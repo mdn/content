@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.redirectStart
 slug: Web/API/PerformanceResourceTiming/redirectStart
+page-type: web-api-instance-property
 tags:
   - API
   - Property

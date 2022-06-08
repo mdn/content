@@ -1,6 +1,7 @@
 ---
 title: Taking still photos with WebRTC
 slug: Web/API/WebRTC_API/Taking_still_photos
+page-type: guide
 tags:
   - API
   - Advanced

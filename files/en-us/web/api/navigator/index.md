@@ -1,6 +1,7 @@
 ---
 title: Navigator
 slug: Web/API/Navigator
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -103,8 +104,6 @@ _Doesn't inherit any properties._
   - : Returns the version of the browser as a string. Do not rely on this property to return the correct value.
 - {{domxref("Navigator.activeVRDisplays")}} {{readonlyInline}} {{deprecated_inline}}
   - : Returns an array containing every {{domxref("VRDisplay")}} object that is currently presenting ({{domxref("VRDisplay.ispresenting")}} is `true`).
-- {{domxref("Navigator.battery")}} {{readonlyInline}} {{deprecated_inline}}
-  - : Returns a {{domxref("BatteryManager")}} object. Use {{domxref("Navigator.getBattery()")}} instead.
 - {{domxref("Navigator.doNotTrack")}} {{readonlyInline}} {{deprecated_inline}}
   - : Reports the value of the user's do-not-track preference. When this value is "yes", your web site or application should not track the user.
 - {{domxref("Navigator.mimeTypes")}} {{readonlyInline}}{{deprecated_inline}}

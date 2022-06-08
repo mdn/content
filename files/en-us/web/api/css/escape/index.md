@@ -1,6 +1,7 @@
 ---
 title: CSS.escape()
 slug: Web/API/CSS/escape
+page-type: web-api-static-method
 tags:
   - API
   - CSS
@@ -25,7 +26,7 @@ escape(str)
 
 ### Parameters
 
-- _str_
+- `str`
   - : The string to be escaped.
 
 ### Return value
@@ -71,5 +72,4 @@ var element = document.querySelector('a[href="#' + CSS.escape(fragment) + '"]');
 ## See also
 
 - The {{DOMxRef("CSS")}} interface where this static method resides.
-- [A
-  polyfill for the CSS.escape](https://github.com/mathiasbynens/CSS.escape/blob/master/css.escape.js)
+- [A polyfill for the CSS.escape](https://github.com/mathiasbynens/CSS.escape/blob/master/css.escape.js)

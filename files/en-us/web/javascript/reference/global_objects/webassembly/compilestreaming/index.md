@@ -29,7 +29,7 @@ WebAssembly.compileStreaming(source)
 
 ### Parameters
 
-- _source_
+- `source`
   - : A [`Response`](/en-US/docs/Web/API/Response)
     object or a promise that will fulfill with one, representing the underlying source of
     a .wasm module you want to stream and compile.

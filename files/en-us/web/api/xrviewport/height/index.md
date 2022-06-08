@@ -1,6 +1,7 @@
 ---
 title: XRViewport.height
 slug: Web/API/XRViewport/height
+page-type: web-api-instance-property
 tags:
   - API
   - AR

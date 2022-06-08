@@ -1,6 +1,7 @@
 ---
 title: Canvas tutorial
 slug: Web/API/Canvas_API/Tutorial
+page-type: guide
 tags:
   - Canvas
   - Graphics

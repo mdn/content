@@ -1,6 +1,7 @@
 ---
 title: 'Document: pointermove event'
 slug: Web/API/Document/pointermove_event
+page-type: web-api-event
 tags:
   - Document
   - Event

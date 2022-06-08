@@ -68,7 +68,7 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 
 - [Developer Tools Performance Features](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
   - : This section provides information on how to use and understand the performance features in your developer tools, including [Waterfall](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html), [Call Tree](https://firefox-source-docs.mozilla.org/devtools-user/performance/call_tree/index.html), and [Flame Charts](https://firefox-source-docs.mozilla.org/devtools-user/performance/flame_chart/index.html).
-- [Profiling with the built-in profiler](/en-US/docs/Mozilla/Performance/Profiling_with_the_Built-in_Profiler)
+- [Profiling with the built-in profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
   - : Learn how to profile app performance with Firefox's built-in profiler.
 
 ## Glossary Terms

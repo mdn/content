@@ -1,6 +1,7 @@
 ---
 title: OfflineAudioContext.startRendering()
 slug: Web/API/OfflineAudioContext/startRendering
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -57,8 +58,7 @@ promise `AudioBuffer`. This is then played as part of a simple standard audio
 graph.
 
 > **Note:** For a working example, see our [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/)
-> GitHub repo (see the [source
-> code](https://github.com/mdn/webaudio-examples) too.)
+> GitHub repo (see the [source code](https://github.com/mdn/webaudio-examples) too.)
 
 ```js
 // define online and offline audio context

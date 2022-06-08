@@ -1,6 +1,7 @@
 ---
 title: HMDVRDevice
 slug: Web/API/HMDVRDevice
+page-type: web-api-interface
 tags:
   - API
   - Experimental

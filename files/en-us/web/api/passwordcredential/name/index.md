@@ -1,6 +1,7 @@
 ---
 title: PasswordCredential.name
 slug: Web/API/PasswordCredential/name
+page-type: web-api-instance-property
 tags:
   - API
   - Credential Management API

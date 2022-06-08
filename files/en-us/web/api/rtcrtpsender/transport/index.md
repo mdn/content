@@ -1,6 +1,7 @@
 ---
 title: RTCRtpSender.transport
 slug: Web/API/RTCRtpSender/transport
+page-type: web-api-instance-property
 tags:
   - API
   - Connectivity

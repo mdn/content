@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.lastResponseTimestamp
 slug: Web/API/RTCIceCandidatePairStats/lastResponseTimestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Connection

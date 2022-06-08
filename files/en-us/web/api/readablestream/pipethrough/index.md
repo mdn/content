@@ -1,6 +1,7 @@
 ---
 title: ReadableStream.pipeThrough()
 slug: Web/API/ReadableStream/pipeThrough
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -59,7 +60,6 @@ pipeThrough(transformStream, options)
     - `signal`
 
       - : If set to an [`AbortSignal`](/en-US/docs/Web/API/AbortSignal) object, ongoing pipe operations can then be aborted via the corresponding [`AbortController`](/en-US/docs/Web/API/AbortController).
-
 
 ### Return value
 

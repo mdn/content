@@ -1,6 +1,7 @@
 ---
 title: 'Document: transitionend event'
 slug: Web/API/Document/transitionend_event
+page-type: web-api-event
 tags:
   - CSS transition
   - Document
@@ -59,7 +60,7 @@ document.ontransitionend = () => {
 };
 ```
 
-[See a live example of this event.](/en-US/docs/Web/API/HTMLElement/transitionend_event#live_example)
+[See a live example of this event](/en-US/docs/Web/API/HTMLElement/transitionend_event#live_example).
 
 ## Specifications
 

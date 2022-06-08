@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onpointerover
 slug: Web/API/GlobalEventHandlers/onpointerover
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

@@ -1,6 +1,7 @@
 ---
 title: EXT_disjoint_timer_query
 slug: Web/API/EXT_disjoint_timer_query
+page-type: webgl-extension
 tags:
   - API
   - Reference
@@ -23,7 +24,7 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 
 This extension exposes a new type:
 
-- GLuint64EXT
+- `GLuint64EXT`
   - : Unsigned 64-bit integer number.
 
 ## Constants

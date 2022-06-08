@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.close()
 slug: Web/API/RTCPeerConnection/close
+page-type: web-api-instance-method
 tags:
   - Method
   - RTCPeerConnection

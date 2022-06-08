@@ -1,6 +1,7 @@
 ---
 title: Using the Notifications API
 slug: Web/API/Notifications_API/Using_the_Notifications_API
+page-type: guide
 tags:
   - API
   - Advanced
@@ -9,6 +10,7 @@ tags:
   - Notifications API
   - Push
   - Tutorial
+browser-compat: api.Notification
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
@@ -256,11 +258,11 @@ window.addEventListener('load', function () {
 
 ## Specifications
 
-{{Specifications("api.Notification")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## See also
 

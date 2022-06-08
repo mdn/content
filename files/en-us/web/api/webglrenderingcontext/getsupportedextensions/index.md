@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getSupportedExtensions()
 slug: Web/API/WebGLRenderingContext/getSupportedExtensions
+page-type: web-api-instance-method
 tags:
   - API
   - Method

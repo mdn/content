@@ -1,6 +1,7 @@
 ---
 title: Selection.toString()
 slug: Web/API/Selection/toString
+page-type: web-api-instance-method
 tags:
   - API
   - HTML Editing

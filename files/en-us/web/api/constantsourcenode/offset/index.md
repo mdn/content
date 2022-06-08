@@ -1,6 +1,7 @@
 ---
 title: ConstantSourceNode.offset
 slug: Web/API/ConstantSourceNode/offset
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -38,8 +39,7 @@ To access the `offset` parameter's current value, access the parameter's
 
 This example shows how to set up a `ConstantSourceNode` so its
 `offset` is used as the input to a pair of {{domxref("GainNode")}}s; this
-snippet is derived from the complete example you can find in [Controlling
-multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode).
+snippet is derived from the complete example you can find in [Controlling multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode).
 
 ```js
 gainNode2 = context.createGain();
@@ -85,8 +85,7 @@ adopt the new volume level.
 
 ## See also
 
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - {{domxref("ConstantSourceNode")}}
 - {{domxref("AudioNode")}}
 - {{domxref("AudioParam")}}

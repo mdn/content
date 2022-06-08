@@ -1,6 +1,7 @@
 ---
 title: VRFrameData.timestamp
 slug: Web/API/VRFrameData/timestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

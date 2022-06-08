@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.stepDown()
 slug: Web/API/HTMLInputElement/stepDown
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -113,7 +114,7 @@ stepDown(stepDecrement)
 
 ### Parameters
 
-- _`stepDecrement`_ {{optional_inline}}
+- `stepDecrement` {{optional_inline}}
 
   - : A numeric value.  If no parameter is passed, _stepDecrement_ defaults to 1.
 
@@ -182,7 +183,7 @@ input:invalid {
 
 Note if you don't pass a parameter to the `stepDown()` method, it defaults
 to 1. Any other value is a multiplier of the `step` attribute value, which in
-this case is 5. If we pass `4` as the _`stepDecrement`_, the input will `stepDown` by
+this case is 5. If we pass `4` as the `stepDecrement`, the input will `stepDown` by
 `4 * 5`, or `20`. If the parameter is `0`, the number will not be
 decremented. The `stepDown()` method will not allow the input to go out of range, in this
 case stopping when it reaches 0 and rounding down and floats that are passed as a

@@ -1,6 +1,7 @@
 ---
 title: 'HTMLFormElement: formdata event'
 slug: Web/API/HTMLFormElement/formdata_event
+page-type: web-api-event
 tags:
   - Event
   - Forms

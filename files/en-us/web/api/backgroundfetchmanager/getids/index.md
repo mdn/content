@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchManager.getIds()
 slug: Web/API/BackgroundFetchManager/getIds
+page-type: web-api-instance-method
 tags:
   - API
   - Method

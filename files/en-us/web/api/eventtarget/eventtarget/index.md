@@ -1,6 +1,7 @@
 ---
 title: EventTarget()
 slug: Web/API/EventTarget/EventTarget
+page-type: web-api-constructor
 tags:
   - Constructor
   - Reference

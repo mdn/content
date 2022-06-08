@@ -1,6 +1,7 @@
 ---
 title: FetchEvent.respondWith()
 slug: Web/API/FetchEvent/respondWith
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -132,9 +133,7 @@ addEventListener('fetch', event => {
 
 ## See also
 
-- [Using
-  Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Is ServiceWorker
-  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)

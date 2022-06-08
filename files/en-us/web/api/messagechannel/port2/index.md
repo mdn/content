@@ -1,6 +1,7 @@
 ---
 title: MessageChannel.port2
 slug: Web/API/MessageChannel/port2
+page-type: web-api-instance-property
 tags:
   - API
   - Channel messaging
@@ -54,9 +55,7 @@ function handleMessage(e) {
 }
 ```
 
-For a full working example, see our [channel
-messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on GitHub ([run it live
-too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
+For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
 ## Specifications
 
@@ -68,5 +67,4 @@ too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
 ## See also
 
-- [Using
-  channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

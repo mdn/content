@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.offsetLeft
 slug: Web/API/HTMLElement/offsetLeft
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View

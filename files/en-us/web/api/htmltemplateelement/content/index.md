@@ -1,6 +1,7 @@
 ---
 title: HTMLTemplateElement.content
 slug: Web/API/HTMLTemplateElement/content
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

@@ -1,6 +1,7 @@
 ---
 title: MediaList
 slug: Web/API/MediaList
+page-type: web-api-interface
 tags:
   - API
   - CSSOM

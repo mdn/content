@@ -1,6 +1,7 @@
 ---
 title: XSLTProcessor
 slug: Web/API/XSLTProcessor
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -90,12 +91,9 @@ and not exposed to Web content:
 
 ## Examples
 
-1. [Basic
-    example](/en-US/docs/XSLT/XSLT_JS_Interface_in_Gecko/Basic_Example)
-2. [Advanced
-    example](/en-US/docs/XSLT/XSLT_JS_Interface_in_Gecko/Advanced_Example)
-3. [Additional
-    example](/en-US/docs/XSLT/XSLT_JS_Interface_in_Gecko/JavaScript_XSLT_Bindings)
+1. [Basic example](/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example)
+2. [Advanced example](/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example)
+3. [Additional example](/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/JavaScript_XSLT_Bindings)
 
 ## Specifications
 
@@ -113,5 +111,4 @@ in Gecko.
 
 ## See also
 
-- [Using
-  the Mozilla JavaScript interface to XSL Transformations](/en-US/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations)
+- [Using the Mozilla JavaScript interface to XSL Transformations](/en-US/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations)

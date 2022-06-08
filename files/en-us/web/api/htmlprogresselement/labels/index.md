@@ -1,6 +1,7 @@
 ---
 title: HTMLProgressElement.labels
 slug: Web/API/HTMLProgressElement/labels
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

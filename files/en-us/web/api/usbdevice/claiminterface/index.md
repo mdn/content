@@ -1,6 +1,7 @@
 ---
 title: USBDevice.claimInterface()
 slug: Web/API/USBDevice/claimInterface
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -26,9 +27,9 @@ claimInterface(interfaceNumber)
 
 ### Parameters
 
-- interfaceNumber
+- `interfaceNumber`
   - : The index of one of the interfaces supported by the device. Interfaces are
-    device-specific.
+    device specific.
 
 ### Return value
 

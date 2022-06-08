@@ -1,6 +1,7 @@
 ---
 title: VideoPlaybackQuality
 slug: Web/API/VideoPlaybackQuality
+page-type: web-api-interface
 tags:
   - API
   - Experimental

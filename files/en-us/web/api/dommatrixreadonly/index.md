@@ -1,6 +1,7 @@
 ---
 title: DOMMatrixReadOnly
 slug: Web/API/DOMMatrixReadOnly
+page-type: web-api-interface
 tags:
   - Interface
   - Reference

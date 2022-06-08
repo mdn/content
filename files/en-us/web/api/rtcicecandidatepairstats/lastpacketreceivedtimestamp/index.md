@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.lastPacketReceivedTimestamp
 slug: Web/API/RTCIceCandidatePairStats/lastPacketReceivedTimestamp
+page-type: web-api-instance-property
 tags:
   - API
   - ICE

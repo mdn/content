@@ -1,6 +1,7 @@
 ---
 title: MediaStream Recording API
 slug: Web/API/MediaStream_Recording_API
+page-type: web-api-overview
 tags:
   - API
   - Audio
@@ -35,7 +36,7 @@ The process of recording a stream is simple:
 
 > **Note:** Individual {{domxref("Blob")}}s containing slices of the recorded media will not necessarily be individually playable. The media needs to be reassembled before playback.
 
-If anything goes wrong during recording, an {{event("error")}} event is sent to the `MediaRecorder`. You can listen for `error` events by setting up a {{domxref("MediaRecorder.error_event", "onerror")}} event handler.
+If anything goes wrong during recording, an {{domxref("MediaRecorder/error_event", "error")}} event is sent to the `MediaRecorder`. You can listen for `error` events by setting up a {{domxref("MediaRecorder.error_event", "onerror")}} event handler.
 
 Example here, we use an HTML Canvas as source of the {{domxref("MediaStream")}}, and stop recording after 9 seconds.
 
@@ -131,8 +132,6 @@ To learn more about using the MediaStream Recording API, see [Using the MediaStr
 {{Specifications}}
 
 ## Browser compatibility
-
-### `MediaRecorder`
 
 {{Compat}}
 

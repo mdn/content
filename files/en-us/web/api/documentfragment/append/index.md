@@ -1,6 +1,7 @@
 ---
 title: DocumentFragment.append()
 slug: Web/API/DocumentFragment/append
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

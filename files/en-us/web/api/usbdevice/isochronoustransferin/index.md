@@ -1,6 +1,7 @@
 ---
 title: USBDevice.isochronousTransferIn()
 slug: Web/API/USBDevice/isochronousTransferIn
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -27,9 +28,9 @@ isochronousTransferIn(endpointNumber, packetLengths)
 
 ### Parameters
 
-- endpointNumber
+- `endpointNumber`
   - : The number of a device-specific endpoint (buffer).
-- packetLengths
+- `packetLengths`
   - : An array of lengths for the packets being received.
 
 ### Return value

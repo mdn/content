@@ -1,6 +1,7 @@
 ---
 title: XRInputSourceArray
 slug: Web/API/XRInputSourceArray
+page-type: web-api-interface
 tags:
   - API
   - AR

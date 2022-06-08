@@ -1,6 +1,7 @@
 ---
 title: HTMLTableRowElement.rowIndex
 slug: Web/API/HTMLTableRowElement/rowIndex
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

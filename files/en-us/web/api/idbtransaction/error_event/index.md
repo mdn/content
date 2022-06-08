@@ -1,6 +1,7 @@
 ---
 title: 'IDBTransaction: error event'
 slug: Web/API/IDBTransaction/error_event
+page-type: web-api-event
 tags:
   - Event
   - Reference

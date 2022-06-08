@@ -1,6 +1,7 @@
 ---
 title: VideoFrame.timestamp
 slug: Web/API/VideoFrame/timestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Property

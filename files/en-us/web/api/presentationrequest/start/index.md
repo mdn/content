@@ -1,6 +1,7 @@
 ---
 title: PresentationRequest.start()
 slug: Web/API/PresentationRequest/start
+page-type: web-api-instance-method
 tags:
   - Experimental
   - Method

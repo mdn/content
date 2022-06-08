@@ -1,6 +1,7 @@
 ---
 title: Crypto.subtle
 slug: Web/API/Crypto/subtle
+page-type: web-api-instance-property
 tags:
   - API
   - Cryptography
@@ -33,6 +34,5 @@ low-level cryptography features.
 
 - {{domxref("Crypto")}}.
 - {{domxref("SubtleCrypto")}}.
-- [Compatibility
-  test page](https://vibornoff.github.io/webcrypto-examples/index.html).
+- [Compatibility test page](https://vibornoff.github.io/webcrypto-examples/index.html).
 - [Shim for IE11 and Safari](https://github.com/vibornoff/webcrypto-shim).

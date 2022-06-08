@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onpointerup
 slug: Web/API/GlobalEventHandlers/onpointerup
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

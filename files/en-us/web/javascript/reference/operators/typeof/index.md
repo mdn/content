@@ -37,7 +37,7 @@ more information about types and primitives, see also the [JavaScript data struc
 
 | Type                                                                                     | Result                                 |
 | ---------------------------------------------------------------------------------------- | -------------------------------------- |
-| [Undefined](/en-US/docs/Glossary/Undefined)                                              | `"undefined"`                          |
+| [Undefined](/en-US/docs/Glossary/undefined)                                              | `"undefined"`                          |
 | [Null](/en-US/docs/Glossary/Null)                                                        | `"object"` (see [below](#typeof_null)) |
 | [Boolean](/en-US/docs/Glossary/Boolean)                                                  | `"boolean"`                            |
 | [Number](/en-US/docs/Glossary/Number)                                                    | `"number"`                             |

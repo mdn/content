@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onselect
 slug: Web/API/GlobalEventHandlers/onselect
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -14,8 +15,7 @@ browser-compat: api.GlobalEventHandlers.onselect
 
 The **`onselect`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes [`select`
-events](/en-US/docs/Web/API/Element/select_event).
+processes [`select` events](/en-US/docs/Web/API/Element/select_event).
 
 The `select` event only fires after text inside an
 `{{HtmlElement('input/text', '&lt;input type="text"&gt;')}}` or
@@ -29,8 +29,7 @@ target.onselect = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("UIEvent")}} object as its sole
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("UIEvent")}} object as its sole
 argument.
 
 ## Examples

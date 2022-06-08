@@ -1,6 +1,7 @@
 ---
 title: VRPose
 slug: Web/API/VRPose
+page-type: web-api-interface
 tags:
   - API
   - Deprecated

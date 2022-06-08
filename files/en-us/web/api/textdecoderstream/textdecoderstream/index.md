@@ -1,6 +1,7 @@
 ---
 title: TextDecoderStream()
 slug: Web/API/TextDecoderStream/TextDecoderStream
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

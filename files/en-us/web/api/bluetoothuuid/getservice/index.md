@@ -1,6 +1,7 @@
 ---
 title: BluetoothUUID.getService()
 slug: Web/API/BluetoothUUID/getService
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -23,7 +24,7 @@ getService(name)
 ### Parameters
 
 - `name`
-  - : A {{domxref("DOMString","string")}} containing the name of the service.
+  - : A string containing the name of the service.
 
 ### Return value
 

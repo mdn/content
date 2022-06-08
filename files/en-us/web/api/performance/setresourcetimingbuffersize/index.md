@@ -1,6 +1,7 @@
 ---
 title: performance.setResourceTimingBufferSize()
 slug: Web/API/Performance/setResourceTimingBufferSize
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -28,7 +29,7 @@ setResourceTimingBufferSize(maxSize)
 
 ### Parameters
 
-- maxSize
+- `maxSize`
   - : A `number` representing the maximum number of
     {{domxref("PerformanceEntry","performance entry")}} objects the browser should hold in
     its performance entry buffer.

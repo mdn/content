@@ -1,6 +1,7 @@
 ---
 title: NavigatorUAData.platform
 slug: Web/API/NavigatorUAData/platform
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`platform`** read-only property of the {{domxref("NavigatorUAData")}} inte
 
 ## Value
 
-A {{domxref("DOMString","string")}} containing the platform brand.
+A string containing the platform brand.
 For example, `"Windows"`.
 
 ## Examples

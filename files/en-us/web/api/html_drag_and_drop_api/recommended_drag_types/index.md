@@ -1,6 +1,7 @@
 ---
 title: Recommended Drag Types
 slug: Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
+page-type: guide
 tags:
   - Guide
   - drag and drop
@@ -135,7 +136,7 @@ You could use feature detection to determine which method is supported on `types
 
 ## Dragging Images
 
-Direct image dragging is not common. In fact, Mozilla does not support direct image dragging on Mac or Linux. Instead, images are usually dragged only by their URLs. To do this, use the `text/uri-list` type as with other URLs. The data should be the URL of the image, or a [`data:` URI](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) if the image is not stored on a web site or disk.
+Direct image dragging is not common. In fact, Mozilla does not support direct image dragging on Mac or Linux. Instead, images are usually dragged only by their URLs. To do this, use the `text/uri-list` type as with other URLs. The data should be the URL of the image, or a [`data:` URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) if the image is not stored on a web site or disk.
 
 As with links, the data for the `text/plain` type should also contain the URL. However, a `data:` URL is not usually useful in a text context, so you may wish to exclude the `text/plain` data in this situation.
 

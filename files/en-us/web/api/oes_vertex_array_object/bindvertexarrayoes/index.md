@@ -1,6 +1,7 @@
 ---
 title: OES_vertex_array_object.bindVertexArrayOES()
 slug: Web/API/OES_vertex_array_object/bindVertexArrayOES
+page-type: webgl-extension-method
 tags:
   - API
   - Method
@@ -24,7 +25,7 @@ bindVertexArrayOES(arrayObject)
 
 ### Parameters
 
-- arrayObject
+- `arrayObject`
   - : A {{domxref("WebGLVertexArrayObject")}} (VAO) object to bind.
 
 ### Return value

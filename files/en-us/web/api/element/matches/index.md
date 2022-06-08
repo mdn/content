@@ -1,6 +1,7 @@
 ---
 title: Element.matches()
 slug: Web/API/Element/matches
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Selector
@@ -13,27 +14,27 @@ browser-compat: api.Element.matches
 ---
 {{APIRef("DOM")}}
 
-The **`matches()`** method of the {{domxref("Element")}} interface tests whether the element would be selected by the specified [CSS selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors).
+The **`matches()`** method of the {{domxref("Element")}} interface tests whether the element would be selected by the specified [selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors).
 
 ## Syntax
 
 ```js
-matches(selectorString)
+matches(selectors)
 ```
 
 ### Parameters
 
 - `selectors`
-  - : A string of valid [CSS selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors) to test the {{domxref("Element")}} against.
+  - : A [selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) string, or an array of [selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) strings.
 
 ### Return value
 
-`true` if the {{domxref("Element")}} matches the `selectors`. Otherwise, `false`.
+`true` if the {{domxref("Element")}} matches the `selectors` value. Otherwise, `false`.
 
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - : Thrown if the `selectors` is not a valid CSS selector.
+  - : Thrown if `selectors` is not valid.
 
 ## Examples
 
@@ -41,26 +42,42 @@ matches(selectorString)
 
 ```html
 <ul id="birds">
-  <li>Orange-winged parrot</li>
-  <li class="endangered">Philippine eagle</li>
-  <li>Great white pelican</li>
+  <li class="amazon">Orange-winged parrot</li>
+  <li class="pacific">Philippine eagle</li>
+  <li class="europe asia africa">Great white pelican</li>
 </ul>
+<p></p>
 ```
 
 ### JavaScript
 
 ```js
 const birds = document.querySelectorAll('li');
+const p = document.querySelector('p');
+const results = [];
 
+p.append(`Amazon: `);
 for (const bird of birds) {
-  if (bird.matches('.endangered')) {
-    console.log(`The ${bird.textContent} is endangered!`);
+  // the 'matches()' argument can be a string
+  if (bird.matches('.amazon')) {
+    results.push(`${bird.textContent}`);
   }
 }
+p.append(`${results.join(', ')}. `);
+
+results.length = 0;
+p.append(`Asia and Pacific regions: `);
+for (const bird of birds) {
+  // the 'matches()' argument can be an array of strings
+  if (bird.matches(['.asia', '.pacific'])) {
+    results.push(`${bird.textContent}`);
+  }
+}
+p.append(`${results.join(', ')}. `);
+
 ```
 
-This will log "The Philippine eagle is endangered!" to the console, since the element
-has indeed a `class` attribute with value `endangered`.
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

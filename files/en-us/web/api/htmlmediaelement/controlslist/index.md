@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.controlsList
 slug: Web/API/HTMLMediaElement/controlsList
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -32,5 +33,4 @@ A {{domxref("DOMTokenList")}}.
 
 ## See also
 
-- [Chrome HTMLMediaElement
-  controlsList Sample](https://googlechrome.github.io/samples/media/controlslist.html)
+- [Chrome HTMLMediaElement controlsList Sample](https://googlechrome.github.io/samples/media/controlslist.html)

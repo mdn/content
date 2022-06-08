@@ -1,6 +1,7 @@
 ---
 title: VRDisplay
 slug: Web/API/VRDisplay
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -34,8 +35,6 @@ An array of all connected VR Devices can be returned by invoking the {{domxref("
   - : Returns an identifier for this particular VRDisplay, which is also used as an association point in the [Gamepad API](/en-US/docs/Web/API/Gamepad_API) (see {{domxref("Gamepad.displayId")}}).
 - {{domxref("VRDisplay.displayName")}} {{readonlyInline}} {{deprecated_inline}}
   - : Returns a human-readable name to identify the `VRDisplay`.
-- {{domxref("VRDisplay.hardwareUnitId")}} {{deprecated_inline}}
-  - : Returns a {{domxref("DOMString")}} defining the shared ID of the display, and any other devices that are part of that hardware set (e.g. controllers). This is no longer needed, and has been removed from the spec. Displays now use {{domxref("VRDisplay.displayId")}}, and corresponding controllers will now return the same ID under {{domxref("Gamepad.displayId")}}.
 - {{domxref("VRDisplay.isConnected")}} {{readonlyInline}} {{deprecated_inline}}
   - : Returns a boolean value indicating whether the `VRDisplay` is connected to the computer.
 - {{domxref("VRDisplay.isPresenting")}} {{readonlyInline}} {{deprecated_inline}}

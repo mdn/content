@@ -38,7 +38,14 @@ If the counter value is negative, the symbol provided as value for the descripto
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<symbol> <symbol>?
+
+<symbol> =
+  <string>       |
+  <image>        |
+  <custom-ident>
+```
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: TextEncoderStream
 slug: Web/API/TextEncoderStream
+page-type: web-api-interface
 tags:
   - API
   - Interface

@@ -1,5 +1,5 @@
 ---
-title: 'aria-readonly'
+title: aria-readonly
 slug: Web/Accessibility/ARIA/Attributes/aria-readonly
 tags:
   - Accessibility
@@ -10,7 +10,6 @@ tags:
   - Reference
 spec-urls: https://w3c.github.io/aria/#aria-readonly
 ---
-
 The `aria-readonly` attribute indicates that the element is not editable, but is otherwise operable.
 
 ## Description
@@ -54,7 +53,7 @@ Used in roles:
 - [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
 - [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
 - [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
-- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)
+- [`radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role)
 - [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
 - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
 - [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)

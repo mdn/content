@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.createFramebuffer()
 slug: Web/API/WebGLRenderingContext/createFramebuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method

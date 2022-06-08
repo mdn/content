@@ -31,7 +31,9 @@ This only works when used inside CSS placed within a [shadow DOM](/en-US/docs/We
 
 ## Syntax
 
-{{csssyntax}}
+```
+::slotted( <compound-selector> )
+```
 
 ## Examples
 

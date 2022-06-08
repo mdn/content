@@ -1,6 +1,7 @@
 ---
 title: USBDevice
 slug: Web/API/USBDevice
+page-type: web-api-interface
 tags:
   - API
   - Interface

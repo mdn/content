@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaRequired
 slug: Web/API/ElementInternals/ariaRequired
+page-type: web-api-instance-property
 tags:
   - API
   - Property

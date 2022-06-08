@@ -1,6 +1,7 @@
 ---
 title: MSGestureEvent
 slug: Web/API/MSGestureEvent
+page-type: web-api-interface
 tags:
   - API
   - DOM

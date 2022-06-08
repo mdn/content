@@ -1,6 +1,7 @@
 ---
 title: HTMLCanvasElement.toBlob()
 slug: Web/API/HTMLCanvasElement/toBlob
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

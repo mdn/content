@@ -1,6 +1,7 @@
 ---
 title: 'Window: beforeunload event'
 slug: Web/API/Window/beforeunload_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
@@ -104,8 +105,7 @@ string. For example:
 - Firefox displays the string, "This page is asking you to confirm that you want to
   leave - data you have entered may not be saved." (see {{bug("588292")}}).
 - Chrome displays the string, "Do you want to leave this site? Changes you made may
-  not be saved." (see [Chrome Platform
-  Status](https://chromestatus.com/feature/5349061406228480)).
+  not be saved." (see [Chrome Platform Status](https://chromestatus.com/feature/5349061406228480)).
 
 Internet Explorer does not respect the `null` return value and will display
 this to users as "null" text. You have to use `undefined` to skip the prompt.

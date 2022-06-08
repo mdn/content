@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamBYOBReader.cancel()
 slug: Web/API/ReadableStreamBYOBReader/cancel
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -29,7 +30,7 @@ cancel(reason)
 
 ### Parameters
 
-- reason {{optional_inline}}
+- `reason` {{optional_inline}}
   - : A human-readable reason for the cancellation. The underlying source may or may not use it.
 
 ### Return value

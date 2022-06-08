@@ -1,6 +1,7 @@
 ---
 title: 'HIDDevice: inputreport event'
 slug: Web/API/HIDDevice/inputreport_event
+page-type: web-api-event
 tags:
   - API
   - Property

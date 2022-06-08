@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.deleteProgram()
 slug: Web/API/WebGLRenderingContext/deleteProgram
+page-type: web-api-instance-method
 tags:
   - API
   - Method

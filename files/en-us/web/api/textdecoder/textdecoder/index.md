@@ -1,6 +1,7 @@
 ---
 title: TextDecoder()
 slug: Web/API/TextDecoder/TextDecoder
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -30,7 +31,7 @@ new TextDecoder(utfLabel, options)
 ### Parameters
 
 - `utfLabel`{{Optional_Inline}}
-  - : A {{DOMxRef("DOMString")}}, defaulting to `"utf-8"`, containing the
+  - : A string, defaulting to `"utf-8"`, containing the
     _label_ of the encoder. This may be [any valid label](/en-US/docs/Web/API/Encoding_API/Encodings).
 - `options`{{Optional_Inline}}
 

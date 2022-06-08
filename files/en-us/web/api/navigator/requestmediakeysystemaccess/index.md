@@ -1,6 +1,7 @@
 ---
 title: Navigator.requestMediaKeySystemAccess()
 slug: Web/API/Navigator/requestMediaKeySystemAccess
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -21,8 +22,7 @@ browser-compat: api.Navigator.requestMediaKeySystemAccess
 The **`Navigator.requestMediaKeySystemAccess()`** method
 returns a {{jsxref('Promise')}} which delivers a {{domxref('MediaKeySystemAccess')}}
 object that can be used to access a particular media key system, which can in turn be
-used to create keys for decrypting a media stream. This method is part of the [Encrypted Media Extensions
-API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), which brings support for encrypted media and DRM-protected video to the web.
+used to create keys for decrypting a media stream. This method is part of the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), which brings support for encrypted media and DRM-protected video to the web.
 
 This method may have user-visible effects such as asking for permission to access one
 or more system resources. Consider that when deciding when to call
@@ -41,7 +41,7 @@ requestMediaKeySystemAccess(keySystem, supportedConfigurations)
 ### Parameters
 
 - `keySystem`
-  - : A {{domxref('DOMString')}} identifying the key system. For example
+  - : A string identifying the key system. For example
     `com.example.somesystem` or `org.w3.clearkey`.
 - `supportedConfigurations`
   - : A non-empty {{jsxref('Array')}} of objects conforming to the object returned by {{domxref("MediaKeySystemAccess.getConfiguration")}}. The first element with a satisfiable configuration will be used.
@@ -139,7 +139,6 @@ should be permitted, and therefore are valid requests.
 
 ## See also
 
-- [Encrypted Media
-  Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API)
+- [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API)
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)

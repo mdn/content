@@ -1,6 +1,7 @@
 ---
 title: performance.clearMeasures()
 slug: Web/API/Performance/clearMeasures
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -27,7 +28,7 @@ clearMeasures(name)
 
 ### Parameters
 
-- name {{optional_inline}}
+- `name` {{optional_inline}}
   - : A string representing the name of the timestamp. If this argument
     is omitted, all {{domxref("PerformanceEntry","performance entries")}} with an
     {{domxref("PerformanceEntry.entryType","entry type")}} of "`measure`" will
@@ -35,7 +36,7 @@ clearMeasures(name)
 
 ### Return value
 
-void
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

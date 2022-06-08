@@ -1,6 +1,7 @@
 ---
 title: CSS numeric factory functions
 slug: Web/API/CSS/factory_functions
+page-type: web-api-static-method
 tags:
   - API
   - CSS
@@ -8,7 +9,9 @@ tags:
   - Houdini
   - Reference
   - factory function
+browser-compat: api.CSS
 ---
+{{APIRef("CSSOM")}}
 {{SeeCompatTable}}
 
 The **CSS numeric factory
@@ -93,11 +96,11 @@ console.log(currentMargin.value, currentMargin.unit); // 40, 'px'
 
 ## Specifications
 
-{{Specifications("api.CSS")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.CSS")}}
+{{Compat}}
 
 ## See also
 

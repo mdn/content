@@ -1,6 +1,7 @@
 ---
 title: CSSPositionValue.y
 slug: Web/API/CSSPositionValue/y
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API

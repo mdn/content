@@ -32,4 +32,4 @@ You can use this attribute with any SVG element.
 
 - {{domxref("SVGElement")}}
 - The {{domxref("SVGElement.dataset")}} property used to access these attributes from scripts.
-- [Using data attributes](/en-US/docs/Web/Guide/HTML/Using_data_attributes)
+- [Using data attributes](/en-US/docs/Learn/HTML/Howto/Use_data_attributes)

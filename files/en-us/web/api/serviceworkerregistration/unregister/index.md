@@ -1,6 +1,7 @@
 ---
 title: ServiceWorkerRegistration.unregister()
 slug: Web/API/ServiceWorkerRegistration/unregister
+page-type: web-api-instance-method
 tags:
   - API
   - Method

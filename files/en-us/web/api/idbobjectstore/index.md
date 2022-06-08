@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore
 slug: Web/API/IDBObjectStore
+page-type: web-api-interface
 tags:
   - API
   - IDBObjectStore

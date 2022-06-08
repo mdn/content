@@ -1,6 +1,7 @@
 ---
-title: PaymentRequest.prototype.id
+title: PaymentRequest.id
 slug: Web/API/PaymentRequest/id
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -58,7 +59,7 @@ var id = paymentRequest.id
 
 ### Value
 
-A {{domxref('DOMString')}}.
+A string.
 
 ## Specifications
 

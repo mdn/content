@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.perDscpPacketsReceived
 slug: Web/API/RTCInboundRtpStreamStats/perDscpPacketsReceived
+page-type: web-api-instance-property
 tags:
   - API
   - DCSP

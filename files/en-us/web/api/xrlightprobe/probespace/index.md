@@ -1,6 +1,7 @@
 ---
 title: XRLightProbe.probeSpace
 slug: Web/API/XRLightProbe/probeSpace
+page-type: web-api-instance-property
 tags:
   - API
   - AR

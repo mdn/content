@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisUtterance.pitch
 slug: Web/API/SpeechSynthesisUtterance/pitch
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -1,6 +1,7 @@
 ---
 title: XRRigidTransform.inverse
 slug: Web/API/XRRigidTransform/inverse
+page-type: web-api-instance-property
 tags:
   - API
   - AR

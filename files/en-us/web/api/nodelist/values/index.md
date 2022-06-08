@@ -1,6 +1,7 @@
 ---
 title: NodeList.values()
 slug: Web/API/NodeList/values
+page-type: web-api-instance-method
 tags:
   - DOM
   - Iterator

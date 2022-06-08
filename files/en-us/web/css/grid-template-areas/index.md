@@ -103,7 +103,7 @@ grid-template-areas: unset;
 
 #### Result
 
-{{EmbedLiveSample("Specifying_named_grid_areas", "100%", "250px")}}
+{{EmbedLiveSample("Specifying_named_grid_areas", "100%", "285px")}}
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.effectAllowed
 slug: Web/API/DataTransfer/effectAllowed
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -19,37 +20,37 @@ dragged will be moved, and the _link_ operation is used to indicate that some
 form of relationship or connection will be created between the source and drop
 locations.
 
-This property should be set in the {{event("dragstart")}} event to set the desired drag
-effect for the drag source. Within the {{event("dragenter")}} and {{event("dragover")}}
+This property should be set in the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event to set the desired drag
+effect for the drag source. Within the {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {{domxref("HTMLElement/dragover_event", "dragover")}}
 event handlers, this property will be set to whatever value was assigned during the
-{{event("dragstart")}} event, thus `effectAllowed` may be used to determine
+{{domxref("HTMLElement/dragstart_event", "dragstart")}} event, thus `effectAllowed` may be used to determine
 which effect is permitted.
 
 Assigning a value to `effectAllowed` in events other than
-{{event("dragstart")}} has no effect.
+{{domxref("HTMLElement/dragstart_event", "dragstart")}} has no effect.
 
 ## Value
 
 A string representing the drag operation that is allowed. The
 possible values are:
 
-- none
+- `none`
   - : The item may not be dropped.
-- copy
+- `copy`
   - : A copy of the source item may be made at the new location.
-- copyLink
+- `copyLink`
   - : A copy or link operation is permitted.
-- copyMove
+- `copyMove`
   - : A copy or move operation is permitted.
-- link
+- `link`
   - : A link may be established to the source at the new location.
-- linkMove
+- `linkMove`
   - : A link or move operation is permitted.
-- move
+- `move`
   - : An item may be moved to a new location.
-- all
+- `all`
   - : All operations are permitted.
-- uninitialized
+- `uninitialized`
   - : The default value when the effect has not been set, equivalent to all.
 
 Assigning any other value to `effectAllowed` has no effect and the old value
@@ -94,7 +95,7 @@ function drop_handler(ev) {
  console.log("drop: dropEffect = " + ev.dataTransfer.dropEffect + " ; effectAllowed = " + ev.dataTransfer.effectAllowed);
  ev.preventDefault();
  // Get the id of the target and add the moved element to the target's DOM
- var data = ev.dataTransfer.getData("text");
+ const data = ev.dataTransfer.getData("text");
  ev.target.appendChild(document.getElementById(data));
 }
 

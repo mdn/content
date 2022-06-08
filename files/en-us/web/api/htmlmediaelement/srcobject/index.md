@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.srcObject
 slug: Web/API/HTMLMediaElement/srcObject
+page-type: web-api-instance-property
 tags:
   - API
   - HTML

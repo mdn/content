@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: copy event'
 slug: Web/API/HTMLElement/copy_event
+page-type: web-api-event
 tags:
   - API
   - Clipboard API

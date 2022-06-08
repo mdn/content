@@ -1,6 +1,7 @@
 ---
 title: Navigator.permissions
 slug: Web/API/Navigator/permissions
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

@@ -1,6 +1,7 @@
 ---
 title: 'Element: mouseenter event'
 slug: Web/API/Element/mouseenter_event
+page-type: web-api-event
 tags:
   - API
   - Cursor

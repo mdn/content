@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ondblclick
 slug: Web/API/GlobalEventHandlers/ondblclick
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -27,8 +28,7 @@ target.ondblclick = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("MouseEvent")}} object as its sole
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("MouseEvent")}} object as its sole
 argument. Within the function,
 [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) will
 be the element upon which the event was triggered.

@@ -1,6 +1,7 @@
 ---
 title: TextTrack.id
 slug: Web/API/TextTrack/id
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`id`** read-only property of the {{domxref("TextTrack")}} interface return
 
 ## Value
 
-A {{domxref("DOMString","string")}} containing the ID, or an empty string.
+A string containing the ID, or an empty string.
 
 ## Examples
 

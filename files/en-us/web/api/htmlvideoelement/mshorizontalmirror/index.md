@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.msHorizontalMirror
 slug: Web/API/HTMLVideoElement/msHorizontalMirror
+page-type: web-api-instance-property
 tags:
   - API
   - API:Microsoft Extensions
@@ -45,4 +46,4 @@ Example #2:
 ## See also
 
 - {{DOMxRef("HTMLVideoElement")}}
-- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_API_extensions)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

@@ -1,6 +1,7 @@
 ---
 title: PaymentRequest.shippingType
 slug: Web/API/PaymentRequest/shippingType
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

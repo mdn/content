@@ -1,6 +1,7 @@
 ---
-title: ImageDecoder.ImageDecoder()
+title: ImageDecoder()
 slug: Web/API/ImageDecoder/ImageDecoder
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -23,7 +24,7 @@ new ImageDecoder(init)
 - `init`
   - : An object containing the following members:
     - `type`
-      - : A {{domxref("DOMString","string")}} containing the MIME type of the image file to be decoded.
+      - : A string containing the MIME type of the image file to be decoded.
     - `data`
       - : A {{domxref("BufferSource")}} or {{domxref("ReadableStream")}} of bytes representing an encoded image type as described by `type`.
     - `premultiplyAlpha`{{Optional_Inline}}

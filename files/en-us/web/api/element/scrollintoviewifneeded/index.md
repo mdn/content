@@ -1,6 +1,7 @@
 ---
 title: Element.scrollIntoViewIfNeeded()
 slug: Web/API/Element/scrollIntoViewIfNeeded
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

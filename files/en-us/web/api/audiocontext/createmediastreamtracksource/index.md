@@ -1,6 +1,7 @@
 ---
 title: AudioContext.createMediaStreamTrackSource()
 slug: Web/API/AudioContext/createMediaStreamTrackSource
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -72,7 +73,8 @@ navigator.mediaDevices.getUserMedia ({audio: true, video: false})
   };
 
   let audioCtx = new AudioContext();
-  let source = audioCtx.createMediaStreamSource(stream);
+  let audioTracks = stream.getAudioTracks();
+  let source = audioCtx.createMediaStreamTrackSource(audioTracks[0]);
 
   let biquadFilter = audioCtx.createBiquadFilter();
   biquadFilter.type = "lowshelf";

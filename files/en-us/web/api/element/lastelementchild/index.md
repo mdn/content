@@ -1,6 +1,7 @@
 ---
 title: Element.lastElementChild
 slug: Web/API/Element/lastElementChild
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -19,7 +20,7 @@ To get all child nodes, including non-element nodes like text and comment nodes,
 
 ## Value
 
-A {{domxref("Element")}} object, or `null`
+A {{domxref("Element")}} object, or `null`.
 
 ## Examples
 

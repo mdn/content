@@ -1,6 +1,7 @@
 ---
 title: Navigator.presentation
 slug: Web/API/Navigator/presentation
+page-type: web-api-instance-property
 browser-compat: api.Navigator.presentation
 ---
 {{SeeCompatTable}}{{securecontext_header}}{{APIRef("Presentation API")}}

@@ -1,6 +1,7 @@
 ---
 title: WritableStreamDefaultWriter.close()
 slug: Web/API/WritableStreamDefaultWriter/close
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

@@ -86,7 +86,7 @@ function testInput(re, str) {
 
 ### Using test() on a regex with the "global" flag
 
-When a regex has the [global flag](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags_2) set,
+When a regex has the [global flag](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags_2) set,
 `test()` will advance the {{jsxref("RegExp.lastIndex", "lastIndex")}} of the regex.
 ({{jsxref("RegExp.prototype.exec()")}} also advances the `lastIndex` property.)
 

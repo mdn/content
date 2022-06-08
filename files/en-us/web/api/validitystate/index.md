@@ -1,6 +1,7 @@
 ---
 title: ValidityState
 slug: Web/API/ValidityState
+page-type: web-api-interface
 tags:
   - API
   - Constraint Validation API

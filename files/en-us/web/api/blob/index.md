@@ -1,6 +1,7 @@
 ---
 title: Blob
 slug: Web/API/Blob
+page-type: web-api-interface
 tags:
   - API
   - Blob
@@ -138,4 +139,4 @@ By using other methods of `FileReader`, it is possible to read the contents of a
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("File")}}
 - {{DOMxRef("URL.createObjectURL")}}
-- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)

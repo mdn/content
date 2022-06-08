@@ -1,6 +1,7 @@
 ---
 title: HTMLPictureElement
 slug: Web/API/HTMLPictureElement
+page-type: web-api-interface
 tags:
   - API
   - Experimental

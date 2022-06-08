@@ -1,6 +1,7 @@
 ---
 title: PointerEvent()
 slug: Web/API/PointerEvent/PointerEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

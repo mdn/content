@@ -1,6 +1,7 @@
 ---
 title: PasswordCredential.iconURL
 slug: Web/API/PasswordCredential/iconURL
+page-type: web-api-instance-property
 tags:
   - API
   - Credential Management API

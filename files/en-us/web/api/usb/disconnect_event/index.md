@@ -1,6 +1,7 @@
 ---
 title: 'USB: disconnect event'
 slug: Web/API/USB/disconnect_event
+page-type: web-api-event
 tags:
   - API
   - Event

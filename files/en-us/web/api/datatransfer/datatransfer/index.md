@@ -1,6 +1,7 @@
 ---
 title: DataTransfer()
 slug: Web/API/DataTransfer/DataTransfer
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

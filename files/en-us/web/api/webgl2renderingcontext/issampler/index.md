@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.isSampler()
 slug: Web/API/WebGL2RenderingContext/isSampler
+page-type: web-api-instance-method
 tags:
   - API
   - Method

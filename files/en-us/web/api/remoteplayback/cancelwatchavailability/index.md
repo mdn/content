@@ -1,6 +1,7 @@
 ---
 title: RemotePlayback.cancelWatchAvailability()
 slug: Web/API/RemotePlayback/cancelWatchAvailability
+page-type: web-api-instance-method
 tags:
   - API
   - Method

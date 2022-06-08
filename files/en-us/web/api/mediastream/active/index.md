@@ -1,6 +1,7 @@
 ---
 title: MediaStream.active
 slug: Web/API/MediaStream/active
+page-type: web-api-instance-property
 tags:
   - API
   - Media Capture and Streams

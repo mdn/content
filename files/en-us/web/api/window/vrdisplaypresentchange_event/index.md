@@ -1,6 +1,7 @@
 ---
 title: 'Window: vrdisplaypresentchange event'
 slug: Web/API/Window/vrdisplaypresentchange_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
@@ -57,7 +58,7 @@ window.addEventListener('vrdisplaypresentchange', function() {
 });
 ```
 
-Or use the [`onvrdisplaypresentchange`](/en-US/docs/Web/API/Window/onvrdisplaypresentchange) event handler property:
+Or use the `onvrdisplaypresentchange` event handler property:
 
 ```js
 window.onvrdisplaypresentchange = function() {

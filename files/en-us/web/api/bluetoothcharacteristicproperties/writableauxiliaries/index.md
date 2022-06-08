@@ -1,6 +1,7 @@
 ---
 title: BluetoothCharacteristicProperties.writableAuxiliaries
 slug: Web/API/BluetoothCharacteristicProperties/writableAuxiliaries
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth

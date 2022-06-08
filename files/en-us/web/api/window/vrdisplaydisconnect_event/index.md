@@ -1,6 +1,7 @@
 ---
 title: 'Window: vrdisplaydisconnect event'
 slug: Web/API/Window/vrdisplaydisconnect_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
@@ -53,7 +54,7 @@ window.addEventListener('vrdisplaydisconnect', function() {
 });
 ```
 
-Or use the [`onvrdisplaydisconnect`](/en-US/docs/Web/API/Window/onvrdisplaydisconnect) event handler property:
+Or use the `onvrdisplaydisconnect` event handler property:
 
 ```js
 window.onvrdisplaydisconnect = function() {

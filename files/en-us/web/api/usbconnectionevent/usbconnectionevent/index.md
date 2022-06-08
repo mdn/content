@@ -1,6 +1,7 @@
 ---
 title: USBConnectionEvent()
 slug: Web/API/USBConnectionEvent/USBConnectionEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

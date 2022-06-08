@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.tHead
 slug: Web/API/HTMLTableElement/tHead
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

@@ -1,6 +1,7 @@
 ---
 title: BarProp
 slug: Web/API/BarProp
+page-type: web-api-interface
 tags:
   - API
   - Interface

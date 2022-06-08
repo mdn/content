@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamBYOBReader.releaseLock()
 slug: Web/API/ReadableStreamBYOBReader/releaseLock
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

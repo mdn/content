@@ -1,6 +1,7 @@
 ---
 title: MediaStreamEvent.stream
 slug: Web/API/MediaStreamEvent/stream
+page-type: web-api-instance-property
 tags:
   - Experimental
   - MediaStreamEvent

@@ -1,6 +1,7 @@
 ---
 title: Document.mozSetImageElement()
 slug: Web/API/Document/mozSetImageElement
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

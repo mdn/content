@@ -1,6 +1,7 @@
 ---
 title: ReadableStream()
 slug: Web/API/ReadableStream/ReadableStream
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -76,7 +77,7 @@ new ReadableStream(underlyingSource, queuingStrategy)
     - `highWaterMark`
       - : A non-negative integer — this defines the total number of chunks that can be
         contained in the internal queue before backpressure is applied.
-    - size(chunk)
+    - `size(chunk)`
       - : A method containing a parameter `chunk` — this indicates the size to
         use for each chunk, in bytes.
 
@@ -99,8 +100,7 @@ An instance of the {{domxref("ReadableStream")}} object.
 ## Examples
 
 In the following simple example, a custom `ReadableStream` is created using
-a constructor (see our [Simple random
-stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/) for the full code). The `start()` function generates a
+a constructor (see our [Simple random stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/) for the full code). The `start()` function generates a
 random string of text every second and enqueues it into the stream. A
 `cancel()` function is also provided to stop the generation if
 {{domxref("ReadableStream.cancel()")}} is called for any reason.

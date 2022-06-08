@@ -1,6 +1,7 @@
 ---
 title: VRLayerInit.leftBounds
 slug: Web/API/VRLayerInit/leftBounds
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onpause
 slug: Web/API/GlobalEventHandlers/onpause
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -38,4 +39,4 @@ specifying the handler for the event.
 ## See also
 
 - {{event("pause")}}
-- [DOM event handlers](/en-US/docs/Web/Guide/Events/Event_handlers)
+- [DOM event handlers](/en-US/docs/Web/Events/Event_handlers)

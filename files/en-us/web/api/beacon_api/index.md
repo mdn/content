@@ -1,10 +1,12 @@
 ---
 title: Beacon API
 slug: Web/API/Beacon_API
+page-type: web-api-overview
 tags:
   - Guide
   - Overview
   - Web Performance
+browser-compat: api.Navigator.sendBeacon
 ---
 {{DefaultAPISidebar("Beacon")}}
 
@@ -24,11 +26,11 @@ The method takes two arguments, the URL and the data to send in the request. The
 
 ## Specifications
 
-{{Specifications("api.Navigator.sendBeacon")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Navigator.sendBeacon")}}
+{{Compat}}
 
 ## See also
 

@@ -395,11 +395,11 @@ It's possible to use `String` as a more reliable
 used on {{jsxref("null")}} and {{jsxref("undefined")}}. For example:
 
 ```js
-var nullVar = null;
+const nullVar = null;
 nullVar.toString();       // TypeError: nullVar is null
 String(nullVar);          // "null"
 
-var undefinedVar;
+const undefinedVar;
 undefinedVar.toString();  // TypeError: undefinedVar is undefined
 String(undefinedVar);     // "undefined"
 ```
@@ -416,5 +416,4 @@ String(undefinedVar);     // "undefined"
 
 - [Text formatting in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
 - {{jsxref("RegExp")}}
-- {{domxref("DOMString")}}
 - [Binary strings](/en-US/docs/Web/API/DOMString/Binary)

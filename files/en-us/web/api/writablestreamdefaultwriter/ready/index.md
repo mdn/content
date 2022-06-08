@@ -1,6 +1,7 @@
 ---
 title: WritableStreamDefaultWriter.ready
 slug: Web/API/WritableStreamDefaultWriter/ready
+page-type: web-api-instance-property
 tags:
   - API
   - Property

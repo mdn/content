@@ -1,6 +1,7 @@
 ---
 title: AudioTrack.kind
 slug: Web/API/AudioTrack/kind
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

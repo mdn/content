@@ -1,6 +1,7 @@
 ---
 title: VRPose.angularAcceleration
 slug: Web/API/VRPose/angularAcceleration
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

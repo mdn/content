@@ -1,6 +1,7 @@
 ---
 title: BluetoothCharacteristicProperties
 slug: Web/API/BluetoothCharacteristicProperties
+page-type: web-api-interface
 tags:
   - API
   - Bluetooth

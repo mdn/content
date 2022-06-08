@@ -1,6 +1,7 @@
 ---
 title: Reporting API
 slug: Web/API/Reporting_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental
@@ -8,6 +9,7 @@ tags:
   - Reference
   - Reporting
   - Secure context
+spec-urls: https://w3c.github.io/reporting/#intro
 ---
 {{SeeCompatTable}}{{APIRef("Reporting API")}}
 
@@ -120,9 +122,7 @@ This causes a deprecation report to be generated; because of the event handler w
 
 ## Specifications
 
-| Specification                                                | Status | Comment |
-| ------------------------------------------------------------ | ------ | ------- |
-| [Reporting API spec](https://w3c.github.io/reporting/#intro) |        |         |
+{{Specifications}}
 
 ## Browser compatibility
 

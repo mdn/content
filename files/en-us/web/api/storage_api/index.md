@@ -1,6 +1,7 @@
 ---
 title: Storage API
 slug: Web/API/Storage_API
+page-type: web-api-overview
 tags:
   - API
   - Overview
@@ -10,6 +11,7 @@ tags:
   - Storage
   - Storage API
   - Usage
+browser-compat: api.StorageManager
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Storage")}} {{AvailableInWorkers}}
 
@@ -79,15 +81,11 @@ navigator.storage.estimate().then(estimate => {
 
 ## Specifications
 
-| Specification                                               |
-| ----------------------------------------------------------- |
-| [Storage Living Standard](https://storage.spec.whatwg.org/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `StorageManager`
-
-{{Compat("api.StorageManager")}}
+{{Compat}}
 
 ## See also
 

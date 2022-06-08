@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicy.createScriptURL()
 slug: Web/API/TrustedTypePolicy/createScriptURL
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: Document.open()
 slug: Web/API/Document/open
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

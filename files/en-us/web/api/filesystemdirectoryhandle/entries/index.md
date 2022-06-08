@@ -1,6 +1,7 @@
 ---
 title: FileSystemDirectoryHandle.entries()
 slug: Web/API/FileSystemDirectoryHandle/entries
+page-type: web-api-instance-method
 tags:
   - Directories
   - File System Access API

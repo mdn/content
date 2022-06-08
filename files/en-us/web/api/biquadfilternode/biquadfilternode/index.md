@@ -1,6 +1,7 @@
 ---
 title: BiquadFilterNode()
 slug: Web/API/BiquadFilterNode/BiquadFilterNode
+page-type: web-api-constructor
 tags:
   - API
   - Audio

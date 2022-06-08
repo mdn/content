@@ -222,7 +222,7 @@ try {
 ```
 
 To make  `finally` blocks of a sync generator to be always called use
-appropriate form of the loop, `for await...of` for the async generator and
+the appropriate form of the loop, `for await...of` for the async generator and
 `for...of` for the sync one and await yielded promises explicitly inside the
 loop.
 

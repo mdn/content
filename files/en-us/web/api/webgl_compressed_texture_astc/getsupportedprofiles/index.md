@@ -1,6 +1,7 @@
 ---
 title: WEBGL_compressed_texture_astc.getSupportedProfiles()
 slug: Web/API/WEBGL_compressed_texture_astc/getSupportedProfiles
+page-type: webgl-extension-method
 tags:
   - API
   - Method

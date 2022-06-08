@@ -1,6 +1,7 @@
 ---
 title: Keyboard.unlock()
 slug: Web/API/Keyboard/unlock
+page-type: web-api-instance-method
 tags:
   - API
   - Keyboard API

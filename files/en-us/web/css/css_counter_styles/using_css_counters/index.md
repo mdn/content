@@ -92,11 +92,11 @@ For example, you might use this to lay out sections as shown:
 ```
 1 One
   1.1 Nested one
-  2.1 Nested two
+  1.2 Nested two
 2 Two
-  1.1 Nested one
-  2.1 Nested two
-  3.1 Nested three
+  2.1 Nested one
+  2.2 Nested two
+  2.3 Nested three
 3 Three
 ```
 

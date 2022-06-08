@@ -1,6 +1,7 @@
 ---
 title: Window.top
 slug: Web/API/Window/top
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

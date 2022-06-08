@@ -1,6 +1,7 @@
 ---
 title: navigator.platform
 slug: Web/API/Navigator/platform
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -13,13 +14,13 @@ browser-compat: api.Navigator.platform
 ---
 {{ APIRef("HTML DOM") }}
 
-The **`platform`** property read-only property of the {{domxref("Navigator")}} interface returns a string identifying the platform on which the user’s browser is running.
+The **`platform`** property read-only property of the {{domxref("Navigator")}} interface returns a string identifying the platform on which the user's browser is running.
 
-> **Note:** In general, you should whenever possible avoid writing code that uses methods or properties like this one to try to find out information about the user’s environment, and instead write code that does [feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection).
+> **Note:** In general, you should whenever possible avoid writing code that uses methods or properties like this one to try to find out information about the user's environment, and instead write code that does [feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection).
 
 ## Value
 
-A string identifying the platform on which the user’s browser is running; for example: `"MacIntel"`, `"Win32"`, `"Linux x86_64"`, `"Linux x86_64"`.
+A string identifying the platform on which the user's browser is running; for example: `"MacIntel"`, `"Win32"`, `"Linux x86_64"`, `"Linux x86_64"`.
 
 ## Examples
 
@@ -32,7 +33,7 @@ if (navigator.platform.indexOf("Mac") === 0 || navigator.platform === "iPhone") 
 }
 ```
 
-That is, check if `navigator.platform` starts with `"Mac"` or else is an exact match for `"iPhone"`, and then based on whether either of those is true, choose the modifier key your web application’s UI will advise users to press in keyboard shortcuts.
+That is, check if `navigator.platform` starts with `"Mac"` or else is an exact match for `"iPhone"`, and then based on whether either of those is true, choose the modifier key your web application's UI will advise users to press in keyboard shortcuts.
 
 ## Usage notes
 

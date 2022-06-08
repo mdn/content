@@ -1,6 +1,7 @@
 ---
 title: OES_vertex_array_object.deleteVertexArrayOES()
 slug: Web/API/OES_vertex_array_object/deleteVertexArrayOES
+page-type: webgl-extension-method
 tags:
   - API
   - Method
@@ -24,7 +25,7 @@ deleteVertexArrayOES(arrayObject)
 
 ### Parameters
 
-- arrayObject
+- `arrayObject`
   - : A {{domxref("WebGLVertexArrayObject")}} (VAO) object to delete.
 
 ### Return value

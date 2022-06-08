@@ -54,7 +54,7 @@ In basic use without specifying a locale, a formatted string in the default loca
 with default options is returned.
 
 ```js
-var bigint = 3500n;
+const bigint = 3500n;
 
 bigint.toLocaleString();
 // Displays "3,500" if in U.S. English locale
@@ -68,7 +68,7 @@ specify that language (and possibly some fallback languages) using the
 `locales` argument:
 
 ```js
-var bigint = 123456789123456789n;
+const bigint = 123456789123456789n;
 
 // German uses period for thousands
 console.log(bigint.toLocaleString('de-DE'));
@@ -98,7 +98,7 @@ The results provided by `toLocaleString` can be customized using the
 `options` argument:
 
 ```js
-var bigint = 123456789123456789n;
+const bigint = 123456789123456789n;
 
 // request a currency format
 console.log(bigint.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));

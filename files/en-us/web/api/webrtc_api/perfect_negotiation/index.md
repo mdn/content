@@ -1,6 +1,7 @@
 ---
 title: 'Establishing a connection: The WebRTC perfect negotiation pattern'
 slug: Web/API/WebRTC_API/Perfect_negotiation
+page-type: guide
 tags:
   - API
   - Configure

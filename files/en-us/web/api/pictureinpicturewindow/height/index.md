@@ -1,6 +1,7 @@
 ---
 title: PictureInPictureWindow.height
 slug: Web/API/PictureInPictureWindow/height
+page-type: web-api-instance-property
 tags:
   - API
   - Interface

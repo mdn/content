@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.focus()
 slug: Web/API/HTMLElement/focus
+page-type: web-api-instance-method
 tags:
   - API
   - Focus
@@ -131,8 +132,7 @@ focusNoScrollMethod = function getFocusWithoutScrolling() {
 - Behavior of the focus in relation to different HTML features like
   {{HTMLAttrxRef("tabindex")}} or {{Glossary("shadow tree","shadow dom", 1)}},
   which previously remained under-specified, were recently updated (as October
-  of 2019). Checkout [WHATWG
-  blog](https://blog.whatwg.org/focusing-on-focus) for more info.
+  of 2019). Checkout [WHATWG blog](https://blog.whatwg.org/focusing-on-focus) for more info.
 
 ## Browser compatibility
 

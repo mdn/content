@@ -1,6 +1,7 @@
 ---
 title: WebSocket
 slug: Web/API/WebSocket
+page-type: web-api-interface
 tags:
   - API
   - Interface

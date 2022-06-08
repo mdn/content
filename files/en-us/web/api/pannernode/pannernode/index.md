@@ -1,6 +1,7 @@
 ---
 title: PannerNode()
 slug: Web/API/PannerNode/PannerNode
+page-type: web-api-constructor
 tags:
   - API
   - Audio

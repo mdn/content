@@ -1,6 +1,7 @@
 ---
 title: XRDepthInformation
 slug: Web/API/XRDepthInformation
+page-type: web-api-interface
 tags:
   - API
   - Interface

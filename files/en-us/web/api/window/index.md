@@ -1,6 +1,7 @@
 ---
 title: Window
 slug: Web/API/Window
+page-type: web-api-interface
 tags:
   - API
   - Browser
@@ -41,7 +42,7 @@ See also the [DOM Interfaces](/en-US/docs/Web/API/Document_Object_Model).
 - {{domxref("StaticRange")}} {{experimental_inline}} {{readonlyinline}}
   - : Returns a {{domxref('StaticRange.StaticRange','StaticRange()')}} constructor which creates a {{domxref('StaticRange')}} object.
 - {{domxref("Worker")}}
-  - : Used for creating a [Web worker.](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+  - : Used for creating a [Web worker](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
 - {{domxref("XMLSerializer")}}
   - : Converts a DOM tree into XML or HTML source.
 
@@ -67,6 +68,8 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the document that the window contains.
 - {{domxref("Window.event")}} {{deprecated_inline}} {{readOnlyInline}}
   - : Returns the **current event**, which is the event currently being handled by the JavaScript code's context, or `undefined` if no event is currently being handled. The {{domxref("Event")}} object passed directly to event handlers should be used instead whenever possible.
+- {{domxref("Window.external")}} {{deprecated_inline}} {{readOnlyInline}}
+  - : Returns an object with functions for adding external search providers to the browser.
 - {{domxref("Window.frameElement")}} {{readOnlyInline}}
   - : Returns the element in which the window is embedded, or null if the window is not embedded.
 - {{domxref("Window.frames")}} {{readOnlyInline}}
@@ -171,8 +174,6 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the content element in the current window. Since Firefox 57 (initially Nightly-only), both versions are only available from chrome (privileged) code, and not available to the web anymore.
 - {{domxref("Window.defaultStatus")}} {{deprecated_inline}}
   - : Gets/sets the status bar text for the given window.
-- {{domxref("Window.mozPaintCount")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Returns the number of times the current document has been rendered to the screen in this window. This can be used to compute rendering performance.
 - {{domxref("Window.orientation")}} {{readOnlyInline}} {{deprecated_inline}}
   - : Returns the orientation in degrees (in 90 degree increments) of the viewport relative to the device's natural orientation.
 - {{domxref("Window.returnValue")}} {{deprecated_inline}}
@@ -327,7 +328,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.oncontextmenu")}}
   - : Called when the RIGHT mouse button is pressed
 - {{domxref("GlobalEventHandlers.onerror")}}
-  - : Called when a resource fails to load OR when an error occurs at runtime. See {{event("error")}} event.
+  - : Called when a resource fails to load OR when an error occurs at runtime. See {{domxref("Window/error_event", "error")}} event.
 - {{domxref("GlobalEventHandlers.onfocus")}}
   - : Called after the window receives or regains focus. See {{event("focus")}} events.
 - {{domxref("GlobalEventHandlers.oninput")}}

@@ -20,7 +20,9 @@ This selector is useful to provide a different focus indicator based on the user
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:focus-visible
+```
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: Response.formData()
 slug: Web/API/Response/formData
+page-type: web-api-instance-method
 tags:
   - API
   - Fetch

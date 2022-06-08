@@ -1,6 +1,7 @@
 ---
 title: BluetoothCharacteristicProperties.read
 slug: Web/API/BluetoothCharacteristicProperties/read
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth

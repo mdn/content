@@ -1,6 +1,7 @@
 ---
 title: console.warn()
 slug: Web/API/console/warn
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -40,8 +41,7 @@ warn(msg, subst1, /* ..., */ substN])
   - : JavaScript objects with which to replace substitution strings within
     `msg`. This gives you additional control over the format of the output.
 
-See [Outputting
-text to the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of {{domxref("console")}} for details.
+See [Outputting text to the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of {{domxref("console")}} for details.
 
 ### Return value
 
@@ -57,5 +57,4 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [MSDN: Using
-  the F12 Tools Console to View Errors and Status](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85))
+- [MSDN: Using the F12 Tools Console to View Errors and Status](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85))
