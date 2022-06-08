@@ -175,7 +175,7 @@ This HTML will be rendered as a highlighted box, like:
 ##### Callouts
 
 ```plain
-> **Callout:** **This is how you write a callout**.
+> **Callout:** **This is how you write a callout.**
 >
 > It can have multiple paragraphs.
 ```
