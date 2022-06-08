@@ -96,9 +96,10 @@ showNotification(title, options)
       - : An ID for a given notification that allows you to find,
         replace, or remove the notification using a script if necessary.
     - `timestamp`
-      - : A {{domxref("DOMTimeStamp")}} representing the time when
-        the notification was created. It can be used to indicate the time at which a
-        notification is actual. For example, this could be in the past when a notification
+      - : A timestamp (in milliseconds, excluding leap seconds, relative to 01 January, 1970 00:00:00 UTC)
+        representing the time when the notification was created.
+        It can be used to indicate the time at which a notification is actual.
+        For example, this could be in the past when a notification
         is used for a message that couldn't immediately be delivered because the device
         was offline, or in the future for a meeting that is about to start.
     - `vibrate` {{experimental_inline}}

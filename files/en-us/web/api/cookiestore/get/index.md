@@ -52,9 +52,9 @@ A {{jsxref("Promise")}} that resolves with an object containing the first cookie
 - `path`
   - : A string containing the path of the cookie.
 - `expires`
-  - : A {{domxref("DOMTimeStamp")}} containing the expiration date of the cookie.
+  - : A timestamp (in milliseconds, excluding leap seconds, relative to 01 January, 1970 00:00:00 UTC) containing the expiration date of the cookie.
 - `secure`
-  - : A {{jsxref("boolean")}} indicating whether the cookie is to be used in secure contexts only.
+  - : A boolean value indicating whether the cookie is to be used in secure contexts only.
 - `sameSite`
 
   - : One of the following [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) values:
