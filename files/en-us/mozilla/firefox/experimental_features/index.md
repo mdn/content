@@ -900,7 +900,6 @@ With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) 
   </tbody>
 </table>
 
-
 ### Service Workers
 
 #### Preloading of service worker resources on navigation
