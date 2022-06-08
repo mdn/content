@@ -8564,6 +8564,9 @@
 /en-US/docs/Web/API/MIDIAccess/onstatechange	/en-US/docs/Web/API/MIDIAccess/statechange_event
 /en-US/docs/Web/API/MIDIInput/onmidimessage	/en-US/docs/Web/API/MIDIInput/midimessage_event
 /en-US/docs/Web/API/MIDIPort/onstatechange	/en-US/docs/Web/API/MIDIPort/statechange_event
+/en-US/docs/Web/API/MSCandidateWindowHide	/en-US/docs/Web/API/HTMLElement/mscandidatewindowhide_event
+/en-US/docs/Web/API/MSCandidateWindowShow	/en-US/docs/Web/API/HTMLElement/mscandidatewindowshow_event
+/en-US/docs/Web/API/MSCandidateWindowUpdate	/en-US/docs/Web/API/HTMLElement/mscandidatewindowupdate_event
 /en-US/docs/Web/API/MSContentZoom	/en-US/docs/Web/API/Element/msContentZoom_event
 /en-US/docs/Web/API/MSLaunchUri	/en-US/docs/Web/API/Navigator/msLaunchUri
 /en-US/docs/Web/API/MSManipulationStateChanged	/en-US/docs/Web/API/Element/MSManipulationStateChanged_event
