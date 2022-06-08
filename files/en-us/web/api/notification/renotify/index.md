@@ -21,7 +21,7 @@ option of the {{domxref("Notification.Notification","Notification()")}} construc
 ## Value
 
 A boolean value. `false` is the default; `true` makes
-the notification renotify the user.
+the notification renotify the user. If `true`, tag must be setted.
 
 ## Examples
 
@@ -29,9 +29,14 @@ The following snippet is intended to fire a notification that renotifies the use
 it has been replaced; a simple `options` object is created, and then the
 notification is fired using the `Notification()` constructor.
 
+Note: If you set `renotify: true` on a notification without a tag, you'll get the following error:
+
+TypeError: Failed to execute 'showNotification' on 'ServiceWorkerRegistration': Notifications which set the renotify flag must specify a non-empty tag
+
 ```js
 const options = {
   body: 'Do you like my Notification?',
+  tag: 'notif-with-renotify',
   renotify: true
 }
 
