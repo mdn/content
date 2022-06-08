@@ -8710,6 +8710,8 @@
 /en-US/docs/Web/API/MsPlayToPreferredSourceUri	/en-US/docs/Web/API/HTMLMediaElement/msPlayToPreferredSourceURI
 /en-US/docs/Web/API/MsPlayToPrimary	/en-US/docs/Web/API/HTMLMediaElement/msPlayToPrimary
 /en-US/docs/Web/API/MsPlayToSource	/en-US/docs/Web/API/HTMLMediaElement/msPlayToSource
+/en-US/docs/Web/API/MsRealTime	/en-US/docs/Web/API/HTMLMediaElement/msRealTime
+/en-US/docs/Web/API/MsSetMediaProtectionManager	/en-US/docs/Web/API/HTMLMediaElement/msSetMediaProtectionManager
 /en-US/docs/Web/API/MsSetVideoRectangle	/en-US/docs/Web/API/HTMLVideoElement/msSetVideoRectangle
 /en-US/docs/Web/API/MsStereo3DPackingMode	/en-US/docs/Web/API/HTMLVideoElement/msStereo3DPackingMode
 /en-US/docs/Web/API/MsStereo3DRenderMode	/en-US/docs/Web/API/HTMLVideoElement/msStereo3DRenderMode
@@ -10228,6 +10230,7 @@
 /en-US/docs/Web/API/msMatchesSelector	/en-US/docs/Web/API/Element/matches
 /en-US/docs/Web/API/msPutPropertyEnabled	/en-US/docs/Web/API/CSSStyleDeclaration/msPutPropertyEnabled
 /en-US/docs/Web/API/msRegionOverflow	/en-US/docs/Web/API/Element/msRegionOverflow
+/en-US/docs/Web/API/mssitemodejumplistitemremoved	/en-US/docs/Web/API/Document/mssitemodejumplistitemremoved_event
 /en-US/docs/Web/API/msthumbnailclick	/en-US/docs/Web/API/Document/msthumbnailclick_event
 /en-US/docs/Web/API/mute	/en-US/docs/Web/API/MediaStreamTrack/mute_event
 /en-US/docs/Web/API/navigator.doNotTrack	/en-US/docs/Web/API/Navigator/doNotTrack
