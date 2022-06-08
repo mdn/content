@@ -10,9 +10,9 @@ tags:
 ---
 {{WebAssemblySidebar}}
 
-The **`wrap`** instruction, is used to convert numbers of type `i64` to type `i32`.
+The **`wrap`** instruction, is used to convert numbers of type `i64` to type `i32`. If the number is larger than what an `i32` can hold this operation will wrap, resulting in a different number.
 
-> **Note:** If the number is larger than what an `i32` can hold this operation will [wrap](https://en.wikipedia.org/wiki/Modular_arithmetic), resulting in a different number.
+One can think of wrap either as reducing the value [mod](https://en.wikipedia.org/wiki/Modular_arithmetic) 2<sup>32</sup>, or as discarding the high 32 bits to produce a value containing just the low 32 bits.
 
 {{EmbedInteractiveExample("pages/wat/wrap.html", "tabbed-taller")}}
 
