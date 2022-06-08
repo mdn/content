@@ -46988,6 +46988,24 @@
       "AFBarstow"
     ]
   },
+  "Web/API/HTMLElement/mscandidatewindowhide_event": {
+    "modified": "2019-03-18T21:30:58.857Z",
+    "contributors": [
+      "mattwojo"
+    ]
+  },
+  "Web/API/HTMLElement/mscandidatewindowshow_event": {
+    "modified": "2019-03-18T21:30:59.572Z",
+    "contributors": [
+      "mattwojo"
+    ]
+  },
+  "Web/API/HTMLElement/mscandidatewindowupdate_event": {
+    "modified": "2019-03-18T21:28:43.354Z",
+    "contributors": [
+      "mattwojo"
+    ]
+  },
   "Web/API/HTMLElement/nonce": {
     "modified": "2020-10-15T22:00:37.198Z",
     "contributors": [
@@ -54898,24 +54916,6 @@
       "fscholz",
       "jpmedley",
       "rolfedh"
-    ]
-  },
-  "Web/API/MSCandidateWindowHide": {
-    "modified": "2019-03-18T21:30:58.857Z",
-    "contributors": [
-      "mattwojo"
-    ]
-  },
-  "Web/API/MSCandidateWindowShow": {
-    "modified": "2019-03-18T21:30:59.572Z",
-    "contributors": [
-      "mattwojo"
-    ]
-  },
-  "Web/API/MSCandidateWindowUpdate": {
-    "modified": "2019-03-18T21:28:43.354Z",
-    "contributors": [
-      "mattwojo"
     ]
   },
   "Web/API/MSGestureEvent": {
