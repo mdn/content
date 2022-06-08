@@ -73,10 +73,10 @@ A number.
     </button>
   </body>
   <script>
-    const buttonOne = document.getElementById('aButton'),
-    buttonTwo = document.getElementById('anotherButton'),
-    divOne = document.getElementById('aDiv'),
-    divTwo = document.getElementById('anotherDiv');
+    const buttonOne = document.getElementById('aButton');
+    const buttonTwo = document.getElementById('anotherButton');
+    const divOne = document.getElementById('aDiv');
+    const divTwo = document.getElementById('anotherDiv');
 
     //check to determine if an overflow is happening
     function isOverflowing(element) {
