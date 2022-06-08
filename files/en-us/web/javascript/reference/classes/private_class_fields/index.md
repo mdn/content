@@ -120,8 +120,8 @@ class ClassWithPrivateStaticField {
   }
 }
 
-console.log(ClassWithPrivateStaticField.publicStaticMethod() === 42);
-// true
+console.log(ClassWithPrivateStaticField.publicStaticMethod()); // 42
+console.log(new ClassWithPrivateStaticField().publicInstanceMethod()); // 42
 ```
 
 There is a restriction on private static fields: Only the class which
