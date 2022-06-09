@@ -28,9 +28,9 @@ In the following code snippet from [HTML5Rocks](https://web.dev/read-files/), we
                                      window.webkitResolveLocalFileSystemURL;
 
 // Create web workers
-  var worker = new Worker('worker.js');
+  const worker = new Worker('worker.js');
   worker.onmessage = function(e) {
-    var urls = e.data.entries;
+    const urls = e.data.entries;
     urls.forEach(function(url, i) {
       window.resolveLocalFileSystemURL(url, function(fileEntry) {
         // Print out file's name.
@@ -50,12 +50,12 @@ self.requestFileSystemSync = self.webkitRequestFileSystemSync ||
                              self.requestFileSystemSync;
 
 // Global for holding the list of entry file system URLs.
-var paths = [];
+let paths = [];
 
 function getAllEntries(dirReader) {
-  var entries = dirReader.readEntries();
+  const entries = dirReader.readEntries();
 
-  for (var i = 0, entry; entry = entries[i]; ++i) {
+  for (let i = 0, entry; entry = entries[i]; ++i) {
     // Stash this entry's filesystem in URL
     paths.push(entry.toURL());
 
@@ -72,7 +72,7 @@ function onError(e) {
 }
 
 self.onmessage = function(e) {
-  var data = e.data;
+  const data = e.data;
 
   // Ignore everything else except our 'list' command.
   if (!data.cmd || data.cmd != 'list') {
@@ -80,7 +80,7 @@ self.onmessage = function(e) {
   }
 
   try {
-    var fs = requestFileSystemSync(TEMPORARY, 1024*1024 /*1MB*/);
+    const fs = requestFileSystemSync(TEMPORARY, 1024*1024 /*1MB*/);
 
     getAllEntries(fs.root.createReader());
 
