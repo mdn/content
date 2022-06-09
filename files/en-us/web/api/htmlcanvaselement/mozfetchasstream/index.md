@@ -47,7 +47,7 @@ FileUtils.jsm. Also uses NetUtil.jsm
 ```js
 const canvas = document.getElementById('canvas');
 const d = canvas.width;
-ctx = canvas.getContext('2d');
+const ctx = canvas.getContext('2d');
 ctx.beginPath();
 ctx.moveTo(d / 2, 0);
 ctx.lineTo(d, d);
