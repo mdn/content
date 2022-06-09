@@ -119,6 +119,28 @@ Each example must have an H3 heading naming the example. The heading should be d
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information.
 
+> **Note:** Sometimes you will want to link to examples given on another page.
+>
+> If you have some examples in this page and some more examples on another page, then include an H3 heading for each example in this page, then a final H3 heading with the text "More examples", under which you can link to the extra examples. For example:
+>
+>  ```md
+>  ## Examples
+>
+>  ### Using the fetch API
+>  ... example of Fetch
+>
+>  ### More examples
+>  ...links to further examples
+>  ```
+>
+> If you _only_ have examples on another page, then you should not provide any H3 headings, but just add the links directly under the "Examples" H2. For example:
+>
+>  ```md
+>   ## Examples
+>
+>   For examples of this API, see [the page on fetch()](https://example.org).
+>
+
 ## Specifications
 
 {{Specifications}}

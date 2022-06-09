@@ -81,6 +81,7 @@ For example:
 
 ````
 ## Examples
+
 ### Styling a paragraph
 
 In this example, we're using CSS to style paragraphs that have the `fancy` class set.
