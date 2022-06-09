@@ -209,13 +209,13 @@ Before we move on, let's look at an example in action.
 
 So what's going on here? First of all, we are only interested in the first seven rules of this example, and as you'll notice, we have included their specificity values in a comment before each one.
 
-- The first two selectors are competing over the styling of the link's background color — the second one wins and makes the background color blue because it has an extra ID selector in the chain: its specificity is 201 vs. 101.
-- The third and fourth selectors are competing over the styling of the link's text color — the second one wins and makes the text white because although it has one less element selector, the missing selector is swapped out for a class selector, which is worth ten rather than one. So the winning specificity is 113 vs. 104.
-- Selectors 5–7 are competing over the styling of the link's border when hovered. Selector six clearly loses to five with a specificity of 23 vs. 24 — it has one fewer element selectors in the chain. Selector seven, however, beats both five and six — it has the same number of sub-selectors in the chain as five, but an element has been swapped out for a class selector. So the winning specificity is 33 vs. 23 and 24.
+- The first two selectors are competing over the styling of the link's background color — the second one wins and makes the background color blue because it has an extra ID selector in the chain: its specificity is 2-0-1 vs. 1-0-1.
+- The third and fourth selectors are competing over the styling of the link's text color — the second one wins and makes the text white because although it has one less element selector, the missing selector is swapped out for a class selector, which has more weight than infinity element selectors. The winning specificity is 1-1-3 vs. 1-0-4.
+- Selectors 5–7 are competing over the styling of the link's border when hovered. Selector six clearly loses to five with a specificity of 0-2-3 vs. 0-2-4 — it has one fewer element selectors in the chain. Selector seven, however, beats both five and six — it has the same number of sub-selectors in the chain as five, but an element has been swapped out for a class selector. So the winning specificity is 0-3-3 vs. 0-2-3 and 0-2-4.
 
-> **Note:** This has only been an approximate example for ease of understanding. In actuality, each selector type has its own level of specificity that cannot be overwritten by selectors with a lower specificity level. For example, a _million_ **class** selectors combined would not be able to overwrite the rules of _one_ **id** selector.
+> **Note:** Each selector type has its own level of specificity that cannot be overwritten by selectors with a lower specificity level. For example, a _million_ **class** selectors combined would not be able to overwrite the rules of _one_ **id** selector.
 >
-> A more accurate way to evaluate specificity would be to score the specificity levels individually starting from highest and moving on to lowest when necessary. Only when there is a tie between selector scores within a specificity level do you need to evaluate the next level down; otherwise, you can disregard the lower specificity level selectors since they can never overwrite the higher specificity levels.
+> The best way to evaluate specificity is to score the specificity levels individually starting from highest and moving on to lowest when necessary. Only when there is a tie between selector scores within a specificity column do you need to evaluate the next column down; otherwise, you can disregard the lower specificity selectors since they can never overwrite the higher specificity selector component.
 
 ### Inline styles
 
@@ -236,17 +236,21 @@ Let's walk through this to see what's happening — try removing some of the pro
 1. You'll see that the third rule's {{cssxref("color")}} and {{cssxref("padding")}} values have been applied, but the {{cssxref("background-color")}} hasn't. Why? Really, all three should surely apply because rules later in the source order generally override earlier rules.
 2. However, the rules above it win because class selectors have higher specificity than element selectors.
 3. Both elements have a {{htmlattrxref("class")}} of `better`, but the 2nd one has an {{htmlattrxref("id")}} of `winning` too. Since IDs have an _even higher_ specificity than classes (you can only have one element with each unique ID on a page, but many elements with the same class — ID selectors are _very specific_ in what they target), the red background color and the 1px black border should both be applied to the 2nd element, with the first element getting the gray background color, and no border, as specified by the class.
-4. The 2nd element _does_ get the red background color, but no border. Why? Because of the `!important` declaration in the second rule — including this after `border: none` means that this declaration will win over the border value in the previous rule, even though the ID has higher specificity.
+4. The 2nd element _does_ get the red background color, but no border. Why? Because of the `!important` flag in the second rule — including this after `border: none` means that this declaration will win over the border value in the previous rule, even though the ID has higher specificity.
 
-> **Note:** The only way to override this `!important` declaration would be to include another `!important` declaration on a declaration with the _same specificity_ later in the source order, or one with higher specificity.
+> **Note:** The only way to override an important declaration is to include another important declaration with the _same specificity_ later in the source order, or one with higher specificity, or to include an important declaration in a prior cascade layer (we haven't covered cascade layers yet).
 
-One situation in which you may have to use `!important` is when you are working on a CMS where you can't edit the core CSS modules, and you really want to override a style that can't be overridden in any other way. But really, don't use it if you can avoid it.
+One situation in which you may have to use `!important` is when you are working on a CMS where you can't edit the core CSS modules, and you really want to override an inline style or an important declaration that can't be overridden in any other way. But really, don't use it if you can avoid it.
 
 ## The effect of CSS location
 
-Finally, it is also useful to note that the importance of a CSS declaration depends on what stylesheet it is specified in — it is possible for users to set custom stylesheets to override the developer's styles. For example, the user might be visually impaired, and want to set the font size on all web pages they visit to be double the normal size to allow for easier reading.
+Finally, it is important to note that the precedence of a CSS declaration depends on what stylesheet and cascade layer it is specified in. 
 
-## Order of overriding declarations
+It is possible for users can set custom stylesheets to override the developer's styles. For example, the user might be visually impaired, and want to set the font size on all web pages they visit to be double the normal size to allow for easier reading.
+
+It is also possible to declare developer styles in cascade layers, making later in non-layered styles override styles declared in layers, and making styles declared in later layers override styles from earlier declared layers. For example, as a developer you may not be able to edit a 3rd party stylesheet, but you can import the external stylesheet into a cascade layer so that all of your styles easily override the imported styles without worrying about 3rd party selector specificity.
+
+### Order of overriding declarations
 
 Conflicting declarations will be applied in the following order, with later ones overriding earlier ones:
 
@@ -255,8 +259,22 @@ Conflicting declarations will be applied in the following order, with later ones
 3. Normal declarations in author style sheets (these are the styles set by us, the web developers).
 4. Important declarations in author style sheets
 5. Important declarations in user style sheets
+6. Important declarations in user agent style sheets
 
-It makes sense for web developers' stylesheets to override user stylesheets, so the design can be kept as intended, but sometimes users have good reasons to override web developer styles, as mentioned above — this can be achieved by using `!important` in their rules.
+Note that the order of precendence is inverted for important styles. It makes sense for web developers' stylesheets to override user stylesheets, so the design can be kept as intended, but sometimes users have good reasons to override web developer styles, as mentioned above — this can be achieved by using `!important` in their rules.
+
+### Order of cascade layers
+
+While layers are a more advanced topic that you may not use right away, when you do start using [cascade layers](/en-US/docs/Web/CSS/@layer), it's important to understand how layers cascade. 
+
+When you declare CSS in cascade layers, the order of precedence is determined by the order in which the layers is declared. CSS declared outside of any layer is combined together, in the order in which the styles are declared, as a final, unnamed layer, as if it were a last declared layer. With competing normal (not important) styles, later layers take precedence over earlier layers. For importand styles, the order is reversed, with important styles in earlier layers taking precedence over important styles declared in subsquent layers or outside of any layer. Inline styles take precedence over all author styles, no matter the layer.
+
+When you have multiple style blocks in different layers providing competing values for a property on a single element, the layer in which the styles are declared determine the precedence. Specifity between layers doesn't matter, but specificity within a single layer still does.
+
+{{EmbedGHLiveSample("css-examples/learn/cascade/cascade-layers.html", '100%', 800)}}
+
+Let's discuss a few things from the above to understand what's happening. There are two layers, `firstLayer` and `secondLayer`, in that order. While the specifity in `secondLayer` is the highest, no properties from that declaration are used. Why? Because non-layered normal styles take precedence over layered normal styles, no matter the specificity, and important layered styles take precedence over important styles declared in later layers, again, no matter the specificity. By changing the first line of CSS to read `@layer secondLayer, firstLayer;` you will change the layer order, and all the important styles from `firstLayer` will be changed to the values in `secondLayer`.
+
 
 ## Test your skills!
 
