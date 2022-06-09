@@ -18,7 +18,7 @@ tags:
 
 Specificity is an algorithm that calculates the weight that is applied to a given CSS declaration. The weight is determined by the number of [selectors of each weight category](#selector-weight-categories) in the selector matching the element (or pseudo-element). If there are two or more declarations providing different property values for the same element, the declaration value in the style block having the matching selector with the greatest algorithmic weight gets applied.
 
-The specificity alorithm is basically a 3-column value of the number of selector components in each weight category. The three categories, or weights, are ID, CLASS, and TYPE. The three column value is written as a count of components in each weight category: _ID - CLASS - TYPE_. The three columns are created by counting the number of selector components for each selector weight category in the selectors that match the element. 
+The specificity algorithm is basically a three-column value of three categories or weights - ID, CLASS, and TYPE - corresponding to the three types of selectors. The value represents the count of selector components in each weight category and is written as _ID - CLASS - TYPE_. The three columns are created by counting the number of selector components for each selector weight category in the selectors that match the element. 
 
 ### Selector weight categories
 
