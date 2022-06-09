@@ -244,7 +244,14 @@ In the above example, all paragraph text, including the nested content, will be 
 
 The best approach is to not use `!important`. The above explanations on specificity should be helpful in avoiding using the flag and removing it altogether when encountered. 
 
-To remove the perceived need for `!important`, you can 1) increase the specifity of the selector of the formerly important declaration so it is greater than other declarations, 2) give it the same specificity and put it after the declaration it is meant to override, 3) reduce the specificity of the selector you are trying to override. These methods are all covered above. 
+To remove the perceived need for `!important`, you can do one of the following:
+
+- Increase the specificity of the selector of the formerly `!important` declaration so that it is greater than other declarations
+- Give it the same specificity and put it after the declaration it is meant to override
+- Reduce the specificity of the selector you are trying to override.
+
+All these methods are covered in preceding sections. 
+
  
 When unable to remove `!important` flags from an authors style sheet, the only solution to overriding the important styles is by using `!important`. Creating a [cascade layer](../@layer/) of important declaration overrides is an excellent solution. Two ways of doing this include:
 
