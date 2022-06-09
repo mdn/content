@@ -72,7 +72,7 @@ Once the specificity values of the relevant selectors are determined, the number
 .bodyClass .sectionClass .parentClass [id="myElement"] { color: yellow; /* 0-4-0 */}
 ```
 
-The first column is the number of `id` components in each selector. The number in the _ID_ columns of competing selectors are compared. The selector with the greater value in the _ID_ column wins no matter what the values are in the other columns. Even though the first selector has more components in total, only the number in the first column matters. 
+The first column is the value of the _ID_ component, which is the number of IDs in each selector. The numbers in the _ID_ columns of competing selectors are compared. The selector with the greater value in the _ID_ column wins no matter what the values are in the other columns. In the above example, even though the yellow selector has more components in total, only the value of the first column matters. 
 
 If the number in the _ID_ columns of competing selectors is the same, then the next column, _CLASS_, is compared, as shown below.
 
