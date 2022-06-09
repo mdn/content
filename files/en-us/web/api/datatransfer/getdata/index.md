@@ -70,7 +70,7 @@ This example shows the use of the {{domxref("DataTransfer")}} object's
 }
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 function allowDrop(allowdropevent) {
