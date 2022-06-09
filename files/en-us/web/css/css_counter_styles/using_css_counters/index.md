@@ -242,12 +242,10 @@ a[href]:empty::after {
 
 {{EmbedLiveSample("A_more_sophisticated_example", "100%", 150)}}
 
-## Nesting counters
+### Example of a nested counter
 
 A CSS counter can be especially useful for making outlined lists, because a new instance of the counter is automatically created in child elements.
 Using the {{cssxref("counters", "counters()")}} function, separating text can be inserted between different levels of nested counters.
-
-### Example of a nested counter
 
 #### CSS
 
