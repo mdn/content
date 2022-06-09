@@ -31,7 +31,8 @@ A boolean value that is `true` if at least one cell was unregistered and `false`
 
 ### Exceptions
 
-A `TypeError` is thrown if `unregisterToken` is not an object.
+- {{jsxref("TypeError")}}
+  - : Thrown when `unregisterToken` is not an object.
 
 ## Notes
 
