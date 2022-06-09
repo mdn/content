@@ -80,7 +80,7 @@ If you're not using a particular language type (for example if you are not using
 For example:
 
 ````
-
+## Examples
 ### Styling a paragraph
 
 In this example we're using CSS to style paragraphs which have the `fancy` class set.
