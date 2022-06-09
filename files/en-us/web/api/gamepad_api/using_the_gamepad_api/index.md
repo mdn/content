@@ -311,7 +311,7 @@ function updateStatus() {
 
 function scangamepads() {
   const gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads() : []);
-  for (var i = 0; i < gamepads.length; i++) {
+  for (let i = 0; i < gamepads.length; i++) {
     if (gamepads[i]) {
       if (gamepads[i].index in controllers) {
         controllers[gamepads[i].index] = gamepads[i];
