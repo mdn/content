@@ -258,7 +258,7 @@ When unable to remove `!important` flags from an authors style sheet, the only s
 Method #1
 
   1. Create a separate, short style sheet containing only important declarations specifically overriding any important declarations you were unable to remove. 
-  2. Import this stylesheet as the first import in your CSS using `layer()`, including the `@import` before linking to other stylesheets to be certain the important overrides is imported as the first layer. 
+  2. Import this stylesheet as the first import in your CSS using `layer()`, including the `@import` statement, before linking to other stylesheets. This is to ensure that the important overrides is imported as the first layer. 
 
 ```html
 <style>
