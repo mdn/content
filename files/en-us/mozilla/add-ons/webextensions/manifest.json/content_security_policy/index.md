@@ -205,7 +205,7 @@ Enable the use of [WebAssembly](/en-US/docs/WebAssembly):
 
 **Manifest V2**
 
-For backward compatibility, Manifest V2 extensions can make use of web assembly without the use of `wasm-unsafe-eval`. However, if the extension uses WebAssembly inclusion of `wasm-unsafe-eval`is recommended. See [WebAssembly
+For backward compatibility, Manifest V2 extensions can use web assembly without the use of `wasm-unsafe-eval`. However, if the extension uses WebAssembly, inclusion of `wasm-unsafe-eval` is recommended. See [WebAssembly
 ](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#webassembly) on the Content Security Policy page for more information.
 
 ```json
