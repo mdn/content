@@ -37,6 +37,14 @@ register(target, heldValue, unregisterToken);
 
 `undefined`.
 
+### Exceptions
+
+A `TypeError` is thrown in one of the following cases:
+
+- `target` is not an object (object as opposed to primitives; functions are objects as well)
+- `target === heldValue`
+- `unregisterToken` is not an object
+
 ## Notes
 
 See the [Avoid where possible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#avoid_where_possible)

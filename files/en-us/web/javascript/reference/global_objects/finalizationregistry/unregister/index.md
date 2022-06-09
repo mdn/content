@@ -27,7 +27,11 @@ unregister(unregisterToken);
 
 ### Return value
 
-`true` if at least one cell was unregistered; `false` if no cell was unregistered.
+A boolean value that is `true` if at least one cell was unregistered and `false` if no cell was unregistered.
+
+### Exceptions
+
+A `TypeError` is thrown if `unregisterToken` is not an object.
 
 ## Notes
 
