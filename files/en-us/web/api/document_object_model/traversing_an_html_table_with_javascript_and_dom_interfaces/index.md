@@ -31,23 +31,23 @@ This article is an overview of some powerful, fundamental DOM level 1 methods an
 ```js
 function generate_table() {
   // get the reference for the body
-  var body = document.getElementsByTagName("body")[0];
+  const body = document.getElementsByTagName("body")[0];
 
   // creates a <table> element and a <tbody> element
-  var tbl = document.createElement("table");
-  var tblBody = document.createElement("tbody");
+  const tbl = document.createElement("table");
+  const tblBody = document.createElement("tbody");
 
   // creating all cells
-  for (var i = 0; i < 2; i++) {
+  for (let i = 0; i < 2; i++) {
     // creates a table row
-    var row = document.createElement("tr");
+    const row = document.createElement("tr");
 
-    for (var j = 0; j < 2; j++) {
+    for (let j = 0; j < 2; j++) {
       // Create a <td> element and a text node, make the text
       // node the contents of the <td>, and put the <td> at
       // the end of the table row
-      var cell = document.createElement("td");
-      var cellText = document.createTextNode("cell in row "+i+", column "+j);
+      const cell = document.createElement("td");
+      let cellText = document.createTextNode("cell in row "+i+", column "+j);
       cell.appendChild(cellText);
       row.appendChild(cell);
     }
@@ -269,18 +269,18 @@ The basic steps to create the table in sample1.html are:
 <script>
     function start() {
         // get the reference for the body
-        var mybody = document.getElementsByTagName("body")[0];
+        let mybody = document.getElementsByTagName("body")[0];
 
         // creates <table> and <tbody> elements
         mytable = document.createElement("table");
         mytablebody = document.createElement("tbody");
 
         // creating all cells
-        for(var j = 0; j < 3; j++) {
+        for(let j = 0; j < 3; j++) {
             // creates a <tr> element
             mycurrent_row = document.createElement("tr");
 
-            for(var i = 0; i < 4; i++) {
+            for(let i = 0; i < 4; i++) {
                 // creates a <td> element
                 mycurrent_cell = document.createElement("td");
                 // creates a Text Node
@@ -355,13 +355,13 @@ Once you have the object in your JavaScript variable, you can set `style` proper
 </body>
 <script>
     function start() {
-       var mybody = document.getElementsByTagName("body")[0];
+       const mybody = document.getElementsByTagName("body")[0];
        mytable = document.createElement("table");
        mytablebody = document.createElement("tbody");
 
-       for(var row = 0; row < 2; row++) {
+       for(let row = 0; row < 2; row++) {
            mycurrent_row=document.createElement("tr");
-           for(var col = 0; col < 2; col++) {
+           for(let col = 0; col < 2; col++) {
                mycurrent_cell = document.createElement("td");
                currenttext = document.createTextNode("cell is: " + row + col);
                mycurrent_cell.appendChild(currenttext);
