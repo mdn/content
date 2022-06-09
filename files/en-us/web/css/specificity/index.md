@@ -149,7 +149,7 @@ Make sure to include a comment with every inclusion of the important flag so cod
 
 CSS declarations marked as important override any other declarations within the same cascade layer and origin. Although technically, [`!important`](/en-US/docs/Web/CSS/important) has nothing to do with specificity, it interacts directly with specificity and the cascade. It reverses the [cascade](/en-US/docs/Web/CSS/Cascade) order of stylesheets. 
 
-If declarations from the same origin and cascade layer conflict, if one property value has the `!important` flag set, the important declaration is applied no matter the specificity. When conflicting declarations from the same origin and cascade layer with the `!important` flag are applied to the same element, the declaration with a greater specificity is applied. 
+If declarations from the same origin and cascade layer conflict and one property value has the `!important` flag set, the important declaration is applied no matter the specificity. When conflicting declarations from the same origin and cascade layer with the `!important` flag are applied to the same element, the declaration with a greater specificity is applied. 
 
 Using `!important` to override specificity is considered a **bad practice** and should be avoided for this purpose. Understanding and effectively using specificity and the cascade can remove any need for the `!important` flag. 
 
@@ -205,7 +205,7 @@ You can also include the `id` or any part of a selector as a parameter in the `:
 
 ### Increasing specifity by duplicating selectors
 
-As a special case for increasing specificity duplicating weights from the _CLASS_ or _ID_ columns. Duplicating simple selectors will increase specificity when overriding very specific selectors over which you have no control. 
+As a special case for increasing specificity, you can duplicate weights from the _CLASS_ or _ID_ columns. Duplicating simple selectors will increase specificity when overriding very specific selectors over which you have no control. 
 
 ```css
 #myId#myId#myId span { /* 3-0-1 */}
@@ -253,7 +253,7 @@ To remove the perceived need for `!important`, you can do one of the following:
 All these methods are covered in preceding sections. 
 
  
-When unable to remove `!important` flags from an authors style sheet, the only solution to overriding the important styles is by using `!important`. Creating a [cascade layer](../@layer/) of important declaration overrides is an excellent solution. Two ways of doing this include:
+If you're unable to remove `!important` flags from an authors style sheet, the only solution to overriding the important styles is by using `!important`. Creating a [cascade layer](../@layer/) of important declaration overrides is an excellent solution. Two ways of doing this include:
 
 Method #1
 
@@ -287,7 +287,7 @@ Method #2
  }
 ```
   
-The specificity of the selector of the important style within the layer can be low, as long as it matches the element you are trying to override. Normal layers should be declared outside the layer as layered styles have lower precedence than unlayered styles.
+The specificity of the selector of the important style within the layer can be low, as long as it matches the element you are trying to override. Normal layers should be declared outside the layer because layered styles have lower precedence than unlayered styles.
   
 ### Tree proximity ignorance
 
@@ -331,7 +331,7 @@ The `h1` will be purple because the `h1` selector targets the element specifical
 
 ## Examples
 
-### Basic example
+In the following CSS, we have three selectors targeting {{HTMLElement('input') elements to set a color. For a given input, the specificity weight of the color declaration having precedence is the matching selector with the greatest weight:
 
 ```css
 #myElement input.myClass { color: red; } /* 1-1-1 */
@@ -341,7 +341,7 @@ html body main input { color: green; }  /* 0-0-4 */
 
 If the above selectors all target the same input, the input will be red, as the first declaration has the highest value in the _ID_ column. 
 
-The last selector has four type components. While it has the highest integer value, no matter how many type components are included, even if there were 150, type components never have precedence over a class selectors. The column values are compared starting from the left and moving right when column values are equal.
+The last selector has four _TYPE_ components. While it has the highest integer value, no matter how many elements and pseudo-elements are included, even if there were 150, TYPE components never have precedence over _CLASS_ components. The column values are compared starting from left to right when column values are equal.
 
 If we convert the id selector to an attribute selector, the first two selectors have the same specificity:
 
