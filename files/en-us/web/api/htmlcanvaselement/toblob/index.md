@@ -61,8 +61,8 @@ The code snippet below, for example, takes the image in the {{HTMLElement("canva
 const canvas = document.getElementById('canvas');
 
 canvas.toBlob(function(blob) {
-  const newImg = document.createElement('img'),
-      url = URL.createObjectURL(blob);
+  const newImg = document.createElement('img');
+  const url = URL.createObjectURL(blob);
 
   newImg.onload = function() {
     // no longer need to read the blob so it's revoked
