@@ -90,7 +90,7 @@ A download link is created by setting the download attribute. The value of the d
 ```js
 const canvas = document.getElementById('canvas');
 const d = canvas.width;
-ctx = canvas.getContext('2d');
+const ctx = canvas.getContext('2d');
 ctx.beginPath();
 ctx.moveTo(d / 2, 0);
 ctx.lineTo(d, d);
