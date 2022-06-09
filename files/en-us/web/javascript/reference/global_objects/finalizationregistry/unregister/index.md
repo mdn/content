@@ -23,12 +23,11 @@ unregister(unregisterToken);
 ### Parameters
 
 - `unregisterToken`
-  - : The token used with the {{jsxref("FinalizationRegistry.prototype.register",
-        "register")}} method when registering the target object.
+  - : The token used with the {{jsxref("FinalizationRegistry.prototype.register", "register")}} method when registering the target object. Multiple cells registered with the same `unregisterToken` will be unregistered together.
 
 ### Return value
 
-`undefined`.
+`true` if at least one cell was unregistered; `false` if no cell was unregistered.
 
 ## Notes
 
