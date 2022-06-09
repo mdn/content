@@ -10,32 +10,32 @@ tags:
 ---
 {{CSSRef}}
 
-**Specificity** is the algorithm by which browsers decide which CSS property style declaration is the most relevant to an element and, therefore, which property values will be applied. The specificity algorithm calculates [CSS selector](/en-US/docs/Web/CSS/Reference#selectors) weight to determine which rule from competing style declarations gets applied to an element. 
+**Specificity** is the algorithm used by browsers to determine the [CSS declaration](/en-US/docs/Learn/CSS/First_steps/What_is_CSS#css_syntax) that is the most relevant to an element, which in turn, determines the property value to apply to the element. The specificity algorithm calculates the weight of a [CSS selector](/en-US/docs/Web/CSS/Reference#selectors) to determine which rule from competing CSS declarations gets applied to an element. 
 
-Specificity is considered **after** determining [cascade origin and importance](/en-US/docs/Web/CSS/Cascade). In other words, for competing property declarations, specifity is only relevant and compared between selectors from the one [cascade origin and layer](/en-US/docs/Web/CSS/@layer) that has precedence for the property. Order of appearance becomes relevant when the selector specificity of the competing declarations in the cascade layer with precedence are equal.
+> Note: Browsers consider specificity **after** determining [cascade origin and importance](/en-US/docs/Web/CSS/Cascade). In other words, for competing property declarations, specificity is relevant and compared only between selectors from the one [cascade origin and layer](/en-US/docs/Web/CSS/@layer) that has precedence for the property. Order of appearance becomes relevant when the selector specificity of the competing declarations in the cascade layer with precedence are equal.
 
 ## How is specificity calculated?
 
-Specificity is an algorithm that is applied to a given CSS declaration, determined by the number of [selectors of each weight category](#selector-weight-categories) in the selector matching the element (or pseudo-element). If there are two or more declarations providing different property values for the same element, the declaration value in the style block having the matching selector with the greatest algorithmic weight gets applied.
+Specificity is an algorithm that calculates the weight that is applied to a given CSS declaration. The weight is determined by the number of [selectors of each weight category](#selector-weight-categories) in the selector matching the element (or pseudo-element). If there are two or more declarations providing different property values for the same element, the declaration value in the style block having the matching selector with the greatest algorithmic weight gets applied.
 
 The specificity alorithm is basically a 3-column value of the number of selector components in each weight category. The three categories, or weights, are ID, CLASS, and TYPE. The three column value is written as a count of components in each weight category: _ID - CLASS - TYPE_. The three columns are created by counting the number of selector components for each selector weight category in the selectors that match the element. 
 
 ### Selector weight categories
 
-The following list of selectors decrease by specificity:
+The selector weight categories are listed here in the order of decreasing specificity:
 
-- ID Column
-  - : Includes only [ID selectors](/en-US/docs/Web/CSS/ID_selectors), such as `#example`. For each ID in a matching selector, add 1-0-0 to the value.
-- CLASS Column
-  - : Includes [class selectors](/en-US/docs/Web/CSS/Class_selectors), such as `.myClass`, attributes selectors like `[type="radio"]` and `[lang|="fr"]`, and pseudo-classes, such as `:hover`, `:nth-of-type(3n)`, and `:required`. For each class, attribute selector, or pseudo-class in a matching selector, add 0-1-0 to the value.
+- ID column
+  - : Includes only [ID selectors](/en-US/docs/Web/CSS/ID_selectors), such as `#example`. For each ID in a matching selector, add 1-0-0 to the weight value.
+- CLASS column
+  - : Includes [class selectors](/en-US/docs/Web/CSS/Class_selectors), such as `.myClass`, attribute selectors like `[type="radio"]` and `[lang|="fr"]`, and pseudo-classes, such as `:hover`, `:nth-of-type(3n)`, and `:required`. For each class, attribute selector, or pseudo-class in a matching selector, add 0-1-0 to the weight value.
 - TYPE column
-  - : Includes [type selectors](/en-US/docs/Web/CSS/Type_selectors), such as `p`, `h1`, and `td`,  and pseudo-elements like `::before`, `::placeholder`, and all other selectors with double colon notation. For each element or pseudo-element in a matching selector, add 0-0-1 to the value.
+  - : Includes [type selectors](/en-US/docs/Web/CSS/Type_selectors), such as `p`, `h1`, and `td`,  and pseudo-elements like `::before`, `::placeholder`, and all other selectors with double-colon notation. For each type or pseudo-element in a matching selector, add 0-0-1 to the weight value.
 - No value
-  - : The Universal selector ({{CSSxRef("Universal_selectors", "*")}}), and {{CSSxRef(":where", ":where()")}} and its parameters, aren't counted in the equation, but they do match elements. The value for both the universal selector and the specificity adjustment pseudo-class is 0-0-0; these selectors do not impact the specificity algorithm value.
+  - : The universal selector ({{CSSxRef("Universal_selectors", "*")}}) and the pseudo-class {{CSSxRef(":where", ":where()")}} and its parameters aren't counted when calculating the weight, but they do match elements. The value for both the universal selector and the pseudo-class is 0-0-0; these selectors do not impact the specificity weight value.
 
-Combinators, such as {{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Descendant_combinator), and {{CSSxRef("Column_combinator", "||")}} may make a selector more specific, but don't add value to the specificy value. 
+Combinators, such as {{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Descendant_combinator), and {{CSSxRef("Column_combinator", "||")}}, may make a selector more specific but don't add any value to the specificity weight. 
 
-The negation pseudo-class, {{CSSxRef(":not", ":not()")}},  itself has no weight. Neither does the {{CSSxRef(":is", ":is()")}} pseudo-class. The parameters in these selectors, however, do. The value of both come from the parameter in the list of parameters that has the highest specificity. The [`:not()` and `:is()` exceptions](#the-is-and-not-exceptions) are discussed below.
+The negation pseudo-class, {{CSSxRef(":not", ":not()")}},  itself has no weight. Neither does the {{CSSxRef(":is", ":is()")}} pseudo-class. The parameters in these selectors, however, do. The values of both come from the parameter in the list of parameters that has the highest specificity. The [`:not()` and `:is()` exceptions](#the-is-and-not-exceptions) are discussed below.
 
 #### Matching selector
 
@@ -49,13 +49,13 @@ input:focus,
 }
 ```
 
-The `[type="password"]` selector in the above selector list, with a specificity `0-1-0`, applies the `color: blue` declaration to all password input types at the weight of `0-1-0`. 
+The `[type="password"]` selector in the above selector list, with a specificity weight of `0-1-0`, applies the `color: blue` declaration to all password input types. 
 
-All inputs, no matter the type, when receiving focus, match the second selector in the list, `input:focus`, with a specificity of `0-1-1`; this weight is made up of the `:focus` pseudo-class (0-1-0) and the `input` type (0-1-1). If the password input has focus, it will match `input:focus`, and the specificity for the `color: blue` style declaration will be `0-1-1`. When that password doesn't have focus, the specificity remains at `0-1-0`.
+All inputs, no matter the type, when receiving focus, match the second selector in the list, `input:focus`, with a specificity weight of `0-1-1`; this weight is made up of the `:focus` pseudo-class (0-1-0) and the `input` type (0-1-1). If the password input has focus, it will match `input:focus`, and the specificity weight for the `color: blue` style declaration will be `0-1-1`. When that password doesn't have focus, the specificity weight remains at `0-1-0`.
 
 The specificity for a required input nested in an element with attribute `id="myApp"` is `1-2-1`, based on one ID, two pseudo-classes, and one element type. 
 
-If the password input type is nested in a element with `id="myApp"` set, the specificity will be `1-2-1`, whether or not it has focus. Why is the specificity `1-2-1` rather than `0-1-1` or `0-1-0` in this case? Because the specificity weight comes from the matching selector with the greatest specificity weight. The weight is determined by comparing the values in the three columns, from left to right. 
+If the password input type is nested in an element with `id="myApp"` set, the specificity weight will be `1-2-1`, whether or not it has focus. Why is the specificity weight `1-2-1` rather than `0-1-1` or `0-1-0` in this case? Because the specificity weight comes from the matching selector with the greatest specificity weight. The weight is determined by comparing the values in the three columns, from left to right. 
 
 ```css
 [type="password"]             /* 0-1-0 */
@@ -63,9 +63,9 @@ input:focus                   /* 0-1-1 */
 :root #myApp input:required   /* 1-2-1 */
 ```
 
-### 3-column comparison
+### Three-column comparison
 
-Once the specificity value of the relevant selectors are determined, the number of selector components in each column are compared, from left to right.
+Once the specificity values of the relevant selectors are determined, the number of selector components in each column are compared, from left to right.
 
 ```css
 #myElement { color: green; /* 1-0-0  - WINS!! */}
@@ -74,23 +74,23 @@ Once the specificity value of the relevant selectors are determined, the number 
 
 The first column is the number of `id` components in each selector. The number in the _ID_ columns of competing selectors are compared. The selector with the greater value in the _ID_ column wins no matter what the values are in the other columns. Even though the first selector has more components in total, only the number in the first column matters. 
 
-If the values in the ID column are equal, then the next column is compared.
+If the number in the _ID_ columns of competing selectors is the same, then the next column, _CLASS_, is compared, as shown below.
 
 ```css
 #myElement { color: yellow; /* 1-0-0  */}
 #myApp [id="myElement"] { color: green; /* 1-1-0  - WINS!! */}
 ```
 
-If there is an equal number of _ID_ values, the _CLASS_ column is compared. The _CLASS_ column is the number of class names, attribute selectors, and pseudo-classes in the selector. When the _id_ columns are equal, the selector with the greater number of _CLASS_ value wins, no matter the value in the _type_ column. 
+The _CLASS_ column is the count of class names, attribute selectors, and pseudo-classes in the selector. When the _ID_ column value is the same, the selector with the greater value in the _CLASS_ column wins, no matter the value in the _TYPE_ column. This is shown in the example below.
 
 ```css
 :root input { color: green; /* 0-1-1 - WINS because CLASS column is greater */}
 html body main input  { color: yellow; /* 0-0-4 */}
 ```
 
-If the values in the _CLASS_ and _ID_ columns are equal, the _TYPE_ column becomes relevant. The _TYPE_ column is the number of element types and pseudo-elements in the selector. When the first two columns have the same value, the selector with the greater number of _TYPE_ values wins. 
+If the numbers in the _CLASS_ and _ID_ columns in competing selectors are the same, the _TYPE_ column becomes relevant. The _TYPE_ column is the number of element types and pseudo-elements in the selector. When the first two columns have the same value, the selector with the greater number in the _TYPE_ column wins. 
 
-If there are equal values in all three columns, the proximity rule comes into play, wherein the last declared style has precedence. 
+If the competing selectors have the same values in all the three columns, the proximity rule comes into play, wherein the last declared style gets precedence. 
 
 ```css
 input.myClass { color: yellow; /* 0-1-1 */}
@@ -99,7 +99,7 @@ input.myClass { color: yellow; /* 0-1-1 */}
 
 ### The `:is()` and `:not()` exceptions
 
-The matches-any pseudo-class {{CSSxRef(":is", ":is()")}} and the negation pseudo-class {{CSSxRef(":not", ":not()")}} are _not_ considered a pseudo-class in the specificity calculation. They, themselves, add no weight to the specificity equation. However, the selector parameters passed into the pseudo-class parenthesis are part of the specificity algorithm; the weight of the matches-any and negation pseudoclass in the specificity value calculation is the weight of the parameter's [weight](#selector-weight-categories).
+The matches-any pseudo-class {{CSSxRef(":is", ":is()")}} and the negation pseudo-class {{CSSxRef(":not", ":not()")}} are _not_ considered as pseudo-classes in the specificity weight calculation. They themselves don't add any weight to the specificity equation. However, the selector parameters passed into the pseudo-class parenthesis are part of the specificity algorithm; the weight of the matches-any and negation pseudo-class in the specificity value calculation is the weight of the parameter's [weight](#selector-weight-categories).
 
 ```css
 p { /* 0-0-1 */ }
@@ -109,7 +109,7 @@ div.outer p {  /* 0-1-2 */ }
 div:not(.inner) p {  /* 0-1-2 */ }
 ``` 
 
-Note that in the above CSS pairing, the specificity weight provided by the `:is()` and `:not()` pseudo-classes is the value of the selector parameter, not the pseudoclass. 
+Note that in the above CSS pairing, the specificity weight provided by the `:is()` and `:not()` pseudo-classes is the value of the selector parameter, not of the pseudoclass. 
 
 Both of these pseudoclasses accept complex selector lists, or comma-separated selectors, as a parameter. This feature can be used to increase an selector's specificity:
 
@@ -119,7 +119,7 @@ p:not(#fakeId) {  /* 1-0-1 */ }
 div:not(.inner, #fakeId) p {  /* 1-0-2 */ }
 ```
 
-In the above CSS code block we have included `#fakeId` in the selectors. This fake id makes adds `1-0-0` to the specifity of each paragraph.
+In the above CSS code block, we have included `#fakeId` in the selectors. This `#fakeId` adds `1-0-0` to the specificity weight of each paragraph.
 
 Generally, you want to keep specificity down to a minumum, but if you need to increase an element's specificity for a particular reason, these two pseudo-classes can help.
 ```css
@@ -129,7 +129,7 @@ In this example, all links will be blue, unless overridden by a link declaration
 
 ### Inline styles
 
-Inline styles added to an element (e.g., `style="font-weight: bold;"`) always overwrite any normal styles in author stylesheets, and thus can be thought of as having the highest specificity. Think of inline styles as having a specificity weight of `1-0-0-0`.
+Inline styles added to an element (e.g., `style="font-weight: bold;"`) always overwrite any normal styles in author stylesheets, and therefore, can be thought of as having the highest specificity. Think of inline styles as having a specificity weight of `1-0-0-0`.
 
 The only way to override inline styles is by using `!important`.
 
@@ -147,19 +147,19 @@ Make sure to include a comment with every inclusion of the important flag so cod
 
 ### The `!important` exception
 
-Important declarations override any other declarations within the same cascade layer and origin. Although technically [`!important`](/en-US/docs/Web/CSS/important) has nothing to do with specificity, it interacts directly with specificity and the cascade. It reverses the [cascade](/en-US/docs/Web/CSS/Cascade) order of stylesheets. 
+CSS declarations marked as important override any other declarations within the same cascade layer and origin. Although technically, [`!important`](/en-US/docs/Web/CSS/important) has nothing to do with specificity, it interacts directly with specificity and the cascade. It reverses the [cascade](/en-US/docs/Web/CSS/Cascade) order of stylesheets. 
 
 If declarations from the same origin and cascade layer conflict, if one property value has the `!important` flag set, the important declaration is applied no matter the specificity. When conflicting declarations from the same origin and cascade layer with the `!important` flag are applied to the same element, the declaration with a greater specificity is applied. 
 
 Using `!important` to override specificity is considered a **bad practice** and should be avoided for this purpose. Understanding and effectively using specificity and the cascade can remove any need for the `!important` flag. 
 
-Instead of using `!important` to override foreign CSS (from external libraries, like Bootstrap or normalize.css) import the 3rd party scripts directly into [cascade layers](/en-US/docs/Web/CSS/@layer). If you must use `!important` in your CSS, comment your usage so future code maintainers know why it was important and know not to override it. But, definitely, don't use `!important` when writing plugins or frameworks that other developers will need to incorporate without being able to control.
+Instead of using `!important` to override foreign CSS (from external libraries, like Bootstrap or normalize.css), import the third-party scripts directly into [cascade layers](/en-US/docs/Web/CSS/@layer). If you must use `!important` in your CSS, comment your usage so future code maintainers know why the declaration was marked important and know not to override it. But definitely, don't use `!important` when writing plugins or frameworks that other developers will need to incorporate without being able to control.
 
 ### The `:where()` exception
 
 The specificity-adjustment pseudo-class {{CSSxRef(":where", ":where()")}} always has its specificity replaced with zero, `0-0-0`. It enables making CSS selectors very specific in what element is targeted without any increase to specifity. 
 
-In creating 3rd party CSS to be used by developers who don't have access to edit your CSS, it's considered good practice to create CSS with the lowest possible specificity. If your theme includes the CSS:
+In creating third-party CSS to be used by developers who don't have access to edit your CSS, it's considered a good practice to create CSS with the lowest possible specificity. For example, if your theme includes the following CSS:
 
 ```css
 :where(#defaultTheme) a { /* 0-0-1 */
@@ -167,7 +167,7 @@ In creating 3rd party CSS to be used by developers who don't have access to edit
 }
 ```
 
-The developer implementing the widget can easily override the link color using only type selectors. 
+Then the developer implementing the widget can easily override the link color using only type selectors. 
 
 ```css
 footer a { /* 0-0-2 */
@@ -175,13 +175,13 @@ footer a { /* 0-0-2 */
 }
 ```
 
-## Tips for handling specifity headaches
+## Tips for handling specificity headaches
 
 Instead of using `!important`, consider using cascade layers and using low weight specificity throughout your CSS so that styles are easily overridden with slightly more specific rules.  Using semantic HTML helps provide anchors from which to apply styling.
 
 ### Making selectors specific with and without adding specifity
 
-By indicating the section of the document you're styling before the element you're selecting, the rule becomes more specific. Depending on how you add it, you can add some, a lot, or no specificity:
+By indicating the section of the document you're styling before the element you're selecting, the rule becomes more specific. Depending on how you add it, you can add some, a lot, or no specificity, as shown below:
 
 ```html
 <main id="myContent">
@@ -195,13 +195,13 @@ By indicating the section of the document you're styling before the element you'
 :where(#myContent) h1 { color: blue;  /* 0-0-1 */}
 ```
 
-No matter the order, the heading will be green because that rule is most specific.
+No matter the order, the heading will be green because that rule is the most specific.
 
 #### Reducing ID specificity
 
 Specificity is based on the form of a selector.  Including the `id` of an element as an attribute selector rather than an id selector is a good way to make an element more specific without adding an overabundance of specificity. In the previous example, the selector `[id="myContent"]` counts as an attribute selector for the purpose of determining the selector's specificity, even though it selects an ID.
 
-You can also include the `id`, or any part of a selector, as a parameter in the `:where()` specificity-adjustment pseudo class if need to make a selector more specific but don't want to add any specificity at all. 
+You can also include the `id` or any part of a selector as a parameter in the `:where()` specificity-adjustment pseudo class if you need to make a selector more specific but don't want to add any specificity at all. 
 
 ### Increasing specifity by duplicating selectors
 
@@ -214,14 +214,14 @@ As a special case for increasing specificity duplicating weights from the _CLASS
 
 Use this sparingly, if at all. If using selector duplication, always comment your CSS.
 
-By using `:is()` and `:not()` you can increase specificity even if you can't add an `id` to a parent element:
+By using `:is()` and `:not()`, you can increase specificity even if you can't add an `id` to a parent element:
 
 ```css
 :not(#fakeID#fakeId#fakeID) span { /* 3-0-1 */ }
 :is(#fakeID#fakeId#fakeID, span) { /* 3-0-0 */ }
 ```
 
-### Precedence over 3rd party CSS
+### Precedence over third-party CSS
 
 Leveraging cascade layers is the standard way of enabling one set of styles to take precedence over another set of styles; cascade layers enable this without using specificity! Normal (not important) author styles imported into cascade layers have lower precedence than unlayered author styles. 
 
@@ -238,11 +238,11 @@ When two selectors from different layers match the same element, origin and impo
 </style>
 ```
 
-In this example, all paragraph text, included nested content, will be `1rem` no matter how many class names the paragraphs have that match the TW stylesheet.
+In the above example, all paragraph text, including the nested content, will be `1rem` no matter how many class names the paragraphs have that match the TW stylesheet.
 
 ### Avoiding and overriding `!important`
 
-The best solution is to not use `!important`. The above explanations on specificity should be helpful in avoiding using the flag, and removing it altogether when encountered. 
+The best approach is to not use `!important`. The above explanations on specificity should be helpful in avoiding using the flag and removing it altogether when encountered. 
 
 To remove the perceived need for `!important`, you can 1) increase the specifity of the selector of the formerly important declaration so it is greater than other declarations, 2) give it the same specificity and put it after the declaration it is meant to override, 3) reduce the specificity of the selector you are trying to override. These methods are all covered above. 
  
@@ -261,7 +261,7 @@ Method #1
 
 Method #2
 
-1. At the beginning of your stylesheet declarations, create a named cascade layer:
+1. At the beginning of your stylesheet declarations, create a named cascade layer, like so:
 
 ```css
 @layer importantOverrides;
@@ -296,7 +296,7 @@ html h1 {
 }
 ```
 
-The `h1` elements will be purples because when declarations have the same specificity, the last declared selector has precedence.
+The `h1` elements will be purple because when declarations have the same specificity, the last declared selector has precedence.
 
 ### Directly targeted elements vs. inherited styles
 
@@ -351,7 +351,8 @@ When multiple declarations have equal specificity, the last declaration found in
 
 When two selectors in the the same cascade layer and origin have the same specificity, proximity is important; the last selector wins.
 
-For more information, visit: ["Specificity" in "Cascade and inheritance"](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity_2), you can also visit: [SpeciFISHity](https://specifishity.com)
+- "Specificity" in "Cascade and inheritance"](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity_2
+- [SpeciFISHity](https://specifishity.com)
 
 ## Specifications
 
