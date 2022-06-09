@@ -29,12 +29,14 @@ An array.
 
 ```js
 function gameLoop() {
+  let gp;
   if(navigator.webkitGetGamepads) {
-    const gp = navigator.webkitGetGamepads()[0];
+      gp = navigator.webkitGetGamepads()[0];
   } else {
-    const gp = navigator.getGamepads()[0];
+      gp = navigator.getGamepads()[0];
   }
-
+  let a;
+  let b;
   if(gp.axes[0] != 0) {
     b -= gp.axes[0];
   } else if(gp.axes[1] != 0) {
