@@ -368,6 +368,5 @@ When two selectors in the the same cascade layer and origin have the same specif
 ## See also
 
 - Specificity Calculator: An interactive website to test and understand your own CSS rules - <https://specificity.keegan.st/>
-- CSS4 Selectors Specificity - [http://www.w3.org/TR/selectors/#specificity](https://www.w3.org/TR/selectors/#specificity)
 - {{CSS_Key_Concepts}}
 - [_ID-CLASS-TYPE_ exercise](https://estelle.github.io/CSS/selectors/exercises/specificity.html) a specificity quiz
