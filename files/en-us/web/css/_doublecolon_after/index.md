@@ -14,7 +14,7 @@ browser-compat: css.selectors.after
 
 In CSS, **`::after`** creates a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) that is the last child of the selected element. It is often used to add cosmetic content to an element with the {{CSSxRef("content")}} property. It is inline by default.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-after.html")}}
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-after.html", "tabbed-standard")}}
 
 ```css
 /* Add an arrow after links */
