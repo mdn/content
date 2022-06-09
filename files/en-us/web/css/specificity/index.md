@@ -343,23 +343,26 @@ If the above selectors all target the same input, the input will be red, as the 
 
 The last selector has four _TYPE_ components. While it has the highest integer value, no matter how many elements and pseudo-elements are included, even if there were 150, TYPE components never have precedence over _CLASS_ components. The column values are compared starting from left to right when column values are equal.
 
-If we convert the id selector to an attribute selector, the first two selectors have the same specificity:
+Had we converted the id selector in the example code above to an attribute selector, the first two selectors would have the same specificity, as shown below:
 
 ```css
 [id="myElement"] input.myClass { color: red; }   /* 0-2-1 */
 input[type="password"]:required { color: blue; } /* 0-2-1 */
 ```
 
-When multiple declarations have equal specificity, the last declaration found in the CSS is applied to the element. Specificity only applies when the same element is targeted by multiple declarations in a cascade layer or origin. As per CSS rules, [directly targeted elements](#directly_targeted_elements_vs._inherited_styles) will always take precedence over rules which an element inherits from its ancestor.
+When multiple declarations have equal specificity, the last declaration found in the CSS is applied to the element. If both selectors match the same {{HTMLElement('input')}}, the color will be blue.
 
-> **Note:** [Proximity of elements](#tree_proximity_ignorance) in the document tree has no effect on the specificity.
+## Additional notes
 
-> **Note:** Specificity only matters for declarations of the same importance and same origin and cascade layer. If matching selectors are in different origins, the [cascade](/en-US/docs/Web/CSS/Cascade) determines which declaration takes precedence.  
+A few things to remember about specificity:
 
-When two selectors in the the same cascade layer and origin have the same specificity, proximity is important; the last selector wins.
+1. Specificity only applies when the same element is targeted by multiple declarations in the same cascade layer or origin. Specificity only matters for declarations of the same importance and same origin and [cascade layer](/en-US/docs/Web/CSS/@layer). If matching selectors are in different origins, the [cascade](/en-US/docs/Web/CSS/Cascade) determines which declaration takes precedence. 
 
-- "Specificity" in "Cascade and inheritance"](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity_2
-- [SpeciFISHity](https://specifishity.com)
+2. When two selectors in the the same cascade layer and origin have the same specificity, proximity is important; the last selector wins.
+
+3. As per CSS rules, [directly targeted elements](#directly_targeted_elements_vs._inherited_styles) will always take precedence over rules which an element inherits from its ancestor.
+
+4. [Proximity of elements](#tree_proximity_ignorance) in the document tree has no effect on the specificity.
 
 ## Specifications
 
@@ -367,6 +370,8 @@ When two selectors in the the same cascade layer and origin have the same specif
 
 ## See also
 
-- Specificity Calculator: An interactive website to test and understand your own CSS rules - <https://specificity.keegan.st/>
 - {{CSS_Key_Concepts}}
+- "Specificity" in "Cascade and inheritance"](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity_2
+- [SpeciFISHity](https://specifishity.com)
+- Specificity Calculator: An interactive website to test and understand your own CSS rules - <https://specificity.keegan.st/>
 - [_ID-CLASS-TYPE_ exercise](https://estelle.github.io/CSS/selectors/exercises/specificity.html) a specificity quiz
