@@ -311,7 +311,7 @@ This is the form used to get the user's email address (for sending the password 
     \{{ form.email.errors }}
   {% endif %}
       <p>\{{ form.email }}</p>
-    <input type="submit" class="btn btn-default btn-lg" value="Reset password">
+    <input type="submit" class="btn btn-default btn-lg" value="Reset password" />
   </form>
 {% endblock %}
 ```
