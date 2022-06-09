@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Date.Date
 
 Creates a JavaScript **`Date`**
 instance that represents a single moment in time in a platform-independent
-format.`Date` objects contain a `Number` that represents
+format. `Date` objects contain a `Number` that represents
 milliseconds since 1 January 1970 UTC.
 
 {{EmbedInteractiveExample("pages/js/date-constructor.html")}}
@@ -43,9 +43,10 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 There are five basic forms for the `Date()` constructor:
 
 1. No parameters
-
-    When no parameters are provided, the newly-created `Date` object
-    represents the current date and time as of the time of instantiation.
+      
+    <p>
+    
+    When no parameters are provided, the newly-created `Date` object represents the current date and time as of the time of instantiation.
 
 2. Time value or timestamp number
 
@@ -74,42 +75,40 @@ There are five basic forms for the `Date()` constructor:
 
 5. Individual date and time component values
 
-    Given at least a year and month, this form of `Date()` returns a
-    `Date` object whose component values (year, month, day, hour, minute,
-    second, and millisecond) all come from the following parameters. Any missing fields
-    are given the lowest possible value (`1` for `day`
-    and `0` for every other component). The parameter values are all
-    evaluated against the local time zone, rather than UTC.
+    <p>
 
+    Given at least a year and month, this form of `Date()` returns a `Date` object whose component values (year, month, day, hour, minute, second, and millisecond) all come from the following parameters. Any missing fields are given the lowest possible value (`1` for `day` and `0` for every other component). The parameter values are all evaluated against the local time zone, rather than UTC.
+
+    <p>
+
+    If any parameter overflows its defined bounds, it "carries over". For example, if a `monthIndex` greater than `11` is passed in, those months will cause the year to increment; if a `minutes` greater than `59` is passed in, `hours` will increment accordingly, etc. Therefore, `new Date(1990, 12, 1)` will return January 1st, 1991; `new Date(2020, 5, 19, 25, 65)` will return 2:05 A.M. June 20th, 2020.
+
+    <p>
+
+    Similarly, if any parameter underflows, it "borrows" from the higher positions. For example, `new Date(2020, 5, 0)` will return May 31th, 2020.
+  
     - `year`
 
       - : Integer value representing the year.
 
-        Values from `0` to `99` map to the years
-        `1900` to `1999`. All other values are the actual year.
-        See the [example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#interpretation_of_two-digit_years).
+        Values from `0` to `99` map to the years `1900` to `1999`. All other values are the actual year. See the [example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#interpretation_of_two-digit_years).
 
     - `monthIndex`
-      - : Integer value representing the month, beginning with `0` for January
-        to `11` for December. If a value greater than `11` is passed in,
-        then those months will be added to the date; for example, `new Date(1990, 12, 1)` will return January 1st, 1991
+      - : Integer value representing the month, beginning with `0` for January to `11` for December.
     - `day` {{optional_inline}}
       - : Integer value representing the day of the month. The default is `1`.
     - `hours` {{optional_inline}}
       - : Integer value between `0` and `23` representing the hour of the day. Defaults to `0`.
     - `minutes` {{optional_inline}}
-      - : Integer value representing the minute segment of a time. The default is
-        `0` minutes past the hour.
+      - : Integer value representing the minute segment of a time. The default is `0` minutes past the hour.
     - `seconds` {{optional_inline}}
-      - : Integer value representing the second segment of a time. The default is
-        `0` seconds past the minute.
+      - : Integer value representing the second segment of a time. The default is `0` seconds past the minute.
     - `milliseconds` {{optional_inline}}
-      - : Integer value representing the millisecond segment of a time. The default is
-        `0` milliseconds past the second.
+      - : Integer value representing the millisecond segment of a time. The default is `0` milliseconds past the second.
 
 ### Return value
 
-Calling `new Date()` (the `Date()`constructor) returns a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object. If called with an invalid date string, it returns a `Date` object whose [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toString) method returns the literal string `Invalid Date`.
+Calling `new Date()` (the `Date()` constructor) returns a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object. If called with an invalid date string, or if the date to be constructed will have a UNIX timestamp less than `-8,640,000,000,000,000` or greater than `8,640,000,000,000,000` milliseconds, it returns a `Date` object whose [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toString) method returns the literal string `Invalid Date`.
 
 Calling the `Date()` function (without the `new` keyword) returns a string representation of the current date and time, exactly as `new Date().toString()` does. Any arguments given in a `Date()` function call (without the `new` keyword) are ignored; regardless of whether it's called with an invalid date string — or even called wth any arbitrary object or other primitive as an argument — it always returns a string representation of the current date and time.
 
