@@ -48,30 +48,18 @@ Compared to a website, extensions have access to additional privileged APIs, so 
 
 ## Default content security policy
 
-The default content security policy for an extension depends on whether it's implemented under Manifest V2 or V3.
-
-For Manifest V2 extensions, the default content security policy is:
-
-```
-"script-src 'self'; object-src 'self'; 'wasm-unsafe-eval';"
-```
-
-For Manifest V3 extensions, the default content security policy is:
+The default content security policy for extensions is:
 
 ```
 "script-src 'self'; object-src 'self';"
 ```
 
-> **Note:** 
->In Firefox 102 and later, `wasm-unsafe-eval` can be included in the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json key for Manifest V3 extensions to enable the use of [WebAssembly](/en-US/docs/WebAssembly).
->
->For Chrome, extensions cannot use WebAssembly in version 101 or earlier. In 102, extensions can use WebAssembly (the same behavior as Firefox 101 and earlier). From version 103, extensions can use WebAssembly if they include `wasm-unsafe-eval` in the `content_security_policy` in the manifest key. 
-
 These policies are applied to any extension that has not explicitly set its own content security policy using the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json key. It has the following consequences:
 
-- [You may only load \<script> and \<object> resources that are local to the extension.](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#location_of_script_and_object_resources)
-- [The extension is not allowed to evaluate strings as JavaScript.](</en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#eval()_and_friends>)
-- [Inline JavaScript is not executed.](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#inline_javascript)
+- [You may only load \<script> and \<object> resources that are local to the extension.](#location_of_script_and_object_resources)
+- [The extension is not allowed to evaluate strings as JavaScript.](#eval_and_friends)
+- [Inline JavaScript is not executed.](#inline_javascript)
+- [WebAssembly cannot be used by default.](#webassembly)
 
 ### Location of script and object resources
 
@@ -115,3 +103,15 @@ Under the default CSP, inline JavaScript is not executed. This disallows both Ja
 ```
 
 If you are currently using code like `<body onload="main()">` to run your script when the page has loaded, listen for [DOMContentLoaded](/en-US/docs/Web/API/Window/DOMContentLoaded_event) or [load](/en-US/docs/Web/API/Window/load_event) instead.
+
+
+
+### WebAssembly
+
+Extensions wishing to use [WebAssembly](/en-US/docs/WebAssembly) require `wasm-unsafe-eval`.
+
+In Firefox 102 and later, `wasm-unsafe-eval` can be included in the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json key for Manifest V3 extensions to enable the use of WebAssembly.
+
+Manifest V2 extensions in Firefox can use WebAssembly without `wasm-unsafe-eval` in their CSP for backward compatibility. However, this behavior isn't guaranteed; see {{bug(1770909)}}. Extensions using WebAssembly are therefore encouraged to declare `wasm-unsafe-eval` in their CSP.
+
+For Chrome, extensions cannot use WebAssembly in version 101 or earlier. In 102, extensions can use WebAssembly (the same behavior as Firefox 101 and earlier). From version 103, extensions can use WebAssembly if they include `wasm-unsafe-eval` in the `content_security_policy` in the manifest key.

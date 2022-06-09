@@ -205,13 +205,18 @@ Enable the use of [WebAssembly](/en-US/docs/WebAssembly):
 
 **Manifest V2**
 
-Not applicable, use of WebAssembly is permitted by the [default CSP](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#default_content_security_policy).
+For backward compatibility, Manifest V2 extensions can make use of web assembly without the use of `wasm-unsafe-eval`. However, if the extension uses WebAssembly inclusion of `wasm-unsafe-eval`is recommended. See [WebAssembly
+](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#webassembly) on the Content Security Policy page for more information.
+
+```json
+"content_security_policy": "script-src 'self' 'wasm-unsafe-eval'"
+```
 
 **Manifest V3**
 
 ```json
 "content_security_policy": {
-  "extension_page": "wasm-unsafe-eval"
+  "extension_page": "script-src 'self' 'wasm-unsafe-eval'"
 } 
 
 ### Invalid examples
