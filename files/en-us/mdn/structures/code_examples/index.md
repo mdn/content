@@ -67,7 +67,7 @@ Traditional live samples are inserted into the page using the [`EmbedLiveSample`
 
 ### Formatting live samples
 
-If you write a live sample, you should give it a descriptive heading, then optionally a short prose description of the example, then the following subheadings, in the following order:
+If you write a live sample in the "Examples" section, provide a descriptive H3 heading for this live sample example. Ideally, write a short description of the example explaining the scenario and what you are hoping to demonstrate. Then add subsections with following H4 headings, in the order listed:
 
 - **HTML** containing HTML code blocks
 - **CSS** containing CSS code blocks
