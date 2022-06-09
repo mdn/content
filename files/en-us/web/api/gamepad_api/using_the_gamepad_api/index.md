@@ -299,7 +299,7 @@ function updateStatus() {
     }
 
     const axes = d.getElementsByClassName("axis");
-    for (i = 0; i < controller.axes.length; i++) {
+    for (let i = 0; i < controller.axes.length; i++) {
       const a = axes[i];
       a.innerHTML = i + ": " + controller.axes[i].toFixed(4);
       a.setAttribute("value", controller.axes[i] + 1);
