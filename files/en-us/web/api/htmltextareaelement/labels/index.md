@@ -42,7 +42,7 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-{{EmbedLiveSample("Examples", "100%", 60)}}
+{{EmbedLiveSample("Examples", "100%", 100)}}
 
 ## Specifications
 
