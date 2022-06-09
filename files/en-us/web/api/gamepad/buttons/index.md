@@ -47,6 +47,8 @@ example I've just allowed either.
 
 ```js
 function gameLoop() {
+  let a;
+  let b;
   if(navigator.webkitGetGamepads) {
     const gp = navigator.webkitGetGamepads()[0];
 
