@@ -61,7 +61,7 @@ bufferData(target, srcData, usage, srcOffset, length)
   - : A {{domxref("WebGL_API/Types", "GLsizeiptr")}} setting the size in bytes of the buffer object's data
     store.
 - `srcData` {{optional_inline}}
-  - : An {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}}, a {{jsxref("TypedArray)}} or a {{jsxref("DataView")}}
+  - : An {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}}
     that will be copied into the data store.
     If `null`, a data store is still created, but the content is uninitialized and undefined.
 - `usage`

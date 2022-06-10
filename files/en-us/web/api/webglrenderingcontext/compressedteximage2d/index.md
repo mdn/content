@@ -166,7 +166,7 @@ compressedTexImage3D(target, level, internalformat, width, height, depth, border
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying the offset in bytes from which to read from the
     buffer bound to `gl.PIXEL_UNPACK_BUFFER`.
 - `pixels`
-  - : A {{jsxref("TypedArray)}} or a {{jsxref("DataView")}} that will be used as a data store for the
+  - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} that will be used as a data store for the
     compressed image data in memory.
 
 ### Return value

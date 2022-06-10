@@ -43,7 +43,7 @@ send(data)
       - : Specifying a `Blob` enqueues the blob's raw data to be transmitted in
         a binary frame. The value of `bufferedAmount` is increased by the byte
         size of that raw data.
-    - {{jsxref("TypedArray)}} or a {{jsxref("DataView")}}
+    - {{jsxref("TypedArray")}} or a {{jsxref("DataView")}}
       - : You can send any [JavaScript typed array](/en-US/docs/Web/JavaScript/Typed_arrays) object as a binary frame;
         its binary data  contents are queued in the buffer,
         increasing the value of `bufferedAmount` by the requisite number of bytes.
