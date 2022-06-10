@@ -12,6 +12,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.SpeechSynthesisUtterance
 ---
+
 {{APIRef("Web Speech API")}}
 
 The `SpeechSynthesisUtterance()` constructor of the {{domxref("SpeechSynthesisUtterance")}} interface returns a new `SpeechSynthesisUtterance` object instance.
@@ -19,7 +20,7 @@ The `SpeechSynthesisUtterance()` constructor of the {{domxref("SpeechSynthesisUt
 ## Syntax
 
 ```js
-new SpeechSynthesisUtterance(text)
+new SpeechSynthesisUtterance(text);
 ```
 
 ### Parameters
@@ -29,7 +30,7 @@ new SpeechSynthesisUtterance(text)
 
 ## Examples
 
-The following snippet is excerpted from our [Speech synthesizer demo](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis).
+The following snippet is excerpted from our [Speech synthesizer demo](https://github.com/mdn/dom-examples/tree/master/web-speech-api/speak-easy-synthesis).
 
 ```js
 var synth = window.speechSynthesis;

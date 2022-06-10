@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesis.speak
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`speak()`** method of the {{domxref("SpeechSynthesis")}}
@@ -22,7 +23,7 @@ queue; it will be spoken when any other utterances queued before it have been sp
 ## Syntax
 
 ```js
-speak(utterance)
+speak(utterance);
 ```
 
 ### Parameters
@@ -36,7 +37,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-This snippet is excerpted from our [Speech synthesizer demo](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis). When a form containing the text we want to speak is submitted,
+This snippet is excerpted from our [Speech synthesizer demo](https://github.com/mdn/dom-examples/tree/master/web-speech-api/speak-easy-synthesis). When a form containing the text we want to speak is submitted,
 we (amongst other things) create a new utterance containing this text, then speak it by
 passing it into `speak()` as a parameter.
 

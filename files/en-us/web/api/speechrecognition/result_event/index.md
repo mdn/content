@@ -1,5 +1,5 @@
 ---
-title: 'SpeechRecognition: result event'
+title: "SpeechRecognition: result event"
 slug: Web/API/SpeechRecognition/result_event
 page-type: web-api-event
 tags:
@@ -8,6 +8,7 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechRecognition.result_event
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`result`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when the speech recognition service returns a result — a word or phrase has been positively recognized and this has been communicated back to the app
@@ -17,9 +18,9 @@ The **`result`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_AP
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('result', event => { })
+addEventListener("result", (event) => {});
 
-onresult = event => { }
+onresult = (event) => {};
 ```
 
 ## Event type
@@ -43,16 +44,16 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ## Examples
 
-This code is excerpted from our [Speech color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) example.
+This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/tree/master/web-speech-api/speech-color-changer/script.js) example.
 
 You can use the `result` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
 var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('result', function(event) {
+recognition.addEventListener("result", function (event) {
   var color = event.results[0][0].transcript;
-  diagnostic.textContent = 'Result received: ' + color + '.';
+  diagnostic.textContent = "Result received: " + color + ".";
   bg.style.backgroundColor = color;
 });
 ```
@@ -60,11 +61,11 @@ recognition.addEventListener('result', function(event) {
 Or use the `onresult` event handler property:
 
 ```js
-recognition.onresult = function(event) {
+recognition.onresult = function (event) {
   var color = event.results[0][0].transcript;
-  diagnostic.textContent = 'Result received: ' + color + '.';
+  diagnostic.textContent = "Result received: " + color + ".";
   bg.style.backgroundColor = color;
-}
+};
 ```
 
 ## Specifications
