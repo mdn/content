@@ -109,7 +109,7 @@ div.outer p {  /* 0-1-2 */ }
 div:not(.inner) p {  /* 0-1-2 */ }
 ``` 
 
-Note that in the above CSS pairing, the specificity weight provided by the `:is()` and `:not()` pseudo-classes is the value of the selector parameter, not of the pseudoclass. 
+Note that in the above CSS pairing, the specificity weight provided by the `:is()` and `:not()` pseudo-classes is the value of the selector parameter, not of the pseudo-class. 
 
 Both of these pseudo-classes accept complex selector lists, a list of comma-separated selectors, as a parameter. This feature can be used to increase a selector's specificity:
 
