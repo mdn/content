@@ -45,7 +45,7 @@ send(data)
         size of that raw data.
     - {{jsxref("TypedArray")}} or a {{jsxref("DataView")}}
       - : You can send any [JavaScript typed array](/en-US/docs/Web/JavaScript/Typed_arrays) object as a binary frame;
-        its binary data  contents are queued in the buffer,
+        its binary data contents are queued in the buffer,
         increasing the value of `bufferedAmount` by the requisite number of bytes.
 
 ### Return value
