@@ -39,6 +39,9 @@ This article provides information about the changes in Firefox 102 that will aff
 
 - The Non-standard interfaces [IDBMutableFile](/en-US/docs/Web/API/IDBMutableFile), [IDBFileHandle](/en-US/docs/Web/API/IDBFileHandle), [IDBFileRequest](/en-US/docs/Web/API/IDBFileRequest), and the method [IDBDatabase.createMutableFile()](/en-US/docs/Web/API/IDBDatabase#idbdatabase.createmutablefile), have been disabled by default, in preparation for removal in a future release ({{bug(1764771)}}).
 
+- [Transform streams](/en-US/docs/Web/API/TransformStream) are now supported, allowing you to pipe from a {{domxref("ReadableStream")}} to a {{domxref("WritableStream")}}, executing a transformation on the chunks.
+  The update includes the new interfaces [`TransformStream`](/en-US/docs/Web/API/TransformStream) and [`TransformStreamDefaultController`](/en-US/docs/Web/API/TransformStreamDefaultController), and the method [`ReadableStream.pipeThrough()`](/en-US/docs/Web/API/ReadableStream/pipeThrough) ({{bug(1767507)}}).
+
 #### DOM
 
 - The Firefox-only property {{domxref("Window.sidebar")}} has been moved behind a preference, and is planned for removal ({{bug(1768486)}}).

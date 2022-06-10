@@ -1,6 +1,7 @@
 ---
 title: Navigator.vibrate()
 slug: Web/API/Navigator/vibrate
+page-type: web-api-instance-method
 tags:
   - API
   - Method

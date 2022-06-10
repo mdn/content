@@ -12,7 +12,7 @@ browser-compat: api.CSSStyleDeclaration.getPropertyPriority
 {{ APIRef("CSSOM") }}
 
 The **CSSStyleDeclaration.getPropertyPriority()** method interface returns
-a {{domxref('DOMString')}} that provides all explicitly set priorities on the CSS
+a string that provides all explicitly set priorities on the CSS
 property.
 
 ## Syntax
@@ -23,14 +23,13 @@ getPropertyPriority(property)
 
 ### Parameters
 
-- *`property`* is a {{domxref('DOMString')}} representing the
-  property name to be checked.
+- `property`
+  - : A string representing the property name to be checked.
 
 ### Return value
 
-- `priority` is a {{domxref('DOMString')}} that represents the
-  priority (e.g. `"important"`) if one exists. If none exists, returns the
-  empty string.
+A string that represents the priority (e.g. `"important"`) if one exists.
+If none exists, returns the empty string.
 
 ## Examples
 

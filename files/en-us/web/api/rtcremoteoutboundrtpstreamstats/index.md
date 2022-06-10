@@ -1,6 +1,7 @@
 ---
 title: RTCRemoteOutboundRtpStreamStats
 slug: Web/API/RTCRemoteOutboundRtpStreamStats
+page-type: web-api-interface
 tags:
   - API
   - Dictionary

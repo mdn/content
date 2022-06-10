@@ -1,6 +1,7 @@
 ---
 title: Navigator.contacts
 slug: Web/API/Navigator/contacts
+page-type: web-api-instance-property
 tags:
   - Contact Picker API
   - Contacts

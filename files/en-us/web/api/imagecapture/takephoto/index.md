@@ -1,6 +1,7 @@
 ---
 title: ImageCapture.takePhoto()
 slug: Web/API/ImageCapture/takePhoto
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -54,8 +55,7 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}}.
 
 ## Examples
 
-This example is extracted from this [Simple
-Image Capture demo](https://simpl.info/imagecapture/). It shows how to use the {{jsxref("Promise")}} returned by
+This example is extracted from this [Simple Image Capture demo](https://simpl.info/imagecapture/). It shows how to use the {{jsxref("Promise")}} returned by
 `takePhoto()` to copy the returned {{domxref("Blob")}} to an
 {{htmlelement("img")}} element. For simplicity it does not show how to instantiate the
 {{domxref("ImageCapture")}} object.

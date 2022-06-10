@@ -1,6 +1,7 @@
 ---
 title: FileSystemSync
 slug: Web/API/FileSystemSync
+page-type: web-api-interface
 tags:
   - API
   - File API

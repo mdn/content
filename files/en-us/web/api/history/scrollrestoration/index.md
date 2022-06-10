@@ -1,6 +1,7 @@
 ---
 title: History.scrollRestoration
 slug: Web/API/History/scrollRestoration
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

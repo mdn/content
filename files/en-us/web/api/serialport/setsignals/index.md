@@ -1,6 +1,7 @@
 ---
 title: SerialPort.setSignals()
 slug: Web/API/SerialPort/setSignals
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: XRLightEstimate
 slug: Web/API/XRLightEstimate
+page-type: web-api-interface
 tags:
   - API
   - Interface

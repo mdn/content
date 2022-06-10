@@ -1,6 +1,7 @@
 ---
 title: Document.linkColor
 slug: Web/API/Document/linkColor
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

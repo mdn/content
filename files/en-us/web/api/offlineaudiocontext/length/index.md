@@ -1,6 +1,7 @@
 ---
 title: OfflineAudioContext.length
 slug: Web/API/OfflineAudioContext/length
+page-type: web-api-instance-property
 tags:
   - API
   - NeedsExample

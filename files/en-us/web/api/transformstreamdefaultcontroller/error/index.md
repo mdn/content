@@ -1,6 +1,7 @@
 ---
 title: TransformStreamDefaultController.error()
 slug: Web/API/TransformStreamDefaultController/error
+page-type: web-api-instance-method
 tags:
   - API
   - Method

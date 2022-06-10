@@ -1,6 +1,7 @@
 ---
 title: DragEvent
 slug: Web/API/DragEvent
+page-type: web-api-interface
 tags:
   - API
   - DragEvent

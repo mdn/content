@@ -1,6 +1,7 @@
 ---
 title: Web Storage API
 slug: Web/API/Web_Storage_API
+page-type: web-api-overview
 tags:
   - API
   - Reference

@@ -1,6 +1,7 @@
 ---
 title: RTCIceServer
 slug: Web/API/RTCIceServer
+page-type: web-api-interface
 tags:
   - Authentication
   - Configuration

@@ -1,6 +1,7 @@
 ---
 title: HTMLFormControlsCollection
 slug: Web/API/HTMLFormControlsCollection
+page-type: web-api-interface
 tags:
   - API
   - Collection

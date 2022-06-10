@@ -1,6 +1,7 @@
 ---
 title: Scissor animation
 slug: Web/API/WebGL_API/By_example/Scissor_animation
+page-type: guide
 tags:
   - Animation
   - Beginner

@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamBYOBRequest.respondWithNewView()
 slug: Web/API/ReadableStreamBYOBRequest/respondWithNewView
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

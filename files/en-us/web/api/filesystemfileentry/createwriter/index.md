@@ -1,6 +1,7 @@
 ---
 title: FileSystemFileEntry.createWriter()
 slug: Web/API/FileSystemFileEntry/createWriter
+page-type: web-api-instance-method
 tags:
   - API
   - File and Directory Entries API

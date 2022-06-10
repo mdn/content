@@ -1,6 +1,7 @@
 ---
 title: SVGSymbolElement
 slug: Web/API/SVGSymbolElement
+page-type: web-api-interface
 tags:
   - API
   - Interface

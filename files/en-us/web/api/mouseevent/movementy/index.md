@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.movementY
 slug: Web/API/MouseEvent/movementY
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

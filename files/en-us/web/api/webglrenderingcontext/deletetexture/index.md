@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.deleteTexture()
 slug: Web/API/WebGLRenderingContext/deleteTexture
+page-type: web-api-instance-method
 tags:
   - API
   - Method

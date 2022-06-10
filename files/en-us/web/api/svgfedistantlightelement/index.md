@@ -1,6 +1,7 @@
 ---
 title: SVGFEDistantLightElement
 slug: Web/API/SVGFEDistantLightElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

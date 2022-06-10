@@ -1,6 +1,7 @@
 ---
 title: setInterval()
 slug: Web/API/setInterval
+page-type: web-api-global-function
 tags:
   - API
   - Gecko
@@ -159,8 +160,7 @@ See also: [`clearInterval()`](/en-US/docs/Web/API/clearInterval).
 
 When you pass a method to `setInterval()` or any other function, it is
 invoked with the wrong [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)
-value. This problem is explained in detail in the [JavaScript
-reference](/en-US/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method).
+value. This problem is explained in detail in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method).
 
 ### Explanation
 

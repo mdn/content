@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.responseXML
 slug: Web/API/XMLHttpRequest/responseXML
+page-type: web-api-instance-property
 tags:
   - AJAX
   - API
@@ -86,8 +87,7 @@ xhr.send();
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("XMLHttpRequest.response")}}
 - {{domxref("XMLHttpRequest.responseType")}}
-- [Parsing and serializing
-  XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
+- [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
 - Parsing XML into a DOM tree: {{domxref("DOMParser")}}
 - Serializing a DOM tree into XML: {{domxref("XMLSerializer")}} (specifically, the
   {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} method)

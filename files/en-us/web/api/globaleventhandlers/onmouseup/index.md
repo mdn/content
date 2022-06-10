@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onmouseup
 slug: Web/API/GlobalEventHandlers/onmouseup
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -29,8 +30,7 @@ target.onmouseup = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("MouseEvent")}} object as its sole
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("MouseEvent")}} object as its sole
 argument.
 
 ## Example

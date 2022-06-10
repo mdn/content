@@ -1,6 +1,7 @@
 ---
 title: VTTCue.text
 slug: Web/API/VTTCue/text
+page-type: web-api-instance-property
 tags:
   - API
   - Property

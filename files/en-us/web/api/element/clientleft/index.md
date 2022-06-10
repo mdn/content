@@ -1,6 +1,7 @@
 ---
 title: Element.clientLeft
 slug: Web/API/Element/clientLeft
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View

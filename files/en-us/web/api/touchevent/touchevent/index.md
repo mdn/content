@@ -1,6 +1,7 @@
 ---
 title: TouchEvent()
 slug: Web/API/TouchEvent/TouchEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

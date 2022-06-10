@@ -1,6 +1,7 @@
 ---
 title: XRAnchor.delete()
 slug: Web/API/XRAnchor/delete
+page-type: web-api-instance-method
 tags:
   - API
   - Method

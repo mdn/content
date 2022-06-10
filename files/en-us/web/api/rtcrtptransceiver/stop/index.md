@@ -1,6 +1,7 @@
 ---
 title: RTCRtpTransceiver.stop()
 slug: Web/API/RTCRtpTransceiver/stop
+page-type: web-api-instance-method
 tags:
   - API
   - Media

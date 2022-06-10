@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.entries()
 slug: Web/API/URLSearchParams/entries
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: 'RTCPeerConnection: track event'
 slug: Web/API/RTCPeerConnection/track_event
+page-type: web-api-event
 tags:
   - DOM
   - DOM Event Reference

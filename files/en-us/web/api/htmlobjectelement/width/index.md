@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.width
 slug: Web/API/HTMLObjectElement/width
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

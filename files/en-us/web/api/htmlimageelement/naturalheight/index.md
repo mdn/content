@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.naturalHeight
 slug: Web/API/HTMLImageElement/naturalHeight
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLImageElement

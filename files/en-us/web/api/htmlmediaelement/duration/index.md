@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.duration
 slug: Web/API/HTMLMediaElement/duration
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

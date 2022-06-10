@@ -1,6 +1,7 @@
 ---
 title: VideoTrack.selected
 slug: Web/API/VideoTrack/selected
+page-type: web-api-instance-property
 tags:
   - HTML DOM
   - Media

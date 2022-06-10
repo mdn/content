@@ -1,6 +1,7 @@
 ---
 title: Selection.rangeCount
 slug: Web/API/Selection/rangeCount
+page-type: web-api-instance-property
 tags:
   - API
   - HTML Editing

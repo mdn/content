@@ -1,6 +1,7 @@
 ---
 title: XRLayerEvent
 slug: Web/API/XRLayerEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface

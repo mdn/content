@@ -1,6 +1,7 @@
 ---
 title: SVGAnimatedEnumeration
 slug: Web/API/SVGAnimatedEnumeration
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

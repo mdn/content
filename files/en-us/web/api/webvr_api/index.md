@@ -1,6 +1,7 @@
 ---
 title: WebVR API
 slug: Web/API/WebVR_API
+page-type: web-api-overview
 tags:
   - API
   - Deprecated

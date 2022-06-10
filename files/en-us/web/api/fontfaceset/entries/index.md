@@ -1,6 +1,7 @@
 ---
 title: FontFaceSet.entries()
 slug: Web/API/FontFaceSet/entries
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.stageParameters
 slug: Web/API/VRDisplay/stageParameters
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

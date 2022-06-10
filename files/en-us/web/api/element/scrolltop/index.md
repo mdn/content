@@ -1,6 +1,7 @@
 ---
 title: Element.scrollTop
 slug: Web/API/Element/scrollTop
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View

@@ -1,6 +1,7 @@
 ---
 title: InstallEvent.activeWorker
 slug: Web/API/InstallEvent/activeWorker
+page-type: web-api-instance-property
 tags:
   - API
   - InstallEvent

@@ -1,6 +1,7 @@
 ---
 title: IDBFileHandle.readAsArrayBuffer()
 slug: Web/API/IDBFileHandle/readAsArrayBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Files

@@ -1,6 +1,7 @@
 ---
 title: File System Access API
 slug: Web/API/File_System_Access_API
+page-type: web-api-overview
 tags:
   - API
   - Directory

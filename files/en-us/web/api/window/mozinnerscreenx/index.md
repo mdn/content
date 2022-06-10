@@ -1,6 +1,7 @@
 ---
 title: Window.mozInnerScreenX
 slug: Web/API/Window/mozInnerScreenX
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

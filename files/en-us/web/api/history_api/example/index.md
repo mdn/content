@@ -1,6 +1,7 @@
 ---
 title: Ajax navigation example
 slug: Web/API/History_API/Example
+page-type: guide
 ---
 This is an example of an AJAX website composed only of three pages (_first_page.php_, _second_page.php_ and _third_page.php_). To see how it works, please create the following files (or git clone [https://github.com/giabao/mdn-ajax-nav-example.git](https://github.com/giabao/mdn-ajax-nav-example) ):
 

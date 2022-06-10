@@ -1,6 +1,7 @@
 ---
 title: XPathResult.booleanValue
 slug: Web/API/XPathResult/booleanValue
+page-type: web-api-instance-property
 tags:
   - API
   - DOM XPath API

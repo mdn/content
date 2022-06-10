@@ -1,6 +1,7 @@
 ---
 title: XRRigidTransform.position
 slug: Web/API/XRRigidTransform/position
+page-type: web-api-instance-property
 tags:
   - 3D
   - API

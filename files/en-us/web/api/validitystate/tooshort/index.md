@@ -1,6 +1,7 @@
 ---
 title: ValidityState.tooShort
 slug: Web/API/ValidityState/tooShort
+page-type: web-api-instance-property
 browser-compat: api.ValidityState.tooShort
 ---
 {{APIRef("HTML DOM")}}

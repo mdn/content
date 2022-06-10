@@ -1,6 +1,7 @@
 ---
 title: Window.self
 slug: Web/API/Window/self
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

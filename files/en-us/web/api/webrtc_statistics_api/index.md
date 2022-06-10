@@ -1,6 +1,7 @@
 ---
 title: WebRTC Statistics API
 slug: Web/API/WebRTC_Statistics_API
+page-type: web-api-overview
 tags:
   - API
   - Draft

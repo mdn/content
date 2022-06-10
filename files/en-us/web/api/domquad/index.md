@@ -1,6 +1,7 @@
 ---
 title: DOMQuad
 slug: Web/API/DOMQuad
+page-type: web-api-interface
 tags:
   - API
   - DOM

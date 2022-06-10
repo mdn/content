@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.selectedIndex
 slug: Web/API/HTMLSelectElement/selectedIndex
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

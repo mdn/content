@@ -438,7 +438,7 @@ There are a few other things you could learn about tables in HTML, but this is a
 
 If you are already learning CSS and have done well on the assessment, you can move on and learn about styling HTML tables — see [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables).
 
-If want to get started with learning CSS, check out the [CSS Learning Area](/en-US/docs/Learn/CSS)!
+If you want to get started with learning CSS, check out the [CSS Learning Area](/en-US/docs/Learn/CSS)!
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
 

@@ -1,6 +1,7 @@
 ---
 title: location.pathname
 slug: Web/API/Location/pathname
+page-type: web-api-instance-property
 tags:
   - API
   - Location
@@ -13,12 +14,9 @@ browser-compat: api.Location.pathname
 The **`pathname`** property of the {{domxref("Location")}}
 interface is a string containing the path of the URL for the location, which will be the empty string if there is no path.
 
-## Syntax
+## Value
 
-```js
-string = object.pathname;
-object.pathname = string;
-```
+A string.
 
 ## Examples
 

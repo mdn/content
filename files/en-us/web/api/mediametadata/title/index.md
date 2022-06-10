@@ -1,6 +1,7 @@
 ---
 title: MediaMetadata.title
 slug: Web/API/MediaMetadata/title
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

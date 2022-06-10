@@ -1,6 +1,7 @@
 ---
 title: Answering a Call
 slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call
+page-type: guide
 ---
 {{WebRTCSidebar}}
 

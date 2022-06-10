@@ -1,6 +1,7 @@
 ---
 title: RelativeOrientationSensor
 slug: Web/API/RelativeOrientationSensor
+page-type: web-api-interface
 tags:
   - API
   - Generic Sensor API

@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.setRemoteDescription()
 slug: Web/API/RTCPeerConnection/setRemoteDescription
+page-type: web-api-instance-method
 tags:
   - API
   - ICE

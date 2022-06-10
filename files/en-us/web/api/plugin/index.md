@@ -1,6 +1,7 @@
 ---
 title: Plugin
 slug: Web/API/Plugin
+page-type: web-api-interface
 tags:
   - API
   - Add-ons

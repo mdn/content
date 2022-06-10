@@ -1,6 +1,7 @@
 ---
 title: USBDevice.isochronousTransferIn()
 slug: Web/API/USBDevice/isochronousTransferIn
+page-type: web-api-instance-method
 tags:
   - API
   - Method

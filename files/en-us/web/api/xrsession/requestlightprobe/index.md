@@ -1,6 +1,7 @@
 ---
 title: XRSession.requestLightProbe()
 slug: Web/API/XRSession/requestLightProbe
+page-type: web-api-instance-method
 tags:
   - API
   - AR

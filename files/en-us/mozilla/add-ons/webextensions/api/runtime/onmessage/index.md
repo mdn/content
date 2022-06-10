@@ -35,12 +35,12 @@ Along with the message itself, the listener is passed:
 - a `sender` object giving details about the message sender.
 - a `sendResponse()` function that can be used to send a response back to the sender.
 
-You can send a synchronous response to the message by calling the `sendResponse()` function inside your listener. [See an example](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_a_synchronous_response).
+You can send a synchronous response to the message by calling the `sendResponse()` function inside your listener. [See an example](#sending_a_synchronous_response).
 
 To send an asynchronous response, there are two options:
 
-- return `true` from the event listener. This keeps the `sendResponse()` function valid after the listener returns, so you can call it later. [See an example](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_sendresponse).
-- return a `Promise` from the event listener, and resolve when you have the response (or reject it in case of an error). [See an example](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_a_promise).
+- return `true` from the event listener. This keeps the `sendResponse()` function valid after the listener returns, so you can call it later. [See an example](#sending_an_asynchronous_response_using_sendresponse).
+- return a `Promise` from the event listener, and resolve when you have the response (or reject it in case of an error). [See an example](#sending_an_asynchronous_response_using_a_promise).
 
 > **Note:** You can also use a [connection-based approach to exchange messages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging).
 

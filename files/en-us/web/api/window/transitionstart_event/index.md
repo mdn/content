@@ -1,6 +1,7 @@
 ---
 title: 'Window: transitionstart event'
 slug: Web/API/Window/transitionstart_event
+page-type: web-api-event
 tags:
   - API
   - Reference

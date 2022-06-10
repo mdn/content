@@ -1,6 +1,7 @@
 ---
 title: 'WebSocket: open event'
 slug: Web/API/WebSocket/open_event
+page-type: web-api-event
 tags:
   - API
   - Event

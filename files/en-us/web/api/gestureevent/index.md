@@ -1,6 +1,7 @@
 ---
 title: GestureEvent
 slug: Web/API/GestureEvent
+page-type: web-api-interface
 tags:
   - API
   - DOM

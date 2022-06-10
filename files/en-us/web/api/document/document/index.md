@@ -1,6 +1,7 @@
 ---
 title: Document()
 slug: Web/API/Document/Document
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

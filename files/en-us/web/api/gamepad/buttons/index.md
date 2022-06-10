@@ -1,6 +1,7 @@
 ---
 title: Gamepad.buttons
 slug: Web/API/Gamepad/buttons
+page-type: web-api-instance-property
 tags:
   - API
   - Gamepad API

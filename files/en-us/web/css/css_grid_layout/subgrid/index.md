@@ -13,8 +13,6 @@ browser-compat: css.properties.grid-template-columns.subgrid
 
 Level 2 of the CSS Grid Layout specification includes a `subgrid` value for {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}. This guide details what subgrid does, and gives some use cases and design patterns that are solved by the feature.
 
-> **Warning:** This feature is shipped in Firefox 71, which is currently the only browser to implement subgrid.
-
 ## Introduction to subgrid
 
 When you add `display: grid` to a grid container, only the direct children become grid items and can then be placed on the grid that you have created. The children of these items display in normal flow.

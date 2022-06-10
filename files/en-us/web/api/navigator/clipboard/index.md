@@ -1,6 +1,7 @@
 ---
 title: Navigator.clipboard
 slug: Web/API/Navigator/clipboard
+page-type: web-api-instance-property
 tags:
   - API
   - Clip

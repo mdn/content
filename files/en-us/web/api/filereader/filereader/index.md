@@ -1,6 +1,7 @@
 ---
 title: FileReader()
 slug: Web/API/FileReader/FileReader
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -13,7 +14,7 @@ browser-compat: api.FileReader.FileReader
 
 The **`FileReader()`** constructor creates a new FileReader.
 
-For details about how to use `FileReader`, see [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications).
+For details about how to use `FileReader`, see [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications).
 
 ## Syntax
 
@@ -49,4 +50,4 @@ function printFile(file) {
 
 ## See also
 
-- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)

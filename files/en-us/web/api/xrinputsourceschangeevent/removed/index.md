@@ -1,6 +1,7 @@
 ---
 title: XRInputSourcesChangeEvent.removed
 slug: Web/API/XRInputSourcesChangeEvent/removed
+page-type: web-api-instance-property
 tags:
   - API
   - AR

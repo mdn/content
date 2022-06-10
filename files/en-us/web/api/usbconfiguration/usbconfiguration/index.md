@@ -1,6 +1,7 @@
 ---
 title: USBConfiguration()
 slug: Web/API/USBConfiguration/USBConfiguration
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

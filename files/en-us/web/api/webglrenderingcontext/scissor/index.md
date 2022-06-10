@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.scissor()
 slug: Web/API/WebGLRenderingContext/scissor
+page-type: web-api-instance-method
 tags:
   - API
   - Method

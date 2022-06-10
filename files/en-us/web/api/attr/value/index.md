@@ -11,7 +11,7 @@ browser-compat: api.Attr.value
 
 The **`value`** property of the {{domxref("Attr")}} interface contains the value of the attribute.
 
-### Value
+## Value
 
 A string representing the attribute value.
 

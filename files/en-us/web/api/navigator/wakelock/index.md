@@ -1,6 +1,7 @@
 ---
 title: Navigator.wakeLock
 slug: Web/API/Navigator/wakeLock
+page-type: web-api-instance-property
 tags:
   - API
   - Reference

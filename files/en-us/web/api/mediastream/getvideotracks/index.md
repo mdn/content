@@ -1,6 +1,7 @@
 ---
 title: MediaStream.getVideoTracks()
 slug: Web/API/MediaStream/getVideoTracks
+page-type: web-api-instance-method
 tags:
   - API
   - Media

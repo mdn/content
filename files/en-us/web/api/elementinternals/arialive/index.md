@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaLive
 slug: Web/API/ElementInternals/ariaLive
+page-type: web-api-instance-property
 tags:
   - API
   - Property

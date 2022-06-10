@@ -1,6 +1,7 @@
 ---
 title: FileSystemDirectoryReader
 slug: Web/API/FileSystemDirectoryReader
+page-type: web-api-interface
 tags:
   - API
   - File and Directory Entries API

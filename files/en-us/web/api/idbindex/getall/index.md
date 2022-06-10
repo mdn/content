@@ -1,6 +1,7 @@
 ---
 title: IDBIndex.getAll()
 slug: Web/API/IDBIndex/getAll
+page-type: web-api-instance-method
 tags:
   - API
   - IDBIndex

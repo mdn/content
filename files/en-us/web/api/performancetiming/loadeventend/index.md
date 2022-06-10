@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.loadEventEnd
 slug: Web/API/PerformanceTiming/loadEventEnd
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility

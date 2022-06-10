@@ -1,6 +1,7 @@
 ---
 title: PresentationAvailability.value
 slug: Web/API/PresentationAvailability/value
+page-type: web-api-instance-property
 browser-compat: api.PresentationAvailability.value
 ---
 

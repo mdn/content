@@ -1,6 +1,7 @@
 ---
 title: FederatedCredential()
 slug: Web/API/FederatedCredential/FederatedCredential
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

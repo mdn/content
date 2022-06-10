@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.play()
 slug: Web/API/HTMLMediaElement/play
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

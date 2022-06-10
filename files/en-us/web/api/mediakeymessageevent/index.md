@@ -1,6 +1,7 @@
 ---
 title: MediaKeyMessageEvent
 slug: Web/API/MediaKeyMessageEvent
+page-type: web-api-interface
 tags:
   - API
   - EncryptedMediaExtensions

@@ -1,6 +1,7 @@
 ---
 title: 'TextTrackList: addtrack event'
 slug: Web/API/TextTrackList/addtrack_event
+page-type: web-api-event
 tags:
   - API
   - Reference

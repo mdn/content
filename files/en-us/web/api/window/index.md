@@ -1,6 +1,7 @@
 ---
 title: Window
 slug: Web/API/Window
+page-type: web-api-interface
 tags:
   - API
   - Browser

@@ -1,6 +1,7 @@
 ---
 title: 'IDBFileRequest: progress event'
 slug: Web/API/IDBFileRequest/progress_event
+page-type: web-api-event
 tags:
   - API
   - DOM

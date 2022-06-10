@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.getModifierState()
 slug: Web/API/MouseEvent/getModifierState
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

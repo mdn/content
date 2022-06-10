@@ -1,6 +1,7 @@
 ---
 title: GainNode.gain
 slug: Web/API/GainNode/gain
+page-type: web-api-instance-property
 tags:
   - API
   - Gain

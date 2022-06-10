@@ -1,6 +1,7 @@
 ---
 title: URL.password
 slug: Web/API/URL/password
+page-type: web-api-instance-property
 tags:
   - API
   - Property

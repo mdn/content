@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onerror
 slug: Web/API/GlobalEventHandlers/onerror
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

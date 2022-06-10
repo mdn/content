@@ -1,6 +1,7 @@
 ---
 title: XRCylinderLayer.transform
 slug: Web/API/XRCylinderLayer/transform
+page-type: web-api-instance-property
 tags:
   - API
   - Property

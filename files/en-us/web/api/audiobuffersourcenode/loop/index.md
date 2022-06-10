@@ -53,7 +53,7 @@ function getData() {
   request.responseType = 'arraybuffer';
 
   request.onload = function() {
-    var audioData = request.response;
+    const audioData = request.response;
 
     audioCtx.decodeAudioData(audioData, function(buffer) {
         myBuffer = buffer;
@@ -91,6 +91,5 @@ play.onclick = function() {
 ## See also
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - {{domxref("AudioBufferSourceNode")}}

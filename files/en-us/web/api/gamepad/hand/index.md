@@ -1,6 +1,7 @@
 ---
 title: Gamepad.hand
 slug: Web/API/Gamepad/hand
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

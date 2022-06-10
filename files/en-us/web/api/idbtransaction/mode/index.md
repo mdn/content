@@ -1,6 +1,7 @@
 ---
 title: IDBTransaction.mode
 slug: Web/API/IDBTransaction/mode
+page-type: web-api-instance-property
 tags:
   - API
   - Database
@@ -48,8 +49,7 @@ some data to an object store. Note also the functions attached to transaction ev
 handlers to report on the outcome of the transaction opening in the event of success or
 failure. At the end, we log the mode of the current transaction using `mode`.
 For a full working example, see our [To-do
-Notifications app](https://github.com/mdn/to-do-notifications/) ([view
-example live](https://mdn.github.io/to-do-notifications/).)
+Notifications app](https://github.com/mdn/to-do-notifications/) ([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
 // Let us open our database

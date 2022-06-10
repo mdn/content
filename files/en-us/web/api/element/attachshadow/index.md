@@ -1,6 +1,7 @@
 ---
 title: Element.attachShadow()
 slug: Web/API/Element/attachShadow
+page-type: web-api-instance-method
 tags:
   - API
   - Element

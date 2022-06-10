@@ -1,6 +1,7 @@
 ---
 title: HTMLFormElement.action
 slug: Web/API/HTMLFormElement/action
+page-type: web-api-instance-property
 tags:
   - API
   - Forms

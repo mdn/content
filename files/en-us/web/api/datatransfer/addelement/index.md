@@ -43,7 +43,7 @@ This example shows the use of the `addElement()` method
 ```js
 function change_drag_node(event, node)
 {
-  var dt = event.dataTransfer;
+  const dt = event.dataTransfer;
   dt.addElement(node);
 }
 ```

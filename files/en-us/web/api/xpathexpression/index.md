@@ -1,6 +1,7 @@
 ---
 title: XPathExpression
 slug: Web/API/XPathExpression
+page-type: web-api-interface
 tags:
   - API
   - DOM

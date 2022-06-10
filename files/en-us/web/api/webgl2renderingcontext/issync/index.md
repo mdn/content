@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.isSync()
 slug: Web/API/WebGL2RenderingContext/isSync
+page-type: web-api-instance-method
 tags:
   - API
   - Method

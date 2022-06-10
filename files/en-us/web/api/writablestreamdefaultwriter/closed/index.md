@@ -1,6 +1,7 @@
 ---
 title: WritableStreamDefaultWriter.closed
 slug: Web/API/WritableStreamDefaultWriter/closed
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.drawingBufferWidth
 slug: Web/API/WebGLRenderingContext/drawingBufferWidth
+page-type: web-api-instance-property
 tags:
   - API
   - Property

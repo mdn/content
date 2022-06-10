@@ -1,6 +1,7 @@
 ---
 title: Introduction to WebRTC protocols
 slug: Web/API/WebRTC_API/Protocols
+page-type: guide
 tags:
   - API
   - Audio

@@ -1,6 +1,7 @@
 ---
 title: RTCIceTransport.getLocalCandidates()
 slug: Web/API/RTCIceTransport/getLocalCandidates
+page-type: web-api-instance-method
 tags:
   - API
   - Candidates

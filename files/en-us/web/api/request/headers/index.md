@@ -1,6 +1,7 @@
 ---
 title: Request.headers
 slug: Web/API/Request/headers
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch

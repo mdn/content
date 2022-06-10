@@ -1,6 +1,7 @@
 ---
 title: HTMLAreaElement.search
 slug: Web/API/HTMLAreaElement/search
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAreaElement

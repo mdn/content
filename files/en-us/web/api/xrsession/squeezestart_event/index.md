@@ -1,6 +1,7 @@
 ---
 title: 'XRSession: squeezestart event'
 slug: Web/API/XRSession/squeezestart_event
+page-type: web-api-event
 tags:
   - API
   - AR

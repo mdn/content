@@ -1,6 +1,7 @@
 ---
 title: 'TextTrackList: removeTrack event'
 slug: Web/API/TextTrackList/removeTrack_event
+page-type: web-api-event
 tags:
   - API
   - Media Streams API

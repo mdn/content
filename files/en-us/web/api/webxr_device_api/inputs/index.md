@@ -1,6 +1,7 @@
 ---
 title: Inputs and input sources
 slug: Web/API/WebXR_Device_API/Inputs
+page-type: guide
 tags:
   - API
   - AR

@@ -1,6 +1,7 @@
 ---
 title: IDBRequest.source
 slug: Web/API/IDBRequest/source
+page-type: web-api-instance-property
 tags:
   - API
   - Database

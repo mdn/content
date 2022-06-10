@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.screenX
 slug: Web/API/MouseEvent/screenX
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View

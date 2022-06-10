@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognition.interimResults
 slug: Web/API/SpeechRecognition/interimResults
+page-type: web-api-instance-property
 tags:
   - API
   - Property

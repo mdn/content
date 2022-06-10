@@ -1,6 +1,7 @@
 ---
 title: 'XRCylinderLayer: redraw event'
 slug: Web/API/XRCylinderLayer/redraw_event
+page-type: web-api-event
 tags:
   - API
   - Event

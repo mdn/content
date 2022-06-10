@@ -1,6 +1,7 @@
 ---
 title: MIDIPort.manufacturer
 slug: Web/API/MIDIPort/manufacturer
+page-type: web-api-instance-property
 tags:
   - API
   - Property

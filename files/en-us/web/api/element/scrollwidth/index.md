@@ -1,6 +1,7 @@
 ---
 title: Element.scrollWidth
 slug: Web/API/Element/scrollWidth
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View

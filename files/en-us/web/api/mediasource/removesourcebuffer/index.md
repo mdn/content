@@ -1,6 +1,7 @@
 ---
 title: MediaSource.removeSourceBuffer()
 slug: Web/API/MediaSource/removeSourceBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

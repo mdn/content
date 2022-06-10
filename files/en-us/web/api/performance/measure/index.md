@@ -1,6 +1,7 @@
 ---
 title: performance.measure()
 slug: Web/API/Performance/measure
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: Touch events (Mozilla experimental)
 slug: Web/API/Touch_events/Mozilla_experimental_events
+page-type: guide
 tags:
   - DOM
   - Gecko DOM Reference

@@ -1,6 +1,7 @@
 ---
 title: IDBCursor.delete()
 slug: Web/API/IDBCursor/delete
+page-type: web-api-instance-method
 tags:
   - API
   - Database

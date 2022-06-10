@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrackGenerator
 slug: Web/API/MediaStreamTrackGenerator
+page-type: web-api-interface
 tags:
   - API
   - Interface

@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamDefaultReader.releaseLock()
 slug: Web/API/ReadableStreamDefaultReader/releaseLock
+page-type: web-api-instance-method
 tags:
   - API
   - Method

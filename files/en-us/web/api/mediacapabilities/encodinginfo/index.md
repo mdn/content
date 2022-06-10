@@ -1,6 +1,7 @@
 ---
 title: MediaCapabilities.encodingInfo()
 slug: Web/API/MediaCapabilities/encodingInfo
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

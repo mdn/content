@@ -1,6 +1,7 @@
 ---
 title: 'Document: dragover event'
 slug: Web/API/Document/dragover_event
+page-type: web-api-event
 tags:
   - API
   - DOM

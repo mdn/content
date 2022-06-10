@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.frame
 slug: Web/API/HTMLTableElement/frame
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

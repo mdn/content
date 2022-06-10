@@ -1,6 +1,7 @@
 ---
 title: NetworkInformation.type
 slug: Web/API/NetworkInformation/type
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

@@ -1,6 +1,7 @@
 ---
 title: Keyboard.lock()
 slug: Web/API/Keyboard/lock
+page-type: web-api-instance-method
 tags:
   - API
   - Keyboard API

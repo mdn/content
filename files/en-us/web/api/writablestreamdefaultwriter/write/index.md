@@ -1,6 +1,7 @@
 ---
 title: WritableStreamDefaultWriter.write()
 slug: Web/API/WritableStreamDefaultWriter/write
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

@@ -1,6 +1,7 @@
 ---
 title: IDBRequest.transaction
 slug: Web/API/IDBRequest/transaction
+page-type: web-api-instance-property
 tags:
   - API
   - Database

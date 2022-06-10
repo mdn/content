@@ -92,11 +92,11 @@ For example, you might use this to lay out sections as shown:
 ```
 1 One
   1.1 Nested one
-  2.1 Nested two
+  1.2 Nested two
 2 Two
-  1.1 Nested one
-  2.1 Nested two
-  3.1 Nested three
+  2.1 Nested one
+  2.2 Nested two
+  2.3 Nested three
 3 Three
 ```
 
@@ -242,12 +242,10 @@ a[href]:empty::after {
 
 {{EmbedLiveSample("A_more_sophisticated_example", "100%", 150)}}
 
-## Nesting counters
+### Example of a nested counter
 
 A CSS counter can be especially useful for making outlined lists, because a new instance of the counter is automatically created in child elements.
 Using the {{cssxref("counters", "counters()")}} function, separating text can be inserted between different levels of nested counters.
-
-### Example of a nested counter
 
 #### CSS
 

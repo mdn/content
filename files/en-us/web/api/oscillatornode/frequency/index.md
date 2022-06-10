@@ -1,6 +1,7 @@
 ---
 title: OscillatorNode.frequency
 slug: Web/API/OscillatorNode/frequency
+page-type: web-api-instance-property
 tags:
   - API
   - OscillatorNode

@@ -1,6 +1,7 @@
 ---
 title: MIDIOutput.send()
 slug: Web/API/MIDIOutput/send
+page-type: web-api-instance-method
 tags:
   - API
   - Method

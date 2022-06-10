@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.sampleRate
 slug: Web/API/MediaTrackSupportedConstraints/sampleRate
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints
