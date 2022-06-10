@@ -57,7 +57,7 @@ globally (in the top-most scope).
 An explanation of why the name "**let**" was chosen can be found [here](https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri).
 
 Many issues with `let` variables can be avoided by declaring them at the top of the scope in which they are used (doing so may impact readability).
- 
+
 Unlike `var`, `let` begins _Declarations_, not _Statements_. That means you cannot use a lone `let` declaration as the body of a block (which makes sense, since there's no way to access the variable).
 
 ```js
