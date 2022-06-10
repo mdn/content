@@ -75,6 +75,7 @@ td {
   padding: 0.5rem;
 }
 ```
+#### Result
 
 {{ EmbedLiveSample('Example') }}
 
@@ -169,6 +170,8 @@ function set_background() {
   secondParagraph.style.background = "red";
 }
 ```
+
+#### Result
 
 {{ EmbedLiveSample('Example_2') }}
 
