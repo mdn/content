@@ -247,8 +247,8 @@ Create a new HTML file called /**locallibrary/templates/registration/login.html*
         <td>\{{ form.password }}</td>
       </tr>
     </table>
-    <input type="submit" value="login" />
-    <input type="hidden" name="next" value="\{{ next }}" />
+    <input type="submit" value="login">
+    <input type="hidden" name="next" value="\{{ next }}">
   </form>
 
   {# Assumes you setup the password_reset view in your URLconf #}
@@ -362,7 +362,7 @@ This page is where you enter your new password after clicking the link in the pa
                 </tr>
                 <tr>
                     <td></td>
-                    <td><input type="submit" value="Change my password" /></td>
+                    <td><input type="submit" value="Change my password"></td>
                 </tr>
             </table>
         </form>
