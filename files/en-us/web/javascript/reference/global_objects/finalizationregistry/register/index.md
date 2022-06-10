@@ -40,7 +40,10 @@ register(target, heldValue, unregisterToken);
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown when: `target` is not an object (object as opposed to primitives; functions are objects as well), `target === heldValue`, or `unregisterToken` is not an object.
+  - : Thrown when one of the following condition is met:
+    - `target` is not an object (object as opposed to primitives; functions are objects as well)
+    - `target` is the same as `heldvalue` (`target === heldValue`)
+    - `unregisterToken` is not an object
 
 ## Notes
 
