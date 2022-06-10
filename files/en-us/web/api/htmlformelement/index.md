@@ -160,11 +160,11 @@ Extract information from a `<form>` element and set some of its attributes:
 <script>
   function getFormInfo(){
     // Get a reference to the form via its name
-    var f = document.forms["formA"];
+    const f = document.forms["formA"];
     // The form properties we're interested in
-    var properties = [ 'elements', 'length', 'name', 'charset', 'action', 'acceptCharset', 'action', 'enctype', 'method', 'target' ];
+    const properties = [ 'elements', 'length', 'name', 'charset', 'action', 'acceptCharset', 'action', 'enctype', 'method', 'target' ];
     // Iterate over the properties, turning them into a string that we can display to the user
-    var info = properties.map(function(property) { return property + ": " + f[property] }).join("\n");
+    const info = properties.map(function(property) { return property + ": " + f[property] }).join("\n");
 
     // Set the form's <textarea> to display the form's properties
     document.forms["formA"].elements['form-info'].value = info; // document.forms["formA"]['form-info'].value would also work
