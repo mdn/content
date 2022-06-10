@@ -115,7 +115,7 @@ console.log('Entry 0 in the 32-bit array is now ' + int32View[0]);
 
 The output from this is `"Entry 0 in the 32-bit array is now 32"`.
 
-In other words, the two arrays are indeed viewed on the same data buffer, treating it as different formats. You can do this with any [view types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects "JavaScript typed arrays/ArrayBufferView#Typed array subclasses").
+In other words, the two arrays are indeed viewed on the same data buffer, treating it as different formats. You can do this with any [view types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects).
 
 ### Working with complex data structures
 

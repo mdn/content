@@ -24760,18 +24760,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/ArrayBufferView": {
-    "modified": "2019-10-01T12:15:40.895Z",
-    "contributors": [
-      "aduh95",
-      "yegao",
-      "mfluehr",
-      "TimothyGu",
-      "Jeremie",
-      "fscholz",
-      "teoli"
-    ]
-  },
   "Web/API/Attr": {
     "modified": "2020-10-15T21:10:30.867Z",
     "contributors": [

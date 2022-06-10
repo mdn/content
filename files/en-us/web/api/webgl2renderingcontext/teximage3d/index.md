@@ -121,7 +121,7 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
     - {{domxref("HTMLVideoElement")}}.
 
 - `srcData`
-  - : An {{domxref("ArrayBufferView")}} object.
+  - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object.
 
 - `offset`
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} byte offset into the {{domxref("WebGLBuffer")}}'s data
