@@ -38,7 +38,7 @@ const circle = document.getElementById('circle');
 console.log(circle.cy);
 ```
 
-{{EmbedLiveSample("Example", "200", "200")}}
+{{EmbedLiveSample("Examples", "200", "200")}}
 
 ## Specifications
 
