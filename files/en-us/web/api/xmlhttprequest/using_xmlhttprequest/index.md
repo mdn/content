@@ -367,9 +367,8 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
     for (var nIdx = 0; nIdx < nBytes; nIdx++) {
       ui8Data[nIdx] = sData.charCodeAt(nIdx) & 0xff;
     }
-    /* send as ArrayBufferView...: */
+    /* send: */
     this.send(ui8Data);
-    /* ...or as ArrayBuffer (legacy)...: this.send(ui8Data.buffer); */
   };
 }
 

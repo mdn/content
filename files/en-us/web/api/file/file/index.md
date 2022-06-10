@@ -24,8 +24,8 @@ new File(bits, name, options)
 ### Parameters
 
 - `bits`
-  - : An {{jsxref("Array")}} of {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}},
-    {{domxref("Blob")}}, string objects, or a mix of any of such
+  - : An {{jsxref("Array")}} of {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray)}}, a {{jsxref("DataView")}},
+    a {{domxref("Blob")}}, string literals or objects, or a mix of any of such
     objects, that will be put inside the {{domxref("File")}}.
     Note that strings objects here are encoded as UTF-8, unlike the usual JS UTF-16 strings.
 - `name`
