@@ -35,8 +35,8 @@ function gameLoop() {
   } else {
       gp = navigator.getGamepads()[0];
   }
-  let a;
-  let b;
+  let a = 0;
+  let b = 0;
   if(gp.axes[0] != 0) {
     b -= gp.axes[0];
   } else if(gp.axes[1] != 0) {
