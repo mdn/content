@@ -382,7 +382,7 @@ Insert some HTML tags or _smiles_ or any custom text in a textarea.
 
 ```js
 function insertMetachars(sStartTag, sEndTag) {
-  var bDouble = arguments.length > 1, oMsgInput = document.myForm.myTxtArea, nSelStart = oMsgInput.selectionStart, nSelEnd = oMsgInput.selectionEnd, sOldText = oMsgInput.value;
+  let bDouble = arguments.length > 1, oMsgInput = document.myForm.myTxtArea, nSelStart = oMsgInput.selectionStart, nSelEnd = oMsgInput.selectionEnd, sOldText = oMsgInput.value;
   oMsgInput.value = sOldText.substring(0, nSelStart) + (bDouble ? sStartTag + sOldText.substring(nSelStart, nSelEnd) + sEndTag : sStartTag) + sOldText.substring(nSelEnd);
   oMsgInput.setSelectionRange(bDouble || nSelStart === nSelEnd ? nSelStart + sStartTag.length : nSelStart, (bDouble ? nSelEnd : nSelStart) + sStartTag.length);
   oMsgInput.focus();
@@ -405,7 +405,7 @@ HTML:
 
 ```html
 <form name="myForm">
-<p>[&nbsp;<span class="intLink" onclick="insertMetachars('&lt;strong&gt;','&lt;\/strong&gt;');"><strong>Bold</strong></span> | <span class="intLink" onclick="insertMetachars('&lt;em&gt;','&lt;\/em&gt;');"><em>Italic</em></span> | <span class="intLink" onclick="var newURL=prompt('Enter the full URL for the link');if(newURL){insertMetachars('&lt;a href=\u0022'+newURL+'\u0022&gt;','&lt;\/a&gt;');}else{document.myForm.myTxtArea.focus();}">URL</span> | <span class="intLink" onclick="insertMetachars('\n&lt;code&gt;\n','\n&lt;\/code&gt;\n');">code</span> | <span class="intLink" onclick="insertMetachars(' :-)');">smile</span> | etc. etc.&nbsp;]</p>
+<p>[&nbsp;<span class="intLink" onclick="insertMetachars('&lt;strong&gt;','&lt;\/strong&gt;');"><strong>Bold</strong></span> | <span class="intLink" onclick="insertMetachars('&lt;em&gt;','&lt;\/em&gt;');"><em>Italic</em></span> | <span class="intLink" onclick="let newURL=prompt('Enter the full URL for the link');if(newURL){insertMetachars('&lt;a href=\u0022'+newURL+'\u0022&gt;','&lt;\/a&gt;');}else{document.myForm.myTxtArea.focus();}">URL</span> | <span class="intLink" onclick="insertMetachars('\n&lt;code&gt;\n','\n&lt;\/code&gt;\n');">code</span> | <span class="intLink" onclick="insertMetachars(' :-)');">smile</span> | etc. etc.&nbsp;]</p>
 <p><textarea name="myTxtArea" rows="10" cols="50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis, arcu vitae adipiscing placerat, nisl lectus accumsan nisi, vitae iaculis sem neque vel lectus. Praesent tristique commodo lorem quis fringilla. Sed ac tellus eros. Sed consectetur eleifend felis vitae luctus. Praesent sagittis, est eget bibendum tincidunt, ligula diam tincidunt augue, a fermentum odio velit eget mi. Phasellus mattis, elit id fringilla semper, orci magna cursus ligula, non venenatis lacus augue sit amet dui. Pellentesque lacinia odio id nisi pulvinar commodo tempus at odio. Ut consectetur eros porttitor nunc mollis ultrices. Aenean porttitor, purus sollicitudin viverra auctor, neque erat blandit sapien, sit amet tincidunt massa mi ac nibh. Proin nibh sem, bibendum ut placerat nec, cursus et lacus. Phasellus vel augue turpis. Nunc eu mauris eu leo blandit mollis interdum eget lorem. </textarea></p>
 </form>
 ```
@@ -420,7 +420,7 @@ First, create a function that takes the text field and a key event as input and 
 
 ```js
 function checkRows(oField, oKeyEvent) {
-  var nKey = (oKeyEvent || /* old IE */ window.event || /* check is not supported! */ { keyCode: 38 }).keyCode,
+  let nKey = (oKeyEvent || /* old IE */ window.event || /* check is not supported! */ { keyCode: 38 }).keyCode,
 
     // put here the maximum number of characters per line:
     nCols = 30,
