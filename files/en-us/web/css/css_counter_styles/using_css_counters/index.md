@@ -109,7 +109,7 @@ The generated text is the value of all counters with the given name in scope at 
 The counter is rendered in the specified `<counter-style>` for both methods (`decimal` by default).
 You can use any of the {{cssxref("list-style-type")}} values or your own [custom styles](/en-US/docs/Web/CSS/CSS_Counter_Styles).
 
-Examples showing the use of `counter()` and `counter()` are given below in the [basic example](#basic_example) and [Example of a nested counter](#example_of_a_nested_counter), respectively.
+Examples showing the use of `counter()` and `counters()` are given below in the [basic example](#basic_example) and [Example of a nested counter](#example_of_a_nested_counter), respectively.
 
 ### Reversed counters
 
@@ -207,7 +207,7 @@ h3::before {
 
 #### Result
 
-{{EmbedLiveSample("Reversing a counter", "100%", 150)}}
+{{EmbedLiveSample("Basic example: reversed counter", "100%", 150)}}
 
 ### A more sophisticated example
 
