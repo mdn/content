@@ -79,7 +79,6 @@ This example establishes an event listener for {{event("keydown")}} events that 
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="world">
   <polygon id="spaceship" points="15,0 0,30 30,30"/>
 </svg>
-<script>refresh();</script>
 ```
 
 #### CSS
@@ -155,6 +154,7 @@ function refresh() {
 
   spaceship.setAttribute("transform", transform);
 }
+refresh();
 ```
 
 Finally, the `addEventListener()` method is used to start listening for {{event("keydown")}} events, acting on each key by updating the ship position and rotation angle, then calling `refresh()` to draw the ship at its new position and angle.
