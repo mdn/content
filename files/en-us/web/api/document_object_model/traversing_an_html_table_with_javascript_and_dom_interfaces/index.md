@@ -391,10 +391,3 @@ Once you have the object in your JavaScript variable, you can set `style` proper
 </script>
 </html>
 ```
-
-#### Original Document Information
-
-- Author(s)
-  - : Marcio Galli
-- Migrated from
-  - : https\://web.archive.org/web/20000815054125/https\://mozilla.org/docs/dom/technote/tn-dom-table/
