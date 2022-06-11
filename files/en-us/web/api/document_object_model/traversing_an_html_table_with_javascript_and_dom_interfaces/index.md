@@ -269,7 +269,7 @@ The basic steps to create the table in sample1.html are:
 <script>
     function start() {
         // get the reference for the body
-        let mybody = document.getElementsByTagName("body")[0];
+        const mybody = document.getElementsByTagName("body")[0];
 
         // creates <table> and <tbody> elements
         const mytable = document.createElement("table");
