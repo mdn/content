@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createBiquadFilter()
 slug: Web/API/BaseAudioContext/createBiquadFilter
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext

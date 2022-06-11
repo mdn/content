@@ -1,6 +1,7 @@
 ---
 title: Response.clone()
 slug: Web/API/Response/clone
+page-type: web-api-instance-method
 tags:
   - API
   - Fetch

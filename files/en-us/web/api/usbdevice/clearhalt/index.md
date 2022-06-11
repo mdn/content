@@ -1,6 +1,7 @@
 ---
 title: USBDevice.clearHalt()
 slug: Web/API/USBDevice/clearHalt
+page-type: web-api-instance-method
 tags:
   - API
   - Method

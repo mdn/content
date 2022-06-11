@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onfocus
 slug: Web/API/GlobalEventHandlers/onfocus
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -19,8 +20,7 @@ processes {{event("focus")}} events on the given element.
 The `focus` event is raised when the user sets focus on an element.
 
 For `onfocus` to fire on non-input elements, they must be given the
-{{htmlattrxref("tabindex")}} attribute (see [Building
-keyboard accessibility back in](/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in) for more details).
+{{htmlattrxref("tabindex")}} attribute (see [Building keyboard accessibility back in](/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in) for more details).
 
 > **Note:** The opposite of `onfocus` is
 > {{domxref("GlobalEventHandlers.onblur", "onblur")}}.
@@ -33,8 +33,7 @@ target.onfocus = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("FocusEvent")}} object as its sole
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("FocusEvent")}} object as its sole
 argument.
 
 ## Example

@@ -1,6 +1,7 @@
 ---
 title: 'Element: mouseout event'
 slug: Web/API/Element/mouseout_event
+page-type: web-api-event
 tags:
   - API
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: IDBVersionChangeEvent.newVersion
 slug: Web/API/IDBVersionChangeEvent/newVersion
+page-type: web-api-instance-property
 tags:
   - API
   - Database
@@ -28,8 +29,7 @@ A number that is a 64-bit integer.
 
 In the following code snippet, we make a request to open a database, and include
 handlers for the success and error cases. These events are fired via the custom
-`IDBVersionChangeEvent` interface. For a full working example, see our [To-do
-Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+`IDBVersionChangeEvent` interface. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
 var note = document.querySelector("ul");

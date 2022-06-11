@@ -1,6 +1,7 @@
 ---
 title: Using channel messaging
 slug: Web/API/Channel_Messaging_API/Using_channel_messaging
+page-type: guide
 tags:
   - API
   - Channel messaging
@@ -27,7 +28,7 @@ Message channels on the other hand can provide a secure channel that allows you 
 
 ## Simple examples
 
-To get your started, we have published a couple of demos on GitHub. First up, check out our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)), which shows a really simple single message transfer between a page and an embedded {{htmlelement("iframe")}}.
+To get you started, we have published a couple of demos on GitHub. First up, check out our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)), which shows a really simple single message transfer between a page and an embedded {{htmlelement("iframe")}}.
 
 Secondly, have a look at our [multimessaging demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-multimessage) ([run this live](https://mdn.github.io/dom-examples/channel-messaging-multimessage/)), which shows a slightly more complex setup that can send multiple messages between the main page and an IFrame.
 
@@ -40,13 +41,13 @@ We'll be focusing on the latter example in this article. It looks like so:
 In the main page of the demo, we have a simple form with a text input for entering messages to be sent to an {{htmlelement("iframe")}}. We also have a paragraph which we will use later on to display confirmation messages that we will receive back from the {{htmlelement("iframe")}}.
 
 ```js
-var input = document.getElementById('message-input');
-var output = document.getElementById('message-output');
-var button = document.querySelector('button');
-var iframe = document.querySelector('iframe');
+const input = document.getElementById('message-input');
+const output = document.getElementById('message-output');
+const button = document.querySelector('button');
+const iframe = document.querySelector('iframe');
 
-var channel = new MessageChannel();
-var port1 = channel.port1;
+const channel = new MessageChannel();
+const port1 = channel.port1;
 
 // Wait for the iframe to load
 iframe.addEventListener("load", onLoad);
@@ -92,8 +93,8 @@ When our button is clicked, we prevent the form from submitting as normal and th
 Over in the IFrame, we have the following JavaScript:
 
 ```js
-var list = document.querySelector('ul');
-var port2;
+const list = document.querySelector('ul');
+const port2;
 
 // Listen for the initial port transfer message
 window.addEventListener('message', initPort);
@@ -106,7 +107,7 @@ function initPort(e) {
 
 // Handle messages received on port2
 function onMessage(e) {
-  var listItem = document.createElement('li');
+  const listItem = document.createElement('li');
   listItem.textContent = e.data;
   list.appendChild(listItem);
   port2.postMessage('Message received by IFrame: "' + e.data + '"');

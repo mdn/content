@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.mozSetDataAt()
 slug: Web/API/DataTransfer/mozSetDataAt
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -64,8 +65,8 @@ This example shows the use of the `mozSetDataAt()` method in a
 ```js
 function dragstart_handler(event)
 {
-  var dt = event.dataTransfer;
-  var idx = dt.mozItemCount;
+  const dt = event.dataTransfer;
+  const idx = dt.mozItemCount;
   // Add two new items to the drag transfer
   if (idx >= 0) {
     dt.mozSetDataAt("text/uri-list","http://www.example.com/", idx);

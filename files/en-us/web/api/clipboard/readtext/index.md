@@ -1,6 +1,7 @@
 ---
 title: Clipboard.readText()
 slug: Web/API/Clipboard/readText
+page-type: web-api-instance-method
 tags:
   - API
   - Async Clipboard API

@@ -1,6 +1,7 @@
 ---
 title: Using IIR filters
 slug: Web/API/Web_Audio_API/Using_IIR_filters
+page-type: guide
 tags:
   - API
   - Audio

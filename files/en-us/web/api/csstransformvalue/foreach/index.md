@@ -1,6 +1,7 @@
 ---
 title: cssTransformValue.forEach()
 slug: Web/API/CSSTransformValue/forEach
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API

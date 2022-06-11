@@ -1,6 +1,7 @@
 ---
 title: Element.localName
 slug: Web/API/Element/localName
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

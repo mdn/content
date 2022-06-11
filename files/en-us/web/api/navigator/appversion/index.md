@@ -1,6 +1,7 @@
 ---
 title: Navigator.appVersion
 slug: Web/API/Navigator/appVersion
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

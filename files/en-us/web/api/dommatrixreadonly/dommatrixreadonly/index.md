@@ -1,6 +1,7 @@
 ---
 title: DOMMatrixReadOnly()
 slug: Web/API/DOMMatrixReadOnly/DOMMatrixReadOnly
+page-type: web-api-constructor
 tags:
   - Constructor
   - Reference

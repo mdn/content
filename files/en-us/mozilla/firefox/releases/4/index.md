@@ -18,11 +18,11 @@ Firefox 4, which shipped on March 22, 2011, enhances performance, adds more supp
 
 ## Features for web developers
 
-Gecko now uses the [HTML5](/en-US/docs/Web/Guide/HTML/HTML5) parser, which fixes bugs, improves interoperability, and improves performance. It also lets content embed [SVG](/en-US/docs/Web/SVG) and [MathML](/en-US/docs/Web/MathML) directly in the HTML markup.
+Gecko now uses the [HTML5](/en-US/docs/Glossary/HTML5) parser, which fixes bugs, improves interoperability, and improves performance. It also lets content embed [SVG](/en-US/docs/Web/SVG) and [MathML](/en-US/docs/Web/MathML) directly in the HTML markup.
 
 ### HTML
 
-- [Meet the HTML5 parser](/en-US/docs/Web/Guide/HTML/HTML5/HTML5_Parser)
+- [Meet the HTML5 parser](/en-US/docs/Learn/HTML)
   - : A look at what the HTML5 parser means to you, and how to embed SVG and MathML into your content inline.
 - [Forms in HTML5](/en-US/docs/Learn/Forms)
   - : A look at improvements to web forms in HTML5. Among these changes are added input types in the {{HTMLElement("input")}} element, data validation, and more.
@@ -54,7 +54,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 - `canvas2dcontext.globalCompositeOperation` no longer throws an exception when set to an unrecognized value, and no longer supports the non-standard `darker` value.
 - Support for the obsolete {{HTMLElement("spacer")}} element, which was absent in all other browsers, has been removed.
 - The {{HTMLElement("isindex")}} element, when created by calling {{domxref("document.createElement()")}}, is now created as a simple element with no properties or methods.
-- Gecko now supports calling `click()` on {{HTMLElement("input")}} elements to open the file picker. See the [example](</en-US/docs/Web/API/File/Using_files_from_web_applications#using_hidden_file_input_elements_using_the_click()_method>) in the article [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications).
+- Gecko now supports calling `click()` on {{HTMLElement("input")}} elements to open the file picker. See the [example](/en-US/docs/Web/API/File/Using_files_from_web_applications#using_hidden_file_input_elements_using_the_click_method) in the article [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications).
 - The {{HTMLElement("input")}} element supports a new [`mozactionhint`](/en-US/docs/Web/HTML/Element/input#mozactionhint) attribute, which lets you specify the label for the enter key on virtual keyboards.
 - {{HTMLElement("script")}} elements inside {{HTMLElement("iframe")}}, {{HTMLElement("noembed")}}, and {{HTMLElement("noframes")}} elements now get executed, which they weren't in previous versions of Firefox. This is in compliance with the specification, and matches the behavior of other browsers.
 
@@ -70,7 +70,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
   - : The {{cssxref("-moz-image-rect")}} function makes it possible to use subrectangles of images as a {{cssxref("background-image")}}.
 - CSS touch properties
   - : Support for touch properties is added. Details, and real article names, to come later.
-- [Using arbitrary elements as CSS backgrounds](</en-US/docs/Web/CSS/element()>)
+- [Using arbitrary elements as CSS backgrounds](/en-US/docs/Web/CSS/element)
   - : You can use the `-moz-element` CSS function and the {{domxref("document.mozSetImageElement()")}} DOM function to use arbitrary HTML elements as backgrounds.
 - [Privacy and the :visited selector](/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector)
   - : Changes have been made to what information can be obtained about the style of visited links using CSS selectors. This may affect some web applications.
@@ -293,7 +293,7 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 - The {{domxref("document.onreadystatechange")}} event has been implemented.
 - The {{domxref("document.createElement")}} method no longer accepts `<` and `>` around the tag name in quirks mode.
 - The {{domxref("element.setCapture()")}} and {{domxref("document.releaseCapture()")}} methods have been added, allowing elements to continue tracking mouse events even while the mouse is outside their normal tracking area after a `mousedown` event has occurred.
-- The {{domxref("window.mozPaintCount")}} property has been added; it lets you determine how many times a document has been painted. This can be useful when testing performance of your web application.
+- The `window.mozPaintCount` property has been added; it lets you determine how many times a document has been painted. This can be useful when testing performance of your web application.
 - The language token has been removed from {{domxref("window.navigator.appVersion")}} and {{domxref("window.navigator.userAgent")}}. Use {{domxref("window.navigator.language")}} or the [Accept-Language header](/en-US/docs/Web/HTTP/Content_negotiation) instead. {{Bug(572656)}}
 - The [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) object now exposes the response as a JavaScript typed array as well as a string, using the Gecko-specific `mozResponseArrayBuffer` property.
 - [Mouse events](/en-US/docs/Web/API/MouseEvent) now include a `mozPressure` property indicating the amount of pressure on supported pressure-sensitive input devices.
@@ -354,8 +354,8 @@ If you're a theme developer, you should read [Theme changes in Firefox 4](/en-US
 
 #### Miscellaneous changes to code modules
 
-- The `NetUtil.jsm` code module now offers the [`readInputStreamToString()`](</en-US/docs/JavaScript_code_modules/NetUtil.jsm#readInputStreamToString()>) method, which lets you read arbitrary bytes from a stream into a string, even if the stream includes zeroes.
-- The XPCOMUtils.jsm code module now offers [IterSimpleEnumerator()](</en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#IterSimpleEnumerator()>) and [IterStringEnumerator()](</en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#IterStringEnumerator()>) helpers to iterate over XPCOM enumerators.
+- The `NetUtil.jsm` code module now offers the [`readInputStreamToString()`](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/NetUtil.html#readInputStreamToString()>) method, which lets you read arbitrary bytes from a stream into a string, even if the stream includes zeroes.
+- The XPCOMUtils.jsm code module now offers [IterSimpleEnumerator()](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.html#IterSimpleEnumerator()>) and [IterStringEnumerator()](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.html#IterStringEnumerator()>) helpers to iterate over XPCOM enumerators.
 - You can now [use workers in JavaScript code modules](/en-US/docs/JavaScript_code_modules/Using_workers_in_JavaScript_code_modules).
 
 ### DOM changes

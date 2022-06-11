@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognitionResult.length
 slug: Web/API/SpeechRecognitionResult/length
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -30,8 +31,7 @@ A number.
 
 ## Examples
 
-This code is excerpted from our [Speech
-color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) example.
+This code is excerpted from our [Speech color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) example.
 
 ```js
 recognition.onresult = function(event) {

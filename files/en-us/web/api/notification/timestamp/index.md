@@ -1,6 +1,7 @@
 ---
 title: Notification.timestamp
 slug: Web/API/Notification/timestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Notification
@@ -57,5 +58,4 @@ console.log(n.timestamp) // should log original timestamp
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

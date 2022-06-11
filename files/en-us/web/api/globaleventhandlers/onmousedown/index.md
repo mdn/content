@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onmousedown
 slug: Web/API/GlobalEventHandlers/onmousedown
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

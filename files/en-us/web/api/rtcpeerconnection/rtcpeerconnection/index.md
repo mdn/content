@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection()
 slug: Web/API/RTCPeerConnection/RTCPeerConnection
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -169,10 +170,7 @@ the cost of generating new keys.
 
 ## See also
 
-- [Signaling and
-  video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
-- [WebRTC architecture
-  overview](/en-US/docs/Web/API/WebRTC_API/Protocols)
-- [Lifetime of a WebRTC
-  session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
+- [WebRTC architecture overview](/en-US/docs/Web/API/WebRTC_API/Protocols)
+- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
 - {{domxref("RTCPeerConnection")}}

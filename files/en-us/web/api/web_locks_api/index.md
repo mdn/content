@@ -1,6 +1,7 @@
 ---
 title: Web Locks API
 slug: Web/API/Web_Locks_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental

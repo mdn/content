@@ -100,7 +100,7 @@ The first proxy in the array will be tried first. If it does not respond in `fai
 
 ### PAC file environment
 
-The global helper functions usually available for PAC files ([`isPlainHostName()`](</en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#isplainhostname()_2>), [`dnsDomainIs()`](</en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#dnsdomainis()>), and so on) are not available.
+The global helper functions usually available for PAC files ([`isPlainHostName()`](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#isplainhostname), [`dnsDomainIs()`](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#dnsdomainis), and so on) are not available.
 
 Code running in the PAC file does not get access to:
 

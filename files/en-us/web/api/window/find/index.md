@@ -1,6 +1,7 @@
 ---
 title: Window.find()
 slug: Web/API/Window/find
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

@@ -1,6 +1,7 @@
 ---
 title: console.info()
 slug: Web/API/console/info
+page-type: web-api-instance-method
 tags:
   - API
   - Debugging

@@ -1,6 +1,7 @@
 ---
 title: InterventionReportBody.lineNumber
 slug: Web/API/InterventionReportBody/lineNumber
+page-type: web-api-instance-property
 tags:
   - API
   - Property

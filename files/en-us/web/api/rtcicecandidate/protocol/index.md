@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.protocol
 slug: Web/API/RTCIceCandidate/protocol
+page-type: web-api-instance-property
 tags:
   - API
   - ICE

@@ -1,6 +1,7 @@
 ---
 title: Background Synchronization API
 slug: Web/API/Background_Synchronization_API
+page-type: web-api-overview
 tags:
   - API
   - Background

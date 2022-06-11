@@ -1,6 +1,7 @@
 ---
 title: HIDDevice.sendReport()
 slug: Web/API/HIDDevice/sendReport
+page-type: web-api-instance-method
 tags:
   - API
   - Method

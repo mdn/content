@@ -1,6 +1,7 @@
 ---
 title: 'ServiceWorkerGlobalScope: notificationclick event'
 slug: Web/API/ServiceWorkerGlobalScope/notificationclick_event
+page-type: web-api-event
 tags:
   - Event
   - Notifications

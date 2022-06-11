@@ -1,6 +1,7 @@
 ---
 title: Node.hasChildNodes()
 slug: Web/API/Node/hasChildNodes
+page-type: web-api-instance-method
 tags:
   - Method
 

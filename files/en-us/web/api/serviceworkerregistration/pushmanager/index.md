@@ -1,6 +1,7 @@
 ---
 title: ServiceWorkerRegistration.pushManager
 slug: Web/API/ServiceWorkerRegistration/pushManager
+page-type: web-api-instance-property
 tags:
   - API
   - Property

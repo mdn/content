@@ -1,6 +1,7 @@
 ---
 title: Hello vertex attributes
 slug: Web/API/WebGL_API/By_example/Hello_vertex_attributes
+page-type: guide
 tags:
   - Beginner
   - Example

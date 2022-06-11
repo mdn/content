@@ -1,6 +1,7 @@
 ---
 title: Document.querySelectorAll()
 slug: Web/API/Document/querySelectorAll
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Selectors

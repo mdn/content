@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicyFactory.getAttributeType()
 slug: Web/API/TrustedTypePolicyFactory/getAttributeType
+page-type: web-api-instance-method
 tags:
   - API
   - Method

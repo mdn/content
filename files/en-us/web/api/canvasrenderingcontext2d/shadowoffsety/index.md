@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.shadowOffsetY
 slug: Web/API/CanvasRenderingContext2D/shadowOffsetY
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas

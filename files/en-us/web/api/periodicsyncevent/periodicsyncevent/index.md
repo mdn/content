@@ -1,6 +1,7 @@
 ---
 title: PeriodicSyncEvent()
 slug: Web/API/PeriodicSyncEvent/PeriodicSyncEvent
+page-type: web-api-constructor
 tags:
   - Constructor
   - Offline

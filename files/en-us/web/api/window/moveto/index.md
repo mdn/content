@@ -1,6 +1,7 @@
 ---
 title: Window.moveTo()
 slug: Web/API/Window/moveTo
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View

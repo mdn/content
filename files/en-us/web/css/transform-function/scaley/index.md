@@ -18,8 +18,7 @@ y-axis (vertically). Its result is a {{cssxref("&lt;transform-function&gt;")}} d
 
 It modifies the ordinate of each element point by a constant factor, except when the scale factor is 1, in which case
 the function is the identity transform. The scaling is not isotropic, and the angles of the element are not conserved.
-`scaleY(-1)` defines an [axial
-symmetry](https://en.wikipedia.org/wiki/Axial_symmetry), with a horizontal axis passing through the origin (as specified by the {{cssxref("transform-origin")}}
+`scaleY(-1)` defines an [axial symmetry](https://en.wikipedia.org/wiki/Axial_symmetry), with a horizontal axis passing through the origin (as specified by the {{cssxref("transform-origin")}}
 property).
 
 > **Note:** `scaleY(sy)` is equivalent to

@@ -1,6 +1,7 @@
 ---
 title: NDEFReader()
 slug: Web/API/NDEFReader/NDEFReader
+page-type: web-api-constructor
 tags:
   - NDEF
   - Reference

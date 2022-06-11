@@ -1,6 +1,7 @@
 ---
 title: Checking when a deadline is due
 slug: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
+page-type: guide
 tags:
   - Apps
   - Date

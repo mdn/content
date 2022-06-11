@@ -1,6 +1,7 @@
 ---
 title: Navigator.doNotTrack
 slug: Web/API/Navigator/doNotTrack
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

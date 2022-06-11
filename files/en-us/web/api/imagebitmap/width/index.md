@@ -1,6 +1,7 @@
 ---
 title: ImageBitmap.width
 slug: Web/API/ImageBitmap/width
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas

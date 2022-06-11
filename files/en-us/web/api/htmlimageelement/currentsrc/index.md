@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.currentSrc
 slug: Web/API/HTMLImageElement/currentSrc
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLImageElement

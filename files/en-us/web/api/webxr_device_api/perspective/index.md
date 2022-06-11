@@ -1,6 +1,7 @@
 ---
 title: A perspective retrospective for WebXR developers
 slug: Web/API/WebXR_Device_API/Perspective
+page-type: guide
 tags:
   - 3D
   - API

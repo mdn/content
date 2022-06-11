@@ -1,6 +1,7 @@
 ---
 title: Performance
 slug: Web/API/Performance
+page-type: web-api-interface
 tags:
   - API
   - Interface

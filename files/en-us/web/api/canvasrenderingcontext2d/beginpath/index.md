@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.beginPath()
 slug: Web/API/CanvasRenderingContext2D/beginPath
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

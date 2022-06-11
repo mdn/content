@@ -1,6 +1,7 @@
 ---
 title: 'Document: pointercancel event'
 slug: Web/API/Document/pointercancel_event
+page-type: web-api-event
 tags:
   - API
   - Document

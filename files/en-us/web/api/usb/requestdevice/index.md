@@ -1,6 +1,7 @@
 ---
 title: USB.requestDevice()
 slug: Web/API/USB/requestDevice
+page-type: web-api-instance-method
 tags:
   - API
   - Method

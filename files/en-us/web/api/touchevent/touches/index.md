@@ -1,6 +1,7 @@
 ---
 title: TouchEvent.touches
 slug: Web/API/TouchEvent/touches
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

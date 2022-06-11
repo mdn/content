@@ -1,6 +1,7 @@
 ---
 title: TextTrack.addCue()
 slug: Web/API/TextTrack/addCue
+page-type: web-api-instance-method
 tags:
   - API
   - Method

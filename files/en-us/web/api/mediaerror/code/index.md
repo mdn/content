@@ -1,6 +1,7 @@
 ---
 title: MediaError.code
 slug: Web/API/MediaError/code
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

@@ -1,6 +1,7 @@
 ---
 title: RTCRtpStreamStats.sliCount
 slug: Web/API/RTCRtpStreamStats/sliCount
+page-type: web-api-instance-property
 tags:
   - API
   - Media

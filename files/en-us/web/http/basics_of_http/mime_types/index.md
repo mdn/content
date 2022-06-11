@@ -156,7 +156,7 @@ Per the current relevant standards, JavaScript content should always be served u
 No other MIME types are considered valid for JavaScript, and using any MIME type other than`text/javascript` may result in scripts that do not load or run.
 
 You may find some JavaScript content incorrectly served with a `charset` parameter as part of the MIME type — as an attempt to specify the character set for the script content.
-That `charset` parameter isn’t valid for JavaScript content, and in most cases will result in a script failing to load.
+That `charset` parameter isn't valid for JavaScript content, and in most cases will result in a script failing to load.
 
 #### Legacy JavaScript MIME types
 

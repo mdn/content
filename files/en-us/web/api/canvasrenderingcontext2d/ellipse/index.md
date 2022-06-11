@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.ellipse()
 slug: Web/API/CanvasRenderingContext2D/ellipse
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

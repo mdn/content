@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.bgColor
 slug: Web/API/HTMLTableElement/bgColor
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -38,8 +39,7 @@ t.bgColor = 'lightblue';
 
 ## Specifications
 
-- [DOM Level 2
-  HTML:_HTMLTableElement_ .bgColor](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-83532985)
+- [DOM Level 2 HTML:_HTMLTableElement_ .bgColor](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-83532985)
 
 ## Browser compatibility
 

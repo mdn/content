@@ -1,6 +1,7 @@
 ---
 title: CSSValue
 slug: Web/API/CSSValue
+page-type: web-api-interface
 tags:
   - API
   - CSSOM

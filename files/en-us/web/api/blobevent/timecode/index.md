@@ -1,6 +1,7 @@
 ---
 title: BlobEvent.timecode
 slug: Web/API/BlobEvent/timecode
+page-type: web-api-instance-property
 tags:
   - API
   - BlobEvent

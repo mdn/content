@@ -1,6 +1,7 @@
 ---
 title: WebVR concepts
 slug: Web/API/WebVR_API/Concepts
+page-type: guide
 tags:
   - Acceleration
   - Apps

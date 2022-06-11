@@ -1,6 +1,7 @@
 ---
 title: DynamicsCompressorNode.ratio
 slug: Web/API/DynamicsCompressorNode/ratio
+page-type: web-api-instance-property
 tags:
   - API
   - DynamicsCompressorNode

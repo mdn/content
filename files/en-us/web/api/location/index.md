@@ -1,6 +1,7 @@
 ---
 title: Location
 slug: Web/API/Location
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.stream
 slug: Web/API/RTCDataChannel/stream
+page-type: web-api-instance-property
 tags:
   - Non-standard
   - Deprecated
@@ -55,7 +56,6 @@ This feature is not part of any current specification. It is not on track to bec
 ## See also
 
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
-- [Using WebRTC data
-  channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels)
+- [Using WebRTC data channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels)
 - {{domxref("RTCDataChannel")}}
 - {{domxref("RTCDataChannel.id")}}

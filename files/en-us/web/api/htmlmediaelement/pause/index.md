@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.pause()
 slug: Web/API/HTMLMediaElement/pause
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

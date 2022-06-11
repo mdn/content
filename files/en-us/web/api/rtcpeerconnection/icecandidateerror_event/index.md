@@ -1,6 +1,7 @@
 ---
 title: 'RTCPeerConnection: icecandidateerror event'
 slug: Web/API/RTCPeerConnection/icecandidateerror_event
+page-type: web-api-event
 tags:
   - API
   - Connection

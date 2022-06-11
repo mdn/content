@@ -1,6 +1,7 @@
 ---
 title: MIDIAccess
 slug: Web/API/MIDIAccess
+page-type: web-api-interface
 tags:
   - API
   - Interface

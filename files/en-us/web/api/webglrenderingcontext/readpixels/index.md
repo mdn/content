@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.readPixels()
 slug: Web/API/WebGLRenderingContext/readPixels
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -12,8 +13,7 @@ browser-compat: api.WebGLRenderingContext.readPixels
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.readPixels()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) reads a block of pixels from a
-specified rectangle of the current color framebuffer into an
-{{domxref("ArrayBufferView")}} object.
+specified rectangle of the current color framebuffer into a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}}} object.
 
 ## Syntax
 
@@ -86,8 +86,8 @@ readPixels(x, y, width, height, format, type, pixels, dstOffset)
 
 - `pixels`
 
-  - : An {{domxref("ArrayBufferView")}} object to read data into. The array type must
-    match the type of the `type` parameter.
+  - : An object to read data into. The array type must
+    match the type of the `type` parameter:
 
     - {{jsxref("Uint8Array")}} for `gl.UNSIGNED_BYTE`.
     - {{jsxref("Uint16Array")}} for `gl.UNSIGNED_SHORT_5_6_5`,

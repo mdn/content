@@ -1,6 +1,7 @@
 ---
 title: DataTransferItemList.remove()
 slug: Web/API/DataTransferItemList/remove
+page-type: web-api-instance-method
 tags:
   - API
   - DataTransferItemList

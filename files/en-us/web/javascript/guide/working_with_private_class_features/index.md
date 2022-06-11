@@ -5,6 +5,7 @@ tags:
   - Document
   - Guide
   - JavaScript
+browser-compat: javascript.classes
 ---
 {{jsSidebar("JavaScript Guide")}}
 
@@ -204,7 +205,7 @@ class Scalar {
   }
 
   add(s) {
-    // check the passed object defines #length
+    // check the passed object defines #total
     if (!(#total in s)) {
       throw new TypeError("Expected an instance of Scalar");
     }
@@ -225,4 +226,4 @@ scalar1.add({}) // throws informative exception
 
 ## Browser compatibility
 
-{{Compat("javascript.classes")}}
+{{Compat}}

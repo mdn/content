@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.screenY
 slug: Web/API/MouseEvent/screenY
+page-type: web-api-instance-property
 tags:
   - API
   - DOM Events

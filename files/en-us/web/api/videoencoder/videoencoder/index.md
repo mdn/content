@@ -1,6 +1,7 @@
 ---
 title: VideoEncoder.VideoEncoder()
 slug: Web/API/VideoEncoder/VideoEncoder
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

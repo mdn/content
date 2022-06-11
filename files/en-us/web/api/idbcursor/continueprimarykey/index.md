@@ -1,6 +1,7 @@
 ---
 title: IDBCursor.continuePrimaryKey()
 slug: Web/API/IDBCursor/continuePrimaryKey
+page-type: web-api-instance-method
 tags:
   - API
   - IDBCursor

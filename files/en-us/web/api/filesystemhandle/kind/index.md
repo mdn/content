@@ -1,6 +1,7 @@
 ---
 title: FileSystemHandle.kind
 slug: Web/API/FileSystemHandle/kind
+page-type: web-api-instance-property
 tags:
   - Directory
   - File
@@ -59,5 +60,4 @@ async function getFile() {
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

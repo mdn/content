@@ -1,6 +1,7 @@
 ---
 title: ImageBitmapRenderingContext.transferFromImageBitmap()
 slug: Web/API/ImageBitmapRenderingContext/transferFromImageBitmap
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

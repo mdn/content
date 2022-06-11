@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.retransmissionsSent
 slug: Web/API/RTCIceCandidatePairStats/retransmissionsSent
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidatePairStats.retransmissionsSent
 ---
 {{APIRef("WebRTC")}}

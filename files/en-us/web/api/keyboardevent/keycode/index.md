@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.keyCode
 slug: Web/API/KeyboardEvent/keyCode
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

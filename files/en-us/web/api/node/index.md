@@ -1,6 +1,7 @@
 ---
 title: Node
 slug: Web/API/Node
+page-type: web-api-interface
 tags:
   - Interface
   - Reference

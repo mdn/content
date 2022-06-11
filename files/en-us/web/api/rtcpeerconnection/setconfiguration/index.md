@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.setConfiguration()
 slug: Web/API/RTCPeerConnection/setConfiguration
+page-type: web-api-instance-method
 tags:
   - Configuration
   - Method

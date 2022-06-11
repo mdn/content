@@ -1,6 +1,7 @@
 ---
 title: Request.arrayBuffer()
 slug: Web/API/Request/arrayBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - ArrayBuffer

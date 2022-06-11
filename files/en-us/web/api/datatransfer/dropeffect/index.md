@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.dropEffect
 slug: Web/API/DataTransfer/dropEffect
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -104,7 +105,7 @@ function drop_handler(ev) {
   ev.preventDefault();
 
   // Get the id of the target and add the moved element to the target's DOM
-  var data = ev.dataTransfer.getData("text");
+  const data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
 }
 

@@ -1,6 +1,7 @@
 ---
 title: console.timeStamp()
 slug: Web/API/console/timeStamp
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

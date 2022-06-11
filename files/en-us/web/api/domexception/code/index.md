@@ -1,6 +1,7 @@
 ---
 title: DOMException.code
 slug: Web/API/DOMException/code
+page-type: web-api-instance-property
 tags:
   - API
   - Code

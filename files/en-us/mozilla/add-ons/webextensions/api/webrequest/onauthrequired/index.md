@@ -42,7 +42,7 @@ The listener can respond in one of four different ways:
     - in addListener, pass `"blocking"` in the `extraInfoSpec` parameter
     - in the listener, return a `Promise` that is resolved with an object containing an `authCredentials` property, set to the credentials to supply
 
-See [Examples](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired#examples).
+See [Examples](#examples).
 
 If you use `"blocking"` you must have the ["webRequestBlocking" API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in your `manifest.json`.
 
@@ -84,7 +84,7 @@ Events have three functions:
   - : A function that will be called when this event occurs. The function will be passed the following arguments:
 
     - `details`
-      - : [`object`](#details). Details about the request. See [`details`](#details) below.
+      - : [`object`](#details). Details about the request. See [`details`](#details_2) below.
 
     Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}} or a {{jsxref("Promise")}}.
 

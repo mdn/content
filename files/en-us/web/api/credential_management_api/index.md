@@ -1,6 +1,7 @@
 ---
 title: Credential Management API
 slug: Web/API/Credential_Management_API
+page-type: web-api-overview
 tags:
   - API
   - Credential Management API

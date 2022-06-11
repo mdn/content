@@ -1,6 +1,7 @@
 ---
 title: Navigator.getGamepads()
 slug: Web/API/Navigator/getGamepads
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

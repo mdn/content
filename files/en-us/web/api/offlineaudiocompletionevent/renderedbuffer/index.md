@@ -1,6 +1,7 @@
 ---
 title: OfflineAudioCompletionEvent.renderedBuffer
 slug: Web/API/OfflineAudioCompletionEvent/renderedBuffer
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

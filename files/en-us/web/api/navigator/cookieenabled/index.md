@@ -1,6 +1,7 @@
 ---
 title: Navigator.cookieEnabled
 slug: Web/API/Navigator/cookieEnabled
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

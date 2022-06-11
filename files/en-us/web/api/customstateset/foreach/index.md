@@ -1,6 +1,7 @@
 ---
 title: CustomStateSet.forEach()
 slug: Web/API/CustomStateSet/forEach
+page-type: web-api-instance-method
 tags:
   - API
   - Method

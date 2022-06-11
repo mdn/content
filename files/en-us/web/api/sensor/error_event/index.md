@@ -1,6 +1,7 @@
 ---
 title: 'Sensor: error event'
 slug: Web/API/Sensor/error_event
+page-type: web-api-event
 tags:
   - API
   - Generic Sensor API

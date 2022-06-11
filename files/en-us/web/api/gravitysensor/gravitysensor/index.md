@@ -1,6 +1,7 @@
 ---
 title: GravitySensor()
 slug: Web/API/GravitySensor/GravitySensor
+page-type: web-api-constructor
 tags:
   - API
   - Accelerometer

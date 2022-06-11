@@ -1,6 +1,7 @@
 ---
 title: Notification
 slug: Web/API/Notification
+page-type: web-api-interface
 tags:
   - API
   - Interface

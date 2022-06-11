@@ -1,6 +1,7 @@
 ---
 title: PerformanceObserver()
 slug: Web/API/PerformanceObserver/PerformanceObserver
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

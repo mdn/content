@@ -13,7 +13,7 @@ tags:
   - Security
   - XMLHttpRequest
   - l10n:priority
-spec-urls: https://fetch.spec.whatwg.org/#cors-protocol
+browser-compat: http.headers.Access-Control-Allow-Origin
 ---
 {{HTTPSidebar}}
 
@@ -492,7 +492,7 @@ Examples of this usage can be [found above](#preflighted_requests).
 
 ## Browser compatibility
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ## See also
 

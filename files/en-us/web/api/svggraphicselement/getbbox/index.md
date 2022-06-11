@@ -1,6 +1,7 @@
 ---
 title: SVGGraphicsElement.getBBox()
 slug: Web/API/SVGGraphicsElement/getBBox
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -105,5 +106,4 @@ rectBoundingClientRect.setAttribute('height', boundingClientRectGroup.height);
 
 ## See also
 
-- [getBBox
-  in SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html#getBBox)
+- [getBBox in SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html#getBBox)

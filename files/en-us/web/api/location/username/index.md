@@ -1,6 +1,7 @@
 ---
 title: location.username
 slug: Web/API/Location/username
+page-type: web-api-instance-property
 tags:
   - API
   - Location
@@ -8,19 +9,17 @@ tags:
   - Reference
 browser-compat: api.Location.username
 ---
-{{APIRef("HTMLDOM")}}
+{{APIRef("HTML DOM")}}
+
 {{deprecated_header}}
 
 The **`username`** property of the {{domxref("Location")}}
 interface is a string containing the username specified before the
 domain name.
 
-## Syntax
+## Value
 
-```js
-string = object.username;
-object.username = string;
-```
+A string.
 
 ## Examples
 

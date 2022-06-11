@@ -1,6 +1,7 @@
 ---
 title: OES_vertex_array_object
 slug: Web/API/OES_vertex_array_object
+page-type: webgl-extension
 tags:
   - API
   - Reference

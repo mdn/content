@@ -1,6 +1,7 @@
 ---
 title: WorkerLocation.hostname
 slug: Web/API/WorkerLocation/hostname
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -1,6 +1,7 @@
 ---
 title: 'RTCDataChannel: close event'
 slug: Web/API/RTCDataChannel/close_event
+page-type: web-api-event
 tags:
   - API
   - Connection

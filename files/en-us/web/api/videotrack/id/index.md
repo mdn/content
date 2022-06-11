@@ -1,6 +1,7 @@
 ---
 title: VideoTrack.id
 slug: Web/API/VideoTrack/id
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

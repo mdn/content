@@ -1,6 +1,7 @@
 ---
 title: 'Element: mouseup event'
 slug: Web/API/Element/mouseup_event
+page-type: web-api-event
 tags:
   - API
   - DOM

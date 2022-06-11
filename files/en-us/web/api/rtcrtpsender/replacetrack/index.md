@@ -1,6 +1,7 @@
 ---
 title: RTCRtpSender.replaceTrack()
 slug: Web/API/RTCRtpSender/replaceTrack
+page-type: web-api-instance-method
 tags:
   - Audio
   - Media

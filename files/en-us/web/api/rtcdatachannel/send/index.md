@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.send()
 slug: Web/API/RTCDataChannel/send
+page-type: web-api-instance-method
 tags:
   - API
   - Communication
@@ -42,8 +43,7 @@ send(data)
 
 - `data`
   - : The data to transmit across the connection. This may be a string,
-    a {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, or an
-    {{domxref("ArrayBufferView")}}.
+    a {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object.
 
 ### Return value
 

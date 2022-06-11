@@ -1,6 +1,7 @@
 ---
 title: FileSystemWritableFileStream.write()
 slug: Web/API/FileSystemWritableFileStream/write
+page-type: web-api-instance-method
 tags:
   - File
   - File System Access API
@@ -116,5 +117,4 @@ writableStream.write({ type: "truncate", size: size })
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

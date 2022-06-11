@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.rules
 slug: Web/API/CSSStyleSheet/rules
+page-type: web-api-instance-property
 tags:
   - API
   - CSS
@@ -48,5 +49,4 @@ describing one rule making up the stylesheet.
 ## See also
 
 - [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model)
-- [Using
-  dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

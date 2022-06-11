@@ -1,6 +1,7 @@
 ---
 title: 'DedicatedWorkerGlobalScope: message event'
 slug: Web/API/DedicatedWorkerGlobalScope/message_event
+page-type: web-api-event
 tags:
   - Event
   - message

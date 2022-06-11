@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.firstRequestTimestamp
 slug: Web/API/RTCIceCandidatePairStats/firstRequestTimestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Connectivity

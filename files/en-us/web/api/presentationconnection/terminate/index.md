@@ -1,6 +1,7 @@
 ---
 title: PresentationConnection.terminate()
 slug: Web/API/PresentationConnection/terminate
+page-type: web-api-instance-method
 tags:
   - API
   - Method

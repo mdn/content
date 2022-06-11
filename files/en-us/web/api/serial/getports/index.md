@@ -1,6 +1,7 @@
 ---
 title: Serial.getPorts()
 slug: Web/API/Serial/getPorts
+page-type: web-api-instance-method
 tags:
   - API
   - Method

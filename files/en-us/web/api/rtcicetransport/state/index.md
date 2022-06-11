@@ -1,6 +1,7 @@
 ---
 title: RTCIceTransport.state
 slug: Web/API/RTCIceTransport/state
+page-type: web-api-instance-property
 tags:
   - API
   - Enumerated Type

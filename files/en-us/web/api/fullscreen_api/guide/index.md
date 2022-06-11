@@ -1,6 +1,7 @@
 ---
 title: Guide to the Fullscreen API
 slug: Web/API/Fullscreen_API/Guide
+page-type: guide
 tags:
   - API
   - Drawing

@@ -1,6 +1,7 @@
 ---
 title: Element.remove()
 slug: Web/API/Element/remove
+page-type: web-api-instance-method
 tags:
   - API
   - Element

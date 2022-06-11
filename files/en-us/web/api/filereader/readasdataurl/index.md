@@ -1,6 +1,7 @@
 ---
 title: FileReader.readAsDataURL()
 slug: Web/API/FileReader/readAsDataURL
+page-type: web-api-instance-method
 tags:
   - API
   - Base 64

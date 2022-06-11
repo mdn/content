@@ -1,6 +1,7 @@
 ---
 title: RTCErrorEvent.error
 slug: Web/API/RTCErrorEvent/error
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

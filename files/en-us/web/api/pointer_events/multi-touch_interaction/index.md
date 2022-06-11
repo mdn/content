@@ -1,6 +1,7 @@
 ---
 title: Multi-touch interaction
 slug: Web/API/Pointer_events/Multi-touch_interaction
+page-type: guide
 tags:
   - Guide
   - Pointer Events

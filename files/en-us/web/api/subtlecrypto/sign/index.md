@@ -1,6 +1,7 @@
 ---
 title: SubtleCrypto.sign()
 slug: Web/API/SubtleCrypto/sign
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -42,7 +43,7 @@ sign(algorithm, key, data)
   - : A {{domxref("CryptoKey")}} object containing the key to be used for signing.
     If `algorithm` identifies a public-key cryptosystem, this is the private key.
 - `data`
-  - : An {{jsxref("ArrayBuffer")}} or {{domxref("ArrayBufferView")}} object containing the data to be signed.
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object containing the data to be signed.
 
 ### Return value
 

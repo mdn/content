@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.relatedPort
 slug: Web/API/RTCIceCandidate/relatedPort
+page-type: web-api-instance-property
 tags:
   - API
   - Address

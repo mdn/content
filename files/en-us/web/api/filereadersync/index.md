@@ -1,6 +1,7 @@
 ---
 title: FileReaderSync
 slug: Web/API/FileReaderSync
+page-type: web-api-interface
 tags:
   - API
   - NeedsMarkupWork

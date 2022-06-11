@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognitionEvent
 slug: Web/API/SpeechRecognitionEvent
+page-type: web-api-interface
 tags:
   - API
   - Experimental

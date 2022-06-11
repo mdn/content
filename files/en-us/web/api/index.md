@@ -1,6 +1,7 @@
 ---
 title: Web APIs
 slug: Web/API
+page-type: landing-page
 tags:
   - API
   - DOM

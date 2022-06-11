@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.bufferedAmountLowThreshold
 slug: Web/API/RTCDataChannel/bufferedAmountLowThreshold
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCDataChannel
@@ -68,8 +69,7 @@ dc.onbufferedamountlow = function() {
 ## See also
 
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
-- [Using WebRTC data
-  channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels)
+- [Using WebRTC data channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels)
 - {{domxref("RTCDataChannel")}}
 - {{domxref("RTCDataChannel.bufferedAmount")}}
 - {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event

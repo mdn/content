@@ -1,6 +1,7 @@
 ---
 title: RsaHashedImportParams
 slug: Web/API/RsaHashedImportParams
+page-type: web-api-interface
 tags:
   - API
   - Dictionary

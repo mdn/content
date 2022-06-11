@@ -1,6 +1,7 @@
 ---
 title: VRFrameData.leftViewMatrix
 slug: Web/API/VRFrameData/leftViewMatrix
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

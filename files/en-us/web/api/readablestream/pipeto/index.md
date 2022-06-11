@@ -1,6 +1,7 @@
 ---
 title: ReadableStream.pipeTo()
 slug: Web/API/ReadableStream/pipeTo
+page-type: web-api-instance-method
 tags:
   - API
   - Method

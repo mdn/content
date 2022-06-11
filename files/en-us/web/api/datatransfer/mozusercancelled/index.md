@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.mozUserCancelled
 slug: Web/API/DataTransfer/mozUserCancelled
+page-type: web-api-instance-property
 tags:
   - API
   - Non-standard
@@ -36,7 +37,7 @@ This example shows the use of the `mozUserCancelled` property in the
 ```js
 function dragend_handler(event)
 {
-  var dragData = event.dataTransfer;
+  const dragData = event.dataTransfer;
   console.log("mozUserCancelled = " + dragData.mozUserCancelled);
 }
 ```

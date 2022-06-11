@@ -1,6 +1,7 @@
 ---
 title: MessageEvent
 slug: Web/API/MessageEvent
+page-type: web-api-interface
 tags:
   - API
   - Channels

@@ -1,6 +1,7 @@
 ---
 title: ImageTrack
 slug: Web/API/ImageTrack
+page-type: web-api-interface
 tags:
   - API
   - Interface

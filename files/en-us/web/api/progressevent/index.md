@@ -1,6 +1,7 @@
 ---
 title: ProgressEvent
 slug: Web/API/ProgressEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface

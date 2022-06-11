@@ -1,6 +1,7 @@
 ---
 title: Element.openOrClosedShadowRoot
 slug: Web/API/Element/openOrClosedShadowRoot
+page-type: web-api-instance-property
 tags:
   - API
   - Add-ons

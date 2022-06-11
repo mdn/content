@@ -1,6 +1,7 @@
 ---
 title: DOMPointReadOnly.fromPoint()
 slug: Web/API/DOMPointReadOnly/fromPoint
+page-type: web-api-static-method
 tags:
   - API
   - Coordinates

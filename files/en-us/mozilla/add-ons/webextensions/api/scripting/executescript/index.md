@@ -68,7 +68,7 @@ Each `InjectionResult` object has these properties:
     - `message`
       - : `string`. A message explaining why the injection failed.
 
-The result of the script is the last evaluated statement, which is similar to the results seen if you executed the script in the [Web Console](/en-US/docs/Tools/Web_Console) (not any `console.log()` output). For example, consider a script like this:
+The result of the script is the last evaluated statement, which is similar to the results seen if you executed the script in the [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) (not any `console.log()` output). For example, consider a script like this:
 
 ```js
 let foo='my result'; foo;

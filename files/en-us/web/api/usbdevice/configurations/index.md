@@ -1,6 +1,7 @@
 ---
 title: USBDevice.configurations
 slug: Web/API/USBDevice/configurations
+page-type: web-api-instance-property
 tags:
   - API
   - Property

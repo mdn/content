@@ -1,6 +1,7 @@
 ---
 title: Element.querySelector()
 slug: Web/API/Element/querySelector
+page-type: web-api-instance-method
 tags:
   - API
   - CSS

@@ -1,6 +1,7 @@
 ---
 title: HTMLIFrameElement.fetchPriority
 slug: Web/API/HTMLIFrameElement/fetchPriority
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

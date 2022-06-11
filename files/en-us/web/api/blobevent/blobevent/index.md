@@ -1,6 +1,7 @@
 ---
 title: BlobEvent()
 slug: Web/API/BlobEvent/BlobEvent
+page-type: web-api-constructor
 tags:
   - API
   - BlobEvent

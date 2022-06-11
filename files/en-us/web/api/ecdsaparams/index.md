@@ -1,6 +1,7 @@
 ---
 title: EcdsaParams
 slug: Web/API/EcdsaParams
+page-type: web-api-interface
 tags:
   - API
   - Dictionary

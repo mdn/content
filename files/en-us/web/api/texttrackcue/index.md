@@ -1,6 +1,7 @@
 ---
 title: TextTrackCue
 slug: Web/API/TextTrackCue
+page-type: web-api-interface
 tags:
   - API
   - Accessibility

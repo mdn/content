@@ -1,6 +1,7 @@
 ---
 title: AudioListener.upX
 slug: Web/API/AudioListener/upX
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

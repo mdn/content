@@ -1,6 +1,7 @@
 ---
 title: IDBCursor.direction
 slug: Web/API/IDBCursor/direction
+page-type: web-api-instance-property
 tags:
   - API
   - Database

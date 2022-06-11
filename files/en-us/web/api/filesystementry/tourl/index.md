@@ -1,6 +1,7 @@
 ---
 title: FileSystemEntry.toURL()
 slug: Web/API/FileSystemEntry/toURL
+page-type: web-api-instance-method
 tags:
   - API
   - File and Directory Entries API

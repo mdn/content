@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.compressedTexImage[23]D()
 slug: Web/API/WebGLRenderingContext/compressedTexImage2D
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -77,8 +78,7 @@ compressedTexImage3D(target, level, internalformat, width, height, depth, border
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the compressed image format. Compressed image
     formats must be enabled by [WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) before
     using this method. All values are possible for `compressedTexImage2D`. See
-    [compressed texture
-    formats](/en-US/docs/Web/API/WebGL_API/Compressed_texture_formats) for which are valid for `compressedTexImage3D`. Possible
+    [compressed texture formats](/en-US/docs/Web/API/WebGL_API/Compressed_texture_formats) for which are valid for `compressedTexImage3D`. Possible
     values:
 
     - When using the {{domxref("WEBGL_compressed_texture_s3tc")}} extension:
@@ -165,7 +165,7 @@ compressedTexImage3D(target, level, internalformat, width, height, depth, border
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying the offset in bytes from which to read from the
     buffer bound to `gl.PIXEL_UNPACK_BUFFER`.
 - `pixels`
-  - : An {{domxref("ArrayBufferView")}} that will be used as a data store for the
+  - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} that will be used as a data store for the
     compressed image data in memory.
 
 ### Return value

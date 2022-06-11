@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.responseStart
 slug: Web/API/PerformanceResourceTiming/responseStart
+page-type: web-api-instance-property
 tags:
   - API
   - Property

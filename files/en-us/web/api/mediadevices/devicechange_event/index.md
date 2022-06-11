@@ -1,6 +1,7 @@
 ---
 title: 'MediaDevices: devicechange event'
 slug: Web/API/MediaDevices/devicechange_event
+page-type: web-api-event
 tags:
   - API
   - Audio
@@ -187,9 +188,7 @@ display it to the user.
 
 The line
 `let [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);`
-deserves special notice. This uses [destructuring
-assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) (a new feature of [ECMAScript
-6](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla)) to assign the values of the first three items in the array returned by
+deserves special notice. This uses [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) (a new feature of [ECMAScript 6](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla)) to assign the values of the first three items in the array returned by
 {{jsxref("String.match()")}} to the variables `kind`, `type`, and
 `direction`. We do this because the value of
 {{domxref("MediaDeviceInfo.kind")}} is a single string that includes both the media type

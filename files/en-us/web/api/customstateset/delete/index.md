@@ -1,6 +1,7 @@
 ---
 title: CustomStateSet.delete()
 slug: Web/API/CustomStateSet/delete
+page-type: web-api-instance-method
 tags:
   - API
   - Method

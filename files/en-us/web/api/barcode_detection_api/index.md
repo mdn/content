@@ -1,6 +1,7 @@
 ---
 title: Barcode Detection API
 slug: Web/API/Barcode_Detection_API
+page-type: web-api-overview
 tags:
   - API
   - Landing
@@ -241,7 +242,7 @@ if (!('BarcodeDetector' in window)) {
   console.log('Barcode Detector supported!');
 
   // create new detector
-  var barcodeDetector = new BarcodeDetector({formats: ['code_39', 'codabar', 'ean_13']});
+  const barcodeDetector = new BarcodeDetector({formats: ['code_39', 'codabar', 'ean_13']});
 }
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Touch events
 slug: Web/API/Touch_events
+page-type: web-api-overview
 tags:
   - Advanced
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: TransformStreamDefaultController.enqueue()
 slug: Web/API/TransformStreamDefaultController/enqueue
+page-type: web-api-instance-method
 tags:
   - API
   - Method

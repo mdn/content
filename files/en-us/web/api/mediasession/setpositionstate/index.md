@@ -1,6 +1,7 @@
 ---
 title: MediaSession.setPositionState()
 slug: Web/API/MediaSession/setPositionState
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

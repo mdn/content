@@ -12,6 +12,7 @@ spec-urls:
   - https://html.spec.whatwg.org/multipage/input.html#the-min-and-max-attributes
   - https://html.spec.whatwg.org/multipage/forms.html#the-progress-element
   - https://html.spec.whatwg.org/multipage/forms.html#the-meter-element
+browser-compat: html.elements.attributes.max
 ---
 
 {{HTMLSidebar}}
@@ -138,7 +139,7 @@ Provide instructions to help users understand how to complete the form and use i
 
 ## Browser compatibility
 
-{{Compat("html.elements.attributes.max")}}
+{{Compat}}
 
 ## See also
 

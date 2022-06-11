@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.echoCancellation
 slug: Web/API/MediaTrackSupportedConstraints/echoCancellation
+page-type: web-api-instance-property
 tags:
   - API
   - Media
