@@ -50,7 +50,7 @@ self.requestFileSystemSync = self.webkitRequestFileSystemSync ||
                              self.requestFileSystemSync;
 
 // Global for holding the list of entry file system URLs.
-let paths = [];
+const paths = [];
 
 function getAllEntries(dirReader) {
   const entries = dirReader.readEntries();
