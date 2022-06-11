@@ -1,5 +1,5 @@
 ---
-title: VideoFrame.VideoFrame()
+title: VideoFrame()
 slug: Web/API/VideoFrame/VideoFrame
 page-type: web-api-constructor
 tags:
@@ -52,10 +52,10 @@ The first type of constructor (see above) creates a new {{domxref("VideoFrame")}
     - `displayHeight`{{Optional_Inline}}
       - : The height of the `VideoFrame` when displayed after applying aspect-ratio adjustments.
 
-The second type of constructor (see above) creates a new {{domxref("VideoFrame")}} from an {{domxref("ArrayBuffer")}}. Its parameters are:
+The second type of constructor (see above) creates a new {{domxref("VideoFrame")}} from an {{jsxref("ArrayBuffer")}}. Its parameters are:
 
 - `data`
-  - : An {{domxref("ArrayBuffer")}} containing the data for the new `VideoFrame`.
+  - : An {{jsxref("ArrayBuffer")}} containing the data for the new `VideoFrame`.
 - `init`
   - : A dictionary object containing the following:
     - `format`
