@@ -41,7 +41,5 @@ which is requesting merchant validation. See
 ## See also
 
 - [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
-- [Using
-  the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
-- [Payment processing
-  concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)
+- [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- [Payment processing concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)

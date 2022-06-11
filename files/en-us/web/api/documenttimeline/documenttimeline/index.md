@@ -37,14 +37,14 @@ new DocumentTimeline(options)
 We could share a single `documentTimeline` among multiple animations, thus allowing us to manipulate just that group of animations via their shared timeline. This bit of code would start all the cats animating 500 milliseconds into their animations:
 
 ```js
-var cats = document.querySelectorAll('.sharedTimelineCat');
+let cats = document.querySelectorAll('.sharedTimelineCat');
 cats = Array.prototype.slice.call(cats);
 
-var sharedTimeline = new DocumentTimeline({ originTime: 500 });
+const sharedTimeline = new DocumentTimeline({ originTime: 500 });
 
 cats.forEach(function(cat) {
-  var catKeyframes = new KeyframeEffect(cat, keyframes, timing);
-  var catAnimation = new Animation(catKeyframes, sharedTimeline);
+  const catKeyframes = new KeyframeEffect(cat, keyframes, timing);
+  const catAnimation = new Animation(catKeyframes, sharedTimeline);
   catAnimation.play();
 });
 ```

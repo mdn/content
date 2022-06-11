@@ -56,7 +56,7 @@ getBufferSubData(target, srcByteOffset, dstData, dstOffset, length)
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying the byte offset from which to start reading
     from the buffer.
 - `dstData`
-  - : An {{domxref("ArrayBufferView")}} to copy the data to. If `dstData` is a
+  - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object to copy the data to. If `dstData` is a
     {{jsxref("DataView")}} then `dstOffset` and `length` are
     interpreted in bytes, otherwise `dstData`'s element type is used.
 - `dstOffset` {{optional_inline}}

@@ -73,7 +73,7 @@ compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height,
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the offset in bytes from which to read from the
     buffer bound to `gl.PIXEL_UNPACK_BUFFER`.
 - `srcData`
-  - : An {{domxref("ArrayBufferView")}} that be used as a data store for the compressed
+  - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object that will be used as a data store for the compressed
     image data in memory.
 
 ### Return value

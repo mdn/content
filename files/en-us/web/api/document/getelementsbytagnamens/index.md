@@ -68,29 +68,29 @@ extension.
 
 function getAllParaElems()
 {
-  var allParas = document.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
+  const allParas = document.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
 
-  var num = allParas.length;
+  const num = allParas.length;
 
   alert("There are " + num + " &lt;p&gt; elements in this document");
 }
 
 function div1ParaElems()
 {
-  var div1 = document.getElementById("div1")
-  var div1Paras = div1.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
+  const div1 = document.getElementById("div1")
+  const div1Paras = div1.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
 
-  var num = div1Paras.length;
+  const num = div1Paras.length;
 
   alert("There are " + num + " &lt;p&gt; elements in div1 element");
 }
 
 function div2ParaElems()
 {
-  var div2 = document.getElementById("div2")
-  var div2Paras = div2.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
+  const div2 = document.getElementById("div2")
+  const div2Paras = div2.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
 
-  var num = div2Paras.length;
+  const num = div2Paras.length;
 
   alert("There are " + num + " &lt;p&gt; elements in div2 element");
 }

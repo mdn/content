@@ -285,8 +285,7 @@ This runs the GeckoView example application as installed on the first Android em
 
 ## See also
 
-- [geckodriver's
-  documentation on supported Firefox capabilities](https://firefox-source-docs.mozilla.org/testing/geckodriver/Capabilities.html)
+- [geckodriver's documentation on supported Firefox capabilities](https://firefox-source-docs.mozilla.org/testing/geckodriver/Capabilities.html)
 - [Chrome-specific WebDriver capabilities](https://chromedriver.chromium.org/capabilities)
   (`goog:chromeOptions)`
 - [List of WebDriver capabilities](/en-US/docs/Web/WebDriver/Capabilities)

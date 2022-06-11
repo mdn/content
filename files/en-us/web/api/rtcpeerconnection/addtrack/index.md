@@ -230,8 +230,7 @@ creating a new sender results in these changes:
 
 ## Examples
 
-This example is drawn from the code presented in the article [Signaling and video
-calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) and its corresponding sample code. It comes from the
+This example is drawn from the code presented in the article [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) and its corresponding sample code. It comes from the
 `handleVideoOfferMsg()` method there, which is called when an offer message
 is received from the remote peer.
 
@@ -280,6 +279,5 @@ returned by {{domxref("MediaStream.getTracks()")}} and passing them to
 ## See also
 
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
-- [Introduction to the Real-time
-  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - {{DOMxRef("RTCPeerConnection/track_event", "track")}}

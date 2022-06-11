@@ -61,7 +61,6 @@ should be facing directly along the _y_ axis.
 
 ## See also
 
-- [Movement,
-  orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion)
+- [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion)
 - {{interwiki("wikipedia", "versor", "Unit quaternions")}}
 - {{interwiki("wikipedia", "Quaternions and spatial rotation")}}

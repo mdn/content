@@ -45,10 +45,8 @@ authenticator or nothing if this information is not available. The elements of t
 lexicographical order. Their values may be :
 
 - `"usb"`: the authenticator can be contacted via a removable USB link
-- `"nfc"`: the authenticator may be used over [NFC (Near Field
-  Communication)](https://en.wikipedia.org/wiki/Near-field_communication)
-- `"ble"`: the authenticator may be used over [BLE (Bluetooth Low
-  Energy)](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy)
+- `"nfc"`: the authenticator may be used over [NFC (Near Field Communication)](https://en.wikipedia.org/wiki/Near-field_communication)
+- `"ble"`: the authenticator may be used over [BLE (Bluetooth Low Energy)](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy)
 - `"internal"`: the authenticator is specifically bound to the client
   device (cannot be removed).
 

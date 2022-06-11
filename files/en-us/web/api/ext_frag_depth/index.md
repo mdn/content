@@ -1,6 +1,7 @@
 ---
 title: EXT_frag_depth
 slug: Web/API/EXT_frag_depth
+page-type: webgl-extension
 tags:
   - API
   - Fragment Shader

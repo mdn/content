@@ -191,7 +191,7 @@ If you're an extension developer, you should start by reading [Updating extensio
 - XUL elements now support the `clientHeight`,`clientWidth`,`scrollHeight`, and`scrollWidth`properties.
 - [`keyset`](/en-US/docs/XUL/keyset)s now include a `disabled` attribute.
 - In addition, `keyset`s can now be removed using the node's [`removeChild()`](/en-US/docs/Web/API/Node/removeChild) method.
-- [`mozIStorageStatement`](/en-US/docs/mozIStorageStatement) had the `initialize()` method removed; consumers should use the [`createStatement()`](</en-US/docs/mozIStorageConnection#createStatement()>) method instead to get a new statement object.
+- `mozIStorageStatement` had the `initialize()` method removed; consumers should use the `createStatement()` method instead to get a new statement object.
 - The [Storage](/en-US/docs/Storage) API now offers support for asynchronous requests.
 - The `nsICookie2` interface now exposes the time at which cookies were created in its new `creationTime` attribute.
 - Added a flag to `nsIProtocolHandler` (`URI_IS_LOCAL_RESOURCE`) that is checked during chrome registration to make sure a protocol is allowed to be registered.

@@ -1,6 +1,7 @@
 ---
 title: OES_texture_float
 slug: Web/API/OES_texture_float
+page-type: webgl-extension
 tags:
   - API
   - Reference
@@ -21,7 +22,7 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 This extension extends {{domxref("WebGLRenderingContext.texImage2D()")}} and {{domxref("WebGLRenderingContext.texSubImage2D()")}}:
 
 - The `type` parameter now accepts `gl.FLOAT`.
-- The `pixels` parameter now accepts an `ArrayBufferView` of type {{jsxref("Float32Array")}}.
+- The `pixels` parameter now accepts a {{jsxref("Float32Array")}}.
 
 ## Limitation: Linear filtering
 
