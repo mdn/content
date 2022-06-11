@@ -282,7 +282,7 @@ The basic steps to create the table in sample1.html are:
 
             for(let i = 0; i < 4; i++) {
                 // creates a <td> element
-                mycurrent_cell = document.createElement("td");
+                const mycurrent_cell = document.createElement("td");
                 // creates a Text Node
                 currenttext = document.createTextNode("cell is row " + j + ", column " + i);
                 // appends the Text Node we created into the cell <td>
