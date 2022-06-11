@@ -299,7 +299,7 @@ td { padding: 2px 10px 2px 10px; }
 
 function showEventProperties(e) {
   function addCell(row, text) {
-    let cell = row.insertCell(-1);
+    const cell = row.insertCell(-1);
     cell.appendChild(document.createTextNode(text));
   }
 
