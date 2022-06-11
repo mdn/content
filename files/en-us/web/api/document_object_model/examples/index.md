@@ -316,7 +316,7 @@ function showEventProperties(e) {
     addCell(row, labelList[i]);
   }
 
-  let tbody = document.createElement('tbody');
+  const tbody = document.createElement('tbody');
   table.appendChild(tbody);
 
   for (let p in e) {
