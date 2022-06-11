@@ -32,7 +32,7 @@ The canvas API is able to use any of the following data types as an image source
   - : Using an HTML {{HTMLElement("video")}} element as your image source grabs the current frame from the video and uses it as an image.
 - {{domxref("HTMLCanvasElement")}}
   - : You can use another {{HTMLElement("canvas")}} element as your image source.
-- {{domxref("ImageBitmap)}}
+- {{domxref("ImageBitmap")}}
   - : A bitmap image, eventually cropped. Such type are used to extract part of an image, a _sprite_, from a larger image
 - {{domxref("OffscreenCanvas")}}
   - : A special kind of `<canvas>` that is not displayed and is prepared without being display. Using such an image source allows to switch to it without the composition of the content to be visible to the user.
