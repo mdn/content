@@ -278,7 +278,7 @@ The basic steps to create the table in sample1.html are:
         // creating all cells
         for(let j = 0; j < 3; j++) {
             // creates a <tr> element
-            mycurrent_row = document.createElement("tr");
+            const mycurrent_row = document.createElement("tr");
 
             for(let i = 0; i < 4; i++) {
                 // creates a <td> element
