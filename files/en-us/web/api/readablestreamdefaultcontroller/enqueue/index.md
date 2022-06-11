@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamDefaultController.enqueue()
 slug: Web/API/ReadableStreamDefaultController/enqueue
+page-type: web-api-instance-method
 tags:
   - API
   - Method

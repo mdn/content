@@ -1,6 +1,7 @@
 ---
 title: VisualViewport.pageLeft
 slug: Web/API/VisualViewport/pageLeft
+page-type: web-api-instance-property
 tags:
   - API
   - Property

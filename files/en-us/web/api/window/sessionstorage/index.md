@@ -1,6 +1,7 @@
 ---
 title: Window.sessionStorage
 slug: Web/API/Window/sessionStorage
+page-type: web-api-instance-property
 tags:
   - APIs
   - Property

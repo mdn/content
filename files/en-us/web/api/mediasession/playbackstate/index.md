@@ -1,6 +1,7 @@
 ---
 title: MediaSession.playbackState
 slug: Web/API/MediaSession/playbackState
+page-type: web-api-instance-property
 tags:
   - Audio
   - Media
@@ -18,14 +19,7 @@ The **`playbackState`** property of the
 {{domxref("MediaSession")}} interface indicates whether the current media session is
 playing or paused.
 
-## Syntax
-
-```js
-let playbackState = mediaSession.playbackState;
-mediaSession.playbackState = playbackState;
-```
-
-### Value
+## Value
 
 A string indicating the current playback state of the media session.
 The value may be one of the following:

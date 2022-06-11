@@ -1,6 +1,7 @@
 ---
 title: MediaElementAudioSourceNode()
 slug: Web/API/MediaElementAudioSourceNode/MediaElementAudioSourceNode
+page-type: web-api-constructor
 tags:
   - API
   - Audio

@@ -1,6 +1,7 @@
 ---
 title: HkdfParams
 slug: Web/API/HkdfParams
+page-type: web-api-interface
 tags:
   - API
   - Dictionary

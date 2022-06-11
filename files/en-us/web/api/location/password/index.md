@@ -1,6 +1,7 @@
 ---
 title: location.password
 slug: Web/API/Location/password
+page-type: web-api-instance-property
 tags:
   - API
   - Location
@@ -8,7 +9,8 @@ tags:
   - Reference
 browser-compat: api.Location.password
 ---
-{{APIRef("HTMLDOM")}}
+{{APIRef("HTML DOM")}}
+
 {{deprecated_header}}
 
 The **`password`** property of the {{domxref("Location")}}
@@ -19,12 +21,9 @@ If it is set without first setting the
 [`username`](/en-US/docs/Web/API/Location/username) property, it
 silently fails.
 
-## Syntax
+## Value
 
-```js
-string = object.password;
-object.password = string;
-```
+A string.
 
 ## Examples
 

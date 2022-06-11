@@ -1,6 +1,7 @@
 ---
 title: FetchEvent.resultingClientId
 slug: Web/API/FetchEvent/resultingClientId
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

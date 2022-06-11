@@ -1,6 +1,7 @@
 ---
 title: CharacterData.replaceWith()
 slug: Web/API/CharacterData/replaceWith
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.reliable
 slug: Web/API/RTCDataChannel/reliable
+page-type: web-api-instance-property
 tags:
   - Deprecated
   - Non-standard

@@ -1,6 +1,7 @@
 ---
 title: XRCPUDepthInformation
 slug: Web/API/XRCPUDepthInformation
+page-type: web-api-interface
 tags:
   - API
   - Interface

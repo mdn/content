@@ -1,6 +1,7 @@
 ---
 title: MediaMetadata()
 slug: Web/API/MediaMetadata/MediaMetadata
+page-type: web-api-constructor
 tags:
   - Audio
   - Experimental

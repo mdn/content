@@ -1,6 +1,7 @@
 ---
 title: XRViewport.width
 slug: Web/API/XRViewport/width
+page-type: web-api-instance-property
 tags:
   - API
   - AR

@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.hidden
 slug: Web/API/HTMLElement/hidden
+page-type: web-api-instance-property
 tags:
   - API
   - Attribute

@@ -1,6 +1,7 @@
 ---
 title: Element.attachShadow()
 slug: Web/API/Element/attachShadow
+page-type: web-api-instance-method
 tags:
   - API
   - Element
@@ -84,9 +85,9 @@ Returns a {{domxref("ShadowRoot")}} object.
 
 ### Exceptions
 
-- `InvalidStateError`
+- `InvalidStateError` {{domxref("DOMException")}}
   - : The element you are trying to attach to is already a shadow host.
-- `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : You are trying to attach a shadow root to an element outside the HTML namespace, the element cannot have a shadow attached to it,
     or the static property `disabledFeatures` has been given a value of `"shadow"` in the element definition.
 

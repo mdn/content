@@ -1,6 +1,7 @@
 ---
 title: PaymentRequestUpdateEvent.updateWith()
 slug: Web/API/PaymentRequestUpdateEvent/updateWith
+page-type: web-api-instance-method
 tags:
   - API
   - Change

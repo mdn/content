@@ -1,6 +1,7 @@
 ---
 title: Cache.put()
 slug: Web/API/Cache/put
+page-type: web-api-instance-method
 tags:
   - API
   - Cache

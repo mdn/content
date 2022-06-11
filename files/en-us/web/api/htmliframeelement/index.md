@@ -1,6 +1,7 @@
 ---
 title: HTMLIFrameElement
 slug: Web/API/HTMLIFrameElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

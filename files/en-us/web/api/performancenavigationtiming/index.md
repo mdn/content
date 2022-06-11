@@ -1,6 +1,7 @@
 ---
 title: PerformanceNavigationTiming
 slug: Web/API/PerformanceNavigationTiming
+page-type: web-api-interface
 tags:
   - API
   - Interface

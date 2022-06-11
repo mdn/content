@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.bufferData()
 slug: Web/API/WebGLRenderingContext/bufferData
+page-type: web-api-instance-method
 tags:
   - API
   - Buffer

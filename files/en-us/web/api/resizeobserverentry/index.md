@@ -1,6 +1,7 @@
 ---
 title: ResizeObserverEntry
 slug: Web/API/ResizeObserverEntry
+page-type: web-api-interface
 tags:
   - API
   - Bounding Box

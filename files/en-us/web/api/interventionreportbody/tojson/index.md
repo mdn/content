@@ -1,6 +1,7 @@
 ---
 title: InterventionReportBody.toJSON()
 slug: Web/API/InterventionReportBody/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method

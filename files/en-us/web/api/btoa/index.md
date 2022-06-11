@@ -1,6 +1,7 @@
 ---
 title: btoa()
 slug: Web/API/btoa
+page-type: web-api-global-function
 tags:
   - API
   - HTML DOM
@@ -8,9 +9,6 @@ tags:
   - Reference
   - Polyfill
   - Web
-  - btoa
-  - data
-  - strings
 browser-compat: api.btoa
 ---
 {{APIRef("HTML DOM")}}
@@ -142,4 +140,3 @@ See also the example `utf8_to_b64` and `b64_to_utf8` functions in the [Solution 
 - [`data` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
 - {{domxref("atob","atob()")}}
 - {{Glossary("Base64")}}
-- [Polyfill](https://github.com/MaxArt2501/base64-js/blob/master/base64.js)

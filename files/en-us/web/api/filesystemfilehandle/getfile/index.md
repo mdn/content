@@ -1,6 +1,7 @@
 ---
 title: FileSystemFileHandle.getFile()
 slug: Web/API/FileSystemFileHandle/getFile
+page-type: web-api-instance-method
 tags:
   - Directory
   - File

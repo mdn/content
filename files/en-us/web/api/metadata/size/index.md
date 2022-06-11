@@ -1,6 +1,7 @@
 ---
 title: Metadata.size
 slug: Web/API/Metadata/size
+page-type: web-api-instance-property
 tags:
   - API
   - File and Directory Entries API

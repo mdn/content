@@ -1,6 +1,7 @@
 ---
 title: CSS Typed Object Model API
 slug: Web/API/CSS_Typed_OM_API
+page-type: web-api-overview
 tags:
   - CSS Typed OM
   - CSS Typed Object Model API

@@ -1,6 +1,7 @@
 ---
 title: Worklet.addModule()
 slug: Web/API/Worklet/addModule
+page-type: web-api-instance-method
 tags:
   - API
   - Background

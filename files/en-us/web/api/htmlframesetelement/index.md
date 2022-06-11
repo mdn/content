@@ -1,6 +1,7 @@
 ---
 title: HTMLFrameSetElement
 slug: Web/API/HTMLFrameSetElement
+page-type: web-api-interface
 tags:
   - API
   - HTML-DOM

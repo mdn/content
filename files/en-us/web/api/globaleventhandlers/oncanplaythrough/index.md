@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.oncanplaythrough
 slug: Web/API/GlobalEventHandlers/oncanplaythrough
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

@@ -1,6 +1,7 @@
 ---
 title: AuthenticatorResponse.clientDataJSON
 slug: Web/API/AuthenticatorResponse/clientDataJSON
+page-type: web-api-instance-property
 tags:
   - API
   - AuthenticatorResponse
@@ -41,12 +42,11 @@ After the `clientDataJSON` object is converted from an
     {{domxref("PublicKeyCredentialCreationOptions.challenge")}}.
 - `origin`
   - : The fully qualified origin of the requester which has been given by the
-    client/browser to the authenticator. We should expect the [relying party's
-    id](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/rpId) to be a suffix of this value.
+    client/browser to the authenticator. We should expect the _relying party's
+    id_ to be a suffix of this value.
 - `tokenBindingId` {{optional_inline}}
 
-  - : An object describing the state of [the
-    token binding protocol](https://datatracker.ietf.org/doc/html/rfc8471) for the communication with the relying party. It has
+  - : An object describing the state of [the token binding protocol](https://datatracker.ietf.org/doc/html/rfc8471) for the communication with the relying party. It has
     two properties:
 
     - `status`: A string which is either `"supported"` which

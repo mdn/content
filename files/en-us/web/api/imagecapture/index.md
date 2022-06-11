@@ -1,6 +1,7 @@
 ---
 title: ImageCapture
 slug: Web/API/ImageCapture
+page-type: web-api-interface
 tags:
   - API
   - Experimental

@@ -1,6 +1,7 @@
 ---
 title: XRRigidTransform.orientation
 slug: Web/API/XRRigidTransform/orientation
+page-type: web-api-instance-property
 tags:
   - API
   - AR

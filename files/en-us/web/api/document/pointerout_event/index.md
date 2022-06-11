@@ -1,6 +1,7 @@
 ---
 title: 'Document: pointerout event'
 slug: Web/API/Document/pointerout_event
+page-type: web-api-event
 tags:
   - Document
   - Event

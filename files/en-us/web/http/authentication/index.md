@@ -90,7 +90,7 @@ Some common authentication schemes include:
 - **Bearer**
   - : See {{rfc(6750)}}, bearer tokens to access OAuth 2.0-protected resources
 - **Digest**
-  - : See {{rfc(7616)}}. Firefox 93 and later support SHA-256 encryption. Previous versions only support MD5 hashing (not recommended).
+  - : See {{rfc(7616)}}. Firefox 93 and later support the SHA-256 algorithm. Previous versions only support MD5 hashing (not recommended).
 - **HOBA**
   - : See {{rfc(7486)}}, Section 3, **H**TTP **O**rigin-**B**ound **A**uthentication, digital-signature-based
 - **Mutual**

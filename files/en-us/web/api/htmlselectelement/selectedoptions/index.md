@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.selectedOptions
 slug: Web/API/HTMLSelectElement/selectedOptions
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

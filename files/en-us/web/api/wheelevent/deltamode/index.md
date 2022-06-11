@@ -1,6 +1,7 @@
 ---
 title: WheelEvent.deltaMode
 slug: Web/API/WheelEvent/deltaMode
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

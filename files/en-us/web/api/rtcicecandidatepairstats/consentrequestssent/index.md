@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.consentRequestsSent
 slug: Web/API/RTCIceCandidatePairStats/consentRequestsSent
+page-type: web-api-instance-property
 tags:
   - API
   - Candidates

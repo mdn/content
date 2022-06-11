@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.overrideMimeType()
 slug: Web/API/XMLHttpRequest/overrideMimeType
+page-type: web-api-instance-method
 tags:
   - API
   - File Type
@@ -74,6 +75,5 @@ req.send();
 
 ## See also
 
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - {{domxref("XMLHttpRequest.responseType")}}

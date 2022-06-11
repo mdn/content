@@ -1,6 +1,7 @@
 ---
 title: Background Fetch API
 slug: Web/API/Background_Fetch_API
+page-type: web-api-overview
 tags:
   - API
   - Overview

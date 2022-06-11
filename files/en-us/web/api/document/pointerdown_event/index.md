@@ -1,6 +1,7 @@
 ---
 title: 'Document: pointerdown event'
 slug: Web/API/Document/pointerdown_event
+page-type: web-api-event
 tags:
   - API
   - Document

@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.relayProtocol
 slug: Web/API/RTCIceCandidateStats/relayProtocol
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate

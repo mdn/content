@@ -1,6 +1,7 @@
 ---
 title: BatteryManager.dischargingTime
 slug: Web/API/BatteryManager/dischargingTime
+page-type: web-api-instance-property
 tags:
   - API
   - Property

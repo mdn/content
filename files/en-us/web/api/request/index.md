@@ -1,6 +1,7 @@
 ---
 title: Request
 slug: Web/API/Request
+page-type: web-api-interface
 tags:
   - API
   - Fetch

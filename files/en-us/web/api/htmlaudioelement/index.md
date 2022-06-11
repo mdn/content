@@ -1,6 +1,7 @@
 ---
 title: HTMLAudioElement
 slug: Web/API/HTMLAudioElement
+page-type: web-api-interface
 tags:
   - API
   - Audio

@@ -1,6 +1,7 @@
 ---
 title: CustomElementRegistry
 slug: Web/API/CustomElementRegistry
+page-type: web-api-interface
 tags:
   - API
   - CustomElementRegistry

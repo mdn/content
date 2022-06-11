@@ -64,13 +64,13 @@ One can assign the `constructor` property of non-primitives.
 
 ```js
 const arr = [];
-arr.constructor = Stringl
+arr.constructor = String
 arr.constructor === String // true
 arr instanceof String // false
 arr instanceof Array // true
 
 const foo = new Foo();
-foo.constructor = 'bar'l
+foo.constructor = 'bar'
 foo.constructor === 'bar' // true
 
 // etc.

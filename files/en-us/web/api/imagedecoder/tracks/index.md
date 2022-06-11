@@ -1,6 +1,7 @@
 ---
 title: ImageDecoder.tracks
 slug: Web/API/ImageDecoder/tracks
+page-type: web-api-instance-property
 tags:
   - API
   - Property

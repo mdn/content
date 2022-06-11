@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue.min()
 slug: Web/API/CSSNumericValue/min
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -27,7 +28,7 @@ min(number1, /* ..., */ numberN)
 ### Parameters
 
 - `number1`, …, `numberN`
-  - : Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
+  - : Either a number or a {{domxref('CSSNumericValue')}}.
 
 ### Return value
 

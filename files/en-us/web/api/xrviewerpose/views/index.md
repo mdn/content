@@ -1,6 +1,7 @@
 ---
 title: XRViewerPose.views
 slug: Web/API/XRViewerPose/views
+page-type: web-api-instance-property
 tags:
   - 3D
   - API
@@ -56,5 +57,4 @@ See [`XRViewerPose`](/en-US/docs/Web/API/XRViewerPose#examples) for example code
 ## See also
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
-- [Movement,
-  orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion)
+- [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion)

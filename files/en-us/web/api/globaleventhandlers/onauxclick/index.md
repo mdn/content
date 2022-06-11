@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onauxclick
 slug: Web/API/GlobalEventHandlers/onauxclick
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -37,8 +38,7 @@ target.onauxclick = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("MouseEvent")}} object as its sole
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("MouseEvent")}} object as its sole
 argument. Within the function,
 [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) will
 be the element upon which the event was triggered.
@@ -53,9 +53,7 @@ In this example we define functions for two event handlers —
 {{domxref("GlobalEventHandlers.onclick", "onclick")}} and `onauxclick`. The
 former changes the color of the button background, while the latter changes the button
 foreground (text) color. You can see the two functions in action by trying the demo out
-with a multi-button mouse ([see it
-live on GitHub](https://mdn.github.io/dom-examples/auxclick/); also [see the
-source code](https://github.com/mdn/dom-examples/blob/master/auxclick/index.html)).
+with a multi-button mouse ([see it live on GitHub](https://mdn.github.io/dom-examples/auxclick/); also [see the source code](https://github.com/mdn/dom-examples/blob/master/auxclick/index.html)).
 
 ```js
 var button = document.querySelector('button');

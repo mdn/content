@@ -1,6 +1,7 @@
 ---
 title: MediaElementAudioSourceNode.mediaElement
 slug: Web/API/MediaElementAudioSourceNode/mediaElement
+page-type: web-api-instance-property
 tags:
   - API
   - MediaElementAudioSourceNode

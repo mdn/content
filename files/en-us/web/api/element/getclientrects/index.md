@@ -1,6 +1,7 @@
 ---
 title: Element.getClientRects()
 slug: Web/API/Element/getClientRects
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View

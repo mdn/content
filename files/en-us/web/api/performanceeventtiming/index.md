@@ -1,6 +1,7 @@
 ---
 title: PerformanceEventTiming
 slug: Web/API/PerformanceEventTiming
+page-type: web-api-interface
 tags:
   - API
   - Event Timing API

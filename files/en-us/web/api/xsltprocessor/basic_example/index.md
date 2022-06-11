@@ -1,6 +1,7 @@
 ---
 title: XSLT Basic Example
 slug: Web/API/XSLTProcessor/Basic_Example
+page-type: guide
 tags:
   - XSLT
   - Example

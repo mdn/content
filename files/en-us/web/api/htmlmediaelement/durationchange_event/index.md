@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: durationchange event'
 slug: Web/API/HTMLMediaElement/durationchange_event
+page-type: web-api-event
 tags:
   - Audio
   - Event

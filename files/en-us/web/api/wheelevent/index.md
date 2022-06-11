@@ -1,6 +1,7 @@
 ---
 title: WheelEvent
 slug: Web/API/WheelEvent
+page-type: web-api-interface
 tags:
   - API
   - DOM

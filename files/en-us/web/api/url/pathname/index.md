@@ -1,6 +1,7 @@
 ---
 title: URL.pathname
 slug: Web/API/URL/pathname
+page-type: web-api-instance-property
 tags:
   - API
   - Property

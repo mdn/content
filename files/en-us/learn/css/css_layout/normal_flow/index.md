@@ -52,7 +52,8 @@ That explains how elements are structured individually, but how about the way th
 
 Inline elements behave differently. They don't appear on new lines; instead, they all sit on the same line along with any adjacent (or wrapped) text content as long as there is space for them to do so inside the width of the parent block level element. If there isn't space, then the overflowing content will move down to a new line.
 
-If two adjacent elements both have a margin set on them and the two margins touch, the larger of the two remains and the smaller one disappears. Recall that this is known as **margin collapsing**.
+If two vertically adjacent elements both have a margin set on them and their margins touch, the larger of the two margins remains and the smaller one disappears. This is known as [**margin collapsing**](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing).
+Collapsing margins is only relevant in the **vertical direction**.
 
 Let's look at a simple example that explains all of this:
 
@@ -65,7 +66,7 @@ Let's look at a simple example that explains all of this:
 
 <p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line along with adjacent text nodes, if there is space on the same line. Overflowing inline elements will <span>wrap onto a new line if possible (like this one containing text)</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
+<p>Inline elements <span>like this one</span> and <span>this one</span> sit on the same line along with adjacent text nodes, if there is space on the same line. Overflowing inline elements will <span>wrap onto a new line if possible (like this one containing text)</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
 ```
 
 ```css

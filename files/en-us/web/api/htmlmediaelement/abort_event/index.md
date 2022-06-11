@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: abort event'
 slug: Web/API/HTMLMediaElement/abort_event
+page-type: web-api-event
 tags:
   - API
   - Event

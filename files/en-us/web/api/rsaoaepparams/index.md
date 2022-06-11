@@ -1,6 +1,7 @@
 ---
 title: RsaOaepParams
 slug: Web/API/RsaOaepParams
+page-type: web-api-interface
 tags:
   - API
   - Dictionary

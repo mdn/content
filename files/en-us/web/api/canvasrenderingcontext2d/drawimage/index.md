@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.drawImage()
 slug: Web/API/CanvasRenderingContext2D/drawImage
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -183,11 +184,9 @@ function drawImageActualSize() {
   the coordinate values was non-finite or zero. As per the specification, this no longer
   happens.
 - Gecko 9.0 {{ geckoRelease("9.0") }} now correctly supports CORS for drawing images
-  across domains without [tainting the
-  canvas](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
+  across domains without [tainting the canvas](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
 - Gecko 11.0 {{ geckoRelease("11.0") }} now allows SVG-as-an-image to be drawn into a
-  canvas without [tainting the
-  canvas](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
+  canvas without [tainting the canvas](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
 
 ## Notes
 

@@ -1,6 +1,7 @@
 ---
 title: URL.protocol
 slug: Web/API/URL/protocol
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -1,6 +1,7 @@
 ---
 title: URLPattern.hash
 slug: Web/API/URLPattern/hash
+page-type: web-api-instance-property
 tags:
   - API
   - Property

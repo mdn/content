@@ -1,6 +1,7 @@
 ---
 title: XRMediaBinding.createEquirectLayer()
 slug: Web/API/XRMediaBinding/createEquirectLayer
+page-type: web-api-instance-method
 tags:
   - API
   - Method

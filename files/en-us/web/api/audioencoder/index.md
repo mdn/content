@@ -1,6 +1,7 @@
 ---
 title: AudioEncoder
 slug: Web/API/AudioEncoder
+page-type: web-api-interface
 tags:
   - API
   - Interface

@@ -1,6 +1,7 @@
 ---
 title: 'XRSession: visibilitychange event'
 slug: Web/API/XRSession/visibilitychange_event
+page-type: web-api-event
 tags:
   - API
   - Event

@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.playbackRate
 slug: Web/API/HTMLMediaElement/playbackRate
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

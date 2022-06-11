@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.consentExpiredTimestamp
 slug: Web/API/RTCIceCandidatePairStats/consentExpiredTimestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Binding

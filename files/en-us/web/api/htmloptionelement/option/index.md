@@ -1,6 +1,7 @@
 ---
 title: Option()
 slug: Web/API/HTMLOptionElement/Option
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

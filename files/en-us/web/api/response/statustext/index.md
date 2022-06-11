@@ -1,6 +1,7 @@
 ---
 title: Response.statusText
 slug: Web/API/Response/statusText
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch

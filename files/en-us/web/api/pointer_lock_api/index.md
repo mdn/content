@@ -1,6 +1,7 @@
 ---
 title: Pointer Lock API
 slug: Web/API/Pointer_Lock_API
+page-type: web-api-overview
 tags:
   - API
   - Advanced

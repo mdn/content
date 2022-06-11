@@ -1,6 +1,7 @@
 ---
 title: 'HTMLFormElement: reset event'
 slug: Web/API/HTMLFormElement/reset_event
+page-type: web-api-event
 tags:
   - API
   - Event

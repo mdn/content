@@ -1,6 +1,7 @@
 ---
 title: CSSTransformValue()
 slug: Web/API/CSSTransformValue/CSSTransformValue
+page-type: web-api-constructor
 tags:
   - API
   - CSS

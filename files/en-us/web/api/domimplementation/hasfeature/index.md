@@ -1,6 +1,7 @@
 ---
 title: DOMImplementation.hasFeature()
 slug: Web/API/DOMImplementation/hasFeature
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

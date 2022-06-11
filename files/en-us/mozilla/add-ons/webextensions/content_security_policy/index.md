@@ -43,7 +43,7 @@ Like websites, extensions can load content from different sources. For example, 
 
 Compared to a website, extensions have access to additional privileged APIs, so if they are compromised by malicious code, the risks are greater. For this reason:
 
-- a fairly strict content security policy is applied to extensions by default. See [default content security policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#default_content_security_policy).
+- a fairly strict content security policy is applied to extensions by default. See [default content security policy](#default_content_security_policy).
 - the extension's author can change the default policy using the `content_security_policy` manifest.json key, but there are restrictions on the policies that are allowed. See [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy).
 
 ## Default content security policy
@@ -103,8 +103,6 @@ Under the default CSP, inline JavaScript is not executed. This disallows both Ja
 ```
 
 If you are currently using code like `<body onload="main()">` to run your script when the page has loaded, listen for [DOMContentLoaded](/en-US/docs/Web/API/Window/DOMContentLoaded_event) or [load](/en-US/docs/Web/API/Window/load_event) instead.
-
-
 
 ### WebAssembly
 

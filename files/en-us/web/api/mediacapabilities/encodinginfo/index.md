@@ -1,6 +1,7 @@
 ---
 title: MediaCapabilities.encodingInfo()
 slug: Web/API/MediaCapabilities/encodingInfo
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -32,8 +33,10 @@ encodingInfo(configuration)
     - `type`
       - : The type of media being tested. This takes one of two values:
 
-        - `record` — Represents a configuration for recording of media, e.g. using {{domxref("MediaRecorder")}}.
-        - `transmission` — Represents a configuration meant to be transmitted over electronic means (e.g. using {{domxref("RTCPeerConnection")}}).
+        - `record`
+          - : Represents a configuration for recording of media, e.g. using {{domxref("MediaRecorder")}}.
+        - `transmission`
+          - : Represents a configuration meant to be transmitted over electronic means (e.g. using {{domxref("RTCPeerConnection")}}).
 
     - `video`
       - : Configuration object for a video media source.

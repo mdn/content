@@ -1,6 +1,7 @@
 ---
 title: CSSMathProduct()
 slug: Web/API/CSSMathProduct/CSSMathProduct
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API

@@ -1,6 +1,7 @@
 ---
 title: PictureInPictureWindow
 slug: Web/API/PictureInPictureWindow
+page-type: web-api-interface
 tags:
   - API
   - Advanced

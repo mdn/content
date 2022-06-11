@@ -1,6 +1,7 @@
 ---
 title: 'IDBMutableFile: error event'
 slug: Web/API/IDBMutableFile/error_event
+page-type: web-api-event
 tags:
   - API
   - Files

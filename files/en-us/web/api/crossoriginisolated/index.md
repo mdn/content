@@ -1,6 +1,7 @@
 ---
 title: crossOriginIsolated
 slug: Web/API/crossOriginIsolated
+page-type: web-api-global-property
 tags:
   - API
   - Experimental

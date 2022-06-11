@@ -1,6 +1,7 @@
 ---
 title: Node.isEqualNode()
 slug: Web/API/Node/isEqualNode
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference

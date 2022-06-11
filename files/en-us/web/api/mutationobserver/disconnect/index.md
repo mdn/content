@@ -1,6 +1,7 @@
 ---
 title: MutationObserver.disconnect()
 slug: Web/API/MutationObserver/disconnect
+page-type: web-api-instance-method
 tags:
   - API
   - Changes

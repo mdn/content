@@ -1,6 +1,7 @@
 ---
 title: IDBFileHandle.mode
 slug: Web/API/IDBFileHandle/mode
+page-type: web-api-instance-property
 tags:
   - API
   - Files

@@ -1,6 +1,7 @@
 ---
 title: CacheStorage
 slug: Web/API/CacheStorage
+page-type: web-api-interface
 tags:
   - API
   - CacheStorage

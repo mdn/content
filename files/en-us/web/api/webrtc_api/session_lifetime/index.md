@@ -1,6 +1,7 @@
 ---
 title: Lifetime of a WebRTC session
 slug: Web/API/WebRTC_API/Session_lifetime
+page-type: guide
 tags:
   - Advanced
   - Guide

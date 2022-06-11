@@ -1,6 +1,7 @@
 ---
 title: GamepadHapticActuator
 slug: Web/API/GamepadHapticActuator
+page-type: web-api-interface
 tags:
   - API
   - Experimental

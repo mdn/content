@@ -1,6 +1,7 @@
 ---
 title: MIDIPort.type
 slug: Web/API/MIDIPort/type
+page-type: web-api-instance-property
 tags:
   - API
   - Property

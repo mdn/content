@@ -1,6 +1,7 @@
 ---
 title: WorkerNavigator.appCodeName
 slug: Web/API/WorkerNavigator/appCodeName
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

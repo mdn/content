@@ -59,20 +59,11 @@ There are five basic forms for the `Date()` constructor:
 
     - `dateString`
 
-      - : A string value representing a date, specified in a format recognized by the
-        {{jsxref("Date.parse()")}} method. (These formats are
-        [IETF-compliant RFC 2822 timestamps](https://datatracker.ietf.org/doc/html/rfc2822#page-14),
-        and also strings in a
-        [version of ISO8601](https://262.ecma-international.org/11.0/#sec-date.parse).)
+      - : A string value representing a date, in a format recognized by the {{jsxref("Date.parse()")}} method. (The ECMA262 spec specifies a [simplified version of ISO 8601](https://tc39.es/ecma262/#sec-date-time-string-format), but other formats can be implementation-defined, which commonly include [IETF-compliant RFC 2822 timestamps](https://datatracker.ietf.org/doc/html/rfc2822#page-14).)
 
-        > **Note:** Parsing of date strings with the `Date`
-        > constructor (and `Date.parse()`, which works the same way) is
-        > _strongly discouraged_ due to browser differences and inconsistencies.
+        > **Note:** When parsing date strings with the `Date` constructor (and `Date.parse`, they are equivalent), always make sure that the input conforms to the ISO 8601 format (`YYYY-MM-DDTHH:mm:ss.sssZ`) — the parsing behavior with other formats is implementation-defined and may not work across all browsers. Support for [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822) format strings is by convention only. A library can help if many different formats are to be accommodated.
         >
-        > - Support for [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822)
-        >   format strings is by convention only.
-        > - Support for ISO 8601 formats differs in that date-only strings (e.g.
-        >   `"1970-01-01"`) are treated as UTC, not local.
+        > Date-only strings (e.g. `"1970-01-01"`) are treated as UTC, while date-time strings (e.g. `"1970-01-01T12:00"`) are treated as local. You are therefore also advised to make sure the input format is consistent between the two types.
 
 4. Date object
 
@@ -128,17 +119,13 @@ Calling the `Date()` function (without the `new` keyword) returns a string repre
 
 The following examples show several ways to create JavaScript dates:
 
-> **Note:** Parsing of date strings with the `Date` constructor
-> (and `Date.parse`, they are equivalent) is strongly discouraged due to
-> browser differences and inconsistencies.
-
 ```js
-let today = new Date()
-let sameDay = new Date(today)
-let birthday = new Date('December 17, 1995 13:24:00')
-let birthday = new Date('1995-12-17T13:24:00')
-let birthday = new Date(1995, 11, 17)            // the month is 0-indexed
-let birthday = new Date(1995, 11, 17, 13, 24, 0)
+const today = new Date()
+const birthday = new Date('December 17, 1995 03:24:00') // DISCOURAGED: may not work in all runtimes
+const birthday = new Date('1995-12-17T03:24:00')   // This is ISO-8601-compliant and will work reliably
+const birthday = new Date(1995, 11, 17)            // the month is 0-indexed
+const birthday = new Date(1995, 11, 17, 3, 24, 0)
+const birthday = new Date(628021800000)            // passing epoch timestamp
 ```
 
 ## Specifications

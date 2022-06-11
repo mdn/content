@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.withCredentials
 slug: Web/API/XMLHttpRequest/withCredentials
+page-type: web-api-instance-property
 tags:
   - AJAX
   - API

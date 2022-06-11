@@ -1,6 +1,7 @@
 ---
 title: History.forward()
 slug: Web/API/History/forward
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

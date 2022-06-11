@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.shiftKey
 slug: Web/API/MouseEvent/shiftKey
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

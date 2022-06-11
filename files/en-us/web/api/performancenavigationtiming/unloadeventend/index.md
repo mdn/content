@@ -1,6 +1,7 @@
 ---
 title: PerformanceNavigationTiming.unloadEventEnd
 slug: Web/API/PerformanceNavigationTiming/unloadEventEnd
+page-type: web-api-instance-property
 tags:
   - API
   - Property

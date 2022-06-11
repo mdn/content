@@ -1,6 +1,7 @@
 ---
 title: ContentIndexEvent.id
 slug: Web/API/ContentIndexEvent/id
+page-type: web-api-instance-property
 tags:
   - Content
   - Content Index API
@@ -49,9 +50,6 @@ self.addEventListener('contentdelete', (event) => {
 
 ## See also
 
-- [An introductory article on the
-  Content Index API](https://web.dev/content-indexing-api/)
-- [An app which uses the Content Index API to list
-  and remove 'save for later' content](https://contentindex.dev/)
-- [Service Worker API, along with
-  information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)
+- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
+- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
+- [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

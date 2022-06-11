@@ -1,6 +1,7 @@
 ---
 title: 'XMLHttpRequest: timeout event'
 slug: Web/API/XMLHttpRequest/timeout_event
+page-type: web-api-event
 tags:
   - API
   - Event

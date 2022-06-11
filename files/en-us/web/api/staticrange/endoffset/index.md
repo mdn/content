@@ -1,6 +1,7 @@
 ---
 title: StaticRange.endOffset
 slug: Web/API/StaticRange/endOffset
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

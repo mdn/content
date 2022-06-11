@@ -1,6 +1,7 @@
 ---
 title: 'Window: appinstalled event'
 slug: Web/API/Window/appinstalled_event
+page-type: web-api-event
 tags:
   - API
   - Manifest

@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming
 slug: Web/API/PerformanceResourceTiming
+page-type: web-api-interface
 tags:
   - DOM
   - Interface

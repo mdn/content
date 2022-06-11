@@ -416,5 +416,4 @@ String(undefinedVar);     // "undefined"
 
 - [Text formatting in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
 - {{jsxref("RegExp")}}
-- {{domxref("DOMString")}}
 - [Binary strings](/en-US/docs/Web/API/DOMString/Binary)

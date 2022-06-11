@@ -1,6 +1,7 @@
 ---
 title: Range.surroundContents()
 slug: Web/API/Range/surroundContents
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

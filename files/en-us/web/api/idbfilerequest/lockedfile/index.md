@@ -1,6 +1,7 @@
 ---
 title: IDBFileRequest.lockedFile
 slug: Web/API/IDBFileRequest/lockedFile
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

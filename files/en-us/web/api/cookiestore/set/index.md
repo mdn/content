@@ -1,6 +1,7 @@
 ---
 title: CookieStore.set()
 slug: Web/API/CookieStore/set
+page-type: web-api-instance-method
 tags:
   - API
   - Method

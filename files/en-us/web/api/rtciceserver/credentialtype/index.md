@@ -1,6 +1,7 @@
 ---
 title: RTCIceServer.credentialType
 slug: Web/API/RTCIceServer/credentialType
+page-type: web-api-instance-property
 tags:
   - Authentication
   - ICE

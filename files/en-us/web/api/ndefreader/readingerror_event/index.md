@@ -1,6 +1,7 @@
 ---
 title: 'NDEFReader: readingerror event'
 slug: Web/API/NDEFReader/readingerror_event
+page-type: web-api-event
 tags:
   - Event
   - NDEF

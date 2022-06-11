@@ -25,5 +25,4 @@ Among other things, i18n requires support for multiple
 
 - {{interwiki("wikipedia", "Internationalization and localization", "i18n")}} on Wikipedia
 - [i18n on W3C](https://www.w3.org/International/questions/qa-i18n.en#Internationalization)
-- [i18n on gala-global.org](https://www.gala-global.org/what-internationalization)
 - [i18n material on i18nguy.com](http://www.i18nguy.com/)

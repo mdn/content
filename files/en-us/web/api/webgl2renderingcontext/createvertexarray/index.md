@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.createVertexArray()
 slug: Web/API/WebGL2RenderingContext/createVertexArray
+page-type: web-api-instance-method
 tags:
   - API
   - Method

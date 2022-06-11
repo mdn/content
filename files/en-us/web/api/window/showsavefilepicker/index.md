@@ -1,6 +1,7 @@
 ---
 title: Window.showSaveFilePicker()
 slug: Web/API/Window/showSaveFilePicker
+page-type: web-api-instance-method
 tags:
   - Directory
   - File
@@ -43,8 +44,7 @@ showSaveFilePicker()
           - : An optional description of the category of files
             types allowed.
         - `accept`
-          - : An {{jsxref('Object')}} with the keys set to the [MIME
-            type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) and the values an {{jsxref('Array')}} of file extensions (see below
+          - : An {{jsxref('Object')}} with the keys set to the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) and the values an {{jsxref('Array')}} of file extensions (see below
             for an example).
 
 ### Return value

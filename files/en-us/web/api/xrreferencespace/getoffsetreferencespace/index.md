@@ -1,6 +1,7 @@
 ---
 title: XRReferenceSpace.getOffsetReferenceSpace()
 slug: Web/API/XRReferenceSpace/getOffsetReferenceSpace
+page-type: web-api-instance-method
 tags:
   - API
   - AR

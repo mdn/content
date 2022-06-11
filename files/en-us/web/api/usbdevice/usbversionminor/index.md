@@ -1,6 +1,7 @@
 ---
 title: USBDevice.usbVersionMinor
 slug: Web/API/USBDevice/usbVersionMinor
+page-type: web-api-instance-property
 tags:
   - API
   - Property

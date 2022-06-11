@@ -1,6 +1,7 @@
 ---
 title: CSSCounterStyleRule.fallback
 slug: Web/API/CSSCounterStyleRule/fallback
+page-type: web-api-instance-property
 tags:
   - API
   - Property

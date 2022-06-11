@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.pendingRemoteDescription
 slug: Web/API/RTCPeerConnection/pendingRemoteDescription
+page-type: web-api-instance-property
 tags:
   - API
   - Property

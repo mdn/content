@@ -1,6 +1,7 @@
 ---
 title: GeolocationCoordinates.speed
 slug: Web/API/GeolocationCoordinates/speed
+page-type: web-api-instance-property
 tags:
   - API
   - Geolocation API

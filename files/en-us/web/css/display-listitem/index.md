@@ -9,7 +9,7 @@ tags:
   - Reference
   - display-listitem
   - list-item
-spec-urls: https://drafts.csswg.org/css-display/#typedef-display-listitem
+browser-compat: css.properties.display.list-item
 ---
 {{CSSRef}}
 
@@ -50,9 +50,7 @@ A single value of `list-item` will cause the element to behave like a list item.
 
 ## Browser compatibility
 
-### Support of `list-item`
-
-{{Compat("css.properties.display.list-item", 10)}}
+{{Compat}}
 
 ## See also
 

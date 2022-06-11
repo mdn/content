@@ -1,6 +1,7 @@
 ---
 title: WEBGL_draw_buffers.drawBuffersWEBGL()
 slug: Web/API/WEBGL_draw_buffers/drawBuffersWEBGL
+page-type: webgl-extension-method
 tags:
   - API
   - Method

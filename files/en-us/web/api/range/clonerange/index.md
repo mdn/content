@@ -1,6 +1,7 @@
 ---
 title: Range.cloneRange()
 slug: Web/API/Range/cloneRange
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
