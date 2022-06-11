@@ -35,7 +35,7 @@ new BarcodeDetector(options)
 
     - `formats`
       - : An {{jsxref('Array')}} of barcode formats as strings.
-        To see a full list of supported formats see the [Barcode Detection API](/en-US/docs/Web/API/Barcode_detection_API).
+        To see a full list of supported formats see the [Barcode Detection API](/en-US/docs/Web/API/Barcode_Detection_API).
 
 ## Examples
 
