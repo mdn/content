@@ -356,8 +356,8 @@ Once you have the object in your JavaScript variable, you can set `style` proper
 <script>
     function start() {
        const mybody = document.getElementsByTagName("body")[0];
-       mytable = document.createElement("table");
-       mytablebody = document.createElement("tbody");
+       const mytable = document.createElement("table");
+       const mytablebody = document.createElement("tbody");
 
        for(let row = 0; row < 2; row++) {
            mycurrent_row=document.createElement("tr");
