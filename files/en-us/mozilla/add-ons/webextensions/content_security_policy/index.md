@@ -108,8 +108,8 @@ If you are currently using code like `<body onload="main()">` to run your script
 
 Extensions wishing to use [WebAssembly](/en-US/docs/WebAssembly) require `'wasm-unsafe-eval'` to be specified in the `script-src` directive.
 
-Since Firefox 102 and Chrome 103, `'wasm-unsafe-eval'` can be included in the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json key to enable the use of WebAssembly in extensions.
+From Firefox 102 and Chrome 103, `'wasm-unsafe-eval'` can be included in the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json key to enable the use of WebAssembly in extensions.
 
-Manifest V2 extensions in Firefox can use WebAssembly without `'wasm-unsafe-eval'` in their CSP for backward compatibility. However, this behavior isn't guaranteed; see {{bug(1770909)}}. Extensions using WebAssembly are therefore encouraged to declare `'wasm-unsafe-eval'` in their CSP.
+Manifest V2 extensions in Firefox can use WebAssembly without `'wasm-unsafe-eval'` in their CSP for backward compatibility. However, this behavior isn't guaranteed, see {{bug(1770909)}}. Extensions using WebAssembly are therefore encouraged to declare `'wasm-unsafe-eval'` in their CSP.
 
 For Chrome, extensions cannot use WebAssembly in version 101 or earlier. In 102, extensions can use WebAssembly (the same behavior as Firefox 101 and earlier). From version 103, extensions can use WebAssembly if they include `'wasm-unsafe-eval'` in the `content_security_policy` in the manifest key.
