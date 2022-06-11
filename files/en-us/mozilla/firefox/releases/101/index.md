@@ -76,6 +76,7 @@ The [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) media feat
 - Addition of the {{WebExtAPIRef("action")}} API, which takes over the features of the {{WebExtAPIRef("browserAction")}} API in Manifest V3 extensions. Corresponding addition of the [`"action"`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) manifest key. Note that the {{WebExtAPIRef("browserAction")}} API and [`"action"`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest key are only available in Manifest V2 extensions.
 - The [`"background"`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) manifest key property `"persistent"` can be set to `false` under the control of preferences: for Manifest V2, the <code>extensions.eventPages.enabled</code> preference, and in Manifest V3, the <code>extensions.manifestV3.enabled</code> preference.
 - Addition of the [`"host_permissions"`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key, which is available for Manifest V3 extensions.
+- Addition of the {{WebExtAPIRef("storage.StorageArea.onChanged")}} event that enables you to listen for changes in content in the `local`,  `session`, and `sync` storage areas ({{bug(1758475)}}).
 
 #### Removals
 
