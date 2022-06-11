@@ -94,7 +94,7 @@ const myArrayBuffer = audioCtx.createBuffer(2, audioCtx.sampleRate * 3, audioCtx
 //just random values between -1.0 and 1.0
   for (let channel = 0; channel < myArrayBuffer.numberOfChannels; channel++) {
   // This gives us the actual ArrayBuffer that contains the data
-  let nowBuffering = myArrayBuffer.getChannelData(channel);
+  const nowBuffering = myArrayBuffer.getChannelData(channel);
   for (let i = 0; i < myArrayBuffer.length; i++) {
     // Math.random() is in [0; 1.0]
     // audio needs to be in [-1.0; 1.0]
