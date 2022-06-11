@@ -272,8 +272,8 @@ The basic steps to create the table in sample1.html are:
         let mybody = document.getElementsByTagName("body")[0];
 
         // creates <table> and <tbody> elements
-        mytable = document.createElement("table");
-        mytablebody = document.createElement("tbody");
+        const mytable = document.createElement("table");
+        const mytablebody = document.createElement("tbody");
 
         // creating all cells
         for(let j = 0; j < 3; j++) {
