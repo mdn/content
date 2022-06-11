@@ -46,34 +46,34 @@ entirely implementation-dependent.
         There is no default value; if the `style` is "`currency`", the `currency`
         property must be provided.
     - `currencyDisplay`
-    
+
       - : How to display the currency in currency formatting. Possible values are:
-      
+
         - "`symbol`" to use a localized currency symbol such as
           €, this is the default value,
         - "`code`" to use the ISO currency code,
         - "`name`" to use a localized currency name such as
           "`dollar`",
-          
-     - `localeMatcher`
-         - : The locale matching algorithm to use. Possible values are
+
+    - `localeMatcher`
+      - : The locale matching algorithm to use. Possible values are
         "`lookup`" and "`best fit`"; the default is
         "`best fit`". For information about this option, see the
         {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
-        
-      - `style`
-        - : The formatting style to use , the default is "`decimal`".
 
-          - "`decimal`" for plain number formatting.
-          - "`currency`" for currency formatting.
-          - "`percent`" for percent formatting
-          
+    - `style`
+      - : The formatting style to use , the default is "`decimal`".
+
+        - "`decimal`" for plain number formatting.
+        - "`currency`" for currency formatting.
+        - "`percent`" for percent formatting
+
     - `useGrouping`
-        - : Whether to use grouping separators. The default is `true`.
+      - : Whether to use grouping separators. The default is `true`.
 
-          - "`true`": display grouping separators even if the locale prefers otherwise
-          - "`false`": do not display grouping separators
-          
+        - "`true`": display grouping separators even if the locale prefers otherwise
+        - "`false`": do not display grouping separators
+
     The following properties fall into two groups:
     `minimumIntegerDigits`, `minimumFractionDigits`, and
     `maximumFractionDigits` in one group,
@@ -103,7 +103,7 @@ entirely implementation-dependent.
     - `maximumSignificantDigits`
       - : The maximum number of significant digits to use. Possible values are from
         1 to 21; the default is 21.
-       
+
 See the [`Intl.NumberFormat()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat)
 for details on these parameters and how to use them.
 
