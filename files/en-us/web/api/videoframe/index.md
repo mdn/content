@@ -19,7 +19,14 @@ The **`VideoFrame`** interface of the {{domxref('Web Codecs API','','',' ')}} re
 
 A `VideoFrame` object can be created or accessed in a number of ways. The {{domxref("MediaStreamTrackProcessor")}} breaks a media track into individual `VideoFrame` objects.
 
-A `VideoFrame` is a {{domxref("CanvasImageSource")}} and has a constructor that accepts a `CanvasImageSource`. This means that a frame can be created from an image or video element.
+A `VideoFrame` is an image source and has a constructor that accepts any other canvas source (
+an {{domxref("SVGImageElement")}},
+an {{domxref("HTMLVideoElement")}},
+an {{domxref("HTMLCanvasElement")}},
+an {{domxref("ImageBitmap")}},
+an {{domxref("OffscreenCanvas")}},
+or another {{domxref("VideoFrame")}}).
+This means that a frame can be created from an image or video element.
 
 A second constructor enables the creation of a `VideoFrame` from its binary pixel representation in a {{domxref("BufferSource")}}.
 

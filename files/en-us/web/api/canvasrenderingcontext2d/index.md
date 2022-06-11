@@ -131,7 +131,7 @@ Fill styling is used for colors and styles inside shapes and stroke styling is u
 - {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}
   - : Creates a radial gradient given by the coordinates of the two circles represented by the parameters.
 - {{domxref("CanvasRenderingContext2D.createPattern()")}}
-  - : Creates a pattern using the specified image (a {{domxref("CanvasImageSource")}}). It repeats the source in the directions specified by the repetition argument. This method returns a {{domxref("CanvasPattern")}}.
+  - : Creates a pattern using the specified image. It repeats the source in the directions specified by the repetition argument. This method returns a {{domxref("CanvasPattern")}}.
 
 ### Shadows
 
