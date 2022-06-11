@@ -47,7 +47,7 @@ function generate_table() {
       // node the contents of the <td>, and put the <td> at
       // the end of the table row
       const cell = document.createElement("td");
-      let cellText = document.createTextNode("cell in row "+i+", column "+j);
+      const cellText = document.createTextNode("cell in row "+i+", column "+j);
       cell.appendChild(cellText);
       row.appendChild(cell);
     }
