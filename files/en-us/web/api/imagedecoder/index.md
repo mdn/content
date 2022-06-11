@@ -39,6 +39,7 @@ The **`ImageDecoder`** interface of the {{domxref('WebCodecs API','','','true')}
   - : Aborts all pending `decode()` operations.
 
 ## Static methods
+
 - {{domxref("ImageDecoder.isTypeSupported()")}}
   - : Indicates if the provided [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) is supported for unpacking and decoding.
 

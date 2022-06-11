@@ -75,6 +75,7 @@ td {
   padding: 0.5rem;
 }
 ```
+
 #### Result
 
 {{ EmbedLiveSample('Example') }}
@@ -193,7 +194,7 @@ We've performed following steps:
     const secondParagraph = paragraphs[1];
     ```
 
-![](sample2a2.jpg)
+    ![](sample2a2.jpg)
 
 3. Finally, we set background color to red using the {{domxref("HTMLElement.style", "style")}} property of the {{domxref("HTMLParagraphElement", "paragraph")}} object:
 
