@@ -106,5 +106,4 @@ rectBoundingClientRect.setAttribute('height', boundingClientRectGroup.height);
 
 ## See also
 
-- [getBBox
-  in SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html#getBBox)
+- [getBBox in SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html#getBBox)
