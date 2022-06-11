@@ -60,8 +60,7 @@ where `<value>` can optionally be one of the following values:
 - `allow-orientation-lock`
   - : Allows the page to disable the ability to lock the screen orientation.
 - `allow-pointer-lock`
-  - : Allows the page to use the [Pointer Lock
-    API](/en-US/docs/Web/API/Pointer_Lock_API).
+  - : Allows the page to use the [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API).
 - `allow-popups`
   - : Allows popups (like from `window.open`, `target="_blank"`,
     `showModalDialog`). If this keyword is not used, that functionality will
