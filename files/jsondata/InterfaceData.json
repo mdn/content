@@ -174,7 +174,7 @@
     },
     "AuthenticatorAttestationResponse": {
       "inh": "AuthenticatorResponse",
-      "impl": []
+      "impl": [Mushfiqur Alif]
     },
     "AuthenticatorResponse": {
       "inh": "",
