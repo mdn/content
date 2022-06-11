@@ -362,8 +362,8 @@ Once you have the object in your JavaScript variable, you can set `style` proper
        for(let row = 0; row < 2; row++) {
            mycurrent_row=document.createElement("tr");
            for(let col = 0; col < 2; col++) {
-               mycurrent_cell = document.createElement("td");
-               currenttext = document.createTextNode("cell is: " + row + col);
+               const mycurrent_cell = document.createElement("td");
+               const currenttext = document.createTextNode("cell is: " + row + col);
                mycurrent_cell.appendChild(currenttext);
                mycurrent_row.appendChild(mycurrent_cell);
                // set the cell background color
