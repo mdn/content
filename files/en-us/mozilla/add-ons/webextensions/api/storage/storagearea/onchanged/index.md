@@ -20,7 +20,8 @@ Fires when one or more items in a storage area change. Compared to {{WebExtAPIRe
 ## Syntax
 
 ```js
-browser.storage.StorageArea.onChanged.addListener(callback)
+// local can also be sync, managed, or session
+browser.storage.local.onChanged.addListener(callback)
 browser.storage.StorageArea.onChanged.removeListener(listener)
 browser.storage.StorageArea.onChanged.hasListener(listener)
 ```
@@ -44,8 +45,6 @@ Events have three functions:
 
     - `changes`
       - : `object`. Object describing the change. This contains one property for each key that changed. The name of the property is the name of the key that changed, and its value is a {{WebExtAPIRef('storage.StorageChange')}} object describing the change to that item.
-    - `areaName`
-      - : `string`. The name of the storage area (`"local"`, `"managed"`, '"session"', or `"sync"`) where the changes occurred.
 
 ## Examples
 
@@ -54,7 +53,7 @@ Events have three functions:
 Log the old value and its new value of
 changes in the local storage.
 */
-function logStorageChange(changes, area) {
+function logStorageChange(changes) {
 
   let changedItems = Object.keys(changes);
 
@@ -76,7 +75,7 @@ browser.storage.local.onChanged.addListener(logStorageChange);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/#event-onChanged) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/#event-StorageArea-onChanged) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

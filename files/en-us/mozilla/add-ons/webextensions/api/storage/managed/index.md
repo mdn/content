@@ -17,8 +17,6 @@ browser-compat: webextensions.api.storage.managed
 
 A {{WebExtAPIRef("storage.StorageArea")}} object that represents the `managed` storage area. Items in `managed` storage are set by the domain administrator or other native applications installed on the user's computer and are read-only for the extension. Trying to modify this storage area results in an error.
 
-When values are set, if they have been implemented, the {{WebExtAPIRef("storage.onChanged")}} and {{WebExtAPIRef("storage.StorageArea.onChanged", "storage.managed.onChanged")}} events fire.
-
 ## Provisioning managed storage
 
 The procedure for provisioning managed storage varies between browsers. For Chrome instructions, see the ["Manifest for storage areas"](https://developer.chrome.com/docs/extensions/mv3/manifest/storage/) article.

@@ -76,7 +76,7 @@ The `sync` object implements the methods defined on the {{WebExtAPIRef("storage.
 - {{WebExtAPIRef("storage.StorageArea.getBytesInUse()", "storage.sync.getBytesInUse()")}}
   - : Gets the amount of storage space (in bytes) used for one or more items in the storage area.
 - {{WebExtAPIRef("storage.StorageArea.set()", "storage.sync.set()")}}
-  - : Stores one or more items in the storage area. If the item exists, its value is updated. When you set a value, if they have been implemented, the {{WebExtAPIRef("storage.onChanged")}} and {{WebExtAPIRef("storage.StorageArea.onChanged", "storage.sync.onChanged")}} events fire.
+  - : Stores one or more items in the storage area. If the item exists, its value is updated.
 - {{WebExtAPIRef("storage.StorageArea.remove()", "storage.sync.remove()")}}
   - : Removes one or more items from the storage area.
 - {{WebExtAPIRef("storage.StorageArea.clear()", "storage.sync.clear()")}}

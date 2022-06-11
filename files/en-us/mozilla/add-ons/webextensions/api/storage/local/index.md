@@ -37,7 +37,7 @@ The `local` object implements the methods defined on the {{WebExtAPIRef("storage
 - {{WebExtAPIRef("storage.StorageArea.getBytesInUse()", "storage.local.getBytesInUse()")}}
   - : Gets the amount of storage space (in bytes) used for one or more items in the storage area.
 - {{WebExtAPIRef("storage.StorageArea.set()", "storage.local.set()")}}
-  - : Stores one or more items in the storage area. If the item exists, its value is updated. When you set a value, if they have been implemented, the {{WebExtAPIRef("storage.onChanged")}} and {{WebExtAPIRef("storage.StorageArea.onChanged", "storage.local.onChanged")}} events fire.
+  - : Stores one or more items in the storage area. If the item exists, its value is updated. 
 - {{WebExtAPIRef("storage.StorageArea.remove()", "storage.local.remove()")}}
   - : Removes one or more items from the storage area.
 - {{WebExtAPIRef("storage.StorageArea.clear()", "storage.local.clear()")}}

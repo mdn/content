@@ -30,7 +30,7 @@ The `session` object implements the methods defined on the {{WebExtAPIRef("stora
 - {{WebExtAPIRef("storage.StorageArea.getBytesInUse()", "storage.session.getBytesInUse()")}}
   - : Gets the amount of storage space (in bytes) used for one or more items in the storage area.
 - {{WebExtAPIRef("storage.StorageArea.set()", "storage.session.set()")}}
-  - : Stores one or more items in the storage area. If the item exists, its value is updated. When you set a value, if they have been implemented, the {{WebExtAPIRef("storage.onChanged")}} and {{WebExtAPIRef("storage.StorageArea.onChanged", "storage.session.onChanged")}} events fire.
+  - : Stores one or more items in the storage area. If the item exists, its value is updated. 
 - {{WebExtAPIRef("storage.StorageArea.remove()", "storage.session.remove()")}}
   - : Removes one or more items from the storage area.
 - {{WebExtAPIRef("storage.StorageArea.clear()", "storage.session.clear()")}}
