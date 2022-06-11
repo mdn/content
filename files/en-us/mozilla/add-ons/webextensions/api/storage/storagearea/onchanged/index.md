@@ -22,8 +22,8 @@ Fires when one or more items in a storage area change. Compared to {{WebExtAPIRe
 ```js
 // local can also be sync, managed, or session
 browser.storage.local.onChanged.addListener(callback)
-browser.storage.StorageArea.onChanged.removeListener(listener)
-browser.storage.StorageArea.onChanged.hasListener(listener)
+browser.storage.local.onChanged.removeListener(listener)
+browser.storage.local.onChanged.hasListener(listener)
 ```
 
 Events have three functions:
