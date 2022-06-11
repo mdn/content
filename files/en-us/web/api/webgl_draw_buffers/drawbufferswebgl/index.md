@@ -88,5 +88,4 @@ ext.drawBuffersWEBGL([
 - {{domxref("WebGLRenderingContext.framebufferTexture2D()")}}
 - {{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter()")}}
 - {{domxref("WebGLRenderingContext.getParameter()")}}
-- [WebGL deferred
-  shading - Mozilla Hacks blog](https://hacks.mozilla.org/2014/01/webgl-deferred-shading/)
+- [WebGL deferred shading - Mozilla Hacks blog](https://hacks.mozilla.org/2014/01/webgl-deferred-shading/)
