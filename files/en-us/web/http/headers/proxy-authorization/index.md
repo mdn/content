@@ -38,10 +38,8 @@ Proxy-Authorization: <type> <credentials>
 ## Directives
 
 - \<type>
-  - : [Authentication
-    type](/en-US/docs/Web/HTTP/Authentication#authentication_schemes). A common type is ["Basic"](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme).
-    See also the [IANA
-    registry of Authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
+  - : [Authentication type](/en-US/docs/Web/HTTP/Authentication#authentication_schemes). A common type is ["Basic"](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme).
+    See also the [IANA registry of Authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
 - \<credentials>
 
   - : The credentials are constructed like this:
