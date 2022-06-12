@@ -6,7 +6,7 @@ tags:
   - API
   - Method
   - Reference
-  - istypesupported
+  - isTypeSupported
   - ImageDecoder
 browser-compat: api.ImageDecoder.isTypeSupported
 ---
