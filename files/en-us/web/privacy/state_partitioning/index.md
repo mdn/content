@@ -194,7 +194,7 @@ third-party integrations that are common on the web to continue to function.
 #### Storage Access API
 
 Third-party frames may use
-[`document.requestStorageAccess` ](/en-US/docs/Web/API/Document/requestStorageAccess) to request unpartitioned storage access through the
+[document.requestStorageAccess](/en-US/docs/Web/API/Document/requestStorageAccess) to request unpartitioned storage access through the
 [Storage Access API](/en-US/docs/Web/API/Storage_Access_API). Once
 granted, the requesting third-party will gain access to its first-party
 storage bucket (i.e., the storage it would have access to if visited as a
