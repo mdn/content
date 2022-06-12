@@ -331,7 +331,7 @@ The `h1` will be purple because the `h1` selector targets the element specifical
 
 ## Examples
 
-In the following CSS, we have three selectors targeting {{HTMLElement('input') elements to set a color. For a given input, the specificity weight of the color declaration having precedence is the matching selector with the greatest weight:
+In the following CSS, we have three selectors targeting {{HTMLElement('input')}} elements to set a color. For a given input, the specificity weight of the color declaration having precedence is the matching selector with the greatest weight:
 
 ```css
 #myElement input.myClass { color: red; } /* 1-1-1 */
