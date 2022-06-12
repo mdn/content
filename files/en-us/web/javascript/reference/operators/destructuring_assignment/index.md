@@ -21,25 +21,30 @@ The **destructuring assignment** syntax is a JavaScript expression that makes it
 ## Syntax
 
 ```js
-let a, b, rest;
-[a, b] = [10, 20];
-console.log(a); // 10
-console.log(b); // 20
+const [a, b] = array;
+const [a, , b] = array;
+const [a, b, ...rest] = array;
+const [a, , b, ...rest] = array;
+const [a, b, ...{ pop, push }] = array;
+const [a, b, ...[c, d]] = array;
 
-[a, b, ...rest] = [10, 20, 30, 40, 50];
-console.log(a); // 10
-console.log(b); // 20
-console.log(rest); // [30, 40, 50]
+const { a, b } = obj;
+const { a: a1, b: b1 } = obj;
+const { a, b, ...rest } = obj;
+const { a: a1, b: b1, ...rest } = obj;
 
-({ a, b } = { a: 10, b: 20 });
-console.log(a); // 10
-console.log(b); // 20
+let a, b, c, d, rest, pop, push;
+[a, b] = array;
+[a, , b] = array;
+[a, b, ...rest] = array;
+[a, , b, ...rest] = array;
+[a, b, ...{ pop, push }] = array;
+[a, b, ...[c, d]] = array;
 
-// Stage 4(finished) proposal
-({a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40});
-console.log(a); // 10
-console.log(b); // 20
-console.log(rest); // {c: 30, d: 40}
+({ a, b } = obj); // brackets are required
+({ a: a1, b: b1 } = obj);
+({ a, b, ...rest } = obj);
+({ a: a1, b: b1, ...rest } = obj);
 ```
 
 ## Description
@@ -197,6 +202,39 @@ const [a, ...b,] = [1, 2, 3];
 
 // SyntaxError: rest element may not have a trailing comma
 // Always consider using rest operator as the last element
+```
+
+#### Using a binding pattern as the rest property
+
+The rest property of array destructuring assignment can be another array or object binding pattern. This allows you to simultaneously unpack the properties and indices of arrays.
+
+```js
+const [a, b, ...{ pop, push }] = [1, 2];
+console.log(a, b); // 1 2
+console.log(pop, push); // [Function pop] [Function push]
+```
+
+```js
+const [a, b, ...[c, d]] = [1, 2, 3, 4];
+console.log(a, b, c, d); // 1 2 3 4
+```
+
+These binding patterns can even be nested, as long as each rest property is the last in the list.
+
+```js
+const [a, b, ...[c, d, ...[e, f]]] = [1, 2, 3, 4, 5, 6];
+console.log(a, b, c, d, e, f); // 1 2 3 4 5 6
+```
+
+However, object destructuring can only have an identifier as the rest property.
+
+```js example-bad
+const { a, ...{ b } } = { a: 1, b: 2 };
+// SyntaxError: `...` must be followed by an identifier in declaration contexts
+
+let a, b;
+({ a, ...{ b } } = { a: 1, b: 2 });
+// SyntaxError: `...` must be followed by an assignable reference in assignment contexts
 ```
 
 #### Unpacking values from a regular expression match
