@@ -57,7 +57,7 @@ If we used `IDBKeyRange.upperBound("F", true);`, then the range excludes
 "F"; and instead only includes the values before it.
 
 > **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange) repo
+> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/indexeddb-examples/tree/master/idbkeyrange) repo
 > ([view the example live too](https://mdn.github.io/indexeddb-examples/idbkeyrange/).)
 
 ```js
