@@ -86,7 +86,7 @@ function renderImage(result) {
               result.image.duration / 1000.0))
       .catch(e => {
         // We can end up requesting an imageIndex past the end since we're using
-        // a ReadableStrem from fetch(), when this happens just wrap around.
+        // a ReadableStream from fetch(), when this happens just wrap around.
         if (e instanceof RangeError) {
           imageIndex = 0;
           imageDecoder.decode({frameIndex: imageIndex}).then(renderImage);
