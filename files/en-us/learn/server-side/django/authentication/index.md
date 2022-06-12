@@ -503,18 +503,13 @@ from datetime import date
 
 Now add the following property definition to the `BookInstance` class:
 
-> **Note:** The following uses Python's `bool()` function, which evaluates an object or the resulting object of an expression and returns True unless:
-> The object is empty, like [], (), {}
-> The object is False
-> The object is 0
-> The object is None
-> 
-> `bool()` returns False in the above cases. This is a very "pythonic" way of returning boolean values from expressions.  
+> **Note:** The following code uses Python's `bool()` function, which evaluates an object or the resulting object of an expression, and returns `True` unless the result is "falsy", in which case it returns `False`.
+> In Python an object is _falsy_ (evaluates as `False`) if it is: empty (like `[]`, `()`, `{}`), `0`, `None` or if it is `False`.
 
 ```python
 @property
 def is_overdue(self):
-    """Derives whether the book is overdue given due data and current date."""
+    """Determines if the book is overdue based on due date and current date."""
     return bool(self.due_back and date.today() > self.due_back)
 ```
 
