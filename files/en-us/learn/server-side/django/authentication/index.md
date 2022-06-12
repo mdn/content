@@ -514,7 +514,6 @@ Now add the following property definition to the `BookInstance` class:
 ```python
 @property
 def is_overdue(self):
-    if self.due_back and date.today() > self.due_back:
     """Derives whether the book is overdue given due data and current date."""
     return bool(self.due_back and date.today() > self.due_back)
 ```
