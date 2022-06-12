@@ -23,6 +23,7 @@ The **destructuring assignment** syntax is a JavaScript expression that makes it
 ```js
 const [a, b] = array;
 const [a, , b] = array;
+const [a = aDefault, b] = array;
 const [a, b, ...rest] = array;
 const [a, , b, ...rest] = array;
 const [a, b, ...{ pop, push }] = array;
@@ -30,12 +31,14 @@ const [a, b, ...[c, d]] = array;
 
 const { a, b } = obj;
 const { a: a1, b: b1 } = obj;
+const { a: a1 = aDefault, b = bDefault } = obj;
 const { a, b, ...rest } = obj;
 const { a: a1, b: b1, ...rest } = obj;
 
-let a, b, c, d, rest, pop, push;
+let a, b, a1, b1, c, d, rest, pop, push;
 [a, b] = array;
 [a, , b] = array;
+[a = aDefault, b] = array;
 [a, b, ...rest] = array;
 [a, , b, ...rest] = array;
 [a, b, ...{ pop, push }] = array;
@@ -43,6 +46,7 @@ let a, b, c, d, rest, pop, push;
 
 ({ a, b } = obj); // brackets are required
 ({ a: a1, b: b1 } = obj);
+({ a: a1 = aDefault, b = bDefault } = obj);
 ({ a, b, ...rest } = obj);
 ({ a: a1, b: b1, ...rest } = obj);
 ```
@@ -226,7 +230,7 @@ const [a, b, ...[c, d, ...[e, f]]] = [1, 2, 3, 4, 5, 6];
 console.log(a, b, c, d, e, f); // 1 2 3 4 5 6
 ```
 
-However, object destructuring can only have an identifier as the rest property.
+On the other hand, object destructuring can only have an identifier as the rest property.
 
 ```js example-bad
 const { a, ...{ b } } = { a: 1, b: 2 };
@@ -257,6 +261,52 @@ function parseProtocol(url) {
 
 console.log(parseProtocol('https://developer.mozilla.org/en-US/docs/Web/JavaScript'));
 // "https"
+```
+
+#### Using array destructuring on any iterable
+
+Array destructuring calls the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) of the right-hand side. Therefore, any iterable, not necessarily arrays, can be destructured.
+
+```js
+const [a, b] = new Map([[1, 2], [3, 4]]);
+console.log(a, b); // [1, 2] [3, 4]
+```
+
+Non-iterables cannot be destructured as arrays.
+
+```js example-bad
+const obj = { 0: "a", 1: "b", length: 2 };
+const [a, b] = obj;
+// TypeError: obj is not iterable
+```
+
+Iterables are only iterated until all bindings are assigned.
+
+```js
+const obj = {
+  *[Symbol.iterator]() {
+    for (const v of [0, 1, 2, 3]) {
+      console.log(v);
+      yield v;
+    }
+  }
+}
+const [a, b] = obj; // Only logs 0 and 1
+```
+
+The rest binding is eagerly evaluated and creates a new array, instead of using the old iterable.
+
+```js
+const obj = {
+  *[Symbol.iterator]() {
+    for (const v of [0, 1, 2, 3]) {
+      console.log(v);
+      yield v;
+    }
+  }
+}
+const [a, b, ...rest] = obj; // Logs 0 1 2 3
+console.log(rest); // Logs an array [2, 3]
 ```
 
 ### Object destructuring
