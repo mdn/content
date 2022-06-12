@@ -503,12 +503,20 @@ from datetime import date
 
 Now add the following property definition to the `BookInstance` class:
 
+> **Note:** The following uses Python's `bool()` function, which evaluates an object or the resulting object of an expression and returns True unless:
+> The object is empty, like [], (), {}
+> The object is False
+> The object is 0
+> The object is None
+> 
+> `bool()` returns False in the above cases. This is a very "pythonic" way of returning boolean values from expressions.  
+
 ```python
 @property
 def is_overdue(self):
     if self.due_back and date.today() > self.due_back:
-        return True
-    return False
+    """Derives whether the book is overdue given due data and current date."""
+    return bool(self.due_back and date.today() > self.due_back)
 ```
 
 > **Note:** We first verify whether `due_back` is empty before making a comparison. An empty `due_back` field would cause Django to throw an error instead of showing the page: empty values are not comparable. This is not something we would want our users to experience!
