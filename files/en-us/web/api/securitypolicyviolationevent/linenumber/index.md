@@ -1,7 +1,6 @@
 ---
 title: SecurityPolicyViolationEvent.lineNumber
 slug: Web/API/SecurityPolicyViolationEvent/lineNumber
-page-type: web-api-instance-property
 tags:
   - API
   - CSP

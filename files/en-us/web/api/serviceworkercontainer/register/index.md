@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerContainer.register()
 slug: Web/API/ServiceWorkerContainer/register
-page-type: web-api-instance-method
 tags:
   - API
   - Method

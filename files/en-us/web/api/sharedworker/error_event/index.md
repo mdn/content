@@ -1,7 +1,6 @@
 ---
 title: 'SharedWorker: error event'
 slug: Web/API/SharedWorker/error_event
-page-type: web-api-event
 tags:
   - API
   - SharedWorker

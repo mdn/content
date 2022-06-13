@@ -1,7 +1,6 @@
 ---
 title: 'SpeechSynthesisUtterance: pause event'
 slug: Web/API/SpeechSynthesisUtterance/pause_event
-page-type: web-api-event
 tags:
   - Event
   - Reference

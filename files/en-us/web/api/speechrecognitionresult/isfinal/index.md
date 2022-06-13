@@ -1,7 +1,6 @@
 ---
 title: SpeechRecognitionResult.isFinal
 slug: Web/API/SpeechRecognitionResult/isFinal
-page-type: web-api-instance-property
 tags:
   - API
   - Experimental

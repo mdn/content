@@ -1,7 +1,6 @@
 ---
 title: RTCSessionDescription
 slug: Web/API/RTCSessionDescription
-page-type: web-api-interface
 tags:
   - API
   - Audio

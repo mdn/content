@@ -1,7 +1,6 @@
 ---
 title: Text.wholeText
 slug: Web/API/Text/wholeText
-page-type: web-api-instance-property
 tags:
   - Property
   - Reference

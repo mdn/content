@@ -1,7 +1,6 @@
 ---
 title: SVGFEDropShadowElement
 slug: Web/API/SVGFEDropShadowElement
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

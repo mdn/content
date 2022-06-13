@@ -1,7 +1,6 @@
 ---
 title: SVGPolygonElement
 slug: Web/API/SVGPolygonElement
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

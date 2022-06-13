@@ -1,7 +1,6 @@
 ---
 title: SVGRectElement
 slug: Web/API/SVGRectElement
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

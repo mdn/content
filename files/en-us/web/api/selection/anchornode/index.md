@@ -1,7 +1,6 @@
 ---
 title: Selection.anchorNode
 slug: Web/API/Selection/anchorNode
-page-type: web-api-instance-property
 tags:
   - API
   - HTML Editing

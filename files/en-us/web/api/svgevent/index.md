@@ -1,7 +1,6 @@
 ---
 title: SVGEvent
 slug: Web/API/SVGEvent
-page-type: web-api-interface
 tags:
   - API
   - Reference

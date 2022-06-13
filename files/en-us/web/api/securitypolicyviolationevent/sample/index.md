@@ -1,7 +1,6 @@
 ---
 title: SecurityPolicyViolationEvent.sample
 slug: Web/API/SecurityPolicyViolationEvent/sample
-page-type: web-api-instance-property
 tags:
   - API
   - CSP

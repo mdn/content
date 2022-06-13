@@ -1,7 +1,6 @@
 ---
 title: Sensor
 slug: Web/API/Sensor
-page-type: web-api-interface
 tags:
   - API
   - Generic Sensor API

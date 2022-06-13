@@ -1,7 +1,6 @@
 ---
 title: SVGGraphicsElement.getBBox()
 slug: Web/API/SVGGraphicsElement/getBBox
-page-type: web-api-instance-method
 tags:
   - API
   - Method

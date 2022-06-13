@@ -1,7 +1,6 @@
 ---
 title: StaticRange
 slug: Web/API/StaticRange
-page-type: web-api-interface
 tags:
   - API
   - Content Range

@@ -1,7 +1,6 @@
 ---
 title: SpeechRecognitionAlternative.transcript
 slug: Web/API/SpeechRecognitionAlternative/transcript
-page-type: web-api-instance-property
 tags:
   - API
   - Experimental

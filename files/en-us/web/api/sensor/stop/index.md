@@ -1,7 +1,6 @@
 ---
 title: Sensor.stop()
 slug: Web/API/Sensor/stop
-page-type: web-api-instance-method
 tags:
   - API
   - Generic Sensor API

@@ -1,7 +1,6 @@
 ---
 title: ShadowRoot.innerHTML
 slug: Web/API/ShadowRoot/innerHTML
-page-type: web-api-instance-property
 tags:
   - API
   - Property

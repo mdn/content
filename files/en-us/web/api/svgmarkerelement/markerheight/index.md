@@ -1,7 +1,6 @@
 ---
 title: SVGMarkerElement.markerHeight
 slug: Web/API/SVGMarkerElement/markerHeight
-page-type: web-api-instance-property
 tags:
   - API
   - Property

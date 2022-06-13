@@ -1,7 +1,6 @@
 ---
 title: 'SVGGraphicsElement: cut event'
 slug: Web/API/SVGGraphicsElement/cut_event
-page-type: web-api-event
 tags:
   - API
   - Event

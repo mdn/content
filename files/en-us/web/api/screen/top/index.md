@@ -1,7 +1,6 @@
 ---
 title: Screen.top
 slug: Web/API/Screen/top
-page-type: web-api-instance-property
 tags:
   - API
   - API:Microsoft Extensions

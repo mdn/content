@@ -1,7 +1,6 @@
 ---
 title: SVGMPathElement
 slug: Web/API/SVGMPathElement
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

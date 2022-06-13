@@ -1,7 +1,6 @@
 ---
 title: Selection.isCollapsed
 slug: Web/API/Selection/isCollapsed
-page-type: web-api-instance-property
 tags:
   - API
   - DOM

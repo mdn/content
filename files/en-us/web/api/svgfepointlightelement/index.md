@@ -1,7 +1,6 @@
 ---
 title: SVGFEPointLightElement
 slug: Web/API/SVGFEPointLightElement
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

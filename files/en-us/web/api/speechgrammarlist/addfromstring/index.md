@@ -1,7 +1,6 @@
 ---
 title: SpeechGrammarList.addFromString()
 slug: Web/API/SpeechGrammarList/addFromString
-page-type: web-api-instance-method
 tags:
   - API
   - Experimental

@@ -1,7 +1,6 @@
 ---
 title: TextDecoderStream.writable
 slug: Web/API/TextDecoderStream/writable
-page-type: web-api-instance-property
 tags:
   - API
   - Property

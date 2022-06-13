@@ -1,7 +1,6 @@
 ---
 title: 'ServiceWorkerGlobalScope: push event'
 slug: Web/API/ServiceWorkerGlobalScope/push_event
-page-type: web-api-event
 tags:
   - API
   - Event

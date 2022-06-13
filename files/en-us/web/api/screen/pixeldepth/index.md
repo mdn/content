@@ -1,7 +1,6 @@
 ---
 title: Screen.pixelDepth
 slug: Web/API/Screen/pixelDepth
-page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View

@@ -1,7 +1,6 @@
 ---
 title: SVGAnimatedRect
 slug: Web/API/SVGAnimatedRect
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

@@ -1,7 +1,6 @@
 ---
 title: ServiceWorker.state
 slug: Web/API/ServiceWorker/state
-page-type: web-api-instance-property
 tags:
   - API
   - Property

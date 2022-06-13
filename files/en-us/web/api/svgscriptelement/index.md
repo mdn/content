@@ -1,7 +1,6 @@
 ---
 title: SVGScriptElement
 slug: Web/API/SVGScriptElement
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

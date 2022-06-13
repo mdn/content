@@ -1,7 +1,6 @@
 ---
 title: SpeechRecognitionAlternative
 slug: Web/API/SpeechRecognitionAlternative
-page-type: web-api-interface
 tags:
   - API
   - Experimental

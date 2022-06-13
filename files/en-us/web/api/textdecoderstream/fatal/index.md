@@ -1,7 +1,6 @@
 ---
 title: TextDecoderStream.fatal
 slug: Web/API/TextDecoderStream/fatal
-page-type: web-api-instance-property
 tags:
   - API
   - Property

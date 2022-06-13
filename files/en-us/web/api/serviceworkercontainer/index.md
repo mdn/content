@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerContainer
 slug: Web/API/ServiceWorkerContainer
-page-type: web-api-interface
 tags:
   - API
   - Draft

@@ -1,7 +1,6 @@
 ---
 title: SVGAnimatedLengthList
 slug: Web/API/SVGAnimatedLengthList
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

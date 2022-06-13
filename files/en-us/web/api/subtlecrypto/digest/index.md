@@ -1,7 +1,6 @@
 ---
 title: SubtleCrypto.digest()
 slug: Web/API/SubtleCrypto/digest
-page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,7 +1,6 @@
 ---
 title: SpeechRecognitionEvent.emma
 slug: Web/API/SpeechRecognitionEvent/emma
-page-type: web-api-instance-property
 tags:
   - API
   - Experimental

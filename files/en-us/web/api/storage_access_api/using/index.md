@@ -1,7 +1,6 @@
 ---
 title: Using the Storage Access API
 slug: Web/API/Storage_Access_API/Using
-page-type: guide
 tags:
   - API
   - DOM

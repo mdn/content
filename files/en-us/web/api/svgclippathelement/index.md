@@ -1,7 +1,6 @@
 ---
 title: SVGClipPathElement
 slug: Web/API/SVGClipPathElement
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

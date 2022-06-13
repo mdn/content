@@ -1,7 +1,6 @@
 ---
 title: SpeechSynthesis.pending
 slug: Web/API/SpeechSynthesis/pending
-page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -1,7 +1,6 @@
 ---
 title: Storage Access API
 slug: Web/API/Storage_Access_API
-page-type: web-api-overview
 tags:
   - API
   - Reference

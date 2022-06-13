@@ -1,7 +1,6 @@
 ---
 title: SpeechGrammarList
 slug: Web/API/SpeechGrammarList
-page-type: web-api-interface
 tags:
   - API
   - Experimental

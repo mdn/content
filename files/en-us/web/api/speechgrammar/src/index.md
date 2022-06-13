@@ -1,7 +1,6 @@
 ---
 title: SpeechGrammar.src
 slug: Web/API/SpeechGrammar/src
-page-type: web-api-instance-property
 tags:
   - API
   - Experimental

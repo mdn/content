@@ -1,7 +1,6 @@
 ---
 title: SVGTRefElement
 slug: Web/API/SVGTRefElement
-page-type: web-api-interface
 tags:
   - API
   - Deprecated

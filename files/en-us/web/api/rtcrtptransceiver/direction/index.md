@@ -1,7 +1,6 @@
 ---
 title: RTCRtpTransceiver.direction
 slug: Web/API/RTCRtpTransceiver/direction
-page-type: web-api-instance-property
 tags:
   - API
   - Media

@@ -1,7 +1,6 @@
 ---
 title: SourceBuffer.updating
 slug: Web/API/SourceBuffer/updating
-page-type: web-api-instance-property
 tags:
   - API
   - Audio

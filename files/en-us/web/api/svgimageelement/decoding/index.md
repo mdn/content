@@ -1,7 +1,6 @@
 ---
 title: SVGImageElement.decoding
 slug: Web/API/SVGImageElement/decoding
-page-type: web-api-instance-property
 tags:
   - API
   - Image

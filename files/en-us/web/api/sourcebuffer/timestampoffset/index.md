@@ -1,7 +1,6 @@
 ---
 title: SourceBuffer.timestampOffset
 slug: Web/API/SourceBuffer/timestampOffset
-page-type: web-api-instance-property
 tags:
   - API
   - Audio

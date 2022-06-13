@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="969.4 104 750.6 504" width="750.6" height="504"><defs><marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="a" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -4 7 8" markerWidth="7" markerHeight="8" color="#000"><path d="M0 0h4.8m0 3v-6M0 1.2 4.2 0 0-1.2" fill="none" stroke="currentColor"/></marker><marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="b" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-6 -4 7 8" markerWidth="7" markerHeight="8" color="#000"><path d="M0 0h-4.8m0-3v6M0-1.2-4.2 0 0 1.2" fill="none" stroke="currentColor"/></marker></defs><g fill="none"><path fill="#fff" d="M969.4 104H1720v504H969.4z"/><path fill="#666" d="M992 192h320v360H992z"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M992 192h320v360H992z"/><text transform="translate(997 506)" fill="#ffffd1">
+              <tspan font-family="Verdana" font-size="28" font-weight="700" x="91.733" y="28">Left Eye</tspan>
+            </text><path fill="#666" d="M1312 192h320v360h-320z"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M1312 192h320v360h-320z"/><text transform="translate(1317 506)" fill="#ffffd1">
+              <tspan font-family="Verdana" font-size="28" font-weight="700" x="80.365" y="28">Right Eye</tspan>
+            </text><path d="m1312 560-8 16h-304l-8-16" stroke="#000" stroke-linecap="round" stroke-width="2"/><path fill="#fff" d="M1127.805 560h48.391v32h-48.391z"/><text transform="translate(1132.805 565)" fill="#000">
+            <tspan font-family="Verdana" font-size="18" font-weight="700" x="0" y="18">640</tspan>
+          </text><path d="m1632 560-8 16h-304l-8-16" stroke="#000" stroke-linecap="round" stroke-width="2"/><path fill="#fff" d="M1447.805 560h48.391v32h-48.391z"/><text transform="translate(1452.805 565)" fill="#000">
+            <tspan font-family="Verdana" font-size="18" font-weight="700" x="0" y="18">640</tspan>
+          </text><path stroke="#ebebeb" stroke-linecap="round" stroke-width="3" d="M1312 192v360"/><path marker-end="url(#a)" marker-start="url(#b)" stroke="#000" stroke-linecap="round" stroke-width="2" d="M1001.6 160h620.8"/><path fill="#fff" d="M1275.711 143h66.875v34h-66.875z"/><text transform="translate(1280.711 148)" fill="#000">
+              <tspan font-family="Verdana" font-size="20" font-weight="700" x="0" y="20">1280</tspan>
+            </text><text transform="translate(1235.2 125)" fill="#000">
+              <tspan font-family="Fira Mono for Powerline" font-size="16" font-weight="400" x="0" y="15">framebufferWidth</tspan>
+            </text><path marker-end="url(#a)" marker-start="url(#b)" stroke="#000" stroke-linecap="round" stroke-width="2" d="M1664 201.6v332.8"/><path fill="#fff" d="M1647 341.672h34v52.656h-34z"/><text transform="rotate(90 664.664 1011.336)" fill="#000">
+              <tspan font-family="Verdana" font-size="20" font-weight="700" x="0" y="20">720</tspan>
+            </text><text transform="rotate(90 706.3 992.7)" fill="#000">
+              <tspan font-family="Fira Mono for Powerline" font-size="16" font-weight="400" x="0" y="15">framebufferHeight</tspan>
+            </text></g></svg>

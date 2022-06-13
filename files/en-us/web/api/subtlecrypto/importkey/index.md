@@ -1,7 +1,6 @@
 ---
 title: SubtleCrypto.importKey()
 slug: Web/API/SubtleCrypto/importKey
-page-type: web-api-instance-method
 tags:
   - API
   - Method

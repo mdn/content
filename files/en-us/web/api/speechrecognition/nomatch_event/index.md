@@ -1,7 +1,6 @@
 ---
 title: 'SpeechRecognition: nomatch event'
 slug: Web/API/SpeechRecognition/nomatch_event
-page-type: web-api-event
 tags:
   - Event
   - Reference

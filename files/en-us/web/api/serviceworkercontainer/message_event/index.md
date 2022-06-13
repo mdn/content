@@ -1,7 +1,6 @@
 ---
 title: 'ServiceWorkerContainer: message event'
 slug: Web/API/ServiceWorkerContainer/message_event
-page-type: web-api-event
 tags:
   - API
   - Event

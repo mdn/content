@@ -1,7 +1,6 @@
 ---
 title: SpeechRecognition.maxAlternatives
 slug: Web/API/SpeechRecognition/maxAlternatives
-page-type: web-api-instance-property
 tags:
   - API
   - Property

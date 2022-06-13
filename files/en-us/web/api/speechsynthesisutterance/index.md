@@ -1,7 +1,6 @@
 ---
 title: SpeechSynthesisUtterance
 slug: Web/API/SpeechSynthesisUtterance
-page-type: web-api-interface
 tags:
   - API
   - Interface

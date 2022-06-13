@@ -1,7 +1,6 @@
 ---
 title: 'TextTrack: cuechange event'
 slug: Web/API/TextTrack/cuechange_event
-page-type: web-api-event
 tags:
   - API
   - Event

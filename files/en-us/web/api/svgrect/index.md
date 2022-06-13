@@ -1,7 +1,6 @@
 ---
 title: SVGRect
 slug: Web/API/SVGRect
-page-type: web-api-interface
 tags:
   - API
   - Reference

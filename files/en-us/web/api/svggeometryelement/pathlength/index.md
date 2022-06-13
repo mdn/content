@@ -1,7 +1,6 @@
 ---
 title: SVGGeometryElement.pathLength
 slug: Web/API/SVGGeometryElement/pathLength
-page-type: web-api-instance-property
 tags:
   - API
   - DOM

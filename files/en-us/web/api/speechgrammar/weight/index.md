@@ -1,7 +1,6 @@
 ---
 title: SpeechGrammar.weight
 slug: Web/API/SpeechGrammar/weight
-page-type: web-api-instance-property
 tags:
   - API
   - Experimental

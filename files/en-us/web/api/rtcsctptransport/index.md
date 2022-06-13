@@ -1,7 +1,6 @@
 ---
 title: RTCSctpTransport
 slug: Web/API/RTCSctpTransport
-page-type: web-api-interface
 tags:
   - Experimental
   - Interface

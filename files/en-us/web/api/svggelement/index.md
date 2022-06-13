@@ -1,7 +1,6 @@
 ---
 title: SVGGElement
 slug: Web/API/SVGGElement
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

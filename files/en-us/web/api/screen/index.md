@@ -1,7 +1,6 @@
 ---
 title: Screen
 slug: Web/API/Screen
-page-type: web-api-interface
 tags:
   - API
   - CSSOM View

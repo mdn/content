@@ -1,7 +1,6 @@
 ---
 title: RTCSessionDescription.toJSON()
 slug: Web/API/RTCSessionDescription/toJSON
-page-type: web-api-instance-method
 tags:
   - Experimental
   - Method

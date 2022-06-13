@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerContainer.getRegistration()
 slug: Web/API/ServiceWorkerContainer/getRegistration
-page-type: web-api-instance-method
 tags:
   - API
   - Method

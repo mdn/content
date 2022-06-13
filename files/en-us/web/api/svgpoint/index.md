@@ -1,7 +1,6 @@
 ---
 title: SVGPoint
 slug: Web/API/SVGPoint
-page-type: web-api-interface
 tags:
   - API
   - DOM

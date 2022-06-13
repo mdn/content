@@ -1,7 +1,6 @@
 ---
 title: 'ServiceWorkerGlobalScope: pushsubscriptionchange event'
 slug: Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event
-page-type: web-api-event
 tags:
   - API
   - Event

@@ -1,7 +1,6 @@
 ---
 title: SourceBuffer.removeAsync()
 slug: Web/API/SourceBuffer/removeAsync
-page-type: web-api-instance-method
 tags:
   - API
   - Audio

@@ -1,7 +1,6 @@
 ---
 title: SourceBuffer.textTracks
 slug: Web/API/SourceBuffer/textTracks
-page-type: web-api-instance-property
 tags:
   - API
   - Experimental

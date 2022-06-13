@@ -1,7 +1,6 @@
 ---
 title: Using the Screen Capture API
 slug: Web/API/Screen_Capture_API/Using_Screen_Capture
-page-type: guide
 tags:
   - API
   - Capture

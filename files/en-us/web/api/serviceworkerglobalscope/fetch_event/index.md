@@ -1,7 +1,6 @@
 ---
 title: 'ServiceWorkerGlobalScope: fetch event'
 slug: Web/API/ServiceWorkerGlobalScope/fetch_event
-page-type: web-api-event
 tags:
   - API
   - Property

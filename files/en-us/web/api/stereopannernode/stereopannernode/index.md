@@ -1,7 +1,6 @@
 ---
 title: StereoPannerNode()
 slug: Web/API/StereoPannerNode/StereoPannerNode
-page-type: web-api-constructor
 tags:
   - API
   - Audio

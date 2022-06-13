@@ -1,7 +1,6 @@
 ---
 title: ScriptProcessorNode
 slug: Web/API/ScriptProcessorNode
-page-type: web-api-interface
 tags:
   - API
   - Deprecated

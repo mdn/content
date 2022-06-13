@@ -1,7 +1,6 @@
 ---
 title: TextDecoder
 slug: Web/API/TextDecoder
-page-type: web-api-interface
 tags:
   - API
   - DOM

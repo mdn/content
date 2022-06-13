@@ -1,7 +1,6 @@
 ---
 title: RTCStatsReport
 slug: Web/API/RTCStatsReport
-page-type: web-api-interface
 tags:
   - API
   - Dictionary

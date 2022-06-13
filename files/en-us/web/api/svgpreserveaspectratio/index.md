@@ -1,7 +1,6 @@
 ---
 title: SVGPreserveAspectRatio
 slug: Web/API/SVGPreserveAspectRatio
-page-type: web-api-interface
 tags:
   - API
   - Reference

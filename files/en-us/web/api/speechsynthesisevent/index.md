@@ -1,7 +1,6 @@
 ---
 title: SpeechSynthesisEvent
 slug: Web/API/SpeechSynthesisEvent
-page-type: web-api-interface
 tags:
   - API
   - Interface

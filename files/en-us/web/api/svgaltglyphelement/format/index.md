@@ -1,7 +1,6 @@
 ---
 title: SVGAltGlyphElement.format
 slug: Web/API/SVGAltGlyphElement/format
-page-type: web-api-instance-property
 browser-compat: api.SVGAltGlyphElement.format
 ---
 {{APIRef("SVGAltGlyphElement")}}

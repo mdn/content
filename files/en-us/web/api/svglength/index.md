@@ -1,7 +1,6 @@
 ---
 title: SVGLength
 slug: Web/API/SVGLength
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

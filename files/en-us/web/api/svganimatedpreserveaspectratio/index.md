@@ -1,7 +1,6 @@
 ---
 title: SVGAnimatedPreserveAspectRatio
 slug: Web/API/SVGAnimatedPreserveAspectRatio
-page-type: web-api-interface
 tags:
   - API
   - Reference

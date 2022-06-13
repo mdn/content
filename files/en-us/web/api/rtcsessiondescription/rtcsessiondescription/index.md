@@ -1,7 +1,6 @@
 ---
 title: RTCSessionDescription()
 slug: Web/API/RTCSessionDescription/RTCSessionDescription
-page-type: web-api-constructor
 tags:
   - Constructor
   - Deprecated

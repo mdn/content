@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerRegistration.waiting
 slug: Web/API/ServiceWorkerRegistration/waiting
-page-type: web-api-instance-property
 tags:
   - API
   - Property

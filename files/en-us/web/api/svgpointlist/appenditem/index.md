@@ -1,7 +1,6 @@
 ---
 title: SVGPointList.appendItem()
 slug: Web/API/SVGPointList/appendItem
-page-type: web-api-instance-method
 tags:
   - API
   - Method

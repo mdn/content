@@ -1,7 +1,6 @@
 ---
 title: Sensor.timestamp
 slug: Web/API/Sensor/timestamp
-page-type: web-api-instance-property
 tags:
   - API
   - Generic Sensor API

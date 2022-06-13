@@ -1,7 +1,6 @@
 ---
 title: 'SVGElement: error event'
 slug: Web/API/SVGElement/error_event
-page-type: web-api-event
 tags:
   - API
   - Error

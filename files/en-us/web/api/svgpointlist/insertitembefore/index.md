@@ -1,7 +1,6 @@
 ---
 title: SVGPointList.insertItemBefore()
 slug: Web/API/SVGPointList/insertItemBefore
-page-type: web-api-instance-method
 tags:
   - API
   - Method

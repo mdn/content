@@ -1,7 +1,6 @@
 ---
 title: Service Worker API
 slug: Web/API/Service_Worker_API
-page-type: web-api-overview
 tags:
   - API
   - Landing

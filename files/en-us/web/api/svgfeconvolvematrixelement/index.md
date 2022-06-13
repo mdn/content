@@ -1,7 +1,6 @@
 ---
 title: SVGFEConvolveMatrixElement
 slug: Web/API/SVGFEConvolveMatrixElement
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

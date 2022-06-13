@@ -1,7 +1,6 @@
 ---
 title: SpeechSynthesisVoice.lang
 slug: Web/API/SpeechSynthesisVoice/lang
-page-type: web-api-instance-property
 tags:
   - API
   - Property

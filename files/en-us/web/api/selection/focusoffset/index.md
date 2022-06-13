@@ -1,7 +1,6 @@
 ---
 title: Selection.focusOffset
 slug: Web/API/Selection/focusOffset
-page-type: web-api-instance-property
 tags:
   - API
   - HTML Editing

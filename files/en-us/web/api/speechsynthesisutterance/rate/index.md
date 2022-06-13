@@ -1,7 +1,6 @@
 ---
 title: SpeechSynthesisUtterance.rate
 slug: Web/API/SpeechSynthesisUtterance/rate
-page-type: web-api-instance-property
 tags:
   - API
   - Property

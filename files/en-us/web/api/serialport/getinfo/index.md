@@ -1,7 +1,6 @@
 ---
 title: SerialPort.getInfo()
 slug: Web/API/SerialPort/getInfo
-page-type: web-api-instance-method
 tags:
   - API
   - Method

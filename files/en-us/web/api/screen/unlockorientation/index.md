@@ -1,7 +1,6 @@
 ---
 title: Screen.unlockOrientation()
 slug: Web/API/Screen/unlockOrientation
-page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View

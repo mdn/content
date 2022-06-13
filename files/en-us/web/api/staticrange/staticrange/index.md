@@ -1,7 +1,6 @@
 ---
 title: StaticRange()
 slug: Web/API/StaticRange/StaticRange
-page-type: web-api-constructor
 tags:
   - API
   - Constructor

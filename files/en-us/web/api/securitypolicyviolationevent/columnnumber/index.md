@@ -1,7 +1,6 @@
 ---
 title: SecurityPolicyViolationEvent.columnNumber
 slug: Web/API/SecurityPolicyViolationEvent/columnNumber
-page-type: web-api-instance-property
 tags:
   - API
   - CSP

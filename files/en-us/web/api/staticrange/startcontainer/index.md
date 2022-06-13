@@ -1,7 +1,6 @@
 ---
 title: StaticRange.startContainer
 slug: Web/API/StaticRange/startContainer
-page-type: web-api-instance-property
 tags:
   - API
   - DOM

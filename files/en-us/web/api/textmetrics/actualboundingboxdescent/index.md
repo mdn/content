@@ -1,7 +1,6 @@
 ---
 title: TextMetrics.actualBoundingBoxDescent
 slug: Web/API/TextMetrics/actualBoundingBoxDescent
-page-type: web-api-instance-property
 tags:
   - API
   - Experimental

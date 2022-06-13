@@ -1,7 +1,6 @@
 ---
 title: Selection.anchorOffset
 slug: Web/API/Selection/anchorOffset
-page-type: web-api-instance-property
 tags:
   - API
   - HTML Editing

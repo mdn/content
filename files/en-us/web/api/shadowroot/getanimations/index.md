@@ -1,7 +1,6 @@
 ---
 title: ShadowRoot.getAnimations()
 slug: Web/API/ShadowRoot/getAnimations
-page-type: web-api-instance-method
 tags:
   - API
   - Animation

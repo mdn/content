@@ -1,7 +1,6 @@
 ---
 title: RTCRtpTransceiver.stopped
 slug: Web/API/RTCRtpTransceiver/stopped
-page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

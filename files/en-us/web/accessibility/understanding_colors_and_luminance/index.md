@@ -322,11 +322,13 @@ Color as in hues and saturation can affect our mood, and enhance — or de-enhan
 
 ### Flashing and Seizures
 
+
 Continuous flashing brighter/darker at rates higher than 3 flashes per second, and over an area that covers just 5° of central vision, has been shown to induce photic seizures in some people, most likely in children and adolescents. It has also been found that certain very regular, high contrast patterns such as parallel white and black stripes, can also induce seizures. Some studies have indicated that very deep saturated red (with wavelengths of 660nm-700nm+) may exacerbate the problem, if these deep reds flash between a saturated and unsaturated state, no matter the luminance.
 
 The Epilepsy Foundation of America researched photic-related seizures thoroughly in this publication [Photic- and Pattern-induced Seizures A Review](https://www.researchgate.net/publication/7615895_Photic-_and_Pattern-induced_Seizures_A_Review_for_the_Epilepsy_Foundation_of_America_Working_Group). The study resulted in several important guidelines, a few key guidelines are:
 
 **Single, double, or triple flashes in one second are acceptable, but a sequence of flashes is not recommended when both of the following occur:**
+
 
 1. More than three flashes within any one second period.
 2. From the minimal expected viewing distance, the total area of concurrent flashes subtends a visual angle of 5° or more (200px to 300px square on a desktop monitor to as little as 50px square for a closely held mobile device).
@@ -336,9 +338,11 @@ The Epilepsy Foundation of America researched photic-related seizures thoroughly
 1. Five light–dark pairs of stripes, if the stripes change direction, oscillate, flash, or reverse in contrast.
 2. Eight light–dark pairs of stripes, if the pattern is unchanging or continuously and smoothly drifting in one direction.
 
+
 The consensus recommendations are in this brief paper, [Photic- and Pattern-induced Seizures: Expert Consensus of the Epilepsy Foundation of America](https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1528-1167.2005.31405.x). Some additional insights are available in this UK paper covering [guidelines for preventing seizures.](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.9473&rep=rep1&type=pdf).
 
 Additional notes: The EFA recommendation from 2005 pre-dates smart phones, and was based on television set usage, defining a flash that _"occupies a solid visual angle of ≥0.006 steradians (∼10% of the central visual field or 25% of screen area at typical viewing distances)."_ This is essentially equivalent to a visual angle of 5° square. Since that time, mobile devices have substantially changed how we view media. For a typical smart phone viewed very close (5"-6" or 12cm-15cm) that would be an area about 50px to 70px square.
+
 
 ---
 

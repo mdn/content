@@ -1,7 +1,6 @@
 ---
 title: 'SpeechSynthesisUtterance: end event'
 slug: Web/API/SpeechSynthesisUtterance/end_event
-page-type: web-api-event
 tags:
   - Event
   - Reference

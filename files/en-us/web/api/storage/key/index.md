@@ -1,7 +1,6 @@
 ---
 title: Storage.key()
 slug: Web/API/Storage/key
-page-type: web-api-instance-method
 tags:
   - API
   - Method

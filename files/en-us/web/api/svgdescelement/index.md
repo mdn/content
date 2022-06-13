@@ -1,7 +1,6 @@
 ---
 title: SVGDescElement
 slug: Web/API/SVGDescElement
-page-type: web-api-interface
 tags:
   - API
   - NeedsExample

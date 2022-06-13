@@ -1,7 +1,6 @@
 ---
 title: 'SpeechSynthesisUtterance: mark event'
 slug: Web/API/SpeechSynthesisUtterance/mark_event
-page-type: web-api-event
 tags:
   - Event
   - Reference

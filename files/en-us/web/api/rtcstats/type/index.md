@@ -1,7 +1,6 @@
 ---
 title: RTCStats.type
 slug: Web/API/RTCStats/type
-page-type: web-api-instance-property
 tags:
   - API
   - Property

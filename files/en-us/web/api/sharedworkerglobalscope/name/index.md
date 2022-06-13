@@ -1,7 +1,6 @@
 ---
 title: SharedWorkerGlobalScope.name
 slug: Web/API/SharedWorkerGlobalScope/name
-page-type: web-api-instance-property
 tags:
   - API
   - Property
