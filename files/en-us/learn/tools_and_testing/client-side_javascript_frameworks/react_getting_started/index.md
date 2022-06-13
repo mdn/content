@@ -434,10 +434,24 @@ function App() {
 }
 ```
 
-Change the signature of the `App` function so that it accepts `props` as a parameter, and delete the `subject` const. Just like any other function parameter, you can put `props` in a `console.log()` to print it to your browser's console. Go ahead and do that before the `return` statement, like so:
+The object property `subject` corresponds to the `subject` prop we added to our `<App />` component call, and the string `Clarice` corresponds to its value. Component props in React are always collected into objects in this fashion.
+
+Now that `subject` is one of our props, let's utilize it in `App.js`. Change the signature of the `App` function so that it accepts `props` as a parameter, and delete the `subject` const. Next, change the `subject` constant so that, instead of defining it as the string `React`, you are reading the value of `props.subject`. 
 
 ```js
 function App(props) {
+  const subject = props.subject;
+  return (
+    // return statement
+  );
+}
+```
+
+Just like any other function parameter, you can put `props` in a `console.log()` to print it to your browser's console. Go ahead and do that before the `return` statement, like so:
+
+```js
+function App(props) {
+  const subject = props.subject;
   console.log(props);
   return (
     // return statement
@@ -451,20 +465,7 @@ Save your file and check your browser's JavaScript console. You should see somet
 Object { subject: "Clarice" }
 ```
 
-The object property `subject` corresponds to the `subject` prop we added to our `<App />` component call, and the string `Clarice` corresponds to its value. Component props in React are always collected into objects in this fashion.
-
-Now that `subject` is one of our props, let's utilize it in `App.js`. Change the `subject` constant so that, instead of defining it as the string `React`, you are reading the value of `props.subject`. You can also delete your `console.log()` if you want.
-
-```js
-function App(props) {
-  const subject = props.subject;
-  return (
-    // return statement
-  );
-}
-```
-
-When you save, the app should now greet you with "Hello, Clarice!". If you return to `index.js`, edit the value of `subject`, and save, your text will change.
+When you save, the app should now greet you with "Hello, Clarice!". If you return to `index.js`, edit the value of `subject`, and save, your text will change. You can also delete your `console.log()` now if you want.
 
 ## Summary
 
