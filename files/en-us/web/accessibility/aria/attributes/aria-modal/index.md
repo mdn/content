@@ -18,13 +18,13 @@ A section of content is "modal" means navigation is limited to the area itself a
 
 > **Note:** ARIA only modifies the accessibility tree, modifying how assistive technology presents the content to your users. ARIA doesn't change anything about an element's function or behavior. To create a modal effect you must use JavaScript to manage behavior, focus, and ARIA states.
 
-Relevant only on `dialog` and `alertdialog` containers, setting `aria-modal="true"` tells assistive technologies to  let the user know the ability to interact with, or access other content on the page requires the modal dialog to be closed or otherwise lose focus.
+Relevant only on `dialog` and `alertdialog` containers, setting `aria-modal="true"` tells assistive technologies to let the user know the ability to interact with, or access other content on the page requires the modal dialog to be closed or otherwise lose focus.
 
 Modal dialogs are when content is displayed and the user's interaction is limited to only that section until it is dismissed.
 
 When creating modal dialogs, `aria-modal="true"` tells assistive technologies that the windows underneath the current dialog are not part of the modal content.
 
-When a modal element is displayed, focus should be placed in the modal. Focus needs to be "trapped" inside the modal when it is visible, until is is dismissed. Assistive technology (<abbr>AT</abbr>) can then navigate the modal's content and understand the scope of the modal's content. `aria-modal` attribute helps AT communicate the bounds of the modal and distinguishes it from the rest of the page's content. When dismissed, focus should return to the element that triggered the modal.
+When a modal element is displayed, focus should be placed in the modal. Focus needs to be "trapped" inside the modal when it is visible, until it is dismissed. Assistive technology (<abbr>AT</abbr>) can then navigate the modal's content and understand the scope of the modal's content. The `aria-modal` attribute helps AT communicate the bounds of the modal and distinguishes it from the rest of the page's content. When dismissed, focus should return to the element that triggered the modal.
 
 Ensure the modal is controllable using only its descendant elements. If a modal dialog has a close button, the button should be a descendant contained with the modal container in the DOM. 
 
@@ -32,7 +32,7 @@ When a modal element is displayed, authors **should** mark all other contents as
 
 There is an [`inert`](/en-US/docs/Web/API/HTMLElement/inert) attribute that, when supported, will be a boolean attribute that indicates, by its presence, that the element and all its shadow-including descendants is to be made inert. Until `inert` is fully supported, all other content should be [made inert using JavaScript](https://whistlr.info/2021/inert/). 
 
-When supported, inluding `aria-modal="true"` on a [`dialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) or [`alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role), removes the requirement of putting [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) on background content as the `aria-modal` informs assistive technologies that content outside a dialog is inert. Note that there are still compatibility issues for the `dialog` element, so using it in production is not recommended.
+When supported, including `aria-modal="true"` on a [`dialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) or [`alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role), removes the requirement of putting [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) on background content, as the `aria-modal` informs assistive technologies that content outside a dialog is inert. Note that there are still compatibility issues for the `dialog` element, so using it in production is not recommended.
 
 If a dialog is not modal -- there is no inert background and focus isn't confined to the dialog -- either include `aria-modal="false"` or omit the attribute altogether. 
 
