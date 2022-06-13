@@ -13,7 +13,7 @@ tags:
   - as
 browser-compat: api.HTMLLinkElement.as
 ---
-{{SeeCompatTable}}{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}
 
 The **`as`** property of the {{domxref("HTMLLinkElement")}}
 interface returns a string representing the type of content being
