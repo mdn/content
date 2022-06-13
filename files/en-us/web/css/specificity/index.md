@@ -282,7 +282,7 @@ Method #2
    /* normal styles here */
  }
  @layer importantOverrides {
-    [id="myElement] p {
+    [id="myElement"] p {
       /* important style here */;
     }
  }
