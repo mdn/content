@@ -7,6 +7,7 @@ tags:
   - Guide
   - Reference
   - Web
+spec-urls: https://drafts.csswg.org/selectors/#specificity-rules
 ---
 {{CSSRef}}
 
@@ -33,7 +34,7 @@ The selector weight categories are listed here in the order of decreasing specif
 - No value
   - : The universal selector ({{CSSxRef("Universal_selectors", "*")}}) and the pseudo-class {{CSSxRef(":where", ":where()")}} and its parameters aren't counted when calculating the weight, but they do match elements. The value for both the universal selector and the pseudo-class is 0-0-0; these selectors do not impact the specificity weight value.
 
-Combinators, such as {{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Descendant_combinator), and {{CSSxRef("Column_combinator", "||")}}, may make a selector more specific but don't add any value to the specificity weight. 
+Combinators, such as {{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Descendant_combinator), and {{CSSxRef("Column_combinator", "||")}}, may make a selector more specific in what is selected but they don't add any value to the specificity weight. 
 
 The negation pseudo-class, {{CSSxRef(":not", ":not()")}}, itself has no weight. Neither does the {{CSSxRef(":is", ":is()")}} pseudo-class. The parameters in these selectors, however, do. The values of both come from the parameter in the list of parameters that has the highest specificity. The [`:not()` and `:is()` exceptions](#the-is-and-not-exceptions) are discussed below.
 
