@@ -1044,7 +1044,7 @@
       "guides": [],
       "interfaces": ["Scheduler", "TaskController", "TaskSignal", "AbortSignal", "TaskPriorityChangeEvent"],
       "methods": [],
-      "properties": [],
+      "properties": ["Window.scheduler"],
       "events": []
     },
     "Proximity Events": {
