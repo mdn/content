@@ -1,6 +1,7 @@
 ---
 title: Web Bluetooth API
 slug: Web/API/Web_Bluetooth_API
+page-type: web-api-overview
 tags:
   - API
   - Bluetooth

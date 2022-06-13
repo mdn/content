@@ -1,6 +1,7 @@
 ---
 title: API event subpage template
 slug: MDN/Structures/Page_types/API_event_subpage_template
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -24,6 +25,7 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 > ---
 > title: 'NameOfTheParentInterface: NameOfTheEvent event'
 > slug: Web/API/NameOfTheParentInterface/NameOfTheEventHandler_event
+> page-type: web-api-event
 > tags:
 >   - NameOfTheEvent
 >   - API
@@ -42,6 +44,8 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
 >     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheEventHandler_event`.
+> - **page-type**
+>   - : The `page-type` key for Web/API events is always `web-api-event`.
 > - **tags**
 >   - : Always include the following tags: **API**, **Reference**, **Event**,  the _name of the event_, the name of the _parent interface_ (e.g. **Window**).
 >

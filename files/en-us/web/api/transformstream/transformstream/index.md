@@ -1,6 +1,7 @@
 ---
 title: TransformStream()
 slug: Web/API/TransformStream/TransformStream
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

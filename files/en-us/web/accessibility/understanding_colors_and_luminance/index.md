@@ -430,7 +430,6 @@ Within the W3 AGWG there is active discussion and investigation regarding the WC
 #### W3C Issues and Discussions
 
 - [The Visual Contrast Research Group](https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup) for WCAG 3.
-- [Links to Documentation](https://git.myndex.com) and Discussions regarding the Visual Contrast Research Group and APCA.
 - [Light and dark text](https://github.com/w3c/silver/issues/261) & WCAG 3.0 contrast (Silver thread #261)
 - [Contrast Ratio Math](https://github.com/w3c/wcag/issues/695) and Related Visual Issue thread #695
 - [Luminance / Luma confusion](https://github.com/w3c/wcag/issues/236) thread #236

@@ -1,6 +1,7 @@
 ---
 title: WritableStream
 slug: Web/API/WritableStream
+page-type: web-api-interface
 tags:
   - API
   - Interface

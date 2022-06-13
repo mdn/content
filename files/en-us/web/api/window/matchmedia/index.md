@@ -1,6 +1,7 @@
 ---
 title: Window.matchMedia()
 slug: Web/API/Window/matchMedia
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View

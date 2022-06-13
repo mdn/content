@@ -1,6 +1,7 @@
 ---
 title: XRInputSource.targetRayMode
 slug: Web/API/XRInputSource/targetRayMode
+page-type: web-api-instance-property
 tags:
   - API
   - AR

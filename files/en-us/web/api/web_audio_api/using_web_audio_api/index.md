@@ -1,6 +1,7 @@
 ---
 title: Using the Web Audio API
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
+page-type: guide
 tags:
   - API
   - Audio

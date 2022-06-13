@@ -1,5 +1,5 @@
 ---
-title: 'MediaRecorder: stop event'
+title: "MediaRecorder: stop event"
 slug: Web/API/MediaRecorder/stop_event
 page-type: web-api-event
 tags:
@@ -14,6 +14,7 @@ tags:
   - stop
 browser-compat: api.MediaRecorder.stop_event
 ---
+
 {{APIRef("Media Recorder API")}}
 
 The `stop` event is fired when
@@ -27,9 +28,9 @@ point available for you to use in your application.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('stop', event => { });
+addEventListener("stop", (event) => {});
 
-onstop = event => { };
+onstop = (event) => {};
 ```
 
 ## Event type
@@ -70,7 +71,7 @@ A generic {{domxref("Event")}}.
 ## See also
 
 - [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
-  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/web-dictaphone/).)
+- [Web Dictaphone](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder +
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/media/web-dictaphone/).)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("Navigator.getUserMedia")}}

@@ -21,14 +21,7 @@ information about the currently playing media, or `null` if the metadata has
 not been set. This metadata is provided by the browser to the device for presentation in
 any standard media control user interface the device might offer.
 
-## Syntax
-
-```js
-var mediaMetadata = navigator.mediaSession.metadata;
-navigator.mediaSession.metadata = mediaMetadata;
-```
-
-### Value
+## Value
 
 An instance of {{domxref("MediaMetadata")}} containing information about the media
 currently being played.

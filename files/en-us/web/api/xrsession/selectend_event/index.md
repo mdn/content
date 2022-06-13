@@ -1,6 +1,7 @@
 ---
 title: 'XRSession: selectend event'
 slug: Web/API/XRSession/selectend_event
+page-type: web-api-event
 tags:
   - API
   - AR

@@ -1,6 +1,7 @@
 ---
 title: TransitionEvent
 slug: Web/API/TransitionEvent
+page-type: web-api-interface
 tags:
   - API
   - CSS

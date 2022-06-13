@@ -1,6 +1,7 @@
 ---
 title: Using XMLHttpRequest
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
+page-type: guide
 tags:
   - AJAX
   - AJAXfile
@@ -102,7 +103,7 @@ three primary ways to analyze and parse this raw HTML string:
     `fragment.body.innerHTML` and traverse the DOM of the fragment.
 3. {{jsxref("RegExp")}} can be used if you always know the content of the HTML
     `responseText` beforehand. You might want to remove line breaks, if you use
-    RegExp to scan with regard to linebreaks. However, this method is a "last resort"
+    `RegExp` to scan with regard to line breaks. However, this method is a "last resort"
     since if the HTML code changes slightly, the method will likely fail.
 
 ## Handling binary data
@@ -366,9 +367,8 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
     for (var nIdx = 0; nIdx < nBytes; nIdx++) {
       ui8Data[nIdx] = sData.charCodeAt(nIdx) & 0xff;
     }
-    /* send as ArrayBufferView...: */
+    /* send: */
     this.send(ui8Data);
-    /* ...or as ArrayBuffer (legacy)...: this.send(ui8Data.buffer); */
   };
 }
 

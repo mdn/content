@@ -1,6 +1,7 @@
 ---
 title: Window.parent
 slug: Web/API/Window/parent
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

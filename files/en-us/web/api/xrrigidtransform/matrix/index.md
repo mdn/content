@@ -1,6 +1,7 @@
 ---
 title: XRRigidTransform.matrix
 slug: Web/API/XRRigidTransform/matrix
+page-type: web-api-instance-property
 tags:
   - API
   - AR

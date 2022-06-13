@@ -1,6 +1,7 @@
 ---
 title: File API
 slug: Web/API/File_API
+page-type: web-api-overview
 tags:
   - API
   - Overview

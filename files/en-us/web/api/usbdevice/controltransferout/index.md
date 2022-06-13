@@ -1,6 +1,7 @@
 ---
 title: USBDevice.controlTransferOut()
 slug: Web/API/USBDevice/controlTransferOut
+page-type: web-api-instance-method
 tags:
   - API
   - Method

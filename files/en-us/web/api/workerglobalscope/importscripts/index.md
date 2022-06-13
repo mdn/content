@@ -1,6 +1,7 @@
 ---
 title: WorkerGlobalScope.importScripts()
 slug: Web/API/WorkerGlobalScope/importScripts
+page-type: web-api-instance-method
 tags:
   - API
   - Method

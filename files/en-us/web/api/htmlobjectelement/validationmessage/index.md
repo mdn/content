@@ -23,7 +23,7 @@ constraints.
 
 ## Value
 
-A {{domxref('DOMString')}}.
+A string.
 
 ## Specifications
 

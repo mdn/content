@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.set()
 slug: Web/API/URLSearchParams/set
+page-type: web-api-instance-method
 tags:
   - API
   - Method

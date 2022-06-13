@@ -39,9 +39,9 @@ request.open("POST", "http://foo.com/submitform.php");
 request.send(formData);
 ```
 
-> **Note:** The fields "userfile" and "webmasterfile" both contain a file. The number assigned to the field "accountnum" is immediately converted into a string by the [`FormData.append()`](</en-US/docs/Web/API/FormData#append()>) method (the field's value can be a {{ domxref("Blob") }}, {{ domxref("File") }}, or a string: **if the value is neither a Blob nor a File, the value is converted to a string**).
+> **Note:** The fields "userfile" and "webmasterfile" both contain a file. The number assigned to the field "accountnum" is immediately converted into a string by the [`FormData.append()`](/en-US/docs/Web/API/FormData/append) method (the field's value can be a {{ domxref("Blob") }}, {{ domxref("File") }}, or a string: **if the value is neither a Blob nor a File, the value is converted to a string**).
 
-This example builds a `FormData` instance containing values for fields named "username", "accountnum", "userfile" and "webmasterfile", then uses the `XMLHttpRequest` method [`send()`](</en-US/docs/Web/API/XMLHttpRequest#send()>) to send the form's data. The field "webmasterfile" is a {{domxref("Blob")}}. A `Blob` object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The {{ domxref("File") }} interface is based on `Blob`, inheriting blob functionality and expanding it to support files on the user's system. In order to build a `Blob` you can invoke the {{domxref("Blob.Blob","Blob() constructor")}}.
+This example builds a `FormData` instance containing values for fields named "username", "accountnum", "userfile" and "webmasterfile", then uses the `XMLHttpRequest` method [`send()`](/en-US/docs/Web/API/XMLHttpRequest/send) to send the form's data. The field "webmasterfile" is a {{domxref("Blob")}}. A `Blob` object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The {{ domxref("File") }} interface is based on `Blob`, inheriting blob functionality and expanding it to support files on the user's system. In order to build a `Blob` you can invoke the {{domxref("Blob.Blob","Blob() constructor")}}.
 
 ## Retrieving a FormData object from an HTML form
 

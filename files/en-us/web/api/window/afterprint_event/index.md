@@ -1,6 +1,7 @@
 ---
 title: 'Window: afterprint event'
 slug: Web/API/Window/afterprint_event
+page-type: web-api-event
 tags:
   - Event
   - Reference

@@ -1,6 +1,7 @@
 ---
 title: Window
 slug: Web/API/Window
+page-type: web-api-interface
 tags:
   - API
   - Browser
@@ -165,7 +166,10 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - {{domxref("indexedDB")}} {{readonlyInline}}
   - : Provides a mechanism for applications to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.
 - {{domxref("origin")}} {{readOnlyinline}}
-  - : Returns the global object's origin, serialized as a string. (This does not yet appear to be implemented in any browser.)
+  - : Returns the global object's origin, serialized as a string.
+- {{domxref("Window.scheduler")}} {{readOnlyInline}}
+  - : Returns the {{domxref("Scheduler")}} object associated with the current context.
+    This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
 
 ### Deprecated properties
 

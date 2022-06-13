@@ -1,6 +1,7 @@
 ---
 title: 'WakeLockSentinel: release event'
 slug: Web/API/WakeLockSentinel/release_event
+page-type: web-api-event
 tags:
   - Event Handler
   - Property

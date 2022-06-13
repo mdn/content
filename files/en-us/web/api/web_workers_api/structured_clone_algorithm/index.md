@@ -1,6 +1,7 @@
 ---
 title: The structured clone algorithm
 slug: Web/API/Web_Workers_API/Structured_clone_algorithm
+page-type: guide
 tags:
   - Advanced
   - DOM
@@ -78,10 +79,12 @@ It clones by recursing through the input object while maintaining a map of previ
       <td></td>
     </tr>
     <tr>
-      <td>{{domxref("ArrayBufferView")}}</td>
-      <td>
-        Including other <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed arrays</a>.
-      </td>
+      <td>{{jsxref("TypedArray")}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("DataView")}}</td>
+      <td></td>
     </tr>
     <tr>
       <td>{{domxref("ImageBitmap")}}</td>

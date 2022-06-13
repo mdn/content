@@ -1,6 +1,7 @@
 ---
 title: WebGL constants
 slug: Web/API/WebGL_API/Constants
+page-type: guide
 tags:
   - API
   - Reference

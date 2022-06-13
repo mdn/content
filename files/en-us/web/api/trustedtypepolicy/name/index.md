@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicy.name
 slug: Web/API/TrustedTypePolicy/name
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getSupportedExtensions()
 slug: Web/API/WebGLRenderingContext/getSupportedExtensions
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -44,8 +45,7 @@ specific extension object.
 
 ## WebGL extensions
 
-Extensions for the WebGL API are registered in the [WebGL Extension
-Registry](https://www.khronos.org/registry/webgl/extensions/). They are also listed [here](/en-US/docs/Web/API/WebGL_API#extensions).
+Extensions for the WebGL API are registered in the [WebGL Extension Registry](https://www.khronos.org/registry/webgl/extensions/). They are also listed [here](/en-US/docs/Web/API/WebGL_API#extensions).
 
 ## Specifications
 

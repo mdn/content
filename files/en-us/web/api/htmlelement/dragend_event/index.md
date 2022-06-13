@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: dragend event'
 slug: Web/API/HTMLElement/dragend_event
+page-type: web-api-event
 tags:
   - API
   - DOM

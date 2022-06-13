@@ -1,6 +1,7 @@
 ---
 title: 'Window: messageerror event'
 slug: Web/API/Window/messageerror_event
+page-type: web-api-event
 tags:
   - API
   - Event

@@ -53,7 +53,7 @@ By static examples, we are talking about static code blocks that show how a feat
 
 ```js
 // This is a JS example
-var test = "Hello";
+const test = "Hello";
 console.log(test);
 ```
 

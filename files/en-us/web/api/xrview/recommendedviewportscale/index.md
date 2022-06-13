@@ -1,6 +1,7 @@
 ---
 title: XRView.recommendedViewportScale
 slug: Web/API/XRView/recommendedViewportScale
+page-type: web-api-instance-property
 tags:
   - API
   - Property

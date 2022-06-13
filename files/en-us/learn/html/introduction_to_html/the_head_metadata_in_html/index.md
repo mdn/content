@@ -176,7 +176,7 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
 <meta property="og:title" content="Mozilla Developer Network">
 ```
 
-One effect of this is that when you link to MDN Web Docs on facebook, the link appears along with an image and description: a richer experience for users.
+One effect of this is that when you link to MDN Web Docs on Facebook, the link appears along with an image and description: a richer experience for users.
 
 ![Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description.](facebook-output.png)
 

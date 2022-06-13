@@ -1,6 +1,7 @@
 ---
 title: API landing page template
 slug: MDN/Structures/Page_types/API_landing_page_template
+page-type: web-api-overview
 tags:
   - API
   - Landing
@@ -21,6 +22,7 @@ tags:
 > ---
 > title: NameOfTheAPI API
 > slug: Web/API/NameOfTheAPI_API
+> page-type: web-api-overview
 > tags:
 >   - API
 >   - NameOfTheAPI API
@@ -40,6 +42,8 @@ tags:
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
 >     This will be formatted like `Web/API/NameOfTheAPI_API`.
 >     For example, the [WebXR Device API](/en-US/docs/Web/API/WebVR_API)'s slug is `Web/API/WebXR_Device_API`.
+> - **page-type**
+>   - : The `page-type` key for Web/API landing pages is always `web-api-overview`.
 > - **tags**
 >   - : Always include the following tags: **API**, **Reference**, **Landing**,  the _name of the API_ (e.g. **WebXR Device API**).
 >

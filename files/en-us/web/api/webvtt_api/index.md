@@ -1,6 +1,7 @@
 ---
 title: Web Video Text Tracks Format (WebVTT)
 slug: Web/API/WebVTT_API
+page-type: web-api-overview
 tags:
   - API
   - Intermediate

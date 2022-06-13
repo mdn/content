@@ -1,6 +1,7 @@
 ---
 title: VideoFrame.displayWidth
 slug: Web/API/VideoFrame/displayWidth
+page-type: web-api-instance-property
 tags:
   - API
   - Property

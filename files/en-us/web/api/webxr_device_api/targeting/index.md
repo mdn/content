@@ -1,6 +1,7 @@
 ---
 title: Targeting and hit detection
 slug: Web/API/WebXR_Device_API/Targeting
+page-type: guide
 tags:
   - Draft
 ---

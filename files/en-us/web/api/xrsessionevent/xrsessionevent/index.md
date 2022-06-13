@@ -1,6 +1,7 @@
 ---
 title: XRSessionEvent()
 slug: Web/API/XRSessionEvent/XRSessionEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

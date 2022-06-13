@@ -20,7 +20,7 @@ The **`paymentRequestId`** read-only property of the
 
 ## Value
 
-A DOMString contains the ID.
+A string contains the ID.
 
 ## Specifications
 

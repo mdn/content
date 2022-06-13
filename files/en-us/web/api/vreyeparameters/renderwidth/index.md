@@ -1,6 +1,7 @@
 ---
 title: VREyeParameters.renderWidth
 slug: Web/API/VREyeParameters/renderWidth
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

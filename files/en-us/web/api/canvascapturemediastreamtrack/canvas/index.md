@@ -20,13 +20,7 @@ The {{domxref("CanvasCaptureMediaStreamTrack")}} **`canvas`**
 read-only property returns the {{domxref("HTMLCanvasElement")}} from which frames are
 being captured.
 
-## Syntax
-
-```js
-var elt = stream.canvas;
-```
-
-### Value
+## Value
 
 An `HTMLCanvasElement` indicating the canvas which is the source of the
 frames being captured.

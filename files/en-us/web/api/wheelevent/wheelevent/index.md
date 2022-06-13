@@ -1,6 +1,7 @@
 ---
 title: WheelEvent()
 slug: Web/API/WheelEvent/WheelEvent
+page-type: web-api-constructor
 tags:
   - Constructor
   - DOM

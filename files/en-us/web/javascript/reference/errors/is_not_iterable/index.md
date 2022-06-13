@@ -10,8 +10,9 @@ tags:
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "is not iterable" occurs when the value which is given as the
-right-hand side of [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
-or as argument of a function such as {{jsxref("Promise.all")}} or {{jsxref("TypedArray.from")}},
+right-hand side of [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement),
+as argument of a function such as {{jsxref("Promise.all")}} or {{jsxref("TypedArray.from")}},
+or as the right-hand side of an array [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment),
 is not an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
 
 ## Message
@@ -27,14 +28,27 @@ TypeError: 'x' is not a function or its return value is not iterable (Chrome)
 
 ## What went wrong?
 
-The value which is given as the right-hand side of [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
+The value which is given as the right-hand side of [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement),
 or as argument of a function such as {{jsxref("Promise.all")}} or {{jsxref("TypedArray.from")}},
+or as the right-hand side of an array [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment),
 is not an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
 An iterable can be a built-in iterable type such as
 {{jsxref("Array")}}, {{jsxref("String")}} or {{jsxref("Map")}}, a generator result, or
 an object implementing the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol).
 
 ## Examples
+
+### Array destructuring a non-iterable
+
+```js example-bad
+const myobj = { arrayOrObjProp1: {}, arrayOrObjProp2: [42] };
+
+const { arrayOrObjProp1: [value1], arrayOrObjProp2: [value2] } = myobj; // TypeError: object is not iterable
+
+console.log(value1, value2);
+```
+
+The non-iterable might turn to be `undefined` in some runtime environments.
 
 ### Iterating over Object properties
 

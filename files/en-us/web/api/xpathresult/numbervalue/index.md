@@ -1,6 +1,7 @@
 ---
 title: XPathResult.numberValue
 slug: Web/API/XPathResult/numberValue
+page-type: web-api-instance-property
 tags:
   - API
   - DOM XPath API

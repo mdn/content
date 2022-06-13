@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequestEventTarget
 slug: Web/API/XMLHttpRequestEventTarget
+page-type: web-api-interface
 tags:
   - AJAX
   - API

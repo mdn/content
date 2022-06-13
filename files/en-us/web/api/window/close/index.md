@@ -1,6 +1,7 @@
 ---
 title: Window.close()
 slug: Web/API/Window/close
+page-type: web-api-instance-method
 tags:
   - API
   - Gecko

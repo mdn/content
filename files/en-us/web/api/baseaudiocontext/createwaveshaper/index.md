@@ -46,13 +46,13 @@ node. For applied examples/information, check out our [Voice-change-O-matic](htt
 > smoother sounding result. We found the below distortion curve code on [Stack Overflow](https://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion).
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var distortion = audioCtx.createWaveShaper();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const distortion = audioCtx.createWaveShaper();
 
   ...
 
 function makeDistortionCurve(amount) {
-  var k = typeof amount === 'number' ? amount : 50,
+  const k = typeof amount === 'number' ? amount : 50,
     n_samples = 44100,
     curve = new Float32Array(n_samples),
     deg = Math.PI / 180,
