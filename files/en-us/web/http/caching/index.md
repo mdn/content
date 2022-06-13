@@ -151,9 +151,6 @@ However, the time format is difficult to parse, many implementation bugs were fo
 
 If both `Expires` and `Cache-Control: max-age` are available, `max-age` is defined to be preferred. So it is not necessary to provide `Expires` now that HTTP/1.1 is widely used.
 
-
-
-
 ## Vary
 
 The way that responses are distinguished from one another is essentially based on their URLs:
@@ -565,7 +562,7 @@ Because the cache removes old entries when new entries are saved, the probabilit
 
 Note that number `41` has the longest `max-age` (1 year), but with `public`.
 
-`public` has the effect of making the response storable even if the `Authorization` header is present.
+The `public` value has the effect of making the response storable even if the `Authorization` header is present.
 
 > **Note:** The `public` directive should only be used if there is a need to store the response when the `Authorization` header is set.
 > It is not required otherwise, because a response will be stored in the shared cache as long as `max-age` is given.
