@@ -35,7 +35,7 @@ The selector weight categories are listed here in the order of decreasing specif
 
 Combinators, such as {{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Descendant_combinator), and {{CSSxRef("Column_combinator", "||")}}, may make a selector more specific but don't add any value to the specificity weight. 
 
-The negation pseudo-class, {{CSSxRef(":not", ":not()")}},  itself has no weight. Neither does the {{CSSxRef(":is", ":is()")}} pseudo-class. The parameters in these selectors, however, do. The values of both come from the parameter in the list of parameters that has the highest specificity. The [`:not()` and `:is()` exceptions](#the-is-and-not-exceptions) are discussed below.
+The negation pseudo-class, {{CSSxRef(":not", ":not()")}}, itself has no weight. Neither does the {{CSSxRef(":is", ":is()")}} pseudo-class. The parameters in these selectors, however, do. The values of both come from the parameter in the list of parameters that has the highest specificity. The [`:not()` and `:is()` exceptions](#the-is-and-not-exceptions) are discussed below.
 
 #### Matching selector
 
