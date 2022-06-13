@@ -1488,6 +1488,15 @@ Note that since locking the screen orientation isn't typically supported on desk
   </tbody>
 </table>
 
+
+### Prioritized Task Scheduling API
+
+The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they defined in a website developer's code, or in third party libraries and frameworks.
+
+This is enabled on Firefox Nightly (only) from Firefox 101.
+No preference is provided to allow it to be enabled in other releases.
+
+
 ### Streaming API
 
 #### Transferable streams
