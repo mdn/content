@@ -278,7 +278,7 @@ Method #2
 2. Each time you need to override an important declaration, declare it within the named layer. Only declare important rules within the layer. 
   
  ```css
- [id="myElement] p {
+ [id="myElement"] p {
    /* normal styles here */
  }
  @layer importantOverrides {
