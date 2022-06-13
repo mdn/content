@@ -195,6 +195,7 @@ The above examples will be interpreted the same as:
 ```js
 /**
  * Example 1
+ * on line 211 myvar is not undefined, take a look
  */
 var x;
 console.log(x === undefined); // true
