@@ -32,8 +32,12 @@ The canvas API is able to use any of the following data types as an image source
   - : Using an HTML {{HTMLElement("video")}} element as your image source grabs the current frame from the video and uses it as an image.
 - {{domxref("HTMLCanvasElement")}}
   - : You can use another {{HTMLElement("canvas")}} element as your image source.
-
-These sources are collectively referred to by the type {{domxref("CanvasImageSource")}}.
+- {{domxref("ImageBitmap")}}
+  - : A bitmap image, eventually cropped. Such type are used to extract part of an image, a _sprite_, from a larger image
+- {{domxref("OffscreenCanvas")}}
+  - : A special kind of `<canvas>` that is not displayed and is prepared without being display. Using such an image source allows to switch to it without the composition of the content to be visible to the user.
+- {{domxref("VideoFrame")}}
+  - : An image representing one single frame of a video.
 
 There are several ways to get images for use on a canvas.
 
@@ -106,14 +110,14 @@ function getMyVideo() {
 }
 ```
 
-This returns the {{domxref("HTMLVideoElement")}} object for the video, which, as covered earlier, is one of the objects that can be used as a `CanvasImageSource`.
+This returns the {{domxref("HTMLVideoElement")}} object for the video, which, as covered earlier, can be used as an image source for the canvse.
 
 ## Drawing images
 
 Once we have a reference to our source image object we can use the `drawImage()` method to render it to the canvas. As we will see later the `drawImage()` method is overloaded and has several variants. In its most basic form it looks like this:
 
 - {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(image, x, y)")}}
-  - : Draws the `CanvasImageSource` specified by the `image` parameter at the coordinates (`x`, `y`).
+  - : Draws the image specified by the `image` parameter at the coordinates (`x`, `y`).
 
 > **Note:** SVG images must specify a width and height in the root \<svg> element.
 

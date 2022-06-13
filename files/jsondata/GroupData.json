@@ -81,7 +81,6 @@
       ],
       "interfaces": [
         "CanvasGradient",
-        "CanvasImageSource",
         "CanvasPattern",
         "CanvasRenderingContext2D",
         "HTMLCanvasElement",

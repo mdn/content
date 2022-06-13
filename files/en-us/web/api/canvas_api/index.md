@@ -50,7 +50,6 @@ ctx.fillRect(10, 10, 150, 100);
 - {{domxref("HTMLCanvasElement")}}
 - {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasGradient")}}
-- {{domxref("CanvasImageSource")}}
 - {{domxref("CanvasPattern")}}
 - {{domxref("ImageBitmap")}}
 - {{domxref("ImageData")}}

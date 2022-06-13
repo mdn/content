@@ -7582,6 +7582,7 @@
 /en-US/docs/Web/API/CanvasCaptureMediaStream/canvas	/en-US/docs/Web/API/CanvasCaptureMediaStreamTrack/canvas
 /en-US/docs/Web/API/CanvasCaptureMediaStream/requestFrame	/en-US/docs/Web/API/CanvasCaptureMediaStreamTrack/requestFrame
 /en-US/docs/Web/API/CanvasGradient.addColorStop	/en-US/docs/Web/API/CanvasGradient/addColorStop
+/en-US/docs/Web/API/CanvasImageSource	/en-US/docs/Web/API/CanvasRenderingContext2D
 /en-US/docs/Web/API/CanvasPattern.setTransform	/en-US/docs/Web/API/CanvasPattern/setTransform
 /en-US/docs/Web/API/CanvasPixelArray	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 /en-US/docs/Web/API/CanvasRenderingContext2D.arc	/en-US/docs/Web/API/CanvasRenderingContext2D/arc

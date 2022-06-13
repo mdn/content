@@ -76,10 +76,9 @@ There is other content on MDN that is outside our web platform technology remit 
 
 The following API interface reference documents (and their child pages) are currently considered Tier 1. For more information on the rationale for these groupings and priorities, see the work done in <https://github.com/mdn/sprints/issues/3327>.
 
-### Canvas API (112)
+### Canvas API (111)
 
 - [`CanvasGradient`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasGradient) (2)
-- [`CanvasImageSource`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasImageSource) (1)
 - [`CanvasPattern`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasPattern) (2)
 - [`CanvasRenderingContext2D`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D) (71)
 - [`ImageBitmap`](https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap) (4)

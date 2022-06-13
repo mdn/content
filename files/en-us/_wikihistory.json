@@ -29459,20 +29459,6 @@
       "Sebastianz"
     ]
   },
-  "Web/API/CanvasImageSource": {
-    "modified": "2020-04-27T19:38:09.761Z",
-    "contributors": [
-      "severo",
-      "mfluehr",
-      "sideshowbarker",
-      "Nektro",
-      "jpmedley",
-      "Mehran-Shakerinava",
-      "Jeremie",
-      "fscholz",
-      "teoli"
-    ]
-  },
   "Web/API/CanvasPattern": {
     "modified": "2020-10-15T21:13:55.004Z",
     "contributors": [

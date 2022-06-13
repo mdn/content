@@ -32,7 +32,7 @@ createPattern(image, repetition)
 
 - `image`
 
-  - : A {{domxref("CanvasImageSource")}} to be used as the pattern's image. It can be any
+  - : An image to be used as the pattern's image. It can be any
     of the following:
 
     - {{domxref("HTMLImageElement")}} ({{HTMLElement("img")}})
@@ -42,6 +42,7 @@ createPattern(image, repetition)
     - {{domxref("HTMLCanvasElement")}} ({{HTMLElement("canvas")}})
     - {{domxref("ImageBitmap")}}
     - {{domxref("OffscreenCanvas")}}
+    - {{domxref("VideoFrame")}}
 
 - `repetition`
 
