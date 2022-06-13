@@ -78,9 +78,9 @@ In JavaScript, arrays aren't [primitives](/en-US/docs/Glossary/Primitive) but ar
   - : Returns a new array formed by applying a given callback function to each element of the calling array, and then flattening the result by one level.
 - {{jsxref("Array.prototype.forEach()")}}
   - : Calls a function for each element in the calling array.
-- {{jsxref("Array.prototype.groupBy()")}} {{Experimental_Inline}}
+- {{jsxref("Array.prototype.group()")}} {{Experimental_Inline}}
   - : Groups the elements of an array into an object according to the strings returned by a test function.
-- {{jsxref("Array.prototype.groupByToMap()")}} {{Experimental_Inline}}
+- {{jsxref("Array.prototype.groupToMap()")}} {{Experimental_Inline}}
   - : Groups the elements of an array into a {{jsxref("Map")}} according to values returned by a test function.
 - {{jsxref("Array.prototype.includes()")}}
   - : Determines whether the calling array contains a value, returning `true` or `false` as appropriate.
@@ -449,7 +449,7 @@ console.log(fruitsAlias);
 
 ### Grouping the elements of an array
 
-The {{jsxref("Array.prototype.groupBy()")}} methods can be used to group the elements of an array, using a test function that returns a string indicating the group of the current element.
+The {{jsxref("Array.prototype.group()")}} methods can be used to group the elements of an array, using a test function that returns a string indicating the group of the current element.
 
 Here we have a simple inventory array that contains "food" objects that have a `name` and a `type`.
 
@@ -463,14 +463,14 @@ const inventory = [
 ];
 ```
 
-To use `groupBy()`, you supply a callback function that is called with the current element, and optionally the current index and array, and returns a string indicating the group of the element.
+To use `group()`, you supply a callback function that is called with the current element, and optionally the current index and array, and returns a string indicating the group of the element.
 
 The code below uses a arrow function to return the `type` of each array element (this uses [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_fields_from_objects_passed_as_a_function_parameter) to unpack the `type` element from the passed object).
 The result is an object that has properties named after the unique strings returned by the callback.
 Each property is assigned an array containing the elements in the group.
 
 ```js
-let result = inventory.groupBy( ({ type }) => type );
+let result = inventory.group( ({ type }) => type );
 console.log(result.vegetables)
 // expected output: Array [Object { name: "asparagus", type: "vegetables" }]
 ```
@@ -478,8 +478,8 @@ console.log(result.vegetables)
 Note that the returned object references the _same_ elements as the original array (not {{glossary("deep copy","deep copies")}}).
 Changing the internal structure of these elements will be reflected in both the original array and the returned object.
 
-If you can't use a string as the key, for example, if the information to group is associated with an object that might change, then you can instead use {{jsxref("Array.prototype.groupByToMap()")}}.
-This is very similar to `groupBy` except that it groups the elements of the array into a {{jsxref("Map")}} that can use an arbitrary value ({{Glossary("object")}} or {{Glossary("primitive")}}) as a key.
+If you can't use a string as the key, for example, if the information to group is associated with an object that might change, then you can instead use {{jsxref("Array.prototype.groupToMap()")}}.
+This is very similar to `group` except that it groups the elements of the array into a {{jsxref("Map")}} that can use an arbitrary value ({{Glossary("object")}} or {{Glossary("primitive")}}) as a key.
 
 ## Other examples
 
