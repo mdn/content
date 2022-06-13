@@ -45,6 +45,7 @@ storageItem.then((res) => {
   console.log(`Managed color is: ${res.color}`);
 });
 ```
+
 ## Methods
 
 The `managed` object implements the methods defined on the {{WebExtAPIRef("storage.StorageArea")}} type:
