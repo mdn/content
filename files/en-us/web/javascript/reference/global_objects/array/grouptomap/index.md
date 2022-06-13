@@ -1,43 +1,43 @@
 ---
-title: Array.prototype.groupByToMap()
-slug: Web/JavaScript/Reference/Global_Objects/Array/groupByToMap
+title: Array.prototype.groupToMap()
+slug: Web/JavaScript/Reference/Global_Objects/Array/groupToMap
 tags:
   - Array
-  - groupByToMap
+  - groupToMap
   - JavaScript
   - Method
   - Prototype
   - Reference
   - Experimental
-browser-compat: javascript.builtins.Array.groupByToMap
+browser-compat: javascript.builtins.Array.groupToMap
 ---
 {{JSRef}} {{SeeCompatTable}}
 
-The **`groupByToMap()`** method groups the elements of the calling array using the values returned by a provided testing function.
+The **`groupToMap()`** method groups the elements of the calling array using the values returned by a provided testing function.
 The final returned {{jsxref("Map")}} uses the unique values from the test function as keys, which can be used to get the array of elements in each group.
 
 <!-- {{EmbedInteractiveExample("pages/js/array-groupbytomap.html")}} -->
 
 The method is primarily useful when grouping elements that are associated with an object, and in particular when that object might change over time.
-If the object is invariant, you might instead represent it using a string, and group elements with {{jsxref("Array.prototype.groupBy()")}}.
+If the object is invariant, you might instead represent it using a string, and group elements with {{jsxref("Array.prototype.group()")}}.
 
 ## Syntax
 
 ```js
 // Arrow function
-groupByToMap((element) => { /* ... */ } )
-groupByToMap((element, index) => { /* ... */ } )
-groupByToMap((element, index, array) => { /* ... */ } )
+groupToMap((element) => { /* ... */ } )
+groupToMap((element, index) => { /* ... */ } )
+groupToMap((element, index, array) => { /* ... */ } )
 
 // Callback function
-groupByToMap(callbackFn)
-groupByToMap(callbackFn, thisArg)
+groupToMap(callbackFn)
+groupToMap(callbackFn, thisArg)
 
 // Inline callback function
-groupByToMap(function(element) { /* ... */ })
-groupByToMap(function(element, index) { /* ... */ })
-groupByToMap(function(element, index, array){ /* ... */ })
-groupByToMap(function(element, index, array) { /* ... */ }, thisArg)
+groupToMap(function(element) { /* ... */ })
+groupToMap(function(element, index) { /* ... */ })
+groupToMap(function(element, index, array){ /* ... */ })
+groupToMap(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
@@ -53,7 +53,7 @@ groupByToMap(function(element, index, array) { /* ... */ }, thisArg)
     - `index`
       - : The index (position) of the current element in the array.
     - `array`
-      - : The array that `groupByToMap()` was called on.
+      - : The array that `groupToMap()` was called on.
 
     The value ({{Glossary("object")}} or {{Glossary("primitive")}}) returned from the callback indicates the group of the current element.
 
@@ -74,9 +74,9 @@ A {{jsxref("Map")}} object with keys for each group, each assigned to an array c
 
 ## Description
 
-The `groupByToMap()` method executes `callbackFn` once for each index of the array.
+The `groupToMap()` method executes `callbackFn` once for each index of the array.
 The callback function returns a value indicating the group of the associated element.
-The values returned by `callbackFn` are used as keys for the {{jsxref("Map")}} returned by `groupByToMap()`.
+The values returned by `callbackFn` are used as keys for the {{jsxref("Map")}} returned by `groupToMap()`.
 Each key has an associated array containing all the elements for which the callback returned the same value.
 
 The elements in the returned {{jsxref("Map")}} and the original array are the same (not {{glossary("deep copy","deep copies")}}).
@@ -84,7 +84,7 @@ Changing the internal structure of the elements will be reflected in both the or
 
 This method is useful when you need to group information that is related to a particular object that might potentially change over time.
 This is because even if the object is modified, it will continue to work as a key to the returned `Map`.
-If you instead create a string representation for the object and use that as a grouping key in {{jsxref("Array.prototype.groupBy()")}}, you must maintain the mapping between the original object and its representation as the object changes.
+If you instead create a string representation for the object and use that as a grouping key in {{jsxref("Array.prototype.group()")}}, you must maintain the mapping between the original object and its representation as the object changes.
 
 > **Note:** To access the groups in the returned `Map`, you must use the same object that was originally used as a key in the `Map` (although you may modify its properties).
 > You can't use another object that just happens to have the same name and properties.
@@ -95,18 +95,18 @@ While groups often depend only on the current element, it is possible to impleme
 `callbackFn` is invoked for _every_ index of the array, not just those with assigned values.
 This means it may be less efficient for sparse arrays, compared to methods that only visit assigned values.
 
-If a `thisArg` parameter is provided to `groupByToMap()`, it will be used as the `this` value inside each invocation of the `callbackFn`.
+If a `thisArg` parameter is provided to `groupToMap()`, it will be used as the `this` value inside each invocation of the `callbackFn`.
 If it is not provided, then {{jsxref("undefined")}} is used.
 
 ### Mutating the array in the callback
 
-The `groupByToMap()` method does not mutate the array on which it is called, but the function provided to `callbackFn` can.
-Note however that the elements processed by `groupByToMap()` are set _before_ the first invocation of `callbackFn`.
+The `groupToMap()` method does not mutate the array on which it is called, but the function provided to `callbackFn` can.
+Note however that the elements processed by `groupToMap()` are set _before_ the first invocation of `callbackFn`.
 Therefore:
 
-- `callbackFn` will not visit any elements added to the array after the call to `groupByToMap()` begins.
+- `callbackFn` will not visit any elements added to the array after the call to `groupToMap()` begins.
 - Elements that are assigned to indexes already visited, or to indexes outside the range, will not be visited by `callbackFn`.
-- If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time `groupByToMap()` visits that element's index.
+- If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time `groupToMap()` visits that element's index.
 - Elements that are [deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete#deleting_array_elements) are still visited.
 
 > **Warning:** Concurrent modifications of the kind described above frequently lead to hard-to-understand code and are generally to be avoided (except in special cases).
@@ -126,13 +126,13 @@ const inventory = [
 ];
 ```
 
-The code below uses `groupByToMap()` with an arrow function that returns the object keys named `restock` or `sufficient`, depending on whether the element has `quantity < 6`.
+The code below uses `groupToMap()` with an arrow function that returns the object keys named `restock` or `sufficient`, depending on whether the element has `quantity < 6`.
 The returned `result` object is a `Map` so we need to call `get()` with the key to obtain the array.
 
 ```js
 const restock  = { restock: true };
 const sufficient = { restock: false };
-const result = inventory.groupByToMap( ({ quantity }) => quantity < 6 ? restock : sufficient );
+const result = inventory.groupToMap( ({ quantity }) => quantity < 6 ? restock : sufficient );
 console.log(result.get(restock));
 // expected output: Array [Object { name: "bananas", type: "fruit", quantity: 5 }]
 ```
@@ -167,5 +167,5 @@ console.log(result.get(restock2));
 
 ## See also
 
-- {{jsxref("Array.prototype.groupBy()")}}
-- [Polyfill of `Array.prototype.groupBy` in `core-js`](https://github.com/zloirock/core-js#array-grouping)
+- {{jsxref("Array.prototype.group()")}}
+- [Polyfill of `Array.prototype.group` in `core-js`](https://github.com/zloirock/core-js#array-grouping)
