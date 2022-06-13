@@ -30,7 +30,7 @@ new VideoEncoder(init)
             - `codec`
               - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#video-codec-registry).
             - `description` {{Optional_Inline}}
-              - : A {{domxref("BufferSource")}} containing a sequence of codec-specific bytes, commonly known as "extradata".
+              - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing a sequence of codec-specific bytes, commonly known as "extradata".
             - `codedWidth` {{Optional_Inline}}
               - : An integer representing the width of the {{domxref("VideoFrame")}} in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
             - `codedHeight` {{Optional_Inline}}
@@ -51,7 +51,8 @@ new VideoEncoder(init)
         - `svc` {{Optional_Inline}}
           - : An optional object with only one member: `temporalLayerId`, which is a number that identifies the [temporal layer](https://w3c.github.io/webcodecs/#temporal-layer) for the associated {{domxref("EncodedVideoChunk")}}.
         - `alphaSideData` {{Optional_Inline}}
-          - : A {{domxref("BufferSource")}} that contains the {{domxref("EncodedVideoChunk")}}'s extra alpha channel data.
+          - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}
+            that contains the {{domxref("EncodedVideoChunk")}}'s extra alpha channel data.
     - `error`
       - : A callback which takes an {{jsxref("Error")}} object as its only argument.
 

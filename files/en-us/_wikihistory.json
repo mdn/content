@@ -27462,15 +27462,6 @@
       "teoli"
     ]
   },
-  "Web/API/BufferSource": {
-    "modified": "2019-03-23T22:29:36.836Z",
-    "contributors": [
-      "mfluehr",
-      "chrisveness",
-      "PushpitaPikuDey",
-      "tamird"
-    ]
-  },
   "Web/API/ByteLengthQueuingStrategy": {
     "modified": "2020-10-15T21:57:32.639Z",
     "contributors": [

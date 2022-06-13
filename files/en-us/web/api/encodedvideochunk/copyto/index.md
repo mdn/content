@@ -23,7 +23,7 @@ copyTo(destination)
 ### Parameters
 
 - `destination`
-  - : A {{domxref("BufferSource")}} that the data can be copied to.
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} that the data can be copied to.
 
 ### Return value
 

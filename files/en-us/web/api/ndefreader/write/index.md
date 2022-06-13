@@ -24,11 +24,12 @@ NDEFReader.write(message);
 
 - `message`
 
-  - : The message to be written, one of string,
-    {{DOMxRef("BufferSource")}}, or an array of records. A record has the following members:
+  - : The message to be written, either a string object or literal, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
+    a {{jsxref("DataView")}}, or an array of records. A record has the following members:
 
     - `data` {{optional_inline}}
-      - : Contains the data to be transmitted, one of a string, a {{domxref("BufferSource")}}, or an array of nested records.
+      - : Contains the data to be transmitted,a string object or literal, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
+        a {{jsxref("DataView")}}, or an array of nestedrecords
     - `encoding` {{optional_inline}}
       - : A string specifying the record's encoding.
     - `id` {{optional_inline}}
