@@ -59,7 +59,7 @@ only the values after it.
 
 > **Note:** For a more complete example allowing you to experiment with
 > key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/indexeddb-examples/tree/master/idbkeyrange) repo
-> ([view the example live too](https://mdn.github.io/indexeddb-examples/idbkeyrange/).)
+> ([view the example live too](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/).)
 
 ```js
 function displayData() {

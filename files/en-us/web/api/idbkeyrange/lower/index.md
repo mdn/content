@@ -40,7 +40,7 @@ console, which should appear as "F".
 
 > **Note:** For a more complete example allowing you to experiment with
 > key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/indexeddb-examples/tree/master/idbkeyrange) repo.
-> (View the example [live](https://mdn.github.io/indexeddb-examples/idbkeyrange/) too.
+> (View the example [live](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/) too.
 
 ```js
 function displayData() {
