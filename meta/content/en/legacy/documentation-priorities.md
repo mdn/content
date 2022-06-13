@@ -95,7 +95,7 @@ The following API interface reference documents (and their child pages) are curr
 - [`ClipboardEvent`](https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent) (3)
 - [`ClipboardItem`](https://developer.mozilla.org/en-US/docs/Web/API/ClipboardItem) (5)
 
-### DOM (439)
+### DOM (436)
 
 > **Note:** "DOM" is only a partial group — we only included the interface docs with the highest page views, to keep the size of Tier 1 down to a manageable number. Other DOM interfaces not in this list are in Tier 2.
 
@@ -103,7 +103,6 @@ The following API interface reference documents (and their child pages) are curr
 - [`CustomEvent`](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent) (4)
 - [`Document`](https://developer.mozilla.org/en-US/docs/Web/API/Document) (164)
 - [`DOMParser`](https://developer.mozilla.org/en-US/docs/Web/API/DOMParser) (2)
-- [`DOMString`](https://developer.mozilla.org/en-US/docs/Web/API/DOMString) (2)
 - [`Element`](https://developer.mozilla.org/en-US/docs/Web/API/Element) (176)
 - [`Event`](https://developer.mozilla.org/en-US/docs/Web/API/Event) (24)
 - [`EventTarget`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget) (5)
@@ -111,7 +110,6 @@ The following API interface reference documents (and their child pages) are curr
 - [`MutationObserver`](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) (5)
 - [`Node`](https://developer.mozilla.org/en-US/docs/Web/API/Node) (36)
 - [`NodeList`](https://developer.mozilla.org/en-US/docs/Web/API/NodeList) (7)
-- [`USVString`](https://developer.mozilla.org/en-US/docs/Web/API/USVString) (1)
 
 ### DOM Events (22)
 
