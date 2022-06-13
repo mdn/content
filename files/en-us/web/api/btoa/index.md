@@ -32,7 +32,7 @@ btoa(stringToEncode)
 ### Parameters
 
 - `stringToEncode`
-  - : The [binary string](/en-US/docs/Web/API/DOMString/Binary) to encode.
+  - : The _binary string_ to encode.
 
 ### Return value
 
