@@ -11,7 +11,7 @@ browser-compat: api.VideoFrame
 ---
 {{DefaultAPISidebar("Web Codecs API")}}
 
-The **`VideoFrame`** interface of the {{domxref('Web Codecs API','','',' ')}} represents a frame of a video.
+The **`VideoFrame`** interface of the [Web Codecs API](/en-US/docs/Web/API/WebCodecs_API) represents a frame of a video.
 
 `VideoFrame` is a {{glossary("Transferable objects","transferable object")}}.
 
