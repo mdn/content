@@ -49,7 +49,7 @@ Math.log1p(x)
 
 ### Return value
 
-The natural logarithm (base {{jsxref("Math.E", "e")}}) of **1** plus the given number. If the number is less than **-1**, {{jsxref("NaN")}} is returned.
+The natural logarithm (base {{jsxref("Math.E", "e")}}) of `1` plus the given number. If the number is less than `-1`, {{jsxref("NaN")}} is returned.
 
 ## Description
 
