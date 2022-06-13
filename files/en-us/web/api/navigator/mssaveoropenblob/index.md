@@ -1,5 +1,5 @@
 ---
-title: Navigator.msSaveOrOpenBlob
+title: Navigator.msSaveOrOpenBlob()
 slug: Web/API/Navigator/msSaveOrOpenBlob
 page-type: web-api-instance-method
 browser-compat: api.Navigator.msSaveOrOpenBlob
