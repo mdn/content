@@ -304,7 +304,7 @@ html h1 {
 }
 ```
 
-The `h1` elements will be purple because when declarations have the same specificity, the last declared selector has precedence.
+The `<h1>` elements will be purple because when declarations have the same specificity, the last declared selector has precedence.
 
 ### Directly targeted elements vs. inherited styles
 
