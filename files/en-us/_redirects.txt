@@ -1211,7 +1211,7 @@
 /en-US/docs/DOM/DOMImplementation.createDocumentType	/en-US/docs/Web/API/DOMImplementation/createDocumentType
 /en-US/docs/DOM/DOMImplementation.createHTMLDocument	/en-US/docs/Web/API/DOMImplementation/createHTMLDocument
 /en-US/docs/DOM/DOMParser	/en-US/docs/Web/API/DOMParser
-/en-US/docs/DOM/DOMString	/en-US/docs/Web/API/DOMString
+/en-US/docs/DOM/DOMString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 /en-US/docs/DOM/DOMStringList	/en-US/docs/Web/API/DOMStringList
 /en-US/docs/DOM/DOMStringMap	/en-US/docs/Web/API/DOMStringMap
 /en-US/docs/DOM/DOMTimeStamp	/en-US/docs/Web/API/DOMTimeStamp
@@ -2744,7 +2744,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/DOMImplementation.createDocument	/en-US/docs/Web/API/DOMImplementation/createDocument
 /en-US/docs/Document_Object_Model_(DOM)/DOMImplementation.createDocumentType	/en-US/docs/Web/API/DOMImplementation/createDocumentType
 /en-US/docs/Document_Object_Model_(DOM)/DOMImplementation.createHTMLDocument	/en-US/docs/Web/API/DOMImplementation/createHTMLDocument
-/en-US/docs/Document_Object_Model_(DOM)/DOMString	/en-US/docs/Web/API/DOMString
+/en-US/docs/Document_Object_Model_(DOM)/DOMString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 /en-US/docs/Document_Object_Model_(DOM)/DOMStringList	/en-US/docs/Web/API/DOMStringList
 /en-US/docs/Document_Object_Model_(DOM)/DOMStringMap	/en-US/docs/Web/API/DOMStringMap
 /en-US/docs/Document_Object_Model_(DOM)/DOMTimeStamp	/en-US/docs/Web/API/DOMTimeStamp
@@ -7563,6 +7563,7 @@
 /en-US/docs/Web/API/CSSFontLoading_API	/en-US/docs/Web/API/CSS_Font_Loading_API
 /en-US/docs/Web/API/CSSMatrix	/en-US/docs/Web/API/DOMMatrix
 /en-US/docs/Web/API/CSSOM	/en-US/docs/Web/API/CSS_Object_Model
+/en-US/docs/Web/API/CSSOMString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 /en-US/docs/Web/API/CSSRule.cssText	/en-US/docs/Web/API/CSSRule/cssText
 /en-US/docs/Web/API/CSSRule.parentStyleSheet	/en-US/docs/Web/API/CSSRule/parentStyleSheet
 /en-US/docs/Web/API/CSSStyleRule.selectorText	/en-US/docs/Web/API/CSSStyleRule/selectorText
@@ -7752,6 +7753,8 @@
 /en-US/docs/Web/API/DOMPointInit/z	/en-US/docs/web/api/DOMPoint/z
 /en-US/docs/Web/API/DOMPointReadOnly/DOMPoint.x	/en-US/docs/Web/API/DOMPointReadOnly/x
 /en-US/docs/Web/API/DOMReadOnlyMatrix	/en-US/docs/Web/API/DOMMatrixReadOnly
+/en-US/docs/Web/API/DOMString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+/en-US/docs/Web/API/DOMString/binary	/en-US/docs/Web/API/btoa
 /en-US/docs/Web/API/DOMTokenList/DOMTokenList.add()	/en-US/docs/Web/API/DOMTokenList/add
 /en-US/docs/Web/API/DataTransfer/clearData()	/en-US/docs/Web/API/DataTransfer/clearData
 /en-US/docs/Web/API/DataTransfer/getData()	/en-US/docs/Web/API/DataTransfer/getData
@@ -9553,6 +9556,7 @@
 /en-US/docs/Web/API/USB/onconnect	/en-US/docs/Web/API/USB/connect_event
 /en-US/docs/Web/API/USB/ondisconnect	/en-US/docs/Web/API/USB/disconnect_event
 /en-US/docs/Web/API/USBDevice/USBDevice.deviceClass	/en-US/docs/Web/API/USBDevice/deviceClass
+/en-US/docs/Web/API/USVString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 /en-US/docs/Web/API/Uint16Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array
 /en-US/docs/Web/API/Uint32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array
 /en-US/docs/Web/API/Uint8Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
