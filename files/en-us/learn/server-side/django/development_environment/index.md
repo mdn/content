@@ -361,6 +361,13 @@ py -3 -m django --version
 
 > **Warning:** The rest of this **module** uses the _Linux_ command for invoking Python 3 (`python3`) . If you're working on _Windows_ replace this prefix with: `py -3`
 
+## Other Python tools
+
+Experienced Python developers may install additional tools, such as linters (which help detect common errors in code).
+
+Note that you should use a [Django aware linter](https://djangopackages.org/grids/g/linters/) like [pylint-django](https://pypi.org/project/pylint-django/).
+Commonly used Python linters, such as `pylint`, may incorrectly report errors in the standard files generated for Django.
+
 ## Testing your installation
 
 The above test works, but it isn't very much fun. A more interesting test is to create a skeleton project and see it working. To do this, first navigate in your command prompt/terminal to where you want to store your Django apps. Create a folder for your test site and navigate into it.
@@ -400,12 +407,6 @@ Quit the server with CONTROL-C.
 Once the server is running you can view the site by navigating to the following URL on your local web browser: `http://127.0.0.1:8000/`. You should see a site that looks like this:
 
 ![The home page of the skeleton Django app](django_skeleton_app_homepage_django_4_0.png)
-
-## Note on linting
-
-Experienced Python developers are likely to have installed `pylint`, a near-ubiquitous tool for detecting common errors in Python code.
-Unfortunately `pylint` incorrectly report errors in the standard files generated using Django.
-You may want to consider using a Django aware linter like [pylint-django](https://pypi.org/project/pylint-django/).
 
 ## Summary
 
