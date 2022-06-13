@@ -67401,12 +67401,6 @@
       "fscholz"
     ]
   },
-  "Web/API/RTCStatsType": {
-    "modified": "2020-10-15T22:09:26.058Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCTrackEvent": {
     "modified": "2020-10-15T22:06:16.807Z",
     "contributors": [
