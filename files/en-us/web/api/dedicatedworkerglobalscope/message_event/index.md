@@ -53,7 +53,7 @@ The following code snippet shows creation of a {{domxref("Worker")}} object usin
 ```js
 // main.js
 
-var myWorker = new Worker("worker.js");
+const myWorker = new Worker("worker.js");
 
 first.onchange = function() {
   myWorker.postMessage([first.value, second.value]);
@@ -64,7 +64,7 @@ first.onchange = function() {
 
 self.onmessage = function(e) {
   console.log('Message received from main script');
-  var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+  const workerResult = 'Result: ' + (e.data[0] * e.data[1]);
   console.log('Posting message back to main script');
   postMessage(workerResult);
 }
