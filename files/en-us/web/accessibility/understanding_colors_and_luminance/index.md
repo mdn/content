@@ -52,7 +52,6 @@ We normally associate L, M, or S cone sensitivity with the sensation of red, gre
 
 ![A chart showing the normalized cone spectral response curves, which demonstrate substantial overlap, especially for the M and L cones](normalizedconeresponse.svg)
 
-
 ### RGB additive model
 
 RGB is called an additive color model because it functions by adding light of different wavelengths in different proportions to stimulate the L, M, S cones in the eye to create a particular color sensation. For instance when you see the color yellow on your monitor, the monitor is still only emitting red and green light. The separate red and green stimulate the L and M cones similarly to how a "yellow" wavelength of light might, as yellow is "in between" red and green. The red and green light do not "mix" in the air as if paint, they remain separate. The "mixing" happens in our vision system's neurological processing.
