@@ -85,6 +85,7 @@ A JSON string representing the given value, or undefined.
 - All the other {{JSxRef("Object")}} instances (including {{JSxRef("Map")}},
   {{JSxRef("Set")}}, {{JSxRef("WeakMap")}}, and {{JSxRef("WeakSet")}}) will have only
   their enumerable properties serialized.
+  - Enumerable properties are visited using the same algorithm as [`Object.keys`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys), which has a well-defined order and is stable across implementations. For example, `JSON.stringify` on the same object will always produce the same string, and `JSON.parse(JSON.stringify(obj))` would produce an object with the same key ordering as the original (assuming the object is completely JSON-serializable).
 
 ## Examples
 
@@ -333,10 +334,6 @@ eval('(' + jsFriendlyJSONStringify(s) + ')');
 //   logged to console, so we use alert
 alert(jsFriendlyJSONStringify(s)); // {"a":"\u2028","b":"\u2029"}
 ```
-
-> **Note:** Properties of non-array objects are not guaranteed to be
-> stringified in any particular order. Do not rely on ordering of properties within the
-> same object within the stringification.
 
 ```js
 const a = JSON.stringify({ foo: "bar", baz: "quux" })
