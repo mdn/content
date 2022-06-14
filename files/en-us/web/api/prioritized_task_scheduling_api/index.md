@@ -16,7 +16,7 @@ The **Prioritized Task Scheduling API** provides a standardized way to prioritiz
 The [task priorities](#task-priorities) are very course-grained, and are based around whether tasks block user interaction, or otherwise impact the user experience, or can run in the background.
 Developers and frameworks may implement more fine-grained prioritisation schemes within the broad categories define by the API
 
-The API is promise-based and supports the ability to set and change task priorities, to delay tasks being added to the scheduler, to abort tasks, and to monitor for priority change and abort events. 
+The API is promise-based and supports the ability to set and change task priorities, to delay tasks being added to the scheduler, to abort tasks, and to monitor for priority change and abort events.
 
 ## Concepts and Usage
 
@@ -62,6 +62,7 @@ The same task might be waited on using `await`/`async` as shown below (note, thi
 
 You can also specify an options object to the `postTask()` method if you want to change the default behaviour.
 The options are:
+
 - `priority` This allows you to specify a particular immutable priority.
   Once set, the priority cannot be changed.
 - `signal` This allows you to specify a signal, which may be either a {{domxref("TaskSignal")}} or {{domxref("AbortSignal")}}
@@ -97,7 +98,6 @@ There are just three priorities, which are listed below (ordered from highest to
   - : Tasks that are not time-critical.
     This might include log processing or initializing third party libraries that aren't required for rendering.
 
-
 ### Mutable and immutable task priority
 
 There are many use cases where the task priority never needs to change, while for others it does.
@@ -116,7 +116,6 @@ If the priority is not set with `options.priority` or by passing a {{domxref("Ta
 Note that a task that needs to be aborted must set `options.signal` to either {{domxref("TaskSignal")}} or {{domxref("AbortSignal")}}.
 However for a task with an immutable priority, {{domxref("AbortSignal")}} more clearly indicates that the task priority cannot be changed using the signal.
 
-
 ## Interfaces
 
 - {{domxref("Scheduler")}}
@@ -131,7 +130,6 @@ However for a task with an immutable priority, {{domxref("AbortSignal")}} more c
 
 > **Note:** If the [task priority](#task_priorities) never needs to be changed, you can use an {{domxref("AbortController")}} and its associated {{domxref("AbortSignal")}} instead of {{domxref("TaskController")}} and {{domxref("TaskSignal")}}.
 
-
 ### Extensions to other interfaces
 
 The Prioritized Task Scheduling API extends the following APIs, adding the listed features:
@@ -143,11 +141,12 @@ The Prioritized Task Scheduling API extends the following APIs, adding the liste
 ## Examples
 
 Note that the examples below use `mylog()` to write to a text area.
-The code for the log area and method is generally hidden in order to not to distract from more relevant code. 
+The code for the log area and method is generally hidden in order to not to distract from more relevant code.
 
 ```html hidden
 <textarea id="log" style="min-height: 20px; width: 95%"></textarea>
 ```
+
 ```js
 //hidden logger code - simplifies example
 let log = document.getElementById('log');
@@ -163,6 +162,7 @@ The code below prints "Feature: Supported" if the API is supported on this brows
 ```html hidden
 <textarea id="log" style="min-height: 20px; width: 95%"></textarea>
 ```
+
 ```js hidden
 //hidden logger code - simplifies example
 let log = document.getElementById('log');
@@ -181,7 +181,6 @@ else {
 
 {{EmbedLiveSample('Feature checking','400px','70px')}}
 
-
 ### Basic usage
 
 Tasks are posted using {{domxref('Scheduler.postTask()')}}, specifying a callback function (task) in the first argument, and an optional second argument that can be used to specify a task priority, signal, and/or delay.
@@ -190,6 +189,7 @@ The method returns a {{jsxref("Promise")}} that resolves with the return value o
 ```html hidden
 <textarea id="log" style="min-height: 100px; width: 95%"></textarea>
 ```
+
 ```js hidden
 let log = document.getElementById('log');
 function mylog(text) { log.textContent += `${text}\n`; }
@@ -241,7 +241,6 @@ Note that the order they are run depends on the priority first, and then the dec
 
 {{EmbedLiveSample('Basic usage','400px','170px')}}
 
-
 ### Permanent priorities
 
 [Task priorities](#task_priorities) may be set using `priority` parameter in the optional second argument.
@@ -281,7 +280,6 @@ The output below shows that the tasks are executed in priority order, and then d
 
 {{EmbedLiveSample("Permanent priorities",'400px','170px')}}
 
-
 ### Changing task priorities
 
 [Task priorities](#task_priorities) can also take their initial value from a {{domxref("TaskSignal")}} passed to `postTask()` in the optional second argument.
@@ -299,6 +297,7 @@ The task is then posted, passing in the signal, and then we immediately change t
 ```html hidden
 <textarea id="log" style="min-height: 70px; width: 95%"></textarea>
 ```
+
 ```js hidden
 let log = document.getElementById('log');
 function mylog(text) { log.textContent += `${text}\n`; }
@@ -339,6 +338,7 @@ The only difference is that you must use {{domxref("TaskController")}} if you al
 ```html hidden
 <textarea id="log" style="min-height: 50px; width: 95%"></textarea>
 ```
+
 ```js hidden
 let log = document.getElementById('log');
 function mylog(text) { log.textContent += `${text}\n`; }
@@ -367,7 +367,6 @@ The log below shows the aborted task.
 
 {{EmbedLiveSample("Aborting tasks",'400px','100px')}}
 
-
 ### Delaying tasks
 
 Tasks can be delayed by specifying an integer number of milliseconds in the `options.delay` parameter to `postTask()`.
@@ -377,12 +376,14 @@ The `delay` is the minimum amount of time before the task is added to the schedu
 ```html hidden
 <textarea id="log" style="min-height: 50px; width: 95%"></textarea>
 ```
+
 ```js hidden
 let log = document.getElementById('log');
 function mylog(text) { log.textContent += `${text}\n`; }
 ```
 
 The code below shows two tasks added (as arrow functions) with a delay.
+
 ```js
 if ('scheduler' in this) {
   // Post task as arrow function with delay of 2 seconds
@@ -398,11 +399,9 @@ Note that the second string appears in log after about 2 seconds.
 
 {{EmbedLiveSample("Delaying tasks",'400px','100px')}}
 
-
 ## Specifications
 
 {{Specifications}}
-
 
 ## Browser compatibility
 

@@ -11,7 +11,7 @@ browser-compat: api.TaskSignal.prioritychange_event
 ---
 {{APIRef("Prioritized Task Scheduling API")}} {{SeeCompatTable}}
 
-The **`prioritychange`** event is sent to a {{domxref('TaskSignal')}} if its [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) is changed. 
+The **`prioritychange`** event is sent to a {{domxref('TaskSignal')}} if its [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) is changed.
 
 ## Syntax
 
@@ -42,6 +42,7 @@ The example below shows how to listen for the `prioritychange` event on a {{domx
 ```html hidden
 <textarea id="log" style="min-height: 70px; width: 95%"></textarea>
 ```
+
 ```js hidden
 let log = document.getElementById('log');
 function mylog(text) { log.textContent += `${text}\n`; }
@@ -89,4 +90,3 @@ This happens before the task is executed, but could also happen when the task is
 ## Browser compatibility
 
 {{Compat}}
-

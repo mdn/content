@@ -64,7 +64,6 @@ This article provides information about the changes in Firefox 102 that will aff
 - With the introduction of support for the 'wasm-unsafe-eval' CSP keyword in Firefox ({{bug(1740263)}}), Manifest V3 extensions are now required to specify this keyword in the [content_security_policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest key to use [WebAssembly](/en-US/docs/WebAssembly). For backwards-compatibility, Manifest V2 extensions can still use WebAssembly without the keyword ({{bug(1766027)}}).
 - The `nonPersistentCookies` option of the {{WebExtAPIRef("privacy.websites")}} `cookieConfig` property has been deprecated ({{bug(1754924)}}).
 
-
 #### Removals
 
 ### Other
