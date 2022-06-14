@@ -91,7 +91,7 @@ console.log( myObj.myString );
 
 All keys in the square bracket notation are converted to strings, unless they're Symbols. JavaScript object property names (keys) can only be strings or Symbols. For example, in the above code, when the key `anotherObj` is added to the `myObj`, JavaScript will call the {{jsxref("Object.toString", "anotherObj.toString()")}} method, and use this result string as the new key.
 
-(Side note: at some point, private names will also be added as the [class fields proposal](https://github.com/tc39/proposal-class-fields) progresses, but you won't use them with `[]` form).
+Side note: At some point, private names will also be added as the [class fields proposal](https://github.com/tc39/proposal-class-fields) progresses, but you won't use them with `[]` form.
 
 You can also access properties by using a string value that is stored in a variable:
 
