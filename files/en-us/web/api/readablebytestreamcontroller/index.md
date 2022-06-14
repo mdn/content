@@ -23,7 +23,7 @@ These are called with the controller as a parameter, in order to setup the under
 The underlying source uses the controller to supply data to the stream via its [`byobRequest`](#readablebytestreamcontroller.byobrequest) property or [`enqueue()`](#readablebytestreamcontroller.enqueue) method.
 [`byobRequest`](#readablebytestreamcontroller.byobrequest) is a {{domxref("ReadableStreamBYOBRequest")}} object that represents a pending request from a consumer to make a zero-copy transfer of data direct to a consumer.
 `byobRequest` must be used to copy data if it exists (do not use `enqueue()` in this case)!
-If the underlying source needs to pass data to the stream and `byobRequest` is `null` then the source can call [`enqueue()`](#readablebytestreamcontroller.enqueue) to add the data to the stream.
+If the underlying source needs to pass data to the stream and `byobRequest` is `null` then the source can call [`enqueue()`](#readablebytestreamcontroller.enqueue) to add the data to the stream's internal queues.
 
 Note that the [`byobRequest`](#readablebytestreamcontroller.byobrequest) is only created in "BYOB mode" when there is a request from a reader and the stream's internal queue is empty.
 "BYOB mode" is enabled when either [`autoAllocateChunkSize`](/en-US/docs/Web/API/ReadableStream/ReadableStream#autoallocatechunksize) is specified in the [`ReadableController()` constructor](/en-US/docs/Web/API/ReadableStream/ReadableStream#autoallocatechunksize) or when using a {{domxref("ReadableStreamBYOBReader")}} (typically constructed by calling {{domxref("ReadableStream.getReader()")}} with the argument `{ mode: 'byob' }`).

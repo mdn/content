@@ -13,11 +13,14 @@ browser-compat: api.ReadableByteStreamController.byobRequest
 ---
 {{APIRef("Streams")}}
 
-The **`byobRequest`** read-only property of the {{domxref("ReadableByteStreamController")}} interface returns the current BYOB pull request, or `undefined` if there are no pending requests.
+The **`byobRequest`** read-only property of the {{domxref("ReadableByteStreamController")}} interface returns the current BYOB request, or `null` if there are no pending requests.
+
+An underlying byte source should check this property, and use it to write data to the stream if it exists (rather than using {{domxref("ReadableByteStreamController.enqueue()")}}).
+This will result in an efficient zero-byte transfer of the data to the consumer.
 
 ## Value
 
-A {{domxref("ReadableStreamBYOBRequest")}} object instance, or `undefined`.
+A {{domxref("ReadableStreamBYOBRequest")}} object instance, or `null`.
 
 ## Examples
 
