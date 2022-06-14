@@ -257,3 +257,7 @@ The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtension
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Viewport `<meta>` tag](/en-US/docs/Web/HTML/Viewport_meta_tag)
