@@ -58,7 +58,7 @@ This method requires one of the following:
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with {{jsxref("Undefined")}} when setting the cookie completes.
+A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when setting the cookie completes.
 
 ### Exceptions
 
