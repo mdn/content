@@ -5572,6 +5572,7 @@
 /en-US/docs/Mobile/Mobile_Web_Development	/en-US/docs/Web/Guide/Mobile
 /en-US/docs/MouseEvent.initMouseEvent	/en-US/docs/Web/API/MouseEvent/initMouseEvent
 /en-US/docs/Mozilla's_Quirks_Mode	/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
+/en-US/docs/Mozilla/Add-ons/AMO/Policy	https://extensionworkshop.com/documentation/publish/add-on-policies/
 /en-US/docs/Mozilla/Add-ons/Themes	https://extensionworkshop.com/documentation/themes/
 /en-US/docs/Mozilla/Add-ons/Themes/Theme_concepts	https://extensionworkshop.com/documentation/themes/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms/clearAll()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms/clearAll
