@@ -14,7 +14,7 @@ spec-urls: https://wicg.github.io/scheduling-apis/
 The **Prioritized Task Scheduling API** provides a standardized way to prioritize all tasks belonging to an application, whether they defined in a website developer's code, or in third party libraries and frameworks.
 
 The [task priorities](#task-priorities) are very course-grained, and are based around whether tasks block user interaction, or otherwise impact the user experience, or can run in the background.
-Developers and frameworks may implement more fine-grained prioritisation schemes within the broad categories define by the API
+Developers and frameworks may implement more fine-grained prioritization schemes within the broad categories define by the API
 
 The API is promise-based and supports the ability to set and change task priorities, to delay tasks being added to the scheduler, to abort tasks, and to monitor for priority change and abort events.
 
@@ -34,7 +34,7 @@ This creates a task with default priority [`user-visible`](#user-visible) that h
 const promise = scheduler.postTask(myTask);
 ```
 
-Because the method returns a promise you can wait on its resolution asyncronously using `then`, and catch errors thrown by the task callback function (or when the task is aborted) using `catch`.
+Because the method returns a promise you can wait on its resolution asynchronously using `then`, and catch errors thrown by the task callback function (or when the task is aborted) using `catch`.
 The callback function can be any kind of function (below we demonstrate an arrow function).
 
 ```js
@@ -60,7 +60,7 @@ The same task might be waited on using `await`/`async` as shown below (note, thi
 })();
 ```
 
-You can also specify an options object to the `postTask()` method if you want to change the default behaviour.
+You can also specify an options object to the `postTask()` method if you want to change the default behavior.
 The options are:
 
 - `priority` This allows you to specify a particular immutable priority.
@@ -101,7 +101,7 @@ There are just three priorities, which are listed below (ordered from highest to
 ### Mutable and immutable task priority
 
 There are many use cases where the task priority never needs to change, while for others it does.
-For example fetching an image might change from a `background` task to `user-visible` as a carousel is scrolled into the veiwing area.
+For example fetching an image might change from a `background` task to `user-visible` as a carousel is scrolled into the viewing area.
 
 Task priorities can be set as static (immutable) or dynamic (modifiable) depending on the arguments passed to {{domxref('Scheduler.postTask()')}}.=
 
@@ -136,7 +136,7 @@ The Prioritized Task Scheduling API extends the following APIs, adding the liste
 
 - [`scheduler`](/en-US/docs/Web/API/Window/scheduler)
   - : This property is the entry point for using this API.
-    It is implemented on [`Window`](/en-US/docs/Web/API/Window#scheduler) and [`WorkerGlobalScope`](/en-US/docs/Web/API/WorkerGlobalScope#scheduler), making an instance of {{domxref("Scheduler")}} available thorugh `this` in most scopes.
+    It is implemented on [`Window`](/en-US/docs/Web/API/Window#scheduler) and [`WorkerGlobalScope`](/en-US/docs/Web/API/WorkerGlobalScope#scheduler), making an instance of {{domxref("Scheduler")}} available through `this` in most scopes.
 
 ## Examples
 
