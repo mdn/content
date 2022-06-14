@@ -327,8 +327,8 @@ These operators do not attempt to convert the operands to compatible types befor
 The following table describes the comparison operators in terms of this sample code:
 
 ```js
-var var1 = 3;
-var var2 = 4;
+const var1 = 3;
+const var2 = 4;
 ```
 
 <table class="standard-table">
@@ -345,7 +345,7 @@ var var2 = 4;
   <tbody>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#equality">Equal</a> (<code>==</code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Equality">Equal</a> (<code>==</code>)
       </td>
       <td>Returns <code>true</code> if the operands are equal.</td>
       <td>
@@ -356,7 +356,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#inequality">Not equal</a> (<code>!=</code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Inequality">Not equal</a> (<code>!=</code>)
       </td>
       <td>Returns <code>true</code> if the operands are not equal.</td>
       <td>
@@ -365,7 +365,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#identity">Strict equal</a> (<code>===</code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality">Strict equal</a> (<code>===</code>)
       </td>
       <td>
         Returns <code>true</code> if the operands are equal and of the same
@@ -387,7 +387,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#greater_than_operator">Greater than</a> (<code>></code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than">Greater than</a> (<code>></code>)
       </td>
       <td>
         Returns <code>true</code> if the left operand is greater than the right operand.
@@ -398,7 +398,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#greater_than_or_equal_operator">Greater than or equal</a>
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal">Greater than or equal</a>
         (<code>>=</code>)
       </td>
       <td>
@@ -410,7 +410,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#less_than_operator">Less than</a>
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Less_than">Less than</a>
         (<code>&#x3C;</code>)
       </td>
       <td>
@@ -422,7 +422,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#less_than_or_equal_operator">Less than or equal</a>
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal">Less than or equal</a>
         (<code>&#x3C;=</code>)
       </td>
       <td>
