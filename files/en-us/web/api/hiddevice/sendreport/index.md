@@ -35,7 +35,7 @@ A {{jsxref("Promise")}} that resolves with `undefined` once the report has been 
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NotAllowedError`
+- `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if sending the report fails for any reason.
 
 ## Examples

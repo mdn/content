@@ -33,7 +33,7 @@ A {{jsxref("Promise")}} which resolves with a {{jsxref("DataView")}} object cont
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NotAllowedError`
+- `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if receiving the report fails for any reason.
 
 ## Examples
