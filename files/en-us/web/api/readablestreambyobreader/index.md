@@ -13,14 +13,16 @@ browser-compat: api.ReadableStreamBYOBReader
 ---
 {{APIRef("Streams")}}
 
-The `ReadableStreamBYOBReader` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) defines a reader for a {{domxref("ReadableStream")}} that supports zero-copy reading from an underlying byte source when its internal queues are empty.
-It is used for efficient copying from byte-sources, such as files.
+The `ReadableStreamBYOBReader` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) defines a reader for a {{domxref("ReadableStream")}} that supports zero-copy reading from an underlying byte source.
+It is used for efficient copying from underlying sources where the data is delivered as an "anonymous" sequence of bytes, such as files.
 
-An instance of this reader type should usually be obtained by calling {{domxref("ReadableStream.getReader()")}} on the stream, specifying the mode as `"byob"` (in other words: `stream.getReader("byob")`).
-The readable stream must have been [constructed](/en-US/docs/Web/API/ReadableStream/ReadableStream) specifying an underlying source of [`type="bytes"`](/en-US/docs/Web/API/ReadableStream/ReadableStream#type)).
+An instance of this reader type should usually be obtained by calling {{domxref("ReadableStream.getReader()")}} on the stream, specifying the mode as `"byob"`.
+The readable stream must have an _underlying byte source_. In other words, it must have been [constructed](/en-US/docs/Web/API/ReadableStream/ReadableStream) specifying an underlying source with [`type="bytes"`](/en-US/docs/Web/API/ReadableStream/ReadableStream#type)).
+
+Using this kind of reader, a [`read()`](#readablestreambyobreader.read) request when the readable stream's internal queues are empty will result in a zero copy transfer from the underlying source (bypassing the stream's internal queues).
+If the internal queues are not empty, a `read()` will satisfy the request from the buffered data.
 
 Note that the methods and properties are the same as for the default reader ({{domxref("ReadableStreamDefaultReader")}}), and it is used in the same way.
-The difference is that a normal stream will always satisfy a pending [`read()`](#readablestreambyobreader.read) request from its internal queue (which is kept supplied by the underlying source) while a byte stream will tranfer data directly from the underlying source if there is request for data when the internal queue is empty.
 
 ## Constructor
 
