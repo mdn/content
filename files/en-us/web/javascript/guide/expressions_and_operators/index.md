@@ -139,8 +139,6 @@ In general, assignments are used within a variable declaration (i.e., with [`con
 // The result of the x = f() assignment expression is discarded.
 let x = f();
 
-// Declares a variable x and initializes it to the result of g().
-// The result of the x = g() assignment expression is discarded.
 x = g(); // Reassigns the variable x to the result of g().
 ```
 
@@ -313,7 +311,7 @@ let z = y = x = f();
 
 This statement seemingly declares the variables `x`, `y`, and `z`.
 However, it only actually declares the variable `z`.
-`y` and `x` are either invalid references to nonexistent variables (in [strict mode][/en-US/docs/Web/JavaScript/Reference/Strict_mode]) or, worse, would implicitly create [global variables][/en-US/docs/Glossary/Global_variable] for `x` and `y` in [sloppy mode][/en-US/docs/Glossary/Sloppy_mode].
+`y` and `x` are either invalid references to nonexistent variables (in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)) or, worse, would implicitly create [global variables](/en-US/docs/Glossary/Global_variable) for `x` and `y` in [sloppy mode](/en-US/docs/Glossary/Sloppy_mode).
 
 ### Comparison operators
 
