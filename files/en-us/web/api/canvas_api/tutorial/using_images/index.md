@@ -110,7 +110,7 @@ function getMyVideo() {
 }
 ```
 
-This returns the {{domxref("HTMLVideoElement")}} object for the video, which, as covered earlier, can be used as an image source for the canvse.
+This returns the {{domxref("HTMLVideoElement")}} object for the video, which, as covered earlier, can be used as an image source for the canvas.
 
 ## Drawing images
 

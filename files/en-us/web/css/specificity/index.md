@@ -122,7 +122,7 @@ div:not(.inner, #fakeId) p {  /* 1-0-2 */ }
 
 In the above CSS code block, we have included `#fakeId` in the selectors. This `#fakeId` adds `1-0-0` to the specificity weight of each paragraph.
 
-Generally, you want to keep specificity down to a minumum, but if you need to increase an element's specificity for a particular reason, these two pseudo-classes can help.
+Generally, you want to keep specificity down to a minimum, but if you need to increase an element's specificity for a particular reason, these two pseudo-classes can help.
 ```css
 a:not(#fakeId#fakeId#fakeID) { color: blue; /* 3-0-1 */}
 ```
@@ -158,7 +158,7 @@ Instead of using `!important` to override foreign CSS (from external libraries, 
 
 ### The `:where()` exception
 
-The specificity-adjustment pseudo-class {{CSSxRef(":where", ":where()")}} always has its specificity replaced with zero, `0-0-0`. It enables making CSS selectors very specific in what element is targeted without any increase to specifity. 
+The specificity-adjustment pseudo-class {{CSSxRef(":where", ":where()")}} always has its specificity replaced with zero, `0-0-0`. It enables making CSS selectors very specific in what element is targeted without any increase to specificity. 
 
 In creating third-party CSS to be used by developers who don't have access to edit your CSS, it's considered a good practice to create CSS with the lowest possible specificity. For example, if your theme includes the following CSS:
 
@@ -180,7 +180,7 @@ footer a { /* 0-0-2 */
 
 Instead of using `!important`, consider using cascade layers and using low weight specificity throughout your CSS so that styles are easily overridden with slightly more specific rules.  Using semantic HTML helps provide anchors from which to apply styling.
 
-### Making selectors specific with and without adding specifity
+### Making selectors specific with and without adding specificity
 
 By indicating the section of the document you're styling before the element you're selecting, the rule becomes more specific. Depending on how you add it, you can add some, a lot, or no specificity, as shown below:
 
@@ -204,7 +204,7 @@ Specificity is based on the form of a selector.  Including the `id` of an elemen
 
 You can also include the `id` or any part of a selector as a parameter in the `:where()` specificity-adjustment pseudo class if you need to make a selector more specific but don't want to add any specificity at all. 
 
-### Increasing specifity by duplicating selectors
+### Increasing specificityty by duplicating selecto
 
 As a special case for increasing specificity, you can duplicate weights from the _CLASS_ or _ID_ columns. Duplicating simple selectors will increase specificity when overriding very specific selectors over which you have no control. 
 
@@ -226,9 +226,9 @@ By using `:is()` and `:not()`, you can increase specificity even if you can't ad
 
 Leveraging cascade layers is the standard way of enabling one set of styles to take precedence over another set of styles; cascade layers enable this without using specificity! Normal (not important) author styles imported into cascade layers have lower precedence than unlayered author styles. 
 
-If styles are coming from a stylesheet you can't edit or don't understand and you need to override styles, a strategy is to import the styles you don't control into a cascade layer. Styles in subsequently declared layers take precendence, with unlayered styles having precedence over all layered styles from the same origin.
+If styles are coming from a stylesheet you can't edit or don't understand and you need to override styles, a strategy is to import the styles you don't control into a cascade layer. Styles in subsequently declared layers take precedence, with unlayered styles having precedence over all layered styles from the same origin.
 
-When two selectors from different layers match the same element, origin and importance take precendence; the specificity of the selector in the losing stylesheet is irrelevant.
+When two selectors from different layers match the same element, origin and importance take precedence; the specificity of the selector in the losing stylesheet is irrelevant.
 
 ```html
 <style>

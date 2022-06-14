@@ -36,7 +36,7 @@ _This interface has no methods of its own, but inherits the methods of its paren
 
 ## Examples
 
-An object of this type is returned in the hander for a `prioritychange` event.
+An object of this type is returned in the handler for a `prioritychange` event.
 The code below shows a handler in which the `newPriority` and `previousPriority` are logged.
 
 ```js  
