@@ -24,7 +24,7 @@ copyTo(destination, options)
 ### Parameters
 
 - `destination`
-  - : An `ArrayBuffer` or `ArrayBufferView` to copy to.
+  - : An `ArrayBuffer`, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} to copy to.
 - `options`{{Optional_Inline}}
   - : An object containing the following:
     - `rect`{{Optional_Inline}}

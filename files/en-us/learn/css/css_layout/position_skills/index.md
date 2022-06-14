@@ -39,7 +39,7 @@ Additional question:
 
 ## Task 2
 
-In this taks, if you scroll the box in the example below, the sidebar scrolls with the content. Change it so that the sidebar stays in place and only the content scrolls.
+In this task, if you scroll the box in the example below, the sidebar scrolls with the content. Change it so that the sidebar stays in place and only the content scrolls.
 
 ![The content is scrolled but the sidebar has stayed in place.](position-task2.png)
 

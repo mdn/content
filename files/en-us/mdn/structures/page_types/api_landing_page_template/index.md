@@ -137,21 +137,11 @@ The _name of interface_ extends the following APIs, adding the listed features.
 
 ## Examples
 
-Fill in a simple example that nicely shows a typical usage of the API, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information).
+### A descriptive heading
 
-This text should be replaced with a brief description of what the example demonstrates.
+Each example must have an H3 heading naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
 
-```js
-my code block
-```
-
-If you've included an example directly in the page as shown above, and that example is longer than 4-5 lines or so, consider following the example with a step-by-step explanation of what it's doing, so that new programmers can learn more easily, and to help smooth the learning curve for complicated subjects.
-
-And/or include a list of links to useful code samples that live elsewhere:
-
-- x
-- y
-- z
+See our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information.
 
 ## Specifications
 

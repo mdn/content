@@ -1,5 +1,5 @@
 ---
-title: VideoColorSpace.VideoColorSpace()
+title: VideoColorSpace()
 slug: Web/API/VideoColorSpace/VideoColorSpace
 page-type: web-api-constructor
 tags:

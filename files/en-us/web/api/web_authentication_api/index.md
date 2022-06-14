@@ -70,9 +70,9 @@ After a user has registered with web authentication, they can subsequently authe
 
 _Figure 2 - similar to Figure 1, a diagram showing the sequence of actions for a web authentication and the essential data associated with each action._
 
-First (labeled step 0 in the diagram), the application makes the initial registration request. The protocol and format of this request are outside the scope of the Web Authentication API.
+First (labeled step 0 in the diagram), the application makes the initial authentication request. The protocol and format of this request are outside the scope of the Web Authentication API.
 
-After this, the registration steps are:
+After this, the authentication steps are:
 
 1. **Server Sends Challenge** - The server sends a challenge to the JavaScript program. The protocol for communicating with the server is not specified and is outside of the scope of the Web Authentication API. Typically, server communications would be [REST](/en-US/docs/Glossary/REST) over https (probably using [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) or [Fetch](/en-US/docs/Web/API/Fetch_API)), but they could also be [SOAP](/en-US/docs/Glossary/SOAP), [RFC 2549](https://datatracker.ietf.org/doc/html/rfc2549) or nearly any other protocol provided that the protocol is secure. The parameters received from the server will be passed to the [get()](/en-US/docs/Web/API/CredentialsContainer/get) call, typically with little or no modification. **Note that it is absolutely critical that the challenge be a buffer of random information (at least 16 bytes) and it MUST be generated on the server in order to ensure the security of the authentication process.**
 2. **Browser Calls authenticatorGetCredential() on Authenticator** - Internally, the browser will validate the parameters and fill in any defaults, which become the {{domxref("AuthenticatorResponse.clientDataJSON")}}. One of the most important parameters is the origin, which recorded as part of the clientData so that the origin can be verified by the server later. The parameters to the get() call are passed to the authenticator, along with a SHA-256 hash of the clientDataJSON (only a hash is sent because the link to the authenticator may be a low-bandwidth NFC or Bluetooth link and the authenticator is just going to sign over the hash to ensure that it isn't tampered with).

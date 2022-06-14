@@ -205,7 +205,7 @@ class Scalar {
   }
 
   add(s) {
-    // check the passed object defines #length
+    // check the passed object defines #total
     if (!(#total in s)) {
       throw new TypeError("Expected an instance of Scalar");
     }

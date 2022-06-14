@@ -45,7 +45,7 @@ function sendMessage(message, writableStream) {
     .then(function() {
       defaultWriter.write(chunk)
       .then(function() {
-        console.log("Chunk written to sink.);
+        console.log("Chunk written to sink.");
       })
       .catch(function(err) {
         console.log("Chunk error: " + err);

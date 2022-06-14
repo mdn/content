@@ -4,14 +4,13 @@ slug: Web/API/HTMLAnchorElement/referrerPolicy
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - HTMLAnchorElement
   - Property
   - Reference
   - Referrer Policy
 browser-compat: api.HTMLAnchorElement.referrerPolicy
 ---
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 The
 **`HTMLAnchorElement.referrerPolicy`**

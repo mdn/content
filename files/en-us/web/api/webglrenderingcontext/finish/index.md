@@ -40,6 +40,5 @@ None ({{jsxref("undefined")}}).
 ## See also
 
 - {{domxref("WebGLRenderingContext.flush()")}}
-- [WebGL best
-  practices](/en-US/docs/Web/API/WebGL_API/WebGL_best_practices) (which recommends avoiding `finish()` as it may slow down
+- [WebGL best practices](/en-US/docs/Web/API/WebGL_API/WebGL_best_practices) (which recommends avoiding `finish()` as it may slow down
   your main rendering loop)

@@ -29,7 +29,9 @@ Browsers are optimized to handle CSS animations, and handle animating properties
 
 ### `will-change` property
 
-The CSS [`will-change`](/en-US/docs/Web/CSS/will-change) property tells browsers which properties of an element are expected to change enabling browsers to set up optimizations before the element is actually changed, improving performance by doing potentially expensive work before it is required.
+The CSS [`will-change`](/en-US/docs/Web/CSS/will-change) property hints to browsers how an element is expected to change. Browsers may set up optimizations before an element is actually changed. These kinds of optimizations can increase the responsiveness of a page by doing potentially expensive work before it is actually required.
+
+> **Note:** `will-change` is intended to be used as a last resort to try to deal with existing performance problems. It should not be used to anticipate performance problems.
 
 ```css
 will-change: opacity, transform;

@@ -21,8 +21,9 @@ browser-compat: api.SourceBuffer.appendBufferAsync
 
 The **`appendBufferAsync()`** method
 of the {{domxref("SourceBuffer")}} interface begins the process of asynchronously
-appending media segment data from an {{jsxref("ArrayBuffer")}} or
-{{domxref("ArrayBufferView")}} object to the `SourceBuffer`. It
+appending media segment data from an {{jsxref("ArrayBuffer")}},
+a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object to the `SourceBuffer`.
+It
 returns a {{jsxref("Promise")}} which is fulfilled once the buffer has been appended.
 
 ## Syntax
@@ -34,14 +35,14 @@ appendBufferAsync(source)
 ### Parameters
 
 - `source`
-  - : A {{domxref("BufferSource")}} (that is, either an {{domxref("ArrayBufferView")}} or
-    {{jsxref("ArrayBuffer")}}) which contains the media segment data you want to add to
+  - : Either an {{domxref("ArrayBufferView")}},
+    a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object that contains the media segment data you want to add to
     the `SourceBuffer`.
 
 ### Return value
 
 A {{jsxref("Promise")}} which is fulfilled when the buffer has been added successfully
-to the `SourceBuffer`, or `null` if the request could not be
+to the `SourceBuffer`, or `null`, if the request could not be
 initiated.
 
 ## Examples

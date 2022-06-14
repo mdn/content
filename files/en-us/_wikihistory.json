@@ -24760,18 +24760,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/ArrayBufferView": {
-    "modified": "2019-10-01T12:15:40.895Z",
-    "contributors": [
-      "aduh95",
-      "yegao",
-      "mfluehr",
-      "TimothyGu",
-      "Jeremie",
-      "fscholz",
-      "teoli"
-    ]
-  },
   "Web/API/Attr": {
     "modified": "2020-10-15T21:10:30.867Z",
     "contributors": [
@@ -28005,16 +27993,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/CSSOMString": {
-    "modified": "2019-05-19T16:05:41.080Z",
-    "contributors": [
-      "Wuzzel",
-      "alattalatta",
-      "mfuji09",
-      "championshuttler",
-      "jsx"
-    ]
-  },
   "Web/API/CSSPageRule": {
     "modified": "2020-10-15T21:21:03.183Z",
     "contributors": [
@@ -29479,20 +29457,6 @@
       "nmve",
       "erikadoyle",
       "Sebastianz"
-    ]
-  },
-  "Web/API/CanvasImageSource": {
-    "modified": "2020-04-27T19:38:09.761Z",
-    "contributors": [
-      "severo",
-      "mfluehr",
-      "sideshowbarker",
-      "Nektro",
-      "jpmedley",
-      "Mehran-Shakerinava",
-      "Jeremie",
-      "fscholz",
-      "teoli"
     ]
   },
   "Web/API/CanvasPattern": {
@@ -32396,40 +32360,6 @@
       "connorshea",
       "rolfedh",
       "chrisdavidmills"
-    ]
-  },
-  "Web/API/DOMString": {
-    "modified": "2020-10-26T23:29:51.423Z",
-    "contributors": [
-      "gregprice",
-      "mfuji09",
-      "alattalatta",
-      "mfluehr",
-      "jsx",
-      "Riptrip",
-      "chrisdavidmills",
-      "Freya716",
-      "Delapouite",
-      "teoli",
-      "Annevk",
-      "fusionchess",
-      "kscarfone",
-      "ethertank",
-      "Sheppy",
-      "Brettz9"
-    ]
-  },
-  "Web/API/DOMString/Binary": {
-    "modified": "2019-04-23T21:55:41.758Z",
-    "contributors": [
-      "madmurphy",
-      "zbjornson",
-      "jwhitlock",
-      "fanyer",
-      "rhyne24",
-      "kscarfone",
-      "ethertank",
-      "fusionchess"
     ]
   },
   "Web/API/DOMStringList": {
@@ -67473,12 +67403,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/RTCStatsIceCandidatePairState": {
-    "modified": "2020-10-15T22:17:00.827Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCStatsReport": {
     "modified": "2020-10-15T21:44:42.878Z",
     "contributors": [
@@ -76592,18 +76516,6 @@
     "modified": "2020-10-15T22:30:07.803Z",
     "contributors": [
       "jpmedley"
-    ]
-  },
-  "Web/API/USVString": {
-    "modified": "2020-10-26T23:50:33.232Z",
-    "contributors": [
-      "gregprice",
-      "alattalatta",
-      "fscholz",
-      "ExE-Boss",
-      "jsx",
-      "kscarfone",
-      "chrisdavidmills"
     ]
   },
   "Web/API/UserProximityEvent": {
