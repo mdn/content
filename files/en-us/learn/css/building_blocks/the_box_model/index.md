@@ -58,7 +58,7 @@ If a box has an outer display type of `block`, then:
 - The box will break onto a new line.
 - The {{cssxref("width")}} and {{cssxref("height")}} properties are respected.
 - Padding, margin and border will cause other elements to be pushed away from the box.
-- The box will extend in the inline direction to fill the space available in its container. In most cases the box will become as wide as its container, filling up 100% of the space available.
+- The box will extend in the inline direction to fill the space available in its container. In most cases, the box will become as wide as its container, filling up 100% of the space available.
 
 Some HTML elements, such as `<h1>` and `<p>`, use `block` as their outer display type by default.
 
@@ -77,21 +77,21 @@ Boxes also have an _inner_ display type, which dictates how elements inside that
 
 Block and inline layout is the default way things behave on the web. By default and without any other instruction, the elements inside a box are also laid out in **[normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)** and behave as block or inline boxes.
 
-You can change the inner display type for example by setting `display: flex;`. The element will still use the outer display type `block` but this changes the inner display type to `flex`. Any direct children of this box will become flex items and behave according to the [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) spec.
+You can change the inner display type for example by setting `display: flex;`. The element will still use the outer display type `block` but this changes the inner display type to `flex`. Any direct children of this box will become flex items and behave according to the [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) specification.
 
 If you look more into CSS layout, you will also come across other inner values your boxes can have, for example [`grid`](/en-US/docs/Learn/CSS/CSS_layout/Grids).
 
-> **Note:** To read more about the values of display, and how boxes work in block and inline layout, take a look at the MDN guide to [Block and Inline Layout](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow).  
+> **Note:** To read more about the values of display, and how boxes work in block and inline layout, take a look at the MDN guide [Block and Inline Layout](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow).  
 
 ## Examples of different display types
 
 The example below has three different HTML elements, all of which have an outer display type of `block`.
 
-- A paragraph with a border added in CSS. The browser renders this as a block box. The paragraph starts on a new line and uses the entire available width.
+- A paragraph with a border added in CSS. The browser renders this as a block box. The paragraph starts on a new line and extends the entire available width.
 
-- A list, which is laid out using `display: flex`. This establishes flex layout for the items inside the container. The list itself is a block box and — like the paragraph — expands to the full container width and breaks onto a new line.
+- A list, which is laid out using `display: flex`. This establishes flex layout for the children of the container, which are flex items. The list itself is a block box and — like the paragraph — expands to the full container width and breaks onto a new line.
 
-- A block-level paragraph, inside which are two `<span>` elements. These elements would normally be `inline`, however, one of the elements has a class of block, and we have set it to `display: block`.
+- A block-level paragraph, inside which are two `<span>` elements. These elements would normally be `inline`, however, one of the elements has a class of "block" which gets set to `display: block`.
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/block.html", '100%', 1100)}}
 
@@ -99,7 +99,7 @@ In the next example, we can see how `inline` elements behave.
 
 - The `<span>` elements in the first paragraph are inline by default and so do not force line breaks.
 
-- The `<ul>` element that is set to `display: inline-flex` creates an inline box around some flex items.
+- The `<ul>` element that is set to `display: inline-flex` creates an inline box containing some flex items.
 
 - The two paragraphs are both set to `display: inline`. The inline flex container and paragraphs all run together on one line rather than breaking onto new lines (as they would do if they were displaying as block-level elements).
 
@@ -119,7 +119,7 @@ To add complexity, there is a standard and an alternate box model. By default, b
 
 Making up a block box in CSS we have the:
 
-- **Content box**: The area where your content is displayed; size it using properties like {{cssxref("width")}} and {{cssxref("height")}}.
+- **Content box**: The area where your content is displayed; size it using properties like  {{cssxref("inline-size")}} and {{cssxref("block-size")}} or {{cssxref("width")}} and {{cssxref("height")}}.
 - **Padding box**: The padding sits around the content as white space; size it using {{cssxref("padding")}} and related properties.
 - **Border box**: The border box wraps the content and any padding; size it using {{cssxref("border")}} and related properties.
 - **Margin box**: The margin is the outermost layer, wrapping the content, padding, and border as whitespace between this box and other elements; size it using {{cssxref("margin")}} and related properties.
@@ -130,7 +130,7 @@ The below diagram shows these layers:
 
 ### The standard CSS box model
 
-In the standard box model, if you give a box a `width` and a `height` attribute, this defines the width and height of the _content box_. Any padding and border is then added to that width and height to get the total size taken up by the box (see image below).
+In the standard box model, if you give a box an `inline-size` and a `block-size` (or `width` and a `height`) attributes, this defines the inline-size and block-size (with and height in horizontal languages) of the _content box_. Any padding and border is then added to those dimensions to get the total size taken up by the box (see image below).
 
 If we assume that a box has the following CSS:
 
@@ -167,14 +167,16 @@ If we assume the box has the same CSS as above:
 ```css
 .box {
   width: 350px;
+  inline-size: 350px;
   height: 150px;
+  block-size: 150px;
   margin: 10px;
   padding: 25px;
   border: 5px solid black;
 }
 ```
 
-Now, the _actual_ space taken up by the box will be 350px wide and 150px high.
+Now, the _actual_ space taken up by the box will be 350px in the inline direction and 150px in the block direction.
 
 ![Showing the size of the box when the alternate box model is being used.](alternate-box-model.png)
 
