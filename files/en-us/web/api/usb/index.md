@@ -1,6 +1,7 @@
 ---
 title: USB
 slug: Web/API/USB
+page-type: web-api-interface
 tags:
   - API
   - Interface

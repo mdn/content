@@ -7,6 +7,7 @@ tags:
   - Layout
   - cookbook
   - recipes
+browser-compat: css.properties.grid-template-columns
 ---
 {{CSSRef}}
 
@@ -22,7 +23,7 @@ Items placed on the grid should be able to align to a horizontally-centered max-
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/grid-wrapper--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/grid-wrapper--download.html)
 
 ## Choices made
 
@@ -69,11 +70,7 @@ Although Grid enables us to position items anywhere (within reason), it is impor
 
 ## Browser compatibility
 
-The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
-
-### grid-template-columns
-
-{{Compat("css.properties.grid-template-columns")}}
+{{Compat}}
 
 ## See also
 

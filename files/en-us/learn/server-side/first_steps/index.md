@@ -41,4 +41,4 @@ With the basic understanding that you gain from this preparation, you'll be read
 
 ## Assessments
 
-This "first steps" module doesn't have any assessment because we haven't yet shown you any code. At this point, you should have a general understanding of what of the functionality you can deliver with server-side programming, and you have made a decision about what server-side web framework you will use to create your first server-side application.
+This "first steps" module doesn't have any assessment because we haven't yet shown you any code. At this point, you should have a general understanding of the functionality you can deliver with server-side programming, and you have made a decision about what server-side web framework you will use to create your first server-side application.

@@ -1,6 +1,7 @@
 ---
 title: HIDDevice.open()
 slug: Web/API/HIDDevice/open
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,7 +19,7 @@ The **`open()`** method of the {{domxref("HIDDevice")}} interface requests that 
 ## Syntax
 
 ```js
-HIDDevice.open();
+open()
 ```
 
 ### Parameters

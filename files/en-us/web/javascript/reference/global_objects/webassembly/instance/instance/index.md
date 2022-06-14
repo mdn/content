@@ -28,9 +28,9 @@ new WebAssembly.Instance(module, importObject)
 
 ### Parameters
 
-- _module_
+- `module`
   - : The {{jsxref("WebAssembly.Module")}} object to be instantiated.
-- _importObject_ {{optional_inline}}
+- `importObject` {{optional_inline}}
   - : An object containing the values to be imported into the newly-created
     `Instance`, such as functions or {{jsxref("WebAssembly.Memory")}} objects.
     There must be one matching property for each declared import of `module` or
@@ -89,5 +89,4 @@ WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

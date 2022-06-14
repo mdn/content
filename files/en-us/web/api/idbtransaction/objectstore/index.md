@@ -1,6 +1,7 @@
 ---
 title: IDBTransaction.objectStore()
 slug: Web/API/IDBTransaction/objectStore
+page-type: web-api-instance-method
 tags:
   - API
   - Database
@@ -27,7 +28,7 @@ transaction object, a different {{domxref("IDBObjectStore")}} instance is return
 ## Syntax
 
 ```js
-IDBTransaction.objectStore(name);
+objectStore(name)
 ```
 
 ### Parameters
@@ -46,14 +47,12 @@ An {{domxref("IDBObjectStore")}} object for accessing an object store.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the request was made on a source object that has been deleted or removed, or if the transaction has finished.
 
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store. Note also the functions attached to transaction event
 handlers to report on the outcome of the transaction opening in the event of success or
-failure. For a full working example, see our [To-do
-Notifications](https://github.com/mdn/to-do-notifications/) app ([view
-example live](https://mdn.github.io/to-do-notifications/).)
+failure. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([View example live](https://mdn.github.io/to-do-notifications/)).
 
 ```js
 // Let us open our database

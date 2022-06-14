@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchManager.getIds()
 slug: Web/API/BackgroundFetchManager/getIds
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -19,7 +20,7 @@ The **`getIds()`** method of the {{domxref("BackgroundFetchManager")}} interface
 ## Syntax
 
 ```js
-let stringArray = BackgroundFetchManager.getIds();
+getIds()
 ```
 
 ### Parameters

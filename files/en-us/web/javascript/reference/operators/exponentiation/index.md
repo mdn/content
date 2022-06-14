@@ -48,8 +48,8 @@ immediately before the base number; doing so will cause a SyntaxError.
 ```
 
 Note that some programming languages use the caret symbol <kbd>^</kbd> for
-exponentiation, but JavaScript uses that symbol for the [bitwise
-logical XOR operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR).
+exponentiation, but JavaScript uses that symbol for the
+[bitwise logical XOR operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR).
 
 ## Examples
 
@@ -95,21 +95,12 @@ To force the base of an exponentiation expression to be a negative number:
 
 ## See also
 
-- [Addition
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Subtraction
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Increment
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decrement
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary
-  negation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unary plus
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Subtraction operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Division operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplication operator](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Increment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Decrement operator](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Unary negation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Unary plus operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)

@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesis.speak()
 slug: Web/API/SpeechSynthesis/speak
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -24,14 +25,14 @@ queue; it will be spoken when any other utterances queued before it have been sp
 speak(utterance)
 ```
 
-### Returns
-
-{{jsxref('undefined')}}.
-
 ### Parameters
 
 - `utterance`
   - : A {{domxref("SpeechSynthesisUtterance")}} object.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

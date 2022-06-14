@@ -1,6 +1,7 @@
 ---
 title: 'IDBTransaction: abort event'
 slug: Web/API/IDBTransaction/abort_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
@@ -18,7 +19,7 @@ This can happen for any of the following reasons:
 - An I/O error (an actual failure to write to disk, for example disk detached, or other OS/hardware failure).
 - Quota exceeded.
 
-This non-cancelable event [bubbles](/en-US/docs/Learn/JavaScript/Building_blocks/Events#bubbling_and_capturing_explained) to the associated {{domxref("IDBDatabase")}} object.  
+This non-cancelable event [bubbles](/en-US/docs/Learn/JavaScript/Building_blocks/Events#bubbling_and_capturing_explained) to the associated {{domxref("IDBDatabase")}} object.
 
 ## Syntax
 

@@ -50,8 +50,7 @@ This method is inherited by every object descended from `Object`, but can be ove
 > {{jsxref("undefined")}} returns `[object Undefined]`, as defined
 > in the 5th Edition of ECMAScript and subsequent Errata.
 >
-> See [Using `toString()` to
-> detect object class](#using_tostring_to_detect_object_class).
+> See [Using `toString()` to detect object class](#using_tostring_to_detect_object_class).
 
 ## Parameters
 

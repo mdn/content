@@ -1,9 +1,9 @@
 ---
 title: FileSystemEntry.remove()
 slug: Web/API/FileSystemEntry/remove
+page-type: web-api-instance-method
 tags:
   - API
-  - File System API
   - File and Directory Entries API
   - FileSystemEntry
   - Files
@@ -15,7 +15,7 @@ tags:
   - Deprecated
 browser-compat: api.FileSystemEntry.remove
 ---
-{{APIRef("File System API")}}{{deprecated_header}}
+{{APIRef("File and Directory Entries API")}}{{deprecated_header}}
 
 The {{domxref("FileSystemEntry")}} interface's method
 **`remove()`** deletes the file
@@ -29,7 +29,8 @@ instead.
 ## Syntax
 
 ```js
-FileSystemEntry.remove(successCallback[, errorCallback]);
+remove(successCallback)
+remove(successCallback, errorCallback)
 ```
 
 ### Parameters
@@ -41,7 +42,7 @@ FileSystemEntry.remove(successCallback[, errorCallback]);
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Errors
 
@@ -59,7 +60,7 @@ FileSystemEntry.remove(successCallback[, errorCallback]);
   - : The entry couldn't be removed due to permissions or other access constraints, or
     because there are too many calls being made on file resources.
 
-## Example
+## Examples
 
 This example deletes a temporary work file.
 
@@ -77,8 +78,6 @@ workingDirectory.getFile("tmp/workfile.json", {}, function(fileEntry) {
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemDirectoryEntry.removeRecursively()")}}

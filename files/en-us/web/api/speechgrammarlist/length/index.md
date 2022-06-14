@@ -1,6 +1,7 @@
 ---
 title: SpeechGrammarList.length
 slug: Web/API/SpeechGrammarList/length
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -19,13 +20,7 @@ The **`length`** read-only property of the
 {{domxref("SpeechGrammarList")}} interface returns the number of
 {{domxref("SpeechGrammar")}} objects contained in the {{domxref("SpeechGrammarList")}}.
 
-## Syntax
-
-```js
-var myListLength = speechGrammarListInstance.length;
-```
-
-### Value
+## Value
 
 A number indicating the number of {{domxref("SpeechGrammar")}} objects contained in the
 {{domxref("SpeechGrammarList")}}.

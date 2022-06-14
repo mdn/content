@@ -52,5 +52,5 @@ This topic contains the following modules, in a suggested order for working thro
 
 - [Web forms](/en-US/docs/Learn/Forms)
   - : This module provides a series of articles that will help you master the essentials of web forms. Web forms are a very powerful tool for interacting with users — most commonly they are used for collecting data from users, or allowing them to control a user interface. However, for historical and technical reasons it's not always obvious how to use them to their full potential. We'll cover all the essential aspects of Web forms including marking up their HTML structure, styling form controls, validating form data, and submitting data to the server.
-- [HTML (HyperText Markup Language)](/en-US/docs/Web/HTML)
+- [HTML (HyperText Markup Language) on MDN](/en-US/docs/Web/HTML)
   - : The main entry point for HTML reference documentation on MDN, including detailed element and attribute references — if you want to know what attributes an element has or what values an attribute has, for example, this is a great place to start.

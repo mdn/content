@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.isSync()
 slug: Web/API/WebGL2RenderingContext/isSync
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -17,7 +18,7 @@ passed object is a valid {{domxref("WebGLSync")}} object.
 ## Syntax
 
 ```js
-GLboolean gl.isSync(sync);
+isSync(sync)
 ```
 
 ### Parameters

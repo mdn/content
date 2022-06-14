@@ -1,6 +1,7 @@
 ---
 title: TaskAttributionTiming.containerType
 slug: Web/API/TaskAttributionTiming/containerType
+page-type: web-api-instance-property
 tags:
   - API
   - Long Tasks API
@@ -16,15 +17,9 @@ The **`containerType`** readonly property of the
 {{domxref("TaskAttributionTiming")}} interface returns the type of frame container, one
 of `iframe`, `embed`, or `object`.
 
-## Syntax
+## Value
 
-```js
-var containerType = TaskAttributionTiming.containerType;
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing the container's type, one of `iframe`,
+A string containing the container's type, one of `iframe`,
 `embed`, or `object`.
 
 ## Specifications

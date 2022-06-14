@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.responseStart
 slug: Web/API/PerformanceResourceTiming/responseStart
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -16,18 +17,12 @@ the first byte of the response from the server, cache, or local resource.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-resource.responseStart;
-```
-
-### Return value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the first
 byte of the response from the server.
 
-## Example
+## Examples
 
 In the following example, the value of the `*Start` and `*End`
 properties of all "`resource`"

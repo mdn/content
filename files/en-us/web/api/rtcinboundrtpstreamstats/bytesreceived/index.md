@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.bytesReceived
 slug: Web/API/RTCInboundRtpStreamStats/bytesReceived
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -25,13 +26,7 @@ The {{domxref("RTCInboundRtpStreamStats")}} dictionary's
 indicates the total number of bytes received so far from this synchronization source
 (SSRC).
 
-## Syntax
-
-```js
-var bytesReceived = rtcInboundRtpStreamStats.bytesReceived;
-```
-
-### Value
+## Value
 
 An unsigned integer value indicating the total number of bytes received so far on this
 RTP stream, not including header and padding bytes. This value can be used to calculate

@@ -24,7 +24,7 @@ When considering using `browser_style: true`, you need to test your extension wi
 
 > **Note:** **Google Chrome** and **Opera** use `chrome_style` instead of `browser_style`, so if you wish to support them, you need to add both keys.
 
-In Firefox, the stylesheet can be seen at `chrome://browser/content/extension.css`. The extra stylesheet at `chrome://browser/content/extension-mac.css` is also included on OS X.
+In Firefox, the stylesheet can be seen at `chrome://browser/content/extension.css`. The extra stylesheet at `chrome://browser/content/extension-mac.css` is also included on macOS.
 
 Most styles are automatically applied, but some elements require you to add the non-standard `browser-style` class to get their styling, as detailed in the table below:
 
@@ -109,7 +109,7 @@ Most styles are automatically applied, but some elements require you to add the 
 
 ## Browser compatibility
 
-{{Compat("webextensions.browser_style")}}
+For browser compatibility information refer to the browser compatibility sections of the [action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action#browser_compatibility), [browser_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#browser_compatibility), [page_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action#browser_compatibility), [sidebar_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action#browser_compatibility), and [options_ui](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui#browser_compatibility) manifest keys.
 
 ## Firefox Panel Components
 

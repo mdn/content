@@ -14,9 +14,8 @@ browser-compat: javascript.builtins.String.matchAll
 {{JSRef}}
 
 The **`matchAll()`** method returns an iterator of all results
-matching a _string_ against a _[regular
-expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)_, including [capturing
-groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges).
+matching a _string_ against a _[regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)_,
+including [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges).
 
 {{EmbedInteractiveExample("pages/js/string-matchall.html")}}
 
@@ -154,10 +153,8 @@ array[1];
 
 - [Polyfill of `String.prototype.matchAll` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.match()")}}
-- [Using regular
-  expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
-- [Capturing
-  groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
+- [Using regular expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
 - {{jsxref("RegExp")}}
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}

@@ -1,6 +1,7 @@
 ---
 title: NetworkInformation.downlinkMax
 slug: Web/API/NetworkInformation/downlinkMax
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -19,16 +20,9 @@ connection technology.
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-var max = NetworkInformation.downlinkMax
-```
-
-### Return value
-
-- an `unrestricted double` representing the maximum downlink speed,
-  in megabits per second (Mb/s), for the underlying connection technology.
+An `unrestricted double` representing the maximum downlink speed, in megabits per second (Mb/s), for the underlying connection technology.
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: 'MediaStreamTrack: overconstrained event'
 slug: Web/API/MediaStreamTrack/overconstrained_event
+page-type: web-api-event
 tags:
   - API
   - Deprecated

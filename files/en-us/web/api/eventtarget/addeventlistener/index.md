@@ -1,6 +1,7 @@
 ---
 title: EventTarget.addEventListener()
 slug: Web/API/EventTarget/addEventListener
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -55,7 +56,7 @@ addEventListener(type, listener, useCapture);
 - `listener`
   - : The object that receives a notification (an object that implements the
     {{domxref("Event")}} interface) when an event of the specified type occurs. This must
-    be an object implementing the {{domxref("EventListener")}} interface, or a JavaScript
+    be an object with a `handleEvent()` method, or a JavaScript
     [function](/en-US/docs/Web/JavaScript/Guide/Functions). See
     [The event listener callback](#the_event_listener_callback) for details on the callback itself.
 - `options` {{optional_inline}}
@@ -103,15 +104,14 @@ addEventListener(type, listener, useCapture);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Usage notes
 
 ### The event listener callback
 
 The event listener can be specified as either a callback function or
-an object that implements {{domxref("EventListener")}},
-whose {{domxref("EventListener.handleEvent()", "handleEvent()")}} method serves as the callback function.
+an object whose `handleEvent()` method serves as the callback function.
 
 The callback function itself has the same parameters and return value as the
 `handleEvent()` method; that is, the callback accepts a single parameter: an
@@ -198,7 +198,7 @@ event on the element `someElement`. For the third parameter, if
 `true`; otherwise, we know that we need to pass a Boolean, and we pass
 `false` as the value of the `useCapture` parameter.
 
-If you'd prefer, you can use a third-party library like [Modernizr](https://modernizr.com/docs) or [Detect It](https://github.com/rafrex/detect-it) to do this test for you.
+If you'd prefer, you can use a third-party library like [Modernizr](https://modernizr.com/docs) or [Detect It](https://github.com/rafgraph/detect-it) to do this test for you.
 
 You can learn more from the article about
 [`EventListenerOptions`](https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection)
@@ -495,8 +495,7 @@ my_element.addEventListener('click', function (e) {
 })
 ```
 
-As a reminder, [arrow
-functions do not have their own `this` context](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#no_separate_this).
+As a reminder, [arrow functions do not have their own `this` context](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#no_separate_this).
 
 ```js
 my_element.addEventListener('click', (e) => {

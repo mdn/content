@@ -1,6 +1,7 @@
 ---
 title: BluetoothCharacteristicProperties.indicate
 slug: Web/API/BluetoothCharacteristicProperties/indicate
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth
@@ -20,13 +21,7 @@ The **`indicate`** read-only property of the
 `boolean` that is `true` if indications of the characteristic
 value with acknowledgement is permitted.
 
-## Syntax
-
-```js
-var aBoolean = BluetoothCharacteristicProperties.indicate;
-```
-
-### Value
+## Value
 
 A boolean value.
 

@@ -27,8 +27,8 @@ var varname1 [= value1] [, varname2 [= value2] ... [, varnameN [= valueN]]];
   - : Initial value of the variable. It can be any legal expression. Default value is
     `undefined`.
 
-Alternatively, the [Destructuring
-Assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax can also be used to declare variables.
+Alternatively, the [Destructuring Assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+syntax can also be used to declare variables.
 
 ```js
 var { bar } = foo; // where foo = { bar:10, baz:12 };
@@ -80,8 +80,9 @@ console.log('still going...'); // still going...
 In the global context, a variable declared using `var` is added as a
 non-configurable property of the global object. This means its property descriptor
 cannot be changed and it cannot be deleted using {{JSxRef("Operators/delete", "delete")}}. The corresponding
-name is also added to a list on the internal `[[VarNames]]` slot on the [global
-environment record](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-global-environment-records) (which forms part of the global lexical environment). The list
+name is also added to a list on the internal `[[VarNames]]` slot on the
+[global environment record](https://262.ecma-international.org/10.0/#sec-global-environment-records)
+(which forms part of the global lexical environment). The list
 of names in `[[VarNames]]` enables the runtime to distinguish between global
 variables and straightforward properties on the global object.
 
@@ -99,7 +100,7 @@ delete globalThis.x; // TypeError in strict mode. Fails silently otherwise.
 delete x;  // SyntaxError in strict mode. Fails silently otherwise.
 ```
 
-Note that in both NodeJS [CommonJS](http://www.commonjs.org/) modules and
+Note that in both NodeJS [CommonJS](https://www.commonjs.org/) modules and
 native [ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules),
 top-level variable declarations are scoped to the module, and are not, therefore added
 as properties to the global object.
@@ -136,8 +137,8 @@ foo = 'f' // In non-strict mode, assumes you want to create a property named `fo
 globalThis.hasOwnProperty('foo') // true
 ```
 
-In ECMAScript 5, this behavior was changed for [strict
-mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). Assignment to an unqualified identifier in strict mode will result in a
+In ECMAScript 5, this behavior was changed for [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
+Assignment to an unqualified identifier in strict mode will result in a
 `ReferenceError`, to avoid the accidental creation of properties on the
 global object.
 

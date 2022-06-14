@@ -70,9 +70,9 @@ A locale identifier is a string that consists of:
 - "`zh-Hans-CN`": Chinese (language) written in simplified characters (script) as used in China (region)
 - "`en-emodeng`": English (language) in the "Early modern English" dialect (variant)
 
-Subtags identifying languages, scripts, regions (including countries), and (rarely used) variants are registered in the [IANA Language Subtag Registry](https://www.iana.org/assignments/language-subtag-registry). This registry is periodically updated over time, and implementations may not always be up to date, so don't rely too much on subtags being universally supported.
+Subtags identifying languages, scripts, regions (including countries), and (rarely used) variants are registered in the [IANA Language Subtag Registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry). This registry is periodically updated over time, and implementations may not always be up to date, so don't rely too much on subtags being universally supported.
 
-BCP 47 extension sequences consist of a single digit or letter (other than `"x"`) and one or more two- to eight-letter or digit subtags separated by hyphens. Only one sequence is permitted for each digit or letter: "`de-a-foo-a-foo`" is invalid. BCP 47 extension subtags are defined in the [Unicode CLDR Project](https://github.com/unicode-org/cldr/tree/master/common/bcp47). Currently only two extensions have defined semantics:
+BCP 47 extension sequences consist of a single digit or letter (other than `"x"`) and one or more two- to eight-letter or digit subtags separated by hyphens. Only one sequence is permitted for each digit or letter: "`de-a-foo-a-foo`" is invalid. BCP 47 extension subtags are defined in the [Unicode CLDR Project](https://github.com/unicode-org/cldr/tree/main/common/bcp47). Currently only two extensions have defined semantics:
 
 - The `"u"` (Unicode) extension can be used to request additional customization of {{jsxref("Intl.Collator")}}, {{jsxref("Intl.NumberFormat")}}, or {{jsxref("Intl.DateTimeFormat")}} objects. Examples:
 
@@ -133,14 +133,14 @@ log("de-DE");
 - Introduction: [The ECMAScript Internationalization API](https://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html)
 - Constructors
 
-  - {{jsxref("Intl/Collator", "Intl.Collator")}}
-  - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
-  - {{jsxref("Intl/ListFormat", "Intl.ListFormat")}}
-  - {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
-  - {{jsxref("Intl/PluralRules", "Intl.PluralRules")}}
-  - {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
-  - {{jsxref("Intl/Locale", "Intl.Locale")}}
-  - {{jsxref("Intl/Segmenter", "Intl.Segmenter")}}
+  - {{jsxref("Intl/Collator", "Intl.Collator()")}}
+  - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat()")}}
+  - {{jsxref("Intl/ListFormat", "Intl.ListFormat()")}}
+  - {{jsxref("Intl/NumberFormat", "Intl.NumberFormat()")}}
+  - {{jsxref("Intl/PluralRules", "Intl.PluralRules()")}}
+  - {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat()")}}
+  - {{jsxref("Intl/Locale", "Intl.Locale()")}}
+  - {{jsxref("Intl/Segmenter", "Intl.Segmenter()")}}
 
 - Methods
 

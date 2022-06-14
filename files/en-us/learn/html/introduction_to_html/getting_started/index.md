@@ -432,7 +432,7 @@ As shorthand, it is acceptable to write this as follows:
 <input type="text">
 ```
 
-For reference, the example above also includes a non-disabled form input element.The HTML from the example above produces this result:
+For reference, the example above also includes a non-disabled form input element. The HTML from the example above produces this result:
 
 {{ EmbedLiveSample('Boolean_attributes', 700, 100, "", "") }}
 
@@ -533,7 +533,7 @@ If you want to experiment with writing some HTML on your local computer, you can
 3. Paste the code into the new text file.
 4. Save the file as `index.html`.
 
-> **Note:** You can also find this basic HTML template on the [MDN Learning Area Github repo](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html).
+> **Note:** You can also find this basic HTML template on the [MDN Learning Area GitHub repo](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html).
 
 You can now open this file in a web browser to see what the rendered code looks like. Edit the code and refresh the browser to see what the result is. Initially the page looks like this:
 
@@ -749,7 +749,7 @@ At this point, you should understand what HTML looks like, and how it works at a
 
 ## See also
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 

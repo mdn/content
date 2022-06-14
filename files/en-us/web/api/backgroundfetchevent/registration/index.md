@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchEvent.registration
 slug: Web/API/BackgroundFetchEvent/registration
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,13 +14,7 @@ browser-compat: api.BackgroundFetchEvent.registration
 
 The **`registration`** read-only property of the {{domxref("BackgroundFetchEvent")}} interface returns a {{domxref("BackgroundFetchRegistration")}} object.
 
-## Syntax
-
-```js
-let registration = BackgroundFetchEvent.registration;
-```
-
-### Value
+## Value
 
 A {{domxref("BackgroundFetchRegistration")}}.
 

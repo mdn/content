@@ -1,6 +1,7 @@
 ---
 title: Range.collapse()
 slug: Web/API/Range/collapse
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -20,7 +21,8 @@ see the {{domxref("Range.collapsed")}} property.
 ## Syntax
 
 ```js
-range.collapse(toStart);
+collapse()
+collapse(toStart)
 ```
 
 ### Parameters
@@ -30,7 +32,11 @@ range.collapse(toStart);
     to its start, `false` to its end. If omitted, it defaults to
     `false` {{experimental_inline}}.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 var range = document.createRange();

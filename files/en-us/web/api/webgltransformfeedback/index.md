@@ -1,6 +1,7 @@
 ---
 title: WebGLTransformFeedback
 slug: Web/API/WebGLTransformFeedback
+page-type: web-api-interface
 tags:
   - API
   - Interface

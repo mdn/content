@@ -1,6 +1,7 @@
 ---
 title: XRViewerPose
 slug: Web/API/XRViewerPose
+page-type: web-api-interface
 tags:
   - 3D
   - API

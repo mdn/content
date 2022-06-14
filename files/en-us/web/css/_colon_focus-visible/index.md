@@ -20,7 +20,9 @@ This selector is useful to provide a different focus indicator based on the user
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:focus-visible
+```
 
 ## Examples
 
@@ -78,6 +80,7 @@ custom-button:focus {
   custom-button:focus {
     /* Remove the focus indicator on mouse-focus for browsers
        that do support :focus-visible */
+    outline: none;
     background: transparent;
   }
 }

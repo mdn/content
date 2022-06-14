@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-label
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-label
 ---
 
 The `aria-label` attribute defines a string value that labels an interactive element.
@@ -28,7 +29,7 @@ In cases where an interactive element has no accessible name, or an accessible n
 
 Most content has an accessible name generated from its immediate wrapping element's text content. Accessible names can also be created by certain attributes or associated elements.
 
-By default, a button's accessible name is the content between the opening and closing {{HTMLElement('button')}} tags, an image's accessible name is the content of its [`alt`](/en-US/docs/Web/HTML/Element/Img#attr-alt) attribute, and a form input's accessible name is the content of the associated {{HTMLElement('label')}} element.
+By default, a button's accessible name is the content between the opening and closing {{HTMLElement('button')}} tags, an image's accessible name is the content of its [`alt`](/en-US/docs/Web/HTML/Element/img#attr-alt) attribute, and a form input's accessible name is the content of the associated {{HTMLElement('label')}} element.
 
 If none of these options are available, or if the default accessible name is not appropriate, use the `aria-label` attribute to define the accessible name of an element.
 
@@ -40,7 +41,7 @@ The `aria-label` attribute can be used with regular, semantic HTML elements; it 
 
 Don't "overuse" `aria-label`. For example, use visible text with `aria-describedby` or `aria-description`, not `aria-label`, to provide additional instructions or clarify the UI. Always remember, you don't need to target instructions to screen readers only; if instructions are needed, provide them to everyone (or, preferably, make your UI more intuitive).
 
-Not all elements can be given an accessible name. Neither `aria-label` nor `aria-labelledby` should be used with non-interactive elements or inline structural role such as with `code`, `term`, or `emphasis` nor roles whose semantics will not be mapped to the accessibility API, including `presentation`, `none`, and `hidden`. The `aria-label` attribute is intended for interactive elements only. Use `aria-label` to ensure an accessible name is provided when none is visible in the DOM for all interactive elements, like links, videos, form controls, [landmark roles](g/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles), and [widget roles](/en-US/docs/Web/Accessibility/ARIA/Roles#2._widget_roles).
+Not all elements can be given an accessible name. Neither `aria-label` nor `aria-labelledby` should be used with non-interactive elements or inline structural role such as with `code`, `term`, or `emphasis` nor roles whose semantics will not be mapped to the accessibility API, including `presentation`, `none`, and `hidden`. The `aria-label` attribute is intended for interactive elements only. Use `aria-label` to ensure an accessible name is provided when none is visible in the DOM for all interactive elements, like links, videos, form controls, [landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles), and [widget roles](/en-US/docs/Web/Accessibility/ARIA/Roles#2._widget_roles).
 
 If you give your {{HTMLElement('iframe')}}s a `title`, your images an `alt` attributes, and your input's associated {{HTMLElement('label')}}s, `aria-label` is not necessary. But, if present, the `aria-label` will take precedence over the `title`, `alt` and `<label>` as your `iframe`, image, or input's accessible name, respectively.
 
@@ -62,15 +63,13 @@ If you give your {{HTMLElement('iframe')}}s a `title`, your images an `alt` attr
 
 Used in almost all roles **except** roles that can not be provided an accessible name by the author.
 
-The `aria-label` attribute is **NOT** supported in [`code`](/en-US/docs/Web/Accessibility/ARIA/Roles/code_role), [`caption`](/en-US/docs/Web/Accessibility/ARIA/Roles/caption_role), [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Roles/deletion_role), [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Roles/emphasis_role), [`generic`](/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role), [`insertion`](/en-US/docs/Web/Accessibility/ARIA/Roles/_role), [`mark`](/en-US/docs/Web/Accessibility/ARIA/Roles/mark_role), [`paragraph`](/en-US/docs/Web/Accessibility/ARIA/Roles/paragraph_role), [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role)/[`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/none_role), [`strong`](/en-US/docs/Web/Accessibility/ARIA/Roles/strong_role), [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/supscript_role), [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/superscript_role), [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Roles/suggestion_role), [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role), and [`time`](/en-US/docs/Web/Accessibility/ARIA/Roles/time_role)
+The `aria-label` attribute is **NOT** supported in [`code`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`caption`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`generic`](/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role), [`insertion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`mark`](/en-US/docs/Web/Accessibility/ARIA/Roles/mark_role), [`paragraph`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role)/[`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/none_role), [`strong`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Roles/suggestion_role), [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role), and [`time`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 
 > **Note:** The `aria-label` attribute is intended for interactive elements only. When placed on non-interactive elements, such as those listed above, it may not be read or may confuse your users as a non-interactive element that acts like an interactive one.
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-label","ARIA: aria-label Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

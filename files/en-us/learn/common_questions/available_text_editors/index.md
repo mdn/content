@@ -51,7 +51,7 @@ Notice we didn't mention price. Obviously, that matters too, but a product's cos
 
 Here are some popular editors:
 
-<table class="standard-table" &#x22;="">
+<table class="standard-table">
   <thead>
     <tr>
       <th scope="col">Editor</th>
@@ -219,7 +219,7 @@ Here are some popular editors:
     </tr>
     <tr>
       <td>
-        <a href="https://komodoide.com/komodo-edit/" rel="external"
+        <a href="https://www.activestate.com/products/komodo-ide/komodo-edit/" rel="external"
           >Komodo Edit</a
         >
       </td>
@@ -232,7 +232,7 @@ Here are some popular editors:
           >Online Manual</a
         >
       </td>
-      <td><a href="https://komodoide.com/resources/addons/">Yes</a></td>
+      <td><a href="https://www.activestate.com/products/komodo-ide/resources/addons/">Yes</a></td>
     </tr>
     <tr>
       <td>
@@ -453,10 +453,10 @@ If you aren't sure which features you want, or your favorite editor lacks those 
 If you like _lots_ of features and your editor is slowing down because of all your plugins, try using an [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) (integrated development environment). An IDE provides many tools in one interface and it's a bit daunting for beginners, but always an option if your text editor feels too limited. Here are some popular IDEs:
 
 - [Aptana Studio](http://www.aptana.com/)
-- [Eclipse](https://eclipse.org/)
-- [Komodo IDE](https://komodoide.com/)
-- [NetBeans IDE](https://netbeans.org/)
-- [Visual Studio](https://www.visualstudio.com/)
+- [Eclipse](https://www.eclipse.org/)
+- [Komodo IDE](https://www.activestate.com/products/komodo-ide/)
+- [NetBeans IDE](https://netbeans.apache.org//)
+- [Visual Studio](https://visualstudio.microsoft.com/)
 - [WebStorm](https://www.jetbrains.com/webstorm/)
 
 #### Do I need support/help while using my text editor?
@@ -484,11 +484,11 @@ When you install a new text editor, your OS will probably continue to open text 
 
 - Windows
 
-  - [Windows 8](https://windows.microsoft.com/en-us/windows-8/choose-programs-windows-uses-default)
-  - [Windows 7](https://windows.microsoft.com/en-us/windows/change-default-programs#1TC=windows-7)
-  - [older systems](https://pcsupport.about.com/od/fixtheproblem/f/chdefprogram.htm)
+  - [Windows 8](https://support.microsoft.com/en-us/windows?ui=en-US&rs=en-US&ad=US)
+  - [Windows 7](https://support.microsoft.com/en-us/windows/change-which-programs-windows-7-uses-by-default-62fd162f-8c82-0436-806f-c60d69dcf495)
+  - [older systems](https://www.lifewire.com/how-to-change-file-associations-in-windows-2624477)
 
-- [Mac OS X](https://osxdaily.com/2013/08/08/change-default-application-open-files-mac-os-x/)
+- [macOS](https://osxdaily.com/2013/08/08/change-default-application-open-files-mac-os-x/)
 - Linux
 
   - [Ubuntu Unity](https://askubuntu.com/questions/289337/how-can-i-change-file-association-globally)

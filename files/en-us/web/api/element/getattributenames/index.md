@@ -1,6 +1,7 @@
 ---
 title: Element.getAttributeNames()
 slug: Web/API/Element/getAttributeNames
+page-type: web-api-instance-method
 tags:
   - API
   - Attribute
@@ -26,10 +27,18 @@ The names returned by **`getAttributeNames()`** are _qualified_ attribute names,
 ## Syntax
 
 ```js
-let attributeNames = element.getAttributeNames();
+getAttributeNames()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 The following example shows how:
 

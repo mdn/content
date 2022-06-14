@@ -51,7 +51,7 @@ There are other peripheral tools that are part of a typical development environm
 
 ### What operating systems are supported?
 
-_Node_ can be run on Windows, macOS, many flavors of Linux, Docker, etc. There is a full list on the nodejs [Downloads](https://nodejs.org/en/download/) page. Almost any personal computer should have the necessary performance to run Node during development. _Express_ is run in a _Node_ environment, and hence can run on any platform that runs _Node_.
+_Node_ can be run on Windows, macOS, many flavors of Linux, Docker, etc. There is a full list on the Node.js [Downloads](https://nodejs.org/en/download/) page. Almost any personal computer should have the necessary performance to run Node during development. _Express_ is run in a _Node_ environment, and hence can run on any platform that runs _Node_.
 
 In this article we provide setup instructions for Windows, macOS, and Ubuntu Linux.
 
@@ -155,7 +155,7 @@ Next to _Node_ itself, [NPM](https://docs.npmjs.com/) is the most important tool
 
 > **Note:** From Node's perspective, _Express_ is just another package that you need to install using NPM and then require in your own code.
 
-You can manually use NPM to separately fetch each needed package. Typically we instead manage dependencies using a plain-text definition file named [package.json](https://docs.npmjs.com/files/package.json). This file lists all the dependencies for a specific JavaScript "package", including the package's name, version, description, initial file to execute, production dependencies, development dependencies, versions of _Node_ it can work with, etc. The **package.json** file should contain everything NPM needs to fetch and run your application (if you were writing a reusable library you could use this definition to upload your package to the npm repository and make it available for other users).
+You can manually use NPM to separately fetch each needed package. Typically we instead manage dependencies using a plain-text definition file named [package.json](https://docs.npmjs.com/files/package.json/). This file lists all the dependencies for a specific JavaScript "package", including the package's name, version, description, initial file to execute, production dependencies, development dependencies, versions of _Node_ it can work with, etc. The **package.json** file should contain everything NPM needs to fetch and run your application (if you were writing a reusable library you could use this definition to upload your package to the npm repository and make it available for other users).
 
 ### Adding dependencies
 
@@ -192,9 +192,9 @@ The following steps show how you can use NPM to download a package, save it into
     }
     ```
 
-3. Now install Express in the `myapp` directory and save it in the dependencies list of your **package.json** file
+3. Now install Express in the `myapp` directory and save it in the dependencies list of your **package.json** file:
 
-4. ```bash
+   ```bash
     npm install express
     ```
 
@@ -217,7 +217,7 @@ The following steps show how you can use NPM to download a package, save it into
     }
     ```
 
-5. To use the Express library you call the `require()` function in your index.js file to include it in your application.
+4. To use the Express library you call the `require()` function in your **index.js** file to include it in your application.
     Create this file now, in the root of the "myapp" application directory, and give it the following contents:
 
     ```js
@@ -240,19 +240,19 @@ The following steps show how you can use NPM to download a package, save it into
 
     > **Note:** The backticks in the `` `Example app listening on port ${port}!` `` let us interpolate the value of `$port` into the string.
 
-6. You can start the server by calling node with the script in your command prompt:
+5. You can start the server by calling node with the script in your command prompt:
 
     ```bash
     >node index.js
     Example app listening on port 3000
     ```
 
-7. Navigate to the URL `http://127.0.0.1:3000/`.
+6. Navigate to the URL `http://127.0.0.1:3000/`.
     If everything is working, the browser should display the string "Hello World!".
 
 ### Development dependencies
 
-If a dependency is only used during development, you should instead save it as a "development dependency" (so that your package users don't have to install it in production). For example, to use the popular JavaScript Linting tool [eslint](https://eslint.org/) you would call NPM as shown:
+If a dependency is only used during development, you should instead save it as a "development dependency" (so that your package users don't have to install it in production). For example, to use the popular JavaScript Linting tool [ESLint](https://eslint.org/) you would call NPM as shown:
 
 ```bash
 npm install eslint --save-dev
@@ -270,7 +270,7 @@ The following entry would then be added to your application's **package.json**:
 
 ### Running tasks
 
-In addition to defining and fetching dependencies you can also define _named_ scripts in your **package.json** files and call NPM to execute them with the [run-script](https://docs.npmjs.com/cli/run-script) command. This approach is commonly used to automate running tests and parts of the development or build toolchain (e.g., running tools to minify JavaScript, shrink images, LINT/analyze your code, etc).
+In addition to defining and fetching dependencies you can also define _named_ scripts in your **package.json** files and call NPM to execute them with the [run-script](https://docs.npmjs.com/cli/run-script/) command. This approach is commonly used to automate running tests and parts of the development or build toolchain (e.g., running tools to minify JavaScript, shrink images, LINT/analyze your code, etc).
 
 > **Note:** Task runners like [Gulp](https://gulpjs.com/) and [Grunt](https://gruntjs.com/) can also be used to run tests and other external tools.
 
@@ -374,7 +374,7 @@ The DEBUG command creates useful logging, resulting in an output like that shown
 ```bash
 >SET DEBUG=helloworld:* & npm start
 
-> helloworld@0.0.0 start D:\Github\expresstests\helloworld
+> helloworld@0.0.0 start D:\GitHub\expresstests\helloworld
 > node ./bin/www
 
   helloworld:server Listening on port 3000 +0ms
@@ -398,7 +398,7 @@ In the next article we start working through a tutorial to build a complete web 
 - [Installing Node.js via package manager](https://nodejs.org/en/download/package-manager/) (nodejs.org)
 - [Installing Express](https://expressjs.com/en/starter/installing.html) (expressjs.com)
 - [Express Application Generator](https://expressjs.com/en/starter/generator.html) (expressjs.com)
-- [Using Node.js with Windows subsystem for Linux](https://docs.microsoft.com/windows/nodejs/) (docs.microsoft.com)
+- [Using Node.js with Windows subsystem for Linux](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/) (docs.microsoft.com)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 

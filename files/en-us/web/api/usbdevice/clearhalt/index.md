@@ -1,6 +1,7 @@
 ---
 title: USBDevice.clearHalt()
 slug: Web/API/USBDevice/clearHalt
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -23,15 +24,15 @@ terminology) to clear that condition. See the for details.
 ## Syntax
 
 ```js
-var promise = USBDevice.clearHalt(direction, endpointNumber)
+clearHalt(direction, endpointNumber)
 ```
 
 ### Parameters
 
-- direction
+- `direction`
   - : Indicates whether the devices input or output should be cleared. Valid values
     are `'in'` or `'out'`.
-- endpointNumber
+- `endpointNumber`
   - : Indicates the number of the endpoint to clear. The promise will reject if an invalid
     endpoint is supplied.
 
@@ -39,7 +40,7 @@ var promise = USBDevice.clearHalt(direction, endpointNumber)
 
 A {{jsxref("promise")}}.
 
-## Example
+## Examples
 
 The following example shows how to test for and clear a `'stall'` condition
 in the result of a data transfer.

@@ -67,8 +67,8 @@ browser.sidebarAction.setPanel(
 This code toggles the sidebar document when the user clicks a browser action:
 
 ```js
-var thisPanel = browser.runtime.getURL("/this.html");
-var thatPanel = browser.runtime.getURL("/that.html");
+let thisPanel = browser.runtime.getURL("/this.html");
+let thatPanel = browser.runtime.getURL("/that.html");
 
 function toggle(panel) {
   if (panel === thisPanel) {

@@ -1,6 +1,7 @@
 ---
 title: XRInputSource.hand
 slug: Web/API/XRInputSource/hand
+page-type: web-api-instance-property
 tags:
   - API
   - Controller

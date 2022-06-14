@@ -19,7 +19,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var forgettingTab = browser.sessions.forgetClosedTab(
+let forgettingTab = browser.sessions.forgetClosedTab(
   windowId,            // integer
   sessionId            // string
 )

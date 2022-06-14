@@ -2,10 +2,13 @@
 title: scroll-margin-inline-end
 slug: Web/CSS/scroll-margin-inline-end
 tags:
-  - Advanced
   - CSS
+  - CSS Property
   - Reference
+  - Web
   - recipe:css-property
+  - scroll-margin-inline
+  - scroll-margin-inline-end
 browser-compat: css.properties.scroll-margin-inline-end
 ---
 {{CSSRef}}
@@ -25,6 +28,7 @@ scroll-margin-inline-end: 1em;
 scroll-margin-inline-end: inherit;
 scroll-margin-inline-end: initial;
 scroll-margin-inline-end: revert;
+scroll-margin-inline-end: revert-layer;
 scroll-margin-inline-end: unset;
 ```
 

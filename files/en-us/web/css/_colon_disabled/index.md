@@ -23,7 +23,9 @@ input:disabled {
 
 ## Syntax
 
-{{csssyntax}}
+```
+:disabled
+```
 
 ## Examples
 

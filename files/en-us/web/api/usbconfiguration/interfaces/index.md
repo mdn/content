@@ -1,6 +1,7 @@
 ---
 title: USBConfiguration.interfaces
 slug: Web/API/USBConfiguration/interfaces
+page-type: web-api-instance-property
 tags:
   - API
   - Interfaces
@@ -18,13 +19,7 @@ The **`interfaces`** read-only property of the
 {{domxref("USBConfiguration")}} interface returns an array containing instances of the
 {{domxref('USBInterface')}} describing each interface supported by this configuration.
 
-## Syntax
-
-```js
-  var interfaces[] = USBConfiguration.interfaces
-```
-
-### Value
+## Value
 
 An array containing instances of {{domxref('USBInterface')}}.
 

@@ -82,7 +82,7 @@ The object that was passed to the function.
 ### Using Object.defineProperties
 
 ```js
-var obj = {};
+const obj = {};
 Object.defineProperties(obj, {
   'property1': {
     value: true,
@@ -178,5 +178,4 @@ function defineProperties(obj, properties) {
 
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.keys()")}}
-- [Enumerability
-  and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)

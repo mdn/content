@@ -1,6 +1,7 @@
 ---
 title: XRProjectionLayer
 slug: Web/API/XRProjectionLayer
+page-type: web-api-interface
 tags:
   - API
   - AR
@@ -45,7 +46,7 @@ _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 - {{domxref("XRCompositionLayer.mipLevels")}} {{ReadOnlyInline}}
   - : The actual number of mip levels in the color and texture data for the layer.
 - {{domxref("XRCompositionLayer.needsRedraw")}} {{ReadOnlyInline}}
-  - : A boolean signaling that the layer should be rerendered in the next frame.
+  - : A boolean signaling that the layer should be re-rendered in the next frame.
 - {{domxref("XRProjectionLayer.textureArrayLength")}} {{ReadOnlyInline}}
   - : The layer's layer count for array textures when using `texture-array` as the `textureType`.
 - {{domxref("XRProjectionLayer.textureHeight")}} {{ReadOnlyInline}}

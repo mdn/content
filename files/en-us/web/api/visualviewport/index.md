@@ -1,6 +1,7 @@
 ---
 title: VisualViewport
 slug: Web/API/VisualViewport
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -54,7 +55,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 ### Hiding an overlaid box on zoom
 
-This example, taken from the [Visual Viewport README](https://github.com/WICG/visual-viewport), shows how to write a simple bit of code that will hide an overlaid box (which might contain an advert, say) when the user zooms in. This is a nice way to improve the user experience when zooming in on pages. A [live sample](https://wicg.github.io/visual-viewport/examples/hide-on-zoom.html)  is also available.
+This example, taken from the [Visual Viewport README](https://github.com/WICG/visual-viewport), shows how to write a simple bit of code that will hide an overlaid box (which might contain an advert, say) when the user zooms in. This is a nice way to improve the user experience when zooming in on pages. A [live sample](https://wicg.github.io/visual-viewport/examples/hide-on-zoom.html) is also available.
 
 ```js
 var bottomBar = document.getElementById('bottombar');

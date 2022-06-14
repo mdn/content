@@ -24,7 +24,7 @@ Promise.any(iterable);
 ### Parameters
 
 - `iterable`
-  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol) object, such as an {{JSxRef("Array")}}.
+  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) object, such as an {{JSxRef("Array")}}.
 
 ### Return value
 

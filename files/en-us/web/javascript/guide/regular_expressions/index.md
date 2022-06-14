@@ -189,7 +189,7 @@ function escapeRegExp(string) {
 The "g" after the regular expression is an option or flag that performs a global search, looking in the whole string and returning all matches.
 It is explained in detail below in [Advanced Searching With Flags](#advanced_searching_with_flags).
 
-_Why isn't this built into JavaScript?_ There is a proposal to add such a function to RegExp, but it was [rejected by TC39.](https://github.com/benjamingr/RegExp.escape/issues/37)
+_Why isn't this built into JavaScript?_ There is a [proposal](https://github.com/tc39/proposal-regex-escaping) to add such a function to RegExp.
 
 ### Using parentheses
 
@@ -396,6 +396,24 @@ In contrast, {{jsxref("String.prototype.match()")}} method returns all matches a
 ```js
 console.log(str.match(re)); // ["fee ", "fi ", "fo "]
 ```
+
+#### Using unicode regular expressions
+
+The "u" flag is used to create "unicode" regular expressions; that is, regular expressions which support matching against unicode text. This is mainly accomplished through the use of [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), which are supported only within "unicode" regular expressions.
+
+For example, the following regular expression might be used to match against an arbitrary unicode "word":
+
+```js
+/\p{L}*/u
+```
+
+There are a number of other differences between unicode and non-unicode regular expressions that one should be aware of:
+
+- Unicode regular expressions do not support so-called "identity escapes"; that is, patterns where an escaping backslash is not needed and effectively ignored. For example, `/\a/` is a valid regular expression matching the letter 'a', but `/\a/u` is not.
+
+- Curly brackets need to be escaped when not used as [quantifiers](en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers). For example, `/{/` is a valid regular expression matching the curly bracket '{', but `/{/u` is not -- instead, the bracket should be escaped and `/\\{/u` should be used instead.
+
+- The `-` character is interpreted differently within character classes. In particular, for unicode regular expressions, `-` is interpreted as a literal `-` (and not as part of a range) only if it appears at the start or end of a pattern. For example, `/[\w-:]/` is a valid regular expression matching a word character, a `-`, or `:`, but `/\w-:/u` is an invalid regular expression, as `\w` to `:` is not a well-defined range of characters.
 
 ## Examples
 

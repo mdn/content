@@ -314,7 +314,7 @@ Alternatively, you can chain the promise with `catch()`:
 
 ```js
 async function getProcessedData(url) {
-  const v = await downloadData(url).catch(e => { 
+  const v = await downloadData(url).catch(e => {
     return downloadFallbackData(url)
   })
   return processDataInWorker(v)
@@ -339,5 +339,4 @@ it's not already a promise itself (as in the examples).
 - {{jsxref("Operators/async_function", "async function expression", "", 1)}}
 - {{jsxref("AsyncFunction")}} object
 - {{jsxref("Operators/await", "await")}}
-- ["Decorating
-  Async Javascript Functions" on "innolitics.com"](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/)
+- [Decorating Async Javascript Functions](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/) on _innolitics.com_

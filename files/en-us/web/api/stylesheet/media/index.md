@@ -1,6 +1,7 @@
 ---
 title: StyleSheet.media
 slug: Web/API/StyleSheet/media
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -12,7 +13,11 @@ browser-compat: api.StyleSheet.media
 
 The **`media`** property of the {{domxref("StyleSheet")}} interface specifies the intended destination media for style information. It is a read-only, array-like `MediaList` object and can be removed with `deleteMedium()` and added with `appendMedium()`.
 
-## Example
+## Value
+
+A read-only array-like `MediaList` object.
+
+## Examples
 
 ```html
 <!doctype html>
@@ -20,7 +25,7 @@ The **`media`** property of the {{domxref("StyleSheet")}} interface specifies th
 <head>
 <link rel="stylesheet" href="document.css" type="text/css" media="screen" />
 <style rel="stylesheet" type="text/css" media="screen, print">
-body  { background-color: snow; }
+body { background-color: snow; }
 </style>
 </head>
 <body>

@@ -1,6 +1,7 @@
 ---
 title: FileReader.readAsBinaryString()
 slug: Web/API/FileReader/readAsBinaryString
+page-type: web-api-instance-method
 tags:
   - API
   - File API
@@ -25,7 +26,7 @@ Using {{domxref("FileReader.readAsArrayBuffer()")}} is recommended.
 ## Syntax
 
 ```js
-instanceOfFileReader.readAsBinaryString(blob);
+readAsBinaryString(blob)
 ```
 
 ### Parameters
@@ -33,7 +34,11 @@ instanceOfFileReader.readAsBinaryString(blob);
 - `blob`
   - : The {{domxref("Blob")}} or {{domxref("File")}} from which to read.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 var canvas = document.createElement('canvas');

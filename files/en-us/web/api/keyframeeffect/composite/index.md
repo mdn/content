@@ -1,10 +1,10 @@
 ---
 title: KeyframeEffect.composite
 slug: Web/API/KeyframeEffect/composite
+page-type: web-api-instance-property
 tags:
   - API
   - Animation
-  - Experimental
   - KeyframeEffect
   - Property
   - Reference
@@ -13,29 +13,19 @@ tags:
   - web animations api
 browser-compat: api.KeyframeEffect.composite
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
+{{ APIRef("Web Animations API") }}
 
 The **`composite`** property of a {{domxref("KeyframeEffect")}} resolves how an element's animation impacts its underlying property values.
 
-## Syntax
-
-```js
-// getting
-var compositeEnumeration = keyframeEffect.composite;
-
-// setting
-keyframeEffect.composite = 'accumulate';
-```
-
-### Value
+## Value
 
 To understand these values, take the example of a `keyframeEffect` value of `blur(2)` working on an underlying property value of  `blur(3)`.
 
-- replace
+- `replace`
   - : The `keyframeEffect` **overrides** the underlying value it is combined with:  `blur(2)` replaces `blur(3)`.
-- add
+- `add`
   - : The `keyframeEffect` is **added** to the underlying value with which it is combined (aka _additive_):  `blur(2) blur(3)`.
-- accumulate
+- `accumulate`
   - : The keyframeEffect is **accumulated** on to the underlying value:  `blur(5)`.
 
 ## Specifications

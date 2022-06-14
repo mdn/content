@@ -1,6 +1,7 @@
 ---
 title: CredentialsContainer.preventSilentAccess()
 slug: Web/API/CredentialsContainer/preventSilentAccess
+page-type: web-api-instance-method
 tags:
   - API
   - Credential Management API
@@ -25,20 +26,19 @@ website, ensuring this user's login information is not automatically passed on t
 site visit.
 
 Earlier versions of the spec called this method`requireUserMediation()`.
-The [Browser
-compatibility](/en-US/docs/Web/API/CredentialsContainer#browser_compatibility) section has support details.
+The [Browser compatibility](/en-US/docs/Web/API/CredentialsContainer#browser_compatibility) section has support details.
 
 ## Syntax
 
 ```js
-var Promise = CredentialsContainer.preventSilentAccess()
+preventSilentAccess()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 An empty {{jsxref("Promise")}}.
 

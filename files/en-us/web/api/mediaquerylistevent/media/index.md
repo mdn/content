@@ -1,6 +1,7 @@
 ---
 title: MediaQueryListEvent.media
 slug: Web/API/MediaQueryListEvent/media
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -14,18 +15,12 @@ browser-compat: api.MediaQueryListEvent.media
 {{APIRef("CSSOM")}}
 
 The **`media`** read-only property of the
-{{DOMxRef("MediaQueryListEvent")}} interface is a {{DOMxRef("DOMString")}} representing
+{{DOMxRef("MediaQueryListEvent")}} interface is a string representing
 a serialized media query.
 
-## Syntax
+## Value
 
-```js
-var media = MediaQueryListEvent.media;
-```
-
-### Value
-
-A {{DOMxRef("DOMString")}} representing a serialized media query.
+A string representing a serialized media query.
 
 ## Examples
 
@@ -38,7 +33,7 @@ function screenTest(e) {
     para.textContent = 'This is a narrow screen — less than 600px wide.';
     document.body.style.backgroundColor = 'red';
   } else {
-    /* the viewport is more than than 600 pixels wide */
+    /* the viewport is more than 600 pixels wide */
     para.textContent = 'This is a wide screen — more than 600px wide.';
     document.body.style.backgroundColor = 'blue';
   }
@@ -60,8 +55,7 @@ mql.addListener(screenTest);
 ## See also
 
 - [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from
-  code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.multiple
 slug: Web/API/HTMLInputElement/multiple
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -15,7 +16,11 @@ browser-compat: api.HTMLInputElement.multiple
 
 The **`HTMLInputElement.multiple`** property indicates if an input can have more than one value. Firefox currently only supports `multiple` for `<input type="file">`.
 
-## Example
+## Value
+
+A boolean value.
+
+## Examples
 
 ```js
 // fileInput is a <input type=file multiple>

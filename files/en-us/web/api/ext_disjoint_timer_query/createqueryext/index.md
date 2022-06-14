@@ -1,6 +1,7 @@
 ---
 title: EXT_disjoint_timer_query.createQueryEXT()
 slug: Web/API/EXT_disjoint_timer_query/createQueryEXT
+page-type: webgl-extension-method
 tags:
   - API
   - Method
@@ -19,7 +20,7 @@ a set of GL commands.
 ## Syntax
 
 ```js
-WebGLTimerQueryEXT ext.createQueryEXT();
+createQueryEXT()
 ```
 
 ### Parameters

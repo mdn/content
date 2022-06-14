@@ -1,6 +1,7 @@
 ---
 title: SyncEvent.lastChance
 slug: Web/API/SyncEvent/lastChance
+page-type: web-api-instance-property
 tags:
   - API
   - Background Sync
@@ -20,13 +21,7 @@ make further synchronization attempts after the current attempt. This is the val
 passed in the `lastChance` parameter of the
 {{domxref("SyncEvent.SyncEvent","SyncEvent()")}} constructor.
 
-## Syntax
-
-```js
-var lastChance = SyncEvent.lastChance
-```
-
-### Value
+## Value
 
 A boolean value that indicates whether the user agent will not make further
 synchronization attempts after the current attempt.

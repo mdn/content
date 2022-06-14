@@ -1,6 +1,7 @@
 ---
 title: WindowClient.focus()
 slug: Web/API/WindowClient/focus
+page-type: web-api-instance-method
 tags:
   - API
   - Client
@@ -22,9 +23,7 @@ interface gives user input focus to the current client and returns a
 ## Syntax
 
 ```js
-windowClient.focus().then(function(windowClient) {
-  // do something with your WindowClient once it has been focused
-});
+focus()
 ```
 
 ### Parameters
@@ -35,7 +34,7 @@ None.
 
 A {{jsxref("Promise")}} that resolves to the existing {{domxref("WindowClient")}}.
 
-## Example
+## Examples
 
 ```js
 self.addEventListener('notificationclick', function(event) {

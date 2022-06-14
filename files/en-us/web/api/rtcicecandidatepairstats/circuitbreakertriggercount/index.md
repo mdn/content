@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.circuitBreakerTriggerCount
 slug: Web/API/RTCIceCandidatePairStats/circuitBreakerTriggerCount
+page-type: web-api-instance-property
 tags:
   - API
   - Circuit-Breaker
@@ -24,13 +25,7 @@ unexpected connection abort on this specific connection configuration.
 A circuit breaker trigger is fired each time the connection times out or otherwise
 needs to be halted automatically.
 
-## Syntax
-
-```js
-cbtCount = rtcIceCandidatePairStats.circuitBreakerTriggerCount;
-```
-
-### Value
+## Value
 
 An integer value indicating the number of times the circuit-breaker has been triggered
 for the 5-tuple used by this connection. A 5-tuple defining a TCP connection is made up

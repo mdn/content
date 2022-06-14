@@ -1,6 +1,7 @@
 ---
 title: USBDevice.releaseInterface()
 slug: Web/API/USBDevice/releaseInterface
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -21,12 +22,12 @@ claimed interface is released from exclusive access.
 ## Syntax
 
 ```js
-var promise = USBDevice.releaseInterface(interfaceNumber)
+releaseInterface(interfaceNumber)
 ```
 
 ### Parameters
 
-- interfaceNumber
+- `interfaceNumber`
   - : The device-specific index of the currently-claimed interface.
 
 ### Return value

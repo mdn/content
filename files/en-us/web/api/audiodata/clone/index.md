@@ -1,6 +1,7 @@
 ---
 title: AudioData.clone()
 slug: Web/API/AudioData/clone
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,14 +17,14 @@ The **`clone()`** method of the {{domxref("AudioData")}} interface creates a new
 ## Syntax
 
 ```js
-AudioData.clone()
+clone()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 The cloned {{domxref("AudioData")}} object.
 

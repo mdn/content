@@ -1,6 +1,7 @@
 ---
 title: IDBFactory
 slug: Web/API/IDBFactory
+page-type: web-api-interface
 tags:
   - API
   - HTTP

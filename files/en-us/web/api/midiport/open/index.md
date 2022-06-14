@@ -1,6 +1,7 @@
 ---
 title: MIDIPort.open()
 slug: Web/API/MIDIPort/open
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -20,8 +21,7 @@ If the port is already open when this method is called, then the promise will re
 ## Syntax
 
 ```js
-var output = midiAccess.outputs.get(portID);
-output.open(); // opens the port
+open()
 ```
 
 ### Parameters

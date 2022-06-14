@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ondragend
 slug: Web/API/GlobalEventHandlers/ondragend
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -11,7 +12,7 @@ browser-compat: api.GlobalEventHandlers.ondragend
 {{ApiRef("HTML DOM")}}
 
 A {{domxref("GlobalEventHandlers","global event handler")}} for the
-{{event("dragend")}} event.
+{{domxref("HTMLElement/dragend_event", "dragend")}} event.
 
 ## Syntax
 
@@ -28,7 +29,7 @@ targetElement.ondragend = dragendHandler;
 
 This example demonstrates using the
 {{domxref("GlobalEventHandlers.ondragend","ondragend")}} global event handler to set an
-element's {{event("dragend")}} event handler.
+element's {{domxref("HTMLElement/dragend_event", "dragend")}} event handler.
 
 ### HTML
 
@@ -144,4 +145,7 @@ button.addEventListener("click", () => {
 
 ## See also
 
-- {{event("dragend")}}
+- {{domxref("Window")}}: {{domxref("Window/dragend_event", "dragend")}} event
+- {{domxref("Document")}}: {{domxref("Document/dragend_event", "dragend")}} event
+- {{domxref("HTMLElement")}}: {{domxref("HTMLElement/dragend_event", "dragend")}} event
+- {{domxref("SVGElement")}}: {{domxref("SVGElement/dragend_event", "dragend")}} event

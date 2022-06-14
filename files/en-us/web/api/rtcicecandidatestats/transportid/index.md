@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.transportId
 slug: Web/API/RTCIceCandidateStats/transportId
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -29,15 +30,9 @@ The {{domxref("RTCIceCandidateStats")}} dictionary's
 identifies the transport that produced the {{domxref("RTCTransportStats")}} from which
 information about this candidate was taken.
 
-## Syntax
+## Value
 
-```js
-transportID = rtcIceCandidateStats.transportId;
-```
-
-### Value
-
-A {{domxref("DOMString")}} whose value uniquely identifies the transport from which any
+A string whose value uniquely identifies the transport from which any
 transport-related information accumulated in the {{domxref("RTCIceCandidateStats")}} was
 taken. This can be used to compare candidates that would use the same transport, for
 example.

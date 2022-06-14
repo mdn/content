@@ -1,6 +1,7 @@
 ---
 title: USBDevice.deviceSubclass
 slug: Web/API/USBDevice/deviceSubclass
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -19,13 +20,7 @@ The **`deviceSubclass`** read only property of the
 the purpose of loading a USB driver that will work with that device. The other two
 properties are USBDevice.deviceClass and USBDevice.deviceProtocol.
 
-## Syntax
-
-```js
-var serialNumber = USBDevice.deviceSubclass
-```
-
-### Value
+## Value
 
 A number.
 

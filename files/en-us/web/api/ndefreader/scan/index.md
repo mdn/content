@@ -1,6 +1,7 @@
 ---
 title: NDEFReader.scan()
 slug: Web/API/NDEFReader/scan
+page-type: web-api-instance-method
 tags:
   - NDEF
   - Reference

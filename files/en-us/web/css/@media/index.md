@@ -53,7 +53,7 @@ Except when using the `not` or `only` logical operators, the media type is optio
 - `screen`
   - : Intended primarily for screens.
 
-> **Note:** CSS2.1 and [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) defined several additional media types (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, and `aural`), but they were deprecated in [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) and shouldn't be used.
+> **Note:** CSS2.1 and [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) defined several additional media types (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, and `aural`), but they were deprecated in [Media Queries 4](https://drafts.csswg.org/mediaqueries/#media-types) and shouldn't be used.
 
 ### Media features
 
@@ -78,7 +78,7 @@ Media feature expressions test for their presence or value, and are entirely opt
 - {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}}  {{deprecated_inline}}
   - : Width-to-height aspect ratio of the output device.
     Deprecated in Media Queries Level 4.
-- {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}  
+- {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}
   - : Height of the rendering surface of the output device.
     Deprecated in Media Queries Level 4.
 - {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}
@@ -86,6 +86,8 @@ Media feature expressions test for their presence or value, and are entirely opt
 - {{cssxref("@media/display-mode", "display-mode")}}
   - : The display mode of the application, as specified in the web app manifest's [`display`](/en-US/docs/Web/Manifest#display) member.
     Defined in the [Web App Manifest spec](https://w3c.github.io/manifest/#the-display-mode-media-feature).
+- {{cssxref("@media/dynamic-range", "dynamic-range")}}
+  - : Combination of brightness, contrast ratio, and color depth that are supported by the user agent and the output device. Added in Media Queries Level 5.
 - {{cssxref("@media/forced-colors", "forced-colors")}}
   - : Detect whether user agent restricts color palette.
     Added in Media Queries Level 5.
@@ -125,10 +127,12 @@ Media feature expressions test for their presence or value, and are entirely opt
   - : Pixel density of the output device.
 - {{cssxref("@media/scripting", "scripting")}}
   - : Detects whether scripting (i.e. JavaScript) is available.
-    Added in Media Queries Level 5.  
+    Added in Media Queries Level 5.
 - {{cssxref("@media/update-frequency", "update")}}
   - : How frequently the output device can modify the appearance of content.
     Added in Media Queries Level 4.
+- {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
+  - : Combination of brightness, contrast ratio, and color depth that are supported by the video plane of user agent and the output device. Added in Media Queries Level 5.
 - {{cssxref("@media/width", "width")}}
   - : Width of the viewport including width of scrollbar.
 
@@ -173,7 +177,11 @@ Because of this potential, a browser may opt to fudge the returned values in som
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+@media <media-query-list> {
+  <stylesheet>
+}
+```
 
 ## Examples
 

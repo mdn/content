@@ -45,7 +45,7 @@ font-size values in em and ex units used to be affected by the user's minimum fo
 
 font-size values in em and ex units are now based on an "intended font size" that is not affected by the user's minimum font size. In other words, font sizes are always calculated according to the designer's intention and are adjusted for minimum font size afterwards.
 
-See {{Bug(434718)}}, especially its NOT A CASE FOR THE BUG TEMPLATE - The following link points to a Bugzilla attachment, not a Bugzilla bug; if you use the attachment number as a bug number, it becomes nonsense [attachment 322943](https://bugzilla.mozilla.org/attachment.cgi?id=322943) NOT A CASE FOR THE BUG TEMPLATE for a demonstration (must be watched with a minimum font size >= 6 to see the difference: the two box cascades behave differently in Firefox 2, because the em-based font-size "bounces" off the minimum font size).
+See {{Bug(434718)}}, especially its NOT A CASE FOR THE BUG TEMPLATE - The following link points to a Bugzilla attachment, not a Bugzilla bug; if you use the attachment number as a bug number, it becomes nonsense [attachment 322943](https://bug434718.bmoattachments.org/attachment.cgi?id=322943) NOT A CASE FOR THE BUG TEMPLATE for a demonstration (must be watched with a minimum font size >= 6 to see the difference: the two box cascades behave differently in Firefox 2, because the em-based font-size "bounces" off the minimum font size).
 
 ## Security changes
 
@@ -77,7 +77,7 @@ In prior versions of Firefox, there were cases in which when the user submitted 
 
 ### Using remote JARs in frames
 
-Using code in JAR files loaded from other domains is no longer allowed in frames; this mitigates a [potential attack vector](https://www.mozilla.org/security/announce/2008/mfsa2008-23.html).
+Using code in JAR files loaded from other domains is no longer allowed in frames; this mitigates a [potential attack vector](https://www.mozilla.org/en-US/security/advisories/mfsa2008-23/).
 
 ### Changes to same-origin policy for file: URIs
 

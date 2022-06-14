@@ -1,6 +1,7 @@
 ---
 title: RTCSctpTransport.state
 slug: Web/API/RTCSctpTransport/state
+page-type: web-api-instance-property
 tags:
   - API
   - Draft
@@ -22,13 +23,7 @@ The **`state`** read-only property of the
 {{DOMxRef("RTCSctpTransport")}} interface provides information which describes a Stream
 Control Transmission Protocol (**{{Glossary("SCTP")}}**) transport state.
 
-## Syntax
-
-```js
-var myState = sctpTransport.state;
-```
-
-### Value
+## Value
 
 A string whose value is taken from the `RTCSctpTransportState` enumerated
 type. Its value is one of the following:

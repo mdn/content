@@ -1,11 +1,13 @@
 ---
 title: Trusted Types API
 slug: Web/API/Trusted_Types_API
+page-type: web-api-overview
 tags:
   - API
   - Overview
   - Reference
   - Trusted Types
+spec-urls: https://w3c.github.io/webappsec-trusted-types/dist/spec/
 ---
 {{DefaultAPISidebar("Trusted Types API")}}
 
@@ -41,7 +43,7 @@ A policy is a factory for Trusted Types. Web developers can specify a set of pol
 - {{domxref("TrustedScript")}}
   - : Represents a string to insert into an injection sink that could lead to the script being executed.
 - {{domxref("TrustedScriptURL")}}
-  - : Represents a string to insert into an injection sink that will parse it as an URL of an external script resource.
+  - : Represents a string to insert into an injection sink that will parse it as a URL of an external script resource.
 - {{domxref("TrustedTypePolicy")}}
   - : Defines the functions used to create the above Trusted Type objects.
 - {{domxref("TrustedTypePolicyFactory")}}
@@ -72,9 +74,7 @@ Read more about this example, and discover other ways to sanitize input in the a
 
 ## Specifications
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Trusted Types')}} | {{Spec2('Trusted Types')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

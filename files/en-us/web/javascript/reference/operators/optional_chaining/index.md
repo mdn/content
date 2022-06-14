@@ -152,6 +152,8 @@ let nestedProp = obj?.['prop' + 'Name'];
 
 ### Optional chaining not valid on the left-hand side of an assignment
 
+It is invalid to try to assign to the result of an optional chaining expression:
+
 ```js
 let object = {};
 object?.property = 1; // Uncaught SyntaxError: Invalid left-hand side in assignment
@@ -159,7 +161,10 @@ object?.property = 1; // Uncaught SyntaxError: Invalid left-hand side in assignm
 
 ### Array item access with optional chaining
 
+You can use [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation) for optional chaining on arrays:
+
 ```js
+const arr = ['a', 'b', 'c', 'd']
 let arrayItem = arr?.[42];
 ```
 

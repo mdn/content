@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.strokeText()
 slug: Web/API/CanvasRenderingContext2D/strokeText
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -36,13 +37,14 @@ on it.
 ## Syntax
 
 ```js
-CanvasRenderingContext2D.strokeText(text, x, y [, maxWidth]);
+strokeText(text, x, y)
+strokeText(text, x, y, maxWidth)
 ```
 
 ### Parameters
 
 - `text`
-  - : A {{domxref("DOMString")}} specifying the text string to render into the context.
+  - : A string specifying the text string to render into the context.
     The text is rendered using the settings specified by
     {{domxref("CanvasRenderingContext2D.font","font")}},
     {{domxref("CanvasRenderingContext2D.textAlign","textAlign")}},
@@ -61,7 +63,7 @@ CanvasRenderingContext2D.strokeText(text, x, y [, maxWidth]);
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

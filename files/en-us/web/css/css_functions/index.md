@@ -93,7 +93,7 @@ The math functions allow CSS numeric values to be written as mathematical expres
 - {{cssxref("abs", "abs()")}} {{Experimental_Inline}}
   - : Takes a calculation and returns the absolute value.
 - {{cssxref("acos", "acos()")}} {{Experimental_Inline}}
-  - : An inverse trigonometric function the angle returned must be normalized to the range \[0deg, 180deg];.
+  - : An inverse trigonometric function the angle returned must be normalized to the range \[0deg, 180deg].
 - {{cssxref("asin", "asin()")}} {{Experimental_Inline}}
   - : An inverse trigonometric function the angle returned must be normalized to the range \[-90deg, 90deg].
 - {{cssxref("atan", "atan()")}} {{Experimental_Inline}}
@@ -173,6 +173,10 @@ Functions which specify different color representations. These may be used anywh
   - : Lab color is device-independent and specifies physical measurements of color.
 - {{cssxref("color_value/lch", "lch()")}} {{Experimental_Inline}}
   - : LCH color is device-independent and specifies color using polar coordinates for chroma and hue.
+- {{cssxref("color_value/oklab", "oklab()")}} {{Experimental_Inline}}
+  - : OKLab color is device-independent and specifies physical measurements of color.
+- {{cssxref("color_value/oklch", "oklch()")}} {{Experimental_Inline}}
+  - : OKLCH color is device-independent and specifies color using polar coordinates for chroma and hue.
 - {{cssxref("color_value/rgb", "rgb()")}}
   - : The RGB color model defines a given color according to its red, green, and blue components. An optional alpha component represents the color's transparency.
 - {{cssxref("color_value/rgba", "rgba()")}}

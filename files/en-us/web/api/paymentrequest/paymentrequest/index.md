@@ -1,6 +1,7 @@
 ---
 title: PaymentRequest()
 slug: Web/API/PaymentRequest/PaymentRequest
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -21,7 +22,8 @@ process of generating, validating, and submitting a payment request.
 ## Syntax
 
 ```js
-var paymentRequest = new PaymentRequest(methodData, details, [options]);
+new PaymentRequest(methodData, details)
+new PaymentRequest(methodData, details, options)
 ```
 
 ### Parameters
@@ -36,7 +38,7 @@ var paymentRequest = new PaymentRequest(methodData, details, [options]);
       - : For early implementations of the spec, this was a sequence of identifiers for
         payment methods that the merchant website accepts. Starting with more recent
         browsers, this parameter is more generic than credit cards, it is a single
-        {{domxref("DOMString")}}, and the meaning of the `data` parameter
+        string, and the meaning of the `data` parameter
         changes with the `supportedMethods`. For example, the Example Pay payment method
         is selected by specifying the string `https://example.com/pay` here.
     - `data`

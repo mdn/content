@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.vertexAttribPointer()
 slug: Web/API/WebGLRenderingContext/vertexAttribPointer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -20,7 +21,7 @@ buffer object and specifies its layout.
 ## Syntax
 
 ```js
-void gl.vertexAttribPointer(index, size, type, normalized, stride, offset);
+vertexAttribPointer(index, size, type, normalized, stride, offset)
 ```
 
 ### Parameters
@@ -42,7 +43,7 @@ void gl.vertexAttribPointer(index, size, type, normalized, stride, offset);
     - `gl.UNSIGNED_SHORT`: unsigned 16-bit integer, with values in \[0,
       65535]
     - `gl.FLOAT`: 32-bit IEEE floating point number
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
       - `gl.HALF_FLOAT`: 16-bit IEEE floating point number
@@ -72,7 +73,7 @@ void gl.vertexAttribPointer(index, size, type, normalized, stride, offset);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -147,7 +148,7 @@ back to an integer in the vertex shader (e.g. `(int) floatNumber`), or use
 The vertex shader code may include a number of attributes, but we don't need to specify
 the values for each attribute. Instead, we can supply a default value that will be
 identical for all vertices. We can call
-`{{domxref("WebGLRenderingContext.disableVertexAttribArray()", "gl.disableVertexAttribArray()")}}`
+{{domxref("WebGLRenderingContext.disableVertexAttribArray()", "gl.disableVertexAttribArray()")}}
 to tell WebGL to use the default value, while calling
 {{domxref("WebGLRenderingContext.enableVertexAttribArray()",
   "gl.enableVertexAttribArray()")}} will read the values from the array buffer as
@@ -161,7 +162,7 @@ value.
 
 The default value is `vec4(0.0, 0.0, 0.0, 1.0)` by default but we can
 specify a different default value with
-`{{domxref("WebGLRenderingContext.vertexAttrib()", "gl.vertexAttrib[1234]f[v]()")}}`.
+{{domxref("WebGLRenderingContext.vertexAttrib()", "gl.vertexAttrib[1234]f[v]()")}}.
 
 For example, your vertex shader may be using a position and a color attribute. Most
 meshes have the color specified at a per-vertex level, but some meshes are of a uniform
@@ -309,6 +310,5 @@ gl.enableVertexAttribArray(locTexUV);
 
 ## See also
 
-- [Vertex
-  Specification](https://www.khronos.org/opengl/wiki/Vertex_Specification) on the OpenGL wiki
+- [Vertex Specification](https://www.khronos.org/opengl/wiki/Vertex_Specification) on the OpenGL wiki
 - {{domxref("WebGL2RenderingContext.vertexAttribIPointer()")}}

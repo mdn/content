@@ -1,6 +1,7 @@
 ---
 title: HIDDevice.productName
 slug: Web/API/HIDDevice/productName
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,15 +14,9 @@ browser-compat: api.HIDDevice.productName
 
 The **`productName`** read-only property of the {{domxref("HIDDevice")}} interface returns the product name of the connected HID device.
 
-## Syntax
+## Value
 
-```js
-let productName = HIDDevice.productName;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}}.
+A string.
 
 ## Examples
 

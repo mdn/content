@@ -1,6 +1,7 @@
 ---
-title: MediaRecorder.isTypeSupported
+title: MediaRecorder.isTypeSupported()
 slug: Web/API/MediaRecorder/isTypeSupported
+page-type: web-api-static-method
 tags:
   - API
   - Audio
@@ -24,7 +25,7 @@ should be able to successfully record.
 ## Syntax
 
 ```js
-var canRecord = MediaRecorder.isTypeSupported(mimeType)
+isTypeSupported(mimeType)
 ```
 
 ### Parameters
@@ -40,7 +41,7 @@ fail if there are insufficient resources to support the recording and encoding p
 If the value is `false`, the user agent is incapable of recording the
 specified format.
 
-## Example
+## Examples
 
 ```js
 var types = ["video/webm",
@@ -66,14 +67,10 @@ for (var i in types) {
 
 ## See also
 
-- [MediaStream Recording
-  API](/en-US/docs/Web/API/MediaStream_Recording_API)
-- [Using
-  the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [Guide to media types and formats on the
-  web](/en-US/docs/Web/Media/Formats)
-- [The "codecs" parameter in
-  common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
+- [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)
+- [Using the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
+- [The "codecs" parameter in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
 - {{domxref("MediaStreamTrack")}}
 - {{domxref("MediaStream")}}
 - {{domxref("MediaCapabilities")}}

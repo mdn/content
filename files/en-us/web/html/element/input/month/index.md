@@ -15,7 +15,7 @@ tags:
   - Number
   - Reference
   - month
-browser-compat: html.elements.input.input-month
+browser-compat: html.elements.input.type_month
 ---
 
 {{HTMLRef("Input_types")}}
@@ -29,9 +29,9 @@ The control's UI varies in general from browser to browser; at the moment suppor
 In browsers that don't support `month` inputs, the control degrades gracefully to a simple [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text), although there may be automatic validation of the entered text to ensure it's formatted as expected.
 
 For those of you using a browser that doesn't support `month`, the screenshot below shows what it looks like in Chrome and Opera.
-Clicking the down arrow on the right hand side brings up a date picker that lets you select the month and year.
+Clicking the down arrow on the right-hand side brings up a date picker that lets you select the month and year.
 
-![Month control on chrome browser](month-control-chrome.png)
+![Month control on Chrome browser](month-control-chrome.png)
 
 The Microsoft Edge `month` control looks like this:
 
@@ -42,7 +42,7 @@ The Microsoft Edge `month` control looks like this:
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing a month and year, or
+        A string representing a month and year, or
         empty.
       </td>
     </tr>
@@ -67,6 +67,10 @@ The Microsoft Edge `month` control looks like this:
       <td><code>value</code></td>
     </tr>
     <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>Methods</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}},
@@ -79,7 +83,7 @@ The Microsoft Edge `month` control looks like this:
 
 ## Value
 
-A {{domxref("DOMString")}} representing the value of the month and year entered into the input, in the form YYYY-MM (four or more digit year, then a hyphen ("`-`"), followed by the two-digit month).
+A string representing the value of the month and year entered into the input, in the form YYYY-MM (four or more digit year, then a hyphen ("`-`"), followed by the two-digit month).
 The format of the month string used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid local month string")}}.
 
 ### Setting a default value

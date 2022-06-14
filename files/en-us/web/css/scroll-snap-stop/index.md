@@ -20,9 +20,11 @@ scroll-snap-stop: normal;
 scroll-snap-stop: always;
 
 /* Global values */
-scroll-snap-type: inherit;
-scroll-snap-type: initial;
-scroll-snap-type: unset;
+scroll-snap-stop: inherit;
+scroll-snap-stop: initial;
+scroll-snap-stop: revert;
+scroll-snap-stop: revert-layer;
+scroll-snap-stop: unset;
 ```
 
 ## Syntax

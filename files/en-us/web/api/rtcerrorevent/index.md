@@ -1,6 +1,7 @@
 ---
 title: RTCErrorEvent
 slug: Web/API/RTCErrorEvent
+page-type: web-api-interface
 tags:
   - API
   - Error

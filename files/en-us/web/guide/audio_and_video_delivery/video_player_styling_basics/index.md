@@ -14,7 +14,7 @@ In the previous [Cross browser video player article](/en-US/docs/Web/Guide/Audio
 
 ![A video player with play, stop, volume and fullscreen controls, showing an image of a soldier.](video-player-styled.png)
 
-You can find the code for the [updated, styled example](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-styled) on Github, and [view it live](https://iandevlin.github.io/mdn/video-player-styled/).
+You can find the code for the [updated, styled example](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-styled) on GitHub, and [view it live](https://iandevlin.github.io/mdn/video-player-styled/).
 
 ## Preliminary modifications from the original example
 

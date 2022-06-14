@@ -1,6 +1,7 @@
 ---
 title: Locks.name
 slug: Web/API/Lock/name
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -24,17 +25,11 @@ across multiple tabs, workers, or other code within the origin. For example, if 
 tab of a web application should be synchronizing network resources with an offline
 database, it could use a lock name such as `"net_db_sync"`.
 
-## Syntax
+## Value
 
-```js
-var name = Lock.name
-```
+A string.
 
-### Value
-
-A {{domxref("DOMString")}}.
-
-## Example
+## Examples
 
 The following examples show how the name property passed in the call
 to {{domxref('LockManager.request()')}}. `LockManager` is the object returned

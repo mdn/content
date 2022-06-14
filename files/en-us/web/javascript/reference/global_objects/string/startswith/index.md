@@ -75,8 +75,7 @@ if (!String.prototype.startsWith) {
 ```
 
 A more robust (fully ES2015 specification compliant), but less performant and
-compact, Polyfill is available [on GitHub by
-Mathias Bynens](https://github.com/mathiasbynens/String.prototype.startsWith).
+compact, Polyfill is available [on GitHub by Mathias Bynens](https://github.com/mathiasbynens/String.prototype.startsWith).
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: NDEFReader.write()
 slug: Web/API/NDEFReader/write
+page-type: web-api-instance-method
 tags:
   - NDEF
   - Reference
@@ -23,7 +24,7 @@ NDEFReader.write(message);
 
 - `message`
 
-  - : The message to be written, one of {{DOMxRef("DOMString")}},
+  - : The message to be written, one of string,
     {{DOMxRef("BufferSource")}}, or an array of records. A record has the following members:
 
     - `data` {{optional_inline}}
@@ -59,7 +60,7 @@ NDEFReader.write(message);
 
   - : An object with the following properties:
 
-    - `overwrite` -- A {{JSxRef("Boolean")}} specifying whether or not
+    - `overwrite` -- A boolean value specifying whether or not
       existing records should be overwritten, if such exists.
     - `signal` -- An optional {{DOMxRef("AbortSignal")}} that allows the current write operation to be canceled.
 
@@ -92,7 +93,7 @@ following:
 
 ### Write a text string
 
-The following example shows how to write a {{DOMxRef("DOMString")}} to an NFC tag and process any errors that occur.
+The following example shows how to write a string to an NFC tag and process any errors that occur.
 
 ```js
 const ndef = new NDEFReader();

@@ -76,7 +76,7 @@ elements are sorted according to the return value of the compare function (all
 
 | `compareFunction(a, b)` return value | sort order                         |
 |--------------------------------------|------------------------------------|
-| > 0                                  | sort `b` before `a`                |
+| > 0                                  | sort `a` after `b`                 |
 | < 0                                  | sort `a` before `b`                |
 | === 0                                | keep original order of `a` and `b` |
 
@@ -222,7 +222,7 @@ items.sort(function (a, b) {
 The `compareFunction` can be invoked multiple times per element within the
 array. Depending on the `compareFunction`'s nature, this may yield a high
 overhead. The more work a `compareFunction` does and the more elements there
-are to sort, it may be more efficient to use [map](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) for
+are to sort, it may be more efficient to use [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) for
 sorting. The idea is to traverse the array once to extract the actual values used for
 sorting into a temporary array, sort the temporary array, and then traverse the
 temporary array to achieve the right order.
@@ -250,7 +250,7 @@ mapped.sort((a, b) => {
 const result = mapped.map(v => data[v.i]);
 ```
 
-There is an open source library available called [mapsort](https://null.house/open-source/mapsort) which applies this approach.
+There is an open source library available called [mapsort](https://github.com/Pimm/mapsort) which applies this approach.
 
 ### Sort stability
 
@@ -310,7 +310,6 @@ Before version 10 (or EcmaScript 2019), sort stability was not guaranteed, meani
 - [Polyfill of `Array.prototype.sort` with modern behavior like stable sort in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.reverse()")}}
 - {{jsxref("String.prototype.localeCompare()")}}
-- [About the stability of the algorithm used
-  by V8 engine](https://v8.dev/blog/array-sort)
+- [About the stability of the algorithm used by V8 engine](https://v8.dev/blog/array-sort)
 - [V8 sort stability](https://v8.dev/features/stable-sort)
 - [Mathias Bynens' sort stability demo](https://mathiasbynens.be/demo/sort-stability)

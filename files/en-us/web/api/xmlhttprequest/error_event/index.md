@@ -1,6 +1,7 @@
 ---
 title: 'XMLHttpRequest: error event'
 slug: Web/API/XMLHttpRequest/error_event
+page-type: web-api-event
 tags:
   - API
   - Error

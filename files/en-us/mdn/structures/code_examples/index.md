@@ -53,7 +53,7 @@ By static examples, we are talking about static code blocks that show how a feat
 
 ```js
 // This is a JS example
-var test = "Hello";
+const test = "Hello";
 console.log(test);
 ```
 
@@ -63,11 +63,56 @@ Optionally, you might want to show a static image of the code's resulting output
 
 ## Traditional live samples
 
-Traditional live samples are inserted into the page using the [`EmbedLiveSample`](https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedLiveSample.ejs) macro. An \\{{EmbedLiveSample}} call dynamically grabs the code blocks in the same document section as itself and puts them into a document, which it then inserts into the page inside an {{htmlelement("iframe")}}. See our [Live samples guide](/en-US/docs/MDN/Structures/Live_samples) for more information.
+Traditional live samples are inserted into the page using the [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) macro. An \\{{EmbedLiveSample}} call dynamically grabs the code blocks in the same document section as itself and puts them into a document, which it then inserts into the page inside an {{htmlelement("iframe")}}. See our [Live samples guide](/en-US/docs/MDN/Structures/Live_samples) for more information.
+
+### Formatting live samples
+
+If you write a live sample in the "Examples" section, provide a descriptive H3 heading (`###`) for this live sample example. Ideally, write a short description of the example explaining the scenario and what you are hoping to demonstrate. Then add subsections with following H4 headings (`####`), in the order listed:
+
+- HTML
+- CSS
+- JavaScript
+- Result
+Write the code blocks in the respective subsections listed above.
+In the **Result** subsection, add the call to the [`EmbedLiveSample` macro](/en-US/docs/MDN/Structures/Live_samples#live_sample_macros). Preferably, include some more prose in this subsection to describe the result.
+If you're not using a particular language type (for example, if you are not using JavaScript) or if you are hiding it, then you should omit the corresponding heading.
+
+For example:
+
+````
+## Examples
+
+### Styling a paragraph
+
+In this example, we're using CSS to style paragraphs that have the `fancy` class set.
+
+#### HTML
+
+```html
+<p>I'm not fancy.</p>
+
+<p class="fancy">But I am!</p>
+```
+
+#### CSS
+
+```css
+p.fancy {
+  color: red;
+}
+```
+
+#### Result
+
+\{{EmbedLiveSample("Styling a paragraph")}}
+
+Only the `<p>` element with `class="fancy"` will get styled `red`.
+
+````
 
 ## GitHub live samples
 
-GitHub live samples are inserted into the page using the [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedGHLiveSample.ejs) macro. An \\{{EmbedGHLiveSample}} call dynamically grabs the document at a specified URL (which has to be inside the **mdn** GitHub organization), and inserts into the page inside an {{htmlelement("iframe")}}.
+GitHub live samples are inserted into the page using the [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs) macro. An \\{{EmbedGHLiveSample}} call dynamically grabs the document at a specified URL (which has to be inside the **mdn** GitHub organization), and inserts into the page inside an {{htmlelement("iframe")}}.
 
 These work in a very similar way to Traditional live samples, but they are a lot simpler:
 
@@ -103,12 +148,12 @@ The interactive examples are intended to be used at the top of MDN reference pag
 - The UI is more performance-intensive than other code examples; you shouldn't put more than one on each MDN article you apply them to.
 - They are not intended for large code examples — the UI supports a range of fixed sizes, which only really work for short (say, 10–15 line) examples.
 
-If you want to submit an example, you can find out how at the [interactive examples repo Contribution guide](https://github.com/mdn/interactive-examples/blob/master/CONTRIBUTING.md).
+If you want to submit an example, you can find out how at the [interactive examples repo Contribution guide](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md).
 
 If you find a page that doesn't have an associated interactive example, you are welcome to contribute one!
 
 ### Interactive example demo
 
-The [`EmbedInteractiveExample`](https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedInteractiveExample.ejs) macro is used to embed finished examples into MDN pages. For example, the macro call \\{{EmbedInteractiveExample("pages/js/array-push.html")}} displays the following code example:
+The [`EmbedInteractiveExample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedInteractiveExample.ejs) macro is used to embed finished examples into MDN pages. For example, the macro call \\{{EmbedInteractiveExample("pages/js/array-push.html")}} displays the following code example:
 
 {{EmbedInteractiveExample("pages/js/array-push.html")}}Try adjusting the code to see what happens, and playing with the controls.

@@ -44,16 +44,18 @@ reduceRight(function(accumulator, currentValue, index, array) { /* ... */ }, ini
 
 - `callbackFn`
 
-  - : Function to execute on each value in the array, taking four arguments:
+  - : Function to execute on each value in the array.
+
+    The function is called with the following arguments:
 
     - `accumulator`
       - : The value previously returned in the last invocation of the callback, or
         `initialValue`, if supplied. (See below.)
     - `currentValue`
       - : The current element being processed in the array.
-    - `index`{{optional_inline}}
+    - `index`
       - : The index of the current element being processed in the array.
-    - `array`{{optional_inline}}
+    - `array`
       - : The array `reduceRight()` was called upon.
 
 - `initialValue` {{optional_inline}}

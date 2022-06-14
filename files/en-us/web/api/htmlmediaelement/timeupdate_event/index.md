@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: timeupdate event'
 slug: Web/API/HTMLMediaElement/timeupdate_event
+page-type: web-api-event
 tags:
   - Audio
   - Event
@@ -13,7 +14,7 @@ browser-compat: api.HTMLMediaElement.timeupdate_event
 
 The `timeupdate` event is fired when the time indicated by the `currentTime` attribute has been updated.
 
-The event frequency is dependant on the system load, but will be thrown between about 4Hz and 66Hz (assuming the event handlers don't take longer than 250ms to run). User agents are encouraged to vary the frequency of the event based on the system load and the average cost of processing the event each time, so that the UI updates are not any more frequent than the user agent can comfortably handle while decoding the video.
+The event frequency is dependent on the system load, but will be thrown between about 4Hz and 66Hz (assuming the event handlers don't take longer than 250ms to run). User agents are encouraged to vary the frequency of the event based on the system load and the average cost of processing the event each time, so that the UI updates are not any more frequent than the user agent can comfortably handle while decoding the video.
 
 <table class="properties">
   <tbody>
@@ -46,7 +47,7 @@ The event frequency is dependant on the system load, but will be thrown between 
 
 ## Examples
 
-These examples add an event listener for the HTMLMediaElement's `timeupdate` event, then post a message when that event handler has reacted to the event firing. Remember, the event frequency is dependant on the system load.
+These examples add an event listener for the HTMLMediaElement's `timeupdate` event, then post a message when that event handler has reacted to the event firing. Remember, the event frequency is dependent on the system load.
 
 Using `addEventListener()`:
 

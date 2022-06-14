@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getProgramInfoLog()
 slug: Web/API/WebGLRenderingContext/getProgramInfoLog
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,7 +19,7 @@ occurred during failed linking or validation of `WebGLProgram` objects.
 ## Syntax
 
 ```js
-gl.getProgramInfoLog(program);
+getProgramInfoLog(program)
 ```
 
 ### Parameters
@@ -28,7 +29,7 @@ gl.getProgramInfoLog(program);
 
 ### Return value
 
-A {{domxref("DOMString")}} that contains diagnostic messages, warning messages, and
+A string that contains diagnostic messages, warning messages, and
 other information about the last linking or validation operation. When a
 {{domxref("WebGLProgram")}} object is initially created, its information log will be a
 string of length 0.

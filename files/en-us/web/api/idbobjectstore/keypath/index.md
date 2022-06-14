@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.keyPath
 slug: Web/API/IDBObjectStore/keyPath
+page-type: web-api-instance-property
 tags:
   - API
   - Database
@@ -15,25 +16,18 @@ browser-compat: api.IDBObjectStore.keyPath
 {{ APIRef("IndexedDB") }}
 
 The **`keyPath`** read-only property of the
-{{domxref("IDBObjectStore")}} interface returns the [key
-path](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path) of this object store.
+{{domxref("IDBObjectStore")}} interface returns the [key path](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path) of this object store.
 
 If this property is null, the application must provide a key for each modification
 operation.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var mykeyPath = objectStore.keyPath;
-```
-
-### Value
+## Value
 
 Any value type.
 
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store using `add()`. After the object store has been
@@ -102,5 +96,4 @@ function addData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

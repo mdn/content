@@ -1,6 +1,7 @@
 ---
 title: PushManager.getSubscription()
 slug: Web/API/PushManager/getSubscription
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -19,20 +20,20 @@ It returns a {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscriptio
 ## Syntax
 
 ```js
-PushManager.getSubscription().then(function(pushSubscription) { /* ... */ } );
+getSubscription()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 A {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}} object or `null`.
 
-## Example
+## Examples
 
-This code snippet is taken from a [push messaging and notification sample](https://github.com/GoogleChrome/samples/blob/gh-pages/push-messaging-and-notifications). (No live demo is available.)
+This code snippet is taken from a [push messaging and notification sample](https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications). (No live demo is available.)
 
 ```js
 // We need the service worker registration to check for a subscription

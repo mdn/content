@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getActiveUniform()
 slug: Web/API/WebGLRenderingContext/getActiveUniform
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -20,7 +21,7 @@ generic library creation.
 ## Syntax
 
 ```js
-WebGLActiveInfo WebGLRenderingContext.getActiveUniform(program, index);
+getActiveUniform(program, index)
 ```
 
 ### Parameters

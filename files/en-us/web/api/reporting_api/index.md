@@ -1,6 +1,7 @@
 ---
 title: Reporting API
 slug: Web/API/Reporting_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental
@@ -8,6 +9,7 @@ tags:
   - Reference
   - Reporting
   - Secure context
+spec-urls: https://w3c.github.io/reporting/#intro
 ---
 {{SeeCompatTable}}{{APIRef("Reporting API")}}
 
@@ -120,9 +122,7 @@ This causes a deprecation report to be generated; because of the event handler w
 
 ## Specifications
 
-| Specification                                                | Status | Comment |
-| ------------------------------------------------------------ | ------ | ------- |
-| [Reporting API spec](https://w3c.github.io/reporting/#intro) |        |         |
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -131,7 +131,7 @@ Support is at an early stage right now. Firefox supports the JavaScript API and 
 - JavaScript API: `dom.reporting.enabled` (enabled in nightly only)
 - HTTP header: `dom.reporting.header.enabled`
 
-Chrome is also working on an implementation: [information about Chrome implementation](https://developers.google.com/web/updates/2018/09/reportingapi).
+Chrome is also working on an implementation: [information about Chrome implementation](https://web.dev/reporting-api/).
 
 ## See also
 

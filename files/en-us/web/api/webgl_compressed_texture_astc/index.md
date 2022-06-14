@@ -1,6 +1,7 @@
 ---
 title: WEBGL_compressed_texture_astc
 slug: Web/API/WEBGL_compressed_texture_astc
+page-type: webgl-extension
 tags:
   - API
   - Reference
@@ -13,11 +14,11 @@ browser-compat: api.WEBGL_compressed_texture_astc
 
 The **`WEBGL_compressed_texture_astc`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes [Adaptive Scalable Texture Compression](https://en.wikipedia.org/wiki/Adaptive_Scalable_Texture_Compression) (ASTC) compressed texture formats to WebGL.
 
-For more information, see the article [Using ASTC Texture Compression for Game Assets](https://developer.nvidia.com/astc-texture-compression-for-game-assets) by nvidia.
+For more information, see the article [Using ASTC Texture Compression for Game Assets](https://developer.nvidia.com/astc-texture-compression-for-game-assets) by NVIDIA.
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-> **Note:** ASTC compression is typically available on Mali ARM GPUs, Intel GPUs, and Nividia Tegra chips.
+> **Note:** ASTC compression is typically available on Mali ARM GPUs, Intel GPUs, and NVIDIA Tegra chips.
 >
 > This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
 

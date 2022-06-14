@@ -1,6 +1,7 @@
 ---
 title: FetchEvent.respondWith()
 slug: Web/API/FetchEvent/respondWith
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -73,19 +74,18 @@ resulting {{domxref("Window.location")}}. This means sites can still provide an
 ## Syntax
 
 ```js
-fetchEvent.respondWith(
-  // Promise that resolves to a Response.
-);
+respondWith(response)
 ```
 
 ### Parameters
 
-A {{domxref("Response")}} or a {{jsxref("Promise")}} that resolves to a
+- `response`
+  - : A {{domxref("Response")}} or a {{jsxref("Promise")}} that resolves to a
 `Response`. Otherwise, a network error is returned to Fetch.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -133,9 +133,7 @@ addEventListener('fetch', event => {
 
 ## See also
 
-- [Using
-  Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Is ServiceWorker
-  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)

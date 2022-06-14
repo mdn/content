@@ -1,6 +1,7 @@
 ---
 title: EncodedAudioChunk.type
 slug: Web/API/EncodedAudioChunk/type
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,7 +14,7 @@ browser-compat: api.EncodedAudioChunk.type
 
 The **`type`** read-only property of the {{domxref("EncodedAudioChunk")}} interface returns a value indicating whether the audio chunk is a key chunk, which does not relying on other frames for decoding.
 
-### Value
+## Value
 
 A string, one of:
 

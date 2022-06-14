@@ -1,6 +1,7 @@
 ---
 title: File and Directory Entries API support in Firefox
 slug: Web/API/File_and_Directory_Entries_API/Firefox_support
+page-type: guide
 tags:
   - API
   - Chrome
@@ -18,7 +19,7 @@ tags:
 
 The original File System API was created to let browsers implement support for accessing a sandboxed virtual file system on the user's storage device. Work to standardize the specification was abandoned back in 2012, but by that point, Google Chrome included its own implementation of the API. Over time, a number of popular sites and Web applications came to use it, often without providing any means of falling back to standard APIs or even checking to be sure the API is available before using it. Mozilla instead opted to implement other APIs which can be used to solve many of the same problems, such as [IndexedDB](/en-US/docs/Web/API/IndexedDB_API); see the blog post [Why no FileSystem API in Firefox?](https://hacks.mozilla.org/2012/07/why-no-filesystem-api-in-firefox/) for more insights.
 
-This has caused a number of popular web sites not to work properly on browsers other than Chrome. Because of that, an attempt was made to create a spec offering the features of Google's API which consensus could be reached on. The result was the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API). This subset of the API provided by Chrome is still not fully specified; however, for web compatibility reasons, it was decided to implement a subset of the API in Firefox; this was introduced in Firefox 50.
+This has caused a number of popular websites not to work properly on browsers other than Chrome. Because of that, an attempt was made to create a spec offering the features of Google's API which consensus could be reached on. The result was the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API). This subset of the API provided by Chrome is still not fully specified; however, for web compatibility reasons, it was decided to implement a subset of the API in Firefox; this was introduced in Firefox 50.
 
 This article describes how the Firefox implementation of the File and Directory Entries API differs from other implementations and/or the specification.
 

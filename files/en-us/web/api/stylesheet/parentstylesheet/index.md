@@ -1,6 +1,7 @@
 ---
 title: StyleSheet.parentStyleSheet
 slug: Web/API/StyleSheet/parentStyleSheet
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -15,13 +16,11 @@ The **`parentStyleSheet`** property of the
 {{domxref("StyleSheet")}} interface returns the style sheet, if any, that is including
 the given style sheet.
 
-## Syntax
+## Value
 
-```js
-objRef = stylesheet.parentStyleSheet
-```
+A {{domxref("StyleSheet")}} object.
 
-## Example
+## Examples
 
 ```js
 // Find the top level stylesheet

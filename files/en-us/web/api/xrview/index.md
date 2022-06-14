@@ -1,6 +1,7 @@
 ---
 title: XRView
 slug: Web/API/XRView
+page-type: web-api-interface
 tags:
   - API
   - AR
@@ -63,7 +64,7 @@ If in the future it becomes possible for each view to render into a different la
 
 ### Preparing to render every view for a pose
 
-To draw everything the user sees, each frame requires iterating over the list of views returned by the {{domxref("XRViewerPose")}} object's  {{domxref("XRViewerPose.views", "views")}} list:
+To draw everything the user sees, each frame requires iterating over the list of views returned by the {{domxref("XRViewerPose")}} object's {{domxref("XRViewerPose.views", "views")}} list:
 
 ```js
 for (let view of pose.views) {

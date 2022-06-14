@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.relList
 slug: Web/API/HTMLAnchorElement/relList
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -21,22 +22,20 @@ element and the current document.
 The property itself is read-only, meaning you can't substitute the
 {{domxref("DOMTokenList")}} with another one, but its contents can still be changed.
 
-## Syntax
+## Value
+
+A string.
+
+## Examples
 
 ```js
-var relstr = anchorElt.relList;
-```
-
-## Example
-
-```js
-var anchors = document.getElementsByTagName("a");
-var length = anchors.length;
-for (var i = 0; i < length; i++) {
-  var list = anchors[i].relList;
-  var listLength = list.length;
+const anchors = document.getElementsByTagName("a");
+const length = anchors.length;
+for (let i = 0; i < length; i++) {
+  const list = anchors[i].relList;
+  const listLength = list.length;
   console.log("New anchor node found with", listLength, "link types in relList.");
-  for (var j = 0; j < listLength; j++) {
+  for (let j = 0; j < listLength; j++) {
     console.log(list[j]);
   }
 }
@@ -54,5 +53,5 @@ for (var i = 0; i < length; i++) {
 
 - The equivalent property on {{HTMLElement("area")}} and {{HTMLElement("link")}},
   {{domxref("HTMLAreaElement.relList")}} and {{domxref("HTMLLinkElement.relList")}}.
-- The very same list but as a space-separated tokens in a {{domxref("DOMString")}}:
+- The very same list but as a space-separated tokens in a string:
   {{domxref("HTMLAnchorElement.rel")}}

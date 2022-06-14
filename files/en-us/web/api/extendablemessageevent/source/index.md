@@ -1,6 +1,7 @@
 ---
 title: ExtendableMessageEvent.source
 slug: Web/API/ExtendableMessageEvent/source
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -17,13 +18,7 @@ The **`source`** read-only property of the
 {{domxref("ExtendableMessageEvent")}} interface returns a reference to the
 {{domxref("Client")}} object from which the message was sent.
 
-## Syntax
-
-```js
-var mySource = extendableMessageEvent.source;
-```
-
-### Value
+## Value
 
 A {{domxref("Client")}}, {{domxref("ServiceWorker")}} or {{domxref("MessagePort")}}
 object.
@@ -64,10 +59,7 @@ self.onmessage = function(e) {
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service
-  workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker
-  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Channel Messaging](/en-US/docs/Web/API/Channel_Messaging_API)

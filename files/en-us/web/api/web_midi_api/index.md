@@ -1,16 +1,18 @@
 ---
 title: Web MIDI API
 slug: Web/API/Web_MIDI_API
+page-type: web-api-overview
 tags:
   - API
   - MIDI
   - Overview
   - Reference
   - Web MIDI API
+spec-urls: https://webaudio.github.io/web-midi-api/
 ---
 {{DefaultAPISidebar("Web MIDI API")}}{{SecureContext_Header}}
 
-The Web MIDI API connects to and interacts with with Musical Instrument Digital Interface (MIDI) Devices.
+The Web MIDI API connects to and interacts with Musical Instrument Digital Interface (MIDI) Devices.
 
 The interfaces deal with the practical aspects of sending and receiving MIDI messages. Therefore, the API can be used for musical and non-musical uses, with any MIDI device connected to your computer.
 
@@ -96,9 +98,7 @@ function startLoggingMIDIInput( midiAccess, indexOfPort ) {
 
 ## Specifications
 
-| Specification                                            |
-| -------------------------------------------------------- |
-| [Web MIDI API](https://webaudio.github.io/web-midi-api/) |
+{{Specifications}}
 
 ## See also
 

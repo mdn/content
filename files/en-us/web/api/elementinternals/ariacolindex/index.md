@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaColIndex
 slug: Web/API/ElementInternals/ariaColIndex
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,16 +18,9 @@ The **`ariaColIndex`** property of the {{domxref("ElementInternals")}} interface
 
 > **Note:** Setting aria attributes on `ElementInternals` allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
 
-## Syntax
+## Value
 
-```js
-let ariaColIndex = ElementInternals.ariaColIndex;
-ElementInternals.ariaColIndex = ariaColIndex;
-```
-
-### Value
-
-A {{domxref("DOMString")}} which contains an integer.
+A string which contains an integer.
 
 ## Examples
 
@@ -46,4 +40,4 @@ this.internals_.ariaColIndex = "2";
 
 ## See also
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

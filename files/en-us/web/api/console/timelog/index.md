@@ -1,6 +1,7 @@
 ---
 title: console.timeLog()
 slug: Web/API/console/timeLog
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -23,7 +24,7 @@ details and examples.
 ## Syntax
 
 ```js
-console.timeLog(label);
+timeLog(label)
 ```
 
 ### Parameters
@@ -31,7 +32,7 @@ console.timeLog(label);
 - `label`
   - : The name of the timer to log to the console.
 
-### Return
+### Return value
 
 If no label parameter included:
 

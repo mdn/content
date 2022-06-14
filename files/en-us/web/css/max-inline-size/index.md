@@ -42,6 +42,7 @@ max-inline-size: fit-content(20em);
 max-inline-size: inherit;
 max-inline-size: initial;
 max-inline-size: revert;
+max-inline-size: revert-layer;
 max-inline-size: unset;
 ```
 

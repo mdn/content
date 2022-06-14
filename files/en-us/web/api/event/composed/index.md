@@ -1,6 +1,7 @@
 ---
 title: Event.composed
 slug: Web/API/Event/composed
+page-type: web-api-instance-property
 tags:
   - Property
   - Read-only
@@ -55,7 +56,7 @@ customElements.define('open-shadow',
       const shadowRoot = this.attachShadow({
         mode: 'open'
       });
-      
+
       shadowRoot.appendChild(pElem);
     }
   }

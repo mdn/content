@@ -16,7 +16,7 @@ tags:
 
 The UserScriptOptions object represents the content scripts to register. It has similar syntax to the contentScript options supported by browser.contentScripts.register. The differences are:
 
-- it does not support a css property (use browser.contentScripts.register to dynamically register/unregister stylesheets)
+- it does not support a CSS property (use browser.contentScripts.register to dynamically register/unregister stylesheets)
 - It does support an optional scriptMetadata property (as a plain JSON object which contains some metadata properties associated to the registered userScripts)
 
 The UserScriptOptions object has the following properties:

@@ -1,6 +1,7 @@
 ---
 title: OffscreenCanvas
 slug: Web/API/OffscreenCanvas
+page-type: web-api-interface
 tags:
   - API
   - Canvas
@@ -12,6 +13,8 @@ browser-compat: api.OffscreenCanvas
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 The **`OffscreenCanvas`** interface provides a canvas that can be rendered off screen. It is available in both the window and [worker](/en-US/docs/Web/API/Web_Workers_API) contexts.
+
+`OffscreenCanvas` is a {{glossary("Transferable objects","transferable object")}}.
 
 {{AvailableInWorkers}}
 

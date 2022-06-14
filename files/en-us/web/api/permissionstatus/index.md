@@ -1,6 +1,7 @@
 ---
 title: PermissionStatus
 slug: Web/API/PermissionStatus
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -26,9 +27,9 @@ The **`PermissionStatus`** interface of the [Permissions API](Permissions_API) p
 - `PermissionStatus.status`{{readonlyinline}} {{deprecated_inline}}
   - : Returns the state of a requested permission; one of `'granted'`, `'denied'`, or `'prompt'`. Later versions of the specification replace this with {{domxref("PermissionStatus.state")}}.
 
-### Event Handler
+### Events
 
-- {{domxref("PermissionStatus.onchange")}}
+- {{domxref("PermissionStatus.change_event", "change")}}
   - : An event called whenever `PermissionStatus.status` changes.
 
 ## Example

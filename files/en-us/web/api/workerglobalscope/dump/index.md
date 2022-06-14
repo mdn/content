@@ -1,6 +1,7 @@
 ---
 title: WorkerGlobalScope.dump()
 slug: Web/API/WorkerGlobalScope/dump
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -19,13 +20,17 @@ Output from `dump()` is _not_ sent to the browser's developer tools console. To 
 ## Syntax
 
 ```js
-dump(message);
+dump(message)
 ```
 
 ### Parameters
 
 - `message`
   - : A string containing the message to log.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

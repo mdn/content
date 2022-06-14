@@ -42,7 +42,7 @@ Since the cloned nodes are not exposed, care must be taken when using [CSS](/en-
 
 For security reasons, browsers may apply the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) on `use` elements and may refuse to load a cross-origin URL in the {{SVGAttr("href")}} attribute. There is currently no defined way to set a cross-origin policy for `use` elements.
 
-> **Warning:** Since SVG 2, the {{SVGAttr("xlink:href")}} attribute is deprecated in favor of {{SVGAttr("href")}}. See {{SVGAttr("xlink:href")}} page for more information. However, {{SVGAttr("xlink:href")}} can still be required in practice for cross-browser compatibility (see the [compatibility table](#browser_compatibility) below).
+> **Warning:** Since SVG 2, the {{SVGAttr("xlink:href")}} attribute is deprecated in favor of {{SVGAttr("href")}}. See {{SVGAttr("xlink:href")}} page for more information.
 
 ## Attributes
 

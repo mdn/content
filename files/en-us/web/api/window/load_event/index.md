@@ -1,6 +1,7 @@
 ---
 title: 'Window: load event'
 slug: Web/API/Window/load_event
+page-type: web-api-event
 tags:
   - Event
   - HTML DOM
@@ -72,7 +73,7 @@ window.onload = (event) => {
 ```css hidden
 body {
   display: grid;
-  grid-template-areas: "control  log";
+  grid-template-areas: "control log";
 }
 
 .controls {

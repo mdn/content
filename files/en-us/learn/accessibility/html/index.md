@@ -276,9 +276,9 @@ By UI controls, we mean the main parts of web documents that users interact with
 
 One key aspect of the accessibility of UI controls is that by default, browsers allow them to be manipulated by the keyboard. You can try this out using our [native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) example (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)). Open this in a new tab, and try pressing the tab key; after a few presses, you should see the tab focus start to move through the different focusable elements. The focused elements are given a highlighted default style in every browser (it differs slightly between different browsers) so that you can tell what element is focused.
 
-![](button-focused-unfocused.png)
+![Three buttons with the text "Click me!", "Click me too!", and "And me!" inside them respectively. The third button has a blue outline around it to indicate current tab focus.](button-focused-unfocused.png)
 
-> **Note:** From Firefox 84 you can also enable an overlay that shows the page tabbing order. For more information see: [Accessibility Inspector > Show web page tabbing order](/en-US/docs/Tools/Accessibility_inspector#show_web_page_tabbing_order).
+> **Note:** From Firefox 84 you can also enable an overlay that shows the page tabbing order. For more information see: [Accessibility Inspector > Show web page tabbing order](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order).
 
 You can then press Enter/Return to follow a focused link or press a button (we've included some JavaScript to make the buttons alert a message), or start typing to enter text in a text input. Other form elements have different controls; for example, the {{htmlelement("select")}} element can have its options displayed and cycled between using the up and down arrow keys.
 
@@ -412,7 +412,7 @@ As an added bonus, in most browsers associating a label with a form input means 
 
 > **Note:** You can see some good and bad form examples in [good-form.html](https://mdn.github.io/learning-area/accessibility/html/good-form.html) and [bad-form.html](https://mdn.github.io/learning-area/accessibility/html/bad-form.html).
 
-You can find a nice explanation of the importance of proper text labels, and how to investigate text label issues using the [Firefox Accessibility Inspector](/en-US/docs/Tools/Accessibility_inspector), in the following video:
+You can find a nice explanation of the importance of proper text labels, and how to investigate text label issues using the [Firefox Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html), in the following video:
 
 {{EmbedYouTube("YhlAVlfH0rQ")}}
 
@@ -489,7 +489,7 @@ One thing to consider is whether your images have meaning inside your content, o
 
 If you do want to provide extra contextual information, you should put it in the text surrounding the image, or inside a `title` attribute, as shown above. In this case, most screen readers will read out the alt text, the title attribute, and the filename. In addition, browsers display title text as tooltips when moused over.
 
-![](title-attribute.png)
+![Screenshot of a red Tyrannosaurus Rex with the text "The mozilla red dinosaur" displayed as tooltip on mouseover.](title-attribute.png)
 
 Let's have another quick look at the fourth method:
 
@@ -511,7 +511,7 @@ Images also have another mechanisms available for providing descriptive text. Fo
 <img src="dinosaur.png" longdesc="dino-info.html">
 ```
 
-This sounds like a good idea, especially for infographics like big charts with lots of information on them that could perhaps be represented as an accessible data table instead (see [Accessible data tables](/en-US/docs/Learn/Accessibility/HTML#accessible_data_tables)). However, `longdesc` is not supported consistently by screen readers, and the content is completely inaccessible to non-screen reader users. It is arguably much better to include the long description on the same page as the image, or link to it with a regular link.
+This sounds like a good idea, especially for infographics like big charts with lots of information on them that could perhaps be represented as an accessible data table instead (see [Accessible data tables](#accessible_data_tables)). However, `longdesc` is not supported consistently by screen readers, and the content is completely inaccessible to non-screen reader users. It is arguably much better to include the long description on the same page as the image, or link to it with a regular link.
 
 HTML5 includes two new elements — {{htmlelement("figure")}} and {{htmlelement("figcaption")}} — which are supposed to associate a figure of some kind (it could be anything, not necessarily an image) with a figure caption:
 
@@ -587,7 +587,7 @@ A skip link, also known as skipnav, is an `a` element placed as close as possibl
 Skip links are especially useful for people who navigate with the aid of assistive technology such as switch control, voice command, or mouth sticks/head wands, where the act of moving through repetitive links can be a laborious task.
 
 - [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
-- [How–to: Use Skip Navigation links - The A11Y Project](https://www.a11yproject.com/posts/2013-05-11-skip-nav-links/)
+- [How–to: Use Skip Navigation links - The A11Y Project](https://www.a11yproject.com/posts/skip-nav-links/)
 - [MDN Understanding WCAG, Guideline 2.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [Understanding Success Criterion 2.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 

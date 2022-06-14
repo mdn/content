@@ -1,6 +1,7 @@
 ---
 title: Window.navigator
 slug: Web/API/Window/navigator
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -16,11 +17,9 @@ The **`Window.navigator`** read-only property returns a
 reference to the {{domxref("Navigator")}} object, which has methods and properties about
 the application running the script.
 
-## Syntax
+## Value
 
-```js
-navigatorObject = window.navigator
-```
+The {{domxref("navigator")}} object.
 
 ## Examples
 

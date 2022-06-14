@@ -1,6 +1,7 @@
 ---
 title: IDBIndex.name
 slug: Web/API/IDBIndex/name
+page-type: web-api-instance-property
 tags:
   - API
   - Database
@@ -19,16 +20,9 @@ interface contains a string which names the index.
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-var indexName = IDBIndex.name;
-IDBIndex.name = indexName;
-```
-
-### Value
-
-A {{domxref("DOMString")}} specifying a name for the index.
+A string specifying a name for the index.
 
 ### Exceptions
 
@@ -44,7 +38,7 @@ name.
 - `ConstraintError` {{domxref("DOMException")}}
   - : Thrown if an index is already using the specified `name`.
 
-## Example
+## Examples
 
 In the following example we open a transaction and an object store, then get the
 index `lName` from a simple contacts database. We then open a basic cursor on
@@ -57,9 +51,7 @@ The name of the index is logged to the console: it should be returned as
 `lName`.
 
 Finally, we iterate through each record, inserting the data into an HTML table. For a
-complete working example, see our [IndexedDB-examples
-demo repo](https://github.com/mdn/indexeddb-examples/tree/master/idbindex) ([View the
-example live](https://mdn.github.io/indexeddb-examples/idbindex)).
+complete working example, see our [IndexedDB-examples demo repo](https://github.com/mdn/indexeddb-examples/tree/master/idbindex) ([View the example live](https://mdn.github.io/indexeddb-examples/idbindex/)).
 
 ```js
 function displayDataByIndex() {
@@ -108,5 +100,4 @@ function displayDataByIndex() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).

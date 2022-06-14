@@ -1,6 +1,7 @@
 ---
 title: Document.mozSetImageElement()
 slug: Web/API/Document/mozSetImageElement
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -19,7 +20,7 @@ element ID.
 ## Syntax
 
 ```js
-document.mozSetImageElement(imageElementId, imageElement);
+mozSetImageElement(imageElementId, imageElement)
 ```
 
 ### Parameters
@@ -31,7 +32,11 @@ document.mozSetImageElement(imageElementId, imageElement);
   to that image element string. Specify `null` to remove the background
   element.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 This example changes the background of a {{ HTMLElement("div") }} block each time the
 block is clicked by the user.
@@ -54,13 +59,13 @@ The CSS defined by the {{ HTMLElement("style") }} block above is used by our {{
   HTMLElement("div") }} to use an element with the id "canvasbg" as its background.
 
 ```js
-var c = 0x00;
+let c = 0x00;
 function clicked() {
-  var canvas = document.createElement("canvas");
+  const canvas = document.createElement("canvas");
   canvas.setAttribute("width", 100);
   canvas.setAttribute("height", 100);
 
-  var ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext('2d');
   ctx.fillStyle = "#" + c.toString(16) + "0000";
   ctx.fillRect(25, 25, 75, 75);
 

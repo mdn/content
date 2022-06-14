@@ -13,15 +13,14 @@ browser-compat: http.headers.If-Unmodified-Since
 The HyperText Transfer Protocol (HTTP) **`If-Unmodified-Since`** request header makes the
 request for the resource conditional: the server will send the requested resource or accept it in
 the case of a {{HTTPMethod("POST")}} or another non-{{Glossary("Safe/HTTP", "safe")}} method only if the resource has not been modified after the date specified by this HTTP header. If the resource has been modified
-after the specified date, the response will be a {{HTTPStatus("412 Precondition Failed")}} error.
+after the specified date, the response will be a {{HTTPStatus("412", "412 Precondition Failed")}} error.
 
 The **`If-Unmodified-Since`** HTTP header is commonly used in the following situations:
 
 - In conjunction with non-{{Glossary("Safe/HTTP", "safe")}} methods, like {{HTTPMethod("POST")}},
-  this header can be used to implement an [optimistic
-  concurrency control](https://en.wikipedia.org/wiki/Optimistic_concurrency_control), as is done by some wikis: editions are rejected if the
+  this header can be used to implement an [optimistic concurrency control](https://en.wikipedia.org/wiki/Optimistic_concurrency_control), as is done by some wikis: editions are rejected if the
   stored document has been modified since the original was retrieved.
-- In conjunction with a range request using the {{HTTPHeader("If-Range")}} header, this header can
+- In conjunction with a range request using the {{HTTPHeader("Range")}} header, this header can
   be used to ensure that the new fragment requested comes from an unmodified document.
 
 <table class="properties">
@@ -50,7 +49,7 @@ If-Unmodified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> G
 - \<day>
   - : A 2-digit day number of the month. Examples: "04", "23".
 - \<month>
-  - : A 3-letter description of the month. One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" (case sensitive).
+  - : A 3-letter description of the month. One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" (case-sensitive).
 - \<year>
   - : A 4-digit year number. Examples: "1990", "2016".
 - \<hour>
@@ -82,5 +81,5 @@ If-Unmodified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 - {{HTTPHeader("If-Modified-Since")}}
 - {{HTTPHeader("If-Match")}}
 - {{HTTPHeader("If-None-Match")}}
-- {{HTTPHeader("If-Range")}}
+- {{HTTPHeader("Range")}}
 - {{HTTPStatus("412", "412 Precondition Failed")}}

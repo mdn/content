@@ -1,6 +1,7 @@
 ---
 title: Element.ariaSort
 slug: Web/API/Element/ariaSort
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,16 +16,9 @@ browser-compat: api.Element.ariaSort
 
 The **`ariaSort`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute, which indicates if items in a table or grid are sorted in ascending or descending order.
 
-## Syntax
+## Value
 
-```js
-var ariaSort = element.ariaSort;
-element.ariaSort = ariaSort
-```
-
-### Value
-
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"ascending"`
   - : Items are sorted in ascending order by this column.
@@ -86,4 +80,4 @@ console.log(el.ariaSort); // ascending
 
 ## See also
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

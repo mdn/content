@@ -4,7 +4,6 @@ slug: Web/CSS/:where
 tags:
   - ':where'
   - CSS
-  - Experimental
   - NeedsBrowserCompatibility
   - NeedsContent
   - NeedsExample
@@ -137,7 +136,9 @@ However, selectors inside `:where()` have specificity 0, so the orange footer li
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:where( <complex-selector-list> )
+```
 
 ## Specifications
 

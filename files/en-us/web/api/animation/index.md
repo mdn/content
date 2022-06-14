@@ -1,6 +1,7 @@
 ---
 title: Animation
 slug: Web/API/Animation
+page-type: web-api-interface
 tags:
   - API
   - Animations
@@ -83,7 +84,7 @@ You can see this in action in our simple [replace indefinite animations demo](ht
 
 - {{domxref("animation.commitStyles()")}} for committing the end styling state of an animation to the element being animated, even after that animation has been removed.
 - The {{domxref("animation/remove_event", "remove")}} event on the {{domxref("Animation")}} interface fires when the animation is removed (i.e., put into an `active` replace state).
-- {{domxref("animation.persist()")}} for when you explicitly want an animations to be retained.
+- {{domxref("animation.persist()")}} for when you explicitly want an animation to be retained.
 - {{domxref("animation.replaceState")}} to return the replace state of the animation. This will be `active` if the animation has been removed, or `persisted` if {{domxref("Animation.persist", "persist()")}} has been invoked.
 
 ## Accessibility concerns
@@ -92,7 +93,7 @@ Blinking and flashing animation can be problematic for people with cognitive con
 
 Consider providing a mechanism for pausing or disabling animation, as well as using the [Reduced Motion Media Query](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) to create a complimentary experience for users who have expressed a preference for no animated experiences.
 
-- [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity)
+- [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
 - [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
 - [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
 - [MDN Understanding WCAG, Guideline 2.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content)

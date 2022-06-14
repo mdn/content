@@ -1,6 +1,7 @@
 ---
 title: ReadableStream.tee()
 slug: Web/API/ReadableStream/tee
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -29,7 +30,7 @@ will generally lock it for the duration, preventing other readers from locking i
 ## Syntax
 
 ```js
-var teedStreams = readableStream.tee();
+tee()
 ```
 
 ### Parameters
@@ -42,16 +43,15 @@ An {{jsxref("Array")}} containing two {{domxref("ReadableStream")}} instances.
 
 ### Exceptions
 
-- TypeError
-  - : The source stream is not a `ReadableStream`.
+- {{jsxref("TypeError")}}
+  - : Thrown if the source stream is not a `ReadableStream`.
 
 ## Examples
 
 In the following simple example, a previously-created stream is teed, then both
 resulting streams (contained in two members of a generated array) are passed to a
 function that reads the data out of the two streams and prints each stream's chunks
-sequentially to a different part of the UI. See [Simple tee
-example](https://mdn.github.io/dom-examples/streams/simple-tee-example/) for the full code.
+sequentially to a different part of the UI. See [Simple tee example](https://mdn.github.io/dom-examples/streams/simple-tee-example/) for the full code.
 
 ```js
 function teeStream() {

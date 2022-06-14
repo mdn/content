@@ -1,6 +1,7 @@
 ---
 title: fetch()
 slug: Web/API/fetch
+page-type: web-api-global-function
 tags:
   - API
   - Experimental
@@ -42,7 +43,8 @@ rather than the directive of the resources it's retrieving.
 ## Syntax
 
 ```js
-const fetchResponsePromise = fetch(resource [, init])
+fetch(resource)
+fetch(resource, init)
 ```
 
 ### Parameters
@@ -67,12 +69,11 @@ const fetchResponsePromise = fetch(resource [, init])
     - `headers`
       - : Any headers you want to add to your request, contained within a
         {{domxref("Headers")}} object or an object literal with {{jsxref("String")}}
-        values. Note that [some names
-        are forbidden](/en-US/docs/Glossary/Forbidden_header_name).
+        values. Note that [some names are forbidden](/en-US/docs/Glossary/Forbidden_header_name).
     - `body`
       - : Any body that you want to add to your request: this can be a
         {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}},
-        {{domxref("URLSearchParams")}}, {{domxref("USVString")}}, or
+        {{domxref("URLSearchParams")}}, string, or
         {{domxref("ReadableStream")}} object. Note that a request using the
         `GET` or `HEAD` method cannot have a body.
     - `mode`
@@ -104,11 +105,10 @@ const fetchResponsePromise = fetch(resource [, init])
           See [WHATWG fetch standard](https://fetch.spec.whatwg.org/#requests) for more information.
 
     - `referrer`
-      - : A {{domxref("USVString")}} specifying the referrer of the request. This can be a
+      - : A string specifying the referrer of the request. This can be a
         same-origin URL, `about:client`, or an empty string.
     - `referrerPolicy`
-      - : Specifies the [referrer
-        policy](https://w3c.github.io/webappsec-referrer-policy/#referrer-policies) to use for the request. May be one of `no-referrer`,
+      - : Specifies the [referrer policy](https://w3c.github.io/webappsec-referrer-policy/#referrer-policies) to use for the request. May be one of `no-referrer`,
         `no-referrer-when-downgrade`, `same-origin`,
         `origin`, `strict-origin`,
         `origin-when-cross-origin`,
@@ -131,10 +131,10 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
 
 ### Exceptions
 
-- `AbortError`
+- `AbortError` {{domxref("DOMException")}}
   - : The request was aborted due to a call to the {{domxref("AbortController")}}
     {{domxref("AbortController.abort", "abort()")}} method.
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : Can occur for the following reasons:
 
 <table>
@@ -264,8 +264,7 @@ fetch('https://example.com/', {
 
 ## Examples
 
-In our [Fetch
-Request example](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (see [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)) we
+In our [Fetch Request example](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (see [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)) we
 create a new {{domxref("Request")}} object using the relevant constructor, then fetch it
 using a `fetch()` call. Since we are fetching an image, we run
 {{domxref("Response.blob()")}} on the response to give it the proper MIME type so it will be
@@ -282,7 +281,7 @@ fetch(myRequest)
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${ response.status }`);
     }
-    
+
     return response.blob();
   })
   .then((response) => {
@@ -290,9 +289,7 @@ fetch(myRequest)
   });
 ```
 
-In the [Fetch
-with init then Request example](https://github.com/mdn/fetch-examples/blob/master/fetch-with-init-then-request/index.html) (see [Fetch
-Request init live](https://mdn.github.io/fetch-examples/fetch-with-init-then-request/)), we do the same thing except that we pass in an
+In the [Fetch with init then Request example](https://github.com/mdn/fetch-examples/blob/master/fetch-with-init-then-request/index.html) (see [Fetch Request init live](https://mdn.github.io/fetch-examples/fetch-with-init-then-request/)), we do the same thing except that we pass in an
 `init` object when we invoke `fetch()`:
 
 ```js

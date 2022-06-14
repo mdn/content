@@ -1,6 +1,7 @@
 ---
 title: PerformanceEntry.duration
 slug: Web/API/PerformanceEntry/duration
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -37,13 +38,7 @@ The value returned by this property depends on the performance entry's
 
 This property is {{readonlyInline}}.
 
-## Syntax
-
-```js
-entry.duration;
-```
-
-### Return value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} representing the duration of the
 {{domxref("PerformanceEntry","performance entry")}}. If the duration concept doesn't
@@ -57,7 +52,7 @@ the difference between the {{domxref("PerformanceResourceTiming.responseEnd")}} 
 {{domxref("PerformanceEntry.startTime")}}
 {{domxref("DOMHighResTimeStamp","timestamps")}}.
 
-## Example
+## Examples
 
 The following example shows the use of the `duration` property.
 

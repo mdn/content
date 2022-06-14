@@ -11,6 +11,9 @@ tags:
   - cell role
   - Reference
   - document structure role
+spec-urls:
+  - https://w3c.github.io/aria/#cell
+  - https://w3c.github.io/aria-practices/#cell
 ---
 The `cell` value of the ARIA _role_ attribute identifies an element as being a cell in a tabular container that does not contain column or row header information. To be supported, the cell must be nested in an element with the role of `row`.
 
@@ -32,7 +35,7 @@ A better, more semantic way of writing the cells above would be to use the seman
 
 ## Description
 
-The element with `role="cell"` is a cell within a row, optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role), within a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role). If the cell is in a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), opt for  [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role). Using native HTML {{HTMLElement('td')}} elements, whenever possible, is strongly encouraged.
+The element with `role="cell"` is a cell within a row, optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role), within a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role). If the cell is in a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), opt for [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role). Using native HTML {{HTMLElement('td')}} elements, whenever possible, is strongly encouraged.
 
 Each element with `role="cell"` MUST be nested in a container element with [`role="row"`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role). That row, in turn, can be nested within an element with [`role="rowgroup"`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role), and should be nested within a `grid`, `table` or `treegrid`. If a cell contains column or row header information, use the `columnheader` or `rowheader` roles, respectively. If the cell does not contain header information and is nested in a `grid` or `treegrid`, the role of `gridcell` may be more appropriate.
 
@@ -159,10 +162,7 @@ When applied to a {{HTMLElement('td')}}, it returns cell semantics to the elemen
 
 ## Specifications
 
-| Specification                                                                            | Status                                           |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#cell","ARIA Cell Role")}}                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#cell","ARIA Cell Role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See also
 

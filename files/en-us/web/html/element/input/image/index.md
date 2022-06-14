@@ -14,7 +14,7 @@ tags:
   - Input Type
   - Number
   - Reference
-browser-compat: html.elements.input.input-image
+browser-compat: html.elements.input.type_image
 ---
 
 {{HTMLRef}}
@@ -50,6 +50,10 @@ browser-compat: html.elements.input.input-image
     <tr>
       <td><strong>IDL attributes</strong></td>
       <td>None.</td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
       <td><strong>Methods</strong></td>

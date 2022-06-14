@@ -1,6 +1,7 @@
 ---
 title: Web Locks API
 slug: Web/API/Web_Locks_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental
@@ -9,6 +10,7 @@ tags:
   - Reference
   - Web Locks API
   - lock
+spec-urls: https://w3c.github.io/web-locks/
 ---
 {{SeeCompatTable}}{{APIRef("Web Locks")}}{{DefaultAPISidebar}}{{securecontext_header}}
 
@@ -109,9 +111,7 @@ A deadlock occurs when a process can no longer make progress because each part i
 
 ## Specifications
 
-| Specification                    | Status                       | Comment             |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Web Locks')}} | {{Spec2('Web Locks')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

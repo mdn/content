@@ -33,7 +33,7 @@ Returns the frame ID of the target frame, or -1 if the frame doesn't exist.
 
 ## Examples
 
-This code recursivelly walks descendant frames and gets parent frame IDs.
+This code recursively walks descendant frames and gets parent frame IDs.
 
 ```js
 let parents = {};

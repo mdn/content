@@ -1,6 +1,7 @@
 ---
 title: Screen.orientation
 slug: Web/API/Screen/orientation
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -16,21 +17,15 @@ browser-compat: api.Screen.orientation
 The **`orientation`** read-only property of the
 {{DOMxRef("Screen")}} interface returns the current orientation of the screen.
 
-## Syntax
-
-```js
-var orientation = screen.orientation;
-```
-
-### Return value
+## Value
 
 An instance of {{DOMxRef("ScreenOrientation")}} representing the orientation of the
 screen.
 
-Note that older, prefixed versions returned a {{DOMxRef("DOMString")}} equivalent to
+Note that older, prefixed versions returned a string equivalent to
 {{DOMxRef("ScreenOrientation.type")}}.
 
-## Example
+## Examples
 
 ```js
 var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;

@@ -6,25 +6,36 @@ tags:
   - Security
   - WebMechanics
 ---
-The _site_ of a piece of web content is determined by the _registrable domain_ of the host within the origin. This is computed by consulting a _Public Suffix List_ to find the portion of the host which is counted as the _public suffix_ (e.g. `com`, `org` or `co.uk`).
+Informally, a _site_ is a website, which is a collection of web pages, served from the same domain, and maintained by a single organization.
 
-The concept of a _site_ is used in [SameSite cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie#directives), as well as a web application's [Cross-Origin Resource Policy](</en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)>).
+Browsers sometimes need to distinguish precisely between different sites. For example, the browser must only send [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) cookies to the same site that set them.
+
+For this more precise definition a site is determined by the _registrable domain_ portion of the domain name. The registrable domain consists of an entry in the [Public Suffix List](https://publicsuffix.org/list/) plus the portion of the domain name just before it. This means that, for example, `theguardian.co.uk`, `sussex.ac.uk`, and `bookshop.org` are all registrable domains.
+
+According to this definition, `support.mozilla.org` and `developer.mozilla.org` are part of the same site, because `mozilla.org` is a registrable domain.
+
+In some contexts, the scheme is also considered when differentiating sites. This would make `http://vpl.ca` and `https://vpl.ca` different sites. Including the scheme prevents an insecure (HTTP) site from being treated as the same site as a secure (HTTPS) site. A definition that considers the scheme is sometimes called a _schemeful same-site_. This stricter definition is applied in the rules for handling [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) cookies.
 
 ## Examples
 
-These are the same site because the registrable domain of _mozilla.org_ is the same (different host and files path don't matter):
+These are the same site because the registrable domain of `mozilla.org` is the same:
 
 - `https://developer.mozilla.org/en-US/docs/`
 - `https://support.mozilla.org/en-US/`
 
-These are the same site because scheme and port are not relevant:
+These are the same site because the port is not relevant:
 
-- `http://example.com:8080`
+- `https://example.com:8080`
 - `https://example.com`
 
-These are not same site because the registrable domain of the two URLs differs:
+These are not the same site because the registrable domain of the two URLs differs:
 
 - `https://developer.mozilla.org/en-US/docs/`
+- `https://example.com`
+
+These are the same site, or different sites if the scheme is considered:
+
+- `http://example.com`
 - `https://example.com`
 
 ## See also

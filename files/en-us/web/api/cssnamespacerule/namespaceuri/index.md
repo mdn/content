@@ -1,6 +1,7 @@
 ---
 title: CSSNamespaceRule.namespaceURI
 slug: Web/API/CSSNamespaceRule/namespaceURI
+page-type: web-api-instance-property
 tags:
   - API
   - CSSNamespaceRule
@@ -12,17 +13,11 @@ browser-compat: api.CSSNamespaceRule.namespaceURI
 ---
 {{ APIRef("CSSOM") }}
 
-The read-only **`namespaceURI`** property of the {{domxref("CSSNamespaceRule")}} returns a {{domxref("DOMString")}} containing the text of the URI of the given namespace.
+The read-only **`namespaceURI`** property of the {{domxref("CSSNamespaceRule")}} returns a string containing the text of the URI of the given namespace.
 
-## Syntax
+## Value
 
-```js
-var namespaceURI = CSSNamespaceRule.namespaceURI
-```
-
-### Returns
-
-A {{domxref("DOMString")}} containing a URI.
+A string containing a URI.
 
 ## Examples
 

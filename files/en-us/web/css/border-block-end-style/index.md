@@ -31,6 +31,7 @@ border-block-end-style: groove;
 border-block-end-style: inherit;
 border-block-end-style: initial;
 border-block-end-style: revert;
+border-block-end-style: revert-layer;
 border-block-end-style: unset;
 ```
 

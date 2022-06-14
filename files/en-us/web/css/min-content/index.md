@@ -27,6 +27,7 @@ grid-template-columns: 200px 1fr min-content;
 min-content: inherit;
 min-content: initial;
 min-content: revert;
+min-content: revert-layer;
 min-content: unset;
 ```
 
@@ -99,7 +100,5 @@ min-content: unset;
 {{Specifications}}
 
 ## Browser compatibility
-
-### Supported for width (and other sizing properties)
 
 {{Compat}}

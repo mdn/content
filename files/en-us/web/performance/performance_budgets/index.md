@@ -55,7 +55,7 @@ File size checks are the first line of defense against regressions but translati
 
 The first step is to define a development baseline for each branch to compare to and the precision of the difference between development and production can be used as a goal towards better match the live environment.
 
-The [Lighthouse Bot](https://github.com/GoogleChromeLabs/lighthousebot) integrates with [Travis CI](https://travis-ci.org/) and can be used to gather [Lighthouse](https://developers.google.com/web/tools/lighthouse/) and [Webpage Test](https://webpagetest.org) metrics from a development URL. The bot will pass or fail based on the provided minimum scores.
+The [Lighthouse Bot](https://github.com/GoogleChromeLabs/lighthousebot) integrates with [Travis CI](https://travis-ci.org/) and can be used to gather [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) and [Webpage Test](https://webpagetest.org) metrics from a development URL. The bot will pass or fail based on the provided minimum scores.
 
 ## How do I enforce a performance budget?
 
@@ -68,5 +68,5 @@ A performance budget helps you protect optimal behavior for your current users w
 ## See also
 
 - [Start Performance Budgeting](https://addyosmani.com/blog/performance-budgets/) by Addy Osmani
-- [Performance Budgets 101](https://web.dev/fast/performance-budgets-101) by Milica Mihajlija
+- [Performance Budgets 101](https://web.dev/performance-budgets-101/) by Milica Mihajlija
 - [Performance Budgets That Stick](https://timkadlec.com/remembers/2019-03-07-performance-budgets-that-stick/) by Tim Kadlec

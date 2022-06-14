@@ -1,6 +1,7 @@
 ---
 title: TransitionEvent.elapsedTime
 slug: Web/API/TransitionEvent/elapsedTime
+page-type: web-api-instance-property
 tags:
   - API
   - CSS
@@ -19,11 +20,9 @@ The **`TransitionEvent.elapsedTime`** read-only property is a
 when this event fired. This value is not affected by the {{cssxref("transition-delay")}}
 property.
 
-## Syntax
+## Value
 
-```js
-name = TransitionEvent.elapsedTime
-```
+A number.
 
 ## Specifications
 

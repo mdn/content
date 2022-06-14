@@ -1,6 +1,7 @@
 ---
 title: 'MediaStreamTrack: unmute event'
 slug: Web/API/MediaStreamTrack/unmute_event
+page-type: web-api-event
 tags:
   - Audio
   - Event
@@ -64,6 +65,32 @@ musicTrack.mute = event = > {
   document.getElementById("timeline-widget").style.backgroundColor = "#fff";
 }
 ```
+
+### Unmute tracks through receivers
+
+The following example shows how to unmute tracks using receivers.
+
+```js
+// Peer 1 (Receiver)
+audioTrack.addEventListener('unmute', event => {
+  // Do something in UI
+});
+
+videoTrack.addEventListener('unmute', event => {
+  // Do something in UI
+});
+
+// Peer 2 (Sender)
+const transceivers = peer.getTransceivers();
+
+const audioTrack = transceivers[0];
+audioTrack.direction = 'sendrecv';
+
+const videoTrack = transceivers[1];
+videoTrack.direction = 'sendrecv';
+```
+
+`transceivers` is an array of {{domxref("RTCRtpTransceiver")}} where you can find the audio or video track sent and received. For more information, see the {{domxref("RTCRtpTransceiver.direction", "direction")}} article.
 
 ## Specifications
 

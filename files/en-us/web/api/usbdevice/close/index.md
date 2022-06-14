@@ -1,6 +1,7 @@
 ---
 title: USBDevice.close()
 slug: Web/API/USBDevice/close
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -21,7 +22,7 @@ released and the device session has ended.
 ## Syntax
 
 ```js
-var promise = USBDevice.close()
+close()
 ```
 
 ### Parameters

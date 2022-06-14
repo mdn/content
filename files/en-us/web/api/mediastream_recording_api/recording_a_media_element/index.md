@@ -1,6 +1,7 @@
 ---
 title: Recording a media element
 slug: Web/API/MediaStream_Recording_API/Recording_a_media_element
+page-type: guide
 tags:
   - API
   - Audio
@@ -21,8 +22,8 @@ While the article Using the MediaStream Recording API demonstrates using the {{d
 ### HTML content
 
 ```html hidden
-<p>Click the "Start" button to begin video recording for a few seconds. You can stop
-   the video by clicking the creatively-named "Stop" button. The "Download"
+<p>Click the "Start Recording" button to begin video recording for a few seconds. You can stop
+   recording by clicking the "Stop Recording" button. The "Download"
    button will download the received data (although it's in a raw, unwrapped form
    that isn't very useful).
 </p>
@@ -34,7 +35,7 @@ Let's start by looking at the key bits of the HTML. There's a little more than t
 ```html
 <div class="left">
   <div id="startButton" class="button">
-    Start
+    Start Recording
   </div>
   <h2>Preview</h2>
   <video id="preview" width="160" height="120" autoplay muted></video>
@@ -46,7 +47,7 @@ We present our main interface in two columns. On the left is a start button and 
 ```html
 <div class="right">
   <div id="stopButton" class="button">
-    Stop
+    Stop Recording
   </div>
   <h2>Recording</h2>
   <video id="recording" width="160" height="120" controls></video>
@@ -190,7 +191,7 @@ function startRecording(stream, lengthInMS) {
 - Line 3
   - : Creates an empty array, `data`, which will be used to hold the {{domxref("Blob")}}s of media data provided to our {{domxref("MediaRecorder.dataavailable_event", "ondataavailable")}} event handler.
 - Line 5
-  - : Sets up the handler for the {{event("dataavailable")}} event. The received event's `data` property is a {{domxref("Blob")}} that contains the media data. The event handler pushes the `Blob` onto the `data` array.
+  - : Sets up the handler for the {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event. The received event's `data` property is a {{domxref("Blob")}} that contains the media data. The event handler pushes the `Blob` onto the `data` array.
 - Lines 6-7
   - : Starts the recording process by calling {{domxref("MediaRecorder.start", "recorder.start()")}}, and outputs a message to the log with the updated state of the recorder and the number of seconds it will be recording.
 - Lines 9-12
@@ -236,7 +237,13 @@ startButton.addEventListener("click", function() {
     log("Successfully recorded " + recordedBlob.size + " bytes of " +
         recordedBlob.type + " media.");
   })
-  .catch(log);
+  .catch((error) => {
+    if (error.name === "NotFoundError") {
+      log("Camera or microphone not found. Can't record.");
+    } else {
+      log(error);
+    }
+  });
 }, false);
 ```
 
@@ -250,7 +257,7 @@ When a {{event("click")}} event occurs, here's what happens:
   - : When the preview video begins to play, we know there's media to record, so we respond by calling the [`startRecording()`](#starting_media_recording) function we created earlier, passing in the preview video stream (as the source media to be recorded) and `recordingTimeMS` as the number of milliseconds of media to record. As mentioned before, `startRecording()` returns a {{jsxref("Promise")}} whose resolution handler is called (receiving as input an array of {{domxref("Blob")}} objects containing the chunks of recorded media data) once recording has completed.
 - Lines 11-15
 
-  - : The recording process's resolution handler receives as input an array of media data `Blob`s locally known as `recordedChunks`. The first thing we do is merge the chunks into a single {{domxref("Blob")}} whose MIME type is `"video/webm"` by taking advantage of the fact that the {{domxref("Blob.Blob", "Blob()")}} constructor concatenates arrays of objects into one object. Then {{domxref("URL.createObjectURL()")}} is used to create an URL that references the blob; this is then made the value of the recorded video playback element's {{htmlattrxref("src", "video")}} attribute (so that you can play the video from the blob) as well as the target of the download button's link.
+  - : The recording process's resolution handler receives as input an array of media data `Blob`s locally known as `recordedChunks`. The first thing we do is merge the chunks into a single {{domxref("Blob")}} whose MIME type is `"video/webm"` by taking advantage of the fact that the {{domxref("Blob.Blob", "Blob()")}} constructor concatenates arrays of objects into one object. Then {{domxref("URL.createObjectURL()")}} is used to create a URL that references the blob; this is then made the value of the recorded video playback element's {{htmlattrxref("src", "video")}} attribute (so that you can play the video from the blob) as well as the target of the download button's link.
 
     Then the download button's {{htmlattrxref("download", "a")}} attribute is set. While the `download` attribute can be a Boolean, you can also set it to a string to use as the name for the downloaded file. So by setting the download link's `download` attribute to "RecordedVideo.webm", we tell the browser that clicking the button should download a file named `"RecordedVideo.webm"` whose contents are the recorded video.
 

@@ -15,4 +15,4 @@ The (GNU) GPL (General Public License) is a {{Glossary("copyleft")}} free softwa
 
 - [FAQ](https://www.gnu.org/licenses/gpl-faq.html) on GNU licenses
 - [GNU GPL](https://en.wikipedia.org/wiki/GNU_General_Public_License) on Wikipedia
-- [GPL License](https://gnu.org/licenses/gpl.html) text
+- [GPL License](https://www.gnu.org/licenses/gpl-3.0.html) text

@@ -35,6 +35,7 @@ hyphens: auto;
 hyphens: inherit;
 hyphens: initial;
 hyphens: revert;
+hyphens: revert-layer;
 hyphens: unset;
 ```
 
@@ -130,4 +131,4 @@ dd.auto {
 - {{cssxref("content")}}
 - {{cssxref("overflow-wrap")}} (formerly `word-wrap`)
 - {{cssxref("word-break")}}
-- [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_Text/Wrapping_text)
+- [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_Text/Wrapping_Text)

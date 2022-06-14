@@ -18,7 +18,7 @@ The **`handler.ownKeys()`** method is a trap for
 ## Syntax
 
 ```js
-const p = new Proxy(target, {
+new Proxy(target, {
   ownKeys: function(target) {
   }
 });

@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrackGenerator.writable
 slug: Web/API/MediaStreamTrackGenerator/writable
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,13 +14,7 @@ browser-compat: api.MediaStreamTrackGenerator.writable
 
 The **`writable`**  property of the {{domxref("MediaStreamTrackGenerator")}} interface returns a {{domxref("WritableStream")}}. This allows the writing of media frames to the `MediaStreamTrackGenerator`. The frames will be audio or video. The type is dictated by the kind of `MediaStreamTrackGenerator` that was created.
 
-## Syntax
-
-```js
-let writable = MediaStreamTrackGenerator.writable;
-```
-
-### Value
+## Value
 
 A {{domxref("WritableStream")}}.
 

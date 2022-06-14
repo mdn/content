@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.setIdentityProvider()
 slug: Web/API/RTCPeerConnection/setIdentityProvider
+page-type: web-api-instance-method
 tags:
   - Method
   - RTCPeerConnection
@@ -21,21 +22,25 @@ If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set 
 ## Syntax
 
 ```js
-pc.setIdentityProvider(domainname [, protocol] [, username]);
+setIdentityProvider(domainname)
+setIdentityProvider(domainname, protocol)
+setIdentityProvider(domainname, protocol, username)
 ```
-
-_There is no return value for this method._
 
 ### Parameters
 
-- _domainname_
-  - : Is a {{domxref("DOMString")}} is the domain name where the IdP is.
-- _protocol_ {{optional_Inline}}
-  - : Is a {{domxref("DOMString")}} representing the protocol used to communicate with the
+- `domainname`
+  - : A string representing the domain name where the IdP is.
+- `protocol` {{optional_Inline}}
+  - : A string representing the protocol used to communicate with the
     IdP. It defaults to `"default"` and is used to determine the URL where the
     IdP is listening.
-- _username_ {{optional_Inline}}
-  - : Is a {{domxref("DOMString")}} representing the username associated with the IdP.
+- `username` {{optional_Inline}}
+  - : A string representing the username associated with the IdP.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Example
 

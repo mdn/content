@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.load()
 slug: Web/API/HTMLMediaElement/load
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -36,7 +37,7 @@ causing the changes to take effect.
 ## Syntax
 
 ```js
-mediaElement.load();
+load()
 ```
 
 ### Parameters
@@ -45,7 +46,7 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Usage notes
 
@@ -77,7 +78,7 @@ proceeds:
   **{{event("loadstart")}}** event is delivered.
 - From this point onward, events are sent just like any media load.
 
-## Example
+## Examples
 
 This example finds a {{HTMLElement("video")}} element in the document and resets it by
 calling `load()`.

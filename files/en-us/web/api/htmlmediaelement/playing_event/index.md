@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: playing event'
 slug: Web/API/HTMLMediaElement/playing_event
+page-type: web-api-event
 tags:
   - API
   - HTMLMediaElement

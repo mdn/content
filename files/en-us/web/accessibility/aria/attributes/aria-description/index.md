@@ -1,13 +1,14 @@
 ---
 title: 'aria-description'
 slug: Web/Accessibility/ARIA/Attributes/aria-description
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-description
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-description
 ---
 
 The global `aria-description` attribute defines a string value that describes or annotates the current element.
@@ -17,7 +18,7 @@ The global `aria-description` attribute defines a string value that describes or
 The global `aria-description` attribute provides a mechanism for the developer to describe or annotate the current element providing greater context for assistive technology users.
 
 ```html
-<div role="application" aria-label="calendar" 
+<div role="application" aria-label="calendar"
      aria-description="Game schedule for the Boston Red Sox 2021 Season">
     <h1>Red Sox 2021</h1>
     <div role="grid">
@@ -42,7 +43,7 @@ The content of the description, whether set by `aria-description` or `aria-descr
 ## ARIAMixin API
 
 - {{domxref("Element.ariaDescription")}}
-  - : The  [`ariaDescription`](/en-US/docs/Web/API/Element/ariaDescription) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-description` attribute, which defines a string value that describes or annotates the current element.
+  - : The [`ariaDescription`](/en-US/docs/Web/API/Element/ariaDescription) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-description` attribute, which defines a string value that describes or annotates the current element.
 
 ## Associated roles
 
@@ -50,9 +51,7 @@ Used in **ALL** roles.
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-description","ARIA: aria-description Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

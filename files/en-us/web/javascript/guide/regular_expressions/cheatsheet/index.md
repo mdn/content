@@ -22,7 +22,6 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       <th scope="col">Meaning</th>
     </tr>
   </thead>
-  <tbody></tbody>
   <tbody>
     <tr>
       <td><code>.</code></td>

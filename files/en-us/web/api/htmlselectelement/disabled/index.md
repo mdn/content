@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.disabled
 slug: Web/API/HTMLSelectElement/disabled
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -15,13 +16,11 @@ The **`HTMLSelectElement.disabled`** is a boolean value that reflects the
 HTML attribute, which indicates whether the control is disabled. If it is disabled, it
 does not accept clicks. A disabled element is unusable and un-clickable.
 
-## Syntax
+## Value
 
-```js
-aSelectElement.disabled = aBool;
-```
+A boolean value.
 
-## Example
+## Examples
 
 ### HTML
 

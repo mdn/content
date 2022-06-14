@@ -1,6 +1,7 @@
 ---
 title: AudioDecoder.decode()
 slug: Web/API/AudioDecoder/decode
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,7 +17,7 @@ The **`decode()`** method of the {{domxref("AudioDecoder")}} interface enqueues 
 ## Syntax
 
 ```js
-AudioDecoder.decode(chunk)
+decode(chunk)
 ```
 
 ### Parameters
@@ -24,7 +25,7 @@ AudioDecoder.decode(chunk)
 - `chunk`
   - : An {{domxref("EncodedAudioChunk")}} object representing a chunk of encoded audio.
 
-### Return Value
+### Return value
 
 {{jsxref("Undefined")}}.
 

@@ -1,6 +1,7 @@
 ---
 title: 'XMLHttpRequest: abort event'
 slug: Web/API/XMLHttpRequest/abort_event
+page-type: web-api-event
 tags:
   - API
   - Event

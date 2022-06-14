@@ -1,6 +1,7 @@
 ---
 title: VideoPlaybackQuality.creationTime
 slug: Web/API/VideoPlaybackQuality/creationTime
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -21,13 +22,7 @@ The read-only **`creationTime`** property on the
 {{domxref("VideoPlaybackQuality")}} interface reports the number of milliseconds since
 the browsing context was created this quality sample was recorded.
 
-## Syntax
-
-```js
-value = videoPlaybackQuality.creationTime;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} object which indicates the number of milliseconds
 that elapsed between the time the browsing context was created and the time at which
@@ -35,7 +30,7 @@ this sample of the video quality was obtained.
 
 For details on how the time is determined, see {{domxref("Performance.now()")}}.
 
-## Example
+## Examples
 
 This example calls `getVideoPlaybackQuality()` to obtain a
 {{domxref("VideoPlaybackQuality")}} object, then determines what percentage of frames

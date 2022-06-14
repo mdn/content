@@ -76,25 +76,25 @@ Firefox 15 shipped on August 28, 2012. This article lists key changes that are u
 
 ### Interface changes
 
-- {{interface("nsIDOMWindowUtils")}}
+- `nsIDOMWindowUtils`
   - : `aModifiers` of `sendMouseEvent()`, `sendTouchEvent()`, `sendMouseEventToWindow()`, `sendMouseScrollEvent()` and `sendKeyEvent()` supports all modifier keys which are supported by [`KeyboardEvent.getModifierState()`](/en-US/docs/Web/API/KeyboardEvent#getmodifierstate%28%29). Use `MODIFIER_*` values. And now the 5th parameter of `sendKeyEvent()` is changed from `boolean` to `unsigned long`. For backward compatibility, if caller passes `true` or `false` to it, the behavior isn't changed. This change allows callers to specify the key's location.
-- {{interface("nsIBrowserHistory")}}
-  - : The `hidePage()` method was never implemented, and has been removed entirely in this release. The `addPageWithDetails()` method has also been removed as part of the ongoing work to make all [Places](/en-US/docs/Places) APIs asynchronous; use {{ifmethod("mozIAsyncHistory", "updatePlaces")}} instead. Also, the `count` attribute was removed; it had not returned an actual count in some time (instead, it was indicating whether or not any entries existed). You can use {{ifattribute("nsINavHistoryService", "hasHistoryEntries")}} instead.
-- {{interface("inIDOMUtils")}}
-  - : The {{ifmethod("inlDOMUtils", "parseStyleSheet")}} method has been added and allows the (re-)parsing of Cascading Style Sheets.
-- {{interface("nsIINIParserWriter")}}
-  - : The {{ifmethod("nsIINIParserWriter", "writeFile")}} method now accepts a `flags` property. This currently offers only one option: you can now tell it to write the file in UTF-16 format instead of UTF-8, for better compatibility with Windows and certain installers.
+- `nsIBrowserHistory`
+  - : The `hidePage()` method was never implemented, and has been removed entirely in this release. The `addPageWithDetails()` method has also been removed as part of the ongoing work to make all [Places](/en-US/docs/Places) APIs asynchronous; use `mozIAsyncHistory.updatePlaces()` instead. Also, the `count` attribute was removed; it had not returned an actual count in some time (instead, it was indicating whether or not any entries existed). You can use `nsINavHistoryService.hasHistoryEntries` instead.
+- `inIDOMUtils`
+  - : The `inlDOMUtils.parseStyleSheet()` method has been added and allows the (re-)parsing of Cascading Style Sheets.
+- `nsIINIParserWriter`
+  - : The `nsIINIParserWriter.writeFile()` method now accepts a `flags` property. This currently offers only one option: you can now tell it to write the file in UTF-16 format instead of UTF-8, for better compatibility with Windows and certain installers.
 
 #### New interfaces
 
-- {{interface("nsISpeculativeConnect")}}
+- `nsISpeculativeConnect`
   - : Provides a way to hint to the networking layer that you are likely to ask to open a connection to a given URI sometime in the near future. This lets the network layer begin the sometimes high-latency process of opening a new network connection ahead of time.
 
 #### Removed interfaces
 
 The following interfaces have been removed.
 
-- {{interface("nsIGlobalHistory")}}
+- `nsIGlobalHistory`
 
 ## See also
 

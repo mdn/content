@@ -1,6 +1,7 @@
 ---
 title: VideoEncoder.encode()
 slug: Web/API/VideoEncoder/encode
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,8 +17,8 @@ The **`encode()`** method of the {{domxref("VideoEncoder")}} interface enqueues 
 ## Syntax
 
 ```js
-VideoEncoder.encode(frame);
-VideoEncoder.encode(frame, options);
+encode(frame)
+encode(frame, options)
 ```
 
 ### Parameters
@@ -29,7 +30,7 @@ VideoEncoder.encode(frame, options);
     - `keyFrame`
       - : A {{jsxref("boolean")}}, defaulting to `false` giving the user agent flexibility to decide if this frame should be encoded as a key frame. If `true` this indicates that the given frame must be encoded as a key frame.
 
-### Return Value
+### Return value
 
 {{jsxref("Undefined")}}.
 

@@ -1,6 +1,7 @@
 ---
 title: Multi-touch interaction
 slug: Web/API/Touch_events/Multi-touch_interaction
+page-type: guide
 tags:
   - Guide
   - TouchEvent
@@ -10,7 +11,7 @@ tags:
 
 The touch event interfaces support application-specific single and multi-touch interactions. However, the interfaces can be a bit tricky for programmers to use because touch events are very different from other DOM input events, such as {{domxref("MouseEvent","mouse events")}}. The application described in this guide shows how to use touch events for simple single and multi-touch interactions, the basics needed to build application-specific gestures.
 
-A _live_ version of this application is available on [Github](https://mdn.github.io/dom-examples/touchevents/Multi-touch_interaction.html). The [source code is available on Github](https://github.com/mdn/dom-examples/tree/master/touchevents) and pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
+A _live_ version of this application is available on [GitHub](https://mdn.github.io/dom-examples/touchevents/Multi-touch_interaction.html). The [source code is available on GitHub](https://github.com/mdn/dom-examples/tree/master/touchevents) and pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
 
 ## Example
 
@@ -193,7 +194,7 @@ The application uses {{HTMLElement("div")}} elements for the touch areas and pro
 <div id="target3"> Tap, Hold or Swipe me 3</div>
 <div id="target4"> Tap, Hold or Swipe me 4</div>
 
-<!-- UI for logging/bebugging -->
+<!-- UI for logging/debugging -->
 <button id="log" onclick="enableLog(event);">Start/Stop event logging</button>
 <button id="clearlog" onclick="clearLog(event);">Clear the log</button>
 <p></p>

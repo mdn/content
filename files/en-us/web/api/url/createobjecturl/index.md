@@ -1,6 +1,7 @@
 ---
 title: URL.createObjectURL()
 slug: Web/API/URL/createObjectURL
+page-type: web-api-static-method
 tags:
   - API
   - Blob
@@ -16,7 +17,7 @@ browser-compat: api.URL.createObjectURL
 {{APIRef("URL API")}}
 
 The **`URL.createObjectURL()`** static
-method creates a {{domxref("DOMString")}} containing a URL representing the object
+method creates a string containing a URL representing the object
 given in the parameter.
 
 The URL lifetime is tied to the {{domxref("document")}}
@@ -33,7 +34,7 @@ To release an object URL, call {{domxref("URL.revokeObjectURL", "revokeObjectURL
 ## Syntax
 
 ```js
-const objectURL = URL.createObjectURL(object)
+createObjectURL(object)
 ```
 
 ### Parameters
@@ -44,13 +45,12 @@ const objectURL = URL.createObjectURL(object)
 
 ### Return value
 
-A {{domxref("DOMString")}} containing an object URL that can be used to reference the
+A string containing an object URL that can be used to reference the
 contents of the specified source `object`.
 
 ## Examples
 
-See [Using
-object URLs to display images](/en-US/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images).
+See [Using object URLs to display images](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images).
 
 ## Usage notes
 
@@ -86,9 +86,8 @@ support for doing this.
 
 ## See also
 
-- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
-- [Using
-  object URLs to display images](/en-US/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images)
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
+- [Using object URLs to display images](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images)
 - {{domxref("URL.revokeObjectURL()")}}
 - {{domxref("HTMLMediaElement.srcObject")}}
 - {{domxref("FileReader.readAsDataURL()")}}

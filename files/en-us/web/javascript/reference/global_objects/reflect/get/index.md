@@ -47,9 +47,8 @@ A {{jsxref("TypeError")}}, if `target` is not an
 
 ## Description
 
-The `Reflect.get` method allows you to get a property on an object. It is
-like the [property
-accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) syntax as a function.
+The `Reflect.get` method allows you to get a property on an object. It is like the
+[property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) syntax as a function.
 
 ## Examples
 
@@ -97,5 +96,4 @@ Reflect.get(obj, 'foo', y) // "3bar"
 
 - [Polyfill of `Reflect.get` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
-- [Property
-  accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)

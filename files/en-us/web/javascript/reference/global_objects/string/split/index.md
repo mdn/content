@@ -54,11 +54,10 @@ split(separator, limit)
 
     > **Warning:** When the empty string (`""`) is used as a
     > separator, the string is **not** split by _user-perceived
-    > characters_ ([grapheme
-    > clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) or unicode characters (codepoints), but by UTF-16 codeunits. This
-    > destroys [surrogate
-    > pairs](https://unicode.org/faq/utf_bom.html#utf16-2). See ["How do you get a
-    > string to a character array in JavaScript?" on StackOverflow](https://stackoverflow.com/a/34717402).
+    > characters_ ([grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries))
+    > or unicode characters (codepoints), but by UTF-16 codeunits.
+    > This destroys [surrogate pairs](https://unicode.org/faq/utf_bom.html#utf16-2).
+    > See ["How do you get a string to a character array in JavaScript?" on StackOverflow](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402).
 
 - `limit` {{optional_inline}}
 
@@ -213,33 +212,7 @@ This script displays the following:
 [ "Hello ", "1", " word. Sentence number ", "2", "." ]
 ```
 
-> **Note:** `\d` matches the [character
-> class](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) for digits between 0 and 9.
-
-### Reversing a String using `split()`
-
-> **Warning:** This is not a robust way to reverse a string:
->
-> ```js example-bad
-> const str = 'asdfghjkl'
-> const strReverse = str.split('').reverse().join('')
-> // 'lkjhgfdsa'
->
-> // split() returns an array on which reverse() and join() can be applied
-> ```
->
-> It doesn't work if the string contains grapheme clusters, even when using a
-> unicode-aware split. (Use, for example, [esrever](https://github.com/mathiasbynens/esrever) instead.)
->
-> ```js example-bad
-> const str = 'mañana mañana'
-> const strReverse = str.split('').reverse().join('')
-> // => "anãnam anañam" // notice how the first word has an ã rather ñ
-> ```
->
-> **Bonus:** use {{jsxref("Operators", "===",
-    "#Identity_strict_equality_(===)")}} operator to test if the original string was a
-> palindrome.
+> **Note:** `\d` matches the [character class](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) for digits between 0 and 9.
 
 ## Specifications
 
@@ -255,5 +228,4 @@ This script displays the following:
 - {{jsxref("String.prototype.indexOf()")}}
 - {{jsxref("String.prototype.lastIndexOf()")}}
 - {{jsxref("Array.prototype.join()")}}
-- [Using regular
-  expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Using regular expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)

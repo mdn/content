@@ -1,6 +1,7 @@
 ---
 title: URLPattern.port
 slug: Web/API/URLPattern/port
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -14,15 +15,15 @@ browser-compat: api.URLPattern.port
 {{ APIRef("URL Pattern API") }}
 
 The **`port`** property of the {{domxref("URLPattern")}} interface is a
-{{domxref("USVString")}} containing the pattern used to match the port part of a
+string containing the pattern used to match the port part of a
 URL. This value may differ from the input to the constructor due to
 normalization.
 
 {{AvailableInWorkers}}
 
-### Value
+## Value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

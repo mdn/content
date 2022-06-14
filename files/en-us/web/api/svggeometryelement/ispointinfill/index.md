@@ -1,6 +1,7 @@
 ---
 title: SVGGeometryElement.isPointInFill()
 slug: Web/API/SVGGeometryElement/isPointInFill
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -21,20 +22,20 @@ interpreted as a point in the local coordinate system of the element.
 ## Syntax
 
 ```js
-boolean someElement.isPointInFill(DOMPointInit point);
+isPointInFill(point)
 ```
 
 ### Parameters
 
-- point
-  - : An object interpreted as a point in the local coordinate system
+- `point`
+  - : A DOMPointInit object interpreted as a point in the local coordinate system
     of the element.
 
 ### Return value
 
 A boolean indicating whether the given point is within the fill or not.
 
-## Example
+## Examples
 
 ### SVG
 
@@ -63,7 +64,7 @@ console.log('Point at 40,30:', circle.isPointInFill(new DOMPoint(40, 30)));
 
 ### Result
 
-{{EmbedLiveSample("Example", "150", "150")}}
+{{EmbedLiveSample("Examples", "150", "150")}}
 
 ## Specifications
 

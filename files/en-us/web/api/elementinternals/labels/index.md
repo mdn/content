@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.labels
 slug: Web/API/ElementInternals/labels
+page-type: web-api-instance-property
 tags:
   - API
   - Property

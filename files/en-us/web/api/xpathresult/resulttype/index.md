@@ -1,6 +1,7 @@
 ---
 title: XPathResult.resultType
 slug: Web/API/XPathResult/resultType
+page-type: web-api-instance-property
 tags:
   - API
   - DOM XPath API
@@ -18,13 +19,7 @@ the type constants.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var resultType = result.resultType;
-```
-
-### Return value
+## Value
 
 An integer value representing the type of the result, as defined by the type constants.
 
@@ -125,7 +120,7 @@ An integer value representing the type of the result, as defined by the type con
   </tbody>
 </table>
 
-## Example
+## Examples
 
 The following example shows the use of the `resultType` property.
 

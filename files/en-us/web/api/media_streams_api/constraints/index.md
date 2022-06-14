@@ -1,6 +1,7 @@
 ---
 title: Capabilities, constraints, and settings
 slug: Web/API/Media_Streams_API/Constraints
+page-type: guide
 tags:
   - Advanced
   - Audio
@@ -13,6 +14,7 @@ tags:
   - Settings
   - Video
   - WebRTC
+browser-compat: api.MediaDevices.getSupportedConstraints
 ---
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
@@ -546,28 +548,11 @@ Here you can see the complete example in action.
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('Media Capture', '#constrainable-interface', 'Constrainable pattern')}}
-      </td>
-      <td>{{Spec2('Media Capture')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-### `MediaDevices.getSupportedConstraints`
-
-{{Compat("api.MediaDevices.getSupportedConstraints")}}
+{{Compat}}
 
 ## See also
 

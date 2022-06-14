@@ -1,6 +1,7 @@
 ---
 title: Network Information API
 slug: Web/API/Network_Information_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental
@@ -11,7 +12,7 @@ browser-compat: api.NetworkInformation
 ---
 {{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
 
-The Network Information API provides information about the system's connection in terms of general connection type (e.g., 'wifi', 'cellular', etc.).
+The Network Information API provides information about the system's connection in terms of general connection type (e.g., 'wifi, 'cellular', etc.).
 This can be used to select high definition content or low definition content based on the user's connection.
 
 The interface consists of a single {{domxref("NetworkInformation")}} object, an instance of which is returned by the {{domxref("Navigator.connection")}} property.
@@ -73,4 +74,4 @@ if (connection) {
 
 ## See also
 
-- [Online and offline events](/en-US/docs/Web/API/Navigator/Online_and_offline_events)
+- [Online and offline events](/en-US/docs/Web/API/Navigator/onLine)

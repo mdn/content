@@ -149,11 +149,11 @@ This code logs all cookies that will be sent in making requests to the target [m
 
 ```js
 // The target match pattern
-var targetPage = "*://*.google.ca/*";
+let targetPage = "*://*.google.ca/*";
 
 // Log cookies sent with this request
 function logCookies(e) {
-  for (var header of e.requestHeaders) {
+  for (let header of e.requestHeaders) {
     if (header.name == "Cookie") {
       console.log(header.value);
     }
@@ -171,7 +171,7 @@ browser.webRequest.onSendHeaders.addListener(
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest#event-onSendHeaders) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#event-onSendHeaders) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

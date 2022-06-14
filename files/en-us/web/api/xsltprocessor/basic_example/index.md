@@ -1,6 +1,7 @@
 ---
 title: XSLT Basic Example
 slug: Web/API/XSLTProcessor/Basic_Example
+page-type: guide
 tags:
   - XSLT
   - Example
@@ -57,7 +58,7 @@ To try out the example:
    This allows you to browse the files in the directory as though they were hosted on the internet.
 
    > **Warning:** Opening the XML file directly from the file system will not work, because loading the stylesheet from the file system is a [cross-origin request](/en-US/docs/Web/HTTP/CORS), and will be disallowed by default.
-   > Hosting the xml and stylesheet on the same local server ensures that they have the same origin.
+   > Hosting the XML and stylesheet on the same local server ensures that they have the same origin.
 1. Open **example.xml** from the browser.
 1. The browser output is then as shown below:
 

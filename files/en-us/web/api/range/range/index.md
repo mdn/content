@@ -1,6 +1,7 @@
 ---
 title: Range()
 slug: Web/API/Range/Range
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -20,10 +21,14 @@ object.
 ## Syntax
 
 ```js
-range = new Range()
+new Range()
 ```
 
-## Example
+### Parameters
+
+None.
+
+## Examples
 
 In this example we create a new range with the `Range()` constructor, and
 set its beginning and end positions using the {{domxref("Range.setStartBefore()")}} and
@@ -62,7 +67,7 @@ selection.addRange(range);
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples", 400, 210)}}
 
 ## Specifications
 

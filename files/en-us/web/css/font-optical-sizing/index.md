@@ -27,6 +27,7 @@ font-optical-sizing: auto; /* default */
 font-optical-sizing: inherit;
 font-optical-sizing: initial;
 font-optical-sizing: revert;
+font-optical-sizing: revert-layer;
 font-optical-sizing: unset;
 ```
 
@@ -80,7 +81,7 @@ p {
 }
 ```
 
-> **Note:** The font referenced above — which includes optical sizing and is freely-licensed — is good for testing. You can [download it on GitHub](https://github.com/TypeNetwork/Amstelvar/releases).
+> **Note:** The font referenced above — which includes optical sizing and is freely-licensed — is good for testing. You can [download it on GitHub](https://github.com/googlefonts/amstelvar/releases).
 
 ## Specifications
 

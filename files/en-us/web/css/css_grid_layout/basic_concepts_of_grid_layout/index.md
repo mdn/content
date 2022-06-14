@@ -81,11 +81,11 @@ I make the `.wrapper` a grid container.
 
 {{ EmbedLiveSample('The_Grid_container', '200', '330') }}
 
-All the direct children are now grid items. In a web browser, you won't see any difference to how these items are displayed before turning them into a grid, as grid has created a single column grid for the items. At this point, you may find it useful to work with the [Grid Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts), available as part of Firefox's Developer Tools. If you view this example in Firefox and inspect the grid, you will see a small icon next to the value `grid`. Click this and then the grid on this element will be overlaid in the browser window.
+All the direct children are now grid items. In a web browser, you won't see any difference to how these items are displayed before turning them into a grid, as grid has created a single column grid for the items. At this point, you may find it useful to work with the [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html), available as part of Firefox's Developer Tools. If you view this example in Firefox and inspect the grid, you will see a small icon next to the value `grid`. Click this and then the grid on this element will be overlaid in the browser window.
 
 ![Using the Grid Highlighter in DevTools to view a grid](1-grid-inspector.png)
 
-As you learn and then work with the CSS Grid Layout this tool will give you a better idea of what is happening with your grids visually.
+As you learn and then work with the CSS Grid Layout, this tool will give you a better idea of what is happening with your grids visually.
 
 If we want to start making this more grid-like we need to add column tracks.
 
@@ -461,7 +461,7 @@ The second item starts on grid column line 1, and spans one track. This is the d
 
 {{ EmbedLiveSample('Positioning_items_against_lines', '230', '450') }}
 
-> **Note:** Don't forget that you can use the [Grid Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) in Firefox Developer Tools to see how the items are positioned against the lines of the grid.
+> **Note:** Don't forget that you can use the [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) in Firefox Developer Tools to see how the items are positioned against the lines of the grid.
 
 ### Line-positioning shorthands
 

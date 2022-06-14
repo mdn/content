@@ -37,6 +37,7 @@ font-variant: common-ligatures small-caps;
 font-variant: inherit;
 font-variant: initial;
 font-variant: revert;
+font-variant: revert-layer;
 font-variant: unset;
 ```
 
@@ -89,7 +90,7 @@ p.small {
 
 #### Result
 
-{{ EmbedLiveSample('Setting_the_small-caps_font_variant', '', '', '', 'Web/CSS/font-variant') }}
+{{ EmbedLiveSample('Setting the small-caps font variant') }}
 
 ## Specifications
 

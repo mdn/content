@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognitionResultList.item()
 slug: Web/API/SpeechRecognitionResultList/item
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -24,10 +25,15 @@ syntax.
 ## Syntax
 
 ```js
-var myResult = speechRecognitionResultListInstance[0];
+item(index)
 ```
 
-### Returns
+### Parameters
+
+- `index`
+  - : Index of the item to retrieve.
+
+### Return value
 
 A {{domxref("SpeechRecognitionResult")}} object.
 

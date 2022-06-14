@@ -1,6 +1,7 @@
 ---
 title: PaymentRequest.shippingAddress
 slug: Web/API/PaymentRequest/shippingAddress
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -19,13 +20,9 @@ The **`shippingAddress`** read-only property of
 the {{domxref('PaymentRequest')}} interface returns the shipping address provided by the
 user. It is `null` by default.
 
-## Syntax
+## Value
 
-```js
-var paymentAddress = PaymentRequest.shippingAddress;
-```
-
-## Example
+## Examples
 
 Generally, the user agent will fill the `shippingAddress` property value.
 You can trigger this by setting

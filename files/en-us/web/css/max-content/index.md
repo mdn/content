@@ -27,6 +27,7 @@ grid-template-columns: 200px 1fr max-content;
 max-content: inherit;
 max-content: initial;
 max-content: revert;
+max-content: revert-layer;
 max-content: unset;
 ```
 
@@ -107,8 +108,6 @@ max-content: unset;
 {{Specifications}}
 
 ## Browser compatibility
-
-### Supported for width (and other sizing properties)
 
 {{Compat}}
 

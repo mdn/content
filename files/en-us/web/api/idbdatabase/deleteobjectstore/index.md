@@ -1,6 +1,7 @@
 ---
 title: IDBDatabase.deleteObjectStore()
 slug: Web/API/IDBDatabase/deleteObjectStore
+page-type: web-api-instance-method
 tags:
   - API
   - Database
@@ -26,7 +27,7 @@ transaction.
 ## Syntax
 
 ```js
-dbInstance.deleteObjectStore(name);
+deleteObjectStore(name)
 ```
 
 ### Parameters
@@ -34,6 +35,10 @@ dbInstance.deleteObjectStore(name);
 - `name`
   - : The name of the object store you want to delete. Names are
         case sensitive.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -44,7 +49,7 @@ dbInstance.deleteObjectStore(name);
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown when trying to delete an object store that does not exist.
 
-## Example
+## Examples
 
 ```js
 var dbName = "sampleDB";

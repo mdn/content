@@ -4,7 +4,6 @@ slug: Web/CSS/:any-link
 tags:
   - ':any-link'
   - CSS
-  - Experimental
   - Layout
   - Links
   - Pseudo-class
@@ -27,7 +26,9 @@ The **`:any-link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CS
 
 ## Syntax
 
-{{csssyntax}}
+```
+:any-link
+```
 
 ## Examples
 

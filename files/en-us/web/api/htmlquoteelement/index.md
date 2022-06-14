@@ -1,6 +1,7 @@
 ---
 title: HTMLQuoteElement
 slug: Web/API/HTMLQuoteElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -19,7 +20,7 @@ The **`HTMLQuoteElement`** interface provides special properties and methods (be
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLQuoteElement.cite")}}
-  - : Is a {{domxref("DOMString")}} reflecting the {{htmlattrxref("cite", "blockquote")}} HTML attribute, containing a URL for the source of the quotation.
+  - : A string reflecting the {{htmlattrxref("cite", "blockquote")}} HTML attribute, containing a URL for the source of the quotation.
 
 ## Methods
 

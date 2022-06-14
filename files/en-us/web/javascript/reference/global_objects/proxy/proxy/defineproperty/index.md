@@ -18,7 +18,7 @@ The **`handler.defineProperty()`** method is a trap for
 ## Syntax
 
 ```js
-const p = new Proxy(target, {
+new Proxy(target, {
   defineProperty: function(target, property, descriptor) {
   }
 });

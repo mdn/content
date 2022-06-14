@@ -51,6 +51,7 @@ counter-reset: none;
 counter-reset: inherit;
 counter-reset: initial;
 counter-reset: revert;
+counter-reset: revert-layer;
 counter-reset: unset;
 ```
 

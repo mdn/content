@@ -1,6 +1,7 @@
 ---
 title: GeolocationPositionError
 slug: Web/API/GeolocationPositionError
+page-type: web-api-interface
 tags:
   - API
   - Geolocation API
@@ -28,7 +29,7 @@ _The `GeolocationPositionError` interface doesn't inherit any property._
     | `3`   | `TIMEOUT`              | The time allowed to acquire the geolocation was reached before the information was obtained. |
 
 - {{domxref("GeolocationPositionError.message")}} {{readonlyInline}} {{securecontext_inline}}
-  - : Returns a human-readable {{domxref("DOMString")}} describing the details of the error. Specifications note that this is primarily intended for debugging use and not to be shown directly in a user interface.
+  - : Returns a human-readable string describing the details of the error. Specifications note that this is primarily intended for debugging use and not to be shown directly in a user interface.
 
 ## Methods
 

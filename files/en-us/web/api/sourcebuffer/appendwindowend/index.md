@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.appendWindowEnd
 slug: Web/API/SourceBuffer/appendWindowEnd
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -24,15 +25,7 @@ appended, whereas those outside the range will be filtered out.
 
 The default value of `appendWindowEnd` is positive infinity.
 
-## Syntax
-
-```js
-var myAppendWindowEnd = sourceBuffer.appendWindowEnd;
-
-sourceBuffer.appendWindowEnd = 120.0;
-```
-
-### Value
+## Value
 
 A double, indicating the end time of the append window, in seconds.
 
@@ -49,7 +42,7 @@ The following exceptions may be thrown when setting a new value for this propert
         currently <code>true</code>), or this <code>SourceBuffer</code> has been
         removed from the {{domxref("MediaSource")}}.
 
-## Example
+## Examples
 
 TBD
 

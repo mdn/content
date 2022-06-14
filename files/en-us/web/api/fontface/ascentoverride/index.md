@@ -1,6 +1,7 @@
 ---
 title: FontFace.ascentOverride
 slug: Web/API/FontFace/ascentOverride
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,16 +14,9 @@ browser-compat: api.FontFace.ascentOverride
 
 The **`ascentOverride`** property of the {{domxref("FontFace")}} interface returns and sets the value of the {{cssxref("@font-face/ascent-override")}} descriptor. The possible values are `normal`, indicating that the metric used should be obtained from the font file, or a percentage.
 
-## Syntax
+## Value
 
-```js
-let ascentOverride = FontFace.ascentOverride;
-FontFace.ascentOverride = '90%';
-```
-
-### Value
-
-A {{domxref("CSSOMString","string")}}.
+A string.
 
 ## Examples
 

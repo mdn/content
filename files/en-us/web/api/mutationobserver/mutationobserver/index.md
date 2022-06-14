@@ -1,6 +1,7 @@
 ---
 title: MutationObserver()
 slug: Web/API/MutationObserver/MutationObserver
+page-type: web-api-constructor
 tags:
   - API
   - Changes
@@ -29,7 +30,7 @@ establish which portion of the DOM to watch and what kinds of changes to watch f
 ## Syntax
 
 ```js
-const observer = new MutationObserver(callback)
+new MutationObserver(callback)
 ```
 
 ### Parameters
@@ -53,7 +54,7 @@ const observer = new MutationObserver(callback)
 A new {{domxref("MutationObserver")}} object, configured to call the specified
 `callback` when DOM mutations occur.
 
-## Example
+## Examples
 
 This example creates a new `MutationObserver` configured to watch a node and
 all of its children for additions and removals of elements to the tree, as well as any

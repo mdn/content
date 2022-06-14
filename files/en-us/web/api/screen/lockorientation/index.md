@@ -1,6 +1,7 @@
 ---
 title: Screen.lockOrientation()
 slug: Web/API/Screen/lockOrientation
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -24,7 +25,7 @@ interface locks the screen into a specified orientation.
 ## Syntax
 
 ```js
-lockAllowed = window.screen.lockOrientation(orientation);
+lockOrientation(orientation)
 ```
 
 ### Parameters
@@ -41,25 +42,25 @@ The following strings represent the possible orientation requirements you may sp
     A screen is considered in its primary portrait mode if the device is held in its
     normal position and that position is in portrait, or if the normal position of the
     device is in landscape and the device held turned by 90° clockwise. The normal
-    position is device dependant.
+    position is device dependent.
 - `portrait-secondary`
   - : It represents the orientation of the screen when it is in its secondary portrait
     mode. A screen is considered in its secondary portrait mode if the device is held 180°
     from its normal position and that position is in portrait, or if the normal position
     of the device is in landscape and the device held is turned by 90° counterclockwise. The
-    normal position is device dependant.
+    normal position is device dependent.
 - `landscape-primary`
   - : It represents the orientation of the screen when it is in its primary landscape
     mode. A screen is considered in its primary landscape mode if the device is held in
     its normal position and that position is in landscape, or if the normal position of
     the device is in portrait and the device held is turned by 90° clockwise. The normal
-    position is device dependant.
+    position is device dependent.
 - `landscape-secondary`
   - : It represents the orientation of the screen when it is in its secondary landscape
     mode. A screen is considered in its secondary landscape mode if the device held is
     180° from its normal position and that position is in landscape, or if the normal
     position of the device is in portrait and the device held is turned by 90°
-    counterclockwise. The normal position is device dependant.
+    counterclockwise. The normal position is device dependent.
 - `portrait`
   - : It represents both `portrait-primary` and
     `portrait-secondary`.
@@ -86,7 +87,7 @@ doesn't indicate that the screen orientation is indeed locked: there may be a de
 
 ## Examples
 
-### Usage with a `DOMString` argument
+### Usage with a string argument
 
 ```js
 screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;

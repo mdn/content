@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.arc()
 slug: Web/API/CanvasRenderingContext2D/arc
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -13,13 +14,13 @@ browser-compat: api.CanvasRenderingContext2D.arc
 
 The
 **`CanvasRenderingContext2D.arc()`**
-method of the [Canvas 2D API
-](/en-US/docs/Web/API/CanvasRenderingContext2D)adds a circular arc to the current sub-path.
+method of the [Canvas 2D API](/en-US/docs/Web/API/CanvasRenderingContext2D) adds a circular arc to the current sub-path.
 
 ## Syntax
 
 ```js
-void ctx.arc(x, y, radius, startAngle, endAngle [, counterclockwise]);
+arc(x, y, radius, startAngle, endAngle)
+arc(x, y, radius, startAngle, endAngle, counterclockwise)
 ```
 
 The `arc()` method creates a circular arc centered at `(x, y)`
@@ -43,6 +44,10 @@ at `endAngle`, and travels in the direction given by
   - : An optional boolean value. If `true`, draws the arc
     counter-clockwise between the start and end angles. The default is `false`
     (clockwise).
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

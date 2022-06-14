@@ -1,6 +1,7 @@
 ---
 title: Document.timeline
 slug: Web/API/Document/timeline
+page-type: web-api-instance-property
 tags:
   - API
   - Animation
@@ -26,14 +27,7 @@ The time values for this timeline are calculated as a fixed offset from the glob
 
 > **Note:** A document timeline that is associated with a non-active document is also considered to be **inactive**.
 
-## Syntax
-
-```js
-var pageTimeline = document.timeline;
-var thisMoment = pageTimeline.currentTime;
-```
-
-### Value
+## Value
 
 A {{domxref("DocumentTimeline")}} object.
 

@@ -1,6 +1,7 @@
 ---
 title: self.crypto
 slug: Web/API/crypto_property
+page-type: web-api-global-property
 tags:
   - API
   - Crypto
@@ -28,7 +29,7 @@ Although `crypto` is available on all windows, the returned `Crypto` object only
 
 An instance of the {{domxref("Crypto")}} interface, providing access to general-purpose cryptography and a strong random-number generator.
 
-## Example
+## Examples
 
 This example uses the `crypto` property to access the {{domxref("Crypto.getRandomValues", "getRandomValues()")}} method.
 

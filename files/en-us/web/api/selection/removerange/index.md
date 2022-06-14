@@ -1,6 +1,7 @@
 ---
 title: Selection.removeRange()
 slug: Web/API/Selection/removeRange
+page-type: web-api-instance-method
 tags:
   - API
   - HTML Editing
@@ -17,17 +18,17 @@ selection.
 ## Syntax
 
 ```js
-sel.removeRange(range)
+removeRange(range)
 ```
 
 ### Parameters
 
-- _`range`_
+- `range`
   - : A range object that will be removed to the selection.
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

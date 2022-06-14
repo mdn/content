@@ -1,6 +1,7 @@
 ---
 title: XRInputSourceArray.forEach()
 slug: Web/API/XRInputSourceArray/forEach
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -31,7 +32,8 @@ list.
 ## Syntax
 
 ```js
-xrInputSourceArray.forEach(callback, thisArg);
+forEach(callback)
+forEach(callback, thisArg)
 ```
 
 ### Parameters
@@ -55,8 +57,7 @@ xrInputSourceArray.forEach(callback, thisArg);
 - `thisArg` {{optional_inline}}
   - : The value to be used for
     [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)
-    while executing the callback. Note that if you use [arrow function
-    notation](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (`=>`) to provide the callback, you can
+    while executing the callback. Note that if you use [arrow function notation](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (`=>`) to provide the callback, you can
     omit `thisArg`, since all arrow functions lexically bind `this`.
 
 ### Return value

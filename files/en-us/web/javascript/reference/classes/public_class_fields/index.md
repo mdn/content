@@ -290,7 +290,6 @@ console.log(instance.msg)
 
 ## See also
 
-- [The
-  Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
+- [The Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
 - [Public and private class fields](https://v8.dev/features/class-fields)
   article at the v8.dev site

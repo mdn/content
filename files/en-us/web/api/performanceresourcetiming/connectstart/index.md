@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.connectStart
 slug: Web/API/PerformanceResourceTiming/connectStart
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -16,18 +17,12 @@ establishing the connection to the server to retrieve the resource.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-resource.connectStart;
-```
-
-### Return value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts to establish
 the connection to the server to retrieve the resource.
 
-## Example
+## Examples
 
 In the following example, the value of the `*Start` and `*End`
 properties of all "`resource`"

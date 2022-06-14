@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.address
 slug: Web/API/RTCIceCandidateStats/address
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -30,13 +31,7 @@ well.
 When a domain name is specified, the first IP address selected for that
 address is used, even if the domain name maps to multiple IP addresses.
 
-## Syntax
-
-```js
-candidateAddress = rtcIceCandidateStats.address;
-```
-
-### Value
+## Value
 
 Either an IPv4 or IPv6 address or a fully-qualified domain name, which corresponds to
 the candidate.

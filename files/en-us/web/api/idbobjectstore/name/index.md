@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.name
 slug: Web/API/IDBObjectStore/name
+page-type: web-api-instance-property
 tags:
   - API
   - Database
@@ -19,16 +20,9 @@ interface indicates the name of this object store.
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-IDBObjectStore.name = myNewName;
-var myObjectStoreName = IDBObjectStore.name;
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing the object
+A string containing the object
 store's name.
 
 ### Exceptions
@@ -45,7 +39,7 @@ store's name.
 - `ConstraintError` {{domxref("DOMException")}}
   - : Thrown if an object store is already using the specified `name`.
 
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store using `add()`. After the object store has been
@@ -115,5 +109,4 @@ function addData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

@@ -38,7 +38,7 @@ foo; //ReferenceError: foo is not defined
 
 ```js
 // foo is known to exist now but it has no type or value:
-var foo = null;
+const foo = null;
 foo; //null
 ```
 
@@ -46,8 +46,7 @@ foo; //null
 
 ### Difference between `null` and `undefined`
 
-When checking for `null` or `undefined`, beware of the [differences
-between equality (==) and identity (===) operators](/en-US/docs/Web/JavaScript/Reference/Operators), as the former performs
+When checking for `null` or `undefined`, beware of the [differences between equality (==) and identity (===) operators](/en-US/docs/Web/JavaScript/Reference/Operators), as the former performs
 type-conversion.
 
 ```js

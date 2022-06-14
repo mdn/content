@@ -1,6 +1,7 @@
 ---
 title: PaymentResponse.details
 slug: Web/API/PaymentResponse/details
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -22,13 +23,9 @@ transaction and determine a successful funds transfer.
 
 This data is returned by the payment app that satisfies the payment request. Developers need to consult whomever controls the URL for the expected shape of the details object.
 
-## Syntax
+## Value
 
-```js
-var detailsObject = PaymentResponse.details;
-```
-
-## Example
+## Examples
 
 The following example extracts the details from the {{domxref('PaymentResponse')}}
 object to the promise returned from {{domxref('PaymentRequest.show()')}}. In a

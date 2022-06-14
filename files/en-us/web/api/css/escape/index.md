@@ -1,6 +1,7 @@
 ---
 title: CSS.escape()
 slug: Web/API/CSS/escape
+page-type: web-api-static-method
 tags:
   - API
   - CSS
@@ -14,19 +15,23 @@ browser-compat: api.CSS.escape
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 The **`CSS.escape()`** static method returns a
-{{DOMxRef("CSSOMString")}} containing the escaped string passed as parameter, mostly for
+string containing the escaped string passed as parameter, mostly for
 use as part of a CSS selector.
 
 ## Syntax
 
 ```js
-escapedStr = CSS.escape(str);
+escape(str)
 ```
 
 ### Parameters
 
-- _str_
-  - : The {{DOMxRef("CSSOMString")}} to be escaped.
+- `str`
+  - : The string to be escaped.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -67,5 +72,4 @@ var element = document.querySelector('a[href="#' + CSS.escape(fragment) + '"]');
 ## See also
 
 - The {{DOMxRef("CSS")}} interface where this static method resides.
-- [A
-  polyfill for the CSS.escape](https://github.com/mathiasbynens/CSS.escape/blob/master/css.escape.js)
+- [A polyfill for the CSS.escape](https://github.com/mathiasbynens/CSS.escape/blob/master/css.escape.js)

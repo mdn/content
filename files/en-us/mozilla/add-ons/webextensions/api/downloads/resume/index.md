@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var resuming = browser.downloads.resume(
+let resuming = browser.downloads.resume(
   downloadId      // integer
 )
 ```
@@ -43,7 +43,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If t
 ## Examples
 
 ```js
-var downloadId = 2;
+let downloadId = 2;
 
 function onResumed() {
   console.log(`Resumed download`);
@@ -53,13 +53,13 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var resuming = browser.downloads.resume(downloadId);
+let resuming = browser.downloads.resume(downloadId);
 resuming.then(onResumed, onError);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-resume) API.
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-resume) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

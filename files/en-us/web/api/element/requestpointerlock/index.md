@@ -1,6 +1,7 @@
 ---
 title: Element.requestPointerLock()
 slug: Web/API/Element/requestPointerLock
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -24,8 +25,16 @@ To track the success or failure of the request, it is necessary to listen for th
 ## Syntax
 
 ```js
-instanceOfElement.requestPointerLock();
+requestPointerLock()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

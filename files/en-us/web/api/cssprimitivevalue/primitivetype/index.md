@@ -1,16 +1,18 @@
 ---
 title: CSSPrimitiveValue.primitiveType
 slug: Web/API/CSSPrimitiveValue/primitiveType
+page-type: web-api-instance-property
 tags:
   - API
   - CSSPrimitiveValue
   - Property
   - Read-only
   - Reference
+  - Deprecated
   - primitiveValue
 browser-compat: api.CSSPrimitiveValue.primitiveType
 ---
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`primitiveType`** read-only property of the
 {{domxref("CSSPrimitiveValue")}} interface represents the type of a CSS value.
@@ -23,13 +25,7 @@ The **`primitiveType`** read-only property of the
 > - the untyped [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model), widely supported, or
 > - the modern [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), less supported and considered experimental.
 
-## Syntax
-
-```js
-type = cssPrimitiveValue.primitiveType;
-```
-
-### Value
+## Value
 
 An `unsigned short` representing the type of the value. Possible values are:
 
@@ -236,7 +232,7 @@ An `unsigned short` representing the type of the value. Possible values are:
   </tbody>
 </table>
 
-## Example
+## Examples
 
 ```js
 var cs = window.getComputedStyle(document.body);
@@ -246,7 +242,7 @@ console.log(cssValue.primitiveType);
 
 ## Specifications
 
-This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) specification, but has been dropped from any
 standardization effort since then.
 
 It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.

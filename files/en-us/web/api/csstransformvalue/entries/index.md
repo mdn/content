@@ -1,6 +1,7 @@
 ---
 title: CSSTransformValue.entries()
 slug: Web/API/CSSTransformValue/entries
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -23,7 +24,7 @@ properties in the prototype chain as well).
 ## Syntax
 
 ```js
-CSSTransformValue.entries(obj);
+entries(obj)
 ```
 
 ### Parameters

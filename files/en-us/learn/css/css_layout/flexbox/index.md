@@ -53,7 +53,7 @@ As you'll see in subsequent sections, flexbox makes a lot of layout tasks much e
 
 ## Introducing a simple example
 
-In this article, you'll work through a series of exercises to help you understand how flexbox works. To get started, you should make a local copy of the first starter file — [flexbox0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox0.html) from our github repo. Load it in a modern browser (like Firefox or Chrome) and have a look at the code in your code editor. You can also [see it live here](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html).
+In this article, you'll work through a series of exercises to help you understand how flexbox works. To get started, you should make a local copy of the first starter file — [flexbox0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox0.html) from our GitHub repo. Load it in a modern browser (like Firefox or Chrome) and have a look at the code in your code editor. You can also [see it live here](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html).
 
 ![Image showing the starting point of Flexbox tutorial](bih741v.png)
 
@@ -219,7 +219,7 @@ Refresh the page and you'll see that the buttons are now nicely centered horizon
 
 {{cssxref("align-items")}} controls where the flex items sit on the cross axis.
 
-- By default, the value is `stretch`, which stretches all flex items to fill the parent in the direction of the cross axis. If the parent doesn't have a fixed width in the cross axis direction, then all flex items will become as long as the longest flex item. This is how our first example had columns of equal height by default.
+- By default, the value is `stretch`, which stretches all flex items to fill the parent in the direction of the cross axis. If the parent doesn't have a fixed height in the cross axis direction, then all flex items will become as tall as the tallest flex item. This is how our first example had columns of equal height by default.
 - The `center` value that we used in our above code causes the items to maintain their intrinsic dimensions, but be centered along the cross axis. This is why our current example's buttons are centered vertically.
 - You can also have values like `flex-start` and `flex-end`, which will align all items at the start and end of the cross axis respectively. See {{cssxref("align-items")}} for the full details.
 
@@ -349,11 +349,16 @@ We discuss strategies for overcoming cross-browser support issues in our [Cross 
 
 ## Test your skills!
 
-We've covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on: see [Test your skills: Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox_skills).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox_skills).
 
 ## Summary
 
-That concludes our tour of the basics of Flexbox. We hope you had fun and will have a good play around with it as you proceed further with your learning. Next, we'll have a look at another important aspect of CSS layouts: CSS Grids.
+That concludes our tour of the basics of Flexbox. We hope you had fun and will have a good play around with it as you proceed further with your learning. Next, we'll have a look at another important aspect of CSS layouts: [CSS Grids](/en-US/docs/Learn/CSS/CSS_layout/Grids).
+
+## See also
+
+- [CSS-Tricks Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) — an article explaining everything about Flexbox in a visually appealing way
+- [Flexbox Froggy](https://flexboxfroggy.com/) — an educational game to learn and better understand the basics of Flexbox
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 
@@ -370,4 +375,4 @@ That concludes our tour of the basics of Flexbox. We hope you had fun and will h
 - [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
 - [Legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
 - [Supporting older browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension assessment](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
+- [Fundamental layout comprehension](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

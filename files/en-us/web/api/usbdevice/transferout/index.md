@@ -1,6 +1,7 @@
 ---
 title: USBDevice.transferOut()
 slug: Web/API/USBDevice/transferOut
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -22,14 +23,14 @@ device.
 ## Syntax
 
 ```js
-var promise = USBDevice.transferOut(endpointNumber, data)
+transferOut(endpointNumber, data)
 ```
 
 ### Parameters
 
-- endpointNumber
+- `endpointNumber`
   - : The number of a device-specific endpoint (buffer).
-- data
+- `data`
   - : A {{domxref("TypedArray")}} containing the data to send to the device.
 
 ### Return value

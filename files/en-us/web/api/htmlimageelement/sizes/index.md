@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.sizes
 slug: Web/API/HTMLImageElement/sizes
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -27,16 +28,9 @@ conditions.
 Each condition is specified using the same conditional format used
 by [media queries](/en-US/docs/Web/CSS/Media_Queries).
 
-## Syntax
+## Value
 
-```js
-let sizes = htmlImageElement.sizes;
-htmlImageElement.sizes = sizes;
-```
-
-### Value
-
-A {{domxref("USVString")}} containing a comma-separated list of source size descriptors
+A string containing a comma-separated list of source size descriptors
 followed by an optional fallback size. Each **source size descriptor** is
 comprised of a media condition, then at least one whitespace character, then the
 **source size value** to use for the image when the media condition
@@ -64,7 +58,7 @@ unit, which lets you specify the width as a percentage of the viewport width
 > `100%` are not allowed, as there would be uncertainty as to what the
 > specified value is a percentage of.
 
-## Example
+## Examples
 
 In this example, a blog-like layout is created, displaying some text and an image which
 for which three size points are specified, depending on the width of the window. Three
@@ -162,9 +156,6 @@ This result may be {{LiveSampleLink('Example', 'viewed in its own window')}}.
 ## See also
 
 - [Media queries](/en-US/docs/Web/CSS/Media_Queries)
-- [Using media
-  queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Images in
-  HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Responsive
-  images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)

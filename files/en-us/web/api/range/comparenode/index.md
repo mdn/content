@@ -1,6 +1,7 @@
 ---
 title: Range.compareNode()
 slug: Web/API/Range/compareNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -30,8 +31,7 @@ The possible values are:
   - : Node starts after and ends before the Range, i.e. the Node is completely selected by
     the Range.
 
-> **Warning:** This method [has been
-> removed](/en-US/docs/Mozilla/Firefox/Releases/3/Site_compatibility) from [Gecko 1.9](/en-US/docs/Mozilla/Firefox/Releases/3) and
+> **Warning:** This method [has been removed](/en-US/docs/Mozilla/Firefox/Releases/3/Site_compatibility) from [Gecko 1.9](/en-US/docs/Mozilla/Firefox/Releases/3) and
 > will not exist in future versions of Firefox, which was the only browser implementing
 > it; you should switch to {{DOMxRef("Range.compareBoundaryPoints()")}} as soon as
 > possible.
@@ -64,15 +64,19 @@ function rangeCompareNode(range, node) {
 ## Syntax
 
 ```js
-returnValue = range.compareNode( referenceNode );
+compareNode(referenceNode)
 ```
 
 ### Parameters
 
-- _referenceNode_
+- `referenceNode`
   - : The {{DOMxRef("Node")}} to compare with the `Range`.
 
-## Example
+### Return value
+
+A constant indicating the position of the {{DOMxRef("Node")}}.
+
+## Examples
 
 ```js
 range = document.createRange();

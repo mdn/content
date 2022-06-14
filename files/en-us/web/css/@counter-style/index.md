@@ -94,7 +94,9 @@ Each `@counter-style` is identified by a name and has a set of descriptors.
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+@counter-style <counter-style-name> { <declaration-list> }
+```
 
 ## Examples
 
@@ -122,14 +124,14 @@ Which will produce lists like this:
 Ⓑ Two
 Ⓒ Three
 Ⓓ Four
-Ⓔ FIve
+Ⓔ Five
 ...
 ...
-Ⓨ Twenty Five
-Ⓩ Twenty Six
-27 Twenty Seven
-28 Twenty Eight
-29 Twenty Nine
+Ⓨ Twenty-five
+Ⓩ Twenty-six
+27 Twenty-seven
+28 Twenty-eight
+29 Twenty-nine
 30 Thirty
 
 See more examples on the [demo page](https://mdn.github.io/css-examples/counter-style-demo/).
@@ -153,4 +155,4 @@ The [Counter styles converter](https://r12a.github.io/app-counters/) pulls from 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}, {{Cssxref("list-style-type")}}
 - {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles.
 - CSS {{Cssxref("counter", "counter()")}} and {{Cssxref("counters", "counters()")}} functions
-- [Counter style demo](https://mdn.github.io/css-examples/counter-style-demo/) ([code](https://github.com/mdn/css-examples/tree/master/counter-style-demo))
+- [Counter style demo](https://mdn.github.io/css-examples/counter-style-demo/) ([code](https://github.com/mdn/css-examples/tree/main/counter-style-demo))

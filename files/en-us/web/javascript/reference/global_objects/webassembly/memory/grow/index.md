@@ -26,7 +26,7 @@ grow(number)
 
 ### Parameters
 
-- _number_
+- `number`
   - : The number of WebAssembly pages you want to grow the memory by (each one is 64KiB in
     size).
 
@@ -69,5 +69,4 @@ pages.
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.currentTime
 slug: Web/API/BaseAudioContext/currentTime
+page-type: web-api-instance-property
 tags:
   - API
   - AudioContext
@@ -17,13 +18,11 @@ The `currentTime` read-only property of the {{ domxref("BaseAudioContext") }}
 interface returns a double representing an ever-increasing hardware timestamp in seconds that
 can be used for scheduling audio playback, visualizing timelines, etc. It starts at 0.
 
-## Syntax
+## Value
 
-```js
-var curTime = baseAudioContext.currentTime;
-```
+A floating point number.
 
-## Example
+## Examples
 
 ```js
 var AudioContext = window.AudioContext || window.webkitAudioContext;

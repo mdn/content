@@ -13,6 +13,8 @@ browser-compat: css.properties.unicode-bidi
 
 The **`unicode-bidi`** [CSS](/en-US/docs/Web/CSS) property, together with the {{cssxref("direction")}} property, determines how bidirectional text in a document is handled. For example, if a block of content contains both left-to-right and right-to-left text, the user-agent uses a complex Unicode algorithm to decide how to display the text. The `unicode-bidi` property overrides this algorithm and allows the developer to control the text embedding.
 
+{{EmbedInteractiveExample("pages/css/unicode-bidi.html")}}
+
 The `unicode-bidi` and {{cssxref("direction")}} properties are the only properties that are not affected by the {{cssxref("all")}} shorthand.
 
 > **Warning:** This property is intended for Document Type Definition (DTD) designers. Web designers and similar authors **should not** override it.
@@ -32,6 +34,7 @@ unicode-bidi: plaintext;
 unicode-bidi: inherit;
 unicode-bidi: initial;
 unicode-bidi: revert;
+unicode-bidi: revert-layer;
 unicode-bidi: unset;
 ```
 

@@ -117,8 +117,8 @@ function minOfArray(arr) {
   let min = Infinity;
   let QUANTUM = 32768;
 
-  for (var i = 0, len = arr.length; i < len; i += QUANTUM) {
-    var submin = Math.min.apply(null,
+  for (let i = 0, len = arr.length; i < len; i += QUANTUM) {
+    const submin = Math.min.apply(null,
                                 arr.slice(i, Math.min(i+QUANTUM, len)));
     min = Math.min(submin, min);
   }
@@ -146,7 +146,7 @@ Function.prototype.construct = function(aArgs) {
 Example usage:
 
 ```js
-function MyConstructor() {
+function MyConstructor(arguments) {
   for (let nProp = 0; nProp < arguments.length; nProp++) {
     this['property' + nProp] = arguments[nProp];
   }

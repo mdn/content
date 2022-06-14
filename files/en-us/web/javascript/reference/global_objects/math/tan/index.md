@@ -52,7 +52,7 @@ radians and returns the tangent.
 
 ```js
 function getTanDeg(deg) {
-  var rad = deg * Math.PI/180;
+  const rad = deg * Math.PI/180;
   return Math.tan(rad);
 }
 ```

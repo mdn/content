@@ -37,7 +37,7 @@ If you set a new icon using `setIcon()`, and omit both the `tabId` and `windowId
 ## Syntax
 
 ```js
-var settingIcon = browser.sidebarAction.setIcon(
+let settingIcon = browser.sidebarAction.setIcon(
   details         // object
 )
 ```
@@ -109,7 +109,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 The code below toggles the sidebar icon for the active tab when the user clicks a browser action:
 
 ```js
-var on = false;
+let on = false;
 
 function toggle(tab) {
   if (on) {

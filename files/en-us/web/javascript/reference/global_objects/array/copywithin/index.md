@@ -94,7 +94,7 @@ necessary.
 // {0: 1, 3: 1, length: 5}
 
 // ES2015 Typed Arrays are subclasses of Array
-var i32a = new Int32Array([1, 2, 3, 4, 5])
+const i32a = new Int32Array([1, 2, 3, 4, 5])
 
 i32a.copyWithin(0, 2)
 // Int32Array [3, 4, 5, 4, 5]
@@ -115,6 +115,5 @@ i32a.copyWithin(0, 2)
 ## See also
 
 - [Polyfill of `Array.prototype.copyWithin` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [A
-  polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
+- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
 - {{jsxref("Array")}}

@@ -1,6 +1,7 @@
 ---
 title: PaymentRequest.abort()
 slug: Web/API/PaymentRequest/abort
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -20,16 +21,16 @@ interface that might be shown.
 ## Syntax
 
 ```js
-PaymentRequest.abort();
+abort()
 ```
-
-### Returns
-
-{{jsxref('undefined')}}.
 
 ### Parameters
 
-None
+None.
+
+### Return value
+
+None ({{jsxref('undefined')}}).
 
 ## Examples
 

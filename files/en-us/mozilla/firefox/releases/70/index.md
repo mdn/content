@@ -17,11 +17,11 @@ This article provides information about the changes in Firefox 70 that will affe
 
 #### Debugger updates
 
-- In the [Debugger](/en-US/docs/Tools/Debugger) you can now set breakpoints for [DOM Mutation](/en-US/docs/Tools/Debugger/Break_on_DOM_mutation), so execution will pause when a node or its attributes are changed or when a node is removed from the DOM ({{bug(1576219)}}).
+- In the [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) you can now set breakpoints for [DOM Mutation](https://firefox-source-docs.mozilla.org/devtools-user/debugger/break_on_dom_mutation/index.html), so execution will pause when a node or its attributes are changed or when a node is removed from the DOM ({{bug(1576219)}}).
 - The Debugger now shows an overlay on the page when it is paused, with basic stepping buttons to let you step and continue ({{bug(1574646)}}).
 - The Debugger now shows sources that already got discarded by the engine (usually scripts that execute once during page load), so you can properly set breakpoints to debug when they execute next ({{bug(1572280)}}).
-- The Debugger's [scopes panel](/en-US/docs/Tools/Debugger/Using_the_Debugger_map_scopes_feature) grouping has been simplified, consolidating additional scopes previously shown above the top level function (e.g. blocks created by [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with), or [`if`/`else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)) ({{bug(1448166)}})
-- The Debugger now retains the currently selected and expanded variables in the [scopes panel](/en-US/docs/Tools/Debugger/Using_the_Debugger_map_scopes_feature) while stepping ({{bug(1405402)}}).
+- The Debugger's [scopes panel](https://firefox-source-docs.mozilla.org/devtools-user/debugger/using_the_debugger_map_scopes_feature/index.html) grouping has been simplified, consolidating additional scopes previously shown above the top level function (e.g. blocks created by [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with), or [`if`/`else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)) ({{bug(1448166)}})
+- The Debugger now retains the currently selected and expanded variables in the [scopes panel](https://firefox-source-docs.mozilla.org/devtools-user/debugger/using_the_debugger_map_scopes_feature/index.html) while stepping ({{bug(1405402)}}).
 - The Debugger now handles stepping over async functions correctly, making [asynchronous function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) debugging easier ({{bug(1570178)}}).
 - When debugging in [Container sessions](https://support.mozilla.org/en-US/kb/containers) (useful for testing different logins), the sources in the debugger are now shown correctly ({{bug(1375036)}}).
 - [`debugger`](/en-US/docs/Web/JavaScript/Reference/Statements/debugger) statements can be now disabled in the Debugger by setting a breakpoint on them and switching the breakpoints to "Never pause here" ({{bug(925269)}}).
@@ -29,9 +29,9 @@ This article provides information about the changes in Firefox 70 that will affe
 
 #### Other updates
 
-- An icon will be displayed next to inactive CSS properties in the [Rules view](/en-US/docs/Tools/Page_Inspector/UI_Tour#rules_view) of the [Page Inspector](/en-US/docs/Tools/Page_Inspector), which you can hover over to get information on why it is inactive ({{bug(1306054)}}).
-- In the [CSS Rules view](/en-US/docs/Tools/Page_Inspector/UI_Tour#rules_view), the [color picker](/en-US/docs/Tools/Page_Inspector/How_to/Inspect_and_select_colors) on foreground colors now tells you whether its contrast with the background color meets accessibility conformance criteria ({{bug(1478156)}}).
-- The [Accessibility inspector](/en-US/docs/Tools/Accessibility_inspector)'s [Check for issues](/en-US/docs/Tools/Accessibility_inspector#check_for_accessibility_issues) dropdown now includes keyboard accessibility checks ({{bug(1564968)}}).
+- An icon will be displayed next to inactive CSS properties in the [Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#rules-view) of the [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), which you can hover over to get information on why it is inactive ({{bug(1306054)}}).
+- In the [CSS Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#rules-view), the [color picker](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/inspect_and_select_colors/index.html) on foreground colors now tells you whether its contrast with the background color meets accessibility conformance criteria ({{bug(1478156)}}).
+- The [Accessibility inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html)'s [Check for issues](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#check-for-accessibility-issues) dropdown now includes keyboard accessibility checks ({{bug(1564968)}}).
 
 ### HTML
 
@@ -84,9 +84,9 @@ This article provides information about the changes in Firefox 70 that will affe
 
 #### DOM
 
-- The {{domxref("History.back","back()")}}, {{domxref("History.forward","forward()")}}, and {{domxref("History.go","go()")}} methods are now asynchronous. Add a listener to the `{{domxref("Window/popstate_event", "popstate")}}` event to get notification that navigation has completed {{Bug(1563587)}}.
+- The {{domxref("History.back","back()")}}, {{domxref("History.forward","forward()")}}, and {{domxref("History.go","go()")}} methods are now asynchronous. Add a listener to the {{domxref("Window/popstate_event", "popstate")}} event to get notification that navigation has completed {{Bug(1563587)}}.
 - We've added support {{DOMxRef("DOMMatrix")}}, {{DOMxRef("DOMPoint")}}, etc. in web workers ({{bug(1420580)}}).
-- A few more members have been moved from {{domxref("HTMLDocument")}} to {{domxref("Document")}}, including  {{domxref("Document.all")}}, {{domxref("Document.clear")}}, {{domxref("Document.captureEvents")}}, and {{domxref("Document.clearEvents")}} ({{bug(1558570)}}, {{bug(1558571)}}).
+- A few more members have been moved from {{domxref("HTMLDocument")}} to {{domxref("Document")}}, including {{domxref("Document.all")}}, {{domxref("Document.clear")}}, {{domxref("Document.captureEvents")}}, and {{domxref("Document.clearEvents")}} ({{bug(1558570)}}, {{bug(1558571)}}).
 - [Notification](/en-US/docs/Web/API/Notifications_API) permission can no longer be requested from inside a cross-origin {{htmlelement("iframe")}} ({{bug(1560741)}}).
 
 #### Media, Web Audio, and WebRTC
@@ -107,7 +107,7 @@ This article provides information about the changes in Firefox 70 that will affe
 
 ### HTTP
 
-- The default referrer policy for third-party tracking resources is now `strict-origin-when-cross-origin` when [Enhanced Tracking Protection](/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection) is turned on ({{bug(1569996)}}).
+- The default referrer policy for third-party tracking resources is now `strict-origin-when-cross-origin` when [Enhanced Tracking Protection](/en-US/docs/Web/Privacy/Tracking_Protection) is turned on ({{bug(1569996)}}).
 - The size of the {{httpheader("Referer")}} request header is now limited to 4 KB (4,096 bytes). If an overly long referer exceeds the defined limit, only the origin part will be sent ({{bug(1557346)}}).
 - The [HTTP cache](/en-US/docs/Web/HTTP/Caching) is now partitioned per the top-level document's origin ({{bug(1536058)}}).
 

@@ -34,6 +34,7 @@ right: auto;
 right: inherit;
 right: initial;
 right: revert;
+right: revert-layer;
 right: unset;
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: 'MediaQueryList: change event'
 slug: Web/API/MediaQueryList/change_event
+page-type: web-api-event
 tags:
   - API
   - CSSOM View
@@ -38,7 +39,7 @@ _The `MediaQueryListEvent` interface inherits properties from its parent interfa
 - {{DOMxRef("MediaQueryListEvent.matches")}}{{ReadOnlyInline}}
   - : A boolean value that is `true` if the {{DOMxRef("document")}} currently matches the media query list, or `false` if not.
 - {{DOMxRef("MediaQueryListEvent.media")}}{{ReadOnlyInline}}
-  - : A {{DOMxRef("DOMString")}} representing a serialized media query.
+  - : A string representing a serialized media query.
 
 ## Example
 
@@ -50,7 +51,7 @@ mql.onchange = (e) => {
     /* the viewport is 600 pixels wide or less */
     console.log('This is a narrow screen — less than 600px wide.')
   } else {
-    /* the viewport is more than than 600 pixels wide */
+    /* the viewport is more than 600 pixels wide */
     console.log('This is a wide screen — more than 600px wide.')
   }
 }
@@ -67,8 +68,7 @@ mql.onchange = (e) => {
 ## See also
 
 - [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from
-  code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

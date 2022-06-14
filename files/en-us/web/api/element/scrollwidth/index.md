@@ -1,6 +1,7 @@
 ---
 title: Element.scrollWidth
 slug: Web/API/Element/scrollWidth
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -28,16 +29,11 @@ without a need for horizontal scrollbar, its `scrollWidth` is equal to
 > **Note:** This property will round the value to an integer. If you need a fractional value,
 > use {{ domxref("element.getBoundingClientRect()") }}.
 
-## Syntax
+## Value
 
-```js
-var xScrollWidth = element.scrollWidth;
-```
+A number.
 
-`xScrollWidth` is the width of the content of
-`element` in pixels.
-
-## Example
+## Examples
 
 ```html
 <!DOCTYPE html>

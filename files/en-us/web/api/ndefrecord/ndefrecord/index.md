@@ -1,6 +1,7 @@
 ---
 title: NDEFRecord()
 slug: Web/API/NDEFRecord/NDEFRecord
+page-type: web-api-constructor
 tags:
   - NDEF
   - Reference
@@ -10,7 +11,7 @@ browser-compat: api.NDEFRecord.NDEFRecord
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
 The **`NDEFRecord()`**
-constructor of the [Web NFC API](/en-US/docs/Web/API/WebNFC_API) returns a
+constructor of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_API) returns a
 newly constructed {{DOMxRef("NDEFRecord")}} object that represents data that can be
 read from, or written to, compatible NFC devices; e.g. NFC tags supporting NDEF.
 

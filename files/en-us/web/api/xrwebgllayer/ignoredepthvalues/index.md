@@ -1,6 +1,7 @@
 ---
 title: XRWebGLLayer.ignoreDepthValues
 slug: Web/API/XRWebGLLayer/ignoreDepthValues
+page-type: web-api-instance-property
 tags:
   - 3D
   - API
@@ -37,8 +38,7 @@ The value of `ignoreDepthValues` can only be set when the
 A Boolean value which is `true` if the WebGL context's depth buffer is being
 used while computing the locations of points in the 3D world. Otherwise, if this is
 `true`, the depth buffer's values are being used to assist in placing objects
-in the scene. Since the [XR
-compositor](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#The_WebXR_compositor) uses the depth buffer by default, this value is `false`
+in the scene. Since the [XR compositor](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#the_webxr_compositor) uses the depth buffer by default, this value is `false`
 unless explicitly set otherwise when creating the {{domxref("XRWebGLLayer")}} using its
 constructor, {{domxref("XRWebGLLayer.XRWebGLLayer", "XRWebGLLayer()")}}.
 
@@ -50,7 +50,7 @@ scene, in order to potentially improve the quality or the output as well as the 
 level for the viewer.
 
 The depth buffer is {{domxref("XRWebGLLayer.framebufferWidth", "framebufferWidth")}}
-entires wide and {{domxref("XRWebGLLayer.framebufferHeight", "framebuffer")}} entries
+entries wide and {{domxref("XRWebGLLayer.framebufferHeight", "framebuffer")}} entries
 tall. Each entry in the buffer specifies the depth at which the corresponding pixel is
 located, and has a value between 0.0 and 1.0.
 

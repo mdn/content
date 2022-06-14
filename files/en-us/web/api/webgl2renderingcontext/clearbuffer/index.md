@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.clearBuffer[fiuv]()
 slug: Web/API/WebGL2RenderingContext/clearBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,10 +19,16 @@ currently bound framebuffer.
 ## Syntax
 
 ```js
-void gl.clearBufferfv(buffer, drawbuffer, values, optional srcOffset);
-void gl.clearBufferiv(buffer, drawbuffer, values, optional srcOffset);
-void gl.clearBufferuiv(buffer, drawbuffer, values, optional srcOffset);
-void gl.clearBufferfi(buffer, drawbuffer, depth, stencil);
+clearBufferfv(buffer, drawbuffer, values)
+clearBufferfv(buffer, drawbuffer, values, srcOffset)
+
+clearBufferiv(buffer, drawbuffer, values)
+clearBufferiv(buffer, drawbuffer, values, srcOffset)
+
+clearBufferuiv(buffer, drawbuffer, values)
+clearBufferuiv(buffer, drawbuffer, values, srcOffset)
+
+clearBufferfi(buffer, drawbuffer, depth, stencil)
 ```
 
 ### Parameters
@@ -50,7 +57,7 @@ void gl.clearBufferfi(buffer, drawbuffer, depth, stencil);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

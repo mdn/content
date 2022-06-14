@@ -1,6 +1,7 @@
 ---
 title: IDBCursorWithValue.value
 slug: Web/API/IDBCursorWithValue/value
+page-type: web-api-instance-property
 tags:
   - API
   - Database
@@ -20,17 +21,11 @@ whatever that is.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var value = myIDBCursorWithValue.value;
-```
-
-### Value
+## Value
 
 The value of the current cursor.
 
-## Example
+## Examples
 
 In this example we create a transaction, retrieve an object store, then use a cursor to
 iterate through all the records in the object store. Within each iteration we log the
@@ -79,5 +74,4 @@ function displayData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

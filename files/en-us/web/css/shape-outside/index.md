@@ -46,9 +46,10 @@ shape-outside: url(image.png);
 shape-outside: linear-gradient(45deg, rgba(255, 255, 255, 0) 150px, red 150px);
 
 /* Global values */
-shape-outside: initial;
 shape-outside: inherit;
+shape-outside: initial;
 shape-outside: revert;
+shape-outside: revert-layer;
 shape-outside: unset;
 ```
 

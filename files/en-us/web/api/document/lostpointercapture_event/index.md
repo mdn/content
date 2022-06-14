@@ -1,6 +1,7 @@
 ---
 title: 'Document: lostpointercapture event'
 slug: Web/API/Document/lostpointercapture_event
+page-type: web-api-event
 tags:
   - API
   - Document

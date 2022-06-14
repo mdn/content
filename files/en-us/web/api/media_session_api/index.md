@@ -1,6 +1,7 @@
 ---
 title: Media Session API
 slug: Web/API/Media_Session_API
+page-type: web-api-overview
 tags:
   - Audio
   - Media
@@ -10,6 +11,7 @@ tags:
   - Overview
   - Reference
   - Video
+browser-compat: api.MediaSession
 ---
 {{DefaultAPISidebar("Media Session API")}}
 
@@ -92,10 +94,8 @@ playButton.addEventListener('pointerup', function(event) {
 
 ## Specifications
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Media Session')}} | {{Spec2('Media Session')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.MediaSession")}}
+{{Compat}}

@@ -52,6 +52,7 @@ transition: all 0.5s ease-out;
 transition: inherit;
 transition: initial;
 transition: revert;
+transition: revert-layer;
 transition: unset;
 ```
 

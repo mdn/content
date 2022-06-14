@@ -1,6 +1,7 @@
 ---
 title: LayoutShiftAttribution.node
 slug: Web/API/LayoutShiftAttribution/node
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,13 +14,7 @@ browser-compat: api.LayoutShiftAttribution.node
 
 The **`node`** read-only property of the {{domxref("LayoutShiftAttribution")}} interface returns a {{domxref("node")}} representing the object that has shifted.
 
-## Syntax
-
-```js
-let node = LayoutShiftAttribution.node;
-```
-
-### Value
+## Value
 
 A {{domxref("node")}}.
 

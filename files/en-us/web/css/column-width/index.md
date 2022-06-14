@@ -32,6 +32,7 @@ column-width: 3.3vw;
 column-width: inherit;
 column-width: initial;
 column-width: revert;
+column-width: revert-layer;
 column-width: unset;
 ```
 

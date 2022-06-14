@@ -1,6 +1,7 @@
 ---
 title: CSSSkew
 slug: Web/API/CSSSkew
+page-type: web-api-interface
 tags:
   - API
   - CSS

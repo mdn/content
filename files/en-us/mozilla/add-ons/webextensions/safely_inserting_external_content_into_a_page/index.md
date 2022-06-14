@@ -28,8 +28,8 @@ When working with strings, there are a couple of recommended options to safely a
 A lightweight approach to inserting strings into a page is to use the native DOM manipulation methods: [`document.createElement`](/en-US/docs/Web/API/Document/createElement), [`Element.setAttribute`](/en-US/docs/Web/API/Element/setAttribute), and [`Node.textContent`](/en-US/docs/Web/API/Node/textContent). The safe approach is to create the nodes separately and assign their content using textContent:
 
 ```js example-good
-var data = JSON.parse(responseText);
-var div = document.createElement("div");
+let data = JSON.parse(responseText);
+let div = document.createElement("div");
 div.className = data.className;
 div.textContent = "Your favorite color is now " + data.color;
 addonElement.appendChild(div);
@@ -40,7 +40,7 @@ This approach is safe because the use of `.textContent` automatically escapes an
 However, beware, you can use native methods that aren't safe. Take the following code:
 
 ```js example-bad
-var data = JSON.parse(responseText);
+let data = JSON.parse(responseText);
 addonElement.innerHTML = "<div class='" + data.className + "'>" +
                          "Your favorite color is now " + data.color +
                          "</div>";
@@ -53,7 +53,7 @@ Here, the contents of `data.className` or `data.color` could contain HTML that c
 When using jQuery, functions such as `attr()` and `text()` escape content as it's added to a DOM. So, the "favorite color" example from above, implemented in jQuery, would look like this:
 
 ```js example-good
-var node = $("</div>");
+let node = $("</div>");
 node.addClass(data.className);
 node.text("Your favorite color is now " + data.color);
 ```
@@ -80,16 +80,16 @@ For production use, [DOMPurify](https://github.com/cure53/DOMPurify) comes as a 
 Then, in myinjectionscript.js you can read the external HTML, sanitize it, and add it to a page's DOM:
 
 ```js
-var elem = document.createElement("div");
-var cleanHTML = DOMPurify.sanitize(externalHTML);
+let elem = document.createElement("div");
+let cleanHTML = DOMPurify.sanitize(externalHTML);
 elem.innerHTML = cleanHTML;
 ```
 
 You can use any method to add the sanitized HTML to your DOM, for example jQuery's `.html()` function. Remember though that the `SAFE_FOR_JQUERY` flag needs to be used in this case:
 
 ```js
-var elem = $("<div/>");
-var cleanHTML = DOMPurify.sanitize(externalHTML, { SAFE_FOR_JQUERY: true });
+let elem = $("<div/>");
+let cleanHTML = DOMPurify.sanitize(externalHTML, { SAFE_FOR_JQUERY: true });
 elem.html(cleanHTML);
 ```
 

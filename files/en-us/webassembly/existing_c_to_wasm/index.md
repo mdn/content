@@ -61,7 +61,7 @@ Now you only need some HTML and JavaScript to load your new module:
 
 And you will see the correct version number in the [output](https://googlechrome.github.io/samples/webassembly/version.html):
 
-![  Screenshot of the DevTools console showing the correct versionnumber.](version.png)
+![  Screenshot of the DevTools console showing the correct version number.](version.png)
 
 > **Note:** libwebp returns the current version a.b.c as a hexadecimal number 0xabc. For example, v0.6.1 is encoded as 0x000601 = 1537.
 
@@ -173,8 +173,7 @@ api.free_result(resultPointer);
 
 Depending on the size of your image, you might run into an error where wasm can't grow the memory enough to accommodate both the input and the output image:
 
-![
-  Screenshot of the DevTools console showing an error.](error.png)
+![Screenshot of the DevTools console showing an error.](error.png)
 
 Luckily, the solution to this problem is in the error message. You just need to add `-s ALLOW_MEMORY_GROWTH=1` to your compilation command.
 
@@ -190,6 +189,6 @@ document.body.appendChild(img)
 
 Behold, the glory of a new WebP image.
 
-[Demo](https://googlechrome.github.io/samples/webassembly/image.html) | [Original Article](https://developers.google.com/web/updates/2018/03/emscripting-a-c-library)
+[Demo](https://googlechrome.github.io/samples/webassembly/image.html) | [Original Article](https://web.dev/emscripting-a-c-library/)
 
 ![DevTools network panel and the generated image.](result.jpg)

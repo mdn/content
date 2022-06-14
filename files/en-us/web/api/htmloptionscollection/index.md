@@ -1,6 +1,7 @@
 ---
 title: HTMLOptionsCollection
 slug: Web/API/HTMLOptionsCollection
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

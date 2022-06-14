@@ -1,6 +1,7 @@
 ---
 title: USBDevice.productId
 slug: Web/API/USBDevice/productID
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -18,13 +19,7 @@ The **`productId`** read only property of the
 {{domxref("USBDevice")}} interface the manufacturer-defined code that identifies a USB
 device.
 
-## Syntax
-
-```js
-var serialNumber = USBDevice.productId
-```
-
-### Value
+## Value
 
 The manufacturer-defined code that identifies a USB device.
 

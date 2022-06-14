@@ -1,6 +1,7 @@
 ---
 title: CSSVariableReferenceValue()
 slug: Web/API/CSSVariableReferenceValue/CSSVariableReferenceValue
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
@@ -18,16 +19,16 @@ Creates a new {{domxref('CSSVariableReferenceValue')}}.
 ## Syntax
 
 ```js
-new CSSVariableReferenceValue(variable[, fallback]])
+new CSSVariableReferenceValue(variable)
+new CSSVariableReferenceValue(variable, fallback)
 ```
 
 ### Parameters
 
-- _variable_
+- `variable`
   - : A [custom property name](/en-US/docs/Web/CSS/--*).
-- _fallback_
-  - : Optional. A [custom
-    property fallback value](/en-US/docs/Web/CSS/Using_CSS_custom_properties#custom_property_fallback_values).
+- `fallback` {{optional_inline}}
+  - : A [custom property fallback value](/en-US/docs/Web/CSS/Using_CSS_custom_properties#custom_property_fallback_values).
 
 ## Specifications
 
@@ -36,9 +37,3 @@ new CSSVariableReferenceValue(variable[, fallback]])
 ## Browser compatibility
 
 {{Compat}}
-
-- _variable_
-  - : A CSS [custom property](/en-US/docs/Web/CSS/--*)
-- _fallback_
-  - : Optional. A [custom
-    property fallback value](/en-US/docs/Web/CSS/Using_CSS_custom_properties#custom_property_fallback_values).

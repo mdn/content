@@ -1,9 +1,9 @@
 ---
 title: FormDataEvent.formData
 slug: Web/API/FormDataEvent/formData
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - FormDataEvent
   - Forms
   - Property
@@ -12,17 +12,11 @@ browser-compat: api.FormDataEvent.formData
 ---
 {{APIRef("DOM")}}
 
-The `formData` read only property of the {{domxref("FormDataEvent")}}
+The `formData` read-only property of the {{domxref("FormDataEvent")}}
 interface contains the {{domxref("FormData")}} object representing the data contained in
 the form when the event was fired.
 
-## Syntax
-
-```js
-formData = formDataEvent.formData
-```
-
-### Returns
+## Value
 
 A {{domxref("FormData")}} object.
 
@@ -72,8 +66,6 @@ formElem.addEventListener('formdata', (e) => {
 ## See also
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData
-  objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

@@ -1,6 +1,7 @@
 ---
 title: CSSPerspective()
 slug: Web/API/CSSPerspective/CSSPerspective
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
@@ -21,7 +22,7 @@ the individual {{CSSXref('transform')}} property in CSS.
 ## Syntax
 
 ```js
-var CSSPerspective = new CSSPerspective(length);
+new CSSPerspective(length)
 ```
 
 ### Parameters

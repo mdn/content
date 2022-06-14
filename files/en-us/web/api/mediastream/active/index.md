@@ -1,6 +1,7 @@
 ---
 title: MediaStream.active
 slug: Web/API/MediaStream/active
+page-type: web-api-instance-property
 tags:
   - API
   - Media Capture and Streams
@@ -21,18 +22,12 @@ its {{domxref("MediaStreamTrack")}}s is not in the {{domxref("MediaStreamTrack.e
 state. Once every track has ended, the stream's `active` property becomes
 `false`.
 
-## Syntax
-
-```js
-const isActive = MediaStream.active;
-```
-
-### Value
+## Value
 
 A Boolean value which is `true` if the stream is currently active;
 otherwise, the value is `false`.
 
-## Example
+## Examples
 
 In this example, a new stream whose source is the user's local camera and microphone is
 requested using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}. When that

@@ -1,6 +1,7 @@
 ---
 title: RTCRtpSender.replaceTrack()
 slug: Web/API/RTCRtpSender/replaceTrack
+page-type: web-api-instance-method
 tags:
   - Audio
   - Media
@@ -68,7 +69,7 @@ rejection handler:
     would require negotiation.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Returned if the track on which this method was called is stopped rather than running.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Returned if the new track's `kind` doesn't match the original track.
 
 ## Usage notes

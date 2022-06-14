@@ -26,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var removing = browser.browsingData.removePasswords(
+let removing = browser.browsingData.removePasswords(
   removalOptions            // RemovalOptions object
 )
 ```
@@ -57,7 +57,7 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+let oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
 
 browser.browsingData.removePasswords({since: oneWeekAgo}).
 then(onRemoved, onError);
@@ -83,7 +83,7 @@ browser.browsingData.removePasswords({}).then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData) API.
+> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

@@ -1,6 +1,7 @@
 ---
 title: Document.open()
 slug: Web/API/Document/open
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -24,7 +25,7 @@ This does come with some side effects. For example:
 ## Syntax
 
 ```js
-document.open();
+open()
 ```
 
 ### Parameters

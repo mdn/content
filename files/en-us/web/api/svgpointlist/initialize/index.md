@@ -1,6 +1,7 @@
 ---
 title: SVGPointList.initialize()
 slug: Web/API/SVGPointList/initialize
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,7 +17,7 @@ The **`initialize()`** method of the {{domxref("SVGPointList")}} interface clear
 ## Syntax
 
 ```js
-SVGPointList.initialize(obj);
+initialize(obj)
 ```
 
 ### Parameters

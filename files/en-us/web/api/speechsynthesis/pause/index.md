@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesis.pause()
 slug: Web/API/SpeechSynthesis/pause
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -23,13 +24,13 @@ interface puts the `SpeechSynthesis` object into a paused state.
 pause()
 ```
 
-### Returns
-
-{{jsxref('undefined')}}.
-
 ### Parameters
 
 None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

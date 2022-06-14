@@ -1,6 +1,7 @@
 ---
 title: Using the Web Storage API
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
+page-type: guide
 tags:
   - API
   - Guide
@@ -8,6 +9,7 @@ tags:
   - Web Storage API
   - localStorage
   - sessionStorage
+spec-urls: https://html.spec.whatwg.org/multipage/webstorage.html#webstorage
 ---
 {{DefaultAPISidebar("Web Storage API")}}
 
@@ -25,7 +27,7 @@ localStorage['colorSetting'] = '#a4509b';
 localStorage.setItem('colorSetting', '#a4509b');
 ```
 
-> **Note:** It's recommended to use the Web Storage API (`setItem`, `getItem`, `removeItem`, `key`, `length`) to prevent the [pitfalls](https://www.2ality.com/2012/01/objects-as-maps.html) associated with using plain objects as key-value stores.
+> **Note:** It's recommended to use the Web Storage API (`setItem`, `getItem`, `removeItem`, `key`, `length`) to prevent the [pitfalls](https://2ality.com/2012/01/objects-as-maps.html) associated with using plain objects as key-value stores.
 
 The two mechanisms within Web Storage are as follows:
 
@@ -198,9 +200,7 @@ Web Storage also provides a couple of simple methods to remove data. We don't us
 
 ## Specifications
 
-| Specification                                                                | Status                           | Comment |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#webstorage')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

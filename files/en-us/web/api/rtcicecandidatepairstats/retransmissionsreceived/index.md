@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.retransmissionsReceived
 slug: Web/API/RTCIceCandidatePairStats/retransmissionsReceived
+page-type: web-api-instance-property
 tags:
   - API
   - Connectivity
@@ -30,13 +31,7 @@ The number of retransmissions that have been sent on the connection can be
 found in {{domxref("RTCIceCandidatePairStats.retransmissionsSent",
   "retransmissionsSent")}}.
 
-## Syntax
-
-```js
-retransmissionsReceived = rtcIceCandidatePairStats.retransmissionsReceived;
-```
-
-### Value
+## Value
 
 An integer value indicating the total number of retransmitted STUN connectivity check
 requests have been received on the connection referenced by this candidate pair so far.

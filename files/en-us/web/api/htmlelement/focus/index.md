@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.focus()
 slug: Web/API/HTMLElement/focus
+page-type: web-api-instance-method
 tags:
   - API
   - Focus
@@ -22,7 +23,8 @@ the element which will receive keyboard and similar events by default.
 ## Syntax
 
 ```js
-element.focus(options);
+focus()
+focus(options)
 ```
 
 ### Parameters
@@ -39,6 +41,10 @@ element.focus(options);
         the browser will scroll the element into view after focusing it. If
         `preventScroll` is set to `true`, no scrolling will
         occur.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -126,8 +132,7 @@ focusNoScrollMethod = function getFocusWithoutScrolling() {
 - Behavior of the focus in relation to different HTML features like
   {{HTMLAttrxRef("tabindex")}} or {{Glossary("shadow tree","shadow dom", 1)}},
   which previously remained under-specified, were recently updated (as October
-  of 2019). Checkout [WHATWG
-  blog](https://blog.whatwg.org/focusing-on-focus) for more info.
+  of 2019). Checkout [WHATWG blog](https://blog.whatwg.org/focusing-on-focus) for more info.
 
 ## Browser compatibility
 

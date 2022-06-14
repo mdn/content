@@ -21,7 +21,7 @@ the program will terminate.
 ## Syntax
 
 ```js
-throw expression; 
+throw expression;
 ```
 
 - `expression`
@@ -40,9 +40,9 @@ throw true;     // generates an exception with the value true
 throw new Error('Required');  // generates an error object with the message of Required
 ```
 
-Also note that the `throw` statement is affected by [automatic
-semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion) as no line terminator between the `throw`
-keyword and the expression is allowed.
+Also note that the `throw` statement is affected by
+[automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)
+as no line terminator between the `throw` keyword and the expression is allowed.
 
 ## Examples
 

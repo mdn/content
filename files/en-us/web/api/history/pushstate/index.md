@@ -1,6 +1,7 @@
 ---
 title: History.pushState()
 slug: Web/API/History/pushState
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -24,8 +25,8 @@ session history stack.
 ## Syntax
 
 ```js
-history.pushState(state, unused)
-history.pushState(state, unused, url)
+pushState(state, unused)
+pushState(state, unused, url)
 ```
 
 ### Parameters
@@ -40,7 +41,7 @@ history.pushState(state, unused, url)
 
     The `state` object can be anything that can be serialized. Because
     Firefox saves `state` objects to the user's disk so they can be restored
-    after the user restarts the browser, we impose a size limit of 2 MiB on the
+    after the user restarts the browser, we impose a size limit of 16 MiB on the
     serialized representation of a `state` object. If you pass a
     `state` object whose serialized representation is larger than this
     to `pushState()`, the method will throw an exception. If you need more
@@ -58,6 +59,10 @@ history.pushState(state, unused, url)
     current URL. The new URL must be of the same {{glossary("origin")}} as the current
     URL; otherwise, `pushState()` will throw an exception. If this parameter
     isn't specified, it's set to the document's current URL.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Description
 
@@ -109,6 +114,5 @@ window.history.pushState({}, '', url);
 
 ## See also
 
-- [Working with
-  the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)
+- [Working with the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)
 - [Window: popstate event](/en-US/docs/Web/API/Window/popstate_event)

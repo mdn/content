@@ -1,6 +1,7 @@
 ---
 title: XRFrame.getViewerPose()
 slug: Web/API/XRFrame/getViewerPose
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -63,8 +64,7 @@ if (viewerPose) {
 }
 ```
 
-To see a complete example, take a look at [Movement, orientation,
-and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion).
+To see a complete example, take a look at [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion).
 
 ## Specifications
 

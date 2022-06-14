@@ -1,6 +1,7 @@
 ---
 title: OTPCredential.code
 slug: Web/API/OTPCredential/code
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,15 +14,9 @@ browser-compat: api.OTPCredential.code
 
 The **`code`** property of the {{domxref("OTPCredential")}} interface returns the one-time password.
 
-## Syntax
+## Value
 
-```js
-let code = OTPCredential.code;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing the one-time password.
+A string containing the one-time password.
 
 ## Examples
 

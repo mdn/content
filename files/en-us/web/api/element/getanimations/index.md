@@ -1,6 +1,7 @@
 ---
 title: Element.getAnimations()
 slug: Web/API/Element/getAnimations
+page-type: web-api-instance-method
 tags:
   - API
   - Animatable
@@ -31,12 +32,13 @@ elements too.
 ## Syntax
 
 ```js
-const animations = Element.getAnimations(options);
+getAnimations()
+getAnimations(options)
 ```
 
 ### Parameters
 
-- `options {{optional_inline}}`
+- `options`{{optional_inline}}
 
   - : An options object containing the following property:
 

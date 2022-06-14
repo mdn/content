@@ -1,6 +1,7 @@
 ---
 title: SVGGeometryElement.isPointInStroke()
 slug: Web/API/SVGGeometryElement/isPointInStroke
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -22,12 +23,12 @@ the element.
 ## Syntax
 
 ```js
-boolean someElement.isPointInStroke(DOMPointInit point);
+isPointInStroke(point)
 ```
 
 ### Parameters
 
-- point
+- `point`
   - : An object interpreted as a point in the local coordinate system
     of the element.
 
@@ -35,7 +36,7 @@ boolean someElement.isPointInStroke(DOMPointInit point);
 
 A boolean indicating whether the given point is within the stroke or not.
 
-## Example
+## Examples
 
 ### SVG
 
@@ -68,7 +69,7 @@ console.log('Point at 83,17:', circle.isPointInStroke(new DOMPoint(83, 17)));
 
 ### Result
 
-{{EmbedLiveSample("Example", "150", "150")}}
+{{EmbedLiveSample("Examples", "150", "150")}}
 
 ## Specifications
 

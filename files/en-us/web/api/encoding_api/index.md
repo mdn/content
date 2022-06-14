@@ -1,11 +1,13 @@
 ---
 title: Encoding API
 slug: Web/API/Encoding_API
+page-type: web-api-overview
 tags:
   - API
   - Encoding
   - Overview
   - Reference
+spec-urls: https://encoding.spec.whatwg.org/
 ---
 {{DefaultAPISidebar("Encoding API")}}
 
@@ -24,9 +26,7 @@ The API provides four interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEnc
 
 ## Specifications
 
-| Specification                    | Status                       | Comment             |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName("Encoding")}} | {{Spec2("Encoding")}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -40,4 +40,4 @@ The API provides four interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEnc
 
 ## See also
 
-- A [shim](https://code.google.com/p/stringencoding/) allowing to use this interface in browsers that don't support it
+- A [shim](https://github.com/inexorabletash/text-encoding) allowing to use this interface in browsers that don't support it

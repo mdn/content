@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.offsetParent
 slug: Web/API/HTMLElement/offsetParent
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -23,21 +24,16 @@ ancestor `td`, `th`, `table` will be returned, or the
 > - The element or its parent element has the `display` property set to
 >   `none`.
 > - The element has the `position` property set to `fixed`
->   (firefox returns `<body>`).
+>   (Firefox returns `<body>`).
 > - The element is `<body>` or `<html>`.
 
 `offsetParent` is useful because
 {{domxref("HTMLElement.offsetTop","offsetTop")}} and
 {{domxref("HTMLElement.offsetLeft","offsetLeft")}} are relative to its padding edge.
 
-## Syntax
+## Value
 
-```js
-parentObj = element.offsetParent;
-```
-
-- _parentObj_ is an object reference to the element in which the current
-  element is offset.
+An object reference to the element in which the current element is offset.
 
 ## Specifications
 

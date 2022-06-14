@@ -1,6 +1,7 @@
 ---
 title: Response.bodyUsed
 slug: Web/API/Response/bodyUsed
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch
@@ -18,7 +19,7 @@ The **`bodyUsed`** read-only property of the {{domxref("Response")}} interface i
 
 A boolean value.
 
-## Example
+## Examples
 
 In our [fetch request example](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (run [fetch request live](https://mdn.github.io/fetch-examples/fetch-request/)),
 we create a new request using the {{domxref("Request.Request","Request()")}} constructor,
@@ -49,7 +50,7 @@ fetch('https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg').the
 });
 ```
 
-{{ EmbedLiveSample('Example', '100%', '250px') }}
+{{ EmbedLiveSample('Examples', '100%', '250px') }}
 
 ## Specifications
 

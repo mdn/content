@@ -1,6 +1,7 @@
 ---
 title: BluetoothCharacteristicProperties.authenticatedSignedWrites
 slug: Web/API/BluetoothCharacteristicProperties/authenticatedSignedWrites
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth
@@ -20,13 +21,7 @@ property of the {{domxref("BluetoothCharacteristicProperties")}} interface retur
 `boolean` that is `true` if signed writing to the characteristic
 value is permitted.
 
-## Syntax
-
-```js
-var aBoolean = BluetoothCharacteristicProperties.authenticatedSignedWrites;
-```
-
-### Value
+## Value
 
 A boolean value.
 

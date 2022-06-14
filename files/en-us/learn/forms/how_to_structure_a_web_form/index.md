@@ -47,7 +47,7 @@ We already met this in the previous article.
 
 > **Warning:** It's strictly forbidden to nest a form inside another form. Nesting can cause forms to behave in an unpredictable manner, so it is a bad idea.
 
-It's always possible to use a form control outside of a {{HTMLElement("form")}} element. If you do so, by default that control has nothing to do with any form unless you associate it with a form using its [`form`](/en-US/docs/Web/HTML/Element/input#attr-form) attribute. This was introduced to let you explicitly bind a control with a form even if it is not nested inside it.
+It's always possible to use a form control outside of a {{HTMLElement("form")}} element. If you do so, by default that control has nothing to do with any form unless you associate it with a form using its [`form`](/en-US/docs/Web/HTML/Element/input#form) attribute. This was introduced to let you explicitly bind a control with a form even if it is not nested inside it.
 
 Let's move forward and cover the structural elements you'll find nested in a form.
 
@@ -107,7 +107,7 @@ There is another way to associate a form control with a label — nest the form 
 
 Even in such cases however, it is considered best practice to set the `for` attribute to ensure all assistive technologies understand the relationship between label and widget.
 
-If there is no label, or if the form control is neither implicitly or explicitly associated with a label, a screenreader will read out something like "Edit text blank", which isn't very helpful at all.
+If there is no label, or if the form control is neither implicitly nor explicitly associated with a label, a screenreader will read out something like "Edit text blank", which isn't very helpful at all.
 
 ### Labels are clickable, too!
 
@@ -164,7 +164,7 @@ Let's consider this example:
 
 {{EmbedLiveSample("Multiple_labels", 120, 120)}}
 
-The paragraph at the top states a rule for required elements. The rule must be included _before_ it is used so that sighted users and users of assistive technologies such as screen readers can learn what it means before they encounter a required element. While this helps inform users what an asterisk means, it can not be relied upon. A screen reader will speak an asterisk as "_star_" when encountered. When hovered by a sighted mouse user, "_required_" should appear, which is achieved by use of the `title` attribute. Titles being read aloud depend on the screen reader's settings, so it is more reliable to also include the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) attribute, which is always read by screen readers.
+The paragraph at the top states a rule for required elements. The rule must be included _before_ it is used so that sighted users and users of assistive technologies such as screen readers can learn what it means before they encounter a required element. While this helps inform users what an asterisk means, it can not be relied upon. A screen reader will speak an asterisk as "_star_" when encountered. When hovered by a sighted mouse user, "_required_" should appear, which is achieved by use of the `title` attribute. Titles being read aloud depend on the screen reader's settings, so it is more reliable to also include the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute, which is always read by screen readers.
 
 The above variants increase in effectiveness as you go through them:
 
@@ -222,7 +222,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
           <ul>
               <li>
                 <label for="title_1">
-                  <input type="radio" id="title_1" name="title" value="K" >
+                  <input type="radio" id="title_1" name="title" value="K">
                   King
                 </label>
               </li>
@@ -327,7 +327,7 @@ You now have all the knowledge you'll need to properly structure your web forms.
 
 ## See also
 
-- [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://www.alistapart.com/articles/sensibleforms/)
+- [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://alistapart.com/article/sensibleforms/)
 
 {{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
 

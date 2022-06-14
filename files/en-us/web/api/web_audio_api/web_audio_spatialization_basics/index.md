@@ -1,6 +1,7 @@
 ---
 title: Web audio spatialization basics
 slug: Web/API/Web_Audio_API/Web_audio_spatialization_basics
+page-type: guide
 tags:
   - PannerNode
   - Web Audio API
@@ -185,7 +186,7 @@ Finally, we'll set some bounds so our boombox doesn't move too far in any direct
 const moveControls = document.querySelector('#move-controls').querySelectorAll('button');
 const boombox = document.querySelector('.boombox-body');
 
-// the values for our css transforms
+// the values for our CSS transforms
 let transform = {
     xAxis: 0,
     yAxis: 0,
@@ -272,7 +273,7 @@ const q = Math.PI/rotationRate; //rotation increment in radians
 We can also use this to work out degrees rotated, which will help with the CSS transforms we will have to create (note we need both an x and y-axis for the CSS transforms):
 
 ```js
-// get degrees for css
+// get degrees for CSS
 const degreesX = (q * 180)/Math.PI;
 const degreesY = (q * 180)/Math.PI;
 ```

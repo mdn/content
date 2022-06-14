@@ -1,6 +1,7 @@
 ---
 title: Node
 slug: Web/API/Node
+page-type: web-api-interface
 tags:
   - Interface
   - Reference
@@ -135,7 +136,7 @@ parent, {{DOMxRef("EventTarget")}}._
   - : Returns a boolean value indicating whether or not the two nodes are
     the same (that is, they reference the same object).
 - {{DOMxRef("Node.lookupPrefix()")}}
-  - : Returns a {{DOMxRef("DOMString")}} containing the prefix for a given namespace URI,
+  - : Returns a string containing the prefix for a given namespace URI,
     if present, and `null` if not. When multiple prefixes are possible, the
     result is implementation-dependent.
 - {{DOMxRef("Node.lookupNamespaceURI()")}}

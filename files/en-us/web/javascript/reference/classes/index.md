@@ -259,6 +259,8 @@ class Rectangle {
 }
 ```
 
+We don't need keywords like `let`, `const`, or `var` to declare fields.
+
 By declaring fields up-front, class definitions become more self-documenting, and the fields are always present.
 
 As seen above, the fields can be declared with or without a default value.
@@ -343,7 +345,7 @@ d.speak(); // Mitzie barks.
 // For similar methods, the child's method takes precedence over parent's method
 ```
 
-Note that classes cannot extend regular (non-constructible) objects
+Note that classes cannot extend regular (non-constructible) objects.
 If you want to inherit from a regular object, you can instead use {{jsxref("Object.setPrototypeOf()")}}:
 
 ```js

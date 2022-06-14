@@ -14,9 +14,9 @@ tags:
 
 Highlights:
 
-- [Memory tool](/en-US/docs/Tools/Memory)
-- [Animation inspector improvements](/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations)
-- [New Waterfall markers: DomContentLoaded, load, worker messages](/en-US/docs/Tools/Performance/Waterfall#markers)
+- [Memory tool](https://firefox-source-docs.mozilla.org/devtools-user/memory/index.html)
+- [Animation inspector improvements](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html)
+- [New Waterfall markers: DomContentLoaded, load, worker messages](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html#markers)
 
 [All devtools bugs fixed between Firefox 43 and Firefox 44.](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-11-03&query_format=advanced&chfield=resolution&chfieldfrom=2015-09-19&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=12582678)
 
@@ -99,12 +99,12 @@ Highlights:
 
 - For compatibility with specific existing sites, the property `Document.charset` has been implemented as an alias of {{domxref("Document.characterSet")}} ({{bug(647621)}}).
 - Support for the [`window.sidebar.addSearchEngine()`](/en-US/docs/Web/OpenSearch#installing_sherlock_plugins) method, which allowed Web pages to invoke an installation of a Sherlock plugin, has been dropped and now it just logs a warning in the Web Console ({{bug(862148)}}).
-- To fight unwanted pop-ups, prompts requested in {{domxref("WindowEventHandlers/onbeforeunload", "Window.onbeforeunload")}} of pages that have not been interacted with are no more displayed ({{bug(636905)}}).
+- To fight unwanted pop-ups, prompts requested in {{domxref("Window/beforeunload_event", "beforeunload")}} events of pages that have not been interacted with are no more displayed ({{bug(636905)}}).
 - The deprecated method {{domxref("MessageEvent.initMessageEvent()")}} has been reimplemented for backward compatibility ({{bug(949376)}}).
 - The obsolete property `DocumentType.internalSubset` has been removed ({{bug(801545)}}).
-- For compatibility with existing sites, the properties {{domxref("Window.orientation")}} and {{domxref("Window.onorientationchange")}}, as well as the {{event("orientationchange")}} event have been implemented ({{bug(920734)}}).
+- For compatibility with existing sites, the properties {{domxref("Window.orientation")}} and {{domxref("Window.onorientationchange")}}, as well as the {{domxref("Window.orientationchange_event", "orientationchange")}} event have been implemented ({{bug(920734)}}).
 - An {{HTMLElement("iframe")}} with explicit fullscreen request should not exit fullscreen implicitly ({{bug(1187801)}}).
-- The events {{event("mouseover")}}, {{event("mouseout")}}, {{event("mouseenter")}}, {{event("mouseleave")}}, {{event("pointermove")}}, {{event("pointerover")}}, {{event("pointerout")}}, {{event("pointerenter")}} and {{event("pointerleave")}} are now triggered for disabled form elements ({{bug(218093)}}).
+- The events {{event("mouseover")}}, {{event("mouseout")}}, {{event("mouseenter")}}, {{event("mouseleave")}}, {{domxref("HTMLElement/pointermove_event", "pointermove")}}, {{domxref("HTMLElement/pointerover_event", "pointerover")}}, {{domxref("HTMLElement/pointerout_event", "pointerout")}}, {{domxref("HTMLElement/pointerenter_event", "pointerenter")}} and {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} are now triggered for disabled form elements ({{bug(218093)}}).
 - The method {{domxref("Element.webkitMatchesSelector()")}} has been added ({{bug(1216193)}}) to improve interoperability.
 - To match the spec, the method {{domxref("Document.createAttribute()")}} now converts the input to lower case ({{bug(1176313)}}).
 - The non-standard `dialog` feature for {{domxref("Window.open()")}} is no longer available to Web content. It is still available to extensions and other code with chrome privileges ({{bug(1095236)}}.
@@ -128,13 +128,13 @@ Highlights:
 
 #### Service Workers
 
-- The {{domxref("ServiceWorkerMessageEvent")}} and {{domxref("ExtendableMessageEvent")}} interfaces have been implemented ({{bug(1143717)}} and {{bug(1207068)}}).
+- The `ServiceWorkerMessageEvent` and {{domxref("ExtendableMessageEvent")}} interfaces have been implemented ({{bug(1143717)}} and {{bug(1207068)}}).
 - {{domxref("Headers")}} objects now support a pair iterator, meaning that the methods {{domxref("Headers.entries()")}}, {{domxref("Headers.keys()")}}, and {{domxref("Headers.values()")}} are now available; {{jsxref("Symbol.iterator")}} now also returns the default iterator for them ({{bug(1108181)}}).
 - The {{domxref('XMLHttpRequest')}} API has been disabled on Service Workers ({{bug(931243)}}).
 - The interface {{domxref("FetchEvent")}} now extends {{domxref("ExtendableEvent")}}, giving it access to the {{domxref("ExtendableEvent.waitUntil()")}} method. ({{bug(1214772)}}).
 - Following a recent change in the specification, `FetchEvent.client` has been removed ({{bug(1218135)}}).
 - To match the latest specification, the {{domxref("ServiceWorkerContainer.onreloadpage")}} has been removed ({{bug(1218139)}}).
-- The event handlers {{domxref("ServiceWorkerGlobalScope.onbeforeevicted")}} and {{domxref("ServiceWorkerGlobalScope.onevicted")}} have been removed as they weren't following the spec. They will be reintroduced in the future, but their removal will allow feature detection to work as expected ({{bug(1218142)}}).
+- The event handlers {{domxref("ServiceWorkerGlobalScope.beforeevicted_event", "onbeforeevicted")}} and {{domxref("ServiceWorkerGlobalScope.evicted_event", "onevicted")}} have been removed as they weren't following the spec. They will be reintroduced in the future, but their removal will allow feature detection to work as expected ({{bug(1218142)}}).
 - In the {{domxref("FetchEvent.FetchEvent", "FetchEvent()")}} constructor, if the `isReload` member is not present in the options dictionary, it now defaults to `false` ({{bug(1216401)}}).
 - The {{domxref("Client.frameType")}} property is now implemented on the right interface; it was on {{domxref("WindowClient")}} before ({{bug(1218146)}}).
 - When AppCache is used to provide offline support for a page, a warning message is now displayed in the console advising developers to use [Service workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers) instead ({{bug("1204581")}}.)
@@ -148,7 +148,7 @@ Highlights:
   - `mozRTCIceCandidate` is now {{domxref("RTCIceCandidate")}}.
   - `mozRTCSessionDescription` is now {{domxref("RTCSessionDescription")}}.
 
-- The {{domxref("RTCDataChannel.bufferedAmountLowThreshold")}} and {{domxref("RTCDataChannel.onbufferedamountlow")}} properties, as well as the {{event("bufferedamountlow")}} event, have been implemented ({{bug(1178091)}}).
+- The {{domxref("RTCDataChannel.bufferedAmountLowThreshold")}} property, as well as the {{domxref("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event and its event handler, have been implemented ({{bug(1178091)}}).
 - The attribute {{domxref("RTCPeerConnection.canTrickleIceCandidates")}} has been added, the non-standard method {{domxref("RTCPeerConnection.updateIce()")}} removed ({{bug(1209744)}}).
 - The {{domxref("MediaStream")}} interface now supports the {{domxref("MediaStream.addTrack()")}} and {{domxref("MediaStream.removeTrack()")}} methods ({{bug(1103188)}}).
 - The constructor {{domxref("MediaStream.MediaStream", "MediaStream()")}} has been implemented ({{bug(1070216)}}).
@@ -210,7 +210,7 @@ _No change._
 
 ### XPCOM
 
-- The {{interface("nsIDOMWindow")}} interface is now empty. Its contents were either no longer used, had moved elsewhere, or were only used from C++. The items available from C++ code now reside in the `{{source("dom/base/nsPIDOMWindow.h", "nsPIDOMWindow")}}` interface ({{bug(1216401)}}).
+- The `nsIDOMWindow` interface is now empty. Its contents were either no longer used, had moved elsewhere, or were only used from C++. The items available from C++ code now reside in the `{{source("dom/base/nsPIDOMWindow.h", "nsPIDOMWindow")}}` interface ({{bug(1216401)}}).
 
 ### Other
 

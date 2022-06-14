@@ -1,6 +1,7 @@
 ---
 title: PaymentResponse.complete()
 slug: Web/API/PaymentResponse/complete
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -27,14 +28,15 @@ the payment request and the {{jsxref("Promise")}} returned by the
 ## Syntax
 
 ```js
-completePromise = paymentRequest.complete(result);
+complete()
+complete(result)
 ```
 
 ### Parameters
 
 - `result` {{optional_inline}}
 
-  - : A {{domxref("DOMString")}} indicating the state of the payment operation upon
+  - : A string indicating the state of the payment operation upon
     completion. It must be one of the following:
 
     - `success`

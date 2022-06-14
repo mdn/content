@@ -1,6 +1,7 @@
 ---
 title: Picture-in-Picture API
 slug: Web/API/Picture-in-Picture_API
+page-type: web-api-overview
 tags:
   - API
   - DOM
@@ -13,6 +14,7 @@ tags:
   - Video
   - View
   - pip
+browser-compat: api.PictureInPictureWindow
 ---
 {{DefaultAPISidebar("Picture-in-Picture API")}}
 
@@ -101,45 +103,19 @@ function togglePictureInPicture() {
 }
 ```
 
-This block starts by looking at the value of the {{DOMxRef("Document", "document")}}'s `pictureInPictureElement` attribute. If the value is `null`, no video is in the floating window. so we can request a video to enter the picture-in-picture mode; otherwise, it's the element that's currently in picture-in-picture mode. Switching to picture-in-picture mode is done by calling {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}} on the {{HTMLElement("video")}} element.
+This block starts by looking at the value of the {{DOMxRef("Document", "document")}}'s `pictureInPictureElement` attribute.
 
-If a video is in the floating window (`pictureInPictureElement` is not `null`), we call {{DOMxRef("Document.exitPictureInPicture", "exitPictureInPicture()")}} on the `document` to bring the video back into its initial box.
+If the value is not `null`, it's the element that's currently in picture-in-picture mode, that is in a floating window. We call {{DOMxRef("Document.exitPictureInPicture", "document.exitPictureInPicture()")}} to bring the video back into its initial box.
+
+If the value is `null`, no video is in the floating window. So we can request a video to enter the picture-in-picture mode. We do it by calling {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}} on the {{HTMLElement("video")}} element.
 
 ## Specifications
 
-| Specification                                                   |
-| --------------------------------------------------------------- |
-| [Picture-in-Picture](https://w3c.github.io/picture-in-picture/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `HTMLVideoElement.requestPictureInPicture`
-
-{{Compat("api.HTMLVideoElement.requestPictureInPicture")}}
-
-### `HTMLVideoElement.autoPictureInPicture`
-
-{{Compat("api.HTMLVideoElement.autoPictureInPicture")}}
-
-### `HTMLVideoElement.disablePictureInPicture`
-
-{{Compat("api.HTMLVideoElement.disablePictureInPicture")}}
-
-### `Document.pictureInPictureEnabled`
-
-{{Compat("api.Document.pictureInPictureEnabled")}}
-
-### `Document.exitPictureInPicture`
-
-{{Compat("api.Document.exitPictureInPicture")}}
-
-### `Document.pictureInPictureElement`
-
-{{Compat("api.Document.pictureInPictureElement")}}
-
-### `PictureInPictureWindow`
-
-{{Compat("api.PictureInPictureWindow")}}
+{{Compat}}
 
 ## See also
 

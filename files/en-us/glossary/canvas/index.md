@@ -19,4 +19,4 @@ It is a low level, procedural model that updates a [bitmap](https://en.wikipedia
 - The HTML {{HTMLElement("canvas")}} element on MDN
 - [The Canvas general documentation on MDN](/en-US/docs/Web/API/Canvas_API)
 - {{domxref("CanvasRenderingContext2D")}}: The canvas 2D drawing API
-- [The Canvas 2D API specification](https://www.w3.org/TR/2dcontext/)
+- [The Canvas 2D API specification](https://html.spec.whatwg.org/multipage/)

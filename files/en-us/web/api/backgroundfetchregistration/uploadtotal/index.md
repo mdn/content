@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchRegistration.uploadTotal
 slug: Web/API/BackgroundFetchRegistration/uploadTotal
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,13 +14,7 @@ browser-compat: api.BackgroundFetchRegistration.uploadTotal
 
 The **`uploadTotal`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns the total number of bytes to be sent to the server.
 
-## Syntax
-
-```js
-let uploadTotal = BackgroundFetchRegistration.uploadTotal;
-```
-
-### Value
+## Value
 
 A {{jsxref("number")}}.
 

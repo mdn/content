@@ -13,7 +13,7 @@ tags:
   - Input Type
   - Reference
   - Time
-browser-compat: html.elements.input.input-time
+browser-compat: html.elements.input.type_time
 ---
 
 {{HTMLRef("Input_types")}}
@@ -54,7 +54,7 @@ The Edge `time` control is somewhat more elaborate, opening up an hour and minut
   <tbody>
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
-      <td>A {{domxref("DOMString")}} representing a time, or empty.</td>
+      <td>A string representing a time, or empty.</td>
     </tr>
     <tr>
       <td><strong>Events</strong></td>
@@ -78,6 +78,10 @@ The Edge `time` control is somewhat more elaborate, opening up an hour and minut
         <code>value</code>, <code>valueAsDate</code>,
         <code>valueAsNumber</code>, and <code>list</code>.
       </td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
       <td><strong>Methods</strong></td>
@@ -284,7 +288,7 @@ The result here is that:
 
 #### Making min and max cross midnight
 
-By setting a {{htmlattrxref("min", "input")}} attribute greater than the {{htmlattrxref("max", "input")}} attribute, the valid time range will wrap around midnight to produce a valid time range which crosses midnight. This functionality is not supported by any other input types. While this feature is [in the HTML spec](https://html.spec.whatwg.org/C/#has-a-reversed-range), it is not yet universally supported. Chrome-based browsers support it starting in version 82 and Firefox added it in version 76. Safari as of version 14.1 does not support this. Be prepared for this situation to arise:
+By setting a {{htmlattrxref("min", "input")}} attribute greater than the {{htmlattrxref("max", "input")}} attribute, the valid time range will wrap around midnight to produce a valid time range which crosses midnight. This functionality is not supported by any other input types. While this feature is [in the HTML spec](https://html.spec.whatwg.org/multipage/input.html#has-a-reversed-range), it is not yet universally supported. Chrome-based browsers support it starting in version 82 and Firefox added it in version 76. Safari as of version 14.1 does not support this. Be prepared for this situation to arise:
 
 ```js
 const input = document.createElement('input');

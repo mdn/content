@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver.observe()
 slug: Web/API/IntersectionObserver/observe
+page-type: web-api-instance-method
 tags:
   - API
   - Intersection Observer
@@ -31,7 +32,7 @@ be processed by a single call to the callback.
 ## Syntax
 
 ```js
-IntersectionObserver.observe(targetElement);
+observe(targetElement)
 ```
 
 ### Parameters
@@ -43,7 +44,7 @@ IntersectionObserver.observe(targetElement);
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

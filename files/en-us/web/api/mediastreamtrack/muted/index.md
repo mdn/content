@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrack.muted
 slug: Web/API/MediaStreamTrack/muted
+page-type: web-api-instance-property
 tags:
   - API
   - Media Capture and Streams
@@ -23,21 +24,15 @@ indicating whether or not the track is currently unable to provide media output.
 > (audio frames in which every sample is 0, or video frames in which every pixel is
 > black).
 
-## Syntax
-
-```js
-const mutedFlag = track.muted
-```
-
-### Value
+## Value
 
 A {{jsxref('Boolean')}} which is `true` if the track is currently muted, or
 `false` if the track is currently unmuted.
 
 > **Note:** When possible, avoid polling `muted` to monitor the track's muting status.
-> Instead, add event listeners for the {{event("mute")}} and {{event("unmute")}} events.
+> Instead, add event listeners for the {{domxref("MediaStreamTrack.mute_event", "mute")}} and {{domxref("MediaStreamTrack.unmute_event", "unmute")}} events.
 
-## Example
+## Examples
 
 This example counts the number of tracks in an array of {{domxref("MediaStreamTrack")}}
 objects which are currently muted.

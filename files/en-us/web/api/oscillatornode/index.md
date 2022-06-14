@@ -1,9 +1,9 @@
 ---
 title: OscillatorNode
 slug: Web/API/OscillatorNode
+page-type: web-api-interface
 tags:
   - API
-  - Constructor
   - Interface
   - Media
   - OscillatorNode

@@ -14,7 +14,7 @@ browser-compat: css.types.transform-function.translate
 The **`translate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) repositions an element in the horizontal and/or vertical
 directions. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-![](translate.png)
+{{EmbedInteractiveExample("pages/css/function-translate.html")}}
 
 This transformation is characterized by a two-dimensional vector. Its coordinates define how much the element moves
 in each direction.

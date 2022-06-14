@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.lastResponseTimestamp
 slug: Web/API/RTCIceCandidatePairStats/lastResponseTimestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Connection
@@ -26,13 +27,7 @@ The {{domxref("RTCIceCandidatePairStats")}} property
 last {{Glossary("STUN")}} response was received on the described candidate
 pair.
 
-## Syntax
-
-```js
-lastResponseTimestamp = rtcIceCandidatePairStats.lastResponseTimestamp;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} object indicating the timestamp at which the most
 recent STUN response was received on the connection defined by the described pair of

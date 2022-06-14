@@ -31,6 +31,7 @@ column-rule-width: 2.5em;
 column-rule-width: inherit;
 column-rule-width: initial;
 column-rule-width: revert;
+column-rule-width: revert-layer;
 column-rule-width: unset;
 ```
 

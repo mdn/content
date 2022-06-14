@@ -5,6 +5,7 @@ tags:
   - Document
   - Guide
   - JavaScript
+browser-compat: javascript.classes
 ---
 {{jsSidebar("JavaScript Guide")}}
 
@@ -202,9 +203,9 @@ class Scalar {
   constructor(value) {
     this.#total = value || this.#total;
   }
-  
+
   add(s) {
-    // check the passed object defines #length
+    // check the passed object defines #total
     if (!(#total in s)) {
       throw new TypeError("Expected an instance of Scalar");
     }
@@ -220,9 +221,9 @@ scalar1.add({}) // throws informative exception
 ## See also
 
 - [Private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
-- [Private Syntax FAQ](https://github.com/tc39/proposal-class-fields/blob/master/PRIVATE_SYNTAX_FAQ.md)
+- [Private Syntax FAQ](https://github.com/tc39/proposal-class-fields/blob/main/PRIVATE_SYNTAX_FAQ.md)
 - [The Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
 
 ## Browser compatibility
 
-{{Compat("javascript.classes")}}
+{{Compat}}

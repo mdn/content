@@ -1,6 +1,7 @@
 ---
 title: Inputs and input sources
 slug: Web/API/WebXR_Device_API/Inputs
+page-type: guide
 tags:
   - API
   - AR
@@ -18,7 +19,7 @@ tags:
   - XR
   - controllers
 ---
-{{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{draft("Artwork is still being produced and will be inserted as it's completed.")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 A full WebXR experience isn't just about showing the user a wholly virtual scene or augmenting reality by adding to or altering the world around them. In order to make an experience that's fulfilling and engaging, the user needs to be able to interact with it. To that end, WebXR provides support for a variety of kinds of input devices.
 
@@ -302,7 +303,7 @@ Each input source should define a **primary action**. A primary action (which wi
 
 When the user points a device along a target ray in your 3D space and then triggers a select action, the following events are sent to the active {{domxref("XRSession")}}:
 
-1. A {{domxref("XRSession.selectstart_event", "selectstart")}} event, indicating that the user has performed the activity that begins the primary action. This may be a gesture, depressing a button, or the like.
+1. A {{domxref("XRSession.selectstart_event", "selectstart")}} event, indicating that the user has performed the activity that begins the primary action. This may be a gesture, pressing a button, or the like.
 2. If the primary action ends successfully (for example, due to the user releasing the button or trigger), rather than because of an error, the {{domxref("XRSession.select_event", "select")}} event is sent.
 3. After the `select` event is sent _or_ if the controller on which the action is being performed is disconnected or otherwise becomes unavailable, the {{domxref("XRSession.selectend_event", "selectend")}} event is sent.
 
@@ -492,7 +493,7 @@ To determine what object is targeted, follow the targeting ray until it intersec
 
 In any case, to identify the targeted object, you need to determine if the ray specified by the {{domxref("XRInputSource")}} property {{domxref("XRInputSource.targetRaySpace", "targetRaySpace")}} intersects any objects in the scene, whether they're virtual or real-world.
 
-See [Targeting and hit detection](/en-US/docs/Web/API/WebXR_Device_API/Targeting) for a more detailed look at what's involved..
+See [Targeting and hit detection](/en-US/docs/Web/API/WebXR_Device_API/Targeting) for a more detailed look at what's involved.
 
 ### Presenting hand-held objects
 
@@ -579,7 +580,7 @@ function drawFrame(time, frame) {
 }
 ```
 
-The `drawFrame()` function shown here is the callback invoked when it's time to draw the frame, as established by calling the the {{domxref("XRSession")}} method {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}. It calls a function `applyExternalInputs()` which we'll define momentarily; it takes the `avatar` object and uses its information to update the avatar's reference frame.
+The `drawFrame()` function shown here is the callback invoked when it's time to draw the frame, as established by calling the {{domxref("XRSession")}} method {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}. It calls a function `applyExternalInputs()` which we'll define momentarily; it takes the `avatar` object and uses its information to update the avatar's reference frame.
 
 After that, everything proceeds as usual, getting the viewer's pose from the updated reference frame, requesting the next frame callback through `requestAnimationFrame()`, and then continuing to set up WebGL and draw the scene. The drawing and other related code can be found in the example [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion).
 

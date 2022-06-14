@@ -1,6 +1,7 @@
 ---
 title: Animation.playState
 slug: Web/API/Animation/playState
+page-type: web-api-instance-property
 tags:
   - API
   - Animation
@@ -17,15 +18,7 @@ The **`Animation.playState`** property of the [Web Animations API](/en-US/docs/W
 
 > **Note:** This property is read-only for CSS Animations and Transitions.
 
-## Syntax
-
-```js
-var currentPlayState = Animation.playState;
-
-Animation.playState = newState;
-```
-
-### Value
+## Value
 
 - `idle`
   - : The current time of the animation is unresolved and there are no pending tasks.
@@ -38,7 +31,7 @@ Animation.playState = newState;
 
 Previously, Web Animations defined a **`pending`** value to indicate that some asynchronous operation such as initiating playback was yet to complete. This is now indicated by the separate {{domxref("Animation.pending")}} property.
 
-## Example
+## Examples
 
 In the [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) example, players can get an ending with [Alice crying into a pool of tears](https://codepen.io/rachelnabors/pen/EPJdJx?editors=0010). In the game, for performance reasons, the tears should only be animating when they're visible. So they must be paused as soon as they are animated like so:
 

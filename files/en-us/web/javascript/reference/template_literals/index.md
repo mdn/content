@@ -15,9 +15,9 @@ browser-compat: javascript.grammar.template_literals
 ---
 {{JsSidebar("More")}}
 
-Template literals are literals delimited with backtick (\`) characters, allowing for [multi-line strings](#multi-line_strings), for [string interpolation](#string-interpolation) with embedded expressions, and for special constructs called [tagged templates](#tagged-templates).
+Template literals are literals delimited with backtick (\`) characters, allowing for [multi-line strings](#multi-line_strings), for [string interpolation](#string_interpolation) with embedded expressions, and for special constructs called [tagged templates](#tagged_templates).
 
-Template literals are sometimes informally called _template strings_, because they are used most commonly for [string interpolation](#string-interpolation) (to create strings by doing substitution of placeholders). However, a tagged template literal may not result in a string; it can be used with a custom [tag function](#tagged-templates) to perform whatever operations you want on the different parts of the template literal.
+Template literals are sometimes informally called _template strings_, because they are used most commonly for [string interpolation](#string_interpolation) (to create strings by doing substitution of placeholders). However, a tagged template literal may not result in a string; it can be used with a custom [tag function](#tagged_templates) to perform whatever operations you want on the different parts of the template literal.
 
 ## Syntax
 
@@ -30,12 +30,9 @@ Template literals are sometimes informally called _template strings_, because th
 
 `string text ${expression} string text`
 
-// Re-usable template:
-const templateFn = expression => `string text ${expression} string text`;
-
-// Tagged, this calls the function "example" with the template as the
+// Tagged, this calls the function "tagFunction" with the template as the
 // first argument and substitution values as subsequent arguments:
-example`string text ${expression} string text`
+tagFunction`string text ${expression} string text`
 ```
 
 ## Description
@@ -43,15 +40,21 @@ example`string text ${expression} string text`
 Template literals are enclosed by backtick (\`) characters instead
 of double or single quotes.
 
-Along with having normal strings, template literals can also contain other parts called _placeholders_, which are embedded expressions delimited by a dollar sign and curly braces: `${expression}`. The strings and placeholders get passed to a function — either a default function, or a function you supply. The default function (when you don’t supply your own) just performs [string interpolation](#string-interplotion) to do substitution of the placeholders and then concatenate the parts into a single string.
+Along with having normal strings, template literals can also contain other parts called _placeholders_, which are embedded expressions delimited by a dollar sign and curly braces: `${expression}`. The strings and placeholders get passed to a function — either a default function, or a function you supply. The default function (when you don't supply your own) just performs [string interpolation](#string_interpolation) to do substitution of the placeholders and then concatenate the parts into a single string.
 
-To supply a function of your own, precede the template literal with a function name; the result is called a [**tagged template**](#tagged-templates). In that case, the template literal is passed to your tag function, where you can then perform whatever operations you want on the different parts of the template literal.
+To supply a function of your own, precede the template literal with a function name; the result is called a [**tagged template**](#tagged_templates). In that case, the template literal is passed to your tag function, where you can then perform whatever operations you want on the different parts of the template literal.
 
 To escape a backtick in a template literal, put a backslash (`\`) before the
 backtick.
 
 ```js
 `\`` === '`' // --> true
+```
+
+Dollar signs can be escaped as well to prevent interpolation.
+
+```js
+`\${1}` === '${1}' // --> true
 ```
 
 ### Multi-line strings
@@ -79,7 +82,7 @@ string text line 2`);
 
 ### String interpolation
 
-Without template literals, when you want to combine output from expressions with strings, you’d need to use the "`+`" (plus sign) [concatenation operator](#string_operators):
+Without template literals, when you want to combine output from expressions with strings, you'd [concatenate them](/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using_) using the "`+`" (plus sign) ([addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)):
 
 ```js
 let a = 5;
@@ -204,8 +207,7 @@ t3Closure({name: 'MDN', age: 30}); //"I'm MDN. I'm almost 30 years old."
 
 The special `raw` property, available on the first argument to the tag
 function, allows you to access the raw strings as they were entered, without processing
-[escape
-sequences](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#using_special_characters_in_strings).
+[escape sequences](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#using_special_characters_in_strings).
 
 ```js
 function tag(strings) {
@@ -258,8 +260,9 @@ latex`\unicode`
 #### ES2018 revision of illegal escape sequences
 
 Tagged templates should allow the embedding of languages (for example [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language), or [LaTeX](https://en.wikipedia.org/wiki/LaTeX)), where other escapes sequences
-are common. The ECMAScript proposal [Template Literal
-Revision](https://tc39.github.io/proposal-template-literal-revision/) (integrated in the ECMAScript 2018 standard) removed the
+are common.
+The ECMAScript proposal [Template Literal Revision](https://tc39.es/proposal-template-literal-revision/)
+(integrated in the ECMAScript 2018 standard) removed the
 syntax restriction of ECMAScript escape sequences from tagged templates.
 
 However, illegal escape sequences must still be represented in the "cooked"
@@ -296,7 +299,5 @@ let bad = `bad escape sequence: \unicode`;
 - {{jsxref("String")}}
 - {{jsxref("String.raw()")}}
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Template-like
-  strings in ES3 compatible syntax](https://gist.github.com/WebReflection/8f227532143e63649804)
-- ["ES6 in
-  Depth: Template strings" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/)
+- [Template-like strings in ES3 compatible syntax](https://gist.github.com/WebReflection/8f227532143e63649804)
+- ["ES6 in Depth: Template strings" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/)

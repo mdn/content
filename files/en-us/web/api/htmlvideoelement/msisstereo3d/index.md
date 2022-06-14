@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.msIsStereo3D
 slug: Web/API/HTMLVideoElement/msIsStereo3D
+page-type: web-api-instance-property
 tags:
   - API
   - API:Microsoft Extensions
@@ -17,12 +18,6 @@ whether the system considers the loaded video source to be stereo 3-D or not.
 
 This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-## Syntax
-
-```js
-HTMLVideoElement.msIsStereo3D: {{JSxRef("Boolean","boolean")}};
-```
-
 ## Value
 
 {{JSxRef("Boolean")}} value set to _true_ indicates that the video source is
@@ -38,4 +33,4 @@ enhancement information (SEI) messages to determine the stereo capability of the
 ## See also
 
 - {{DOMxRef("HTMLVideoElement")}}
-- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_API_extensions)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

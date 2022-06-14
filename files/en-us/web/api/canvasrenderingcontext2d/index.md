@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D
 slug: Web/API/CanvasRenderingContext2D
+page-type: web-api-interface
 tags:
   - API
   - Canvas
@@ -130,12 +131,12 @@ Fill styling is used for colors and styles inside shapes and stroke styling is u
 - {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}
   - : Creates a radial gradient given by the coordinates of the two circles represented by the parameters.
 - {{domxref("CanvasRenderingContext2D.createPattern()")}}
-  - : Creates a pattern using the specified image (a {{domxref("CanvasImageSource")}}). It repeats the source in the directions specified by the repetition argument. This method returns a {{domxref("CanvasPattern")}}.
+  - : Creates a pattern using the specified image. It repeats the source in the directions specified by the repetition argument. This method returns a {{domxref("CanvasPattern")}}.
 
 ### Shadows
 
 - {{domxref("CanvasRenderingContext2D.shadowBlur")}}
-  - : Specifies the blurring effect. Default: `0`
+  - : Specifies the blurring effect. Default: `0`.
 - {{domxref("CanvasRenderingContext2D.shadowColor")}}
   - : Color of the shadow. Default: fully-transparent black.
 - {{domxref("CanvasRenderingContext2D.shadowOffsetX")}}
@@ -189,8 +190,6 @@ The following methods can be used to manipulate paths of objects.
 
 Objects in the `CanvasRenderingContext2D` rendering context have a current transformation matrix and methods to manipulate it. The transformation matrix is applied when creating the current default path, painting text, shapes and {{domxref("Path2D")}} objects. The methods listed below remain for historical and compatibility reasons as {{domxref("DOMMatrix")}} objects are used in most parts of the API nowadays and will be used in the future instead.
 
-- {{domxref("CanvasRenderingContext2D.currentTransform")}} {{experimental_inline}}
-  - : Current transformation matrix ({{domxref("DOMMatrix")}} object).
 - {{domxref("CanvasRenderingContext2D.getTransform()")}}
   - : Retrieves the current transformation matrix being applied to the context.
 - {{domxref("CanvasRenderingContext2D.rotate()")}}
@@ -251,14 +250,14 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
 
 ### Filters
 
-- {{experimental_inline}} {{domxref("CanvasRenderingContext2D.filter")}}
+- {{domxref("CanvasRenderingContext2D.filter")}} {{experimental_inline}}
   - : Applies a CSS or SVG filter to the canvas, e.g., to change its brightness or blurriness.
 
 ## Non-standard APIs
 
 ### Blink and WebKit
 
-Most of these APIs are [deprecated and were removed shortly after Chrome 36](https://code.google.com/p/chromium/issues/detail?id=363198).
+Most of these APIs are [deprecated and were removed shortly after Chrome 36](https://bugs.chromium.org/p/chromium/issues/detail?id=363198).
 
 - {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.clearShadow()`
   - : Removes all shadow settings like {{domxref("CanvasRenderingContext2D.shadowColor")}} and {{domxref("CanvasRenderingContext2D.shadowBlur")}}.
@@ -307,10 +306,6 @@ Most of these APIs are [deprecated and were removed shortly after Chrome 36](htt
 
 #### Prefixed APIs
 
-- {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransform`
-  - : Sets or gets the current transformation matrix, see {{domxref("CanvasRenderingContext2D.currentTransform")}}.
-- {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransformInverse`
-  - : Sets or gets the current inverted transformation matrix.
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozImageSmoothingEnabled`
   - : See {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}.
 - {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozTextStyle`

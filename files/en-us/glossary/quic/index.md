@@ -26,7 +26,7 @@ There is limited browser and server support for QUIC today.
 
 ### Resources
 
-- [Chromium Projects Documentation](https://www.chromium.org/quic)
+- [Chromium Projects Documentation](https://www.chromium.org/quic/)
 - [IETF Draft](https://datatracker.ietf.org/doc/html/draft-tsvwg-quic-protocol-02)
 
 ## See also

@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.isNaN
 
 The **`isNaN()`** function determines whether a value is
 {{jsxref("NaN")}} or not. Because coercion inside the `isNaN`
-function can be [surprising](#Confusing_special-case_behavior), you may alternatively
+function can be [surprising](#confusing_special-case_behavior), you may alternatively
 want to use {{jsxref("Number.isNaN()")}}.
 
 {{EmbedInteractiveExample("pages/js/globalprops-isnan.html")}}

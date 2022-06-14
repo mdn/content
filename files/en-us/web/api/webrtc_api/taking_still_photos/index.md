@@ -1,6 +1,7 @@
 ---
 title: Taking still photos with WebRTC
 slug: Web/API/WebRTC_API/Taking_still_photos
+page-type: guide
 tags:
   - API
   - Advanced
@@ -193,7 +194,7 @@ Clearing the photo box involves creating an image, then converting it into a for
 
 We start by getting a reference to the hidden {{HTMLElement("canvas")}} element that we use for offscreen rendering. Next we set the `fillStyle` to `#AAA` (a fairly light grey), and fill the entire canvas with that color by calling {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}.
 
-Last in this function, we convert the canvas into a PNG image and call `{{domxref("Element.setAttribute", "photo.setAttribute()")}}` to make our captured still box display the image.
+Last in this function, we convert the canvas into a PNG image and call {{domxref("Element.setAttribute", "photo.setAttribute()")}} to make our captured still box display the image.
 
 ### Capturing a frame from the stream
 
@@ -239,12 +240,12 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
   </p>
   <div class="camera">
     <video id="video">Video stream not available.</video>
-    <button id="startbutton">Take photo</button> 
+    <button id="startbutton">Take photo</button>
   </div>
   <canvas id="canvas">
   </canvas>
   <div class="output">
-    <img id="photo" alt="The screen capture will appear in this box."> 
+    <img id="photo" alt="The screen capture will appear in this box.">
   </div>
   <p>
     Visit our article <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Taking_still_photos"> Taking still photos with WebRTC</a> to learn more about the technologies used here.
@@ -363,14 +364,14 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
     video.addEventListener('canplay', function(ev){
       if (!streaming) {
         height = video.videoHeight / (video.videoWidth/width);
-      
+
         // Firefox currently has a bug where the height can't be read from
         // the video, so we will make assumptions if this happens.
-      
+
         if (isNaN(height)) {
           height = width / (4/3);
         }
-      
+
         video.setAttribute('width', width);
         video.setAttribute('height', height);
         canvas.setAttribute('width', width);
@@ -383,7 +384,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
       takepicture();
       ev.preventDefault();
     }, false);
-    
+
     clearphoto();
   }
 
@@ -398,7 +399,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
     var data = canvas.toDataURL('image/png');
     photo.setAttribute('src', data);
   }
-  
+
   // Capture a photo by fetching the current contents of the video
   // and drawing it into a canvas, then converting that to a PNG
   // format data URL. By drawing it on an offscreen canvas and then
@@ -411,7 +412,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
       canvas.width = width;
       canvas.height = height;
       context.drawImage(video, 0, 0, width, height);
-    
+
       var data = canvas.toDataURL('image/png');
       photo.setAttribute('src', data);
     } else {
@@ -434,7 +435,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 
 Since we're capturing images from the user's webcam by grabbing frames from a {{HTMLElement("video")}} element, we can very easily apply filters and fun effects to the video. As it turns out, any CSS filters you apply to the element using the {{cssxref("filter")}} property affect the captured photo. These filters can range from the simple (making the image black and white) to the extreme (gaussian blurs and hue rotation).
 
-You can play with this effect using, for example, the Firefox developer tools' [style editor](/en-US/docs/Tools/Style_Editor); see [Edit CSS filters](/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_filters) for details on how to do so.
+You can play with this effect using, for example, the Firefox developer tools' [style editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html); see [Edit CSS filters](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_filters/index.html) for details on how to do so.
 
 ## Using specific devices
 

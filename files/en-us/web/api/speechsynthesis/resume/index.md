@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesis.resume()
 slug: Web/API/SpeechSynthesis/resume
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -24,13 +25,13 @@ resumes it if it was already paused.
 resume()
 ```
 
-### Returns
-
-{{jsxref('undefined')}}.
-
 ### Parameters
 
 None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

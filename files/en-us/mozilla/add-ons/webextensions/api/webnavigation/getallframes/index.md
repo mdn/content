@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingFrames = browser.webNavigation.getAllFrames(
+let gettingFrames = browser.webNavigation.getAllFrames(
   details                // object
 )
 ```
@@ -73,13 +73,13 @@ function onError(error) {
 }
 
 function logAllFrames(tabs) {
-  var gettingAllFrames = browser.webNavigation.getAllFrames({tabId: tabs[0].id});
+  let gettingAllFrames = browser.webNavigation.getAllFrames({tabId: tabs[0].id});
   gettingAllFrames.then(logFrameInfo, onError);
 }
 
 browser.browserAction.onClicked.addListener(function() {
 
-  var querying = browser.tabs.query({
+  let querying = browser.tabs.query({
     currentWindow: true,
     active: true
   });
@@ -91,7 +91,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation#method-getAllFrames) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/#method-getAllFrames) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

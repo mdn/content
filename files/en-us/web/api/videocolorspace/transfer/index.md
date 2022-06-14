@@ -1,6 +1,7 @@
 ---
 title: VideoColorSpace.transfer
 slug: Web/API/VideoColorSpace/transfer
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,7 +14,7 @@ browser-compat: api.VideoColorSpace.transfer
 
 The **`transfer`** read-only property of the {{domxref("VideoColorSpace")}} interface returns the opto-electronic transfer characteristics of the video.
 
-### Value
+## Value
 
 A string containing one of the following values:
 

@@ -1,15 +1,15 @@
 ---
-title: 'aria-setsize'
+title: aria-setsize
 slug: Web/Accessibility/ARIA/Attributes/aria-setsize
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-setsize
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-setsize
 ---
-
 The `aria-setsize` attribute defines the number of items in the current set of listitems or treeitems when not all items in the set are present in the DOM.
 
 ## Description
@@ -20,7 +20,7 @@ When the DOM is not complete, the browser calculation of the number of items in 
 
 `aria-setsize` attribute is set on each item, rather than on any containing element. The value is the same for each item: an integer reflecting number of items in the complete set, or `-1` if the set size is unknown. If all the items are present in the DOM, the browser can calculate the set size and the position of each item, making both `aria-setsize` and `aria-posinset` unnecessary.
 
-Elements with the `aria-setsize` generally have the  [`aria-posinset`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-posinset) attribute included as well to indicate the position of that item within the set. The `aria-posinset` value is between `1` and the positive value of `aria-setsize`.
+Elements with the `aria-setsize` generally have the [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) attribute included as well to indicate the position of that item within the set. The `aria-posinset` value is between `1` and the positive value of `aria-setsize`.
 
 For example, in a page's comments section, When comments in are not all in the DOM, such as when comments are paginated, the level, total number of comments, and position of each comment should be set with ARIA. The hierarchical level of comments can be indicated with [`aria-level`](en-US/docs/Web/Accessibility/aria/Attributes/aria-level). Group positional information is indicated with `aria-posinset` and `aria-setsize`.
 
@@ -56,9 +56,9 @@ To orient the user, assistive technologies would list the bananas above as "item
 ## ARIAMixin API
 
 - {{domxref("Element.ariaSetSize")}}
-  - : The  [`ariaSetSize`](/en-US/docs/Web/API/Element/ariaSetSize) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-setsize` attribute.
+  - : The [`ariaSetSize`](/en-US/docs/Web/API/Element/ariaSetSize) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-setsize` attribute.
 - {{domxref("ElementInternals.ariaSetSize")}}
-  - : The  [`ariaSetSize`](/en-US/docs/Web/API/ElementInternals/ariaSetSize) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-setsize` attribute.
+  - : The [`ariaSetSize`](/en-US/docs/Web/API/ElementInternals/ariaSetSize) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-setsize` attribute.
 
 ## Associated roles
 
@@ -84,13 +84,11 @@ Inherits into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-setsize","ARIA: aria-setsize Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 
-- [`aria-posinset`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-posinset)
+- [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
 - [Treegrid Email Inbox](https://www.w3.org/TR/2019/WD-wai-aria-practices-1.2-20191218/examples/treegrid/treegrid-1.html) example
 - [Navigation Treeview Using Declared Properties](https://www.w3.org/TR/2019/WD-wai-aria-practices-1.2-20191218/examples/treeview/treeview-2/treeview-2b.html) example
 

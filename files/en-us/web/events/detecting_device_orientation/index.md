@@ -9,8 +9,9 @@ tags:
   - Motion
   - Orientation
   - Reference
+spec-urls: https://w3c.github.io/deviceorientation/
 ---
-{{SeeCompatTable}}
+{{DefaultAPISidebar("Device Orientation Events")}}
 
 Increasingly, web-enabled devices are capable of determining their **orientation**; that is, they can report data indicating changes to their orientation with relation to the pull of gravity. In particular, hand-held devices such as mobile phones can use this information to automatically rotate the display to remain upright, presenting a wide-screen view of the web content when the device is rotated so that its width is greater than its height.
 
@@ -20,7 +21,7 @@ The second event is the {{domxref("DeviceMotionEvent")}}, which is sent when a c
 
 ## Processing orientation events
 
-All you need to do in order to begin receiving orientation change is to listen to the {{event("deviceorientation")}} event:
+All you need to do in order to begin receiving orientation change is to listen to the {{domxref("Window.deviceorientation_event", "deviceorientation")}} event:
 
 > **Note:** [parallax](https://github.com/wagerfield/parallax) is a polyfill for normalizing the accelerometer and gyroscope data on mobile devices. This is useful for overcoming some of the differences in device support for device orientation.
 
@@ -60,7 +61,7 @@ The value reported for each axis indicates the amount of rotation around a given
 
 ### Orientation example
 
-This example will work on any browser supporting the {{event("deviceorientation")}} event and running on a device able to detect its orientation.
+This example will work on any browser supporting the {{domxref("Window.deviceorientation_event", "deviceorientation")}} event and running on a device able to detect its orientation.
 
 So let's imagine a ball in a garden:
 
@@ -130,13 +131,13 @@ function handleOrientation(event) {
 window.addEventListener('deviceorientation', handleOrientation);
 ```
 
-{{LiveSampleLink("Orientation_example", "Click here")}} to open this example in a new window; because {{domxref("Window/deviceorientation_event", "deviceorientation")}} doesn't work in a cross-origin {{HTMLElement("iframe")}} in all browsers.
+{{LiveSampleLink("Orientation_example", "Click here")}} to open this example in a new window; because {{domxref("Window.deviceorientation_event", "deviceorientation")}} doesn't work in a cross-origin {{HTMLElement("iframe")}} in all browsers.
 
 {{EmbedLiveSample('Orientation_example', '230', '260')}}
 
 ## Processing motion events
 
-Motion events are handled the same way as the orientation events except that they have their own event's name: {{domxref("Window/devicemotion_event", "devicemotion")}}
+Motion events are handled the same way as the orientation events except that they have their own event's name: {{domxref("Window.devicemotion_event", "devicemotion")}}
 
 ```js
 window.addEventListener("devicemotion", handleMotion, true);
@@ -171,9 +172,7 @@ Finally, {{domxref("DeviceMotionEvent.interval","interval")}} represents the int
 
 ## Specifications
 
-| Specification                                | Status                                   | Comment                |
-| -------------------------------------------- | ---------------------------------------- | ---------------------- |
-| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Initial specification. |
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -189,9 +188,6 @@ Finally, {{domxref("DeviceMotionEvent.interval","interval")}} represents the int
 
 - {{domxref("DeviceOrientationEvent")}}
 - {{domxref("DeviceMotionEvent")}}
-- The legacy [`MozOrientation`](/en-US/docs/Web/Events/MozOrientation) event.
 - [Orientation and motion data explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained)
 - [Using deviceorientation in 3D Transforms](/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms)
 - [Cyber Orb: 2D maze game with device orientation](/en-US/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation)
-
-<section id="Quick_links"><ul><li><a href="/en-US/docs/Web/Events/Orientation_and_motion_data_explained">Orientation and motion data explained</a></li><li>{{domxref("DeviceOrientationEvent")}}</li><li>{{domxref("DeviceMotionEvent")}}</li><li><a href="/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms">Using deviceorientation in 3D Transforms</a></li><li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li></ul></section>

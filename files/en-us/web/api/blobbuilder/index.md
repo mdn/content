@@ -1,6 +1,7 @@
 ---
 title: BlobBuilder
 slug: Web/API/BlobBuilder
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -151,13 +152,15 @@ File getFile(
 
 A {{domxref("File")}} object.
 
+## Specifications
+
+This feature is not part of any specification anymore. It is no more on track to become a standard.
+
 ## Browser compatibility
 
 {{Compat}}
 
 ## See also
 
-- {{spec("http://dev.w3.org/2009/dap/file-system/file-writer.html#idl-def-BlobBuilder",
-    "File API Specification: BlobBuilder", "ED")}}
 - {{domxref("Blob")}}
 - {{domxref("File")}}

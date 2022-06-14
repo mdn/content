@@ -1,6 +1,7 @@
 ---
 title: SerialPort.setSignals()
 slug: Web/API/SerialPort/setSignals
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,7 +17,8 @@ The **`setSignals()`** method of the {{domxref("SerialPort")}} interface sets co
 ## Syntax
 
 ```js
-var promise = SerialPort.setSignals(options);
+setSignals()
+setSignals(options)
 ```
 
 ### Parameters
@@ -26,11 +28,11 @@ var promise = SerialPort.setSignals(options);
   - : An object with any of the following values:
 
     - `dataTerminalReady`
-      - : A boolean indicating whether to invoke the operating system to either assert (if true) or deassert (if false) the "data terminal ready" or "DTR" signal on the serial port.
+      - : A boolean indicating whether to invoke the operating system to either assert (if true) or de-assert (if false) the "data terminal ready" or "DTR" signal on the serial port.
     - `requestToSend`
-      - : A boolean indicating whether to invoke the operating system to either assert (if true) or deassert (if false) the "request to send" or "RTS" signal on the serial port.
+      - : A boolean indicating whether to invoke the operating system to either assert (if true) or de-assert (if false) the "request to send" or "RTS" signal on the serial port.
     - `break`
-      - : A boolean indicating whether to invoke the operating system to either assert (if true) or deassert (if false) the "break" signal on the serial port.
+      - : A boolean indicating whether to invoke the operating system to either assert (if true) or de-assert (if false) the "break" signal on the serial port.
 
 ### Return value
 

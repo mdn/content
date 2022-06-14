@@ -39,8 +39,8 @@ This constructor takes two mandatory arguments:
 An empty handler will create a proxy that behaves, in almost all respects, exactly like
 the target. By defining any of a set group of functions on the `handler`
 object, you can customize specific aspects of the proxy's behavior. For example, by
-defining `get()` you can provide a customized version of the target's [property
-accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors).
+defining `get()` you can provide a customized version of the target's
+[property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors).
 
 ### Handler functions
 
@@ -117,6 +117,5 @@ console.log(proxy.proxied);    // "replaced value"
 
 ## See also
 
-- [`Proxy` and
-  `Reflect` in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Meta_programming)
+- [`Proxy` and `Reflect` in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Meta_programming)
 - {{jsxref("Global_Objects/Reflect", "Reflect")}}

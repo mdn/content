@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver.thresholds
 slug: Web/API/IntersectionObserver/thresholds
+page-type: web-api-instance-property
 tags:
   - API
   - Draft
@@ -24,13 +25,7 @@ array containing that single value.
 See {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "Thresholds")}} to
 learn how thresholds work.
 
-## Syntax
-
-```js
-var thresholds = IntersectionObserver.thresholds;
-```
-
-### Value
+## Value
 
 An array of intersection thresholds, originally specified using the
 `threshold` property when instantiating the observer. If only one observer

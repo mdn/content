@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognitionResultList.length
 slug: Web/API/SpeechRecognitionResultList/length
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -20,13 +21,7 @@ The **`length`** read-only property of the
 "array" — the number of {{domxref("SpeechRecognitionResult")}} objects in the
 list.
 
-## Syntax
-
-```js
-var myLength = speechRecognitionResultListInstance.length;
-```
-
-### Returns
+## Value
 
 A number.
 

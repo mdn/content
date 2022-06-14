@@ -501,7 +501,7 @@ function Engineer(name, projs, mach) {
 }
 ```
 
-Using the javascript `call()` method makes a cleaner implementation because the `base` is not needed anymore.
+Using the JavaScript `call()` method makes a cleaner implementation because the `base` is not needed anymore.
 
 ## Property inheritance revisited
 

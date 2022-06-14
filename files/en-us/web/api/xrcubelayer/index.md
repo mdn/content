@@ -1,6 +1,7 @@
 ---
 title: XRCubeLayer
 slug: Web/API/XRCubeLayer
+page-type: web-api-interface
 tags:
   - API
   - AR

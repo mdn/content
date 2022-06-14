@@ -1,6 +1,7 @@
 ---
 title: Window.getSelection()
 slug: Web/API/Window/getSelection
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -20,8 +21,12 @@ the current position of the caret.
 ## Syntax
 
 ```js
-selection = window.getSelection();
+getSelection()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

@@ -1,6 +1,7 @@
 ---
 title: MediaStream.id
 slug: Web/API/MediaStream/id
+page-type: web-api-instance-property
 tags:
   - MediaStream
   - Property
@@ -9,10 +10,10 @@ tags:
   - Web
 browser-compat: api.MediaStream.id
 ---
-{{APIRef("WebRTC")}}
+{{APIRef("Media Capture and Streams")}}
 
 The **`MediaStream.id()`** read-only property is a
-{{domxref("DOMString")}} containing 36 characters denoting a unique identifier (GUID)
+string containing 36 characters denoting a unique identifier (GUID)
 for the object.
 
 ## Syntax

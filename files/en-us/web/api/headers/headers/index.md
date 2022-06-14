@@ -1,6 +1,7 @@
 ---
 title: Headers()
 slug: Web/API/Headers/Headers
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -16,7 +17,8 @@ The **`Headers()`** constructor creates a new
 ## Syntax
 
 ```js
-var myHeaders = new Headers(init);
+new Headers()
+new Headers(init)
 ```
 
 ### Parameters
@@ -28,7 +30,7 @@ var myHeaders = new Headers(init);
     `Headers` object. In the last case, the new `Headers` object
     copies its data from the existing `Headers` object.
 
-## Example
+## Examples
 
 Creating an empty `Headers` object is simple:
 

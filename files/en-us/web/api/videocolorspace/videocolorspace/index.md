@@ -1,6 +1,7 @@
 ---
-title: VideoColorSpace.VideoColorSpace()
+title: VideoColorSpace()
 slug: Web/API/VideoColorSpace/VideoColorSpace
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -15,8 +16,8 @@ The **`VideoColorSpace()`** constructor creates a new {{domxref("VideoColorSpace
 ## Syntax
 
 ```js
-new VideoColorSpace();
-new VideoColorSpace(init);
+new VideoColorSpace()
+new VideoColorSpace(init)
 ```
 
 ### Parameters

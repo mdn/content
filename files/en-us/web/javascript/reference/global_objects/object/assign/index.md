@@ -77,7 +77,7 @@ console.log(copy); // { a: 1 }
 
 ### Warning for Deep Clone
 
-For [deep cloning](/en-us/docs/Glossary/Deep_copy), we need to use alternatives, because `Object.assign()`
+For [deep cloning](/en-US/docs/Glossary/Deep_copy), we need to use alternatives, because `Object.assign()`
 copies property values.
 
 If the source value is a reference to an object, it only copies the reference value.
@@ -252,7 +252,5 @@ console.log(copy);
 
 - [Polyfill of `Object.assign` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.defineProperties()")}}
-- [Enumerability
-  and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
-- [Spread
-  in object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Spread in object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals)

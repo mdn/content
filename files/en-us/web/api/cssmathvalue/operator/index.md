@@ -1,6 +1,7 @@
 ---
 title: CSSMathValue.operator
 slug: Web/API/CSSMathValue/operator
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -20,25 +21,19 @@ current subtype represents. For example, if the current `CSSMathValue`
 subtype is `CSSMathSum`, this property will return the string
 `"sum"`.
 
-## Syntax
-
-```js
-var aString = CSSMathValue.operator;
-```
-
-### Value
+## Value
 
 A {{jsxref('String')}}.
 
-| Interface                                  | Value       |
-| ------------------------------------------ | ----------- |
-| `{{domxref('CSSMathSum')}}`         | `"sum"`     |
-| `{{domxref('CSSMathProduct')}}` | `"product"` |
-| `{{domxref('CSSMathMin')}}`         | `"min"`     |
-| `{{domxref('CSSMathMax')}}`         | `"max"`     |
-| `{{domxref('CSSMathClamp')}}`     | `"clamp"`   |
-| `{{domxref('CSSMathNegate')}}`     | `"negate"`  |
-| `{{domxref('CSSMathInvert')}}`     | `"invert"`  |
+| Interface                         | Value       |
+|-----------------------------------| ----------- |
+| {{domxref('CSSMathSum')}}         | `"sum"`     |
+| {{domxref('CSSMathProduct')}}     | `"product"` |
+| {{domxref('CSSMathMin')}}         | `"min"`     |
+| {{domxref('CSSMathMax')}}         | `"max"`     |
+| {{domxref('CSSMathClamp')}}     | `"clamp"`   |
+| {{domxref('CSSMathNegate')}}      | `"negate"`  |
+| {{domxref('CSSMathInvert')}}      | `"invert"`  |
 
 ## Examples
 

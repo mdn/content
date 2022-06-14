@@ -1,6 +1,7 @@
 ---
 title: FileSystemWritableFileStream.seek()
 slug: Web/API/FileSystemWritableFileStream/seek
+page-type: web-api-instance-method
 tags:
   - File
   - File System Access API
@@ -33,9 +34,9 @@ FileSystemWritableStream.seek(position).then(...);
 
 ### Exceptions
 
-- NotAllowedError
+- `NotAllowedError` {{domxref("DOMException")}}
   - : If the {{domxref('PermissionStatus.state')}} is not 'granted'.
-- TypeError
+- {{jsxref("TypeError")}}
   - : If `position` is not defined or of type unsigned long.
 
 ## Examples
@@ -53,5 +54,4 @@ Todo
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

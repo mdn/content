@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createStereoPanner()
 slug: Web/API/BaseAudioContext/createStereoPanner
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext
@@ -25,18 +26,20 @@ It positions an incoming audio stream in a stereo image using a [low-cost pannin
 ## Syntax
 
 ```js
-baseAudioContext.createStereoPanner();
+createStereoPanner()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 A {{domxref("StereoPannerNode")}}.
 
-## Example
+## Examples
 
-In our [StereoPannerNode
-example](https://mdn.github.io/webaudio-examples/stereo-panner-node/) ([see
-source code](https://github.com/mdn/webaudio-examples/tree/master/stereo-panner-node)) HTML we have a simple {{htmlelement("audio")}} element along with a
+In our [StereoPannerNode example](https://mdn.github.io/webaudio-examples/stereo-panner-node/) ([see source code](https://github.com/mdn/webaudio-examples/tree/master/stereo-panner-node)) HTML we have a simple {{htmlelement("audio")}} element along with a
 slider {{HTMLElement("input")}} to increase and decrease pan value. In the JavaScript we
 create a {{domxref("MediaElementAudioSourceNode")}} and a
 {{domxref("StereoPannerNode")}}, and connect the two together using the

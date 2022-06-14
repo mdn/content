@@ -26,7 +26,7 @@ We've already provided you with a basic reset to build upon.
 
 1. First of all, try giving the search box a consistent width, height, padding, and border color across browsers.
 2. You'll find that some browsers will not behave in terms of the form element's height. This is due to native OS styling being used in some cases. How can you remove this native styling?
-3. Once you've removed the native styling, you'll need to add back one of the features it was providing, to keep same look and feel we originally had. How do you do this?
+3. Once you've removed the native styling, you'll need to add back one of the features it was providing, to keep the same look and feel we originally had. How do you do this?
 4. One thing that is inconsistent across browsers (particularly looking at Safari here) is the position of the standard blue focus outline. How can you remove this?
 5. There is a major problem with just getting rid of the blue focus outline. What is it? Can you add some kind of styling back in so that users can tell when the search box is being hovered or focused?
 6. Another thing that commonly denotes a search box is a magnifying glass icon. We've made one available in the same directory as our HTML files — see [search-24px.png](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/advanced-styling/search-24px.png) — plus a `<div>` element after the search input to help you attach it, should you need it. Can you figure out a sensible way to attach it, and can you use some CSS to get it to sit to the right of the search box, and be lined up vertically as well?
@@ -78,7 +78,7 @@ You can practice these examples in the Interactive Editors above.
 If you would like your work assessed, or are stuck and want to ask for help:
 
 1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
-2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
     - A descriptive title such as "Assessment wanted for Advanced form styling 1 skill test".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.

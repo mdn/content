@@ -38,7 +38,7 @@ The set of types in the JavaScript language consists of [_primitive values_](#pr
 
 ## Primitive values
 
-All types except objects define immutable values (that is, values which can't be changed). For example (and unlike in C), Strings are immutable. We refer to values of these types as "_primitive values_".
+All types except objects define immutable values (that is, values which can't be changed). For example, Strings are immutable. We refer to values of these types as "_primitive values_".
 
 ### Boolean type
 
@@ -52,21 +52,17 @@ The Null type has exactly one value: `null`. See {{jsxref("null")}} and [Null](/
 
 A variable that has not been assigned a value has the value `undefined`. See {{jsxref("undefined")}} and [Undefined](/en-US/docs/Glossary/undefined) for more details.
 
-### Number type
+### Numeric types
 
-ECMAScript has two built-in numeric types: **Number** and **BigInt** (see below).
+ECMAScript has two built-in numeric types: [Number](#number-type) and [BigInt](#bigint-type) — along with the related value [NaN](#nan).
 
-The Number type is a [double-precision 64-bit binary format IEEE 754 value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) (numbers between -(2^53 − 1) and 2^53 − 1). In addition to representing floating-point numbers, the number type has three symbolic values: `+Infinity`, `-Infinity`, and {{jsxref("NaN")}} ("**N**ot a **N**umber").
+#### Number type
 
-To check for the largest available value or smallest available value within {{jsxref("Infinity", "±Infinity")}}, you can use the constants {{jsxref("Number.MAX_VALUE")}} or {{jsxref("Number.MIN_VALUE")}}.
+The Number type is a [double-precision 64-bit binary format IEEE 754 value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format). It is capable of storing floating-point numbers between 2^-1074 and 2^1024, but can only safely store integers in the range -(2^53 − 1) to 2^53 − 1. Values outside of the range from {{jsxref("Number.MIN_VALUE")}} to {{jsxref("Number.MAX_VALUE")}} are automatically converted to either `+Infinity` or `-Infinity`, which behave similarly to mathematical infinity, but with some slight differences; see {{jsxref("Number.POSITIVE_INFINITY")}} for details.
 
-> **Note:** Starting with ECMAScript 2015, you are also able to check if a number is in the double-precision floating-point number range using {{jsxref("Number.isSafeInteger()")}} as well as {{jsxref("Number.MAX_SAFE_INTEGER")}} and {{jsxref("Number.MIN_SAFE_INTEGER")}}.
->
-> Beyond this range, integers in JavaScript are not safe anymore and will be a double-precision floating point approximation of the value.
+> **Note:** You can check if a number is in the double-precision floating-point number range using {{jsxref("Number.isSafeInteger()")}} Outside the range from {{jsxref("Number.MIN_SAFE_INTEGER")}} to {{jsxref("Number.MAX_SAFE_INTEGER")}}, JavaScript can no longer safely represent integers; they will instead be represented by a double-precision floating point approximation.
 
-The number type has only one integer with two representations: `0` is represented as both `-0` and `+0`. (`0` is an alias for `+0`.)
-
-In practice, this has almost no impact. For example, `+0 === -0` is `true`. However, you are able to notice this when you divide by zero:
+The number type has only one integer with multiple representations: `0` is represented as both `-0` and `+0` (where `0` is an alias for `+0`). In practice, there is almost no difference between the different representations; for example, `+0 === -0` is `true`. However, you are able to notice this when you divide by zero:
 
 ```js
 > 42 / +0
@@ -81,7 +77,7 @@ Although a number often represents only its value, JavaScript provides {{jsxref(
 
 It may be necessary to use such techniques in very constrained environments, like when trying to cope with the limitations of local storage, or in extreme cases (such as when each bit over the network counts). This technique should only be considered when it is the last measure that can be taken to optimize size.
 
-### BigInt type
+#### BigInt type
 
 The BigInt type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. With BigInts, you can safely store and operate on large integers even beyond the safe integer limit for Numbers.
 
@@ -109,11 +105,15 @@ A BigInt behaves like a Number in cases where it is converted to boolean: `if`, 
 
 `BigInt`s cannot be operated on interchangeably with Numbers. Instead a {{jsxref("TypeError")}} will be thrown.
 
+#### NaN
+
+{{jsxref("NaN")}} ("**N**ot a **N**umber") is typically encountered when the result of an arithmetic operation cannot be expressed as a number. It is also the only value in JavaScript that is not equal to itself.
+
 ### String type
 
 JavaScript's String type is used to represent textual data. It is a set of "elements" of 16-bit unsigned integer values. Each element in the String occupies a position in the String. The first element is at index `0`, the next at index `1`, and so on. The length of a String is the number of elements in it.
 
-Unlike some programming languages (such as C), JavaScript strings are immutable. This means that once a string is created, it is not possible to modify it.
+JavaScript strings are immutable. This means that once a string is created, it is not possible to modify it.
 
 However, it is still possible to create another string based on an operation on the original string. For example:
 
@@ -298,6 +298,6 @@ Please read the [reference page](/en-US/docs/Web/JavaScript/Reference/Operators/
 ## See also
 
 - [JavaScript Data Structures and Algorithms by Oleksii Trekhleb](https://github.com/trekhleb/javascript-algorithms)
-- [Nicholas Zakas collection of common data structure and common algorithms in JavaScript.](https://github.com/nzakas/computer-science-in-javascript/)
-- [Search Tre(i)es implemented in JavaScript](https://github.com/monmohan/DataStructures_In_Javascript)
+- [Nicholas Zakas collection of common data structure and common algorithms in JavaScript.](https://github.com/humanwhocodes/computer-science-in-javascript)
+- [Search Tre(i)es implemented in JavaScript](https://github.com/monmohan/dsjslib)
 - [Data Types and Values in the ECMAScript specification](https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values)

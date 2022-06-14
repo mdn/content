@@ -1,6 +1,7 @@
 ---
 title: SerialPort
 slug: Web/API/SerialPort
+page-type: web-api-interface
 tags:
   - API
   - Interface

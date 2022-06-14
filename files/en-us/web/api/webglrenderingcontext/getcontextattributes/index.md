@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getContextAttributes()
 slug: Web/API/WebGLRenderingContext/getContextAttributes
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,8 +19,12 @@ parameters. Might return {{jsxref("null")}}, if the context is lost.
 ## Syntax
 
 ```js
-gl.getContextAttributes();
+getContextAttributes()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

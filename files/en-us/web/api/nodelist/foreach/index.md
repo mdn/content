@@ -1,6 +1,7 @@
 ---
 title: NodeList.prototype.forEach()
 slug: Web/API/NodeList/forEach
+page-type: web-api-instance-method
 tags:
   - DOM
   - Iterable

@@ -10,4 +10,4 @@ The **Exchangeable Image File Format (EXIF)** is a standard that specifies how m
 ## See also
 
 - [EXIF](https://en.wikipedia.org/wiki/Exif) (Wikipedia)
-- [CIPA Standards, including "CIPA DC-008-Translation-2019 Exchangeable image file format for digital still cameras : Exif Version 2.32"](https://www.cipa.jp/std/std-sec_e.html)
+- [CIPA Standards, including "CIPA DC-008-Translation-2019 Exchangeable image file format for digital still cameras : Exif Version 2.32"](https://www.cipa.jp/e/std/std-sec.html)

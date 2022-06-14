@@ -1,6 +1,7 @@
 ---
 title: ImageBitmapRenderingContext.transferFromImageBitmap()
 slug: Web/API/ImageBitmapRenderingContext/transferFromImageBitmap
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -24,13 +25,17 @@ a spec change. The old name is being kept as an alias to avoid code breakage.
 ## Syntax
 
 ```js
-void ImageBitmapRenderingContext.transferFromImageBitmap(bitmap)
+transferFromImageBitmap(bitmap)
 ```
 
 ### Parameters
 
 - `bitmap`
   - : An {{domxref("ImageBitmap")}} object to transfer.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

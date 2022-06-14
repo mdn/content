@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrackProcessor.readable
 slug: Web/API/MediaStreamTrackProcessor/readable
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,13 +14,7 @@ browser-compat: api.MediaStreamTrackProcessor.readable
 
 The **`readable`**  property of the {{domxref("MediaStreamTrackProcessor")}} interface returns a {{domxref("ReadableStream")}}.
 
-## Syntax
-
-```js
-let readable = MediaStreamTrackProcessor.readable;
-```
-
-### Value
+## Value
 
 A {{domxref("ReadableStream")}}.
 

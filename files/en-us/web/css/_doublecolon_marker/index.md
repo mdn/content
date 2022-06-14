@@ -4,7 +4,6 @@ slug: Web/CSS/::marker
 tags:
   - CSS
   - CSS Lists
-  - Experimental
   - Layout
   - Pseudo-element
   - Reference
@@ -37,7 +36,9 @@ Only certain CSS properties can be used in a rule with `::marker` as a selector:
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+::marker
+```
 
 ## Examples
 

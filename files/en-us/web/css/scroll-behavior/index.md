@@ -30,6 +30,7 @@ scroll-behavior: smooth;
 scroll-behavior: inherit;
 scroll-behavior: initial;
 scroll-behavior: revert;
+scroll-behavior: revert-layer;
 scroll-behavior: unset;
 ```
 

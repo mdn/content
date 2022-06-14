@@ -1,6 +1,7 @@
 ---
 title: Document.activeElement
 slug: Web/API/Document/activeElement
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -33,18 +34,12 @@ aren't text input elements are not typically focusable by default.
 > the same thing as selection (the currently highlighted part of the document). You can
 > get the current selection using {{domxref("window.getSelection()")}}.
 
-## Syntax
-
-```js
-element = document.activeElement
-```
-
-### Value
+## Value
 
 The {{domxref('Element')}} which currently has focus, {{HTMLElement("body")}} or
 `null` if there is no focused element.
 
-## Example
+## Examples
 
 ### HTML
 

@@ -52,7 +52,7 @@ This request includes:
 
 - Additional information can be encoded with the request (for example, HTML form data). Information can be encoded as:
 
-  - URL parameters: `GET` requests encode data in the URL sent to the server by adding name/value pairs onto the end of it — for example `http://mysite.com?name=Fred&age=11`. You always have a question mark (`?`) separating the rest of the URL from the URL parameters, an equals sign (`=`) separating each name from its associated value, and an ampersand (`&`) separating each pair. URL parameters are inherently "insecure" as they can be changed by users and then resubmitted. As a result URL parameters/`GET` requests are not used for requests that update data on the server.
+  - URL parameters: `GET` requests encode data in the URL sent to the server by adding name/value pairs onto the end of it — for example `http://example.com?name=Fred&age=11`. You always have a question mark (`?`) separating the rest of the URL from the URL parameters, an equals sign (`=`) separating each name from its associated value, and an ampersand (`&`) separating each pair. URL parameters are inherently "insecure" as they can be changed by users and then resubmitted. As a result URL parameters/`GET` requests are not used for requests that update data on the server.
   - `POST` data. `POST` requests add new resources, the data for which is encoded within the request body.
   - Client-side cookies. Cookies contain session data about the client, including keys that the server can use to determine their login status and permissions/accesses to resources.
 
@@ -194,7 +194,7 @@ X-Cache-Info: not cacheable; request wasn't a GET or HEAD
 Content-Length: 0
 ```
 
-> **Note:** The HTTP responses and requests shown in these examples were captured using the [Fiddler](https://www.telerik.com/download/fiddler) application, but you can get similar information using web sniffers (e.g. [Websniffer](https://websniffer.cc/)) or packet analyzers like [Wireshark](https://www.wireshark.org/). You can try this yourself. Use any of the linked tools, and then navigate through a site and edit profile information to see the different requests and responses. Most modern browsers also have tools that monitor network requests (for example, the [Network Monitor](/en-US/docs/Tools/Network_Monitor) tool in Firefox).
+> **Note:** The HTTP responses and requests shown in these examples were captured using the [Fiddler](https://www.telerik.com/download/fiddler) application, but you can get similar information using web sniffers (e.g. [Websniffer](https://websniffer.cc/)) or packet analyzers like [Wireshark](https://www.wireshark.org/). You can try this yourself. Use any of the linked tools, and then navigate through a site and edit profile information to see the different requests and responses. Most modern browsers also have tools that monitor network requests (for example, the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) tool in Firefox).
 
 ## Static sites
 
@@ -230,7 +230,7 @@ The diagram below shows the main elements of the "team coach" website, along wit
 
 After the coach submits the form with the team name and number of players, the sequence of operations is:
 
-1. The web browser creates an HTTP `GET` request to the server using the base URL for the resource (`/best`) and encoding the team and player number either as URL parameters (e.g. `/best?team=my_team_name&show=11)` or as part of the URL pattern (e.g. `/best/my_team_name/11/`). A `GET` request is used because the request is only fetching data (not modifying data).
+1. The web browser creates an HTTP `GET` request to the server using the base URL for the resource (`/best`) and encoding the team and player number either as URL parameters (e.g. `/best?team=my_team_name&show=11`) or as part of the URL pattern (e.g. `/best/my_team_name/11/`). A `GET` request is used because the request is only fetching data (not modifying data).
 2. The *Web Server* detects that the request is "dynamic" and forwards it to the *Web Application* for processing (the web server determines how to handle different URLs based on pattern matching rules defined in its configuration).
 3. The *Web Application* identifies that the _intention_ of the request is to get the "best team list" based on the URL (`/best/`) and finds out the required team name and number of players from the URL. The *Web Application* then gets the required information from the database (using additional "internal" parameters to define which players are "best", and possibly also getting the identity of the logged in coach from a client-side cookie).
 4. The _Web Application_ dynamically creates an HTML page by putting the data (from the _Database_) into placeholders inside an HTML template.

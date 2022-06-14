@@ -1,6 +1,7 @@
 ---
 title: ExtendableEvent.waitUntil()
 slug: Web/API/ExtendableEvent/waitUntil
+page-type: web-api-instance-method
 tags:
   - API
   - ExtendableEvent
@@ -41,14 +42,18 @@ settle.
 ## Syntax
 
 ```js
-extendableEvent.waitUntil(promise);
+waitUntil(promise)
 ```
 
 ### Parameters
 
 A {{jsxref("Promise")}}.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 Using `waitUntil()` within a service worker's `install` event:
 
@@ -76,8 +81,6 @@ addEventListener('install', event => {
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Is ServiceWorker
-  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}

@@ -1,6 +1,7 @@
 ---
 title: RTCOutboundRtpStreamStats.firCount
 slug: Web/API/RTCOutboundRtpStreamStats/firCount
+page-type: web-api-instance-property
 tags:
   - API
   - FIR
@@ -32,13 +33,7 @@ of a delta frame.
 
 Available only on video media.
 
-## Syntax
-
-```js
-var firCount = RTCOutboundRtpStreamStats.firCount;
-```
-
-### Value
+## Value
 
 An integer value indicating how many FIR packets have been received by the sender
 during the current connection. This statistic is available only for video tracks.

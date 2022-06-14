@@ -32,6 +32,7 @@ mask-image: image(url(mask.png), skyblue), linear-gradient(rgba(0, 0, 0, 1.0), t
 mask-image: inherit;
 mask-image: initial;
 mask-image: revert;
+mask-image: revert-layer;
 mask-image: unset;
 ```
 

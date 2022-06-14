@@ -278,7 +278,7 @@ The bit rate may be adjusted at any time. In order to avoid network congestion, 
 
 G.711 defines the format for **Pulse Code Modulation** (**PCM**) audio as a series of 8-bit integer samples taken at a sample rate of 8,000 Hz, yielding a bit rate of 64 kbps. Both {{interwiki("wikipedia", "M-law", "µ-law")}} and {{interwiki("wikipedia", "A-law")}} encodings are allowed.
 
-G.711 is [defined by the ITU](https://www.itu.int/rec/T-REC-G.711-198811-I/en) and its payload format is defined in {{RFC(3551, "4.5.14")}}.
+G.711 is [defined by the ITU](https://www.itu.int/rec/T-REC-G.711-198811-I/en) and its payload format is defined in {{RFC(3551, "", "4.5.14")}}.
 
 WebRTC requires that G.711 use 8-bit samples at the standard 64 kbps rate, even though G.711 supports some other variations. Neither G.711.0 (lossless compression), G.711.1 (wideband capability), nor any other extensions to the G.711 standard are mandated by WebRTC.
 

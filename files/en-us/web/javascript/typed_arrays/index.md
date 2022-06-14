@@ -49,9 +49,9 @@ The {{jsxref("DataView")}} is a low-level interface that provides a getter/sette
 
 These are some examples of APIs that make use of typed arrays; there are others, and more are being added all the time.
 
-- [`FileReader.prototype.readAsArrayBuffer()`](</en-US/docs/Web/API/FileReader#readasarraybuffer()>)
+- [`FileReader.prototype.readAsArrayBuffer()`](/en-US/docs/Web/API/FileReader/readAsArrayBuffer)
   - : The `FileReader.prototype.readAsArrayBuffer()` method starts reading the contents of the specified [`Blob`](/en-US/docs/Web/API/Blob) or [`File`](/en-US/docs/Web/API/File).
-- [`XMLHttpRequest.prototype.send()`](</en-US/docs/Web/API/XMLHttpRequest#send()>)
+- [`XMLHttpRequest.prototype.send()`](/en-US/docs/Web/API/XMLHttpRequest/send)
   - : `XMLHttpRequest` instances' `send()` method now supports typed arrays and {{jsxref("ArrayBuffer")}} objects as argument.
 - [`ImageData.data`](/en-US/docs/Web/API/ImageData)
   - : Is a {{jsxref("Uint8ClampedArray")}} representing a one-dimensional array containing the data in the RGBA order, with integer values between `0` and `255` inclusive.
@@ -115,7 +115,7 @@ console.log('Entry 0 in the 32-bit array is now ' + int32View[0]);
 
 The output from this is `"Entry 0 in the 32-bit array is now 32"`.
 
-In other words, the two arrays are indeed viewed on the same data buffer, treating it as different formats. You can do this with any [view types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects "JavaScript typed arrays/ArrayBufferView#Typed array subclasses").
+In other words, the two arrays are indeed viewed on the same data buffer, treating it as different formats. You can do this with any [view types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects).
 
 ### Working with complex data structures
 
@@ -173,6 +173,6 @@ const normalArray = Array.prototype.slice.call(typedArray);
 ## See also
 
 - [Getting `ArrayBuffer`s or typed arrays from Base64-encoded strings](/en-US/docs/Glossary/Base64#appendix_decode_a_base64_string_to_uint8array_or_arraybuffer)
-- [Faster Canvas Pixel Manipulation with Typed Arrays](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays)
-- [Typed Arrays: Binary Data in the Browser](https://www.html5rocks.com/en/tutorials/webgl/typed_arrays)
+- [Faster Canvas Pixel Manipulation with Typed Arrays](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays/)
+- [Typed Arrays: Binary Data in the Browser](https://www.html5rocks.com/en/tutorials/webgl/typed_arrays/)
 - [Endianness](/en-US/docs/Glossary/Endianness)

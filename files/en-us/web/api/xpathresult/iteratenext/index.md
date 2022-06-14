@@ -1,6 +1,7 @@
 ---
 title: XPathResult.iterateNext()
 slug: Web/API/XPathResult/iterateNext
+page-type: web-api-instance-method
 tags:
   - API
   - DOM XPath API
@@ -19,8 +20,12 @@ next node from it or `null` if there are no more nodes.
 ## Syntax
 
 ```js
-var node = result.iterateNext();
+iterateNext()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -39,7 +44,7 @@ In case {{domxref("XPathResult.resultType")}} is not
 If the document is mutated since the result was returned, an
 {{domxref("XPathException")}} of type `INVALID_STATE_ERR` is thrown.
 
-## Example
+## Examples
 
 The following example shows the use of the `iterateNext()` method.
 
@@ -65,7 +70,7 @@ document.querySelector("output").textContent = tagNames.join(", ");
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

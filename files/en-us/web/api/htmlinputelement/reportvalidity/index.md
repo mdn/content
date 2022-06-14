@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.reportValidity()
 slug: Web/API/HTMLInputElement/reportValidity
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -19,8 +20,12 @@ The **`reportValidity()`** method of the {{domxref('HTMLInputElement')}} interfa
 ## Syntax
 
 ```js
-element.reportValidity();
+reportValidity()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

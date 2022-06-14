@@ -1,6 +1,7 @@
 ---
 title: MIDIPort.version
 slug: Web/API/MIDIPort/version
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,15 +14,9 @@ browser-compat: api.MIDIPort.version
 
 The **`version`** read-only property of the {{domxref("MIDIPort")}} interface returns the version of the port.
 
-## Syntax
+## Value
 
-```js
-let version = MIDIPort.version;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing the version of the port.
+A string containing the version of the port.
 
 ## Examples
 

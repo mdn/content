@@ -1,6 +1,7 @@
 ---
 title: WindowControlsOverlay
 slug: Web/API/WindowControlsOverlay
+page-type: web-api-interface
 tags:
   - API
   - Window Controls Overlay

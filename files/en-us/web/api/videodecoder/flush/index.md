@@ -1,6 +1,7 @@
 ---
 title: VideoDecoder.flush()
 slug: Web/API/VideoDecoder/flush
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,14 +17,14 @@ The **`flush()`** method of the {{domxref("VideoDecoder")}} interface returns a 
 ## Syntax
 
 ```js
-VideoDecoder.flush()
+flush()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 A {{jsxref("Promise")}} that resolves with undefined.
 

@@ -1,6 +1,7 @@
 ---
 title: Document()
 slug: Web/API/Document/Document
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -18,8 +19,12 @@ an entry point into the page's content.
 ## Syntax
 
 ```js
-new Document();
+new Document()
 ```
+
+### Parameters
+
+None.
 
 ## Specifications
 

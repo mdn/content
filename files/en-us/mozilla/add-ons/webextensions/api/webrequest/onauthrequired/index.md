@@ -42,7 +42,7 @@ The listener can respond in one of four different ways:
     - in addListener, pass `"blocking"` in the `extraInfoSpec` parameter
     - in the listener, return a `Promise` that is resolved with an object containing an `authCredentials` property, set to the credentials to supply
 
-See [Examples](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired#examples).
+See [Examples](#examples).
 
 If you use `"blocking"` you must have the ["webRequestBlocking" API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in your `manifest.json`.
 
@@ -84,7 +84,7 @@ Events have three functions:
   - : A function that will be called when this event occurs. The function will be passed the following arguments:
 
     - `details`
-      - : [`object`](#details). Details about the request. See [`details`](#details) below.
+      - : [`object`](#details). Details about the request. See [`details`](#details_2) below.
 
     Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}} or a {{jsxref("Promise")}}.
 
@@ -247,7 +247,7 @@ const pendingRequests = [];
 // We can stop worrying about it.
 function completed(requestDetails) {
   console.log(`completed: ${requestDetails.requestId}`);
-  var index = pendingRequests.indexOf(requestDetails.requestId);
+  let index = pendingRequests.indexOf(requestDetails.requestId);
   if (index > -1) {
     pendingRequests.splice(index, 1);
   }
@@ -294,7 +294,7 @@ const pendingRequests = [];
 */
 function completed(requestDetails) {
   console.log(`completed: ${requestDetails.requestId}`);
-  var index = pendingRequests.indexOf(requestDetails.requestId);
+  let index = pendingRequests.indexOf(requestDetails.requestId);
   if (index > -1) {
     pendingRequests.splice(index, 1);
   }
@@ -336,7 +336,7 @@ browser.webRequest.onErrorOccurred.addListener(
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest#event-onAuthRequired) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#event-onAuthRequired) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

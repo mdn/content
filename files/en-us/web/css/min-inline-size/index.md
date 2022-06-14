@@ -35,6 +35,7 @@ min-inline-size: fit-content(20em);
 min-inline-size: inherit;
 min-inline-size: initial;
 min-inline-size: revert;
+min-inline-size: revert-layer;
 min-inline-size: unset;
 ```
 

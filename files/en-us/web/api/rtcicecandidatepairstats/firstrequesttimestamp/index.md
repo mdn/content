@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.firstRequestTimestamp
 slug: Web/API/RTCIceCandidatePairStats/firstRequestTimestamp
+page-type: web-api-instance-property
 tags:
   - API
   - Connectivity
@@ -25,13 +26,7 @@ The {{domxref("RTCIceCandidatePairStats")}} property
 **`firstRequestTimestamp`** specifies the time at which the
 first {{Glossary("STUN")}} request was sent on the described candidate pair.
 
-## Syntax
-
-```js
-firstRequestTimestamp = rtcIceCandidatePairStats.firstRequestTimestamp;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} object indicating the timestamp at which the first
 STUN request was sent on the connection described by the described pair of candidates.

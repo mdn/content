@@ -16,7 +16,7 @@ Firefox 20 was released on April, 2nd 2013. This article provides information ab
 ### HTML
 
 - Support for the {{htmlattrxref("download", "a")}} attribute on the {{HTMLElement("a")}} and {{HTMLElement("area")}} element has been added ({{bug("676619")}}).
-- The value `auto` for the [global attribute](/en-US/docs/Web/HTML/Global_attributes) [`dir`](/en-US/docs/Web/HTML/Global_attributes#attr-dir) has been implemented ({{bug("548206")}}).
+- The value `auto` for the [global attribute](/en-US/docs/Web/HTML/Global_attributes) [`dir`](/en-US/docs/Web/HTML/Global_attributes#dir) has been implemented ({{bug("548206")}}).
 - The [global attribute](/en-US/docs/Web/HTML/Global_attributes) [contextmenu](/en-US/docs/Web/HTML/Global_attributes/contextmenu) now works on Firefox for Android ({{bug("736321")}}).
 
 ### JavaScript
@@ -30,7 +30,7 @@ Firefox 20 was released on April, 2nd 2013. This article provides information ab
 ### CSS
 
 - [CSS Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) is now available by default in pre-release builds only (excluding beta versions). It can be enabled in release and beta version by setting the `layout.css.flexbox.enabled` about:config preference to `true`.
-- The `mask-type` property from the [CSS Masking specification](https://dvcs.w3.org/hg/FXTF/raw-file/tip/masking/index.html) has been added ({{bug("793617")}}).
+- The `mask-type` property from the [CSS Masking specification](https://www.w3.org/TR/css-masking-1/#the-mask-type) has been added ({{bug("793617")}}).
 - Experimental support for the {{cssxref(":scope")}} pseudo-class has been added. Enabled by default in Aurora and Nightly, it can be enabled in release and beta version by setting the `layout.css.scope-pseudo.enabled` about:config preference to `true` ({{bug("648722")}}).
 
 ### DOM/APIs
@@ -65,14 +65,14 @@ Firefox 20 was released on April, 2nd 2013. This article provides information ab
 ## Changes for add-on and Mozilla developers
 
 - [ECMAScript for XML (E4X)](/en-US/docs/E4X) is now fully disabled for all chrome and content scripts. It was previously disabled for content in Firefox 17 and has been removed entirely for Firefox 21. Use DOMParser/DOMSerializer or a non-native JXON algorithm instead.
-- The {{interface("nsIDOMParserJS")}} interface no longer exists {{bug('816410')}}. See {{interface("nsIDOMParser")}} for alternatives.
-- Content Preferences: The {{Interface("nsIContentPrefService")}} interface is now deprecated and the asynchronous {{Interface("nsIContentPrefService2")}} storage API has been implemented.
-- The {{interface("nsIProfile")}} and {{interface("nsIProfileChangeStatus")}} interfaces have been removed, along with other code supporting the pre-Firefox profile management system. You probably weren't using these interfaces, but if you were, you should stop doing so. This prevents defunct parts of the profile management system from vetoing the shutdown process.
-- The {{interface("nsIEventSource")}} interface no longer exists {{bug('819639')}}.
+- The `nsIDOMParserJS` interface no longer exists {{bug('816410')}}. See `nsIDOMParser` for alternatives.
+- Content Preferences: The `nsIContentPrefService` interface is now deprecated and the asynchronous `nsIContentPrefService2` storage API has been implemented.
+- The `nsIProfile` and `nsIProfileChangeStatus` interfaces have been removed, along with other code supporting the pre-Firefox profile management system. You probably weren't using these interfaces, but if you were, you should stop doing so. This prevents defunct parts of the profile management system from vetoing the shutdown process.
+- The `nsIEventSource` interface no longer exists {{bug('819639')}}.
 
 ## See also
 
-- [Firefox 20 Release Notes](https://www.mozilla.org/en-US/firefox/20.0/releasenotes/)
+- [Firefox 20 Release Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/20.0/releasenotes/)
 - [Add-on Compatibility for Firefox 20](https://blog.mozilla.org/addons/2013/03/20/compatibility-for-firefox-20/)
 
 ### Older versions

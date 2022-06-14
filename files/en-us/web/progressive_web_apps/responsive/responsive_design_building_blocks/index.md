@@ -28,7 +28,7 @@ The best place to start is with fluid measurements for our application layout �
 
 We've written a simple-but-fun prototype for an application called Snapshot, which takes a video stream from your webcam (using {{domxref("navigator.getUserMedia", "getUserMedia()")}}) then allows you to capture stills from that video stream (using HTML5 {{HTMLElement("canvas")}}), and save them to a gallery. You can then view previously-captured images and delete them. Other articles will discuss the functionality in more detail, but here we're interested in the layout.
 
-> **Note:** You can find the [Snapshot app on Github](https://github.com/chrisdavidmills/snapshot); check out the code and help improve it. You can also see [Snapshot running live](https://chrisdavidmills.github.io/snapshot/). Note that `getUserMedia()` is an experimental technology, which currently only works in Google Chrome and Firefox desktop. More functionality and a clean up of the styling of Snapshot are planned for a future date.
+> **Note:** You can find the [Snapshot app on GitHub](https://github.com/chrisdavidmills/snapshot); check out the code and help improve it. You can also see [Snapshot running live](https://chrisdavidmills.github.io/snapshot/). Note that `getUserMedia()` is an experimental technology, which currently only works in Google Chrome and Firefox desktop. More functionality and a clean up of the styling of Snapshot are planned for a future date.
 
 Our desktop layout for Snapshot is three columns, containing the camera viewer, image capture view, and gallery, respectively.
 
@@ -88,7 +88,7 @@ The padding does not affect the overall width and height of the containers becau
 }
 ```
 
-This basically means that {{cssxref("width")}} and {{cssxref("height")}} will now set the dimensions of an element all the way up to and including the border, not just the content. So if you set `width: 40%`, the box width will always be `40%` of its parent, and any {{cssxref("padding")}} and {{cssxref("border")}} widths set on the box will be subtracted from the content width, not added to it. Very useful! Read more about this at [\* { Box-sizing: Border-box } FTW](http://www.paulirish.com/2012/box-sizing-border-box-ftw/), by Paul Irish.
+This basically means that {{cssxref("width")}} and {{cssxref("height")}} will now set the dimensions of an element all the way up to and including the border, not just the content. So if you set `width: 40%`, the box width will always be `40%` of its parent, and any {{cssxref("padding")}} and {{cssxref("border")}} widths set on the box will be subtracted from the content width, not added to it. Very useful! Read more about this at [\* { Box-sizing: Border-box } FTW](https://www.paulirish.com/2012/box-sizing-border-box-ftw/), by Paul Irish.
 
 ## Flexible replaced elements
 
@@ -179,7 +179,7 @@ We then have a narrow screen layout, designed to fit the bill for a mobile app/o
   }
 ```
 
-This first block resets a number of different things from the widescreen layouts that were't required for the mobile app.
+This first block resets a number of different things from the widescreen layouts that weren't required for the mobile app.
 
 ```css
   x-card:nth-child(1) video, x-card:nth-child(2) img, x-card:nth-child(3) {
@@ -349,7 +349,7 @@ There is a way to override this mobile rendering behavior — viewport, which is
 
 This causes our browser to render our mobile app layout properly — `width=480` tells the browser _"render this markup at 480 pixels wide"_, hence the media queries kick in appropriately. There are many more options available in the viewport meta tag, which you can read about in [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Mozilla/Mobile/Viewport_meta_tag).
 
-> **Note:** There is a spec called [device adaptation](http://dev.w3.org/csswg/css-device-adapt/), which defines the same functionality but in CSS, using a `@viewport` at-rule. This is probably a more logical place to put such information, but the spec is not as well supported as the viewport meta tag, therefore you should stick with that for now.
+> **Note:** There is a spec called [device adaptation](https://drafts.csswg.org/css-device-adapt/), which defines the same functionality but in CSS, using a `@viewport` at-rule. This is probably a more logical place to put such information, but the spec is not as well supported as the viewport meta tag, therefore you should stick with that for now.
 
 ## Responsive images/video
 
@@ -391,7 +391,7 @@ button {
 }
 ```
 
-This looks rather complicated, but really it's not — we are providing a number of media query options, as at this time different browsers support different resolution media query types and even units. Brett Jankord has a good explanation at [Cross Browser Retina/High Resolution Media Queries](http://www.brettjankord.com/2012/11/28/cross-browser-retina-high-resolution-media-queries/).
+This looks rather complicated, but really it's not — we are providing a number of media query options, as at this time different browsers support different resolution media query types and even units. Brett Jankord has a good explanation at [Cross Browser Retina/High Resolution Media Queries](https://www.brettjankord.com/2012/11/28/cross-browser-retina-high-resolution-media-queries/).
 
 ### \<video>
 
@@ -419,14 +419,12 @@ This allows your site to serve different video files based on the available spac
 
 ### \<img>
 
-HTML images are a more difficult proposition. There is no mechanism inherent in HTML images for serving different image files dependent on viewport size, and, due to a number of irksome browser behavior realities, solutions are more difficult to hack together than you would imagine. There are currently some standards proposals in the works that would provide this — the W3C [responsive images community group](https://www.w3.org/community/respimg/) discussed this problem for ages and arrived at the [\<picture>](https://www.w3.org/TR/html-picture-element/) element, which provides a similar markup structure to {{HTMLElement("video")}}[,](/en-US/docs/Web/HTML/Element/video) with {{HTMLElement("source")}} alternatives selectable via media query results. Another proposal, [srcset](https://www.w3.org/html/wg/drafts/srcset/w3c-srcset/), was put forward by Apple and takes a slightly different approach, instead providing a new `srcset` attribute for {{HTMLElement("img")}} inside which image references are placed along with "hints" that the browser can use to work out which image is most suitable to display given its viewport size, resolution, etc. These are not intended to be mutually exclusive.
+HTML images are a more difficult proposition. There is no mechanism inherent in HTML images for serving different image files dependent on viewport size, and, due to a number of irksome browser behavior realities, solutions are more difficult to hack together than you would imagine. There are currently some standards proposals in the works that would provide this — the W3C [responsive images community group](https://www.w3.org/community/respimg/) discussed this problem for ages and arrived at the [\<picture>](https://www.w3.org/TR/html-picture-element/) element, which provides a similar markup structure to {{HTMLElement("video")}}[,](/en-US/docs/Web/HTML/Element/video) with {{HTMLElement("source")}} alternatives selectable via media query results. Another proposal, [srcset](https://html.spec.whatwg.org/srcset/w3c-srcset/), was put forward by Apple and takes a slightly different approach, instead providing a new `srcset` attribute for {{HTMLElement("img")}} inside which image references are placed along with "hints" that the browser can use to work out which image is most suitable to display given its viewport size, resolution, etc. These are not intended to be mutually exclusive.
 
 This all sounds good. But those solutions are definitely not ready for production yet — both are in a very early stage of standardization, and have no support across browsers. Currently we have to rely on various polyfills and other solutions, none of which are perfect for all situations, so you need to decide which one is right for your particular situation. Some available solutions are as follows:
 
 - [HiSRC](https://github.com/teleject/hisrc)
-  - : A [jQuery](http://jquery.com) plugin that allows you to create small, medium, and large versions of an image, and then serves the appropriate one according to the browser's resolution and available network speed.
-- [Mobify.js capturing](http://www.mobify.com/mobifyjs/v2/docs/capturing/)
-  - : A very clever technique from Mozilla that allows you to capture the source of the page before it's parsed. This way, you can swap out image `src` values with JavaScript depending on browser features, circumventing browser preloading issues. This is promising, but doesn't work very well across older browsers.
+  - : A [jQuery](https://jquery.com/) plugin that allows you to create small, medium, and large versions of an image, and then serves the appropriate one according to the browser's resolution and available network speed.
 - [Picturefill](https://github.com/scottjehl/picturefill)
   - : A JavaScript-based polyfill for `<picture>`, which works nicely, but it does require a lot of custom markup.
 - [Adaptive images](http://adaptive-images.com/)

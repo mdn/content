@@ -1,6 +1,7 @@
 ---
 title: Selection.focusOffset
 slug: Web/API/Selection/focusOffset
+page-type: web-api-instance-property
 tags:
   - API
   - HTML Editing
@@ -19,11 +20,9 @@ number of characters that the selection's focus is offset within the
 This number is zero-based. If the selection ends with the first character in the
 {{domxref("Selection.focusNode")}}, `0` is returned.
 
-## Syntax
+## Value
 
-```js
-offset = sel.focusOffset
-```
+A number.
 
 ## Specifications
 

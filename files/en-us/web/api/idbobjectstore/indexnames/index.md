@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.indexNames
 slug: Web/API/IDBObjectStore/indexNames
+page-type: web-api-instance-property
 tags:
   - API
   - Database
@@ -20,17 +21,11 @@ in this object store.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var myindexNames = objectStore.indexNames;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMStringList")}}.
 
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store using `add()`. After the object store has been
@@ -99,5 +94,4 @@ function addData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

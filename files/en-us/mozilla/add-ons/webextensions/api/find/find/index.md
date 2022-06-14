@@ -256,7 +256,7 @@ The content script:
  * Add a black DIV where the rect is.
  */
 function redactRect(rect) {
-  var redaction = document.createElement("div");
+  let redaction = document.createElement("div");
   redaction.style.backgroundColor = "black";
   redaction.style.position = "absolute";
   redaction.style.top = `${rect.top}px`;

@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.autoIncrement
 slug: Web/API/IDBObjectStore/autoIncrement
+page-type: web-api-instance-property
 tags:
   - API
   - Database
@@ -22,13 +23,7 @@ Note that every object store has its own separate auto increment counter.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var myAutoIncrement = objectStore.autoIncrement;
-```
-
-### Value
+## Value
 
 A boolean value:
 
@@ -37,7 +32,7 @@ A boolean value:
 | `true`  | The object store auto increments.           |
 | `false` | The object store does not auto increment.   |
 
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store using `add()`. After the object store has been
@@ -107,5 +102,4 @@ function addData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
