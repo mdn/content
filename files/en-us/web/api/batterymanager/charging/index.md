@@ -36,7 +36,7 @@ navigator.getBattery().then(battery => {
 });
 ```
 
-{{ EmbedLiveSample('Example', '100%', 30) }}
+{{ EmbedLiveSample('Examples', '100%', 30) }}
 
 ## Specifications
 
