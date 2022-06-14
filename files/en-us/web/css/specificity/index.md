@@ -372,7 +372,7 @@ A few things to remember about specificity:
 ## See also
 
 - {{CSS_Key_Concepts}}
-- "Specificity" in "Cascade and inheritance"](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity_2)
+- ["Specificity" in "Cascade and inheritance"](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity_2)
 - [SpeciFISHity](https://specifishity.com)
 - [Specificity Calculator](https://specificity.keegan.st/): An interactive website to test and understand your own CSS rules
 - [_ID-CLASS-TYPE_ exercise](https://estelle.github.io/CSS/selectors/exercises/specificity.html) a specificity quiz
