@@ -23,13 +23,13 @@ None.
 
 - {{domxref('Scheduler.postTask()')}}
   - : Adds a task to the scheduler as a callback, optionally specifying a priority, delay, and/or a signal for aborting the task.
-    
+
 ## Examples
 
 If the feature is defined, an instance of this object is returned by the global `this` in both workers and the main thread.
 The only property of the interface is the {{domxref('Scheduler.postTask()','postTask()')}} method, which is used to post the task and returns a promise.
 
-The code below shows a simple task that resolves with the text 'Task executing'. 
+The code below shows a simple task that resolves with the text 'Task executing'.
 This text is logged on success.
 The code also shows a `catch` block, which would be required in more complex code to handle when a task is aborted or throws an error.
 
@@ -52,4 +52,3 @@ For more comprehensive example code see [Prioritized Task Scheduling API > Examp
 ## Browser compatibility
 
 {{Compat}}
-

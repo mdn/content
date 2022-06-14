@@ -145,6 +145,7 @@ scheduler.postTask( ()=>{ console.log('usr-vis 3 (default)'); } );
 ```
 
 The expected output is shown below: tasks are executed in priority order, and then declaration order.
+
 ```js
 usr-blk 1
 usr-blk 2
@@ -229,6 +230,7 @@ This effectively adds the task to the prioritized queue on a timeout, as might b
 The `delay` is the minimum amount of time before the task is added to the scheduler; it may be longer.
 
 The code below shows two tasks added (as arrow functions) with a delay.
+
 ```js
 // Post task as arrow function with delay of 2 seconds
 scheduler.postTask( ()=>{ return 'Task delayed by 2000ms'; }, {delay: 2000} )
@@ -244,4 +246,3 @@ scheduler.postTask( ()=>{ return 'Next task should complete in about 2000ms'; },
 ## Browser compatibility
 
 {{Compat}}
-

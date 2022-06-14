@@ -52,6 +52,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 ## Examples
 
 Examples for how the `TaskSignal` is created and used for prioritizing and aborting tasks can be found here:
+
 - [Prioritized Task Scheduling API > Examples](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#examples)
 - [`TaskController` > Examples](/en-US/docs/Web/API/TaskController#examples)
 - [`TaskSignal: prioritychange` event > Examples](/en-US/docs/Web/API/TaskSignal/prioritychange_event#examples)
@@ -63,4 +64,3 @@ Examples for how the `TaskSignal` is created and used for prioritizing and abort
 ## Browser compatibility
 
 {{Compat}}
-

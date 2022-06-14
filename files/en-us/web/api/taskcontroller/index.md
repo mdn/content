@@ -48,7 +48,6 @@ _This interface also inherits the properties of its parent, {{domxref("AbortCont
     The signal is passed to tasks so that they can be aborted or re-prioritized by the controller.
     The property is inherited from [`AbortController`](/en-US/docs/Web/API/AbortController#abortcontroller.signal).
 
-
 ## Examples
 
 > **Note:** Additional "live" examples can be found in:  [Prioritized Task Scheduling API > Examples](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#examples).
@@ -115,6 +114,7 @@ controller.abort();
 ```
 
 The console output of this example would be:
+
 ```
 The priority changed from user-blocking to background.
 Task aborted
