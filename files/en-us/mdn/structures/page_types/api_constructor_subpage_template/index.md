@@ -121,7 +121,8 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_exam
 
 > **Note:** Sometimes you will want to link to examples given on another page.
 >
-> If you have some examples in this page and some more examples on another page, then include an H3 heading for each example in this page, then a final H3 heading with the text "More examples", under which you can link to the extra examples. For example:
+> Scenario 1: If you have some examples on this page and some more examples on another page
+> Include an H3 heading for each example on this page and then a final H3 heading with the text "More examples", under which you can link to the examples on other pages. For example:
 >
 >  ```md
 >  ## Examples
@@ -130,10 +131,11 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_exam
 >  ... example of Fetch
 >
 >  ### More examples
->  ...links to further examples
+>  ...links to more examples on other pages
 >  ```
 >
-> If you _only_ have examples on another page, then you should not provide any H3 headings, but just add the links directly under the "Examples" H2. For example:
+> Scenario 2: If you _only_ have examples on another page and none on this page
+Don't add any H3 headings; just add the links directly under the H2 heading "Examples". For example:
 >
 >  ```md
 >   ## Examples
