@@ -24,7 +24,7 @@ new ReadableStream(underlyingSource, queuingStrategy)
 
 ### Parameters
 
-- `underlyingSource` {{optional_inline}}
+- `underlyingSource` {{optional_inline}} 
 
   - : An object containing methods and properties that define how the constructed stream
     instance will behave. `underlyingSource` can contain the following:
