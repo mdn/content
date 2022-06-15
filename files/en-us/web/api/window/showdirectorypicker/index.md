@@ -30,7 +30,7 @@ var FileSystemDirectoryHandle = window.showDirectoryPicker();
   - : An object containing options, which are as follows:
 
     - `mode`
-      - : A string that defaults to `read` for read-only access or `readwrite` for read
+      - : A string that defaults to `"read"` for read-only access or `"readwrite"` for read
         and write access to the directory.
 
 ### Return value
