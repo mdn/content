@@ -26,7 +26,7 @@ new ImageDecoder(init)
     - `type`
       - : A string containing the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the image file to be decoded.
     - `data`
-      - : A {{domxref("BufferSource")}} or {{domxref("ReadableStream")}} of bytes representing an encoded image type as described by `type`.
+      - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, or a {{domxref("ReadableStream")}} of bytes representing an encoded image type as described by `type`.
     - `premultiplyAlpha`{{Optional_Inline}}
       - : Specifies whether the decoded image's color channels should be premultiplied by the alpha channel. If not provided set as `"default"`:
         - `"none"`

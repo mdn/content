@@ -23,7 +23,7 @@ copyTo(destination, options)
 ### Parameters
 
 - `destination`
-  - : The {{domxref("BufferSource","buffer")}} to copy the plane to.
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} to copy the plane to.
 - `options`
   - : An object containing the following:
     - `planeIndex`
