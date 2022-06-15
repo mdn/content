@@ -27,6 +27,7 @@ new DecompressionStream(format)
 
     - `"gzip"`
     - `"deflate"`
+    - `"deflate-raw"`
 
 ## Exceptions
 
