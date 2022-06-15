@@ -108,10 +108,10 @@ You can also access properties by using a string value that is stored in a varia
 str = 'myString';
 myObj[str] = 'This key is in variable str';
 
-console.log( myObj.str ); //[Log] undefined
+console.log(myObj.str); //[Log] undefined
 
-console.log( myObj[str] ); //[Log] This key is in variable str
-console.log( myObj.myString ); //[Log] This key is in variable str
+console.log(myObj[str]); //[Log] This key is in variable str
+console.log(myObj.myString); //[Log] This key is in variable str
 ```
 
 This allows accessing any property as determined at runtime:
@@ -124,7 +124,7 @@ myCar[propertyName] = 'Ford';
 propertyName = 'model';
 myCar[propertyName] = 'Mustang';
 
-console.log( myCar );
+console.log(myCar);
 
 // [Log] {make: 'Ford', model: 'Mustang'}
 ```
