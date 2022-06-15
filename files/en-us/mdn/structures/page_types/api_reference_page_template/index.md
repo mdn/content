@@ -106,7 +106,6 @@ Each example must have an H3 heading (`###`) naming the example. The heading sho
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information.
 
-
 ## Specifications
 
 {{Specifications}}
