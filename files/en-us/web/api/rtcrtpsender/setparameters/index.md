@@ -52,9 +52,9 @@ setParameters(parameters)
     - `transactionId`
       - : A string containing a unique ID for the last set of parameters applied; this value is used to ensure that {{domxref("RTCRtpSender.setParameters", "setParameters()")}} can only be called to alter changes made by a specific previous call to {{domxref("RTCRtpSender.getParameters", "getParameters()")}}. Once this parameter is initially set, it cannot be changed.
     - `degradationPreference` {{deprecated_inline}}
-      - : Specifies the preferred way the WebRTC layer should handle optimizing bandwidth against quality in constrained-bandwidth situations; the value comes from the {{domxref("RTCDegradationPreference")}} enumerated string type, and the default is `balanced`.
+      - : Specifies the preferred way the WebRTC layer should handle optimizing bandwidth against quality in constrained-bandwidth situations; the possible values are `maintain-framerate`, `maintain-resolution`, or `balanced`. The default value is `balanced`.
     - `priority` {{deprecated_inline}}
-      - : A string from the {{domxref("RTCPriorityType")}} enumerated type which indicates the encoding's priority. The default value is `low`.
+      - : A string that indicates the encoding's priority. It is one of: `very-low`, `low`, `medium`, or `high`. The default value is `low`.
 
 ### Return value
 

@@ -1915,12 +1915,6 @@
         "RTCRTPStreamStats"
       ],
       "types": [
-        "RTCPriorityType",
-        "RTCDtxStatus",
-        "RTCDegradationPreference",
-        "RTCSctpTransportState",
-        "RTCErrorDetailType",
-        "RTCQualityLimitationReason",
         "RTCStatsType"
       ],
       "methods": ["MediaDevices.getUserMedia()"],
