@@ -206,7 +206,7 @@ Specificity is based on the form of a selector.  Including the `id` of an elemen
 
 You can also include the `id` or any part of a selector as a parameter in the `:where()` specificity-adjustment pseudo class if you need to make a selector more specific but don't want to add any specificity at all.
 
-### Increasing specificityty by duplicating selecto
+### Increasing specificity by duplicating selector
 
 As a special case for increasing specificity, you can duplicate weights from the _CLASS_ or _ID_ columns. Duplicating simple selectors will increase specificity when overriding very specific selectors over which you have no control.
 
