@@ -74,19 +74,19 @@ complete working example, see our [IndexedDB-examples demo repo](https://github.
 ```js
 function displayDataByIndex() {
   tableEntry.innerHTML = '';
-  var transaction = db.transaction(['contactsList'], 'readonly');
-  var objectStore = transaction.objectStore('contactsList');
+  const transaction = db.transaction(['contactsList'], 'readonly');
+  const objectStore = transaction.objectStore('contactsList');
 
-  var myIndex = objectStore.index('lName');
-  var getRequest = myIndex.get('Bungle');
+  const myIndex = objectStore.index('lName');
+  const getRequest = myIndex.get('Bungle');
   getRequest.onsuccess = function() {
     console.log(getRequest.result);
   }
 
   myIndex.openCursor().onsuccess = function(event) {
-    var cursor = event.target.result;
+    const cursor = event.target.result;
     if(cursor) {
-      var tableRow = document.createElement('tr');
+      const tableRow = document.createElement('tr');
       tableRow.innerHTML =   '<td>' + cursor.value.id + '</td>'
                            + '<td>' + cursor.value.lName + '</td>'
                            + '<td>' + cursor.value.fName + '</td>'
