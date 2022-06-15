@@ -69,14 +69,14 @@ Finally, we iterate through each record, and insert the data into an HTML table.
 ```js
 function displayDataByIndex() {
   tableEntry.innerHTML = '';
-  var transaction = db.transaction(['contactsList'], 'readonly');
-  var objectStore = transaction.objectStore('contactsList');
+  const transaction = db.transaction(['contactsList'], 'readonly');
+  const objectStore = transaction.objectStore('contactsList');
 
-  var myIndex = objectStore.index('lName');
+  const myIndex = objectStore.index('lName');
   myIndex.openCursor().onsuccess = function(event) {
-    var cursor = event.target.result;
+   const cursor = event.target.result;
     if(cursor) {
-      var tableRow = document.createElement('tr');
+      const tableRow = document.createElement('tr');
       tableRow.innerHTML =   '<td>' + cursor.value.id + '</td>'
                            + '<td>' + cursor.value.lName + '</td>'
                            + '<td>' + cursor.value.fName + '</td>'
