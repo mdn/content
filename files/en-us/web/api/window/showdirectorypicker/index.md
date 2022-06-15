@@ -25,7 +25,13 @@ var FileSystemDirectoryHandle = window.showDirectoryPicker();
 
 ### Parameters
 
-None.
+- `options` {{optional_inline}}
+
+  - : An object containing options, which are as follows:
+
+    - `mode`
+      - : A string that defaults to `read` for read-only access or `readwrite` for read
+        and write access to the directory.
 
 ### Return value
 
