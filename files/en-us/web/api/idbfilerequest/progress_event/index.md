@@ -46,7 +46,7 @@ A {{domxref("Event")}} with two extra properties:
 // Assuming 'request' which is an IDBFileRequest object
 
 request.onprogress = function (status) {
-  var progress = document.querySelector('progress');
+  const progress = document.querySelector('progress');
 
   progress.value = status.loaded;
   progress.max   = status.total;
