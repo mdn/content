@@ -45,24 +45,24 @@ the developer console. For a full working example, see our
 ([View the example live](https://mdn.github.io/to-do-notifications/)).
 
 ```js
-var title = "Walk dog";
+const title = "Walk dog";
 
 // Open up a transaction as usual
-var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
 
 // Get the to-do list object that has this title as it's title
-var objectStoreTitleRequest = objectStore.get(title);
+const objectStoreTitleRequest = objectStore.get(title);
 
 objectStoreTitleRequest.onsuccess = function() {
   // Grab the data object returned as the result
-  var data = objectStoreTitleRequest.result;
+  const data = objectStoreTitleRequest.result;
 
   // Update the notified value in the object to "yes"
   data.notified = "yes";
 
   // Create another request that inserts the item
   // back into the database
-  var updateTitleRequest = objectStore.put(data);
+  const updateTitleRequest = objectStore.put(data);
 
   // Log the source of this request
   console.log("The readyState of this request is " + updateTitleRequest.readyState);
