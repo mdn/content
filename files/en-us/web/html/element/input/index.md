@@ -1040,7 +1040,7 @@ Specific attributes and their values can lead to a specific error {{domxref('Val
       </td>
     </tr>
     <tr>
-      <td><a href="#maxlength"><code>maxlength</code></a></td>
+      <td><a href="#maxlength"><code>minlength</code></a></td>
       <td>{{domxref('validityState.tooShort')}}</td>
       <td>
         Occurs when the number of characters is less than the number required by the <code>minlength</code> property
