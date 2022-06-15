@@ -81,8 +81,8 @@ myObj[rand]             = 'A random number is the key here';
 myObj[anotherObj]       = 'This key is object anotherObj';
 myObj['']               = 'This key is an empty string';
 
-console.log( myObj );
-console.log( myObj.myString );
+console.log(myObj);
+console.log(myObj.myString);
 </script>
 
 /*
