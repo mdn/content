@@ -364,10 +364,7 @@ Adding a new document is relatively straightforward, especially if you can
 start by copying the `index.html` or `index.md` of a similar document.
 There are only a few things to keep in mind:
 
-- Documents can be authored in either Markdown or HTML. However, we've converted
-  the site to Markdown and don't want to mix authoring
-  formats within a section. If you are adding a new document under
-  `files/en-us/web/`, make it a Markdown file. 
+- Documents must be authored in Markdown.
 - Remember that a document is represented by an `index.html` or `index.md` file
   within its own folder.
 - Determine where in the document hierarchy your document belongs. For
@@ -395,8 +392,7 @@ As we outlined above, the step-by-step process in general would be:
     git checkout -b my-add
     ```
 
-1. Create one or more new document folders, each with their own `index.md`
-(or `index.html`) file.
+1. Create one or more new document folders, each with their own `index.md` file.
 
 1. Add and commit your new files, as well as push your new branch to your fork:
 
