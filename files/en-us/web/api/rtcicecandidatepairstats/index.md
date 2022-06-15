@@ -81,7 +81,7 @@ _`RTCIceCandidatePairStats` is based upon {{domxref("RTCStats")}} and inherits i
 - {{domxref("RTCIceCandidatePairStats.retransmissionsSent", "retransmissionsSent")}} {{optional_inline}}
   - : The total number of times connectivity check request retransmissions were sent.
 - {{domxref("RTCIceCandidatePairStats.state", "state")}} {{optional_inline}}
-  - : A {{domxref("RTCStatsIceCandidatePairState")}} object which indicates the state of the connection between the two candidates.
+  - : A string which indicates the state of the connection between the two candidates.
 - {{domxref("RTCIceCandidatePairStats.totalRoundTripTime", "totalRoundTripTime")}} {{optional_inline}}
   - : A floating-point value indicating the total time, in seconds, that has elapsed between sending STUN requests and receiving responses to them, for all such requests made to date on this candidate pair. This includes both connectivity check and consent check requests. You can compute the average round trip time (RTT) by dividing this value by {{domxref("RTCIceCandidatePairStats.responsesReceived", "responsesReceived")}}.
 - {{domxref("RTCIceCandidatePairStats.transportId", "transportId")}} {{optional_inline}}

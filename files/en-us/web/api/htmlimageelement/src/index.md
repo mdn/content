@@ -14,6 +14,7 @@ tags:
   - fallback
   - source
   - src
+  - Property
 browser-compat: api.HTMLImageElement.src
 ---
 {{APIRef("HTML DOM")}}
@@ -23,14 +24,7 @@ The {{domxref("HTMLImageElement")}} property
     "img")}} attribute, specifies the image to display in the {{HTMLElement("img")}}
 element.
 
-## Syntax
-
-```js
-htmlImageElement.src = newSource;
-let src = htmlImageElement.src;
-```
-
-### Value
+## Value
 
 When providing only a single image, rather than a set of images from which the browser
 selects the best match for the viewport size and display pixel density, the

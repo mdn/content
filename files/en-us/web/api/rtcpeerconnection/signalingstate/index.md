@@ -101,8 +101,7 @@ var state = pc.signalingState;
 
 ## See also
 
-- [Lifetime of a WebRTC
-  session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
 - {{domxref("RTCPeerConnection")}}
 - {{DOMxRef("RTCPeerConnection/signalingstatechange_event", "signalingstatechange")}}
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)

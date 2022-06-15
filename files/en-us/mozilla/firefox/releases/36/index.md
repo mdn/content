@@ -134,8 +134,8 @@ _No change._
 
 ### JavaScript code modules
 
-- [PromiseUtils.resolveOrTimeout](</en-US/docs/Mozilla/JavaScript_code_modules/PromiseUtils.jsm#resolveOrTimeout()>) is implemented ({{bug(1080466)}}).
-- [PromiseUtils.defer](</en-US/docs/Mozilla/JavaScript_code_modules/PromiseUtils.jsm#defer()>) (a replacement for [Promise.defer](</en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm#defer()>)) is implemented ({{bug(1093021)}}).
+- `PromiseUtils.resolveOrTimeout` is implemented ({{bug(1080466)}}).
+- [PromiseUtils.defer](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/PromiseUtils.html#defer()>) (a replacement for `Promise.defer()`) is implemented ({{bug(1093021)}}).
 
 ### Interfaces
 

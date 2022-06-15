@@ -14,6 +14,7 @@ tags:
   - Video
 browser-compat: api.MediaRecorder.MediaRecorder
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 The **`MediaRecorder()`** constructor
@@ -27,8 +28,8 @@ and codec configuration(s) to use by specifying [the `codecs` parameter](/en-US/
 ## Syntax
 
 ```js
-new MediaRecorder(stream)
-new MediaRecorder(stream, options)
+new MediaRecorder(stream);
+new MediaRecorder(stream, options);
 ```
 
 ### Parameters
@@ -113,7 +114,7 @@ if (navigator.mediaDevices.getUserMedia) {
 ## See also
 
 - [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
-  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/web-dictaphone/).)
+- [Web Dictaphone](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder +
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/media/web-dictaphone/).)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("MediaDevices.getUserMedia")}}

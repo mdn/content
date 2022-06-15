@@ -17,7 +17,7 @@ event.
 ## Syntax
 
 ```js
-var dropHandler = targetElement.ondrop;
+const dropHandler = targetElement.ondrop;
 ```
 
 ### Return value
@@ -65,7 +65,7 @@ function drop_handler(ev) {
  ev.currentTarget.style.background = "lightyellow";
 
  ev.preventDefault();
- var data = ev.dataTransfer.getData("text");
+ const data = ev.dataTransfer.getData("text");
  ev.target.appendChild(document.getElementById(data));
 }
 

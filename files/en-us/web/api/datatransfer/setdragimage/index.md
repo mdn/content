@@ -91,7 +91,7 @@ function dragstart_handler(ev) {
  // Create an image and use it for the drag image
  // NOTE: change "example.gif" to an existing image or the image will not
  // be created and the default drag image will be used.
- var img = new Image();
+ const img = new Image();
  img.src = 'example.gif';
  ev.dataTransfer.setDragImage(img, 10, 10);
 }
@@ -105,7 +105,7 @@ function drop_handler(ev) {
  console.log("Drop");
  ev.preventDefault();
  // Get the data, which is the id of the drop target
- var data = ev.dataTransfer.getData("text");
+ const data = ev.dataTransfer.getData("text");
  ev.target.appendChild(document.getElementById(data));
 }
 </script>

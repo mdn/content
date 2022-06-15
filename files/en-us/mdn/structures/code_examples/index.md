@@ -53,7 +53,7 @@ By static examples, we are talking about static code blocks that show how a feat
 
 ```js
 // This is a JS example
-var test = "Hello";
+const test = "Hello";
 console.log(test);
 ```
 
@@ -64,6 +64,51 @@ Optionally, you might want to show a static image of the code's resulting output
 ## Traditional live samples
 
 Traditional live samples are inserted into the page using the [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) macro. An \\{{EmbedLiveSample}} call dynamically grabs the code blocks in the same document section as itself and puts them into a document, which it then inserts into the page inside an {{htmlelement("iframe")}}. See our [Live samples guide](/en-US/docs/MDN/Structures/Live_samples) for more information.
+
+### Formatting live samples
+
+If you write a live sample in the "Examples" section, provide a descriptive H3 heading (`###`) for this live sample example. Ideally, write a short description of the example explaining the scenario and what you are hoping to demonstrate. Then add subsections with following H4 headings (`####`), in the order listed:
+
+- HTML
+- CSS
+- JavaScript
+- Result
+Write the code blocks in the respective subsections listed above.
+In the **Result** subsection, add the call to the [`EmbedLiveSample` macro](/en-US/docs/MDN/Structures/Live_samples#live_sample_macros). Preferably, include some more prose in this subsection to describe the result.
+If you're not using a particular language type (for example, if you are not using JavaScript) or if you are hiding it, then you should omit the corresponding heading.
+
+For example:
+
+````
+## Examples
+
+### Styling a paragraph
+
+In this example, we're using CSS to style paragraphs that have the `fancy` class set.
+
+#### HTML
+
+```html
+<p>I'm not fancy.</p>
+
+<p class="fancy">But I am!</p>
+```
+
+#### CSS
+
+```css
+p.fancy {
+  color: red;
+}
+```
+
+#### Result
+
+\{{EmbedLiveSample("Styling a paragraph")}}
+
+Only the `<p>` element with `class="fancy"` will get styled `red`.
+
+````
 
 ## GitHub live samples
 

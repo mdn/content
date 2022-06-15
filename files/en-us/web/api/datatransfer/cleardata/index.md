@@ -88,11 +88,11 @@ span.tweaked {
 ```js
 window.addEventListener('DOMContentLoaded', function () {
   // Select HTML elements
-  var draggable = document.getElementById('source');
-  var droppable = document.getElementById('target');
-  var status = document.getElementById('status');
-  var data = document.getElementById('data');
-  var dropped = false;
+  const draggable = document.getElementById('source');
+  const droppable = document.getElementById('target');
+  const status = document.getElementById('status');
+  const data = document.getElementById('data');
+  let dropped = false;
 
   // Register event handlers
   draggable.addEventListener('dragstart', dragStartHandler);
@@ -158,8 +158,8 @@ window.addEventListener('DOMContentLoaded', function () {
     event.preventDefault();
 
     // Get data linked to event format « text »
-    var _data = event.dataTransfer.getData('text/plain');
-    var element = document.getElementById(_data);
+    const _data = event.dataTransfer.getData('text/plain');
+    const element = document.getElementById(_data);
 
     // Append drag source element to event's target element
     event.target.appendChild(element);

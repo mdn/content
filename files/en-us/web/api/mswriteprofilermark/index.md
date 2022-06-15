@@ -1,6 +1,7 @@
 ---
 title: msWriteProfilerMark
 slug: Web/API/msWriteProfilerMark
+page-type: web-api-global-function
 tags:
   - msWriteProfilerMark
 ---

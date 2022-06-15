@@ -299,4 +299,11 @@ var myBuffer = base64DecToArr("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29ya
 alert(myBuffer.byteLength);
 ```
 
-> **Note:** The function `base64DecToArr(sBase64[, nBlocksSize])` returns an [`uint8Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) of bytes. If your aim is to build a buffer of 16-bit / 32-bit / 64-bit raw data, use the `nBlocksSize` argument, which is the number of bytes of which the `uint8Array.buffer.bytesLength` property must result a multiple (`1` or omitted for ASCII, [binary strings](/en-US/docs/Web/API/DOMString/Binary) or UTF-8-encoded strings, `2` for UTF-16 strings, `4` for UTF-32 strings).
+> **Note:** The function `base64DecToArr(sBase64[, nBlocksSize])` returns
+> an [`uint8Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) of bytes.
+> If your aim is to build a buffer of 16-bit / 32-bit / 64-bit raw data,
+> use the `nBlocksSize` argument,
+> which is the number of bytes of which the `uint8Array.buffer.bytesLength` property must result a multiple
+> (`1` or omitted for ASCII, binary strings
+> (i.e., a string in which each character in the string is treated as a byte of binary data)
+> or UTF-8-encoded strings, `2` for UTF-16 strings, `4` for UTF-32 strings).

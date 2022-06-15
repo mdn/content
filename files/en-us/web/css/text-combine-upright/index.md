@@ -15,6 +15,10 @@ The **`text-combine-upright`** [CSS](/en-US/docs/Web/CSS) property sets the comb
 
 This is used to produce an effect that is known as tate-chū-yoko (縦中横) in Japanese, or as 直書橫向 in Chinese.
 
+{{EmbedInteractiveExample("pages/css/text-combine-upright.html")}}
+
+## Syntax
+
 ```css
 /* Keyword values */
 text-combine-upright: none;
@@ -31,8 +35,6 @@ text-combine-upright: revert;
 text-combine-upright: revert-layer;
 text-combine-upright: unset;
 ```
-
-## Syntax
 
 ### Values
 

@@ -226,13 +226,7 @@ There are other types available:
 - A {{cssxref('transform')}} returns a `CSSTransformValue`.
 - A [custom property](/en-US/docs/Web/CSS/--*) returns a {{domxref('CSSUnparsedValue')}}.
 
-You can use a `CSSUnitValue` or `CSSKeywordValue` to create other objects. For example, the parameters for a {{domxref('CSSPositionValue')}} is one to two `CSSUnitValues` or `CSSKeywordValues`, or one of each:
-
-```js
-let position = new CSSPositionValue(
-    new CSSKeywordValue("center"),
-    new CSSUnitValue(10, "px"));
-```
+You can use a `CSSUnitValue` or `CSSKeywordValue` to create other objects.
 
 ## CSSStyleValue
 
