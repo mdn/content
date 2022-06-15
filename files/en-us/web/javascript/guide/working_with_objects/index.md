@@ -101,7 +101,7 @@ console.log( myObj.myString );
 
 All keys in the square bracket notation are converted to strings, unless they're Symbols. JavaScript object property names (keys) can only be strings or Symbols. For example, in the above code, when the key `anotherObj` is added to the `myObj`, JavaScript will call the {{jsxref("Object.toString", "toString()")}} method of `anotherObj`, and use the resulting string as the new key.
 
-You can also access properties by using a string value that is stored in a variable. The variable must be placed in bracket notation. In the above example, the variable ` str ` held ` myString ` and it is ` myString ` that is the property name. Therefore, ` myObj.str ` will return as undefined.
+You can also access properties by using a string value that is stored in a variable. The variable must be passed in bracket notation. In the above example, the variable `str` held `"myString"` and it is `"myString"` that is the property name. Therefore, `myObj.str` will return as undefined.
 
 ```js
 
