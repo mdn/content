@@ -310,6 +310,5 @@ gl.enableVertexAttribArray(locTexUV);
 
 ## See also
 
-- [Vertex
-  Specification](https://www.khronos.org/opengl/wiki/Vertex_Specification) on the OpenGL wiki
+- [Vertex Specification](https://www.khronos.org/opengl/wiki/Vertex_Specification) on the OpenGL wiki
 - {{domxref("WebGL2RenderingContext.vertexAttribIPointer()")}}

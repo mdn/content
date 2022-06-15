@@ -29,7 +29,7 @@ A string containing the text of the element's inline style declaration.
 </span>
 
 <script>
-  var elem = document.getElementById("s1");
+  const elem = document.getElementById("s1");
   alert(elem.style.cssText); // "color: red;"
 </script>
 ```

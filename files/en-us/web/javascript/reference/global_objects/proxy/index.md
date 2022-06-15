@@ -406,7 +406,7 @@ const docCookies = new Proxy(docCookies, {
     if (!sKey in oTarget) { return false; }
     return oTarget.removeItem(sKey);
   },
-  ownKeys: function (oTarget, sKey) {
+  ownKeys: function (oTarget) {
     return oTarget.keys();
   },
   has: function (oTarget, sKey) {

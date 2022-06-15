@@ -40,9 +40,19 @@ openCursor(query, direction)
     this will default to a range containing only that key. If nothing is passed, this will
     default to a key range that selects all the records in this object store.
 - `direction` {{optional_inline}}
-  - : An [`IDBCursorDirection`](https://w3c.github.io/IndexedDB/#enumdef-idbcursordirection) telling the cursor what direction to travel.
-    Valid values are `"next"`, `"nextunique"`, `"prev"`,
-    and `"prevunique"`. The default is `"next"`.
+  - : A string telling the cursor which direction to travel. The default is `next`. Valid values are:
+    - `next`
+      - : The cursor is opened at the start of the store; then, the cursor returns all records, even duplicates,
+        in the increasing order of keys.
+    - `nextunique`
+      - : The cursor is opened at the start of the store; then, the cursor returns all records, that are not duplicates,
+        in the increasing order of keys.
+    - `prev`
+      - : The cursor is opened at the start of the store; then, the cursor returns all records, even duplicates,
+        in the decreasing order of keys.
+    - `prevunique`
+      - : The cursor is opened at the start of the store; then, the cursor returns all records, that are not duplicates,
+        in the increasing order of keys.
 
 ### Return value
 

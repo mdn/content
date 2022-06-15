@@ -1,6 +1,7 @@
 ---
 title: API property subpage template
 slug: MDN/Structures/Page_types/API_property_subpage_template
+page-type: web-api-instance-property OR web-api-static-property
 tags:
   - API
   - Property
@@ -24,6 +25,7 @@ browser-compat: path.to.feature.NameOfTheProperty
 > ---
 > title: NameOfTheParentInterface.NameOfTheProperty
 > slug: Web/API/NameOfTheParentInterface/NameOfTheProperty
+> page-type: web-api-instance-property OR web-api-static-property
 > tags:
 >   - NameOfTheProperty
 >   - API
@@ -43,6 +45,8 @@ browser-compat: path.to.feature.NameOfTheProperty
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
 >     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheProperty`.
+> - **page-type**
+>   - : The `page-type` key for Web/API properties is either `web-api-instance-property` (for instance properties) or `web-api-static-property` (for static properties).
 > - **tags**
 >   - : Always include the following tags: **API**, **Reference**, **Property**,  the _name of the API_ (e.g. **WebVR**), the name of the _parent interface_ (e.g. **IDBIndex**), the name of the property (e.g. **capabilities**).
 >
@@ -93,17 +97,11 @@ Include a description of the property's value, including data type and what it r
 
 ## Examples
 
-Fill in a simple example that nicely shows a typical usage of the property, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information).
+### A descriptive heading
 
-```js
-my code block
-```
+Each example must have an H3 heading (`###`) naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
 
-And/or include a list of links to useful code samples that live elsewhere:
-
-- x
-- y
-- z
+See our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information.
 
 ## Specifications
 

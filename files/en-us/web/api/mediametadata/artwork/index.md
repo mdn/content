@@ -21,14 +21,7 @@ The **`artwork`** property of the
 {{domxref("MediaImage")}} objects representing images associated with playing
 media.
 
-## Syntax
-
-```js
-var artwork[] = mediaMetadata.artwork
-mediaMetadata.artwork = artwork[]
-```
-
-### Value
+## Value
 
 An {{jsxref("Array")}} of {{domxref("MediaImage")}} objects.
 

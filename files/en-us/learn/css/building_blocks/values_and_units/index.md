@@ -153,7 +153,7 @@ The following are all **absolute** length units — they are not relative to any
 | `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm   |
 | `in` | Inches              | 1in = 2.54cm = 96px  |
 | `pc` | Picas               | 1pc = 1/6th of 1in   |
-| `pt` | Points              | 1pt = 1/72th of 1in  |
+| `pt` | Points              | 1pt = 1/72nd of 1in  |
 | `px` | Pixels              | 1px = 1/96th of 1in  |
 
 Most of these units are more useful when used for print, rather than screen output. For example, we don't typically use `cm` (centimeters) on screen. The only value that you will commonly use is `px` (pixels).
@@ -404,7 +404,7 @@ For example, below we are using `calc()` to make the box `20% + 100px` wide. The
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_tasks).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_tasks).
 
 ## Summary
 

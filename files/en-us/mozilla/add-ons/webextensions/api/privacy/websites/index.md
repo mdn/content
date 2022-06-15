@@ -35,7 +35,7 @@ Default values for these properties tend to vary across browsers.
       - "reject_trackers": reject tracking cookies
       - "reject_trackers_and_partition_foreign": reject trackers and partition third-party cookies.
 
-    - `nonPersistentCookies`: a boolean. If true, all cookies will be treated as session cookies.
+    - `nonPersistentCookies` {{deprecated_inline}}: a boolean. If true, all cookies will be treated as session cookies.
 
 - `firstPartyIsolate`
 

@@ -1,6 +1,7 @@
 ---
 title: WEBGL_multi_draw
 slug: Web/API/WEBGL_multi_draw
+page-type: webgl-extension
 tags:
   - API
   - Reference

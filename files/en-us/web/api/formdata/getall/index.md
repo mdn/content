@@ -7,7 +7,6 @@ tags:
   - FormData
   - Method
   - Reference
-  - XHR
   - XMLHttpRequest
 browser-compat: api.FormData.getAll
 ---
@@ -30,24 +29,18 @@ getAll(name)
 
 ### Return value
 
-An array of {{domxref("FormDataEntryValue")}}s whose key matches the value passed in the `name` parameter. If the key doesn't exist, the method returns an empty list.
+An array of values whose key matches the specified `name`. Otherwise, an empty list.
 
 ## Examples
 
-The following line creates an empty `FormData` object:
-
-```js
-var formData = new FormData();
-```
-
-If we add two `username` values using {{domxref("FormData.append")}}:
+If we add two `username` values to a {{domxref("FormData")}} using {{domxref("FormData.append", "append()")}}:
 
 ```js
 formData.append('username', 'Chris');
 formData.append('username', 'Bob');
 ```
 
-The following `getAll()` function will return both `username` values in an array:
+The following `getAll()` method will return both `username` values in an array:
 
 ```js
 formData.getAll('username'); // Returns ["Chris", "Bob"]
@@ -63,7 +56,5 @@ formData.getAll('username'); // Returns ["Chris", "Bob"]
 
 ## See also
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

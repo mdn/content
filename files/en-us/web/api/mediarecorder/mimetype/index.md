@@ -15,6 +15,7 @@ tags:
   - mimeType
 browser-compat: api.MediaRecorder.mimeType
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 The **`mimeType`** read-only
@@ -77,7 +78,7 @@ Constrained Baseline Profile Level 4 for video and AAC-LC (Low Complexity) for a
 which is good for mobile and other possible resource-constrained situations.
 
 ```js
-mimeType: 'video/mp4; codecs="avc1.424028, mp4a.40.2"'
+mimeType: 'video/mp4; codecs="avc1.424028, mp4a.40.2"';
 ```
 
 Assuming this configuration is acceptable to the user agent, the value returned later
@@ -96,7 +97,7 @@ by `m.mimeType` would then be
 
 - [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [The "codecs" parameter in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
-- [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
-  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/web-dictaphone/).)
+- [Web Dictaphone](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder +
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/media/web-dictaphone/).)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("MediaDevices.getUserMedia()")}}

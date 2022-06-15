@@ -118,10 +118,12 @@ The following is a list of usually shareable file types. However, you should alw
 
 ## Examples
 
+### Sharing a URL
+
 The example below shows a button click invoking the Web Share API to share MDN's URL.
 This is taken from our [Web share test](https://mdn.github.io/dom-examples/web-share/) ([see the source code](https://github.com/mdn/dom-examples/blob/master/web-share/index.html)).
 
-### HTML
+#### HTML
 
 The HTML just creates a button to trigger the share, and a paragraph in which to display the result of the test.
 
@@ -130,7 +132,7 @@ The HTML just creates a button to trigger the share, and a paragraph in which to
 <p class="result"></p>
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 const shareData = {
@@ -153,14 +155,14 @@ const shareData = {
   });
 ```
 
-### Result
+#### Result
 
 Click the button to launch the share dialog on your platform.
 Text will appear below the button to indicate whether the share was successful or provide an error code.
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('sharing_a_url')}}
 
-#### **Sharing Files**
+### Sharing Files
 
 To share files, first test for and call {{domxref("navigator.canShare()")}}. Then include an array of files in the call to `navigator.share()`:
 

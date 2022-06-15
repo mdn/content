@@ -56,20 +56,20 @@ foreground (text) color. You can see the two functions in action by trying the d
 with a multi-button mouse ([see it live on GitHub](https://mdn.github.io/dom-examples/auxclick/); also [see the source code](https://github.com/mdn/dom-examples/blob/master/auxclick/index.html)).
 
 ```js
-var button = document.querySelector('button');
-var html = document.querySelector('html');
+const button = document.querySelector('button');
+const html = document.querySelector('html');
 
 function random(number) {
   return Math.floor(Math.random() * number);
 }
 
 button.onclick = function() {
-  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
   button.style.backgroundColor = rndCol;
 };
 
 button.onauxclick = function() {
-  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
   button.style.color = rndCol;
 }
 ```

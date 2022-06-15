@@ -54,13 +54,13 @@ From here, you can play and save the opus file.
     <button>Make sine wave</button>
     <audio controls></audio>
     <script>
-     var b = document.querySelector("button");
-     var clicked = false;
-     var chunks = [];
-     var ac = new AudioContext();
-     var osc = ac.createOscillator();
-     var dest = ac.createMediaStreamDestination();
-     var mediaRecorder = new MediaRecorder(dest.stream);
+     const b = document.querySelector("button");
+     let clicked = false;
+     const chunks = [];
+     const ac = new AudioContext();
+     const osc = ac.createOscillator();
+     const dest = ac.createMediaStreamDestination();
+     const mediaRecorder = new MediaRecorder(dest.stream);
      osc.connect(dest);
 
      b.addEventListener("click", function(e) {
@@ -83,7 +83,7 @@ From here, you can play and save the opus file.
 
      mediaRecorder.onstop = function(evt) {
        // Make blob out of our blobs, and open it.
-       var blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
+       const blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
        document.querySelector("audio").src = URL.createObjectURL(blob);
      };
     </script>

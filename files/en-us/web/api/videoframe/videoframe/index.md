@@ -1,5 +1,5 @@
 ---
-title: VideoFrame.VideoFrame()
+title: VideoFrame()
 slug: Web/API/VideoFrame/VideoFrame
 page-type: web-api-constructor
 tags:
@@ -23,10 +23,16 @@ new VideoFrame(data, init)
 
 ### Parameters
 
-The first type of constructor (see above) creates a new {{domxref("VideoFrame")}} from a {{domxref("CanvasImageSource")}}. Its parameters are:
+The first type of constructor (see above) creates a new {{domxref("VideoFrame")}} from an image. Its parameters are:
 
 - `image`
-  - : A {{domxref("CanvasImageSource")}} containing the image data for the new `VideoFrame`.
+  - : An image containing the image data for the new `VideoFrame`. It can be one of the following objects:
+    an {{domxref("SVGImageElement")}},
+    an {{domxref("HTMLVideoElement")}},
+    an {{domxref("HTMLCanvasElement")}},
+    an {{domxref("ImageBitmap")}},
+    an {{domxref("OffscreenCanvas")}},
+    or another {{domxref("VideoFrame")}}.
 - `init`{{Optional_Inline}}
   - : A dictionary object containing the following:
     - `duration`{{Optional_Inline}}
@@ -52,10 +58,10 @@ The first type of constructor (see above) creates a new {{domxref("VideoFrame")}
     - `displayHeight`{{Optional_Inline}}
       - : The height of the `VideoFrame` when displayed after applying aspect-ratio adjustments.
 
-The second type of constructor (see above) creates a new {{domxref("VideoFrame")}} from an {{domxref("ArrayBuffer")}}. Its parameters are:
+The second type of constructor (see above) creates a new {{domxref("VideoFrame")}} from an {{jsxref("ArrayBuffer")}}. Its parameters are:
 
 - `data`
-  - : An {{domxref("ArrayBuffer")}} containing the data for the new `VideoFrame`.
+  - : An {{jsxref("ArrayBuffer")}} containing the data for the new `VideoFrame`.
 - `init`
   - : A dictionary object containing the following:
     - `format`

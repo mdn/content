@@ -140,8 +140,7 @@ the same one.
 
 Use {{jsxref("Promise.catch()")}} to trap and handle errors.
 
-See [Signaling and
-video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) for the complete example from which this snippet is derived; this
+See [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) for the complete example from which this snippet is derived; this
 will help you to understand how the signaling code here works.
 
 ## Specifications

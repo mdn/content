@@ -247,8 +247,8 @@ Create a new HTML file called /**locallibrary/templates/registration/login.html*
         <td>\{{ form.password }}</td>
       </tr>
     </table>
-    <input type="submit" value="login" />
-    <input type="hidden" name="next" value="\{{ next }}" />
+    <input type="submit" value="login">
+    <input type="hidden" name="next" value="\{{ next }}">
   </form>
 
   {# Assumes you setup the password_reset view in your URLconf #}
@@ -362,7 +362,7 @@ This page is where you enter your new password after clicking the link in the pa
                 </tr>
                 <tr>
                     <td></td>
-                    <td><input type="submit" value="Change my password" /></td>
+                    <td><input type="submit" value="Change my password"></td>
                 </tr>
             </table>
         </form>
@@ -503,12 +503,14 @@ from datetime import date
 
 Now add the following property definition to the `BookInstance` class:
 
+> **Note:** The following code uses Python's `bool()` function, which evaluates an object or the resulting object of an expression, and returns `True` unless the result is "falsy", in which case it returns `False`.
+> In Python an object is _falsy_ (evaluates as `False`) if it is: empty (like `[]`, `()`, `{}`), `0`, `None` or if it is `False`.
+
 ```python
 @property
 def is_overdue(self):
-    if self.due_back and date.today() > self.due_back:
-        return True
-    return False
+    """Determines if the book is overdue based on due date and current date."""
+    return bool(self.due_back and date.today() > self.due_back)
 ```
 
 > **Note:** We first verify whether `due_back` is empty before making a comparison. An empty `due_back` field would cause Django to throw an error instead of showing the page: empty values are not comparable. This is not something we would want our users to experience!

@@ -70,8 +70,7 @@ An array of strings, each identifying a single WebXR feature which the app or si
 
 ## See also
 
-- [Permissions
-  and security for WebXR](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security)
+- [Permissions and security for WebXR](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security)
 - {{domxref("XRPermissionStatus")}}
 - {{domxref("navigator.permissions")}} and {{domxref("WorkerNavigator.permissions")}}
 - {{domxref("Permissions")}}

@@ -25,48 +25,19 @@ section below for possible values.
 
 ## Value
 
-A string (defined by the [`IDBCursorDirection` enum](https://w3c.github.io/IndexedDB/#enumdef-idbcursordirection)) indicating the direction in which the cursor is traversing the data.
+A string indicating the direction in which the cursor is traversing the data.
 Possible values are:
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Value</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>next</code></td>
-      <td>
-        This direction causes the cursor to be opened at the start of
-        the source.
-      </td>
-    </tr>
-    <tr>
-      <td><code>nextunique</code></td>
-      <td>
-        This direction causes the cursor to be opened at the start of
-        the source. For every key with duplicate values, only the first record
-        is yielded.
-      </td>
-    </tr>
-    <tr>
-      <td><code>prev</code></td>
-      <td>
-        This direction causes the cursor to be opened at the end of the source.
-      </td>
-    </tr>
-    <tr>
-      <td><code>prevunique</code></td>
-      <td>
-        This direction causes the cursor to be opened at the end of the source.
-        For every key with duplicate values, only the first record is
-        yielded.<br />
-      </td>
-    </tr>
-  </tbody>
-</table>
+- `next`
+  - : This direction causes the cursor to be opened at the start of the source.
+- `nextunique``
+  - : This direction causes the cursor to be opened at the start of the source.
+    For every key with duplicate values, only the first record is yielded.
+- `prev`
+  - : This direction causes the cursor to be opened at the end of the source.
+- `prevunique`
+  - : This direction causes the cursor to be opened at the end of the source.
+    For every key with duplicate values, only the first record is yielded.
 
 ## Examples
 

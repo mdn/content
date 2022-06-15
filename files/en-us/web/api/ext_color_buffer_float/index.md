@@ -1,6 +1,7 @@
 ---
 title: EXT_color_buffer_float
 slug: Web/API/EXT_color_buffer_float
+page-type: webgl-extension
 tags:
   - API
   - Reference
