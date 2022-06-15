@@ -21,6 +21,8 @@ This article provides information about the changes in Firefox 102 that will aff
 
 ### CSS
 
+The [`update`](/en-US/docs/Web/CSS/@media/update-frequency) media feature that can be used to query the ability of the output device to modify the appearance of content after it is rendered is now available by default ({{bug(1422312)}}).
+
 #### Removals
 
 ### JavaScript
