@@ -135,7 +135,7 @@ You can use the bracket notation with [`for...in`](/en-US/docs/Web/JavaScript/Re
 function showProps(obj, objName) {
   let result = '';
   for (let i in obj) {
-      // obj.hasOwnProperty() is used to exclude properties from the object's prototype chain
+    // obj.hasOwnProperty() is used to exclude properties from the object's prototype chain
     if (obj.hasOwnProperty(i)) {
       result += `${objName}.${i} = ${obj[i]}\n`;
     }
