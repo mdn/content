@@ -61,7 +61,6 @@
 /en-US/docs/ARIA/widgets	/en-US/docs/Web/Accessibility/ARIA/widgets
 /en-US/docs/ARIA/widgets/overview	/en-US/docs/Web/Accessibility/ARIA/widgets
 /en-US/docs/ARIA_Screen_Reader_Implementors_Guide	/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
-/en-US/docs/A_Basic_RayCaster	/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster
 /en-US/docs/A_re-introduction_to_JavaScript	/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 /en-US/docs/About_JavaScript	/en-US/docs/Web/JavaScript/About_JavaScript
 /en-US/docs/About_WOFF	/en-US/docs/Web/Guide/WOFF
@@ -1123,7 +1122,6 @@
 /en-US/docs/Canvas/Text	/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /en-US/docs/Canvas:Text	/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /en-US/docs/Canvas_tutorial	/en-US/docs/Web/API/Canvas_API/Tutorial
-/en-US/docs/Canvas_tutorial/A_Basic_RayCaster	/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster
 /en-US/docs/Canvas_tutorial/Basic_animations	/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
 /en-US/docs/Canvas_tutorial/Pixel_manipulation_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 /en-US/docs/Canvas_tutorial:Basic_animations	/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
@@ -3642,7 +3640,6 @@
 /en-US/docs/HTML/CORS_Enabled_Image	/en-US/docs/Web/HTML/CORS_enabled_image
 /en-US/docs/HTML/CORS_settings_attributes	/en-US/docs/Web/HTML/Attributes/crossorigin
 /en-US/docs/HTML/Canvas	/en-US/docs/Web/API/Canvas_API
-/en-US/docs/HTML/Canvas/A_Basic_RayCaster	/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster
 /en-US/docs/HTML/Canvas/Drawing_Graphics_with_Canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/HTML/Canvas/Pixel_manipulation_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 /en-US/docs/HTML/Canvas/Tutorial	/en-US/docs/Web/API/Canvas_API/Tutorial
@@ -11562,7 +11559,6 @@
 /en-US/docs/Web/Guide/File_System_API/Introduction	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /en-US/docs/Web/Guide/Graphics/Drawing_graphics_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Web/Guide/HTML	/en-US/docs/Learn/HTML
-/en-US/docs/Web/Guide/HTML/A_basic_ray-caster	/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors	/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Basic_animations	/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations

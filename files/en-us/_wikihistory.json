@@ -30314,20 +30314,6 @@
       "BijuGC"
     ]
   },
-  "Web/API/Canvas_API/A_basic_ray-caster": {
-    "modified": "2019-09-18T08:10:55.787Z",
-    "contributors": [
-      "post032",
-      "sideshowbarker",
-      "jacobkim116",
-      "fscholz",
-      "teoli",
-      "Jeremie",
-      "Sheppy",
-      "kscarfone",
-      "trevorh"
-    ]
-  },
   "Web/API/Canvas_API/Manipulating_video_using_canvas": {
     "modified": "2019-11-19T06:16:23.640Z",
     "contributors": [
