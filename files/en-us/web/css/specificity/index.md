@@ -208,7 +208,7 @@ You can also include the `id` or any part of a selector as a parameter in the `:
 
 ### Increasing specificity by duplicating selector
 
-As a special case for increasing specificity, you can duplicate weights from the _CLASS_ or _ID_ columns. Duplicating simple selectors will increase specificity when overriding very specific selectors over which you have no control.
+As a special case for increasing specificity, you can duplicate weights from the _CLASS_ or _ID_ columns. Duplicating id, class, pseudo-class or attribute selectors within a compound selector will increase specificity when overriding very specific selectors over which you have no control.
 
 ```css
 #myId#myId#myId span { /* 3-0-1 */}
