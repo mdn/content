@@ -16,7 +16,7 @@ The **`clone()`** method of the {{domxref("Request")}} interface creates a copy 
 
 Like the underlying {{domxref("ReadableStream.tee")}} api,
 the {{domxref("Request.body", "body")}} of a cloned `Response`
-will signal backpressure at the rate of the *faster* consumer of the two bodies,
+will signal backpressure at the rate of the _faster_ consumer of the two bodies,
 and unread data is enqueued internally on the slower consumed `body`
 without any limit or backpressure.
 Beware when you construct a `Request` from a stream and then `clone` it.

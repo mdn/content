@@ -16,7 +16,7 @@ The **`clone()`** method of the {{domxref("Response")}} interface creates a clon
 
 Like the underlying {{domxref("ReadableStream.tee")}} api,
 the {{domxref("Response.body", "body")}} of a cloned `Response`
-will signal backpressure at the rate of the *faster* consumer of the two bodies,
+will signal backpressure at the rate of the _faster_ consumer of the two bodies,
 and unread data is enqueued internally on the slower consumed `body`
 without any limit or backpressure.
 Backpressure refers to the mechanism by which the streaming consumer of data
