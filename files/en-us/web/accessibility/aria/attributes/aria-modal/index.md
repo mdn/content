@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-modal
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-modal
 ---
 
 The `aria-modal` attribute indicates whether an element is modal when displayed.
@@ -98,9 +99,7 @@ Inherits into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-modal","ARIA: aria-modal Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 
