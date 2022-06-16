@@ -10,7 +10,7 @@ browser-compat: path.to.feature.NameOfTheInterface
 ---
 {{MDNSidebar}}
 
-## YAML header
+## YAML headers
 
 > **Note:** _Remove this whole explanatory note before publishing.
 >
