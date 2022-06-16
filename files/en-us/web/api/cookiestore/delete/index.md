@@ -42,7 +42,7 @@ This method requires one of the following:
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with {{jsxref("Undefined")}} when deletion completes.
+A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when deletion completes.
 
 ### Exceptions
 
