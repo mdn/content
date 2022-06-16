@@ -94,4 +94,4 @@ numObj.toFixed(6)      // Returns '12345.678900': note added zeros
 - {{jsxref("Number.prototype.toExponential()")}}
 - {{jsxref("Number.prototype.toPrecision()")}}
 - {{jsxref("Number.prototype.toString()")}}
-- {{jsxref("Number.EPSILON"}}
+- {{jsxref("Number.EPSILON")}}
