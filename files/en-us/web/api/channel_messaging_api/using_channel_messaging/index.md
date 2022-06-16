@@ -90,7 +90,7 @@ When our button is clicked, we prevent the form from submitting as normal and th
 
 ## Receiving the port and message in the IFrame
 
-In the IFrame, we have the following JavaScript:
+In the {{HTMLElement("iframe")}} elements, we have the following JavaScript:
 
 ```js
 const list = document.querySelector('ul');
