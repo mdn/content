@@ -19,7 +19,7 @@ To start developing with Babylon.js, you don't need much. You should start off b
 
 - Making sure you are using a modern browser with good [WebGL](/en-US/docs/Web/API/WebGL_API) support, such as the latest Firefox or Chrome.
 - Creating a directory to store your experiments in.
-- Saving a copy of the [latest Babylon.js engine](https://cdn.babylonjs.com/2-3/babylon.js) inside your directory.
+- Saving a copy of the [latest Babylon.js engine](https://cdn.babylonjs.com/babylon.js) inside your directory.
 - Opening the [Babylon.js documentation](https://doc.babylonjs.com/) in a separate tab — it is useful to refer to.
 
 ## HTML structure
