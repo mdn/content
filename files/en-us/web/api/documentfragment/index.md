@@ -1,11 +1,11 @@
 ---
 title: DocumentFragment
 slug: Web/API/DocumentFragment
+page-type: web-api-interface
 tags:
   - API
   - DOM
   - DocumentFragment
-  - Documents
   - Interface
   - Reference
   - Web Components
@@ -73,13 +73,13 @@ An empty `DocumentFragment` can be created using the {{domxref("document.createD
 ### JavaScript
 
 ```js
-var list = document.querySelector('#list')
-var fruits = ['Apple', 'Orange', 'Banana', 'Melon']
+const list = document.querySelector('#list')
+const fruits = ['Apple', 'Orange', 'Banana', 'Melon']
 
-var fragment = new DocumentFragment()
+const fragment = new DocumentFragment()
 
-fruits.forEach(function (fruit) {
-  var li = document.createElement('li')
+fruits.forEach((fruit) => {
+  const li = document.createElement('li')
   li.textContent = fruit
   fragment.appendChild(li)
 })
@@ -98,7 +98,3 @@ list.appendChild(fragment)
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [The DOM interfaces index.](/en-US/docs/Web/API/Document_Object_Model)

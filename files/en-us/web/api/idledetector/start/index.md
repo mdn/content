@@ -1,6 +1,7 @@
 ---
 title: IdleDetector.start()
 slug: Web/API/IdleDetector/start
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -29,8 +30,10 @@ start(options)
 
 - `options`{{optional_inline}}
   - : An object with the following properties:
-    - `threshold`: The minimum number of idle milliseconds before reporting should begin.
-    - `signal`: A reference to an {{domxref('AbortSignal')}} instance allowing you to abort idle detection.
+    - `threshold`
+      - : The minimum number of idle milliseconds before reporting should begin.
+    - `signal`
+      - : A reference to an {{domxref('AbortSignal')}} instance allowing you to abort idle detection.
 
 ### Return value
 

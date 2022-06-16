@@ -1,6 +1,7 @@
 ---
 title: 'XRSession: selectstart event'
 slug: Web/API/XRSession/selectstart_event
+page-type: web-api-event
 tags:
   - API
   - AR

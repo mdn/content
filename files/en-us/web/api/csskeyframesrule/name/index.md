@@ -1,6 +1,7 @@
 ---
 title: CSSKeyframesRule.name
 slug: Web/API/CSSKeyframesRule/name
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -16,7 +17,7 @@ The **`name`** property of the {{domxref("CSSKeyframeRule")}} interface gets and
 
 ## Value
 
-A {{domxref('CSSOMString')}}.
+A string.
 
 ## Examples
 

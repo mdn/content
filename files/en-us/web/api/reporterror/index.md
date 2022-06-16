@@ -1,6 +1,7 @@
 ---
 title: reportError()
 slug: Web/API/reportError
+page-type: web-api-global-function
 tags:
   - API
   - Method
@@ -32,7 +33,7 @@ reportError(throwable)
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

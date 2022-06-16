@@ -1,6 +1,7 @@
 ---
 title: CSSStyleDeclaration.setProperty()
 slug: Web/API/CSSStyleDeclaration/setProperty
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM
@@ -17,19 +18,20 @@ a new value for a property on a CSS style declaration object.
 ## Syntax
 
 ```js
+setProperty(propertyName, value)
 setProperty(propertyName, value, priority)
 ```
 
 ### Parameters
 
 - `propertyName`
-  - : A {{domxref('DOMString')}} representing the CSS property name (hyphen case) to be modified.
+  - : A string representing the CSS property name (hyphen case) to be modified.
 - `value` {{optional_inline}}
-  - : A {{domxref('DOMString')}} containing the new property value. If not specified, treated
+  - : A string containing the new property value. If not specified, treated
     as the empty string.
     > **Note:** `value` must not contain `"!important"`, that should be set using the `priority` parameter.
 - `priority` {{optional_inline}}
-  - : A {{domxref('DOMString')}} allowing the "important" CSS priority to be set. If not
+  - : A string allowing the "important" CSS priority to be set. If not
     specified, treated as the empty string. The following values are accepted:
 
     - String value `"important"`

@@ -1,6 +1,7 @@
 ---
 title: AudioTrack.language
 slug: Web/API/AudioTrack/language
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -49,7 +50,7 @@ would like to listen to while watching a movie, for example.
 
 ```js
 function getAvailableLanguages(el) {
-  var trackList = [];
+  const trackList = [];
   const wantedKinds = [
     "main", "translation"
   ];

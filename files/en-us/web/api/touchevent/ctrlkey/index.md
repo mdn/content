@@ -1,6 +1,7 @@
 ---
 title: TouchEvent.ctrlKey
 slug: Web/API/TouchEvent/ctrlKey
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

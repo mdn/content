@@ -1,6 +1,7 @@
 ---
 title: HTMLTableCellElement
 slug: Web/API/HTMLTableCellElement
+page-type: web-api-interface
 tags:
   - API
   - Cells

@@ -1,6 +1,7 @@
 ---
 title: HIDDevice.sendFeatureReport()
 slug: Web/API/HIDDevice/sendFeatureReport
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -26,7 +27,7 @@ sendFeatureReport(reportId, data)
 - `reportId`
   - : An 8-bit report ID. If the HID device does not use report IDs, send `0`.
 - `data`
-  - : Bytes as a {{domxref("BufferSource")}}.
+  - : Bytes as an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
 
 ### Return value
 

@@ -39,7 +39,7 @@ The `bold()` method embeds a string in a `<b>` element:
 The following example uses string methods to change the formatting of a string:
 
 ```js
-var worldString = 'Hello, world';
+const worldString = 'Hello, world';
 
 console.log(worldString.blink());   // <blink>Hello, world</blink>
 console.log(worldString.bold());    // <b>Hello, world</b>

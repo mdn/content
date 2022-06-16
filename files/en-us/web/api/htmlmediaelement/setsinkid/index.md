@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.setSinkId()
 slug: Web/API/HTMLMediaElement/setSinkId
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -26,7 +27,7 @@ setSinkId(sinkId)
 
 ### Parameters
 
-- sinkId
+- `sinkId`
   - : The {{domxref("MediaDeviceInfo.deviceId")}} of the audio output device.
 
 ### Return value

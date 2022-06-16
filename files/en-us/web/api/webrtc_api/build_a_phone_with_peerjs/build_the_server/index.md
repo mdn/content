@@ -1,6 +1,7 @@
 ---
 title: Building the server
 slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Build_the_server
+page-type: guide
 ---
 {{WebRTCSidebar}}
 

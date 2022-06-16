@@ -1,6 +1,7 @@
 ---
 title: 'PaymentRequest: paymentmethodchange event'
 slug: Web/API/PaymentRequest/paymentmethodchange_event
+page-type: web-api-event
 tags:
   - Event
   - Payment Request

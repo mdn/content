@@ -27,7 +27,7 @@ const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]];
 - `nameN`
   - : The constant's name, which can be any legal {{Glossary("identifier")}}.
 - `valueN`
-  - : The constant's value. This can be any legal [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions),
+  - : The constant's value. This can be any legal [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#expressions),
     including a function expression.
 
 The [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
@@ -45,9 +45,7 @@ block in which it is declared. Global constants do **not** become
 properties of the {{domxref("window")}} object, unlike {{jsxref("Statements/var",
   "var")}} variables.
 
-An initializer for a constant is required. You must specify its value in the same
-statement in which it's declared. (This makes sense, given that it can't be changed
-later.)
+An initializer for a constant is required. You must specify its value in the same declaration. (This makes sense, given that it can't be changed later.)
 
 The **`const` declaration** creates a read-only reference to a
 value. It does **not** mean the value it holds is immutable—just that the
@@ -55,10 +53,16 @@ variable identifier cannot be reassigned. For instance, in the case where the co
 an object, this means the object's contents (e.g., its properties) can be altered.
 
 All the considerations about the
-[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_TDZ)
+[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)
 apply to both {{jsxref("Statements/let", "let")}} and `const`.
 
 A constant cannot share its name with a function or a variable in the same scope.
+
+Unlike `var`, `const` begins _Declarations_, not _Statements_. That means you cannot use a lone `const` declaration as the body of a block (which makes sense, since there's no way to access the variable).
+
+```js
+if (true) const a = 1; // SyntaxError: Unexpected token 'const'
+```
 
 ## Examples
 
@@ -154,4 +158,4 @@ MY_ARRAY = ['B'];
 
 - {{jsxref("Statements/var", "var")}}
 - {{jsxref("Statements/let", "let")}}
-- [Constants in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Constants)
+- [Constants in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#constants)

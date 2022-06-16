@@ -1,6 +1,7 @@
 ---
 title: CredentialsContainer.store()
 slug: Web/API/CredentialsContainer/store
+page-type: web-api-instance-method
 tags:
   - API
   - Credential Management API
@@ -23,12 +24,12 @@ The **`store()`** method of the
 ## Syntax
 
 ```js
-store(Credentials)
+store(credentials)
 ```
 
 ### Parameters
 
-- Credentials
+- `credentials`
   - : A valid {{domxref("Credential")}} instance.
 
 ### Return value

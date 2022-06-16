@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.msZoom
 slug: Web/API/HTMLVideoElement/msZoom
+page-type: web-api-instance-property
 tags:
   - API
   - API:Microsoft Extensions
@@ -43,7 +44,7 @@ space of the video object.
 This examples gets a Video object and sets the `msZoom` property to true.
 
 ```js
-    var myVideo = document.getElementById("videoTag1");
+    const myVideo = document.getElementById("videoTag1");
        myVideo.msZoom = true;
        myVideo.play();
 ```
@@ -51,4 +52,4 @@ This examples gets a Video object and sets the `msZoom` property to true.
 ## See also
 
 - [HTMLVideoElement](/en-US/docs/Web/API/HTMLVideoElement)
-- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_API_extensions)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

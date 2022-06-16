@@ -1,6 +1,7 @@
 ---
 title: FileSystemDirectoryReader.readEntries()
 slug: Web/API/FileSystemDirectoryReader/readEntries
+page-type: web-api-instance-method
 tags:
   - API
   - File and Directory Entries API

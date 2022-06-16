@@ -1,6 +1,7 @@
 ---
 title: 'SVGGraphicsElement: paste event'
 slug: Web/API/SVGGraphicsElement/paste_event
+page-type: web-api-event
 tags:
   - API
   - Event

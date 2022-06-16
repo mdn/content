@@ -1,6 +1,7 @@
 ---
 title: MediaKeyStatusMap.get()
 slug: Web/API/MediaKeyStatusMap/get
+page-type: web-api-instance-method
 tags:
   - API
   - EncryptedMediaExtensions
@@ -24,7 +25,7 @@ get(key)
 
 ### Parameters
 
-- key
+- `key`
   - : The key whose value you want returned.
 
 ### Return value

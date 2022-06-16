@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.hspace
 slug: Web/API/HTMLImageElement/hspace
+page-type: web-api-instance-property
 tags:
   - API
   - HTML

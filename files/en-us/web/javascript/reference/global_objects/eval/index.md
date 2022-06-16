@@ -68,7 +68,7 @@ You can work around this limitation in a generic fashion by using
 `toString()`.
 
 ```js
-var expression = new String('2 + 2');
+const expression = new String('2 + 2');
 eval(expression.toString());            // returns 4
 ```
 
@@ -81,13 +81,13 @@ called.
 
 ```js
 function test() {
-  var x = 2, y = 4;
+  const x = 2, y = 4;
   // Direct call, uses local scope
   console.log(eval('x + y')); // Result is 6
   // Indirect call using the comma operator to return eval
   console.log((0, eval)('x + y')); // Uses global scope, throws because x is undefined
   // Indirect call using a variable to store and return eval
-  var geval = eval;
+  const geval = eval;
   console.log(geval('x + y')); // Uses global scope, throws because x is undefined
 }
 ```
@@ -214,10 +214,10 @@ Consider the following example where the property of the object to be accessed i
 known until the code is executed. This can be done with `eval()`:
 
 ```js
-var obj = { a: 20, b: 30 };
-var propName = getPropName();  // returns "a" or "b"
+const obj = { a: 20, b: 30 };
+const propName = getPropName();  // returns "a" or "b"
 
-eval( 'var result = obj.' + propName );
+eval( 'const result = obj.' + propName );
 ```
 
 However, `eval()` is not necessary here. In fact, its use here is
@@ -226,19 +226,19 @@ discouraged. Instead, use the
 which are much faster and safer:
 
 ```js
-var obj = { a: 20, b: 30 };
-var propName = getPropName();  // returns "a" or "b"
-var result = obj[ propName ];  //  obj[ "a" ] is the same as obj.a
+const obj = { a: 20, b: 30 };
+const propName = getPropName();  // returns "a" or "b"
+const result = obj[ propName ];  //  obj[ "a" ] is the same as obj.a
 ```
 
 You can even use this method to access descendant properties. Using `eval()`
 this would look like:
 
 ```js
-var obj = {a: {b: {c: 0}}};
-var propPath = getPropPath();  // returns e.g. "a.b.c"
+const obj = {a: {b: {c: 0}}};
+const propPath = getPropPath();  // returns e.g. "a.b.c"
 
-eval( 'var result = obj.' + propPath );
+eval( 'const result = obj.' + propPath );
 ```
 
 Avoiding `eval()` here could be done by splitting the property path and
@@ -246,32 +246,32 @@ looping through the different properties:
 
 ```js
 function getDescendantProp(obj, desc) {
-  var arr = desc.split('.');
+  let arr = desc.split('.');
   while (arr.length) {
     obj = obj[arr.shift()];
   }
   return obj;
 }
 
-var obj = {a: {b: {c: 0}}};
-var propPath = getPropPath();  // returns e.g. "a.b.c"
-var result = getDescendantProp(obj, propPath);
+const obj = {a: {b: {c: 0}}};
+const propPath = getPropPath();  // returns e.g. "a.b.c"
+const result = getDescendantProp(obj, propPath);
 ```
 
 Setting a property that way works similarly:
 
 ```js
 function setDescendantProp(obj, desc, value) {
-  var arr = desc.split('.');
+  let arr = desc.split('.');
   while (arr.length > 1) {
     obj = obj[arr.shift()];
   }
   return obj[arr[0]] = value;
 }
 
-var obj = {a: {b: {c: 0}}};
-var propPath = getPropPath();  // returns e.g. "a.b.c"
-var result = setDescendantProp(obj, propPath, 1);  // obj.a.b.c will now be 1
+const obj = {a: {b: {c: 0}}};
+const propPath = getPropPath();  // returns e.g. "a.b.c"
+const result = setDescendantProp(obj, propPath, 1);  // obj.a.b.c will now be 1
 ```
 
 ### Use functions instead of evaluating snippets of code
@@ -319,9 +319,9 @@ The first evaluates the string "`x + y + 1`"; the second evaluates the string
 "`42`".
 
 ```js
-var x = 2;
-var y = 39;
-var z = '42';
+const x = 2;
+const y = 39;
+const z = '42';
 eval('x + y + 1'); // returns 42
 eval(z);           // returns 42
 ```
@@ -336,8 +336,8 @@ and it will also evaluate the set of statements and return the value that is ass
 `z`.
 
 ```js
-var x = 5;
-var str = "if (x == 5) {console.log('z is 42'); z = 42;} else z = 0;";
+const x = 5;
+const str = "if (x == 5) {console.log('z is 42'); z = 42;} else z = 0;";
 
 console.log('z is ', eval(str));
 ```
@@ -345,8 +345,8 @@ console.log('z is ', eval(str));
 If you define multiple values then the last value is returned.
 
 ```js
-var x = 5;
-var str = "if (x == 5) {console.log('z is 42'); z = 42; x = 420; } else z = 0;";
+let x = 5;
+const str = "if (x == 5) {console.log('z is 42'); z = 42; x = 420; } else z = 0;";
 
 console.log('x is ', eval(str)); // z is 42  x is 420
 ```
@@ -356,9 +356,9 @@ console.log('x is ', eval(str)); // z is 42  x is 420
 `eval()` returns the value of the last expression evaluated.
 
 ```js
-var str = 'if ( a ) { 1 + 1; } else { 1 + 2; }';
-var a = true;
-var b = eval(str);  // returns 2
+const str = 'if ( a ) { 1 + 1; } else { 1 + 2; }';
+const a = true;
+const b = eval(str);  // returns 2
 
 console.log('b is : ' + b);
 
@@ -371,10 +371,10 @@ console.log('b is : ' + b);
 ### `eval` as a string defining function requires "(" and ")" as prefix and suffix
 
 ```js
-var fctStr1 = 'function a() {}'
-var fctStr2 = '(function a() {})'
-var fct1 = eval(fctStr1)  // return undefined
-var fct2 = eval(fctStr2)  // return a function
+const fctStr1 = 'function a() {}'
+const fctStr2 = '(function a() {})'
+const fct1 = eval(fctStr1)  // return undefined
+const fct2 = eval(fctStr2)  // return a function
 ```
 
 ## Specifications

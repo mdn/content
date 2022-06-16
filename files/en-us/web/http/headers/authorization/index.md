@@ -124,7 +124,7 @@ Generally you will need to check the relevant specifications for these (keys for
 
 For `"Basic"` authentication the credentials are constructed by first combining the username and the password with a colon (`aladdin:opensesame`), and then by encoding the resulting string in [`base64`](/en-US/docs/Glossary/Base64) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
 
-```https
+```http
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
@@ -136,8 +136,6 @@ See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples
 ## Specifications
 
 {{Specifications}}
-
-<!-- {{Specifications}} -->
 
 ## Browser compatibility
 

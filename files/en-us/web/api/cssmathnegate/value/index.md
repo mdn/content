@@ -1,6 +1,7 @@
 ---
 title: CSSMathNegate.value
 slug: Web/API/CSSMathNegate/value
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API

@@ -1,6 +1,7 @@
 ---
 title: Cache.put()
 slug: Web/API/Cache/put
+page-type: web-api-instance-method
 tags:
   - API
   - Cache
@@ -52,9 +53,9 @@ put(request, response)
 
 ### Parameters
 
-- request
+- `request`
   - : The {{domxref("Request")}} object or URL that you want to add to the cache.
-- response
+- `response`
   - : The {{domxref("Response")}} you want to match up to the request.
 
 ### Return value
@@ -68,8 +69,7 @@ A {{jsxref("Promise")}} that resolves with `undefined`.
 
 ## Examples
 
-This example is from the MDN [sw-test
-example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/)).
+This example is from the MDN [sw-test example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/)).
 Here we wait for a {{domxref("FetchEvent")}} to fire. We construct a custom response
 like so:
 
@@ -106,7 +106,6 @@ var cachedResponse = caches.match(event.request).catch(function() {
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("caches")}}

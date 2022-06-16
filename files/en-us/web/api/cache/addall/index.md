@@ -1,6 +1,7 @@
 ---
 title: Cache.addAll()
 slug: Web/API/Cache/addAll
+page-type: web-api-instance-method
 tags:
   - API
   - Cache
@@ -34,7 +35,7 @@ addAll(requests)
 
 ### Parameters
 
-- requests
+- `requests`
   - : An array of string URLs that you want to be fetched and added to the cache. You can
     specify the {{domxref("Request")}} object instead of the URL.
 
@@ -88,7 +89,6 @@ this.addEventListener('install', function(event) {
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("caches")}}

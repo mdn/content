@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.generateCertificate() static function
 slug: Web/API/RTCPeerConnection/generateCertificate
+page-type: web-api-static-method
 tags:
   - API
   - Media
@@ -134,4 +135,4 @@ RTCPeerConnection.generateCertificate("ECDSA");
 - [Web site security](/en-US/docs/Learn/Server-side/First_steps/Website_security)
 - [Web security](/en-US/docs/Web/Security)
 - {{Glossary("Symmetric-key cryptography")}}
-- [`crypto`](/en-US/docs/Web/API/crypto)
+- [`crypto`](/en-US/docs/Web/API/Crypto)

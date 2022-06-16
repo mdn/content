@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.initiatorType
 slug: Web/API/PerformanceResourceTiming/initiatorType
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,7 +12,7 @@ browser-compat: api.PerformanceResourceTiming.initiatorType
 {{APIRef("Resource Timing API")}}
 
 The **`initiatorType`** read-only property is a
-{{domxref("DOMString","string")}} that represents the _type_ of resource that
+string that represents the _type_ of resource that
 initiated the performance event.
 
 The value of this string is as follows:
@@ -29,7 +30,7 @@ The value of this string is as follows:
 
 ## Value
 
-A {{domxref("DOMString","string")}} representing the _type_ of resource that
+A string representing the _type_ of resource that
 initiated the performance event, as specified above.
 
 ## Examples

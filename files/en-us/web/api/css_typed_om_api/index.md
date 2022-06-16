@@ -1,6 +1,7 @@
 ---
 title: CSS Typed Object Model API
 slug: Web/API/CSS_Typed_OM_API
+page-type: web-api-overview
 tags:
   - CSS Typed OM
   - CSS Typed Object Model API
@@ -122,4 +123,4 @@ See individual interfaces
 
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
 - [Using the CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
-- [CSS Houdini](/en-US/docs/Web/Houdini)
+- [CSS Houdini](/en-US/docs/Web/Guide/Houdini)

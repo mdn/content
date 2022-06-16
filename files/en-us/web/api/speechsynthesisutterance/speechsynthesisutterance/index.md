@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisUtterance()
 slug: Web/API/SpeechSynthesisUtterance/SpeechSynthesisUtterance
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

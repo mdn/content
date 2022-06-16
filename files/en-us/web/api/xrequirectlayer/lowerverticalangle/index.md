@@ -1,6 +1,7 @@
 ---
 title: XREquirectLayer.lowerVerticalAngle
 slug: Web/API/XREquirectLayer/lowerVerticalAngle
+page-type: web-api-instance-property
 tags:
   - API
   - Property

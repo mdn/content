@@ -1,6 +1,7 @@
 ---
 title: MIDIPort.name
 slug: Web/API/MIDIPort/name
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`name`** read-only property of the {{domxref("MIDIPort")}} interface retur
 
 ## Value
 
-A {{domxref("DOMString","string")}} containing the system name of the port.
+A string containing the system name of the port.
 
 ## Examples
 

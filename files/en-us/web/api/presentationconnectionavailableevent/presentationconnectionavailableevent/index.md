@@ -1,6 +1,7 @@
 ---
-title: PresentationConnectionAvailableEvent
+title: PresentationConnectionAvailableEvent()
 slug: Web/API/PresentationConnectionAvailableEvent/PresentationConnectionAvailableEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

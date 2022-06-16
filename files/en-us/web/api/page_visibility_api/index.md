@@ -1,6 +1,7 @@
 ---
 title: Page Visibility API
 slug: Web/API/Page_Visibility_API
+page-type: web-api-overview
 tags:
   - API
   - DOM
@@ -14,6 +15,7 @@ tags:
   - Tutorials
   - Visibility
   - Visible Pages
+browser-compat: api.Document.visibilityState
 ---
 {{DefaultAPISidebar("Page Visibility API")}}
 
@@ -159,12 +161,8 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
 ## Specifications
 
-| Specification                                             |
-| --------------------------------------------------------- |
-| [Page Visibility](https://w3c.github.io/page-visibility/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `Document.visibilityState`
-
-{{Compat("api.Document.visibilityState")}}
+{{Compat}}

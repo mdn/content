@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.load()
 slug: Web/API/HTMLMediaElement/load
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

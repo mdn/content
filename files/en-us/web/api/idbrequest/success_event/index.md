@@ -1,6 +1,7 @@
 ---
 title: 'IDBRequest: success event'
 slug: Web/API/IDBRequest/success_event
+page-type: web-api-event
 browser-compat: api.IDBRequest.success_event
 ---
 {{ APIRef("IndexedDB") }}
@@ -90,4 +91,3 @@ openRequest.onsuccess = (event) => {
 ## See also
 
 - [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- [`onsuccess`](/en-US/docs/Web/API/IDBRequest/onsuccess) event handler property

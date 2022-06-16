@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.usernameFragment
 slug: Web/API/RTCIceCandidate/usernameFragment
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate

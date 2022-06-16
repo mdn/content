@@ -1,6 +1,7 @@
 ---
 title: Using Pointer Events
 slug: Web/API/Pointer_events/Using_Pointer_Events
+page-type: guide
 tags:
   - Guide
   - Input
@@ -8,7 +9,7 @@ tags:
   - PointerEvent
   - events
   - touch
-spec-urls: https://w3c.github.io/pointerevents/
+browser-compat: api.PointerEvent
 ---
 {{DefaultAPISidebar("Pointer Events")}}
 
@@ -233,9 +234,7 @@ function log(msg) {
 
 ## Browser compatibility
 
-### `PointerEvent` interface
-
-{{Compat("api.PointerEvent", 0)}}
+{{Compat}}
 
 ## See also
 

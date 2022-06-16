@@ -1,6 +1,7 @@
 ---
 title: CSSMatrixComponent.matrix
 slug: Web/API/CSSMatrixComponent/matrix
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API

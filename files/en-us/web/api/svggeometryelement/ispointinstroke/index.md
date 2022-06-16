@@ -1,6 +1,7 @@
 ---
 title: SVGGeometryElement.isPointInStroke()
 slug: Web/API/SVGGeometryElement/isPointInStroke
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -27,8 +28,8 @@ isPointInStroke(point)
 
 ### Parameters
 
-- point
-  - : A DOMPointInit object interpreted as a point in the local coordinate system
+- `point`
+  - : An object interpreted as a point in the local coordinate system
     of the element.
 
 ### Return value

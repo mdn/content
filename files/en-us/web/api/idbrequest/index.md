@@ -1,6 +1,7 @@
 ---
 title: IDBRequest
 slug: Web/API/IDBRequest
+page-type: web-api-interface
 tags:
   - API
   - Database

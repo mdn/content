@@ -1,6 +1,7 @@
 ---
 title: PannerNode.rolloffFactor
 slug: Web/API/PannerNode/rolloffFactor
+page-type: web-api-instance-property
 tags:
   - API
   - PannerNode

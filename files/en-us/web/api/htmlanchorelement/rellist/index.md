@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.relList
 slug: Web/API/HTMLAnchorElement/relList
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -28,13 +29,13 @@ A string.
 ## Examples
 
 ```js
-var anchors = document.getElementsByTagName("a");
-var length = anchors.length;
-for (var i = 0; i < length; i++) {
-  var list = anchors[i].relList;
-  var listLength = list.length;
+const anchors = document.getElementsByTagName("a");
+const length = anchors.length;
+for (let i = 0; i < length; i++) {
+  const list = anchors[i].relList;
+  const listLength = list.length;
   console.log("New anchor node found with", listLength, "link types in relList.");
-  for (var j = 0; j < listLength; j++) {
+  for (let j = 0; j < listLength; j++) {
     console.log(list[j]);
   }
 }

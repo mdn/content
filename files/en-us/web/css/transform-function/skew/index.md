@@ -247,5 +247,5 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [skewX()](/en-US/docs/Web/CSS/transform-function/skewX())
-- [skewY()](/en-US/docs/Web/CSS/transform-function/skewY())
+- [skewX()](/en-US/docs/Web/CSS/transform-function/skewX)
+- [skewY()](/en-US/docs/Web/CSS/transform-function/skewY)

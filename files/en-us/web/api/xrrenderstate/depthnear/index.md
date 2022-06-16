@@ -1,6 +1,7 @@
 ---
 title: XRRenderState.depthNear
 slug: Web/API/XRRenderState/depthNear
+page-type: web-api-instance-property
 tags:
   - API
   - AR

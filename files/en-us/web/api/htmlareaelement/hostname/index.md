@@ -1,6 +1,7 @@
 ---
 title: HTMLAreaElement.hostname
 slug: Web/API/HTMLAreaElement/hostname
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAreaElement

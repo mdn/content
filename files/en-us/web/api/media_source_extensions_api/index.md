@@ -1,6 +1,7 @@
 ---
 title: Media Source API
 slug: Web/API/Media_Source_Extensions_API
+page-type: web-api-overview
 tags:
   - API
   - Audio
@@ -66,12 +67,6 @@ There are numerous available free and open source tools for transcoding content 
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-### MediaSource interface
-
-{{Compat("api.MediaSource", 0)}}
 
 ## See also
 

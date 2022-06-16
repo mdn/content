@@ -498,7 +498,7 @@ Some IDL members indicate special behaviors that should be noted on appropriate 
 
 ### Stringifiers
 
-In addition to adding the `toString()` method to an interface as described in [toString() and toJSON()](#tostring_and_tojson), stringifiers also indicate that an object instance, when used as a string, returns a `DOMString` other than the default. (The default is usually a JSON representation of the object). Exactly how depends on the way it is specified in the IDL. Regardless of the how, the non-default behavior should be described on the interface page.
+In addition to adding the `toString()` method to an interface as described in [toString() and toJSON()](#tostring_and_tojson), stringifiers also indicate that an object instance, when used as a string, returns a string other than the default. (The default is usually a JSON representation of the object). Exactly how depends on the way it is specified in the IDL. Regardless of the how, the non-default behavior should be described on the interface page.
 
 When the `stringifier` keyword accompanies an attribute name, referencing the object name has the same result as referencing the attribute name. Consider the following IDL:
 

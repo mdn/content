@@ -1,6 +1,7 @@
 ---
 title: console.profile()
 slug: Web/API/console/profile
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

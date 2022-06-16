@@ -1,6 +1,7 @@
 ---
 title: FileSystemFileEntry.file()
 slug: Web/API/FileSystemFileEntry/file
+page-type: web-api-instance-method
 tags:
   - API
   - File
@@ -42,7 +43,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 This example establishes a method, `readFile()`, reads a text file and calls
-a specified callback function with the received text (in a {{jsxref("String")}} object)
+a specified callback function with the received text (in a string)
 once the read is completed. If an error occurs, a specified (optional) error callback is
 called.
 
@@ -66,9 +67,9 @@ function readFile(entry, successCallback, errorCallback) {
 
 This function calls `file()`, specifying as its success callback a method
 which proceeds to use a {{domxref("FileReader")}} to read the file as text. The
-FileReader's {{event("load")}} event handler is set up to deliver the loaded string to
+FileReader's {{domxref("FileReader/load_event", "load")}} event handler is set up to deliver the loaded string to
 the `successCallback` specified when the `readFile()` method was
-called; similarly, its {{event("error")}} handler is set up to call the
+called; similarly, its {{domxref("FileReader/error_event", "error")}} handler is set up to call the
 `errorCallback` specified.
 
 ## Specifications

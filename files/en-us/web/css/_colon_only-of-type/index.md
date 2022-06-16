@@ -26,7 +26,9 @@ p:only-of-type {
 
 ## Syntax
 
-{{csssyntax}}
+```
+:only-of-type
+```
 
 ## Examples
 

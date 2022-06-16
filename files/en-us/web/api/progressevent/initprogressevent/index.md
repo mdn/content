@@ -1,6 +1,7 @@
 ---
 title: ProgressEvent.initProgressEvent()
 slug: Web/API/ProgressEvent/initProgressEvent
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -25,41 +26,31 @@ an animation event created using the deprecated {{domxref("Document.createEvent(
 ## Syntax
 
 ```js
-initProgressEvent(typeArg, canBubbleArg, cancelableArg, lengthComputable, loaded, total)
+initProgressEvent(type, canBubble, cancelable, lengthComputable, loaded, total)
 ```
 
 ### Parameters
 
-- _typeArg_
+- `type`
 
   - : A string identifying the specific type of animation event that
-    occurred. The following values are allowed:
-
-    | Value       | Meaning                                          |
-    | ----------- | ------------------------------------------------ |
-    | `loadstart` | The operation has started.                       |
-    | `progress`  | The operation still is in progress.              |
-    | `error`     | The operation failed and didn't complete.        |
-    | `abort`     | The operation was cancelled and didn't complete. |
-    | `load`      | The operation completed.                         |
-    | `loadend`   | The operation stopped.                           |
-
-- _canBubbleArg_
+    occurred. Possible values are: `loadstart`, `progress`, `error`, `abort`, `load`, or `loadend`.
+- `canBubble`
   - : A boolean flag indicating if the event can bubble
-    (`true`) or not (`false)`.
-- _cancelableArg_
+    (`true`) or not (`false`).
+- `cancelable`
   - : A boolean flag indicating if the event associated action can be
-    avoided (`true`) or not (`false)`.
-- _lengthComputable_
+    avoided (`true`) or not (`false`).
+- `lengthComputable`
   - : A boolean flag indicating if the total work to be done, and the
     amount of work already done, by the underlying process is calculable. In other words,
     it tells if the progress is measurable or not.
-- _loaded_
+- `loaded`
   - : An `unsigned long long` representing the amount of work already
     performed by the underlying process. The ratio of work done can be calculated with the
     property and `ProgressEvent.total`. When downloading a resource using HTTP,
     this only represent the part of the content itself, not headers and other overhead.
-- _total_
+- `total`
   - : An `unsigned long long` representing the total amount of work that the
     underlying process is in the progress of performing. When downloading a resource using
     HTTP, this only represent the content itself, not headers and other overhead.

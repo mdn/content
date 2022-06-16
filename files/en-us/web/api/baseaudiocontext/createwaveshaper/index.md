@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createWaveShaper()
 slug: Web/API/BaseAudioContext/createWaveShaper
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext
@@ -38,22 +39,20 @@ A {{domxref("WaveShaperNode")}}.
 ## Examples
 
 The following example shows basic usage of an AudioContext to create a wave shaper
-node. For applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) [demo](https://mdn.github.io/voice-change-o-matic/) ([see
-app.js](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js) for relevant code).
+node. For applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) [demo](https://mdn.github.io/voice-change-o-matic/) ([see app.js](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js) for relevant code).
 
 > **Note:** Sigmoid functions are commonly used for distortion curves
 > because of their natural properties. Their S-shape, for instance, helps create a
-> smoother sounding result. We found the below distortion curve code on [Stack
-> Overflow](https://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion).
+> smoother sounding result. We found the below distortion curve code on [Stack Overflow](https://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion).
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var distortion = audioCtx.createWaveShaper();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const distortion = audioCtx.createWaveShaper();
 
   ...
 
 function makeDistortionCurve(amount) {
-  var k = typeof amount === 'number' ? amount : 50,
+  const k = typeof amount === 'number' ? amount : 50,
     n_samples = 44100,
     curve = new Float32Array(n_samples),
     deg = Math.PI / 180,

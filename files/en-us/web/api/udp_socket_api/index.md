@@ -1,6 +1,7 @@
 ---
 title: UDP Socket API
 slug: Web/API/UDP_Socket_API
+page-type: web-api-overview
 tags:
   - UDPSocket
   - mozUDPSocket

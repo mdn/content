@@ -1,6 +1,7 @@
 ---
 title: 'Movement, orientation, and motion: A WebXR example'
 slug: Web/API/WebXR_Device_API/Movement_and_motion
+page-type: guide
 tags:
   - 3D
   - API
@@ -694,7 +695,7 @@ The rest of the code is identical to that found in the earlier examples:
 - `loadShader()`
   - : Creates a shader object and loads the specified source code into it before compiling the code and checking to ensure that the compiler succeeded before returning the newly compiled shader to the caller. If an error occurs, `NULL` is returned instead.
 - `initBuffers()`
-  - : Initializes the buffers that contain data to be passed into WebGL. These buffers include the array of vertex positions, the array of vertex normals, the texture coordinates for each surface of the cube, and the array of vertex indices (specifying which entry in the vertex list represents each corner of the cube). An object containing references to eard
+  - : Initializes the buffers that contain data to be passed into WebGL. These buffers include the array of vertex positions, the array of vertex normals, the texture coordinates for each surface of the cube, and the array of vertex indices (specifying which entry in the vertex list represents each corner of the cube).
 - `loadTexture()`
   - : Loads the image at a given URL and creates a WebGL texture from it. If the image's dimensions aren't both powers of two (see the `isPowerOf2()` function), mipmapping is disabled and wrapping is clamped to the edges. This is because optimized rendering of mipmapped textures only works for textures whose dimensions are powers of two in WebGL 1. WebGL 2 supports arbitrarily-sized textures for mipmapping.
 - `isPowerOf2()`
@@ -712,6 +713,6 @@ There are few limitations on what can be done if you set yourself to it.
 
 ## See also
 
-- [Learn WebGL](http://learnwebgl.brown37.net/#) (includes some great visualizations of the camera and how it relates to the virtual world)
+- [Learn WebGL](https://learnwebgl.brown37.net/#) (includes some great visualizations of the camera and how it relates to the virtual world)
 - [WebGL Fundamentals](https://webglfundamentals.org)
 - [Learn OpenGL](https://learnopengl.com/)

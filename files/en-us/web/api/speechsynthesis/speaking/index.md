@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesis.speaking
 slug: Web/API/SpeechSynthesis/speaking
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -1,6 +1,7 @@
 ---
 title: PaymentRequest.abort()
 slug: Web/API/PaymentRequest/abort
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

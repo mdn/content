@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.replace()
 slug: Web/API/CSSStyleSheet/replace
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -24,7 +25,7 @@ replace(text)
 ### Parameters
 
 - `text`
-  - : A {{domxref("USVString","string")}} containing the style rules to replace the content of the stylesheet. If the string does not contain a parseable list of rules, then the value will be set to an empty string.
+  - : A string containing the style rules to replace the content of the stylesheet. If the string does not contain a parseable list of rules, then the value will be set to an empty string.
 
 > **Note:** If any of the rules passed in `text` are an external stylesheet imported with the {{cssxref("@import")}} rule, those rules will be removed, and a warning printed to the console.
 
@@ -62,3 +63,8 @@ stylesheet.replace('body { font-size: 1.4em; } p { color: red; }')
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
+- [Using the Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM)

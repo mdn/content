@@ -1,6 +1,7 @@
 ---
 title: DeviceMotionEvent
 slug: Web/API/DeviceMotionEvent
+page-type: web-api-interface
 tags:
   - API
   - Device Orientation

@@ -22,7 +22,7 @@ By default, the `message` property is an empty string, but this behavior can be 
 ### Throwing a custom error
 
 ```js
-var e = new Error('Could not parse input');
+const e = new Error('Could not parse input');
 // e.message is 'Could not parse input'
 throw e;
 ```

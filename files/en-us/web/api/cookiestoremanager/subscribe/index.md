@@ -1,6 +1,7 @@
 ---
 title: CookieStoreManager.subscribe()
 slug: Web/API/CookieStoreManager/subscribe
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -21,7 +22,7 @@ subscribe(subscriptions)
 
 ### Parameters
 
-- subscriptions
+- `subscriptions`
 
   - : An object containing:
 
@@ -32,7 +33,7 @@ subscribe(subscriptions)
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with {{jsxref("Undefined")}} when the subscription completes.
+A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when the subscription completes.
 
 ### Exceptions
 

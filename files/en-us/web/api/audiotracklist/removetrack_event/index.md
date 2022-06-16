@@ -1,6 +1,7 @@
 ---
 title: 'AudioTrackList: removetrack event'
 slug: Web/API/AudioTrackList/removetrack_event
+page-type: web-api-event
 tags:
   - API
   - Audio

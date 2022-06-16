@@ -1,6 +1,7 @@
 ---
 title: XPathNSResolver.lookupNamespaceURI()
 slug: Web/API/XPathNSResolver/lookupNamespaceURI
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -25,7 +26,7 @@ lookupNamespaceURI(prefix)
 
 ### Parameters
 
-- prefix
+- `prefix`
   - : A string representing the prefix to look for.
 
 ### Return value

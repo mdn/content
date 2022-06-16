@@ -1,6 +1,7 @@
 ---
 title: HMDVRDevice.getEyeParameters()
 slug: Web/API/HMDVRDevice/getEyeParameters
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -40,8 +41,8 @@ The following example is taken from the Mozilla VR Team's [threejs-vr-boilerplat
 
 ```js
 if ( vrHMD.getEyeParameters !== undefined ) {
-    var eyeParamsL = vrHMD.getEyeParameters( 'left' );
-    var eyeParamsR = vrHMD.getEyeParameters( 'right' );
+    const eyeParamsL = vrHMD.getEyeParameters( 'left' );
+    const eyeParamsR = vrHMD.getEyeParameters( 'right' );
 
     eyeTranslationL = eyeParamsL.eyeTranslation;
     eyeTranslationR = eyeParamsR.eyeTranslation;

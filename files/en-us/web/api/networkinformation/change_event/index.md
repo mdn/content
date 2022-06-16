@@ -1,6 +1,7 @@
 ---
 title: 'NetworkInformation: change event'
 slug: Web/API/NetworkInformation/change_event
+page-type: web-api-event
 tags:
   - API
   - Event Handler

@@ -1,6 +1,7 @@
 ---
 title: DirectoryReaderSync
 slug: Web/API/DirectoryReaderSync
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -15,7 +16,7 @@ The `DirectoryReaderSync` interface lets you read the entries in a directory.
 
 ## Basic concepts
 
-Before you call the only method in this interface, [`readEntries()`](</#readEntries()> "#readEntries()"), create the [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync) object. But DirectoryEntrySync (as well as [FileEntrySync](/en-US/docs/Web/API/FileEntrySync)) is not a data type that you can pass between a calling app and Web Worker thread. It's not a big deal, because you don't really need to have the main app and the worker thread see the same JavaScript object; you just need them to access the same files. You can do that by passing a list of  `filesystem:` URLs—which are just strings—instead of a list of entries. You can also use the `filesystem:` URL to look up the entry with `resolveLocalFileSystemURL()`). That gets you back to a DirectoryEntrySync (as well as FileEntrySync) object.
+Before you call the only method in this interface, [`readEntries()`](#readentries), create the [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync) object. But DirectoryEntrySync (as well as [FileEntrySync](/en-US/docs/Web/API/FileEntrySync)) is not a data type that you can pass between a calling app and Web Worker thread. It's not a big deal, because you don't really need to have the main app and the worker thread see the same JavaScript object; you just need them to access the same files. You can do that by passing a list of  `filesystem:` URLs—which are just strings—instead of a list of entries. You can also use the `filesystem:` URL to look up the entry with `resolveLocalFileSystemURL()`). That gets you back to a DirectoryEntrySync (as well as FileEntrySync) object.
 
 #### Example
 
@@ -27,9 +28,9 @@ In the following code snippet from [HTML5Rocks](https://web.dev/read-files/), we
                                      window.webkitResolveLocalFileSystemURL;
 
 // Create web workers
-  var worker = new Worker('worker.js');
+  const worker = new Worker('worker.js');
   worker.onmessage = function(e) {
-    var urls = e.data.entries;
+    const urls = e.data.entries;
     urls.forEach(function(url, i) {
       window.resolveLocalFileSystemURL(url, function(fileEntry) {
         // Print out file's name.
@@ -49,12 +50,12 @@ self.requestFileSystemSync = self.webkitRequestFileSystemSync ||
                              self.requestFileSystemSync;
 
 // Global for holding the list of entry file system URLs.
-var paths = [];
+const paths = [];
 
 function getAllEntries(dirReader) {
-  var entries = dirReader.readEntries();
+  const entries = dirReader.readEntries();
 
-  for (var i = 0, entry; entry = entries[i]; ++i) {
+  for (let i = 0, entry; entry = entries[i]; ++i) {
     // Stash this entry's filesystem in URL
     paths.push(entry.toURL());
 
@@ -71,7 +72,7 @@ function onError(e) {
 }
 
 self.onmessage = function(e) {
-  var data = e.data;
+  const data = e.data;
 
   // Ignore everything else except our 'list' command.
   if (!data.cmd || data.cmd != 'list') {
@@ -79,7 +80,7 @@ self.onmessage = function(e) {
   }
 
   try {
-    var fs = requestFileSystemSync(TEMPORARY, 1024*1024 /*1MB*/);
+    const fs = requestFileSystemSync(TEMPORARY, 1024*1024 /*1MB*/);
 
     getAllEntries(fs.root.createReader());
 

@@ -1,5 +1,5 @@
 ---
-title: WebAssembly control flow
+title: WebAssembly control flow instructions
 slug: WebAssembly/Reference/Control_flow
 tags:
   - WebAssembly
@@ -10,7 +10,7 @@ tags:
 ---
 {{WebAssemblySidebar}}
 
-WebAssembly control flow operators.
+WebAssembly control flow instructions.
 
 - [`block`](/en-US/docs/WebAssembly/Reference/Control_flow/block)
   - : Creates a label that can later be branched out of with a [`br`](/en-US/docs/WebAssembly/Reference/Control_flow/br).
@@ -21,7 +21,7 @@ WebAssembly control flow operators.
 - [`call`](/en-US/docs/WebAssembly/Reference/Control_flow/call)
   - : Calls a function.
 
-- [`drop`](/en-US/docs/WebAssembly/Reference/Control_flow/drop)
+- [`drop`](/en-US/docs/WebAssembly/Reference/Control_flow/Drop)
   - : Pops a value from the stack, and discards it.
 
 - [`end`](/en-US/docs/WebAssembly/Reference/Control_flow/end)
@@ -39,7 +39,7 @@ WebAssembly control flow operators.
 - [`return`](/en-US/docs/WebAssembly/Reference/Control_flow/return)
   - : Returns from a function.
 
-- [`select`](/en-US/docs/WebAssembly/Reference/Control_flow/select)
+- [`select`](/en-US/docs/WebAssembly/Reference/Control_flow/Select)
   - : Selects one of its first two operands based on a boolean condition.
 
 - [`unreachable`](/en-US/docs/WebAssembly/Reference/Control_flow/unreachable)

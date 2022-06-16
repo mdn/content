@@ -59,7 +59,7 @@ The `__defineSetter__` method allows a {{jsxref("Functions/set", "setter",
 ### Non-standard and deprecated way
 
 ```js
-var o = {};
+const o = {};
 o.__defineSetter__('value', function(val) { this.anotherValue = val; });
 o.value = 5;
 console.log(o.value); // undefined
@@ -70,13 +70,15 @@ console.log(o.anotherValue); // 5
 
 ```js
 // Using the set operator
-var o = { set value(val) { this.anotherValue = val; } };
+const o = { set value(val) { this.anotherValue = val; } };
 o.value = 5;
 console.log(o.value); // undefined
 console.log(o.anotherValue); // 5
+```
 
+```js
 // Using Object.defineProperty
-var o = {};
+const o = {};
 Object.defineProperty(o, 'value', {
   set: function(val) {
     this.anotherValue = val;

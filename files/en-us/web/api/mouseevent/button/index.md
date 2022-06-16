@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.button
 slug: Web/API/MouseEvent/button
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

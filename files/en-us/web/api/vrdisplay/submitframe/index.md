@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.submitFrame()
 slug: Web/API/VRDisplay/submitFrame
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -33,7 +34,7 @@ None.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

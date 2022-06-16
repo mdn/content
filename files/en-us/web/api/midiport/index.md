@@ -1,6 +1,7 @@
 ---
 title: MIDIPort
 slug: Web/API/MIDIPort
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -19,14 +20,14 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
 ## Properties
 
 - {{domxref("MIDIPort.id")}}{{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMString","string")}} containing the unique ID of the port.
+  - : Returns a string containing the unique ID of the port.
 - {{domxref("MIDIPort.manufacturer")}}{{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMString","string")}} containing the manufacturer of the port.
+  - : Returns a string containing the manufacturer of the port.
 - {{domxref("MIDIPort.name")}}{{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMString","string")}} containing the system name of the port.
+  - : Returns a string containing the system name of the port.
 - {{domxref("MIDIPort.type")}}{{ReadOnlyInline}}
 
-  - : Returns a {{domxref("DOMString","string")}} containing the type of the port, one of:
+  - : Returns a string containing the type of the port, one of:
 
     - `"input"`
       - : The `MIDIPort` is an input port.
@@ -34,10 +35,10 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
       - : The `MIDIPort` is an output port.
 
 - {{domxref("MIDIPort.version")}}{{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMString","string")}} containing the version of the port.
+  - : Returns a string containing the version of the port.
 - {{domxref("MIDIPort.state")}}{{ReadOnlyInline}}
 
-  - : Returns a {{domxref("DOMString","string")}} containing the state of the port, one of:
+  - : Returns a string containing the state of the port, one of:
 
     - `"disconnected"`
       - : The device that this `MIDIPort` represents is disconnected from the system.
@@ -46,7 +47,7 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
 
 - {{domxref("MIDIPort.connection")}}{{ReadOnlyInline}}
 
-  - : Returns a {{domxref("DOMString","string")}} containing the connection state of the port, one of:
+  - : Returns a string containing the connection state of the port, one of:
 
     - `"open"`
       - : The device that this `MIDIPort` represents has been opened and is available.

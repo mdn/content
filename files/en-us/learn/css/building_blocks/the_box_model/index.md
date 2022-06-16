@@ -79,7 +79,7 @@ Block and inline layout is the default way things behave on the web. By default 
 
 You can change the inner display type for example by setting `display: flex;`. The element will still use the outer display type `block` but this changes the inner display type to `flex`. Any direct children of this box will become flex items and behave according to the [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) specification.
 
-If you look more into CSS layout, you will also come across other inner values your boxes can have, for example [`grid`](/en-US/docs/Learn/CSS/CSS_layout/Grids).
+When you move on to learn about CSS Layout in more detail, you will encounter [`flex`](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), and various other inner values that your boxes can have, for example [`grid`](/en-US/docs/Learn/CSS/CSS_layout/Grids).
 
 > **Note:** To read more about the values of display, and how boxes work in block and inline layout, take a look at the MDN guide [Block and Inline Layout](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow).  
 
@@ -335,7 +335,7 @@ You see this fairly frequently in navigation bars. The navigation below is displ
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The Box Model](/en-US/docs/Learn/CSS/Building_blocks/Box_Model_Tasks).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The box model](/en-US/docs/Learn/CSS/Building_blocks/Box_Model_Tasks).
 
 ## Summary
 

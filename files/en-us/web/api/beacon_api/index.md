@@ -1,10 +1,12 @@
 ---
 title: Beacon API
 slug: Web/API/Beacon_API
+page-type: web-api-overview
 tags:
   - Guide
   - Overview
   - Web Performance
+browser-compat: api.Navigator.sendBeacon
 ---
 {{DefaultAPISidebar("Beacon")}}
 
@@ -20,15 +22,15 @@ For more details about the motivation for and usage of this API, see the documen
 
 This API defines a single method: {{domxref("navigator.sendBeacon()")}}.
 
-The method takes two arguments, the URL and the data to send in the request. The data argument is optional and its type may be an {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, string, or {{domxref("FormData")}}. If the browser successfully queues the request for delivery, the method returns "`true`"; otherwise, it returns "`false`".
+The method takes two arguments, the URL and the data to send in the request. The data argument is optional and its type may be a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("Blob")}}, a string literal or object, or a {{domxref("FormData")}} object. If the browser successfully queues the request for delivery, the method returns "`true`"; otherwise, it returns "`false`".
 
 ## Specifications
 
-{{Specifications("api.Navigator.sendBeacon")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Navigator.sendBeacon")}}
+{{Compat}}
 
 ## See also
 

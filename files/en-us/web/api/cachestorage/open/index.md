@@ -1,6 +1,7 @@
 ---
 title: CacheStorage.open()
 slug: Web/API/CacheStorage/open
+page-type: web-api-instance-method
 tags:
   - API
   - CacheStorage
@@ -34,7 +35,7 @@ open(cacheName)
 
 ### Parameters
 
-- cacheName
+- `cacheName`
   - : The name of the cache you want to open.
 
 ### Return value
@@ -43,8 +44,7 @@ A {{jsxref("Promise")}} that resolves to the requested {{domxref("Cache")}} obje
 
 ## Examples
 
-This example is from the MDN [sw-test
-example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/)).
+This example is from the MDN [sw-test example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/)).
 Here we wait for an {{domxref("InstallEvent")}} to fire, then runs
 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} to handle the install process for
 the app. This consists of calling `CacheStorage.open()` to create a new
@@ -79,7 +79,6 @@ self.addEventListener('install', function(event) {
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("caches")}}

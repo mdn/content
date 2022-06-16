@@ -1,6 +1,7 @@
 ---
 title: SubtleCrypto.deriveKey()
 slug: Web/API/SubtleCrypto/deriveKey
+page-type: web-api-instance-method
 tags:
   - API
   - Crypto
@@ -51,7 +52,7 @@ deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
     - For [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac): pass an
       [`HmacKeyGenParams`](/en-US/docs/Web/API/HmacKeyGenParams) object.
     - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
-      [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-kw): pass an
+      [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw): pass an
       [`AesKeyGenParams`](/en-US/docs/Web/API/AesKeyGenParams) object.
 - `extractable`
   - : A boolean value indicating whether it
@@ -127,8 +128,7 @@ PBKDF2 is specified in [RFC 2898](https://datatracker.ietf.org/doc/html/rfc2898)
 
 ## Examples
 
-> **Note:** You can [try the
-> working examples](https://mdn.github.io/dom-examples/web-crypto/derive-key/index.html) on GitHub.
+> **Note:** You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/derive-key/index.html) on GitHub.
 
 ### ECDH
 

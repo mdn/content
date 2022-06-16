@@ -1,6 +1,7 @@
 ---
 title: Window.scrollMaxY
 slug: Web/API/Window/scrollMaxY
+page-type: web-api-instance-property
 tags:
   - API
   - DOM_0

@@ -1,6 +1,7 @@
 ---
 title: MediaDeviceInfo.kind
 slug: Web/API/MediaDeviceInfo/kind
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

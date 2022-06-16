@@ -1,6 +1,7 @@
 ---
 title: AudioContext.createMediaStreamSource()
 slug: Web/API/AudioContext/createMediaStreamSource
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -57,15 +58,13 @@ The range slider below the {{ htmlelement("video") }} element controls the amoun
 gain given to the lowpass filter — increase the value of the slider to make the audio
 sound more bass heavy!
 
-> **Note:** You can see this [example
-> running live](https://mdn.github.io/webaudio-examples/stream-source-buffer/), or [view
-> the source](https://github.com/mdn/webaudio-examples/tree/master/stream-source-buffer).
+> **Note:** You can see this [example running live](https://mdn.github.io/webaudio-examples/stream-source-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/tree/master/stream-source-buffer).
 
 ```js
-var pre = document.querySelector('pre');
-var video = document.querySelector('video');
-var myScript = document.querySelector('script');
-var range = document.querySelector('input');
+const pre = document.querySelector('pre');
+const video = document.querySelector('video');
+const myScript = document.querySelector('script');
+const range = document.querySelector('input');
 
 // getUserMedia block - grab stream
 // put it into a MediaStreamAudioSourceNode
@@ -83,11 +82,11 @@ if (navigator.mediaDevices) {
 
         // Create a MediaStreamAudioSourceNode
         // Feed the HTMLMediaElement into it
-        var audioCtx = new AudioContext();
-        var source = audioCtx.createMediaStreamSource(stream);
+        const audioCtx = new AudioContext();
+        const source = audioCtx.createMediaStreamSource(stream);
 
         // Create a biquadfilter
-        var biquadFilter = audioCtx.createBiquadFilter();
+        const biquadFilter = audioCtx.createBiquadFilter();
         biquadFilter.type = "lowshelf";
         biquadFilter.frequency.value = 1000;
         biquadFilter.gain.value = range.value;
@@ -133,5 +132,4 @@ pre.innerHTML = myScript.innerHTML;
 
 ## See also
 
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

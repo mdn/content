@@ -40,7 +40,7 @@ To avoid this, fully qualify global variable access using "window.", like so:
 
 ### Don't concatenate scripts you don't control
 
-The `"use strict;"` directive in ECMAScript, when used on the file level, applies to everything in the file. So appending a script that depends on non-strict-mode behavior to a strict-mode script will cause things to break.
+The `"use strict";` directive in ECMAScript, when used on the file level, applies to everything in the file. So appending a script that depends on non-strict-mode behavior to a strict-mode script will cause things to break.
 
 ### Ask the authors of any JavaScript libraries you use to also follow these guidelines
 

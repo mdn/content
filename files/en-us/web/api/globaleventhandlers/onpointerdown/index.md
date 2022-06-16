@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onpointerdown
 slug: Web/API/GlobalEventHandlers/onpointerdown
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -37,7 +38,7 @@ add a listener for `pointerdown` events.
 ```js
 target.onpointerdown = downHandler;
 
-var downHandler = target.onpointerdown;
+const downHandler = target.onpointerdown;
 ```
 
 ### Value
@@ -84,12 +85,12 @@ The CSS sets up the appearance of the target, and doesn't affect its functionali
 #### JavaScript
 
 ```js
-var targetBox = document.getElementById("target");
+const targetBox = document.getElementById("target");
 
 targetBox.onpointerdown = handleDown;
 
 function handleDown(evt) {
-  var action;
+  let action;
 
   switch(evt.pointerType) {
     case "mouse":
@@ -160,8 +161,7 @@ what happens. For full effect, try it with a variety of pointer types.
 ## See also
 
 - [Pointer events](/en-US/docs/Web/API/Pointer_events)
-- [Using Pointer
-  Events](/en-US/docs/Web/API/Pointer_events/Using_Pointer_Events)
+- [Using Pointer Events](/en-US/docs/Web/API/Pointer_events/Using_Pointer_Events)
 - [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems)
 - [`Document: pointerdown`](/en-US/docs/Web/API/Document/pointerdown_event)
   event

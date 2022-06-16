@@ -1,6 +1,7 @@
 ---
 title: NDEFReadingEvent
 slug: Web/API/NDEFReadingEvent
+page-type: web-api-interface
 tags:
   - NDEF
   - Reference

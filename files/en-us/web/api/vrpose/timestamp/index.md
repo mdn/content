@@ -1,6 +1,7 @@
 ---
 title: VRPose.timestamp
 slug: Web/API/VRPose/timeStamp
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

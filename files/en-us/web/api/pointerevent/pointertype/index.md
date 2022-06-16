@@ -1,6 +1,7 @@
 ---
 title: PointerEvent.pointerType
 slug: Web/API/PointerEvent/pointerType
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: Animating objects with WebGL
 slug: Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
+page-type: guide
 tags:
   - Tutorial
   - WebGL

@@ -1,6 +1,7 @@
 ---
 title: ContentIndex.delete()
 slug: Web/API/ContentIndex/delete
+page-type: web-api-instance-method
 tags:
   - Content
   - Content Index API
@@ -80,9 +81,6 @@ self.registration.index.delete('my-id');
 
 ## See also
 
-- [An introductory article on the
-  Content Index API](https://web.dev/content-indexing-api/)
-- [An app which uses the Content Index API to list
-  and remove 'save for later' content](https://contentindex.dev/)
-- [Service Worker API, along with
-  information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)
+- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
+- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
+- [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

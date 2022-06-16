@@ -37,7 +37,7 @@ myCar.model = 'Mustang';
 myCar.year = 1969;
 ```
 
-The above example could also be written using an **[object initializer](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#object_initializers)**, which is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`):
+The above example could also be written using an **[object initializer](#object_initializers)**, which is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`):
 
 ```js
 const myCar = {
@@ -69,19 +69,29 @@ An object property name can be any valid JavaScript string, or anything that can
 const myObj = new Object(),
       str = 'myString',
       rand = Math.random(),
-      obj = new Object();
+      anotherObj = new Object();
 
-myObj.type              = 'Dot syntax';
-myObj['date created']   = 'String with space';
-myObj[str]              = 'String value';
-myObj[rand]             = 'Random Number';
-myObj[obj]              = 'Object';
-myObj['']               = 'Even an empty string';
+// Now, creating additional properties.
+myObj.type              = 'Dot syntax for a key named type';
+myObj['date created']   = 'This key is a string with a space';
+myObj[str]              = 'This key is held in the variable str';
+myObj[rand]             = 'A random number is the key here';
+myObj[anotherObj]       = 'This key is the name of object anotherObj';
+myObj['']               = 'This key is an empty string';
 
-console.log(myObj);
+console.log( myObj);
+console.log( myObj.myString );
+
+/* 
+[Log] {type: "Dot syntax for a key named type", date created: "This key is a string with a space", myString: "This key is held in the variable str", 0.9803286397184368: "A random number is the key here", [object Object]: "This key is the name of object anotherObj", …} 
+[Log] This key is held in the variable str
+*/
+
 ```
 
-Please note that all keys in the square bracket notation are converted to string unless they're Symbols, since JavaScript object property names (keys) can only be strings or Symbols (at some point, private names will also be added as the [class fields proposal](https://github.com/tc39/proposal-class-fields) progresses, but you won't use them with `[]` form). For example, in the above code, when the key `obj` is added to the `myObj`, JavaScript will call the {{jsxref("Object.toString", "obj.toString()")}} method, and use this result string as the new key.
+All keys in the square bracket notation are converted to strings, unless they're Symbols. JavaScript object property names (keys) can only be strings or Symbols. For example, in the above code, when the key `anotherObj` is added to the `myObj`, JavaScript will call the {{jsxref("Object.toString", "anotherObj.toString()")}} method, and use this result string as the new key.
+
+Side note: At some point, private names will also be added as the [class fields proposal](https://github.com/tc39/proposal-class-fields) progresses, but you won't use them with `[]` form.
 
 You can also access properties by using a string value that is stored in a variable:
 
@@ -120,15 +130,15 @@ myCar.year = 1969
 
 There are three native ways to list/traverse object properties:
 
-- [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops. This method traverses all enumerable properties of an object and its prototype chain.
-- {{jsxref("Object.keys", "Object.keys(o)")}}. This method returns an array with all the own (not in the prototype chain) enumerable properties' names ("keys") of an object `o`.
-- {{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(o)")}}. This method returns an array containing all own properties' names (enumerable or not) of an object `o`.
+- [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops. This method traverses all of the enumerable properties of an object as well as its prototype chain.
+- {{jsxref("Object.keys", "Object.keys(myObj)")}}. This method returns an array with only the enumerable property names ("keys") in the object `myObj`, but not those in the prototype chain.
+- {{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(myObj)")}}. This method returns an array containing all the property names in the object `myObj`, regardless of if they are enumerable or not.
 
 There is no native way to list "hidden" properties (properties in the prototype chain which are not accessible through the object, because another property has the same name earlier in the prototype chain). However, this can be achieved with the following function:
 
 ```js
-function listAllProperties(o) {
-  let objectToInspect = o;
+function listAllProperties(myObj) {
+  let objectToInspect = myObj;
   let result = [];
 
   while(objectToInspect !== null) {
@@ -422,7 +432,7 @@ Getters and setters can be either
 When defining getters and setters using [object initializers](#object_initializers) all you need to do is to prefix a getter method with `get` and a setter method with `set`. Of course, the getter method must not expect a parameter, while the setter method expects exactly one parameter (the new value to set). For instance:
 
 ```js
-const o = {
+const myObj = {
   a: 7,
   get b() {
     return this.a + 1;
@@ -432,32 +442,32 @@ const o = {
   }
 };
 
-console.log(o.a); // 7
-console.log(o.b); // 8 <-- At this point the get b() method is initiated.
-o.c = 50;         //   <-- At this point the set c(x) method is initiated
-console.log(o.a); // 25
+console.log(myObj.a); // 7
+console.log(myObj.b); // 8 <-- At this point the get b() method is initiated.
+myObj.c = 50;         //   <-- At this point the set c(x) method is initiated
+console.log(myObj.a); // 25
 ```
 
-The `o` object's properties are:
+The `myObj` object's properties are:
 
-- `o.a` — a number
-- `o.b` — a getter that returns `o.a` plus 1
-- `o.c` — a setter that sets the value of `o.a` to half of the value `o.c` is being set to
+- `myObj.a` — a number
+- `myObj.b` — a getter that returns `myObj.a` plus 1
+- `myObj.c` — a setter that sets the value of `myObj.a` to half of the value `myObj.c` is being set to
 
 Please note that function names of getters and setters defined in an object literal using "\[gs]et _property_()" are not the names of the getters themselves, even though the `[gs]et propertyName(){ }` syntax may mislead you to think otherwise.
 
 Getters and setters can also be added to an object at any time after creation using the {{jsxref("Object.defineProperties()")}} method. This method's first parameter is the object on which you want to define the getter or setter. The second parameter is an object whose property names are the getter or setter names, and whose property values are objects for defining the getter or setter functions. Here's an example that defines the same getter and setter used in the previous example:
 
 ```js
-const o = { a: 0 };
+const myObj = { a: 0 };
 
-Object.defineProperties(o, {
+Object.defineProperties(myObj, {
      'b': { get: function() { return this.a + 1; } },
      'c': { set: function(x) { this.a = x / 2; } }
 });
 
-o.c = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
-console.log(o.b); // Runs the getter, which yields a + 1 or 6
+myObj.c = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
+console.log(myObj.b); // Runs the getter, which yields a + 1 or 6
 ```
 
 Which of the two forms to choose depends on your programming style and task at hand. If you already go for the object initializer when defining a prototype you will probably most of the time choose the first form. This form is more compact and natural. However, if you need to add getters and setters later — because you did not write the prototype or particular object — then the second form is the only possible form. The second form probably best represents the dynamic nature of JavaScript — but it can make the code hard to read and understand.

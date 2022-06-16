@@ -48,7 +48,7 @@ The list below denotes the codecs most commonly used on the web and which contai
       <th scope="row"><a href="#aac_advanced_audio_coding">AAC</a></th>
       <td>Advanced Audio Coding</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#adts">ADTS</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>
       </td>
@@ -57,7 +57,7 @@ The list below denotes the codecs most commonly used on the web and which contai
       <th scope="row"><a href="#alac_apple_lossless_audio_codec">ALAC</a></th>
       <td>Apple Lossless Audio Codec</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime"
           >QuickTime</a
         >
@@ -73,7 +73,7 @@ The list below denotes the codecs most commonly used on the web and which contai
       <th scope="row"><a href="#flac_free_lossless_audio_codec">FLAC</a></th>
       <td>Free Lossless Audio Codec</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#flac">FLAC</a>
       </td>
@@ -103,7 +103,7 @@ The list below denotes the codecs most commonly used on the web and which contai
       <th scope="row"><a href="#mp3_mpeg-1_audio_layer_iii">MP3</a></th>
       <td>MPEG-1 Audio Layer III</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#adts">ADTS</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg">MPEG</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>
@@ -119,7 +119,7 @@ The list below denotes the codecs most commonly used on the web and which contai
       <td>Opus</td>
       <td>
         <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a>
       </td>
     </tr>

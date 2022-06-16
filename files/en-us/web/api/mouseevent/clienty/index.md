@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.clientY
 slug: Web/API/MouseEvent/clientY
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View

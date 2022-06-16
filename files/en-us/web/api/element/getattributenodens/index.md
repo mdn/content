@@ -1,6 +1,7 @@
 ---
 title: Element.getAttributeNodeNS()
 slug: Web/API/Element/getAttributeNodeNS
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

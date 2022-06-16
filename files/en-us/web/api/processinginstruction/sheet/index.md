@@ -1,6 +1,7 @@
 ---
 title: ProcessingInstruction.sheet
 slug: Web/API/ProcessingInstruction/sheet
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference

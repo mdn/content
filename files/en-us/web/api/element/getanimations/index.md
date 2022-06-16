@@ -1,6 +1,7 @@
 ---
 title: Element.getAnimations()
 slug: Web/API/Element/getAnimations
+page-type: web-api-instance-method
 tags:
   - API
   - Animatable

@@ -1,6 +1,7 @@
 ---
 title: MediaStreamAudioSourceNode()
 slug: Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode
+page-type: web-api-constructor
 tags:
   - API
   - Audio
@@ -12,8 +13,7 @@ browser-compat: api.MediaStreamAudioSourceNode.MediaStreamAudioSourceNode
 ---
 {{APIRef("Web Audio API")}}
 
-The [Web Audio
-API](/en-US/docs/Web/API/Web_Audio_API)'s **`MediaStreamAudioSourceNode()`** constructor
+The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)'s **`MediaStreamAudioSourceNode()`** constructor
 creates and returns a new {{domxref("MediaStreamAudioSourceNode")}} object which uses
 the first audio track of a given {{domxref("MediaStream")}} as its source.
 
@@ -35,8 +35,7 @@ new MediaStreamAudioSourceNode(context, options)
     be associated with.
 - `options`
 
-  - : An object defining the properties you
-    want the `MediaStreamAudioSourceNode` to have:
+  - : An object defining the properties you want the `MediaStreamAudioSourceNode` to have:
 
     - `mediaStream`
       - : A required property which specifies the {{domxref("MediaStream")}} from which to obtain audio for the node.

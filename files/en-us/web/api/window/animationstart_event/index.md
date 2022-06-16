@@ -1,6 +1,7 @@
 ---
 title: 'Window: animationstart event'
 slug: Web/API/Window/animationstart_event
+page-type: web-api-event
 tags:
   - API
   - Animation

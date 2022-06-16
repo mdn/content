@@ -1,6 +1,7 @@
 ---
 title: Event.initEvent()
 slug: Web/API/Event/initEvent
+page-type: web-api-instance-method
 tags:
   - Deprecated
   - Method

@@ -1,6 +1,7 @@
 ---
 title: HashChangeEvent
 slug: Web/API/HashChangeEvent
+page-type: web-api-interface
 tags:
   - API
   - Event

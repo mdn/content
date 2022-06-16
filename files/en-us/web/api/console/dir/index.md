@@ -1,6 +1,7 @@
 ---
 title: console.dir()
 slug: Web/API/console/dir
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -51,7 +52,5 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [MSDN: Using
-  the F12 Tools Console to View Errors and Status](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85))
-- [Chrome
-  Console API reference](https://developer.chrome.com/docs/devtools/console/api/#dir)
+- [MSDN: Using the F12 Tools Console to View Errors and Status](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85))
+- [Chrome Console API reference](https://developer.chrome.com/docs/devtools/console/api/#dir)

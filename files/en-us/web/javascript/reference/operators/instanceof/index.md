@@ -100,10 +100,10 @@ The following example shows the behavior of `instanceof` with `String` objects.
 let literalString = 'This is a literal string';
 let stringObject  = new String('String created with constructor');
 
-literalString instanceof String;  // false, string literal is not a String
+literalString instanceof String;  // false, string primitive is not a String
 stringObject  instanceof String;  // true
 
-literalString instanceof Object;  // false, string literal is not an Object
+literalString instanceof Object;  // false, string primitive is not an Object
 stringObject  instanceof Object;  // true
 
 stringObject  instanceof Date;    // false

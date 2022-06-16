@@ -1,6 +1,7 @@
 ---
 title: NodeList.keys()
 slug: Web/API/NodeList/keys
+page-type: web-api-instance-method
 tags:
   - DOM
   - Iterator

@@ -1,6 +1,7 @@
 ---
 title: XRReferenceSpace.getOffsetReferenceSpace()
 slug: Web/API/XRReferenceSpace/getOffsetReferenceSpace
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -184,9 +185,7 @@ drawing a frame, immediately before fetching the viewer's pose using
 {{domxref("XRFrame.getViewerPose", "getViewerPose()")}}, and the rendering should be
 performed in this reference space.
 
-You can see code similar to this in use in our broader WebXR tutorial article called [Movement, orientation,
-and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion). In particular, check out the section called [Starting
-up the WebXR session](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion#starting_up_the_webxr_session).
+You can see code similar to this in use in our broader WebXR tutorial article called [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion). In particular, check out the section called [Starting up the WebXR session](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion#starting_up_the_webxr_session).
 
 ## Specifications
 

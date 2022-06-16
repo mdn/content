@@ -1,6 +1,7 @@
 ---
 title: OscillatorNode.type
 slug: Web/API/OscillatorNode/type
+page-type: web-api-instance-property
 tags:
   - API
   - OscillatorNode
@@ -48,8 +49,7 @@ available values are:
 ## Examples
 
 The following example shows basic usage of an {{ domxref("AudioContext") }} to create
-an oscillator node. For an applied example, check out our [Violent Theremin demo](https://mdn.github.io/violent-theremin/) ([see
-app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) for relevant code).
+an oscillator node. For an applied example, check out our [Violent Theremin demo](https://mdn.github.io/violent-theremin/) ([see app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) for relevant code).
 
 ```js
 // create web audio api context

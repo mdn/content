@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMap.delete()
 slug: Web/API/StylePropertyMap/delete
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -25,7 +26,7 @@ delete(property)
 
 ### Parameters
 
-- property
+- `property`
   - : An identifier indicating the stylistic feature (e.g. font, width, background
     color) to remove.
 

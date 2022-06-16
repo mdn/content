@@ -1,6 +1,7 @@
 ---
 title: BatteryManager.charging
 slug: Web/API/BatteryManager/charging
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -35,7 +36,7 @@ navigator.getBattery().then(battery => {
 });
 ```
 
-{{ EmbedLiveSample('Example', '100%', 30) }}
+{{ EmbedLiveSample('Examples', '100%', 30) }}
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: WEBGL_lose_context.restoreContext()
 slug: Web/API/WEBGL_lose_context/restoreContext
+page-type: webgl-extension-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: Element.removeAttributeNode()
 slug: Web/API/Element/removeAttributeNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: MIDIPort.manufacturer
 slug: Web/API/MIDIPort/manufacturer
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`manufacturer`** read-only property of the {{domxref("MIDIPort")}} interfa
 
 ## Value
 
-A {{domxref("DOMString","string")}} containing the manufacturer of the port.
+A string containing the manufacturer of the port.
 
 ## Examples
 

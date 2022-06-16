@@ -52,7 +52,7 @@ The `validate()` method is then used to check whether the module is valid.
 fetch('simple.wasm').then(response =>
   response.arrayBuffer()
 ).then(function(bytes) {
-  var valid = WebAssembly.validate(bytes);
+  const valid = WebAssembly.validate(bytes);
   console.log("The given bytes are "
     + (valid ? "" : "not ") + "a valid wasm module");
 });

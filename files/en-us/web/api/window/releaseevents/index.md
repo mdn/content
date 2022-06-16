@@ -1,6 +1,7 @@
 ---
 title: Window.releaseEvents()
 slug: Web/API/Window/releaseEvents
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -51,7 +52,7 @@ window.releaseEvents(Event.KEYPRESS)
 Note that you can pass a list of events to this method using the following syntax:
 `window.releaseEvents(Event.KEYPRESS | Event.KEYDOWN | Event.KEYUP)`.
 
-See also [`window.captureEvents`](/en-US/docs/Web/API/window.captureEvents)
+See also [`window.captureEvents`](/en-US/docs/Web/API/Window/captureEvents)
 ({{deprecated_inline}}).
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: AbortSignal.throwIfAborted()
 slug: Web/API/AbortSignal/throwIfAborted
+page-type: web-api-instance-method
 tags:
   - API
   - AbortSignal

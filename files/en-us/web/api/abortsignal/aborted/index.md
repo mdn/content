@@ -1,6 +1,7 @@
 ---
 title: AbortSignal.aborted
 slug: Web/API/AbortSignal/aborted
+page-type: web-api-instance-property
 tags:
   - API
   - AbortSignal

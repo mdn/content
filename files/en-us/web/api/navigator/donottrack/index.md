@@ -1,6 +1,7 @@
 ---
 title: Navigator.doNotTrack
 slug: Web/API/Navigator/doNotTrack
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -37,4 +38,4 @@ console.log(navigator.doNotTrack);
 
 ## See also
 
-- [The Do Not Track field guide](/en-US/docs/Web/Security/Do_not_track_field_guide)
+- [The Do Not Track field guide](/en-US/docs/Web/HTTP/Headers/DNT)

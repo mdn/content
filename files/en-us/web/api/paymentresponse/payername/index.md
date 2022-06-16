@@ -1,6 +1,7 @@
 ---
 title: PaymentRequest.payerName
 slug: Web/API/PaymentResponse/payerName
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

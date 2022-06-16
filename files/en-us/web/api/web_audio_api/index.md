@@ -1,6 +1,7 @@
 ---
 title: Web Audio API
 slug: Web/API/Web_Audio_API
+page-type: web-api-overview
 tags:
   - API
   - Audio
@@ -9,6 +10,7 @@ tags:
   - Overview
   - Web Audio API
   - sound
+browser-compat: api.AudioContext
 ---
 {{DefaultAPISidebar("Web Audio API")}}
 
@@ -198,13 +200,13 @@ You can find a number of examples at our [webaudio-example repo](https://github.
 
 ## Specifications
 
-{{Specifications("api.AudioContext")}}
+{{Specifications}}
 
 ## Browser compatibility
 
 ### AudioContext
 
-{{Compat("api.AudioContext", 0)}}
+{{Compat}}
 
 ## See also
 
@@ -218,8 +220,8 @@ You can find a number of examples at our [webaudio-example repo](https://github.
 - [Visualizations with Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
 - [Web audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - [Controlling multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
-- [Mixing Positional Audio and WebGL](https://www.html5rocks.com/tutorials/webaudio/positional_audio/)
-- [Developing Game Audio with the Web Audio API](https://www.html5rocks.com/tutorials/webaudio/games/)
+- [Mixing Positional Audio and WebGL](https://www.html5rocks.com/en/tutorials/webaudio/positional_audio/)
+- [Developing Game Audio with the Web Audio API](https://www.html5rocks.com/en/tutorials/webaudio/games/)
 - [Porting webkitAudioContext code to standards based AudioContext](/en-US/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext)
 
 ### Libraries

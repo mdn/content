@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.appendWindowStart
 slug: Web/API/SourceBuffer/appendWindowStart
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.decoding
 slug: Web/API/HTMLImageElement/decoding
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

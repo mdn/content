@@ -1,6 +1,7 @@
 ---
 title: Range.insertNode()
 slug: Web/API/Range/insertNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -28,7 +29,7 @@ insertNode(newNode)
 
 ### Parameters
 
-- _newNode_
+- `newNode`
   - : The {{domxref("Node")}} to insert at the start of the `range`.
 
 ### Return value

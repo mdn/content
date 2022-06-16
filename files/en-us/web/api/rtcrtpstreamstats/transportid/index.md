@@ -1,6 +1,7 @@
 ---
 title: RTCRtpStreamStats.transportId
 slug: Web/API/RTCRtpStreamStats/transportId
+page-type: web-api-instance-property
 tags:
   - API
   - Property

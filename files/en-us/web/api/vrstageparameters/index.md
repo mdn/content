@@ -1,6 +1,7 @@
 ---
 title: VRStageParameters
 slug: Web/API/VRStageParameters
+page-type: web-api-interface
 tags:
   - API
   - Deprecated

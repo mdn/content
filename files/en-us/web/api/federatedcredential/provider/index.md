@@ -1,6 +1,7 @@
 ---
 title: FederatedCredential.provider
 slug: Web/API/FederatedCredential/provider
+page-type: web-api-instance-property
 tags:
   - API
   - Credential Management API

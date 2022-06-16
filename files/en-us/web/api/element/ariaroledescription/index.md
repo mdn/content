@@ -1,6 +1,7 @@
 ---
 title: Element.ariaRoleDescription
 slug: Web/API/Element/ariaRoleDescription
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -42,4 +43,4 @@ console.log(el.ariaRoleDescription); // "an updated description of this widget"
 
 {{Compat}}
 
-- [ARIA: application role](/en-US/docs/Web/Accessibility/ARIA/Roles/Application_Role)
+- [ARIA: application role](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)

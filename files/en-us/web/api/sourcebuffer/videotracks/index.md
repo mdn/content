@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.videoTracks
 slug: Web/API/SourceBuffer/videoTracks
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

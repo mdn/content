@@ -1,6 +1,7 @@
 ---
 title: ServiceWorkerRegistration.getNotifications()
 slug: Web/API/ServiceWorkerRegistration/getNotifications
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -33,13 +34,14 @@ getNotifications(options)
 
 ### Parameters
 
-- options {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object containing options to filter the notifications returned. The available
     options are:
 
-    - `tag`: A string representing a notification tag. If
-      specified, only notifications that have this tag will be returned.
+    - `tag`
+      - : A string representing a notification tag. If
+        specified, only notifications that have this tag will be returned.
 
 ### Return value
 

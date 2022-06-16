@@ -1,6 +1,7 @@
 ---
 title: PaymentResponse.retry()
 slug: Web/API/PaymentResponse/retry
+page-type: web-api-instance-method
 tags:
   - API
   - Commerce
@@ -70,8 +71,7 @@ concept, in outline form, is:
 4. If `show()` is rejected, the payment request failed, usually because
     either there's already one being processed, because the {{Glossary("user agent")}}
     doesn't support any of the specified payment methods, or because of a security issue.
-    See the [list of
-    exceptions](/en-US/docs/Web/API/PaymentRequest/show#exceptions) for `show()` for further details. Call
+    See the [list of exceptions](/en-US/docs/Web/API/PaymentRequest/show#exceptions) for `show()` for further details. Call
     `complete("fail")` to close the payment request.
 
 ```js

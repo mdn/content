@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.clearColor()
 slug: Web/API/WebGLRenderingContext/clearColor
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: 'Document: touchcancel event'
 slug: Web/API/Document/touchcancel_event
+page-type: web-api-event
 tags:
   - Document
   - Event

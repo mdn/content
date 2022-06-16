@@ -1,6 +1,7 @@
 ---
 title: WritableStreamDefaultWriter.write()
 slug: Web/API/WritableStreamDefaultWriter/write
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -31,7 +32,7 @@ write(chunk)
 
 ### Parameters
 
-- chunk
+- `chunk`
   - : A block of binary data to pass to the `WritableStream`.
 
 ### Return value
@@ -121,8 +122,7 @@ const writableStream = new WritableStream({
 sendMessage("Hello, world.", writableStream);
 ```
 
-You can find the full code in our [Simple writer
-example](https://mdn.github.io/dom-examples/streams/simple-writer/).
+You can find the full code in our [Simple writer example](https://mdn.github.io/dom-examples/streams/simple-writer/).
 
 ## Specifications
 

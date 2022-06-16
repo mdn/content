@@ -1,6 +1,7 @@
 ---
 title: AudioDecoder.decode()
 slug: Web/API/AudioDecoder/decode
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -26,7 +27,7 @@ decode(chunk)
 
 ### Return value
 
-{{jsxref("Undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

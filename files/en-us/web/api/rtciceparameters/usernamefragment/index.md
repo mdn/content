@@ -1,6 +1,7 @@
 ---
 title: RTCIceParameters.usernameFragment
 slug: Web/API/RTCIceParameters/usernameFragment
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate

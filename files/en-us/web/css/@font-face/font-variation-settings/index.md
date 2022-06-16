@@ -37,7 +37,10 @@ font-variation-settings: "xhgt" 0.7;
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+normal                 |
+[ <string> <number> ]#
+```
 
 ## Examples
 

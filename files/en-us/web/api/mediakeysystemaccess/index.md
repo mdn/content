@@ -1,6 +1,7 @@
 ---
 title: MediaKeySystemAccess
 slug: Web/API/MediaKeySystemAccess
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -20,7 +21,7 @@ The **`MediaKeySystemAccess`** interface of the [EncryptedMediaExtensions API](/
 ## Properties
 
 - {{domxref("MediaKeySystemAccess.keySystem")}} {{readonlyinline}}
-  - : Returns a {{domxref('DOMString')}} identifying the key system being used.
+  - : Returns a string identifying the key system being used.
 
 ## Methods
 

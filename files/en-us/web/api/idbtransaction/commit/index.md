@@ -1,6 +1,7 @@
 ---
 title: IDBTransaction.commit()
 slug: Web/API/IDBTransaction/commit
+page-type: web-api-instance-method
 tags:
   - API
   - IDBTransaction
@@ -32,7 +33,7 @@ None.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

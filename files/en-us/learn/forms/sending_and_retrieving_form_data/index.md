@@ -60,7 +60,7 @@ The {{HTMLElement("form")}} element defines how the data will be sent. All of it
 
 ### The action attribute
 
-The [`action`](/en-US/docs/Web/HTML/Attributes/action) attribute defines where the data gets sent. Its value must be a valid relative or absolute [URL](/en-US/docs/Learn/Common_questions/What_is_a_URL). If this attribute isn't provided, the data will be sent to the URL of the page containing the form — the current page.
+The {{htmlattrxref("action","form")}} attribute defines where the data gets sent. Its value must be a valid relative or absolute [URL](/en-US/docs/Learn/Common_questions/What_is_a_URL). If this attribute isn't provided, the data will be sent to the URL of the page containing the form — the current page.
 
 In this example, the data is sent to an absolute URL — `https://example.com`:
 
@@ -88,7 +88,7 @@ How the data is sent depends on the `method` attribute.
 
 ### The method attribute
 
-The [`method`](/en-US/docs/Web/HTML/Attributes/method) attribute defines how data is sent. The [HTTP protocol](/en-US/docs/Web/HTTP) provides several ways to perform a request; HTML form data can be transmitted via a number of different methods, the most common being the `GET` method and the `POST` method
+The {{htmlattrxref("method","form")}} attribute defines how data is sent. The [HTTP protocol](/en-US/docs/Web/HTTP) provides several ways to perform a request; HTML form data can be transmitted via a number of different methods, the most common being the `GET` method and the `POST` method
 
 To understand the difference between those two methods, let's step back and examine [how HTTP works](/en-US/docs/Web/HTTP/Overview). Each time you want to reach a resource on the Web, the browser sends a request to a URL. An HTTP request consists of two parts: a [header](/en-US/docs/Web/HTTP/Headers) that contains a set of global metadata about the browser's capabilities, and a body that can contain information necessary for the server to process the specific request.
 
@@ -215,7 +215,7 @@ This example displays a page with the data we sent. You can see this in action i
 
 ### Example: Python
 
-This example shows how you would use Python to do the same thing — display the submitted data on a web page. This uses the [Flask framework](https://flask.pocoo.org/) for rendering the templates, handling the form data submission, etc. (see [python-example.py](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/python-example.py)).
+This example shows how you would use Python to do the same thing — display the submitted data on a web page. This uses the [Flask framework](https://flask.palletsprojects.com/) for rendering the templates, handling the form data submission, etc. (see [python-example.py](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/python-example.py)).
 
 ```python
 from flask import Flask, render_template, request
@@ -245,7 +245,7 @@ The two templates referenced in the above code are as follows (these need to be 
 
 There are many other server-side technologies you can use for form handling, including Perl, Java, .Net, Ruby, etc. Just pick the one you like best. That said, it's worth noting that it's very uncommon to use these technologies directly because this can be tricky. It's more common to use one of the many high quality frameworks that make handling forms easier, such as:
 
-- [Django](/en-US/docs/Learn/Server-side/Django) for Python (a bit more heavyweight than [Flask](https://flask.pocoo.org/), but with more tools and options).
+- [Django](/en-US/docs/Learn/Server-side/Django) for Python (a bit more heavyweight than [Flask](https://flask.palletsprojects.com/), but with more tools and options).
 - [Express](/en-US/docs/Learn/Server-side/Express_Nodejs) for Node.js.
 - [Laravel](https://laravel.com/) for PHP.
 - [Ruby On Rails](https://rubyonrails.org/) for Ruby.

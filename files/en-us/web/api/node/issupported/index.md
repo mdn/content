@@ -1,6 +1,7 @@
 ---
 title: Node.isSupported()
 slug: Web/API/Node/isSupported
+page-type: web-api-instance-method
 tags:
   - Method
   - Deprecated

@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onpointercancel
 slug: Web/API/GlobalEventHandlers/onpointercancel
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -22,7 +23,7 @@ processes {{domxref("HTMLElement/pointercancel_event", "pointercancel")}} events
 ```js
 targetElement.onpointercancel = cancelHandler;
 
-var cancelHandler = targetElement.onpointercancel;
+const cancelHandler = targetElement.onpointercancel;
 ```
 
 ### Value
@@ -42,7 +43,7 @@ function cancelHandler(ev) {
   // Process the pointercancel event
 }
 function init() {
-  var el = document.getElementById('target1');
+  const el = document.getElementById('target1');
   el.onpointercancel = cancelHandler;
 }
 </script>

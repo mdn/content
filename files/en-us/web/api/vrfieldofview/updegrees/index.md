@@ -1,6 +1,7 @@
 ---
 title: VRFieldOfView.upDegrees
 slug: Web/API/VRFieldOfView/upDegrees
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

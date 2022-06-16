@@ -1,6 +1,7 @@
 ---
 title: XRRenderState.depthFar
 slug: Web/API/XRRenderState/depthFar
+page-type: web-api-instance-property
 tags:
   - API
   - AR

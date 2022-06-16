@@ -1,6 +1,7 @@
 ---
 title: 'AudioTrackList: addtrack event'
 slug: Web/API/AudioTrackList/addtrack_event
+page-type: web-api-event
 tags:
   - API
   - Event

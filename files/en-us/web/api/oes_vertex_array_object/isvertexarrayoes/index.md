@@ -1,6 +1,7 @@
 ---
 title: OES_vertex_array_object.isVertexArrayOES()
 slug: Web/API/OES_vertex_array_object/isVertexArrayOES
+page-type: webgl-extension-method
 tags:
   - API
   - Method
@@ -24,7 +25,7 @@ isVertexArrayOES(arrayObject)
 
 ### Parameters
 
-- arrayObject
+- `arrayObject`
   - : A {{domxref("WebGLVertexArrayObject")}} (VAO) object to test.
 
 ### Return value

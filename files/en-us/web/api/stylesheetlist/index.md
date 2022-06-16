@@ -1,6 +1,7 @@
 ---
 title: StyleSheetList
 slug: Web/API/StyleSheetList
+page-type: web-api-interface
 tags:
   - API
   - CSSOM

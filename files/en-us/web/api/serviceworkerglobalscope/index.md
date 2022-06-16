@@ -1,6 +1,7 @@
 ---
 title: ServiceWorkerGlobalScope
 slug: Web/API/ServiceWorkerGlobalScope
+page-type: web-api-interface
 tags:
   - API
   - Interface

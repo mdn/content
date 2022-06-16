@@ -1,6 +1,7 @@
 ---
 title: SerialPort.open()
 slug: Web/API/SerialPort/open
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -21,7 +22,7 @@ open(options)
 
 ### Parameters
 
-- _`options`_
+- `options`
 
   - : An object with any of the following values:
 

@@ -1,6 +1,7 @@
 ---
 title: AudioListener.upY
 slug: Web/API/AudioListener/upY
+page-type: web-api-instance-property
 tags:
   - API
   - AudioListener

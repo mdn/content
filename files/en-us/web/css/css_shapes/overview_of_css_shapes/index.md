@@ -62,7 +62,7 @@ In the example below you can change the value `border-box` to any of the other a
 
 {{EmbedGHLiveSample("css-examples/shapes/overview/box.html", '100%', 810)}}
 
-To explore the box values in more detail see our guide covering [Shapes From Box Values](/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values).
+To explore the box values in more detail see our guide covering [Shapes From Box Values](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values).
 
 ### Shapes from images
 

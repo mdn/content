@@ -1,6 +1,7 @@
 ---
 title: A simple RTCDataChannel sample
 slug: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
+page-type: guide
 tags:
   - API
   - Communication
@@ -57,7 +58,7 @@ The WebRTC API makes heavy use of {{jsxref("Promise")}}s. They make it very easy
 
 ### Starting up
 
-When the script is run, we set up a {{event("load")}} event listener, so that once the page is fully loaded, our `startup()` function is called.
+When the script is run, we set up a {{domxref("Window/load_event", "load")}} event listener, so that once the page is fully loaded, our `startup()` function is called.
 
 ```js
 function startup() {

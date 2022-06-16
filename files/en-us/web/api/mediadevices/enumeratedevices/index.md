@@ -1,6 +1,7 @@
 ---
 title: MediaDevices.enumerateDevices()
 slug: Web/API/MediaDevices/enumerateDevices
+page-type: web-api-instance-method
 tags:
   - API
   - MediaDevices

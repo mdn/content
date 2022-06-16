@@ -1,6 +1,7 @@
 ---
 title: USBDevice.open()
 slug: Web/API/USBDevice/open
+page-type: web-api-instance-method
 tags:
   - API
   - Method

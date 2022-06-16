@@ -125,17 +125,11 @@ If the header has a lot of available directives, feel free to include multiple d
 
 ## Examples
 
-Fill in a some examples that show common use cases of the HTTP header (for example, a typical request and response sequence).
+### A descriptive heading
 
-```http
-my HTTP header example
-```
+Each example must have an H3 heading (`###`) naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
 
-And/or include a list of links to useful code samples that live elsewhere:
-
-- x
-- y
-- z
+See our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information.
 
 ## Specifications
 

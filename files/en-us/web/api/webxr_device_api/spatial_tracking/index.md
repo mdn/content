@@ -1,6 +1,7 @@
 ---
 title: 'Spaces and reference spaces: Spatial tracking in WebXR'
 slug: Web/API/WebXR_Device_API/Spatial_tracking
+page-type: guide
 tags:
   - 3D
   - API

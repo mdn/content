@@ -1,6 +1,7 @@
 ---
 title: CloseEvent.initCloseEvent()
 slug: Web/API/CloseEvent/initCloseEvent
+page-type: web-api-instance-method
 tags:
   - API
   - CloseEvent
@@ -33,16 +34,16 @@ initCloseEvent(type, canBubble, cancelable, wasClean, reasonCode, reason)
 
 ### Parameters
 
-- _`type`_
+- `type`
   - : the string to set the event's {{domxref("Event.type", "type")}} to. Possible type
     for close event is `close`.
-- _`canBubble`_
+- `canBubble`
   - : whether or not the event can bubble. Sets the value of
     {{domxref("Event.bubbles")}}.
-- _`cancelable`_
+- `cancelable`
   - : whether or not the event's default action can be prevented. Sets the value of
     {{domxref("Event.cancelable")}}.
-- _`wasClean`_
+- `wasClean`
   - : whether or not the connection was cleanly closed.
 - `reasonCode`
   - : the reason of the close.

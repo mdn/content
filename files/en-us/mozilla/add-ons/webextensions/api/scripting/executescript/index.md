@@ -20,8 +20,8 @@ Injects a script into a target context. The script is run at `document_idle` by 
 
 To use this API you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and permission for the target's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
 
-In Firefox and Safari, partial lack of host permissions can result in a successful execution (with the partial results in the resolved promise). In Chrome, any missing permission prevents any execution from happening, see ([crbug 1325114](https://crbug.com/1325114))).
- 
+In Firefox and Safari, partial lack of host permissions can result in a successful execution (with the partial results in the resolved promise). In Chrome, any missing permission prevents any execution from happening, see ([Issue 1325114](https://bugs.chromium.org/p/chromium/issues/detail?id=1325114))).
+
 The scripts you inject are called [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts).
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
@@ -49,7 +49,7 @@ let results = await browser.scripting.executeScript(
     - `injectImmediately`{{optional_inline}}
       - : `boolean`. Whether the injection into the target is triggered as soon as possible, but not necessarily prior to page load.
     - `target`
-      - : {{WebExtAPIRef("scripting.InjectionTarget")}}. Details specifying the target to inject the script into.   
+      - : {{WebExtAPIRef("scripting.InjectionTarget")}}. Details specifying the target to inject the script into.
 
 ### Return value
 
@@ -68,7 +68,7 @@ Each `InjectionResult` object has these properties:
     - `message`
       - : `string`. A message explaining why the injection failed.
 
-The result of the script is the last evaluated statement, which is similar to the results seen if you executed the script in the [Web Console](/en-US/docs/Tools/Web_Console) (not any `console.log()` output). For example, consider a script like this:
+The result of the script is the last evaluated statement, which is similar to the results seen if you executed the script in the [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) (not any `console.log()` output). For example, consider a script like this:
 
 ```js
 let foo='my result'; foo;
@@ -117,11 +117,10 @@ browser.action.onClicked.addListener(async tab => {
 });
 ```
 
-
 {{WebExtExamples}}
 
 ## Browser compatibility
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/extensions/scripting#method-executeScript) API.
+> **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/scripting/#method-executeScript) API.

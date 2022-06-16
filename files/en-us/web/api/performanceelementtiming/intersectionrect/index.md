@@ -1,6 +1,7 @@
 ---
 title: PerformanceElementTiming.intersectionRect
 slug: Web/API/PerformanceElementTiming/intersectionRect
+page-type: web-api-instance-property
 tags:
   - API
   - Property

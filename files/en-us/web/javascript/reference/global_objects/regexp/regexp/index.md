@@ -38,7 +38,7 @@ RegExp(pattern[, flags])
 
     As of ES5, this can also be another `RegExp` object or literal (for the
     two RegExp constructor notations only). Patterns may include
-    [special characters](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_special_characters)
+    [special characters](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#using_special_characters)
     to match a wider range of values than would a literal string.
 
 - `flags`
@@ -71,8 +71,7 @@ RegExp(pattern[, flags])
     - `s` ("dotAll")
       - : Allows `.` to match newlines.
     - `u` (unicode)
-      - : Treat `pattern` as a sequence of Unicode code points. (See
-        also [Binary strings](/en-US/docs/Web/API/DOMString/Binary)).
+      - : Treat `pattern` as a sequence of Unicode code points..
     - `y` (sticky)
       - : Matches only from the index indicated by the `lastIndex` property of
         this regular expression in the target string. Does not attempt to match from any

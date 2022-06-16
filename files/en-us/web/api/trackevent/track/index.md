@@ -1,6 +1,7 @@
 ---
 title: TrackEvent.track
 slug: Web/API/TrackEvent/track
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

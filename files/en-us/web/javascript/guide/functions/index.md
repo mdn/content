@@ -57,6 +57,20 @@ y = mycar.make; // y gets the value "Toyota"
                 // (the make property was changed by the function)
 ```
 
+When you pass an array as a parameter, if the function changes any of the array's values, that change is visible outside the function, as shown in the following example:
+
+```js
+function myFunc(theArr) {
+  theArr[0] = 30;
+}
+
+const arr = [45];
+
+console.log(arr[0]); // 45
+myFunc(arr);
+console.log(arr[0]); // 30
+```
+
 ### Function expressions
 
 While the function declaration above is syntactically a statement, functions can also be created by a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function).
@@ -484,7 +498,7 @@ getCode();    // Returns the apiCode
 
 > **Note:** There are a number of pitfalls to watch out for when using closures!
 >
-> If an enclosed function defines a variable with the same name as a variable in the outer scope, then there is no way to refer to the variable in the outer scope again. (The inner scope variable "overrides" the outer one, until the program exits the inner scope.)
+> If an enclosed function defines a variable with the same name as a variable in the outer scope, then there is no way to refer to the variable in the outer scope again. (The inner scope variable "overrides" the outer one, until the program exits the inner scope. It can be thought of as a [name conflict](#name_conflicts).)
 >
 > ```js example-bad
 > var createPet = function(name) {  // The outer function defines a variable called "name".

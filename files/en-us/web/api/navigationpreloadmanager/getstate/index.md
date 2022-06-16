@@ -1,6 +1,7 @@
 ---
 title: NavigationPreloadManager.getState()
 slug: Web/API/NavigationPreloadManager/getState
+page-type: web-api-instance-method
 tags:
   - API
   - Method

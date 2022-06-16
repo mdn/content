@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.maxPacketLifeTime
 slug: Web/API/RTCDataChannel/maxPacketLifeTime
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCDataChannel

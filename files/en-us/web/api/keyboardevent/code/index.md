@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.code
 slug: Web/API/KeyboardEvent/code
+page-type: web-api-instance-property
 tags:
   - API
   - Code
@@ -27,7 +28,7 @@ To determine what character corresponds with the key event, use the {{domxref("K
 
 ## Value
 
-The code values for Windows, Linux, and macOS are list on the [KeyboardEvent: code values](/en-US/docs/Web/API/KeyboardEvent/code/code_values) page.
+The code values for Windows, Linux, and macOS are list on the [KeyboardEvent: code values](/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values) page.
 
 ## Examples
 
@@ -78,7 +79,6 @@ This example establishes an event listener for {{event("keydown")}} events that 
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="world">
   <polygon id="spaceship" points="15,0 0,30 30,30"/>
 </svg>
-<script>refresh();</script>
 ```
 
 #### CSS
@@ -154,6 +154,7 @@ function refresh() {
 
   spaceship.setAttribute("transform", transform);
 }
+refresh();
 ```
 
 Finally, the `addEventListener()` method is used to start listening for {{event("keydown")}} events, acting on each key by updating the ship position and rotation angle, then calling `refresh()` to draw the ship at its new position and angle.

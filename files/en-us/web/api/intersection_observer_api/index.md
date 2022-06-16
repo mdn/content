@@ -1,6 +1,7 @@
 ---
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
+page-type: web-api-overview
 tags:
   - API
   - Clipping
@@ -11,7 +12,7 @@ tags:
   - Performance
   - Reference
   - Web
-spec-urls: https://w3c.github.io/IntersectionObserver/
+browser-compat: api.IntersectionObserver
 ---
 {{DefaultAPISidebar("Intersection Observer API")}}
 
@@ -110,7 +111,7 @@ Also, note that if you specified the `root` option, the target must be a descend
 
 ### How intersection is calculated
 
-All areas considered by the Intersection Observer API are rectangles; elements which are irregularly shaped are considered as occupying the smallest rectangle which encloses all of the element's parts. Similarly, if the visible portion of an element is not rectangular, the element's intersection rectangle is construed to be the smallest rectangle that contains all the visible portions of the element.
+All areas considered by the Intersection Observer API are rectangles; elements which are irregularly shaped are considered as occupying the smallest rectangle which encloses all of the element's parts. Similarly, if the visible portion of an element is not rectangular, the element's intersection rectangle is considered to be the smallest rectangle that contains all the visible portions of the element.
 
 It's useful to understand a bit about how the various properties provided by {{domxref("IntersectionObserverEntry")}} describe an intersection.
 
@@ -425,7 +426,7 @@ The constants and variables we set up here are:
 - `decreasingColor`
   - : Similarly, this is a string defining a color we'll apply when the visibility ratio is decreasing.
 
-We call {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} to start listening for the {{event("load")}} event; once the page has finished loading, we get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
+We call {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} to start listening for the {{domxref("Window/load_event", "load")}} event; once the page has finished loading, we get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
 
 #### Creating the intersection observer
 
@@ -586,7 +587,7 @@ There's an even more extensive example at [Timing element visibility with the In
 
 ## Browser compatibility
 
-{{Compat("api.IntersectionObserver")}}
+{{Compat}}
 
 ## See also
 

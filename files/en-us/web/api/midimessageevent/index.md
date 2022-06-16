@@ -1,6 +1,7 @@
 ---
 title: MIDIMessageEvent
 slug: Web/API/MIDIMessageEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface

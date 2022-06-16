@@ -1,6 +1,7 @@
 ---
 title: URL.toJSON()
 slug: Web/API/URL/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method

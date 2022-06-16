@@ -1,6 +1,7 @@
 ---
 title: Animation.commitStyles()
 slug: Web/API/Animation/commitStyles
+page-type: web-api-instance-method
 tags:
   - API
   - Animation

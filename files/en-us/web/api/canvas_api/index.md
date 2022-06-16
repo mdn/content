@@ -1,6 +1,7 @@
 ---
 title: Canvas API
 slug: Web/API/Canvas_API
+page-type: web-api-overview
 tags:
   - API
   - Canvas
@@ -8,6 +9,7 @@ tags:
   - JavaScript
   - Overview
   - Reference
+browser-compat: html.elements.canvas
 ---
 {{CanvasSidebar}}
 
@@ -48,7 +50,6 @@ ctx.fillRect(10, 10, 150, 100);
 - {{domxref("HTMLCanvasElement")}}
 - {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasGradient")}}
-- {{domxref("CanvasImageSource")}}
 - {{domxref("CanvasPattern")}}
 - {{domxref("ImageBitmap")}}
 - {{domxref("ImageData")}}
@@ -71,8 +72,6 @@ ctx.fillRect(10, 10, 150, 100);
   - : A hands-on, book-length introduction to the Canvas API and WebGL.
 - [Canvas Handbook](https://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html)
   - : A handy reference for the Canvas API.
-- [Demo: A basic ray-caster](/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster)
-  - : A demo of ray-casting animation using canvas.
 - [Manipulating video using canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
   - : Combining {{HTMLElement("video")}} and {{HTMLElement("canvas")}} to manipulate video data in real time.
 
@@ -97,11 +96,11 @@ The Canvas API is extremely powerful, but not always simple to use. The librarie
 
 ## Specifications
 
-{{Specifications("html.elements.canvas")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-Mozilla applications gained support for `<canvas>` starting with Gecko 1.8 ([Firefox 1.5](/en-US/docs/Mozilla/Firefox/Releases/1.5)). The element was originally introduced by Apple for the macOS Dashboard and Safari. Internet Explorer supports `<canvas>` from version 9 onwards; for earlier versions of IE, a page can effectively add support for `<canvas>` by including a script from Google's [Explorer Canvas](https://github.com/arv/explorercanvas) project. Google Chrome and Opera 9 also support `<canvas>`.
+{{Compat}}
 
 ## See also
 

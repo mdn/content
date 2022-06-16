@@ -1,6 +1,7 @@
 ---
 title: Response.clone()
 slug: Web/API/Response/clone
+page-type: web-api-instance-method
 tags:
   - API
   - Fetch
@@ -13,6 +14,21 @@ browser-compat: api.Response.clone
 {{APIRef("Fetch")}}
 
 The **`clone()`** method of the {{domxref("Response")}} interface creates a clone of a response object, identical in every way, but stored in a different variable.
+
+Like the underlying {{domxref("ReadableStream.tee")}} api,
+the {{domxref("Response.body", "body")}} of a cloned `Response`
+will signal backpressure at the rate of the _faster_ consumer of the two bodies,
+and unread data is enqueued internally on the slower consumed `body`
+without any limit or backpressure.
+Backpressure refers to the mechanism by which the streaming consumer of data
+(in this case, the code that reads the body)
+slows down the producer of data (such as the TCP server)
+so as not to load large amounts of data in memory
+that is waiting to be used by the application.
+If only one cloned branch is consumed, then the entire body will be buffered in memory.
+Therefore, `clone()` is one way to read a response twice in sequence,
+but you should not use it to read very large bodies
+in parallel at different speeds.
 
 `clone()` throws a {{jsxref("TypeError")}} if the response body has already been used.
 In fact, the main reason `clone()` exists is to allow multiple uses of body objects (when they are one-use only.)

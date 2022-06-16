@@ -1,6 +1,7 @@
 ---
 title: FontFace.descentOverride
 slug: Web/API/FontFace/descentOverride
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`descentOverride`** property of the {{domxref("FontFace")}} interface retu
 
 ## Value
 
-A {{domxref("CSSOMString","string")}}.
+A string.
 
 ## Examples
 

@@ -54,13 +54,13 @@ This Set-Cookie was blocked because it had the "SameSite=None" attribute but did
 
 The warning appears because any cookie that requests `SameSite=None` but is not marked `Secure` will be rejected.
 
-```example-bad
+```http example-bad
 Set-Cookie: flavor=choco; SameSite=None
 ```
 
 To fix this, you will have to add the `Secure` attribute to your `SameSite=None` cookies.
 
-```example-good
+```http example-good
 Set-Cookie: flavor=choco; SameSite=None; Secure
 ```
 
@@ -82,13 +82,13 @@ Cookie "myCookie" has "SameSite" policy set to "Lax" because it is missing a "Sa
 
 The warning appears because the `SameSite` policy for a cookie was not explicitly specified:
 
-```example-bad
+```http example-bad
 Set-Cookie: flavor=choco
 ```
 
 You should explicitly communicate the intended `SameSite` policy for your cookie (rather than relying on browsers to apply `SameSite=Lax` automatically). This will also improve the experience across browsers as not all of them default to `Lax` yet.
 
-```example-good
+```http example-good
 Set-Cookie: flavor=choco; SameSite=Lax
 ```
 

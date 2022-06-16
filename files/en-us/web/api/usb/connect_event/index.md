@@ -1,6 +1,7 @@
 ---
 title: 'USB: connect event'
 slug: Web/API/USB/connect_event
+page-type: web-api-event
 tags:
   - API
   - Event

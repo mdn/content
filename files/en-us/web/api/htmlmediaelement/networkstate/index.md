@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.networkState
 slug: Web/API/HTMLMediaElement/networkState
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

@@ -1,6 +1,7 @@
 ---
 title: AudioDestinationNode
 slug: Web/API/AudioDestinationNode
+page-type: web-api-interface
 tags:
   - API
   - AudioDestinationNode

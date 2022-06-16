@@ -1,6 +1,7 @@
 ---
 title: Recording a media element
 slug: Web/API/MediaStream_Recording_API/Recording_a_media_element
+page-type: guide
 tags:
   - API
   - Audio
@@ -238,7 +239,7 @@ startButton.addEventListener("click", function() {
   })
   .catch((error) => {
     if (error.name === "NotFoundError") {
-      log("Camera or microphone not found. Can’t record.");
+      log("Camera or microphone not found. Can't record.");
     } else {
       log(error);
     }

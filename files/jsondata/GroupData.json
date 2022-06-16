@@ -30,7 +30,7 @@
       ],
       "interfaces": ["BatteryManager"],
       "methods": ["Navigator.getBattery()"],
-      "properties": ["Navigator.battery"],
+      "properties": [],
       "events": []
     },
     "Barcode Detection API": {
@@ -81,7 +81,6 @@
       ],
       "interfaces": [
         "CanvasGradient",
-        "CanvasImageSource",
         "CanvasPattern",
         "CanvasRenderingContext2D",
         "HTMLCanvasElement",
@@ -137,8 +136,7 @@
       "interfaces": ["ContentIndex", "ContentIndexEvent"],
       "methods": [],
       "properties": [
-        "ServiceWorkerRegistration.index",
-        "ServiceWorkerGlobalScope.oncontentdelete"
+        "ServiceWorkerRegistration.index"
       ],
       "events": ["ServiceWorkerGlobalScope: contentdelete"]
     },
@@ -385,18 +383,18 @@
       "events": []
     },
     "File API": {
+      "overview": ["File API"],
       "guides": [
-        "/docs/Using_files_from_web_applications",
-        "/docs/Extensions/Using_the_DOM_File_API_in_chrome_code"
+        "/docs/Web/API/File_API/Using_files_from_web_applications"
       ],
       "interfaces": [
+        "Blob",
         "File",
         "FileList",
         "FileReader",
-        "FileReaderSync",
-        "Blob"
+        "FileReaderSync"
       ],
-      "methods": [],
+      "methods": ["URL.createObjectURL()", "URL.revokeObjectURL()"],
       "properties": [],
       "events": []
     },
@@ -758,7 +756,6 @@
       ],
       "interfaces": [
         "MediaCapabilities",
-        "ScreenLuminance",
         "Screen"
       ],
       "methods": [
@@ -767,13 +764,7 @@
       ],
       "properties": [],
       "events": [],
-      "dictionaries": [
-        "MediaConfiguration",
-        "VideoConfiguration",
-        "AudioConfiguration",
-        "MediaDecodingConfiguration",
-        "MediaEncodingConfiguration"
-      ]
+      "dictionaries": []
     },
     "Media Capture and Streams": {
       "overview": ["Media Streams API"],
@@ -1047,6 +1038,14 @@
       ],
       "events": []
     },
+    "Prioritized Task Scheduling API": {
+      "overview": ["Prioritized Task Scheduling API"],
+      "guides": [],
+      "interfaces": ["Scheduler", "TaskController", "TaskSignal", "AbortSignal", "TaskPriorityChangeEvent"],
+      "methods": [],
+      "properties": ["Window.scheduler"],
+      "events": []
+    },
     "Proximity Events": {
       "overview": ["Proximity Events"],
       "interfaces": ["DeviceProximityEvent", "UserProximityEvent"],
@@ -1071,6 +1070,22 @@
         "ServiceWorkerGlobalScope: push",
         "ServiceWorkerGlobalScope: pushsubscriptionchange"
       ]
+    },
+    "Reporting API": {
+      "overview": ["Reporting_API"],
+      "guides": [],
+      "interfaces": [
+        "CrashReportBody",
+        "DeprecationReportBody",
+        "InterventionReportBody",
+        "Report",
+        "ReportBody",
+        "ReportError",
+        "ReportingObserver"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
     },
     "Resize Observer API": {
       "overview": ["Resize Observer API"],
@@ -1521,6 +1536,7 @@
         "/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API",
         "/docs/Web/API/Web_Audio_API/Best_practices",
         "/docs/Web/API/Web_Audio_API/Advanced_techniques",
+        "/docs/Web/API/Web_Audio_API/Using_AudioWorklet",
         "/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode",
         "/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext",
         "/docs/Web/API/Web_Audio_API/Simple_synth",
@@ -1733,7 +1749,6 @@
         "WebGL2RenderingContext",
         "WEBGL_compressed_texture_s3tc",
         "WEBGL_compressed_texture_s3tc_srgb",
-        "WEBGL_compressed_texture_atc",
         "WEBGL_compressed_texture_etc1",
         "WEBGL_compressed_texture_pvrtc",
         "WEBGL_debug_renderer_info",
@@ -1900,30 +1915,7 @@
         "RTCRTPStreamStats"
       ],
       "types": [
-        "RTCIceTransportPolicy",
-        "RTCBundlePolicy",
-        "RTCRtcpMuxPolicy",
-        "RTCSignalingState",
-        "RTCIceGatheringState",
-        "RTCPeerConnectionState",
-        "RTCIceConnectionState",
-        "RTCIceProtocol",
-        "RTCIceTcpCandidateType",
-        "RTCIceCandidateType",
-        "RTCPriorityType",
-        "RTCRtpTransceiverDirection",
-        "RTCDtxStatus",
-        "RTCDegradationPreference",
-        "RTCDtlsTransportState",
-        "RTCIceGathererState",
-        "RTCIceComponent",
-        "RTCSctpTransportState",
-        "RTCDataChannelState",
-        "RTCErrorDetailType",
-        "RTCStatsType",
-        "RTCCodecType",
-        "RTCQualityLimitationReason",
-        "RTCStatsIceCandidatePairState"
+        "RTCStatsType"
       ],
       "methods": ["MediaDevices.getUserMedia()"],
       "properties": ["Navigator.mediaDevices"],
@@ -1988,7 +1980,7 @@
         "SpeechGrammarList",
         "SpeechRecognition",
         "SpeechRecognitionAlternative",
-        "SpeechRecognitionError",
+        "SpeechRecognitionErrorEvent",
         "SpeechRecognitionEvent",
         "SpeechRecognitionResult",
         "SpeechRecognitionResultList",

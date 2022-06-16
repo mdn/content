@@ -1,6 +1,7 @@
 ---
 title: PushManager.getSubscription()
 slug: Web/API/PushManager/getSubscription
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

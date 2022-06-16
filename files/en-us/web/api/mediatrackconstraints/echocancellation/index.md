@@ -1,6 +1,7 @@
 ---
 title: MediaTrackConstraints.echoCancellation
 slug: Web/API/MediaTrackConstraints/echoCancellation
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints
@@ -18,7 +19,7 @@ browser-compat: api.MediaTrackConstraints.echoCancellation
 
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`echoCancellation`** property is a
-[`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainBoolean) describing the requested or mandatory constraints placed
+[`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) describing the requested or mandatory constraints placed
 upon the value of the {{domxref("MediaTrackSettings.echoCancellation",
   "echoCancellation")}} constrainable property.
 
@@ -56,8 +57,7 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Exampl
 ## See also
 
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities,
-  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}

@@ -1,6 +1,7 @@
 ---
 title: AudioParam.setTargetAtTime()
 slug: Web/API/AudioParam/setTargetAtTime
+page-type: web-api-instance-method
 tags:
   - API
   - AudioParam
@@ -25,13 +26,13 @@ setTargetAtTime(target, startTime, timeConstant)
 
 ### Parameters
 
-- target
+- `target`
   - : The value the parameter will start to transition towards at the given start time.
-- startTime
+- `startTime`
   - : The time that the exponential transition will begin, in the same time coordinate
     system as {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}. If it is less than or equal to
     `AudioContext.currentTime`, the parameter will start changing immediately.
-- timeConstant
+- `timeConstant`
   - : The time-constant value, given in seconds, of an exponential approach to the target
     value. The larger this value is, the slower the transition will be.
 
@@ -58,8 +59,7 @@ another <math>
 <mtext>%</mtext>
 </mrow><annotation encoding="TeX">1 - e^{-1} \approx 63.2%</annotation>
 </semantics></math>. For the complete formula (which uses a first-order linear continuous
-time-invariant system), check the [Web
-Audio specification](https://webaudio.github.io/web-audio-api/#dom-audioparam-settargetattime).
+time-invariant system), check the [Web Audio specification](https://webaudio.github.io/web-audio-api/#dom-audioparam-settargetattime).
 
 If you absolutely need to reach the target value by a specific time, you can use
 {{domxref("AudioParam.exponentialRampToValueAtTime()")}}. However, for mathematical
@@ -100,9 +100,7 @@ the time progresses.
 
 ## Examples
 
-In this example, we have a media source with two control buttons (see the [webaudio-examples
-repo](https://github.com/mdn/webaudio-examples/blob/master/audio-param/index.html) for the source code, or [view the example
-live](https://mdn.github.io/webaudio-examples/audio-param/).) When these buttons are pressed, `setTargetAtTime()` is used to
+In this example, we have a media source with two control buttons (see the [webaudio-examples repo](https://github.com/mdn/webaudio-examples/blob/master/audio-param/index.html) for the source code, or [view the example live](https://mdn.github.io/webaudio-examples/audio-param/).) When these buttons are pressed, `setTargetAtTime()` is used to
 fade the gain value up to 1.0, and down to 0, respectively, with the effect starting
 after 1 second, and the length of time the effect lasts being controlled by the
 timeConstant.

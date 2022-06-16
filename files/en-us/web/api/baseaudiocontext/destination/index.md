@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.destination
 slug: Web/API/BaseAudioContext/destination
+page-type: web-api-instance-property
 tags:
   - API
   - AudioContext

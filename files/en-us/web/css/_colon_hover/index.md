@@ -27,7 +27,9 @@ Styles defined by the `:hover` pseudo-class will be overridden by any subsequent
 
 ## Syntax
 
-{{csssyntax}}
+```
+:hover
+```
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.drawWindow()
 slug: Web/API/CanvasRenderingContext2D/drawWindow
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -22,7 +23,7 @@ scrolling.
 This API cannot be used by Web content. It is synchronous, and as such can't capture
 cross-origin (out of process) iframes with Fission.  If you're using it from an
 extension, you should switch to {{WebExtAPIRef('tabs.captureTab')}} to capture the
-tab's image as a [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) and then render the captured image onto canvas using
+tab's image as a [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) and then render the captured image onto canvas using
 {{domxref("CanvasRenderingContext2D.drawImage")}}. If you're writing chrome code,
 you probably want [WindowGlobalParent.drawSnapshot](https://searchfox.org/mozilla-central/rev/9b282b34b5/dom/chrome-webidl/WindowGlobalActors.webidl#81-98)
 from the parent process.
@@ -52,6 +53,7 @@ drawWindow(window, x, y, w, h, bgColor, flags)
     the window is rendered into it. This color may be transparent/translucent. It is given
     as a CSS color string (for example, `rgb()` or `rgba()`).
     > **Note:**
+    >
     > - If "`rgba(0,0,0,0)`" is used for the background color, the drawing
     >   will be transparent wherever the window is transparent.
     > - Top-level browsed documents are usually not transparent because the user's

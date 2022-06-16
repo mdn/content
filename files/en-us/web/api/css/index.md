@@ -1,6 +1,7 @@
 ---
 title: CSS
 slug: Web/API/CSS
+page-type: web-api-interface
 tags:
   - API
   - CSSOM
@@ -51,4 +52,3 @@ _No inherited static methods_.
 ## Browser compatibility
 
 {{Compat}}
-

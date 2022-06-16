@@ -1,6 +1,7 @@
 ---
 title: performance.getEntriesByType()
 slug: Web/API/Performance/getEntriesByType
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -26,7 +27,7 @@ getEntriesByType(type)
 
 ### Parameters
 
-- type
+- `type`
   - : The type of entry to retrieve such as "`mark`". The valid entry types are
     listed in {{domxref("PerformanceEntry.entryType")}}.
 
