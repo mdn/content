@@ -10,11 +10,11 @@ browser-compat: path.to.feature.NameOfTheInterface
 ---
 {{MDNSidebar}}
 
-> **Note:** _Remove this whole explanatory note before publishing_
+## YAML header
+
+> **Note:** _Remove this whole explanatory note before publishing.
 >
-> **Page front matter**
->
-> The frontmatter at the top of the page is used to define "page metadata". The values should be updated appropriately for the particular interface.
+> The YAML at the top of the page is used to define "page metadata". The values should be updated appropriately for the particular interface.
 >
 > ```plain
 > ---
@@ -45,8 +45,10 @@ browser-compat: path.to.feature.NameOfTheInterface
 >   - : Replace the placeholder value `path.to.feature.NameOfTheMethod` with the query string for the method in the [Browser compat data repo](https://github.com/mdn/browser-compat-data). The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
 >
 >     Note that you may first need to create/update an entry for the API method in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry for the API will need to include specification information. See our [guide on how to do this](/en-US/docs/MDN/Structures/Compatibility_tables).
->
-> **Top macros**
+
+## Top macros
+
+> **Note:** _Remove this whole explanatory note before publishing.
 >
 > There are five macro calls at the top of the template by default. You should update or delete them according to the advice below:
 >
