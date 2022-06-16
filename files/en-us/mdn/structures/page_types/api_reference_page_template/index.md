@@ -12,7 +12,7 @@ browser-compat: path.to.feature.NameOfTheInterface
 
 > **Note:** _Remove this whole explanatory note before publishing_
 >
-> ### Page front matter
+> **Page front matter**
 >
 > The frontmatter at the top of the page is used to define "page metadata". The values should be updated appropriately for the particular interface.
 >
@@ -46,7 +46,7 @@ browser-compat: path.to.feature.NameOfTheInterface
 >
 >     Note that you may first need to create/update an entry for the API method in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry for the API will need to include specification information. See our [guide on how to do this](/en-US/docs/MDN/Structures/Compatibility_tables).
 >
-> ### Top macros
+> **Top macros**
 >
 > There are five macro calls at the top of the template by default. You should update or delete them according to the advice below:
 >
