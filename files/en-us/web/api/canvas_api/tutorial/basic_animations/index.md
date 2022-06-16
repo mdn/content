@@ -464,8 +464,6 @@ function anim() {
 
 ## Other examples
 
-- [A basic ray-caster](/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster)
-  - : A good example of how to do animations using keyboard controls.
 - [Advanced animations](/en-US/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
   - : We will have a look at some advanced animation techniques and physics in the next chapter.
 
