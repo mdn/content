@@ -42,7 +42,7 @@ let creating = browser.tabs.create(
     - `index` {{optional_inline}}
       - : `integer`. The position the tab should take in the window. The provided value will be clamped to between zero and the number of tabs in the window.
     - `muted` {{optional_inline}}
-      - : `boolean`. Whether the tab should be muted. Defaults to `false`.   
+      - : `boolean`. Whether the tab should be muted. Defaults to `false`.
     - `openerTabId` {{optional_inline}}
       - : `integer`. The ID of the tab that opened this tab. If specified, the opener tab must be in the same window as the newly created tab.
     - `openInReaderMode` {{optional_inline}}
