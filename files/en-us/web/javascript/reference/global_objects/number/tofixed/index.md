@@ -76,8 +76,8 @@ numObj.toFixed(6)      // Returns '12345.678900': additional zeros
 2.55.toFixed(1)        // Returns '2.5': it rounds down as it can't
                        // be represented exactly by a float and the
                        // closest representable float is lower
-2.449999999999999999   // Returns `2.5: it rounds up as it less than
-                       // NUMBER.EPSILON away from 2.45 and therefore
+2.449999999999999999.toFixed(1) // Returns `2.5: it rounds up as it less
+                       // than NUMBER.EPSILON away from 2.45 and therefore
                        // cannot be distinguished
 -2.34.toFixed(1)       // Returns -2.3: due to operator precedence,
                        // negative number literals don't return a string...
