@@ -123,13 +123,13 @@ async function setVideoParams(sender, height, bitrate) {
   const scaleRatio = sender.track.getSettings().height/height;
   const params = sender.getParameters();
 
-  params.encodings[0].scaleResolutionDownBy = Math.max(ratio, 1);
+  params.encodings[0].scaleResolutionDownBy = Math.max(scaleRatio, 1);
   params.encodings[0].maxBitrate = bitrate;
   await sender.setParameters(params);
 }
 ```
 
-In calling this function, you specify a sender, as w\.ell as the height you wish to
+In calling this function, you specify a sender, as well as the height you wish to
 scale the sender's video to, as well as a maximum bitrate to permit the sender to
 transmit. A scaling factor for the size of the video, `scaleRatio`, is
 computed. Then the sender's current parameters are fetched using
@@ -162,7 +162,7 @@ async function setVideoParams(sender, height, bitrate) {
     params.encodings = [{ }];
   }
 
-  params.encodings[0].scaleResolutionDownBy = Math.max(ratio, 1);
+  params.encodings[0].scaleResolutionDownBy = Math.max(scaleRatio, 1);
   params.encodings[0].maxBitrate = bitrate;
   await sender.setParameters(params);
 
