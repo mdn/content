@@ -12,7 +12,7 @@ browser-compat: path.to.feature.NameOfTheInterface
 
 ## YAML headers
 
-> **Note:** _Remove this whole explanatory note before publishing.
+> **Note:** _Remove this whole explanatory note before publishing._
 >
 > The YAML at the top of the page is used to define "page metadata". The values should be updated appropriately for the particular interface.
 >
@@ -48,7 +48,7 @@ browser-compat: path.to.feature.NameOfTheInterface
 
 ## Top macros
 
-> **Note:** _Remove this whole explanatory note before publishing.
+> **Note:** _Remove this whole explanatory note before publishing._
 >
 > There are five macro calls at the top of the template by default. You should update or delete them according to the advice below:
 >
