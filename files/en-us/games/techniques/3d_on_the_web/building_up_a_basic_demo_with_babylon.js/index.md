@@ -99,7 +99,7 @@ There are many [cameras](https://doc.babylonjs.com/divingDeeper/cameras) availab
 
 ## Let there be light
 
-There are various [light sources](https://doc.babylonjs.com/tutorials/Lights) available in Babylon.js. The most basic one is the `PointLight`, which works like a flashlight — shining a spotlight in a given direction. Add the following line below your camera definition:
+There are various [light sources](https://doc.babylonjs.com/divingDeeper/lights/lights_introduction#types-of-lights) available in Babylon.js. The most basic one is the `PointLight`, which works like a flashlight — shining a spotlight in a given direction. Add the following line below your camera definition:
 
 ```js
 var light = new BABYLON.PointLight("light", new BABYLON.Vector3(10, 10, 0), scene);
