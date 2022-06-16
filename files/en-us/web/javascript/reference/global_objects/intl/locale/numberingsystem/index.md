@@ -105,6 +105,7 @@ A numeral system is a system for expressing numbers. The `numberingSystem` prope
 | tirh     | Tirhuta digits                                                             |
 | tibt     | Tibetan digits                                                             |
 | traditio | Traditional numerals — may be algorithmic                                  |
+| tnsa     | Tangsa Digits                                                              |
 | vaii     | Vai digits                                                                 |
 | wara     | Warang Citi digits                                                         |
 | wcho     | Wancho digits                                                              |
