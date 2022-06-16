@@ -73,7 +73,10 @@ numObj.toFixed(6)      // Returns '12345.678900': note added zeros
 (1.23e-10).toFixed(2)  // Returns '0.00'
 2.34.toFixed(1)        // Returns '2.3'
 2.35.toFixed(1)        // Returns '2.4'. Note it rounds up
-2.55.toFixed(1)        // Returns '2.5'. Note it rounds down - see warning above
+2.55.toFixed(1)        // Returns '2.5'. Note it rounds down as it can't be represented exactly by a float and the
+                       // closest representable float is lower
+2.449999999999999999   // Returns `2.5. Note it rounds up as it less than NUMBER.EPSILON away from 2.45 and therefore
+                       // cannot be distinguished
 -2.34.toFixed(1)       // Returns -2.3 (due to operator precedence, negative number literals don't return a string...)
 (-2.34).toFixed(1)     // Returns '-2.3'
 ```
@@ -91,3 +94,4 @@ numObj.toFixed(6)      // Returns '12345.678900': note added zeros
 - {{jsxref("Number.prototype.toExponential()")}}
 - {{jsxref("Number.prototype.toPrecision()")}}
 - {{jsxref("Number.prototype.toString()")}}
+- {{jsxref("Number.EPSILON"}}
