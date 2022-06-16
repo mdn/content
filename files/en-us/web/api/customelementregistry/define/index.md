@@ -156,7 +156,7 @@ customElements.define('popup-info', PopUpInfo);
 ```
 
 ```html
-<popup-info img="img/alt.png" text="Your card validation code (CVC) is an extra
+<popup-info img="img/alt.png" data-text="Your card validation code (CVC) is an extra
                                     security feature — it is the last 3 or 4
                                     numbers on the back of your card.">
 ```
