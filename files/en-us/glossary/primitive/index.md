@@ -21,8 +21,7 @@ For example, below it looks like `toUpperCase()` and `length` are methods and pr
 
 ```js
 let mystring = "lower case string";
-mystring.toUpperCase();
-console.log(mystring);
+console.log(mystring.toUpperCase());
 // 'LOWER CASE STRING'
 console.log(mystring.length)
 // 17
