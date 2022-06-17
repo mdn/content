@@ -49,6 +49,7 @@ The page front matter in the pages on MDN Web Docs comprises of the YAML headers
 
 ## Top macros
 
+By default, there are five macro calls at the top of a template. You should update or delete them according to the advice below.
 > **Note:** _Remove this whole explanatory note before publishing._
 >
 >
