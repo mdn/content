@@ -63,3 +63,238 @@ If this is not specified, the default reader will still "work" but all data will
 
 Other than the differences outlined above, the controller and underlying source have the same methods, callbacks and properties, are used [in same way as for default streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams).
 
+## Examples
+
+
+
+## Example pull
+
+- Reading from a source
+- Show source getting a request or not getting a request
+- Show for pull first. 
+
+
+In the following simple example, a custom `ReadableStream` is created using a constructor (see our [Simple random stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/) for the full code). The `start()` function generates a random string of text every second and enqueues it into the stream. A `cancel()` function is also provided to stop the generation if {{domxref("ReadableStream.cancel()")}} is called for any reason.
+
+Note that a {{domxref("ReadableStreamDefaultController")}} object is provided as the parameter of the `start()` and `pull()` functions.
+
+When a button is pressed, the generation is stopped, the stream is closed using {{domxref("ReadableStreamDefaultController.close()")}}, and another function is run, which reads the data back out of the stream.
+
+```css
+.input {
+  float: left;
+  width: 50%;
+}
+.output {
+  float: right;
+  width: 50%;
+}
+hr {
+  clear: both;
+}
+button {
+  display: block;
+}
+```
+
+```html
+<button>Close stream</button>
+<h2>Final result</h2>
+<p>Waiting ...</p>
+
+<hr>
+<div class="input">
+  <h2>Custom stream input</h2>
+  <ul>
+  </ul>
+</div>
+<div class="output">
+  <h2>Reading custom stream</h2>
+  <ul>
+  </ul>
+</div>
+```
+
+```js
+// Object that can be used as a push or pull underlying source
+// If init() is called it will emit events.
+// As a pull source just call randomByteArray() for bytes, or randomChars() for characters
+class DemoUnderlyingSource extends EventTarget {
+  constructor() {
+    super();
+    this.interval;
+    this.maxdata = 10; //maximum data that can be sent (magic)
+  }
+
+  // Function to start simulating push underlying source
+  // Sets up code to emit random events.
+  // After maxdata (10) events will close 
+  init() {
+    // emit this event after every second
+    this.interval = setInterval(() => {
+      if (this.maxdata > 0) {
+        let string = this.randomChars();
+        let newEvent = new Event("newdata");
+        newEvent.data=string;
+        this.dispatchEvent(newEvent);
+      } else {
+        let endEvent = new Event("enddata");
+        this.dispatchEvent(endEvent);
+      } 
+      //Iterate down until all "data" sent 
+      this.maxdata--;
+    }, 1000);
+  }
+
+  // Simulate pausing source (clears the interval)
+  pauseSource() { clearInterval( this.interval ); }
+
+  // Return random character string
+  // Use to get chunk for pull source
+  randomChars(length = 8) {
+    let string = "";
+    let choices = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
+
+    for (let i = 0; i < length; i++) {
+      string += choices.charAt(Math.floor(Math.random() * choices.length));
+    }
+    return string;
+  }
+
+  // Return random Uint8Array of bytes
+  // Use to get bytes for pull source
+  randomByteArray(bytes = 8) {
+    const textEncoder = new TextEncoder();
+    return textEncoder.encode(this.randomChars(bytes));
+  }
+
+readInto(buffer, offset, length) {
+  const myview = new Uint8Array(buffer, offset, length);
+  // Write the length of data specified
+  const dataToSend = this.randomByteArray(length);
+  for (let i = 0; i < length; i++) {
+    myview[i]=dataToSend[i];
+  }
+}
+
+};
+```
+
+```js
+// Store reference to lists, paragraph and button
+const list1 = document.querySelector('.input ul');
+const list2 = document.querySelector('.output ul');
+const para = document.querySelector('p');
+const button = document.querySelector('button');
+
+// Create empty string in which to store final result
+let result = "";
+
+// Create my underlying source
+let myUnderlyingSource = new DemoUnderlyingSource();
+
+// Close my source
+button.addEventListener('click', function() {
+  //myUnderlyingSource.pauseSource(); //This I can do!
+  reader.releaseLock(); //These fail, I can't cancel without releasing a lock and I can't release a lock while I have an outstanding read. Not sure of "right" approach.
+  stream.cancel();
+})
+```
+
+```js
+const stream = new ReadableStream({
+  type: "bytes",
+  start(controller) {
+    // no initialization for this "demo" source
+    
+    // Show type of controller?
+    //Show type of 
+    let listItem = document.createElement('li');
+    listItem.textContent = `start(): ${controller.constructor.name}.byobRequest = ${controller.byobRequest}`;
+    list1.appendChild(listItem);
+  },
+  pull(controller) {
+    // Request data from source
+    const someData = myUnderlyingSource.randomByteArray();
+    let listItem = document.createElement('li');
+    listItem.textContent = `pull(): byobRequest = ${controller.byobRequest}`;
+    list1.appendChild(listItem);
+    if (controller.byobRequest) {
+      //value defined
+       para.textContent = `BYOB!`;
+       // controller.byobRequest.view = someData; //Cant do this, would replace the view and probably break stuff
+       // try write my data into the view. Just a small bit as though I can't get it very fast.
+       // when I get back to this CHECK the size of data available and request no more or fixed size or whatever.
+       // https://streams.spec.whatwg.org/#example-rbs-push
+       const theview = controller.byobRequest.view
+       myUnderlyingSource.readInto(theview.buffer, theview.offset, theview.length)
+       controller.byobRequest.respond(someData.length);
+        
+    } else {
+      para.textContent = `ENQUEUE`;
+      //No BYOBRequest so enqueue data to stream
+      //controller.enqueue(someData);
+    }
+  },
+  cancel() {
+    // This is called if the reader cancels,
+    // so we should stop generating strings
+    myUnderlyingSource.pauseSource();
+  }
+});
+```
+
+```js
+const reader = stream.getReader({mode: "byob"});
+let buffer = new ArrayBuffer(1024);
+readStream(reader);
+
+function readStream(reader) {
+  let bytesReceived = 0;
+  let offset =  0;
+
+  while (offset < buffer.byteLength) {
+    
+    // read() returns a promise that resolves when a value has been received
+    reader.read( new Uint8Array(buffer, offset, buffer.byteLength - offset) ).then(function processText({ done, value }) {
+      // Result objects contain two properties:
+      // done  - true if the stream has already given you all its data.
+      // value - some data. Always undefined when done is true.
+      if (done) {
+        console.log("Stream complete");
+        para.textContent = result;
+        return;
+      }
+
+      buffer = value.buffer;
+      offset += value.byteLength;
+
+      bytesReceived += value.byteLength;
+
+      const chunk = value;
+      let listItem = document.createElement('li');
+      listItem.textContent = `Read ${bytesReceived} chars. Chunk = ${chunk}`;
+      list2.appendChild(listItem);
+      result += chunk;
+
+      // Read some more, and call this function again
+      return reader.read( new Uint8Array(buffer, offset, buffer.byteLength - offset) ).then(processText);
+    });
+
+  }
+
+
+}
+
+```
+
+{{EmbedLiveSample("Examples pull","100%","500px")}}
+
+## Examples push
+
+
+
+
+## Summary
+
+
