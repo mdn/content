@@ -90,6 +90,33 @@ console.log(car2.color);   // 'original color'
 > **Note:** While the constructor function can be invoked like any regular function (i.e. without the `new` operator),
 > in this case a new object is not created and the value of `this` is also different.
 
+A function can know whether it is invoked with `new` by checking [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target). `new.target` is only `undefined` when the function is invoked without `new`. For example, you can have a function that behaves differently when it's called versus when it's constructed:
+
+```js
+function Car(color) {
+  if (!new.target) {
+    // Called as function.
+    return `${color} car`;
+  }
+  // Called with new.
+  this.color = color;
+}
+
+const a = Car("red"); // a is "red car"
+const b = new Car("red"); // b is `Car { color: "red" }`
+```
+
+Prior to ES6, which introduced [classes](/en-US/docs/Web/JavaScript/Reference/Classes), most JavaScript built-ins are both callable and constructible, although many of them exhibit different behaviors. To name a few:
+
+- [`Array()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array), [`Error()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error), and [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) behave the same when called as a function or a constructor.
+- [`Boolean()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean/Boolean), [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number), and [`String()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/String) coerce their argument to the respective primitive type when called, and return wrapper objects when constructed.
+- [`Date()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date) returns a string representing the current date when called, equivalent to `new Date().toString()`.
+
+After ES6, the language is stricter about which are constructors and which are functions. For example:
+
+- [`Symbol()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol) and [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) can only be called without `new`. Attempting to construct them will throw a `TypeError`.
+- [`Proxy`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy) and [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Map) can only be constructed with `new`. Attempting to call them will throw a `TypeError`.
+
 ## Examples
 
 ### Object type and object instance
