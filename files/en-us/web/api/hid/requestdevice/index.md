@@ -8,9 +8,10 @@ tags:
   - Reference
   - requestDevice
   - HID
+  - Experimental
 browser-compat: api.HID.requestDevice
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`requestDevice()`** method of the {{domxref("HID")}} interface requests access to a HID device.
 
