@@ -235,6 +235,7 @@ We can control all margins of an element at once using the {{cssxref("margin")}}
 #### Margin collapsing
 
 Depending on whether two elements whose margins touch have positive or negative margins, the results will be different:
+
 - Two positive margins will combine to become one margin. Its size will be equal to the largest individual margin.
 - Two negative margins will collapse and the smallest (furthest from zero) value will be used.
 - If one margin is negative, its value will be _subtracted_ from the total.

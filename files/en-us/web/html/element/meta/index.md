@@ -178,7 +178,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 {{Compat}}
 
-## See also 
+## See also
 
 - [Standard metadata names](/en-US/docs/Web/HTML/Element/meta/name)
 - [Learn: `<meta>`](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_the_meta_element)
