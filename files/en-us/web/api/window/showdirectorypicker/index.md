@@ -9,9 +9,10 @@ tags:
   - Method
   - Window
   - working with files
+  - Experimental
 browser-compat: api.Window.showDirectoryPicker
 ---
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}{{SeeCompatTable}}
 
 The **`showDirectoryPicker()`** method of the
 {{domxref("Window")}} interface displays a directory picker which allows the user to
