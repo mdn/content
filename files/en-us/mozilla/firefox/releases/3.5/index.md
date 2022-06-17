@@ -130,7 +130,7 @@ tags:
 
 - [HTML 5 text API for `canvas` elements](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
   - : Canvas elements now support the HTML 5 text API.
-- [Shadow effects in a `canvas`](/en-US/docs/Canvas_tutorial/Applying_styles_and_colors#Shadows)
+- [Shadow effects in a `canvas`](/en-US/ddocs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#shadows)
   - : Canvas shadow effects are now supported.
 - [`createImageData()`](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas#creating_an_imagedata_object)
   - : The canvas method `createImageData()` is now supported, allowing code to specifically create an `ImageData` object instead of requiring it to be done automatically. This can improve performance of other `ImageData` methods by preventing them from having to create the object.

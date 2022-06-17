@@ -30,7 +30,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 - Calling [`drawImage()`](/en-US/docs/Web/API/CanvasRenderingContext2D/drawimage) with non-finite coordinates no longer throws an exception.
 - `toDataURL()` method now accepts a second argument to control JPEG quality.
 - Support for the non-standard `globalCompositeOperation` operations `clear` and `over` has been removed.
-- [Shadows](/en-US/docs/Canvas_tutorial/Applying_styles_and_colors#Shadows) are now only drawn for `source-over` compositing operations.
+- [Shadows](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#Shadows) are now only drawn for `source-over` compositing operations.
 - You can now configure the fill rule used by canvas by setting the `mozFillRule` [attribute](/en-US/docs/Web/API/CanvasRenderingContext2D#attributes) on the context.
 - Support for the experimental `mozDash`, `mozDashOffset`, `mozCurrentTransform` and `mozCurrentTransformInverse` attributes has been added.
 - Support for the non-standard methods `mozDrawText()`, `mozMeasureText()`, `mozPathText()` and `mozTextAlongPath()` has been removed.
