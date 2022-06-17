@@ -22,7 +22,8 @@ The readable stream must have an _underlying byte source_. In other words, it mu
 Using this kind of reader, a [`read()`](#readablestreambyobreader.read) request when the readable stream's internal queues are empty will result in a zero copy transfer from the underlying source (bypassing the stream's internal queues).
 If the internal queues are not empty, a `read()` will satisfy the request from the buffered data.
 
-Note that the methods and properties are the same as for the default reader ({{domxref("ReadableStreamDefaultReader")}}), and it is used in the same way.
+Note that the methods and properties are similar to those for the default reader ({{domxref("ReadableStreamDefaultReader")}}).
+The `read()` method differs in that it provide a view into which data should be written.
 
 ## Constructor
 
@@ -39,7 +40,7 @@ Note that the methods and properties are the same as for the default reader ({{d
 - {{domxref("ReadableStreamBYOBReader.cancel()")}}
   - : Returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer. The supplied `reason` argument will be given to the underlying source, which may or may not use it.
 - {{domxref("ReadableStreamBYOBReader.read()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with the next chunk in the stream or rejects with an indication that the stream is closed or has errored.
+  - : Passes a view into which data must be written, and returns a {{jsxref("Promise")}} that resolves with the next chunk in the stream or rejects with an indication that the stream is closed or has errored.
 - {{domxref("ReadableStreamBYOBReader.releaseLock()")}}
   - : Releases the reader's lock on the stream.
 
