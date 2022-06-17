@@ -10,7 +10,9 @@ browser-compat: path.to.feature.NameOfTheInterface
 ---
 {{MDNSidebar}}
 
-## YAML headers
+## Page front matter
+
+The page front matter in the pages on MDN Web Docs comprises of the YAML headers listed and described below. This YAML content at the top of a page is used to define the "page front matter" or the "page metadata". The values should be updated appropriately when describing a particular interface.
 
 > **Note:** _Remove this whole explanatory note before publishing._
 >
