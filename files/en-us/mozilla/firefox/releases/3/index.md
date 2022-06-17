@@ -32,7 +32,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 
 <!---->
 
-- [Transform support for canvas](/en-US/docs/Canvas_tutorial/Transformations#Transforms)
+- [Transform support for canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations#transforms)
   - : Firefox now supports the `transform()` and `setTransform()` methods on canvases.
 
 <!---->
