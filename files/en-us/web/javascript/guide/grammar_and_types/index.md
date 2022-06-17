@@ -681,9 +681,11 @@ const todos = [
   "Profit!",
 ];
 
+const progress = { javascript: 20, html: 50, css: 10 };
+
 print`I need to do:
 ${todos}
-My current progress is: ${{ javascript: 20, html: 50, css: 10 }}
+My current progress is: ${progress}
 `;
 
 // I need to do:
@@ -697,13 +699,13 @@ My current progress is: ${{ javascript: 20, html: 50, css: 10 }}
 Since tagged template literals are just sugar of function calls, you can re-write the above as an equivalent function call:
 
 ```js
-print(["I need to do:\n", "\nMy current progress is: ", "\n"], todos, { javascript: 20, html: 50, css: 10 });
+print(["I need to do:\n", "\nMy current progress is: ", "\n"], todos, progress);
 ```
 
 This may be reminiscent of the `console.log`-style interpolation:
 
 ```js
-console.log("I need to do:\n%o\nMy current progress is: %o\n", todos, { javascript: 20, html: 50, css: 10 });
+console.log("I need to do:\n%o\nMy current progress is: %o\n", todos, progress);
 ```
 
 You can see how the tagged template reads more naturally than a traditional "formatter" function, where the variables and the template itself have to be declared separately.
