@@ -352,4 +352,5 @@ We don't yet have an example that uses {{domxref("TransformStream")}}.
 ## Summary
 
 That explains the basics of "default" readable streams.
-We'll explain bytestreams in a separate future article, once they are available in browsers.
+
+See [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams) for information about how to use readable _byte_ streams: streams with an underlying byte source that can perform efficient zero-copy transfers to a consumer, bypassing the stream's internal queues.
