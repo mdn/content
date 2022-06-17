@@ -113,7 +113,7 @@ blockquote { all: initial; }
 
 {{EmbedLiveSample("allinitial", "200", "125")}}
 
-With the `all` property set to `initial` in the `blockquote` rule, the {{HTMLElement("blockquote")}} element doesn't use the browser default styling anymore: it is an _inline_ element now (initial value), its [`background-color`](en-US/docs/Web/CSS/background-color#formal_definition) is `transparent` (initial value), its [`font-size`](en-US/docs/Web/CSS/font-size#formal_definition) is `medium`, and its [`color`](en-US/docs/Web/CSS/color#formal_definition) is `black` (initial value).
+With the `all` property set to `initial` in the `blockquote` rule, the {{HTMLElement("blockquote")}} element doesn't use the browser default styling anymore: it is an _inline_ element now (initial value), its [`background-color`](/en-US/docs/Web/CSS/background-color#formal_definition) is `transparent` (initial value), its [`font-size`](/en-US/docs/Web/CSS/font-size#formal_definition) is `medium`, and its [`color`](/en-US/docs/Web/CSS/color#formal_definition) is `black` (initial value).
 
 #### C. `all: inherit`
 
@@ -145,7 +145,7 @@ blockquote { all: unset; }
 
 {{EmbedLiveSample("allunset", "200", "125")}}
 
-When the `unset` value is applied to the `all` property in the `blockquote` rule, the {{HTMLElement("blockquote")}} element doesn't use the browser default styling. Because [`background-color`](en-US/docs/Web/CSS/background-color#formal_definition) is a non-inherited property and [`font-size`](en-US/docs/Web/CSS/font-size#formal_definition) and [`color`](en-US/docs/Web/CSS/color#formal_definition) are inherited properties, the `<blockquote>` element is an _inline_ element now (initial value), its {{cssxref("background-color")}} is `transparent` (initial value), but its {{cssxref("font-size")}} is still `small` (inherited value), and its {{cssxref("color")}} is `blue` (inherited value).
+When the `unset` value is applied to the `all` property in the `blockquote` rule, the {{HTMLElement("blockquote")}} element doesn't use the browser default styling. Because [`background-color`](/en-US/docs/Web/CSS/background-color#formal_definition) is a non-inherited property and [`font-size`](/en-US/docs/Web/CSS/font-size#formal_definition) and [`color`](/en-US/docs/Web/CSS/color#formal_definition) are inherited properties, the `<blockquote>` element is an _inline_ element now (initial value), its {{cssxref("background-color")}} is `transparent` (initial value), but its {{cssxref("font-size")}} is still `small` (inherited value), and its {{cssxref("color")}} is `blue` (inherited value).
 
 #### E. `all: revert`
 
