@@ -16,7 +16,6 @@ The page front matter in the pages on MDN Web Docs comprises of the YAML headers
 
 > **Note:** _Remove this whole explanatory note before publishing._
 >
-> The YAML at the top of the page is used to define "page metadata". The values should be updated appropriately for the particular interface.
 >
 > ```plain
 > ---
