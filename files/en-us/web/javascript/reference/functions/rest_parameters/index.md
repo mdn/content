@@ -61,7 +61,7 @@ foo(...wrong, arg2, arg3)
 foo(arg1, arg2, ...correct)
 ```
 
-### The difference between rest parameters and the `arguments` object
+### The difference between rest parameters and the arguments object
 
 There are three main differences between rest parameters and the
 {{jsxref("Functions/arguments", "arguments")}} object:
@@ -79,7 +79,7 @@ There are three main differences between rest parameters and the
   the parameters — including the parameters in the `...restParam` array —
   bundled into one array-like object.
 
-### From `arguments` to an array
+### From arguments to an array
 
 Rest parameters were introduced to reduce the boilerplate code that was commonly used
 for converting a set of arguments to an array.
@@ -187,7 +187,7 @@ let arr = multiply(2, 15, 25, 42)
 console.log(arr)  // [30, 50, 84]
 ```
 
-### Rest parameters are real arrays; the `arguments` object is not
+### Rest parameters are real arrays; the arguments object is not
 
 {{jsxref("Array")}} methods can be used on rest parameters, but not on the
 `arguments` object:
