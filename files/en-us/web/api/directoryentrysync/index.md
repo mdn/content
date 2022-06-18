@@ -24,16 +24,16 @@ If you want to create subdirectories, you have to create each child directory in
 
 #### Example
 
-The `getFile()` method returns a `FileEntrySync`, which represents a file in the file system. The following creates an empty file called `seekrits.txt` in the root directory.
+The `getFile()` method returns a `FileEntrySync`, which represents a file in the file system. The following creates an empty file called `logs.txt` in the root directory.
 
 ```js
-var fileEntry = fs.root.getFile('seekrits.txt', {create: true});
+const fileEntry = fs.root.getFile('logs.txt', {create: true});
 ```
 
-The `getDirectory()` method returns a `DirectoryEntrySync`, which represents a file in the file system. The following creates a new directory called `superseekrit` in the root directory.
+The `getDirectory()` method returns a `DirectoryEntrySync`, which represents a file in the file system. The following creates a new directory called `project_dir` in the root directory.
 
 ```js
-var dirEntry = fs.root.getDirectory('superseekrit', {create: true});
+const dirEntry = fs.root.getDirectory('project_dir', {create: true});
 ```
 
 ## Method overview
