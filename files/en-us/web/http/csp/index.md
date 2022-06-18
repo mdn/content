@@ -102,7 +102,7 @@ Content-Security-Policy: default-src 'self' trusted.com *.trusted.com
 A web site administrator wants to allow users of a web application to include images from any origin in their own content,
 but to restrict audio or video media to trusted providers, and all scripts only to a specific server that hosts trusted code.
 
-```
+```http
 Content-Security-Policy: default-src 'self'; img-src *; media-src media1.com media2.com; script-src userscripts.example.com
 ```
 
@@ -116,7 +116,7 @@ Here, by default, content is only permitted from the document's origin, with the
 
 A web site administrator for an online banking site wants to ensure that all its content is loaded using TLS, in order to prevent attackers from eavesdropping on requests.
 
-```
+```http
 Content-Security-Policy: default-src https://onlinebanking.jumbobank.com
 ```
 
