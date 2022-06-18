@@ -130,7 +130,7 @@ The below diagram shows these layers:
 
 ### The standard CSS box model
 
-In the standard box model, if you give a box an `inline-size` and a `block-size` (or `width` and a `height`) attributes, this defines the inline-size and block-size (with and height in horizontal languages) of the _content box_. Any padding and border is then added to those dimensions to get the total size taken up by the box (see image below).
+In the standard box model, if you give a box an `inline-size` and a `block-size` (or `width` and a `height`) attributes, this defines the inline-size and block-size (width and height in horizontal languages) of the _content box_. Any padding and border is then added to those dimensions to get the total size taken up by the box (see image below).
 
 If we assume that a box has the following CSS:
 
