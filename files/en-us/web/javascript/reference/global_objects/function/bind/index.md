@@ -61,7 +61,7 @@ of its wrapped function.
 A bound function has the following internal properties:
 
 - **`[[BoundTargetFunction]]`**
-  - : The wrapped function object
+  - : The wrapped function object.
 - **`[[BoundThis]]`**
   - : The value that is always passed as `this` value when calling the wrapped
     function.
