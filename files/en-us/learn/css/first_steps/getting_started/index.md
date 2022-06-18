@@ -14,7 +14,7 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
 
-In this article, we will take a simple HTML document and apply CSS to it, learning some practical things about the language along the way.
+In this article, we will take a HTML document and apply CSS to it, learning some practical things about the language along the way.
 
 <table>
   <tbody>
@@ -45,9 +45,9 @@ In this article, we will take a simple HTML document and apply CSS to it, learni
   </tbody>
 </table>
 
-## Starting with some HTML
+## Adding an HTML document
 
-Our starting point is an HTML document. You can copy the code from below if you want to work on your own computer. Save the code below as `index.html` in a folder on your machine.
+Our starting point is an HTML document. You can copy the code from below and save it as `index.html` in a folder on your computer.
 
 ```html
 <!doctype html>
@@ -79,27 +79,31 @@ and also a <a href="https://example.com">link</a>.</p>
 
 > **Note:** If you are reading this on a device or an environment where you can't easily create files, then don't worry — live code editors are provided below to allow you to write example code right here in the page.
 
-## Adding CSS to our document
+## Adding CSS to the document
 
-The very first thing we need to do is to tell the HTML document that we have some CSS rules we want it to use. There are three different ways to apply CSS to an HTML document that you'll commonly come across, however, for now, we will look at the most usual and useful way of doing so — linking CSS from the head of your document.
+First, tell the HTML document that we have some CSS rules we want it to use. There are three options to apply CSS to an HTML document that you'll commonly come across.  For now, we will use the most usual and useful way — linking CSS from the head of your document.
 
-Create a file in the same folder as your HTML document and save it as `styles.css`. The `.css` extension shows that this is a CSS file.
+1.  Create a file in the same folder as your HTML document and save it as `styles.css`. The `.css` extension shows that this is a CSS file.
 
-To link `styles.css` to `index.html`, add the following line somewhere inside the {{htmlelement("head")}} of the HTML document:
+2. To link `styles.css` to `index.html`, add the following line somewhere inside the {{htmlelement("head")}} of the HTML document:
 
-```html
-<link rel="stylesheet" href="styles.css">
-```
+    ```html
+    <link rel="stylesheet" href="styles.css">
+    ```
 
-This {{htmlelement("link")}} element tells the browser that we have a stylesheet, using the `rel` attribute, and the location of that stylesheet as the value of the `href` attribute. You can test that the CSS works by adding a rule to `styles.css`. Using your code editor, add the following to your CSS file:
+    This {{htmlelement("link")}} element tells the browser that we have a stylesheet, using the `rel` attribute, and the location of that stylesheet as the value of the `href` attribute. 
+    
+3. To test that the CSS works by adding a rule to `styles.css`, use your editor and add the following to your CSS file:
 
-```css
-h1 {
-  color: red;
-}
-```
+    ```css
+    h1 {
+      color: red;
+    }
+    ```
 
-Save your HTML and CSS files and reload the page in a web browser. The level one heading at the top of the document should now be red. If that happens, congratulations — you have successfully applied some CSS to an HTML document. If that doesn't happen, carefully check that you've typed everything correctly.
+4. Save your HTML and CSS files and reload the page in a web browser. 
+
+The level one heading at the top of the document should now be read. If that happens, congratulations — you have successfully applied some CSS to an HTML document. If that doesn't happen, carefully check that you've typed everything correctly.
 
 You can continue to work in `styles.css` locally, or you can use our interactive editor below to continue with this tutorial. The interactive editor acts as if the CSS in the first panel is linked to the HTML document, just as we have with our document above.
 
