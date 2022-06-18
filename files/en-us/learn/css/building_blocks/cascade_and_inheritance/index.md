@@ -134,7 +134,7 @@ For example:
 1. The second list item has the class `my-class-1` applied. This sets the color of the `<a>` element nested inside to `inherit`. If you remove the rule, how does it change the color of the link?
 2. Do you understand why the third and fourth links are the color that they are? The third link is set to `initial`, which means it uses the initial value of the property (in this case black) and not the browser default for links, which is blue. The fourth is set to `unset` which means that the link text uses the color of the parent element, green.
 3. Which of the links will change color if you define a new color for the `<a>` element — for example `a { color: red; }`?
-4. After reading the next section on resetting all properties, come back and change the `color` property to `all`. Notice how the second link is on a new line and has a bullet. What properties do you think were inherited? 
+4. After reading the next section on resetting all properties, come back and change the `color` property to `all`. Notice how the second link is on a new line and has a bullet. What properties do you think were inherited?
 
 {{EmbedGHLiveSample("css-examples/learn/cascade/keywords.html", '100%', 800)}}
 
@@ -182,16 +182,13 @@ Let's now have a look at how the browser will calculate specificity. We already 
 
 The amount of specificity a selector has is measured using three different values (or components), which can be thought of as ID, CLASS, and ELEMENT columns in the hundreds, tens, and ones place:
 
-
 - **Indentifiers**: Score one in this column for each ID selector contained inside the overall selector.
 - **Classes**: Score one in this column for each class selector, attribute selector, or pseudo-class contained inside the overall selector.
 - **Elements**: Score one in this column for each element selector or pseudo-element contained inside the overall selector.
 
-> **Note:** The universal selector ([`*`](/en-US/docs/Web/CSS/Universal_selectors)), combinators (`+`, `>`, `~`, ' '), and specificity adjustment selector ([`:where()`](en-US/docs/Web/CSS/:where)) have no effect on specificity. 
+> **Note:** The universal selector ([`*`](/en-US/docs/Web/CSS/Universal_selectors)), combinators (`+`, `>`, `~`, ' '), and specificity adjustment selector ([`:where()`](en-US/docs/Web/CSS/:where)) have no effect on specificity.
 
 The negation ([`:not()`](en-US/docs/Web/CSS/:not)) and the matches-any ([`:is()`](en-US/docs/Web/CSS/:is)) pseudo-classes themselves don't have effect on specificity, but their parameters do. The specificity each contributes to the specificity algorithm is the specificity of the selector in parameter that has the greatest weight.
-
-
 
 The following table shows a few isolated examples to get you in the mood. Try going through these, and make sure you understand why they have the specificity that we have given them. We've not covered selectors in detail yet, but you can find details of each selector on the MDN [selectors reference](/en-US/docs/Web/CSS/CSS_Selectors).
 
@@ -244,7 +241,7 @@ One situation in which you may have to use the `!important` flag is when you are
 
 ## The effect of CSS location
 
-Finally, it is important to note that the precedence of a CSS declaration depends on what stylesheet and cascade layer it is specified in. 
+Finally, it is important to note that the precedence of a CSS declaration depends on what stylesheet and cascade layer it is specified in.
 
 It is possible for users to set custom stylesheets to override the developer's styles. For example, a visually impaired user might want to set the font size on all web pages they visit to be double the normal size to allow for easier reading.
 
@@ -265,7 +262,7 @@ Conflicting declarations will be applied in the following order, with later ones
 
 ### Order of cascade layers
 
-Even though [cascade layers](/en-US/docs/Web/CSS/@layer) is an advanced topic and you may not use this feature right away, it's important to understand how layers cascade. 
+Even though [cascade layers](/en-US/docs/Web/CSS/@layer) is an advanced topic and you may not use this feature right away, it's important to understand how layers cascade.
 
 When you declare CSS in cascade layers, the order of precedence is determined by the order in which the layers are declared. CSS styles declared outside of any layer are combined together, in the order in which those styles are declared, into an unnamed layer, as if it were the last declared layer. With competing normal (not important) styles, later layers take precedence over earlier defined layers. For styles flagged with `!important`, however, the order is reversed, with important styles in earlier layers taking precedence over important styles declared in subsquent layers or outside of any layer. Inline styles take precedence over all author styles, no matter the layer.
 
@@ -276,7 +273,6 @@ When you have multiple style blocks in different layers providing competing valu
 Let's discuss a few things from the above example to understand what's happening. Two layers have been declared, `firstLayer` and `secondLayer`, in that order. Even though the specificity in `secondLayer` is the highest, no properties from that declaration are used. Why? Because non-layered normal styles take precedence over layered normal styles, no matter the specificity, and important layered styles take precedence over important styles declared in later layers, again, no matter the specificity.
 
 If you change the first line of CSS in this example to read `@layer secondLayer, firstLayer;`, you will change the layer declaration order, and all the important styles from `firstLayer` will be changed to their respective values in `secondLayer`.
-
 
 ## Test your skills!
 
