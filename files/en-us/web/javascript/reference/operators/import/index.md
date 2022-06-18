@@ -57,7 +57,7 @@ If your file is not run as a module (if it's referenced in an HTML file, the scr
 (async () => {
   if (somethingIsTrue) {
     // import module for side effects
-    await import('/modules/my-module.js');
+    await import("/modules/my-module.js");
   }
 })();
 ```
@@ -73,7 +73,11 @@ You need to destructure and rename the "default" key from the returned object.
 ```js
 (async () => {
   if (somethingIsTrue) {
-    const { default: myDefault, foo, bar } = await import('/modules/my-module.js');
+    const {
+      default: myDefault,
+      foo,
+      bar,
+    } = await import("/modules/my-module.js");
   }
 })();
 ```
@@ -88,7 +92,7 @@ for (const link of document.querySelectorAll("nav > a")) {
   link.addEventListener("click", (e) => {
     e.preventDefault();
 
-    import('/modules/my-module.js')
+    import("/modules/my-module.js")
       .then((module) => {
         module.loadPageInto(main);
       })
@@ -111,6 +115,20 @@ if (typeof window === "undefined") {
 } else {
   myModule = await import("module-used-in-browser");
 }
+```
+
+### Importing modules with a non-literal specifier
+
+Dynamic imports allow any expression as the module specifier, not necessarily string literals.
+
+Here, we load 10 modules: `/modules/module-0.js`, `/modules/module-1.js`... in parallel, and call the `load` functions that each one exports.
+
+```js
+Promise.all(
+  Array.from({ length: 10 }).map((_, index) =>
+    import(`/modules/module-${index}.js`)
+  )
+).then((modules) => modules.forEach((module) => module.load()));
 ```
 
 ## Specifications
