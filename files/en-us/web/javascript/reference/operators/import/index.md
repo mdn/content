@@ -36,7 +36,7 @@ It returns a promise which fulfills to an object containing all exports from `mo
 
 ## Description
 
-The standard import syntax is static and will always result in all code in the imported module being evaluated at load time. Dynamic imports allows one to circumvent the syntactic rigidity of static import declarations and load a module conditionally or on demand. The following are some reasons why you might need to use dynamic import:
+The import declaration syntax (`import something from "somewhere"`) is static and will always result in the imported module being evaluated at load time. Dynamic imports allows one to circumvent the syntactic rigidity of import declarations and load a module conditionally or on demand. The following are some reasons why you might need to use dynamic import:
 
 - When importing statically significantly slows the loading of your code and there is a low likelihood that you will need the code you are importing, or you will not need it until a later time.
 - When importing statically significantly increases your program's memory usage and there is a low likelihood that you will need the code you are importing.
