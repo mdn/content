@@ -90,5 +90,5 @@ loading.
 ## See also
 
 - {{domxref("Window/load_event", "load")}} event
-- {{domxref("Window/DOMContentLoaded_event" ,"DOMContentLoaded")}} event
+- {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}} event
 - IIFE [Immediately-invoked function expression](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
