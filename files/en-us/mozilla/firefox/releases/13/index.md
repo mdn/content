@@ -37,7 +37,7 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 - The {{domxref("Blob","Blob.mozSlice()")}} method has been unprefixed.
 - Support for the {{domxref("Blob")}} constructor has been added.
 - Support for `globalStorage` has been removed.
-- The new {{domxref("DOMRequest")}} interface, used for reporting the status and result of background operations, has been added.
+- The new `DOMRequest` interface, used for reporting the status and result of background operations, has been added.
 - The {{domxref("HTMLOptionElement", "HTMLOptionElement.index()")}} method now returns `0` instead of the incorrect `-1` when the {{HTMLElement("option")}} is inside a {{HTMLElement("datalist")}} HTML element.
 - {{domxref("DOMException")}} as defined in DOM Level 4 has been implemented.
 - The {{domxref("FileError")}} interface has been removed in favor of the {{domxref("DOMError")}} interface as defined in the latest FileAPI specification.
