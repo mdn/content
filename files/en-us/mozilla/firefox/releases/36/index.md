@@ -85,7 +85,7 @@ Highlights:
 - Experimental support for virtual reality devices has landed behind the `dom.vr.enabled` preference, off by default ({{bug(1036604)}}).
 - The function associated with {{domxref("RTCPeerConnection.signalingstatechange_event", "RTCPeerConnection.onsignalingstatechange")}} now receives an event as parameter, as per spec ({{bug(1075133)}}).
 - The experimental implementation of Web Animations make progress: the method {{domxref("Animation/play", "AnimationPlayer.play()")}} and {{domxref("Animation/pause", "AnimationPlayer.pause()")}} are now supported ({{bug(1070745)}}), as well as {{domxref("Animation/playState", "AnimationPlayer.playState")}} ({{bug(1037321)}}).
-- The non-standard {{domxref("DOMRequest")}} interface has now a {{domxref("DOMRequest.then()", "then()")}} method ({{bug(839838)}}).
+- The non-standard `DOMRequest` interface has now a `DOMRequest.then()` method ({{bug(839838)}}).
 - The CSSOM View scroll behavior controlling methods, {{domxref("Element.scroll()")}}, {{domxref("Element.scrollTo()")}}, {{domxref("Element.scrollBy()")}}, and {{domxref("Element.scrollIntoView()")}}, have been implemented or extended ({{bug(1045754)}} and {{bug(1087559)}}).
 - Assigning to {{domxref("Element.innerHTML")}} on an {{domxref("SVGElement")}} now create elements in the SVG namespace ({{bug(886390)}}).
 - The `nsIWebBrowserPersist.saveURI()`>) method now requires 8 arguments, in an order incompatible with previous releases.
