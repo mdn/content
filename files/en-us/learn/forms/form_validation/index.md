@@ -782,8 +782,8 @@ function addEvent(element, event, callback) {
       output = previousEventCallBack(e);
       if(output === false) return false;
     }
-  }
-};
+  };
+}
 
 // Now we can rebuild our validation constraint
 // Because we do not rely on CSS pseudo-class, we have to
