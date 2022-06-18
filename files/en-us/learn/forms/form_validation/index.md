@@ -772,7 +772,7 @@ const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z
 function addEvent(element, event, callback) {
   let previousEventCallBack = element["on"+event];
   element["on"+event] = function (e) {
-    const output = callback(e);
+    let output = callback(e);
 
     // A callback that returns `false` stops the callback chain
     // and interrupts the execution of the event callback.
