@@ -13,7 +13,9 @@ browser-compat: javascript.operators.import
 ---
 {{jsSidebar("Operators")}}
 
-The `import()` call is a function-like expression that allows asynchronously loading an ECMAScript module into a potentially non-module environment.
+The `import()` call, commonly called _dynamic import_, is a function-like expression that allows loading an ECMAScript module asynchronously and dynamically into a potentially non-module environment.
+
+Unlike the [declaration-style counterpart](/en-US/docs/Web/JavaScript/Reference/Statements/import), dynamic imports are only evaluated when needed, and permits greater syntactic flexibility.
 
 ## Syntax
 
@@ -21,7 +23,7 @@ The `import()` call is a function-like expression that allows asynchronously loa
 import(moduleName)
 ```
 
-The `import()` call is a syntax that closely resembles a function call, but `import` itself is a keyword, not a function. You cannot alias it like `const myImport = import`, which will throw a `SyntaxError`.
+The `import()` call is a syntax that closely resembles a function call, but `import` itself is a keyword, not a function. You cannot alias it like `const myImport = import`, which will throw a {{jsxref("SyntaxError")}}.
 
 ### Parameters
 

@@ -22,7 +22,7 @@ used in embedded scripts unless such script has a `type="module"`. Bindings
 imported are called live bindings because they are updated by the module that exported
 the binding.
 
-There is also a function-like dynamic [**`import()`**](/en-US/docs/Web/JavaScript/Reference/Operators/import), which does not require scripts of `type="module"`.
+There is also a function-like dynamic [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import), which does not require scripts of `type="module"`.
 
 Backward compatibility can be ensured using attribute `nomodule` on the
 {{HTMLElement("script")}} tag.
