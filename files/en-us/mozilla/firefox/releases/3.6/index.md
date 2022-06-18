@@ -115,7 +115,7 @@ If you're an extension developer, you should start by reading [Updating extensio
 
 - [Locale-aware collation of data is now supported by the Storage API](</en-US/docs/Storage#Collation_(sorting)>)
   - : Gecko 1.9.2 added several new collation methods to provide optimized collation (sorting) of results using locale-aware techniques.
-- [Properties on a statement can now be enumerated](/en-US/docs/mozIStorageStatementParams#Enumeration_of_properties)
+- [Properties on a statement can now be enumerated](/en-US/docs/mozIStorageStatementParams#enumeration_of_properties)
   - : You can now use a [`for..in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) enumeration to enumerate all the properties on a statement.
 - mozIStorageStatement's getParameterIndex changed behavior between 3.5 and 3.6.
   - : See {{bug(528166)}} for details.

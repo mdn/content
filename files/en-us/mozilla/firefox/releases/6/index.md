@@ -125,7 +125,7 @@ For an overview of the changes you may need to make in order to make your add-on
 
 #### FileUtils.jsm
 
-- The `openSafeFileOutputStream()` method now opens files with the `DEFER_OPEN` [behavior flag](/en-US/docs/XPCOM_Interface_Reference/nsIFileOutputStream#Behavior_flag_constants) instead of attempting to open them immediately.
+- The `openSafeFileOutputStream()` method now opens files with the `DEFER_OPEN` [behavior flag](/en-US/docs/XPCOM_Interface_Reference/nsIFileOutputStream#behavior_flag_constants) instead of attempting to open them immediately.
 
 #### XPCOMUtils.jsm
 
@@ -133,7 +133,7 @@ For an overview of the changes you may need to make in order to make your add-on
 
 ### XPCOM
 
-- [`nsCOMArray<T>`](/en-US/docs/XPCOM_array_guide#nsCOMArray.3cT.3e) now has a [`RemoveObjectsAt()`](/en-US/docs/XPCOM_array_guide#Deleting_objects) method for removing multiple objects at once from the array.
+- [`nsCOMArray<T>`](/en-US/docs/XPCOM_array_guide#nsCOMArray.3cT.3e) now has a [`RemoveObjectsAt()`](/en-US/docs/XPCOM_array_guide#deleting_objects) method for removing multiple objects at once from the array.
 
 ### Using the DOM from chrome
 
