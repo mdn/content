@@ -48,7 +48,7 @@ drawn at 400px.
 
 ```html
 <p>Image width: <span class="size">?</span>px (resize to update)</p>
-<img src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png.png"
+<img src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png"
       alt="Clock"
       srcset="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
           /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w"
