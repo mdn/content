@@ -39,7 +39,7 @@ Events have three functions:
   - : Function that is called when this event occurs. The function is passed an object with these properties:
 
     - `id`
-      - : `String`. ID of the page visited.
+      - : `String`. The unique identifier for the {{WebExtAPIRef("history.HistoryItem")}} associated with this visit.
     - `url`
       - : `String`. URL of the page visited.
     - `title`
