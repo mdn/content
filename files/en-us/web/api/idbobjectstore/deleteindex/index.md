@@ -74,7 +74,7 @@ DBOpenRequest.onsuccess = function(event) {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable. This is used a lot below
-  let db = this.result;
+  db = this.result;
 
   // Run the displayData() function to populate the task list with all the to-do list data already in the IDB
   displayData();
