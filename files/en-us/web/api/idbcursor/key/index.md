@@ -39,13 +39,13 @@ you can grab data from the current record under the cursor object using `cursor.
 
 ```js
 function displayData() {
-  var transaction = db.transaction(['rushAlbumList'], "readonly");
-  var objectStore = transaction.objectStore('rushAlbumList');
+  const transaction = db.transaction(['rushAlbumList'], "readonly");
+  const objectStore = transaction.objectStore('rushAlbumList');
 
   objectStore.openCursor().onsuccess = function(event) {
-    var cursor = event.target.result;
+    const cursor = event.target.result;
     if(cursor) {
-      var listItem = document.createElement('li');
+      const listItem = document.createElement('li');
       listItem.innerHTML = cursor.value.albumTitle + ', ' + cursor.value.year;
       list.appendChild(listItem);
 
