@@ -34,22 +34,22 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.0.1.tgz#e71fe19c5ba99413fae9305cc9ed060eeb07ea45"
-  integrity sha512-c+RIBgZSqSWgxZdNWLaaCAfBon2YM4pz0QD+VoT32rIOGChJl3l99E7B/xSWvVlSSiE7jQkEuJx3hbKoUdAi3w==
+"@mdn/browser-compat-data@^5.1.0":
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.1.1.tgz#20b3040392242216ee7f9c3f0807fcb1f0b88872"
+  integrity sha512-odIvtuAoXePQL4UcPrhy3MSXMvz2vefTe5uQQoLzKHQ6+f6vAhVlZEbs92d6cz8oSjylF+KL3Z/G2eLCMFl7qw==
 
-"@mdn/yari@1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.5.0.tgz#cd5d6dd246dc6944f3d9ddf077dea7cb308c6f79"
-  integrity sha512-DkhgApS1TwyYsjEUb/G2oQzVo3DPP+nW8ke8qO43VbO5wdxG9iipFA+wkA806OvkQOB2a3kmpcyyJpW0rg+vfQ==
+"@mdn/yari@1.5.6":
+  version "1.5.6"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.5.6.tgz#a43374ef1cfe240dd49aca0601b02e36eb8abae5"
+  integrity sha512-X4DKaxzraO04Pkl4brI9pEKCy6zZPs+FxAYUP/yBzjBQy1M58vSb89+oQLddBlxNhpYfDKTqff+9GmW9joR4qg==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
-    "@mdn/browser-compat-data" "^5.0.1"
+    "@mdn/browser-compat-data" "^5.1.0"
     "@use-it/interval" "^1.0.0"
     accept-language-parser "^1.5.0"
-    browser-specs "^3.12.0"
+    browser-specs "^3.13.0"
     chalk "^4.1.2"
     cheerio "^1.0.0-rc.11"
     cli-progress "^3.11.1"
@@ -570,10 +570,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^3.12.0:
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.12.0.tgz#87252d060f191baa7d895f4e6ee7290691506903"
-  integrity sha512-wntVE7WNbCuTJ5KhzlHGtZIjmn+iZaBjSYu1IAms5WKTPvkAn6A9xf2+ed0qaXTuh+cLhS/FgV4SQ/CtYYkFhg==
+browser-specs@^3.13.0:
+  version "3.13.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.13.0.tgz#cf9d896a36c7f46dd50f5ebf82968ad22c1ba95d"
+  integrity sha512-HU/pp210tqpGGnrAJzD2NLLrVFF1wZfuTEQ5C2UWwqutjvcBSIZsdOtnRWMiUOIT7QOlkBwZ1Iv/6kQye8tyTA==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"

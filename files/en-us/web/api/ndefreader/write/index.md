@@ -29,7 +29,7 @@ NDEFReader.write(message);
 
     - `data` {{optional_inline}}
       - : Contains the data to be transmitted,a string object or literal, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
-        a {{jsxref("DataView")}}, or an array of nestedrecords
+        a {{jsxref("DataView")}}, or an array of nested records
     - `encoding` {{optional_inline}}
       - : A string specifying the record's encoding.
     - `id` {{optional_inline}}

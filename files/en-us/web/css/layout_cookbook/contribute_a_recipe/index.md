@@ -82,7 +82,7 @@ The template explains what should be part of each section, and you can refer to 
 
 If you need general guidance on using the MDN wiki, see the help pages available here.
 
-If you need to ask any questions, or want someone to take a look at your page then the [MDN Discourse forum](https://discourse.mozilla.org/c/mdn/236) is a good place to do this, or [chat with us on Matrix](/en-US/docs/MDN/Community/Conversations#Synchronous_chat).
+If you need to ask any questions, or want someone to take a look at your page then the [MDN Discourse forum](https://discourse.mozilla.org/c/mdn/236) is a good place to do this, or [chat with us on Matrix](/en-US/docs/MDN/Community/Conversations#synchronous_chat).
 
 ## See also
 

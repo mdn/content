@@ -90,5 +90,5 @@ loading.
 ## See also
 
 - {{domxref("Window/load_event", "load")}} event
-- `DOMContentLoaded` event in [Listening to events: Simple DOM events](/en-US/docs/Listening_to_events_in_Firefox_extensions#Simple_DOM_events)
+- {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}} event
 - {{glossary("IIFE")}} (Immediately-invoked function expression)

@@ -72,7 +72,7 @@ section {
 ...
 ```
 
-### Using hidden to manually manage visibility.
+### Using hidden to manually manage visibility
 
 The following example shows that it is possible to manage visibility in script. The added benefit of using `content-visibility: hidden` instead of, for example, `display: none` is that rendered content when hidden with `content-visibility` will preserve rendering state. This means that if the content is shown again, it will render quicker than the alternative.
 

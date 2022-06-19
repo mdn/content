@@ -69,7 +69,7 @@ The promise may also be rejected with an error thrown by the callback during exe
 
 ## Examples
 
-The following examples are slightly simplified versions of the live examples provided in [Prioritized Task Scheduling API > Examples](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#Examples).
+The following examples are slightly simplified versions of the live examples provided in [Prioritized Task Scheduling API > Examples](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#examples).
 
 ### Feature checking
 
