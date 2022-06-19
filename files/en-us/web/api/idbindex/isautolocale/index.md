@@ -38,7 +38,7 @@ function displayDataByIndex() {
   console.log(myIndex.isAutoLocale);
 
   myIndex.openCursor().onsuccess = function(event) {
-    cosnt cursor = event.target.result;
+    const cursor = event.target.result;
     if(cursor) {
       const tableRow = document.createElement('tr');
       tableRow.innerHTML =   '<td>' + cursor.value.id + '</td>'
