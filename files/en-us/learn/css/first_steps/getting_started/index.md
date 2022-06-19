@@ -77,7 +77,7 @@ and also a <a href="https://example.com">link</a>.</p>
 </html>
 ```
 
-> **Note:** If you are reading this on a device or an environment where you can't easily create files, then don't worry — live code editors are provided below to allow you to write example code right here in the page.
+> **Note:** If you are reading this on a device or environment where you can't easily create files, then don't worry — you can write example code in our interactive editor right here in the page.
 
 ## Adding CSS to the document
 
@@ -131,9 +131,9 @@ Try this out in the interactive editor below (edit the code boxes) or in your lo
 
 ## Changing the default behavior of elements
 
-When we look at a well-marked up HTML document, even something as simple as our example, we can see how the browser is making the HTML readable by adding some default styling. Headings are large and bold and our list has bullets. This happens because browsers have internal stylesheets containing default styles, which they apply to all pages by default; without them all of the text would run together in a clump and we would have to style everything from scratch. All modern browsers display HTML content by default in pretty much the same way.
+Browsers is making the HTML readable by applying some internal stylesheets with default styles to all HTML documents. Without default styles, all of the text would run together in a clump and we would have to style everything from scratch. All modern browsers display HTML content by default in pretty much the same way. Headings are large and bold and our list has bullets. 
 
-However, you will often want something other than the choice the browser has made. This can be done by choosing the HTML element that you want to change and using a CSS rule to change the way it looks. A good example is `<ul>`, an unordered list. It has list bullets. If you don't want those bullets, you can remove them like so:
+To change the default styles, you can choose the HTML element that you want to change. Use a CSS rule to change the way it looks. A good example is `<ul>`, an unordered list. It has list bullets but you can remove them like so:
 
 ```css
 li {
@@ -143,36 +143,36 @@ li {
 
 Try adding this to your CSS now.
 
-The `list-style-type` property is a good property to look at on MDN to see which values are supported. Take a look at the page for [`list-style-type`](/en-US/docs/Web/CSS/list-style-type) and you will find an interactive example at the top of the page to try some different values in, then all allowable values are detailed further down the page.
-
-Looking at that page you will discover that in addition to removing the list bullets, you can change them — try changing them to square bullets by using a value of `square`.
+The [`list-style-type`](/en-US/docs/Web/CSS/list-style-type) property also supports other values, for example `square` to change the list bullets. The linked page contains an interactive example to try some different values and explains all allowable values. 
 
 ## Adding a class
 
-So far, we have styled elements based on their HTML element names. This works as long as you want all of the elements of that type in your document to look the same. Most of the time that isn't the case and so you will need to find a way to select a subset of the elements without changing the others. The most common way to do this is to add a class to your HTML element and target that class.
+So far, we have styled elements based on their HTML element names. This works as long as you want all of the elements of that type in your document to look the same. Often, you want to select a subset of the elements without changing the others. The most common way to do this is to add a class to your HTML element and target that class.
 
-In your HTML document, add a [class attribute](/en-US/docs/Web/HTML/Global_attributes/class) to the second list item. Your list will now look like this:
+1. In your HTML document, add a [class attribute](/en-US/docs/Web/HTML/Global_attributes/class) to the second list item. Your list will now look like this:
 
-```html
-<ul>
-  <li>Item one</li>
-  <li class="special">Item two</li>
-  <li>Item <em>three</em></li>
-</ul>
-```
+    ```html
+    <ul>
+      <li>Item one</li>
+      <li class="special">Item two</li>
+      <li>Item <em>three</em></li>
+    </ul>
+    ```
 
-In your CSS, you can target the class of `special` by creating a selector that starts with a full stop character. Add the following to your CSS file:
+2. In your CSS, target the class of `special` by creating a selector that starts with a full stop character. Add the following to your CSS file:
 
-```css
-.special {
-  color: orange;
-  font-weight: bold;
-}
-```
+    ```css
+    .special {
+      color: orange;
+      font-weight: bold;
+    }
+    ```
 
-Save and refresh to see what the result is.
+3. Save and refresh to see what the result is.
 
 You can apply the class of `special` to any element on your page that you want to have the same look as this list item. For example, you might want the `<span>` in the paragraph to also be orange and bold. Try adding a `class` of `special` to it, then reload your page and see what happens.
+
+### Adding a selector along with a class
 
 Sometimes you will see rules with a selector that lists the HTML element selector along with the class:
 
