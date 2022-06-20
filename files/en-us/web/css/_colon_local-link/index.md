@@ -2,6 +2,7 @@
 title: ':local-link'
 slug: Web/CSS/:local-link
 browser-compat: css.selectors.local-link
+spec-url: https://drafts.csswg.org/selectors/#local-link-pseudo
 ---
 {{ CSSRef }}
 
