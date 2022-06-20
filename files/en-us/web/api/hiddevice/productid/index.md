@@ -8,9 +8,10 @@ tags:
   - Reference
   - productId
   - HIDDevice
+  - Experimental
 browser-compat: api.HIDDevice.productId
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`productId`** read-only property of the {{domxref("HIDDevice")}} interface returns the product ID of the connected HID device.
 
