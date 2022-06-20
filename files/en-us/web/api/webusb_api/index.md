@@ -9,7 +9,7 @@ tags:
   - Reference
 spec-urls: https://wicg.github.io/webusb/
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Web USB API")}}
+{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}
 
 The **WebUSB API** provides a way to expose non-standard Universal Serial Bus (USB) compatible devices services to the web, to make USB safer and easier to use.
 

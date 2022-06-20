@@ -2023,6 +2023,27 @@
       "properties": [],
       "events": []
     },
+    "WebUSB API": {
+      "overview": ["WebUSB API"],
+      "interfaces": [
+        "USB",
+        "USBAlternateInterface",
+        "USBConfiguration",
+        "USBConnectionEvent",
+        "USBDevice",
+        "USBEndPoint",
+        "USBInterface",
+        "USBInTransferResult",
+        "USBIsochronousInTransferPacket",
+        "USBIsochronousInTransferResult",
+        "USBIsochronousOutTransferPacket",
+        "USBIsochronousOutTransferResult",
+        "USBOutTransferResult"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "WebVR API": {
       "overview": ["WebVR API"],
       "guides": [

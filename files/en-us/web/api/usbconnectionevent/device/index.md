@@ -10,7 +10,7 @@ tags:
   - USBConnectionEvent
 browser-compat: api.USBConnectionEvent.device
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}
+{{securecontext_header}}{{APIRef("WebUSB API")}}
 
 The **`device`** read-only property of the {{domxref("USBConnectionEvent")}} interface returns a {{domxref("USBDevice")}} object representing the device being connected or disconnected.
 

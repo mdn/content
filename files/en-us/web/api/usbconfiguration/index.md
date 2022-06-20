@@ -12,7 +12,7 @@ tags:
   - WebUSB API
 browser-compat: api.USBConfiguration
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}
+{{securecontext_header}}{{APIRef("WebUSB API")}}
 
 The `USBConfiguration` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) provides information about a particular configuration of a USB device and the interfaces that it supports.
 
