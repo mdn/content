@@ -28,7 +28,7 @@ new Promise(executor)
 
 ### Return value
 
-When called via `new`, the `Promise` constructor returns a promise object. The promise object will become "resolved" when either of the functions `resolutionFunc` or `rejectionFunc` are invoked. Note that if you call `resolutionFunc` or `rejectionFunc` and pass another Promise object as an argument, it can be said to be "resolved", but still not "settled".
+When called via `new`, the `Promise` constructor returns a promise object. The promise object will become _resolved_ when either of the functions `resolutionFunc` or `rejectionFunc` are invoked. Note that if you call `resolutionFunc` or `rejectionFunc` and pass another `Promise` object as an argument, it can be said to be "resolved", but still not "settled".
 
 ## Description
 
