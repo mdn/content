@@ -1914,9 +1914,6 @@
         "RTCCertificateStats",
         "RTCRTPStreamStats"
       ],
-      "types": [
-        "RTCStatsType"
-      ],
       "methods": ["MediaDevices.getUserMedia()"],
       "properties": ["Navigator.mediaDevices"],
       "events": [
