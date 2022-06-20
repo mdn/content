@@ -354,8 +354,8 @@ If you're a theme developer, you should read [Theme changes in Firefox 4](/en-US
 
 #### Miscellaneous changes to code modules
 
-- The `NetUtil.jsm` code module now offers the [`readInputStreamToString()`](https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/NetUtil.html#readInputStreamToString) method, which lets you read arbitrary bytes from a stream into a string, even if the stream includes zeroes.
-- The XPCOMUtils.jsm code module now offers [IterSimpleEnumerator()](https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.html#IterSimpleEnumerator) and [IterStringEnumerator()](https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.html#IterStringEnumerator) helpers to iterate over XPCOM enumerators.
+- The `NetUtil.jsm` code module now offers the [`readInputStreamToString()`](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/NetUtil.html#readInputStreamToString()>) method, which lets you read arbitrary bytes from a stream into a string, even if the stream includes zeroes.
+- The XPCOMUtils.jsm code module now offers [IterSimpleEnumerator()](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.html#IterSimpleEnumerator()>) and [IterStringEnumerator()](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.html#IterStringEnumerator()>) helpers to iterate over XPCOM enumerators.
 - You can now [use workers in JavaScript code modules](/en-US/docs/JavaScript_code_modules/Using_workers_in_JavaScript_code_modules).
 
 ### DOM changes
