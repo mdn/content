@@ -16,7 +16,7 @@ The **`HTMLElement.offsetParent`** read-only property returns a
 reference to the element which is the closest (nearest in the containment hierarchy)
 positioned (non-static) ancestor element.
 
-If there is no positioned ancestor the nearest ancestor `td`, `th`, `table` will be returned (only if the element is static positioned), otherwise the `body` will be returned.
+If there is no positioned ancestor element, the nearest ancestor `td`, `th`, `table` will be returned (**note**: only if the element is static positioned), otherwise the `body` will be returned.
 
 > **Note:** `offsetParent` returns `null` in the following
 > situations:
