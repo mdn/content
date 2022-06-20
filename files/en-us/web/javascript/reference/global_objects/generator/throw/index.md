@@ -28,7 +28,7 @@ generatorObject.throw(exception)
 
 ### Return value
 
-If the thrown exception is caught by a `try...catch` and the generator resumes to yield more values, it will return an {{jsxref("Global_Objects/Object", "Object")}} with two properties:
+If the thrown exception is caught by a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) and the generator resumes to yield more values, it will return an {{jsxref("Global_Objects/Object", "Object")}} with two properties:
 
 - `done`
   - : A boolean value:
