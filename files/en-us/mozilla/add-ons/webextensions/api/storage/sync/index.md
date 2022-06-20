@@ -15,7 +15,7 @@ browser-compat: webextensions.api.storage.sync
 ---
 {{AddonSidebar()}}
 
-Represents the `sync` storage area. Items in `sync` storage are synced by the browser. The data is then available across all instances of that browser that the user is logged into (for example, when using Firefox sync or a Google account) across different devices.
+Represents the `sync` storage area. Items in `sync` storage are synced by the browser. The data is then available on all instances of the browser the user is logged into (for example, when using Firefox sync or a Google account) across different devices.
 
 For Firefox, a user must have `Add-ons` checked under the "Sync Settings" options in `"about:preferences"`.
 
@@ -66,6 +66,14 @@ The browser enforces limits on the amount of data each extension is allowed to s
 </table>
 
 If an extension attempts to store items that exceed these limits, calls to {{WebExtAPIRef("storage.StorageArea.set()", "storage.sync.set()")}} are rejected with an error. An extension can use {{WebExtAPIRef("storage.StorageArea.getBytesInUse()", "storage.sync.getBytesInUse()")}} to find out how much of its quota is in use.
+
+## Synchronization process
+
+In Firefox, extension data is synced every 10 minutes or whenever the user selects **Settings** > **Sync** > **Sync Now**. When the browser performs a sync it:
+- compares the value on the server with the value at the last sync; if they are different, the value from the server is written to the browser's sync storage.
+- compares the browser's sync storage value with the value on the server; if they are different, writes the browser's value to the server.
+
+This means that a change on the server takes precedence over a change in the browser's sync storage. Therefore, a user can update a value on one browser and then update the same data on a second browser before the second browser is synchronized. For this reason, sync storage is not ideal for data that's likely to change dynamically. To handle such cases, use {{WebExtAPIRef("storage.StorageArea.onChanged", "storage.sync.onChanged")}} to listen for sync updates and react accordingly.
 
 ## Methods
 
