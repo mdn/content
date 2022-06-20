@@ -28,7 +28,7 @@ This article provides information about the changes in Firefox 83 that will affe
 ### CSS
 
 - The vendor prefixed `:-moz-any()` is now aliased to the standard {{CSSxRef(":is", ":is()")}} CSS pseudo-class function ({{bug(1666086)}}).
-- We've added support for [CSS Conic Gradients](</en-US/docs/Web/CSS/conic-gradient()>) ({{bug(1632351)}}) and ({{bug(1175958)}}).
+- We've added support for [CSS Conic Gradients](/en-US/docs/Web/CSS/conic-gradient) ({{bug(1632351)}}) and ({{bug(1175958)}}).
 
 ### JavaScript
 
