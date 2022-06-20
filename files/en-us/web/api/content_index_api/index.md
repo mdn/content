@@ -191,7 +191,7 @@ self.addEventListener('contentdelete', (event) => {
 });
 ```
 
-The {{domxref('ServiceWorkerGlobalScope.contentdelete_event', "contentdelete)}} event is only fired when the deletion happens due to interaction with the browser's built-in user interface. It is not fired when the {{domxref('ContentIndex.delete()')}} method is called.
+The {{domxref('ServiceWorkerGlobalScope.contentdelete_event', "contentdelete")}} event is only fired when the deletion happens due to interaction with the browser's built-in user interface. It is not fired when the {{domxref('ContentIndex.delete()')}} method is called.
 
 ## Specifications
 
