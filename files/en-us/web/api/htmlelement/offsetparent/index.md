@@ -14,9 +14,9 @@ browser-compat: api.HTMLElement.offsetParent
 
 The **`HTMLElement.offsetParent`** read-only property returns a
 reference to the element which is the closest (nearest in the containment hierarchy)
-positioned ancestor element. If there is no positioned ancestor element, the nearest
-ancestor `td`, `th`, `table` will be returned, or the
-`body` if there are no ancestor table elements either.
+positioned (non-static) ancestor element.
+
+If there is no positioned ancestor the nearest ancestor `td`, `th`, `table` will be returned (only if the element is static positioned), otherwise the `body` will be returned.
 
 > **Note:** `offsetParent` returns `null` in the following
 > situations:
