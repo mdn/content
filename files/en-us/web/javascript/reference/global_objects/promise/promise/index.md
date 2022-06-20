@@ -32,7 +32,7 @@ When called via `new`, the `Promise` constructor returns a promise object. The p
 
 ## Description
 
-Traditionally (before promises), asynchronous tasks are designed as callbacks.
+Traditionally (before promises), asynchronous tasks were designed as callbacks.
 
 ```js
 readFile("./data.txt", (error, result) => {
