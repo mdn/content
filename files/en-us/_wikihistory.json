@@ -145297,15 +145297,6 @@
       "Jeremie"
     ]
   },
-  "Web/SVG/Attribute/color-rendering": {
-    "modified": "2020-10-15T21:07:29.272Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sebastianz",
-      "connorshea",
-      "Jeremie"
-    ]
-  },
   "Web/SVG/Attribute/contentScriptType": {
     "modified": "2020-10-15T21:09:10.002Z",
     "contributors": [
