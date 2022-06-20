@@ -116,7 +116,7 @@ The math functions allow CSS numeric values to be written as mathematical expres
   - : A modulus function that contains two calculations A and B, and returns the difference between A and the nearest integer multiple of B either above or below A.
 - {{cssxref("round", "round()")}} {{Experimental_Inline}}
   - : Contains an optional rounding strategy, and two calculations A and B, and returns the value of A, rounded according to the rounding strategy, to the nearest integer multiple of B either above or below A.
-- {{cssxref("sign", "sign()")}} {{Experimental_Inline}}
+- {{cssxref("sign_function", "sign()")}} {{Experimental_Inline}}
   - : Takes a calculation and returns -1 if the numeric value is negative,
     \+1 if the numeric value is positive, 0⁺ if the numeric value is 0⁺, and 0⁻ if the numeric value is 0⁻.
 - {{cssxref("sin", "sin()")}} {{Experimental_Inline}}
