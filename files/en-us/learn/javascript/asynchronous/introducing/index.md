@@ -199,7 +199,7 @@ document.querySelector('#reload').addEventListener('click', () => {
 
 This is the basic problem with long-running synchronous functions. What we need is a way for our program to:
 
-- start a long-running operation by calling a function
+1. Start a long-running operation by calling a function.
 - have the function start the operation and return immediately, so our program can still be responsive to other events
 - be notified with the result of the operation, when it eventually completes.
 
