@@ -153,7 +153,7 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-{{EmbedLiveSample('Translate', '100%', 200)}}
+{{EmbedLiveSample('Example_3', '100%', 200)}}
 
 ### Scale
 
