@@ -8118,7 +8118,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oncanplay	/en-US/docs/Web/API/GlobalEventHandlers/oncanplay
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oncanplaythrough	/en-US/docs/Web/API/GlobalEventHandlers/oncanplaythrough
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oncuechange	/en-US/docs/Web/API/TextTrack/cuechange_event
-/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.ondurationchange	/en-US/docs/Web/API/GlobalEventHandlers/ondurationchange
+/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.ondurationchange	/en-US/docs/Web/API/HTMLMediaElement/durationchange_event
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onemptied	/en-US/docs/Web/API/GlobalEventHandlers/onemptied
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onended	/en-US/docs/Web/API/GlobalEventHandlers/onended
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oninvalid	/en-US/docs/Web/API/GlobalEventHandlers/oninvalid
@@ -8135,6 +8135,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Web/API/GlobalEventHandlers/oncuechange	/en-US/docs/Web/API/TextTrack/cuechange_event
 /en-US/docs/Web/API/GlobalEventHandlers/ondragexit	/en-US/docs/Web/API/GlobalEventHandlers/ondragleave
+/en-US/docs/Web/API/GlobalEventHandlers/ondurationchange	/en-US/docs/Web/API/HTMLMediaElement/durationchange_event
 /en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenchange	/en-US/docs/Web/API/Document/fullscreenchange_event
 /en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenerror	/en-US/docs/Web/API/Document/fullscreenerror_event
 /en-US/docs/Web/API/GlobalEventHandlers/onpointerdown/drag	/en-US/docs/Web/API/GlobalEventHandlers/ondrag

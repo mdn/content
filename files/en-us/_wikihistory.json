@@ -44482,18 +44482,6 @@
       "AFBarstow"
     ]
   },
-  "Web/API/GlobalEventHandlers/ondurationchange": {
-    "modified": "2020-10-15T21:43:47.156Z",
-    "contributors": [
-      "suvyme",
-      "mfluehr",
-      "fscholz",
-      "sideshowbarker",
-      "wbamberg",
-      "rolfedh",
-      "Guillaume-Heras"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onemptied": {
     "modified": "2020-10-15T21:44:06.259Z",
     "contributors": [
