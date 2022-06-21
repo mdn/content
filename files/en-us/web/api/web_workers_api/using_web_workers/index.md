@@ -447,8 +447,8 @@ Here are the full implementation:
      */
     function QueryableWorker(url, defaultListener, onError) {
       const instance = this,
-          worker = new Worker(url),
-          listeners = {};
+      const worker = new Worker(url),
+      let listeners = {};
 
       this.defaultListener = defaultListener || function() {};
 
