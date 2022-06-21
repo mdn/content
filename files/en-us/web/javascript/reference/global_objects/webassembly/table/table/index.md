@@ -38,7 +38,7 @@ new WebAssembly.Table(tableDescriptor)
   thrown.
 - If `maximum` is specified and is smaller than `initial`, a
   {{jsxref("RangeError")}} is thrown.
-  - If `tableDescriptor.element` is one of the [reference types](https://webassembly.github.io/spec/core/syntax/types.html#syntax-reftype), then a {{jsxref("TypeError")}} is thrown.
+  - If `tableDescriptor.element` is not one of the [reference types](https://webassembly.github.io/spec/core/syntax/types.html#syntax-reftype), then a {{jsxref("TypeError")}} is thrown.
 
 ## Examples
 
@@ -61,7 +61,7 @@ console.log(tbl.get(1));  // "null"
 We then create an import object that contains the table:
 
 ```js
-var importObj = {
+const importObj = {
   js: {
     tbl: tbl
   }
