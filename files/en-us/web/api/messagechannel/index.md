@@ -70,7 +70,7 @@ In this example, you can see two way message passing between main and worker thr
 let {port1: mainPort, port2: workerPort} = new MessageChannel();
 
 let worker = new Worker("worker-code.js");
-let data = {
+const data = {
     type: "eventFromMain",
     payload: { name: "init" }
 };
