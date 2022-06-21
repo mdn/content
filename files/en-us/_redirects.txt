@@ -9121,7 +9121,6 @@
 /en-US/docs/Web/API/RTCIceCandidateInit/sdpMid	/en-US/docs/Web/API/RTCIceCandidate/sdpMid
 /en-US/docs/Web/API/RTCIceCandidateInit/usernameFragment	/en-US/docs/Web/API/RTCIceCandidate/usernameFragment
 /en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceieved	/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceived
-/en-US/docs/Web/API/RTCIceCandidatePairStats/circuitBreakerTriggerCoun	/en-US/docs/Web/API/RTCIceCandidatePairStats/circuitBreakerTriggerCount
 /en-US/docs/Web/API/RTCIceCandidatePairStats/contentRequestsSent	/en-US/docs/Web/API/RTCIceCandidatePairStats/consentRequestsSent
 /en-US/docs/Web/API/RTCIceCandidateStats/ip	/en-US/docs/Web/API/RTCIceCandidateStats/address
 /en-US/docs/Web/API/RTCIceCandidateStats/mozLocalTransport	/en-US/docs/Web/API/RTCIceCandidateStats/relayProtocol
