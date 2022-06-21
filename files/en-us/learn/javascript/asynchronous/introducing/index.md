@@ -203,7 +203,7 @@ This is the basic problem with long-running synchronous functions. What we need 
 2. Have that function start the operation and return immediately, so that our program can still be responsive to other events.
 3. Notify us with the result of the operation when it eventually completes.
 
-That's what asynchronous functions can do, and the rest of this module explains how they are implemented in JavaScript.
+That's precisely what asynchronous functions can do. The rest of this module explains how they are implemented in JavaScript.
 
 ## Event handlers
 
