@@ -29,7 +29,7 @@ A {{domxref("ServiceWorker")}} object.
 
 ```js
 self.addEventListener('install', function(event) {
-  var myActiveWorker = event.activeWorker;
+  const myActiveWorker = event.activeWorker;
 });
 ```
 

@@ -91,7 +91,7 @@ document.body.addEventListener('click', function (evt) {
 
 ```js
 // location: https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container
-var loc = document.location;
+const loc = document.location;
 console.log(loc.href);      // https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container
 console.log(loc.protocol);  // https:
 console.log(loc.host);      // developer.mozilla.org:8080
