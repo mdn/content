@@ -132,7 +132,7 @@ Try clicking "Generate primes". Depending on how fast your computer is, it will 
 
 ### The trouble with long-running synchronous functions
 
-The next example is just like the last one, except we added a text box for you to type in. This time, click "Generate primes" and then try typing in the text box.
+The next example is just like the last one, except we added a text box for you to type in. This time, click "Generate primes", and try typing in the text box immediately after.
 
 You'll find that while our `generatePrimes()` function is running, our program is completely unresponsive: you can't type anything, or click anything, or do anything else.
 
