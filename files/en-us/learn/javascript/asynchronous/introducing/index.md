@@ -72,7 +72,7 @@ console.log(greeting);
 // "Hello, my name is Miriam!"
 ```
 
-Here, `makeGreeting()` is a **synchronous function**, because the caller has to wait for the function to finish its work and return before the caller can continue.
+Here, `makeGreeting()` is a **synchronous function** because the caller has to wait for the function to finish its work and output the return value before the caller can continue.
 
 ### A long-running synchronous function
 
