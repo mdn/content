@@ -65,6 +65,6 @@ For another (overlapping) set of links to learning resources, see the [MDN Learn
 - [Tizag CSS Tutorials](http://www.tizag.com/cssT/)
   - : An easy-to-follow reference for those wishing to learn CSS through short, concise tutorials.
 - [jQuery Fundamentals](http://jqfundamentals.com/)
-  - : An open-source reference book featuring detailed introductions to both JavaScript and JQuery for beginners.
+  - : An open-source reference book featuring detailed introductions to both JavaScript and jQuery for beginners.
 - [JavaScript From Null: A Video Series](https://code.tutsplus.com/tutorials/javascript-from-null-video-series--net-8066)
   - : A video series on JavaScript for absolute beginners looking for more 'visual'-based learning
