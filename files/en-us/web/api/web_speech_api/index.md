@@ -10,6 +10,9 @@ tags:
   - recognition
   - speech
   - synthesis
+browser-compat:
+  - api.SpeechRecognition
+  - api.SpeechSynthesis
 ---
 {{DefaultAPISidebar("Web Speech API")}}
 
@@ -73,19 +76,11 @@ The [Web Speech API examples](https://github.com/mdn/dom-examples/tree/master/we
 
 ## Specifications
 
-| Specification      |
-| ------------------ |
-| [Web Speech API](https://wicg.github.io/speech-api/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `SpeechRecognition`
-
-{{Compat("api.SpeechRecognition", 0)}}
-
-### `SpeechSynthesis`
-
-{{Compat("api.SpeechSynthesis", 0)}}
+{{Compat}}
 
 ## See also
 

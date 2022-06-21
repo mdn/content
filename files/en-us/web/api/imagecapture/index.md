@@ -48,7 +48,7 @@ The following code is taken from [Chrome's Grab Frame - Take Photo Sample](https
 This example shows, roughly, a {{domxref("MediaStreamTrack")}} extracted from a device's {{domxref("MediaStream")}}. The track is then used to create an `ImageCapture` object so that `takePhoto()` and `grabFrame()` can be called. Finally, it shows how to apply the results of these calls to a canvas object.
 
 ```js
-var imageCapture;
+let imageCapture;
 
 function onGetUserMediaButtonClick() {
   navigator.mediaDevices.getUserMedia({video: true})

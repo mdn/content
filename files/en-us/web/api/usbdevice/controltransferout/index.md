@@ -11,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - controlTransferOut
+  - Experimental
 browser-compat: api.USBDevice.controlTransferOut
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
