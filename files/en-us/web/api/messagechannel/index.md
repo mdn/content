@@ -67,7 +67,7 @@ In this example, you can see two way message passing between main and worker thr
 
 // main.js
 
-let {port1: mainPort, port2: workerPort} = new MessageChannel();
+const {port1: mainPort, port2: workerPort} = new MessageChannel();
 
 const worker = new Worker("worker-code.js");
 const data = {
