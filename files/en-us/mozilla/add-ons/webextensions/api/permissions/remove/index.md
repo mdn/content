@@ -34,7 +34,7 @@ let removing = browser.permissions.remove(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the permissions listed in the `permissions` argument were removed, or `false` otherwise.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the permissions listed in the `permissions` argument are no longer granted, or `false` otherwise.
 
 ## Browser compatibility
 
