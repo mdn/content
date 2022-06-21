@@ -128,7 +128,7 @@ document.querySelector('#reload').addEventListener('click', () => {
 
 {{EmbedLiveSample("A long-running synchronous function", 600, 120)}}
 
-Click "Generate primes". Depending on how fast your computer is, it will probably take a few seconds before the program displays the "Finished!" message.
+Try clicking "Generate primes". Depending on how fast your computer is, it will probably take a few seconds before the program displays the "Finished!" message.
 
 ### The trouble with long-running synchronous functions
 
