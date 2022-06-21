@@ -54,6 +54,8 @@ new WebAssembly.Memory(memoryDescriptor)
   thrown.
 - If `maximum` is specified and is smaller than `initial`, a
   {{jsxref("RangeError")}} is thrown.
+- If `shared` is present and `true`, yet `maximum` is not specified, a
+  {{jsxref("TypeError")}} is thrown.
 
 ## Examples
 
