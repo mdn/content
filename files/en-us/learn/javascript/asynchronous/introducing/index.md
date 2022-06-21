@@ -36,7 +36,7 @@ Many functions provided by browsers, especially the most interesting ones, can p
 - Accessing a user's camera or microphone using {{domxref("MediaDevices/getUserMedia", "getUserMedia()")}}
 - Asking a user to select files using {{domxref("window/showOpenFilePicker", "showOpenFilePicker()")}}
 
-Even though you may not have to _implement_ your own asynchronous functions very often, you are very likely to need to _use_ them correctly.
+So even though you may not have to _implement_ your own asynchronous functions very often, you are very likely to need to _use_ them correctly.
 
 In this article, we start by looking at the problem with long-running synchronous functions, which make asynchronous programming a necessity.
 
