@@ -61,9 +61,10 @@ NDEFReader.write(message);
 
   - : An object with the following properties:
 
-    - `overwrite` -- A boolean value specifying whether or not
-      existing records should be overwritten, if such exists.
-    - `signal` -- An optional {{DOMxRef("AbortSignal")}} that allows the current write operation to be canceled.
+    - `overwrite`
+      - : A boolean value specifying whether or not existing records should be overwritten, if such exists.
+    - `signal` {{optional_inline}}
+      - : An {{DOMxRef("AbortSignal")}} that allows the current write operation to be canceled.
 
 ### Return value
 
