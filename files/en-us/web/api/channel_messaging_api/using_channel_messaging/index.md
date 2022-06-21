@@ -9,6 +9,9 @@ tags:
   - MessageChannel
   - MessagePort
   - Tutorial
+browser-compat:
+  - api.MessageChannel
+  - api.MessagePort
 ---
 {{DefaultAPISidebar("Channel Messaging API")}}
 
@@ -136,17 +139,11 @@ When a message is received back from the IFrame confirming that the original mes
 
 ## Specifications
 
-{{Specifications("api.MessageChannel")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-### `MessageChannel`
-
-{{Compat("api.MessageChannel", 0)}}
-
-### `MessagePort`
-
-{{Compat("api.MessagePort", 0)}}
+{{Compat}}
 
 ## See also
 

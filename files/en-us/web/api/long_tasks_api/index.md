@@ -14,7 +14,9 @@ tags:
   - Reference
   - TaskAttributionTiming
   - Web Performance
-spec-urls: https://w3c.github.io/longtasks/
+browser-compat:
+  - api.PerformanceLongTaskTiming
+  - api.TaskAttributionTiming
 ---
 {{DefaultAPISidebar("Long Tasks")}}
 
@@ -80,13 +82,7 @@ observer.observe({entryTypes: ["longtask"]});
 
 ## Browser compatibility
 
-### `PerformanceLongTaskTiming`
-
-{{Compat("api.PerformanceLongTaskTiming")}}
-
-### `TaskAttributionTiming`
-
-{{Compat("api.TaskAttributionTiming")}}
+{{Compat}}
 
 ## See also
 
