@@ -52,7 +52,7 @@ Note that this is functionally no different than:
 #### CSS
 
 ```css
-menu {
+menu, ul {
   display: flex;
   list-style: none;
   padding: 0;
