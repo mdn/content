@@ -1,6 +1,7 @@
 ---
 title: Prioritized Task Scheduling API
 slug: Web/API/Prioritized_Task_Scheduling_API
+page-type: web-api-overview
 tags:
   - API
   - Prioritized Task Scheduling API
@@ -307,10 +308,10 @@ function mylog(text) { log.textContent += `${text}\n`; }
 if ('scheduler' in this) {
   // Create a TaskController, setting its signal priority to 'user-blocking'
   const controller = new TaskController({priority: 'user-blocking'});
-  
+
   // Listen for 'prioritychange' events on the controller's signal.
-  controller.signal.addEventListener('prioritychange', 
-    event => { 
+  controller.signal.addEventListener('prioritychange',
+    event => {
       const previousPriority = event.previousPriority;
       const newPriority = event.target.priority;
       mylog(`Priority changed from ${previousPriority} to ${newPriority}.`);
@@ -357,7 +358,7 @@ if ('scheduler' in this) {
   scheduler.postTask( ()=>{ mylog('Task executing'); }, {signal: abortTaskController.signal} )
     .then( (taskResult) => { mylog(`${taskResult}`); }) //This won't run!
     .catch( (error) => { mylog(`Error: ${error}`); });  // Log the error
-  
+
   // Abort the task
   abortTaskController.abort();
 }
@@ -390,7 +391,7 @@ if ('scheduler' in this) {
   scheduler.postTask( ()=>{ return 'Task delayed by 2000ms'; }, {delay: 2000} )
     .then( (taskResult) => { mylog(`${taskResult}`); })
   scheduler.postTask( ()=>{ return 'Next task should complete in about 2000ms'; }, {delay: 1} )
-    .then( (taskResult) => { mylog(`${taskResult}`); }) 
+    .then( (taskResult) => { mylog(`${taskResult}`); })
 }
 ```
 
