@@ -20,7 +20,7 @@ tags:
   - WebRTC
 browser-compat: api.MediaRecorderErrorEvent
 ---
-{{APIRef("MediaStream Recording")}}
+{{APIRef("MediaStream Recording")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The `MediaRecorderErrorEvent` interface represents errors returned by the [MediaStream Recording API.](/en-US/docs/Web/API/MediaStream_Recording_API) It is an {{domxref("Event")}} object that encapsulates a reference to a {{domxref("DOMException")}} describing the error that occurred.
 
@@ -41,10 +41,6 @@ _Inherits properties from its parent interface, {{domxref("Event")}}_.
 ## Methods
 
 _Inherits methods from its parent interface, {{domxref("Event")}}_.
-
-## Specifications
-
-{{Specifications}}
 
 ## Browser compatibility
 
