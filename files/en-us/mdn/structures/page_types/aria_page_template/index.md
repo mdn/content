@@ -85,7 +85,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_exam
 >
 > **Scenario 1:** If you have some examples on this page and some more examples on another page:
 >
-> Include an H3 heading for each example on this page and then a final H3 heading with the text "More examples", under which you can link to the examples on other pages. For example:
+> Include an H3 heading (`###`) for each example on this page and then a final H3 heading (`###`) with the text "More examples", under which you can link to the examples on other pages. For example:
 >
 >  ```md
 >  ## Examples
