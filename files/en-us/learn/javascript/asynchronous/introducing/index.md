@@ -54,7 +54,7 @@ console.log(greeting);
 This code:
 
 1. Declares a string called `name`.
-2. declares another string called `greeting`, which uses `name`
+2. Declares another string called `greeting`, which uses `name`.
 3. logs the greeting to the JavaScript console.
 
 We should note here that the browser effectively steps through the program one line at a time, in the order we wrote it, and at each point it waits for the line to finish its work before going on to the next line. It has to do this, because each line depends on the work done in the preceding lines.
