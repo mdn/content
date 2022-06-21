@@ -564,7 +564,7 @@ For example, when transferring an {{jsxref("ArrayBuffer")}} from your main app t
 
 ```js
 // Create a 32MB "file" and fill it.
-let uInt8Array = new Uint8Array(1024 * 1024 * 32); // 32MB
+const uInt8Array = new Uint8Array(1024 * 1024 * 32); // 32MB
 for (let i = 0; i < uInt8Array.length; ++i) {
   uInt8Array[i] = i;
 }
