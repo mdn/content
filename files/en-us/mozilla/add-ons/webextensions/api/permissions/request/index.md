@@ -40,7 +40,7 @@ let requesting = browser.permissions.request(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the extension was granted all the permissions listed in the `permissions` argument, or `false` otherwise.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the is now granted all the permissions listed in the `permissions` argument, or `false` otherwise.
 
 ## Browser compatibility
 
