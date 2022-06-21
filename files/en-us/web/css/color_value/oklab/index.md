@@ -9,7 +9,6 @@ tags:
   - Web
   - color
   - oklab
-  - Experimental
 browser-compat: css.types.color.oklab
 ---
 {{CSSRef}}
