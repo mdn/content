@@ -30,7 +30,7 @@ A {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}}
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `"SecurityError"`
+- `SecurityError` {{domxref("DOMException")}}
   - : The returned `Promise` rejects with this error if a [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) restricts use of this API or a permission to use it has not granted via a user gesture.
 
 ## Examples
