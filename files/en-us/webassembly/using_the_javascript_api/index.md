@@ -40,7 +40,7 @@ Let's run through some examples that explain how to use the WebAssembly JavaScri
 4. In the second line, you will see that the import has a two-level namespace — the internal function `$i` is imported from `imports.imported_func`. We need to reflect this two-level namespace in JavaScript when writing the object to be imported into the wasm module. Create a `<script></script>` element in your HTML file, and add the following code to it:
 
     ```js
-    var importObject = {
+    const importObject = {
       imports: { imported_func: arg => console.log(arg) }
     };
     ```
