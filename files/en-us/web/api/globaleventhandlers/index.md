@@ -73,8 +73,6 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event is raised.
 - {{domxref("GlobalEventHandlers.ondrop")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/drop_event", "drop")}} event is raised.
-- {{domxref("GlobalEventHandlers.ondurationchange")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("durationchange")}} event is raised.
 - {{domxref("GlobalEventHandlers.onemptied")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("emptied")}} event is raised.
 - {{domxref("GlobalEventHandlers.onended")}}
