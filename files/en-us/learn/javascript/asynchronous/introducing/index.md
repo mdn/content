@@ -78,7 +78,7 @@ Here, `makeGreeting()` is a **synchronous function**, because the caller has to 
 
 What if the synchronous function takes a long time?
 
-This program generates a number of large prime numbers, using a very inefficient algorithm, when the user clicks the "Generate primes" button. The user can set the number of primes to generate, which of course affects how long the operation will take.
+The program below uses a very inefficient algorithm to generate multiple large prime numbers when a user clicks the "Generate primes" button. The user can control the number of primes to generate, which of course, affects how long the operation will take.
 
 ```html
 <label for="quota">Number of primes:</label>
