@@ -8,7 +8,7 @@ tags:
   - Reference
   - Landing
   - Experimental
-spec-urls: https://wicg.github.io/scheduling-apis/
+browser-compat: api.Scheduler
 ---
 {{DefaultAPISidebar("Prioritized Task Scheduling API")}} {{SeeCompatTable}} {{AvailableInWorkers}}
 
@@ -406,7 +406,7 @@ Note that the second string appears in log after about 2 seconds.
 
 ## Browser compatibility
 
-{{Compat("api.Scheduler")}}
+{{Compat}}
 
 ## See also
 
