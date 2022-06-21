@@ -8,7 +8,6 @@ tags:
   - elementtiming
   - Performance
   - Reference
-spec-urls: https://wicg.github.io/element-timing/forms.html#attr-label-for
 ---
 
 {{HTMLSidebar}}
@@ -37,14 +36,6 @@ Good contenders for elements you might want to observe are:
 
 <p elementtiming="important-text">Some very important information.</p">
 ```
-
-## Specifications
-
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat("html.elements.attribute.elementtiming")}}
 
 ## See also
 
