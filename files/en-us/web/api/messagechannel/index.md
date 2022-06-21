@@ -80,7 +80,7 @@ mainPort.onmessage = (e) => console.log(e.data);
 
 // worker-code.js
 let workerPort;
-let data = {
+const data = {
     type:"eventFromWoker", 
     payload: {name:"init"}
 };
