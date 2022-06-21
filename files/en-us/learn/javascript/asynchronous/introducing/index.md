@@ -53,7 +53,7 @@ console.log(greeting);
 
 This code:
 
-1. declares a string called `name`
+1. Declares a string called `name`.
 2. declares another string called `greeting`, which uses `name`
 3. logs the greeting to the JavaScript console.
 
