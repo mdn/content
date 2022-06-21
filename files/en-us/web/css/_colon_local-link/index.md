@@ -51,4 +51,4 @@ a:local-link {
 
 ## See also
 
-- Link-related pseudo-classes: {{ cssxref(":link") }},{{ cssxref(":visited") }}, {{ cssxref(":hover") }}, {{ cssxref(":active") }}
+- Link-related pseudo-classes: {{ cssxref(":link") }},{{ cssxref(":visited") }}, {{ cssxref(":hover") }}, {{ cssxref(":active") }}, {{ cssxref(":any-link") }}
