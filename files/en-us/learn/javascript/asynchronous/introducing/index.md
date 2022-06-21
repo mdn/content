@@ -38,7 +38,7 @@ Many functions provided by browsers, especially the most interesting ones, can p
 
 So even though you may not have to _implement_ your own asynchronous functions very often, you are very likely to need to _use_ them correctly.
 
-In this article, we start by looking at the problem with long-running synchronous functions, which make asynchronous programming a necessity.
+In this article, we'll start by looking at the problem with long-running synchronous functions, which make asynchronous programming a necessity.
 
 ## Synchronous programming
 
