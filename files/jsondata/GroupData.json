@@ -157,6 +157,18 @@
       "properties": ["Window.console", "WorkerGlobalScope.console"],
       "events": []
     },
+    "Cookie Store API": {
+      "overview": ["Cookie Store API"],
+      "interfaces": [
+        "CookieStore",
+        "CookieStoreManager",
+        "CookieChangeEvent",
+        "ExtendableCookieChangeEvent"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Credential Management API": {
       "overview": ["Credential Management API"],
       "interfaces": [
