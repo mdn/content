@@ -191,10 +191,10 @@ class CustomError extends Error {
 try {
   throw new CustomError('baz', 'bazMessage')
 } catch(e) {
-  console.error(e.name)    //CustomError
-  console.error(e.foo)     //baz
-  console.error(e.message) //bazMessage
-  console.error(e.stack)   //stacktrace
+  console.error(e.name)    // CustomError
+  console.error(e.foo)     // baz
+  console.error(e.message) // bazMessage
+  console.error(e.stack)   // stacktrace
 }
 ```
 
@@ -225,10 +225,10 @@ CustomError.prototype = Object.create(Error.prototype, {
 
 try {
   throw new CustomError('baz', 'bazMessage');
-} catch(e){
-  console.error(e.name); //CustomError
-  console.error(e.foo); //baz
-  console.error(e.message); //bazMessage
+} catch(e) {
+  console.error(e.name); // CustomError
+  console.error(e.foo); // baz
+  console.error(e.message); // bazMessage
 }
 ```
 
