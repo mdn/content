@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.BigInt.asIntN
 ---
 {{JSRef}}
 
-The **`BigInt.asIntN`** static method clamps a BigInt value to the given number of bits, and returns that value as a signed integer.
+The **`BigInt.asIntN`** static method clamps a `BigInt` value to the given number of bits, and returns that value as a signed integer.
 
 {{EmbedInteractiveExample("pages/js/bigint-asintn.html", "taller")}}
 
@@ -34,7 +34,7 @@ The value of `bigint` modulo 2^`bits`, as a signed integer.
 
 ## Description
 
-The `BigInt.asIntN` method clamps a BigInt value to the given number of bits, and interprets the result as a signed integer. For example, for `BigInt.asIntN(3, 25n)`, the value `25n` is clamped to `1n`:
+The `BigInt.asIntN` method clamps a `BigInt` value to the given number of bits, and interprets the result as a signed integer. For example, for `BigInt.asIntN(3, 25n)`, the value `25n` is clamped to `1n`:
 
 ```plain
 25n = 00011001 (base 2)
@@ -50,7 +50,7 @@ If the leading bit of the remaining number is `1`, the result is negative. For e
 ===>      1001 (base 2) = -7n
 ```
 
-> **Note:** Bigints are always encoded as two's complement in binary.
+> **Note:** `BigInt` values are always encoded as two's complement in binary.
 
 ## Examples
 
