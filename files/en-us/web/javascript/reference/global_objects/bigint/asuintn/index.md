@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.BigInt.asUintN
 ---
 {{JSRef}}
 
-The **`BigInt.asIntN`** static method clamps a `BigInt` value to the given number of bits, and returns that value as an unsigned integer.
+The **`BigInt.asUintN`** static method clamps a `BigInt` value to the given number of bits, and returns that value as an unsigned integer.
 
 {{EmbedInteractiveExample("pages/js/bigint-asuintn.html", "taller")}}
 
@@ -34,7 +34,7 @@ The value of `bigint` modulo 2^`bits`, as an unsigned integer.
 
 ## Description
 
-The `BigInt.asUintN` method clamps a `BigInt` value to the given number of bits, and interprets the result as an unsigned integer. Unsigned integers have no sign bits and are always positive. For example, for `BigInt.asUintN(4, 25n)`, the value `25n` is clamped to `9n`:
+The `BigInt.asUintN` method clamps a `BigInt` value to the given number of bits, and interprets the result as an unsigned integer. Unsigned integers have no sign bits and are always non-negative. For example, for `BigInt.asUintN(4, 25n)`, the value `25n` is clamped to `9n`:
 
 ```plain
 25n = 00011001 (base 2)
