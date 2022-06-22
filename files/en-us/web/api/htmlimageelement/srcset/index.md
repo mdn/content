@@ -127,7 +127,7 @@ the wrap must occur.
 ```css
 .box {
   width: 200px;
-  border: 2px solid rgba(150, 150, 150, 255);
+  border: 2px solid rgb(150, 150, 150);
   padding: 0.5em;
   word-break: break-all;
 }
