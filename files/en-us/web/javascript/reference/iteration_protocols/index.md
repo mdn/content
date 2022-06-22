@@ -51,7 +51,7 @@ All iterator protocol methods (`next()`, `return()`, and `throw()`) are expected
 - `value`
   - : Any JavaScript value returned by the iterator. Can be omitted when `done` is `true`.
 
-In practice, neither properties are strictly required: if an object without either property is returned, it's effectively equivalent to `{ done: false, value: undefined }`.
+In practice, neither property is strictly required; if an object without either property is returned, it's effectively equivalent to `{ done: false, value: undefined }`.
 
 If an iterator returns a result with `done: true`, any subsequent calls to `next()` are expected to return `done: true` as well, although this is not enforced on the language level.
 
@@ -411,7 +411,7 @@ console.log(typeof aGeneratorObject[Symbol.iterator]);
 // "function", because it has an @@iterator method, so it's an iterable
 
 console.log(aGeneratorObject[Symbol.iterator]() === aGeneratorObject);
-// true, because its @@iterator method returns itself (an iterator), so it's an well-formed iterable
+// true, because its @@iterator method returns itself (an iterator), so it's a well-formed iterable
 
 console.log([...aGeneratorObject]);
 // [1, 2, 3]
