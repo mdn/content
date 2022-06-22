@@ -59,4 +59,4 @@ TODO
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
 - {{jsxref("Function")}} object
-- {{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}
+- {{jsxref("Functions", "Functions", "", 1)}}

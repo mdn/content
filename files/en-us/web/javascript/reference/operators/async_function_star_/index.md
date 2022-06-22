@@ -67,4 +67,4 @@ x(6).next().then(res => console.log(res.value)); // logs 36
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
 - {{jsxref("Function")}} object
-- {{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}
+- {{jsxref("Functions", "Functions", "", 1)}}

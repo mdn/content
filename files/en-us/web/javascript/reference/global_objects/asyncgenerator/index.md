@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.AsyncGenerator
 ---
 {{JSRef}}
 
-The **`AsyncGenerator`** object is returned by an {{jsxref("Statements/async_function*", "async generator function", "", 1)}} and it conforms to both the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol) and the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol).
+The **`AsyncGenerator`** object is returned by an {{jsxref("Statements/async_function*", "async generator function", "", 1)}} and it conforms to both the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) and the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol).
 
 Async generators always yield a {{jsxref("Promise")}} object.
 
@@ -90,4 +90,4 @@ main()
 - {{jsxref("Operators/function*", '<code>function*</code> expression', "", 1)}}
 - {{jsxref("GeneratorFunction", "Generator Function", "", 1)}}
 - {{jsxref("AsyncGeneratorFunction", "Async Generator Function", "", 1)}}
-- [The Iterator protocol](/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)

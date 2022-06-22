@@ -37,11 +37,11 @@ new GeneratorFunction(arg1, arg2, functionBody)
 
 ## Description
 
-{{jsxref("Statements/async_function*", "async generator function")}} objects created with the `AsyncGeneratorFunction` constructor are parsed when the function is created. This is less efficient than declaring a generator function with an {{jsxref("Statements/async_function*", "async function* expression")}} and calling it within your code, because such functions are parsed with the rest of the code.
+Async generator function objects created with the `AsyncGeneratorFunction` constructor are parsed when the function is created. This is less efficient than declaring a generator function with an {{jsxref("Operators/async_function*", "async function* expression")}} and calling it within your code, because such functions are parsed with the rest of the code.
 
 All arguments passed to the function are treated as the names of the identifiers of the parameters in the function to be created, in the order in which they are passed.
 
-> **Note:** {{jsxref("Statements/async_generator_function*", "async generator functions")}} created with the `AsyncGeneratorFunction` constructor do not create closures to their creation contexts; they are always created in the global scope.
+> **Note:** Async generator functions created with the `AsyncGeneratorFunction` constructor do not create closures to their creation contexts; they are always created in the global scope.
 > 
 > When running them, they will only be able to access their own local variables and global ones, not the ones from the scope in which the `AsyncGeneratorFunction` constructor was called.
 >
@@ -79,4 +79,4 @@ asyncGen.next().then(res => console.log(res.value)); // 20
 - {{jsxref("Global_Objects/GeneratorFunction", "GeneratorFunction")}}
 - {{jsxref("Global_Objects/AsyncFunction", "AsyncFunction")}}
 - [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
-- {{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}
+- {{jsxref("Functions", "Functions", "", 1)}}
