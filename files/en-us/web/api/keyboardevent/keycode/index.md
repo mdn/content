@@ -32,7 +32,7 @@ window.addEventListener("keydown", function (event) {
     return; // Should do nothing if the default action has been cancelled
   }
 
-  var handled = false;
+  const handled = false;
   if (event.key !== undefined) {
     // Handle the event with KeyboardEvent.key and set handled true.
   } else if (event.keyCode !== undefined) {

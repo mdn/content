@@ -50,7 +50,7 @@ A {{jsxref("Promise")}} that resolves with an array of connected {{domxref("HIDD
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `SecurityError`
+- `SecurityError` {{domxref("DOMException")}}
   - : Thrown if the page does not allow access to the HID feature.
 
 ## Examples

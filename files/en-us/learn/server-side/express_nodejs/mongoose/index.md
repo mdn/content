@@ -514,7 +514,7 @@ For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.co
 
 > **Note:** If you prefer you can set up a MongoDb database locally by downloading and installing the [appropriate binaries for your system](https://www.mongodb.com/try/community). The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting. Note, however, that the [Express Tutorial Part 7: Deploying to Production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment) tutorial requires some form of remote database, since the free tier of the [Heroku](https://www.heroku.com/) service does not provide persistent storage. It is therefore highly recommended to use [MongoDB Atlas](https://www.mongodb.com/atlas/database).
 
-You will first need to [create an account](https://www.mongodb.com/atlas/database/register) with MongoDB Atlas (this is free, and just requires that you enter basic contact details and acknowledge their terms of service).
+You will first need to [create an account](https://www.mongodb.com/cloud/atlas/register) with MongoDB Atlas (this is free, and just requires that you enter basic contact details and acknowledge their terms of service).
 
 After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) screen:
 
