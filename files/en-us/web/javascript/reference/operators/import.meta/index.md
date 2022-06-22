@@ -1,17 +1,17 @@
 ---
 title: import.meta
-slug: Web/JavaScript/Reference/Statements/import.meta
+slug: Web/JavaScript/Reference/Operators/import.meta
 tags:
   - JavaScript
   - Language feature
   - Modules
   - Reference
-  - Statement
+  - Operator
   - import
   - import.meta
-browser-compat: javascript.statements.import_meta
+browser-compat: javascript.operators.import_meta
 ---
-{{JSSidebar("Statements")}}
+{{JSSidebar("Operators")}}
 
 The **`import.meta`** object exposes context-specific metadata
 to a JavaScript module. It contains information about the module, like the module's URL.

@@ -140734,6 +140734,18 @@
       "JayTaves"
     ]
   },
+  "Web/JavaScript/Reference/Operators/import.meta": {
+    "modified": "2020-10-15T22:06:37.793Z",
+    "contributors": [
+      "fscholz",
+      "Brettz9",
+      "sideshowbarker",
+      "felix.s",
+      "rwaldron",
+      "ExE-Boss",
+      "deniolp"
+    ]
+  },
   "Web/JavaScript/Reference/Operators/Increment": {
     "modified": "2020-10-15T22:30:28.619Z",
     "contributors": [
@@ -142710,18 +142722,6 @@
       "Ptak82",
       "Maian",
       "Dria"
-    ]
-  },
-  "Web/JavaScript/Reference/Statements/import.meta": {
-    "modified": "2020-10-15T22:06:37.793Z",
-    "contributors": [
-      "fscholz",
-      "Brettz9",
-      "sideshowbarker",
-      "felix.s",
-      "rwaldron",
-      "ExE-Boss",
-      "deniolp"
     ]
   },
   "Web/JavaScript/Reference/Statements/label": {

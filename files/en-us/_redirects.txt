@@ -12018,6 +12018,7 @@
 /en-US/docs/Web/JavaScript/Reference/Reserved_Words	/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords
 /en-US/docs/Web/JavaScript/Reference/Spread_operator	/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /en-US/docs/Web/JavaScript/Reference/Statements/default	/en-US/docs/Web/JavaScript/Reference/Statements/switch
+/en-US/docs/Web/JavaScript/Reference/Statements/import.meta	/en-US/docs/Web/JavaScript/Reference/Operators/import.meta
 /en-US/docs/Web/JavaScript/Reference/Statements/yield	/en-US/docs/Web/JavaScript/Reference/Operators/yield
 /en-US/docs/Web/JavaScript/Reference/Symbols	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /en-US/docs/Web/JavaScript/Reference/arrow_functions	/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
