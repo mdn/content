@@ -37,7 +37,7 @@ The **`WebAssembly.LinkError`** object indicates an error during module instanti
 ## Instance methods
 
 - {{jsxref("Error.prototype.toString", "WebAssembly.LinkError.prototype.toString()")}}
-  - : Returns a string representing the specified `Error` object.. Inherited from {{jsxref("Error")}}.
+  - : Returns a string representing the specified `Error` object. Inherited from {{jsxref("Error")}}.
 
 ## Examples
 
