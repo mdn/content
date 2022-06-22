@@ -124,7 +124,7 @@ These are examples of the CSS notations used to define a color. Here the example
 
 ```css
 /* by name (from a defined set of names) */
-div { color: 'magenta'; }
+div { color: magenta; }
 
 /* by HSL representation of the sRGB value */
 div { color: hsl(300, 100%, 50%); }
