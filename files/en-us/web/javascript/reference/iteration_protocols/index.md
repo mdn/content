@@ -195,7 +195,7 @@ new WeakSet(
 ).has(myObj); // true
 ```
 
-#### See also
+#### Other articles relevant to built-in iterables
 
 - {{jsxref("Promise.all()", "Promise.all(<var>iterable</var>)")}}
 - {{jsxref("Promise.allSettled()", "Promise.allSettled(<var>iterable</var>)")}}
