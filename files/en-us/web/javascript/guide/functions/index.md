@@ -165,7 +165,6 @@ The scope of a function is the function in which it is declared (or the entire p
 >
 > ```js example-bad
 > console.log(square)    // ReferenceError: Cannot access 'square' before initialization
-> console.log(square(5)) // Uncaught TypeError: square is not a function
 > const square = function(n) {
 >   return n * n;
 > }
