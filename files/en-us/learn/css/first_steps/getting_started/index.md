@@ -105,9 +105,9 @@ For now, we will use the most common way — linking CSS from the head of your d
 
 4. Save your HTML and CSS files and reload the page in a web browser. 
 
-The level one heading at the top of the document should now be read. If that happens, congratulations — you have successfully applied some CSS to an HTML document. If that doesn't happen, carefully check that you've typed everything correctly.
+The level one heading at the top of the document is now red. Congratulations — you have successfully applied CSS to an HTML document.
 
-You can continue to work in `styles.css` locally, or you can use our interactive editor below to continue with this tutorial. The interactive editor acts as if the CSS in the first panel is linked to the HTML document, just as we have with our document above.
+To continue with this tutorial, you can continue to work in the local `styles.css` file or you can use our interactive editor. 
 
 ## Styling HTML elements
 
