@@ -79,7 +79,7 @@ and also a <a href="https://example.com">link</a>.</p>
 
 > **Note:** If you are reading this on a device or environment where you can't easily create files, then don't worry — you can write example code in our interactive editor right here in the page.
 
-## Adding CSS to the document
+## Adding CSS to our document
 
 First, tell the HTML document that we have some CSS rules we want it to use. There are three options to apply CSS to an HTML document, which will be part of the next lesson.
 
