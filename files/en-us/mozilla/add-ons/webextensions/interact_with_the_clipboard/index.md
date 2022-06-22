@@ -12,6 +12,9 @@ tags:
   - WebExtensions
   - copy
   - paste
+browser-compat:
+  - api.Clipboard
+  - webextensions.api.clipboard
 ---
 {{AddonSidebar}}
 
@@ -171,13 +174,7 @@ Firefox supports the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/
 
 ## Browser compatibility
 
-### navigator.clipboard
-
-{{Compat("api.Clipboard")}}
-
-### clipboard.setImageData
-
-{{Compat("webextensions.api.clipboard")}}
+{{Compat}}
 
 ## See also
 

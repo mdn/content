@@ -27,7 +27,7 @@ Specific classes of statistic are defined as dictionaries based on `RTCStats`. F
 - {{domxref("RTCStats.timestamp", "timestamp")}}
   - : A {{domxref("DOMHighResTimeStamp")}} object indicating the time at which the sample was taken for this statistics object.
 - {{domxref("RTCStats.type", "type")}}
-  - : A string indicating the type of statistics the object contains, taken from the enum type {{domxref("RTCStatsType")}}.
+  - : A string indicating the type of statistics the object contains.
 
 ## The statistics type hierarchy
 

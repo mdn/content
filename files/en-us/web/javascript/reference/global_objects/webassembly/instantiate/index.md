@@ -44,7 +44,7 @@ WebAssembly.instantiate(bufferSource, importObject);
 - `bufferSource`
   - : A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or
     {{jsxref("ArrayBuffer")}} containing the binary code of the .wasm module you want to
-    compile.
+    compile, or a {{jsxref("WebAssembly.Module")}}.
 - `importObject` {{optional_inline}}
   - : An object containing the values to be imported into the newly-created
     `Instance`, such as functions or {{jsxref("WebAssembly.Memory")}} objects.
@@ -64,8 +64,8 @@ fields:
 
 #### Exceptions
 
-- If either of the parameters are not of the correct type or structure, a
-  {{jsxref("TypeError")}} is thrown.
+- If either of the parameters are not of the correct type or structure,
+  the promise rejects with a {{jsxref("TypeError")}}.
 - If the operation fails, the promise rejects with a
   {{jsxref("WebAssembly.CompileError")}}, {{jsxref("WebAssembly.LinkError")}}, or
   {{jsxref("WebAssembly.RuntimeError")}}, depending on the cause of the failure.

@@ -29,8 +29,8 @@ A string.
 
 ```js
 // Let an <a id="myAnchor" href="/en-US/docs/Location.search?q=123"> element be in the document
-var anchor = document.getElementById("myAnchor");
-var queryString = anchor.search; // Returns:'?q=123'
+const anchor = document.getElementById("myAnchor");
+const queryString = anchor.search; // Returns:'?q=123'
 
 // Further parsing:
 let params = new URLSearchParams(queryString);

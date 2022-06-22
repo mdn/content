@@ -8,9 +8,10 @@ tags:
   - Reference
   - collections
   - HIDDevice
+  - Experimental
 browser-compat: api.HIDDevice.collections
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`collections`** read-only property of the {{domxref("HIDDevice")}} interface returns an array of report formats
 
