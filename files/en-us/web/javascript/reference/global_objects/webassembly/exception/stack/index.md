@@ -73,7 +73,7 @@ let throwExceptionWithStack = (param) => {
   throw new WebAssembly.Exception(tag, [param], {traceStack: true});
 };
 
-//N ote: importObject properties match the WebAssembly import statements.
+// Note: importObject properties match the WebAssembly import statements.
 const importObject = {
   "extmod": {
     "exttag": tag,
