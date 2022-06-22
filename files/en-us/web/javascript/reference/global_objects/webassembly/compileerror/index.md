@@ -38,7 +38,7 @@ The **`WebAssembly.CompileError`** object indicates an error during WebAssembly 
 ## Instance methods
 
 - {{jsxref("Error.prototype.toString", "WebAssembly.CompileError.prototype.toString()")}}
-  - : Returns a string representing the specified `Error` object.. Inherited from {{jsxref("Error")}}.
+  - : Returns a string representing the specified `Error` object. Inherited from {{jsxref("Error")}}.
 
 ## Examples
 
