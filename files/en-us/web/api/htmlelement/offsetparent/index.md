@@ -18,9 +18,9 @@ positioned ancestor element.
 
 A positioned ancestor is either:
 - an element with a non-static position
-- `td`, `th`, `table` in case the element itself is static positioned
+- `td`, `th`, `table` in case the element itself is static positioned.
 
-If there is no positioned ancestor element, the `body` will be returned.
+If there is no positioned ancestor element, the `body` is returned.
 
 > **Note:** `offsetParent` returns `null` in the following
 > situations:
