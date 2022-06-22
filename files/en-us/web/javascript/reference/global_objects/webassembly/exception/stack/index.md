@@ -46,15 +46,15 @@ It exports the method `run1` that can be called by external code to call `$throw
 ```wasm
 (module
   ;; import tag that will be referred to here as $tagname
-  (import "extmod" "exttag" (tag $tagname (param i32)) )
+  (import "extmod" "exttag" (tag $tagname (param i32)))
 
   ;; import function that will be referred to here as $throwExnWithStack
-  (import "extmod" "throwExnWithStack" (func $throwExnWithStack (param i32) ) )
+  (import "extmod" "throwExnWithStack" (func $throwExnWithStack (param i32)))
 
   ;; call $throwExnWithStack passing 42 as parameter
-      (func (export "run1")
-     i32.const 42
-     call $throwExnWithStack
+  (func (export "run1")
+    i32.const 42
+    call $throwExnWithStack
   )
 )
 ```
@@ -66,27 +66,34 @@ Once the file is instantiated, the code calls the exported WebAssembly `run1()` 
 The stack is then logged from the `catch` statement.
 
 ```js
-let tag = new WebAssembly.Tag( { parameters: ['i32']} );
+let tag = new WebAssembly.Tag({ parameters: ['i32'] });
 
 let throwExceptionWithStack = (param) => {
-  //Note: We declare the exception with  '{traceStack: true}'
+  // Note: We declare the exception with  '{traceStack: true}'
   throw new WebAssembly.Exception(tag, [param], {traceStack: true});
 };
 
-//Note: importObject properties match the WebAssembly import statements.
-const importObject = { "extmod": {"exttag": tag, "throwExnWithStack": throwExceptionWithStack} }
+//N ote: importObject properties match the WebAssembly import statements.
+const importObject = {
+  "extmod": {
+    "exttag": tag,
+    "throwExnWithStack": throwExceptionWithStack
+  }
+};
+
 WebAssembly.instantiateStreaming(fetch('example.wasm'), importObject )
   .then(obj => {
     console.log(obj.instance.exports.run1(12));  // Note, we do nothing with the value passed in
   })
-  .catch((e) => {
-    console.log(`stack: ${ e.stack }`);
+  .catch(e => {
+    console.log(`stack: ${e.stack}`);
   });
 
-//Log output (something like):
+/* Log output (something like):
 stack: throwExceptionWithStack@http://<url>/main.js:76:9
 @http://<url>/example.wasm:wasm-function[3]:0x73
 @http://<url>/main.js:82:38
+*/
 ```
 
 The most "relevant" part of this code is the line where the Exception is created:
