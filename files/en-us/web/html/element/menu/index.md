@@ -11,7 +11,7 @@ browser-compat: html.elements.menu
 ---
 {{HTMLRef}}
 
-The **`<menu>`** [HTML](/en-US/docs/Web/HTML) element is treated by browsers (and exposed through the accessibility tree) as no different than a {{HTMLElement("ul")}}. It represents an unordered list of items (represented by {{HTMLElement("li")}} elements).
+The **`<menu>`** [HTML](/en-US/docs/Web/HTML) element is described in the HTML specification as a semantic alternative to {{HTMLElement("ul")}}, but treated by browsers (and exposed through the accessibility tree) as no different than {{HTMLElement("ul")}}. It represents an unordered list of items (which are represented by {{HTMLElement("li")}} elements).
 
 ## Attributes
 
