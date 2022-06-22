@@ -123,9 +123,9 @@ The `translate(<x> [<y>])` transform function moves the object by `x` and `y`. I
 
 In other words:
 
-```js
+```plain
 xnew = xold + <x>
-    ynew = yold + <y>
+ynew = yold + <y>
 ```
 
 #### Example
@@ -153,7 +153,7 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-{{EmbedLiveSample('Translate', '100%', 200)}}
+{{EmbedLiveSample('Example_3', '100%', 200)}}
 
 ### Scale
 

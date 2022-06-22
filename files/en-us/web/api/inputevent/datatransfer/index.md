@@ -49,7 +49,6 @@ Try copying and pasting some of the content provided to see the effects.
 ```js
 const editable = document.querySelector('p[contenteditable]');
 const result = document.querySelector('.result')
-const dataTransferObj;
 
 editable.addEventListener('input', (e) => {
   result.textContent = e.dataTransfer.getData('text/html');

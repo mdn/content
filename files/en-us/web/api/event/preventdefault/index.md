@@ -103,7 +103,7 @@ And here's the JavaScript code that does the job. First, listen for
 {{domxref("Element/keypress_event", "keypress")}} events:
 
 ```js
-var myTextbox = document.getElementById('my-textbox');
+const myTextbox = document.getElementById('my-textbox');
 myTextbox.addEventListener('keypress', checkName, false);
 ```
 
@@ -112,7 +112,7 @@ whether to allow it:
 
 ```js
 function checkName(evt) {
-  var charCode = evt.charCode;
+  const charCode = evt.charCode;
   if (charCode != 0) {
     if (charCode < 97 || charCode > 122) {
       evt.preventDefault();
@@ -129,8 +129,8 @@ The `displayWarning()` function presents a notification of a problem. It's
 not an elegant function but does the job for the purposes of this example:
 
 ```js
-var warningTimeout;
-var warningBox = document.createElement("div");
+let warningTimeout;
+const warningBox = document.createElement("div");
 warningBox.className = "warning";
 
 function displayWarning(msg) {

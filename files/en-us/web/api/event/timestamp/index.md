@@ -37,7 +37,7 @@ The value is a {{domxref("DOMHighResTimeStamp")}} accurate to
 
 ```js
 function getTime(event) {
-  var time = document.getElementById("time");
+  const time = document.getElementById("time");
   time.firstChild.nodeValue = event.timeStamp;
 }
 document.body.addEventListener("keypress", getTime);
