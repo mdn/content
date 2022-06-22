@@ -26,9 +26,9 @@ An {{domxref("Element")}}, {{domxref("CSSPseudoElement")}}, or `null`.
 In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), `whiteRabbit` sets the **`target`** element to be animated:
 
 ```js
-var whiteRabbit = document.getElementById("rabbit");
+const whiteRabbit = document.getElementById("rabbit");
 
-var rabbitDownKeyframes = new KeyframeEffect(
+const rabbitDownKeyframes = new KeyframeEffect(
   whiteRabbit,
   [
     { transform: 'translateY(0%)' },

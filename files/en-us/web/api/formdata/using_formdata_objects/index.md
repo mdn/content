@@ -20,7 +20,7 @@ The [`FormData`](/en-US/docs/Web/API/FormData) object lets you compile a set of 
 You can build a `FormData` object yourself, instantiating it then appending fields to it by calling its {{domxref("FormData.append","append()")}} method, like this:
 
 ```js
-var formData = new FormData();
+const formData = new FormData();
 
 formData.append("username", "Groucho");
 formData.append("accountnum", 123456); // number 123456 is immediately converted to a string "123456"
@@ -29,12 +29,12 @@ formData.append("accountnum", 123456); // number 123456 is immediately converted
 formData.append("userfile", fileInputElement.files[0]);
 
 // JavaScript file-like object
-var content = '<a id="a"><b id="b">hey!</b></a>'; // the body of the new file...
-var blob = new Blob([content], { type: "text/xml"});
+const content = '<a id="a"><b id="b">hey!</b></a>'; // the body of the new file...
+const blob = new Blob([content], { type: "text/xml"});
 
 formData.append("webmasterfile", blob);
 
-var request = new XMLHttpRequest();
+const request = new XMLHttpRequest();
 request.open("POST", "http://foo.com/submitform.php");
 request.send(formData);
 ```
@@ -50,14 +50,14 @@ To construct a `FormData` object that contains the data from an existing {{ HTML
 > **Note:** FormData will only use input fields that use the name attribute.
 
 ```js
-var formData = new FormData(someFormElement);
+const formData = new FormData(someFormElement);
 ```
 
 For example:
 
 ```js
-var formElement = document.querySelector("form");
-var request = new XMLHttpRequest();
+const formElement = document.querySelector("form");
+const request = new XMLHttpRequest();
 request.open("POST", "submitform.php");
 request.send(new FormData(formElement));
 ```
@@ -65,9 +65,9 @@ request.send(new FormData(formElement));
 You can also append additional data to the `FormData` object between retrieving it from a form and sending it, like this:
 
 ```js
-var formElement = document.querySelector("form");
-var formData = new FormData(formElement);
-var request = new XMLHttpRequest();
+const formElement = document.querySelector("form");
+const formData = new FormData(formElement);
+const request = new XMLHttpRequest();
 request.open("POST", "submitform.php");
 formData.append("serialnumber", serialNumber++);
 request.send(formData);
@@ -95,15 +95,15 @@ You can also send files using `FormData`. Include an {{ HTMLElement("input") }} 
 Then you can send it using code like the following:
 
 ```js
-var form = document.forms.namedItem("fileinfo");
+const form = document.forms.namedItem("fileinfo");
 form.addEventListener('submit', function(ev) {
 
-  var oOutput = document.querySelector("div"),
+  const oOutput = document.querySelector("div"),
       oData = new FormData(form);
 
   oData.append("CustomField", "This is some extra data");
 
-  var oReq = new XMLHttpRequest();
+  const oReq = new XMLHttpRequest();
   oReq.open("POST", "stash.php", true);
   oReq.onload = function(oEvent) {
     if (oReq.status == 200) {
@@ -162,7 +162,7 @@ formElem.addEventListener('formdata', (e) => {
 
   // Get the form data from the event object
   let data = e.formData;
-  for (var value of data.values()) {
+  for (let value of data.values()) {
     console.log(value);
   }
 

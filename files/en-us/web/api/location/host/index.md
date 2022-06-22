@@ -23,7 +23,7 @@ A string.
 ## Examples
 
 ```js
-var anchor = document.createElement("a");
+const anchor = document.createElement("a");
 
 anchor.href = "https://developer.mozilla.org/en-US/Location.host"
 anchor.host == "developer.mozilla.org"

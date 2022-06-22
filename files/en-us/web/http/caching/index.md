@@ -304,7 +304,7 @@ However, in general, a "do not cache" requirement in practice amounts to the fol
 
 - Don't want the response stored by anyone other than the specific client, for privacy reasons.
 - Want to provide up-to-date information always.
-- Don't know what could happen with in outdated implementations.
+- Don't know what could happen in outdated implementations.
 
 Under that set of circumstances, `no-store` is not always the most-appropriate directive.
 
