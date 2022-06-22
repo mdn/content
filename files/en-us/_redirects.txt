@@ -4608,7 +4608,7 @@
 /en-US/docs/JavaScript/Reference/Global_Objects/eval	/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval
 /en-US/docs/JavaScript/Reference/Global_Objects/isFinite	/en-US/docs/Web/JavaScript/Reference/Global_Objects/isFinite
 /en-US/docs/JavaScript/Reference/Global_Objects/isNaN	/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN
-/en-US/docs/JavaScript/Reference/Global_Objects/null	/en-US/docs/Web/JavaScript/Reference/Global_Objects/null
+/en-US/docs/JavaScript/Reference/Global_Objects/null	/en-US/docs/Web/JavaScript/Reference/Operators/null
 /en-US/docs/JavaScript/Reference/Global_Objects/parseFloat	/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat
 /en-US/docs/JavaScript/Reference/Global_Objects/parseInt	/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
 /en-US/docs/JavaScript/Reference/Global_Objects/undefined	/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined
@@ -11999,6 +11999,7 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/WebAssembly.Module.prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/null	/en-US/docs/Web/JavaScript/Reference/Operators/null
 /en-US/docs/Web/JavaScript/Reference/Methods_Index	/en-US/docs/Web/JavaScript/Reference
 /en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators	/en-US/docs/Web/JavaScript/Reference/Operators
 /en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators	/en-US/docs/Web/JavaScript/Reference/Operators#Assignment_operators

@@ -261,7 +261,7 @@ let mergedObj = { ...obj1, ...obj2 }
 
 ### Prototype setter
 
-A property definition of the form `__proto__: value` or `"__proto__": value` does not create a property with the name `__proto__`.  Instead, if the provided value is an object or [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null), it points the `[[Prototype]]` of the created object to that value.  (If the value is not an object or `null`, the object is not changed.)
+A property definition of the form `__proto__: value` or `"__proto__": value` does not create a property with the name `__proto__`.  Instead, if the provided value is an object or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), it points the `[[Prototype]]` of the created object to that value.  (If the value is not an object or `null`, the object is not changed.)
 
 ```js
 let obj1 = {}
