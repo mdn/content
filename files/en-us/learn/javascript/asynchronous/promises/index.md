@@ -341,8 +341,9 @@ async function fetchProducts() {
   }
 }
 
-const data = await fetchProducts();
-console.log(data[0].name));
+// Note: We can't use `await` outside the context of an async function. So we'll use `.then()` here for simplicity.
+const promise = fetchProducts();
+promise.then(data => console.log(data[0].name);
 ```
 
 You'll probably use `async` functions a lot where you might otherwise use promise chains, and they make working with promises much more intuitive.
