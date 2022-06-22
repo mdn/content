@@ -50,7 +50,7 @@ In this article, we will take a HTML document and apply CSS to it, learning some
 Our starting point is an HTML document. You can copy the code from below and save it as `index.html` in a folder on your computer.
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
