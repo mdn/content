@@ -211,7 +211,7 @@ However, persisting data should be preferred rather than relying on {{WebExtAPIR
 
 If you've a persistent background script, this section provides instructions on converting it to the non-persistent model.
 
-### Update your `manifest.json` file
+### Update your manifest.json file
 
 In your extension's `manifest.json` file, change the persistent property of [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) key to `false` for your script or page.
 
