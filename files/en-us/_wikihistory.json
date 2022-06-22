@@ -44278,28 +44278,6 @@
       "Guillaume-Heras"
     ]
   },
-  "Web/API/GlobalEventHandlers/oncanplay": {
-    "modified": "2020-10-15T21:43:46.113Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "sideshowbarker",
-      "wbamberg",
-      "rolfedh",
-      "Guillaume-Heras"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/oncanplaythrough": {
-    "modified": "2020-10-15T21:43:46.835Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "sideshowbarker",
-      "wbamberg",
-      "Guillaume-Heras",
-      "rolfedh"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onchange": {
     "modified": "2020-10-15T21:06:29.702Z",
     "contributors": [
