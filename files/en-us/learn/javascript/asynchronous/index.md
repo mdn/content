@@ -42,7 +42,7 @@ Asynchronous JavaScript is a fairly advanced topic, and you are advised to work 
 - [How to use promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
   - : Here we'll introduce promises and show how to use promise-based APIs. We'll also introduce the `async` and `await` keywords.
 - [Implementing a promise-based API](/en-US/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-  - : We outline how to implement your own promise-based API.
+  - : This article will outline how to implement your own promise-based API.
 - [Introducing workers](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
   - : Workers enable you to run certain tasks in a separate thread to keep your main code responsive. In this article, we rewrite a long-running synchronous function to use a worker.
 
