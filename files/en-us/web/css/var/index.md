@@ -78,7 +78,7 @@ body {
 }
 
 body {
-  /* main-bg-color isn't set, it will fallback on backup-bg-color. If backup-bg-color isn't set it will fallback on white. */
+  /* main-bg-color isn't set, it will fall back to backup-bg-color. If backup-bg-color isn't set it will fall back to white. */
   color: var(--main-bg-color, var(--backup-bg-color, white));
 }
 ```
