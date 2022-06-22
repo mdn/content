@@ -197,7 +197,7 @@ span.special {
 }
 ```
 
-Some classes can be applied to many elements. You don't want to have to edit your CSS every time something new needs to adopt that style. Therefore, you can bypass the element and refer to the class - unless some special rules only apply to one element and you want to make sure they don't apply to other elements.
+Some classes can be applied to many elements. You don't want to have to edit your CSS every time something new needs to adopt that style. Therefore, you can bypass the element and refer to the class — unless some special rules only apply to one element and you want to make sure they don't apply to other elements.
 
 ## Styling things based on their location in a document
 
