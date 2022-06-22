@@ -81,9 +81,11 @@ and also a <a href="https://example.com">link</a>.</p>
 
 ## Adding CSS to the document
 
-First, tell the HTML document that we have some CSS rules we want it to use. There are three options to apply CSS to an HTML document that you'll commonly come across.  For now, we will use the most usual and useful way — linking CSS from the head of your document.
+First, tell the HTML document that we have some CSS rules we want it to use. There are [three options to apply CSS](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured) to an HTML document. 
 
-1.  Create a file in the same folder as your HTML document and save it as `styles.css`. The `.css` extension shows that this is a CSS file.
+For now, we will use the most common way — linking CSS from the head of your document.
+
+1. Create a file in the same folder as your HTML document and save it as `styles.css`. The `.css` extension shows that this is a CSS file.
 
 2. To link `styles.css` to `index.html`, add the following line somewhere inside the {{htmlelement("head")}} of the HTML document:
 
@@ -93,7 +95,7 @@ First, tell the HTML document that we have some CSS rules we want it to use. The
 
     This {{htmlelement("link")}} element tells the browser that we have a stylesheet, using the `rel` attribute, and the location of that stylesheet as the value of the `href` attribute. 
     
-3. To test that the CSS works by adding a rule to `styles.css`, use your editor and add the following to your CSS file:
+3. To test that the CSS works, use your editor and add the following to your rule to `styles.css` file:
 
     ```css
     h1 {
@@ -131,9 +133,9 @@ Try this out in the interactive editor below (edit the code boxes) or in your lo
 
 ## Changing the default behavior of elements
 
-Browsers is making the HTML readable by applying some internal stylesheets with default styles to all HTML documents. Without default styles, all of the text would run together in a clump and we would have to style everything from scratch. All modern browsers display HTML content by default in pretty much the same way. Headings are large and bold and our list has bullets. 
+Browsers are making the HTML readable by applying some internal stylesheets with default styles to all HTML documents. All modern browsers display HTML content by default in pretty much the same way. Headings are large and bold and lists have bullets. 
 
-To change the default styles, you can choose the HTML element that you want to change. Use a CSS rule to change the way it looks. A good example is `<ul>`, an unordered list. It has list bullets but you can remove them like so:
+To change the default styles, you can choose the HTML element that you want to change and apply a CSS rule to it. A good example is `<ul>`, an unordered list. It has list bullets but you can remove them like so:
 
 ```css
 li {
@@ -147,9 +149,11 @@ The [`list-style-type`](/en-US/docs/Web/CSS/list-style-type) property also suppo
 
 ## Adding a class
 
-So far, we have styled elements based on their HTML element names. This works as long as you want all of the elements of that type in your document to look the same. Often, you want to select a subset of the elements without changing the others. The most common way to do this is to add a class to your HTML element and target that class.
+So far, we have styled elements based on their HTML element names. The CSS styles all elements of that type in your document. Often, you want to select a subset of the elements without changing the others. 
 
-1. In your HTML document, add a [class attribute](/en-US/docs/Web/HTML/Global_attributes/class) to the second list item. Your list will now look like this:
+The most common way to do this is to add a class to your HTML element and target that class.
+
+1. In your HTML document, add a [class attribute](/en-US/docs/Web/HTML/Global_attributes/class) to the second list item:
 
     ```html
     <ul>
@@ -159,7 +163,7 @@ So far, we have styled elements based on their HTML element names. This works as
     </ul>
     ```
 
-2. In your CSS, target the class of `special` by creating a selector that starts with a full stop character. Add the following to your CSS file:
+2. In your CSS, target the class of `special` by creating a selector that starts with a full stop character:
 
     ```css
     .special {
@@ -193,31 +197,33 @@ span.special {
 }
 ```
 
-As you can imagine, some classes might be applied to many elements and you don't want to have to keep editing your CSS every time something new needs to take on that style. Therefore, it is sometimes best to bypass the element and refer to the class, unless you know that you want to create some special rules for one element alone, and perhaps want to make sure they are not applied to other things.
+Some classes can be applied to many elements. You don't want to have to edit your CSS every time something new needs to adopt that style. Therefore, you can bypass the element and refer to the class - unless some special rules only apply to one element and you want to make sure they don't apply to other elements.
 
 ## Styling things based on their location in a document
 
-There are times when you will want something to look different based on where it is in the document. There are a number of selectors that can help you here, but for now we will look at just a couple. In our document, there are two `<em>` elements — one inside a paragraph and the other inside a list item. To select only an `<em>` that is nested inside an `<li>` element, you can use a selector called the **descendant combinator**, which takes the form of a space between two other selectors.
+Sometimes, will want something to look different based on where it is in the document. There are [some selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators) that can help you but we will look at just two of them.
 
-Add the following rule to your stylesheet:
+- **descendant combinator**: In our document, there are two `<em>` elements — one inside a paragraph and the other inside a list item. To select only an `<em>` that is nested inside an `<li>` element, you can put a space between the two selectors. This selector will select any `<em>` element that is inside (a descendant of) an `<li>`.
 
-```css
-li em {
-  color: rebeccapurple;
-}
-```
+    Add the following rule to your stylesheet:
 
-This selector will select any `<em>` element that is inside (a descendant of) an `<li>`. So in your example document, you should find that the `<em>` in the third list item is now purple, but the one inside the paragraph is unchanged.
+    ```css
+    li em {
+      color: rebeccapurple;
+    }
+    ```
+    
+    In your example document, only the `<em>` in the third list item should now be purple.
 
-Something else you might like to try is styling a paragraph when it comes directly after a heading at the same hierarchy level in the HTML. To do so, place a `+` (an **adjacent sibling combinator**) between the selectors.
+- **adjacent sibling combinator**: In your document, you can style a paragraph that comes after the heading by putting a `+` between the selectors. This selector will style a paragraph when it comes directly after another element at the same hierarchy level in the HTML.
 
-Try adding this rule to your stylesheet as well:
+    Try adding this rule to your stylesheet as well:
 
-```css
-h1 + p {
-  font-size: 200%;
-}
-```
+    ```css
+    h1 + p {
+      font-size: 200%;
+    }
+    ```
 
 The live example below includes the two rules above. Try adding a rule to make a span red if it is inside a paragraph. You will know if you have it right because the span in the first paragraph will be red, but the one in the first list item will not change color.
 
@@ -227,7 +233,7 @@ The live example below includes the two rules above. Try adding a rule to make a
 
 ## Styling things based on state
 
-The final type of styling we shall take a look at in this tutorial is the ability to style things based on their state. A straightforward example of this is when styling links. When we style a link, we need to target the [`<a>`](/en-US/docs/Web/HTML/Element/a) (anchor) element. This has different states depending on whether it is unvisited, visited, being hovered over, focused via the keyboard, or in the process of being clicked (activated). You can use CSS to target these different states — the CSS below styles unvisited links pink and visited links green.
+You can also style things based on their state, for example links. The [`<a>`](/en-US/docs/Web/HTML/Element/a) (anchor) element has different states depending on whether it is unvisited, visited, being hovered over, focused via the keyboard, or in the process of being clicked (activated). You can use CSS to target these different states — the CSS below styles unvisited links pink and visited links green.
 
 ```css
 a:link {
@@ -239,7 +245,7 @@ a:visited {
 }
 ```
 
-You can change the way the link looks when the user hovers over it, for example by removing the underline, which is achieved by the next rule:
+You can also change the way the link looks when the user hovers over it. This rule removes the underline:
 
 ```css
 a:hover {
@@ -247,21 +253,25 @@ a:hover {
 }
 ```
 
-In the live example below, you can play with different values for the various states of a link. I have added the rules above to it, and now realize that the pink color is quite light and hard to read — why not change that to a better color? Can you make the links bold?
+The live example below includes the two rules above. You can play with different values for the various states of a link. The pink color is quite light and hard to read — why not change that to a better color? Can you make the links bold?
 
 {{EmbedGHLiveSample("css-examples/learn/getting-started/started3.html", '100%', 1000)}}
 
-We have removed the underline on our link on hover. You could remove the underline from all states of a link. It is worth remembering however that in a real site, you want to ensure that visitors know that a link is a link. Leaving the underline in place can be an important clue for people to realize that some text inside a paragraph can be clicked on — this is the behavior they are used to. As with everything in CSS, there is the potential to make the document less accessible with your changes — we will aim to highlight potential pitfalls in appropriate places.
+## Accessibility concerns
+
+In the previous section, we have removed the underline on our link on hover. You could remove the underline from all states of a link. In a real site, you want to ensure that visitors know that a link is a link. Leaving the underline in place can be an important clue for people to realize that some text inside a paragraph can be clicked on — this is the behavior they are used to. 
+
+As with everything in CSS, there is the potential to make the document less accessible with your changes — we will aim to highlight potential pitfalls in appropriate places.
 
 > **Note:** you will often see mention of [accessibility](/en-US/docs/Learn/Accessibility) in these lessons and across MDN. When we talk about accessibility we are referring to the requirement for our webpages to be understandable and usable by everyone.
 >
-> Your visitor may well be on a computer with a mouse or trackpad, or a phone with a touchscreen. Or they might be using a screenreader, which reads out the content of the document, or they may need to use much larger text, or be navigating the site using the keyboard only.
+> Your visitor may well be on a computer with a mouse or trackpad, or a smartphone. Or they might be using a screenreader, which reads out the content of the document, or they may need to use much larger text, or be navigating the site using the keyboard only.
 >
 > A plain HTML document is generally accessible to everyone — as you start to style that document it is important that you don't make it less accessible.
 
 ## Combining selectors and combinators
 
-It is worth noting that you can combine multiple selectors and combinators together. For example:
+You can also combine multiple selectors and combinators together. For example:
 
 ```css
 /* selects any <span> that is inside a <p>, which is inside an <article>  */
@@ -281,15 +291,11 @@ body h1 + p .special {
 }
 ```
 
-This will style any element with a class of `special`, which is inside a `<p>`, which comes just after an `<h1>`, which is inside a `<body>`. Phew!
-
-In the original HTML we provided, the only element styled is `<span class="special">`.
-
-Don't worry if this seems complicated at the moment — you'll soon start to get the hang of it as you write more CSS.
+In the original HTML we provided, the only element styled is `<span class="special">`. The example above will style any element with a class of `special`, which is inside a `<p>`, which comes just after an `<h1>`, which is inside a `<body>`. Phew! Don't worry if this seems complicated at the moment — you'll soon start to get the hang of it as you write more CSS.
 
 ## Summary
 
-In this article, we have taken a look at a number of ways in which you can style a document using CSS. We will be developing this knowledge as we move through the rest of the lessons. However, you now already know enough to style text, apply CSS based on different ways of targeting elements in the document, and look up properties and values in the MDN documentation.
+In this article, we have taken a look at how you can style a document using CSS. We will be developing this knowledge as we move through the rest of the lessons. However, you now already know enough to style text, apply CSS based on different ways of targeting elements in the document, and look up properties and values in the MDN documentation.
 
 In the next lesson, we'll be taking a look at [how CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured).
 
