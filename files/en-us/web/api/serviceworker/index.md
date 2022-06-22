@@ -18,7 +18,7 @@ The **`ServiceWorker`** interface of the [Service Worker API](/en-US/docs/Web/AP
 
 A `ServiceWorker` object is available in the {{domxref("ServiceWorkerRegistration.active")}} property, and the {{domxref("ServiceWorkerContainer.controller")}} property — this is a service worker that has been activated and is controlling the page (the service worker has been successfully registered, and the controlled page has been reloaded.)
 
-The `ServiceWorker` interface is dispatched a set of lifecycle events — `install` and `activate` — and functional events including `fetch`. A `ServiceWorker` object has an associated {{domxref("ServiceWorker.state")}}, related to its lifecycle.
+The `ServiceWorker` interface is dispatched as a set of lifecycle events — `install` and `activate` — and functional events including `fetch`. A `ServiceWorker` object has an associated {{domxref("ServiceWorker.state")}}, related to its lifecycle.
 
 {{InheritanceDiagram}}
 
