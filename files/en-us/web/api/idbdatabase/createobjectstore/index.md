@@ -81,7 +81,7 @@ one of the following types:
 
 ```js
 // Let us open our database
-var request = window.indexedDB.open("toDoList", 4);
+const request = window.indexedDB.open("toDoList", 4);
 
 // This handler is called when a new version of the database
 // is created, either when one has not been created before
@@ -89,7 +89,7 @@ var request = window.indexedDB.open("toDoList", 4);
 // window.indexedDB.open().
 // This handler is only supported in recent browsers.
 request.onupgradeneeded = event => {
-  var db = event.target.result;
+  const db = event.target.result;
 
   db.onerror = event => {
     note.innerHTML += "<li>Error loading database.</li>";
@@ -97,7 +97,7 @@ request.onupgradeneeded = event => {
 
   // Create an objectStore for this database
 
-  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  const objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
 
   // define what data items the objectStore will contain
 

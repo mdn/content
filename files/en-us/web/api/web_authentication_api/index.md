@@ -10,6 +10,13 @@ tags:
   - Reference
   - Web Authentication API
   - WebAuthn
+browser-compat:
+  - api.Credential
+  - api.CredentialsContainer
+  - api.PublicKeyCredential
+  - api.AuthenticatorResponse
+  - api.AuthenticatorAttestationResponse
+  - api.AuthenticatorAssertionResponse
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
 
@@ -192,32 +199,8 @@ navigator.credentials.create(createCredentialDefaultArgs)
 
 ## Specifications
 
-| Specification                                                                                      |
-| -------------------------------------------------------------------------------------------------- |
-| [Web Authentication: An API for accessing Public Key Credentials](https://w3c.github.io/webauthn/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### Credential
-
-{{Compat("api.Credential")}}
-
-### CredentialsContainer
-
-{{Compat("api.CredentialsContainer")}}
-
-### PublicKeyCredential
-
-{{Compat("api.PublicKeyCredential")}}
-
-### AuthenticatorResponse
-
-{{Compat("api.AuthenticatorResponse")}}
-
-### AuthenticatorAttestationResponse
-
-{{Compat("api.AuthenticatorAttestationResponse")}}
-
-### AuthenticatorAssertionResponse
-
-{{Compat("api.AuthenticatorAssertionResponse")}}
+{{Compat}}

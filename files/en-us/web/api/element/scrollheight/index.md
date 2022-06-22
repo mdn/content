@@ -143,7 +143,7 @@ function checkReading () {
 }
 
 onload = function () {
-  var oToBeRead = document.getElementById("rules");
+  const oToBeRead = document.getElementById("rules");
   checkReading.noticeBox = document.createElement("span");
   document.registration.accept.checked = false;
   checkReading.noticeBox.id = "notice";

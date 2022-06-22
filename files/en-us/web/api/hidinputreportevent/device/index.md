@@ -8,9 +8,10 @@ tags:
   - Reference
   - device
   - HIDInputReportEvent
+  - Experimental
 browser-compat: api.HIDInputReportEvent.device
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`device`**  property of the {{domxref("HIDInputReportEvent")}} interface returns the {{domxref("HIDDevice")}} instance that represents the HID interface that sent the input report.
 

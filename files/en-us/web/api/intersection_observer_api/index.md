@@ -365,7 +365,7 @@ The CSS isn't terribly important for the purposes of this example; it lays out t
 
 ```css
 #box {
-  background-color: rgba(40, 40, 190, 255);
+  background-color: rgba(40, 40, 190, 1);
   border: 4px solid rgb(20, 20, 120);
   transition: background-color 1s, border 1s;
   width: 350px;

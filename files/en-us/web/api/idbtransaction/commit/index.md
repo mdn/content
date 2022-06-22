@@ -44,7 +44,7 @@ None ({{jsxref("undefined")}}).
 
 ```js
 // open a read/write db transaction, ready for adding the data
-var transaction = db.transaction(["myDB"], "readwrite");
+const transaction = db.transaction(["myDB"], "readwrite");
 
 // report on the success of opening the transaction
 transaction.oncomplete = event => {
@@ -56,10 +56,10 @@ transaction.onerror = event {
 };
 
 // create an object store on the transaction
-var objectStore = transaction.objectStore("myObjStore");
+const objectStore = transaction.objectStore("myObjStore");
 
 // add our newItem object to the object store
-var objectStoreRequest = objectStore.add(newItem[0]);
+const objectStoreRequest = objectStore.add(newItem[0]);
 
 objectStoreRequest.onsuccess = event => {
   // report the success of the request (this does not mean the item

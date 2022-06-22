@@ -44,7 +44,7 @@ None.
 
 ## Examples
 
-We create an element with a [`width`](/en-US/docs/Web/CSS/width) determined using a [`calc()`](</en-US/docs/Web/CSS/calc()>) function, then {{DOMxRef("console.log()")}} the `operator`.
+We create an element with a [`width`](/en-US/docs/Web/CSS/width) determined using a [`calc()`](/en-US/docs/Web/CSS/calc) function, then {{DOMxRef("console.log()")}} the `operator`.
 
 ```html
 <div>has width</div>

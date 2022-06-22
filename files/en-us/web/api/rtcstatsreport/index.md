@@ -32,7 +32,7 @@ All WebRTC statistics objects are fundamentally based on the {{domxref("RTCStats
 
 ### The statistic categories
 
-The {{domxref("RTCStats.type", "type")}} gives the name of the statistic category represented by the object, and is how you locate the specific type of data you need. The statistic category names are members of the enumerated type {{domxref("RTCStatsType")}}.
+The {{domxref("RTCStats.type", "type")}} gives the name of the statistic category represented by the object, and is how you locate the specific type of data you need.
 
 ## Specifications
 

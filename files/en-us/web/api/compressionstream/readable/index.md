@@ -10,7 +10,7 @@ tags:
   - CompressionStream
 browser-compat: api.CompressionStream.readable
 ---
-{{DefaultAPISidebar("Compression Streams API")}}
+{{APIRef("Compression Streams API")}}
 
 The **`readable`** read-only property of the {{domxref("CompressionStream")}} interface returns a {{domxref("ReadableStream")}}.
 

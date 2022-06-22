@@ -21,7 +21,7 @@ There are four types of code example available on MDN:
 
 - Static examples — plain code blocks, possibly with a screenshot to statically show the result of such code if it were to be run.
 - Traditional MDN "live samples" — A macro that takes plain code blocks, dynamically puts them into a document inside an {{htmlelement("iframe")}} element, and embeds it into the page to show the code running live.
-- GitHub "live samples" — A macro that takes a document in a GitHub repo inside the [mdn organization](https://github.com/mdn/), puts it inside an {{htmlelement("iframe")}} element, and embeds it into the page to show the code running live.
+- GitHub "live samples" — A macro that takes a document in a GitHub repo inside the [MDN organization](https://github.com/mdn/), puts it inside an {{htmlelement("iframe")}} element, and embeds it into the page to show the code running live.
 - Interactive examples — Our system for creating [live interactive examples](https://github.com/mdn/interactive-examples) that show the code running live but also allow you to change code on the fly to see what the effect is and easily copy the results.
 
 We'll discuss each one in later sections.
@@ -120,7 +120,7 @@ You don't have to worry about placement of code blocks on the page — it grabs 
 
 The macro only has three parameters:
 
-1. The URL of the document to embed — this is relative to the mdn organization, the top level directory of which is at `https://mdn.github.io/`. So this parameter needs to contain the part of the URL after that, e.g. `my-subdirectory/example.html`. You can omit the filename if it is called `index.html`.
+1. The URL of the document to embed — this is relative to the MDN organization, the top level directory of which is at `https://mdn.github.io/`. So this parameter needs to contain the part of the URL after that, e.g. `my-subdirectory/example.html`. You can omit the filename if it is called `index.html`.
 2. The width of the `<iframe>`, which can be expressed as a percentage or in pixels.
 3. The height of the `<iframe>`, which can be expressed as a percentage or in pixels.
 
@@ -134,7 +134,7 @@ This looks like so when rendered:
 
 ### Tips for using GitHub live samples
 
-- You obviously need to get a suitable code sample onto the [mdn GitHub organization](https://github.com/mdn/) first. This needs to be done using Git. If you are not familiar with Git, check out our [How do I use GitHub Pages?](/en-US/docs/Learn/Common_questions/Using_Github_pages) article, and [Preparing to add the data](/en-US/docs/MDN/Structures/Compatibility_tables#preparing_to_add_the_data) for more advanced uses.
+- You obviously need to get a suitable code sample onto the [MDN GitHub organization](https://github.com/mdn/) first. This needs to be done using Git. If you are not familiar with Git, check out our [How do I use GitHub Pages?](/en-US/docs/Learn/Common_questions/Using_Github_pages) article, and [Preparing to add the data](/en-US/docs/MDN/Structures/Compatibility_tables#preparing_to_add_the_data) for more advanced uses.
 - Your code sample needs to be suitable to show what you are trying to demonstrate — it should contain one simple example that does one thing well, should have no offensive content in it, and should follow the MDN [Code sample guidelines](/en-US/docs/MDN/Guidelines/Code_guidelines).
 
 ## Interactive examples

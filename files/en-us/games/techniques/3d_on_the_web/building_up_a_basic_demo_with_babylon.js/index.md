@@ -130,7 +130,7 @@ The box looks black at the moment, because we haven't defined any material to ap
 
 ## Material
 
-Material is that thing covering the object — the colors or texture on its surface. In our case we will use a simple blue color to paint our box. There are many types of [materials](https://doc.babylonjs.com/tutorials/Materials) that can be used, but for now the standard one should be enough for us. Add these lines below the previous ones:
+Material is that thing covering the object — the colors or texture on its surface. In our case we will use a simple blue color to paint our box. There are many types of [materials](https://doc.babylonjs.com/toolsAndResources/assetLibraries/materialsLibrary) that can be used, but for now the standard one should be enough for us. Add these lines below the previous ones:
 
 ```js
 var boxMaterial = new BABYLON.StandardMaterial("material", scene);

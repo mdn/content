@@ -25,7 +25,7 @@ A boolean.
 ## Examples
 
 ```js
-var kbdEvent = new KeyboardEvent("syntheticKey", false);
+const kbdEvent = new KeyboardEvent("syntheticKey", false);
 console.log(kbdEvent.isComposing); // return false
 ```
 

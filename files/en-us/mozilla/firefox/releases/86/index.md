@@ -76,6 +76,7 @@ _No changes._
 - [Host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) now grant access to privileged parts of the [tabs API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs) ({{bug(1679688)}}).
 - `focused: false` is now ignored when set as an option in a [`windows.create()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/create) call ({{bug(1253129)}}).
 - {{WebExtAPIRef("identity.getRedirectURL")}} now supports a loopback address, see [Getting the redirect URL](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url) for details ({{bug(1614919)}}).
+- The page ID is now returned as part of {{WebExtAPIRef("history.onTitleChanged")}} ({{bug(1678611)}}).
 
 ## Older versions
 
