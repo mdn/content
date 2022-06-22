@@ -287,9 +287,9 @@ async function fetchProducts() {
       throw new Error(`HTTP error: ${response.status}`);
     }
     // after this line, our function will wait for the `response.json()` call to be settled
-    // the `response.json()` call will either return the JSON object or throw an error
-    const json = await response.json();
-    console.log(json[0].name);
+    // the `response.json()` call will either return the parsed JSON object or throw an error
+    const data = await response.json();
+    console.log(data[0].name);
   }
   catch(error) {
     console.error(`Could not get products: ${error}`);
@@ -312,16 +312,16 @@ async function fetchProducts() {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
-    const json = await response.json();
-    return json;
+    const data = await response.json();
+    return data;
   }
   catch(error) {
     console.error(`Could not get products: ${error}`);
   }
 }
 
-const json = fetchProducts();
-console.log(json[0].name);   // json is a Promise object, so this will not work
+const promise = fetchProducts();
+console.log(promise[0].name);   // "promise" is a Promise object, so this will not work
 ```
 
 Instead, you'd need to do something like:
@@ -333,16 +333,16 @@ async function fetchProducts() {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
-    const json = await response.json();
-    return json;
+    const data = await response.json();
+    return data;
   }
   catch(error) {
     console.error(`Could not get products: ${error}`);
   }
 }
 
-const jsonPromise = fetchProducts();
-jsonPromise.then((json) => console.log(json[0].name));
+const data = await fetchProducts();
+console.log(data[0].name));
 ```
 
 You'll probably use `async` functions a lot where you might otherwise use promise chains, and they make working with promises much more intuitive.
