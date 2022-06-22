@@ -381,11 +381,11 @@ This example gives a preference for camera resolution, and assigns the resulting
 
 ```js
 // Prefer camera resolution nearest to 1280x720.
-var constraints = { audio: true, video: { width: 1280, height: 720 } };
+const constraints = { audio: true, video: { width: 1280, height: 720 } };
 
 navigator.mediaDevices.getUserMedia(constraints)
 .then(function(mediaStream) {
-  var video = document.querySelector('video');
+  const video = document.querySelector('video');
   video.srcObject = mediaStream;
   video.onloadedmetadata = function(e) {
     video.play();
@@ -415,7 +415,7 @@ if (navigator.mediaDevices.getUserMedia === undefined) {
   navigator.mediaDevices.getUserMedia = function(constraints) {
 
     // First get ahold of the legacy getUserMedia, if present
-    var getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+    const getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
     // Some browsers just don't implement it - return a rejected promise with an error
     // to keep a consistent interface
@@ -432,7 +432,7 @@ if (navigator.mediaDevices.getUserMedia === undefined) {
 
 navigator.mediaDevices.getUserMedia({ audio: true, video: true })
 .then(function(stream) {
-  var video = document.querySelector('video');
+  const video = document.querySelector('video');
   // Older browsers may not have srcObject
   if ("srcObject" in video) {
     video.srcObject = stream;
@@ -455,7 +455,7 @@ Lower frame-rates may be desirable in some cases, like WebRTC transmissions with
 bandwidth restrictions.
 
 ```js
-var constraints = { video: { frameRate: { ideal: 10, max: 15 } } };
+const constraints = { video: { frameRate: { ideal: 10, max: 15 } } };
 ```
 
 ### Front and back camera
@@ -463,10 +463,10 @@ var constraints = { video: { frameRate: { ideal: 10, max: 15 } } };
 On mobile phones.
 
 ```js
-var front = false;
+const front = false;
 document.getElementById('flip-button').onclick = function() { front = !front; };
 
-var constraints = { video: { facingMode: (front? "user" : "environment") } };
+const constraints = { video: { facingMode: (front? "user" : "environment") } };
 ```
 
 ## Specifications
