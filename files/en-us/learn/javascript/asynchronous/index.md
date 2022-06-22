@@ -44,7 +44,7 @@ Asynchronous JavaScript is a fairly advanced topic, and you are advised to work 
 - [Implementing a promise-based API](/en-US/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
   - : This article will outline how to implement your own promise-based API.
 - [Introducing workers](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-  - : Workers enable you to run certain tasks in a separate thread to keep your main code responsive. In this article, we rewrite a long-running synchronous function to use a worker.
+  - : Workers enable you to run certain tasks in a separate thread to keep your main code responsive. In this article, we'll rewrite a long-running synchronous function to use a worker.
 
 ## Assessments
 
