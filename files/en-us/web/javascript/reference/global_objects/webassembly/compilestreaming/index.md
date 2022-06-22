@@ -41,10 +41,12 @@ representing the compiled module.
 
 ### Exceptions
 
-- If `bufferSource` is not a [typed array](/en-US/docs/Web/JavaScript/Typed_arrays), a
-  {{jsxref("TypeError")}} is thrown.
+- If `source` is not a [`Response`](/en-US/docs/Web/API/Response) or `Promise` resolving to a `Response`,
+  the promise rejects with a {{jsxref("TypeError")}}.
 - If compilation fails, the promise rejects with a
   {{jsxref("WebAssembly.CompileError")}}.
+- If the `source` is a `Promise` that rejects, the promise rejects with the error.
+- If the `source` `Result` has an error (e.g. bad MIME type), the promise rejects an error.
 
 ## Examples
 
