@@ -37,7 +37,7 @@ The **`WebAssembly.RuntimeError`** object is the error type that is thrown whene
 ## Instance methods
 
 - {{jsxref("Error.prototype.toString", "WebAssembly.RuntimeError.prototype.toString()")}}
-  - : Returns a string representing the specified `Error` object.. Inherited from {{jsxref("Error")}}.
+  - : Returns a string representing the specified `Error` object. Inherited from {{jsxref("Error")}}.
 
 ## Examples
 
