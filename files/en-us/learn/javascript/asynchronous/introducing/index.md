@@ -72,13 +72,13 @@ console.log(greeting);
 // "Hello, my name is Miriam!"
 ```
 
-Here, `makeGreeting()` is a **synchronous function** because the caller has to wait for the function to finish its work and output the return value before the caller can continue.
+Here, `makeGreeting()` is a **synchronous function** because the caller has to wait for the function to finish its work and return a value before the caller can continue.
 
 ### A long-running synchronous function
 
 What if the synchronous function takes a long time?
 
-The program below uses a very inefficient algorithm to generate multiple large prime numbers when a user clicks the "Generate primes" button. The user can control the number of primes to generate, which of course, affects how long the operation will take.
+The program below uses a very inefficient algorithm to generate multiple large prime numbers when a user clicks the "Generate primes" button. The higher the number of primes a user specifies, the longer the operation will take.
 
 ```html
 <label for="quota">Number of primes:</label>
