@@ -463,7 +463,7 @@ const constraints = { video: { frameRate: { ideal: 10, max: 15 } } };
 On mobile phones.
 
 ```js
-const front = false;
+let front = false;
 document.getElementById('flip-button').onclick = function() { front = !front; };
 
 const constraints = { video: { facingMode: (front? "user" : "environment") } };
