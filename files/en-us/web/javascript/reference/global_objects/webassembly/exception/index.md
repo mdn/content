@@ -31,7 +31,7 @@ Once the exception is available to the WebAssembly module, it can attach a stack
 ## Constructor
 
 - [`WebAssembly.Exception()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/Exception)
-  - : Creates a new [`WebAssembly.Exception`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception) object.
+  - : Creates a new `WebAssembly.Exception` object.
 
 ## Instance methods
 
@@ -43,7 +43,7 @@ Once the exception is available to the WebAssembly module, it can attach a stack
 
 ## Instance properties
 
-- [`Exception.prototype.stack`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/stack)
+- [`Exception.prototype.stack`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/stack) {{non-standard_inline}}
   - : Returns the stack trace for the exception, or `undefined`.
 
 ## Examples
