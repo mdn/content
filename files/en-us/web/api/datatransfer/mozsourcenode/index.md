@@ -37,8 +37,8 @@ This example shows the use of the `mozSourceNode` property in the
 ```js
 function dragend_handler(event)
 {
-  var dragData = event.dataTransfer;
-  var node = dragData.mozSourceNode;
+  const dragData = event.dataTransfer;
+  const node = dragData.mozSourceNode;
   if (node != null)
     console.log("mozSourceNode = " + dragData.mozSourceNode);
   else

@@ -213,7 +213,7 @@ const control    = document.getElementById('radius');
 
 const mouse = { x: 0, y: 0 };
 
-let r  = 100; // Radius
+const r  = 100; // Radius
 const p0 = { x: 0, y: 50 };
 
 const p1 = { x: 100, y: 100 };
@@ -247,7 +247,7 @@ const drawArc = function ([p0, p1, p2], r) {
 let t0 = 0;
 let rr = 0; // the radius that changes over time
 let a  = 0; // angle
-let PI2 = Math.PI * 2;
+const PI2 = Math.PI * 2;
 const loop = function (t) {
   t0 = t / 1000;
   a  = t0 % PI2;

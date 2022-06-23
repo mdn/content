@@ -73,7 +73,7 @@ So far this is pretty similar to what we've done in previous sections. However o
 
 When the second `restore()` statement is called, the original state (the one we set up before the first call to `save`) is restored and the last rectangle is once again drawn in black.
 
-{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "canvas_savestate.png")}}
+{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "190", "canvas_savestate.png")}}
 
 ## Translating
 
@@ -115,7 +115,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_translate_example", "160", "160", "translate.png")}}
+{{EmbedLiveSample("A_translate_example", "160", "190", "translate.png")}}
 
 ## Rotating
 
@@ -176,7 +176,7 @@ To rotate the rectangle around its own center, we translate the canvas to the ce
 draw();
 ```
 
-{{EmbedLiveSample("A_rotate_example", "310", "210", "rotate.png")}}
+{{EmbedLiveSample("A_rotate_example", "310", "260", "rotate.png")}}
 
 ## Scaling
 
@@ -218,7 +218,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_scale_example", "160", "160", "scale.png")}}
+{{EmbedLiveSample("A_scale_example", "160", "190", "scale.png")}}
 
 ## Transforms
 
@@ -260,7 +260,7 @@ function draw() {
   const sin = Math.sin(Math.PI / 6);
   const cos = Math.cos(Math.PI / 6);
   ctx.translate(100, 100);
-  const c = 0;
+  let c = 0;
   for (let i = 0; i <= 12; i++) {
     c = Math.floor(255 / 12 * i);
     ctx.fillStyle = 'rgb(' + c + ', ' + c + ', ' + c + ')';
@@ -282,6 +282,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Example_for_transform_and_setTransform", "230", "280", "canvas_transform.png")}}
+{{EmbedLiveSample("Example_for_transform_and_setTransform", "230", "290", "canvas_transform.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}

@@ -11,6 +11,7 @@ tags:
   - stream
 browser-compat: api.MediaRecorder.stream
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 The **`MediaRecorder.stream`** read-only property returns the
@@ -35,9 +36,9 @@ if (navigator.getUserMedia) {
 
       // Success callback
       function(stream) {
-           var mediaRecorder = new MediaRecorder(stream);
+           const mediaRecorder = new MediaRecorder(stream);
 
-           var myStream = mediaRecorder.stream;
+           const myStream = mediaRecorder.stream;
            console.log(myStream);
 
 ...
@@ -54,7 +55,7 @@ if (navigator.getUserMedia) {
 ## See also
 
 - [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
-  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/web-dictaphone/).)
+- [Web Dictaphone](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder +
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/media/web-dictaphone/).)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("Navigator.getUserMedia")}}

@@ -83,7 +83,7 @@ function loadError(oError) {
 }
 
 function prefixScript(url, onloadFunction) {
-  var newScript = document.createElement("script");
+  const newScript = document.createElement("script");
   newScript.onerror = loadError;
   if (onloadFunction) { newScript.onload = onloadFunction; }
   document.currentScript.parentNode.insertBefore(newScript, document.currentScript);
@@ -99,7 +99,7 @@ function loadError(oError) {
 }
 
 function affixScriptToHead(url, onloadFunction) {
-  var newScript = document.createElement("script");
+  const newScript = document.createElement("script");
   newScript.onerror = loadError;
   if (onloadFunction) { newScript.onload = onloadFunction; }
   document.head.appendChild(newScript);

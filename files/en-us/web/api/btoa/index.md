@@ -14,8 +14,8 @@ browser-compat: api.btoa
 {{APIRef("HTML DOM")}}
 
 The **`btoa()`** method creates a
-{{glossary("Base64")}}-encoded ASCII string from a [binary string](/en-US/docs/Web/API/DOMString/Binary) (i.e., a
-{{jsxref("String")}} object in which each character in the string is treated as a byte
+{{glossary("Base64")}}-encoded ASCII string from a _binary string_ (i.e., a
+string in which each character in the string is treated as a byte
 of binary data).
 
 You can use this method to encode data which may otherwise cause communication
@@ -32,7 +32,7 @@ btoa(stringToEncode)
 ### Parameters
 
 - `stringToEncode`
-  - : The [binary string](/en-US/docs/Web/API/DOMString/Binary) to encode.
+  - : The _binary string_ to encode.
 
 ### Return value
 

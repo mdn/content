@@ -183,7 +183,7 @@ Here's what's going on in the `networkTestStop()` function: after calling
 the {{domxref("RTCPeerConnection")}} method {{domxref("RTCPeerConnection.getStats",
   "getStats()")}} to get the latest statistics report for the connection and storing it in
 `endReport`,  This is an {{domxref("RTCStatsReport")}} object, which maps
-strings taken from the {{domxref("RTCStatsType")}} enumerated type to objects of the
+strings to objects of the
 corresponding {{domxref("RTCStats")}}-based type.
 
 Now we can begin to process the results, starting with the ending statistics found in
@@ -244,9 +244,7 @@ and `networkTestStop()`).
 
 ### Try it and fork it
 
-This example is [available
-on Glitch for you to try out](https://websocket-webrtc-chat-with-stats.glitch.me), examine, or remix.  You can also [access
-it directly](https://33030790-3517-4d21-9b93-511347fa1ebd@api.glitch.com/git/websocket-webrtc-chat-with-stats) using Glitch's Git server.
+This example is [available on Glitch for you to try out](https://websocket-webrtc-chat-with-stats.glitch.me), examine, or remix.  You can also [access it directly](https://33030790-3517-4d21-9b93-511347fa1ebd@api.glitch.com/git/websocket-webrtc-chat-with-stats) using Glitch's Git server.
 
 [Remix It](https://glitch.com/edit/?utm_content=project_websocket-webrtc-chat-with-stats&utm_source=remix_this&utm_medium=button&utm_campaign=glitchButton#!/remix/websocket-webrtc-chat-with-stats)
 

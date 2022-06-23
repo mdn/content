@@ -38,7 +38,7 @@ add a listener for `pointerdown` events.
 ```js
 target.onpointerdown = downHandler;
 
-var downHandler = target.onpointerdown;
+const downHandler = target.onpointerdown;
 ```
 
 ### Value
@@ -85,12 +85,12 @@ The CSS sets up the appearance of the target, and doesn't affect its functionali
 #### JavaScript
 
 ```js
-var targetBox = document.getElementById("target");
+const targetBox = document.getElementById("target");
 
 targetBox.onpointerdown = handleDown;
 
 function handleDown(evt) {
-  var action;
+  let action;
 
   switch(evt.pointerType) {
     case "mouse":

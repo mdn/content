@@ -7,6 +7,7 @@ tags:
   - Constructor
   - Reference
   - USBConnectionEvent
+  - Experimental
 browser-compat: api.USBConnectionEvent.USBConnectionEvent
 ---
 {{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}

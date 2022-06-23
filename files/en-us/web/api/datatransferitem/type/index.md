@@ -34,8 +34,8 @@ This example shows the use of the `type` property.
 function drop_handler(ev) {
  console.log("Drop");
  ev.preventDefault();
- var data = ev.dataTransfer.items;
- for (var i = 0; i < data.length; i += 1) {
+ const data = ev.dataTransfer.items;
+ for (let i = 0; i < data.length; i += 1) {
    if ((data[i].kind == 'string') &&
        (data[i].type.match('^text/plain'))) {
      // This item is the target node
@@ -53,7 +53,7 @@ function drop_handler(ev) {
    } else if ((data[i].kind == 'file') &&
               (data[i].type.match('^image/'))) {
      // Drag data item is an image file
-     var f = data[i].getAsFile();
+     const f = data[i].getAsFile();
      console.log("... Drop: File ");
    }
  }

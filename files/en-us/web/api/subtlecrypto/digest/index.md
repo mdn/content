@@ -37,7 +37,7 @@ digest(algorithm, data)
     - `"SHA-384"`
     - `"SHA-512"`.
 - `data`
-  - : An {{jsxref("ArrayBuffer")}} or {{domxref("ArrayBufferView")}} containing the data to be digested.
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object containing the data to be digested.
 
 ### Return value
 

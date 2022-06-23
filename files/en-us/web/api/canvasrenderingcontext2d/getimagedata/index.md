@@ -96,13 +96,13 @@ const ctx = canvas.getContext('2d');
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
 
-let imageData = ctx.getImageData(60, 60, 200, 100);
+const imageData = ctx.getImageData(60, 60, 200, 100);
 ctx.putImageData(imageData, 150, 10);
 ```
 
 #### Result
 
-{{EmbedLiveSample("Getting_image_data_from_a_canvas", 700, 180)}}
+{{EmbedLiveSample("Getting_image_data_from_a_canvas", 700, 190)}}
 
 ## Specifications
 

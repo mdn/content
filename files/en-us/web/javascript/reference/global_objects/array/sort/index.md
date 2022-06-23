@@ -176,10 +176,10 @@ sorted arrays. The numeric arrays are sorted without a compare function, then so
 using one.
 
 ```js
-let stringArray = ['Blue', 'Humpback', 'Beluga'];
-let numberArray = [40, 1, 5, 200];
-let numericStringArray = ['80', '9', '700'];
-let mixedNumericArray = ['80', '9', '700', 40, 1, 5, 200];
+const stringArray = ['Blue', 'Humpback', 'Beluga'];
+const numberArray = [40, 1, 5, 200];
+const numericStringArray = ['80', '9', '700'];
+const mixedNumericArray = ['80', '9', '700', 40, 1, 5, 200];
 
 function compareNumbers(a, b) {
   return a - b;

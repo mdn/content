@@ -13,8 +13,7 @@ browser-compat: api.MediaStreamAudioSourceNode.MediaStreamAudioSourceNode
 ---
 {{APIRef("Web Audio API")}}
 
-The [Web Audio
-API](/en-US/docs/Web/API/Web_Audio_API)'s **`MediaStreamAudioSourceNode()`** constructor
+The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)'s **`MediaStreamAudioSourceNode()`** constructor
 creates and returns a new {{domxref("MediaStreamAudioSourceNode")}} object which uses
 the first audio track of a given {{domxref("MediaStream")}} as its source.
 

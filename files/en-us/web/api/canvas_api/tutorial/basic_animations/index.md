@@ -169,8 +169,7 @@ function clock() {
 
   const sec = now.getSeconds();
   const min = now.getMinutes();
-  const hr  = now.getHours();
-  hr = hr >= 12 ? hr - 12 : hr;
+  const hr  = now.getHours() % 12;
 
   ctx.fillStyle = 'black';
 
@@ -263,12 +262,12 @@ const y = -4.5; // vertical offset
 // Main program
 
 const dx = 0.75;
-const imgW;
-const imgH;
-const x = 0;
-const clearX;
-const clearY;
-const ctx;
+let imgW;
+let imgH;
+let x = 0;
+let clearX;
+let clearY;
+let ctx;
 
 img.onload = function() {
     imgW = img.width * scale;
@@ -465,8 +464,6 @@ function anim() {
 
 ## Other examples
 
-- [A basic ray-caster](/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster)
-  - : A good example of how to do animations using keyboard controls.
 - [Advanced animations](/en-US/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
   - : We will have a look at some advanced animation techniques and physics in the next chapter.
 

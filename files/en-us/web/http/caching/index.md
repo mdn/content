@@ -21,7 +21,7 @@ Proper operation of the cache is critical to the health of the system.
 
 ## Types of caches
 
-In the [HTTP Caching](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cache) spec, there are two main types of caches: **private caches** and **shared caches**.
+In the [HTTP Caching](https://httpwg.org/specs/rfc9111.html) spec, there are two main types of caches: **private caches** and **shared caches**.
 
 ### Private caches
 
@@ -37,9 +37,7 @@ Cache-Control: private
 
 Personalized contents are usually controlled by cookies, but the presence of a cookie does not always indicate that it is private, and thus a cookie alone does not make the response private.
 
-Also, since the private cache requires `private`, you may think that the shared cache requires `public` — but that is not quite true. A shared cache will store a response without needing `public` as long as `max-age` is given.
-
-If the response has an `Authorization` header, it cannot be stored in either the private cache or the shared cache, even if it has `max-age` — and `public` can be used to allow such a case. But if you are not using basic authentication and do not have an `Authorization` header, then there is no need to add `public`; it's just a waste of bytes in that case.
+Note that if the response has an `Authorization` header, it cannot be stored in the private cache (or a shared cache, unless `public` is specified).
 
 ### Shared cache
 
@@ -77,7 +75,7 @@ For example, Varnish uses VCL-based logic to handle cache storage, while service
 
 That means if a managed cache intentionally ignores a `no-store` directive, there is no need to perceive it as being "non-compliant" with the standard. What you should do is, avoid using kitchen-sink headers, but carefully read the documentation of whatever managed-cache mechanism you're using, and ensure you're controlling the cache properly in the ways provided by the mechanism you've chosen to use.
 
-Note that some CDNs provide their own headers that are effective only for that CDN (for example, `Surrogate-Control`). Currently, work is underway to define a [`CDN-Cache-Control`](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-targeted-cache-control) header to standardize those.
+Note that some CDNs provide their own headers that are effective only for that CDN (for example, `Surrogate-Control`). Currently, work is underway to define a [`CDN-Cache-Control`](https://httpwg.org/specs/rfc9213.html) header to standardize those.
 
 ![Type of Cache](type-of-cache.png)
 
@@ -306,7 +304,7 @@ However, in general, a "do not cache" requirement in practice amounts to the fol
 
 - Don't want the response stored by anyone other than the specific client, for privacy reasons.
 - Want to provide up-to-date information always.
-- Don't know what could happen with in outdated implementations.
+- Don't know what could happen in outdated implementations.
 
 Under that set of circumstances, `no-store` is not always the most-appropriate directive.
 
@@ -564,7 +562,12 @@ Because the cache removes old entries when new entries are saved, the probabilit
 
 Note that number `41` has the longest `max-age` (1 year), but with `public`.
 
-`public` has the effect of making the response storable even if the `Authorization` header is present. So if the response is personalized with basic authentication, the presence of `public` may cause problems. If you are concerned about that, you can choose the second-longest value, `37` (1 month).
+The `public` value has the effect of making the response storable even if the `Authorization` header is present.
+
+> **Note:** The `public` directive should only be used if there is a need to store the response when the `Authorization` header is set.
+> It is not required otherwise, because a response will be stored in the shared cache as long as `max-age` is given.
+
+So if the response is personalized with basic authentication, the presence of `public` may cause problems. If you are concerned about that, you can choose the second-longest value, `37` (1 month).
 
 ```http
 # response for bundle.v123.js

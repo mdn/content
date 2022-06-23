@@ -49,8 +49,8 @@ during a video call.
 
 ```js
 document.querySelector('.playAndRecord').addEventListener('click', function() {
-  var playbackElement = document.getElementById("playback");
-  var captureStream = playbackElement.captureStream();
+  const playbackElement = document.getElementById("playback");
+  const captureStream = playbackElement.captureStream();
   playbackElement.play();
 });
 ```

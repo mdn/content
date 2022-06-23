@@ -62,7 +62,7 @@ None ({{jsxref("undefined")}}).
 </html>
 ```
 
-{{EmbedLiveSample("Syntax")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Notes
 

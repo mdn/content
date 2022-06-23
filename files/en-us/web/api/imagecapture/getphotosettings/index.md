@@ -48,8 +48,7 @@ containing the following properties:
 
 ## Examples
 
-The following example, extracted from [Chrome's
-Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html), uses the results from
+The following example, extracted from [Chrome's Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html), uses the results from
 `getPhotoSettings()` to modify the size of an input range. This example also
 shows how the {{domxref("ImageCapture")}} object is created using a
 {{domxref("MediaStreamTrack")}} retrieved from a device's {{domxref("MediaStream")}}.
@@ -57,7 +56,7 @@ shows how the {{domxref("ImageCapture")}} object is created using a
 ```js
 const input = document.querySelector('input[type="range"]');
 
-var imageCapture;
+let imageCapture;
 
 navigator.mediaDevices.getUserMedia({video: true})
 .then(mediaStream => {

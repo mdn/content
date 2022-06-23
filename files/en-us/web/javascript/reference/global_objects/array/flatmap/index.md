@@ -14,11 +14,7 @@ browser-compat: javascript.builtins.Array.flatMap
 ---
 {{JSRef}}
 
-The **`flatMap()`** method returns a new array formed by
-applying a given callback function to each element of the array, and then flattening the
-result by one level. It is identical to a {{jsxref("Array.prototype.map","map()")}}
-followed by a {{jsxref("Array.prototype.flat","flat()")}} of depth 1, but slightly more
-efficient than calling those two methods separately.
+The **`flatMap()`** method returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level. It is identical to a {{jsxref("Array.prototype.map","map()")}} followed by a {{jsxref("Array.prototype.flat","flat()")}} of depth 1 (`arr.map(...args).flat()`), but slightly more efficient than calling those two methods separately.
 
 ## Syntax
 
@@ -60,7 +56,7 @@ flatMap(function(currentValue, index, array) { /* ... */ }, thisArg)
 ### Return value
 
 A new array with each element being the result of the callback function and flattened
-to a depth of 1.
+by a depth of 1.
 
 ## Description
 
@@ -76,14 +72,14 @@ of depth 1.
 #### Pre-allocate and explicitly iterate
 
 ```js
-let arr = [1, 2, 3, 4];
+const arr = [1, 2, 3, 4];
 
 arr.flatMap(x => [x, x * 2]);
 // is equivalent to
 const n = arr.length;
 const acc = new Array(n * 2);
 for (let i = 0; i < n; i++){
-  let x = arr[i];
+  const x = arr[i];
   acc[i * 2] = x;
   acc[i * 2 + 1] = x * 2;
 }
@@ -101,7 +97,7 @@ its flexibility and readability are desired.
 ### `map()` and `flatMap()`
 
 ```js
-let arr1 = [1, 2, 3, 4];
+const arr1 = [1, 2, 3, 4];
 
 arr1.map(x => [x * 2]);
 // [[2], [4], [6], [8]]
@@ -120,7 +116,7 @@ better showcases the use of `flatMap`.
 Let's generate a list of words from a list of sentences.
 
 ```js
-let arr1 = ["it's Sunny in", "", "California"];
+const arr1 = ["it's Sunny in", "", "California"];
 
 arr1.map(x => x.split(" "));
 // [["it's","Sunny","in"],[""],["California"]]
@@ -143,9 +139,9 @@ Return a 1-element array to keep the item, a multiple-element array to add items
 ```js
 // Let's say we want to remove all the negative numbers
 // and split the odd numbers into an even number and a 1
-let a = [5, 4, -3, 20, 17, -33, -4, 18]
-//       |\  \  x   |  | \   x   x   |
-//      [4,1, 4,   20, 16, 1,       18]
+const a = [5, 4, -3, 20, 17, -33, -4, 18]
+//         |\  \  x   |  | \   x   x   |
+//        [4,1, 4,   20, 16, 1,       18]
 
 a.flatMap( (n) =>
   (n < 0) ?      [] :

@@ -68,10 +68,6 @@ There are numerous available free and open source tools for transcoding content 
 
 {{Specifications}}
 
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
 - [Transcoding assets for Media Source Extensions](/en-US/docs/Web/API/Media_Source_Extensions_API/Transcoding_assets_for_MSE)

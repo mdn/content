@@ -10,6 +10,12 @@ tags:
   - cookbook
   - flexbox
   - grid
+browser-compat:
+  - css.properties.column-width
+  - css.properties.column-rule
+  - css.properties.flex
+  - css.properties.flex-wrap
+  - css.properties.grid-template-columns
 ---
 {{CSSRef}}
 
@@ -91,27 +97,7 @@ Use Grid:
 
 ## Browser compatibility
 
-The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
-
-### column-width
-
-{{Compat("css.properties.column-width")}}
-
-### column-rule
-
-{{Compat("css.properties.column-rule")}}
-
-### flex
-
-{{Compat("css.properties.flex")}}
-
-### flex-wrap
-
-{{Compat("css.properties.flex-wrap")}}
-
-### grid-template-columns
-
-{{Compat("css.properties.grid-template-columns")}}
+{{Compat}}
 
 ## Resources on MDN
 

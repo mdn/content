@@ -125,15 +125,15 @@ For an overview of the changes you may need to make in order to make your add-on
 
 #### FileUtils.jsm
 
-- The `openSafeFileOutputStream()` method now opens files with the `DEFER_OPEN` [behavior flag](/en-US/docs/XPCOM_Interface_Reference/nsIFileOutputStream#Behavior_flag_constants) instead of attempting to open them immediately.
+- The `openSafeFileOutputStream()` method now opens files with the `DEFER_OPEN` [behavior flag](/en-US/docs/XPCOM_Interface_Reference/nsIFileOutputStream#behavior_flag_constants) instead of attempting to open them immediately.
 
 #### XPCOMUtils.jsm
 
-- The new [`importRelative()`](</en-US/docs/JavaScript_code_modules/XPCOMUtils.jsm#importRelative()>) method lets you load one JavaScript code module from a path relative to the path of another JavaScript code module. This makes it easier to build modules that depend on each other.
+- The new [`importRelative()`](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.html#importRelative()>) method lets you load one JavaScript code module from a path relative to the path of another JavaScript code module. This makes it easier to build modules that depend on each other.
 
 ### XPCOM
 
-- [`nsCOMArray<T>`](/en-US/docs/XPCOM_array_guide#nsCOMArray.3cT.3e) now has a [`RemoveObjectsAt()`](/en-US/docs/XPCOM_array_guide#Deleting_objects) method for removing multiple objects at once from the array.
+- [`nsCOMArray<T>`](/en-US/docs/XPCOM_array_guide#nsCOMArray.3cT.3e) now has a [`RemoveObjectsAt()`](/en-US/docs/XPCOM_array_guide#deleting_objects) method for removing multiple objects at once from the array.
 
 ### Using the DOM from chrome
 
