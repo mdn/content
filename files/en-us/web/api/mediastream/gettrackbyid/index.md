@@ -22,7 +22,7 @@ string. If there is no track with the specified ID, this method returns
 ## Syntax
 
 ```js
-var track = MediaStream.getTrackById(id);
+const track = MediaStream.getTrackById(id);
 ```
 
 ### Parameters
