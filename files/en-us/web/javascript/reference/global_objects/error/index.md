@@ -206,7 +206,7 @@ try {
 function CustomError(foo, message, fileName, lineNumber) {
   let instance = new Error(message, fileName, lineNumber);
   instance.foo = foo;
-  Object.setPrototypeOf(instance, CustomError);
+  Object.setPrototypeOf(instance, CustomError.prototype);
   if (Error.captureStackTrace) {
     Error.captureStackTrace(instance, CustomError);
   }
