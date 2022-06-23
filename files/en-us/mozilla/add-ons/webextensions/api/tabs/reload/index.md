@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var reloading = browser.tabs.reload(
+let reloading = browser.tabs.reload(
   tabId,            // optional integer
   reloadProperties  // optional object
 )
@@ -41,7 +41,7 @@ var reloading = browser.tabs.reload(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the tab has been reloaded. If any error occurs, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the tab has been reloaded. If any error occurs, the promise will be rejected with an error message.
 
 ## Examples
 
@@ -68,7 +68,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var reloading = browser.tabs.reload(2, {bypassCache: true});
+let reloading = browser.tabs.reload(2, {bypassCache: true});
 reloading.then(onReloaded, onError);
 ```
 
@@ -78,7 +78,7 @@ reloading.then(onReloaded, onError);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-reload) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-reload) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

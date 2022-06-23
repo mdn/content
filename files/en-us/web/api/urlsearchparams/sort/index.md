@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.sort()
 slug: Web/API/URLSearchParams/sort
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -22,7 +23,7 @@ preserved).
 ## Syntax
 
 ```js
-searchParams.sort();
+sort()
 ```
 
 ### Parameters
@@ -31,7 +32,7 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -48,7 +49,9 @@ console.log(searchParams.toString());
 
 The result is:
 
-    a=2&a=1&b=3&c=4
+```
+a=2&a=1&b=3&c=4
+```
 
 ## Specifications
 

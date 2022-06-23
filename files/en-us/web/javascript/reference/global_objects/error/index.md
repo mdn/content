@@ -6,11 +6,12 @@ tags:
   - JavaScript
   - Object
   - Reference
+  - Polyfill
 browser-compat: javascript.builtins.Error
 ---
 {{JSRef}}
 
-`Error` objects are thrown when runtime errors occur. The `Error` object can also be used as a base object for user-defined exceptions. See below for standard built-in error types.
+`Error` objects are thrown when runtime errors occur. The `Error` object can also be used as a base object for user-defined exceptions. See below for standard built-in error types.
 
 ## Description
 
@@ -23,7 +24,7 @@ Besides the generic `Error` constructor, there are other core error constructors
 - {{JSxRef("EvalError")}}
   - : Creates an instance representing an error that occurs regarding the global function {{JSxRef("Global_Objects/eval", "eval()")}}.
 - {{JSxRef("RangeError")}}
-  - : Creates an instance representing an error that occurs when a numeric variable or parameter is outside of its valid range.
+  - : Creates an instance representing an error that occurs when a numeric variable or parameter is outside its valid range.
 - {{JSxRef("ReferenceError")}}
   - : Creates an instance representing an error that occurs when de-referencing an invalid reference.
 - {{JSxRef("SyntaxError")}}
@@ -53,10 +54,9 @@ Besides the generic `Error` constructor, there are other core error constructors
   - : Error message.
 - {{jsxref("Error.prototype.name")}}
   - : Error name.
-- {{jsxref("Error.prototype.description")}} {{non-standard_inline}}
-  - : A non-standard Microsoft property for the error description. Similar to {{jsxref("Error.prototype.message", "message")}}.
-- {{jsxref("Error.prototype.number")}} {{non-standard_inline}}
-  - : A non-standard Microsoft property for an error number.
+- {{jsxref("Error.prototype.cause")}}
+  - : Error cause.
+     If an error is caught and re-thrown, this property should contain the original error.
 - {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
   - : A non-standard Mozilla property for the path to the file that raised this error.
 - {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
@@ -100,7 +100,7 @@ try {
     console.error(e.name + ': ' + e.message)
   }
   // ... etc
-  
+
   else {
     // If none of our cases matched leave the Error unhandled
     throw e;
@@ -112,8 +112,8 @@ try {
 
 Sometimes a block of code can fail for reasons that require different handling, but which throw very similar errors (i.e. with the same type and message).
 
-If you don't have control over the original errors that are thrown, one option is to catch them and throw new <code>Error</code> objects that have more specific messages.
-The original error should be passed to the new <code>Error</code> in the constructor `option` parameter (`cause` property), as this ensures that the original error and stack trace are available to higher level try/catch blocks.
+If you don't have control over the original errors that are thrown, one option is to catch them and throw new `Error` objects that have more specific messages.
+The original error should be passed to the new `Error` in the constructor `option` parameter (`cause` property), as this ensures that the original error and stack trace are available to higher level try/catch blocks.
 
 The example below shows this for two methods that would otherwise fail with similar errors (`doFailSomeWay()` and `doFailAnotherWay()`):
 
@@ -145,96 +145,88 @@ try {
 }
 ```
 
-You can also use the `cause` property in [custom error types](#custom_error_types), provided the subclasses' constructor passes the `options` parameter when calling `super()`:
+> **Note:** If you are making a library, you should prefer to use error cause to discriminate between different errors emitted — rather than asking your consumers to parse the error message. See the [error cause page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause) for an example.
+
+[Custom error types](#custom_error_types) can also use the [`cause`](#error.prototype.cause) property, provided the subclasses' constructor passes the `options` parameter when calling `super()`:
+
 ```js
 class MyError extends Error {
   constructor(/* some arguments */) {
-    // Needs to pass both `message` and `options` to install the "cause" property. 
+    // Needs to pass both `message` and `options` to install the "cause" property.
     super(message, options);
   }
 }
 ```
 
-### Custom Error Types
+### Custom error types
 
-You might want to define your own error types deriving from `Error` to be able to `throw new MyError()` and use `instanceof MyError` to check the kind of error in the exception handler.  This results in cleaner and more consistent error handling code.
+You might want to define your own error types deriving from `Error` to be able to `throw new MyError()` and use `instanceof MyError` to check the kind of error in the exception handler. This results in cleaner and more consistent error handling code.
 
-See ["What's a good way to extend Error in JavaScript?"](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) on StackOverflow for an in-depth discussion.
+See ["What's a good way to extend Error in JavaScript?"](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) on StackOverflow for an in-depth discussion.
 
-#### ES6 Custom Error Class
+#### ES6 CustomError class
 
-> **Warning:** Versions of Babel prior to 7 can handle `CustomError` class methods, but only when they are declared with [Object.defineProperty()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Otherwise, old versions of Babel and other transpilers will not correctly handle the following code without [additional configuration](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
+> **Warning:** Versions of Babel prior to 7 can handle `CustomError` class methods, but only when they are declared with [Object.defineProperty()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Otherwise, old versions of Babel and other transpilers will not correctly handle the following code without [additional configuration](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
 
-> **Note:** Some browsers include the `CustomError` constructor in the stack trace when using ES2015 classes.
+> **Note:** Some browsers include the `CustomError` constructor in the stack trace when using ES2015 classes.
 
 ```js
 class CustomError extends Error {
   constructor(foo = 'bar', ...params) {
     // Pass remaining arguments (including vendor specific ones) to parent constructor
-    super(...params)
+    super(...params);
 
-    // Maintains proper stack trace for where our error was thrown (only available on V8)
+    // Maintains proper stack trace for where our error was thrown (only available on V8)
     if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, CustomError)
+      Error.captureStackTrace(this, CustomError);
     }
 
-    this.name = 'CustomError'
+    this.name = 'CustomError';
     // Custom debugging information
-    this.foo = foo
-    this.date = new Date()
+    this.foo = foo;
+    this.date = new Date();
   }
 }
 
 try {
-  throw new CustomError('baz', 'bazMessage')
+  throw new CustomError('baz', 'bazMessage');
 } catch(e) {
-  console.error(e.name)    //CustomError
-  console.error(e.foo)     //baz
-  console.error(e.message) //bazMessage
-  console.error(e.stack)   //stacktrace
+  console.error(e.name);    // CustomError
+  console.error(e.foo);     // baz
+  console.error(e.message); // bazMessage
+  console.error(e.stack);   // stacktrace
 }
 ```
 
-#### ES5 Custom Error Object
+#### ES5 CustomError object
 
-> **Warning:** All browsers include the `CustomError` constructor in the stack trace when using a prototypal declaration.
+> **Warning:** All browsers include the `CustomError` constructor in the stack trace when using a prototypal declaration.
 
 ```js
 function CustomError(foo, message, fileName, lineNumber) {
-  var instance = new Error(message, fileName, lineNumber);
-  instance.name = 'CustomError';
+  let instance = new Error(message, fileName, lineNumber);
   instance.foo = foo;
-  Object.setPrototypeOf(instance, Object.getPrototypeOf(this));
+  Object.setPrototypeOf(instance, CustomError.prototype);
   if (Error.captureStackTrace) {
     Error.captureStackTrace(instance, CustomError);
   }
   return instance;
 }
 
-CustomError.prototype = Object.create(Error.prototype, {
-  constructor: {
-    value: Error,
-    enumerable: false,
-    writable: true,
-    configurable: true
-  }
-});
+Object.setPrototypeOf(CustomError.prototype, Error.prototype);
 
-if (Object.setPrototypeOf){
-  Object.setPrototypeOf(CustomError, Error);
-} else {
-  CustomError.__proto__ = Error;
-}
+Object.setPrototypeOf(CustomError, Error);
+
+CustomError.prototype.name = 'CustomError';
 
 try {
   throw new CustomError('baz', 'bazMessage');
-} catch(e){
-  console.error(e.name); //CustomError
-  console.error(e.foo); //baz
-  console.error(e.message); //bazMessage
+} catch(e) {
+  console.error(e.name); // CustomError
+  console.error(e.foo); // baz
+  console.error(e.message); // bazMessage
 }
 ```
-
 
 ## Specifications
 
@@ -246,5 +238,6 @@ try {
 
 ## See also
 
+- [A polyfill of `Error`](https://github.com/zloirock/core-js#ecmascript-error) with modern behavior like support `cause` is available in [`core-js`](https://github.com/zloirock/core-js)
 - {{JSxRef("Statements/throw", "throw")}}
 - {{JSxRef("Statements/try...catch", "try...catch")}}

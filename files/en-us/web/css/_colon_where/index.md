@@ -4,7 +4,6 @@ slug: Web/CSS/:where
 tags:
   - ':where'
   - CSS
-  - Experimental
   - NeedsBrowserCompatibility
   - NeedsContent
   - NeedsExample
@@ -42,7 +41,7 @@ The difference between `:where()` and {{CSSxRef(":is", ":is()")}} is that `:wher
 
 The specification defines `:is()` and `:where()` as accepting a [forgiving selector list](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list).
 
-In CSS when using a selector list, if any of the selectors are invalid then the whole list is deemed invalid. When using `:is()` or `:where() `instead of the whole list of selectors being deemed invalid if one fails to parse, the incorrect or unsupported selector will be ignored and the others used.
+In CSS when using a selector list, if any of the selectors are invalid then the whole list is deemed invalid. When using `:is()` or `:where()` instead of the whole list of selectors being deemed invalid if one fails to parse, the incorrect or unsupported selector will be ignored and the others used.
 
 ```css
 :where(:valid, :unsupported) {
@@ -137,7 +136,9 @@ However, selectors inside `:where()` have specificity 0, so the orange footer li
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:where( <complex-selector-list> )
+```
 
 ## Specifications
 

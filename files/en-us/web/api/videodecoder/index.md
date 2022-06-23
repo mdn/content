@@ -1,6 +1,7 @@
 ---
 title: VideoDecoder
 slug: Web/API/VideoDecoder
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -14,7 +15,7 @@ The **`VideoDecoder`** interface of the {{domxref('WebCodecs API','','','true')}
 
 ## Constructor
 
-- {{domxref("VideoDecoder.VideoDecoder()")}}
+- {{domxref("VideoDecoder.VideoDecoder", "VideoDecoder()")}}
   - : Creates a new `VideoDecoder` object.
 
 ## Properties

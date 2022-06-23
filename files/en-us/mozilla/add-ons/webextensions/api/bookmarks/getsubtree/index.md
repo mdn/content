@@ -17,14 +17,14 @@ browser-compat: webextensions.api.bookmarks.getSubTree
 
 The **`bookmarks.getSubTree()`** method asynchronously retrieves a {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}, given its ID.
 
-If the item is a folder, you can access all its descendants recursively using its `children` property and the `children` property of its descendants, if they are themselves folders.
+If the item is a folder, you can access all its descendants recursively using its `children` property and the `children` property of its descendants, if they are themselves folders.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
 ```js
-var gettingSubTree = browser.bookmarks.getSubTree(
+let gettingSubTree = browser.bookmarks.getSubTree(
   id                     // string
 )
 ```
@@ -57,7 +57,7 @@ function logItems(bookmarkItem, indent) {
     indent++;
   }
   if (bookmarkItem.children) {
-    for (var child of bookmarkItem.children) {
+    for (let child of bookmarkItem.children) {
       logItems(child, indent);
     }
   }
@@ -68,12 +68,12 @@ function logSubTree(bookmarkItems) {
 }
 
 function onRejected(error) {
-  console.log(`An error: ${error}`);
+  console.log(`An error: ${error}`);
 }
 
-var subTreeID = "root_____";
+let subTreeID = "root_____";
 
-var gettingSubTree = browser.bookmarks.getSubTree(subTreeID);
+let gettingSubTree = browser.bookmarks.getSubTree(subTreeID);
 gettingSubTree.then(logSubTree, onRejected);
 ```
 
@@ -83,7 +83,7 @@ gettingSubTree.then(logSubTree, onRejected);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-getSubTree) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-getSubTree) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

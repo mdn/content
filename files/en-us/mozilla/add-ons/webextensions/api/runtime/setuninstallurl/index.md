@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var settingUrl = browser.runtime.setUninstallURL(
+let settingUrl = browser.runtime.setUninstallURL(
   url             // string
 )
 ```
@@ -51,13 +51,13 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var settingUrl = browser.runtime.setUninstallURL("https://example.org");
+let settingUrl = browser.runtime.setUninstallURL("https://example.org");
 settingUrl.then(onSetURL, onError);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-setUninstallURL) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-setUninstallURL) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

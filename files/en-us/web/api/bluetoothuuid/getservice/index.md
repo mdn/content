@@ -1,36 +1,38 @@
 ---
 title: BluetoothUUID.getService()
 slug: Web/API/BluetoothUUID/getService
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - getService
+  - Experimental
   - BluetoothUUID
 browser-compat: api.BluetoothUUID.getService
 ---
-{{APIRef("Bluetooth API")}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`getService()`**  method of the {{domxref("BluetoothUUID")}} interface returns a UUID representing a registered service when passed a name or the 16- or 32-bit UUID alias.
 
 ## Syntax
 
 ```js
-BluetoothUUID.getService(name);
+getService(name)
 ```
 
 ### Parameters
 
 - `name`
-  - : A {{domxref("DOMString","string")}} containing the name of the service.
+  - : A string containing the name of the service.
 
-### Returns
+### Return value
 
 A 128-bit UUID.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if `name` does not appear in the registry.
 
 ## Examples
@@ -49,4 +51,3 @@ console.log(result); // "0000180a-0000-1000-8000-00805f9b34fb"
 ## Browser compatibility
 
 {{Compat}}
-

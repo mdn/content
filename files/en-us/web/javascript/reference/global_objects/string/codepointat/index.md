@@ -14,7 +14,9 @@ browser-compat: javascript.builtins.String.codePointAt
 {{JSRef}}
 
 The **`codePointAt()`** method returns a non-negative integer
-that is the UTF-16 code point value.
+that is the Unicode code point value at the given position.
+Note that this function does not give the nth code point in a string,
+but the code point starting at the specified string index.
 
 {{EmbedInteractiveExample("pages/js/string-codepointat.html","shorter")}}
 
@@ -110,7 +112,7 @@ if (!String.prototype.codePointAt) {
       // Get the first code unit
       var first = string.charCodeAt(index);
       var second;
-      if ( // check if it’s the start of a surrogate pair
+      if ( // check if it's the start of a surrogate pair
         first >= 0xD800 && first <= 0xDBFF && // high surrogate
         size > index + 1 // there is a next code unit
       ) {
@@ -145,7 +147,7 @@ if (!String.prototype.codePointAt) {
 
 ## See also
 
-- A polyfill of `String.prototype.codePointAt` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.codePointAt` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.fromCodePoint()")}}
 - {{jsxref("String.fromCharCode()")}}
 - {{jsxref("String.prototype.charCodeAt()")}}

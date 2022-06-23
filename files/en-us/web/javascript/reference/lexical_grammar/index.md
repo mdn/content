@@ -19,9 +19,9 @@ Control characters have no visual representation but are used to control the int
 
 | Code point | Name                  | Abbreviation | Description                                                                                                                                                                                                                    |
 | ---------- | --------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `U+200C`   | Zero width non-joiner | <ZWNJ>       | Placed between characters to prevent being connected into ligatures in certain languages ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_non-joiner)).                                                                   |
-| `U+200D`   | Zero width joiner     | <ZWJ>        | Placed between characters that would not normally be connected in order to cause the characters to be rendered using their connected form in certain languages ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_joiner)). |
-| `U+FEFF`   | Byte order mark       | <BOM>        | Used at the start of the script to mark it as Unicode and the text's byte order ([Wikipedia](https://en.wikipedia.org/wiki/Byte_order_mark)).                                                                                  |
+| `U+200C`   | Zero width non-joiner | \<ZWNJ>      | Placed between characters to prevent being connected into ligatures in certain languages ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_non-joiner)).                                                                   |
+| `U+200D`   | Zero width joiner     | \<ZWJ>       | Placed between characters that would not normally be connected in order to cause the characters to be rendered using their connected form in certain languages ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_joiner)). |
+| `U+FEFF`   | Byte order mark       | \<BOM>       | Used at the start of the script to mark it as Unicode and the text's byte order ([Wikipedia](https://en.wikipedia.org/wiki/Byte_order_mark)).                                                                                  |
 
 ## White space
 
@@ -29,12 +29,12 @@ Control characters have no visual representation but are used to control the int
 
 | Code point | Name                           | Abbreviation | Description                                                                                               | Escape sequence |
 | ---------- | ------------------------------ | ------------ | --------------------------------------------------------------------------------------------------------- | --------------- |
-| U+0009     | Character tabulation           | <HT>         | Horizontal tabulation                                                                                     | \t              |
-| U+000B     | Line tabulation                | <VT>         | Vertical tabulation                                                                                       | \v              |
-| U+000C     | Form feed                      | <FF>         | Page breaking control character ([Wikipedia](https://en.wikipedia.org/wiki/Page_break#Form_feed)).        | \f              |
-| U+0020     | Space                          | <SP>         | Normal space                                                                                              |                 |
-| U+00A0     | No-break space                 | <NBSP>       | Normal space, but no point at which a line may break                                                      |                 |
-| Others     | Other Unicode space characters | <USP>        | [Spaces in Unicode on Wikipedia](https://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode) |                 |
+| U+0009     | Character tabulation           | \<HT>        | Horizontal tabulation                                                                                     | \t              |
+| U+000B     | Line tabulation                | \<VT>        | Vertical tabulation                                                                                       | \v              |
+| U+000C     | Form feed                      | \<FF>        | Page breaking control character ([Wikipedia](https://en.wikipedia.org/wiki/Page_break#Form_feed)).        | \f              |
+| U+0020     | Space                          | \<SP>        | Normal space                                                                                              |                 |
+| U+00A0     | No-break space                 | \<NBSP>      | Normal space, but no point at which a line may break                                                      |                 |
+| Others     | Other Unicode space characters | \<USP>       | [Spaces in Unicode on Wikipedia](https://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode) |                 |
 
 ## Line terminators
 
@@ -44,10 +44,10 @@ Only the following Unicode code points are treated as line terminators in ECMASc
 
 | Code point | Name                | Abbreviation | Description                                            | Escape sequence |
 | ---------- | ------------------- | ------------ | ------------------------------------------------------ | --------------- |
-| U+000A     | Line Feed           | <LF>         | New line character in UNIX systems.                    | \n              |
-| U+000D     | Carriage Return     | <CR>         | New line character in Commodore and early Mac systems. | \r              |
-| U+2028     | Line Separator      | <LS>         | [Wikipedia](https://en.wikipedia.org/wiki/Newline)     |                 |
-| U+2029     | Paragraph Separator | <PS>         | [Wikipedia](https://en.wikipedia.org/wiki/Newline)     |                 |
+| U+000A     | Line Feed           | \<LF>        | New line character in UNIX systems.                    | \n              |
+| U+000D     | Carriage Return     | \<CR>        | New line character in Commodore and early Mac systems. | \r              |
+| U+2028     | Line Separator      | \<LS>        | [Wikipedia](https://en.wikipedia.org/wiki/Newline)     |                 |
+| U+2029     | Paragraph Separator | \<PS>        | [Wikipedia](https://en.wikipedia.org/wiki/Newline)     |                 |
 
 ## Comments
 
@@ -112,7 +112,7 @@ In this case, the `console.log()` call is never issued, since it's inside a comm
 
 A specialized third comment syntax, the **hashbang comment**, is in the process of being standardized in ECMAScript (see the [Hashbang Grammar proposal](https://github.com/tc39/proposal-hashbang)).
 
-A hashbang comment behaves exactly like a single line-only (`//`) comment. Instead, it begins with `#!` and **is only valid at the absolute start of a script or module**. Note also that no whitespace of any kind is permitted before the `#!`. The comment consists of all the characters after `#!` up to the end of the first line; only one such comment is permitted.
+A hashbang comment behaves exactly like a single line-only (`//`) comment. Instead, it begins with `#!` and **is only valid at the absolute start of a script or module**. Note also that no whitespace of any kind is permitted before the `#!`. The comment consists of all the characters after `#!` up to the end of the first line; only one such comment is permitted.
 
 The hashbang comment specifies the path to a specific JavaScript interpreter that you want to use to execute the script. An example is as follows:
 
@@ -126,7 +126,7 @@ console.log("Hello world");
 
 > **Warning:** If you want scripts to be runnable directly in a shell environment, encode them in UTF-8 without a [BOM](https://en.wikipedia.org/wiki/Byte_order_mark). Although a BOM will not cause any problems for code running in a browser, it is not advised to use a BOM with a hashbang in a script — because the BOM will prevent the script from working when you try to run it in a Unix/Linux shell environment. So if you want scripts to be runnable directly in a shell environment, encode them in UTF-8 without a BOM.
 
-You must only use the `#!` comment style to specify a JavaScript interpreter. In all other cases just use a `//` comment (or mulitiline comment).
+You must only use the `#!` comment style to specify a JavaScript interpreter. In all other cases just use a `//` comment (or multiline comment).
 
 ## Keywords
 
@@ -215,7 +215,7 @@ Additionally, the literals `null`, `true`, and `false` cannot be used as identif
 
 ### Reserved word usage
 
-Reserved words actually only apply to *Identifier*s (vs. *IdentifierName*s) . As described in [es5.github.com/#A.1](https://es5.github.com/#A.1), these are all *IdentifierName*s which do not exclude _ReservedWords_.
+Reserved words actually only apply to *Identifier*s (vs. *IdentifierName*s) . As indicated in the [ECMAScript Lexical Grammar](https://tc39.es/ecma262/multipage/grammar-summary.html#sec-lexical-grammar), these are all *IdentifierName*s which do not exclude _ReservedWords_.
 
 ```js
 a.import
@@ -249,7 +249,7 @@ null
 
 ### Boolean literal
 
-See also {{jsxref("Boolean")}} for more information.
+See also [boolean type](/en-US/docs/Web/JavaScript/Data_structures#boolean_type) for more information.
 
 ```js
 true
@@ -258,7 +258,7 @@ false
 
 ### Numeric literals
 
-The {{jsxref("Number")}} and {{jsxref("BigInt")}} types use numeric literals.
+The [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type) and [BigInt](/en-US/docs/Web/JavaScript/Data_structures#bigint_type) types use numeric literals.
 
 #### Decimal
 
@@ -271,19 +271,19 @@ The {{jsxref("Number")}} and {{jsxref("BigInt")}} types use numeric literals.
 0777 // parsed as octal, 511 in decimal
 ```
 
-Note that decimal literals can start with a zero (`0`) followed by another decimal digit, but If all digits after the leading `0` are smaller than 8, the number is interpreted as an octal number. This won't throw in JavaScript, see [bug 957513](https://bugzilla.mozilla.org/show_bug.cgi?id=957513). See also the page about {{jsxref("parseInt", "parseInt()")}}
+Note that decimal literals can start with a zero (`0`) followed by another decimal digit, but If all digits after the leading `0` are smaller than 8, the number is interpreted as an octal number. This won't throw in JavaScript, see [bug 957513](https://bugzilla.mozilla.org/show_bug.cgi?id=957513). See also the page about {{jsxref("parseInt", "parseInt()")}}
 
 ##### Exponential
 
-The decimal exponential literal is specified by the following format: `beN`; where `b` is a base number (integer or floating), followed by `e` char (which serves as separator or _exponent indicator_) and `N`, which is *exponent* or *power* number – a signed integer (as per 2019 ECMA-262 specs):
+The decimal exponential literal is specified by the following format: `beN`; where `b` is a base number (integer or floating), followed by `e` char (which serves as separator or _exponent indicator_) and `N`, which is *exponent* or *power* number – a signed integer (as per 2019 ECMA-262 specs):
 
 ```js
-0e-5   // => 0
-0e+5   // => 0
-5e1    // => 50
+0e-5   // => 0
+0e+5   // => 0
+5e1    // => 50
 175e-2 // => 1.75
-1e3    // => 1000
-1e-3   // => 0.001
+1e3    // => 1000
+1e-3   // => 0.001
 ```
 
 #### Binary
@@ -311,7 +311,7 @@ var m = 0o644; // 420
 
 #### Hexadecimal
 
-Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X)`. If the digits after 0x are outside the range (0123456789ABCDEF), the following {{jsxref("SyntaxError")}} is thrown: "Identifier starts immediately after numeric literal".
+Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X`). If the digits after 0x are outside the range (0123456789ABCDEF), the following {{jsxref("SyntaxError")}} is thrown: "Identifier starts immediately after numeric literal".
 
 ```js
 0xFFFFFFFFFFFFFFFFF // 295147905179352830000
@@ -321,12 +321,12 @@ Hexadecimal number syntax uses a leading zero followed by a lowercase or upperca
 
 #### BigInt literal
 
-The {{jsxref("BigInt")}} type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. BigInt literals are created by appending `n` to the end of an integer.
+The [BigInt](/en-US/docs/Web/JavaScript/Data_structures#bigint_type) type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. BigInt literals are created by appending `n` to the end of an integer.
 
 ```js
-123456789123456789n     // 123456789123456789
-0o777777777777n         // 68719476735
-0x123456789ABCDEFn      // 81985529216486895‬
+123456789123456789n     // 123456789123456789
+0o777777777777n         // 68719476735
+0x123456789ABCDEFn      // 81985529216486895
 0b11101001010101010101n // 955733
 ```
 
@@ -405,7 +405,7 @@ See also {{jsxref("Array")}} for more information.
 
 ### String literals
 
-A string literal is zero or more Unicode code points enclosed in single or double quotes. Unicode code points may also be represented by an escape sequence. All code points may appear literally in a string literal except for these closing quote code points:
+A [string](/en-US/docs/Web/JavaScript/Data_structures#string_type) literal is zero or more Unicode code points enclosed in single or double quotes. Unicode code points may also be represented by an escape sequence. All code points may appear literally in a string literal except for these closing quote code points:
 
 - U+005C \ (backslash),
 - U+000D \<CR>,
@@ -483,7 +483,6 @@ tag `string text ${expression} string text`
 
 Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements) must be terminated with semicolons and are therefore affected by automatic semicolon insertion (ASI):
 
-- Empty statement
 - `let`, `const`, variable statement
 - `import`, `export`, module declaration
 - Expression statement
@@ -491,7 +490,7 @@ Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements) mu
 - `continue`, `break`, `throw`
 - `return`
 
-The ECMAScript specification mentions [three rules of semicolon insertion](https://tc39.github.io/ecma262/#sec-rules-of-automatic-semicolon-insertion).
+The ECMAScript specification mentions [three rules of semicolon insertion](https://tc39.es/ecma262/#sec-rules-of-automatic-semicolon-insertion).
 
 1\. A semicolon is inserted before, when a [Line terminator](#line_terminators) or "}" is encountered that is not allowed by the grammar.
 
@@ -526,7 +525,6 @@ a = b;
 - `break`
 - `return`
 - `yield`, `yield*`
-- `module`
 
 ```js
 return
@@ -547,7 +545,7 @@ a + b;
 - [Lexical grammar in the ECMAScript specification](https://tc39.es/ecma262/#sec-ecmascript-language-lexical-grammar)
 - [Jeff Walden: Binary and octal numbers](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
 - [Mathias Bynens: JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes)
-- {{jsxref("Boolean")}}
-- {{jsxref("Number")}}
+- [Boolean](/en-US/docs/Web/JavaScript/Data_structures#boolean_type)
+- [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type)
+- [string](/en-US/docs/Web/JavaScript/Data_structures#string_type)
 - {{jsxref("RegExp")}}
-- {{jsxref("String")}}

@@ -1,11 +1,13 @@
 ---
 title: Server-sent events
 slug: Web/API/Server-sent_events
+page-type: web-api-overview
 tags:
   - API
   - Overview
   - SSE
   - Server-sent events
+spec-urls: https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events
 ---
 {{DefaultAPISidebar("Server Sent Events")}}
 
@@ -13,7 +15,7 @@ Traditionally, a web page has to send a request to the server to receive new dat
 
 {{AvailableInWorkers}}
 
-> **Note:** Firefox does not currently support the use of server-sent events in service workers (it does support them in dedicated and shared workers). See {{bug(1681218)}}.
+> **Note:** Firefox does not currently support the use of server-sent events in service workers (it does support them in dedicated and shared workers). See {{bug(1681218)}}.
 
 ## Concepts and usage
 
@@ -30,9 +32,7 @@ To learn how to use server-sent events, see our article [Using server-sent event
 
 ## Specifications
 
-| Specification                                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------ |
-| [HTML Living Standard # server-sent-events](https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events) |
+{{Specifications}}
 
 ## See also
 
@@ -40,9 +40,9 @@ To learn how to use server-sent events, see our article [Using server-sent event
 
 - [Mercure: a real-time communication protocol (publish-subscribe) built on top of SSE](https://mercure.rocks)
 - [EventSource polyfill for Node.js](https://github.com/EventSource/eventsource)
-- Remy Sharp’s [EventSource polyfill](https://github.com/remy/polyfills/blob/master/EventSource.js)
-- Yaffle’s [EventSource polyfill](https://github.com/Yaffle/EventSource)
-- Rick Waldron’s [jquery plugin](https://github.com/rwldrn/jquery.eventsource)
+- Remy Sharp's [EventSource polyfill](https://github.com/remy/polyfills/blob/master/EventSource.js)
+- Yaffle's [EventSource polyfill](https://github.com/Yaffle/EventSource)
+- Rick Waldron's [jquery plugin](https://github.com/rwaldron/jquery.eventsource)
 - intercooler.js [declarative SSE support](https://intercoolerjs.org/docs.html#sse)
 
 ### Related Topics
@@ -53,6 +53,5 @@ To learn how to use server-sent events, see our article [Using server-sent event
 
 ### Other resources
 
-- A [Twitter like application](https://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/) powered by server-sent events and [its code on Github](https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline).
-- [HTML5 and Server-sent events](https://dsheiko.com/weblog/html5-and-server-sent-events)
-- [Server-sent events using Asp.Net](https://rajudasa.blogspot.in/2012/05/html5-server-sent-events-using-aspnet.html)
+- A [Twitter like application](https://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/) powered by server-sent events and [its code on GitHub](https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline).
+- [HTML5 and Server-sent events](https://dsheiko.com/weblog/html5-and-server-sent-events/)

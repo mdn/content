@@ -25,7 +25,7 @@ Credentials are cookies, authorization headers, or TLS client certificates.
 When used as part of a response to a preflight request, this indicates whether or not
 the actual request can be made using credentials. Note that simple {{HTTPMethod("GET")}}
 requests are not preflighted. So, if a request is made for a resource with
-credentials, and if this header is not returned with the resource; the response is ignored
+credentials, and if this header is not returned with the resource, the response is ignored
 by the browser and not returned to the web content.
 
 The `Access-Control-Allow-Credentials` header works in conjunction with the
@@ -34,7 +34,7 @@ The `Access-Control-Allow-Credentials` header works in conjunction with the
 constructor of the Fetch API. For a CORS request with credentials, for browsers
 to expose the response to the frontend JavaScript code, both the server (using the
 `Access-Control-Allow-Credentials` header) and the client (by setting the
-credentials mode for the XHR, Fetch, or Ajax request) must indicate that they’re opting
+credentials mode for the XHR, Fetch, or Ajax request) must indicate that they're opting
 into including credentials.
 
 <table class="properties">

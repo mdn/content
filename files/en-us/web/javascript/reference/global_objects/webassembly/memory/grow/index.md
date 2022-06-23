@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.WebAssembly.Memory.grow
 ---
 {{JSRef}}
 
-The **`grow()`** protoype method of the
+The **`grow()`** prototype method of the
 [`Memory`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory)
 object increases the size of the memory instance by a specified number of WebAssembly
 pages.
@@ -26,13 +26,17 @@ grow(number)
 
 ### Parameters
 
-- _number_
+- `number`
   - : The number of WebAssembly pages you want to grow the memory by (each one is 64KiB in
     size).
 
 ### Return value
 
 The previous size of the memory, in units of WebAssembly pages.
+
+### Exceptions
+
+- {{jsxref("RangeError")}}: The overall size after growing should not exceed the Memory instance's maximum size capacity.
 
 ## Examples
 
@@ -42,7 +46,10 @@ The following example creates a new WebAssembly Memory instance with an initial 
 1 page (64KiB), and a maximum size of 10 pages (640KiB).
 
 ```js
-var memory = new WebAssembly.Memory({initial:1, maximum:10});
+const memory = new WebAssembly.Memory({
+  initial: 1,
+  maximum: 10
+});
 ```
 
 We can then grow the instance by one page like so:
@@ -69,5 +76,4 @@ pages.
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

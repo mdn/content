@@ -13,7 +13,7 @@ The **`order`** attribute indicates the size of the matrix to be used by a {{SVG
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feConvolveMatrix")}}
 
 ## Example
 
@@ -27,11 +27,11 @@ html, body, svg {
 <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
   <filter id="emboss1" x="0" y="0" width="100%" height="100%">
     <feTurbulence baseFrequency="0.025" seed="0" />
-    <feConvolveMatrix kernelMatrix="3 0 0 0 0 0 0 0 -4" order="3"/>
+    <feConvolveMatrix kernelMatrix="3 0 0 -4" order="2"/>
   </filter>
   <filter id="emboss2" x="0" y="0" width="100%" height="100%">
     <feTurbulence baseFrequency="0.025" seed="0" />
-    <feConvolveMatrix kernelMatrix="3 0 0 0 0 0 0 0 -4" order="1 1 1"/>
+    <feConvolveMatrix kernelMatrix="3 0 0 0 0 0 0 0 -4" order="3"/>
   </filter>
 
   <rect x="0" y="0" width="200" height="200" style="filter:url(#emboss1);" />
@@ -66,38 +66,14 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `<number-optional-number>`
-    *   : This value indicates the number of cells in each dimension for the kernel matrix. The values provided must be {{cssxref("integer")}}s greater than zero. Values that are not integers will be truncated, i.e. rounded to the closest integer value towards zero. The first number, indicates the number of columns in the matrix. The second number, indicates the number of rows in the matrix. If no second number is not provided, it defaults to the first number.
+- `<number-optional-number>`
+  - : This value indicates the number of cells in each dimension for the kernel matrix. The values provided must be {{cssxref("integer")}}s greater than zero. Values that are not integers will be truncated, i.e. rounded to the closest integer value towards zero. The first number, indicates the number of columns in the matrix. The second number, indicates the number of rows in the matrix. If no second number is not provided, it defaults to the first number.
 
-        It is recommended that only small values (e.g., 3) be used; higher values may result in very high CPU overhead and usually do not produce results that justify the impact on performance.
+      It is recommended that only small values (e.g., 3) be used; higher values may result in very high CPU overhead and usually do not produce results that justify the impact on performance.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-order", "order")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feConvolveMatrixElementOrderAttribute", "order")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

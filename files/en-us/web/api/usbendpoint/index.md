@@ -1,6 +1,7 @@
 ---
 title: USBEndpoint
 slug: Web/API/USBEndpoint
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -8,16 +9,17 @@ tags:
   - USB
   - USBEndpoint
   - Web USB API
+  - Experimental
 browser-compat: api.USBEndpoint
 ---
-{{securecontext_header}}
+{{APIRef("WebUSB API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The `USBEndpoint` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) provides information about an endpoint provided by the USB device. An endpoint represents a unidirectional data stream into or out of a device.
 
 ## Constructor
 
-- **`{{domxref("USBEndpoint.USBEndpoint")}}`**
-  - : Creates a new `USBEndpoint` object which will be populated with information about the endpoint on the provided {{domxref('USBAltenateInterface')}} with the given endpoint number and transfer direction.
+- **`{{domxref("USBEndpoint.USBEndpoint", "USBEndpoint()")}}`**
+  - : Creates a new `USBEndpoint` object which will be populated with information about the endpoint on the provided {{domxref('USBAlternateInterface')}} with the given endpoint number and transfer direction.
 
 ## Properties
 

@@ -1,6 +1,7 @@
 ---
 title: XRWebGLLayer
 slug: Web/API/XRWebGLLayer
+page-type: web-api-interface
 tags:
   - API
   - AR
@@ -22,6 +23,8 @@ The **`XRWebGLLayer`** interface of the WebXR Device API provides a linkage betw
 
 Although `XRWebGLLayer` is currently the only type of framebuffer layer supported by [WebGL](/en-US/docs/Web/API/WebGL_API), it's entirely possible that future updates to the WebXR specification may allow for other layer types and corresponding image sources.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("XRWebGLLayer.XRWebGLLayer", "new XRWebGLLayer()")}}
@@ -40,7 +43,7 @@ Although `XRWebGLLayer` is currently the only type of framebuffer layer supporte
 - {{domxref('XRWebGLLayer.framebufferHeight', "framebufferHeight")}} {{ReadOnlyInline}}
   - : Returns the height of the layer's framebuffer.
 - {{domxref('XRWebGLLayer.ignoreDepthValues', "ignoreDepthValues")}} {{ReadOnlyInline}}
-  - : A Boolean which Indicates whether or not the [WebXR compositor](en-US/docs/Web/API/WebXR_Device_API/Fundamentals#The_WebXR_compositor) should make use of the contents of the layer's depth buffer while compositing the scene.
+  - : A Boolean which Indicates whether or not the [WebXR compositor](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#the_webxr_compositor) should make use of the contents of the layer's depth buffer while compositing the scene.
 
 ## Methods
 
@@ -65,7 +68,7 @@ gl.bindFrameBuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 
 ### Rendering every view in a frame
 
-Each time the GPU is ready to render the scene to the XR device, the XR runtime calls the function you specified when you called the {{domxref("XRSession")}} method {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} to ask to render the frame.
+Each time the GPU is ready to render the scene to the XR device, the XR runtime calls the function you specified when you called the {{domxref("XRSession")}} method {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} to ask to render the frame.
 
 That function receives as input an {{domxref("XRFrame")}} which encapsulates the data needed to render the frame. This information includes the pose (an {{domxref("XRViewerPose")}} object) that describes the position and facing direction of the viewer within the scene as well as a list of {{domxref("XRView")}} objects, each representing one perspective on the scene. In current WebXR implementations, there will never be more than two entries in this list: one describing the position and viewing angle of the left eye and another doing the same for the right.
 

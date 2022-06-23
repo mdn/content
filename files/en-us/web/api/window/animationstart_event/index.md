@@ -1,6 +1,7 @@
 ---
 title: 'Window: animationstart event'
 slug: Web/API/Window/animationstart_event
+page-type: web-api-event
 tags:
   - API
   - Animation
@@ -45,7 +46,7 @@ This listens for the `animationstart` event and logs a message when it is fired:
 
 ```js
 window.addEventListener('animationstart', () => {
-  console.log('Animation started');
+  console.log('Animation started');
 });
 ```
 
@@ -53,7 +54,7 @@ The same, but using `onanimationstart`:
 
 ```js
 window.onanimationstart = () => {
-  console.log('Animation started');
+  console.log('Animation started');
 };
 ```
 

@@ -29,12 +29,12 @@ el.addEventListener("touchend", handleEnd);
 el.addEventListener("touchcancel", handleCancel);
 ```
 
-This way, touching the game's {{htmlelement("canvas")}} on the mobile screen would emit events, and thus we could manipulate the game in any way we want (for example, moving the space ship around). The events are as follows:
+This way, touching the game's {{htmlelement("canvas")}} on the mobile screen would emit events, and thus we could manipulate the game in any way we want (for example, moving the spaceship around). The events are as follows:
 
 - [touchstart](/en-US/docs/Web/API/GlobalEventHandlers/ontouchstart) is fired when the user puts a finger on the screen.
 - [touchmove](/en-US/docs/Web/API/GlobalEventHandlers/ontouchmove) is fired when they move the finger on the screen while touching it
 - [touchend](/en-US/docs/Web/API/GlobalEventHandlers/ontouchend) is fired when the user stops touching the screen
-- [touchcancel](/en-US/docs/Web/API/GlobalEventHandlers/ontouchcancel) is fired when a touch is cancelled, for example when the user moves their finger outside of the screen.
+- [touchcancel](/en-US/docs/Web/API/GlobalEventHandlers/ontouchcancel) is fired when a touch is cancelled, for example when the user moves their finger out of the screen.
 
 > **Note:** The [touch events](/en-US/docs/Web/API/Touch_events) reference article provides more examples and information.
 
@@ -42,7 +42,7 @@ This way, touching the game's {{htmlelement("canvas")}} on the mobile screen wou
 
 Let's implement the mobile support in a [little demo](https://github.com/end3r/JavaScript-Game-Controls/) available on GitHub, so we can move the player's ship by touching the screen on a mobile device.
 
-We will use two events: `touchstart `and,`touchmove` both handled by one function. Why? The function `touchHandler` will assign proper variables to the ship's position so that we can use it for both cases: when the player touches the screen but doesn't move it (`touchstart`), and when the finger is moved on the screen (`touchmove`):
+We will use two events: `touchstart` and,`touchmove` both handled by one function. Why? The function `touchHandler` will assign proper variables to the ship's position so that we can use it for both cases: when the player touches the screen but doesn't move it (`touchstart`), and when the finger is moved on the screen (`touchmove`):
 
 ```js
 document.addEventListener("touchstart", touchHandler);
@@ -66,7 +66,7 @@ If the touch occurs (`touches` object is not empty), then we will have all the i
 
 ![Touch controls for the player's ship, with visible output of the x and y position.](controls-touch.png)
 
-To see if it's working correctly we can output the `x` and `y` positions using the `output` element. The `preventDefault()` function is needed to prevent the browser from moving — without it you'd have the default behavior, and the Canvas would be dragged around the page, which would show the browser scroll bars and look messy.
+To see if it's working correctly we can output the `x` and `y` positions using the `output` element. The `preventDefault()` function is needed to prevent the browser from moving — without it, you'd have the default behavior, and the Canvas would be dragged around the page, which would show the browser scroll bars and look messy.
 
 ## Touch events in Phaser
 
@@ -76,9 +76,9 @@ We don't have to do this on our own; frameworks like Phaser offer systems for ma
 
 A [pointer](https://phaser.io/docs/2.6.1/Phaser.Pointer.html) represents a single finger on the touch screen. Phaser starts two pointers by default, so two fingers can perform an action at once. Captain Rogers is a simple game — it can be controlled by two fingers, the left one moving the ship and the right one controlling the ship's gun. There's no multitouch or gestures — everything is handled by single pointer inputs.
 
-You can add more pointers to the game by using; `this.game.input.addPointer` up to ten pointers can be managed simultaneously. The most recently used pointer is available in the `this.game.input.activePointer` object — the most recent finger active on the screen.
+You can add more pointers to the game by using; `this.game.input.addPointer` up to ten pointers can be managed simultaneously. The most recently used pointer is available in the `this.game.input.activePointer` object — the most recent finger active on the screen.
 
-If you need to access a specific pointer, they are all available at, ` this.game.input.pointer1``this.game.input.pointer2 `, etc. They are assigned dynamically, so if you put three fingers on the screen, then, ` pointer1``pointer2 `, and `pointer3` will be active. Removing the second finger, for example, won't affect the other two, and setting it back again will use the first available property, so `pointer2` will be used again.
+If you need to access a specific pointer, they are all available at, `this.game.input.pointer1`, `this.game.input.pointer2`, etc. They are assigned dynamically, so if you put three fingers on the screen, then, `pointer1`, `pointer2`, and `pointer3` will be active. Removing the second finger, for example, won't affect the other two, and setting it back again will use the first available property, so `pointer2` will be used again.
 
 You can quickly get the coordinates of the most recently active pointer via the `this.game.input.x` and `this.game.input.y` variables.
 
@@ -120,7 +120,7 @@ var buttonEnclave = this.add.button(10, 10, 'logo-enclave', this.clickEnclave, t
 
 This one is formed in the `MainMenu` state — it will be placed ten pixels from the top left corner of the screen, use the `logo-enclave` image, and execute the `clickEnclave()` function when it is touched. This will work on mobile and desktop out of the box. There are a few buttons in the main menu, including the one that will start the game.
 
-For the actual gameplay, instead of creating more buttons and covering the small mobile screen with them, we can use something a little bit different: we'll create invisible areas which respond to the given action. From a design point of view, it is better to make the field of activity bigger without covering half of the screen with button images. For example, tapping on the right side of the screen will fire the weapon:
+For the actual gameplay, instead of creating more buttons and covering the small mobile screen with them, we can use something a little different: we'll create invisible areas which respond to the given action. From a design point of view, it is better to make the field of activity bigger without covering half of the screen with button images. For example, tapping on the right side of the screen will fire the weapon:
 
 ```js
 this.buttonShoot = this.add.button(this.world.width*0.5, 0, 'button-alpha', null, this);

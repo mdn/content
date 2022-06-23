@@ -12,7 +12,7 @@ tags:
   - Input
   - Reference
   - color
-browser-compat: html.elements.input.input-color
+browser-compat: html.elements.input.type_color
 ---
 
 {{HTMLRef}}
@@ -28,9 +28,9 @@ The element's presentation may vary substantially from one browser and/or platfo
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A 7-character {{domxref("DOMString")}} specifying a
+        A 7-character string specifying a
         {{cssxref("&lt;color&gt;")}} in lower-case hexadecimal notation
       </td>
     </tr>
@@ -53,6 +53,10 @@ The element's presentation may vary substantially from one browser and/or platfo
       <td><code>list</code> and <code>value</code></td>
     </tr>
     <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>Methods</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}}
@@ -63,7 +67,7 @@ The element's presentation may vary substantially from one browser and/or platfo
 
 ## Value
 
-The {{htmlattrxref("value", "input")}} of an {{HTMLElement("input")}} element of type `color` is always a {{domxref("DOMString")}} which contains a 7-character string specifying an RGB color in hexadecimal format. While you can input the color in either upper- or lower-case, it will be stored in lower-case form. The value is never in any other form, and is never empty.
+The {{htmlattrxref("value", "input")}} of an {{HTMLElement("input")}} element of type `color` is always a string which contains a 7-character string specifying an RGB color in hexadecimal format. While you can input the color in either upper- or lower-case, it will be stored in lower-case form. The value is never in any other form, and is never empty.
 
 > **Note:** Setting the value to anything that isn't a valid, fully-opaque, RGB color _in hexadecimal notation_ will result in the value being set to `#000000`. In particular, you can't use CSS's standardized color names, or any CSS function syntax, to set the value. This makes sense when you keep in mind that HTML and CSS are separate languages and specifications. In addition, colors with an alpha channel are not supported; specifying a color in 9-character hexadecimal notation (e.g. `#009900aa`) will also result in the color being set to `#000000`.
 
@@ -85,7 +89,7 @@ If you don't specify a value, the default is `#000000`, which is black. The valu
 
 ### Tracking color changes
 
-As is the case with other {{HTMLElement("input")}} types, there are two events that can be used to detect changes to the color value: {{domxref("HTMLElement/input_event", "input")}} and {{domxref("HTMLElement/change_event", "change")}}. `input` is fired on the `<input>` element every time the color changes. The `change` event is fired when the user dismisses the color picker. In both cases, you can determine the new value of the element by looking at its {{domxref("HTMLInputElement.value", "value")}}.
+As is the case with other {{HTMLElement("input")}} types, there are two events that can be used to detect changes to the color value: {{domxref("HTMLElement/input_event", "input")}} and {{domxref("HTMLElement/change_event", "change")}}. `input` is fired on the `<input>` element every time the color changes. The `change` event is fired when the user dismisses the color picker. In both cases, you can determine the new value of the element by looking at its {{htmlattrxref("value", "input")}}.
 
 Here's an example that watches changes over time to the color value:
 
@@ -180,7 +184,7 @@ function updateFirst(event) {
 }
 ```
 
-When the color picker is dismissed, indicating that the value will not be changing again (unless the user re-opens the color picker), a `change` event is sent to the element. We handle that event using the `updateAll()` function, using {{domxref("HTMLInputElement.value", "Event.target.value")}} to obtain the final selected color:
+When the color picker is dismissed, indicating that the value will not be changing again (unless the user re-opens the color picker), a `change` event is sent to the element. We handle that event using the `updateAll()` function, using {{htmlattrxref("value", "input", "Event.target.value")}} to obtain the final selected color:
 
 ```js
 function updateAll(event) {

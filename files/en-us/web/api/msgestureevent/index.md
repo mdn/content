@@ -1,6 +1,7 @@
 ---
 title: MSGestureEvent
 slug: Web/API/MSGestureEvent
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -9,7 +10,7 @@ tags:
   - Reference
 browser-compat: api.MSGestureEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 {{Non-standard_header()}}
 
@@ -65,7 +66,7 @@ _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and
 
 ## Specifications
 
-_Not part of any specification._ Microsoft has [a description on MSDN](<https://msdn.microsoft.com/en-us/library/hh772076(v=vs.85).aspx>).
+_Not part of any specification._ Microsoft has [a description on MSDN](<https://msdn.microsoft.com/library/hh772076(v=vs.85).aspx>).
 
 ## Browser compatibility
 

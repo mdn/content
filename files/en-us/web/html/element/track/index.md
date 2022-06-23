@@ -111,7 +111,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - {{htmlattrdef("src")}}
   - : Address of the track (`.vtt` file). Must be a valid URL. This attribute must be specified and its URL value must have the same origin as the document — unless the {{HTMLElement("audio")}} or {{HTMLElement("video")}} parent element of the `track` element has a [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute.
 - {{htmlattrdef("srclang")}}
-  - : Language of the track text data. It must be a valid [BCP 47](https://r12a.github.io/app-subtags/) language tag. If the `kind` attribute is set to `subtitles`, then `srclang` must be defined.
+  - : Language of the track text data. It must be a valid [BCP 47](https://r12a.github.io/app-subtags/) language tag. If the `kind` attribute is set to `subtitles`, then `srclang` must be defined.
 
 ## Usage notes
 
@@ -123,7 +123,17 @@ A media element cannot have more than one `track` with the same `kind`, `srclang
 
 ### Detecting cue changes
 
-{{page("/en-US/docs/Web/API/TextTrack/cuechange_event", "On the track element")}}
+The underlying {{domxref("TextTrack")}}, indicated by the {{domxref("HTMLTrackElement.track", "track")}} property, receives a `cuechange` event every time the currently-presented cue is changed. This happens even if the track isn't associated with a media element.
+
+If the track _is_ associated with a media element, using the {{HTMLElement("track")}} element as a child of the {{HTMLElement("audio")}} or {{HTMLElement("video")}} element, the `cuechange` event is also sent to the {{domxref("HTMLTrackElement")}}.
+
+```js
+let textTrackElem = document.getElementById("texttrack");
+
+textTrackElem.addEventListener("cuechange", event => {
+  let cues = event.target.track.activeCues;
+});
+```
 
 ## Examples
 

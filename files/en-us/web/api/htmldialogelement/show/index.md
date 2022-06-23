@@ -1,6 +1,7 @@
 ---
 title: HTMLDialogElement.show()
 slug: Web/API/HTMLDialogElement/show
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -20,7 +21,7 @@ outside of the dialog.
 ## Syntax
 
 ```js
-dialogInstance.show();
+show()
 ```
 
 ### Parameters
@@ -29,7 +30,7 @@ None.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -65,9 +66,9 @@ button.
 
   <script>
     (function() {
-      var updateButton = document.getElementById('updateDetails');
-      var cancelButton = document.getElementById('cancel');
-      var dialog = document.getElementById('favDialog');
+      const updateButton = document.getElementById('updateDetails');
+      const cancelButton = document.getElementById('cancel');
+      const dialog = document.getElementById('favDialog');
       dialog.returnValue = 'favAnimal';
 
       function openCheck(dialog) {
@@ -78,9 +79,9 @@ button.
         }
       }
 
-      // Update button opens a modal dialog
+      // Update button opens a modeless dialog
       updateButton.addEventListener('click', function() {
-        dialog.showModal();
+        dialog.show();
         openCheck(dialog);
       });
 

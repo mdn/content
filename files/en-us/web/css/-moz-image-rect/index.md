@@ -18,12 +18,12 @@ The **`-moz-image-rect`** value for [CSS](/en-US/docs/Web/CSS) {{CSSxRef("backgr
 ## Syntax
 
 ```css
--moz-image-rect({{CSSxRef("url()")}}, top, right, bottom, left);
+-moz-image-rect({{CSSxRef("url", "url()")}}, top, right, bottom, left);
 ```
 
 ### Values
 
-- {{CSSxRef("url()")}}
+- {{CSSxRef("url", "url()")}}
   - : The URI of the image from which to take the sub-image.
 - `top`
   - : The top edge, specified as an {{CSSxRef("&lt;integer&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}}, of the sub-image within the specified image.
@@ -119,7 +119,7 @@ The HTML is quite simple:
 </div>
 ```
 
-This places the four segments of our image in a two-by-two box grid. These four segments are all contained within a larger {{HTMLElement("div")}} block whose primary purpose is to receive click events and dispatch them to our JavaScript code.
+This places the four segments of our image in a two-by-two box grid. These four segments are all contained within a larger {{HTMLElement("div")}} block whose primary purpose is to receive click events and dispatch them to our JavaScript code.
 
 ### The JavaScript code
 

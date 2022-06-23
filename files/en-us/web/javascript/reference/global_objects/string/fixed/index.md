@@ -40,7 +40,7 @@ The following example uses the `fixed` method to change the formatting of a
 string:
 
 ```js
-var worldString = 'Hello, world';
+const worldString = 'Hello, world';
 console.log(worldString.fixed()); // "<tt>Hello, world</tt>"
 ```
 
@@ -54,7 +54,7 @@ console.log(worldString.fixed()); // "<tt>Hello, world</tt>"
 
 ## See also
 
-- A polyfill of `String.prototype.fixed` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.fixed` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.bold()")}}
 - {{jsxref("String.prototype.italics()")}}
 - {{jsxref("String.prototype.strike()")}}

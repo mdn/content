@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onmousedown
 slug: Web/API/GlobalEventHandlers/onmousedown
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -16,7 +17,7 @@ The **`onmousedown`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
 processes {{event("mousedown")}} events.
 
-The `mousedown` event fires when the user depresses the mouse button.
+The `mousedown` event fires when the user presses a mouse button.
 
 > **Note:** The opposite of `onmousedown` is
 > {{domxref("GlobalEventHandlers.onmouseup", "onmouseup")}}.
@@ -29,8 +30,7 @@ target.onmousedown = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("MouseEvent")}} object as its sole
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("MouseEvent")}} object as its sole
 argument.
 
 ## Example
@@ -44,7 +44,7 @@ and {{domxref("GlobalEventHandlers.onmousemove", "onmousemove")}} event handlers
 ```html
 <div class="container">
   <div class="view" hidden></div>
-  <img src="https://interactive-examples.mdn.mozilla.net/media/examples/gecko-320-213.jpg">
+  <img src="rhino.jpg">
 </div>
 ```
 
@@ -52,8 +52,8 @@ and {{domxref("GlobalEventHandlers.onmousemove", "onmousemove")}} event handlers
 
 ```css
 .container {
-  width: 320px;
-  height: 213px;
+  width: 300px;
+  height: 227px;
   background: black;
 }
 

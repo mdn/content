@@ -100,6 +100,6 @@ console.log(result[1]); // [ "2019-03-07", "2019", "03", "07" ]
 
 ## See also
 
-- A polyfill of `RegExp.prototype[@@matchAll]` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `RegExp.prototype[@@matchAll]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{JSxRef("String.prototype.matchAll()")}}
 - {{JSxRef("Symbol.matchAll")}}

@@ -38,7 +38,7 @@ Cross-Origin-Embedder-Policy: unsafe-none | require-corp
   - : This is the default value. Allows the document to fetch cross-origin resources without giving explicit permission through the CORS protocol or the {{HTTPHeader("Cross-Origin-Resource-Policy")}} header.
 - `require-corp`
   - : A document can only load resources from the same origin, or resources explicitly marked as loadable from another origin.
-    If a cross origin resource supports CORS, the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute or the {{HTTPHeader("Cross-Origin-Resource-Policy")}} header must be used to load it without being blocked by COEP.
+    If a cross origin resource supports CORS, the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute or the {{HTTPHeader("Cross-Origin-Resource-Policy")}} header must be used to load it without being blocked by COEP.
 
 ## Examples
 

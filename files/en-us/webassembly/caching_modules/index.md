@@ -111,7 +111,7 @@ If we do, we instantiate it with the given import object:
     },
 ```
 
-If not, we compile it from scratch and then store the compiled Module in the database with a key of url, for next time we want to use it:
+If not, we compile it from scratch and then store the compiled Module in the database with a key of URL, for next time we want to use it:
 
 ```js
     errMsg => {

@@ -26,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingIcon = browser.downloads.getFileIcon(
+let gettingIcon = browser.downloads.getFileIcon(
   downloadId,           // integer
   options               // optional object
 )
@@ -67,12 +67,12 @@ function onError(error) {
 function getIcon(downloadItems) {
     if (downloadItems.length > 0) {
       latestDownloadId = downloadItems[0].id;
-      var gettingIcon = browser.downloads.getFileIcon(latestDownloadId);
+      let gettingIcon = browser.downloads.getFileIcon(latestDownloadId);
       gettingIcon.then(gotIcon, onError);
     }
   }
 
-var searching = browser.downloads.search({
+let searching = browser.downloads.search({
   limit: 1,
   orderBy: ["-startTime"]
 });
@@ -82,7 +82,7 @@ searching.then(getIcon, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-getFileIcon) API.
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-getFileIcon) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

@@ -41,8 +41,7 @@ speed:
   [Learn web development](https://developer.mozilla.org/en-US/docs/Learn) tutorials.
 - Open source: If you've never contributed to an open source project before,
   have a read of [Basic etiquette for open source projects](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Open_source_etiquette).
-- Git and GitHub: If you are unfamiliar with these tools, [GitHub for complete
-  beginners](https://developer.mozilla.org/en-US/docs/MDN/Contribute/GitHub_beginners)
+- Git and GitHub: If you are unfamiliar with these tools, [GitHub for complete beginners](https://developer.mozilla.org/en-US/docs/MDN/Contribute/GitHub_beginners)
   will get you started.
 - MDN's repo structures: If you are not sure what repos to edit to make changes
   to the different parts of MDN's content,
@@ -62,14 +61,14 @@ There are several ways forward from this point. It's up to you.
 Here are some options:
 
 1. Go to <https://github.com/mdn/content> and just use the
-[GitHub UI](https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/managing-files-on-github).
+[GitHub UI](https://docs.github.com/en/repositories/working-with-files/managing-files).
 This is the easiest approach if you just want to make a simple change to
 a single file, like fixing a typo.
-1. Install and use the [GitHub Desktop](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-desktop)
-1. Install and use the [GitHub CLI](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-cli)
+1. Install and use the [GitHub Desktop](https://docs.github.com/en/get-started/using-github/github-desktop)
+1. Install and use the [GitHub CLI](https://docs.github.com/en/github-cli/github-cli/about-github-cli)
 1. [Install `git`](https://git-scm.com/downloads) and use it from the
 command line. You might find these resources helpful:
-    - [Using Git](https://docs.github.com/en/free-pro-team@latest/github/using-git)
+    - [Using Git](https://docs.github.com/en/get-started)
     - [`git` cheatsheet](https://training.github.com/)
 
 If you choose an option other than the GitHub UI, you want to install
@@ -128,7 +127,7 @@ document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs
 If you just want to make a simple change to a single file, like fixing a typo,
 the GitHub UI is the simplest way to do that. For example, if you've found
 a typo within the [JavaScript landing page](https://developer.mozilla.org/en-US/docs/Web/JavaScript),
-you can sign into GitHub, go to <https://github.com/mdn/content>,
+you can sign in to GitHub, go to <https://github.com/mdn/content>,
 navigate to the source file `files/en-us/web/javascript/index.md`,
 and then click on the edit (pencil) button.
 
@@ -136,11 +135,11 @@ and then click on the edit (pencil) button.
   to jump to its source file on GitHub.
 
 From there the GitHub UI will take your hand and
-[walk you through the rest](https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/editing-files-in-your-repository),
+[walk you through the rest](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files),
 like automatically creating a
-[fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
+[fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 and branch to commit your changes to, as well as helping you reach the
-ultimate goal, a [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests).
+ultimate goal, a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 Your pull request represents the work you want to be reviewed,
 hopefully approved, and then merged into the `main` branch of this repository.
 
@@ -166,13 +165,13 @@ moving one or more documents, the GitHub UI is not very efficient.
 You'd have to make a separate pull request for every page you want to change.
 Instead, you're going to have to use `git` or one of the other
 `git`-based approaches like the
-[GitHub Desktop](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-desktop).
+[GitHub Desktop](https://docs.github.com/en/get-started/using-github/github-desktop).
 
 1. You'll want to create a
-[fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
+[fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 of this repository, so you can freely experiment with branches and
 changes in your own copy before submitting your changes as a
-[pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests).
+[pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 Let's assume your GitHub username is `octocat`. Your fork would be a copy
 of this repository but in your own account, so
 `https://github.com/octocat/content`.
@@ -224,7 +223,7 @@ and use it to make a pull request.
 
 1. Next, you'll want to start the local preview service, so you can see
 the changes you'll make as they would look in production. Once started,
-this local preview service is available at `http://localhost:5000/`
+this local preview service is available at `http://localhost:5042/`
 within your browser.
 
     ```sh
@@ -267,10 +266,10 @@ it's important to keep the following in mind:**
 1. Once you've made and saved your changes, open a browser, and navigate
 to the page(s) you've changed. For example, if you changed
 `files/en-us/web/javascript/index.md`, open
-`http://localhost:5000/en-us/docs/web/javascript` in your browser.
+`http://localhost:5042/en-us/docs/web/javascript` in your browser.
 
 1. You might have noticed that at the top of each page that you preview,
-for example the `http://localhost:5000/en-us/docs/web/javascript` page,
+for example the `http://localhost:5042/en-us/docs/web/javascript` page,
 there is a `Show flaws` button. Click on that button to see if your
 changes have introduced flaws on the page. You can also fix flaws on a
 particular page by running the command:
@@ -291,7 +290,7 @@ and then push the branch to your fork. Remember, the default name that
     ```
 
 1. You're now ready to create a
-[pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+[pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 1. Once you've created your pull request, sit back, relax, and wait for
 a review.
@@ -365,19 +364,14 @@ Adding a new document is relatively straightforward, especially if you can
 start by copying the `index.html` or `index.md` of a similar document.
 There are only a few things to keep in mind:
 
-- Documents can be authored in either Markdown or HTML. However, we're converting
-  the site to Markdown one section at a time, and don't want to mix authoring
-  formats within a section. At this point we have only converted the JavaScript
-  documentation. So if you are adding a new document under
-  `files/en-us/web/javascript`, make it a Markdown file. Otherwise make it an
-  HTML file.
+- Documents must be authored in Markdown.
 - Remember that a document is represented by an `index.html` or `index.md` file
   within its own folder.
 - Determine where in the document hierarchy your document belongs. For
   example, if you're
   creating a new CSS document for a new property `foo`, you'll want to create
   a new folder
-  `files/en-us/web/css/foo/` and its `files/en-us/web/css/foo/index.html` file.
+  `files/en-us/web/css/foo/` and its `files/en-us/web/css/foo/index.md` file.
 - Remember that a document's `index.html` or `index.md` file must start with
   front-matter that defines the `title`, `slug`, and
   [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag)
@@ -398,8 +392,7 @@ As we outlined above, the step-by-step process in general would be:
     git checkout -b my-add
     ```
 
-1. Create one or more new document folders, each with their own `index.html`
-or `index.md` file.
+1. Create one or more new document folders, each with their own `index.md` file.
 
 1. Add and commit your new files, as well as push your new branch to your fork:
 
@@ -410,7 +403,7 @@ or `index.md` file.
     ```
 
 1. And finally create your
-[pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+[pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 ### Moving one or more documents
 
@@ -457,7 +450,7 @@ push your branch to your fork:
     git push -u origin my-move
     ```
 
-1. Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+1. Now you're ready to create your [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 **Important: `yarn content move` automatically adds the necessary redirect
 information to the `_redirects.txt` file so that the old location will redirect
@@ -516,7 +509,7 @@ push your branch to your fork:
     git push -u origin my-delete
     ```
 
-1. Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+1. Now you're ready to create your [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 > **Note:** If the slug of the page you wish to delete contain special
   characters, include it in quotes:
@@ -561,226 +554,7 @@ pushing your branch to your fork:
     git push -u origin my-delete
     ```
 
-### Adding images
+## Learn more
 
-Adding an image to a document is easy as well. All you need to do is add
-your image file within the document's folder, and then reference the image
-from within the document's `index.html` or `index.md` file, using an `<img>`
-or [the equivalent Markdown syntax](https://github.github.com/gfm/#images).
-It's as easy as that. Let's walk through an example:
-
-1. You should be getting used to this by now, as we've done it several
-times above. Make sure you start with a fresh working branch updated with
-the latest content from the `main` branch of the `mdn` remote.
-
-    ```sh
-    cd ~/repos/mdn/content
-    git checkout main
-    git pull mdn main
-    # Run "yarn" again just to ensure you've
-    # installed the latest Yari dependency.
-    yarn
-    git checkout -b my-images
-    ```
-
-1. Add your image to the document folder. For this example, let's assume
-we're adding a new image to the `files/en-us/web/css` document.
-
-    ```sh
-    cd ~/repos/mdn/content
-    cp /some/path/my-cool-image.png files/en-us/web/css/
-    ```
-
-1. Run the `filecheck` command on each image you add. It'll complain if
-something's wrong (see also the [Compressing images](#compressing-images)
-section below).
-We'll automatically run this as one of the tests we run when your new pull
-request is created, but why wait to fix any possible issues later?
-
-    ```sh
-    yarn filecheck files/en-us/web/css/my-cool-image.png
-    ```
-
-1. Use your image within the document. For example, add the following `<img>` element
-somewhere inside `files/en-us/web/css/index.html`:
-
-    ```html
-    <img src="my-cool-image.png" alt="My cool image">
-    ```
-
-1. Add and commit all of the deleted, created, and modified files, as well as
-push your branch to your fork:
-
-    ```sh
-    git add files/en-us/web/css/my-cool-image.png files/en-us/web/css/index.html
-    git commit
-    git push -u origin my-images
-    ```
-
-1. Now you're ready to create your
-   [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
-
-#### Compressing images
-
-When you add images to MDN, you should make sure that they are compressed
-as much as possible without degrading quality, to save on download size
-for our readers. In fact, if you don't do this our CI process will fail
-and the build results will warn you that some of your images are too big.
-
-The best way to compress them is by using the built-in compression tool.
-You can compress an image appropriately by using the `filecheck` command
-with the `--save-compression` option — this compresses the specified image
-as much as possible, and saves the result over the top of the original.
-
-For example:
-
-```sh
-yarn filecheck files/en-us/web/css/my-cool-image.png --save-compression
-```
-
-### Updating a browser compatibility table
-
-The browser compatibility table shown near the bottom of many of the
-MDN document pages, for example on
-[the JavaScript Array page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Browser_compatibility),
-is generated from the `npm` package created from the <https://github.com/mdn/browser-compat-data>
-repository. If you'd like to make or suggest a change to the content of
-the browser compatibility table on any given MDN document page, you can either
-use the `Report problems with this data on GitHub` link in the upper-right
-corner of the table on the page itself to create an issue, or go to
-<https://github.com/mdn/browser-compat-data> and
-[read more to learn how to contribute](https://github.com/mdn/browser-compat-data/blob/master/docs/contributing.md).
-
-### Adding code examples
-
-There are a lot of code examples on MDN, and you'll probably want to add
-some as you contribute content to the project. There are four types of
-code example used on MDN:
-
-- [Static examples](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#Static_examples)
-  — plain code blocks, possibly with a screenshot to statically show the
-  result of such code if it were to be run.
-- [Traditional MDN "live samples"](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#Traditional_live_samples)
-  — A macro that takes plain code blocks, dynamically puts
-  them into a document inside an `<iframe>` element, and embeds it into the
-  page to show the code running live.
-- [GitHub "live samples"](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#GitHub_live_samples)
-  — A macro that takes a document in a GitHub repo inside the [mdn organization](https://github.com/mdn),
-  puts it inside an `<iframe>` element, and embeds
-  it into the page to show the code running live.
-- [Interactive examples](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples#Interactive_examples)
-  — Our system for creating live interactive examples that show the
-  code running live but also allow you to change code on the fly to see what
-  the effect is.
-
-For a complete description of this topic, see
-[the MDN code examples page](https://developer.mozilla.org/en-US/docs/MDN/Structures/Code_examples).
-
-Also make sure that your code examples follow the
-[MDN code example guidelines](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines).
-
-### Archiving and unarchiving pages
-
-Pages with the banner "This is an archived page. It's not actively maintained."
-at the top are archived pages — they are archived because either they are
-obsolete or out-of-date, or they are not in scope for MDN contributors to
-actively work on.
-
-If you find a page that is marked archived and you think it shouldn't be,
-you can follow the below steps to unarchive it:
-
-- Submit an issue to check why the page is archived and if it should be
-  unarchived.
-- Find the source code location of the archived page. Archived pages live in
-  the [Archived content](https://github.com/mdn/archived-content/) repo,
-  the structure of which is the same as this repo (except that there are
-  also locale directories present other than `en-US`). As an example:
-  - Take the archived [Mobile developer challenge](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Mobile_developer_challenge)
-    page, which is at the URL `https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Mobile_developer_challenge`.
-  - This page's source code is at [https://github.com/mdn/archived-content/blob/main/files/en-us/mozilla/mobile/mobile_developer_challenge/index.html](https://github.com/mdn/archived-content/blob/main/files/en-us/mozilla/mobile/mobile_developer_challenge/index.html).
-- To unarchive the page, you need to open a pull request to move the page's
-directory into the appropriate place inside this repo, and update the
-page's meta data (like `slug`) if needed.
-
-> **Note:** To archive a non-archived page, you need to follow the
-above procedure, but move the page in question the opposite way between repos.
-When removing the page from MDN, remember to use the [delete command](#deleting-a-document).
-
-**Note:** You can have an archived page with non-archived pages below it in the
-hierarchy, and vice-versa. To achieve this you need to have the same directory
-structure in both the `content` and `archive-content` repos. Whether a page
-is non-archived or archived depends on which repo its `index.html` file is
-in. As an example, compare the [archived-content mozilla directory](https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla)
-with the [content mozilla directory](https://github.com/mdn/content/tree/main/files/en-us/mozilla).
-Both locations represent the same directory structure, but the
-`index.html` file appears in the latter, therefore the page is not archived.
-
-### Making a change that depends on a macro update
-
-KumaScript macros are still used on MDN pages, even in the new platform.
-These are the function names surrounded by handlebars-style double curly
-braces that you'll see in the source code on occasion, for example
-`{{domxref}}` Eventually we have to replace them with something else,
-but they are here for now. They live in <https://github.com/mdn/yari/tree/main/kumascript/macros>.
-
-Sometimes you'll want to make a change to the content that relies on a
-macro change. Take [https://github.com/mdn/content/pull/187](https://github.com/mdn/content/pull/187).
-Florian wanted to add documentation for a new WebGL extension to MDN, but
-this change relied on the new feature's spec being added to
-<https://github.com/mdn/yari/blob/main/kumascript/macros/SpecData.json>.
-If not, the specification table on the new page would not render properly
-because the data it relies on would not be there.
-
-In such situations:
-
-1. Make the required PR to <https://github.com/mdn/yari/tree/main/kumascript/macros>
-   first, and get that merged.
-2. Add the content to this repo.
-
-## Frequently asked questions (FAQ)
-
-### When will my change show up on the production MDN site?
-
-After your pull request is merged, it may take up to 48 hours before the
-change goes live on the production <https://developer.mozilla.org/> site,
-but it will usually be quicker.
-
-- The complete build runs every 24h at around 7PM US/Eastern time, and is
-  then deployed.
-- Once deployment has occurred, it can take up to 24 hours for the
-  associated CDN caches to replace their previously-cached content with
-  the updates.
-
-You can use <https://whatsdeployed.io/s/DLi/mdn/content> to see if your change
-has been deployed to the production site.
-And use <https://whatsdeployed.io/s/16d/mdn/translated-content> for changes
-to the <https://github.com/mdn/translated-content> repo.
-
-### Can I copy content from other sources to put on MDN?
-
-In general, we do not approve of copying content from other sources and putting
-it on MDN. MDN should be made up of original content wherever possible. If we
-receive a pull request and discover that it contains plagiarised content,
-we will close it and request that the submitter resubmit the change with
-the content rewritten into their own words.
-
-If someone wants to donate an article to MDN that they previously published on
-their blog or it makes sense to copy a complex reference sheet to MDN there may
-be justification for republishing it. In these cases you should discuss your
-plan with the MDN team first:
-
-1. Include a comment on the relevant repo issue that explains your intention — say
-what you would like to copy (include the URL) and explain why you think this
-is appropriate.
-1. If the content is published under a closed license:
-   - If you hold the rights to the content, state this, and say that you are
-happy to republish it on MDN.
-   - If you do not hold the rights to the content, include the author/publisher
-   on the issue if possible, or include details of how they could be contacted
-   so we can ask them for permission to republish the content.
-1. If the content is published under an open license, say what it is, and link
-to the license so we can check whether it is compatible with [MDN's license](https://developer.mozilla.org/en-US/docs/MDN/About#using_mdn_web_docs_content).
-1. @-mention chrisdavidmills on the issue, so he can review the request.
-
-Be warned that unless there is a good reason to republish the content, we will
-probably say "no". The MDN writing team's decision is final.
+You can learn more about contributing to MDN on
+[the MDN Web Docs for Contributors site](https://mdn-contributor-docs.mozilla.org/).

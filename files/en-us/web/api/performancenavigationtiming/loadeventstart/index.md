@@ -1,6 +1,7 @@
 ---
 title: PerformanceNavigationTiming.loadEventStart
 slug: Web/API/PerformanceNavigationTiming/loadEventStart
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,22 +11,16 @@ browser-compat: api.PerformanceNavigationTiming.loadEventStart
 ---
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
-The **`loadEventStart`** read-only property returns a
+The **`loadEventStart`** read-only property returns a
 {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the
 time immediately before the load event of the current document is fired.
 
-## Syntax
-
-```js
-perfEntry.loadEventStart;
-```
-
-### Return Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp","timestamp")}} representing a time value equal to the
 time immediately before the load event of the current document is fired.
 
-## Example
+## Examples
 
 The following example illustrates this property's usage.
 

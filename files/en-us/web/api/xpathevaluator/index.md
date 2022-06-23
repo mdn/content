@@ -1,6 +1,7 @@
 ---
 title: XPathEvaluator
 slug: Web/API/XPathEvaluator
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -15,7 +16,7 @@ browser-compat: api.XPathEvaluator
 ---
 {{APIRef("DOM XPath")}}
 
-The `XPathEvaluator` interface allows to compile and evaluate {{Glossary("XPath")}} expressions.
+The `XPathEvaluator` interface allows to compile and evaluate {{Glossary("XPath")}} expressions.
 
 It is implemented by the {{domxref("Document")}} interface.
 

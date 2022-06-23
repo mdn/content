@@ -1,6 +1,7 @@
 ---
 title: CloseEvent
 slug: Web/API/CloseEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -14,6 +15,8 @@ browser-compat: api.CloseEvent
 
 A `CloseEvent` is sent to clients using {{Glossary("WebSockets")}} when the connection is closed. This is delivered to the listener indicated by the `WebSocket` object's `onclose` attribute.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}}
@@ -26,7 +29,7 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 - {{domxref("CloseEvent.code")}}{{readOnlyInline}}
   - : Returns an `unsigned short` containing the close code sent by the server.
 - {{domxref("CloseEvent.reason")}}{{readOnlyInline}}
-  - : Returns a {{domxref("DOMString")}} indicating the reason the server closed the connection. This is specific to the particular server and sub-protocol.
+  - : Returns a string indicating the reason the server closed the connection. This is specific to the particular server and sub-protocol.
 - {{domxref("CloseEvent.wasClean")}}{{readOnlyInline}}
   - : Returns a boolean value that Indicates whether or not the connection was cleanly closed.
 

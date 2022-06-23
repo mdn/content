@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var getting = browser.windows.get(
+let getting = browser.windows.get(
   windowId,              // integer
   getInfo                // optional object
 )
@@ -69,14 +69,14 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  var getting = browser.windows.get(tab.windowId, {populate: true});
+  let getting = browser.windows.get(tab.windowId, {populate: true});
   getting.then(logTabs, onError);
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows#method-get) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/windows/#method-get) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

@@ -1,6 +1,7 @@
 ---
 title: FileSystemHandle.requestPermission()
 slug: Web/API/FileSystemHandle/requestPermission
+page-type: web-api-instance-method
 tags:
   - Directory
   - File
@@ -9,7 +10,7 @@ tags:
   - Method
 browser-compat: api.FileSystemHandle.requestPermission
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`requestPermission()`** method of the
 {{domxref("FileSystemHandle")}} interface requests read or readwrite permissions for the
@@ -37,8 +38,8 @@ var PermissionState = FileSystemHandle.requestPermission(FileSystemHandlePermiss
 
 ### Exceptions
 
-- `TypeError`
-  - : No parameter is specified or the `mode` is not that of
+- {{jsxref("TypeError")}}
+  - : Thrown if no parameter is specified or the `mode` is not that of
     `'read'` or `'readwrite'`
 
 ## Examples
@@ -81,5 +82,4 @@ async function verifyPermission(fileHandle, withWrite) {
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

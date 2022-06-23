@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.responseURL
 slug: Web/API/XMLHttpRequest/responseURL
+page-type: web-api-instance-property
 tags:
   - AJAX
   - Property

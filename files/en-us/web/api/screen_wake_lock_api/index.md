@@ -1,6 +1,7 @@
 ---
 title: Screen Wake Lock API
 slug: Web/API/Screen_Wake_Lock_API
+page-type: web-api-overview
 tags:
   - API
   - Overview
@@ -9,6 +10,7 @@ tags:
   - Wake Lock
   - WakeLock
   - screen
+browser-compat: api.WakeLock
 ---
 {{DefaultAPISidebar("Screen Wake Lock API")}}
 
@@ -63,11 +65,11 @@ let wakeLock = null;
 
 // create an async function to request a wake lock
 try {
-  wakeLock = await navigator.wakeLock.request('screen');
-  statusElem.textContent = 'Wake Lock is active!';
+  wakeLock = await navigator.wakeLock.request('screen');
+  statusElem.textContent = 'Wake Lock is active!';
 } catch (err) {
-  // The Wake Lock request has failed - usually system related, such as battery.
-  statusElem.textContent = `${err.name}, ${err.message}`;
+  // The Wake Lock request has failed - usually system related, such as battery.
+  statusElem.textContent = `${err.name}, ${err.message}`;
 }
 ```
 
@@ -113,7 +115,7 @@ You can find the [complete code on GitHub here](https://github.com/mdn/dom-examp
 
 - Release the screen wake lock when user ends activity that required always-on screen. For example, a ticketing app which uses QR codes to transmit ticket information, might acquire screen wake lock when the QR code is displayed (so that code is successfully scanned) but release afterwards. A presentation app might hold the lock only while a presentation is active, but not when presentation is being edited.
 - If your app is performing long-running downloads, consider using background fetch.
-- If you app is synchronizing data from a remote server, consider using background sync.
+- If your app is synchronizing data from a remote server, consider using background sync.
 - Only active documents can acquire screen wake locks and previously acquired locks are automatically released when document becomes inactive. Therefore make sure to re-acquire screen wake lock if necessary when document becomes active (listen for [visibilitychange](/en-US/docs/Web/API/Document/visibilitychange_event) event).
 
 ## Feature Policy integration
@@ -122,16 +124,14 @@ Access to Screen Wake Lock API is controlled by [Feature Policy](/en-US/docs/Web
 
 ## Specifications
 
-| Specification                                                   |
-| --------------------------------------------------------------- |
-| [Screen Wake Lock API](https://w3c.github.io/screen-wake-lock/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.WakeLock")}}
+{{Compat}}
 
 ## See also
 
-- [An introductory article on the Screen Wake Lock API](https://web.dev/wakelock/)
+- [An introductory article on the Screen Wake Lock API](https://web.dev/wake-lock/)
 - [A Screen Wake Lock API demo on glitch](https://wake-lock-demo.glitch.me/)
 - [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) directive {{HTTPHeader("Feature-Policy/screen-wake-lock","screen-wake-lock")}}

@@ -1,6 +1,7 @@
 ---
 title: 'Element: scroll event'
 slug: Web/API/Element/scroll_event
+page-type: web-api-event
 tags:
   - API
   - Element
@@ -70,7 +71,7 @@ window.addEventListener('scroll', function(e) {
 });
 ```
 
-> **Note:** You can find more examples on the {{domxref("Document/resize_event", "resize")}} event page.
+> **Note:** You can find more examples on the {{domxref("Window/resize_event", "resize")}} event page.
 
 ## Specifications
 

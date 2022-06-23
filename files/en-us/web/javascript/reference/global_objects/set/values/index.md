@@ -38,12 +38,12 @@ A new iterator object containing the values for each element in the given
 ### Using values()
 
 ```js
-var mySet = new Set();
+const mySet = new Set();
 mySet.add('foo');
 mySet.add('bar');
 mySet.add('baz');
 
-var setIter = mySet.values();
+const setIter = mySet.values();
 
 console.log(setIter.next().value); // "foo"
 console.log(setIter.next().value); // "bar"

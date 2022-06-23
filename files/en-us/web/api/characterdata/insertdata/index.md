@@ -1,6 +1,7 @@
 ---
 title: CharacterData.insertData()
 slug: Web/API/CharacterData/insertData
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -30,6 +31,11 @@ characterData.insertData(offset, data)
 ### Return value
 
 None.
+
+## Exceptions
+
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : Thrown if offset is negative or greater than the length of the contained data.
 
 ## Example
 

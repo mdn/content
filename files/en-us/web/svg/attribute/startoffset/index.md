@@ -12,7 +12,7 @@ The **`startOffset`** attribute defines an offset from the start of the path for
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("textPath")}}
+- {{SVGElement("textPath")}}
 
 ## Example
 
@@ -65,42 +65,18 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-*   `<length-percentage>`
-    *   : A length represents a distance along the path measured in the current user coordinate system for the {{SVGElement("textPath")}} element.
+- `<length-percentage>`
+  - : A length represents a distance along the path measured in the current user coordinate system for the {{SVGElement("textPath")}} element.
 
-        If a percentage is given, then the start offset represents a percentage distance along the entire path. Thus, `0%` indicates the start point of the path and `100%` indicates the end point of the path.
-*   `<number>`
-    *   : This value indicates a distance along the path measured in the current user coordinate system for the `<textPath>` element.
+    If a percentage is given, then the start offset represents a percentage distance along the entire path. Thus, `0%` indicates the start point of the path and `100%` indicates the end point of the path.
+- `<number>`
+  - : This value indicates a distance along the path measured in the current user coordinate system for the `<textPath>` element.
 
 > **Note:** Negative values and values larger than the path length (e.g. `150%`) are allowed.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "text.html#TextPathElementStartOffsetAttribute", "startOffset")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "text.html#TextPathElementStartOffsetAttribute", "startOffset")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

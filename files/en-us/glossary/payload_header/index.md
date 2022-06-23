@@ -11,7 +11,7 @@ A **payload header** is an {{Glossary("HTTP_header", "HTTP header")}} that descr
 
 Payload headers may be present in both HTTP request and response messages (i.e. in any message that is carrying payload data).
 
-The payload headers include: {{HTTPHeader("Content-Length")}}, {{HTTPHeader("Content-Range")}}, {{HTTPHeader("Trailer")}}, and {{HTTPHeader("Transfer-Encoding")}}.
+The payload headers include: {{HTTPHeader("Content-Length")}}, {{HTTPHeader("Content-Range")}}, {{HTTPHeader("Trailer")}}, and {{HTTPHeader("Transfer-Encoding")}}.
 
 ## See also
 

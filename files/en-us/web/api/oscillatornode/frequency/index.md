@@ -1,6 +1,7 @@
 ---
 title: OscillatorNode.frequency
 slug: Web/API/OscillatorNode/frequency
+page-type: web-api-instance-property
 tags:
   - API
   - OscillatorNode
@@ -14,22 +15,15 @@ browser-compat: api.OscillatorNode.frequency
 
 The **`frequency`** property of the {{ domxref("OscillatorNode") }} interface is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the frequency of oscillation in hertz.
 
-## Syntax
+> **Note:** though the `AudioParam` returned is read-only, the value it represents is not.
 
-```js
-var oscillator = audioCtx.createOscillator();
-oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // value in hertz
-```
-
-> **Note:** though the `AudioParam` returned is read-only, the value it represents is not.
-
-### Value
+## Value
 
 An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}.
 
-## Example
+## Examples
 
-The following example shows basic usage of an {{ domxref("AudioContext") }} to create an oscillator node. For an applied example, check out our [Violent Theremin demo](https://mdn.github.io/violent-theremin/) ([see app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) for relevant code).
+The following example shows basic usage of an {{ domxref("AudioContext") }} to create an oscillator node. For an applied example, check out our [Violent Theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) ([see app.js](https://github.com/mdn/webaudio-examples/violent-theremin/scripts/app.js) for relevant code).
 
 ```js
 // create web audio api context

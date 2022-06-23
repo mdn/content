@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognitionAlternative.confidence
 slug: Web/API/SpeechRecognitionAlternative/confidence
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -22,20 +23,14 @@ confident the speech recognition system is that the recognition is correct.
 > **Note:** Mozilla's implementation of `confidence` is still
 > being worked on — at the moment, it always seems to return 1.
 
-## Syntax
+## Value
 
-```js
-var myConfidence = speechRecognitionAlternativeInstance.confidence;
-```
-
-### Returns
-
-A number betwen 0 and 1.
+A number between 0 and 1.
 
 ## Examples
 
 This code is excerpted from our
-[Speech color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) example.
+[Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 recognition.onresult = function(event) {

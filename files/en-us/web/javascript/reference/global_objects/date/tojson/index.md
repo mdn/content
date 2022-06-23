@@ -29,7 +29,7 @@ A string representation of the given date.
 ## Description
 
 {{jsxref("Date")}} instances refer to a specific point in time. Calling
-`toJSON()` returns a string (using {{jsxref("Date.prototype.toISOString()",
+`toJSON()` returns a string (using {{jsxref("Date.prototype.toISOString()",
   "toISOString()")}}) representing the {{jsxref("Date")}} object's value. This method is
 generally intended to, by default, usefully serialize {{jsxref("Date")}} objects during
 [JSON](/en-US/docs/Glossary/JSON) serialization.
@@ -39,8 +39,8 @@ generally intended to, by default, usefully serialize {{jsxref("Date")}} objects
 ### Using toJSON()
 
 ```js
-var jsonDate = (new Date()).toJSON();
-var backToDate = new Date(jsonDate);
+const jsonDate = (new Date()).toJSON();
+const backToDate = new Date(jsonDate);
 
 console.log(jsonDate); //2015-10-26T07:46:36.611Z
 ```

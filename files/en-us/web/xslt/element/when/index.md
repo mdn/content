@@ -13,9 +13,11 @@ The `<xsl:when>` element always appears within an `<xsl:choose>` element, acting
 
 ### Syntax
 
-    <xsl:when test=EXPRESSION>
-    	TEMPLATE
-    </xsl:when>
+```xml
+<xsl:when test=EXPRESSION>
+  TEMPLATE
+</xsl:when>
+```
 
 ### Required Attributes
 

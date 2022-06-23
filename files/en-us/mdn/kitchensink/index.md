@@ -13,7 +13,7 @@ tags:
 
 The **kitchensink** is a page that _attempts_ to incorporate every possible content element and Yari macro.
 
-This page attempts to be the complete intersection of every other page. No in terms of the text but in terms of the styles and macros.
+This page attempts to be the complete intersection of every other page. Not in terms of the text but in terms of the styles and macros.
 Let's start with some notes...
 
 Text that uses the `<kbd>` tag: <kbd>Shift</kbd>
@@ -34,14 +34,16 @@ Text that uses the `<kbd>` tag: <kbd>Shift</kbd>
 
 ### Plain text
 
-      ___________________________
-    < I'm an expert in my field. >
-      ---------------------------
-             \   ^__^
-              \  (oo)\_______
-                 (__)\       )\/\
-                     ||----w |
-                     ||     ||
+```
+  ___________________________
+< I'm an expert in my field. >
+  ---------------------------
+         \   ^__^
+          \  (oo)\_______
+             (__)\       )\/\
+                 ||----w |
+                 ||     ||
+```
 
 ### HTML
 
@@ -111,9 +113,19 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
 
 ## Tables
 
-| Specification                                                                                | Status                           | Comment |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName("HTML WHATWG", "#link-type-dns-prefetch", "dns-prefetch")}} | {{Spec2("HTML WHATWG")}} |         |
+### Markdown table
+
+| Constant name                | Value  | Description |
+| ---------------------------- | ------ | ----------- |
+| `QUERY_COUNTER_BITS_EXT`     | 0x8864 | The number of bits used to hold the query result for the given target. |
+| `CURRENT_QUERY_EXT`          | 0x8865 | The currently active query. |
+| `QUERY_RESULT_EXT`           | 0x8866 | The query result. |
+| `QUERY_RESULT_AVAILABLE_EXT` | 0x8867 | A Boolean indicating whether a query result is available. |
+| `TIME_ELAPSED_EXT`           | 0x88BF | Elapsed time (in nanoseconds). |
+| `TIMESTAMP_EXT`              | 0x8E28 | The current time. |
+| `GPU_DISJOINT_EXT`           | 0x8FBB | A Boolean indicating whether the GPU performed any disjoint operation. |
+
+### HTML table
 
 <table class="properties">
   <tbody>
@@ -175,7 +187,7 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
       <td><code>width</code></td>
       <td>A positive integer number, or the text <code>device-width</code></td>
       <td>
-        Defines the pixel width of the viewport that you want the web site to be
+        Defines the pixel width of the viewport that you want the website to be
         rendered at.
       </td>
     </tr>
@@ -193,7 +205,7 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
       <td><code>auto</code>, <code>contain</code> or <code>cover</code></td>
       <td>
         <p>
-          The <code>auto</code> value doesn’t affect the initial layout viewport, and the whole web page is viewable.
+          The <code>auto</code> value doesn't affect the initial layout viewport, and the whole web page is viewable.
         </p>
         <p>
           The <code>contain</code> value means that the viewport is scaled to
@@ -205,13 +217,6 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
           ensure that important content doesn't end up outside the display.
         </p>
       </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('Fetch','#forbidden-response-header-name','forbidden-response-header-name')}}
-      </td>
-      <td>{{spec2('Fetch')}}</td>
-      <td></td>
     </tr>
   </tbody>
 </table>
@@ -246,9 +251,9 @@ var rect1 = {x: 5, y: 5, width: 50, height: 50}
 var rect2 = {x: 20, y: 10, width: 10, height: 10}
 
 if (rect1.x < rect2.x + rect2.width &&
-   rect1.x + rect1.width > rect2.x &&
-   rect1.y < rect2.y + rect2.height &&
-   rect1.y + rect1.height > rect2.y) {
+   rect1.x + rect1.width > rect2.x &&
+   rect1.y < rect2.y + rect2.height &&
+   rect1.y + rect1.height > rect2.y) {
     // collision detected!
 }
 
@@ -289,7 +294,7 @@ this.color("blue");
 
 </pre></div>
 
-{{ EmbedLiveSample('Rect_code', '700', '300', '', 'Games/Techniques/2D_collision_detection') }}
+{{ EmbedLiveSample('Rect_code', '700', '300') }}
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
@@ -304,7 +309,7 @@ this.color("blue");
 - [Accessibility resources at MDN](/en-US/docs/Web/Accessibility)
 - {{Interwiki("wikipedia", "Web accessibility")}} on Wikipedia
 
-The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) macro inserts a localised note box indicating that a feature is available in a [Web worker](/en-US/docs/Web/API/Web_Workers_API) context.
+The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) macro inserts a localized note box indicating that a feature is available in a [Web worker](/en-US/docs/Web/API/Web_Workers_API) context.
 
 {{AvailableInWorkers}}
 

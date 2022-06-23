@@ -1,6 +1,7 @@
 ---
 title: 'Element: touchcancel event'
 slug: Web/API/Element/touchcancel_event
+page-type: web-api-event
 tags:
   - Event
   - Touch Events
@@ -13,7 +14,7 @@ browser-compat: api.Element.touchcancel_event
 ---
 {{APIRef}}
 
-The `touchcancel` event is fired when one or more touch points have been disrupted in an implementation-specific manner (for example, too many touch points are created).
+The `touchcancel` event is fired when one or more touch points have been disrupted in an implementation-specific manner (for example, too many touch points are created).
 
 <table class="properties">
   <tbody>

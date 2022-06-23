@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.insertRow()
 slug: Web/API/HTMLTableElement/insertRow
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -33,7 +34,8 @@ let row = specific_tbody.insertRow(index)
 ## Syntax
 
 ```js
-var newRow = HTMLTableElement.insertRow(index);
+insertRow()
+insertRow(index)
 ```
 
 {{domxref("HTMLTableElement")}} is a reference to an HTML {{HtmlElement("table")}}
@@ -56,7 +58,7 @@ row.
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if `index` is greater than the number of rows.
 
-## Example
+## Examples
 
 This example uses `insertRow(-1)` to append a new row to a table.
 
@@ -99,7 +101,7 @@ addRow('my-table');
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 
@@ -112,4 +114,4 @@ addRow('my-table');
 ## See also
 
 - {{domxref("HTMLTableRowElement.insertCell()")}}
-- The HTML element representing rows: {{domxref("HTMLTableRowElement")}}
+- The HTML element representing rows: {{domxref("HTMLTableRowElement")}}

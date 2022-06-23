@@ -6,22 +6,17 @@ tags:
   - HTTP Header
   - Request header
   - Response header
+  - Deprecated
   - Reference
 browser-compat: http.headers.Warning
 ---
-{{HTTPSidebar}}
+{{HTTPSidebar}} {{deprecated_header}}
 
-> **Note:** The `Warning` header has been deprecated; see
-> [Warning
-> (https://github.com/httpwg/http-core/issues/139)](https://github.com/httpwg/http-core/issues/139) and [Warning: header &
-> stale-while-revalidate (https://github.com/whatwg/fetch/issues/913)](https://github.com/whatwg/fetch/issues/913) for more
-> details.
+The **`Warning`** HTTP header contains information about possible problems with the status of the message.
+More than one `Warning` header may appear in a response.
 
-The **`Warning`** HTTP header contains information
-about possible problems with the status of the message. More than one
-`Warning` header may appear in a response.
-
-`Warning` header fields can, in general, be applied to any message. However, some warn-codes are specific to caches and can only be applied to response messages.
+`Warning` header fields can, in general, be applied to any message.
+However, some warn-codes are specific to caches and can only be applied to response messages.
 
 <table class="properties">
   <tbody>
@@ -49,24 +44,17 @@ Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 
 - \<warn-code>
 
-  - : A three-digit warning number. The first digit indicates whether the
-    `Warning` is required to be deleted from a stored response after
-    validation.
+  - : A three-digit warning number. The first digit indicates whether the `Warning` is required to be deleted from a stored response after validation.
 
-    - `1xx` warn-codes describe the freshness or validation status of the
-      response and will be deleted by a cache after deletion.
-    - `2xx` warn-codes describe some aspect of the representation that is
-      not rectified by a validation and will not be deleted by a cache after validation
-      unless a full response is sent.
+    - `1xx` warn-codes describe the freshness or validation status of the response and will be deleted by a cache after deletion.
+    - `2xx` warn-codes describe some aspect of the representation that is not rectified by a validation and will not be deleted by a cache after validation unless a full response is sent.
 
 - \<warn-agent>
-  - : The name or pseudonym of the server or software adding the `Warning`
-    header (might be "-" when the agent is unknown).
+  - : The name or pseudonym of the server or software adding the `Warning` header (might be "-" when the agent is unknown).
 - \<warn-text>
   - : An advisory text describing the error.
 - \<warn-date>
-  - : A date. This is optional. If more than one `Warning` header is sent, include a date that
-    matches the {{HTTPHeader("Date")}} header.
+  - : A date. This is optional. If more than one `Warning` header is sent, include a date that matches the {{HTTPHeader("Date")}} header.
 
 ## Warning codes
 
@@ -77,7 +65,7 @@ The [HTTP Warn Codes registry at iana.org](https://www.iana.org/assignments/http
 | 110  | Response is Stale                | The response provided by a cache is stale (the expiration time set for the response has passed).                                                  |
 | 111  | Revalidation Failed              | An attempt to validate the stale response failed due to an inability to reach the server.                                                  |
 | 112  | Disconnected Operation           | The cache is intentionally disconnected from the rest of the network.                                                                               |
-| 113  | Heuristic Expiration             | A cache heuristically chose a freshness lifetime greater than 24 hours and the age of the response is greater than 24 hours.       |
+| 113  | Heuristic Expiration             | A cache heuristically chose a [freshness lifetime](/en-US/docs/Web/HTTP/Caching#freshness_lifetime) greater than 24 hours and the age of the response is greater than 24 hours.       |
 | 199  | Miscellaneous Warning            | Arbitrary information that should be presented to a user or logged.                                                                                                       |
 | 214  | Transformation Applied           | Added by a proxy if it applies any transformation to the representation, such as changing the content-coding, media-type or the like. |
 | 299  | Miscellaneous Persistent Warning | Arbitrary information that should be presented to a user or logged. This warn-code is similar to the warn-code 199 and additionally indicates a persistent warning.                                                                                      |

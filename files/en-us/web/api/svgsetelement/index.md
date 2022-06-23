@@ -1,6 +1,7 @@
 ---
 title: SVGSetElement
 slug: Web/API/SVGSetElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGSetElement
 
 The **`SVGSetElement`** interface corresponds to the {{SVGElement("set")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

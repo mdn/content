@@ -1,6 +1,7 @@
 ---
 title: AudioNode.channelCountMode
 slug: Web/API/AudioNode/channelCountMode
+page-type: web-api-instance-property
 tags:
   - API
   - AudioNode
@@ -37,7 +38,6 @@ The possible values of `channelCountMode` and their meanings are:
       <td>
         {{domxref("GainNode")}}, {{domxref("DelayNode")}},
         {{domxref("ScriptProcessorNode")}},
-        {{domxref("ChannelMergerNode")}},
         {{domxref("BiquadFilterNode")}},
         {{domxref("WaveShaperNode")}}
       </td>
@@ -62,26 +62,20 @@ The possible values of `channelCountMode` and their meanings are:
       <td>
         {{domxref("AudioDestinationNode")}},
         {{domxref("AnalyserNode")}},
-        {{domxref("ChannelSplitterNode")}}
+        {{domxref("ChannelSplitterNode")}},
+        {{domxref("ChannelMergerNode")}}
       </td>
     </tr>
   </tbody>
 </table>
 
-> **Note:** In older versions of the spec, the default for a {{domxref("ChannelSplitterNode")}} was max.
+> **Note:** In older versions of the spec, the default for a {{domxref("ChannelSplitterNode")}} was max.
 
-## Syntax
-
-```js
-var oscillator = audioCtx.createOscillator();
-oscillator.channelCountMode = 'explicit';
-```
-
-### Value
+## Value
 
 A enumerated value representing a [channelCountMode](https://webaudio.github.io/web-audio-api/#idl-def-ChannelCountMode).
 
-## Example
+## Examples
 
 ```js
 var AudioContext = window.AudioContext || window.webkitAudioContext;

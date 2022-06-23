@@ -1,6 +1,7 @@
 ---
 title: NodeList.values()
 slug: Web/API/NodeList/values
+page-type: web-api-instance-method
 tags:
   - DOM
   - Iterator
@@ -49,9 +50,11 @@ for(var value of list.values()) {
 
 The result is:
 
-    <p>
-    #text "hey"
-    <span>
+```
+<p>
+#text "hey"
+<span>
+```
 
 ## Browser compatibility
 
@@ -59,6 +62,6 @@ The result is:
 
 ## See also
 
-- A polyfill of `NodeList.prototype.values` is available in [`core-js`](https://github.com/zloirock/core-js#iterable-dom-collections)
+- [Polyfill of `NodeList.prototype.values` in `core-js`](https://github.com/zloirock/core-js#iterable-dom-collections)
 - {{domxref("Node")}}
 - {{domxref("NodeList")}}

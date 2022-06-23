@@ -8,6 +8,12 @@ tags:
   - Data Type
   - Reference
   - display-legacy
+spec-urls: https://drafts.csswg.org/css-display/#typedef-display-legacy
+browser-compat:
+  - css.properties.display.inline-block
+  - css.properties.display.inline-table
+  - css.properties.display.inline-flex
+  - css.properties.display.inline-grid
 ---
 {{CSSRef}}
 
@@ -78,27 +84,11 @@ In the new syntax the inline flex container would be created using two values, i
 
 ## Specifications
 
-| Specification                                                                                    | Status                           |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('CSS3 Display', '#typedef-display-legacy', 'display-legacy')}} | {{Spec2('CSS3 Display')}} |
+{{Specifications}}
 
 ## Browser compatibility
 
-### Support of inline-block
-
-{{Compat("css.properties.display.inline-block", 10)}}
-
-### Support of inline-table
-
-{{Compat("css.properties.display.inline-table", 10)}}
-
-### Support of inline-flex
-
-{{Compat("css.properties.display.inline-flex", 10)}}
-
-### Support of inline-grid
-
-{{Compat("css.properties.display.inline-grid", 10)}}
+{{Compat}}
 
 ## See also
 

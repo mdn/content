@@ -1,6 +1,7 @@
 ---
 title: XMLSerializer
 slug: Web/API/XMLSerializer
+page-type: web-api-interface
 tags:
   - Converting
   - DOM Parsing
@@ -48,7 +49,7 @@ This example uses the {{domxref("Element.insertAdjacentHTML()")}} method to inse
 > - The {{domxref("Element.replaceWith")}} method (to replace an existing node with the new one)
 > - The {{domxref("Document.insertAdjacentElement()")}} and {{domxref("Element.insertAdjacentElement()")}} methods.
 
-Because `insertAdjacentHTML()` accepts a string and not a `Node` as its second parameter, `XMLSerializer` is used to first convert the node into a string.
+Because `insertAdjacentHTML()` accepts a string and not a `Node` as its second parameter, `XMLSerializer` is used to first convert the node into a string.
 
 ```js
 var inp = document.createElement('input');

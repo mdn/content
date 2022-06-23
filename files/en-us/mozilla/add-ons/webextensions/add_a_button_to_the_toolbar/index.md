@@ -172,7 +172,7 @@ document.addEventListener("click", function(e) {
     return;
   }
 
-  var chosenPage = "https://" + e.target.textContent;
+  let chosenPage = "https://" + e.target.textContent;
   browser.tabs.create({
     url: chosenPage
   });
@@ -184,15 +184,17 @@ In our JavaScript, we listen for clicks on the popup choices. We first check to 
 
 The extension's final structure should look like this:
 
-    button/
-        icons/
-            page-16.png
-            page-32.png
-        popup/
-            choose_page.css
-            choose_page.html
-            choose_page.js
-        manifest.json
+```
+button/
+    icons/
+        page-16.png
+        page-32.png
+    popup/
+        choose_page.css
+        choose_page.html
+        choose_page.js
+    manifest.json
+```
 
 Now [reload the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading-a-temporary-extension), click the button again, and try clicking on the choices in the popup:
 

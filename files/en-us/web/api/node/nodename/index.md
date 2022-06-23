@@ -1,6 +1,7 @@
 ---
 title: Node.nodeName
 slug: Web/API/Node/nodeName
+page-type: web-api-instance-property
 tags:
   - Property
   - Read-only
@@ -13,7 +14,7 @@ The read-only **`nodeName`** property of {{domxref("Node")}} returns the name of
 
 ## Value
 
-A {{jsxref("String")}}. Values for the different types of nodes are:
+A string. Values for the different types of nodes are:
 
 - {{domxref("Attr")}}
   - : The value of {{domxref("Attr.name")}}, that is the _qualified name_ of the attribute.
@@ -40,13 +41,14 @@ A {{jsxref("String")}}. Values for the different types of nodes are:
 This example displays the node names of several nodes
 
 ```html
-This is some html:
+This is some HTML:
 <div id="d1">Hello world</div>
 <!-- Example of comment -->
 Text <span>Text</span>
 Text<br/>
 <svg height="20" width="20">
   <circle cx="10" cy="10" r="5" stroke="black" stroke-width="1" fill="red" />
+</svg>
 <hr>
 <output id="result">Not calculated yet.</output>
 ```
@@ -54,7 +56,7 @@ Text<br/>
 and the following script:
 
 ```js
-const node = document.getElementsByTagName("body")[0].firstChild;
+let node = document.getElementsByTagName("body")[0].firstChild;
 let result = "Node names are:<br/>";
 while (node) {
   result += node.nodeName + "<br/>";

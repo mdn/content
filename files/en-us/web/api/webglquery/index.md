@@ -1,6 +1,7 @@
 ---
 title: WebGLQuery
 slug: Web/API/WebGLQuery
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -14,6 +15,8 @@ browser-compat: api.WebGLQuery
 The **`WebGLQuery`** interface is part of the [WebGL 2](/en-US/docs/Web/API/WebGL_API) API and provides ways to asynchronously query for information. By default, occlusion queries and primitive queries are available.
 
 Another kind of queries are disjoint timer queries, which allow you to measure performance and profiling of your GPU. Disjoint timer queries are available with the {{domxref("EXT_disjoint_timer_query")}} extension only.
+
+{{InheritanceDiagram}}
 
 When working with `WebGLQuery` objects, the following methods of the {{domxref("WebGL2RenderingContext")}} are useful:
 

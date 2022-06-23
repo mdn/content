@@ -46,7 +46,7 @@ Events have three functions:
 
       - : {{WebExtAPIRef('history.HistoryItem')}}. An object representing the item in the browser's history.
 
-        At the time that this event is sent, the browser doesn't yet know the title of the page. If the browser has visited this page before and has remembered its old title, then the `HistoryItem.title` object will contain the old title of the page. If the browser doesn't have a record of the page's old title, then `HistoryItem.title` will be empty. To get the titles of pages as soon as they are known, listen for {{WebExtAPIRef("history.onTitleChanged")}}.
+        At the time that this event is sent, the browser doesn't yet know the title of the page. If the browser has visited this page before and has remembered its old title, then the `HistoryItem.title` object will contain the old title of the page. If the browser doesn't have a record of the page's old title, then `HistoryItem.title` will be empty. To get the titles of pages as soon as they are known, listen for {{WebExtAPIRef("history.onTitleChanged")}}.
 
 ## Browser compatibility
 
@@ -67,7 +67,7 @@ browser.history.onVisited.addListener(onVisited);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/extensions/history#event-onVisited) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/history/#event-onVisited) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

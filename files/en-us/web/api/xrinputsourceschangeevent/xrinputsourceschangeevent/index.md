@@ -1,6 +1,7 @@
 ---
 title: XRInputSourcesChangeEvent()
 slug: Web/API/XRInputSourcesChangeEvent/XRInputSourcesChangeEvent
+page-type: web-api-constructor
 tags:
   - API
   - AR
@@ -32,32 +33,29 @@ you by the WebXR system.
 ## Syntax
 
 ```js
-new XRInputSourcesChangeEvent(type, eventInitDict)
+new XRInputSourcesChangeEvent(type, options)
 ```
 
 ### Parameters
 
 - `type`
-  - : A string indicating the type of event which has occurred. This
-    string must always be `inputsourceschange`.
-- `eventInitDict`
-
-  - : An object that provides options to configure the event. It may contain the following properties:
-
-    - `added`: An array of zero or more {{domxref("XRInputSource")}} objects, each representing one input device which is newly available to use.
-    - `removed`: An array of zero or more {{domxref("XRInputSource")}} objects representing the input devices which are no longer available.
-    - `session`: The {{domxref("XRSession")}} to which the event applies.
+  - :  A string with the name of the event.
+    It is case-sensitive and browsers always set it to `inputsourceschange`.
+- `options`
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
+    - `added`
+      - : An array of zero or more {{domxref("XRInputSource")}} objects, each representing one input device which is newly available to use.
+    - `removed`
+      - : An array of zero or more {{domxref("XRInputSource")}} objects representing the input devices which are no longer available.
+    - `session`
+      - : The {{domxref("XRSession")}} to which the event applies.
 
 ### Return value
 
-A newly-created {{domxref("XRInputSourcesChangeEvent")}} object configured based upon
+A new {{domxref("XRInputSourcesChangeEvent")}} object configured based upon
 the input parameters provided.
 
-## Event types
-
-{{page("/en-US/docs/Web/API/XRInputSourcesChangeEvent", "Event types")}}
-
-## Example
+## Examples
 
 The following snippet of code creates a new `XRInputSourcesChangeEvent`
 object indicating that a single new input source, described by an
@@ -65,8 +63,10 @@ object indicating that a single new input source, described by an
 the system.
 
 ```js
-let iscEvent = new XRInputSourcesChangeEvent("inputsourceschange", { session: xrSession,
-                           added: [newInputSource], removed: [] });
+let iscEvent = new XRInputSourcesChangeEvent("inputsourceschange",
+                                             { session: xrSession,
+                                               added: [newInputSource],
+                                               removed: [] });
 ```
 
 ## Specifications

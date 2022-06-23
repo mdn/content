@@ -45,25 +45,25 @@ git remote -v
 
 Now, whenever you want to update your fork, you can do so by:
 
-1.  Making sure you are in the main branch:
+1. Making sure you are in the main branch:
 
     ```bash
     git checkout main
     ```
 
-2.  fetching the up-to-date repo contents using the following:
+2. fetching the up-to-date repo contents using the following:
 
     ```bash
     git fetch upstream
     ```
 
-3.  rebasing the contents of your main branch with the official repo's contents:
+3. rebasing the contents of your main branch with the official repo's contents:
 
     ```bash
     git rebase upstream/main
     ```
 
-4.  pushing these updates back to your remote fork using this:
+4. pushing these updates back to your remote fork using this:
 
     ```bash
     git push
@@ -73,9 +73,9 @@ Now, whenever you want to update your fork, you can do so by:
 
 Next, go to your remote fork (it will be at `https://github.com/your-username/browser-compat-data`) and create a new branch to store your changes for this data addition. This can be done by:
 
-1.  Clicking on the "Branch: Main" button.
-2.  Entering a new branch name into the "Find or create a branch..." text field.
-3.  Pressing the resulting "Create branch _name-of-branch_ from Main" button.
+1. Clicking on the "Branch: Main" button.
+2. Entering a new branch name into the "Find or create a branch..." text field.
+3. Pressing the resulting "Create branch _name-of-branch_ from Main" button.
 
 For example, if you were wanting to add data for the WebVR API, you'd create a branch called something like "webvr".
 
@@ -134,7 +134,7 @@ Other types of features work in the same way, but with different object names:
 - HTML data works in basically the same way, except that the top-level object structure is `html.elements`. See [article.json](https://github.com/mdn/browser-compat-data/blob/main/html/elements/article.json) for an example.
 - The top level object structure for JS built-in objects is `javascript.builtins`; see [Array.json](https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/Array.json) for an example.
 
-In HTML, CSS, and JS pages, you'll normally only need one feature. API interfaces work slightly differently — they always have multiple sub-features (see {{anch("Sub-features")}}, below).
+In HTML, CSS, and JS pages, you'll normally only need one feature. API interfaces work slightly differently — they always have multiple sub-features (see [Sub-features](#sub-features), below).
 
 ### Basic structure inside a feature
 
@@ -147,7 +147,7 @@ Inside a feature `__compat` member, you need to include the following members:
 
 The names of the browser members are defined in the schema (see [Browser identifiers](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#browser-identifiers)). You should use the full list of currently defined identifiers. If you wish to add another browser, talk to us first, as this could have a wide-ranging impact and should not be done without careful thought.
 
-In a basic browser compat data file, you'll only need to include "version_added" inside the browser identifier members (we'll cover {{anch("Adding_data_Advanced_cases", "Adding data: Advanced cases")}} later on). The different values you might want to include are as follows:
+In a basic browser compat data file, you'll only need to include "version_added" inside the browser identifier members (we'll cover [Adding data: Advanced cases](#adding_data_advanced_cases) later on). The different values you might want to include are as follows:
 
 - A version number: If you know the exact version in which a browser started to support your feature, use a string representing the number, e.g. `"47"`.
 - `true`: If a browser supports a feature but you don't know the exact version number, use the value `true`.
@@ -241,7 +241,7 @@ There is a fourth, optional, member that can go inside the `__compat` member —
 
 ### Sub-features
 
-In a page where the compat table has more than one row, you'll need multiple subfeatures inside each feature to define the information for each row. This can happen, for example, when you've got the basic support for a feature stored in one row, but then the feature also has a new property or value type that was addded much later in the specification's life and is only supported in a couple of browsers.
+In a page where the compat table has more than one row, you'll need multiple subfeatures inside each feature to define the information for each row. This can happen, for example, when you've got the basic support for a feature stored in one row, but then the feature also has a new property or value type that was added much later in the specification's life and is only supported in a couple of browsers.
 
 As an example, see the [compat data](https://github.com/mdn/browser-compat-data/blob/main/css/properties/background-color.json) and [corresponding MDN page](/en-US/docs/Web/CSS/background-color) for the `background-color` property. The basic support exists inside the `__compat` object as explained above, then you have an additional row for browsers' support for "alpha channel for hex values", which contains its own `__compat` object.
 

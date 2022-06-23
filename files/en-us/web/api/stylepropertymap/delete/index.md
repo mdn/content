@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMap.delete()
 slug: Web/API/StylePropertyMap/delete
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -20,20 +21,20 @@ property.
 ## Syntax
 
 ```js
-StylePropertyMap.delete(property)
+delete(property)
 ```
 
 ### Parameters
 
-- property
-  - : An identifier indicating the stylistic feature (e.g. font, width, background
-    color) to remove.
+- `property`
+  - : An identifier indicating the stylistic feature (e.g. font, width, background
+    color) to remove.
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 The following example removes the {{cssxref('background-image')}} property from the
 element's [style attribute](/en-US/docs/Web/HTML/Global_attributes/style).

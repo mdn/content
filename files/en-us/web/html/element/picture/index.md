@@ -13,7 +13,6 @@ tags:
   - picture
 browser-compat: html.elements.picture
 ---
-
 {{HTMLRef}}
 
 The **`<picture>`** [HTML](/en-US/docs/Web/HTML) element contains zero or more {{HTMLElement("source")}} elements and one {{HTMLElement("img")}} element to offer alternative versions of an image for different display/device scenarios.
@@ -26,15 +25,15 @@ To decide which URL to load, the {{Glossary("user agent")}} examines each `<sour
 
 The `<img>` element serves two purposes:
 
-1.  It describes the size and other attributes of the image and its presentation.
-2.  It provides a fallback in case none of the offered `<source>` elements are able to provide a usable image.
+1. It describes the size and other attributes of the image and its presentation.
+2. It provides a fallback in case none of the offered `<source>` elements are able to provide a usable image.
 
 Common use cases for `<picture>`:
 
 - **Art direction.** Cropping or modifying images for different `media` conditions (for example, loading a simpler version of an image which has too many details, on smaller displays).
 - **Offering alternative image formats**, for cases where certain formats are not supported.
 
-  > **Note:** For example, newer formats like [AVIF](/en-US/docs/Web/Media/Formats/Image_types#AVIF_image) or [WEBP](/en-US/docs/Web/Media/Formats/Image_types#WebP_image) have many advantages, but  might not be supported by the browser. A list of supported image formats can be found in: [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types).
+  > **Note:** For example, newer formats like [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) or [WEBP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) have many advantages, but might not be supported by the browser. A list of supported image formats can be found in: [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types).
 
 - **Saving bandwidth and speeding page load times** by loading the most appropriate image for the viewer's display.
 
@@ -140,8 +139,9 @@ The `type` attribute specifies a [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP
 
 ```html
 <picture>
-  <source srcset="logo.webp" type="image/webp">
-  <img src="logo.png" alt="logo">
+  <source srcset="photo.avif" type="image/avif">
+  <source srcset="photo.webp" type="image/webp">
+  <img src="photo.jpg" alt="photo">
 </picture>
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: NDEFRecord.lang
 slug: Web/API/NDEFRecord/lang
+page-type: web-api-instance-property
 tags:
   - NDEF
   - Reference
@@ -24,7 +25,7 @@ NDEFRecord.lang
 
 ### Value
 
-A {{DOMxRef("USVString")}}.
+A string.
 
 ## Specifications
 
@@ -36,5 +37,5 @@ A {{DOMxRef("USVString")}}.
 
 ## See also
 
-- [HTML `lang` attribute](/en-US/docs/Web/HTML/Global_attributes/lang), that declares content langauge of the document or its elements
+- [HTML `lang` attribute](/en-US/docs/Web/HTML/Global_attributes/lang), that declares content language of the document or its elements
 - HTTP headers that declare content language: {{HTTPHeader("Content-Language")}} and {{HTTPHEader("Accept-Language")}}

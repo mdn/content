@@ -1,6 +1,7 @@
 ---
 title: Using the Web Audio API
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
+page-type: guide
 tags:
   - API
   - Audio
@@ -104,7 +105,7 @@ We've already created an input node by passing our audio element into the API. F
 track.connect(audioContext.destination);
 ```
 
-A good way to visualise these nodes is by drawing an audio graph so you can visualize it. This is what our current audio graph looks like:
+A good way to visualize these nodes is by drawing an audio graph so you can visualize it. This is what our current audio graph looks like:
 
 ![an audio graph with an audio element source connected to the default destination](graph1.jpg)
 
@@ -192,10 +193,10 @@ Let's add another modification node to practice what we've just learnt.
 There's a {{domxref("StereoPannerNode")}} node, which changes the balance of the sound between the left and right speakers, if the user has stereo capabilities.
 
 > **Note:** The `StereoPannerNode` is for simple cases in which you just want stereo panning from left to right.
-> There is also a {{domxref("PannerNode")}}, which allows for a great deal of control over 3D space, or sound _spatialisation_, for creating more complex effects.
+> There is also a {{domxref("PannerNode")}}, which allows for a great deal of control over 3D space, or sound _spatialization_, for creating more complex effects.
 > This is used in games and 3D apps to create birds flying overhead, or sound coming from behind the user for instance.
 
-To visualise it, we will be making our audio graph look like this:
+To visualize it, we will be making our audio graph look like this:
 
 ![An image showing the audio graph showing an input node, two modification nodes (a gain node and a stereo panner node) and a destination node.](graphpan.jpg)
 
@@ -246,7 +247,7 @@ The [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic) is a fun
 
 ![A UI with a sound wave being shown, and options for choosing voice effects and visualizations.](voice-change-o-matic.png)
 
-Another application developed specifically to demonstrate the Web Audio API is the [Violent Theremin](https://mdn.github.io/violent-theremin/), a simple web application that allows you to change pitch and volume by moving your mouse pointer. It also provides a psychedelic lightshow ([see Violent Theremin source code](https://github.com/mdn/violent-theremin)).
+Another application developed specifically to demonstrate the Web Audio API is the [Violent Theremin](https://mdn.github.io/webaudio-examples/violent-theremin/), a simple web application that allows you to change pitch and volume by moving your mouse pointer. It also provides a psychedelic lightshow ([see Violent Theremin source code](https://github.com/mdn/webaudio-examples/violent-theremin)).
 
 ![A page full of rainbow colors, with two buttons labeled Clear screen and mute.](violent-theremin.png)
 

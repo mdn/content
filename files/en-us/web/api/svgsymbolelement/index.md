@@ -1,6 +1,7 @@
 ---
 title: SVGSymbolElement
 slug: Web/API/SVGSymbolElement
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -15,7 +16,7 @@ browser-compat: api.SVGSymbolElement
 
 The **`SVGSymbolElement`** interface corresponds to the {{SVGElement("symbol")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

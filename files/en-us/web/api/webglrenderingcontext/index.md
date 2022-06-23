@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext
 slug: Web/API/WebGLRenderingContext
+page-type: web-api-interface
 tags:
   - 2D
   - 3D
@@ -28,7 +29,7 @@ var canvas = document.getElementById('myCanvas');
 var gl = canvas.getContext('webgl');
 ```
 
-Once you have the WebGL rendering context for a canvas, you can render within it. The [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial "WebGL tutorial") has more information, examples, and resources on how to get started with WebGL.
+Once you have the WebGL rendering context for a canvas, you can render within it. The [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) has more information, examples, and resources on how to get started with WebGL.
 
 If you require a WebGL 2.0 context, see {{domxref("WebGL2RenderingContext")}}; this supplies access to an implementation of OpenGL ES 3.0 graphics.
 
@@ -53,7 +54,7 @@ The following properties and methods provide general information and functionali
 - {{domxref("WebGLRenderingContext.isContextLost()")}}
   - : Returns `true` if the context is lost, otherwise returns `false`.
 - {{domxref("WebGLRenderingContext.makeXRCompatible()")}}
-  - : Ensures the context is compatible with the user's XR hardware, re-creating the context if necessary with a new configuration to do so. This can be used to start an application using standard 2D presentation, then transition to using a VR or AR mode later.
+  - : Ensures the context is compatible with the user's XR hardware, re-creating the context if necessary with a new configuration to do so. This can be used to start an application using standard 2D presentation, then transition to using a VR or AR mode later.
 
 ## Viewing and clipping
 
@@ -303,7 +304,7 @@ The following properties and methods provide general information and functionali
 These methods manage WebGL extensions:
 
 - {{domxref("WebGLRenderingContext.getSupportedExtensions()")}}
-  - : Returns an {{jsxref("Array")}} of {{domxref("DOMString")}} elements with all the supported WebGL extensions.
+  - : Returns an {{jsxref("Array")}} of strings containing all the supported WebGL extensions.
 - {{domxref("WebGLRenderingContext.getExtension()")}}
   - : Returns an extension object.
 

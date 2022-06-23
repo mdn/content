@@ -1,6 +1,7 @@
 ---
 title: SVGAnimateTransformElement
 slug: Web/API/SVGAnimateTransformElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGAnimateTransformElement
 
 The `SVGAnimateTransformElement` interface corresponds to the {{SVGElement("animateTransform")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

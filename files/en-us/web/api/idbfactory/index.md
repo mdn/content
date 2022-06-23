@@ -1,6 +1,7 @@
 ---
 title: IDBFactory
 slug: Web/API/IDBFactory
+page-type: web-api-interface
 tags:
   - API
   - HTTP
@@ -46,14 +47,14 @@ var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being opened successfully, or not
 DBOpenRequest.onerror = function(event) {
-  console.error("Error loading database.");
+  console.error("Error loading database.");
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  console.info("Database initialised.");
+  console.info("Database initialized.");
 
-  // store the result of opening the database in the db variable. This is used a lot later on, for opening transactions and suchlike.
-  db = DBOpenRequest.result;
+  // store the result of opening the database in the db variable. This is used a lot later on, for opening transactions and suchlike.
+  db = DBOpenRequest.result;
 };
 ```
 

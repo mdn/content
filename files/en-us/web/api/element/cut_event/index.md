@@ -1,6 +1,7 @@
 ---
 title: 'Element: cut event'
 slug: Web/API/Element/cut_event
+page-type: web-api-event
 tags:
   - API
   - Clipboard API
@@ -84,7 +85,7 @@ source.addEventListener('cut', (event) => {
 
 #### Result
 
-{{ EmbedLiveSample('Live_example', '100%', '100px') }}
+{{ EmbedLiveSample('Live_example', '100%', '120px') }}
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: Node.appendChild()
 slug: Web/API/Node/appendChild
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -65,9 +66,6 @@ the empty {{domxref("DocumentFragment")}} is returned.
     - If the current node is a {{domxref("DocumentType")}} and its parent is _not_ a {{domxref("Document")}}, as a _doctype_ should always be a direct descendant of a _document_.
     - If the parent of the node is a {{domxref("Document")}} and `aChild` is a {{domxref("DocumentFragment")}} with more than one {{domxref("Element")}} child, or that has a {{domxref("Text")}} child.
     - If the insertion of `aChild`  would lead to {{domxref("Document")}} with more than one {{domxref("Element")}} as child.
-    - If the insertion of `aChild`  would lead to the presence of an {{domxref("Element")}} node before a {{domxref("DocumentType")}} node.
-- `NotFoundError` {{domxref("DOMException")}}
-  - : Thrown if the parent of `aChild` is not the current node.
 
 ## Example
 

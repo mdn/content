@@ -1,6 +1,7 @@
 ---
 title: TextTrack.label
 slug: Web/API/TextTrack/label
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,15 +14,9 @@ browser-compat: api.TextTrack.label
 
 The **`label`** read-only property of the {{domxref("TextTrack")}} interface returns a human-readable label for the text track, if it is available.
 
-## Syntax
+## Value
 
-```js
-let label = TextTrack.label;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing the `label`, or an empty string.
+A string containing the `label`, or an empty string.
 
 ## Examples
 

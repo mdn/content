@@ -27,16 +27,16 @@ A `TypeError` may be thrown when:
 ## Instance properties
 
 - {{jsxref("Error.prototype.message", "TypeError.prototype.message")}}
-  - : Error message. Although ECMA-262 specifies that {{jsxref("TypeError")}} should provide its own `message` property, in [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey), it inherits {{jsxref("Error.prototype.message")}}.
+  - : Error message.
 - {{jsxref("Error.prototype.name", "TypeError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "TypeError.prototype.fileName")}}
+- {{jsxref("Error.prototype.fileName", "TypeError.prototype.fileName")}} {{non-standard_inline}}
   - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "TypeError.prototype.lineNumber")}}
+- {{jsxref("Error.prototype.lineNumber", "TypeError.prototype.lineNumber")}} {{non-standard_inline}}
   - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "TypeError.prototype.columnNumber")}}
+- {{jsxref("Error.prototype.columnNumber", "TypeError.prototype.columnNumber")}} {{non-standard_inline}}
   - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "TypeError.prototype.stack")}}
+- {{jsxref("Error.prototype.stack", "TypeError.prototype.stack")}} {{non-standard_inline}}
   - : Stack trace. Inherited from {{jsxref("Error")}}.
 
 ## Examples

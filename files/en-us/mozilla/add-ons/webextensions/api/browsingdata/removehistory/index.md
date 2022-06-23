@@ -16,7 +16,7 @@ browser-compat: webextensions.api.browsingData.removeHistory
 
 Clears the record of web pages that the user has visited (browsing history).
 
-You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
+You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
 
 - clear only records of web pages visited after a given time
 - control whether to clear only records of normal web pages or to clear records of hosted apps and extensions as well.
@@ -26,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var removing = browser.browsingData.removeHistory(
+let removing = browser.browsingData.removeHistory(
   removalOptions            // RemovalOptions object
 )
 ```
@@ -39,10 +39,6 @@ var removing = browser.browsingData.removeHistory(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the removal has finished. If any error occurs, the promise will be rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -61,7 +57,7 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+let oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
 
 browser.browsingData.removeHistory(
   {since: oneWeekAgo}).
@@ -83,9 +79,13 @@ browser.browsingData.removeHistory({}).
 then(onRemoved, onError);
 ```
 
+## Browser compatibility
+
+{{Compat}}
+
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData) API.
+> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

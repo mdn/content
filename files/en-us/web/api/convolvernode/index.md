@@ -1,6 +1,7 @@
 ---
 title: ConvolverNode
 slug: Web/API/ConvolverNode
+page-type: web-api-interface
 tags:
   - API
   - ConvolverNode
@@ -14,6 +15,8 @@ browser-compat: api.ConvolverNode
 The `ConvolverNode` interface is an {{domxref("AudioNode")}} that performs a Linear Convolution on a given {{domxref("AudioBuffer")}}, often used to achieve a reverb effect. A `ConvolverNode` always has exactly one input and one output.
 
 > **Note:** For more information on the theory behind Linear Convolution, see the [Convolution article on Wikipedia](https://en.wikipedia.org/wiki/Convolution).
+
+{{InheritanceDiagram}}
 
 <table class="properties">
   <tbody>

@@ -12,27 +12,29 @@ tags:
 
 The `type` attribute is a generic attribute and it has different meaning based on the context in which it's used.
 
-*   For the {{SVGElement("animateTransform")}} element, it defines the type of transformation, whose values change over time.
-*   For the {{SVGElement("feColorMatrix")}} element, it indicates the type of matrix operation. The keyword `matrix` indicates that a full 5x4 matrix of values will be provided. The other keywords represent convenience shortcuts to allow commonly used color operations to be performed without specifying a complete matrix.
-*   For the {{SVGElement("feFuncR")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncB")}}, and {{SVGElement("feFuncA")}} elements, it Indicates the type of component transfer function.
-*   For the {{SVGElement("feTurbulence")}} element, it indicates whether the filter primitive should perform a noise or turbulence function.
-*   For the {{SVGElement("style")}} and {{SVGElement("script")}} elements, it defines the content type of the element.
+- For the {{SVGElement("animateTransform")}} element, it defines the type of transformation, whose values change over time.
+- For the {{SVGElement("feColorMatrix")}} element, it indicates the type of matrix operation. The keyword `matrix` indicates that a full 5x4 matrix of values will be provided. The other keywords represent convenience shortcuts to allow commonly used color operations to be performed without specifying a complete matrix.
+- For the {{SVGElement("feFuncR")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncB")}}, and {{SVGElement("feFuncA")}} elements, it Indicates the type of component transfer function.
+- For the {{SVGElement("feTurbulence")}} element, it indicates whether the filter primitive should perform a noise or turbulence function.
+- For the {{SVGElement("style")}} and {{SVGElement("script")}} elements, it defines the content type of the element.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("animateTransform")}}
-*   {{SVGElement("feColorMatrix")}}
-*   {{SVGElement("feFuncA")}}
-*   {{SVGElement("feFuncB")}}
-*   {{SVGElement("feFuncG")}}
-*   {{SVGElement("feFuncR")}}
-*   {{SVGElement("feTurbulence")}}
-*   {{SVGElement("script")}}
-*   {{SVGElement("style")}}
+- {{SVGElement("animateTransform")}}
+- {{SVGElement("feColorMatrix")}}
+- {{SVGElement("feFuncA")}}
+- {{SVGElement("feFuncB")}}
+- {{SVGElement("feFuncG")}}
+- {{SVGElement("feFuncR")}}
+- {{SVGElement("feTurbulence")}}
+- {{SVGElement("script")}}
+- {{SVGElement("style")}}
 
 ## Usage context
 
-### For the {{SVGElement("animateTransform")}} elements
+### For the &lt;animateTransform&gt; elements
+
+SVG element: {{SVGElement("animateTransform")}}
 
 <table class="properties">
   <tbody>
@@ -63,7 +65,9 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-### For the {{ SVGElement("feColorMatrix") }} element
+### For the &lt;feColorMatrix&gt; element
+
+SVG element: {{SVGElement("feColorMatrix")}}
 
 <table class="properties">
   <tbody>
@@ -88,14 +92,16 @@ You can use this attribute with the following SVG elements:
         <a
           href="https://www.w3.org/TR/SVG11/filters.html#feColorMatrixTypeAttribute"
           rel="external"
-          ><span>SVG 1.1 (2nd Edition)</span></a
+          >SVG 1.1 (2nd Edition)</a
         >
       </td>
     </tr>
   </tbody>
 </table>
 
-### For the {{ SVGElement("feFuncR") }}, {{ SVGElement("feFuncG") }}, {{ SVGElement("feFuncB") }}, and {{ SVGElement("feFuncA") }} elements
+### For the &lt;feFuncR&gt;, &lt;feFuncG&gt;, &lt;feFuncB&gt;, and &lt;feFuncA&gt; elements
+
+SVG elements: {{SVGElement("feFuncR")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncA")}}
 
 <table class="properties">
   <tbody>
@@ -120,14 +126,16 @@ You can use this attribute with the following SVG elements:
         <a
           href="https://www.w3.org/TR/SVG11/filters.html#feComponentTransferTypeAttribute"
           rel="external"
-          ><span>SVG 1.1 (2nd Edition)</span></a
+          >SVG 1.1 (2nd Edition)</a
         >
       </td>
     </tr>
   </tbody>
 </table>
 
-### For the {{ SVGElement("feTurbulence") }} element
+### For the &lt;feTurbulence&gt; element
+
+SVG element: {{SVGElement("feTurbulence")}}
 
 <table class="properties">
   <tbody>
@@ -151,14 +159,16 @@ You can use this attribute with the following SVG elements:
         <a
           href="https://www.w3.org/TR/SVG11/filters.html#feTurbulenceTypeAttribute"
           rel="external"
-          ><span>SVG 1.1 (2nd Edition)</span></a
+          >SVG 1.1 (2nd Edition)</a
         >
       </td>
     </tr>
   </tbody>
 </table>
 
-### For the {{ SVGElement("style") }} and {{SVGElement("script")}} elements
+### For the &lt;style&gt; and &lt;script&gt; elements
+
+SVG elements: {{SVGElement("style")}}, {{SVGElement("script")}}
 
 <table class="properties">
   <tbody>
@@ -180,7 +190,7 @@ You can use this attribute with the following SVG elements:
         <a
           href="https://www.w3.org/TR/SVG11/script.html#ScriptElementTypeAttribute"
           rel="external"
-          ><span>SVG 1.1 (2nd Edition) : script</span></a
+          >SVG 1.1 (2nd Edition) : script</a
         ><br /><a
           href="https://www.w3.org/TR/SVG11/styling.html#StyleElementTypeAttribute"
           rel="external"

@@ -39,37 +39,37 @@ html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
 
 ## Attributes
 
-*   {{SVGAttr("keyPoints")}}
-    *   : This attribute indicate, in the range \[0,1], how far is the object along the path for each {{SVGAttr("keyTimes")}} associated values.
-        *Value type*: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number)\*; *Default value*: none; *Animatable*: **no**
-*   {{SVGAttr("path")}}
-    *   : This attribute defines the path of the motion, using the same syntax as the {{SVGAttr('d')}} attribute.
-        *Value type*: **\<string>**; *Default value*: none; *Animatable*: **no**
-*   {{SVGAttr("rotate")}}
-    *   : This attribute defines a rotation applied to the element animated along a path, usually to make it pointing in the direction of the animation.
-        *Value type*: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number)|`auto`|`auto-reverse`; *Default value*: `0`; *Animatable*: **no**
+- {{SVGAttr("keyPoints")}}
+  - : This attribute indicate, in the range \[0,1], how far is the object along the path for each {{SVGAttr("keyTimes")}} associated values.
+    *Value type*: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number)\*; *Default value*: none; *Animatable*: **no**
+- {{SVGAttr("path")}}
+  - : This attribute defines the path of the motion, using the same syntax as the {{SVGAttr('d')}} attribute.
+    *Value type*: **\<string>**; *Default value*: none; *Animatable*: **no**
+- {{SVGAttr("rotate")}}
+  - : This attribute defines a rotation applied to the element animated along a path, usually to make it pointing in the direction of the animation.
+    *Value type*: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number)|`auto`|`auto-reverse`; *Default value*: `0`; *Animatable*: **no**
 
 > **Note:** For `<animateMotion>`, the default value for the {{SVGAttr("calcMode")}} attribute is `paced`.
 
 ### Animation Attributes
 
-*   [Animation timing attributes](/en-US/docs/Web/SVG/Attribute#animation_timing_attributes)
-    *   : {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
-*   [Animation value attributes](/en-US/docs/Web/SVG/Attribute#animation_value_attributes)
-    *   : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}
-*   [Other Animation attributes](/en-US/docs/Web/SVG/Attribute#animation_attributes)
-    *   : Most notably: {{SVGAttr("attributeName")}}, {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
-*   [Animation event attributes](/en-US/docs/Web/SVG/Attribute/Events#animation_event_attributes)
-    *   : Most notably: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}
+- [Animation timing attributes](/en-US/docs/Web/SVG/Attribute#animation_timing_attributes)
+  - : {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
+- [Animation value attributes](/en-US/docs/Web/SVG/Attribute#animation_value_attributes)
+  - : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}
+- [Other Animation attributes](/en-US/docs/Web/SVG/Attribute#animation_attributes)
+  - : Most notably: {{SVGAttr("attributeName")}}, {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
+- [Animation event attributes](/en-US/docs/Web/SVG/Attribute/Events#animation_event_attributes)
+  - : Most notably: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}
 
 ### Global attributes
 
-*   [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
-    *   : Most notably: {{SVGAttr('id')}}
-*   [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
-    *   : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-*   Event Attributes
-    *   : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
+- [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
+  - : Most notably: {{SVGAttr('id')}}
+- [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- Event Attributes
+  - : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
 
 ## Usage notes
 
@@ -85,4 +85,4 @@ This element implements the {{domxref("SVGAnimateMotionElement")}} interface.
 
 ## See also
 
-*   {{SVGElement("mpath")}}
+- {{SVGElement("mpath")}}

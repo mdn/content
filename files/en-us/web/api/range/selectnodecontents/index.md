@@ -1,6 +1,7 @@
 ---
 title: Range.selectNodeContents()
 slug: Web/API/Range/selectNodeContents
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -22,7 +23,7 @@ node.
 ## Syntax
 
 ```js
-range.selectNodeContents(referenceNode);
+selectNodeContents(referenceNode)
 ```
 
 ### Parameters
@@ -31,7 +32,11 @@ range.selectNodeContents(referenceNode);
   - : The {{ domxref("Node") }} whose contents will be selected within a {{
     domxref("Range") }}.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 range = document.createRange();

@@ -1,6 +1,7 @@
 ---
 title: 'WebSocket: error event'
 slug: Web/API/WebSocket/error_event
+page-type: web-api-event
 tags:
   - API
   - Error
@@ -14,26 +15,19 @@ browser-compat: api.WebSocket.error_event
 
 The `error` event is fired when a connection with a `WebSocket` has been closed due to an error (some data couldn't be sent for example).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{ domxref("WebSocket.onerror","onerror")}}</td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('error', event => { })
+
+onerror = event => { }
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 

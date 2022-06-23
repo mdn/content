@@ -1,6 +1,7 @@
 ---
 title: PerformanceNavigationTiming.unloadEventStart
 slug: Web/API/PerformanceNavigationTiming/unloadEventStart
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,24 +11,18 @@ browser-compat: api.PerformanceNavigationTiming.unloadEventStart
 ---
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
-The **`unloadEventStart`** read-only property returns a
+The **`unloadEventStart`** read-only property returns a
 {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the
 time immediately before the user agent starts the unload event of the previous document.
 If there is no previous document, this property returns `0`.
 
-## Syntax
-
-```js
-perfEntry.unloadEventStart;
-```
-
-### Return Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to
 the time immediately before the user agent starts the unload event of the previous
 document.
 
-## Example
+## Examples
 
 The following example illustrates this property's usage.
 

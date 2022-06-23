@@ -57,7 +57,7 @@ The following example shows how to recompile a regular expression with a new pat
 and a new flag.
 
 ```js
-var regexObj = new RegExp('foo', 'gi');
+const regexObj = new RegExp('foo', 'gi');
 regexObj.compile('new foo', 'g');
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLAreaElement.relList
 slug: Web/API/HTMLAreaElement/relList
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -21,23 +22,21 @@ The property itself is read-only, meaning you can't substitute the
 {{domxref("DOMTokenList")}} by another one, but the content of the returned list can be
 changed.
 
-## Syntax
+## Value
+
+A string.
+
+## Examples
 
 ```js
-var relstr = areaElt.relList;
-```
+const areas = document.getElementsByTagName("area");
+const length = areas.length;
 
-## Example
-
-```js
-var areas = document.getElementsByTagName("area");
-var length = areas.length;
-
-for (var i = 0; i < length; i++) {
-  var list = areas[i].relList;
-  var listLength = list.length;
+for (let i = 0; i < length; i++) {
+  const list = areas[i].relList;
+  const listLength = list.length;
   console.log("New area found.");
-  for (var j = 0; j < listLength; j++) {
+  for (let j = 0; j < listLength; j++) {
     console.log(list[j]);
   }
 }
@@ -55,5 +54,5 @@ for (var i = 0; i < length; i++) {
 
 - The equivalent property on {{HTMLElement("a")}} and {{HTMLElement("link")}},
   {{domxref("HTMLAnchorElement.relList")}} and {{domxref("HTMLLinkElement.relList")}}.
-- The very same list but as a space-separated tokens in a {{domxref("DOMString")}}:
+- The very same list but as a space-separated tokens in a string:
   {{domxref("HTMLAreaElement.rel")}}

@@ -38,9 +38,9 @@ The function `square` takes one parameter, called `number`. The function consist
 return number * number;
 ```
 
-Primitive parameters (such as a number) are passed to functions **by value**; the value is passed to the function, but if the function changes the value of the parameter, **this change is not reflected globally or in the calling function**.
+Parameters are essentially passed to functions **by value** — so if the code within the body of a function assigns a completely new value to a parameter that was passed to the function, **the change is not reflected globally or in the code which called that function**.
 
-If you pass an object (i.e., a non-primitive value, such as {{jsxref("Array")}} or a user-defined object) as a parameter and the function changes the object's properties, that change is visible outside the function, as shown in the following example:
+When you pass an object as a parameter, if the function changes the object's properties, that change is visible outside the function, as shown in the following example:
 
 ```js
 function myFunc(theObject) {
@@ -55,6 +55,20 @@ x = mycar.make; // x gets the value "Honda"
 myFunc(mycar);
 y = mycar.make; // y gets the value "Toyota"
                 // (the make property was changed by the function)
+```
+
+When you pass an array as a parameter, if the function changes any of the array's values, that change is visible outside the function, as shown in the following example:
+
+```js
+function myFunc(theArr) {
+  theArr[0] = 30;
+}
+
+const arr = [45];
+
+console.log(arr[0]); // 45
+myFunc(arr);
+console.log(arr[0]); // 30
 ```
 
 ### Function expressions
@@ -150,8 +164,7 @@ The scope of a function is the function in which it is declared (or the entire p
 > This means that function hoisting only works with function _declarations_—not with function _expressions_.
 >
 > ```js example-bad
-> console.log(square)    // square is hoisted with an initial value undefined.
-> console.log(square(5)) // Uncaught TypeError: square is not a function
+> console.log(square)    // ReferenceError: Cannot access 'square' before initialization
 > const square = function(n) {
 >   return n * n;
 > }
@@ -225,9 +238,9 @@ getScore(); // Returns "Chamakh scored 5"
 
 A function can refer to and call itself. There are three ways for a function to refer to itself:
 
-1.  The function's name
-2.  [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
-3.  An in-scope variable that refers to the function
+1. The function's name
+2. [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
+3. An in-scope variable that refers to the function
 
 For example, consider the following function definition:
 
@@ -239,9 +252,9 @@ var foo = function bar() {
 
 Within the function body, the following are all equivalent:
 
-1.  `bar()`
-2.  `arguments.callee()`
-3.  `foo()`
+1. `bar()`
+2. `arguments.callee()`
+3. `foo()`
 
 A function that calls itself is called a _recursive function_. In some ways, recursion is analogous to a loop. Both execute the same code multiple times, and both require a condition (to avoid an infinite loop, or rather, infinite recursion in this case).
 
@@ -386,15 +399,15 @@ In this example, `C` accesses `B`'s `y` and `A`'s `x`.
 
 This can be done because:
 
-1.  `B` forms a closure including `A` (i.e., `B` can access `A`'s arguments and variables).
-2.  `C` forms a closure including `B`.
-3.  Because `B`'s closure includes `A`, `C`'s closure includes `A`, `C` can access _both_ `B` _and_ `A`'s arguments and variables. In other words, `C` _chains_ the scopes of `B` and `A`, _in that order_.
+1. `B` forms a closure including `A` (i.e., `B` can access `A`'s arguments and variables).
+2. `C` forms a closure including `B`.
+3. Because `C`'s closure includes `B` and `B`'s closure includes `A`, then `C`'s closure also includes `A`. This means `C` can access _both_ `B` _and_ `A`'s arguments and variables. In other words, `C` _chains_ the scopes of `B` and `A`, _in that order_.
 
 The reverse, however, is not true. `A` cannot access `C`, because `A` cannot access any argument or variable of `B`, which `C` is a variable of. Thus, `C` remains private to only `B`.
 
 ### Name conflicts
 
-When two arguments or variables in the scopes of a closure have the same name, there is a _name conflict_. More nested scopes take precedence. So, the inner-most scope takes the highest precedence, while the outer-most scope takes the lowest. This is the scope chain. The first on the chain is the inner-most scope, and the last is the outer-most scope. Consider the following:
+When two arguments or variables in the scopes of a closure have the same name, there is a _name conflict_. More nested scopes take precedence. So, the innermost scope takes the highest precedence, while the outermost scope takes the lowest. This is the scope chain. The first on the chain is the innermost scope, and the last is the outermost scope. Consider the following:
 
 ```js
 function outside() {
@@ -484,7 +497,7 @@ getCode();    // Returns the apiCode
 
 > **Note:** There are a number of pitfalls to watch out for when using closures!
 >
-> If an enclosed function defines a variable with the same name as a variable in the outer scope, then there is no way to refer to the variable in the outer scope again. (The inner scope variable "overrides" the outer one, until the program exits the inner scope.)
+> If an enclosed function defines a variable with the same name as a variable in the outer scope, then there is no way to refer to the variable in the outer scope again. (The inner scope variable "overrides" the outer one, until the program exits the inner scope. It can be thought of as a [name conflict](#name_conflicts).)
 >
 > ```js example-bad
 > var createPet = function(name) {  // The outer function defines a variable called "name".

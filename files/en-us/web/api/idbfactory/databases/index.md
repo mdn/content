@@ -1,6 +1,7 @@
 ---
-title: IDBFactory.databases
+title: IDBFactory.databases()
 slug: Web/API/IDBFactory/databases
+page-type: web-api-instance-method
 tags:
   - API
   - Database
@@ -13,7 +14,7 @@ browser-compat: api.IDBFactory.databases
 ---
 {{ APIRef("IndexedDB") }}
 
-The **`databases`** method of the {{domxref("IDBFactory")}} interface returns a list representing all the available databases, including their names and versions.
+The **`databases`** method of the {{domxref("IDBFactory")}} interface returns a list representing all the available databases, including their names and versions.
 
 {{AvailableInWorkers}}
 
@@ -22,7 +23,7 @@ The **`databases`** method of the {{domxref("IDBFactory")}} interface returns a
 ## Syntax
 
 ```js
-const promise = indexedDB.databases()
+databases()
 ```
 
 ### Parameters
@@ -31,7 +32,7 @@ The method does not take in any parameters.
 
 ### Return value
 
-A promise that resolves either to an error or a list of dictionaries, each with two elements, `name` and `version`:
+A promise that resolves either to an error or a list of dictionaries, each with two elements, `name` and `version`:
 
 - `name`
   - : The database name.
@@ -40,19 +41,17 @@ A promise that resolves either to an error or a list of dictionaries, each with
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of the following types:
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the method is called from an [opaque origin](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802#42242802).
 
-| Attribute                                | Description                                          |
-| ---------------------------------------- | ---------------------------------------------------- |
-| {{exception("SecurityError")}} | The method is called from an opaque origin.          |
-| Other error                              | Specification does not describe all possible errors. |
+## Examples
 
-## Example
-
-    const promise = indexedDB.databases()
-    promise.then(databases => {
-      console.log(databases)
-    })
+```js
+const promise = indexedDB.databases()
+promise.then(databases => {
+  console.log(databases)
+})
+```
 
 ## Specifications
 

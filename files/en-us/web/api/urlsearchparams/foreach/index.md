@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.forEach()
 slug: Web/API/URLSearchParams/forEach
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -20,7 +21,8 @@ in this object via a callback function.
 ## Syntax
 
 ```js
-searchParams.forEach(callback);
+forEach(callback)
+forEach(callback, thisArg)
 ```
 
 ### Parameters
@@ -41,7 +43,7 @@ searchParams.forEach(callback);
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -51,14 +53,16 @@ var searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // Log the values
 searchParams.forEach(function(value, key) {
-  console.log(value, key);
+  console.log(value, key);
 });
 ```
 
 The result is:
 
-    value1 key1
-    value2 key2
+```
+value1 key1
+value2 key2
+```
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: SVGForeignObjectElement
 slug: Web/API/SVGForeignObjectElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGForeignObjectElement
 
 The **`SVGForeignObjectElement`** interface provides access to the properties of {{SVGElement("foreignObject")}} elements, as well as methods to manipulate them.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

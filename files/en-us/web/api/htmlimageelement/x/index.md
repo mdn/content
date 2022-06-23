@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.x
 slug: Web/API/HTMLImageElement/x
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -15,6 +16,7 @@ tags:
   - border
   - left
   - x
+  - Property
 browser-compat: api.HTMLImageElement.x
 ---
 {{APIRef("HTML DOM")}}
@@ -31,13 +33,7 @@ either of those values set explicitly on it, or it has inherited it from a conta
 element, or by being located within a column described by either {{HTMLElement("col")}}
 or {{HTMLElement("colgroup")}}.
 
-## Syntax
-
-```js
-let imageX = htmlImageElement.x;
-```
-
-### Value
+## Value
 
 An integer value indicating the distance in pixels from the left edge of the element's
 nearest root element and the left edge of the {{HTMLElement("img")}} element's border

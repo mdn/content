@@ -9,7 +9,7 @@ tags:
 ---
 {{HTTPSidebar}}
 
-When navigating through different networks of the Internet, proxy servers and HTTP tunnels are facilitating access to content on the World Wide Web. A proxy can be on the user's local computer, or anywhere between the user's computer and a destination server on the Internet. This page outlines some basics about proxies and introduces a few configuration options.
+When navigating through different networks of the Internet, proxy servers and HTTP tunnels are facilitating access to content on the World Wide Web. A proxy can be on the user's local computer, or anywhere between the user's computer and a destination server on the Internet. This page outlines some basics about proxies and introduces a few configuration options.
 
 There are two types of proxies: **forward proxies** (or tunnel, or gateway) and **reverse proxies** (used to control and protect access to a server for load-balancing, authentication, decryption or caching).
 
@@ -41,7 +41,7 @@ Or the de-facto standard versions:
 - {{HTTPHeader("X-Forwarded-For")}} {{non-standard_inline}}
   - : Identifies the originating IP addresses of a client connecting to a web server through an HTTP proxy or a load balancer.
 - {{HTTPHeader("X-Forwarded-Host")}} {{non-standard_inline}}
-  - : Identifies the original host requested that a client used to connect to your proxy or load balancer.
+  - : Identifies the original host requested that a client used to connect to your proxy or load balancer.
 - {{HTTPHeader("X-Forwarded-Proto")}} {{non-standard_inline}}
   - : identifies the protocol (HTTP or HTTPS) that a client used to connect to your proxy or load balancer.
 
@@ -74,14 +74,14 @@ And the MIME type set to:
 application/x-ns-proxy-autoconfig
 ```
 
-The file consists of a function called `FindProxyForURL`. The example below will work in an environment where the internal DNS server is set up so that it can only resolve internal host names, and the goal is to use a proxy only for hosts that aren't resolvable:
+The file consists of a function called `FindProxyForURL`. The example below will work in an environment where the internal DNS server is set up so that it can only resolve internal host names, and the goal is to use a proxy only for hosts that aren't resolvable:
 
 ```js
 function FindProxyForURL(url, host) {
   if (isResolvable(host))
-    return "DIRECT";
-  else
-    return "PROXY proxy.mydomain.com:8080";
+    return "DIRECT";
+  else
+    return "PROXY proxy.mydomain.com:8080";
 }
 ```
 

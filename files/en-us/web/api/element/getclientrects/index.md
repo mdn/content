@@ -1,6 +1,7 @@
 ---
 title: Element.getClientRects()
 slug: Web/API/Element/getClientRects
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -18,8 +19,7 @@ browser-compat: api.Element.getClientRects
 
 The **`getClientRects()`** method of the {{domxref("Element")}}
 interface returns a collection of {{DOMxRef("DOMRect")}} objects that indicate the
-bounding rectangles for each [CSS border
-box](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) in a client.
+bounding rectangles for each [CSS border box](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) in a client.
 
 Most elements only have one border box each, but a multiline [inline element](/en-US/docs/Web/HTML/Inline_elements) (such as a multiline
 {{HTMLElement("span")}} element, by default) has a border box around each line.
@@ -27,8 +27,12 @@ Most elements only have one border box each, but a multiline [inline element](/e
 ## Syntax
 
 ```js
-let rectCollection = object.getClientRects();
+getClientRects()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -85,7 +89,7 @@ third block.
 ```html
 <h3>A paragraph with a span inside</h3>
 <p>Both the span and the paragraph have a border set. The
-  client rects are in red. Note that the p has onlyone border
+  client rects are in red. Note that the p has only one border
   box, while the span has multiple border boxes.</p>
 
 <div>
@@ -153,29 +157,29 @@ Example 3: This HTML creates two tables with captions. Client rects are painted 
   caption, the client rects do include the caption.</p>
 
 <div>
-  <strong>Original</strong>
-  <table>
-    <caption>caption</caption>
-    <thead>
-      <tr><th>thead</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>tbody</td></tr>
-    </tbody>
-  </table>
+  <strong>Original</strong>
+  <table>
+    <caption>caption</caption>
+    <thead>
+      <tr><th>thead</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>tbody</td></tr>
+    </tbody>
+  </table>
 </div>
 
 <div>
-  <strong>table's rect</strong>
-  <table class="withClientRectsOverlay">
-    <caption>caption</caption>
-    <thead>
-      <tr><th>thead</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>tbody</td></tr>
-    </tbody>
-  </table>
+  <strong>table's rect</strong>
+  <table class="withClientRectsOverlay">
+    <caption>caption</caption>
+    <thead>
+      <tr><th>thead</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>tbody</td></tr>
+    </tbody>
+  </table>
 </div>
 ```
 
@@ -210,32 +214,32 @@ The JavaScript code draws the client rects for all HTML elements that have CSS c
 
 ```js
 function addClientRectsOverlay(elt) {
-  /* Absolutely position a div over each client rect so that its border width
-     is the same as the rectangle's width.
-     Note: the overlays will be out of place if the user resizes or zooms. */
-  var rects = elt.getClientRects();
-  for (var i = 0; i != rects.length; i++) {
-    var rect = rects[i];
-    var tableRectDiv = document.createElement('div');
-    tableRectDiv.style.position = 'absolute';
-    tableRectDiv.style.border = '1px solid red';
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
-    tableRectDiv.style.margin = tableRectDiv.style.padding = '0';
-    tableRectDiv.style.top = (rect.top + scrollTop) + 'px';
-    tableRectDiv.style.left = (rect.left + scrollLeft) + 'px';
-    // We want rect.width to be the border width, so content width is 2px less.
-    tableRectDiv.style.width = (rect.width - 2) + 'px';
-    tableRectDiv.style.height = (rect.height - 2) + 'px';
-    document.body.appendChild(tableRectDiv);
+  /* Absolutely position a div over each client rect so that its border width
+     is the same as the rectangle's width.
+     Note: the overlays will be out of place if the user resizes or zooms. */
+  const rects = elt.getClientRects();
+  for (let i = 0; i != rects.length; i++) {
+    const rect = rects[i];
+    const tableRectDiv = document.createElement('div');
+    tableRectDiv.style.position = 'absolute';
+    tableRectDiv.style.border = '1px solid red';
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
+    tableRectDiv.style.margin = tableRectDiv.style.padding = '0';
+    tableRectDiv.style.top = (rect.top + scrollTop) + 'px';
+    tableRectDiv.style.left = (rect.left + scrollLeft) + 'px';
+    // We want rect.width to be the border width, so content width is 2px less.
+    tableRectDiv.style.width = (rect.width - 2) + 'px';
+    tableRectDiv.style.height = (rect.height - 2) + 'px';
+    document.body.appendChild(tableRectDiv);
   }
 }
 
 (function() {
   /* Call function addClientRectsOverlay(elt) for all elements with
      assigned class "withClientRectsOverlay" */
-  var elt = document.getElementsByClassName('withClientRectsOverlay');
-  for (var i = 0; i < elt.length; i++) {
+  const elt = document.getElementsByClassName('withClientRectsOverlay');
+  for (let i = 0; i < elt.length; i++) {
     addClientRectsOverlay(elt[i]);
   }
 })();

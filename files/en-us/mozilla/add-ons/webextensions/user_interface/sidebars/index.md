@@ -8,13 +8,15 @@ tags:
 
 A sidebar is a pane that is displayed at the side of the browser window, next to the web page. This page describes sidebars, specifying them, designing them, and examples of use.
 
-The browser provides a UI that enables the user to see the currently available sidebars and to select a sidebar to display. For example, Firefox has a "View > Sidebar" menu. Only one sidebar can be shown at a time, and that sidebar will be displayed for all tabs and all browser windows.
+The browser provides a UI that enables the user to select a sidebar to display. For example, Firefox has the "View" > "Sidebar" menu. Each browser window can display its own sidebar, which is displayed on every tab in the window.
 
 The browser may include a number of built-in sidebars. For example, Firefox includes a sidebar for interacting with bookmarks:
 
-![](bookmarks-sidebar.png)Using the [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest.json key, an extension can add its own sidebar to the browser. It will be listed alongside the built-in sidebars, and the user will be able to open it using the same mechanism as for the built-in sidebars.
+![](bookmarks-sidebar.png)
 
-Like a browser action popup, the sidebar's contents are specified as an HTML document. When the user opens the sidebar, the sidebar's document is loaded into every open browser window. Each window gets its own instance of the document. When new windows are opened, they get their own sidebar documents as well.
+Using the [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest.json key, an extension can add its own sidebar to the browser. It will be listed alongside the built-in sidebars, and the user will be able to open it using the same mechanism as for the built-in sidebars.
+
+Like a browser action popup, the sidebar's contents are specified as an HTML document. When the user opens the sidebar, the sidebar's document is loaded into every open browser window. Each window gets its own instance of the document. When new windows are opened, they get their own sidebar documents as well.
 
 A document for a particular tab can be set using the {{WebExtAPIRef("sidebarAction.setPanel()")}} function. A sidebar can figure out which window it belongs to using the {{WebExtAPIRef("windows.getCurrent()")}} API:
 

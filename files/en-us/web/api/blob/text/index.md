@@ -1,17 +1,13 @@
 ---
 title: Blob.text()
 slug: Web/API/Blob/text
+page-type: web-api-instance-method
 tags:
   - API
   - Blob
   - File API
   - Method
   - Reference
-  - String
-  - Text
-  - Utf-8
-  - get
-  - read
 browser-compat: api.Blob.text
 ---
 {{APIRef("File API")}}
@@ -23,20 +19,16 @@ string containing the contents of the blob, interpreted as UTF-8.
 ## Syntax
 
 ```js
-var textPromise = blob.text();
-
-blob.text().then(text => /* do something with the text */);
-
-var text = await blob.text();
+text()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
-A promise that resolves with a {{domxref("USVString")}} which contains the blob's data
+A promise that resolves with a string which contains the blob's data
 as a text string. The data is _always_ presumed to be in UTF-8 format.
 
 ## Usage notes

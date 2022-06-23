@@ -14,7 +14,7 @@ JavaScript is a bit confusing for developers experienced in class-based language
 
 When it comes to inheritance, JavaScript only has one construct: objects. Each object has a private property which holds a link to another object called its **prototype**. That prototype object has a prototype of its own, and so on until an object is reached with `null` as its prototype. By definition, `null` has no prototype, and acts as the final link in this **prototype chain**.
 
-Nearly all objects in JavaScript are instances of {{jsxref("Object")}} which sits just below `null` on the top of a prototype chain.
+Nearly all objects in JavaScript are instances of {{jsxref("Object")}}, which has `null` as its prototype.
 
 While this confusion is often considered to be one of JavaScript's weaknesses, the prototypal inheritance model itself is, in fact, more powerful than the classic model. It is, for example, fairly trivial to build a classic model on top of a prototypal model.
 
@@ -32,24 +32,25 @@ Here is what happens when trying to access a property:
 
 ```js
 // Let's create an object o from function F with its own properties a and b:
-let F = function () {
+const F = function () {
    this.a = 1;
    this.b = 2;
-}
-let o = new F(); // {a: 1, b: 2}
+};
+const o = new F(); // { a: 1, b: 2 }
 
 // add properties in F function's prototype
 F.prototype.b = 3;
 F.prototype.c = 4;
 
-// do not set the prototype F.prototype = {b:3,c:4}; this will break the prototype chain
+// do not set the prototype F.prototype = { b: 3, c: 4 };
+// this will break the prototype chain
 // o.[[Prototype]] has properties b and c.
 // o.[[Prototype]].[[Prototype]] is Object.prototype.
 // Finally, o.[[Prototype]].[[Prototype]].[[Prototype]] is null.
 // This is the end of the prototype chain, as null,
 // by definition, has no [[Prototype]].
 // Thus, the full prototype chain looks like:
-// {a: 1, b: 2} ---> {b: 3, c: 4} ---> Object.prototype ---> null
+// { a: 1, b: 2 } ---> { b: 3, c: 4 } ---> Object.prototype ---> null
 
 console.log(o.a); // 1
 // Is there an 'a' own property on o? Yes, and its value is 1.
@@ -66,12 +67,13 @@ console.log(o.c); // 4
 console.log(o.d); // undefined
 // Is there a 'd' own property on o? No, check its prototype.
 // Is there a 'd' own property on o.[[Prototype]]? No, check its prototype.
-// o.[[Prototype]].[[Prototype]] is Object.prototype and there is no 'd' property by default, check its prototype.
+// o.[[Prototype]].[[Prototype]] is Object.prototype and
+// there is no 'd' property by default, check its prototype.
 // o.[[Prototype]].[[Prototype]].[[Prototype]] is null, stop searching,
 // no property found, return undefined.
 ```
 
-[Code Link](https://repl.it/@khaled_hossain_code/prototype)
+[Code Link](https://replit.com/@khaled_hossain_code/prototype)
 
 Setting a property to an object creates an own property. The only exception to the getting and setting behavior rules is when there is an inherited property with a [getter or a setter](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters).
 
@@ -82,7 +84,7 @@ JavaScript does not have "methods" in the form that class-based languages define
 When an inherited function is executed, the value of [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) points to the inheriting object, not to the prototype object where the function is an own property.
 
 ```js
-var o = {
+const o = {
   a: 2,
   m: function() {
     return this.a + 1;
@@ -92,10 +94,10 @@ var o = {
 console.log(o.m()); // 3
 // When calling o.m in this case, 'this' refers to o
 
-var p = Object.create(o);
+const p = Object.create(o);
 // p is an object that inherits from o
 
-p.a = 4; // creates a property 'a' on p
+p.a = 4; // assign the value 4 to the property 'a' on p
 console.log(p.m()); // 5
 // when p.m is called, 'this' refers to p.
 // So when p inherits the function m of o,
@@ -106,59 +108,59 @@ console.log(p.m()); // 5
 
 Let's look at what happens behind the scenes in a bit more detail.
 
-In JavaScript, as mentioned above, functions are able to have properties. All functions have a special property named `prototype`. Please note that the code below is free-standing (it is safe to assume there is no other JavaScript on the webpage other than the below code). For the best learning experience, it is highly recommended that you open a console, navigate to the "console" tab, copy-and-paste in the below JavaScript code, and run it by pressing the Enter/Return key. (The console is included in most web browser's Developer Tools. More information is available for [Firefox Developer Tools](/en-US/docs/Tools), [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/), and [Edge DevTools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide).)
+In JavaScript, as mentioned above, functions are able to have properties. All functions have a special property named `prototype`. Please note that the code below is free-standing (it is safe to assume there is no other JavaScript on the webpage other than the below code). For the best learning experience, it is highly recommended that you open a console, navigate to the "console" tab, copy-and-paste in the below JavaScript code, and run it by pressing the Enter/Return key. (The console is included in most web browser's Developer Tools. More information is available for [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html), [Chrome DevTools](https://developer.chrome.com/docs/devtools/), and [Edge DevTools](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/).)
 
 ```js
-function doSomething(){}
+function doSomething() {}
 console.log( doSomething.prototype );
 //  It does not matter how you declare the function; a
 //  function in JavaScript will always have a default
 //  prototype property — with one exception: an arrow
 //  function doesn't have a default prototype property:
 const doSomethingFromArrowFunction = () => {};
-console.log( doSomethingFromArrowFunction.prototype );
+console.log(doSomethingFromArrowFunction.prototype);
 ```
 
 As seen above, `doSomething()` has a default `prototype` property, as demonstrated by the console. After running this code, the console should have displayed an object that looks similar to this.
 
 ```js
 {
-    constructor: ƒ doSomething(),
-    __proto__: {
-        constructor: ƒ Object(),
-        hasOwnProperty: ƒ hasOwnProperty(),
-        isPrototypeOf: ƒ isPrototypeOf(),
-        propertyIsEnumerable: ƒ propertyIsEnumerable(),
-        toLocaleString: ƒ toLocaleString(),
-        toString: ƒ toString(),
-        valueOf: ƒ valueOf()
-    }
+  constructor: ƒ doSomething(),
+  __proto__: {
+    constructor: ƒ Object(),
+    hasOwnProperty: ƒ hasOwnProperty(),
+    isPrototypeOf: ƒ isPrototypeOf(),
+    propertyIsEnumerable: ƒ propertyIsEnumerable(),
+    toLocaleString: ƒ toLocaleString(),
+    toString: ƒ toString(),
+    valueOf: ƒ valueOf()
+  }
 }
 ```
 
 We can add properties to the prototype of `doSomething()`, as shown below.
 
 ```js
-function doSomething(){}
-doSomething.prototype.foo = "bar";
-console.log( doSomething.prototype );
+function doSomething() {}
+doSomething.prototype.foo = 'bar';
+console.log(doSomething.prototype);
 ```
 
 This results in:
 
 ```js
 {
-    foo: "bar",
-    constructor: ƒ doSomething(),
-    __proto__: {
-        constructor: ƒ Object(),
-        hasOwnProperty: ƒ hasOwnProperty(),
-        isPrototypeOf: ƒ isPrototypeOf(),
-        propertyIsEnumerable: ƒ propertyIsEnumerable(),
-        toLocaleString: ƒ toLocaleString(),
-        toString: ƒ toString(),
-        valueOf: ƒ valueOf()
-    }
+  foo: "bar",
+  constructor: ƒ doSomething(),
+  __proto__: {
+    constructor: ƒ Object(),
+    hasOwnProperty: ƒ hasOwnProperty(),
+    isPrototypeOf: ƒ isPrototypeOf(),
+    propertyIsEnumerable: ƒ propertyIsEnumerable(),
+    toLocaleString: ƒ toLocaleString(),
+    toString: ƒ toString(),
+    valueOf: ƒ valueOf()
+  }
 }
 ```
 
@@ -167,31 +169,31 @@ We can now use the `new` operator to create an instance of `doSomething()` based
 Try the following code:
 
 ```js
-function doSomething(){}
-doSomething.prototype.foo = "bar"; // add a property onto the prototype
-var doSomeInstancing = new doSomething();
-doSomeInstancing.prop = "some value"; // add a property onto the object
-console.log( doSomeInstancing );
+function doSomething() {}
+doSomething.prototype.foo = 'bar'; // add a property onto the prototype
+const doSomeInstancing = new doSomething();
+doSomeInstancing.prop = 'some value'; // add a property onto the object
+console.log(doSomeInstancing);
 ```
 
 This results in an output similar to the following:
 
 ```js
 {
-    prop: "some value",
+  prop: "some value",
+  __proto__: {
+    foo: "bar",
+    constructor: ƒ doSomething(),
     __proto__: {
-        foo: "bar",
-        constructor: ƒ doSomething(),
-        __proto__: {
-            constructor: ƒ Object(),
-            hasOwnProperty: ƒ hasOwnProperty(),
-            isPrototypeOf: ƒ isPrototypeOf(),
-            propertyIsEnumerable: ƒ propertyIsEnumerable(),
-            toLocaleString: ƒ toLocaleString(),
-            toString: ƒ toString(),
-            valueOf: ƒ valueOf()
-        }
+      constructor: ƒ Object(),
+      hasOwnProperty: ƒ hasOwnProperty(),
+      isPrototypeOf: ƒ isPrototypeOf(),
+      propertyIsEnumerable: ƒ propertyIsEnumerable(),
+      toLocaleString: ƒ toLocaleString(),
+      toString: ƒ toString(),
+      valueOf: ƒ valueOf()
     }
+  }
 }
 ```
 
@@ -206,16 +208,16 @@ If the property is not found in the `__proto__` of the `__proto__` of doSomeInst
 Let's try entering some more code into the console:
 
 ```js
-function doSomething(){}
-doSomething.prototype.foo = "bar";
-var doSomeInstancing = new doSomething();
-doSomeInstancing.prop = "some value";
-console.log("doSomeInstancing.prop:      " + doSomeInstancing.prop);
-console.log("doSomeInstancing.foo:       " + doSomeInstancing.foo);
-console.log("doSomething.prop:           " + doSomething.prop);
-console.log("doSomething.foo:            " + doSomething.foo);
-console.log("doSomething.prototype.prop: " + doSomething.prototype.prop);
-console.log("doSomething.prototype.foo:  " + doSomething.prototype.foo);
+function doSomething() {}
+doSomething.prototype.foo = 'bar';
+const doSomeInstancing = new doSomething();
+doSomeInstancing.prop = 'some value';
+console.log('doSomeInstancing.prop:      ' + doSomeInstancing.prop);
+console.log('doSomeInstancing.foo:       ' + doSomeInstancing.foo);
+console.log('doSomething.prop:           ' + doSomething.prop);
+console.log('doSomething.foo:            ' + doSomething.foo);
+console.log('doSomething.prototype.prop: ' + doSomething.prototype.prop);
+console.log('doSomething.prototype.foo:  ' + doSomething.prototype.foo);
 ```
 
 This results in the following:
@@ -234,7 +236,7 @@ doSomething.prototype.foo:  bar
 ### Objects created with syntax constructs
 
 ```js
-var o = {a: 1};
+const o = { a: 1 };
 
 // The newly created object o has Object.prototype as its [[Prototype]]
 // o has no own property named 'hasOwnProperty'
@@ -243,7 +245,7 @@ var o = {a: 1};
 // Object.prototype has null as its prototype.
 // o ---> Object.prototype ---> null
 
-var b = ['yo', 'whadup', '?'];
+const b = ['yo', 'whadup', '?'];
 
 // Arrays inherit from Array.prototype
 // (which has methods indexOf, forEach, etc.)
@@ -257,6 +259,13 @@ function f() {
 // Functions inherit from Function.prototype
 // (which has methods call, bind, etc.)
 // f ---> Function.prototype ---> Object.prototype ---> null
+
+const p = { b: 2, __proto__: o };
+
+// It is possible to point the newly created object's [[Prototype]] to
+// another object via the __proto__ literal property. (Not to be confused
+// with Object.prototype.__proto__ accessors)
+// p ---> o ---> Object.prototype ---> null
 ```
 
 ### With a constructor
@@ -273,7 +282,7 @@ Graph.prototype.addVertex = function(v) {
   this.vertices.push(v);
 }
 
-var g = new Graph();
+const g = new Graph();
 // g is an object with own properties 'vertices' and 'edges'.
 // g.[[Prototype]] is the value of Graph.prototype when new Graph() is executed.
 ```
@@ -283,17 +292,17 @@ var g = new Graph();
 ECMAScript 5 introduced a new method: {{jsxref("Object.create()")}}. Calling this method creates a new object. The prototype of this object is the first argument of the function:
 
 ```js
-var a = {a: 1};
+const a = { a: 1 };
 // a ---> Object.prototype ---> null
 
-var b = Object.create(a);
+const b = Object.create(a);
 // b ---> a ---> Object.prototype ---> null
 console.log(b.a); // 1 (inherited)
 
-var c = Object.create(b);
+const c = Object.create(b);
 // c ---> b ---> a ---> Object.prototype ---> null
 
-var d = Object.create(null);
+const d = Object.create(null);
 // d ---> null
 console.log(d.hasOwnProperty);
 // undefined, because d doesn't inherit from Object.prototype
@@ -304,13 +313,12 @@ console.log(d.hasOwnProperty);
 Using `Object.create` of another object demonstrates prototypical inheritance with the `delete` operation:
 
 ```js
-var a = {a: 1};
-
-var b = Object.create(a);
+const a = { a: 1 };
+const b = Object.create(a);
 
 console.log(a.a); // print 1
 console.log(b.a); // print 1
-b.a=5;
+b.a = 5;
 console.log(a.a); // print 1
 console.log(b.a); // print 5
 delete b.a;
@@ -321,15 +329,15 @@ console.log(a.a); // print undefined
 console.log(b.a); // print undefined
 ```
 
-In the following example, calling `new Graph()` creates a `Graph` instance that has its own `vertices` property, and that doesn’t inherit any `vertices` property. So when the `vertices` property is deleted from that `Graph` instance, the instance then has neither its own `vertices` property nor any inherited `vertices` property.
+In the following example, calling `new Graph()` creates a `Graph` instance that has its own `vertices` property, and that doesn't inherit any `vertices` property. So when the `vertices` property is deleted from that `Graph` instance, the instance then has neither its own `vertices` property nor any inherited `vertices` property.
 
 ```js
 function Graph() {
-  this.vertices = [4,4];
+  this.vertices = [4, 4];
 }
 
-var g = new Graph();
-console.log(g.vertices); // print [4,4]
+const g = new Graph();
+console.log(g.vertices); // print [4, 4]
 console.log(g.__proto__.vertices) // print undefined
 g.vertices = 25;
 console.log(g.vertices); // print 25
@@ -355,16 +363,18 @@ class Square extends Polygon {
   constructor(sideLength) {
     super(sideLength, sideLength);
   }
+
   get area() {
     return this.height * this.width;
   }
+
   set sideLength(newLength) {
     this.height = newLength;
     this.width = newLength;
   }
 }
 
-var square = new Square(2);
+const square = new Square(2);
 ```
 
 ### Performance
@@ -393,7 +403,7 @@ Note: It is **not** enough to check whether a property is [`undefined`](/en-US/d
 
 ### Summary of methods for extending the prototype chain
 
-Here are all 4 ways and their pros/cons. All of the examples listed below create exactly the same resulting `inst` object (thus logging the same results to the console), except in different ways.
+Here are all 5 ways and their pros/cons. All of the examples listed below create exactly the same resulting `inst` object (thus logging the same results to the console), except in different ways.
 
 #### #1: New initialization
 
@@ -406,13 +416,13 @@ Here are all 4 ways and their pros/cons. All of the examples listed below create
 #### Code example
 
 ```js
-function foo(){}
-foo.prototype.foo_prop = "foo val";
-function bar(){}
-var proto = new foo();
-proto.bar_prop = "bar val";
+function foo() {}
+foo.prototype.foo_prop = 'foo val';
+function bar() {}
+const proto = new foo();
+proto.bar_prop = 'bar val';
 bar.prototype = proto;
-var inst = new bar();
+const inst = new bar();
 console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 ```
@@ -454,36 +464,30 @@ console.log(inst.bar_prop);
 
 ```js
 // Technique 1
-function foo(){}
-foo.prototype.foo_prop = "foo val";
-function bar(){}
-var proto = Object.create(
-  foo.prototype
-);
-proto.bar_prop = "bar val";
+function foo() {}
+foo.prototype.foo_prop = 'foo val';
+function bar() {}
+const proto = Object.create(foo.prototype);
+proto.bar_prop = 'bar val';
 bar.prototype = proto;
-var inst = new bar();
+const inst = new bar();
 console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 ```
 
 ```js
 // Technique 2
-function foo(){}
+function foo() {}
 foo.prototype.foo_prop = "foo val";
-function bar(){}
-var proto = Object.create(
+function bar() {}
+const proto = Object.create(
   foo.prototype,
-  {
-    bar_prop: {
-      value: "bar val"
-    }
-  }
+  { bar_prop: { value: 'bar val' } }
 );
 bar.prototype = proto;
-var inst = new bar();
+const inst = new bar();
 console.log(inst.foo_prop);
-console.log(inst.bar_prop)
+console.log(inst.bar_prop);
 ```
 
 <table class="standard-table">
@@ -520,35 +524,30 @@ console.log(inst.bar_prop)
 
 ```js
 // Technique 1
-function foo(){}
-foo.prototype.foo_prop = "foo val";
-function bar(){}
-var proto = {
-  bar_prop: "bar val"
-};
-Object.setPrototypeOf(
-  proto, foo.prototype
-);
+function foo() {}
+foo.prototype.foo_prop = 'foo val';
+function bar() {}
+const proto = { bar_prop: 'bar val' };
+Object.setPrototypeOf(proto, foo.prototype);
 bar.prototype = proto;
-var inst = new bar();
+const inst = new bar();
 console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 ```
 
 ```js
 // Technique 2
-function foo(){}
-foo.prototype.foo_prop = "foo val";
-function bar(){}
-var proto;
-proto = Object.setPrototypeOf(
-  { bar_prop: "bar val" },
+function foo() {}
+foo.prototype.foo_prop = 'foo val';
+function bar() {}
+const proto = Object.setPrototypeOf(
+  { bar_prop: 'bar val' },
   foo.prototype
 );
 bar.prototype = proto;
-var inst = new bar();
+const inst = new bar();
 console.log(inst.foo_prop);
-console.log(inst.bar_prop)
+console.log(inst.bar_prop);
 ```
 
 <table class="standard-table">
@@ -560,19 +559,20 @@ console.log(inst.bar_prop)
       <th scope="row">Pro(s)</th>
       <td>
         Supported in all modern browsers. Allows the dynamic manipulation of an
-        object’s prototype and can even force a prototype on a prototype-less
+        object's prototype and can even force a prototype on a prototype-less
         object created with <code>Object.create(null)</code>.
       </td>
     </tr>
     <tr>
       <th scope="row">Con(s)</th>
       <td>
-        Ill-performing. Should be deprecated. Many browsers optimize the
-        prototype and try to guess the location of the method in memory when
-        calling an instance in advance; but setting the prototype dynamically
-        disrupts all those optimizations. It might cause some browsers to
-        recompile your code for de-optimization, to make it work according to
-        the specs. Not supported in IE8 and below.
+        Ill-performing. Should be avoided if it's possible to set the prototype
+        at object creation time. Many browsers optimize the prototype and try to
+        guess the location of the method in memory when calling an instance in
+        advance; but setting the prototype dynamically disrupts all those
+        optimizations. It might cause some browsers to recompile your code for
+        de-optimization, to make it work according to the specs. Not supported
+        in IE8 and below.
       </td>
     </tr>
   </tbody>
@@ -580,34 +580,30 @@ console.log(inst.bar_prop)
 
 #### #4: Setting the {{jsxref("Object/proto","__proto__")}} property
 
+> **Warning:** `Object.prototype.__proto__` accessors are **non-standard** and deprecated. You should almost always use `Object.setPrototypeOf` instead.
+
 ```js
 // Technique 1
-function A(){}
-A.prototype.foo_prop = "foo val";
-function bar(){}
-var proto = {
-  bar_prop: "bar val",
-  __proto__: A.prototype
-};
+function A() {}
+A.prototype.foo_prop = 'foo val';
+function bar() {}
+const proto = { bar_prop: 'bar val' };
+// DON'T USE THIS: for example only.
+proto.__proto__ = A.prototype;
 bar.prototype = proto;
-var inst = new bar();
+const inst = new bar();
 console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 ```
 
 ```js
 // Technique 2
-var inst = {
-  __proto__: {
-    bar_prop: "bar val",
-    __proto__: {
-      foo_prop: "foo val",
-      __proto__: Object.prototype
-    }
-  }
-};
+const inst = {};
+// DON'T USE THIS: for example only.
+inst.__proto__ = { bar_prop: 'bar val' };
+inst.__proto__.__proto__ = { foo_prop: 'foo val' };
 console.log(inst.foo_prop);
-console.log(inst.bar_prop)
+console.log(inst.bar_prop);
 ```
 
 <table class="standard-table">
@@ -632,7 +628,59 @@ console.log(inst.bar_prop)
         instance in advance; but setting the prototype dynamically disrupts all
         those optimizations and can even force some browsers to recompile for
         de-optimization of your code, to make it work according to the specs.
-        Not supported in IE10 and below.
+        Not supported in IE10 and below. The {{jsxref("Object/proto","__proto__")}}
+        setter is normative optional, so it may not work across all platforms.
+        You should almost always use {{jsxref("Object.setPrototypeOf")}}
+        instead.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+#### #5: Using the `__proto__` key in object initializers
+
+> **Note:** This is not to be confused with the aforementioned `Object.prototype.__proto__` accessors. `__proto__` in object literals is standardized and optimized.
+
+```js
+const inst = {
+  __proto__: {
+    bar_prop: 'bar val',
+    __proto__: {
+      foo_prop: 'foo val',
+      // This can be omitted
+      __proto__: Object.prototype
+    }
+  }
+};
+console.log(inst.foo_prop);
+console.log(inst.bar_prop);
+```
+
+<table class="standard-table">
+  <caption>
+    Pros and cons of using the <code>__proto__</code> key in <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object initializers</a>
+  </caption>
+  <tbody>
+    <tr>
+      <th scope="row">Pro(s)</th>
+      <td>
+        Supported in all modern browsers. Pointing the <code>__proto__</code>
+        key to something that is not an object only fails silently without
+        throwing an exception. Contrary to the
+        {{jsxref("Object/proto", "Object.prototype.__proto__")}} setter,
+        <code>__proto__</code> in object literal initializers is standardized
+        and optimized, and can even be more performant than
+        {{jsxref("Object.create")}}. Declaring extra own properties on the
+        object at creation is more ergonomic than
+        {{jsxref("Object.create")}}.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Con(s)</th>
+      <td>
+        Not supported in IE10 and below. Likely to be confused with
+        {{jsxref("Object/proto", "Object.prototype.__proto__")}} accessors for
+        people unaware of the difference.
       </td>
     </tr>
   </tbody>
@@ -642,24 +690,24 @@ console.log(inst.bar_prop)
 
 JavaScript is a bit confusing for developers coming from Java or C++, as it's all dynamic, all runtime, and it has no classes at all. It's all just instances (objects). Even the "classes" we simulate are just a function object.
 
-You probably already noticed that our [function A](#4_setting_the___proto___property) has a special property called `prototype`. This special property works with the JavaScript `new `operator. The reference to the prototype object is copied to the internal `[[Prototype]]` property of the new instance. For example, when you do `var a1 = new A()`, JavaScript (after creating the object in memory and before running function `A()` with `this` defined to it) sets `a1.[[Prototype]] = A.prototype`. When you then access properties of the instance, JavaScript first checks whether they exist on that object directly, and if not, it looks in `[[Prototype]]`. This means that all the stuff you define in `prototype` is effectively shared by all instances, and you can even later change parts of `prototype` and have the changes appear in all existing instances, if you wanted to.
+You probably already noticed that our [function A](#4_setting_the___proto___property) has a special property called `prototype`. This special property works with the JavaScript `new` operator. The reference to the prototype object is copied to the internal `[[Prototype]]` property of the new instance. For example, when you do `const a1 = new A()`, JavaScript (after creating the object in memory and before running function `A()` with `this` defined to it) sets `a1.[[Prototype]] = A.prototype`. When you then access properties of the instance, JavaScript first checks whether they exist on that object directly, and if not, it looks in `[[Prototype]]`. This means that all the stuff you define in `prototype` is effectively shared by all instances, and you can even later change parts of `prototype` and have the changes appear in all existing instances, if you wanted to.
 
-If, in the example above, you do `var a1 = new A(); var a2 = new A();` then `a1.doSomething` would actually refer to `Object.getPrototypeOf(a1).doSomething`, which is the same as the `A.prototype.doSomething` you defined, i.e. `Object.getPrototypeOf(a1).doSomething == Object.getPrototypeOf(a2).doSomething == A.prototype.doSomething`.
+If, in the example above, you do `const a1 = new A(); const a2 = new A();` then `a1.doSomething` would actually refer to `Object.getPrototypeOf(a1).doSomething`, which is the same as the `A.prototype.doSomething` you defined, i.e. `Object.getPrototypeOf(a1).doSomething == Object.getPrototypeOf(a2).doSomething == A.prototype.doSomething`.
 
 In short, `prototype` is for types, while `Object.getPrototypeOf()` is the same for instances.
 
-`[[Prototype]]` is looked at _recursively_, i.e. `a1.doSomething`, `Object.getPrototypeOf(a1).doSomething`, `Object.getPrototypeOf(Object.getPrototypeOf(a1)).doSomething` etc., until it's found or `Object.getPrototypeOf `returns null.
+`[[Prototype]]` is looked at _recursively_, i.e. `a1.doSomething`, `Object.getPrototypeOf(a1).doSomething`, `Object.getPrototypeOf(Object.getPrototypeOf(a1)).doSomething` etc., until it's found or `Object.getPrototypeOf` returns null.
 
 So, when you call
 
 ```js
-var o = new Foo();
+const o = new Foo();
 ```
 
 JavaScript actually just does
 
 ```js
-var o = new Object();
+const o = new Object();
 o.[[Prototype]] = Foo.prototype;
 Foo.call(o);
 ```

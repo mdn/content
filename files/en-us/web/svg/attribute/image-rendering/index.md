@@ -17,7 +17,7 @@ The resampling is always done in a truecolor (e.g., 24-bit) color space even if 
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("image")}}
+- {{SVGElement("image")}}
 
 ## Usage notes
 
@@ -41,47 +41,16 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `auto`
-    *   : Indicates that the user agent shall make appropriate tradeoffs to balance speed and quality, but quality shall be given more importance than speed.
-*   `optimizeSpeed`
-    *   : Indicates that the user agent shall emphasize rendering speed over quality.
-*   `optimizeQuality`
-    *   : Indicates that the user agent shall emphasize quality over rendering speed.
+- `auto`
+  - : Indicates that the user agent shall make appropriate tradeoffs to balance speed and quality, but quality shall be given more importance than speed.
+- `optimizeSpeed`
+  - : Indicates that the user agent shall emphasize rendering speed over quality.
+- `optimizeQuality`
+  - : Indicates that the user agent shall emphasize quality over rendering speed.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("CSS3 Images", "#the-image-rendering", "image-rendering")}}
-      </td>
-      <td>{{Spec2("CSS3 Images")}}</td>
-      <td>Definition in CSS</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "painting.html#ImageRenderingProperty", "image-rendering")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>No significant change, only added a reference to CSS Images 3</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "painting.html#ImageRenderingProperty", "image-rendering")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -89,4 +58,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   {{cssxref("image-rendering", "CSS image-rendering")}}
+- {{cssxref("image-rendering", "CSS image-rendering")}}

@@ -1,6 +1,7 @@
 ---
 title: FontFace.status
 slug: Web/API/FontFace/status
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Font Loading API
@@ -19,13 +20,7 @@ The **`status`** read-only property of the
 the font, one of `"unloaded"`, `"loading"`, `"loaded"`,
 or `"error"`.
 
-## Syntax
-
-```js
-let status = FontFace.status;
-```
-
-### Value
+## Value
 
 One of `"unloaded"`, `"loading"`, `"loaded"`, or
 `"error"`.

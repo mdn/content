@@ -14,8 +14,8 @@ browser-compat: javascript.operators.async_function
 The **`async function`** keyword can be used to define
 `async` functions inside expressions.
 
-You can also define async functions using an [async
-function statement](/en-US/docs/Web/JavaScript/Reference/Statements/async_function "The async function keyword can be used to define async functions inside expressions.").
+You can also define async functions using an
+[async function statement](/en-US/docs/Web/JavaScript/Reference/Statements/async_function).
 
 ## Syntax
 
@@ -25,7 +25,7 @@ async function [name]([param1[, param2[, ..., paramN]]]) {
 }
 ```
 
-As of ES2015, you can also use [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+As of ES2015, you can also use [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Parameters
 
@@ -39,7 +39,7 @@ As of ES2015, you can also use [arrow functions](/en-US/docs/Web/JavaScript/Re
 
 ## Description
 
-An `async function` expression is very similar to, and has almost the same syntax as, an {{jsxref('Statements/async_function', 'async function statement')}}. The main difference between an async `function` expression and an async `function` statement is the _function name_, which can be omitted in `async function` expressions to create _anonymous_ functions. An `async function` expression can be used as an [IIFE](/en-US/docs/Glossary/IIFE) (Immediately Invoked Function Expression) which runs as soon as it is defined. See also the chapter about [functions](/en-US/docs/Web/JavaScript/Reference/Functions) for more information.
+An `async function` expression is very similar to, and has almost the same syntax as, an {{jsxref('Statements/async_function', 'async function statement')}}. The main difference between an async `function` expression and an async `function` statement is the _function name_, which can be omitted in `async function` expressions to create _anonymous_ functions. An `async function` expression can be used as an [IIFE](/en-US/docs/Glossary/IIFE) (Immediately Invoked Function Expression) which runs as soon as it is defined. See also the chapter about [functions](/en-US/docs/Web/JavaScript/Reference/Functions) for more information.
 
 ## Examples
 

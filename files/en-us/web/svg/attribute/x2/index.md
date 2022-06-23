@@ -4,6 +4,9 @@ slug: Web/SVG/Attribute/x2
 tags:
   - SVG
   - SVG Attribute
+spec-urls:
+  - https://svgwg.org/svg2-draft/shapes.html#LineElementX2Attribute
+  - https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementX2Attribute
 ---
 {{SVGRef}}
 
@@ -11,8 +14,8 @@ The **`x2`** attribute is used to specify the second x-coordinate for drawing an
 
 You can use this attribute with the following SVG elements:
 
-*   {{ SVGElement("line") }}
-*   {{ SVGElement("linearGradient") }}
+- {{ SVGElement("line") }}
+- {{ SVGElement("linearGradient") }}
 
 ## Example
 
@@ -22,9 +25,9 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-  <line x1="5" x2="1" y1="1" y2="9" stroke="red" />
-  <line x1="5" x2="5" y1="1" y2="9" stroke="green" />
-  <line x1="5" x2="9" y1="1" y2="9" stroke="blue" />
+  <line x1="5" x2="1" y1="1" y2="9" stroke="red" />
+  <line x1="5" x2="5" y1="1" y2="9" stroke="green" />
+  <line x1="5" x2="9" y1="1" y2="9" stroke="blue" />
 </svg>
 ```
 
@@ -50,6 +53,12 @@ For {{SVGElement('line')}}, `x2` defines the x coordinate of the ending point of
             >&#x3C;percentage></a
           ></strong
         >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -69,9 +78,9 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-  <line x1="5" x2="1" y1="1" y2="9" stroke="red"   />
-  <line x1="5" x2="5" y1="1" y2="9" stroke="green" />
-  <line x1="5" x2="9" y1="1" y2="9" stroke="blue"  />
+  <line x1="5" x2="1" y1="1" y2="9" stroke="red"   />
+  <line x1="5" x2="5" y1="1" y2="9" stroke="green" />
+  <line x1="5" x2="9" y1="1" y2="9" stroke="blue"  />
 </svg>
 ```
 
@@ -79,7 +88,7 @@ html,body,svg { height:100% }
 
 ## linearGradient
 
-For {{SVGElement('linearGradient')}}, `x2` defines the  x coordinate of the ending point of the *gradient vector* used to map the gradient stop values. The exact behavior of this attribute is influenced by the {{SVGAttr('gradientUnits')}} attributes
+For {{SVGElement('linearGradient')}}, `x2` defines the x coordinate of the ending point of the *gradient vector* used to map the gradient stop values. The exact behavior of this attribute is influenced by the {{SVGAttr('gradientUnits')}} attributes
 
 <table class="properties">
   <tbody>
@@ -95,6 +104,12 @@ For {{SVGElement('linearGradient')}}, `x2` defines the  x coordinate of the end
         <strong
           ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
           ></strong
         >
       </td>
@@ -120,23 +135,23 @@ html,body,svg { height:100% }
   By default the gradient vector end at the right
   bounding limit of the shape it is applied to
   -->
-  <linearGradient x2="100%" id="g0">
-    <stop offset="0"    stop-color="black"  />
-    <stop offset="100%" stop-color="red" />
-  </linearGradient>
+  <linearGradient x2="100%" id="g0">
+    <stop offset="0"    stop-color="black" />
+    <stop offset="100%" stop-color="red" />
+  </linearGradient>
 
-  <rect x="1"  y="1" width="8" height="8" fill="url(#g0)" />
+  <rect x="1"  y="1" width="8" height="8" fill="url(#g0)" />
 
   <!--
   Here the gradient vector start at 20% of the left
   bounding limit of the shape it is applied to
   -->
-  <linearGradient x2="20%" id="g1">
-    <stop offset="0"    stop-color="black"  />
-    <stop offset="100%" stop-color="red" />
-  </linearGradient>
+  <linearGradient x2="20%" id="g1">
+    <stop offset="0"    stop-color="black" />
+    <stop offset="100%" stop-color="red" />
+  </linearGradient>
 
-  <rect x="11" y="1" width="8" height="8" fill="url(#g1)" />
+  <rect x="11" y="1" width="8" height="8" fill="url(#g1)" />
 </svg>
 ```
 
@@ -144,42 +159,4 @@ html,body,svg { height:100% }
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "shapes.html#LineElementX2Attribute", "x2")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for <code>&#x3C;line></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "pservers.html#LinearGradientElementX2Attribute", "x2")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for <code>&#x3C;linearGradient></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "shapes.html#LineElementX2Attribute", "x2")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;line></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "pservers.html#LinearGradientElementX2Attribute", "x2")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;linearGradient></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

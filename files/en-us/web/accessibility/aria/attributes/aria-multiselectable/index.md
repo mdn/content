@@ -1,13 +1,14 @@
 ---
 title: 'aria-multiselectable'
 slug: Web/Accessibility/ARIA/Attributes/aria-multiselectable
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-multiselectable
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-multiselectable
 ---
 
 The `aria-multiselectable` attribute indicates that the user may select more than one item from the current selectable descendants.
@@ -98,7 +99,7 @@ If a tree, grid, tab list, or list box supports selection of more than one node,
 </ul>
 ```
 
-This listbox supports multiple selection so we set the element with role `listbox` with `aria-multiselectable="true"`. All selected options have `aria-selected` set to `true`. All options that are not selected but are selectable have `aria-selected` set to false. Had we included options that were disabled or otherwise not selectable, we would have omitted the `aria-selected` attribute altogether. Including the attribute, even with no value or explcitly set to `false` indicates to assistive technology users that the item is selectable.
+This listbox supports multiple selection so we set the element with role `listbox` with `aria-multiselectable="true"`. All selected options have `aria-selected` set to `true`. All options that are not selected but are selectable have `aria-selected` set to false. Had we included options that were disabled or otherwise not selectable, we would have omitted the `aria-selected` attribute altogether. Including the attribute, even with no value or explicitly set to `false` indicates to assistive technology users that the item is selectable.
 
 The first rule of ARIA use is "if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so."  Instead of creating an unordered list requiring {{htmlattrxref("tabindex")}}, ARIA and JavaScript to turn text into selectable options, we could have used a native multiselect: the {{htmlelement('select')}} element has a Boolean {{htmlattrxref('multiple', 'select')}} attribute. If included, the user can select multiple options. If not, only a single option can be selected.
 
@@ -122,9 +123,9 @@ The first rule of ARIA use is "if you can use a native feature with the semantic
 </select>
 ```
 
-This HTML `<select>` version is accessibile and interactive, and needs no ARIA or JavaScript to function.
+This HTML `<select>` version is accessible and interactive, and needs no ARIA or JavaScript to function.
 
-If the above isn't styleable to your liking, you can also create a list of selectable options with HTML checkboxes, which is also semantic, focusable, and infinitely stylable with CSS:
+If the above isn't stylable to your liking, you can also create a list of selectable options with HTML checkboxes, which is also semantic, focusable, and infinitely stylable with CSS:
 
 ```html
 <fieldset>
@@ -170,7 +171,7 @@ If the above isn't styleable to your liking, you can also create a list of selec
 </fieldset>
 ```
 
-Instead of `aria-selected="true"`, include the [`checked`](en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute. The browser does the rest.
+Instead of `aria-selected="true"`, include the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute. The browser does the rest.
 
 ## Values
 
@@ -183,9 +184,9 @@ Instead of `aria-selected="true"`, include the [`checked`](en-US/docs/Web/HTML/E
 ## ARIAMixin API
 
 - {{domxref("Element.ariaMultiSelectable")}}
-  - : The  [`ariaMultiSelectable`](/en-US/docs/Web/API/Element/ariaMultiSelectable) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-multiselectable` attribute.
+  - : The [`ariaMultiSelectable`](/en-US/docs/Web/API/Element/ariaMultiSelectable) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-multiselectable` attribute.
 - {{domxref("ElementInternals.ariaMultiSelectable")}}
-  - : The  [`ariaMultiSelectable`](/en-US/docs/Web/API/ElementInternals/ariaMultiSelectable) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-multiselectable` attribute.
+  - : The [`ariaMultiSelectable`](/en-US/docs/Web/API/ElementInternals/ariaMultiSelectable) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-multiselectable` attribute.
 
 ## Associated roles
 
@@ -202,9 +203,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-multiselectable","ARIA: aria-multiselectable Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

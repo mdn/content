@@ -1,6 +1,7 @@
 ---
 title: SVGTSpanElement
 slug: Web/API/SVGTSpanElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGTSpanElement
 
 The **`SVGTSpanElement`** interface represents a {{SVGElement("tspan")}} element.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

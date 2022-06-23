@@ -1,6 +1,7 @@
 ---
 title: CSSTransformComponent.toMatrix()
 slug: Web/API/CSSTransformComponent/toMatrix
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -25,12 +26,12 @@ All transform functions can be represented mathematically as a 4x4 transformatio
 ## Syntax
 
 ```js
-var matrix = CSSTransformComponent.toMatrix();
+toMatrix()
 ```
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 

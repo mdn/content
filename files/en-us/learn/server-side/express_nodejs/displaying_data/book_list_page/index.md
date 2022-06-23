@@ -56,15 +56,15 @@ block content
       li There are no books.
 ```
 
-The view extends the **layout.pug** base template and overrides the `block` named '**content**'. It displays the `title` we passed in from the controller (via the `render()` method) and iterates through the `book_list` variable using the `each`-`in`-`else` syntax. A list item is created for each book displaying the book title as a link to the book's detail page followed by the author name. If there are no books in the `book_list` then the `else` clause is executed, and displays the text 'There are no books.'
+The view extends the **layout.pug** base template and overrides the `block` named '**content**'. It displays the `title` we passed in from the controller (via the `render()` method) and iterates through the `book_list` variable using the `each`-`in`-`else` syntax. A list item is created for each book displaying the book title as a link to the book's detail page followed by the author name. If there are no books in the `book_list` then the `else` clause is executed, and displays the text 'There are no books.'
 
 > **Note:** We use `book.url` to provide the link to the detail record for each book (we've implemented this route, but not the page yet). This is a virtual property of the `Book` model which uses the model instance's `_id` field to produce a unique URL path.
 
-Of interest here is that each book is defined as two lines, using the pipe for the second line. This approach is needed because if the author name were on the previous line then it would be part of the hyperlink.
+Of interest here is that each book is defined as two lines, using the pipe for the second line. This approach is needed because if the author name were on the previous line then it would be part of the hyperlink.
 
 ## What does it look like?
 
-Run the application (see [Testing the routes](/en-US/docs/Learn/Server-side/Express_Nodejs/routes#testing_the_routes) for the relevant commands) and open your browser to <http://localhost:3000/>. Then select the _All books_ link. If everything is set up correctly, your site should look something like the following screenshot.
+Run the application (see [Testing the routes](/en-US/docs/Learn/Server-side/Express_Nodejs/routes#testing_the_routes) for the relevant commands) and open your browser to `http://localhost:3000/`. Then select the _All books_ link. If everything is set up correctly, your site should look something like the following screenshot.
 
 ![Book List Page - Express Local Library site](new_book_list.png)
 

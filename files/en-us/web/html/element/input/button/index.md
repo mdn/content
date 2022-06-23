@@ -11,7 +11,7 @@ tags:
   - Input Type
   - Reference
   - button
-browser-compat: html.elements.input.input-button
+browser-compat: html.elements.input.type_button
 ---
 
 {{HTMLRef("Input_types")}}
@@ -20,13 +20,13 @@ browser-compat: html.elements.input.input-button
 
 {{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
 
-> **Note:** While `<input>` elements of type `button` are still perfectly valid HTML, the newer {{HTMLElement("button")}} element is now the favored way to create buttons. Given that a {{HTMLElement("button")}}’s label text is inserted between the opening and closing tags, you can include HTML in the label, even images.
+> **Note:** While `<input>` elements of type `button` are still perfectly valid HTML, the newer {{HTMLElement("button")}} element is now the favored way to create buttons. Given that a {{HTMLElement("button")}}'s label text is inserted between the opening and closing tags, you can include HTML in the label, even images.
 
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
-      <td>A {{domxref("DOMString")}} used as the button's label</td>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>A string used as the button's label</td>
     </tr>
     <tr>
       <td><strong>Events</strong></td>
@@ -44,6 +44,10 @@ browser-compat: html.elements.input.input-button
       <td><code>value</code></td>
     </tr>
     <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>Methods</strong></td>
       <td>None</td>
     </tr>
@@ -54,7 +58,7 @@ browser-compat: html.elements.input.input-button
 
 ### Button with a value
 
-An `<input type="button">` elements' {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that is used as the button's label.
+An `<input type="button">` elements' {{htmlattrxref("value", "input")}} attribute contains a string that is used as the button's label.
 
 ```html
 <input type="button" value="Click Me">
@@ -74,7 +78,7 @@ If you don't specify a `value`, you get an empty button:
 
 ## Using buttons
 
-`<input type="button">` elements have no default behavior (their cousins,` <input type="submit">` and [`<input type="reset">`](/en-US/docs/Web/HTML/Element/input/reset) are used to submit and reset forms, respectively). To make buttons do anything, you have to write JavaScript code to do the work.
+`<input type="button">` elements have no default behavior (their cousins, `<input type="submit">` and [`<input type="reset">`](/en-US/docs/Web/HTML/Element/input/reset) are used to submit and reset forms, respectively). To make buttons do anything, you have to write JavaScript code to do the work.
 
 ### A simple button
 
@@ -94,17 +98,17 @@ const paragraph = document.querySelector('p');
 button.addEventListener('click', updateButton);
 
 function updateButton() {
-  if (button.value === 'Start machine') {
-    button.value = 'Stop machine';
-    paragraph.textContent = 'The machine has started!';
-  } else {
-    button.value = 'Start machine';
-    paragraph.textContent = 'The machine is stopped.';
-  }
+  if (button.value === 'Start machine') {
+    button.value = 'Stop machine';
+    paragraph.textContent = 'The machine has started!';
+  } else {
+    button.value = 'Start machine';
+    paragraph.textContent = 'The machine is stopped.';
+  }
 }
 ```
 
-The script gets a reference to the {{domxref("HTMLInputElement")}} object representing the `<input>` in the DOM, saving this refence in the variable `button`. {{domxref("EventTarget.addEventListener", "addEventListener()")}} is then used to establish a function that will be run when {{event("click")}} events occur on the button.
+The script gets a reference to the {{domxref("HTMLInputElement")}} object representing the `<input>` in the DOM, saving this reference in the variable `button`. {{domxref("EventTarget.addEventListener", "addEventListener()")}} is then used to establish a function that will be run when {{event("click")}} events occur on the button.
 
 {{EmbedLiveSample("A_simple_button", 650, 100)}}
 
@@ -128,19 +132,19 @@ const paragraph = document.querySelector('p');
 button.addEventListener('click', updateButton);
 
 function updateButton() {
-  if (button.value === 'Start machine') {
-    button.value = 'Stop machine';
-    paragraph.textContent = 'The machine has started!';
-  } else {
-    button.value = 'Start machine';
-    paragraph.textContent = 'The machine is stopped.';
-  }
+  if (button.value === 'Start machine') {
+    button.value = 'Stop machine';
+    paragraph.textContent = 'The machine has started!';
+  } else {
+    button.value = 'Start machine';
+    paragraph.textContent = 'The machine is stopped.';
+  }
 }
 ```
 
 {{EmbedLiveSample("Adding_keyboard_shortcuts_to_buttons", 650, 100)}}
 
-> **Note:** The problem with the above example of course is that the user will not know what the access key is! In a real site, you'd have to provide this information in a way that doesn't intefere with the site design (for example by providing an easily accessible link that points to information on what the site accesskeys are).
+> **Note:** The problem with the above example of course is that the user will not know what the access key is! In a real site, you'd have to provide this information in a way that doesn't interfere with the site design (for example by providing an easily accessible link that points to information on what the site accesskeys are).
 
 ### Disabling and enabling a button
 
@@ -164,12 +168,12 @@ const button = document.querySelector('input');
 button.addEventListener('click', disableButton);
 
 function disableButton() {
-  button.disabled = true;
-  button.value = 'Disabled';
-  window.setTimeout(function() {
-    button.disabled = false;
-    button.value = 'Enabled';
-  }, 2000);
+  button.disabled = true;
+  button.value = 'Disabled';
+  window.setTimeout(function() {
+    button.disabled = false;
+    button.value = 'Enabled';
+  }, 2000);
 }
 ```
 
@@ -230,13 +234,13 @@ The below example shows a very simple drawing app created using a {{htmlelement(
 
 ```css hidden
 body {
-  background: #ccc;
+  background: #ccc;
   margin: 0;
   overflow: hidden;
 }
 
 .toolbar {
-  background: #ccc;
+  background: #ccc;
   width: 150px;
   height: 75px;
   padding: 5px;

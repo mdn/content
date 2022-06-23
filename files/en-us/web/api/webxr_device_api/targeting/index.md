@@ -1,6 +1,7 @@
 ---
 title: Targeting and hit detection
 slug: Web/API/WebXR_Device_API/Targeting
+page-type: guide
 tags:
   - Draft
 ---
@@ -14,7 +15,7 @@ It's possible—or even likely—that whatever 3D graphics engine you're using o
 
 ### Simplified representative objects
 
-One common solution is to overlay simplified, invisible objects atop the objects in your scene. These objects then serve a s. For instance, if you have a more-or-less rectangular object, use a rectangle as a surrogate for the object when performing hit testing. Likewise, if an object is essentially round, use the radius of the minimum enclosing circle to establish a colision test object.
+One common solution is to overlay simplified, invisible objects atop the objects in your scene. These objects then serve a s. For instance, if you have a more-or-less rectangular object, use a rectangle as a surrogate for the object when performing hit testing. Likewise, if an object is essentially round, use the radius of the minimum enclosing circle to establish a collision test object.
 
 ## Real-world hit testing
 

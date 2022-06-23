@@ -48,14 +48,14 @@ The MDN [HTTP header reference](/en-US/docs/Web/HTTP/Headers) documents HTTP hea
   - A specification section listing relevant RFC standard documents.
   - A "See also" section listing relevant resources.
 
-## Step 4a –  add tags to the page
+## Step 4a –  add tags to the page
 
 All HTTP header pages should at least have these tags: "HTTP", "Header", "Reference".
 
 ## Step 5 – add browser compatibility information
 
 - If you have looked at other HTTP header pages, you will see that there is a \\{{compat}} macro that will fill in a browser table for you.
-- The compatibility table page is generated from structured data. If you’d like to contribute to the data, please check out <https://github.com/mdn/browser-compat-data/README.md> and send us a pull request.
+- The compatibility table page is generated from structured data. If you'd like to contribute to the data, please check out <https://github.com/mdn/browser-compat-data/README.md> and send us a pull request.
 
 ## Step 6 – add the header to the HTTP header list
 

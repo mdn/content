@@ -1,6 +1,7 @@
 ---
 title: SVGPatternElement
 slug: Web/API/SVGPatternElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGPatternElement
 
 The **`SVGPatternElement`** interface corresponds to the {{SVGElement("pattern")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

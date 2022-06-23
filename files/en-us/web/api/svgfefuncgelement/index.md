@@ -1,6 +1,7 @@
 ---
 title: SVGFEFuncGElement
 slug: Web/API/SVGFEFuncGElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGFEFuncGElement
 
 The **`SVGFEFuncGElement`** interface corresponds to the {{SVGElement("feFuncG")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

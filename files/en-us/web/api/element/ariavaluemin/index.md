@@ -1,6 +1,7 @@
 ---
 title: Element.ariaValueMin
 slug: Web/API/Element/ariaValueMin
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,16 +16,9 @@ browser-compat: api.Element.ariaValueMin
 
 The **`ariaValueMin`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) attribute, which defines the minimum allowed value for a range widget.
 
-## Syntax
+## Value
 
-```js
-var ariaValueMin = element.ariaValueMin;
-element.ariaValueMin = ariaValueMin
-```
-
-### Value
-
-A {{domxref("DOMString")}} which contains a number.
+A string which contains a number.
 
 ## Examples
 
@@ -33,7 +27,7 @@ In this example the `aria-valuemin` attribute on the element with an ID of `slid
 ```html
 <div role="slider" aria-valuenow="1"
   aria-valuemin="1" aria-valuemax="7"
-	aria-valuetext="Sunday">
+  aria-valuetext="Sunday">
 ```
 
 ```js

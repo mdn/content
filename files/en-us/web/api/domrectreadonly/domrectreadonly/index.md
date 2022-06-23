@@ -1,18 +1,17 @@
 ---
 title: DOMRectReadOnly()
 slug: Web/API/DOMRectReadOnly/DOMRectReadOnly
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
   - DOM
-  - DOM Reference
   - DOMRectReadOnly
-  - Experimental
   - Geometry
   - Reference
 browser-compat: api.DOMRectReadOnly.DOMRectReadOnly
 ---
-{{APIRef("DOM")}}{{ SeeCompatTable }}
+{{APIRef("Geometry Interfaces")}}
 
 The **`DOMRectReadOnly()`** constructor creates a new
 {{domxref("DOMRectReadOnly")}} object.
@@ -20,20 +19,20 @@ The **`DOMRectReadOnly()`** constructor creates a new
 ## Syntax
 
 ```js
-const myDOMRectReadOnly = new DOMRectReadOnly(x, y, width, height)
+new DOMRectReadOnly(x, y, width, height)
 ```
 
 ### Parameters
 
-- _x_
+- `x`
   - : The `x` coordinate of the `DOMRectReadOnly`'s
     origin.
-- _y_
+- `y`
   - : The `y` coordinate of the `DOMRectReadOnly`'s
     origin.
-- _width_
+- `width`
   - : The width of the `DOMRectReadOnly`.
-- _height_
+- `height`
   - : The height of the `DOMRectReadOnly`.
 
 ## Examples

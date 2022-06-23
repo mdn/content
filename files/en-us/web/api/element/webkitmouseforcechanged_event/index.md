@@ -1,6 +1,7 @@
 ---
 title: 'Element: webkitmouseforcechanged event'
 slug: Web/API/Element/webkitmouseforcechanged_event
+page-type: web-api-event
 tags:
   - Event
   - Force Touch
@@ -46,7 +47,7 @@ This event first fires after the {{event("mousedown")}} event and stops firing b
 
 ## Specifications
 
-_Not part of any specification._ Apple has [a description at the Mac Developer Library](https://developer.apple.com/library/prerelease/mac/documentation/AppleApplications/Conceptual/SafariJSProgTopics/RespondingtoForceTouchEventsfromJavaScript.html).
+_Not part of any specification._ Apple has [a description at the Mac Developer Library](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/SafariJSProgTopics/RespondingtoForceTouchEventsfromJavaScript.html).
 
 ## Browser compatibility
 

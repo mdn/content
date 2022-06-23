@@ -1,6 +1,7 @@
 ---
 title: Window.showModalDialog()
 slug: Web/API/Window/showModalDialog
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -21,19 +22,21 @@ created and displayed a modal dialog box containing a specified HTML document.
 ## Syntax
 
 ```js
-returnVal = window.showModalDialog(uri[, arguments][, options]);
+showModalDialog(uri)
+showModalDialog(uri, arguments)
+showModalDialog(uri, arguments, options)
 ```
 
-- `returnVal` holds the `returnValue` property as set by the
-  document specified by `uri`.
-- `uri` is the URL of the document to display in the dialog.
-- `arguments` is an optional variant containing values passed to the
-  dialog; these are made available in the
-  [`window`](/en-US/docs/Web/API/Window) object's
-  [`window.dialogArguments`](/en-US/docs/Web/API/Window/dialogArguments)
-  property.
-- `options` is an optional string specifying window ornamentation for the
-  dialog, using one or more semicolon delimited values:
+### Parameters
+
+- `uri`
+  - : Is the URL of the document to display in the dialog.
+- `arguments` {{optional_inline}}
+  - : Values passed to the dialog.
+    property.
+- `options` {{optional_inline}}
+  - : A string specifying window ornamentation for the
+    dialog, using one or more semicolon delimited values:
 
 <table class="no-markdown">
   <tbody>
@@ -93,6 +96,10 @@ returnVal = window.showModalDialog(uri[, arguments][, options]);
 
 > **Note:** Firefox does not implement the `dialogHide`, `edge`, `status`, or `unadorned` arguments.
 
+### Return value
+
+ Holds the `returnValue` property as set by the document specified by `uri`.
+
 ## Notes
 
 `showModalDialog()` was briefly standardized as part of HTML5. The third
@@ -100,8 +107,7 @@ argument for additional options was not present in the HTML5 version.
 
 ## Specifications
 
-- [MSDN page
-  for `showModalDialog`](<https://msdn.microsoft.com/en-us/library/ms536759(VS.85).aspx>)
+- [MSDN page for `showModalDialog`](<https://msdn.microsoft.com/library/ms536759(VS.85).aspx>)
 
 ## Browser compatibility
 

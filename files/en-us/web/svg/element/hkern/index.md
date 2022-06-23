@@ -22,17 +22,17 @@ The **`<hkern>`** [SVG](/en-US/docs/Web/SVG) element allows to fine-tweak the ho
 
 ### Global attributes
 
-*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
 
 ### Specific attributes
 
-*   {{SVGAttr("u1")}}
-*   {{SVGAttr("g1")}}
-*   {{SVGAttr("u2")}}
-*   {{SVGAttr("g2")}}
-*   {{SVGAttr("k")}}
+- {{SVGAttr("u1")}}
+- {{SVGAttr("g1")}}
+- {{SVGAttr("u2")}}
+- {{SVGAttr("g2")}}
+- {{SVGAttr("k")}}
 
-## DOM Interface
+## DOM Interface
 
 This element implements the {{domxref("SVGHKernElement")}} interface.
 
@@ -46,7 +46,7 @@ This element implements the {{domxref("SVGHKernElement")}} interface.
 
 ## See also
 
-*   {{SVGElement("font")}}
-*   {{SVGElement("glyph")}}
-*   {{SVGElement("vkern")}}
-*   [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts)
+- {{SVGElement("font")}}
+- {{SVGElement("glyph")}}
+- {{SVGElement("vkern")}}
+- [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts)

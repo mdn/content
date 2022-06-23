@@ -1,6 +1,7 @@
 ---
 title: Node.getRootNode()
 slug: Web/API/Node/getRootNode
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -25,7 +26,7 @@ getRootNode(options);
 
   - : An object that sets options for getting the root node. The available options are:
 
-    - `composed`: A {{jsxref('Boolean')}} that indicates whether the shadow
+    - `composed`: A boolean value that indicates whether the shadow
       root should be returned (`false`, the default), or a root node beyond
       shadow root (`true`).
 

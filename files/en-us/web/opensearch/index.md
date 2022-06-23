@@ -16,7 +16,9 @@ The **[OpenSearch description format](https://github.com/dewitt/opensearch)** le
 
 Firefox also supports additional features not in the OpenSearch standard, such as search suggestions and the `<SearchForm>` element. This article focuses on creating OpenSearch-compatible search plugins that support these additional Firefox features.
 
-OpenSearch description files can be advertised as described in [Autodiscovery of search plugins](#autodiscovery_of_search_plugins), and can be installed programmatically as described in [Adding search engines from web pages](/en-US/docs/Web/OpenSearch).
+OpenSearch description files can be advertised as described in [Autodiscovery of search plugins](#autodiscovery_of_search_plugins), and can be installed programmatically.
+
+> **Warning:** OpenSearch plugins can't be uploaded anymore on [addons.mozilla.org](https://addons.mozilla.org) (AMO). Search engine feature must use WebExtension API with [chrome settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides) in `manifest.json` file.
 
 ## OpenSearch description file
 
@@ -29,11 +31,7 @@ The XML file that describes a search engine follows the basic template below. Se
   <Description>[Search engine full name and summary]</Description>
   <InputEncoding>[UTF-8]</InputEncoding>
   <Image width="16" height="16" type="image/x-icon">[https://example.com/favicon.ico]</Image>
-  <Url type="text/html" template="[searchURL]">
-    <Param name="[key name]" value="{searchTerms}"/>
-    <!-- other Params if you need them… -->
-    <Param name="[other key name]" value="[parameter value]"/>
-  </Url>
+  <Url type="text/html" template="[searchURL]"/>
   <Url type="application/x-suggestions+json" template="[suggestionURL]"/>
   <moz:SearchForm>[https://example.com/search]</moz:SearchForm>
 </OpenSearchDescription>
@@ -47,9 +45,9 @@ The XML file that describes a search engine follows the basic template below. Se
   - : The [character encoding](/en-US/docs/Glossary/character_encoding) to use when submitting input to the search engine.
 - Image
 
-  - : URI of an icon for the search engine. When possible, include a 16×16 image of type `image/x-icon` (such as `/favicon.ico`) and a 64×64 image of type `image/jpeg` or `image/png`.
+  - : URL of an icon for the search engine. When possible, include a 16×16 image of type `image/x-icon` (such as `/favicon.ico`) and a 64×64 image of type `image/jpeg` or `image/png`.
 
-    The URI may also use the [`data:` URI scheme](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs). (You can generate a `data:` URI from an icon file at [The `data:` URI kitchen](https://software.hixie.ch/utilities/cgi/data/data).)
+    The URL may also use the [`data:` URL scheme](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs). (You can generate a `data:` URL from an icon file at [The `data:` URL kitchen](https://software.hixie.ch/utilities/cgi/data/data).)
 
     ```xml
     <Image height="16" width="16" type="image/x-icon">https://example.com/favicon.ico</Image>
@@ -57,9 +55,9 @@ The XML file that describes a search engine follows the basic template below. Se
     <Image height="16" width="16">data:image/x-icon;base64,AAABAAEAEBAAA … DAAA=</Image>
     ```
 
-    Firefox caches the icon as a [base64](https://en.wikipedia.org/wiki/Base64) `data:` URI (search plug-ins are stored in the [profile](/en-US/docs/Mozilla/Profile_Manager)'s `searchplugins/` folder). `http:` and `https:` URLs are converted to `data:` URIs when this is done.
+    Firefox caches the icon as a [base64](https://en.wikipedia.org/wiki/Base64) `data:` URL (search plug-ins are stored in the [profile](/en-US/docs/Mozilla/Profile_Manager)'s `searchplugins/` folder). `http:` and `https:` URLs are converted to `data:` URLs when this is done.
 
-    > **Note:** For icons loaded remotely (that is, from `https://` URIs as opposed to `data:` URIs), Firefox will reject icons larger than **10 kilobytes**.
+    > **Note:** For icons loaded remotely (that is, from `https://` URLs as opposed to `data:` URLs), Firefox will reject icons larger than **10 kilobytes**.
 
     ![Search suggestions from Google displayed in Firefox's search box](searchsuggestionsample.png)
 
@@ -77,8 +75,6 @@ The XML file that describes a search engine follows the basic template below. Se
 
     For search suggestions, the `application/x-suggestions+json` URL template is used to fetch a suggestion list in [JSON](/en-US/docs/Glossary/JSON) format. For details on how to implement search suggestion support on a server, see [Supporting search suggestions in search plugins](/en-US/docs/Archive/Add-ons/Supporting_search_suggestions_in_search_plugins).
 
-- Param
-  - : The parameters that must be passed in along with the search query as key/value pairs. When specifying values, you can use `{searchTerms}` to insert the search terms entered by the user in the search bar.
 - moz:SearchForm
 
   - : The URL for the site's search initiation page for the plugin. This lets Firefox users visit the web site, and search from the site directly.
@@ -149,7 +145,7 @@ In addition, the search plugin service provides a logging mechanism that may be 
 
 - [OpenSearch Documentation](https://github.com/dewitt/opensearch)
 - [Safari 8.0 Release Notes: Quick Website Search](https://developer.apple.com/library/archive/releasenotes/General/WhatsNewInSafari/Articles/Safari_8_0.html)
-- [Microsoft Edge Dev Guide: Search provider discovery](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/browser-features/search-provider-discovery)
-- [The Chromium Projects: Tab to Search](https://www.chromium.org/tab-to-search)
+- [Microsoft Edge Dev Guide: Search provider discovery](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/)
+- [The Chromium Projects: Tab to Search](https://www.chromium.org/tab-to-search/)
 - imdb.com has a [working `osd.xml`](https://m.media-amazon.com/images/G/01/imdb/images/imdbsearch-3349468880._CB470047351_.xml)
-- [Ready2Search](https://ready.to/search/en) - create OpenSearch plugins. [Customized Search through Ready2Search](https://ready.to/search/make/en_make_plugin.htm)
+- [Ready2Search](https://ready.to/search/en/) - create OpenSearch plugins. [Customized Search through Ready2Search](https://ready.to/search/make/en_make_plugin.htm)

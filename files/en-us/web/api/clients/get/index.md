@@ -1,6 +1,7 @@
 ---
 title: Clients.get()
 slug: Web/API/Clients/get
+page-type: web-api-instance-method
 tags:
   - API
   - Clients
@@ -20,15 +21,13 @@ The **`get()`** method of the
 ## Syntax
 
 ```js
-self.clients.get(id).then(function(client) {
-  // do something with your returned client
-});
+get(id)
 ```
 
 ### Parameters
 
 - `id`
-  - : A {{domxref("DOMString")}} representing the id of the client you want to get.
+  - : A string representing the id of the client you want to get.
 
 ### Return value
 

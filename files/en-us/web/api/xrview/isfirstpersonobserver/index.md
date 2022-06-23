@@ -1,6 +1,7 @@
 ---
 title: XRView.isFirstPersonObserver
 slug: Web/API/XRView/isFirstPersonObserver
+page-type: web-api-instance-property
 tags:
   - API
   - AR

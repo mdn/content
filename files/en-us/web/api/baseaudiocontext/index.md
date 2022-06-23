@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext
 slug: Web/API/BaseAudioContext
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -35,17 +36,17 @@ A `BaseAudioContext` can be a target of events, therefore it implements the {{do
 - {{domxref("BaseAudioContext.state")}} {{readonlyInline}}
   - : Returns the current state of the `AudioContext`.
 
-### Event handlers
+### Events
 
-- {{domxref("BaseAudioContext.onstatechange")}}
-  - : An event handler that runs when an event of type {{event("statechange")}} has fired. This occurs when the `AudioContext`'s state changes, due to the calling of one of the state change methods ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, or {{domxref("AudioContext.close")}}).
+- {{domxref("BaseAudioContext.statechange_event", "statechange")}}
+  - : Fired when the `AudioContext`'s state changes due to the calling of one of the state change methods ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, or {{domxref("AudioContext.close")}}).
 
 ## Methods
 
 _Also implements methods from the interface_ {{domxref("EventTarget")}}.
 
 - {{domxref("BaseAudioContext.createAnalyser()")}}
-  - : Creates an {{domxref("AnalyserNode")}}, which can be used to expose audio time and frequency data and for example to create data visualisations.
+  - : Creates an {{domxref("AnalyserNode")}}, which can be used to expose audio time and frequency data and for example to create data visualizations.
 - {{domxref("BaseAudioContext.createBiquadFilter()")}}
   - : Creates a {{domxref("BiquadFilterNode")}}, which represents a second order filter configurable as several different common filter types: high-pass, low-pass, band-pass, etc
 - {{domxref("BaseAudioContext.createBuffer()")}}
@@ -71,7 +72,7 @@ _Also implements methods from the interface_ {{domxref("EventTarget")}}.
 - {{domxref("BaseAudioContext.createOscillator()")}}
   - : Creates an {{domxref("OscillatorNode")}}, a source representing a periodic waveform. It basically generates a tone.
 - {{domxref("BaseAudioContext.createPanner()")}}
-  - : Creates a {{domxref("PannerNode")}}, which is used to spatialise an incoming audio stream in 3D space.
+  - : Creates a {{domxref("PannerNode")}}, which is used to spatialize an incoming audio stream in 3D space.
 - {{domxref("BaseAudioContext.createPeriodicWave()")}}
   - : Creates a {{domxref("PeriodicWave")}}, used to define a periodic waveform that can be used to determine the output of an {{ domxref("OscillatorNode") }}.
 - {{domxref("BaseAudioContext.createScriptProcessor()")}} {{deprecated_inline}}

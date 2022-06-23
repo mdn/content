@@ -1,6 +1,7 @@
 ---
 title: SVGTitleElement
 slug: Web/API/SVGTitleElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGTitleElement
 
 The **`SVGTitleElement`** interface corresponds to the {{SVGElement("title")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

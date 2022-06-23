@@ -48,14 +48,14 @@ Returns `xpathResult`, which is an `XPathResult` object of the type [specified](
 We create a namespace resolver using the `createNSResolver` method of the [document](/en-US/docs/Web/API/Document) object.
 
 ```js
-var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
+var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
 ```
 
 Or alternatively by using the `createNSResolver` method of a `XPathEvaluator` object.
 
 ```js
 var xpEvaluator = new XPathEvaluator();
-var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
+var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
 ```
 
 And then pass `document.evaluate`, the `nsResolver` variable as the `namespaceResolver` parameter.
@@ -155,7 +155,7 @@ Snapshots do not change with document mutations, so unlike the iterators, the sn
 ```js
 var nodesSnapshot = document.evaluate('//phoneNumber', documentNode, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
 
-for ( var i=0 ; i < nodesSnapshot.snapshotLength; i++ )
+for ( var i=0; i < nodesSnapshot.snapshotLength; i++ )
 {
   alert( nodesSnapshot.snapshotItem(i).textContent );
 }
@@ -225,14 +225,14 @@ The following uses an XML document located at `chrome://yourextension/content/pe
 <?xml version="1.0"?>
 <people xmlns:xul = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" >
   <person>
-	<name first="george" last="bush" />
-	<address street="1600 pennsylvania avenue" city="washington" country="usa"/>
-	<phoneNumber>202-456-1111</phoneNumber>
+    <name first="george" last="bush" />
+    <address street="1600 pennsylvania avenue" city="washington" country="usa"/>
+    <phoneNumber>202-456-1111</phoneNumber>
   </person>
   <person>
-	<name first="tony" last="blair" />
-	<address street="10 downing street" city="london" country="uk"/>
-	<phoneNumber>020 7925 0918</phoneNumber>
+    <name first="tony" last="blair" />
+    <address street="10 downing street" city="london" country="uk"/>
+    <phoneNumber>020 7925 0918</phoneNumber>
   </person>
 </people>
 ```
@@ -249,7 +249,7 @@ req.send(null);
 
 var xmlDoc = req.responseXML;
 
-var nsResolver = xmlDoc.createNSResolver( xmlDoc.ownerDocument == null ? xmlDoc.documentElement : xmlDoc.ownerDocument.documentElement);
+var nsResolver = xmlDoc.createNSResolver( xmlDoc.ownerDocument == null ? xmlDoc.documentElement : xmlDoc.ownerDocument.documentElement);
 
 var personIterator = xmlDoc.evaluate('//person', xmlDoc, nsResolver, XPathResult.ANY_TYPE, null );
 ```
@@ -264,11 +264,13 @@ Components.classes["@mozilla.org/dom/xpath-evaluator;1"].createInstance(Componen
 
 ## Appendix
 
-#### Implementing a User Defined Namespace Resolver
+### Implementing a User Defined Namespace Resolver
 
 This is an example for illustration only. This function will need to take namespace prefixes from the `xpathExpression` and return the URI that corresponds to that prefix. For example, the expression:
 
-    '//xhtml:td/mathml:math'
+```
+'//xhtml:td/mathml:math'
+```
 
 will select all [MathML](/en-US/docs/Web/MathML) expressions that are the children of (X)HTML table data cell elements.
 
@@ -277,7 +279,7 @@ In order to associate the '`mathml:`' prefix with the namespace URI '`http://www
 ```js
 function nsResolver(prefix) {
   var ns = {
-    'xhtml' : 'http://www.w3.org/1999/xhtml',
+    'xhtml': 'http://www.w3.org/1999/xhtml',
     'mathml': 'http://www.w3.org/1998/Math/MathML'
   };
   return ns[prefix] || null;
@@ -290,7 +292,7 @@ Our call to `document.evaluate` would then looks like:
 document.evaluate( '//xhtml:td/mathml:math', document, nsResolver, XPathResult.ANY_TYPE, null );
 ```
 
-#### Implementing a default namespace for XML documents
+### Implementing a default namespace for XML documents
 
 As noted in the [Implementing a Default Namespace Resolver](#implementing_a_default_namespace_resolver) previously, the default resolver does not handle the default namespace for XML documents. For example with this document:
 
@@ -318,11 +320,11 @@ Note that a more complex resolver will be required if the document uses multiple
 
 An approach which might work better (and allow namespaces not to be known ahead of time) is described in the next section.
 
-#### Using XPath functions to reference elements with a default namespace
+### Using XPath functions to reference elements with a default namespace
 
 Another approach to match default elements in a non-null namespace (and one which works well for dynamic XPath expressions where the namespaces might not be known), involves referring to a particular element using a form such as `[namespace-uri()='http://www.w3.org/1999/xhtml' and name()='p' and @id='_myid']`. This circumvents the problem of an XPath query not being able to detect the default namespace on a regularly labeled element.
 
-#### Getting specifically namespaced elements and attributes regardless of prefix
+### Getting specifically namespaced elements and attributes regardless of prefix
 
 If one wishes to provide flexibility in namespaces (as they are intended) by not necessarily requiring a particular prefix to be used when finding a namespaced element or attribute, one must use special techniques.
 
@@ -358,11 +360,9 @@ var thisitemEl = thislevel.iterateNext();
 ## See also
 
 - [XPath](/en-US/docs/Web/XPath)
-- [XML Path Language ](https://www.xml.com/pub/a/2000/08/holman/index.html?page=2#xpath-info)from _[What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/)_ by G. Ken Holman
+- [XML Path Language](https://www.xml.com/pub/a/2000/08/holman/index.html?page=2#xpath-info) from _[What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/)_ by G. Ken Holman
 
 ## Original Document Information
 
-- Based Upon Original Document [Mozilla XPath Tutorial](https://www-xray.ast.cam.ac.uk/~jgraham/mozilla/xpath-tutorial.html)
-- Original Source Author: James Graham.
+- Based upon an original document by James Graham.
 - Other Contributors: James Thompson.
-- Last Updated Date: 2006-3-25.

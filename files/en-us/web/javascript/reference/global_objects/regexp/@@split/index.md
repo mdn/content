@@ -99,7 +99,7 @@ console.log(result); // ["(2016)", "(01)", "(02)"]
 
 ## See also
 
-- A polyfill of `RegExp.prototype[@@split]` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `RegExp.prototype[@@split]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.split()")}}
 - {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
 - {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}

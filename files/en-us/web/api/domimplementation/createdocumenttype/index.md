@@ -1,6 +1,7 @@
 ---
 title: DOMImplementation.createDocumentType()
 slug: Web/API/DOMImplementation/createDocumentType
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -20,20 +21,24 @@ into the document via methods like {{domxref("Node.insertBefore()")}} or
 ## Syntax
 
 ```js
-var doctype = document.implementation.createDocumentType(qualifiedNameStr, publicId, systemId);
+createDocumentType(qualifiedNameStr, publicId, systemId)
 ```
 
 ### Parameters
 
 - `qualifiedNameStr`
-  - : Is a {{domxref("DOMString")}} containing the qualified name, like
+  - : A string containing the qualified name, like
     `svg:svg`.
 - `publicId`
-  - : Is a {{domxref("DOMString")}} containing the `PUBLIC` identifier.
+  - : A string containing the `PUBLIC` identifier.
 - `systemId`
-  - : Is a {{domxref("DOMString")}} containing the `SYSTEM` identifiers.
+  - : A string containing the `SYSTEM` identifiers.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 var dt = document.implementation.createDocumentType('svg:svg', '-//W3C//DTD SVG 1.1//EN', 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd');

@@ -7,7 +7,7 @@ tags:
   - HTML
   - Learn
 ---
-HTML provides several ways to convey description semantics,  whether inline or as structured glossaries. In this article, we'll cover how to properly mark up keywords when you're defining them.
+HTML provides several ways to convey description semantics, whether inline or as structured glossaries. In this article, we'll cover how to properly mark up keywords when you're defining them.
 
 <table class="standard-table">
   <tbody>
@@ -55,7 +55,7 @@ We do that in HTML too, except HTML is not a visual medium and so we don't use b
 
 ### Special case: Abbreviations
 
-It's best to[ mark abbreviations specially](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations) with {{htmlelement("abbr")}}, so that screen readers read them appropriately and so that you can operate on all abbreviations uniformly. Just as with any new keyword, you should define your abbreviations the first time they occur.
+It's best to [mark abbreviations specially](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations) with {{htmlelement("abbr")}}, so that screen readers read them appropriately and so that you can operate on all abbreviations uniformly. Just as with any new keyword, you should define your abbreviations the first time they occur.
 
 ```html
 <p>
@@ -64,7 +64,7 @@ It's best to[ mark abbreviations specially](/en-US/docs/Learn/HTML/Introduction_
 </p>
 ```
 
-> **Note:** The HTML spec does indeed [set aside the `title` attribute](https://www.w3.org/TR/html/text-level-semantics.html#the-abbr-element) for expanding the abbreviation. However, this is not an acceptable alternative for providing an inline expansion. The contents of `title` are completely hidden from your users, unless they're using a mouse and they happen to hover over the abbreviation. The spec duly [acknowledges this as well.](https://www.w3.org/TR/html/dom.html#attr-title)
+> **Note:** The HTML spec does indeed [set aside the `title` attribute](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-abbr-element) for expanding the abbreviation. However, this is not an acceptable alternative for providing an inline expansion. The contents of `title` are completely hidden from your users, unless they're using a mouse and they happen to hover over the abbreviation. The spec duly [acknowledges this as well.](https://html.spec.whatwg.org/multipage/dom.html#attr-title)
 
 ### Improve accessibility
 
@@ -86,7 +86,7 @@ Assistive technology can often use this attribute to find a text alternative to 
 
 Description lists are just what they claim to be: a list of terms and their matching descriptions (e.g., definition lists, dictionary entries, FAQs, and key-value pairs).
 
-> **Note:** Description lists are [not suitable for marking up dialog,](https://www.w3.org/TR/html5/grouping-content.html#the-dl-element) because conversation does not directly describe the speakers. Here are [recommendations for marking up dialog](https://www.w3.org/TR/html5/common-idioms.html#conversations).
+> **Note:** Description lists are [not suitable for marking up dialog,](https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element) because conversation does not directly describe the speakers. Here are [recommendations for marking up dialog](https://html.spec.whatwg.org/multipage/semantics-other.html#conversations).
 
 The terms described go inside {{htmlelement("dt")}} elements. The matching description follows immediately, contained within one or more {{htmlelement("dd")}} elements. Enclose the whole description list with a {{htmlelement("dl")}} element.
 

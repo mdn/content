@@ -65,7 +65,7 @@ The first thing to understand is the concept of link states — different states
 
 ### Default styles
 
-The following example illustrates what a link will behave like by default (the CSS is enlarging and centering the text to make it stand out more.)
+The following example illustrates what a link will behave like by default (the CSS is enlarging and centering the text to make it stand out more).
 
 ```html
 <p><a href="#">A simple link</a></p>
@@ -78,9 +78,9 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Default_styles', '100%', 120) }}
+{{ EmbedLiveSample('Default_styles', '100%', 130) }}
 
-> **Note:** All the links in the examples on this page are fake links — a `#` (hash/pound sign) is put in place of the real URL. This is because if the real links were included, clicking on them would break the examples (you'd end up with an error or a page loaded in the embedded example that you couldn't get back from.) `#` just links to the current page.
+> **Note:** All the links in the examples on this page are fake links — a `#` (hash/pound sign) is put in place of the real URL. This is because if the real links were included, clicking on them would break the examples (you'd end up with an error or a page loaded in the embedded example that you couldn't get back from). `#` just links to the current page.
 
 You'll notice a few things as you explore the default styles:
 
@@ -88,7 +88,7 @@ You'll notice a few things as you explore the default styles:
 - Unvisited links are blue.
 - Visited links are purple.
 - Hovering a link makes the mouse pointer change to a little hand icon.
-- Focused links have an outline around them — you should be able to focus on the links on this page with the keyboard by pressing the tab key (On Mac, you'll need to use
+- Focused links have an outline around them — you should be able to focus on the links on this page with the keyboard by pressing the tab key. (On Mac, you'll need to use
 
   <kbd>option</kbd>
 
@@ -96,7 +96,7 @@ You'll notice a few things as you explore the default styles:
 
   <kbd>tab</kbd>
 
-  , or enable the [Full Keyboard Access: All controls](https://support.apple.com/guide/mac-help/use-your-keyboard-like-a-mouse-mchlp1399/) option by pressing
+  , or enable the [Full Keyboard Access: All controls](https://support.apple.com/en-us/guide/mac-help/mchlp1399/mac) option by pressing
 
   <kbd>Ctrl</kbd>
 
@@ -209,7 +209,7 @@ Firefox</a>, <a href="#">Google Chrome</a>, and
 
 Putting the two together gives us this result:
 
-{{ EmbedLiveSample('Styling_some_links', '100%', 150) }}
+{{ EmbedLiveSample('Styling_some_links', '100%', 200) }}
 
 So what did we do here? This certainly looks different to the default styling, but it still provides a familiar enough experience for users to know what's going on:
 
@@ -264,7 +264,7 @@ a:active {
   <h2>Output</h2>
   <div class="output" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
   <div class="controls">
-    <input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;">
+    <input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;">
     <input id="solution" type="button" value="Show solution" style="margin: 10px 0 0 10px;">
   </div>
 </div>
@@ -289,9 +289,9 @@ function drawOutput() {
 }
 
 reset.addEventListener("click", function() {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
+  htmlInput.value = htmlCode;
+  cssInput.value = cssCode;
+  drawOutput();
 });
 
 solution.addEventListener("click", function() {
@@ -309,14 +309,14 @@ window.addEventListener("load", drawOutput);
 
 ## Including icons on links
 
-A common practice is to include icons on links to provide more of an indicator as to what kind of content the link points to. Let's look at a really simple example that adds an icon to external links (links that lead to other sites.) Such an icon usually looks like a little arrow pointing out of a box. For this example, we'll use [this great example from icons8.com](https://icons8.com/web-app/741/external-link).
+A common practice is to include icons on links to provide more of an indicator as to what kind of content the link points to. Let's look at a really simple example that adds an icon to external links (links that lead to other sites). Such an icon usually looks like a little arrow pointing out of a box. For this example, we'll use [this great example from icons8.com](https://icons8.com/icon/741/external-link).
 
 Let's look at some HTML and CSS that will give us the effect we want. First, some simple HTML to style:
 
 ```html
 <p>For more information on the weather, visit our <a href="#">weather page</a>,
-look at <a href="#">weather on Wikipedia</a>, or check
-out <a href="#">weather on Extreme Science</a>.</p>
+look at <a href="https://en.wikipedia.org/">weather on Wikipedia</a>, or check
+out <a href="https://www.nationalgeographic.org/topics/resource-library-weather/">weather on National Geographic</a>.</p>
 ```
 
 Next, the CSS:
@@ -354,7 +354,7 @@ a:active {
   color: red;
 }
 
-a[href*="#"] {
+a[href^="http"] {
   background: url('external-link-52.png') no-repeat 100% 0;
   background-size: 16px 16px;
   padding-right: 19px;
@@ -363,13 +363,13 @@ a[href*="#"] {
 
 {{ EmbedLiveSample('Including_icons_on_links', '100%', 150) }}
 
-So what's going on here? We'll skip over most of the CSS, as it's just the same information you've looked at before. The last rule, however, is interesting: we're inserting a custom background image on external links in a similar manner to how we handled [custom bullets on list items](/en-US/docs/Learn/CSS/Styling_text/Styling_lists#using_a_custom_bullet_image) in the last article. This time, however, we're using the {{cssxref("background")}} shorthand instead of the individual properties. We set the path to the image we want to insert, specify `no-repeat` so we only get one copy inserted, and then specify the position as 100% of the way to the right of the text content, and 0 pixels from the top.
+So what's going on here? We'll skip over most of the CSS, as it's just the same information you've looked at before. The last rule, however, is interesting: we're inserting a custom background image on external links in a similar manner to how we handled [custom bullets on list items](/en-US/docs/Learn/CSS/Styling_text/Styling_lists#using_a_custom_bullet_image) in the last article. This time, however, we're using the {{cssxref("background")}} shorthand instead of the individual properties. We set the path to the image we want to insert, specify `no-repeat` so we only get one copy inserted, and then specify the position as 100% of the way to the right of the text content, and 0 pixels from the top.
 
 We also use {{cssxref("background-size")}} to specify the size we want the background image to be shown at. It's useful to have a larger icon and then resize it like this as needed for responsive web design purposes. This does, however, only work with IE 9 and later. So if you need to support older browsers, you'll just have to resize the image and insert it as is.
 
 Finally, we set some {{cssxref("padding-right")}} on the links to make space for the background image to appear in, so we aren't overlapping it with the text.
 
-A final word: how did we select just external links? Well, if you are writing your [HTML links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) properly, you should only be using absolute URLs for external links — it is more efficient to use relative links to link to other parts of your own site (as with the first link). The text "http" should therefore only appear in external links (like the second and third ones), and we can select this with an [attribute selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors#attribute_selectors): `a[href*="http"]` selects {{htmlelement("a")}} elements, but only if they have an {{htmlattrxref("href","a")}} attribute with a value that contains "http" somewhere inside it.
+A final word: how did we select just external links? Well, if you are writing your [HTML links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) properly, you should only be using absolute URLs for external links — it is more efficient to use relative links to link to other parts of your own site (as with the first link). The text "http" should therefore only appear in external links (like the second and third ones), and we can select this with an [attribute selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors#attribute_selectors): `a[href^="http"]` selects {{htmlelement("a")}} elements, but only if they have an {{htmlattrxref("href","a")}} attribute with a value that begins with "http".
 
 So that's it. Try revisiting the active learning section above and trying this new technique out!
 
@@ -381,14 +381,18 @@ So that's it. Try revisiting the active learning section above and trying this n
 
 The tools you've explored so far in this article can also be used in other ways. For example, states like hover can be used to style many different elements, not just links — you might want to style the hover state of paragraphs, list items, or other things.
 
-In addition, links are quite commonly styled to look and behave like buttons in certain circumstances. A website navigation menu is usually marked up as a list containing links, and this can be easily styled to look like a set of control buttons or tabs that provide the user with access to other parts of the site. Let's explore how.
+In addition, links are quite commonly styled to look and behave like buttons in certain circumstances. A website navigation menu can be marked up as a set of links, and this can be styled to look like a set of control buttons or tabs that provide the user with access to other parts of the site. Let's explore how.
 
 First, some HTML:
 
 ```html
-<ul>
-  <li><a href="#">Home</a></li><li><a href="#">Pizza</a></li><li><a href="#">Music</a></li><li><a href="#">Wombats</a></li><li><a href="#">Finland</a></li>
-</ul>
+<nav class="container">
+  <a href="#">Home</a>
+  <a href="#">Pizza</a>
+  <a href="#">Music</a>
+  <a href="#">Wombats</a>
+  <a href="#">Finland</a>
+</nav>
 ```
 
 And now our CSS:
@@ -399,28 +403,18 @@ body,html {
   font-family: sans-serif;
 }
 
-ul {
-  padding: 0;
-  width: 100%;
-}
-
-li {
-  display: inline;
+.container {
+  display: flex;
+  gap: 0.625%;
 }
 
 a {
-  outline: none;
+  flex: 1;
   text-decoration: none;
-  display: inline-block;
-  width: 19.5%;
-  margin-right: 0.625%;
-  text-align: center;
-  line-height: 3;
-  color: black;
-}
-
-li:last-child a {
-  margin-right: 0;
+  outline: none;
+  text-align: center;
+  line-height: 3;
+  color: black;
 }
 
 a:link, a:visited, a:focus {
@@ -439,30 +433,23 @@ a:active {
 
 This gives us the following result:
 
-{{ EmbedLiveSample('Styling_links_as_buttons', '100%', 100) }}
+{{ EmbedLiveSample('Styling_links_as_buttons', '100%', 120) }}
 
-Let's explain what's going on here, focusing on the most interesting parts:
+The HTML defines a {{HTMLElement("nav")}} element with a `"container"` class. The `<nav>` contains our links.
 
-- Our second rule removes the default {{cssxref("padding")}} from the {{htmlelement("ul")}} element, and sets its width to span 100% of the outer container (the {{htmlelement("body")}}, in this case).
-- {{htmlelement("li")}} elements are normally block by default (see [types of CSS boxes](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#types_of_css_boxes) for a refresher), meaning that they will sit on their own lines. In this case, we are creating a horizontal list of links, so in the third rule we set the {{cssxref("display")}} property to inline, which causes the list items to sit on the same line as one another. They now behave like inline elements.
-- The fourth rule — which styles the {{htmlelement("a")}} element — is the most complicated here. Let's go through it step by step:
+The CSS includes the styling for the container and the links it contains.
 
-  - As in previous examples, we start by turning off the default {{cssxref("text-decoration")}} and {{cssxref("outline")}} — we don't want those spoiling our look.
-  - Next, we set the {{cssxref("display")}} to `inline-block`. {{htmlelement("a")}} elements are inline by default and, while we don't want them to spill onto their own lines like a value of `block` would achieve, we do want to be able to size them. `inline-block` allows us to do this.
-  - Now onto the sizing! We want to fill up the whole width of the {{htmlelement("ul")}} and leave a little margin between each button (but not a gap at the right hand edge). We also have 5 buttons whose sizes should all be the same. To do this, we set the {{cssxref("width")}} to 19.5% and the {{cssxref("margin-right")}} to 0.625%. You'll notice that all this width adds up to 100.625%, which would make the last button overflow the `<ul>` and fall down to the next line. However, we take it back down to 100% using the next rule, which selects only the last `<a>` in the list and removes the margin from it. Done!
-  - The last three declarations are pretty simple and are mainly just for cosmetic purposes. We center the text inside each link, set the {{cssxref("line-height")}} to 3 to give the buttons some height (which also has the advantage of centering the text vertically), and set the text color to black.
-
-> **Note:** You may have noticed that the list items in the HTML are all put on the same line as each other. This is done because spaces/line breaks in between inline block elements create spaces on the page, just like the spaces in between words; however, such spaces would break our horizontal navigation menu layout. So we've removed them. You can find more information about this problem (and solutions) at [Fighting the space between inline block elements](https://css-tricks.com/fighting-the-space-between-inline-block-elements/).
-
-## Test your skills!
-
-You've reached the end of this article, and already did some skill testing in our Active Learning sections, but can you remember the most important information going forward? You can find an assessment to verify that you've retained this information at the end of the module — see [Typesetting a community school homepage](/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage).
-
-This assessment tests all the knowledge discussed in this module, so you might want to read the next article before moving on to it.
+- The second rule says:
+  - The container is a [flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox). The items it contains — the links, in this case — will be *flex items*.
+  - The gap between the flex items will be `0.625%` of the container's width.
+- The third rule styles the links:
+  - The first declaration, `flex: 1`, means that the widths of the items will be adjusted so they use all the available space in the container.
+  - Next, we turn off the default {{cssxref("text-decoration")}} and {{cssxref("outline")}} — we don't want those spoiling our look.
+  - The last three declarations are to center the text inside each link, set the {{cssxref("line-height")}} to 3 to give the buttons some height (which also has the advantage of centering the text vertically), and set the text color to black.
 
 ## Summary
 
-We hope this article has provided you with all you'll need to know about links — for now! The final article in our Styling text module details how to use custom fonts on your websites (or web fonts, as they are better known).
+We hope this article has provided you with all you'll need to know about links — for now! The final article in our Styling text module details how to use [custom fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts) on your websites (or web fonts, as they are better known).
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
@@ -470,6 +457,6 @@ We hope this article has provided you with all you'll need to know about links �
 
 - [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
 - [Styling lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
-- **Styling links**
+- [Styling links](/en-US/docs/Learn/CSS/Styling_text/Styling_links)
 - [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts)
 - [Typesetting a community school homepage](/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

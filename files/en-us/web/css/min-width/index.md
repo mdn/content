@@ -41,6 +41,7 @@ min-width: fit-content(20em);
 min-width: inherit;
 min-width: initial;
 min-width: revert;
+min-width: revert-layer;
 min-width: unset;
 ```
 

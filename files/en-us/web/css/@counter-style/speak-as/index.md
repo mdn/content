@@ -31,7 +31,7 @@ speak-as: <counter-style-name>;
 
 - `auto`
 
-  - : If the value of `speak-as` is specified as `auto`, then the effective value of `speak-as` will be determined based on the value of the {{cssxref("@counter-style/system")}} descriptor:
+  - : If the value of `speak-as` is specified as `auto`, then the effective value of `speak-as` will be determined based on the value of the {{cssxref("@counter-style/system", "system")}} descriptor:
 
     - If the value of `system` is `alphabetic`, the effective value of `speak-as` will be `spell-out`.
     - If `system` is `cyclic`, the effective value of `speak-as` will be `bullets`.
@@ -47,7 +47,7 @@ speak-as: <counter-style-name>;
 - `spell-out`
   - : The user agent will generate a counter representation as normal and would read it out letter by letter. If the user agent doesn't know how to read out a particular counter symbol, the user agent might read it out as if the value of `speak-as` was `numbers`.
 - `<counter-style-name>`
-  - : The name of another counter style, specified as a {{cssxref("&lt;custom-ident&gt;")}}. If included, the counter will be spoken out in the form specified in that counter style, kind of like specifying the {{cssxref("@counter-style/fallback")}} descriptor. If the specified style does not exist, `speak-as` defaults to `auto`.
+  - : The name of another counter style, specified as a {{cssxref("&lt;custom-ident&gt;")}}. If included, the counter will be spoken out in the form specified in that counter style, kind of like specifying the {{cssxref("@counter-style/fallback", "fallback")}} descriptor. If the specified style does not exist, `speak-as` defaults to `auto`.
 
 ## Accessibility concerns
 
@@ -61,7 +61,16 @@ Assistive technology support is very limited for the `speak-as` property. Do not
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+auto                 |
+bullets              |
+numbers              |
+words                |
+spell-out            |
+<counter-style-name>
+
+<counter-style-name> = <custom-ident>
+```
 
 ## Examples
 
@@ -109,4 +118,4 @@ Assistive technology support is very limited for the `speak-as` property. Do not
 ## See also
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles.
+- {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles.

@@ -26,7 +26,7 @@ TypeError: Cannot create property 'x' on {y} (Chrome)
 
 ## What went wrong?
 
-In {{jsxref("Strict_mode")}}, a {{jsxref("TypeError")}} is raised when attempting to
+In {{jsxref("Strict_mode")}}, a {{jsxref("TypeError")}} is raised when attempting to
 create a property on [primitive](/en-US/docs/Glossary/Primitive) value such
 as a [symbol](/en-US/docs/Glossary/Symbol), a [string](/en-US/docs/Glossary/String), a [number](/en-US/docs/Glossary/Number) or a [boolean](/en-US/docs/Glossary/Boolean). [Primitive](/en-US/docs/Glossary/Primitive) values cannot hold any [property](/en-US/docs/Glossary/property/JavaScript).
 

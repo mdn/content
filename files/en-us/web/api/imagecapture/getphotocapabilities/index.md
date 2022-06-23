@@ -1,6 +1,7 @@
 ---
 title: ImageCapture.getPhotoCapabilities()
 slug: Web/API/ImageCapture/getPhotoCapabilities
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -24,12 +25,17 @@ available configuration options.
 ## Syntax
 
 ```js
-const capabilitiesPromise = imageCaptureObj.getPhotoCapabilities()
+getPhotoCapabilities()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
 A {{jsxref("Promise")}} that resolves with an object containing the following properties:
+
 - `redEyeReduction`
   - : Returns one of `"never"`, `"always"`, or `"controllable"`. The `"controllable"` value means the device's red-eye reduction is controllable by the user.
 - `imageHeight`
@@ -39,10 +45,9 @@ A {{jsxref("Promise")}} that resolves with an object containing the following pr
 - `fillLightMode`
   - : Returns an array of available fill light options. Options include `auto`, `off`, or `flash`.
 
-## Example
+## Examples
 
-The following example, extracted from [Chrome's
-Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html), uses the results from
+The following example, extracted from [Chrome's Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html), uses the results from
 `getPhotoCapabilities()` to modify the size of an input range. This example
 also shows how the {{domxref("ImageCapture")}} object is created using a
 {{domxref("MediaStreamTrack")}} retrieved from a device's {{domxref("MediaStream")}}.
@@ -50,7 +55,7 @@ also shows how the {{domxref("ImageCapture")}} object is created using a
 ```js
 const input = document.querySelector('input[type="range"]');
 
-var imageCapture;
+let imageCapture;
 
 navigator.mediaDevices.getUserMedia({video: true})
 .then(mediaStream => {

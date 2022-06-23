@@ -1,6 +1,7 @@
 ---
 title: Node.normalize()
 slug: Web/API/Node/normalize
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -8,7 +9,7 @@ browser-compat: api.Node.normalize
 ---
 {{APIRef("DOM")}}
 
-The **`normalize()`** method of the {{domxref("Node")}} puts the specified node
+The **`normalize()`** method of the {{domxref("Node")}} interface puts the specified node
 and all of its sub-tree into a _normalized_ form.
 In a normalized sub-tree, no text nodes in the sub-tree are empty and there are no adjacent text nodes.
 

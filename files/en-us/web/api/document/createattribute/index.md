@@ -1,6 +1,7 @@
 ---
 title: Document.createAttribute()
 slug: Web/API/Document/createAttribute
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -11,7 +12,7 @@ browser-compat: api.Document.createAttribute
 {{ ApiRef("DOM") }}
 
 The **`Document.createAttribute()`** method creates a new
-attribute node, and returns it. The object created a node implementing the
+attribute node, and returns it. The object created is a node implementing the
 {{domxref("Attr")}} interface. The DOM does not enforce what sort of attributes can be
 added to a particular element in this manner.
 
@@ -20,7 +21,7 @@ added to a particular element in this manner.
 ## Syntax
 
 ```js
-attribute = document.createAttribute(name)
+createAttribute(name)
 ```
 
 ### Parameters
@@ -33,10 +34,10 @@ A {{domxref("Attr")}} node.
 
 ### Exceptions
 
-- `INVALID_CHARACTER_ERR` if the parameter contains invalid characters for
-  XML attribute.
+- `InvalidCharacterError` {{domxref("DOMException")}}
+  - : Thrown if the [`name`](#name) value is not a valid [XML name](https://www.w3.org/TR/REC-xml/#dt-name); for example, it starts with a number, hyphen, or period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
 
-## Example
+## Examples
 
 ```js
 var node = document.getElementById("div1");
@@ -56,4 +57,7 @@ console.log(node.getAttribute("my_attrib")); // "newVal"
 
 ## See also
 
+- {{domxref("Document.createAttributeNS()")}}
 - {{domxref("Document.createElement()")}}
+- {{domxref("Element.setAttribute()")}}
+- {{domxref("Element.setAttributeNode()")}}

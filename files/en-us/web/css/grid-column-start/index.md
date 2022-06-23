@@ -11,7 +11,7 @@ browser-compat: css.properties.grid-column-start
 ---
 {{CSSRef}}
 
-The **`grid-column-start`** CSS property specifies a grid item’s start position within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement. This start position defines the block-start edge of the {{glossary("grid areas", "grid area")}}.
+The **`grid-column-start`** CSS property specifies a grid item's start position within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement. This start position defines the block-start edge of the {{glossary("grid areas", "grid area")}}.
 
 {{EmbedInteractiveExample("pages/css/grid-column-start.html")}}
 
@@ -37,6 +37,7 @@ grid-column-start: span somegridarea 5;
 grid-column-start: inherit;
 grid-column-start: initial;
 grid-column-start: revert;
+grid-column-start: revert-layer;
 grid-column-start: unset;
 ```
 
@@ -51,10 +52,10 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 ### Values
 
 - `auto`
-  - : A keyword indicating that the property contributes nothing to the grid item’s placement, indicating auto-placement, an automatic span, or a default span of `1`.
+  - : A keyword indicating that the property contributes nothing to the grid item's placement, indicating auto-placement, an automatic span, or a default span of `1`.
 - `<custom-ident>`
 
-  - : If there is a named line with the name `<custom-ident>-start`, it contributes the first such line to the grid item’s placement.
+  - : If there is a named line with the name `<custom-ident>-start`, it contributes the first such line to the grid item's placement.
 
     > **Note:** Named grid areas automatically generate implicit named lines of this form, so specifying `grid-column-start: foo;` will choose the start edge of that named grid area (unless another line named `foo-start` was explicitly specified before it).
 
@@ -62,7 +63,7 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 
 - `<integer> && <custom-ident>?`
 
-  - : Contributes the nth grid line to the grid item’s placement. If a negative integer is given, it counts in reverse, starting from the end edge of the explicit grid.
+  - : Contributes the nth grid line to the grid item's placement. If a negative integer is given, it counts in reverse, starting from the end edge of the explicit grid.
 
     If a name is given as a `<custom-ident>`, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines are assumed to have that name for the purpose of finding this position.
 
@@ -70,11 +71,11 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 
 - `span && [ <integer> || <custom-ident> ]`
 
-  - : Contributes a grid span to the grid item’s placement, such that the column start edge of the grid item’s grid area is n lines from the end edge.
+  - : Contributes a grid span to the grid item's placement, such that the column start edge of the grid item's grid area is n lines from the end edge.
 
     If a name is given as a `<custom-ident>`, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines on the side of the explicit grid corresponding to the search direction are assumed to have that name for the purpose of counting this span.
 
-    If the \<integer> is omitted, it defaults to `1`. Negative integers and `0` are invalid.
+    If the \<integer> is omitted, it defaults to `1`. Negative integers and `0` are invalid.
 
     The `<custom-ident>` cannot take the `span` value.
 
@@ -166,4 +167,4 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 
 - Related CSS properties: {{cssxref("grid-column-end")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-row")}}
 - Grid Layout Guide: _[Line-based placement with CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
-- Video tutorial: _[Line-based placement](http://gridbyexample.com/video/series-line-based-placement/)_
+- Video tutorial: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_

@@ -1,6 +1,7 @@
 ---
 title: PerformanceElementTiming.loadTime
 slug: Web/API/PerformanceElementTiming/loadTime
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,13 +14,7 @@ browser-compat: api.PerformanceElementTiming.loadTime
 
 The **`loadTime`** read-only property of the {{domxref("PerformanceElementTiming")}} interface always returns 0 for text. For images it returns the time which is the latest between the time the image resource is loaded and the time it is attached to the element.
 
-## Syntax
-
-```js
-var loadTime = PerformanceElementTiming.loadTime;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} with the loadTime of the element.
 

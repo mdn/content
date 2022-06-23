@@ -1,6 +1,7 @@
 ---
 title: SVGRadialGradientElement
 slug: Web/API/SVGRadialGradientElement
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -12,7 +13,7 @@ browser-compat: api.SVGRadialGradientElement
 
 The **`SVGRadialGradientElement`** interface corresponds to the {{SVGElement("RadialGradient")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

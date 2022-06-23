@@ -1,6 +1,7 @@
 ---
 title: OffscreenCanvas.transferToImageBitmap()
 slug: Web/API/OffscreenCanvas/transferToImageBitmap
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -19,8 +20,12 @@ the `OffscreenCanvas`.
 ## Syntax
 
 ```js
-ImageBitmap OffscreenCanvas.transferToImageBitmap()
+transferToImageBitmap()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

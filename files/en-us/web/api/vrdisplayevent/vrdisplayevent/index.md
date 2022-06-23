@@ -1,10 +1,11 @@
 ---
 title: VRDisplayEvent()
 slug: Web/API/VRDisplayEvent/VRDisplayEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
-  - Experimental
+  - Deprecated
   - Reference
   - VR
   - VRDisplayEvent
@@ -14,28 +15,32 @@ browser-compat: api.VRDisplayEvent.VRDisplayEvent
 ---
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-The **`VRDisplayEvent()`** constructor creates a {{domxref("VRDisplayEvent")}} object instance.
+The **`VRDisplayEvent()`** constructor creates a {{domxref("VRDisplayEvent")}} object.
 
 > **Note:** This constructor was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 ## Syntax
 
 ```js
-var myEventObject = new VRDisplayEvent(type, eventInitDict);
+new VRDisplayEvent(type, options);
 ```
 
 ### Parameters
 
-- _type_
-  - : A {{domxref("DOMString")}} describing the type of event object you want to create.
-- _eventInitDict_
-
-  - : A object containing initialization options to use when creating the constructor. These are:
-
+- `type`
+  - : A string with the name of the event.
+    It is case-sensitive and browsers set it to `vrdisplayconnect`, `vrdisplaydisconnect`, `vrdisplayactivate`, `vrdisplaydeactivate`, `vrdisplayblur`,
+    `vrdisplaypointerrestricted`, `vrdisplaypointerunrestricted`, or `vrdisplaypresentchange`.
+- `options`
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
     - `display`
-      - : A property containing the {{domxref("VRDisplay")}} the event is to be associated with.
+      - : The {{domxref("VRDisplay")}} the event is to be associated with.
     - `reason`
-      - : A property containing a string representing the human-readable reason why the event is to be fired (see {{domxref("VRDisplayEvent.reason")}}).
+      - : A string representing the human-readable reason why the event is to be fired (see {{domxref("VRDisplayEvent.reason")}}).
+
+### Return value
+
+A new {{domxref("VRDisplayEvent")}} object.
 
 ## Examples
 
@@ -50,7 +55,7 @@ var myEventObject = new VRDisplayEvent('custom', {
 
 This constructor was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/).
 
 ## Browser compatibility
 

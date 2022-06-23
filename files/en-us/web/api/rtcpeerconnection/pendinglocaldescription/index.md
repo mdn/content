@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.pendingLocalDescription
 slug: Web/API/RTCPeerConnection/pendingLocalDescription
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -13,6 +14,7 @@ tags:
   - pendingLocalDescription
 browser-compat: api.RTCPeerConnection.pendingLocalDescription
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only property
@@ -26,19 +28,13 @@ endpoint. For details on the difference, see
 {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current
   descriptions")}}.
 
-## Syntax
-
-```js
-sessionDescription = RTCPeerConnection.pendingLocalDescription;
-```
-
-### Return value
+## Value
 
 If a local description change is in progress, this is an
 {{domxref("RTCSessionDescription")}} describing the proposed configuration. Otherwise,
 this returns `null`.
 
-## Example
+## Examples
 
 This example looks at the `pendingLocalDescription` to determine whether or
 not there's a description change being processed.
@@ -77,4 +73,4 @@ else {
   {{domxref("RTCPeerConnection.remoteDescription")}},
   {{domxref("RTCPeerConnection.pendingRemoteDescription")}},
   {{domxref("RTCPeerConnection.currentRemoteDescription")}}
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

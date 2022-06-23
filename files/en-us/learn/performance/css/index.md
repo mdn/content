@@ -7,7 +7,7 @@ tags:
   - Reference
   - Tutorial
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}} {{draft}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}}
 
 Painting an unstyled page, and then repainting it once styles are parsed would be bad user experience. For this reason, CSS is render blocking, unless the browser knows the CSS is not currently needed. The browser can paint the page once it has downloaded the CSS and built the CSS object model. Browsers follow a specific rendering path: paint only occurs after layout, which occurs after the render tree is created, which in turn requires both the DOM and the CSSOM trees. To optimize the CSSOM construction, remove unnecessary styles, minify, compress and cache it, and split CSS not required at page load into additional files to reduce CSS render blocking.
 
@@ -25,11 +25,13 @@ By default the browser assumes that each specified style sheet is render blockin
 
 ### Animating on the GPU
 
-Browsers are optimized to handle CSS animations, and handle animating properties that do not trigger a reflow (and therefore also a repaint) very well. To improve performance, the node being animated can be moved off the main thread and onto the GPU. Properties that will lead to compositing include 3D transforms ([`transform: translateZ()`](/en-US/docs/Web/CSS/transform), [`rotate3d()`](</en-US/docs/Web/CSS/transform-function/rotate3d()>), etc.), animating transform and [`opacity`](/en-US/docs/Web/CSS/opacity), [`position: fixed`](/en-US/docs/Web/CSS/position), [`will-change`](/en-US/docs/Web/CSS/will-change), and [`filter`](/en-US/docs/Web/CSS/filter). Some elements, including [`<video>`](/en-US/docs/Web/HTML/Element/video), [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) and [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), are also on their own layer. When an element is promoted as a layer, also known as composited, animating transform properties is done in the GPU, resulting in improved performance, especially on mobile.
+Browsers are optimized to handle CSS animations, and handle animating properties that do not trigger a reflow (and therefore also a repaint) very well. To improve performance, the node being animated can be moved off the main thread and onto the GPU. Properties that will lead to compositing include 3D transforms ([`transform: translateZ()`](/en-US/docs/Web/CSS/transform), [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d), etc.), animating transform and [`opacity`](/en-US/docs/Web/CSS/opacity), [`position: fixed`](/en-US/docs/Web/CSS/position), [`will-change`](/en-US/docs/Web/CSS/will-change), and [`filter`](/en-US/docs/Web/CSS/filter). Some elements, including [`<video>`](/en-US/docs/Web/HTML/Element/video), [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) and [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), are also on their own layer. When an element is promoted as a layer, also known as composited, animating transform properties is done in the GPU, resulting in improved performance, especially on mobile.
 
 ### `will-change` property
 
-The CSS [`will-change`](/en-US/docs/Web/CSS/will-change) property tells browsers which properties of an element are expected to change enabling browsers to set up optimizations before the element is actually changed, improving performance by doing potentially expensive work before it is required.
+The CSS [`will-change`](/en-US/docs/Web/CSS/will-change) property hints to browsers how an element is expected to change. Browsers may set up optimizations before an element is actually changed. These kinds of optimizations can increase the responsiveness of a page by doing potentially expensive work before it is actually required.
+
+> **Note:** `will-change` is intended to be used as a last resort to try to deal with existing performance problems. It should not be used to anticipate performance problems.
 
 ```css
 will-change: opacity, transform;
@@ -65,7 +67,7 @@ The {{cssxref('contain')}} CSS property allows an author to indicate that an ele
 - [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
 - [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
 - [Multimedia: video](/en-US/docs/Learn/Performance/video)
-- [JavaScript performance best practices](/en-US/docs/Learn/Performance/JavaScript).
+- [JavaScript performance](/en-US/docs/Learn/Performance/JavaScript)
 - [HTML performance features](/en-US/docs/Learn/Performance/HTML)
 - [CSS performance features](/en-US/docs/Learn/Performance/CSS)
 - [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)

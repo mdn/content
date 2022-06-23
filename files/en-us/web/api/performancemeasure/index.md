@@ -1,6 +1,7 @@
 ---
 title: PerformanceMeasure
 slug: Web/API/PerformanceMeasure
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -19,7 +20,13 @@ browser-compat: api.PerformanceMeasure
 
 ## Properties
 
-This interface has no properties but it extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constrainting the properties as follows:
+This interface defines:
+
+- `PerformanceMeasure.detail`
+  - : Contains arbitrary metadata about the measure.
+    This may be passed in as a property of the {{domxref("Performance.measure()","performance.measure()")}} argument `MeasureOptions`.
+
+In addition, it extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:
 
 - {{domxref("PerformanceEntry.entryType")}}
   - : Returns "`measure`".

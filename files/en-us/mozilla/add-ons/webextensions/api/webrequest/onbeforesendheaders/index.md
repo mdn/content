@@ -19,7 +19,7 @@ This event is triggered before sending any HTTP data, but after all HTTP headers
 
 To have the request headers passed into the listener along with the rest of the request data, pass `"requestHeaders"` in the `extraInfoSpec` array.
 
-To modify the headers synchronously: pass `"blocking"` in `extraInfoSpec`, then in your event listener, return a [`BlockingResponse`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse 'An object of this type is returned by event listeners that have set "blocking" in their extraInfoSpec argument.') with a property named `requestHeaders`, whose value is the set of request headers to send.
+To modify the headers synchronously: pass `"blocking"` in `extraInfoSpec`, then in your event listener, return a [`BlockingResponse`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse) with a property named `requestHeaders`, whose value is the set of request headers to send.
 
 To modify the headers asynchronously: pass `"blocking"` in `extraInfoSpec`, then in your event listener, return a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with a `BlockingResponse`.
 
@@ -73,7 +73,7 @@ Events have three functions:
     - `details`
       - : [`object`](#details). Details of the request. This will include request headers if you have included `"requestHeaders"` in `extraInfoSpec`.
 
-    Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If `"blocking"` is specified in the `extraInfoSpec` parameter, the event listener should return a `BlockingResponse` object, and can set its `requestHeaders` property.
+    Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If `"blocking"` is specified in the `extraInfoSpec` parameter, the event listener should return a `BlockingResponse` object, and can set its `requestHeaders` property.
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A set of filters that restricts the events that will be sent to this listener.
@@ -159,7 +159,7 @@ Events have three functions:
 
     - `fingerprinting` and `fingerprinting_content`: indicates the request is involved in fingerprinting. `fingerprinting_content` indicates the request is loaded from an origin that has been found to fingerprint but is not considered to participate in tracking, such as a payment provider.
     - `cryptomining` and `cryptomining_content`: similar to the fingerprinting category but for cryptomining resources.
-    - `tracking`, `tracking_ad`, `tracking_analytics`, `tracking_social`,  and `tracking_content`: indicates the request is involved in tracking. `tracking` is any generic tracking request, the `ad`, `analytics`, `social`, and `content` suffixes identify the type of tracker.
+    - `tracking`, `tracking_ad`, `tracking_analytics`, `tracking_social`, and `tracking_content`: indicates the request is involved in tracking. `tracking` is any generic tracking request, the `ad`, `analytics`, `social`, and `content` suffixes identify the type of tracker.
     - `any_basic_tracking`: a meta flag that combines any tracking and fingerprinting flags, excluding `tracking_content` and `fingerprinting_content`.
     - `any_strict_tracking`: a meta flag that combines any tracking and fingerprinting flags, including `tracking_content` and `fingerprinting_content`.
     - `any_social_tracking`: a meta flag that combines any social tracking flags.
@@ -178,18 +178,18 @@ This code changes the "User-Agent" header so the browser identifies itself as Op
 /*
 This is the page for which we want to rewrite the User-Agent header.
 */
-var targetPage = "https://httpbin.org/*";
+let targetPage = "https://httpbin.org/*";
 
 /*
 Set UA string to Opera 12
 */
-var ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+let ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 /*
 Rewrite the User-Agent header to "ua".
 */
 function rewriteUserAgentHeader(e) {
-  for (var header of e.requestHeaders) {
+  for (let header of e.requestHeaders) {
     if (header.name.toLowerCase() === "user-agent") {
       header.value = ua;
     }
@@ -218,20 +218,20 @@ This code is exactly like the previous example, except that the listener is asyn
 /*
 This is the page for which we want to rewrite the User-Agent header.
 */
-var targetPage = "https://httpbin.org/*";
+let targetPage = "https://httpbin.org/*";
 
 /*
 Set UA string to Opera 12
 */
-var ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+let ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 /*
 Rewrite the User-Agent header to "ua".
 */
 function rewriteUserAgentHeaderAsync(e) {
-  var asyncRewrite = new Promise((resolve, reject) => {
+  let asyncRewrite = new Promise((resolve, reject) => {
     window.setTimeout(() => {
-      for (var header of e.requestHeaders) {
+      for (let header of e.requestHeaders) {
         if (header.name.toLowerCase() === "user-agent") {
           header.value = ua;
         }
@@ -258,7 +258,7 @@ browser.webRequest.onBeforeSendHeaders.addListener(
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest#event-onBeforeSendHeaders) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#event-onBeforeSendHeaders) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

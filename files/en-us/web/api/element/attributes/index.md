@@ -1,6 +1,7 @@
 ---
 title: Element.attributes
 slug: Web/API/Element/attributes
+page-type: web-api-instance-property
 tags:
   - API
   - Attributes
@@ -19,20 +20,18 @@ methods and the {{domxref("Attr")}} nodes' indexes may differ among browsers. To
 specific, `attributes` is a key/value pair of strings that represents any
 information regarding that attribute.
 
-## Syntax
+## Value
 
-```js
-var attr = element.attributes;
-```
+A {{domxref("NamedNodeMap")}} object.
 
-## Example
+## Examples
 
 ### Basic examples
 
 ```js
 // Get the first <p> element in the document
-var para = document.getElementsByTagName("p")[0];
-var atts = para.attributes;
+const para = document.getElementsByTagName("p")[0];
+const atts = para.attributes;
 ```
 
 ### Enumerating elements attributes
@@ -50,14 +49,14 @@ with id "paragraph", and prints each attribute's value.
   <title>Attributes example</title>
   <script type="text/javascript">
    function listAttributes() {
-     var paragraph = document.getElementById("paragraph");
-     var result = document.getElementById("result");
+     const paragraph = document.getElementById("paragraph");
+     const result = document.getElementById("result");
 
      // First, let's verify that the paragraph has some attributes
      if (paragraph.hasAttributes()) {
-       var attrs = paragraph.attributes;
-       var output = "";
-       for(var i = attrs.length - 1; i >= 0; i--) {
+       const attrs = paragraph.attributes;
+       let output = "";
+       for(let i = attrs.length - 1; i >= 0; i--) {
          output += attrs[i].name + "->" + attrs[i].value;
        }
        result.value = output;
@@ -92,4 +91,4 @@ with id "paragraph", and prints each attribute's value.
 ## See also
 
 - {{domxref("NamedNodeMap")}}, the interface of the returned object
-- Cross-browser compatibility considerations: on [quirksmode](https://www.quirksmode.org/dom/w3c_core.html#attributes)
+- Cross-browser compatibility considerations: on [quirksmode](https://quirksmode.org/dom/core/#attributes)

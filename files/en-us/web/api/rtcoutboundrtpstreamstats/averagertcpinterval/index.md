@@ -1,6 +1,7 @@
 ---
 title: RTCOutboundRtpStreamStats.averageRtcpInterval
 slug: Web/API/RTCOutboundRtpStreamStats/averageRtcpInterval
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -28,13 +29,7 @@ of the {{domxref("RTCOutboundRtpStreamStats")}} dictionary is a floating-point v
 indicating the average time that should pass between transmissions of
 {{Glossary("RTCP")}} packets on this stream.
 
-## Syntax
-
-```js
-var averageRtcpInterval = RTCOutboundRtpStreamStats.averageRtcpInterval;
-```
-
-### Value
+## Value
 
 A floating-point value indicating the average interval, in seconds, between
 transmissions of RTCP packets. This interval is computed following the formula outlined

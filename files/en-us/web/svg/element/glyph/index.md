@@ -20,23 +20,23 @@ A **`<glyph>`** defines a single glyph in an SVG font.
 
 ### Global attributes
 
-*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-*   {{SVGAttr("class")}}
-*   {{SVGAttr("style")}}
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
 
 ### Specific attributes
 
-*   {{SVGAttr("d")}}
-*   {{SVGAttr("horiz-adv-x")}}
-*   {{SVGAttr("vert-origin-x")}}
-*   {{SVGAttr("vert-origin-y")}}
-*   {{SVGAttr("vert-adv-y")}}
-*   {{SVGAttr("unicode")}}
-*   {{SVGAttr("glyph-name")}}
-*   {{SVGAttr("orientation")}}
-*   {{SVGAttr("arabic-form")}}
-*   {{SVGAttr("lang")}}
+- {{SVGAttr("d")}}
+- {{SVGAttr("horiz-adv-x")}}
+- {{SVGAttr("vert-origin-x")}}
+- {{SVGAttr("vert-origin-y")}}
+- {{SVGAttr("vert-adv-y")}}
+- {{SVGAttr("unicode")}}
+- {{SVGAttr("glyph-name")}}
+- {{SVGAttr("orientation")}}
+- {{SVGAttr("arabic-form")}}
+- {{SVGAttr("lang")}}
 
 ## DOM Interface
 
@@ -88,6 +88,6 @@ This element implements the {{domxref("SVGGlyphElement")}} interface.
 
 ## See also
 
-*   {{SVGElement("font")}}
-*   {{SVGElement("missing-glyph")}}
-*   [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts)
+- {{SVGElement("font")}}
+- {{SVGElement("missing-glyph")}}
+- [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts)

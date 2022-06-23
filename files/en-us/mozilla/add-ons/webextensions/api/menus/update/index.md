@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var updating = browser.menus.update(
+let updating = browser.menus.update(
   id,               // integer or string
   updateProperties // object
 )
@@ -89,7 +89,7 @@ var updating = browser.menus.update(
     - `parentId` {{optional_inline}}
       - : `integer` or `string`. The ID of a parent menu item; this makes the item a child of a previously added item. Note: If you have created more than one menu item, then the items will be placed in a submenu. The submenu's parent will be labeled with the name of the extension.
     - `targetUrlPatterns` {{optional_inline}}
-      - : `array` of `string`. Similar to `documentUrlPatterns`, but lets you filter based on the `href` of anchor tags and the `src` attribute of img/audio/video tags. This parameter supports any URL scheme, even those that are usually not allowed in a match pattern.
+      - : `array` of `string`. Similar to `documentUrlPatterns`, but lets you filter based on the `href` of anchor tags and the `src` attribute of img/audio/video tags. This parameter supports any URL scheme, even those that are usually not allowed in a match pattern.
     - `title` {{optional_inline}}
 
       - : `string`. The text to be displayed in the item. Mandatory unless `type` is "separator".
@@ -107,7 +107,7 @@ var updating = browser.menus.update(
     - `type` {{optional_inline}}
       - : `{{WebExtAPIRef('menus.ItemType')}}`. The type of menu item: "normal", "checkbox", "radio", "separator". Defaults to "normal".
     - `viewTypes` {{optional_inline}}
-      - : `{{WebExtAPIRef('extension.ViewType')}}`. List of view types where the menu item will be shown. Defaults to any view, including those without a `viewType`.
+      - : `{{WebExtAPIRef('extension.ViewType')}}`. List of view types where the menu item will be shown. Defaults to any view, including those without a `viewType`.
     - `visible` {{optional_inline}}
       - : `boolean`. Whether the item is shown in the menu. Defaults to `true`.
 
@@ -136,7 +136,7 @@ browser.menus.create({
 
 browser.menus.onClicked.addListener(function(info, tab) {
   if (info.menuItemId == "do-not-click-me") {
-    var updating = browser.menus.update(info.menuItemId, {
+    let updating = browser.menus.update(info.menuItemId, {
       title: "Do not click this button again"
     });
     updating.then(onUpdated, onError);
@@ -150,7 +150,7 @@ browser.menus.onClicked.addListener(function(info, tab) {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus#method-update) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/contextMenus/#method-update) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
 <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //

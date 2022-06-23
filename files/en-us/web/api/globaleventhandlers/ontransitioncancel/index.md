@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ontransitioncancel
 slug: Web/API/GlobalEventHandlers/ontransitioncancel
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Transitions
@@ -18,7 +19,7 @@ The **`ontransitioncancel`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
 processes {{event("transitioncancel")}} events.
 
-The `transitioncancel` event is sent when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) is cancelled. The
+The `transitioncancel` event is sent when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) is cancelled. The
 transition is cancelled when:
 
 - The value of the {{cssxref("transition-property")}} property that applies to the
@@ -90,7 +91,7 @@ it.
   color: #FFFFFF;
   padding: 20px;
   font: bold 1.6em "Helvetica", "Arial", sans-serif;
-  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s, color 2s;
+  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s, color 2s;
   transition: width 2s, height 2s, background-color 2s, transform 2s, color 2s;
 }
 
@@ -99,7 +100,7 @@ it.
   color: #000000;
   width: 200px;
   height: 200px;
-  -webkit-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 ```

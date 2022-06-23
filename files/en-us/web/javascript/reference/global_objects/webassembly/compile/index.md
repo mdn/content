@@ -26,8 +26,8 @@ WebAssembly.compile(bufferSource)
 
 ### Parameters
 
-- _bufferSource_
-  - : A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+- `bufferSource`
+  - : A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or {{jsxref("ArrayBuffer")}}
     containing the binary code of the .wasm module you want to compile.
 
 ### Return value
@@ -37,8 +37,8 @@ representing the compiled module.
 
 ### Exceptions
 
-- If `bufferSource` is not a [typed array](/en-US/docs/Web/JavaScript/Typed_arrays), a
-  {{jsxref("TypeError")}} is thrown.
+- If `bufferSource` is not a [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or {{jsxref("WebAssembly.Module")}},
+  the promise rejects with a {{jsxref("TypeError")}}.
 - If compilation fails, the promise rejects with a
   {{jsxref("WebAssembly.CompileError")}}.
 
@@ -53,11 +53,11 @@ The following example compiles the loaded simple.wasm byte code using the
 var worker = new Worker("wasm_worker.js");
 
 fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
+  response.arrayBuffer()
 ).then(bytes =>
-  WebAssembly.compile(bytes)
+  WebAssembly.compile(bytes)
 ).then(mod =>
-  worker.postMessage(mod)
+  worker.postMessage(mod)
 );
 ```
 
@@ -77,5 +77,4 @@ fetch('simple.wasm').then(response =>
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

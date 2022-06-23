@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: toolbar role'
 slug: Web/Accessibility/ARIA/Roles/toolbar_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
@@ -9,6 +9,9 @@ tags:
   - ARIA roles
   - document structure role
   - toolbar role
+spec-urls:
+  - https://w3c.github.io/aria/#toolbar
+  - https://w3c.github.io/aria-practices/#toolbar
 ---
 
 The `toolbar` role defines the containing element as a collection of commonly used function buttons or controls represented in a compact visual form.
@@ -19,12 +22,11 @@ A toolbar is a collection of commonly used controls, such as buttons or checkbox
 
 The toolbar is commonly a subset of functions found in a `menubar` as a way to reduce user effort. If you have more than one toolbar in a menubar, each toolbar requires a label; which you can include with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
 
-When creating a toolbar, you need to implement focus management and keyboard interactions within the toolbar, handling when the same keyboard interactions is used both in the toolbar and in included native control. The <kbd>Left Arrow</kbd> and <kbd>Right Arrow</kbd> should be used to navigate between the controls withing a horizontal tool bar. The <kbd>Up Arrow</kbd> and <kbd>Down Arrow</kbd> should be used if the toolbar is vertical -- in which case you also want to include the `aria-orientation="vertical"` -- or, in a horizontal toolbar, can be reserved for operating controls, such as spin buttons that require vertical arrow keys to operate.
+When creating a toolbar, you need to implement focus management and keyboard interactions within the toolbar, handling when the same keyboard interactions is used both in the toolbar and in included native control. The <kbd>Left Arrow</kbd> and <kbd>Right Arrow</kbd> should be used to navigate between the controls within a horizontal tool bar. The <kbd>Up Arrow</kbd> and <kbd>Down Arrow</kbd> should be used if the toolbar is vertical -- in which case you also want to include the `aria-orientation="vertical"` -- or, in a horizontal toolbar, can be reserved for operating controls, such as spin buttons that require vertical arrow keys to operate.
 
 Avoid including controls whose operation requires arrow keys used for toolbar navigation. If you must include such a control, make it the last control in the toolbar. For example, in a horizontal toolbar, a textbox could be included as the last element.
 
 If any of the otherwise interactive elements within the toolbar are temporarily disabled, consider letting them remain focusable so screen reader users can be made aware of their presence.
-
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -41,15 +43,14 @@ Implement focus management so the keyboard tab sequence includes one stop for th
 - <kbd>Tab</kbd> and <kbd>Shift + Tab</kbd>
   - : Move focus into and out of the toolbar. When focus moves into a toolbar:
 
-    * If focus is moving into the toolbar for the first time, focus is set on the first control that is not disabled.
-    * If the toolbar has previously contained focus, focus is optionally set on the control that last had focus. Otherwise, it is set on the first control that is not disabled.
+    - If focus is moving into the toolbar for the first time, focus is set on the first control that is not disabled.
+    - If the toolbar has previously contained focus, focus is optionally set on the control that last had focus. Otherwise, it is set on the first control that is not disabled.
 
 - <kbd>Home</kbd> (Optional)
   - : Moves focus to first element.
 
 - <kbd>End</kbd> (Optional)
   - : Moves focus to last element.
-
 
 #### Horizontal toolbar
 
@@ -93,20 +94,14 @@ Avoid including controls whose operation requires arrow keys used for toolbar na
 
 If any of the otherwise interactive elements within the toolbar are disabled, consider letting them remain focusable so screen reader users can be made aware of their presence.
 
-
-
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#toolbar","ARIA: toolbar role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#toolbar","toolbar role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
-
+{{Specifications}}
 
 ## See Also
 
 - [The CSS `:focus` pseudoclass](/en-US/docs/Web/CSS/:focus)
-- [The CSS `:focus-within` pseudclass](/en-US/docs/Web/CSS/:focus-within)
+- [The CSS `:focus-within` pseudoclass](/en-US/docs/Web/CSS/:focus-within)
 
 <section id="Quick_links">
 

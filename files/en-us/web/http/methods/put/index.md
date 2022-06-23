@@ -21,7 +21,7 @@ The difference between `PUT` and {{HTTPMethod("POST")}} is that `PUT` is idempot
     </tr>
     <tr>
       <th scope="row">Successful response has body</th>
-      <td>No</td>
+      <td>May</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Safe/HTTP", "Safe")}}</th>
@@ -67,13 +67,17 @@ Content-length: 16
 
 If the target resource does not have a current representation and the `PUT` request successfully creates one, then the origin server must inform the user agent by sending a {{HTTPStatus("201")}} (`Created`) response.
 
-    HTTP/1.1 201 Created
-    Content-Location: /new.html
+```
+HTTP/1.1 201 Created
+Content-Location: /new.html
+```
 
 If the target resource does have a current representation and that representation is successfully modified in accordance with the state of the enclosed representation, then the origin server must send either a {{HTTPStatus("200")}} (`OK`) or a {{HTTPStatus("204")}} (`No Content`) response to indicate successful completion of the request.
 
-    HTTP/1.1 204 No Content
-    Content-Location: /existing.html
+```
+HTTP/1.1 204 No Content
+Content-Location: /existing.html
+```
 
 ## Specifications
 

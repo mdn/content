@@ -1,6 +1,7 @@
 ---
 title: CharacterData.replaceData()
 slug: Web/API/CharacterData/replaceData
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -8,11 +9,7 @@ browser-compat: api.CharacterData.replaceData
 ---
 {{APIRef("DOM")}}
 
-The **`replaceData()`** of the {{domxref("CharacterData")}} interface
-replace a part of the data inside the node with the string given in paramater.
-
-This method is similar to `insertData()`, but `replaceData()` allows
-overwriting a certain number of bytes.
+The **`replaceData()`** method of the {{domxref("CharacterData")}} interface removes a certain number of characters of the existing text in a given `CharacterData` node and replaces those characters with the text provided.
 
 ## Syntax
 
@@ -33,6 +30,11 @@ characterData.replaceData(offset, count, data)
 ### Return value
 
 None.
+
+## Exceptions
+
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : Thrown if `offset` or `count` is negative or `offset` is greater than the length of the contained data.
 
 ## Example
 
@@ -59,5 +61,7 @@ textnode.replaceData(2, 4, "replaced");
 
 ## See also
 
-- {{domxref("CharacterData.appendData()")}}, {{domxref("CharacterData.deleteData()")}}, {{domxref("CharacterData.insertData()")}}
+- {{domxref("CharacterData.appendData()")}}
+- {{domxref("CharacterData.deleteData()")}}
+- {{domxref("CharacterData.insertData()")}}
 - {{domxref("CharacterData.data")}}

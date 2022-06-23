@@ -1,6 +1,7 @@
 ---
 title: PointerEvent.pressure
 slug: Web/API/PointerEvent/pressure
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -16,25 +17,13 @@ The **`pressure`** read-only property of the
 {{domxref("PointerEvent")}} interface indicates the normalized pressure of the pointer
 input.
 
-## Syntax
+## Value
 
-```js
-var pressure = pointerEvent.pressure;
-```
+The normalized pressure of the pointer input in the range of `0` to `1`, inclusive, where `0` and `1` represent the minimum and maximum pressure the hardware is capable of detecting, respectively. For hardware that does not support pressure, such as a mouse, the value is `0.5` when the pointer is active buttons state and `0`  otherwise.
 
-### Return value
+## Examples
 
-- `pressure`
-  - : The normalized pressure of the pointer input in the range of `0` to
-    `1`, inclusive, where `0` and `1` represent the
-    minimum and maximum pressure the hardware is capable of detecting, respectively. For
-    hardware that does not support pressure, such as a mouse, the value is
-    `0.5` when the pointer is active buttons state and `0`
-    otherwise.
-
-## Example
-
-In this snippet, when a {{event("pointerdown")}} event is fired, different functions
+In this snippet, when a {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event is fired, different functions
 are called depending on the value of the event's `pressure` property.
 
 ```js

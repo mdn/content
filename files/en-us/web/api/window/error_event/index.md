@@ -1,6 +1,7 @@
 ---
 title: 'Window: error event'
 slug: Web/API/Window/error_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -58,7 +59,7 @@ The event object is a {{domxref("UIEvent")}} instance if it was generated from a
 ```css hidden
 body {
   display: grid;
-  grid-template-areas: "control  log";
+  grid-template-areas: "control log";
 }
 
 .controls {

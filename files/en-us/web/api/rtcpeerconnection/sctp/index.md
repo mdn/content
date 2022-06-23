@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.sctp
 slug: Web/API/RTCPeerConnection/sctp
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCPeerConnection
@@ -9,6 +10,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCPeerConnection.sctp
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`sctp`** property on the
@@ -19,13 +21,7 @@ received. If SCTP hasn't been negotiated, this value is `null`.
 The SCTP transport is used for transmitting and receiving data for any and all
 {{domxref("RTCDataChannel")}}s on the peer connection.
 
-## Syntax
-
-```js
-var sctp = RTCPeerConnection.sctp;
-```
-
-### Value
+## Value
 
 A {{domxref("RTCSctpTransport")}} object describing the SCTP transport being used by
 the {{domxref("RTCPeerConnection")}} for transmitting and receiving on its data
@@ -37,12 +33,12 @@ channels, or `null` if SCTP negotiation hasn't happened.
 var pc = new RTCPeerConnection();
 
 var channel = pc.createDataChannel("Mydata");
-channel.onopen = function(event) {
-  channel.send('sending a message');
-}
-channel.onmessage = function(event) {
+channel.onopen = function (event) {
+  channel.send("sending a message");
+};
+channel.onmessage = function (event) {
   console.log(event.data);
-}
+};
 
 // Determine the largest message size that can be sent
 
@@ -60,7 +56,7 @@ var maxMessageSize = sctp.maxMessageSize;
 
 ## See also
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCPeerConnection")}}
 - {{domxref("RTCDataChannel")}}
 - {{Glossary("SCTP")}}

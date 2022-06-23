@@ -1,6 +1,7 @@
 ---
 title: AudioContext.resume()
 slug: Web/API/AudioContext/resume
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -23,7 +24,7 @@ called on an {{domxref("OfflineAudioContext")}}.
 ## Syntax
 
 ```js
-completePromise = audioContext.resume();
+resume()
 ```
 
 ### Parameters
@@ -35,11 +36,9 @@ None.
 A {{jsxref("Promise")}} that resolves when the context has resumed. The promise is
 rejected if the context has already been closed.
 
-## Example
+## Examples
 
-The following snippet is taken from our [AudioContext
-states demo](https://github.com/mdn/webaudio-examples/tree/master/audiocontext-states) ([see it running
-live](https://mdn.github.io/webaudio-examples/audiocontext-states/).) When the suspend/resume button is clicked, the
+The following snippet is taken from our [AudioContext states demo](https://github.com/mdn/webaudio-examples/tree/master/audiocontext-states) ([see it running live](https://mdn.github.io/webaudio-examples/audiocontext-states/).) When the suspend/resume button is clicked, the
 {{domxref("BaseAudioContext/state", "AudioContext.state")}} is queried — if it is `running`,
 {{domxref("AudioContext.suspend()", "suspend()")}} is called; if it is
 `suspended`, `resume()` is called. In each case, the text label of
@@ -47,15 +46,15 @@ the button is updated as appropriate once the promise resolves.
 
 ```js
 susresBtn.onclick = function() {
-  if(audioCtx.state === 'running') {
-    audioCtx.suspend().then(function() {
-      susresBtn.textContent = 'Resume context';
-    });
-  } else if(audioCtx.state === 'suspended') {
-    audioCtx.resume().then(function() {
-      susresBtn.textContent = 'Suspend context';
-    });
-  }
+  if(audioCtx.state === 'running') {
+    audioCtx.suspend().then(function() {
+      susresBtn.textContent = 'Resume context';
+    });
+  } else if(audioCtx.state === 'suspended') {
+    audioCtx.resume().then(function() {
+      susresBtn.textContent = 'Suspend context';
+    });
+  }
 }
 ```
 

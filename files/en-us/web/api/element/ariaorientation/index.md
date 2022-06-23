@@ -1,6 +1,7 @@
 ---
 title: Element.ariaOrientation
 slug: Web/API/Element/ariaOrientation
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,16 +16,9 @@ browser-compat: api.Element.ariaOrientation
 
 The **`ariaOrientation`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) attribute, which indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
 
-## Syntax
+## Value
 
-```js
-var ariaOrientation = element.ariaOrientation;
-element.ariaOrientation = ariaOrientation
-```
-
-### Value
-
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"horizontal"`
   - : The element is horizontal.

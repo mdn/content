@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.secureConnectionStart
 slug: Web/API/PerformanceResourceTiming/secureConnectionStart
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,20 +18,14 @@ the property returns zero.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-resource.secureConnectionStart;
-```
-
-### Return value
+## Value
 
 If the resource is fetched over a secure connection, a
 {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts the handshake
 process to secure the current connection. If a secure connection is not used, this
 property returns zero.
 
-## Example
+## Examples
 
 In the following example, the value of the `*Start` and `*End`
 properties of all "`resource`"

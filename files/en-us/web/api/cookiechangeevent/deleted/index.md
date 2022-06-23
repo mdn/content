@@ -1,6 +1,7 @@
 ---
 title: CookieChangeEvent.deleted
 slug: Web/API/CookieChangeEvent/deleted
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,28 +10,22 @@ tags:
   - CookieChangeEvent
 browser-compat: api.CookieChangeEvent.deleted
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 The **`deleted`** read-only property of the {{domxref("CookieChangeEvent")}} interface returns an array of the cookies that have been deleted by the given `CookieChangeEvent` instance.
 
-## Syntax
-
-```js
-var array = CookieChangeEvent.deleted;
-```
-
-### Value
+## Value
 
 An array of objects containing the deleted cookie(s). Each object contains the following properties:
 
 - `name`
-  - : A {{domxref("USVString")}} containing the name of the cookie.
+  - : A string containing the name of the cookie.
 - `value`
-  - : A {{domxref("USVString")}} containing the value of the cookie.
+  - : A string containing the value of the cookie.
 - `domain`
-  - : A {{domxref("USVString")}} containing the domain of the cookie.
+  - : A string containing the domain of the cookie.
 - `path`
-  - : A {{domxref("USVString")}} containing the path of the cookie.
+  - : A string containing the path of the cookie.
 - `expires`
   - : A {{domxref("DOMTimeStamp")}} containing the expiration date of the cookie.
 - `secure`

@@ -14,12 +14,12 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 ### Developer Tools
 
-- [Completely revamped Responsive Design Mode, including UA selection and network throttling.](/en-US/docs/Tools/Responsive_Design_Mode)
-- [The Animation Inspector now displays timing functions.](/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations)
-- [The Page Inspector now includes a CSS grid inspector.](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
-- [about:debugging now shows service worker state.](/en-US/docs/Tools/about:debugging#service_worker_state)
-- [The Page Inspector includes an easy way to highlight the selected element.](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#element_rule)
-- [The Page Inspector displays whitespace-only text nodes.](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#whitespace-only_text_nodes)
+- [Completely revamped Responsive Design Mode, including UA selection and network throttling.](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html)
+- [The Animation Inspector now displays timing functions.](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html)
+- [The Page Inspector now includes a CSS grid inspector.](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
+- [about:debugging now shows service worker state.](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#service-worker-state)
+- [The Page Inspector includes an easy way to highlight the selected element.](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#element-rule)
+- [The Page Inspector displays whitespace-only text nodes.](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#whitespace-only-text-nodes)
 
 [All devtools bugs fixed between Firefox 51 and Firefox 52](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2016-11-14&query_format=advanced&chfield=resolution&chfieldfrom=2016-09-19&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%20about%3Adebugging&component=Developer%20Tools%3A%20Animation%20Inspector&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Computed%20Styles%20Inspector&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20CSS%20Rules%20Inspector&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20DOM&component=Developer%20Tools%3A%20Font%20Inspector&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20JSON%20Viewer&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Design%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Shared%20Components&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=13333174).
 
@@ -79,7 +79,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - Implemented ES2017 [trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas) in functions ({{bug(1303788)}}).
 - Implemented {{jsxref("Functions/rest_parameters", "rest parameter destructuring", "#Destructuring_rest_parameters", 1)}} ({{bug(1243717)}}).
 - The {{jsxref("Operators", "exponentiation operator (**)", "#Exponentiation_(**)", 1)}} is now enabled by default ({{bug(1291212)}}).
-- You can now use [IANA time zone names](http://www.iana.org/time-zones) in the `timeZone` option of date related APIs like {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} or {{jsxref("Date.toLocaleString()")}} ({{bug(837961)}}).
+- You can now use [IANA time zone names](https://www.iana.org/time-zones) in the `timeZone` option of date related APIs like {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} or {{jsxref("Date.toLocaleString()")}} ({{bug(837961)}}).
 
 #### Changes and removals
 
@@ -87,7 +87,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - Duplicate `__proto__` properties are now allowed in [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ({{bug(1204024)}}).
 - {{jsxref("Array.prototype.toLocaleString()")}} has been re-implemented to support the Intl API parameters "`locales`" and "`options`" ({{bug(1130636)}}).
 - {{jsxref("TypedArray")}} constructors now accept [iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) to create new typed arrays ({{bug(1232266)}}).
-- {{jsxref("TypedArray.from()")}}, {{jsxref("TypedArray.of()")}}, {{jsxref("TypedArray.prototype.filter()")}}, {{jsxref("TypedArray.prototype.map()")}}, {{jsxref("TypedArray.prototype.slice()")}}, {{jsxref("TypedArray.prototype.subarray()")}} now require that their `this` values are valid Typed Array constructors ({{bug(1122396)}}).
+- {{jsxref("TypedArray.from()")}}, {{jsxref("TypedArray.of()")}}, {{jsxref("TypedArray.prototype.filter()")}}, {{jsxref("TypedArray.prototype.map()")}}, {{jsxref("TypedArray.prototype.slice()")}}, {{jsxref("TypedArray.prototype.subarray()")}} now require that their `this` values are valid Typed Array constructors ({{bug(1122396)}}).
 - The non-standard {{jsxref("ArrayBuffer.slice()")}} method (not {{jsxref("ArrayBuffer.prototype.slice()")}}) is deprecated and now presents a warning when used ({{bug(1316913)}}).
 - [Unicode code point escapes](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#unicode_code_point_escapes) can now also be used as identifiers (e.g. "`let \u{61} = 123`", see {{bug(1314037)}}).
 - To conform with ES2015, `\u2e2f` and `ⸯ` now throw when used as identifier, for details see {{bug(917436)}} and {{bug(1197230)}}.
@@ -98,30 +98,30 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 ### DOM
 
-- The [Selection API](/en-US/docs/Web/API/Selection) has fully shipped, including the new {{Event("selectstart")}} and {{Event("selectionchange")}} events (see also {{domxref("GlobalEventHandlers.onselectstart")}} and {{domxref("GlobalEventHandlers.onselectionchange")}}) ({{bug(1309612)}}).
+- The [Selection API](/en-US/docs/Web/API/Selection) has fully shipped, including the new {{domxref("Document/selectstart_event", "selectstart")}} and {{domxref("Document/selectionchange_event", "selectionchange")}} events (see also {{domxref("GlobalEventHandlers.onselectstart")}} and {{domxref("GlobalEventHandlers.onselectionchange")}}) ({{bug(1309612)}}).
 - The property {{domxref("Event.composed")}} is now supported; this Boolean value indicates whether or not the event can bubble through the shadow root into the standard DOM ({{bug(1292063)}}).
-- Only HTML elements, plus the {{HTMLElement("svg")}} and {{HTMLElement("math")}} elements, can be put into full-screen mode by calling {{domxref("Element.requestFullScreen()")}} ({{bug(1305928)}}).
+- Only HTML elements, plus the {{SVGElement("svg")}} and {{MathMLElement("math")}} elements, can be put into full-screen mode by calling {{domxref("Element.requestFullscreen()")}} ({{bug(1305928)}}).
 - [Touch events](/en-US/docs/Web/API/Touch_events) have been reenabled on Windows desktop platforms — see {{bug(1244402)}}. (They were disabled in Firefox 24 because they broke a number of major sites; see {{bug(888304)}}.)
 - The {{event("focusin")}} and {{event("focusout")}} events are now implemented ({{bug("687787")}}).
 - The {{domxref("isSecureContext")}} property has been implemented (see {{bug(1269052)}}).
-- The [Web App Manifest](/en-US/docs/Web/Manifest) install event has been renamed appinstalled (see {{domxref("Window.onappinstalled")}}, {{event("appinstalled")}}) to avoid confusion with the service worker install event (see {{domxref("ServiceWorkerGlobalScope.oninstall")}}). See {{bug(1309099)}} for more details about this update.
-- The {{domxref("DataTransfer.types")}} property of the [Drag and drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) now returns a frozen array of {{domxref("DOMString")}}s rather than a {{domxref("DOMStringList")}} (see {{bug(1298243)}}).
-- The {{Event("loadstart")}} and {{Event("loadend")}} events are now fired on {{htmlelement("img")}} elements (see {{bug(1264769)}}, and also see {{domxref("GlobalEventHandlers.onloadstart")}} and {{domxref("GlobalEventHandlers.onloadend")}}).
+- The [Web App Manifest](/en-US/docs/Web/Manifest) install event has been renamed appinstalled (see {{domxref("Window.appinstalled_event")}}, {{domxref("Window.appinstalled", "appinstalled")}}) to avoid confusion with the service worker install event (see {{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}}). See {{bug(1309099)}} for more details about this update.
+- The {{domxref("DataTransfer.types")}} property of the [Drag and drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) now returns a frozen array of strings rather than a {{domxref("DOMStringList")}} (see {{bug(1298243)}}).
+- The {{Event("loadstart")}} and {{Event("loadend")}} events are now fired on {{htmlelement("img")}} elements (see {{bug(1264769)}}, and also see {{domxref("GlobalEventHandlers.onloadstart")}} and {{domxref("GlobalEventHandlers.onloadend")}}).
 - The {{domxref("Notification.requireInteraction")}} of the [Notifications API](/en-US/docs/Web/API/Notifications_API) has been implemented (see {{bug(862395)}}.)
 - The {{domxref("Window.open()")}} method now has a `noopener` [window feature](/en-US/docs/Web/API/Window/open#window_functionality_features) available (see {{bug(1267339)}}), which mirrors the functionality of the `rel="noopener"` [Link type](/en-US/docs/Web/HTML/Link_types).
 - The {{domxref("CustomElementRegistry.get()")}} method of the [Web Components API](/en-US/docs/Web/Web_Components) has been implemented (see {{bug(1275838)}}).
 - [Pointer Event](/en-US/docs/Web/API/Pointer_events) {{domxref("PointerEvent.width","width")}} and {{domxref("PointerEvent.height","height")}} properties now default to a value of 1 (see {{bug(1304315)}}).
 - The [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) has been updated to include changes in the [latest spec](https://wicg.github.io/entries-api/) (see {{bug(1284987)}} for the exact details).
-- The {{domxref("Event.cancelBubble", "cancelBubble")}} property, which was defined on {{domxref("UIEvent")}}, is now defined on the {{domxref("Event")}} interface instead. See {{bug(1298970)}} for more details.
+- The {{domxref("Event.cancelBubble", "cancelBubble")}} property, which was defined on {{domxref("UIEvent")}}, is now defined on the {{domxref("Event")}} interface instead. See {{bug(1298970)}} for more details.
 
 #### Changes and removals
 
 - The Firefox OS APIs that deal with managing phone calls (Contacts, MobileConnection, Icc, etc.) have been removed ({{bug(1311206)}}).
 - The Firefox OS `Identity` interface has been removed ({{bug(1309030)}}).
-- The Firefox OS Voicemail API [`MozVoicemail`](/en-US/docs/Archive/B2G_OS/API/MozVoicemail), [`MozVoicemailEvent`](/en-US/docs/Archive/B2G_OS/API/MozVoicemailEvent), [`MozVoicemailStatus`](/en-US/docs/Archive/B2G_OS/API/MozVoicemailStatus), [`Navigator.mozVoicemail`](/en-US/docs/Archive/B2G_OS/API/Navigator/mozVoicemail)) has been removed ({{bug(1309723)}}).
+- The Firefox OS Voicemail API (`MozVoicemail`, `MozVoicemailEvent`, `MozVoicemailStatus`, `Navigator.mozVoicemail`) has been removed ({{bug(1309723)}}).
 - The Firefox OS Cell Broadcast API (`MozCellBroadcast`, `MozCellBroadcastEvent`, `MozCellBroadcastMessage`, `Navigator.mozCellBroadcast`) has been removed ({{bug(1306772)}}).
 - The Firefox OS TV broadcast-related APIs have been removed ({{bug(1306778)}}).
-- The Firefox OS FM Radio API ([`FMRadio`](/en-US/docs/Archive/B2G_OS/API/FMRadio), [`Navigator.mozFMRadio`](/en-US/docs/Archive/B2G_OS/API/Navigator/mozFMRadio)) has been removed ({{bug(1306779)}}).
+- The Firefox OS FM Radio API (`FMRadio`, `Navigator.mozFMRadio`) has been removed ({{bug(1306779)}}).
 
 ### Service Workers and Fetch
 
@@ -134,7 +134,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 ### WebRTC
 
 - When an ICE connection is temporarily disrupted, the {{domxref("RTCPeerConnection.iceConnectionState")}} property now gets set to `"disconnected"`; this indicates a transitory failure that may resolve itself shortly, with the connection returning to the `"connected"` state afterward ({{bug(852665)}}).
-- The {{domxref("MediaDevices.ondevicechange")}} event handler and corresponding {{event("devicechange")}} event, which were implemented but disabled by default on Mac only in Firefox 51, have been implemented on Windows and Linux and are now enabled by default on all platforms.
+- The {{domxref("MediaDevices.devicechange_event")}} event and its corresponding handler, which were implemented but disabled by default on Mac only in Firefox 51, have been implemented on Windows and Linux and are now enabled by default on all platforms.
 - The {{domxref("MediaStream.active")}} property is now supported. This read-only Boolean property indicates whether or not at least one track on the stream is currently playing.
 - Prior to Firefox 52, the {{domxref("MediaStreamTrack.stop()")}} method could only stop local tracks (that is, tracks obtained through {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}). Now a variety of tracks can be stopped, including those on a {{domxref("MediaStream")}} associated with a [WebRTC](/en-US/docs/Glossary/WebRTC) connection, [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) stream, or {{domxref("CanvasCaptureMediaStreamTrack", "CanvasCaptureMediaStream")}}.
 - Previously, changing a {{domxref("TextTrack")}}'s {{domxref("TextTrack.mode", "mode")}} repeatedly during a single pass through the Firefox event loop would result in multiple {{event("change")}} events being delivered to the {{domxref("TextTrackList")}} specified by the parent media element's {{domxref("HTMLMediaElement.textTracks", "textTracks")}} property. Now these changes are consolidated into one event ({{bug(882674)}}).
@@ -146,9 +146,9 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 ### Other APIs
 
 - The method {{domxref("FileSystemFileEntry.createWriter()")}}, which was added (but always returned an error) in Firefox 50 has been removed ({{bug(1315185)}}.
-- The proprietary Firefox OS [Apps installation/management APIs](/en-US/docs/Archive/Marketplace/API/App_installation_and_management_APIs) have been removed from the platform (see {{bug(1261019)}}).
-- The proprietary Firefox OS [Web Telephony API](/en-US/docs/Archive/Firefox_OS/Web_Telephony_API) has been removed from the platform (see {{bug(1309719)}}).
-- The proprietary Firefox OS [Web Bluetooth API](/en-US/docs/Archive/Firefox_OS/Bluetooth_API) has been removed from the platform (see {{bug(1310020)}}).
+- The proprietary Firefox OS `Apps installation/management APIs` have been removed from the platform (see {{bug(1261019)}}).
+- The proprietary Firefox OS `Web Telephony API` has been removed from the platform (see {{bug(1309719)}}).
+- The proprietary Firefox OS `Web Bluetooth API` has been removed from the platform (see {{bug(1310020)}}).
 - The [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) is now available only to chrome/privileged code (see {{bug(1313580)}}).
 - `ImageBitmapRenderingContext.transferImageBitmap()` has been renamed to {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}} (see {{bug(1304767)}}).
 - The `mozDash` and `mozDashOffset` members have been removed from {{domxref("CanvasRenderingContext2D")}} (see {{bug(931389)}}).
@@ -172,7 +172,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 ## Plugins
 
-All NPAPI [plugin](/en-US/docs/Mozilla/Add-ons/Plugins) support except Flash has been dropped. Flash usage is also set to be phased out in the future.
+All NPAPI plugin support except Flash has been dropped. Flash usage is also set to be phased out in the future.
 
 ## Changes for add-on and Mozilla developers
 
@@ -191,7 +191,7 @@ New APIs:
 
 ### Interfaces
 
-- `nsIDroppedLinkHandler.dropLinks` method and [nsIDroppedLinkItem](/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDroppedLinkItem) interface have been added to handle dropping multiple items ({{bug(92737)}}).
+- `nsIDroppedLinkHandler.dropLinks` method and `nsIDroppedLinkItem` interface have been added to handle dropping multiple items ({{bug(92737)}}).
 
 ### XUL
 

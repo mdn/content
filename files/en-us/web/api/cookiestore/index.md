@@ -1,25 +1,22 @@
 ---
 title: CookieStore
 slug: Web/API/CookieStore
+page-type: web-api-interface
 tags:
   - API
   - Interface
   - Reference
   - CookieStore
+  - Experimental
 browser-compat: api.CookieStore
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
-The **`CookieStore`** interface of the {{domxref('Cookie Store API')}} provides methods for getting and setting cookies asynchronously from either a page or a service worker.
+The **`CookieStore`** interface of the ['Cookie Store API'](/en-US/docs/Web/API/Cookie_Store_API) provides methods for getting and setting cookies asynchronously from either a page or a service worker.
 
 The `CookieStore` is accessed via attributes in the global scope in a {{domxref("Window")}} or {{domxref("ServiceWorkerGlobalScope")}} context. Therefore there is no constructor.
 
-## Properties
-
-### Event handlers
-
-- {{domxref("CookieStore.onChange")}}
-  - : The `onchange` EventHandler is called whenever a cookie is changed.
+{{InheritanceDiagram}}
 
 ## Methods
 
@@ -31,6 +28,11 @@ The `CookieStore` is accessed via attributes in the global scope in a {{domxref(
   - : The `getAll()` method gets all matching cookies, it returns a {{jsxref("Promise")}} that resolves with a list of cookies.
 - {{domxref("CookieStore.set()")}}
   - : The `set()` method sets a cookie with the given name and value or options object, it returns a {{jsxref("Promise")}} that resolves when the cookie is set.
+
+## Events
+
+- {{domxref("CookieStore.change_event", "change")}}
+  - : The `change` event fires when a change is made to any cookie.
 
 ## Examples
 

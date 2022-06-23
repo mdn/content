@@ -1,6 +1,7 @@
 ---
 title: SVGFESpotLightElement
 slug: Web/API/SVGFESpotLightElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGFESpotLightElement
 
 The **`SVGFESpotLightElement`** interface corresponds to the {{SVGElement("feSpotLight")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

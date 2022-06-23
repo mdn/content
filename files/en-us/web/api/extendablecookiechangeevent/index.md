@@ -1,16 +1,18 @@
 ---
 title: ExtendableCookieChangeEvent
 slug: Web/API/ExtendableCookieChangeEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface
   - Reference
   - ExtendableCookieChangeEvent
+  - Experimental
 browser-compat: api.ExtendableCookieChangeEvent
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
-The **`ExtendableCookieChangeEvent`** interface of the {{domxref('Cookie Store API')}} is the event type passed to {{domxref("ServiceWorkerRegistration.oncookiechange()")}} when any cookie changes have occurred. A cookie change event consists of a cookie and a type (either "changed" or "deleted".)
+The **`ExtendableCookieChangeEvent`** interface of the['Cookie Store API'](/en-US/docs/Web/API/Cookie_Store_API) is the event type passed to {{domxref("ServiceWorkerRegistration.oncookiechange()")}} when any cookie changes occur. A cookie change event consists of a cookie and a type (either "changed" or "deleted".)
 
 Cookie changes that cause the `ExtendableCookieChangeEvent` to be dispatched are:
 
@@ -20,9 +22,11 @@ Cookie changes that cause the `ExtendableCookieChangeEvent` to be dispatched are
 
 > **Note:** A cookie that is replaced due to the insertion of another cookie with the same name, domain, and path, is ignored and does not trigger a change event.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
-- {{domxref("ExtendableCookieChangeEvent.ExtendableCookieChangeEvent()")}}
+- {{domxref("ExtendableCookieChangeEvent.ExtendableCookieChangeEvent", "ExtendableCookieChangeEvent()")}}
   - : Creates a new `ExtendableCookieChangeEvent`.
 
 ## Properties

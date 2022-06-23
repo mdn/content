@@ -6,6 +6,7 @@ tags:
   - Method
   - Number
   - Prototype
+  - Polyfill
 browser-compat: javascript.builtins.Number.toExponential
 ---
 {{JSRef}}
@@ -65,7 +66,7 @@ of rounding in the description of the {{jsxref("Number.prototype.toFixed",
 ### Using toExponential
 
 ```js
-var numObj = 77.1234;
+const numObj = 77.1234;
 
 console.log(numObj.toExponential());  // logs 7.71234e+1
 console.log(numObj.toExponential(4)); // logs 7.7123e+1
@@ -84,6 +85,7 @@ console.log(77 .toExponential());     // logs 7.7e+1
 
 ## See also
 
+- [A polyfill of `Number.prototype.toExponential`](https://github.com/zloirock/core-js#ecmascript-number) with many bug fixes is available in [`core-js`](https://github.com/zloirock/core-js)
 - {{jsxref("Number.prototype.toFixed()")}}
 - {{jsxref("Number.prototype.toPrecision()")}}
 - {{jsxref("Number.prototype.toString()")}}

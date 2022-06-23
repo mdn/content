@@ -1,6 +1,7 @@
 ---
 title: Using the CSS Typed Object Model
 slug: Web/API/CSS_Typed_OM_API/Guide
+page-type: guide
 tags:
   - CSS
   - CSS Typed OM
@@ -50,15 +51,15 @@ const defaultComputedStyles = myElement.computedStyleMap();
 
 // iterate thru the map of all the properties and values, adding a <dt> and <dd> for each
 for (const [prop, val] of defaultComputedStyles) {
-	// properties
-	const cssProperty = document.createElement('dt');
-	cssProperty.appendChild(document.createTextNode(prop));
-	stylesList.appendChild(cssProperty);
+  // properties
+  const cssProperty = document.createElement('dt');
+  cssProperty.appendChild(document.createTextNode(prop));
+  stylesList.appendChild(cssProperty);
 
-	// values
-	const cssValue = document.createElement('dd');
-	cssValue.appendChild(document.createTextNode(val));
-	stylesList.appendChild(cssValue);
+  // values
+  const cssValue = document.createElement('dd');
+  cssValue.appendChild(document.createTextNode(val));
+  stylesList.appendChild(cssValue);
 }
 ```
 
@@ -111,14 +112,14 @@ const ofInterest = ['font-weight', 'border-left-color', 'color', '--color'];
 
 // iterate through our properties of interest
 for ( let i = 0; i < ofInterest.length; i++ ) {
-  	// properties
+  // properties
   const cssProperty = document.createElement('dt');
   cssProperty.appendChild(document.createTextNode(ofInterest[i]));
   stylesList.appendChild(cssProperty);
-  	// values
+  // values
   const cssValue = document.createElement('dd');
   cssValue.appendChild(document.createTextNode( allComputedStyles.get(ofInterest[i])));
-	stylesList.appendChild(cssValue);
+  stylesList.appendChild(cssValue);
 }
 ```
 
@@ -225,13 +226,7 @@ There are other types available:
 - A {{cssxref('transform')}} returns a `CSSTransformValue`.
 - A [custom property](/en-US/docs/Web/CSS/--*) returns a {{domxref('CSSUnparsedValue')}}.
 
-You can use a `CSSUnitValue` or `CSSKeywordValue` to create other objects. For example, the parameters for a {{domxref('CSSPositionValue')}} is one to two `CSSUnitValues` or `CSSKeywordValues`, or one of each:
-
-```js
-let position = new CSSPositionValue(
-    new CSSKeywordValue("center"),
-    new CSSUnitValue(10, "px"));
-```
+You can use a `CSSUnitValue` or `CSSKeywordValue` to create other objects.
 
 ## CSSStyleValue
 
@@ -255,16 +250,16 @@ Let's examine a CSS example with several custom properties, transforms, `calc()`
 }
 
 button {
-	--mainColor: hsl(198, 100%, 66%);
-	display: inline-block;
-	padding: var(--unit) calc(var(--unit)*2);
-	width: calc(30% + 20px);
-	background: no-repeat 5% center url(magicwand.png) var(--mainColor);
-	border: 4px solid var(--mainColor);
-	border-radius: 2px;
-	font-size: calc(var(--unit)*2); color: var(--white);
-	cursor: pointer;
-	transform: scale(0.95);
+  --mainColor: hsl(198, 100%, 66%);
+  display: inline-block;
+  padding: var(--unit) calc(var(--unit)*2);
+  width: calc(30% + 20px);
+  background: no-repeat 5% center url(magicwand.png) var(--mainColor);
+  border: 4px solid var(--mainColor);
+  border-radius: 2px;
+  font-size: calc(var(--unit)*2); color: var(--white);
+  cursor: pointer;
+  transform: scale(0.95);
 }
 ```
 
@@ -347,7 +342,7 @@ console.log( parsedUnit.value );  // 1.2
 
 ### CSSMathSum
 
-Although the [`<button>`](/en-US/docs/Web/HTML/Element/button) element is an inline element by default, we've added [`display: inline-block;`](/en-US/docs/Web/CSS/CSS_Display) to enable sizing. In our CSS we have `width: calc(30% + 20px);`, which is a [`calc()`](</en-US/docs/Web/CSS/calc()>) function to define the width.
+Although the [`<button>`](/en-US/docs/Web/HTML/Element/button) element is an inline element by default, we've added [`display: inline-block;`](/en-US/docs/Web/CSS/CSS_Display) to enable sizing. In our CSS we have `width: calc(30% + 20px);`, which is a [`calc()`](/en-US/docs/Web/CSS/calc) function to define the width.
 
 When we `get()` the `width`, we get a [`CSSMathSum`](/en-US/docs/Web/API/CSSMathSum) returned. {{domxref('CSSMathSum.values')}} is a {{domxref('CSSNumericArray')}} with 2 `CSSUnitValues`.
 

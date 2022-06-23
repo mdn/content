@@ -1,6 +1,7 @@
 ---
 title: SVGMaskElement
 slug: Web/API/SVGMaskElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGMaskElement
 
 The **`SVGMaskElement`** interface provides access to the properties of {{SVGElement("mask")}} elements, as well as methods to manipulate them.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

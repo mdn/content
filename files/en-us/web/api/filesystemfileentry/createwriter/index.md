@@ -1,9 +1,9 @@
 ---
 title: FileSystemFileEntry.createWriter()
 slug: Web/API/FileSystemFileEntry/createWriter
+page-type: web-api-instance-method
 tags:
   - API
-  - File System API
   - File and Directory Entries API
   - FileSystemFileEntry
   - Files
@@ -14,8 +14,7 @@ tags:
   - Deprecated
 browser-compat: api.FileSystemFileEntry.createWriter
 ---
-{{APIRef("File System
-  API")}}{{SeeCompatTable}}{{deprecated_header}}{{Non-standard_header}}
+{{APIRef("File and Directories Entries API")}}{{deprecated_header}}{{Non-standard_header}}
 
 The {{domxref("FileSystemFileEntry")}} interface's method
 **`createWriter()`** returns a {{domxref("FileWriter")}} object
@@ -24,7 +23,8 @@ which can be used to write data into the file represented by the directory entry
 ## Syntax
 
 ```js
-FileSystemFileEntry.createWriter(successCallback[, errorCallback]);
+createWriter(successCallback)
+createWriter(successCallback, errorCallback)
 ```
 
 ### Parameters
@@ -40,9 +40,9 @@ FileSystemFileEntry.createWriter(successCallback[, errorCallback]);
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 This example establishes a method, `writeToFileEntry()`, which outputs a
 text string to the file corresponding to the passed-in directory entry.
@@ -64,7 +64,9 @@ passed in and creates a new {{domxref("Blob")}} object of type `text/plain`
 that contains the passed text. This blob is then output to the {{domxref("FileWriter")}}
 object to be written to the file.
 
-This API has no official W3C or WHATWG specification.
+## Specifications
+
+This feature is not part of any specification anymore. It is no longer on track to become a standard.
 
 ## Browser compatibility
 
@@ -72,7 +74,5 @@ This API has no official W3C or WHATWG specification.
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

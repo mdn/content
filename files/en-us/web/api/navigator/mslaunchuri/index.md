@@ -1,6 +1,7 @@
 ---
 title: Navigator.msLaunchUri()
 slug: Web/API/Navigator/msLaunchUri
+page-type: web-api-instance-method
 tags:
   - API
   - API:Microsoft Extensions
@@ -18,13 +19,15 @@ This proprietary method is specific to Internet Explorer, and Microsoft Edge ver
 ## Syntax
 
 ```js
-navigator.msLaunchUri(uri, successCallback, noHandlerCallback);
+msLaunchUri(uri)
+msLaunchUri(uri, successCallback)
+msLaunchUri(uri, successCallback, noHandlerCallback)
 ```
 
 ### Parameters
 
 - `uri`
-  - : A {{domxref("DOMString")}} specifying the URL containing including the protocol of the document or resource to be displayed.
+  - : A string specifying the URL containing including the protocol of the document or resource to be displayed.
 - `successCallback`{{Optional_Inline}}
   - : A function matching the signature of {{DOMxRef("MSLaunchUriCallback")}} to be executed if the protocol handler is present.
 - `noHandlerCallback`{{Optional_Inline}}
@@ -32,7 +35,7 @@ navigator.msLaunchUri(uri, successCallback, noHandlerCallback);
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Usage notes
 
@@ -45,4 +48,4 @@ If the user's system does not have a program registered to handle a specific pro
 ## See also
 
 - {{DOMxRef("MSLaunchUriCallback")}}
-- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_API_extensions)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

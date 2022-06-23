@@ -8,23 +8,23 @@ tags:
 ---
 {{MDNSidebar}}
 
-Several characteristics of a CSS property, like its syntax or if it can be animated, are mentioned in multiple pages on MDN and are therefore stored in an ad-hoc "database". This database actually consists of several JSON files containing CSS related information, which are [stored on GitHub](https://github.com/mdn/data/tree/master/css). This article describes how to update this structure.
+Several characteristics of a CSS property, like its syntax or if it can be animated, are mentioned in multiple pages on MDN and are therefore stored in an ad-hoc "database". This database actually consists of several JSON files containing CSS related information, which are [stored on GitHub](https://github.com/mdn/data/tree/main/css). This article describes how to update this structure.
 
 ## Prerequisite resources
 
 To update or check the content of the CSS JSON DB, you will need to gather information from different sources.
 
-1.  **Latest spec**
+1. **Latest spec**
     Whether it is a W3C Recommendation or an early editor's draft, you should refer to the latest available draft of the spec that covers (or specifies that cover) that feature. To find it, you can usually do a web search. The latest version will often be linked to from all versions of the spec, listed under "latest draft" or similar.
-2.  **Latest web browsers**
-    These should be experimental/alpha builds such as [Firefox Nightly](https://nightly.mozilla.org/)/[Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html) that are more likely to support the features you are documenting. This is especially pertinent if you are documenting a nascent/experimental feature.
-3.  **Additional info**
+2. **Latest web browsers**
+    These should be experimental/alpha builds such as [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/)/[Chrome Canary](https://www.google.com/intl/en/chrome/canary/) that are more likely to support the features you are documenting. This is especially pertinent if you are documenting a nascent/experimental feature.
+3. **Additional info**
     Find as much info as you can to better understand how the specific feature works. E.g. blog posts or demos are good resources.
-4.  **Engineering contacts**
-    It is really useful to find yourself a friendly engineering contact to ask questions about the spec, someone who is involved in the standardization of the API, or its implementation in a browser. If you have the implementation bug on Bugzilla, the engineer who implemented the feature is a good contact: asking him in the bug, with a needinfo flag is a good way of having an answer about a specific question. Other good places to find knowledgeable people are:
+4. **Engineering contacts**
+    It is really useful to find yourself a friendly engineering contact to ask questions about the spec, someone who is involved in the standardization of the API, or its implementation in a browser. If you have the implementation bug on Bugzilla, the engineer who implemented the feature is a good contact: asking him in the bug, with a needinfo flag is a good way of having an answer about a specific question. Other good places to find knowledgeable people are:
 
     - Your internal company address book, if you work for a relevant company.
-    - A public mailing list that is involved in the discussion of that API,  such as Mozilla's [dev-platform](https://lists.mozilla.org/listinfo/dev-platform) list, or the W3C list [www-style](https://lists.w3.org/Archives/Public/www-style/).
+    - A public mailing list that is involved in the discussion of that API, such as Mozilla's [dev-platform](https://groups.google.com/a/mozilla.org/g/dev-platform/) list, or the W3C list [www-style](https://lists.w3.org/Archives/Public/www-style/).
     - The spec itself. For example, the [CSS Animations spec](https://drafts.csswg.org/css-animations/) lists the authors and their contact details at the top.
 
 ## Update the CSS information database
@@ -60,11 +60,11 @@ Note that in some cases the property index table might be more briefly and with 
 
 ### Store the information in the JSONs
 
-The information from the specifications is stored in a specific way in the JSON DB. CSS properties are stored within [properties.json](https://github.com/mdn/data/blob/master/css/properties.json). All the JSON keys below are obligatory.
+The information from the specifications is stored in a specific way in the JSON DB. CSS properties are stored within [properties.json](https://github.com/mdn/data/blob/main/css/properties.json). All the JSON keys below are obligatory.
 
-Translated information is stored as key string mapping to a translation in [l10n/css.json](https://github.com/mdn/data/blob/master/l10n/css.json) with language + country codes (according to [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) and [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)) as keys.
+Translated information is stored as key string mapping to a translation in [l10n/css.json](https://github.com/mdn/data/blob/main/l10n/css.json) with language + country codes (according to [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) and [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)) as keys.
 
-You can use the macros [\\{{cssxref}}](https://github.com/mozilla/kumascript/blob/master/macros/cssxref.ejs) and [\\{{SVGElement}}](https://github.com/mozilla/kumascript/blob/master/macros/SVGElement.ejs) within translations to refer to other parts of MDN.
+You can use the macros [\\{{cssxref}}](https://github.com/mdn/yari/blob/main/kumascript/macros/cssxref.ejs) and [\\{{SVGElement}}](https://github.com/mdn/yari/blob/main/kumascript/macros/SVGElement.ejs) within translations to refer to other parts of MDN.
 
 <table class="standard-table">
   <tbody>
@@ -130,9 +130,9 @@ You can use the macros [\\{{cssxref}}](https://github.com/mozilla/kumascript/blo
         <p>l10n/css.json</p>
         <pre class="brush:js">
 "discrete": {
-  "en-US": "discrete",
-  "de": "diskret",
-  "fr": "discrète"
+  "en-US": "discrete",
+  "de": "diskret",
+  "fr": "discrète"
 }</pre
         >
       </td>
@@ -151,17 +151,17 @@ You can use the macros [\\{{cssxref}}](https://github.com/mozilla/kumascript/blo
         >
         <pre class="brush:js">
 "percentages": [
-  "background-position",
+  "background-position",
   "background-size"
 ]</pre
         >
         <p>l10n/css.json</p>
         <pre class="brush:js">
 "logicalWidthOfContainingBlock": {
-  "en-US": "logical-width of containing block",
-  "de": "logische Breite des beinhaltenden Blocks",
-  "fr": "largeur logique du bloc englobant",
-  "ru": "логическая высота содержащего блока"
+  "en-US": "logical-width of containing block",
+  "de": "logische Breite des beinhaltenden Blocks",
+  "fr": "largeur logique du bloc englobant",
+  "ru": "логическая высота содержащего блока"
 }</pre
         >
       </td>
@@ -201,11 +201,11 @@ You can use the macros [\\{{cssxref}}](https://github.com/mozilla/kumascript/blo
         <pre class="brush:js">"appliesto": "absolutelyPositionedElements"</pre>
         <pre class="brush:js">
 "appliesto": [
-  "border-image-outset",
-  "border-image-repeat",
-  "border-image-slice",
-  "border-image-source",
-  "border-image-width"
+  "border-image-outset",
+  "border-image-repeat",
+  "border-image-slice",
+  "border-image-source",
+  "border-image-width"
 ]</pre
         >
         <p>l10n/css.json</p>
@@ -232,9 +232,9 @@ You can use the macros [\\{{cssxref}}](https://github.com/mozilla/kumascript/blo
         <pre class="brush:js">"computed": "normalizedAngle"</pre>
         <pre class="brush:js">
 "computed": [
-    "border-width",
-    "border-style",
-    "color"
+    "border-width",
+    "border-style",
+    "color"
 ]</pre
         >
         <p>l10n/css.json</p>
@@ -271,7 +271,7 @@ You can use the macros [\\{{cssxref}}](https://github.com/mozilla/kumascript/blo
   </tbody>
 </table>
 
-It may happen that the syntax contains references to specific values. Such values normally define their own syntaxes. Those syntaxes should be stored [syntaxes.json](https://github.com/mdn/data/blob/master/css/syntaxes.json) with their name as key. E.g. the {{cssxref("font-family")}} property has a syntax of `[ <family-name> | <generic-family> ]#`. The syntaxes for the values `<family-name>` and `<generic-family>` are stored like this:
+It may happen that the syntax contains references to specific values. Such values normally define their own syntaxes. Those syntaxes should be stored [syntaxes.json](https://github.com/mdn/data/blob/main/css/syntaxes.json) with their name as key. E.g. the {{cssxref("font-family")}} property has a syntax of `[ <family-name> | <generic-family> ]#`. The syntaxes for the values `<family-name>` and `<generic-family>` are stored like this:
 
 ```js
 {

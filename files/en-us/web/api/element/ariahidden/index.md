@@ -1,6 +1,7 @@
 ---
 title: Element.ariaHidden
 slug: Web/API/Element/ariaHidden
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,16 +16,9 @@ browser-compat: api.Element.ariaHidden
 
 The **`ariaHidden`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)) attribute, which indicates whether the element is exposed to an accessibility API.
 
-## Syntax
+## Value
 
-```js
-var ariaHidden = element.ariaHidden;
-element.ariaHidden = ariaHidden
-```
-
-### Value
-
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : The element is hidden from the accessibility API.

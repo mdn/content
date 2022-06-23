@@ -1,6 +1,7 @@
 ---
 title: HTMLMenuItemElement
 slug: Web/API/HTMLMenuItemElement
+page-type: web-api-interface
 tags:
   - API
   - Deprecated
@@ -14,7 +15,7 @@ browser-compat: api.HTMLMenuItemElement
 
 The **`HTMLMenuItemElement`** interface provides special properties (beyond those defined on the regular {{DOMxRef("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("menuitem")}} elements.
 
-{{InheritanceDiagram(600,120)}}
+{{InheritanceDiagram}}
 
 ## Specifications
 

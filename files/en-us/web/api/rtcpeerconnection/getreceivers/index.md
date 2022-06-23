@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.getReceivers()
 slug: Web/API/RTCPeerConnection/getReceivers
+page-type: web-api-instance-method
 tags:
   - Media
   - Method
@@ -12,6 +13,7 @@ tags:
   - getReceivers
 browser-compat: api.RTCPeerConnection.getReceivers
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection.getReceivers()`** method returns an
@@ -48,5 +50,5 @@ tbd
 
 ## See also
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC_API)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCRtpSender")}}

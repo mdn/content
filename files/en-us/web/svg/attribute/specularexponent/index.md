@@ -5,6 +5,9 @@ tags:
   - Filters
   - SVG
   - SVG Attribute
+spec-urls:
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespecularlighting-specularexponent
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespotlight-specularexponent
 ---
 {{SVGRef}}
 
@@ -12,8 +15,8 @@ The **`specularExponent`** attribute controls the focus for the light source. Th
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feSpecularLighting")}}
-*   {{SVGElement("feSpotLight")}}
+- {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feSpotLight")}}
 
 ## Example
 
@@ -88,46 +91,8 @@ For {{SVGElement("feSpotLight")}}, `specularExponent` defines the exponent value
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-fespecularlighting-specularexponent", "specularExponent for &lt;feSpecularLighting&gt;")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-fespotlight-specularexponent", "specularExponent for &lt;feSpotLight&gt;")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feSpecularLightingSpecularExponentAttribute", "specularExponent for &lt;feSpecularLighting&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;feSpecularLighting></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feSpotLightSpecularExponentAttribute", "specularExponent for &lt;feSpotLight&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;feSpotLight></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 
-*   [Description of Phong reflection model on Wikipedia](https://en.wikipedia.org/wiki/Phong_reflection_model)
+- [Description of Phong reflection model on Wikipedia](https://en.wikipedia.org/wiki/Phong_reflection_model)

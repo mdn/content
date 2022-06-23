@@ -27,8 +27,7 @@ Intl.ListFormat.supportedLocalesOf(locales, options)
 
 - `locales`
   - : A string with a BCP 47 language tag, or an array of such strings. For the general
-    form of the `locales` argument, see the {{jsxref("Intl",
-		"Intl", "#Locale_identification_and_negotiation", 1)}} page.
+    form of the `locales` argument, see the {{jsxref("Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page.
 - `options` {{optional_inline}}
 
   - : An object that may have the following property:

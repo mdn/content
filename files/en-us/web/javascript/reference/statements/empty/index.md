@@ -26,7 +26,7 @@ The empty statement is a semicolon (`;`) indicating that no statement will
 be executed, even if JavaScript syntax requires one.
 
 The opposite behavior, where you want multiple statements, but JavaScript only allows a
-single one, is possible using a[ block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block),
+single one, is possible using a [block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block),
 which combines several statements into a single one.
 
 ## Examples

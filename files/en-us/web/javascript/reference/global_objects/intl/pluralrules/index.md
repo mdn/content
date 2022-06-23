@@ -30,7 +30,9 @@ The **`Intl.PluralRules`** object enables plural-sensitive formatting and plural
 - {{jsxref("Intl/PluralRules/resolvedOptions", "Intl.PluralRules.prototype.resolvedOptions()")}}
   - : Returns a new object with properties reflecting the locale and collation options computed during initialization of the object.
 - {{jsxref("Intl/PluralRules/select", "Intl.PluralRules.prototype.select()")}}
-  - : Returns a {{jsxref("String")}} indicating which plural rule to use for locale-aware formatting.
+  - : Returns a string indicating which plural rule to use for locale-aware formatting.
+- {{jsxref("Intl/PluralRules/selectRange", "Intl.PluralRules.prototype.selectRange()")}}
+  - : This method receives two values and returns a string indicating which plural rule to use for locale-aware formatting.
 
 ## Examples
 
@@ -53,10 +55,6 @@ new Intl.PluralRules('ar-EG').select(18);
 // → 'many'
 ```
 
-## Polyfill
-
-[formatjs Intl.PluralRules polyfill](https://formatjs.io/docs/polyfills/intl-pluralrules)
-
 ## Specifications
 
 {{Specifications}}
@@ -68,3 +66,4 @@ new Intl.PluralRules('ar-EG').select(18);
 ## See also
 
 - {{jsxref("Intl")}}
+- [A polyfill of `Intl.PluralRules` in FormatJS](https://formatjs.io/docs/polyfills/intl-pluralrules/)

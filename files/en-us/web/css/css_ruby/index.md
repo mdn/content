@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-ruby/
 ---
 {{CSSRef}}
 
@@ -21,6 +22,8 @@ tags:
 
 ## Specifications
 
-| Specification                    | Status                       | Comment            |
-| -------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('CSS3 Ruby')}} | {{Spec2('CSS3 Ruby')}} | Initial definition |
+{{Specifications}}
+
+## See Also
+
+- {{HTMLElement('ruby')}}

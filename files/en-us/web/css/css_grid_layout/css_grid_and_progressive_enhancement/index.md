@@ -13,11 +13,11 @@ In Spring of 2017, we saw for the first time a major specification like Grid bei
 
 ## The supporting browsers
 
-Other than in Internet Explorer, CSS Grid Layout is unprefixed in Safari, Chrome, Opera,  Firefox and Edge. Support for all the properties and values detailed in these guides is interoperable across browsers. This means that if you write some Grid Layout code in Firefox, it should work in the same way in Chrome. This is no longer an experimental specification, and you are safe to use it in production.
+Other than in Internet Explorer, CSS Grid Layout is unprefixed in Safari, Chrome, Opera, Firefox and Edge. Support for all the properties and values detailed in these guides is interoperable across browsers. This means that if you write some Grid Layout code in Firefox, it should work in the same way in Chrome. This is no longer an experimental specification, and you are safe to use it in production.
 
 ## The Internet Explorer and Edge situation
 
-It should be remembered that the original implementation of CSS Grid Layout happened in Internet Explorer 10. This early specification did not contain all of the properties and values that the up-to-date specification has. There are also substantial differences between what shipped in IE10 and the current specification, even where the properties and values appear the same. This early implementation is also the version of Grid Layout implemented in Edge up to version 15.
+It should be remembered that the original implementation of CSS Grid Layout happened in Internet Explorer 10. This early specification did not contain all of the properties and values that the up-to-date specification has. There are also substantial differences between what shipped in IE10 and the current specification, even where the properties and values appear the same. This early implementation is also the version of Grid Layout implemented in Edge up to version 15.
 
 The IE/Edge (≤15) version of the specification is prefixed with an `-ms` prefix and the properties implemented in IE/Edge (≤15) are as follows:
 
@@ -25,18 +25,20 @@ The IE/Edge (≤15) version of the specification is prefixed with an `-ms` prefi
 - {{cssxref("grid-template-rows")}} as `-ms-grid-rows`
 - {{cssxref("grid-row-start")}} as `-ms-grid-row`
 - {{cssxref("grid-column-start")}} as `-ms-grid-column`
-- {{cssxref("align-self")}} as `-ms-grid-row-align`
-- {{cssxref("justify-self")}} as `-ms-grid-column-align`
+- {{cssxref("align-self")}} as `-ms-grid-row-align`
+- {{cssxref("justify-self")}} as `-ms-grid-column-align`
 
 The IE version has additional properties not required in the new specification of `-ms-grid-column-span` and `-ms-grid-row-span`. This version does not include auto-placement capability, or grid template areas. Some simple grid layouts could be implemented for IE10, through to Edge 15, using the `-ms` properties. As these properties are vendor prefixed, they will not effect any browser supporting the up to date and unprefixed specification.
 
 ### Autoprefixer grid layout support
 
-The popular tool _[Autoprefixer](https://github.com/postcss/autoprefixer)_ has been updated to support the `-ms-` grid version. By default, grid prefixes are disabled, but you can enable it with `grid: true` option.
+The popular tool _[Autoprefixer](https://github.com/postcss/autoprefixer)_ has been updated to support the `-ms-` grid version. By default, grid prefixes are disabled, but you can enable it with `grid: true` option.
 
-    autoprefixer({ grid: 'autoplace' })
+```js
+autoprefixer({ grid: 'autoplace' })
+```
 
-Grid prefixes are disabled by default because some properties can’t be prefixed.
+Grid prefixes are disabled by default because some properties can't be prefixed.
 
 ## Is it safe to use CSS grids for my layout?
 
@@ -169,7 +171,7 @@ The example demonstrates the typical problem that we have with floated layouts: 
 
 ![A floated cards layout demonstrating the problem caused by uneven content height.](10-floated-cards.png)
 
-As a concession for older browsers, I have set a {{cssxref("min-height")}} on the items, and hope that my content editors won’t add too much content and make a mess of the layout!
+As a concession for older browsers, I have set a {{cssxref("min-height")}} on the items, and hope that my content editors won't add too much content and make a mess of the layout!
 
 I then enhance the layout using grid. I can turn my {{HTMLElement("ul")}} into a grid container with three column tracks. However, the width I have assigned to the list items themselves still applies, and it now makes those items a third of the width of the track:
 
@@ -191,7 +193,7 @@ _Feature queries_ will look very familiar if you have ever used a [media query](
 
 Feature queries have excellent browser support, and all of the browsers that support the updated grid specification support feature queries too. You can use them to deal with the issue we have with our enhanced: floated layout.
 
-I use an `@supports` rule to check for support of `display: grid`. I then do my grid code on the {{HTMLElement("ul")}}, set my width and {{cssxref("min-height")}} on the {{HTMLElement("li")}} to `auto`. I also remove the margins and negative margins, and replace the spacing with the {{cssxref("gap")}} property. This means I don’t get a final margin on the last row of boxes. The layout now works, even if there is more content in one of the cards, than the others:
+I use an `@supports` rule to check for support of `display: grid`. I then do my grid code on the {{HTMLElement("ul")}}, set my width and {{cssxref("min-height")}} on the {{HTMLElement("li")}} to `auto`. I also remove the margins and negative margins, and replace the spacing with the {{cssxref("gap")}} property. This means I don't get a final margin on the last row of boxes. The layout now works, even if there is more content in one of the cards, than the others:
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -271,7 +273,7 @@ I use an `@supports` rule to check for support of `display: grid`. I then do my 
 
 Due to the problems of creating grids of items using floats, many of us would use a different method to the floated method shown above to layout a set of cards. Using `display: inline-block` is an alternate method.
 
-Once again I can use feature queries to overwrite a layout that uses `display: inline-block`, and again I don’t need to overwrite everything. An item that is set to `inline-block` becomes a grid item, and so the behavior of `inline-block` no longer applies. I have used the {{cssxref("vertical-align")}} property on my item when in the `inline-block` display mode, but this property does not apply to grid items and, therefore, is ignored once the item becomes a grid item:
+Once again I can use feature queries to overwrite a layout that uses `display: inline-block`, and again I don't need to overwrite everything. An item that is set to `inline-block` becomes a grid item, and so the behavior of `inline-block` no longer applies. I have used the {{cssxref("vertical-align")}} property on my item when in the `inline-block` display mode, but this property does not apply to grid items and, therefore, is ignored once the item becomes a grid item:
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -324,20 +326,20 @@ Once again I can use feature queries to overwrite a layout that uses `display: i
 <div class="wrapper">
     <ul>
         <li class="card">
-            <h2>One</h2>
-            <p>We can use CSS Grid to overwrite older methods.</p>
-        </li>
+            <h2>One</h2>
+            <p>We can use CSS Grid to overwrite older methods.</p>
+        </li>
         <li class="card">
-            <h2>Two</h2>
+            <h2>Two</h2>
             <p>We can use CSS Grid to overwrite older methods.</p>
             <p>We can use CSS Grid to overwrite older methods.</p>
-        </li>
-        <li class="card">
-            <h2>Three</h2>
+        </li>
+        <li class="card">
+            <h2>Three</h2>
             <p>We can use CSS Grid to overwrite older methods.</p>
-        </li>
-        <li class="card">
-            <h2>Four</h2>
+        </li>
+        <li class="card">
+            <h2>Four</h2>
             <p>We can use CSS Grid to overwrite older methods.</p>
         </li>
         <li class="card">
@@ -378,7 +380,7 @@ As we have already seen, {{cssxref("float")}} and also {{cssxref("clear")}} have
 
 ### Vertical alignment
 
-The alignment property {{cssxref("vertical-align")}} has no effect on a grid item. In layouts using `display: inline-block` or ` display: ``table`, you might use the vertical-align property to perform basic alignment. In your grid layout you then have the far more powerful box alignment properties.
+The alignment property {{cssxref("vertical-align")}} has no effect on a grid item. In layouts using `display: inline-block` or `display: table`, you might use the vertical-align property to perform basic alignment. In your grid layout you then have the far more powerful box alignment properties.
 
 ### Multiple-column layout
 
@@ -389,4 +391,4 @@ You can also use multiple column layout as your legacy browser plan, as the `col
 - For an excellent explanation of feature queries, and how to use them well, see [Using Feature Queries in CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/).
 - A write-up of the differences between the IE/Edge (≤15) Grid implementation and the modern implementation, also covering _autoprefixer_ support, take a look at: _[Should I try to use the IE implementation of CSS Grid Layout?](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/)_
 - [Autoprefixer and Grid Autoplacement support in IE](https://github.com/postcss/autoprefixer#grid-autoplacement-support-in-ie)
-- [CSS Grid and the New Autoprefixer](https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer)
+- [CSS Grid and the New Autoprefixer](https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer/)

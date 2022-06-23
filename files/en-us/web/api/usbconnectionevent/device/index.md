@@ -1,25 +1,21 @@
 ---
 title: USBConnectionEvent.device
 slug: Web/API/USBConnectionEvent/device
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
   - device
   - USBConnectionEvent
+  - Experimental
 browser-compat: api.USBConnectionEvent.device
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}
+{{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`device`** read-only property of the {{domxref("USBConnectionEvent")}} interface returns a {{domxref("USBDevice")}} object representing the device being connected or disconnected.
 
-## Syntax
-
-```js
-let device = USBConnectionEvent.device;
-```
-
-### Value
+## Value
 
 A {{domxref("USBDevice")}} object.
 

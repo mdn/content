@@ -15,8 +15,8 @@ All glyphs with the given glyph name are included in the set. The total set of p
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("hkern")}}
-*   {{SVGElement("vkern")}}
+- {{SVGElement("hkern")}}
+- {{SVGElement("vkern")}}
 
 ## Context notes
 
@@ -44,29 +44,12 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<name>#`
-    *   : This value indicates a comma-separated sequence of glyph names (i.e., values that match {{SVGAttr("glyph-name")}} attributes on {{SVGElement("glyph")}} elements) which identify a set of possible first glyphs in the kerning pair.
+- `<name>#`
+  - : This value indicates a comma-separated sequence of glyph names (i.e., values that match {{SVGAttr("glyph-name")}} attributes on {{SVGElement("glyph")}} elements) which identify a set of possible first glyphs in the kerning pair.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "fonts.html#HKernElementG1Attribute", "g1")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

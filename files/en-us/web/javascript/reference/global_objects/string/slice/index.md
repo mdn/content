@@ -28,7 +28,7 @@ slice(beginIndex, endIndex)
 - `beginIndex`
 
   - : The zero-based index at which to begin extraction.
-  
+
     If `beginIndex` is negative, `slice()` begins extraction from
     `str.length + beginIndex`. (E.g. `"test".slice(-2)` returns `"st"`)
 
@@ -41,8 +41,7 @@ slice(beginIndex, endIndex)
 
 - `endIndex` {{optional_inline}}
 
-  - : The zero-based index _before_ which to end extraction. The character at this
-    index will not be included.
+  - : The index of the first character to exclude from the returned substring.
 
     If `endIndex` is omitted, undefined, or cannot be converted to a number (using
     {{jsxref('Number', 'Number(endIndex)')}}) `slice()` extracts to the end of the
@@ -52,7 +51,7 @@ slice(beginIndex, endIndex)
     `slice()` also extracts to the end of the string.
     (E.g. `"test".slice(2, 10)` returns `"st"`)
 
-    If `endIndex` is negative, `slice()` is treated as
+    If `endIndex` is negative, `slice()` treats it as
     `str.length + endIndex`. (E.g, if
     `endIndex` is `-2`, it is treated as
     `str.length - 2` and `"test".slice(1, -2)` returns `"e"`) .

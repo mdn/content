@@ -1,6 +1,7 @@
 ---
 title: BluetoothUUID
 slug: Web/API/BluetoothUUID
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -55,4 +56,3 @@ console.log(result); // "0000180a-0000-1000-8000-00805f9b34fb"
 ## Browser compatibility
 
 {{Compat}}
-

@@ -65,28 +65,28 @@ new Float64Array(buffer, byteOffset, length);
 
 ```js
 // From a length
-var float64 = new Float64Array(2);
+let float64 = new Float64Array(2);
 float64[0] = 42;
 console.log(float64[0]); // 42
 console.log(float64.length); // 2
 console.log(float64.BYTES_PER_ELEMENT); // 8
 
 // From an array
-var arr = new Float64Array([21,31]);
+const arr = new Float64Array([21,31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
-var x = new Float64Array([21, 31]);
-var y = new Float64Array(x);
+const x = new Float64Array([21, 31]);
+const y = new Float64Array(x);
 console.log(y[0]); // 21
 
 // From an ArrayBuffer
-var buffer = new ArrayBuffer(32);
-var z = new Float64Array(buffer, 0, 4);
+const buffer = new ArrayBuffer(32);
+const z = new Float64Array(buffer, 0, 4);
 
 // From an iterable
-var iterable = function*(){ yield* [1,2,3]; }();
-var float64 = new Float64Array(iterable);
+const iterable = function*(){ yield* [1,2,3]; }();
+const float64 = new Float64Array(iterable);
 // Float64Array[1, 2, 3]
 ```
 
@@ -106,18 +106,18 @@ constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
 a {{jsxref("TypeError")}} from now on.
 
 ```js example-bad
-var dv = Float64Array([1, 2, 3]);
+const dv = Float64Array([1, 2, 3]);
 // TypeError: calling a builtin Float64Array constructor
 // without new is forbidden
 ```
 
 ```js example-good
-var dv = new Float64Array([1, 2, 3]);
+const dv = new Float64Array([1, 2, 3]);
 ```
 
 ## See also
 
-- A polyfill of `Float64Array` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `Float64Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

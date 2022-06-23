@@ -1,6 +1,7 @@
 ---
 title: Using Pointer Events
 slug: Web/API/Pointer_events/Using_Pointer_Events
+page-type: guide
 tags:
   - Guide
   - Input
@@ -8,6 +9,7 @@ tags:
   - PointerEvent
   - events
   - touch
+browser-compat: api.PointerEvent
 ---
 {{DefaultAPISidebar("Pointer Events")}}
 
@@ -15,7 +17,7 @@ This guide demonstrates how to use [pointer events](/en-US/docs/Web/API/Pointer_
 
 This application will only work on a browser that supports pointer events.
 
-A live version of this application is available on [GitHub](https://mdn.github.io/dom-examples/pointerevents/Using_Pointer_Events.html). The [source code is available on Github](https://github.com/mdn/dom-examples/blob/master/pointerevents/Using_Pointer_Events.html) and pull requests and bug reports are welcome.
+A live version of this application is available on [GitHub](https://mdn.github.io/dom-examples/pointerevents/Using_Pointer_Events.html). The [source code is available on GitHub](https://github.com/mdn/dom-examples/blob/master/pointerevents/Using_Pointer_Events.html) and pull requests and bug reports are welcome.
 
 ## Definitions
 
@@ -67,7 +69,7 @@ We'll keep track of the touches in-progress.
 var ongoingTouches = new Array();
 ```
 
-When a {{event("pointerdown")}} event occurs, indicating that a new touch on the surface has occurred, the `handleStart()` function below is called.
+When a {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event occurs, indicating that a new touch on the surface has occurred, the `handleStart()` function below is called.
 
 ```js
 function handleStart(evt) {
@@ -90,7 +92,7 @@ After storing some of the event's processing in the `ongoingTouches` for later p
 
 #### Drawing as the pointers move
 
-Each time one or more pointers moves, a {{event("pointermove")}} event is delivered, resulting in our `handleMove()` function being called. Its responsibility in this example is to update the cached touch information and to draw a line from the previous position to the current position of each touch.
+Each time one or more pointers moves, a {{domxref("HTMLElement/pointermove_event", "pointermove")}} event is delivered, resulting in our `handleMove()` function being called. Its responsibility in this example is to update the cached touch information and to draw a line from the previous position to the current position of each touch.
 
 ```js
 function handleMove(evt) {
@@ -126,7 +128,7 @@ After drawing the line, we call [`Array.splice()`](/en-US/docs/Web/JavaScript/Re
 
 #### Handling the end of a touch
 
-When the user lifts a finger off the surface, a {{event("pointerup")}} event is sent. We handle this event by calling the `handleEnd()` function below. Its job is to draw the last line segment for the touch that ended and remove the touch point from the ongoing touch list.
+When the user lifts a finger off the surface, a {{domxref("HTMLElement/pointerup_event", "pointerup")}} event is sent. We handle this event by calling the `handleEnd()` function below. Its job is to draw the last line segment for the touch that ended and remove the touch point from the ongoing touch list.
 
 ```js
 function handleEnd(evt) {
@@ -154,7 +156,7 @@ This is very similar to the previous function; the only real differences are tha
 
 #### Handling canceled touches
 
-If the user's finger wanders into browser UI, or the touch otherwise needs to be canceled, the {{event("pointercancel")}} event is sent, and we call the `handleCancel()` function below.
+If the user's finger wanders into browser UI, or the touch otherwise needs to be canceled, the {{domxref("HTMLElement/pointercancel_event", "pointercancel")}} event is sent, and we call the `handleCancel()` function below.
 
 ```js
 function handleCancel(evt) {
@@ -228,35 +230,11 @@ function log(msg) {
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('Pointer Events 2','#pointerevent-interface', 'PointerEvent')}}
-      </td>
-      <td>{{Spec2('Pointer Events 2')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('Pointer Events', '#pointerevent-interface', 'PointerEvent')}}
-      </td>
-      <td>{{Spec2('Pointer Events')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-### `PointerEvent` interface
-
-{{Compat("api.PointerEvent", 0)}}
+{{Compat}}
 
 ## See also
 

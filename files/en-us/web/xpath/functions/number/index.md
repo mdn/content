@@ -11,7 +11,9 @@ The `number` function converts an object to a number and returns the number.
 
 ### Syntax
 
-    number( [object] )
+```
+number( [object] )
+```
 
 ### Arguments
 
@@ -31,7 +33,7 @@ The resulting number after converting the object.
 
 ### Defined
 
-[XPath 1.0 4.4](https://www.w3.org/TR/xpath#function-number)
+[XPath 1.0 4.4](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-number)
 
 ### Gecko support
 

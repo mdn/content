@@ -12,7 +12,7 @@ tags:
 ---
 These tips are based on common knowledge and experimentation.
 
-An optimized web page not only provides for a more responsive site for your visitors but also reduces the load on your web servers and Internet connection. This can be crucial for high volume sites or sites which have a spike in traffic due to unusual circumstances such as breaking news stories.
+An optimized web page not only provides for a more responsive site for your visitors but also reduces the load on your web servers and internet connection. This can be crucial for high volume sites or sites which have a spike in traffic due to unusual circumstances such as breaking news stories.
 
 Optimizing page load performance is not just for content which will be viewed by narrowband dial-up or mobile device visitors. It is just as important for broadband content and can lead to dramatic improvements even for your visitors with the fastest connections.
 
@@ -38,11 +38,11 @@ If you use background images a lot in your CSS, you can reduce the number of HTT
 
 For the purposes of this article, a CDN is a means to reduce the physical distance between your server and your visitor. As the distance between your server origin and visitor increases, the load times will increase. Suppose your website server is located in the United States and it has a visitor from India; the page load time will be much higher for the Indian visitor compared to a visitor from the US.
 
-A CDN is a geographically distributed network of servers that work together to shorten the distance between the user and your website. CDNs store cached versions of your website and serve them to visitors via the network node closest to the user, thereby reducing [latency](http://www.webperformancetoday.com/2012/04/02/latency-101-what-is-latency-and-why-is-it-such-a-big-deal/).
+A CDN is a geographically distributed network of servers that work together to shorten the distance between the user and your website. CDNs store cached versions of your website and serve them to visitors via the network node closest to the user, thereby reducing [latency](/en-US/docs/Web/Performance/Understanding_latency).
 
 Further reading:
 
-- [Understanding CDNs](https://www.incapsula.com/cdn-guide/what-is-cdn-how-it-works.html)
+- [Understanding CDNs](https://www.imperva.com/learn/performance/what-is-cdn-how-it-works/)
 
 ### Reduce domain lookups
 
@@ -60,10 +60,10 @@ So, in particular, for pages which are generated dynamically, a little research 
 
 More information:
 
-1.  [HTTP Conditional Get for RSS Hackers](https://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
-2.  [HTTP 304: Not Modified](https://annevankesteren.nl/archives/2005/05/http-304)
-3.  [HTTP ETag on Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag)
-4.  [Caching in HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html)
+1. [HTTP Conditional Get for RSS Hackers](https://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
+2. [HTTP 304: Not Modified](https://annevankesteren.nl/2005/05/http-304)
+3. [HTTP ETag on Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag)
+4. [Caching in HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html)
 
 ### Optimally order the components of the page
 
@@ -91,19 +91,23 @@ Tables are still considered valid markup but should be used for displaying tabul
 
 Rather than deeply nesting tables as in:
 
+```html
+<table>
+  <table>
     <table>
-      <table>
-        <table>
-              ...
-        </table>
-      </table>
+          ...
     </table>
+  </table>
+</table>
+```
 
 use non-nested tables or divs as in
 
-    <table>...</table>
-    <table>...</table>
-    <table>...</table>
+```html
+<table>...</table>
+<table>...</table>
+<table>...</table>
+```
 
 See also: [CSS Flexible Box Layout](https://www.w3.org/TR/css-flexbox-1/) and [CSS Grid Layout](https://www.w3.org/TR/css-grid-1/) specifications.
 
@@ -113,7 +117,7 @@ SVG produced by most drawing applications often contains unnecessary metadata wh
 
 ### Minify and compress your images
 
-Large images cause your page to take more time to load. Consider compressing your images before adding them to your page, using compression features built into image-manipulation tools such as Photoshop, or using a specialized tool such as [Compress Jpeg](https://compressjpeg.com/) or [Tiny PNG](https://tinypng.com),.
+Large images cause your page to take more time to load. Consider compressing your images before adding them to your page, using compression features built into image-manipulation tools such as Photoshop, or using a specialized tool such as [Compress Jpeg](https://compressjpeg.com/) or [Tiny PNG](https://tinypng.com).
 
 ### Specify sizes for images and tables
 
@@ -121,7 +125,9 @@ If the browser can immediately determine the height and/or width of your images 
 
 Tables should use the CSS selector: property combination:
 
-      table-layout: fixed;
+```css
+table-layout: fixed;
+```
 
 and should specify widths of columns using the [`<col>`](/en-US/docs/Web/HTML/Element/col) and the [`<colgroup>`](/en-US/docs/Web/HTML/Element/colgroup) elements.
 
@@ -183,5 +189,4 @@ Note: Even though these attributes do help a lot the first time a page is loaded
 
 - Book: ["Speed Up Your Site" by Andy King](http://www.websiteoptimization.com/)
 - The excellent and very complete [Best Practices for Speeding Up Your Web Site](https://developer.yahoo.com/performance/rules.html) (Yahoo!)
-- Tools for analyzing and optimizing performance: [Google PageSpeed Tools](https://developers.google.com/speed/pagespeed/)
-- [Paint Flashing Tool](/en-US/docs/Tools/Paint_Flashing_Tool)
+- Tools for analyzing and optimizing performance: [Google PageSpeed Tools](https://developers.google.com/speed)

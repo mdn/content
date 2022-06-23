@@ -13,7 +13,7 @@ browser-compat: html.elements.select
 
 {{HTMLRef}}
 
-The **`<select>`** [HTML](/en-US/docs/Web/HTML) element represents a control that provides a menu of options:
+The **`<select>`** [HTML](/en-US/docs/Web/HTML) element represents a control that provides a menu of options.
 
 {{EmbedInteractiveExample("pages/tabbed/select.html", "tabbed-standard")}}
 
@@ -32,7 +32,7 @@ For further examples, see [The native form widgets: Drop-down content](/en-US/do
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - {{htmlattrdef("autocomplete")}}
-  - : A {{domxref("DOMString")}} providing a hint for a {{Glossary("user agent", "user agent's")}} autocomplete feature. See [The HTML autocomplete attribute](/en-US/docs/Web/HTML/Attributes/autocomplete) for a complete list of values and details on how to use autocomplete.
+  - : A string providing a hint for a {{Glossary("user agent", "user agent's")}} autocomplete feature. See [The HTML autocomplete attribute](/en-US/docs/Web/HTML/Attributes/autocomplete) for a complete list of values and details on how to use autocomplete.
 - {{htmlattrdef("autofocus")}}
   - : This Boolean attribute lets you specify that a form control should have input focus when the page loads. Only one form element in a document can have the `autofocus` attribute.
 - {{htmlattrdef("disabled")}}
@@ -193,7 +193,7 @@ This example shows how you could use some CSS and JavaScript to provide extensiv
 
 This example basically:
 
-- Clones the `<select>`'s context (the [`<option>`s](/en-US/docs/Web/HTML/Element/option)) in a parent wrapper and reimplements the standard expected behavior using additional HTML elements and JavaScript. This includes basic tab behavior to provide keyboard accessibility.
+- Clones the `<select>`'s context (the [`<option>`s](/en-US/docs/Web/HTML/Element/option)) in a parent wrapper and reimplements the standard expected behavior using additional HTML elements and JavaScript. This includes basic tab behavior to provide keyboard accessibility.
 - Maps some standards native `attributes` to `data-attributes` of the new elements in order to manage state and CSS.
 
 > **Note:** Not all native features are supported, it's a Proof of Concept. IT starts from standard HTML but the same results can be achieved starting from JSON data, custom HTML, or other solutions.
@@ -202,34 +202,34 @@ This example basically:
 
 ```html
 <form>
- <fieldset>
-    <legend>Standard controls</legend>
-    <select
-       name=1A
-       id=select
-       autocomplete=off
-       required
-       >
-       <option>Carrots</option>
-       <option>Peas</option>
-       <option>Beans</option>
-       <option>Pneumonoultramicroscopicsilicovolcanoconiosis</option>
-    </select>
- </fieldset>
- <fieldset id=custom>
-    <legend>Custom controls</legend>
-    <select
-       name="2A"
-       id="select"
-       autocomplete="off"
-       required
-       >
-       <option>Carrots</option>
-       <option>Peas</option>
-       <option>Beans</option>
-       <option>Pneumonoultramicroscopicsilicovolcanoconiosis</option>
-    </select>
-  </fieldset>
+ <fieldset>
+    <legend>Standard controls</legend>
+    <select
+       name=1A
+       id=select
+       autocomplete=off
+       required
+       >
+       <option>Carrots</option>
+       <option>Peas</option>
+       <option>Beans</option>
+       <option>Pneumonoultramicroscopicsilicovolcanoconiosis</option>
+    </select>
+ </fieldset>
+ <fieldset id=custom>
+    <legend>Custom controls</legend>
+    <select
+       name="2A"
+       id="select"
+       autocomplete="off"
+       required
+       >
+       <option>Carrots</option>
+       <option>Peas</option>
+       <option>Beans</option>
+       <option>Pneumonoultramicroscopicsilicovolcanoconiosis</option>
+    </select>
+  </fieldset>
 </form>
 ```
 

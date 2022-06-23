@@ -64,13 +64,13 @@ Suppose you are a musician. You could wish to:
 
 Once you have such a list, you need to prioritize. Order the goals from most important to least important:
 
-1.  Find a new girl/boyfriend.
-2.  Let people hear your music.
-3.  Talk about your music.
-4.  Meet other musicians.
-5.  Sell goodies.
-6.  Teach music through videos.
-7.  Publish photos of your cats.
+1. Find a new girl/boyfriend.
+2. Let people hear your music.
+3. Talk about your music.
+4. Meet other musicians.
+5. Sell goodies.
+6. Teach music through videos.
+7. Publish photos of your cats.
 
 Doing this simple exercise—writing goals and sorting them—will help you out when you have decisions to make. (Should I implement these features, use these services, create these designs?)
 

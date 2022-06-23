@@ -1,9 +1,9 @@
 ---
 title: SpeechSynthesisVoice.voiceURI
 slug: Web/API/SpeechSynthesisVoice/voiceURI
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechSynthesisVoice
@@ -13,23 +13,16 @@ tags:
   - voiceURI
 browser-compat: api.SpeechSynthesisVoice.voiceURI
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`voiceURI`** read-only property of the
 {{domxref("SpeechSynthesisVoice")}} interface returns the type of URI and location of
 the speech synthesis service for this voice.
 
-## Syntax
+## Value
 
-```js
-var myVoiceURI = speechSynthesisVoiceInstance.voiceURI;
-```
-
-### Value
-
-A {{domxref("DOMString")}} representing the URI of the voice. This is a generic URI and
-can point to local or remote services, e.g. it could be a proprietary system URN or a
-URL to a remote service.
+A string representing the URI of the voice. This is a generic URI and
+can point to local or remote services, e.g. it could be a proprietary system URN or a URL to a remote service.
 
 ## Examples
 

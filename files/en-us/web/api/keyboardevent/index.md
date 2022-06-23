@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -17,7 +18,7 @@ tags:
   - user input
 browser-compat: api.KeyboardEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`KeyboardEvent`** objects describe a user interaction with the keyboard; each event describes a single interaction between the user and a key (or combination of a key with modifier keys) on the keyboard. The event type ({{event('keydown')}}, {{event('keypress')}}, or {{event('keyup')}}) identifies what kind of keyboard activity occurred.
 
@@ -121,11 +122,11 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
 - {{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}
 
-  - : Returns a boolean value that is `true` if the  <kbd>Alt</kbd> (<kbd>Option</kbd> or <kbd>⌥</kbd> on OS X) key was active when the key event was generated.
+  - : Returns a boolean value that is `true` if the  <kbd>Alt</kbd> (<kbd>Option</kbd> or <kbd>⌥</kbd> on macOS) key was active when the key event was generated.
 
 - {{domxref("KeyboardEvent.code")}} {{Readonlyinline}}
 
-  - : Returns a {{domxref("DOMString")}} with the code value of the physical key represented by the event.
+  - : Returns a string with the code value of the physical key represented by the event.
 
     > **Warning:** This ignores the user's keyboard layout, so that if the user presses the key at the "Y" position in a QWERTY keyboard layout (near the middle of the row above the home row), this will always return "KeyY", even if the user has a QWERTZ keyboard (which would mean the user expects a "Z" and all the other properties would indicate a "Z") or a Dvorak keyboard layout (where the user would expect an "F"). If you want to display the correct keystrokes to the user, you can use {{domxref("Keyboard.getLayoutMap()")}}.
 
@@ -136,15 +137,15 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}
   - : Returns a boolean value that is `true` if the event is fired between after `compositionstart` and before `compositionend`.
 - {{domxref("KeyboardEvent.key")}} {{Readonlyinline}}
-  - : Returns a {{domxref("DOMString")}} representing the key value of the key represented by the event.
+  - : Returns a string representing the key value of the key represented by the event.
 - {{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}
 
-  - : Returns a {{domxref("DOMString")}} representing a locale string indicating the locale the keyboard is configured for. This may be the empty string if the browser or device doesn't know the keyboard's locale.
+  - : Returns a string representing a locale string indicating the locale the keyboard is configured for. This may be the empty string if the browser or device doesn't know the keyboard's locale.
 
     > **Note:** This does not describe the locale of the data being entered. A user may be using one keyboard layout while typing text in a different language.
 
 - {{domxref("KeyboardEvent.location")}} {{Readonlyinline}}
-  - : Returns a {{jsxref("Number")}} representing the location of the key on the keyboard or other input device. A list of the constants identifying the locations is shown above in {{anch("Keyboard locations")}}.
+  - : Returns a {{jsxref("Number")}} representing the location of the key on the keyboard or other input device. A list of the constants identifying the locations is shown above in [Keyboard locations](#keyboard_locations).
 - {{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}
 
   - : Returns a boolean value that is `true` if the <kbd>Meta</kbd> key (on Mac keyboards, the <kbd>⌘ Command</kbd> key; on Windows keyboards, the Windows key (<kbd>⊞</kbd>)) was active when the key event was generated.
@@ -174,7 +175,7 @@ _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and
 
 - {{domxref("KeyboardEvent.char")}} {{Non-standard_inline}}{{Deprecated_inline}}{{Readonlyinline}}
 
-  - : Returns a {{domxref("DOMString")}} representing the character value of the key. If the key corresponds to a printable character, this value is a non-empty Unicode string containing that character. If the key doesn't have a printable representation, this is an empty string.
+  - : Returns a string representing the character value of the key. If the key corresponds to a printable character, this value is a non-empty Unicode string containing that character. If the key doesn't have a printable representation, this is an empty string.
 
     > **Note:** If the key is used as a macro that inserts multiple characters, this attribute's value is the entire string, not just the first character.
 
@@ -218,9 +219,9 @@ The following events are based on the `KeyboardEvent` type. They can be delivere
 
 There are three types of keyboard events: {{event("keydown")}}, {{event("keypress")}}, and {{event("keyup")}}. For most keys, Gecko dispatches a sequence of key events like this:
 
-1.  When the key is first pressed, the `keydown` event is sent.
-2.  If the key is not a modifier key, the `keypress` event is sent.
-3.  When the user releases the key, the `keyup` event is sent.
+1. When the key is first pressed, the `keydown` event is sent.
+2. If the key is not a modifier key, the `keypress` event is sent.
+3. When the user releases the key, the `keyup` event is sent.
 
 ### Special cases
 
@@ -234,12 +235,12 @@ However, a limitation of the macOS event model causes Caps Lock to dispatch only
 
 When a key is pressed and held down, it begins to auto-repeat. This results in a sequence of events similar to the following being dispatched:
 
-1.  `keydown`
-2.  `keypress`
-3.  `keydown`
-4.  `keypress`
-5.  <\<repeating until the user releases the key>>
-6.  `keyup`
+1. `keydown`
+2. `keypress`
+3. `keydown`
+4. `keypress`
+5. <\<repeating until the user releases the key>>
+6. `keyup`
 
 This is what the DOM Level 3 specification says should happen. There are some caveats, however, as described below.
 
@@ -247,14 +248,14 @@ This is what the DOM Level 3 specification says should happen. There are some ca
 
 In some GTK-based environments, auto-repeat dispatches a native key-up event automatically during auto-repeat, and there's no way for Gecko to know the difference between a repeated series of keypresses and an auto-repeat. On those platforms, then, an auto-repeat key will generate the following sequence of events:
 
-1.  `keydown`
-2.  `keypress`
-3.  `keyup`
-4.  `keydown`
-5.  `keypress`
-6.  `keyup`
-7.  <\<repeating until the user releases the key>>
-8.  `keyup`
+1. `keydown`
+2. `keypress`
+3. `keyup`
+4. `keydown`
+5. `keypress`
+6. `keyup`
+7. <\<repeating until the user releases the key>>
+8. `keyup`
 
 In these environments, unfortunately, there's no way for web content to tell the difference between auto-repeating keys and keys that are just being pressed repeatedly.
 
@@ -291,22 +292,22 @@ document.addEventListener('keydown', (event) => {
   }
 
   if (event.ctrlKey) {
-    // Even though event.key is not 'Control' (e.g., 'a' is pressed),
-    // event.ctrlKey may be true if Ctrl key is pressed at the same time.
-    alert(`Combination of ctrlKey + ${keyName}`);
-  } else {
-    alert(`Key pressed ${keyName}`);
-  }
+    // Even though event.key is not 'Control' (e.g., 'a' is pressed),
+    // event.ctrlKey may be true if Ctrl key is pressed at the same time.
+    alert(`Combination of ctrlKey + ${keyName}`);
+  } else {
+    alert(`Key pressed ${keyName}`);
+  }
 }, false);
 
 document.addEventListener('keyup', (event) => {
-  const keyName = event.key;
+  const keyName = event.key;
 
-  // As the user releases the Ctrl key, the key is no longer active,
-  // so event.ctrlKey is false.
-  if (keyName === 'Control') {
-    alert('Control key was released');
-  }
+  // As the user releases the Ctrl key, the key is no longer active,
+  // so event.ctrlKey is false.
+  if (keyName === 'Control') {
+    alert('Control key was released');
+  }
 }, false);
 
 </script>

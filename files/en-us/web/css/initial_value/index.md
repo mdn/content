@@ -5,6 +5,7 @@ tags:
   - CSS
   - Guide
   - Reference
+spec-urls: https://www.w3.org/TR/CSS22/cascade.html#specified-value
 ---
 {{CSSRef}}
 
@@ -19,10 +20,7 @@ You can explicitly specify the initial value by using the {{cssxref("initial")}}
 
 ## Specifications
 
-| Specification                                                           | Status              | Comment              |
-| ----------------------------------------------------------------------- | ------------------- | -------------------- |
-| [CSS Cascade 4](https://drafts.csswg.org/css-cascade-4/#initial-values) |                     | Formal definition.   |
-| {{SpecName("CSS2.1", "cascade.html#specified-value", "initial value")}} | {{Spec2("CSS2.1")}} | Implicit definition. |
+{{Specifications}}
 
 ## See also
 

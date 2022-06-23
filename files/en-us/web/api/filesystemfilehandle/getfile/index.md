@@ -1,6 +1,7 @@
 ---
 title: FileSystemFileHandle.getFile()
 slug: Web/API/FileSystemFileHandle/getFile
+page-type: web-api-instance-method
 tags:
   - Directory
   - File
@@ -11,7 +12,7 @@ tags:
   - working with files
 browser-compat: api.FileSystemFileHandle.getFile
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`getFile()`** method of the
 {{domxref("FileSystemFileHandle")}} interface returns a {{jsxref('Promise')}} which resolves to a
@@ -66,5 +67,4 @@ async function getTheFile() {
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

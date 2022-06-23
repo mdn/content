@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+browser-compat: css.properties.display
 ---
 {{CSSRef}}
 
@@ -44,7 +45,6 @@ tags:
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
 - [Aligning Items in a Flex Container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
 - [Controlling Ratios of Flex Items Along the Main Axis](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)
-- [Cross-browser Flexbox mixins](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
 - [Mastering Wrapping of Flex Items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
 - [Ordering Flex Items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)
 - [Relationship of flexbox to other layout methods](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)
@@ -67,14 +67,8 @@ tags:
 
 ## Specifications
 
-| Specification                                                                            | Status                           | Comment                                                                      |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------- |
-| {{SpecName("CSS3 Display", "#the-display-properties", "display")}} | {{Spec2("CSS3 Display")}} | Added `run-in`, `flow`, `flow-root`, `contents` and multi-keyword values.    |
-| {{SpecName("CSS2.1", "visuren.html#display-prop", "display")}}     | {{Spec2("CSS2.1")}}         | Added the table model values and `inline-block`.                             |
-| {{SpecName("CSS1", "#display", "display")}}                                 | {{Spec2("CSS1")}}         | Initial definition. Basic values: `none`, `block`, `inline` and `list-item`. |
-
-In addition to the CSS Display Specification Level 3, further specifications define the behavior of various values of display.
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("css.properties.display", 10)}}
+{{Compat}}

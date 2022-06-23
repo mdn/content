@@ -1,6 +1,7 @@
 ---
 title: PageTransitionEvent
 slug: Web/API/PageTransitionEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -12,7 +13,7 @@ browser-compat: api.PageTransitionEvent
 
 The **`PageTransitionEvent`** event object is available inside handler functions for the [`pageshow`](/en-US/docs/Web/API/Window/pageshow_event) and [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) events, fired when a document is being loaded or unloaded.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -39,11 +40,11 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 window.addEventListener('pageshow', myFunction);
 
 function myFunction(event) {
-  if (event.persisted) {
-    alert("The page was cached by the browser");
-  } else {
-    alert("The page was NOT cached by the browser");
-  }
+  if (event.persisted) {
+    alert("The page was cached by the browser");
+  } else {
+    alert("The page was NOT cached by the browser");
+  }
 }
 ```
 

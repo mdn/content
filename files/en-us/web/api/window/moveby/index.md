@@ -1,6 +1,7 @@
 ---
 title: Window.moveBy()
 slug: Web/API/Window/moveBy
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -21,7 +22,7 @@ interface moves the current window by a specified amount.
 ## Syntax
 
 ```js
-window.moveBy(deltaX, deltaY)
+moveBy(deltaX, deltaY)
 ```
 
 ### Parameters
@@ -31,7 +32,11 @@ window.moveBy(deltaX, deltaY)
 - `deltaY` is the amount of pixels to move the window vertically. Positive
   values are down, while negative values are up.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 This example moves the window 10 pixels to the right and 10 pixels up.
 
@@ -49,11 +54,10 @@ function budge() {
 
 {{Compat}}
 
-As of Firefox 7, websites can no longer move a browser window [in the following
-cases](https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24):
+As of Firefox 7, websites can no longer move a browser window [in the following cases](https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24):
 
-1.  You can't move a window or tab that wasn’t created by {{domxref("Window.open()")}}.
-2.  You can't move a window or tab when it’s in a window with more than one tab.
+1. You can't move a window or tab that wasn't created by {{domxref("Window.open()")}}.
+2. You can't move a window or tab when it's in a window with more than one tab.
 
 ## See also
 

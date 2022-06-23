@@ -1,6 +1,7 @@
 ---
 title: MediaSource
 slug: Web/API/MediaSource
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -31,27 +32,18 @@ The **`MediaSource`** interface of the [Media Source Extensions API](/en-US/docs
 - {{domxref("MediaSource.sourceBuffers")}} {{readonlyInline}}
   - : Returns a {{domxref("SourceBufferList")}} object containing the list of {{domxref("SourceBuffer")}} objects associated with this `MediaSource`.
 - {{domxref("MediaSource.activeSourceBuffers")}} {{readonlyInline}}
-  - : Returns a {{domxref("SourceBufferList")}} object containing a subset of the {{domxref("SourceBuffer")}} objects contained within {{domxref("MediaSource.sourceBuffers")}} — the list of objects providing the selected video track,  enabled audio tracks, and shown/hidden text tracks.
+  - : Returns a {{domxref("SourceBufferList")}} object containing a subset of the {{domxref("SourceBuffer")}} objects contained within {{domxref("MediaSource.sourceBuffers")}} — the list of objects providing the selected video track,  enabled audio tracks, and shown/hidden text tracks.
 - {{domxref("MediaSource.readyState")}} {{readonlyInline}}
   - : Returns an enum representing the state of the current `MediaSource`, whether it is not currently attached to a media element (`closed`), attached and ready to receive {{domxref("SourceBuffer")}} objects (`open`), or attached but the stream has been ended via {{domxref("MediaSource.endOfStream()")}} (`ended`.)
 - {{domxref("MediaSource.duration")}}
   - : Gets and sets the duration of the current media being presented.
-
-### Event handlers
-
-- {{domxref("MediaSource.onsourceclose")}}
-  - : The event handler for the `sourceclose` event.
-- {{domxref("MediaSource.onsourceended")}}
-  - : The event handler for the `sourceended` event.
-- {{domxref("MediaSource.onsourceopen")}}
-  - : The event handler for the `sourceopen` event.
 
 ## Methods
 
 _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
 - {{domxref("MediaSource.addSourceBuffer()")}}
-  - : Creates a new {{domxref("SourceBuffer")}} of the given MIME type and adds it to the {{domxref("MediaSource.sourceBuffers")}} list.
+  - : Creates a new {{domxref("SourceBuffer")}} of the given MIME type and adds it to the {{domxref("MediaSource.sourceBuffers")}} list.
 - {{domxref("MediaSource.clearLiveSeekableRange()")}}
   - : Clears a seekable range previously set with a call to `setLiveSeekableRange()`.
 - {{domxref("MediaSource.endOfStream()")}}
@@ -60,6 +52,15 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
   - : Removes the given {{domxref("SourceBuffer")}} from the {{domxref("MediaSource.sourceBuffers")}} list.
 - {{domxref("MediaSource.setLiveSeekableRange()")}}
   - : Sets the range that the user can seek to in the media element.
+
+### Events
+
+- {{domxref("MediaSource.sourceclose_event", "sourceclose")}}
+  - : Fired when the `MediaSource` instance is not attached to a media element anymore.
+- {{domxref("MediaSource.sourceended_event", "sourceended")}}
+  - : Fired when the `MediaSource` instance is still attached to a media element, but {{domxref("MediaSource.endOfStream", "endOfStream()")}} has been called.
+- {{domxref("MediaSource.sourceopen_event", "sourceopen")}}
+  - : Fired when the `MediaSource` instance has been opened by a media element and is ready for data to be appended to the {{domxref("SourceBuffer")}} objects in {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}}.
 
 ## Static methods
 
@@ -71,15 +72,15 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 The following simple example loads a video with {{domxref("XMLHttpRequest")}}, playing it as soon as it can. This example was written by Nick Desaulniers and can be [viewed live here](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (you can also [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
 
 ```js
-var video = document.querySelector('video');
+const video = document.querySelector('video');
 
-var assetURL = 'frag_bunny.mp4';
+const assetURL = 'frag_bunny.mp4';
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
-var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
+const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
 if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
-  var mediaSource = new MediaSource();
+  let mediaSource = new MediaSource();
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
   mediaSource.addEventListener('sourceopen', sourceOpen);
@@ -89,8 +90,8 @@ if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
 
 function sourceOpen (_) {
   //console.log(this.readyState); // open
-  var mediaSource = this;
-  var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+  let mediaSource = this;
+  let sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, function (buf) {
     sourceBuffer.addEventListener('updateend', function (_) {
       mediaSource.endOfStream();
@@ -103,7 +104,7 @@ function sourceOpen (_) {
 
 function fetchAB (url, cb) {
   console.log(url);
-  var xhr = new XMLHttpRequest;
+  let xhr = new XMLHttpRequest;
   xhr.open('get', url);
   xhr.responseType = 'arraybuffer';
   xhr.onload = function () {

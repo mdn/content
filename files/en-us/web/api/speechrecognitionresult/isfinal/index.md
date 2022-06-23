@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognitionResult.isFinal
 slug: Web/API/SpeechRecognitionResult/isFinal
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -21,13 +22,7 @@ whether this result is final (`true`) or not (`false`) — if so,
 then this is the final time this result will be returned; if not, then this result is an
 interim result, and may be updated later on.
 
-## Syntax
-
-```js
-var myIsFinal = speechRecognitionResultInstance.isFinal;
-```
-
-### Returns
+## Value
 
 A boolean value.
 

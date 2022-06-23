@@ -1,6 +1,7 @@
 ---
 title: URL.origin
 slug: Web/API/URL/origin
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -14,7 +15,7 @@ browser-compat: api.URL.origin
 {{APIRef("URL API")}}
 
 The **`origin`** read-only property of
-the {{domxref("URL")}} interface returns a {{domxref("USVString")}} containing the
+the {{domxref("URL")}} interface returns a string containing the
 Unicode serialization of the origin of the represented URL.
 
 The exact structure
@@ -24,22 +25,16 @@ varies depending on the type of URL:
   `'://'`, followed by the domain, followed by `':'`, followed by
   the port (the default port, `80` and `443` respectively, if
   explicitly specified).
-- For `file:` URLs, the value is browser dependant.
+- For `file:` URLs, the value is browser dependent.
 - for `blob:` URLs, the origin of the URL following `blob:` will
   be used, e.g `"blob:https://mozilla.org"` will be returned as
   `"https://mozilla.org".`
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-const originString = url.origin
-```
-
-### Value
-
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

@@ -76,7 +76,7 @@ if ('ab'.substr(-1) != 'b') {
     return function(start, length) {
       // call the original method
       return substr.call(this,
-      	// did we get a negative start, calculate how much it is from the beginning of the string
+        // did we get a negative start, calculate how much it is from the beginning of the string
         // adjust the start parameter for negative value
         start < 0 ? this.length + start : start,
         length)
@@ -90,7 +90,7 @@ if ('ab'.substr(-1) != 'b') {
 ### Using substr()
 
 ```js
-var aString = 'Mozilla';
+const aString = 'Mozilla';
 
 console.log(aString.substr(0, 1));   // 'M'
 console.log(aString.substr(1, 0));   // ''
@@ -112,6 +112,6 @@ console.log(aString.substr(20, 2));  // ''
 
 ## See also
 
-- A polyfill of `String.prototype.substr` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.substr` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.slice()")}}
 - {{jsxref("String.prototype.substring()")}}

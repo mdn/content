@@ -1,6 +1,7 @@
 ---
 title: HTMLDialogElement.showModal()
 slug: Web/API/HTMLDialogElement/showModal
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -22,7 +23,7 @@ the content outside it is rendered inert.
 ## Syntax
 
 ```js
-dialogInstance.showModal();
+showModal()
 ```
 
 ### Parameters
@@ -31,7 +32,7 @@ None.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -72,9 +73,9 @@ button.
 
   <script>
     (function() {
-      var updateButton = document.getElementById('updateDetails');
-      var cancelButton = document.getElementById('cancel');
-      var dialog = document.getElementById('favDialog');
+      const updateButton = document.getElementById('updateDetails');
+      const cancelButton = document.getElementById('cancel');
+      const dialog = document.getElementById('favDialog');
       dialog.returnValue = 'favAnimal';
 
       function openCheck(dialog) {
@@ -101,9 +102,8 @@ button.
   </script>
 ```
 
-> **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html)
-> ([see it live
-> also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
+> **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html)
+> ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
 ## Specifications
 

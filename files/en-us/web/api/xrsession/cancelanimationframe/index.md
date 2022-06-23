@@ -1,6 +1,7 @@
 ---
 title: XRSession.cancelAnimationFrame()
 slug: Web/API/XRSession/cancelAnimationFrame
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -18,7 +19,7 @@ browser-compat: api.XRSession.cancelAnimationFrame
 ---
 {{APIRef("WebXR Device API")}}
 
-The **`cancelAnimationFrame()`** method of
+The **`cancelAnimationFrame()`** method of
 the {{domxref("XRSession")}} interface cancels an animation frame which was previously
 requested by calling {{DOMxRef("XRSession.requestAnimationFrame",
     "requestAnimationFrame")}}.
@@ -33,24 +34,24 @@ cancelAnimationFrame(handle)
 
 - `handle`
   - : The unique value returned by the call
-    to {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} that
+    to {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} that
     previously scheduled the animation callback.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Usage notes
 
-This function has no effect if the specified `handle` cannot be found.
+This function has no effect if the specified `handle` cannot be found.
 
-## Example
+## Examples
 
 In the example below we see code which starts up a WebXR session if immersive VR mode
 is supported. Once started, the session schedules its first frame to be rendered by
-calling {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}.
+calling {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}.
 
-The `pauseXR()` function shown at the bottom can be called to suspend the
+The `pauseXR()` function shown at the bottom can be called to suspend the
 WebVR session, in essence, by canceling any pending animation frame callback. Since each
 frame callback schedules the next one, removing the callback terminates updating of the
 WebXR scene.
@@ -71,25 +72,25 @@ if (XR) {
 }
 
 function frameCallback(time, xrFrame) {
-  xrSession.requestAnimationFrame(frameCallback);
+  xrSession.requestAnimationFrame(frameCallback);
 
-  // Update and render the frame
+  // Update and render the frame
 }
 
 async function startXR() {
-  xrSession = XR.requestSession("immersive-vr");
+  xrSession = XR.requestSession("immersive-vr");
 
-  if (xrSession) {
-    stopButton.onclick = stopXR;
-    requestHandle = xrSession.requestAnimationFrame(frameCallback);
-  }
+  if (xrSession) {
+    stopButton.onclick = stopXR;
+    requestHandle = xrSession.requestAnimationFrame(frameCallback);
+  }
 }
 
 function pauseXR() {
   if (xrSession && requestHandle) {
-    xrSession.cancelAnimationFrame(requestHandle);
-    requestHandle = null;
-  }
+    xrSession.cancelAnimationFrame(requestHandle);
+    requestHandle = null;
+  }
 }
 ```
 

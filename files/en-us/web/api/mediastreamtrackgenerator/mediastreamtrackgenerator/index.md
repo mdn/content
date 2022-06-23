@@ -1,6 +1,7 @@
 ---
-title: MediaStreamTrackGenerator.MediaStreamTrackGenerator()
+title: MediaStreamTrackGenerator()
 slug: Web/API/MediaStreamTrackGenerator/MediaStreamTrackGenerator
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -15,21 +16,21 @@ The **`MediaStreamTrackGenerator()`** constructor creates a new {{domxref("Media
 ## Syntax
 
 ```js
-new MediaStreamTrackGenerator(options);
+new MediaStreamTrackGenerator(options)
 ```
 
 ### Parameters
 
 - `options`
-  - : An object containing the property `kind`, which is a {{domxref("DOMString", "string")}} with one of the following values:
-      - `"audio"`
-        - : Specifies that the stream accepts {{domxref("AudioTrack")}} objects.
-      - `"video"`
-        - : Specifies that the stream accepts {{domxref("VideoTrack")}} objects.
+  - : An object containing the property `kind`, which is one of the following strings:
+    - `"audio"`
+      - : Specifies that the stream accepts {{domxref("AudioTrack")}} objects.
+    - `"video"`
+      - : Specifies that the stream accepts {{domxref("VideoTrack")}} objects.
 
 ## Exceptions
 
-- {{domxref("DOMException")}} `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if `init.kind` is not `"video"` or `"audio"`.
 
 ## Examples

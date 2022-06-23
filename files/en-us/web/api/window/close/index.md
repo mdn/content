@@ -1,6 +1,7 @@
 ---
 title: Window.close()
 slug: Web/API/Window/close
+page-type: web-api-instance-method
 tags:
   - API
   - Gecko
@@ -27,8 +28,16 @@ objects returned by
 ## Syntax
 
 ```js
-window.close();
+close()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

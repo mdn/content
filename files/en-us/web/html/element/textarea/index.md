@@ -31,17 +31,6 @@ The `<textarea>` element also accepts several attributes common to form `<input>
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("autocapitalize")}} {{non-standard_inline}}
-
-  - : This is a non-standard attribute supported by WebKit on iOS (therefore nearly all browsers running on iOS, including Safari, Firefox, and Chrome), which controls whether and how the text value should be automatically capitalized as it is entered/edited by the user. The non-deprecated values are available in iOS 5 and later. Possible values are:
-
-    - `none`: Completely disables automatic capitalization.
-    - `sentences`: Automatically capitalize the first letter of sentences.
-    - `words`: Automatically capitalize the first letter of words.
-    - `characters`: Automatically capitalize all characters.
-    - `on`: {{deprecated_inline}} Deprecated since iOS 5.
-    - `off`: {{deprecated_inline}} Deprecated since iOS 5.
-
 - {{htmlattrdef("autocomplete")}}
 
   - : This attribute indicates whether the value of the control can be automatically completed by the browser. Possible values are:
@@ -85,7 +74,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - {{ htmlattrdef("required") }}
   - : This attribute specifies that the user must fill in a value before submitting a form.
 - {{ htmlattrdef("rows") }}
-  - : The number of visible text lines for the control.
+  - : The number of visible text lines for the control. If it is specified, it must be a positive integer. If it is not specified, the default value is 2.
 - {{ htmlattrdef("spellcheck") }}
 
   - : Specifies whether the `<textarea>` is subject to spell checking by the underlying browser/OS. The value can be:
@@ -116,11 +105,11 @@ The HTML specification doesn't define where the baseline of a `<textarea>` is, s
 
 ### Controlling whether a textarea is resizable
 
-In most browsers, `<textarea>`s are resizable — you'll notice the drag handle in the right hand corner, which can be used to alter the size of the element on the page. This is controlled by the {{ cssxref("resize") }} CSS property — resizing is enabled by default, but you can explicitly disable it using a `resize` value of `none`:
+In most browsers, `<textarea>`s are resizable — you'll notice the drag handle in the right-hand corner, which can be used to alter the size of the element on the page. This is controlled by the {{ cssxref("resize") }} CSS property — resizing is enabled by default, but you can explicitly disable it using a `resize` value of `none`:
 
 ```html
 textarea {
-  resize: none;
+  resize: none;
 }
 ```
 
@@ -142,7 +131,7 @@ textarea:valid {
 
 ### Basic example
 
-The following example show a very simple textarea, with a set numbers of rows and columns and some default content.
+The following example shows a very simple textarea, with a set numbers of rows and columns and some default content.
 
 ```html
 <textarea name="textarea"
@@ -151,7 +140,7 @@ The following example show a very simple textarea, with a set numbers of rows an
 
 {{ EmbedLiveSample('Basic_example','600','150') }}
 
-### Min and max length
+### Example using "minlength" and "maxlength"
 
 This example has a minimum and maximum number of characters — of 10 and 20 respectively. Try it and see.
 
@@ -161,11 +150,11 @@ This example has a minimum and maximum number of characters — of 10 and 20 res
    minlength="10" maxlength="20">Write something here</textarea>
 ```
 
-{{ EmbedLiveSample('Min_and_max_length','600','80') }}
+{{ EmbedLiveSample('Example using "minlength" and "maxlength"','600','80') }}
 
 Note that `minlength` doesn't stop the user from removing characters so that the number entered goes past the minimum, but it does make the value entered into the `<textarea>` invalid. Also note that even if you have a `minlength` value set (3, for example), an empty `<textarea>` is still considered valid unless you also have the `required` attribute set.
 
-### Placeholder
+### Example using "placeholder"
 
 This example has a placeholder set. Notice how it disappears when you start typing into the box.
 
@@ -175,7 +164,7 @@ This example has a placeholder set. Notice how it disappears when you start typi
    placeholder="Comment text."></textarea>
 ```
 
-{{ EmbedLiveSample('Placeholder','600','80') }}
+{{ EmbedLiveSample('Example using "placeholder"','600','80') }}
 
 > **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for a full explanation.
 
@@ -183,7 +172,7 @@ This example has a placeholder set. Notice how it disappears when you start typi
 
 This example shows two `<textarea>`s — one of which is `disabled`, and one of which is `readonly`. Have a play with both and you'll see the difference in behavior — the `disabled` element is not selectable in any way (and its value is not submitted), whereas the `readonly` element is selectable and its contents copyable (and its value is submitted); you just can't edit the contents.
 
-> **Note:** In browsers other than firefox, such as chrome, the `disabled` textarea content may be selectable and copyable.
+> **Note:** In browsers other than Firefox, such as chrome, the `disabled` textarea content may be selectable and copyable.
 
 ```html
 <textarea name="textarea"

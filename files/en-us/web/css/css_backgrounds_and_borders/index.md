@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-backgrounds/
 ---
 {{CSSRef}}
 
@@ -69,19 +70,15 @@ These styles can also decorate borders with lines or images, and make them squar
   - : Explains how to set one or more backgrounds on an element.
 - [Resizing background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images)
   - : Describes how to change the size and repeating behavior of background images.
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
   - : An overview of how CSS color can be used in HTML, including for borders.
-- [Border-image generator](/en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator)
+- [Border-image generator](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator)
   - : This interactive tool lets you visually create border images (the {{cssxref("border-image")}} property).
-- [Border-radius generator](/en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator)
+- [Border-radius generator](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator)
   - : This interactive tool lets you visually create rounded corners (the {{cssxref("border-radius")}} property).
-- [Box-shadow generator](/en-US/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator)
+- [Box-shadow generator](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator)
   - : This interactive tool lets you visually create shadows behind elements (the {{cssxref("box-shadow")}} property).
 
 ## Specifications
 
-| Specification                                | Status                                   | Comment |
-| -------------------------------------------- | ---------------------------------------- | ------- |
-| {{ SpecName('CSS3 Backgrounds') }} | {{ Spec2('CSS3 Backgrounds') }} |         |
-| {{SpecName('CSS2.1', 'box.html')}} | {{Spec2('CSS2.1')}}                 |         |
-| {{SpecName('CSS1', '#border')}}     | {{Spec2('CSS1')}}                 |         |
+{{Specifications}}

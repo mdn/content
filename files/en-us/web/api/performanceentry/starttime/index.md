@@ -1,6 +1,7 @@
 ---
 title: PerformanceEntry.startTime
 slug: Web/API/PerformanceEntry/startTime
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -35,13 +36,7 @@ The value returned by this property depends on the performance entry's
 
 This property is {{readonlyInline}}.
 
-## Syntax
-
-```js
-entry.startTime;
-```
-
-### Return value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} representing the first timestamp when the
 {{domxref("PerformanceEntry","performance entry")}} was created.
@@ -52,7 +47,7 @@ the entry is a {{domxref("PerformanceResourceTiming")}} object), this property r
 the {{domxref("PerformanceResourceTiming.fetchStart")}}
 {{domxref("DOMHighResTimeStamp","timestamp")}}.
 
-## Example
+## Examples
 
 The following example shows the use of the `startTime` property.
 

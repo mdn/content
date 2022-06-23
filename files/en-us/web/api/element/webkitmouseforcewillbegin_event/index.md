@@ -1,6 +1,7 @@
 ---
 title: 'Element: webkitmouseforcewillbegin event'
 slug: Web/API/Element/webkitmouseforcewillbegin_event
+page-type: web-api-event
 tags:
   - API
   - Element
@@ -48,7 +49,7 @@ To instruct macOS not to engage any default Force Touch actions if the user appl
 
 ## Specifications
 
-_Not part of any specification._ Apple has [a description at the Mac Developer Library](https://developer.apple.com/library/prerelease/mac/documentation/AppleApplications/Conceptual/SafariJSProgTopics/RespondingtoForceTouchEventsfromJavaScript.html).
+_Not part of any specification._ Apple has [a description at the Mac Developer Library](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/SafariJSProgTopics/RespondingtoForceTouchEventsfromJavaScript.html).
 
 ## Browser compatibility
 

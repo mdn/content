@@ -1,6 +1,7 @@
 ---
 title: 'WebSocket: message event'
 slug: Web/API/WebSocket/message_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
@@ -12,26 +13,36 @@ browser-compat: api.WebSocket.message_event
 
 The `message` event is fired when data is received through a `WebSocket`.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("MessageEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{ domxref("WebSocket.onmessage","onmessage")}}</td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('message', event => { })
+
+onmessage = event => { }
+```
+
+## Event type
+
+An {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("MessageEvent")}}
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref("MessageEvent.data", "data")}} {{readonlyInline}}
+  - : The data sent by the message emitter.
+- {{domxref("MessageEvent.origin", "origin")}} {{readonlyInline}}
+  - : A string representing the origin of the message emitter.
+- {{domxref("MessageEvent.lastEventId", "lastEventId")}} {{readonlyInline}}
+  - : A string representing a unique ID for the event.
+- {{domxref("MessageEvent.source", "source")}} {{readonlyInline}}
+  - : A `MessageEventSource` (which can be a {{domxref("Window")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
+- {{domxref("MessageEvent.ports", "ports")}} {{readonlyInline}}
+  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
 
 ## Examples
 

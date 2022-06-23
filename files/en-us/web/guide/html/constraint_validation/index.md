@@ -8,7 +8,7 @@ tags:
   - NeedsContent
   - Selectors
 ---
-The creation of web forms has always been a complex task. While marking up the form itself is easy, checking whether each field has a valid and coherent value is more difficult, and informing the user about the problem may become a headache.[ HTML5](/en-US/docs/Web/Guide/HTML/HTML5) introduced new mechanisms for forms: it added new semantic types for the {{ HTMLElement("input") }} element and _constraint validation_ to ease the work of checking the form content on the client side. Basic, usual constraints can be checked, without the need for JavaScript, by setting new attributes; more complex constraints can be tested using the [Constraint validation API](/en-US/docs/Web/API/Constraint_validation).
+The creation of web forms has always been a complex task. While marking up the form itself is easy, checking whether each field has a valid and coherent value is more difficult, and informing the user about the problem may become a headache. [HTML5](/en-US/docs/Glossary/HTML5) introduced new mechanisms for forms: it added new semantic types for the {{ HTMLElement("input") }} element and _constraint validation_ to ease the work of checking the form content on the client side. Basic, usual constraints can be checked, without the need for JavaScript, by setting new attributes; more complex constraints can be tested using the [Constraint validation API](/en-US/docs/Web/API/Constraint_validation).
 
 For a basic introduction to these concepts, with examples, see the [Form validation tutorial](/en-US/docs/Learn/Forms/Form_validation).
 
@@ -104,7 +104,7 @@ In addition to the `type` attribute described above, the following attributes ar
     </tr>
     <tr>
       <td>
-        <code>datetime</code>, <code>datetime-local</code>, <code>time</code>
+        <code>datetime-local</code>, <code>time</code>
       </td>
       <td>A valid date and time</td>
     </tr>
@@ -132,7 +132,7 @@ In addition to the `type` attribute described above, the following attributes ar
     </tr>
     <tr>
       <td>
-        <code>datetime</code>, <code>datetime-local</code>, <code>time</code>
+        <code>datetime-local</code>, <code>time</code>
       </td>
       <td>A valid date and time</td>
     </tr>
@@ -145,7 +145,7 @@ In addition to the `type` attribute described above, the following attributes ar
       <td>
         <code>text</code>, <code>search</code>, <code>url</code>,
         <code>tel</code>, <code>email</code>, <code>password</code>,
-        <code>date</code>, <code>datetime</code>, <code>datetime-local</code>,
+        <code>date</code>, <code>datetime-local</code>,
         <code>month</code>, <code>week</code>, <code>time</code>,
         <code>number</code>, <code>checkbox</code>, <code>radio</code>,
         <code>file</code>; also on the {{ HTMLElement("select") }} and
@@ -198,7 +198,7 @@ In addition to the `type` attribute described above, the following attributes ar
     </tr>
     <tr>
       <td>
-        <code>datetime</code>, <code>datetime-local</code>, <code>time</code>
+        <code>datetime-local</code>, <code>time</code>
       </td>
       <td>An integer number of seconds</td>
     </tr>
@@ -273,7 +273,7 @@ In addition to the `type` attribute described above, the following attributes ar
 
 Constraint validation is done through the Constraint Validation API either on a single form element or at the form level, on the {{ HTMLElement("form") }} element itself. The constraint validation is done in the following ways:
 
-- By a call to the `checkValidity()` or `reportValidity()` method of a form-associated DOM interface, ([`HTMLInputElement`](/en-US/docs/Web/API/HTMLInputElement), [`HTMLSelectElement`](/en-US/docs/Web/API/HTMLSelectElement), [`HTMLButtonElement`](/en-US/docs/Web/API/HTMLButtonElement), [`HTMLOutputElement`](/en-US/docs/Web/API/HTMLOutputElement) or [`HTMLTextAreaElement`](/en-US/docs/Web/API/HTMLTextAreaElement)), which evaluates the constraints only on this element, allowing a script to get this information. The `checkValidity()` method returns a Boolean indicating whether the element's value passes its constraints. (This is typically done by the user-agent when determining which of the CSS pseudo-classes, {{ Cssxref(":valid") }} or {{ Cssxref(":invalid") }}, applies.) In contrast, the `reportValidity()` method reports any constraint failures to the user.
+- By a call to the `checkValidity()` or `reportValidity()` method of a form-associated DOM interface, ([`HTMLInputElement`](/en-US/docs/Web/API/HTMLInputElement), [`HTMLSelectElement`](/en-US/docs/Web/API/HTMLSelectElement), [`HTMLButtonElement`](/en-US/docs/Web/API/HTMLButtonElement), [`HTMLOutputElement`](/en-US/docs/Web/API/HTMLOutputElement) or [`HTMLTextAreaElement`](/en-US/docs/Web/API/HTMLTextAreaElement)), which evaluates the constraints only on this element, allowing a script to get this information. The `checkValidity()` method returns a Boolean indicating whether the element's value passes its constraints. (This is typically done by the user-agent when determining which of the CSS pseudo-classes, {{ Cssxref(":valid") }} or {{ Cssxref(":invalid") }}, applies.) In contrast, the `reportValidity()` method reports any constraint failures to the user.
 - By a call to the `checkValidity()` or `reportValidity()` method on the [`HTMLFormElement`](/en-US/docs/Web/API/HTMLFormElement) interface.
 - By submitting the form itself.
 
@@ -292,7 +292,7 @@ Basically, the idea is to trigger JavaScript on some form field event (like **on
 
 ### Constraint combining several fields: Postal code validation
 
-The postal code format varies from one country to another. Not only do most countries allow an optional prefix with the country code (like `D-` in Germany, `F- `in France or Switzerland), but some countries have postal codes with only a fixed number of digits; others, like the UK, have more complex structures, allowing letters at some specific positions.
+The postal code format varies from one country to another. Not only do most countries allow an optional prefix with the country code (like `D-` in Germany, `F-` in France or Switzerland), but some countries have postal codes with only a fixed number of digits; others, like the UK, have more complex structures, allowing letters at some specific positions.
 
 > **Note:** This is not a comprehensive postal code validation library, but rather a demonstration of the key concepts.
 
@@ -327,7 +327,7 @@ function checkZIP() {
     fr : [ '^(F-)?\\d{5}$' , "France ZIPs must have exactly 5 digits: e.g. F-75012 or 75012" ],
     de : [ '^(D-)?\\d{5}$' , "Germany ZIPs must have exactly 5 digits: e.g. D-12345 or 12345" ],
     nl : [ '^(NL-)?\\d{4}\\s*([A-RT-Z][A-Z]|S[BCE-RT-Z])$',
-                    "Nederland ZIPs must have exactly 4 digits, followed by 2 letters except SA, SD and SS" ]
+                    "Netherland ZIPs must have exactly 4 digits, followed by 2 letters except SA, SD and SS" ]
   };
 
   // Read the country id

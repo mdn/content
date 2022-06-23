@@ -1,6 +1,7 @@
 ---
 title: Picture-in-Picture API
 slug: Web/API/Picture-in-Picture_API
+page-type: web-api-overview
 tags:
   - API
   - DOM
@@ -13,6 +14,7 @@ tags:
   - Video
   - View
   - pip
+browser-compat: api.PictureInPictureWindow
 ---
 {{DefaultAPISidebar("Picture-in-Picture API")}}
 
@@ -39,7 +41,7 @@ The Picture-in-Picture API adds methods to the {{DOMxRef("HTMLVideoElement")}} a
 
 ## Properties
 
-*The Picture-in-Picture API augments the* {{DOMxRef("HTMLVideoElement")}}, {{DOMxRef("Document")}}, and {{DOMxRef("ShadowRoot")}} _interfaces with properties that can be used to determine if the floating video window mode is supported and available, if picture-in-picture mode is currently active, and which video is floating._
+*The Picture-in-Picture API augments the* {{DOMxRef("HTMLVideoElement")}}, {{DOMxRef("Document")}}, and {{DOMxRef("ShadowRoot")}} _interfaces with properties that can be used to determine if the floating video window mode is supported and available, if picture-in-picture mode is currently active, and which video is floating._
 
 ### Properties on the HTMLVideoElement interface
 
@@ -63,11 +65,11 @@ The Picture-in-Picture API adds methods to the {{DOMxRef("HTMLVideoElement")}} a
 _The Picture-in-Picture API defines three events, which can be used to detect when picture-in-picture mode is toggled and when the floating video window is resized._
 
 - {{domxref("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}}
-  - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it enters picture-in-picture mode. The associated event handler is {{DOMxRef("HTMLVideoElement.onenterpictureinpicture")}}
+  - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it enters picture-in-picture mode.
 - {{domxref("HTMLVideoElement.leavepictureinpicture_event", "leavepictureinpicture")}}
-  - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it leaves picture-in-picture mode. The associated event handler is {{DOMxRef("HTMLVideoElement.onleavepictureinpicture")}}
+  - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it leaves picture-in-picture mode.
 - {{domxref("PictureInPictureWindow.resize_event", "resize")}}
-  - : Sent to a {{DOMxRef("PictureInPictureWindow")}} when it changes size. The associated event handler is {{DOMxRef("PictureInPictureWindow.onresize")}}
+  - : Sent to a {{DOMxRef("PictureInPictureWindow")}} when it changes size.
 
 ## Controlling styling
 
@@ -75,7 +77,7 @@ The [`:picture-in-picture`](/en-US/docs/Web/CSS/:picture-in-picture) [CSS](/en-U
 
 ## Controlling access
 
-The availability of picture-in-picture mode can be controlled using [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy). The full-screen mode feature is identified by the string `"picture-in-picture"`, with a default allow-list value of `"self"`, meaning that picture-in-picture mode is permitted in top-level document contexts, as well as to nested browsing contexts loaded from the same origin as the top-most document.
+The availability of picture-in-picture mode can be controlled using [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy). The fullscreen mode feature is identified by the string `"picture-in-picture"`, with a default allow-list value of `"self"`, meaning that picture-in-picture mode is permitted in top-level document contexts, as well as to nested browsing contexts loaded from the same origin as the top-most document.
 
 See [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) to learn more about using Feature Policy to control access to an API.
 
@@ -101,45 +103,19 @@ function togglePictureInPicture() {
 }
 ```
 
-This block starts by looking at the value of the {{DOMxRef("Document", "document")}}'s `pictureInPictureElement` attribute. If the value is `null`, no video is in the floating window. so we can request a video to enter the picture-in-picture mode; otherwise, it's the element that's currently in picture-in-picture mode. Switching to picture-in-picture mode is done by calling {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}} on the {{HTMLElement("video")}} element.
+This block starts by looking at the value of the {{DOMxRef("Document", "document")}}'s `pictureInPictureElement` attribute.
 
-If a video is in the floating window (`pictureInPictureElement` is not `null`), we call {{DOMxRef("Document.exitPictureInPicture", "exitPictureInPicture()")}} on the `document` to bring the video back into its initial box.
+If the value is not `null`, it's the element that's currently in picture-in-picture mode, that is in a floating window. We call {{DOMxRef("Document.exitPictureInPicture", "document.exitPictureInPicture()")}} to bring the video back into its initial box.
+
+If the value is `null`, no video is in the floating window. So we can request a video to enter the picture-in-picture mode. We do it by calling {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}} on the {{HTMLElement("video")}} element.
 
 ## Specifications
 
-| Specification                                                   |
-| --------------------------------------------------------------- |
-| [Picture-in-Picture](https://w3c.github.io/picture-in-picture/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `HTMLVideoElement.requestPictureInPicture`
-
-{{Compat("api.HTMLVideoElement.requestPictureInPicture")}}
-
-### `HTMLVideoElement.autoPictureInPicture`
-
-{{Compat("api.HTMLVideoElement.autoPictureInPicture")}}
-
-### `HTMLVideoElement.disablePictureInPicture`
-
-{{Compat("api.HTMLVideoElement.disablePictureInPicture")}}
-
-### `Document.pictureInPictureEnabled`
-
-{{Compat("api.Document.pictureInPictureEnabled")}}
-
-### `Document.exitPictureInPicture`
-
-{{Compat("api.Document.exitPictureInPicture")}}
-
-### `Document.pictureInPictureElement`
-
-{{Compat("api.Document.pictureInPictureElement")}}
-
-### `PictureInPictureWindow`
-
-{{Compat("api.PictureInPictureWindow")}}
+{{Compat}}
 
 ## See also
 

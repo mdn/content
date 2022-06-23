@@ -56,7 +56,7 @@ tags:
   - **The W3C homepage**: <https://www.w3.org>
   - **The main XSL page**: <https://www.w3.org/Style/XSL/>
   - **XSLT specifications overview**: <https://www.w3.org/TR/xslt/>
-  - **Archive of public style (CSS and XSLT) discussions**: [https://lists.w3.org/Archives/Public/www-style/](http://lists.w3.org/Archives/Public/www-style/)
+  - **Archive of public style (CSS and XSLT) discussions**: [https://lists.w3.org/Archives/Public/www-style/](https://lists.w3.org/Archives/Public/www-style/)
   - **XPath specifications overview**: <https://www.w3.org/TR/xpath/>
 
     - The World Wide Web Consortium is the body that publishes Recommendations for a number of web-based technologies, many of which become the de-facto standard.
@@ -79,13 +79,13 @@ tags:
 
 - **Jeni's XSLT Pages**
 
-  - **Index**: <http://www.jenitennison.com/xslt/>
+  - **Index**: <https://www.jenitennison.com/xslt/>
 
 <!---->
 
 - **XMLPitstop.com**
 
-  - **StyleSheet Center**: <http://www.xmlpitstop.com/default_datatype_SSC.html>
+  - **StyleSheet Center**: <https://www.xmlpitstop.com/default_datatype_SSC.html>
 
 <!---->
 
@@ -103,10 +103,10 @@ tags:
 
 - **XSL-List**
 
-  - **Subscribe**: <http://www.mulberrytech.com/xsl/xsl-list/>
+  - **Subscribe**: <https://www.mulberrytech.com/xsl/xsl-list/index.html>
   - **Archives**: <https://www.biglist.com/lists/xsl-list/archives/>
 
-    - The XSL-List is a very active general mailing list, hosted by [Mulberry Technologies](http://mulberrytech.com/)
+    - The XSL-List is a very active general mailing list, hosted by [Mulberry Technologies](https://mulberrytech.com/)
 
 <!---->
 

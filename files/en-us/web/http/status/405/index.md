@@ -7,6 +7,7 @@ tags:
   - HTTP Status Code
   - Reference
   - Status code
+spec-urls: https://httpwg.org/specs/rfc7231.html#section-6.5.5
 ---
 {{HTTPSidebar}}
 
@@ -22,9 +23,7 @@ The server **must** generate an **`Allow`** header field in a 405 status code re
 
 ## Specifications
 
-| Specification                                                        | Title                                                         |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "405 Method Not Allowed" , "6.5.5")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## See also
 

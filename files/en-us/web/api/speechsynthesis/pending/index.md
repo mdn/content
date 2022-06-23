@@ -1,9 +1,9 @@
 ---
 title: SpeechSynthesis.pending
 slug: Web/API/SpeechSynthesis/pending
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechSynthesis
@@ -13,19 +13,13 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesis.pending
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`pending`** read-only property of the
 {{domxref("SpeechSynthesis")}} interface is a boolean value that returns
 `true` if the utterance queue contains as-yet-unspoken utterances.
 
-## Syntax
-
-```js
-var amIPending = speechSynthesisInstance.pending;
-```
-
-### Value
+## Value
 
 A boolean value.
 

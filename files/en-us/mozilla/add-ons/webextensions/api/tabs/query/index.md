@@ -40,7 +40,7 @@ let querying = browser.tabs.query(queryObj)
     - `autoDiscardable`{{optional_inline}}
       - : `boolean`. Whether the tabs can be discarded automatically by the browser when resources are low.
     - `cookieStoreId` {{optional_inline}}
-      - : `string`. Use this to return only tabs whose cookie store ID is `cookieStoreId`. This option is only available if the add-on has the `"cookies"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+      - : `string` or `array` of `string`. Use this to return tabs whose `tab.cookieStoreId` matches any of the `cookieStoreId` strings. This option is only available if the add-on has the `"cookies"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
     - `currentWindow`{{optional_inline}}
       - : `boolean`. Whether the tabs are in the current window.
     - `discarded`{{optional_inline}}
@@ -152,7 +152,7 @@ querying.then(logTabs, onError);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-query) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-query) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

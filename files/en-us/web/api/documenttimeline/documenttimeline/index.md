@@ -1,6 +1,7 @@
 ---
 title: DocumentTimeline()
 slug: Web/API/DocumentTimeline/DocumentTimeline
+page-type: web-api-constructor
 tags:
   - API
   - Animation
@@ -19,28 +20,32 @@ The **`DocumentTimeline()`** constructor of the [Web Animations API](/en-US/docs
 ## Syntax
 
 ```js
-var sharedTimeline = new DocumentTimeline(options);
+new DocumentTimeline(options)
 ```
 
 ### Parameters
 
-- options
-  - : An object specifying options for the new timeline. Currently the only supported option is the `originTime` member which specifies the zero time for the `documentTimeline` as a real number of milliseconds relative to the {{domxref("PerformanceTiming.navigationStart","navigationStart")}} moment of the active document for the current browsing context.
+- `options`
+  - : An object specifying options for the new timeline. The following properties are available:
+    - `originTime`
+      - : A number that specifies the zero time for the `documentTimeline`
+        as a real number of milliseconds relative to the {{domxref("PerformanceTiming.navigationStart","navigationStart")}} time of the active document
+        for the current browsing context.
 
 ## Examples
 
-We could share a single `documentTimeline` among multiple animations, thus allowing us to manipulate just that group of animations via their shared timeline. This bit of code would start all the cats animating 500 milliseconds into their animations:
+We could share a single `documentTimeline` among multiple animations, thus allowing us to manipulate just that group of animations via their shared timeline. This bit of code would start all the cats animating 500 milliseconds into their animations:
 
 ```js
-var cats = document.querySelectorAll('.sharedTimelineCat');
+let cats = document.querySelectorAll('.sharedTimelineCat');
 cats = Array.prototype.slice.call(cats);
 
-var sharedTimeline = new DocumentTimeline({ originTime: 500 });
+const sharedTimeline = new DocumentTimeline({ originTime: 500 });
 
 cats.forEach(function(cat) {
-  var catKeyframes = new KeyframeEffect(cat, keyframes, timing);
-  var catAnimation = new Animation(catKeyframes, sharedTimeline);
-  catAnimation.play();
+  const catKeyframes = new KeyframeEffect(cat, keyframes, timing);
+  const catAnimation = new Animation(catKeyframes, sharedTimeline);
+  catAnimation.play();
 });
 ```
 

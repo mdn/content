@@ -1,6 +1,7 @@
 ---
 title: Canvas size and WebGL
 slug: Web/API/WebGL_API/By_example/Canvas_size_and_WebGL
+page-type: guide
 tags:
   - Beginner
   - Example

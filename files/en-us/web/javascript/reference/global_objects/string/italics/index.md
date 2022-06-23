@@ -38,7 +38,7 @@ The `italics()` method embeds a string in an `<i>` element:
 The following example uses string methods to change the formatting of a string:
 
 ```js
-var worldString = 'Hello, world';
+const worldString = 'Hello, world';
 console.log(worldString.blink());  // <blink>Hello, world</blink>
 console.log(worldString.bold());  // <b>Hello, world</b>
 console.log(worldString.italics()); // <i>Hello, world</i>
@@ -55,7 +55,7 @@ console.log(worldString.strike());  // <strike>Hello, world</strike>
 
 ## See also
 
-- A polyfill of `String.prototype.italics` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.italics` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.blink()")}}
 - {{jsxref("String.prototype.bold()")}}
 - {{jsxref("String.prototype.strike()")}}

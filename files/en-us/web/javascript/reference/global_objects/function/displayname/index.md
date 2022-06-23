@@ -21,7 +21,7 @@ It is usually preferred by consoles and profilers over {{jsxref("Function.name",
 By entering the following in a console, it should display as something like "`function My Function()`":
 
 ```js
-var a = function() {};
+const a = function() {};
 a.displayName = 'My Function';
 
 a; // "function My Function()"
@@ -34,7 +34,7 @@ function doSomething() {}
 
 console.log(doSomething.displayName); // "undefined"
 
-var popup = function(content) { console.log(content); };
+const popup = function(content) { console.log(content); };
 
 popup.displayName = 'Show Popup';
 
@@ -46,7 +46,7 @@ console.log(popup.displayName); // "Show Popup"
 You can define a function with a display name in a {{jsxref("Functions", "function expression", "", 1)}}:
 
 ```js
-var object = {
+const object = {
   someMethod: function() {}
 };
 
@@ -63,7 +63,7 @@ try { someMethod } catch(e) { console.log(e); }
 You can dynamically change the `displayName` of a function:
 
 ```js
-var object = {
+const object = {
   // anonymous
   someMethod: function(value) {
     arguments.callee.displayName = 'someMethod (' + value + ')';

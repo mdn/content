@@ -1,6 +1,7 @@
 ---
 title: Range.extractContents()
 slug: Web/API/Range/extractContents
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -25,10 +26,18 @@ document fragment valid.
 ## Syntax
 
 ```js
-documentFragment = range.extractContents();
+extractContents()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ### Basic example
 

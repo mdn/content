@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.insertRule()
 slug: Web/API/CSSStyleSheet/insertRule
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM
@@ -12,7 +13,7 @@ browser-compat: api.CSSStyleSheet.insertRule
 {{APIRef("CSSOM")}}
 
 The **`CSSStyleSheet.insertRule()`**
-method inserts a new [CSS rule](/en-US/docs/Web/API/CSSRule) into the [current style sheet](/en-US/docs/Web/API/CSSStyleSheet), with some [restrictions](#restrictions).
+method inserts a new [CSS rule](/en-US/docs/Web/API/CSSRule) into the [current style sheet](/en-US/docs/Web/API/CSSStyleSheet).
 
 > **Note:** Although `insertRule()` is exclusively a method of
 > {{domxref("CSSStyleSheet")}}, it actually inserts the rule into
@@ -22,14 +23,15 @@ method inserts a new [CSS rule](/en-US/docs/Web/API/CSSRule) into the [current s
 ## Syntax
 
 ```js
-stylesheet.insertRule(rule [, index])
+insertRule(rule)
+insertRule(rule, index)
 ```
 
 ### Parameters
 
 - `rule`
 
-  - : A {{domxref("DOMString")}} containing the rule to be inserted. What the inserted
+  - : A string containing the rule to be inserted. What the inserted
     rule must contain depends on its type:
 
     - **For [rule-sets](/en-US/docs/Web/CSS/Syntax#css_statements)**, both
@@ -49,9 +51,6 @@ stylesheet.insertRule(rule [, index])
 The newly inserted rule's index within the stylesheet's rule-list.
 
 ### Exceptions
-
-CSS has some intuitive and not-so-intuitive restrictions affecting where rules can be
-inserted. Violating them will raise an exception.
 
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if `index` > `{{domxref("CSSRuleList", "", "", "1")}}.length`.
@@ -97,16 +96,16 @@ addStylesheetRules([
 ]);
 */
 function addStylesheetRules (rules) {
-  var styleEl = document.createElement('style');
+  const styleEl = document.createElement('style');
 
   // Append <style> element to <head>
   document.head.appendChild(styleEl);
 
   // Grab style element's sheet
-  var styleSheet = styleEl.sheet;
+  const styleSheet = styleEl.sheet;
 
-  for (var i = 0; i < rules.length; i++) {
-    var j = 1,
+  for (let i = 0; i < rules.length; i++) {
+    let j = 1,
         rule = rules[i],
         selector = rule[0],
         propStr = '';
@@ -116,8 +115,8 @@ function addStylesheetRules (rules) {
       j = 0;
     }
 
-    for (var pl = rule.length; j < pl; j++) {
-      var prop = rule[j];
+    for (let pl = rule.length; j < pl; j++) {
+      const prop = rule[j];
       propStr += prop[0] + ': ' + prop[1] + (prop[2] ? ' !important' : '') + ';\n';
     }
 
@@ -191,16 +190,14 @@ To support Internet Explorer 8 and below, use:
 `addRule('pre', 'font: 14px verdana'); // add rule at end`
 
 Also note the non-standard
-[`removeRule()`](http://www.quirksmode.org/dom/w3c_css.html#change)
+[`removeRule()`](https://www.quirksmode.org/dom/w3c_css.html#change)
 and
-[`.rules`](http://www.quirksmode.org/dom/w3c_css.html#access)
+[`.rules`](https://www.quirksmode.org/dom/w3c_css.html#access)
 instead of {{domxref("CSSStyleSheet.deleteRule","deleteRule()")}} and
 {{domxref("CSSStyleSheet",".cssRules")}}, respectively.
 
 ## See also
 
 - {{domxref("CSSStyleSheet.deleteRule")}}
-- [Cross-Browser
-  CSS-rules ordering (CSS1)](http://www-archive.mozilla.org/docs/web-developer/css1technote/css1tojs.html#priority)
-- [Quirksmode -
-  CSS](http://www.quirksmode.org/dom/w3c_css.html)
+- [Cross-Browser CSS-rules ordering (CSS1)](https://www-archive.mozilla.org/docs/web-developer/css1technote/css1tojs.html#priority)
+- [Quirksmode - CSS](https://www.quirksmode.org/dom/w3c_css.html)

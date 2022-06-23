@@ -21,35 +21,35 @@ When a child element is blended into a background, the value of the `color-inter
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("a")}}
-*   {{SVGElement("animate")}}
-*   {{SVGElement("animateColor")}}
-*   {{SVGElement("circle")}}
-*   {{SVGElement("clipPath")}}
-*   {{SVGElement("defs")}}
-*   {{SVGElement("ellipse")}}
-*   {{SVGElement("foreignObject")}}
-*   {{SVGElement("g")}}
-*   {{SVGElement("glyph")}}
-*   {{SVGElement("image")}}
-*   {{SVGElement("line")}}
-*   {{SVGElement("linearGradient")}}
-*   {{SVGElement("marker")}}
-*   {{SVGElement("mask")}}
-*   {{SVGElement("missing-glyph")}}
-*   {{SVGElement("path")}}
-*   {{SVGElement("pattern")}}
-*   {{SVGElement("polygon")}}
-*   {{SVGElement("polyline")}}
-*   {{SVGElement("radialGradient")}}
-*   {{SVGElement("rect")}}
-*   {{SVGElement("svg")}}
-*   {{SVGElement("switch")}}
-*   {{SVGElement("symbol")}}
-*   {{SVGElement("text")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("tspan")}}
-*   {{SVGElement("use")}}
+- {{SVGElement("a")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateColor")}}
+- {{SVGElement("circle")}}
+- {{SVGElement("clipPath")}}
+- {{SVGElement("defs")}}
+- {{SVGElement("ellipse")}}
+- {{SVGElement("foreignObject")}}
+- {{SVGElement("g")}}
+- {{SVGElement("glyph")}}
+- {{SVGElement("image")}}
+- {{SVGElement("line")}}
+- {{SVGElement("linearGradient")}}
+- {{SVGElement("marker")}}
+- {{SVGElement("mask")}}
+- {{SVGElement("missing-glyph")}}
+- {{SVGElement("path")}}
+- {{SVGElement("pattern")}}
+- {{SVGElement("polygon")}}
+- {{SVGElement("polyline")}}
+- {{SVGElement("radialGradient")}}
+- {{SVGElement("rect")}}
+- {{SVGElement("svg")}}
+- {{SVGElement("switch")}}
+- {{SVGElement("symbol")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tspan")}}
+- {{SVGElement("use")}}
 
 ## Usage notes
 
@@ -70,40 +70,16 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `auto`
-    *   : Indicates that the user agent can choose either the `sRGB` or `linearRGB` spaces for color interpolation. This option indicates that the author doesn't require that color interpolation occur in a particular color space.
-*   `sRGB`
-    *   : Indicates that color interpolation should occur in the sRGB color space.
-*   `linearRGB`
-    *   : Indicates that color interpolation should occur in the linearized RGB color space as described in [the sRGB specification](https://webstore.iec.ch/publication/6169).
+- `auto`
+  - : Indicates that the user agent can choose either the `sRGB` or `linearRGB` spaces for color interpolation. This option indicates that the author doesn't require that color interpolation occur in a particular color space.
+- `sRGB`
+  - : Indicates that color interpolation should occur in the sRGB color space.
+- `linearRGB`
+  - : Indicates that color interpolation should occur in the linearized RGB color space as described in [the sRGB specification](https://webstore.iec.ch/publication/6169).
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('SVG2', 'painting.html#ColorInterpolation', 'color-interpolation')}}
-      </td>
-      <td>{{Spec2('SVG2')}}</td>
-      <td>No significant change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('SVG1.1', 'painting.html#ColorInterpolationProperty', 'color-interpolation')}}
-      </td>
-      <td>{{Spec2('SVG1.1')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -111,6 +87,6 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   [sRGB specification](https://webstore.iec.ch/publication/6169)
-*   {{SVGAttr("color-interpolation-filters")}}
-*   [Computer color is broken](https://www.youtube.com/watch?v=LKnqECcg6Gw) - popular demonstration of linearRGB
+- [sRGB specification](https://webstore.iec.ch/publication/6169)
+- {{SVGAttr("color-interpolation-filters")}}
+- [Computer color is broken](https://www.youtube.com/watch?v=LKnqECcg6Gw) - popular demonstration of linearRGB

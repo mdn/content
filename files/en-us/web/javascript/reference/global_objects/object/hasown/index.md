@@ -10,11 +10,10 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.hasOwn
 ---
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
 The **`Object.hasOwn()`** static method returns `true` if the specified object has the indicated property as its _own_ property.
 If the property is inherited, or does not exist, the method returns `false`.
-
 
 > **Note:** `Object.hasOwn()` is intended as a replacement for {{jsxref("Object.hasOwnProperty()")}}.
 
@@ -23,14 +22,14 @@ If the property is inherited, or does not exist, the method returns `false`.
 ## Syntax
 
 ```js
-Object.hasOwn(instance,prop)
+hasOwn(instance, prop)
 ```
 
 ### Parameters
 
-- _instance_
+- `instance`
   - : The JavaScript object instance to test.
-- _prop_
+- `prop`
   - : The {{jsxref("String")}} name or {{Glossary("Symbol")}} of
     the property to test.
 
@@ -103,7 +102,7 @@ for (let name of Object.keys(example)) {
 }
 ```
 
-But if you need to use `for..in`, you can use `Object.hasOwn()` to skip the inherited properties:
+But if you need to use `for...in`, you can use `Object.hasOwn()` to skip the inherited properties:
 
 ```js
 let example = { foo: true, bar: true };
@@ -123,7 +122,6 @@ you can use `hasOwn()` method to check whether a particular index exists:
 let fruits = ['Apple', 'Banana','Watermelon', 'Orange'];
 Object.hasOwn(fruits, 3);   // true ('Orange')
 Object.hasOwn(fruits, 4);   // false - not defined
-    
 ```
 
 ### Problematic cases for hasOwnProperty
@@ -141,7 +139,7 @@ let foo = {
 };
 
 if (Object.hasOwn(foo, 'bar')) {
-  console.log(foo.bar); //true - remplementation of hasOwnProperty() does not affect Object
+  console.log(foo.bar); //true - reimplementation of hasOwnProperty() does not affect Object
 }
 ```
 
@@ -167,7 +165,7 @@ if (Object.hasOwn(foo, 'prop')) {
 
 ## See also
 
-- A polyfill of `Object.hasOwn` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.hasOwn` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.hasOwnProperty()")}}
 - [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}

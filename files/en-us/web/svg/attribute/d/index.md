@@ -4,18 +4,18 @@ slug: Web/SVG/Attribute/d
 tags:
   - SVG
   - SVG Attribute
+browser-compat: svg.elements.path.d
 ---
 {{SVGRef}}
 
 The **`d`** attribute defines a path to be drawn.
 
-A path definition is a list of [path commands](#path_commands) where each command is composed of a command letter and numbers that represent the command parameters. The commands are detailed below.
+A path definition is a list of [path commands](#path_commands) where each command is composed of a command letter and numbers that represent the command parameters.
+The commands are [detailed below](#path_commands).
 
-You can use this attribute with the following SVG elements:
+You can use this attribute with the following SVG elements: [`<path>`](#path), [`<glyph>`](#path), [`<missing-glyph>`](#missing-glyph).
 
-*   {{SVGElement("path")}}
-*   {{SVGElement("glyph")}}
-*   {{SVGElement("missing-glyph")}}
+`d` is a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation), and hence can also be [used as a CSS property](#using_d_as_a_css_property).
 
 ## Example
 
@@ -25,7 +25,7 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <path fill="none" stroke="red"
+  <path fill="none" stroke="red"
     d="M 10,30
        A 20,20 0,0,1 50,30
        A 20,20 0,0,1 90,30
@@ -45,9 +45,7 @@ For {{SVGElement('path')}}, `d` is a string containing a series of path commands
     <tr>
       <th scope="row">Value</th>
       <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong
-        >
+        <strong><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>
@@ -72,9 +70,7 @@ For {{SVGElement('glyph')}}, `d` is a string containing a series of path command
     <tr>
       <th scope="row">Value</th>
       <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong
-        >
+        <strong><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>
@@ -101,9 +97,7 @@ For {{SVGElement('missing-glyph')}}, `d` is a string containing a series of path
     <tr>
       <th scope="row">Value</th>
       <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong
-        >
+        <strong><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>
@@ -117,26 +111,57 @@ For {{SVGElement('missing-glyph')}}, `d` is a string containing a series of path
   </tbody>
 </table>
 
+## Using d as a CSS property
+
+`d` is a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation), and hence can be also be modified using CSS.
+The property takes either [path()](/en-US/docs/Web/CSS/path) or `none`.
+
+The example below shows how you might apply a new path on hover over an element.
+The new path is the same as the old one, but adds a line across the heart.
+
+```css
+html,body,svg { height:100% }
+
+/* This path is displayed on hover*/
+#svg_css_ex1:hover path {
+  d: path("M10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Q10,60 10,30 z M5,5 L90,90")
+}
+```
+
+```html
+<svg id="svg_css_ex1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path fill="none" stroke="red"
+    d="M 10,30
+       A 20,20 0,0,1 50,30
+       A 20,20 0,0,1 90,30
+       Q 90,60 50,90
+       Q 10,60 10,30 z
+       " />
+</svg>
+```
+
+{{EmbedLiveSample('Using d as a CSS Property', '100%', 200)}}
+
 ## Path commands
 
 Path commands are instructions that define a path to be drawn. Each command is composed of a command letter and numbers that represent the command parameters.
 
 SVG defines 6 types of path commands, for a total of 20 commands:
 
-*   MoveTo: `M`, `m`
-*   LineTo: `L`, `l`, `H`, `h`, `V`, `v`
-*   Cubic Bézier Curve: `C`, `c`, `S`, `s`
-*   Quadratic Bézier Curve: `Q`, `q`, `T`, `t`
-*   Elliptical Arc Curve: `A`, `a`
-*   ClosePath: `Z`, `z`
+- MoveTo: `M`, `m`
+- LineTo: `L`, `l`, `H`, `h`, `V`, `v`
+- Cubic Bézier Curve: `C`, `c`, `S`, `s`
+- Quadratic Bézier Curve: `Q`, `q`, `T`, `t`
+- Elliptical Arc Curve: `A`, `a`
+- ClosePath: `Z`, `z`
 
 > **Note:** Commands are *case-sensitive*. An upper-case command specifies absolute coordinates, while a lower-case command specifies coordinates relative to the current position.
 
 It is always possible to specify a negative value as an argument to a command:
 
-*   negative angles will be anti-clockwise;
-*   *absolute* negative *x* and *y* values are interpreted as negative coordinates;
-*   *relative* negative *x* values move to the left, and relative negative *y* values move upwards.
+- negative angles will be anti-clockwise;
+- *absolute* negative *x* and *y* values are interpreted as negative coordinates;
+- *relative* negative *x* values move to the left, and relative negative *y* values move upwards.
 
 ### MoveTo path commands
 
@@ -210,18 +235,18 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <path fill="none" stroke="red"
+  <path fill="none" stroke="red"
     d="M 10,10 h 10
-       m  0,10 h 10
-       m  0,10 h 10
-       M 40,20 h 10
-       m  0,10 h 10
-       m  0,10 h 10
-       m  0,10 h 10
-       M 50,50 h 10
-       m-20,10 h 10
-       m-20,10 h 10
-       m-20,10 h 10" />
+       m  0,10 h 10
+       m  0,10 h 10
+       M 40,20 h 10
+       m  0,10 h 10
+       m  0,10 h 10
+       m  0,10 h 10
+       M 50,50 h 10
+       m-20,10 h 10
+       m-20,10 h 10
+       m-20,10 h 10" />
 </svg>
 ```
 
@@ -387,18 +412,18 @@ html,body,svg { height:100% }
 ```html
 <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
   <!-- LineTo commands with absolute coordinates -->
-  <path fill="none" stroke="red"
-        d="M 10,10
-           L 90,90
-           V 10
-           H 50" />
+  <path fill="none" stroke="red"
+        d="M 10,10
+           L 90,90
+           V 10
+           H 50" />
 
   <!-- LineTo commands with relative coordinates -->
   <path fill="none" stroke="red"
-        d="M 110,10
-           l 80,80
-           v -80
-           h -40" />
+        d="M 110,10
+           l 80,80
+           v -80
+           h -40" />
 </svg>
 ```
 
@@ -406,18 +431,18 @@ html,body,svg { height:100% }
 
 ### Cubic Bézier Curve
 
-*Cubic [Bézier curves](https://en.wikipedia.org/wiki/Bézier_curve)* are smooth curve definitions using four points:
+*Cubic [Bézier curves](/en-US/docs/Glossary/Bezier_curve)* are smooth curve definitions using four points:
 
-*   starting point (current point)
-    *   : (*P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*})
-*   end point
-    *   : (*P<sub>n</sub>* = {*x<sub>n</sub>*, *y<sub>n</sub>*})
-*   start control point
-    *   : (*P<sub>cs</sub>* = {*x<sub>cs</sub>*, *y<sub>cs</sub>*})
-        (controls curvature near the start of the curve)
-*   end control point
-    *   : (*P<sub>ce</sub>* = {*x<sub>ce</sub>*, *y<sub>ce</sub>*})
-        (controls curvature near the end of the curve)
+- starting point (current point)
+  - : (*P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*})
+- end point
+  - : (*P<sub>n</sub>* = {*x<sub>n</sub>*, *y<sub>n</sub>*})
+- start control point
+  - : (*P<sub>cs</sub>* = {*x<sub>cs</sub>*, *y<sub>cs</sub>*})
+    (controls curvature near the start of the curve)
+- end control point
+  - : (*P<sub>ce</sub>* = {*x<sub>ce</sub>*, *y<sub>ce</sub>*})
+    (controls curvature near the end of the curve)
 
 After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for the next command (*P<sub>o</sub>′*).
 
@@ -446,7 +471,7 @@ After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for
           >,<code><var>y</var></code
           >. The <em>start control point</em> is specified by
           <code><var>x1</var></code
-          >,<code><var>y1</var></code> and the <em>end control point</em> is
+          >,<code><var>y1</var></code> and the <em>end control point</em> is
           specified by <code><var>x2</var></code
           >,<code><var>y2</var></code
           >. Any subsequent triplet(s) of coordinate pairs are interpreted as
@@ -552,7 +577,7 @@ After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for
         Draw a smooth cubic Bézier curve from the <em>current point</em> to the
         <em>end point</em>, which is the <em>current point</em> shifted by
         <code><var>dx</var></code> along the x-axis and
-        <code><var>dy</var></code> along the y-axis. The
+        <code><var>dy</var></code> along the y-axis. The
         <em>end control point</em> is the <em>current point</em> (starting point
         of the curve) shifted by <code><var>dx2</var></code> along the x-axis
         and <code><var>dy2</var></code> along the y-axis. The
@@ -619,15 +644,15 @@ html,body,svg { height:100% }
 
 ### Quadratic Bézier Curve
 
-*Quadratic [Bézier curves](https://en.wikipedia.org/wiki/Bézier_curve)* are smooth curve definitions using three points:
+*Quadratic [Bézier curves](/en-US/docs/Glossary/Bezier_curve)* are smooth curve definitions using three points:
 
-*   starting point (current point)
-    *   : *P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*}
-*   end point
-    *   : *P<sub>n</sub>* = {*x<sub>n</sub>*, *y<sub>n</sub>*}
-*   control point
-    *   : *P<sub>c</sub>* = {*x<sub>c</sub>*, *y<sub>c</sub>*}
-        (controls curvature)
+- starting point (current point)
+  - : *P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*}
+- end point
+  - : *P<sub>n</sub>* = {*x<sub>n</sub>*, *y<sub>n</sub>*}
+- control point
+  - : *P<sub>c</sub>* = {*x<sub>c</sub>*, *y<sub>c</sub>*}
+    (controls curvature)
 
 After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for the next command (*P<sub>o</sub>′*).
 
@@ -968,7 +993,7 @@ html,body,svg { height:100% }
 
 ### ClosePath
 
-*ClosePath* instructions draw a straight line from the *current position* to the first point in the path.
+*ClosePath* instructions draw a straight line from the *current position* to the first point in the path.
 
 <table class="no-markdown">
   <tbody>
@@ -1029,40 +1054,10 @@ html,body,svg { height:100% }
 
 {{EmbedLiveSample('ClosePath', '100%', 200)}}
 
-> **Note:** As a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation) `d` can be used as a CSS property
-
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("SVG2", "paths.html#DProperty", "d")}}</td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for <code>&#x3C;path></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "fonts.html#GlyphElementDAttribute", "d")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Initial definition for <code>&#x3C;glyph></code> and
-        <code>&#x3C;missing-glyph></code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "paths.html#DAttribute", "d")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;path></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

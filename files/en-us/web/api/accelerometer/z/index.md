@@ -1,6 +1,7 @@
 ---
 title: Accelerometer.z
 slug: Web/API/Accelerometer/z
+page-type: web-api-instance-property
 tags:
   - API
   - Accelerometer
@@ -20,19 +21,13 @@ The **`z`** read-only property of the {{domxref("Accelerometer")}} interface ret
 
 If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
-## Syntax
-
-```js
-var zAcceleration = accelerometer.z
-```
-
-### Value
+## Value
 
 A {{jsxref('Number')}}.
 
-## Example
+## Examples
 
-Acceleration is typically read in the {{domxref('Sensor.onreading')}} event callback. In the example below this occurs sixty times a second.
+Acceleration is typically read in the {{domxref('Sensor.reading_event', 'reading')}} event callback. In the example below this occurs sixty times a second.
 
 ```js
 let accelerometer = new Accelerometer({frequency: 60});

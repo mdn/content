@@ -1,6 +1,7 @@
 ---
 title: Clearing with colors
 slug: Web/API/WebGL_API/By_example/Clearing_with_colors
+page-type: guide
 tags:
   - Beginner
   - Example

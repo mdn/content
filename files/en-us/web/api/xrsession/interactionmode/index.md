@@ -1,6 +1,7 @@
 ---
 title: XRSession.interactionMode
 slug: Web/API/XRSession/interactionMode
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -19,7 +20,7 @@ browser-compat: api.XRSession.interactionMode
 ---
 {{APIRef("WebXR Device API")}}
 
-The {{domxref("XRSession")}} interface's *read-only* **`interactionMode`** property
+The {{domxref("XRSession")}} interface's *read-only* **`interactionMode`** property
 describes the best space (according to the user agent) for the application to draw an interactive UI for the current session.
 
 ## Value
@@ -29,8 +30,10 @@ for the current session.
 
 Possible values are:
 
-- `screen-space`: indicating that the UI should be drawn directly to the screen without projection. This is typically the mode reported from handheld devices.
-- `world-space`: indicating that the UI should be drawn in the world, some distance from the user, so that they may interact with it using controllers. This is typically the mode reported from headworn devices.
+- `screen-space`
+  - : Indicates that the UI should be drawn directly to the screen without projection. This is typically the mode reported from handheld devices.
+- `world-space`
+  - : Indicates that the UI should be drawn in the world, some distance from the user, so that they may interact with it using controllers. This is typically the mode reported from headworn devices.
 
 ## Examples
 

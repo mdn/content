@@ -1,9 +1,9 @@
 ---
 title: SpeechSynthesis.paused
 slug: Web/API/SpeechSynthesis/paused
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechSynthesis
@@ -13,12 +13,11 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesis.paused
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`paused`** read-only property of the
 {{domxref("SpeechSynthesis")}} interface is a boolean value that returns
-`true` if the `SpeechSynthesis` object is in a paused state, or
-`false` if not.
+`true` if the `SpeechSynthesis` object is in a paused state, or `false` if not.
 
 It can be set to {{domxref("SpeechSynthesis.pause()", "paused")}} even if nothing is
 currently being spoken through it. If
@@ -26,13 +25,7 @@ currently being spoken through it. If
 queue, they will not be spoken until the `SpeechSynthesis` object is
 unpaused, using {{domxref("SpeechSynthesis.resume()")}}.
 
-## Syntax
-
-```js
-var amIPaused = speechSynthesisInstance.paused;
-```
-
-### Value
+## Value
 
 A boolean value.
 

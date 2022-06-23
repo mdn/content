@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.validateProgram()
 slug: Web/API/WebGLRenderingContext/validateProgram
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -19,17 +20,17 @@ used in the current WebGL state.
 ## Syntax
 
 ```js
-void gl.validateProgram(program);
+validateProgram(program)
 ```
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}} to validate.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

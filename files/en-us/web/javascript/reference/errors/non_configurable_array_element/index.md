@@ -10,8 +10,8 @@ tags:
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "can't delete non-configurable array element" occurs when it
-was attempted to [shorten
-the length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length#shortening_an_array) of an array, but one of the array's elements is [non-configurable](/en-US/docs/Web/JavaScript/Data_structures#properties).
+was attempted to [shorten the length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length#shortening_an_array)
+of an array, but one of the array's elements is [non-configurable](/en-US/docs/Web/JavaScript/Data_structures#properties).
 
 ## Message
 
@@ -26,8 +26,8 @@ TypeError: Cannot delete property '2' of [object Array] (Chrome)
 
 ## What went wrong?
 
-It was attempted to [shorten
-the length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length#shortening_an_array) of an array, but one of the array's elements is [non-configurable](/en-US/docs/Web/JavaScript/Data_structures#properties).
+It was attempted to [shorten the length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length#shortening_an_array)
+of an array, but one of the array's elements is [non-configurable](/en-US/docs/Web/JavaScript/Data_structures#properties).
 When shortening an array, the elements beyond the new array length will be deleted,
 which failed in this situation.
 
@@ -35,8 +35,8 @@ The `configurable` attribute controls whether the property can be deleted
 from the object and whether its attributes (other than `writable`) can be
 changed.
 
-Usually, properties in an object created by an [array
-initializer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#syntax) are configurable. However, for example, when using
+Usually, properties in an object created by an [array initializer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#syntax)
+are configurable. However, for example, when using
 {{jsxref("Object.defineProperty()")}}, the property isn't configurable by default.
 
 ## Examples

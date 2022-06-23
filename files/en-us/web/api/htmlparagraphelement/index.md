@@ -1,6 +1,7 @@
 ---
 title: HTMLParagraphElement
 slug: Web/API/HTMLParagraphElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -12,14 +13,14 @@ browser-compat: api.HTMLParagraphElement
 
 The **`HTMLParagraphElement`** interface provides special properties (beyond those of the regular {{domxref("HTMLElement")}} object interface it inherits) for manipulating {{HTMLElement("p")}} elements.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLParagraphElement.align")}} {{deprecated_inline}}
-  - : A {{domxref("DOMString")}} representing an enumerated property indicating alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, `"justify"`, and `"center"`.
+  - : A string representing an enumerated property indicating alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, `"justify"`, and `"center"`.
 
 ## Methods
 

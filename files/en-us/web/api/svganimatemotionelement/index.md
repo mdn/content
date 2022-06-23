@@ -1,6 +1,7 @@
 ---
 title: SVGAnimateMotionElement
 slug: Web/API/SVGAnimateMotionElement
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -12,7 +13,7 @@ browser-compat: api.SVGAnimateMotionElement
 
 The **`SVGAnimateMotionElement`** interface corresponds to the {{SVGElement("animateMotion")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

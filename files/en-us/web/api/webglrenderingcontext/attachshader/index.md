@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.attachShader()
 slug: Web/API/WebGLRenderingContext/attachShader
+page-type: web-api-instance-method
 tags:
   - Method
   - WebGL
@@ -22,7 +23,7 @@ void gl.attachShader(program, shader);
 - `program`
   - : A {{domxref("WebGLProgram")}}.
 - `shader`
-  - : A fragment or vertex {{domxref("WebGLShader")}}.
+  - : A fragment or vertex {{domxref("WebGLShader")}}.
 
 ## Examples
 

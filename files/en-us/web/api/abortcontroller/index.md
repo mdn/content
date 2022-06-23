@@ -1,6 +1,7 @@
 ---
 title: AbortController
 slug: Web/API/AbortController
+page-type: web-api-interface
 tags:
   - API
   - AbortController
@@ -32,6 +33,8 @@ You can create a new `AbortController` object using the {{domxref("AbortControll
 
 ## Examples
 
+> **Note:** There are additional examples in the {{domxref("AbortSignal")}} reference.
+
 In the following snippet, we aim to download a video using the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 
 We first create a controller using the {{domxref("AbortController.AbortController","AbortController()")}} constructor, then grab a reference to its associated {{domxref("AbortSignal")}} object using the {{domxref("AbortController.signal")}} property.
@@ -39,26 +42,29 @@ We first create a controller using the {{domxref("AbortController.AbortControlle
 When the [fetch request](/en-US/docs/Web/API/fetch) is initiated, we pass in the `AbortSignal` as an option inside the request's options object (the `{signal}` below). This associates the signal and controller with the fetch request and allows us to abort it by calling {{domxref("AbortController.abort()")}}, as seen below in the second event listener.
 
 ```js
-var controller = new AbortController();
-var signal = controller.signal;
+let controller;
+const url = "video.mp4";
 
-var downloadBtn = document.querySelector('.download');
-var abortBtn = document.querySelector('.abort');
+const downloadBtn = document.querySelector('.download');
+const abortBtn = document.querySelector('.abort');
 
 downloadBtn.addEventListener('click', fetchVideo);
 
 abortBtn.addEventListener('click', function() {
-  controller.abort();
+  if (controller) controller.abort();
   console.log('Download aborted');
 });
 
 function fetchVideo() {
-  ...
-  fetch(url, {signal}).then(function(response) {
-    ...
-  }).catch(function(e) {
-   reports.textContent = 'Download error: ' + e.message;
-  })
+  controller = new AbortController();
+  const signal = controller.signal;
+  fetch(url, { signal })
+    .then(function(response) {
+      console.log('Download complete', response);
+    })
+    .catch(function(e) {
+      console.log('Download error: ' + e.message);
+    });
 }
 ```
 
@@ -77,4 +83,4 @@ You can find a [full working example on GitHub](https://github.com/mdn/dom-examp
 ## See also
 
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
-- [Abortable Fetch](https://developers.google.com/web/updates/2017/09/abortable-fetch) by Jake Archibald
+- [Abortable Fetch](https://developer.chrome.com/blog/abortable-fetch/) by Jake Archibald

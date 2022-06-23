@@ -1,6 +1,7 @@
 ---
 title: MediaSession.setActionHandler()
 slug: Web/API/MediaSession/setActionHandler
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -16,48 +17,72 @@ browser-compat: api.MediaSession.setActionHandler
 ---
 {{APIRef("Media Session API")}}
 
-The **`setActionHandler()`** method of the
-{{domxref("MediaSession")}} interface sets a handler for a media session action. These
-actions let a web app receive notifications when the user engages a device's built-in
-physical or onscreen media controls, such as play, stop, or seek buttons.
+The **`setActionHandler()`** method of the {{domxref("MediaSession")}} interface sets a handler for a media session action.
+These actions let a web app receive notifications when the user engages a device's built-in physical or onscreen media controls, such as play, stop, or seek buttons.
 
 ## Syntax
 
 ```js
-navigator.mediaSession.setActionHandler(type, callback)
+setActionHandler(type, callback)
 ```
 
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} representing an action type to listen for. It will be one
-    of `{{anch("play")}}`,
-    `{{anch("pause")}}`, `{{anch("stop")}}`,
-    `{{anch("seekbackward")}}`, `{{anch("seekforward")}}`, `{{anch("seekto")}}`, `{{anch("skipad")}}`,`{{anch("previoustrack")}}`,
-    or `{{anch("nexttrack")}}`. Further details on the action types can be
-    found below under {{anch("Media session actions")}}.
+  - : A string representing an action type to listen for. It will be one
+    of the following:
+    - `nexttrack`
+      - : Advances playback to the next track.
+    - `pause`
+      - : Pauses playback of the media.
+    - `play`
+      - : Begins (or resumes) playback of the media.
+    - `previoustrack`
+      - : Moves back to the previous track.
+    - `seekbackward`
+      - : Seeks backward through the media from the current position.
+        The `seekOffset` property passed to the callback specifies the amount of time to seek backward.
+    - `seekforward`
+      - : Seeks forward from the current position through the media.
+        The `seekOffset` property passed to the callback specifies the amount of time to seek forward.
+    - `seekto`
+      - : Moves the playback position to the specified time within the media.
+        The time to which to seek is specified in the `seekTime` property passed to the callback.
+        If you intend to perform multiple `seekto` operations in rapid succession, you can also specify the `fastSeek` property passed to the callback with a value of `true`.
+        This lets the browser know it can take steps to optimize repeated operations, and is likely to result in improved performance.
+    - `skipad`
+      - : Skips past the currently playing advertisement or commercial.
+        This action may or may not be available, depending on the platform and {{Glossary("user agent")}}, or may be disabled due to subscription level or other circumstances.
+    - `stop`
+      - : Halts playback entirely.
 - `callback`
-  - : A function to call when the specified action type is invoked. The callback receives
-    no input parameters, and should not return a value.
+  - : A function to call when the specified action type is invoked. The callback should not return a value. The callback receives a dictionary containing the following properties:
+    - `action`
+      - : A string representing the action type. This property allows a single callback to handle multiple action types.
+    - `fastSeek` {{optional_inline}}
+      - : A [`seekto`](#seekto) action may *optionally* include this property, which is a Boolean value indicating whether or not to perform a "fast" seek.
+        A "fast" seek is a seek being performed in a rapid sequence, such as when fast-forwarding or reversing through the media, rapidly skipping through it.
+        This property can be used to indicate that you should use the shortest possible method to seek the media.
+        `fastSeek` is not included on the final action in the seek sequence in this situation.
+    - `seekOffset` {{optional_inline}}
+      - : If the `action` is either [`seekforward`](#seekforward) or [`seekbackward`](#seekbackward) and this property is present, it is a floating point value which indicates the number of seconds to move the play position forward or backward.
+        If this property isn't present, those actions should choose a reasonable default distance to skip forward or backward (such as 7 or 10 seconds).
+    - `seekTime` {{optional_inline}}
+      - : If the `action` is [`seekto`](#seekto), this property must be present and must be a floating-point value indicating the absolute time within the media to move the playback position to, where 0 indicates the beginning of the media. This property is not present for other action types.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Description
 
-To remove a previously-established action handler, call `setActionHandler()`
-again, specifying `null` as the `callback`.
+To remove a previously-established action handler, call `setActionHandler()` again, specifying `null` as the `callback`.
 
-The action handler receives as input a single parameter: an object conforming to
-the {{domxref("MediaSessionActionDetails")}} dictionary, which provides both the action
-type (so the same function can handle multiple action types), as well as data needed in
-order to perform the action.
+The action handler receives as input a single parameter: an object which provides both the action type (so the same function can handle multiple action types), as well as data needed in order to perform the action.
 
 ## Examples
 
-This example creates a new media session and assigns action handlers (which don't do
-anything) to it.
+This example creates a new media session and assigns action handlers (which don't do anything) to it.
 
 ```js
 if ('mediaSession' in navigator) {
@@ -87,8 +112,7 @@ if ('mediaSession' in navigator) {
 }
 ```
 
-The following example sets up two functions for playing and pausing, then uses them as
-callbacks with the relevant action handlers.
+The following example sets up two functions for playing and pausing, then uses them as callbacks with the relevant action handlers.
 
 ```js
 const actionHandlers = [
@@ -126,8 +150,7 @@ for (const [action, handler] of actionHandlers) {
 }
 ```
 
-This example uses appropriate action handlers to allow seeking in either direction
-through the playing media.
+This example uses appropriate action handlers to allow seeking in either direction through the playing media.
 
 ```js
 let skipTime = 10; // Time to skip in seconds
@@ -152,9 +175,7 @@ navigator.mediaSession.setActionHandler('nexttrack', null);
 
 ### Supporting multiple actions in one handler function
 
-You can also, if you prefer, use a single function to handle multiple action types, by
-checking the value of the `MediaSessionActionDetails` object's
-{{domxref("MediaSessionActionDetails.action", "action")}} property:
+You can also, if you prefer, use a single function to handle multiple action types, by checking the value of the `action` property:
 
 ```js
 let skipTime = 7;
@@ -163,20 +184,19 @@ navigator.mediaSession.setActionHandler("seekforward", handleSeek);
 navigator.mediaSession.setActionHandler("seekbackward", handleSeek);
 
 function handleSeek(details) {
-  switch(details.action) {
-    case "seekforward":
-      audio.currentTime = Math.min(audio.currentTime + skipTime,
-              audio.duration);
-      break;
-    case "seekbackward":
-      audio.currentTime = Math.max(audio.currentTime - skipTime, 0);
-      break;
-  }
+  switch(details.action) {
+    case "seekforward":
+      audio.currentTime = Math.min(audio.currentTime + skipTime,
+              audio.duration);
+      break;
+    case "seekbackward":
+      audio.currentTime = Math.max(audio.currentTime - skipTime, 0);
+      break;
+  }
 }
 ```
 
-Here, the `handleSeek()` function handles
-both `seekbackward` and `seekforward` actions.
+Here, the `handleSeek()` function handles both `seekbackward` and `seekforward` actions.
 
 ## Specifications
 

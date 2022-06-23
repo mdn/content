@@ -1,6 +1,7 @@
 ---
 title: VideoColorSpace.fullRange
 slug: Web/API/VideoColorSpace/fullRange
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -33,5 +34,3 @@ console.log(colorSpace.fullRange);
 ## Browser compatibility
 
 {{Compat}}
-
-

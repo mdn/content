@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.oncancel
 slug: Web/API/GlobalEventHandlers/oncancel
+page-type: web-api-instance-property
 tags:
   - API
   - Dialog
@@ -18,7 +19,7 @@ The **`oncancel`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) for
 processing {{event("cancel")}} events sent to a {{HTMLElement("dialog")}} element.
 
-The `cancel` event fires when the user indicates a wish to dismiss a
+The `cancel` event fires when the user indicates a wish to dismiss a
 `<dialog>`. This event handler prevents the event from bubbling, so any
 parent handlers are not notified of the event.
 
@@ -30,8 +31,7 @@ target.oncancel = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives an {{domxref("Event")}} object as its sole
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives an {{domxref("Event")}} object as its sole
 argument.
 
 Only one `oncancel` handler can be assigned to an object at a time. You may

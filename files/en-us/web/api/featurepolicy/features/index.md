@@ -1,6 +1,7 @@
 ---
 title: FeaturePolicy.features()
 slug: Web/API/FeaturePolicy/features
+page-type: web-api-instance-method
 browser-compat: api.FeaturePolicy.features
 ---
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
@@ -39,7 +40,7 @@ const supportedDirectives = featurePolicy.features()
 
 // Print out each directive into the console
 for (const directive of supportedDirectives){
-  console.log(directive)
+  console.log(directive)
 }
 ```
 

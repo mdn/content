@@ -10,7 +10,7 @@ tags:
 
 Perhaps more exciting than just fills and strokes is the fact that you can also create and apply gradients as either fills or strokes.
 
-There are two types of gradients: linear and radial. You **must** give the gradient an `id` attribute; otherwise it can't be referenced by other elements inside the file.  Gradients are defined in a defs section as opposed to on a shape itself to promote reusability.
+There are two types of gradients: linear and radial. You **must** give the gradient an `id` attribute; otherwise it can't be referenced by other elements inside the file. Gradients are defined in a defs section as opposed to on a shape itself to promote reusability.
 
 ## Linear Gradient
 
@@ -47,25 +47,31 @@ Linear gradients change along a straight line. To insert one, you create a {{SVG
 
 {{ EmbedLiveSample('Linear_Gradient','120','280') }}
 
-Above is an example of a linear gradient being applied to a `<rect>` element. Inside the linear gradient are several {{SVGElement('stop')}} nodes. These nodes tell the gradient what color it should be at certain positions by specifying an `offset` attribute for the position, and a `stop-color` attribute. This can be assigned directly or through CSS. The two methods have been intermixed for the purposes of this example. For instance, this one tells the gradient to start at the color red, change to transparent-black in the middle, and end at the color blue. You can insert as many stop colors as you like to create a blend that's as beautiful or hideous as you need, but the offsets should always increase from 0% (or 0 if you want to drop the % sign) to 100% (or 1). Duplicate values will use the stop that is assigned furthest down the XML tree. Also, like with fill and stroke, you can specify a `stop-opacity` attribute to set the opacity at that position (again, in FF3 you can also use rgba values to do this).
+Above is an example of a linear gradient being applied to a `<rect>` element. Inside the linear gradient are several {{SVGElement('stop')}} nodes. These nodes tell the gradient what color it should be at certain positions by specifying an `offset` attribute for the position, and a `stop-color` attribute. This can be assigned directly or through CSS. The two methods have been intermixed for the purposes of this example. For instance, this one tells the gradient to start at the color red, change to transparent-black in the middle, and end at the color blue. You can insert as many stop colors as you like to create a blend that's as beautiful or hideous as you need, but the offsets should always increase from 0% (or 0 if you want to drop the % sign) to 100% (or 1). Duplicate values will use the stop that is assigned furthest down the XML tree. Also, like with fill and stroke, you can specify a `stop-opacity` attribute to set the opacity at that position (again, in FF3 you can also use rgba values to do this).
 
-     <stop offset="100%" stop-color="yellow" stop-opacity="0.5"/>
+```
+<stop offset="100%" stop-color="yellow" stop-opacity="0.5"/>
+```
 
 To use a gradient, we have to reference it from an object's `fill` or `stroke` attributes. This is done the same way you reference elements in CSS, using a `url`. In this case, the url is just a reference to our gradient, which I've given the creative ID, "Gradient". To attach it, set the `fill` to `url(#Gradient)`, and voila! Our object is now multicolored. You can do the same with `stroke`.
 
 The `<linearGradient>` element also takes several other attributes, which specify the size and appearance of the gradient. The orientation of the gradient is controlled by two points, designated by the attributes `x1`, `x2`, `y1`, and `y2`. These attributes define a line along which the gradient travels. The gradient defaults to a horizontal orientation, but it can be rotated by changing these. Gradient2 in the above example is designed to create a vertical gradient.
 
-     <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+```html
+<linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+```
 
 > **Note:** You can also use the `xlink:href` attribute on gradients too. When it is used, attributes and stops from one gradient can be included on another. In the above example, you wouldn't have to recreate all the stops in Gradient2.
 >
->      <linearGradient id="Gradient1">
->        <stop id="stop1" offset="0%"/>
->        <stop id="stop2" offset="50%"/>
->        <stop id="stop3" offset="100%"/>
->      </linearGradient>
->      <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"
->         xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Gradient1"/>
+> ```html
+> <linearGradient id="Gradient1">
+>   <stop id="stop1" offset="0%"/>
+>   <stop id="stop2" offset="50%"/>
+>   <stop id="stop3" offset="100%"/>
+> </linearGradient>
+> <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"
+>    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Gradient1"/>
+> ```
 >
 > I've included the xlink namespace here directly on the node, although usually you would define it at the top of your document. More on that when we [talk about images](/en-US/docs/Web/SVG/Tutorial/Other_content_in_SVG).
 
@@ -140,34 +146,34 @@ Both linear and radial gradients also take a few other attributes to describe tr
 <?xml version="1.0" standalone="no"?>
 
 <svg width="220" height="220" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-      <radialGradient id="GradientPad"
-            cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
-            spreadMethod="pad">
-        <stop offset="0%" stop-color="red"/>
-        <stop offset="100%" stop-color="blue"/>
-      </radialGradient>
-      <radialGradient id="GradientRepeat"
-            cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
-            spreadMethod="repeat">
-        <stop offset="0%" stop-color="red"/>
-        <stop offset="100%" stop-color="blue"/>
-      </radialGradient>
-      <radialGradient id="GradientReflect"
-            cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
-            spreadMethod="reflect">
-        <stop offset="0%" stop-color="red"/>
-        <stop offset="100%" stop-color="blue"/>
-      </radialGradient>
-  </defs>
+  <defs>
+      <radialGradient id="GradientPad"
+            cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
+            spreadMethod="pad">
+        <stop offset="0%" stop-color="red"/>
+        <stop offset="100%" stop-color="blue"/>
+      </radialGradient>
+      <radialGradient id="GradientRepeat"
+            cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
+            spreadMethod="repeat">
+        <stop offset="0%" stop-color="red"/>
+        <stop offset="100%" stop-color="blue"/>
+      </radialGradient>
+      <radialGradient id="GradientReflect"
+            cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
+            spreadMethod="reflect">
+        <stop offset="0%" stop-color="red"/>
+        <stop offset="100%" stop-color="blue"/>
+      </radialGradient>
+  </defs>
 
-  <rect x="10" y="10" rx="15" ry="15" width="100" height="100" fill="url(#GradientPad)"/>
-  <rect x="10" y="120" rx="15" ry="15" width="100" height="100" fill="url(#GradientRepeat)"/>
-  <rect x="120" y="120" rx="15" ry="15" width="100" height="100" fill="url(#GradientReflect)"/>
+  <rect x="10" y="10" rx="15" ry="15" width="100" height="100" fill="url(#GradientPad)"/>
+  <rect x="10" y="120" rx="15" ry="15" width="100" height="100" fill="url(#GradientRepeat)"/>
+  <rect x="120" y="120" rx="15" ry="15" width="100" height="100" fill="url(#GradientReflect)"/>
 
-  <text x="15" y="30" fill="white" font-family="sans-serif" font-size="12pt">Pad</text>
-  <text x="15" y="140" fill="white" font-family="sans-serif" font-size="12pt">Repeat</text>
-  <text x="125" y="140" fill="white" font-family="sans-serif" font-size="12pt">Reflect</text>
+  <text x="15" y="30" fill="white" font-family="sans-serif" font-size="12pt">Pad</text>
+  <text x="15" y="140" fill="white" font-family="sans-serif" font-size="12pt">Repeat</text>
+  <text x="125" y="140" fill="white" font-family="sans-serif" font-size="12pt">Reflect</text>
 
 </svg>
 ```
@@ -176,7 +182,9 @@ Both linear and radial gradients also take a few other attributes to describe tr
 
 Both gradients also have an attribute named `gradientUnits`, which describes the unit system you're going to use when you describe the size or orientation of the gradient. There are two possible values to use here: `userSpaceOnUse` or `objectBoundingBox`. `objectBoundingBox` is the default, so that's what has been shown so far. It essentially scales the gradient to the size of your object, so you only have to specify coordinates in values from zero to one, and they're scaled to the size of your object automatically for you. `userSpaceOnUse` essentially takes in absolute units. So you have to know where your object is, and place the gradient at the same place. The radialGradient above would be rewritten:
 
-     <radialGradient id="Gradient" cx="60" cy="60" r="50" fx="35" fy="35" gradientUnits="userSpaceOnUse">
+```html
+<radialGradient id="Gradient" cx="60" cy="60" r="50" fx="35" fy="35" gradientUnits="userSpaceOnUse">
+```
 
 You can also then apply another transformation to the gradient by using the `gradientTransform` attribute, but since we haven't [introduced transforms](/en-US/docs/Web/SVG/Tutorial/Basic_Transformations) yet, I'll leave that for later.
 

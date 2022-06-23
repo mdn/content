@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.redirectStart
 slug: Web/API/PerformanceTiming/redirectStart
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility
@@ -25,11 +26,9 @@ in milliseconds since the UNIX epoch, the first HTTP redirect starts. If there i
 redirect, or if one of the redirect is not of the same origin, the value returned is
 `0`.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.redirectStart;
-```
+An `unsigned long long`.
 
 ## Specifications
 

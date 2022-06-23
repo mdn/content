@@ -14,17 +14,17 @@ The **`fill-opacity`** attribute is a presentation attribute defining the opacit
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement('altGlyph')}}
-*   {{SVGElement('circle')}}
-*   {{SVGElement('ellipse')}}
-*   {{SVGElement('path')}}
-*   {{SVGElement('polygon')}}
-*   {{SVGElement('polyline')}}
-*   {{SVGElement('rect')}}
-*   {{SVGElement('text')}}
-*   {{SVGElement('textPath')}}
-*   {{SVGElement('tref')}}
-*   {{SVGElement('tspan')}}
+- {{SVGElement('altGlyph')}}
+- {{SVGElement('circle')}}
+- {{SVGElement('ellipse')}}
+- {{SVGElement('path')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tref')}}
+- {{SVGElement('tspan')}}
 
 ## Example
 
@@ -81,34 +81,10 @@ html,body,svg { height:100% }
 
 > **Note:** SVG2 introduces percentage values for `fill-opacity`, however, it is not widely supported yet (*See [Browser compatibility](#browser_compatibility) below*) as a consequence, it is best practices to set opacity with a value in the range `[0-1]`.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-## Specifications
-
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "painting.html#FillOpacityProperty", "fill-opacity")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for shapes and texts</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "painting.html#FillOpacityProperty", "fill-opacity")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for shapes and texts</td>
-    </tr>
-  </tbody>
-</table>

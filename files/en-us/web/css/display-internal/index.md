@@ -8,6 +8,9 @@ tags:
   - Data Type
   - Reference
   - display-internal
+browser-compat:
+  - css.properties.display.table_values
+  - css.properties.display.ruby_values
 ---
 {{CSSRef}}
 
@@ -86,23 +89,11 @@ label, input {
 
 ## Specifications
 
-| Specification                                                                                            | Status                           |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('CSS3 Display', '#typedef-display-internal', 'display-internal')}} | {{Spec2('CSS3 Display')}} |
+{{Specifications}}
 
 ## Browser compatibility
 
-### Support of table values
-
-`table`, `table-cell`, `table-column`, `table-column-group`, `table-footer-group`, `table-header-group`, `table-row`, and `table-row-group`
-
-{{Compat("css.properties.display.table_values", 10)}}
-
-### Support of ruby values
-
-`ruby`, `ruby-base`, `ruby-base-container`, `ruby-text`, and `ruby-text-container`
-
-{{Compat("css.properties.display.ruby_values", 10)}}
+{{Compat}}
 
 ## See also
 

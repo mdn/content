@@ -61,7 +61,7 @@ foo(...wrong, arg2, arg3)
 foo(arg1, arg2, ...correct)
 ```
 
-### The difference between rest parameters and the `arguments` object
+### The difference between rest parameters and the arguments object
 
 There are three main differences between rest parameters and the
 {{jsxref("Functions/arguments", "arguments")}} object:
@@ -70,14 +70,14 @@ There are three main differences between rest parameters and the
   parameters are {{jsxref("Array")}} instances, meaning methods
   like {{jsxref("Array.sort", "sort")}}, {{jsxref("Array.map", "map")}},
   {{jsxref("Array.forEach", "forEach")}} or {{jsxref("Array/pop", "pop")}} can be
-  applied on it directly;
+  applied on it directly.
 - The `arguments` object has additional functionality specific to itself
   (like the `callee` property).
 - The `...restParam` bundles all the extra parameters into a single array,
   therefore it does not contain any named argument defined **before** the
   `...restParam`. Whereas the `arguments` object contains all of
-  the parameters -- including all of the stuff in the `...restParam` --
-  **un**bundled.
+  the parameters — including the parameters in the `...restParam` array —
+  bundled into one array-like object.
 
 ### From arguments to an array
 
@@ -187,7 +187,7 @@ let arr = multiply(2, 15, 25, 42)
 console.log(arr)  // [30, 50, 84]
 ```
 
-### Rest parameters are real arrays; the arguments object is not.
+### Rest parameters are real arrays; the arguments object is not
 
 {{jsxref("Array")}} methods can be used on rest parameters, but not on the
 `arguments` object:
@@ -231,7 +231,7 @@ console.log(sortArguments(5, 3, 7, 1))  // 1, 3, 5, 7
 
 ## See also
 
-- [Spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) (also ‘`...`’)
+- [Spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) (also '`...`')
 - [Destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 - [`arguments` object](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
 - {{jsxref("Array")}}

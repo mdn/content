@@ -45,7 +45,7 @@ Overview: [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Con
 
 ## Loops and iteration
 
-Oveview: [Loops and iteration](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+Overview: [Loops and iteration](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 
 - [`for`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement)
 - [`while`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#while_statement)

@@ -1,6 +1,7 @@
 ---
 title: XRView.requestViewportScale()
 slug: Web/API/XRView/requestViewportScale
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -28,7 +29,7 @@ requestViewportScale(scale)
 
 ### Return value
 
-Returns {{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -39,6 +40,7 @@ Dynamic viewport scaling allows applications to only use a subset of the availab
 The `scale` parameter can be a number greater than 0.0 and less than or equal to 1.0.
 
 Alternatively, you can use the {{domxref("XRView.recommendedViewportScale")}} property which contains the user agent's recommended value based on internal heuristics. If the user agent doesn't provide a recommended viewport scale, its value is `null` and the call to `requestViewportScale()` is ignored.
+
 ## Examples
 
 The following example shows how to request and apply a new viewport scale. The call to {{domxref("XRWebGLLayer.getViewport()")}} applies the change and returns the updated viewport.

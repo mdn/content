@@ -38,11 +38,11 @@ Now that we've looked at the fundamental building blocks of JavaScript, we'll te
 
 ## Starting point
 
-To get this assessment started, you should go and [grab the ZIP](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/gallery/gallery-start.zip?raw=true) file for the example, unzip it somewhere on your computer, and do the exercise locally to begin with.
+To get this assessment started, you should go and [grab the ZIP](https://raw.githubusercontent.com/mdn/learning-area/main/javascript/building-blocks/gallery/gallery-start.zip) file for the example, unzip it somewhere on your computer, and do the exercise locally to begin with.
 
-Alternatively, you could use a site like [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/) to do your assessment. You could paste the HTML, CSS and JavaScript into one of these online editors. If the online editor you are using doesn't have separate JavaScript/CSS panels, feel free to put them inline `<script>`/`<style>` elements inside the HTML page.
+Alternatively, you could use a site like [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/) to do your assessment. You could paste the HTML, CSS and JavaScript into one of these online editors. If the online editor you are using doesn't have separate JavaScript/CSS panels, feel free to put them inline `<script>`/`<style>` elements inside the HTML page.
 
-> **Note:** If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
+> **Note:** If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
 ## Project brief
 
@@ -86,7 +86,7 @@ The following sections describe what you need to do.
 
 ## Declare an array of image filenames
 
-You need to create an array listing the filenames of all the image to include in the gallery. The array should be declared as a constant.
+You need to create an array listing the filenames of all the images to include in the gallery. The array should be declared as a constant.
 
 ### Looping through the images
 
@@ -94,8 +94,8 @@ We've already provided you with lines that store a reference to the `thumb-bar <
 
 You need to:
 
-1.  Put the section of code below the "Looping through images" comment inside a loop that loops through all the filenames in the array.
-2.  In each loop iteration, replace the `xxx` placeholder value with a string that will equal the path to the image in each case. We are setting the value of the `src` attribute to this value in each case. Bear in mind that in each case, the image is inside the images directory and its name is `pic1.jpg`, `pic2.jpg`, etc.
+1. Put the section of code below the "Looping through images" comment inside a loop that loops through all the filenames in the array.
+2. In each loop iteration, replace the `xxx` placeholder value with a string that will equal the path to the image in each case. We are setting the value of the `src` attribute to this value in each case. Bear in mind that in each case, the image is inside the images directory and its name is `pic1.jpg`, `pic2.jpg`, etc.
 
 ### Adding a click event listener to each thumbnail image
 
@@ -107,9 +107,9 @@ Alternatively, you can add one event listener to the thumb bar.
 
 That just leaves our darken/lighten `<button>` — we've already provided a line that stores a reference to the `<button>` in a constant called `btn`. You need to add a click event listener that:
 
-1.  Checks the current class name set on the `<button>` — you can again achieve this by using `getAttribute()`.
-2.  If the class name is `"dark"`, changes the `<button>` class to `"light"` (using [`setAttribute()`](/en-US/docs/Web/API/Element/setAttribute)), its text content to "Lighten", and the {{cssxref("background-color")}} of the overlay `<div>` to `"rgba(0,0,0,0.5)"`.
-3.  If the class name is not `"dark"`, changes the `<button>` class to `"dark"`, its text content back to "Darken", and the {{cssxref("background-color")}} of the overlay `<div>` to `"rgba(0,0,0,0)"`.
+1. Checks the current class name set on the `<button>` — you can again achieve this by using `getAttribute()`.
+2. If the class name is `"dark"`, changes the `<button>` class to `"light"` (using [`setAttribute()`](/en-US/docs/Web/API/Element/setAttribute)), its text content to "Lighten", and the {{cssxref("background-color")}} of the overlay `<div>` to `"rgba(0,0,0,0.5)"`.
+3. If the class name is not `"dark"`, changes the `<button>` class to `"dark"`, its text content back to "Darken", and the {{cssxref("background-color")}} of the overlay `<div>` to `"rgba(0,0,0,0)"`.
 
 The following lines provide a basis for achieving the changes stipulated in points 2 and 3 above.
 
@@ -127,8 +127,8 @@ overlay.style.backgroundColor = xxx;
 
 If you would like your work assessed, or are stuck and want to ask for help:
 
-1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
     - A descriptive title such as "Assessment wanted for Image gallery".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.

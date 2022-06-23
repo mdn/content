@@ -1,6 +1,7 @@
 ---
 title: 'Element: wheel event'
 slug: Web/API/Element/wheel_event
+page-type: web-api-event
 tags:
   - API
   - DOM
@@ -71,15 +72,15 @@ div {
 
 ```js
 function zoom(event) {
-  event.preventDefault();
+  event.preventDefault();
 
-  scale += event.deltaY * -0.01;
+  scale += event.deltaY * -0.01;
 
-  // Restrict scale
-  scale = Math.min(Math.max(.125, scale), 4);
+  // Restrict scale
+  scale = Math.min(Math.max(.125, scale), 4);
 
-  // Apply scale transform
-  el.style.transform = `scale(${scale})`;
+  // Apply scale transform
+  el.style.transform = `scale(${scale})`;
 }
 
 let scale = 1;

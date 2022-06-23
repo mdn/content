@@ -22,19 +22,19 @@ There are some rules that can restrict when extensions are able to change settin
 
 This means that if extension X tries to change a setting:
 
-1.  If the setting is locked, then the setting is not changed. However, X's change is remembered, and it is stored in a queue, ordered by X's precedence relative to any other extensions that tried to change the setting. If the setting becomes unlocked later on, the first extension in the queue gets to change the setting.
-2.  Otherwise, if no other extension has already changed the setting, then X succeeds in changing the setting, and is then said to "control" the setting.
-3.  Otherwise, if a lower-precedence extension Y has already changed the setting, then X succeeds in changing the setting, and now controls the setting. However, Y's change is remembered, and is stored in a queue in precedence order. If X subsequently clears its value, or if X is disabled or uninstalled,  the first extension in the queue gets to make its change to the setting.
-4.  Otherwise, if a higher-precedence extension Z has already changed the setting, then X does not succeed in changing the setting, but its change is queued. If Z subsequently clears its value, or if Z is disabled or uninstalled, the first extension in the queue gets to make its change to the setting.
+1. If the setting is locked, then the setting is not changed. However, X's change is remembered, and it is stored in a queue, ordered by X's precedence relative to any other extensions that tried to change the setting. If the setting becomes unlocked later on, the first extension in the queue gets to change the setting.
+2. Otherwise, if no other extension has already changed the setting, then X succeeds in changing the setting, and is then said to "control" the setting.
+3. Otherwise, if a lower-precedence extension Y has already changed the setting, then X succeeds in changing the setting, and now controls the setting. However, Y's change is remembered, and is stored in a queue in precedence order. If X subsequently clears its value, or if X is disabled or uninstalled, the first extension in the queue gets to make its change to the setting.
+4. Otherwise, if a higher-precedence extension Z has already changed the setting, then X does not succeed in changing the setting, but its change is queued. If Z subsequently clears its value, or if Z is disabled or uninstalled, the first extension in the queue gets to make its change to the setting.
 
 An extension can find out which of these scenarios applies by examining the "`levelOfControl`" property returned from a call to [`BrowserSetting.get()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get).
 
-The [`BrowserSetting.set()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set) method returns a Promise that resolves to a boolean: if an attempt to change a setting actually results in the setting being changed (scenarios 2 and 3 above) the boolean is `true`: otherwise it is `false`.
+The [`BrowserSetting.set()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set) method returns a Promise that resolves to a boolean: if an attempt to change a setting actually results in the setting being changed (scenarios 2 and 3 above) the boolean is `true`: otherwise it is `false`.
 
 ## Syntax
 
 ```js
-var setting = setting.set(
+let setting = setting.set(
   details     // object
 )
 ```
@@ -71,7 +71,7 @@ function onSet(result) {
 
 browser.browserAction.onClicked.addListener(() => {
 
-    var setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
+    let setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
       value: false
     });
     setting.then(onSet);
@@ -83,7 +83,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 > **Note:**
 >
-> This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/extensions/types) API.
+> This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/types/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

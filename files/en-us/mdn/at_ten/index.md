@@ -10,7 +10,7 @@ Celebrate 10 years of documenting your Web.
 
 ## The history of MDN
 
-In early 2005, a small team of idealists set out to create a new, free, community-built online resource for all Web developers. Their brilliant but offbeat idea grew into today’s Mozilla Developer Network—the premier resource for all open Web technologies. Ten years later, our global community is bigger than ever, and together we’re still creating documentation, sample code and learning resources for all open Web technologies, including CSS, HTML, JavaScript and everything else that makes the open Web as powerful as it is.
+In early 2005, a small team of idealists set out to create a new, free, community-built online resource for all Web developers. Their brilliant but offbeat idea grew into today's Mozilla Developer Network—the premier resource for all open Web technologies. Ten years later, our global community is bigger than ever, and together we're still creating documentation, sample code and learning resources for all open Web technologies, including CSS, HTML, JavaScript and everything else that makes the open Web as powerful as it is.
 
 [Learn more about the history](/en-US/docs/MDN/At_ten/History_of_MDN)
 

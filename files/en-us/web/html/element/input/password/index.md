@@ -14,27 +14,31 @@ tags:
   - Reference
   - Web
   - password
-browser-compat: html.elements.input.input-password
+browser-compat: html.elements.input.type_password
 ---
 
 {{HTMLRef("Input_types")}}
 
 `<input>` elements of type **`password`** provide a way for the user to securely enter a password.
 
-The element is presented as a one-line plain text editor control in which the text is obscured so that it cannot be read, usually by replacing each character with a symbol such as the asterisk ("\*") or a dot ("•"). This character will vary depending on the {{Glossary("user agent")}} and {{Glossary("OS")}}.
+The element is presented as a one-line plain text editor control in which the text is obscured so that it cannot be read, usually by replacing each character with a symbol such as the asterisk ("\*") or a dot ("•").
+This character will vary depending on the {{Glossary("user agent")}} and operating system.
 
 {{EmbedInteractiveExample("pages/tabbed/input-password.html", "tabbed-standard")}}
 
-Specifics of how the entry process works may vary from browser to browser; mobile devices, for example, often display the typed character for a moment before obscuring it, to allow the user to be sure they pressed the key they meant to press; this is helpful given the small size of keys and the ease with which the wrong one can be pressed, especially on virtual keyboards.
+The precise behavior of the entry process may vary from browser to browser.
+Some browsers display the typed character for a moment before obscuring it, while others allow the user to toggle the display of plain-text on and off.
+Both approaches help a user check that they entered the intended password, which can be particularly difficult on mobile devices.
 
-> **Note:** Any forms involving sensitive information like passwords (e.g. login forms) should be served over HTTPS; Many browsers now implement mechanisms to warn against insecure login forms; see [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords).
+> **Note:** Any forms involving sensitive information like passwords (such as login forms) should be served over HTTPS.
+> Many browsers now implement mechanisms to warn against insecure login forms; see [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords).
 
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing a password, or empty
+        A string representing a password, or empty
       </td>
     </tr>
     <tr>
@@ -66,6 +70,10 @@ Specifics of how the entry process works may vary from browser to browser; mobil
       </td>
     </tr>
     <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>Methods</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}},
@@ -79,9 +87,9 @@ Specifics of how the entry process works may vary from browser to browser; mobil
 
 ## Value
 
-The {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} whose value is the current contents of the text editing control being used to enter the password. If the user hasn't entered anything yet, this value is an empty string (`""`). If the {{htmlattrxref("required")}} property is specified, then the password edit box must contain a value other than an empty string to be valid.
+The {{htmlattrxref("value", "input")}} attribute contains a string whose value is the current contents of the text editing control being used to enter the password. If the user hasn't entered anything yet, this value is an empty string (`""`). If the {{htmlattrxref("required")}} property is specified, then the password edit box must contain a value other than an empty string to be valid.
 
-If the {{htmlattrxref("pattern", "input")}} attribute is specified, the content of a `password` control is only considered valid if the value passes validation; see {{anch("Validation")}} for more information.
+If the {{htmlattrxref("pattern", "input")}} attribute is specified, the content of a `password` control is only considered valid if the value passes validation; see [Validation](#validation) for more information.
 
 > **Note:** The line feed (U+000A) and carriage return (U+000D) characters are not permitted in a `password` value. When setting the value of a password control, line feed and carriage return characters are stripped out of the value.
 
@@ -109,7 +117,7 @@ If the specified pattern is not specified or is invalid, no regular expression i
 
 > **Note:** Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
 
-Use of a pattern is strongly recommended for password inputs, in order to help ensure that valid passwords using a wide assortment of character classes are selected and used by your users. With a pattern, you can mandate case rules, require the use of some number of digits and/or punctuation characters, and so forth. See the section {{anch("Validation")}} for details and an example.
+Use of a pattern is strongly recommended for password inputs, in order to help ensure that valid passwords using a wide assortment of character classes are selected and used by your users. With a pattern, you can mandate case rules, require the use of some number of digits and/or punctuation characters, and so forth. See the section [Validation](#validation) for details and an example.
 
 ### placeholder
 
@@ -121,7 +129,7 @@ If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossa
 
 ### readonly
 
-A Boolean attribute which, if present, means this field cannot be edited by the user. Its `value` can, however, still be changed from JavaScript code that directly sets the value of the {{domxref("HTMLInputElement.value")}} property.
+A Boolean attribute which, if present, means this field cannot be edited by the user. Its `value` can, however, still be changed from JavaScript code that directly sets the value of the {{domxref("HTMLInputElement","HTMLInputElement.value")}} property.
 
 > **Note:** Because a read-only field cannot have a value, `required` does not have any effect on inputs with the `readonly` attribute also specified.
 
@@ -129,7 +137,7 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 
 The `size` attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font ({{cssxref("font")}} settings in use).
 
-This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the `{{anch("maxlength")}}` attribute.
+This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the [`maxlength`](#maxlength) attribute.
 
 ## Using password inputs
 

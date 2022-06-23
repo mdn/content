@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.label
 slug: Web/API/RTCDataChannel/label
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCDataChannel
@@ -13,7 +14,7 @@ browser-compat: api.RTCDataChannel.label
 {{APIRef("WebRTC")}}
 
 The read-only `RTCDataChannel` property **`label`**
-returns a {{domxref("DOMString")}} containing a name describing the data channel. These
+returns a string containing a name describing the data channel. These
 labels are not required to be unique.
 
 You may use the label as you wish; you could use it to identify all the channels that

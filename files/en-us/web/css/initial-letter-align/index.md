@@ -30,6 +30,7 @@ initial-letter-align: ideographic;
 initial-letter-align: inherit;
 initial-letter-align: initial;
 initial-letter-align: revert;
+initial-letter-align: revert-layer;
 initial-letter-align: unset;
 ```
 
@@ -72,22 +73,22 @@ One of the keyword values listed below.
 #### CSS
 
 ```css
-.auto {
+.auto::first-letter {
   -webkit-initial-letter-align: auto;
   initial-letter-align: auto;
 }
 
-.alphabetic {
+.alphabetic::first-letter {
   -webkit-initial-letter-align: alphabetic;
   initial-letter-align: alphabetic;
 }
 
-.hanging {
+.hanging::first-letter {
   -webkit-initial-letter-align: hanging;
   initial-letter-align: hanging;
 }
 
-.ideographic {
+.ideographic::first-letter {
   -webkit-initial-letter-align: ideographic;
   initial-letter-align: ideographic;
 }

@@ -17,8 +17,6 @@ tags:
 
 Client-side tooling can be intimidating, but this series of articles aims to illustrate the purpose of some of the most common client-side tool types, explain the tools you can chain together, how to install them using package managers, and control them using the command line. We finish up by providing a complete toolchain example showing you how to get productive.
 
-**[Get started now, with our "Client-side tooling overview"](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)**
-
 ## Prerequisites
 
 You should really learn the basics of the core [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn/CSS), and [JavaScript](/en-US/docs/Learn/JavaScript) languages first before attempting to use the tools detailed here.
@@ -35,7 +33,7 @@ You should really learn the basics of the core [HTML](/en-US/docs/Learn/HTML), [
 ## Guides
 
 - [1. Client-side tooling overview](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)
-  - : In this article we provide an overview of modern web tooling, what kinds of tools are available and where you’ll meet them in the lifecycle of web app development, and how to find help with individual tools.
+  - : In this article we provide an overview of modern web tooling, what kinds of tools are available and where you'll meet them in the lifecycle of web app development, and how to find help with individual tools.
 - [2. Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)
   - : In your development process you'll undoubtedly be required to run some command in the terminal (or on the "command line" — these are effectively the same thing). This article provides an introduction to the terminal, the essential commands you'll need to enter into it, how to chain commands together, and how to add your own command line interface (CLI) tools.
 - [3. Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)

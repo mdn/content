@@ -27,6 +27,7 @@ break-inside: avoid-region;
 break-inside: inherit;
 break-inside: initial;
 break-inside: revert;
+break-inside: revert-layer;
 break-inside: unset;
 ```
 
@@ -34,8 +35,8 @@ Each possible break point (in other words, each element boundary) is affected by
 
 To determine if a break must be done, the following rules are applied:
 
-1.  If any of the three concerned values is a _forced break value_ (`always`, `left`, `right`, `page`, `column`, or `region`), it has precedence. If more than one of them are such a break, the value of the element that appears the latest in the flow is used. Thus, the `break-before` value has precedence over the `break-after` value, which in turn has precedence over the `break-inside` value.
-2.  If any of the three concerned values is an _avoid break value_ (`avoid`, `avoid-page`, `avoid-region`, or `avoid-column`), no such break will be applied at that point.
+1. If any of the three concerned values is a _forced break value_ (`always`, `left`, `right`, `page`, `column`, or `region`), it has precedence. If more than one of them are such a break, the value of the element that appears the latest in the flow is used. Thus, the `break-before` value has precedence over the `break-after` value, which in turn has precedence over the `break-inside` value.
+2. If any of the three concerned values is an _avoid break value_ (`avoid`, `avoid-page`, `avoid-region`, or `avoid-column`), no such break will be applied at that point.
 
 Once forced breaks have been applied, soft breaks may be added if needed, but not on element boundaries that resolve in a corresponding `avoid` value.
 
@@ -155,7 +156,7 @@ article {
 
 ## Specifications
 
-{{Specifications("css.properties.break-inside.multicol_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

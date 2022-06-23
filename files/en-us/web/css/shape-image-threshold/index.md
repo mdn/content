@@ -33,6 +33,7 @@ shape-image-threshold: 0.7;
 shape-image-threshold: inherit;
 shape-image-threshold: initial;
 shape-image-threshold: revert;
+shape-image-threshold: revert-layer;
 shape-image-threshold: unset;
 ```
 

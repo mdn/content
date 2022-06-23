@@ -1,6 +1,7 @@
 ---
 title: PointerEvent.tiltX
 slug: Web/API/PointerEvent/tiltX
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -17,24 +18,13 @@ The **`tiltX`** read-only property of the
 plane_ of the pointer and the screen. This property is typically only useful for a
 pen/stylus pointer type.
 
-For an illustration of this property see [Figure 2 in the
-specification](https://w3c.github.io/pointerevents/#dom-pointerevent-tiltx).
+For an illustration of this property see [Figure 2 in the specification](https://w3c.github.io/pointerevents/#dom-pointerevent-tiltx).
 
-## Syntax
+## Value
 
-```js
-var tiltX = pointerEvent.tiltX;
-```
+The angle in degrees between the Y-Z plane of the pointer (stylus) and the screen. The range of values is `-90` to `90`, inclusive, where a positive value is a tilt to the right. For devices that do not support this property, the value is `0`.
 
-### Return value
-
-- `tiltX`
-  - : The angle in degrees between the Y-Z plane of the pointer (stylus) and the screen.
-    The range of values is `-90` to `90`, inclusive, where a
-    positive value is a tilt to the right. For devices that do not support this property,
-    the value is `0`.
-
-## Example
+## Examples
 
 This example illustrates simple accessing of the `tiltX` and
 {{domxref("PointerEvent.tiltY","tiltY")}} properties.

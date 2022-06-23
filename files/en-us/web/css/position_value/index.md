@@ -98,5 +98,5 @@ bottom top
 - [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)
 - [CSS Values and Units introduction](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
 - {{cssxref("background-position")}}
-- {{cssxref("gradient/radial-gradient()", "radial-gradient()")}}
-- {{cssxref("gradient/conic-gradient()", "conic-gradient()")}}
+- {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
+- {{cssxref("gradient/conic-gradient", "conic-gradient()")}}

@@ -1,6 +1,7 @@
 ---
 title: CSSStyleDeclaration
 slug: Web/API/CSSStyleDeclaration
+page-type: web-api-interface
 tags:
   - API
   - CSSOM
@@ -47,17 +48,17 @@ A `CSSStyleDeclaration` object can be exposed using three different APIs:
   - : Removes a property from the CSS declaration block.
 - {{DOMxRef("CSSStyleDeclaration.setProperty()")}}
   - : Modifies an existing CSS property or creates a new CSS property in the declaration block.
-- {{DOMxRef("CSSStyleDeclaration.getPropertyCSSValue()")}} {{deprecated_inline}}
+- {{DOMxRef("CSSStyleDeclaration.getPropertyCSSValue()")}} {{deprecated_inline}}
   - : **Only supported via getComputedStyle in Firefox.** Returns the property value as a {{DOMxRef("CSSPrimitiveValue")}} or `null` for [shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties).
 
 ## Example
 
 ```js
-var styleObj = document.styleSheets[0].cssRules[0].style;
+const styleObj = document.styleSheets[0].cssRules[0].style;
 console.log(styleObj.cssText);
 
-for (var i = styleObj.length; i--;) {
-  var nameString = styleObj[i];
+for (let i = styleObj.length; i--;) {
+  const nameString = styleObj[i];
   styleObj.removeProperty(nameString);
 }
 

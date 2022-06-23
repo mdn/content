@@ -1,6 +1,7 @@
 ---
 title: Window.scroll()
 slug: Web/API/Window/scroll
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -17,8 +18,8 @@ particular place in the document.
 ## Syntax
 
 ```js
-window.scroll(x-coord, y-coord)
-window.scroll(options)
+scroll(x-coord, y-coord)
+scroll(options)
 ```
 
 ### Parameters
@@ -37,7 +38,11 @@ window.scroll(options)
     - `left`
       - : Specifies the number of pixels along the X axis to scroll the window or element.
     - `behavior`
-      - : Specifies whether the scrolling should animate smoothly (`smooth`), happen instantly in a single jump (`instant`), or let the browser choose (`auto`, default).
+      - : Specifies whether the scrolling should animate smoothly (`smooth`), or happen instantly in a single jump (`auto`, the default value).
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

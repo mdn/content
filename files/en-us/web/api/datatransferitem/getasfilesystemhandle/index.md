@@ -1,6 +1,7 @@
 ---
 title: DataTransferItem.getAsFileSystemHandle()
 slug: Web/API/DataTransferItem/getAsFileSystemHandle
+page-type: web-api-instance-method
 tags:
   - DataTransferItem
   - Directory
@@ -9,7 +10,7 @@ tags:
   - Method
 browser-compat: api.DataTransferItem.getAsFileSystemHandle
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("HTML Drag and Drop API")}}
+{{securecontext_header}}{{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 The **`getAsFileSystemHandle()`** method of the
 {{domxref("DataTransferItem")}} interface returns a {{domxref('FileSystemFileHandle')}}
@@ -28,7 +29,7 @@ None.
 
 ### Return value
 
-A {{domxref('FileSystemFileHandle')}} or {{domxref('FileSystemDirectoryHandle')}}.
+A {{jsxref('Promise')}} fulfilled with a {{domxref('FileSystemFileHandle')}} or {{domxref('FileSystemDirectoryHandle')}}.
 
 ### Exceptions
 
@@ -74,5 +75,4 @@ elem.addEventListener('drop', async (e) => {
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

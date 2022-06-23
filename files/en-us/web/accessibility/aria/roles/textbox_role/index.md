@@ -7,7 +7,7 @@ tags:
   - Accessibility
   - Reference
   - textbox role
-  - needcontent
+  - NeedsContent
 ---
 The `textbox` role is used to identify an element that allows the input of free-form text. Whenever possible, rather than using this role, use an {{HTMLElement("input")}} element with [type="text"](/en-US/docs/Web/HTML/Element/input/text), for single-line input, or a {{HTMLElement("textarea")}} element for multi-line input.
 
@@ -20,7 +20,7 @@ The default is a single line input, in which <kbd>Return</kbd> or <kbd>Enter</kb
 ```html
 <!-- Simple text input field -->
 <div id="txtboxLabel">Enter your five-digit zipcode</div>
-<div role="textbox" contenteditable="true" aria-placeholder="5-digit zipcode" 
+<div role="textbox" contenteditable="true" aria-placeholder="5-digit zipcode"
     aria-labelledby="txtboxLabel"></div>
 
 <!-- Multi-line text area -->
@@ -101,8 +101,8 @@ All features associated with any and all properties and states must be maintaine
 
 When the `textbox` role is added to an element, or such an element becomes visible, the user agent should do the following:
 
-   - Expose the element as having a textbox role in the operating system's accessibility API.
-   - Fire an accessible textbox event using the operating system's accessibility API if it supports it.
+- Expose the element as having a textbox role in the operating system's accessibility API.
+- Fire an accessible textbox event using the operating system's accessibility API if it supports it.
 
 Assistive technology products should listen for such an event and notify the user accordingly:
 
@@ -113,7 +113,7 @@ Assistive technology products should listen for such an event and notify the use
 
 ## Examples
 
-### Example 1: Adding the role in the HTML code for single line input
+### Example 1: Adding the role in the HTML code for single line input
 
 The snippet below shows how the textbox role is added directly into the HTML source code.
 

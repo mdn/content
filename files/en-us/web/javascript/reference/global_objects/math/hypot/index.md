@@ -169,7 +169,7 @@ if (!Math.hypot) Math.hypot = function () {
 
 ## See also
 
-- A polyfill of `Math.hypot` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.hypot` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.abs()")}}
 - {{jsxref("Math.pow()")}}
 - {{jsxref("Math.sqrt()")}}

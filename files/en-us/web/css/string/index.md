@@ -32,24 +32,26 @@ However, to get new lines, you must also set the {{cssxref("white-space")}} prop
 
 ### Examples of valid strings
 
-    /* Simple strings */
-    "This string is demarcated by double quotes."
-    'This string is demarcated by single quotes.'
+```css
+/* Simple strings */
+"This string is demarcated by double quotes."
+'This string is demarcated by single quotes.'
 
-    /* Character escaping */
-    "This is a string with \" an escaped double quote."
-    "This string also has \22 an escaped double quote."
-    'This is a string with \' an escaped single quote.'
-    'This string also has \27 an escaped single quote.'
-    "This is a string with \\ an escaped backslash."
+/* Character escaping */
+"This is a string with \" an escaped double quote."
+"This string also has \22 an escaped double quote."
+'This is a string with \' an escaped single quote.'
+'This string also has \27 an escaped single quote.'
+"This is a string with \\ an escaped backslash."
 
-    /* New line in a string */
-    "This string has a \Aline break in it."
+/* New line in a string */
+"This string has a \Aline break in it."
 
-    /* String spanning two lines of code (these two strings will have identical output) */
-    "A really long \
-    awesome string"
-    "A really long awesome string"
+/* String spanning two lines of code (these two strings will have identical output) */
+"A really long \
+awesome string"
+"A really long awesome string"
+```
 
 ## Specifications
 

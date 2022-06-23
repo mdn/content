@@ -1,6 +1,7 @@
 ---
 title: How whitespace is handled by HTML, CSS, and in the DOM
 slug: Web/API/Document_Object_Model/Whitespace
+page-type: guide
 tags:
   - CSS
   - DOM
@@ -8,7 +9,7 @@ tags:
   - JavaScript
   - whitespace
 ---
-{{APIRef("DOM")}}
+{{DefaultAPISidebar("DOM")}}
 
 The presence of whitespace in the [DOM](/en-US/docs/Web/API/Document_Object_Model) can cause layout problems and make manipulation of the content tree difficult in unexpected ways, depending on where it is located. This article explores when difficulties can occur, and looks at what can be done to mitigate resulting problems.
 
@@ -23,10 +24,10 @@ In the case of HTML, whitespace is largely ignored — whitespace in between wor
 ```html
 <!DOCTYPE html>
 
-    <h1>       Hello      World!     </h1>
+  <h1>      Hello      World!     </h1>
 ```
 
-This source code contains a couple of line feeds after the `DOCTYPE` and a bunch of space characters before,  after, and inside the `<h1>` element, but the browser doesn’t seem to care at all and just shows the words "Hello World!" as if these characters didn’t exist at all:
+This source code contains a couple of line feeds after the `DOCTYPE` and a bunch of space characters before, after, and inside the `<h1>` element, but the browser doesn't seem to care at all and just shows the words "Hello World!" as if these characters didn't exist at all:
 
 {{EmbedLiveSample('HTML_largely_ignores_whitespace')}}
 
@@ -66,11 +67,11 @@ Conserving whitespace characters in the DOM is useful in many ways, but there ar
 
 ### How does CSS process whitespace?
 
-Most whitespace characters are ignored, not all of them are. In the earlier example one of the spaces between "Hello" and "World!" still exists when the page is rendered in a browser. There are rules in the browser engine that decide which whitespace characters are useful and which aren’t — these are specified at least in part in [CSS Text Module Level 3](https://www.w3.org/TR/css-text-3), and especially the parts about the [CSS `white-space` property](https://www.w3.org/TR/css-text-3/#white-space-property) and [whitespace processing details](https://www.w3.org/TR/css-text-3/#white-space-processing), but we also offer an easier explanation below.
+Most whitespace characters are ignored, not all of them are. In the earlier example one of the spaces between "Hello" and "World!" still exists when the page is rendered in a browser. There are rules in the browser engine that decide which whitespace characters are useful and which aren't — these are specified at least in part in [CSS Text Module Level 3](https://www.w3.org/TR/css-text-3/), and especially the parts about the [CSS `white-space` property](https://www.w3.org/TR/css-text-3/#white-space-property) and [whitespace processing details](https://www.w3.org/TR/css-text-3/#white-space-processing), but we also offer an easier explanation below.
 
 #### Example
 
-Let’s take another example. To make it easier, we’ve added a comment that shows all spaces with ◦, all tabs with ⇥ , and all line breaks with ⏎:
+Let's take another example. To make it easier, we've added a comment that shows all spaces with ◦, all tabs with ⇥ , and all line breaks with ⏎:
 
 This example:
 
@@ -100,33 +101,33 @@ Because of this, it establishes what is called an [inline formatting context](/e
 
 Inside this context, whitespace character processing can be summarized as follows:
 
-1.  First, all spaces and tabs immediately before and after a line break are ignored so, if we take our example markup from before and apply this first rule, we get:
+1. First, all spaces and tabs immediately before and after a line break are ignored so, if we take our example markup from before and apply this first rule, we get:
 
     ```html
     <h1>◦◦◦Hello⏎
     <span>◦World!</span>⇥◦◦</h1>
     ```
 
-2.  Next, all tab characters are handled as space characters, so the example becomes:
+2. Next, all tab characters are handled as space characters, so the example becomes:
 
     ```html
     <h1>◦◦◦Hello⏎
     <span>◦World!</span>◦◦◦</h1>
     ```
 
-3.  Next, line breaks are converted to spaces:
+3. Next, line breaks are converted to spaces:
 
     ```html
     <h1>◦◦◦Hello◦<span>◦World!</span>◦◦◦</h1>
     ```
 
-4.  After that, any space immediately following another space (even across two separate inline elements) is ignored, so we end up with:
+4. After that, any space immediately following another space (even across two separate inline elements) is ignored, so we end up with:
 
     ```html
     <h1>◦Hello◦<span>World!</span>◦</h1>
     ```
 
-5.  And finally, sequences of spaces at the beginning and end of a line are removed, so we finally get this:
+5. And finally, sequences of spaces at the beginning and end of a line are removed, so we finally get this:
 
     ```html
     <h1>Hello◦<span>World!</span></h1>
@@ -134,7 +135,7 @@ Inside this context, whitespace character processing can be summarized as follow
 
 This is why people visiting the web page will see the phrase "Hello World!" nicely written at the top of the page, rather than a weirdly indented "Hello" followed but an even more weirdly indented "World!" on the line below that.
 
-> **Note:** [Firefox DevTools](/en-US/docs/Tools) have supported highlighting text nodes since version 52, making it easier to see exactly what nodes whitespace characters are contained within. Pure whitespace nodes are marked with a "whitespace" label.
+> **Note:** [Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) have supported highlighting text nodes since version 52, making it easier to see exactly what nodes whitespace characters are contained within. Pure whitespace nodes are marked with a "whitespace" label.
 
 ### Whitespace in block formatting contexts
 
@@ -144,7 +145,7 @@ Within this context, whitespace is treated very differently.
 
 #### Example
 
-Let’s take a look at an example to explain how. We've marked the whitespace characters as before.
+Let's take a look at an example to explain how. We've marked the whitespace characters as before.
 
 We have 3 text nodes that contain only whitespace, one before the first `<div>`, one between the 2 `<divs>`, and one after the second `<div>`.
 
@@ -172,7 +173,7 @@ This renders like so:
 
 We can summarize how the whitespace here is handled as follows (the may be some slight differences in exact behavior between browsers, but this basically works):
 
-1.  Because we’re inside a block formatting context, everything must be a block, so our 3 text nodes also become blocks, just like the 2 `<div>`s. Blocks occupy the full width available and are stacked on top of each other, which means that we end up with a layout composed of this list of blocks:
+1. Because we're inside a block formatting context, everything must be a block, so our 3 text nodes also become blocks, just like the 2 `<div>`s. Blocks occupy the full width available and are stacked on top of each other, which means that we end up with a layout composed of this list of blocks:
 
     ```html
     <block>⏎⇥</block>
@@ -182,7 +183,7 @@ We can summarize how the whitespace here is handled as follows (the may be some 
     <block>◦◦⏎</block>
     ```
 
-2.  This is then simplified further by applying the processing rules for whitespace in inline formatting contexts to these blocks:
+2. This is then simplified further by applying the processing rules for whitespace in inline formatting contexts to these blocks:
 
     ```html
     <block></block>
@@ -192,17 +193,17 @@ We can summarize how the whitespace here is handled as follows (the may be some 
     <block></block>
     ```
 
-3.  The 3 empty blocks we now have are not going to occupy any space in the final layout, because they don’t contain anything, so we’ll end up with only 2 blocks taking up space in the page. People viewing the web page see the words "Hello" and "World!" on 2 separate lines as you’d expect 2 `<div>`s to be laid out. The browser engine has essentially ignored all of the whitespace that was added in the source code.
+3. The 3 empty blocks we now have are not going to occupy any space in the final layout, because they don't contain anything, so we'll end up with only 2 blocks taking up space in the page. People viewing the web page see the words "Hello" and "World!" on 2 separate lines as you'd expect 2 `<div>`s to be laid out. The browser engine has essentially ignored all of the whitespace that was added in the source code.
 
 ## Spaces in between inline and inline-block elements
 
 Let's move on to look at a few issues that can arise due to whitespace, and what can be done about them. First of all, we'll look at what happens with spaces in between inline and inline-block elements. In fact, we saw this already in our very first example, when we described how whitespace is processed inside inline formatting contexts.
 
-We said that there were rules to ignore most characters but that word-separating characters remain. When you’re only dealing with block-level elements such as `<p>` that only contain inline elements such as `<em>`, `<strong>`, `<span>`, etc., you don’t normally care about this because the extra whitespace that does make it to the layout is helpful to separate the words in the sentence.
+We said that there were rules to ignore most characters but that word-separating characters remain. When you're only dealing with block-level elements such as `<p>` that only contain inline elements such as `<em>`, `<strong>`, `<span>`, etc., you don't normally care about this because the extra whitespace that does make it to the layout is helpful to separate the words in the sentence.
 
 It gets more interesting however when you start using `inline-block` elements. These elements behave like inline elements on the outside, and blocks on the inside, and are often used to display more complex pieces of UI than just text, side-by-side on the same line, for example navigation menu items.
 
-Because they are blocks, many people expect that they will behave as such, but really they don’t. If there is formatting whitespace between adjacent inline elements, this will result in space in the layout, just like the spaces between words in text.
+Because they are blocks, many people expect that they will behave as such, but really they don't. If there is formatting whitespace between adjacent inline elements, this will result in space in the layout, just like the spaces between words in text.
 
 ### Example
 
@@ -316,7 +317,7 @@ You can also solve this problem by putting your list items all on the same line 
 
 ## DOM traversal and whitespace
 
-When trying to do [DOM](/en-US/docs/Web/API/Document_Object_Model) manipulation in JavaScript, you can also encounter problems because of whitespace nodes. For example, if you have a reference to a parent node and want to affect its first element child using [`Node.firstChild`](/en-US/docs/Web/API/Node/firstChild), if there is a rogue whitespace node just after the opening parent tag you will not get the result you are expecting. The text node would be selected instead of the element you want to affect.
+When trying to do [DOM](/en-US/docs/Web/API/Document_Object_Model) manipulation in JavaScript, you can also encounter problems because of whitespace nodes. For example, if you have a reference to a parent node and want to affect its first element child using [`Node.firstChild`](/en-US/docs/Web/API/Node/firstChild), if there is a rogue whitespace node just after the opening parent tag you will not get the result you are expecting. The text node would be selected instead of the element you want to affect.
 
 As another example, if you have a certain subset of elements that you want to do something to based on whether they are empty (have no child nodes) or not, you could check whether each element is empty using something like [`Node.hasChildNodes()`](/en-US/docs/Web/API/Node/hasChildNodes), but again, if any target elements contain text nodes, you could end up with false results.
 
@@ -419,7 +420,7 @@ function node_after( sib )
  */
 function last_child( par )
 {
-  var res=par.lastChild;
+  let res=par.lastChild;
   while (res) {
     if (!is_ignorable(res)) return res;
     res = res.previousSibling;
@@ -439,7 +440,7 @@ function last_child( par )
  */
 function first_child( par )
 {
-  var res=par.firstChild;
+  let res=par.firstChild;
   while (res) {
     if (!is_ignorable(res)) return res;
     res = res.nextSibling;
@@ -458,7 +459,7 @@ function first_child( par )
  */
 function data_of( txt )
 {
-  var data = txt.textContent;
+  let data = txt.textContent;
   // Use ECMA-262 Edition 3 String and RegExp features
   data = data.replace(/[\t\n\r ]+/g, " ");
   if (data.charAt(0) == " ")
@@ -474,7 +475,7 @@ function data_of( txt )
 The following code demonstrates the use of the functions above. It iterates over the children of an element (whose children are all elements) to find the one whose text is `"This is the third paragraph"`, and then changes the class attribute and the contents of that paragraph.
 
 ```js
-var cur = first_child(document.getElementById("test"));
+const cur = first_child(document.getElementById("test"));
 while (cur)
 {
   if (data_of(cur.firstChild) == "This is the third paragraph.")

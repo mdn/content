@@ -13,7 +13,7 @@ tags:
 ---
 {{CSSRef}}
 
-CSS Grid Layout implements the specification [Box Alignment Level 3](https://drafts.csswg.org/css-align/) which is the same standard [flexbox ](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)uses for aligning items in its flex container. This specification details how alignment should work in all the different layout methods. Layout methods will conform to the specification where possible and implement individual behavior based on their differences (features and constraints). While the specification currently specifies alignment details for all layout methods, browsers have not fully implemented all of the specification; however, the CSS Grid Layout method has been widely adopted.
+CSS Grid Layout implements the specification [Box Alignment Level 3](https://drafts.csswg.org/css-align/) which is the same standard [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) uses for aligning items in its flex container. This specification details how alignment should work in all the different layout methods. Layout methods will conform to the specification where possible and implement individual behavior based on their differences (features and constraints). While the specification currently specifies alignment details for all layout methods, browsers have not fully implemented all of the specification; however, the CSS Grid Layout method has been widely adopted.
 
 This guide presents demonstrations of how box alignment in grid layout works. You will see many similarities in how these properties and values work in flexbox. Due to grid being two-dimensional and flexbox one-dimensional there are some small differences that you should watch out for. So we will start by looking at the two axes that we deal with when aligning things in a grid.
 
@@ -103,7 +103,7 @@ In the following example, I have four grid areas within my grid. I can use the {
 
 {{ EmbedLiveSample('Using_align-items', '500', '500') }}
 
-Keep in mind that once you set `align-items: start`, the height of each child `<div>` will be determined by the contents of the `<div>`.  This is in contrast to omitting [`align-items`](/en-US/docs/Web/CSS/align-items) completely, in which case the height of each `<div>` stretches to fill its grid area.
+Keep in mind that once you set `align-items: start`, the height of each child `<div>` will be determined by the contents of the `<div>`. This is in contrast to omitting [`align-items`](/en-US/docs/Web/CSS/align-items) completely, in which case the height of each `<div>` stretches to fill its grid area.
 
 The {{cssxref("align-items")}} property sets the {{cssxref("align-self")}} property for all of the child grid items. This means that you can set the property individually, by using `align-self` on a grid item.
 
@@ -171,7 +171,7 @@ In this next example, I am using the `align-self` property, to demonstrate the d
 
 ### Items with an intrinsic aspect ratio
 
-The specification details that the default behavior in {{cssxref("align-self")}} is to stretch, except for items which have an intrinsic aspect ratio, in this case they behave as `start`. The reason for this, is that if items with an aspect ratio are set to stretch, this default would distort them.
+The specification details that the default behavior in {{cssxref("align-self")}} is to stretch, except for items which have an intrinsic aspect ratio, in this case they behave as `start`. The reason for this, is that if items with an aspect ratio are set to stretch, this default would distort them.
 
 This behavior has now been clarified in the specification, with browsers yet to implement the correct behavior. Until that happens, you can ensure that items do not stretch, such as images, which are direct children of the grid, by setting {{cssxref("align-self")}} and {{cssxref("justify-self")}} to start. This will mimic the correct behavior once implemented.
 
@@ -310,7 +310,7 @@ By combining the align and justify properties we can easily center an item insid
 
 ## Aligning the grid tracks on the block axis
 
-If you have a situation where your grid tracks use an area that is smaller than the grid container, then you can align the grid tracks themselves, inside that container. Once again, this operates on the block and inline axes, with {{cssxref("align-content")}} aligning tracks on the block axis, and {{cssxref("justify-content")}} performing alignment on the inline axis. The {{CSSxRef("place-content")}} property is shorthand for {{cssxref("align-content")}} and {{cssxref("justify-content")}}. The values for {{cssxref("align-content")}}, {{cssxref("justify-content")}} and {{cssxref("place-content")}} are:
+If you have a situation where your grid tracks use an area that is smaller than the grid container, then you can align the grid tracks themselves, inside that container. Once again, this operates on the block and inline axes, with {{cssxref("align-content")}} aligning tracks on the block axis, and {{cssxref("justify-content")}} performing alignment on the inline axis. The {{CSSxRef("place-content")}} property is shorthand for {{cssxref("align-content")}} and {{cssxref("justify-content")}}. The values for {{cssxref("align-content")}}, {{cssxref("justify-content")}} and {{cssxref("place-content")}} are:
 
 - `normal`
 - `start`
@@ -510,7 +510,7 @@ We can also use values for this property that you may be familiar with from flex
 
 {{ EmbedLiveSample('Setting_align-content_space-between', '500', '600') }}
 
-It is worth noting, that using these space distribution values may cause items on your grid to become larger. If an item spans more than one grid track, as further space is added between the tracks, that item needs to become large to absorb the space. We’re always working in a strict grid. Therefore, if you decide to use these values, ensure that the content of your tracks can cope with the extra space, or that you have used alignment properties on the items, to cause them to move to the start rather than stretch.
+It is worth noting, that using these space distribution values may cause items on your grid to become larger. If an item spans more than one grid track, as further space is added between the tracks, that item needs to become large to absorb the space. We're always working in a strict grid. Therefore, if you decide to use these values, ensure that the content of your tracks can cope with the extra space, or that you have used alignment properties on the items, to cause them to move to the start rather than stretch.
 
 In the below image I have placed the grid with `align-content`, with a value of `start` alongside the grid when `align-content` has a value of `space-between`. You can see how items 1 and 2, which span two row tracks have taken on extra height as they gain the additional space added to the gap between those two tracks:
 
@@ -582,7 +582,7 @@ Using the same example, I am setting {{cssxref("justify-content")}} to `space-ar
 
 ## Alignment and auto margins
 
-Another way to align items inside their area, is to use auto margins. If you have ever centered your layout in the viewport, by setting the right and left margin of the container block to `auto`, you know that an auto margin absorbs all of the available space. By setting the margin to `auto` on both sides, it pushes the block into the middle as both margins attempt to take all of the space.
+Another way to align items inside their area is to use auto margins. If you have ever centered your layout in the viewport, by setting the right and left margin of the container block to `auto`, you know that an auto margin absorbs all of the available space. By setting the margin to `auto` on both sides, it pushes the block into the middle as both margins attempt to take all of the space.
 
 In this next example, I have given item 1 a left margin of `auto`. You can see how the content is now pushed over to the right side of the area, as the auto margin takes up remaining space, after room for the content of that item has been assigned:
 
@@ -643,7 +643,7 @@ In this next example, I have given item 1 a left margin of `auto`. You can see h
 
 {{ EmbedLiveSample('Alignment_and_auto_margins', '500', '550') }}
 
-You can see how the item is aligned by using the [Firefox Grid Highlighter](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts):
+You can see how the item is aligned by using the [Firefox Grid Highlighter](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html):
 
 ![Image showing auto-margins using the Grid Highlighter.](7_auto_margins.png)
 
@@ -651,6 +651,6 @@ You can see how the item is aligned by using the [Firefox Grid Highlighter](/en-
 
 In all of these examples I have been working in English, which is a left-to-right language. This means that our start lines are top and left of our grid when thinking in physical directions.
 
-CSS Grid Layout, and the Box Alignment specification are designed to work with writing modes in CSS. This means that if you are working in a right to left language, such as Arabic, the start of the grid would be the top and right, so the default of `justify-content: start` would be for grid tracks to start on the right hand side of the grid.
+CSS Grid Layout, and the Box Alignment specification are designed to work with writing modes in CSS. This means that if you are working in a right to left language, such as Arabic, the start of the grid would be the top and right, so the default of `justify-content: start` would be for grid tracks to start on the right-hand side of the grid.
 
 Setting auto margins, using `margin-right` or `margin-left` however, or absolutely positioning items using the `top`, `right`, `bottom` and `left` offsets would not honor writing modes. In the next guide, we will look further into this interaction between CSS grid layout, box alignment and writing modes. This will be important to understand, if you develop sites that are then displayed in multiple languages, or if you want to mix languages or writing modes in a design.

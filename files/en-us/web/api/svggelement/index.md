@@ -1,6 +1,7 @@
 ---
 title: SVGGElement
 slug: Web/API/SVGGElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGGElement
 
 The **`SVGGElement`** interface corresponds to the {{SVGElement("g")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

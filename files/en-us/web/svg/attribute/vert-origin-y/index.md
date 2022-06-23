@@ -13,7 +13,7 @@ The **`vert-origin-y`** attribute indicates the y-coordinate in the font coordin
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("font")}}
+- {{SVGElement("font")}}
 
 ## Usage notes
 
@@ -40,29 +40,12 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<number>`
-    *   : This value indicates the y-coordinate of the origin of a glyph for vertically oriented text.
+- `<number>`
+  - : This value indicates the y-coordinate of the origin of a glyph for vertically oriented text.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "fonts.html#FontElementVertOriginYAttribute", "vert-origin-y")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -70,6 +53,6 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   {{SVGAttr("horiz-origin-x")}}
-*   {{SVGAttr("horiz-origin-y")}}
-*   {{SVGAttr("vert-origin-x")}}
+- {{SVGAttr("horiz-origin-x")}}
+- {{SVGAttr("horiz-origin-y")}}
+- {{SVGAttr("vert-origin-x")}}

@@ -1,9 +1,10 @@
 ---
 title: 'Window: copy event'
 slug: Web/API/Window/copy_event
+page-type: web-api-event
 tags:
   - API
-  - Clippboard API
+  - Clipboard API
   - Event
   - Reference
   - Web

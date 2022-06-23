@@ -1,6 +1,7 @@
 ---
 title: Window.alert()
 slug: Web/API/Window/alert
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -19,7 +20,8 @@ Under some conditions — for example, when the user switches tabs — the brows
 ## Syntax
 
 ```js
-window.alert(message);
+alert()
+alert(message)
 ```
 
 ### Parameters
@@ -28,7 +30,11 @@ window.alert(message);
   - : A string you want to display in the alert dialog, or, alternatively, an object that
     is converted into a string and displayed.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 window.alert("Hello world!");
@@ -49,6 +55,8 @@ prevent the user from accessing the rest of the program's interface until the di
 is closed. For this reason, you should not overuse any function that creates a dialog
 box (or modal window).
 
+Alternatively {{HTMLElement("dialog")}} element can be used to display alerts.
+
 ## Specifications
 
 {{Specifications}}
@@ -59,8 +67,6 @@ box (or modal window).
 
 ## See also
 
+- {{HTMLElement("dialog")}} element
 - {{domxref("window.confirm","confirm")}}
 - {{domxref("window.prompt","prompt")}}
-- For [Mozilla Chrome](/en-US/docs/Glossary/Chrome) see
-  {{ifmethod("nsIPromptService","alert")}} and
-  {{ifmethod("nsIPromptService","alertCheck")}}

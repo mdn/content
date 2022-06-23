@@ -46,7 +46,7 @@ The **`-ms-high-contrast`** media feature is specified as one of the following v
 
 ```css
 @media screen and (-ms-high-contrast: black-on-white) {
-  div { background-image: url('image-bw.png'); }
+  div { background-image: url('image-bw.png'); }
 }
 ```
 
@@ -54,7 +54,7 @@ The **`-ms-high-contrast`** media feature is specified as one of the following v
 
 ```css
 @media screen and (-ms-high-contrast: white-on-black) {
-  div { background-image: url('image-wb.png'); }
+  div { background-image: url('image-wb.png'); }
 }
 ```
 
@@ -69,8 +69,8 @@ High Contrast Mode's theme colors come from a limited subset of deprecated [CSS2
 - `grayText`: controls the color of the disabled text.
 - `highlightText`: controls the color of selected text.
 - `highlight`: controls the background color of selected text.
-- `buttonText`: controls the background color of a {{HTMLElement("button")}} element.
-- `buttonFace`: controls the color of a {{HTMLElement("button")}} element's text.
+- `buttonText`: controls the color of a {{HTMLElement("button")}} element's text.
+- `buttonFace`: controls the background color of a {{HTMLElement("button")}} element.
 - `window`: controls the color of the background.
 
 Because High Contrast Mode themes are dynamic, use these color keywords in place of other [CSS color values](/en-US/docs/Web/CSS/color). This will ensure that content will always be able to be perceived.
@@ -93,5 +93,5 @@ The `-ms-high-contrast` media feature was introduced in Windows 8.
 
 ## See also
 
-- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 - [@media](/en-US/docs/Web/CSS/@media)

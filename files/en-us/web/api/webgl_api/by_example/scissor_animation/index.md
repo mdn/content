@@ -1,6 +1,7 @@
 ---
 title: Scissor animation
 slug: Web/API/WebGL_API/By_example/Scissor_animation
+page-type: guide
 tags:
   - Animation
   - Beginner
@@ -111,7 +112,7 @@ function drawAnimation () {
   // Every frame the vertical position of the square is
   // decreased, to create the illusion of movement.
   position[1] -= velocity;
-  // When the sqaure hits the bottom of the drawing buffer,
+  // When the square hits the bottom of the drawing buffer,
   // we override it with new square of different color and
   // velocity.
   if (position[1] < 0) {

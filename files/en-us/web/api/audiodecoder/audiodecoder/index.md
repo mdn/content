@@ -1,6 +1,7 @@
 ---
 title: AudioDecoder.AudioDecoder()
 slug: Web/API/AudioDecoder/AudioDecoder
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -15,7 +16,7 @@ The **`AudioDecoder()`** constructor creates a new {{domxref("AudioDecoder")}} o
 ## Syntax
 
 ```js
-new AudioDecoder(init);
+new AudioDecoder(init)
 ```
 
 ### Parameters
@@ -45,4 +46,3 @@ const audioDecoder = new AudioDecoder({
 ## Browser compatibility
 
 {{Compat}}
-

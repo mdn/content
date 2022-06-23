@@ -44,6 +44,7 @@ text-transform: full-size-kana;
 text-transform: inherit;
 text-transform: initial;
 text-transform: revert;
+text-transform: revert-layer;
 text-transform: unset;
 ```
 
@@ -70,7 +71,7 @@ text-transform: unset;
 
 Large sections of text set with a `text-transform` value of `uppercase` may be difficult for people with cognitive concerns such as Dyslexia to read.
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
 ## Formal definition
@@ -83,7 +84,7 @@ Large sections of text set with a `text-transform` value of `uppercase` may be d
 
 ## Examples
 
-### `none`
+### Example using "none"
 
 ```html
 <p>Initial String
@@ -103,9 +104,9 @@ strong { float: right; }
 
 This demonstrates no text transformation.
 
-{{ EmbedLiveSample('none', '100%', '100px') }}
+{{ EmbedLiveSample('Example using "none"', '100%', '100px') }}
 
-### capitalize (General)
+### Example using "capitalize" (general)
 
 ```html
 <p>Initial String
@@ -125,16 +126,16 @@ strong { float: right; }
 
 This demonstrates text capitalization.
 
-{{ EmbedLiveSample('capitalize_General', '100%', '100px') }}
+{{ EmbedLiveSample('Example using "capitalize" (general)', '100%', '100px') }}
 
-### capitalize (Punctuation)
+### Example using "capitalize" (punctuation)
 
 ```html
 <p>Initial String
-  <strong>(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</strong>
+  <strong>(this) "is" [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</strong>
 </p>
 <p>text-transform: capitalize
-  <strong><span>(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</span></strong>
+  <strong><span>(this) "is" [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</span></strong>
 </p>
 ```
 
@@ -147,9 +148,9 @@ strong { float: right; }
 
 This demonstrates how initial punctuations of a word are ignored. The keyword target the first letter, that is the first Unicode character part of the Letter or Number general category.
 
-{{ EmbedLiveSample('capitalize_Punctuation', '100%', '100px') }}
+{{ EmbedLiveSample('Example using "capitalize" (punctuation)', '100%', '100px') }}
 
-### capitalize (Symbols)
+### Example using "capitalize" (Symbols)
 
 ```html
 <p>Initial String
@@ -169,9 +170,9 @@ strong { float: right; }
 
 This demonstrates how initial symbols are ignored. The keyword target the first letter, that is the first Unicode character part of the Letter or Number general category.
 
-{{ EmbedLiveSample('capitalize_Symbols', '100%', '100px') }}
+{{ EmbedLiveSample('Example using "capitalize" (symbols)', '100%', '100px') }}
 
-### capitalize (Dutch ij digraph)
+### Example using "capitalize" (Dutch ij digraph)
 
 ```html
 <p>Initial String
@@ -191,9 +192,9 @@ strong { float: right; }
 
 This demonstrates how the Dutch _ij_ digraph must be handled like one single letter.
 
-{{ EmbedLiveSample('capitalize_Dutch_ij_digraph', '100%', '100px') }}
+{{ EmbedLiveSample('Example using "capitalize" (Dutch ij digraph)', '100%', '100px') }}
 
-### uppercase (General)
+### Example using "uppercase" (general)
 
 ```html
 <p>Initial String
@@ -213,9 +214,9 @@ strong { float: right; }
 
 This demonstrates transforming the text to uppercase.
 
-{{ EmbedLiveSample('uppercase_General', '100%', '100px') }}
+{{ EmbedLiveSample('Example using "uppercase" (general)', '100%', '100px') }}
 
-### uppercase (Greek Vowels)
+### Example using "uppercase" (Greek vowels)
 
 ```html
 <p>Initial String
@@ -235,9 +236,9 @@ strong { float: right; }
 
 This demonstrates how Greek vowels except disjunctive _eta_ should have no accent, and the accent on the first vowel of a vowel pair becomes a diaeresis on the second vowel.
 
-{{ EmbedLiveSample('uppercase_Greek_Vowels', '100%', '100px') }}
+{{ EmbedLiveSample('Example using "uppercase" (Greek vowels)', '100%', '100px') }}
 
-### lowercase (General)
+### Example using "lowercase" (general)
 
 ```html
 <p>Initial String
@@ -257,9 +258,9 @@ strong { float: right; }
 
 This demonstrates transforming the text to lowercase.
 
-{{ EmbedLiveSample('lowercase_General', '100%', '100px') }}
+{{ EmbedLiveSample('Example using "lowercase" (general)', '100%', '100px') }}
 
-### lowercase (Greek Σ)
+### Example using "lowercase" (Greek Σ)
 
 ```html
 <p>Initial String
@@ -279,9 +280,9 @@ strong { float: right; }
 
 This demonstrates how the Greek character sigma (`Σ`) is transformed into the regular lowercase sigma (`σ`) or the word-final variant (`ς`), according the context.
 
-{{ EmbedLiveSample('lowercase_Greek_Σ', '100%', '100px') }}
+{{ EmbedLiveSample('Example using "lowercase" (Greek Σ)', '100%', '100px') }}
 
-### lowercase (Lithuanian)
+### Example using "lowercase" (Lithuanian)
 
 ```html
 <p>Initial String
@@ -301,9 +302,9 @@ strong { float: right; }
 
 This demonstrates how the Lithuanian letters `Ĩ` and `J́` retain their dot when transformed to lowercase.
 
-{{ EmbedLiveSample('lowercase_Lithuanian', '100%', '100px') }}
+{{ EmbedLiveSample('Example using "lowercase" (Lithuanian)', '100%', '100px') }}
 
-### full-width (General)
+### Example using "full-width" (general)
 
 ```html
 <p>Initial String
@@ -321,11 +322,11 @@ span {
 strong { width: 100%; float: right; }
 ```
 
-Some characters exists in two formats, normal width and a full-width, with different Unicode code points. The full-width version is used to mix them smoothly with Asian ideographic characters.
+Some characters exist in two formats: normal width and a full-width, with different Unicode code points. The full-width version is used to mix them smoothly with Asian ideographic characters.
 
-{{ EmbedLiveSample('full-width_General', '100%', '175px') }}
+{{ EmbedLiveSample('Example using "full-width" (general)', '100%', '175px') }}
 
-### full-width (Japanese half-width katakana)
+### Example using "full-width" (Japanese half-width katakana)
 
 ```html
 <p>Initial String
@@ -345,9 +346,9 @@ strong { width: 100%; float: right; }
 
 The Japanese half-width katakana was used to represent katakana in 8-bit character codes. Unlike regular (full-width) katakana characters, a letter with dakuten (voiced sound mark) is represented as two code points, the body of letter and dakuten. The `full-width` combines these into a single code point when converting these characters into full-width.
 
-{{ EmbedLiveSample('full-width_Japanese_half-width_katakana', '100%', '175px') }}
+{{ EmbedLiveSample('Example using "full-width" (Japanese half-width katakana)', '100%', '175px') }}
 
-### full-size-kana
+### Example using "full-size-kana"
 
 ```html
 <p>ァィゥェ ォヵㇰヶ ㇱㇲッㇳ ㇴㇵㇶㇷ ㇸㇹㇺャ ュョㇻㇼ ㇽㇾㇿヮ</p>
@@ -361,7 +362,7 @@ p:nth-of-type(2) {
 }
 ```
 
-{{ EmbedLiveSample('full-size-kana', '100%', '175px') }}
+{{ EmbedLiveSample('Example using "full-size-kana"', '100%', '175px') }}
 
 ## Specifications
 

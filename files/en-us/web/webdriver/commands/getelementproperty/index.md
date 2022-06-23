@@ -38,25 +38,29 @@ The _Get Element Property_ [command](/en-US/docs/Web/WebDriver/Commands) of the 
 
 Python:
 
-    import urllib
+```python
+import urllib
 
-    from selenium import webdriver
+from selenium import webdriver
 
-    def inline(doc):
-        return "data:text/html;charset=utf-8,{}".format(urllib.quote(doc))
+def inline(doc):
+    return "data:text/html;charset=utf-8,{}".format(urllib.quote(doc))
 
-    session = webdriver.Firefox()
-    session.get(inline("<input value=foo>"))
-    textbox = driver.find_element_by_tag_name("input")
-    textbox.send_keys("bar")
+session = webdriver.Firefox()
+session.get(inline("<input value=foo>"))
+textbox = driver.find_element_by_tag_name("input")
+textbox.send_keys("bar")
 
-    print(text_box.get_attribute("value"))
-    print(text_box.get_property("value"))
+print(text_box.get_attribute("value"))
+print(text_box.get_property("value"))
+```
 
 Output:
 
-    foo
-    bar
+```
+foo
+bar
+```
 
 ## Specifications
 

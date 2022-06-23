@@ -1,6 +1,7 @@
 ---
 title: SVGDescElement
 slug: Web/API/SVGDescElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGDescElement
 
 The **`SVGDescElement`** interface corresponds to the {{SVGElement("desc")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

@@ -30,7 +30,7 @@ Version of the extension, formatted as numbers and ASCII characters separated by
 
 You can inspect the [add-ons linter code](https://github.com/mozilla/addons-linter/blob/master/src/schema/formats.js#L10) to see how extension versions for Firefox are validated.
 
-Note that [the syntax defined for Chrome's `version`](https://developer.chrome.com/extensions/manifest/version) is more restrictive than that used by Firefox:
+Note that [the syntax defined for Chrome's `version`](https://developer.chrome.com/docs/extensions/mv3/manifest/version/) is more restrictive than that used by Firefox:
 
 - values for `version` that are valid for Chrome will always be valid for Firefox
 - values for `version` that are valid for Firefox may not be valid for Chrome

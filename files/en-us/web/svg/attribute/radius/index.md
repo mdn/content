@@ -18,7 +18,7 @@ A negative or zero value disables the effect of the given filter primitive (i.e.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feMorphology")}}
+- {{SVGElement("feMorphology")}}
 
 ## Usage notes
 
@@ -45,31 +45,7 @@ You can use this attribute with the following SVG elements:
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-femorphology-radius", "radius")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feMorphologyRadiusAttribute", "radius")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

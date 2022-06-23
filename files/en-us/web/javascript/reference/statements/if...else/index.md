@@ -29,13 +29,13 @@ if (condition) {
 ```
 
 - `condition`
-  - : An [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions)
+  - : An [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#expressions)
     that is considered to be either {{Glossary("truthy")}} or {{Glossary("falsy")}}.
 - `statement1`
   - : Statement that is executed if _condition_ is {{Glossary("truthy")}}. Can be
     any statement, including further nested `if` statements. To execute
     multiple statements, use a [block](/en-US/docs/Web/JavaScript/Reference/Statements/block) statement
-    (`{ ... }`) to group those statements. To execute no statements, use an [empty](/en-US/docs/Web/JavaScript/Reference/Statements/Empty) statement.
+    (`{ /* ... */ }`) to group those statements. To execute no statements, use an [empty](/en-US/docs/Web/JavaScript/Reference/Statements/Empty) statement.
 - `statement2`
   - : Statement that is executed if `condition` is
     {{Glossary("falsy")}} and the `else` clause exists. Can be any statement,
@@ -73,7 +73,7 @@ else
 ```
 
 To execute multiple statements within a clause, use a block statement
-(`{ ... }`) to group those statements. In general, it is a good practice to
+(`{ /* ... */ }`) to group those statements. In general, it is a good practice to
 always use block statements, especially in code involving nested `if`
 statements:
 
@@ -126,11 +126,9 @@ if (x > 50) {
 }
 ```
 
-### Assignment within the conditional expression
+### Using an assignment as a condition
 
-It is advisable to not use simple assignments in a conditional expression, because the
-assignment can be confused with equality when glancing over the code. For example, do
-not use the following code:
+You should almost never have an `if...else` with an assignment like "`x = y`" as a condition:
 
 ```js example-bad
 if (x = y) {
@@ -138,14 +136,7 @@ if (x = y) {
 }
 ```
 
-If you need to use an assignment in a conditional expression, a common practice is to
-put additional parentheses around the assignment. For example:
-
-```js example-good
-if ((x = y)) {
-  /* do something */
-}
-```
+However, in the rare case you find yourself wanting to do something like that, the [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) documentation has a [Using an assignment as a condition](/en-US/docs/Web/JavaScript/Reference/Statements/while#using_an_assignment_as_a_condition) section with an example showing a general best-practice syntax you should know about and follow.
 
 ## Specifications
 
@@ -159,5 +150,4 @@ if ((x = y)) {
 
 - {{jsxref("Statements/block", "block")}}
 - {{jsxref("Statements/switch", "switch")}}
-- [Conditional
-  operator](/en-US/docs/JavaScript/Reference/Operators/Conditional_Operator)
+- [Conditional operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)

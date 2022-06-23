@@ -56,7 +56,7 @@ Check the global state:
 
 ```js
 browser.browserAction.isEnabled({}).then(result => {
-  console.log(result);
+  console.log(result);
 });
 ```
 
@@ -64,14 +64,14 @@ Check the state of the currently active tab:
 
 ```js
 async function enabledInActiveTab() {
-  let tabs = await browser.tabs.query({
+  let tabs = await browser.tabs.query({
     currentWindow:true,
     active: true
   });
-  let enabled = await browser.browserAction.isEnabled({
+  let enabled = await browser.browserAction.isEnabled({
     tabId: tabs[0].id
   });
-  console.log(enabled);
+  console.log(enabled);
 }
 ```
 

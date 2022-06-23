@@ -1,6 +1,7 @@
 ---
 title: SVGTextElement
 slug: Web/API/SVGTextElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGTextElement
 
 The **`SVGTextElement`** interface corresponds to the {{SVGElement("text")}} elements.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

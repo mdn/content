@@ -1,6 +1,7 @@
 ---
 title: SVGSwitchElement
 slug: Web/API/SVGSwitchElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGSwitchElement
 
 The **`SVGSwitchElement`** interface corresponds to the {{SVGElement("switch")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

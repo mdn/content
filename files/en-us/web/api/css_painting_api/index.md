@@ -1,6 +1,7 @@
 ---
 title: CSS Painting API
 slug: Web/API/CSS_Painting_API
+page-type: web-api-overview
 tags:
   - API
   - CSS
@@ -8,10 +9,11 @@ tags:
   - Houdini
   - Painting
   - Reference
+browser-compat: api.PaintWorkletGlobalScope
 ---
 {{DefaultAPISidebar("CSS Painting API")}}
 
-The CSS Painting API — part of the [CSS Houdini](/en-US/docs/Web/Houdini) umbrella of APIs — allows developers to write JavaScript functions that can draw directly into an element's background, border, or content.
+The CSS Painting API — part of the [CSS Houdini](/en-US/docs/Web/Guide/Houdini) umbrella of APIs — allows developers to write JavaScript functions that can draw directly into an element's background, border, or content.
 
 ## Concepts and usage
 
@@ -30,7 +32,7 @@ The API defines {{domxref('PaintWorklet')}}, a {{domxref('worklet')}} that can b
 ## Interfaces
 
 - {{domxref('PaintWorklet')}}
-  - : Programmatically generates an image where a CSS property expects a file. Access this interface through [`CSS.paintWorklet`](/en-US/docs/Web/API/CSS/paintWorklet "paintWorklet is a static, read-only property of the CSS interface that provides access to the PaintWorklet, which programmatically generates an image where a CSS property expects a file.").
+  - : Programmatically generates an image where a CSS property expects a file. Access this interface through [`CSS.paintWorklet`](/en-US/docs/Web/API/CSS/paintWorklet).
 - {{domxref('PaintWorkletGlobalScope')}}
   - : The global execution context of the `paintWorklet`.
 - {{domxref('PaintRenderingContext2D')}}
@@ -144,14 +146,14 @@ While you can't play with the worklet's script, you can alter the custom propert
 
 ## Specifications
 
-{{Specifications("api.PaintWorkletGlobalScope")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-See the browser compatibility data for each CSS Painting API Interface.
+{{Compat}}
 
 ## See also
 
 - [Using the CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API/Guide)
 - [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/en-US/docs/Web/Houdini)
+- [CSS Houdini](/en-US/docs/Web/Guide/Houdini)

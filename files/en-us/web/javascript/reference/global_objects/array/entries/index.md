@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.entries
 ---
+
 {{JSRef}}
 
 The **`entries()`** method returns a new **Array
@@ -22,7 +23,7 @@ array.
 ## Syntax
 
 ```js
-entries()
+entries();
 ```
 
 ### Return value
@@ -34,25 +35,27 @@ A new {{jsxref("Array")}} iterator object.
 ### Iterating with index and element
 
 ```js
-const a = ['a', 'b', 'c'];
+const a = ["a", "b", "c"];
 
-for (const [index, element] of a.entries())
+for (const [index, element] of a.entries()) {
   console.log(index, element);
+}
 
 // 0 'a'
 // 1 'b'
 // 2 'c'
 ```
 
-### Using a `for…of` loop
+### Using a for...of loop
 
 ```js
-var a = ['a', 'b', 'c'];
-var iterator = a.entries();
+const array = ["a", "b", "c"];
+const arrayEntries = array.entries();
 
-for (let e of iterator) {
-  console.log(e);
+for (let element of arrayEntries) {
+  console.log(element);
 }
+
 // [0, 'a']
 // [1, 'b']
 // [2, 'c']
@@ -68,13 +71,12 @@ for (let e of iterator) {
 
 ## See also
 
-- A polyfill of `Array.prototype.entries` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.entries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.values()")}}
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.every()")}}
 - {{jsxref("Array.prototype.some()")}}
 - [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-- [Iteration
-  protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)

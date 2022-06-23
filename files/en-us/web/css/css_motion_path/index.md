@@ -9,6 +9,7 @@ tags:
   - Motion Path
   - Overview
   - Reference
+browser-compat: css.properties.offset-path
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
@@ -56,12 +57,8 @@ The idea is that when you want to animate an element moving along a path, you pr
 
 ## Specifications
 
-| Specification                                    | Status                                       | Comment             |
-| ------------------------------------------------ | -------------------------------------------- | ------------------- |
-| {{SpecName('Motion Path Level 1')}} | {{Spec2('Motion Path Level 1')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-### offset property
-
-{{Compat("css.properties.offset-path")}}
+{{Compat}}

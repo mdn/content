@@ -1,23 +1,25 @@
 ---
 title: CookieStore.get()
 slug: Web/API/CookieStore/get
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - get()
   - CookieStore
+  - Experimental
 browser-compat: api.CookieStore.get
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 The **`get()`** method of the {{domxref("CookieStore")}} interface returns a single cookie with the given name or options object. (See below.) The method will return the first matching cookie for the passed parameters.
 
 ## Syntax
 
 ```js
-var cookie = CookieStore.get(name);
-var cookie = CookieStore.get(options);
+get(name)
+get(options)
 ```
 
 ### Parameters
@@ -25,15 +27,15 @@ var cookie = CookieStore.get(options);
 This method requires one of the following:
 
 - `name`
-  - : A {{domxref("USVString")}} with the name of a cookie.
-- options
+  - : A string with the name of a cookie.
+- `options`
 
   - : An object containing:
 
     - `name`
-      - : A {{domxref("USVString")}} with the name of a cookie.
+      - : A string with the name of a cookie.
     - `url`
-      - : A {{domxref("USVString")}} with the url of a cookie.
+      - : A string with the URL of a cookie.
 
 > **Note:** The `url` option enables the modification of a cookie scoped under a particular URL. Service workers can obtain cookies that would be sent to any URL under their scope. From a document you may only obtain the cookies at the current URL, so the only valid URL in a document context is the document's URL.
 
@@ -42,13 +44,13 @@ This method requires one of the following:
 A {{jsxref("Promise")}} that resolves with an object containing the first cookie matching the submitted name or options. This object contains the following properties:
 
 - `name`
-  - : A {{domxref("USVString")}} containing the name of the cookie.
+  - : A string containing the name of the cookie.
 - `value`
-  - : A {{domxref("USVString")}} containing the value of the cookie.
+  - : A string containing the value of the cookie.
 - `domain`
-  - : A {{domxref("USVString")}} containing the domain of the cookie.
+  - : A string containing the domain of the cookie.
 - `path`
-  - : A {{domxref("USVString")}} containing the path of the cookie.
+  - : A string containing the path of the cookie.
 - `expires`
   - : A {{domxref("DOMTimeStamp")}} containing the expiration date of the cookie.
 - `secure`

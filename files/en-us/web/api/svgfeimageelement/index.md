@@ -1,6 +1,7 @@
 ---
 title: SVGFEImageElement
 slug: Web/API/SVGFEImageElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGFEImageElement
 
 The **`SVGFEImageElement`** interface corresponds to the {{SVGElement("feImage")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

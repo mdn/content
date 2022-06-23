@@ -1,6 +1,7 @@
 ---
 title: LargestContentfulPaint
 slug: Web/API/LargestContentfulPaint
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -14,6 +15,8 @@ browser-compat: api.LargestContentfulPaint
 {{DefaultAPISidebar("Largest Contentful Paint API")}}
 
 The `LargestContentfulPaint` interface of the {{domxref("Largest Contentful Paint API")}} provides details about the largest image or text paint before user input on a web page. The timing of this paint is a good heuristic for when the main page content is available during load.
+
+{{InheritanceDiagram}}
 
 ## Properties
 

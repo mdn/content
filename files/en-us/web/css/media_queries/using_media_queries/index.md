@@ -27,10 +27,10 @@ Media queries are used for the following:
 A media query is composed of an optional _media type_ and any number of _media feature_ expressions, which may optionally be combined in various ways using _logical operators_.
 Media queries are case-insensitive.
 
-- [Media types](/en-US/docs/Web/CSS/@media#media_types) define the broad category of device for which the media query applies: `all`, `print`, `screen`, `speech`.
-  
+- [Media types](/en-US/docs/Web/CSS/@media#media_types) define the broad category of device for which the media query applies: `all`, `print`, `screen`.
+
   The type is optional (assumed to be `all`) except when using the `not` or `only` logical operators.
-- [Media feature](/en-US/docs/Web/CSS/@media#media_features) describe a specific characterisic of the {{glossary("user agent")}}, output device, or environment: {{cssxref("@media/any-hover", "any-hover")}}, {{cssxref("@media/any-pointer", "any-pointer")}}, {{cssxref("@media/aspect-ratio", "aspect-ratio")}}, {{cssxref("@media/color", "color")}}, {{cssxref("@media/color-gamut", "color-gamut")}}, {{cssxref("@media/color-index", "color-index")}}, {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}} {{deprecated_inline}}, {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}, {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}, {{cssxref("@media/display-mode", "display-mode")}}, {{cssxref("@media/forced-colors", "forced-colors")}}, {{cssxref("@media/grid", "grid")}}, {{cssxref("@media/height", "height")}}, {{cssxref("@media/hover", "hover")}}, {{cssxref("@media/inverted-colors", "inverted-colors")}}, {{cssxref("@media/monochrome", "monochrome")}}, {{cssxref("@media/orientation", "orientation")}}, {{cssxref("@media/overflow-block", "overflow-block")}}, {{cssxref("@media/overflow-inline", "overflow-inline")}}, {{cssxref("@media/pointer", "pointer")}}, {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}, {{cssxref("@media/prefers-contrast", "prefers-contrast")}}, {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}, {{cssxref("@media/resolution", "resolution")}}, {{cssxref("@media/scripting", "scripting")}}, {{cssxref("@media/update-frequency", "update")}}, {{cssxref("@media/width", "width")}}
+- [Media features](/en-US/docs/Web/CSS/@media#media_features) describe a specific characteristic of the {{glossary("user agent")}}, output device, or environment: {{cssxref("@media/any-hover", "any-hover")}}, {{cssxref("@media/any-pointer", "any-pointer")}}, {{cssxref("@media/aspect-ratio", "aspect-ratio")}}, {{cssxref("@media/color", "color")}}, {{cssxref("@media/color-gamut", "color-gamut")}}, {{cssxref("@media/color-index", "color-index")}}, {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}} {{deprecated_inline}}, {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}, {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}, {{cssxref("@media/display-mode", "display-mode")}}, {{cssxref("@media/dynamic-range", "dynamic-range")}}, {{cssxref("@media/forced-colors", "forced-colors")}}, {{cssxref("@media/grid", "grid")}}, {{cssxref("@media/height", "height")}}, {{cssxref("@media/hover", "hover")}}, {{cssxref("@media/inverted-colors", "inverted-colors")}}, {{cssxref("@media/monochrome", "monochrome")}}, {{cssxref("@media/orientation", "orientation")}}, {{cssxref("@media/overflow-block", "overflow-block")}}, {{cssxref("@media/overflow-inline", "overflow-inline")}}, {{cssxref("@media/pointer", "pointer")}}, {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}, {{cssxref("@media/prefers-contrast", "prefers-contrast")}}, {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}, {{cssxref("@media/resolution", "resolution")}}, {{cssxref("@media/scripting", "scripting")}}, {{cssxref("@media/update-frequency", "update")}}, {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}, {{cssxref("@media/width", "width")}}.
 
   For example, the {{cssxref("@media/hover", "hover")}} feature allows a query to test against whether the device supports hovering over elements.
   Media feature expressions test for their presence or value, and are entirely optional.
@@ -45,7 +45,6 @@ Queries involving unknown media types are always false.
 > **Note:** A style sheet with a media query attached to its {{HTMLElement("link")}} tag [will still download](https://scottjehl.github.io/CSS-Download-Tests/) even if the query returns `false`, the download will happen but the priority of downloading will be much lower.
 > Nevertheless, its contents will not apply unless and until the result of the query changes to `true`.
 > You can read why this happens in Tomayac's blog [Why Browser Download Stylesheet with Non-Matching Media Queries](https://medium.com/@tomayac/why-browsers-download-stylesheets-with-non-matching-media-queries-eb61b91b85a2).
-
 
 ## Targeting media types
 
@@ -84,7 +83,7 @@ For example, this CSS will apply styles only if your browser's {{glossary("viewp
 @media (max-width: 12450px) { ... }
 ```
 
-If you create a media feature query without specifying a value, the nested styles will be used as long as the feature's value is not zero (or `none`, in Level 4).
+If you create a media feature query without specifying a value, the nested styles will be used as long as the feature's value is not zero (or `none`, in [Level 4](https://drafts.csswg.org/mediaqueries-4/)).
 For example, this CSS will apply to any device with a color screen:
 
 ```css
@@ -92,11 +91,6 @@ For example, this CSS will apply to any device with a color screen:
 ```
 
 If a feature doesn't apply to the device on which the browser is running, expressions involving that media feature are always false.
-For example, the styles nested inside the following query will never be used, because no speech-only device has a screen aspect ratio:
-
-```css
-@media speech and (aspect-ratio: 11/5) { ... }
-```
 
 For more [Media feature](/en-US/docs/Web/CSS/@media#media_features) examples, please see the reference page for each specific feature.
 
@@ -188,8 +182,8 @@ _It has no effect on modern browsers._
 The Media Queries Level 4 specification includes some syntax improvements to make media queries using features that have a "range" type, for example width or height, less verbose.
 Level 4 adds a _range context_ for writing such queries. For example, using the `max-` functionality for width we might write the following:
 
-> **Note:** The Media Queries Level 4 specification has reasonable support in modern browsers, but some media features are not well supported.
-> See the [`@media` browser compatibility table](/en-US/docs/Web/CSS/@media#Browser_compatibility) for more details.
+> **Note:** The Media Queries Level 4 specification has reasonable support in modern browsers, but some media features are not well supported.
+> See the [`@media` browser compatibility table](/en-US/docs/Web/CSS/@media#browser_compatibility) for more details.
 
 ```css
 @media (max-width: 30em) { ... }
@@ -234,7 +228,8 @@ For example, the following query tests for devices that have a monochrome displa
 
 ## See also
 
+- [@media](/en-US/docs/Web/CSS/@media)
 - [Testing media queries programmatically](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
-- [CSS Animations Between Media Queries](http://davidwalsh.name/animate-media-queries)
-- [Extended Mozilla media features](/en-US/docs/Web/CSS/Mozilla_Extensions#Media_features)
-- [Extended WebKit media features](/en-US/docs/Web/CSS/Webkit_Extensions#Media_features)
+- [CSS Animations Between Media Queries](https://davidwalsh.name/animate-media-queries)
+- [Extended Mozilla media features](/en-US/docs/Web/CSS/Mozilla_Extensions#media_features)
+- [Extended WebKit media features](/en-US/docs/Web/CSS/WebKit_Extensions#media_features)

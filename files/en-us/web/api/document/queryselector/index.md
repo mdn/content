@@ -1,6 +1,7 @@
 ---
 title: Document.querySelector()
 slug: Web/API/Document/querySelector
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Selectors
@@ -27,35 +28,33 @@ selector, or group of selectors. If no matches are found, `null` is returned.
 ## Syntax
 
 ```js
-element = document.querySelector(selectors);
+querySelector(selectors)
 ```
 
 ### Parameters
 
-- _selectors_
-  - : A {{domxref("DOMString")}} containing one or more selectors to match. This string
+- `selectors`
+  - : A string containing one or more selectors to match. This string
     must be a valid CSS selector string; if it isn't, a `SyntaxError` exception
-    is thrown. See [Locating
-    DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) for more about selectors and how to manage them.
+    is thrown. See [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) for more about selectors and how to manage them.
 
 > **Note:** Characters that are not part of standard CSS syntax must be
 > escaped using a backslash character. Since JavaScript also uses backslash escaping, be
 > especially careful when writing string literals using these characters. See
-> {{anch("Escaping special characters")}} for more information.
+> [Escaping special characters](#escaping_special_characters) for more information.
 
 ### Return value
 
 An {{domxref("Element")}} object representing the first element in the document
-that matches the specified set of [CSS
-selectors](/en-US/docs/Web/CSS/CSS_Selectors), or `null` is returned if there are no matches.
+that matches the specified set of [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors), or `null` is returned if there are no matches.
 
 If you need a list of all elements matching the specified selectors, you should use
 {{domxref("Document.querySelectorAll", "querySelectorAll()")}} instead.
 
 ### Exceptions
 
-- `SyntaxError`
-  - : The syntax of the specified _selectors_ is invalid.
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if the syntax of the specified _selectors_ is invalid.
 
 ## Usage notes
 
@@ -101,7 +100,7 @@ In this example, the first element in the document with the class
 var el = document.querySelector(".myclass");
 ```
 
-### A more complex selector
+### Complex selectors
 
 Selectors can also be really powerful, as demonstrated in the following example. Here,
 the first {{HTMLElement("input")}} element with the name "login"
@@ -134,8 +133,7 @@ not the `main` class.
 
 ## See also
 
-- [Locating
-  DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
 - {{domxref("Element.querySelector()")}}
 - {{domxref("Document.querySelectorAll()")}}
 - {{domxref("Element.querySelectorAll()")}}

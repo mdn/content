@@ -1,6 +1,7 @@
 ---
 title: 'Document: gotpointercapture event'
 slug: Web/API/Document/gotpointercapture_event
+page-type: web-api-event
 tags:
   - Document
   - Event

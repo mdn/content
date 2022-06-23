@@ -14,8 +14,9 @@ browser-compat: javascript.builtins.Reflect.deleteProperty
 
 The static
 **`Reflect.deleteProperty()`**
-method allows to delete properties. It is like the [`delete`
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete) as a function.
+method allows to delete properties. It is like the
+[`delete` operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
+as a function.
 
 {{EmbedInteractiveExample("pages/js/reflect-deleteproperty.html", "taller")}}
 
@@ -46,8 +47,8 @@ A {{jsxref("TypeError")}}, if `target` is not an
 
 The `Reflect.deleteProperty` method allows you to delete a property on an
 object. It returns a {{jsxref("Boolean")}} indicating whether or not the property was
-successfully deleted. It is almost identical to the non-strict [`delete`
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete).
+successfully deleted. It is almost identical to the non-strict
+[`delete` operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete).
 
 ## Examples
 
@@ -79,7 +80,6 @@ Reflect.deleteProperty(Object.freeze({foo: 1}), 'foo')  // false
 
 ## See also
 
-- A polyfill of `Reflect.deleteProperty` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.deleteProperty` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
-- [`delete`
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
+- [`delete` operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete)

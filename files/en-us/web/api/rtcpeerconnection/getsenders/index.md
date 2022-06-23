@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.getSenders()
 slug: Web/API/RTCPeerConnection/getSenders
+page-type: web-api-instance-method
 tags:
   - Media
   - Method
@@ -13,6 +14,7 @@ tags:
   - getSenders
 browser-compat: api.RTCPeerConnection.getSenders
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCPeerConnection")}} method
@@ -65,5 +67,5 @@ function setMuting(pc, muting) {
 
 ## See also
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC_API)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCRtpSender")}}

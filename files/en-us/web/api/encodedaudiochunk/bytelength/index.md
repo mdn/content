@@ -1,6 +1,7 @@
 ---
 title: EncodedAudioChunk.byteLength
 slug: Web/API/EncodedAudioChunk/byteLength
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -40,5 +41,3 @@ console.log(chunk.byteLength); //352800
 ## Browser compatibility
 
 {{Compat}}
-
-

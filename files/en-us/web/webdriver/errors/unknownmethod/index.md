@@ -15,18 +15,24 @@ WebDriver provides a largely REST-ish API and not all endpoints in this API has 
 
 The New Session command provides a `POST` request endpoint which lets you create new WebDriver sessions:
 
-    % curl -d '{}' http://localhost:4444/session
-    {"sessionId":"d4605710-5a4e-4d64-a52a-778bb0c31e00","value":{"XULappId":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","acceptSslCerts":false,"appBuildId":"20160913030425","browserName":"firefox","browserVersion":"51.0a1","command_id":1,"platform":"LINUX","platformName":"linux","platformVersion":"4.9.0-1-amd64","processId":17474,"proxy":{},"raisesAccessibilityExceptions":false,"rotatable":false,"specificationLevel":0,"takesElementScreenshot":true,"takesScreenshot":true,"version":"51.0a1"}}
+```bash
+% curl -d '{}' http://localhost:4444/session
+{"sessionId":"d4605710-5a4e-4d64-a52a-778bb0c31e00","value":{"XULappId":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","acceptSslCerts":false,"appBuildId":"20160913030425","browserName":"firefox","browserVersion":"51.0a1","command_id":1,"platform":"LINUX","platformName":"linux","platformVersion":"4.9.0-1-amd64","processId":17474,"proxy":{},"raisesAccessibilityExceptions":false,"rotatable":false,"specificationLevel":0,"takesElementScreenshot":true,"takesScreenshot":true,"version":"51.0a1"}}
+```
 
 It also implements the `DELETE` method for ending a session:
 
-    % curl -X DELETE http://localhost:4444/session/d4605710-5a4e-4d64-a52a-778bb0c31e00
-    {}
+```bash
+% curl -X DELETE http://localhost:4444/session/d4605710-5a4e-4d64-a52a-778bb0c31e00
+{}
+```
 
 But it does not, for example, provide a `GET` method, and this will consequently return an unknown method error:
 
-    % curl http://localhost:4444/session/650f9df3-740e-314c-958d-307e41752fae
-    {"value":{"error":"unknown command","message":"GET /session/650f9df3-740e-314c-958d-307e41752fae did not match a known command","stacktrace":""}}%
+```bash
+% curl http://localhost:4444/session/650f9df3-740e-314c-958d-307e41752fae
+{"value":{"error":"unknown command","message":"GET /session/650f9df3-740e-314c-958d-307e41752fae did not match a known command","stacktrace":""}}%
+```
 
 ## See also
 

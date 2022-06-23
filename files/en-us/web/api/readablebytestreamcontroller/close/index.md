@@ -1,6 +1,7 @@
 ---
 title: ReadableByteStreamController.close()
 slug: Web/API/ReadableByteStreamController/close
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -11,7 +12,7 @@ tags:
   - close
 browser-compat: api.ReadableByteStreamController.close
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`close()`** method of the
 {{domxref("ReadableByteStreamController")}} interface closes the associated stream.
@@ -22,7 +23,7 @@ The **`close()`** method of the
 ## Syntax
 
 ```js
-readableByteStreamController.close();
+close()
 ```
 
 ### Parameters
@@ -31,12 +32,12 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- TypeError
-  - : The source object is not a `ReadableByteStreamController`, or the stream
+- {{jsxref("TypeError")}}
+  - : Thrown if the source object is not a `ReadableByteStreamController`, or the stream
     is not readable for some other reason.
 
 ## Examples

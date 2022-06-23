@@ -1,6 +1,7 @@
 ---
 title: Drawing text
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
+page-type: guide
 tags:
   - Canvas
   - Graphics
@@ -26,7 +27,7 @@ The text is filled using the current `fillStyle`.
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById('canvas').getContext('2d');
   ctx.font = '48px serif';
   ctx.fillText('Hello world', 10, 50);
 }
@@ -48,7 +49,7 @@ The text is filled using the current `strokeStyle`.
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById('canvas').getContext('2d');
   ctx.font = '48px serif';
   ctx.strokeText('Hello world', 10, 50);
 }
@@ -79,7 +80,7 @@ In the examples above we are already making use of the `font` property to make t
 
 These properties might be familiar to you, if you have worked with CSS before.
 
-The following diagram from the [WHATWG](https://www.whatwg.org/) demonstrates the various baselines supported by the `textBaseline` property.![The top of the em square is
+The following diagram from the [WHATWG](https://whatwg.org/) demonstrates the various baselines supported by the `textBaseline` property.![The top of the em square is
 roughly at the top of the glyphs in a font, the hanging baseline is
 where some glyphs like आ are anchored, the middle is half-way
 between the top of the em square and the bottom of the em square,
@@ -97,8 +98,8 @@ Edit the code below and see your changes update live in the canvas:
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.font = "48px serif";
@@ -107,12 +108,12 @@ ctx.strokeText("Hello world", 0, 100);</textarea>
 ```
 
 ```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
-var code = textarea.value;
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const edit = document.getElementById('edit');
+const code = textarea.value;
 
 function drawCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -145,8 +146,8 @@ The following code snippet shows how you can measure a text and get its width.
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var text = ctx.measureText('foo'); // TextMetrics object
+  const ctx = document.getElementById('canvas').getContext('2d');
+  const text = ctx.measureText('foo'); // TextMetrics object
   text.width; // 16;
 }
 ```

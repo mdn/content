@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognitionResult.length
 slug: Web/API/SpeechRecognitionResult/length
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -24,20 +25,13 @@ The number of alternatives contained in the result depends on what the
 {{domxref("SpeechRecognition.maxAlternatives")}} property was set to when the speech
 recognition was first initiated.
 
-## Syntax
-
-```js
-var myLength = speechRecognitionResultInstance.length;
-```
-
-### Returns
+## Value
 
 A number.
 
 ## Examples
 
-This code is excerpted from our [Speech
-color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) example.
+This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 recognition.onresult = function(event) {

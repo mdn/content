@@ -1,6 +1,7 @@
 ---
 title: Advanced animations
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
+page-type: guide
 tags:
   - Canvas
   - Graphics
@@ -93,10 +94,10 @@ Without any boundary collision testing our ball runs out of the canvas quickly. 
 
 ```js
 if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
-  ball.vy = -ball.vy;
+  ball.vy = -ball.vy;
 }
 if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
-  ball.vx = -ball.vx;
+  ball.vx = -ball.vx;
 }
 ```
 

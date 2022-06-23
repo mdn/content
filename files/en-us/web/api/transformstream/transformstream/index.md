@@ -1,6 +1,7 @@
 ---
 title: TransformStream()
 slug: Web/API/TransformStream/TransformStream
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -15,10 +16,10 @@ The **`TransformStream()`** constructor creates a new {{domxref("TransformStream
 ## Syntax
 
 ```js
-new TransformStream();
-new TransformStream(transformer);
-new TransformStream(transformer, writableStrategy);
-new TransformStream(transformer, writableStrategy, readableStrategy);
+new TransformStream()
+new TransformStream(transformer)
+new TransformStream(transformer, writableStrategy)
+new TransformStream(transformer, writableStrategy, readableStrategy)
 ```
 
 ### Parameters

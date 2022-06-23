@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-text-decor/
 ---
 {{CSSRef}}
 
@@ -38,23 +39,23 @@ _None._
 
 ```css
 .under {
-  text-decoration: underline red;
+  text-decoration: underline red;
 }
 
 .over {
-  text-decoration: wavy overline lime;
+  text-decoration: wavy overline lime;
 }
 
 .line {
-  text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 .plain {
-  text-decoration: none;
+  text-decoration: none;
 }
 
 .underover {
-  text-decoration: dashed underline overline;
+  text-decoration: dashed underline overline;
 }
 
 .thick {
@@ -84,9 +85,4 @@ _None._
 
 ## Specifications
 
-| Specification                                    | Status                                       | Comment            |
-| ------------------------------------------------ | -------------------------------------------- | ------------------ |
-| {{SpecName('CSS4 Text Decoration')}} | {{Spec2('CSS4 Text Decoration')}} |                    |
-| {{SpecName('CSS3 Text Decoration')}} | {{Spec2('CSS3 Text Decoration')}} |                    |
-| {{SpecName('CSS2.1', 'text.html')}} | {{Spec2('CSS2.1')}}                     |                    |
-| {{SpecName('CSS1')}}                     | {{Spec2('CSS1')}}                     | Initial definition |
+{{Specifications}}

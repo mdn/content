@@ -22,17 +22,17 @@ If you would like to contribute an example for the Layout Cookbook, then this pa
 
 A recipe consists of:
 
-1.  A live example, stored in the [CSS Examples GitHub repo](https://github.com/mdn/css-examples).
-2.  A downloadable version of that example, also stored in the CSS Examples repo.
-3.  A page in the [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) section of the site that details:
+1. A live example, stored in the [CSS Examples GitHub repo](https://github.com/mdn/css-examples).
+2. A downloadable version of that example, also stored in the CSS Examples repo.
+3. A page in the [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) section of the site that details:
 
-    1.  Requirements
-    2.  The recipe
-    3.  The choices made
-    4.  Any useful fallbacks or alternative methods
-    5.  Any accessibility concerns
-    6.  Browser compatibility
-    7.  Additional resources
+    1. Requirements
+    2. The recipe
+    3. The choices made
+    4. Any useful fallbacks or alternative methods
+    5. Any accessibility concerns
+    6. Browser compatibility
+    7. Additional resources
 
 ### 1. Build your pattern
 
@@ -44,7 +44,7 @@ Ensure that the HTML and CSS is valid, and test in more than one browser. If you
 
 The live examples that you can see on cookbook pages and elsewhere on MDN allow visitors to play with the code and change relevant parts without being overwhelmed with all of the code needed. You recipe will be demonstrated by way of one or more examples.
 
-Fork the [CSS Examples repo](https://github.com/mdn/css-examples) and then take a look in the `css-cookbook` folder. There is a [cookbook-template.html](https://github.com/mdn/css-examples/blob/master/css-cookbook/cookbook-template.html) file you can copy as a starting point. Save this in the css-cookbook directory with a name that makes sense for your pattern. The template is commented to help you add the various parts to the right place.
+Fork the [CSS Examples repo](https://github.com/mdn/css-examples) and then take a look in the `css-cookbook` folder. There is a [cookbook-template.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/cookbook-template.html) file you can copy as a starting point. Save this in the css-cookbook directory with a name that makes sense for your pattern. The template is commented to help you add the various parts to the right place.
 
 The important parts of this are as follows.
 
@@ -56,19 +56,19 @@ You need to add the HTML for your component twice. First inside the section with
 
 Your editable CSS, from the second block in the head, also needs to be copied into the `playable-css` section.
 
-A simple worked example is [center.html](https://github.com/mdn/css-examples/blob/master/css-cookbook/center.html), which is embedded on the page [Center an element](/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element). You can use this to see how to add the various bits correctly.
+A simple worked example is [center.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/center.html), which is embedded on the page [Center an element](/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element). You can use this to see how to add the various bits correctly.
 
 If you have forked the repo and therefore have our CSS and JavaScript files alongside your example, if you open up your live example in the browser you should see everything working exactly as it will when included in a page.
 
 #### Useful tips
 
-1.  Do not indent the CSS and HTML inside the textareas; instead bump it up against the start of the lines. This will look better when it is rendered.
-2.  If you have any required images, pop them into the directory with the examples. Or you are welcome to use any already there.
-3.  You can adjust the height of the textareas by changing the height in the inline styles.
+1. Do not indent the CSS and HTML inside the textareas; instead bump it up against the start of the lines. This will look better when it is rendered.
+2. If you have any required images, pop them into the directory with the examples. Or you are welcome to use any already there.
+3. You can adjust the height of the textareas by changing the height in the inline styles.
 
 ### 3. Create a downloadable version
 
-As the examples include all of our live example code, we want to offer visitors a simple example without all of that included. Make a copy of your live example with --download appended. For example, center.html, has a download version named `center--download.html`. This file will be similar to your initial example. It should be a basic version of your pattern as a single HTML page. It can be handy to include the body CSS rules that are in our included stylesheet, if you take a look at [cookbook-template--download.html](https://github.com/mdn/css-examples/blob/master/css-cookbook/cookbook-template--download.html), these are included as a starting point.
+As the examples include all of our live example code, we want to offer visitors a simple example without all of that included. Make a copy of your live example with --download appended. For example, center.html, has a download version named `center--download.html`. This file will be similar to your initial example. It should be a basic version of your pattern as a single HTML page. It can be handy to include the body CSS rules that are in our included stylesheet, if you take a look at [cookbook-template--download.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/cookbook-template--download.html), these are included as a starting point.
 
 ### 4. Make a Pull Request with your example
 
@@ -76,13 +76,13 @@ Make a PR on the [CSS Examples repo](https://github.com/mdn/css-examples). This 
 
 ### 5. Create your page
 
-Once your example is merged you can create your page. You will need an MDN account to do so with [page creation permissions](/en-US/docs/MDN/Contribute/Howto/Create_and_edit_pages#Getting_page_creation_permissions), and you can then create the page as a subpage of the CSS Cookbook page. [There is a template for Cookbook pages here](/en-US/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template).
+Once your example is merged you can create your page. You will need an MDN account to do so with [page creation permissions](/en-US/docs/MDN/Contribute/Howto/Create_and_edit_pages#getting_page_creation_permissions), and you can then create the page as a subpage of the CSS Cookbook page. [There is a template for Cookbook pages here](/en-US/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template).
 
 The template explains what should be part of each section, and you can refer to other cookbook examples for more help. If you click to edit any of those pages then you will be able to see things such as the macros used to embed compat data, and live examples.
 
 If you need general guidance on using the MDN wiki, see the help pages available here.
 
-If you need to ask any questions, or want someone to take a look at your page then the [MDN Discourse forum](https://discourse.mozilla.org/c/mdn) is a good place to do this, or [chat with us on Matrix](/en-US/docs/MDN/Community/Conversations#Synchronous_chat).
+If you need to ask any questions, or want someone to take a look at your page then the [MDN Discourse forum](https://discourse.mozilla.org/c/mdn/236) is a good place to do this, or [chat with us on Matrix](/en-US/docs/MDN/Community/Conversations#synchronous_chat).
 
 ## See also
 

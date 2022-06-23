@@ -37,7 +37,7 @@ If the element has been transformed, the snap coordinates are likewise transform
 - `none`
   - : Specifies that the element does not contribute to a snap point.
 - {{cssxref("&lt;position&gt;")}}
-  - : Specifies the offset of the snap coordinates from the start edge of the element’s border box. For each pairing, the first value gives the x coordinate of the snap coordinate, the second value its y coordinate.
+  - : Specifies the offset of the snap coordinates from the start edge of the element's border box. For each pairing, the first value gives the x coordinate of the snap coordinate, the second value its y coordinate.
 
 ## Formal definition
 
@@ -56,31 +56,31 @@ If the element has been transformed, the snap coordinates are likewise transform
 ```html
 <div id="container">
   <div>
-    <p>At coordinate (0, 0)</p>
-    <div class="scrollContainer coordinate0">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-    </div>
-  </div>
+    <p>At coordinate (0, 0)</p>
+    <div class="scrollContainer coordinate0">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
 
-  <div>
-    <p>At coordinate (25, 0)</p>
-    <div class="scrollContainer coordinate25">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-    </div>
-  </div>
+  <div>
+    <p>At coordinate (25, 0)</p>
+    <div class="scrollContainer coordinate25">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
 
-  <div>
-    <p>At coordinate (50, 0)</p>
-    <div class="scrollContainer coordinate50">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-    </div>
-  </div>
+  <div>
+    <p>At coordinate (50, 0)</p>
+    <div class="scrollContainer coordinate50">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
 </div>
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.pendingRemoteDescription
 slug: Web/API/RTCPeerConnection/pendingRemoteDescription
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -12,6 +13,7 @@ tags:
   - pendingRemoteDescription
 browser-compat: api.RTCPeerConnection.pendingRemoteDescription
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only property
@@ -25,19 +27,13 @@ description for the remote endpoint. For details on the difference, see
 {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current
   descriptions")}}.
 
-## Syntax
-
-```js
-sessionDescription = RTCPeerConnection.pendingRemoteDescription;
-```
-
-### Return value
+## Value
 
 If a remote description change is in progress, this is an
 {{domxref("RTCSessionDescription")}} describing the proposed configuration. Otherwise,
 this returns `null`.
 
-## Example
+## Examples
 
 This example looks at the `pendingRemoteDescription` to determine whether or
 not there's a description change being processed.
@@ -76,4 +72,4 @@ else {
   {{domxref("RTCPeerConnection.localDescription")}},
   {{domxref("RTCPeerConnection.pendingLocalDescription")}},
   {{domxref("RTCPeerConnection.currentLocalDescription")}}
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

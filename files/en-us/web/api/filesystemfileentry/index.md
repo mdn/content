@@ -1,6 +1,7 @@
 ---
 title: FileSystemFileEntry
 slug: Web/API/FileSystemFileEntry
+page-type: web-api-interface
 tags:
   - API
   - File and Directory Entries API
@@ -13,7 +14,9 @@ browser-compat: api.FileSystemFileEntry
 ---
 {{APIRef("File and Directory Entries API")}}
 
-The **`FileSystemFileEntry`** interface of the [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction) represents a file in a file system. It offers properties describing the file's attributes, as well as the {{domxref("FileSystemFileEntry.file", "file()")}} method, which creates a {{domxref("File")}} object that can be used to read the file.
+The **`FileSystemFileEntry`** interface of the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction) represents a file in a file system. It offers properties describing the file's attributes, as well as the {{domxref("FileSystemFileEntry.file", "file()")}} method, which creates a {{domxref("File")}} object that can be used to read the file.
+
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -35,4 +38,4 @@ _Inherits the properties of its parent interface, {{domxref("FileSystemEntry")}}
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

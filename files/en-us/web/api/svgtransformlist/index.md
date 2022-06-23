@@ -1,6 +1,7 @@
 ---
 title: SVGTransformList
 slug: Web/API/SVGTransformList
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -23,7 +24,7 @@ An `SVGTransformList` object can be designated as read only, which means that at
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Also implement</th>
+      <th scope="row">Also implement</th>
       <td><em>None</em></td>
     </tr>
     <tr>
@@ -93,7 +94,7 @@ An `SVGTransformList` object can be designated as read only, which means that at
       </td>
     </tr>
     <tr>
-      <th scope="row">Normative document</th>
+      <th scope="row">Normative document</th>
       <td>
         <a
           href="https://www.w3.org/TR/SVG/coords.html#InterfaceSVGTransformList"
@@ -180,7 +181,7 @@ An `SVGTransformList` object can be designated as read only, which means that at
         <p>
           Returns the specified item from the list. The returned item is the
           item itself and not a copy. Any changes made to the item are
-          immediately reflected in the list. The first item is number 0.
+          immediately reflected in the list. The first item is number 0.
         </p>
         <p><strong>Exceptions:</strong></p>
         <ul>

@@ -10,7 +10,7 @@ tags:
 ---
 This subarticle shows how to define a page/form to create `BookInstance` objects. This is very much like the form we used to create `Book` objects.
 
-## Import validation and sanitisation methods
+## Import validation and sanitization methods
 
 Open **/controllers/bookinstanceController.js**, and add the following lines at the top of the file:
 
@@ -52,7 +52,7 @@ Find the exported `bookinstance_create_post()` controller method and replace it 
 // Handle BookInstance create on POST.
 exports.bookinstance_create_post = [
 
-    // Validate and sanitise fields.
+    // Validate and sanitize fields.
     body('book', 'Book must be specified').trim().isLength({ min: 1 }).escape(),
     body('imprint', 'Imprint must be specified').trim().isLength({ min: 1 }).escape(),
     body('status').escape(),
@@ -78,7 +78,7 @@ exports.bookinstance_create_post = [
                 .exec(function (err, books) {
                     if (err) { return next(err); }
                     // Successful, so render.
-                    res.render('bookinstance_form', { title: 'Create BookInstance', book_list: books, selected_book: bookinstance.book._id , errors: errors.array(), bookinstance: bookinstance });
+                    res.render('bookinstance_form', { title: 'Create BookInstance', book_list: books, selected_book: bookinstance.book._id, errors: errors.array(), bookinstance: bookinstance });
             });
             return;
         }
@@ -112,10 +112,7 @@ block content
       select#book.form-control(type='select' placeholder='Select book' name='book' required='true')
         - book_list.sort(function(a, b) {let textA = a.title.toUpperCase(); let textB = b.title.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
         for book in book_list
-          if bookinstance
-            option(value=book._id selected=(bookinstance.book.toString()==book._id.toString() ? 'selected' : false)) #{book.title}
-          else
-            option(value=book._id) #{book.title}
+          option(value=book._id, selected=(selected_book==book._id.toString() ? 'selected' : false) ) #{book.title}
 
     div.form-group
       label(for='imprint') Imprint:
@@ -146,7 +143,7 @@ The view structure and behavior is almost the same as for the **book_form.pug** 
 
 ## What does it look like?
 
-Run the application and open your browser to <http://localhost:3000/>. Then select the _Create new book instance (copy)_ link. If everything is set up correctly, your site should look something like the following screenshot. After you submit a valid `BookInstance`, it should be saved and you'll be taken to the detail page.
+Run the application and open your browser to `http://localhost:3000/`. Then select the _Create new book instance (copy)_ link. If everything is set up correctly, your site should look something like the following screenshot. After you submit a valid `BookInstance`, it should be saved and you'll be taken to the detail page.
 
 ![](locallibary_express_bookinstance_create_empty.png)
 

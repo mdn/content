@@ -1,6 +1,7 @@
 ---
 title: WritableStreamDefaultWriter
 slug: Web/API/WritableStreamDefaultWriter
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -23,7 +24,7 @@ The **`WritableStreamDefaultWriter`** interface of the [Streams API](/en-US/docs
 ## Properties
 
 - {{domxref("WritableStreamDefaultWriter.closed")}}{{readonlyinline}}
-  - : Allows you to write code that responds to an end to the streaming process. Returns a promise that fulfills if the stream becomes closed or the writer's lock is released, or rejects if the stream errors.
+  - : Allows you to write code that responds to an end to the streaming process. Returns a promise that fulfills if the stream becomes closed, or rejects if the stream errors or the writer's lock is released.
 - {{domxref("WritableStreamDefaultWriter.desiredSize")}}{{readonlyinline}}
   - : Returns the desired size required to fill the stream's internal queue.
 - {{domxref("WritableStreamDefaultWriter.ready")}}{{readonlyinline}}
@@ -85,8 +86,8 @@ The following example shows the creation of a `WritableStream` with a custom sin
    // Implement the sink
    write(chunk) {
      return new Promise((resolve, reject) => {
-       var buffer = new ArrayBuffer(2);
-       var view = new Uint16Array(buffer);
+       var buffer = new ArrayBuffer(1);
+       var view = new Uint8Array(buffer);
        view[0] = chunk;
        var decoded = decoder.decode(view, { stream: true });
        var listItem = document.createElement('li');

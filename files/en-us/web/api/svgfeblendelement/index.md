@@ -1,6 +1,7 @@
 ---
 title: SVGFEBlendElement
 slug: Web/API/SVGFEBlendElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGFEBlendElement
 
 The **`SVGFEBlendElement`** interface corresponds to the {{SVGElement("feBlend")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Constants
 

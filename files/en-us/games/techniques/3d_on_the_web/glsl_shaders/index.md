@@ -12,7 +12,7 @@ tags:
 ---
 {{GamesSidebar}}
 
-Shaders use GLSL (OpenGL Shading Language), a special OpenGL Shading Language with syntax similar to C. GLSL is executed directly by the graphics pipeline. There are [several different kinds of shaders](https://www.khronos.org/opengl/wiki/Shader), but two are commonly used to create graphics on the web: Vertex Shaders and Fragment (Pixel) Shaders. Vertex Shaders transform shape positions into 3D drawing coordinates. Fragment Shaders compute the renderings of a shape's colors and other attributes.
+Shaders use GLSL (OpenGL Shading Language), a special OpenGL Shading Language with syntax similar to C. GLSL is executed directly by the graphics pipeline. There are [several kinds of shaders](https://www.khronos.org/opengl/wiki/Shader), but two are commonly used to create graphics on the web: Vertex Shaders and Fragment (Pixel) Shaders. Vertex Shaders transform shape positions into 3D drawing coordinates. Fragment Shaders compute the renderings of a shape's colors and other attributes.
 
 GLSL is not as intuitive as JavaScript. GLSL is strongly typed and there is a lot of math involving vectors and matrices. It can get very complicated — very quickly. In this article we will make a simple code example that renders a cube. To speed up the background code we will be using the Three.js API.
 
@@ -26,7 +26,7 @@ A shader is essentially a function required to draw something on the screen. Sha
 
 Vertex shaders manipulate coordinates in a 3D space and are called once per vertex. The purpose of the vertex shader is to set up the `gl_Position` variable — this is a special, global, and built-in GLSL variable. `gl_Position` is used to store the position of the current vertex.
 
-The `void main()` function is a standard way of defining the `gl_Position` variable. Everything inside  `void main()` will be executed by the vertex shader.  A vertex shader yields a variable containing how to project a vertex's position in 3D space onto a 2D screen.
+The `void main()` function is a standard way of defining the `gl_Position` variable. Everything inside `void main()` will be executed by the vertex shader. A vertex shader yields a variable containing how to project a vertex's position in 3D space onto a 2D screen.
 
 ### Fragment shaders
 
@@ -56,23 +56,23 @@ Here's the HTML structure we will use.
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>MDN Games: Shaders demo</title>
-	<style>
-		body { margin: 0; padding: 0; font-size: 0; }
-		canvas { width: 100%; height: 100%; }
-	</style>
-	<script src="three.min.js"></script>
+  <meta charset="utf-8">
+  <title>MDN Games: Shaders demo</title>
+  <style>
+    body { margin: 0; padding: 0; font-size: 0; }
+    canvas { width: 100%; height: 100%; }
+  </style>
+  <script src="three.min.js"></script>
 </head>
 <body>
   <script id="vertexShader" type="x-shader/x-vertex">
-	// vertex shader's code goes here
+  // vertex shader's code goes here
   </script>
   <script id="fragmentShader" type="x-shader/x-fragment">
-	// fragment shader's code goes here
+  // fragment shader's code goes here
   </script>
   <script>
-	// scene setup goes here
+  // scene setup goes here
   </script>
 </body>
 </html>
@@ -80,9 +80,9 @@ Here's the HTML structure we will use.
 
 It contains some basic information like the document {{htmlelement("title")}}, and some CSS to set the `width` and `height` of the {{htmlelement("canvas")}} element that Three.js will insert on the page to be the full size of the viewport. The {{htmlelement("script")}} element in the {{htmlelement("head")}} includes the Three.js library in the page; we will write our code into three script tags in the {{htmlelement("body")}} tag:
 
-1.  The first one will contain the vertex shader.
-2.  The second one will contain the fragment shader.
-3.  The third one will contain the actual JavaScript code generating the scene.
+1. The first one will contain the vertex shader.
+2. The second one will contain the fragment shader.
+3. The third one will contain the actual JavaScript code generating the scene.
 
 Before reading on, copy this code to a new text file and save it in your working directory as `index.html`. We'll create a scene featuring a simple cube in this file to explain how the shaders work.
 
@@ -98,7 +98,7 @@ Let's continue by writing a simple vertex shader — add the code below inside t
 
 ```glsl
 void main() {
-	gl_Position = projectionMatrix * modelViewMatrix * vec4(position.x+10.0, position.y, position.z+5.0, 1.0);
+  gl_Position = projectionMatrix * modelViewMatrix * vec4(position.x+10.0, position.y, position.z+5.0, 1.0);
 }
 ```
 
@@ -114,7 +114,7 @@ Now we'll add the texture shader to the code — add the code below to the body'
 
 ```glsl
 void main() {
-	gl_FragColor = vec4(0.0, 0.58, 0.86, 1.0);
+  gl_FragColor = vec4(0.0, 0.58, 0.86, 1.0);
 }
 ```
 
@@ -132,8 +132,8 @@ Then, create the [`shaderMaterial`](https://threejs.org/docs/#Reference/Material
 
 ```js
 var shaderMaterial = new THREE.ShaderMaterial( {
-	vertexShader: document.getElementById( 'vertexShader' ).textContent,
-	fragmentShader: document.getElementById( 'fragmentShader' ).textContent
+  vertexShader: document.getElementById( 'vertexShader' ).textContent,
+  fragmentShader: document.getElementById( 'fragmentShader' ).textContent
 });
 ```
 
@@ -219,11 +219,11 @@ canvas { width: 100%; height: 100%; }
 
 ### Result
 
-{{ EmbedLiveSample('Final_code', '100%', '400', '', 'Games/Techniques/3D_on_the_web/GLSL_Shaders') }}
+{{ EmbedLiveSample('Final_code', '100%', '400') }}
 
 ## Conclusion
 
-This article has taught the very basics of shaders. Our example doesn't do much but there are many more cool things you can do with shaders — check out some really cool ones on [ShaderToy](https://shadertoy.com/) for inspiration and to learn from their sources.
+This article has taught the very basics of shaders. Our example doesn't do much but there are many more cool things you can do with shaders — check out some really cool ones on [ShaderToy](https://www.shadertoy.com/) for inspiration and to learn from their sources.
 
 ## See also
 

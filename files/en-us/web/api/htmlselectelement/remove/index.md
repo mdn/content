@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.remove()
 slug: Web/API/HTMLSelectElement/remove
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -17,36 +18,40 @@ at the specified index from the options collection for this select element.
 ## Syntax
 
 ```js
-collection.remove(index);
+remove(index)
 ```
 
 ### Parameters
 
-- `index` is a long for the index of the {{ domxref("HTMLOptionElement") }}
+- `index` is a zero-based long for the index of the {{ domxref("HTMLOptionElement") }}
   to remove from the collection. If the index is not found the method has no effect.
 
-## Example
+### Return value
 
-```js
-var sel = document.getElementById("existingList");
-sel.remove(1);
+None ({{jsxref("undefined")}}).
 
-/*
-  Takes the existing following select object:
+## Examples
 
-  <select id="existingList" name="existingList">
+```html
+<select id="existingList" name="existingList">
     <option value="1">Option: Value 1</option>
     <option value="2">Option: Value 2</option>
     <option value="3">Option: Value 3</option>
-  </select>
+</select>
+```
 
-  And changes it to:
+```js
+let sel = document.getElementById("existingList");
+sel.remove(1);
+```
 
-  <select id="existingList" name="existingList">
+HTML is now:
+
+```html
+<select id="existingList" name="existingList">
     <option value="1">Option: Value 1</option>
     <option value="3">Option: Value 3</option>
-  </select>
-*/
+</select>
 ```
 
 ## Specifications

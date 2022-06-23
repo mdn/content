@@ -1,6 +1,7 @@
 ---
 title: SVGAnimationElement
 slug: Web/API/SVGAnimationElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGAnimationElement
 
 The **`SVGAnimationElement`** interface is the base interface for all of the animation element interfaces: {{domxref("SVGAnimateElement")}}, {{domxref("SVGSetElement")}}, {{domxref("SVGAnimateColorElement")}}, {{domxref("SVGAnimateMotionElement")}} and {{domxref("SVGAnimateTransformElement")}}.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -51,13 +52,10 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - [`beginEvent`](/en-US/docs/Web/API/SVGAnimationElement/beginEvent_event)
   - : Fired when the element local timeline begins to play.
-    Also available via the [`onbegin`](/en-US/docs/Web/API/SVGAnimationElement/onbegin) property.
 - [`endEvent`](/en-US/docs/Web/API/SVGAnimationElement/endEvent_event)
   - : Fired when at the active end of the animation is reached.
-    Also available via the [`onend`](/en-US/docs/Web/API/SVGAnimationElement/onend) property.
 - [`repeatEvent`](/en-US/docs/Web/API/SVGAnimationElement/repeatEvent_event)
   - : Fired when the element's local timeline repeats. It will be fired each time the element repeats, after the first iteration.
-    Also available via the [`onrepeat`](/en-US/docs/Web/API/SVGAnimationElement/onrepeat) property.
 
 ## Specifications
 

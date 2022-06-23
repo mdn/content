@@ -1,6 +1,7 @@
 ---
 title: File.lastModifiedDate
 slug: Web/API/File/lastModifiedDate
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -17,17 +18,11 @@ browser-compat: api.File.lastModifiedDate
 
 The **`File.lastModifiedDate`** read-only property returns the last modified date of the file. Files without a known last modified date returns the current date .
 
-## Syntax
-
-```js
-var time = instanceOfFile.lastModifiedDate
-```
-
-### Value
+## Value
 
 A [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object indicating the date and time at which the file was last modified.
 
-## Example
+## Examples
 
 ```js
 // fileInput is a HTMLInputElement: <input type="file" multiple id="myfileinput">
@@ -45,7 +40,7 @@ for (var i = 0; i < files.length; i++) {
 
 To offer protection against timing attacks and fingerprinting, the precision of `someFile.lastModifiedDate.getTime()` might get rounded depending on browser settings.
 
-In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
+In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
 
 ```js
 // reduced time precision (2ms) in Firefox 60
@@ -67,7 +62,7 @@ In Firefox, you can also enable `privacy.resistFingerprinting`, the precision wi
 
 ## Specifications
 
-_Though present in early draft of the File API spec, this property has been removed from it and is now non-standard. Use {{domxref("File.lastModified")}} instead._
+_Though present in early draft of the File API spec, this property has been removed from it and is now non-standard. Use {{domxref("File.lastModified")}} instead._
 
 ## Browser compatibility
 

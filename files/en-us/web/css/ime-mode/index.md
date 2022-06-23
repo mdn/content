@@ -24,10 +24,11 @@ ime-mode: disabled;
 ime-mode: inherit;
 ime-mode: initial;
 ime-mode: revert;
+ime-mode: revert-layer;
 ime-mode: unset;
 ```
 
-The `ime-mode` property is only partially and inconsistently implemented in browsers. It was introduced by Microsoft with Internet Explorer 5 as a proprietary extension: {{spec("https://msdn.microsoft.com/library/ms530767(VS.85).aspx","-ms-ime-mode Attribute | imeMode Property")}}.
+The `ime-mode` property is only partially and inconsistently implemented in browsers. It was introduced by Microsoft with Internet Explorer 5 as a proprietary extension.
 
 > **Note:** In general, it's not appropriate for a public web site to change the IME mode. This property should only be used for private web applications or to undo the property if it was previously set by legacy code.
 

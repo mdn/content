@@ -21,19 +21,19 @@ The **`filter()`** method **creates a new array** with all elements that pass th
 
 ```js
 // Arrow function
-filter((element) => { ... } )
-filter((element, index) => { ... } )
-filter((element, index, array) => { ... } )
+filter((element) => { /* ... */ } )
+filter((element, index) => { /* ... */ } )
+filter((element, index, array) => { /* ... */ } )
 
 // Callback function
 filter(callbackFn)
 filter(callbackFn, thisArg)
 
 // Inline callback function
-filter(function(element) { ... })
-filter(function(element, index) { ... })
-filter(function(element, index, array){ ... })
-filter(function(element, index, array) { ... }, thisArg)
+filter(function(element) { /* ... */ })
+filter(function(element, index) { /* ... */ })
+filter(function(element, index, array){ /* ... */ })
+filter(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
@@ -42,13 +42,13 @@ filter(function(element, index, array) { ... }, thisArg)
 
   - : Function is a predicate, to test each element of the array. Return a value that coerces to `true` to keep the element, or to `false` otherwise.
 
-    It accepts three arguments:
+    The function is called with the following arguments:
 
     - `element`
       - : The current element being processed in the array.
-    - `index`{{optional_inline}}
+    - `index`
       - : The index of the current element being processed in the array.
-    - `array`{{optional_inline}}
+    - `array`
       - : The array on which `filter()` was called.
 
 - `thisArg`{{optional_inline}}
@@ -64,9 +64,9 @@ A new array with the elements that pass the test. If no elements pass the test, 
 
 `callbackFn` is invoked with three arguments:
 
-1.  the value of the element
-2.  the index of the element
-3.  the Array object being traversed
+1. the value of the element
+2. the index of the element
+3. the Array object being traversed
 
 If a `thisArg` parameter is provided to `filter`, it will be used as the callback's `this` value. Otherwise, the value `undefined` will be used as its `this` value. The `this` value ultimately observable by `callbackFn` is determined according to [the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
@@ -112,7 +112,7 @@ console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]
 
 ### Filtering invalid entries from JSON
 
-The following example uses `filter()` to create a filtered json of all elements with non-zero, numeric `id`.
+The following example uses `filter()` to create a filtered JSON of all elements with non-zero, numeric `id`.
 
 ```js
 let arr = [
@@ -233,7 +233,7 @@ console.log(deleteWords)
 
 ## See also
 
-- A polyfill of `Array.prototype.filter` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.filter` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.every()")}}
 - {{jsxref("Array.prototype.some()")}}

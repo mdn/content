@@ -121,7 +121,7 @@ let empties = new Array(3).fill(undefined)
 
 The `in` operator returns `true` for properties in the prototype
 chain. (If you want to check for only _non-inherited_ properties,
-use {{jsxref("Object.prototype.hasOwnProperty()")}} instead.)
+use {{jsxref("Object.prototype.hasOwnProperty()")}} instead.)
 
 ```js
 'toString' in {}  // returns true
@@ -146,7 +146,7 @@ The code fragment below demonstrates a static function that checks whether a spe
     }
   }
   ClassWithPrivateFeatures.f(new ClassWithPrivateFeatures()) // returns true
-  ClassWithPrivateFeatures.f({}) // returns false  
+  ClassWithPrivateFeatures.f({}) // returns false
 ```
 
 ## Specifications
@@ -163,5 +163,4 @@ The code fragment below demonstrates a static function that checks whether a spe
 - [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Reflect.has()")}}
-- [Enumerability and
-  ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)

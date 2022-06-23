@@ -1,6 +1,7 @@
 ---
 title: FileSystemHandle.isSameEntry()
 slug: Web/API/FileSystemHandle/isSameEntry
+page-type: web-api-instance-method
 tags:
   - Directory
   - File
@@ -9,7 +10,7 @@ tags:
   - Method
 browser-compat: api.FileSystemHandle.isSameEntry
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`isSameEntry()`** method of the
 {{domxref("FileSystemHandle")}} interface compares two {{domxref("FileSystemHandle",
@@ -60,5 +61,4 @@ function removeMatches(fileEntry, entriesArr) {
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

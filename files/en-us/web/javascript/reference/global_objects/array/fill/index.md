@@ -50,7 +50,6 @@ The modified array, filled with `value`.
 > To use `Array.prototype.fill()` when declaring an array, make sure to assign slots to the array.
 > [See example](#using_fill_to_populate_an_empty_array).
 
-
 ## Polyfill
 
 ```js
@@ -63,29 +62,24 @@ if (!Array.prototype.fill) {
         throw new TypeError('this is null or not defined');
       }
 
-      var O = Object(this);
+      let O = Object(this);
 
       // Steps 3-5.
-      var len = O.length >>> 0;
+      const len = O.length >>> 0;
 
       // Steps 6-7.
-      var start = arguments[1];
-      var relativeStart = start >> 0;
+      const start = arguments[1];
+      const relativeStart = start >> 0;
 
       // Step 8.
-      var k = relativeStart < 0 ?
-        Math.max(len + relativeStart, 0) :
-        Math.min(relativeStart, len);
+      let k = relativeStart < 0 ? Math.max(len + relativeStart, 0) : Math.min(relativeStart, len);
 
       // Steps 9-10.
-      var end = arguments[2];
-      var relativeEnd = end === undefined ?
-        len : end >> 0;
+      const end = arguments[2];
+      const relativeEnd = end === undefined ? len : end >> 0;
 
       // Step 11.
-      var finalValue = relativeEnd < 0 ?
-        Math.max(len + relativeEnd, 0) :
-        Math.min(relativeEnd, len);
+      const finalValue = relativeEnd < 0 ? Math.max(len + relativeEnd, 0) : Math.min(relativeEnd, len);
 
       // Step 12.
       while (k < finalValue) {
@@ -157,6 +151,6 @@ let tempGirls = Array(5).fill("girl",0);
 
 ## See also
 
-- A polyfill of `Array.prototype.fill` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.fill` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array")}}
 - {{jsxref("TypedArray.prototype.fill()")}}

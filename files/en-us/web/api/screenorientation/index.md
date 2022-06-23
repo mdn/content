@@ -1,6 +1,7 @@
 ---
 title: ScreenOrientation
 slug: Web/API/ScreenOrientation
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -15,6 +16,8 @@ browser-compat: api.ScreenOrientation
 The **`ScreenOrientation`** interface of the [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API) provides information about the current orientation of the document.
 
 A **`ScreenOrientation`** instance object can be retrieved using the {{domxref("screen.orientation")}} property.
+
+{{InheritanceDiagram}}
 
 ## Properties
 

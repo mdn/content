@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onanimationcancel
 slug: Web/API/GlobalEventHandlers/onanimationcancel
+page-type: web-api-instance-property
 tags:
   - API
   - Animation
@@ -180,7 +181,7 @@ function handleCancelEvent(event) {
 ```
 
 Then we add a method to handle toggle {{cssxref("display")}} between
-` "``flex" ` and ` "``none" ` and establish it
+`flex` and `none` and establish it
 as the handler for a {{event("click")}} event on the "Hide/Show" the Box button:
 
 ```js

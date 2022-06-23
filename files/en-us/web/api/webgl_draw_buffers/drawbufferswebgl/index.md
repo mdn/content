@@ -1,6 +1,7 @@
 ---
 title: WEBGL_draw_buffers.drawBuffersWEBGL()
 slug: Web/API/WEBGL_draw_buffers/drawBuffersWEBGL
+page-type: webgl-extension-method
 tags:
   - API
   - Method
@@ -24,12 +25,12 @@ This method is part of the {{domxref("WEBGL_draw_buffers")}} extension.
 ## Syntax
 
 ```js
-void gl.getExtension('WEBGL_draw_buffers').drawBuffersWEBGL(buffers);
+drawBuffersWEBGL(buffers)
 ```
 
 ### Parameters
 
-- buffers
+- `buffers`
 
   - : An {{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLenum")}} constants defining drawing buffers.
     Possible values:
@@ -56,7 +57,7 @@ void gl.getExtension('WEBGL_draw_buffers').drawBuffersWEBGL(buffers);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -87,5 +88,4 @@ ext.drawBuffersWEBGL([
 - {{domxref("WebGLRenderingContext.framebufferTexture2D()")}}
 - {{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter()")}}
 - {{domxref("WebGLRenderingContext.getParameter()")}}
-- [WebGL deferred
-  shading - Mozilla Hacks blog](https://hacks.mozilla.org/2014/01/webgl-deferred-shading/)
+- [WebGL deferred shading - Mozilla Hacks blog](https://hacks.mozilla.org/2014/01/webgl-deferred-shading/)

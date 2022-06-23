@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.FinalizationRegistry.unregister
 ---
 {{JSRef}}
 
-The `unregister` unregisters a target object from a
+The `unregister()` method unregisters a target object from a
 {{jsxref("FinalizationRegistry")}} instance.
 
 ## Syntax
@@ -23,17 +23,21 @@ unregister(unregisterToken);
 ### Parameters
 
 - `unregisterToken`
-  - : The token used with the {{jsxref("FinalizationRegistry.prototype.register",
-        "register")}} method when registering the target object.
+  - : The token used with the {{jsxref("FinalizationRegistry.prototype.register", "register")}} method when registering the target object. Multiple cells registered with the same `unregisterToken` will be unregistered together.
 
 ### Return value
 
-`undefined`.
+A boolean value that is `true` if at least one cell was unregistered and `false` if no cell was unregistered.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown when `unregisterToken` is not an object.
 
 ## Notes
 
 When a target object has been reclaimed, it is no longer registered in the registry.
-There is no need to all `unregister` in your cleanup callback. Only call
+There is no need to call `unregister` in your cleanup callback. Only call
 `unregister` if you haven't received a cleanup callback and no longer need
 to receive one.
 

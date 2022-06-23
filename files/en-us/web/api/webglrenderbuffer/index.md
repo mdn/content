@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderbuffer
 slug: Web/API/WebGLRenderbuffer
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -9,7 +10,9 @@ browser-compat: api.WebGLRenderbuffer
 ---
 {{APIRef("WebGL")}}
 
-The **WebGLRenderbuffer** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and represents a buffer that can contain an image, or can be source or target of an rendering operation.
+The **WebGLRenderbuffer** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and represents a buffer that can contain an image, or that can be a source or target of a rendering operation.
+
+{{InheritanceDiagram}}
 
 ## Description
 

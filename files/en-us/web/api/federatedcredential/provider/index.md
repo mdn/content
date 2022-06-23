@@ -1,6 +1,7 @@
 ---
 title: FederatedCredential.provider
 slug: Web/API/FederatedCredential/provider
+page-type: web-api-instance-property
 tags:
   - API
   - Credential Management API
@@ -14,20 +15,14 @@ browser-compat: api.FederatedCredential.provider
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}
 
 The **`provider`** property of the
-{{domxref("FederatedCredential")}} interface returns a {{domxref("USVString")}}
+{{domxref("FederatedCredential")}} interface returns a string
 containing a credential's federated identity provider.
 
-## Syntax
+## Value
 
-```js
-var provider = FederatedCredential.provider
-```
+A string containing a credential's federated identity provider.
 
-### Value
-
-A {{domxref("USVString")}} containing a credential's federated identity provider.
-
-## Example
+## Examples
 
 ```js
 // TBD

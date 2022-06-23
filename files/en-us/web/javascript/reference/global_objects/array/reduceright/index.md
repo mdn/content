@@ -24,36 +24,38 @@ See also {{jsxref("Array.prototype.reduce()")}} for left-to-right.
 
 ```js
 // Arrow function
-reduceRight((accumulator, currentValue) => { ... } )
-reduceRight((accumulator, currentValue, index) => { ... } )
-reduceRight((accumulator, currentValue, index, array) => { ... } )
-reduceRight((accumulator, currentValue, index, array) => { ... }, initialValue)
+reduceRight((accumulator, currentValue) => { /* ... */ } )
+reduceRight((accumulator, currentValue, index) => { /* ... */ } )
+reduceRight((accumulator, currentValue, index, array) => { /* ... */ } )
+reduceRight((accumulator, currentValue, index, array) => { /* ... */ }, initialValue)
 
 // Callback function
 reduceRight(callbackFn)
 reduceRight(callbackFn, initialValue)
 
 // Callback reducer function
-reduceRight(function(accumulator, currentValue) { ... })
-reduceRight(function(accumulator, currentValue, index) { ... })
-reduceRight(function(accumulator, currentValue, index, array){ ... })
-reduceRight(function(accumulator, currentValue, index, array) { ... }, initialValue)
+reduceRight(function(accumulator, currentValue) { /* ... */ })
+reduceRight(function(accumulator, currentValue, index) { /* ... */ })
+reduceRight(function(accumulator, currentValue, index, array){ /* ... */ })
+reduceRight(function(accumulator, currentValue, index, array) { /* ... */ }, initialValue)
 ```
 
 ### Parameters
 
 - `callbackFn`
 
-  - : Function to execute on each value in the array, taking four arguments:
+  - : Function to execute on each value in the array.
+
+    The function is called with the following arguments:
 
     - `accumulator`
       - : The value previously returned in the last invocation of the callback, or
         `initialValue`, if supplied. (See below.)
     - `currentValue`
       - : The current element being processed in the array.
-    - `index`{{optional_inline}}
+    - `index`
       - : The index of the current element being processed in the array.
-    - `array`{{optional_inline}}
+    - `array`
       - : The array `reduceRight()` was called upon.
 
 - `initialValue` {{optional_inline}}
@@ -82,13 +84,13 @@ arr.reduceRight(function(accumulator, currentValue, index, array) {
 });
 ```
 
-The first time the function is called, the `accumulator` and
+The first time the function is called, the `accumulator` and
 `currentValue` can be one of two values. If an
 `initialValue` was provided in the call to
-`reduceRight`, then `accumulator` will be equal to
+`reduceRight`, then `accumulator` will be equal to
 `initialValue` and `currentValue` will be
 equal to the last value in the array. If no `initialValue` was
-provided, then `accumulator` will be equal to the last value in
+provided, then `accumulator` will be equal to the last value in
 the array and `currentValue` will be equal to the second-to-last
 value.
 
@@ -246,53 +248,12 @@ look like this:
 The value returned by `reduceRight` this time would be, of course,
 `20`.
 
-## Polyfill
-
-`reduceRight` was added to the ECMA-262 standard in the 5th edition; as such
-it may not be present in all implementations of the standard. You can work around this
-by inserting the following code at the beginning of your scripts, allowing use of
-`reduceRight` in implementations which do not natively support it.
-
-```js
-// Production steps of ECMA-262, Edition 5, 15.4.4.22
-// Reference: https://es5.github.io/#x15.4.4.22
-if ('function' !== typeof Array.prototype.reduceRight) {
-  Array.prototype.reduceRight = function(callback /*, initialValue*/) {
-    'use strict';
-    if (null === this || 'undefined' === typeof this) {
-      throw new TypeError('Array.prototype.reduce called on null or undefined');
-    }
-    if ('function' !== typeof callback) {
-      throw new TypeError(callback + ' is not a function');
-    }
-    var t = Object(this), len = t.length >>> 0, k = len - 1, value;
-    if (arguments.length >= 2) {
-      value = arguments[1];
-    } else {
-      while (k >= 0 && !(k in t)) {
-        k--;
-      }
-      if (k < 0) {
-        throw new TypeError('Reduce of empty array with no initial value');
-      }
-      value = t[k--];
-    }
-    for (; k >= 0; k--) {
-      if (k in t) {
-        value = callback(value, t[k], k, t);
-      }
-    }
-    return value;
-  };
-}
-```
-
 ## Examples
 
 ### Sum up all values within an array
 
 ```js
-var sum = [0, 1, 2, 3].reduceRight(function(a, b) {
+const sum = [0, 1, 2, 3].reduceRight(function(a, b) {
   return a + b;
 });
 // sum is 6
@@ -301,7 +262,7 @@ var sum = [0, 1, 2, 3].reduceRight(function(a, b) {
 ### Flatten an array of arrays
 
 ```js
-var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
+const flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
     return a.concat(b);
 }, []);
 // flattened is [4, 5, 2, 3, 0, 1]
@@ -355,9 +316,9 @@ const computation2 = (input, callback) => {
 ### Difference between `reduce` and `reduceRight`
 
 ```js
-var a = ['1', '2', '3', '4', '5'];
-var left  = a.reduce(function(prev, cur)      { return prev + cur; });
-var right = a.reduceRight(function(prev, cur) { return prev + cur; });
+const a = ['1', '2', '3', '4', '5'];
+const left  = a.reduce(function(prev, cur)      { return prev + cur; });
+const right = a.reduceRight(function(prev, cur) { return prev + cur; });
 
 console.log(left);  // "12345"
 console.log(right); // "54321"
@@ -398,5 +359,5 @@ console.log(compose(inc, double)(2)); // 5
 
 ## See also
 
-- A polyfill of `Array.prototype.reduceRight` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.reduceRight` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.reduce()")}}

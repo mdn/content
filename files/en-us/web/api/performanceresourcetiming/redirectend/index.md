@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.redirectEnd
 slug: Web/API/PerformanceResourceTiming/redirectEnd
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,25 +16,19 @@ The **`redirectEnd`** read-only property returns a
 of the response of the last redirect.
 
 When fetching a resource, if there are multiple HTTP redirects, and any of the
-redirects have an origin that is different from the current document, and the timing
+redirects have an origin that is different from the current document, and the timing
 allow check algorithm passes for each redirected resource, this property returns the
 time immediately after receiving the last byte of the response of the last redirect;
 otherwise, zero is returned.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-resource.redirectEnd;
-```
-
-### Return value
+## Value
 
 A {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after receiving the last
 byte of the response of the last redirect.
 
-## Example
+## Examples
 
 In the following example, the value of the `*Start` and `*End`
 properties of all "`resource`"

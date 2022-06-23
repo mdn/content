@@ -1,6 +1,7 @@
 ---
 title: Window.captureEvents()
 slug: Web/API/Window/captureEvents
+page-type: web-api-instance-method
 tags:
   - API
   - Gecko
@@ -16,8 +17,12 @@ capture all events of the specified type.
 ## Syntax
 
 ```js
-window.captureEvents(eventType)
+captureEvents(eventType)
 ```
+
+### Parameters
+
+-`eventType`
 
 `eventType` is a combination of the following values:
 `Event.ABORT`, `Event.BLUR`, `Event.CLICK`,
@@ -29,7 +34,11 @@ window.captureEvents(eventType)
 `Event.RESET`, `Event.RESIZE`, `Event.SELECT`,
 `Event.SUBMIT`, `Event.UNLOAD`.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```html
 <!DOCTYPE html>

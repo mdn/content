@@ -38,7 +38,7 @@ meaning it can never be run.
 Why should I have semicolons after `return` statements? In the case of
 semicolon-less `return` statements, it can be unclear whether the developer
 intended to return the statement on the following line, or to stop execution and return.
-The warning indicates that there is ambiguity in the way the `return`
+The warning indicates that there is ambiguity in the way the `return`
 statement is written.
 
 Warnings will not be shown for semicolon-less returns if these statements follow it:

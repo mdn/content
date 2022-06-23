@@ -1,6 +1,7 @@
 ---
 title: Window.innerWidth
 slug: Web/API/Window/innerWidth
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -24,13 +25,7 @@ More precisely, `innerWidth` returns the width of the window's
 layout viewport—can be obtained from the {{domxref("Window.innerHeight",
   "innerHeight")}} property.
 
-## Syntax
-
-```js
-let intViewportWidth = window.innerWidth;
-```
-
-### Value
+## Value
 
 An integer value indicating the width of the window's layout viewport in pixels. This
 property is read-only, and has no default value.
@@ -48,7 +43,7 @@ property instead.
 The `innerWidth` property is available on any window or object that behaves
 like a window, such as a frame or tab.
 
-## Example
+## Examples
 
 ```js
 // This will return the width of the viewport
@@ -63,6 +58,36 @@ var intFramesetWidth = parent.innerWidth;
 // This will return the width of the viewport of the outermost frameset
 var intOuterFramesetWidth = top.innerWidth;
 ```
+
+## Demo
+
+### HTML
+
+```html
+<p>Resize the browser window to fire the <code>resize</code> event.</p>
+<p>Window height: <span id="height"></span></p>
+<p>Window width: <span id="width"></span></p>
+```
+
+### JavaScript
+
+```js
+const heightOutput = document.querySelector("#height");
+const widthOutput = document.querySelector("#width");
+
+function resizeListener() {
+  heightOutput.textContent = window.innerHeight;
+  widthOutput.textContent = window.innerWidth;
+}
+
+window.addEventListener("resize", resizeListener);
+```
+
+### Result
+
+{{EmbedLiveSample('Demo')}}
+
+You can also {{LiveSampleLink('Demo', 'view the results of the demo code in a separate page')}}.
 
 ## Specifications
 

@@ -15,9 +15,11 @@ A loop is a sequence of instructions that is continually repeated until a certai
 
 #### Syntax:
 
-    for (statement 1; statement 2; statement 3){
-     execute code block
-    }
+```
+for (statement 1; statement 2; statement 3){
+  execute code block
+}
+```
 
 - Statement 1 is executed once before the code block is run.
 - Statement 2 defines the condition needed to execute the code block.
@@ -42,9 +44,11 @@ For the above example, the syntax is as follows:
 
 #### Syntax:
 
-    while (condition){
-     execute code block
-    }
+```
+while (condition){
+  execute code block
+}
+```
 
 - The code block will continue to loop as long as the condition is true.
 
@@ -56,7 +60,7 @@ while(i < 5){
     console.log(i)
     i++
 }
-//This loop  will print number 0-4, will stop when condition becomes false (i >=5)
+//This loop will print number 0-4, will stop when condition becomes false (i >=5)
 ```
 
 For the above example, the syntax is as follows:

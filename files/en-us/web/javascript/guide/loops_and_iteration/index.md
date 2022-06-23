@@ -48,9 +48,7 @@ The statements for loops provided in JavaScript are:
 
 ## `for` statement
 
-A {{jsxref("statements/for","for")}} loop repeats until a specified condition evaluates
-to `false`. The JavaScript `for` loop is similar to the Java and C
-`for` loop.
+A {{jsxref("statements/for","for")}} loop repeats until a specified condition evaluates to false. The JavaScript `for` loop is similar to the Java and C `for` loop.
 
 A `for` statement looks as follows:
 
@@ -61,46 +59,40 @@ for ([initialExpression]; [conditionExpression]; [incrementExpression])
 
 When a `for` loop executes, the following occurs:
 
-1.  The initializing expression `initialExpression`, if any, is executed.
-    This expression usually initializes one or more loop counters, but the syntax allows
-    an expression of any degree of complexity. This expression can also declare variables.
-2.  The `conditionExpression` expression is evaluated. If the value of
-    `conditionExpression` is true, the loop statements execute. If the value of
-    `condition` is false, the `for` loop terminates. (If the
-    `condition` expression is omitted entirely, the condition is assumed to be
-    true.)
-3.  The `statement` executes. To execute multiple statements, use a block
-    statement (`{ ... }`) to group those statements.
-4.  If present, the update expression `incrementExpression` is executed.
-5.  Control returns to Step 2.
+1. The initializing expression `initialExpression`, if any, is executed. This expression usually initializes one or more loop counters, but the syntax allows an expression of any degree of complexity. This expression can also declare variables.
+2. The `conditionExpression` expression is evaluated. If the value of `conditionExpression` is true, the loop statements execute. Otherwise, the `for` loop terminates. (If the `conditionExpression` expression is omitted entirely, the condition is assumed to be true.)
+3. The `statement` executes. To execute multiple statements, use a [block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block) (`{ ... }`) to group those statements.
+4. If present, the update expression `incrementExpression` is executed.
+5. Control returns to Step 2.
 
 ### Example
 
 In the example below, the function contains a `for` statement that counts
-the number of selected options in a scrolling list (a [`<select>`](/en-US/docs/Web/HTML/Element/select "The HTML <select> element represents a control that provides a menu of options")
-element that allows multiple selections). The `for` statement declares the
-variable `i` and initializes it to `0`. It checks that
-`i` is less than the number of options in the `<select>`
-element, performs the succeeding `if` statement, and increments
-`i` by after each pass through the loop.
+the number of selected options in a scrolling list (a [`<select>`](/en-US/docs/Web/HTML/Element/select)
+element that allows multiple selections).
+
+#### HTML
 
 ```html
 <form name="selectForm">
-  <p>
-    <label for="musicTypes">Choose some music types, then click the button below:</label>
-    <select id="musicTypes" name="musicTypes" multiple="multiple">
-      <option selected="selected">R&B</option>
-      <option>Jazz</option>
-      <option>Blues</option>
-      <option>New Age</option>
-      <option>Classical</option>
-      <option>Opera</option>
-    </select>
-  </p>
-  <p><input id="btn" type="button" value="How many are selected?" /></p>
+  <label for="musicTypes">Choose some music types, then click the button below:</label>
+  <select id="musicTypes" name="musicTypes" multiple>
+    <option selected>R&B</option>
+    <option>Jazz</option>
+    <option>Blues</option>
+    <option>New Age</option>
+    <option>Classical</option>
+    <option>Opera</option>
+  </select>
+  <button id="btn" type="button">How many are selected?</button>
 </form>
+```
 
-<script>
+#### JavaScript
+
+Here, the `for` statement declares the variable `i` and initializes it to `0`. It checks that `i` is less than the number of options in the `<select>` element, performs the succeeding `if` statement, and increments `i` by 1 after each pass through the loop.
+
+```js
 function howMany(selectObject) {
   let numberSelected = 0;
   for (let i = 0; i < selectObject.options.length; i++) {
@@ -111,11 +103,12 @@ function howMany(selectObject) {
   return numberSelected;
 }
 
-let btn = document.getElementById('btn');
-btn.addEventListener('click', function() {
-  alert('Number of options selected: ' + howMany(document.selectForm.musicTypes));
+const btn = document.getElementById('btn');
+
+btn.addEventListener('click', () => {
+  const musicTypes = document.selectForm.musicTypes;
+  console.log(`You have selected ${howMany(musicTypes)} option(s).`);
 });
-</script>
 ```
 
 ## `do...while` statement
@@ -164,7 +157,7 @@ while (condition)
   statement
 ```
 
-If the *`condition `*becomes `false`,
+If the *`condition`* becomes `false`,
 `statement` within the loop stops executing and control passes to the
 statement following the loop.
 
@@ -266,9 +259,9 @@ break;
 break [label];
 ```
 
-1.  The first form of the syntax terminates the innermost enclosing loop or
+1. The first form of the syntax terminates the innermost enclosing loop or
     `switch.`
-2.  The second form of the syntax terminates the specified enclosing labeled statement.
+2. The second form of the syntax terminates the specified enclosing labeled statement.
 
 ### Example 1
 

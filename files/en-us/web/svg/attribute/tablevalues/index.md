@@ -4,17 +4,18 @@ slug: Web/SVG/Attribute/tableValues
 tags:
   - SVG
   - SVG Attribute
+spec-urls: https://drafts.fxtf.org/filter-effects//#element-attrdef-fecomponenttransfer-tablevalues
 ---
 {{SVGRef}}
 
-The **`tableValues`** attribute defines a list of numbers defining a lookup table of values for a for a color component transfer function.
+The **`tableValues`** attribute defines a list of numbers defining a lookup table of values for a color component transfer function.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feFuncA")}}
-*   {{SVGElement("feFuncB")}}
-*   {{SVGElement("feFuncG")}}
-*   {{SVGElement("feFuncR")}}
+- {{SVGElement("feFuncA")}}
+- {{SVGElement("feFuncB")}}
+- {{SVGElement("feFuncG")}}
+- {{SVGElement("feFuncR")}}
 
 ## Example
 
@@ -37,16 +38,16 @@ html, body, svg {
 
   <filter id="componentTransfer1" x="0" y="0" width="100%" height="100%">
     <feComponentTransfer>
-      <feFuncR type="table" tableValues="0 1"/>
-      <feFuncG type="table" tableValues="0 1"/>
-      <feFuncB type="table" tableValues="0 1"/>
+      <feFuncR type="table" tableValues="0 1"/>
+      <feFuncG type="table" tableValues="0 1"/>
+      <feFuncB type="table" tableValues="0 1"/>
     </feComponentTransfer>
   </filter>
   <filter id="componentTransfer2" x="0" y="0" width="100%" height="100%">
     <feComponentTransfer>
-      <feFuncR type="table" tableValues="1 0"/>
-      <feFuncG type="table" tableValues="1 0"/>
-      <feFuncB type="table" tableValues="1 0"/>
+      <feFuncR type="table" tableValues="1 0"/>
+      <feFuncG type="table" tableValues="1 0"/>
+      <feFuncB type="table" tableValues="1 0"/>
     </feComponentTransfer>
   </filter>
 
@@ -84,35 +85,11 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `<list-of-numbers>`
-    *   : This value holds a comma- and/or space-separated list of {{cssxref("number")}}s, which define a lookup table for the color component transfer function. Each number can be between `0` and `1`.
+- `<list-of-numbers>`
+  - : This value holds a comma- and/or space-separated list of {{cssxref("number")}}s, which define a lookup table for the color component transfer function. Each number can be between `0` and `1`.
 
-        An empty list results in an identity transfer function.
+    An empty list results in an identity transfer function.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "/#element-attrdef-fecomponenttransfer-tablevalues", "tableValues")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feComponentTransferTableValuesAttribute", "tableValues")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

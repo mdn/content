@@ -1,6 +1,7 @@
 ---
 title: Performance.timeOrigin
 slug: Web/API/Performance/timeOrigin
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -19,13 +20,7 @@ start time of the performance measurement.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var timeOrigin = performance.timeOrigin
-```
-
-### Value
+## Value
 
 A high resolution timestamp.
 

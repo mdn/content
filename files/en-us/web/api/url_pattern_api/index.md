@@ -1,6 +1,7 @@
 ---
 title: URL Pattern API
 slug: Web/API/URL_Pattern_API
+page-type: web-api-overview
 tags:
   - API
   - Overview
@@ -15,7 +16,7 @@ browser-compat: api.URLPattern
 
 The URL Pattern API defines a syntax that is used to create URL pattern
 matchers. These patterns can be matched against URLs or individual URL
-components. The URL Pattern API is used by the the {{domxref("URLPattern")}}
+components. The URL Pattern API is used by the {{domxref("URLPattern")}}
 interface.
 
 ## Concepts and usage
@@ -29,8 +30,8 @@ can contain:
 - Named groups (`/books/:id`) which extract a part of the matched URL.
 - Non-capturing groups (`/books{/old}?`) which make parts of a pattern optional
   or be matched multiple times.
-- {{jsxref("RegExp")}} groups (`/books/(^\d)`) which make arbitrarily complex
-  regex matches.
+- {{jsxref("RegExp")}} groups (`/books/(\\d+)`) which make arbitrarily complex
+  regex matches with a few [limitations](#regex_matchers_limitations).
 
 You can find details about the syntax in the [pattern syntax](#pattern_syntax)
 section below.
@@ -47,7 +48,7 @@ The syntax for patterns is based on the
 [path-to-regexp](https://github.com/pillarjs/path-to-regexp) JavaScript library.
 This syntax is similar to the one used in
 [Ruby on Rails](https://rubyonrails.org), or JavaScript frameworks like
-[Express](https://expressjs.com/) or [Next.js](https://next.js).
+[Express](https://expressjs.com/) or [Next.js](https://nextjs.org/).
 
 ### Fixed text and capture groups
 
@@ -90,11 +91,87 @@ console.log(pattern.test('https://example.com/books/abc')); // false
 console.log(pattern.test('https://example.com/books/')); // false
 ```
 
-### Unamed and named groups
+### Regex matchers limitations
+
+Some regex patterns do not work as you may expect:
+
+- Starts with `^` will only match if used at the start of the protocol portion of the URLPattern and is redundant if used.
+
+  ```js
+  // with `^` in pathname
+  const pattern = new URLPattern({ pathname: '(^b)' });
+  console.log(pattern.test('https://example.com/ba')); // false
+  console.log(pattern.test('https://example.com/xa')); // false
+
+  // with `^` in protocol
+  const pattern = new URLPattern({ protocol: '(^https?)' });
+  console.log(pattern.test('https://example.com/index.html')); // true
+  console.log(pattern.test('xhttps://example.com/index.html')); // false
+
+  // without `^` in protocol
+  const pattern = new URLPattern({ protocol: '(https?)' });
+  console.log(pattern.test('https://example.com/index.html')); // true
+  console.log(pattern.test('xhttps://example.com/index.html')); // false
+  ```
+
+- Ends with `$` will only match if used at the end of the hash portion of the URLPattern and is redundant if used.
+
+  ```js
+  // with `$` in pathname
+  const pattern = new URLPattern({ pathname: '(path$)' });
+  console.log(pattern.test('https://example.com/path')); // false
+  console.log(pattern.test('https://example.com/other')); // false
+
+  // with `$` in protocol
+  const pattern = new URLPattern({ hash: '(hash$)' });
+  console.log(pattern.test('https://example.com/#hash')); // true
+  console.log(pattern.test('xhttps://example.com/#otherhash')); // false
+
+  // without `$` in protocol
+  const pattern = new URLPattern({ hash: '(hash)' });
+  console.log(pattern.test('https://example.com/#hash')); // true
+  console.log(pattern.test('xhttps://example.com/#otherhash')); // false
+  ```
+
+- Lookaheads, and lookbehinds will never match any portion of the URLPattern.
+
+  ```js
+  // lookahead
+  const pattern = new URLPattern({ pathname: '(a(?=b))' });
+  console.log(pattern.test('https://example.com/ab')); // false
+  console.log(pattern.test('https://example.com/ax')); // false
+
+  // negative-lookahead
+  const pattern = new URLPattern({ pathname: '(a(?!b))' });
+  console.log(pattern.test('https://example.com/ab')); // false
+  console.log(pattern.test('https://example.com/ax')); // false
+
+  // lookbehind
+  const pattern = new URLPattern({ pathname: '((?<=b)a)' });
+  console.log(pattern.test('https://example.com/ba')); // false
+  console.log(pattern.test('https://example.com/xa')); // false
+
+  // negative-lookbehind
+  const pattern = new URLPattern({ pathname: '((?<!b)a)' });
+  console.log(pattern.test('https://example.com/ba')); // false
+  console.log(pattern.test('https://example.com/xa')); // false
+  ```
+
+- Parentheses need to be escaped in range expressions within URLPattern even though they don't in RegExp.
+
+  ```js
+  const pattern = new URLPattern({ pathname: '([()])' }); // throws
+  const pattern = new URLPattern({ pathname: '([\\(\\)])' }); // ok
+
+  const regex = new RegExp('[()]'); // ok
+  const regex = new RegExp('[\\(\\)]'); // ok
+  ```
+
+### Unnamed and named groups
 
 Groups can either be named or unnamed. Named groups are specified by prefixing
 the group name with a colon (`:`). Regexp groups that are not prefixed by a
-colon and a name are unnamed. Unamed groups are numerically indexed in the match
+colon and a name are unnamed. Unnamed groups are numerically indexed in the match
 result based on their order in the pattern.
 
 ```js
@@ -212,12 +289,12 @@ console.log(pattern.test('https://example.com/books/')); // true
 
 The wildcard token (`*`) is a shorthand for an unnamed capturing group that
 matches all characters zero or more times. You can place this anywhere in the
-pattern. The wilcard is greedy, meaning that it will match the longest possible
+pattern. The wildcard is greedy, meaning that it will match the longest possible
 string.
 
 ```js
 // A wildcard at the end of a pattern
-const pattern = new URLPattern('/books/', 'https://example.com');
+const pattern = new URLPattern('/books/*', 'https://example.com');
 console.log(pattern.test('https://example.com/books/123')); // true
 console.log(pattern.test('https://example.com/books')); // false
 console.log(pattern.test('https://example.com/books/')); // true
@@ -406,7 +483,7 @@ console.log(pattern1.search); // ''
 console.log(pattern1.hash); // ''
 
 // Equivalent to pattern1
-const pattern2 = new URLPattern('/foo/*', 'https://example.com' });
+const pattern2 = new URLPattern('/foo/*', 'https://example.com');
 
 // Throws because a relative constructor string must have a base URL to resolve
 // against.

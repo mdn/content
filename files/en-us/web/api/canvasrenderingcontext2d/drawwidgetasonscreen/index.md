@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.drawWidgetAsOnScreen()
 slug: Web/API/CanvasRenderingContext2D/drawWidgetAsOnScreen
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -26,13 +27,17 @@ only from within the chrome process.
 ## Syntax
 
 ```js
-void ctx.drawWidgetAsOnScreen(window);
+drawWidgetAsOnScreen(window)
 ```
 
 ### Parameters
 
 - `window`
   - : The {{domxref("Window")}} to render.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

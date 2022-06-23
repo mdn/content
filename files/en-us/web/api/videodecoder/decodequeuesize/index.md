@@ -1,6 +1,7 @@
 ---
 title: VideoDecoder.decodeQueueSize
 slug: Web/API/VideoDecoder/decodeQueueSize
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -32,5 +33,3 @@ console.log(VideoDecoder.decodeQueueSize);
 ## Browser compatibility
 
 {{Compat}}
-
-

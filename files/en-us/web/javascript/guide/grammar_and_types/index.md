@@ -82,9 +82,9 @@ You can declare a variable in two ways:
 - With the keyword {{jsxref("Statements/var", "var")}}. For example, `var x = 42`. This syntax can be used to declare both **local** and **global** variables, depending on the _execution context_.
 - With the keyword {{jsxref("Statements/const", "const")}} or {{jsxref("Statements/let", "let")}}. For example, `let y = 13`. This syntax can be used to declare a block-scope local variable. (See [Variable scope](#variable_scope) below.)
 
-You can declare variables to unpack values from [Object Literals](#object_literals) using the [Destructuring Assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax. For example, `let { bar } = foo`. This will create a variable named `bar` and assign to it the value corresponding to the key of the same name from our object `foo`.
+You can declare variables to unpack values from [Object Literals](#object_literals) using the [Destructuring Assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax. For example, `let { bar } = foo`. This will create a variable named `bar` and assign to it the value corresponding to the key of the same name from our object `foo`.
 
-You can also assign a value to a variable For example, `x = 42`. This form creates an **[undeclared global](/en-US/docs/Web/JavaScript/Reference/Statements/var#description)** variable. It also generates a strict JavaScript warning. Undeclared global variables can often lead to unexpected behavior. Thus, it is discouraged to use undeclared global variables.
+You can also assign a value to a variable. For example, `x = 42`. This form creates an **[undeclared global](/en-US/docs/Web/JavaScript/Reference/Statements/var#description)** variable. It also generates a strict JavaScript warning. Undeclared global variables can often lead to unexpected behavior. Thus, it is discouraged to use undeclared global variables.
 
 ### Evaluating variables
 
@@ -106,7 +106,7 @@ let x;
 console.log('The value of x is ' + x); // The value of x is undefined
 
 console.log('The value of y is ' + y); // Uncaught ReferenceError: y is not defined
-let y; 
+let y;
 ```
 
 You can use `undefined` to determine whether a variable has a value. In the following code, the variable `input` is not assigned a value, and the [`if`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement evaluates to `true`.
@@ -223,21 +223,31 @@ let x = 3;
 
 ### Function hoisting
 
-In the case of functions, only function _declarations_ are hoisted—but _not_ the function _expressions_.
+Functions are hoisted if they're defined using [function _declarations_](/en-US/docs/Web/JavaScript/Reference/Statements/function) — but functions are not hoisted if they're defined using [function _expressions_](/en-US/docs/Web/JavaScript/Reference/Operators/function).
 
-```js
-/* Function declaration */
+The following example shows how, due to function hoisting, the function `foo` can be called even before it's defined — because the `foo` function is defined using a function declaration.
 
+```js example-good
 foo(); // "bar"
 
+/* Function declaration */
 function foo() {
   console.log('bar');
 }
+```
+
+In the following example, the variable name `baz` is hoisted — due to [variable hoisting](#variable_hoisting) — but because a function is assigned to `baz` using a function expression rather than `baz` being defined with a function declaration, the function can't be called before it's defined, because it's not hoisted.
+
+Thus, the `baz()` call below throws a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) with _“baz is not a function”_, because the function assigned to `baz` isn't hoisted — while the `console.log(baz)` call doesn't throw a [`ReferenceError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError) but instead logs [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined), because the _variable_ `baz` is still hoisted even though the function assigned to it isn't. (But the value of `baz` is undefined, since nothing has yet been assigned to it).
+
+```js example-bad
+// Doesn't throw ReferenceError
+console.log(baz) // undefined
+
+// Throws 'TypeError: baz is not a function'
+baz();
 
 /* Function expression */
-
-baz(); // TypeError: baz is not a function
-
 var baz = function() {
   console.log('bar2');
 };
@@ -304,13 +314,13 @@ The latest ECMAScript standard defines eight data types:
 
 - Seven data types that are {{Glossary("Primitive", "primitives")}}:
 
-  1.  {{Glossary("Boolean")}}. `true` and `false`.
-  2.  {{Glossary("null")}}. A special keyword denoting a null value. (Because JavaScript is case-sensitive, `null` is not the same as `Null`, `NULL`, or any other variant.)
-  3.  {{Glossary("undefined")}}. A top-level property whose value is not defined.
-  4.  {{Glossary("Number")}}. An integer or floating point number. For example: `42` or `3.14159`.
-  5.  {{Glossary("BigInt")}}. An integer with arbitrary precision. For example: `9007199254740992n`.
-  6.  {{Glossary("String")}}. A sequence of characters that represent a text value. For example: "Howdy"
-  7.  {{Glossary("Symbol")}} (new in ECMAScript 2015). A data type whose instances are unique and immutable.
+  1. {{Glossary("Boolean")}}. `true` and `false`.
+  2. {{Glossary("null")}}. A special keyword denoting a null value. (Because JavaScript is case-sensitive, `null` is not the same as `Null`, `NULL`, or any other variant.)
+  3. {{Glossary("undefined")}}. A top-level property whose value is not defined.
+  4. {{Glossary("Number")}}. An integer or floating point number. For example: `42` or `3.14159`.
+  5. {{Glossary("BigInt")}}. An integer with arbitrary precision. For example: `9007199254740992n`.
+  6. {{Glossary("String")}}. A sequence of characters that represent a text value. For example: "Howdy"
+  7. {{Glossary("Symbol")}} (new in ECMAScript 2015). A data type whose instances are unique and immutable.
 
 - and {{Glossary("Object")}}
 
@@ -341,13 +351,14 @@ In expressions involving numeric and string values with the `+` operator, JavaSc
 ```js
 x = 'The answer is ' + 42 // "The answer is 42"
 y = 42 + ' is the answer' // "42 is the answer"
+z = '37' + 7 // "377"
 ```
 
 With all other operators, JavaScript does _not_ convert numeric values to strings. For example:
 
 ```js
 '37' - 7 // 30
-'37' + 7 // "377"
+'37' * 7 // 259
 ```
 
 ### Converting strings to numbers
@@ -379,7 +390,6 @@ _Literals_ represent values in JavaScript. These are fixed values—not variable
 
 - [Array literals](#array_literals)
 - [Boolean literals](#boolean_literals)
-- [Floating-point literals](#floating-point_literals)
 - [Numeric literals](#numeric_literals)
 - [Object literals](#object_literals)
 - [RegExp literals](#regexp_literals)
@@ -403,23 +413,24 @@ If an array is created using a literal in a top-level script, JavaScript interpr
 
 #### Extra commas in array literals
 
-You do not have to specify all elements in an array literal. If you put two commas in a row, the array fills in the value `undefined` for the unspecified elements. The following example creates the `fish` array:
+If you put two commas in a row in an array literal, the array leaves an empty slot for the unspecified element. The following example creates the `fish` array:
 
 ```js
 let fish = ['Lion', , 'Angel'];
 ```
 
-This array has two elements with values and one empty element:
+When you log this array, you will see:
 
-- `fish[0]` is "Lion"
-- `fish[1]` is `undefined`
-- `fish[2]` is "Angel"
+```js
+console.log(fish);
+// [ 'Lion', <1 empty item>, 'Angel' ]
+```
+
+Note that the second item is "empty", which is not exactly the same as the actual `undefined` value. When using array-traversing methods like [`Array.prototype.map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), empty slots are skipped. However, index-accessing `fish[1]` still returns `undefined`.
 
 If you include a trailing comma at the end of the list of elements, the comma is ignored.
 
 In the following example, the `length` of the array is three. There is no `myList[3]`. All other commas in the list indicate a new element.
-
-> **Note:** Trailing commas can create errors in older browser versions and it is a best practice to remove them.
 
 ```js
 let myList = ['home', , 'school', ];
@@ -428,7 +439,7 @@ let myList = ['home', , 'school', ];
 In the following example, the `length` of the array is four, and `myList[0]` and `myList[2]` are missing.
 
 ```js
-let myList = [ ,'home', , 'school'];
+let myList = [, 'home', , 'school'];
 ```
 
 In the following example, the `length` of the array is four, and `myList[1]` and `myList[3]` are missing. **Only the last comma is ignored.**
@@ -437,9 +448,23 @@ In the following example, the `length` of the array is four, and `myList[1]` and
 let myList = ['home', , 'school', , ];
 ```
 
+> **Note:** Trailing commas help keep git diffs clean when you have a multi-line array, because appending an item to the end only adds one line, but does not modify the previous line.
+>
+> ```diff
+> const myList = [
+>   "home",
+>   "school",
+> + "hospital",
+> ];
+> ```
+
 Understanding the behavior of extra commas is important to understanding JavaScript as a language.
 
-However, when writing your own code, you should explicitly declare the missing elements as `undefined`. Doing this increases your code's clarity and maintainability.
+However, when writing your own code, you should explicitly declare the missing elements as `undefined`, or at least insert a comment to highlight its absence. Doing this increases your code's clarity and maintainability.
+
+```js
+let myList = ['home', /* empty */, 'school', /* empty */, ];
+```
 
 ### Boolean literals
 
@@ -467,10 +492,12 @@ Integer and {{jsxref("BigInt")}} literals can be written in decimal (base 10), h
 
 Some examples of integer literals are:
 
-    0, 117, 123456789123456789n             (decimal, base 10)
-    015, 0001, 0o777777777777n              (octal, base 8)
-    0x1123, 0x00111, 0x123456789ABCDEFn     (hexadecimal, "hex" or base 16)
-    0b11, 0b0011, 0b11101001010101010101n   (binary, base 2)
+```
+0, 117, 123456789123456789n             (decimal, base 10)
+015, 0001, 0o777777777777n              (octal, base 8)
+0x1123, 0x00111, 0x123456789ABCDEFn     (hexadecimal, "hex" or base 16)
+0b11, 0b0011, 0b11101001010101010101n   (binary, base 2)
+```
 
 For more information, see [Numeric literals in the Lexical grammar reference](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals).
 
@@ -487,14 +514,18 @@ The exponent part is an "`e`" or "`E`" followed by an integer, which can be sign
 
 More succinctly, the syntax is:
 
-    [digits].[digits][(E|e)[(+|-)]digits]
+```
+[digits].[digits][(E|e)[(+|-)]digits]
+```
 
 For example:
 
-    3.1415926
-    .123456789
-    3.1E+12
-    .1e-23
+```
+3.1415926
+.123456789
+3.1E+12
+.1e-23
+```
 
 ### Object literals
 
@@ -556,7 +587,7 @@ Together, these also bring object literals and class declarations closer togethe
 var obj = {
     // __proto__
     __proto__: theProtoObj,
-    // Shorthand for ‘handler: handler’
+    // Shorthand for 'handler: handler'
     handler,
     // Methods
     toString() {
@@ -613,18 +644,71 @@ Template literals provide syntactic sugar for constructing strings. (This is sim
  quoted strings cannot.`
 
 // String interpolation
-var name = 'Bob', time = 'today';
+const name = 'Bob', time = 'today';
 `Hello ${name}, how are you ${time}?`
 ```
 
-[Tagged templates](/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_template) are a compact syntax for specifying a template literal along with a call to a “tag” function for parsing it; the name of the template tag function precedes the template literal — as in the following example, where the template tag function is named "`myTag`":
+[Tagged templates](/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates) are a compact syntax for specifying a template literal along with a call to a "tag" function for parsing it. A tagged template is just a more succinct and semantic way to invoke a function that processes a string and a set of relevant values. The name of the template tag function precedes the template literal — as in the following example, where the template tag function is named `print`. The `print` function will interpolate the arguments and serialize any objects or arrays that may come up, avoiding the pesky `[object Object]`.
 
 ```js
-let myTag = (str, name, age) => `${str[0]}${name}${str[1]}${age}${str[2]}`;
-let [name, age] = ['Mika', 28];
-myTag`Participant "${ name }" is ${ age } years old.`;
-// Participant "Mika" is 28 years old.
+const formatArg = (arg) => {
+  if (Array.isArray(arg)) {
+    // Print a bulleted list
+    return arg.map((part) => `- ${part}`).join("\n");
+  }
+  if (arg.toString === Object.prototype.toString) {
+    // This object will be serialized to "[object Object]".
+    // Let's print something nicer.
+    return JSON.stringify(arg);
+  }
+  return arg;
+}
+
+const print = (segments, ...args) => {
+  // For any well-formed template literal, there will always be N args and
+  // (N+1) string segments.
+  let message = segments[0];
+  segments.slice(1).forEach((segment, index) => {
+    message += formatArg(args[index]) + segment;
+  });
+  console.log(message);
+}
+
+const todos = [
+  "Learn JavaScript",
+  "Learn Web APIs",
+  "Set up my website",
+  "Profit!",
+];
+
+const progress = { javascript: 20, html: 50, css: 10 };
+
+print`I need to do:
+${todos}
+My current progress is: ${progress}
+`;
+
+// I need to do:
+// - Learn JavaScript
+// - Learn Web APIs
+// - Set up my website
+// - Profit!
+// My current progress is: {"javascript":20,"html":50,"css":10}
 ```
+
+Since tagged template literals are just sugar of function calls, you can re-write the above as an equivalent function call:
+
+```js
+print(["I need to do:\n", "\nMy current progress is: ", "\n"], todos, progress);
+```
+
+This may be reminiscent of the `console.log`-style interpolation:
+
+```js
+console.log("I need to do:\n%o\nMy current progress is: %o\n", todos, progress);
+```
+
+You can see how the tagged template reads more naturally than a traditional "formatter" function, where the variables and the template itself have to be declared separately.
 
 #### Using special characters in strings
 
@@ -703,12 +787,10 @@ The following table lists the special characters that you can use in JavaScript 
         <code>\x<em>XX</em></code>
       </td>
       <td>
-        <p>
-          The character with the Latin-1 encoding specified by the two
-          hexadecimal digits <em>XX</em> between <code>00</code> and
-          <code>FF</code>.<br />For example, <code>\xA9</code> is the
-          hexadecimal sequence for the copyright symbol.
-        </p>
+        The character with the Latin-1 encoding specified by the two
+        hexadecimal digits <em>XX</em> between <code>00</code> and
+        <code>FF</code>.<br />For example, <code>\xA9</code> is the
+        hexadecimal sequence for the copyright symbol.
       </td>
     </tr>
     <tr>
@@ -750,7 +832,9 @@ console.log(quote);
 
 The result of this would be:
 
-    He read "The Cremation of Sam McGee" by R.W. Service.
+```
+He read "The Cremation of Sam McGee" by R.W. Service.
+```
 
 To include a literal backslash inside a string, you must escape the backslash character. For example, to assign the file path `c:\temp` to a string, use the following:
 
@@ -785,7 +869,7 @@ var poem =
 `Roses are red,
 Violets are blue.
 Sugar is sweet,
-and so is foo.` 
+and so is foo.`
 ```
 
 ## More information

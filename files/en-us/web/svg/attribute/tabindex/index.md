@@ -53,29 +53,12 @@ html, body, svg {
   </tbody>
 </table>
 
-*   valid integer
-    *   : Relative order of the element for the purposes of sequential focus navigation.
+- valid integer
+  - : Relative order of the element for the purposes of sequential focus navigation.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "struct.html#SVGElementTabindexAttribute", "tabindex")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -83,4 +66,4 @@ html, body, svg {
 
 ## See also
 
-*   [HTML `tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex)
+- [HTML `tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex)

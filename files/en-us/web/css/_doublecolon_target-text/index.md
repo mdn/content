@@ -16,13 +16,15 @@ The **`::target-text`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/
 
 ```css
 ::target-text {
-  background-color: pink;
+  background-color: pink;
 }
 ```
 
 ## Syntax
 
-{{csssyntax}}
+```
+::target-text
+```
 
 ## Examples
 
@@ -32,7 +34,6 @@ The **`::target-text`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/
 ::target-text {
   background-color: rebeccapurple;
   color: white;
-  font-weight: bold;
 }
 ```
 

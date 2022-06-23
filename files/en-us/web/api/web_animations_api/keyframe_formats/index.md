@@ -1,6 +1,7 @@
 ---
 title: Keyframe Formats
 slug: Web/API/Web_Animations_API/Keyframe_Formats
+page-type: guide
 tags:
   - API
   - Animation
@@ -11,16 +12,17 @@ tags:
   - setKeyframes()
   - waapi
   - web animations api
+browser-compat: api.Element.animate
 ---
 {{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
-{{domxref("Element.animate()")}}, {{domxref("KeyframeEffect.KeyframeEffect()")}}, and {{domxref("KeyframeEffect.setKeyframes()")}} all accept objects formatted to represent a set of keyframes. There are several options to this format, which are explained below.
+{{domxref("Element.animate()")}}, {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}, and {{domxref("KeyframeEffect.setKeyframes()")}} all accept objects formatted to represent a set of keyframes. There are several options to this format, which are explained below.
 
 ## Syntax
 
 There are two different ways to format keyframes:
 
-1.  An `array` of objects (keyframes) consisting of properties and values to iterate over. This is the canonical format returned by the {{domxref("KeyframeEffect.getKeyframes()", "getKeyframes()")}} method.
+1. An `array` of objects (keyframes) consisting of properties and values to iterate over. This is the canonical format returned by the {{domxref("KeyframeEffect.getKeyframes()", "getKeyframes()")}} method.
 
     ```js
     element.animate([
@@ -59,7 +61,7 @@ There are two different ways to format keyframes:
 
     In this example, the specified easing only applies from the keyframe where it is specified until the next keyframe. Any `easing` value specified on the `options` argument, however, applies across a single iteration of the animation — for the entire duration.
 
-2.  An `object` containing key-value pairs consisting of the property to animate and an `array` of values to iterate over.
+2. An `object` containing key-value pairs consisting of the property to animate and an `array` of values to iterate over.
 
     ```js
     element.animate({
@@ -119,36 +121,19 @@ The following special attributes may also be specified:
 - easing
   - : The [timing function](/en-US/docs/Web/CSS/easing-function) used from this keyframe until the next keyframe in the series.
 - composite
-  - : The {{domxref("KeyframeEffect.composite")}} operation used to combine the values specified in this keyframe with the underlying value. This will be `auto` if the composite operation specified on the effect is being used.
+  - : The {{domxref("KeyframeEffect.composite")}} operation used to combine the values specified in this keyframe with the underlying value. This will be `auto` if the composite operation specified on the effect is being used.
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Web Animations", "#processing-a-keyframes-argument", "Keyframe object formats")}}
-      </td>
-      <td>{{Spec2('Web Animations')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-### `Element.animate`
-
-{{Compat("api.Element.animate")}}
+{{Compat}}
 
 ## See also
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
 - {{domxref("Element.animate()")}}
-- {{domxref("KeyframeEffect.KeyframeEffect()")}}
+- {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}
 - {{domxref("KeyframeEffect.setKeyframes()")}}

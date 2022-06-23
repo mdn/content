@@ -11,8 +11,8 @@ browser-compat: javascript.statements.break
 {{jsSidebar("Statements")}}
 
 The **`break` statement** terminates the current loop,
-{{jsxref("Statements/switch", "switch")}}, or {{jsxref("Statements/label", "label", "",
-  1)}} statement and transfers program control to the statement following the terminated
+{{jsxref("Statements/switch", "switch")}}, or {{jsxref("Statements/label", "label", "", 1)}}
+statement and transfers program control to the statement following the terminated
 statement.
 
 {{EmbedInteractiveExample("pages/js/statement-break.html")}}
@@ -66,7 +66,7 @@ function testBreak(x) {
 
 The following code has a `break` statement that terminates the
 {{jsxref("Statements/switch", "switch")}} statement when a case is matched and the
-corresponding code has ran
+corresponding code has run.
 
 ```js
 const food = "sushi";

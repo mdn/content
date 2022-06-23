@@ -1,6 +1,7 @@
 ---
 title: SVGFEDropShadowElement
 slug: Web/API/SVGFEDropShadowElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGFEDropShadowElement
 
 The **`SVGFEDropShadowElement`** interface corresponds to the {{SVGElement("feDropShadow")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

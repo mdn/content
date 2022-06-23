@@ -44,7 +44,7 @@ necessarily non-writable).
 
 ```js
 // Objects aren't sealed by default.
-var empty = {};
+const empty = {};
 Object.isSealed(empty); // === false
 
 // If you make an empty object non-extensible,
@@ -54,20 +54,20 @@ Object.isSealed(empty); // === true
 
 // The same is not true of a non-empty object,
 // unless its properties are all non-configurable.
-var hasProp = { fee: 'fie foe fum' };
+const hasProp = { fee: 'fie foe fum' };
 Object.preventExtensions(hasProp);
 Object.isSealed(hasProp); // === false
 
 // But make them all non-configurable
 // and the object becomes sealed.
 Object.defineProperty(hasProp, 'fee', {
-  configurable: false
+  configurable: false
 });
 Object.isSealed(hasProp); // === true
 
 // The easiest way to seal an object, of course,
 // is Object.seal.
-var sealed = {};
+const sealed = {};
 Object.seal(sealed);
 Object.isSealed(sealed); // === true
 
@@ -79,11 +79,11 @@ Object.isExtensible(sealed); // === false
 Object.isFrozen(sealed); // === true
 // (all properties also non-writable)
 
-var s2 = Object.seal({ p: 3 });
+const s2 = Object.seal({ p: 3 });
 Object.isFrozen(s2); // === false
 // ('p' is still writable)
 
-var s3 = Object.seal({ get p() { return 0; } });
+const s3 = Object.seal({ get p() { return 0; } });
 Object.isFrozen(s3); // === true
 // (only configurability matters for accessor properties)
 ```

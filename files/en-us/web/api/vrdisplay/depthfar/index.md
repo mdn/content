@@ -1,9 +1,10 @@
 ---
 title: VRDisplay.depthFar
 slug: Web/API/VRDisplay/depthFar
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -21,17 +22,10 @@ The **`depthFar`** property of the {{domxref("VRDisplay")}} interface gets and s
 
 Generally you should leave the value as is, but you might want to reduce it if you are trying to improve performance on slower computers.
 
-## Syntax
+## Value
 
-```js
-var mydepthFar = vrDisplayInstance.depthFar;
-
-vrDisplayInstance.depthFar = 7500.0;
-```
-
-### Value
-
-A double, representing the z-depth in meters; its initial value is `10000.0`.
+A double, representing the z-depth in meters.
+It initial value is `10000.0`.
 
 ## Examples
 
@@ -39,7 +33,7 @@ A double, representing the z-depth in meters; its initial value is `10000.0`.
 var vrDisplay;
 
 navigator.getVRDisplays().then(function(displays) {
-  vrDisplay = displays[0];
+  vrDisplay = displays[0];
   vrDisplay.depthNear = 1.0;
   vrDisplay.depthFar = 7500.0;
 });
@@ -49,7 +43,7 @@ navigator.getVRDisplays().then(function(displays) {
 
 This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/).
 
 ## Browser compatibility
 

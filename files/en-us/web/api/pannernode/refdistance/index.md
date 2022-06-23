@@ -1,6 +1,7 @@
 ---
 title: PannerNode.refDistance
 slug: Web/API/PannerNode/refDistance
+page-type: web-api-instance-property
 tags:
   - API
   - PannerNode
@@ -12,28 +13,20 @@ browser-compat: api.PannerNode.refDistance
 ---
 {{ APIRef("Web Audio API") }}
 
-The `refDistance` property of the {{ domxref("PannerNode") }} interface is a double value representing the reference distance for reducing volume as the audio source moves further from the listener – i.e. the distance at which the volume reduction starts taking effect. This value is used by all distance models.
+The `refDistance` property of the {{ domxref("PannerNode") }} interface is a double value representing the reference distance for reducing volume as the audio source moves further from the listener – i.e. the distance at which the volume reduction starts taking effect. This value is used by all distance models.
 
 The `refDistance` property's default value is `1`.
 
-## Syntax
+## Value
 
-```js
-var audioCtx = new AudioContext();
-var panner = audioCtx.createPanner();
-panner.refDistance = 1;
-```
-
-### Value
-
-A non-negative number. If the value is set to less than 0, a `RangeError` is thrown.
+A non-negative number. If the value is set to less than 0, a {{jsxref("RangeError")}} is thrown.
 
 ### Exceptions
 
-- `RangeError`
-  - : The property has been given a value that is outside the accepted range.
+- {{jsxref("RangeError")}}
+  - : Thrown if the property has been given a value that is outside the accepted range.
 
-## Example
+## Examples
 
 This example demonstrates how different values of {{ domxref("PannerNode.refDistance", "refDistance") }} affect how the volume of a sound decays as it moves away from the listener. Unlike {{ domxref("PannerNode.rolloffFactor", "rolloffFactor") }}, changing this value also _delays_ the volume decay until the sound moves past the reference point.
 
@@ -74,7 +67,7 @@ scheduleTestTone(7, context.currentTime + NOTE_LENGTH * 2);
 
 After running this code, the resulting waveforms should look something like this:
 
-![A waveform visualisation of three oscillator tones produced in Web Audio. Each oscillator moves away from the listener at the same speed, but with different refDistances affecting the resulting volume decay.](screen_shot_2018-10-11_at_23.14.32.png)
+![A waveform visualization of three oscillator tones produced in Web Audio. Each oscillator moves away from the listener at the same speed, but with different refDistances affecting the resulting volume decay.](screen_shot_2018-10-11_at_23.14.32.png)
 
 ## Specifications
 
@@ -87,4 +80,4 @@ After running this code, the resulting waveforms should look something like this
 ## See also
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web Audio spatialisation basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Web Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)

@@ -1,6 +1,7 @@
 ---
 title: Multi-touch interaction
 slug: Web/API/Pointer_events/Multi-touch_interaction
+page-type: guide
 tags:
   - Guide
   - Pointer Events
@@ -8,15 +9,15 @@ tags:
 ---
 {{DefaultAPISidebar("Pointer Events")}}
 
-Pointer events extend DOM input events to support various pointing input devices such as pen/stylus and touch screens as well as mouse. The _pointer_ is a hardware-agnostic device that can target a specific set of screen coordinates. Having a single event model for pointers can simplify creating Web sites, applications and provide a good user experience regardless of the user's hardware.
+Pointer events extend DOM input events to support various pointing input devices such as pen/stylus and touch screens as well as mouse. The _pointer_ is a hardware-agnostic device that can target a specific set of screen coordinates. Having a single event model for pointers can simplify creating Web sites, applications and provide a good user experience regardless of the user's hardware.
 
-Pointer events have many similarities to mouse events but they support multiple simultaneous pointers such as multiple fingers on a touch screen. This additional feature can be used to provide richer user interaction models but at the cost of additional complexity in the multi-touch interaction handling. This document demonstrates via example code, using pointer events with different multi-touch interactions.
+Pointer events have many similarities to mouse events but they support multiple simultaneous pointers such as multiple fingers on a touch screen. This additional feature can be used to provide richer user interaction models but at the cost of additional complexity in the multi-touch interaction handling. This document demonstrates via example code, using pointer events with different multi-touch interactions.
 
-A _live_ version of this application is available on [Github](https://mdn.github.io/dom-examples/pointerevents/Multi-touch_interaction.html). The [source code is available on Github](https://github.com/mdn/dom-examples/blob/master/pointerevents/Multi-touch_interaction.html); pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
+A _live_ version of this application is available on [GitHub](https://mdn.github.io/dom-examples/pointerevents/Multi-touch_interaction.html). The [source code is available on GitHub](https://github.com/mdn/dom-examples/blob/master/pointerevents/Multi-touch_interaction.html); pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
 
 ## Example
 
-This example demonstrates using pointer events' various event types ({{event("pointerdown")}}, {{event("pointermove")}}, {{event("pointerup")}} {{event("pointercancel")}}, etc.) for different multi-touch interactions.
+This example demonstrates using pointer events' various event types ({{domxref("HTMLElement/pointerdown_event", "pointerdown")}}, {{domxref("HTMLElement/pointermove_event", "pointermove")}}, {{domxref("HTMLElement/pointerup_event", "pointerup")}} {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}, etc.) for different multi-touch interactions.
 
 ### Define touch targets
 
@@ -45,7 +46,7 @@ The application uses {{HTMLElement("div")}} to define three different touch targ
 
 ### Global state
 
-To support multi-touch interaction, preserving a pointer's event state during various event phases is required. This application uses three arrays to cache event state, one cache per target element.
+To support multi-touch interaction, preserving a pointer's event state during various event phases is required. This application uses three arrays to cache event state, one cache per target element.
 
 ```js
 // Log events flag
@@ -59,7 +60,7 @@ var evCache3 = new Array();
 
 ### Register event handlers
 
-Event handlers are registered for the following pointer events: {{event("pointerdown")}}, {{event("pointermove")}} and {{event("pointerup")}}. The handler for {{event("pointerup")}} is used for the {{event("pointercancel")}}, {{event("pointerout")}} and {{event("pointerleave")}} events, since these four events have the same semantics in this application.
+Event handlers are registered for the following pointer events: {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}, {{domxref("HTMLElement/pointermove_event", "pointermove")}} and {{domxref("HTMLElement/pointerup_event", "pointerup")}}. The handler for {{domxref("HTMLElement/pointerup_event", "pointerup")}} is used for the {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}, {{domxref("HTMLElement/pointerout_event", "pointerout")}} and {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} events, since these four events have the same semantics in this application.
 
 ```js
 function set_handlers(name) {
@@ -85,9 +86,9 @@ function init() {
 
 ### Pointer down
 
-The {{event("pointerdown")}} event is fired when a pointer (mouse, pen/stylus or touch point on a touchscreen) makes contact with the _contact surface_. The event's state must be cached, in case this down event is part of a multi-touch interaction.
+The {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event is fired when a pointer (mouse, pen/stylus or touch point on a touchscreen) makes contact with the _contact surface_. The event's state must be cached, in case this down event is part of a multi-touch interaction.
 
-In this application, when a pointer is placed down on an element, the background color of the element changes, depending on the number of active touch points the element has. See the [`update_background`](#update_background_color) function for more details about the color changes.
+In this application, when a pointer is placed down on an element, the background color of the element changes, depending on the number of active touch points the element has. See the [`update_background`](#update_background_color) function for more details about the color changes.
 
 ```js
 function pointerdown_handler(ev) {
@@ -102,9 +103,9 @@ function pointerdown_handler(ev) {
 
 ### Pointer move
 
-The {{event("pointermove")}} handler is called when the pointer moves. It may be called multiple times (for example, if the user moves the pointer) before a different event type is fired.
+The {{domxref("HTMLElement/pointermove_event", "pointermove")}} handler is called when the pointer moves. It may be called multiple times (for example, if the user moves the pointer) before a different event type is fired.
 
-In this application, a pointer move is represented by the target's border being set to `dashed` to provide a clear visual indication that the element has received this event.
+In this application, a pointer move is represented by the target's border being set to `dashed` to provide a clear visual indication that the element has received this event.
 
 ```js
 function pointermove_handler(ev) {
@@ -121,9 +122,9 @@ function pointermove_handler(ev) {
 
 ### Pointer up
 
-The {{event("pointerup")}} event is fired when a pointer is raised from the _contact surface_. When this occurs, the event is removed from the associated event cache.
+The {{domxref("HTMLElement/pointerup_event", "pointerup")}} event is fired when a pointer is raised from the _contact surface_. When this occurs, the event is removed from the associated event cache.
 
-In this application, this handler is also used for {{event("pointercancel")}}, {{event("pointerleave")}} and {{event("pointerout")}} events.
+In this application, this handler is also used for {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}, {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} and {{domxref("HTMLElement/pointerout_event", "pointerout")}} events.
 
 ```js
 function pointerup_handler(ev) {

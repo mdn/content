@@ -1,6 +1,7 @@
 ---
 title: SVGMarkerElement.setOrientToAuto()
 slug: Web/API/SVGMarkerElement/setOrientToAuto
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,12 +17,16 @@ The **`setOrientToAuto()`** method of the {{domxref("SVGMarkerElement")}} interf
 ## Syntax
 
 ```js
-setOrientToAuto();
+setOrientToAuto()
 ```
 
 ### Parameters
 
 None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

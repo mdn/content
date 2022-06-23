@@ -20,9 +20,9 @@ The `nth-last-col` pseudo-class is specified with a single argument, which repre
 
 See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
 
-### Formal syntax
-
-{{csssyntax}}
+```
+:nth-last-col
+```
 
 ## Examples
 

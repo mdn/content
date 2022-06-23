@@ -1,6 +1,7 @@
 ---
 title: Range.endOffset
 slug: Web/API/Range/endOffset
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -23,13 +24,11 @@ boundary point of the {{domxref("Range")}}. This property is read-only. To chang
 `endOffset` of a {{domxref("Range")}}, use one of the
 {{domxref("Range.setEnd")}} methods.
 
-## Syntax
+## Value
 
-```js
-endRangeOffset = range.endOffset;
-```
+A number.
 
-## Example
+## Examples
 
 ```js
 var range = document.createRange();

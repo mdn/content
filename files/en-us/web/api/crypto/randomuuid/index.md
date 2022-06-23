@@ -1,6 +1,7 @@
 ---
 title: Crypto.randomUUID()
 slug: Web/API/Crypto/randomUUID
+page-type: web-api-instance-method
 tags:
   - API
   - Crypto
@@ -19,16 +20,20 @@ The **`randomUUID()`** method of the {{domxref("Crypto")}} interface is used to 
 ## Syntax
 
 ```js
-crypto.randomUUID()
+randomUUID()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
-A {{domxref("DOMString")}} containing a randomly generated, 36 character long v4 UUID.
+A string containing a randomly generated, 36 character long v4 UUID.
 
 ## Examples
 
-The method is accessed through the global {{domxref("crypto_property", "crypto")}} property.
+The method is accessed through the global {{domxref("crypto_property", "crypto")}} property.
 
 ```js
 /* Assuming that self.crypto.randomUUID() is available */

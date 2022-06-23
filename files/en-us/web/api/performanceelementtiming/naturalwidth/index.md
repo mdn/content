@@ -1,6 +1,7 @@
 ---
 title: PerformanceElementTiming.naturalWidth
 slug: Web/API/PerformanceElementTiming/naturalWidth
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,13 +14,7 @@ browser-compat: api.PerformanceElementTiming.naturalWidth
 
 The **`naturalWidth`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the intrinsic width of the image element.
 
-## Syntax
-
-```js
-var width = PerformanceElementTiming.naturalWidth;
-```
-
-### Value
+## Value
 
 An unsigned 32-bit integer (unsigned long) which is the intrinsic width of the image if this is applied to an image, 0 for text.
 

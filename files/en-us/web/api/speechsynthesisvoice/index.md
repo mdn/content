@@ -1,9 +1,9 @@
 ---
 title: SpeechSynthesisVoice
 slug: Web/API/SpeechSynthesisVoice
+page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Interface
   - Reference
   - SpeechSynthesisVoice
@@ -12,9 +12,10 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisVoice
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
-The **`SpeechSynthesisVoice`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a voice that the system supports. Every `SpeechSynthesisVoice` has its own relative speech service including information about language, name and URI.
+The **`SpeechSynthesisVoice`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a voice that the system supports.
+Every `SpeechSynthesisVoice` has its own relative speech service including information about language, name and URI.
 
 ## Properties
 
@@ -31,7 +32,7 @@ The **`SpeechSynthesisVoice`** interface of the [Web Speech API](/en-US/docs/Web
 
 ## Examples
 
-The following snippet is excerpted from our [Speech synthesiser demo](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis).
+The following snippet is excerpted from our [Speech synthesizer demo](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speak-easy-synthesis/script.js).
 
 ```js
 var synth = window.speechSynthesis;

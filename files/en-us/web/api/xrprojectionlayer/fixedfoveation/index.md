@@ -1,6 +1,7 @@
 ---
 title: XRProjectionLayer.fixedFoveation
 slug: Web/API/XRProjectionLayer/fixedFoveation
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -21,6 +22,7 @@ It is most useful for low-contrast textures such as background images, but less 
 ## Value
 
 A number between 0 and 1.
+
 - The minimum amount of foveation is indicated by 0 (full resolution).
 - The maximum amount of foveation is indicated by 1 (the edges render at lower resolution).
 
@@ -45,6 +47,7 @@ The `fixedFoveation` property allows you to set the level of foveation at runtim
 let glProjectionLayer = glBinding.createProjectionLayer(/* ... */);
 glProjectionLayer.fixedFoveation = 1; // maximum foveation
 ```
+
 ## Specifications
 
 {{Specifications}}

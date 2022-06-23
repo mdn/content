@@ -1,6 +1,7 @@
 ---
 title: WebSocket
 slug: Web/API/WebSocket
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -17,9 +18,11 @@ To construct a `WebSocket`, use the [`WebSocket()`](/en-US/docs/Web/API/WebSocke
 
 {{AvailableInWorkers}}
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
-- {{domxref("WebSocket.WebSocket", "WebSocket(url[, protocols])")}}
+- {{domxref("WebSocket.WebSocket", "WebSocket()")}}
   - : Returns a newly created `WebSocket` object.
 
 ## Properties
@@ -30,14 +33,6 @@ To construct a `WebSocket`, use the [`WebSocket()`](/en-US/docs/Web/API/WebSocke
   - : The number of bytes of queued data.
 - {{domxref("WebSocket.extensions")}} {{readonlyinline}}
   - : The extensions selected by the server.
-- {{domxref("WebSocket.onclose")}}
-  - : An event listener to be called when the connection is closed.
-- {{domxref("WebSocket.onerror")}}
-  - : An event listener to be called when an error occurs.
-- {{domxref("WebSocket.onmessage")}}
-  - : An event listener to be called when a message is received from the server.
-- {{domxref("WebSocket.onopen")}}
-  - : An event listener to be called when the connection is opened.
 - {{domxref("WebSocket.protocol")}} {{readonlyinline}}
   - : The sub-protocol selected by the server.
 - {{domxref("WebSocket.readyState")}} {{readonlyinline}}
@@ -47,9 +42,9 @@ To construct a `WebSocket`, use the [`WebSocket()`](/en-US/docs/Web/API/WebSocke
 
 ## Methods
 
-- {{domxref("WebSocket.close", "WebSocket.close([code[, reason]])")}}
+- {{domxref("WebSocket.close()")}}
   - : Closes the connection.
-- {{domxref("WebSocket.send", "WebSocket.send(data)")}}
+- {{domxref("WebSocket.send()")}}
   - : Enqueues data to be transmitted.
 
 ## Events
@@ -58,16 +53,16 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{domxref("WebSocket/close_event", "close")}}
   - : Fired when a connection with a `WebSocket` is closed.
-    Also available via the {{domxref("WebSocket/onclose", "onclose")}} property
+    Also available via the `onclose` property
 - {{domxref("WebSocket/error_event", "error")}}
   - : Fired when a connection with a `WebSocket` has been closed because of an error, such as when some data couldn't be sent.
-    Also available via the {{domxref("WebSocket/onerror", "onerror")}} property.
+    Also available via the `onerror` property.
 - {{domxref("WebSocket/message_event", "message")}}
   - : Fired when data is received through a `WebSocket`.
-    Also available via the {{domxref("WebSocket/onmessage", "onmessage")}} property.
+    Also available via the `onmessage` property.
 - {{domxref("WebSocket/open_event", "open")}}
   - : Fired when a connection with a `WebSocket` is opened.
-    Also available via the {{domxref("WebSocket/onopen", "onopen")}} property.
+    Also available via the `onopen` property.
 
 ## Examples
 

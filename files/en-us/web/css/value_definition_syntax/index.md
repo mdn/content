@@ -6,6 +6,7 @@ tags:
   - Guide
   - Reference
   - Syntax
+spec-urls: https://drafts.csswg.org/css-values/#value-defs
 ---
 {{CSSRef}}
 
@@ -21,9 +22,9 @@ The definition syntax describes which values are allowed and the interactions be
 
 A keyword with a predefined meaning appears literally, without quotation marks. For example: `auto`, `smaller` or `ease-in`.
 
-#### The specific case of `inherit`, `initial` and `unset`
+#### The specific case of `inherit`, `initial` and `unset`
 
-All CSS properties accept the keywords `inherit`, `initial` and `unset`, that are defined throughout CSS. They are not shown in the value definition, and are implicitly defined.
+All CSS properties accept the keywords `inherit`, `initial` and `unset`, that are defined throughout CSS. They are not shown in the value definition, and are implicitly defined.
 
 ### Literals
 
@@ -154,7 +155,7 @@ But not:
 - `center 3%`, as only one of the components must be present.
 - `3em 4.5em`, as a component must be present at most one time.
 
-> **Note:** the double bar has precedence over the single bar, meaning that `bold | thin || <length>` is equivalent to `bold | [ thin || <length> ]`. It describes `bold`, `thin`, `<length>`, `<length> thin`, or `thin <length> `but not `bold <length>` as only one entity from each side of the `|` combinator can be present.
+> **Note:** the double bar has precedence over the single bar, meaning that `bold | thin || <length>` is equivalent to `bold | [ thin || <length> ]`. It describes `bold`, `thin`, `<length>`, `<length> thin`, or `thin <length>` but not `bold <length>` as only one entity from each side of the `|` combinator can be present.
 
 ## Component value multipliers
 
@@ -381,11 +382,7 @@ But not:
 
 ## Specifications
 
-| Specification                                                                                                | Status                           | Comment                               |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------- |
-| {{SpecName("CSS3 Values", "#value-defs", "Value definition syntax")}}                 | {{Spec2("CSS3 Values")}} | Adds the hash mark multiplier.        |
-| {{SpecName("CSS2.1", "about.html#value-defs", "Value definition syntax")}}         | {{Spec2("CSS2.1")}}         | Adds the double ampersand combinator. |
-| {{SpecName("CSS1", "#notation-for-property-values", "Value definition syntax")}} | {{Spec2("CSS1")}}         | Initial definition                    |
+{{Specifications}}
 
 ## See also
 

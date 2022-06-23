@@ -1,16 +1,13 @@
 ---
 title: Blob.stream()
 slug: Web/API/Blob/stream
+page-type: web-api-instance-method
 tags:
   - API
   - Blob
-  - Change
-  - Convert
   - File API
   - Method
-  - ReadableStream
   - Reference
-  - stream
 browser-compat: api.Blob.stream
 ---
 {{APIRef("File API")}}
@@ -22,14 +19,14 @@ which upon reading returns the data contained within the `Blob`.
 ## Syntax
 
 ```js
-var stream = blob.stream();
+stream()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 A {{domxref("ReadableStream")}} which, upon reading, returns the contents of the
 `Blob`.

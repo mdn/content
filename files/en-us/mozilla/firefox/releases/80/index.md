@@ -9,16 +9,16 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 80 that will affect developers. Firefox 80 was released on August 25, 2020.
+This article provides information about the changes in Firefox 80 that will affect developers. Firefox 80 was released on August 25, 2020.
 
 ## Changes for web developers
 
 ### Developer Tools
 
-- You can now block and unblock network requests using the `:block` and `:unblock` [helper commands](/en-US/docs/Tools/Web_Console/Helpers) in the Web Console ({{bug("1546394")}}).
-- When [adding a class](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#viewing_and_changing_classes_on_an_element) to an element in the Page Inspector's Rules pane, existing classes are suggested with autocomplete (Refer to {{bug("1492797")}}).
-- When the Debugger [breaks on an exception](/en-US/docs/Tools/Debugger/How_to/Breaking_on_exceptions), the tooltip in the source pane now shows a disclosure triangle that reveals a stack trace ({{bug("1643633")}}).
-- In the [Network Monitor request list](/en-US/docs/Tools/Network_Monitor/request_list#network_request_columns), a turtle icon is shown for "slow" requests that exceed a configurable threshold for the waiting time ({{bug("1648373")}}).
+- You can now block and unblock network requests using the `:block` and `:unblock` [helper commands](https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html) in the Web Console ({{bug("1546394")}}).
+- When [adding a class](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#viewing-and-changing-classes-on-an-element) to an element in the Page Inspector's Rules pane, existing classes are suggested with autocomplete (Refer to {{bug("1492797")}}).
+- When the Debugger [breaks on an exception](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/breaking_on_exceptions/index.html), the tooltip in the source pane now shows a disclosure triangle that reveals a stack trace ({{bug("1643633")}}).
+- In the [Network Monitor request list](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#network-request-columns), a turtle icon is shown for "slow" requests that exceed a configurable threshold for the waiting time ({{bug("1648373")}}).
 
 ### HTML
 

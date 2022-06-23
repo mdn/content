@@ -1,6 +1,7 @@
 ---
 title: Screen.unlockOrientation()
 slug: Web/API/Screen/unlockOrientation
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -19,20 +20,24 @@ method should be used instead.
 > **Warning:** This feature is deprecated and should be avoided. Use the {{DOMxRef("ScreenOrientation.unlock()")}} method instead.
 
 > **Note:** This method only works for installed Web apps or for Web pages
-> in [full-screen mode](/en-US/docs/Web/API/Fullscreen_API).
+> in [fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
 
 ## Syntax
 
 ```js
-var unlocked = window.screen.unlockOrientation();
+unlockOrientation()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
 Returns `true` if the orientation was successfully unlocked or
 `false` if the orientation couldn't be unlocked.
 
-## Example
+## Examples
 
 ```js
 var unlockOrientation = screen.unlockOrientation || screen.mozUnlockOrientation || screen.msUnlockOrientation || (screen.orientation && screen.orientation.unlock);
@@ -58,5 +63,5 @@ Use {{domxref("ScreenOrientation.unlock()")}} instead.
 
 - {{DOMxRef("Screen.orientation")}}
 - {{DOMxRef("Screen.lockOrientation()")}}
-- {{DOMxRef("Screen.onorientationchange")}}
+- {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} event
 - [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

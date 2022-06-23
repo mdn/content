@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore
 slug: Web/API/IDBObjectStore
+page-type: web-api-interface
 tags:
   - API
   - IDBObjectStore
@@ -11,7 +12,7 @@ browser-compat: api.IDBObjectStore
 ---
 {{APIRef("IndexedDB")}}
 
-The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) represents an object store in a database. Records within an object store are sorted according to their keys. This sorting enables fast insertion, look-up, and ordered retrieval.
+The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) represents an object store in a database. Records within an object store are sorted according to their keys. This sorting enables fast insertion, look-up, and ordered retrieval.
 
 {{AvailableInWorkers}}
 
@@ -31,7 +32,7 @@ The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/In
 ## Methods
 
 - {{domxref("IDBObjectStore.add()")}}
-  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) of the `value`, and stores the cloned value in the object store. This is for adding new records to an object store.
+  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#structured-clone) of the `value`, and stores the cloned value in the object store. This is for adding new records to an object store.
 - {{domxref("IDBObjectStore.clear()")}}
   - : Creates and immediately returns an {{domxref("IDBRequest")}} object, and clears this object store in a separate thread. This is for deleting all current records out of an object store.
 - {{domxref("IDBObjectStore.count()")}}
@@ -39,17 +40,17 @@ The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/In
 - {{domxref("IDBObjectStore.createIndex()")}}
   - : Creates a new index during a version upgrade, returning a new {{domxref("IDBIndex")}} object in the connected database.
 - {{domxref("IDBObjectStore.delete()")}}
-  - : returns an {{domxref("IDBRequest")}} object, and, in a separate thread, deletes the store object selected by the specified key. This is for deleting individual records out of an object store.
+  - : returns an {{domxref("IDBRequest")}} object, and, in a separate thread, deletes the store object selected by the specified key. This is for deleting individual records out of an object store.
 - {{domxref("IDBObjectStore.deleteIndex()")}}
   - : Destroys the specified index in the connected database, used during a version upgrade.
 - {{domxref("IDBObjectStore.get()")}}
-  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, returns the store object store selected by the specified key. This is for retrieving specific records from an object store.
+  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, returns the store object store selected by the specified key. This is for retrieving specific records from an object store.
 - {{domxref("IDBObjectStore.getKey()")}}
   - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread retrieves and returns the record key for the object in the object stored matching the specified parameter.
 - {{domxref("IDBObjectStore.getAll()")}}
-  - : Returns an {{domxref("IDBRequest")}} object retrieves all objects in the object store matching the specified parameter or all objects in the store if no parameters are given.
+  - : Returns an {{domxref("IDBRequest")}} object retrieves all objects in the object store matching the specified parameter or all objects in the store if no parameters are given.
 - {{domxref("IDBObjectStore.getAllKeys()")}}
-  - : Returns an {{domxref("IDBRequest")}} object retrieves record keys for all objects in the object store matching the specified parameter or all objects in the store if no parameters are given.
+  - : Returns an {{domxref("IDBRequest")}} object retrieves record keys for all objects in the object store matching the specified parameter or all objects in the store if no parameters are given.
 - {{domxref("IDBObjectStore.index()")}}
   - : Opens an index from this object store after which it can, for example, be used to return a sequence of records sorted by that index using a cursor.
 - {{domxref("IDBObjectStore.openCursor()")}}
@@ -57,18 +58,18 @@ The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/In
 - {{domxref("IDBObjectStore.openKeyCursor()")}}
   - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, returns a new {{domxref("IDBCursor")}}. Used for iterating through an object store with a key.
 - {{domxref("IDBObjectStore.put()")}}
-  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) of the `value`, and stores the cloned value in the object store. This is for updating existing records in an object store when the transaction's mode is `readwrite`.
+  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#structured-clone) of the `value`, and stores the cloned value in the object store. This is for updating existing records in an object store when the transaction's mode is `readwrite`.
 
 ## Example
 
-This example shows a variety of different uses of object stores, from updating the data structure with {{domxref("IDBObjectStore.createIndex")}} inside an `onupgradeneeded` function, to adding a new item to our object store with {{domxref("IDBObjectStore.add")}}. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+This example shows a variety of different uses of object stores, from updating the data structure with {{domxref("IDBObjectStore.createIndex")}} inside an `onupgradeneeded` function, to adding a new item to our object store with {{domxref("IDBObjectStore.add")}}. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+  note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in db.
   db = DBOpenRequest.result;
@@ -79,7 +80,7 @@ DBOpenRequest.onsuccess = function(event) {
 // been created before, or a new version number has been
 // submitted via the window.indexedDB.open line above
 DBOpenRequest.onupgradeneeded = function(event) {
-  var db = event.target.result;
+  const db = event.target.result;
 
   db.onerror = function(event) {
     note.innerHTML += '<li>Error loading database.</li>';
@@ -87,7 +88,7 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
   // Create an objectStore for this database
 
-  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  const objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
 
   // define what data items the objectStore will contain
 
@@ -103,12 +104,12 @@ DBOpenRequest.onupgradeneeded = function(event) {
 };
 
 // Create a new item to add in to the object store
-var newItem = [
-  { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: 'December', year: 2013, notified: "no" }
+const newItem = [
+  { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: 'December', year: 2013, notified: "no" }
 ];
 
 // open a read/write db transaction, ready for adding the data
-var transaction = db.transaction(["toDoList"], "readwrite");
+const transaction = db.transaction(["toDoList"], "readwrite");
 
 // report on the success of the transaction completing, when everything is done
 transaction.oncomplete = function(event) {
@@ -120,9 +121,9 @@ transaction.onerror = function(event) {
 };
 
 // create an object store on the transaction
-var objectStore = transaction.objectStore("toDoList");
+const objectStore = transaction.objectStore("toDoList");
 // make a request to add our newItem object to the object store
-var objectStoreRequest = objectStore.add(newItem[0]);
+const objectStoreRequest = objectStore.add(newItem[0]);
 
 objectStoreRequest.onsuccess = function(event) {
   note.innerHTML += '<li>Request successful .</li>';

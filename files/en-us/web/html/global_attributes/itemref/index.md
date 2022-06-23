@@ -21,39 +21,39 @@ The `itemref` attribute can only be specified on elements that have an `itemscop
 
 > **Note:** The `itemref` attribute is not part of the microdata data model. It is merely a syntactic construct to aid authors in adding annotations to pages where the data to be annotated does not follow a convenient tree structure. For example, it allows authors to mark up data in a table so that each column defines a separate item while keeping the properties in the cells.
 
-## Example
+## Examples
 
-### HTML
+### Representing structured data for a band
+
+This example uses microdata attributes to represent the following structured data (in [JSON-LD](https://json-ld.org/) format):
+
+```json
+{
+  "@id": "amanda",
+  "name": "Amanda",
+  "band": {
+    "@id": "b",
+    "name": "Jazz Band",
+    "size": 12
+  }
+}
+```
+
+#### HTML
 
 ```html
 <div itemscope id="amanda" itemref="a b"></div>
 <p id="a">Name: <span itemprop="name">Amanda</span> </p>
 <div id="b" itemprop="band" itemscope itemref="c"></div>
 <div id="c">
-    <p>Band: <span itemprop="name">Jazz Band</span> </p>
-    <p>Size: <span itemprop="size">12</span> players</p>
+    <p>Band: <span itemprop="name">Jazz Band</span> </p>
+    <p>Size: <span itemprop="size">12</span> players</p>
 </div>
 ```
 
-### Structured data
+#### Result
 
-(in [JSON-LD](https://json-ld.org/) format)
-
-```json
-{
-  "@id": "amanda",
-  "name": "Amanda",
-  "band": {
-    "@id": "b",
-    "name": "Jazz Band",
-    "size": 12
-  }
-}
-```
-
-### Result
-
-{{EmbedLiveSample('Example', '', '', '', 'Web/HTML/Global_attributes/itemref')}}
+{{EmbedLiveSample('Representing structured data for a band')}}
 
 ## Specifications
 

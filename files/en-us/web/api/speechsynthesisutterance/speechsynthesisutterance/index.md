@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisUtterance()
 slug: Web/API/SpeechSynthesisUtterance/SpeechSynthesisUtterance
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -18,17 +19,17 @@ The `SpeechSynthesisUtterance()` constructor of the {{domxref("SpeechSynthesisUt
 ## Syntax
 
 ```js
-var utterThis = new SpeechSynthesisUtterance(text);
+new SpeechSynthesisUtterance(text)
 ```
 
 ### Parameters
 
 - `text`
-  - : A {{domxref("DOMString")}} containing the text that will be synthesized when the utterance is spoken..
+  - : A string containing the text that will be synthesized when the utterance is spoken.
 
 ## Examples
 
-The following snippet is excerpted from our [Speech synthesizer demo](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis).
+The following snippet is excerpted from our [Speech synthesizer demo](https://github.com/mdn/dom-examples/tree/master/web-speech-api/speak-easy-synthesis).
 
 ```js
 var synth = window.speechSynthesis;

@@ -56,7 +56,7 @@ The possible values for the first parameter are listed below. If the first param
 
 ## Cross-origin resources
 
-The first set of directives control [CORS](https://www.w3.org/TR/cors/) (Cross-Origin Resource Sharing) access to resources from the server. CORS is an HTTP-header based mechanism that allows a server to indicate the external origins (domain, protocol, or port) which a browser should permit loading of resources.
+The first set of directives control [CORS](https://fetch.spec.whatwg.org/) (Cross-Origin Resource Sharing) access to resources from the server. CORS is an HTTP-header based mechanism that allows a server to indicate the external origins (domain, protocol, or port) which a browser should permit loading of resources.
 
 For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts. For example, XMLHttpRequest and the Fetch API follow the same-origin policy. A web application using those APIs can only request resources from the same origin the application was loaded from unless the response from other origins includes the appropriate CORS headers.
 
@@ -160,7 +160,7 @@ For example, the filename extensions of content files often define the content's
 
 Associates media types with one or more extensions to make sure the resources will be served appropriately.
 
-Servers should use text/javascript for JavaScript resources as indicated in the [HTML specification](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages)
+Servers should use text/javascript for JavaScript resources as indicated in the [HTML specification](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages)
 
 ```bash
 <IfModule mod_expires.c>
@@ -231,7 +231,7 @@ Use [AddDefaultCharset](https://httpd.apache.org/docs/current/mod/core.html#addd
 
 ```bash
 <IfModule mod_mime.c>
-  AddDefaultCharset utf-8
+  AddDefaultCharset utf-8
 </IfModule>
 ```
 
@@ -274,9 +274,9 @@ The basic pattern to enable `mod_rewrite` is a pre-requisite for all other tasks
 
 The required steps are:
 
-1.  Turn on the rewrite engine (this is necessary in order for the `RewriteRule` directives to work) as documented in the [RewriteEngine](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#RewriteEngine) documentation
-2.  Enable the `FollowSymLinks` option if it isn't already. See [Core Options](https://httpd.apache.org/docs/current/mod/core.html#options) documentation
-3.  If your web host doesn't allow the `FollowSymlinks` option, you need to comment it out or remove it, and then uncomment the `Options +SymLinksIfOwnerMatch` line, but be aware of the [performance impact](https://httpd.apache.org/docs/current/misc/perf-tuning.html#symlinks)
+1. Turn on the rewrite engine (this is necessary in order for the `RewriteRule` directives to work) as documented in the [RewriteEngine](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#RewriteEngine) documentation
+2. Enable the `FollowSymLinks` option if it isn't already. See [Core Options](https://httpd.apache.org/docs/current/mod/core.html#options) documentation
+3. If your web host doesn't allow the `FollowSymlinks` option, you need to comment it out or remove it, and then uncomment the `Options +SymLinksIfOwnerMatch` line, but be aware of the [performance impact](https://httpd.apache.org/docs/current/misc/perf-tuning.html#symlinks)
 
     - Some cloud hosting services will require you set `RewriteBase`
     - See [Rackspace FAQ](https://www.rackspace.com/knowledge_center/frequently-asked-question/why-is-modrewrite-not-working-on-my-site) and the [HTTPD documentation](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewritebase)
@@ -294,7 +294,7 @@ The required steps are:
 
 ### Forcing https
 
-These Rewrite rules will redirect from the `http://` insecure version to the `https://` secure version of the URL as described in the [Apache HTTPD wiki](https://wiki.apache.org/httpd/RewriteHTTPToHTTPS).
+These Rewrite rules will redirect from the `http://` insecure version to the `https://` secure version of the URL as described in the [Apache HTTPD wiki](https://cwiki.apache.org/confluence/display/httpd/RewriteHTTPToHTTPS).
 
 ```bash
 <IfModule mod_rewrite.c>
@@ -317,7 +317,7 @@ If you're using cPanel AutoSSL or the Let's Encrypt webroot method to create you
 </IfModule>
 ```
 
-### Redirecting from www. URLs
+### Redirecting from www. URLs
 
 These directives will rewrite `www.example.com` to `example.com`.
 
@@ -336,7 +336,7 @@ The rule assumes by default that both HTTP and HTTPS environments are available 
   RewriteRule ^ - [E=PROTO:http]
 
   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-  RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
+  RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
 </IfModule>
 ```
 
@@ -371,7 +371,7 @@ The following might not be a good idea if you use "real" subdomains for certain 
 
 ## Frame Options
 
-The example below sends the `X-Frame-Options` response header with DENY as the value, informing browsers not to display the content of the web page in any frame to protect the website against [clickjacking](https://www.owasp.org/index.php/Clickjacking).
+The example below sends the `X-Frame-Options` response header with DENY as the value, informing browsers not to display the content of the web page in any frame to protect the website against [clickjacking](/en-US/docs/Glossary/Clickjacking).
 
 This might not be the best setting for everyone. You should read about [the other two possible values for the `X-Frame-Options` header](https://datatracker.ietf.org/doc/html/rfc7034#section-2.1): `SAMEORIGIN` and `ALLOW-FROM`.
 
@@ -461,26 +461,26 @@ Be aware that Strict Transport Security is not revokable and you must ensure bei
 
 ## Prevent some browsers from MIME-sniffing the response
 
-1.  Restricts all fetches by default to the origin of the current website by setting the `default-src` directive to `'self'` - which acts as a fallback to all [Fetch directives](/en-US/docs/Glossary/Fetch_directive).
+1. Restricts all fetches by default to the origin of the current website by setting the `default-src` directive to `'self'` - which acts as a fallback to all [Fetch directives](/en-US/docs/Glossary/Fetch_directive).
 
     - This is convenient as you do not have to specify all Fetch directives that apply to your site, for example: `connect-src 'self'; font-src 'self'; script-src 'self'; style-src 'self'`, etc
     - This restriction also means that you must explicitly define from which site(s) your website is allowed to load resources from, otherwise it will be restricted to the same origin as the page making the request
 
-2.  Disallows the `<base>` element on the website. This is to prevent attackers from changing the locations of resources loaded from relative URLs
+2. Disallows the `<base>` element on the website. This is to prevent attackers from changing the locations of resources loaded from relative URLs
 
     - If you want to use the `<base>` element, then use `base-uri 'self'` instead
 
-3.  Only allows form submissions are from the current origin with: `form-action 'self'`
-4.  Prevents all websites (including your own) from embedding your webpages within e.g. the `<iframe>` or `<object>` element by setting: `frame-ancestors 'none'`.
+3. Only allows form submissions are from the current origin with: `form-action 'self'`
+4. Prevents all websites (including your own) from embedding your webpages within e.g. the `<iframe>` or `<object>` element by setting: `frame-ancestors 'none'`.
 
-    - The `frame-ancestors`directive helps avoid "Clickjacking" attacks and is similar to the `X-Frame-Options` header
+    - The `frame-ancestors`directive helps avoid [clickjacking](/en-US/docs/Glossary/Clickjacking) attacks and is similar to the `X-Frame-Options` header
     - Browsers that support the CSP header will ignore `X-Frame-Options` if `frame-ancestors` is also specified
 
-5.  Forces the browser to treat all the resources that are served over HTTP as if they were loaded securely over HTTPS by setting the `upgrade-insecure-requests` directive
+5. Forces the browser to treat all the resources that are served over HTTP as if they were loaded securely over HTTPS by setting the `upgrade-insecure-requests` directive
 
     - **`upgrade-insecure-requests` does not ensure HTTPS for the top-level navigation. If you want to force the website itself to be loaded over HTTPS you must include the `Strict-Transport-Security` header**
 
-6.  Includes the `Content-Security-Policy` header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although Javascript files can not execute scripts in a "browsing context", they are included to target [web workers](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#csp_in_workers)
+6. Includes the `Content-Security-Policy` header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although Javascript files can not execute scripts in a "browsing context", they are included to target [web workers](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#csp_in_workers)
 
 Some older browsers would try and guess the content type of a resource, even when it isn't properly set up on the server configuration. This reduces exposure to drive-by download attacks and cross-origin data leaks.
 
@@ -511,7 +511,7 @@ Use services like the ones below to check your Referrer Policy:
 
 ## Disable TRACE HTTP Method
 
-The [TRACE](/en-US/docs/Web/HTTP/Methods/TRACE) method, while seemingly harmless, can be successfully leveraged in some scenarios to steal legitimate users' credentials. See [A Cross-Site Tracing (XST) attack](https://www.owasp.org/index.php/Cross_Site_Tracing) and [OWASP Web Security Testing Guide](<https://www.owasp.org/index.php/Test_HTTP_Methods_(OTG-CONFIG-006)>)
+The [TRACE](/en-US/docs/Web/HTTP/Methods/TRACE) method, while seemingly harmless, can be successfully leveraged in some scenarios to steal legitimate users' credentials. See [A Cross-Site Tracing (XST) attack](https://owasp.org/www-community/attacks/Cross_Site_Tracing) and [OWASP Web Security Testing Guide](<https://www.owasp.org/index.php/Test_HTTP_Methods_(OTG-CONFIG-006)>)
 
 Modern browsers now prevent TRACE requests made via JavaScript, however, other ways of sending TRACE requests with browsers have been discovered, such as using Java.
 
@@ -594,7 +594,7 @@ Compress all output labeled with one of the following media types using the [Add
       "font/opentype" \
       "font/otf" \
       "font/ttf" \
-      "image/bmp" \
+      "image/bmp" \
       "image/svg+xml" \
       "image/vnd.microsoft.icon" \
       "text/cache-manifest" \

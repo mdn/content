@@ -1,6 +1,7 @@
 ---
 title: MediaKeyStatusMap
 slug: Web/API/MediaKeyStatusMap
+page-type: web-api-interface
 tags:
   - API
   - EncryptedMediaExtensions
@@ -16,13 +17,13 @@ The **`MediaKeyStatusMap`** interface of the [EncryptedMediaExtensions API](/en-
 ## Properties
 
 - {{domxref("MediaKeyStatusMap.size")}} {{readonlyinline}}
-  - : Returns the number of key/value pars in the status map.
+  - : Returns the number of key/value pairs in the status map.
 
 ## Methods
 
 - {{domxref("MediaKeyStatusMap.entries()")}} {{readonlyinline}}
   - : Returns a new `Iterator` object containing an array of `[key, value]` for each element in the status map, in insertion order.
-- {{domxref("MediaKeyStatusMap.forEach()","MediaKeyStatusMap.forEach(callback[, argument])")}} {{readonlyinline}}
+- {{domxref("MediaKeyStatusMap.forEach()","MediaKeyStatusMap.forEach(callback[, argument])")}} {{readonlyinline}}
   - : Calls `callback` once for each key-value pair in the status map, in insertion order. If `argument` is present it will be passed to the callback.
 - {{domxref("MediaKeyStatusMap.get()")}} {{readonlyinline}}
   - : Returns the value associated with the given key, or `undefined` if there is none.

@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.binaryType
 slug: Web/API/RTCDataChannel/binaryType
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCDataChannel
@@ -12,7 +13,7 @@ browser-compat: api.RTCDataChannel.binaryType
 {{APIRef("WebRTC")}}
 
 The property **`binaryType`** on the
-{{domxref("RTCDataChannel")}} interface is a {{domxref("DOMString")}} which specifies
+{{domxref("RTCDataChannel")}} interface is a string which specifies
 the type of object which should be used to represent binary data received
 on the {{domxref("RTCDataChannel")}}. Values allowed by the
 {{domxref("WebSocket.binaryType")}} property are also permitted here:
@@ -34,7 +35,7 @@ aDataChannel.binaryType = type;
 
 ### Value
 
-A {{domxref("DOMString")}} that can have one of these values:
+A string that can have one of these values:
 
 - `"blob"`
   - : Received binary messages' contents will be contained in {{domxref("Blob")}} objects.
@@ -74,7 +75,6 @@ dc.onmessage = function(event) {
 ## See also
 
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
-- [Using WebRTC data
-  channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels)
+- [Using WebRTC data channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels)
 - {{domxref("RTCDataChannel")}}
 - {{domxref("RTCDataChannel.send()")}}

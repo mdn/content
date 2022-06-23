@@ -1,6 +1,7 @@
 ---
 title: RTCOutboundRtpStreamStats
 slug: Web/API/RTCOutboundRtpStreamStats
+page-type: web-api-interface
 tags:
   - API
   - Dictionary
@@ -31,7 +32,7 @@ _The `RTCOutboundRtpStreamStats` dictionary includes the following properties in
 - {{domxref("RTCOutboundRtpStreamStats.framesEncoded", "framesEncoded")}}
   - : The number of frames that have been successfully encoded so far for sending on this RTP stream. _Only valid for video streams._
 - {{domxref("RTCOutboundRtpStreamStats.lastPacketSentTimestamp", "lastPacketSentTimestamp")}}
-  - : A {{domxref("DOMHighResTimeStamp")}} indicating the time at which the last packet was sent for this SSRC. The {{domxref("RTCStats.timestamp", "timestamp")}} property, on the other hand, indicates the time at which the `RTCOutboundRtpStreamStats` object was generated.
+  - : A {{domxref("DOMHighResTimeStamp")}} indicating the time at which the last packet was sent for this SSRC. The {{domxref("RTCStats.timestamp", "timestamp")}} property, on the other hand, indicates the time at which the `RTCOutboundRtpStreamStats` object was generated.
 - {{domxref("RTCOutboundRtpStreamStats.nackCount", "nackCount")}}
   - : An integer value indicating the total number of Negative ACKnolwedgement (NACK) packets this `RTCRtpSender` has received from the remote {{domxref("RTCRtpReceiver")}}.
 - {{domxref("RTCOutboundRtpStreamStats.perDscpPacketsSent", "perDscpPacketsSent")}}
@@ -43,7 +44,7 @@ _The `RTCOutboundRtpStreamStats` dictionary includes the following properties in
 - {{domxref("RTCOutboundRtpStreamStats.qualityLimitationDurations", "qualityLimitationDurations")}}
   - : A record mapping each of the quality limitation reasons in the {{domxref("RTCRemoteInboundRtpStreamStats")}} enumeration to a floating-point value indicating the number of seconds the stream has spent with its quality limited for that reason.
 - {{domxref("RTCOutboundRtpStreamStats.qualityLimitationReason", "qualityLimitationReason")}}
-  - : A value from the {{domxref("RTCQualityLimitationReason")}} enumerated type explaining why the resolution and/or frame rate is being limited for this RTP stream. _Valid only for video streams_.
+  - : One of the string `none`, `cpu`, `bandwidth`, or `other`, explaining why the resolution and/or frame rate is being limited for this RTP stream. _Valid only for video streams_.
 - {{domxref("RTCOutboundRtpStreamStats.remoteId", "remoteId")}}
   - : A string which identifies the {{domxref("RTCRemoteInboundRtpStreamStats")}} object that provides statistics for the remote peer for this same SSRC. This ID is stable across multiple calls to `getStats()`.
 - {{domxref("RTCOutboundRtpStreamStats.retransmittedBytesSent", "retransmittedBytesSent")}}

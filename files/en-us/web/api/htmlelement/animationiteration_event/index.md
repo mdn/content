@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: animationiteration event'
 slug: Web/API/HTMLElement/animationiteration_event
+page-type: web-api-event
 tags:
   - API
   - Animation
@@ -102,12 +103,12 @@ animated.onanimationiteration = () => {
 }
 
 @keyframes slidein {
-  from {
-    transform: translateX(100%) scaleX(3);
-  }
-  to {
-    transform: translateX(0) scaleX(1);
-  }
+  from {
+    transform: translateX(100%) scaleX(3);
+  }
+  to {
+    transform: translateX(0) scaleX(1);
+  }
 }
 ```
 

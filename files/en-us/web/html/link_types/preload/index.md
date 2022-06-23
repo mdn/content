@@ -88,7 +88,7 @@ Many different content types can be preloaded. The possible `as` attribute value
 
 `<link>` elements can accept a {{htmlattrxref("type", "link")}} attribute, which contains the MIME type of the resource the element points to. This is especially useful when preloading resources — the browser will use the `type` attribute value to work out if it supports that resource, and will only download it if so, ignoring it if not.
 
-You can see an example of this in our video example (see the [full source code](https://github.com/mdn/html-examples/tree/master/link-rel-preload/video), and also [the live version](https://mdn.github.io/html-examples/link-rel-preload/video/)), a code snippet from which is shown below. And while this code won’t actually cause preloading in any browsers — because video preloading isn’t yet supported in any browsers — it still illustrates the core behavior behind preloading in general.
+You can see an example of this in our video example (see the [full source code](https://github.com/mdn/html-examples/tree/master/link-rel-preload/video), and also [the live version](https://mdn.github.io/html-examples/link-rel-preload/video/)), a code snippet from which is shown below. And while this code won't actually cause preloading in any browsers — because video preloading isn't yet supported in any browsers — it still illustrates the core behavior behind preloading in general.
 
 ```html
 <head>
@@ -106,17 +106,17 @@ You can see an example of this in our video example (see the [full source code](
 </body>
 ```
 
-The code in the example above causes the `video/mp4` video to be preloaded only in supporting browsers — and for users who have `video/mp4` support in their browsers, causes the `video/mp4` video to actually be used (since it’s the first {{htmlelement("source")}} specified). That makes the video player hopefully smoother/more responsive for users who have `video/mp4` support in their browsers.
+The code in the example above causes the `video/mp4` video to be preloaded only in supporting browsers — and for users who have `video/mp4` support in their browsers, causes the `video/mp4` video to actually be used (since it's the first {{htmlelement("source")}} specified). That makes the video player hopefully smoother/more responsive for users who have `video/mp4` support in their browsers.
 
 Note that for users whose browsers have both `video/mp4` and `video/webm` support, if in that code a `<link rel="preload" href="sintel-short.webm" as="video" type="video/webm">` element were also specified, then _both_ the `video/mp4` and `video/webm` videos would be preloaded — even though only one of them would actually be used.
 
-Therefore, specifying preloading for multiple types of the same resource is discouraged. Instead, the best practice is to specify preloading only for the type the majority of your users are likely to actually use. That’s why the code in the example above doesn’t specify preloading for the `video/webm` video.
+Therefore, specifying preloading for multiple types of the same resource is discouraged. Instead, the best practice is to specify preloading only for the type the majority of your users are likely to actually use. That's why the code in the example above doesn't specify preloading for the `video/webm` video.
 
-However, the lack of preloading doesn’t prevent the `video/webm` video from actually being used by those who need it: for users whose browsers don’t have `video/mp4` support but do have `video/webm` support, the code in the example above does still cause the `video/webm` video to be used — but it does so without also causing it to also be preloaded unnecessarily for the majority of other users.
+However, the lack of preloading doesn't prevent the `video/webm` video from actually being used by those who need it: for users whose browsers don't have `video/mp4` support but do have `video/webm` support, the code in the example above does still cause the `video/webm` video to be used — but it does so without also causing it to also be preloaded unnecessarily for the majority of other users.
 
-## CORS-enabled fetches
+## CORS-enabled fetches
 
-When preloading resources that are fetched with [CORS](/en-US/docs/Web/HTTP/CORS) enabled (e.g. [`fetch()`](/en-US/docs/Web/API/fetch), [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) or [fonts](/en-US/docs/Web/CSS/@font-face)), special care needs to be taken to setting the {{htmlattrxref("crossorigin","link")}} attribute on your [`<link>`](/en-US/docs/Web/HTML/Element/link) element. The attribute needs to be set to match the resource's CORS and credentials mode, even when the fetch is not cross-origin.
+When preloading resources that are fetched with [CORS](/en-US/docs/Web/HTTP/CORS) enabled (e.g. [`fetch()`](/en-US/docs/Web/API/fetch), [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) or [fonts](/en-US/docs/Web/CSS/@font-face)), special care needs to be taken to setting the {{htmlattrxref("crossorigin","link")}} attribute on your [`<link>`](/en-US/docs/Web/HTML/Element/link) element. The attribute needs to be set to match the resource's CORS and credentials mode, even when the fetch is not cross-origin.
 
 As mentioned above, one interesting case where this applies is font files. Because of various reasons, these have to be fetched using anonymous-mode CORS (see [Font fetching requirements](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)).
 
@@ -206,7 +206,7 @@ This is useful when you want to preload a script, but then defer execution until
 Other preloading features exist, but none are quite as fit for purpose as `<link rel="preload">`:
 
 - `<link rel="prefetch">` has been supported in browsers for a long time, but it is intended for prefetching resources that will be used in the **_next_** navigation/page load (e.g. when you go to the next page). This is fine, but isn't useful for the current page! In addition, browsers will give `prefetch` resources a lower priority than `preload` ones — the current page is more important than the next. See [Link prefetching FAQ](/en-US/docs/Web/HTTP/Link_prefetching_FAQ) for more details.
-- `<link rel="prerender">` renders a specified webpage in the background, speeding up its load if the user navigates to it. Because of the potential to waste users bandwidth, Chrome treats `prerender` as a [NoState prefetch](https://developers.google.com/web/updates/2018/07/nostate-prefetch) instead.
+- `<link rel="prerender">` renders a specified webpage in the background, speeding up its load if the user navigates to it. Because of the potential to waste users bandwidth, Chrome treats `prerender` as a [NoState prefetch](https://developer.chrome.com/blog/nostate-prefetch/) instead.
 - `<link rel="subresource">` {{non-standard_inline}} was supported in Chrome a while ago, and was intended to tackle the same issue as `preload`, but it had a problem: there was no way to work out a priority for the items (`as` didn't exist back then), so they all got fetched with fairly low priority.
 - There are a number of script-based resource loaders out there, but they don't have any power over the browser's fetch prioritization queue, and are subject to much the same performance problems.
 

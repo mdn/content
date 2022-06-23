@@ -1,6 +1,7 @@
 ---
 title: MediaTrackConstraints.logicalSurface
 slug: Web/API/MediaTrackConstraints/logicalSurface
+page-type: web-api-instance-property
 tags:
   - API
   - Capture
@@ -24,7 +25,7 @@ browser-compat: api.MediaTrackConstraints.logicalSurface
 
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`logicalSurface`** property is a
-[`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) describing the requested or mandatory constraints
+[`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) describing the requested or mandatory constraints
 placed upon the value of the {{domxref("MediaTrackSettings.logicalSurface",
     "logicalSurface")}} constrainable property.
 
@@ -39,17 +40,9 @@ the value of {{domxref("MediaTrackSupportedConstraints.logicalSurface")}} as ret
 a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
+## Value
 
-```js
-var constraintsObject = { logicalSurface: constraint };
-
-constraintsObject.logicalSurface = constraint;
-```
-
-### Value
-
-A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainBoolean) which is `true` if logical surfaces should
+A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) which is `true` if logical surfaces should
 be permitted among the selections available to the user.
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "How
@@ -60,7 +53,7 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "How
 You can check the setting selected by the user agent after the display media has been
 created by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} by calling
 {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} on the display media's
-video {{domxref("MediaStreamTrack")}}, then checking the value of  the returned
+video {{domxref("MediaStreamTrack")}}, then checking the value of the returned
 {{domxref("MediaTrackSettings")}} object's
 {{domxref("MediaTrackSettings.logicalSurface", "logicalSurface")}} object.
 
@@ -71,7 +64,7 @@ one:
 let isLogicalSurface = displayStream.getVideoTracks()[0].getSettings().logicalSurface;
 ```
 
-Following this code, `isLogicalSurface`  is `true` if the display
+Following this code, `isLogicalSurface`  is `true` if the display
 surface contained in the stream is a logical surface; that is, one which may not be
 entirely onscreen, or may even be entirely offscreen.
 
@@ -86,10 +79,8 @@ entirely onscreen, or may even be entirely offscreen.
 ## See also
 
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
-- [Using the
-  Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
-- [Capabilities,
-  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}

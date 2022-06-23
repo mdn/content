@@ -1,6 +1,7 @@
 ---
 title: SVGAnimatedNumberList
 slug: Web/API/SVGAnimatedNumberList
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -20,7 +21,7 @@ The `SVGAnimatedNumber` interface is used for attributes which take a list of nu
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Also implement</th>
+      <th scope="row">Also implement</th>
       <td><em>None</em></td>
     </tr>
     <tr>
@@ -43,7 +44,7 @@ The `SVGAnimatedNumber` interface is used for attributes which take a list of nu
       </td>
     </tr>
     <tr>
-      <th scope="row">Normative document</th>
+      <th scope="row">Normative document</th>
       <td>
         <a
           href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGAnimatedAngle"
@@ -57,9 +58,9 @@ The `SVGAnimatedNumber` interface is used for attributes which take a list of nu
 ## Properties
 
 - {{domxref("SVGAnimatedNumberList.baseVal")}} {{ReadOnlyInline}}
-  - : Is a {{domxref("SVGNumberList")}} that represents the base value of the given attribute before applying any animations.
+  - : A {{domxref("SVGNumberList")}} that represents the base value of the given attribute before applying any animations.
 - {{domxref("SVGAnimatedNumberList.animVal")}} {{ReadOnlyInline}}
-  - : Is a read only {{ domxref("SVGNumberList") }} that represents the current animated value of the given attribute. If the given attribute is not currently being animated, then the {{ domxref("SVGNumberList") }} will have the same contents as `baseVal`. The object referenced by `animVal` will always be distinct from the one referenced by `baseVal`, even when the attribute is not animated.
+  - : A read only {{ domxref("SVGNumberList") }} that represents the current animated value of the given attribute. If the given attribute is not currently being animated, then the {{ domxref("SVGNumberList") }} will have the same contents as `baseVal`. The object referenced by `animVal` will always be distinct from the one referenced by `baseVal`, even when the attribute is not animated.
 
 ## Methods
 

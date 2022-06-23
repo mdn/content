@@ -1,6 +1,7 @@
 ---
 title: HTMLSlotElement.assign()
 slug: Web/API/HTMLSlotElement/assign
+page-type: web-api-instance-method
 tags:
   - API
   - HTMLSlotElement
@@ -8,7 +9,7 @@ tags:
   - Reference
   - Web Components
   - assign
-  - shadow dom
+  - shadow DOM
 browser-compat: api.HTMLSlotElement.assign
 ---
 {{APIRef("Shadow DOM API")}}
@@ -19,12 +20,14 @@ The **`assign()`** method of the
 ## Syntax
 
 ```js
-HTMLSlotElement.assign(...nodes)
+assign(node1)
+assign(node1, node2)
+assign(node1, node2, /* ... ,*/ nodeN)
 ```
 
 ### Parameters
 
-- ...`nodes`
+- `node1`, …, `nodeN`
   - : A set of {{domxref("Element")}} or {{domxref("Text")}} nodes.
 
 ### Return value

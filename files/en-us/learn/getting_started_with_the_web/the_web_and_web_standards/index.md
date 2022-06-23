@@ -66,17 +66,19 @@ There are a number of technologies to learn if you want to be a front-end web de
 
 ### Browsers
 
-You are probably reading these words inside a web browser in this very moment (unless you've printed it out, or are using assistive technology, such as a screenreader to read it out to you). Web browsers are the software programs people use to consume the web, and include [Firefox](https://www.mozilla.org/en-US/firefox/), [Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/), [Safari](https://www.apple.com/safari/), and [Edge](https://www.microsoft.com/en-us/windows/microsoft-edge).
+You are probably reading these words inside a web browser in this very moment (unless you've printed it out, or are using assistive technology, such as a screenreader to read it out to you). Web browsers are the software programs people use to consume the web, and include [Firefox](https://www.mozilla.org/en-US/firefox/), [Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/), [Safari](https://www.apple.com/safari/), and [Edge](https://www.microsoft.com/en-us/edge).
 
 ### HTTP
 
 Hypertext Transfer Protocol, or [HTTP](/en-US/docs/Web/HTTP/Basics_of_HTTP), is a messaging protocol that allows web browsers to communicate with web servers (where web sites are stored). A typical conversation goes something like
 
-    "Hello web server. Can you give me the files I need to render bbc.co.uk"?
+```
+"Hello web server. Can you give me the files I need to render bbc.co.uk"?
 
-    "Sure thing web browser — here you go"
+"Sure thing web browser — here you go"
 
-    [Downloads files and renders web page]
+[Downloads files and renders web page]
+```
 
 The actual syntax for HTTP messages (called requests and responses) is not that human-readable, but this gives you the basic idea.
 
@@ -99,7 +101,7 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
 - Cascading Style Sheets (**CSS**) is a rule-based language used to apply styles to your HTML, for example setting text and background colors, adding borders, animating things, or laying out a page in a certain way. As a simple example, the following code would turn our HTML paragraph red:
 
   ```css
-  p  {
+  p {
     color: red;
   }
   ```
@@ -122,7 +124,7 @@ Once you've learned the "raw" technologies that can be used to build web pages (
 - The [developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) inside modern browsers that can be used to debug your code.
 - [Testing tools](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) that can be used to run tests to show whether your code is behaving as you intended it to.
 - Libraries and frameworks built on top of JavaScript that allow you to build certain types of web site much more quickly and effectively.
-- So-called "Linters", which take a set of rules, look at your code, and highlight places where you haven't followed the rules properly.
+- So-called "Linters", which take a set of rules, look at your code, and highlight places where you haven't followed the rules properly.
 - Minifiers, which remove all the whitespace from your code files to make it so that they are smaller and therefore download from the server more quickly.
 
 ### Server-side languages and frameworks

@@ -13,7 +13,7 @@ The **`string`** attribute is a hint to the user agent, and specifies a list of 
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("font-face-format")}}
+- {{SVGElement("font-face-format")}}
 
 ## Usage notes
 
@@ -40,31 +40,14 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<anything>`
-    *   : This value specifies a list of formats that are supported by the font referenced by the parent {{SVGElement("font-face-uri")}} element.
+- `<anything>`
+  - : This value specifies a list of formats that are supported by the font referenced by the parent {{SVGElement("font-face-uri")}} element.
 
-        The available types are: `"woff"`, `"woff2"`, `"truetype"`, `"opentype"`, `"embedded-opentype"`, and `"svg"`. See the {{cssxref("@font-face/src", "src")}} descriptor of the {{cssxref("@font-face")}} at-rule for more information.
+    The available types are: `"woff"`, `"woff2"`, `"truetype"`, `"opentype"`, `"embedded-opentype"`, and `"svg"`. See the {{cssxref("@font-face/src", "src")}} descriptor of the {{cssxref("@font-face")}} at-rule for more information.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "fonts.html#FontFaceFormatElementStringAttribute", "string")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

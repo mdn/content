@@ -1,6 +1,7 @@
 ---
 title: HTMLOptGroupElement
 slug: Web/API/HTMLOptGroupElement
+page-type: web-api-interface
 tags:
   - API
   - Forms
@@ -14,16 +15,16 @@ browser-compat: api.HTMLOptGroupElement
 
 The **`HTMLOptGroupElement`** interface provides special properties and methods (beyond the regular {{domxref("HTMLElement")}} object interface they also have available to them by inheritance) for manipulating the layout and presentation of {{HTMLElement("optgroup")}} elements.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLOptGroupElement.disabled")}}
-  - : Is a boolean value representing whether or not the whole list of children {{HTMLElement("option")}} is disabled (true) or not (false).
+  - : A boolean value representing whether or not the whole list of children {{HTMLElement("option")}} is disabled (true) or not (false).
 - {{domxref("HTMLOptGroupElement.label")}}
-  - : Is a {{domxref("DOMString")}} representing the label for the group.
+  - : A string representing the label for the group.
 
 ## Methods
 

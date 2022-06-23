@@ -1,6 +1,7 @@
 ---
 title: NodeList.keys()
 slug: Web/API/NodeList/keys
+page-type: web-api-instance-method
 tags:
   - DOM
   - Iterator
@@ -49,9 +50,11 @@ for(var key of list.keys()) {
 
 The result is:
 
-    0
-    1
-    2
+```
+0
+1
+2
+```
 
 ## Browser compatibility
 
@@ -59,6 +62,6 @@ The result is:
 
 ## See also
 
-- A polyfill of `NodeList.prototype.keys` is available in [`core-js`](https://github.com/zloirock/core-js#iterable-dom-collections)
+- [Polyfill of `NodeList.prototype.keys` in `core-js`](https://github.com/zloirock/core-js#iterable-dom-collections)
 - {{domxref("Node")}}
 - {{domxref("NodeList")}}

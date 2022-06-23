@@ -28,11 +28,11 @@ The properties defined by the specification are:
 - {{cssxref("column-fill")}}
 - {{cssxref("column-gap")}}
 
-By adding `column-count` or `column-width` to an element, that element becomes a _multi-column container_, or _multicol container_ for short. The columns are anonymous boxes and described as column boxes in the specification.
+By adding `column-count` or `column-width` to an element, that element becomes a _multi-column container_, or _multicol container_ for short. The columns are anonymous boxes and described as column boxes in the specification.
 
 ## Defining columns
 
-To create a multicol container you must use at least one of the `column-*` properties, these being `column-count` and `column-width`.
+To create a multicol container you must use at least one of the `column-*` properties, these being `column-count` and `column-width`.
 
 ### The `column-count` property
 
@@ -42,7 +42,7 @@ In the below example we use the `column-count` property to create three columns 
 
 {{EmbedGHLiveSample("css-examples/multicol/basics/column-count.html", '100%', 550)}}
 
-In the above example the content is wrapped in paragraph `p` tags with default styling.  Therefore, there is a margin above each paragraph. You can see how this margin causes the first line of text to be pushed down. This is because a multicol container creates a new Block Formatting Context (BFC) which means margins on child elements do not collapse with any margin on the container.
+In the above example the content is wrapped in paragraph `p` tags with default styling. Therefore, there is a margin above each paragraph. You can see how this margin causes the first line of text to be pushed down. This is because a multicol container creates a new Block Formatting Context (BFC) which means margins on child elements do not collapse with any margin on the container.
 
 ### The `column-width` property
 
@@ -56,7 +56,7 @@ In the below example we use the `column-width` property with a value of 200px. W
 
 ### Using `column-count` and `column-width` together
 
-If you specify both properties on a multicol container then `column-count` will act as a maximum number of columns. Therefore the behavior as described for column-width will happen, until the number of columns in column-count is reached. After this point no more columns will be drawn, and the extra space is distributed evenly between the existing columns, even if there is enough room for more columns of the specified `column-width`  size.
+If you specify both properties on a multicol container then `column-count` will act as a maximum number of columns. Therefore the behavior as described for column-width will happen, until the number of columns in column-count is reached. After this point no more columns will be drawn, and the extra space is distributed evenly between the existing columns, even if there is enough room for more columns of the specified `column-width` size.
 
 When using both properties together you may get fewer columns than specified in the value for `column-count`.
 
@@ -70,21 +70,27 @@ You can use the `columns`shorthand to set `column-count` and `column-width`. If 
 
 This CSS would give the same result as example 1, `column-count` set to 3.
 
-    .container {
-      columns: 3;
-    }
+```css
+.container {
+  columns: 3;
+}
+```
 
 This CSS would give the same result as example 2, with `column-width` of 200px.
 
-    .container {
-      columns: 200px;
-    }
+```css
+.container {
+  columns: 200px;
+}
+```
 
 This CSS would give the same result as example 3, with both `column-count` and `column-width` set.
 
-    .container {
-      columns: 2 200px;
-    }
+```css
+.container {
+  columns: 2 200px;
+}
+```
 
 ## Next Steps
 

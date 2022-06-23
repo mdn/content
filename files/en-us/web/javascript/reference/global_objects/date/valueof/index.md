@@ -24,7 +24,7 @@ valueOf()
 
 ### Return value
 
-The number of milliseconds between 1 January 1970 00:00:00 UTC and the given date.
+The number of milliseconds between 1 January 1970 00:00:00 UTC and the given date, or {{jsxref("NaN")}} in case of an invalid date.
 
 ## Description
 
@@ -42,8 +42,8 @@ This method is usually called internally by JavaScript and not explicitly in cod
 ### Using valueOf()
 
 ```js
-var x = new Date(56, 6, 17);
-var myVar = x.valueOf();      // assigns -424713600000 to myVar
+const x = new Date(56, 6, 17);
+const myVar = x.valueOf();      // assigns -424713600000 to myVar
 ```
 
 ## Specifications

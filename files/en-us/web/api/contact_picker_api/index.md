@@ -1,6 +1,7 @@
 ---
 title: Contact Picker API
 slug: Web/API/Contact_Picker_API
+page-type: web-api-overview
 tags:
   - API
   - Contact Picker API
@@ -9,6 +10,7 @@ tags:
   - Overview
   - PWA
   - contact picker
+browser-compat: api.ContactsManager
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}
 
@@ -96,11 +98,11 @@ async function getContacts() {
 
 ## Specifications
 
-{{Specifications("api.ContactsManager")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.ContactsManager")}}
+{{Compat}}
 
 ## See also
 

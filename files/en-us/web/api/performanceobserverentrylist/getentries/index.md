@@ -1,6 +1,7 @@
 ---
 title: PerformanceObserverEntryList.getEntries()
 slug: Web/API/PerformanceObserverEntryList/getEntries
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -24,24 +25,16 @@ interfaces.
 
 ## Syntax
 
-General syntax:
-
 ```js
-entries = list.getEntries();
-entries = list.getEntries(PerformanceEntryFilterOptions);
-```
-
-Specific usage:
-
-```js
-entries = list.getEntries({name: "entry_name", entryType: "mark"});
+getEntries()
+getEntries(performanceEntryFilterOptions)
 ```
 
 ### Parameters
 
-- `PerformanceEntryFilterOptions`{{optional_inline}}
+- `performanceEntryFilterOptions` {{optional_inline}}
 
-  - : Is a `PerformanceEntryFilterOptions` dictionary, having the following
+  - : A `PerformanceEntryFilterOptions` object, having the following
     fields:
 
     - `"name"`, the name of a performance entry.
@@ -61,7 +54,7 @@ entries' {{domxref("PerformanceEntry.startTime","startTime")}}. If no objects th
 the filter are found, an empty list is returned. If no argument is given, all entries
 are returned.
 
-## Example
+## Examples
 
 ```js
 function print_perf_entry(pe) {

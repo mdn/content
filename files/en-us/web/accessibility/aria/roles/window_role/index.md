@@ -1,13 +1,14 @@
 ---
 title: 'ARIA: window role'
 slug: Web/Accessibility/ARIA/Roles/window_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
   - ARIA Role
   - ARIA window
   - Reference
+spec-urls: https://w3c.github.io/aria/#window
 ---
 
 The `window` role defines a browser or app window.
@@ -24,17 +25,12 @@ Do not use.
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#window","ARIA: window role")}}                                             | {{Spec2('ARIA')}}                         |
-
+{{Specifications}}
 
 ## See Also
 
 - [ARIA: `roletype` role](/en-US/docs/Web/Accessibility/ARIA/Roles/roletype_role)
 - [ARIA: `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
-
-
 
 <section id="Quick_links">
 

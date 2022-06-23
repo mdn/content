@@ -1,6 +1,7 @@
 ---
 title: RTCRtpStreamStats.kind
 slug: Web/API/RTCRtpStreamStats/kind
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -28,18 +29,12 @@ Its value
 is always either `"audio"` or `"video"`.
 
 This property was previously called `mediaType`. The name was changed in the
-specification in February, 2018. See {{anch("Browser compatibility")}} below to
+specification in February, 2018. See [Browser compatibility](#browser_compatibility) below to
 determine how this affects the browsers you're targeting.
 
-## Syntax
+## Value
 
-```js
-mediaKind = RTCRtpStreamStats.kind;
-```
-
-### Value
-
-A {{domxref("DOMString")}} whose value is `"audio"` if the track whose
+A string whose value is `"audio"` if the track whose
 statistics are given by the `RTCRtpStreamStats` object contains audio, or
 `"video"` if the track contains video media.
 

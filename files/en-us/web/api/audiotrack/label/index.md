@@ -1,6 +1,7 @@
 ---
 title: AudioTrack.label
 slug: Web/API/AudioTrack/label
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -23,15 +24,9 @@ property **`label`** returns a string specifying the audio
 track's human-readable label, if one is available; otherwise, it returns an empty
 string.
 
-## Syntax
+## Value
 
-```js
-var audioTrackLabel = AudioTrack.label;
-```
-
-### Value
-
-A {{domxref("DOMString")}} specifying the track's human-readable label, if one is
+A string specifying the track's human-readable label, if one is
 available in the track metadata. Otherwise, an empty string (`""`) is
 returned.
 
@@ -39,7 +34,7 @@ For example, a track whose {{domxref("AudioTrack.kind", "kind")}} is
 `"commentary"` might have a `label` such as
 `"Commentary with director Mark Markmarkimark and star Donna Donnalidon"`.
 
-## Example
+## Examples
 
 This example returns an array of track kinds and labels for potential use in a user
 interface to select audio tracks for a specified media element. The list is filtered to
@@ -47,7 +42,7 @@ only allow certain track kinds through.
 
 ```js
 function getTrackList(el) {
-  var trackList = [];
+  const trackList = [];
   const wantedKinds = [
     "main", "alternative", "main-desc", "translation", "commentary"
   ];

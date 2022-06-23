@@ -1,9 +1,9 @@
 ---
 title: SpeechSynthesis.getVoices()
 slug: Web/API/SpeechSynthesis/getVoices
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Reference
   - SpeechSynthesis
@@ -13,7 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesis.getVoices
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`getVoices()`** method of the
 {{domxref("SpeechSynthesis")}} interface returns a list of
@@ -23,7 +23,7 @@ current device.
 ## Syntax
 
 ```js
-speechSynthesisInstance.getVoices();
+getVoices()
 ```
 
 ### Parameters
@@ -34,11 +34,7 @@ None.
 
 A list (array) of {{domxref("SpeechSynthesisVoice")}} objects.
 
-> **Note:** The spec wrongly lists this method as returning as a
-> `SpeechSynthesisVoiceList` object, but this was in fact removed from the
-> spec.
-
-## Example
+## Examples
 
 ### JavaScript
 
@@ -76,7 +72,7 @@ if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !=
 <select id="voiceSelect"></select>
 ```
 
-{{EmbedLiveSample("Example", 400, 25)}}
+{{EmbedLiveSample("Examples", 400, 25)}}
 
 ## Specifications
 

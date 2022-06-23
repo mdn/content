@@ -102,7 +102,7 @@ try { object_someMethod } catch(e) { console.log(e); }
 // ReferenceError: object_someMethod is not defined
 ```
 
-The name property is read-only and cannot be changed by the assigment operator:
+The name property is read-only and cannot be changed by the assignment operator:
 
 ```js
  let object = {
@@ -119,7 +119,7 @@ To change it, use {{jsxref("Object.defineProperty()")}}.
 ### Shorthand method names
 
 ```js
-var o = {
+const o = {
   foo(){}
 };
 o.foo.name; // "foo";
@@ -144,7 +144,7 @@ let o = {
   set foo(x){}
 };
 
-var descriptor = Object.getOwnPropertyDescriptor(o, "foo");
+const descriptor = Object.getOwnPropertyDescriptor(o, "foo");
 descriptor.get.name; // "get foo"
 descriptor.set.name; // "set foo";
 ```
@@ -156,11 +156,11 @@ You can use `obj.constructor.name` to check the "class" of an object (but be sur
 ```js
 function Foo() {}  // ES2015 Syntax: class Foo {}
 
-var fooInstance = new Foo();
+const fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // logs "Foo"
 ```
 
-> **Warning:** The script interpreter will set the built-in `Function.name` property only if a function does not have an own property called _name_ (see section [9.2.11 of the ECMAScript2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname)). However, ES2015 specifies the _static_ keyword such that static methods will be set as OwnProperty of the class constructor function (ECMAScript2015, [14.5.14.21.b](https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation)).
+> **Warning:** The script interpreter will set the built-in `Function.name` property only if a function does not have an own property called _name_ (see section [9.2.11 of the ECMAScript2015 Language Specification](https://262.ecma-international.org/6.0/#sec-setfunctionname)). However, ES2015 specifies the _static_ keyword such that static methods will be set as OwnProperty of the class constructor function (ECMAScript2015, [14.5.14.21.b](https://262.ecma-international.org/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://262.ecma-international.org/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation)).
 
 Therefore we can't obtain the class name for virtually any class with a static method property `name()`:
 

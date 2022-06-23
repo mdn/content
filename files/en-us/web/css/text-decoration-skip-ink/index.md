@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Property
   - CSS Text Decoration
-  - Experimental
   - Layout
   - Reference
   - Web
@@ -30,10 +29,11 @@ text-decoration-skip-ink: auto;
 text-decoration-skip-ink: all;
 
 /* Global keywords */
-text-decoration-skip: inherit;
-text-decoration-skip: initial;
+text-decoration-skip-ink: inherit;
+text-decoration-skip-ink: initial;
 text-decoration-skip-ink: revert;
-text-decoration-skip: unset;
+text-decoration-skip-ink: revert-layer;
+text-decoration-skip-ink: unset;
 ```
 
 ### Values

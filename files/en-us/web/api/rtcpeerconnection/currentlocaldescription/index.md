@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.currentLocalDescription
 slug: Web/API/RTCPeerConnection/currentLocalDescription
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -13,6 +14,7 @@ tags:
   - currentLocalConnection
 browser-compat: api.RTCPeerConnection.currentLocalDescription
 ---
+
 {{WebRTCSidebar}}
 
 The read-only property
@@ -36,18 +38,12 @@ the change isn't necessarily instantaneous, see
 > may specify a description which the connection is currently in the process of
 > switching over to.
 
-## Syntax
-
-```js
-sessionDescription = RTCPeerConnection.currentLocalDescription;
-```
-
-### Return value
+## Value
 
 The current description of the local end of the connection, if one has been set. If
 none has been successfully set, this value is `null`.
 
-## Example
+## Examples
 
 This example looks at the `currentLocalDescription` and displays an alert
 containing the {{domxref("RTCSessionDescription")}} object's `type` and
@@ -89,4 +85,4 @@ else {
   {{domxref("RTCPeerConnection.remoteDescription")}},
   {{domxref("RTCPeerConnection.pendingRemoteDescription")}},
   {{domxref("RTCPeerConnection.currentRemoteDescription")}}
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

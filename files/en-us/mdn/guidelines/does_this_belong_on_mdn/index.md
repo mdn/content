@@ -12,7 +12,7 @@ In this article, you'll find information describing how to decide whether or not
 
 ## The question
 
-If you're preparing to document something, you may be trying to decide whether to put the information on MDN Web Docs. In addition, you may be considering maintaining documentation in your source code, putting the document on the [Mozilla wiki](https://wiki.mozilla.org/), or in readme files in a Git repository. This article's purpose is to help you decide which of these options is right for your content.
+If you're preparing to document something, you may be trying to decide whether to put the information on MDN Web Docs. In addition, you may be considering maintaining documentation in your source code, putting the document on the [Mozilla wiki](https://wiki.mozilla.org/Main_Page), or in readme files in a Git repository. This article's purpose is to help you decide which of these options is right for your content.
 
 The two main considerations for whether a document belongs on MDN are:
 
@@ -25,7 +25,7 @@ Be aware that all contributions to MDN fall under specific open source licenses;
 
 ## What topics belong on MDN Web Docs?
 
-In general, if it's an open web-facing technology, we document it on MDN. This means any feature that can used by Web developers creating sites and applications now and in the near future. If it is implemented by multiple browsers and either accepted as standard or is progressing towards standardization, then yes, definitely. If it is still very experimental and not implemented in multiple browsers and/or liable to change, then it is still suitable for inclusion, but may not be seen as a priority for the writer's team to work on.
+In general, if it's an open web-facing technology, we document it on MDN. This means any feature that can be used by Web developers creating sites and applications now and in the near future. If it is implemented by multiple browsers and either accepted as standard or is progressing towards standardization, then yes, definitely. If it is still very experimental and not implemented in multiple browsers and/or liable to change, then it is still suitable for inclusion, but may not be seen as a priority for the writer's team to work on.
 
 The primary focus is on front-end web technologies:
 
@@ -51,7 +51,7 @@ Also welcome are topics that cut across technologies but are relevant to Web dev
 
 ## What topics don't belong on MDN Web Docs?
 
-In general, anything that isn't an open web standard does not belong on MDN. The below sections provide more specifics.
+In general, anything that isn't an open web standard does not belong on MDN. The sections below provide more detail.
 
 ### Mozilla products
 
@@ -61,7 +61,7 @@ While MDN Web Docs contains a large quantity of Mozilla product documentation, t
 
 - [Firefox browser](/en-US/docs/Mozilla/Firefox)
 
-  - [Firefox Developer Tools](/en-US/docs/Tools)
+  - [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
   - [Add-ons](/en-US/docs/Mozilla/Add-ons)
   - [Building and configuring Firefox](/en-US/docs/Mozilla/Developer_guide/Build_Instructions)
   - etc.
@@ -69,7 +69,7 @@ While MDN Web Docs contains a large quantity of Mozilla product documentation, t
 - [The Mozilla platform](/en-US/docs/Mozilla)
 
   - [Gecko](/en-US/docs/Mozilla/Gecko)
-  - [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey)
+  - [SpiderMonkey](https://firefox-source-docs.mozilla.org/js/)
   - etc.
 
 ### What else?

@@ -1,40 +1,30 @@
 ---
 title: 'SpeechRecognition: end event'
 slug: Web/API/SpeechRecognition/end_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
   - Web Speech API
 browser-compat: api.SpeechRecognition.end_event
 ---
-{{APIRef("Web Speech API")}} {{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`end`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) {{domxref("SpeechRecognition")}} object is fired when the speech recognition service has disconnected.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/SpeechRecognition/onend">onend</a></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('end', event => { })
+
+onend = event => { }
+```
+
+## Event type
+
+A generic {{DOMxRef("Event")}} with no added properties.
 
 ## Examples
 
@@ -48,7 +38,7 @@ recognition.addEventListener('end', function() {
 });
 ```
 
-Or use the [`onend`](/en-US/docs/Web/API/SpeechRecognition/onend) event handler property:
+Or use the `onend` event handler property:
 
 ```js
 recognition.onend = function() {
@@ -67,4 +57,3 @@ recognition.onend = function() {
 ## See also
 
 - [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)
-- [`onend`](/en-US/docs/Web/API/SpeechRecognition/onend)

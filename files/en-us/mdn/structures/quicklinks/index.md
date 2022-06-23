@@ -21,20 +21,20 @@ For example, your quicklinks HTML might look like this:
 
 ```html
 <section id="Quick_links">
-  <ol>
-    <li><a href="http://docs.ckeditor.com/">CKEditor documentation site</a></li>
-    <li><a href="http://mxr.mozilla.org/">MXR: Mozilla source cross-reference</a></li>
-    <li class="toggle">
-      <details><summary>Style guides</summary>
-      <ol>
-        <li><a href="http://www.economist.com/research/StyleGuide/">The Economist style guide</a></li>
-        <li><a href="https://www.amazon.com/gp/product/0226104036/">The Chicago manual of style</a></li>
-        <li><a href="http://www.answers.com/library/Dictionary">Answers.com dictionary</a></li>
-        <li><a href="http://www.wsu.edu/~brians/errors/">Common Errors in English</a></li>
-      </ol>
-      </details>
-    </li>
-  </ol>
+  <ol>
+    <li><a href="http://docs.ckeditor.com/">CKEditor documentation site</a></li>
+    <li><a href="http://mxr.mozilla.org/">MXR: Mozilla source cross-reference</a></li>
+    <li class="toggle">
+      <details><summary>Style guides</summary>
+      <ol>
+        <li><a href="http://www.economist.com/research/StyleGuide/">The Economist style guide</a></li>
+        <li><a href="https://www.amazon.com/gp/product/0226104036/">The Chicago manual of style</a></li>
+        <li><a href="http://www.answers.com/library/Dictionary">Answers.com dictionary</a></li>
+        <li><a href="http://www.wsu.edu/~brians/errors/">Common Errors in English</a></li>
+      </ol>
+      </details>
+    </li>
+  </ol>
 </section>
 ```
 
@@ -48,7 +48,7 @@ The important things to note:
 It's worth noting that you can (and often **should**) use macros to generate quicklinks.
 Any time you need to use the same set of quicklinks on more than one page, you should turn them into a macro.
 
-Your macro can be as simple or as complex as necessary; it needs to output HTML similar to what's shown in {{anch("Quicklinks syntax")}} above.
+Your macro can be as simple or as complex as necessary; it needs to output HTML similar to what's shown in [Quicklinks syntax](#quicklinks_syntax) above.
 
 ### Standard quicklinks macros
 

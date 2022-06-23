@@ -204,7 +204,7 @@ update: function() {
 },
 ```
 
-The function above clears the buttons cache, and copies their status from the previous frame to the cache. Next, the button status is cleared and the new information is added. The same goes for the axes information — looping through axes adds the values to the array. Received values are assigned to the proper objects and returns the pressed info for debugging purposes.
+The function above clears the buttons cache, and copies their status from the previous frame to the cache. Next, the button status is cleared and the new information is added. The same goes for the axes' information — looping through axes adds the values to the array. Received values are assigned to the proper objects and returns the pressed info for debugging purposes.
 
 The `button.pressed()` function detects the actual button presses:
 
@@ -231,7 +231,7 @@ It loops through pressed buttons and if the button we're looking for is pressed,
 
 ## Implementation
 
-We now know what the `GamepadAPI` object looks like and what variables and functions it contain, so let's learn how all this is actually used in the game. To indicate that the gamepad controller is active we can show the user some custom text on the game's main menu screen.
+We now know what the `GamepadAPI` object looks like and what variables and functions it contains, so let's learn how all this is actually used in the game. To indicate that the gamepad controller is active we can show the user some custom text on the game's main menu screen.
 
 The `textGamepad` object holds the text saying a gamepad has been connected, and is hidden by default. Here's the code we've prepared in the `create()` function that is executed once when the new state is created:
 

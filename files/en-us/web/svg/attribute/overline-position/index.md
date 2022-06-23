@@ -11,7 +11,7 @@ The `overline-position` attribute represents the ideal vertical position of the 
 
 You can use this attribute with the following SVG elements:
 
-*   {{ SVGElement("font-face") }}
+- {{ SVGElement("font-face") }}
 
 ## Usage context
 
@@ -23,7 +23,7 @@ You can use this attribute with the following SVG elements:
     </tr>
     <tr>
       <th scope="row">Value</th>
-      <td><a href="/en-US/docs/SVG/Content_type#Number">&#x3C;number></a></td>
+      <td><a href="/en-US/docs/Web/SVG/Content_type#Number">&#x3C;number></a></td>
     </tr>
     <tr>
       <th scope="row">Animatable</th>

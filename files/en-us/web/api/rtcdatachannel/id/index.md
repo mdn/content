@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.id
 slug: Web/API/RTCDataChannel/id
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCDataChannel
@@ -47,10 +48,12 @@ This can be also useful for logging and debugging purposes.
 
 ## Example
 
-    var pc = new RTCPeerConnection();
-    var dc = pc.createDataChannel("my channel");
+```js
+var pc = new RTCPeerConnection();
+var dc = pc.createDataChannel("my channel");
 
-    console.log("Channel id: " + dc.id);
+console.log("Channel id: " + dc.id);
+```
 
 ## Specifications
 

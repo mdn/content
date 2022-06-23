@@ -1,13 +1,14 @@
 ---
 title: 'aria-atomic'
-slug: web/Accessibility/ARIA/Attributes/aria-atomic
-tags: 
+slug: Web/Accessibility/ARIA/Attributes/aria-atomic
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-atomic
   - NeedsExample
+spec-urls: https://w3c.github.io/aria/#aria-atomic
 ---
 
 In ARIA live regions, the global `aria-atomic` attribute indicates whether assistive technologies such as a screen reader will present all, or only parts of, the changed region based on the change notifications defined by the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute.
@@ -26,16 +27,14 @@ If no ancestor has explicitly set `aria-atomic`, only the node or nodes of live 
   - : present only the changed node or nodes.
 - `true`
   - : present the entire changed region as a whole, including the author-defined label if one exists.
-  
+
 ## Associated roles
 
 Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Roles).
 
 ## Specifications
 
-| Specification         | Status            |
-| ---------------- | ---------------- |
-| {{SpecName("ARIA","#aria-atomic","ARIA: aria-atomic Attribute")}}              | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

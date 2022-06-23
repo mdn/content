@@ -12,4 +12,4 @@ A **rendering engine** is software that draws text and images on the screen. The
 ## See also
 
 - {{Interwiki("wikipedia", "Web browser engine")}} on Wikipedia
-- [Venkatraman.R - Behind Browsers (Part 1, Basics) ](https://medium.com/@ramsunvtech/behind-browser-basics-part-1-b733e9f3c0e6)
+- [Venkatraman.R - Behind Browsers (Part 1, Basics)](https://medium.com/@ramsunvtech/behind-browser-basics-part-1-b733e9f3c0e6)

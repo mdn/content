@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.addStream()
 slug: Web/API/RTCPeerConnection/addStream
+page-type: web-api-instance-method
 tags:
   - Deprecated
   - Method
@@ -10,6 +11,7 @@ tags:
   - addStream
 browser-compat: api.RTCPeerConnection.addStream
 ---
+
 {{APIRef("WebRTC")}}{{deprecated_header}}
 
 The _obsolete_ {{domxref("RTCPeerConnection")}} method
@@ -47,21 +49,24 @@ This simple example adds the audio and video stream coming from the user's camer
 the connection.
 
 ```js
-navigator.mediaDevices.getUserMedia({video:true, audio:true}, function(stream) {
-  var pc = new RTCPeerConnection();
-  pc.addStream(stream);
-});
+navigator.mediaDevices.getUserMedia(
+  { video: true, audio: true },
+  function (stream) {
+    var pc = new RTCPeerConnection();
+    pc.addStream(stream);
+  }
+);
 ```
 
 ## Migrating to addTrack()
 
-{{anch("Browser compatibility", "Compatibility allowing")}}, you should update your
+[Compatibility allowing](#browser_compatibility), you should update your
 code to instead use the {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} method:
 
 ```js
-navigator.getUserMedia({video:true, audio:true}, function(stream) {
+navigator.getUserMedia({ video: true, audio: true }, function (stream) {
   var pc = new RTCPeerConnection();
-  stream.getTracks().forEach(function(track) {
+  stream.getTracks().forEach(function (track) {
     pc.addTrack(track, stream);
   });
 });
@@ -85,17 +90,17 @@ if (pc.addTrack) {
   pc.addTrack(track, stream);
 } else {
   // If you have code listening for negotiationneeded events:
-  setTimeout(() => pc.dispatchEvent(new Event('negotiationneeded')));
+  setTimeout(() => pc.dispatchEvent(new Event("negotiationneeded")));
 }
 
 // Remove a track from a stream and the peer connection said stream was added to:
 
 stream.removeTrack(track);
 if (pc.removeTrack) {
-  pc.removeTrack(pc.getSenders().find(sender => sender.track == track));
+  pc.removeTrack(pc.getSenders().find((sender) => sender.track == track));
 } else {
   // If you have code listening for negotiationneeded events:
-  setTimeout(() => pc.dispatchEvent(new Event('negotiationneeded')));
+  setTimeout(() => pc.dispatchEvent(new Event("negotiationneeded")));
 }
 ```
 
@@ -109,4 +114,4 @@ if (pc.removeTrack) {
 
 ## See also
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

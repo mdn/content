@@ -30,8 +30,8 @@ The HTML document structure is quite simple, as the game will be rendered entire
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
     <style>
-    	* { padding: 0; margin: 0; }
-    	canvas { background: #eee; display: block; margin: 0 auto; }
+      * { padding: 0; margin: 0; }
+      canvas { background: #eee; display: block; margin: 0 auto; }
     </style>
 </head>
 <body>
@@ -39,7 +39,7 @@ The HTML document structure is quite simple, as the game will be rendered entire
 <canvas id="myCanvas" width="480" height="320"></canvas>
 
 <script>
-	// JavaScript code goes here
+  // JavaScript code goes here
 </script>
 
 </body>
@@ -69,7 +69,7 @@ ctx.fill();
 ctx.closePath();
 ```
 
-All the instructions are between the {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}} and {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}} methods. We are defining a rectangle using {{domxref("CanvasRenderingContext2D.rect()","rect()")}}: the first two values specify the coordinates of the top left corner of the rectangle on the canvas, while the second two specify the width and height of the rectangle. In our case the rectangle is painted 20 pixels from the left side of the screen and 40 pixels from the top side, and is 50 pixels wide and 50 pixels high, which makes it a perfect square. The {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} property stores a color that will be used by the {{domxref("CanvasRenderingContext2D.fill()","fill()")}} method to paint the square, in our case, red.
+All the instructions are between the {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}} and {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}} methods. We are defining a rectangle using {{domxref("CanvasRenderingContext2D.rect()","rect()")}}: the first two values specify the coordinates of the top left corner of the rectangle on the canvas, while the second two specify the width and height of the rectangle. In our case the rectangle is painted 20 pixels from the left side of the screen and 40 pixels from the top side, and is 50 pixels wide and 50 pixels high, which makes it a perfect square. The {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} property stores a color that will be used by the {{domxref("CanvasRenderingContext2D.fill()","fill()")}} method to paint the square, in our case, red.
 
 We're not limited to rectangles — here's a piece of code for printing out a green circle. Try adding this to the bottom of your JavaScript, saving and refreshing:
 

@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.texStorage2D()
 slug: Web/API/WebGL2RenderingContext/texStorage2D
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,7 +19,7 @@ two-dimensional texture storage.
 ## Syntax
 
 ```js
-void gl.texStorage2D(target, levels, internalformat, width, height);
+texStorage2D(target, levels, internalformat, width, height)
 ```
 
 ### Parameters
@@ -54,7 +55,7 @@ void gl.texStorage2D(target, levels, internalformat, width, height);
     - `gl.RGB32F`
     - `gl.RGB8UI`
     - `gl.RGBA8`
-    - `gl.SRGB8_APLHA8`
+    - `gl.SRGB8_ALPHA8`
     - `gl.RGB5_A1`
     - `gl.RGBA4`
     - `gl.RGBA16F`
@@ -62,8 +63,7 @@ void gl.texStorage2D(target, levels, internalformat, width, height);
     - `gl.RGBA8UI`
 
     Unlike OpenGL 3.0, WebGL 2 **doesn't support** the following ETC2 and
-    EAC compressed texture formats (see [section
-    5.37](https://www.khronos.org/registry/webgl/specs/latest/2.0/#5.37) in the WebGL 2 spec). You might be able to enable them via the
+    EAC compressed texture formats (see [section 5.37](https://www.khronos.org/registry/webgl/specs/latest/2.0/#5.37) in the WebGL 2 spec). You might be able to enable them via the
     {{domxref("WEBGL_compressed_texture_etc")}} extension, though.
 
     - `gl.COMPRESSED_R11_EAC`
@@ -84,7 +84,7 @@ void gl.texStorage2D(target, levels, internalformat, width, height);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

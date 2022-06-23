@@ -14,10 +14,10 @@ To test the latest developer features of Firefox, install Firefox Developer Edit
 
 Highlights:
 
-- [Full-text search in the Page Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#searching)
-- [Heap snapshot diffing in the Memory tool](/en-US/docs/Tools/Memory/Basic_operations#comparing_snapshots)
-- [DomContentLoaded and load events shown in the Network Monitor](/en-US/docs/Tools/Network_Monitor#timeline)
-- [Animation inspector improvements](/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations)
+- [Full-text search in the Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#searching)
+- [Heap snapshot diffing in the Memory tool](https://firefox-source-docs.mozilla.org/devtools-user/memory/basic_operations/index.html#comparing-snapshots)
+- [DomContentLoaded and load events shown in the Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#timeline)
+- [Animation inspector improvements](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html)
 
 [All devtools bugs fixed between Firefox 43 and Firefox 44.](https://bugzilla.mozilla.org/buglist.cgi?bug_status=RESOLVED&bug_status=VERIFIED&chfield=resolution&chfieldfrom=2015-10-29&chfieldto=2015-12-14&chfieldvalue=FIXED&classification=Client%20Software&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20about%3Adebugging&component=Developer%20Tools%3A%20Animation%20Inspector&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Computed%20Styles%20Inspector&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20CSS%20Rules%20Inspector&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Font%20Inspector&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20JSON%20Viewer&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&resolution=FIXED&list_id=12753878)
 
@@ -36,20 +36,20 @@ Highlights:
   - The implied minimum size of grid Items, that is the special {{cssxref("min-width")}} and {{cssxref("min-height")}} `auto` behavior has been implemented ({{bug(1176775)}}).
   - {{cssxref("align-self")}} and {{cssxref("justify-self")}} are now supported on grid layouts ({{bug(1151213)}}).
   - {{cssxref("align-content")}} and {{cssxref("justify-content")}} are now supported on grid layouts ({{bug(1151214)}}).
-  - Resolved value of grid-template-columns,grid-template-rows in px units ({{bug(978212)}}).
+  - Resolved value of grid-template-columns,grid-template-rows in px units ({{bug(978212)}}).
   - The related feature {{cssxref("display")}}: contents has been supported since [Firefox 37](/en-US/docs/Mozilla/Firefox/Releases/37)
 
-- Implement full support for CSS Box Alignment for CSS Grid, support the missing values: `start,` `end,` `self-start,` `self-end,` `left,` `right,last-baseline,space-evenly`({{bug(1176782)}}).  CSS Box Alignment currently applies only to CSS Flexbox and CSS Grid.
+- Implement full support for CSS Box Alignment for CSS Grid, support the missing values: `start,` `end,` `self-start,` `self-end,` `left,` `right,last-baseline,space-evenly`({{bug(1176782)}}).  CSS Box Alignment currently applies only to CSS Flexbox and CSS Grid.
 - \[css-grid]\[css-flexbox] Implement grid/flex layout for \<fieldset> ({{bug(1230207)}}).
 - The `inline-start` and `inline-end` values have been added to {{cssxref("float")}} and {{cssxref("clear")}} ({{bug(1122918)}}). They are enabled by default on Nightly and Aurora (Dev edition), as well as on Firefox OS; to activate it on a release or beta version, you need to flip the `layout.css.float-logical-values.enabled` to `true`.
-- The {{cssxref("text-emphasis")}}, {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}}, and {{cssxref("text-emphasis-position")}} have been implemented; they are disabled by default (set `layout.css.text-emphasis.enabled`  to true to activate them ({{bug(1040668)}}).
+- The {{cssxref("text-emphasis")}}, {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}}, and {{cssxref("text-emphasis-position")}} have been implemented; they are disabled by default (set `layout.css.text-emphasis.enabled`  to true to activate them ({{bug(1040668)}}).
 - Several `-webkit` prefixed properties and values have been added for web compatibility, behind the preference `layout.css.prefixes.webkit`, defaulting to `false`:
 
   - Added `-webkit-backface-visibility`, `-webkit-perspective` and `-webkit-perspective-origin` for web compatibility, behind the preference `layout.css.prefixes.webkit`, defaulting to `false` ({{bug(1179444)}}).
 
 ### JavaScript
 
-- ES2015 [Classes](/en-US/docs/Web/JavaScript/Reference/Classes) are now enabled by default ({{bug(1197932)}}).
+- ES2015 [Classes](/en-US/docs/Web/JavaScript/Reference/Classes) are now enabled by default ({{bug(1197932)}}).
 - {{jsxref("Operators/Expression_closures", "Expression closures", "", 1)}} are deprecated and will now present a warning in the console ({{bug(995610)}}).
 - {{jsxref("String.prototype.replace")}} does not restore {{jsxref("Global_Objects/RegExp/n", "RegExp static properties", "", 1)}} after executing function parameter anymore ({{bug(1226936)}}).
 - {{jsxref("Math.random()")}} has been updated to the better XorShift128+ algorithm ({{bug(322529)}}).
@@ -59,7 +59,7 @@ Highlights:
 #### DOM & HTML DOM
 
 - For compatibility, the non-standard property [`Node.innerText`](/en-US/docs/Web/API/HTMLElement/innerText) has been implemented ({{bug(264412)}}).
-- The {{domxref("HTMLImageElement.srcset")}} attribute now reacts to resize/viewport changes ({{bug(1166138)}}).
+- The {{domxref("HTMLImageElement.srcset")}} attribute now reacts to resize/viewport changes ({{bug(1166138)}}).
 - {{domxref("Element.getAttributeNames()")}} has been implemented ({{bug(1228634)}}).
 
 #### WebGL
@@ -92,10 +92,10 @@ _No change._
 #### Miscellaneous
 
 - [Web Speech Synthesis API](/en-US/docs/Web/API/Web_Speech_API) has been implemented on Firefox Desktop ({{bug(1003439)}}).
-- The {{domxref("WindowEventHandlers/onstorage", "Window.onstorage")}} event handler property has been added.
-- The interface {{domxref("ComputedTiming")}} have been added to our experimental implementation of [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) ({{bug(1108055)}}).
+- The {{domxref("Window/storage_event", "storage")}} event has been added.
+- The interface {{domxref("ComputedTiming")}} have been added to our experimental implementation of [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) ({{bug(1108055)}}).
 - The {{domxref("GlobalEventHandlers/onselectionchange", "Document.onselectionchange")}} event handler property has been added ({{bug(1231193)}}).
-- After removing a video track from a media stream by calling {{domxref("MediaStream.removeTrack()")}} you can nowadd another video track later using {{domxref("MediaStream.addTrack()")}} and have it played ({{bug(1223696)}}).
+- After removing a video track from a media stream by calling {{domxref("MediaStream.removeTrack()")}} you can now add another video track later using {{domxref("MediaStream.addTrack()")}} and have it played ({{bug(1223696)}}).
 
 ### MathML
 
@@ -108,11 +108,11 @@ _No change._
 
 ### Audio/Video
 
-- Fixed: Regression (since Firefox 41) whereby audio playback was stuttering due to duration time rounding errors ({{bug(1222866)}}.)
+- Fixed: Regression (since Firefox 41) whereby audio playback was stuttering due to duration time rounding errors ({{bug(1222866)}}.)
 
 ## HTTP
 
-- The `jar:` protocol has been disabled by default when accessed from Web content; you may enable this if necessary by setting the {{pref("network.jar.block-remote-files")}} preference to `false` ({{bug(1215235)}}).
+- The `jar:` protocol has been disabled by default when accessed from Web content; you may enable this if necessary by setting the `network.jar.block-remote-files` preference to `false` ({{bug(1215235)}}).
 
 ## Security
 
@@ -144,7 +144,7 @@ Starting in Firefox 45, search plugins located in the user's profile's `searchpl
 
 ### Other
 
-- WebIDL constructors could be called without the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator in chrome context.  Now such code will raise a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) as in Web content since Firefox 30. For example, `var req = XMLHttpRequest();` needs to be `var req = new XMLHttpRequest();`.
+- WebIDL constructors could be called without the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator in chrome context.  Now such code will raise a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) as in Web content since Firefox 30. For example, `var req = XMLHttpRequest();` needs to be `var req = new XMLHttpRequest();`.
 
 ## Older versions
 

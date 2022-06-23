@@ -30,4 +30,4 @@ As you can see, the color without an alpha channel completely blocks the backgro
 - {{interwiki("wikipedia", "Alpha compositing")}} on Wikipedia
 - {{interwiki("wikipedia", "RGBA color model")}} on Wikipedia
 - {{interwiki("wikipedia", "Channel (digital image)")}} on Wikipedia
-- [CSS color](/en-US/docs/Web/CSS/CSS_Color)
+- [CSS color](/en-US/docs/Web/CSS/CSS_Colors)

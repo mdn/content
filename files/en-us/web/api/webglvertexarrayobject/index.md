@@ -1,6 +1,7 @@
 ---
 title: WebGLVertexArrayObject
 slug: Web/API/WebGLVertexArrayObject
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -11,6 +12,8 @@ browser-compat: api.WebGLVertexArrayObject
 {{APIRef("WebGL")}}
 
 The **`WebGLVertexArrayObject`** interface is part of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API), represents vertex array objects (VAOs) pointing to vertex array data, and provides names for different sets of vertex data.
+
+{{InheritanceDiagram}}
 
 When working with `WebGLVertexArrayObject` objects, the following methods are useful:
 

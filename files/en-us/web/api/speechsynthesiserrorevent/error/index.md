@@ -1,10 +1,10 @@
 ---
 title: SpeechSynthesisErrorEvent.error
 slug: Web/API/SpeechSynthesisErrorEvent/error
+page-type: web-api-instance-property
 tags:
   - API
   - Error
-  - Experimental
   - Property
   - Reference
   - SpeechSynthesisErrorEvent
@@ -13,21 +13,14 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisErrorEvent.error
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`error`** property of the
-{{domxref("SpeechSynthesisErrorEvent")}} interface returns an error code indicating what
-has gone wrong with a speech synthesis attempt.
+{{domxref("SpeechSynthesisErrorEvent")}} interface returns an error code indicating what has gone wrong with a speech synthesis attempt.
 
-## Syntax
+## Value
 
-```js
-myError = event.error;
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing an error code. Possible codes are:
+A string containing an error code. Possible codes are:
 
 - `canceled`
   - : A {{domxref("SpeechSynthesis.cancel")}} method call caused the

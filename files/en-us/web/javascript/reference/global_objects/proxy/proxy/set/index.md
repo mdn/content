@@ -18,7 +18,7 @@ value.
 ## Syntax
 
 ```js
-const p = new Proxy(target, {
+new Proxy(target, {
   set: function(target, property, value, receiver) {
   }
 });

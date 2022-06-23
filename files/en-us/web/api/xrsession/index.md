@@ -1,6 +1,7 @@
 ---
 title: XRSession
 slug: Web/API/XRSession
+page-type: web-api-interface
 tags:
   - API
   - AR
@@ -15,9 +16,11 @@ browser-compat: api.XRSession
 ---
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
-The WebXR Device API's **`XRSession`** interface represents an ongoing XR session, providing methods and properties used to interact with and control the session. To open a WebXR session, use the {{domxref("XRSystem")}} interface's {{domxref("XRSystem.requestSession", "requestSession()")}} method.
+The {{domxref("WebXR Device API")}}'s **`XRSession`** interface represents an ongoing XR session, providing methods and properties used to interact with and control the session. To open a WebXR session, use the {{domxref("XRSystem")}} interface's {{domxref("XRSystem.requestSession", "requestSession()")}} method.
 
 With `XRSession` methods, you can poll the viewer's position and orientation (the {{domxref("XRViewerPose")}}), gather information about the user's environment, and present imagery to the user. `XRSession` supports both inline and immersive virtual and augmented reality modes.
+
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -76,7 +79,7 @@ _The following events are delivered to `XRSession` objects._
 - {{domxref("XRSession.selectend_event", "selectend")}}
   - : An event of type {{domxref("XRInputSourceEvent")}} which gets sent to the session object when one of its input devices finishes its primary action or gets disconnected while in the process of handling a primary action. For example: for button or trigger actions, this means the button has been released; for spoken commands, it means the user has finished speaking. This is the last of the three `select*` events to be sent. Also available through the `onselectend` event handler property.
 - {{domxref("XRSession.selectstart_event", "selectstart")}}
-  - : An event of type `XRInputSourceEvent` which is sent to the session object when one of its input devices is first engaged by the user in such a way as to cause the primary action to begin. This is the first of the `session*` event to be sent. Also available through the `onselectstart` event handler property.
+  - : An event of type {{domxref("XRInputSourceEvent")}} which is sent to the session object when one of its input devices is first engaged by the user in such a way as to cause the primary action to begin. This is the first of the `session*` event to be sent. Also available through the `onselectstart` event handler property.
 - {{domxref("XRSession.squeeze_event", "squeeze")}}
   - : An {{domxref("XRInputSourceEvent")}} sent to indicate that a [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_actions) has successfully completed. This indicates that the device being squeezed has been released, and may represent dropping a grabbed object, for example. It is sent immediately before the `squeezeend` event is sent to indicate that the squeeze action is over. Also available through the `onsqueeze` event handler property.
 - {{domxref("XRSession.squeezeend_event", "squeezeend")}}

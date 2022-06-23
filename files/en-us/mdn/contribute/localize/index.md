@@ -18,18 +18,18 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 
 ### Brazilian Portuguese (pt-BR)
 
-- Discussions: [Telegram (MDN localization in Brazillian Portuguese)](https://t.me/mdn_l10n_pt_br)
+- Discussions: [Telegram (MDN localization in Brazilian Portuguese)](https://t.me/mdn_l10n_pt_br)
 - Current contributors: [Luisa Migueres](https://github.com/lumigueres), [Julio Sampaio](https://github.com/juliosampaio), [Josiel Rocha](https://github.com/josielrocha), [Clóvis Lima Júnior](https://github.com/clovislima)
 
 ### Chinese (zh-CN, zh-TW)
 
-- Discussions: [Telegram (MozTW L10n channel)](https://moztw.org/tg)
+- Discussions: [Telegram (MozTW L10n channel)](https://moztw.org/community/telegram/)
 - Current contributors: [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [dibery](https://github.com/dibery)
 
 ### French (fr)
 
 - Discussions : [Matrix (#l10n-fr channel)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
-- Current contributors: [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb), [JNa0](https://github.com/JNa0), [nicolas-goudry](https://github.com/nicolas-goudry), [LEMIBANDDEXARI](https://github.com/LEMIBANDDEXARI)
+- Current contributors: [cw118](https://github.com/cw118), [Jb Audras](https://github.com/audrasjb), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
 
 ### Japanese (ja)
 
@@ -46,10 +46,15 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 - Discussions: [Matrix (#mdn-l10n-ru channel)](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
 - Current contributors: [armanpwnz](https://github.com/armanpwnz), [captainspring](https://github.com/captainspring), [mpstv](https://github.com/mpstv), [myshov](https://github.com/myshov), [Saionaro](https://github.com/Saionaro), [sashasushko](https://github.com/sashasushko), [lex111](https://github.com/lex111)
 
+### Spanish (es)
+
+- Discussions: [Matrix (#mdn-l10n-es channel)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org)
+- Current maintainers: [@JuanVqz](https://github.com/JuanVqz), [@dacalderonp](https://github.com/dacalderonp), [@lasr21](https://github.com/lasr21), [@tuxxy](https://github.com/tuxxy)
+
 > **Note:** If you want to discuss unfreezing a currently frozen locale, the [guidelines on what is required can be found here](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#activating-a-locale).
 
 ## See also
 
-- [MDN localization update, February 2021](https://hacks.mozilla.org/mdn-localization-update-february-2021/) — the latest state of localization on MDN
-- [An update on MDN Web Docs’ localization strategy](https://hacks.mozilla.org/an-update-on-mdn-web-docs-localization-strategy/) — updated strategy based on community feedback
-- [MDN Web Docs evolves! Lowdown on the upcoming new platform](https://hacks.mozilla.org/mdn-web-docs-evolves-lowdown-on-the-upcoming-new-platform/) — more on the advantages of the new platform, and the rationale behind the localization changes.
+- [MDN localization update, February 2021](https://hacks.mozilla.org/2021/02/mdn-localization-update-february-2021/) — the latest state of localization on MDN
+- [An update on MDN Web Docs' localization strategy](https://hacks.mozilla.org/2020/12/an-update-on-mdn-web-docs-localization-strategy/) — updated strategy based on community feedback
+- [MDN Web Docs evolves! Lowdown on the upcoming new platform](https://hacks.mozilla.org/2020/10/mdn-web-docs-evolves-lowdown-on-the-upcoming-new-platform/) — more on the advantages of the new platform, and the rationale behind the localization changes.

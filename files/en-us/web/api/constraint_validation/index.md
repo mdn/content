@@ -1,11 +1,13 @@
 ---
 title: Constraint validation API
 slug: Web/API/Constraint_validation
+page-type: web-api-overview
 tags:
   - API
   - Constraint validation
   - Landing
   - Reference
+browser-compat: api.ValidityState
 ---
 {{apiref()}}
 
@@ -51,11 +53,11 @@ The constraint validation API extends the interfaces for the form-associated ele
 
 #### Methods
 
-- {{domxref('HTMLObjectElement.checkValidity', 'checkValidity()')}}
+- {{domxref('HTMLInputElement.checkValidity', 'checkValidity()')}}
   - : Checks the element's value against its constraints. If the value is invalid, it fires an [invalid](/en-US/docs/Web/API/HTMLInputElement/invalid_event) event at the element and returns `false`; otherwise it returns `true`.
 - {{domxref('HTMLFormElement.reportValidity','reportValidity()')}} HTMLFormElement method
   - : Checks the element's value against its constraints and also reports the validity status; if the value is invalid, it fires an [invalid](/en-US/docs/Web/API/HTMLInputElement/invalid_event) event at the element, returns `false`, and then reports the validity status to the user in whatever way the user agent has available. Otherwise, it returns `true`.
-- {{domxref('HTMLObjectElement.setCustomValidity','setCustomValidity(<em>message</em>)')}}
+- {{domxref('HTMLInputElement.setCustomValidity','setCustomValidity(<em>message</em>)')}}
   - : Sets a custom error message string to be shown to the user upon submitting the form, explaining why the value is not valid — when a message is set, the validity state is set to invalid. To clear this state, invoke the function with an empty string passed as its argument. In this case the custom error message is cleared, the element is considered valid, and no message is shown.
 
 ## Examples
@@ -70,7 +72,7 @@ Take the following form:
 </form>
 ```
 
-The basic HTML form validation features will cause this to produce a default error message if you try to submit the form with either no valid filled in, or a value that does not match the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern).
+The basic HTML form validation features will cause this to produce a default error message if you try to submit the form with either no value filled in, or a value that does not match the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern).
 
 If you wanted to instead display custom error messages, you could use JavaScript like the following:
 
@@ -106,11 +108,15 @@ In brief:
 
 ## Specifications
 
-{{Specifications("api.ValidityState")}}
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
 - [`<input>`](/en-US/docs/Web/HTML/Element/input)
 - [`<select>`](/en-US/docs/Web/HTML/Element/select)
 - [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea)
-- `{{domxref('ValidityState')}}`'s properties: {{domxref('validityState.badInput', 'badInput')}}, {{domxref('validityState.customError','customError')}}, {{domxref('validityState.patternMismatch','patternMismatch')}}, {{domxref('validityState.rangeOverflow','rangeOverflow')}}, {{domxref('validityState.rangeUnderflow','rangeUnderflow')}}, {{domxref('validityState.stepMismatch','stepMismatch')}}, {{domxref('validityState.tooLong','tooLong')}}, {{domxref('validityState.tooShort','tooShort')}}, {{domxref('validityState.typeMismatch','typeMismatch')}}, {{domxref('validityState.valid','valid')}}, and {{domxref('validityState.valueMissing','valueMissing')}}.
+- {{domxref('ValidityState')}}'s properties: {{domxref('validityState.badInput', 'badInput')}}, {{domxref('validityState.customError','customError')}}, {{domxref('validityState.patternMismatch','patternMismatch')}}, {{domxref('validityState.rangeOverflow','rangeOverflow')}}, {{domxref('validityState.rangeUnderflow','rangeUnderflow')}}, {{domxref('validityState.stepMismatch','stepMismatch')}}, {{domxref('validityState.tooLong','tooLong')}}, {{domxref('validityState.tooShort','tooShort')}}, {{domxref('validityState.typeMismatch','typeMismatch')}}, {{domxref('validityState.valid','valid')}}, and {{domxref('validityState.valueMissing','valueMissing')}}.

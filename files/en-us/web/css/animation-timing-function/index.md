@@ -48,6 +48,7 @@ animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
 animation-timing-function: inherit;
 animation-timing-function: initial;
 animation-timing-function: revert;
+animation-timing-function: revert-layer;
 animation-timing-function: unset;
 ```
 
@@ -59,7 +60,7 @@ A keyframe's timing function is applied on a property-by-property basis from the
 
 - {{cssxref("&lt;easing-function&gt;")}}
 
-  - : The easing function that corresponds to a given animation, as determined by {{cssxref("animation-name")}}.
+  - : The easing function that corresponds to a given animation, as determined by {{cssxref("animation-name")}}.
 
     The non-step keyword values (ease, linear, ease-in-out, etc.) each represent cubic Bézier curve with fixed four point values, with the cubic-bezier() function value allowing for a non-predefined value. The step timing functions divides the input time into a specified number of intervals that are equal in length. It is defined by a number of steps and a step position.
 
@@ -249,7 +250,7 @@ A keyframe's timing function is applied on a property-by-property basis from the
 
 ## See also
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations "CSS developer guide about CSS animations")
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - {{cssxref('easing-function')}}
 - JavaScript {{domxref("AnimationEvent")}} API
 - [cubic-bezier.com](https://cubic-bezier.com)

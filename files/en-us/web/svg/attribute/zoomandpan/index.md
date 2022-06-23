@@ -17,8 +17,8 @@ Panning represents a translation (i.e., a shift) transformation on an SVG docume
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("svg")}}
-*   {{SVGElement("view")}}
+- {{SVGElement("svg")}}
+- {{SVGElement("view")}}
 
 ## Example
 
@@ -63,24 +63,7 @@ html, body, svg {
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "interact.html#ZoomAndPanAttribute", "zoomAndPan")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

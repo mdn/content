@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getShaderSource()
 slug: Web/API/WebGLRenderingContext/getShaderSource
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -13,22 +14,22 @@ browser-compat: api.WebGLRenderingContext.getShaderSource
 
 The **`WebGLRenderingContext.getShaderSource()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) returns the source code of a
-{{domxref("WebGLShader")}} as a {{domxref("DOMString")}}.
+{{domxref("WebGLShader")}} as a string.
 
 ## Syntax
 
 ```js
-DOMString gl.getShaderSource(shader);
+getShaderSource(shader)
 ```
 
 ### Parameters
 
-- shader
+- `shader`
   - : A {{domxref("WebGLShader")}} object to get the source code from.
 
 ### Return value
 
-A {{domxref("DOMString")}} containing the source code of the shader.
+A string containing the source code of the shader.
 
 ## Examples
 

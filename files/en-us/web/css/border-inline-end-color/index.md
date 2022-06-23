@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - border-inline
   - border-inline-color
@@ -30,12 +29,11 @@ border-inline-end-color: #663399;
 border-inline-end-color: inherit;
 border-inline-end-color: initial;
 border-inline-end-color: revert;
+border-inline-end-color: revert-layer;
 border-inline-end-color: unset;
 ```
 
 Related properties are {{cssxref("border-block-start-color")}}, {{cssxref("border-block-end-color")}}, and {{cssxref("border-inline-start-color")}}, which define the other border colors of the element.
-
-{{cssinfo}}
 
 ### Values
 

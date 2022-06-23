@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMapReadOnly.values()
 slug: Web/API/StylePropertyMapReadOnly/values
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -21,7 +22,7 @@ new _array iterator_ containing the values for each index in the
 ## Syntax
 
 ```js
-StylePropertyMapReadOnly.values()
+values()
 ```
 
 ### Parameters
@@ -32,10 +33,10 @@ None.
 
 A new {{jsxref("Array")}}.
 
-## Example
+## Examples
 
-In this example we use the `values()` method to be able to access the values
-within our [`Element.computedStyleMap()`](/en-US/docs/Web/API/Element/computedStyleMap).
+In this example we use the `values()` method to be able to access the values
+within our [`Element.computedStyleMap()`](/en-US/docs/Web/API/Element/computedStyleMap).
 
 ```js
 // get a button element
@@ -44,7 +45,7 @@ const buttonEl = document.querySelector('button');
 // we can retrieve all computed styles with `computedStyleMap`
 const allComputedStyles = buttonEl.computedStyleMap();
 
-// values returns an iterable list of the css values
+// values returns an iterable list of the CSS values
 const vals = allComputedStyles.values();
 console.log(vals.next().value); // returns a CSSStyleValue
 ```

@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.timestampOffset
 slug: Web/API/SourceBuffer/timestampOffset
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -14,7 +15,7 @@ tags:
   - timestampOffset
 browser-compat: api.SourceBuffer.timestampOffset
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 The **`timestampOffset`** property of the
 {{domxref("SourceBuffer")}} interface controls the offset applied to timestamps inside
@@ -22,15 +23,7 @@ media segments that are appended to the `SourceBuffer`.
 
 The initial value of `timestampOffset` is 0.
 
-## Syntax
-
-```js
-var myOffset = sourceBuffer.timestampOffset;
-
-sourceBuffer.timestampOffset = 2.5;
-```
-
-### Value
+## Value
 
 A double, with the offset amount expressed in seconds.
 
@@ -47,7 +40,7 @@ The following exception may be thrown when setting a new value for this property
         `SourceBuffer` has been removed from the
         {{domxref("MediaSource")}}.
 
-## Example
+## Examples
 
 TBD
 

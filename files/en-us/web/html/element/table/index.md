@@ -99,7 +99,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
 
-  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color kewords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
+  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
 
     To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.
 
@@ -354,22 +354,25 @@ The following example adds an event handler to every `<th>` element of every `<t
 ##### JavaScript
 
 ```js
-for (let table of document.querySelectorAll('table')) {
-  for (let th of table.tHead.rows[0].cells) {
-    th.onclick = function(){
-      const tBody = table.tBodies[0];
-      const rows = tBody.rows;
-      for (let tr of rows) {
-        Array.prototype.slice.call(rows)
-          .sort(function(tr1, tr2){
-            const cellIndex = th.cellIndex;
-            return tr1.cells[cellIndex].textContent.localeCompare(tr2.cells[cellIndex].textContent);
-          })
-          .forEach(function(tr){
-            this.appendChild(this.removeChild(tr));
-          }, tBody);
-      }
-    }
+const allTables = document.querySelectorAll('table');
+
+for (let table of allTables) {
+  const tBody = table.tBodies[0];
+  const rows = Array.from(tBody.rows);
+  const headerCells = table.tHead.rows[0].cells;
+
+  for (let th of headerCells) {
+    const cellIndex = th.cellIndex;
+
+    th.addEventListener('click', () => {
+      rows.sort((tr1, tr2) => {
+        const tr1Text = tr1.cells[cellIndex].textContent;
+        const tr2Text = tr2.cells[cellIndex].textContent;
+        return tr1Text.localeCompare(tr2Text);
+      });
+
+      tBody.append(...rows);
+    });
   }
 }
 ```
@@ -380,188 +383,188 @@ for (let table of document.querySelectorAll('table')) {
 
 ### Displaying large tables in small spaces
 
-A common issue with tables on the web is that they don’t natively work very well on small screens when the amount of content is large, and the way to make them scrollable isn’t obvious, especially when the markup may come from a CDN and cannot be modified to have a wrapper.
+A common issue with tables on the web is that they don't natively work very well on small screens when the amount of content is large, and the way to make them scrollable isn't obvious, especially when the markup may come from a CDN and cannot be modified to have a wrapper.
 
 This example provides one way to display tables in small spaces. We've hidden the HTML content as it is very large, and there is nothing remarkable about it. The CSS is more useful to inspect in this example.
 
 ```html hidden
 <table>
-  <thead>
-    <tr>
-      <th>1<sup>3</sup> equals:
-      <th>2<sup>3</sup> equals:
-      <th>3<sup>3</sup> equals:
-      <th>4<sup>3</sup> equals:
-      <th>5<sup>3</sup> equals:
-      <th>6<sup>3</sup> equals:
-      <th>7<sup>3</sup> equals:
-  <tbody>
-    <tr>
-      <td>row 1: 1
-      <td>row 1: 8
-      <td>row 1: 27
-      <td>row 1: 64
-      <td>row 1: 125
-      <td>row 1: 216
-      <td>row 1: 343
-    <tr>
-      <td>row 2: 1
-      <td>row 2: 8
-      <td>row 2: 27
-      <td>row 2: 64
-      <td>row 2: 125
-      <td>row 2: 216
-      <td>row 2: 343
-    <tr>
-      <td>row 3: 1
-      <td>row 3: 8
-      <td>row 3: 27
-      <td>row 3: 64
-      <td>row 3: 125
-      <td>row 3: 216
-      <td>row 3: 343
-    <tr>
-      <td>row 4: 1
-      <td>row 4: 8
-      <td>row 4: 27
-      <td>row 4: 64
-      <td>row 4: 125
-      <td>row 4: 216
-      <td>row 4: 343
-    <tr>
-      <td>row 5: 1
-      <td>row 5: 8
-      <td>row 5: 27
-      <td>row 5: 64
-      <td>row 5: 125
-      <td>row 5: 216
-      <td>row 5: 343
-    <tr>
-      <td>row 6: 1
-      <td>row 6: 8
-      <td>row 6: 27
-      <td>row 6: 64
-      <td>row 6: 125
-      <td>row 6: 216
-      <td>row 6: 343
-    <tr>
-      <td>row 7: 1
-      <td>row 7: 8
-      <td>row 7: 27
-      <td>row 7: 64
-      <td>row 7: 125
-      <td>row 7: 216
-      <td>row 7: 343
-    <tr>
-      <td>row 8: 1
-      <td>row 8: 8
-      <td>row 8: 27
-      <td>row 8: 64
-      <td>row 8: 125
-      <td>row 8: 216
-      <td>row 8: 343
-    <tr>
-      <td>row 9: 1
-      <td>row 9: 8
-      <td>row 9: 27
-      <td>row 9: 64
-      <td>row 9: 125
-      <td>row 9: 216
-      <td>row 9: 343
-    <tr>
-      <td>row 10: 1
-      <td>row 10: 8
-      <td>row 10: 27
-      <td>row 10: 64
-      <td>row 10: 125
-      <td>row 10: 216
-      <td>row 10: 343
-    <tr>
-      <td>row 11: 1
-      <td>row 11: 8
-      <td>row 11: 27
-      <td>row 11: 64
-      <td>row 11: 125
-      <td>row 11: 216
-      <td>row 11: 343
-    <tr>
-      <td>row 12: 1
-      <td>row 12: 8
-      <td>row 12: 27
-      <td>row 12: 64
-      <td>row 12: 125
-      <td>row 12: 216
-      <td>row 12: 343
-    <tr>
-      <td>row 13: 1
-      <td>row 13: 8
-      <td>row 13: 27
-      <td>row 13: 64
-      <td>row 13: 125
-      <td>row 13: 216
-      <td>row 13: 343
-    <tr>
-      <td>row 14: 1
-      <td>row 14: 8
-      <td>row 14: 27
-      <td>row 14: 64
-      <td>row 14: 125
-      <td>row 14: 216
-      <td>row 14: 343
-    <tr>
-      <td>row 15: 1
-      <td>row 15: 8
-      <td>row 15: 27
-      <td>row 15: 64
-      <td>row 15: 125
-      <td>row 15: 216
-      <td>row 15: 343
-    <tr>
-      <td>row 16: 1
-      <td>row 16: 8
-      <td>row 16: 27
-      <td>row 16: 64
-      <td>row 16: 125
-      <td>row 16: 216
-      <td>row 16: 343
-    <tr>
-      <td>row 17: 1
-      <td>row 17: 8
-      <td>row 17: 27
-      <td>row 17: 64
-      <td>row 17: 125
-      <td>row 17: 216
-      <td>row 17: 343
-    <tr>
-      <td>row 18: 1
-      <td>row 18: 8
-      <td>row 18: 27
-      <td>row 18: 64
-      <td>row 18: 125
-      <td>row 18: 216
-      <td>row 18: 343
-    <tr>
-      <td>row 19: 1
-      <td>row 19: 8
-      <td>row 19: 27
-      <td>row 19: 64
-      <td>row 19: 125
-      <td>row 19: 216
-      <td>row 19: 343
-    <tr>
-      <td>row 20: 1
-      <td>row 20: 8
-      <td>row 20: 27
-      <td>row 20: 64
-      <td>row 20: 125
-      <td>row 20: 216
-      <td>row 20: 343
+  <thead>
+    <tr>
+      <th>1<sup>3</sup> equals:
+      <th>2<sup>3</sup> equals:
+      <th>3<sup>3</sup> equals:
+      <th>4<sup>3</sup> equals:
+      <th>5<sup>3</sup> equals:
+      <th>6<sup>3</sup> equals:
+      <th>7<sup>3</sup> equals:
+  <tbody>
+    <tr>
+      <td>row 1: 1
+      <td>row 1: 8
+      <td>row 1: 27
+      <td>row 1: 64
+      <td>row 1: 125
+      <td>row 1: 216
+      <td>row 1: 343
+    <tr>
+      <td>row 2: 1
+      <td>row 2: 8
+      <td>row 2: 27
+      <td>row 2: 64
+      <td>row 2: 125
+      <td>row 2: 216
+      <td>row 2: 343
+    <tr>
+      <td>row 3: 1
+      <td>row 3: 8
+      <td>row 3: 27
+      <td>row 3: 64
+      <td>row 3: 125
+      <td>row 3: 216
+      <td>row 3: 343
+    <tr>
+      <td>row 4: 1
+      <td>row 4: 8
+      <td>row 4: 27
+      <td>row 4: 64
+      <td>row 4: 125
+      <td>row 4: 216
+      <td>row 4: 343
+    <tr>
+      <td>row 5: 1
+      <td>row 5: 8
+      <td>row 5: 27
+      <td>row 5: 64
+      <td>row 5: 125
+      <td>row 5: 216
+      <td>row 5: 343
+    <tr>
+      <td>row 6: 1
+      <td>row 6: 8
+      <td>row 6: 27
+      <td>row 6: 64
+      <td>row 6: 125
+      <td>row 6: 216
+      <td>row 6: 343
+    <tr>
+      <td>row 7: 1
+      <td>row 7: 8
+      <td>row 7: 27
+      <td>row 7: 64
+      <td>row 7: 125
+      <td>row 7: 216
+      <td>row 7: 343
+    <tr>
+      <td>row 8: 1
+      <td>row 8: 8
+      <td>row 8: 27
+      <td>row 8: 64
+      <td>row 8: 125
+      <td>row 8: 216
+      <td>row 8: 343
+    <tr>
+      <td>row 9: 1
+      <td>row 9: 8
+      <td>row 9: 27
+      <td>row 9: 64
+      <td>row 9: 125
+      <td>row 9: 216
+      <td>row 9: 343
+    <tr>
+      <td>row 10: 1
+      <td>row 10: 8
+      <td>row 10: 27
+      <td>row 10: 64
+      <td>row 10: 125
+      <td>row 10: 216
+      <td>row 10: 343
+    <tr>
+      <td>row 11: 1
+      <td>row 11: 8
+      <td>row 11: 27
+      <td>row 11: 64
+      <td>row 11: 125
+      <td>row 11: 216
+      <td>row 11: 343
+    <tr>
+      <td>row 12: 1
+      <td>row 12: 8
+      <td>row 12: 27
+      <td>row 12: 64
+      <td>row 12: 125
+      <td>row 12: 216
+      <td>row 12: 343
+    <tr>
+      <td>row 13: 1
+      <td>row 13: 8
+      <td>row 13: 27
+      <td>row 13: 64
+      <td>row 13: 125
+      <td>row 13: 216
+      <td>row 13: 343
+    <tr>
+      <td>row 14: 1
+      <td>row 14: 8
+      <td>row 14: 27
+      <td>row 14: 64
+      <td>row 14: 125
+      <td>row 14: 216
+      <td>row 14: 343
+    <tr>
+      <td>row 15: 1
+      <td>row 15: 8
+      <td>row 15: 27
+      <td>row 15: 64
+      <td>row 15: 125
+      <td>row 15: 216
+      <td>row 15: 343
+    <tr>
+      <td>row 16: 1
+      <td>row 16: 8
+      <td>row 16: 27
+      <td>row 16: 64
+      <td>row 16: 125
+      <td>row 16: 216
+      <td>row 16: 343
+    <tr>
+      <td>row 17: 1
+      <td>row 17: 8
+      <td>row 17: 27
+      <td>row 17: 64
+      <td>row 17: 125
+      <td>row 17: 216
+      <td>row 17: 343
+    <tr>
+      <td>row 18: 1
+      <td>row 18: 8
+      <td>row 18: 27
+      <td>row 18: 64
+      <td>row 18: 125
+      <td>row 18: 216
+      <td>row 18: 343
+    <tr>
+      <td>row 19: 1
+      <td>row 19: 8
+      <td>row 19: 27
+      <td>row 19: 64
+      <td>row 19: 125
+      <td>row 19: 216
+      <td>row 19: 343
+    <tr>
+      <td>row 20: 1
+      <td>row 20: 8
+      <td>row 20: 27
+      <td>row 20: 64
+      <td>row 20: 125
+      <td>row 20: 216
+      <td>row 20: 343
 </table>
 ```
 
-When looking at these styles you’ll notice that table’s {{cssxref("display")}} property has been set to `block`. While this allows scrolling, the table loses some of its integrity, and table cells try to become as small as possible. To mitigate this issue we've set {{cssxref("white-space")}} to `nowrap` on the `<tbody>`. However, we don’t do this for the `<thead>` to avoid long titles forcing columns to be wider than they need to be to display the data.
+When looking at these styles you'll notice that table's {{cssxref("display")}} property has been set to `block`. While this allows scrolling, the table loses some of its integrity, and table cells try to become as small as possible. To mitigate this issue we've set {{cssxref("white-space")}} to `nowrap` on the `<tbody>`. However, we don't do this for the `<thead>` to avoid long titles forcing columns to be wider than they need to be to display the data.
 
-To keep the table headers on the page while scrolling down we've set {{cssxref("position")}} to sticky on the `<th>` elements. Note that we have **not** set {{cssxref("border-collapse")}}  to `collapse`, as if we do the header cannot be separated correctly from the rest of the table.
+To keep the table headers on the page while scrolling down we've set {{cssxref("position")}} to sticky on the `<th>` elements. Note that we have **not** set {{cssxref("border-collapse")}}  to `collapse`, as if we do the header cannot be separated correctly from the rest of the table.
 
 ```css
 table,
@@ -664,7 +667,7 @@ Providing a declaration of `scope="col"` on a {{HTMLElement("th")}} element will
 
 ### Complicated tables
 
-Assistive technology such as screen readers may have difficulty parsing tables that are so complex that header cells can’t be associated in a strictly horizontal or vertical way. This is typically indicated by the presence of the {{htmlattrxref("colspan", "td")}} and {{htmlattrxref("rowspan", "td")}} attributes.
+Assistive technology such as screen readers may have difficulty parsing tables that are so complex that header cells can't be associated in a strictly horizontal or vertical way. This is typically indicated by the presence of the {{htmlattrxref("colspan", "td")}} and {{htmlattrxref("rowspan", "td")}} attributes.
 
 Ideally, consider alternate ways to present the table's content, including breaking it apart into a collection of smaller, related tables that don't have to rely on using the `colspan` and `rowspan` attributes. In addition to helping people who use assistive technology understand the table's content, this may also benefit people with cognitive concerns who may have difficulty understanding the associations the table layout is describing.
 

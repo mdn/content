@@ -1,6 +1,7 @@
 ---
 title: SVGFEFloodElement
 slug: Web/API/SVGFEFloodElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGFEFloodElement
 
 The **`SVGFEFloodElement`** interface corresponds to the {{SVGElement("feFlood")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMapReadOnly
 slug: Web/API/StylePropertyMapReadOnly
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -13,12 +14,12 @@ browser-compat: api.StylePropertyMapReadOnly
 ---
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-The **`StylePropertyMapReadOnly`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_Object_Model_API) provides a read-only representation of a CSS declaration block that is an alternative to {{domxref("CSSStyleDeclaration")}}. Retrieve an instance of this interface using {{domxref('Element.computedStyleMap','Element.computedStyleMap()')}}.
+The **`StylePropertyMapReadOnly`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) provides a read-only representation of a CSS declaration block that is an alternative to {{domxref("CSSStyleDeclaration")}}. Retrieve an instance of this interface using {{domxref('Element.computedStyleMap','Element.computedStyleMap()')}}.
 
 ## Properties
 
 - {{domxref('StylePropertyMapReadOnly.size')}}
-  - : Returns an unsinged long integer containing the size of the `StylePropertyMapReadOnly` object.
+  - : Returns an unsigned long integer containing the size of the `StylePropertyMapReadOnly` object.
 
 ## Methods
 
@@ -33,7 +34,7 @@ The **`StylePropertyMapReadOnly`** interface of the [CSS Typed Object Model API]
 - {{domxref('StylePropertyMapReadOnly.has()')}}
   - : Indicates whether the specified property is in the `StylePropertyMapReadOnly` object.
 - {{domxref('StylePropertyMapReadOnly.keys()')}}
-  - : Returns a new _array iterator_ containing the keys for each item in `StylePropertyMapReadOnly`.
+  - : Returns a new _array iterator_ containing the keys for each item in `StylePropertyMapReadOnly`.
 - {{domxref('StylePropertyMapReadOnly.values()')}}
   - : Returns a new _array iterator_ containing the values for each index in the `StylePropertyMapReadOnly` object.
 
@@ -44,7 +45,7 @@ We have to have an element to observe:
 ```html
 <p>
    This is a paragraph with some text. We can add some CSS, or not. The
-   style map will include all the default and inherted CSS property values.
+   style map will include all the default and inherited CSS property values.
 </p>
 <dl id="output"></dl>
 ```
@@ -74,15 +75,15 @@ const stylePropertyMap = myElement.computedStyleMap();
 
 // iterate thru the map of all the properties and values, adding a <dt> and <dd> for each
 for (const [prop, val] of stylePropertyMap) {
-	// properties
-	const cssProperty = document.createElement('dt');
-	cssProperty.innerText = prop;
-	stylesList.appendChild(cssProperty);
+  // properties
+  const cssProperty = document.createElement('dt');
+  cssProperty.innerText = prop;
+  stylesList.appendChild(cssProperty);
 
-	// values
-	const cssValue = document.createElement('dd');
-	cssValue.innerText = val;
-	stylesList.appendChild(cssValue);
+  // values
+  const cssValue = document.createElement('dd');
+  cssValue.innerText = val;
+  stylesList.appendChild(cssValue);
 }
 ```
 

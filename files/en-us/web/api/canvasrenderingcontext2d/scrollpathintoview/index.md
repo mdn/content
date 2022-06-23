@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.scrollPathIntoView()
 slug: Web/API/CanvasRenderingContext2D/scrollPathIntoView
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -20,14 +21,18 @@ to {{domxref("Element.scrollIntoView()")}}.
 ## Syntax
 
 ```js
-void ctx.scrollPathIntoView();
-void ctx.scrollPathIntoView(path);
+scrollPathIntoView()
+scrollPathIntoView(path)
 ```
 
 ### Parameters
 
 - `path`
   - : A {{domxref("Path2D")}} path to use.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -61,22 +66,28 @@ Edit the code below to see your changes update live in the canvas:
 <input id="button" type="range" min="1" max="12">
 </canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.rect(10, 10, 30, 30);
-ctx.scrollPathIntoView();</textarea>
+ctx.fill();
+if(ctx.scrollPathIntoView) {
+  ctx.scrollPathIntoView();
+} else {
+  ctx.fillText("Your browser does not support 'scrollPathIntoView()'.", 0, 150);
+}
+</textarea>
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const edit = document.getElementById("edit");
+const code = textarea.value;
 
 function drawCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);

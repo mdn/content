@@ -42,13 +42,13 @@ The first example we'll look at is a classic tabbed info box — a very common f
 
 ![](tabbed-info-box.png)
 
-> **Note:** You can see the finished example running live at [info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)). Check it out to get an idea of what you will be building in this section of the article.
+> **Note:** You can see the finished example running live at [info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)). Check it out to get an idea of what you will be building in this section of the article.
 
-You might be thinking "why not just create the separate tabs as separate webpages, and just have the tabs clicking through to the separate pages to create the effect?" This code would be simpler, yes, but then each separate "page" view would actually be a newly-loaded webpage, which would make it harder to save information across views, and integrate this feature into a larger UI design. In addition, so-called "single page apps" are becoming very popular — especially for mobile web UIs — because having everything served as a single file cuts down on the number of HTTP requests required to view all the content, thereby improving performance.
+You might be thinking "why not just create the separate tabs as separate webpages, and just have the tabs clicking through to the separate pages to create the effect?" This code would be simpler, yes, but then each separate "page" view would actually be a newly-loaded webpage, which would make it harder to save information across views, and integrate this feature into a larger UI design. In addition, so-called "single page apps" are becoming very popular — especially for mobile web UIs — because having everything served as a single file cuts down on the number of HTTP requests required to view all the content, thereby improving performance.
 
 > **Note:** Some web developers take things even further, only having one page of information loaded at once, and dynamically changing the information shown using a JavaScript feature such as [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest). At this point in your learning however we want to keep things as simple as possible. There is some JavaScript later on, but only a tiny bit.
 
-To start with, we'd like you to make a local copy of the starting HTML file — [info-box-start.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box-start.html). Save this somewhere sensible on your local computer, and open it up in your text editor. Let's look at the HTML contained within the body:
+To start with, we'd like you to make a local copy of the starting HTML file — [info-box-start.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box-start.html). Save this somewhere sensible on your local computer, and open it up in your text editor. Let's look at the HTML contained within the body:
 
 ```html
 <section class="info-box">
@@ -206,34 +206,36 @@ The second rule we'll add here makes it so that a panel with a `class` of `activ
 
 The final step to getting this feature working is to add some JavaScript. Put the following block of code, exactly as written in between your opening and closing {{htmlelement("script")}} tags (you'll find these below the HTML content):
 
-    var tabs = document.querySelectorAll('.info-box li a');
-    var panels = document.querySelectorAll('.info-box article');
+```js
+var tabs = document.querySelectorAll('.info-box li a');
+var panels = document.querySelectorAll('.info-box article');
 
+for(i = 0; i < tabs.length; i++) {
+  var tab = tabs[i];
+  setTabHandler(tab, i);
+}
+
+function setTabHandler(tab, tabPos) {
+  tab.onclick = function() {
     for(i = 0; i < tabs.length; i++) {
-      var tab = tabs[i];
-      setTabHandler(tab, i);
+      tabs[i].className = '';
     }
 
-    function setTabHandler(tab, tabPos) {
-      tab.onclick = function() {
-        for(i = 0; i < tabs.length; i++) {
-          tabs[i].className = '';
-        }
+    tab.className = 'active';
 
-        tab.className = 'active';
-
-        for(i = 0; i < panels.length; i++) {
-          panels[i].className = '';
-        }
-
-        panels[tabPos].className = 'active-panel';
-      }
+    for(i = 0; i < panels.length; i++) {
+      panels[i].className = '';
     }
+
+    panels[tabPos].className = 'active-panel';
+  }
+}
+```
 
 This code does the following:
 
 - First we save a reference to all the tabs and all the panels in two variables called `tabs` and `panels`, so we can easily do things to them later on.
-- Then we use a `for` loop to cycle through all the tabs and run a function called `setTabHandler()` on each one, which sets up the functionality that should occur when each one is clicked on. When run, the function is passed a reference to the particular tab it is being run for, and an index number `i` that indentifies the tab's position in the `tabs` array.
+- Then we use a `for` loop to cycle through all the tabs and run a function called `setTabHandler()` on each one, which sets up the functionality that should occur when each one is clicked on. When run, the function is passed a reference to the particular tab it is being run for, and an index number `i` that identifies the tab's position in the `tabs` array.
 - In the `setTabHandler()` function, the tab has an `onclick` event handler set on it, so that when the tab is clicked, the following occurs:
 
   - A `for` loop is used to cycle through all the tabs and remove any classes that are present on them.
@@ -249,9 +251,9 @@ In our second example, we will take our first example — our info-box — and a
 
 ![](fixed-info-box.png)
 
-> **Note:** You can see the finished example running live at [fixed-info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html) ([source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/fixed-info-box.html)). Check it out to get an idea of what you will be building in this section of the article.
+> **Note:** You can see the finished example running live at [fixed-info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/fixed-info-box.html)). Check it out to get an idea of what you will be building in this section of the article.
 
-As a starting point, you can use your completed example from the first section of the article, or make a local copy of [info-box.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html) from our Github repo.
+As a starting point, you can use your completed example from the first section of the article, or make a local copy of [info-box.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html) from our GitHub repo.
 
 ### HTML additions
 
@@ -314,9 +316,9 @@ Our finished example will look like this:
 
 ![](hidden-sliding-panel.png)
 
-> **Note:** You can see the finished example running live at [hidden-info-panel.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html) ([source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel.html)). Check it out to get an idea of what you will be building in this section of the article.
+> **Note:** You can see the finished example running live at [hidden-info-panel.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/hidden-info-panel.html)). Check it out to get an idea of what you will be building in this section of the article.
 
-As a starting point, make a local copy of [hidden-info-panel-start.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel-start.html) from our Github repo. This doesn't follow on from the previous example, so a fresh start file is required. Let's have a look at the HTML in the file:
+As a starting point, make a local copy of [hidden-info-panel-start.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/hidden-info-panel-start.html) from our GitHub repo. This doesn't follow on from the previous example, so a fresh start file is required. Let's have a look at the HTML in the file:
 
 ```css
 <label for="toggle">❔</label>
@@ -410,7 +412,7 @@ So there you have it — a rather clever JavaScript-free way to create a togglin
 
 ## Summary
 
-So that rounds off our look at positioning — by now, you should have an idea of how the basic mechanics work, as well as understanding how to start applying these to build some interesting UI features. Don't worry if you didn't get this all immediately — positioning is a fairly advanced topic, and you can always work through the articles again to aid your understanding. The next subject we'll turn to is Flexbox.
+So that rounds off our look at positioning — by now, you should have an idea of how the basic mechanics work, as well as understanding how to start applying these to build some interesting UI features. Don't worry if you didn't get this all immediately — positioning is a fairly advanced topic, and you can always work through the articles again to aid your understanding.
 
 ## In this module
 

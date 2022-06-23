@@ -12,7 +12,7 @@ The **`maskContentUnits`** attribute indicates which coordinate system to use fo
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement('mask')}}
+- {{SVGElement('mask')}}
 
 ## Example
 
@@ -71,38 +71,14 @@ For {{SVGElement("mask")}}, `maskContentUnits` defines the coordinate system in 
   </tbody>
 </table>
 
-*   `userSpaceOnUse`
-    *   : This value indicates that all coordinates inside the {{SVGElement('mask')}} element refer to the user coordinate system as defined when the mask was created.
-*   `objectBoundingBox`
-    *   : This value indicates that all coordinates inside the {{SVGElement('mask')}} element are relative to the bounding box of the element the mask is applied to. A bounding box could be considered the same as if the content of the {{ SVGElement("mask") }} were bound to a "`0 0 1 1`" {{ SVGAttr("viewbox") }}.
+- `userSpaceOnUse`
+  - : This value indicates that all coordinates inside the {{SVGElement('mask')}} element refer to the user coordinate system as defined when the mask was created.
+- `objectBoundingBox`
+  - : This value indicates that all coordinates inside the {{SVGElement('mask')}} element are relative to the bounding box of the element the mask is applied to. A bounding box could be considered the same as if the content of the {{ SVGElement("mask") }} were bound to a "`0 0 1 1`" {{ SVGAttr("viewbox") }}.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("CSS Masks", "#element-attrdef-mask-maskcontentunits", "maskContentUnits")}}
-      </td>
-      <td>{{Spec2("CSS Masks")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "masking.html#MaskElementMaskContentUnitsAttribute", "maskContentUnits")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

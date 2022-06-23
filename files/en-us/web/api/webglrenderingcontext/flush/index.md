@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.flush()
 slug: Web/API/WebGLRenderingContext/flush
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -17,7 +18,7 @@ causing all commands to be executed as quickly as possible.
 ## Syntax
 
 ```js
-void gl.flush();
+flush()
 ```
 
 ### Parameters
@@ -26,7 +27,7 @@ None.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

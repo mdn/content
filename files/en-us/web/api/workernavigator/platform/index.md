@@ -1,6 +1,7 @@
 ---
 title: WorkerNavigator.platform
 slug: Web/API/WorkerNavigator/platform
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -17,22 +18,16 @@ Returns a string representing the platform of the browser. The specification all
 browsers to always return the empty string, so don't rely on this property to get a
 reliable answer.
 
-## Syntax
+## Value
 
-```js
-platform = navigator.platform
-```
-
-### Value
-
-A {{domxref("DOMString")}} identifying the platform on which the browser is running, or
+A string identifying the platform on which the browser is running, or
 an empty string if the browser declines to (or is unable to) identify the platform.
 `platform` is a string that must be an empty string or a string representing
 the platform on which the browser is executing.
 
 For example: "`MacIntel`", "`Win32`", "`FreeBSD i386`", "`WebTV OS`"
 
-## Example
+## Examples
 
 ```js
 console.log(navigator.platform);

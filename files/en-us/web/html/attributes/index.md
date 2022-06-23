@@ -878,7 +878,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/input#attr-list">list</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/input#list">list</a></code>
       </td>
       <td>{{ HTMLElement("input") }}</td>
       <td>Identifies a list of pre-defined options to suggest to the user.</td>
@@ -969,7 +969,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/HTML/Element/form#attr-method">method</a>
+        <code><a href="/en-US/docs/Web/HTML/Element/form#attr-method">method</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -1054,7 +1054,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
         {{ HTMLElement("dialog") }}
       </td>
       <td>
-        Indicates whether the the contents are currently visible (in the case of
+        Indicates whether the contents are currently visible (in the case of
         a <code>&#x3C;details></code> element) or whether the dialog is active
         and can be interacted with (in the case of a
         <code>&#x3C;dialog></code> element).
@@ -1179,6 +1179,13 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
         Indicates whether the list should be displayed in a descending order
         instead of a ascending.
       </td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles">role</a></code>
+      </td>
+      <td><a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a></td>
+      <td>Defines an explicit role for an element for use by assistive technologies.</td>
     </tr>
     <tr>
       <td>
@@ -1403,7 +1410,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
       </td>
       <td>
-        Specify whether an element’s attribute values and the values of its
+        Specify whether an element's attribute values and the values of its
         <code><a href="https://dom.spec.whatwg.org/#text">Text</a></code> node
         children are to be translated when the page is localized, or whether to
         leave them unchanged.
@@ -1501,18 +1508,20 @@ Most of the time, IDL attributes will return their values as they are really use
 
 IDL attributes are not always strings; for example, `input.maxlength` is a number (a signed long). When using IDL attributes, you read or set values of the desired type, so `input.maxlength` is always going to return a number and when you set `input.maxlength`, it wants a number. If you pass another type, it is automatically converted to a number as specified by the standard JavaScript rules for type conversion.
 
-IDL attributes can [reflect other types](https://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#reflecting-content-attributes-in-idl-attributes) such as unsigned long, URLs, booleans, etc. Unfortunately, there are no clear rules and the way IDL attributes behave in conjunction with their corresponding content attributes depends on the attribute. Most of the time, it will follow [the rules laid out in the specification](https://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#reflecting-content-attributes-in-idl-attributes), but sometimes it doesn't. HTML specifications try to make this as developer-friendly as possible, but for various reasons (mostly historical), some attributes behave oddly (`select.size`, for example) and you should read the specifications to understand how exactly they behave.
+IDL attributes can [reflect other types](https://html.spec.whatwg.org/multipage/urls-and-fetching.html) such as unsigned long, URLs, booleans, etc. Unfortunately, there are no clear rules and the way IDL attributes behave in conjunction with their corresponding content attributes depends on the attribute. Most of the time, it will follow [the rules laid out in the specification](https://html.spec.whatwg.org/multipage/urls-and-fetching.html), but sometimes it doesn't. HTML specifications try to make this as developer-friendly as possible, but for various reasons (mostly historical), some attributes behave oddly (`select.size`, for example) and you should read the specifications to understand how exactly they behave.
 
 ## Boolean Attributes
 
-Some content attributes (e.g. `required`, `readonly`, `disabled`) are called [boolean attributes](https://www.w3.org/TR/html52/infrastructure.html#sec-boolean-attributes). If a boolean attribute is present, its value is **true**, and if it's absent, its value is **false**.
+Some content attributes (e.g. `required`, `readonly`, `disabled`) are called [boolean attributes](https://html.spec.whatwg.org/multipage/infrastructure.html#sec-boolean-attributes). If a boolean attribute is present, its value is **true**, and if it's absent, its value is **false**.
 
 HTML5 defines restrictions on the allowed values of boolean attributes: If the attribute is present, its value must either be the empty string (equivalently, the attribute may have an unassigned value), or a value that is an ASCII case-insensitive match for the attribute's canonical name, with no leading or trailing whitespace. The following examples are valid ways to mark up a boolean attribute:
 
-    <div itemscope> This is valid HTML but invalid XML. </div>
-    <div itemscope=itemscope> This is also valid HTML but invalid XML. </div>
-    <div itemscope=""> This is valid HTML and also valid XML. </div>
-    <div itemscope="itemscope"> This is also valid HTML and XML, but perhaps a bit verbose. </div>
+```html
+<div itemscope> This is valid HTML but invalid XML. </div>
+<div itemscope=itemscope> This is also valid HTML but invalid XML. </div>
+<div itemscope=""> This is valid HTML and also valid XML. </div>
+<div itemscope="itemscope"> This is also valid HTML and XML, but perhaps a bit verbose. </div>
+```
 
 To be clear, the values "`true`" and "`false`" are not allowed on boolean attributes. To represent a false value, the attribute has to be omitted altogether. This restriction clears up some common misunderstandings: With `checked="false"` for example, the element's `checked` attribute would be interpreted as **true** because the attribute is present.
 

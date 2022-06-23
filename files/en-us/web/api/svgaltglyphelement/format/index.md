@@ -1,6 +1,7 @@
 ---
 title: SVGAltGlyphElement.format
 slug: Web/API/SVGAltGlyphElement/format
+page-type: web-api-instance-property
 browser-compat: api.SVGAltGlyphElement.format
 ---
 {{APIRef("SVGAltGlyphElement")}}
@@ -8,9 +9,9 @@ browser-compat: api.SVGAltGlyphElement.format
 {{Deprecated_header}}
 
 The **`SVGAltGlyphElement.format`** property is a
-{{domxref("DOMString")}} that defines the format of the given font. It has the same
+string that defines the format of the given font. It has the same
 meaning as the 'format' property of {{domxref("SVGGlyphRefElement")}} property. If the
-font is in one of the formats listed in [CSS2(\[CSS2\],
+font is in one of the formats listed in [CSS2(\[CSS2\],
 section15.3.5)](https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#referencing), then its value is the corresponding \<string> parameter
 of the font.
 

@@ -28,8 +28,8 @@ If the specified fallback style is also unable to construct a representation, th
 
 A couple of scenarios where a fallback style will be used are:
 
-- When the {{cssxref('range')}} descriptor is specified for a counter style, the fallback style will be used to represent values that fall outside the range.
-- When the `fixed` {{cssxref('system')}} is used and there are not enough symbols to cover all the list items, the fallback style will be used for the rest of the list items.
+- When the {{cssxref('@counter-style/range', 'range')}} descriptor is specified for a counter style, the fallback style will be used to represent values that fall outside the range.
+- When the `fixed` {{cssxref('@counter-style/system', 'system')}} is used and there are not enough symbols to cover all the list items, the fallback style will be used for the rest of the list items.
 
 ## Formal definition
 
@@ -37,7 +37,11 @@ A couple of scenarios where a fallback style will be used are:
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<counter-style-name>
+
+<counter-style-name> = <custom-ident>
+```
 
 ## Examples
 
@@ -59,7 +63,8 @@ A couple of scenarios where a fallback style will be used are:
 
 ```css
 @counter-style fallback-example {
-  system: fixed; symbols: "\24B6" "\24B7" "\24B8";
+  system: fixed;
+  symbols: "\24B6" "\24B7" "\24B8";
   fallback: upper-alpha;
 }
 

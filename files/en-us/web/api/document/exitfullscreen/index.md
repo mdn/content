@@ -1,12 +1,13 @@
 ---
 title: Document.exitFullscreen()
 slug: Web/API/Document/exitFullscreen
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
   - Document
   - Full
-  - Full-screen
+  - Fullscreen
   - Fullscreen API
   - Method
   - Reference
@@ -19,14 +20,14 @@ browser-compat: api.Document.exitFullscreen
 
 The {{domxref("Document")}} method
 **`exitFullscreen()`** requests that the element on this
-document which is currently being presented in full-screen mode be taken out of
-full-screen mode, restoring the previous state of the screen. This usually
+document which is currently being presented in fullscreen mode be taken out of
+fullscreen mode, restoring the previous state of the screen. This usually
 reverses the effects of a previous call to {{domxref("Element.requestFullscreen()")}}.
 
 ## Syntax
 
 ```js
-exitPromise = document.exitFullscreen();
+exitFullscreen()
 ```
 
 ### Parameters
@@ -36,20 +37,20 @@ None.
 ### Return value
 
 A {{jsxref("Promise")}} which is resolved once the {{Glossary("user agent")}} has
-finished exiting full-screen mode. If an error occurs while attempting to exit
-full-screen mode, the `catch()` handler for the promise is called.
+finished exiting fullscreen mode. If an error occurs while attempting to exit
+fullscreen mode, the `catch()` handler for the promise is called.
 
-## Example
+## Examples
 
-This example causes the current document to toggle in and out of a full-screen
+This example causes the current document to toggle in and out of a fullscreen
 presentation whenever the mouse button is clicked within it.
 
 ```js
 document.onclick = function (event) {
   if (document.fullscreenElement) {
     document.exitFullscreen()
-      .then(() => console.log("Document Exited from Full screen mode"))
-      .catch((err) => console.error(err))
+      .then(() => console.log("Document Exited from Full screen mode"))
+      .catch((err) => console.error(err))
   } else {
     document.documentElement.requestFullscreen();
   }
@@ -57,7 +58,7 @@ document.onclick = function (event) {
 ```
 
 > **Note:** For a more complete example, see the
-> {{SectionOnPage("/en-US/docs/Web/API/Element/requestFullScreen", "Example")}}.
+> {{SectionOnPage("/en-US/docs/Web/API/Element/requestFullscreen", "Examples")}}.
 
 ## Specifications
 

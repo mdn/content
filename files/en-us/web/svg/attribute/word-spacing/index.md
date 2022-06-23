@@ -18,11 +18,11 @@ If a \<length> is provided with one of the unit identifiers (e.g. .25em or 1%), 
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("altGlyph")}}
-*   {{SVGElement("text")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("tref")}}
-*   {{SVGElement("tspan")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## Example
 
@@ -34,8 +34,8 @@ html, body, svg {
 
 ```html
 <svg viewBox="0 0 250 50" xmlns="http://www.w3.org/2000/svg">
-  <text y="20" word-spacing="2">Bigger spacing between words</text>
-  <text x="0" y="40" word-spacing="-0.5">Smaller spacing between words</text>
+  <text y="20" word-spacing="2">Bigger spacing between words</text>
+  <text x="0" y="40" word-spacing="-0.5">Smaller spacing between words</text>
 </svg>
 ```
 
@@ -64,31 +64,7 @@ For a description of the values, please refer to the [CSS `letter-spacing`](/en-
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("CSS3 Text", "#word-spacing-property", "word-spacing")}}
-      </td>
-      <td>{{Spec2("CSS3 Text")}}</td>
-      <td>SVG 2 just refers to the definition in CSS Text 3.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "text.html#WordSpacingProperty", "word-spacing")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -96,4 +72,4 @@ For a description of the values, please refer to the [CSS `letter-spacing`](/en-
 
 ## See also
 
-*   {{cssxref("word-spacing", "CSS word-spacing")}}
+- {{cssxref("word-spacing", "CSS word-spacing")}}

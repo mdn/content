@@ -28,7 +28,7 @@ console.log(Sym1 === Sym2) // returns "false"
 // they are different values.
 ```
 
-> **Note:** If you are familiar with Ruby (or another language) that also has a feature called _"symbols"_, please don’t be misled. JavaScript symbols are different.
+> **Note:** If you are familiar with Ruby (or another language) that also has a feature called _"symbols"_, please don't be misled. JavaScript symbols are different.
 
 _Symbol_ type is a new feature in ECMAScript 2015. There is no ECMAScript 5 equivalent for Symbol.
 
@@ -36,7 +36,7 @@ In some programming languages, the symbol data type is referred to as an "atom."
 
 ### Symbols don't "Auto-Convert" to strings
 
-Most values in JavaScript support implicit conversion to a string. For instance, we can `alert` almost any value, and it will work. Symbols are special. They don’t auto-convert.
+Most values in JavaScript support implicit conversion to a string. For instance, we can `alert` almost any value, and it will work. Symbols are special. They don't auto-convert.
 
 For example:
 
@@ -45,7 +45,7 @@ let Sym = Symbol("Sym")
 alert(Sym)  // TypeError: Cannot convert a Symbol value to a string
 ```
 
-That’s a "language guard" against messing up, because strings and symbols are fundamentally different, and should not occasionally convert one into another.
+That's a "language guard" against messing up, because strings and symbols are fundamentally different, and should not occasionally convert one into another.
 
 If you really want to show a symbol, we need to call `.toString()` on it.
 
@@ -68,7 +68,7 @@ The {{jsxref("Symbol")}} class has constants for so-called _well-known symbols_.
 
 Examples of well-known symbols are: {{jsxref("Symbol.iterator")}} for array-like objects, or {{jsxref("Symbol.search")}} for string objects.
 
-They are listed in the specification in the [Well-known symbols](https://tc39.github.io/ecma262/#sec-well-known-symbols) table:
+They are listed in the specification in the [Well-known symbols](https://tc39.es/ecma262/#sec-well-known-symbols) table:
 
 - `Symbol.hasInstance`
 - `Symbol.isConcatSpreadable`

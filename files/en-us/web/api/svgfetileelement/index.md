@@ -1,6 +1,7 @@
 ---
 title: SVGFETileElement
 slug: Web/API/SVGFETileElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGFETileElement
 
 The **`SVGFETileElement`** interface corresponds to the {{SVGElement("feTile")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

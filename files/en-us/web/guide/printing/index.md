@@ -21,7 +21,9 @@ There may be other cases in which you want to manage the printing process, but t
 
 Add the following to your {{HTMLElement("head")}} tag.
 
-    <link href="/path/to/print.css" media="print" rel="stylesheet" />
+```html
+<link href="/path/to/print.css" media="print" rel="stylesheet" />
+```
 
 ## Using media queries to improve layout
 
@@ -29,7 +31,7 @@ Add the following to your {{HTMLElement("head")}} tag.
 
 Some browsers (including Firefox 6 and later and Internet Explorer) send `beforeprint` and `afterprint` events to let content determine when printing may have occurred. You can use this to adjust the user interface presented during printing (such as by displaying or hiding user interface elements during the print process).
 
-> **Note:** You can also use [`window.onbeforeprint`](/en-US/docs/Web/API/WindowEventHandlers/onbeforeprint) and [`window.onafterprint`](/en-US/docs/Web/API/WindowEventHandlers/onafterprint) to assign handlers for these events, but using {{domxref("EventTarget.addEventListener()")}} is preferred.
+> **Note:** You can also use `window.onbeforeprint` and `window.onafterprint` to assign handlers for these events, but using {{domxref("EventTarget.addEventListener()")}} is preferred.
 
 ## Examples
 
@@ -77,28 +79,28 @@ If you want to be able to print an external page without opening it, you can uti
 <title>MDN Example</title>
 <script type="text/javascript">
 function closePrint () {
-  document.body.removeChild(this.__container__);
+  document.body.removeChild(this.__container__);
 }
 
 function setPrint () {
-  this.contentWindow.__container__ = this;
-  this.contentWindow.onbeforeunload = closePrint;
-  this.contentWindow.onafterprint = closePrint;
+  this.contentWindow.__container__ = this;
+  this.contentWindow.onbeforeunload = closePrint;
+  this.contentWindow.onafterprint = closePrint;
   this.contentWindow.focus(); // Required for IE
-  this.contentWindow.print();
+  this.contentWindow.print();
 }
 
 function printPage (sURL) {
-  var oHideFrame = document.createElement("iframe");
-  oHideFrame.onload = setPrint;
-  oHideFrame.style.position = "fixed";
-  oHideFrame.style.right = "0";
-  oHideFrame.style.bottom = "0";
+  var oHideFrame = document.createElement("iframe");
+  oHideFrame.onload = setPrint;
+  oHideFrame.style.position = "fixed";
+  oHideFrame.style.right = "0";
+  oHideFrame.style.bottom = "0";
   oHideFrame.style.width = "0";
   oHideFrame.style.height = "0";
   oHideFrame.style.border = "0";
-  oHideFrame.src = sURL;
-  document.body.appendChild(oHideFrame);
+  oHideFrame.src = sURL;
+  document.body.appendChild(oHideFrame);
 }
 </script>
 </head>
@@ -109,12 +111,12 @@ function printPage (sURL) {
 </html>
 ```
 
-> **Note:** Older versions of Internet Explorer cannot print the contents of a hidden {{HTMLElement("iframe")}}.
+> **Note:** Older versions of Internet Explorer cannot print the contents of a hidden {{HTMLElement("iframe")}}.
 
 ## See also
 
 - [`window.print`](/en-US/docs/Web/API/Window/print)
-- [`window.onbeforeprint`](/en-US/docs/Web/API/WindowEventHandlers/onbeforeprint)
-- [`window.onafterprint`](/en-US/docs/Web/API/WindowEventHandlers/onafterprint)
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries "CSS/Media queries")
+- {{ domxref("window.beforeprint_event", "beforeprint") }} event
+- {{ domxref("window.afterprint_event", "afterprint") }} event
+- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 - {{cssxref("@media")}}

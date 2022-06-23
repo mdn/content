@@ -154,17 +154,17 @@ The MathML `<mo>` element represents an operator in a broad sense. Besides opera
 <math>
 
 <mrow>
-  <mn>5</mn>
-  <mo>+</mo>
-  <mn>5</mn>
+  <mn>5</mn>
+  <mo>+</mo>
+  <mn>5</mn>
 </mrow>
 
 <mrow>
   <mo> [ </mo> <!-- default form value: prefix -->
-  <mrow>
+  <mrow>
     <mn> 0 </mn>
     <mo> ; </mo> <!-- default form value: infix -->
-    <mn> 1 </mn>
+    <mn> 1 </mn>
   </mrow>
   <mo> ) </mo> <!-- default form value: postfix -->
 </mrow>
@@ -183,5 +183,5 @@ The MathML `<mo>` element represents an operator in a broad sense. Besides opera
 ## Gecko-specific notes
 
 - Starting with Gecko 16.0 {{ geckoRelease("16.0") }} the default values for `lspace` and `rspace` have been corrected to match the MathML3 specification. They now default to the constant `thickmathspace` (5/18em).
-- Some `mathvariant` values are only implemented starting with Gecko 28.0 (Firefox 28.0 / Thunderbird 28.0 / SeaMonkey 2.25) and require appropriate [math fonts](/en-US/docs/Mozilla/MathML_Project/Fonts).
+- Some `mathvariant` values are only implemented starting with Gecko 28.0 (Firefox 28.0 / Thunderbird 28.0 / SeaMonkey 2.25) and require appropriate [math fonts](/en-US/docs/Web/MathML/Fonts).
 - Any [linebreaking](https://www.w3.org/TR/MathML3/chapter3.html#presm.lbattrs) or [indentation attributes](https://www.w3.org/TR/MathML3/chapter3.html#presm.lbindent.attrs) are not implemented yet. See {{ bug("534962") }}.

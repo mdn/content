@@ -13,8 +13,9 @@ browser-compat: javascript.builtins.TypedArray.from
 ---
 {{JSRef}}
 
-The **`TypedArray.from()`** method creates a new [typed
-array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) from an array-like or iterable object. This method is nearly the same as
+The **`TypedArray.from()`** method creates a new
+[typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects)
+from an array-like or iterable object. This method is nearly the same as
 {{jsxref("Array.from()")}}.
 
 {{EmbedInteractiveExample("pages/js/typedarray-from.html","shorter")}}
@@ -23,18 +24,18 @@ array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray
 
 ```js
 // Arrow function
-TypedArray.from(arrayLike, (element) => { ... } )
-TypedArray.from(arrayLike, (element, index) => { ... } )
+TypedArray.from(arrayLike, (element) => { /* ... */ } )
+TypedArray.from(arrayLike, (element, index) => { /* ... */ } )
 
 // Mapping function
 TypedArray.from(arrayLike, mapFn)
 TypedArray.from(arrayLike, mapFn, thisArg)
 
 // Inline mapping function
-TypedArray.from(arrayLike, function mapFn(element) { ... })
-TypedArray.from(arrayLike, function mapFn(element, index) { ... })
-TypedArray.from(arrayLike, function mapFn(element) { ... }, thisArg)
-TypedArray.from(arrayLike, function mapFn(element, index) { ... }, thisArg)
+TypedArray.from(arrayLike, function mapFn(element) { /* ... */ })
+TypedArray.from(arrayLike, function mapFn(element, index) { /* ... */ })
+TypedArray.from(arrayLike, function mapFn(element) { /* ... */ }, thisArg)
+TypedArray.from(arrayLike, function mapFn(element, index) { /* ... */ }, thisArg)
 ```
 
 Where `TypedArray` is one of:
@@ -70,7 +71,7 @@ A new {{jsxref("TypedArray")}} instance.
 
 - array-like objects (objects with a `length` property and indexed
   elements); or
-- [iterable objects](/en-US/docs/Web/JavaScript/Guide/iterable) (objects
+- [iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) (objects
   where you can get its elements, such as {{jsxref("Map")}} and {{jsxref("Set")}}).
 
 `TypedArray.from()` has the optional parameter
@@ -152,7 +153,7 @@ Uint8Array.from({length: 5}, (v, k) => k);
 
 ## See also
 
-- A polyfill of `TypedArray.from` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.from` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.of()")}}
 - {{jsxref("Array.from()")}}
 - {{jsxref("Array.prototype.map()")}}

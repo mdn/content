@@ -14,7 +14,9 @@ You can also use `exsl:node-set()` to turn strings into text nodes.
 
 ## Syntax
 
-    exsl:node-set(object)
+```
+exsl:node-set(object)
+```
 
 ### Parameters
 
@@ -27,4 +29,4 @@ The node-set corresponding to the specified `object`.
 
 ## Specifications
 
-[EXSLT - EXSL:NODE-SET](http://www.exslt.org/exsl/functions/node-set/index.html)
+[EXSLT - EXSL:NODE-SET](http://exslt.org/exsl/functions/node-set/index.html)

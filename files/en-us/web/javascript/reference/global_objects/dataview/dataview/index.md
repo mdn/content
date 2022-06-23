@@ -63,8 +63,8 @@ other details of representing numbers in binary form.
 ### Using DataView
 
 ```js
-var buffer = new ArrayBuffer(16);
-var view = new DataView(buffer, 0);
+const buffer = new ArrayBuffer(16);
+const view = new DataView(buffer, 0);
 
 view.setInt16(1, 42);
 view.getInt16(1); // 42
@@ -80,5 +80,5 @@ view.getInt16(1); // 42
 
 ## See also
 
-- A polyfill of `DataView` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `DataView` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("DataView")}}

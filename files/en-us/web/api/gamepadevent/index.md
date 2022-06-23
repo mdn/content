@@ -1,6 +1,7 @@
 ---
 title: GamepadEvent
 slug: Web/API/GamepadEvent
+page-type: web-api-interface
 tags:
   - API
   - Gamepad API
@@ -11,7 +12,9 @@ browser-compat: api.GamepadEvent
 ---
 {{APIRef("Gamepad API")}}{{securecontext_header}}
 
-The GamepadEvent interface of the Gamepad API contains references to gamepads connected to the system, which is what the gamepad events {{domxref("Window.gamepadconnected")}} and {{domxref("Window.gamepaddisconnected")}} are fired in response to.
+The GamepadEvent interface of the Gamepad API contains references to gamepads connected to the system, which is what the gamepad events {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} and {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} are fired in response to.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
@@ -25,7 +28,7 @@ The GamepadEvent interface of the Gamepad API contains references to gamepads co
 
 ## Examples
 
-The gamepad property being called on a fired {{domxref("Window.gamepadconnected")}} event.
+The gamepad property being called on a fired {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} event.
 
 ```js
 window.addEventListener("gamepadconnected", function(e) {
@@ -35,7 +38,7 @@ window.addEventListener("gamepadconnected", function(e) {
 });
 ```
 
-And on a {{domxref("Window.gamepaddisconnected")}} event.
+And on a {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} event.
 
 ```js
 window.addEventListener("gamepaddisconnected", function(e) {

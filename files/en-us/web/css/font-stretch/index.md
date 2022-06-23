@@ -38,6 +38,7 @@ font-stretch: 200%;
 font-stretch: inherit;
 font-stretch: initial;
 font-stretch: revert;
+font-stretch: revert-layer;
 font-stretch: unset;
 ```
 
@@ -54,12 +55,6 @@ This property may be specified as a single keyword value or a single {{cssxref("
 - `<percentage>`
 
   - : A {{cssxref("&lt;percentage&gt;")}} value between 50% and 200% (inclusive). Negative values are not allowed for this property.
-
-    > **Note:** In earlier versions of the `font-stretch` specification, the property accepts only the nine keyword values.
-    >
-    > **The {{ SpecName('CSS4 Fonts', '#propdef-font-stretch') }} spec** extends the syntax to accept a `<percentage>` value as well. This enables variable fonts to offer something more like a _continuum_ of character widths. For TrueType or OpenType variable fonts, the "`wdth`" variation is used to implement varying widths.
-    >
-    > However, note that the `<percentage>` syntax is not yet supported by all browsers: check the [Browser compatibility](#browser_compatibility) table for details.
 
 ### Keyword to numeric mapping
 
@@ -133,7 +128,7 @@ The table below demonstrates the effect of supplying various different percentag
 </table>
 
 - **Helvetica Neue**, which is installed by default on macOS, has a single condensed face in addition to the normal face. All values of `font-stretch` less than 100% select the condensed face, while all other values select the normal face.
-- **[League Mono Variable](https://tylerfinck.com/leaguemonovariable/)** is a variable font that offers something like a continuous range of widths for different percentage values of `font-stretch`.
+- **[League Mono Variable](https://demos.tyfromtheinternet.com/leaguemonovariable/)** is a variable font that offers something like a continuous range of widths for different percentage values of `font-stretch`.
 
 ## Formal definition
 
@@ -146,8 +141,6 @@ The table below demonstrates the effect of supplying various different percentag
 ## Examples
 
 ### Setting font stretch percentages
-
-> **Note:** This example will only work in browsers that support `<percentage>` values.
 
 {{EmbedGHLiveSample("css-examples/variable-fonts/font-stretch.html", '100%', 950)}}
 

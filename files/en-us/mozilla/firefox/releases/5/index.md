@@ -18,7 +18,7 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 - In order to comply with the HTML5 specification, support for the UTF-7 and UTF-32 [character sets](/en-US/docs/Character_Sets_Supported_by_Gecko) has been removed.
 - When in quirks mode, empty {{ HTMLElement("map") }}s are no longer skipped over in favor of non-empty ones when matching. See the [Gecko notes](/en-US/docs/Web/HTML/Element/map#gecko_notes) on the {{ HTMLElement("map") }} element for details.
 - Firefox mobile on Android now supports WOFF fonts for {{ cssxref("@font-face") }}.
-- WebGL [no longer loads textures from domains other than the originating domain](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#cross-domain_textures), as a security measure. [HTTP access control](/en-US/docs/Web/HTTP_access_control) support should be coming sometime in the future to make this possible more securely.
+- WebGL [no longer loads textures from domains other than the originating domain](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#cross-domain_textures), as a security measure. [HTTP access control](/en-US/docs/Web/HTTP_access_control) support should be coming sometime in the future to make this possible more securely.
 
 #### Canvas improvements
 
@@ -26,7 +26,7 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 - Specifying non-finite values when adding color stops through a call to the {{ domxref("CanvasGradient") }} method `addColorStop()` now correctly throws `INDEX_SIZE_ERR` instead of `SYNTAX_ERR`.
 - The {{ domxref("HTMLCanvasElement") }} method `toDataURL()` now correctly lower-cases the specified MIME type before matching.
 - `getImageData()` now correctly accepts rectangles that extend beyond the bounds of the canvas; pixels outside the canvas are returned as transparent black.
-- `drawImage()` and `createImageData()` now handle negative arguments in accordance with the specification, by flipping the rectangle around the appropriate axis. **We need an article about [CSS sizing](http://dev.w3.org/csswg/css3-images/#default-sizing) and how this works.**
+- `drawImage()` and `createImageData()` now handle negative arguments in accordance with the specification, by flipping the rectangle around the appropriate axis. **We need an article about [CSS sizing](https://drafts.csswg.org/css-images-3/) and how this works.**
 - Specifying non-finite values when calling `createImageData()` now properly throws a `NOT_SUPPORTED_ERR` exception.
 - `createImageData()` and `getImageData()` now correctly return at least one pixel's worth of image data if a rectangle smaller than one pixel is specified.
 - Specifying a negative radius when calling `createRadialGradient()` now correctly throws `INDEX_SIZE_ERR`.
@@ -47,9 +47,9 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 - The {{ domxref("setTimeout()") }} method now clamps to send no more than one timeout per second in inactive tabs. In addition, it now clamps nested timeouts to the smallest value allowed by the HTML5 specification: 4 ms (instead of the 10 ms it used to clamp to).
 - Similarly, the {{ domxref("setInterval()") }} method now clamps to no more than one interval per second in inactive tabs.
 - [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) now [supports the `loadend` event](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#detecting_any_load_end_condition) for progress listeners. This is sent after any transfer is finished (that is, after the `abort`, `error`, or `load` event). You can use this to handle any tasks that need to be performed regardless of success or failure of a transfer.
-- The {{ domxref("Blob") }} and, by extension, the {{ domxref("File") }} objects' `slice()` method has been removed and replaced with a new, proposed syntax that makes it more consistent with [`Array.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) and [`String.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice) methods in JavaScript. This method is named [`mozSlice()`](</en-US/docs/Web/API/Blob#mozslice()>) for now.
+- The {{ domxref("Blob") }} and, by extension, the {{ domxref("File") }} objects' `slice()` method has been removed and replaced with a new, proposed syntax that makes it more consistent with [`Array.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) and [`String.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice) methods in JavaScript. This method is named `mozSlice()` for now.
 - The value of {{ domxref("window.navigator.language") }} is now determined by looking at the value of the `Accept-Language` [HTTP header](/en-US/docs/Web/HTTP/Headers).
-- The {{ domxref("Element.prefix") }} property is now read only, as required by the DOM specification.
+- The {{ domxref("Element.prefix") }} property is now read only, as required by the DOM specification.
 - The {{ domxref("HTMLVideoElement") }} now supports experimental properties to get information about video paint statistics like frame rates.
 
 ### JavaScript
@@ -77,7 +77,7 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 
 ### Developer tools
 
-- The [Web Console's `Console` object](/en-US/docs/Tools/Web_Console#the_console_object) now has a `debug()` method, which is an alias for its `log()` method; this improves compatibility with certain existing sites.
+- The [Web Console's `Console` object](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#the-console-object) now has a `debug()` method, which is an alias for its `log()` method; this improves compatibility with certain existing sites.
 
 ## Changes for Mozilla and add-on developers
 
@@ -93,16 +93,16 @@ For a guide to updating your add-on for Firefox 5, please see [Updating add-ons 
 
 #### NetUtil.jsm
 
-- The [`asyncFetch()`](</en-US/docs/JavaScript_code_modules/NetUtil.jsm#asyncFetch()>) method now supports specifying the input source as an {{ interface("nsIInputStream") }}.
+- The [`asyncFetch()`](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/NetUtil.html#asyncFetch()>) method now supports specifying the input source as an `nsIInputStream`.
 
 ### Interface changes
 
-- The {{ interface("nsIHttpChannelInternal") }} interface has new attributes providing access to information about the channels' endpoints' addresses and ports. This information is provided primarily for debugging purposes.
+- The `nsIHttpChannelInternal` interface has new attributes providing access to information about the channels' endpoints' addresses and ports. This information is provided primarily for debugging purposes.
 - The {{ HTMLElement("canvas") }} element's {{ htmlattrxref("width", "canvas") }} and {{ htmlattrxref("height", "canvas") }} attributes are now reflected in IDL as unsigned integers instead of signed (see [`HTMLCanvasElement`](/en-US/docs/Web/API/HTMLCanvasElement)).
-- The `nsIAppStartup2` and {{ interface("nsIAppStartup_MOZILLA_2_0") }} interfaces have been merged into the {{ interface("nsIAppStartup") }} interface.
-- The `nsIDocShell_MOZILLA_2_0_BRANCH` interface has been merged into the {{ interface("nsIDocShell") }} interface.
-- The `nsIFocusManager_MOZILLA_2_0_BRANCH` interface has been merged into the {{ interface("nsIFocusManager") }} interface.
-- The `nsIHTMLEditor_MOZILLA_2_0_BRANCH` interface has been merged into the {{ interface("nsIHTMLEditor") }} interface.
+- The `nsIAppStartup2` and `nsIAppStartup_MOZILLA_2_0` interfaces have been merged into the `nsIAppStartup` interface.
+- The `nsIDocShell_MOZILLA_2_0_BRANCH` interface has been merged into the `nsIDocShell` interface.
+- The `nsIFocusManager_MOZILLA_2_0_BRANCH` interface has been merged into the `nsIFocusManager` interface.
+- The `nsIHTMLEditor_MOZILLA_2_0_BRANCH` interface has been merged into the `nsIHTMLEditor` interface.
 
 #### New interfaces
 

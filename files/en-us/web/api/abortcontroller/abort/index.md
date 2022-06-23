@@ -1,6 +1,7 @@
 ---
 title: AbortController.abort()
 slug: Web/API/AbortController/abort
+page-type: web-api-instance-method
 tags:
   - API
   - AbortController
@@ -13,21 +14,25 @@ browser-compat: api.AbortController.abort
 ---
 {{APIRef("DOM")}}
 
-The **`abort()`** method of the {{domxref("AbortController")}} interface aborts a DOM request before it has completed. This is able to abort [fetch requests](/en-US/docs/Web/API/fetch), the consumption of any response bodies, or streams.
+The **`abort()`** method of the {{domxref("AbortController")}} interface aborts a DOM request before it has completed.
+This is able to abort [fetch requests](/en-US/docs/Web/API/fetch), the consumption of any response bodies, or streams.
 
 ## Syntax
 
 ```js
-controller.abort();
+abort()
+abort(reason)
 ```
 
 ### Parameters
 
-None.
+- `reason` {{optional_inline}}
+  - : The reason why the operation was aborted, which can be any JavaScript value.
+    If not specified, the reason is set to "AbortError" {{domxref("DOMException")}}.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: MediaDevices.getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -68,13 +69,13 @@ navigator.mediaDevices.getUserMedia(constraints)
 
 > **Note:** If the current document isn't loaded securely,
 > `navigator.mediaDevices` will be `undefined`, and you cannot use
-> `getUserMedia()`. See {{anch("Security")}} for more information on this and
+> `getUserMedia()`. See [Security](#security) for more information on this and
 > other security issues related to using `getUserMedia()`.
 
 ## Syntax
 
 ```js
-var promise = navigator.mediaDevices.getUserMedia(constraints);
+getUserMedia(constraints)
 ```
 
 ### Parameters
@@ -149,8 +150,7 @@ var promise = navigator.mediaDevices.getUserMedia(constraints);
 
     An `ideal` value, when used, has gravity, which means that the browser
     will try to find the setting (and camera, if you have more than one), with the
-    smallest [fitness
-    distance](https://w3c.github.io/mediacapture-main/#dfn-fitness-distance) from the ideal values given.
+    smallest [fitness distance](https://w3c.github.io/mediacapture-main/#dfn-fitness-distance) from the ideal values given.
 
     Plain values are inherently ideal, which means that the first of our resolution
     examples above could have been written like this:
@@ -236,7 +236,7 @@ object when the requested media has successfully been obtained.
   - : Thrown if user media support is disabled on the {{domxref("Document")}} on which
     `getUserMedia()` was called. The mechanism by which user media support is
     enabled and disabled is left up to the individual user agent.
-- `TypeError`  {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the list of constraints specified is empty, or has all constraints set to
     `false`. This can also happen if you try to call
     `getUserMedia()` in an insecure context, since
@@ -319,12 +319,16 @@ For example, this line in the HTTP headers will enable use of a camera for the d
 and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same
 origin:
 
-    Feature-Policy: camera 'self'
+```
+Feature-Policy: camera 'self'
+```
 
 This will request access to the microphone for the current origin and the specific
 origin https\://developer.mozilla.org:
 
-    Feature-Policy: microphone 'self' https://developer.mozilla.org
+```
+Feature-Policy: microphone 'self' https://developer.mozilla.org
+```
 
 If you're using `getUserMedia()` within an `<iframe>`, you
 can request permission just for that frame, which is clearly more secure than requesting
@@ -336,8 +340,7 @@ microphone:
 </iframe>
 ```
 
-Read our guide, [Using Feature
-Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy), to learn more about how it works.
+Read our guide, [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy), to learn more about how it works.
 
 #### Encryption based security
 
@@ -348,7 +351,7 @@ isn't loaded in a secure context, the {{domxref("navigator.mediaDevices")}} prop
 `undefined`, making access to `getUserMedia()` impossible.
 
 Attempting to access `getUserMedia()` in this situation will result in a
-`TypeError`.
+{{jsxref("TypeError")}}.
 
 #### Document source security
 
@@ -378,11 +381,11 @@ This example gives a preference for camera resolution, and assigns the resulting
 
 ```js
 // Prefer camera resolution nearest to 1280x720.
-var constraints = { audio: true, video: { width: 1280, height: 720 } };
+const constraints = { audio: true, video: { width: 1280, height: 720 } };
 
 navigator.mediaDevices.getUserMedia(constraints)
 .then(function(mediaStream) {
-  var video = document.querySelector('video');
+  const video = document.querySelector('video');
   video.srcObject = mediaStream;
   video.onloadedmetadata = function(e) {
     video.play();
@@ -412,7 +415,7 @@ if (navigator.mediaDevices.getUserMedia === undefined) {
   navigator.mediaDevices.getUserMedia = function(constraints) {
 
     // First get ahold of the legacy getUserMedia, if present
-    var getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+    const getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
     // Some browsers just don't implement it - return a rejected promise with an error
     // to keep a consistent interface
@@ -429,7 +432,7 @@ if (navigator.mediaDevices.getUserMedia === undefined) {
 
 navigator.mediaDevices.getUserMedia({ audio: true, video: true })
 .then(function(stream) {
-  var video = document.querySelector('video');
+  const video = document.querySelector('video');
   // Older browsers may not have srcObject
   if ("srcObject" in video) {
     video.srcObject = stream;
@@ -452,7 +455,7 @@ Lower frame-rates may be desirable in some cases, like WebRTC transmissions with
 bandwidth restrictions.
 
 ```js
-var constraints = { video: { frameRate: { ideal: 10, max: 15 } } };
+const constraints = { video: { frameRate: { ideal: 10, max: 15 } } };
 ```
 
 ### Front and back camera
@@ -460,10 +463,10 @@ var constraints = { video: { frameRate: { ideal: 10, max: 15 } } };
 On mobile phones.
 
 ```js
-var front = false;
+let front = false;
 document.getElementById('flip-button').onclick = function() { front = !front; };
 
-var constraints = { video: { facingMode: (front? "user" : "environment") } };
+const constraints = { video: { facingMode: (front? "user" : "environment") } };
 ```
 
 ## Specifications
@@ -479,12 +482,10 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
 - The older {{domxref("navigator.getUserMedia()")}} legacy API.
 - {{domxref("mediaDevices.enumerateDevices()")}}: Listing available media devices
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Media Capture and Streams API (Media
-  Streams)](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API (Media Streams)](/en-US/docs/Web/API/Media_Streams_API)
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API): Capturing
   screen contents as a {{domxref("MediaStream")}}
 - {{domxref("mediaDevices.getDisplayMedia()")}}: Getting a stream containing screen
   contents
-- [Taking webcam
-  photos](/en-US/docs/Web/API/WebRTC_API/Taking_still_photos): A tutorial on using `getUserMedia()` to take still photos
+- [Taking webcam photos](/en-US/docs/Web/API/WebRTC_API/Taking_still_photos): A tutorial on using `getUserMedia()` to take still photos
   rather than video

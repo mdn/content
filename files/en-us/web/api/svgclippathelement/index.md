@@ -1,6 +1,7 @@
 ---
 title: SVGClipPathElement
 slug: Web/API/SVGClipPathElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGClipPathElement
 
 The **`SVGClipPathElement`** interface provides access to the properties of {{SVGElement("clipPath")}} elements, as well as methods to manipulate them.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Masking
   - CSS Property
-  - Experimental
   - NeedsCompatTable
   - NeedsExample
   - Reference
@@ -32,6 +31,7 @@ mask-border-source: linear-gradient(to top, red, yellow);
 mask-border-source: inherit;
 mask-border-source: initial;
 mask-border-source: revert;
+mask-border-source: revert-layer;
 mask-border-source: unset;
 ```
 

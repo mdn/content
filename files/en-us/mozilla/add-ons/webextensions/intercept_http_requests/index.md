@@ -63,6 +63,7 @@ Here we use {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} to
 The `{urls: ["<all_urls>"]}` [pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) means we will intercept HTTP requests to all URLs.
 
 To test it out:
+
 - [Install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
 - Open the [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/) (use <kbd>Ctrl + Shift + J</kbd>)
 - Enable *Show Content Messages* in the menu:
@@ -111,8 +112,8 @@ The changes here are to:
 Next, replace **background.js** with this:
 
 ```js
-var pattern = "https://developer.mozilla.org/*";
-var targetUrl = "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
+let pattern = "https://developer.mozilla.org/*";
+let targetUrl = "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
 
 function redirect(requestDetails) {
   console.log("Redirecting: " + requestDetails.url);
@@ -131,7 +132,7 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-Again, we use the {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} event listener to run a function just before each request is made.
+Again, we use the {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} event listener to run a function just before each request is made.
 This function replaces the `redirectUrl` with the target URL specified in the function. In this case, the frog image from the [your second extension tutorial](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension).
 
 This time we are not intercepting every request: the `{urls:[pattern], types:["image"]}` option specifies that we should only intercept requests (1) to URLs residing under "https\://developer.mozilla.org/" (2) for image resources.
@@ -174,9 +175,9 @@ Update your **manifest.json** to include `http://useragentstring.com/`
 Replace "background.js" with code like this:
 
 ```js
-var targetPage = "http://useragentstring.com/*";
+let targetPage = "http://useragentstring.com/*";
 
-var ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+let ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 function rewriteUserAgentHeader(e) {
   e.requestHeaders.forEach(function(header){
@@ -194,13 +195,13 @@ browser.webRequest.onBeforeSendHeaders.addListener(
 );
 ```
 
-Here we use the {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} event listener to run a function just before the request headers are sent.
+Here we use the {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} event listener to run a function just before the request headers are sent.
 
 The listener function will be called only for requests to URLs matching the `targetPage` [pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
 Also note that we've again passed `"blocking"` as an option. We've also passed `"requestHeaders"`, which means that the listener will be passed an array containing the request headers that we expect to send.
 See {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}} for more information on these options.
 
-The listener function looks for the "User-Agent" header in the array of request headers, replaces its value with the value of the `ua` variable, and returns the modified array.
+The listener function looks for the "User-Agent" header in the array of request headers, replaces its value with the value of the `ua` variable, and returns the modified array.
 This modified array will now be sent to the server.
 
 To test it out, open [useragentstring.com](http://useragentstring.com/) and check that it identifies the browser as Firefox.

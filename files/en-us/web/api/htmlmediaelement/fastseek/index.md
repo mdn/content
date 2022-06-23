@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.fastSeek()
 slug: Web/API/HTMLMediaElement/fastSeek
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -11,7 +12,7 @@ tags:
   - fastSeek
 browser-compat: api.HTMLMediaElement.fastSeek
 ---
-{{APIRef("HTML DOM")}} {{SeeCompatTable}}
+{{APIRef("HTML DOM")}} {{SeeCompatTable}}
 
 The **`HTMLMediaElement.fastSeek()`** method quickly seeks the
 media to the new time with precision tradeoff.
@@ -22,19 +23,19 @@ media to the new time with precision tradeoff.
 ## Syntax
 
 ```js
-HTMLMediaElement.fastSeek(time);
+fastSeek(time)
 ```
 
 ### Parameters
 
-- time
+- `time`
   - : A double.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 This example quickly seeks to 20-second position of the video element.
 

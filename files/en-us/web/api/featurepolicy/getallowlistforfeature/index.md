@@ -1,6 +1,7 @@
 ---
 title: FeaturePolicy.getAllowlistForFeature()
 slug: Web/API/FeaturePolicy/getAllowlistForFeature
+page-type: web-api-instance-method
 tags:
   - API
   - Feature Policy
@@ -51,7 +52,7 @@ const featurePolicy = document.featurePolicy
 const allowlist = featurePolicy.getAllowlistForFeature("camera")
 
 for (const origin of allowlist) {
-  console.log(origin)
+  console.log(origin)
 }
 ```
 

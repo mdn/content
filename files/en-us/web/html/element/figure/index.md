@@ -130,7 +130,7 @@ function NavigatorExample() {
   txt+= "Cookies Enabled: " + navigator.cookieEnabled  + "; ";
   txt+= "Platform: " + navigator.platform  + "; ";
   txt+= "User-agent header: " + navigator.userAgent  + "; ";
-  console.log("NavigatorExample", txt);
+  console.log("NavigatorExample", txt);
 }
   </pre>
 </figure>
@@ -157,7 +157,7 @@ function NavigatorExample() {
   <p style="white-space:pre">
 Bid me discourse, I will enchant thine ear,
   Or like a fairy trip upon the green,
-Or, like a nymph, with long dishevell'd hair,
+Or, like a nymph, with long dishevelled hair,
   Dance on the sands, and yet no footing seen:
 Love is a spirit all compact of fire,
   Not gross to sink, but light, and will aspire.</p>

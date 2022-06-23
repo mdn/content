@@ -1,6 +1,7 @@
 ---
 title: SVGMetadataElement
 slug: Web/API/SVGMetadataElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGMetadataElement
 
 The **`SVGMetadataElement`** interface corresponds to the {{SVGElement("metadata")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

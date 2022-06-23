@@ -1,6 +1,7 @@
 ---
 title: Window.print()
 slug: Web/API/Window/print
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -11,15 +12,25 @@ browser-compat: api.Window.print
 ---
 {{ ApiRef() }}
 
-Opens the Print Dialog to print the current document.
+Opens the print dialog to print the current document.
 
-In most browsers, this method will block while the print dialog is open. However in more recent versions of Safari, it may return immediately.
+If the document is still loading when this function is called, then the document will finish loading before opening the print dialog.
+
+This method will block while the print dialog is open.
 
 ## Syntax
 
 ```js
-window.print()
+print()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 
@@ -32,5 +43,5 @@ window.print()
 ## See also
 
 - [Printing](/en-US/docs/Web/Guide/Printing)
-- {{ domxref("window.onbeforeprint") }}
-- {{ domxref("window.onafterprint") }}
+- {{ domxref("window.beforeprint_event", "beforeprint") }} event
+- {{ domxref("window.afterprint_event", "afterprint") }} event

@@ -17,14 +17,14 @@ browser-compat: webextensions.api.tabs.update
 
 Navigate the tab to a new URL, or modify other properties of the tab.
 
-To use this function, pass the ID of the tab to update, and an `updateProperties` object containing the properties you want to update. Properties that are not specified in `updateProperties` are not modified.
+To use this function, pass the ID of the tab to update, and an `updateProperties` object containing the properties you want to update. Properties that are not specified in `updateProperties` are not modified.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
 ```js
-var updating = browser.tabs.update(
+let updating = browser.tabs.update(
   tabId,              // optional integer
   updateProperties    // object
 )
@@ -39,7 +39,7 @@ var updating = browser.tabs.update(
   - : `object`. The set of properties to update for this tab. To learn more about these properties, see the {{WebExtAPIRef("tabs.Tab")}} documentation.
 
     - `active`{{optional_inline}}
-      - : `boolean`. Whether the tab should become active. Does not affect whether the window is focused (see {{WebExtAPIRef('windows.update')}}). If `true`, non-active highlighted tabs will stop being highlighted. If `false`, does nothing.
+      - : `boolean`. Whether the tab should become active. Does not affect whether the window is focused (see {{WebExtAPIRef('windows.update')}}). If `true`, non-active highlighted tabs will stop being highlighted. If `false`, does nothing.
     - `autoDiscardable`{{optional_inline}}
       - : `boolean`. Whether the tab should be discarded automatically by the browser when resources are low.
     - `highlighted`{{optional_inline}}
@@ -82,7 +82,7 @@ var updating = browser.tabs.update(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the updated tab. The {{WebExtAPIRef('tabs.Tab')}} object doesn't contain `url`, `title` and `favIconUrl` unless matching [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or the `"tabs"` permission has been requested. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the updated tab. The {{WebExtAPIRef('tabs.Tab')}} object doesn't contain `url`, `title` and `favIconUrl` unless matching [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or the `"tabs"` permission has been requested. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.
 
 ## Examples
 
@@ -97,7 +97,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var updating = browser.tabs.update({url: "https://developer.mozilla.org"});
+let updating = browser.tabs.update({url: "https://developer.mozilla.org"});
 updating.then(onUpdated, onError);
 ```
 
@@ -113,14 +113,14 @@ function onError(error) {
 }
 
 function updateFirstTab(tabs) {
-  var updating = browser.tabs.update(tabs[0].id, {
+  let updating = browser.tabs.update(tabs[0].id, {
     active: true,
     url: "https://developer.mozilla.org"
   });
   updating.then(onUpdated, onError);
 }
 
-var querying = browser.tabs.query({currentWindow:true});
+let querying = browser.tabs.query({currentWindow:true});
 querying.then(updateFirstTab, onError);
 ```
 
@@ -130,7 +130,7 @@ querying.then(updateFirstTab, onError);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-update) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-update) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

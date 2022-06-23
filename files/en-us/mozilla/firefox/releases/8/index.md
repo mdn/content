@@ -7,7 +7,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-Firefox 8 was released on November 8, 2011. This article provides information both for [web developers](/en-US/docs/Mozilla/Firefox/Releases/8#changes_for_web_developers) and for add-on and [Mozilla project developers](/en-US/docs/Mozilla/Firefox/Releases/8#changes_for_mozilla_and_add-on_developers) to help take full advantage of the features of this release.
+Firefox 8 was released on November 8, 2011. This article provides information both for [web developers](#changes_for_web_developers) and for add-on and [Mozilla project developers](#changes_for_mozilla_and_add-on_developers) to help take full advantage of the features of this release.
 
 ## Changes for web developers
 
@@ -63,8 +63,8 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 
 ### WebSockets
 
-- The [`WebSocket`](/en-US/docs/Web/API/WebSocket) object's [`send()`](</en-US/docs/Web/API/WebSocket#send()>) method no longer incorrectly returns a Boolean value.
-- The [`WebSocket`](/en-US/docs/Web/API/WebSocket) object's [`close()`](</en-US/docs/Web/API/WebSocket#close()>) method now matches the current draft of the standard, and close events now properly use the [`CloseEvent`](/en-US/docs/Web/API/CloseEvent) interface.
+- The [`WebSocket`](/en-US/docs/Web/API/WebSocket) object's [`send()`](/en-US/docs/Web/API/WebSocket/send) method no longer incorrectly returns a Boolean value.
+- The [`WebSocket`](/en-US/docs/Web/API/WebSocket) object's [`close()`](/en-US/docs/Web/API/WebSocket/close) method now matches the current draft of the standard, and close events now properly use the [`CloseEvent`](/en-US/docs/Web/API/CloseEvent) interface.
 - The [`WebSocket`](/en-US/docs/Web/API/WebSocket) object's `extensions` attribute is now supported.
 - The WebSocket constructor now supports an array of protocols as well as a single protocol string.
 - Mixed content is not allowed with WebSockets; that is, you can no longer open a connection to a non-secure WebSocket server from secure content.
@@ -84,11 +84,11 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 
 ### Developer tools
 
-- The [`console`](/en-US/docs/Tools/Web_Console#the_console_object) object has a new `dir()` method, which displays an interactive list of the properties on a specified object.
+- The [`console`](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#the-console-object) object has a new `dir()` method, which displays an interactive list of the properties on a specified object.
 
 ## Changes for Mozilla and add-on developers
 
-See [Updating add-ons for Firefox 8](/en-US/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_8) for a guide to changes you're likely to have to make to make your add-ons compatible with Firefox 8.
+See [Updating add-ons for Firefox 8](/en-US/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_8) for a guide to changes you're likely to have to make your add-ons compatible with Firefox 8.
 
 > **Note:** Firefox 8 requires that binary components be recompiled, as do all major releases of Firefox. See [Binary Interfaces](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces) for details.
 
@@ -99,7 +99,7 @@ See [Updating add-ons for Firefox 8](/en-US/docs/Mozilla/Firefox/Updating_add-on
 
 #### Other XPCOM related changes
 
-- You can now instantiate DOM {{ domxref("File") }} objects from component code by doing new File, instead of having to instantiate an {{ interface("nsIDOMFile") }} directly.
+- You can now instantiate DOM {{ domxref("File") }} objects from component code by doing new File, instead of having to instantiate an `nsIDOMFile` directly.
 - The `nsTPtrArray` array type has been removed. Its functionality is now all available on `nsTArray`, which now offers the `SafeElementAt()` method when instantiated using a pointer type. See the section on [`SafeElementAt()`](/en-US/docs/XPCOM_array_guide#Bounds-safe_access_to_elements) in the [XPCOM array guide](/en-US/docs/XPCOM_array_guide) for more information.
 
 ### Workers
@@ -128,20 +128,20 @@ It is no longer possible to access XPCOM objects from ChromeWorkers. XPConnect h
 
 ### Interface changes
 
-- The {{ ifmethod("mozIJSSubScriptLoader", "loadSubScript") }} method now loads scripts from the startup cache when possible.
-- The `ownerWindow` attribute has been removed from the {{ interface("nsIAccessNode") }} interface.
-- The {{ interface("nsIDOMStorageWindow") }} interface has been merged into the {{ interface("nsIDOMWindow") }} interface.
-- All members of the {{ interface("nsIDOMWindowInternal") }} interface have been moved into the {{ interface("nsIDOMWindow") }} interface. The interface itself (with no members) remains available for compatibility until Firefox 9.
-- In order to improve performance, callback handling for asynchronous Places database updates has been changed. See the new {{ ifmethod("mozIVisitInfoCallback", "handleResult") }} and {{ ifmethod("mozIVisitInfoCallback", "handleError") }} methods, which replace the old single method for both error and success condition handling.
-- The {{ interface("nsIMemoryReporter") }} `KIND_MAPPED` attribute has been deprecated in favor of `KIND_NONHEAP`, new unit types `UNITS_COUNT_CUMULATIVE` and `UNITS_PERCENTAGE` have been added.
-- The {{ interface("nsIMemoryReporterManager") }} interface has a new `explicit` attribute, which reports the total size of explicit memory allocations.
-- The {{ interface("nsIMemoryReporterManager") }} interface has a new `resident` attribute, which reports the amount of physical memory used.
-- The {{ interface("nsINetworkLinkService") }} interface has a new attribute, `linkType`. This attribute provides the type of network connection in use. All Operating Systems currently return `LINK_TYPE_UNKNOWN`. Android support was backed out due to perceived security concerns.
-- The {{ interface("nsISelection2") }} interface has been merged into the {{ interface("nsISelectionPrivate") }} interface.
-- The {{ interface("nsISelection3") }} interface has been merged into the {{ interface("nsISelection") }} interface.
-- The {{ interface("nsISessionStartup") }} attribute state is now a [`jsval`](/en-US/SpiderMonkey/JSAPI_Reference/Jsval) instead of a string, for performance reasons.
-- The {{ interface("nsIDocShell") }} attribute `isActive` is now `false` for minimized windows.
-- The {{ ifmethod("nsIDownloadHistory", "addDownload") }} method now saves the target where the download is saved on the local file system.
+- The `mozIJSSubScriptLoader.loadSubScript()` method now loads scripts from the startup cache when possible.
+- The `ownerWindow` attribute has been removed from the `nsIAccessNode` interface.
+- The `nsIDOMStorageWindow` interface has been merged into the `nsIDOMWindow` interface.
+- All members of the `nsIDOMWindowInternal` interface have been moved into the `nsIDOMWindow` interface. The interface itself (with no members) remains available for compatibility until Firefox 9.
+- In order to improve performance, callback handling for asynchronous Places database updates has been changed. See the new `mozIVisitInfoCallback.handleResult()` and `mozIVisitInfoCallback.handleError()` methods, which replace the old single method for both error and success condition handling.
+- The `nsIMemoryReporter` `KIND_MAPPED` attribute has been deprecated in favor of `KIND_NONHEAP`, new unit types `UNITS_COUNT_CUMULATIVE` and `UNITS_PERCENTAGE` have been added.
+- The `nsIMemoryReporterManager` interface has a new `explicit` attribute, which reports the total size of explicit memory allocations.
+- The `nsIMemoryReporterManager` interface has a new `resident` attribute, which reports the amount of physical memory used.
+- The `nsINetworkLinkService` interface has a new attribute, `linkType`. This attribute provides the type of network connection in use. All Operating Systems currently return `LINK_TYPE_UNKNOWN`. Android support was backed out due to perceived security concerns.
+- The `nsISelection2` interface has been merged into the `nsISelectionPrivate` interface.
+- The `nsISelection3` interface has been merged into the `nsISelection` interface.
+- The `nsISessionStartup` attribute state is now a [`jsval`](/en-US/SpiderMonkey/JSAPI_Reference/Jsval) instead of a string, for performance reasons.
+- The `nsIDocShell` attribute `isActive` is now `false` for minimized windows.
+- The `nsIDownloadHistory.addDownload()` method now saves the target where the download is saved on the local file system.
 
 #### Removed interfaces
 
@@ -150,7 +150,7 @@ The following interfaces were implementation details that are no longer needed:
 - `nsITimelineService`
 - `nsIDOMHTMLIsIndexElement`
 
-The {{ interface("nsIWorkerFactory") }} interface has been removed as well. Workers can still be created using the `Worker` and `ChromeWorker` constructors.
+The `nsIWorkerFactory` interface has been removed as well. Workers can still be created using the `Worker` and `ChromeWorker` constructors.
 
 ### Other changes
 

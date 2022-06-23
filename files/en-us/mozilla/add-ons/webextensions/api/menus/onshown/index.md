@@ -29,11 +29,11 @@ The handler is passed some information about the menu and its contents, and some
 If the `onShown` handler calls any asynchronous APIs, then it's possible that the menu has been closed again before the handler resumes execution. Because of this, if a handler calls any asynchronous APIs, it should check that the menu is still being displayed before it updates the menu. For example:
 
 ```js
-var lastMenuInstanceId = 0;
-var nextMenuInstanceId = 1;
+let lastMenuInstanceId = 0;
+let nextMenuInstanceId = 1;
 
 browser.menus.onShown.addListener(async function(info, tab) {
-  var menuInstanceId = nextMenuInstanceId++;
+  let menuInstanceId = nextMenuInstanceId++;
   lastMenuInstanceId = menuInstanceId;
 
   // Call an async function
@@ -51,7 +51,7 @@ browser.menus.onHidden.addListener(function() {
 });
 ```
 
-Note that it is possible to call menus API functions synchronously, and in this case you don't have to perform this check:
+Note that it is possible to call menus API functions synchronously, and in this case you don't have to perform this check:
 
 ```js
 browser.menus.onShown.addListener(async function(info, tab) {
@@ -65,7 +65,7 @@ However, if you call these APIs asynchronously, then you do have to perform the 
 
 ```js
 browser.menus.onShown.addListener(async function(info, tab) {
-  var menuInstanceId = nextMenuInstanceId++;
+  let menuInstanceId = nextMenuInstanceId++;
   lastMenuInstanceId = menuInstanceId;
 
   await browser.menus.update(menuId, ...);
@@ -120,10 +120,6 @@ Events have three functions:
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. The details of the tab where the click took place. If the click did not take place in or on a tab, this parameter will be missing.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example listens for the context menu to be shown over a link, then updates the `openLabelledId` menu item with the link's hostname:
@@ -147,3 +143,7 @@ browser.menus.onShown.addListener(info => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

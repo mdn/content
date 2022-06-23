@@ -1,6 +1,7 @@
 ---
 title: LargestContentfulPaint.toJSON()
 slug: Web/API/LargestContentfulPaint/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,7 +17,7 @@ The **`toJSON()`** method of the {{domxref("LargestContentfulPaint")}} interface
 ## Syntax
 
 ```js
-LargestContentfulPaint.toJSON();
+toJSON()
 ```
 
 ### Parameters

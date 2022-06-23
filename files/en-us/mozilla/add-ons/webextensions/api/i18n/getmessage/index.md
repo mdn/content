@@ -56,7 +56,7 @@ browser.i18n.getMessage(
 Get the localized string for `"messageContent"`, with `target.url` substituted:
 
 ```js
-var message = browser.i18n.getMessage("messageContent", target.url);
+let message = browser.i18n.getMessage("messageContent", target.url);
 console.log(message);
 ```
 
@@ -79,11 +79,13 @@ This would work with a \_locales/en/messages.json file containing:
 
 If `target.url` is "https\://developer.mozilla.org", then the value of message, in the "en" locale, would be:
 
-    "You clicked https://developer.mozilla.org."
+```
+"You clicked https://developer.mozilla.org."
+```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/extensions/i18n#method-getMessage) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/i18n/#method-getMessage) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/extensions/common/api/i18n.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

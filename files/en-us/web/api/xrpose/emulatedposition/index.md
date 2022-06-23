@@ -1,6 +1,7 @@
 ---
 title: XRPose.emulatedPosition
 slug: Web/API/XRPose/emulatedPosition
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -37,7 +38,7 @@ it's simulated or computed based on other sources.
 
 A Boolean which is `true` if the pose's position is computed based on
 estimates or is derived from sources other than direct sensor data. If the position is
-precisely gbased on direct sensor inputs, the value is `false`.
+precisely based on direct sensor inputs, the value is `false`.
 
 ## Usage notes
 

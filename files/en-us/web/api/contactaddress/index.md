@@ -1,6 +1,7 @@
 ---
 title: ContactAddress
 slug: Web/API/ContactAddress
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -12,7 +13,7 @@ browser-compat: api.ContactAddress
 
 The **`ContactAddress`** interface of the {{domxref('contact_picker_api','Contact Picker API','','true')}} represents a physical address. Instances of this interface are retrieved from the `address` property of the objects returned by {{domxref("ContactManager.getProperties()")}}.
 
-It may be useful to refer to the Universal Postal Union web site's [Addressing S42 standard](https://www.upu.int/en/Postal-Solutions/Programmes-Services/Addressing-Solutions#addressing-s42-standard) materials, which provide information about international standards for postal addresses.
+It may be useful to refer to the Universal Postal Union website's [Addressing S42 standard](https://www.upu.int/en/Postal-Solutions/Programmes-Services/Addressing-Solutions#addressing-s42-standard) materials, which provide information about international standards for postal addresses.
 
 ## Properties
 
@@ -24,7 +25,7 @@ _Inherits methods from its parent, {{domxref("PaymentAddress")}}_.
 
 ## Examples
 
-The following example propmpts the user to select contacts, then prints the first returned address to the console.
+The following example prompts the user to select contacts, then prints the first returned address to the console.
 
 ```js
 const props = ['address'];
@@ -48,4 +49,3 @@ async function getContacts() {
 ## Browser compatibility
 
 {{Compat}}
-

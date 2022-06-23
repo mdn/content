@@ -1,6 +1,7 @@
 ---
 title: SVGFEDisplacementMapElement
 slug: Web/API/SVGFEDisplacementMapElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGFEDisplacementMapElement
 
 The **`SVGFEDisplacementMapElement`** interface corresponds to the {{SVGElement("feDisplacementMap")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Constants
 

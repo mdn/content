@@ -1,6 +1,7 @@
 ---
 title: SVGFEComponentTransferElement
 slug: Web/API/SVGFEComponentTransferElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGFEComponentTransferElement
 
 The **`SVGFEComponentTransferElement`** interface corresponds to the {{SVGElement("feComponentTransfer")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

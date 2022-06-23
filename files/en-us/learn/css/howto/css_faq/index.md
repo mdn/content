@@ -13,7 +13,7 @@ In this article, you'll find some frequently-asked questions (FAQs) about CSS, a
 
 ## Why doesn't my CSS, which is valid, render correctly?
 
-Browsers use the `DOCTYPE` declaration to choose whether to show the document using a mode that is more compatible  with Web standards or with old browser bugs. Using a correct and modern `DOCTYPE` declaration at the start of your HTML will improve browser standards compliance.
+Browsers use the `DOCTYPE` declaration to choose whether to show the document using a mode that is more compatible with Web standards or with old browser bugs. Using a correct and modern `DOCTYPE` declaration at the start of your HTML will improve browser standards compliance.
 
 Modern browsers have two main rendering modes:
 
@@ -24,20 +24,30 @@ Gecko-based browsers, have a third _[Almost Standards Mode](/en-US/docs/Mozilla/
 
 This is a list of the most commonly used `DOCTYPE` declarations that will trigger Standards or Almost Standards mode:
 
-    <!DOCTYPE html> /* This is the HTML5 doctype. Given that each modern browser uses an HTML5
-                       parser, this is the recommended doctype */
+```html
+<!DOCTYPE html> /* This is the HTML5 doctype. Given that each modern browser uses an HTML5
+                    parser, this is the recommended doctype */
+```
 
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
+```html
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+```
 
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-    "http://www.w3.org/TR/html4/strict.dtd">
+```html
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+```
 
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+```
 
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+```
 
 When at all possible, you should just use the HTML5 doctype.
 
@@ -61,7 +71,7 @@ It is generally recommended to use classes as much as possible, and to use ids o
 - Classes allow you to style multiple elements, therefore they can lead to shorter stylesheets, rather than having to write out the same styling information in multiple rules that use id selectors. Shorter stylesheets are more performant.
 - Class selectors have lower [specificity](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity) than id selectors, so are easier to override if needed.
 
-> **Note:** See [Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) for more information.
+> **Note:** See [Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) for more information.
 
 ## How do I restore the default value of a property?
 
@@ -83,38 +93,44 @@ h1 { color: initial; }
 
 ## How do I derive one style from another?
 
-CSS does not exactly allow one style to be defined in terms of another. (See [Eric Meyer's note about the Working Group's stance](http://archivist.incutio.com/viewlist/css-discuss/2685)). However, assigning multiple classes to a single element can provide the same effect, and [CSS Variables](/en-US/docs/Web/CSS/Using_CSS_custom_properties) now provide a way to define style information in one place that can be reused in multiple places.
+CSS does not exactly allow one style to be defined in terms of another. However, assigning multiple classes to a single element can provide the same effect, and [CSS Variables](/en-US/docs/Web/CSS/Using_CSS_custom_properties) now provide a way to define style information in one place that can be reused in multiple places.
 
 ## How do I assign multiple classes to an element?
 
 HTML elements can be assigned multiple classes by listing the classes in the `class` attribute, with a blank space to separate them.
 
-    <style type="text/css">
-    .news { background: black; color: white; }
-    .today { font-weight: bold; }
-    </style>
+```html
+<style type="text/css">
+.news { background: black; color: white; }
+.today { font-weight: bold; }
+</style>
 
-    <div class="news today">
-    ... content of today's news ...
-    </div>
+<div class="news today">
+... content of today's news ...
+</div>
+```
 
 If the same property is declared in both rules, the conflict is resolved first through specificity, then according to the order of the CSS declarations. The order of classes in the `class` attribute is not relevant.
 
 ## Why don't my style rules work properly?
 
-Style rules that are syntactically correct may not apply in certain situations. You can use [DOM Inspector](/en-US/docs/Tools/Add-ons/DOM_Inspector)'s _CSS Style Rules_ view to debug problems of this kind, but the most frequent instances of ignored style rules are listed below.
+Style rules that are syntactically correct may not apply in certain situations. You can use [Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html) of  _CSS Pane_ of the Inspector to debug problems of this kind, but the most frequent instances of ignored style rules are listed below.
 
 ### HTML elements hierarchy
 
 The way CSS styles are applied to HTML elements depends also on the elements hierarchy. It is important to remember that a rule applied to a descendent overrides the style of the parent, in spite of any specificity or priority of CSS rules.
 
-    .news { color: black; }
-    .corpName { font-weight: bold; color: red; }
+```css
+.news { color: black; }
+.corpName { font-weight: bold; color: red; }
+```
 
-    <!-- news item text is black, but corporate name is red and in bold -->
-    <div class="news">
-       (Reuters) <span class="corpName">General Electric</span> (GE.NYS) announced on Thursday...
-    </div>
+```html
+<!-- news item text is black, but corporate name is red and in bold -->
+<div class="news">
+    (Reuters) <span class="corpName">General Electric</span> (GE.NYS) announced on Thursday...
+</div>
+```
 
 In case of complex HTML hierarchies, if a rule seems to be ignored, check if the element is inside another element with a different style.
 
@@ -122,17 +138,21 @@ In case of complex HTML hierarchies, if a rule seems to be ignored, check if the
 
 In CSS stylesheets, order **is** important. If you define a rule and then you re-define the same rule, the last definition is used.
 
-    #stockTicker { font-weight: bold; }
-    .stockSymbol { color: red; }
-    /*  other rules             */
-    /*  other rules             */
-    /*  other rules             */
-    .stockSymbol { font-weight: normal; }
+```css
+#stockTicker { font-weight: bold; }
+.stockSymbol { color: red; }
+/*  other rules             */
+/*  other rules             */
+/*  other rules             */
+.stockSymbol { font-weight: normal; }
+```
 
-    <!-- most text is in bold, except "GE", which is red and not bold -->
-    <div id="stockTicker">
-       NYS: <span class="stockSymbol">GE</span> +1.0 ...
-    </div>
+```html
+<!-- most text is in bold, except "GE", which is red and not bold -->
+<div id="stockTicker">
+    NYS: <span class="stockSymbol">GE</span> +1.0 ...
+</div>
+```
 
 To avoid this kind of error, try to define rules only once for a certain selector, and group all rules belonging to that selector.
 
@@ -140,32 +160,42 @@ To avoid this kind of error, try to define rules only once for a certain selecto
 
 Using shorthand properties for defining style rules is good because it uses a very compact syntax. Using shorthand with only some attributes is possible and correct, but it must be remembered that undeclared attributes are automatically reset to their default values. This means that a previous rule for a single attribute could be implicitly overridden.
 
-    #stockTicker { font-size: 12px; font-family: Verdana; font-weight: bold; }
-    .stockSymbol { font: 14px Arial; color: red; }
+```css
+#stockTicker { font-size: 12px; font-family: Verdana; font-weight: bold; }
+.stockSymbol { font: 14px Arial; color: red; }
+```
 
-    <div id="stockTicker">
-       NYS: <span class="stockSymbol">GE</span> +1.0 ...
-    </div>
+```html
+<div id="stockTicker">
+    NYS: <span class="stockSymbol">GE</span> +1.0 ...
+</div>
+```
 
 In the previous example the problem occurred on rules belonging to different elements, but it could happen also for the same element, because rule order **is** important.
 
-    #stockTicker {
-       font-weight: bold;
-       font: 12px Verdana;  /* font-weight is now set to normal */
-    }
+```css
+#stockTicker {
+    font-weight: bold;
+    font: 12px Verdana;  /* font-weight is now set to normal */
+}
+```
 
 ### Use of the `*` selector
 
 The `*` wildcard selector refers to any element, and it has to be used with particular care.
 
-    body * { font-weight: normal; }
-    #stockTicker { font: 12px Verdana; }
-    .corpName { font-weight: bold; }
-    .stockUp { color: red; }
+```css
+body * { font-weight: normal; }
+#stockTicker { font: 12px Verdana; }
+.corpName { font-weight: bold; }
+.stockUp { color: red; }
+```
 
-    <div id="section">
-       NYS: <span class="corpName"><span class="stockUp">GE</span></span> +1.0 ...
-    </div>
+```html
+<div id="section">
+    NYS: <span class="corpName"><span class="stockUp">GE</span></span> +1.0 ...
+</div>
+```
 
 In this example the `body *` selector applies the rule to all elements inside body, at any hierarchy level, including the `.stockUp` class. So `font-weight: bold;` applied to the `.corpName` class is overridden by `font-weight: normal;` applied to all elements in the body.
 
@@ -175,11 +205,15 @@ The use of the \* selector should be minimized as it is a slow selector, especia
 
 When multiple rules apply to a certain element, the rule chosen depends on its style [specificity](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity). Inline style (in HTML `style` attributes) has the highest specificity and will override any selectors, followed by ID selectors, then class selectors, and eventually element selectors. The text color of the below {{htmlelement("div")}} will therefore be red.
 
-    div { color: black; }
-    #orange { color: orange; }
-    .green { color: green; }
+```css
+div { color: black; }
+#orange { color: orange; }
+.green { color: green; }
+```
 
-    <div id="orange" class="green" style="color: red;">This is red</div>
+```html
+<div id="orange" class="green" style="color: red;">This is red</div>
+```
 
 The rules are more complicated when the selector has multiple parts. More detailed information about how selector specificity is calculated can be found in the [CSS 2.1 Specification chapter 6.4.3](https://www.w3.org/TR/CSS21/cascade.html#specificity).
 
@@ -201,7 +235,7 @@ transform: rotate(90deg);
 
 > **Note:** For more information on dealing with prefixed properties, see [Handling common HTML and CSS problems — Handling CSS prefixes](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes) from our [Cross-browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) module.
 
-> **Note:** See the [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions "CSS Reference/Mozilla Extensions") page for more information on the Mozilla-prefixed CSS properties.
+> **Note:** See the [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions) page for more information on the Mozilla-prefixed CSS properties.
 
 ## How does z-index relate to positioning?
 

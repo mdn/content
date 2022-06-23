@@ -14,7 +14,7 @@ browser-compat: css.at-rules.font-face.font-stretch
 
 The **`font-stretch`** CSS descriptor allows authors to specify a normal, condensed, or expanded face for the fonts specified in the {{cssxref("@font-face")}} rule.
 
-For a particular font family, authors can download various font faces which correspond to the different styles of the same font family, and then use the `font-stretch `descriptor to explicitly specify the font face's stretch. The values for the CSS descriptor is same as that of its corresponding font property.
+For a particular font family, authors can download various font faces which correspond to the different styles of the same font family, and then use the `font-stretch` descriptor to explicitly specify the font face's stretch. The values for the CSS descriptor is same as that of its corresponding font property.
 
 ## Syntax
 
@@ -35,10 +35,10 @@ font-stretch: 200%;
 
 /* multiple values */
 font-stretch: 75% 125%;
-font-stretch: condensed ultra-condensed;;
+font-stretch: condensed ultra-condensed;
 ```
 
-The `font-weight` property is described using any one of the values listed below.
+The `font-stretch` property is described using any one of the values listed below.
 
 ### Values
 
@@ -125,7 +125,21 @@ People with dyslexia and other cognitive conditions may have difficulty reading 
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<font-stretch-absolute>{1,2}
+
+<font-stretch-absolute> =
+  normal          |
+  ultra-condensed |
+  extra-condensed |
+  condensed       |
+  semi-condensed  |
+  semi-expanded   |
+  expanded        |
+  extra-expanded  |
+  ultra-expanded  |
+  <percentage>
+```
 
 ## Examples
 

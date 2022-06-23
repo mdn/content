@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Number.isNaN
 {{JSRef}}
 
 The **`Number.isNaN()`** method determines whether the passed
-value is {{jsxref("NaN")}} and its type is {{jsxref("Number")}}. It is a more robust
+value is {{jsxref("NaN")}} and its type is {{jsxref("Number")}}. It is a more robust
 version of the original, global {{jsxref("isNaN", "isNaN()")}}.
 
 {{EmbedInteractiveExample("pages/js/number-isnan.html", "taller")}}
@@ -95,6 +95,6 @@ Number.isNaN = Number.isNaN || function isNaN(input) {
 
 ## See also
 
-- A polyfill of `Number.isNaN` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [Polyfill of `Number.isNaN` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
 - {{jsxref("Number")}}
 - {{jsxref("isNaN", "isNaN()")}}

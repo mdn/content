@@ -1,6 +1,7 @@
 ---
 title: SVGFECompositeElement
 slug: Web/API/SVGFECompositeElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGFECompositeElement
 
 The **`SVGFECompositeElement`** interface corresponds to the {{SVGElement("feComposite")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Constants
 

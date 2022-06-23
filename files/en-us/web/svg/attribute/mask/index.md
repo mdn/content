@@ -14,25 +14,25 @@ The **`mask`** attribute is a presentation attribute mainly used to bind a given
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement('a')}}
-*   {{SVGElement('circle')}}
-*   {{SVGElement('clipPath')}}
-*   {{SVGElement('ellipse')}}
-*   {{SVGElement('g')}}
-*   {{SVGElement('glyph')}}
-*   {{SVGElement('image')}}
-*   {{SVGElement('line')}}
-*   {{SVGElement('marker')}}
-*   {{SVGElement('mask')}}
-*   {{SVGElement('path')}}
-*   {{SVGElement('pattern')}}
-*   {{SVGElement('polygon')}}
-*   {{SVGElement('polyline')}}
-*   {{SVGElement('rect')}}
-*   {{SVGElement('svg')}}
-*   {{SVGElement('symbol')}}
-*   {{SVGElement('text')}}
-*   {{SVGElement('use')}}
+- {{SVGElement('a')}}
+- {{SVGElement('circle')}}
+- {{SVGElement('clipPath')}}
+- {{SVGElement('ellipse')}}
+- {{SVGElement('g')}}
+- {{SVGElement('glyph')}}
+- {{SVGElement('image')}}
+- {{SVGElement('line')}}
+- {{SVGElement('marker')}}
+- {{SVGElement('mask')}}
+- {{SVGElement('path')}}
+- {{SVGElement('pattern')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('svg')}}
+- {{SVGElement('symbol')}}
+- {{SVGElement('text')}}
+- {{SVGElement('use')}}
 
 ## Example
 
@@ -82,33 +82,7 @@ Since SVG2, the {{cssxref('mask')}} attribute is defined as a css property and i
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("CSS Masks", "#the-mask", "mask")}}</td>
-      <td>{{Spec2("CSS Masks")}}</td>
-      <td>
-        Extends its usage to HTML elements.<br />Extends its syntax by making it
-        a shorthand for the new <code>mask-*</code> properties defined in that
-        specification.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "masking.html#MaskProperty", "mask")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

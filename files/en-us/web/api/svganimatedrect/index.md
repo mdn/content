@@ -1,6 +1,7 @@
 ---
 title: SVGAnimatedRect
 slug: Web/API/SVGAnimatedRect
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -18,7 +19,7 @@ The `SVGAnimatedRect` interface is used for attributes of basic {{ domxref("SVGR
 <table class="no-markdown">
   <tbody>
     <tr>
-      <th scope="row">Also implement</th>
+      <th scope="row">Also implement</th>
       <td><em>None</em></td>
     </tr>
     <tr>
@@ -39,7 +40,7 @@ The `SVGAnimatedRect` interface is used for attributes of basic {{ domxref("SVGR
       </td>
     </tr>
     <tr>
-      <th scope="row">Normative document</th>
+      <th scope="row">Normative document</th>
       <td>
         <a
           href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGAnimatedRect"

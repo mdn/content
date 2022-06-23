@@ -28,7 +28,7 @@ and can be modified by setting the property to a different value.
 
 For example, the `placeholder` below is reflected into {{domxref("HTMLInputElement.placeholder")}}.
 
-Considering the follow HTML:
+Considering the following HTML:
 
 ```html
 <input placeholder="Original placeholder">

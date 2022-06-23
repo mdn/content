@@ -11,8 +11,7 @@ browser-compat: http.headers.Content-Location
 
 The **`Content-Location`** header indicates an alternate
 location for the returned data. The principal use is to indicate the URL of a resource
-transmitted as the result of [content
-negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
+transmitted as the result of [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
 
 {{HTTPHeader("Location")}} and `Content-Location` are different.
 `Location` indicates the URL of a redirect, while
@@ -64,12 +63,11 @@ URLs for `Content-Location` depending on the request's
 | `Accept: text/plain, text/*`          | `Content-Location: /documents/foo.txt`  |
 
 These URLs are examples — the site could serve the different filetypes with any URL
-patterns it wishes, such as a [query string
-parameter](/en-US/docs/Web/API/HTMLAnchorElement/search): `/documents/foo?format=json`,
+patterns it wishes, such as a [query string parameter](/en-US/docs/Web/API/HTMLAnchorElement/search): `/documents/foo?format=json`,
 `/documents/foo?format=xml`, and so on.
 
 Then the client could remember that the JSON version is available at that particular
-URL, skipping content negotation the next time it requests that document.
+URL, skipping content negotiation the next time it requests that document.
 
 The server could also consider other [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) headers, such
 as {{HTTPHeader("Accept-Language")}}.
@@ -79,7 +77,7 @@ as {{HTTPHeader("Accept-Language")}}.
 Say you're creating a new blog post through a site's API:
 
 ```
-PUT /new/post
+POST /new/post
 Host: example.com
 Content-Type: text/markdown
 
@@ -88,15 +86,16 @@ Content-Type: text/markdown
 I made this through `example.com`'s API. I hope it worked.
 ```
 
-The site returns a generic success message confirming the post was published. The
-server specifies _where_ the new post is with `Content-Location`:
+The site returns the published post in the response body. The server specifies  _where_ the new post is with the `Content-Location` header, indicating that this location refers to the content (the body) of this response:
 
 ```
 HTTP/1.1 201 Created
-Content-Type: text/plain; charset=utf-8
+Content-Type: text/markdown
 Content-Location: /my-first-blog-post
 
-✅ Success!
+# My first blog post
+
+I made this through `example.com`'s API. I hope it worked.
 ```
 
 ### Indicating the URL of a transaction's result

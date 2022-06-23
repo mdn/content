@@ -16,7 +16,7 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 
-[Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) is a one-dimensional layout method for arranging items in rows or columns. Items _flex_ (expand) to fill additional space or shrink to fit into smaller spaces. This article explains all the fundamentals.
+[Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) is a one-dimensional layout method for arranging items in rows or columns. Items _flex_ (expand) to fill additional space or shrink to fit into smaller spaces. This article explains all the fundamentals.
 
 <table>
   <tbody>
@@ -53,7 +53,7 @@ As you'll see in subsequent sections, flexbox makes a lot of layout tasks much e
 
 ## Introducing a simple example
 
-In this article, you'll work through a series of exercises to help you understand how flexbox works. To get started, you should make a local copy of the first starter file — [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) from our github repo. Load it in a modern browser (like Firefox or Chrome) and have a look at the code in your code editor. You can also [see it live here](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html).
+In this article, you'll work through a series of exercises to help you understand how flexbox works. To get started, you should make a local copy of the first starter file — [flexbox0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox0.html) from our GitHub repo. Load it in a modern browser (like Firefox or Chrome) and have a look at the code in your code editor. You can also [see it live here](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html).
 
 ![Image showing the starting point of Flexbox tutorial](bih741v.png)
 
@@ -92,7 +92,7 @@ Bear this terminology in mind as you go through subsequent sections. You can alw
 
 ## Columns or rows?
 
-Flexbox provides a property called {{cssxref("flex-direction")}} that specifies which direction the main axis runs (which direction the flexbox children are laid out in). By default this is set to `row`, which causes them to be laid out in a row in the direction your browser's default language works in (left to right, in the case of an English browser).
+Flexbox provides a property called {{cssxref("flex-direction")}} that specifies which direction the main axis runs (which direction the flexbox children are laid out in). By default this is set to `row`, which causes them to be laid out in a row in the direction your browser's default language works in (left to right, in the case of an English browser).
 
 Try adding the following declaration to your {{htmlelement("section")}} rule:
 
@@ -106,7 +106,7 @@ You'll see that this puts the items back in a column layout, much like they were
 
 ## Wrapping
 
-One issue that arises when you have a fixed width or height in your layout is that eventually your flexbox children will overflow their container, breaking the layout. Have a look at our [flexbox-wrap0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html) example and try [viewing it live](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html) (take a local copy of this file now if you want to follow along with this example):
+One issue that arises when you have a fixed width or height in your layout is that eventually your flexbox children will overflow their container, breaking the layout. Have a look at our [flexbox-wrap0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox-wrap0.html) example and try [viewing it live](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html) (take a local copy of this file now if you want to follow along with this example):
 
 ![](flexbox-example3.png)
 
@@ -145,7 +145,7 @@ flex-flow: row wrap;
 
 ## Flexible sizing of flex items
 
-Let's now return to our first example and look at how we can control what proportion of space flex items take up compared to the other flex items. Fire up your local copy of [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html), or take a copy of [flexbox1.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox1.html) as a new starting point ([see it live](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)).
+Let's now return to our first example and look at how we can control what proportion of space flex items take up compared to the other flex items. Fire up your local copy of [flexbox0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox0.html), or take a copy of [flexbox1.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox1.html) as a new starting point ([see it live](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)).
 
 First, add the following rule to the bottom of your CSS:
 
@@ -197,7 +197,7 @@ We'd advise against using the longhand flex properties unless you really have to
 
 ## Horizontal and vertical alignment
 
-You can also use flexbox features to align flex items along the main or cross axis. Let's explore this by looking at a new example: [flex-align0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html) ([see it live also](https://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html)). We're going to turn this into a neat, flexible button/toolbar. At the moment you'll see a horizontal menu bar with some buttons jammed into the top left-hand corner.
+You can also use flexbox features to align flex items along the main or cross axis. Let's explore this by looking at a new example: [flex-align0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flex-align0.html) ([see it live also](https://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html)). We're going to turn this into a neat, flexible button/toolbar. At the moment you'll see a horizontal menu bar with some buttons jammed into the top left-hand corner.
 
 ![](flexbox-example5.png)
 
@@ -219,7 +219,7 @@ Refresh the page and you'll see that the buttons are now nicely centered horizon
 
 {{cssxref("align-items")}} controls where the flex items sit on the cross axis.
 
-- By default, the value is `stretch`, which stretches all flex items to fill the parent in the direction of the cross axis. If the parent doesn't have a fixed width in the cross axis direction, then all flex items will become as long as the longest flex item. This is how our first example had columns of equal height by default.
+- By default, the value is `stretch`, which stretches all flex items to fill the parent in the direction of the cross axis. If the parent doesn't have a fixed height in the cross axis direction, then all flex items will become as tall as the tallest flex item. This is how our first example had columns of equal height by default.
 - The `center` value that we used in our above code causes the items to maintain their intrinsic dimensions, but be centered along the cross axis. This is why our current example's buttons are centered vertically.
 - You can also have values like `flex-start` and `flex-end`, which will align all items at the start and end of the cross axis respectively. See {{cssxref("align-items")}} for the full details.
 
@@ -274,19 +274,21 @@ button:last-child {
 
 ## Nested flex boxes
 
-It's possible to create some pretty complex layouts with flexbox. It's perfectly OK to set a flex item to also be a flex container, so that its children are also laid out like flexible boxes. Have a look at [complex-flexbox.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html) ([see it live also](https://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)).
+It's possible to create some pretty complex layouts with flexbox. It's perfectly OK to set a flex item to also be a flex container, so that its children are also laid out like flexible boxes. Have a look at [complex-flexbox.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/complex-flexbox.html) ([see it live also](https://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)).
 
 ![](flexbox-example7.png)
 
-The HTML for this is fairly simple. We've got a {{htmlelement("section")}} element containing three {{htmlelement("article")}}s. The third {{htmlelement("article")}} contains three {{htmlelement("div")}}s. :
+The HTML for this is fairly simple. We've got a {{htmlelement("section")}} element containing three {{htmlelement("article")}}s. The third {{htmlelement("article")}} contains three {{htmlelement("div")}}s, and the first {{htmlelement("div")}} contains five {{htmlelement("button")}}s :
 
-    section - article
-              article
-              article - div - button
-                        div   button
-                        div   button
-                              button
-                              button
+```
+section - article
+          article
+          article - div - button
+                    div   button
+                    div   button
+                          button
+                          button
+```
 
 Let's look at the code we've used for the layout.
 
@@ -298,7 +300,7 @@ section {
 }
 ```
 
-Next, we set some flex values on the {{htmlelement("article")}}s themselves. Take special note of the 2nd rule here: we're setting the third {{htmlelement("article")}} to have its children laid out like flex items too, but this time we're laying them out like a column.
+Next, we set some flex values on the {{htmlelement("article")}}s themselves. Take special note of the second rule here: we're setting the third {{htmlelement("article")}} to have its children laid out like flex items too, but this time we're laying them out like a column.
 
 ```css
 article {
@@ -312,11 +314,11 @@ article:nth-of-type(3) {
 }
 ```
 
-Next, we select the first {{htmlelement("div")}}. We first use `flex:1 100px;` to effectively give it a minimum height of 100px, then we set its children (the {{htmlelement("button")}} elements) to also be laid out like flex items. Here we lay them out in a wrapping row and align them in the center of the available space as we did with the individual button example we saw earlier.
+Next, we select the first {{htmlelement("div")}}. We first use `flex: 1 100px;` to effectively give it a minimum height of 100px, then we set its children (the {{htmlelement("button")}} elements) to also be laid out like flex items. Here we lay them out in a wrapping row and align them in the center of the available space as we did with the individual button example we saw earlier.
 
 ```css
 article:nth-of-type(3) div:first-child {
-  flex:1 100px;
+  flex: 1 100px;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -347,11 +349,16 @@ We discuss strategies for overcoming cross-browser support issues in our [Cross 
 
 ## Test your skills!
 
-We've covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on: see [Test your skills: Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox_skills).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox_skills).
 
 ## Summary
 
-That concludes our tour of the basics of flexbox. We hope you had fun and will have a good play around with it as you proceed further with your learning. Next, we'll have a look at another important aspect of CSS layouts: CSS Grids.
+That concludes our tour of the basics of Flexbox. We hope you had fun and will have a good play around with it as you proceed further with your learning. Next, we'll have a look at another important aspect of CSS layouts: [CSS Grids](/en-US/docs/Learn/CSS/CSS_layout/Grids).
+
+## See also
+
+- [CSS-Tricks Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) — an article explaining everything about Flexbox in a visually appealing way
+- [Flexbox Froggy](https://flexboxfroggy.com/) — an educational game to learn and better understand the basics of Flexbox
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 
@@ -368,4 +375,4 @@ That concludes our tour of the basics of flexbox. We hope you had fun and will h
 - [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
 - [Legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
 - [Supporting older browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension assessment](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
+- [Fundamental layout comprehension](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

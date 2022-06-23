@@ -1,6 +1,7 @@
 ---
 title: Basic animations
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
+page-type: guide
 tags:
   - Canvas
   - Graphics
@@ -19,13 +20,13 @@ Probably the biggest limitation is, that once a shape gets drawn, it stays that 
 
 These are the steps you need to take to draw a frame:
 
-1.  **Clear the canvas**
+1. **Clear the canvas**
     Unless the shapes you'll be drawing fill the complete canvas (for instance a backdrop image), you need to clear any shapes that have been drawn previously. The easiest way to do this is using the {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} method.
-2.  **Save the canvas state**
+2. **Save the canvas state**
     If you're changing any setting (such as styles, transformations, etc.) which affect the canvas state and you want to make sure the original state is used each time a frame is drawn, you need to save that original state.
-3.  **Draw animated shapes**
+3. **Draw animated shapes**
     The step where you do the actual frame rendering.
-4.  **Restore the canvas state**
+4. **Restore the canvas state**
     If you've saved the state, restore it before drawing a new frame.
 
 ## Controlling an animation
@@ -45,7 +46,7 @@ First there's the {{domxref("setInterval()")}}, {{domxref("setTimeout()")}}, and
 - {{domxref("Window.requestAnimationFrame()", "requestAnimationFrame(callback)")}}
   - : Tells the browser that you wish to perform an animation and requests that the browser call a specified function to update an animation before the next repaint.
 
-If you don't want any user interaction you can use the `setInterval()` function which repeatedly executes the supplied code. If we wanted to make a game, we could use keyboard or mouse events to control the animation and use `setTimeout()`. By setting {{domxref("EventListener")}}s, we catch any user interaction and execute our animation functions.
+If you don't want any user interaction you can use the `setInterval()` function which repeatedly executes the supplied code. If we wanted to make a game, we could use keyboard or mouse events to control the animation and use `setTimeout()`. By setting {{domxref("EventListener")}}s, we catch any user interaction and execute our animation functions.
 
 > **Note:** In the examples below, we'll use the {{domxref("window.requestAnimationFrame()")}} method to control the animation. The `requestAnimationFrame` method provides a smoother and more efficient way for animating by calling the animation frame when the system is ready to paint the frame. The number of callbacks is usually 60 times per second and may be reduced to a lower rate when running in background tabs. For more information about the animation loop, especially for games, see the article [Anatomy of a video game](/en-US/docs/Games/Anatomy) in our [Game development zone](/en-US/docs/Games).
 
@@ -62,9 +63,9 @@ This example animates a small model of our solar system.
 ### JavaScript
 
 ```js
-var sun = new Image();
-var moon = new Image();
-var earth = new Image();
+const sun = new Image();
+const moon = new Image();
+const earth = new Image();
 function init() {
   sun.src = 'canvas_sun.png';
   moon.src = 'canvas_moon.png';
@@ -73,7 +74,7 @@ function init() {
 }
 
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById('canvas').getContext('2d');
 
   ctx.globalCompositeOperation = 'destination-over';
   ctx.clearRect(0, 0, 300, 300); // clear canvas
@@ -84,7 +85,7 @@ function draw() {
   ctx.translate(150, 150);
 
   // Earth
-  var time = new Date();
+  const time = new Date();
   ctx.rotate(((2 * Math.PI) / 60) * time.getSeconds() + ((2 * Math.PI) / 60000) * time.getMilliseconds());
   ctx.translate(105, 0);
   ctx.fillRect(0, -12, 40, 24); // Shadow
@@ -129,8 +130,8 @@ This example draws an animated clock, showing your current time.
 
 ```js
 function clock() {
-  var now = new Date();
-  var ctx = document.getElementById('canvas').getContext('2d');
+  const now = new Date();
+  const ctx = document.getElementById('canvas').getContext('2d');
   ctx.save();
   ctx.clearRect(0, 0, 150, 150);
   ctx.translate(75, 75);
@@ -143,7 +144,7 @@ function clock() {
 
   // Hour marks
   ctx.save();
-  for (var i = 0; i < 12; i++) {
+  for (let i = 0; i < 12; i++) {
     ctx.beginPath();
     ctx.rotate(Math.PI / 6);
     ctx.moveTo(100, 0);
@@ -166,10 +167,9 @@ function clock() {
   }
   ctx.restore();
 
-  var sec = now.getSeconds();
-  var min = now.getMinutes();
-  var hr  = now.getHours();
-  hr = hr >= 12 ? hr - 12 : hr;
+  const sec = now.getSeconds();
+  const min = now.getMinutes();
+  const hr  = now.getHours() % 12;
 
   ctx.fillStyle = 'black';
 
@@ -247,85 +247,85 @@ The HTML includes the {{HTMLElement("canvas")}} in which the image is scrolled. 
 ### JavaScript
 
 ```js
-var img = new Image();
+const img = new Image();
 
 // User Variables - customize these to change the image being scrolled, its
 // direction, and the speed.
 
 img.src = 'capitan_meadows_yosemite_national_park.jpg';
-var CanvasXSize = 800;
-var CanvasYSize = 200;
-var speed = 30; // lower is faster
-var scale = 1.05;
-var y = -4.5; // vertical offset
+const CanvasXSize = 800;
+const CanvasYSize = 200;
+const speed = 30; // lower is faster
+const scale = 1.05;
+const y = -4.5; // vertical offset
 
 // Main program
 
-var dx = 0.75;
-var imgW;
-var imgH;
-var x = 0;
-var clearX;
-var clearY;
-var ctx;
+const dx = 0.75;
+let imgW;
+let imgH;
+let x = 0;
+let clearX;
+let clearY;
+let ctx;
 
 img.onload = function() {
     imgW = img.width * scale;
     imgH = img.height * scale;
 
-    if (imgW > CanvasXSize) {
-        // image larger than canvas
-        x = CanvasXSize - imgW;
-    }
     if (imgW > CanvasXSize) {
-        // image width larger than canvas
-        clearX = imgW;
-    } else {
-        clearX = CanvasXSize;
-    }
+        // image larger than canvas
+        x = CanvasXSize - imgW;
+    }
+    if (imgW > CanvasXSize) {
+        // image width larger than canvas
+        clearX = imgW;
+    } else {
+        clearX = CanvasXSize;
+    }
     if (imgH > CanvasYSize) {
-        // image height larger than canvas
-        clearY = imgH;
-    } else {
-        clearY = CanvasYSize;
-    }
+        // image height larger than canvas
+        clearY = imgH;
+    } else {
+        clearY = CanvasYSize;
+    }
 
     // get canvas context
     ctx = document.getElementById('canvas').getContext('2d');
 
-    // set refresh rate
+    // set refresh rate
     return setInterval(draw, speed);
 }
 
 function draw() {
     ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
 
-    // if image is <= Canvas Size
+    // if image is <= Canvas Size
     if (imgW <= CanvasXSize) {
         // reset, start from beginning
         if (x > CanvasXSize) {
-            x = -imgW + x;
-        }
+            x = -imgW + x;
+        }
         // draw additional image1
         if (x > 0) {
-            ctx.drawImage(img, -imgW + x, y, imgW, imgH);
-        }
+            ctx.drawImage(img, -imgW + x, y, imgW, imgH);
+        }
         // draw additional image2
         if (x - imgW > 0) {
-            ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
-        }
+            ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
+        }
     }
 
     // image is > Canvas Size
     else {
         // reset, start from beginning
         if (x > (CanvasXSize)) {
-            x = CanvasXSize - imgW;
-        }
+            x = CanvasXSize - imgW;
+        }
         // draw additional image
         if (x > (CanvasXSize-imgW)) {
-            ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
-        }
+            ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
+        }
     }
     // draw image
     ctx.drawImage(img, x, y,imgW, imgH);
@@ -464,8 +464,6 @@ function anim() {
 
 ## Other examples
 
-- [A basic ray-caster](/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster)
-  - : A good example of how to do animations using keyboard controls.
 - [Advanced animations](/en-US/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
   - : We will have a look at some advanced animation techniques and physics in the next chapter.
 

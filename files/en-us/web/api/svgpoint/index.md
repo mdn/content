@@ -1,14 +1,19 @@
 ---
 title: SVGPoint
 slug: Web/API/SVGPoint
+page-type: web-api-interface
 tags:
   - API
   - DOM
   - NeedsContent
   - SVG
+  - deprecated
 browser-compat: api.SVGPoint
 ---
 {{APIRef("SVG")}}{{Deprecated_header}}
+
+> **Warning:** `SVGPoint` is deprecated.
+> Use {{domxref("DOMPoint")}} or {{domxref("DOMPointReadOnly")}} instead.
 
 An `SVGPoint` represents a 2D or 3D point in the SVG coordinate system.
 

@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.samplerParameter[if]()
 slug: Web/API/WebGL2RenderingContext/samplerParameter
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,8 +19,8 @@ of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) set
 ## Syntax
 
 ```js
-void gl.samplerParameteri(sampler, pname, param);
-void gl.samplerParameterf(sampler, pname, param);
+samplerParameteri(sampler, pname, param)
+samplerParameterf(sampler, pname, param)
 ```
 
 ### Parameters
@@ -30,24 +31,33 @@ void gl.samplerParameterf(sampler, pname, param);
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which parameter to set. Possible values:
 
-    - `gl.TEXTURE_COMPARE_FUNC`: A {{domxref("WebGL_API/Types", "GLenum")}} specifying the
-      texture comparison function.
-    - `gl.TEXTURE_COMPARE_MODE`: A {{domxref("WebGL_API/Types", "GLenum")}} specifying the
-      texture comparison mode.
-    - `gl.TEXTURE_MAG_FILTER`: A {{domxref("WebGL_API/Types", "GLenum")}} specifying the
-      texture magnification filter.
-    - `gl.TEXTURE_MAX_LOD`: A {{domxref("WebGL_API/Types", "GLfloat")}} specifying the maximum
-      level-of-detail value.
-    - `gl.TEXTURE_MIN_FILTER`: A {{domxref("WebGL_API/Types", "GLenum")}} specifying the
-      texture minification filter
-    - `gl.TEXTURE_MIN_LOD`: A {{domxref("WebGL_API/Types", "GLfloat")}} specifying the minimum
-      level-of-detail value.
-    - `gl.TEXTURE_WRAP_R`: A {{domxref("WebGL_API/Types", "GLenum")}} specifying the texture
-      wrapping function for the texture coordinate r.
-    - `gl.TEXTURE_WRAP_S`: A {{domxref("WebGL_API/Types", "GLenum")}} specifying the texture
-      wrapping function for the texture coordinate s.
-    - `gl.TEXTURE_WRAP_T`: A {{domxref("WebGL_API/Types", "GLenum")}} specifying the texture
-      wrapping function for the texture coordinate t.
+    - `gl.TEXTURE_COMPARE_FUNC`
+      - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the
+        texture comparison function.
+    - `gl.TEXTURE_COMPARE_MODE`
+      - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the
+        texture comparison mode.
+    - `gl.TEXTURE_MAG_FILTER`
+      - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the
+        texture magnification filter.
+    - `gl.TEXTURE_MAX_LOD`
+      - : A {{domxref("WebGL_API/Types", "GLfloat")}} specifying the maximum
+        level-of-detail value.
+    - `gl.TEXTURE_MIN_FILTER`
+      - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the
+        texture minification filter
+    - `gl.TEXTURE_MIN_LOD`
+      - : A {{domxref("WebGL_API/Types", "GLfloat")}} specifying the minimum
+        level-of-detail value.
+    - `gl.TEXTURE_WRAP_R`
+      - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the texture
+        wrapping function for the texture coordinate r.
+    - `gl.TEXTURE_WRAP_S`
+      - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the texture
+        wrapping function for the texture coordinate s.
+    - `gl.TEXTURE_WRAP_T`
+      - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the texture
+        wrapping function for the texture coordinate t.
 
 - `param`
   - : A {{domxref("WebGL_API/Types", "GLint")}} (`samplerParameteri`) or a {{domxref("WebGL_API/Types", "GLfloat")}}
@@ -55,7 +65,7 @@ void gl.samplerParameterf(sampler, pname, param);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

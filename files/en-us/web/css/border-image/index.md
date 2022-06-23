@@ -46,6 +46,7 @@ border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
 border-image: inherit;
 border-image: initial;
 border-image: revert;
+border-image: revert-layer;
 border-image: unset;
 ```
 
@@ -71,7 +72,7 @@ The `border-image` property may be specified with anywhere from one to five of t
 Assistive technology cannot parse border images. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
 - [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content)
-- [Understanding Success Criterion 1.1.1  | Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [Understanding Success Criterion 1.1.1  | Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Formal definition
 
@@ -157,5 +158,5 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
 - {{cssxref("outline")}}
 - {{cssxref("box-shadow")}}
 - {{cssxref("background-image")}}
-- {{cssxref("url()", "url()")}} function
-- Gradient functions: {{CSSxRef("gradient/conic-gradient()", "conic-gradient()")}}, {{CSSxRef("gradient/repeating-conic-gradient()", "repeating-conic-gradient()")}}, {{CSSxRef("gradient/linear-gradient()", "linear-gradient()")}}, {{CSSxRef("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient()", "radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}}
+- {{cssxref("url", "url()")}} function
+- Gradient functions: {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}, {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}, {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}, {{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}

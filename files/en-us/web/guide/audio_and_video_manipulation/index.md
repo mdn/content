@@ -25,10 +25,10 @@ The {{htmlelement("canvas")}} element provides a surface for drawing graphics on
 
 The general technique is to:
 
-1.  Write a frame from the {{htmlelement("video")}} element to the {{htmlelement("canvas")}} element.
-2.  Read the data from the `<canvas>` element and manipulate it.
-3.  Write the manipulated data to your "display" `<canvas>` (which effectively can be the same element).
-4.  Pause and repeat.
+1. Write a frame from the {{htmlelement("video")}} element to the {{htmlelement("canvas")}} element.
+2. Read the data from the `<canvas>` element and manipulate it.
+3. Write the manipulated data to your "display" `<canvas>` (which effectively can be the same element).
+4. Pause and repeat.
 
 For example, let's process a video to display it in greyscale. In this case, we'll show both the source video and the output greyscale frames. Ordinarily, if you were implementing a "play video in greyscale" feature, you'd probably add `display: none` to the style for the `<video>` element, to keep the source video from being drawn to the screen while showing only the canvas showing the altered frames.
 
@@ -38,8 +38,8 @@ We can set up our video player and `<canvas>` element like this:
 
 ```html
 <video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous">
-  <source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
-  <source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
+  <source src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
+  <source src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
 </video>
 
 <canvas id="my-canvas" width="480" height="270"></canvas>
@@ -106,7 +106,7 @@ processor.doLoad()
 
 This is a pretty simple example showing how to manipulate video frames using a canvas. For efficiency, you should consider using {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} instead of `setTimeout()` when running on browsers that support it.
 
-You can achieve the same result by applying the {{cssxref("filter-function/grayscale()", "grayscale()")}} CSS function to the source `<video>` element.
+You can achieve the same result by applying the {{cssxref("filter-function/grayscale", "grayscale()")}} CSS function to the source `<video>` element.
 
 > **Note:** Due to potential security issues if your video is on a different domain than your code, you'll need to enable [CORS (Cross Origin Resource Sharing)](/en-US/docs/Web/HTTP/CORS) on your video server.
 
@@ -128,7 +128,7 @@ Note that the `playbackRate` property works with both `<audio>` and `<video>`, b
 
 ```html
 <video id="my-video" controls
-       src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v">
+       src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v">
 </video>
 ```
 
@@ -143,8 +143,8 @@ myVideo.playbackRate = 2;
 
 ```html hidden
 <video id="my-video" controls="true" width="480" height="270">
-  <source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
-  <source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
+  <source src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
+  <source src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
 </video>
 <div class="playable-buttons">
   <input id="edit" type="button" value="Edit" />
@@ -228,8 +228,8 @@ filter.gain.value = 25;
 
 ```html hidden
 <video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous">
-  <source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
-  <source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
+  <source src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
+  <source src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
 </video>
 <div class="playable-buttons">
   <input id="edit" type="button" value="Edit" />
@@ -346,7 +346,7 @@ Libraries currently exist for the following formats :
 
 - [Various Web Audio API (and other) examples](https://github.com/mdn/)
 - [THREE.js Video Cube example](https://github.com/chrisdavidmills/threejs-video-cube)
-- [Convolution Effects in Real-Time](http://chromium.googlecode.com/svn/trunk/samples/audio/convolution-effects.html)
+- [Convolution Effects in Real-Time](https://chromium.googlecode.com/svn/trunk/samples/audio/convolution-effects.html)
 
 ## See also
 
@@ -355,10 +355,10 @@ Libraries currently exist for the following formats :
 - [Manipulating Video Using Canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
 - [HTML5 playbackRate explained](/en-US/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained)
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web audio spatialisation basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
-- [Using Video frames as a WebGL Texture](/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL#using_the_video_frames_as_a_texture) (You can also the [THREE.js](http://threejs.org) WebGL library (and others) to [achieve this effect](https://stemkoski.github.io/Three.js/Video.html))
+- [Web audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Using Video frames as a WebGL Texture](/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL#using_the_video_frames_as_a_texture) (You can also the [THREE.js](https://threejs.org) WebGL library (and others) to [achieve this effect](https://stemkoski.github.io/Three.js/Video.html))
 - [Animating Textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL)
-- [Developing Game Audio with the Web Audio API (Room effects and filters)](http://www.html5rocks.com/en/tutorials/webaudio/games/#toc-room)
+- [Developing Game Audio with the Web Audio API (Room effects and filters)](https://www.html5rocks.com/en/tutorials/webaudio/games/#toc-room)
 
 ### Reference
 
@@ -369,5 +369,3 @@ Libraries currently exist for the following formats :
 - [AudioContext](/en-US/docs/Web/API/AudioContext)
 - More info on [Spatial Audio](/en-US/docs/Web/API/BaseAudioContext/createPanner)
 - [Web media technologies](/en-US/docs/Web/Media)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Apps/Fundamentals/")}}

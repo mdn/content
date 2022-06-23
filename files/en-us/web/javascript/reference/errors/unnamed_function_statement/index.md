@@ -9,7 +9,9 @@ tags:
 ---
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "function statement requires a name" occurs when there is a [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function) in the code that requires a name.
+The JavaScript exception "function statement requires a name" occurs
+when there is a [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+in the code that requires a name.
 
 ## Message
 
@@ -50,7 +52,7 @@ var greet = function() {
 };
 ```
 
-If your function is intended to be an [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (Immediately Invoked Function Expression, which is a function that runs as soon as it is defined) you will need to add a few more braces:
+If your function is intended to be an [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (Immediately Invoked Function Expression, which is a function that runs as soon as it is defined) you will need to add a few more braces:
 
 ```js example-good
 (function () {
@@ -129,5 +131,5 @@ promise.then(
 - [Functions in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Functions)
 - [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function)
 - [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
-- [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
+- {{glossary("IIFE")}}
 - [label](/en-US/docs/Web/JavaScript/Reference/Statements/label)

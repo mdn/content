@@ -13,9 +13,11 @@ The `<xsl:otherwise>` element is used to define the action that should be taken 
 
 ### Syntax
 
-    <xsl:otherwise>
-    	TEMPLATE
-    </xsl:otherwise>
+```xml
+<xsl:otherwise>
+  TEMPLATE
+</xsl:otherwise>
+```
 
 ### Required Attributes
 

@@ -1,6 +1,7 @@
 ---
 title: URL.username
 slug: Web/API/URL/username
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,20 +14,13 @@ browser-compat: api.URL.username
 {{ApiRef("URL API")}}
 
 The **`username`** property of the {{domxref("URL")}} interface
-is a {{domxref("USVString")}} containing the username specified before the domain name.
+is a string containing the username specified before the domain name.
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-const usernameString = url.username
-url.username = newUsername
-```
-
-### Value
-
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

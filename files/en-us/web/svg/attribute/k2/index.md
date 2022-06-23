@@ -19,7 +19,7 @@ result = k1*i1*i2 + k2*i1 + k3*i2 + k4
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feComposite")}}
+- {{SVGElement("feComposite")}}
 
 ## Example
 
@@ -68,31 +68,7 @@ html, body, svg {
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-fecomposite-k2", "k2")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feCompositeK2Attribute", "k2")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

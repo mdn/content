@@ -5,6 +5,7 @@ tags:
   - NeedsCompatTable
   - SVG
   - SVG Attribute
+spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-result
 ---
 {{SVGRef}}
 
@@ -12,23 +13,23 @@ The **`result`** attribute defines the assigned name for this filter primitive. 
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feBlend")}}
-*   {{SVGElement("feColorMatrix")}}
-*   {{SVGElement("feComponentTransfer")}}
-*   {{SVGElement("feComposite")}}
-*   {{SVGElement("feConvolveMatrix")}}
-*   {{SVGElement("feDiffuseLighting")}}
-*   {{SVGElement("feDisplacementMap")}}
-*   {{SVGElement("feDropShadow")}}
-*   {{SVGElement("feFlood")}}
-*   {{SVGElement("feGaussianBlur")}}
-*   {{SVGElement("feImage")}}
-*   {{SVGElement("feMerge")}}
-*   {{SVGElement("feMorphology")}}
-*   {{SVGElement("feOffset")}}
-*   {{SVGElement("feSpecularLighting")}}
-*   {{SVGElement("feTile")}}
-*   {{SVGElement("feTurbulence")}}
+- {{SVGElement("feBlend")}}
+- {{SVGElement("feColorMatrix")}}
+- {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feComposite")}}
+- {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feDisplacementMap")}}
+- {{SVGElement("feDropShadow")}}
+- {{SVGElement("feFlood")}}
+- {{SVGElement("feGaussianBlur")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("feMerge")}}
+- {{SVGElement("feMorphology")}}
+- {{SVGElement("feOffset")}}
+- {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feTile")}}
+- {{SVGElement("feTurbulence")}}
 
 ## Example
 
@@ -73,35 +74,9 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `<filter-primitive-reference>`
-    *   : This value is a {{cssxref("custom-ident")}} and defines the name for the filter primitive. It is only meaningful within a given {{SVGElement("filter")}} element and thus has only local scope. It is legal for the same `<filter-primitive-reference>` to appear multiple times within the same `<filter>` element. When referenced, this value will use the closest preceding filter primitive with the given result.
+- `<filter-primitive-reference>`
+  - : This value is a {{cssxref("custom-ident")}} and defines the name for the filter primitive. It is only meaningful within a given {{SVGElement("filter")}} element and thus has only local scope. It is legal for the same `<filter-primitive-reference>` to appear multiple times within the same `<filter>` element. When referenced, this value will use the closest preceding filter primitive with the given result.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-filter-primitive-result", "result")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>
-        Clarifies that the value is a {{cssxref("custom-ident")}}.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#FilterPrimitiveResultAttribute", "result")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

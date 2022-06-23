@@ -32,10 +32,10 @@ This code sets the value to "afterCurrent" and then logs the new value:
 
 ```js
 async function setAfterCurrent() {
-  let result = await browser.browserSettings.newTabPosition.set({value: "afterCurrent"});
-  console.log(`Result: ${result}`);
-  let newValue = await browser.browserSettings.newTabPosition.get({});
-  console.log(`New value: ${newValue.value}`);
+  let result = await browser.browserSettings.newTabPosition.set({value: "afterCurrent"});
+  console.log(`Result: ${result}`);
+  let newValue = await browser.browserSettings.newTabPosition.get({});
+  console.log(`New value: ${newValue.value}`);
 }
 ```
 

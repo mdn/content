@@ -1,6 +1,7 @@
 ---
 title: ConvolverNode()
 slug: Web/API/ConvolverNode/ConvolverNode
+page-type: web-api-constructor
 tags:
   - API
   - Audio
@@ -18,34 +19,39 @@ The **`ConvolverNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API
 ## Syntax
 
 ```js
-var convolverNode = new ConvolverNode(context, options)
+new ConvolverNode(context, options)
 ```
 
 ### Parameters
 
-- _context_
+- `context`
   - : A reference to an {{domxref("AudioContext")}}.
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : Options are as follows:
 
-    - `audioBuffer`: A mono, stereo, or
-      4-channel _{{domxref("AudioBuffer")}}_containing the
-      (possibly multichannel) impulse response used by the `ConvolverNode`
-      to create the reverb effect.
-    - `disableNormalization`: A boolean value controlling
-      whether the impulse response from the buffer will be scaled by an equal-power
-      normalization, or not. The default is '`false`'.
-    - `channelCount`: Represents an integer used to determine how many channels are used
-      when [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node.
-      (See {{domxref("AudioNode.channelCount")}} for more information.)
-      Its usage and precise definition depend on the value of `channelCountMode`.
-    - `channelCountMode`: Represents an enumerated value describing the way channels must be matched between the node's inputs and outputs.
-      (See {{domxref("AudioNode.channelCountMode")}} for more information including default values.)
-    - `channelInterpretation`: Represents an enumerated value describing the meaning of the channels.
-      This interpretation will define how audio [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
-      The possible values are `"speakers"` or `"discrete"`.
-      (See {{domxref("AudioNode.channelCountMode")}} for more information including default values.)
+    - `audioBuffer`
+      - : A mono, stereo, or
+        4-channel {{domxref("AudioBuffer")}} containing the
+        (possibly multichannel) impulse response used by the `ConvolverNode`
+        to create the reverb effect.
+    - `disableNormalization`
+      - : A boolean value controlling
+        whether the impulse response from the buffer will be scaled by an equal-power
+        normalization, or not. The default is '`false`'.
+    - `channelCount`
+      - : Represents an integer used to determine how many channels are used
+        when [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node.
+        (See {{domxref("AudioNode.channelCount")}} for more information.)
+        Its usage and precise definition depend on the value of `channelCountMode`.
+    - `channelCountMode`
+      - : Represents an enumerated value describing the way channels must be matched between the node's inputs and outputs.
+        (See {{domxref("AudioNode.channelCountMode")}} for more information including default values.)
+    - `channelInterpretation`
+      - : Represents an enumerated value describing the meaning of the channels.
+        This interpretation will define how audio [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
+        The possible values are `"speakers"` or `"discrete"`.
+        (See {{domxref("AudioNode.channelCountMode")}} for more information including default values.)
 
 ### Return value
 

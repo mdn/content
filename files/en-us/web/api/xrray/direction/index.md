@@ -1,6 +1,7 @@
 ---
 title: XRRay.direction
 slug: Web/API/XRRay/direction
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -25,7 +26,7 @@ A {{domxref("DOMPointReadOnly")}} object.
 
 ### Using the `direction` property
 
-The `direction` property contains the normalized ray’s 3-dimensional directional vector.
+The `direction` property contains the normalized ray's 3-dimensional directional vector.
 
 ```js
 let origin = {x : 10.0, y : 10.0, z : 10.0, w : 1.0};

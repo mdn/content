@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+browser-compat: css.at-rules.viewport
 ---
 {{CSSRef}}
 
@@ -20,12 +21,8 @@ tags:
 
 ## Specifications
 
-| Specification                        | Status                           | Comment            |
-| ------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("CSS3 Device")}} | {{Spec2("CSS3 Device")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `@viewport` rule
-
-{{Compat("css.at-rules.viewport")}}
+{{Compat}}

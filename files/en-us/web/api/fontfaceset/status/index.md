@@ -1,6 +1,7 @@
 ---
 title: FontFaceSet.status
 slug: Web/API/FontFaceSet/status
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -35,5 +36,3 @@ console.log(document.fonts.status);
 ## Browser compatibility
 
 {{Compat}}
-
-

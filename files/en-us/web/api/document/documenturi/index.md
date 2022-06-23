@@ -1,6 +1,7 @@
 ---
 title: Document.documentURI
 slug: Web/API/Document/documentURI
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -15,13 +16,11 @@ browser-compat: api.Document.documentURI
 The **`documentURI`** read-only property of the
 {{domxref("Document")}} interface returns the document location as a string.
 
-## Syntax
+## Value
 
-```js
-const uri = document.documentURI
-```
+A string.
 
-## Example
+## Examples
 
 ### JavaScript
 

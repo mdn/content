@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: transitionstart event'
 slug: Web/API/HTMLElement/transitionstart_event
+page-type: web-api-event
 tags:
   - CSS Transitions
   - Event
@@ -48,10 +49,10 @@ element.addEventListener('transitionstart', () => {
 });
 ```
 
-The same, but using the [`ontransitionstart`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitionrun) property instead of `addEventListener()`:
+The same, but using the [`ontransitionstart`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitionstart) property instead of `addEventListener()`:
 
 ```js
-element.ontransitionrun = () => {
+element.ontransitionstart = () => {
   console.log('Started transitioning');
 };
 ```
@@ -96,11 +97,11 @@ transition.addEventListener('transitionstart', function() {
 });
 
 transition.addEventListener('transitionend', function() {
-  message.textContent = 'transitionend fired';
+  message.textContent = 'transitionend fired';
 });
 ```
 
-{{ EmbedLiveSample('Examples', '100%', '150px') }}
+{{ EmbedLiveSample('Live example', '100%', '170') }}
 
 The difference is that:
 

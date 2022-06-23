@@ -13,7 +13,7 @@ browser-compat: css.properties.row-gap
 ---
 {{CSSRef}}
 
-The **`row-gap`** [CSS](/en-US/docs/Web/CSS) property sets the size of the gap ({{glossary("gutters","gutter")}}) between an element's grid rows.
+The **`row-gap`** [CSS](/en-US/docs/Web/CSS) property sets the size of the gap ({{glossary("gutters","gutter")}}) between an element's rows.
 
 {{EmbedInteractiveExample("pages/css/row-gap.html")}}
 
@@ -33,6 +33,7 @@ row-gap: 10%;
 row-gap: inherit;
 row-gap: initial;
 row-gap: revert;
+row-gap: revert-layer;
 row-gap: unset;
 ```
 
@@ -124,7 +125,7 @@ row-gap: unset;
 
 ## Specifications
 
-{{Specifications("css.properties.row-gap.grid_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

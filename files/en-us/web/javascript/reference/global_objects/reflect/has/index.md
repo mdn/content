@@ -66,8 +66,7 @@ Reflect.has(obj, 'dormitory')  // false
 ```
 
 `Reflect.has` returns `true` for any inherited properties, like
-the [`in`
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/in):
+the [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in):
 
 ```js
 const a = {foo: 123}
@@ -87,7 +86,6 @@ Reflect.has(c, 'foo') // true
 
 ## See also
 
-- A polyfill of `Reflect.has` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.has` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
-- [`in`
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/in)
+- [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in)

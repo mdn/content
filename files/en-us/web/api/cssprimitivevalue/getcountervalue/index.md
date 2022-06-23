@@ -1,6 +1,7 @@
 ---
 title: CSSPrimitiveValue.getCounterValue()
 slug: Web/API/CSSPrimitiveValue/getCounterValue
+page-type: web-api-instance-method
 tags:
   - API
   - CSSPrimitiveValue
@@ -29,8 +30,12 @@ is raised. Modification to the corresponding style property can be achieved usin
 ## Syntax
 
 ```js
-var counterValue = cssPrimitiveValue.getCounterValue();
+getCounterValue()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -44,7 +49,7 @@ A {{domxref("Counter")}} object representing the counter value.
 
 ## Specifications
 
-This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) specification, but has been dropped from any
 standardization effort since then.
 
 It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.

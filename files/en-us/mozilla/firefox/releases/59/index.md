@@ -14,11 +14,11 @@ This article provides information about the changes in Firefox 59 that will affe
 
 ### Developer tools
 
-- The [Network Monitor](/en-US/docs/Tools/Network_Monitor) Response tab now shows a [preview of the rendered HTML](/en-US/docs/Tools/Network_Monitor#html_preview) — if the response is HTML ({{bug(1353319)}}).
-- Cookie information shown in the Storage Inspector (see [Cookies](/en-US/docs/Tools/Storage_Inspector#cookies)) now includes a _sameSite_ column showing what the same-site status of each cookie is ({{bug(1298370)}}).
-- The [Rulers](/en-US/docs/Tools/Rulers) tool now includes a readout showing the current dimensions of the viewport ({{bug(1402633)}}).
-- In [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode), you can now set the screen dimensions using the cursor keys ({{bug(1421663)}}). See the [Setting screen size](/en-US/docs/Tools/Responsive_Design_Mode#setting_screen_size) section for more details.
-- The _Raw headers_ display in the [Network Monitor](/en-US/docs/Tools/Network_Monitor) _Headers_ tab now includes the response's status code ({{bug(1419401)}}).
+- The [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) Response tab now shows a [preview of the rendered HTML](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#html-preview) — if the response is HTML ({{bug(1353319)}}).
+- Cookie information shown in the Storage Inspector (see [Cookies](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html#cookies)) now includes a _sameSite_ column showing what the same-site status of each cookie is ({{bug(1298370)}}).
+- The [Rulers](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html) tool now includes a readout showing the current dimensions of the viewport ({{bug(1402633)}}).
+- In [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html), you can now set the screen dimensions using the cursor keys ({{bug(1421663)}}). See the [Setting screen size](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#setting-screen-size) section for more details.
+- The _Raw headers_ display in the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) _Headers_ tab now includes the response's status code ({{bug(1419401)}}).
 
 ### HTML
 
@@ -26,12 +26,12 @@ This article provides information about the changes in Firefox 59 that will affe
 
 ### CSS
 
-- The {{cssxref("overscroll-behavior")}} property and its associated longhand properties — {{cssxref("overscroll-behavior-x")}} and {{cssxref("overscroll-behavior-y")}} — have been implemented ({{bug(951793)}}), and it has been enabled by default on all releases ({{bug(1428879)}}).
-- The behavior of "unusual elements" (elements that aren’t rendered purely by CSS box concepts such as replaced elements) when given a {{cssxref("display")}} value of `contents` has been updated as per spec ({{bug(1427292)}}). See [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) for exactly what the specced behaviors are.
+- The {{cssxref("overscroll-behavior")}} property and its associated longhand properties — {{cssxref("overscroll-behavior-x")}} and {{cssxref("overscroll-behavior-y")}} — have been implemented ({{bug(951793)}}), and it has been enabled by default on all releases ({{bug(1428879)}}).
+- The behavior of "unusual elements" (elements that aren't rendered purely by CSS box concepts such as replaced elements) when given a {{cssxref("display")}} value of `contents` has been updated as per spec ({{bug(1427292)}}). See [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) for exactly what the specified behaviors are.
 - {{cssxref("position")}} `sticky` is now supported on appropriate [HTML table](/en-US/docs/Learn/HTML/Tables) parts (e.g. {{htmlelement("th")}} elements) ({{bug(975644)}}).
-- {{cssxref("calc()")}} is now supported in {{cssxref("&lt;color&gt;")}} values — `rgb()`, `rgba()`, `hsl()`, and `hsla()` ({{bug(984021)}}).
-- {{cssxref("calc()")}} in [media query](/en-US/docs/Web/CSS/Media_Queries) values is now supported {{bug(1396057)}}.
-- The {{cssxref("@document")}} at-rule has been limited to use only in user and UA sheets ({{bug(1035091)}}).
+- {{cssxref("calc", "calc()")}} is now supported in {{cssxref("&lt;color&gt;")}} values — `rgb()`, `rgba()`, `hsl()`, and `hsla()` ({{bug(984021)}}).
+- {{cssxref("calc", "calc()")}} in [media query](/en-US/docs/Web/CSS/Media_Queries) values is now supported {{bug(1396057)}}.
+- The {{cssxref("@document")}} at-rule has been limited to use only in user and UA sheets ({{bug(1035091)}}).
 - Implement the {{cssxref("font-optical-sizing")}} property ({{bug(1435692)}}).
 
 ### SVG
@@ -61,12 +61,12 @@ _No changes._
 
 - The service worker [Clients API](/en-US/docs/Web/API/Clients) can now find and communicate with windows in a separate browser process ({{bug(1293277)}}) .
 - Nested about:blank and about:srcdoc iframes will now inherit their parent's controlling service worker. Fixed in ({{bug(1293277)}}) and ({{bug(1426979)}}).
-- When a service worker provides a {{domxref("Response")}} to {{domxref("FetchEvent.respondWith()")}}, the {{domxref("Response.url")}} value will now be propagated to the intercepted network request as the final resolved URL.  In the past the {{domxref("Request.url","FetchEvent.request.url")}} was used for this instead.  This means, for example, if a service worker intercepts a stylesheet or worker script, then the provided `Response.url` will be used to resolve any relative {{cssxref("@import")}} or {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} subresource loads ({{bug(1222008)}}).
+- When a service worker provides a {{domxref("Response")}} to {{domxref("FetchEvent.respondWith()")}}, the {{domxref("Response.url")}} value will now be propagated to the intercepted network request as the final resolved URL.  In the past the {{domxref("Request.url","FetchEvent.request.url")}} was used for this instead.  This means, for example, if a service worker intercepts a stylesheet or worker script, then the provided `Response.url` will be used to resolve any relative {{cssxref("@import")}} or {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} subresource loads ({{bug(1222008)}}).
 - `FetchEvent.respondWith()` will now trigger a network error if the {{domxref("Request.mode","FetchEvent.request.mode")}} is `"same-origin"` and the provided {{domxref("Response.type")}} is `"cors"`. ({{bug(1222008)}})
 
 #### Media and WebRTC
 
-- The {{domxref("MediaStreamTrack")}} property {{domxref("MediaStreamTrack.muted")}}, along with the events {{event("mute")}} and {{event("unmute")}} and the corresponding event handlers, {{domxref("MediaStreamTrack.onmute", "onmute")}} and {{domxref("MediaStreamTrack.onmute", "onunmute")}}, have been implemented. A track's `muted` state indicates that the track is not currently able to provide media data.
+- The {{domxref("MediaStreamTrack")}} property {{domxref("MediaStreamTrack.muted")}}, along with the events {{domxref("MediaStreamTrack.mute_event", "mute")}} and {{domxref("MediaStreamTrack.unmute_event", "unmute")}} and the corresponding event handlers, {{domxref("MediaStreamTrack.mute_event", "onmute")}} and {{domxref("MediaStreamTrack.unmute_event", "onunmute")}}, have been implemented. A track's `muted` state indicates that the track is not currently able to provide media data.
 
   > **Note:** The `muted` state of a track isn't useful for what's typically thought of as muting and unmuting a track. Instead, use the {{domxref("MediaStreamTrack.enabled", "enabled")}} property; setting `enabled` to `false` causes the track to output only empty frames.
 
@@ -91,7 +91,7 @@ _No changes._
 
 ### Security
 
-- Top-level navigation to `data:` URIs has been blocked {{bug(1401895)}}. See [Blocking Top-Level Navigations to data URLs for Firefox 59](https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-59/) for more details.
+- Top-level navigation to `data:` URLs has been blocked {{bug(1401895)}}. See [Blocking Top-Level Navigations to data URLs for Firefox 59](https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-59/) for more details.
 - The `SAMEORIGIN` directive of the {{httpheader("X-Frame-Options")}} header has been changed so that it checks not only the top-level IFrame is in the same origin, but all its ancestors as well ({{bug(725490)}}).
 - Image resources loaded from different origins to the current document are no longer able to trigger HTTP authentication dialogs ({{bug(1423146)}}).
 - HTTP authentication now uses `utf-8` encoding for usernames and passwords (rather than `ISO-8859-1`) for parity with other browsers, and to avoid potential problems as described in {{bug(1419658)}}.
@@ -109,7 +109,7 @@ _No changes._
 
 ### HTML
 
-The non-standard `version` parameter of the {{htmlelement("script")}} element's {{htmlattrxref("type","script")}} attribute (e.g.  `type="application/javascript;version=1.8"`) has been removed ({{bug(1428745)}}).
+The non-standard `version` parameter of the {{htmlelement("script")}} element's {{htmlattrxref("type","script")}} attribute (e.g.  `type="application/javascript;version=1.8"`) has been removed ({{bug(1428745)}}).
 
 ### CSS
 

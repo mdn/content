@@ -114,7 +114,7 @@ This content script:
 ```js
 // content-script.js
 
-var myPort = browser.runtime.connect({name:"port-from-cs"});
+let myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
 
 myPort.onMessage.addListener(function(m) {
@@ -141,7 +141,7 @@ The corresponding background script:
 ```js
 // background-script.js
 
-var portFromCS;
+let portFromCS;
 
 function connected(p) {
   portFromCS = p;
@@ -166,10 +166,10 @@ If you have multiple content scripts communicating at the same time, you might w
 ```js
 // background-script.js
 
-var ports = []
+let ports = []
 
 function connected(p) {
-  ports[p.sender.tab.id]    = p
+  ports[p.sender.tab.id]    = p
   //...
 }
 
@@ -177,8 +177,8 @@ browser.runtime.onConnect.addListener(connected)
 
 browser.browserAction.onClicked.addListener(function() {
   ports.forEach(p => {
-        p.postMessage({greeting: "they clicked the button!"})
-    })
+        p.postMessage({greeting: "they clicked the button!"})
+    })
 });
 ```
 
@@ -190,7 +190,7 @@ This example connects to the native application "ping_pong" and starts listening
 /*
 On startup, connect to the "ping_pong" app.
 */
-var port = browser.runtime.connectNative("ping_pong");
+let port = browser.runtime.connectNative("ping_pong");
 
 /*
 Listen for messages from the app.
@@ -210,7 +210,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#type-Port) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#type-Port) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

@@ -1,9 +1,9 @@
 ---
 title: SpeechSynthesisVoice.localService
 slug: Web/API/SpeechSynthesisVoice/localService
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechSynthesisVoice
@@ -13,7 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisVoice.localService
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`localService`** read-only property of the
 {{domxref("SpeechSynthesisVoice")}} interface returns a boolean value
@@ -24,13 +24,7 @@ This property is provided to allow differentiation in the case that some voice o
 are provided by a remote service; it is possible that remote voices might have extra
 latency, bandwidth or cost associated with them, so such distinction may be useful.
 
-## Syntax
-
-```js
-var amILocal = speechSynthesisVoiceInstance.localService;
-```
-
-### Value
+## Value
 
 A boolean value.
 

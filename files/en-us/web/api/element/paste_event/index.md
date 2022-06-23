@@ -1,6 +1,7 @@
 ---
 title: 'Element: paste event'
 slug: Web/API/Element/paste_event
+page-type: web-api-event
 tags:
   - Clipboard API
   - Event
@@ -82,7 +83,7 @@ target.addEventListener('paste', (event) => {
 
 #### Result
 
-{{ EmbedLiveSample('Live_example', '100%', '100px') }}
+{{ EmbedLiveSample('Live_example', '100%', '120px') }}
 
 ## Specifications
 

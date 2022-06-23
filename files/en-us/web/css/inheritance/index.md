@@ -15,9 +15,9 @@ In CSS, **inheritance** controls what happens when no value is specified for a p
 CSS properties can be categorized in two types:
 
 - **inherited properties**, which by default are set to the [computed value](/en-US/docs/Web/CSS/computed_value) of the parent element
-- **non-inherited properties**, which by default are set to [initial value](/en-US/docs/Web/CSS/Initial_value) of the property
+- **non-inherited properties**, which by default are set to [initial value](/en-US/docs/Web/CSS/initial_value) of the property
 
-Refer to [any CSS property](/en-US/docs/Web/CSS/Reference#Keyword_index) definition to see whether a specific property inherits by default ("Inherited: yes") or not ("Inherited: no").
+Refer to [any CSS property](/en-US/docs/Web/CSS/Reference#keyword_index) definition to see whether a specific property inherits by default ("Inherited: yes") or not ("Inherited: no").
 
 ## Inherited properties
 
@@ -73,7 +73,7 @@ This reverts the style of the paragraphs' {{cssxref("font")}} property to the us
 
 ## See also
 
-- CSS values for controlling inheritance: {{ cssxref("inherit") }}, {{cssxref("initial")}}, {{cssxref("unset")}}, and {{cssxref("revert")}}
+- CSS values for controlling inheritance: {{ cssxref("inherit") }}, {{cssxref("initial")}}, {{cssxref("revert")}}, {{cssxref("revert-layer")}}, and {{cssxref("unset")}}
 - [Introducing the CSS cascade](/en-US/docs/Web/CSS/Cascade)
-- [Cascade and inheritance](/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance)
+- [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 - {{ CSS_key_concepts() }}

@@ -44,16 +44,18 @@ There are many other elements in HTML for formatting text, which we didn't get t
 
 ## Description lists
 
-In HTML text fundamentals, we walked through how to [mark up basic lists](/en-US/docs/Learn/HTML#lists) in HTML, but we didn't mention the third type of list you'll occasionally come across — **description lists**. The purpose of these lists is to mark up a set of items and their associated descriptions, such as terms and definitions, or questions and answers. Let's look at an example of a set of terms and definitions:
+In HTML text fundamentals, we walked through how to [mark up basic lists](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists) in HTML, but we didn't mention the third type of list you'll occasionally come across — **description lists**. The purpose of these lists is to mark up a set of items and their associated descriptions, such as terms and definitions, or questions and answers. Let's look at an example of a set of terms and definitions:
 
-    soliloquy
-    In drama, where a character speaks to themselves, representing their inner thoughts or feelings and in the process relaying them to the audience (but not to other characters.)
-    monologue
-    In drama, where a character speaks their thoughts out loud to share them with the audience and any other characters present.
-    aside
-    In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of additional background information
+```
+soliloquy
+In drama, where a character speaks to themselves, representing their inner thoughts or feelings and in the process relaying them to the audience (but not to other characters.)
+monologue
+In drama, where a character speaks their thoughts out loud to share them with the audience and any other characters present.
+aside
+In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of additional background information
+```
 
-Description lists use a different wrapper than the other list types — {{htmlelement("dl")}}; in addition each term is wrapped in a {{htmlelement("dt")}} (description term) element, and each description is wrapped in a {{htmlelement("dd")}} (description definition) element.
+Description lists use a different wrapper than the other list types — {{htmlelement("dl")}}; in addition each term is wrapped in a {{htmlelement("dt")}} (description term) element, and each description is wrapped in a {{htmlelement("dd")}} (description definition) element.
 
 ### Description list example
 
@@ -291,9 +293,9 @@ Citations are styled in italic font by default.
 
 Time for another active learning example! In this example we'd like you to:
 
-1.  Turn the middle paragraph into a blockquote, which includes a `cite` attribute.
-2.  Turn "The Need To Eliminate Negative Self Talk" in the third paragraph into an inline quote, and include a `cite` attribute.
-3.  Wrap the title of each source in `<cite>` tags and turn each one into a link to that source.
+1. Turn the middle paragraph into a blockquote, which includes a `cite` attribute.
+2. Turn "The Need To Eliminate Negative Self Talk" in the third paragraph into an inline quote, and include a `cite` attribute.
+3. Wrap the title of each source in `<cite>` tags and turn each one into a link to that source.
 
 The citation sources you need are:
 
@@ -376,7 +378,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-const htmlSolution = '<p>Hello and welcome to my motivation page. As <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius\' quotes site</cite></a> says:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n <p>It does not matter how slowly you go as long as you do not stop.</p>\n</blockquote>\n\n<p>I also love the concept of positive thinking, and <q cite="http://example.com/affirmationsforpositivethinking">The Need To Eliminate Negative Self Talk</q> (as mentioned in <a href="https://example.com/affirmationsforpositivethinking"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
+const htmlSolution = '<p>Hello and welcome to my motivation page. As <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius\' quotes site</cite></a> says:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n <p>It does not matter how slowly you go as long as you do not stop.</p>\n</blockquote>\n\n<p>I also love the concept of positive thinking, and <q cite="http://example.com/affirmationsforpositivethinking">The Need To Eliminate Negative Self Talk</q> (as mentioned in <a href="http://example.com/affirmationsforpositivethinking"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
 let solutionEntry = htmlSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -610,7 +612,7 @@ Note that something like this would also be OK, if the linked page contained the
 </address>
 ```
 
-> **Note:** The {{htmlelement("address")}} element should only be used to provide contact information for the document contained with the nearest {{htmlelement("article")}} or {{htmlelement("body")}} element. It would be correct to use it in the footer of a site to include the contact information of the entire site, on inside an article for the contact details of the author, but not to mark up a list of addresses unrelated to the content of that page.
+> **Note:** The {{htmlelement("address")}} element should only be used to provide contact information for the document contained with the nearest {{htmlelement("article")}} or {{htmlelement("body")}} element. It would be correct to use it in the footer of a site to include the contact information of the entire site, or inside an article for the contact details of the author, but not to mark up a list of addresses unrelated to the content of that page.
 
 ## Superscript and subscript
 
@@ -624,7 +626,7 @@ You will occasionally need to use superscript and subscript when marking up item
 
 The output of this code looks like so:
 
-{{ EmbedLiveSample('Superscript_and_subscript', '100%', '141px') }}
+{{ EmbedLiveSample('Superscript_and_subscript', '100%', 160) }}
 
 ## Representing computer code
 
@@ -636,7 +638,7 @@ There are a number of elements available for marking up computer code using HTML
 - {{htmlelement("kbd")}}: For marking up keyboard (and other types of) input entered into the computer.
 - {{htmlelement("samp")}}: For marking up the output of a computer program.
 
-Let's look at a few examples. You should try having a play with these (try grabbing a copy of our [other-semantics.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/other-semantics.html) sample file):
+Let's look at a few examples. You should try having a play with these (try grabbing a copy of our [other-semantics.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/advanced-text-formatting/other-semantics.html) sample file):
 
 ```html
 <pre><code>var para = document.querySelector('p');
@@ -658,7 +660,7 @@ para.onclick = function() {
 
 The above code will look like so:
 
-{{ EmbedLiveSample('Representing_computer_code','100%',300) }}
+{{ EmbedLiveSample('Representing_computer_code','100%',350) }}
 
 ## Marking up times and dates
 
@@ -670,6 +672,7 @@ HTML also provides the {{htmlelement("time")}} element for marking up times and 
 
 Why is this useful? Well, there are many different ways that humans write down dates. The above date could be written as:
 
+<!-- markdownlint-disable MD033 -->
 - 20 January 2016
 - 20th January 2016
 - Jan 20 2016
@@ -680,7 +683,9 @@ Why is this useful? Well, there are many different ways that humans write down d
 - <span lang="ja">2016 年 1 月 20 日</span>
 - And so on
 
-But these different forms cannot be easily recognized by computers — what if you wanted to automatically grab the dates of all events in a page and insert them into a calendar? The {{htmlelement("time")}} element allows you to attach an unambiguous, machine-readable time/date for this purpose.
+<!-- markdownlint-enable MD033 -->
+
+But these different forms cannot be easily recognized by computers — what if you wanted to automatically grab the dates of all events in a page and insert them into a calendar? The {{htmlelement("time")}} element allows you to attach an unambiguous, machine-readable time/date for this purpose.
 
 The basic example above just provides a simple machine readable date, but there are many other options that are possible, for example:
 
@@ -709,14 +714,14 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-That marks the end of our study of HTML text semantics. Bear in mind that what you have seen during this course is not an exhaustive list of HTML text elements — we wanted to try to cover the essentials, and some of the more common ones you will see in the wild, or at least might find interesting. To find way more HTML elements, you can take a look at our [HTML element reference](/en-US/docs/Web/HTML/Element) (the [Inline text semantics](/en-US/docs/Web/HTML/Element#inline_text_semantics) section would be a great place to start.) In the next article we will look at the HTML elements you'd use to structure the different parts of an HTML document.
+That marks the end of our study of HTML text semantics. Bear in mind that what you have seen during this course is not an exhaustive list of HTML text elements — we wanted to try to cover the essentials, and some of the more common ones you will see in the wild, or at least might find interesting. To find way more HTML elements, you can take a look at our [HTML element reference](/en-US/docs/Web/HTML/Element) (the [Inline text semantics](/en-US/docs/Web/HTML/Element#inline_text_semantics) section would be a great place to start). In the next article, we'll look at the HTML elements you'd use to [structure the different parts of an HTML document](/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure).
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
 
 ## In this module
 
 - [Getting started with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [What’s in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [What's in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
 - [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
 - [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
 - [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)

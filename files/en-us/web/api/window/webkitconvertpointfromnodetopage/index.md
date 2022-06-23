@@ -1,6 +1,7 @@
 ---
 title: Window.convertPointFromNodeToPage()
 slug: Web/API/Window/webkitConvertPointFromNodeToPage
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -23,13 +24,13 @@ coordinate system, the {{domxref("Window")}} method
 which specifies the same position in the page's coordinate system. This method is
 non-standard and _should not be used_.
 
-> **Warning:** Please review the {{anch("Browser compatibility")}} section before using this method,
+> **Warning:** Please review the [Browser compatibility](#browser_compatibility) section before using this method,
 > as it's not widely supported (nor is the {{domxref("WebKitPoint")}} object it uses).
 
 ## Syntax
 
 ```js
-Point = Window.convertPointFromNodeToPage(node, nodePoint);
+convertPointFromNodeToPage(node, nodePoint)
 ```
 
 ### Parameters
@@ -47,8 +48,7 @@ A {{domxref("WebKitPoint")}} object specifying a point in the page's coordinate 
 
 ## Specifications
 
-This method was specified in [the defunct 20 March
-2009 Working Draft of CSS 2D Transforms Module Level 3](https://www.w3.org/TR/2009/WD-css3-2d-transforms-20090320/). It is not present in the
+This method was specified in [the defunct 20 March 2009 Working Draft of CSS 2D Transforms Module Level 3](https://www.w3.org/TR/2009/WD-css3-2d-transforms-20090320/). It is not present in the
 current CSS Transforms Module Level 1 Working Draft.
 
 ## Browser compatibility
@@ -59,5 +59,3 @@ current CSS Transforms Module Level 1 Working Draft.
 
 - {{domxref("Window.webkitConvertPointFromPageToNode")}}
 - Mozilla implementation bug: {{bug(850806)}}
-- [`webkitConvertPointFromNodeToPage`
-  documentation at IE Dev Center](https://msdn.microsoft.com/en-us/library/ie/dn760734%28v=vs.85%29.aspx)

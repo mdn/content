@@ -16,7 +16,7 @@ browser-compat: html.elements.tbody
 
 {{HTMLRef}}
 
-The **`<tbody>`** [HTML](/en-US/docs/Web/HTML) element encapsulates a set of table rows ({{HTMLElement("tr")}} elements), indicating that they comprise the body of the table ({{HTMLELement("table")}}).
+The **`<tbody>`** [HTML](/en-US/docs/Web/HTML) element encapsulates a set of table rows ({{HTMLElement("tr")}} elements), indicating that they comprise the body of the table ({{HTMLElement("table")}}).
 
 {{EmbedInteractiveExample("pages/tabbed/tbody.html","tabbed-taller")}}
 
@@ -39,11 +39,7 @@ The `<tbody>` element, along with its cousins {{HTMLElement("thead")}} and {{HTM
     <tr>
       <th scope="row">Tag omission</th>
       <td>
-        The <code>&#x3C;tbody></code> element is not a required child element
-        for a parent {{ HTMLElement("table") }} element to graphically
-        render. However, it must not be present, if its parent
-        {{ HTMLElement("table") }} element has a
-        {{ HTMLElement("tr") }} element as a child.
+        The <code>&#x3C;tbody></code> element is not a required child element for a parent {{ HTMLElement("table") }} element to graphically render. However, it must be present, if the parent {{ HTMLElement("table") }} element has a {{HTMLElement("thead")}}, a {{HTMLElement("tfoot")}} or another {{HTMLElement("tbody")}} element as a child. If the <code>&#x3C;tbody></code> element starts with a {{HTMLElement("tbody")}} element, and is not following a non-closed <code>&#x3C;tbody></code> element, its opening tag can be omitted.
       </td>
     </tr>
     <tr>
@@ -101,7 +97,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
 
-  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color kewords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
+  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
 
     As this attribute is deprecated, use the CSS {{cssxref("background-color")}} property instead.
 

@@ -1,9 +1,9 @@
 ---
 title: Headers.keys()
 slug: Web/API/Headers/keys
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Fetch API
   - Headers
   - Method
@@ -21,14 +21,18 @@ in this object. The keys are {{jsxref("String")}} objects.
 ## Syntax
 
 ```js
-headers.keys();
+keys()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
 Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-## Example
+## Examples
 
 ```js
 // Create a test Headers object
@@ -44,8 +48,10 @@ for(var key of myHeaders.keys()) {
 
 The result is:
 
-    content-type
-    vary
+```
+content-type
+vary
+```
 
 ## Browser compatibility
 

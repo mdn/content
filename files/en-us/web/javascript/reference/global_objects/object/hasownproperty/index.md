@@ -28,7 +28,7 @@ hasOwnProperty(prop)
 
 ### Parameters
 
-- _prop_
+- `prop`
   - : The {{jsxref("String")}} name or {{Glossary("Symbol")}} of
     the property to test.
 
@@ -152,7 +152,7 @@ let foo = { bar: 'Here be dragons' };
 
 // Use Object.hasOwn() method - recommended
 Object.hasOwn(foo, "bar");  // true
-  
+
 // Use the hasOwnProperty property from the Object prototype
 Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
 

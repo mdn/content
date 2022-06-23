@@ -42,7 +42,7 @@ To use this API you need to have the "browserSettings" [permission](/en-US/docs/
 - {{WebExtAPIRef("browserSettings.newTabPosition")}}
   - : Controls the position of newly opened tabs relative to already open tabs.
 - {{WebExtAPIRef("browserSettings.openBookmarksInNewTabs")}}
-  - : Determines whether bookmarks are opened in the current tab or a new tab.
+  - : Determines whether bookmarks are opened in the current tab or a new tab.
 - {{WebExtAPIRef("browserSettings.openSearchResultsInNewTabs")}}
   - : Determines whether search results are opened in the current tab or a new tab.
 - {{WebExtAPIRef("browserSettings.openUrlbarResultsInNewTabs")}}

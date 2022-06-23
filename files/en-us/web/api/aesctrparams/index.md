@@ -1,16 +1,18 @@
 ---
 title: AesCtrParams
 slug: Web/API/AesCtrParams
+page-type: web-api-interface
 tags:
   - API
   - AesCtrParams
   - Dictionary
   - Reference
   - Web Crypto API
+spec-urls: https://w3c.github.io/webcrypto/#dfn-AesCtrParams
 ---
 {{ APIRef("Web Crypto API") }}
 
-The **`AesCtrParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}}, or {{domxref("SubtleCrypto.unwrapKey()")}}, when using the [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr) algorithm.
+The **`AesCtrParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}}, or {{domxref("SubtleCrypto.unwrapKey()")}}, when using the [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr) algorithm.
 
 AES is a block cipher, meaning that it splits the message into blocks and encrypts it a block at a time. In CTR mode, every time a block of the message is encrypted, an extra block of data is mixed in. This extra block is called the "counter block".
 
@@ -31,9 +33,9 @@ Essentially: the nonce should ensure that counter blocks are not reused from one
 ## Properties
 
 - `name`
-  - : A {{domxref("DOMString")}}. This should be set to `AES-CTR`.
+  - : A string. This should be set to `AES-CTR`.
 - `counter`
-  - : A {{domxref("BufferSource")}} — the initial value of the counter block. This must be 16 bytes long (the AES block size). The rightmost `length` bits of this block are used for the counter, and the rest is used for the nonce. For example, if `length` is set to 64, then the first half of `counter` is the nonce and the second half is used for the counter.
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} — the initial value of the counter block. This must be 16 bytes long (the AES block size). The rightmost `length` bits of this block are used for the counter, and the rest is used for the nonce. For example, if `length` is set to 64, then the first half of `counter` is the nonce and the second half is used for the counter.
 - `length`
   - : A `Number` — the number of bits in the counter block that are used for the actual counter. The counter must be big enough that it doesn't wrap: if the message is `n` blocks and the counter is `m` bits long, then the following must be true: `n <= 2^m`. The [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) standard, which defines CTR, suggests that the counter should occupy half of the counter block (see [Appendix B.2](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf#%5B%7B%22num%22%3A73%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22Fit%22%7D%5D)), so for AES it would be 64.
 
@@ -43,26 +45,11 @@ See the examples for {{domxref("SubtleCrypto.encrypt()")}} and {{domxref("Subtle
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{ SpecName('Web Crypto API', '#dfn-AesCtrParams', 'SubtleCrypto.AesCtrParams') }}
-      </td>
-      <td>{{ Spec2('Web Crypto API') }}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-Browsers that support the "AES-CTR" algorithm for the {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}}, or {{domxref("SubtleCrypto.unwrapKey()")}} methods will support this type.
+Browsers that support the "AES-CTR" algorithm for the {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}}, or {{domxref("SubtleCrypto.unwrapKey()")}} methods will support this type.
 
 ## See also
 

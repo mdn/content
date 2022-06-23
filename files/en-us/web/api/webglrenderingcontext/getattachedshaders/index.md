@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getAttachedShaders()
 slug: Web/API/WebGLRenderingContext/getAttachedShaders
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,12 +19,12 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns a list of
 ## Syntax
 
 ```js
-sequence<WebGLShader> gl.getAttachedShaders(program);
+getAttachedShaders(program)
 ```
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}} object to get attached shaders for.
 
 ### Return value

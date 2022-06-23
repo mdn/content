@@ -1,6 +1,7 @@
 ---
 title: Element.classList
 slug: Web/API/Element/classList
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -19,13 +20,7 @@ attributes of the element. This can then be used to manipulate the class list.
 Using `classList` is a convenient alternative to accessing an element's list
 of classes as a space-delimited string via {{domxref("element.className")}}.
 
-## Syntax
-
-```js
-const elementClasses = elementNodeReference.classList;
-```
-
-### Returns
+## Value
 
 A {{domxref("DOMTokenList")}} representing the contents of the element's
 `class` attribute. If the `class` attribute is not set or empty,

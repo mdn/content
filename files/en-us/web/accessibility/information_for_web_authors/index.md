@@ -7,25 +7,25 @@ tags:
 ---
 ## Guidelines and Regulations
 
-1.  [Section 508 Guidelines for web authors](https://www.section508.gov/index.cfm?FuseAction=Content&#x26;ID=12#Web)
+1. [Section 508 Guidelines for web authors](https://www.section508.gov/index.cfm?FuseAction=Content&#x26;ID=12#Web)
 
     These guidelines must be followed by U.S. websites. Other organizations such as schools are starting to follow these guidelines as well.
 
-2.  [<dfn>Web Content Accessibility Guidelines (WCAG)</dfn> 1.0](https://www.w3.org/TR/WAI-WEBCONTENT/)
+2. [<dfn>Web Content Accessibility Guidelines (WCAG)</dfn> 1.0](https://www.w3.org/TR/WAI-WEBCONTENT/)
 
-    Another important set of guidelines from the W3C _Web Accessibility Initiative (WAI)_. The European Union is looking to base their upcoming accessibility regulations on these guidelines. These guidelines are discussed on the [<abbr title="Web Accessibility Initiative">WAI</abbr> interest group discussion list](https://www.w3.org/WAI/IG/).
+    Another important set of guidelines from the W3C _Web Accessibility Initiative (WAI)_. The European Union is looking to base their upcoming accessibility regulations on these guidelines. These guidelines are discussed on the [<abbr title="Web Accessibility Initiative">WAI</abbr> interest group discussion list](https://www.w3.org/WAI/about/groups/waiig/#mailinglist).
 
 ## How-to's
 
-1.  [Key-navigable custom DHTML widgets in Mozilla & IE](https://web.archive.org/web/20081001203400/https://developer.mozilla.org/En/Key-navigable_custom_DHTML_widgets)
+1. [Key-navigable custom DHTML widgets in Mozilla & IE](https://web.archive.org/web/20081001203400/https://developer.mozilla.org/En/Key-navigable_custom_DHTML_widgets)
 
     This document discusses how to use tabindex, element.focus() and onkeypress to make custom DHTML widgets such as menus or tree views keyboard accessible.
 
-2.  [Accessible Web Page Authoring](https://www.ibm.com/able/guidelines/web/accessweb.html)
+2. [Accessible Web Page Authoring](https://www.ibm.com/able/guidelines/web/accessweb.html)
 
     IBM has put together a simple, practical resource for web authors to learn accessibility the fast and painless way. Highly recommended, an excellent resource.
 
-3.  [Dive Into Accessibility](http://diveintoaccessibility.org/)
+3. [Dive Into Accessibility](http://diveintoaccessibility.org/)
 
     by Mark Pilgrim
 
@@ -33,24 +33,17 @@ tags:
 
 ### Automated Checking & Repair
 
-1.  [Cynthia says™](https://www.contentquality.com/)
-
-    from HiSoftware® Company
-
-    "Cynthia says™" is a free online webpage accessibility validation service that is designed to identify errors in webpage related to Section 508 standards and/or the WCAG guidelines. It can perform a "Complete Webpage Quality Check" for accessibility, privacy, searchability, metadata and even alt text attribute quality. The web author chooses the guidelines (as a basis for errors and warnings) to be used by "Cynthia says™": Section 508, WCAG Priorities 1, 2 and 3. The output data report is displayed in a clear and well structured table where each and all checkpoints are identified and described (along with an helpful clickable link to the related reference guideline) into logical groups and according to measurable results: passed, warning, failed for automated verification, warning for manual verification, not selected, not available, not related, etc.
-
-2.  [Accessibility Valet](http://valet.webthing.com/access/url.html)
+1. [Accessibility Valet](http://valet.webthing.com/access/url.html)
 
     from WebThing
 
-
-3.  [<dfn>WAVE 4.0 beta (Web Accessibility Versatile Evaluator)</dfn>](https://wave.webaim.org/) from  [WebAIM](https://www.webaim.org/)
+2. [<dfn>WAVE 4.0 beta (Web Accessibility Versatile Evaluator)</dfn>](https://wave.webaim.org/) from [WebAIM](https://webaim.org/)
 
     WAVE 4.0 beta is another powerful, free online webpage accessibility validation service that identifies accessibility errors and reports accessibility warnings about webpage related to Section 508 standards and/or the WCAG guidelines. Its purpose is to aid humans in the web accessibility evaluation process. Rather than providing a complex technical report, WAVE 4.0 shows the original web page with embedded icons and indicators that reveal the accessibility information within your page. You can get accessibility report for errors, warnings. You can view the structure and order view of the document. You can see a text-only view and outline view of the document.
 
     You can install a custom WAVE toolbar in Firefox for a quick, easy and convenient evaluation of web pages directly within Firefox. You can also add a WAVE bookmarklet in Firefox or even WAVE direct links for checking a webpage.
 
-4.  [HTML advanced validator](http://users.skynet.be/mgueury/mozilla/index.html) (Firefox extension)</a>
+3. [HTML advanced validator](http://users.skynet.be/mgueury/mozilla/index.html) (Firefox extension)</a>
 
     by Marc Gueury
 
@@ -58,12 +51,12 @@ tags:
 
     This HTML advanced validator Firefox extension is very resourceful and highly customizable. It's an extension add-on to Firefox 2.x and Firefox 3.x. It not only checks and reports possible markup errors and warnings (based on W3C Tidy and/or based on true SGML validation) but it can also report accessibility errors and warnings according to selectable accessibility guidelines (Section 508, WCAG Priorities 1, 2 or 3). Its accessibility report is viewable in the View Source window (View > Source code <kbd>Ctrl+U</kbd> or right-click on the status bar). Two panes are added at the bottom of the view source code window: the left pane contains the errors and warnings (with their correspondent line number) and the right pane identifies the checkpoint along with an example and a clickable link to the reference/guideline. **Just wonderful!**
 
-    The HTML advanced validator may also be downloaded from [Firefox Add-ons: HTML Validator](https://addons.mozilla.org/firefox/addon/249).
+    The HTML advanced validator may also be downloaded from [Firefox Add-ons: HTML Validator](https://addons.mozilla.org/en-US/firefox/addon/html-validator/).
 
-5.  [Color contrast analyzer](https://juicystudio.com/services/colourcontrast.php#contrast)
+4. [Luminosity Color Contrast Ratio Analyser](https://juicystudio.com/services/luminositycontrastratio.php)
 
     by Juicy Studio
-    How can a web author establish easily and quickly if the background color and foreground (text) color in use in his webpages have sufficient color contrast difference and sufficient color brightness difference? [Color contrast analyzer](https://juicystudio.com/services/colourcontrast.php#contrast) is an excellent tool for such task. Effective color contrast and effective color brightness difference have a **decisive importance for reading**, furthermore for people with partial color deficiency (see the excellent examples in [Effective Color Contrast](http://www.lighthouse.org/accessibility/effective-color-contrast/) by Lighthouse International).
+    How can a web author establish easily and quickly if the background color and foreground (text) color in use in his webpages have sufficient color contrast difference and sufficient color brightness difference? [Luminosity Color Contrast Ratio Analyser](https://juicystudio.com/services/luminositycontrastratio.php) is an excellent tool for such task. Effective color contrast and effective color brightness difference have a **decisive importance for reading**, furthermore for people with partial color deficiency (see the excellent examples in [Effective Color Contrast](https://lighthouseguild.org/effective-color-contrast-and-making-text-legible/) by Lighthouse International).
 
     The [Juicy Studio CSS analyzer](https://juicystudio.com/services/csstest.php) will also analyze and report the color contrast and color brightness differences involved in your stylesheets.
 
@@ -87,5 +80,5 @@ We have two discussion lists, which can be read via a newsgroup reader, as a mai
 
 | Purpose              | Newsgroup                                                                              | Mailing list                                                                      | Google group                                                                  |
 | -------------------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| Developer discussion | [mozilla.dev.accessibility](news://news.mozilla.org/mozilla.dev.accessibility)         | [subscribe/unsubscribe](https://lists.mozilla.org/listinfo/dev-accessibility)     | [Google group](https://groups.google.com/group/mozilla.dev.accessibility)     |
-| End user support     | [mozilla.support.accessibility](news://news.mozilla.org/mozilla.support.accessibility) | [subscribe/unsubscribe](https://lists.mozilla.org/listinfo/support-accessibility) | [Google group](https://groups.google.com/group/mozilla.support.accessibility) |
+| Developer discussion | [mozilla.dev.accessibility](news://news.mozilla.org/mozilla.dev.accessibility)         | [subscribe/unsubscribe](https://lists.mozilla.org/listinfo/dev-accessibility)     | [Discourse group](https://discourse.mozilla.org/c/a11y/)     |
+| End user support     | [mozilla.support.accessibility](news://news.mozilla.org/mozilla.support.accessibility) | [subscribe/unsubscribe](https://lists.mozilla.org/listinfo/support-accessibility) |  |

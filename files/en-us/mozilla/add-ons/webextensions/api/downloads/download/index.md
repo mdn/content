@@ -29,7 +29,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var downloading = browser.downloads.download(
+let downloading = browser.downloads.download(
   options                   // object
 )
 ```
@@ -95,9 +95,9 @@ function onFailed(error) {
   console.log(`Download failed: ${error}`);
 }
 
-var downloadUrl = "https://example.org/image.png";
+let downloadUrl = "https://example.org/image.png";
 
-var downloading = browser.downloads.download({
+let downloading = browser.downloads.download({
   url : downloadUrl,
   filename : 'my-image-again.png',
   conflictAction : 'uniquify'
@@ -108,7 +108,7 @@ downloading.then(onStartedDownload, onFailed);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-download) API.
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-download) API.
 
 <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //

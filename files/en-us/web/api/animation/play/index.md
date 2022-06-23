@@ -1,6 +1,7 @@
 ---
 title: Animation.play()
 slug: Web/API/Animation/play
+page-type: web-api-instance-method
 tags:
   - API
   - Animation
@@ -13,14 +14,14 @@ tags:
   - web animations api
 browser-compat: api.Animation.play
 ---
-{{ APIRef("Web Animations") }}{{SeeCompatTable}}
+{{ APIRef("Web Animations") }}
 
 The **`play()`** method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{ domxref("Animation") }} Interface starts or resumes playing of an animation. If the animation is finished, calling `play()` restarts the animation, playing it from the beginning.
 
 ## Syntax
 
 ```js
-animation.play();
+play()
 ```
 
 ### Parameters
@@ -29,11 +30,11 @@ None.
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
-In the [Growing/Shrinking Alice Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) example, clicking or tapping the cake causes Alice's growing animation (`aliceChange`) to play forward, causing her to get bigger, as well as triggering the cake's animation. Two `Animation.play()`s, one `EventListener`:
+In the [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) example, clicking or tapping the cake causes Alice's growing animation (`aliceChange`) to play forward, causing her to get bigger, as well as triggering the cake's animation. Two `Animation.play()`s, one `EventListener`:
 
 ```js
 // The cake has its own animation:

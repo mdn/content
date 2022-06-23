@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.canvas
 slug: Web/API/WebGLRenderingContext/canvas
+page-type: web-api-instance-property
 tags:
   - Property
   - Read-only
@@ -24,7 +25,7 @@ gl.canvas;
 
 ### Return value
 
-Either a {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}} object or
+Either a {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}} object or
 {{jsxref("null")}}.
 
 ## Examples

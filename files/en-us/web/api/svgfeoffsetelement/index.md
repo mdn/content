@@ -1,6 +1,7 @@
 ---
 title: SVGFEOffsetElement
 slug: Web/API/SVGFEOffsetElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGFEOffsetElement
 
 The **`SVGFEOffsetElement`** interface corresponds to the {{SVGElement("feOffset")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

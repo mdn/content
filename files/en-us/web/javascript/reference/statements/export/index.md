@@ -13,10 +13,10 @@ browser-compat: javascript.statements.export
 ---
 {{jsSidebar("Statements")}}
 
-The **`export`** statement is used
+The **`export`** declaration is used
 when creating JavaScript modules to export live bindings to functions, objects, or
 primitive values from the module so they can be used by other programs with the
-{{jsxref("Statements/import", "import")}} statement. The value of an imported binding
+{{jsxref("Statements/import", "import")}} declaration. The value of an imported binding
 is subject to change in the module that exports it. When a module updates the value of
 a binding that it exports, the update will be visible in its imported value.
 
@@ -27,8 +27,8 @@ declare them as such or not. The export statement cannot be used in embedded scr
 
 There are two types of exports:
 
-1.  Named Exports (Zero or more exports per module)
-2.  Default Exports (One per module)
+1. Named Exports (Zero or more exports per module)
+2. Default Exports (One per module)
 
 ```js
 // Exporting individual features
@@ -42,9 +42,11 @@ export { name1, name2, …, nameN };
 
 // Renaming exports
 export { variable1 as name1, variable2 as name2, …, nameN };
+export { variable1 as "string name" };
 
 // Exporting destructured assignments with renaming
 export const { name1, name2: bar } = o;
+export const [ name1, name2 ] = array;
 
 // Default exports
 export default expression;
@@ -54,15 +56,14 @@ export { name1 as default, … };
 
 // Aggregating modules
 export * from …; // does not set the default export
-export * as name1 from …; // Draft ECMAScript® 2O21
+export * as name1 from …; // ECMAScript® 2020
 export { name1, name2, …, nameN } from …;
 export { import1 as name1, import2 as name2, …, nameN } from …;
 export { default, … } from …;
 ```
 
 - `nameN`
-  - : Identifier to be exported (so that it can be imported via
-    {{jsxref("Statements/import", "import")}} in another script).
+  - : Identifier to be exported (so that it can be imported via {{jsxref("Statements/import", "import")}} in another script). If you use an alias with `as`, the actual exported name can be specified as a string literal, which may not be a valid identifier.
 
 ## Description
 
@@ -79,7 +80,7 @@ export { myFunction, myVariable };
 // export individual features (can export var, let,
 // const, function, class)
 export let myVariable = Math.sqrt(2);
-export function myFunction() { ... };
+export function myFunction() { /* ... */ };
 ```
 
 Default exports:
@@ -89,14 +90,14 @@ Default exports:
 export { myFunction as default };
 
 // export individual features as default
-export default function () { ... }
+export default function () { /* ... */ }
 export default class { .. }
 
 // each export overwrites the previous one
 ```
 
 Named exports are useful to export several values. During the import, it is mandatory
-to use the same name of the corresponding object.
+to import them within curly braces with the same name of the corresponding object.
 
 But a default export can be imported with any name for example:
 
@@ -288,9 +289,6 @@ import { myFunction, myVariable, myClass } from 'parentModule.js'
 
 - {{jsxref("Statements/import", "import")}}
 - [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide
-- [ES6 in Depth:
-  Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- [ES
-  modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
-- [Axel Rauschmayer's book:
-  "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)
+- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
+- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
+- [Axel Rauschmayer's book: "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)

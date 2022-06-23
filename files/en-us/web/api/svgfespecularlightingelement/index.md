@@ -1,6 +1,7 @@
 ---
 title: SVGFESpecularLightingElement
 slug: Web/API/SVGFESpecularLightingElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGFESpecularLightingElement
 
 The **`SVGFESpecularLightingElement`** interface corresponds to the {{SVGElement("feSpecularLighting")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.candidate
 slug: Web/API/RTCIceCandidate/candidate
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -19,26 +20,22 @@ browser-compat: api.RTCIceCandidate.candidate
 ---
 {{APIRef("WebRTC")}}
 
-The read-only property **`candidate`** on the {{domxref("RTCIceCandidate")}} interface returns a {{domxref("DOMString")}} describing the candidate in detail.
+The read-only property **`candidate`** on the {{domxref("RTCIceCandidate")}} interface returns a string describing the candidate in detail.
 Most of the other properties of `RTCIceCandidate` are actually extracted from this string.
 
 This property can be configured using the `candidate` property of the object passed into the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate() constructor")}} or {{domxref("RTCPeerConnection.addIceCandidate()")}}.
 
-## Syntax
+## Value
 
-```js
-var candidate = RTCIceCandidate.candidate;
-```
-
-### Value
-
-A {{domxref("DOMString")}} describing the properties of the candidate, taken directly from the {{Glossary("SDP")}} attribute `"candidate"`.
+A string describing the properties of the candidate, taken directly from the {{Glossary("SDP")}} attribute `"candidate"`.
 The candidate string specifies the network connectivity information for the candidate.
 If the `candidate` is an empty string (`""`), the end of the candidate list has been reached; this candidate is known as the "end-of-candidates" marker.
 
 The syntax of the candidate string is described in {{RFC(5245, "", 15.1)}}. For an a-line (attribute line) that looks like this:
 
-    a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```
+a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```
 
 the corresponding `candidate` string's value will be: `"candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host"`.
 
@@ -56,7 +53,7 @@ attributes for this example candidate is:
 - {{domxref("RTCIceCandidate.port", "port")}} = 44323
 - {{domxref("RTCIceCandidate.type", "type")}} = `"host"`
 
-## Example
+## Examples
 
 In this example, we see a function which receives as input an SDP string containing an
 ICE candidate received from the remote peer during the signaling process.

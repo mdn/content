@@ -1,6 +1,7 @@
 ---
 title: XPathExpression.evaluate()
 slug: Web/API/XPathExpression/evaluate
+page-type: web-api-instance-method
 tags:
   - API
   - DOM XPath API
@@ -19,17 +20,19 @@ returns an {{domxref("XPathResult")}}.
 ## Syntax
 
 ```js
-XPathResult node.evaluate(contextNode, type, result);
+evaluate(contextNode)
+evaluate(contextNode, type)
+evaluate(contextNode, type, result)
 ```
 
 ### Parameters
 
-- contextNode
+- `contextNode`
   - : A {{domxref("Node")}} representing the context to use for evaluating the expression.
-- type {{optional_inline}}
+- `type` {{optional_inline}}
   - : Specifies the type of result to be returned by evaluating the expression. This must
     be one of the {{domxref("XPathResult", "XPathResult", "Constants")}}.
-- result {{optional_inline}}
+- `result` {{optional_inline}}
   - : Allows to specify a result object which may be reused and returned by this method.
     If this is specified as `null` or the implementation does not reuse the
     specified result, a new result object will be returned.
@@ -70,7 +73,7 @@ If the provided context node is not a type permitted as an XPath context node or
 request type is not permitted by the {{domxref("XPathEvaluator")}}, a
 {{domxref("DOMException")}} of type `NOT_SUPPORTED_ERR` is raised.
 
-## Example
+## Examples
 
 The following example shows the use of the `evaluate()` method.
 
@@ -93,7 +96,7 @@ document.querySelector("output").textContent = result.snapshotLength;
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

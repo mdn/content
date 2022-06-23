@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ontouchstart
 slug: Web/API/GlobalEventHandlers/ontouchstart
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

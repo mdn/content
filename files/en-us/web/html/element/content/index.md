@@ -71,28 +71,28 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 Here is a simple example of using the `<content>` element. It is an HTML file with everything needed in it.
 
-> **Note:** For this code to work, the browser you display it in must support Web Components. See [Enabling Web Components in Firefox](/en-US/docs/Web/Web_Components#enabling_web_components_in_firefox).
+> **Note:** For this code to work, the browser you display it in must support Web Components. See [Enabling Web Components in Firefox](/en-US/docs/Web/Web_Components#enabling_web_components_in_firefox).
 
 ```html
 <html>
   <head></head>
   <body>
-  <!-- The original content accessed by <content> -->
-  <div>
-    <h4>My Content Heading</h4>
-    <p>My content text</p>
-  </div>
+  <!-- The original content accessed by <content> -->
+  <div>
+    <h4>My Content Heading</h4>
+    <p>My content text</p>
+  </div>
 
-  <script>
-  // Get the <div> above.
-  var myContent = document.querySelector('div');
-  // Create a shadow DOM on the <div>
-  var shadowroot = myContent.createShadowRoot();
-  // Insert into the shadow DOM a new heading and
-  // part of the original content: the <p> tag.
-  shadowroot.innerHTML =
-   '<h2>Inserted Heading</h2> <content select="p"></content>';
-  </script>
+  <script>
+  // Get the <div> above.
+  var myContent = document.querySelector('div');
+  // Create a shadow DOM on the <div>
+  var shadowroot = myContent.createShadowRoot();
+  // Insert into the shadow DOM a new heading and
+  // part of the original content: the <p> tag.
+  shadowroot.innerHTML =
+   '<h2>Inserted Heading</h2> <content select="p"></content>';
+  </script>
 
   </body>
 </html>
@@ -113,6 +113,6 @@ This element is no longer defined by any specifications.
 ## See also
 
 - [Web Components](/en-US/docs/Web/Web_Components)
-- {{HTMLElement("shadow")}}, {{HTMLElement("slot")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}
+- {{HTMLElement("shadow")}}, {{HTMLElement("slot")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}
 
 {{HTMLRef}}

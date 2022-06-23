@@ -11,6 +11,7 @@ tags:
   - Layout
   - Reference
   - easing-function
+browser-compat: css.types.easing-function
 ---
 {{CSSRef}}
 
@@ -18,7 +19,7 @@ The **`<easing-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/W
 
 This transition between two values may be applied in different situations. It may be used to describe how fast values change during animations. This lets you vary the animation's speed over the course of its duration. It may also be used to interpolate between two colors in a color gradient.
 
-The easing functions in the cubic-bezier subset of easing functions are often called "smooth" easing functions, because they can be used to smooth down the start and end of the interpolation. They correlate an input ratio to an output ratio, both expressed as {{cssxref("&lt;number&gt;")}}s. For these values, `0.0` represents the initial state, and `1.0` represents the final state.
+The easing functions in the cubic-bezier subset of easing functions are often called "smooth" easing functions, because they can be used to smooth down the start and end of the {{Glossary("interpolation")}}. They correlate an input ratio to an output ratio, both expressed as {{cssxref("&lt;number&gt;")}}s. For these values, `0.0` represents the initial state, and `1.0` represents the final state.
 
 Depending on the specific function used, the calculated output can sometimes grow to be greater than `1.0` or smaller than `0.0` during the course of an animation. This causes the value to go farther than the final state, and then return. In animations, for some properties, such as {{cssxref("left")}} or {{cssxref("right")}}, this creates a kind of "bouncing" effect.
 
@@ -28,13 +29,10 @@ However, certain properties will restrict the output if it goes outside an allow
 
 ![](tf_with_output_gt_than_1_clipped.png)
 
-## Syntax
-
-There are three types of [easing function](/en-US/docs/Web/CSS/easing-function#easing_functions): linear, [cubic Bézier curves](https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves), and staircase functions. The value of an `<easing-function>` type describes the easing function using one of those three types.
-
 ### Easing functions
 
-CSS supports three kinds of easing functions: linear, the subset of the cubic Bézier curves that are functions, and staircase functions. The most useful of these functions are given a keyword that allows them to be easily referenced.
+The value of an `<easing-function>` type describes the easing function using one of the three types that
+CSS supports: linear, the subset of the [cubic Bézier curves](/en-US/docs/Glossary/Bezier_curve) that are functions, and staircase functions. The most useful of these functions are given a keyword that allows them to be easily referenced.
 
 #### The linear class of easing functions
 
@@ -48,7 +46,7 @@ The interpolation is done at a constant rate from beginning to end. This keyword
 
 ![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' A curved line extends from the origin to the X 1 Y 1 position. The X 0 Y 0 point of the line is labeled  'P₀ = (0, 0)'. Extending from the X 0 Y 0 point is a Bezier handle labeled 'P₁ = (0.075, 0.75)'. The X 1 Y 1 point of the line is labeled 'P₃ = (1, 1)'. Extending from the X 1 Y 1 point is a Bezier handle labeled 'P₂ = (0.0875, 0.36)'.](cubic-bezier-example.png)
 
-The `cubic-bezier()` functional notation defines a [cubic Bézier curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves). As these curves are continuous, they are often used to smooth down the start and end of the interpolation and are therefore sometimes called _easing functions_.
+The `cubic-bezier()` functional notation defines a [cubic Bézier curve](/en-US/docs/Glossary/Bezier_curve). As these curves are continuous, they are often used to smooth down the start and end of the interpolation and are therefore sometimes called _easing functions_.
 
 A cubic Bézier curve is defined by four points P0, P1, P2, and P3. P0 and P3 are the start and the end of the curve and, in CSS these points are fixed as the coordinates are ratios (the abscissa the ratio of time, the ordinate the ratio of the output range). P0 is `(0, 0)` and represents the initial time or position and the initial state, P3 is `(1, 1)` and represents the final time or position and the final state.
 
@@ -319,16 +317,14 @@ steps(0, jump-none)
 
 ## Specifications
 
-| Specification                                                                                                    | Status                           | Comment             |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('CSS Easing 1', '#typedef-easing-function', '&lt;easing-function&gt;')}} | {{Spec2('CSS Easing 1')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("css.types.easing-function", 2)}}
+{{Compat}}
 
 ## See also
 
 - [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations)
 - [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions)
-- [cubic-bezier](http://cubic-bezier.com/)
+- [cubic-bezier](https://cubic-bezier.com/)

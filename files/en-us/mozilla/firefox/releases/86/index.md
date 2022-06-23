@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 86 that will affect developers. Firefox 86 was released on February 23, 2021.
+This article provides information about the changes in Firefox 86 that will affect developers. Firefox 86 was released on February 23, 2021.
 
 > **Note:** See also [A Fabulous February Firefox — 86!](https://hacks.mozilla.org/2021/02/a-fabulous-february-firefox-86/) on Mozilla Hacks.
 
@@ -17,7 +17,7 @@ This article provides information about the changes in Firefox 86 that will aff
 
 ### Developer Tools
 
-- The `cd()` [web console helper function](/en-US/docs/Tools/Web_Console/Helpers), which was deprecated in Firefox 74, has now been removed. The `<iframe>` context picker tool described in [Working with iframes](/en-US/docs/Tools/Working_with_iframes) serves the same purpose, but is much better! For more information see {{bug(1607741)}}.
+- The `cd()` [web console helper function](https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html), which was deprecated in Firefox 74, has now been removed. The `<iframe>` context picker tool described in [Working with iframes](https://firefox-source-docs.mozilla.org/devtools-user/working_with_iframes/index.html) serves the same purpose, but is much better! For more information see {{bug(1607741)}}.
 - The different {{cssxref("margin")}} and {{cssxref("padding")}} shorthand and longhand properties are now marked as inactive on internal table elements because they have no effect on them. ({{bug(1551569)}}).
 - The {{cssxref("order")}} property was previously incorrectly marked as inactive for grid items. This got fixed in {{bug(1579017)}}.
 
@@ -31,8 +31,8 @@ _No changes._
 
 ### CSS
 
-- The {{cssxref(":autofill")}} pseudo-class is now enabled, with `-webkit-autofill` as an alias ({{bug(1685675)}}) and ({{bug(1475316)}}).
-- The {{cssxref("list-style-image")}} property now accepts any valid {{cssxref("image")}} ({{bug(1685078)}}).
+- The {{cssxref(":autofill")}} pseudo-class is now enabled, with `-webkit-autofill` as an alias ({{bug(1685675)}}) and ({{bug(1475316)}}).
+- The {{cssxref("list-style-image")}} property now accepts any valid {{cssxref("image")}} ({{bug(1685078)}}).
 
 ### JavaScript
 
@@ -63,8 +63,7 @@ _No changes._
 
 - WebDriver commands following a call to `WebDriver:SwitchToFrame` can fail with a "no such window" error
   if the frame's content hasn't yet finished loading ({{bug(1691348)}}).
-- After a [cross-group
-  page navigation](https://firefox-source-docs.mozilla.org/dom/navigation/nav_replace.html#cross-group-navigations), accessing a previously-retrieved element might not always raise a "stale element" error, and
+- After a [cross-group page navigation](https://firefox-source-docs.mozilla.org/dom/navigation/nav_replace.html#cross-group-navigations), accessing a previously-retrieved element might not always raise a "stale element" error, and
   can also lead to a "no such element" error. To prevent this, set the `marionette.actors.enabled`
   preference to `false` ({{bug(1690308)}}).
 
@@ -77,6 +76,7 @@ _No changes._
 - [Host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) now grant access to privileged parts of the [tabs API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs) ({{bug(1679688)}}).
 - `focused: false` is now ignored when set as an option in a [`windows.create()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/create) call ({{bug(1253129)}}).
 - {{WebExtAPIRef("identity.getRedirectURL")}} now supports a loopback address, see [Getting the redirect URL](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url) for details ({{bug(1614919)}}).
+- The page ID is now returned as part of {{WebExtAPIRef("history.onTitleChanged")}} ({{bug(1678611)}}).
 
 ## Older versions
 

@@ -1,5 +1,5 @@
 ---
-title: HTML Tables
+title: HTML tables
 slug: Learn/HTML/Tables
 tags:
   - <td>
@@ -35,14 +35,16 @@ Before starting this module, you should already have covered the basics of HTML 
 
 ## Guides
 
-This module contains the following articles:
+This module contains the following articles, which will take you through all the fundamentals of creating tables in HTML.
 
 - [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
   - : This article gets you started with HTML tables, covering the very basics such as rows and cells, headings, making cells span multiple columns and rows, and how to group together all the cells in a column for styling purposes.
 - [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
-  - : This module looks at some more advanced features of HTML tables — such as captions/summaries and grouping your rows into table head, body and footer sections — as well as looking at the accessibility of tables for visually impaired users.
+  - : This article looks at some more advanced features of HTML tables — such as captions/summaries and grouping your rows into table head, body and footer sections — as well as looking at the accessibility of tables for visually impaired users.
 
 ## Assessments
+
+The following assessment will test your understanding of the HTML table techniques covered in the guides above.
 
 - [Structuring planet data](/en-US/docs/Learn/HTML/Tables/Structuring_planet_data)
   - : In our table assessment, we provide you with some data on the planets in our solar system, and get you to structure it into an HTML table.

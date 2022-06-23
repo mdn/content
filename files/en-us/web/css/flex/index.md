@@ -53,6 +53,7 @@ flex: 2 2 10%;
 flex: inherit;
 flex: initial;
 flex: revert;
+flex: revert-layer;
 flex: unset;
 ```
 
@@ -60,7 +61,8 @@ The `flex` property may be specified using one, two, or three values.
 
 - **One-value syntax:** the value must be one of:
 
-  - a `<number>`: In this case it is interpreted as `flex: <number> 1 0`; the {{cssxref("flex-shrink")}} value is assumed to be 1 and the {{cssxref("flex-basis")}} value is assumed to be `0`.
+  - a `<number>`: In this case it is interpreted as `flex: <number> 1 0`; the {{cssxref("flex-shrink")}} value is assumed to be `1` and the {{cssxref("flex-basis")}} value is assumed to be `0`.
+  - a `<width>`: In this case it is interpreted as `flex: 1 1 <width>`; the {{cssxref("flex-grow")}} value is assumed to be `1` and the {{cssxref("flex-shrink")}} value is assumed to be `1`.
   - one of the keywords: `none`, `auto`, or `initial`.
 
 - **Two-value syntax:**
@@ -76,9 +78,9 @@ The `flex` property may be specified using one, two, or three values.
 
 - **Three-value syntax:** the values must be in the following order:
 
-  1.  a {{cssxref("&lt;number&gt;")}} for `<flex-grow>`.
-  2.  a {{cssxref("&lt;number&gt;")}} for `<flex-shrink>`.
-  3.  a valid value for {{cssxref("width")}} for `<flex-basis>`.
+  1. a {{cssxref("&lt;number&gt;")}} for `<flex-grow>`.
+  2. a {{cssxref("&lt;number&gt;")}} for `<flex-shrink>`.
+  3. a valid value for {{cssxref("width")}} for `<flex-basis>`.
 
 ### Values
 

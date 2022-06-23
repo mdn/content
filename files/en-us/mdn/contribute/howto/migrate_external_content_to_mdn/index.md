@@ -46,10 +46,10 @@ If the content is high quality and meets the above content type criteria, then i
 
 What follows is a sample workflow for migrating content onto MDN Web Docs. We migrated some W3C Payment Request code to MDN, as recorded in [this GitHub issue](https://github.com/w3c/payment-request-info/issues/4).
 
-1.  Identify the resource to be migrated.
-2.  Identify who owns the content, and talk to them and their associated community to make sure moving the content is not going to be a problem.
-3.  Identify an MDN Web Docs contact who can help you with the migration. If in doubt, [ask for help](/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
-4.  Looking at [our GitHub content repo](https://github.com/mdn/content), identify the location where the content should be put, making sure that it doesn't duplicate existing content (see above).
-5.  Move the content over, making changes as necessary so it fits MDN style.
-6.  Request a review from the MDN team/community
-7.  Redirect the old resource to the new location, as appropriate.
+1. Identify the resource to be migrated.
+2. Identify who owns the content, and talk to them and their associated community to make sure moving the content is not going to be a problem.
+3. Identify an MDN Web Docs contact who can help you with the migration. If in doubt, [ask for help](/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
+4. Looking at [our GitHub content repo](https://github.com/mdn/content), identify the location where the content should be put, making sure that it doesn't duplicate existing content (see above).
+5. Move the content over, making changes as necessary so it fits MDN style.
+6. Request a review from the MDN team/community
+7. Redirect the old resource to the new location, as appropriate.

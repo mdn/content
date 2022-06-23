@@ -1,10 +1,10 @@
 ---
 title: Request.cache
 slug: Web/API/Request/cache
+page-type: web-api-instance-property
 tags:
   - API
   - Cache
-  - Experimental
   - Fetch
   - Property
   - Reference
@@ -15,13 +15,7 @@ browser-compat: api.Request.cache
 
 The **`cache`** read-only property of the {{domxref("Request")}} interface contains the cache mode of the request. It controls how the request will interact with the browser's [HTTP cache](/en-US/docs/Web/HTTP/Caching).
 
-## Syntax
-
-```js
-var currentCacheMode = request.cache;
-```
-
-### Value
+## Value
 
 A `RequestCache` value. The available values are:
 
@@ -50,7 +44,7 @@ A `RequestCache` value. The available values are:
 
   The `"only-if-cached"` mode can only be used if the request's [`mode`](/en-US/docs/Web/API/Request/mode) is `"same-origin"`. Cached redirects will be followed if the request's `redirect` property is `"follow"` and the redirects do not violate the `"same-origin"` mode.
 
-## Example
+## Examples
 
 ```js
 // Download a resource with cache busting, to bypass the cache
@@ -84,7 +78,7 @@ fetch("some.json", {cache: "force-cache"})
 let controller = new AbortController();
 fetch("some.json", {cache: "only-if-cached", mode: "same-origin", signal: controller.signal})
   .catch(e => e instanceof TypeError && e.message === "Failed to fetch" ?
-    ({status: 504}) : // Workaround for chrome; which fails with a typeerror
+    ({status: 504}) : // Workaround for chrome; which fails with a TypeError
     Promise.reject(e))
   .then(res => {
     if (res.status === 504) {

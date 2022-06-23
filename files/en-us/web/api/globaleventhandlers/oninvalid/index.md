@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.oninvalid
 slug: Web/API/GlobalEventHandlers/oninvalid
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -30,8 +31,7 @@ var functionRef = target.oninvalid;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("Event")}} object as its sole
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("Event")}} object as its sole
 argument.
 
 ## Example
@@ -92,4 +92,4 @@ function submit(event) {
 ## See also
 
 - {{event("invalid")}} event
-- [DOM on-event handlers](/en-US/docs/Web/Guide/Events/Event_handlers)
+- [DOM on-event handlers](/en-US/docs/Web/Events/Event_handlers)

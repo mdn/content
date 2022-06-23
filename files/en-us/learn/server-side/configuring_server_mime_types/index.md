@@ -19,7 +19,7 @@ Examples of MIME types:
 - `text/markdown` for Markdown files.
 - `application/octet-stream` for binary files where user action is expected.
 
-Server default configurations vary wildly and set different _default_ MIME-type values for files with no defined content type.
+Server default configurations vary wildly and set different _default_ MIME-type values for files with no defined content type.
 
 Versions of the Apache Web Server **before 2.2.7** were configured to report a MIME type of `text/plain` or `application/octet-stream` for unknown content types. Modern versions of Apache report `none` for files with unknown content types.
 
@@ -31,7 +31,7 @@ As new content types are invented or added to web servers, web administrators ma
 
 If a web server or application reports an incorrect MIME type for content (including a "default type" for unknown content), a web browser has no way of knowing the author's intentions. This may cause unexpected behavior.
 
-Some web browsers, such as Internet Explorer, try to _guess_ the correct MIME type. This allows misconfigured web servers and applications to continue working for those browsers (but not other browsers that correctly implement the standard). Apart from violating the HTTP spec, this is a bad idea for a couple of other significant reasons:
+Some web browsers, such as Internet Explorer, try to _guess_ the correct MIME type. This allows misconfigured web servers and applications to continue working for those browsers (but not other browsers that correctly implement the standard). Apart from violating the HTTP spec, this is a bad idea for a couple of other significant reasons:
 
 - Loss of control
 
@@ -72,7 +72,7 @@ While browsers may support any, some, or all of these alternative MIME types, yo
 There are several ways to determine the correct MIME type value to be used to serve your content.
 
 - If your content was created using commercial software, read the vendor's documentation to see what MIME types should be reported for the application.
-- Look in IANA's [MIME Media Types registry](https://www.iana.org/assignments/media-types/index.html), which contains information on all registered MIME types.
+- Look in IANA's [MIME Media Types registry](https://www.iana.org/assignments/media-types/media-types.xhtml), which contains information on all registered MIME types.
 - Search for the file extension in [FILExt](https://filext.com/) or the [File extensions reference](https://www.file-extensions.org/) to see what MIME types are associated with that extension. Pay close attention as the application may have multiple MIME types that differ by only one letter.
 
 ## How to check the MIME type of received content
@@ -90,13 +90,13 @@ There are several ways to determine the correct MIME type value to be used to se
 
   - According to the standards, the `<meta>` element that specifies the MIME type should be ignored if there's a Content-Type header available.
 
-[IANA](https://www.iana.org/) keeps a list of registered [MIME Media Types](https://www.iana.org/assignments/media-types/index.html). The [HTTP specification](https://www.w3.org/Protocols/HTTP/1.1/spec.html) defines a superset of MIME types, which is used to describe the media types used on the web.
+[IANA](https://www.iana.org/) keeps a list of registered [MIME Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml). The [HTTP specification](https://www.w3.org/Protocols/rfc2616/rfc2616.html) defines a superset of MIME types, which is used to describe the media types used on the web.
 
 ## How to set up your server to send the correct MIME types
 
 The goal is to configure your server to send the correct {{HTTPHeader("Content-Type")}} header for each document.
 
-- If you're using the Apache web server, check the **_Media Types and Character Encodings_** section of [Apache Configuration: .htaccess](/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess) for examples of different document types and their corresponding MIME types.
+- If you're using the Apache web server, check the **_Media Types and Character Encodings_** section of [Apache Configuration: .htaccess](/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess) for examples of different document types and their corresponding MIME types.
 - If you're using Nginx, note that Nginx does not have a `.htaccess` equivalent tool, so all changes will go into the main configuration file.
 - If you're using a server-side script or framework to generate content, the way to indicate the content type will depend on the tool you're using. Check the framework or library's documentation.
 
@@ -106,15 +106,15 @@ Regardless of what server system you use, the effect you need to achieve is to s
 header('Content-Type: application/pdf')
 ```
 
-Trying to instead set it with just `header('application/pdf')` won’t work.
+Trying to instead set it with just `header('application/pdf')` won't work.
 
 ## Related Links
 
-- [IANA | MIME Media Types](https://www.iana.org/assignments/media-types/index.html)
-- [Hypertext Transfer Protocol — HTTP/1.1](https://www.w3.org/Protocols/HTTP/1.1/spec.html)
+- [IANA | MIME Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml)
+- [Hypertext Transfer Protocol — HTTP/1.1](https://www.w3.org/Protocols/rfc2616/rfc2616.html)
 - [MIME types (IANA media types)](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
 - [Apache vs Nginx: Practical Considerations](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations)
-- [Migrate Apache .htaccess to Nginx server block](https://barryvanveen.nl/blog/56-migrate-apache-htaccess-to-nginx-server-block)
-- [Microsoft - 293336 - INFO: WebCast: MIME Type Handling in Microsoft Internet Explorer](https://support.microsoft.com/default.aspx?sd=msdn&scid=kb;en-us;293336)
+- [Migrate Apache .htaccess to Nginx server block](https://barryvanveen.nl/articles/56-migrate-apache-htaccess-to-nginx-server-block)
+- [Microsoft - 293336 - INFO: WebCast: MIME Type Handling in Microsoft Internet Explorer](https://mskb.pkisolutions.com/kb/293336)
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

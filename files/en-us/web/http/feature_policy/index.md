@@ -13,6 +13,7 @@ tags:
   - delegation
   - header
   - permission
+browser-compat: http.headers.Feature-Policy
 ---
 {{HTTPSidebar}}
 
@@ -78,7 +79,7 @@ The current set of policy-controlled features fall into two broad categories:
 
 There are several policy-controlled features to help enforce best practices for providing good performance and user experiences.
 
-In most cases, the policy-controlled features represent functionality that when used will negatively impact the user experience. To avoid breaking existing web content, the default for such policy-controlled features is to allow the functionality to be used by all origins. Best practices are then enforced by using policies that disable the policy-controlled features. For more details see "Enforcing best practices for good user experiences".
+In most cases, the policy-controlled features represent functionality that when used will negatively impact the user experience. To avoid breaking existing web content, the default for such policy-controlled features is to allow the functionality to be used by all origins. Best practices are then enforced by using policies that disable the policy-controlled features. For more details see [Enforcing best practices for good user experiences](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy#enforcing_best_practices_for_good_user_experiences)
 
 The features include:
 
@@ -118,24 +119,22 @@ The features include (see [Features list](/en-US/docs/Web/HTTP/Headers/Feature-P
 ## Examples
 
 - [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
-- See [Feature Policy Demos](http://feature-policy-demos.appspot.com/) for example usage of many policies.
+- See [Feature Policy Demos](https://feature-policy-demos.appspot.com/) for example usage of many policies.
 
 ## Specifications
 
-| Specification                                                                                                    | Status                               | Comment                                                                                                                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("Feature Policy","#feature-policy-http-header-field","Feature-Policy")}} | {{Spec2("Feature Policy")}} | Initial definition. Defines the {{httpheader("Feature-Policy")}} header. Directives are defined in the specs for the features they control. See individual directive pages for details. |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("http.headers.Feature-Policy")}}
+{{Compat}}
 
 ## See also
 
 - [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
 - {{HTTPHeader("Feature-Policy")}} HTTP header
 - {{HTMLElement("iframe","<code>allow</code>","#Attributes")}} attribute on iframes
-- [Introduction to Feature Policy](https://developers.google.com/web/updates/2018/06/feature-policy)
-- [Feature policies on www.chromestatus.com](https://www.chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy)
+- [Introduction to Feature Policy](https://developer.chrome.com/blog/feature-policy/)
+- [Feature policies on www.chromestatus.com](https://chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy)
 - [Feature-Policy Tester (Chrome Developer Tools extension)](https://chrome.google.com/webstore/detail/feature-policy-tester-dev/pchamnkhkeokbpahnocjaeednpbpacop)
 - [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)

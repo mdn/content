@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onformdata
 slug: Web/API/GlobalEventHandlers/onformdata
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -15,7 +16,7 @@ browser-compat: api.GlobalEventHandlers.onformdata
 
 The **`onformdata`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
-processing {{domxref("HTMLFormElement/formdata_event", "formdata")}} events, fired after the entry list representing the
+processing {{domxref("HTMLFormElement/formdata_event", "formdata")}} events, fired after the entry list representing the
 form's data is constructed. This happens when the form is submitted, but can also be
 triggered by the invocation of a {{domxref("FormData.FormData", "FormData()")}}
 constructor. `onformdata` is available on {{domxref("HTMLFormElement")}}.
@@ -28,8 +29,7 @@ target.onformdata = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("FormDataEvent")}} object as its
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("FormDataEvent")}} object as its
 sole argument.
 
 ## Examples
@@ -56,12 +56,12 @@ formElem.onformdata = (e) => {
 
   // Get the form data from the event object
   let data = e.formData;
-  for (var value of data.values()) {
+  for (let value of data.values()) {
     console.log(value);
   }
 
   // submit the data via XHR
-  var request = new XMLHttpRequest();
+  const request = new XMLHttpRequest();
   request.open("POST", "/formHandler");
   request.send(data);
 };
@@ -77,8 +77,6 @@ formElem.onformdata = (e) => {
 
 ## See also
 
-- [`formdata`
-  event](/en-US/docs/Web/API/HTMLFormElement/formdata_event)
+- [`formdata` event](/en-US/docs/Web/API/HTMLFormElement/formdata_event)
 - {{domxref("FormDataEvent")}}
-- [Using FormData
-  Objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using FormData Objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)

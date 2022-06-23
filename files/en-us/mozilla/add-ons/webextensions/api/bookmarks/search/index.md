@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var searching = browser.bookmarks.search(
+let searching = browser.bookmarks.search(
   query                  // string or object
 )
 ```
@@ -37,7 +37,7 @@ var searching = browser.bookmarks.search(
 
     If `query` is a **string**, it consists of zero or more space-delimited search terms. Each search term matches if it is a substring in the bookmark's URL or title. Matching is case-insensitive. For a bookmark to match the query, all the query's search terms must be matched.
 
-    If `query` is an **object**, it consists of zero or more of 3 properties: `query`, `title`, and `url`, which are described below. For a bookmark to match the query, all the properties' terms must be matched.
+    If `query` is an **object**, it consists of zero or more of 3 properties: `query`, `title`, and `url`, which are described below. For a bookmark to match the query, all the properties' terms must be matched.
 
     - `query` {{optional_inline}}
       - : A {{jsxref("string")}} specifying one or more terms to match against; the format is identical to the string form of the `query` parameter. If this isn't a string, an exception is thrown.
@@ -71,7 +71,7 @@ function onRejected(error) {
   console.log(`An error: ${error}`);
 }
 
-var searching = browser.bookmarks.search({});
+let searching = browser.bookmarks.search({});
 
 searching.then(onFulfilled, onRejected);
 ```
@@ -92,7 +92,7 @@ function onRejected(error) {
 }
 
 function checkActiveTab(tab) {
-  var searching = browser.bookmarks.search({url: tab.url});
+  let searching = browser.bookmarks.search({url: tab.url});
   searching.then(onFulfilled, onRejected);
 }
 
@@ -105,7 +105,7 @@ browser.browserAction.onClicked.addListener(checkActiveTab);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-search) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-search) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

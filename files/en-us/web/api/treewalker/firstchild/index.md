@@ -1,6 +1,7 @@
 ---
 title: TreeWalker.firstChild()
 slug: Web/API/TreeWalker/firstChild
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -19,10 +20,18 @@ returns `null` and the current node is not changed.
 ## Syntax
 
 ```js
-node = treeWalker.firstChild;
+firstChild()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+A {{domxref("Node")}} object or `null`.
+
+## Examples
 
 ```js
 var treeWalker = document.createTreeWalker(

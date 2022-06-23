@@ -1,11 +1,11 @@
 ---
 title: InputEvent.dataTransfer
 slug: Web/API/InputEvent/dataTransfer
+page-type: web-api-instance-property
 tags:
   - API
   - DOM Events
   - DataTransfer
-  - Experimental
   - Input
   - InputEvent
   - Property
@@ -13,20 +13,14 @@ tags:
   - events
 browser-compat: api.InputEvent.dataTransfer
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`dataTransfer`** read-only property of the
 {{domxref("InputEvent")}} interface returns a {{domxref("DataTransfer")}} object
-containing information about richtext or plaintext data being added to or removed from
+containing information about richtext or plaintext data being added to or removed from
 editable content.
 
-## Syntax
-
-```js
-var dataTransfer = inputEvent.dataTransfer
-```
-
-### Value
+## Value
 
 A {{domxref("DataTransfer")}} object.
 
@@ -53,9 +47,8 @@ Try copying and pasting some of the content provided to see the effects.
 ```
 
 ```js
-var editable = document.querySelector('p[contenteditable]');
-var result = document.querySelector('.result')
-var dataTransferObj;
+const editable = document.querySelector('p[contenteditable]');
+const result = document.querySelector('.result')
 
 editable.addEventListener('input', (e) => {
   result.textContent = e.dataTransfer.getData('text/html');

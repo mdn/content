@@ -1,6 +1,7 @@
 ---
 title: CustomStateSet.entries()
 slug: Web/API/CustomStateSet/entries
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,14 +17,14 @@ The **`entries`** method of the {{domxref("CustomStateSet")}} interface returns 
 ## Syntax
 
 ```js
-CustomStateSet.entries()
+entries()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 A new iterator object that contains an array of `[value, value]` for each element in the `CustomStateSet`, in insertion order.
 
@@ -34,4 +35,3 @@ A new iterator object that contains an array of `[value, value]` for each elemen
 ## Browser compatibility
 
 {{Compat}}
-

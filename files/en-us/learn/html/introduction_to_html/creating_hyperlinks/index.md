@@ -58,11 +58,11 @@ Almost any web content can be converted to a link so that when clicked or otherw
 
 For example, the BBC homepage contains many links that point not only to multiple news stories, but also different areas of the site (navigation functionality), login/registration pages (user tools), and more.
 
-![frontpage of bbc.co.uk, showing many news items, and navigation menu functionality](updated-bbc-website.png)
+![front page of bbc.co.uk, showing many news items, and navigation menu functionality](updated-bbc-website.png)
 
 ## Anatomy of a link
 
-A basic link is created by wrapping the text or other content, see {{anch("Block level links")}}, inside an {{htmlelement("a")}} element and using the {{htmlattrxref("href", "a")}} attribute, also known as a **Hypertext Reference**, or **target**, that contains the web address.
+A basic link is created by wrapping the text or other content, see [Block level links](#block_level_links), inside an {{htmlelement("a")}} element and using the {{htmlattrxref("href", "a")}} attribute, also known as a **Hypertext Reference**, or **target**, that contains the web address.
 
 ```html
 <p>I'm creating a link to
@@ -77,7 +77,7 @@ I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/en-US/).
 ### Adding supporting information with the title attribute
 
 Another attribute you may want to add to your links is `title`.
-The title contains additional information about the link, such as which kind of information the page contains, or things to be aware of on the web site.
+The title contains additional information about the link, such as which kind of information the page contains, or things to be aware of on the website.
 
 ```html
 <p>I'm creating a link to
@@ -96,7 +96,7 @@ I'm creating a link to <a href="https://www.mozilla.org/en-US/" title="The best 
 
 ### Active learning: creating your own example link
 
-Create an HTML document using your local code editor and our [getting started template](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html).
+Create an HTML document using your local code editor and our [getting started template](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html).
 
 - Inside the HTML body, add one or more paragraphs or other types of content you already know about.
 - Change some of the content into links.
@@ -109,7 +109,7 @@ If you have an image you want to make into a link, use the {{htmlelement("a")}} 
 
 ```html
 <a href="https://www.mozilla.org/en-US/">
-  <img src="mozilla-image.png" alt="mozilla logo that links to the mozilla homepage">
+  <img src="mozilla-image.png" alt="mozilla logo that links to the Mozilla homepage">
 </a>
 ```
 
@@ -121,11 +121,11 @@ To fully understand link targets, you need to understand URLs and file paths. Th
 
 A URL, or Uniform Resource Locator is a string of text that defines where something is located on the Web. For example, Mozilla's English homepage is located at `https://www.mozilla.org/en-US/`.
 
-URLs use paths to find files. Paths specify where the file you're interested in is located in the filesystem. Let's look at an example of a directory structure, see the [creating-hyperlinks](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/creating-hyperlinks) directory.
+URLs use paths to find files. Paths specify where the file you're interested in is located in the filesystem. Let's look at an example of a directory structure, see the [creating-hyperlinks](https://github.com/mdn/learning-area/tree/main/html/introduction-to-html/creating-hyperlinks) directory.
 
 ![A simple directory structure. The parent directory is called creating-hyperlinks and contains two files called index.html and contacts.html, and two directories called projects and pdfs, which contain an index.html and a project-brief.pdf file, respectively](simple-directory.png)
 
-The **root** of this directory structure is called `creating-hyperlinks`. When working locally with a web site, you'll have one directory that contains the entire site. Inside the **root**, we have an `index.html` file and a `contacts.html`. In a real website, `index.html` would be our home page or landing page (a web page that serves as the entry point for a website or a particular section of a website.).
+The **root** of this directory structure is called `creating-hyperlinks`. When working locally with a website, you'll have one directory that contains the entire site. Inside the **root**, we have an `index.html` file and a `contacts.html`. In a real website, `index.html` would be our home page or landing page (a web page that serves as the entry point for a website or a particular section of a website.).
 
 There are also two directories inside our root — `pdfs` and `projects`. These each have a single file inside them — a PDF (`project-brief.pdf`) and an `index.html` file, respectively. Note that you can have two `index.html` files in one project, as long as they're in different filesystem locations. The second `index.html` would perhaps be the main landing page for project-related information.
 
@@ -179,14 +179,14 @@ You can even use the document fragment reference on its own to link to _another 
 Two terms you'll come across on the Web are **absolute URL** and **relative URL:**
 
 **absolute URL**: Points to a location defined by its absolute location on the web, including {{glossary("protocol")}} and {{glossary("domain name")}}.
-For example, if an `index.html` page is uploaded to a directory called `projects` that sits inside the **root** of a web server, and the web site's domain is `https://www.example.com`, the page would be available at `https://www.example.com/projects/index.html` (or even just `https://www.example.com/projects/`, as most web servers just look for a landing page such as `index.html` to load if it isn't specified in the URL.)
+For example, if an `index.html` page is uploaded to a directory called `projects` that sits inside the **root** of a web server, and the website's domain is `https://www.example.com`, the page would be available at `https://www.example.com/projects/index.html` (or even just `https://www.example.com/projects/`, as most web servers just look for a landing page such as `index.html` to load if it isn't specified in the URL.)
 
 An absolute URL will always point to the same location, no matter where it's used.
 
 **relative URL**: Points to a location that is _relative_ to the file you are linking from, more like what we looked at in the previous section.
 For example, if we wanted to link from our example file at `https://www.example.com/projects/index.html` to a PDF file in the same directory, the URL would just be the filename — `project-brief.pdf` — no extra information needed. If the PDF was available in a subdirectory inside `projects` called `pdfs`, the relative link would be `pdfs/project-brief.pdf` (the equivalent absolute URL would be `https://www.example.com/projects/pdfs/project-brief.pdf`.)
 
-A relative URL will point to different places depending on the actual location of the file you refer from — for example if we moved our `index.html` file out of the `projects` directory and into the **root** of the web site (the top level, not in any directories), the `pdfs/project-brief.pdf` relative URL link inside it would now point to a file located at `https://www.example.com/pdfs/project-brief.pdf`, not a file located at `https://www.example.com/projects/pdfs/project-brief.pdf`.
+A relative URL will point to different places depending on the actual location of the file you refer from — for example if we moved our `index.html` file out of the `projects` directory and into the **root** of the website (the top level, not in any directories), the `pdfs/project-brief.pdf` relative URL link inside it would now point to a file located at `https://www.example.com/pdfs/project-brief.pdf`, not a file located at `https://www.example.com/projects/pdfs/project-brief.pdf`.
 
 Of course, the location of the `project-brief.pdf` file and `pdfs` folder won't suddenly change because you moved the `index.html` file — this would make your link point to the wrong place, so it wouldn't work if clicked on. You need to be careful!
 
@@ -198,24 +198,24 @@ There are some best practices to follow when writing links. Let's look at these 
 
 It's easy to throw links up on your page. That's not enough. We need to make our links _accessible_ to all readers, regardless of their current context and which tools they prefer. For example:
 
-- Screenreader users like jumping around from link to link on the page, and reading links out of context.
+- Screen reader users like jumping around from link to link on the page, and reading links out of context.
 - Search engines use link text to index target files, so it is a good idea to include keywords in your link text to effectively describe what is being linked to.
 - Visual readers skim over the page rather than reading every word, and their eyes will be drawn to page features that stand out, like links. They will find descriptive link text useful.
 
 Let's look at a specific example:
 
-**Good** link text: [Download Firefox](https://firefox.com)
+**Good** link text: [Download Firefox](https://www.mozilla.org/en-US/firefox/new/?redirect_source=firefox-com)
 
 ```html example-good
-<p><a href="https://firefox.com/">
+<p><a href="https://www.mozilla.org/firefox/">
   Download Firefox
 </a></p>
 ```
 
-**Bad** link text: [Click here](https://firefox.com/) to download Firefox
+**Bad** link text: [Click here](https://www.mozilla.org/firefox/) to download Firefox
 
 ```html example-bad
-<p><a href="https://firefox.com/">
+<p><a href="https://www.mozilla.org/firefox/">
   Click here
 </a>
 to download Firefox</p>
@@ -268,14 +268,14 @@ When you are linking to a resource that's to be downloaded rather than opened in
 
 ## Active learning: creating a navigation menu
 
-For this exercise, we'd like you to link some pages together with a navigation menu to create a multi-page website. This is one common way in which a website is created — the same page structure is used on every page, including the same navigation menu, so when links are clicked it gives the impression that you are staying in the same place, and different content is being brought up.
+For this exercise, we'd like you to link some pages together with a navigation menu to create a multipage website. This is one common way in which a website is created — the same page structure is used on every page, including the same navigation menu, so when links are clicked it gives the impression that you are staying in the same place, and different content is being brought up.
 
-You'll need to make local copies of the following four pages, all in the same directory. For a complete file list, see the [navigation-menu-start](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-start) directory:
+You'll need to make local copies of the following four pages, all in the same directory. For a complete file list, see the [navigation-menu-start](https://github.com/mdn/learning-area/tree/main/html/introduction-to-html/navigation-menu-start) directory:
 
-- [index.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/navigation-menu-start/index.html)
-- [projects.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/navigation-menu-start/projects.html)
-- [pictures.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/navigation-menu-start/pictures.html)
-- [social.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/navigation-menu-start/social.html)
+- [index.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/navigation-menu-start/index.html)
+- [projects.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/navigation-menu-start/projects.html)
+- [pictures.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/navigation-menu-start/pictures.html)
+- [social.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/navigation-menu-start/social.html)
 
 You should:
 
@@ -290,7 +290,7 @@ The finished example should look similar to the following page:
 
 ![An example of a simple HTML navigation menu, with home, pictures, projects, and social menu items](navigation-example.png)
 
-> **Note:** If you get stuck, or aren't sure if you have got it right, you can check the [navigation-menu-marked-up](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up) directory to see the correct answer.
+> **Note:** If you get stuck, or aren't sure if you have got it right, you can check the [navigation-menu-marked-up](https://github.com/mdn/learning-area/tree/main/html/introduction-to-html/navigation-menu-marked-up) directory to see the correct answer.
 
 ## E-mail links
 
@@ -322,12 +322,12 @@ Here's an example that includes a cc, bcc, subject and body:
 </a>
 ```
 
-> **Note:** The values of each field must be URL-encoded, that is with non-printing characters (invisible characters like tabs, carriage returns, and page breaks) and spaces [percent-escaped](https://en.wikipedia.org/wiki/Percent-encoding).
+> **Note:** The values of each field must be URL-encoded with non-printing characters (invisible characters like tabs, carriage returns, and page breaks) and spaces [percent-escaped](https://en.wikipedia.org/wiki/Percent-encoding).
 > Also, note the use of the question mark (`?`) to separate the main URL from the field values, and ampersands (&) to separate each field in the `mailto:` URL.
 > This is standard URL query notation.
 > Read [The GET method](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data#the_get_method) to understand what URL query notation is more commonly used for.
 
-Here are a few other sample `mailto` URLs:
+Here are a few other sample `mailto` URLs:
 
 - <mailto:>
 - <mailto:nowhere@mozilla.org>
@@ -341,14 +341,14 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-That's it for links, for now anyway! You'll return to links later on in the course when you start to look at styling them. Next up for HTML, we'll return to text semantics and look at some more advanced/unusual features that you'll find useful — Advanced text formatting is your next stop.
+That's it for links, for now anyway! You'll return to links later on in the course when you start to look at styling them. Next up for HTML, we'll return to text semantics and look at some more advanced/unusual features that you'll find useful — [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting) is your next stop.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
 
 ## In this module
 
 - [Getting started with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [What’s in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [What's in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
 - [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
 - [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
 - [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)

@@ -1,6 +1,7 @@
 ---
 title: SVGFEDistantLightElement
 slug: Web/API/SVGFEDistantLightElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGFEDistantLightElement
 
 The **`SVGFEDistantLightElement`** interface corresponds to the {{SVGElement("feDistantLight")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

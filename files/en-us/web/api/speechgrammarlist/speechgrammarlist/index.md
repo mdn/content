@@ -1,6 +1,7 @@
 ---
 title: SpeechGrammarList()
 slug: Web/API/SpeechGrammarList/SpeechGrammarList
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -20,7 +21,7 @@ The **`SpeechGrammarList()`** constructor creates a new
 ## Syntax
 
 ```js
-var myGrammarList = new SpeechGrammarList();
+new SpeechGrammarList()
 ```
 
 ### Parameters
@@ -29,8 +30,7 @@ None.
 
 ## Examples
 
-In our simple [Speech
-color changer](https://github.com/mdn/web-speech-api/tree/master/speech-color-changer) example, we create a new `SpeechRecognition` object
+In our simple [Speech color changer](https://github.com/mdn/dom-examples/tree/master/web-speech-api/speech-color-changer) example, we create a new `SpeechRecognition` object
 instance using the {{domxref("SpeechRecognition.SpeechRecognition",
   "SpeechRecognition()")}} constructor, create a new {{domxref("SpeechGrammarList")}}, add
 our grammar string to it using the {{domxref("SpeechGrammarList.addFromString")}}

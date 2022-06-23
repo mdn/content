@@ -1,6 +1,7 @@
 ---
 title: DOMMatrixReadOnly.translate()
 slug: Web/API/DOMMatrixReadOnly/translate
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -31,7 +32,7 @@ DOMMatrix.translate(translateX, translateY, translateZ);
 
 ### Return value
 
-Returns a [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix "The DOMMatrix interface represents 4x4 matrices, suitable for 2D and 3D operations.")
+Returns a [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix)
 containing a new matrix being the result of the matrix being translated by the given
 vector. The original matrix is not modified.
 

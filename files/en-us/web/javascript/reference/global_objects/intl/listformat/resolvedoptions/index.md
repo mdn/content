@@ -18,6 +18,10 @@ returns a new object with properties reflecting the locale and style formatting
 options computed during the construction of the current {{jsxref("Intl.ListFormat")}}
 object.
 
+{{EmbedInteractiveExample("pages/js/intl-listformat-prototype-resolvedoptions.html")}}
+
+<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
+
 ## Syntax
 
 ```js
@@ -71,11 +75,7 @@ console.log(usedOptions.type);   // "conjunction" (the default value)
 ## See also
 
 - {{jsxref("Intl.ListFormat")}}
-- {{jsxref("Intl/NumberFormat/resolvedOptions",
-		"Intl.NumberFormat.prototype.resolvedOptions()")}}
-- {{jsxref("Intl/Collator/resolvedOptions",
-		"Intl.Collator.prototype.resolvedOptions()")}}
-- {{jsxref("Intl/DateTimeFormat/resolvedOptions",
-		"Intl.DateTimeFormat.prototype.resolvedOptions()")}}
-- {{jsxref("Intl/PluralRules/resolvedOptions",
-		"Intl.PluralRules.prototype.resolvedOptions()")}}
+- {{jsxref("Intl/NumberFormat/resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}
+- {{jsxref("Intl/Collator/resolvedOptions", "Intl.Collator.prototype.resolvedOptions()")}}
+- {{jsxref("Intl/DateTimeFormat/resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}
+- {{jsxref("Intl/PluralRules/resolvedOptions", "Intl.PluralRules.prototype.resolvedOptions()")}}

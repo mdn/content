@@ -99,7 +99,7 @@ It should mention the technologies and/or APIs that are being documented or disc
 This example of a summary is far too short.
 It leaves out too much information, such as what it means exactly to "stroke" text, where the text is drawn, and so forth.
 
-**`CanvasRenderingContext2D.strokeText()`** draws a string.
+> **`CanvasRenderingContext2D.strokeText()`** draws a string.
 
 ##### Example: Too long!
 
@@ -108,31 +108,31 @@ Too much detail is included, and the text delves too deeply into describing othe
 
 Instead, the summary should focus on the `strokeText()` method, and should refer to the appropriate guides where the other details are described.
 
-When called, the Canvas 2D API method **`CanvasRenderingContext2D.strokeText()`** strokes the characters in the specified string beginning at the coordinates specified, using the current pen color.
-In the terminology of computer graphics, "stroking" text means to draw the outlines of the glyphs in the string without filling in the contents of each character with color.
-
-The text is drawn using the context's current font as specified in the context's {{domxref("CanvasRenderingContext2D.font", "font")}} property.
-
-The placement of the text relative to the specified coordinates are determined by the context's `textAlign`, `textBaseline`, and `direction` properties.
-`textAlign` controls the placement of the string relative to the X coordinate specified; if the value is `"center"`, then the string is drawn starting at `x - (stringWidth / 2)`, placing the specified X-coordinate in the middle of the string.
-If the value is `"left"`, the string is drawn starting at the specified value of `x`.
-And if `textAlign` is `"right"`, the text is drawn such that it ends at the specified X-coordinate.
-
-(etc etc etc...)
-
-You can, optionally, provide a fourth parameter that lets you specify a maximum width for the string, in pixels.
-If you provide this parameter, the text is compressed horizontally or scaled (or otherwise adjusted) to fit inside a space that wide when being drawn.
-
-You can call the **`fillText()`** method to draw a string's characters as filled with color instead of only drawing the outlines of the characters.
+> When called, the Canvas 2D API method **`CanvasRenderingContext2D.strokeText()`** strokes the characters in the specified string beginning at the coordinates specified, using the current pen color.
+> In the terminology of computer graphics, "stroking" text means to draw the outlines of the glyphs in the string without filling in the contents of each character with color.
+>
+> The text is drawn using the context's current font as specified in the context's {{domxref("CanvasRenderingContext2D.font", "font")}} property.
+>
+> The placement of the text relative to the specified coordinates are determined by the context's `textAlign`, `textBaseline`, and `direction` properties.
+> `textAlign` controls the placement of the string relative to the X coordinate specified; if the value is `"center"`, then the string is drawn starting at `x - (stringWidth / 2)`, placing the specified X-coordinate in the middle of the string.
+> If the value is `"left"`, the string is drawn starting at the specified value of `x`.
+> And if `textAlign` is `"right"`, the text is drawn such that it ends at the specified X-coordinate.
+>
+> (etc etc etc...)
+>
+> You can, optionally, provide a fourth parameter that lets you specify a maximum width for the string, in pixels.
+> If you provide this parameter, the text is compressed horizontally or scaled (or otherwise adjusted) to fit inside a space that wide when being drawn.
+>
+> You can call the **`fillText()`** method to draw a string's characters as filled with color instead of only drawing the outlines of the characters.
 
 ##### Example: Much better!
 
 Here we see a much better overview for the `strokeText()` method.
 
-The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates.
-The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
-
-For more details and further examples, see {{SectionOnPage("/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Text")}} in the Learning Area as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+> The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates.
+> The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
+>
+> For more details and further examples, see {{SectionOnPage("/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Text")}} in the Learning Area as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
 #### Include all relevant examples
 
@@ -159,7 +159,7 @@ This makes documenting code incredibly powerful and flexible.
 #### Overly-short articles are hard to find
 
 If an article is "thin"—that is, too short—it may not be indexed properly (or at all) by search engines.
-As a rule of thumb, the article's body text should be at least 250–300 words.
+As a guiding principle, the article's body text should be at least 250–300 words.
 Don't artificially inflate a page, but treat this guideline as a minimum target length when possible.
 
 ### Headings
@@ -236,7 +236,7 @@ Use the **"Formatting Styles"** drop-down list to apply predefined styles to sel
 > **Warning:** Similarly, the **"Warning Box"** style creates warning boxes like this.
 
 Unless specifically instructed, _do not_ use the HTML `style` attribute to manually apply a style.
-If you can't do it using a predefined class, ask for help in the [MDN discussion forum](https://discourse.mozilla.org/c/mdn).
+If you can't do it using a predefined class, ask for help in the [MDN discussion forum](https://discourse.mozilla.org/c/mdn/236).
 
 ### Code sample style and formatting
 
@@ -276,7 +276,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 Use the {{HTMLElement("code")}} tags to mark up function names, variable names, and method names.
 For example: "the `frenchText()` function".
 
-**Method names should be followed by a pair of parentheses.** For example, `doSomethingUseful()`.
+**Method names should be followed by a pair of parentheses.** For example, `doSomethingUseful()`.
 The parentheses help differentiate methods from other code terms.
 
 #### Syntax highlighting
@@ -297,7 +297,7 @@ They also ensure correct linking to detailed documentation.
   - : Use "Inline Code" style to put attribute names in `code font`.
     Additionally, put them in **`bold face`** when the attribute is mentioned in association with an explanation of what it does, or the first time it is used in the article.
 - Attribute definitions
-  - : Use the [`htmlattrdef`](https://github.com/mdn/yari/tree/main/kumascript/macros/htmlattrdef.ejs)  macro (e.g., `\{{htmlattrdef("type")}})` for the definition term, so that it can be linked to from other pages easily by using the [`htmlattrxref`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs) macro (e.g., `\{{htmlattrxref("type","element")}}`) to reference attribute definitions.
+  - : Use the [`htmlattrdef`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs) macro (e.g., `\{{htmlattrdef("type")}})` for the definition term, so that it can be linked to from other pages easily by using the [`htmlattrxref`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs) macro (e.g., `\{{htmlattrxref("type","element")}}`) to reference attribute definitions.
 - Attribute values
   - : Use the "Inline Code" style to apply `<code>` to attribute values, and don't use quotation marks around string values, unless needed by the syntax of a code sample.
     **For example:** "When the `type` attribute of an `<input>` element is set to `email` or `tel` ..."
@@ -383,9 +383,9 @@ Use standard English capitalization rules in body text, and capitalize "World Wi
 
 Keyboard keys should use sentence-style capitalization, not all-caps capitalization.
 For example, "<kbd>Enter</kbd>" not "<kbd>ENTER</kbd>".
-The only exception is that you can use "<kbd>ESC</kbd>" to abbreviate the "<kbd>Escape</kbd>" key.
+The only exception is that you can use "<kbd>ESC</kbd>" to abbreviate the "<kbd>Escape</kbd>" key.
 
-Certain words should always be capitalized (such as trademarks which include capital letters), or words derived from the name of a person (unless it's being used within code, and code’s syntax requires lower-casing).
+Certain words should always be capitalized (such as trademarks which include capital letters), or words derived from the name of a person (unless it's being used within code, and code's syntax requires lower-casing).
 Some examples:
 
 - Boolean (named for English mathematician and logician {{interwiki("wikipedia", "George Boole")}})
@@ -520,7 +520,7 @@ There are a couple of reasons for this.
 Use American-English spelling.
 
 In general, use the first entry at [Dictionary.com](https://www.dictionary.com/), unless that entry is listed as a variant spelling or as being primarily used in a non-American form of English.
-For example, if you [look up "behaviour"](https://www.dictionary.com/browse/behaviour)(with a additional *u* added to the American standard form), you find the phrase "Chiefly British" followed by a link to the American standard form, ["behavior"](https://dictionary.reference.com/browse/behavior).
+For example, if you [look up "behaviour"](https://www.dictionary.com/browse/behaviour)(with a additional *u* added to the American standard form), you find the phrase "Chiefly British" followed by a link to the American standard form, ["behavior"](https://www.dictionary.com/browse/behavior).
 Do not use variant spellings.
 
 - **Correct**: localize, behavior

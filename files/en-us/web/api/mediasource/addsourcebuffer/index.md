@@ -1,6 +1,7 @@
 ---
 title: MediaSource.addSourceBuffer()
 slug: Web/API/MediaSource/addSourceBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -25,13 +26,13 @@ given {{Glossary("MIME type")}} and adds it to the `MediaSource`'s
 ## Syntax
 
 ```js
-var sourceBuffer = mediaSource.addSourceBuffer(mimeType);
+addSourceBuffer(mimeType)
 ```
 
 ### Parameters
 
 - `mimeType`
-  - : A {{domxref("DOMString")}} specifying the MIME type of the
+  - : A string specifying the MIME type of the
     {{domxref("SourceBuffer")}} to create and add to the {{domxref("MediaSource")}}.
 
 ### Return value
@@ -57,20 +58,18 @@ created and added to the media source.
     a new `SourceBuffer` using the given `mimeType` would result in
     an [unsupported configuration of `SourceBuffer`s](https://w3c.github.io/media-source/#sourcebuffer-configuration).
 
-## Example
+## Examples
 
-The following snippet is from a simple example written by Nick Desaulniers ([view the full demo
-live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download
-the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
+The following snippet is from a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
 
 ```js
-var assetURL = 'frag_bunny.mp4';
+const assetURL = 'frag_bunny.mp4';
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
-var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
+const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
 if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
-  var mediaSource = new MediaSource;
+  let mediaSource = new MediaSource;
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
   mediaSource.addEventListener('sourceopen', sourceOpen);
@@ -80,8 +79,8 @@ if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
 
 function sourceOpen (_) {
   //console.log(this.readyState); // open
-  var mediaSource = this;
-  var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+  let mediaSource = this;
+  let sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, function (buf) {
     sourceBuffer.addEventListener('updateend', function (_) {
       mediaSource.endOfStream();

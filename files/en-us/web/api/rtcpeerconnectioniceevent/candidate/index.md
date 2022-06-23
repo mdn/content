@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnectionIceEvent.candidate
 slug: Web/API/RTCPeerConnectionIceEvent/candidate
+page-type: web-api-instance-property
 tags:
   - Candidate
   - Negotiation
@@ -52,5 +53,5 @@ pc.onicecandidate = function( ev ) {
 
 ## See also
 
-- {{event("icecandidate")}}
+- {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}}
 - {{domxref("RTCPeerConnection")}}

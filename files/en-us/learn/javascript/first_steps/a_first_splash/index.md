@@ -45,7 +45,7 @@ We want to set really clear expectations here: You won't be expected to learn Ja
 
 ## Thinking like a programmer
 
-One of the hardest things to learn in programming is not the syntax you need to learn, but how to apply it to solve real world problems. You need to start thinking like a programmer — this generally involves looking at descriptions of what your program needs to do, working out what code features are needed to achieve those things, and how to make them work together.
+One of the hardest things to learn in programming is not the syntax you need to learn, but how to apply it to solve real world problems. You need to start thinking like a programmer — this generally involves looking at descriptions of what your program needs to do, working out what code features are needed to achieve those things, and how to make them work together.
 
 This requires a mixture of hard work, experience with the programming syntax, and practice — plus a bit of creativity. The more you code, the better you'll get at it. We can't promise that you'll develop "programmer brain" in five minutes, but we will give you plenty of opportunity to practice thinking like a programmer throughout the course.
 
@@ -65,36 +65,36 @@ Let's imagine your boss has given you the following brief for creating this game
 
 Upon looking at this brief, the first thing we can do is to start breaking it down into simple actionable tasks, in as much of a programmer mindset as possible:
 
-1.  Generate a random number between 1 and 100.
-2.  Record the turn number the player is on. Start it on 1.
-3.  Provide the player with a way to guess what the number is.
-4.  Once a guess has been submitted first record it somewhere so the user can see their previous guesses.
-5.  Next, check whether it is the correct number.
-6.  If it is correct:
+1. Generate a random number between 1 and 100.
+2. Record the turn number the player is on. Start it on 1.
+3. Provide the player with a way to guess what the number is.
+4. Once a guess has been submitted first record it somewhere so the user can see their previous guesses.
+5. Next, check whether it is the correct number.
+6. If it is correct:
 
-    1.  Display congratulations message.
-    2.  Stop the player from being able to enter more guesses (this would mess the game up).
-    3.  Display control allowing the player to restart the game.
+    1. Display congratulations message.
+    2. Stop the player from being able to enter more guesses (this would mess the game up).
+    3. Display control allowing the player to restart the game.
 
-7.  If it is wrong and the player has turns left:
+7. If it is wrong and the player has turns left:
 
-    1.  Tell the player they are wrong and whether their guess was too high or too low.
-    2.  Allow them to enter another guess.
-    3.  Increment the turn number by 1.
+    1. Tell the player they are wrong and whether their guess was too high or too low.
+    2. Allow them to enter another guess.
+    3. Increment the turn number by 1.
 
-8.  If it is wrong and the player has no turns left:
+8. If it is wrong and the player has no turns left:
 
-    1.  Tell the player it is game over.
-    2.  Stop the player from being able to enter more guesses (this would mess the game up).
-    3.  Display control allowing the player to restart the game.
+    1. Tell the player it is game over.
+    2. Stop the player from being able to enter more guesses (this would mess the game up).
+    3. Display control allowing the player to restart the game.
 
-9.  Once the game restarts, make sure the game logic and UI are completely reset, then go back to step 1.
+9. Once the game restarts, make sure the game logic and UI are completely reset, then go back to step 1.
 
 Let's now move forward, looking at how we can turn these steps into code, building up the example, and exploring JavaScript features as we go.
 
 ### Initial setup
 
-To begin this tutorial, we'd like you to make a local copy of the [number-guessing-game-start.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html) file ([see it live here](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html)). Open it in both your text editor and your web browser. At the moment you'll see a simple heading, paragraph of instructions and form for entering a guess, but the form won't currently do anything.
+To begin this tutorial, we'd like you to make a local copy of the [number-guessing-game-start.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html) file ([see it live here](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html)). Open it in both your text editor and your web browser. At the moment you'll see a simple heading, paragraph of instructions and form for entering a guess, but the form won't currently do anything.
 
 The place where we'll be adding all our code is inside the {{htmlelement("script")}} element at the bottom of the HTML:
 
@@ -176,7 +176,7 @@ Let's try that now. Save your code and refresh the page in your browser. Then go
 checkGuess();
 ```
 
-After pressing <kbd>Return</kbd>/<kbd>Enter</kbd>, you should see an alert come up that says `I am a placeholder`; we have defined a function in our code that creates an alert whenever we call it.
+After pressing <kbd>Return</kbd>/<kbd>Enter</kbd>, you should see an alert come up that says `I am a placeholder`; we have defined a function in our code that creates an alert whenever we call it.
 
 > **Note:** You'll learn a lot more about functions [later in the course](/en-US/docs/Learn/JavaScript/Building_blocks/Functions).
 
@@ -220,7 +220,7 @@ let name2 = 'Bingo';
 name2 = name2 + ' says hello!';
 ```
 
-When we are running true/false tests (for example inside conditionals — see {{anch("Conditionals", "below")}}) we use [comparison operators](/en-US/docs/Web/JavaScript/Reference/Operators). For example:
+When we are running true/false tests (for example inside conditionals — see [below](#conditionals)) we use [comparison operators](/en-US/docs/Web/JavaScript/Reference/Operators). For example:
 
 <table class="standard-table">
   <thead>
@@ -326,7 +326,7 @@ This is a lot of code — phew! Let's go through each section and explain what i
   guessCount === 1
   ```
 
-  If it is, we make the guesses paragraph's text content equal to `Previous guesses: `. If not, we don't.
+  If it is, we make the guesses paragraph's text content equal to `Previous guesses:`. If not, we don't.
 
 - Line 6 appends the current `userGuess` value onto the end of the `guesses` paragraph, plus a blank space so there will be a space between each guess shown.
 - The next block does a few checks:
@@ -339,7 +339,7 @@ This is a lot of code — phew! Let's go through each section and explain what i
 
 ### Events
 
-At this point we have a nicely implemented `checkGuess()` function, but it won't do anything because we haven't called it yet. Ideally we want to call it when the "Submit guess" button is pressed, and to do this we need to use an **event**. Events are things that happen in the browser — a button being clicked, a page loading, a video playing, etc. — in response to which we can run blocks of code. The constructs that listen out for the event happening are called **event listeners**, and the blocks of code that run in response to the event firing are called **event handlers**.
+At this point, we have a nicely implemented `checkGuess()` function, but it won't do anything because we haven't called it yet. Ideally, we want to call it when the "Submit guess" button is pressed, and to do this we need to use an **event**. Events are things that happen in the browser — a button being clicked, a page loading, a video playing, etc. — in response to which we can run blocks of code. **Event listeners** observe specific events and call **event handlers**, which are blocks of code that run in response to an event firing.
 
 Add the following line below your `checkGuess()` function:
 
@@ -477,10 +477,10 @@ Variables that don't contain references to form elements won't have `focus()` av
 
 Let's play with some browser objects a bit.
 
-1.  First of all, open up your program in a browser.
-2.  Next, open your [browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools), and make sure the JavaScript console tab is open.
-3.  Type `guessField` into the console and the console shows you that the variable contains an {{htmlelement("input")}} element. You'll also notice that the console autocompletes the names of objects that exist inside the execution environment, including your variables!
-4.  Now type in the following:
+1. First of all, open up your program in a browser.
+2. Next, open your [browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools), and make sure the JavaScript console tab is open.
+3. Type `guessField` into the console and the console shows you that the variable contains an {{htmlelement("input")}} element. You'll also notice that the console autocompletes the names of objects that exist inside the execution environment, including your variables!
+4. Now type in the following:
 
     ```js
     guessField.value = 'Hello';
@@ -488,8 +488,8 @@ Let's play with some browser objects a bit.
 
     The `value` property represents the current value entered into the text field. You'll see that by entering this command, we've changed the text in the text field!
 
-5.  Now try typing `guesses` into the console and pressing return. The console shows you that the variable contains a {{htmlelement("p")}} element.
-6.  Now try entering the following line:
+5. Now try typing `guesses` into the console and pressing return. The console shows you that the variable contains a {{htmlelement("p")}} element.
+6. Now try entering the following line:
 
     ```js
     guesses.value
@@ -497,13 +497,13 @@ Let's play with some browser objects a bit.
 
     The browser returns `undefined`, because paragraphs don't have the `value` property.
 
-7.  To change the text inside a paragraph, you need the {{domxref("Node.textContent", "textContent")}} property instead. Try this:
+7. To change the text inside a paragraph, you need the {{domxref("Node.textContent", "textContent")}} property instead. Try this:
 
     ```js
     guesses.textContent = 'Where is my paragraph?';
     ```
 
-8.  Now for some fun stuff. Try entering the below lines, one by one:
+8. Now for some fun stuff. Try entering the below lines, one by one:
 
     ```js
     guesses.style.backgroundColor = 'yellow';
@@ -516,7 +516,7 @@ Let's play with some browser objects a bit.
 
 ## Finished for now...
 
-So that's it for building the example. You got to the end — well done! Try your final code out, or [play with our finished version here](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). If you can't get the example to work, check it against the [source code](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html).
+So that's it for building the example. You got to the end — well done! Try your final code out, or [play with our finished version here](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). If you can't get the example to work, check it against the [source code](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html).
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
 

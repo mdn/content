@@ -13,9 +13,9 @@ The **`horiz-adv-x`** attribute indicates the horizontal advance after rendering
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("font")}}
-*   {{SVGElement("glyph")}}
-*   {{SVGElement("missing-glyph")}}
+- {{SVGElement("font")}}
+- {{SVGElement("glyph")}}
+- {{SVGElement("missing-glyph")}}
 
 ## font
 
@@ -44,8 +44,8 @@ For {{SVGElement("font")}} elements, `horiz-adv-x` specifies the default horizon
   </tbody>
 </table>
 
-*   `<number>`
-    *   : This value indicates the horizontal advance of the glyph.
+- `<number>`
+  - : This value indicates the horizontal advance of the glyph.
 
 ## glyph, missing-glyph
 
@@ -76,39 +76,12 @@ For {{SVGElement("glyph")}} and {{SVGElement("missing-glyph")}} elements, `horiz
   </tbody>
 </table>
 
-*   `<number>`
-    *   : This value indicates the horizontal advance of the glyph.
+- `<number>`
+  - : This value indicates the horizontal advance of the glyph.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "fonts.html#GlyphElementHorizAdvXAttribute", "horiz-adv-x for &lt;glyph&gt; and &lt;missing-glyph&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Initial definition for <code>&#x3C;glyph></code> and
-        <code>&#x3C;missing-glyph></code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "fonts.html#FontElementHorizAdvXAttribute", "horiz-adv-x for &lt;font&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;font></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -116,4 +89,4 @@ For {{SVGElement("glyph")}} and {{SVGElement("missing-glyph")}} elements, `horiz
 
 ## See also
 
-*   {{SVGAttr("vert-adv-y")}}
+- {{SVGAttr("vert-adv-y")}}

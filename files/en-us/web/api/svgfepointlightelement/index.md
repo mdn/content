@@ -1,6 +1,7 @@
 ---
 title: SVGFEPointLightElement
 slug: Web/API/SVGFEPointLightElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGFEPointLightElement
 
 The **`SVGFEPointLightElement`** interface corresponds to the {{SVGElement("fePointLight")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

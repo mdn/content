@@ -19,7 +19,7 @@ create a class that is a child of another class.
 ## Syntax
 
 ```js
-class ChildClass extends ParentClass { ... }
+class ChildClass extends ParentClass { /* ... */ }
 ```
 
 ## Description
@@ -27,8 +27,54 @@ class ChildClass extends ParentClass { ... }
 The `extends` keyword can be used to subclass custom classes as well as
 built-in objects.
 
-The `.prototype` of the extension must be an {{jsxref("Object")}} or
-{{jsxref("null")}}.
+Any constructor that can be called with `new` (that is, it has the `prototype` property) can be the candidate for the parent class.
+
+```js
+function OldStyleClass() {
+  this.someProperty = 1;
+}
+OldStyleClass.prototype.someMethod = function () {};
+
+class ChildClass extends OldStyleClass {}
+
+class ModernClass {
+  someProperty = 1;
+  someMethod() {}
+}
+
+class AnotherChildClass extends ModernClass {}
+```
+
+The `.prototype` of the `ParentClass` must be an {{jsxref("Object")}} or {{jsxref("null")}}.
+
+```js
+function ParentClass() {}
+ParentClass.prototype = 3;
+
+class ChildClass extends ParentClass {}
+// Uncaught TypeError: Class extends value does not have valid prototype property 3
+```
+
+> **Note:** You would rarely worry about this in practice, because a non-object `prototype` doesn't behave as it should anyway.
+>
+> ```js
+> function ParentClass() {}
+> ParentClass.prototype = 3;
+> console.log(Object.getPrototypeOf(new ParentClass()));
+> // Logs "[Object: null prototype] {}": not actually a number!
+> ```
+
+`extends` will set the prototype for both `ChildClass` and `ChildClass.prototype`.
+
+```js
+class ParentClass {}
+class ChildClass extends ParentClass {}
+
+// Allows inheritance of static properties
+Object.getPrototypeOf(ChildClass) === ParentClass;
+// Allows inheritance of instance properties
+Object.getPrototypeOf(ChildClass.prototype) === ParentClass.prototype;
+```
 
 ## Examples
 
@@ -56,9 +102,9 @@ class Square extends Polygon {
 
 ### Using extends with built-in objects
 
-This example extends the built-in {{jsxref("Date")}} object. This example is extracted
-from this [live
-demo](https://googlechrome.github.io/samples/classes-es6/index.html) [(source)](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html).
+This example extends the built-in {{jsxref("Date")}} object.
+This example is extracted from this [live demo](https://googlechrome.github.io/samples/classes-es6/index.html)
+[(source)](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html).
 
 ```js
 class myDate extends Date {
@@ -83,5 +129,4 @@ class myDate extends Date {
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - [constructor](/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
 - [super](/en-US/docs/Web/JavaScript/Reference/Operators/super)
-- [Anurag
-  Majumdar - Super & Extends in JavaScript](https://medium.com/beginners-guide-to-mobile-web-development/super-and-extends-in-javascript-es6-understanding-the-tough-parts-6120372d3420)
+- [Anurag Majumdar - Super & Extends in JavaScript](https://medium.com/beginners-guide-to-mobile-web-development/super-and-extends-in-javascript-es6-understanding-the-tough-parts-6120372d3420)

@@ -54,24 +54,24 @@ An entry in `GroupData.json` has the following structure:
 
 …where:
 
-* `"Name_of_the_API"`
-  * : This key is both an ID used by sidebar macros like `\{{APIRef("Name_of_the_API")}}` and the name displayed in the sidebar itself. Choose it wisely.
+- `"Name_of_the_API"`
+  - : This key is both an ID used by sidebar macros like `\{{APIRef("Name_of_the_API")}}` and the name displayed in the sidebar itself. Choose it wisely.
     > **Warning:** If you want to change the name displayed in the sidebar, you must edit all the pages displaying it.
-* `"overview"`
-  * : This is a list containing one page: the overview page, used as the link for the `"Name_of_the_API"` text. The value is the _title of the page_, and the page must be in the `web/api/`directory.
-* `"guides"`
-  * : This is a list of guides to display in the sidebar, in the given order. The values are _paths to the page_, starting with `/docs/`.
-* `"interfaces"`
-  * : This lists the interfaces that are part of the API.
-* `"methods"`
-  * : This lists the methods that are part of the API.
+- `"overview"`
+  - : This is a list containing one page: the overview page, used as the link for the `"Name_of_the_API"` text. The value is the _title of the page_, and the page must be in the `web/api/`directory.
+- `"guides"`
+  - : This is a list of guides to display in the sidebar, in the given order. The values are _paths to the page_, starting with `/docs/`.
+- `"interfaces"`
+  - : This lists the interfaces that are part of the API.
+- `"methods"`
+  - : This lists the methods that are part of the API.
     > **Note:** The methods of the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the tag `Method` is in the YAML header on that page.
-* `"properties"`
-  * : This lists the methods on other interfaces that are part of the API, like `navigator.xr` (a property that the WebXR API adds to the `navigator` object)
+- `"properties"`
+  - : This lists the methods on other interfaces that are part of the API, like `navigator.xr` (a property that the WebXR API adds to the `navigator` object)
     > **Note:** The properties of the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the tag `Property` is in the YAML header on that page.
-* `"events"`
-  * : This lists events of other interfaces that are part of the API. The values are the _title of the pages_ (that must reside under `Web/Events`)
-    > **Note:** The events targetting the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the tag `Event` (singular!) is in the YAML header on that page.
+- `"events"`
+  - : This lists events of other interfaces that are part of the API. The values are the _title of the pages_ (that must reside under `Web/Events`)
+    > **Note:** The events targeting the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the tag `Event` (singular!) is in the YAML header on that page.
 
 There are two other keys, `"dictionaries"` and `"callbacks"`, operating on the same principle. As we no longer document these entities in their own pages, their use is deprecated, and no new entry should be added to them (and we remove them little by little).
 
@@ -83,7 +83,7 @@ This file should be updated in the same PR where changes affecting the sidebar h
 
 To test your changes, check that the sidebar in the files in your PR displays all entries correctly.
 
-The `GroupData.json` file is located [here](https://github.com/mdn/content/tree/main/files/jsondata/GroupData.json) on Github.
+The `GroupData.json` file is located [here](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) on GitHub.
 
 ## InterfaceData: recording interface inheritance
 
@@ -114,7 +114,7 @@ The same PR adding a new interface that inherits from another one must update th
 
 To test your changes, check that the sidebars of each interface you edited in your PR display inheritance correctly.
 
-The `InterfaceData.json` file is located [here](https://github.com/mdn/content/tree/main/files/jsondata/InterfaceData.json) on Github.
+The `InterfaceData.json` file is located [here](https://github.com/mdn/content/blob/main/files/jsondata/InterfaceData.json) on GitHub.
 
 ## SpecData: Specification information
 
@@ -122,4 +122,4 @@ The `InterfaceData.json` file is located [here](https://github.com/mdn/content/t
 
 The `\{{SpecName}}` and `\{{Spec2}}` macros that we are removing use the `SpecData.json` file. We do not accept any further contributions to the `SpecData.json` file; instead, either try to insert a specification table, using the `\{{Specifications}}` macro, or try to hardcode the (good) link to the specification. Note that most of the time, mentioning or linking to a specification outside the _Specifications_ section is a sign of something not appropriately documented on MDN.
 
-The `SpecData.json` file is located [here](https://github.com/mdn/content/tree/main/files/jsondata/SpecData.json) on Github.
+The `SpecData.json` file is located [here](https://github.com/mdn/content/blob/main/files/jsondata/SpecData.json) on GitHub.

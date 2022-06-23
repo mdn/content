@@ -30,7 +30,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var creating = browser.windows.create(
+let creating = browser.windows.create(
   createData            // optional object
 )
 ```
@@ -43,10 +43,10 @@ var creating = browser.windows.create(
 
     - `allowScriptsToClose` {{optional_inline}}
 
-      - : `boolean`. When the window is opened, it will contain a single tab, or more than one tab if `url` is given and includes an array containing more than one URL. By default scripts running in these pages are not allowed to close their tab using [`window.close()`](/en-US/docs/Web/API/Window/close).  If you include `allowScriptsToClose` and set it to `true` , then this default behavior is changed, so scripts can close their tabs. Note that:
+      - : `boolean`. When the window is opened, it will contain a single tab, or more than one tab if `url` is given and includes an array containing more than one URL. By default scripts running in these pages are not allowed to close their tab using [`window.close()`](/en-US/docs/Web/API/Window/close).  If you include `allowScriptsToClose` and set it to `true` , then this default behavior is changed, so scripts can close their tabs. Note that:
 
         - this only applies to the tabs that were opened when the window was created. If the user opens more tabs in this window, then scripts will not be able to close those new tabs.
-        - if the url(s) given in `url` point to [extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages) (that is, they are pages included with this extension and loaded with the "moz-extension:" protocol) then scripts _are_ by default allowed to close those tabs.
+        - if the URL(s) given in `url` point to [extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages) (that is, they are pages included with this extension and loaded with the "moz-extension:" protocol) then scripts _are_ by default allowed to close those tabs.
 
     - `cookieStoreId` {{optional_inline}}
       - : `integer`. If present, specifies the `CookieStoreId` for all tabs that will be created when the window is opened.
@@ -91,7 +91,7 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  var creating = browser.windows.create({
+  let creating = browser.windows.create({
     url: ["https://developer.mozilla.org",
           "https://addons.mozilla.org"]
   });
@@ -111,7 +111,7 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  var creating = browser.windows.create({
+  let creating = browser.windows.create({
     tabId: tab.id
   });
   creating.then(onCreated, onError);
@@ -131,9 +131,9 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener((tab) => {
 
-  var popupURL = browser.extension.getURL("popup/popup.html");
+  let popupURL = browser.extension.getURL("popup/popup.html");
 
-  var creating = browser.windows.create({
+  let creating = browser.windows.create({
     url: popupURL,
     type: "popup",
     height: 200,
@@ -150,7 +150,7 @@ browser.browserAction.onClicked.addListener((tab) => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows#method-create) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/windows/#method-create) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

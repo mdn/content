@@ -1,6 +1,7 @@
 ---
 title: StyleSheetList.item()
 slug: Web/API/StyleSheetList/item
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,7 +17,7 @@ The **`item()`** method of the {{domxref("StyleSheetList")}} interface returns a
 ## Syntax
 
 ```js
-StyleSheetList.item(index);
+item(index)
 ```
 
 ### Parameters

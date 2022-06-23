@@ -1,6 +1,7 @@
 ---
 title: DragEvent
 slug: Web/API/DragEvent
+page-type: web-api-interface
 tags:
   - API
   - DragEvent
@@ -13,6 +14,8 @@ browser-compat: api.DragEvent
 The **`DragEvent`** interface is a {{domxref("Event","DOM event")}} that represents a drag and drop interaction. The user initiates a drag by placing a pointer device (such as a mouse) on the touch surface and then dragging the pointer to a new location (such as another DOM element). Applications are free to interpret a drag and drop interaction in an application-specific way.
 
 This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref("Event")}}.
+
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -28,37 +31,37 @@ Although this interface has a constructor, it is not possible to create a useful
 
 ## Event types
 
-- {{event('drag')}}
+- {{domxref("HTMLElement/drag_event", "drag")}}
   - : This event is fired when an element or text selection is being dragged.
-- {{event('dragend')}}
+- {{domxref("HTMLElement/dragend_event", "dragend")}}
   - : This event is fired when a drag operation is being ended (by releasing a mouse button or hitting the escape key).
-- {{event('dragenter')}}
+- {{domxref("HTMLElement/dragenter_event", "dragenter")}}
   - : This event is fired when a dragged element or text selection enters a valid drop target.
-- {{event('dragleave')}}
+- {{domxref("HTMLElement/dragleave_event", "dragleave")}}
   - : This event is fired when a dragged element or text selection leaves a valid drop target.
-- {{event('dragover')}}
-  - : This event is fired continuously when an element or text selection is being dragged and the mouse pointer is over a valid drop target (every 50 ms WHEN mouse is not moving ELSE much faster between 5 ms (slow movement) and 1ms (fast movement) approximately. This firing pattern is different than {{Event("mouseover")}} ).
-- {{event('dragstart')}}
+- {{domxref("HTMLElement/dragover_event", "dragover")}}
+  - : This event is fired continuously when an element or text selection is being dragged and the mouse pointer is over a valid drop target (every 50 ms WHEN mouse is not moving ELSE much faster between 5 ms (slow movement) and 1ms (fast movement) approximately. This firing pattern is different than {{Event("mouseover")}} ).
+- {{domxref("HTMLElement/dragstart_event", "dragstart")}}
   - : This event is fired when the user starts dragging an element or text selection.
-- {{event('drop')}}
+- {{domxref("HTMLElement/drop_event", "drop")}}
   - : This event is fired when an element or text selection is dropped on a valid drop target.
 
 ## GlobalEventHandlers
 
 - {{domxref('GlobalEventHandlers.ondrag')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{event('drag')}} event.
+  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{domxref("HTMLElement/drag_event", "drag")}} event.
 - {{domxref('GlobalEventHandlers.ondragend')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{event('dragend')}} event.
+  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{domxref("HTMLElement/dragend_event", "dragend")}} event.
 - {{domxref('GlobalEventHandlers.ondragenter')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{event('dragenter')}} event.
+  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{domxref("HTMLElement/dragenter_event", "dragenter")}} event.
 - {{domxref('GlobalEventHandlers.ondragleave')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{event('dragleave')}} event.
+  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{domxref("HTMLElement/dragleave_event", "dragleave")}} event.
 - {{domxref('GlobalEventHandlers.ondragover')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{event('dragover')}} event.
+  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{domxref("HTMLElement/dragover_event", "dragover")}} event.
 - {{domxref('GlobalEventHandlers.ondragstart')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{event('dragstart')}} event.
+  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event.
 - {{domxref('GlobalEventHandlers.ondrop')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{event('drop')}} event.
+  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{domxref("HTMLElement/drop_event", "drop")}} event.
 
 ## Example
 

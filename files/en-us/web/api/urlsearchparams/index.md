@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams
 slug: Web/API/URLSearchParams
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -15,7 +16,7 @@ browser-compat: api.URLSearchParams
 
 The **`URLSearchParams`** interface defines utility methods to work with the query string of a URL.
 
-An object implementing `URLSearchParams` can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure, for example the following two lines are equivalent:
+An object implementing `URLSearchParams` can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure to iterate over key/value pairs in the same order as they appear in the query string, for example the following two lines are equivalent:
 
 ```js
 for (const [key, value] of mySearchParams) {}
@@ -36,7 +37,7 @@ for (const [key, value] of mySearchParams.entries()) {}
 - {{domxref("URLSearchParams.delete()")}}
   - : Deletes the given search parameter, and its associated value, from the list of all search parameters.
 - {{domxref("URLSearchParams.entries()")}}
-  - : Returns an {{jsxref("Iteration_protocols","iterator")}} allowing iteration through all key/value pairs contained in this object.
+  - : Returns an {{jsxref("Iteration_protocols","iterator")}} allowing iteration through all key/value pairs contained in this object in the same order as they appear in the query string.
 - {{domxref("URLSearchParams.forEach()")}}
   - : Allows iteration through all values contained in this object via a callback function.
 - {{domxref("URLSearchParams.get()")}}
@@ -60,10 +61,10 @@ for (const [key, value] of mySearchParams.entries()) {}
 
 ```js
 const paramsString = 'q=URLUtils.searchParams&topic=api';
-let searchParams = new URLSearchParams(paramsString);
+const searchParams = new URLSearchParams(paramsString);
 
-//Iterate the search parameters.
-for (let p of searchParams) {
+// Iterating the search parameters
+for (const p of searchParams) {
   console.log(p);
 }
 
@@ -81,25 +82,27 @@ searchParams.toString();                 // "q=URLUtils.searchParams"
 
 ```js
 // Search parameters can also be an object
-let paramsObj = {foo: 'bar', baz: 'bar'};
-let searchParams = new URLSearchParams(paramsObj);
+const paramsObj = {foo: 'bar', baz: 'bar'};
+const searchParams = new URLSearchParams(paramsObj);
 
 searchParams.toString();                 // "foo=bar&baz=bar"
 searchParams.has('foo');                 // true
-searchParams.get('foo');                 // bar
+searchParams.get('foo');     
 ```
 
+### Duplicate search parameters
+
 ```js
-// Having duplicate parameters only returns the first value
-let paramStr = 'foo=bar&foo=baz';
-let searchParams = new URLSearchParams(paramStr);
+const paramStr = 'foo=bar&foo=baz';
+const searchParams = new URLSearchParams(paramStr);
 
 searchParams.toString();                 // "foo=bar&foo=baz"
 searchParams.has('foo');                 // true
-searchParams.get('foo');                 // bar
+searchParams.get('foo');                 // bar, only returns the first value
+searchParams.getAll('foo');              // ["bar", "baz"]
 ```
 
-### Gotchas
+### No URL parsing
 
 The `URLSearchParams` constructor does _not_ parse full URLs. However, it will strip an initial leading `?` off of a string, if present.
 
@@ -119,33 +122,46 @@ searchParams2.has('query'); // true
 
 const url = new URL('http://example.com/search?query=%40');
 const searchParams3 = new URLSearchParams(url.search);
-searchParams3.has('query') // true
+searchParams3.has('query'); // true
 ```
 
-It interprets `+` as a space
+### Preserving plus signs
+
+The `URLSearchParams` constructor interprets plus signs (`+`) as spaces, which might cause problems.
 
 ```js
-const base64 = btoa(String.fromCharCode(19, 224, 23, 64, 31, 128)); // base64 is "E+AXQB+A"
-const searchParams = new URLSearchParams('q=foo&bin=' + base64); // q=foo&bin=E+AXQB+A
-const getBin = searchParams.get('bin'); // "E AXQB A" + char is replaced by spaces
-btoa(atob(getBin)); // "EAXQBA==" no error thrown
-btoa(String.fromCharCode(16,5,208,4)) // "EAXQBA==" decodes to wrong binary value
-getBin.replace(/ /g, '+'); // "E+AXQB+A" is one solution
+const rawData = '\x13à\x17@\x1F\x80';
+const base64Data = btoa(rawData); // 'E+AXQB+A'
 
-// or use set to add the parameter, but this increases the query string length
-searchParams.set('bin2', base64) // "q=foo&bin=E+AXQB+A&bin2=E%2BAXQB%2BA" encodes + as %2B
-searchParams.get('bin2'); // "E+AXQB+A"
+const searchParams = new URLSearchParams(`bin=${base64Data}`); // 'bin=E+AXQB+A'
+const binQuery = searchParams.get('bin'); // 'E AXQB A', '+' is replaced by spaces
+
+console.log(atob(binQuery) === rawData); // false
 ```
 
-It doesn't distinguish between a parameter with nothing after the `=` and a parameter
-that doesn't have a `=` altogether.
+You can avoid this by encoding the data with the {{jsxref("encodeURIComponent", "encodeURIComponent()")}}.
 
 ```js
-const emptyVal = new URLSearchParams('foo=&bar=baz')
-emptyVal.get('foo') // returns ''
-const noEquals = new URLSearchParams('foo&bar=baz')
-noEquals.get('foo') // also returns ''
-noEquals.toString() // 'foo=&bar=baz'
+const rawData = '\x13à\x17@\x1F\x80';
+const base64Data = btoa(rawData); // 'E+AXQB+A'
+const encodedBase64Data = encodeURIComponent(base64Data); // 'E%2BAXQB%2BA'
+
+const searchParams = new URLSearchParams(`bin=${encodedBase64Data}`); // 'bin=E%2BAXQB%2BA'
+const binQuery = searchParams.get('bin'); // 'E+AXQB+A'
+
+console.log(atob(binQuery) === rawData); // true
+```
+
+### Empty value vs. no value
+
+`URLSearchParams` doesn't distinguish between a parameter with nothing after the `=`, and a parameter that doesn't have a `=` altogether.
+
+```js
+const emptyVal = new URLSearchParams('foo=&bar=baz');
+emptyVal.get('foo'); // returns ''
+const noEquals = new URLSearchParams('foo&bar=baz');
+noEquals.get('foo'); // also returns ''
+noEquals.toString(); // 'foo=&bar=baz'
 ```
 
 ## Specifications
@@ -158,6 +174,6 @@ noEquals.toString() // 'foo=&bar=baz'
 
 ## See also
 
-- A polyfill of `URLSearchParams` is available in [`core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- [Polyfill of `URLSearchParams` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - The {{domxref("URL")}} interface.
-- [Google Developers: Easy URL manipulation with URLSearchParams](https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en)
+- [Google Developers: Easy URL manipulation with URLSearchParams](https://developer.chrome.com/blog/urlsearchparams/)

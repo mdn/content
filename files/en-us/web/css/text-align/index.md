@@ -11,7 +11,7 @@ browser-compat: css.properties.text-align
 ---
 {{CSSRef}}
 
-The **`text-align`** [CSS](/en-US/docs/Web/CSS) property sets the horizontal alignment of the content inside a block element or table-cell box. This means it works like {{cssxref("vertical-align")}} but in the horizontal direction.
+The **`text-align`** [CSS](/en-US/docs/Web/CSS) property sets the horizontal alignment of the inline-level content inside a block element or table-cell box. This means it works like {{cssxref("vertical-align")}} but in the horizontal direction.
 
 {{EmbedInteractiveExample("pages/css/text-align.html")}}
 
@@ -40,6 +40,7 @@ text-align: -webkit-center;
 text-align: inherit;
 text-align: initial;
 text-align: revert;
+text-align: revert-layer;
 text-align: unset;
 ```
 
@@ -139,7 +140,7 @@ The inconsistent spacing between words created by justified text can be problema
 
 {{EmbedLiveSample("Centered_text","100%","100%")}}
 
-### Justify
+### Example using "justify"
 
 #### HTML
 
@@ -163,7 +164,7 @@ The inconsistent spacing between words created by justified text can be problema
 
 #### Result
 
-{{EmbedLiveSample("Justify","100%","100%")}}
+{{EmbedLiveSample('Example using "justify"',"100%","100%")}}
 
 ## Specifications
 

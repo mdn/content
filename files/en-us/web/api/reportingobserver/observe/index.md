@@ -1,6 +1,7 @@
 ---
 title: ReportingObserver.observe()
 slug: Web/API/ReportingObserver/observe
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -20,8 +21,16 @@ collecting reports in its report queue.
 ## Syntax
 
 ```js
-reportingObserverInstance.observe()
+observe()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

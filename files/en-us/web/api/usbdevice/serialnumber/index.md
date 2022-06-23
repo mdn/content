@@ -1,6 +1,7 @@
 ---
 title: USBDevice.serialNumber
 slug: Web/API/USBDevice/serialNumber
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - serialNumber
+  - Experimental
 browser-compat: api.USBDevice.serialNumber
 ---
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
@@ -18,13 +20,7 @@ The **`serialNumber`** read only property of the
 {{domxref("USBDevice")}} interface is the manufacturer-defined serial number for the
 specific USB device.
 
-## Syntax
-
-```js
-var serialNumber = USBDevice.serialNumber
-```
-
-### Value
+## Value
 
 The serial number for the specified USB device
 
