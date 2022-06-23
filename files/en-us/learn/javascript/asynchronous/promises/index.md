@@ -85,8 +85,8 @@ const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/
 
 fetchPromise.then( response => {
   const jsonPromise = response.json();
-  jsonPromise.then( json => {
-    console.log(json[0].name);
+  jsonPromise.then( data => {
+    console.log(data[0].name);
   });
 });
 ```
@@ -106,8 +106,8 @@ fetchPromise
   .then( response => {
     return response.json();
   })
-  .then( json => {
-    console.log(json[0].name);
+  .then( data => {
+    console.log(data[0].name);
   });
 ```
 
@@ -125,8 +125,8 @@ fetchPromise
     }
     return response.json();
   })
-  .then( json => {
-    console.log(json[0].name);
+  .then( data => {
+    console.log(data[0].name);
   });
 ```
 
@@ -152,8 +152,8 @@ fetchPromise
     }
     return response.json();
   })
-  .then( json => {
-    console.log(json[0].name);
+  .then( data => {
+    console.log(data[0].name);
   })
   .catch( error => {
     console.error(`Could not get products: ${error}`);
