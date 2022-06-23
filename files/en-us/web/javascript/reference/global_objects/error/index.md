@@ -174,27 +174,27 @@ See ["What's a good way to extend Error in JavaScript?"](https://stackoverflow.c
 class CustomError extends Error {
   constructor(foo = 'bar', ...params) {
     // Pass remaining arguments (including vendor specific ones) to parent constructor
-    super(...params)
+    super(...params);
 
     // Maintains proper stack trace for where our error was thrown (only available on V8)
     if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, CustomError)
+      Error.captureStackTrace(this, CustomError);
     }
 
-    this.name = 'CustomError'
+    this.name = 'CustomError';
     // Custom debugging information
-    this.foo = foo
-    this.date = new Date()
+    this.foo = foo;
+    this.date = new Date();
   }
 }
 
 try {
-  throw new CustomError('baz', 'bazMessage')
+  throw new CustomError('baz', 'bazMessage');
 } catch(e) {
-  console.error(e.name)    // CustomError
-  console.error(e.foo)     // baz
-  console.error(e.message) // bazMessage
-  console.error(e.stack)   // stacktrace
+  console.error(e.name);    // CustomError
+  console.error(e.foo);     // baz
+  console.error(e.message); // bazMessage
+  console.error(e.stack);   // stacktrace
 }
 ```
 
@@ -214,12 +214,14 @@ function CustomError(foo, message, fileName, lineNumber) {
   return instance;
 }
 
+Object.setPrototypeOf(CustomError, Error);
+
 CustomError.prototype = Object.create(Error.prototype, {
   constructor: {
-    value: Error,
+    value: CustomError,
     enumerable: false,
-    writable: true,
-    configurable: true
+    writable: false,
+    configurable: false
   }
 });
 
