@@ -151,7 +151,7 @@ if (navigator.mediaDevices) {
 }
 ```
 
-> **Note:** This code sample is inspired by the Web Dictaphone demo. Some lines have been omitted for brevity; [refer to the source](https://github.com/mdn/dom-examples/media/web-dictaphone/) for the complete code.
+> **Note:** This code sample is inspired by the Web Dictaphone demo. Some lines have been omitted for brevity; [refer to the source](https://github.com/mdn/dom-examples/tree/master/media/web-dictaphone) for the complete code.
 
 ## Specifications
 
