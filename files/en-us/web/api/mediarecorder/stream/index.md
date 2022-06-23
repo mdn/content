@@ -36,9 +36,9 @@ if (navigator.getUserMedia) {
 
       // Success callback
       function(stream) {
-           var mediaRecorder = new MediaRecorder(stream);
+           const mediaRecorder = new MediaRecorder(stream);
 
-           var myStream = mediaRecorder.stream;
+           const myStream = mediaRecorder.stream;
            console.log(myStream);
 
 ...

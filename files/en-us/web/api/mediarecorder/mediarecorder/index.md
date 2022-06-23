@@ -86,16 +86,16 @@ media data and save them to disk, they will be in an MP4 file).
 ```js
 ...
 if (navigator.mediaDevices.getUserMedia) {
-  var constraints = { audio: true, video: true };
-  var chunks = [];
+  const constraints = { audio: true, video: true };
+  const chunks = [];
 
-  var onSuccess = function(stream) {
-    var options = {
+  const onSuccess = function(stream) {
+    const options = {
       audioBitsPerSecond : 128000,
       videoBitsPerSecond : 2500000,
       mimeType : 'video/mp4'
     }
-    var mediaRecorder = new MediaRecorder(stream,options);
+    const mediaRecorder = new MediaRecorder(stream,options);
     m = mediaRecorder;
 
 ...
