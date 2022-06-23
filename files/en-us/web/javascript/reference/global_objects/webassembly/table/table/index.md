@@ -45,7 +45,7 @@ new WebAssembly.Table(tableDescriptor)
 ### Creating a new WebAssembly Table instance
 
 The following example creates a `WebAssembly.Table` instance with an initial size of 2
-elements. The `WebAssembly.Table` contents are populated using a WebAssembly module and are accessible using Javascript. When viewing the [live example](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html), open your developer console to display console logs from the code snippets below. 
+elements. The `WebAssembly.Table` contents are populated using a WebAssembly module and are accessible from JavaScript. When viewing the [live example](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html), open your developer console to display console log messages from the code snippets below.
 
 This example uses the following reference files: 
 1. `table2.html`:  An HTML file containing JavaScript that creates a `WebAssembly.Table` ([source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html))
@@ -60,7 +60,7 @@ const tbl = new WebAssembly.Table({
 });
 ```
 
-At this point, the table contains two null elements. We retrieve the index contents using {{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}}:
+We can retrieve the index contents using {{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}}:
 
 ```js
 console.log(tbl.length);  // a table with 2 elements
@@ -78,9 +78,7 @@ const importObject = {
 };
 ```
 
-Next, we load and instantiate a WebAssembly module. The `table2.wasm` module contains two functions:
-1. Return 42 and store this function in index 0 of the `importObject` table
-2. Return 83 and store function in index 1 of `importObject` table
+Next, we load and instantiate a WebAssembly module. The `table2.wasm` module defines a table containing two functions. The first function returns 42, and the second returns 83:
 
 ```wasm
 (module
@@ -91,7 +89,7 @@ Next, we load and instantiate a WebAssembly module. The `table2.wasm` module con
 )
 ```
 
-Instantiate `table2.wasm` using the {{jsxref("WebAssembly.instantiateStreaming()")}} method:  
+We instantiate `table2.wasm` using the {{jsxref("WebAssembly.instantiateStreaming()")}} method:
 
 ```js
 const instantiating = WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject);
@@ -112,7 +110,7 @@ instantiating.then(obj => {
 });
 ```
 
-This example shows that while we are creating and accessing the `WebAssembly.Table` from JavaScript, the same `Table` is visible and callable inside the WebAssembly instance.
+While we are creating and accessing the `WebAssembly.Table` from JavaScript, the same `Table` is also visible and callable inside the WebAssembly instance.
 
 ## Specifications
 
