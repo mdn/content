@@ -62,9 +62,9 @@ a.length = a.length - 1;         // set -1 to the length property
 
 let b = new Array(Math.pow(2, 32) - 1);
 b.length = b.length + 1;         // set 2^32 to the length property
-b.length = 2.5;                  // set an integer to the length property
+b.length = 2.5;                  // set the length property to a floating number
 
-let c = new Array(2.5);          // pass an integer
+let c = new Array(2.5);          // pass a floating number
 
 ```
 
