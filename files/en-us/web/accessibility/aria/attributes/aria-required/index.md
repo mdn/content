@@ -33,9 +33,10 @@ If a form contains both required and optional form elements, the required elemen
 The attribute should be added to the form-control role. If the user needs to fill in an email address [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role), include `aria-required="true"` on the textbox.
 
 ```html
-<div id="tbLabel">Email Address (required)</>
+<div id="tbLabel">Email Address *</>
 <div role="textbox" contenteditable aria-labelledby="tblabel" aria-required="true" id="email1"></div>
 ```
+> **Note:** A `required` attribute is unnecessary if a field already includes it in the label. Doing so results in screen readers reading the term `required` twice. 
 
 In this example, JavaScript must be used to prevent the containing form from being submitted if the textbox has no content.
 
