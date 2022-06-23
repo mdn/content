@@ -136,7 +136,7 @@ if (navigator.mediaDevices) {
       console.log("recorder stopped");
 
       deleteButton.onclick = function(e) {
-        evtTgt = e.target;
+        const evtTgt = e.target;
         evtTgt.parentNode.parentNode.removeChild(evtTgt.parentNode);
       }
     }
