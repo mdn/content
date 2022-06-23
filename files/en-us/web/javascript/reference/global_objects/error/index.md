@@ -205,25 +205,19 @@ try {
 ```js
 function CustomError(foo, message, fileName, lineNumber) {
   let instance = new Error(message, fileName, lineNumber);
-  instance.name = 'CustomError';
   instance.foo = foo;
-  Object.setPrototypeOf(instance, Object.getPrototypeOf(this));
+  Object.setPrototypeOf(instance, CustomError);
   if (Error.captureStackTrace) {
     Error.captureStackTrace(instance, CustomError);
   }
   return instance;
 }
 
-CustomError.prototype = Object.create(Error.prototype, {
-  constructor: {
-    value: CustomError,
-    enumerable: false,
-    writable: true,
-    configurable: true
-  }
-});
+Object.setPrototypeOf(CustomError.prototype, Error.prototype);
 
 Object.setPrototypeOf(CustomError, Error);
+
+CustomError.prototype.name = 'CustomError';
 
 try {
   throw new CustomError('baz', 'bazMessage');
