@@ -214,8 +214,6 @@ function CustomError(foo, message, fileName, lineNumber) {
   return instance;
 }
 
-Object.setPrototypeOf(CustomError, Error);
-
 CustomError.prototype = Object.create(Error.prototype, {
   constructor: {
     value: CustomError,
@@ -224,6 +222,8 @@ CustomError.prototype = Object.create(Error.prototype, {
     configurable: true
   }
 });
+
+Object.setPrototypeOf(CustomError, Error);
 
 try {
   throw new CustomError('baz', 'bazMessage');
