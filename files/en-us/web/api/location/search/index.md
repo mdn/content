@@ -33,8 +33,8 @@ const anchor = document.getElementById("myAnchor");
 const queryString = anchor.search; // Returns:'?q=123'
 
 // Further parsing:
-let params = new URLSearchParams(queryString);
-let q = parseInt(params.get("q")); // is the number 123
+const params = new URLSearchParams(queryString);
+const q = parseInt(params.get("q")); // is the number 123
 ```
 
 ## Specifications
