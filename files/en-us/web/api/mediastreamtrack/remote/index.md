@@ -22,7 +22,7 @@ is sourced remotely (that is, sourced by an {{domxref("RTCPeerConnection")}}), o
 ## Syntax
 
 ```js
-var bool = track.remote;
+const bool = track.remote;
 ```
 
 ## Browser compatibility

@@ -46,7 +46,7 @@ None ({{jsxref("undefined")}}).
 
 ```js
 for (i = 0; i < 10; i++) {
-  var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+  let sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
 }
 
 mediaSource.removeSourceBuffer(mediaSource.sourceBuffers[0]);
