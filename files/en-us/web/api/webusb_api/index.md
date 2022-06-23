@@ -83,8 +83,6 @@ navigator.usb.getDevices().then(devices => {
 
 {{Specifications}}
 
-## Browser compatibility
-
 ## See also
 
 - [Access USB Devices on the Web](https://web.dev/usb/)
