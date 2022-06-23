@@ -83,7 +83,7 @@ if (navigator.mediaDevices) {
   console.log('getUserMedia supported.');
 
   const constraints = { audio: true };
-  const chunks = [];
+  let chunks = [];
 
   navigator.mediaDevices.getUserMedia(constraints)
   .then(function(stream) {
