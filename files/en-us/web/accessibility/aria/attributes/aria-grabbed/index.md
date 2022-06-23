@@ -51,7 +51,7 @@ Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
 - HTML [Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - {{domxref('dataTransfer')}}
 - {{domxref('DataTransfer.dropEffect')}}
-- {{event("dragstart")}}
+- {{domxref("HTMLElement/dragstart_event", "dragstart")}}
 - [Accessible Drag and Drop](https://dev.opera.com/articles/accessible-drag-and-drop/) by Gez Lemon
 
 <section id="Quick_links">

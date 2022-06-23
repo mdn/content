@@ -1,6 +1,7 @@
 ---
 title: PushMessageData.json()
 slug: Web/API/PushMessageData/json
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

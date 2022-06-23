@@ -1,6 +1,7 @@
 ---
 title: ContentIndexEvent()
 slug: Web/API/ContentIndexEvent/ContentIndexEvent
+page-type: web-api-constructor
 tags:
   - Constructor
   - Content
@@ -30,7 +31,7 @@ new ContentIndexEvent(type, options)
   - : A string with the name of the event.
     It is case-sensitive and browsers always set it to `contentdelete`.
 - `options`
-  - : An object that,_in addition of the properties defined in {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}_, has the following properties:
+  - : An object that, _in addition of the properties defined in {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}_, has the following properties:
     - `id`
       - : The id of the indexed content you want the {{domxref("ContentIndex")}} object to remove.
 
@@ -62,9 +63,6 @@ ciEvent.id; // should return 'unique-content-id'
 
 ## See also
 
-- [An introductory article on the
-  Content Index API](https://web.dev/content-indexing-api/)
-- [An app which uses the Content Index API to list
-  and remove 'save for later' content](https://contentindex.dev/)
-- [Service Worker API, along with
-  information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)
+- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
+- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
+- [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

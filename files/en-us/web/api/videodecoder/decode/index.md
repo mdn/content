@@ -1,6 +1,7 @@
 ---
 title: VideoDecoder.decode()
 slug: Web/API/VideoDecoder/decode
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -26,7 +27,7 @@ decode(chunk)
 
 ### Return value
 
-{{jsxref("Undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

@@ -1,6 +1,7 @@
 ---
 title: BiquadFilterNode.frequency
 slug: Web/API/BiquadFilterNode/frequency
+page-type: web-api-instance-property
 tags:
   - API
   - BiquadFilterNode

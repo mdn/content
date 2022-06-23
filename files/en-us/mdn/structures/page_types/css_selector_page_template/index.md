@@ -93,17 +93,37 @@ The summary paragraph — start by naming the selector and saying what it does. 
 
 ## Examples
 
-Fill in a simple example that nicely shows a typical usage of the selector, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information).
+### A descriptive heading
 
-```css
-my code block
-```
+Each example must have an H3 heading (`###`) naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
 
-And/or include a list of links to useful code samples that live elsewhere:
+See our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information.
 
-- x
-- y
-- z
+> **Note:** Sometimes you will want to link to examples given on another page.
+>
+> **Scenario 1:** If you have some examples on this page and some more examples on another page:
+>
+> Include an H3 heading (`###`) for each example on this page and then a final H3 heading (`###`) with the text "More examples", under which you can link to the examples on other pages. For example:
+>
+>  ```md
+>  ## Examples
+>
+>  ### Using the fetch API
+>  ... example of Fetch
+>
+>  ### More examples
+>  ...links to more examples on other pages
+>  ```
+>
+> **Scenario 2:** If you _only_ have examples on another page and none on this page:
+>
+> Don't add any H3 headings; just add the links directly under the H2 heading "Examples". For example:
+>
+>  ```md
+>   ## Examples
+>
+>   For examples of this API, see [the page on fetch()](https://example.org).
+>
 
 ## Accessibility concerns
 

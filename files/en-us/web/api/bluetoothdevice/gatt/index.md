@@ -1,6 +1,7 @@
 ---
 title: BluetoothDevice.gatt
 slug: Web/API/BluetoothDevice/gatt
+page-type: web-api-instance-property
 tags:
   - API
   - BluetoothDevice

@@ -25,7 +25,9 @@ What this selector matches is defined in [HTML Standard §4.16.3 Pseudo-classes]
 
 ## Syntax
 
-{{csssyntax}}
+```
+:default
+```
 
 ## Examples
 

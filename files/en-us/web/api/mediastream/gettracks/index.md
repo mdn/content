@@ -1,6 +1,7 @@
 ---
 title: MediaStream.getTracks()
 slug: Web/API/MediaStream/getTracks
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

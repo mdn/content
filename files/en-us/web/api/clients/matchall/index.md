@@ -1,6 +1,7 @@
 ---
 title: Clients.matchAll()
 slug: Web/API/Clients/matchAll
+page-type: web-api-instance-method
 tags:
   - API
   - Clients

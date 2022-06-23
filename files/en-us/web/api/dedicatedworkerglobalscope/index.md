@@ -1,6 +1,7 @@
 ---
 title: DedicatedWorkerGlobalScope
 slug: Web/API/DedicatedWorkerGlobalScope
+page-type: web-api-interface
 tags:
   - API
   - DedicatedWorkerGlobalScope

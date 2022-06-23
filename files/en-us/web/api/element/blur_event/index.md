@@ -1,6 +1,7 @@
 ---
 title: 'Element: blur event'
 slug: Web/API/Element/blur_event
+page-type: web-api-event
 tags:
   - API
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: FetchEvent
 slug: Web/API/FetchEvent
+page-type: web-api-interface
 tags:
   - API
   - FetchEvent

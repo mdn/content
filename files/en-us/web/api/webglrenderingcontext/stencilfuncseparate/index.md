@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.stencilFuncSeparate()
 slug: Web/API/WebGLRenderingContext/stencilFuncSeparate
+page-type: web-api-instance-method
 tags:
   - API
   - Method

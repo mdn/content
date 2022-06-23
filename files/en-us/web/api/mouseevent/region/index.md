@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.region
 slug: Web/API/MouseEvent/region
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas

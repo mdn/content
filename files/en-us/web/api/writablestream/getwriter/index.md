@@ -1,6 +1,7 @@
 ---
 title: WritableStream.getWriter()
 slug: Web/API/WritableStream/getWriter
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -111,8 +112,7 @@ const writableStream = new WritableStream({
 sendMessage("Hello, world.", writableStream);
 ```
 
-You can find the full code in our [Simple writer
-example](https://mdn.github.io/dom-examples/streams/simple-writer/).
+You can find the full code in our [Simple writer example](https://mdn.github.io/dom-examples/streams/simple-writer/).
 
 ## Specifications
 

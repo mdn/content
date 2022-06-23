@@ -1,6 +1,7 @@
 ---
 title: Cache
 slug: Web/API/Cache
+page-type: web-api-interface
 tags:
   - API
   - Cache
@@ -62,8 +63,8 @@ In the code example, `caches` is a property of the {{domxref("ServiceWorkerGloba
 > **Note:** In Chrome, visit `chrome://inspect/#service-workers` and click on the "inspect" link below the registered service worker to view logging statements for the various actions the [`service-worker.js`](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) script is performing.
 
 ```js
-var CACHE_VERSION = 1;
-var CURRENT_CACHES = {
+const CACHE_VERSION = 1;
+const CURRENT_CACHES = {
   font: 'font-cache-v' + CACHE_VERSION
 };
 
@@ -71,7 +72,7 @@ self.addEventListener('activate', function(event) {
   // Delete all caches that aren't named in CURRENT_CACHES.
   // While there is only one cache in this example, the same logic will handle the case where
   // there are multiple versioned caches.
-  var expectedCacheNamesSet = new Set(Object.values(CURRENT_CACHES));
+  const expectedCacheNamesSet = new Set(Object.values(CURRENT_CACHES));
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
       return Promise.all(
@@ -151,7 +152,7 @@ self.addEventListener('fetch', function(event) {
 
 ### Cookies and Cache objects
 
-The [Fetch API](/en-US/docs/Web/API/Fetch_API) requires {{httpheader("Set-Cookie")}} headers to be stripped before returning a {{domxref("Response")}} object from {{domxref("fetch()")}}. So a `Response` stored in a `Cache` won't contain `Set-Cookie` headers, and therefore won’t cause any cookies to be stored.
+The [Fetch API](/en-US/docs/Web/API/Fetch_API) requires {{httpheader("Set-Cookie")}} headers to be stripped before returning a {{domxref("Response")}} object from {{domxref("fetch()")}}. So a `Response` stored in a `Cache` won't contain `Set-Cookie` headers, and therefore won't cause any cookies to be stored.
 
 ## Specifications
 

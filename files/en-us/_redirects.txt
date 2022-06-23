@@ -61,7 +61,6 @@
 /en-US/docs/ARIA/widgets	/en-US/docs/Web/Accessibility/ARIA/widgets
 /en-US/docs/ARIA/widgets/overview	/en-US/docs/Web/Accessibility/ARIA/widgets
 /en-US/docs/ARIA_Screen_Reader_Implementors_Guide	/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
-/en-US/docs/A_Basic_RayCaster	/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster
 /en-US/docs/A_re-introduction_to_JavaScript	/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 /en-US/docs/About_JavaScript	/en-US/docs/Web/JavaScript/About_JavaScript
 /en-US/docs/About_WOFF	/en-US/docs/Web/Guide/WOFF
@@ -478,7 +477,6 @@
 /en-US/docs/CSS/CSS_Reference/Webkit_Extensions	/en-US/docs/Web/CSS/Webkit_Extensions
 /en-US/docs/CSS/CSS_animated_properties	/en-US/docs/Web/CSS/CSS_animated_properties
 /en-US/docs/CSS/CSS_animations	/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
-/en-US/docs/CSS/CSS_animations/Detecting_CSS_animation_support	/en-US/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /en-US/docs/CSS/CSS_flex-wrap	/en-US/docs/Web/CSS/flex-wrap
 /en-US/docs/CSS/CSS_percentage_values	/en-US/docs/Web/CSS
 /en-US/docs/CSS/CSS_transform_functions	/en-US/docs/Web/CSS/transform
@@ -545,7 +543,6 @@
 /en-US/docs/CSS/Tutorial/Using_CSS_flexible_boxes	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /en-US/docs/CSS/Tutorials	/en-US/docs/Web/CSS/Tutorials
 /en-US/docs/CSS/Tutorials/Using_CSS_animations	/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
-/en-US/docs/CSS/Tutorials/Using_CSS_animations/Detecting_CSS_animation_support	/en-US/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /en-US/docs/CSS/Tutorials/Using_CSS_flexible_boxes	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /en-US/docs/CSS/Tutorials/Using_CSS_gradients	/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients
 /en-US/docs/CSS/Tutorials/Using_CSS_multiple_backgrounds	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
@@ -1125,7 +1122,6 @@
 /en-US/docs/Canvas/Text	/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /en-US/docs/Canvas:Text	/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /en-US/docs/Canvas_tutorial	/en-US/docs/Web/API/Canvas_API/Tutorial
-/en-US/docs/Canvas_tutorial/A_Basic_RayCaster	/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster
 /en-US/docs/Canvas_tutorial/Basic_animations	/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
 /en-US/docs/Canvas_tutorial/Pixel_manipulation_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 /en-US/docs/Canvas_tutorial:Basic_animations	/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
@@ -1211,7 +1207,7 @@
 /en-US/docs/DOM/DOMImplementation.createDocumentType	/en-US/docs/Web/API/DOMImplementation/createDocumentType
 /en-US/docs/DOM/DOMImplementation.createHTMLDocument	/en-US/docs/Web/API/DOMImplementation/createHTMLDocument
 /en-US/docs/DOM/DOMParser	/en-US/docs/Web/API/DOMParser
-/en-US/docs/DOM/DOMString	/en-US/docs/Web/API/DOMString
+/en-US/docs/DOM/DOMString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 /en-US/docs/DOM/DOMStringList	/en-US/docs/Web/API/DOMStringList
 /en-US/docs/DOM/DOMStringMap	/en-US/docs/Web/API/DOMStringMap
 /en-US/docs/DOM/DOMTimeStamp	/en-US/docs/Web/API/DOMTimeStamp
@@ -2137,7 +2133,7 @@
 /en-US/docs/DOM/window.mozAnimationStartTime	/en-US/docs/Web/API/Animation/startTime
 /en-US/docs/DOM/window.mozInnerScreenX	/en-US/docs/Web/API/Window/mozInnerScreenX
 /en-US/docs/DOM/window.mozInnerScreenY	/en-US/docs/Web/API/Window/mozInnerScreenY
-/en-US/docs/DOM/window.mozPaintCount	/en-US/docs/Web/API/Window/mozPaintCount
+/en-US/docs/DOM/window.mozPaintCount	/en-US/docs/Web/API/Window
 /en-US/docs/DOM/window.mozRequestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
 /en-US/docs/DOM/window.name	/en-US/docs/Web/API/Window/name
 /en-US/docs/DOM/window.navigator	/en-US/docs/Web/API/Window/navigator
@@ -2174,7 +2170,7 @@
 /en-US/docs/DOM/window.navigator.vendor	/en-US/docs/Web/API/Navigator/vendor
 /en-US/docs/DOM/window.navigator.vendorSub	/en-US/docs/Web/API/Navigator/vendorSub
 /en-US/docs/DOM/window.navigator.vibrate	/en-US/docs/Web/API/Navigator/vibrate
-/en-US/docs/DOM/window.onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
+/en-US/docs/DOM/window.onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/DOM/window.onafterprint	/en-US/docs/Web/API/Window/afterprint_event
 /en-US/docs/DOM/window.onbeforeprint	/en-US/docs/Web/API/Window/beforeprint_event
 /en-US/docs/DOM/window.onbeforeunload	/en-US/docs/Web/API/Window/beforeunload_event
@@ -2613,7 +2609,7 @@
 /en-US/docs/DOM:window.navigator.userAgent	/en-US/docs/Web/API/Navigator/userAgent
 /en-US/docs/DOM:window.navigator.vendor	/en-US/docs/Web/API/Navigator/vendor
 /en-US/docs/DOM:window.navigator.vendorSub	/en-US/docs/Web/API/Navigator/vendorSub
-/en-US/docs/DOM:window.onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
+/en-US/docs/DOM:window.onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/DOM:window.onbeforeunload	/en-US/docs/Web/API/Window/beforeunload_event
 /en-US/docs/DOM:window.onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
 /en-US/docs/DOM:window.onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
@@ -2744,7 +2740,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/DOMImplementation.createDocument	/en-US/docs/Web/API/DOMImplementation/createDocument
 /en-US/docs/Document_Object_Model_(DOM)/DOMImplementation.createDocumentType	/en-US/docs/Web/API/DOMImplementation/createDocumentType
 /en-US/docs/Document_Object_Model_(DOM)/DOMImplementation.createHTMLDocument	/en-US/docs/Web/API/DOMImplementation/createHTMLDocument
-/en-US/docs/Document_Object_Model_(DOM)/DOMString	/en-US/docs/Web/API/DOMString
+/en-US/docs/Document_Object_Model_(DOM)/DOMString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 /en-US/docs/Document_Object_Model_(DOM)/DOMStringList	/en-US/docs/Web/API/DOMStringList
 /en-US/docs/Document_Object_Model_(DOM)/DOMStringMap	/en-US/docs/Web/API/DOMStringMap
 /en-US/docs/Document_Object_Model_(DOM)/DOMTimeStamp	/en-US/docs/Web/API/DOMTimeStamp
@@ -3313,7 +3309,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.mozAnimationStartTime	/en-US/docs/Web/API/Animation/startTime
 /en-US/docs/Document_Object_Model_(DOM)/window.mozInnerScreenX	/en-US/docs/Web/API/Window/mozInnerScreenX
 /en-US/docs/Document_Object_Model_(DOM)/window.mozInnerScreenY	/en-US/docs/Web/API/Window/mozInnerScreenY
-/en-US/docs/Document_Object_Model_(DOM)/window.mozPaintCount	/en-US/docs/Web/API/Window/mozPaintCount
+/en-US/docs/Document_Object_Model_(DOM)/window.mozPaintCount	/en-US/docs/Web/API/Window
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator	/en-US/docs/Web/API/Window/navigator
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.appCodeName	/en-US/docs/Web/API/Navigator/appCodeName
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.appName	/en-US/docs/Web/API/Navigator/appName
@@ -3334,7 +3330,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.userAgent	/en-US/docs/Web/API/Navigator/userAgent
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.vendor	/en-US/docs/Web/API/Navigator/vendor
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.vendorSub	/en-US/docs/Web/API/Navigator/vendorSub
-/en-US/docs/Document_Object_Model_(DOM)/window.onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
+/en-US/docs/Document_Object_Model_(DOM)/window.onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onbeforeunload	/en-US/docs/Web/API/Window/beforeunload_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
 /en-US/docs/Document_Object_Model_(DOM)/window.onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
@@ -3644,7 +3640,6 @@
 /en-US/docs/HTML/CORS_Enabled_Image	/en-US/docs/Web/HTML/CORS_enabled_image
 /en-US/docs/HTML/CORS_settings_attributes	/en-US/docs/Web/HTML/Attributes/crossorigin
 /en-US/docs/HTML/Canvas	/en-US/docs/Web/API/Canvas_API
-/en-US/docs/HTML/Canvas/A_Basic_RayCaster	/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster
 /en-US/docs/HTML/Canvas/Drawing_Graphics_with_Canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/HTML/Canvas/Pixel_manipulation_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 /en-US/docs/HTML/Canvas/Tutorial	/en-US/docs/Web/API/Canvas_API/Tutorial
@@ -4613,7 +4608,7 @@
 /en-US/docs/JavaScript/Reference/Global_Objects/eval	/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval
 /en-US/docs/JavaScript/Reference/Global_Objects/isFinite	/en-US/docs/Web/JavaScript/Reference/Global_Objects/isFinite
 /en-US/docs/JavaScript/Reference/Global_Objects/isNaN	/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN
-/en-US/docs/JavaScript/Reference/Global_Objects/null	/en-US/docs/Web/JavaScript/Reference/Global_Objects/null
+/en-US/docs/JavaScript/Reference/Global_Objects/null	/en-US/docs/Web/JavaScript/Reference/Operators/null
 /en-US/docs/JavaScript/Reference/Global_Objects/parseFloat	/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat
 /en-US/docs/JavaScript/Reference/Global_Objects/parseInt	/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
 /en-US/docs/JavaScript/Reference/Global_Objects/undefined	/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined
@@ -4713,7 +4708,7 @@
 /en-US/docs/JavaScript/Strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
 /en-US/docs/JavaScript/Typed_arrays	/en-US/docs/Web/JavaScript/Typed_arrays
 /en-US/docs/JavaScript/Typed_arrays/ArrayBuffer	/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-/en-US/docs/JavaScript/Typed_arrays/ArrayBufferView	/en-US/docs/Web/API/ArrayBufferView
+/en-US/docs/JavaScript/Typed_arrays/ArrayBufferView	/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /en-US/docs/JavaScript/Typed_arrays/DataView	/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView
 /en-US/docs/JavaScript/Typed_arrays/Float32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array
 /en-US/docs/JavaScript/Typed_arrays/Float64Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array
@@ -5158,7 +5153,7 @@
 /en-US/docs/JavaScript_templates	/en-US/docs/Web/JavaScript/Reference/Template_literals
 /en-US/docs/JavaScript_typed_arrays	/en-US/docs/Web/JavaScript/Typed_arrays
 /en-US/docs/JavaScript_typed_arrays/ArrayBuffer	/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-/en-US/docs/JavaScript_typed_arrays/ArrayBufferView	/en-US/docs/Web/API/ArrayBufferView
+/en-US/docs/JavaScript_typed_arrays/ArrayBufferView	/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /en-US/docs/JavaScript_typed_arrays/DataView	/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView
 /en-US/docs/JavaScript_typed_arrays/Float32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array
 /en-US/docs/JavaScript_typed_arrays/Float64Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array
@@ -6391,7 +6386,6 @@
 /en-US/docs/SVG/Attribute/color-interpolation	/en-US/docs/Web/SVG/Attribute/color-interpolation
 /en-US/docs/SVG/Attribute/color-interpolation-filters	/en-US/docs/Web/SVG/Attribute/color-interpolation-filters
 /en-US/docs/SVG/Attribute/color-profile	/en-US/docs/Web/SVG/Attribute/color-profile
-/en-US/docs/SVG/Attribute/color-rendering	/en-US/docs/Web/SVG/Attribute/color-rendering
 /en-US/docs/SVG/Attribute/contentScriptType	/en-US/docs/Web/SVG/Attribute/contentScriptType
 /en-US/docs/SVG/Attribute/contentStyleType	/en-US/docs/Web/SVG/Attribute/contentStyleType
 /en-US/docs/SVG/Attribute/cursor	/en-US/docs/Web/SVG/Attribute/cursor
@@ -7244,7 +7238,7 @@
 /en-US/docs/Using_XPath	/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /en-US/docs/Using_an_External_Spell-checker	/en-US/docs/Mozilla/Firefox/Releases/3/Using_an_external_spell_checker
 /en-US/docs/Using_audio_and_video_in_Firefox	/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
-/en-US/docs/Using_files_from_web_applications	/en-US/docs/Web/API/File/Using_files_from_web_applications
+/en-US/docs/Using_files_from_web_applications	/en-US/docs/Web/API/File_API/Using_files_from_web_applications
 /en-US/docs/Using_flexbox	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /en-US/docs/Using_geolocation	/en-US/docs/Web/API/Geolocation_API
 /en-US/docs/Using_gradients	/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients
@@ -7343,6 +7337,7 @@
 /en-US/docs/Web/API/AnimationTimingEffectProperties/iterations	/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect
 /en-US/docs/Web/API/Apps.mgmt.addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/Web/API/Apps.mgmt.removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
+/en-US/docs/Web/API/ArrayBufferView	/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /en-US/docs/Web/API/AudioBuffer.copyFromChannel	/en-US/docs/Web/API/AudioBuffer/copyFromChannel
 /en-US/docs/Web/API/AudioBuffer.copyToChannel	/en-US/docs/Web/API/AudioBuffer/copyToChannel
 /en-US/docs/Web/API/AudioBuffer.duration	/en-US/docs/Web/API/AudioBuffer/duration
@@ -7562,6 +7557,7 @@
 /en-US/docs/Web/API/CSSFontLoading_API	/en-US/docs/Web/API/CSS_Font_Loading_API
 /en-US/docs/Web/API/CSSMatrix	/en-US/docs/Web/API/DOMMatrix
 /en-US/docs/Web/API/CSSOM	/en-US/docs/Web/API/CSS_Object_Model
+/en-US/docs/Web/API/CSSOMString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 /en-US/docs/Web/API/CSSRule.cssText	/en-US/docs/Web/API/CSSRule/cssText
 /en-US/docs/Web/API/CSSRule.parentStyleSheet	/en-US/docs/Web/API/CSSRule/parentStyleSheet
 /en-US/docs/Web/API/CSSStyleRule.selectorText	/en-US/docs/Web/API/CSSStyleRule/selectorText
@@ -7580,6 +7576,7 @@
 /en-US/docs/Web/API/CanvasCaptureMediaStream/canvas	/en-US/docs/Web/API/CanvasCaptureMediaStreamTrack/canvas
 /en-US/docs/Web/API/CanvasCaptureMediaStream/requestFrame	/en-US/docs/Web/API/CanvasCaptureMediaStreamTrack/requestFrame
 /en-US/docs/Web/API/CanvasGradient.addColorStop	/en-US/docs/Web/API/CanvasGradient/addColorStop
+/en-US/docs/Web/API/CanvasImageSource	/en-US/docs/Web/API/CanvasRenderingContext2D
 /en-US/docs/Web/API/CanvasPattern.setTransform	/en-US/docs/Web/API/CanvasPattern/setTransform
 /en-US/docs/Web/API/CanvasPixelArray	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 /en-US/docs/Web/API/CanvasRenderingContext2D.arc	/en-US/docs/Web/API/CanvasRenderingContext2D/arc
@@ -7751,6 +7748,8 @@
 /en-US/docs/Web/API/DOMPointInit/z	/en-US/docs/web/api/DOMPoint/z
 /en-US/docs/Web/API/DOMPointReadOnly/DOMPoint.x	/en-US/docs/Web/API/DOMPointReadOnly/x
 /en-US/docs/Web/API/DOMReadOnlyMatrix	/en-US/docs/Web/API/DOMMatrixReadOnly
+/en-US/docs/Web/API/DOMString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+/en-US/docs/Web/API/DOMString/binary	/en-US/docs/Web/API/btoa
 /en-US/docs/Web/API/DOMTokenList/DOMTokenList.add()	/en-US/docs/Web/API/DOMTokenList/add
 /en-US/docs/Web/API/DataTransfer/clearData()	/en-US/docs/Web/API/DataTransfer/clearData
 /en-US/docs/Web/API/DataTransfer/getData()	/en-US/docs/Web/API/DataTransfer/getData
@@ -7819,8 +7818,9 @@
 /en-US/docs/Web/API/Document/mozCancelFullScreen	/en-US/docs/Web/API/Document/exitFullscreen
 /en-US/docs/Web/API/Document/mozFullScreenElement	/en-US/docs/Web/API/Document/fullscreenElement
 /en-US/docs/Web/API/Document/mozFullScreenEnabled	/en-US/docs/Web/API/Document/fullscreenEnabled
+/en-US/docs/Web/API/Document/msthumbnailclick	/en-US/docs/Web/API/Document/msthumbnailclick_event
 /en-US/docs/Web/API/Document/namespaceURI	/en-US/docs/Web/API/Element/namespaceURI
-/en-US/docs/Web/API/Document/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
+/en-US/docs/Web/API/Document/onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Web/API/Document/onafterscriptexecute	/en-US/docs/Web/API/Document/afterscriptexecute_event
 /en-US/docs/Web/API/Document/onbeforescriptexecute	/en-US/docs/Web/API/Document/beforescriptexecute_event
 /en-US/docs/Web/API/Document/onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
@@ -8007,6 +8007,7 @@
 /en-US/docs/Web/API/File.name	/en-US/docs/Web/API/File/name
 /en-US/docs/Web/API/File.size	/en-US/docs/Web/API/Blob/size
 /en-US/docs/Web/API/File.type	/en-US/docs/Web/API/Blob/type
+/en-US/docs/Web/API/File/Using_files_from_web_applications	/en-US/docs/Web/API/File_API/Using_files_from_web_applications
 /en-US/docs/Web/API/File/fileName	/en-US/docs/Web/API/File/name
 /en-US/docs/Web/API/File/fileSize	/en-US/docs/Web/API/Blob/size
 /en-US/docs/Web/API/File/size	/en-US/docs/Web/API/Blob/size
@@ -8053,6 +8054,7 @@
 /en-US/docs/Web/API/FontFaceSet/onloading	/en-US/docs/Web/API/FontFaceSet/loading_event
 /en-US/docs/Web/API/FontFaceSet/onloadingdone	/en-US/docs/Web/API/FontFaceSet/loadingdone_event
 /en-US/docs/Web/API/FontFaceSet/onloadingerror	/en-US/docs/Web/API/FontFaceSet/loadingerror_event
+/en-US/docs/Web/API/FormDataEntryValue	/en-US/docs/Web/API/FormData
 /en-US/docs/Web/API/FullscreenOptions	/en-US/docs/Web/API/Element/requestFullScreen
 /en-US/docs/Web/API/FullscreenOptions/navigationUI	/en-US/docs/Web/API/Element/requestFullScreen
 /en-US/docs/Web/API/GLbitfield	/en-US/docs/Web/API/WebGL_API/Types
@@ -8089,7 +8091,7 @@
 /en-US/docs/Web/API/Geolocation/Using_geolocation	/en-US/docs/Web/API/Geolocation_API
 /en-US/docs/Web/API/Geolocation_API/Using	/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
 /en-US/docs/Web/API/GlobalEventHandlers.click	/en-US/docs/Web/API/Element/click_event
-/en-US/docs/Web/API/GlobalEventHandlers.onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
+/en-US/docs/Web/API/GlobalEventHandlers.onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Web/API/GlobalEventHandlers.onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
 /en-US/docs/Web/API/GlobalEventHandlers.onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
 /en-US/docs/Web/API/GlobalEventHandlers.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
@@ -8113,10 +8115,10 @@
 /en-US/docs/Web/API/GlobalEventHandlers.onsubmit	/en-US/docs/Web/API/GlobalEventHandlers/onsubmit
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHanders.ontouchmove	/en-US/docs/Web/API/GlobalEventHandlers/ontouchmove
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oncancel	/en-US/docs/Web/API/GlobalEventHandlers/oncancel
-/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oncanplay	/en-US/docs/Web/API/GlobalEventHandlers/oncanplay
-/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oncanplaythrough	/en-US/docs/Web/API/GlobalEventHandlers/oncanplaythrough
+/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oncanplay	/en-US/docs/Web/API/HTMLMediaElement/canplay_event
+/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oncanplaythrough	/en-US/docs/Web/API/HTMLMediaElement/canplaythrough_event
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oncuechange	/en-US/docs/Web/API/TextTrack/cuechange_event
-/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.ondurationchange	/en-US/docs/Web/API/GlobalEventHandlers/ondurationchange
+/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.ondurationchange	/en-US/docs/Web/API/HTMLMediaElement/durationchange_event
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onemptied	/en-US/docs/Web/API/GlobalEventHandlers/onemptied
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onended	/en-US/docs/Web/API/GlobalEventHandlers/onended
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oninvalid	/en-US/docs/Web/API/GlobalEventHandlers/oninvalid
@@ -8130,8 +8132,12 @@
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay	/en-US/docs/Web/API/GlobalEventHandlers/onplay
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.ontouchend	/en-US/docs/Web/API/GlobalEventHandlers/ontouchend
 /en-US/docs/Web/API/GlobalEventHandlers/dragexit_event	/en-US/docs/Web/API/Document/dragleave_event
+/en-US/docs/Web/API/GlobalEventHandlers/onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
+/en-US/docs/Web/API/GlobalEventHandlers/oncanplay	/en-US/docs/Web/API/HTMLMediaElement/canplay_event
+/en-US/docs/Web/API/GlobalEventHandlers/oncanplaythrough	/en-US/docs/Web/API/HTMLMediaElement/canplaythrough_event
 /en-US/docs/Web/API/GlobalEventHandlers/oncuechange	/en-US/docs/Web/API/TextTrack/cuechange_event
 /en-US/docs/Web/API/GlobalEventHandlers/ondragexit	/en-US/docs/Web/API/GlobalEventHandlers/ondragleave
+/en-US/docs/Web/API/GlobalEventHandlers/ondurationchange	/en-US/docs/Web/API/HTMLMediaElement/durationchange_event
 /en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenchange	/en-US/docs/Web/API/Document/fullscreenchange_event
 /en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenerror	/en-US/docs/Web/API/Document/fullscreenerror_event
 /en-US/docs/Web/API/GlobalEventHandlers/onpointerdown/drag	/en-US/docs/Web/API/GlobalEventHandlers/ondrag
@@ -8193,7 +8199,7 @@
 /en-US/docs/Web/API/HTMLElement/HTMLElement.accessKey	/en-US/docs/Web/API/HTMLElement/accessKey
 /en-US/docs/Web/API/HTMLElement/forceSpellCheck	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/Web/API/HTMLElement/invalid_event	/en-US/docs/Web/API/HTMLInputElement/invalid_event
-/en-US/docs/Web/API/HTMLElement/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
+/en-US/docs/Web/API/HTMLElement/onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Web/API/HTMLElement/onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
 /en-US/docs/Web/API/HTMLElement/onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
 /en-US/docs/Web/API/HTMLElement/onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
@@ -8560,9 +8566,13 @@
 /en-US/docs/Web/API/MIDIAccess/onstatechange	/en-US/docs/Web/API/MIDIAccess/statechange_event
 /en-US/docs/Web/API/MIDIInput/onmidimessage	/en-US/docs/Web/API/MIDIInput/midimessage_event
 /en-US/docs/Web/API/MIDIPort/onstatechange	/en-US/docs/Web/API/MIDIPort/statechange_event
+/en-US/docs/Web/API/MSCandidateWindowHide	/en-US/docs/Web/API/HTMLElement/mscandidatewindowhide_event
+/en-US/docs/Web/API/MSCandidateWindowShow	/en-US/docs/Web/API/HTMLElement/mscandidatewindowshow_event
+/en-US/docs/Web/API/MSCandidateWindowUpdate	/en-US/docs/Web/API/HTMLElement/mscandidatewindowupdate_event
 /en-US/docs/Web/API/MSContentZoom	/en-US/docs/Web/API/Element/msContentZoom_event
 /en-US/docs/Web/API/MSLaunchUri	/en-US/docs/Web/API/Navigator/msLaunchUri
 /en-US/docs/Web/API/MSManipulationStateChanged	/en-US/docs/Web/API/Element/MSManipulationStateChanged_event
+/en-US/docs/Web/API/MSRangeCollection	/en-US/docs/Web/API/Element/msGetRegionContent
 /en-US/docs/Web/API/MediaCapabilities/MediaCapabilitiesInfo	/en-US/docs/Web/API/MediaCapabilities
 /en-US/docs/Web/API/MediaCapabilitiesInfo	/en-US/docs/Web/API/MediaCapabilities/encodingInfo
 /en-US/docs/Web/API/MediaCapabilities_API	/en-US/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API
@@ -8692,12 +8702,21 @@
 /en-US/docs/Web/API/MsAudioDeviceType	/en-US/docs/Web/API/HTMLAudioElement/msAudioDeviceType
 /en-US/docs/Web/API/MsClearEffects	/en-US/docs/Web/API/HTMLMediaElement/msClearEffects
 /en-US/docs/Web/API/MsExtendedCode	/en-US/docs/Web/API/MediaError/msExtendedCode
+/en-US/docs/Web/API/MsFirstPaint	/en-US/docs/Web/API/PerformanceTiming/MsFirstPaint
+/en-US/docs/Web/API/MsGraphicsTrustStatus	/en-US/docs/Web/API/HTMLMediaElement/msGraphicsTrustStatus
 /en-US/docs/Web/API/MsHorizontalMirror	/en-US/docs/Web/API/HTMLVideoElement/msHorizontalMirror
 /en-US/docs/Web/API/MsInsertAudioEffect	/en-US/docs/Web/API/HTMLMediaElement/msInsertAudioEffect
 /en-US/docs/Web/API/MsInsertVideoEffect	/en-US/docs/Web/API/HTMLVideoElement/msInsertVideoEffect
+/en-US/docs/Web/API/MsIsBoxed	/en-US/docs/Web/API/HTMLVideoElement/msIsBoxed
 /en-US/docs/Web/API/MsIsLayoutOptimalForPlayback	/en-US/docs/Web/API/HTMLVideoElement/msIsLayoutOptimalForPlayback
 /en-US/docs/Web/API/MsIsStereo3D	/en-US/docs/Web/API/HTMLVideoElement/msIsStereo3D
 /en-US/docs/Web/API/MsManipulationViewsEnabled	/en-US/docs/Web/API/Touch/MsManipulationViewsEnabled
+/en-US/docs/Web/API/MsPlayToDisabled	/en-US/docs/Web/API/HTMLMediaElement/msPlayToDisabled
+/en-US/docs/Web/API/MsPlayToPreferredSourceUri	/en-US/docs/Web/API/HTMLMediaElement/msPlayToPreferredSourceURI
+/en-US/docs/Web/API/MsPlayToPrimary	/en-US/docs/Web/API/HTMLMediaElement/msPlayToPrimary
+/en-US/docs/Web/API/MsPlayToSource	/en-US/docs/Web/API/HTMLMediaElement/msPlayToSource
+/en-US/docs/Web/API/MsRealTime	/en-US/docs/Web/API/HTMLMediaElement/msRealTime
+/en-US/docs/Web/API/MsSetMediaProtectionManager	/en-US/docs/Web/API/HTMLMediaElement/msSetMediaProtectionManager
 /en-US/docs/Web/API/MsSetVideoRectangle	/en-US/docs/Web/API/HTMLVideoElement/msSetVideoRectangle
 /en-US/docs/Web/API/MsStereo3DPackingMode	/en-US/docs/Web/API/HTMLVideoElement/msStereo3DPackingMode
 /en-US/docs/Web/API/MsStereo3DRenderMode	/en-US/docs/Web/API/HTMLVideoElement/msStereo3DRenderMode
@@ -9105,9 +9124,9 @@
 /en-US/docs/Web/API/RTCIceCandidateInit/sdpMid	/en-US/docs/Web/API/RTCIceCandidate/sdpMid
 /en-US/docs/Web/API/RTCIceCandidateInit/usernameFragment	/en-US/docs/Web/API/RTCIceCandidate/usernameFragment
 /en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceieved	/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceived
-/en-US/docs/Web/API/RTCIceCandidatePairStats/circuitBreakerTriggerCoun	/en-US/docs/Web/API/RTCIceCandidatePairStats/circuitBreakerTriggerCount
 /en-US/docs/Web/API/RTCIceCandidatePairStats/contentRequestsSent	/en-US/docs/Web/API/RTCIceCandidatePairStats/consentRequestsSent
 /en-US/docs/Web/API/RTCIceCandidateStats/ip	/en-US/docs/Web/API/RTCIceCandidateStats/address
+/en-US/docs/Web/API/RTCIceCandidateStats/mozLocalTransport	/en-US/docs/Web/API/RTCIceCandidateStats/relayProtocol
 /en-US/docs/Web/API/RTCIceCandidateType	/en-US/docs/Web/API/RTCIceCandidate/type
 /en-US/docs/Web/API/RTCIceComponent	/en-US/docs/Web/API/RTCIceCandidate/component
 /en-US/docs/Web/API/RTCIceConnectionState	/en-US/docs/Web/API/RTCPeerConnection/iceConnectionState
@@ -9184,6 +9203,8 @@
 /en-US/docs/Web/API/RTCSessionDescription.toJSON	/en-US/docs/Web/API/RTCSessionDescription/toJSON
 /en-US/docs/Web/API/RTCSessionDescription.type	/en-US/docs/Web/API/RTCSessionDescription/type
 /en-US/docs/Web/API/RTCSignalingState	/en-US/docs/Web/API/RTCPeerConnection/signalingState
+/en-US/docs/Web/API/RTCStatsIceCandidatePairState	/en-US/docs/Web/API/RTCIceCandidatePairStats/state
+/en-US/docs/Web/API/RTCStatsType	/en-US/docs/Web/API/RTCStats/type
 /en-US/docs/Web/API/RTCTrackEventInit	/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent
 /en-US/docs/Web/API/RTCTrackEventInit/receiver	/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent
 /en-US/docs/Web/API/RTCTrackEventInit/streams	/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent
@@ -9217,7 +9238,7 @@
 /en-US/docs/Web/API/SVGAnimationElement/onend	/en-US/docs/Web/API/SVGAnimationElement/endEvent_event
 /en-US/docs/Web/API/SVGAnimationElement/onrepeat	/en-US/docs/Web/API/SVGAnimationElement/repeatEvent_event
 /en-US/docs/Web/API/SVGElement/dataset	/en-US/docs/Web/API/HTMLElement/dataset
-/en-US/docs/Web/API/SVGElement/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
+/en-US/docs/Web/API/SVGElement/onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Web/API/SVGElement/onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
 /en-US/docs/Web/API/SVGElement/onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
 /en-US/docs/Web/API/SVGElement/onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
@@ -9534,6 +9555,7 @@
 /en-US/docs/Web/API/USB/onconnect	/en-US/docs/Web/API/USB/connect_event
 /en-US/docs/Web/API/USB/ondisconnect	/en-US/docs/Web/API/USB/disconnect_event
 /en-US/docs/Web/API/USBDevice/USBDevice.deviceClass	/en-US/docs/Web/API/USBDevice/deviceClass
+/en-US/docs/Web/API/USVString	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 /en-US/docs/Web/API/Uint16Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array
 /en-US/docs/Web/API/Uint32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array
 /en-US/docs/Web/API/Uint8Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
@@ -9542,13 +9564,17 @@
 /en-US/docs/Web/API/VRDevice	/en-US/docs/Web/API/VRDisplay
 /en-US/docs/Web/API/VRDevice/deviceId	/en-US/docs/Web/API/VRDisplay/displayId
 /en-US/docs/Web/API/VRDevice/deviceName	/en-US/docs/Web/API/VRDisplay/displayName
-/en-US/docs/Web/API/VRDevice/hardwareUnitId	/en-US/docs/Web/API/VRDisplay/hardwareUnitId
+/en-US/docs/Web/API/VRDevice/hardwareUnitId	/en-US/docs/Web/API/VRDisplay
 /en-US/docs/Web/API/VRDisplay/VRdisplay.isConnected	/en-US/docs/Web/API/VRDisplay/isConnected
 /en-US/docs/Web/API/VRDisplay/deviceId	/en-US/docs/Web/API/VRDisplay/displayId
 /en-US/docs/Web/API/VRDisplay/deviceName	/en-US/docs/Web/API/VRDisplay/displayName
+/en-US/docs/Web/API/VRDisplay/hardwareUnitId	/en-US/docs/Web/API/VRFieldOfView
 /en-US/docs/Web/API/VREyeParameters/currentFieldOfView	/en-US/docs/Web/API/VREyeParameters/fieldOfView
 /en-US/docs/Web/API/VREyeParameters/eyeTranslation	/en-US/docs/Web/API/VREyeParameters/offset
-/en-US/docs/Web/API/VRFieldOfView/VRFieldOfView.VRFieldOfView()	/en-US/docs/Web/API/VRFieldOfView/VRFieldOfView
+/en-US/docs/Web/API/VREyeParameters/recommendedFieldOfView	/en-US/docs/Web/API/VREyeParameters
+/en-US/docs/Web/API/VREyeParameters/renderRect	/en-US/docs/Web/API/VREyeParameters
+/en-US/docs/Web/API/VRFieldOfView/VRFieldOfView	/en-US/docs/Web/API/VRFieldOfView
+/en-US/docs/Web/API/VRFieldOfView/VRFieldOfView.VRFieldOfView()	/en-US/docs/Web/API/VRFieldOfView
 /en-US/docs/Web/API/VRFieldOfViewReadOnly/downDegrees	/en-US/docs/Web/API/VRFieldOfView/downDegrees
 /en-US/docs/Web/API/VRFieldOfViewReadOnly/leftDegrees	/en-US/docs/Web/API/VRFieldOfView/leftDegrees
 /en-US/docs/Web/API/VRFieldOfViewReadOnly/rightDegrees	/en-US/docs/Web/API/VRFieldOfView/rightDegrees
@@ -9557,11 +9583,13 @@
 /en-US/docs/Web/API/VRLayer/leftBounds	/en-US/docs/Web/API/VRLayerInit/leftBounds
 /en-US/docs/Web/API/VRLayer/rightBounds	/en-US/docs/Web/API/VRLayerInit/rightBounds
 /en-US/docs/Web/API/VRLayer/source	/en-US/docs/Web/API/VRLayerInit/source
+/en-US/docs/Web/API/VRPose/hasOrientation	/en-US/docs/Web/API/VRPose/orientation
+/en-US/docs/Web/API/VRPose/hasPosition	/en-US/docs/Web/API/VRPose/position
 /en-US/docs/Web/API/VRPositionState	/en-US/docs/Web/API/VRPose
 /en-US/docs/Web/API/VRPositionState/angularAcceleration	/en-US/docs/Web/API/VRPose/angularAcceleration
 /en-US/docs/Web/API/VRPositionState/angularVelocity	/en-US/docs/Web/API/VRPose/angularVelocity
-/en-US/docs/Web/API/VRPositionState/hasOrientation	/en-US/docs/Web/API/VRPose/hasOrientation
-/en-US/docs/Web/API/VRPositionState/hasPosition	/en-US/docs/Web/API/VRPose/hasPosition
+/en-US/docs/Web/API/VRPositionState/hasOrientation	/en-US/docs/Web/API/VRPose/orientation
+/en-US/docs/Web/API/VRPositionState/hasPosition	/en-US/docs/Web/API/VRPose/position
 /en-US/docs/Web/API/VRPositionState/linearAcceleration	/en-US/docs/Web/API/VRPose/linearAcceleration
 /en-US/docs/Web/API/VRPositionState/linearVelocity	/en-US/docs/Web/API/VRPose/linearVelocity
 /en-US/docs/Web/API/VRPositionState/orientation	/en-US/docs/Web/API/VRPose/orientation
@@ -9735,8 +9763,9 @@
 /en-US/docs/Web/API/Window/indexedDB	/en-US/docs/Web/API/indexedDB
 /en-US/docs/Web/API/Window/minimize	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/mozAnimationStartTime	/en-US/docs/Web/API/Animation/startTime
+/en-US/docs/Web/API/Window/mozPaintCount	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/mozRequestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
-/en-US/docs/Web/API/Window/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
+/en-US/docs/Web/API/Window/onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Web/API/Window/onafterprint	/en-US/docs/Web/API/Window/afterprint_event
 /en-US/docs/Web/API/Window/onappinstalled	/en-US/docs/Web/API/Window/appinstalled_event
 /en-US/docs/Web/API/Window/onbeforeinstallprompt	/en-US/docs/Web/API/Window/beforeinstallprompt_event
@@ -10198,9 +10227,18 @@
 /en-US/docs/Web/API/mozRTCSessionDescription.type	/en-US/docs/Web/API/RTCSessionDescription/type
 /en-US/docs/Web/API/mozRTCSessionDescription/mozRTCSessionDescription	/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription
 /en-US/docs/Web/API/mozRTCSessionDescription/toJSON	/en-US/docs/Web/API/RTCSessionDescription/toJSON
+/en-US/docs/Web/API/msCaching	/en-US/docs/Web/API/XMLHttpRequest/msCaching
+/en-US/docs/Web/API/msCachingEnabled	/en-US/docs/Web/API/XMLHttpRequest/msCachingEnabled
+/en-US/docs/Web/API/msCapsLockWarningOff	/en-US/docs/Web/API/Document/msCapsLockWarningOff
 /en-US/docs/Web/API/msConvertURL	/en-US/docs/Web/API/Event
 /en-US/docs/Web/API/msFrameStep	/en-US/docs/Web/API/HTMLVideoElement/msFrameStep
+/en-US/docs/Web/API/msGetPropertyEnabled	/en-US/docs/Web/API/CSSStyleDeclaration/msGetPropertyEnabled
+/en-US/docs/Web/API/msGetRegionContent	/en-US/docs/Web/API/Element/msGetRegionContent
 /en-US/docs/Web/API/msMatchesSelector	/en-US/docs/Web/API/Element/matches
+/en-US/docs/Web/API/msPutPropertyEnabled	/en-US/docs/Web/API/CSSStyleDeclaration/msPutPropertyEnabled
+/en-US/docs/Web/API/msRegionOverflow	/en-US/docs/Web/API/Element/msRegionOverflow
+/en-US/docs/Web/API/mssitemodejumplistitemremoved	/en-US/docs/Web/API/Document/mssitemodejumplistitemremoved_event
+/en-US/docs/Web/API/msthumbnailclick	/en-US/docs/Web/API/Document/msthumbnailclick_event
 /en-US/docs/Web/API/mute	/en-US/docs/Web/API/MediaStreamTrack/mute_event
 /en-US/docs/Web/API/navigator.doNotTrack	/en-US/docs/Web/API/Navigator/doNotTrack
 /en-US/docs/Web/API/navigator.geolocation.clearWatch	/en-US/docs/Web/API/Geolocation/clearWatch
@@ -10347,7 +10385,7 @@
 /en-US/docs/Web/API/window.mozAnimationStartTime	/en-US/docs/Web/API/Animation/startTime
 /en-US/docs/Web/API/window.mozInnerScreenX	/en-US/docs/Web/API/Window/mozInnerScreenX
 /en-US/docs/Web/API/window.mozInnerScreenY	/en-US/docs/Web/API/Window/mozInnerScreenY
-/en-US/docs/Web/API/window.mozPaintCount	/en-US/docs/Web/API/Window/mozPaintCount
+/en-US/docs/Web/API/window.mozPaintCount	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/window.mozRequestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
 /en-US/docs/Web/API/window.name	/en-US/docs/Web/API/Window/name
 /en-US/docs/Web/API/window.navigator	/en-US/docs/Web/API/Window/navigator
@@ -10383,7 +10421,7 @@
 /en-US/docs/Web/API/window.navigator.vendor	/en-US/docs/Web/API/Navigator/vendor
 /en-US/docs/Web/API/window.navigator.vendorSub	/en-US/docs/Web/API/Navigator/vendorSub
 /en-US/docs/Web/API/window.navigator.vibrate	/en-US/docs/Web/API/Navigator/vibrate
-/en-US/docs/Web/API/window.onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
+/en-US/docs/Web/API/window.onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Web/API/window.onafterprint	/en-US/docs/Web/API/Window/afterprint_event
 /en-US/docs/Web/API/window.onbeforeprint	/en-US/docs/Web/API/Window/beforeprint_event
 /en-US/docs/Web/API/window.onbeforeunload	/en-US/docs/Web/API/Window/beforeunload_event
@@ -10890,7 +10928,6 @@
 /en-US/docs/Web/CSS/Aural	/en-US/docs/Web/CSS/@media/aural
 /en-US/docs/Web/CSS/Block_formatting_context	/en-US/docs/Web/Guide/CSS/Block_formatting_context
 /en-US/docs/Web/CSS/CSS3_Columns	/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
-/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations/Detecting_CSS_animation_support	/en-US/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /en-US/docs/Web/CSS/CSS_Background_and_Borders	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders
 /en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
 /en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
@@ -11004,6 +11041,8 @@
 /en-US/docs/Web/CSS/color_value/hwb()	/en-US/docs/Web/CSS/color_value/hwb
 /en-US/docs/Web/CSS/color_value/lab()	/en-US/docs/Web/CSS/color_value/lab
 /en-US/docs/Web/CSS/color_value/lch()	/en-US/docs/Web/CSS/color_value/lch
+/en-US/docs/Web/CSS/color_value/oklab()	/en-US/docs/Web/CSS/color_value/oklab
+/en-US/docs/Web/CSS/color_value/oklch()	/en-US/docs/Web/CSS/color_value/oklch
 /en-US/docs/Web/CSS/color_value/rgb()	/en-US/docs/Web/CSS/color_value/rgb
 /en-US/docs/Web/CSS/color_value/rgba()	/en-US/docs/Web/CSS/color_value/rgba
 /en-US/docs/Web/CSS/conic-gradient	/en-US/docs/Web/CSS/gradient/conic-gradient
@@ -11483,7 +11522,6 @@
 /en-US/docs/Web/Guide/CSS/Understanding_z_index/Stacking_without_z-index	/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 /en-US/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context	/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 /en-US/docs/Web/Guide/CSS/Using_CSS_animations	/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
-/en-US/docs/Web/Guide/CSS/Using_CSS_animations/Detecting_CSS_animation_support	/en-US/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /en-US/docs/Web/Guide/CSS/Using_CSS_gradients	/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients
 /en-US/docs/Web/Guide/CSS/Using_CSS_transforms	/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms
 /en-US/docs/Web/Guide/CSS/Using_CSS_transitions	/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
@@ -11523,7 +11561,6 @@
 /en-US/docs/Web/Guide/File_System_API/Introduction	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /en-US/docs/Web/Guide/Graphics/Drawing_graphics_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Web/Guide/HTML	/en-US/docs/Learn/HTML
-/en-US/docs/Web/Guide/HTML/A_basic_ray-caster	/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors	/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Basic_animations	/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
@@ -11962,6 +11999,7 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/WebAssembly.Module.prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/null	/en-US/docs/Web/JavaScript/Reference/Operators/null
 /en-US/docs/Web/JavaScript/Reference/Methods_Index	/en-US/docs/Web/JavaScript/Reference
 /en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators	/en-US/docs/Web/JavaScript/Reference/Operators
 /en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators	/en-US/docs/Web/JavaScript/Reference/Operators#Assignment_operators
@@ -11992,7 +12030,7 @@
 /en-US/docs/Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation	/en-US/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation
 /en-US/docs/Web/JavaScript/Tutorials	/en-US/docs/Web/JavaScript
 /en-US/docs/Web/JavaScript/Typed_arrays/ArrayBuffer	/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBufferView	/en-US/docs/Web/API/ArrayBufferView
+/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBufferView	/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /en-US/docs/Web/JavaScript/Typed_arrays/DataView	/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView
 /en-US/docs/Web/JavaScript/Typed_arrays/Float32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array
 /en-US/docs/Web/JavaScript/Typed_arrays/Float64Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array
@@ -12892,7 +12930,7 @@
 /en-US/docs/window.moveBy	/en-US/docs/Web/API/Window/moveBy
 /en-US/docs/window.moveTo	/en-US/docs/Web/API/Window/moveTo
 /en-US/docs/window.navigator	/en-US/docs/Web/API/Window/navigator
-/en-US/docs/window.onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
+/en-US/docs/window.onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/window.open	/en-US/docs/Web/API/Window/open
 /en-US/docs/window.opener	/en-US/docs/Web/API/Window/opener
 /en-US/docs/window.outerHeight	/en-US/docs/Web/API/Window/outerHeight

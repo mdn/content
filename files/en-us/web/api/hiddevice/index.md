@@ -1,14 +1,16 @@
 ---
 title: HIDDevice
 slug: Web/API/HIDDevice
+page-type: web-api-interface
 tags:
   - API
   - Interface
   - Reference
   - HIDDevice
+  - Experimental
 browser-compat: api.HIDDevice
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`HIDDevice`** interface of the {{domxref('WebHID API')}} represents a HID Device. It provides properties for accessing information about the device, methods for opening and closing the connection, and the sending and receiving of reports.
 

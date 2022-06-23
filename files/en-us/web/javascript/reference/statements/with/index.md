@@ -75,7 +75,7 @@ function f(x, o) {
 
 Only when `f` is called can `x` be determined as found or not — and if found,
 whether as a property of `o`, or, if no such property exists, as `f`'s first formal argument. If you forget to define
-`x` in the object you pass as the second argument, you won't get an error — instead you’ll just get unexpected results. (And it's also unclear what the actual intent of such code would be.)
+`x` in the object you pass as the second argument, you won't get an error — instead you'll just get unexpected results. (And it's also unclear what the actual intent of such code would be.)
 
 **Contra:** Code using `with` may not be forward compatible,
 especially when used with something other than a plain object. Consider this example:

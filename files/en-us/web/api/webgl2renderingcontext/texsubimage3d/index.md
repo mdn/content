@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.texSubImage3D()
 slug: Web/API/WebGL2RenderingContext/texSubImage3D
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -114,16 +115,11 @@ texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, fo
 
   - : One of the following objects can be used as a pixel source for the texture:
 
-    - {{domxref("ArrayBufferView")}}:
-
-      - A {{jsxref("Uint8Array")}} must be used if `type` is
-        `gl.UNSIGNED_BYTE`.
-      - A {{jsxref("Uint16Array")}} must be used if `type` is either
-        `gl.UNSIGNED_SHORT_5_6_5`, `gl.UNSIGNED_SHORT_4_4_4_4`,
-        `gl.UNSIGNED_SHORT_5_5_5_1`, or `ext.HALF_FLOAT_OES`.
-      - A {{jsxref("Float32Array")}} must be used if `type` is
-        `gl.FLOAT`.
-
+    - {{jsxref("Uint8Array")}} (must be used if `type` is `gl.UNSIGNED_BYTE`)
+    - {{jsxref("Uint16Array")}} (must be used if `type` is either
+      `gl.UNSIGNED_SHORT_5_6_5`, `gl.UNSIGNED_SHORT_4_4_4_4`,
+      `gl.UNSIGNED_SHORT_5_5_5_1`, or `ext.HALF_FLOAT_OES`)
+    - {{jsxref("Float32Array")}} (must be used if `type` is `gl.FLOAT`)
     - {{domxref("ImageBitmap")}}
     - {{domxref("ImageData")}}
     - {{domxref("HTMLImageElement")}}
@@ -132,7 +128,7 @@ texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, fo
 
 - `srcData`
 
-  - : An {{domxref("ArrayBufferView")}} object.
+  - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object.
 
 - `offset`
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} byte offset into the {{domxref("WebGLBuffer")}}'s data

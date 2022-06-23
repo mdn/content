@@ -1,6 +1,7 @@
 ---
 title: Using the WebVR API
 slug: Web/API/WebVR_API/Using_the_WebVR_API
+page-type: guide
 tags:
   - '1.1'
   - API

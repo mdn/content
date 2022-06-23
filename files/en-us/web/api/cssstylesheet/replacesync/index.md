@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.replaceSync()
 slug: Web/API/CSSStyleSheet/replaceSync
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -34,7 +35,7 @@ Undefined.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NotAllowedError`
+- `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if the stylesheet was not created using the {{domxref("CSSStyleSheet.CSSStyleSheet()","CSSStyleSheet()")}} constructor or if the stylesheet is flagged as unmodifiable.
 
 ## Examples
@@ -54,3 +55,8 @@ stylesheet.replaceSync('body { font-size: 1.4em; } p { color: red; }');
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
+- [Using the Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM)

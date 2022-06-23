@@ -1,6 +1,7 @@
 ---
 title: 'Window: pageshow event'
 slug: Web/API/Window/pageshow_event
+page-type: web-api-event
 tags:
   - API
   - Document

@@ -1,6 +1,7 @@
 ---
 title: Pointer events
 slug: Web/API/Pointer_events
+page-type: web-api-overview
 tags:
   - API
   - Interface

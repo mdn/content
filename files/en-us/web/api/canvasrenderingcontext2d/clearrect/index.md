@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.clearRect()
 slug: Web/API/CanvasRenderingContext2D/clearRect
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

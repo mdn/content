@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.crossOrigin
 slug: Web/API/HTMLImageElement/crossOrigin
+page-type: web-api-instance-property
 tags:
   - API
   - CORS

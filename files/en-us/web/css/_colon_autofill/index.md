@@ -24,7 +24,7 @@ The **`:autofill`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) match
 
 ## Syntax
 
-```css
+```
 :autofill
 ```
 

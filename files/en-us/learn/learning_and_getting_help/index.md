@@ -272,7 +272,7 @@ However, it also makes sense to find useful groups on social networking sites su
 
 ### Physical meetups
 
-Lastly, you should try attending some physical meetups to meet other like-minded people, especially ones that cater to beginners. [meetup.com](https://www.meetup.com/find/tech/) is a good place to find local physical meetups, and you could also try your local press/what's on sites.
+Lastly, you should try attending some physical meetups to meet other like-minded people, especially ones that cater to beginners. [meetup.com](https://www.meetup.com/find/?keywords=tech&source=EVENTS) is a good place to find local physical meetups, and you could also try your local press/what's on sites.
 
 You could also try attending full-fledged web conferences. While these can be expensive, you could try volunteering at them, and many conferences offer reduced rate tickets, for example, student or diversity tickets.
 

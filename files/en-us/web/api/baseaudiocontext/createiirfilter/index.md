@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createIIRFilter()
 slug: Web/API/BaseAudioContext/createIIRFilter
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

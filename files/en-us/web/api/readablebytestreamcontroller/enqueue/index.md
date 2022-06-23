@@ -1,6 +1,7 @@
 ---
 title: ReadableByteStreamController.enqueue()
 slug: Web/API/ReadableByteStreamController/enqueue
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

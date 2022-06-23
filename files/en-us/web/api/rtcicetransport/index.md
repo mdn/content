@@ -1,6 +1,7 @@
 ---
 title: RTCIceTransport
 slug: Web/API/RTCIceTransport
+page-type: web-api-interface
 tags:
   - API
   - Audio

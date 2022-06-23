@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.mozBackgroundRequest
 slug: Web/API/XMLHttpRequest/mozBackgroundRequest
+page-type: web-api-instance-property
 tags:
   - API
   - Background Service

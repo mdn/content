@@ -13,7 +13,7 @@ tags:
   - Security
   - XMLHttpRequest
   - l10n:priority
-spec-urls: https://fetch.spec.whatwg.org/#cors-protocol
+browser-compat: http.headers.Access-Control-Allow-Origin
 ---
 {{HTTPSidebar}}
 
@@ -163,12 +163,12 @@ The following is an example of a request that will be preflighted:
 const xhr = new XMLHttpRequest();
 xhr.open('POST', 'https://bar.other/resources/post-here/');
 xhr.setRequestHeader('X-PINGOTHER', 'pingpong');
-xhr.setRequestHeader('Content-Type', 'application/xml');
+xhr.setRequestHeader('Content-Type', 'text/xml');
 xhr.onreadystatechange = handler;
 xhr.send('<person><name>Arun</name></person>');
 ```
 
-The example above creates an XML body to send with the `POST` request. Also, a non-standard HTTP `X-PINGOTHER` request header is set. Such headers are not part of HTTP/1.1, but are generally useful to web applications. Since the request uses a `Content-Type` of `application/xml`, and since a custom header is set, this request is preflighted.
+The example above creates an XML body to send with the `POST` request. Also, a non-standard HTTP `X-PINGOTHER` request header is set. Such headers are not part of HTTP/1.1, but are generally useful to web applications. Since the request uses a `Content-Type` of `text/xml`, and since a custom header is set, this request is preflighted.
 
 ![](preflight_correct.png)
 
@@ -492,7 +492,7 @@ Examples of this usage can be [found above](#preflighted_requests).
 
 ## Browser compatibility
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ## See also
 

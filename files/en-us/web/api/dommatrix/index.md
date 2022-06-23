@@ -1,6 +1,7 @@
 ---
 title: DOMMatrix (WebKitCSSMatrix)
 slug: Web/API/DOMMatrix
+page-type: web-api-interface
 tags:
   - API
   - DOMMatrix
@@ -10,7 +11,9 @@ tags:
   - Interface
   - Reference
   - matrix
-browser-compat: api.DOMMatrix
+browser-compat:
+  - api.DOMMatrix
+  - api.WebKitCSSMatrix
 ---
 {{APIRef("Geometry Interfaces")}}
 
@@ -109,8 +112,6 @@ The `DOMMatrix` interface is designed with the intent that it will be used for a
 ## Browser compatibility
 
 {{Compat}}
-
-{{Compat("api.WebKitCSSMatrix")}}
 
 ## See also
 

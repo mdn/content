@@ -1,11 +1,11 @@
 ---
 title: TransitionEvent.propertyName
 slug: Web/API/TransitionEvent/propertyName
+page-type: web-api-instance-property
 tags:
   - API
   - CSS
   - CSS3 Transitions
-  - Experimental
   - Property
   - Reference
   - TransitionEvent

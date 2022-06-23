@@ -1,6 +1,7 @@
 ---
 title: AudioBufferSourceNode.playbackRate
 slug: Web/API/AudioBufferSourceNode/playbackRate
+page-type: web-api-instance-property
 tags:
   - API
   - AudioBufferSourceNode
@@ -59,7 +60,7 @@ function getData() {
   request.responseType = 'arraybuffer';
 
   request.onload = function() {
-    var audioData = request.response;
+    const audioData = request.response;
 
     audioCtx.decodeAudioData(audioData, function(buffer) {
         myBuffer = buffer;

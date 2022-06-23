@@ -1,6 +1,7 @@
 ---
 title: KeyframeEffect.iterationComposite
 slug: Web/API/KeyframeEffect/iterationComposite
+page-type: web-api-instance-property
 tags:
   - API
   - Animation
@@ -21,9 +22,9 @@ The **`iterationComposite`** property of a {{domxref("KeyframeEffect")}} resolve
 
 One of the followings:
 
-- replace
+- `replace`
   - : The `keyframeEffect` value produced is independent of the current iteration.
-- accumulate
+- `accumulate`
   - : Subsequent iterations of the `keyframeEffect` build on the final value of the previous iteration.
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: Cache.match()
 slug: Web/API/Cache/match
+page-type: web-api-instance-method
 tags:
   - API
   - Cache

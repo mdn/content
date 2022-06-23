@@ -1,6 +1,7 @@
 ---
 title: Animation.updatePlaybackRate()
 slug: Web/API/Animation/updatePlaybackRate
+page-type: web-api-instance-method
 tags:
   - API
   - Animation

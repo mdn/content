@@ -1,6 +1,7 @@
 ---
 title: IDBDatabase.objectStoreNames
 slug: Web/API/IDBDatabase/objectStoreNames
+page-type: web-api-instance-property
 tags:
   - API
   - Database
@@ -16,8 +17,7 @@ browser-compat: api.IDBDatabase.objectStoreNames
 
 The **`objectStoreNames`** read-only property of the
 {{domxref("IDBDatabase")}} interface is a {{ domxref("DOMStringList") }} containing a
-list of the names of the [object
-stores](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store) currently in the connected database.
+list of the names of the [object stores](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store) currently in the connected database.
 
 {{AvailableInWorkers}}
 

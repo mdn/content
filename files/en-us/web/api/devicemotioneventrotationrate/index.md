@@ -1,6 +1,7 @@
 ---
 title: DeviceMotionEventRotationRate
 slug: Web/API/DeviceMotionEventRotationRate
+page-type: web-api-interface
 tags:
   - API
   - DOM

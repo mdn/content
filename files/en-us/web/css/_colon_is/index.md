@@ -36,28 +36,6 @@ footer p:hover {
 
 Pseudo-elements are not valid in the selector list for `:is()`.
 
-Note that older browsers support this functionality as `:matches()`, or through an older, prefixed pseudo-class — `:any()`, including older versions of Chrome, Firefox, and Safari. `:any()` works in exactly the same way as `:matches()`/`:is()`, except that it requires vendor prefixes and doesn't support [complex selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors).
-
-These legacy pseudo-classes can be used to provide backwards compatibility.
-
-```css
-/* Backwards-compatible version with :-*-any() and :matches()
-   (It is not possible to group selectors into single rule,
-   because presence of invalid selector would invalidate whole rule.) */
-:-webkit-any(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-:-moz-any(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-:matches(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-```
-
 ### Difference between :is() and :where()
 
 The difference between the two is that `:is()` counts towards the specificity of the overall selector (it takes the specificity of its most specific argument), whereas [`:where()`](/en-US/docs/Web/CSS/:where) has a specificity value of 0. This is demonstrated by the [example on the `:where()` reference page](/en-US/docs/Web/CSS/:where#examples).
@@ -261,7 +239,9 @@ some-element::after {
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:is( <forgiving-selector-list> )
+```
 
 ## Specifications
 

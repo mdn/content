@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.audioTracks
 slug: Web/API/HTMLMediaElement/audioTracks
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

@@ -1,6 +1,7 @@
 ---
 title: MessageEvent.ports
 slug: Web/API/MessageEvent/ports
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

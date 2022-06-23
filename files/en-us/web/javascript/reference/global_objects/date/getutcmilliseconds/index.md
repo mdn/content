@@ -41,8 +41,8 @@ The following example assigns the milliseconds portion of the current time to th
 variable `milliseconds`.
 
 ```js
-var today = new Date();
-var milliseconds = today.getUTCMilliseconds();
+const today = new Date();
+const milliseconds = today.getUTCMilliseconds();
 ```
 
 ## Specifications

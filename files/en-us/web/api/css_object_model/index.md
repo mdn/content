@@ -1,6 +1,7 @@
 ---
 title: CSS Object Model (CSSOM)
 slug: Web/API/CSS_Object_Model
+page-type: web-api-overview
 tags:
   - API
   - CSSOM

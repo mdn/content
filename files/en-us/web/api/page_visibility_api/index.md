@@ -1,6 +1,7 @@
 ---
 title: Page Visibility API
 slug: Web/API/Page_Visibility_API
+page-type: web-api-overview
 tags:
   - API
   - DOM

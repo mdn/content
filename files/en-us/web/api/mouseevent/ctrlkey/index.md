@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.ctrlKey
 slug: Web/API/MouseEvent/ctrlKey
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

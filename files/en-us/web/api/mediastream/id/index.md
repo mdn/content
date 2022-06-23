@@ -1,6 +1,7 @@
 ---
 title: MediaStream.id
 slug: Web/API/MediaStream/id
+page-type: web-api-instance-property
 tags:
   - MediaStream
   - Property
@@ -18,13 +19,13 @@ for the object.
 ## Syntax
 
 ```js
-var id = mediaStream.id;
+const id = mediaStream.id;
 ```
 
 ## Example
 
 ```js
-var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+const p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
 
 p.then(function(stream) {
    console.log(stream.id);

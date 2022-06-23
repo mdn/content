@@ -1,6 +1,7 @@
 ---
 title: Bluetooth
 slug: Web/API/Bluetooth
+page-type: web-api-interface
 tags:
   - API
   - Bluetooth

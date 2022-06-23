@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.mozClearDataAt()
 slug: Web/API/DataTransfer/mozClearDataAt
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -50,12 +51,12 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 This example shows the use of the `mozClearDataAt()` method in a
-{{event("dragend")}} event handler.
+{{domxref("HTMLElement/dragend_event", "dragend")}} event handler.
 
 ```js
 function dragend_handler(event)
 {
-  var dt = event.dataTransfer;
+  const dt = event.dataTransfer;
   // Remove a text/html item
   dt.mozClearDataAt("text/html", 1);
 }

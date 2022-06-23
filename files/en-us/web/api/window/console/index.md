@@ -1,6 +1,7 @@
 ---
 title: Window.console
 slug: Web/API/Window/console
+page-type: web-api-instance-property
 tags:
   - API
   - Property

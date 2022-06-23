@@ -1,6 +1,7 @@
 ---
 title: HTML in XMLHttpRequest
 slug: Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest
+page-type: guide
 tags:
   - API
   - Guide

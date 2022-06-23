@@ -1,6 +1,7 @@
 ---
 title: Web Video Text Tracks Format (WebVTT)
 slug: Web/API/WebVTT_API
+page-type: web-api-overview
 tags:
   - API
   - Intermediate
@@ -14,6 +15,9 @@ tags:
   - captions
   - subtitles
   - text tracks
+browser-compat:
+  - api.VTTCue
+  - api.TextTrack
 ---
 {{DefaultAPISidebar("WebVTT")}}
 
@@ -786,19 +790,11 @@ Where p and a are the tags which are used in HTML for paragraph and link, respec
 
 ## Specifications
 
-| Specification                                                             |
-| ------------------------------------------------------------------------- |
-| [WebVTT: The Web Video Text Tracks Format](https://w3c.github.io/webvtt/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `VTTCue` interface
-
-{{Compat("api.VTTCue", 0)}}
-
-### `TextTrack` interface
-
-{{Compat("api.TextTrack", 0)}}
+{{Compat}}
 
 ### Notes
 

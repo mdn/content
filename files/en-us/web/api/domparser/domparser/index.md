@@ -1,6 +1,7 @@
 ---
 title: DOMParser()
 slug: Web/API/DOMParser/DOMParser
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

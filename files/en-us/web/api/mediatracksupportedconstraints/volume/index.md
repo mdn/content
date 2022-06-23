@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.volume
 slug: Web/API/MediaTrackSupportedConstraints/volume
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints

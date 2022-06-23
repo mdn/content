@@ -1,6 +1,7 @@
 ---
 title: BlobBuilder
 slug: Web/API/BlobBuilder
+page-type: web-api-interface
 tags:
   - API
   - DOM

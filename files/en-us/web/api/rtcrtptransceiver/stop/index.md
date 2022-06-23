@@ -1,6 +1,7 @@
 ---
 title: RTCRtpTransceiver.stop()
 slug: Web/API/RTCRtpTransceiver/stop
+page-type: web-api-instance-method
 tags:
   - API
   - Media
@@ -76,6 +77,5 @@ transceiver has been fully stopped.
 ## See also
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Introduction to the Real-time
-  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - {{domxref("MediaStreamTrack")}}

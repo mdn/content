@@ -1,6 +1,7 @@
 ---
 title: HMDVRDevice.setFieldOfView()
 slug: Web/API/HMDVRDevice/setFieldOfView
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -44,12 +45,12 @@ The following simple example shows a function that can be used to set a custom f
 
 ```js
 function setCustomFOV(up,right,down,left) {
-  var testFOV = new VRFieldOfView(up,right,down,left);
+  const testFOV = new VRFieldOfView(up,right,down,left);
 
   gHMD.setFieldOfView(testFOV,testFOV,0.01,10000.0);
 
-  var lEye = gHMD.getEyeParameters('left');
-  var rEye = gHMD.getEyeParameters('right');
+  const lEye = gHMD.getEyeParameters('left');
+  const rEye = gHMD.getEyeParameters('right');
   console.log(lEye.currentFieldOfView);
   console.log(rEye.currentFieldOfView);
 }

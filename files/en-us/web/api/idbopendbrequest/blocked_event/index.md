@@ -1,6 +1,7 @@
 ---
 title: 'IDBOpenDBRequest: blocked event'
 slug: Web/API/IDBOpenDBRequest/blocked_event
+page-type: web-api-event
 tags:
   - Event
   - IDBOpenDBRequest
@@ -55,7 +56,7 @@ DBOpenRequest.onupgradeneeded = (event) => {
   };
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
 
   // define what data items the objectStore will contain
   objectStore.createIndex('hours', 'hours', { unique: false });
@@ -91,7 +92,7 @@ DBOpenRequest.onupgradeneeded = (event) => {
   };
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
 
   // define what data items the objectStore will contain
   objectStore.createIndex('hours', 'hours', { unique: false });

@@ -41,11 +41,11 @@ WebAssembly.instantiate(bufferSource, importObject);
 
 #### Parameters
 
-- _bufferSource_
+- `bufferSource`
   - : A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or
     {{jsxref("ArrayBuffer")}} containing the binary code of the .wasm module you want to
-    compile.
-- _importObject_ {{optional_inline}}
+    compile, or a {{jsxref("WebAssembly.Module")}}.
+- `importObject` {{optional_inline}}
   - : An object containing the values to be imported into the newly-created
     `Instance`, such as functions or {{jsxref("WebAssembly.Memory")}} objects.
     There must be one matching property for each declared import of the compiled module or
@@ -64,8 +64,8 @@ fields:
 
 #### Exceptions
 
-- If either of the parameters are not of the correct type or structure, a
-  {{jsxref("TypeError")}} is thrown.
+- If either of the parameters are not of the correct type or structure,
+  the promise rejects with a {{jsxref("TypeError")}}.
 - If the operation fails, the promise rejects with a
   {{jsxref("WebAssembly.CompileError")}}, {{jsxref("WebAssembly.LinkError")}}, or
   {{jsxref("WebAssembly.RuntimeError")}}, depending on the cause of the failure.
@@ -78,9 +78,9 @@ WebAssembly.instantiate(module, importObject);
 
 #### Parameters
 
-- _module_
+- `module`
   - : The {{jsxref("WebAssembly.Module")}} object to be instantiated.
-- _importObject_ {{optional_inline}}
+- `importObject` {{optional_inline}}
   - : An object containing the values to be imported into the newly-created
     `Instance`, such as functions or {{jsxref("WebAssembly.Memory")}} objects.
     There must be one matching property for each declared import of `module` or

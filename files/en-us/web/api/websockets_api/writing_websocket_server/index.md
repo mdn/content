@@ -1,6 +1,7 @@
 ---
 title: Writing a WebSocket server in C#
 slug: Web/API/WebSockets_API/Writing_WebSocket_server
+page-type: guide
 tags:
   - HTML5
   - NeedsMarkupWork
@@ -8,11 +9,12 @@ tags:
   - WebSockets
 ---
 {{DefaultAPISidebar("Websockets API")}}
+
 ## Introduction
 
 If you would like to use the WebSocket API, it is useful if you have a server. In this article I will show you how to write one in C#. You can do it in any server-side language, but to keep things simple and more understandable, I chose Microsoft's language.
 
-This server conforms to [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455) so it will only handle connections from Chrome version 16, Firefox 11, IE 10 and over.
+This server conforms to [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455), so it will only handle connections from Chrome version 16, Firefox 11, IE 10 and over.
 
 ## First steps
 
@@ -135,7 +137,7 @@ if (Regex.IsMatch(data, "^GET")) {
 }
 ```
 
-The response is easy to build, but might be a little bit difficult to understand. The full explanation of the Server handshake can be found in RFC 6455, section 4.2.2. For our purposes, we'll just build a simple response.
+The response is easy to build, but might be a little difficult to understand. The full explanation of the Server handshake can be found in RFC 6455, section 4.2.2. For our purposes, we'll just build a simple response.
 
 You must:
 

@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchRecord.request
 slug: Web/API/BackgroundFetchRecord/request
+page-type: web-api-instance-property
 tags:
   - API
   - Property

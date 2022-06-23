@@ -1,6 +1,7 @@
 ---
 title: RTCTrackEvent.streams
 slug: Web/API/RTCTrackEvent/streams
+page-type: web-api-instance-property
 tags:
   - API
   - Media

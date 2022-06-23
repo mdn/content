@@ -1,6 +1,7 @@
 ---
 title: Media Capture and Streams API (Media Stream)
 slug: Web/API/Media_Streams_API
+page-type: web-api-overview
 tags:
   - API
   - Audio
@@ -9,6 +10,7 @@ tags:
   - Media Streams API
   - Overview
   - Video
+browser-compat: api.MediaStream
 ---
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
@@ -67,7 +69,7 @@ The [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_
 
 ## Browser compatibility
 
-{{Compat("api.MediaStream")}}
+{{Compat}}
 
 ## See also
 

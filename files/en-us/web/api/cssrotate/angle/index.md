@@ -1,6 +1,7 @@
 ---
 title: CSSRotate.angle
 slug: Web/API/CSSRotate/angle
+page-type: web-api-instance-property
 tags:
   - API
   - CSS

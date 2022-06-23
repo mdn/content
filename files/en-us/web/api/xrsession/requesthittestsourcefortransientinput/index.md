@@ -1,6 +1,7 @@
 ---
 title: XRSession.requestHitTestSourceForTransientInput()
 slug: Web/API/XRSession/requestHitTestSourceForTransientInput
+page-type: web-api-instance-method
 tags:
   - API
   - AR

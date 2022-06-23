@@ -1,6 +1,7 @@
 ---
 title: BluetoothUUID.getService()
 slug: Web/API/BluetoothUUID/getService
+page-type: web-api-instance-method
 tags:
   - API
   - Method

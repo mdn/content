@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet
 slug: Web/API/CSSStyleSheet
+page-type: web-api-interface
 tags:
   - API
   - CSS

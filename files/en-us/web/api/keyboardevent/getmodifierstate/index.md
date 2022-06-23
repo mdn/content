@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.getModifierState()
 slug: Web/API/KeyboardEvent/getModifierState
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

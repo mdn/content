@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.texImage2D()
 slug: Web/API/WebGLRenderingContext/texImage2D
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -20,7 +21,7 @@ image.
 ```js
 // WebGL1
 texImage2D(target, level, internalformat, width, height, border, format, type)
-texImage2D(target, level, internalformat, width, height, border, format, type, pixels) // pixels is instance of ArrayBufferView
+texImage2D(target, level, internalformat, width, height, border, format, type, pixels) // pixels a TypedArray or a DataView
 texImage2D(target, level, internalformat, format, type)
 texImage2D(target, level, internalformat, format, type, pixels)
 
@@ -123,7 +124,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
     </table>
 
     Other possible values in WebGL2 for the versions of `texImage2D` that
-    take an `ArrayBufferView` or a `GLintptr offset`
+    take a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}}, or a `GLintptr offset`
 
     <table>
       <thead>
@@ -762,8 +763,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
 - `format`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the format of the texel data. In WebGL 1, this
     must be the same as `internalformat` (see above). in WebGL 2, the
-    combinations are listed in [this
-    table](https://www.khronos.org/registry/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE).
+    combinations are listed in [this table](https://www.khronos.org/registry/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE).
 - `type`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the data type of the texel data. Possible values:
@@ -810,19 +810,13 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
 
   - : One of the following objects can be used as a pixel source for the texture:
 
-    - {{domxref("ArrayBufferView")}},
-
-      - A {{jsxref("Uint8Array")}} must be used if `type` is
-        `gl.UNSIGNED_BYTE`.
-      - A {{jsxref("Uint16Array")}} must be used if `type` is either
-        `gl.UNSIGNED_SHORT_5_6_5`, `gl.UNSIGNED_SHORT_4_4_4_4`,
-        `gl.UNSIGNED_SHORT_5_5_5_1`, `gl.UNSIGNED_SHORT` or
-        `ext.HALF_FLOAT_OES`.
-      - A {{jsxref("Uint32Array")}} must be used if `type` is
-        `gl.UNSIGNED_INT` or `ext.UNSIGNED_INT_24_8_WEBGL`.
-      - A {{jsxref("Float32Array")}} must be used if `type` is
-        `gl.FLOAT`.
-
+    - {{jsxref("Uint8Array")}} (must be used if `type` is `gl.UNSIGNED_BYTE`)
+    - {{jsxref("Uint16Array")}} (must be used if `type` is either
+      `gl.UNSIGNED_SHORT_5_6_5`, `gl.UNSIGNED_SHORT_4_4_4_4`,
+      `gl.UNSIGNED_SHORT_5_5_5_1`, `gl.UNSIGNED_SHORT` or
+      `ext.HALF_FLOAT_OES`)
+    - {{jsxref("Uint32Array")}} (must be used if `type` is `gl.UNSIGNED_INT` or `ext.UNSIGNED_INT_24_8_WEBGL`)
+    - {{jsxref("Float32Array")}} (must be used if `type` is `gl.FLOAT`)
     - {{domxref("ImageData")}},
     - {{domxref("HTMLImageElement")}},
     - {{domxref("HTMLCanvasElement")}},

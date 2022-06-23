@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.msIsStereo3D
 slug: Web/API/HTMLVideoElement/msIsStereo3D
+page-type: web-api-instance-property
 tags:
   - API
   - API:Microsoft Extensions

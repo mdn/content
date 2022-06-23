@@ -81,7 +81,6 @@
       ],
       "interfaces": [
         "CanvasGradient",
-        "CanvasImageSource",
         "CanvasPattern",
         "CanvasRenderingContext2D",
         "HTMLCanvasElement",
@@ -122,6 +121,16 @@
         "Element: paste"
       ]
     },
+    "Compression Streams API": {
+      "overview": ["Compression Streams API"],
+      "interfaces": [
+        "CompressionStream",
+        "DecompressionStream"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Contact Picker API": {
       "overview": ["Contact Picker API"],
       "interfaces": ["ContactsManager"],
@@ -146,6 +155,18 @@
       "interfaces": ["Console"],
       "methods": [],
       "properties": ["Window.console", "WorkerGlobalScope.console"],
+      "events": []
+    },
+    "Cookie Store API": {
+      "overview": ["Cookie Store API"],
+      "interfaces": [
+        "CookieStore",
+        "CookieStoreManager",
+        "CookieChangeEvent",
+        "ExtendableCookieChangeEvent"
+      ],
+      "methods": [],
+      "properties": [],
       "events": []
     },
     "Credential Management API": {
@@ -384,18 +405,18 @@
       "events": []
     },
     "File API": {
+      "overview": ["File API"],
       "guides": [
-        "/docs/Using_files_from_web_applications",
-        "/docs/Extensions/Using_the_DOM_File_API_in_chrome_code"
+        "/docs/Web/API/File_API/Using_files_from_web_applications"
       ],
       "interfaces": [
+        "Blob",
         "File",
         "FileList",
         "FileReader",
-        "FileReaderSync",
-        "Blob"
+        "FileReaderSync"
       ],
-      "methods": [],
+      "methods": ["URL.createObjectURL()", "URL.revokeObjectURL()"],
       "properties": [],
       "events": []
     },
@@ -1039,6 +1060,14 @@
       ],
       "events": []
     },
+    "Prioritized Task Scheduling API": {
+      "overview": ["Prioritized Task Scheduling API"],
+      "guides": [],
+      "interfaces": ["Scheduler", "TaskController", "TaskSignal", "AbortSignal", "TaskPriorityChangeEvent"],
+      "methods": [],
+      "properties": ["Window.scheduler"],
+      "events": []
+    },
     "Proximity Events": {
       "overview": ["Proximity Events"],
       "interfaces": ["DeviceProximityEvent", "UserProximityEvent"],
@@ -1529,6 +1558,7 @@
         "/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API",
         "/docs/Web/API/Web_Audio_API/Best_practices",
         "/docs/Web/API/Web_Audio_API/Advanced_techniques",
+        "/docs/Web/API/Web_Audio_API/Using_AudioWorklet",
         "/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode",
         "/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext",
         "/docs/Web/API/Web_Audio_API/Simple_synth",
@@ -1906,32 +1936,6 @@
         "RTCCertificateStats",
         "RTCRTPStreamStats"
       ],
-      "types": [
-        "RTCIceTransportPolicy",
-        "RTCBundlePolicy",
-        "RTCRtcpMuxPolicy",
-        "RTCSignalingState",
-        "RTCIceGatheringState",
-        "RTCPeerConnectionState",
-        "RTCIceConnectionState",
-        "RTCIceProtocol",
-        "RTCIceTcpCandidateType",
-        "RTCIceCandidateType",
-        "RTCPriorityType",
-        "RTCRtpTransceiverDirection",
-        "RTCDtxStatus",
-        "RTCDegradationPreference",
-        "RTCDtlsTransportState",
-        "RTCIceGathererState",
-        "RTCIceComponent",
-        "RTCSctpTransportState",
-        "RTCDataChannelState",
-        "RTCErrorDetailType",
-        "RTCStatsType",
-        "RTCCodecType",
-        "RTCQualityLimitationReason",
-        "RTCStatsIceCandidatePairState"
-      ],
       "methods": ["MediaDevices.getUserMedia()"],
       "properties": ["Navigator.mediaDevices"],
       "events": [
@@ -2033,6 +2037,27 @@
         "WorkerGlobalScope",
         "WorkerLocation",
         "WorkerNavigator"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
+    "WebUSB API": {
+      "overview": ["WebUSB API"],
+      "interfaces": [
+        "USB",
+        "USBAlternateInterface",
+        "USBConfiguration",
+        "USBConnectionEvent",
+        "USBDevice",
+        "USBEndPoint",
+        "USBInterface",
+        "USBInTransferResult",
+        "USBIsochronousInTransferPacket",
+        "USBIsochronousInTransferResult",
+        "USBIsochronousOutTransferPacket",
+        "USBIsochronousOutTransferResult",
+        "USBOutTransferResult"
       ],
       "methods": [],
       "properties": [],

@@ -1,6 +1,7 @@
 ---
 title: ContactsManager.select()
 slug: Web/API/ContactsManager/select
+page-type: web-api-instance-method
 tags:
   - Contact Picker API
   - Contacts
@@ -21,12 +22,13 @@ resolve.
 ## Syntax
 
 ```js
-var ContactInfo = ContactsManager.select(properties, options);
+select(properties)
+select(properties, options)
 ```
 
 ### Parameters
 
-- _properties_
+- `properties`
 
   - : An array of {{jsxref('String', 'strings')}} defining what information to retrieve
     from a contact. Allowed values are as follows:
@@ -41,8 +43,8 @@ var ContactInfo = ContactsManager.select(properties, options);
 
   - : Options are as follows:
 
-    - `multiple`: A Boolean that allows multiple contacts to be selected.
-      The default is `false`.
+    - `multiple`
+      - : A Boolean that allows multiple contacts to be selected. The default is `false`.
 
 ### Return value
 

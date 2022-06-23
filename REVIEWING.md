@@ -36,7 +36,7 @@ out-of-date. This is being handled as follows:
 
 ## Review guidelines
 
-If you are reviewing mdn content changes, read through the following
+If you are reviewing MDN content changes, read through the following
 guidelines. There's quite a lot here, but don't worry if you don't review
 perfectly in accordance with all of these points immediately. It is more
 important to make sure the content is readable, useful, correct, and not
@@ -80,6 +80,12 @@ inappropriate, than it is to follow every guideline to the letter.
    - Alternatively, you can edit files using the GitHub UI — go to the pull
      request's "Files changed" tab, find the file you want to edit, and
      choose "three dot" menu (...) > Edit file.
+1. If a pull request is fine in itself, is a clear improvement to the content,
+   and makes the change it claims to make in the description, you should as a
+   rule merge it, even if you can see other improvements that could be made in
+   the same file. If you want to ensure that these other improvements will
+   be taken care of, file a follow-up issue or pull request of your own to
+   address them.
 1. If you don't understand a content change that you've been selected to
    review, or feel that it is too large and complex for you to deal with,
    don't panic! Feel free to reach out to someone else to ask for help,

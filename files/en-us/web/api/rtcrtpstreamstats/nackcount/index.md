@@ -1,6 +1,7 @@
 ---
 title: RTCRtpStreamStats.nackCount
 slug: Web/API/RTCRtpStreamStats/nackCount
+page-type: web-api-instance-property
 tags:
   - API
   - Acknowledgement

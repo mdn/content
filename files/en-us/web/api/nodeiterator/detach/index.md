@@ -1,6 +1,7 @@
 ---
 title: NodeIterator.detach()
 slug: Web/API/NodeIterator/detach
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: DeviceMotionEvent.accelerationIncludingGravity
 slug: Web/API/DeviceMotionEvent/accelerationIncludingGravity
+page-type: web-api-instance-property
 tags:
   - API
   - Device Orientation
@@ -14,8 +15,7 @@ browser-compat: api.DeviceMotionEvent.accelerationIncludingGravity
 {{APIRef("Device Orientation Events")}}
 
 The **`accelerationIncludingGravity`** property returns the
-amount of acceleration recorded by the device, in [meters per second
-squared (m/s²)](https://en.wikipedia.org/wiki/Meter_per_second_squared). Unlike {{DOMxRef("DeviceMotionEvent.acceleration")}}
+amount of acceleration recorded by the device, in [meters per second squared (m/s²)](https://en.wikipedia.org/wiki/Meter_per_second_squared). Unlike {{DOMxRef("DeviceMotionEvent.acceleration")}}
 which compensates for the influence of gravity, its value is the sum of the acceleration
 of the device as induced by the user and an acceleration equal and opposite to that
 caused by gravity. In other words, it measures the

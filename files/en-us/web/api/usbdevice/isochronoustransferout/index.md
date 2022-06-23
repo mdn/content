@@ -1,6 +1,7 @@
 ---
 title: USBDevice.isochronousTransferOut()
 slug: Web/API/USBDevice/isochronousTransferOut
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - isochronousTransferOut
+  - Experimental
 browser-compat: api.USBDevice.isochronousTransferOut
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}

@@ -1,6 +1,7 @@
 ---
 title: MouseEvent
 slug: Web/API/MouseEvent
+page-type: web-api-interface
 tags:
   - API
   - DOM

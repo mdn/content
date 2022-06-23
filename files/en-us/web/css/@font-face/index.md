@@ -106,7 +106,11 @@ The `@font-face` at-rule may be used not only at the top level of a CSS, but als
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+@font-face {
+  <declaration-list>
+}
+```
 
 ## Examples
 
@@ -135,7 +139,7 @@ This example specifies a downloadable font to use, applying it to the entire bod
 
 The output of this example code looks like so:
 
-{{EmbedGHLiveSample("css-examples/web-fonts/basic-web-font.html", '100%', 50)}}
+{{EmbedGHLiveSample("css-examples/web-fonts/basic-web-font.html", '100%', '100')}}
 
 ### Specifying local font alternatives
 

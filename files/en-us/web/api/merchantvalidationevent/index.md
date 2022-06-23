@@ -1,6 +1,7 @@
 ---
 title: MerchantValidationEvent
 slug: Web/API/MerchantValidationEvent
+page-type: web-api-interface
 tags:
   - API
   - Commerce

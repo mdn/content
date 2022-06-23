@@ -145,7 +145,7 @@ The position of the thumb is the maximum value minus the current value times the
   position: absolute;
   height: 1rem;
   width: 2rem;
-  background-color: currentColor;
+  background-color: currentcolor;
   left: -0.5rem;
 }
 ```
@@ -176,7 +176,7 @@ There are a few ways to make a range input vertical. In this example, we used [C
 | Right and Up arrows | Increase the selected value by one step |
 | Left and Down arrows | Decrease the selected value by one step|
 | Page Up | (Optional) increase the value by a set amount greater than one step |
-| Page Up and Page Down | (Optional) decrease the value by a set amount greater than one step |
+| Page Down | (Optional) decrease the value by a set amount greater than one step |
 | Home | Set the slider to the minimum value. |
 | End | Set the slider to the maximum value. |
 

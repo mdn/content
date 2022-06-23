@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.getIdentityAssertion()
 slug: Web/API/RTCPeerConnection/getIdentityAssertion
+page-type: web-api-instance-method
 tags:
   - Method
   - RTCPeerConnection

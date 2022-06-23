@@ -32,7 +32,7 @@ One of HTML's main jobs is to give text structure so that a browser can display 
       <th scope="row">Objective:</th>
       <td>
         Learn how to mark up a basic page of text to give it structure and
-        meaning—including paragraphs, headings, lists, emphasis, and quotations.
+        meaning — including paragraphs, headings, lists, emphasis, and quotations.
       </td>
     </tr>
   </tbody>
@@ -90,7 +90,7 @@ It's really up to you what the elements involved represent, as long as the hiera
 
 ### Why do we need structure?
 
-To answer this question, let's take a look at [text-start.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/html-text-formatting/text-start.html)—the starting point of our running example for this article (a nice hummus recipe). You should save a copy of this file on your local machine, as you'll need it for the exercises later on. This document's body currently contains multiple pieces of content. They aren't marked up in any way, but they are separated with linebreaks (Enter/Return pressed to go onto the next line).
+To answer this question, let's take a look at [text-start.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/html-text-formatting/text-start.html)—the starting point of our running example for this article (a nice hummus recipe). You should save a copy of this file on your local machine, as you'll need it for the exercises later on. This document's body currently contains multiple pieces of content. They aren't marked up in any way, but they are separated with line breaks (Enter/Return pressed to go onto the next line).
 
 However, when you open the document in your browser, you'll see that the text appears as a big chunk!
 
@@ -947,7 +947,7 @@ HTML5 redefined `<b>`, `<i>`, and `<u>` with new, somewhat confusing, semantic r
 Here's the best rule you can remember: It's likely appropriate to use `<b>`, `<i>`, or `<u>` to convey a meaning traditionally conveyed with bold, italics, or underline, provided there is no more suitable element. However, it always remains critical to keep an accessibility mindset. The concept of italics isn't very helpful to people using screen readers, or to people using a writing system other than the Latin alphabet.
 
 - {{HTMLElement('i')}} is used to convey a meaning traditionally conveyed by italic: foreign words, taxonomic designation, technical terms, a thought...
-- {{HTMLElement('b')}} is used to convey a meaning traditionally conveyed by bold: key words, product names, lead sentence...
+- {{HTMLElement('b')}} is used to convey a meaning traditionally conveyed by bold: keywords, product names, lead sentence...
 - {{HTMLElement('u')}} is used to convey a meaning traditionally conveyed by underline: proper name, misspelling...
 
 > **Note:** People strongly associate underlining with hyperlinks. Therefore, on the web, it's best to underline only links. Use the `<u>` element when it's semantically appropriate, but consider using CSS to change the default underline to something more appropriate on the web. The example below illustrates how it can be done.

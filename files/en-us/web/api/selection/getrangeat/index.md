@@ -1,6 +1,7 @@
 ---
 title: Selection.getRangeAt()
 slug: Web/API/Selection/getRangeAt
+page-type: web-api-instance-method
 tags:
   - API
   - HTML Editing

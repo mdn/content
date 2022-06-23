@@ -1,6 +1,7 @@
 ---
 title: LockManager.request()
 slug: Web/API/LockManager/request
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

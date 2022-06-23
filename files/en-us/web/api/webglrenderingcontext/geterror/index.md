@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getError()
 slug: Web/API/WebGLRenderingContext/getError
+page-type: web-api-instance-method
 tags:
   - API
   - Method

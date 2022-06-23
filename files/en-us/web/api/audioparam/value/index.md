@@ -1,6 +1,7 @@
 ---
 title: AudioParam.value
 slug: Web/API/AudioParam/value
+page-type: web-api-instance-property
 tags:
   - API
   - AudioParam
@@ -120,8 +121,7 @@ gainNode.gain.setValueAtTime(0.4, audioCtx.currentTime);
 When changing the gain value of a {{domxref("GainNode")}}, Google Chrome prior to
 version 64 (January 2018) would perform a smooth interpolation to prevent dezippering.
 Starting with version 64, the value is changed instantly to bring it in line with the
-Web Audio spec. See [Chrome Platform
-Status](https://chromestatus.com/feature/5287995770929152) for details.
+Web Audio spec. See [Chrome Platform Status](https://chromestatus.com/feature/5287995770929152) for details.
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLButtonElement.disabled
 slug: Web/API/HTMLButtonElement/disabled
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -10,7 +11,7 @@ browser-compat: api.HTMLButtonElement.disabled
 ---
 {{APIRef("HTML DOM")}}
 
-The **`HTMLButtonElement.disabled`** property indicates whether or not the control is disabled, meaning that it does not accept any clicks.
+The **`HTMLButtonElement.disabled`** property indicates whether the control is disabled, meaning that it does not accept any clicks.
 
 ## Value
 
@@ -23,4 +24,3 @@ A boolean value.
 ## Browser compatibility
 
 {{Compat}}
-

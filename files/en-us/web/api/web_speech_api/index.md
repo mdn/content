@@ -1,6 +1,7 @@
 ---
 title: Web Speech API
 slug: Web/API/Web_Speech_API
+page-type: web-api-overview
 tags:
   - API
   - Landing
@@ -9,6 +10,9 @@ tags:
   - recognition
   - speech
   - synthesis
+browser-compat:
+  - api.SpeechRecognition
+  - api.SpeechSynthesis
 ---
 {{DefaultAPISidebar("Web Speech API")}}
 
@@ -68,23 +72,15 @@ For more details on using these features, see [Using the Web Speech API](/en-US/
 
 ## Examples
 
-The [Web Speech API repo](https://github.com/mdn/web-speech-api/) on GitHub contains demos to illustrate speech recognition and synthesis.
+The [Web Speech API examples](https://github.com/mdn/dom-examples/tree/master/web-speech-api) on GitHub contains demos to illustrate speech recognition and synthesis.
 
 ## Specifications
 
-| Specification      |
-| ------------------ |
-| [Web Speech API](https://wicg.github.io/speech-api/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `SpeechRecognition`
-
-{{Compat("api.SpeechRecognition", 0)}}
-
-### `SpeechSynthesis`
-
-{{Compat("api.SpeechSynthesis", 0)}}
+{{Compat}}
 
 ## See also
 

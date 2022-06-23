@@ -1,6 +1,7 @@
 ---
 title: URL Pattern API
 slug: Web/API/URL_Pattern_API
+page-type: web-api-overview
 tags:
   - API
   - Overview
@@ -482,7 +483,7 @@ console.log(pattern1.search); // ''
 console.log(pattern1.hash); // ''
 
 // Equivalent to pattern1
-const pattern2 = new URLPattern('/foo/*', 'https://example.com' });
+const pattern2 = new URLPattern('/foo/*', 'https://example.com');
 
 // Throws because a relative constructor string must have a base URL to resolve
 // against.

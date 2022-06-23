@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchRegistration.id
 slug: Web/API/BackgroundFetchRegistration/id
+page-type: web-api-instance-property
 tags:
   - API
   - Property

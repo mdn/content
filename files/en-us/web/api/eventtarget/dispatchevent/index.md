@@ -1,6 +1,7 @@
 ---
 title: EventTarget.dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference

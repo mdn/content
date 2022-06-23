@@ -1,6 +1,7 @@
 ---
 title: MediaSession
 slug: Web/API/MediaSession
+page-type: web-api-interface
 tags:
   - API
   - Audio

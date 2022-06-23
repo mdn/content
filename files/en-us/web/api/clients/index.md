@@ -1,6 +1,7 @@
 ---
 title: Clients
 slug: Web/API/Clients
+page-type: web-api-interface
 tags:
   - API
   - Clients

@@ -1,6 +1,7 @@
 ---
 title: HTMLScriptElement.supports()
 slug: Web/API/HTMLScriptElement/supports
+page-type: web-api-static-method
 tags:
   - API
   - HTMLScriptElement

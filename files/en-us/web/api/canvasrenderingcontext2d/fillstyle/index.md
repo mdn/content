@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.fillStyle
 slug: Web/API/CanvasRenderingContext2D/fillStyle
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas

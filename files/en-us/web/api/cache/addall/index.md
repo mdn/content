@@ -1,6 +1,7 @@
 ---
 title: Cache.addAll()
 slug: Web/API/Cache/addAll
+page-type: web-api-instance-method
 tags:
   - API
   - Cache

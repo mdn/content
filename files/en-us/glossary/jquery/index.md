@@ -3,7 +3,7 @@ title: jQuery
 slug: Glossary/jQuery
 tags:
   - Glossary
-  - JQuery
+  - jQuery
   - JavaScript
 ---
 **jQuery** is a {{Glossary("JavaScript")}} {{Glossary("Library")}} that focuses on simplifying {{Glossary("DOM")}} manipulation, {{Glossary("AJAX")}} calls, and {{Glossary("Event")}} handling.

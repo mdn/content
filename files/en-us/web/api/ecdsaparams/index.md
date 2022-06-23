@@ -1,13 +1,16 @@
 ---
 title: EcdsaParams
 slug: Web/API/EcdsaParams
+page-type: web-api-interface
 tags:
   - API
   - Dictionary
   - EcdsaParams
   - Reference
   - Web Crypto API
-spec-urls: https://w3c.github.io/webcrypto/#dfn-EcdsaParams
+browser-compat:
+  - api.SubtleCrypto.sign
+  - api.SubtleCrypto.verify
 ---
 {{ APIRef("Web Crypto API") }}
 
@@ -39,7 +42,7 @@ See the examples for {{domxref("SubtleCrypto.sign()")}} or {{domxref("SubtleCryp
 
 Browsers that support the "ECDSA" algorithm for the {{domxref("SubtleCrypto.sign()")}} and {{domxref("SubtleCrypto.verify()")}} methods will support this type.
 
-{{Compat("api.SubtleCrypto.sign")}}
+{{Compat}}
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: BeforeUnloadEvent
 slug: Web/API/BeforeUnloadEvent
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -52,7 +53,7 @@ WebKit-derived browsers don't follow the spec for the dialog box. An almost-cros
 
 ```js
 window.addEventListener("beforeunload", function (e) {
-  var confirmationMessage = "\o/";
+  const confirmationMessage = "\o/";
 
   (e || window.event).returnValue = confirmationMessage;     // Gecko + IE
   return confirmationMessage;                                /* Safari, Chrome, and other

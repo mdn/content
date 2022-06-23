@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.disabled
 slug: Web/API/HTMLSelectElement/disabled
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

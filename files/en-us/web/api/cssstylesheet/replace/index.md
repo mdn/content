@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.replace()
 slug: Web/API/CSSStyleSheet/replace
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -34,10 +35,10 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("CSSStyleSheet")}}.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NotAllowedError`
-  - : Thrown if the stylesheet was not created using the {{domxref("CSSStyleSheet.CSSStyleSheet()","CSSStyleSheet()")}} constructor.
-- {{domxref("DOMException")}} `NotAllowedError`
-  - : If the stylesheet is flagged as unmodifiable.
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if one of these two conditions is met:
+    - The stylesheet was not created using the {{domxref("CSSStyleSheet.CSSStyleSheet()","CSSStyleSheet()")}} constructor.
+    - The stylesheet is flagged as unmodifiable.
 
 ## Examples
 
@@ -62,3 +63,8 @@ stylesheet.replace('body { font-size: 1.4em; } p { color: red; }')
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
+- [Using the Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM)

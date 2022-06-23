@@ -116,7 +116,7 @@ The math functions allow CSS numeric values to be written as mathematical expres
   - : A modulus function that contains two calculations A and B, and returns the difference between A and the nearest integer multiple of B either above or below A.
 - {{cssxref("round", "round()")}} {{Experimental_Inline}}
   - : Contains an optional rounding strategy, and two calculations A and B, and returns the value of A, rounded according to the rounding strategy, to the nearest integer multiple of B either above or below A.
-- {{cssxref("sign", "sign()")}} {{Experimental_Inline}}
+- {{cssxref("sign_function", "sign()")}} {{Experimental_Inline}}
   - : Takes a calculation and returns -1 if the numeric value is negative,
     \+1 if the numeric value is positive, 0⁺ if the numeric value is 0⁺, and 0⁻ if the numeric value is 0⁻.
 - {{cssxref("sin", "sin()")}} {{Experimental_Inline}}
@@ -173,6 +173,10 @@ Functions which specify different color representations. These may be used anywh
   - : Lab color is device-independent and specifies physical measurements of color.
 - {{cssxref("color_value/lch", "lch()")}} {{Experimental_Inline}}
   - : LCH color is device-independent and specifies color using polar coordinates for chroma and hue.
+- {{cssxref("color_value/oklab", "oklab()")}} {{Experimental_Inline}}
+  - : OKLab color is device-independent and specifies physical measurements of color.
+- {{cssxref("color_value/oklch", "oklch()")}} {{Experimental_Inline}}
+  - : OKLCH color is device-independent and specifies color using polar coordinates for chroma and hue.
 - {{cssxref("color_value/rgb", "rgb()")}}
   - : The RGB color model defines a given color according to its red, green, and blue components. An optional alpha component represents the color's transparency.
 - {{cssxref("color_value/rgba", "rgba()")}}

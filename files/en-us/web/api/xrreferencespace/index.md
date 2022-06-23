@@ -1,6 +1,7 @@
 ---
 title: XRReferenceSpace
 slug: Web/API/XRReferenceSpace
+page-type: web-api-interface
 tags:
   - API
   - AR

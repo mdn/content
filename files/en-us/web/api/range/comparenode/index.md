@@ -1,6 +1,7 @@
 ---
 title: Range.compareNode()
 slug: Web/API/Range/compareNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

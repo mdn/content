@@ -51,7 +51,7 @@ Also welcome are topics that cut across technologies but are relevant to Web dev
 
 ## What topics don't belong on MDN Web Docs?
 
-In general, anything that isn't an open web standard does not belong on MDN. The below sections provide more specifics.
+In general, anything that isn't an open web standard does not belong on MDN. The sections below provide more detail.
 
 ### Mozilla products
 

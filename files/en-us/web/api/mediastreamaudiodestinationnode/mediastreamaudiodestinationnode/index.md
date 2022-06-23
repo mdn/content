@@ -1,6 +1,7 @@
 ---
 title: MediaStreamAudioDestinationNode()
 slug: Web/API/MediaStreamAudioDestinationNode/MediaStreamAudioDestinationNode
+page-type: web-api-constructor
 tags:
   - API
   - Audio
@@ -49,9 +50,9 @@ new MediaStreamAudioDestinationNode(context, options)
 ## Examples
 
 ```js
-var ac = new AudioContext();
+let ac = new AudioContext();
 
-var myDestination = new MediaStreamAudioDestinationNode(ac);
+let myDestination = new MediaStreamAudioDestinationNode(ac);
 ```
 
 ## Specifications

@@ -110,7 +110,11 @@ To append rules to the `layout` layer inside `framework`, join the two names wit
 
 ## Formal syntax
 
-{{CSSSyntax}}
+```
+@layer [ <layer-name># | <layer-name>?  {
+  <stylesheet>
+} ]
+```
 
 ## Examples
 

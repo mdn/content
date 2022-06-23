@@ -1,6 +1,7 @@
 ---
 title: MutationObserver.observe()
 slug: Web/API/MutationObserver/observe
+page-type: web-api-instance-method
 tags:
   - API
   - Attribute Changes

@@ -1,15 +1,17 @@
 ---
 title: 'HIDDevice: inputreport event'
 slug: Web/API/HIDDevice/inputreport_event
+page-type: web-api-event
 tags:
   - API
   - Property
   - Reference
   - oninputreport
   - HIDDevice
+  - Experimental
 browser-compat: api.HIDDevice.inputreport_event
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`inputreport`** event of the {{domxref("HIDDevice")}} interface fires when a new report is received from the HID device.
 

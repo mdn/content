@@ -1,6 +1,7 @@
 ---
 title: MediaStream.getTrackById()
 slug: Web/API/MediaStream/getTrackById
+page-type: web-api-instance-method
 tags:
   - Media
   - MediaStream
@@ -21,7 +22,7 @@ string. If there is no track with the specified ID, this method returns
 ## Syntax
 
 ```js
-var track = MediaStream.getTrackById(id);
+const track = MediaStream.getTrackById(id);
 ```
 
 ### Parameters

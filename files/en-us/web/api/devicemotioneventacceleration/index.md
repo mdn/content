@@ -1,6 +1,7 @@
 ---
 title: DeviceMotionEventAcceleration
 slug: Web/API/DeviceMotionEventAcceleration
+page-type: web-api-interface
 tags:
   - API
   - DeviceAcceleration

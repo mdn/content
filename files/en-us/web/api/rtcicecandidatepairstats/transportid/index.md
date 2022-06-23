@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.transportId
 slug: Web/API/RTCIceCandidatePairStats/transportId
+page-type: web-api-instance-property
 tags:
   - API
   - ICE

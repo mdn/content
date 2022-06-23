@@ -1,6 +1,7 @@
 ---
 title: 'WindowControlsOverlay: geometrychange event'
 slug: Web/API/WindowControlsOverlay/geometrychange_event
+page-type: web-api-event
 tags:
   - Event
   - Reference

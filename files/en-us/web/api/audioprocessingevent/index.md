@@ -1,6 +1,7 @@
 ---
 title: AudioProcessingEvent
 slug: Web/API/AudioProcessingEvent
+page-type: web-api-interface
 tags:
   - API
   - Deprecated

@@ -1,6 +1,7 @@
 ---
 title: Document.hidden
 slug: Web/API/Document/hidden
+page-type: web-api-instance-property
 tags:
   - DOM
   - Document

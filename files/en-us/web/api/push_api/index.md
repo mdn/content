@@ -1,6 +1,7 @@
 ---
 title: Push API
 slug: Web/API/Push_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental
@@ -9,6 +10,9 @@ tags:
   - Push
   - Reference
   - Service Workers
+browser-compat:
+  - api.PushEvent
+  - api.PushMessageData
 ---
 {{ApiRef("Push API")}}
 
@@ -61,19 +65,11 @@ Mozilla's [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook
 
 ## Specifications
 
-| Specification                               |
-| ------------------------------------------- |
-| [Push API](https://w3c.github.io/push-api/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `PushEvent`
-
-{{Compat("api.PushEvent")}}
-
-### `PushMessageData`
-
-{{Compat("api.PushMessageData")}}
+{{Compat}}
 
 ## See also
 

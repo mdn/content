@@ -184,7 +184,7 @@ The following list includes image formats that appear on the web, but which shou
 
 > **Note:** Safari 11.1 added the ability to use a video format, as an animated gif replacement.
 > No other browser supports this.
-> See the [Chromium bug](https://crbug.com/791658), and [Firefox bug](https://bugzil.la/895131) for more information.
+> See the [Chromium bug](https://bugs.chromium.org/p/chromium/issues/detail?id=791658), and [Firefox bug](https://bugzilla.mozilla.org/show_bug.cgi?id=895131) for more information.
 
 ## Image file type details
 
@@ -1047,7 +1047,7 @@ For instance, this example defines an drawing area with initial size 100 by 100 
 
 SVG can be used in web content in two ways:
 
-1. You can directly write the {{HTMLElement("svg")}} element within the HTML, containing [SVG elements](/en-US/docs/Web/SVG/Element) to draw the image.
+1. You can directly write the {{SVGElement("svg")}} element within the HTML, containing [SVG elements](/en-US/docs/Web/SVG/Element) to draw the image.
 2. You can display an SVG image anywhere you can use any of the other image types, including with the {{HTMLElement("img")}} and {{HTMLElement("picture")}} elements, the {{cssxref("background-image")}} CSS property, and so forth.
 
 SVG is an ideal choice for images which can be represented using a series of drawing commands, especially if the size at which the image will be rendered is unknown or may vary, since SVG will smoothly scale to the desired size.

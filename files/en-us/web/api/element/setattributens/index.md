@@ -1,6 +1,7 @@
 ---
 title: Element.setAttributeNS()
 slug: Web/API/Element/setAttributeNS
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

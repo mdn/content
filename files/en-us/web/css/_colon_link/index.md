@@ -27,7 +27,9 @@ Styles defined by the `:link` pseudo-class will be overridden by any subsequent 
 
 ## Syntax
 
-{{csssyntax}}
+```
+:link
+```
 
 ## Examples
 

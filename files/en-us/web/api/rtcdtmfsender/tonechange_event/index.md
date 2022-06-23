@@ -1,6 +1,7 @@
 ---
 title: 'RTCDTMFSender: tonechange event'
 slug: Web/API/RTCDTMFSender/tonechange_event
+page-type: web-api-event
 tags:
   - DTMF
   - RTCDTMFSender

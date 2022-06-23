@@ -1,6 +1,7 @@
 ---
 title: 'Document: scroll event'
 slug: Web/API/Document/scroll_event
+page-type: web-api-event
 tags:
   - API
   - DOM

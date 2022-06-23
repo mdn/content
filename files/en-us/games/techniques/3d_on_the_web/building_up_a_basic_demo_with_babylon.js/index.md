@@ -19,7 +19,7 @@ To start developing with Babylon.js, you don't need much. You should start off b
 
 - Making sure you are using a modern browser with good [WebGL](/en-US/docs/Web/API/WebGL_API) support, such as the latest Firefox or Chrome.
 - Creating a directory to store your experiments in.
-- Saving a copy of the [latest Babylon.js engine](https://cdn.babylonjs.com/2-3/babylon.js) inside your directory.
+- Saving a copy of the [latest Babylon.js engine](https://cdn.babylonjs.com/babylon.js) inside your directory.
 - Opening the [Babylon.js documentation](https://doc.babylonjs.com/) in a separate tab — it is useful to refer to.
 
 ## HTML structure
@@ -93,13 +93,13 @@ Now the setup code is in place we need to think about implementing the standard 
 var camera = new BABYLON.FreeCamera("camera", new BABYLON.Vector3(0, 0, -10), scene);
 ```
 
-There are many [cameras](https://doc.babylonjs.com/tutorials/Cameras) available in Babylon.js; `FreeCamera` is the most basic and universal one. To initialize it you need to pass it three parameters: any name you want to use for it, the coordinates where you want it to be positioned in the 3D space, and the scene you want to add it to.
+There are many [cameras](https://doc.babylonjs.com/divingDeeper/cameras) available in Babylon.js; `FreeCamera` is the most basic and universal one. To initialize it you need to pass it three parameters: any name you want to use for it, the coordinates where you want it to be positioned in the 3D space, and the scene you want to add it to.
 
 > **Note:** You probably noticed the `BABYLON.Vector3()` method in use here — this defines a 3D position on the scene. Babylon.js is bundled with a complete math library for handling vectors, colors, matrices etc.
 
 ## Let there be light
 
-There are various [light sources](https://doc.babylonjs.com/tutorials/Lights) available in Babylon.js. The most basic one is the `PointLight`, which works like a flashlight — shining a spotlight in a given direction. Add the following line below your camera definition:
+There are various [light sources](https://doc.babylonjs.com/divingDeeper/lights/lights_introduction#types-of-lights) available in Babylon.js. The most basic one is the `PointLight`, which works like a flashlight — shining a spotlight in a given direction. Add the following line below your camera definition:
 
 ```js
 var light = new BABYLON.PointLight("light", new BABYLON.Vector3(10, 10, 0), scene);
@@ -130,7 +130,7 @@ The box looks black at the moment, because we haven't defined any material to ap
 
 ## Material
 
-Material is that thing covering the object — the colors or texture on its surface. In our case we will use a simple blue color to paint our box. There are many types of [materials](https://doc.babylonjs.com/tutorials/Materials) that can be used, but for now the standard one should be enough for us. Add these lines below the previous ones:
+Material is that thing covering the object — the colors or texture on its surface. In our case we will use a simple blue color to paint our box. There are many types of [materials](https://doc.babylonjs.com/toolsAndResources/assetLibraries/materialsLibrary) that can be used, but for now the standard one should be enough for us. Add these lines below the previous ones:
 
 ```js
 var boxMaterial = new BABYLON.StandardMaterial("material", scene);

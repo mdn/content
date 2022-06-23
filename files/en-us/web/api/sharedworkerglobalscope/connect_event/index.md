@@ -1,6 +1,7 @@
 ---
 title: 'SharedWorkerGlobalScope: connect event'
 slug: Web/API/SharedWorkerGlobalScope/connect_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -66,7 +67,7 @@ self.onconnect = function(e) {
 }
 ```
 
-For a complete running example, see our [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](https://mdn.github.io/simple-shared-worker/).)
+For a complete running example, see our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/).)
 
 ### addEventListener equivalent
 

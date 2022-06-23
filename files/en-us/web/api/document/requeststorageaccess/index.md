@@ -1,6 +1,7 @@
 ---
 title: Document.requestStorageAccess()
 slug: Web/API/Document/requestStorageAccess
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -63,8 +64,7 @@ storage access to...
   one.
 
   - Note that this number is also incremented when automatic access grants are given
-    through [Firefox
-    compatibility heuristics](/en-US/docs/Web/Privacy/Storage_Access_Policy#automatic_storage_access_upon_interaction).
+    through [Firefox compatibility heuristics](/en-US/docs/Web/Privacy/Storage_Access_Policy#automatic_storage_access_upon_interaction).
 
 - The ephemeral storage access grant is:
 
@@ -150,9 +150,7 @@ document.requestStorageAccess().then(
 ## Specifications
 
 The API is currently only at the proposal stage — the standardization process has yet
-to begin. You can currently find specification details of the API at Apple's [Introducing
-Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) blog post, and the [Storage Access API proposal in the
-Privacy CG](https://github.com/privacycg/storage-access).
+to begin. You can currently find specification details of the API at Apple's [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) blog post, and the [Storage Access API proposal in the Privacy CG](https://github.com/privacycg/storage-access).
 
 ## Browser compatibility
 

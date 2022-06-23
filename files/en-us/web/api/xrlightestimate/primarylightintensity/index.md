@@ -1,6 +1,7 @@
 ---
 title: XRLightEstimate.primaryLightIntensity
 slug: Web/API/XRLightEstimate/primaryLightIntensity
+page-type: web-api-instance-property
 tags:
   - API
   - AR

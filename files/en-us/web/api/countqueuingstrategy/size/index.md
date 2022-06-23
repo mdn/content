@@ -1,6 +1,7 @@
 ---
 title: CountQueuingStrategy.size()
 slug: Web/API/CountQueuingStrategy/size
+page-type: web-api-instance-method
 tags:
   - API
   - CountQueuingStrategy

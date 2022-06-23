@@ -1,6 +1,7 @@
 ---
 title: EventSource
 slug: Web/API/EventSource
+page-type: web-api-interface
 tags:
   - API
   - Communications
@@ -65,11 +66,11 @@ Additionally, the event source itself may send messages with an event field, whi
 In this basic example, an `EventSource` is created to receive unnamed events from the server; a page with the name `sse.php` is responsible for generating the events.
 
 ```js
-var evtSource = new EventSource('sse.php');
-var eventList = document.querySelector('ul');
+const evtSource = new EventSource('sse.php');
+const eventList = document.querySelector('ul');
 
 evtSource.onmessage = function(e) {
-  var newElement = document.createElement("li");
+  const newElement = document.createElement("li");
 
   newElement.textContent = "message: " + e.data;
   eventList.appendChild(newElement);
@@ -78,7 +79,7 @@ evtSource.onmessage = function(e) {
 
 Each received event causes our `EventSource` object's `onmessage` event handler to be run. It, in turn, creates a new {{HTMLElement("li")}} element and writes the message's data into it, then appends the new element to the list element already in the document.
 
-> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events).
 
 To listen to named events, you'll require a listener for each type of event sent.
 

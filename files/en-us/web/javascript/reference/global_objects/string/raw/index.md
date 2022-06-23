@@ -83,6 +83,9 @@ let name = 'Bob';
 String.raw`Hi\n${name}!`;
 // 'Hi\\nBob!', substitutions are processed.
 
+String.raw`Hi \${name}!`;
+// 'Hi \\${name}!', the dollar sign is escaped; there's no interpolation.
+
 // Normally you would not call String.raw() as a function,
 // but to simulate `foo${2 + 3}bar${'Java' + 'Script'}baz` you can do:
 String.raw({

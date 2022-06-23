@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.fenceSync()
 slug: Web/API/WebGL2RenderingContext/fenceSync
+page-type: web-api-instance-method
 tags:
   - API
   - Method

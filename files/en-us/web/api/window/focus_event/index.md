@@ -1,6 +1,7 @@
 ---
 title: 'Window: focus event'
 slug: Web/API/Window/focus_event
+page-type: web-api-event
 tags:
   - API
   - Event

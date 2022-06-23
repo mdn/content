@@ -1,6 +1,7 @@
 ---
 title: WebRTC Statistics API
 slug: Web/API/WebRTC_Statistics_API
+page-type: web-api-overview
 tags:
   - API
   - Draft
@@ -68,7 +69,7 @@ The {{domxref("RTCStatsReport")}} object contains a map of named objects based o
   <thead>
     <tr>
       <th scope="row">
-        Statistic category name ({{domxref("RTCStatsType")}})
+        Statistic category name
       </th>
       <th scope="col">Description</th>
       <th scope="col">Dictionaries implemented</th>

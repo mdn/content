@@ -1,6 +1,7 @@
 ---
 title: Touch
 slug: Web/API/Touch
+page-type: web-api-interface
 tags:
   - API
   - DOM

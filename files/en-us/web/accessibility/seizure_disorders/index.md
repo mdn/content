@@ -65,7 +65,7 @@ It's important to note that not all flashing and blinking is bad. NASA, in its d
 
 ### Flashing and flickering—how is danger quantified?
 
-According to the article ["Photic- and pattern-induced seizures: expert consensus of the Epilepsy Foundation of America Working Group",](https://www.epilepsy.com/sites/core/files/atoms/files/Epilepsia%20vol%2046%20issue%209%20Photosensitivity.pdf) _"A flash is a potential hazard if it has luminance ≥20 cd/m<sup>2</sup>, occurs at a frequency of ≥3 Hz, and occupies a solid visual angle of ≥0.006 steradians (approximately 10% of the central visual field or 25% of screen area at typical viewing distances)."_
+According to the article ["Photic- and pattern-induced seizures: expert consensus of the Epilepsy Foundation of America Working Group",](https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1528-1167.2005.31405.x) _"A flash is a potential hazard if it has luminance ≥20 cd/m<sup>2</sup>, occurs at a frequency of ≥3 Hz, and occupies a solid visual angle of ≥0.006 steradians (approximately 10% of the central visual field or 25% of screen area at typical viewing distances)."_
 
 How far is a typical viewing distance? The recommendation considered for a typical viewing distance at the time of writing was "_the area can be taken as applying to an area >25% of the area of a television screen, assuming standard viewing distances of ≥2 m (∼9 feet)"_. Much has changed since that time, and we are now much closer to our screen.
 
@@ -82,7 +82,7 @@ These standards are based on earlier research. In 2004, The Epilepsy Foundation 
 
 ### Size and distance
 
-#### How big? It depends.
+#### How big? It depends
 
 "Relative" size and distance both matter. According to [PEAT](https://trace.umd.edu/peat/), _"The combined area of flashes occurring concurrently occupies no more than a total of one quarter of any 341 x 256 pixel rectangle anywhere on the displayed screen area when the content is viewed at 1024 by 768 pixels."_
 
@@ -587,7 +587,7 @@ The Web Animations model is intended to provide the features necessary for expre
 
 - [Color Tutorial: describing color](https://colortutorial.design/) Tom Jewett
 - [Formula to Determine Brightness of RGB color](https://stackoverflow.com/questions/596216/formula-to-determine-perceived-brightness-of-rgb-color) Stack Exchange Discussion Thread
-- [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/?error=cookies_not_supported&code=86d8b1f2-8d9a-40bf-85f9-6c224b7e023e) Scientific American By Susana Martinez-Conde, Stephen L. Macknik on November 1, 2014
+- [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/) Scientific American By Susana Martinez-Conde, Stephen L. Macknik on November 1, 2014
 
 #### Discussions
 

@@ -1,6 +1,7 @@
 ---
 title: 'Element: webkitmouseforcechanged event'
 slug: Web/API/Element/webkitmouseforcechanged_event
+page-type: web-api-event
 tags:
   - Event
   - Force Touch

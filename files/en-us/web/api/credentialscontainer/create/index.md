@@ -1,6 +1,7 @@
 ---
 title: CredentialsContainer.create()
 slug: Web/API/CredentialsContainer/create
+page-type: web-api-instance-method
 tags:
   - API
   - Credential Management API
@@ -35,35 +36,38 @@ create(options)
     the requested new `Credentials` object. It must include one of the options
     "password", "federated", or "publicKey". The options are:
 
-    - `password`: {{optional_inline}} Either an
-      {{domxref("HTMLFormElement")}}, or a {{domxref("PasswordCredentialData")}} object.
-      TBD
+    - `password` {{optional_inline}}
+      - : Either an
+        {{domxref("HTMLFormElement")}}, or a {{domxref("PasswordCredentialData")}} object.
+        TBD
 
-      - `id`: (required) string Inherited from
-        {{domxref("CredentialData")}}.
-      - `name`: string {{optional_inline}} TBD
-      - `iconURL`: string {{optional_inline}} TBD
-      - `password`: (required) string TBD
+        - `id`: (required) string Inherited from
+          {{domxref("CredentialData")}}.
+        - `name`: string {{optional_inline}} TBD
+        - `iconURL`: string {{optional_inline}} TBD
+        - `password`: (required) string TBD
 
-    - `federated`: {{optional_inline}} An
-      {{domxref("FederatedCredentialInit")}} object. Contains requirements for
-      creating/obtaining federated credentials. The available options are:
+    - `federated` {{optional_inline}}
+      - : An
+        {{domxref("FederatedCredentialInit")}} object. Contains requirements for
+        creating/obtaining federated credentials. The available options are:
 
-      - `id`: (required) string Inherited from
-        {{domxref("CredentialData")}}.
-      - `name`: string {{optional_inline}} TBD
-      - `iconURL`: string {{optional_inline}} TBD
-      - `provider`: (required) string TBD
-      - `protocol`: string {{optional_inline}} TBD
+        - `id`: (required) string Inherited from
+          {{domxref("CredentialData")}}.
+        - `name`: string {{optional_inline}} TBD
+        - `iconURL`: string {{optional_inline}} TBD
+        - `provider`: (required) string TBD
+        - `protocol`: string {{optional_inline}} TBD
 
-    - `publicKey` {optional_inline}}
+    - `publicKey` {{optional_inline}}
       - : An object that describes the options for creating a [WebAuthn](/en-US/docs/Web/API/Web_Authentication_API) credential containing the following properties:
         - `rp`
           - : An object describing the relying party which requested the credential creation.
         - `user`
           - : An object describing the user account for which the credential is generated.
         - `challenge`
-          - : A {{domxref("BufferSource")}}, emitted by the relying party's server and used as a [cryptographic challenge](https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication). This value will be signed by the authenticator and the signature will be sent back as part of {{domxref("AuthenticatorAttestationResponse.attestationObject")}}.
+          - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}
+          emitted by the relying party's server and used as a [cryptographic challenge](https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication). This value will be signed by the authenticator and the signature will be sent back as part of {{domxref("AuthenticatorAttestationResponse.attestationObject")}}.
         - `pubKeyCredParams`
           - : An {{jsxref("Array")}} of element which specify the desired features of the credential, including its type and the algorithm used for the cryptographic signature operations. This array is sorted by descending order of preference.
         - `timeout` {{optional_inline}}

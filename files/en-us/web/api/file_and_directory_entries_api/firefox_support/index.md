@@ -1,6 +1,7 @@
 ---
 title: File and Directory Entries API support in Firefox
 slug: Web/API/File_and_Directory_Entries_API/Firefox_support
+page-type: guide
 tags:
   - API
   - Chrome

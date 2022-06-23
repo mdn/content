@@ -1,6 +1,7 @@
 ---
 title: URL.href
 slug: Web/API/URL/href
+page-type: web-api-instance-property
 tags:
   - API
   - Property

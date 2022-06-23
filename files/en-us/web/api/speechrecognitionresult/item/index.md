@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognitionResult.item()
 slug: Web/API/SpeechRecognitionResult/item
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -38,8 +39,7 @@ A {{domxref("SpeechRecognitionAlternative")}} object.
 
 ## Examples
 
-This code is excerpted from our [Speech
-color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) example.
+This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 recognition.onresult = function(event) {

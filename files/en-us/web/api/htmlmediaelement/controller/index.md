@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.controller
 slug: Web/API/HTMLMediaElement/controller
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

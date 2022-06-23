@@ -1,6 +1,7 @@
 ---
 title: XRCompositionLayer
 slug: Web/API/XRCompositionLayer
+page-type: web-api-interface
 tags:
   - API
   - AR

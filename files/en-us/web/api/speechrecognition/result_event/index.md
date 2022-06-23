@@ -1,6 +1,7 @@
 ---
 title: 'SpeechRecognition: result event'
 slug: Web/API/SpeechRecognition/result_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
@@ -42,7 +43,7 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ## Examples
 
-This code is excerpted from our [Speech color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) example.
+This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
 
 You can use the `result` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 

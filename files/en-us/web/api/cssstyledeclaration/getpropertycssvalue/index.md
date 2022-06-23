@@ -1,6 +1,7 @@
 ---
 title: CSSStyleDeclaration.getPropertyCSSValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyCSSValue
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM
@@ -32,13 +33,12 @@ getPropertyCSSValue(property)
 
 ### Parameters
 
-- *`property`* is a {{domxref('DOMString')}} representing the
-  property name to be retrieved.
+- `property`
+  - : A string representing the property name to be retrieved.
 
 ### Return value
 
-- `value` is a {{domxref('CSSValue')}} containing the CSS value
-  for a property. If none exists, returns `null`.
+A {{domxref('CSSValue')}} containing the CSS value for a property. If none exists, returns `null`.
 
 ## Examples
 

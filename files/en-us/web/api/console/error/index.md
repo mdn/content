@@ -1,6 +1,7 @@
 ---
 title: console.error()
 slug: Web/API/console/error
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

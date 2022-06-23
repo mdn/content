@@ -1,6 +1,7 @@
 ---
 title: Browser storage limits and eviction criteria
 slug: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
+page-type: guide
 tags:
   - Database
   - IndexedDB
@@ -95,5 +96,5 @@ We track the "last access time" for each origin using temporary storage. Once th
 
 ## See also
 
-- [Working with quota on mobile browsers](https://web.dev/storage-for-the-web/), by [Eiji Kitamura.](https://blog.agektmr.com) A detailed analysis of client-side storage on mobile browsers.
+- [Working with quota on mobile browsers](https://web.dev/storage-for-the-web/), by [Eiji Kitamura](https://blog.agektmr.com). A detailed analysis of client-side storage on mobile browsers.
 - [Storage for the web](https://web.dev/storage-for-the-web/) (https://web.dev/)

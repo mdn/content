@@ -1,6 +1,7 @@
 ---
 title: Fullscreen API
 slug: Web/API/Fullscreen_API
+page-type: web-api-overview
 tags:
   - API
   - DOM
@@ -16,7 +17,12 @@ tags:
   - View
   - fullscreen
   - screen
-spec-urls: https://fullscreen.spec.whatwg.org/
+browser-compat:
+  - api.Document.fullscreen
+  - api.Document.fullscreenElement
+  - api.Document.fullscreenEnabled
+  - api.Document.exitFullscreen
+  - api.Element.requestFullscreen
 ---
 {{DefaultAPISidebar("Fullscreen API")}}
 
@@ -128,25 +134,7 @@ If fullscreen mode is already active (`fullscreenElement` is not `null`), we cal
 
 ## Browser compatibility
 
-### `Document.fullscreen`
-
-{{Compat("api.Document.fullscreen")}}
-
-### `Document.fullscreenElement`
-
-{{Compat("api.Document.fullscreenElement")}}
-
-### `Document.fullscreenEnabled`
-
-{{Compat("api.Document.fullscreenEnabled")}}
-
-### `Document.exitFullscreen`
-
-{{Compat("api.Document.exitFullscreen")}}
-
-### `Element.requestFullscreen`
-
-{{Compat("api.Element.requestFullscreen")}}
+{{Compat}}
 
 ## See also
 

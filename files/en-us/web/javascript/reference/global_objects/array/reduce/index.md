@@ -35,6 +35,9 @@ The reducer walks through the array element-by-element, at each step adding the 
 reduce((previousValue, currentValue) => { /* ... */ } )
 reduce((previousValue, currentValue, currentIndex) => { /* ... */ } )
 reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ } )
+
+reduce((previousValue, currentValue) => { /* ... */ } , initialValue)
+reduce((previousValue, currentValue, currentIndex) => { /* ... */ } , initialValue)
 reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ }, initialValue)
 
 // Callback function
@@ -45,6 +48,9 @@ reduce(callbackFn, initialValue)
 reduce(function(previousValue, currentValue) { /* ... */ })
 reduce(function(previousValue, currentValue, currentIndex) { /* ... */ })
 reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ })
+
+reduce(function(previousValue, currentValue) { /* ... */ }, initialValue)
+reduce(function(previousValue, currentValue, currentIndex) { /* ... */ }, initialValue)
 reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ }, initialValue)
 ```
 
@@ -454,7 +460,7 @@ console.log(myArrayWithNoDuplicates)
 Using {{jsxref("Array.filter()")}} then {{jsxref("Array.map()")}} traverses the array
 twice, but you can achieve the same effect while traversing only once with
 {{jsxref("Array.reduce()")}}, thereby being more efficient. (If you like `for` loops, you
-can filter and map while traversing once with {{jsxref("Array.forEach()")}}).
+can filter and map while traversing once with {{jsxref("Array.forEach()")}}.)
 
 ```js
 const numbers = [-5, 6, 2, 0,];

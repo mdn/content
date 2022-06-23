@@ -1,6 +1,7 @@
 ---
 title: OscillatorNode
 slug: Web/API/OscillatorNode
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -75,7 +76,7 @@ _Inherits methods from its parent, {{domxref("AudioScheduledSourceNode")}}, and 
 
 ## Examples
 
-The following example shows basic usage of an {{domxref("AudioContext")}} to create an oscillator node and to start playing a tone on it. For an applied example, check out our [Violent Theremin demo](https://mdn.github.io/violent-theremin/) ([see app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) for relevant code).
+The following example shows basic usage of an {{domxref("AudioContext")}} to create an oscillator node and to start playing a tone on it. For an applied example, check out our [Violent Theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) ([see app.js](https://github.com/mdn/webaudio-examples/violent-theremin/scripts/app.js) for relevant code).
 
 ```js
 // create web audio api context

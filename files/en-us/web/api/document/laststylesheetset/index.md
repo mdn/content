@@ -1,6 +1,7 @@
 ---
 title: Document.lastStyleSheetSet
 slug: Web/API/Document/lastStyleSheetSet
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM

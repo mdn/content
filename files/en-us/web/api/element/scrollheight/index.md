@@ -1,6 +1,7 @@
 ---
 title: Element.scrollHeight
 slug: Web/API/Element/scrollHeight
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -142,7 +143,7 @@ function checkReading () {
 }
 
 onload = function () {
-  var oToBeRead = document.getElementById("rules");
+  const oToBeRead = document.getElementById("rules");
   checkReading.noticeBox = document.createElement("span");
   document.registration.accept.checked = false;
   checkReading.noticeBox.id = "notice";
@@ -165,10 +166,7 @@ onload = function () {
 
 ## See also
 
-- [MSDN:
-  Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer
-  9](<https://docs.microsoft.com/previous-versions/hh781509(v=vs.85)>)
+- [MSDN: Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9](<https://docs.microsoft.com/previous-versions/hh781509(v=vs.85)>)
 - {{domxref("Element.clientHeight")}}
 - {{domxref("HTMLElement.offsetHeight")}}
-- [Determining
-  the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

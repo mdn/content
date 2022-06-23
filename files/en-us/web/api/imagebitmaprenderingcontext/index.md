@@ -1,6 +1,7 @@
 ---
 title: ImageBitmapRenderingContext
 slug: Web/API/ImageBitmapRenderingContext
+page-type: web-api-interface
 tags:
   - API
   - Canvas

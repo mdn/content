@@ -1,6 +1,7 @@
 ---
 title: User-Agent Client Hints API
 slug: Web/API/User-Agent_Client_Hints_API
+page-type: web-api-overview
 tags:
   - API
   - User-Agent Client Hints API

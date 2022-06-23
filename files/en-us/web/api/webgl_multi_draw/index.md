@@ -1,6 +1,7 @@
 ---
 title: WEBGL_multi_draw
 slug: Web/API/WEBGL_multi_draw
+page-type: webgl-extension
 tags:
   - API
   - Reference
@@ -37,7 +38,7 @@ When this extension is enabled:
     [`drawArrays`](/en-US/docs/Web/API/WebGLRenderingContext/drawArrays)).
 - [`ext.multiDrawElementsWEBGL()`](/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawElementsWEBGL)
   - : Renders multiple primitives from element array data (identical to multiple calls to
-    [`drawElements`](en-US/docs/Web/API/WebGLRenderingContext/drawElements)).
+    [`drawElements`](/en-US/docs/Web/API/WebGLRenderingContext/drawElements)).
 - [`ext.multiDrawArraysInstancedWEBGL()`](/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawArraysInstancedWEBGL)
   - : Renders multiple primitives from array data (identical to multiple calls to
     [`drawArraysInstanced`](/en-US/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced)).

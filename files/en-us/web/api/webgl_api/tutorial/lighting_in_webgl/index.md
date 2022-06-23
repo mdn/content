@@ -1,6 +1,7 @@
 ---
 title: Lighting in WebGL
 slug: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
+page-type: guide
 tags:
   - 3D
   - Fragments

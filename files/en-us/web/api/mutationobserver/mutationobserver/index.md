@@ -1,6 +1,7 @@
 ---
 title: MutationObserver()
 slug: Web/API/MutationObserver/MutationObserver
+page-type: web-api-constructor
 tags:
   - API
   - Changes

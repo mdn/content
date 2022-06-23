@@ -1,6 +1,7 @@
 ---
 title: IndexedDB API
 slug: Web/API/IndexedDB_API
+page-type: web-api-overview
 tags:
   - API
   - Advanced

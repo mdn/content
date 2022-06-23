@@ -1,6 +1,7 @@
 ---
 title: VRPose.linearAcceleration
 slug: Web/API/VRPose/linearAcceleration
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

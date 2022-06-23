@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.location
 slug: Web/API/KeyboardEvent/location
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
