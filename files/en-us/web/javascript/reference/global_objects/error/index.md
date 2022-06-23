@@ -220,8 +220,8 @@ CustomError.prototype = Object.create(Error.prototype, {
   constructor: {
     value: CustomError,
     enumerable: false,
-    writable: false,
-    configurable: false
+    writable: true,
+    configurable: true
   }
 });
 
