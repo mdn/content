@@ -140074,37 +140074,6 @@
       "Anonymous"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/null": {
-    "modified": "2020-10-15T21:21:07.188Z",
-    "contributors": [
-      "sideshowbarker",
-      "hinell",
-      "backbencher.dev",
-      "fscholz",
-      "wbamberg",
-      "ddbeck",
-      "jinbeomhong",
-      "neverRare",
-      "saranshgupta1995",
-      "schalkneethling",
-      "levytskyi",
-      "jameshkramer",
-      "SphinxKnight",
-      "chharvey",
-      "bellentuck",
-      "nmve",
-      "snizh",
-      "rmx",
-      "vaniananthuni",
-      "thejameskyle",
-      "liammonahan",
-      "tjcrowder",
-      "x2357",
-      "Sheppy",
-      "dbruant",
-      "teoli"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/parseFloat": {
     "modified": "2020-10-22T10:33:45.776Z",
     "contributors": [
@@ -140840,6 +140809,37 @@
     "modified": "2020-10-15T22:30:34.996Z",
     "contributors": [
       "fscholz"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/null": {
+    "modified": "2020-10-15T21:21:07.188Z",
+    "contributors": [
+      "sideshowbarker",
+      "hinell",
+      "backbencher.dev",
+      "fscholz",
+      "wbamberg",
+      "ddbeck",
+      "jinbeomhong",
+      "neverRare",
+      "saranshgupta1995",
+      "schalkneethling",
+      "levytskyi",
+      "jameshkramer",
+      "SphinxKnight",
+      "chharvey",
+      "bellentuck",
+      "nmve",
+      "snizh",
+      "rmx",
+      "vaniananthuni",
+      "thejameskyle",
+      "liammonahan",
+      "tjcrowder",
+      "x2357",
+      "Sheppy",
+      "dbruant",
+      "teoli"
     ]
   },
   "Web/JavaScript/Reference/Operators/Nullish_coalescing_operator": {
