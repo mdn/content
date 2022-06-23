@@ -60,20 +60,17 @@ The [`update`](/en-US/docs/Web/CSS/@media/update-frequency) media feature that c
 
 #### Removals
 
-### WebDriver conformance (WebDriver BiDi, Marionette)
+### WebDriver conformance 
+#### WebDriver BiDi
 - Fixed issue where `WebDriver:Navigate` with a PageLoadStrategy of "none" returns before navigation has started  ({{bug(1754132)}}).
-- Fixed issue where Sharing a WebDriver session with Marionette doesn't wait for browserStartupFinished ({{bug(1767387)}}).
-- There are some improvements to Webdriver BiDi Navigate
-  - A new `expectNavigation` flag was added ({{bug(1766217)}}).
-  - Support handling navigation to the about:blank page ({{bug(1763128)}}).
-  - Support for hash changes  ({{bug(1763127)}}).
-  - Stop navigation for any URL with the same hash  ({{bug(1767924)}}).
-  - Support navigation to images  ({{bug(1763132)}}).
-  - Support handling of erroneous navigation requests ({{bug(1763124)}}).
+- There are some improvements to Webdriver BiDi's `browsingContext.navigate`
+  - Fixed edge cases where the navigation could incorrectly timeout ({{bug(1766217)}}).
+  - Added support for handling navigation to the about:blank page ({{bug(1763128)}}).
+  - Added support for hash changes  ({{bug(1763127)}}).
+  - Added support navigation to error pages ({{bug(1763124)}}).
+- Fixed a potential race condition in `WebDriver:SwitchToWindow` when switching to a different tab  ({{bug(1749666)}}).
+#### Marionette
 - Allow marionette to connect to a windowless instance of Firefox  ({{bug(1726465)}}).
-- Wait for TabSelect properly when switching tabs  ({{bug(1749666)}}).
-- Enabled WebDriver BiDi on release channels  ({{bug(1753997)}}).
-#### Removals
 
 ## Changes for add-on developers
 
