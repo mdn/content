@@ -1,6 +1,7 @@
 ---
 title: Element.setPointerCapture()
 slug: Web/API/Element/setPointerCapture
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

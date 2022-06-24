@@ -1,6 +1,7 @@
 ---
 title: 'IDBMutableFile: abort event'
 slug: Web/API/IDBMutableFile/abort_event
+page-type: web-api-event
 tags:
   - API
   - Files

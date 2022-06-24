@@ -1,6 +1,7 @@
 ---
 title: CSSStyleValue.parse()
 slug: Web/API/CSSStyleValue/parse
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API

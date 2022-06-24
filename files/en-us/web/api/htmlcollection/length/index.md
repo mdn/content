@@ -1,6 +1,7 @@
 ---
 title: HTMLCollection.length
 slug: Web/API/HTMLCollection/length
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

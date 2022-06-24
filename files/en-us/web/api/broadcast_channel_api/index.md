@@ -1,6 +1,7 @@
 ---
 title: Broadcast Channel API
 slug: Web/API/Broadcast_Channel_API
+page-type: web-api-overview
 tags:
   - API
   - Broadcast Channel API

@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.checkValidity()
 slug: Web/API/HTMLSelectElement/checkValidity
+page-type: web-api-instance-method
 tags:
   - API
   - Constraint Validation API

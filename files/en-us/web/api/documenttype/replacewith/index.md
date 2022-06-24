@@ -1,6 +1,7 @@
 ---
 title: DocumentType.replaceWith()
 slug: Web/API/DocumentType/replaceWith
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

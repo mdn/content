@@ -1,6 +1,7 @@
 ---
 title: AnimationEvent()
 slug: Web/API/AnimationEvent/AnimationEvent
+page-type: web-api-constructor
 tags:
   - API
   - AnimationEvent

@@ -1,6 +1,7 @@
 ---
 title: AudioTrack.language
 slug: Web/API/AudioTrack/language
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

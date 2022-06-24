@@ -66,7 +66,7 @@ New ECMAScript 2015 features implemented:
 
 ### MathML
 
-- Partial implementation of the [OpenType MATH table](https://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition), section 6.3.6 ({{Bug(407059)}}). For details, see the [fonts for Mozilla's MathML engine](/en-US/docs/Mozilla/MathML_Project/Fonts) and try the [MathML torture test](/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test) .
+- Partial implementation of the [OpenType MATH table](https://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition), section 6.3.6 ({{Bug(407059)}}). For details, try the [MathML torture test](/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test) .
 - The `::-moz-math-stretchy` pseudo-element has been removed ({{Bug(1000879)}}).
 - When available, the Unicode Mathematical alphanumeric characters are used for bold, italic and bold-italic math variants ({{Bug(930504)}}).
 
@@ -80,7 +80,7 @@ _No change._
 
 ## Security
 
-- [Privileged code now gets Xray vision for `Date` instances](/en-US/docs/Xray_vision#Xrays_for_JavaScript_objects).
+- [Privileged code now gets Xray vision for `Date` instances](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xrays_for_javascript_objects).
 
 ## Changes for add-on and Mozilla developers
 
@@ -92,7 +92,7 @@ _No change._
   }
   ```
 
-- `nsIDOMWindowUtils.sendQueryContentEvent()`>) and `nsIDOMWindowUtils.sendSelectionSetEvent()` have `aAdditionalFlags` as optional argument. If you called `nsIDOMWindowUtils.sendSelectionSetEvent()` with `true` for `aReverse`, the behavior would be broken by this change. See [explanation of each flag](/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#Constants) (`QUERY_CONTENT_FLAG_*` and `SELECTION_SET_FLAG_*`) for the detail of `aAdditionalFlags`.
+- `nsIDOMWindowUtils.sendQueryContentEvent()`>) and `nsIDOMWindowUtils.sendSelectionSetEvent()` have `aAdditionalFlags` as optional argument. If you called `nsIDOMWindowUtils.sendSelectionSetEvent()` with `true` for `aReverse`, the behavior would be broken by this change. See [explanation of each flag](/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#constants) (`QUERY_CONTENT_FLAG_*` and `SELECTION_SET_FLAG_*`) for the detail of `aAdditionalFlags`.
 
 ### Add-on SDK
 

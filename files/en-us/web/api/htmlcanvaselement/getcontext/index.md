@@ -1,6 +1,7 @@
 ---
 title: HTMLCanvasElement.getContext()
 slug: Web/API/HTMLCanvasElement/getContext
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -53,8 +54,7 @@ getContext(contextType, contextAttributes)
     > in new implementations of WebGL. These implementations have either not reached
     > test suite conformance, or the graphics drivers on the platform are not yet
     > stable. The [Khronos Group](https://www.khronos.org/) certifies WebGL
-    > implementations under certain [conformance
-    > rules](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
+    > implementations under certain [conformance > rules](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
 
 - `contextAttributes` {{optional_inline}}
 
@@ -168,8 +168,7 @@ var ctx = canvas.getContext('2d');
 console.log(ctx); // CanvasRenderingContext2D { /* ... */ }
 ```
 
-Now you have the [2D rendering
-context](/en-US/docs/Web/API/CanvasRenderingContext2D) for a canvas and you can draw within it.
+Now you have the [2D rendering context](/en-US/docs/Web/API/CanvasRenderingContext2D) for a canvas and you can draw within it.
 
 ## Specifications
 

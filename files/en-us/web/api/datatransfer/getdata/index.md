@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.getData()
 slug: Web/API/DataTransfer/getData
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -36,8 +37,7 @@ A string representing the drag data for the specified `format`. If the drag oper
 ### Caveats
 
 - Data availability
-  - : The [HTML5
-    Drag and Drop Specification](https://www.w3.org/TR/2011/WD-html5-20110113/dnd.html#drag-data-store-mode) dictates a `drag data store mode`.
+  - : The [HTML5 Drag and Drop Specification](https://www.w3.org/TR/2011/WD-html5-20110113/dnd.html#drag-data-store-mode) dictates a `drag data store mode`.
     This may result in unexpected behavior, being
     **`DataTransfer.getData()`** not returning an expected
     value, because not all browsers enforce this restriction.
@@ -70,7 +70,7 @@ This example shows the use of the {{domxref("DataTransfer")}} object's
 }
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 function allowDrop(allowdropevent) {
@@ -85,7 +85,7 @@ function drag(dragevent) {
 
 function drop(dropevent) {
     dropevent.preventDefault();
-    var data = dropevent.dataTransfer.getData("text");
+    const data = dropevent.dataTransfer.getData("text");
     dropevent.target.appendChild(document.getElementById(data));
     document.getElementById("drag").style.color = 'black';
 }

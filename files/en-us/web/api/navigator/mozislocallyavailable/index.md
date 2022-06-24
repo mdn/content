@@ -1,6 +1,7 @@
 ---
 title: Navigator.mozIsLocallyAvailable()
 slug: Web/API/Navigator/mozIsLocallyAvailable
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -37,7 +38,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var available = navigator.mozIsLocallyAvailable("my-image-file.png", true);
+const available = navigator.mozIsLocallyAvailable("my-image-file.png", true);
 if (available) {
   /* the offline resource is present */
 } else {

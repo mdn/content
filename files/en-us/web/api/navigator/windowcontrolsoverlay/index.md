@@ -1,6 +1,7 @@
 ---
 title: Navigator.windowControlsOverlay
 slug: Web/API/Navigator/windowControlsOverlay
+page-type: web-api-instance-property
 tags:
   - API
   - Window Controls Overlay

@@ -1,6 +1,7 @@
 ---
 title: Showing and hiding HTML
 slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Show_hide_html
+page-type: guide
 ---
 {{WebRTCSidebar}}
 

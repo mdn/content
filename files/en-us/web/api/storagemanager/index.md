@@ -1,6 +1,7 @@
 ---
 title: StorageManager
 slug: Web/API/StorageManager
+page-type: web-api-interface
 tags:
   - API
   - Interface

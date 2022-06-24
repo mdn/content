@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.generateMipmap()
 slug: Web/API/WebGLRenderingContext/generateMipmap
+page-type: web-api-instance-method
 tags:
   - API
   - Method

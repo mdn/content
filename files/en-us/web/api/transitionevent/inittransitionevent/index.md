@@ -1,13 +1,13 @@
 ---
 title: TransitionEvent.initTransitionEvent()
 slug: Web/API/TransitionEvent/initTransitionEvent
+page-type: web-api-instance-method
 tags:
   - API
   - CSS
   - CSS3 Transitions
   - CSSOM
   - Deprecated
-  - Experimental
   - Method
   - Reference
   - TransitionEvent

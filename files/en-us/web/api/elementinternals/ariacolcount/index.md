@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaColCount
 slug: Web/API/ElementInternals/ariaColCount
+page-type: web-api-instance-property
 tags:
   - API
   - Property

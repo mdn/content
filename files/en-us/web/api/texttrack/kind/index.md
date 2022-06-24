@@ -1,6 +1,7 @@
 ---
 title: TextTrack.kind
 slug: Web/API/TextTrack/kind
+page-type: web-api-instance-property
 tags:
   - API
   - Property

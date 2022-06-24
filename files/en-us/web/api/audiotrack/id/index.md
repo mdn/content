@@ -1,6 +1,7 @@
 ---
 title: AudioTrack.id
 slug: Web/API/AudioTrack/id
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

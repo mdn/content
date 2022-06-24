@@ -1,6 +1,7 @@
 ---
 title: console.group()
 slug: Web/API/console/group
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

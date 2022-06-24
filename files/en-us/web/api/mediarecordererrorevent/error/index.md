@@ -1,6 +1,7 @@
 ---
 title: MediaRecorderErrorEvent.error
 slug: Web/API/MediaRecorderErrorEvent/error
+page-type: web-api-instance-property
 tags:
   - API
   - Error
@@ -96,7 +97,5 @@ function recordStream(stream) {
 
 ## See also
 
-- [MediaStream Recording
-  API](/en-US/docs/Web/API/MediaStream_Recording_API)
-- [Using
-  the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)
+- [Using the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)

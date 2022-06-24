@@ -1,6 +1,7 @@
 ---
 title: CSSNumericArray
 slug: Web/API/CSSNumericArray
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API

@@ -1,6 +1,7 @@
 ---
 title: Image()
 slug: Web/API/HTMLImageElement/Image
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -20,7 +21,7 @@ constructor creates a new {{DOMxRef("HTMLImageElement")}} instance. It is functi
 equivalent to {{DOMxRef("Document.createElement()",
     "document.createElement('img')")}}.
 
-> **Note:** This function should not be confused with the CSS [`image()`](</en-US/docs/Web/CSS/image/image()>) function.
+> **Note:** This function should not be confused with the CSS [`image()`](/en-US/docs/Web/CSS/image/image) function.
 
 ## Syntax
 

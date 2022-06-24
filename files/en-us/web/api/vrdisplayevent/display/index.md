@@ -1,6 +1,7 @@
 ---
 title: VRDisplayEvent.display
 slug: Web/API/VRDisplayEvent/display
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

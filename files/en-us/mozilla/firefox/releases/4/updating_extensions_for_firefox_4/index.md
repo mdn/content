@@ -58,7 +58,7 @@ You can no longer pass JavaScript objects between threads. This renders the Thre
 
 ## Network redirects
 
-The API for handling network redirects has been changed to be asynchronous; any add-ons registering in the "net-channel-event-sinks" category will need to be updated to use [the new API](</en-US/docs/XPCOM_Interface_Reference/nsIChannelEventSink#asyncOnChannelRedirect()>).
+The API for handling network redirects has been changed to be asynchronous; any add-ons registering in the "net-channel-event-sinks" category will need to be updated to use the new API `asyncOnChannelRedirect`.
 
 ## XPI unpacking
 

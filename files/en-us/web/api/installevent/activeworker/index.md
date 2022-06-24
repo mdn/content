@@ -1,6 +1,7 @@
 ---
 title: InstallEvent.activeWorker
 slug: Web/API/InstallEvent/activeWorker
+page-type: web-api-instance-property
 tags:
   - API
   - InstallEvent
@@ -28,7 +29,7 @@ A {{domxref("ServiceWorker")}} object.
 
 ```js
 self.addEventListener('install', function(event) {
-  var myActiveWorker = event.activeWorker;
+  const myActiveWorker = event.activeWorker;
 });
 ```
 

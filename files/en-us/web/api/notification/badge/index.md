@@ -1,6 +1,7 @@
 ---
 title: Notification.badge
 slug: Web/API/Notification/badge
+page-type: web-api-instance-property
 tags:
   - API
   - Notification

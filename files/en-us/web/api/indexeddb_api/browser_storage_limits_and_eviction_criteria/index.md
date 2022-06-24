@@ -1,6 +1,7 @@
 ---
 title: Browser storage limits and eviction criteria
 slug: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
+page-type: guide
 tags:
   - Database
   - IndexedDB

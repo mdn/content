@@ -1,6 +1,7 @@
 ---
 title: Guide to the Fullscreen API
 slug: Web/API/Fullscreen_API/Guide
+page-type: guide
 tags:
   - API
   - Drawing
@@ -13,7 +14,9 @@ tags:
   - full screen
   - fullscreen
   - screen
-spec-urls: https://fullscreen.spec.whatwg.org/
+browser-compat:
+  - api.Document.fullscreen
+  - api.Document.fullscreenEnabled
 ---
 {{DefaultAPISidebar("Fullscreen API")}}
 
@@ -184,13 +187,7 @@ For the moment not all browsers are implementing the unprefixed version of the A
 
 ## Browser compatibility
 
-### `Document.fullscreen`
-
-{{Compat("api.Document.fullscreen")}}
-
-### `Document.fullscreenEnabled`
-
-{{Compat("api.Document.fullscreenEnabled")}}
+{{Compat}}
 
 ## See also
 

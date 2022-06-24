@@ -109,4 +109,4 @@ WebAssembly numeric instructions.
   - Count the amount of trailing zeros in a numbers binary representation.
 
 - [`Population count`](/en-US/docs/WebAssembly/Reference/Numeric/Population_count)
-  - Count the total amount of leading 1s in a numbers binary representation.
+  - Count the total amount of 1s in a numbers binary representation.

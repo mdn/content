@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.pixelStorei()
 slug: Web/API/WebGLRenderingContext/pixelStorei
+page-type: web-api-instance-method
 tags:
   - API
   - Method

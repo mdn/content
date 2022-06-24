@@ -1,6 +1,7 @@
 ---
 title: Document.domain
 slug: Web/API/Document/domain
+page-type: web-api-instance-property
 tags:
   - API
   - Document

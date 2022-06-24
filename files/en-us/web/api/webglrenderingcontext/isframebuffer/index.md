@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.isFramebuffer()
 slug: Web/API/WebGLRenderingContext/isFramebuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method

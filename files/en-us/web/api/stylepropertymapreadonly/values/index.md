@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMapReadOnly.values()
 slug: Web/API/StylePropertyMapReadOnly/values
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API

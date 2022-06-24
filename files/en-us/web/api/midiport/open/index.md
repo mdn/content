@@ -1,6 +1,7 @@
 ---
 title: MIDIPort.open()
 slug: Web/API/MIDIPort/open
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -33,7 +34,7 @@ A {{jsxref("Promise")}} which resolves once access to the port has been successf
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `InvalidAccessError`
+- `InvalidAccessError` {{domxref("DOMException")}}
   - : The promise is rejected with this error if the port is unavailable and cannot be opened.
 
 ## Examples
@@ -41,7 +42,7 @@ A {{jsxref("Promise")}} which resolves once access to the port has been successf
 The following example shows an output port being opened.
 
 ```js
-var output = midiAccess.outputs.get(portID);
+const output = midiAccess.outputs.get(portID);
 output.open(); // opens the port
 ```
 

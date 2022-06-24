@@ -1,6 +1,7 @@
 ---
 title: CSSMathValue.operator
 slug: Web/API/CSSMathValue/operator
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -37,7 +38,7 @@ A {{jsxref('String')}}.
 ## Examples
 
 We create an element with a [`width`](/en-US/docs/Web/CSS/width)
-determined using a [`calc()`](</en-US/docs/Web/CSS/calc()>) function,
+determined using a [`calc()`](/en-US/docs/Web/CSS/calc) function,
 then {{DOMxRef("console.log()")}} the
 `operator`.
 

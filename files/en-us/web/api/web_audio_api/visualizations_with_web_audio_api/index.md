@@ -1,6 +1,7 @@
 ---
 title: Visualizations with Web Audio API
 slug: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
+page-type: guide
 tags:
   - API
   - Web Audio API
@@ -10,7 +11,6 @@ tags:
   - visualization
   - waveform
 ---
-
 {{DefaultAPISidebar("Web Audio API")}}
 
 One of the most interesting features of the Web Audio API is the ability to extract frequency, waveform, and other data from your audio source, which can then be used to create visualizations. This article explains how, and provides a couple of basic use cases.

@@ -1,6 +1,7 @@
 ---
 title: DynamicsCompressorNode.attack
 slug: Web/API/DynamicsCompressorNode/attack
+page-type: web-api-instance-property
 tags:
   - API
   - Attack

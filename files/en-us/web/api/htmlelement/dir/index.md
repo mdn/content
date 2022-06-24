@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.dir
 slug: Web/API/HTMLElement/dir
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

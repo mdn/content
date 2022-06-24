@@ -1,12 +1,13 @@
 ---
 title: Web Serial API
 slug: Web/API/Web_Serial_API
+page-type: web-api-overview
 tags:
   - API
   - Web Serial
   - Overview
   - Reference
-spec-urls: https://wicg.github.io/serial/
+browser-compat: api.Serial
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Web Serial API")}}
 
@@ -91,7 +92,7 @@ while (port.readable) {
 
 ## Browser compatibility
 
-{{Compat("api.Serial")}}
+{{Compat}}
 
 ## See also
 

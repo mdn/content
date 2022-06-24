@@ -1,6 +1,7 @@
 ---
 title: VideoFrame.clone()
 slug: Web/API/VideoFrame/clone
+page-type: web-api-instance-method
 tags:
   - API
   - Method

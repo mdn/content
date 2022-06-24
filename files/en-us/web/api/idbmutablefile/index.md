@@ -1,6 +1,7 @@
 ---
 title: IDBMutableFile
 slug: Web/API/IDBMutableFile
+page-type: web-api-interface
 tags:
   - API
   - DOM

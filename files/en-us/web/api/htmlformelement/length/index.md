@@ -1,6 +1,7 @@
 ---
 title: HTMLFormElement.length
 slug: Web/API/HTMLFormElement/length
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

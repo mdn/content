@@ -1,6 +1,7 @@
 ---
 title: CompositionEvent.initCompositionEvent()
 slug: Web/API/CompositionEvent/initCompositionEvent
+page-type: web-api-instance-method
 tags:
   - API
   - CompositionEvent

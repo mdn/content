@@ -1,6 +1,7 @@
 ---
 title: Navigator.contacts
 slug: Web/API/Navigator/contacts
+page-type: web-api-instance-property
 tags:
   - Contact Picker API
   - Contacts
@@ -21,7 +22,7 @@ of the selected entries with a website or application.
 ## Syntax
 
 ```js
-var contactsManager = navigator.contacts;
+const contactsManager = navigator.contacts;
 ```
 
 ### Return Value

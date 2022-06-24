@@ -1,6 +1,7 @@
 ---
 title: IDBFileHandle.append()
 slug: Web/API/IDBFileHandle/append
+page-type: web-api-instance-method
 tags:
   - API
   - Files

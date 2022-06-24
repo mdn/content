@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
+page-type: web-api-interface
 tags:
   - API
   - DOM

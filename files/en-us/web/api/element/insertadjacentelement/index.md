@@ -1,6 +1,7 @@
 ---
 title: Element.insertAdjacentElement()
 slug: Web/API/Element/insertAdjacentElement
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -74,7 +75,7 @@ The element that was inserted, or `null`, if the insertion failed.
 
 ```js
 beforeBtn.addEventListener('click', function() {
-  var tempDiv = document.createElement('div');
+  const tempDiv = document.createElement('div');
   tempDiv.style.backgroundColor = randomColor();
   if (activeElem) {
     activeElem.insertAdjacentElement('beforebegin', tempDiv);
@@ -83,7 +84,7 @@ beforeBtn.addEventListener('click', function() {
 });
 
 afterBtn.addEventListener('click', function() {
-  var tempDiv = document.createElement('div');
+  const tempDiv = document.createElement('div');
   tempDiv.style.backgroundColor = randomColor();
   if (activeElem) {
     activeElem.insertAdjacentElement('afterend', tempDiv);

@@ -1,6 +1,7 @@
 ---
 title: AudioTrackList.getTrackById()
 slug: Web/API/AudioTrackList/getTrackById
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

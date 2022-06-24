@@ -1,6 +1,7 @@
 ---
 title: ContentIndex.add()
 slug: Web/API/ContentIndex/add
+page-type: web-api-instance-method
 tags:
   - Content
   - Content Index API
@@ -10,13 +11,13 @@ tags:
   - PWA
   - content index
   - content indexing
+  - Experimental
 browser-compat: api.ContentIndex.add
 ---
-{{DefaultAPISidebar("Content Index API")}}
+{{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The **`add()`** method of the
-{{domxref("ContentIndex")}} interface registers an item with the {{domxref('Content
-  Index API','content index')}}.
+{{domxref("ContentIndex")}} interface registers an item with the [content index](/en-US/docs/Web/API/Content_Index_API).
 
 ## Syntax
 
@@ -86,7 +87,7 @@ Returns a {{jsxref("Promise")}} that resolves with `undefined`
 
 Here we're declaring an item in the correct format and creating an asynchronous
 function which uses the `add` method to register it with the
-{{domxref('Content Index API','content index')}}.
+[content index](/en-US/docs/Web/API/Content_Index_API).
 
 ```js
 // our content
@@ -122,7 +123,7 @@ async function registerContent(data) {
 ```
 
 The `add` method can also be used within the
-{{domxref('ServiceWorker','service worker')}} scope.
+[service worker](/en-US/docs/Web/API/ServiceWorker) scope.
 
 ```js
 // our content
@@ -152,9 +153,6 @@ self.registration.index.add(item);
 
 ## See also
 
-- [An introductory article on the
-  Content Index API](https://web.dev/content-indexing-api/)
-- [An app which uses the Content Index API to list
-  and remove 'save for later' content](https://contentindex.dev/)
-- [Service Worker API, along with
-  information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)
+- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
+- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
+- [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

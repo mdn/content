@@ -21,7 +21,7 @@ Proper operation of the cache is critical to the health of the system.
 
 ## Types of caches
 
-In the [HTTP Caching](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cache) spec, there are two main types of caches: **private caches** and **shared caches**.
+In the [HTTP Caching](https://httpwg.org/specs/rfc9111.html) spec, there are two main types of caches: **private caches** and **shared caches**.
 
 ### Private caches
 
@@ -37,9 +37,7 @@ Cache-Control: private
 
 Personalized contents are usually controlled by cookies, but the presence of a cookie does not always indicate that it is private, and thus a cookie alone does not make the response private.
 
-Also, since the private cache requires `private`, you may think that the shared cache requires `public` — but that is not quite true. A shared cache will store a response without needing `public` as long as `max-age` is given.
-
-If the response has an `Authorization` header, it cannot be stored in either the private cache or the shared cache, even if it has `max-age` — and `public` can be used to allow such a case. But if you are not using basic authentication and do not have an `Authorization` header, then there is no need to add `public`; it’s just a waste of bytes in that case.
+Note that if the response has an `Authorization` header, it cannot be stored in the private cache (or a shared cache, unless `public` is specified).
 
 ### Shared cache
 
@@ -75,9 +73,9 @@ Cache-Control: no-store
 
 For example, Varnish uses VCL-based logic to handle cache storage, while service workers in combination with the Cache API allow you to create that logic in JavaScript.
 
-That means if a managed cache intentionally ignores a `no-store` directive, there is no need to perceive it as being "non-compliant" with the standard. What you should do is, avoid using kitchen-sink headers, but carefully read the documentation of whatever managed-cache mechanism you’re using, and ensure you’re controlling the cache properly in the ways provided by the mechanism you’ve chosen to use.
+That means if a managed cache intentionally ignores a `no-store` directive, there is no need to perceive it as being "non-compliant" with the standard. What you should do is, avoid using kitchen-sink headers, but carefully read the documentation of whatever managed-cache mechanism you're using, and ensure you're controlling the cache properly in the ways provided by the mechanism you've chosen to use.
 
-Note that some CDNs provide their own headers that are effective only for that CDN (for example, `Surrogate-Control`). Currently, work is underway to define a [`CDN-Cache-Control`](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-targeted-cache-control) header to standardize those.
+Note that some CDNs provide their own headers that are effective only for that CDN (for example, `Surrogate-Control`). Currently, work is underway to define a [`CDN-Cache-Control`](https://httpwg.org/specs/rfc9213.html) header to standardize those.
 
 ![Type of Cache](type-of-cache.png)
 
@@ -208,7 +206,7 @@ If-Modified-Since: Tue, 22 Feb 2022 22:00:00 GMT
 
 The server will respond with `304 Not Modified` if the content has not changed since the specified time.
 
-Since this response only indicates "no change", there is no response body — instead there’s just a status code — so the transfer size is extremely small.
+Since this response only indicates "no change", there is no response body — instead there's just a status code — so the transfer size is extremely small.
 
 ```http
 HTTP/1.1 304 Not Modified
@@ -290,13 +288,13 @@ Cache-Control: max-age=0, must-revalidate
 
 However, that usage of `max-age=0` is a remnant of the fact that many implementations prior to HTTP/1.1 were unable to handle the `no-cache` directive — and so to deal with that limitation, `max-age=0` was used as a workaround.
 
-But now that HTTP/1.1-conformant servers are widely deployed, there’s no reason to ever use that `max-age=0`-and-`must-revalidate` combination — you should instead just use `no-cache`.
+But now that HTTP/1.1-conformant servers are widely deployed, there's no reason to ever use that `max-age=0`-and-`must-revalidate` combination — you should instead just use `no-cache`.
 
 ## Don't cache
 
 The `no-cache` directive does not prevent storage of responses, but instead prevents reuse of responses without revalidation.
 
-If you don’t want a response stored in any cache, use `no-store`.
+If you don't want a response stored in any cache, use `no-store`.
 
 ```http
 Cache-Control: no-store
@@ -306,7 +304,7 @@ However, in general, a "do not cache" requirement in practice amounts to the fol
 
 - Don't want the response stored by anyone other than the specific client, for privacy reasons.
 - Want to provide up-to-date information always.
-- Don't know what could happen with in outdated implementations.
+- Don't know what could happen in outdated implementations.
 
 Under that set of circumstances, `no-store` is not always the most-appropriate directive.
 
@@ -358,7 +356,7 @@ Cache-Control: no-cache, private
 
 You may think adding `no-store` would be the right way to opt out from caching.
 
-However, it’s basically not recommended to grant `no-store` easily, because you lose many advantages that HTTP and browsers have, including the browser’s back/forward cache.
+However, it's basically not recommended to grant `no-store` easily, because you lose many advantages that HTTP and browsers have, including the browser's back/forward cache.
 
 Therefore, to get the advantages of the full feature set of the web platform, prefer the use of `no-cache` in combination with `private`.
 
@@ -410,7 +408,7 @@ Cache-Control: no-cache
 
 (The requests from Chrome, Edge, and Firefox look very much like the above; the requests from Safari will look a bit different.)
 
-Since that’s not a conditional request with `no-cache`, you can be sure you’ll get a `200 OK` from the origin server.
+Since that's not a conditional request with `no-cache`, you can be sure you'll get a `200 OK` from the origin server.
 
 That behavior is also defined in the [Fetch](https://fetch.spec.whatwg.org/#http-network-or-cache-fetch) standard and can be reproduced in JavaScript by calling `fetch()` with the cache mode set to `reload` (note that it's not `force-reload`):
 
@@ -455,7 +453,7 @@ You may want to overwrite that response once it expired on the server, but there
 
 One of the methods mentioned in the specification is to send a request for the same URL with an unsafe method such as `POST` — but that is usually difficult to do so intentionally in many clients.
 
-There is also a specification for a `Clear-Site-Data: cache` header and value, but [not all browsers support it](https://groups.google.com/a/mozilla.org/g/dev-platform/c/I939w1yrTp4) — and even when it’s used, it is only affects browser caches, but has no effect on intermediate caches.
+There is also a specification for a `Clear-Site-Data: cache` header and value, but [not all browsers support it](https://groups.google.com/a/mozilla.org/g/dev-platform/c/I939w1yrTp4) — and even when it's used, it is only affects browser caches, but has no effect on intermediate caches.
 
 Therefore, it should be assumed that any stored response will remain for its `max-age` period unless the user manually performs a reload, force reload, or clear-history action.
 
@@ -483,9 +481,9 @@ This section describes the common patterns in designing caches.
 
 As mentioned above, the default behavior for caching (that is, for a response without `Cache-Control`) is not simply "don't cache" but implicit caching according to so-called "heuristic caching".
 
-To avoid that heuristic caching, it’s preferable to explicitly give all responses a default `Cache-Control` header.
+To avoid that heuristic caching, it's preferable to explicitly give all responses a default `Cache-Control` header.
 
-To ensure that by default the latest versions of resources will always be transferred, it’s common practice to make the default `Cache-Control` value include `no-cache`:
+To ensure that by default the latest versions of resources will always be transferred, it's common practice to make the default `Cache-Control` value include `no-cache`:
 
 ```http
 Cache-Control: no-cache
@@ -564,7 +562,12 @@ Because the cache removes old entries when new entries are saved, the probabilit
 
 Note that number `41` has the longest `max-age` (1 year), but with `public`.
 
-`public` has the effect of making the response storable even if the `Authorization` header is present. So if the response is personalized with basic authentication, the presence of `public` may cause problems. If you are concerned about that, you can choose the second-longest value, `37` (1 month).
+The `public` value has the effect of making the response storable even if the `Authorization` header is present.
+
+> **Note:** The `public` directive should only be used if there is a need to store the response when the `Authorization` header is set.
+> It is not required otherwise, because a response will be stored in the shared cache as long as `max-age` is given.
+
+So if the response is personalized with basic authentication, the presence of `public` may cause problems. If you are concerned about that, you can choose the second-longest value, `37` (1 month).
 
 ```http
 # response for bundle.v123.js
@@ -578,13 +581,13 @@ Cache-Control: max-age=2592000
 
 ### Validation
 
-Don't forget to set the `If-Modified-Since` and `ETag` headers, so that you don't have to re-transmit a resource when reloading. It’s easy to generate those headers for pre-built static files.
+Don't forget to set the `Last-Modified` and `ETag` headers, so that you don't have to re-transmit a resource when reloading. It's easy to generate those headers for pre-built static files.
 
 The `ETag` value here may be a hash of the file.
 
 ```http
 # response for bundle.v123.js
-If-Modified-Since: Tue, 22 Feb 2022 20:20:20 GMT
+Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
 ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 ```
 
@@ -598,14 +601,14 @@ The combined result is shown below.
 Content-Type: application/javascript
 Content-Length: 1024
 Cache-Control: public, max-age=31536000, immutable
-If-Modified-Since: Tue, 22 Feb 2022 20:20:20 GMT
+Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
 ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 ```
 
 Making a response cacheable over a long period of time by changing the URL when the content changes is called **cache busting**. That technique can be applied to all subresources, such as images.
 
 > **Note:** When evaluating the use of `immutable` and QPACK:
-> If you’re concerned that `immutable` changes the predefined value provided by QPACK, consider that
+> If you're concerned that `immutable` changes the predefined value provided by QPACK, consider that
 > in this case, the `immutable` part can be encoded separately by splitting the `Cache-Control` value into two lines — though this is dependent on the encoding algorithm a particular QPACK implementation uses.
 
 ```http
@@ -629,25 +632,25 @@ If the following HTML itself is stored, the latest version cannot be displayed e
 
 For that case, `no-cache` would be appropriate — rather than`no-store` — since we don't want to store HTML, but instead just want it to always be up-to-date.
 
-Furthermore, adding `If-Modified-Since` and `If-None-Match` will allow clients to send conditional requests, and a `304 Not Modified` can be returned if there have been no updates to the HTML:
+Furthermore, adding `Last-Modified` and `ETag` will allow clients to send conditional requests, and a `304 Not Modified` can be returned if there have been no updates to the HTML:
 
 ```http
 200 OK HTTP/1.1
 Content-Type: text/html
 Content-Length: 1024
 Cache-Control: no-cache
-If-Modified-Since: Tue, 22 Feb 2022 20:20:20 GMT
+Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
 ETag: AAPuIbAOdvAGEETbgAAAAAAABAAE
 ```
 
-That setting is appropriate for non-personalized HTML — but for a response which gets personalized using cookies (for example, after a login), don’t forget to also specify `private`:
+That setting is appropriate for non-personalized HTML — but for a response which gets personalized using cookies (for example, after a login), don't forget to also specify `private`:
 
 ```http
 200 OK HTTP/1.1
 Content-Type: text/html
 Content-Length: 1024
 Cache-Control: no-cache, private
-If-Modified-Since: Tue, 22 Feb 2022 20:20:20 GMT
+Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
 ETag: AAPuIbAOdvAGEETbgAAAAAAABAAE
 Set-Cookie: __Host-SID=AHNtAyt3fvJrUL5g5tnGwER; Secure; Path=/; HttpOnly
 ```
@@ -658,9 +661,9 @@ Most web content can be covered by a combination of the two patterns described a
 
 ### More about managed caches
 
-With the method described in previous sections, subresources can be cached for a long time by using cache busting, but main resources (which are usually HTML documents) can’t be.
+With the method described in previous sections, subresources can be cached for a long time by using cache busting, but main resources (which are usually HTML documents) can't be.
 
-Caching main resources is difficult because, using just standard directives from the HTTP Caching specification, there’s no way to actively delete cache contents when content is updated on the server.
+Caching main resources is difficult because, using just standard directives from the HTTP Caching specification, there's no way to actively delete cache contents when content is updated on the server.
 
 However, it is possible by deploying a managed cache such as a CDN or service worker.
 
@@ -668,7 +671,7 @@ For example, a CDN that allows cache purging via an API or dashboard operation w
 
 A service worker could do the same if it could delete the contents in the Cache API when an update occurs on the server.
 
-For more information, see the documentation for your CDN, and consult the [service worker documentation](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API).
+For more information, see the documentation for your CDN, and consult the [service worker documentation](/en-US/docs/Web/API/Service_Worker_API).
 
 ## See also
 

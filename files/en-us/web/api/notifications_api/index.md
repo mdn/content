@@ -1,6 +1,7 @@
 ---
 title: Notifications API
 slug: Web/API/Notifications_API
+page-type: web-api-overview
 tags:
   - Landing
   - Notifications

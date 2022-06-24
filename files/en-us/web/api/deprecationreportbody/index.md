@@ -1,6 +1,7 @@
 ---
 title: DeprecationReportBody
 slug: Web/API/DeprecationReportBody
+page-type: web-api-interface
 tags:
   - API
   - DeprecationReportBody

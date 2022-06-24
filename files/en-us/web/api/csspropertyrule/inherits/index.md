@@ -1,6 +1,7 @@
 ---
 title: CSSPropertyRule.inherits
 slug: Web/API/CSSPropertyRule/inherits
+page-type: web-api-instance-property
 tags:
   - API
   - CSS

@@ -1,6 +1,7 @@
 ---
 title: AudioWorkletProcessor
 slug: Web/API/AudioWorkletProcessor
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -104,3 +105,4 @@ whiteNoiseNode.connect(audioContext.destination)
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using AudioWorklet](/en-US/docs/Web/API/Web_Audio_API/Using_AudioWorklet)

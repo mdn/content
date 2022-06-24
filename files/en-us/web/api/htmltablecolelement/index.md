@@ -1,6 +1,7 @@
 ---
 title: HTMLTableColElement
 slug: Web/API/HTMLTableColElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

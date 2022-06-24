@@ -1,6 +1,7 @@
 ---
 title: Using the Fetch API
 slug: Web/API/Fetch_API/Using_Fetch
+page-type: guide
 tags:
   - API
   - BODY
@@ -401,9 +402,11 @@ The {{domxref("Response.Response","Response()")}} constructor takes two optional
 Both requests and responses may contain body data. A body is an instance of any of the following types:
 
 - {{jsxref("ArrayBuffer")}}
-- {{domxref("ArrayBufferView")}} (Uint8Array and friends)
-- {{domxref("Blob")}}/{{domxref("File")}}
-- string
+- {{jsxref("TypedArray")}} (Uint8Array and friends)
+- {{jsxref("DataView")}}
+- {{domxref("Blob")}}
+- {{domxref("File")}}
+- {{jsxref("String")}}, or a string literal
 - {{domxref("URLSearchParams")}}
 - {{domxref("FormData")}}
 

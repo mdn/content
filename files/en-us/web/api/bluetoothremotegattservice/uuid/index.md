@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTService.uuid
 slug: Web/API/BluetoothRemoteGATTService/uuid
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth

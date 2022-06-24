@@ -1,6 +1,7 @@
 ---
 title: VREyeParameters.renderHeight
 slug: Web/API/VREyeParameters/renderHeight
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

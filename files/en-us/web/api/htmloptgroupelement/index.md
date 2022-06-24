@@ -1,6 +1,7 @@
 ---
 title: HTMLOptGroupElement
 slug: Web/API/HTMLOptGroupElement
+page-type: web-api-interface
 tags:
   - API
   - Forms

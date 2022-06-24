@@ -1,6 +1,7 @@
 ---
 title: CredentialsContainer
 slug: Web/API/CredentialsContainer
+page-type: web-api-interface
 tags:
   - API
   - Credential Management API

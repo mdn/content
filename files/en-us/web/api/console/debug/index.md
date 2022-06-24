@@ -1,6 +1,7 @@
 ---
 title: console.debug()
 slug: Web/API/console/debug
+page-type: web-api-instance-method
 tags:
   - API
   - Debug

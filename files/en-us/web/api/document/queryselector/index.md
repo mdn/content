@@ -1,6 +1,7 @@
 ---
 title: Document.querySelector()
 slug: Web/API/Document/querySelector
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Selectors
@@ -99,7 +100,7 @@ In this example, the first element in the document with the class
 var el = document.querySelector(".myclass");
 ```
 
-### A more complex selector
+### Complex selectors
 
 Selectors can also be really powerful, as demonstrated in the following example. Here,
 the first {{HTMLElement("input")}} element with the name "login"

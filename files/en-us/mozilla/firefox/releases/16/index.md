@@ -39,12 +39,12 @@ Firefox 16 shipped on October 9, 2012. This article lists key changes that are u
 
 - Two new properties `width` and `height` have been added to the {{domxref("HTMLInputElement")}} interface ([bug 683855](https://bugzilla.mozilla.org/show_bug.cgi?id=683855)).
 - IndexedDB properties and methods have been unprefixed. ([bug 726378](https://bugzilla.mozilla.org/show_bug.cgi?id=726378))
-- The [Battery API](/en-US/docs/Web/API/Navigator/battery) is now unprefixed.
+- The [Battery API](/en-US/docs/Web/API/Navigator/getBattery) is now unprefixed.
 - The Vibration API has been unprefixed.
 - The non-standard `Keyboard` interface, prefixed as `mozKeyboard`, now has the `Keyboard.setSelectedOption()` and `Keyboard.setValue()` methods, as well as the `Keyboard.onfocuschange`. _This interface, only available for Firefox OS, has been removed in Firefox 31._
 - The [`java`](/en-US/docs/LiveConnect_Reference/java) and [`Packages`](/en-US/docs/LiveConnect_Reference/Packages) global objects have been removed. See [LiveConnect](/en-US/docs/LiveConnect).
 - The `CSSRule.type` associated with {{domxref("CSSNamespaceRule")}} has been updated from `UNKNOWN_RULE` (`0`) to `NAMESPACE_RULE` (`10`) ([bug 765590](https://bugzilla.mozilla.org/show_bug.cgi?id=765590)).
-- WebSMS API: {{domxref("SmsRequest")}} has been superseded by the more general {{domxref("DOMRequest")}}.
+- WebSMS API: {{domxref("SmsRequest")}} has been superseded by the more general `DOMRequest`.
 - The non-standard {{domxref("Element.scrollTopMax")}} and {{domxref("Element.scrollLeftMax")}} read-only properties have been added ({{bug(766937)}}).
 - The second parameter of {{domxref("Blob.blob", "Blob()")}}, when set to `null` or `undefined`, is now being handled as an empty dictionary ({{bug(7691119)}}).
 

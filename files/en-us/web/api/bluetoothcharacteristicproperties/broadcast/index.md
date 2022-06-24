@@ -1,6 +1,7 @@
 ---
 title: BluetoothCharacteristicProperties.broadcast
 slug: Web/API/BluetoothCharacteristicProperties/broadcast
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth

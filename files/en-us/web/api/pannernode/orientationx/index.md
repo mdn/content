@@ -1,6 +1,7 @@
 ---
 title: PannerNode.orientationX
 slug: Web/API/PannerNode/orientationX
+page-type: web-api-instance-property
 tags:
   - PannerNode
   - Property
@@ -149,6 +150,5 @@ osc.start(0);
 ## See also
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web
-  Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Web Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - {{domxref("PannerNode")}}

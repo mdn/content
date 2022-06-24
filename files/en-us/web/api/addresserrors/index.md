@@ -1,6 +1,7 @@
 ---
 title: AddressErrors
 slug: Web/API/AddressErrors
+page-type: web-api-interface
 tags:
   - API
   - Address

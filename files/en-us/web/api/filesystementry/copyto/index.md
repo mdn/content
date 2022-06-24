@@ -1,6 +1,7 @@
 ---
 title: FileSystemEntry.copyTo()
 slug: Web/API/FileSystemEntry/copyTo
+page-type: web-api-instance-method
 tags:
   - API
   - File and Directory Entries APIs

@@ -1,6 +1,7 @@
 ---
 title: Window.pageYOffset
 slug: Web/API/Window/pageYOffset
+page-type: web-api-instance-property
 tags:
   - API
   - Alias

@@ -1,6 +1,7 @@
 ---
-title: PaintWorkletGlobalScope.registerPaint
+title: PaintWorkletGlobalScope.registerPaint()
 slug: Web/API/PaintWorklet/registerPaint
+page-type: web-api-instance-method
 tags:
   - API
   - CSS

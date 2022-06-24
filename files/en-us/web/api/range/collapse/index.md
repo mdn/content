@@ -1,6 +1,7 @@
 ---
 title: Range.collapse()
 slug: Web/API/Range/collapse
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

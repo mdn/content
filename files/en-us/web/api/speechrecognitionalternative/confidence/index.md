@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognitionAlternative.confidence
 slug: Web/API/SpeechRecognitionAlternative/confidence
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -29,7 +30,7 @@ A number between 0 and 1.
 ## Examples
 
 This code is excerpted from our
-[Speech color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) example.
+[Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 recognition.onresult = function(event) {

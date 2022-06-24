@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.alt
 slug: Web/API/HTMLImageElement/alt
+page-type: web-api-instance-property
 tags:
   - API
   - Element
@@ -120,7 +121,7 @@ p {
 }
 
 .left-margin {
-  background-color: rgb(241, 240, 237, 255);
+  background-color: rgb(241, 240, 237);
   width: 9em;
   height: 100%;
   float: left;
@@ -136,7 +137,7 @@ p {
 }
 
 .contents {
-  background-color: rgb(241, 240, 235, 255);
+  background-color: rgb(241, 240, 235);
   height: 100%;
   margin-left: 2em;
   padding-top: 1em;

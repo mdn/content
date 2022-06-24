@@ -5,6 +5,7 @@ tags:
   - Document
   - Guide
   - JavaScript
+browser-compat: javascript.classes
 ---
 {{jsSidebar("JavaScript Guide")}}
 
@@ -194,7 +195,7 @@ In this case, pretty much every field and method is private to the class. Thus, 
 
 Javascript code will `throw` if you attempt to access a private method or field that does not exist (this differs from a normal/public method, which will return `undefined`). If you need to write code to test whether a private feature has been defined you might use `try`/`catch`, but it is more compact to use the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator. This returns `true` or `false` depending on whether or not the property is defined.
 
-The code below demonstrates the approach using the example of a class for adding `Scalar` values. The class uses the `in` operator to check that added objects have the `#length` private class field, and throws an informative exception message if a different type of object is passed.
+The code below demonstrates the approach using the example of a class for adding `Scalar` values. The class uses the `in` operator to check that added objects have the `#total` private class field, and throws an informative exception message if a different type of object is passed.
 
 ```js
 class Scalar {
@@ -204,7 +205,7 @@ class Scalar {
   }
 
   add(s) {
-    // check the passed object defines #length
+    // check the passed object defines #total
     if (!(#total in s)) {
       throw new TypeError("Expected an instance of Scalar");
     }
@@ -225,4 +226,4 @@ scalar1.add({}) // throws informative exception
 
 ## Browser compatibility
 
-{{Compat("javascript.classes")}}
+{{Compat}}

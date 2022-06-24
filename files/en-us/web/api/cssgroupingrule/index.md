@@ -1,6 +1,7 @@
 ---
 title: CSSGroupingRule
 slug: Web/API/CSSGroupingRule
+page-type: web-api-interface
 tags:
   - API
   - CSSOM

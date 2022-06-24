@@ -49,9 +49,9 @@ The {{jsxref("DataView")}} is a low-level interface that provides a getter/sette
 
 These are some examples of APIs that make use of typed arrays; there are others, and more are being added all the time.
 
-- [`FileReader.prototype.readAsArrayBuffer()`](</en-US/docs/Web/API/FileReader#readasarraybuffer()>)
+- [`FileReader.prototype.readAsArrayBuffer()`](/en-US/docs/Web/API/FileReader/readAsArrayBuffer)
   - : The `FileReader.prototype.readAsArrayBuffer()` method starts reading the contents of the specified [`Blob`](/en-US/docs/Web/API/Blob) or [`File`](/en-US/docs/Web/API/File).
-- [`XMLHttpRequest.prototype.send()`](</en-US/docs/Web/API/XMLHttpRequest#send()>)
+- [`XMLHttpRequest.prototype.send()`](/en-US/docs/Web/API/XMLHttpRequest/send)
   - : `XMLHttpRequest` instances' `send()` method now supports typed arrays and {{jsxref("ArrayBuffer")}} objects as argument.
 - [`ImageData.data`](/en-US/docs/Web/API/ImageData)
   - : Is a {{jsxref("Uint8ClampedArray")}} representing a one-dimensional array containing the data in the RGBA order, with integer values between `0` and `255` inclusive.
@@ -115,7 +115,7 @@ console.log('Entry 0 in the 32-bit array is now ' + int32View[0]);
 
 The output from this is `"Entry 0 in the 32-bit array is now 32"`.
 
-In other words, the two arrays are indeed viewed on the same data buffer, treating it as different formats. You can do this with any [view types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects "JavaScript typed arrays/ArrayBufferView#Typed array subclasses").
+In other words, the two arrays are indeed viewed on the same data buffer, treating it as different formats. You can do this with any [view types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects).
 
 ### Working with complex data structures
 

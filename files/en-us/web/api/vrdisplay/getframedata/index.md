@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.getFrameData()
 slug: Web/API/VRDisplay/getFrameData
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated

@@ -1,6 +1,7 @@
 ---
 title: Range()
 slug: Web/API/Range/Range
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

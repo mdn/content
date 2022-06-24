@@ -1,6 +1,7 @@
 ---
 title: DataTransferItem.webkitGetAsEntry()
 slug: Web/API/DataTransferItem/webkitGetAsEntry
+page-type: web-api-instance-method
 tags:
   - API
   - DataTransferItem

@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams
 slug: Web/API/URLSearchParams
+page-type: web-api-interface
 tags:
   - API
   - Interface

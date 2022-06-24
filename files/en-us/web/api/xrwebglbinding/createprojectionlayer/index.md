@@ -1,6 +1,7 @@
 ---
 title: XRWebGLBinding.createProjectionLayer()
 slug: Web/API/XRWebGLBinding/createProjectionLayer
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,13 +1,16 @@
 ---
 title: Network Information API
 slug: Web/API/Network_Information_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental
   - Network Information API
   - Reference
   - WebAPI
-browser-compat: api.NetworkInformation
+browser-compat:
+  - api.NetworkInformation
+  - api.Navigator.connection
 ---
 {{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
 
@@ -59,17 +62,9 @@ if (connection) {
 
 {{Specifications}}
 
-{{Specifications("api.Navigator.connection")}}
-
 ## Browser compatibility
 
-### NetworkInformation
-
 {{Compat}}
-
-### Navigator.connection
-
-{{Compat("api.Navigator.connection")}}
 
 ## See also
 

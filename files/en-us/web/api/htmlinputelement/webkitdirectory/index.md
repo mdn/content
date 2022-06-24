@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.webkitdirectory
 slug: Web/API/HTMLInputElement/webkitdirectory
+page-type: web-api-instance-property
 tags:
   - API
   - File and Directory Entries API

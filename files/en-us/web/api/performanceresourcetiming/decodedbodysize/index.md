@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.decodedBodySize
 slug: Web/API/PerformanceResourceTiming/decodedBodySize
+page-type: web-api-instance-property
 tags:
   - API
   - Property

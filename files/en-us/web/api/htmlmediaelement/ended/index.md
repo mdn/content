@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.ended
 slug: Web/API/HTMLMediaElement/ended
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

@@ -1,6 +1,7 @@
 ---
 title: Window.getDefaultComputedStyle()
 slug: Web/API/window/getDefaultComputedStyle
+page-type: web-api-instance-method
 tags:
   - API
   - CSS

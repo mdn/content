@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.isTexture()
 slug: Web/API/WebGLRenderingContext/isTexture
+page-type: web-api-instance-method
 tags:
   - API
   - Method

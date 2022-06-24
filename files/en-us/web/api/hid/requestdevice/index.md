@@ -1,15 +1,17 @@
 ---
 title: HID.requestDevice()
 slug: Web/API/HID/requestDevice
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - requestDevice
   - HID
+  - Experimental
 browser-compat: api.HID.requestDevice
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`requestDevice()`** method of the {{domxref("HID")}} interface requests access to a HID device.
 
@@ -48,7 +50,7 @@ A {{jsxref("Promise")}} that resolves with an array of connected {{domxref("HIDD
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `SecurityError`
+- `SecurityError` {{domxref("DOMException")}}
   - : Thrown if the page does not allow access to the HID feature.
 
 ## Examples

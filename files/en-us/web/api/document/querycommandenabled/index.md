@@ -1,6 +1,7 @@
 ---
 title: Document.queryCommandEnabled()
 slug: Web/API/Document/queryCommandEnabled
+page-type: web-api-instance-method
 tags:
   - CSS
   - Document

@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.bytesReceived
 slug: Web/API/RTCInboundRtpStreamStats/bytesReceived
+page-type: web-api-instance-property
 tags:
   - API
   - Media

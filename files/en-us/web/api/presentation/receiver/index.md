@@ -1,6 +1,7 @@
 ---
 title: Presentation.receiver
 slug: Web/API/Presentation/receiver
+page-type: web-api-instance-property
 tags:
   - API
   - Presentation

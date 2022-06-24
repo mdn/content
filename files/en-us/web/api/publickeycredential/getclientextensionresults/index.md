@@ -1,6 +1,7 @@
 ---
 title: PublicKeyCredential.getClientExtensionResults()
 slug: Web/API/PublicKeyCredential/getClientExtensionResults
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -98,8 +99,7 @@ navigator.credentials.create({ publicKey })
 
 ## See also
 
-- [The list of the
-  currently defined extensions](https://www.w3.org/TR/webauthn/#sctn-defined-extensions)
+- [The list of the currently defined extensions](https://www.w3.org/TR/webauthn/#sctn-defined-extensions)
 - {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} which contains the
   result of the authenticator's extensions processing
 - {{domxref("PublicKeyCredentialCreationOptions.extensions")}} which contains the

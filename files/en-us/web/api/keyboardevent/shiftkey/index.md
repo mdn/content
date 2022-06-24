@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.shiftKey
 slug: Web/API/KeyboardEvent/shiftKey
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

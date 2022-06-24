@@ -1,6 +1,7 @@
 ---
 title: FileSystemDirectoryHandle.removeEntry()
 slug: Web/API/FileSystemDirectoryHandle/removeEntry
+page-type: web-api-instance-method
 tags:
   - Directory
   - File
@@ -74,5 +75,4 @@ currentDirHandle.removeEntry(entryName).then( () => {
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

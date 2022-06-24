@@ -1,6 +1,7 @@
 ---
 title: MediaStreamEvent()
 slug: Web/API/MediaStreamEvent/MediaStreamEvent
+page-type: web-api-constructor
 tags:
   - Constructor
   - Deprecated
@@ -37,7 +38,7 @@ A new {{domxref("MediaStreamEvent")}} object.
 
 ```js
 // s is a MediaStream
-var event = new MediaStreamEvent("addstream", {"stream": s});
+const event = new MediaStreamEvent("addstream", {"stream": s});
 ```
 
 ## Specifications

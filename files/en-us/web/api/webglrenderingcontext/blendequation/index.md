@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.blendEquation()
 slug: Web/API/WebGLRenderingContext/blendEquation
+page-type: web-api-instance-method
 tags:
   - API
   - Method

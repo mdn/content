@@ -1,6 +1,7 @@
 ---
 title: Document.createTextNode()
 slug: Web/API/Document/createTextNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -39,8 +40,8 @@ A {{domxref("Text")}} node.
 <title>createTextNode example</title>
 <script>
 function addTextNode(text) {
-  var newtext = document.createTextNode(text),
-      p1 = document.getElementById("p1");
+  const newtext = document.createTextNode(text);
+  const p1 = document.getElementById("p1");
 
   p1.appendChild(newtext);
 }

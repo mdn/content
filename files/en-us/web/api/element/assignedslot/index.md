@@ -1,6 +1,7 @@
 ---
 title: Element.assignedSlot
 slug: Web/API/Element/assignedSlot
+page-type: web-api-instance-property
 tags:
   - API
   - Property

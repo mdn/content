@@ -1,6 +1,7 @@
 ---
 title: FetchEvent.request
 slug: Web/API/FetchEvent/request
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

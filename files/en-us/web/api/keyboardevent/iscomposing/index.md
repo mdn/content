@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.isComposing
 slug: Web/API/KeyboardEvent/isComposing
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -24,7 +25,7 @@ A boolean.
 ## Examples
 
 ```js
-var kbdEvent = new KeyboardEvent("syntheticKey", false);
+const kbdEvent = new KeyboardEvent("syntheticKey", false);
 console.log(kbdEvent.isComposing); // return false
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.replaceSync()
 slug: Web/API/CSSStyleSheet/replaceSync
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -34,7 +35,7 @@ Undefined.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NotAllowedError`
+- `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if the stylesheet was not created using the {{domxref("CSSStyleSheet.CSSStyleSheet()","CSSStyleSheet()")}} constructor or if the stylesheet is flagged as unmodifiable.
 
 ## Examples

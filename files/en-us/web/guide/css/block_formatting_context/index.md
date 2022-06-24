@@ -114,7 +114,7 @@ section {
 
 ### Exclude external floats
 
-In the following example, we are using `display:flow-root` and floats to implement double columns layout, because an element in the normal flow that establishes a new BFC must not overlap the margin box of any floats in the same block formatting context as the element itself.
+In the following example, we are using `display:flow-root` and floats to implement double columns layout. We are able to do this because an element in the normal flow that establishes a new BFC does not overlap the margin box of any floats in the same block formatting context as the element itself.
 
 #### HTML
 

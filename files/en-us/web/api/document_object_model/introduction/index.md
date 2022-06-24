@@ -1,6 +1,7 @@
 ---
 title: Introduction to the DOM
 slug: Web/API/Document_Object_Model/Introduction
+page-type: guide
 tags:
   - Beginner
   - DOM

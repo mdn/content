@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.textBaseline
 slug: Web/API/CanvasRenderingContext2D/textBaseline
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas

@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamBYOBReader.cancel()
 slug: Web/API/ReadableStreamBYOBReader/cancel
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

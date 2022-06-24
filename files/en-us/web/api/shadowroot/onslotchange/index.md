@@ -1,6 +1,7 @@
 ---
 title: ShadowRoot.onslotchange
 slug: Web/API/ShadowRoot/onslotchange
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

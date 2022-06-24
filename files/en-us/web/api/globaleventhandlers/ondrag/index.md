@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ondrag
 slug: Web/API/GlobalEventHandlers/ondrag
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

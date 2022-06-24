@@ -1,6 +1,7 @@
 ---
 title: WritableStreamDefaultWriter.ready
 slug: Web/API/WritableStreamDefaultWriter/ready
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -44,7 +45,7 @@ function sendMessage(message, writableStream) {
     .then(function() {
       defaultWriter.write(chunk)
       .then(function() {
-        console.log("Chunk written to sink.);
+        console.log("Chunk written to sink.");
       })
       .catch(function(err) {
         console.log("Chunk error: " + err);

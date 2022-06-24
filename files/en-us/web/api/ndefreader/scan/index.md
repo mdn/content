@@ -1,6 +1,7 @@
 ---
 title: NDEFReader.scan()
 slug: Web/API/NDEFReader/scan
+page-type: web-api-instance-method
 tags:
   - NDEF
   - Reference
@@ -15,7 +16,7 @@ The `scan()` method of the {{DOMxRef("NDEFReader")}} interface activates a readi
 ## Syntax
 
 ```js
-var readerPromise = NDEFReader.scan(options);
+const readerPromise = NDEFReader.scan(options);
 ```
 
 ### Parameters

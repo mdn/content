@@ -1,6 +1,7 @@
 ---
 title: KeyframeEffect.iterationComposite
 slug: Web/API/KeyframeEffect/iterationComposite
+page-type: web-api-instance-property
 tags:
   - API
   - Animation

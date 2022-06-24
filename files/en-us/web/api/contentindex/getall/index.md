@@ -1,6 +1,7 @@
 ---
 title: ContentIndex.getAll()
 slug: Web/API/ContentIndex/getAll
+page-type: web-api-instance-method
 tags:
   - Content
   - Content Index API
@@ -10,9 +11,10 @@ tags:
   - PWA
   - content indexing
   - getAll
+  - Experimental
 browser-compat: api.ContentIndex.getAll
 ---
-{{DefaultAPISidebar("Content Index API")}}
+{{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The **`getAll()`** method of the
 {{domxref("ContentIndex")}} interface returns a {{jsxref('Promise')}} that resolves with
@@ -76,7 +78,7 @@ No exceptions are thrown. If there are no items in the Content Index, an empty
 ## Examples
 
 The below example shows an asynchronous function that retrieves items within the
-{{domxref('Content Index API','content index')}} and iterates over each entry, building
+[content index](/en-US/docs/Web/API/Content_Index_API) and iterates over each entry, building
 a list for the interface.
 
 ```js
@@ -131,9 +133,6 @@ async function createReadingList() {
 
 ## See also
 
-- [An introductory article on the
-  Content Index API](https://web.dev/content-indexing-api/)
-- [An app which uses the Content Index API to list
-  and remove 'save for later' content](https://contentindex.dev/)
-- [Service Worker API, along with
-  information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)
+- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
+- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
+- [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

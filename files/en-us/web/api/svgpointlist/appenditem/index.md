@@ -1,6 +1,7 @@
 ---
 title: SVGPointList.appendItem()
 slug: Web/API/SVGPointList/appendItem
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -30,7 +31,7 @@ The {{domxref("SVGPoint")}} object that was appended.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NoModificationAllowedError`
+- `NoModificationAllowedError` {{domxref("DOMException")}}
   - : Thrown if the list is read-only.
 
 ## Examples

@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.options
 slug: Web/API/HTMLSelectElement/options
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLSelectElement
@@ -44,7 +45,7 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-{{EmbedLiveSample("Example", "100%", 30)}}
+{{EmbedLiveSample("Examples", "100%", 30)}}
 
 ## Specifications
 

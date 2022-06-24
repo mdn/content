@@ -1,6 +1,7 @@
 ---
 title: Navigator.xr
 slug: Web/API/Navigator/xr
+page-type: web-api-instance-property
 tags:
   - API
   - AR

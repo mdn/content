@@ -1,6 +1,7 @@
 ---
 title: AudioDecoder.reset()
 slug: Web/API/AudioDecoder/reset
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -25,7 +26,7 @@ None.
 
 ### Return value
 
-{{jsxref("Undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

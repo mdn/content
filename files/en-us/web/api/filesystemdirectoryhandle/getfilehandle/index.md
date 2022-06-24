@@ -1,6 +1,7 @@
 ---
 title: FileSystemDirectoryHandle.getFileHandle()
 slug: Web/API/FileSystemDirectoryHandle/getFileHandle
+page-type: web-api-instance-method
 tags:
   - Directory
   - File
@@ -77,5 +78,4 @@ const fileHandle = currentDirHandle.getFileHandle(fileName, {create: true});
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

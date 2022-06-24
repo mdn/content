@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onpointerout
 slug: Web/API/GlobalEventHandlers/onpointerout
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

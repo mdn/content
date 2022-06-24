@@ -1,6 +1,7 @@
 ---
 title: FileReader
 slug: Web/API/FileReader
+page-type: web-api-interface
 tags:
   - API
   - File API
@@ -26,7 +27,7 @@ File objects may be obtained from a {{domxref("FileList")}} object returned as a
 - {{domxref("FileReader.FileReader", "FileReader()")}}
   - : Returns a newly constructed `FileReader`.
 
-See [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications) for details and examples.
+See [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications) for details and examples.
 
 ## Properties
 
@@ -60,7 +61,7 @@ See [Using files from web applications](/en-US/docs/Web/API/File/Using_files_fro
 
 ## Events
 
-Listen to these events using {{domxref("EventTarget/addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
+Listen to these events using {{domxref("EventTarget/addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface. Remove the event listeners with {{domxref("EventTarget.removeEventListener", "removeEventListener()")}}, once `FileReader` is no longer used, to avoid memory leaks.
 
 - {{domxref("FileReader/abort_event", "abort")}}
   - : Fired when a read has been aborted, for example because the program called {{domxref("FileReader.abort()")}}.
@@ -85,7 +86,7 @@ Listen to these events using {{domxref("EventTarget/addEventListener", "addEvent
 
 ## See also
 
-- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
 - {{domxref("File")}}
 - {{domxref("Blob")}}
 - {{domxref("FileReaderSync")}}

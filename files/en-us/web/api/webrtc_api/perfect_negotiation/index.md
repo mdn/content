@@ -1,6 +1,7 @@
 ---
 title: 'Establishing a connection: The WebRTC perfect negotiation pattern'
 slug: Web/API/WebRTC_API/Perfect_negotiation
+page-type: guide
 tags:
   - API
   - Configure
@@ -394,8 +395,8 @@ This has a number of reliability issues and outright bugs (such as failing if th
 Now, you can use `restartIce()` to do this much more cleanly:
 
 ```js example-good
-pc.onnegotiationneeded = async options => {
-  await pc.setLocalDescription(await pc.createOffer(options));
+pc.onnegotiationneeded = async () => {
+  await pc.setLocalDescription();
   signaler.send({ description: pc.localDescription });
 };
 pc.oniceconnectionstatechange = () => {

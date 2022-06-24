@@ -1,6 +1,7 @@
 ---
 title: WebGLProgram
 slug: Web/API/WebGLProgram
+page-type: web-api-interface
 tags:
   - API
   - GL

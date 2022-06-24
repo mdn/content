@@ -1,6 +1,7 @@
 ---
 title: TextTrackCueList.length
 slug: Web/API/TextTrackCueList/length
+page-type: web-api-instance-property
 tags:
   - API
   - Property

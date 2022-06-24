@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ondrop
 slug: Web/API/GlobalEventHandlers/ondrop
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -16,7 +17,7 @@ event.
 ## Syntax
 
 ```js
-var dropHandler = targetElement.ondrop;
+const dropHandler = targetElement.ondrop;
 ```
 
 ### Return value
@@ -64,7 +65,7 @@ function drop_handler(ev) {
  ev.currentTarget.style.background = "lightyellow";
 
  ev.preventDefault();
- var data = ev.dataTransfer.getData("text");
+ const data = ev.dataTransfer.getData("text");
  ev.target.appendChild(document.getElementById(data));
 }
 

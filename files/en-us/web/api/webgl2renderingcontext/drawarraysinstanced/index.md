@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.drawArraysInstanced()
 slug: Web/API/WebGL2RenderingContext/drawArraysInstanced
+page-type: web-api-instance-method
 tags:
   - API
   - Method

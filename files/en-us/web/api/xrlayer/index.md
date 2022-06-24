@@ -1,6 +1,7 @@
 ---
 title: XRLayer
 slug: Web/API/XRLayer
+page-type: web-api-interface
 tags:
   - API
   - Interface

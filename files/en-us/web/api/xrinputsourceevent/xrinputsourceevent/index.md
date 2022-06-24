@@ -1,6 +1,7 @@
 ---
 title: XRInputSourceEvent()
 slug: Web/API/XRInputSourceEvent/XRInputSourceEvent
+page-type: web-api-constructor
 tags:
   - API
   - AR

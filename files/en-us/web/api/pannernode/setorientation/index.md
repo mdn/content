@@ -1,6 +1,7 @@
 ---
 title: PannerNode.setOrientation()
 slug: Web/API/PannerNode/setOrientation
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: OscillatorNode.detune
 slug: Web/API/OscillatorNode/detune
+page-type: web-api-instance-property
 tags:
   - API
   - OscillatorNode
@@ -22,7 +23,7 @@ An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}.
 
 ## Examples
 
-The following example shows basic usage of an {{ domxref("AudioContext") }} to create an oscillator node. For applied examples/information, check out our [Violent Theremin demo](https://mdn.github.io/violent-theremin/) ([see app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) for relevant code).
+The following example shows basic usage of an {{ domxref("AudioContext") }} to create an oscillator node. For applied examples/information, check out our [Violent Theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) ([see app.js](https://github.com/mdn/webaudio-examples/violent-theremin/scripts/app.js) for relevant code).
 
 ```js
 // create web audio api context

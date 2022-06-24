@@ -1,6 +1,7 @@
 ---
 title: AudioEncoder.reset()
 slug: Web/API/AudioEncoder/reset
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -25,7 +26,7 @@ None.
 
 ### Return value
 
-{{jsxref("Undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

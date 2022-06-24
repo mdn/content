@@ -1,6 +1,7 @@
 ---
 title: AudioEncoder.configure()
 slug: Web/API/AudioEncoder/configure
+page-type: web-api-instance-method
 tags:
   - API
   - Method

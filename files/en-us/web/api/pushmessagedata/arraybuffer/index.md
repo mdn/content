@@ -1,6 +1,7 @@
 ---
 title: PushMessageData.arrayBuffer()
 slug: Web/API/PushMessageData/arrayBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - ArrayBuffer

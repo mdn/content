@@ -24,7 +24,7 @@ Besides the generic `Error` constructor, there are other core error constructors
 - {{JSxRef("EvalError")}}
   - : Creates an instance representing an error that occurs regarding the global function {{JSxRef("Global_Objects/eval", "eval()")}}.
 - {{JSxRef("RangeError")}}
-  - : Creates an instance representing an error that occurs when a numeric variable or parameter is outside of its valid range.
+  - : Creates an instance representing an error that occurs when a numeric variable or parameter is outside its valid range.
 - {{JSxRef("ReferenceError")}}
   - : Creates an instance representing an error that occurs when de-referencing an invalid reference.
 - {{JSxRef("SyntaxError")}}
@@ -56,7 +56,7 @@ Besides the generic `Error` constructor, there are other core error constructors
   - : Error name.
 - {{jsxref("Error.prototype.cause")}}
   - : Error cause.
-     If an error is caught and re-thrown, this property should contain the original error. 
+     If an error is caught and re-thrown, this property should contain the original error.
 - {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
   - : A non-standard Mozilla property for the path to the file that raised this error.
 - {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
@@ -145,6 +145,8 @@ try {
 }
 ```
 
+> **Note:** If you are making a library, you should prefer to use error cause to discriminate between different errors emitted — rather than asking your consumers to parse the error message. See the [error cause page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause) for an example.
+
 [Custom error types](#custom_error_types) can also use the [`cause`](#error.prototype.cause) property, provided the subclasses' constructor passes the `options` parameter when calling `super()`:
 
 ```js
@@ -172,27 +174,27 @@ See ["What's a good way to extend Error in JavaScript?"](https://stackoverflow.c
 class CustomError extends Error {
   constructor(foo = 'bar', ...params) {
     // Pass remaining arguments (including vendor specific ones) to parent constructor
-    super(...params)
+    super(...params);
 
     // Maintains proper stack trace for where our error was thrown (only available on V8)
     if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, CustomError)
+      Error.captureStackTrace(this, CustomError);
     }
 
-    this.name = 'CustomError'
+    this.name = 'CustomError';
     // Custom debugging information
-    this.foo = foo
-    this.date = new Date()
+    this.foo = foo;
+    this.date = new Date();
   }
 }
 
 try {
-  throw new CustomError('baz', 'bazMessage')
+  throw new CustomError('baz', 'bazMessage');
 } catch(e) {
-  console.error(e.name)    //CustomError
-  console.error(e.foo)     //baz
-  console.error(e.message) //bazMessage
-  console.error(e.stack)   //stacktrace
+  console.error(e.name);    // CustomError
+  console.error(e.foo);     // baz
+  console.error(e.message); // bazMessage
+  console.error(e.stack);   // stacktrace
 }
 ```
 
@@ -203,36 +205,26 @@ try {
 ```js
 function CustomError(foo, message, fileName, lineNumber) {
   let instance = new Error(message, fileName, lineNumber);
-  instance.name = 'CustomError';
   instance.foo = foo;
-  Object.setPrototypeOf(instance, Object.getPrototypeOf(this));
+  Object.setPrototypeOf(instance, CustomError.prototype);
   if (Error.captureStackTrace) {
     Error.captureStackTrace(instance, CustomError);
   }
   return instance;
 }
 
-CustomError.prototype = Object.create(Error.prototype, {
-  constructor: {
-    value: Error,
-    enumerable: false,
-    writable: true,
-    configurable: true
-  }
-});
+Object.setPrototypeOf(CustomError.prototype, Error.prototype);
 
-if (Object.setPrototypeOf){
-  Object.setPrototypeOf(CustomError, Error);
-} else {
-  CustomError.__proto__ = Error;
-}
+Object.setPrototypeOf(CustomError, Error);
+
+CustomError.prototype.name = 'CustomError';
 
 try {
   throw new CustomError('baz', 'bazMessage');
-} catch(e){
-  console.error(e.name); //CustomError
-  console.error(e.foo); //baz
-  console.error(e.message); //bazMessage
+} catch(e) {
+  console.error(e.name); // CustomError
+  console.error(e.foo); // baz
+  console.error(e.message); // bazMessage
 }
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: XRFrame.getJointPose()
 slug: Web/API/XRFrame/getJointPose
+page-type: web-api-instance-method
 tags:
   - API
   - AR

@@ -1,6 +1,7 @@
 ---
 title: Document.alinkColor
 slug: Web/API/Document/alinkColor
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

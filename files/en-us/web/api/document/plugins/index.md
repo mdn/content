@@ -1,6 +1,7 @@
 ---
 title: Document.plugins
 slug: Web/API/Document/plugins
+page-type: web-api-instance-property
 tags:
   - API
   - Document

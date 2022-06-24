@@ -1,6 +1,7 @@
 ---
 title: console.time()
 slug: Web/API/console/time
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
