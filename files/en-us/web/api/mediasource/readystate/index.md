@@ -37,7 +37,7 @@ The following snippet is from a simple example written by Nick Desaulniers ([vie
 
 ```js
 if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
-  let mediaSource = new MediaSource;
+  const mediaSource = new MediaSource;
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
   mediaSource.addEventListener('sourceopen', sourceOpen);
@@ -47,8 +47,8 @@ if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
 
 function sourceOpen (_) {
   //console.log(this.readyState); // open
-  let mediaSource = this;
-  let sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+  const mediaSource = this;
+  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, function (buf) {
     sourceBuffer.addEventListener('updateend', function (_) {
       mediaSource.endOfStream();
