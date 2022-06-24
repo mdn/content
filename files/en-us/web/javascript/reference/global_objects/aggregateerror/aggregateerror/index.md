@@ -25,11 +25,11 @@ new AggregateError(errors, message, options)
 
 - `errors`
   - : An iterable of errors, may not actually be {{JSxRef("Error")}} instances.
-- `message` {{Optional_Inline}}
+- `message` {{optional_inline}}
   - : A human-readable description of the aggregate error.
-- `options` {{Optional_Inline}}
+- `options` {{optional_inline}}
   - : An object that has the following properties:
-    - `cause` {{Optional_Inline}}
+    - `cause` {{optional_inline}}
       - : A property indicating the specific cause of the error.
           When catching and re-throwing an error with a more-specific or useful error message, this property should be used to pass the original error.
 
@@ -40,9 +40,9 @@ new AggregateError(errors, message, options)
 ```js
 try {
   throw new AggregateError([
-    new Error("some error"),
+    new Error('some error')
   ], 'Hello');
-} catch (e) {
+} catch(e) {
   console.log(e instanceof AggregateError); // true
   console.log(e.message);                   // "Hello"
   console.log(e.name);                      // "AggregateError"
