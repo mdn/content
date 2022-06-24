@@ -19,6 +19,7 @@ WebAssembly specifies a [trap](https://webassembly.github.io/simd/core/intro/ove
 ```js
 new WebAssembly.RuntimeError()
 new WebAssembly.RuntimeError(message)
+new WebAssembly.RuntimeError(message, options)
 new WebAssembly.RuntimeError(message, fileName)
 new WebAssembly.RuntimeError(message, fileName, lineNumber)
 ```
@@ -47,7 +48,7 @@ details to the console:
 ```js
 try {
   throw new WebAssembly.RuntimeError('Hello', 'someFile', 10);
-} catch (e) {
+} catch(e) {
   console.log(e instanceof WebAssembly.RuntimeError); // true
   console.log(e.message);                             // "Hello"
   console.log(e.name);                                // "RuntimeError"
