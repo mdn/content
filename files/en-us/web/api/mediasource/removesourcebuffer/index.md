@@ -45,8 +45,8 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-for (i = 0; i < 10; i++) {
-  let sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+for (let i = 0; i < 10; i++) {
+  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
 }
 
 mediaSource.removeSourceBuffer(mediaSource.sourceBuffers[0]);
