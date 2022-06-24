@@ -55,7 +55,6 @@ Page titles, on the other hand, may be as long as you like, within reason, and t
 
 When you need to add some articles about a topic or subject area, you will typically do so by creating a landing page, then adding subpages for each of the individual articles.
 The landing page should open with a paragraph or two describing the topic or technology, then provide a list of the subpages with descriptions of each page.
-You can automate the insertion of pages into the list using some macros we've created.
 
 For example, consider the [JavaScript](/en-US/docs/Web/JavaScript) guide, which is structured as follows:
 
