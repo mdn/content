@@ -26,9 +26,9 @@ new RangeError(message, fileName, lineNumber)
 
 - `message` {{optional_inline}}
   - : Human-readable description of the error.
-- `options` {{Optional_Inline}}
+- `options` {{optional_inline}}
   - : An object that has the following properties:
-    - `cause` {{Optional_Inline}}
+    - `cause` {{optional_inline}}
       - : A property indicating the specific cause of the error.
           When catching and re-throwing an error with a more-specific or useful error message, this property should be used to pass the original error.
 - `fileName` {{optional_inline}} {{non-standard_inline}}
@@ -41,48 +41,36 @@ new RangeError(message, fileName, lineNumber)
 ### Using `RangeError` (for numeric values)
 
 ```js
-function check(n)
-{
-    if( !(n >= -500 && n <= 500) )
-    {
-        throw new RangeError("The argument must be between -500 and 500.")
-    }
+function check(n) {
+  if(!(n >= -500 && n <= 500)) {
+    throw new RangeError('The argument must be between -500 and 500.');
+  }
 }
 
-try
-{
-    check(2000)
-}
-catch(error)
-{
-    if (error instanceof RangeError)
-    {
-        // Handle the error
-    }
+try {
+  check(2000);
+} catch(error) {
+  if(error instanceof RangeError) {
+    // Handle the error
+  }
 }
 ```
 
 ### Using `RangeError` (for non-numeric values)
 
 ```js
-function check(value)
-{
-    if(["apple", "banana", "carrot"].includes(value) === false)
-    {
-        throw new RangeError('The argument must be an "apple", "banana", or "carrot".')
-    }
+function check(value) {
+  if(['apple', 'banana', 'carrot'].includes(value) === false) {
+    throw new RangeError('The argument must be an "apple", "banana", or "carrot".');
+  }
 }
 
-try
-{
-    check("cabbage")
-}
-catch(error)
-{
-    if(error instanceof RangeError)
-    {
-        // Handle the error
-    }
+try {
+  check('cabbage');
+} catch(error) {
+  if(error instanceof RangeError) {
+    // Handle the error
+  }
 }
 ```
 
