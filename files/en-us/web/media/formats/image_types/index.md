@@ -868,7 +868,7 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
 
 ### PNG (Portable Network Graphics)
 
-The {{Glossary("PNG")}} (pronounced "**ping**") image format uses lossless or lossy compression to provide more efficient compression, and supports higher color depths than [GIF](#gif_graphics_interchange_format), as well as full alpha transparency support.
+The {{Glossary("PNG")}} (pronounced "**ping**") image format uses lossless compression, while supporting higher color depths than [GIF](#gif_graphics_interchange_format) and being more efficient, as well as featuring full alpha transparency support.
 
 PNG is widely supported, with all major browsers offering full support for its features.
 Internet Explorer, which introduced PNG support in versions 4–5, did not fully support it until IE 9, and had many infamous bugs for many of the intervening years, including in the once-omnipresent Internet Explorer 6.
