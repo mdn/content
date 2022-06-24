@@ -22,7 +22,7 @@ of the selected entries with a website or application.
 ## Syntax
 
 ```js
-var contactsManager = navigator.contacts;
+const contactsManager = navigator.contacts;
 ```
 
 ### Return Value
