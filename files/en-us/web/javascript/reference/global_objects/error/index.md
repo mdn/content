@@ -40,7 +40,7 @@ Besides the generic `Error` constructor, there are other core error constructors
 
 ## Constructor
 
-- [`Error()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error)
+- {{jsxref("Error/Error", "Error()")}}
   - : Creates a new `Error` object.
 
 ## Static methods
@@ -80,9 +80,9 @@ You can handle the error using the {{JSxRef("Statements/try...catch", "try...cat
 
 ```js
 try {
-  throw new Error('Whoops!')
-} catch (e) {
-  console.error(e.name + ': ' + e.message)
+  throw new Error('Whoops!');
+} catch(e) {
+  console.error(e.name + ': ' + e.message);
 }
 ```
 
@@ -92,12 +92,12 @@ You can choose to handle only specific error types by testing the error type wit
 
 ```js
 try {
-  foo.bar()
-} catch (e) {
+  foo.bar();
+} catch(e) {
   if (e instanceof EvalError) {
-    console.error(e.name + ': ' + e.message)
+    console.error(e.name + ': ' + e.message);
   } else if (e instanceof RangeError) {
-    console.error(e.name + ': ' + e.message)
+    console.error(e.name + ': ' + e.message);
   }
   // ... etc
 
@@ -121,12 +121,12 @@ The example below shows this for two methods that would otherwise fail with simi
 function doWork() {
   try {
     doFailSomeWay();
-  } catch (err) {
+  } catch(err) {
     throw new Error('Failed in some way', { cause: err });
   }
   try {
     doFailAnotherWay();
-  } catch (err) {
+  } catch(err) {
     throw new Error('Failed in another way', { cause: err });
   }
 }
@@ -177,7 +177,7 @@ class CustomError extends Error {
     super(...params);
 
     // Maintains proper stack trace for where our error was thrown (only available on V8)
-    if (Error.captureStackTrace) {
+    if(Error.captureStackTrace) {
       Error.captureStackTrace(this, CustomError);
     }
 
@@ -204,10 +204,10 @@ try {
 
 ```js
 function CustomError(foo, message, fileName, lineNumber) {
-  let instance = new Error(message, fileName, lineNumber);
+  var instance = new Error(message, fileName, lineNumber);
   instance.foo = foo;
   Object.setPrototypeOf(instance, CustomError.prototype);
-  if (Error.captureStackTrace) {
+  if(Error.captureStackTrace) {
     Error.captureStackTrace(instance, CustomError);
   }
   return instance;
