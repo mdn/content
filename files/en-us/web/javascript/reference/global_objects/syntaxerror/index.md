@@ -22,10 +22,12 @@ The **`SyntaxError`** object represents an error when trying to interpret syntac
 
 - {{jsxref("Error.prototype.message", "SyntaxError.prototype.message")}}
   - : Error message. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.name", "SyntaxError.prototype.cause")}}
+  - : Error name. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.cause", "SyntaxError.prototype.cause")}}
+  - : Error cause. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.fileName", "SyntaxError.prototype.fileName")}} {{non-standard_inline}}
   - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.cause", "EvalError.prototype.cause")}}
-  - : Error cause. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.lineNumber", "SyntaxError.prototype.lineNumber")}} {{non-standard_inline}}
   - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.columnNumber", "SyntaxError.prototype.columnNumber")}} {{non-standard_inline}}
@@ -40,7 +42,7 @@ The **`SyntaxError`** object represents an error when trying to interpret syntac
 ```js
 try {
   eval('hoo bar');
-} catch (e) {
+} catch(e) {
   console.error(e instanceof SyntaxError);
   console.error(e.message);
   console.error(e.name);
@@ -56,7 +58,7 @@ try {
 ```js
 try {
   throw new SyntaxError('Hello', 'someFile.js', 10);
-} catch (e) {
+} catch(e) {
   console.error(e instanceof SyntaxError); // true
   console.error(e.message);                // Hello
   console.error(e.name);                   // SyntaxError
