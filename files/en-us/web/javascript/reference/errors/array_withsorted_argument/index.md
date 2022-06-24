@@ -45,6 +45,3 @@ let a = [1, 3, 2].withSorted();   // [1, 2, 3]
 var cmp = { asc: (x, y) => x >= y, dsc: (x, y) => x <= y };
 let a = [1, 3, 2].withSorted(cmp[this.key || 'asc']); // [1, 2, 3]
 ```
-### Note
-
-The `Array.prototype.withSorted` method is part of a [proposal](https://github.com/tc39/proposal-change-array-by-copy) that will be added in the future.
