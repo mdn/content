@@ -69,18 +69,18 @@ const assetURL = 'frag_bunny.mp4';
 const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
 if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
-  let mediaSource = new MediaSource;
+  const mediaSource = new MediaSource;
   //console.log(mediaSource.readyState); // closed
-  video.src = URL.createObjectURL(mediaSource);
   mediaSource.addEventListener('sourceopen', sourceOpen);
+  video.src = URL.createObjectURL(mediaSource);
 } else {
   console.error('Unsupported MIME type or codec: ', mimeCodec);
 }
 
 function sourceOpen (_) {
   //console.log(this.readyState); // open
-  let mediaSource = this;
-  let sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+  const mediaSource = this;
+  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, function (buf) {
     sourceBuffer.addEventListener('updateend', function (_) {
       mediaSource.endOfStream();
