@@ -111,12 +111,12 @@ None ({{jsxref("undefined")}}).
 ```js
 document.body.onclick = function(){
   e = arguments[0];
-  var dt = e.target,stag = dt.tagName.toLowerCase();
+  const dt = e.target,stag = dt.tagName.toLowerCase();
   document.getElementById("out").innerHTML = stag;
 };
 
-var simulateClick = function(){
-  var evt = document.createEvent("MouseEvents");
+const simulateClick = function(){
+  const evt = document.createEvent("MouseEvents");
   evt.initMouseEvent("click", true, true, window, 0, 0, 0, 80, 20, false, false, false, false, 0, null);
   document.body.dispatchEvent(evt);
 }

@@ -29,8 +29,8 @@ Example of using the `event.region` combined with `CanvasRenderingContext2D.addH
 <canvas id="canvas"></canvas>
 
 <script>
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.arc(70, 80, 10, 0, 2 * Math.PI, false);

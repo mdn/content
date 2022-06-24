@@ -16,7 +16,7 @@ The `scan()` method of the {{DOMxRef("NDEFReader")}} interface activates a readi
 ## Syntax
 
 ```js
-var readerPromise = NDEFReader.scan(options);
+const readerPromise = NDEFReader.scan(options);
 ```
 
 ### Parameters
