@@ -44,7 +44,7 @@ The **`EvalError`** object indicates an error regarding the global {{jsxref("Glo
 ```js
 try {
   throw new EvalError('Hello', 'someFile.js', 10);
-} catch (e) {
+} catch(e) {
   console.log(e instanceof EvalError); // true
   console.log(e.message);              // "Hello"
   console.log(e.name);                 // "EvalError"
