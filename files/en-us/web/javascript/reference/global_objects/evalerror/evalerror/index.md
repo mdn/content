@@ -28,9 +28,9 @@ new EvalError(message, fileName, lineNumber)
 
 - `message` {{optional_inline}}
   - : Human-readable description of the error.
-- `options` {{Optional_Inline}}
+- `options` {{optional_inline}}
   - : An object that has the following properties:
-    - `cause` {{Optional_Inline}}
+    - `cause` {{optional_inline}}
       - : A property indicating the specific cause of the error.
           When catching and re-throwing an error with a more-specific or useful error message, this property should be used to pass the original error.
 - `fileName` {{optional_inline}} {{non-standard_inline}}
