@@ -50,7 +50,7 @@ The following snippet creates a new `RuntimeError` instance, and logs its detail
 ```js
 try {
   throw new WebAssembly.RuntimeError('Hello', 'someFile', 10);
-} catch (e) {
+} catch(e) {
   console.log(e instanceof WebAssembly.RuntimeError); // true
   console.log(e.message);                             // "Hello"
   console.log(e.name);                                // "RuntimeError"
