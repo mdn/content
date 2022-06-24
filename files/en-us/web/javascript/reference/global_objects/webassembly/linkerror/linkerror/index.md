@@ -20,6 +20,7 @@ from the start function).
 ```js
 new WebAssembly.LinkError()
 new WebAssembly.LinkError(message)
+new WebAssembly.LinkError(message, options)
 new WebAssembly.LinkError(message, fileName)
 new WebAssembly.LinkError(message, fileName, lineNumber)
 ```
@@ -48,7 +49,7 @@ details to the console:
 ```js
 try {
   throw new WebAssembly.LinkError('Hello', 'someFile', 10);
-} catch (e) {
+} catch(e) {
   console.log(e instanceof LinkError); // true
   console.log(e.message);                 // "Hello"
   console.log(e.name);                    // "LinkError"
