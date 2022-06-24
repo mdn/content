@@ -42,7 +42,7 @@ new ImageData(dataArray, width, height, settings)
 - `colorSpace`
   - : One of `"srgb"`, `"rec2020"`, or `"display-p3"`.
 - `dataArray`
-  - : A {{jsxref("Uint8ClampedArray")}} array containing the underlying pixel representation of the image. If no such array is given, an image with a transparent black rectangle of the specified `width` and `height` will be created.
+  - : A {{jsxref("Uint8ClampedArray")}} containing the underlying pixel representation of the image. If no such array is given, an image with a transparent black rectangle of the specified `width` and `height` will be created.
 
 ### Return value
 
