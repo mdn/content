@@ -27,9 +27,9 @@ new SyntaxError(message, fileName, lineNumber)
 
 - `message` {{optional_inline}}
   - : Human-readable description of the error
-- `options` {{Optional_Inline}}
+- `options` {{optional_inline}}
   - : An object that has the following properties:
-    - `cause` {{Optional_Inline}}
+    - `cause` {{optional_inline}}
       - : A property indicating the specific cause of the error.
           When catching and re-throwing an error with a more-specific or useful error message, this property should be used to pass the original error.
 - `fileName` {{optional_inline}} {{non-standard_inline}}
@@ -44,7 +44,7 @@ new SyntaxError(message, fileName, lineNumber)
 ```js
 try {
   eval('hoo bar');
-} catch (e) {
+} catch(e) {
   console.error(e instanceof SyntaxError);
   console.error(e.message);
   console.error(e.name);
@@ -60,7 +60,7 @@ try {
 ```js
 try {
   throw new SyntaxError('Hello', 'someFile.js', 10);
-} catch (e) {
+} catch(e) {
   console.error(e instanceof SyntaxError); // true
   console.error(e.message);                // Hello
   console.error(e.name);                   // SyntaxError
