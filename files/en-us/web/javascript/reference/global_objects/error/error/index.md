@@ -61,7 +61,7 @@ In this case you should pass the original error into the constructor for the new
 ```js
 try {
   frameworkThatCanThrow();
-} catch (err) {
+} catch(err) {
   throw new Error('New error message', { cause: err });
 }
 ```
