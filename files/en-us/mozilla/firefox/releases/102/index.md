@@ -13,29 +13,17 @@ This article provides information about the changes in Firefox 102 that will aff
 
 ## Changes for web developers
 
-### Developer Tools
-
 ### HTML
 
-#### Removals
+No notable changes.
 
 ### CSS
 
 The [`update`](/en-US/docs/Web/CSS/@media/update-frequency) media feature that can be used to query the ability of the output device to modify the appearance of content after it is rendered is now available by default ({{bug(1422312)}}).
 
-#### Removals
-
 ### JavaScript
 
-#### Removals
-
-### HTTP
-
-#### Removals
-
-### Security
-
-#### Removals
+No notable changes.
 
 ### APIs
 
@@ -51,27 +39,11 @@ The [`update`](/en-US/docs/Web/CSS/@media/update-frequency) media feature that c
 
 - The Firefox-only property {{domxref("Window.sidebar")}} has been moved behind a preference and is planned for removal ({{bug(1768486)}}).
 
-#### Media, WebRTC, and Web Audio
-
-#### Removals
-
-### WebAssembly
-
-#### Removals
-
-### WebDriver conformance (WebDriver BiDi, Marionette)
-
-#### Removals
-
 ## Changes for add-on developers
 
 - The {{WebExtAPIRef("scripting")}} API, which provides features to execute script, insert and remove CSS, and manage the registration of content scripts is now available to Manifest V2 extensions ({{bug(1766615)}}).
 - With the introduction of support for the 'wasm-unsafe-eval' CSP keyword in Firefox ({{bug(1740263)}}), Manifest V3 extensions are now required to specify this keyword in the [content_security_policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest key to use [WebAssembly](/en-US/docs/WebAssembly). For backwards-compatibility, Manifest V2 extensions can still use WebAssembly without the keyword ({{bug(1766027)}}).
 - The `nonPersistentCookies` option of the {{WebExtAPIRef("privacy.websites")}} `cookieConfig` property has been deprecated ({{bug(1754924)}}).
-
-#### Removals
-
-### Other
 
 ## Older versions
 
