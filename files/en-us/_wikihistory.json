@@ -44241,33 +44241,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/GlobalEventHandlers/onblur": {
-    "modified": "2020-10-15T21:06:34.865Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "Ninja4Code",
-      "Sheppy",
-      "erikadoyle",
-      "jenjwong",
-      "jpmedley",
-      "cvrebert",
-      "Sebastianz",
-      "anik",
-      "teoli",
-      "clukawski",
-      "kosvrouvas",
-      "kscarfone",
-      "m.chisholm",
-      "ziyunfei",
-      "Varmaa",
-      "Mgjbot",
-      "Egor",
-      "Jabez",
-      "Dria",
-      "JesseW"
-    ]
-  },
   "Web/API/GlobalEventHandlers/oncancel": {
     "modified": "2020-10-15T21:43:50.314Z",
     "contributors": [
@@ -44518,30 +44491,6 @@
       "SergeG",
       "Doekman",
       "alecananian"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onfocus": {
-    "modified": "2020-10-15T21:03:55.383Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "sideshowbarker",
-      "wxdude225",
-      "chrisdavidmills",
-      "HeyHugo",
-      "jpmedley",
-      "cvrebert",
-      "Sebastianz",
-      "teoli",
-      "kosvrouvas",
-      "kscarfone",
-      "Sheppy",
-      "ziyunfei",
-      "DavidA",
-      "Mgjbot",
-      "Egor",
-      "Dria",
-      "JesseW"
     ]
   },
   "Web/API/GlobalEventHandlers/onformdata": {
@@ -140823,37 +140772,6 @@
       "fscholz"
     ]
   },
-  "Web/JavaScript/Reference/Operators/null": {
-    "modified": "2020-10-15T21:21:07.188Z",
-    "contributors": [
-      "sideshowbarker",
-      "hinell",
-      "backbencher.dev",
-      "fscholz",
-      "wbamberg",
-      "ddbeck",
-      "jinbeomhong",
-      "neverRare",
-      "saranshgupta1995",
-      "schalkneethling",
-      "levytskyi",
-      "jameshkramer",
-      "SphinxKnight",
-      "chharvey",
-      "bellentuck",
-      "nmve",
-      "snizh",
-      "rmx",
-      "vaniananthuni",
-      "thejameskyle",
-      "liammonahan",
-      "tjcrowder",
-      "x2357",
-      "Sheppy",
-      "dbruant",
-      "teoli"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Nullish_coalescing_operator": {
     "modified": "2020-12-04T00:50:22.490Z",
     "contributors": [
@@ -141522,6 +141440,37 @@
       "jpmedley",
       "dzlabs",
       "imconfig"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/null": {
+    "modified": "2020-10-15T21:21:07.188Z",
+    "contributors": [
+      "sideshowbarker",
+      "hinell",
+      "backbencher.dev",
+      "fscholz",
+      "wbamberg",
+      "ddbeck",
+      "jinbeomhong",
+      "neverRare",
+      "saranshgupta1995",
+      "schalkneethling",
+      "levytskyi",
+      "jameshkramer",
+      "SphinxKnight",
+      "chharvey",
+      "bellentuck",
+      "nmve",
+      "snizh",
+      "rmx",
+      "vaniananthuni",
+      "thejameskyle",
+      "liammonahan",
+      "tjcrowder",
+      "x2357",
+      "Sheppy",
+      "dbruant",
+      "teoli"
     ]
   },
   "Web/JavaScript/Reference/Operators/super": {
