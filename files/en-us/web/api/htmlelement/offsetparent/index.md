@@ -17,6 +17,7 @@ reference to the element which is the closest (nearest in the containment hierar
 positioned ancestor element.
 
 A positioned ancestor is either:
+
 - an element with a non-static position
 - `td`, `th`, `table` in case the element itself is static positioned.
 
