@@ -19,6 +19,7 @@ WebAssembly decoding or validation.
 ```js
 new WebAssembly.CompileError()
 new WebAssembly.CompileError(message)
+new WebAssembly.CompileError(message, options)
 new WebAssembly.CompileError(message, fileName)
 new WebAssembly.CompileError(message, fileName, lineNumber)
 ```
@@ -47,7 +48,7 @@ details to the console:
 ```js
 try {
   throw new WebAssembly.CompileError('Hello', 'someFile', 10);
-} catch (e) {
+} catch(e) {
   console.log(e instanceof CompileError); // true
   console.log(e.message);                 // "Hello"
   console.log(e.name);                    // "CompileError"
