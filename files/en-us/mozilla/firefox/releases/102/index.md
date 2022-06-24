@@ -39,6 +39,8 @@ No notable changes.
 
 - The Firefox-only property {{domxref("Window.sidebar")}} has been moved behind a preference and is planned for removal ({{bug(1768486)}}).
 
+### WebDriver conformance
+
 ## Changes for add-on developers
 
 - The {{WebExtAPIRef("scripting")}} API, which provides features to execute script, insert and remove CSS, and manage the registration of content scripts is now available to Manifest V2 extensions ({{bug(1766615)}}).
