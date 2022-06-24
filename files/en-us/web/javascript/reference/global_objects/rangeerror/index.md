@@ -33,7 +33,7 @@ This can be encountered when:
   - : Error message.
 - {{jsxref("Error.prototype.name", "RangeError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.cause", "EvalError.prototype.cause")}}
+- {{jsxref("Error.prototype.cause", "RangeError.prototype.cause")}}
   - : Error cause. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.fileName", "RangeError.prototype.fileName")}} {{non-standard_inline}}
   - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
@@ -49,48 +49,36 @@ This can be encountered when:
 ### Using RangeError (for numeric values)
 
 ```js
-function check(n)
-{
-    if( !(n >= -500 && n <= 500) )
-    {
-        throw new RangeError("The argument must be between -500 and 500.")
-    }
+function check(n) {
+  if(!(n >= -500 && n <= 500)) {
+    throw new RangeError("The argument must be between -500 and 500.");
+  }
 }
 
-try
-{
-    check(2000)
-}
-catch(error)
-{
-    if (error instanceof RangeError)
-    {
-        // Handle the error
-    }
+try {
+  check(2000);
+} catch(error) {
+  if (error instanceof RangeError) {
+    // Handle the error
+  }
 }
 ```
 
 ### Using RangeError (for non-numeric values)
 
 ```js
-function check(value)
-{
-    if(["apple", "banana", "carrot"].includes(value) === false)
-    {
-        throw new RangeError('The argument must be an "apple", "banana", or "carrot".')
-    }
+function check(value) {
+  if(['apple', 'banana', 'carrot'].includes(value) === false) {
+    throw new RangeError('The argument must be an "apple", "banana", or "carrot".');
+  }
 }
 
-try
-{
-    check("cabbage")
-}
-catch(error)
-{
-    if(error instanceof RangeError)
-    {
-        // Handle the error
-    }
+try {
+  check('cabbage');
+} catch(error) {
+  if(error instanceof RangeError) {
+    // Handle the error
+  }
 }
 ```
 
