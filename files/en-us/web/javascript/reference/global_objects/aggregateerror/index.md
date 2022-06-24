@@ -35,7 +35,7 @@ The **`AggregateError`** object represents an error when several errors need to 
 
 ```js
 Promise.any([
-  Promise.reject(new Error('some error'));
+  Promise.reject(new Error('some error')),
 ]).catch(e => {
   console.log(e instanceof AggregateError); // true
   console.log(e.message);                   // "All Promises rejected"
@@ -49,7 +49,7 @@ Promise.any([
 ```js
 try {
   throw new AggregateError([
-    new Error('some error')
+    new Error('some error'),
   ], 'Hello');
 } catch(e) {
   console.log(e instanceof AggregateError); // true
