@@ -55,7 +55,7 @@ The code values for Windows, Linux, and macOS are list on the [KeyboardEvent: co
 #output:focus-visible {
   outline: 3px solid dodgerblue;
 }
-```		
+```
 
 #### JavaScript
 

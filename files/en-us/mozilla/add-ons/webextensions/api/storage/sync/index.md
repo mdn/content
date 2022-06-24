@@ -70,12 +70,13 @@ If an extension attempts to store items that exceed these limits, calls to {{Web
 ## Synchronization process
 
 In Firefox, extension data is synced every 10 minutes or whenever the user selects **Sync Now** in **Settings** > **Sync** or Firefox account. When the browser performs a sync, for each key stored, it:
+
 - compares the value on the server with the value at the last sync; if they are different, the value from the server is written to the key in the browser's sync storage.
 - compares the browser's sync storage values with the value on the server; if they are different, writes the browser's key value to the server.
 
-This means that, for each key, a change on the server takes precedence over a change in the browser's sync storage. 
+This means that, for each key, a change on the server takes precedence over a change in the browser's sync storage.
 
-This mechanism is generally OK for data such as user preferences or other global settings changed by the user. 
+This mechanism is generally OK for data such as user preferences or other global settings changed by the user.
 
 However, a key's value can be updated on one browser and synchronized then updated on a second browser before the second browser is synchronized, resulting in the local update being overwritten during sync. This mechanism is, therefore, not ideal for data aggregated across devices, such as a count of page views or how many times an option is used. To handle such cases, use {{WebExtAPIRef("storage.StorageArea.onChanged", "storage.sync.onChanged")}} to listen for sync updates from the server (for example, a count of page views on another browser instance). Then adjust the value locally to take the remote value into account (for example, update the total views based on the remote count and new local count).
 

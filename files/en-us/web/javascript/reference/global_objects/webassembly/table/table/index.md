@@ -47,11 +47,12 @@ new WebAssembly.Table(tableDescriptor)
 The following example creates a `WebAssembly.Table` instance with an initial size of 2
 elements. The `WebAssembly.Table` contents are populated using a WebAssembly module and are accessible from JavaScript. When viewing the [live example](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html), open your developer console to display console log messages from the code snippets below.
 
-This example uses the following reference files: 
+This example uses the following reference files:
+
 1. `table2.html`:  An HTML file containing JavaScript that creates a `WebAssembly.Table` ([source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html))
 2. `table2.wasm`: A WebAssembly module imported by the JavaScript code in `table2.html` ([source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat))
 
-In `table2.html`, we create a `WebAssembly.Table`: 
+In `table2.html`, we create a `WebAssembly.Table`:
 
 ```js
 const tbl = new WebAssembly.Table({
@@ -96,6 +97,7 @@ const instantiating = WebAssembly.instantiateStreaming(fetch('table2.wasm'), imp
 ```
 
 After instantiating `table2.wasm`, `tbl` is updated with the following:
+
 - table length is still 2
 - content for index 0 is now a function which returns 42
 - content for index 1 is now a function which returns 83
