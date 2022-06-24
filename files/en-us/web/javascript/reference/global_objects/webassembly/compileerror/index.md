@@ -51,7 +51,7 @@ The following snippet creates a new `CompileError` instance, and logs its detail
 ```js
 try {
   throw new WebAssembly.CompileError('Hello', 'someFile', 10);
-} catch (e) {
+} catch(e) {
   console.log(e instanceof CompileError); // true
   console.log(e.message);                 // "Hello"
   console.log(e.name);                    // "CompileError"
