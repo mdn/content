@@ -18,14 +18,20 @@ several errors that need to be wrapped in a single error.
 ```js
 new AggregateError(errors)
 new AggregateError(errors, message)
+new AggregateError(errors, message, options)
 ```
 
 ### Parameters
 
 - `errors`
   - : An iterable of errors, may not actually be {{JSxRef("Error")}} instances.
-- `message`{{Optional_Inline}}
-  - : An optional human-readable description of the aggregate error.
+- `message` {{Optional_Inline}}
+  - : A human-readable description of the aggregate error.
+- `options` {{Optional_Inline}}
+  - : An object that has the following properties:
+    - `cause` {{Optional_Inline}}
+      - : A property indicating the specific cause of the error.
+          When catching and re-throwing an error with a more-specific or useful error message, this property should be used to pass the original error.
 
 ## Examples
 
