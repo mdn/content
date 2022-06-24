@@ -30,6 +30,8 @@ Example cases are mostly when something is too large, e.g.:
   - : Error message. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.name", "InternalError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.cause", "InternalError.prototype.cause")}}
+  - : Error cause. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.fileName", "InternalError.prototype.fileName")}} {{non-standard_inline}}
   - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.lineNumber", "InternalError.prototype.lineNumber")}} {{non-standard_inline}}
@@ -47,20 +49,22 @@ This recursive function runs 10 times, as per the exit condition.
 
 ```js
 function loop(x) {
-  if (x >= 10) // "x >= 10" is the exit condition
+  if(x >= 10) { // "x >= 10" is the exit condition
     return;
+  }
   // do stuff
   loop(x + 1); // the recursive call
 }
 loop(0);
 ```
 
-Setting this condition to an extremely high value, won't work:
+Setting this condition to an extremely high value, may not work:
 
 ```js example-bad
 function loop(x) {
-  if (x >= 1000000000000)
+  if(x >= 1000000000000) {
     return;
+  }
   // do stuff
   loop(x + 1);
 }
