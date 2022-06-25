@@ -15,6 +15,12 @@ So let's get started by setting up the basis for our WebRTC-powered phone app.
     - [PeerJS](https://peerjs.com/docs/): `yarn add peerjs`
     - [Peer](https://github.com/peers/peerjs-server): `yarn add peer`
 
+   If you’re using Yarn 2.0, the `node_modules` directory won’t be created unless you add the following line to your `.yarnrc.yml` file:
+
+    ```
+    nodeLinker: node-modules
+    ```
+
     Peer will be used for the peer server and PeerJS will be used to access the PeerJS API and framework. Your `package.json` should something look like this when you've finished installing the dependencies:
 
     ```json
