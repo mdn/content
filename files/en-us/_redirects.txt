@@ -9700,6 +9700,7 @@
 /en-US/docs/Web/API/WebRTC_API/Interface_overview	/en-US/docs/Web/API/WebRTC_API#WebRTC_concepts_and_usage
 /en-US/docs/Web/API/WebRTC_API/Introduction	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/Web/API/WebRTC_API/Overview	/en-US/docs/Web/API/WebRTC_API#WebRTC_concepts_and_usage
+/en-US/docs/Web/API/WebRTC_API/Taking_still_photos	/en-US/docs/Web/API/Media_Streams_API/Taking_still_photos
 /en-US/docs/Web/API/WebRTC_API/WebRTC_basics	/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling
 /en-US/docs/Web/API/WebSocket/onclose	/en-US/docs/Web/API/WebSocket/close_event
 /en-US/docs/Web/API/WebSocket/onerror	/en-US/docs/Web/API/WebSocket/error_event
@@ -11488,7 +11489,7 @@
 /en-US/docs/Web/Guide/API/Vibration	/en-US/docs/Web/API/Vibration_API
 /en-US/docs/Web/Guide/API/WebRTC	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/Web/Guide/API/WebRTC/Introduction	/en-US/docs/Web/API/WebRTC_API
-/en-US/docs/Web/Guide/API/WebRTC/Taking_webcam_photos	/en-US/docs/Web/API/WebRTC_API/Taking_still_photos
+/en-US/docs/Web/Guide/API/WebRTC/Taking_webcam_photos	/en-US/docs/Web/API/Media_Streams_API/Taking_still_photos
 /en-US/docs/Web/Guide/API/WebRTC/WebRTC_architecture	/en-US/docs/Web/API/WebRTC_API/Connectivity
 /en-US/docs/Web/Guide/API/WebRTC/WebRTC_basics	/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling
 /en-US/docs/Web/Guide/Audio_and_video_delivery/H.264_support_in_Firefox	/en-US/docs/Web/Guide/Audio_and_video_delivery
@@ -12393,7 +12394,7 @@
 /en-US/docs/WebRTC/Introduction-redirect-1	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/WebRTC/MediaStream_API	/en-US/docs/Web/API/Media_Streams_API
 /en-US/docs/WebRTC/Peer-to-peer_communications_with_WebRTC	/en-US/docs/Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC
-/en-US/docs/WebRTC/Taking_webcam_photos	/en-US/docs/Web/API/WebRTC_API/Taking_still_photos
+/en-US/docs/WebRTC/Taking_webcam_photos	/en-US/docs/Web/API/Media_Streams_API/Taking_still_photos
 /en-US/docs/WebRTC/WebRTC_reference	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/WebRTC/navigator.getUserMedia	/en-US/docs/Web/API/Navigator/getUserMedia
 /en-US/docs/WebSockets	/en-US/docs/Web/API/WebSockets_API

@@ -57143,6 +57143,33 @@
       "adammcfadden"
     ]
   },
+  "Web/API/Media_Streams_API/Taking_still_photos": {
+    "modified": "2020-02-12T09:11:02.185Z",
+    "contributors": [
+      "Sheppy",
+      "fippo",
+      "PhilLab",
+      "fscholz",
+      "wbamberg",
+      "DeveloperDavo",
+      "weisjohn",
+      "Hubenet",
+      "rogeru",
+      "Jib",
+      "zalun",
+      "teoli",
+      "kshitijpurwar",
+      "chrisdavidmills",
+      "Kiley85",
+      "Null",
+      "KarlPurk",
+      "Jeremie",
+      "ianpgall",
+      "codepo8",
+      "jswisher",
+      "espressive"
+    ]
+  },
   "Web/API/MerchantValidationEvent": {
     "modified": "2020-10-15T22:08:43.420Z",
     "contributors": [
@@ -79953,33 +79980,6 @@
       "kdex",
       "Sheppy",
       "teoli"
-    ]
-  },
-  "Web/API/WebRTC_API/Taking_still_photos": {
-    "modified": "2020-02-12T09:11:02.185Z",
-    "contributors": [
-      "Sheppy",
-      "fippo",
-      "PhilLab",
-      "fscholz",
-      "wbamberg",
-      "DeveloperDavo",
-      "weisjohn",
-      "Hubenet",
-      "rogeru",
-      "Jib",
-      "zalun",
-      "teoli",
-      "kshitijpurwar",
-      "chrisdavidmills",
-      "Kiley85",
-      "Null",
-      "KarlPurk",
-      "Jeremie",
-      "ianpgall",
-      "codepo8",
-      "jswisher",
-      "espressive"
     ]
   },
   "Web/API/WebRTC_API/Using_DTMF": {
@@ -140652,18 +140652,6 @@
       "JayTaves"
     ]
   },
-  "Web/JavaScript/Reference/Operators/import.meta": {
-    "modified": "2020-10-15T22:06:37.793Z",
-    "contributors": [
-      "fscholz",
-      "Brettz9",
-      "sideshowbarker",
-      "felix.s",
-      "rwaldron",
-      "ExE-Boss",
-      "deniolp"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Increment": {
     "modified": "2020-10-15T22:30:28.619Z",
     "contributors": [
@@ -141283,6 +141271,18 @@
       "XMO",
       "kdex",
       "imconfig"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/import.meta": {
+    "modified": "2020-10-15T22:06:37.793Z",
+    "contributors": [
+      "fscholz",
+      "Brettz9",
+      "sideshowbarker",
+      "felix.s",
+      "rwaldron",
+      "ExE-Boss",
+      "deniolp"
     ]
   },
   "Web/JavaScript/Reference/Operators/in": {
