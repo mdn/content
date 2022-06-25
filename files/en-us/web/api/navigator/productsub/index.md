@@ -25,7 +25,7 @@ A string.
 ```js
 <script>
 function prodsub() {
-  var dt = document.getElementById("d").childNodes[0];
+  const dt = document.getElementById("d").childNodes[0];
   dt.data = navigator.productSub;
 }
 </script>

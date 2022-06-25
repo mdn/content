@@ -38,7 +38,7 @@ media element.
 <script type="text/javascript">
 
   // Step 1: Obtain PlayToManager object for app's current view.
-    var ptm = Windows.Media.PlayTo.PlayToManager.getForCurrentView();
+    const ptm = Windows.Media.PlayTo.PlayToManager.getForCurrentView();
 
   // Step 2: Register for the sourcerequested event (user swipes Devices charm).
     ptm.addEventListener("sourcerequested", function(e) {
