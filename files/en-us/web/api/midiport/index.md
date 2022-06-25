@@ -78,14 +78,14 @@ The following example lists input and output ports, and displays information abo
 
 ```js
 function listInputsAndOutputs( midiAccess ) {
-  for (let entry of midiAccess.inputs) {
+  for (const entry of midiAccess.inputs) {
     const input = entry[1];
     console.log( "Input port [type:'" + input.type + "'] id:'" + input.id +
       "' manufacturer:'" + input.manufacturer + "' name:'" + input.name +
       "' version:'" + input.version + "'" );
   }
 
-  for (let entry of midiAccess.outputs) {
+  for (const entry of midiAccess.outputs) {
     const output = entry[1];
     console.log( "Output port [type:'" + output.type + "'] id:'" + output.id +
       "' manufacturer:'" + output.manufacturer + "' name:'" + output.name +

@@ -318,8 +318,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 
 - {{domxref("GlobalEventHandlers.onabort")}}
   - : Called when the loading of a resource has been aborted, such as by a user canceling the load while it is still in progress.
-- {{domxref("GlobalEventHandlers.onblur")}}
-  - : Called after the window loses focus, such as due to a popup.
 - {{domxref("GlobalEventHandlers.onchange")}}
   - : An event handler property for change events on the window.
 - {{domxref("GlobalEventHandlers.onclick")}}
@@ -332,8 +330,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Called when the RIGHT mouse button is pressed.
 - {{domxref("GlobalEventHandlers.onerror")}}
   - : Called when a resource fails to load OR when an error occurs at runtime. See {{domxref("Window/error_event", "error")}} event.
-- {{domxref("GlobalEventHandlers.onfocus")}}
-  - : Called after the window receives or regains focus. See {{event("focus")}} events.
 - {{domxref("GlobalEventHandlers.oninput")}}
   - : Called when the value of an \<input> element changes.
 - {{domxref("GlobalEventHandlers.onkeydown")}}
