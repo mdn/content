@@ -736,7 +736,7 @@ Many thanks to Paul Kinlan for his article [Adding a Service Worker and Offline 
 
 #### Testing the example offline
 
-To test our [service worker example](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/), you'll need to load it a couple of times to make sure it is installed. Once this is done, you can:
+To test our [service worker example](https://developers.google.com/codelabs/pwa-training/pwa03--going-offline#0), you'll need to load it a couple of times to make sure it is installed. Once this is done, you can:
 
 - Try unplugging your network/turning your Wi-Fi off.
 - Select _File > Work Offline_ if you are using Firefox.
