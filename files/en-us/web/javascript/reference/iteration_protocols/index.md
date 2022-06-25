@@ -82,6 +82,24 @@ Optionally, the iterator can also implement the **`return(value)`** and **`throw
 >
 > However, when possible, it's better for `iterable[Symbol.iterator]` to return different iterators that always start from the beginning, like [`Set.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator) does.
 
+## The async iterator and async iterable protocols
+
+There are another pair of protocols used for async iteration, named **async iterator** and **async iterable** protocols. They have very similar interfaces compared to the iterable and iterator protocols, except that each return value from the calls to the iterator methods is wrapped in a promise.
+
+An object implements the async iterable protocol when it implements the following methods:
+
+| Property            | Value                                                                                                           |
+| ------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `[Symbol.iterator]` | A zero-argument function that returns an object, conforming to the async iterator protocol. |
+
+An object implements the async iterator protocol when it implements the following methods:
+
+| Property | Value                                                                                                                                                                                                                                                                                          |
+| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `next()` | A function that accepts zero or one argument and returns a promise. The promise fulfills to an object conforming to the `IteratorResult` interface, and the properties have the same semantics as those of the sync iterator's. |
+| `return(value)` (optional) | A function that accepts zero or one argument and returns a promise. The promise fulfills to an object conforming to the `IteratorResult` interface, and the properties have the same semantics as those of the sync iterator's. |
+| `throw(exception)` (optional) | A function that accepts zero or one argument and returns a promise. The promise fulfills to an object conforming to the `IteratorResult` interface, and the properties have the same semantics as those of the sync iterator's. |
+
 ## Examples using the iteration protocols
 
 A {{jsxref("String")}} is an example of a built-in iterable object:
