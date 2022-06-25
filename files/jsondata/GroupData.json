@@ -790,7 +790,10 @@
     },
     "Media Capture and Streams": {
       "overview": ["Media Streams API"],
-      "guides": ["/docs/Web/API/Media_Streams_API/Constraints"],
+      "guides": [
+        "/docs/Web/API/Media_Streams_API/Constraints",
+        "/docs/Web/API/Media_Streams_API/Taking_still_photos"
+      ],
       "interfaces": [
         "BlobEvent",
         "CanvasCaptureMediaStreamTrack",
@@ -1852,7 +1855,6 @@
         "/docs/Web/API/WebRTC_API/Using_data_channels",
         "/docs/Web/API/WebRTC_API/Using_DTMF",
         "/docs/Web/API/WebRTC_API/adapter.js",
-        "/docs/Web/API/WebRTC_API/Taking_still_photos",
         "/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample"
       ],
       "interfaces": [
