@@ -7,13 +7,12 @@ tags:
   - CSS
   - CSS3 Transitions
   - CSSOM
-  - Experimental
   - Property
   - Reference
   - TransitionEvent
 browser-compat: api.TransitionEvent.pseudoElement
 ---
-{{ apiref("CSSOM") }} {{SeeCompatTable}}
+{{ apiref("CSSOM") }}
 
 The **`TransitionEvent.pseudoElement`** read-only property is a
 string, starting with `'::'`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on.

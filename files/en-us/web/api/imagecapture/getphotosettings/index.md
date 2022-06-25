@@ -56,7 +56,7 @@ shows how the {{domxref("ImageCapture")}} object is created using a
 ```js
 const input = document.querySelector('input[type="range"]');
 
-var imageCapture;
+let imageCapture;
 
 navigator.mediaDevices.getUserMedia({video: true})
 .then(mediaStream => {

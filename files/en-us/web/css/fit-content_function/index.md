@@ -9,7 +9,9 @@ tags:
   - Layout
   - Reference
   - Web
-spec-urls: https://drafts.csswg.org/css-grid/#valdef-grid-template-columns-fit-content
+browser-compat:
+  - css.properties.width.fit-content_function
+  - css.properties.grid-template-columns.fit-content
 ---
 {{CSSRef}}
 
@@ -95,13 +97,7 @@ fit-content(40%)
 
 ## Browser compatibility
 
-### Supported for width (and other sizing properties)
-
-{{Compat("css.properties.width.fit-content_function")}}
-
-### Supported in grid layout
-
-{{Compat("css.properties.grid-template-columns.fit-content")}}
+{{Compat}}
 
 ## See also
 

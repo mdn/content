@@ -20,7 +20,7 @@ touch events on mobile browsers.
 ## Syntax
 
 ```js
-var boolean = InputDeviceCapabilities.firesTouchEvents
+const boolean = InputDeviceCapabilities.firesTouchEvents
 ```
 
 ### Returns

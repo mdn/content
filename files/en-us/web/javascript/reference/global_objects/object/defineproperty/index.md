@@ -389,7 +389,7 @@ entry.
 
 ```js
 function Archiver() {
-  const temperature = null;
+  let temperature = null;
   const archive = [];
 
   Object.defineProperty(this, 'temperature', {

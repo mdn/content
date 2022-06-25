@@ -8,9 +8,10 @@ tags:
   - Reference
   - sendReport
   - HIDDevice
+  - Experimental
 browser-compat: api.HIDDevice.sendReport
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`sendReport()`** method of the {{domxref("HIDDevice")}} interface sends an output report to the HID device.
 
@@ -35,7 +36,7 @@ A {{jsxref("Promise")}} that resolves with `undefined` once the report has been 
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NotAllowedError`
+- `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if sending the report fails for any reason.
 
 ## Examples

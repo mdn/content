@@ -44278,28 +44278,6 @@
       "Guillaume-Heras"
     ]
   },
-  "Web/API/GlobalEventHandlers/oncanplay": {
-    "modified": "2020-10-15T21:43:46.113Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "sideshowbarker",
-      "wbamberg",
-      "rolfedh",
-      "Guillaume-Heras"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/oncanplaythrough": {
-    "modified": "2020-10-15T21:43:46.835Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "sideshowbarker",
-      "wbamberg",
-      "Guillaume-Heras",
-      "rolfedh"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onchange": {
     "modified": "2020-10-15T21:06:29.702Z",
     "contributors": [
@@ -44480,18 +44458,6 @@
       "rolfedh",
       "Sebastianz",
       "AFBarstow"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ondurationchange": {
-    "modified": "2020-10-15T21:43:47.156Z",
-    "contributors": [
-      "suvyme",
-      "mfluehr",
-      "fscholz",
-      "sideshowbarker",
-      "wbamberg",
-      "rolfedh",
-      "Guillaume-Heras"
     ]
   },
   "Web/API/GlobalEventHandlers/onemptied": {
@@ -65746,19 +65712,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/RTCIceCandidatePairStats/circuitBreakerTriggerCount": {
-    "modified": "2020-10-15T22:16:09.693Z",
-    "contributors": [
-      "bradley27783",
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCIceCandidatePairStats/consentExpiredTimestamp": {
-    "modified": "2020-10-15T22:16:19.628Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCIceCandidatePairStats/consentRequestsSent": {
     "modified": "2020-10-15T22:16:40.833Z",
     "contributors": [
@@ -65771,13 +65724,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/RTCIceCandidatePairStats/firstRequestTimestamp": {
-    "modified": "2020-12-10T11:02:26.528Z",
-    "contributors": [
-      "bershanskiy",
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCIceCandidatePairStats/lastPacketReceivedTimestamp": {
     "modified": "2020-10-15T22:16:59.350Z",
     "contributors": [
@@ -65786,18 +65732,6 @@
   },
   "Web/API/RTCIceCandidatePairStats/lastPacketSentTimestamp": {
     "modified": "2020-10-15T22:16:59.920Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCIceCandidatePairStats/lastRequestTimestamp": {
-    "modified": "2020-10-15T22:16:58.742Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCIceCandidatePairStats/lastResponseTimestamp": {
-    "modified": "2020-10-15T22:16:58.707Z",
     "contributors": [
       "Sheppy"
     ]
@@ -65865,18 +65799,6 @@
   },
   "Web/API/RTCIceCandidatePairStats/responsesSent": {
     "modified": "2020-10-15T22:17:01.253Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCIceCandidatePairStats/retransmissionsReceived": {
-    "modified": "2020-10-15T22:17:01.398Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCIceCandidatePairStats/retransmissionsSent": {
-    "modified": "2020-10-15T22:17:01.769Z",
     "contributors": [
       "Sheppy"
     ]
@@ -67195,13 +67117,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/RTCRtpStreamStats/sliCount": {
-    "modified": "2020-10-15T22:09:13.405Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCRtpStreamStats/ssrc": {
     "modified": "2020-10-15T22:08:52.056Z",
     "contributors": [
@@ -67385,12 +67300,6 @@
     "contributors": [
       "Sheppy",
       "fscholz"
-    ]
-  },
-  "Web/API/RTCStatsType": {
-    "modified": "2020-10-15T22:09:26.058Z",
-    "contributors": [
-      "Sheppy"
     ]
   },
   "Web/API/RTCTrackEvent": {
@@ -140165,37 +140074,6 @@
       "Anonymous"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/null": {
-    "modified": "2020-10-15T21:21:07.188Z",
-    "contributors": [
-      "sideshowbarker",
-      "hinell",
-      "backbencher.dev",
-      "fscholz",
-      "wbamberg",
-      "ddbeck",
-      "jinbeomhong",
-      "neverRare",
-      "saranshgupta1995",
-      "schalkneethling",
-      "levytskyi",
-      "jameshkramer",
-      "SphinxKnight",
-      "chharvey",
-      "bellentuck",
-      "nmve",
-      "snizh",
-      "rmx",
-      "vaniananthuni",
-      "thejameskyle",
-      "liammonahan",
-      "tjcrowder",
-      "x2357",
-      "Sheppy",
-      "dbruant",
-      "teoli"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/parseFloat": {
     "modified": "2020-10-22T10:33:45.776Z",
     "contributors": [
@@ -140931,6 +140809,37 @@
     "modified": "2020-10-15T22:30:34.996Z",
     "contributors": [
       "fscholz"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/null": {
+    "modified": "2020-10-15T21:21:07.188Z",
+    "contributors": [
+      "sideshowbarker",
+      "hinell",
+      "backbencher.dev",
+      "fscholz",
+      "wbamberg",
+      "ddbeck",
+      "jinbeomhong",
+      "neverRare",
+      "saranshgupta1995",
+      "schalkneethling",
+      "levytskyi",
+      "jameshkramer",
+      "SphinxKnight",
+      "chharvey",
+      "bellentuck",
+      "nmve",
+      "snizh",
+      "rmx",
+      "vaniananthuni",
+      "thejameskyle",
+      "liammonahan",
+      "tjcrowder",
+      "x2357",
+      "Sheppy",
+      "dbruant",
+      "teoli"
     ]
   },
   "Web/JavaScript/Reference/Operators/Nullish_coalescing_operator": {

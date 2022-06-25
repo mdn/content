@@ -72,7 +72,7 @@ promise to be immediately rejected with a `NotAllowedError`. Web sites should
 be prepared to handle this situation. For example, a site should not present a user
 interface that assumes playback has begun automatically, but should instead update their
 UI based on whether the returned promise is fulfilled or rejected. See the
-[example](#example) below for more information.
+[example](#examples) below for more information.
 
 > **Note:** The `play()` method may cause the user to be asked
 > to grant permission to play the media, resulting in a possible delay before the

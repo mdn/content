@@ -97,7 +97,7 @@ _Also implements methods from the interface_ {{domxref("EventTarget")}}.
 
 ## Example
 
-This simple snippet of code shows the creation of some audio nodes, and how the `AudioNode` properties and methods can be used. You can find examples of such usage on any of the examples linked to on the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) landing page (for example [Violent Theremin](https://github.com/mdn/violent-theremin)).
+This simple snippet of code shows the creation of some audio nodes, and how the `AudioNode` properties and methods can be used. You can find examples of such usage on any of the examples linked to on the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) landing page (for example [Violent Theremin](https://github.com/mdn/webaudio-examples/violent-theremin)).
 
 ```js
 const audioCtx = new AudioContext();

@@ -8,7 +8,9 @@ tags:
   - HTML
   - min
   - Reference
-spec-urls: https://html.spec.whatwg.org/multipage/input.html#the-min-and-max-attributes
+browser-compat:
+  - html.elements.input.attributes.min
+  - html.elements.meter.min
 ---
 
 {{HTMLSidebar}}
@@ -147,7 +149,7 @@ Provide instructions to help users understand how to complete the form and use i
 
 ## Browser compatibility
 
-{{Compat("html.elements.attributes.min")}}
+{{Compat}}
 
 ## See also
 

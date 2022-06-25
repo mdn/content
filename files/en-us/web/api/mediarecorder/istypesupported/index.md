@@ -44,7 +44,7 @@ specified format.
 ## Examples
 
 ```js
-var types = ["video/webm",
+const types = ["video/webm",
              "audio/webm",
              "video/webm\;codecs=vp8",
              "video/webm\;codecs=daala",
@@ -52,7 +52,7 @@ var types = ["video/webm",
              "audio/webm\;codecs=opus",
              "video/mpeg"];
 
-for (var i in types) {
+for (let i in types) {
   console.log( "Is " + types[i] + " supported? " + (MediaRecorder.isTypeSupported(types[i]) ? "Maybe!" : "Nope :("));
 }
 ```

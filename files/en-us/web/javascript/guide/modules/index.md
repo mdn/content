@@ -7,6 +7,9 @@ tags:
   - Modules
   - export
   - import
+browser-compat:
+  - javascript.statements.import
+  - javascript.statements.export
 ---
 {{JSSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
 
@@ -20,17 +23,11 @@ It has therefore made sense in recent years to start thinking about providing me
 
 The good news is that modern browsers have started to support module functionality natively, and this is what this article is all about. This can only be a good thing — browsers can optimize loading of modules, making it more efficient than having to use a library and do all of that extra client-side processing and extra round trips.
 
-## Browser support
+Use of native JavaScript modules is dependent on the {{JSxRef("Statements/import", "import")}} and {{JSxRef("Statements/export", "export")}} statements; these are supported in browsers as shown in the compatibility table below.
 
-Use of native JavaScript modules is dependent on the {{JSxRef("Statements/import", "import")}} and {{JSxRef("Statements/export", "export")}} statements; these are supported in browsers as follows:
+## Browser compatibility
 
-### import
-
-{{Compat("javascript.statements.import")}}
-
-### export
-
-{{Compat("javascript.statements.export")}}
+{{Compat}}
 
 ## Introducing an example
 

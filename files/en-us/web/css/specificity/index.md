@@ -360,7 +360,7 @@ A few things to remember about specificity:
 
 1. Specificity only applies when the same element is targeted by multiple declarations in the same cascade layer or origin. Specificity only matters for declarations of the same importance and same origin and [cascade layer](/en-US/docs/Web/CSS/@layer). If matching selectors are in different origins, the [cascade](/en-US/docs/Web/CSS/Cascade) determines which declaration takes precedence.
 
-2. When two selectors in the the same cascade layer and origin have the same specificity, proximity is important; the last selector wins.
+2. When two selectors in the same cascade layer and origin have the same specificity, proximity is important; the last selector wins.
 
 3. As per CSS rules, [directly targeted elements](#directly_targeted_elements_vs._inherited_styles) will always take precedence over rules which an element inherits from its ancestor.
 

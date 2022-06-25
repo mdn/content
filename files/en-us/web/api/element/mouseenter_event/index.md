@@ -94,8 +94,8 @@ Styling the `div` to make it more visible.
 #### JavaScript
 
 ```js
-var enterEventCount = 0;
-var leaveEventCount = 0;
+let enterEventCount = 0;
+let leaveEventCount = 0;
 const mouseTarget = document.getElementById('mouseTarget');
 const unorderedList = document.getElementById('unorderedList');
 
@@ -113,10 +113,10 @@ mouseTarget.addEventListener('mouseleave', e => {
 
 function addListItem(text) {
   // Create a new text node using the supplied text
-  var newTextNode = document.createTextNode(text);
+  const newTextNode = document.createTextNode(text);
 
   // Create a new li element
-  var newListItem = document.createElement("li");
+  const newListItem = document.createElement("li");
 
   // Add the text node to the li element
   newListItem.appendChild(newTextNode);

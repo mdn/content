@@ -29,10 +29,10 @@ a [channel message](/en-US/docs/Web/API/Channel_Messaging_API), the event
 object of `onmessage` will be a `ExtendableMessageEvent`.
 
 ```js
-var port;
+let port;
 
 self.addEventListener('push', function(e) {
-  var obj = e.data.json();
+  const obj = e.data.json();
 
   if(obj.action === 'subscribe' || obj.action === 'unsubscribe') {
     port.postMessage(obj);

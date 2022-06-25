@@ -11,9 +11,10 @@ tags:
   - PWA
   - content indexing
   - getAll
+  - Experimental
 browser-compat: api.ContentIndex.getAll
 ---
-{{DefaultAPISidebar("Content Index API")}}
+{{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The **`getAll()`** method of the
 {{domxref("ContentIndex")}} interface returns a {{jsxref('Promise')}} that resolves with
@@ -77,7 +78,7 @@ No exceptions are thrown. If there are no items in the Content Index, an empty
 ## Examples
 
 The below example shows an asynchronous function that retrieves items within the
-{{domxref('Content Index API','content index')}} and iterates over each entry, building
+[content index](/en-US/docs/Web/API/Content_Index_API) and iterates over each entry, building
 a list for the interface.
 
 ```js
