@@ -109,12 +109,12 @@ None ({{jsxref("undefined")}}).
 ### JavaScript
 
 ```js
-document.body.onclick = function(event){
+document.body.onclick = event => {
   const elementTag = event.target.tagName.toLowerCase();
   document.getElementById("out").innerHTML = elementTag;
 };
 
-const simulateClick = function(){
+const simulateClick = () => {
   const event = document.createEvent("MouseEvents");
   event.initMouseEvent("click", true, true, window, 0, 0, 0, 80, 20, false, false, false, false, 0, null);
   document.body.dispatchEvent(event);
