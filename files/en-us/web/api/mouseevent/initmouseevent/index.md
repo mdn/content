@@ -123,7 +123,7 @@ const simulateClick = function(){
 simulateClick();
 ```
 
-### Result_
+### Result
 
 {{EmbedLiveSample('Examples')}}
 
