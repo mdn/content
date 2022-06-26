@@ -30,9 +30,6 @@ This is used while localizing the display of the address, allowing
 the determination of the field separators and the order of fields when formatting the
 address.
 
-## Syntax
-
-```js
 const paymentLanguageCode = PaymentAddress.languageCode;
 ```
 
