@@ -42,7 +42,7 @@ var v = "Hi! I'm a strict mode script!";
 Likewise, to invoke strict mode for a function, put the _exact_ statement `"use strict";` (or `'use strict';`) in the function's body before any other statements.
 
 ```js
-function strict() {
+function Myfunc() {
   // Function-level strict mode syntax
   'use strict';
   function nested() { return 'And so am I!'; }
