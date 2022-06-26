@@ -79,7 +79,7 @@ if (navigator.mediaDevices.getSupportedConstraints().frameRate) {
 
 The output, showing if your browser supports the `frameRate` constraint, is:
 
-{{ EmbedLiveSample('Example', 600, 80) }}
+{{ EmbedLiveSample('Examples', 600, 80) }}
 
 While this example is trivial, you can replace the simple output of "Supported" vs.
 "Not supported" with code to provide alternative methods for presenting the audiovisual

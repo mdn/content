@@ -60,7 +60,7 @@ innerTextOutput.value = source.innerText;
 
 ### Result
 
-{{EmbedLiveSample("Example", 700, 450)}}
+{{EmbedLiveSample("Examples", 700, 450)}}
 
 ## Specifications
 
