@@ -55,6 +55,11 @@ handlers to report on the outcome of the transaction opening in the event of suc
 failure. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([View example live](https://mdn.github.io/to-do-notifications/)).
 
 ```js
+const note = document.getElementById('notifications');
+
+// an instance of a db object for us to store the IDB data in
+let db;
+
 // Let us open our database
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 

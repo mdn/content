@@ -33,6 +33,11 @@ failure. At the end, we return the associated database connection using `db`.
 For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)/p>
 
 ```js
+const note = document.getElementById('notifications');
+
+// an instance of a db object for us to store the IDB data in
+let db;
+
 // Let us open our database
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 

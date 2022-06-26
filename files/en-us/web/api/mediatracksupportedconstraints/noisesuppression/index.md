@@ -69,7 +69,7 @@ if (navigator.mediaDevices.getSupportedConstraints().noiseSuppression) {
 
 ### Result
 
-{{ EmbedLiveSample('Example', 600, 80) }}
+{{ EmbedLiveSample('Examples', 600, 80) }}
 
 ## Specifications
 

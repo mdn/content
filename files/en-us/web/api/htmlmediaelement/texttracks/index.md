@@ -77,9 +77,9 @@ The `HTMLMediaElement.textTracks` returns a
 of each English track to the console.
 
 ```js
-var tracks = document.querySelector('video').textTracks;
+const tracks = document.querySelector('video').textTracks;
 
-for (var i = 0, L = tracks.length; i < L; i++) { /* tracks.length == 10 */
+for (let i = 0, L = tracks.length; i < L; i++) { /* tracks.length == 10 */
    if (tracks[i].language == 'en') {
       console.dir(tracks[i]);
    }
