@@ -162,7 +162,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
     See [Chrome Registration](https://developer.mozilla.org/en-US/docs/Mozilla/Chrome_Registration).
 
 - Extension Manager
-  - : Following are the new features: 
+  - : Following are the new features:
     - It is now possible to have Extensions outside the profile and application Extensions directories.
     - Installing extensions can now be done by dropping an XPI into the profile or application Extensions directory.
     - Uninstalling an Extension now involves deleting its folder from the profile or application Extensions directory.
@@ -174,7 +174,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
   - : An API has been introduced so that extensions can easily handle complex command-line flags. This API will be stable and frozen for 1.1. See the interfaces `nsICommandLine` and `nsICommandLineHandler`.
 
 - XTF Support
-  - : The eXtensible Tag Framework allows adding support for new namespaces using XPCOM components to Mozilla (written in JavaScript or C++). For example, 
+  - : The eXtensible Tag Framework allows adding support for new namespaces using XPCOM components to Mozilla (written in JavaScript or C++). For example,
     the [Mozilla XForms Project](https://www.mozilla.org/projects/xforms) uses XTF to add support for the XForms namespace. See [XTF Home Page](https://web.archive.org/web/20070527160710/http://www.croczilla.com/xtf).
 
 ### New Browser Features
