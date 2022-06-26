@@ -33,8 +33,7 @@ The interface consists of a single {{domxref("NetworkInformation")}} object, an 
 This example watches for changes to the user's connection.
 
 ```js
-const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-let type = connection.effectiveType;
+let type = navigator.connection.effectiveType;
 
 function updateConnectionStatus() {
   console.log("Connection type changed from " + type + " to " + connection.effectiveType);
