@@ -10,9 +10,6 @@ The **`modifiers`** read-only property of the
 {{domxref("PaymentRequestEvent")}} interface returns an array of objects containing
 changes to payment details.
 
-## Syntax
-
-```js
 const modifiers[] = paymentDetailsEvent.modifiers
 ```
 
