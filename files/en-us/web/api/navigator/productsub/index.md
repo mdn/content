@@ -28,7 +28,7 @@ function prodsub() {
   const dt = document.getElementById("d").childNodes[0];
   dt.data = navigator.productSub;
 }
-</script>
+console.log(prodsub()); // Returns: 20010725
 
 <button onclick="prodsub();">productSub</button>
 // returns: 20010725
