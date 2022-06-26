@@ -92,7 +92,7 @@ function dragover_handler(ev) {
 }
 
 function drop_handler(ev) {
-    event_log.textContent += "Dropped\n";
+    event_log.textContent += "Drop\n";
     ev.preventDefault();
     const data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
