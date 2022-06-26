@@ -20,10 +20,7 @@ The **`shippingType`** read-only property of the
 `"delivery"`, `"pickup"`, or `null` if one was not
 provided by the constructor.
 
-const shippingType = paymentRequest.shippingType
-```
-
-### Value
+## Value
 
 One of `"shipping"`, `"delivery"`, `"pickup"`, or
 `null`.
