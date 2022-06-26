@@ -21,7 +21,7 @@ of the selected entries with a website or application.
 
 ### Value
 
-A {{domxref('ContactsManager')}} object.
+A {{domxref('ContactsManager')}} object. Two successive calls return the same object.
 
 ## Examples
 
