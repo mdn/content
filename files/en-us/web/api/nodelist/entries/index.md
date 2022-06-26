@@ -30,10 +30,10 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 ## Example
 
 ```js
-let node = document.createElement("div");
-let kid1 = document.createElement("p");
-let kid2 = document.createTextNode("hey");
-let kid3 = document.createElement("span");
+const node = document.createElement("div");
+const kid1 = document.createElement("p");
+const kid2 = document.createTextNode("hey");
+const kid3 = document.createElement("span");
 node.appendChild(kid1);
 node.appendChild(kid2);
 node.appendChild(kid3);
