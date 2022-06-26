@@ -153,7 +153,7 @@ Although this event inherits from the [Event](/en-US/docs/Web/API/Event) object,
 ## Example
 
 ```
-declare const MSSiteModeEvent: {
+declare var MSSiteModeEvent: {
     prototype: MSSiteModeEvent;
     new(): MSSiteModeEvent;
 }
