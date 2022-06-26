@@ -15,10 +15,7 @@ instrument.
 ## Syntax
 
 ```js
-const instrumentKey = paymentRequestEvent.instrumentKey
-```
-
-### Value
+## Value
 
 A `PaymentInstrument` object.
 
