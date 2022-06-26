@@ -58,7 +58,7 @@ function check(n) {
 try {
   check(2000);
 } catch(error) {
-  if (error instanceof RangeError) {
+  if(error instanceof RangeError) {
     // Handle the error
   }
 }
