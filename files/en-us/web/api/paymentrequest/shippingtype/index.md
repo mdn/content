@@ -20,9 +20,6 @@ The **`shippingType`** read-only property of the
 `"delivery"`, `"pickup"`, or `null` if one was not
 provided by the constructor.
 
-## Syntax
-
-```js
 const shippingType = paymentRequest.shippingType
 ```
 
