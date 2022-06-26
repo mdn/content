@@ -57,7 +57,7 @@ _No changes._
 
 - The {{jsxref("WebAssembly.Global()")}} constructor is now supported, along with global variables in WebAssembly ({{bug(1464656)}}).
 - The {{jsxref("Array.prototype.flat()")}} and {{jsxref("Array.prototype.flatMap()")}} methods are now enabled by default ({{bug(1435813)}}).
-- The [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Statements/import.meta) property has been implemented to expose context-specific metadata to a JavaScript module ({{bug(1427610)}}).
+- The [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta) property has been implemented to expose context-specific metadata to a JavaScript module ({{bug(1427610)}}).
 - JavaScript [string literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) may now directly contain the U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR characters. As a consequence, {{jsxref("JSON")}} syntax is now a subset of JavaScript literal syntax (see {{bug(1435828)}} and the TC39 proposal [json-superset](https://github.com/tc39/proposal-json-superset)).
 - For out-of-bounds [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) indexes, {{jsxref("Reflect.defineProperty()")}} and {{jsxref("Reflect.set()")}} will now return `false` instead of `true` ({{bug(1308735)}}).
 

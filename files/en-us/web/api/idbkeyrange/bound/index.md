@@ -72,15 +72,15 @@ include `"A"` and `"F"`, only the values between them.
 
 ```js
 function displayData() {
-  var keyRangeValue = IDBKeyRange.bound("A", "F");
+  const keyRangeValue = IDBKeyRange.bound("A", "F");
 
-  var transaction = db.transaction(['fThings'], 'readonly');
-  var objectStore = transaction.objectStore('fThings');
+  const transaction = db.transaction(['fThings'], 'readonly');
+  const objectStore = transaction.objectStore('fThings');
 
   objectStore.openCursor(keyRangeValue).onsuccess = function(event) {
-    var cursor = event.target.result;
+    const cursor = event.target.result;
       if(cursor) {
-        var listItem = document.createElement('li');
+        const listItem = document.createElement('li');
         listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
         list.appendChild(listItem);
 

@@ -49,7 +49,7 @@ const recordedChunks = [];
 
 console.log(stream);
 const options = { mimeType: "video/webm; codecs=vp9" };
-mediaRecorder = new MediaRecorder(stream, options);
+const mediaRecorder = new MediaRecorder(stream, options);
 
 mediaRecorder.ondataavailable = handleDataAvailable;
 mediaRecorder.start();
@@ -101,9 +101,9 @@ In this code snippet, `enumerateDevices()` is used to examine the available inpu
 navigator.mediaDevices.enumerateDevices()
 .then(function(devices) {
   devices.forEach(function(device) {
-    let menu = document.getElementById("inputdevices");
+    const menu = document.getElementById("inputdevices");
     if (device.kind == "audioinput") {
-      let item = document.createElement("option");
+      const item = document.createElement("option");
       item.innerText = device.label;
       item.value = device.deviceId;
       menu.appendChild(item);
