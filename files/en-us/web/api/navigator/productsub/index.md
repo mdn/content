@@ -23,15 +23,11 @@ A string.
 ## Examples
 
 ```js
-<script>
 function prodsub() {
-  var dt = document.getElementById("d").childNodes[0];
+  const dt = document.getElementById("d").childNodes[0];
   dt.data = navigator.productSub;
 }
-</script>
-
-<button onclick="prodsub();">productSub</button>
-// returns: 20010725
+console.log(prodsub()); // Returns: 20010725
 ```
 
 ## Notes
