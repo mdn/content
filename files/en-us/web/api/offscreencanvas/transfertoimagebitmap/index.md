@@ -34,8 +34,8 @@ An {{domxref("ImageBitmap")}}.
 ## Examples
 
 ```js
-let offscreen = new OffscreenCanvas(256, 256);
-let gl = offscreen.getContext("webgl");
+const offscreen = new OffscreenCanvas(256, 256);
+const gl = offscreen.getContext("webgl");
 
 // ... some drawing using the gl context ...
 

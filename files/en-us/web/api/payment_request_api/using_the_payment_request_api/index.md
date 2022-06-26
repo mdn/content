@@ -31,7 +31,7 @@ So for example, you could create a new `PaymentRequest` instance like so:
 
 ```js
 const request = new PaymentRequest(buildSupportedPaymentMethodData(),
-                                 buildShoppingCartDetails());
+                                   buildShoppingCartDetails());
 ```
 
 The functions invoked inside the constructor return the required object parameters:
@@ -95,7 +95,7 @@ new PaymentRequest(buildSupportedPaymentMethodData(),
         if(result) {
           // Real payment request
           const request = new PaymentRequest(buildSupportedPaymentMethodData(),
-                                           checkoutObject);
+                                             checkoutObject);
 
           request.show().then(function(paymentResponse) {
             // Here we would process the payment.

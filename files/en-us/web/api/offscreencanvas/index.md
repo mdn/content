@@ -62,19 +62,19 @@ the following code will provide the rendering using an `OffscreenCanvas` as desc
 const one = document.getElementById("one").getContext("bitmaprenderer");
 const two = document.getElementById("two").getContext("bitmaprenderer");
 
-let offscreen = new OffscreenCanvas(256, 256);
-let gl = offscreen.getContext('webgl');
+const offscreen = new OffscreenCanvas(256, 256);
+const gl = offscreen.getContext('webgl');
 
 // ... some drawing for the first canvas using the gl context ...
 
 // Commit rendering to the first canvas
-let bitmapOne = offscreen.transferToImageBitmap();
+const bitmapOne = offscreen.transferToImageBitmap();
 one.transferFromImageBitmap(bitmapOne);
 
 // ... some more drawing for the second canvas using the gl context ...
 
 // Commit rendering to the second canvas
-let bitmapTwo = offscreen.transferToImageBitmap();
+const bitmapTwo = offscreen.transferToImageBitmap();
 two.transferFromImageBitmap(bitmapTwo);
 ```
 
@@ -96,8 +96,8 @@ offscreencanvas.js (worker code):
 
 ```js
 onmessage = function(evt) {
-  let canvas = evt.data.canvas;
-  let gl = canvas.getContext("webgl");
+  const canvas = evt.data.canvas;
+  const gl = canvas.getContext("webgl");
 
   // ... some drawing using the gl context ...
 };

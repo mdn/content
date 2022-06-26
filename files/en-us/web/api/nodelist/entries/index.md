@@ -38,7 +38,7 @@ node.appendChild(kid1);
 node.appendChild(kid2);
 node.appendChild(kid3);
 
-let list = node.childNodes;
+const list = node.childNodes;
 
 // Using for..of
 for(let entry of list.entries()) {

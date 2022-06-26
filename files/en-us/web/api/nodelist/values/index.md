@@ -1,4 +1,4 @@
-let---
+---
 title: NodeList.values()
 slug: Web/API/NodeList/values
 page-type: web-api-instance-method
@@ -31,19 +31,19 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 ## Example
 
 ```js
-let node = document.createElement("div");
-let kid1 = document.createElement("p");
-let kid2 = document.createTextNode("hey");
-let kid3 = document.createElement("span");
+const node = document.createElement("div");
+const kid1 = document.createElement("p");
+const kid2 = document.createTextNode("hey");
+const kid3 = document.createElement("span");
 
 node.appendChild(kid1);
 node.appendChild(kid2);
 node.appendChild(kid3);
 
-let list = node.childNodes;
+const list = node.childNodes;
 
 // Using for..of
-for(let value of list.values()) {
+for(const value of list.values()) {
   console.log(value);
 }
 ```

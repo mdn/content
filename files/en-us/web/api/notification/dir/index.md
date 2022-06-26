@@ -1,4 +1,4 @@
-const---
+---
 title: Notification.dir
 slug: Web/API/Notification/dir
 page-type: web-api-instance-property
