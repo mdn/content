@@ -19,7 +19,7 @@ meaning one of 'slow-2g', '2g', '3g', or '4g'. This value is determined using a
 combination of recently observed, round-trip time and downlink values.
 
 
-### Value
+## Value
 
 A {{jsxref("String")}} containing one of 'slow-2g', '2g', '3g', or '4g'.
 
