@@ -29,9 +29,6 @@ function prodsub() {
   dt.data = navigator.productSub;
 }
 console.log(prodsub()); // Returns: 20010725
-
-<button onclick="prodsub();">productSub</button>
-// returns: 20010725
 ```
 
 ## Notes
