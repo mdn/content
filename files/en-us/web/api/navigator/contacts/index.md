@@ -19,15 +19,9 @@ The **`contacts`** read-only property of the
 which allows users to select entries from their contact list and share limited details
 of the selected entries with a website or application.
 
-## Syntax
+### Value
 
-```js
-const contactsManager = navigator.contacts;
-```
-
-### Return Value
-
-{{domxref('ContactsManager')}}
+A {{domxref('ContactsManager')}} object.
 
 ## Examples
 
