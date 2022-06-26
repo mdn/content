@@ -12,9 +12,6 @@ The **`instrumentKey`** read-only property of the
 the user or an empty string if the user has not registered or chosen a payment
 instrument.
 
-## Syntax
-
-```js
 ## Value
 
 A `PaymentInstrument` object.
