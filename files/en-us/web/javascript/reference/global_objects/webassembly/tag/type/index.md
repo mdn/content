@@ -29,7 +29,7 @@ None
 
 An object with a property named `parameters` that references the array of data types associated with this [`Tag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag).
 
-This is the same as the `type` object that was originally passed into the [`Tag()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag/Tag).
+This is a copy of the `type` object that was originally passed into the [`Tag()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag/Tag).
 
 ## Examples
 
