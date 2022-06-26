@@ -141,7 +141,7 @@ break50.addEventListener("click",
 
 ### Result
 
-{{EmbedLiveSample("Example", 900, 850)}}
+{{EmbedLiveSample("Examples", 900, 850)}}
 
 This result may be {{LiveSampleLink('Example', 'viewed in its own window')}}.
 
