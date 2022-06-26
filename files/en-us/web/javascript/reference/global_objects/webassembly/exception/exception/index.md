@@ -37,8 +37,7 @@ new Exception(tag, payload, options)
     If the number of data fields in the payload and their types don't match, a {{jsxref("TypeError")}} exception is thrown.
 - `options` {{optional_inline}} {{non-standard_inline}}
   - : An object with the following optional fields:
-
-    - `traceStack` {{optional_inline}}
+    - `traceStack` {{optional_inline}} {{non-standard_inline}}
       - : `true` if the `Exception` may have a stack trace attached to its [`stack`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/stack) property, otherwise `false`.
          This is `false` by default (if `options` or `options.traceStack` are not provided).
 
