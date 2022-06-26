@@ -240,7 +240,7 @@ The following CSS styles our example content.
 The resulting content looks like this.
 You can see output into the log by moving the mouse in and out of the box, clicking in it, and so forth.
 
-{{EmbedLiveSample("Example", 640, 350)}}
+{{EmbedLiveSample("Examples", 640, 350)}}
 
 ## Specifications
 
