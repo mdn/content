@@ -12,10 +12,7 @@ The **`methodData`** read-only property of the
 payment methods that the web site accepts and any associated payment method specific
 data.
 
-const methodData[] = paymentRequestEvent.methodData
-```
-
-### Value
+## Value
 
 An array of {{domxref("PaymentMethodData")}} objects.
 
