@@ -210,7 +210,7 @@ The variable is initialized with a value when execution reaches the line of code
 If no initial value was specified with the variable declaration, it will be initialized with a value of `undefined`.
 
 This differs from {{jsxref("Statements/var", "var", "var_hoisting")}} variables, which will return a value of `undefined` if they are accessed before they are declared.
-The code below demonstrates the different result when `let` and `var` are accessed in code before the line in which the are declared.
+The code below demonstrates the different result when `let` and `var` are accessed in code before the line in which they are declared.
 
 ```js example-bad
 { // TDZ starts at beginning of scope
