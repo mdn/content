@@ -15,9 +15,9 @@ browser-compat: javascript.builtins.WebAssembly.Exception.getArg
 
 The **`getArg()`** prototype method of the {{jsxref("WebAssembly.Exception", "Exception")}} object can be used to get the value of a specified item in the exception's data arguments.
 
-The method passes a {{jsxref("WebAssembly.Tag")}} and will only succeed if the thrown `Exception` was created using the same tag; otherwise it will throw a `TypeError`.
+The method passes a {{jsxref("WebAssembly.Tag")}} and will only succeed if the thrown `Exception` was created using the same tag, otherwise it will throw a `TypeError`.
 This ensures that the exception can only be read if the calling code has access to the tag.
-Tags that are neither imported into or exported from the WebAssembly code are internal, and their associated runtime exceptions cannot be queried using this method!
+Tags that are neither imported into or exported from callee code are internal, and their associated runtime exceptions cannot be queried using this method!
 
 > **Note:** It is not enough that the tag has an identical sequence of data types — it must have the same _identity_ (be the same tag) as was used to create the exception.
 
@@ -52,7 +52,7 @@ it may be either imported into or exported from the calling code.
 
 ### Getting exception value from imported tag
 
-Consider the following WebAssembly code, which is assumed to be compiled to a file **example.wasm**.
+Consider the following WebAssembly code, which is assumed to be compiled to a file "example.wasm".
 This imports a tag, which it refers to internally as `$tagname`, and exports a method `run` that can be called by external code to throw an exception using the tag.
 
 ```wasm
