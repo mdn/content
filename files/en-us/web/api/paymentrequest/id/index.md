@@ -51,10 +51,7 @@ const json = response.toJSON();
 console.log(json.requestId,response.requestId, request.id);
 ```
 
-const id = paymentRequest.id
-```
-
-### Value
+## Value
 
 A string.
 
