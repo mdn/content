@@ -13,7 +13,7 @@ changes to payment details.
 ## Syntax
 
 ```js
-var modifiers[] = paymentDetailsEvent.modifiers
+const modifiers[] = paymentDetailsEvent.modifiers
 ```
 
 ### Value

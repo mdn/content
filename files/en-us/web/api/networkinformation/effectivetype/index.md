@@ -21,7 +21,7 @@ combination of recently observed, round-trip time and downlink values.
 ## Syntax
 
 ```js
-var effectiveType = NetworkInformation.effectiveType
+const effectiveType = NetworkInformation.effectiveType
 ```
 
 ### Value

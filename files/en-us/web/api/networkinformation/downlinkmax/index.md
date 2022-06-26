@@ -31,14 +31,14 @@ logs changes as they occur.
 
 ```js
 function logConnectionType() {
-  var connectionType = 'not supported';
-  var downlinkMax = 'not supported';
+  let connectionType = 'not supported';
+  let downlinkMax = 'not supported';
 
   if ('connection' in navigator) {
-    connectionType = navigator.connection.effectiveType;
+     connectionType = navigator.connection.effectiveType;
 
     if ('downlinkMax' in navigator.connection) {
-      downlinkMax = navigator.connection.downlinkMax;
+     downlinkMax = navigator.connection.downlinkMax;
     }
   }
 

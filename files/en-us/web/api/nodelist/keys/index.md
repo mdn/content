@@ -1,4 +1,4 @@
----
+let---
 title: NodeList.keys()
 slug: Web/API/NodeList/keys
 page-type: web-api-instance-method
@@ -31,19 +31,19 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 ## Example
 
 ```js
-var node = document.createElement("div");
-var kid1 = document.createElement("p");
-var kid2 = document.createTextNode("hey");
-var kid3 = document.createElement("span");
+let node = document.createElement("div");
+let kid1 = document.createElement("p");
+let kid2 = document.createTextNode("hey");
+let kid3 = document.createElement("span");
 
 node.appendChild(kid1);
 node.appendChild(kid2);
 node.appendChild(kid3);
 
-var list = node.childNodes;
+let list = node.childNodes;
 
 // Using for..of
-for(var key of list.keys()) {
+for(let key of list.keys()) {
    console.log(key);
 }
 ```

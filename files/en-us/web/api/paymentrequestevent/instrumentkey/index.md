@@ -15,7 +15,7 @@ instrument.
 ## Syntax
 
 ```js
-var instrumentKey = paymentRequestEvent.instrumentKey
+const instrumentKey = paymentRequestEvent.instrumentKey
 ```
 
 ### Value

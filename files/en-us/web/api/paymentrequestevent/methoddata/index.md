@@ -15,7 +15,7 @@ data.
 ## Syntax
 
 ```js
-var methodData[] = paymentRequestEvent.methodData
+const methodData[] = paymentRequestEvent.methodData
 ```
 
 ### Value

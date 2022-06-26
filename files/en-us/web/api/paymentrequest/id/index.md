@@ -54,7 +54,7 @@ console.log(json.requestId,response.requestId, request.id);
 ## Syntax
 
 ```js
-var id = paymentRequest.id
+const id = paymentRequest.id
 ```
 
 ### Value

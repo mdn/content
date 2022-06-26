@@ -33,7 +33,7 @@ address.
 ## Syntax
 
 ```js
-var paymentLanguageCode = PaymentAddress.languageCode;
+const paymentLanguageCode = PaymentAddress.languageCode;
 ```
 
 ### Value

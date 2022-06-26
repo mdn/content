@@ -23,7 +23,7 @@ provided by the constructor.
 ## Syntax
 
 ```js
-var shippingType = paymentRequest.shippingType
+const shippingType = paymentRequest.shippingType
 ```
 
 ### Value
