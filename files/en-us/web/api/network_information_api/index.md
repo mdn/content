@@ -37,7 +37,7 @@ let type = navigator.connection.effectiveType;
 
 function updateConnectionStatus() {
   console.log("Connection type changed from " + type + " to " + connection.effectiveType);
-  type = connection.effectiveType;
+  let type = connection.effectiveType;
 }
 
 connection.addEventListener('change', updateConnectionStatus);
