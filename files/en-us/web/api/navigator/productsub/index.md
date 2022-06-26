@@ -23,7 +23,6 @@ A string.
 ## Examples
 
 ```js
-<script>
 function prodsub() {
   const dt = document.getElementById("d").childNodes[0];
   dt.data = navigator.productSub;
