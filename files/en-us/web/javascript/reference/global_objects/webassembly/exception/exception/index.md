@@ -23,6 +23,7 @@ The `options.traceStack` property can be set true (by default it is `false`) to 
 ## Syntax
 
 ```js
+new Exception(tag, payload)
 new Exception(tag, payload, options)
 ```
 
@@ -34,7 +35,7 @@ new Exception(tag, payload, options)
   - : An array of one or more data fields comprising the payload of the exception.
     The elements must match the data types of the corresponding elements in the `tag`.
     If the number of data fields in the payload and their types don't match, a {{jsxref("TypeError")}} exception is thrown.
-- `options` {{optional_inline}}
+- `options` {{optional_inline}} {{non-standard_inline}}
   - : An object with the following optional fields:
 
     - `traceStack` {{optional_inline}}
