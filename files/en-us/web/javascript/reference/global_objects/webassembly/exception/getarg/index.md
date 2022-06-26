@@ -43,7 +43,7 @@ The value of the argument at `index`.
 - {{jsxref("TypeError")}}
   - : The tags don't match; the exception was not created with the tag passed to the method.
 - {{jsxref("RangeError")}}
-  - : The index exceeds the available elements; the value of the `index` parameter is greater than or equal to the number of fields in the data.
+  - : The value of the `index` parameter is greater than or equal to the number of fields in the data.
 
 ## Examples
 
@@ -53,7 +53,7 @@ it may be either imported into or exported from the calling code.
 ### Getting exception value from imported tag
 
 Consider the following WebAssembly code, which is assumed to be compiled to a file **example.wasm**.
-This imports a tag, which it refers to internally as `$tagname`, and exports a method `run1` that can be called by external code to throw an exception using the tag.
+This imports a tag, which it refers to internally as `$tagname`, and exports a method `run` that can be called by external code to throw an exception using the tag.
 
 ```wasm
 (module
@@ -66,8 +66,8 @@ This imports a tag, which it refers to internally as `$tagname`, and exports a m
     throw $tagname
   )
 
-  ;; Exported function "run1" that calls $throwException
-  (func (export "run1")
+  ;; Exported function "run" that calls $throwException
+  (func (export "run")
     i32.const 1
     call $throwException
   )
@@ -77,7 +77,7 @@ This imports a tag, which it refers to internally as `$tagname`, and exports a m
 The code below below calls [`WebAssembly.instantiateStreaming`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming) to import the "example.wasm" file, passing in an "import object" (`importObject`) that includes a new {{jsxref("WebAssembly.Tag")}} named `tagToImport`.
 The import object defines an object with properties that match the `import` statement in the WebAssembly code.
 
-Once the file is instantiated, the code calls the exported WebAssembly `run1()` method, which will immediately throw an exception.
+Once the file is instantiated, the code calls the exported WebAssembly `run()` method, which will immediately throw an exception.
 
 ```js
 const tagToImport = new WebAssembly.Tag({ parameters: ["i32"] });
@@ -91,7 +91,7 @@ const importObject = {
 
 WebAssembly.instantiateStreaming(fetch("example.wasm"), importObject)
   .then(obj => {
-    console.log(obj.instance.exports.run1());
+    console.log(obj.instance.exports.run());
   })
   .catch(e => {
     console.error(e);
@@ -122,7 +122,7 @@ Here is the same WebAssembly module, simply replacing the import with an export.
      throw $tagname
   )
 
-  (func (export "run1")
+  (func (export "run")
      i32.const 1
      call $throwException
   )
@@ -139,7 +139,7 @@ const obj = await WebAssembly.instantiateStreaming(fetch("example.wasm"));
 const tagExportedFromWasm = obj.instance.exports.exptag;
 
 try {
-  console.log(obj.instance.exports.run1());
+  console.log(obj.instance.exports.run());
 } catch(e) {
   console.error(e);
   // If the tag is correct, get the value
