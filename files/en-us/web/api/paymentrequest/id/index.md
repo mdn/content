@@ -51,9 +51,6 @@ const json = response.toJSON();
 console.log(json.requestId,response.requestId, request.id);
 ```
 
-## Syntax
-
-```js
 const id = paymentRequest.id
 ```
 
