@@ -45,7 +45,7 @@ If `separator` is an empty string (`""`), `str` is converted to an array of each
 
 > **Note:** `"".split("")` is therefore the only way to produce an empty array when a string is passed as `separator`.
 
-> **Warning:** When the empty string (`""`) is used as a separator, the string is **not** split by _user-perceived characters_ ([grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) or unicode characters (codepoints), but by UTF-16 codeunits. This destroys [surrogate pairs](https://unicode.org/faq/utf_bom.html#utf16-2). See ["How do you get a string to a character array in JavaScript?" on StackOverflow](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402).
+> **Warning:** When the empty string (`""`) is used as a separator, the string is **not** split by _user-perceived characters_ ([grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) or unicode characters (codepoints), but by UTF-16 codeunits. This destroys [surrogate pairs](https://unicode.org/faq/utf_bom.html#utf16-2). See ["How do you get a string to a character array in JavaScript?" on StackOverflow](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402#34717402).
 
 If `separator` is a regular expression with capturing groups, then each time `separator` matches, the captured groups (including any `undefined` results) are spliced into the output array. This behavior is specified by the regexp's [`Symbol.split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) method.
 
