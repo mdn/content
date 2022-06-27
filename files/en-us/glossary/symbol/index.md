@@ -64,7 +64,7 @@ alert(_Sym.description); // Sym
 
 ### Well-known symbols
 
-The {{jsxref("Symbol")}} class has constants for so-called _well-known symbols_. These symbols let you configure how JS treats an object, by using them as property keys.
+The {{jsxref("Symbol")}} [global or built-in] object has constants for so-called _well-known symbols_. These symbols let you configure how JS treats an object, by using them as property keys.
 
 Examples of well-known symbols are: {{jsxref("Symbol.iterator")}} for array-like objects, or {{jsxref("Symbol.search")}} for string objects.
 
