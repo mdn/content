@@ -38,7 +38,7 @@ function logConnectionType() {
      connectionType = navigator.connection.effectiveType;
 
     if ('downlinkMax' in navigator.connection) {
-     downlinkMax = navigator.connection.downlinkMax;
+      downlinkMax = navigator.connection.downlinkMax;
     }
   }
 
