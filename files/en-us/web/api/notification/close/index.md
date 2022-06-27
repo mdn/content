@@ -54,7 +54,7 @@ function spawnNotification(theBody, theIcon, theTitle) {
     icon: theIcon
   };
 
-  const n = new Notification(theTitle,options);
+  const n = new Notification(theTitle, options);
   document.addEventListener('visibilitychange', function() {
     if (document.visibilityState === 'visible') {
       // The tab has become visible so clear the now-stale Notification.
