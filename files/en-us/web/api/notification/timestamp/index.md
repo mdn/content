@@ -36,14 +36,14 @@ created, then the notification is fired using the `Notification()`
 constructor.
 
 ```js
-var dts = Math.floor(Date.now());
+const dts = Math.floor(Date.now());
 
-var options = {
+const options = {
   body: 'Do you like my body?',
   timestamp: dts
 }
 
-var n = new Notification('Test notification',options);
+const n = new Notification('Test notification',options);
 
 console.log(n.timestamp) // should log original timestamp
 ```
