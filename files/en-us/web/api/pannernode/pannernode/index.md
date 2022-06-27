@@ -83,14 +83,14 @@ new PannerNode(context, options)
 ## Examples
 
 ```js
-var ctx = new AudioContext();
+const ctx = new AudioContext();
 
-var options = {
+const options = {
   positionX : 1,
   maxDistance: 5000
 }
 
-var myPanner = new PannerNode(ctx, options);
+const myPanner = new PannerNode(ctx, options);
 ```
 
 ## Specifications
