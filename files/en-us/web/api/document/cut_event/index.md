@@ -10,7 +10,7 @@ tags:
   - Reference
   - Web
   - cut
-browser-compat: api.Document.cut_event
+browser-compat: api.Element.cut_event
 ---
 {{APIRef}}
 
