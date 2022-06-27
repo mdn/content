@@ -79,14 +79,14 @@ of each English track to the console.
 ```js
 const tracks = document.querySelector('video').textTracks;
 
-for (let i = 0, L = tracks.length; i < L; i++) { /* tracks.length == 10 */
+for (let i = 0; i < tracks.length; i++) { /* tracks.length == 10 */
    if (tracks[i].language == 'en') {
       console.dir(tracks[i]);
    }
 }
 ```
 
-{{EmbedLiveSample("Examples", "100%", 150)}}
+{{EmbedLiveSample("Examples", "100%", 155)}}
 
 ## Specifications
 
