@@ -21,7 +21,7 @@ browser-compat: api.GeolocationCoordinates.longitude
 The {{domxref("GeolocationCoordinates")}} interface's read-only **`longitude`** property is
 a double-precision floating point value which represents the longitude of a geographical position,
 specified in decimal degrees.
-Together with a timestamp (in milliseconds, excluding leap seconds, relative to 01 January, 1970 00:00:00 UTC)
+Together with a timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds,
 indicating a time of measurement,
 the `GeolocationCoordinates` object is part of the {{domxref("GeolocationPosition")}} interface,
 which is the object type returned by Geolocation API functions

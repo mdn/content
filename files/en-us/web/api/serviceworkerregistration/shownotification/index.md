@@ -96,7 +96,7 @@ showNotification(title, options)
       - : An ID for a given notification that allows you to find,
         replace, or remove the notification using a script if necessary.
     - `timestamp`
-      - : A timestamp (in milliseconds, excluding leap seconds, relative to 01 January, 1970 00:00:00 UTC)
+      - : A timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds,
         representing the time when the notification was created.
         It can be used to indicate the time at which a notification is actual.
         For example, this could be in the past when a notification

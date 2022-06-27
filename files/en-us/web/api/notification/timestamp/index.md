@@ -27,7 +27,7 @@ missed message could be set in the past.
 
 ## Value
 
-A number representing a timestamp (in milliseconds, excluding leap seconds, relative to 01 January, 1970 00:00:00 UTC).
+A number representing a timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds.
 
 ## Examples
 

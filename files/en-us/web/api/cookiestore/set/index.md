@@ -39,7 +39,7 @@ This method requires one of the following:
     - `value`
       - : A string with the value of the cookie.
     - `expires` {{Optional_Inline}}
-      - : A timestamp (in milliseconds, excluding leap seconds, relative to 01 January, 1970 00:00:00 UTC) containing the expiration date of the cookie.
+      - : A timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds, containing the expiration date of the cookie.
     - `domain` {{Optional_Inline}}
       - : A string containing the domain of the cookie.
     - `path` {{Optional_Inline}}

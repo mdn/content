@@ -17,7 +17,7 @@ The **`GeolocationPosition.timestamp`** read-only property represents the date a
 
 ## Value
 
-A number containing a timestamp, in milliseconds, excluding leap seconds, relative to 01 January, 1970 00:00:00 UTC).
+A number containing a timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds.
 
 ## Specifications
 
