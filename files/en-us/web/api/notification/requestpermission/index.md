@@ -68,7 +68,7 @@ function notifyMe() {
     Notification.requestPermission().then(function (permission) {
       // If the user accepts, let's create a notification
       if (permission === "granted") {
-        let notification = new Notification("Hi there!");
+        const notification = new Notification("Hi there!");
       }
     });
   }
