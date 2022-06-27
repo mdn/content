@@ -35,7 +35,7 @@ function logConnectionType() {
   let downlinkMax = 'not supported';
 
   if ('connection' in navigator) {
-     connectionType = navigator.connection.effectiveType;
+    connectionType = navigator.connection.effectiveType;
 
     if ('downlinkMax' in navigator.connection) {
       downlinkMax = navigator.connection.downlinkMax;
