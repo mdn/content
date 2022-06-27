@@ -432,7 +432,8 @@ function App() {
 }
 ```
 
-Change the signature of the `App` function so that it accepts `props` as a parameter, and delete the `subject` const. Just like any other function parameter, you can put `props` in a `console.log()` to print it to your browser's console. Go ahead and do that before the `return` statement, like so:
+Change the signature of the `App` function so that it accepts `props` as a parameter, and delete the `subject` const.
+Just like any other function parameter, you can put `props` in a `console.log()` to print it to your browser's console. Go ahead and do that before the `return` statement, like so:
 
 ```js
 function App(props) {
@@ -443,6 +444,7 @@ function App(props) {
 }
 ```
 
+With this change, {subject} becomes undefined, so comment out the line `Hello, {subject}!` for now.
 Save your file and check your browser's JavaScript console. You should see something like this logged:
 
 ```js
@@ -451,7 +453,7 @@ Object { subject: "Clarice" }
 
 The object property `subject` corresponds to the `subject` prop we added to our `<App />` component call, and the string `Clarice` corresponds to its value. Component props in React are always collected into objects in this fashion.
 
-Now that `subject` is one of our props, let's utilize it in `App.js`. Change the `subject` constant so that, instead of defining it as the string `React`, you are reading the value of `props.subject`. You can also delete your `console.log()` if you want.
+Now that `subject` is one of our props, let's utilize it in `App.js`. Change the `subject` constant so that, instead of defining it as the string `React`, you are reading the value of `props.subject`. Now, you can also uncomment the line `Hello, {subject}!` and, if you wish, delete your `console.log()`.
 
 ```js
 function App(props) {
@@ -463,6 +465,7 @@ function App(props) {
 ```
 
 When you save, the app should now greet you with "Hello, Clarice!". If you return to `index.js`, edit the value of `subject`, and save, your text will change.
+Note that if you wanted to leave in the `Hello` line throughout this change, you could also have updated the JSX variable to {props.subject}.
 
 ## Summary
 

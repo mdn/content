@@ -36,7 +36,7 @@ The items typically display inline with a separator to indicate a hierarchy betw
 > }
 > ```
 >
-> This solution uses a more complex selector, but requires less rules. Feel free to choose the solution that you prefer.
+> This solution uses a more complicated selector, but requires fewer rules. Feel free to choose the solution that you prefer.
 
 ## Choices made
 

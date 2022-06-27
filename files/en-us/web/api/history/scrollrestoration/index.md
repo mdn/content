@@ -29,7 +29,7 @@ One of the followings:
 
 ## Examples
 
-### Query the current scroll restoration behavior.
+### Query the current scroll restoration behavior
 
 ```js
 const scrollRestoration = history.scrollRestoration

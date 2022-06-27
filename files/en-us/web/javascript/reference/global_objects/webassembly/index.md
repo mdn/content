@@ -31,17 +31,17 @@ The primary uses for the `WebAssembly` object are:
 - [`WebAssembly.Global()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global)
   - : Represents a global variable instance, accessible from both JavaScript and importable/exportable across one or more {{jsxref("WebAssembly.Module")}} instances. This allows dynamic linking of multiple modules.
 - [`WebAssembly.Instance()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance)
-  - : Is a stateful, executable instance of a [WebAssembly.Module](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module)
+  - : Is a stateful, executable instance of a {{jsxref("WebAssembly.Module")}}
 - [`WebAssembly.LinkError()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError/LinkError)
   - : Indicates an error during module instantiation (besides [traps](https://webassembly.github.io/simd/core/intro/overview.html#trap) from the start function).
 - [`WebAssembly.Memory()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory)
-  - : An object whose {{jsxref("WebAssembly/Memory/buffer","buffer")}} property is a resizable [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) that holds the raw bytes of memory accessed by a WebAssembly `Instance`.
+  - : An object whose {{jsxref("WebAssembly/Memory/buffer","buffer")}} property is a resizable {{jsxref("ArrayBuffer")}} that holds the raw bytes of memory accessed by a WebAssembly `Instance`.
 - [`WebAssembly.Module()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/Module)
   - : Contains stateless WebAssembly code that has already been compiled by the browser and can be efficiently [shared with Workers](/en-US/docs/Web/API/Worker/postMessage), and instantiated multiple times.
 - [`WebAssembly.RuntimeError()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError/RuntimeError)
   - : Error type that is thrown whenever WebAssembly specifies a [trap](https://webassembly.github.io/spec/core/exec/index.html).
 - [`WebAssembly.Table()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table)
-  - : An array-like structure representing a WebAssembly Table, which stores function references.
+  - : An array-like structure representing a WebAssembly Table, which stores [references](https://webassembly.github.io/spec/core/syntax/types.html#syntax-reftype), such as function references.
 - [`WebAssembly.Tag()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag/Tag)
   - : An object that represents a type of WebAssembly exception.
 - [`WebAssembly.Exception()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/Exception)
@@ -73,7 +73,7 @@ WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
 .then(obj => obj.instance.exports.exported_func());
 ```
 
-The `ResultObject`'s instance member is then accessed, and the contained exported function invoked.
+The `ResultObject`'s `.instance` property is then accessed, and the contained exported function invoked.
 
 ## Specifications
 

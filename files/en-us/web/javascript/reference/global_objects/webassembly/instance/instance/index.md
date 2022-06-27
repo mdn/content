@@ -36,6 +36,15 @@ new WebAssembly.Instance(module, importObject)
     There must be one matching property for each declared import of `module` or
     else a {{jsxref("WebAssembly.LinkError")}} is thrown.
 
+#### Exceptions
+
+- If either of the parameters are not of the correct type or structure, a
+  {{jsxref("TypeError")}} is thrown.
+- If the operation fails, one of
+  {{jsxref("WebAssembly.CompileError")}}, {{jsxref("WebAssembly.LinkError")}}, or
+  {{jsxref("WebAssembly.RuntimeError")}} are thrown, depending on the cause of the failure.
+- Some browsers may throw a {{jsxref("RangeError")}}, as they prohibit compilation and instantiation of Wasm with large buffers on the UI thread.
+
 ## Examples
 
 ### Synchronously instantiating a WebAssembly module

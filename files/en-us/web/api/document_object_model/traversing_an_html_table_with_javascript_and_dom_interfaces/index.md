@@ -34,7 +34,7 @@ In this example we add a new table to the page when a button is clicked.
 
 ```js
 function generate_table() {
-  // creates a <table> element and a <tbody> element
+ // creates a <table> element and a <tbody> element
   const tbl = document.createElement("table");
   const tblBody = document.createElement("tbody");
 
@@ -279,20 +279,20 @@ The basic steps to create the table in sample1.html are:
 <script>
     function start() {
         // get the reference for the body
-        var mybody = document.getElementsByTagName("body")[0];
+        const mybody = document.getElementsByTagName("body")[0];
 
         // creates <table> and <tbody> elements
-        mytable = document.createElement("table");
-        mytablebody = document.createElement("tbody");
+        const mytable = document.createElement("table");
+        const mytablebody = document.createElement("tbody");
 
         // creating all cells
-        for(var j = 0; j < 3; j++) {
+        for(let j = 0; j < 3; j++) {
             // creates a <tr> element
-            mycurrent_row = document.createElement("tr");
+            const mycurrent_row = document.createElement("tr");
 
-            for(var i = 0; i < 4; i++) {
+            for(let i = 0; i < 4; i++) {
                 // creates a <td> element
-                mycurrent_cell = document.createElement("td");
+               const mycurrent_cell = document.createElement("td");
                 // creates a Text Node
                 currenttext = document.createTextNode("cell is row " + j + ", column " + i);
                 // appends the Text Node we created into the cell <td>
@@ -365,15 +365,15 @@ Once you have the object in your JavaScript variable, you can set `style` proper
 </body>
 <script>
     function start() {
-       var mybody = document.getElementsByTagName("body")[0];
-       mytable = document.createElement("table");
-       mytablebody = document.createElement("tbody");
+       const mybody = document.getElementsByTagName("body")[0];
+       const mytable = document.createElement("table");
+       const mytablebody = document.createElement("tbody");
 
-       for(var row = 0; row < 2; row++) {
+       for(let row = 0; row < 2; row++) {
            mycurrent_row=document.createElement("tr");
-           for(var col = 0; col < 2; col++) {
-               mycurrent_cell = document.createElement("td");
-               currenttext = document.createTextNode("cell is: " + row + col);
+           for(let col = 0; col < 2; col++) {
+               const mycurrent_cell = document.createElement("td");
+               const currenttext = document.createTextNode("cell is: " + row + col);
                mycurrent_cell.appendChild(currenttext);
                mycurrent_row.appendChild(mycurrent_cell);
                // set the cell background color

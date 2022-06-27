@@ -188,7 +188,7 @@ The result looks like this:
 ## See also
 
 - [ARIA: checkbox role](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
-- [`<input type="checkbox">`](en-US/docs/Web/HTML/Element/input/checkbox)
+- [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)
 - [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
 
 <section id="Quick_links">

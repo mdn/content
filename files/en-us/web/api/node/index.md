@@ -99,7 +99,7 @@ parent, {{DOMxRef("EventTarget")}}_.
 
 ## Methods
 
-_In addition to the properties below, `Node` inherits methods from its
+_In addition to the methods below, `Node` inherits methods from its
 parent, {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("Node.appendChild()")}}

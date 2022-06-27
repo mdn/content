@@ -19,7 +19,7 @@ The **`AesCbcParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/We
 - `name`
   - : A string. This should be set to `AES-CBC`.
 - `iv`
-  - : A {{domxref("BufferSource")}}. The initialization vector. Must be 16 bytes, unpredictable, and preferably cryptographically random. However, it need not be secret (for example, it may be transmitted unencrypted along with the ciphertext).
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}. The initialization vector. Must be 16 bytes, unpredictable, and preferably cryptographically random. However, it need not be secret (for example, it may be transmitted unencrypted along with the ciphertext).
 
 ## Examples
 

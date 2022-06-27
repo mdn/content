@@ -139,8 +139,6 @@ In general, assignments are used within a variable declaration (i.e., with [`con
 // The result of the x = f() assignment expression is discarded.
 let x = f();
 
-// Declares a variable x and initializes it to the result of g().
-// The result of the x = g() assignment expression is discarded.
 x = g(); // Reassigns the variable x to the result of g().
 ```
 
@@ -313,7 +311,7 @@ let z = y = x = f();
 
 This statement seemingly declares the variables `x`, `y`, and `z`.
 However, it only actually declares the variable `z`.
-`y` and `x` are either invalid references to nonexistent variables (in [strict mode][/en-US/docs/Web/JavaScript/Reference/Strict_mode]) or, worse, would implicitly create [global variables][/en-US/docs/Glossary/Global_variable] for `x` and `y` in [sloppy mode][/en-US/docs/Glossary/Sloppy_mode].
+`y` and `x` are either invalid references to nonexistent variables (in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)) or, worse, would implicitly create [global variables](/en-US/docs/Glossary/Global_variable) for `x` and `y` in [sloppy mode](/en-US/docs/Glossary/Sloppy_mode).
 
 ### Comparison operators
 
@@ -327,8 +325,8 @@ These operators do not attempt to convert the operands to compatible types befor
 The following table describes the comparison operators in terms of this sample code:
 
 ```js
-var var1 = 3;
-var var2 = 4;
+const var1 = 3;
+const var2 = 4;
 ```
 
 <table class="standard-table">
@@ -345,7 +343,7 @@ var var2 = 4;
   <tbody>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#equality">Equal</a> (<code>==</code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Equality">Equal</a> (<code>==</code>)
       </td>
       <td>Returns <code>true</code> if the operands are equal.</td>
       <td>
@@ -356,7 +354,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#inequality">Not equal</a> (<code>!=</code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Inequality">Not equal</a> (<code>!=</code>)
       </td>
       <td>Returns <code>true</code> if the operands are not equal.</td>
       <td>
@@ -365,7 +363,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#identity">Strict equal</a> (<code>===</code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality">Strict equal</a> (<code>===</code>)
       </td>
       <td>
         Returns <code>true</code> if the operands are equal and of the same
@@ -387,7 +385,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#greater_than_operator">Greater than</a> (<code>></code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than">Greater than</a> (<code>></code>)
       </td>
       <td>
         Returns <code>true</code> if the left operand is greater than the right operand.
@@ -398,7 +396,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#greater_than_or_equal_operator">Greater than or equal</a>
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal">Greater than or equal</a>
         (<code>>=</code>)
       </td>
       <td>
@@ -410,7 +408,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#less_than_operator">Less than</a>
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Less_than">Less than</a>
         (<code>&#x3C;</code>)
       </td>
       <td>
@@ -422,7 +420,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#less_than_or_equal_operator">Less than or equal</a>
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal">Less than or equal</a>
         (<code>&#x3C;=</code>)
       </td>
       <td>
@@ -760,7 +758,7 @@ The rules of logic guarantee that these evaluations are always correct. Note tha
 _anything_ part of the above expressions is not evaluated, so any side effects of
 doing so do not take effect.
 
-Note that for the second case, in modern code you can use the new [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) (`??`) that works like `||`, but it only returns the second expression, when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)
+Note that for the second case, in modern code you can use the new [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) (`??`) that works like `||`, but it only returns the second expression, when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
 or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined "The global undefined property represents the primitive value undefined.
 It is one of JavaScript's primitive types.").
 It is thus the better alternative to provide defaults, when values like `''` or `0` are valid values for the first expression, too.

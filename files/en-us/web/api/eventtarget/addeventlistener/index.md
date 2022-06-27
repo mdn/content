@@ -187,8 +187,11 @@ Then, when you want to create an actual event listener that uses the options in
 question, you can do something like this:
 
 ```js
-someElement.addEventListener("mouseup", handleMouseUp, passiveSupported
-                               ? { passive: true } : false);
+someElement.addEventListener(
+  "mouseup",
+  handleMouseUp,
+  passiveSupported ? { passive: true } : false
+);
 ```
 
 Here we're adding a listener for the {{domxref("Element/mouseup_event", "mouseup")}}

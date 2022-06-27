@@ -43,7 +43,7 @@ console.log(locale.caseFirst); // Prints "upper"
 
 ### Setting the caseFirst value via the configuration object argument
 
-The {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} constructor has an optional configuration object argument, which can be used to pass extension types. Set the `caseFirst` property of the configuration object to your desired `caseFirst` value, and then pass it into the constructor.
+The {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor has an optional configuration object argument, which can be used to pass extension types. Set the `caseFirst` property of the configuration object to your desired `caseFirst` value, and then pass it into the constructor.
 
 ```js
 let locale = new Intl.Locale("en-Latn-US", { caseFirst: "lower" });

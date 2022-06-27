@@ -62,8 +62,8 @@ p {
 
 ```js
 const range = document.createRange();
-range.setStartBefore(document.getElementsByTagName('b').item(0), 0);
-range.setEndAfter(document.getElementsByTagName('b').item(1), 0);
+range.setStartBefore(document.getElementsByTagName('b').item(0));
+range.setEndAfter(document.getElementsByTagName('b').item(1));
 
 const clientRect = range.getBoundingClientRect();
 const highlight = document.getElementById('highlight');

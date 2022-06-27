@@ -19,7 +19,7 @@ To start developing with Babylon.js, you don't need much. You should start off b
 
 - Making sure you are using a modern browser with good [WebGL](/en-US/docs/Web/API/WebGL_API) support, such as the latest Firefox or Chrome.
 - Creating a directory to store your experiments in.
-- Saving a copy of the [latest Babylon.js engine](https://cdn.babylonjs.com/2-3/babylon.js) inside your directory.
+- Saving a copy of the [latest Babylon.js engine](https://cdn.babylonjs.com/babylon.js) inside your directory.
 - Opening the [Babylon.js documentation](https://doc.babylonjs.com/) in a separate tab — it is useful to refer to.
 
 ## HTML structure
@@ -99,7 +99,7 @@ There are many [cameras](https://doc.babylonjs.com/divingDeeper/cameras) availab
 
 ## Let there be light
 
-There are various [light sources](https://doc.babylonjs.com/tutorials/Lights) available in Babylon.js. The most basic one is the `PointLight`, which works like a flashlight — shining a spotlight in a given direction. Add the following line below your camera definition:
+There are various [light sources](https://doc.babylonjs.com/divingDeeper/lights/lights_introduction#types-of-lights) available in Babylon.js. The most basic one is the `PointLight`, which works like a flashlight — shining a spotlight in a given direction. Add the following line below your camera definition:
 
 ```js
 var light = new BABYLON.PointLight("light", new BABYLON.Vector3(10, 10, 0), scene);
@@ -130,7 +130,7 @@ The box looks black at the moment, because we haven't defined any material to ap
 
 ## Material
 
-Material is that thing covering the object — the colors or texture on its surface. In our case we will use a simple blue color to paint our box. There are many types of [materials](https://doc.babylonjs.com/tutorials/Materials) that can be used, but for now the standard one should be enough for us. Add these lines below the previous ones:
+Material is that thing covering the object — the colors or texture on its surface. In our case we will use a simple blue color to paint our box. There are many types of [materials](https://doc.babylonjs.com/toolsAndResources/assetLibraries/materialsLibrary) that can be used, but for now the standard one should be enough for us. Add these lines below the previous ones:
 
 ```js
 var boxMaterial = new BABYLON.StandardMaterial("material", scene);

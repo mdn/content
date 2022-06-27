@@ -55,7 +55,6 @@ Page titles, on the other hand, may be as long as you like, within reason, and t
 
 When you need to add some articles about a topic or subject area, you will typically do so by creating a landing page, then adding subpages for each of the individual articles.
 The landing page should open with a paragraph or two describing the topic or technology, then provide a list of the subpages with descriptions of each page.
-You can automate the insertion of pages into the list using some macros we've created.
 
 For example, consider the [JavaScript](/en-US/docs/Web/JavaScript) guide, which is structured as follows:
 
@@ -226,17 +225,6 @@ We have created a short numbered list that provides instructive steps to produce
 
 Note how the items in numbered lists read like short paragraphs.
 Because numbered lists are routinely used for instructional purposes, or to walk someone through an orderly procedure, be sure to keep each item focused: one numbered item per step.
-
-### Text formatting and styles
-
-Use the **"Formatting Styles"** drop-down list to apply predefined styles to selected content.
-
-> **Note:** The **"Note Box"** style is used to call out important notes, like this one.
-
-> **Warning:** Similarly, the **"Warning Box"** style creates warning boxes like this.
-
-Unless specifically instructed, _do not_ use the HTML `style` attribute to manually apply a style.
-If you can't do it using a predefined class, ask for help in the [MDN discussion forum](https://discourse.mozilla.org/c/mdn/236).
 
 ### Code sample style and formatting
 

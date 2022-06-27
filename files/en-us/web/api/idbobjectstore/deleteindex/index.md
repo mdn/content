@@ -60,10 +60,10 @@ For a full working example, see our
 [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
-var db;
+let db;
 
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being opened successfully, or not
 DBOpenRequest.onerror = function(event) {
@@ -85,14 +85,14 @@ DBOpenRequest.onsuccess = function(event) {
 // window.indexedDB.open line above
 //it is only implemented in recent browsers
 DBOpenRequest.onupgradeneeded = function(event) {
-  var db = this.result;
+  let db = this.result;
 
   db.onerror = function(event) {
     note.innerHTML += '<li>Error loading database.</li>';
   };
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  const objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
 
   // define what data items the objectStore will contain
 

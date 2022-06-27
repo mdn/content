@@ -156,9 +156,7 @@ customElements.define('popup-info', PopUpInfo);
 ```
 
 ```html
-<popup-info img="img/alt.png" text="Your card validation code (CVC) is an extra
-                                    security feature — it is the last 3 or 4
-                                    numbers on the back of your card.">
+<popup-info img="img/alt.png" data-text="Your card validation code (CVC) is an extra security feature — it is the last 3 or 4 numbers on the back of your card.">
 ```
 
 > **Note:** Constructors for autonomous custom elements must extend
@@ -214,7 +212,7 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 ### Creating an element which disables the ability to attach a shadow root
 
-If the class used for the element contains the static property `disabledFeatures` returning the string \`shadow\` this will cause {{domxref("Element.attachShadow()")}} to return a {{domxref("DOMException")}} `NotSupportedError`.
+If the class used for the element contains the static property `disabledFeatures` returning the string \`shadow\` this will cause {{domxref("Element.attachShadow()")}} to return a `NotSupportedError` {{domxref("DOMException")}}.
 
 ```js
 class PopUpInfo extends HTMLElement {

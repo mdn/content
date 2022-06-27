@@ -45,10 +45,10 @@ A generic {{domxref("Event")}}.
   mediaRecorder.onstop = function(e) {
     console.log("data available after MediaRecorder.stop() called.");
 
-    var audio = document.createElement('audio');
+    const audio = document.createElement('audio');
     audio.controls = true;
-    var blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
-    var audioURL = window.URL.createObjectURL(blob);
+    const blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
+    const audioURL = window.URL.createObjectURL(blob);
     audio.src = audioURL;
     console.log("recorder stopped");
   }

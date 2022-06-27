@@ -32,7 +32,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 
 <!---->
 
-- [Transform support for canvas](/en-US/docs/Canvas_tutorial/Transformations#Transforms)
+- [Transform support for canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations#transforms)
   - : Firefox now supports the `transform()` and `setTransform()` methods on canvases.
 
 <!---->
@@ -104,7 +104,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 
 <!---->
 
-- [Securing updates](/en-US/docs/Extension_Versioning,_Update_and_Compatibility#Securing_Updates)
+- [Securing updates](/en-US/docs/Extension_Versioning,_Update_and_Compatibility#securing_updates)
   - : In order to provide a more secure add-on upgrade path for users, add-ons are now required to provide a secure method for obtaining updates before they can be installed. Add-ons hosted at [AMO](https://addons.mozilla.org) automatically provide this. Any add-ons installed that do not provide a secure update method when the user upgrades to Firefox 3 will be automatically disabled. Firefox will however continue to check for updates to the extension over the insecure path and attempt to install any update offered (installation will fail if the update also fails to provide a secure update method).
 
 <!---->

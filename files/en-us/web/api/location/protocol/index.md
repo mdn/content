@@ -23,8 +23,8 @@ A string.
 
 ```js
 // Let's an <a id="myAnchor" href="https://developer.mozilla.org/en-US/Location.protocol"> element be in the document
-var anchor = document.getElementById("myAnchor");
-var result = anchor.protocol; // Returns:'https:'
+const anchor = document.getElementById("myAnchor");
+const result = anchor.protocol; // Returns:'https:'
 ```
 
 ## Specifications

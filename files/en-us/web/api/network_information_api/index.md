@@ -8,7 +8,9 @@ tags:
   - Network Information API
   - Reference
   - WebAPI
-browser-compat: api.NetworkInformation
+browser-compat:
+  - api.NetworkInformation
+  - api.Navigator.connection
 ---
 {{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
 
@@ -31,12 +33,11 @@ The interface consists of a single {{domxref("NetworkInformation")}} object, an 
 This example watches for changes to the user's connection.
 
 ```js
-var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-var type = connection.effectiveType;
+let type = navigator.connection.effectiveType;
 
 function updateConnectionStatus() {
   console.log("Connection type changed from " + type + " to " + connection.effectiveType);
-  type = connection.effectiveType;
+  type = navigation.connection.effectiveType;
 }
 
 connection.addEventListener('change', updateConnectionStatus);
@@ -60,17 +61,9 @@ if (connection) {
 
 {{Specifications}}
 
-{{Specifications("api.Navigator.connection")}}
-
 ## Browser compatibility
 
-### NetworkInformation
-
 {{Compat}}
-
-### Navigator.connection
-
-{{Compat("api.Navigator.connection")}}
 
 ## See also
 
