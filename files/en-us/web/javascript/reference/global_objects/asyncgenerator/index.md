@@ -90,4 +90,4 @@ main()
 - {{jsxref("Operators/function*", '<code>function*</code> expression', "", 1)}}
 - {{jsxref("GeneratorFunction", "Generator Function", "", 1)}}
 - {{jsxref("AsyncGeneratorFunction", "Async Generator Function", "", 1)}}
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
