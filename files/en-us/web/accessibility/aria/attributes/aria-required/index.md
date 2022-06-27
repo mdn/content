@@ -36,7 +36,7 @@ The attribute should be added to the form-control role. If the user needs to fil
 <div id="tbLabel">Email Address *</>
 <div role="textbox" contenteditable aria-labelledby="tblabel" aria-required="true" id="email1"></div>
 ```
-> **Note:** A `required` attribute is unnecessary if a field already includes it in the label. Doing so results in screen readers reading the term `required` twice. 
+ > **Note:** If the field's label already contains the word “required”, it is recommended to leave out the `aria-required` attribute. This avoids that screenreaders read out the term “required” twice. 
 
 In this example, JavaScript must be used to prevent the containing form from being submitted if the textbox has no content.
 
