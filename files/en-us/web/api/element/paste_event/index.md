@@ -73,7 +73,6 @@ target.addEventListener('paste', (event) => {
 
     let paste = (event.clipboardData || window.clipboardData).getData('text');
     paste = paste.toUpperCase();
-        
     const selection = window.getSelection();
     if (!selection.rangeCount) return;
     selection.deleteFromDocument();
