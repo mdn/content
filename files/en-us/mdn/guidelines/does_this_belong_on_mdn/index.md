@@ -63,12 +63,12 @@ While MDN Web Docs contains a large quantity of Mozilla product documentation, t
 
   - [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
   - [Add-ons](/en-US/docs/Mozilla/Add-ons)
-  - [Building and configuring Firefox](/en-US/docs/Mozilla/Developer_guide/Build_Instructions)
+  - [Building and configuring Firefox](https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html)
   - etc.
 
 - [The Mozilla platform](/en-US/docs/Mozilla)
 
-  - [Gecko](/en-US/docs/Mozilla/Gecko)
+  - [Gecko](/en-US/docs/Glossary/Gecko)
   - [SpiderMonkey](https://firefox-source-docs.mozilla.org/js/)
   - etc.
 
