@@ -49,7 +49,7 @@ asyncGen.next()
 
 ### Async generator iteration
 
-The following example iterates over an async generator logging values 1 - 6 to the console, at decreasing time intervals.
+The following example iterates over an async generator, logging values 1–6 to the console at decreasing time intervals.
 
 ```js
 function waitFor(time, value) {
