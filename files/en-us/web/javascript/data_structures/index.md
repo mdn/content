@@ -58,7 +58,7 @@ ECMAScript has two built-in numeric types: [Number](#number-type) and [BigInt](#
 
 #### Number type
 
-The Number type is a [double-precision 64-bit binary format IEEE 754 value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format). It is capable of storing positive floating-point numbers between 2^-1074 ({{jsxref("Number.MIN_VALUE")}}) and 2^1024 ({{jsxref("Number.MAX_VALUE")}}) as well as negative floating-point numbers between -(2^-1074) and -(2^1024). But it can only safely store integers in the range -(2^53 − 1) ({{jsxref("Number.MIN_SAFE_INTEGER")}}) to 2^53 − 1 ({{jsxref("Number.MAX_SAFE_INTEGER")}}).
+The Number type is a [double-precision 64-bit binary format IEEE 754 value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format). It is capable of storing positive floating-point numbers between 2^-1074 ({{jsxref("Number.MIN_VALUE")}}) and 2^1024 ({{jsxref("Number.MAX_VALUE")}}) as well as negative floating-point numbers between -(2^-1074) and -(2^1024), but it can only safely store integers in the range -(2^53 − 1) ({{jsxref("Number.MIN_SAFE_INTEGER")}}) to 2^53 − 1 ({{jsxref("Number.MAX_SAFE_INTEGER")}}).
 
 > **Note:** You can check if a number is within the range of safe integers using {{jsxref("Number.isSafeInteger()")}}. Outside the range from {{jsxref("Number.MIN_SAFE_INTEGER")}} to {{jsxref("Number.MAX_SAFE_INTEGER")}}, JavaScript can no longer safely represent integers; they will instead be represented by a double-precision floating point approximation.
 
