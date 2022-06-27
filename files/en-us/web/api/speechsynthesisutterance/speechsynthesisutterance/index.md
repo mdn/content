@@ -38,7 +38,7 @@ const inputForm = document.querySelector('form');
 const inputTxt = document.querySelector('input');
 const voiceSelect = document.querySelector('select');
 
-let voices = synth.getVoices();
+const voices = synth.getVoices();
 
   ...
 
