@@ -23,12 +23,10 @@ A string.
 ## Examples
 
 ```js
-function prodsub() {
-  const dt = document.getElementById("d").childNodes[0];
-  dt.data = navigator.productSub;
-}
-console.log(prodsub()); // Returns: 20010725
+document.body.textContent = `productSub: ${navigator.productSub}`;
 ```
+
+{{ EmbedLiveSample("Examples") }}
 
 ## Notes
 
