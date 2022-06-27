@@ -32,21 +32,21 @@ new SpeechSynthesisUtterance(text)
 The following snippet is excerpted from our [Speech synthesizer demo](https://github.com/mdn/dom-examples/tree/master/web-speech-api/speak-easy-synthesis).
 
 ```js
-var synth = window.speechSynthesis;
+let synth = window.speechSynthesis;
 
-var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('input');
-var voiceSelect = document.querySelector('select');
+const inputForm = document.querySelector('form');
+const inputTxt = document.querySelector('input');
+const voiceSelect = document.querySelector('select');
 
-var voices = synth.getVoices();
+let voices = synth.getVoices();
 
   ...
 
 inputForm.onsubmit = function(event) {
   event.preventDefault();
 
-  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+  let utterThis = new SpeechSynthesisUtterance(inputTxt.value);
+  let selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
   for(i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
