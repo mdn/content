@@ -73,7 +73,7 @@ target.addEventListener('paste', (event) => {
     paste = paste.toUpperCase();
 
     const selection = window.getSelection();
-    if (!selection.rangeCount) return false;
+    if (!selection.rangeCount) return;
     selection.deleteFromDocument();
     selection.getRangeAt(0).insertNode(document.createTextNode(paste));
 
