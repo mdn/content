@@ -38,7 +38,7 @@ Let's consider a few use cases for the Page Visibility API.
 
 Developers have historically used imperfect proxies to detect this. For example, watching for {{event("blur")}} and {{event("focus")}} events on the window helps you know when your page is not the active page, but it does not tell you that your page is actually hidden to the user. The Page Visibility API addresses this.
 
-> **Note:** While {{domxref("GlobalEventHandlers.onblur", "onblur")}} and {{domxref("GlobalEventHandlers.onfocus", "onfocus")}} will tell you if the user switches windows, it doesn't necessarily mean it's hidden. Pages only become hidden when the user switches tabs or minimizes the browser window containing the tab.
+> **Note:** While {{domxref("Window.blur_event", "onblur")}} and {{domxref("Window.focus_event", "onfocus")}} will tell you if the user switches windows, it doesn't necessarily mean it's hidden. Pages only become hidden when the user switches tabs or minimizes the browser window containing the tab.
 
 ### Policies in place to aid background page performance
 
@@ -68,7 +68,8 @@ The example, which pauses the video when you switch to another tab and plays aga
 
 ```js
 // Set the name of the hidden property and the change event for visibility
-var hidden, visibilityChange;
+let hidden;
+let visibilityChange;
 if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
   hidden = "hidden";
   visibilityChange = "visibilitychange";
@@ -80,7 +81,7 @@ if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and 
   visibilityChange = "webkitvisibilitychange";
 }
 
-var videoElement = document.getElementById("videoElement");
+const videoElement = document.getElementById("videoElement");
 
 // If the page is hidden, pause the video;
 // if the page is shown, play the video

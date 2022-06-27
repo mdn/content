@@ -66,7 +66,7 @@ document.querySelector('#log').appendChild(log)
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

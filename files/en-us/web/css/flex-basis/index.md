@@ -15,7 +15,7 @@ The **`flex-basis`** [CSS](/en-US/docs/Web/CSS) property sets the initial main s
 
 {{EmbedInteractiveExample("pages/css/flex-basis.html")}}
 
-In this example the {{cssxref("flex-grow")}} and {{cssxref("flex-shrink")}} properties are both set to `1` on all three items, indicating that the flex item can grow and shrink from the initial `flex-basis`.
+In this example, the {{cssxref("flex-grow")}} and {{cssxref("flex-shrink")}} properties are both set to `1` on all three items, indicating that the flex item can grow and shrink from the initial `flex-basis`.
 
 The demo then changes the `flex-basis` on the first item. It will then grow and shrink from that flex-basis. This means that, for example, when the `flex-basis` of the first item is `200px`, it will start out at 200px but then shrink to fit the space available with the other items being at least `min-content` sized.
 
@@ -23,7 +23,7 @@ The image below shows how the Firefox [Flexbox Inspector](https://firefox-source
 
 ![The Firefox Flexbox Inspector showing the size of the item once it has shrunk.](firefox-flex-basis.png)
 
-> **Note:** in case both `flex-basis` (other than `auto`) and `width` (or `height` in case of `flex-direction: column`) are set for an element, `flex-basis` has priority.
+> **Note:** In case both `flex-basis` (other than `auto`) and `width` (or `height` in case of `flex-direction: column`) are set for an element, `flex-basis` has priority.
 
 ## Syntax
 
@@ -34,7 +34,6 @@ flex-basis: 3px;
 flex-basis: auto;
 
 /* Intrinsic sizing keywords */
-flex-basis: fill;
 flex-basis: max-content;
 flex-basis: min-content;
 flex-basis: fit-content;
@@ -166,14 +165,6 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 
 .flex5:after {
   content: 'content';
-}
-
-.flex6 {
-  flex-basis: fill;
-}
-
-.flex6:after {
-  content: 'fill';
 }
 ```
 

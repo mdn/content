@@ -56,7 +56,7 @@ allowDrinksCheckbox.addEventListener("change", function(event) {
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

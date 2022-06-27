@@ -61,7 +61,7 @@ filepicker.addEventListener('change', (event) => {
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ### Dynamically created files
 

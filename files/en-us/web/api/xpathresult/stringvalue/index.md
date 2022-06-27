@@ -52,7 +52,7 @@ document.querySelector("output").textContent = result.stringValue;
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples', 400, 70)}}
 
 ## Specifications
 

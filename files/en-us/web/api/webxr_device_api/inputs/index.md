@@ -311,7 +311,7 @@ Generally speaking, the `selectstart` and `selectend` events tell you when you m
 
 The `select` event, on the other hand, is the event that tells your code that the user has completed the action they want to complete. This might be as simple as throwing an object or pulling the trigger of a gun in a game, or as involved as placing an object that they were dragging around the world back down again in a new location.
 
-If your primary action is a simple trigger action and you don't need to animate anything while the trigger is engaged, you can ignore the `selectstart` and `selectend` events and act on the `start` event.
+If your primary action is a simple trigger action and you don't need to animate anything while the trigger is engaged, you can ignore the `selectstart` and `selectend` events and act on the `select` event.
 
 ```js
 xrSession.addEventListener("select", event => {
