@@ -49,10 +49,10 @@ The connection object is useful for deciding whether to preload resources that t
 
 ```js
 let preloadVideo = true;
-var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 if (connection) {
   if (connection.effectiveType === 'slow-2g') {
-    preloadVideo = false;
+      preloadVideo = false;
   }
 }
 ```
