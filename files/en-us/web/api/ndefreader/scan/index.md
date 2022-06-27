@@ -26,8 +26,7 @@ scan(options)
   - : An object with the following properties:
 
     - `signal`
-      - : An {{DOMxRef("AbortSignal")}} that allows cancelling.
-      this `scan()` operation.
+      - : An {{DOMxRef("AbortSignal")}} that allows cancelling this `scan()` operation.
 
 ### Return value
 
