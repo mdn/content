@@ -82,4 +82,4 @@ Here are some examples of types of documents that should _not_ be placed on MDN:
 - Design documents
 - Project proposals
 - Specifications or standards
-- Promotional material, advertising, or [personal information](#about_your_profile)
+- Promotional material, advertising, or personal information
