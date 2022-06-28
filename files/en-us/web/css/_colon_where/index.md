@@ -86,7 +86,7 @@ Take the following HTML:
 <article>
   <h2>:where()-styled links</h2>
   <section class="where-styling">
-    <p>Here is my main content. This <a href="https://mozilla.org">contains a link</a></p>.
+    <p>Here is my main content. This <a href="https://mozilla.org">contains a link</a>.</p>
   </section>
 
   <aside class="where-styling">
