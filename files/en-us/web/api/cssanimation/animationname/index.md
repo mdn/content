@@ -1,6 +1,7 @@
 ---
-title: CSSAnimation
+title: CSSAnimation.animationName
 slug: Web/API/CSSAnimation/animationName
+page-type: web-api-instance-property
 tags:
   - API
   - Animation
@@ -18,7 +19,7 @@ element.
 
 ## Value
 
-A {{domxref("CSSOMString")}}.
+A string.
 
 ## Examples
 

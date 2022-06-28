@@ -1,6 +1,7 @@
 ---
 title: SVGTextPositioningElement
 slug: Web/API/SVGTextPositioningElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

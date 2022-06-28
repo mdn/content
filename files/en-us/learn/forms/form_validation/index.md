@@ -667,10 +667,10 @@ To validate a form, ask yourself a few questions:
     You should offer up-front suggestions so they know what's expected, as well as clear error messages.
     If you want to dig into form validation UI requirements, here are some useful articles you should read:
 
-    - SmashingMagazine: [Form-Field Validation: The Errors-Only Approach](https://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/)
-    - SmashingMagazine: [Web Form Validation: Best Practices and Tutorials](https://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/)
+    - SmashingMagazine: [Form-Field Validation: The Errors-Only Approach](https://www.smashingmagazine.com/2012/06/form-field-validation-errors-only-approach/)
+    - SmashingMagazine: [Web Form Validation: Best Practices and Tutorials](https://www.smashingmagazine.com/2009/07/web-form-validation-best-practices-and-tutorials/)
     - WebFX: [10 Tips for Optimizing Web Form Submission Usability](https://www.webfx.com/blog/web-design/10-tips-for-optimizing-web-form-submission-usability/)
-    - A List Apart: [Inline Validation in Web Forms](https://www.alistapart.com/articles/inline-validation-in-web-forms/)
+    - A List Apart: [Inline Validation in Web Forms](https://alistapart.com/article/inline-validation-in-web-forms/)
 
 #### An example that doesn't use the constraint validation API
 
@@ -772,7 +772,7 @@ const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z
 function addEvent(element, event, callback) {
   let previousEventCallBack = element["on"+event];
   element["on"+event] = function (e) {
-    const output = callback(e);
+    let output = callback(e);
 
     // A callback that returns `false` stops the callback chain
     // and interrupts the execution of the event callback.
@@ -782,8 +782,8 @@ function addEvent(element, event, callback) {
       output = previousEventCallBack(e);
       if(output === false) return false;
     }
-  }
-};
+  };
+}
 
 // Now we can rebuild our validation constraint
 // Because we do not rely on CSS pseudo-class, we have to

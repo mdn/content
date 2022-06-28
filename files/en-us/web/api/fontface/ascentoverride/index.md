@@ -1,6 +1,7 @@
 ---
 title: FontFace.ascentOverride
 slug: Web/API/FontFace/ascentOverride
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`ascentOverride`** property of the {{domxref("FontFace")}} interface retur
 
 ## Value
 
-A {{domxref("CSSOMString","string")}}.
+A string.
 
 ## Examples
 

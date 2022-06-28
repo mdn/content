@@ -1,6 +1,7 @@
 ---
 title: SerialPort.open()
 slug: Web/API/SerialPort/open
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,12 +17,12 @@ The **`open()`** method of the {{domxref("SerialPort")}} interface returns a {{j
 ## Syntax
 
 ```js
-var promise = SerialPort.open(options);
+open(options)
 ```
 
 ### Parameters
 
-- _`options`_
+- `options`
 
   - : An object with any of the following values:
 

@@ -1,6 +1,7 @@
 ---
 title: Keyboard.unlock()
 slug: Web/API/Keyboard/unlock
+page-type: web-api-instance-method
 tags:
   - API
   - Keyboard API
@@ -20,7 +21,7 @@ The **`unlock()`** method of the
 ## Syntax
 
 ```js
-navigator.keyboard.unlock()
+unlock()
 ```
 
 ### Parameters
@@ -29,7 +30,7 @@ None.
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

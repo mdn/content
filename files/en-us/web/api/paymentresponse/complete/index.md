@@ -1,6 +1,7 @@
 ---
 title: PaymentResponse.complete()
 slug: Web/API/PaymentResponse/complete
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -27,14 +28,15 @@ the payment request and the {{jsxref("Promise")}} returned by the
 ## Syntax
 
 ```js
-completePromise = paymentRequest.complete(result);
+complete()
+complete(result)
 ```
 
 ### Parameters
 
 - `result` {{optional_inline}}
 
-  - : A {{domxref("DOMString")}} indicating the state of the payment operation upon
+  - : A string indicating the state of the payment operation upon
     completion. It must be one of the following:
 
     - `success`
@@ -77,15 +79,15 @@ calls `complete()` with an answer appropriate to the status in the response.
 ```js
 // Initialization of PaymentRequest arguments are excerpted for the
 //   sake of brevity.
-var payment = new PaymentRequest(supportedInstruments, details, options);
+const payment = new PaymentRequest(supportedInstruments, details, options);
 
 payment.show().then(function(paymentResponse) {
-  var fetchOptions = {
+  const fetchOptions = {
     method: 'POST',
     credentials: include,
     body: JSON.stringify(paymentResponse)
   };
-  var serverPaymentRequest = new Request('secure/payment/endpoint');
+  const serverPaymentRequest = new Request('secure/payment/endpoint');
   fetch(serverPaymentRequest, fetchOptions).then( response => {
     if (response.status < 400) {
       paymentResponse.complete("success");

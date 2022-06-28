@@ -1,6 +1,7 @@
 ---
 title: VideoTrackList.length
 slug: Web/API/VideoTrackList/length
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -31,7 +32,7 @@ A number indicating how many video tracks are included in the
 `VideoTrackList`. Each track can be accessed by treating the
 `VideoTrackList` as an array of objects of type {{domxref("VideoTrack")}}.
 
-## Example
+## Examples
 
 This snippet gets the number of video tracks in the first {{HTMLElement("video")}}
 element found in the {{Glossary("DOM")}} by {{domxref("Document.querySelector",

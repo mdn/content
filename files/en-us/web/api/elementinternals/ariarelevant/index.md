@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaRelevant
 slug: Web/API/ElementInternals/ariaRelevant
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -19,7 +20,7 @@ The **`ariaRelevant`** property of the {{domxref("ElementInternals")}} interface
 
 ## Value
 
-A {{domxref("DOMString")}} containing one or more of the following values, space separated:
+A string containing one or more of the following values, space separated:
 
 - "additions"
   - : Additions of Element Nodes within the live region should be considered relevant.

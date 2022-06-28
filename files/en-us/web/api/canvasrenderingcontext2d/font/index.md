@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.font
 slug: Web/API/CanvasRenderingContext2D/font
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -19,7 +20,7 @@ specifier.
 
 ## Value
 
-A {{domxref("DOMString")}} parsed as CSS {{cssxref("font")}} value. The default font is 10px sans-serif.
+A string parsed as CSS {{cssxref("font")}} value. The default font is 10px sans-serif.
 
 ## Examples
 

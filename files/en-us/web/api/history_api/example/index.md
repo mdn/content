@@ -1,6 +1,7 @@
 ---
 title: Ajax navigation example
 slug: Web/API/History_API/Example
+page-type: guide
 ---
 This is an example of an AJAX website composed only of three pages (_first_page.php_, _second_page.php_ and _third_page.php_). To see how it works, please create the following files (or git clone [https://github.com/giabao/mdn-ajax-nav-example.git](https://github.com/giabao/mdn-ajax-nav-example) ):
 
@@ -107,7 +108,7 @@ This is an example of an AJAX website composed only of three pages (_first_page.
 ```php
 <?php
     $page_title = "Third page";
-    $page_content = "<p>This is the content of <strong>third_page.php</strong>. This content is stored into a php variable.</p>";
+    $page_content = "<p>This is the content of <strong>third_page.php</strong>. This content is stored into a PHP variable.</p>";
 
     if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
         echo json_encode(array("page" => $page_title, "content" => $page_content));
@@ -167,7 +168,7 @@ This is an example of an AJAX website composed only of three pages (_first_page.
 **include/after_content.php**:
 
 ```php
-<p>This is the footer. It is shared between all ajax pages.</p>
+<p>This is the footer. It is shared between all Ajax pages.</p>
 ```
 
 **include/before_content.php**:
@@ -212,7 +213,7 @@ const ajaxRequest = new (function () {
     }
 
     function ajaxLoad () {
-        var vMsg, nStatus = this.status;
+        const vMsg, nStatus = this.status;
         switch (nStatus) {
             case 200:
                 vMsg = JSON.parse(this.responseText);
@@ -293,7 +294,7 @@ const ajaxRequest = new (function () {
     function init () {
         oPageInfo.title = document.title;
         history.replaceState(oPageInfo, oPageInfo.title, oPageInfo.url);
-        for (var oLink, nIdx = 0, nLen = document.links.length; nIdx < nLen; document.links[nIdx++].onclick = processLink);
+        for (let oLink, nIdx = 0, nLen = document.links.length; nIdx < nLen; document.links[nIdx++].onclick = processLink);
     }
 
     const
@@ -372,7 +373,7 @@ const ajaxRequest = new (function () {
             511: "Network Authentication Required"
         };
 
-    var
+    const
 
         oReq, bIsLoading = false, bUpdateURL = false;
 
@@ -405,4 +406,4 @@ For more information, please see: [Working with the History API](/en-US/docs/Web
 ## See also
 
 - {{ domxref("window.history") }}
-- {{ domxref("WindowEventHandlers.onpopstate") }}
+- {{domxref("Window/popstate_event", "popstate")}} event

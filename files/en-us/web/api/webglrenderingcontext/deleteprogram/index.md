@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.deleteProgram()
 slug: Web/API/WebGLRenderingContext/deleteProgram
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -19,7 +20,7 @@ been deleted.
 ## Syntax
 
 ```js
-void gl.deleteProgram(program);
+deleteProgram(program)
 ```
 
 ### Parameters
@@ -29,7 +30,7 @@ void gl.deleteProgram(program);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

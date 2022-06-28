@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisVoice.name
 slug: Web/API/SpeechSynthesisVoice/name
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -20,7 +21,7 @@ represents the voice.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the name of the voice.
+A string representing the name of the voice.
 
 ## Examples
 

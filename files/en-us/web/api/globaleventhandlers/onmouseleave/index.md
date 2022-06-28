@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onmouseleave
 slug: Web/API/GlobalEventHandlers/onmouseleave
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -39,4 +40,4 @@ specifying the handler for the event.
 ## See also
 
 - {{event("mouseleave")}}
-- [DOM event handlers](/en-US/docs/Web/Guide/Events/Event_handlers)
+- [DOM event handlers](/en-US/docs/Web/Events/Event_handlers)

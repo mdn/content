@@ -1,6 +1,7 @@
 ---
 title: RTCRtpSender.setParameters()
 slug: Web/API/RTCRtpSender/setParameters
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -33,7 +34,7 @@ connection.
 ## Syntax
 
 ```js
-var promise = rtcRtpSender.setParameters(parameters)
+setParameters(parameters)
 ```
 
 ### Parameters
@@ -51,9 +52,9 @@ var promise = rtcRtpSender.setParameters(parameters)
     - `transactionId`
       - : A string containing a unique ID for the last set of parameters applied; this value is used to ensure that {{domxref("RTCRtpSender.setParameters", "setParameters()")}} can only be called to alter changes made by a specific previous call to {{domxref("RTCRtpSender.getParameters", "getParameters()")}}. Once this parameter is initially set, it cannot be changed.
     - `degradationPreference` {{deprecated_inline}}
-      - : Specifies the preferred way the WebRTC layer should handle optimizing bandwidth against quality in constrained-bandwidth situations; the value comes from the {{domxref("RTCDegradationPreference")}} enumerated string type, and the default is `balanced`.
+      - : Specifies the preferred way the WebRTC layer should handle optimizing bandwidth against quality in constrained-bandwidth situations; the possible values are `maintain-framerate`, `maintain-resolution`, or `balanced`. The default value is `balanced`.
     - `priority` {{deprecated_inline}}
-      - : A string from the {{domxref("RTCPriorityType")}} enumerated type which indicates the encoding's priority. The default value is `low`.
+      - : A string that indicates the encoding's priority. It is one of: `very-low`, `low`, `medium`, or `high`. The default value is `low`.
 
 ### Return value
 
@@ -80,16 +81,10 @@ from the list below.
     has no parameters to set.
 - `OperationError` {{domxref("DOMException")}}
   - : Returned if an error occurs that does not match the ones specified here.
-- `RangeError` {{domxref("DOMException")}}
-  - : Returned if the value specified for {{domxref("RTCRtpSendParameters.scaleResolutionDownBy",
-    "scaleResolutionDownBy")}} is less than 1.0, which would result in scaling up rather
-    than down, which is not allowed; or one or more of the specified encodings'
-    {{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}} values is less
-    than 0.0.
+- {{jsxref("RangeError")}}
+  - : Returned if the value specified for {{domxref("RTCRtpSendParameters.scaleResolutionDownBy", "scaleResolutionDownBy")}} is less than 1.0 — which would result in scaling up rather than down, which is not allowed; or if one or more of the specified `encodings` {{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}} values is less than 0.0.
 
-In addition, if a WebRTC error occurs while configuring or accessing the media, an
-{{domxref("RTCError")}} is thrown with its {{domxref("RTCError.errorDetail",
-  "errorDetail")}} set to `hardware-encoder-error`.
+In addition, if a WebRTC error occurs while configuring or accessing the media, an {{domxref("RTCError")}} is thrown with its {{domxref("RTCError.errorDetail", "errorDetail")}} set to `hardware-encoder-error`.
 
 ## Description
 
@@ -128,13 +123,13 @@ async function setVideoParams(sender, height, bitrate) {
   const scaleRatio = sender.track.getSettings().height/height;
   const params = sender.getParameters();
 
-  params.encodings[0].scaleResolutionDownBy = Math.max(ratio, 1);
+  params.encodings[0].scaleResolutionDownBy = Math.max(scaleRatio, 1);
   params.encodings[0].maxBitrate = bitrate;
   await sender.setParameters(params);
 }
 ```
 
-In calling this function, you specify a sender, as w\.ell as the height you wish to
+In calling this function, you specify a sender, as well as the height you wish to
 scale the sender's video to, as well as a maximum bitrate to permit the sender to
 transmit. A scaling factor for the size of the video, `scaleRatio`, is
 computed. Then the sender's current parameters are fetched using
@@ -167,7 +162,7 @@ async function setVideoParams(sender, height, bitrate) {
     params.encodings = [{ }];
   }
 
-  params.encodings[0].scaleResolutionDownBy = Math.max(ratio, 1);
+  params.encodings[0].scaleResolutionDownBy = Math.max(scaleRatio, 1);
   params.encodings[0].maxBitrate = bitrate;
   await sender.setParameters(params);
 

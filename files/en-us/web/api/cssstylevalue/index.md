@@ -1,6 +1,7 @@
 ---
 title: CSSStyleValue
 slug: Web/API/CSSStyleValue
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API

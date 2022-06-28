@@ -1,6 +1,7 @@
 ---
 title: USBDevice.opened
 slug: Web/API/USBDevice/opened
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - opened
+  - Experimental
 browser-compat: api.USBDevice.opened
 ---
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
@@ -22,7 +24,7 @@ paired USB device. A device must be opened before it can be controlled by a web 
 
 A {{jsxref("boolean")}}.
 
-## Example
+## Examples
 
 This example is for a hypothetical USB device with a multi-colored LED. It shows how to
 test that a device is open before calling {{domxref("USBDevice.controlTransferOut")}} to

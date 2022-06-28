@@ -227,7 +227,7 @@ The modern {{domxref("Fetch API")}} provides the same features with a more power
 
 Another API, [server-sent events](/en-US/docs/Web/API/Server-sent_events), is a one-way service that allows a server to send events to the client, using HTTP as a transport mechanism.
 Using the {{domxref("EventSource")}} interface, the client opens a connection and establishes event handlers.
-The client browser automatically converts the messages that arrive on the HTTP stream into appropriate {{domxref("Event")}} objects, delivering them to the event handlers that have been registered for the events' {{domxref("Event.type", "type")}} if known, or to the {{domxref("EventSource.onmessage", "onmessage")}} event handler if no type-specific event handler was established.
+The client browser automatically converts the messages that arrive on the HTTP stream into appropriate {{domxref("Event")}} objects. Then it delivers them to the event handlers that have been registered for the events' {{domxref("Event.type", "type")}} if known, or to the {{domxref("EventSource.message_event", "onmessage")}} event handler if no type-specific event handler was established.
 
 ## Conclusion
 
@@ -235,4 +235,4 @@ HTTP is an extensible protocol that is easy to use.
 The client-server structure, combined with the ability to add headers, allows HTTP to advance along with the extended capabilities of the Web.
 
 Though HTTP/2 adds some complexity by embedding HTTP messages in frames to improve performance, the basic structure of messages has stayed the same since HTTP/1.0.
-Session flow remains simple, allowing it to be investigated and debugged with a simple [HTTP message monitor](/en-US/docs/Tools/Network_Monitor).
+Session flow remains simple, allowing it to be investigated and debugged with a simple [HTTP message monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html).

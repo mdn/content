@@ -1,6 +1,7 @@
 ---
 title: History.scrollRestoration
 slug: Web/API/History/scrollRestoration
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -28,7 +29,7 @@ One of the followings:
 
 ## Examples
 
-### Query the current scroll restoration behavior.
+### Query the current scroll restoration behavior
 
 ```js
 const scrollRestoration = history.scrollRestoration

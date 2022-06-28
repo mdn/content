@@ -1,6 +1,7 @@
 ---
 title: DedicatedWorkerGlobalScope.name
 slug: Web/API/DedicatedWorkerGlobalScope/name
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -21,7 +22,7 @@ the {{domxref("DedicatedWorkerGlobalScope")}}.
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

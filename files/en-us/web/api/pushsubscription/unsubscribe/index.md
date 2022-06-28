@@ -1,6 +1,7 @@
 ---
 title: PushSubscription.unsubscribe()
 slug: Web/API/PushSubscription/unsubscribe
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -22,19 +23,19 @@ current subscription is successfully unsubscribed.
 ## Syntax
 
 ```js
-PushSubscription.unsubscribe().then(function(Boolean) { /* ... */ });
+unsubscribe()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 A {{jsxref("Promise")}} that resolves to a boolean value when the current
 subscription is successfully unsubscribed.
 
-## Example
+## Examples
 
 ```js
 navigator.serviceWorker.ready.then(function(reg) {

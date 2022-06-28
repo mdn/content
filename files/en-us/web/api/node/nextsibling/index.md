@@ -1,6 +1,7 @@
 ---
 title: Node.nextSibling
 slug: Web/API/Node/nextSibling
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference

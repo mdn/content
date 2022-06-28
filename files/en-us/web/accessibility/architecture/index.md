@@ -25,7 +25,7 @@ However in accessibility hierarchies such as ATK and IAccessible2, text is not e
 
 As explained above, anything that is embedded in text implements the Hyperlink interface.
 
-While it is odd to call non-link objects a link, this was a necessary compromise in the [newatk design](https://www.mozilla.org/access/unix/new-atk.html) because it is necessary to know where objects exist within their containing text. Previously the hyper link interface was really only for links, but the design could not fully represent an HTML document hierarchy. Keeping the link name of the interface is unfortunate but necessary for backwards compatibility, without introducing superfluous interfaces.
+While it is odd to call non-link objects a link, this was a necessary compromise in the [newatk design](https://website-archive.mozilla.org/www.mozilla.org/access/access/unix/new-atk.html) because it is necessary to know where objects exist within their containing text. Previously the hyper link interface was really only for links, but the design could not fully represent an HTML document hierarchy. Keeping the link name of the interface is unfortunate but necessary for backwards compatibility, without introducing superfluous interfaces.
 
 ## API comparison
 
@@ -129,4 +129,4 @@ The following magic offsets are useful to define in your code:
 
 ## More information
 
-Many more details on the Mozilla document hierarchy are in the [original design document for newatk](https://www.mozilla.org/access/unix/new-atk.html). There are also details on the [general implementation of Mozilla accessibility architecture](https://www.mozilla.org/access/architecture) (needs updating).
+Many more details on the Mozilla document hierarchy are in the [original design document for newatk](https://website-archive.mozilla.org/www.mozilla.org/access/access/unix/new-atk.html). There are also details on the [general implementation of Mozilla accessibility architecture](https://website-archive.mozilla.org/www.mozilla.org/access/access/architecture) (needs updating).

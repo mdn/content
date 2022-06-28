@@ -1,6 +1,7 @@
 ---
 title: 'ServiceWorkerGlobalScope: notificationclick event'
 slug: Web/API/ServiceWorkerGlobalScope/notificationclick_event
+page-type: web-api-event
 tags:
   - Event
   - Notifications
@@ -89,7 +90,7 @@ self.onnotificationclick = function(event) {
 };
 ```
 
-You can handle event actions using `event.action` within a {{event("notificationclick")}} event handler:
+You can handle event actions using `event.action` within a {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event handler:
 
 ```js
 navigator.serviceWorker.register('sw.js');

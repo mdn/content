@@ -88,7 +88,7 @@ Sometimes, your app state will need to be accessed by multiple components that a
 
 Moreover, when your app becomes complicated and your component hierarchy gets complex, it might become too difficult for components to relay data between each other. In that case, moving to a global data store might be a good option. If you've already worked with [Redux](https://redux.js.org/) or [Vuex](https://vuex.vuejs.org/), then you'll be familiar with how this kind of store works. Svelte stores offer similar features for state management.
 
-A store is an object with a `subscribe()` method that allows interested parties to be notified whenever the store value changes, and an optional `set()` method that allows you to set new values for the store. This minimal API is known as the [store contract](https://svelte.dev/docs#Store_contract).
+A store is an object with a `subscribe()` method that allows interested parties to be notified whenever the store value changes, and an optional `set()` method that allows you to set new values for the store. This minimal API is known as the [store contract](https://svelte.dev/docs#component-format-script-4-prefix-stores-with-$-to-access-their-values-store-contract).
 
 Svelte provides functions for creating [readable](https://svelte.dev/docs#readable), [writable](https://svelte.dev/docs#writable), and [derived](https://svelte.dev/docs#derived) stores in the `svelte/store` module.
 
@@ -167,7 +167,7 @@ Let's now create our `Alert` component and see how we can read values from the s
     }
     div svg {
       height: 1.6rem;
-      fill: currentColor;
+      fill: currentcolor;
       width: 1.4rem;
       margin-right: 0.5rem;
     }
@@ -205,7 +205,7 @@ Let's now use our component.
 
 3. Load your test app now, and you should now see the `Alert` message on screen. You can click on it to dismiss it.
 
-    ![A simple notification in the top right hand corner of an app saying welcome to the to-do list app](01-alert-message.png)
+    ![A simple notification in the top right-hand corner of an app saying welcome to the to-do list app](01-alert-message.png)
 
 ## Making stores reactive with the reactive `$store` syntax
 
@@ -397,7 +397,7 @@ In our case, just adding a `role="alert"` to the `<div>` container will do the t
 <div role="alert" on:click={() => visible = false}>
 ```
 
-In general, testing your applications using screen readers is a good idea, not only to discover accessibility issues but also to get used to how visually impaired people use the Web. You have several options, like [NVDA](https://www.nvaccess.org/) for Windows, [ChromeVox](http://www.chromevox.com/) for Chrome, [Orca](https://wiki.gnome.org/Projects/Orca) on Linux, and [VoiceOver](https://www.apple.com/accessibility/osx/voiceover/) for Mac OS X and iOS, among other options.
+In general, testing your applications using screen readers is a good idea, not only to discover accessibility issues but also to get used to how visually impaired people use the Web. You have several options, like [NVDA](https://www.nvaccess.org/) for Windows, [ChromeVox](https://support.google.com/chromebook/answer/7031755) for Chrome, [Orca](https://wiki.gnome.org/Projects/Orca) on Linux, and [VoiceOver](https://www.apple.com/accessibility/vision/) for macOS and iOS, among other options.
 
 To learn more about detecting and fixing accessibility issues, check out our [Handling common accessibility problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility) article.
 
@@ -661,7 +661,7 @@ Let's give our `Alert` component a fly `transition`. We'll open the `Alert.svelt
 
 > **Note:** Being a compiler allows Svelte to optimize the size of our bundle by excluding features that are not used. In this case, if we compile our app for production with `npm run build`, our `public/build/bundle.js` file will weight a little less than 22 KB. If we remove the `transitions:fly` directive Svelte is smart enough to realize the fly function is not being used and the `bundle.js` file size will drop down to just 18 KB.
 
-This is just the tip of the iceberg. Svelte has lots of options for dealing with animations and transitions. Svelte also supports specifying different transitions to apply when the element is added or removed from the DOM with the `in:fn`/`out:fn` directives, and it also allows you to define your [custom CSS](https://svelte.dev/tutorial/custom-css-transitions) and [JavaScript](https://svelte.dev/tutorial/custom-js-transitions) transitions. It also has several easing functions to specify the rate of change over time. Have a look at the [ease visualizer](https://svelte.dev/examples#easing) to explore the various ease functions available.
+This is just the tip of the iceberg. Svelte has lots of options for dealing with animations and transitions. Svelte also supports specifying different transitions to apply when the element is added or removed from the DOM with the `in:fn`/`out:fn` directives, and it also allows you to define your [custom CSS](https://svelte.dev/tutorial/custom-css-transitions) and [JavaScript](https://svelte.dev/tutorial/custom-js-transitions) transitions. It also has several easing functions to specify the rate of change over time. Have a look at the [ease visualizer](https://svelte.dev/examples/easing) to explore the various ease functions available.
 
 ## The code so far
 

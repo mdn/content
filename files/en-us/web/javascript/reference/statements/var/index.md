@@ -81,7 +81,7 @@ In the global context, a variable declared using `var` is added as a
 non-configurable property of the global object. This means its property descriptor
 cannot be changed and it cannot be deleted using {{JSxRef("Operators/delete", "delete")}}. The corresponding
 name is also added to a list on the internal `[[VarNames]]` slot on the
-[global environment record](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-global-environment-records)
+[global environment record](https://262.ecma-international.org/10.0/#sec-global-environment-records)
 (which forms part of the global lexical environment). The list
 of names in `[[VarNames]]` enables the runtime to distinguish between global
 variables and straightforward properties on the global object.
@@ -100,7 +100,7 @@ delete globalThis.x; // TypeError in strict mode. Fails silently otherwise.
 delete x;  // SyntaxError in strict mode. Fails silently otherwise.
 ```
 
-Note that in both NodeJS [CommonJS](http://www.commonjs.org/) modules and
+Note that in both NodeJS [CommonJS](https://www.commonjs.org/) modules and
 native [ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules),
 top-level variable declarations are scoped to the module, and are not, therefore added
 as properties to the global object.

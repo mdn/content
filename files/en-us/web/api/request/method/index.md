@@ -1,6 +1,7 @@
 ---
 title: Request.method
 slug: Web/API/Request/method
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch
@@ -15,17 +16,11 @@ The **`method`** read-only property of the
 {{domxref("Request")}} interface contains the request's method (`GET`,
 `POST`, etc.)
 
-## Syntax
-
-```js
-var myMethod = request.method;
-```
-
-### Value
+## Value
 
 A {{jsxref("String")}} indicating the method of the request.
 
-## Example
+## Examples
 
 In the following snippet, we create a new request using the
 {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as

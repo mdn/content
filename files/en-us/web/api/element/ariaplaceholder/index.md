@@ -1,6 +1,7 @@
 ---
 title: Element.ariaPlaceholder
 slug: Web/API/Element/ariaPlaceholder
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -19,7 +20,7 @@ The **`ariaPlaceholder`** property of the {{domxref("Element")}} interface refle
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

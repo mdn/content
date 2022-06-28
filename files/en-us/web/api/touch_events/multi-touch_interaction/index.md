@@ -1,6 +1,7 @@
 ---
 title: Multi-touch interaction
 slug: Web/API/Touch_events/Multi-touch_interaction
+page-type: guide
 tags:
   - Guide
   - TouchEvent
@@ -193,7 +194,7 @@ The application uses {{HTMLElement("div")}} elements for the touch areas and pro
 <div id="target3"> Tap, Hold or Swipe me 3</div>
 <div id="target4"> Tap, Hold or Swipe me 4</div>
 
-<!-- UI for logging/bebugging -->
+<!-- UI for logging/debugging -->
 <button id="log" onclick="enableLog(event);">Start/Stop event logging</button>
 <button id="clearlog" onclick="clearLog(event);">Clear the log</button>
 <p></p>

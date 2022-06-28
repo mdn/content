@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.button
 slug: Web/API/MouseEvent/button
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -11,7 +12,7 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.button
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`MouseEvent.button`** read-only property indicates which button was pressed on the mouse to trigger the event.
 
@@ -39,7 +40,7 @@ A mouse configured for left-handed use may have the button actions reversed.
 Some pointing devices only have one button and use keyboard or other input mechanisms to indicate main, secondary, auxiliary, etc.
 Others may have many buttons mapped to different functions and button values.
 
-## Example
+## Examples
 
 ### HTML
 
@@ -76,7 +77,7 @@ function logMouseButton(e) {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

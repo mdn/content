@@ -1,6 +1,7 @@
 ---
 title: VideoPlaybackQuality.droppedVideoFrames
 slug: Web/API/VideoPlaybackQuality/droppedVideoFrames
+page-type: web-api-instance-property
 tags:
   - API
   - Data Loss
@@ -35,7 +36,7 @@ to avoid dropping frames.
 Frames are typically dropped either before or after decoding them, when it's determined
 that it will not be possible to draw them to the screen at the correct time.
 
-## Example
+## Examples
 
 This example calls {{domxref("HTMLVideoElement.getVideoPlaybackQuality",
   "getVideoPlaybackQuality()")}} to obtain a {{domxref("VideoPlaybackQuality")}} object,

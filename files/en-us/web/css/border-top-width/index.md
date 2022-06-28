@@ -32,6 +32,7 @@ border-top-width: 6px;
 border-top-width: inherit;
 border-top-width: initial;
 border-top-width: revert;
+border-top-width: revert-layer;
 border-top-width: unset;
 ```
 

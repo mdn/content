@@ -1,6 +1,7 @@
 ---
 title: KeyframeEffect
 slug: Web/API/KeyframeEffect
+page-type: web-api-interface
 tags:
   - API
   - Animation
@@ -51,7 +52,7 @@ _This interface inherits some of its methods from its parent, {{domxref("Animati
 
 ## Examples
 
-In the [Follow the White Rabbit example](http://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), the KeyframeEffect constructor is used to create a set of keyframes that dictate how the White Rabbit should animate down the hole:
+In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), the KeyframeEffect constructor is used to create a set of keyframes that dictate how the White Rabbit should animate down the hole:
 
 ```js
 const whiteRabbit = document.getElementById('rabbit');
@@ -64,9 +65,9 @@ const rabbitDownKeyframes = new KeyframeEffect(
     ],
     { duration: 3000, fill: 'forwards' } // keyframe options
   );
-  
+
 const rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
-  
+
 // Play rabbit animation
 rabbitDownAnimation.play();
 ```

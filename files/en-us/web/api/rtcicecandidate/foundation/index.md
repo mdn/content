@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.foundation
 slug: Web/API/RTCIceCandidate/foundation
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -27,7 +28,7 @@ multiple {{domxref("RTCIceTransport")}} objects
 
 ## Value
 
-A {{domxref("DOMString")}} which uniquely identifies the candidate across all
+A string which uniquely identifies the candidate across all
 `RTCIceTransport`s on which it is available.
 
 > **Note:** If `port` is `null` — and
@@ -46,7 +47,7 @@ a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
 
 The field `"4234997325"` is the foundation.
 
-## Example
+## Examples
 
 This code snippet uses the `foundation` of two candidates to determine if
 they're actually the same candidate.

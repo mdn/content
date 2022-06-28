@@ -1,6 +1,7 @@
 ---
 title: PaymentResponse.shippingAddress
 slug: Web/API/PaymentResponse/shippingAddress
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -24,7 +25,7 @@ containing the shipping address provided by the user.
 A {{domxref("PaymentAddress")}} object providing details comprising the shipping
 address provided by the user.
 
-## Example
+## Examples
 
 Generally, the user agent will fill the `shippingAddress` property for you.
 You can trigger this by
@@ -40,7 +41,7 @@ shipping cost.
 ```js
 // Initialization of PaymentRequest arguments are excerpted for brevity.
 
-var payment = new PaymentRequest(supportedInstruments, details, options);
+const payment = new PaymentRequest(supportedInstruments, details, options);
 
 request.addEventListener('shippingaddresschange', function(evt) {
   evt.updateWith(new Promise(function(resolve) {
@@ -56,7 +57,7 @@ payment.show().then(function(paymentResponse) {
 
 function updateDetails(details, shippingAddress, resolve) {
   if (shippingAddress.country === 'US') {
-    var shippingOption = {
+    const shippingOption = {
       id: '',
       label: '',
       amount: {currency: 'USD', value: '0.00'},

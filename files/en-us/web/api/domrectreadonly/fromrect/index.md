@@ -1,6 +1,7 @@
 ---
 title: DOMRectReadOnly.fromRect()
 slug: Web/API/DOMRectReadOnly/fromRect
+page-type: web-api-static-method
 tags:
   - API
   - DOMRectReadOnly
@@ -18,7 +19,8 @@ object with a given location and dimensions.
 ## Syntax
 
 ```js
-DOMRectReadOnly.fromRect(rectangle)
+fromRect()
+fromRect(rectangle)
 ```
 
 ### Parameters

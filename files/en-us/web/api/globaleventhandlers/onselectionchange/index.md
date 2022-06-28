@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onselectionchange
 slug: Web/API/GlobalEventHandlers/onselectionchange
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -70,9 +71,9 @@ It uses {{domxref("HTMLTextAreaElement")}} properties `selectionStart`, `selecti
 const myinput = document.getElementById("mytext");
 
 myinput.addEventListener("selectionchange", () => {
-  document.getElementById("start").textContent = mytext.selectionStart;
-  document.getElementById("end").textContent = mytext.selectionEnd;
-  document.getElementById("direction").textContent = mytext.selectionDirection;
+  document.getElementById("start").textContent = myinput.selectionStart;
+  document.getElementById("end").textContent = myinput.selectionEnd;
+  document.getElementById("direction").textContent = myinput.selectionDirection;
 });
 ```
 
@@ -90,5 +91,5 @@ myinput.addEventListener("selectionchange", () => {
 
 ## See also
 
-- {{event("selectionchange")}} event
+- {{domxref("Document/selectionchange_event", "selectionchange")}} event
 - Related event handler: {{domxref("GlobalEventHandlers.onselectstart")}}

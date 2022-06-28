@@ -1,6 +1,7 @@
 ---
 title: CloseEvent.wasClean
 slug: Web/API/CloseEvent/wasClean
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -14,7 +15,7 @@ The **`wasClean`** read-only property of the {{domxref("CloseEvent")}} interface
 
 ## Value
 
-A {{jsxref("Boolean")}}. True if the connection closed cleanly, false otherwise.
+A boolean value. True if the connection closed cleanly, false otherwise.
 
 ## Examples
 

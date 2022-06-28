@@ -1,6 +1,7 @@
 ---
-title: 'Location: protocol'
+title: location.protocol
 slug: Web/API/Location/protocol
+page-type: web-api-instance-property
 tags:
   - API
   - Location
@@ -11,22 +12,19 @@ browser-compat: api.Location.protocol
 {{ApiRef("Location")}}
 
 The **`protocol`** property of the {{domxref("Location")}}
-interface is a {{domxref("USVString")}} representing the protocol scheme of the URL,
+interface is a string representing the protocol scheme of the URL,
 including the final `':'`.
 
-## Syntax
+## Value
 
-```js
-string = object.protocol;
-object.protocol = string;
-```
+A string.
 
 ## Examples
 
 ```js
 // Let's an <a id="myAnchor" href="https://developer.mozilla.org/en-US/Location.protocol"> element be in the document
-var anchor = document.getElementById("myAnchor");
-var result = anchor.protocol; // Returns:'https:'
+const anchor = document.getElementById("myAnchor");
+const result = anchor.protocol; // Returns:'https:'
 ```
 
 ## Specifications

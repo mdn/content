@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.style
 slug: Web/API/HTMLElement/style
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -73,7 +74,7 @@ color = 'red' > 'rgb(255, 0, 0)'
 ...
 ```
 
-Note the presence of the value `bold` for `font-weight` in the computed style and the absence of it in the element's `style` property
+Note the presence of the value `bold` for `font-weight` in the computed style and the absence of it in the element's `style` property.
 
 ## Specifications
 

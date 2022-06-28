@@ -1,6 +1,7 @@
 ---
 title: Selection
 slug: Web/API/Selection
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -31,7 +32,7 @@ A user may make a selection from left to right (in document order) or right to l
 - {{DOMxRef("Selection.rangeCount")}}{{ReadOnlyInline}}
   - : Returns the number of ranges in the selection.
 - {{DOMxRef("Selection.type")}}{{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DOMString")}} describing the type of the current selection.
+  - : Returns a string describing the type of the current selection.
 
 ## Methods
 
@@ -135,17 +136,17 @@ And when the {{DOMxRef("Range")}} is modified using the following methods:
 
 Other key terms used in this section.
 
-- anchor
+- `anchor`
   - : The anchor of a selection is the beginning point of the selection. When making a selection with a mouse, the anchor is where in the document the mouse button is initially pressed. As the user changes the selection using the mouse or the keyboard, the anchor does not move.
-- editing host
+- `editing host`
   - : An editable element (e.g., an HTML element with {{htmlattrxref("contenteditable")}} set, or the HTML child of a document that has {{DOMxRef("Document.designMode", "designMode")}} enabled).
-- focus of a selection
+- `focus of a selection`
 
   - : The _focus_ of a selection is the end point of the selection. When making a selection with a mouse, the focus is where in the document the mouse button is released. As the user changes the selection using the mouse or the keyboard, the focus is the end of the selection that moves.
 
     > **Note:** This is not the same as the focused _element_ of the document, as returned by {{DOMxRef("document.activeElement")}}.
 
-- range
+- `range`
 
   - : A _range_ is a contiguous part of a document. A range can contain entire nodes as well as portions of nodes (such as a portion of a text node). A user will normally only select a single range at a time, but it's possible for a user to select multiple ranges (e.g., by using the <kbd>Control</kbd> key). A range can be retrieved from a selection as a {{DOMxRef("range")}} object. Range objects can also be created via the DOM and programmatically added or removed from a selection.
 
@@ -160,6 +161,6 @@ Other key terms used in this section.
 ## See also
 
 - {{DOMxRef("Window.getSelection")}}, {{DOMxRef("Document.getSelection")}}, {{DOMxRef("Range")}}
-- Selection-related events: {{Event("selectionchange")}} and {{Event("selectstart")}}
+- Selection-related events: {{domxref("Document/selectionchange_event", "selectionchange")}} and {{domxref("Document/selectstart_event", "selectstart")}}
 - HTML inputs provide simpler helper APIs for working with selection (see {{DOMxRef("HTMLInputElement.setSelectionRange()")}})
 - {{DOMxRef("Document.activeElement")}}, {{DOMxRef("HTMLElement.focus")}}, and {{DOMxRef("HTMLElement.blur")}}

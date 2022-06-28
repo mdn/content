@@ -1,6 +1,7 @@
 ---
 title: VideoPlaybackQuality.corruptedVideoFrames
 slug: Web/API/VideoPlaybackQuality/corruptedVideoFrames
+page-type: web-api-instance-property
 tags:
   - API
   - Corruption
@@ -37,7 +38,7 @@ corrupted video frame. If a corrupted frame is dropped, then both
 {{domxref("VideoPlaybackQuality.droppedVideoFrames", "droppedVideoFrames")}} are
 incremented.
 
-## Example
+## Examples
 
 This example determines the percentage of frames which have been corrupted, and if the
 value is greater than 5%, calls a function called `downgradeVideo()` that

@@ -1,6 +1,7 @@
 ---
 title: Element.ariaKeyShortcuts
 slug: Web/API/Element/ariaKeyShortcuts
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,7 +18,7 @@ The **`ariaKeyShortcuts`** property of the {{domxref("Element")}} interface refl
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

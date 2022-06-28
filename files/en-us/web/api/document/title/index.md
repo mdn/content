@@ -1,6 +1,7 @@
 ---
 title: Document.title
 slug: Web/API/Document/title
+page-type: web-api-instance-property
 tags:
   - API
   - Command API
@@ -13,9 +14,8 @@ browser-compat: api.Document.title
 ---
 {{APIRef("DOM")}}
 
-The **`document.title`** property gets
-or sets the current [title](/en-US/docs/Web/HTML/Element/title) of the
-document.
+The **`document.title`** property gets or sets the current title of the document.
+When present, it defaults to the value of the [`<title>`](/en-US/docs/Web/HTML/Element/title).
 
 ## Value
 
@@ -50,19 +50,6 @@ document).
 </body>
 </html>
 ```
-
-## Notes
-
-This property applies to HTML, SVG, XUL, and other documents in Gecko.
-
-For HTML documents the initial value of `document.title` is the text content
-of the `<title>` element. For XUL it's the value of the
-{{XULAttr("title")}} attribute of the {{XULElem("window")}} or other top-level XUL
-element.
-
-In XUL, accessing `document.title` before the document is fully loaded has
-undefined behavior: `document.title` may return an empty string and setting
-`document.title` may have no effect.
 
 ## Specifications
 

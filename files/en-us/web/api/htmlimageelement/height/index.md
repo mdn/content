@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.height
 slug: Web/API/HTMLImageElement/height
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -47,10 +48,10 @@ otherwise, it's drawn at 300px.
 
 ```html
 <p>Image height: <span class="size">?</span>px (resize to update)</p>
-<img src="/files/17373/clock-demo-200px.png"
+<img src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png"
       alt="Clock"
-      srcset="/files/17373/clock-demo-200px.png 200w,
-          /files/17374/clock-demo-400px.png 400w"
+      srcset="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
+          /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w"
       sizes="(max-width: 400px) 200px, 300px">
 ```
 
@@ -71,7 +72,7 @@ window.addEventListener("resize", updateHeight);
 
 ### Result
 
-{{EmbedLiveSample("Example", 640, 450)}}
+{{EmbedLiveSample("Examples", 640, 450)}}
 
 This example may be easier to try out {{LiveSampleLink('Example', 'in its own window')}}.
 

@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.relatedAddress
 slug: Web/API/RTCIceCandidate/relatedAddress
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -32,7 +33,7 @@ for analysis and diagnostic purposes only, and their inclusion may be blocked by
 
 ## Value
 
-A {{domxref("DOMString")}} which contains the candidate's related address. For both
+A string which contains the candidate's related address. For both
 peer and server reflexive candidates, the related address (and related port) are the
 base for that server or peer reflexive candidate. For relay candidates, the related
 address and port are set to the mapped address selected by the TURN server.
@@ -55,7 +56,7 @@ a=candidate:4234997325 1 udp 2043278322 192.168.0.56 6502 typ srflx raddr 192.16
 The remote address, `relatedAddress`, is the dotted quad (for IPv4) or
 colon-delineated 64-bit address (for IPv6) immediately following the text `"raddr"`, or `"192.168.2.77"`.
 
-## Example
+## Examples
 
 In this example, the candidate's {{domxref("RTCIceCandidate.type", "type")}} is
 checked, and then debugging output is presented, based on the candidate type, including

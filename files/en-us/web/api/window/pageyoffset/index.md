@@ -1,6 +1,7 @@
 ---
 title: Window.pageYOffset
 slug: Web/API/Window/pageYOffset
+page-type: web-api-instance-property
 tags:
   - API
   - Alias
@@ -41,7 +42,7 @@ window's content area.
 Since this property is an alias for {{domxref("Window.scrollY")}}, see that article for
 additional details on this value and its use.
 
-## Example
+## Examples
 
 ```js hidden
 var contentHTML = `
@@ -162,7 +163,7 @@ The result follows. Note that the frame's contents have been scrolled to show th
 section named "Overview", and that the value of the `pageYOffset` property is
 shown with the corresponding value.
 
-{{EmbedLiveSample("Example", 650, 500)}}
+{{EmbedLiveSample("Examples", 650, 500)}}
 
 ## Specifications
 

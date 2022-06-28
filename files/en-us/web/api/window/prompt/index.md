@@ -1,6 +1,7 @@
 ---
 title: Window.prompt()
 slug: Web/API/Window/prompt
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -20,7 +21,9 @@ Under some conditions — for example, when the user switches tabs — the brows
 ## Syntax
 
 ```js
-result = window.prompt(message, default);
+prompt()
+prompt(message)
+prompt(message, default)
 ```
 
 ### Parameters
@@ -37,7 +40,7 @@ result = window.prompt(message, default);
 
 A string containing the text entered by the user, or `null`.
 
-## Example
+## Examples
 
 ```js
 let sign = prompt("What's your sign?");
@@ -57,9 +60,9 @@ When the user clicks the OK button, text entered in the input field is returned.
 user clicks OK without entering any text, an empty string is returned. If the user
 clicks the Cancel button, this function returns `null`.
 
-The above prompt appears as follows (in Chrome on OS X):
+The above prompt appears as follows (in Chrome on macOS):
 
-[![prompt() dialog in Chrome on OS X](prompt.png)](prompt.png)
+[![prompt() dialog in Chrome on macOS](prompt.png)](prompt.png)
 
 ## Notes
 

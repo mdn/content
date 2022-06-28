@@ -21,7 +21,7 @@ By the end of the tutorial you will have a fully functional demo game: [Cyber Or
 
 ## Phaser framework
 
-[Phaser](https://phaser.io/) is a framework for building desktop and mobile HTML5 games. It's quite new, but growing rapidly thanks to the passionate community involved in the development process. You can check it out [on GitHub](https://github.com/photonstorm/phaser) where it's open sourced, read the [online documentation](https://phaser.io/docs/) and go through the big collection of [examples](https://examples.phaser.io/). The Phaser framework provides you with a set of tools that will speed up development and help handle generic tasks needed to complete the game, so you can focus on the game idea itself.
+[Phaser](https://phaser.io/) is a framework for building desktop and mobile HTML5 games. It's quite new, but growing rapidly thanks to the passionate community involved in the development process. You can check it out [on GitHub](https://github.com/photonstorm/phaser) where it's open sourced, read the [online documentation](https://phaser.io/docs/) and go through the big collection of [examples](https://phaser.io/examples). The Phaser framework provides you with a set of tools that will speed up development and help handle generic tasks needed to complete the game, so you can focus on the game idea itself.
 
 ## Starting with the project
 
@@ -95,7 +95,7 @@ The first value is the name of the state and the second one is the object we wan
 
 ## Managing game states
 
-The states in Phaser are separate parts of the game logic; in our case we're loading them from independent JavaScript files for better maintainability. The basic states used in this game are: `Boot`, `Preloader`, `MainMenu`, `Howto` and `Game`. `Boot` will take care of initializing a few settings, `Preloader` will load all of the assets like graphics and audio, `MainMenu` is the menu with the start button, `Howto` shows the "how to play" instructions and the `Game` state lets you actually play the game. Let's quickly go though the content of those states.
+The states in Phaser are separate parts of the game logic; in our case we're loading them from independent JavaScript files for better maintainability. The basic states used in this game are: `Boot`, `Preloader`, `MainMenu`, `Howto` and `Game`. `Boot` will take care of initializing a few settings, `Preloader` will load all of the assets like graphics and audio, `MainMenu` is the menu with the start button, `Howto` shows the "how to play" instructions and the `Game` state lets you actually play the game. Let's quickly go through the content of those states.
 
 ### Boot.js
 
@@ -226,7 +226,7 @@ The `create` and `update` functions are framework-specific, while others will be
 
 - `initLevels` initializes the level data.
 - `showLevel` prints the level data on the screen.
-- `updateCounter` updates the time spent playing each level and records the total time spent playing the game..
+- `updateCounter` updates the time spent playing each level and records the total time spent playing the game.
 - `managePause` pauses and resumes the game.
 - `manageAudio` turns the audio on and off.
 - `wallCollision` is executed when the ball hits the walls or other objects.
@@ -492,4 +492,4 @@ This is merely a working demo of a game that could have lots of additional featu
 
 I hope this tutorial will help you dive into 2D game development and inspire you to create awesome games on your own. You can play the demo game [Cyber Orb](https://orb.enclavegames.com/) and check out its [source code on GitHub](https://github.com/EnclaveGames/Cyber-Orb).
 
-HTML5 gives us raw tools, the frameworks built on top of it are getting faster and better, so now is a great time get into web game development. In this tutorial we used Phaser, but there are a number of [other frameworks](https://html5devstarter.enclavegames.com/#frameworks) worth considering too like [ImpactJS](https://impactjs.com/), [Construct 2](https://www.scirra.com/construct2) or [PlayCanvas](https://playcanvas.com/) — it depends on your preferences, coding skills (or lack thereof), project scale, requirements and other aspects. You should check them all out and decide which one suits your needs best.
+HTML5 gives us raw tools, the frameworks built on top of it are getting faster and better, so now is a great time get into web game development. In this tutorial we used Phaser, but there are a number of [other frameworks](https://html5devstarter.enclavegames.com/#frameworks) worth considering too like [ImpactJS](https://impactjs.com/), [Construct 3](https://www.construct.net/en/make-games/games-editor) or [PlayCanvas](https://playcanvas.com/) — it depends on your preferences, coding skills (or lack thereof), project scale, requirements and other aspects. You should check them all out and decide which one suits your needs best.

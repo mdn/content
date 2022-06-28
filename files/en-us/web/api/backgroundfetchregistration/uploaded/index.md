@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchRegistration.uploaded
 slug: Web/API/BackgroundFetchRegistration/uploaded
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,7 +14,7 @@ browser-compat: api.BackgroundFetchRegistration.uploaded
 
 The **`uploaded`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns the size in bytes successfully sent, initially `0`.
 
-If the value of this property changes, the  [progress](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event) event is fired at the associated {{domxref("BackgroundFetchRegistration")}} object.
+If the value of this property changes, the [progress](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event) event is fired at the associated {{domxref("BackgroundFetchRegistration")}} object.
 
 ## Value
 

@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaValueText
 slug: Web/API/ElementInternals/ariaValueText
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -19,7 +20,7 @@ The **`ariaValueText`** property of the {{domxref("ElementInternals")}} interfac
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

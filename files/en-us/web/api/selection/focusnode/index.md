@@ -1,6 +1,7 @@
 ---
 title: Selection.focusNode
 slug: Web/API/Selection/focusNode
+page-type: web-api-instance-property
 tags:
   - API
   - HTML Editing
@@ -21,11 +22,9 @@ be visualized by holding the <kbd>Shift</kbd> key and pressing the arrow keys on
 keyboard to modify the current selection. The selection's focus moves, but the
 selection's anchor, the other end of the selection, does not move.
 
-## Syntax
+## Value
 
-```js
-node = sel.focusNode
-```
+A {{domxref("Node")}} object.
 
 ## Specifications
 

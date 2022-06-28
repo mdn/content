@@ -39,7 +39,7 @@ Content-Security-Policy: block-all-mixed-content;
 ```
 
 To disallow http assets on a more granular level, you can also set individual directives to `https:`.
-For example, to disallow nonsecure HTTP images:
+For example, to disallow insecure HTTP images:
 
 ```
 Content-Security-Policy: img-src https:

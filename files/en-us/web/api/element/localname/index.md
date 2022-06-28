@@ -1,6 +1,7 @@
 ---
 title: Element.localName
 slug: Web/API/Element/localName
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -17,7 +18,7 @@ local part of the qualified name of an element.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the local part of the element's qualified name.
+A string representing the local part of the element's qualified name.
 
 ## Examples
 
@@ -30,8 +31,8 @@ A {{domxref("DOMString")}} representing the local part of the element's qualifie
 <head>
   <script type="application/javascript"><![CDATA[
   function test() {
-    var text = document.getElementById('text');
-    var circle = document.getElementById('circle');
+    const text = document.getElementById('text');
+    const circle = document.getElementById('circle');
 
     text.value = "<svg:circle> has:\n" +
                  "localName = '" + circle.localName + "'\n" +

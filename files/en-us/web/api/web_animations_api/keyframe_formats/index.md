@@ -1,6 +1,7 @@
 ---
 title: Keyframe Formats
 slug: Web/API/Web_Animations_API/Keyframe_Formats
+page-type: guide
 tags:
   - API
   - Animation
@@ -11,6 +12,7 @@ tags:
   - setKeyframes()
   - waapi
   - web animations api
+browser-compat: api.Element.animate
 ---
 {{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
@@ -123,28 +125,11 @@ The following special attributes may also be specified:
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Web Animations", "#processing-a-keyframes-argument", "Keyframe object formats")}}
-      </td>
-      <td>{{Spec2('Web Animations')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-### `Element.animate`
-
-{{Compat("api.Element.animate")}}
+{{Compat}}
 
 ## See also
 

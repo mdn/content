@@ -1,6 +1,7 @@
 ---
 title: USBConfiguration
 slug: Web/API/USBConfiguration
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -9,9 +10,10 @@ tags:
   - USBConfiguration
   - WebUSB
   - WebUSB API
+  - Experimental
 browser-compat: api.USBConfiguration
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}
+{{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The `USBConfiguration` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) provides information about a particular configuration of a USB device and the interfaces that it supports.
 

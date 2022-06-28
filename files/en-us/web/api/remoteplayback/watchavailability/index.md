@@ -1,6 +1,7 @@
 ---
 title: RemotePlayback.watchAvailability()
 slug: Web/API/RemotePlayback/watchAvailability
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,7 +17,7 @@ The **`watchAvailability()`** method of the {{domxref("RemotePlayback")}} interf
 ## Syntax
 
 ```js
-RemotePlayback.watchAvailability(RemotePlaybackAvailabilityCallback);
+watchAvailability(RemotePlaybackAvailabilityCallback)
 ```
 
 ### Parameters

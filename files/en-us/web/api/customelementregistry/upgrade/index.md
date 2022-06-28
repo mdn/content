@@ -1,6 +1,7 @@
 ---
 title: CustomElementRegistry.upgrade()
 slug: Web/API/CustomElementRegistry/upgrade
+page-type: web-api-instance-method
 tags:
   - API
   - CustomElementRegistry
@@ -21,24 +22,22 @@ document.
 ## Syntax
 
 ```js
-customElements.upgrade(root);
+upgrade(root)
 ```
 
 ### Parameters
 
 - `root`
-  - : A {{domxref("Node")}} instance with shadow-containing descendant elements that are
-    to be upgraded. If there are no descendant elements that can be upgraded, no error is
+  - : A {{domxref("Node")}} instance with shadow-containing descendant elements to upgrade. If there are no descendant elements that can be upgraded, no error is
     thrown.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
-Taken from the [HTML
-spec](https://html.spec.whatwg.org/multipage/custom-elements.html#dom-customelementregistry-upgrade):
+Taken from the [HTML spec](https://html.spec.whatwg.org/multipage/custom-elements.html#dom-customelementregistry-upgrade):
 
 ```js
 const el = document.createElement("spider-man");

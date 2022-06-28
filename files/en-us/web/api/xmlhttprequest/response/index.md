@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.response
 slug: Web/API/XMLHttpRequest/response
+page-type: web-api-instance-property
 tags:
   - AJAX
   - API
@@ -20,8 +21,8 @@ browser-compat: api.XMLHttpRequest.response
 
 The {{domxref("XMLHttpRequest")}}
 **`response`** property returns the response's body content as
-an {{jsxref("ArrayBuffer")}}, {{domxref("Blob")}}, {{domxref("Document")}},
-JavaScript {{jsxref("Object")}}, or {{domxref("DOMString")}}, depending on the value
+an {{jsxref("ArrayBuffer")}}, a {{domxref("Blob")}}, a {{domxref("Document")}},
+a JavaScript {{jsxref("Object")}}, or a string, depending on the value
 of the request's {{domxref("XMLHttpRequest.responseType", "responseType")}}
 property.
 
@@ -39,7 +40,7 @@ with the exception that when reading text data using a `responseType` of
 response so far while the request is still in the `LOADING`
 {{domxref("XMLHttpRequest.readyState", "readyState")}} (3).
 
-## Example
+## Examples
 
 This example presents a function, `load()`, which loads and processes a page
 from the server. It works by creating an {{domxref("XMLHttpRequest")}} object and
@@ -77,7 +78,6 @@ function load(url, callback) {
 
 ## See also
 
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - Getting text and HTML/XML data: {{domxref("XMLHttpRequest.responseText")}} and
   {{domxref("XMLHttpRequest.responseXML")}}

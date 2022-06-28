@@ -1,6 +1,7 @@
 ---
 title: Canvas API
 slug: Web/API/Canvas_API
+page-type: web-api-overview
 tags:
   - API
   - Canvas
@@ -8,6 +9,7 @@ tags:
   - JavaScript
   - Overview
   - Reference
+browser-compat: html.elements.canvas
 ---
 {{CanvasSidebar}}
 
@@ -48,7 +50,6 @@ ctx.fillRect(10, 10, 150, 100);
 - {{domxref("HTMLCanvasElement")}}
 - {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasGradient")}}
-- {{domxref("CanvasImageSource")}}
 - {{domxref("CanvasPattern")}}
 - {{domxref("ImageBitmap")}}
 - {{domxref("ImageData")}}
@@ -71,8 +72,6 @@ ctx.fillRect(10, 10, 150, 100);
   - : A hands-on, book-length introduction to the Canvas API and WebGL.
 - [Canvas Handbook](https://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html)
   - : A handy reference for the Canvas API.
-- [Demo: A basic ray-caster](/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster)
-  - : A demo of ray-tracing animation using canvas.
 - [Manipulating video using canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
   - : Combining {{HTMLElement("video")}} and {{HTMLElement("canvas")}} to manipulate video data in real time.
 
@@ -83,8 +82,8 @@ The Canvas API is extremely powerful, but not always simple to use. The librarie
 - [EaselJS](https://www.createjs.com/easeljs) is an open-source canvas library that makes creating games, generative art, and other highly graphical experiences easy.
 - [Fabric.js](http://fabricjs.com) is an open-source canvas library with SVG parsing capabilities.
 - [heatmap.js](https://www.patrick-wied.at/static/heatmapjs/) is an open-source library for creating canvas-based data heat maps.
-- [JavaScript InfoVis Toolkit](https://thejit.org/) creates interactive data visualizations.
-- [Konva.js](https://konvajs.github.io/) is a 2D canvas library for desktop and mobile applications.
+- [JavaScript InfoVis Toolkit](https://philogb.github.io/jit/) creates interactive data visualizations.
+- [Konva.js](https://konvajs.org/) is a 2D canvas library for desktop and mobile applications.
 - [p5.js](https://p5js.org/) has a full set of canvas drawing functionality for artists, designers, educators, and beginners.
 - [Paper.js](http://paperjs.org/) is an open-source vector graphics scripting framework that runs on top of the HTML5 Canvas.
 - [Phaser](https://phaser.io/) is a fast, free and fun open source framework for Canvas and WebGL powered browser games.
@@ -97,11 +96,11 @@ The Canvas API is extremely powerful, but not always simple to use. The librarie
 
 ## Specifications
 
-{{Specifications("html.elements.canvas")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-Mozilla applications gained support for `<canvas>` starting with Gecko 1.8 ([Firefox 1.5](/en-US/docs/Mozilla/Firefox/Releases/1.5)). The element was originally introduced by Apple for the OS X Dashboard and Safari. Internet Explorer supports `<canvas>` from version 9 onwards; for earlier versions of IE, a page can effectively add support for `<canvas>` by including a script from Google's [Explorer Canvas](https://github.com/arv/explorercanvas) project. Google Chrome and Opera 9 also support `<canvas>`.
+{{Compat}}
 
 ## See also
 

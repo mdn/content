@@ -1,6 +1,7 @@
 ---
 title: MediaDevices.enumerateDevices()
 slug: Web/API/MediaDevices/enumerateDevices
+page-type: web-api-instance-method
 tags:
   - API
   - MediaDevices
@@ -20,8 +21,12 @@ The list of returned devices will omit any devices for which the corresponding p
 ## Syntax
 
 ```js
-navigator.mediaDevices.enumerateDevices()
+enumerateDevices()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -31,7 +36,7 @@ The order is significant - the default capture devices will be listed first.
 
 If enumeration fails, the promise is rejected.
 
-## Example
+## Examples
 
 Here's an example of using `enumerateDevices()`. It outputs a list of the [device IDs](/en-US/docs/Web/API/MediaDeviceInfo/deviceId), with their labels if available.
 

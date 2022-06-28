@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.getUniformIndices()
 slug: Web/API/WebGL2RenderingContext/getUniformIndices
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,7 +19,7 @@ number of uniforms within a {{domxref("WebGLProgram")}}.
 ## Syntax
 
 ```js
-sequence<GLuint> gl.getUniformIndices(program, uniformNames);
+getUniformIndices(program, uniformNames)
 ```
 
 ### Parameters
@@ -26,7 +27,7 @@ sequence<GLuint> gl.getUniformIndices(program, uniformNames);
 - `program`
   - : A {{domxref("WebGLProgram")}} containing uniforms whose indices to query.
 - `uniformNames`
-  - : An {{jsxref("Array")}} of {{domxref("DOMString")}} specifying the names of the
+  - : An {{jsxref("Array")}} of string specifying the names of the
     uniforms to query.
 
 ### Return value

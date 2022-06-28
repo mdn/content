@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue.to()
 slug: Web/API/CSSNumericValue/to
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -21,12 +22,12 @@ another.
 ## Syntax
 
 ```js
-var cssUnitValue = CSSNumericValue.to(unit);
+to(unit)
 ```
 
 ### Parameters
 
-- unit
+- `unit`
   - : The unit to which you want to convert.
 
 ### Return value
@@ -35,10 +36,10 @@ A {{domxref('CSSMathSum')}}.
 
 ### Exceptions
 
-- SyntaxError
-  - : Indicates that an invalid type was passed to the method.
-- TypeError
-  - : Indicates that the passed values cannot be summed.
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if an invalid type was passed to the method.
+- {{jsxref("TypeError")}}
+  - : Thrown if the passed values cannot be summed.
 
 ## Examples
 

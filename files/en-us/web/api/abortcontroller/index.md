@@ -1,6 +1,7 @@
 ---
 title: AbortController
 slug: Web/API/AbortController
+page-type: web-api-interface
 tags:
   - API
   - AbortController
@@ -31,6 +32,8 @@ You can create a new `AbortController` object using the {{domxref("AbortControll
   - : Aborts a DOM request before it has completed. This is able to abort [fetch requests](/en-US/docs/Web/API/fetch), consumption of any response bodies, and streams.
 
 ## Examples
+
+> **Note:** There are additional examples in the {{domxref("AbortSignal")}} reference.
 
 In the following snippet, we aim to download a video using the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 
@@ -80,4 +83,4 @@ You can find a [full working example on GitHub](https://github.com/mdn/dom-examp
 ## See also
 
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
-- [Abortable Fetch](https://developers.google.com/web/updates/2017/09/abortable-fetch) by Jake Archibald
+- [Abortable Fetch](https://developer.chrome.com/blog/abortable-fetch/) by Jake Archibald

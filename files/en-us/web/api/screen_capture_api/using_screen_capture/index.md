@@ -1,6 +1,7 @@
 ---
 title: Using the Screen Capture API
 slug: Web/API/Screen_Capture_API/Using_Screen_Capture
+page-type: guide
 tags:
   - API
   - Capture
@@ -15,6 +16,7 @@ tags:
   - display
   - getDisplayMedia
   - screen
+browser-compat: api.MediaDevices.getDisplayMedia
 ---
 {{DefaultAPISidebar("Screen Capture API")}}
 
@@ -88,7 +90,7 @@ For example, if you specify a {{domxref("MediaTrackConstraints.width", "width")}
 
 While display capture is in effect, the machine which is sharing screen contents will display some form of indicator so the user is aware that sharing is taking place.
 
-> **Note:** For privacy and security reasons, screen sharing sources are not enumerable using {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}. Related to this, the {{event("devicechange")}} event is never sent when there are changes to the sources available for `getDisplayMedia()`.
+> **Note:** For privacy and security reasons, screen sharing sources are not enumerable using {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}. Related to this, the {{domxref("MediaDevices/devicechange_event", "devicechange")}} event is never sent when there are changes to the sources available for `getDisplayMedia()`.
 
 ### Capturing shared audio
 
@@ -124,7 +126,7 @@ In this example the cursor will always be visible in the capture, and the audio 
 
 Capturing audio is always optional, and even when web content requests a stream with both audio and video, the returned {{domxref("MediaStream")}} may still have only one video track, with no audio.
 
-> **Note:** Some properties are not widely implemented and might not be used by the engine. `cursor`, for example, [has limited support](/en-US/docs/Web/API/MediaTrackConstraints/cursor#browser_compatibility).
+> **Note:** Some properties are not widely implemented and might not be used by the engine. `cursor`, for example, [has limited support](/en-US/docs/Web/API/MediaTrackConstraints#browser_compatibility).
 
 ## Using the captured stream
 
@@ -162,7 +164,7 @@ First, some constants are set up to reference the elements on the page to which 
 
 The object `displayMediaOptions` contains the constraints to pass into `getDisplayMedia()`; here, the {{domxref("MediaTrackConstraints.cursor", "cursor")}} property is set to `always`, indicating that the mouse cursor should always be included in the captured media.
 
-> **Note:** Some properties are not widely implemented and might not be used by the engine. `cursor`, for example, [has limited support](/en-US/docs/Web/API/MediaTrackConstraints/cursor#browser_compatibility).
+> **Note:** Some properties are not widely implemented and might not be used by the engine. `cursor`, for example, [has limited support](/en-US/docs/Web/API/MediaTrackConstraints#browser_compatibility).
 
 Finally, event listeners are established to detect user clicks on the start and stop buttons.
 
@@ -335,7 +337,7 @@ If you're performing screen capture within an `<iframe>`, you can request permis
 
 ## Browser compatibility
 
-{{Compat("api.MediaDevices.getDisplayMedia")}}
+{{Compat}}
 
 ## See also
 

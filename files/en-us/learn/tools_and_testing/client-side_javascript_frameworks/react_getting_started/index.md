@@ -42,8 +42,10 @@ In this article we will say hello to React. We'll discover a little bit of detai
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To set up a local React development environment, create a start app, and
-        understand the basics of how it works
+        <p>
+          To set up a local React development environment, create a start app, and
+          understand the basics of how it works
+        </p>
       </td>
     </tr>
   </tbody>
@@ -123,7 +125,7 @@ In order to use create-react-app, you need to have [Node.js](https://nodejs.org/
 
 You may also use the Yarn package manager as an alternative, but we'll assume you are using npm in this set of tutorials. See [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) for more information on npm and yarn.
 
-If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. **Gitbash** (which comes as part of the [git for Windows toolset](https://gitforwindows.org/)) or **[Windows Subsystem for Linux](https://docs.microsoft.com/windows/wsl/about)** (**WSL**) are both suitable. See [Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) for more information on these, and on terminal commands in general.
+If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. **Gitbash** (which comes as part of the [git for Windows toolset](https://gitforwindows.org/)) or **[Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about)** (**WSL**) are both suitable. See [Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) for more information on these, and on terminal commands in general.
 
 Also bear in mind that React and ReactDOM produce apps that only work on a fairly modern set of browsers — IE9+ by way of some polyfills. It is recommended that you use a modern browser like Firefox, Microsoft Edge, Safari, or Chrome when working through these tutorials.
 
@@ -148,7 +150,7 @@ This creates a `moz-todo-react` directory, and does several things inside it:
 - Creates a structure of files and directories that define the basic app architecture.
 - Initializes the directory as a git repository, if you have git installed on your computer.
 
-> **Note:** if you have the yarn package manager installed, create-react-app will default to using it instead of npm. If you have both package managers installed and explicitly want to use NPM, you can add the flag `--use-npm` when you run create-react-app:
+> **Note:** if you have the Yarn package manager installed, create-react-app will default to using it instead of npm. If you have both package managers installed and explicitly want to use NPM, you can add the flag `--use-npm` when you run create-react-app:
 >
 > ```bash
 > npx create-react-app moz-todo-react --use-npm
@@ -432,7 +434,8 @@ function App() {
 }
 ```
 
-Change the signature of the `App` function so that it accepts `props` as a parameter, and delete the `subject` const. Just like any other function parameter, you can put `props` in a `console.log()` to print it to your browser's console. Go ahead and do that before the `return` statement, like so:
+Change the signature of the `App` function so that it accepts `props` as a parameter, and delete the `subject` const.
+Just like any other function parameter, you can put `props` in a `console.log()` to print it to your browser's console. Go ahead and do that before the `return` statement, like so:
 
 ```js
 function App(props) {
@@ -443,6 +446,7 @@ function App(props) {
 }
 ```
 
+With this change, {subject} becomes undefined, so comment out the line `Hello, {subject}!` for now.
 Save your file and check your browser's JavaScript console. You should see something like this logged:
 
 ```js
@@ -451,7 +455,7 @@ Object { subject: "Clarice" }
 
 The object property `subject` corresponds to the `subject` prop we added to our `<App />` component call, and the string `Clarice` corresponds to its value. Component props in React are always collected into objects in this fashion.
 
-Now that `subject` is one of our props, let's utilize it in `App.js`. Change the `subject` constant so that, instead of defining it as the string `React`, you are reading the value of `props.subject`. You can also delete your `console.log()` if you want.
+Now that `subject` is one of our props, let's utilize it in `App.js`. Change the `subject` constant so that, instead of defining it as the string `React`, you are reading the value of `props.subject`. Now, you can also uncomment the line `Hello, {subject}!` and, if you wish, delete your `console.log()`.
 
 ```js
 function App(props) {
@@ -463,6 +467,7 @@ function App(props) {
 ```
 
 When you save, the app should now greet you with "Hello, Clarice!". If you return to `index.js`, edit the value of `subject`, and save, your text will change.
+Note that if you wanted to leave in the `Hello` line throughout this change, you could also have updated the JSX variable to {props.subject}.
 
 ## Summary
 

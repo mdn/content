@@ -1,6 +1,7 @@
 ---
 title: LayoutShiftAttribution.toJSON()
 slug: Web/API/LayoutShiftAttribution/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,7 +17,7 @@ The **`toJSON()`** method of the {{domxref("LayoutShiftAttribution")}} interface
 ## Syntax
 
 ```js
-LayoutShiftAttribution.toJSON();
+toJSON()
 ```
 
 ### Parameters

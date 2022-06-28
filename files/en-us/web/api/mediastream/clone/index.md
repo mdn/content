@@ -1,6 +1,7 @@
 ---
 title: MediaStream.clone()
 slug: Web/API/MediaStream/clone
+page-type: web-api-instance-method
 tags:
   - API
   - Media Capture and Streams
@@ -22,7 +23,7 @@ contains clones of every {{domxref("MediaStreamTrack")}} contained by the
 ## Syntax
 
 ```js
-var stream = MediaStream.clone();
+clone()
 ```
 
 ### Parameters

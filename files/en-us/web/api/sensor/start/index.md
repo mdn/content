@@ -1,6 +1,7 @@
 ---
 title: Sensor.start()
 slug: Web/API/Sensor/start
+page-type: web-api-instance-method
 tags:
   - API
   - Generic Sensor API
@@ -20,7 +21,7 @@ of the sensors based on `Sensor`.
 ## Syntax
 
 ```js
-Sensor.start()
+start()
 ```
 
 ### Parameters
@@ -29,7 +30,7 @@ None.
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

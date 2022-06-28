@@ -1,6 +1,7 @@
 ---
 title: Window.back()
 slug: Web/API/Window/back
+page-type: web-api-instance-method
 tags:
   - API
   - Firefox
@@ -23,7 +24,7 @@ Firefox-specific method and was removed in Firefox 31.
 ## Syntax
 
 ```js
-window.back();
+back()
 ```
 
 ### Parameters
@@ -32,9 +33,9 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 This simple example handles a click on a "Back" button by calling `back()`.
 

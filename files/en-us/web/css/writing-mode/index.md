@@ -29,6 +29,7 @@ writing-mode: vertical-lr;
 writing-mode: inherit;
 writing-mode: initial;
 writing-mode: revert;
+writing-mode: revert-layer;
 writing-mode: unset;
 ```
 

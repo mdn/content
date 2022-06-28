@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamDefaultReader.releaseLock()
 slug: Web/API/ReadableStreamDefaultReader/releaseLock
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -26,7 +27,7 @@ method has not finished. This will result in a `TypeError` being thrown.
 ## Syntax
 
 ```js
-readableStreamDefaultReader.releaseLock();
+releaseLock()
 ```
 
 ### Parameters
@@ -35,12 +36,12 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- TypeError
-  - : The source object is not a `ReadableStreamDefaultReader`, or a read
+- {{jsxref("TypeError")}}
+  - : Thrown if the source object is not a `ReadableStreamDefaultReader`, or a read
     request is pending.
 
 ## Examples

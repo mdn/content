@@ -1,11 +1,13 @@
 ---
 title: InputDeviceCapabilities API
 slug: Web/API/InputDeviceCapabilities_API
+page-type: web-api-overview
 tags:
   - API
   - InputDeviceCapabilities
   - Overview
   - Reference
+browser-compat: api.InputDeviceCapabilities
 ---
 {{DefaultAPISidebar("InputDeviceCapabilities API")}}{{SeeCompatTable}}
 
@@ -32,10 +34,8 @@ myButton.addEventListener('mousedown', function(e) {
 
 ## Specifications
 
-| Specification                                        | Status                                           | Comment             |
-| ---------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("InputDeviceCapabilities")}} | {{Spec2("InputDeviceCapabilities")}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.InputDeviceCapabilities")}}
+{{Compat}}

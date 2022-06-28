@@ -1,6 +1,7 @@
 ---
 title: CSSKeyframesRule
 slug: Web/API/CSSKeyframesRule
+page-type: web-api-interface
 tags:
   - API
   - CSS Animations
@@ -11,7 +12,7 @@ browser-compat: api.CSSKeyframesRule
 ---
 {{APIRef("CSSOM")}}
 
-The **`CSSKeyframesRule`** interface describes an object representing a complete set of keyframes for a CSS animation. It corresponds to the contents of a whole {{cssxref("@keyframes")}} {{cssxref("at-rule")}}.
+The **`CSSKeyframesRule`** interface describes an object representing a complete set of keyframes for a CSS animation. It corresponds to the contents of a whole {{cssxref("@keyframes")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
 
 {{InheritanceDiagram}}
 
@@ -29,11 +30,11 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 
 - {{domxref("CSSKeyframesRule.appendRule()")}}
-  - : Inserts a new keyframe rule into the current CSSKeyframesRule. The parameter is a {{domxref("DOMString")}} containing a keyframe in the same format as an entry of a {{cssxref("@keyframes")}} at-rule. If it contains more than one keyframe rule, a {{domxref("DOMException")}} with a `SYNTAX_ERR` is thrown.
+  - : Inserts a new keyframe rule into the current CSSKeyframesRule. The parameter is a string containing a keyframe in the same format as an entry of a {{cssxref("@keyframes")}} at-rule. If it contains more than one keyframe rule, a {{domxref("DOMException")}} with a `SYNTAX_ERR` is thrown.
 - {{domxref("CSSKeyframesRule.deleteRule()")}}
-  - : Deletes a keyframe rule from the current CSSKeyframesRule. The parameter is the index of the keyframe to be deleted, expressed as a {{domxref("DOMString")}} resolving as a number between `0%` and `100%`.
+  - : Deletes a keyframe rule from the current CSSKeyframesRule. The parameter is the index of the keyframe to be deleted, expressed as a string resolving as a number between `0%` and `100%`.
 - {{domxref("CSSKeyframesRule.findRule()")}}
-  - : Returns a keyframe rule corresponding to the given key. The key is a {{domxref("DOMString")}} containing an index of the keyframe to be returned, resolving to a percentage between `0%` and `100%`. If no such keyframe exists, `findRule` returns `null`.
+  - : Returns a keyframe rule corresponding to the given key. The key is a string containing an index of the keyframe to be returned, resolving to a percentage between `0%` and `100%`. If no such keyframe exists, `findRule` returns `null`.
 
 ## Example
 

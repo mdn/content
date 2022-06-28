@@ -76,7 +76,7 @@ elements are sorted according to the return value of the compare function (all
 
 | `compareFunction(a, b)` return value | sort order                         |
 |--------------------------------------|------------------------------------|
-| > 0                                  | sort `b` before `a`                |
+| > 0                                  | sort `a` after `b`                 |
 | < 0                                  | sort `a` before `b`                |
 | === 0                                | keep original order of `a` and `b` |
 
@@ -176,10 +176,10 @@ sorted arrays. The numeric arrays are sorted without a compare function, then so
 using one.
 
 ```js
-let stringArray = ['Blue', 'Humpback', 'Beluga'];
-let numberArray = [40, 1, 5, 200];
-let numericStringArray = ['80', '9', '700'];
-let mixedNumericArray = ['80', '9', '700', 40, 1, 5, 200];
+const stringArray = ['Blue', 'Humpback', 'Beluga'];
+const numberArray = [40, 1, 5, 200];
+const numericStringArray = ['80', '9', '700'];
+const mixedNumericArray = ['80', '9', '700', 40, 1, 5, 200];
 
 function compareNumbers(a, b) {
   return a - b;
@@ -250,7 +250,7 @@ mapped.sort((a, b) => {
 const result = mapped.map(v => data[v.i]);
 ```
 
-There is an open source library available called [mapsort](https://null.house/open-source/mapsort) which applies this approach.
+There is an open source library available called [mapsort](https://github.com/Pimm/mapsort) which applies this approach.
 
 ### Sort stability
 

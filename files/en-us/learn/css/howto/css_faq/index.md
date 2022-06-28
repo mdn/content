@@ -114,7 +114,7 @@ If the same property is declared in both rules, the conflict is resolved first t
 
 ## Why don't my style rules work properly?
 
-Style rules that are syntactically correct may not apply in certain situations. You can use [DOM Inspector](/en-US/docs/Tools/Add-ons/DOM_Inspector)'s _CSS Style Rules_ view to debug problems of this kind, but the most frequent instances of ignored style rules are listed below.
+Style rules that are syntactically correct may not apply in certain situations. You can use [Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html) of  _CSS Pane_ of the Inspector to debug problems of this kind, but the most frequent instances of ignored style rules are listed below.
 
 ### HTML elements hierarchy
 

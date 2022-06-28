@@ -1,6 +1,7 @@
 ---
 title: Web Periodic Background Synchronization API
 slug: Web/API/Web_Periodic_Background_Synchronization_API
+page-type: web-api-overview
 tags:
   - API
   - Background
@@ -12,6 +13,7 @@ tags:
   - Sync
   - Web Periodic Background Synchronization API
   - periodic
+browser-compat: api.PeriodicSyncManager
 ---
 {{securecontext_header}}
 
@@ -21,7 +23,7 @@ The Web Periodic Background Synchronization API provides a way to register tasks
 
 ## Web Periodic Background Synchronization Concepts and Usage
 
-The Periodic Background Sync API allows web applications to alert their service worker to make any updates, at a periodic time interval. Uses may include fetching latest content whilst a device is connected to wifi, or allowing background updates to an application.
+The Periodic Background Sync API allows web applications to alert their service worker to make any updates, at a periodic time interval. Uses may include fetching latest content whilst a device is connected to Wi-Fi, or allowing background updates to an application.
 
 The minimum time interval is set when the API is invoked; however the user agent might also take into account other factors which affect when the service worker receives the event. For instance previous website engagement, or connection to a known network.
 
@@ -105,13 +107,11 @@ self.addEventListener('periodicsync', event => {
 
 ## Specifications
 
-| Specification                                                                              |
-| ------------------------------------------------------------------------------------------ |
-| [Web Periodic Background Synchronization](https://wicg.github.io/periodic-background-sync/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.PeriodicSyncManager")}}
+{{Compat}}
 
 ## See also
 

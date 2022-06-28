@@ -1,6 +1,7 @@
 ---
 title: VideoFrame
 slug: Web/API/VideoFrame
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -10,15 +11,24 @@ browser-compat: api.VideoFrame
 ---
 {{DefaultAPISidebar("Web Codecs API")}}
 
-The **`VideoFrame`** interface of the {{domxref('Web Codecs API','','',' ')}} represents a frame of a video.
+The **`VideoFrame`** interface of the [Web Codecs API](/en-US/docs/Web/API/WebCodecs_API) represents a frame of a video.
+
+`VideoFrame` is a {{glossary("Transferable objects","transferable object")}}.
 
 ## Description
 
 A `VideoFrame` object can be created or accessed in a number of ways. The {{domxref("MediaStreamTrackProcessor")}} breaks a media track into individual `VideoFrame` objects.
 
-A `VideoFrame` is a {{domxref("CanvasImageSource")}} and has a constructor that accepts a `CanvasImageSource`. This means that a frame can be created from an image or video element.
+A `VideoFrame` is an image source and has a constructor that accepts any other canvas source (
+an {{domxref("SVGImageElement")}},
+an {{domxref("HTMLVideoElement")}},
+an {{domxref("HTMLCanvasElement")}},
+an {{domxref("ImageBitmap")}},
+an {{domxref("OffscreenCanvas")}},
+or another {{domxref("VideoFrame")}}).
+This means that a frame can be created from an image or video element.
 
-A second constructor enables the creation of a `VideoFrame` from its binary pixel representation in a {{domxref("BufferSource")}}.
+A second constructor enables the creation of a `VideoFrame` from its binary pixel representation in an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
 
 Created frames may then turned into a media track, for example with the {{domxref("MediaStreamTrackGenerator")}} interface that creates a media track from a stream of frames.
 
@@ -54,6 +64,8 @@ Created frames may then turned into a media track, for example with the {{domxre
 
 - {{domxref("VideoFrame.allocationSize()")}}
   - : Returns the number of bytes required to hold the `VideoFrame` as filtered by options passed into the method.
+- {{domxref("VideoFrame.copyTo()")}}
+  - : Copies the contents of the `VideoFrame` to an `ArrayBuffer`.
 - {{domxref("VideoFrame.clone()")}}
   - : Creates a new `VideoFrame` object with reference to the same media resource as the original.
 - {{domxref("VideoFrame.close()")}}

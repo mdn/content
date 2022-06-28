@@ -1,6 +1,7 @@
 ---
 title: CSSUnparsedValue.forEach()
 slug: Web/API/CSSUnparsedValue/forEach
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -23,14 +24,25 @@ executes a provided function once for each element of the
 ## Syntax
 
 ```js
-CSSUnparsedValue.forEach(function callback(currentValue[, index[, array]]) {
-    // your iterator
-}[, thisArg]);
+// Arrow function
+forEach((currentValue) => { /* ... */ } )
+forEach((currentValue, index) => { /* ... */ } )
+forEach((currentValue, index, array) => { /* ... */ } )
+
+// Callback function
+forEach(callbackFn)
+forEach(callbackFn, thisArg)
+
+// Inline callback function
+forEach(function(currentValue) { /* ... */ })
+forEach(function(currentValue, index) { /* ... */ })
+forEach(function(currentValue, index, array){ /* ... */ })
+forEach(function(currentValue, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
 
-- `callback`
+- `callbackFn`
 
   - : The function to execute for each element, taking three arguments:
 
@@ -48,7 +60,7 @@ CSSUnparsedValue.forEach(function callback(currentValue[, index[, array]]) {
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

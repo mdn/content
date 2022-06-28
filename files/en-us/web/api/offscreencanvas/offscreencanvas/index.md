@@ -1,6 +1,7 @@
 ---
 title: OffscreenCanvas()
 slug: Web/API/OffscreenCanvas/OffscreenCanvas
+page-type: web-api-constructor
 tags:
   - API
   - Canvas
@@ -19,7 +20,7 @@ instantiated {{domxref("OffscreenCanvas")}} object.
 ## Syntax
 
 ```js
-new OffscreenCanvas(width, height);
+new OffscreenCanvas(width, height)
 ```
 
 ### Parameters

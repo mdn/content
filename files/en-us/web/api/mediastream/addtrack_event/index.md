@@ -1,11 +1,12 @@
 ---
 title: 'MediaStream: addtrack event'
 slug: Web/API/MediaStream/addtrack_event
+page-type: web-api-event
 tags:
   - Event
 browser-compat: api.MediaStream.addtrack_event
 ---
-{{APIRef}}
+{{APIRef("Media Capture and Streams")}}
 
 The `addtrack` event is fired when a new [`MediaStreamTrack`](/en-US/docs/Web/API/MediaStreamTrack) object has been added to a [`MediaStream`](/en-US/docs/Web/API/MediaStream).
 

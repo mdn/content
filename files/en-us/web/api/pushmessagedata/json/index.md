@@ -1,6 +1,7 @@
 ---
 title: PushMessageData.json()
 slug: Web/API/PushMessageData/json
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -19,14 +20,14 @@ The **`json()`** method of the {{domxref("PushMessageData")}} interface extracts
 ## Syntax
 
 ```js
-var myData = pushEvent.data.json();
+json()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 The result of parsing push event data as JSON. This could be anything that can be represented by JSON — an object, an array, a string, a number...
 

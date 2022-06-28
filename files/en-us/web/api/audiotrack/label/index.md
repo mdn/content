@@ -1,6 +1,7 @@
 ---
 title: AudioTrack.label
 slug: Web/API/AudioTrack/label
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -25,7 +26,7 @@ string.
 
 ## Value
 
-A {{domxref("DOMString")}} specifying the track's human-readable label, if one is
+A string specifying the track's human-readable label, if one is
 available in the track metadata. Otherwise, an empty string (`""`) is
 returned.
 
@@ -41,7 +42,7 @@ only allow certain track kinds through.
 
 ```js
 function getTrackList(el) {
-  var trackList = [];
+  const trackList = [];
   const wantedKinds = [
     "main", "alternative", "main-desc", "translation", "commentary"
   ];

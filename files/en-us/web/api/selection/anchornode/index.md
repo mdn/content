@@ -1,6 +1,7 @@
 ---
 title: Selection.anchorNode
 slug: Web/API/Selection/anchorNode
+page-type: web-api-instance-property
 tags:
   - API
   - HTML Editing
@@ -21,11 +22,9 @@ be visualized by holding the Shift key and pressing the arrow keys on your keybo
 selection's anchor does not move, but the selection's focus, the other end of the
 selection, does move.
 
-## Syntax
+## Value
 
-```js
-node = sel.anchorNode
-```
+A {{domxref("Node")}} object.
 
 ## Specifications
 

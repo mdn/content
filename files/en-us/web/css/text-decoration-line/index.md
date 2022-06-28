@@ -35,6 +35,7 @@ text-decoration-line: overline underline line-through;  /* Multiple decoration l
 text-decoration-line: inherit;
 text-decoration-line: initial;
 text-decoration-line: revert;
+text-decoration-line: revert-layer;
 text-decoration-line: unset;
 ```
 

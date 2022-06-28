@@ -1,6 +1,7 @@
 ---
 title: Selection.rangeCount
 slug: Web/API/Selection/rangeCount
+page-type: web-api-instance-property
 tags:
   - API
   - HTML Editing
@@ -27,13 +28,11 @@ Gecko browsers allow multiple selections across table cells. Firefox allows to s
 multiple ranges in the document by using Ctrl+click (unless the click occurs within an
 element that has the `display: table-cell` CSS property assigned).
 
-## Syntax
+## Value
 
-```js
-value = sel.rangeCount
-```
+A number.
 
-## Example
+## Examples
 
 The following example will show the `rangeCount` every second. Select text
 in the browser to see it change.
@@ -61,7 +60,7 @@ Open your console to see how many ranges are in the selection. In Gecko browsers
 can select multiple ranges across table cells by holding down <kbd>Ctrl</kbd> while
 dragging with the mouse.
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

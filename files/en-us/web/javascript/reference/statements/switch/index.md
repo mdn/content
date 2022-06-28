@@ -48,8 +48,8 @@ switch (expression) {
 - `case valueN` {{optional_inline}}
   - : A `case` clause used to match against `expression`.
     If the `expression` matches the specified
-    `valueN`, the statements inside the `case` clause are
-    executed until either the end of the `switch` statement or a
+    `valueN`, the statements inside the matching `case` clause are
+    executed, and then the statements inside all `case` clauses which follow the matching `case` clause are executed — until either the end of the `switch` statement or a
     `break`.
 - `default` {{optional_inline}}
   - : A `default` clause; if provided, this clause is executed if the value of
@@ -60,7 +60,7 @@ switch (expression) {
 A `switch` statement first evaluates its expression. It then looks for the
 first `case` clause whose expression evaluates to the same value as the
 result of the input expression
-(using the [strict comparison](/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators), `===`)
+(using the [strict comparison](/en-US/docs/Web/JavaScript/Reference/Operators), `===`)
 and transfers control to that clause, executing the associated statements.
 (If multiple `case`s match the provided value, the
 first `case` that matches is selected, even if the `case`s are not

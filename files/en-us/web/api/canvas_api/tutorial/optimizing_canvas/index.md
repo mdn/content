@@ -1,6 +1,7 @@
 ---
 title: Optimizing canvas
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
+page-type: guide
 tags:
   - Advanced
   - Canvas
@@ -98,6 +99,27 @@ If your application uses canvas and doesn't need a transparent backdrop, set the
 var ctx = canvas.getContext('2d', { alpha: false });
 ```
 
+### Scaling for high resolution displays
+
+You may find that canvas items appear blurry on higher-resolution displays. While many solutions may exist, a simple first step is to scale the canvas size up and down simultaneously, using its attributes, styling, and its context's scale.
+
+```js
+// Get the DPR and size of the canvas
+var dpr = window.devicePixelRatio;
+var rect = canvas.getBoundingClientRect();
+
+// Set the "actual" size of the canvas
+canvas.width = rect.width * dpr;
+canvas.height = rect.height * dpr;
+
+// Scale the context to ensure correct drawing operations
+ctx.scale(dpr, dpr);
+
+// Set the "drawn" size of the canvas
+canvas.style.width = rect.width + 'px';
+canvas.style.height = rect.height + 'px';
+```
+
 ### More tips
 
 - Batch canvas calls together. For example, draw a polyline instead of multiple separate lines.
@@ -111,7 +133,7 @@ var ctx = canvas.getContext('2d', { alpha: false });
 
 ## See also
 
-- [Improving HTML5 Canvas Performance – HTML5 Rocks](http://www.html5rocks.com/en/tutorials/canvas/performance/#toc-ref)
+- [Improving HTML5 Canvas Performance – HTML5 Rocks](https://www.html5rocks.com/en/tutorials/canvas/performance/#toc-ref)
 - [Optimizing your JavaScript game for Firefox OS – Mozilla Hacks](https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}

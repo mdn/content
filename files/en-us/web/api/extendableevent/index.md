@@ -1,6 +1,7 @@
 ---
 title: ExtendableEvent
 slug: Web/API/ExtendableEvent
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -52,13 +53,13 @@ The code snippet also shows a best practice for versioning caches used by the se
 > **Note:** In Chrome, logging statements are visible via the "Inspect" interface for the relevant service worker accessed via chrome://serviceworker-internals.
 
 ```js
-var CACHE_VERSION = 1;
-var CURRENT_CACHES = {
+const CACHE_VERSION = 1;
+const CURRENT_CACHES = {
   prefetch: 'prefetch-cache-v' + CACHE_VERSION
 };
 
 self.addEventListener('install', function(event) {
-  var urlsToPrefetch = [
+  const urlsToPrefetch = [
     './static/pre_fetched.txt',
     './static/pre_fetched.html',
     'https://www.chromium.org/_/rsrc/1302286216006/config/customLogo.gif'
@@ -80,7 +81,7 @@ self.addEventListener('install', function(event) {
 });
 ```
 
-> **Note:** When fetching resources, it's very important to use `{mode: 'no-cors'}` if there is any chance that the resources are served off of a server that doesn't support {{glossary("CORS")}}. In this example, [www.chromium.org](http://www.chromium.org) doesn't support CORS.
+> **Note:** When fetching resources, it's very important to use `{mode: 'no-cors'}` if there is any chance that the resources are served off of a server that doesn't support {{glossary("CORS")}}. In this example, [www.chromium.org](https://www.chromium.org/) doesn't support CORS.
 
 ## Specifications
 

@@ -1,16 +1,16 @@
 ---
 title: HTMLDialogElement
 slug: Web/API/HTMLDialogElement
+page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - HTML DOM
   - HTMLDialogElement
   - Interface
   - Reference
 browser-compat: api.HTMLDialogElement
 ---
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 The **`HTMLDialogElement`** interface provides methods to manipulate {{HTMLElement("dialog")}} elements. It inherits properties and methods from the {{domxref("HTMLElement")}} interface.
 
@@ -23,14 +23,14 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLDialogElement.open")}}
   - : A boolean value reflecting the {{htmlattrxref("open", "dialog")}} HTML attribute, indicating whether the dialog is available for interaction.
 - {{domxref("HTMLDialogElement.returnValue")}}
-  - : A {{domxref("DOMString")}} that sets or returns the return value for the dialog.
+  - : A string that sets or returns the return value for the dialog.
 
 ## Methods
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDialogElement.close()")}}
-  - : Closes the dialog. An optional {{domxref("DOMString")}} may be passed as an argument, updating the `returnValue` of the dialog.
+  - : Closes the dialog. An optional string may be passed as an argument, updating the `returnValue` of the dialog.
 - {{domxref("HTMLDialogElement.show()")}}
   - : Displays the dialog modelessly, i.e. still allowing interaction with content outside of the dialog.
 - {{domxref("HTMLDialogElement.showModal()")}}
@@ -75,9 +75,9 @@ The following example shows a simple button that, when clicked, opens a {{htmlel
 
   <script>
     (function() {
-      var updateButton = document.getElementById('updateDetails');
-      var cancelButton = document.getElementById('cancel');
-      var dialog = document.getElementById('favDialog');
+      const updateButton = document.getElementById('updateDetails');
+      const cancelButton = document.getElementById('cancel');
+      const dialog = document.getElementById('favDialog');
       dialog.returnValue = 'favAnimal';
 
       function openCheck(dialog) {

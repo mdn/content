@@ -1,6 +1,7 @@
 ---
 title: AudioWorkletNode.parameters
 slug: Web/API/AudioWorkletNode/parameters
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -105,5 +106,4 @@ gainParam.linearRampToValueAtTime(0.5, audioContext.currentTime + 0.5)
 ## See also
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

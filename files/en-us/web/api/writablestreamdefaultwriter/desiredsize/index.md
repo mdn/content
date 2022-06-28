@@ -1,6 +1,7 @@
 ---
 title: WritableStreamDefaultWriter.desiredSize
 slug: Web/API/WritableStreamDefaultWriter/desiredSize
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -27,7 +28,7 @@ closed.
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : The writer's lock is released.
 
 ## Examples

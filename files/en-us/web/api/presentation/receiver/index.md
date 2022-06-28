@@ -1,6 +1,7 @@
 ---
 title: Presentation.receiver
 slug: Web/API/Presentation/receiver
+page-type: web-api-instance-property
 tags:
   - API
   - Presentation
@@ -30,7 +31,7 @@ with the context which is the source of the presentation.
 If the current context is not receiving a presentation, `receiver` is
 `null`.
 
-## Example
+## Examples
 
 ### Determining whether or not the context is receiving a presentation
 

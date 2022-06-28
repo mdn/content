@@ -1,6 +1,7 @@
 ---
 title: NotificationEvent
 slug: Web/API/NotificationEvent
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -53,8 +54,8 @@ self.addEventListener('notificationclick', function(event) {
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i < clientList.length; i++) {
-      var client = clientList[i];
+    for (let i = 0; i < clientList.length; i++) {
+      const client = clientList[i];
       if (client.url == '/' && 'focus' in client)
         return client.focus();
     }

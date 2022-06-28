@@ -1,6 +1,7 @@
 ---
 title: Lighting in WebGL
 slug: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
+page-type: guide
 tags:
   - 3D
   - Fragments
@@ -229,9 +230,9 @@ The only thing left is to look up the location of the `aVertexNormal` attribute 
 
 And that's it!
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample7/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample7/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample7) | [Open this demo on a new page](https://mdn.github.io/webgl-examples/tutorial/sample7/)
+[View the complete code](https://github.com/mdn/dom-examples/webgl-examples/tree/master/tutorial/sample7) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample7/)
 
 ## Exercises for the reader
 

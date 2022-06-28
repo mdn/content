@@ -1,6 +1,7 @@
 ---
 title: SVGFECompositeElement
 slug: Web/API/SVGFECompositeElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.priority
 slug: Web/API/RTCIceCandidate/priority
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -45,7 +46,7 @@ a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
 The priority is the number after the protocol, so it's the fourth field in the candidate string.
 In this example, the priority is 2043278322.
 
-## Example
+## Examples
 
 This candidate examines the `priority` of the candidate and, if it's greater
 than the priority of a previously-seen candidate, remembers the candidate for later use.

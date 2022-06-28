@@ -1,6 +1,7 @@
 ---
 title: Document.createCDATASection()
 slug: Web/API/Document/createCDATASection
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -16,14 +17,19 @@ and returns it.
 ## Syntax
 
 ```js
-var CDATASectionNode = document.createCDATASection(data);
+createCDATASection(data)
 ```
 
-- _CDATASectionNode_ is a [CDATA
-  Section](/en-US/docs/Web/API/CDATASection) node.
-- _data_ is a string containing the data to be added to the CDATA Section.
+### Parameters
 
-## Example
+- `data`
+  - : A string containing the data to be added to the CDATA Section.
+
+### Return value
+
+A [CDATA Section](/en-US/docs/Web/API/CDATASection) node.
+
+## Examples
 
 ```js
 var docu = new DOMParser().parseFromString('<xml></xml>', 'application/xml')

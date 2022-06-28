@@ -61,8 +61,7 @@ Large-Allocation: 500
 ## Troubleshooting errors
 
 The `Large-Allocation` header throws warnings or error messages when used
-incorrectly. You'll encounter them in the [web
-console](/en-US/docs/Tools/Web_Console).
+incorrectly. You'll encounter them in the [web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html).
 
 - This page was loaded in a new process due to a `Large-Allocation` header.
   - : This message means that the browser saw the `Large-Allocation` header,

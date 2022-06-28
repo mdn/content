@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.addStream()
 slug: Web/API/RTCPeerConnection/addStream
+page-type: web-api-instance-method
 tags:
   - Deprecated
   - Method

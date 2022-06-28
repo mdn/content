@@ -1,6 +1,7 @@
 ---
 title: HashChangeEvent.newURL
 slug: Web/API/HashChangeEvent/newURL
+page-type: web-api-instance-property
 tags:
   - API
   - HashChangeEvent
@@ -17,7 +18,7 @@ navigating.
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

@@ -53,6 +53,7 @@ offset: url(arc.svg) 30deg / 50px 100px;
 offset: inherit;
 offset: initial;
 offset: revert;
+offset: revert-layer;
 offset: unset;
 ```
 

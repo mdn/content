@@ -1,9 +1,9 @@
 ---
 title: IntersectionObserverEntry.isIntersecting
 slug: Web/API/IntersectionObserverEntry/isIntersecting
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Intersection Observer
   - Intersection Observer API
   - IntersectionObserverEntry

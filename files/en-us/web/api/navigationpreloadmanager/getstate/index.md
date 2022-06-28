@@ -1,6 +1,7 @@
 ---
 title: NavigationPreloadManager.getState()
 slug: Web/API/NavigationPreloadManager/getState
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -19,7 +20,11 @@ The **`getState()`** method of the {{domxref("NavigationPreloadManager")}} inter
 getState()
 ```
 
-### Return Value
+### Parameters
+
+None.
+
+### Return value
 
 A {{jsxref("Promise")}} that resolves with an object that has the following properties:
 

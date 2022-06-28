@@ -41,8 +41,6 @@ If you are a complete beginner, web development can be challenging — we will h
 
 > **Note:** Our [glossary](/en-US/docs/Glossary) provides terminology definitions. Besides, if you have a specific question about web development, our [Common questions](/en-US/docs/Learn/Common_questions) section may have something to help you.
 
-{{LearnBox({"title":"Random glossary entry"})}}
-
 ## Topics covered
 
 The following is a list of all the topics we cover in the MDN learning area.
@@ -68,7 +66,7 @@ The following is a list of all the topics we cover in the MDN learning area.
 
 ## Getting our code examples
 
-The code examples you'll encounter in the Learning Area are all [available on GitHub](https://github.com/mdn/learning-area/). If you want to copy them all to your computer, the easiest way is to [download a ZIP of the latest master code branch](https://github.com/mdn/learning-area/archive/master.zip).
+The code examples you'll encounter in the Learning Area are all [available on GitHub](https://github.com/mdn/learning-area/). If you want to copy them all to your computer, the easiest way is to [download a ZIP of the latest master code branch](https://codeload.github.com/mdn/learning-area/zip/main).
 
 If you prefer to copy the repo in a more flexible way that allows for automatic updates, you can follow the more complex instructions:
 
@@ -98,7 +96,7 @@ You can update the `learning-area` repository with any changes made to the maste
 
 ## Contact us
 
-If you want to get in touch with us about anything, the best way is to drop us a message on our [Discourse forum](https://discourse.mozilla.org/c/mdn). We'd like to hear from you about anything you think is wrong or missing on the site, requests for new learning topics, requests for help with items you don't understand, or any other questions or concerns.
+If you want to get in touch with us about anything, the best way is to drop us a message on our [Discourse forum](https://discourse.mozilla.org/c/mdn/236). We'd like to hear from you about anything you think is wrong or missing on the site, requests for new learning topics, requests for help with items you don't understand, or any other questions or concerns.
 
 If you're interested in helping develop/improve the content, take a look at [how you can help](/en-US/docs/MDN/Contribute) and get in touch! We are more than happy to talk to you, whether you are a learner, teacher, experienced web developer, or someone else interested in helping to improve the learning experience.
 

@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesis.speak()
 slug: Web/API/SpeechSynthesis/speak
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -24,18 +25,18 @@ queue; it will be spoken when any other utterances queued before it have been sp
 speak(utterance)
 ```
 
-### Returns
-
-{{jsxref('undefined')}}.
-
 ### Parameters
 
 - `utterance`
   - : A {{domxref("SpeechSynthesisUtterance")}} object.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
-This snippet is excerpted from our [Speech synthesizer demo](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis). When a form containing the text we want to speak is submitted,
+This snippet is excerpted from our [Speech synthesizer demo](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speak-easy-synthesis/script.js). When a form containing the text we want to speak is submitted,
 we (amongst other things) create a new utterance containing this text, then speak it by
 passing it into `speak()` as a parameter.
 

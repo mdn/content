@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.currentTime
 slug: Web/API/HTMLMediaElement/currentTime
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -49,7 +50,7 @@ The length of the media in seconds can be determined using the
 ## Examples
 
 ```js
-var video = document.createElement('video');
+const video = document.createElement('video');
 console.log(video.currentTime);
 ```
 

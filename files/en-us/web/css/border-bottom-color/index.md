@@ -30,6 +30,7 @@ border-bottom-color: transparent;
 border-bottom-color: inherit;
 border-bottom-color: initial;
 border-bottom-color: revert;
+border-bottom-color: revert-layer;
 border-bottom-color: unset;
 ```
 

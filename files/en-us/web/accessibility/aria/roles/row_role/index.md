@@ -10,6 +10,9 @@ tags:
   - Reference
   - Row Role
   - document structure role
+spec-urls:
+  - https://w3c.github.io/aria/#row
+  - https://w3c.github.io/aria-practices/#row
 ---
 An element with `role="row"` is a row of cells within a tabular structure. A row contains one or more cells,  grid cells or column headers, and possibly a row header, within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role).
 
@@ -69,9 +72,9 @@ To create an interactive widget that has a tabular structure, use the grid patte
 - [role="gridcell"](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
   - : A cell in a row within a grid or treegrid.
 - [role="columnheader"](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-  - : A header cell that is the structural equivalent of the HTML {{HTMLElement('th')}} element with a column scope ({{HTMLElement('tr', '<code>&lt;tr  scope="col"></code>')}}). Unlike a plain cell, the columnheader role establishes a relationship between it and all cells in the corresponding column.
+  - : A header cell that is the structural equivalent of the HTML {{HTMLElement('th')}} element with a column scope ({{HTMLElement('tr', '<code>&lt;tr  scope="col"&gt;</code>')}}). Unlike a plain cell, the columnheader role establishes a relationship between it and all cells in the corresponding column.
 - [role="rowheader"](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
-  - : A header cell that is the structural equivalent of the HTML {{HTMLElement('th')}} element with a row scope ({{HTMLElement('tr', '<code>&lt;tr  scope="row"></code>')}}). Unlike a plain cell, the rowheader role establishes a relationship between it and all cells in the corresponding row.
+  - : A header cell that is the structural equivalent of the HTML {{HTMLElement('th')}} element with a row scope ({{HTMLElement('tr', '<code>&lt;tr  scope="row"&gt;</code>')}}). Unlike a plain cell, the rowheader role establishes a relationship between it and all cells in the corresponding row.
 
 #### States and properties
 
@@ -195,14 +198,11 @@ none
 
 ## Specifications
 
-| Specification                                                                        | Status                                           |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------ |
-| {{SpecName("ARIA","#row","ARIA row role")}}                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#row","ARIA row role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See also
 
-- The HTML {{HTMLElement('tr', '<code>&lt;tr></code> table row')}} element
+- The HTML {{HTMLElement('tr', '<code>&lt;tr&gt;</code> table row')}} element
 - {{HTMLElement('table')}}
 - [The `rowgroup` role](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)
 - [The `table` role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.cssRules
 slug: Web/API/CSSStyleSheet/cssRules
+page-type: web-api-instance-property
 tags:
   - API
   - CSS
@@ -65,5 +66,4 @@ However, because `CSSRule` is not a proper array, you can't use
 ## See also
 
 - [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model)
-- [Using
-  dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

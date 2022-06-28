@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.selectedOptions
 slug: Web/API/HTMLSelectElement/selectedOptions
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -117,7 +118,7 @@ grammar rules (including a {{interwiki("wikipedia", "serial comma")}}).
 
 The resulting content looks like this in action:
 
-{{EmbedLiveSample("Example", 600, 250)}}
+{{EmbedLiveSample("Examples", 600, 250)}}
 
 ## Specifications
 

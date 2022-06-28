@@ -1,6 +1,7 @@
 ---
 title: XRWebGLBinding
 slug: Web/API/XRWebGLBinding
+page-type: web-api-interface
 tags:
   - API
   - Interface

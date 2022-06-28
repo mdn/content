@@ -1,6 +1,7 @@
 ---
 title: CSSPropertyRule.syntax
 slug: Web/API/CSSPropertyRule/syntax
+page-type: web-api-instance-property
 tags:
   - API
   - CSS
@@ -19,7 +20,7 @@ The read-only **`syntax`** property of the {{domxref("CSSPropertyRule")}} interf
 
 ## Value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

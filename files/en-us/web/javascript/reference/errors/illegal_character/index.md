@@ -37,7 +37,7 @@ or simple quotes (` " `) vs non-standard quotation marks (` " `).
 
 Some characters look similar, but will cause the parser to fail interpreting your code.
 Famous examples of this are quotes, the minus or semicolon
-([greek questionmark (U+37e)](https://en.wikipedia.org/wiki/Question_mark#Greek_question_mark) looks same).
+([greek question mark (U+37e)](https://en.wikipedia.org/wiki/Question_mark#Greek_question_mark) looks same).
 
 ```js example-bad
 "This looks like a string";  // SyntaxError: illegal character

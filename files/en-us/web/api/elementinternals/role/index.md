@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.role
 slug: Web/API/ElementInternals/role
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`role`** read-only property of the {{domxref("ElementInternals")}} interfa
 
 ## Value
 
-A {{domxref("DOMString")}} which contains an ARIA role. A full list of ARIA roles can be found on the [ARIA techniques page](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques).
+A string which contains an ARIA role. A full list of ARIA roles can be found on the [ARIA techniques page](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques).
 
 ## Examples
 

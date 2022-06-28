@@ -1,6 +1,7 @@
 ---
 title: ShadowRoot.pointerLockElement
 slug: Web/API/ShadowRoot/pointerLockElement
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -18,13 +19,7 @@ element set as the target for mouse events while the pointer is locked. It is
 `null` if lock is pending, pointer is unlocked, or the target is in another
 tree.
 
-## Syntax
-
-```js
-shadowRoot.pointerLockElement;
-```
-
-### Value
+## Value
 
 An {{domxref("Element")}} or `null`.
 

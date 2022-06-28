@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.transformFeedbackVaryings()
 slug: Web/API/WebGL2RenderingContext/transformFeedbackVaryings
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,15 +19,15 @@ to record in {{domxref("WebGLTransformFeedback")}} buffers.
 ## Syntax
 
 ```js
-void gl.transformFeedbackVaryings(program, varyings, bufferMode);
+transformFeedbackVaryings(program, varyings, bufferMode)
 ```
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}}.
-- varyings
-  - : An {{jsxref("Array")}} of {{domxref("DOMString")}} specifying the names of the
+- `varyings`
+  - : An {{jsxref("Array")}} of string specifying the names of the
     varying variables to use.
 - `bufferMode`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the mode to use when capturing the varying
@@ -35,7 +36,7 @@ void gl.transformFeedbackVaryings(program, varyings, bufferMode);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: CustomStateSet.size
 slug: Web/API/CustomStateSet/size
+page-type: web-api-instance-property
 tags:
   - API
   - Property

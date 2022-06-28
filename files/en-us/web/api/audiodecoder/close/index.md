@@ -1,6 +1,7 @@
 ---
 title: AudioDecoder.close()
 slug: Web/API/AudioDecoder/close
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,16 +17,16 @@ The **`close()`** method of the {{domxref("AudioDecoder")}} interface ends all p
 ## Syntax
 
 ```js
-AudioDecoder.close()
+close()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -16,8 +16,8 @@ browser-compat: javascript.builtins.String.replace
 The **`replace()`** method returns a
 new string with some or all matches of a `pattern` replaced by a
 `replacement`. The `pattern` can be a string or a
-{{jsxref("RegExp")}}, and the `replacement` can be a string or a function to
-be called for each match. If `pattern` is a string, only the first occurrence
+{{jsxref("RegExp")}}, and the `replacement` can be a string or a function
+called for each match. If `pattern` is a string, only the first occurrence
 will be replaced.
 
 The original string is left unchanged.
@@ -112,7 +112,7 @@ to `'abc - 12345 - #$*%'`:
 
 ```js
 function replacer(match, p1, p2, p3, offset, string) {
-  // p1 is nondigits, p2 digits, and p3 non-alphanumerics
+  // p1 is non-digits, p2 digits, and p3 non-alphanumerics
   return [p1, p2, p3].join(' - ');
 }
 let newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
@@ -141,7 +141,7 @@ This logs `'Twas the night before Christmas...'`.
 
 Global replace can only be done with a regular expression. In the following example,
 the regular expression includes the
-[global and ignore case flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags_2)
+[global and ignore case flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags)
 which permits `replace()` to replace each
 occurrence of `'apples'` in the string with `'oranges'`.
 

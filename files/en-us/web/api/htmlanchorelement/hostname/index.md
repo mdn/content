@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.hostname
 slug: Web/API/HTMLAnchorElement/hostname
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAnchorElement
@@ -11,16 +12,11 @@ browser-compat: api.HTMLAnchorElement.hostname
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.hostname`** property is a
-{{domxref("USVString")}} containing the domain of the URL.
+string containing the domain of the URL.
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = anchor.hostname;
-// Setter
-anchor.hostname = string;
-```
+A string.
 
 ## Examples
 

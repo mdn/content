@@ -14,20 +14,15 @@ browser-compat: css.selectors.nth-last-child
 
 The **`:nth-last-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among a group of siblings, counting from the end.
 
-```css
-/* Selects every fourth element
-   among any group of siblings,
-   counting backwards from the last one */
-:nth-last-child(4n) {
-  color: lime;
-}
-```
-
-> **Note:** This pseudo-class is essentially the same as {{Cssxref(":nth-child")}}, except it counts items backwards from the _end_, not forwards from the beginning.
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-last-child.html", "tabbed-shorter")}}
 
 ## Syntax
 
 The `nth-last-child` pseudo-class is specified with a single argument, which represents the pattern for matching elements, counting from the end.
+
+```
+:nth-last-child( <nth> [ of <complex-selector-list> ]? )
+```
 
 ### Keyword values
 
@@ -40,10 +35,6 @@ The `nth-last-child` pseudo-class is specified with a single argument, which rep
 
 - `<An+B>`
   - : Represents elements whose numeric position in a series of siblings matches the pattern `An+B`, for every positive integer or zero value of `n`. The index of the first element, counting from the end, is `1`. The values `A` and `B` must both be {{cssxref("&lt;integer&gt;")}}s.
-
-### Formal syntax
-
-{{csssyntax}}
 
 ## Examples
 
@@ -167,4 +158,4 @@ li:nth-last-child(3) ~ li {
 ## See also
 
 - {{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}
-- [Quantity Queries for CSS](https://alistapart.com/article/quantity-queries-for-css)
+- [Quantity Queries for CSS](https://alistapart.com/article/quantity-queries-for-css/)

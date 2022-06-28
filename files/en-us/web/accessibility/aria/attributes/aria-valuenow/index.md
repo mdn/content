@@ -1,24 +1,25 @@
 ---
 title: 'aria-valuenow'
 slug: Web/Accessibility/ARIA/Attributes/aria-valuenow
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-valuenow
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-valuenow
 ---
 
 The `aria-valuenow` attribute defines the current value for a `range` widget.
 
 ## Description
 
-The `aria-valuenow` attribute defines the current value for range widgets. It is similar to the `value` attribute of {{HTMLElement('progress')}}, {{HTMLElement('meter')}}, and {{HTMLElement('input')}} of type [`range`](en-US/docs/Web/HTML/Element/input/range), [`number`](en-US/docs/Web/HTML/Element/input/number) and all the date-time types.
+The `aria-valuenow` attribute defines the current value for range widgets. It is similar to the `value` attribute of {{HTMLElement('progress')}}, {{HTMLElement('meter')}}, and {{HTMLElement('input')}} of type [`range`](/en-US/docs/Web/HTML/Element/input/range), [`number`](/en-US/docs/Web/HTML/Element/input/number) and all the date-time types.
 
 When creating a range type role, including [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role), [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role), [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role), and [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role) on a non-semantic element, the `aria-valuenow` enables defining a current numeric value between the minimum and maximum values. The minimum and maximum values are defined with [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) and [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax).
 
-> **Warning:** The [`range`](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role) role itself should **NOT** be used as it is an ["abstract"](en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles). The `aria-valuenow` attribute is used on all of the range roles subtypes.
+> **Warning:** The [`range`](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role) role itself should **NOT** be used as it is an ["abstract"](/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles). The `aria-valuenow` attribute is used on all of the range roles subtypes.
 
 ```html
 <p id="birthyearLabel">What year were you born?</p>
@@ -31,11 +32,11 @@ When creating a range type role, including [`meter`](/en-US/docs/Web/Accessibili
     1984
   </span>
   <span role="button">
-    <span aria-hidden="true">+</span> 
+    <span aria-hidden="true">+</span>
     Increment year by 1
   </span>
   <span role="button">
-    <span aria-hidden="true">-</span> 
+    <span aria-hidden="true">-</span>
     Decrement year by 1
   </span>
 </div>
@@ -45,11 +46,11 @@ Use semantic HTML elements when you can:
 
 ```html
 <label for="birthyear">What year were you born?</label>
-<input 
-  type="number" 
+<input
+  type="number"
   id="birthyear"
-  value="1984" 
-  min="1900" 
+  value="1984"
+  min="1900"
   max="2021">
 ```
 
@@ -99,9 +100,9 @@ If we employ native HTML semantics with {{HTMLElement('input')}} we get styles a
 ## ARIAMixin API
 
 - {{domxref("Element.ariaValueNow")}}
-  - : The  [`ariaValueNow`](/en-US/docs/Web/API/Element/ariaValueNow) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-valuenow` attribute.
+  - : The [`ariaValueNow`](/en-US/docs/Web/API/Element/ariaValueNow) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-valuenow` attribute.
 - {{domxref("ElementInternals.ariaValueNow")}}
-  - : The  [`ariaValueNow`](/en-US/docs/Web/API/ElementInternals/ariaValueNow) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-valuenow` attribute.
+  - : The [`ariaValueNow`](/en-US/docs/Web/API/ElementInternals/ariaValueNow) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-valuenow` attribute.
 
 ## Associated roles
 
@@ -123,14 +124,12 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-valuenow","ARIA: aria-valuenow Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 
 - [`range` role](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role)
-- [`<input type="range>` element `value` attribute](en-US/docs/Web/HTML/Element/input/range#value) attribute
+- [`<input type="range>` element `value` attribute](/en-US/docs/Web/HTML/Element/input/range#value)
 - [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
 - [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
 - [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin).

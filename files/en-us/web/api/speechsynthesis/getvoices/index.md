@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesis.getVoices()
 slug: Web/API/SpeechSynthesis/getVoices
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -33,7 +34,7 @@ None.
 
 A list (array) of {{domxref("SpeechSynthesisVoice")}} objects.
 
-## Example
+## Examples
 
 ### JavaScript
 
@@ -71,7 +72,7 @@ if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !=
 <select id="voiceSelect"></select>
 ```
 
-{{EmbedLiveSample("Example", 400, 25)}}
+{{EmbedLiveSample("Examples", 400, 25)}}
 
 ## Specifications
 

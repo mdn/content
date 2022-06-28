@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onpointermove
 slug: Web/API/GlobalEventHandlers/onpointermove
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -15,7 +16,7 @@ browser-compat: api.GlobalEventHandlers.onpointermove
 
 The **`onpointermove`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("pointermove")}} events.
+processes {{domxref("HTMLElement/pointermove_event", "pointermove")}} events.
 
 ## Syntax
 

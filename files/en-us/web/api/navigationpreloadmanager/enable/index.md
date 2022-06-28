@@ -1,6 +1,7 @@
 ---
 title: NavigationPreloadManager.enable()
 slug: Web/API/NavigationPreloadManager/enable
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -23,7 +24,11 @@ The method should be called in the service worker's `activate` event handler, wh
 enable()
 ```
 
-### Return Value
+### Parameters
+
+None.
+
+### Return value
 
 A {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
 

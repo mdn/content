@@ -1,6 +1,7 @@
 ---
 title: Starting up and shutting down a WebXR session
 slug: Web/API/WebXR_Device_API/Startup_and_shutdown
+page-type: guide
 tags:
   - 3D
   - API
@@ -28,7 +29,7 @@ Assuming you're already familiar with 3D graphics in general and WebGL in partic
 
 ## Accessing the WebXR API
 
-Your app's access to the WebXR API begins with the {{domxref("XRSystem")}} object. This object represents the overall WebXR device suite available to you through the hardware and drivers available on the user's equipment. There is a global `XRSystem` object available for use by your document through the the {{domxref("Navigator")}} property {{domxref("Navigator.xr", "xr")}}, which returns the `XRSystem` object if suitable XR hardware is available for your use given the hardware available and your document's environment.
+Your app's access to the WebXR API begins with the {{domxref("XRSystem")}} object. This object represents the overall WebXR device suite available to you through the hardware and drivers available on the user's equipment. There is a global `XRSystem` object available for use by your document through the {{domxref("Navigator")}} property {{domxref("Navigator.xr", "xr")}}, which returns the `XRSystem` object if suitable XR hardware is available for your use given the hardware available and your document's environment.
 
 Thus the simplest code that fetches the `XRSystem` object is:
 

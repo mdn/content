@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamBYOBReader.read()
 slug: Web/API/ReadableStreamBYOBReader/read
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -19,12 +20,12 @@ The **`read()`** method of the
 ## Syntax
 
 ```js
-var promise = readableStreamBYOBReader.read(view);
+read(view)
 ```
 
 ### Parameters
 
-- view
+- `view`
   - : The view to be read into.
 
 ### Return value
@@ -40,7 +41,7 @@ the stream. The following are possible:
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : The source object is not a `ReadableStreamBYOBReader`, the stream has no
     owner, the view is not an object or has become detached, or the view's length is 0.
 

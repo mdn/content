@@ -41,7 +41,7 @@ WCAG 2.1 includes:
 
   - W3C/WAI: [What's new in WCAG 2.1?](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/)
   - Deque: [WCAG 2.1: What is Next for Accessibility Guidelines](https://www.deque.com/blog/wcag-2-1-what-is-next-for-accessibility-guidelines/)
-  - TPG: [Web Content Accessibility Guidelines (WCAG) 2.1](https://developer.paciellogroup.com/blog/2018/06/web-content-accessibility-guidelines-wcag-2-1/)
+  - TPG: [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.tpgi.com/web-content-accessibility-guidelines-wcag-2-1/)
 
 ## Legal standing
 

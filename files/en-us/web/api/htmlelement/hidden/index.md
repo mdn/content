@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.hidden
 slug: Web/API/HTMLElement/hidden
+page-type: web-api-instance-property
 tags:
   - API
   - Attribute
@@ -120,7 +121,7 @@ h1 {
 
 ### Result
 
-{{ EmbedLiveSample('Example', 560, 200) }}
+{{ EmbedLiveSample('Examples', 560, 200) }}
 
 ## Specifications
 

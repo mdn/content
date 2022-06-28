@@ -1,6 +1,7 @@
 ---
 title: RTCErrorEvent.error
 slug: Web/API/RTCErrorEvent/error
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -23,13 +24,7 @@ The read-only {{domxref("RTCErrorEvent")}} property **`error`**
 contains an {{domxref("RTCError")}} object describing the details of the error which the
 event is announcing.
 
-## Syntax
-
-```js
-let errorInfo = rtcErrorEvent.error;
-```
-
-### Value
+## Value
 
 An {{domxref("RTCError")}} object whose properties provide details about the error
 which has occurred in the context of a {{Glossary("WebRTC")}} operation.

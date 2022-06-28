@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaHidden
 slug: Web/API/ElementInternals/ariaHidden
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -19,7 +20,7 @@ The **`ariaHidden`** property of the {{domxref("ElementInternals")}} interface r
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : The element is hidden from the accessibility API.

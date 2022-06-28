@@ -1,6 +1,7 @@
 ---
 title: PannerNode.orientationY
 slug: Web/API/PannerNode/orientationY
+page-type: web-api-instance-property
 tags:
   - API
   - PannerNode
@@ -40,7 +41,7 @@ can still change the value of the parameter by assigning a new value to its
 An {{domxref("AudioParam")}} whose `value` is the Y component of the
 direction the audio source is facing, in 3D Cartesian coordinate space.
 
-## Example
+## Examples
 
 See [`PannerNode.orientationX`](/en-US/docs/Web/API/PannerNode/orientationX#example) for example code that demonstrates the effect on volume of changing the {{domxref("PannerNode")}} orientation parameters in combination with {{domxref("PannerNode.coneInnerAngle", "coneInnerAngle")}} and {{domxref("PannerNode.coneOuterAngle", "coneOuterAngle")}}.
 
@@ -55,6 +56,5 @@ See [`PannerNode.orientationX`](/en-US/docs/Web/API/PannerNode/orientationX#exam
 ## See also
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web
-  Audio spatialisation basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Web Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - {{domxref("PannerNode")}}

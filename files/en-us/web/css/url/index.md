@@ -72,7 +72,7 @@ The **`url()`** function can be included as a value for
 
     - \<url>
 
-      - : A url, which is a relative or absolute address, or pointer, to the web resource to be included, or a data uri, optionally in single or double quotes. Quotes are required if the URL includes parentheses, whitespace, or quotes, unless these characters are escaped, or if the address includes control characters above 0x7e. Double quotes cannot occur inside double quotes and single quotes cannot occur inside single quotes unless escaped. The following are all valid and equivalent:
+      - : A URL, which is a relative or absolute address, or pointer, to the web resource to be included, or a data URL, optionally in single or double quotes. Quotes are required if the URL includes parentheses, whitespace, or quotes, unless these characters are escaped, or if the address includes control characters above 0x7e. Double quotes cannot occur inside double quotes and single quotes cannot occur inside single quotes unless escaped. The following are all valid and equivalent:
 
         ```css
         <css_property>: url("https://example.com/image.png")
@@ -86,7 +86,7 @@ The **`url()`** function can be included as a value for
       - : References the ID of an [SVG shape](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes) -- `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect` -- using the shape's geometry as the path.
 
 - `<url-modifier>` {{Experimental_Inline}}
-  - : In the future, the `url()` function may support specifying a modifier, an identifier or a functional notation, which alters the meaning of the URL string.This is not supported and not fully defined in the specification.
+  - : In the future, the `url()` function may support specifying a modifier, an identifier or a functional notation, which alters the meaning of the URL string. This is not supported and not fully defined in the specification.
 
 ### Formal syntax
 
@@ -136,7 +136,7 @@ li::after {
 
 {{EmbedLiveSample("Usage_in_the_content_property", "100%", 110)}}
 
-### Using a data-uri
+### Using a data URL
 
 #### HTML
 
@@ -159,7 +159,7 @@ li::after {
 }
 ```
 
-{{EmbedLiveSample("Using_a_data-uri", "100%", 50)}}
+{{EmbedLiveSample("Using_a_data_URL", "100%", 50)}}
 
 ### Usage in filters
 

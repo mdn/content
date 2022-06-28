@@ -1,6 +1,7 @@
 ---
 title: RTCDtlsTransport.iceTransport
 slug: Web/API/RTCDtlsTransport/iceTransport
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -16,13 +17,7 @@ The read-only **{{DOMxRef("RTCDtlsTransport")}}**
 property **`iceTransport`** contains a reference
 to the underlying {{DOMxRef("RTCIceTransport")}}.
 
-## Syntax
-
-```js
-var iceTransport = rtcDtlsTransport.iceTransport;
-```
-
-### Value
+## Value
 
 The underlying {{DOMxRef("RTCIceTransport")}} instance.
 

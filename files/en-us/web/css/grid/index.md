@@ -60,6 +60,7 @@ grid: auto-flow dense 40% / [line1] minmax(20em, max-content);
 grid: inherit;
 grid: initial;
 grid: revert;
+grid: revert-layer;
 grid: unset;
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: WebSocket.bufferedAmount
 slug: Web/API/WebSocket/bufferedAmount
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -16,12 +17,6 @@ the number of bytes of data that have been queued using calls to [`send()`](/en-
 not yet transmitted to the network. This value resets to zero once all queued data has
 been sent. This value does not reset to zero when the connection is closed; if you keep
 calling [`send()`](/en-US/docs/Web/API/WebSocket/send), this will continue to climb.
-
-## Syntax
-
-```js
-var bufferedAmount = aWebSocket.bufferedAmount;
-```
 
 ## Value
 

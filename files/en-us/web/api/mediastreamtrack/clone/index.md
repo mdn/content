@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrack.clone()
 slug: Web/API/MediaStreamTrack/clone
+page-type: web-api-instance-method
 tags:
   - API
   - Media Capture and Streams
@@ -21,8 +22,12 @@ interface creates a duplicate of the `MediaStreamTrack`. This new
 ## Syntax
 
 ```js
-const newTrack = track.clone()
+clone()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

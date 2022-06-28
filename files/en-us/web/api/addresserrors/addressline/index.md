@@ -1,6 +1,7 @@
 ---
 title: AddressErrors.addressLine
 slug: Web/API/AddressErrors/addressLine
+page-type: web-api-instance-property
 tags:
   - API
   - AddressErrors
@@ -20,7 +21,7 @@ An object based on {{domxref("AddressErrors")}} includes an **`addressLine`** pr
 
 ## Value
 
-If an error occurred during validation of the address due to one of the strings in the {{domxref("PaymentAddress.addressLine", "addressLine")}} array having an invalid value, this property is set to a {{domxref("DOMString")}} providing a human-readable error message explaining the validation error.
+If an error occurred during validation of the address due to one of the strings in the {{domxref("PaymentAddress.addressLine", "addressLine")}} array having an invalid value, this property is set to a string providing a human-readable error message explaining the validation error.
 
 The text should also include, when possible, advice about how to go about correcting the error.
 

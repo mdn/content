@@ -1,6 +1,7 @@
 ---
 title: HTMLTemplateElement.content
 slug: Web/API/HTMLTemplateElement/content
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -16,13 +17,11 @@ The **`HTMLTemplateElement.content`** property returns a
 `<template>` element's template contents (a
 {{domxref("DocumentFragment")}}).
 
-## Syntax
+## Value
 
-```js
-var documentFragment = templateElement.content
-```
+A {{domxref("DocumentFragment")}}.
 
-## Example
+## Examples
 
 ```js
 var templateElement = document.querySelector("#foo");

@@ -11,7 +11,7 @@ browser-compat: css.properties.align-content
 ---
 The [CSS](/en-US/docs/Web/CSS) **`align-content`** property sets the distribution of space between and around content items along a [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)'s cross-axis or a [grid](/en-US/docs/Web/CSS/CSS_Grid_Layout)'s block axis.
 
-The interactive example below use Grid Layout to demonstrate some of the values of this property.
+The interactive example below uses Grid Layout to demonstrate some of the values of this property.
 
 {{EmbedInteractiveExample("pages/css/align-content.html")}}
 
@@ -57,6 +57,7 @@ align-content: unsafe center;
 align-content: inherit;
 align-content: initial;
 align-content: revert;
+align-content: revert-layer;
 align-content: unset;
 ```
 
@@ -210,8 +211,6 @@ select {
 
     <option value="start">start</option>
     <option value="end">end</option>
-    <option value="left">left</option>
-    <option value="right">right</option>
 
     <option value="baseline">baseline</option>
     <option value="first baseline">first baseline</option>
@@ -249,7 +248,7 @@ display.addEventListener('change', function (evt) {
 
 ## Specifications
 
-{{Specifications("css.properties.align-content.grid_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

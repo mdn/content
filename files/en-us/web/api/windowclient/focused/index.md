@@ -1,6 +1,7 @@
 ---
 title: WindowClient.focused
 slug: Web/API/WindowClient/focused
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -22,7 +23,7 @@ the current client has focus.
 
 A boolean value.
 
-## Example
+## Examples
 
 ```js
 self.addEventListener('notificationclick', function(event) {

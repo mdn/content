@@ -1,6 +1,7 @@
 ---
 title: MediaRecorderErrorEvent.error
 slug: Web/API/MediaRecorderErrorEvent/error
+page-type: web-api-instance-property
 tags:
   - API
   - Error
@@ -22,7 +23,7 @@ by a {{domxref("MediaRecorder")}} instance.
 When a `MediaRecorderErrorEvent` occurs, you can determine to some extent
 what went wrong by examining the `error` property within the
 `MediaRecorderErrorEvent` received by the `MediaRecorder`'s
-{{event("error")}} event handler, {{domxref("MediaRecorder.error_event", "onerror")}}.
+{{domxref("MediaRecorder/error_event", "error")}} event handler, {{domxref("MediaRecorder/error_event", "onerror")}}.
 
 ## Value
 
@@ -50,7 +51,7 @@ method references.
 - `UnknownError`
   - : A non-security related error occurred that cannot otherwise be categorized.
     Recording stops, the `MediaRecorder`'s {{domxref("MediaRecorder.state",
-    "state")}} becomes `inactive`, one last {{event("dataavailable")}} event is
+    "state")}} becomes `inactive`, one last {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event is
     sent to the `MediaRecorder` with the remaining received data, and finally a
     {{event("stop")}} event is sent.
 
@@ -96,7 +97,5 @@ function recordStream(stream) {
 
 ## See also
 
-- [MediaStream Recording
-  API](/en-US/docs/Web/API/MediaStream_Recording_API)
-- [Using
-  the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)
+- [Using the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)

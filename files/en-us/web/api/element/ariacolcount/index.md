@@ -1,6 +1,7 @@
 ---
 title: Element.ariaColCount
 slug: Web/API/Element/ariaColCount
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,7 +18,7 @@ The **`ariaColCount`** property of the {{domxref("Element")}} interface reflects
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 
@@ -68,4 +69,4 @@ console.log(el.ariaColCount); // 3
 
 {{Compat}}
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

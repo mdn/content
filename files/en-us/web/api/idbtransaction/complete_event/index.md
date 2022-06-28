@@ -1,6 +1,7 @@
 ---
 title: 'IDBTransaction: complete event'
 slug: Web/API/IDBTransaction/complete_event
+page-type: web-api-event
 tags:
   - Event
   - IDBTransaction
@@ -41,7 +42,7 @@ DBOpenRequest.onupgradeneeded = event => {
   };
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
 
   // define what data items the objectStore will contain
   objectStore.createIndex('hours', 'hours', { unique: false });
@@ -82,7 +83,7 @@ DBOpenRequest.onupgradeneeded = event => {
   };
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
 
   // define what data items the objectStore will contain
   objectStore.createIndex('hours', 'hours', { unique: false });

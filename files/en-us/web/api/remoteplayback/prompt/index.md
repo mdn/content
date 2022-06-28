@@ -1,6 +1,7 @@
 ---
 title: RemotePlayback.prompt()
 slug: Web/API/RemotePlayback/prompt
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -20,7 +21,7 @@ If the user chooses to instead disconnect from the device, the {{domxref("Remote
 ## Syntax
 
 ```js
-RemotePlayback.prompt();
+prompt()
 ```
 
 ### Parameters

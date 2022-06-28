@@ -41,7 +41,7 @@ let getting = browser.cookies.get(
       - : A `string` representing the name of the cookie to retrieve.
     - `partitionKey`{{optional_inline}}
 
-      - : An `object` representing the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#Storage_partitioning) containing the cookie. Include this object with `topLevelSite` to obtain a cookie from partitioned storage. Otherwise, returns the cookie from unpartitioned storage. This object contains:
+      - : An `object` representing the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) containing the cookie. Include this object with `topLevelSite` to obtain a cookie from partitioned storage. Otherwise, returns the cookie from unpartitioned storage. This object contains:
 
         - `topLevelSite`{{optional_inline}}
           - : A `string` representing the first-party URL of the top-level site storage partition containing the cookie.
@@ -87,7 +87,7 @@ getActive.then(getCookie);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#method-get) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#method-get) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

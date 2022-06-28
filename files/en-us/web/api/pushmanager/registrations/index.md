@@ -1,6 +1,7 @@
 ---
 title: PushManager.registrations()
 slug: Web/API/PushManager/registrations
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -19,12 +20,16 @@ existing push endpoint registrations.
 ## Syntax
 
 ```js
-var request = navigator.push.registrations();
+registrations()
 ```
 
-### Return
+### Parameters
 
-A {{domxref("DOMRequest")}} object to handle the success or failure of the method call.
+None.
+
+### Return value
+
+A `DOMRequest` object to handle the success or failure of the method call.
 
 If the method call is successful, the request's `result` will be an array of
 [PushRegistration](#pushregistration) objects.
@@ -38,7 +43,7 @@ Those objects are anonymous JavaScript objects with the following properties:
 - `version`
   - : The current version that the push endpoint is at.
 
-## Example
+## Examples
 
 ```js
 var req = navigator.push.registrations();
@@ -70,4 +75,3 @@ This feature is not part of any specification anymore. It is no longer on track 
 ## See also
 
 - {{domxref("PushManager")}}
-- {{domxref("DOMRequest")}}

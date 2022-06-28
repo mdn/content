@@ -1,6 +1,7 @@
 ---
 title: HTMLStyleElement
 slug: Web/API/HTMLStyleElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -22,15 +23,15 @@ This interface doesn't allow to manipulate the CSS it contains (in most case). T
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLStyleElement.media")}}
-  - : Is a {{domxref("DOMString")}} reflecting the HTML attribute representing the intended destination medium for style information.
+  - : A string reflecting the HTML attribute representing the intended destination medium for style information.
 - {{domxref("HTMLStyleElement.type")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} reflecting the HTML attribute representing the type of style being applied by this statement.
+  - : A string reflecting the HTML attribute representing the type of style being applied by this statement.
 - {{domxref("HTMLStyleElement.disabled")}}
-  - : Is a boolean value reflecting the HTML attribute representing whether or not the stylesheet is disabled (true) or not (false).
+  - : A boolean value reflecting the HTML attribute representing whether or not the stylesheet is disabled (true) or not (false).
 - {{domxref("HTMLStyleElement.sheet")}} {{readonlyInline}}
   - : Returns the {{domxref("CSSStyleSheet")}} object associated with the given element, or `null` if there is none
 - {{domxref("HTMLStyleElement.scoped")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Is a boolean value indicating if the element applies to the whole document (`false`) or only to the parent's sub-tree (`true`).
+  - : A boolean value indicating if the element applies to the whole document (`false`) or only to the parent's sub-tree (`true`).
 
 ## Methods
 

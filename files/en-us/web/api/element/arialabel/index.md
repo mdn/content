@@ -1,6 +1,7 @@
 ---
 title: Element.ariaLabel
 slug: Web/API/Element/ariaLabel
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,7 +18,7 @@ The **`ariaLabel`** property of the {{domxref("Element")}} interface reflects th
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string or `null`.
 
 ## Examples
 

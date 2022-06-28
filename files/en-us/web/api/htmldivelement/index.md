@@ -1,6 +1,7 @@
 ---
 title: HTMLDivElement
 slug: Web/API/HTMLDivElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -20,7 +21,7 @@ The **`HTMLDivElement`** interface provides special properties (beyond the regul
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDivElement.align")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} representing an enumerated property indicating alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, `"justify"`, and `"center"`.
+  - : A string representing an enumerated property indicating alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, `"justify"`, and `"center"`.
 
 ## Methods
 

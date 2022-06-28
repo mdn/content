@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaCurrent
 slug: Web/API/ElementInternals/ariaCurrent
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -19,7 +20,7 @@ The **`ariaCurrent`** property of the {{domxref("ElementInternals")}} interface 
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"page"`
   - : Represents the current page within a set of pages.

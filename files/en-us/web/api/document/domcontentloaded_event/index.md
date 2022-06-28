@@ -1,6 +1,7 @@
 ---
 title: 'Document: DOMContentLoaded event'
 slug: Web/API/Document/DOMContentLoaded_event
+page-type: web-api-event
 tags:
   - API
   - DOMContentLoaded
@@ -272,7 +273,7 @@ if (document.readyState === 'loading') {  // Loading hasn't finished yet
 ```css hidden
 body {
   display: grid;
-  grid-template-areas: "control  log";
+  grid-template-areas: "control log";
 }
 
 .controls {

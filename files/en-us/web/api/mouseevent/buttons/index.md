@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.buttons
 slug: Web/API/MouseEvent/buttons
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -11,7 +12,7 @@ tags:
   - UIEvent
 browser-compat: api.MouseEvent.buttons
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`MouseEvent.buttons`** read-only property indicates which buttons are pressed on the mouse (or other input device) when a mouse event is triggered.
 
@@ -36,7 +37,7 @@ For more than one button pressed simultaneously, the values are combined (e.g., 
 - `8`: 4th button (typically the "Browser Back" button)
 - `16` : 5th button (typically the "Browser Forward" button)
 
-## Example
+## Examples
 
 This example logs the `buttons` property when you trigger a {{domxref("Element/mousedown_event", "mousedown")}} event.
 
@@ -65,7 +66,7 @@ document.querySelector('#log').appendChild(log)
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

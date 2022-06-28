@@ -1,6 +1,7 @@
 ---
 title: Recording a media element
 slug: Web/API/MediaStream_Recording_API/Recording_a_media_element
+page-type: guide
 tags:
   - API
   - Audio
@@ -190,7 +191,7 @@ function startRecording(stream, lengthInMS) {
 - Line 3
   - : Creates an empty array, `data`, which will be used to hold the {{domxref("Blob")}}s of media data provided to our {{domxref("MediaRecorder.dataavailable_event", "ondataavailable")}} event handler.
 - Line 5
-  - : Sets up the handler for the {{event("dataavailable")}} event. The received event's `data` property is a {{domxref("Blob")}} that contains the media data. The event handler pushes the `Blob` onto the `data` array.
+  - : Sets up the handler for the {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event. The received event's `data` property is a {{domxref("Blob")}} that contains the media data. The event handler pushes the `Blob` onto the `data` array.
 - Lines 6-7
   - : Starts the recording process by calling {{domxref("MediaRecorder.start", "recorder.start()")}}, and outputs a message to the log with the updated state of the recorder and the number of seconds it will be recording.
 - Lines 9-12
@@ -236,7 +237,13 @@ startButton.addEventListener("click", function() {
     log("Successfully recorded " + recordedBlob.size + " bytes of " +
         recordedBlob.type + " media.");
   })
-  .catch(log);
+  .catch((error) => {
+    if (error.name === "NotFoundError") {
+      log("Camera or microphone not found. Can't record.");
+    } else {
+      log(error);
+    }
+  });
 }, false);
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.isQuery()
 slug: Web/API/WebGL2RenderingContext/isQuery
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -17,7 +18,7 @@ passed object is a valid {{domxref("WebGLQuery")}} object.
 ## Syntax
 
 ```js
-GLBoolean gl.isQuery(query);
+isQuery(query)
 ```
 
 ### Parameters

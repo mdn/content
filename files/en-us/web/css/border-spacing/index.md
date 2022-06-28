@@ -32,6 +32,7 @@ border-spacing: 1cm 2em;
 border-spacing: inherit;
 border-spacing: initial;
 border-spacing: revert;
+border-spacing: revert-layer;
 border-spacing: unset;
 ```
 

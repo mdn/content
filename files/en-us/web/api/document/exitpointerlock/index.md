@@ -1,6 +1,7 @@
 ---
 title: Document.exitPointerLock()
 slug: Web/API/Document/exitPointerLock
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -20,8 +21,16 @@ To track the success or failure of the request, it is necessary to listen for th
 ## Syntax
 
 ```js
-document.exitPointerLock();
+exitPointerLock()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

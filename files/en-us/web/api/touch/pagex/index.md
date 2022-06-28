@@ -1,6 +1,7 @@
 ---
 title: Touch.pageX
 slug: Web/API/Touch/pageX
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -14,18 +15,12 @@ browser-compat: api.Touch.pageX
 The **`Touch.pageX`** read-only property returns the X
 coordinate of the touch point relative to the viewport, including any scroll offset.
 
-## Syntax
-
-```js
-touchItem.pageX;
-```
-
-### Return value
+## Value
 
 A `long` representing the X coordinate of the touch point relative to the
 viewport, including any scroll offset.
 
-## Example
+## Examples
 
 This example illustrates how to access the {{domxref("Touch")}} object's
 {{domxref("Touch.pageX")}} and {{domxref("Touch.pageY")}} properties. The

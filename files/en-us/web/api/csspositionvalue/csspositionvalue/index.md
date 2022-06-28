@@ -1,6 +1,7 @@
 ---
 title: CSSPositionValue()
 slug: Web/API/CSSPositionValue/CSSPositionValue
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
@@ -26,9 +27,9 @@ new CSSPositionValue(x, y)
 
 ### Parameters
 
-- x
+- `x`
   - : A position along the web page's horizontal axis.
-- y
+- `y`
   - : A position along the web page's vertical axix.
 
 ## Examples

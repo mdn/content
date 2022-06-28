@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePair.remote
 slug: Web/API/RTCIceCandidatePair/remote
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -30,7 +31,7 @@ of a viable pair of ICE candidates. The `RTCIceCandidatePair` is returned by
 the {{domxref("RTCIceTransport")}} method
 {{domxref("RTCIceTransport.getSelectedCandidatePair", "getSelectedCandidatePair()")}}.
 
-## Example
+## Examples
 
 This one-line example obtains the current candidate pair and then from that gets the
 remote candidate.

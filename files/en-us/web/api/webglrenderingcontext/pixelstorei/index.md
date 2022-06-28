@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.pixelStorei()
 slug: Web/API/WebGLRenderingContext/pixelStorei
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,21 +17,21 @@ The **`WebGLRenderingContext.pixelStorei()`** method of the [WebGL API](/en-US/d
 ## Syntax
 
 ```js
-void gl.pixelStorei(pname, param);
+pixelStorei(pname, param)
 ```
 
 ### Parameters
 
-- pname
+- `pname`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which parameter to set. See below for possible
     values.
-- param
+- `param`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying a value to set the _`pname`_
     parameter to. See below for possible values.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Pixel storage parameters
 

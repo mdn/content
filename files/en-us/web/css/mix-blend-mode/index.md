@@ -38,9 +38,10 @@ mix-blend-mode: color;
 mix-blend-mode: luminosity;
 
 /* Global values */
-mix-blend-mode: initial;
 mix-blend-mode: inherit;
+mix-blend-mode: initial;
 mix-blend-mode: revert;
+mix-blend-mode: revert-layer;
 mix-blend-mode: unset;
 ```
 

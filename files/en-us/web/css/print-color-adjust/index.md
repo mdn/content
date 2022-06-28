@@ -31,6 +31,7 @@ print-color-adjust: exact;
 print-color-adjust: inherit;
 print-color-adjust: initial;
 print-color-adjust: revert;
+print-color-adjust: revert-layer;
 print-color-adjust: unset;
 ```
 
@@ -115,6 +116,6 @@ For whatever reason, this is the desired appearance in any rendering environment
 
 ## See also
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
 - {{cssxref("background-image")}}

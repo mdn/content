@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.commit()
 slug: Web/API/WebGLRenderingContext/commit
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -20,8 +21,16 @@ context is not directly fixed to a specific canvas.
 ## Syntax
 
 ```js
-void WebGLRenderingContext.commit()
+commit()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

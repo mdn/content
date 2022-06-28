@@ -1,6 +1,7 @@
 ---
 title: 'NetworkInformation: change event'
 slug: Web/API/NetworkInformation/change_event
+page-type: web-api-event
 tags:
   - API
   - Event Handler
@@ -34,7 +35,7 @@ A generic {{domxref("Event")}}.
 
 ```js
 // Get the connection type.
-var type = navigator.connection.type;
+const type = navigator.connection.type;
 
 function changeHandler(e) {
    // Handle change of connection type here.

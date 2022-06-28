@@ -1,6 +1,7 @@
 ---
 title: CSSImportRule.href
 slug: Web/API/CSSImportRule/href
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -21,7 +22,7 @@ associated stylesheet.
 
 ## Value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

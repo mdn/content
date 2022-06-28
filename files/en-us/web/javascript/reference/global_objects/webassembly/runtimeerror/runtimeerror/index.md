@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.WebAssembly.RuntimeError.RuntimeError
 
 The **`WebAssembly.RuntimeError()`** constructor creates a new
 WebAssembly `RuntimeError` object — the type that is thrown whenever
-WebAssembly specifies a [trap](https://webassembly.org/docs/semantics/#traps).
+WebAssembly specifies a [trap](https://webassembly.github.io/simd/core/intro/overview.html#trap).
 
 ## Syntax
 
@@ -27,9 +27,9 @@ new WebAssembly.RuntimeError(message, fileName, lineNumber)
 
 - `message` {{optional_inline}}
   - : Human-readable description of the error.
-- `fileName` {{optional_inline}}
+- `fileName` {{optional_inline}} {{non-standard_inline}}
   - : The name of the file containing the code that caused the exception.
-- `lineNumber` {{optional_inline}}
+- `lineNumber` {{optional_inline}} {{non-standard_inline}}
   - : The line number of the code that caused the exception.
 
 ## Examples

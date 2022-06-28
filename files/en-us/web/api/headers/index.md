@@ -1,6 +1,7 @@
 ---
 title: Headers
 slug: Web/API/Headers
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -55,7 +56,7 @@ An object implementing `Headers` can directly be used in a {{jsxref("Statements/
 
 > **Note:** To be clear, the difference between {{domxref("Headers.set()")}} and {{domxref("Headers.append()")}} is that if the specified header does already exist and does accept multiple values, {{domxref("Headers.set()")}} will overwrite the existing value with the new one, whereas {{domxref("Headers.append()")}} will append the new value onto the end of the set of values. See their dedicated pages for example code.
 
-> **Note:** All of the Headers methods will throw a `TypeError` if you try to pass in a reference to a name that isn't a [valid HTTP Header name](https://fetch.spec.whatwg.org/#concept-header-name). The mutation operations will throw a `TypeError` if the header has an immutable {{Glossary("Guard")}}. In any other failure case they fail silently.
+> **Note:** All of the Headers methods will throw a {{jsxref("TypeError")}} if you try to pass in a reference to a name that isn't a [valid HTTP Header name](https://fetch.spec.whatwg.org/#concept-header-name). The mutation operations will throw a `TypeError` if the header has an immutable {{Glossary("Guard")}}. In any other failure case they fail silently.
 
 > **Note:** When Header values are iterated over, they are automatically sorted in lexicographical order, and values from duplicate header names are combined.
 

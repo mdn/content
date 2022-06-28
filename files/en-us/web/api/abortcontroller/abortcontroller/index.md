@@ -1,6 +1,7 @@
 ---
 title: AbortController()
 slug: Web/API/AbortController/AbortController
+page-type: web-api-constructor
 tags:
   - API
   - AbortController
@@ -17,7 +18,7 @@ The **`AbortController()`** constructor creates a new {{domxref("AbortController
 ## Syntax
 
 ```js
-new AbortController();
+new AbortController()
 ```
 
 ### Parameters

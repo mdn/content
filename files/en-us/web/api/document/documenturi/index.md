@@ -1,6 +1,7 @@
 ---
 title: Document.documentURI
 slug: Web/API/Document/documentURI
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -38,7 +39,7 @@ document.getElementById("url").textContent = document.documentURI;
 
 ### Result
 
-{{EmbedLiveSample("Example", "100%", 100)}}
+{{EmbedLiveSample("Examples", "100%", 100)}}
 
 ## Specifications
 

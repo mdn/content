@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.port
 slug: Web/API/RTCIceCandidateStats/port
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -22,13 +23,7 @@ browser-compat: api.RTCIceCandidateStats.port
 The {{domxref("RTCIceCandidateStats")}} dictionary's **`port`**
 property specifies the network port used by the candidate.
 
-## Syntax
-
-```js
-candidatePort = rtcIceCandidateStats.port;
-```
-
-### Value
+## Value
 
 An integer value indicating the network port used by the {{domxref("RTCIceCandidate")}}
 described by the `RTCIceCandidateStats` object.

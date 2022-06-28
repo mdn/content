@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.createPattern()
 slug: Web/API/CanvasRenderingContext2D/createPattern
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -24,14 +25,14 @@ applied to any subsequent drawing.
 ## Syntax
 
 ```js
-CanvasPattern ctx.createPattern(image, repetition);
+createPattern(image, repetition)
 ```
 
 ### Parameters
 
 - `image`
 
-  - : A {{domxref("CanvasImageSource")}} to be used as the pattern's image. It can be any
+  - : An image to be used as the pattern's image. It can be any
     of the following:
 
     - {{domxref("HTMLImageElement")}} ({{HTMLElement("img")}})
@@ -41,10 +42,11 @@ CanvasPattern ctx.createPattern(image, repetition);
     - {{domxref("HTMLCanvasElement")}} ({{HTMLElement("canvas")}})
     - {{domxref("ImageBitmap")}}
     - {{domxref("OffscreenCanvas")}}
+    - {{domxref("VideoFrame")}}
 
 - `repetition`
 
-  - : A {{domxref("DOMString")}} indicating how to repeat the pattern's image. Possible
+  - : A string indicating how to repeat the pattern's image. Possible
     values are:
 
     - `"repeat"` (both directions)
@@ -82,13 +84,13 @@ The original image looks like this:
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
-var img = new Image();
+const img = new Image();
 img.src = 'canvas_createpattern.png';
 img.onload = function() {
-  var pattern = ctx.createPattern(img, 'repeat');
+  const pattern = ctx.createPattern(img, 'repeat');
   ctx.fillStyle = pattern;
   ctx.fillRect(0, 0, 300, 300);
 };

@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.Array.slice
 ---
 {{JSRef}}
 
-The **`slice()`** method returns a [shallow copy](/en-us/docs/Glossary/Shallow_copy) of a portion of
+The **`slice()`** method returns a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of
 an array into a new array object selected from `start` to `end`
 (`end` not included) where `start` and `end` represent
 the index of items in that array. The original array will not be modified.
@@ -43,7 +43,7 @@ slice(start, end)
 
 - `end` {{optional_inline}}
 
-  - : Zero-based index _before_ which to end extraction. `slice`
+  - : The index of the first element to exclude from the returned array. `slice`
     extracts up to but not including `end`. For example,
     `slice(1,4)` extracts the second element through the fourth element
     (elements indexed 1, 2, and 3).
@@ -65,7 +65,7 @@ A new array containing the extracted elements.
 
 ## Description
 
-`slice` does not alter the original array. It returns a [shallow copy](/en-us/docs/Glossary/Shallow_copy) of
+`slice` does not alter the original array. It returns a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of
 elements from the original array. Elements of the original array are copied into the
 returned array as follows:
 

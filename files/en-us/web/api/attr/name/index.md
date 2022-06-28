@@ -1,6 +1,7 @@
 ---
 title: Attr.name
 slug: Web/API/Attr/name
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
@@ -13,9 +14,9 @@ The read-only **`name`** property of the {{domxref("Attr")}} interface returns t
 
 The qualified name is always in lower case, whatever case at the attribute creation.
 
-### Value
+## Value
 
-A {{jsxref("String")}} representing the attribute's qualified name.
+A string representing the attribute's qualified name.
 
 ## Example
 

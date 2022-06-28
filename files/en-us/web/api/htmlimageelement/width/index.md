@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.width
 slug: Web/API/HTMLImageElement/width
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -47,10 +48,10 @@ drawn at 400px.
 
 ```html
 <p>Image width: <span class="size">?</span>px (resize to update)</p>
-<img src="/files/16864/clock-demo-200px.png"
+<img src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png"
       alt="Clock"
-      srcset="/files/16864/clock-demo-200px.png 200w,
-          /files/16797/clock-demo-400px.png 400w"
+      srcset="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
+          /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w"
       sizes="(max-width: 400px) 200px, 400px">
 ```
 
@@ -73,7 +74,7 @@ window.addEventListener("resize", updateWidth);
 
 ### Result
 
-{{EmbedLiveSample("Example", 640, 450)}}
+{{EmbedLiveSample("Examples", 640, 450)}}
 
 This example may be easier to try out {{LiveSampleLink('Example', 'in its own window')}}.
 

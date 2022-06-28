@@ -29,7 +29,7 @@ parseInt(string, radix)
   - : The value to parse. If this argument is not a string, then it is converted to one
     using the [`ToString`](https://tc39.es/ecma262/#sec-tostring)
     abstract operation. Leading {{glossary("whitespace")}} in this argument is ignored.
-- `radix`_ {{optional_inline}}_
+- `radix` {{optional_inline}}
 
   - : An integer between `2` and `36` that represents the
     _radix_ (the base in mathematical numeral systems) of the
@@ -49,6 +49,8 @@ Or {{jsxref("NaN")}} when
 - the `radix` modulo `2**32` is smaller than `2` or bigger than
   `36`, or
 - the first non-whitespace character cannot be converted to a number.
+
+> **Note:** JavaScript does not have the distinction of "floating point numbers" and "integers" on the language level. `parseInt()` and [`parseFloat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat) only differ in their parsing behavior, but not necessarily their return values. For example, `parseInt("42")` and `parseFloat("42")` would return the same value: a {{jsxref("Number")}} 42.
 
 ## Description
 

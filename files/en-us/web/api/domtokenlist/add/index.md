@@ -1,6 +1,7 @@
 ---
 title: DOMTokenList.add()
 slug: Web/API/DOMTokenList/add
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -30,9 +31,9 @@ None.
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - : One of the arguments is the empty string
+  - : Thrown if one of the arguments is the empty string
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : A token contains ASCII whitespace.
+  - : Thrown if a token contains ASCII whitespace.
 
 ## Examples
 

@@ -7,7 +7,9 @@ tags:
   - Guide
   - Overview
   - Reference
-spec-urls: https://drafts.fxtf.org/filter-effects/#FilterProperty
+browser-compat:
+  - css.properties.backdrop-filter
+  - css.properties.filter
 ---
 {{CSSRef}}
 
@@ -30,10 +32,4 @@ spec-urls: https://drafts.fxtf.org/filter-effects/#FilterProperty
 
 ## Browser compatibility
 
-### `backdrop-filter` property
-
-{{Compat("css.properties.backdrop-filter")}}
-
-### `filter` property
-
-{{Compat("css.properties.filter")}}
+{{Compat}}

@@ -1,6 +1,7 @@
 ---
 title: RTCSessionDescription
 slug: Web/API/RTCSessionDescription
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -27,7 +28,7 @@ _The `RTCSessionDescription` interface doesn't inherit any properties._
 - {{domxref("RTCSessionDescription.type")}} {{ReadOnlyInline}}
   - : An enum describing the session description's type.
 - {{domxref("RTCSessionDescription.sdp")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} containing the {{Glossary("SDP")}} describing the session.
+  - : A string containing the {{Glossary("SDP")}} describing the session.
 
 ## Methods
 

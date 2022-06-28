@@ -1,6 +1,7 @@
 ---
 title: ResizeObserver.unobserve()
 slug: Web/API/ResizeObserver/unobserve
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -20,18 +21,17 @@ The **`unobserve()`** method of the
 ## Syntax
 
 ```js
-void unobserve(target);
+unobserve(target)
 ```
 
 ### Parameters
 
 - `target`
-  - : A reference to an {{domxref('Element')}} or {{domxref('SVGElement')}} to be
-    unobserved.
+  - : A reference to an {{domxref('Element')}} or {{domxref('SVGElement')}} to be unobserved.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -40,8 +40,7 @@ None.
 ## Examples
 
 The following snippet is taken from the [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html)
-([see
-source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)) example:
+([see source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)) example:
 
 ```js
 const resizeObserver = new ResizeObserver(entries => {

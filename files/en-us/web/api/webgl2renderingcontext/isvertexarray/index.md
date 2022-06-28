@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.isVertexArray()
 slug: Web/API/WebGL2RenderingContext/isVertexArray
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,7 +19,7 @@ passed object is a valid {{domxref("WebGLVertexArrayObject")}} object.
 ## Syntax
 
 ```js
-GLBoolean gl.isVertexArray(vertexArray);
+isVertexArray(vertexArray)
 ```
 
 ### Parameters

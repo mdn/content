@@ -1,6 +1,7 @@
 ---
 title: AudioScheduledSourceNode.stop()
 slug: Web/API/AudioScheduledSourceNode/stop
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -44,17 +45,17 @@ stop(when)
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `InvalidStateNode`
-  - : The node has not been started by calling {{domxref("AudioScheduledSourceNode.start",
+- `InvalidStateNode` {{domxref("DOMException")}}
+  - : Thrown if the node has not been started by calling {{domxref("AudioScheduledSourceNode.start",
     "start()")}}.
-- `RangeError`
-  - : The value specified for `when` is negative.
+- {{jsxref("RangeError")}}
+  - : Thrown if the value specified for `when` is negative.
 
-## Example
+## Examples
 
 This example demonstrates starting an oscillator node, scheduled to begin playing at
 once and to stop playing in one second. The stop time is determined by taking the audio

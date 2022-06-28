@@ -31,6 +31,7 @@ text-align-last: justify;
 text-align-last: inherit;
 text-align-last: initial;
 text-align-last: revert;
+text-align-last: revert-layer;
 text-align-last: unset;
 ```
 

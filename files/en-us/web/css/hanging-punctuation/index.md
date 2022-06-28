@@ -36,6 +36,7 @@ hanging-punctuation: first allow-end last;
 hanging-punctuation: inherit;
 hanging-punctuation: initial;
 hanging-punctuation: revert;
+hanging-punctuation: revert-layer;
 hanging-punctuation: unset;
 ```
 

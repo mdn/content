@@ -59,29 +59,28 @@ zeros.
 Consider the following 32-bit word:
 
 ```js
-var a = 32776;   // 00000000000000001000000000001000 (16 leading zeros)
+const a = 32776;   // 00000000000000001000000000001000 (16 leading zeros)
 Math.clz32(a);   // 16
 
-var b = ~32776;  // 11111111111111110111111111110111 (32776 inverted, 0 leading zeros)
+const b = ~32776;  // 11111111111111110111111111110111 (32776 inverted, 0 leading zeros)
 Math.clz32(b);   // 0 (this is equal to how many leading one's there are in a)
 ```
 
 Using this logic, a `clon` function can be created as follows:
 
 ```js
-var clz = Math.clz32;
+const clz = Math.clz32;
 function clon(integer){
     return clz(~integer);
 }
 ```
 
-Further, this technique could be extended to create jumpless "Count Trailing Zeros" and
-"Count Trailing Ones" functions as seen below. The `ctrz` function below
+Further, this technique could be extended to create a jumpless "Count Trailing Zeros" function, as seen below. The `ctrz` function below
 fills in all the high bits with the lowest filled bit, then negates the bits to erase
-all higher set bits so that clz can then be used.
+all higher set bits so that `clz` can then be used.
 
-```js
-var clz = Math.clz32;
+```js example-bad
+const clz = Math.clz32;
 function ctrz(integer){ // count trailing zeros
     // 1. fill in all the higher bits after the first one
     integer |= integer << 16;
@@ -92,6 +91,22 @@ function ctrz(integer){ // count trailing zeros
     // 2. Now, inversing the bits reveals the lowest bits
     return 32 - clz(~integer) |0; // `|0` ensures integer coercion
 }
+```
+
+However, a simpler and possibly more efficient algorithm is the following:
+
+```js example-good
+function ctrz(integer){
+    integer >>>= 0 // ensures coercion to Uint32
+    if (integer === 0) return 32; // skipping this step would make it return -1
+    integer &= -integer; // equivalent to `int = int & (~int + 1)`
+    return 31 - clz(x);
+}
+```
+
+Then we can define a "Count Trailing Ones" function like so:
+
+```js
 function ctron(integer){ // count trailing ones
     // No shift-filling-in-with-ones operator is available in
     // JavaScript, so the below code is the fastest
@@ -113,9 +128,9 @@ Make these helper functions into ASM.JS module; then, you have a true performanc
 masterpiece. Situations like these are exactly what ASM.JS was designed for.
 
 ```js
-var countTrailsMethods = (function(stdlib, foreign, heap) {
+const countTrailsMethods = (function(stdlib, foreign, heap) {
     "use asm";
-    var clz = stdlib.Math.clz32;
+    const clz = stdlib.Math.clz32;
     function ctrz(integer) { // count trailing zeros
         integer = integer | 0; // coerce to an integer
         // 1. fill in all the higher bits after the first one
@@ -135,8 +150,8 @@ var countTrailsMethods = (function(stdlib, foreign, heap) {
     // unfortunately, ASM.JS demands slow crummy objects:
     return {a: ctrz, b: ctron};
 })(window, null, null);
-var ctrz = countTrailsMethods.a;
-var ctron = countTrailsMethods.b;
+const ctrz = countTrailsMethods.a;
+const ctron = countTrailsMethods.b;
 ```
 
 ## Examples
@@ -148,7 +163,7 @@ Math.clz32(1);           // 31
 Math.clz32(1000);        // 22
 Math.clz32();            // 32
 
-var stuff = [NaN, Infinity, -Infinity, 0, -0, false, null, undefined, 'foo', {}, []];
+const stuff = [NaN, Infinity, -Infinity, 0, -0, false, null, undefined, 'foo', {}, []];
 stuff.every(n => Math.clz32(n) == 32);  // true
 
 Math.clz32(true);        // 31

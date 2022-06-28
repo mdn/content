@@ -48,17 +48,17 @@ Sometimes when writing CSS you will encounter an issue where your CSS doesn't se
 
 The article [What are browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) is an up-to-date guide explaining how to access the tools in various browsers and platforms. While you may choose to mostly develop in a particular browser, and therefore will become most familiar with the tools included in that browser, it is worth knowing how to access them in other browsers. This will help if you are seeing different rendering between multiple browsers.
 
-You will also find that browsers have chosen to focus on different areas when creating their DevTools. For example, in Firefox there are some excellent tools for working visually with CSS Layout, allowing you to inspect and edit [Grid Layouts](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts), [Flexbox](/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts), and [Shapes](/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes). However, all of the different browsers have similar fundamental tools, e.g., for inspecting the properties and values applied to elements on your page, and making changes to them from the editor.
+You will also find that browsers have chosen to focus on different areas when creating their DevTools. For example, in Firefox there are some excellent tools for working visually with CSS Layout, allowing you to inspect and edit [Grid Layouts](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html), [Flexbox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html), and [Shapes](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html). However, all of the different browsers have similar fundamental tools, e.g., for inspecting the properties and values applied to elements on your page, and making changes to them from the editor.
 
 In this lesson we will look at some useful features of the Firefox DevTools for working with CSS. In order to do so I'll be using [an example file](https://mdn.github.io/css-examples/learn/inspecting/inspecting.html). Load this up in a new tab if you want to follow along, and open up your DevTools as described in the article linked above.
 
 ## The DOM versus view source
 
-Something that can trip up newcomers to DevTools is the difference between what you see when you [view the source](/en-US/docs/Tools/View_source) of a webpage, or look at the HTML file you put on the server, and what you can see in the [HTML Pane](/en-US/docs/Tools/Page_Inspector/UI_Tour#html_pane) of the DevTools. While it looks roughly similar to what you can see via View Source there are some differences.
+Something that can trip up newcomers to DevTools is the difference between what you see when you [view the source](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) of a webpage, or look at the HTML file you put on the server, and what you can see in the [HTML Pane](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#html-pane) of the DevTools. While it looks roughly similar to what you can see via View Source there are some differences.
 
 In the rendered DOM the browser may have normalized the HTML, for example by correcting some badly-written HTML for you. If you incorrectly closed an element, for instance by opening an `<h2>` but closing with an `</h3>`, the browser will figure out what you were meaning to do and the HTML in the DOM will correctly close the open `<h2>` with an `</h2>`. The DOM will also show any changes made by JavaScript.
 
-View Source, in comparison, is the HTML source code as stored on the server. The [HTML tree](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#html_tree) in your DevTools shows exactly what the browser is rendering at any given time, so it gives you an insight into what is really going on.
+View Source, in comparison, is the HTML source code as stored on the server. The [HTML tree](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#html-tree) in your DevTools shows exactly what the browser is rendering at any given time, so it gives you an insight into what is really going on.
 
 ## Inspecting the applied CSS
 
@@ -66,7 +66,7 @@ Select an element on your page, either by right/ctrl-clicking on it and selectin
 
 ![The example page for this tutorial with DevTools open.](inspecting1.png)
 
-If you look at the [Rules view](/en-US/docs/Tools/Page_Inspector/UI_Tour#rules_view) to the right of your HTML, you should be able to see the CSS properties and values applied to that element. You will see the rules directly applied to class `box1` and also the CSS that is being inherited by the box from its ancestors, in this case from `<body>`. This is useful if you are seeing some CSS being applied that you didn't expect. Perhaps it is being inherited from a parent element and you need to add a rule to overwrite it in the context of this element.
+If you look at the [Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#rules-view) to the right of your HTML, you should be able to see the CSS properties and values applied to that element. You will see the rules directly applied to class `box1` and also the CSS that is being inherited by the box from its ancestors, in this case from `<body>`. This is useful if you are seeing some CSS being applied that you didn't expect. Perhaps it is being inherited from a parent element and you need to add a rule to overwrite it in the context of this element.
 
 Also useful is the ability to expand out shorthand properties. In our example the `margin` shorthand is used.
 
@@ -96,13 +96,13 @@ You can add properties using the DevTools. Perhaps you have realized that you do
 
 ![The DevTools Panel, adding a new property to the rules, with the autocomplete for font- open](inspecting3-font-size.png)
 
-> **Note:** There are other useful features in the Rules view too, for example declarations with invalid values are crossed out. You can find out more at [Examine and edit CSS](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS).
+> **Note:** There are other useful features in the Rules view too, for example declarations with invalid values are crossed out. You can find out more at [Examine and edit CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html).
 
 ## Understanding the box model
 
 In previous lessons we have discussed [the Box Model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model), and the fact that we have an alternate box model that changes how the size of elements are calculated based on the size you give them, plus the padding and borders. DevTools can really help you to understand how the size of an element is being calculated.
 
-The [Layout view](/en-US/docs/Tools/Page_Inspector/UI_Tour#layout_view) shows you a diagram of the box model on the selected element, along with a description of the properties and values that change how the element is laid out. This includes a description of properties that you may not have explicitly used on the element, but which do have initial values set.
+The [Layout view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#layout-view) shows you a diagram of the box model on the selected element, along with a description of the properties and values that change how the element is laid out. This includes a description of properties that you may not have explicitly used on the element, but which do have initial values set.
 
 In this panel, one of the detailed properties is the `box-sizing` property, which controls what box model the element uses.
 
@@ -112,7 +112,7 @@ The element with a class of `box2` is using `border-box`, so here the padding an
 
 ![The Layout section of the DevTools](inspecting4-box-model.png)
 
-> **Note:** Find out more in [Examining and Inspecting the Box Model](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model).
+> **Note:** Find out more in [Examining and Inspecting the Box Model](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html).
 
 ## Solving specificity issues
 
@@ -143,7 +143,7 @@ As you will recall from the lesson on [cascade and inheritance](/en-US/docs/Lear
 
 ## Find out more about the Firefox DevTools
 
-There is a lot of information about the Firefox DevTools here on MDN. Take a look at the main [DevTools section](/en-US/docs/Tools), and for more detail on the things we have briefly covered in this lesson see [The How To Guides](/en-US/docs/Tools/Page_Inspector#how_to).
+There is a lot of information about the Firefox DevTools here on MDN. Take a look at the main [DevTools section](https://firefox-source-docs.mozilla.org/devtools-user/index.html), and for more detail on the things we have briefly covered in this lesson see [The How To Guides](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#how-to).
 
 ## Debugging problems in CSS
 
@@ -193,25 +193,34 @@ In the instance that your problem is actually a bug in a browser, then a reduced
 
 As you become more experienced with CSS, you will find that you get faster at figuring out issues. However, even the most experienced of us sometimes find ourselves wondering what on earth is going on. Taking a methodical approach, making a reduced test case, and explaining the issue to someone else will usually result in a fix being found.
 
+## Summary
+
+So there we have it: an introduction to debugging CSS, which should give you some useful skills to count on when you start to debug CSS and other types of code later on in your career.
+
+In the last article of this module, we'll take a look at how to [organize your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing).
+
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
 
 ## In this module
 
-1. [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+- [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
 
-    - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+  - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+  - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+  - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+  - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3. [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. **Debugging CSS**
-12. [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)
+- [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+- [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+- [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+- [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+- [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
+- [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+- [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)
+- [Fundamental CSS comprehension](/en-US/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
+- [Creating fancy letterheaded paper](/en-US/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
+- [A cool-looking box](/en-US/docs/Learn/CSS/Building_blocks/A_cool_looking_box)

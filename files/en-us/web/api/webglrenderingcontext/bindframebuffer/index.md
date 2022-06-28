@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.bindFramebuffer()
 slug: Web/API/WebGLRenderingContext/bindFramebuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,30 +19,34 @@ The **`WebGLRenderingContext.bindFramebuffer()`** method of the
 ## Syntax
 
 ```js
-void gl.bindFramebuffer(target, framebuffer);
+bindFramebuffer(target, framebuffer)
 ```
 
 ### Parameters
 
-- target
+- `target`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
 
-    - `gl.FRAMEBUFFER`: Collection buffer data storage of color, alpha,
-      depth and stencil buffers used as both a destination for drawing and as a source for reading (see below).
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    - `gl.FRAMEBUFFER`
+      - : Collection buffer data storage of color, alpha,
+        depth and stencil buffers used as both a destination for drawing and as a source for reading (see below).
+
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
-      - `gl.DRAW_FRAMEBUFFER`: Used as a destination for drawing operations such as `gl.draw*`, `gl.clear*` and `gl.blitFramebuffer`.
-      - `gl.READ_FRAMEBUFFER`: Used as a source for reading operations such as `gl.readPixels` and `gl.blitFramebuffer`
+    - `gl.DRAW_FRAMEBUFFER`
+      - : Used as a destination for drawing operations such as `gl.draw*`, `gl.clear*` and `gl.blitFramebuffer`.
+    - `gl.READ_FRAMEBUFFER`
+      - : Used as a source for reading operations such as `gl.readPixels` and `gl.blitFramebuffer`.
 
-- framebuffer
+- `framebuffer`
   - : A {{domxref("WebGLFramebuffer")}} object to bind.
     If `framebuffer` is null, then the canvas (which has no {{domxref("WebGLFramebuffer")}} object) is bound.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

@@ -1,6 +1,7 @@
 ---
 title: PositionSensorVRDevice
 slug: Web/API/PositionSensorVRDevice
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -39,7 +40,7 @@ _This interface doesn't define any properties of its own, but it does inherit th
 
 ## Examples
 
-The following example is taken from our [positionsensorvrdevice](https://mdn.github.io/webvr-tests/positionsensorvrdevice/) demo, which uses the WebVR API to update the view of a simple {{domxref("CanvasRenderingContext2D","2D canvas")}} scene on each frame of a {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} loop.
+The following example uses the WebVR API to update the view of a simple {{domxref("CanvasRenderingContext2D","2D canvas")}} scene on each frame of a {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} loop.
 
 ```js
 function setView() {

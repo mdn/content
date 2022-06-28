@@ -1,6 +1,7 @@
 ---
 title: BlobEvent
 slug: Web/API/BlobEvent
+page-type: web-api-interface
 tags:
   - API
   - Audio

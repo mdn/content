@@ -1,6 +1,7 @@
 ---
 title: Element.ariaSelected
 slug: Web/API/Element/ariaSelected
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,7 +18,7 @@ The **`ariaSelected`** property of the {{domxref("Element")}} interface reflects
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : The item is selected.
@@ -51,4 +52,4 @@ console.log(el.ariaSelected); // false
 
 ## See also
 
-- [ARIA: tab role](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role)
+- [ARIA: tab role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)

@@ -1,11 +1,13 @@
 ---
 title: Trusted Types API
 slug: Web/API/Trusted_Types_API
+page-type: web-api-overview
 tags:
   - API
   - Overview
   - Reference
   - Trusted Types
+spec-urls: https://w3c.github.io/webappsec-trusted-types/dist/spec/
 ---
 {{DefaultAPISidebar("Trusted Types API")}}
 
@@ -72,9 +74,7 @@ Read more about this example, and discover other ways to sanitize input in the a
 
 ## Specifications
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Trusted Types')}} | {{Spec2('Trusted Types')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

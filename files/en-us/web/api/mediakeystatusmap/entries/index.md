@@ -1,6 +1,7 @@
 ---
 title: MediaKeyStatusMap.entries()
 slug: Web/API/MediaKeyStatusMap/entries
+page-type: web-api-instance-method
 tags:
   - API
   - EncryptedMediaExtensions
@@ -20,14 +21,14 @@ insertion order.
 ## Syntax
 
 ```js
-// TBD
+entries()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 ### Exceptions
 

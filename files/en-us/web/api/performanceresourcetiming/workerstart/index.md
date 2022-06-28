@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.workerStart
 slug: Web/API/PerformanceResourceTiming/workerStart
+page-type: web-api-instance-property
 tags:
   - API
   - PerformanceResourceTiming
@@ -21,17 +22,11 @@ is not intercepted by a Service Worker the property will always return 0.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-resource.workerStart;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}}.
 
-## Example
+## Examples
 
 In the following example, the value of the `*Start` and `*End`
 properties of all "`resource`"

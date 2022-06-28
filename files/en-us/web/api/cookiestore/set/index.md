@@ -1,23 +1,25 @@
 ---
 title: CookieStore.set()
 slug: Web/API/CookieStore/set
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - set()
   - CookieStore
+  - Experimental
 browser-compat: api.CookieStore.set
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 The **`set()`** method of the {{domxref("CookieStore")}} interface sets a cookie with the given name and value or options object. (See below.)
 
 ## Syntax
 
 ```js
-var promise = cookieStore.set(name,value);
-var promise = cookieStore.set(options);
+set(name, value)
+set(options)
 ```
 
 ### Parameters
@@ -25,24 +27,24 @@ var promise = cookieStore.set(options);
 This method requires one of the following:
 
 - `name`
-  - : A {{domxref("USVString")}} with the name of the cookie.
+  - : A string with the name of the cookie.
 - `value`
-  - : A {{domxref("USVString")}} with the value of the cookie.
-- options
+  - : A string with the value of the cookie.
+- `options`
 
   - : An object containing:
 
     - `name`
-      - : A {{domxref("USVString")}} with the name of a cookie.
+      - : A string with the name of a cookie.
     - `value`
-      - : A {{domxref("USVString")}} with the value of the cookie.
-    - `expires`{{Optional_Inline}}
+      - : A string with the value of the cookie.
+    - `expires` {{Optional_Inline}}
       - : A {{domxref("DOMTimeStamp")}} containing the expiration date of the cookie.
-    - `domain`{{Optional_Inline}}
-      - : A {{domxref("USVString")}} containing the domain of the cookie.
-    - `path`{{Optional_Inline}}
-      - : A {{domxref("USVString")}} containing the path of the cookie.
-    - `sameSite`{{Optional_Inline}}
+    - `domain` {{Optional_Inline}}
+      - : A string containing the domain of the cookie.
+    - `path` {{Optional_Inline}}
+      - : A string containing the path of the cookie.
+    - `sameSite` {{Optional_Inline}}
 
       - : One of the following [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) values:
 
@@ -57,13 +59,13 @@ This method requires one of the following:
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with {{jsxref("Undefined")}} when setting the cookie completes.
+A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when setting the cookie completes.
 
 ### Exceptions
 
 - {{jsxref("TypeError")}}
   - : Thrown if setting the cookie with the given values fails.
-- {{domxref("DOMException")}} `SecurityError`
+- `SecurityError` {{domxref("DOMException")}}
   - : Thrown if the origin does not {{glossary("serialize")}} to a URL.
 
 ## Examples

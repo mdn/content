@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: stalled event'
 slug: Web/API/HTMLMediaElement/stalled_event
+page-type: web-api-event
 tags:
   - API
   - Audio

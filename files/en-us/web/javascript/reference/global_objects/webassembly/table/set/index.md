@@ -25,15 +25,15 @@ set(index, value)
 
 ### Parameters
 
-- _index_
+- `index`
   - : The index of the function reference you want to mutate.
-- _value_
+- `value`
   - : The value you want to mutate the reference to. This must be an [exported WebAssembly function](/en-US/docs/WebAssembly/Exported_functions),
     a JavaScript wrapper for an underlying wasm function.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -41,7 +41,7 @@ Void.
   to {{jsxref("WebAssembly/Table/length","Table.prototype.length")}}, a
   {{jsxref("RangeError")}} is thrown.
 - If _value_ is not an exported WebAssembly function or
-  [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null),
+  [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null),
   a {{jsxref("TypeError")}} is thrown.
 
 ## Examples

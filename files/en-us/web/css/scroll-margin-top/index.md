@@ -28,6 +28,7 @@ scroll-margin-top: 1em;
 scroll-margin-top: inherit;
 scroll-margin-top: initial;
 scroll-margin-top: revert;
+scroll-margin-top: revert-layer;
 scroll-margin-top: unset;
 ```
 

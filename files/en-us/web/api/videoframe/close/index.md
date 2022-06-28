@@ -1,6 +1,7 @@
 ---
 title: VideoFrame.close()
 slug: Web/API/VideoFrame/close
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,14 +17,14 @@ The **`close()`** method of the {{domxref("VideoFrame")}} interface clears all s
 ## Syntax
 
 ```js
-VideoFrame.close()
+close()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 Undefined.
 

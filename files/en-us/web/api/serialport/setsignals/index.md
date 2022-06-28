@@ -1,6 +1,7 @@
 ---
 title: SerialPort.setSignals()
 slug: Web/API/SerialPort/setSignals
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,7 +17,8 @@ The **`setSignals()`** method of the {{domxref("SerialPort")}} interface sets co
 ## Syntax
 
 ```js
-var promise = SerialPort.setSignals(options);
+setSignals()
+setSignals(options)
 ```
 
 ### Parameters

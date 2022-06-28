@@ -1,6 +1,7 @@
 ---
 title: CSSCounterStyleRule.name
 slug: Web/API/CSSCounterStyleRule/name
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`name`** property of the {{domxref("CSSCounterStyleRule")}} interface gets
 
 ## Value
 
-A {{domxref("CSSOMString")}}
+A string
 
 ## Examples
 

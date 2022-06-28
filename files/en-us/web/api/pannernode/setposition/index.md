@@ -1,6 +1,7 @@
 ---
 title: PannerNode.setPosition()
 slug: Web/API/PannerNode/setPosition
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -19,27 +20,25 @@ The `setPosition()` method's default value of the position is `(0,` `0,` `0)`.
 ## Syntax
 
 ```js
-var audioCtx = new AudioContext();
-var panner = audioCtx.createPanner();
-panner.setPosition(0,0,0);
+setPosition(x, y, z)
 ```
 
-### Returns
+### Parameters
 
-{{jsxref('undefined')}}.
+- `x`
+  - : The x position of the panner in 3D space.
+- `y`
+  - : The y position of the panner in 3D space.
+- `z`
+  - : The z position of the panner in 3D space.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
-
-## Parameters
-
-- x
-  - : The x position of the panner in 3D space.
-- y
-  - : The y position of the panner in 3D space.
-- z
-  - : The z position of the panner in 3D space.
 
 ## Specifications
 

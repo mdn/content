@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.msInsertAudioEffect()
 slug: Web/API/HTMLMediaElement/msInsertAudioEffect
+page-type: web-api-instance-method
 tags:
   - API
   - API:Microsoft Extensions
@@ -19,23 +20,24 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 ## Syntax
 
 ```js
-HTMLMediaElement.msInsertAudioEffect(activatableClassId: {{DOMxRef("DOMString")}}, effectRequired: {{JSxRef("Boolean", "boolean")}}, config);
+msInsertAudioEffect(activatableClassId, effectRequired)
+msInsertAudioEffect(activatableClassId, effectRequired, config)
 ```
 
 ### Parameters
 
-- activatableClassId
-  - : A {{DOMxRef("DOMString")}} defining the audio effects class.
-- effectRequired
+- `activatableClassId`
+  - : A string defining the audio effects class.
+- `effectRequired`
   - : A {{JSxRef("Boolean")}} which if set to _true_ requires an audio effect to be
     defined.
-- config{{Optional_Inline}}
+- `config` {{Optional_Inline}}
   - : An optional {{JSxRef("Object")}} to help with defining any additional configuration
     needed.
 
 ### Return value
 
-This method does not return a value.
+None ({{jsxref("undefined")}}).
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.name
 slug: Web/API/HTMLImageElement/name
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -23,7 +24,7 @@ property available on all elements.
 
 ## Value
 
-A {{domxref("DOMString")}} providing a name by which the image can be referenced.
+A string providing a name by which the image can be referenced.
 
 > **Warning:** This property is deprecated and is only in the
 > specification still for backward compatibility purposes. Since it functions

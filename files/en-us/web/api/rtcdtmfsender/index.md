@@ -1,6 +1,7 @@
 ---
 title: RTCDTMFSender
 slug: Web/API/RTCDTMFSender
+page-type: web-api-interface
 tags:
   - Audio
   - DTMF
@@ -26,7 +27,7 @@ The primary purpose for WebRTC's DTMF support is to allow WebRTC-based communica
 ## Properties
 
 - {{domxref("RTCDTMFSender.toneBuffer")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} which contains the list of DTMF tones currently in the queue to be transmitted (tones which have already been played are no longer included in the string). See {{domxref("RTCDTMFSender.toneBuffer", "toneBuffer")}} for details on the format of the tone buffer.
+  - : A string which contains the list of DTMF tones currently in the queue to be transmitted (tones which have already been played are no longer included in the string). See {{domxref("RTCDTMFSender.toneBuffer", "toneBuffer")}} for details on the format of the tone buffer.
 
 ## Methods
 

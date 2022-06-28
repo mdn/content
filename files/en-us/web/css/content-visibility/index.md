@@ -29,6 +29,7 @@ content-visibility: auto;
 content-visibility: inherit;
 content-visibility: initial;
 content-visibility: revert;
+content-visibility: revert-layer;
 content-visibility: unset;
 ```
 
@@ -47,9 +48,9 @@ content-visibility: unset;
 
 ## Accessibility
 
-Prior to Chromium 90, offscreen headers and landmark roles within `content-visibility: auto` were not exposed to a11y tools. As of Chromium 90, this has been corrected, and off-screen content within a `content-visibility: auto` element remains in the document object model and the accessability tree. This allows improving page performance with `content-visibility: auto` without negatively impacting accessability.
+Prior to Chromium 90, offscreen headers and landmark roles within `content-visibility: auto` were not exposed to a11y tools. As of Chromium 90, this has been corrected, and off-screen content within a `content-visibility: auto` element remains in the document object model and the accessibility tree. This allows improving page performance with `content-visibility: auto` without negatively impacting accessibility.
 
-However, one caveat to keep in mind is that, since styles for off-screen content are not rendered, elements intentionally hidden with `display: none` or `visibility: hidden` *will still appear in the accessability tree*. If you don't want an element to appear in the accessability tree, use `aria-hidden="true"`.
+However, one caveat to keep in mind is that, since styles for off-screen content are not rendered, elements intentionally hidden with `display: none` or `visibility: hidden` *will still appear in the accessibility tree*. If you don't want an element to appear in the accessibility tree, use `aria-hidden="true"`.
 
 ## Examples
 
@@ -71,7 +72,7 @@ section {
 ...
 ```
 
-### Using hidden to manually manage visibility.
+### Using hidden to manually manage visibility
 
 The following example shows that it is possible to manage visibility in script. The added benefit of using `content-visibility: hidden` instead of, for example, `display: none` is that rendered content when hidden with `content-visibility` will preserve rendering state. This means that if the content is shown again, it will render quicker than the alternative.
 

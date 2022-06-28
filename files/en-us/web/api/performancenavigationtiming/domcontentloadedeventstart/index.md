@@ -1,6 +1,7 @@
 ---
 title: PerformanceNavigationTiming.domContentLoadedEventStart
 slug: Web/API/PerformanceNavigationTiming/domContentLoadedEventStart
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,19 +16,13 @@ a {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equ
 the time immediately before the user agent fires the [DOMContentLoaded](https://html.spec.whatwg.org/multipage/syntax.html#the-end)
 event at the current document.
 
-## Syntax
-
-```js
-perfEntry.domContentLoadedEventStart;
-```
-
-### Return Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to
 the time immediately before the user agent fires the [DOMContentLoaded](https://html.spec.whatwg.org/multipage/syntax.html#the-end)
 event at the current document.
 
-## Example
+## Examples
 
 The following example illustrates this property's usage.
 

@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: pointerleave event'
 slug: Web/API/HTMLElement/pointerleave_event
+page-type: web-api-event
 tags:
   - Event
   - HTML DOM

@@ -36,6 +36,7 @@ mask-repeat: round repeat, space, repeat-x;
 mask-repeat: inherit;
 mask-repeat: initial;
 mask-repeat: revert;
+mask-repeat: revert-layer;
 mask-repeat: unset;
 ```
 

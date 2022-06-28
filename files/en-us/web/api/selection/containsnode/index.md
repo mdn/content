@@ -1,6 +1,7 @@
 ---
 title: Selection.containsNode()
 slug: Web/API/Selection/containsNode
+page-type: web-api-instance-method
 tags:
   - API
   - HTML Editing
@@ -17,7 +18,9 @@ specified node is part of the selection.
 ## Syntax
 
 ```js
-sel.containsNode(node, partialContainment)
+containsNode(node)
+containsNode(node)
+containsNode(node, partialContainment)
 ```
 
 ### Parameters
@@ -30,7 +33,11 @@ sel.containsNode(node, partialContainment)
     `containsNode()` only returns `true` when the entire node is
     part of the selection. If not specified, the default value `false` is used.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ### Check for selection
 

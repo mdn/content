@@ -1,6 +1,7 @@
 ---
 title: FontFaceSet.has()
 slug: Web/API/FontFaceSet/has
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,7 +17,7 @@ The **`has()`** method of the {{domxref("FontFaceSet")}} interface returns a {{j
 ## Syntax
 
 ```js
-FontFaceSet.has(value)
+has(value)
 ```
 
 ### Parameters
@@ -24,7 +25,7 @@ FontFaceSet.has(value)
 - `value`
   - : The value to test for in the `FontFaceSet` object.
 
-### Return Value
+### Return value
 
 A {{jsxref("Boolean")}}, `true` if `value` exists in the `FontFaceSet`.
 

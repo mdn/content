@@ -1,6 +1,7 @@
 ---
 title: AddressErrors.organization
 slug: Web/API/AddressErrors/organization
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -21,7 +22,7 @@ An object based on {{domxref("AddressErrors")}} includes an **`organization`** p
 
 ## Value
 
-If the value specified in the {{domxref("PaymentAddress")}} object's {{domxref("PaymentAddress.organization", "organization")}} property could not be validated, this property contains a {{domxref("DOMString")}} offering a human-readable explanation of the validation error and offers suggestions for correcting it.
+If the value specified in the {{domxref("PaymentAddress")}} object's {{domxref("PaymentAddress.organization", "organization")}} property could not be validated, this property contains a string offering a human-readable explanation of the validation error and offers suggestions for correcting it.
 
 For example, if validation ensures that only permitted characters are included in the organization's name, this might return a string such as "The organization name may only contain the letters A-Z, digits, spaces, and commas."
 

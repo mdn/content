@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.bindAttribLocation()
 slug: Web/API/WebGLRenderingContext/bindAttribLocation
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,23 +19,23 @@ to an attribute variable.
 ## Syntax
 
 ```js
-void gl.bindAttribLocation(program, index, name);
+bindAttribLocation(program, index, name)
 ```
 
 ### Parameters
 
 - `program`
   - : A {{domxref("WebGLProgram")}} object to bind.
-- index
+- `index`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the generic vertex to bind.
-- name
-  - : A {{domxref("DOMString")}} specifying the name of the variable to bind to the
+- `name`
+  - : A string specifying the name of the variable to bind to the
     generic vertex index. This name cannot start with "webgl\_" or "\_webgl\_", as these are
     reserved for use by WebGL.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.bgColor
 slug: Web/API/HTMLTableElement/bgColor
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -24,18 +25,11 @@ or using a style rule.
 
 Also available on DOM [`tbody`](/en-US/docs/Web/API/HTMLTableElement/tBodies), [`row`](/en-US/docs/Web/API/HTMLTableElement/rows) and [`cell`](/en-US/docs/DOM/table.cells) objects.
 
-## Syntax
+## Value
 
-```js
-color = table.bgColor
-table.bgColor = color
-```
+A string representing a color value.
 
-### Parameters
-
-- `color` is a string representing a color value.
-
-## Example
+## Examples
 
 ```js
 // Set table background color to lightblue
@@ -45,8 +39,7 @@ t.bgColor = 'lightblue';
 
 ## Specifications
 
-- [DOM Level 2
-  HTML:_HTMLTableElement_ .bgColor](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-83532985)
+- [DOM Level 2 HTML:_HTMLTableElement_ .bgColor](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-83532985)
 
 ## Browser compatibility
 

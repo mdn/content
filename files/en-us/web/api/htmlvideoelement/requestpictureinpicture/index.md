@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.requestPictureInPicture()
 slug: Web/API/HTMLVideoElement/requestPictureInPicture
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -29,8 +30,12 @@ video will receive a {{domxref("HTMLVideoElement.enterpictureinpicture_event",
 ## Syntax
 
 ```js
-videoElement.requestPictureInPicture();
+requestPictureInPicture()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

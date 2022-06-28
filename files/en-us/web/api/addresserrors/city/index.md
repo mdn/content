@@ -1,6 +1,7 @@
 ---
 title: AddressErrors.city
 slug: Web/API/AddressErrors/city
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -21,7 +22,7 @@ An object based on {{domxref("AddressErrors")}} includes a **`city`** property w
 
 ## Value
 
-If the value specified in the {{domxref("PaymentAddress")}} object's {{domxref("PaymentAddress.city", "city")}} property could not be validated, this property contains a {{domxref("DOMString")}} offering a human-readable explanation of the validation error and offers suggestions for correcting it.
+If the value specified in the {{domxref("PaymentAddress")}} object's {{domxref("PaymentAddress.city", "city")}} property could not be validated, this property contains a string offering a human-readable explanation of the validation error and offers suggestions for correcting it.
 
 If the city value was validated successfully, this property is not included in the `AddressErrors` object.
 

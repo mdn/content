@@ -1,6 +1,7 @@
 ---
 title: HTMLButtonElement.labels
 slug: Web/API/HTMLButtonElement/labels
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -14,18 +15,12 @@ The **`HTMLButtonElement.labels`** read-only property returns a
 {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with the
 {{HTMLElement("button")}} element.
 
-## Syntax
-
-```js
-var labelElements = button.labels;
-```
-
-### Return value
+## Value
 
 A {{domxref("NodeList")}} containing the `<label>` elements associated
 with the `<button>` element.
 
-## Example
+## Examples
 
 ### HTML
 
@@ -46,7 +41,7 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-{{EmbedLiveSample("Example", "100%", 30)}}
+{{EmbedLiveSample("Examples", "100%", 30)}}
 
 ## Specifications
 

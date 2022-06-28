@@ -12,11 +12,8 @@ browser-compat: javascript.operators.unsigned_right_shift
 {{jsSidebar("Operators")}}
 
 The **unsigned right shift operator (`>>>`)**
-(zero-fill right shift) shifts the first operand the specified number of bits to the
-right. Excess bits shifted off to the right are discarded. Zero bits are shifted in from
-the left. The sign bit becomes `0`, so the result is always non-negative.
-Unlike the other bitwise operators, zero-fill right shift returns an unsigned 32-bit
-integer.
+(zero-fill right shift) shifts the first operand the specified number of bits, modulo 32, to the
+right.
 
 {{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift.html")}}
 
@@ -52,6 +49,10 @@ However, this is not the case for negative numbers. For example,
                     --------------------------------
 -9 >>> 2 (base 10): 00111111111111111111111111111101 (base 2) = 1073741821 (base 10)
 ```
+
+The left operand will be converted to an unsigned 32-bit integer, which means floating point numbers will be truncated, and number not within the 32-bit bounds will over-/underflow.
+
+The right operand will be converted to an unsigned 32-bit integer and then taken modulo 32, so the actual shift offset will always be a positive integer between 0 and 31, inclusive. For example, `100 >>> 32` is the same as `100 >>> 0` (and produces `100`) because 32 modulo 32 is 0.
 
 ## Examples
 

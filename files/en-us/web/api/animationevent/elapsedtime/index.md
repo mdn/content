@@ -1,6 +1,7 @@
 ---
 title: AnimationEvent.elapsedTime
 slug: Web/API/AnimationEvent/elapsedTime
+page-type: web-api-instance-property
 tags:
   - API
   - AnimationEvent
@@ -34,8 +35,7 @@ A `float` giving the amount of time in seconds.
 
 ## See also
 
-- [Using CSS
-  animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - Animation-related CSS properties and at-rules: {{cssxref("animation")}},
   {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}},
   {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}},

@@ -18,8 +18,8 @@ HTTP allows a browser, or another {{Glossary("user agent")}}, to communicate wit
 
 - [Identifying resources on the Web](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
   - : URIs and how to access resources on the Web.
-- [Data URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
-  - : A specific kind of URIs, data URIs, embed the resource itself inside the identifier.
+- [Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
+  - : A specific kind of URIs, data URLs, embed the resource itself inside the identifier.
 - [Choosing between www and non-www URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs)
   - : Advice on using a www-prefixed domain or not, this article explains the consequences of the choice as well as how to make it.
 - [MIME Types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)

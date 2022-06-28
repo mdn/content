@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.getIndexedParameter()
 slug: Web/API/WebGL2RenderingContext/getIndexedParameter
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,7 +19,7 @@ information about a given `target`.
 ## Syntax
 
 ```js
-any gl.getIndexedParameter(target, index);
+getIndexedParameter(target, index)
 ```
 
 ### Parameters

@@ -1,6 +1,7 @@
 ---
 title: Navigator.setAppBadge()
 slug: Web/API/Navigator/setAppBadge
+page-type: web-api-instance-method
 tags:
   - API
   - Badging API
@@ -17,7 +18,8 @@ The **`setAppBadge()`** method of the {{domxref("Navigator")}} interface a badge
 ## Syntax
 
 ```js
-let promise = Navigator.setAppBadge(contents);
+setAppBadge()
+setAppBadge(contents)
 ```
 
 ### Parameters

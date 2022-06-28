@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.getTransform()
 slug: Web/API/CanvasRenderingContext2D/getTransform
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -19,7 +20,7 @@ the context.
 ## Syntax
 
 ```js
-let storedTransform = ctx.getTransform();
+getTransform()
 ```
 
 ### Parameters

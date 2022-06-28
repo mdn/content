@@ -1,6 +1,7 @@
 ---
 title: Touch.screenX
 slug: Web/API/Touch/screenX
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -15,18 +16,11 @@ browser-compat: api.Touch.screenX
 
 Returns the X coordinate of the touch point relative to the screen, not including any scroll offset.
 
-## Syntax
+## Value
 
-```js
-var x = touchItem.screenX;
-```
+A number.
 
-### Return value
-
-- `x`
-  - : The X coordinate of the touch point relative to the screen, not including any scroll offset.
-
-## Example
+## Examples
 
 This example illustrates how to access the {{domxref("Touch")}} object's {{domxref("Touch.screenX")}} and {{domxref("Touch.screenY")}} properties. The {{domxref("Touch.screenX")}} property is the horizontal (x) coordinate of a touch point relative to the screen in CSS pixels. The {{domxref("Touch.screenY")}} property is the vertical coordinate of a touch point relative to the screen in CSS pixels.
 

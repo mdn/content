@@ -32,7 +32,7 @@ In _server-driven content negotiation_, or proactive content negotiation, the br
 
 ![](httpnegoserver.png)
 
-The HTTP/1.1 standard defines list of the standard headers that start server-driven negotiation (such as {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Encoding")}}, and {{HTTPHeader("Accept-Language")}}). Though {{HTTPHeader("User-Agent")}} isn't in this list, it's sometimes also used to send a specific representation of the requested resource. However, this isn't always considered a good practice. The server uses the {{HTTPHeader("Vary")}} header to indicate which headers it actually used for content negotiation (or more precisely, the associated response headers), so that [caches](/en-US/docs/Web/HTTP/Caching) can work optimally.
+The HTTP/1.1 standard defines list of the standard headers that start server-driven negotiation (such as {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Encoding")}}, and {{HTTPHeader("Accept-Language")}}). Though {{HTTPHeader("User-Agent")}} isn't in this list, it's sometimes also used to send a specific representation of the requested resource. However, this isn't always considered a good practice. The server uses the {{HTTPHeader("Vary")}} header to indicate which headers it actually used for content negotiation (or more precisely, the associated request headers), so that [caches](/en-US/docs/Web/HTTP/Caching) can work optimally.
 
 In addition to these, there's an experimental proposal to add more headers to the list of available headers, called _client hints_. Client hints advertise what kind of device the user agent runs on (for example, a desktop computer or a mobile device).
 

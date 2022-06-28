@@ -1,6 +1,7 @@
 ---
 title: XRCPUDepthInformation.getDepthInMeters()
 slug: Web/API/XRCPUDepthInformation/getDepthInMeters
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -29,6 +30,10 @@ getDepthInMeters(x, y)
   - : X coordinate (origin at the left, grows to the right).
 - `y`
   - : Y coordinate (origin at the top, grows downward).
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

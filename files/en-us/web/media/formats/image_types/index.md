@@ -184,7 +184,7 @@ The following list includes image formats that appear on the web, but which shou
 
 > **Note:** Safari 11.1 added the ability to use a video format, as an animated gif replacement.
 > No other browser supports this.
-> See the [Chromium bug](https://crbug.com/791658), and [Firefox bug](https://bugzil.la/895131) for more information.
+> See the [Chromium bug](https://bugs.chromium.org/p/chromium/issues/detail?id=791658), and [Firefox bug](https://bugzilla.mozilla.org/show_bug.cgi?id=895131) for more information.
 
 ## Image file type details
 
@@ -200,7 +200,7 @@ APNG is a file format first introduced by Mozilla which extends the [PNG](#png_p
 Conceptually similar to the animated GIF format which has been in use for decades, APNG is more capable in that it supports a variety of {{interwiki("wikipedia", "color depth", "color depths")}}, whereas animated GIF supports only 8-bit {{interwiki("wikipedia", "indexed color")}}.
 
 APNG is ideal for basic animations that do not need to synchronize to other activities or to a sound track, such as progress indicators, activity {{interwiki("wikipedia", "throbber", "throbbers")}}, and other animated sequences.
-For example, APNG is [one of the formats supported when creating animated stickers](https://developer.apple.com/stickers/) for Apple's iMessage application (and the Messages application on iOS).
+For example, APNG is [one of the formats supported when creating animated stickers](https://developer.apple.com/imessage/) for Apple's iMessage application (and the Messages application on iOS).
 They're also commonly used for the animated portions of web browsers' user interfaces.
 
 <table class="standard-table">
@@ -378,7 +378,7 @@ As support is not yet comprehensive (and has little historical depth) you should
         <ul>
           <li>Color modes: YUV444, YUV422, YUV420</li>
           <li>Greyscale support: YUV400</li>
-          <li>Bits: 8/10/12 bit</li>
+          <li>Bits: 8/10/12-bit</li>
           <li>Alpha support</li>
           <li>ICC profile support</li>
           <li>
@@ -868,7 +868,7 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
 
 ### PNG (Portable Network Graphics)
 
-The {{Glossary("PNG")}} (pronounced "**ping**") image format uses lossless or lossy compression to provide more efficient compression, and supports higher color depths than [GIF](#gif_graphics_interchange_format), as well as full alpha transparency support.
+The {{Glossary("PNG")}} (pronounced "**ping**") image format uses lossless compression, while supporting higher color depths than [GIF](#gif_graphics_interchange_format) and being more efficient, as well as featuring full alpha transparency support.
 
 PNG is widely supported, with all major browsers offering full support for its features.
 Internet Explorer, which introduced PNG support in versions 4–5, did not fully support it until IE 9, and had many infamous bugs for many of the intervening years, including in the once-omnipresent Internet Explorer 6.
@@ -1047,7 +1047,7 @@ For instance, this example defines an drawing area with initial size 100 by 100 
 
 SVG can be used in web content in two ways:
 
-1. You can directly write the {{HTMLElement("svg")}} element within the HTML, containing [SVG elements](/en-US/docs/Web/SVG/Element) to draw the image.
+1. You can directly write the {{SVGElement("svg")}} element within the HTML, containing [SVG elements](/en-US/docs/Web/SVG/Element) to draw the image.
 2. You can display an SVG image anywhere you can use any of the other image types, including with the {{HTMLElement("img")}} and {{HTMLElement("picture")}} elements, the {{cssxref("background-image")}} CSS property, and so forth.
 
 SVG is an ideal choice for images which can be represented using a series of drawing commands, especially if the size at which the image will be rendered is unknown or may vary, since SVG will smoothly scale to the desired size.

@@ -1,6 +1,7 @@
 ---
 title: TransformStreamDefaultController.enqueue()
 slug: Web/API/TransformStreamDefaultController/enqueue
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,13 +19,23 @@ For more information on readable streams and chunks see [Using Readable Streams]
 ## Syntax
 
 ```js
-TransformStreamDefaultController.enqueue(chunk);
+enqueue(chunk)
 ```
 
 ### Parameters
 
 - `chunk`
   - : The chunk being queued. A chunk is a single piece of data. It can be any type of data, and a stream can contain chunks of different types.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : The stream is not readable.
+    This might occur if the stream is errored via `controller.error()`, or when it is closed without its controller's `controller.close()` method ever being called.
 
 ## Examples
 

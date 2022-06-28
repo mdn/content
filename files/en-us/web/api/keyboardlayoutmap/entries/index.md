@@ -1,6 +1,7 @@
 ---
 title: KeyboardLayoutMap.entries
 slug: Web/API/KeyboardLayoutMap/entries
+page-type: web-api-instance-property
 tags:
   - API
   - Entries

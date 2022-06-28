@@ -1,6 +1,7 @@
 ---
 title: RTCRtpReceiver.getContributingSources()
 slug: Web/API/RTCRtpReceiver/getContributingSources
+page-type: web-api-instance-method
 tags:
   - API
   - CSRC
@@ -24,7 +25,7 @@ in the last ten seconds.
 ## Syntax
 
 ```js
-var rtcRtpContributingSources = rtcRtpReceiver.getContributingSources()
+getContributingSources()
 ```
 
 ### Parameters

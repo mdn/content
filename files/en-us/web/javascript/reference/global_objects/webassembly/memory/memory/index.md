@@ -28,19 +28,19 @@ new WebAssembly.Memory(memoryDescriptor)
 
 ### Parameters
 
-- _memoryDescriptor_
+- `memoryDescriptor`
 
   - : An object that can contain the following members:
 
-    - _initial_
+    - `initial`
       - : The initial size of the WebAssembly Memory, in units of WebAssembly pages.
-    - _maximum {{optional_inline}}_
+    - `maximum` {{optional_inline}}
       - : The maximum size the WebAssembly Memory is allowed to grow to, in units of
         WebAssembly pages. When present, the `maximum` parameter acts as a hint
         to the engine to reserve memory up front. However, the engine may ignore or clamp
         this reservation request. Unshared WebAssembly memories don't need to set a
         `maximum`, but shared memories do.
-    - shared _{{optional_inline}}_
+    - `shared` {{optional_inline}}
       - : A boolean value that defines whether the memory is a shared memory or not. If
         set to `true`, it is a shared memory. The default is
         `false`.
@@ -54,6 +54,8 @@ new WebAssembly.Memory(memoryDescriptor)
   thrown.
 - If `maximum` is specified and is smaller than `initial`, a
   {{jsxref("RangeError")}} is thrown.
+- If `shared` is present and `true`, yet `maximum` is not specified, a
+  {{jsxref("TypeError")}} is thrown.
 
 ## Examples
 
@@ -68,7 +70,10 @@ property will return an
 [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
 
 ```js
-var memory = new WebAssembly.Memory({initial:10, maximum:100});
+const memory = new WebAssembly.Memory({
+  initial: 10,
+  maximum: 100
+});
 ```
 
 The second way to get a `WebAssembly.Memory` object is to have it exported
@@ -81,11 +86,11 @@ function and uses it to sum some values.
 ```js
 WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
 .then(obj => {
-  var i32 = new Uint32Array(memory.buffer);
-  for (var i = 0; i < 10; i++) {
+  const i32 = new Uint32Array(memory.buffer);
+  for (let i = 0; i < 10; i++) {
     i32[i] = i;
   }
-  var sum = obj.instance.exports.accumulate(0, 10);
+  const sum = obj.instance.exports.accumulate(0, 10);
   console.log(sum);
 });
 ```
@@ -93,17 +98,23 @@ WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
 ### Creating a shared memory
 
 By default, WebAssembly memories are unshared.
-You can create a [shared memory](/en-US/docs/WebAssembly/Understanding_the_text_format#Shared_memories)
+You can create a [shared memory](/en-US/docs/WebAssembly/Understanding_the_text_format#shared_memories)
 by passing `shared: true` in the constructor's initialization object:
 
 ```js
-let memory = new WebAssembly.Memory({initial:10, maximum:100, shared:true});
+const memory = new WebAssembly.Memory({
+  initial: 10,
+  maximum: 100,
+  shared: true
+});
 ```
 
 This memory's `buffer` property will return a
 [`SharedArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer).
 
 ## Specifications
+
+The `shared` attribute is only documented in [the Threading proposal for WebAssembly](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#javascript-api-changes) and not part of the official specs.
 
 {{Specifications}}
 

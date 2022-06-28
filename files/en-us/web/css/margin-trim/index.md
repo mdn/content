@@ -28,6 +28,7 @@ margin-trim: all;
 margin-trim: inherit;
 margin-trim: initial;
 margin-trim: revert;
+margin-trim: revert-layer;
 margin-trim: unset;
 ```
 

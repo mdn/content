@@ -1,6 +1,7 @@
 ---
 title: clearInterval()
 slug: Web/API/clearInterval
+page-type: web-api-global-function
 tags:
   - API
   - HTML DOM
@@ -14,6 +15,8 @@ browser-compat: api.clearInterval
 
 The global **`clearInterval()`** method cancels a timed, repeating action which
 was previously established by a call to {{domxref("setInterval", "setInterval()")}}.
+If the parameter provided does not identify a previously established action,
+this method does nothing.
 
 ## Syntax
 
@@ -36,12 +39,11 @@ However, for clarity, you should avoid doing so.
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
-See the [`setInterval()`
-examples](/en-US/docs/Web/API/setInterval#Examples).
+See the [`setInterval()` examples](/en-US/docs/Web/API/setInterval#examples).
 
 ## Specifications
 
@@ -53,9 +55,7 @@ examples](/en-US/docs/Web/API/setInterval#Examples).
 
 ## See also
 
-- [JavaScript timers](/en-US/docs/JavaScript/Timers)
 - {{domxref("setTimeout")}}
 - {{domxref("setInterval")}}
 - {{domxref("clearTimeout")}}
 - {{domxref("Window.requestAnimationFrame")}}
-- [_Daemons_ management](/en-US/docs/JavaScript/Timers/Daemons)

@@ -1,6 +1,7 @@
 ---
 title: Document.forms
 slug: Web/API/Document/forms
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -60,8 +61,8 @@ If the document has no forms, the returned collection is empty, with a length of
 ### Getting an element from within a form
 
 ```js
-var selectForm = document.forms[index];
-var selectFormElement = document.forms[index].elements[index];
+const selectForm = document.forms[index];
+const selectFormElement = document.forms[index].elements[index];
 ```
 
 ### Named form access
@@ -82,7 +83,7 @@ var selectFormElement = document.forms[index].elements[index];
 </form>
 
 <script>
-  var loginForm = document.forms.login; // Or document.forms['login']
+  const loginForm = document.forms.login; // Or document.forms['login']
   loginForm.elements.email.placeholder = 'test@example.com';
   loginForm.elements.password.placeholder = 'password';
 </script>

@@ -1,6 +1,7 @@
 ---
 title: Window.applicationCache
 slug: Web/API/Window/applicationCache
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -19,15 +20,9 @@ browser-compat: api.SharedWorkerGlobalScope.applicationCache
 
 Returns a reference to the application cache object for the window.
 
-## Syntax
+## Value
 
-```js
-cache = window.applicationCache
-```
-
-### Parameters
-
-- `cache` is an object reference to an `OfflineResourceList`.
+An object reference to an `OfflineResourceList`.
 
 ## Browser compatibility
 

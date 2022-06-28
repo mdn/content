@@ -54,6 +54,7 @@ text-emphasis: filled sesame #555;
 text-emphasis: inherit;
 text-emphasis: initial;
 text-emphasis: revert;
+text-emphasis: revert-layer;
 text-emphasis: unset;
 ```
 
@@ -98,7 +99,6 @@ This example draws a heading with triangles used to emphasize each character.
 
 ```css
 h2 {
-  -webkit-text-emphasis: triangle #D55;
   text-emphasis: triangle #D55;
 }
 ```

@@ -1,6 +1,7 @@
 ---
 title: SVGHKernElement
 slug: Web/API/SVGHKernElement
+page-type: web-api-interface
 tags:
   - API
   - Deprecated

@@ -33,6 +33,7 @@ font-variant-numeric: oldstyle-nums stacked-fractions;
 font-variant-numeric: inherit;
 font-variant-numeric: initial;
 font-variant-numeric: revert;
+font-variant-numeric: revert-layer;
 font-variant-numeric: unset;
 ```
 

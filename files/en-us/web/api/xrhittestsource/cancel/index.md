@@ -1,6 +1,7 @@
 ---
 title: XRHitTestSource.cancel()
 slug: Web/API/XRHitTestSource/cancel
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -27,7 +28,7 @@ None.
 
 ### Return value
 
-Returns {{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

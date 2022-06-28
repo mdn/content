@@ -1,6 +1,7 @@
 ---
 title: Element.scrollWidth
 slug: Web/API/Element/scrollWidth
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -72,10 +73,10 @@ A number.
     </button>
   </body>
   <script>
-    var buttonOne = document.getElementById('aButton'),
-    buttonTwo = document.getElementById('anotherButton'),
-    divOne = document.getElementById('aDiv'),
-    divTwo = document.getElementById('anotherDiv');
+    const buttonOne = document.getElementById('aButton');
+    const buttonTwo = document.getElementById('anotherButton');
+    const divOne = document.getElementById('aDiv');
+    const divTwo = document.getElementById('anotherDiv');
 
     //check to determine if an overflow is happening
     function isOverflowing(element) {
@@ -103,7 +104,7 @@ A number.
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

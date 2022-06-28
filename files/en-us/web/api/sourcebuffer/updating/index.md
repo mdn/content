@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.updating
 slug: Web/API/SourceBuffer/updating
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -22,17 +23,11 @@ currently being updated — i.e. whether an {{domxref("SourceBuffer.appendBuffer
 {{domxref("SourceBuffer.appendStream()")}}, or {{domxref("SourceBuffer.remove()")}}
 operation is currently in progress.
 
-## Syntax
-
-```js
-var isUpdating = sourceBuffer.updating;
-```
-
-### Value
+## Value
 
 A boolean value.
 
-## Example
+## Examples
 
 TBD
 

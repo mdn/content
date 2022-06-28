@@ -1,6 +1,7 @@
 ---
 title: PerformanceElementTiming.identifier
 slug: Web/API/PerformanceElementTiming/identifier
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`identifier`** read-only property of the {{domxref("PerformanceElementTimi
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

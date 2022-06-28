@@ -1,6 +1,7 @@
 ---
 title: VideoPlaybackQuality.totalVideoFrames
 slug: Web/API/VideoPlaybackQuality/totalVideoFrames
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -33,7 +34,7 @@ the element _would have presented_ had no problems occurred.
 
 This value is reset when the media is reloaded or replaced.
 
-## Example
+## Examples
 
 This example calls {{domxref("HTMLVideoElement.getVideoPlaybackQuality",
   "getVideoPlaybackQuality()")}} to obtain a {{domxref("VideoPlaybackQuality")}} object,

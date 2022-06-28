@@ -1,6 +1,7 @@
 ---
 title: Element.ariaValueMax
 slug: Web/API/Element/ariaValueMax
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,7 +18,7 @@ The **`ariaValueMax`** property of the {{domxref("Element")}} interface reflects
 
 ## Value
 
-A {{domxref("DOMString")}} which contains a number.
+A string which contains a number.
 
 ## Examples
 

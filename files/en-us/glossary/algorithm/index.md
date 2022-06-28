@@ -22,4 +22,4 @@ There are also Machine Learning algorithms such as Linear Regression, Logistic R
 
 - {{Interwiki("wikipedia", "Algorithm", "Algorithm")}} on Wikipedia
 - [Explanations of sorting algorithms](https://www.toptal.com/developers/sorting-algorithms)
-- [Explanations of algorithmic complexity](https://bigocheatsheet.com/)
+- [Explanations of algorithmic complexity](https://www.bigocheatsheet.com/)

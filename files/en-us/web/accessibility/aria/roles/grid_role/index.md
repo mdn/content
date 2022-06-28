@@ -11,6 +11,8 @@ tags:
   - grid role
   - composite widget role
   - NeedsContent
+spec-urls:
+  - https://w3c.github.io/aria/#grid
 ---
 The grid role is for a widget that contains one or more rows of cells. The position of each cell is significant and can be focused using keyboard input.
 
@@ -51,7 +53,7 @@ The `grid` role is a composite widget containing a collection of one or more row
 </table>
 ```
 
-A grid widget contains one or more rows with one or more cells of thematically related interactive content. While it does not imply a specific visual presentation, it implies a relationship among elements. Uses fall into two categories: presenting tabular information (data grids) and grouping other widgets (layout grids). Even though both data grids and layout grids employ the same ARIA roles, states, and properties, differences in their content and purpose surface factors that are important to consider in keyboard interaction design. See [ARIA Authoring practices](https://www.w3.org/TR/wai-aria-practices-1.2/#grid) for more details
+A grid widget contains one or more rows with one or more cells of thematically related interactive content. While it does not imply a specific visual presentation, it implies a relationship among elements. Uses fall into two categories: presenting tabular information (data grids) and grouping other widgets (layout grids). Even though both data grids and layout grids employ the same ARIA roles, states, and properties, differences in their content and purpose surface factors that are important to consider in keyboard interaction design. See [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) for more details
 
 Cell elements have the role [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), unless they are a row or column header. Then the elements are [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) and [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role), respectively. Cell elements need to be owned by elements with a [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) role. Rows can be grouped using `rowgroups`.
 
@@ -580,8 +582,8 @@ document.querySelector('table').addEventListener("keydown", function(event) {
 
 ### More examples
 
-- [Data Grid Examples](https://www.w3.org/TR/wai-aria-practices-1.1/examples/grid/dataGrids.html)
-- [Layout Grids Examples](https://www.w3.org/TR/wai-aria-practices/examples/grid/LayoutGrids.html)
+- [Data Grid Examples](https://www.w3.org/WAI/ARIA/apg/example-index/grid/dataGrids.html)
+- [Layout Grids Examples](https://www.w3.org/WAI/ARIA/apg/example-index/grid/LayoutGrids.html)
 - [W3C/WAI Tutorial: Tables](https://www.w3.org/WAI/tutorials/tables/)
 
 ## Accessibility concerns
@@ -590,10 +592,7 @@ Even if the keyboard use is properly implemented, some users might not be aware 
 
 ## Specifications
 
-| Specification                                                                    | Status                                           |
-| -------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#grid","Role Grid")}}                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#grid","Role Grid")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See also
 
@@ -605,7 +604,7 @@ Even if the keyboard use is properly implemented, some users might not be aware 
 - [ARIA: `gridcell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
 - [ARIA: `rowheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
 - [ARIA: columnheader role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- {{HTMLElement('table','HTML <code>&lg;table></code> element')}}
+- {{HTMLElement('table','HTML <code>&lt;table&gt;</code> element')}}
 - [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level)
 - [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
 - [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)

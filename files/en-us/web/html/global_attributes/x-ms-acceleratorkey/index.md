@@ -9,10 +9,9 @@ tags:
   - Reference
   - x-ms-acceleratorkey
 ---
-
 {{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}
 
-The **`x-ms-acceleratorkey`** attribute accessibly declares that an [accelerator key](https://docs.microsoft.com/windows/uwp/design/input/keyboard-accelerators) has been assigned to an element: the element is activated via JavaScript when the key(s) are pressed on a keyboard.
+The **`x-ms-acceleratorkey`** attribute accessibly declares that an [accelerator key](https://docs.microsoft.com/en-us/windows/apps/design/input/keyboard-accelerators) has been assigned to an element: the element is activated via JavaScript when the key(s) are pressed on a keyboard.
 
 {{Non-standard_Inline}} This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
@@ -52,4 +51,4 @@ The accelerator key combination. For example:
 
 - [The global `accesskey` attribute](/en-US/docs/Web/HTML/Global_attributes/accesskey)
 - [The `-ms-accelerator` CSS property](/en-US/docs/Web/CSS/-ms-accelerator)
-- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_API_extensions)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

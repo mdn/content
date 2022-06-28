@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.sizes
 slug: Web/API/HTMLImageElement/sizes
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -29,7 +30,7 @@ by [media queries](/en-US/docs/Web/CSS/Media_Queries).
 
 ## Value
 
-A {{domxref("USVString")}} containing a comma-separated list of source size descriptors
+A string containing a comma-separated list of source size descriptors
 followed by an optional fallback size. Each **source size descriptor** is
 comprised of a media condition, then at least one whitespace character, then the
 **source size value** to use for the image when the media condition
@@ -140,7 +141,7 @@ break50.addEventListener("click",
 
 ### Result
 
-{{EmbedLiveSample("Example", 900, 850)}}
+{{EmbedLiveSample("Examples", 900, 850)}}
 
 This result may be {{LiveSampleLink('Example', 'viewed in its own window')}}.
 
@@ -155,9 +156,6 @@ This result may be {{LiveSampleLink('Example', 'viewed in its own window')}}.
 ## See also
 
 - [Media queries](/en-US/docs/Web/CSS/Media_Queries)
-- [Using media
-  queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Images in
-  HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Responsive
-  images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)

@@ -1,6 +1,7 @@
 ---
 title: WakeLockSentinel.release()
 slug: Web/API/WakeLockSentinel/release
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -21,7 +22,7 @@ once the sentinel has been successfully released.
 ## Syntax
 
 ```js
-WakeLockSentinel.release().then(...);
+release()
 ```
 
 ### Parameters

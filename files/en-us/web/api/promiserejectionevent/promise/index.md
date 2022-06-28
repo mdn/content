@@ -1,6 +1,7 @@
 ---
 title: PromiseRejectionEvent.promise
 slug: Web/API/PromiseRejectionEvent/promise
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -63,5 +64,5 @@ window.onunhandledrejection = function(event) {
     rejection events")}}
 - {{jsxref("Promise")}}
 - {{domxref("PromiseRejectionEvent")}}
-- {{event("rejectionhandled")}}
-- {{event("unhandledrejection")}}
+- {{domxref("Window.rejectionhandled_event", "rejectionhandled")}}
+- {{domxref("Window.unhandledrejection_event", "unhandledrejection")}}

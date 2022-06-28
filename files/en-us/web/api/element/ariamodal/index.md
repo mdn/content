@@ -1,6 +1,7 @@
 ---
 title: Element.ariaModal
 slug: Web/API/Element/ariaModal
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,7 +18,7 @@ The **`ariaModal`** property of the {{domxref("Element")}} interface reflects th
 
 ## Value
 
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : The element is modal.

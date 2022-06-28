@@ -31,6 +31,7 @@ masonry-auto-flow: next ordered;
 masonry-auto-flow: inherit;
 masonry-auto-flow: initial;
 masonry-auto-flow: revert;
+masonry-auto-flow: revert-layer;
 masonry-auto-flow: unset;
 ```
 

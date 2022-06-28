@@ -20,7 +20,7 @@ generator.
 ## Syntax
 
 ```js
-next(value)
+generatorObject.next(value)
 ```
 
 ### Parameters
@@ -94,7 +94,7 @@ function* getPage(pageSize = 1, list) {
 }
 
 list = [1, 2, 3, 4, 5, 6, 7, 8]
-var page = getPage(3, list);              // Generator { }
+let page = getPage(3, list);              // Generator { }
 
 page.next();                              // Object {value: (3) [1, 2, 3], done: false}
 page.next();                              // Object {value: (3) [4, 5, 6], done: false}

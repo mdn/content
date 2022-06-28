@@ -1,6 +1,7 @@
 ---
 title: SharedWorkerGlobalScope
 slug: Web/API/SharedWorkerGlobalScope
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -17,7 +18,7 @@ The **`SharedWorkerGlobalScope`** object (the {{domxref("SharedWorker")}} global
 
 ## Properties
 
-_This interface inherits properties from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}, and therefore implements properties from {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, and {{domxref("WindowEventHandlers")}}._
+_This interface inherits properties from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
 
 - {{domxref("SharedWorkerGlobalScope.name")}} {{readOnlyinline}}
   - : The name that the {{domxref("SharedWorker")}} was (optionally) given when it was created using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. This is mainly useful for debugging purposes.
@@ -39,7 +40,7 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
 
 ## Methods
 
-_This interface inherits methods from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}, and therefore implements methods from {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, and {{domxref("WindowEventHandlers")}}._
+_This interface inherits methods from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
 
 - {{domxref("SharedWorkerGlobalScope.close()")}}
   - : Discards any tasks queued in the `SharedWorkerGlobalScope`'s event loop, effectively closing this particular scope.
@@ -86,4 +87,4 @@ Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarge
 - {{domxref("SharedWorker")}}
 - {{domxref("WorkerGlobalScope")}}
 - [Using Web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
-- [Functions available to workers](/en-US/docs/Web/Guide/Needs_categorization/Functions_available_to_workers)
+- [Functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)

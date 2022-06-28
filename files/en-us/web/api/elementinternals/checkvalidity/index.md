@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.checkValidity()
 slug: Web/API/ElementInternals/checkValidity
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,7 +19,7 @@ If `checkValidity` returns `false` then a cancelable [invalid event](/en-US/docs
 ## Syntax
 
 ```js
-ElementInternals.checkValidity();
+checkValidity()
 ```
 
 ### Parameters

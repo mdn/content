@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.naturalHeight
 slug: Web/API/HTMLImageElement/naturalHeight
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLImageElement
@@ -26,8 +27,7 @@ image height, it will be rendered this tall.
 
 > **Note:** Most of the time the natural height is the actual height of the image sent by the server.
 > Nevertheless, browsers can modify an image before pushing it to the renderer. For example, Chrome
-> [degrades the resolution of
-> images on low-end devices](https://bugs.chromium.org/p/chromium/issues/detail?id=1187043#c7). In such cases, `naturalHeight` will consider the height of the image modified
+> [degrades the resolution of images on low-end devices](https://bugs.chromium.org/p/chromium/issues/detail?id=1187043#c7). In such cases, `naturalHeight` will consider the height of the image modified
 > by such browser interventions as the natural height, and returns this value.
 
 ## Value
@@ -51,7 +51,7 @@ its rendered size as altered by the page's CSS and other factors.
 
 ```html
 <div class="box">
-  <img src="/files/16797/clock-demo-400px.png" class="image">
+  <img src="/en-US/docs/Web/HTML/Element/img/clock-demo-400px.png" class="image">
 </div>
 <div class="output">
 </div>
@@ -102,7 +102,7 @@ that the image is available before attempting to examine its width and height.
 
 ### Result
 
-{{EmbedLiveSample("Example", 600, 280)}}
+{{EmbedLiveSample("Examples", 600, 280)}}
 
 ## Specifications
 

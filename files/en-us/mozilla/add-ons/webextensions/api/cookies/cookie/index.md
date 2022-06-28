@@ -35,7 +35,7 @@ Values of this type are objects, which can contain the following properties:
   - : A `string` representing the name of the cookie.
 - `partitionKey`{{optional_inline}}
 
-  - : An `object` representing the description of the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#Storage_partitioning) containing the cookie. This object is omitted (null) if the cookie is not in partitioned storage. This object contains the following properties:
+  - : An `object` representing the description of the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) containing the cookie. This object is omitted (null) if the cookie is not in partitioned storage. This object contains the following properties:
 
     - `topLevelSite`
       - : A `string` representing the first-party URL of the cookie's storage partition, if the cookie is in storage that is partitioned by top-level site.
@@ -79,7 +79,7 @@ gettingAll.then(logCookies);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#type-Cookie) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#type-Cookie) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

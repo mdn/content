@@ -9,6 +9,7 @@ tags:
   - Method
   - WebExtensions
   - contextMenus
+browser-compat: webextensions.api.menus.overrideContext
 ---
 {{AddonSidebar}}
 
@@ -60,3 +61,7 @@ document.addEventListener('contextmenu', event => {
 ```
 
 See [this blog post](https://blog.mozilla.org/addons/2018/11/08/extensions-in-firefox-64/#cm) for more details.
+
+## Browser compatibility
+
+{{ Compat }}

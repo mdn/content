@@ -1,6 +1,7 @@
 ---
 title: Element.requestFullscreen()
-slug: Web/API/Element/requestFullScreen
+slug: Web/API/Element/requestFullscreen
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -36,28 +37,27 @@ detached from the original document, then the document receives these events ins
 ## Syntax
 
 ```js
-var promise = element.requestFullscreen(options);
+requestFullscreen()
+requestFullscreen(options)
 ```
 
 ### Parameters
 
 - `options` {{optional_inline}}
-  - : An object that controls the behavior of the transition to fullscreen mode. See below for available options.
-
-### Options
-
-- `navigationUI`
-
-  - : Controls whether or not to show navigation UI while the element is in fullscreen mode.
-    The default value is "auto", which indicates that the browser should decide what to do.
-
-    - `"hide"`: The browser's navigation interface will be hidden
-      and the entire dimensions of the screen will be allocated to the display of the element.
-    - `"show"`: The browser will present page navigation controls and possibly other
-      user interface; the dimensions of the element (and the perceived size of the screen) will be clamped
-      to leave room for this user interface.
-    - `"auto"`: The browser will choose which of the above settings to apply.
-      This is the default value.
+  - : An object that controls the behavior of the transition to fullscreen mode. The available options are:
+    - `navigationUI` {{optional_inline}}
+      - : Controls whether or not to show navigation UI while the element is in fullscreen mode.
+        The default value is `"auto"`, which indicates that the browser should decide what to do.
+        - `"hide"`
+          - : The browser's navigation interface will be hidden
+            and the entire dimensions of the screen will be allocated to the display of the element.
+        - `"show"`
+          - : The browser will present page navigation controls and possibly other
+            user interface; the dimensions of the element (and the perceived size of the screen) will be clamped
+            to leave room for this user interface.
+        - `"auto"`
+          - : The browser will choose which of the above settings to apply.
+            This is the default value.
 
 ### Return value
 
@@ -103,7 +103,7 @@ be granted.
 
 You can determine whether or not your attempt to switch to fullscreen mode is
 successful by using the {{jsxref("Promise")}} returned by
-`requestFullscreen()`, as seen in the [Example](#example) below.
+`requestFullscreen()`, as seen in the [examples](#examples) below.
 
 To learn when other code has toggled fullscreen mode on and off, you should establish
 listeners for the {{event("fullscreenchange")}} event on the {{domxref("Document")}}.
@@ -141,9 +141,7 @@ presents an alert with an appropriate error message.
 If, on the other hand, fullscreen mode is already in effect, we call
 {{domxref("document.exitFullscreen()")}} to disable fullscreen mode.
 
-You can [see this example
-in action](https://fullscreen-requestfullscreen-demo.glitch.me/) or [view or remix the
-code](https://glitch.com/edit/#!/fullscreen-requestfullscreen-demo) on [Glitch](https://glitch.com/).
+You can [see this example in action](https://fullscreen-requestfullscreen-demo.glitch.me/) or [view or remix the code](https://glitch.com/edit/#!/fullscreen-requestfullscreen-demo) on [Glitch](https://glitch.com/).
 
 ### Using navigationUI
 

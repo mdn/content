@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getShaderPrecisionFormat()
 slug: Web/API/WebGLRenderingContext/getShaderPrecisionFormat
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -20,7 +21,7 @@ the specified shader numeric format.
 ## Syntax
 
 ```js
-WebGLShaderPrecisionFormat gl.getShaderPrecisionFormat(shaderType, precisionType);
+getShaderPrecisionFormat(shaderType, precisionType)
 ```
 
 ### Parameters

@@ -1,6 +1,7 @@
 ---
 title: WebRTC API
 slug: Web/API/WebRTC_API
+page-type: web-api-overview
 tags:
   - API
   - Audio
@@ -12,6 +13,10 @@ tags:
   - WebRTC
   - WebRTC API
   - streaming
+spec-urls:
+  - https://w3c.github.io/webrtc-pc/
+  - https://w3c.github.io/mediacapture-main/
+  - https://w3c.github.io/mediacapture-fromelement/
 ---
 {{DefaultAPISidebar("WebRTC")}}
 
@@ -54,7 +59,7 @@ These interfaces, dictionaries, and types are used to set up, open, and manage W
 - {{DOMxRef("RTCDataChannel")}}
   - : Represents a bi-directional data channel between two peers of a connection.
 - {{DOMxRef("RTCDataChannelEvent")}}
-  - : Represents events that occur while attaching a {{DOMxRef("RTCDataChannel")}} to a {{DOMxRef("RTCPeerConnection")}}. The only event sent with this interface is {{event("datachannel")}}.
+  - : Represents events that occur while attaching a {{DOMxRef("RTCDataChannel")}} to a {{DOMxRef("RTCPeerConnection")}}. The only event sent with this interface is {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}}.
 - {{DOMxRef("RTCSessionDescription")}}
   - : Represents the parameters of a session. Each `RTCSessionDescription` consists of a description {{DOMxRef("RTCSessionDescription.type", "type")}} indicating which part of the offer/answer negotiation process it describes and of the {{Glossary("SDP")}} descriptor of the session.
 - {{DOMxRef("RTCStatsReport")}}
@@ -64,7 +69,7 @@ These interfaces, dictionaries, and types are used to set up, open, and manage W
 - {{DOMxRef("RTCIceTransport")}}
   - : Represents information about an {{Glossary("ICE")}} transport.
 - {{DOMxRef("RTCPeerConnectionIceEvent")}}
-  - : Represents events that occur in relation to ICE candidates with the target, usually an {{DOMxRef("RTCPeerConnection")}}. Only one event is of this type: {{event("icecandidate")}}.
+  - : Represents events that occur in relation to ICE candidates with the target, usually an {{DOMxRef("RTCPeerConnection")}}. Only one event is of this type: {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}}.
 - {{DOMxRef("RTCRtpSender")}}
   - : Manages the encoding and transmission of data for a {{DOMxRef("MediaStreamTrack")}} on an {{DOMxRef("RTCPeerConnection")}}.
 - {{DOMxRef("RTCRtpReceiver")}}
@@ -183,8 +188,6 @@ These interfaces and events are related to interactivity with Public-Switched Te
 
 - [Improving compatibility using WebRTC adapter.js](/en-US/docs/Web/API/WebRTC_API/adapter.js)
   - : The WebRTC organization [provides on GitHub the WebRTC adapter](https://github.com/webrtc/adapter/) to work around compatibility issues in different browsers' WebRTC implementations. The adapter is a JavaScript shim which lets your code to be written to the specification so that it will "just work" in all browsers with WebRTC support.
-- [Taking still photos with WebRTC](/en-US/docs/Web/API/WebRTC_API/Taking_still_photos)
-  - : This article shows how to use WebRTC to access the camera on a computer or mobile phone with WebRTC support and take a photo with it.
 - [A simple RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
   - : The {{DOMxRef("RTCDataChannel")}} interface is a feature which lets you open a channel between two peers over which you may send and receive arbitrary data. The API is intentionally similar to the [WebSocket API](/en-US/docs/Web/API/WebSockets_API), so that the same programming model can be used for each.
 - [Building an internet connected phone with Peer.js](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs)
@@ -192,21 +195,17 @@ These interfaces and events are related to interactivity with Public-Switched Te
 
 ## Specifications
 
-| Specification                                                                        |
-| ------------------------------------------------------------------------------------ |
-| [WebRTC: Real-Time Communication Between Browsers](https://w3c.github.io/webrtc-pc/) |
-| [Media Capture and Streams](https://w3c.github.io/mediacapture-main/)                |
-| [Media Capture from DOM Elements](https://w3c.github.io/mediacapture-fromelement/)   |
+{{Specifications}}
 
 ### WebRTC-proper protocols
 
-- [Application Layer Protocol Negotiation for Web Real-Time Communications](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-alpn/)
-- [WebRTC Audio Codec and Processing Requirements](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-audio/)
-- [RTCWeb Data Channels](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-channel/)
-- [RTCWeb Data Channel Protocol](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-protocol/)
-- [Web Real-Time Communication (WebRTC): Media Transport and Use of RTP](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-rtp-usage/)
-- [WebRTC Security Architecture](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-security-arch/)
-- [Transports for RTCWEB](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-transports/)
+- [Application Layer Protocol Negotiation for Web Real-Time Communications](https://datatracker.ietf.org/doc/rfc8833/)
+- [WebRTC Audio Codec and Processing Requirements](https://datatracker.ietf.org/doc/rfc7874/)
+- [RTCWeb Data Channels](https://datatracker.ietf.org/doc/rfc8831/)
+- [RTCWeb Data Channel Protocol](https://datatracker.ietf.org/doc/rfc8832/)
+- [Web Real-Time Communication (WebRTC): Media Transport and Use of RTP](https://datatracker.ietf.org/doc/rfc8834/)
+- [WebRTC Security Architecture](https://datatracker.ietf.org/doc/rfc8827/)
+- [Transports for RTCWEB](https://datatracker.ietf.org/doc/rfc8835/)
 
 ### Related supporting protocols
 
@@ -215,7 +214,7 @@ These interfaces and events are related to interactivity with Public-Switched Te
 - [URI Scheme for the Session Traversal Utilities for NAT (STUN) Protocol](https://datatracker.ietf.org/doc/html/rfc7064)
 - [Traversal Using Relays around NAT (TURN) Uniform Resource Identifiers](https://datatracker.ietf.org/doc/html/rfc7065)
 - [An Offer/Answer Model with Session Description Protocol (SDP)](https://datatracker.ietf.org/doc/html/rfc3264)
-- [Session Traversal Utilities for NAT (STUN) Extension for Third Party Authorization](https://datatracker.ietf.org/doc/draft-ietf-tram-turn-third-party-authz/)
+- [Session Traversal Utilities for NAT (STUN) Extension for Third Party Authorization](https://datatracker.ietf.org/doc/rfc7635/)
 
 ## See also
 

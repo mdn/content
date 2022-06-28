@@ -1,6 +1,7 @@
 ---
 title: 'MediaRecorder: error event'
 slug: Web/API/MediaRecorder/error_event
+page-type: web-api-event
 tags:
   - Event
 browser-compat: api.MediaRecorder.error_event
@@ -60,7 +61,7 @@ the value of {{domxref("DOMException.name", "MediaRecorderErrorEvent.error.name"
 - `UnknownError`
   - : An non-security related error occurred that cannot otherwise be categorized.
     Recording stops, the `MediaRecorder`'s {{domxref("MediaRecorder.state",
-    "state")}} becomes `inactive`, one last {{event("dataavailable")}} event is
+    "state")}} becomes `inactive`, one last {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event is
     sent to the `MediaRecorder` with the remaining received data, and finally a
     {{event("stop")}} event is sent.
 

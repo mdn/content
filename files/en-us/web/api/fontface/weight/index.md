@@ -1,6 +1,7 @@
 ---
 title: FontFace.weight
 slug: Web/API/FontFace/weight
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Font Loading API
@@ -20,7 +21,7 @@ equivalent to the {{cssxref("@font-face/font-weight", "font-weight")}} descripto
 
 ## Value
 
-A {{domxref('CSSOMString')}} containing a descriptor as it would be defined in a style
+A string containing a descriptor as it would be defined in a style
 sheet's `@font-face` rule.
 
 ## Specifications

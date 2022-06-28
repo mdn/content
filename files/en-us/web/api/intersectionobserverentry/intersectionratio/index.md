@@ -1,9 +1,9 @@
 ---
 title: IntersectionObserverEntry.intersectionRatio
 slug: Web/API/IntersectionObserverEntry/intersectionRatio
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Intersection Observer
   - Intersection Observer API
   - IntersectionObserverEntry
@@ -12,7 +12,7 @@ tags:
   - intersectionRatio
 browser-compat: api.IntersectionObserverEntry.intersectionRatio
 ---
-{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
+{{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's
 read-only **`intersectionRatio`** property tells you how much

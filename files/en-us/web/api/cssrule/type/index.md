@@ -1,6 +1,7 @@
 ---
 title: CSSRule.type
 slug: Web/API/CSSRule/type
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -15,6 +16,17 @@ browser-compat: api.CSSRule.type
 The read-only **`type`** property of the
 {{domxref("CSSRule")}} interface is a deprecated property that returns an integer
 indicating which type of rule the {{domxref("CSSRule")}} represents.
+
+If you need to distinguish different types of CSS rule, a good alternative is to use [`constructor.name`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name):
+
+```js
+const sheets = Array.from(document.styleSheets);
+const rules = sheets.map(sheet => Array.from(sheet.cssRules)).flat();
+
+for (const rule of rules) {
+  console.log(rule.constructor.name);
+}
+```
 
 ## Value
 

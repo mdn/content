@@ -1,6 +1,7 @@
 ---
 title: Selection.isCollapsed
 slug: Web/API/Selection/isCollapsed
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -23,11 +24,9 @@ Keep in mind that a collapsed selection may still have one (or more, in Gecko)
 scenario, calling a {{domxref("Selection")}} object's {{domxref("Selection.getRangeAt",
   "getRangeAt()")}} method may return a `Range` object which is collapsed.
 
-## Syntax
+## Value
 
-```js
-bool = sel.isCollapsed
-```
+A boolean.
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: MediaKeySession.expiration
 slug: Web/API/MediaKeySession/expiration
+page-type: web-api-instance-property
 tags:
   - API
   - EncryptedMediaExtensions
@@ -20,11 +21,9 @@ media data, or NaN if no such time exists. This value is determined by the CDM a
 measured in milliseconds since January 1, 1970, UTC. This value may change during a
 session lifetime, such as when an action triggers the start of a window.
 
-## Syntax
+## Value
 
-```js
-var expirationTime = mediaKeySessionObj.expiration;
-```
+A number or NaN.
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: TextTrackList.length
 slug: Web/API/TextTrackList/length
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -30,7 +31,7 @@ A number indicating how many text tracks are included in the
 `TextTrackList`. Each track can be accessed by treating the
 `TextTrackList` as an array of objects of type {{domxref("TextTrack")}}.
 
-## Example
+## Examples
 
 This snippet gets the number of text tracks in the first media element found in the
 {{Glossary("DOM")}} by {{domxref("Document.querySelector", "querySelector()")}}.

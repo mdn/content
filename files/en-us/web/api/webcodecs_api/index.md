@@ -1,6 +1,7 @@
 ---
 title: WebCodecs API
 slug: Web/API/WebCodecs_API
+page-type: web-api-overview
 tags:
   - API
   - WebCodecs
@@ -19,9 +20,9 @@ Many Web APIs use media codecs internally.
 For example, the {{domxref("Web Audio API")}}, and the {{domxref("WebRTC API")}}.
 However these APIs do not allow developers to work with individual frames of a video stream and unmuxed chunks of encoded audio or video.
 
-Web developers have typically used WebAssembly in order to get round this limitation,
+Web developers have typically used WebAssembly in order to get around this limitation,
 and to work with media codecs in the browser.
-However this requires additional bandwidth to download codecs that already exist in the browser,
+However, this requires additional bandwidth to download codecs that already exist in the browser,
 reducing performance and power efficiency, and adding additional development overhead.
 
 The WebCodecs API provides access to codecs that are already in the browser.

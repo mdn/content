@@ -1,6 +1,7 @@
 ---
 title: Idle Detection API
 slug: Web/API/Idle_Detection_API
+page-type: web-api-overview
 tags:
   - API
   - IdleDetector
@@ -18,7 +19,7 @@ Native applications and browser extensions use idle detection base user experien
 
 ## Interfaces
 
-- `{{domxref("IdleDetector")}}`
+- {{domxref("IdleDetector")}}
   - : Provides methods and events for detecting user activity on a device or screen.
 
 ## Examples

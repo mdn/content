@@ -1,6 +1,7 @@
 ---
 title: SpeechGrammarList.item()
 slug: Web/API/SpeechGrammarList/item
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -23,10 +24,15 @@ objects to be retrieved from the `SpeechGrammarList` using array syntax.
 ## Syntax
 
 ```js
-var myFirstGrammar = speechGrammarListInstance[0];
+item(index)
 ```
 
-### Returns
+### Parameters
+
+- `index`
+  - : Index of the item to retrieve.
+
+### Return value
 
 A {{domxref("SpeechGrammar")}} object.
 

@@ -1,6 +1,7 @@
 ---
 title: 'SharedWorkerGlobalScope: connect event'
 slug: Web/API/SharedWorkerGlobalScope/connect_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -39,9 +40,9 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 - {{domxref("MessageEvent.data")}} {{readonlyInline}}
   - : The data sent by the message emitter.
 - {{domxref("MessageEvent.origin")}} {{readonlyInline}}
-  - : A {{domxref("USVString")}} representing the origin of the message emitter.
+  - : A string representing the origin of the message emitter.
 - {{domxref("MessageEvent.lastEventId")}} {{readonlyInline}}
-  - : A {{domxref("DOMString")}} representing a unique ID for the event.
+  - : A string representing a unique ID for the event.
 - {{domxref("MessageEvent.source")}} {{readonlyInline}}
   - : A `MessageEventSource` (which can be a {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
 - {{domxref("MessageEvent.ports")}} {{readonlyInline}}
@@ -66,7 +67,7 @@ self.onconnect = function(e) {
 }
 ```
 
-For a complete running example, see our [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](https://mdn.github.io/simple-shared-worker/).)
+For a complete running example, see our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/).)
 
 ### addEventListener equivalent
 

@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: paste event'
 slug: Web/API/HTMLElement/paste_event
+page-type: web-api-event
 tags:
   - API
   - Clipboard API
@@ -9,9 +10,9 @@ tags:
   - Reference
   - Web
   - paste
-browser-compat: api.HTMLElement.paste_event
+browser-compat: api.Element.paste_event
 ---
-{{ APIRef("HTML DOM") }} {{SeeCompatTable}}
+{{ APIRef("HTML DOM") }}
 
 The **`paste`** event fires when the user initiates a paste action through the browser's user interface.
 
@@ -36,7 +37,7 @@ A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
 - {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
-  - : Is a {{domxref("DataTransfer")}} object containing the data affected by the user-initiated {{event("cut")}}, {{event("copy")}}, or {{event("paste")}} operation, along with its MIME type.
+  - : A {{domxref("DataTransfer")}} object containing the data affected by the user-initiated {{domxref("HTMLElement/cut_event", "cut")}}, {{domxref("HTMLElement/copy_event", "copy")}}, or {{domxref("HTMLElement/paste_event", "paste")}} operation, along with its MIME type.
 
 ## Example
 

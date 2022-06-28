@@ -1,6 +1,7 @@
 ---
 title: Navigator.clearAppBadge()
 slug: Web/API/Navigator/clearAppBadge
+page-type: web-api-instance-method
 tags:
   - API
   - Badging API
@@ -17,7 +18,7 @@ The **`clearAppBadge()`** method of the {{domxref("Navigator")}} interface clear
 ## Syntax
 
 ```js
-let promise = Navigator.clearAppBadge();
+clearAppBadge()
 ```
 
 ### Parameters

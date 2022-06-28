@@ -1,6 +1,7 @@
 ---
 title: RTCDTMFSender.toneBuffer
 slug: Web/API/RTCDTMFSender/toneBuffer
+page-type: web-api-instance-property
 tags:
   - Audio
   - DTMF
@@ -26,7 +27,7 @@ Tones are removed from the string as they're played, so only upcoming tones are 
 
 ## Value
 
-A {{domxref("DOMString")}} listing the tones to be played. If the string is empty,
+A string listing the tones to be played. If the string is empty,
 there are no tones pending.
 
 ### Exceptions

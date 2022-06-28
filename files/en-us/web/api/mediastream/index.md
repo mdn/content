@@ -1,6 +1,7 @@
 ---
 title: MediaStream
 slug: Web/API/MediaStream
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -32,7 +33,7 @@ _This interface inherits properties from its parent, {{domxref("EventTarget")}}.
 - {{domxref("MediaStream.active")}} {{readonlyinline}}
   - : A Boolean value that returns `true` if the `MediaStream` is active, or `false` otherwise.
 - {{domxref("MediaStream.id")}} {{readonlyInline}}
-  - : A {{domxref("DOMString")}} containing 36 characters denoting a universally unique identifier ({{Glossary("UUID")}}) for the object.
+  - : A string containing a 36-character universally unique identifier ({{Glossary("UUID")}}) for the object.
 
 ## Methods
 

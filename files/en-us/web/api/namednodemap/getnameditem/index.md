@@ -1,6 +1,7 @@
 ---
 title: NamedNodeMap.getNamedItem()
 slug: Web/API/NamedNodeMap/getNamedItem
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference

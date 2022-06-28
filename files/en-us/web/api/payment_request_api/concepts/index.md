@@ -1,6 +1,7 @@
 ---
 title: Payment processing concepts
 slug: Web/API/Payment_Request_API/Concepts
+page-type: guide
 tags:
   - API
   - Apple Pay
@@ -13,6 +14,9 @@ tags:
   - Payment Method
   - Payment Request API
   - Payments
+spec-urls:
+  - https://w3c.github.io/payment-request/
+  - https://w3c.github.io/payment-method-id/
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Payment Request API")}}
 
@@ -53,7 +57,7 @@ These may vary substantially depending on the specifics of the service, and a gi
 - `https://apple.com/apple-pay`
   - : Payments are handled using the [Apple Pay](https://www.apple.com/apple-pay/) service. Currently, Apple Pay is only supported by Safari.
 - `https://google.com/pay`
-  - : Payments are processed by [Google Pay](https://pay.google.com/). This is currently supported only by Chrome and Chromium-based browsers.
+  - : Payments are processed by [Google Pay](https://pay.google.com/payments/home). This is currently supported only by Chrome and Chromium-based browsers.
 
 ## Functions of a payment handler
 
@@ -79,40 +83,11 @@ In this example, `fetchValidationData()` is a function which loads the payment h
 
 By then delivering this data (or a {{jsxref("Promise")}} which resolves to the loaded data) to the payment handler by passing it into `complete()`, the payment handler can use the retrieved data and whatever algorithm and other data to support in order to verify that the merchant can use the payment handler.
 
-Thus, it's important to note that the {{Glossary("user agent")}} never sends a {{event("merchantvalidation")}} event, unless the user agent itself implements a payment handler. For instance, Safari has integrated support for Apple Pay, so the Apple Pay payment handler uses this to ensure that Apple Pay can be used to pay the merchant by sending `merchantvalidation` to the client, instructing it to fetch the server's validation data and deliver it to the payment handler by calling `complete()`.
+Thus, it's important to note that the {{Glossary("user agent")}} never sends a {{domxref("PaymentRequest.merchantvalidation_event", "merchantvalidation")}} event, unless the user agent itself implements a payment handler. For instance, Safari has integrated support for Apple Pay, so the Apple Pay payment handler uses this to ensure that Apple Pay can be used to pay the merchant by sending `merchantvalidation` to the client, instructing it to fetch the server's validation data and deliver it to the payment handler by calling `complete()`.
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Payment')}}</td>
-      <td>{{Spec2('Payment')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Basic Card Payment')}}</td>
-      <td>{{Spec2('Basic Card Payment')}}</td>
-      <td>
-        Defines {{domxref("BasicCardRequest")}} and
-        {{domxref("BasicCardResponse")}}.
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Payment Method Identifiers')}}</td>
-      <td>{{Spec2('Payment Method Identifiers')}}</td>
-      <td>
-        Defines payment method identifiers and how they are validated, and,
-        where applicable, minted and formally registered with the W3C.
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 

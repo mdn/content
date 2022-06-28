@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.audioTracks
 slug: Web/API/HTMLMediaElement/audioTracks
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -19,7 +20,7 @@ browser-compat: api.HTMLMediaElement.audioTracks
 
 The read-only **`audioTracks`**
 property on {{domxref("HTMLMediaElement")}} objects returns
-an {{domxref("AudioTrackList")}} object listing all of the  {{domxref("AudioTrack")}}
+an {{domxref("AudioTrackList")}} object listing all of the {{domxref("AudioTrack")}}
 objects representing the media element's audio tracks.
 
 The media element may be
@@ -57,9 +58,9 @@ The HTML establishes the element itself.
 The JavaScript code handles muting the video element's audio tracks.
 
 ```js
-var video = document.getElementById("video");
+const video = document.getElementById("video");
 
-for (var i = 0; i < video.audioTracks.length; i += 1) {
+for (let i = 0; i < video.audioTracks.length; i += 1) {
   video.audioTracks[i].enabled = false;
 }
 ```

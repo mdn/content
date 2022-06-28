@@ -1,6 +1,7 @@
 ---
 title: Using the Payment Request API
 slug: Web/API/Payment_Request_API/Using_the_Payment_Request_API
+page-type: guide
 tags:
   - Demos
   - Examples
@@ -29,8 +30,8 @@ A payment request always starts with the creation of a new {{domxref("PaymentReq
 So for example, you could create a new `PaymentRequest` instance like so:
 
 ```js
-var request = new PaymentRequest(buildSupportedPaymentMethodData(),
-                                 buildShoppingCartDetails());
+const request = new PaymentRequest(buildSupportedPaymentMethodData(),
+                                   buildShoppingCartDetails());
 ```
 
 The functions invoked inside the constructor return the required object parameters:
@@ -93,8 +94,8 @@ new PaymentRequest(buildSupportedPaymentMethodData(),
       .then(function(result) {
         if(result) {
           // Real payment request
-          var request = new PaymentRequest(buildSupportedPaymentMethodData(),
-                                           checkoutObject);
+          const request = new PaymentRequest(buildSupportedPaymentMethodData(),
+                                             checkoutObject);
 
           request.show().then(function(paymentResponse) {
             // Here we would process the payment.
@@ -234,7 +235,7 @@ The code looks something like this:
 
 ```js
 checkoutButton.addEventListener('click', function() {
-  var request = new PaymentRequest(buildSupportedPaymentMethodData(),
+  const request = new PaymentRequest(buildSupportedPaymentMethodData(),
     buildShoppingCartDetails());
     request.show().then(function(paymentResponse) {
     // Here we would process the payment. For this demo, simulate immediate success:

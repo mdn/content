@@ -1,6 +1,6 @@
 ---
 title: Array.prototype.reduce()
-slug: Web/JavaScript/Reference/Global_Objects/Array/Reduce
+slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 tags:
   - Array
   - Array method
@@ -35,6 +35,9 @@ The reducer walks through the array element-by-element, at each step adding the 
 reduce((previousValue, currentValue) => { /* ... */ } )
 reduce((previousValue, currentValue, currentIndex) => { /* ... */ } )
 reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ } )
+
+reduce((previousValue, currentValue) => { /* ... */ } , initialValue)
+reduce((previousValue, currentValue, currentIndex) => { /* ... */ } , initialValue)
 reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ }, initialValue)
 
 // Callback function
@@ -45,6 +48,9 @@ reduce(callbackFn, initialValue)
 reduce(function(previousValue, currentValue) { /* ... */ })
 reduce(function(previousValue, currentValue, currentIndex) { /* ... */ })
 reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ })
+
+reduce(function(previousValue, currentValue) { /* ... */ }, initialValue)
+reduce(function(previousValue, currentValue, currentIndex) { /* ... */ }, initialValue)
 reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ }, initialValue)
 ```
 
@@ -54,7 +60,7 @@ reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ },
   - : A "reducer" function.
 
     The function is called with the following arguments:
-  
+
     - `previousValue`: the value resulting from the previous call to `callbackFn`.
       On first call, `initialValue` if specified, otherwise the value of `array[0]`.
     - `currentValue`: the value of the current element.
@@ -352,7 +358,7 @@ let flattened = [[0, 1], [2, 3], [4, 5]].reduce(
 ### Counting instances of values in an object
 
 ```js
-let names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice']
+const names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice']
 
 let countedNames = names.reduce(function (allNames, name) {
   if (name in allNames) {
@@ -370,7 +376,7 @@ let countedNames = names.reduce(function (allNames, name) {
 ### Grouping objects by a property
 
 ```js
-let people = [
+const people = [
   { name: 'Alice', age: 21 },
   { name: 'Max', age: 20 },
   { name: 'Jane', age: 20 }
@@ -403,7 +409,7 @@ let groupedPeople = groupBy(people, 'age')
 ```js
 // friends - an array of objects
 // where object field "books" is a list of favorite books
-let friends = [{
+const friends = [{
   name: 'Anna',
   books: ['Bible', 'Harry Potter'],
   age: 21
@@ -438,7 +444,7 @@ let allbooks = friends.reduce(function(previousValue, currentValue) {
 > duplicate items have been removed.
 
 ```js
-let myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd']
+const myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd']
 let myArrayWithNoDuplicates = myArray.reduce(function (previousValue, currentValue) {
   if (previousValue.indexOf(currentValue) === -1) {
     previousValue.push(currentValue)
@@ -454,7 +460,7 @@ console.log(myArrayWithNoDuplicates)
 Using {{jsxref("Array.filter()")}} then {{jsxref("Array.map()")}} traverses the array
 twice, but you can achieve the same effect while traversing only once with
 {{jsxref("Array.reduce()")}}, thereby being more efficient. (If you like `for` loops, you
-can filter and map while traversing once with {{jsxref("Array.forEach()")}}).
+can filter and map while traversing once with {{jsxref("Array.forEach()")}}.)
 
 ```js
 const numbers = [-5, 6, 2, 0,];

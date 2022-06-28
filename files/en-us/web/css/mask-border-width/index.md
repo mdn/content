@@ -43,6 +43,7 @@ mask-border-width: 5% 2em 10% auto;
 mask-border-width: inherit;
 mask-border-width: initial;
 mask-border-width: revert;
+mask-border-width: revert-layer;
 mask-border-width: unset;
 ```
 

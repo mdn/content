@@ -1,6 +1,7 @@
 ---
 title: Report.url
 slug: Web/API/Report/url
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -9,20 +10,14 @@ tags:
   - Report
   - Reporting API
   - URL
-browser-compat: api.Report.url
+spec-urls: https://w3c.github.io/reporting/#dom-report-url
 ---
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`url`** read-only property of the {{domxref("Report")}}
 interface returns the URL of the document that generated the report.
 
-## Syntax
-
-```js
-let reportURL = reportInstance.url
-```
-
-### Returns
+## Value
 
 A string representing the URL of the document that generated the report.
 
@@ -48,7 +43,7 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 ## Browser compatibility
 
-{{Compat}}
+This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
 
 ## See also
 

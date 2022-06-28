@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.protocol
 slug: Web/API/RTCIceCandidate/protocol
+page-type: web-api-instance-property
 tags:
   - API
   - ICE
@@ -26,7 +27,7 @@ You can't specify the value of `protocol` directly in the options object, but it
 
 ## Value
 
-A {{domxref("DOMString")}} that indicates what network protocol the candidate uses:
+A string that indicates what network protocol the candidate uses:
 
 - `tcp`
   - : The candidate, if selected, would use {{Glossary("TCP")}} as the transport protocol for its data. The {{domxref("RTCIceCandidate.tcpType", "tcpType")}} property provides additional information about the kind of TCP candidate represented by the object.
@@ -47,7 +48,7 @@ a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
 The third field, `"udp"`, is the protocol type, indicating that the
 candidate would use the UDP transport protocol.
 
-## Example
+## Examples
 
 This code snippet examines the value of `protocol` to decide if it should
 look at the value of {{domxref("RTCIceCandidate.tcpType", "tcpType")}} to see if it's a

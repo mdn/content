@@ -1,6 +1,7 @@
 ---
 title: FormDataEvent
 slug: Web/API/FormDataEvent
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -63,7 +64,7 @@ formElem.addEventListener('formdata', (e) => {
   console.log('formdata fired');
 
   // modifies the form data
-  const formData = e.formData; 
+  const formData = e.formData;
   formData.set('field1', formData.get('field1').toLowerCase());
   formData.set('field2', formData.get('field2').toLowerCase());
 });

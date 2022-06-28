@@ -1,6 +1,7 @@
 ---
 title: MIDIPort.close()
 slug: Web/API/MIDIPort/close
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,7 +19,7 @@ If the port is successfully closed a new {{domxref("MIDIConnectionEvent")}} is q
 ## Syntax
 
 ```js
-MIDIPort.close();
+close()
 ```
 
 ### Parameters

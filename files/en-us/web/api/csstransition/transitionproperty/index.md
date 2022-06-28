@@ -1,6 +1,7 @@
 ---
 title: CSSTransition.transitionProperty
 slug: Web/API/CSSTransition/transitionProperty
+page-type: web-api-instance-property
 tags:
   - API
   - Animation
@@ -18,7 +19,7 @@ transition was generated.
 
 ## Value
 
-A {{domxref("CSSOMString")}}.
+A string.
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: DOMError
 slug: Web/API/DOMError
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -17,9 +18,9 @@ The **`DOMError`** interface describes an error object that contains an error na
 ## Properties
 
 - {{domxref("DOMError.name")}} {{readOnlyInline}}
-  - : Returns a {{ domxref("DOMString") }} representing one of the error type names (see below).
+  - : Returns a string representing one of the error type names (see below).
 - {{domxref("DOMError.message")}} {{readOnlyInline}}
-  - : Returns a {{ domxref("DOMString") }} representing a message or description associated with the given error type name.
+  - : Returns a string representing a message or description associated with the given error type name.
 
 ## Error types
 

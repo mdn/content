@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchRegistration.failureReason
 slug: Web/API/BackgroundFetchRegistration/failureReason
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,7 +14,7 @@ browser-compat: api.BackgroundFetchRegistration.failureReason
 
 The **`failureReason`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns a string with a value that indicates a reason for a background fetch failure.
 
-If the value of this property changes, the  [progress](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event) event is fired at the associated {{domxref("BackgroundFetchRegistration")}} object.
+If the value of this property changes, the [progress](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event) event is fired at the associated {{domxref("BackgroundFetchRegistration")}} object.
 
 ## Value
 
