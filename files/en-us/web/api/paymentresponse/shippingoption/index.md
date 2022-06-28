@@ -35,7 +35,7 @@ is called. It calls `updateDetails()` to toggle the shipping method between
 
 ```js
 // Initialization of PaymentRequest arguments are excerpted for brevity.
-var payment = new PaymentRequest(supportedInstruments, details, options);
+const payment = new PaymentRequest(supportedInstruments, details, options);
 
 request.addEventListener('shippingoptionchange', function(evt) {
   evt.updateWith(new Promise(function(resolve, reject) {
@@ -50,8 +50,8 @@ payment.show().then(function(paymentResponse) {
 });
 
 function updateDetails(details, shippingOption, resolve, reject) {
-  var selectedShippingOption;
-  var otherShippingOption;
+  let selectedShippingOption;
+  let otherShippingOption;
   if (shippingOption === 'standard') {
     selectedShippingOption = details.shippingOptions[0];
     otherShippingOption = details.shippingOptions[1];

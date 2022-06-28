@@ -95,7 +95,7 @@ The interpolation starts abruptly, and then progressively slows down towards the
 
 #### The steps() class of easing functions
 
-The `steps()` functional notation defines a [step function](https://en.wikipedia.org/wiki/Step_function) dividing the domain of output values in equidistant steps.This subclass of step functions are sometimes also called _staircase functions_.
+The `steps()` functional notation defines a [step function](https://en.wikipedia.org/wiki/Step_function) dividing the domain of output values in equidistant steps. This subclass of step functions are sometimes also called _staircase functions_.
 
 ##### Syntax
 

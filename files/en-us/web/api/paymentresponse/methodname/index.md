@@ -41,7 +41,7 @@ real-world implementation this data would then be sent to a payment server.
 
 ```js
 payment.show().then(paymentResponse => {
-  var paymentData = {
+  const paymentData = {
     // payment method string
     method: paymentResponse.methodName,
     // payment details as you requested

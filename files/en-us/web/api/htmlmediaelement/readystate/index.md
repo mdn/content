@@ -83,7 +83,7 @@ audio will play.
 ```
 
 ```js
-var obj = document.getElementById('example');
+const obj = document.getElementById('example');
 
 obj.addEventListener('loadeddata', function() {
 
