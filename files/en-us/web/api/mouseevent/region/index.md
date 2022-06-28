@@ -14,7 +14,7 @@ browser-compat: api.MouseEvent.region
 ---
 {{APIRef("UI Events")}}
 
-The **`MouseEvent.region`** read-only property returns the id of the [canvas hit region](/en-US/docs/Web/API/CanvasRenderingContext2D/addHitRegion) affected by the event.
+The **`MouseEvent.region`** read-only property returns the id of the canvas hit region affected by the event.
 If no hit region is affected, `null` is returned.
 
 ## Value
@@ -52,4 +52,3 @@ canvas.addEventListener("mousemove", function(event){
 ## See also
 
 - {{domxref("MouseEvent")}}
-- {{domxref("CanvasRenderingContext2D.addHitRegion()")}}
