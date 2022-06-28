@@ -60,7 +60,7 @@ msZoomTo(arguments)
           - : Aligns the specified y-coordinate of the viewport to the element's contentY value.
 
     - `scaleFactor`
-      - : Floating-point. The scale factor (msContentZoomFactor) to zoom to. If no value is specified, defaults to the current zoom level (no additional zoom occurs).This argument is ignored if the element is not zoomable.
+      - : Floating-point. The scale factor (msContentZoomFactor) to zoom to. If no value is specified, defaults to the current zoom level (no additional zoom occurs). This argument is ignored if the element is not zoomable.
 
     - `animate`
       - : The type of animation to use.

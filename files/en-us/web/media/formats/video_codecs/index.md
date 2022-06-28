@@ -1969,7 +1969,7 @@ The decision as to which codec or codecs to use begins with a series of question
 
 In the sections below, we offer recommended codec selections for specific use cases. For each use case, you'll find up to two recommendations. If the codec which is considered best for the use case is proprietary or may require royalty payments, then two options are provided: first, an open and royalty-free option, followed by the proprietary one.
 
-If you are only able to offer a single version of each video, you can choose the format that's most appropriate for your needs.The first one is recommended as being a good combination of quality, performance, and compatibility. The second option will be the most broadly compatible choice, at the expense of some amount of quality, performance, and/or size.
+If you are only able to offer a single version of each video, you can choose the format that's most appropriate for your needs. The first one is recommended as being a good combination of quality, performance, and compatibility. The second option will be the most broadly compatible choice, at the expense of some amount of quality, performance, and/or size.
 
 ### Recommendations for everyday videos
 
