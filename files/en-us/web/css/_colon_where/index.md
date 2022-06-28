@@ -75,7 +75,7 @@ Take the following HTML:
   </section>
 
   <aside class="is-styling">
-    <p>Here is my aside content. This <a href="https://developer.mozilla.org">also contains a link</a></p>.
+    <p>Here is my aside content. This <a href="https://developer.mozilla.org">also contains a link</a>.</p>
   </aside>
 
   <footer class="is-styling">
