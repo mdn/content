@@ -10,7 +10,7 @@ tags:
   - Web
   - Window
   - copy
-browser-compat: api.Window.copy_event
+browser-compat: api.Element.copy_event
 ---
 {{APIRef}}
 

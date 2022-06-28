@@ -18,7 +18,7 @@ tags:
 
 Once you've successfully [created a WebGL context](/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL), you can start rendering into it. A simple thing we can do is draw a simple square untextured plane, so let's start there, by building code to draw a square plane.
 
-The complete source code for this project is [available on GitHub](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2).
+The complete source code for this project is [available on GitHub](https://github.com/mdn/dom-examples/webgl-examples/tree/master/tutorial/sample2).
 
 > **Note:** This project uses the [glMatrix](https://glmatrix.net/) library to perform its matrix operations, so you will need to include that in your project. We're loading a copy from a CDN in our HTML's {{HTMLElement("head")}}.
 
@@ -300,9 +300,9 @@ The first step is to clear the canvas to our background color; then we establish
 
 Then we establish the position of the square plane by loading the identity position and translating away from the camera by 6 units. After that, we bind the square's vertex buffer to the attribute the shader is using for `aVertexPosition` and we tell WebGL how to pull the data out of it. Finally we draw the object by calling the {{domxref("WebGLRenderingContext.drawArrays()", "drawArrays()")}} method.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample2/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2) | [Open this demo on a new page](https://mdn.github.io/webgl-examples/tutorial/sample2/)
+[View the complete code](https://github.com/mdn/dom-examples/webgl-examples/tree/master/tutorial/sample2) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample2/)
 
 ## Matrix utility operations
 

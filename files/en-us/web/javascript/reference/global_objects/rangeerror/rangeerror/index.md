@@ -25,9 +25,9 @@ new RangeError(message, fileName, lineNumber)
 
 - `message` {{optional_inline}}
   - : Human-readable description of the error.
-- `fileName` {{optional_inline}}
+- `fileName` {{optional_inline}} {{non-standard_inline}}
   - : The name of the file containing the code that caused the exception
-- `lineNumber` {{optional_inline}}
+- `lineNumber` {{optional_inline}} {{non-standard_inline}}
   - : The line number of the code that caused the exception
 
 ## Examples
