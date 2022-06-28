@@ -9,7 +9,7 @@ tags:
   - Reference
   - SVG
   - SVG OM
-browser-compat: api.SVGGraphicsElement.cut_event
+browser-compat: api.Element.cut_event
 ---
 {{APIRef}}
 

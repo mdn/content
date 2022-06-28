@@ -118,8 +118,8 @@ If the `contextType` doesn't match a possible drawing context,
 ## Examples
 
 ```js
-var offscreen = new OffscreenCanvas(256, 256);
-var gl = offscreen.getContext("webgl");
+const offscreen = new OffscreenCanvas(256, 256);
+const gl = offscreen.getContext("webgl");
 
 gl; // WebGLRenderingContext
 gl.canvas; // OffscreenCanvas

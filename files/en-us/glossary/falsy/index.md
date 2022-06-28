@@ -22,7 +22,7 @@ The following table provides a complete list of JavaScript falsy values:
 | {{Glossary("null")}}         | [null](/en-US/docs/Web/JavaScript/Reference/Operators/null) — the absence of any value.                                                                                                                                             |
 | {{Glossary("undefined")}}     | [undefined](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) — the primitive value.                                                                                                                                        |
 | {{Glossary("NaN")}}             | [NaN](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) — not a number.                                                                                                                                                           |
-| {{domxref("document.all")}} | Objects are falsy if and only if they have the [\[\[IsHTMLDDA\]\]](https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot) internal slot.That slot only exists in {{domxref("document.all")}} and cannot be set using JavaScript. |
+| {{domxref("document.all")}} | Objects are falsy if and only if they have the [\[\[IsHTMLDDA\]\]](https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot) internal slot. That slot only exists in {{domxref("document.all")}} and cannot be set using JavaScript. |
 
 ## Examples
 
@@ -41,7 +41,7 @@ if ("")
 
 ### The logical AND operator, &&
 
-If the first object is falsy, it returns that object
+If the first object is falsy, it returns that object:
 
 ```js
 false && "dog"
