@@ -25,7 +25,7 @@ should be able to successfully record.
 ## Syntax
 
 ```js
-MediaRecorder.isTypeSupported(mimeType)
+isTypeSupported(mimeType)
 ```
 
 ### Parameters
