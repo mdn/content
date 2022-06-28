@@ -64,7 +64,7 @@ Besides the generic `Error` constructor, there are other core error constructors
 - {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
   - : A non-standard Mozilla property for the column number in the line that raised this error.
 - {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
-  - : A non-standard Mozilla property for a stack trace.
+  - : A non-standard property for a stack trace.
 
 ## Instance methods
 
