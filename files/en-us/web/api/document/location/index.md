@@ -21,7 +21,7 @@ Though `Document.location` is a _read-only_ `Location`
 object, you can also assign a string to it. This means that you can
 work with document.location as if it were a string in most cases:
 `document.location = 'http://www.example.com'` is a synonym of
-`document.location.href = 'http://www.example.com'`.If you assign another
+`document.location.href = 'http://www.example.com'`. If you assign another
 string to it, browser will load the website you assigned.
 
 To retrieve just the URL as a string, the read-only {{domxref("document.URL")}}

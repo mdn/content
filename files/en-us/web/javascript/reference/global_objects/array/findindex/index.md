@@ -100,7 +100,7 @@ not process the elements appended to the array after the call to
 `findIndex()` begins. If an existing, unvisited element of the array is
 changed by `callbackFn`, its value passed to the
 `callbackFn` will be the value at the time `findIndex()`
-visits the element's index.Elements that are {{jsxref("Operators/delete", "deleted")}} are still visited.
+visits the element's index. Elements that are {{jsxref("Operators/delete", "deleted")}} are still visited.
 
 > **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 

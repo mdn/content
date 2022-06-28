@@ -38,7 +38,7 @@ a _PlayTo_ device. This is done to conform to URI standards.
 ```
 
 ```js
-  var video = document.createElement('video');
+  const video = document.createElement('video');
   document.body.appendChild(video);
 
   video.src = "http://www.contoso.com/videos/video.mp4";

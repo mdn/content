@@ -232,7 +232,7 @@ That's it! You have now created a new branch to do your work in. This branch is 
 Tips:
 
 - Make sure that you always update your main branch to be in sync with the mozilla main branch, as discussed in the previous section, before creating a new branch.
-- Make sure that you always create your new branch based on main, and not some other branch.To do this, makes sure that the branch button shows "main" before starting the process. If you don't, your new branch will likely be really out of date, which will create content problems.
+- Make sure that you always create your new branch based on main, and not some other branch. To do this, makes sure that the branch button shows "main" before starting the process. If you don't, your new branch will likely be really out of date, which will create content problems.
 
 ### Get your branch locally and switch to it
 

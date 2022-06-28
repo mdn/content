@@ -145,7 +145,7 @@ reset.addEventListener("click", () => document.location.reload());
 
 #### Result
 
-{{EmbedLiveSample("Setting and getting effectAllowed", 0, 400)}}
+{{EmbedLiveSample("Setting effectAllowed", 0, 400)}}
 
 ## Specifications
 

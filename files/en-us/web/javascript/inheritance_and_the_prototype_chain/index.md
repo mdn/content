@@ -381,23 +381,30 @@ const square = new Square(2);
 
 The lookup time for properties that are high up on the prototype chain can have a negative impact on the performance, and this may be significant in the code where performance is critical. Additionally, trying to access nonexistent properties will always traverse the full prototype chain.
 
-Also, when iterating over the properties of an object, **every** enumerable property that is on the prototype chain will be enumerated. To check whether an object has a property defined on _itself_ and not somewhere on its prototype chain, it is necessary to use the [`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) method which all objects inherit from `Object.prototype`. To give you a concrete example, let's take the above graph example code to illustrate it:
+Also, when iterating over the properties of an object, **every** enumerable property that is on the prototype chain will be enumerated. To check whether an object has a property defined on _itself_ and not somewhere on its prototype chain, it is necessary to use the [`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) or [`Object.hasOwn`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn) methods. All objects inherit [`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) from `Object.prototype`. To give you a concrete example, let's take the above graph example code to illustrate it:
 
 ```js
 console.log(g.hasOwnProperty('vertices'));
 // true
 
+console.log(Object.hasOwn(g, 'vertices'));
+// true
+
 console.log(g.hasOwnProperty('nope'));
+// false
+
+console.log(Object.hasOwn(g, 'nope'));
 // false
 
 console.log(g.hasOwnProperty('addVertex'));
 // false
 
+console.log(Object.hasOwn(g, 'addVertex'));
+// false
+
 console.log(Object.getPrototypeOf(g).hasOwnProperty('addVertex'));
 // true
 ```
-
-[`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) is the only thing in JavaScript which deals with properties and does **not** traverse the prototype chain.
 
 Note: It is **not** enough to check whether a property is [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined). The property might very well exist, but its value just happens to be set to `undefined`.
 
