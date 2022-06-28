@@ -16,7 +16,6 @@ There's another [**`trunc`**](/en-US/docs/WebAssembly/Reference/Numeric/Truncate
 
 {{EmbedInteractiveExample("pages/wat/trunc_float_to_int.html", "tabbed-taller")}}
 
-
 ## Syntax
 
 ```wasm

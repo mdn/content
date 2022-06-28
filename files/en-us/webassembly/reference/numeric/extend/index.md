@@ -10,9 +10,7 @@ tags:
 ---
 {{WebAssemblySidebar}}
 
-
 The **`extend`** instructions, are used to convert (extend) numbers of type `i32` to type `i64`. There are signed and unsigned versions of this instruction.
-
 
 {{EmbedInteractiveExample("pages/wat/extend.html", "tabbed-taller")}}
 

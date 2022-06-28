@@ -40,7 +40,7 @@ for ([initialization]; [condition]; [final-expression])
 - `condition`
   - : An expression to be evaluated before each loop iteration. If this expression [evaluates to true](/en-US/docs/Glossary/Truthy), `statement` is executed. If the expression [evaluates to false](/en-US/docs/Glossary/Falsy), execution exits the loop and goes to the first statement after the `for` construct.
 
-    This conditional test is optional. If omitted, the condition always evaluates to true. 
+    This conditional test is optional. If omitted, the condition always evaluates to true.
 - `final-expression`
   - : An expression to be evaluated at the end of each loop iteration. This occurs before
     the next evaluation of `condition`. Generally used to update or
