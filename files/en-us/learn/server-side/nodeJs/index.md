@@ -9,15 +9,18 @@ tags:
 ---
 
 ## What is NodeJS
+
 Node.js is an open source server environment
 Node.js is free
 Node.js runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.)
 Node.js uses JavaScript on the server
 
 ## How to download Node
-Download Node.js from the official Node.js web site: https://nodejs.org
+
+Download Node.js from the official Node.js web [site](https://nodejs.org)
 
 ## Why NodeJS
+
 Node.js uses asynchronous programming!
 
 A common task for a web server can be to open a file on the server and return the content to the client.
@@ -38,18 +41,21 @@ Node.js eliminates the waiting, and simply continues with the next request.
 Node.js runs single-threaded, non-blocking, asynchronous programming, which is very memory efficient.
 
 ## What Can Node.js Do?
+
 Node.js can generate dynamic page content
 Node.js can create, open, read, write, delete, and close files on the server
 Node.js can collect form data
 Node.js can add, delete, modify data in your database
 
 ## What is a Node.js File?
+
 Node.js files contain tasks that will be executed on certain events
 A typical event is someone trying to access a port on the server
 Node.js files must be initiated on the server before having any effect
 Node.js files have extension ".js"
 
 ## "Hello world" project
+
 ```js
 const http = require('http'); //Use Http module
 

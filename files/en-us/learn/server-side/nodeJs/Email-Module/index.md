@@ -8,21 +8,29 @@ tags:
   - email
   - Server
 ---
+
 ## The Nodemailer Module
+
 The Nodemailer module makes it easy to send emails from your computer.
 The module can be downloaded and installed using npm:
+
 ```terminal
-C:\Users\Your Name>npm install nodemailer
+...\folder>npm install nodemailer
 ```
+
 After you have downloaded the Nodemailer module, you can include the module in any application:
+
 ```js
 var nodemailer = require('nodemailer');
 ```
+
 ## Send an Email
+
 Now you are ready to send emails from your server using username and password provided by your email service provider.
 This tutorial will show you how to use your Gmail account to send an email:
+
 ```js
-var nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -50,7 +58,9 @@ transporter.sendMail(mailOptions, function(error, info){
 And that's it! Now your server is able to send emails.
 
 ## Multiple Receivers
+
 To send an email to more than one receiver, add them to the "to" property of the mailOptions object, separated by commas:
+
 ```js
 var mailOptions = {
   from: 'youremail@gmail.com',
@@ -61,7 +71,9 @@ var mailOptions = {
 ```
 
 ## Send HTML
+
 To send HTML formatted text in your email, use the "html" property instead of the "text" property:
+
 ```js
 var mailOptions = {
   from: 'youremail@gmail.com',
@@ -70,4 +82,5 @@ var mailOptions = {
   html: '<h1>Welcome</h1><p>That was easy!</p>'
 }
 ```
+
 Don't use this module for spam!!!!!!

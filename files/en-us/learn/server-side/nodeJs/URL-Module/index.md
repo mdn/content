@@ -9,15 +9,21 @@ tags:
   - built-in module
   - Server
 ---
+
 ## The Built-in URL Module
+
 The URL module splits up a web address into readable parts.
 To include the URL module, use the require() method:
+
 ```js
-var url = require('url');
+const url = require('url');
 ```
+
 Parse an address with the url.parse() method, and it will return a URL object with each part of the address as properties:
+
 ```js
-var url = require('url');
+
+const url = require('url');
 var adr = 'http://localhost:8080/default.htm?year=2017&month=february';
 var q = url.parse(adr, true);
 
@@ -28,9 +34,12 @@ console.log(q.search); //returns '?year=2017&month=february'
 var qdata = q.query; //returns an object: { year: 2017, month: 'february' }
 console.log(qdata.month); //returns 'february'
 ```
+
 ## Node.js File Server
+
 Now we know how to parse the query string, and in the previous chapter we learned how to make Node.js behave as a file server. Let us combine the two, and serve the file requested by the client.
 Create two html files and save them in the same folder as your node.js files.
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -40,6 +49,7 @@ Create two html files and save them in the same folder as your node.js files.
 </body>
 </html>
 ```
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -49,11 +59,13 @@ Create two html files and save them in the same folder as your node.js files.
 </body>
 </html>
 ```
+
 Create a Node.js file that opens the requested file and returns the content to the client. If anything goes wrong, throw a 404 error:
+
 ```js
-var http = require('http');
-var url = require('url');
-var fs = require('fs');
+import http from"http";
+import url  from "url";
+import fs   from "fs";
 
 http.createServer(function (req, res) {
   var q = url.parse(req.url, true);
@@ -69,9 +81,12 @@ http.createServer(function (req, res) {
   });
 }).listen(8080);
 ```
+
 Remember to initiate the file:
+
 ```terminal
-C:\Users\Your Name>node demo_fileserver.js
+...\Folder>node demo_fileserver.js
 ```
+
 If you have followed the same steps on your computer, you should see two different results when opening these two addresses:
 http://localhost:8080/summer.html or http://localhost:8080/winter.html
