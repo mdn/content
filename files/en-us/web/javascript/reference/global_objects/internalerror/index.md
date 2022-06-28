@@ -57,7 +57,7 @@ function loop(x) {
 loop(0);
 ```
 
-Setting this condition to an extremely high value, won't work:
+Setting this condition to an extremely high value, may not work:
 
 ```js example-bad
 function loop(x) {
