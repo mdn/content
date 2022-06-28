@@ -155,7 +155,7 @@ var keyEnter = this.game.input.keyboard.addKey(Phaser.KeyCode.ENTER);
 var keyEnter.onDown.add(this.clickStart, this);
 ```
 
-You can use `addKey()` to add any key the `Phaser.KeyCode` object has to offer. The `onDown()` function is executed whenever the <kbd>Enter</kbd> key is pressed.It will launch the `clickStart()` method, which starts a new game.
+You can use `addKey()` to add any key the `Phaser.KeyCode` object has to offer. The `onDown()` function is executed whenever the <kbd>Enter</kbd> key is pressed. It will launch the `clickStart()` method, which starts a new game.
 
 It's useful to provide an option to play the game on desktop without using a mouse, so you don't have to take your hands off the keyboard.
 
