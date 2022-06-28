@@ -233,11 +233,11 @@ Now that we've retrieved the JSON data and converted it into a JavaScript object
 function populateHeader(obj) {
   const header = document.querySelector('header');
   const myH1 = document.createElement('h1');
-  myH1.textContent = obj['squadName'];
+  myH1.textContent = obj.squadName;
   header.appendChild(myH1);
 
   const myPara = document.createElement('p');
-  myPara.textContent = `Hometown: ${obj['homeTown']} // Formed: ${obj['formed']}`;
+  myPara.textContent = `Hometown: ${obj.homeTown} // Formed: ${obj.formed}`;
   header.appendChild(myPara);
 }
 ```
@@ -252,7 +252,7 @@ Next, add the following function at the bottom of the code, which creates and di
 
 function populateHeroes(obj) {
   const section = document.querySelector('section');
-  const heroes = obj['members'];
+  const heroes = obj.members;
 
   for (const hero of heroes) {
     const myArticle = document.createElement('article');
