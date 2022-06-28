@@ -40,7 +40,7 @@ Besides the generic `Error` constructor, there are other core error constructors
 
 ## Constructor
 
-- [`Error()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error)
+- {{jsxref("Error/Error", "Error()")}}
   - : Creates a new `Error` object.
 
 ## Static methods
@@ -64,7 +64,7 @@ Besides the generic `Error` constructor, there are other core error constructors
 - {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
   - : A non-standard Mozilla property for the column number in the line that raised this error.
 - {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
-  - : A non-standard Mozilla property for a stack trace.
+  - : A non-standard property for a stack trace.
 
 ## Instance methods
 
@@ -204,7 +204,7 @@ try {
 
 ```js
 function CustomError(foo, message, fileName, lineNumber) {
-  let instance = new Error(message, fileName, lineNumber);
+  var instance = new Error(message, fileName, lineNumber);
   instance.foo = foo;
   Object.setPrototypeOf(instance, CustomError.prototype);
   if (Error.captureStackTrace) {
