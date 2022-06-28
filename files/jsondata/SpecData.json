@@ -316,7 +316,7 @@
   },
   "CSS3 Overflow": {
     "name": "CSS Overflow Module Level 3",
-    "url": "https://drafts.csswg.org/css-overflow-3/",
+    "url": "https://www.w3.org/TR/css-overflow-3/",
     "status": "WD"
   },
   "CSS3 Namespaces": {
