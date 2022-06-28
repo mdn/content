@@ -16,7 +16,7 @@ tags:
 ---
 {{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
 
-Once you've successfully [created a WebGL context](/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL), you can start rendering into it. A simple thing we can do is draw a simple square untextured plane, so let's start there, by building code to draw a square plane.
+Once you've successfully [created a WebGL context](/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL), you can start rendering into it. A simple thing we can do is draw an untextured square plane, so let's start there.
 
 The complete source code for this project is [available on GitHub](https://github.com/mdn/dom-examples/webgl-examples/tree/master/tutorial/sample2).
 
@@ -164,7 +164,7 @@ After we've created a shader program we need to look up the locations that WebGL
 
 ## Creating the square plane
 
-Before we can render our square plane, we need to create the buffer that contains its vertex positions and put the vertex positions in it. We'll do that using a function we call `initBuffers()`; as we explore more advanced WebGL concepts, this routine will be augmented to create more -- and more complex -- 3D objects.
+Before we can render our square plane, we need to create the buffer that contains its vertex positions and put the vertex positions in it. We'll do that using a function we call `initBuffers()`; as we explore more advanced WebGL concepts, this routine will be augmented to create more — and more complex — 3D objects.
 
 ```js
 function initBuffers(gl) {
