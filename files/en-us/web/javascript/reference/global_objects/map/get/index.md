@@ -40,12 +40,27 @@ The element associated with the specified key, or
 ### Using get()
 
 ```js
-let myMap = new Map();
+const myMap = new Map();
 myMap.set('bar', 'foo');
 
 myMap.get('bar');   // Returns "foo"
 myMap.get('baz');   // Returns undefined
 ```
+
+### Using get() to retrieve a reference to an object
+
+```js
+const arr = [];
+const myMap = new Map();
+myMap.set('bar', arr);
+
+myMap.get('bar').push('foo');
+
+console.log(arr); // ["foo"]
+console.log(myMap.get('bar')); // ["foo"]
+```
+
+Note that the map holding a reference to the original object effectively means the object cannot be garbage-collected, which may lead to unexpected memory issues. If you want the object stored in the map to have the same lifespan as the original one, consider using a {{jsxref("WeakMap")}}.
 
 ## Specifications
 

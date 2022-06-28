@@ -68,7 +68,8 @@ The example, which pauses the video when you switch to another tab and plays aga
 
 ```js
 // Set the name of the hidden property and the change event for visibility
-var hidden, visibilityChange;
+let hidden;
+let visibilityChange;
 if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
   hidden = "hidden";
   visibilityChange = "visibilitychange";
@@ -80,7 +81,7 @@ if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and 
   visibilityChange = "webkitvisibilitychange";
 }
 
-var videoElement = document.getElementById("videoElement");
+const videoElement = document.getElementById("videoElement");
 
 // If the page is hidden, pause the video;
 // if the page is shown, play the video

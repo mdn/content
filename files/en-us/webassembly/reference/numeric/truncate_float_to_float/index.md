@@ -1,6 +1,6 @@
 ---
-title: Truncate
-slug: WebAssembly/Reference/Numeric/Truncate
+title: Truncate (float to float)
+slug: WebAssembly/Reference/Numeric/Truncate_float_to_float
 tags:
   - WebAssembly
   - wasm
@@ -14,7 +14,9 @@ The **`trunc`** instructions, short for *truncate*, are used for getting the val
 
 **`trunc`** differs from **`floor`** when used on negative numbers, **`floor`** will round down in those cases while **`trunc`** will round up.
 
-{{EmbedInteractiveExample("pages/wat/trunc.html", "tabbed-standard")}}
+There's another [**`trunc`**](/en-US/docs/WebAssembly/Reference/Numeric/Truncate_float_to_int) instruction that truncates the fractional part of a floating point and converts it to an integer.
+
+{{EmbedInteractiveExample("pages/wat/trunc_float_to_float.html", "tabbed-standard")}}
 
 ## Syntax
 

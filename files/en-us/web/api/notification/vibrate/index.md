@@ -32,12 +32,12 @@ vibration; a simple `options` object is created, and then the notification is
 fired using the `Notification()` constructor.
 
 ```js
-var options = {
+const options = {
   body: 'Do you like my body?',
   vibrate: [200, 100, 200]
 }
 
-var n = new Notification('Test notification',options);
+const n = new Notification('Test notification',options);
 
 console.log(n.vibrate) // should log [200,100,200]
 ```
