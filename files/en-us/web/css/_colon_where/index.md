@@ -94,7 +94,7 @@ Take the following HTML:
   </aside>
 
   <footer class="where-styling">
-    <p>This is my footer, also containing <a href="https://github.com/mdn">a link</a></p>.
+    <p>This is my footer, also containing <a href="https://github.com/mdn">a link</a>.</p>
   </footer>
 </article>
 ```
