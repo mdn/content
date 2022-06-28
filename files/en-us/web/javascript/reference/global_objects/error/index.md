@@ -40,7 +40,7 @@ Besides the generic `Error` constructor, there are other core error constructors
 
 ## Constructor
 
-- [`Error()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error)
+- {{jsxref("Error/Error", "Error()")}}
   - : Creates a new `Error` object.
 
 ## Static methods
