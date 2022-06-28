@@ -86,8 +86,8 @@ and 50em.
        srcset="/files/16870/new-york-skyline-wide.jpg 3724w,
                /files/16869/new-york-skyline-4by3.jpg 1961w,
                /files/16871/new-york-skyline-tall.jpg 1060w"
-       sizes="((min-width: 50em) and (max-width: 60em)) 50em,
-              ((min-width: 30em) and (max-width: 50em)) 30em,
+       sizes="(min-width: 50em) and (max-width: 60em) 50em,
+              (min-width: 30em) and (max-width: 50em) 30em,
               (max-width: 30em) 20em">
   <p>Then there's even more amazing stuff to say down here. Can you
      believe it? I sure can't.</p>
