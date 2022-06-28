@@ -22,7 +22,7 @@ function init() {
   var name = 'Mozilla'; // name is a local variable created by init
   function displayName() {
     // displayName() is the inner function, a closure
-    alert(name); // use variable declared in the parent function
+    console.log(name); // use variable declared in the parent function
   }
   displayName();
 }
@@ -31,7 +31,7 @@ init();
 
 `init()` creates a local variable called `name` and a function called `displayName()`. The `displayName()` function is an inner function that is defined inside `init()` and is available only within the body of the `init()` function. Note that the `displayName()` function has no local variables of its own. However, since inner functions have access to the variables of outer functions, `displayName()` can access the variable `name` declared in the parent function, `init()`.
 
-Run the code using [this JSFiddle link](https://jsfiddle.net/xAFs9/3/) and notice that the `alert()` statement within the `displayName()` function successfully displays the value of the `name` variable, which is declared in its parent function. This is an example of _lexical scoping_, which describes how a parser resolves variable names when functions are nested. The word _lexical_ refers to the fact that lexical scoping uses the location where a variable is declared within the source code to determine where that variable is available. Nested functions have access to variables declared in their outer scope.
+Run the code using [this JSFiddle link](https://jsfiddle.net/3dxck52m/) and notice that the `console.log()` statement within the `displayName()` function successfully displays the value of the `name` variable, which is declared in its parent function. This is an example of _lexical scoping_, which describes how a parser resolves variable names when functions are nested. The word _lexical_ refers to the fact that lexical scoping uses the location where a variable is declared within the source code to determine where that variable is available. Nested functions have access to variables declared in their outer scope.
 
 In this particular example, the scope is called a _function scope_, because the variable is accessible and only accessible within the function body where it's declared.
 
@@ -71,7 +71,7 @@ Consider the following code example:
 function makeFunc() {
   const name = 'Mozilla';
   function displayName() {
-    alert(name);
+    console.log(name);
   }
   return displayName;
 }
@@ -84,7 +84,7 @@ Running this code has exactly the same effect as the previous example of the `in
 
 At first glance, it might seem unintuitive that this code still works. In some programming languages, the local variables within a function exist for just the duration of that function's execution. Once `makeFunc()` finishes executing, you might expect that the `name` variable would no longer be accessible. However, because the code still works as expected, this is obviously not the case in JavaScript.
 
-The reason is that functions in JavaScript form closures. A _closure_ is the combination of a function and the lexical environment within which that function was declared. This environment consists of any local variables that were in-scope at the time the closure was created. In this case, `myFunc` is a reference to the instance of the function `displayName` that is created when `makeFunc` is run. The instance of `displayName` maintains a reference to its lexical environment, within which the variable `name` exists. For this reason, when `myFunc` is invoked, the variable `name` remains available for use, and "Mozilla" is passed to `alert`.
+The reason is that functions in JavaScript form closures. A _closure_ is the combination of a function and the lexical environment within which that function was declared. This environment consists of any local variables that were in-scope at the time the closure was created. In this case, `myFunc` is a reference to the instance of the function `displayName` that is created when `makeFunc` is run. The instance of `displayName` maintains a reference to its lexical environment, within which the variable `name` exists. For this reason, when `myFunc` is invoked, the variable `name` remains available for use, and "Mozilla" is passed to `console.log`.
 
 Here's a slightly more interesting example—a `makeAdder` function:
 
@@ -235,28 +235,28 @@ const makeCounter = function () {
 const counter1 = makeCounter();
 const counter2 = makeCounter();
 
-alert(counter1.value()); // 0.
+console.log(counter1.value()); // 0.
 
 counter1.increment();
 counter1.increment();
-alert(counter1.value()); // 2.
+console.log(counter1.value()); // 2.
 
 counter1.decrement();
-alert(counter1.value()); // 1.
-alert(counter2.value()); // 0.
+console.log(counter1.value()); // 1.
+console.log(counter2.value()); // 0.
 ```
 
 Notice how the two counters maintain their independence from one another. Each closure references a different version of the `privateCounter` variable through its own closure. Each time one of the counters is called, its lexical environment changes by changing the value of this variable. Changes to the variable value in one closure don't affect the value in the other closure.
 
 > **Note:** Using closures in this way provides benefits that are normally associated with object-oriented programming. In particular, _data hiding_ and _encapsulation_.
 
-## Closure Scope Chain
+## Closure scope chain
 
 Every closure has three scopes:
 
-- Local Scope (Own scope)
-- Enclosing Scope (can be block, function, or module scope)
-- Global Scope
+- Local scope (Own scope)
+- Enclosing scope (can be block, function, or module scope)
+- Global scope
 
 A common mistake is not realizing that in the case where the outer function is itself a nested function, access to the outer function's scope includes the enclosing scope of the outer function—effectively creating a chain of function scopes. To demonstrate, consider the following example code.
 
@@ -468,7 +468,7 @@ function setupHelp() {
 setupHelp();
 ```
 
-If you don't want to use more closures, you can use the [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) or [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) keyword introduced in ES6:
+If you don't want to use more closures, you can use the [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) or [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) keyword:
 
 ```js
 function showHelp(help) {
@@ -484,7 +484,7 @@ function setupHelp() {
 
   for (let i = 0; i < helpText.length; i++) {
     const item = helpText[i];
-    document.getElementById(item.id).onfocus = function () {
+    document.getElementById(item.id).onfocus = () => {
       showHelp(item.help);
     };
   }
