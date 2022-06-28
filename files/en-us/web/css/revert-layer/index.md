@@ -140,6 +140,8 @@ This example shows the `revert-layer` keyword behavior when there is no cascade 
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample('Revert_to_style_in_previous_origin')}}
 
 The style for all `<li>` elements rolls back to the defaults in the user-agent origin.
