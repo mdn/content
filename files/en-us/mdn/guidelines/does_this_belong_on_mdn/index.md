@@ -55,14 +55,13 @@ In general, anything that isn't an open web standard does not belong on MDN. The
 
 ### Mozilla products
 
-
 MDN Web Docs doesn't host documentation for Mozilla products anymore.
 
 In particular, the following products have their own documentation site:
 
-  - [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
-  - [Building and configuring Firefox](https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html)
-  - [SpiderMonkey](https://firefox-source-docs.mozilla.org/js/)
+- [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+- [Building and configuring Firefox](https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html)
+- [SpiderMonkey](https://firefox-source-docs.mozilla.org/js/)
 
 ### What else?
 
