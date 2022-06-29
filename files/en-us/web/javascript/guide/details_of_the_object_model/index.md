@@ -29,9 +29,7 @@ In class-based languages, you define a class in a separate _class definition_. I
 
 JavaScript follows a similar model, but does not have a class definition separate from the constructor. Instead, you define a constructor function to create objects with a particular initial set of properties and values. Any JavaScript function can be used as a constructor. You use the `new` operator with a constructor function to create a new object.
 
-> **Note:** ECMAScript 2015 introduces a [class declaration](/en-US/docs/Web/JavaScript/Reference/Classes):
->
-> > JavaScript classes, introduced in ECMAScript 2015, are primarily syntactical sugar over JavaScript's existing prototype-based inheritance. The class syntax _does not_ introduce a new object-oriented inheritance model to JavaScript.
+> **Note:** ECMAScript 2015 introduces [class declarations](/en-US/docs/Web/JavaScript/Reference/Classes). JavaScript classes are primarily syntactical sugar over JavaScript's existing prototype-based inheritance. The class syntax _does not_ introduce a new object-oriented inheritance model to JavaScript — all patterns are convertible to prototype-based inheritance. More details can be found in the classes references.
 
 ### Subclasses and inheritance
 
