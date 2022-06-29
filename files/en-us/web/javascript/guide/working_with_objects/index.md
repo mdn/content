@@ -61,17 +61,15 @@ myCar['model'] = 'Mustang';
 myCar['year'] = 1969;
 ```
 
-An object property name can be any valid JavaScript string, or anything that can be _converted_ to a string, including an empty string. However, any property name that is not a valid JavaScript identifier can not use dot notation.
-
-For example, a property name that has a space or a hyphen, that starts with a number, or that is held inside a variable, can only be accessed using by the square bracket notation. This notation is also very useful when property names are to be dynamically determined, i.e. when the property name is not determined until runtime. Examples are as follows:
+An object property name can be any valid JavaScript string, or anything that can be _converted_ to a string, including an empty string. However, any property name that is not a valid JavaScript identifier cannot use dot notation. For example, a property name that has a space or a hyphen, that starts with a number, or that is held inside a variable can only be accessed using by the square bracket notation. This notation is also very useful when property names are to be dynamically determined, i.e. not determined until runtime. Examples are as follows:
 
 ```js
 // four variables are created and assigned in a single go,
 // separated by commas
-const myObj = new Object(),
+const myObj = {},
       str = 'myString',
       rand = Math.random(),
-      anotherObj = new Object();
+      anotherObj = {};
 
 // Now, creating additional properties.
 myObj.type              = 'Dot syntax for a key named type';
@@ -83,7 +81,6 @@ myObj['']               = 'This key is an empty string';
 
 console.log(myObj);
 console.log(myObj.myString);
-</script>
 
 /*
 [Log] Object
@@ -99,12 +96,11 @@ console.log(myObj.myString);
 // [Log] This key is in variable str
 ```
 
-All keys in the square bracket notation are converted to strings, unless they're Symbols. JavaScript object property names (keys) can only be strings or Symbols. For example, in the above code, when the key `anotherObj` is added to the `myObj`, JavaScript will call the {{jsxref("Object.toString", "toString()")}} method of `anotherObj`, and use the resulting string as the new key.
+JavaScript object property names (keys) can only be strings or Symbols — all keys in the square bracket notation are converted to strings unless they are Symbols. For example, in the above code, when the key `anotherObj` is added to the `myObj`, JavaScript will call the {{jsxref("Object.toString", "toString()")}} method of `anotherObj`, and use the resulting string as the new key.
 
-You can also access properties by using a string value that is stored in a variable. The variable must be passed in bracket notation. In the above example, the variable `str` held `"myString"` and it is `"myString"` that is the property name. Therefore, `myObj.str` will return as undefined.
+You can also access properties with a string value stored in a variable. The variable must be passed in bracket notation. In the example above, the variable `str` held `"myString"` and it is `"myString"` that is the property name. Therefore, `myObj.str` will return as undefined.
 
 ```js
-
 str = 'myString';
 myObj[str] = 'This key is in variable str';
 
@@ -156,9 +152,9 @@ myCar.year = 1969
 
 There are three native ways to list/traverse object properties:
 
-- [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops. This method traverses all of the enumerable properties of an object as well as its prototype chain.
-- {{jsxref("Object.keys", "Object.keys(myObj)")}}. This method returns an array with only the enumerable own property names ("keys") in the object `myObj`, but not those in the prototype chain.
-- {{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(myObj)")}}. This method returns an array containing all the own property names in the object `myObj`, regardless of if they are enumerable or not.
+- [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops. This method traverses all of the enumerable string properties of an object as well as its prototype chain.
+- {{jsxref("Object.keys", "Object.keys(myObj)")}}. This method returns an array with only the enumerable own string property names ("keys") in the object `myObj`, but not those in the prototype chain.
+- {{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(myObj)")}}. This method returns an array containing all the own string property names in the object `myObj`, regardless of if they are enumerable or not.
 
 There is no native way to list "hidden" properties (properties in the prototype chain which are not accessible through the object, because another property has the same name earlier in the prototype chain). However, this can be achieved with the following function:
 
