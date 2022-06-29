@@ -63,8 +63,7 @@ _No changes._
 
 - WebDriver commands following a call to `WebDriver:SwitchToFrame` can fail with a "no such window" error
   if the frame's content hasn't yet finished loading ({{bug(1691348)}}).
-- After a [cross-group
-  page navigation](https://firefox-source-docs.mozilla.org/dom/navigation/nav_replace.html#cross-group-navigations), accessing a previously-retrieved element might not always raise a "stale element" error, and
+- After a [cross-group page navigation](https://firefox-source-docs.mozilla.org/dom/navigation/nav_replace.html#cross-group-navigations), accessing a previously-retrieved element might not always raise a "stale element" error, and
   can also lead to a "no such element" error. To prevent this, set the `marionette.actors.enabled`
   preference to `false` ({{bug(1690308)}}).
 

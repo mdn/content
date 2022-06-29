@@ -81,7 +81,6 @@
       ],
       "interfaces": [
         "CanvasGradient",
-        "CanvasImageSource",
         "CanvasPattern",
         "CanvasRenderingContext2D",
         "HTMLCanvasElement",
@@ -1039,6 +1038,14 @@
       ],
       "events": []
     },
+    "Prioritized Task Scheduling API": {
+      "overview": ["Prioritized Task Scheduling API"],
+      "guides": [],
+      "interfaces": ["Scheduler", "TaskController", "TaskSignal", "AbortSignal", "TaskPriorityChangeEvent"],
+      "methods": [],
+      "properties": ["Window.scheduler"],
+      "events": []
+    },
     "Proximity Events": {
       "overview": ["Proximity Events"],
       "interfaces": ["DeviceProximityEvent", "UserProximityEvent"],
@@ -1908,30 +1915,13 @@
         "RTCRTPStreamStats"
       ],
       "types": [
-        "RTCIceTransportPolicy",
-        "RTCBundlePolicy",
-        "RTCRtcpMuxPolicy",
-        "RTCSignalingState",
-        "RTCIceGatheringState",
-        "RTCPeerConnectionState",
-        "RTCIceConnectionState",
-        "RTCIceProtocol",
-        "RTCIceTcpCandidateType",
-        "RTCIceCandidateType",
         "RTCPriorityType",
-        "RTCRtpTransceiverDirection",
         "RTCDtxStatus",
         "RTCDegradationPreference",
-        "RTCDtlsTransportState",
-        "RTCIceGathererState",
-        "RTCIceComponent",
         "RTCSctpTransportState",
-        "RTCDataChannelState",
         "RTCErrorDetailType",
-        "RTCStatsType",
-        "RTCCodecType",
         "RTCQualityLimitationReason",
-        "RTCStatsIceCandidatePairState"
+        "RTCStatsType"
       ],
       "methods": ["MediaDevices.getUserMedia()"],
       "properties": ["Navigator.mediaDevices"],

@@ -47,8 +47,10 @@ example I've just allowed either.
 
 ```js
 function gameLoop() {
+  let a = 0;
+  let b = 0;
   if(navigator.webkitGetGamepads) {
-    var gp = navigator.webkitGetGamepads()[0];
+    const gp = navigator.webkitGetGamepads()[0];
 
     if(gp.buttons[0] == 1) {
       b--;
@@ -60,7 +62,7 @@ function gameLoop() {
       a--;
     }
   } else {
-    var gp = navigator.getGamepads()[0];
+    const gp = navigator.getGamepads()[0];
 
     if(gp.buttons[0].value > 0 || gp.buttons[0].pressed == true) {
       b--;
@@ -76,7 +78,7 @@ function gameLoop() {
   ball.style.left = a*2 + "px";
   ball.style.top = b*2 + "px";
 
-  var start = rAF(gameLoop);
+  const start = rAF(gameLoop);
 };
 ```
 

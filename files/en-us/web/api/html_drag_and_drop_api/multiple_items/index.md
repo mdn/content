@@ -21,7 +21,7 @@ The drag processing described in this document use the {{domxref("DataTransfer")
 The {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method allows you to add multiple items during a {{domxref("HTMLElement/dragstart_event", "dragstart")}} event. This function similarly to {{domxref("DataTransfer.setData","setData()")}}
 
 ```js
-var dt = event.dataTransfer;
+const dt = event.dataTransfer;
 dt.mozSetDataAt("text/plain", "Data to drag", 0);
 dt.mozSetDataAt("text/plain", "Second data to drag", 1);
 ```
@@ -37,7 +37,7 @@ event.dataTransfer.mozClearDataAt("text/plain", 1);
 Caution: removing the last format for a particular index will remove that item entirely, shifting the remaining items down, so the later items will have different indices. For example:
 
 ```js
-var dt = event.dataTransfer;
+const dt = event.dataTransfer;
 dt.mozSetDataAt("text/uri-list", "URL1", 0);
 dt.mozSetDataAt("text/plain",    "URL1", 0);
 dt.mozSetDataAt("text/uri-list", "URL2", 1);
@@ -76,9 +76,9 @@ However, use the {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} metho
 ```js
 function onDrop(event)
 {
-  var files = [];
-  var dt = event.dataTransfer;
-  for (var i = 0; i < dt.mozItemCount; i++)
+  const files = [];
+  const dt = event.dataTransfer;
+  for (let i = 0; i < dt.mozItemCount; i++)
     files.push(dt.mozGetDataAt("application/x-moz-file", i));
 }
 ```
@@ -86,7 +86,7 @@ function onDrop(event)
 You may also wish to check if the desired format exists using the {{domxref("DataTransfer.mozTypesAt","mozTypesAt")}} method. As with the {{domxref("DataTransfer.types","types")}} property, it returns a list of strings of the types for an item. {{domxref("DataTransfer.types","types ")}} property is equivalent to retrieving the list of types for the item at index 0.
 
 ```js
-var types = event.dataTransfer.mozTypesAt(1);
+const types = event.dataTransfer.mozTypesAt(1);
 ```
 
 ## Dragging Non-String Data
@@ -112,17 +112,17 @@ The following example provides a box where the lists of items and formats droppe
 
 function dodrop(event)
 {
-  var dt = event.dataTransfer;
-  var count = dt.mozItemCount;
+  const dt = event.dataTransfer;
+  const count = dt.mozItemCount;
   output("Items: " + count + "\n");
 
-  for (var i = 0; i < count; i++) {
+  for (let i = 0; i < count; i++) {
     output(" Item " + i + ":\n");
-    var types = dt.mozTypesAt(i);
-    for (var t = 0; t < types.length; t++) {
+    const types = dt.mozTypesAt(i);
+    for (let t = 0; t < types.length; t++) {
       output("  " + types[t] + ": ");
       try {
-        var data = dt.mozGetDataAt(types[t], i);
+        const data = dt.mozGetDataAt(types[t], i);
         output("(" + (typeof data) + ") : <" + data + " >\n");
       } catch (ex) {
         output("<<error>>\n");

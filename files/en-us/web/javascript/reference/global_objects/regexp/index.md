@@ -208,8 +208,8 @@ The [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressi
 ### Extracting sub-domain name from URL
 
 ```js
-let url = 'http://xxx.domain.com'
-console.log(/[^.]+/.exec(url)[0].substr(7)) // logs 'xxx'
+const url = "http://xxx.domain.com";
+console.log(/^https?:\/\/(.+?)\./.exec(url)[1]); // logs 'xxx'
 ```
 
 > **Note:** Instead of using regular expressions for parsing URLs, it is usually better to use the browsers built-in URL parser by using the [URL API](/en-US/docs/Web/API/URL_API).

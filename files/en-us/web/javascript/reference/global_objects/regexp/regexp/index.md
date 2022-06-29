@@ -71,8 +71,7 @@ RegExp(pattern[, flags])
     - `s` ("dotAll")
       - : Allows `.` to match newlines.
     - `u` (unicode)
-      - : Treat `pattern` as a sequence of Unicode code points. (See
-        also [Binary strings](/en-US/docs/Web/API/DOMString/Binary)).
+      - : Treat `pattern` as a sequence of Unicode code points..
     - `y` (sticky)
       - : Matches only from the index indicated by the `lastIndex` property of
         this regular expression in the target string. Does not attempt to match from any

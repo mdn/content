@@ -498,7 +498,7 @@ getCode();    // Returns the apiCode
 
 > **Note:** There are a number of pitfalls to watch out for when using closures!
 >
-> If an enclosed function defines a variable with the same name as a variable in the outer scope, then there is no way to refer to the variable in the outer scope again. (The inner scope variable "overrides" the outer one, until the program exits the inner scope.)
+> If an enclosed function defines a variable with the same name as a variable in the outer scope, then there is no way to refer to the variable in the outer scope again. (The inner scope variable "overrides" the outer one, until the program exits the inner scope. It can be thought of as a [name conflict](#name_conflicts).)
 >
 > ```js example-bad
 > var createPet = function(name) {  // The outer function defines a variable called "name".
