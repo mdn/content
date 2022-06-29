@@ -47,14 +47,19 @@ function myFunc(theObject) {
   theObject.make = 'Toyota';
 }
 
-var mycar = {make: 'Honda', model: 'Accord', year: 1998};
-var x, y;
+const  mycar = {
+  make: 'Honda',
+  model: 'Accord',
+  year: 1998,
+};
 
-x = mycar.make; // x gets the value "Honda"
+// x gets the value "Honda"
+const x = mycar.make;
 
+// the make property was changed by the function
 myFunc(mycar);
-y = mycar.make; // y gets the value "Toyota"
-                // (the make property was changed by the function)
+// y gets the value "Toyota"
+const y = mycar.make;
 ```
 
 When you pass an array as a parameter, if the function changes any of the array's values, that change is visible outside the function, as shown in the following example:
@@ -79,7 +84,7 @@ Such a function can be **anonymous**; it does not have to have a name. For examp
 
 ```js
 const square = function(number) { return number * number }
-var x = square(4) // x gets the value 16
+const x = square(4); // x gets the value 16
 ```
 
 However, a name _can_ be provided with a function expression. Providing a name allows the function to refer to itself, and also makes it easier to identify the function in a debugger's stack traces:
@@ -94,9 +99,8 @@ Function expressions are convenient when passing a function as an argument to an
 
 ```js
 function map(f, a) {
-  let result = []; // Create a new Array
-  let i; // Declare variable
-  for (i = 0; i != a.length; i++)
+  let result = [];
+  for (let i = 0; i != a.length; i++)
     result[i] = f(a[i]);
   return result;
 }
@@ -106,17 +110,18 @@ In the following code, the function receives a function defined by a function ex
 
 ```js
 function map(f, a) {
-  let result = []; // Create a new Array
-  let i; // Declare variable
-  for (i = 0; i != a.length; i++)
+  let result = [];
+  for (let i = 0; i != a.length; i++)
     result[i] = f(a[i]);
   return result;
 }
+
 const f = function(x) {
-   return x * x * x;
+  return x * x * x;
 }
-let numbers = [0, 1, 2, 5, 10];
-let cube = map(f,numbers);
+
+const numbers = [0, 1, 2, 5, 10];
+const cube = map(f,numbers);
 console.log(cube);
 ```
 
@@ -125,7 +130,7 @@ Function returns: `[0, 1, 8, 125, 1000]`.
 In JavaScript, a function can be defined based on a condition. For example, the following function definition defines `myFunc` only if `num` equals `0`:
 
 ```js
-var myFunc;
+let myFunc;
 if (num === 0) {
   myFunc = function(theObject) {
     theObject.make = 'Toyota';
@@ -186,12 +191,12 @@ function factorial(n) {
 You could then compute the factorials of `1` through `5` as follows:
 
 ```js
-var a, b, c, d, e;
-a = factorial(1); // a gets the value 1
-b = factorial(2); // b gets the value 2
-c = factorial(3); // c gets the value 6
-d = factorial(4); // d gets the value 24
-e = factorial(5); // e gets the value 120
+const a = factorial(1); // a gets the value 1
+const b = factorial(2); // b gets the value 2
+const c = factorial(3); // c gets the value 6
+const d = factorial(4); // d gets the value 24
+const e = factorial(5); // e gets the value 120
+
 ```
 
 There are other ways to call functions. There are often cases where a function needs to be called dynamically, or the number of arguments to a function vary, or in which the context of the function call needs to be set to a specific object determined at runtime.
@@ -206,9 +211,9 @@ In other words, a function defined in the global scope can access all variables 
 
 ```js
 // The following variables are defined in the global scope
-var num1 = 20,
-    num2 = 3,
-    name = 'Chamakh';
+const num1 = 20;
+const num2 = 3;
+const name = 'Chamakh';
 
 // This function is defined in the global scope
 function multiply() {
@@ -219,8 +224,8 @@ multiply(); // Returns 60
 
 // A nested function example
 function getScore() {
-  var num1 = 2,
-      num2 = 3;
+  const num1 = 2;
+  const num2 = 3;
 
   function add() {
     return name + ' scored ' + (num1 + num2);
@@ -245,7 +250,7 @@ A function can refer to and call itself. There are three ways for a function to 
 For example, consider the following function definition:
 
 ```js
-var foo = function bar() {
+const foo = function bar() {
    // statements go here
 }
 ```
@@ -261,7 +266,7 @@ A function that calls itself is called a _recursive function_. In some ways, rec
 For example, the following loop...
 
 ```js
-var x = 0;
+let x = 0;
 while (x < 10) { // "x < 10" is the loop condition
    // do stuff
    x++;
@@ -343,9 +348,9 @@ function addSquares(a, b) {
   }
   return square(a) + square(b);
 }
-a = addSquares(2, 3); // returns 13
-b = addSquares(3, 4); // returns 25
-c = addSquares(4, 5); // returns 41
+const a = addSquares(2, 3); // returns 13
+const b = addSquares(3, 4); // returns 25
+const c = addSquares(4, 5); // returns 41
 ```
 
 Since the inner function forms a closure, you can call the outer function and specify arguments for both the outer and inner function:
@@ -357,11 +362,12 @@ function outside(x) {
   }
   return inside;
 }
-fn_inside = outside(3); // Think of it like: give me a function that adds 3 to whatever you give
-                        // it
-result = fn_inside(5); // returns 8
+const fn_inside = outside(3); // Think of it like: give me a function that adds 3 to whatever you give it
 
-result1 = outside(3)(5); // returns 8
+const result = fn_inside(5); // returns 8
+
+const result1 = outside(3)(5); // returns 8
+
 ```
 
 ### Preservation of variables
@@ -411,7 +417,7 @@ When two arguments or variables in the scopes of a closure have the same name, t
 
 ```js
 function outside() {
-  var x = 5;
+  const x = 5;
   function inside(x) {
     return x * 2;
   }
@@ -419,6 +425,7 @@ function outside() {
 }
 
 outside()(10); // returns 20 instead of 10
+
 ```
 
 The name conflict happens at the statement `return x * 2` and is between `inside`'s parameter `x` and `outside`'s variable `x`. The scope chain here is {`inside`, `outside`, global object}. Therefore, `inside`'s `x` takes precedences over `outside`'s `x`, and `20` (`inside`'s `x`) is returned instead of `10` (`outside`'s `x`).
@@ -432,25 +439,25 @@ However, the outer function does _not_ have access to the variables and function
 Also, since the inner function has access to the scope of the outer function, the variables and functions defined in the outer function will live longer than the duration of the outer function execution, if the inner function manages to survive beyond the life of the outer function. A closure is created when the inner function is somehow made available to any scope outside the outer function.
 
 ```js
-var pet = function(name) {   // The outer function defines a variable called "name"
-  var getName = function() {
-    return name;             // The inner function has access to the "name" variable of the outer
-                             //function
+const pet = function(name) {   // The outer function defines a variable called "name"
+  const getName = function() {
+    // The inner function has access to the "name" variable of the outer function
+    return name;             
   }
-  return getName;            // Return the inner function, thereby exposing it to outer scopes
+  return getName; // Return the inner function, thereby exposing it to outer scopes
 }
-myPet = pet('Vivie');
+const myPet = pet('Vivie');
 
-myPet();                     // Returns "Vivie"
+myPet(); // Returns "Vivie"
 ```
 
 It can be much more complex than the code above. An object containing methods for manipulating the inner variables of the outer function can be returned.
 
 ```js
-var createPet = function(name) {
-  var sex;
+const createPet = function(name) {
+  let sex;
 
-  return {
+  const pet = {
     setName: function(newName) {
       name = newName;
     },
@@ -464,15 +471,17 @@ var createPet = function(name) {
     },
 
     setSex: function(newSex) {
-      if(typeof newSex === 'string' && (newSex.toLowerCase() === 'male' ||
-        newSex.toLowerCase() === 'female')) {
+      if ((typeof newSex === 'string') &&
+         (newSex.toLowerCase() === 'male' || newSex.toLowerCase() === 'female')) {
         sex = newSex;
       }
     }
-  }
+  };
+
+  return pet;
 }
 
-var pet = createPet('Vivie');
+const pet = createPet('Vivie');
 pet.getName();                  // Vivie
 
 pet.setName('Oliver');
@@ -484,8 +493,8 @@ pet.getName();                  // Oliver
 In the code above, the `name` variable of the outer function is accessible to the inner functions, and there is no other way to access the inner variables except through the inner functions. The inner variables of the inner functions act as safe stores for the outer arguments and variables. They hold "persistent" and "encapsulated" data for the inner functions to work with. The functions do not even have to be assigned to a variable, or have a name.
 
 ```js
-var getCode = (function() {
-  var apiCode = '0]Eal(eh&2';    // A code we do not want outsiders to be able to modify...
+const getCode = (function() {
+  const apiCode = '0]Eal(eh&2';    // A code we do not want outsiders to be able to modify...
 
   return function() {
     return apiCode;
@@ -500,7 +509,7 @@ getCode();    // Returns the apiCode
 > If an enclosed function defines a variable with the same name as a variable in the outer scope, then there is no way to refer to the variable in the outer scope again. (The inner scope variable "overrides" the outer one, until the program exits the inner scope. It can be thought of as a [name conflict](#name_conflicts).)
 >
 > ```js example-bad
-> var createPet = function(name) {  // The outer function defines a variable called "name".
+> const createPet = function(name) {  // The outer function defines a variable called "name".
 >   return {
 >     setName: function(name) {    // The enclosed function also defines a variable called "name".
 >       name = name;               // How do we access the "name" defined by the outer function?
@@ -525,10 +534,9 @@ For example, consider a function that concatenates several strings. The only for
 
 ```js
 function myConcat(separator) {
-   var result = ''; // initialize list
-   var i;
+   let result = ''; // initialize list
    // iterate through arguments
-   for (i = 1; i < arguments.length; i++) {
+   for (let i = 1; i < arguments.length; i++) {
       result += arguments[i] + separator;
    }
    return result;
@@ -567,13 +575,12 @@ In the past, the general strategy for setting defaults was to test parameter val
 In the following example, if no value is provided for `b`, its value would be `undefined` when evaluating `a*b`, and a call to `multiply` would normally have returned `NaN`. However, this is prevented by the second line in this example:
 
 ```js
-function multiply(a, b) {
-  b = typeof b !== 'undefined' ?  b : 1;
-
-  return a * b;
+function multiply(multiplier, ...theArgs) {
+    return theArgs.map(x => multiplier * x);
 }
 
-multiply(5); // 5
+const arr = multiply(2, 1, 2, 3);
+console.log(arr); // [2, 4, 6]
 ```
 
 #### With default parameters (post-ECMAScript 2015)
@@ -601,7 +608,7 @@ function multiply(multiplier, ...theArgs) {
   return theArgs.map(x => multiplier * x);
 }
 
-var arr = multiply(2, 1, 2, 3);
+const arr = multiply(2, 1, 2, 3);
 console.log(arr); // [2, 4, 6]
 ```
 
@@ -616,18 +623,18 @@ Two factors influenced the introduction of arrow functions: _shorter functions_ 
 In some functional patterns, shorter functions are welcome. Compare:
 
 ```js
-var a = [
+const a = [
   'Hydrogen',
   'Helium',
   'Lithium',
   'Beryllium'
 ];
 
-var a2 = a.map(function(s) { return s.length; });
+const a2 = a.map(function(s) { return s.length; });
 
 console.log(a2); // logs [8, 6, 7, 9]
 
-var a3 = a.map(s => s.length);
+const a3 = a.map(s => s.length);
 
 console.log(a3); // logs [8, 6, 7, 9]
 ```
@@ -649,14 +656,14 @@ function Person() {
   }, 1000);
 }
 
-var p = new Person();
+const p = new Person();
 ```
 
 In ECMAScript 3/5, this issue was fixed by assigning the value in `this` to a variable that could be closed over.
 
 ```js
 function Person() {
-  var self = this; // Some choose `that` instead of `self`.
+  const self = this; // Some choose `that` instead of `self`.
                    // Choose one and be consistent.
   self.age = 0;
 
@@ -681,7 +688,7 @@ function Person() {
   }, 1000);
 }
 
-var p = new Person();
+const p = new Person();
 ```
 
 ## Predefined functions
