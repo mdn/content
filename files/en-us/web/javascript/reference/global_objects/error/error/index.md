@@ -28,7 +28,6 @@ new Error(message, fileName, lineNumber)
   - : A human-readable description of the error.
 - `options` {{optional_inline}}
   - : An object that has the following properties:
-
     - `cause` {{optional_inline}}
       - : A property indicating the specific cause of the error.
           When catching and re-throwing an error with a more-specific or useful error message, this property should be used to pass the original error.

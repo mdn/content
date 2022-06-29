@@ -24,6 +24,8 @@ The **`SyntaxError`** object represents an error when trying to interpret syntac
   - : Error message. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.name", "SyntaxError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.cause", "SyntaxError.prototype.cause")}}
+  - : Error cause. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.fileName", "SyntaxError.prototype.fileName")}} {{non-standard_inline}}
   - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.lineNumber", "SyntaxError.prototype.lineNumber")}} {{non-standard_inline}}
