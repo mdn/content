@@ -102,7 +102,7 @@ that the image is available before attempting to examine its width and height.
 
 ### Result
 
-{{EmbedLiveSample("Example", 600, 280)}}
+{{EmbedLiveSample("Examples", 600, 280)}}
 
 ## Specifications
 

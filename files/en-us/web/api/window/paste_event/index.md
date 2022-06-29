@@ -9,7 +9,7 @@ tags:
   - Web
   - Window
   - paste
-browser-compat: api.Window.paste_event
+browser-compat: api.Element.paste_event
 ---
 {{APIRef}}
 

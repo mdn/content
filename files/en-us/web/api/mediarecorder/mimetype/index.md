@@ -52,17 +52,17 @@ about media types and how they're used in web content and by web browsers.
 if (navigator.mediaDevices) {
   console.log('getUserMedia supported.');
 
-  var constraints = { audio: true, video: true };
-  var chunks = [];
+  const constraints = { audio: true, video: true };
+  const chunks = [];
 
   navigator.mediaDevices.getUserMedia(constraints)
     .then(function(stream) {
-      var options = {
+      const options = {
         audioBitsPerSecond: 128000,
         videoBitsPerSecond: 2500000,
         mimeType: 'video/mp4'
       }
-      var mediaRecorder = new MediaRecorder(stream,options);
+      const mediaRecorder = new MediaRecorder(stream,options);
       m = mediaRecorder;
 
       m.mimeType; // would return 'video/mp4'

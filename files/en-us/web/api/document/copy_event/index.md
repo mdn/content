@@ -10,7 +10,7 @@ tags:
   - Reference
   - Web
   - copy
-browser-compat: api.Document.copy_event
+browser-compat: api.Element.copy_event
 ---
 {{APIRef}}
 

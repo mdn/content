@@ -103,7 +103,7 @@ be granted.
 
 You can determine whether or not your attempt to switch to fullscreen mode is
 successful by using the {{jsxref("Promise")}} returned by
-`requestFullscreen()`, as seen in the [Example](#example) below.
+`requestFullscreen()`, as seen in the [examples](#examples) below.
 
 To learn when other code has toggled fullscreen mode on and off, you should establish
 listeners for the {{event("fullscreenchange")}} event on the {{domxref("Document")}}.

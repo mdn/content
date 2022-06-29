@@ -261,6 +261,8 @@ There are a lot of ways to work with git. One easy workflow is to first set up a
     - Choose your preferred license in the _Add license_ selection list.
     - Check **Initialize this repository with a README**.
 
+> **Warning:** The default “Public” will make *all* the code you submit public—including your database username and password! Either select “Private” or, if you’re hoping to show off your library project, configure the database so that it *only* reads from the environment variables, and does not have the database URI hard-coded in the app.
+
 4. Press **Create repository**.
 5. Click the green "**Clone or download**" button on your new repo page.
 6. Copy the URL value from the text field inside the dialog box that appears (it should be something like: **https\://github.com/_\<your_git_user_id>_/express-locallibrary-tutorial.git**).

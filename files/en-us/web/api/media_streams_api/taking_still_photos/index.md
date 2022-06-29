@@ -1,7 +1,6 @@
 ---
-title: Taking still photos with WebRTC
-slug: Web/API/WebRTC_API/Taking_still_photos
-page-type: guide
+title: Taking still photos with getUserMedia()
+slug: Web/API/Media_Streams_API/Taking_still_photos
 tags:
   - API
   - Advanced
@@ -10,16 +9,17 @@ tags:
   - Sample code
   - Still Photos
   - Video
-  - WebRTC
   - camera
+  - MediaDevices
   - getusermedia
   - webcam
+page-type: guide
 ---
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
-This article shows how to use WebRTC to access the camera on a computer or mobile phone with WebRTC support and take a photo with it.
+This article shows how to use [`navigator.mediaDevices.getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia) to access the camera on a computer or mobile phone with `getUserMedia()` support and take a photo with it.
 
-![WebRTC-based image capture app — on the left we have a video stream taken from a webcam and a take photo button, on the right we have the still image output from taking the photo](web-rtc-demo.png)
+![getUserMedia-based image capture app — on the left we have a video stream taken from a webcam and a take photo button, on the right we have the still image output from taking the photo](web-rtc-demo.png)
 
 You can also jump straight to the [Demo](#demo) if you like.
 
@@ -27,7 +27,7 @@ You can also jump straight to the [Demo](#demo) if you like.
 
 [Our HTML interface](#html) has two main operational sections: the stream and capture panel and the presentation panel. Each of these is presented side-by-side in its own {{HTMLElement("div")}} to facilitate styling and control.
 
-The first panel on the left contains two components: a {{HTMLElement("video")}} element, which will receive the stream from WebRTC, and a {{HTMLElement("button")}} the user clicks to capture a video frame.
+The first panel on the left contains two components: a {{HTMLElement("video")}} element, which will receive the stream from `navigator.mediaDevices.getUserMedia()`, and a {{HTMLElement("button")}} the user clicks to capture a video frame.
 
 ```html
 <div class="camera">
@@ -233,7 +233,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 ```html
 <div class="contentarea">
   <h1>
-    MDN - WebRTC: Still photo capture demo
+    MDN - navigator.mediaDevices.getUserMedia(): Still photo capture demo
   </h1>
   <p>
    This example demonstrates how to set up a media stream using your built-in webcam, fetch an image from that stream, and create a PNG using that image.

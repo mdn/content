@@ -41,7 +41,7 @@ None ({{jsxref("undefined")}}).
   to {{jsxref("WebAssembly/Table/length","Table.prototype.length")}}, a
   {{jsxref("RangeError")}} is thrown.
 - If _value_ is not an exported WebAssembly function or
-  [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null),
+  [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null),
   a {{jsxref("TypeError")}} is thrown.
 
 ## Examples

@@ -48,9 +48,9 @@ When the IFrame has loaded, we register an {{domxref("MessagePort.onmessage","on
 When a message is received back from the IFrame, the `onMessage` function outputs the message to a paragraph.
 
 ```js
-var channel = new MessageChannel();
-var output = document.querySelector('.output');
-var iframe = document.querySelector('iframe');
+const channel = new MessageChannel();
+const output = document.querySelector('.output');
+const iframe = document.querySelector('iframe');
 
 // Wait for the iframe to load
 iframe.addEventListener("load", onLoad);
