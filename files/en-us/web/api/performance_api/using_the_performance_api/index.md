@@ -21,8 +21,8 @@ The following code example shows the use of {{domxref("DOMHighResTimeStamp")}} a
 
 ```js
 function calculate_time() {
-  var startTime;
-  var endTime;
+  const startTime;
+  const endTime;
 
   startTime = performance.now();
   do_task();
@@ -38,14 +38,14 @@ JSON serialization of the {{domxref("Performance")}} object is done via the {{do
 
 ```js
 function print_json() {
-  var json;
-  var o = document.getElementsByTagName("output")[0];
+  let json;
+  const o = document.getElementsByTagName("output")[0];
 
   if (window.performance.toJSON === undefined) {
     json = "window.performance.toJSON() is NOT supported";
     o.innerHTML += json + "<br>";
   } else {
-    var s;
+    const s;
     json = window.performance.toJSON();
 
     // Print the performance object
@@ -53,12 +53,12 @@ function print_json() {
     o.innerHTML = "<p>performance = " + s + "</p>";
 
     // Print the performance.timing and performance.navigation objects
-    var perf = JSON.parse(s);
+    const perf = JSON.parse(s);
 
-    var timing = perf.timing;
+    const timing = perf.timing;
     o.innerHTML += "<p>performance.timing = " + JSON.stringify(timing) + "</p>";
 
-    var navigation = perf.navigation;
+    const navigation = perf.navigation;
     o.innerHTML += "<p>performance.navigation = " + JSON.stringify(navigation) + "</p>";
   }
 }
