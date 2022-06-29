@@ -188,7 +188,7 @@ If you're an extension developer, you should start by reading [Updating extensio
 - The XUL [`textbox`](/en-US/docs/XUL/textbox) widget now offers a [`search`](/en-US/docs/XUL/Attribute/textbox.type) type, for use as search fields.
 - In order to support dragging and dropping tabs between windows, the [`browser`](/en-US/docs/XUL/browser) widget now has a [`swapDocShells()`](/en-US/XUL/Method/SwapDocShells) method.
 - Added the [`level`](/en-US/docs/XUL/Attribute/panel.level) attribute to the [`panel`](/en-US/docs/XUL/panel) element; this specifies whether panels appear on top of other applications, or just on top of the window the panel is contained within.
-- XUL elements now support the `clientHeight`,`clientWidth`,`scrollHeight`, and`scrollWidth`properties.
+- XUL elements now support the `clientHeight`,`clientWidth`,`scrollHeight`, and `scrollWidth` properties.
 - [`keyset`](/en-US/docs/XUL/keyset)s now include a `disabled` attribute.
 - In addition, `keyset`s can now be removed using the node's [`removeChild()`](/en-US/docs/Web/API/Node/removeChild) method.
 - `mozIStorageStatement` had the `initialize()` method removed; consumers should use the `createStatement()` method instead to get a new statement object.

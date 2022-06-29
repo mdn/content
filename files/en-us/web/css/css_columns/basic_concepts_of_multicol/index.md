@@ -66,7 +66,7 @@ In this next example we use `column-width` of 200px and `column-count` of 2. Eve
 
 ### The `columns` shorthand
 
-You can use the `columns`shorthand to set `column-count` and `column-width`. If you set a length unit, this will be used for `column-width`, set an integer and it will be used for `column-count`. You can set both, separating the two values with a space.
+You can use the `columns` shorthand to set `column-count` and `column-width`. If you set a length unit, this will be used for `column-width`, set an integer and it will be used for `column-count`. You can set both, separating the two values with a space.
 
 This CSS would give the same result as example 1, `column-count` set to 3.
 

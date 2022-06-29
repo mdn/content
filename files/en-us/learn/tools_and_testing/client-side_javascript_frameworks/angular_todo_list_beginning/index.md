@@ -221,7 +221,7 @@ In `app.component.html`, replace the `<h2>` with the following:
 
 When the user types a new item in the `<input>` and presses **Enter**, the `addItem()` method adds the value to the `items` array.
 Pressing the **Enter** key also resets the value of `<input>` to an empty string.
-Alternatively, the user can click the **Add** button which calls the same`addItem()` method.
+Alternatively, the user can click the **Add** button which calls the same `addItem()` method.
 
 ## Summary
 
