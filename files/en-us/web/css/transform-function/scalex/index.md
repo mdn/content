@@ -163,8 +163,8 @@ div {
 
 ## See also
 
-- [`scaleY()`](</en-US/docs/Web/CSS/transform-function/scaleY()>)
-- [`scaleZ()`](</en-US/docs/Web/CSS/transform-function/scaleZ()>)
+- [`scaleY()`](/en-US/docs/Web/CSS/transform-function/scaleY)
+- [`scaleZ()`](/en-US/docs/Web/CSS/transform-function/scaleZ)
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("transform-origin")}}

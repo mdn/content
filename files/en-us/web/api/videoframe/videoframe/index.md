@@ -126,7 +126,7 @@ const cnv = document.createElement('canvas');
 let frame_from_canvas = new VideoFrame(cnv, { timestamp: 0 });
 ```
 
-In the following example a `VideoFrame` is created from a {{domxref("BufferSource")}}.
+In the following example a `VideoFrame` is created from a {{jsxref("TypedArray")}}.
 
 ```js
 const pixelSize = 4;

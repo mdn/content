@@ -21,7 +21,7 @@ The difference between `PUT` and {{HTTPMethod("POST")}} is that `PUT` is idempot
     </tr>
     <tr>
       <th scope="row">Successful response has body</th>
-      <td>No</td>
+      <td>May</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Safe/HTTP", "Safe")}}</th>

@@ -23,16 +23,10 @@ A string.
 ## Examples
 
 ```js
-<script>
-function prodsub() {
-  var dt = document.getElementById("d").childNodes[0];
-  dt.data = navigator.productSub;
-}
-</script>
-
-<button onclick="prodsub();">productSub</button>
-// returns: 20010725
+document.body.textContent = `productSub: ${navigator.productSub}`;
 ```
+
+{{ EmbedLiveSample("Examples") }}
 
 ## Notes
 

@@ -139,8 +139,6 @@ In general, assignments are used within a variable declaration (i.e., with [`con
 // The result of the x = f() assignment expression is discarded.
 let x = f();
 
-// Declares a variable x and initializes it to the result of g().
-// The result of the x = g() assignment expression is discarded.
 x = g(); // Reassigns the variable x to the result of g().
 ```
 
@@ -313,7 +311,7 @@ let z = y = x = f();
 
 This statement seemingly declares the variables `x`, `y`, and `z`.
 However, it only actually declares the variable `z`.
-`y` and `x` are either invalid references to nonexistent variables (in [strict mode][/en-US/docs/Web/JavaScript/Reference/Strict_mode]) or, worse, would implicitly create [global variables][/en-US/docs/Glossary/Global_variable] for `x` and `y` in [sloppy mode][/en-US/docs/Glossary/Sloppy_mode].
+`y` and `x` are either invalid references to nonexistent variables (in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)) or, worse, would implicitly create [global variables](/en-US/docs/Glossary/Global_variable) for `x` and `y` in [sloppy mode](/en-US/docs/Glossary/Sloppy_mode).
 
 ### Comparison operators
 
@@ -760,7 +758,7 @@ The rules of logic guarantee that these evaluations are always correct. Note tha
 _anything_ part of the above expressions is not evaluated, so any side effects of
 doing so do not take effect.
 
-Note that for the second case, in modern code you can use the new [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) (`??`) that works like `||`, but it only returns the second expression, when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)
+Note that for the second case, in modern code you can use the new [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) (`??`) that works like `||`, but it only returns the second expression, when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
 or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined "The global undefined property represents the primitive value undefined.
 It is one of JavaScript's primitive types.").
 It is thus the better alternative to provide defaults, when values like `''` or `0` are valid values for the first expression, too.

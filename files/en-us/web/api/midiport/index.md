@@ -78,15 +78,15 @@ The following example lists input and output ports, and displays information abo
 
 ```js
 function listInputsAndOutputs( midiAccess ) {
-  for (var entry of midiAccess.inputs) {
-    var input = entry[1];
+  for (const entry of midiAccess.inputs) {
+    const input = entry[1];
     console.log( "Input port [type:'" + input.type + "'] id:'" + input.id +
       "' manufacturer:'" + input.manufacturer + "' name:'" + input.name +
       "' version:'" + input.version + "'" );
   }
 
-  for (var entry of midiAccess.outputs) {
-    var output = entry[1];
+  for (const entry of midiAccess.outputs) {
+    const output = entry[1];
     console.log( "Output port [type:'" + output.type + "'] id:'" + output.id +
       "' manufacturer:'" + output.manufacturer + "' name:'" + output.name +
       "' version:'" + output.version + "'" );
@@ -100,7 +100,7 @@ The following example takes the list of input ports and adds them to a select li
 
 ```js
 inputs.forEach( function( port, key ) {
-  var opt = document.createElement("option");
+  const opt = document.createElement("option");
   opt.text = port.name;
   document.getElementById("inputportselector").add(opt);
 });

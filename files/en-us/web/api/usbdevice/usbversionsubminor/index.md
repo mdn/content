@@ -11,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - usbVersionSubminor
+  - Experimental
 browser-compat: api.USBDevice.usbVersionSubminor
 ---
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}

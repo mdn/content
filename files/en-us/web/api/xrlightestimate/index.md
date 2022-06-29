@@ -16,7 +16,7 @@ browser-compat: api.XRLightEstimate
 
 The **`XRLightEstimate`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) provides the estimated lighting values for an {{domxref("XRLightProbe")}} at the time represented by an {{domxref("XRFrame")}}.
 
-To get an `XRLightEstimate`object, call the {{domxref("XRFrame.getLightEstimate()")}} method.
+To get an `XRLightEstimate` object, call the {{domxref("XRFrame.getLightEstimate()")}} method.
 
 ## Properties
 

@@ -72,8 +72,6 @@ ctx.fillRect(10, 10, 150, 100);
   - : A hands-on, book-length introduction to the Canvas API and WebGL.
 - [Canvas Handbook](https://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html)
   - : A handy reference for the Canvas API.
-- [Demo: A basic ray-caster](/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster)
-  - : A demo of ray-casting animation using canvas.
 - [Manipulating video using canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
   - : Combining {{HTMLElement("video")}} and {{HTMLElement("canvas")}} to manipulate video data in real time.
 

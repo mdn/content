@@ -1,6 +1,7 @@
 ---
 title: 'TaskSignal: prioritychange event'
 slug: Web/API/TaskSignal/prioritychange_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
@@ -57,10 +58,10 @@ The task is then posted, passing in the signal, and then we immediately change t
 if ('scheduler' in this) {
   // Declare a TaskController, setting its signal priority to 'user-blocking'
   const controller = new TaskController({priority: 'user-blocking'});
-  
+
   // Listen for 'prioritychange' events on the controller's signal.
-  controller.signal.addEventListener('prioritychange', 
-    event => { 
+  controller.signal.addEventListener('prioritychange',
+    event => {
       const previousPriority = event.previousPriority;
       const newPriority = event.target.priority;
       mylog(`Priority changed from ${previousPriority} to ${newPriority}.`);

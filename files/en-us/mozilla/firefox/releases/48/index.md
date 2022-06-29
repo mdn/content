@@ -109,7 +109,7 @@ tags:
 #### WebRTC
 
 - The two methods {{domxref("MediaStream.clone()")}} and {{domxref("MediaStreamTrack.clone()")}} have been implemented ({{bug(1208371)}}).
-- The `iceRestart` entry is now supported in the `RTCOfferOptions`code> dictionary, allowing {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} to be used to request ICE restarts ({{bug(906986)}}).
+- The `iceRestart` entry is now supported in the `RTCOfferOptions` code dictionary, allowing {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} to be used to request ICE restarts ({{bug(906986)}}).
 - The {{domxref("RTCPeerConnection.createOffer()")}} method now prefers the VP9 video codec by default; previously VP8 was preferred ({{bug(1242324)}}.
 - WebM/VP8 video that includes video resolution changes that has been recorded using {{domxref("MediaRecorder")}} can now be played back successfully.
 

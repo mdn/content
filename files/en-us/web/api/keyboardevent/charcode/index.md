@@ -48,7 +48,7 @@ input.addEventListener('keypress', function(e) {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Notes
 

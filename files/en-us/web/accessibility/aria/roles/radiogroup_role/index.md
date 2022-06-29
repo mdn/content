@@ -41,7 +41,7 @@ The `radiogroup` must have an accessible name either by a visible label referenc
 
 ### Keyboard interactions
 
-For `radio` buttons in a `radiogroup` that is NOT in a [`toolbar`](en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role), the following keyboard interactions must be supported:
+For `radio` buttons in a `radiogroup` that is NOT in a [`toolbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role), the following keyboard interactions must be supported:
 
 - <kbd>Tab</kbd> and <kbd>Shift + Tab</kbd>
   - : Move focus into and out of the `radiogroup`. When focus moves into a `radiogroup`, if a radio button is checked, focus is set on the checked button. If none of the radio buttons are checked, focus is set on the first radio button in the group.

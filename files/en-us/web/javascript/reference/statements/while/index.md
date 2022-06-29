@@ -93,7 +93,7 @@ The _effect_ of that line is fine — in that, each time a comment node is found
 
 …and then, when there are no more comment nodes in the document:
 
-1. `iterator.nextNode()` returns [null](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null).
+1. `iterator.nextNode()` returns [null](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 2. The value of `currentNode = iterator.nextNode()` is therefore also `null`, which is [falsy](/en-US/docs/Glossary/Truthy).
 3. So the loop ends.
 

@@ -34,6 +34,10 @@ grow(number)
 
 The previous size of the memory, in units of WebAssembly pages.
 
+### Exceptions
+
+- {{jsxref("RangeError")}}: The overall size after growing should not exceed the Memory instance's maximum size capacity.
+
 ## Examples
 
 ### Using grow
@@ -42,7 +46,10 @@ The following example creates a new WebAssembly Memory instance with an initial 
 1 page (64KiB), and a maximum size of 10 pages (640KiB).
 
 ```js
-var memory = new WebAssembly.Memory({initial:1, maximum:10});
+const memory = new WebAssembly.Memory({
+  initial: 1,
+  maximum: 10
+});
 ```
 
 We can then grow the instance by one page like so:

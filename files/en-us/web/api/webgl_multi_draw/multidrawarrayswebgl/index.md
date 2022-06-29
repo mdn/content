@@ -76,7 +76,7 @@ None.
   `countsList` are negative,
   a `gl.INVALID_VALUE` error is thrown.
 - if `gl.CURRENT_PROGRAM` is
-  [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null),
+  [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null),
   a `gl.INVALID_OPERATION` error is thrown.
 
 ## Examples

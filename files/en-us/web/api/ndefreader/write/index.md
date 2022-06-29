@@ -24,11 +24,12 @@ NDEFReader.write(message);
 
 - `message`
 
-  - : The message to be written, one of string,
-    {{DOMxRef("BufferSource")}}, or an array of records. A record has the following members:
+  - : The message to be written, either a string object or literal, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
+    a {{jsxref("DataView")}}, or an array of records. A record has the following members:
 
     - `data` {{optional_inline}}
-      - : Contains the data to be transmitted, one of a string, a {{domxref("BufferSource")}}, or an array of nested records.
+      - : Contains the data to be transmitted,a string object or literal, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
+        a {{jsxref("DataView")}}, or an array of nested records
     - `encoding` {{optional_inline}}
       - : A string specifying the record's encoding.
     - `id` {{optional_inline}}
@@ -60,9 +61,10 @@ NDEFReader.write(message);
 
   - : An object with the following properties:
 
-    - `overwrite` -- A boolean value specifying whether or not
-      existing records should be overwritten, if such exists.
-    - `signal` -- An optional {{DOMxRef("AbortSignal")}} that allows the current write operation to be canceled.
+    - `overwrite`
+      - : A boolean value specifying whether or not existing records should be overwritten, if such exists.
+    - `signal` {{optional_inline}}
+      - : An {{DOMxRef("AbortSignal")}} that allows the current write operation to be canceled.
 
 ### Return value
 

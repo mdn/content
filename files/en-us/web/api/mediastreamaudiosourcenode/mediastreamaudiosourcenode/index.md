@@ -58,7 +58,7 @@ access to the user's camera, then creates a new
 
 ```js
 // define variables
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // getUserMedia block - grab stream
 // put it into a MediaStreamAudioSourceNode
@@ -69,11 +69,11 @@ if (navigator.mediaDevices.getUserMedia) {
          audio: true,
          video: false
       }).then(function(stream) {
-        var options = {
+        const options = {
           mediaStream : stream
         }
 
-        var source = new MediaStreamAudioSourceNode(audioCtx, options);
+        const source = new MediaStreamAudioSourceNode(audioCtx, options);
         source.connect(audioCtx.destination);
       }).catch(function(err) {
        console.log('The following gUM error occurred: ' + err);

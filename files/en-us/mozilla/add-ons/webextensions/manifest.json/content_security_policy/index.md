@@ -49,6 +49,7 @@ For example, you can use this key to:
 There are restrictions on the policy you can specify here:
 
 - The policy may include just {{CSP("default-src")}}, but if not the policy must include at least the {{CSP("script-src")}} and the {{CSP("object-src")}} directives, and the {{CSP("script-src")}} directive must contain the keyword `'self'`.
+- Directives that reference code – {{CSP("script-src")}}, {{CSP("object-src")}}, {{CSP("worker-src")}}, and {{CSP("default-src")}} – can't specify wildcard hosts, such as `"default-src 'self' *"`. There are no wildcard restrictions on CSP directives that load non-script content, such as {{CSP("img-src")}} – wildcards are a valid content security policy value for regular web pages, so they are a valid value for extensions too.
 - Remote sources must use `https:` schemes.
 - Remote sources must not use wildcards for any domains in the [public suffix list](https://publicsuffix.org/list/) (so "\*.co.uk" and "\*.blogspot.com" are not allowed, although "\*.foo.blogspot.com" is allowed).
 - All sources must specify a host.

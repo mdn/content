@@ -23,10 +23,10 @@ The **`IDBTransaction`** interface of the [IndexedDB API](/en-US/docs/Web/API/In
 Transactions are started when the transaction is created, not when the first request is placed; for example consider this:
 
 ```js
-var trans1 = db.transaction("foo", "readwrite");
-var trans2 = db.transaction("foo", "readwrite");
-var objectStore2 = trans2.objectStore("foo")
-var objectStore1 = trans1.objectStore("foo")
+const trans1 = db.transaction("foo", "readwrite");
+const trans2 = db.transaction("foo", "readwrite");
+const objectStore2 = trans2.objectStore("foo")
+const objectStore1 = trans1.objectStore("foo")
 objectStore2.put("2", "key");
 objectStore1.put("1", "key");
 ```
@@ -147,7 +147,7 @@ Transactions can have one of three modes:
 Even if these constants are now deprecated, you can still use them to provide backward compatibility if required (in Chrome [the change was made in version 21](https://peter.sh/2012/05/tab-sizing-string-values-for-indexeddb-and-chrome-21/)). You should code defensively in case the object is not available anymore:
 
 ```js
-var myIDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || { READ_WRITE: "readwrite" };
+const myIDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || { READ_WRITE: "readwrite" };
 ```
 
 ## Examples
@@ -155,8 +155,13 @@ var myIDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || {
 In the following code snippet, we open a read/write transaction on our database and add some data to an object store. Note also the functions attached to transaction event handlers to report on the outcome of the transaction opening in the event of success or failure. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
+const note = document.getElementById('notifications');
+
+// an instance of a db object for us to store the IDB data in
+let db;
+
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
   note.innerHTML += '<li>Database initialized.</li>';
@@ -171,10 +176,10 @@ DBOpenRequest.onsuccess = function(event) {
 
 function addData() {
   // Create a new object to insert into the IDB
-  var newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  const newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
 
   // open a read/write db transaction, ready to add data
-  var transaction = db.transaction(["toDoList"], "readwrite");
+  const transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of opening the transaction
   transaction.oncomplete = function(event) {
@@ -186,10 +191,10 @@ function addData() {
   };
 
   // create an object store on the transaction
-  var objectStore = transaction.objectStore("toDoList");
+  const objectStore = transaction.objectStore("toDoList");
 
   // add our newItem object to the object store
-  var objectStoreRequest = objectStore.add(newItem[0]);
+  const objectStoreRequest = objectStore.add(newItem[0]);
 
   objectStoreRequest.onsuccess = function(event) {
     // report the success of the request (this does not mean the item

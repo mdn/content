@@ -8,10 +8,10 @@ tags:
   - Link
   - form
   - rel
-spec-urls:
-  - https://html.spec.whatwg.org/multipage/links.html#linkTypes
-  - https://w3c.github.io/preload/#x2.link-type-preload
-  - https://www.w3.org/TR/resource-hints/#dfn-preconnect
+browser-compat:
+  - html.elements.link.rel
+  - html.elements.a.rel
+  - html.elements.area.rel
 ---
 
 {{HTMLSidebar}}
@@ -193,17 +193,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
 ## Browser compatibility
 
-### `rel` attribute for the `link` element
-
-{{Compat("html.elements.link.rel")}}
-
-### `rel` attribute for the `a` element
-
-{{Compat("html.elements.a.rel")}}
-
-### `rel` attribute for the `area` element
-
-{{Compat("html.elements.area.rel")}}
+{{Compat}}
 
 ## See also
 

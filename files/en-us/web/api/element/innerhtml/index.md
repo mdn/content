@@ -164,10 +164,10 @@ This example uses `innerHTML` to create a mechanism for logging messages into a 
 
 ```js
 function log(msg) {
-  var logElem = document.querySelector(".log");
+  const logElem = document.querySelector(".log");
 
-  var time = new Date();
-  var timeStr = time.toLocaleTimeString();
+  const time = new Date();
+  const timeStr = time.toLocaleTimeString();
   logElem.innerHTML += timeStr + ": " + msg + "<br/>";
 }
 
@@ -183,7 +183,7 @@ We add a second method that logs information about {{domxref("MouseEvent")}} bas
 
 ```js
 function logEvent(event) {
-  var msg = "Event <strong>" + event.type + "</strong> at <em>" +
+  const msg = "Event <strong>" + event.type + "</strong> at <em>" +
             event.clientX + ", " + event.clientY + "</em>";
   log(msg);
 }
@@ -192,7 +192,7 @@ function logEvent(event) {
 Then we use this as the event handler for a number of mouse events on the box that contains our log:
 
 ```js
-var boxElem = document.querySelector(".box");
+const boxElem = document.querySelector(".box");
 
 boxElem.addEventListener("mousedown", logEvent);
 boxElem.addEventListener("mouseup", logEvent);
@@ -240,7 +240,7 @@ The following CSS styles our example content.
 The resulting content looks like this.
 You can see output into the log by moving the mouse in and out of the box, clicking in it, and so forth.
 
-{{EmbedLiveSample("Example", 640, 350)}}
+{{EmbedLiveSample("Examples", 640, 350)}}
 
 ## Specifications
 

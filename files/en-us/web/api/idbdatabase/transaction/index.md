@@ -47,7 +47,7 @@ transaction(storeNames, mode, options)
     {{domxref("IDBDatabase.objectStoreNames")}}:
 
     ```js
-    var transaction = db.transaction(db.objectStoreNames);
+    const transaction = db.transaction(db.objectStoreNames);
     ```
 
     Passing an empty array will throw an exception.
@@ -124,10 +124,10 @@ transaction on the database. For a complete example, see our
 [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
-var db;
+const db;
 
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = event => {
   note.innerHTML += '<li>Database initialized.</li>';
@@ -143,7 +143,7 @@ DBOpenRequest.onsuccess = event => {
 };
 
 // open a read/write db transaction, ready for adding the data
-var transaction = db.transaction(["toDoList"], "readwrite");
+const transaction = db.transaction(["toDoList"], "readwrite");
 
 // report on the success of opening the transaction
 transaction.oncomplete = event => {
@@ -156,7 +156,7 @@ transaction.onerror = event => {
 
 // you would then go on to do something to this database
 // via an object store
-var objectStore = transaction.objectStore("toDoList");
+const objectStore = transaction.objectStore("toDoList");
 // etc.
 ```
 

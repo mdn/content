@@ -10,6 +10,13 @@ tags:
   - Reference
   - Web Authentication API
   - WebAuthn
+browser-compat:
+  - api.Credential
+  - api.CredentialsContainer
+  - api.PublicKeyCredential
+  - api.AuthenticatorResponse
+  - api.AuthenticatorAttestationResponse
+  - api.AuthenticatorAssertionResponse
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
 
@@ -60,7 +67,7 @@ After this, the registration steps are:
     2. Ensuring that the origin was the origin expected
     3. Validating that the signature over the clientDataHash and the attestation using the certificate chain for that specific model of the authenticator
 
-    A complete list of validation steps [can be found in the Web Authentication API specification](https://w3c.github.io/webauthn/#registering-a-new-credential). Assuming that the checks pan out, the server will store the new public key associated with the user's account for future use -- that is, whenever the user desires to use the public key for authentication.
+    A complete list of validation steps [can be found in the Web Authentication API specification](https://w3c.github.io/webauthn/#registering-a-new-credential). Assuming that the checks pan out, the server will store the new public key associated with the user's account for future use — that is, whenever the user desires to use the public key for authentication.
 
 ### Authentication
 
@@ -192,32 +199,8 @@ navigator.credentials.create(createCredentialDefaultArgs)
 
 ## Specifications
 
-| Specification                                                                                      |
-| -------------------------------------------------------------------------------------------------- |
-| [Web Authentication: An API for accessing Public Key Credentials](https://w3c.github.io/webauthn/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### Credential
-
-{{Compat("api.Credential")}}
-
-### CredentialsContainer
-
-{{Compat("api.CredentialsContainer")}}
-
-### PublicKeyCredential
-
-{{Compat("api.PublicKeyCredential")}}
-
-### AuthenticatorResponse
-
-{{Compat("api.AuthenticatorResponse")}}
-
-### AuthenticatorAttestationResponse
-
-{{Compat("api.AuthenticatorAttestationResponse")}}
-
-### AuthenticatorAssertionResponse
-
-{{Compat("api.AuthenticatorAssertionResponse")}}
+{{Compat}}

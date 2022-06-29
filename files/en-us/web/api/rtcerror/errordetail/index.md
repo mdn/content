@@ -30,8 +30,7 @@ The {{domxref("RTCError")}} interface's read-only
 ## Value
 
 A read-only string whose value indicates the type of WebRTC-specific error that
-occurred on an {{domxref("RTCPeerConnection")}}. The possible values are taken from the
-`RTCErrorDetailType` enumeration:
+occurred on an {{domxref("RTCPeerConnection")}}. The possible values are:
 
 - `data-channel-failure`
   - : The connection's {{domxref("RTCDataChannel")}} has failed.

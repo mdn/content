@@ -211,7 +211,7 @@ However, persisting data should be preferred rather than relying on {{WebExtAPIR
 
 If you've a persistent background script, this section provides instructions on converting it to the non-persistent model.
 
-### Update you `manifest.json` file
+### Update your manifest.json file
 
 In your extension's `manifest.json` file, change the persistent property of [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) key to `false` for your script or page.
 
@@ -234,7 +234,7 @@ browser.runtime.onStartup.addListener(function() {
 
 ### Record state changes
 
-As scripts now open and close as needed, use the storage API to set and return states and values. Use {{WebExtAPIRef("storage.local")}} `set`to update on the local machine.
+As scripts now open and close as needed, use the storage API to set and return states and values. Use {{WebExtAPIRef("storage.local")}} `set` to update on the local machine.
 
 ```js
 browser.storage.local.set({ variable: variableInformation });
