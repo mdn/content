@@ -233,7 +233,7 @@ These functions are used send to event activity to the application window (to su
 
 ```js
 // Log events flag
-const logEvents = false;
+let logEvents = false;
 
 function enableLog(ev) {
   logEvents = logEvents ? false : true;
