@@ -89,7 +89,7 @@ async function hashTheseFiles(e) {
 }
 ```
 
- {{EmbedLiveSample("hashing-a-file")}}
+ {{EmbedLiveSample("hashing_a_file")}}
 
 ### Where would you use this?
 
