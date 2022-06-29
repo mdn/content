@@ -133,22 +133,21 @@ The JavaScript is similar too. In this case, we have no imports, but instead we 
 To make it a little more "safe", here we also test that we have the right tag using the [`is()` method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/is).
 
 ```js
-const obj = await WebAssembly.instantiateStreaming(fetch("example.wasm"));
+let tagExportedFromWasm;
 
-// Import the tag using its name from the WebAssembly module
-const tagExportedFromWasm = obj.instance.exports.exptag;
-
-try {
-  console.log(obj.instance.exports.run());
-} catch(e) {
-  console.error(e);
-  // If the tag is correct, get the value
-  if (e.is(tagExportedFromWasm)) {
-    console.log(`getArg 0 : ${e.getArg(tagExportedFromWasm, 0)}`);
-  } else {
-    console.log("Tags are different");
-  }
-}
+WebAssembly.instantiateStreaming(fetch("example.wasm"))
+  .then(obj => {
+    // Import the tag using its name from the WebAssembly module
+    tagExportedFromWasm = obj.instance.exports.exptag;
+    console.log(obj.instance.exports.run());
+  })
+  .catch(e => {
+    console.error(e);
+    // If the tag is correct, get the value
+    if (e.is(tagExportedFromWasm)) {
+      console.log(`getArg 0 : ${e.getArg(tagExportedFromWasm, 0)}`);
+    }
+  });
 ```
 
 ## Specifications
