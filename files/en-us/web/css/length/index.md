@@ -249,7 +249,7 @@ inputElem.addEventListener('change', () => {
 
 #### Result
 
-{{EmbedLiveSample('Length_unit_comparison','100%', 700)}}
+{{EmbedLiveSample('Comparing different length units', '100%', 700)}}
 
 ## Specifications
 
