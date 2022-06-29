@@ -87,15 +87,15 @@ For now, we will use the most common way — linking CSS from the head of your d
 
 1. Create a file in the same folder as your HTML document and save it as `styles.css`. The `.css` extension shows that this is a CSS file.
 
-2. To link `styles.css` to `index.html`, add the following line somewhere inside the {{htmlelement("head")}} of the HTML document:
+2. To link `styles.css` to `index.html`, add the following line inside the {{htmlelement("head")}} of the HTML document:
 
     ```html
     <link rel="stylesheet" href="styles.css">
     ```
 
-    This {{htmlelement("link")}} element tells the browser that we have a stylesheet, using the `rel` attribute, and the location of that stylesheet as the value of the `href` attribute. 
+    This {{htmlelement("link")}} element, with the `rel` and `href` attributes, tells the browser that we have a stylesheet and provides the location of that stylesheet. 
     
-3. To test that the CSS works, use your editor and add the following to your rule to `styles.css` file:
+3. To test that the CSS works, use your editor and add the following to your rule to the `styles.css` file:
 
     ```css
     h1 {
