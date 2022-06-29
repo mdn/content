@@ -1,6 +1,7 @@
 ---
 title: 'XRReferenceSpace: reset event'
 slug: Web/API/XRReferenceSpace/reset_event
+page-type: web-api-event
 tags:
   - API
   - AR

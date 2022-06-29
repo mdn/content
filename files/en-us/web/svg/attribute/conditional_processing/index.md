@@ -21,7 +21,7 @@ The SVG conditional processing attributes are all the attributes that can be spe
   - : List all the browser specific capabilities that must be supported by the browser to be allowed to render the associated element.
     *Value*: A list of space-separated URI; *Animatable*: **No**
 - {{SVGAttr('requiredFeatures')}} {{deprecated_inline}}
-  - : List all the features, [as defined is the SVG 1.1 specification](https://www.w3.org/TR/SVG11/feature.html), that must be supported by the browser to be allowed to render the associated element..
+  - : List all the features, [as defined is the SVG 1.1 specification](https://www.w3.org/TR/SVG11/feature.html), that must be supported by the browser to be allowed to render the associated element.
     *Value*: A list of space-separated URI; *Animatable*: **No**
 - {{SVGAttr('systemLanguage')}}
   - : Indicates which language the user must have chosen to render the associated element.

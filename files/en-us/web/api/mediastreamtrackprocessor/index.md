@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrackProcessor
 slug: Web/API/MediaStreamTrackProcessor
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -14,7 +15,7 @@ The **`MediaStreamTrackProcessor`** interface of the {{domxref('Insertable Strea
 
 ## Constructor
 
-- {{domxref("MediaStreamTrackProcessor.MediaStreamTrackProcessor()")}}
+- {{domxref("MediaStreamTrackProcessor.MediaStreamTrackProcessor", "MediaStreamTrackProcessor()")}}
   - : Creates a new `MediaStreamTrackProcessor` object.
 
 ## Properties

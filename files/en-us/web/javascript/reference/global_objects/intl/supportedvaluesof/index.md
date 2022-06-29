@@ -7,11 +7,10 @@ tags:
   - JavaScript
   - Method
   - Reference
-  - Experimental
   - supportedValuesOf
 browser-compat: javascript.builtins.Intl.supportedValuesOf
 ---
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
 The **`Intl.supportedValuesOf()`** method returns an array containing the supported calendar, collation, currency, numbering systems, or unit values supported by the implementation.
 
@@ -52,7 +51,7 @@ A sorted array of unique string values indicating the values supported by the im
 You can check that the method is supported by comparing to `undefined`:
 
 ```js
-if (typeof Intl.supportedValuesOf !== 'undefined') { 
+if (typeof Intl.supportedValuesOf !== 'undefined') {
   //method is supported
 }
 ```
@@ -60,7 +59,7 @@ if (typeof Intl.supportedValuesOf !== 'undefined') {
 ### Get all values for key
 
 To get the supported values for calendar you call the method with the key `"calendar"`.
-YOu can then iterate through the returned array as shown below:
+You can then iterate through the returned array as shown below:
 
 ```js
 Intl.supportedValuesOf("calendar").forEach(function(calendar) {
@@ -104,10 +103,6 @@ try {
 }
 ```
 
-## Polyfill
-
-[Intl.supportedValuesOf() polyfill in proposal TC39](https://github.com/tc39/proposal-intl-enumeration/tree/master/polyfill)
-
 ## Specifications
 
 {{Specifications}}
@@ -119,3 +114,4 @@ try {
 ## See also
 
 - {{jsxref("Global_Objects/Intl", "Intl")}}
+- [A polyfill of `Intl.supportedValuesOf` in proposal TC39](https://github.com/tc39/proposal-intl-enumeration/tree/master/polyfill)

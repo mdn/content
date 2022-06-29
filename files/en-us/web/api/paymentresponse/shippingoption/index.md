@@ -1,6 +1,7 @@
 ---
 title: PaymentResponse.shippingOption
 slug: Web/API/PaymentResponse/shippingOption
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -22,21 +23,19 @@ option selected by the user. This option is only present when the
 {{domxref('PaymentOptions')}} object passed to the
 {{domxref('PaymentRequest.PaymentRequest','PaymentRequest')}} constructor.
 
-## Syntax
+## Value
 
-```js
-var shippingOption = PaymentRequest.shippingOption;
-```
+A string.
 
-## Example
+## Examples
 
-In the example below, the {{domxref('PaymentRequest.onshippingaoptionchange')}} event
+In the example below, the {{domxref('PaymentRequest.shippingoptionchange_event', 'shippingoptionchange')}} event
 is called. It calls `updateDetails()` to toggle the shipping method between
 "standard" and "express".
 
 ```js
 // Initialization of PaymentRequest arguments are excerpted for brevity.
-var payment = new PaymentRequest(supportedInstruments, details, options);
+const payment = new PaymentRequest(supportedInstruments, details, options);
 
 request.addEventListener('shippingoptionchange', function(evt) {
   evt.updateWith(new Promise(function(resolve, reject) {
@@ -51,8 +50,8 @@ payment.show().then(function(paymentResponse) {
 });
 
 function updateDetails(details, shippingOption, resolve, reject) {
-  var selectedShippingOption;
-  var otherShippingOption;
+  let selectedShippingOption;
+  let otherShippingOption;
   if (shippingOption === 'standard') {
     selectedShippingOption = details.shippingOptions[0];
     otherShippingOption = details.shippingOptions[1];

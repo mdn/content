@@ -1,6 +1,7 @@
 ---
 title: 'Document: keydown event'
 slug: Web/API/Document/keydown_event
+page-type: web-api-event
 tags:
   - API
   - DOM

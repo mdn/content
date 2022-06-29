@@ -1,6 +1,7 @@
 ---
 title: Element.firstElementChild
 slug: Web/API/Element/firstElementChild
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -17,16 +18,11 @@ are no child elements.
 `Element.firstElementChild` includes only element nodes.
 To get all child nodes, including non-element nodes like text and comment nodes, use {{domxref("Node.firstChild")}}.
 
-## Syntax
+## Value
 
-```js
-// Getter
-element = el.firstElementChild;
+An {{domxref("Element")}} object, or `null`.
 
-// No setter; read-only property
-```
-
-## Example
+## Examples
 
 ```html
 <ul id="list">

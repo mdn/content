@@ -1,6 +1,7 @@
 ---
 title: RTCOutboundRtpStreamStats.framesEncoded
 slug: Web/API/RTCOutboundRtpStreamStats/framesEncoded
+page-type: web-api-instance-property
 tags:
   - API
   - Encoding
@@ -26,13 +27,7 @@ the {{domxref("RTCOutboundRtpStreamStats")}} dictionary indicates the total numb
 frames that have been encoded by this {{domxref("RTCRtpSender")}} for this media
 source.
 
-## Syntax
-
-```js
-var framesEncoded = RTCOutboundRtpStreamStats.framesEncoded;
-```
-
-### Value
+## Value
 
 An integer value indicating the total number of video frames that this sender has
 encoded so far for this stream.

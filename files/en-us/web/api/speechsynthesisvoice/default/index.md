@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisVoice.default
 slug: Web/API/SpeechSynthesisVoice/default
+page-type: web-api-instance-property
 tags:
   - API
   - Property

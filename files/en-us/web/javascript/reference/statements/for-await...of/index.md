@@ -72,7 +72,7 @@ const asyncIterable = {
 
 ### Iterating over async generators
 
-Since the return values of async generators conform to the async iterable protocol,
+Since the return values of async generator functions conform to the async iterable protocol,
 they can be looped using `for await...of`.
 
 ```js
@@ -113,7 +113,7 @@ async function* streamAsyncIterable(stream) {
   }
 }
 
-// Fetches data from url and calculates response size using the async generator.
+// Fetches data from URL and calculates response size using the async generator.
 async function getResponseSize(url) {
   const response = await fetch(url);
   // Will hold the size of the response, in bytes.
@@ -222,7 +222,7 @@ try {
 ```
 
 To make  `finally` blocks of a sync generator to be always called use
-appropriate form of the loop, `for await...of` for the async generator and
+the appropriate form of the loop, `for await...of` for the async generator and
 `for...of` for the sync one and await yielded promises explicitly inside the
 loop.
 

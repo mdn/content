@@ -1,6 +1,7 @@
 ---
 title: IDBDatabase.version
 slug: Web/API/IDBDatabase/version
+page-type: web-api-instance-property
 tags:
   - API
   - Database
@@ -21,17 +22,11 @@ When a database is first created, this attribute is an empty string.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var myInteger = IDBDatabase.version;
-```
-
-### Value
+## Value
 
 An integer containing the version of the connected database.
 
-## Example
+## Examples
 
 ```js
 // Let us open our database

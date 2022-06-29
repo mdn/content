@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.autoplay
 slug: Web/API/HTMLMediaElement/autoplay
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -32,18 +33,9 @@ active (that is, when {{domxref("MediaStream.active")}} becomes `true`).
 > creating media elements whose source will be set at a later time, under user control.
 
 For a much more in-depth look at autoplay, autoplay blocking, and how to respond when
-autoplay is blocked by the user's browser, see our article [Autoplay guide for media and Web Audio
-APIs](/en-US/docs/Web/Media/Autoplay_guide).
+autoplay is blocked by the user's browser, see our article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide).
 
-## Syntax
-
-```js
-HTMLMediaElement.autoplay = true | false;
-
-var autoplay = HTMLMediaElement.autoplay;
-```
-
-### Value
+## Value
 
 A boolean value which is `true` if the media element will
 begin playback as soon as enough content has loaded to allow it to do so without

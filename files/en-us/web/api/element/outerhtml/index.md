@@ -1,6 +1,7 @@
 ---
 title: Element.outerHTML
 slug: Web/API/Element/outerHTML
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -26,17 +27,9 @@ To only obtain the HTML representation of the contents of an element, or to repl
 contents of an element, use the {{domxref("Element.innerHTML", "innerHTML")}} property
 instead.
 
-## Syntax
+## Value
 
-```js
-var content = element.outerHTML;
-
-element.outerHTML = htmlString;
-```
-
-### Value
-
-Reading the value of `outerHTML` returns a {{domxref("DOMString")}}
+Reading the value of `outerHTML` returns a string
 containing an HTML serialization of the `element` and its descendants.
 Setting the value of `outerHTML` replaces the element and all of its
 descendants with a new DOM tree constructed by parsing the specified
@@ -123,7 +116,7 @@ p.outerHTML = "<div>This div replaced a paragraph.</div>";
 console.log(p.nodeName); // still "P";
 ```
 
-The returned value will contain html escaped attributes:
+The returned value will contain HTML escaped attributes:
 
 ```js
 var anc = document.createElement("a");

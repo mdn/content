@@ -1,6 +1,7 @@
 ---
 title: XRRigidTransform.position
 slug: Web/API/XRRigidTransform/position
+page-type: web-api-instance-property
 tags:
   - 3D
   - API
@@ -33,7 +34,7 @@ transform matrix. The units are meters.
 
 > **Note:** The `w` component of the point is always 1.0.
 
-## Example
+## Examples
 
 To create a reference space which can be used to place an object at eye level (assuming
 eye level is 1.5 meters):

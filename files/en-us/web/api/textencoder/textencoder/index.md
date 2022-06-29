@@ -1,6 +1,7 @@
 ---
 title: TextEncoder()
 slug: Web/API/TextEncoder/TextEncoder
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -17,7 +18,7 @@ The **`TextEncoder()`** constructor returns a newly created
 ## Syntax
 
 ```js
-new TextEncoder();
+new TextEncoder()
 ```
 
 ### Parameters

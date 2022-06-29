@@ -13,7 +13,7 @@ tags:
   - Reference
   - Reset Button
   - reset
-browser-compat: html.elements.input.input-reset
+browser-compat: html.elements.input.type_reset
 ---
 
 {{HTMLRef("Input_types")}}
@@ -27,8 +27,8 @@ browser-compat: html.elements.input.input-reset
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
-      <td>A {{domxref("DOMString")}} used as the button's label</td>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>A string used as the button's label</td>
     </tr>
     <tr>
       <td><strong>Events</strong></td>
@@ -46,6 +46,10 @@ browser-compat: html.elements.input.input-reset
       <td><code>value</code></td>
     </tr>
     <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>Methods</strong></td>
       <td>None</td>
     </tr>
@@ -54,7 +58,7 @@ browser-compat: html.elements.input.input-reset
 
 ## Value
 
-An `<input type="reset">` element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that is used as the button's label. Buttons such as `reset` don't have a value otherwise.
+An `<input type="reset">` element's {{htmlattrxref("value", "input")}} attribute contains a string that is used as the button's label. Buttons such as `reset` don't have a value otherwise.
 
 ### Setting the value attribute
 

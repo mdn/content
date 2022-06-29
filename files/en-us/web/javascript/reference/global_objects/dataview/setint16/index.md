@@ -49,8 +49,8 @@ setInt16(byteOffset, value, littleEndian)
 ### Using the setInt16 method
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const buffer = new ArrayBuffer(8);
+const dataview = new DataView(buffer);
 dataview.setInt16(1, 3);
 dataview.getInt16(1); // 3
 ```

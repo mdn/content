@@ -1,6 +1,7 @@
 ---
 title: DocumentType.remove()
 slug: Web/API/DocumentType/remove
+page-type: web-api-instance-method
 tags:
   - API
   - DocumentType
@@ -23,6 +24,14 @@ The **`DocumentType.remove()`** method removes a document's `doctype`.
 ```js
 remove()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

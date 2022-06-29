@@ -1,6 +1,7 @@
 ---
 title: CSSScale.z
 slug: Web/API/CSSScale/z
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -22,13 +23,7 @@ farther away.
 If this value is present then the transform is a 3D transform and the `is2D`
 property will be set to false.
 
-## Syntax
-
-```js
-var scaleZ = CSSScale.z;
-```
-
-### Value
+## Value
 
 A double integer or a {{domxref("CSSNumericValue")}}
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.seekToNextFrame()
 slug: Web/API/HTMLMediaElement/seekToNextFrame
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -40,10 +41,12 @@ happens.
 ## Syntax
 
 ```js
-var seekCompletePromise = HTMLMediaElement.seekToNextFrame();
-
-HTMLMediaElement.seekToNextFrame();
+seekToNextFrame()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

@@ -1,6 +1,7 @@
 ---
 title: Navigator.mediaDevices
 slug: Web/API/Navigator/mediaDevices
+page-type: web-api-instance-property
 tags:
   - Media
   - Media Capture and Streams API
@@ -22,7 +23,7 @@ devices like cameras and microphones, as well as screen sharing.
 ## Syntax
 
 ```js
-var mediaDevices = navigator.mediaDevices;
+const mediaDevices = navigator.mediaDevices;
 ```
 
 ### Return value

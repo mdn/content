@@ -1,26 +1,20 @@
 ---
 title: Touch.force
 slug: Web/API/Touch/force
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Read-only
   - touch
 browser-compat: api.Touch.force
 ---
-{{ APIRef("Touch Events") }}{{SeeCompatTable}}
+{{ APIRef("Touch Events") }}
 
 The **`Touch.force`** read-only property returns the amount of
 pressure the user is applying to the touch surface for a {{ domxref("Touch") }} point.
 
-## Syntax
-
-```js
-touchItem.force;
-```
-
-### Return value
+## Value
 
 A `float` that represents the amount of pressure the user is applying to the
 touch surface. This is a value between `0.0` (no pressure) and
@@ -29,7 +23,7 @@ touch surface. This is a value between `0.0` (no pressure) and
 support this property). In environments where force is known, the absolute pressure
 represented by the force attribute, and the sensitivity in levels of pressure, may vary.
 
-## Example
+## Examples
 
 This example illustrates using the {{domxref("Touch")}} interface's
 {{domxref("Touch.force")}} property. This property is a relative value of pressure

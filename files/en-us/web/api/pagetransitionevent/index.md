@@ -1,6 +1,7 @@
 ---
 title: PageTransitionEvent
 slug: Web/API/PageTransitionEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface

@@ -1,6 +1,7 @@
 ---
 title: XRInputSource.handedness
 slug: Web/API/XRInputSource/handedness
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -43,7 +44,7 @@ the user's hands, and if it is, which hand. The value is one of the following:
 
 If the input source is not a device associated with a user's hand (whether by being
 held, attached, or worn), the value of `handedness` is `none`.
-This may indicate, for example, an  input source which isn't hand-held, such as controls
+This may indicate, for example, an input source which isn't hand-held, such as controls
 built into a headset or an input device attached to the head or body.
 
 ## Examples
@@ -80,5 +81,4 @@ If `gripSpace` is non-`null`, the function proceeds to get the pose for the `gri
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
 - [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs)
-- [Using gamepads in WebXR
-  applications](/en-US/docs/Web/WebXR%20Device%20API/Gamepads)
+- [Using gamepads in WebXR applications](/en-US/docs/Web/WebXR%20Device%20API/Gamepads)

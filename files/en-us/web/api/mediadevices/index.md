@@ -1,6 +1,7 @@
 ---
 title: MediaDevices
 slug: Web/API/MediaDevices
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -29,12 +30,6 @@ The **`MediaDevices`** interface provides access to connected media input device
 
 _Inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
-## Events
-
-- {{domxref("MediaDevices/devicechange_event", "devicechange")}}
-  - : Fired when a media input or output device is attached to or removed from the user's computer.
-    Also available via the {{domxref("MediaDevices/ondevicechange", "ondevicechange")}} property.
-
 ## Methods
 
 _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
@@ -50,22 +45,27 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 - {{domxref("MediaDevices.selectAudioOutput", "selectAudioOutput()") }}
   - : Prompts the user to select a specific audio output device.
 
+## Events
+
+- {{domxref("MediaDevices/devicechange_event", "devicechange")}}
+  - : Fired when a media input or output device is attached to or removed from the user's computer.
+
 ## Example
 
 ```js
 'use strict';
 
 // Put variables in global scope to make them available to the browser console.
-var video = document.querySelector('video');
-var constraints = window.constraints = {
+const video = document.querySelector('video');
+const constraints = window.constraints = {
   audio: false,
   video: true
 };
-var errorElement = document.querySelector('#errorMsg');
+const errorElement = document.querySelector('#errorMsg');
 
 navigator.mediaDevices.getUserMedia(constraints)
 .then(function(stream) {
-  var videoTracks = stream.getVideoTracks();
+  const videoTracks = stream.getVideoTracks();
   console.log('Got stream with constraints:', constraints);
   console.log('Using video device: ' + videoTracks[0].label);
   stream.onremovetrack = function() {

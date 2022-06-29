@@ -1,6 +1,7 @@
 ---
 title: PannerNode.coneOuterAngle
 slug: Web/API/PannerNode/coneOuterAngle
+page-type: web-api-instance-property
 tags:
   - API
   - PannerNode
@@ -16,19 +17,11 @@ The `coneOuterAngle` property of the {{ domxref("PannerNode") }} interface is a 
 
 The `coneOuterAngle` property's default value is `0`.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var panner = audioCtx.createPanner();
-panner.coneOuterAngle = 0;
-```
-
-### Value
+## Value
 
 A double.
 
-## Example
+## Examples
 
 See [`PannerNode.orientationX`](/en-US/docs/Web/API/PannerNode/orientationX#example) for example code that demonstrates the effect on volume of changing the {{domxref("PannerNode")}} orientation parameters in combination with {{domxref("PannerNode.coneInnerAngle", "coneInnerAngle")}} and {{domxref("PannerNode.coneOuterAngle", "coneOuterAngle")}}.
 
@@ -43,4 +36,4 @@ See [`PannerNode.orientationX`](/en-US/docs/Web/API/PannerNode/orientationX#exam
 ## See also
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web Audio spatialisation basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Web Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)

@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.makeXRCompatible()
 slug: Web/API/WebGLRenderingContext/makeXRCompatible
+page-type: web-api-instance-method
 tags:
   - 3D
   - API

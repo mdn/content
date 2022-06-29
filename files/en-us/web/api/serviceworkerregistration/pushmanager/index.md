@@ -1,6 +1,7 @@
 ---
 title: ServiceWorkerRegistration.pushManager
 slug: Web/API/ServiceWorkerRegistration/pushManager
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -19,13 +20,7 @@ The **`pushManager`** property of the
 support for subscribing, getting an active subscription, and accessing push permission
 status.
 
-## Syntax
-
-```js
-var pushManager = serviceWorkerRegistration.pushManager;
-```
-
-### Value
+## Value
 
 A {{domxref("PushManager")}} object.
 

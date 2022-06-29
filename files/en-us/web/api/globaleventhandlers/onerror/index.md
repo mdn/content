@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onerror
 slug: Web/API/GlobalEventHandlers/onerror
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -12,11 +13,11 @@ browser-compat: api.GlobalEventHandlers.onerror
 ---
 {{ApiRef("HTML DOM")}}
 
-The **`onerror`** property of the {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that processes {{event("error")}} events.
+The **`onerror`** property of the {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that processes `error` events.
 
 Error events are fired at various targets for different kinds of errors:
 
-- When a **JavaScript runtime error** (including syntax errors and exceptions thrown within handlers) occurs, an [`error`](/en-US/docs/Web/API/Element/error_event) event using interface {{domxref("ErrorEvent")}} is fired at {{domxref("window")}} and `window.onerror()` is invoked (as well as handlers attached by {{domxref("EventTarget.addEventListener")}} (not only capturing)).
+- When a **JavaScript runtime error** (including syntax errors and exceptions thrown within handlers) occurs, an [`error`](/en-US/docs/Web/API/Window/error_event) event using interface {{domxref("ErrorEvent")}} is fired at {{domxref("window")}} and `window.onerror()` is invoked (as well as handlers attached by {{domxref("EventTarget.addEventListener")}} (not only capturing)).
 - When a resource (such as an {{HTMLElement("img")}} or {{HTMLElement("script")}}) **fails to load**, an [`error`](/en-US/docs/Web/API/Element/error_event) event using interface {{domxref("Event")}} is fired at the element that initiated the load, and the `onerror()` handler on the element is invoked. These error events do not bubble up to window, but can be handled with a {{domxref("EventTarget.addEventListener")}} configured with `useCapture` set to `true`.
 
 Installing a global `error` event handler is useful for automated collection of error reports.
@@ -71,12 +72,12 @@ When an error occurs in a script, loaded from a [different origin](/en-US/docs/W
 
 ```js
 window.onerror = function (msg, url, lineNo, columnNo, error) {
-  var string = msg.toLowerCase();
-  var substring = 'script error';
+  const string = msg.toLowerCase();
+  const substring = 'script error';
   if (string.indexOf(substring) > -1){
     alert('Script Error: See Browser Console for Detail');
   } else {
-    var message = [
+    const message = [
       'Message: ' + msg,
       'URL: ' + url,
       'Line: ' + lineNo,
@@ -103,5 +104,5 @@ When using the inline HTML markup (`<body onerror="alert('an error occurred')">`
 
 ## See also
 
-- [Capture and report JavaScript errors with window.onerror (blog.sentry.io, 2016)](https://blog.sentry.io/2016/01/04/client-javascript-reporting-window-onerror)
+- [Capture and report JavaScript errors with window.onerror (blog.sentry.io, 2016)](https://blog.sentry.io/2016/01/04/client-javascript-reporting-window-onerror/)
 - [How to catch JavaScript Errors with window.onerror (even on Chrome and Firefox) (danlimerick.wordpress.com, 2014)](https://danlimerick.wordpress.com/2014/01/18/how-to-catch-javascript-errors-with-window-onerror-even-on-chrome-and-firefox/)

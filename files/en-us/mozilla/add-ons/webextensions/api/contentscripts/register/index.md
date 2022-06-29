@@ -21,7 +21,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var registering = browser.contentScripts.register(
+let registering = browser.contentScripts.register(
   contentScriptOptions       // object
 )
 ```
@@ -86,7 +86,7 @@ async function register(hosts, code) {
 
 }
 
-var registered = register(defaultHosts, defaultCode);
+let registered = register(defaultHosts, defaultCode);
 ```
 
 This code registers the JS file at content_scripts/example.js:

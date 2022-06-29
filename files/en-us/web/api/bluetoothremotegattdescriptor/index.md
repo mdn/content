@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTDescriptor
 slug: Web/API/BluetoothRemoteGATTDescriptor
+page-type: web-api-interface
 tags:
   - API
   - Bluetooth
@@ -15,10 +16,6 @@ browser-compat: api.BluetoothRemoteGATTDescriptor
 
 The `BluetoothRemoteGATTDescriptor` interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) provides a GATT Descriptor,
 which provides further information about a characteristic's value.
-
-> **Note:** This page describes the W3C Community Group Web Bluetooth API. For the Firefox OS
-> Bluetooth API, see [`BluetoothGattDescriptor`
-> (Firefox OS)](/en-US/docs/Archive/B2G_OS/API/BluetoothGattDescriptor).
 
 ## Properties
 
@@ -37,7 +34,7 @@ which provides further information about a characteristic's value.
 
 - {{DOMxRef("BluetoothRemoteGATTDescriptor.readValue()")}}
   - : Returns a {{JSxRef("Promise")}} that resolves to
-    an {{JSxRef("ArrayBuffer")}} holding a duplicate  of the `value` property
+    an {{JSxRef("ArrayBuffer")}} holding a duplicate of the `value` property
     if it is available and supported. Otherwise it throws an error.
 - {{DOMxRef("BluetoothRemoteGATTDescriptor.writeValue()")}}
   - : Sets the value property to the bytes contained in an {{JSxRef("ArrayBuffer")}} and

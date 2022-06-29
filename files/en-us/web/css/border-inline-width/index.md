@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.border-inline-width
@@ -30,6 +29,7 @@ border-inline-width: thick;
 border-inline-width: inherit;
 border-inline-width: initial;
 border-inline-width: revert;
+border-inline-width: revert-layer;
 border-inline-width: unset;
 ```
 

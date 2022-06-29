@@ -60,7 +60,10 @@ When range is specified as integers, the value `infinite` can be used to denote 
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+[ [ <integer> | infinite ]{2} ]# |
+auto
+```
 
 ## Examples
 
@@ -108,4 +111,4 @@ The above list will display as follows:
 ## See also
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles.
+- {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles.

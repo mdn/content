@@ -216,7 +216,7 @@ If you have a numeric variable that you want to convert to a string but not chan
   console.log(typeof myString2);
   ```
 
-These constructs can be really useful in some situations. For example, if a user enters a number into a form's text field, it's a string. However, if you want to add this number to something, you'll need it to be a number, so you could pass it through `Number()` to handle this. We did exactly this in our [Number Guessing Game, in line 54](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L54).
+These constructs can be really useful in some situations. For example, if a user enters a number into a form's text field, it's a string. However, if you want to add this number to something, you'll need it to be a number, so you could pass it through `Number()` to handle this. We did exactly this in our [Number Guessing Game, in line 54](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L54).
 
 ## Including expressions in strings
 
@@ -250,10 +250,6 @@ console.log(output);  // I like the song.
 ```
 
 See our [Template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals) reference page for more examples and details of advanced features.
-
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Strings](/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings). Note that this also requires knowledge from the next article, so you might want to read that first.
 
 ## Conclusion
 

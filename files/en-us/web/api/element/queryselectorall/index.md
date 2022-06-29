@@ -1,6 +1,7 @@
 ---
 title: Element.querySelectorAll()
 slug: Web/API/Element/querySelectorAll
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Selectors
@@ -25,16 +26,15 @@ the method was called.
 ## Syntax
 
 ```js
-elementList = parentNode.querySelectorAll(selectors);
+querySelectorAll(selectors)
 ```
 
 ### Parameters
 
 - `selectors`
-  - : A {{domxref("DOMString")}} containing one or more selectors to match against. This
+  - : A string containing one or more selectors to match against. This
     string must be a valid [CSS selector](/en-US/docs/Web/CSS/CSS_Selectors)
-    string; if it's not, a `SyntaxError` exception is thrown. See [Locating
-    DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) for more information about using selectors to
+    string; if it's not, a `SyntaxError` exception is thrown. See [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) for more information about using selectors to
     identify elements. Multiple selectors may be specified by separating them using
     commas.
 
@@ -53,8 +53,8 @@ each descendant node that matches at least one of the specified selectors.
 
 ### Exceptions
 
-- `SyntaxError`
-  - : The syntax of the specified `selectors` string is not valid.
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if the syntax of the specified `selectors` string is not valid.
 
 ## Examples
 
@@ -104,8 +104,7 @@ var container = document.querySelector("#test");
 var matches = container.querySelectorAll("div.highlighted > p");
 ```
 
-This example uses an [attribute
-selector](/en-US/docs/Web/CSS/Attribute_selectors) to return a list of the {{HTMLElement("iframe")}} elements in the document
+This example uses an [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) to return a list of the {{HTMLElement("iframe")}} elements in the document
 that contain an attribute named `"data-src"`:
 
 ```js
@@ -194,12 +193,10 @@ inner.length; // 0
 
 ## See also
 
-- [Locating
-  DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
 - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in the CSS
   Guide
-- [Attribute
-  selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors) in the MDN Learning Area
+- [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors) in the MDN Learning Area
 - {{domxref("Element.querySelector()")}}
 - {{domxref("Document.querySelector()")}} and
   {{domxref("Document.querySelectorAll()")}}

@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.closePath()
 slug: Web/API/CanvasRenderingContext2D/closePath
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -24,8 +25,16 @@ the {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} or
 ## Syntax
 
 ```js
-void ctx.closePath();
+closePath()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

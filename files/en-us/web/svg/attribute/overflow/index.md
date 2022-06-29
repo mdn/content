@@ -74,41 +74,7 @@ For a description of the values, please see the {{cssxref("overflow", "CSS overf
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("CSS2.1", "visufx.html#overflow", "overflow")}}
-      </td>
-      <td>{{Spec2("CSS2.1")}}</td>
-      <td>Definition in CSS</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "render.html#OverflowAndClipProperties", "overflow")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>
-        Simplifies the definition and outlines the values within the user agent
-        stylesheet.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "masking.html#OverflowProperty", "overflow")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

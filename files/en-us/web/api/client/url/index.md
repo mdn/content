@@ -1,6 +1,7 @@
 ---
 title: Client.url
 slug: Web/API/Client/url
+page-type: web-api-instance-property
 tags:
   - API
   - Client
@@ -16,17 +17,11 @@ browser-compat: api.Client.url
 The **`url`** read-only property of the {{domxref("Client")}}
 interface returns the URL of the current service worker client.
 
-## Syntax
+## Value
 
-```js
-var clientUrl = client.url;
-```
+A string.
 
-### Value
-
-A {{domxref("USVString")}}.
-
-## Example
+## Examples
 
 ```js
 self.addEventListener('notificationclick', function(event) {
@@ -38,8 +33,8 @@ self.addEventListener('notificationclick', function(event) {
   event.waitUntil(clients.matchAll({
     type: 'window'
   }).then(function(clientList) {
-    for (var i = 0; i < clientList.length; i++) {
-      var client = clientList[i];
+    for (let i = 0; i < clientList.length; i++) {
+      const client = clientList[i];
       if (client.url == '/' && 'focus' in client)
         return client.focus();
     }

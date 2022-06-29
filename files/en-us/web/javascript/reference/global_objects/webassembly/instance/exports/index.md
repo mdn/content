@@ -45,8 +45,7 @@ WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
 ```
 
 > **Note:** You can also find this example as [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html)
-> on GitHub ([view
-> it live also](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)).
+> on GitHub ([view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)).
 
 ## Specifications
 
@@ -60,5 +59,4 @@ WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

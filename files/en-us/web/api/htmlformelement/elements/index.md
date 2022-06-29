@@ -1,6 +1,7 @@
 ---
 title: HTMLFormElement.elements
 slug: Web/API/HTMLFormElement/elements
+page-type: web-api-instance-property
 tags:
   - API
   - Elements
@@ -28,34 +29,31 @@ index or the element's `name` or `id` attributes.
 Prior to HTML 5, the returned object was an {{domxref("HTMLCollection")}}, on which
 `HTMLFormControlsCollection` is based.
 
-> **Note:** Similarly, you can get a list of all of the forms contained
-> within a given document using the document's {{domxref("Document.forms", "forms")}}
-> property.
+> **Note:** Similarly, you can get a list of all of the forms contained within a given document using the document's {{domxref("Document.forms", "forms")}} property.
 
-## Syntax
+## Value
 
-```js
-nodeList = HTMLFormElement.elements
-```
+An {{domxref("HTMLFormControlsCollection")}} containing all non-image controls in the form.
+This is a live collection; if form controls are added to or removed from the form, this collection will update to reflect the change.
 
-### Value
+The form controls in the returned collection are in the same order in which they appear in the form by following a preorder, depth-first traversal of the tree.
+This is called **tree order**.
 
-An {{domxref("HTMLFormControlsCollection")}} containing all non-image controls in the
-form. This is a live collection; if form controls are added to or removed from the form,
-this collection will update to reflect the change.
+Only the following elements are returned:
 
-The form controls in the returned collection are in the same order in which they appear
-in the form by following a preorder, depth-first traversal of the tree. This is called
-**tree order**.
+- {{HTMLElement("button")}}
+- {{HTMLElement("fieldset")}}
+- {{HTMLElement("input")}} (with the exception that any whose {{htmlattrxref("type", "input")}} is `"image"` are omitted for historical reasons)
+- {{HTMLElement("object")}}
+- {{HTMLElement("output")}}
+- {{HTMLElement("select")}}
+- {{HTMLElement("textarea")}}
 
-{{page("/en-US/docs/Web/API/HTMLFormElement", "Elements that are considered form controls")}}
-
-## Example
+## Examples
 
 ### Quick syntax example
 
-In this example, we see how to obtain the list of form controls as well as how to
-access its members by index and by name or ID.
+In this example, we see how to obtain the list of form controls as well as how to access its members by index and by name or ID.
 
 ```html
 <form id="my-form">

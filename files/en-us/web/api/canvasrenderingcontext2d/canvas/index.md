@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.canvas
 slug: Web/API/CanvasRenderingContext2D/canvas
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -16,11 +17,9 @@ The **`CanvasRenderingContext2D.canvas`** property, part of the
 {{domxref("HTMLCanvasElement")}} object that is associated with a given context. It
 might be {{jsxref("null")}} if there is no associated {{HTMLElement("canvas")}} element.
 
-## Syntax
+## Value
 
-```js
-ctx.canvas;
-```
+A {{domxref("HTMLCanvasElement")}} object.
 
 ## Examples
 

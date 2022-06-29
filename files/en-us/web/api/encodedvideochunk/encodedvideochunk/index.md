@@ -1,6 +1,7 @@
 ---
-title: EncodedVideoChunk.EncodedVideoChunk()
+title: EncodedVideoChunk()
 slug: Web/API/EncodedVideoChunk/EncodedVideoChunk
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -15,12 +16,12 @@ The **`EncodedVideoChunk()`** constructor creates a new {{domxref("EncodedVideoC
 ## Syntax
 
 ```js
-new EncodedVideoChunk(init);
+new EncodedVideoChunk(options)
 ```
 
 ### Parameters
 
-- `init`
+- `options`
   - : An object containing the following members:
     - `type`
       - : Indicates if the chunk is a key chunk that does not rely on other frames for encoding. One of:
@@ -33,7 +34,7 @@ new EncodedVideoChunk(init);
     - `duration`
       - : An integer representing the length of the video in microseconds.
     - `data`
-      - : A {{domxref("BufferSource")}} containing the video data.
+      - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing the video data.
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: FileSystemEntry.isFile
 slug: Web/API/FileSystemEntry/isFile
+page-type: web-api-instance-property
 tags:
   - API
   - File and Directory Entries API
@@ -27,17 +28,11 @@ if the entry is a directory.
 > both `isDirectory` and `isFile` as needed to ensure that the
 > entry is something you know how to work with.
 
-## Syntax
-
-```js
-var isFile = FileSystemEntry.isFile;
-```
-
-### Value
+## Value
 
 A Boolean indicating whether or not the {{domxref("FileSystemEntry")}} is a file.
 
-## Example
+## Examples
 
 This example shows how this property might be used to determine whether to process the
 entry as a directory or file. If the entry is neither, an error handler is called with
@@ -63,10 +58,8 @@ if (entry.isDirectory) {
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemEntry")}}
 - {{domxref("FileSystemEntry.isDirectory")}}
 - {{domxref("FileSystemFileEntry")}}

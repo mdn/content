@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.compressedTexSubImage3D()
 slug: Web/API/WebGL2RenderingContext/compressedTexSubImage3D
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,10 +19,11 @@ three-dimensional sub-rectangle for a texture image in a compressed format.
 ## Syntax
 
 ```js
-// read from the buffer bound to gl.PIXEL_UNPACK_BUFFER
-void gl.compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, offset);
+compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, offset)
 
-void gl.compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, ArrayBufferView srcData, optional srcOffset, optional srcLengthOverride);
+compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, srcData)
+compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, srcData, srcOffset)
+compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, srcData, srcOffset, srcLengthOverride)
 ```
 
 ### Parameters
@@ -71,12 +73,12 @@ void gl.compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width,
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the offset in bytes from which to read from the
     buffer bound to `gl.PIXEL_UNPACK_BUFFER`.
 - `srcData`
-  - : An {{domxref("ArrayBufferView")}} that be used as a data store for the compressed
+  - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object that will be used as a data store for the compressed
     image data in memory.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

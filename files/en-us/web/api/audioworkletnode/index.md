@@ -1,6 +1,7 @@
 ---
 title: AudioWorkletNode
 slug: Web/API/AudioWorkletNode
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -46,13 +47,13 @@ _The `AudioWorkletNode` interface does not define any methods of its own._
 
 ## Examples
 
-In this example we create a custom `AudioWorkletNode` that outputs white noise.
+In this example we create a custom `AudioWorkletNode` that outputs random noise.
 
-First, we need to define a custom {{domxref("AudioWorkletProcessor")}}, which will output white noise, and register it. Note that this should be done in a separate file.
+First, we need to define a custom {{domxref("AudioWorkletProcessor")}}, which will output random noise, and register it. Note that this should be done in a separate file.
 
 ```js
-// white-noise-processor.js
-class WhiteNoiseProcessor extends AudioWorkletProcessor {
+// random-noise-processor.js
+class RandomNoiseProcessor extends AudioWorkletProcessor {
   process (inputs, outputs, parameters) {
     const output = outputs[0]
     output.forEach(channel => {
@@ -64,16 +65,16 @@ class WhiteNoiseProcessor extends AudioWorkletProcessor {
   }
 }
 
-registerProcessor('white-noise-processor', WhiteNoiseProcessor)
+registerProcessor('random-noise-processor', RandomNoiseProcessor)
 ```
 
 Next, in our main script file we'll load the processor, create an instance of `AudioWorkletNode` passing it the name of the processor, and connect the node to an audio graph.
 
 ```js
 const audioContext = new AudioContext()
-await audioContext.audioWorklet.addModule('white-noise-processor.js')
-const whiteNoiseNode = new AudioWorkletNode(audioContext, 'white-noise-processor')
-whiteNoiseNode.connect(audioContext.destination)
+await audioContext.audioWorklet.addModule('random-noise-processor.js')
+const randomNoiseNode = new AudioWorkletNode(audioContext, 'random-noise-processor')
+randomNoiseNode.connect(audioContext.destination)
 ```
 
 ## Specifications
@@ -88,3 +89,4 @@ whiteNoiseNode.connect(audioContext.destination)
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using AudioWorklet](/en-US/docs/Web/API/Web_Audio_API/Using_AudioWorklet)

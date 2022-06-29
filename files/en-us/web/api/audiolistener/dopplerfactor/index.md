@@ -1,6 +1,7 @@
 ---
 title: AudioListener.dopplerFactor
 slug: Web/API/AudioListener/dopplerFactor
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -21,19 +22,11 @@ The deprecated `dopplerFactor` property of the {{ domxref("AudioListener") }} in
 
 The `dopplerFactor` property's default value is `1`, which is a sensible default for most situations.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var myListener = audioCtx.listener;
-myListener.dopplerFactor = 1;
-```
-
-### Value
+## Value
 
 A double indicating the doppler effect's pitch shift value. The value is 1 by default.
 
-## Example
+## Examples
 
 See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
 

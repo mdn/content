@@ -18,7 +18,7 @@ tags:
 
 **Cascading Style Sheets** (**CSS**) is a [stylesheet](/en-US/docs/Web/API/StyleSheet) language used to describe the presentation of a document written in [HTML](/en-US/docs/Web/HTML) or [XML](/en-US/docs/Web/XML/XML_introduction) (including XML dialects such as [SVG](/en-US/docs/Web/SVG), [MathML](/en-US/docs/Web/MathML) or {{Glossary("XHTML")}}). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.
 
-CSS is among the core languages of the **open web** and is standardized across Web browsers according to [W3C specifications](https://w3.org/Style/CSS/#specs). Previously, development of various parts of CSS specification was done synchronously, which allowed versioning of the latest recommendations. You might have heard about CSS1, CSS2.1, CSS3. However, CSS4 has never become an official version.
+CSS is among the core languages of the **open web** and is standardized across Web browsers according to [W3C specifications](https://www.w3.org/Style/CSS/#specs). Previously, development of various parts of CSS specification was done synchronously, which allowed versioning of the latest recommendations. You might have heard about CSS1, CSS2.1, CSS3. However, CSS4 has never become an official version.
 
 From CSS3, the scope of the specification increased significantly and the progress on different CSS modules started to differ so much, that it became more effective to [develop and release recommendations separately per module](https://www.w3.org/Style/CSS/current-work). Instead of versioning the CSS specification, W3C now periodically takes a snapshot of [the latest stable state of the CSS specification](https://www.w3.org/TR/css/).
 
@@ -52,7 +52,7 @@ Our [CSS Learning Area](/en-US/docs/Learn/CSS) features multiple modules that te
 
     The aim here is to provide you with a toolkit for writing competent CSS and help you understand all the essential theory, before moving on to more specific disciplines like [text styling](/en-US/docs/Learn/CSS/Styling_text) and [CSS layout](/en-US/docs/Learn/CSS/CSS_layout).
 
-- [Styling text](/en-US/docs/Learn/CSS/Styling_text)
+- [CSS styling text](/en-US/docs/Learn/CSS/Styling_text)
   - : With the basics of the CSS language covered, the next CSS topic for you to concentrate on is styling text — one of the most common things you'll do with CSS. Here we look at text styling fundamentals, including setting font, boldness, italics, line and letter spacing, drop shadows, and other text features. We round off the module by looking at applying custom fonts to your page, and styling lists and links.
 - [CSS layout](/en-US/docs/Learn/CSS/CSS_layout)
   - : At this point we've already looked at CSS fundamentals, how to style text, and how to style and manipulate the boxes that your content sits inside. Now it's time to look at how to place your boxes in the right place in relation to the viewport, and to each other. We have covered the necessary prerequisites so we can now dive deep into CSS layout, looking at different display settings, modern layout tools like flexbox, CSS grid, and positioning, and some of the legacy techniques you might still want to know about.
@@ -80,12 +80,12 @@ Our [CSS Learning Area](/en-US/docs/Learn/CSS) features multiple modules that te
 
 ## Cookbook
 
-The [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) aims to bring together recipes for common layout patterns, things you might need to implement in your sites. In addition to providing code you can use as a starting point in your projects, these recipes highlight the different ways layout specifications can be used, and the choices you can make as a developer.
+The [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) aims to bring together recipes for common layout patterns, things you might need to implement in your sites. In addition to providing code you can use as a starting point in your projects, these recipes highlight the different ways layout specifications can be used and the choices you can make as a developer.
 
 ## Tools for CSS development
 
 - You can use the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to check if your CSS is valid. This is an invaluable debugging tool.
-- [Firefox Developer Tools](/en-US/docs/Tools) lets you view and edit a page's live CSS via the [Inspector](/en-US/docs/Tools/Page_Inspector) and [Style Editor](/en-US/docs/Tools/Style_Editor) tools.
+- [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) lets you view and edit a page's live CSS via the [Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) and [Style Editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) tools.
 - The [Web Developer extension](https://addons.mozilla.org/en-US/firefox/addon/web-developer/) for Firefox lets you track and edit live CSS on watched sites.
 
 ## Meta bugs

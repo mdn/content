@@ -1,6 +1,7 @@
 ---
 title: Using the Web Animations API
 slug: Web/API/Web_Animations_API/Using_the_Web_Animations_API
+page-type: guide
 tags:
   - Alice
   - Animations
@@ -361,8 +362,8 @@ var endGame = function() {
 
 CSS Animations and Transitions have their own event listeners, and these are also possible with the Web Animations API:
 
-- [`onfinish`](/en-US/docs/Web/API/Animation/onfinish) is the event handler for the `finish` event and can be triggered manually with [`finish()`](/en-US/docs/Web/API/Animation/finish).
-- [`oncancel`](/en-US/docs/Web/API/Animation/oncancel) is the event handler for the `cancel` event and can be triggers with [`cancel()`](/en-US/docs/Web/API/Animation/cancel).
+- [`onfinish`](/en-US/docs/Web/API/Animation/finish_event) is the event handler for the `finish` event and can be triggered manually with [`finish()`](/en-US/docs/Web/API/Animation/finish).
+- [`oncancel`](/en-US/docs/Web/API/Animation/cancel_event) is the event handler for the `cancel` event and can be triggers with [`cancel()`](/en-US/docs/Web/API/Animation/cancel).
 
 Here we set the callbacks for the cake, bottle, and Alice to fire the `endGame` function:
 
@@ -383,6 +384,6 @@ These are the basic features of the Web Animations API, most of which are alread
 
 ## See also
 
-- The [full suite of Alice in Wonderland demos](https://codepen.io/collection/bpEza/) on CodePen for you to play with, fork, and share
+- The [full suite of Alice in Wonderland demos](https://codepen.io/collection/nqNJvD) on CodePen for you to play with, fork, and share
 - [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) — a great article to read that explains more on the background of the Web Animations API, and why it is more performant than other web animation methods
 - [web-animations-js](https://github.com/web-animations/web-animations-js) — the Web Animations API polyfill

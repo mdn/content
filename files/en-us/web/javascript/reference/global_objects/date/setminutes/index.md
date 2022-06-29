@@ -59,7 +59,7 @@ seconds.
 ### Using setMinutes()
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setMinutes(45);
 ```
 

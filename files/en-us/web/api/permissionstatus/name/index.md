@@ -1,6 +1,7 @@
 ---
 title: PermissionStatus.name
 slug: Web/API/PermissionStatus/name
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -21,7 +22,7 @@ The **`name`** read-only property of the {{domxref("PermissionStatus")}} interfa
 
 A read-only value that is identical to the `name` argument passed to {{domxref("Permissions.query", "navigator.permissions.query()")}}.
 
-## Example
+## Examples
 
 ```js
 function stateChangeListener() {

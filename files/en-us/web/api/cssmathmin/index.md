@@ -1,6 +1,7 @@
 ---
 title: CSSMathMin
 slug: Web/API/CSSMathMin
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -19,7 +20,7 @@ The **`CSSMathMin`** interface of the {{domxref('CSS_Object_Model#css_typed_obje
 
 ## Constructor
 
-- {{domxref("CSSMathMin.CSSMathMin()")}}
+- {{domxref("CSSMathMin.CSSMathMin", "CSSMathMin()")}}
   - : Creates a new `CSSMathMin` object.
 
 ## Properties

@@ -1,6 +1,7 @@
 ---
 title: MediaStreamAudioDestinationNode
 slug: Web/API/MediaStreamAudioDestinationNode
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -45,7 +46,7 @@ It is an {{domxref("AudioNode")}} that acts as an audio destination, created usi
 
 ## Constructor
 
-- {{domxref("MediaStreamAudioDestinationNode.MediaStreamAudioDestinationNode()")}}
+- {{domxref("MediaStreamAudioDestinationNode.MediaStreamAudioDestinationNode", "MediaStreamAudioDestinationNode()")}}
   - : Creates a new `MediaStreamAudioDestinationNode` object instance.
 
 ## Properties
@@ -61,7 +62,7 @@ _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
 ## Example
 
-See [`AudioContext.createMediaStreamDestination()`](/en-US/docs/Web/API/AudioContext.createMediaStreamDestination#examples) for example code that creates a `MediaStreamAudioDestinationNode` and uses it as a source for audio to be recorded.
+See [`AudioContext.createMediaStreamDestination()`](/en-US/docs/Web/API/AudioContext/createMediaStreamDestination#examples) for example code that creates a `MediaStreamAudioDestinationNode` and uses it as a source for audio to be recorded.
 
 ## Specifications
 

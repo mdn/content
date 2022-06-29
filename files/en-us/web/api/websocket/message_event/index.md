@@ -1,6 +1,7 @@
 ---
 title: 'WebSocket: message event'
 slug: Web/API/WebSocket/message_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
@@ -35,9 +36,9 @@ _In addition to the properties listed below, properties from the parent interfac
 - {{domxref("MessageEvent.data", "data")}} {{readonlyInline}}
   - : The data sent by the message emitter.
 - {{domxref("MessageEvent.origin", "origin")}} {{readonlyInline}}
-  - : A {{domxref("USVString")}} representing the origin of the message emitter.
+  - : A string representing the origin of the message emitter.
 - {{domxref("MessageEvent.lastEventId", "lastEventId")}} {{readonlyInline}}
-  - : A {{domxref("DOMString")}} representing a unique ID for the event.
+  - : A string representing a unique ID for the event.
 - {{domxref("MessageEvent.source", "source")}} {{readonlyInline}}
   - : A `MessageEventSource` (which can be a {{domxref("Window")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
 - {{domxref("MessageEvent.ports", "ports")}} {{readonlyInline}}

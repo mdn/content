@@ -1,6 +1,7 @@
 ---
 title: BlobBuilder
 slug: Web/API/BlobBuilder
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -17,8 +18,8 @@ browser-compat: api.BlobBuilder
 
 The **`BlobBuilder`** interface provides an easy way to
 construct {{domxref("Blob")}} objects. Just create a `BlobBuilder` and append
-chunks of data to it by calling the {{manch("append")}} method. When you're done
-building your blob, call {{manch("getBlob")}} to retrieve a {{domxref("Blob")}}
+chunks of data to it by calling the [`append()`](#append) method. When you're done
+building your blob, call [`getBlob()`](#getblob) to retrieve a {{domxref("Blob")}}
 containing the data you sent into the blob builder.
 
 ## Method overview
@@ -107,7 +108,7 @@ void append(
 ### getBlob()
 
 Returns the {{domxref("Blob")}} object that has been constructed using the data passed
-through calls to {{manch("append")}}.
+through calls to [`append()`](#append).
 
 ```js
 Blob getBlob(
@@ -124,8 +125,8 @@ Blob getBlob(
 #### Return value
 
 A {{domxref("Blob")}} object containing all of the data passed to any calls to
-{{manch("append")}} made since the `BlobBuilder` was created. This also
-resets the `BlobBuilder` so that the next call to {{manch("append")}} is
+[`append()`](#append) made since the `BlobBuilder` was created. This also
+resets the `BlobBuilder` so that the next call to [`append()`](#append) is
 starting a new, empty blob.
 
 ### getFile() {{non-standard_inline}}
@@ -151,13 +152,15 @@ File getFile(
 
 A {{domxref("File")}} object.
 
+## Specifications
+
+This feature is not part of any specification anymore. It is no more on track to become a standard.
+
 ## Browser compatibility
 
 {{Compat}}
 
 ## See also
 
-- {{spec("http://dev.w3.org/2009/dap/file-system/file-writer.html#idl-def-BlobBuilder",
-    "File API Specification: BlobBuilder", "ED")}}
 - {{domxref("Blob")}}
 - {{domxref("File")}}

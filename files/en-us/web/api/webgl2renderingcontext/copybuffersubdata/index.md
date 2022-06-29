@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.copyBufferSubData()
 slug: Web/API/WebGL2RenderingContext/copyBufferSubData
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,7 +19,7 @@ buffer to another buffer.
 ## Syntax
 
 ```js
-void gl.copyBufferSubData(readTarget, writeTarget, readOffset, writeOffset, size);
+copyBufferSubData(readTarget, writeTarget, readOffset, writeOffset, size)
 ```
 
 ### Parameters
@@ -50,7 +51,7 @@ void gl.copyBufferSubData(readTarget, writeTarget, readOffset, writeOffset, size
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: Notification.icon
 slug: Web/API/Notification/icon
+page-type: web-api-instance-property
 tags:
   - API
   - Notification
@@ -18,26 +19,18 @@ The **`icon`** read-only property of the
 part of the notification, as specified in the `icon` option of the
 {{domxref("Notification.Notification","Notification()")}} constructor.
 
-## Syntax
+## Value
 
-```js
-var icon = Notification.icon;
-```
-
-### Value
-
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 
-In our [To-do
-list app](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view the app running
-live](https://mdn.github.io/to-do-notifications/)), we use the {{domxref("Notification.Notification","Notification()")}}
+In our [To-do list app](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view the app running live](https://mdn.github.io/to-do-notifications/)), we use the {{domxref("Notification.Notification","Notification()")}}
 constructor to fire a notification, passing it arguments to specify the body, icon and
 title we want.
 
 ```js
-var notification = new Notification('To do list', {
+const notification = new Notification('To do list', {
   body: text,
   icon: img
 });
@@ -53,5 +46,4 @@ var notification = new Notification('To do list', {
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

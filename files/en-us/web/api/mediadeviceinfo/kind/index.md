@@ -1,6 +1,7 @@
 ---
 title: MediaDeviceInfo.kind
 slug: Web/API/MediaDeviceInfo/kind
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -16,15 +17,9 @@ The **`kind`** readonly property of
 the {{domxref("MediaDeviceInfo")}} interface returns an enumerated value, that is
 either "videoinput", "audioinput" or "audiooutput".
 
-## Syntax
+## Value
 
-```js
-var kind = MediaDeviceInfo.kind
-```
-
-### Value
-
-A {{domxref("DOMString")}}.
+A string.
 
 ## Specifications
 

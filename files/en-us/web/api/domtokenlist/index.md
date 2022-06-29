@@ -1,6 +1,7 @@
 ---
 title: DOMTokenList
 slug: Web/API/DOMTokenList
+page-type: web-api-interface
 tags:
   - Interface
   - Reference
@@ -15,7 +16,7 @@ A `DOMTokenList` is indexed beginning with `0` as with JavaScript {{jsxref("Arra
 ## Properties
 
 - {{domxref("DOMTokenList.length")}} {{ReadOnlyInline}}
-  - : Is an `integer` representing the number of objects stored in the object.
+  - : An `integer` representing the number of objects stored in the object.
 - {{domxref("DOMTokenList.value")}}
   - : A {{Glossary("stringifier")}} property that returns the value of the list as a string.
 

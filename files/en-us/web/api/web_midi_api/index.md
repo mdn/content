@@ -1,16 +1,18 @@
 ---
 title: Web MIDI API
 slug: Web/API/Web_MIDI_API
+page-type: web-api-overview
 tags:
   - API
   - MIDI
   - Overview
   - Reference
   - Web MIDI API
+spec-urls: https://webaudio.github.io/web-midi-api/
 ---
-{{DefaultAPISidebar("Web MIDI API")}}
+{{DefaultAPISidebar("Web MIDI API")}}{{SecureContext_Header}}
 
-The Web MIDI API connects to and interacts with with Musical Instrument Digital Interface (MIDI) Devices.
+The Web MIDI API connects to and interacts with Musical Instrument Digital Interface (MIDI) Devices.
 
 The interfaces deal with the practical aspects of sending and receiving MIDI messages. Therefore, the API can be used for musical and non-musical uses, with any MIDI device connected to your computer.
 
@@ -29,15 +31,16 @@ The interfaces deal with the practical aspects of sending and receiving MIDI mes
 - {{domxref("MIDIOutput")}}
   - : Queues messages to the linked MIDI port. Messages can be sent immediately or after a specified delay.
 - {{domxref("MIDIMessageEvent")}}
-  - : The event passed to {{domxref("MIDIInput.onmidimessage")}}.
+  - : The event passed to {{domxref("MIDIInput.midimessage_event")}}.
 - {{domxref("MIDIConnectionEvent")}}
-  - : The event passed to the {{domxref("MIDIAccess.onstatechange")}} and {{domxref("MIDIPort.onstatechange")}} event handlers, when a port becomes available or unavailable.
+  - : The event passed to the {{domxref("MIDIAccess.statechange_event")}} and {{domxref("MIDIPort.statechange_event")}} events, when a port becomes available or unavailable.
 
 ## Examples
 
 ### Gaining access to the MIDI port
 
-In the following example the {{domxref("MIDIAccess")}} interface is used to gain access to a MIDI device.
+The {{domxref("navigator.requestMIDIAccess()")}} method returns a promise that resolves to a {{domxref("MIDIAccess")}}, which can then be used to access a MIDI device.
+The method must be called in a secure context.
 
 ```js
 var midi = null;  // global MIDIAccess object
@@ -95,9 +98,7 @@ function startLoggingMIDIInput( midiAccess, indexOfPort ) {
 
 ## Specifications
 
-| Specification                                            |
-| -------------------------------------------------------- |
-| [Web MIDI API](https://webaudio.github.io/web-midi-api/) |
+{{Specifications}}
 
 ## See also
 

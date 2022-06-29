@@ -31,6 +31,7 @@ column-rule: thick inset blue;
 column-rule: inherit;
 column-rule: initial;
 column-rule: revert;
+column-rule: revert-layer;
 column-rule: unset;
 ```
 

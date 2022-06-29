@@ -31,6 +31,7 @@ border-collapse: separate;
 border-collapse: inherit;
 border-collapse: initial;
 border-collapse: revert;
+border-collapse: revert-layer;
 border-collapse: unset;
 ```
 

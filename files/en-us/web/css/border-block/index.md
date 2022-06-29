@@ -5,8 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
-  - Non-standard
   - Reference
   - recipe:css-shorthand-property
 browser-compat: css.properties.border-block
@@ -40,6 +38,7 @@ border-block: medium dashed blue;
 border-block: inherit;
 border-block: initial;
 border-block: revert;
+border-block: revert-layer;
 border-block: unset;
 ```
 

@@ -104,7 +104,7 @@ text {
 </table>
 
 - `<list-of-features>`
-  - : This is a list of feature strings, separated using white space. Determines whether all of the named *features* are supported by the browser. See {{anch("Feature strings")}} below for a list of allowed values.
+  - : This is a list of feature strings, separated using white space. Determines whether all of the named *features* are supported by the browser. See [Feature strings](#feature_strings) below for a list of allowed values.
 
 ## Feature strings
 
@@ -239,7 +239,7 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 - http\://www\.w3.org/TR/SVG11/feature#Extensibility
   - : The browser supports the {{SVGElement("foreignObject")}} element
 
-## Example
+## Testing feature support
 
 ### SVG
 
@@ -542,30 +542,13 @@ text{
 
 ### Result
 
-{{EmbedLiveSample("Example", "400", "400")}}
+{{EmbedLiveSample("Testing feature support", "400", "400")}}
 
 See also [requiredFeatures.svg](/files/3286/requiredFeatures.svg)
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "struct.html#RequiredFeaturesAttribute", "requiredFeatures")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

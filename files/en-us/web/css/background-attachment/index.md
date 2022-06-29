@@ -27,6 +27,7 @@ background-attachment: local;
 background-attachment: inherit;
 background-attachment: initial;
 background-attachment: revert;
+background-attachment: revert-layer;
 background-attachment: unset;
 ```
 

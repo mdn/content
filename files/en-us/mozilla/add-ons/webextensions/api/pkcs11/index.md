@@ -11,6 +11,7 @@ tags:
   - Web Development
   - WebExtensions
   - pkcs11
+browser-compat: webextensions.api.pkcs11
 ---
 {{AddonSidebar}}
 
@@ -44,7 +45,7 @@ There are two environmental prerequisites for using this **API**:
 - One or more `PKCS #11` modules must be installed on the user's computer
 - For each installed `PKCS #11` module, there must be a [native manifest](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests) file that enables the browser to locate the module.
 
-Most probably, the user or device administrator would install the `PKCS #11`module, and its installer would install the native manifest file at the same time.
+Most probably, the user or device administrator would install the `PKCS #11` module, and its installer would install the native manifest file at the same time.
 
 However, the module and manifest can't be installed as part of the extension's own installation process.
 
@@ -63,4 +64,6 @@ For details about the manifest file's contents and location, see [Native manifes
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.pkcs11", 1, 1)}} {{WebExtExamples("h2")}}
+{{WebExtExamples("h2")}}
+
+{{Compat}}

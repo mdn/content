@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.innerText
 slug: Web/API/HTMLElement/innerText
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -21,11 +22,11 @@ As a setter this will replace the element's children with the given value, conve
 
 ## Value
 
-A {{domxref("DOMString")}} representing the rendered text content of an element.
+A string representing the rendered text content of an element.
 
 If the element itself is not [being rendered](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered) (for example, is detached from the document or is hidden from view), the returned value is the same as the {{domxref("Node.textContent")}} property.
 
-## Example
+## Examples
 
 This example compares `innerText` with {{domxref("Node.textContent")}}.
 Note how `innerText` is aware of things like {{htmlElement("br")}} elements, and ignores hidden elements.
@@ -59,7 +60,7 @@ innerTextOutput.value = source.innerText;
 
 ### Result
 
-{{EmbedLiveSample("Example", 700, 450)}}
+{{EmbedLiveSample("Examples", 700, 450)}}
 
 ## Specifications
 

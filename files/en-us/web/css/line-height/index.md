@@ -40,6 +40,7 @@ line-height: 34%;
 line-height: inherit;
 line-height: initial;
 line-height: revert;
+line-height: revert-layer;
 line-height: unset;
 ```
 
@@ -87,7 +88,7 @@ Use a minimum value of `1.5` for `line-height` for main paragraph content. This 
 div { line-height: 1.2;   font-size: 10pt; }   /* number/unitless */
 div { line-height: 1.2em; font-size: 10pt; }   /* length */
 div { line-height: 120%;  font-size: 10pt; }   /* percentage */
-div { font: 10pt/1.2  Georgia,"Bitstream Charter",serif; } /* font shorthand */
+div { font: 10pt/1.2 Georgia,"Bitstream Charter",serif; } /* font shorthand */
 ```
 
 It is often more convenient to set `line-height` by using the {{cssxref("font")}} shorthand as shown above, but this requires the `font-family` property to be specified as well.

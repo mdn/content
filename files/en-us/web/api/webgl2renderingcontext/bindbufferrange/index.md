@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.bindBufferRange()
 slug: Web/API/WebGL2RenderingContext/bindBufferRange
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -19,7 +20,7 @@ the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) binds a range of a given
 ## Syntax
 
 ```js
-void gl.bindBufferRange(target, index, buffer, offset, size);
+bindBufferRange(target, index, buffer, offset, size)
 ```
 
 ### Parameters
@@ -37,15 +38,15 @@ void gl.bindBufferRange(target, index, buffer, offset, size);
 - `buffer`
   - : A {{domxref("WebGLBuffer")}} which to bind to the binding point
     (`target`).
-- offset
+- `offset`
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying the starting offset.
-- size
+- `size`
   - : A {{domxref("WebGL_API/Types", "GLsizeiptr")}} specifying the amount of data that can be read from the
     buffer.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

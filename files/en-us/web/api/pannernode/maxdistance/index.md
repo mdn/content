@@ -1,6 +1,7 @@
 ---
 title: PannerNode.maxDistance
 slug: Web/API/PannerNode/maxDistance
+page-type: web-api-instance-property
 tags:
   - API
   - PannerNode
@@ -16,24 +17,16 @@ The `maxDistance` property of the {{ domxref("PannerNode") }} interface is a dou
 
 The `maxDistance` property's default value is `10000`.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var panner = audioCtx.createPanner();
-panner.maxDistance = 10000;
-```
-
-### Value
+## Value
 
 A double. The default is `10000`, and non-positive values are not allowed.
 
 ### Exceptions
 
-- `RangeError`
-  - : The property has been given a value that is outside the accepted range.
+- {{jsxref("RangeError")}}
+  - : Thrown if the property has been given a value that is outside the accepted range.
 
-## Example
+## Examples
 
 See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
 

@@ -1,12 +1,12 @@
 ---
 title: AnimationPlaybackEvent.currentTime
 slug: Web/API/AnimationPlaybackEvent/currentTime
+page-type: web-api-instance-property
 tags:
   - API
   - Animation
   - AnimationPlaybackEvent
   - Attribute
-  - Experimental
   - Property
   - Reference
   - currentTime
@@ -14,9 +14,9 @@ tags:
   - web animations api
 browser-compat: api.AnimationPlaybackEvent.currentTime
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
+{{ APIRef("Web Animations") }}
 
-The **`currentTime`** read-only property of the `{{domxref("AnimationPlaybackEvent")}}` interface represents the current time of the animation that generated the event at the moment the event is queued. This will be unresolved if the animation was `idle` at the time the event was generated.
+The **`currentTime`** read-only property of the {{domxref("AnimationPlaybackEvent")}} interface represents the current time of the animation that generated the event at the moment the event is queued. This will be unresolved if the animation was `idle` at the time the event was generated.
 
 ## Value
 

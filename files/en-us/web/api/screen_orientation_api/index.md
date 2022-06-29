@@ -1,15 +1,16 @@
 ---
 title: Screen Orientation API
 slug: Web/API/Screen_Orientation_API
+page-type: web-api-overview
 tags:
   - API
   - Draft
-  - Experimental
   - NeedsContent
   - Overview
   - Screen Orientation
+browser-compat: api.ScreenOrientation
 ---
-{{DefaultAPISidebar("Screen Orientation API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Screen Orientation API")}}
 
 The **Screen Orientation API** provides information about the orientation of the screen.
 
@@ -19,10 +20,8 @@ The **Screen Orientation API** provides information about the orientation of the
 
 ## Specifications
 
-| Specification                                | Status                                   | Comment             |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName("Screen Orientation")}} | {{Spec2("Screen Orientation")}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.ScreenOrientation")}}
+{{Compat}}

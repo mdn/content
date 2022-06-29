@@ -1,6 +1,7 @@
 ---
 title: EncodedAudioChunk
 slug: Web/API/EncodedAudioChunk
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -14,7 +15,7 @@ The **`EncodedAudioChunk`** interface of the {{domxref('WebCodecs API','','',' '
 
 ## Constructor
 
-- {{domxref("EncodedAudioChunk.EncodedAudioChunk()")}}
+- {{domxref("EncodedAudioChunk.EncodedAudioChunk", "EncodedAudioChunk()")}}
   - : Creates a new `EncodedAudioChunk` object.
 
 ## Properties

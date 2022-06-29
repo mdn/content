@@ -1,16 +1,16 @@
 ---
 title: Selection.setBaseAndExtent()
 slug: Web/API/Selection/setBaseAndExtent
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Reference
   - Selection
   - setBaseAndExtent
 browser-compat: api.Selection.setBaseAndExtent
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`setBaseAndExtent()`** method of the
 {{domxref("Selection")}} interface sets the selection to be a range including all or
@@ -19,7 +19,7 @@ parts of two specified DOM nodes, and any content located between them.
 ## Syntax
 
 ```js
-sel.setBaseAndExtent(anchorNode,anchorOffset,focusNode,focusOffset)
+setBaseAndExtent(anchorNode,anchorOffset,focusNode,focusOffset)
 ```
 
 ### Parameters
@@ -43,9 +43,9 @@ sel.setBaseAndExtent(anchorNode,anchorOffset,focusNode,focusOffset)
 > might follow. For example, <kbd>Shift</kbd> + <kbd>➡︎</kbd> would cause the selection
 > to narrow from the beginning rather than grow at the end.
 
-### Return Value
+### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -121,9 +121,7 @@ affects the selection.
 
 {{ EmbedLiveSample('Examples', '100%', 370) }}
 
-> **Note:** You can find this [example
-> on GitHub](https://github.com/chrisdavidmills/selection-api-examples/blob/master/setBaseAndExtent.html) ([see
-> it live also](https://chrisdavidmills.github.io/selection-api-examples/setBaseAndExtent.html).)
+> **Note:** You can find this [example on GitHub](https://github.com/chrisdavidmills/selection-api-examples/blob/master/setBaseAndExtent.html) ([see it live also](https://chrisdavidmills.github.io/selection-api-examples/setBaseAndExtent.html).)
 
 ## Specifications
 

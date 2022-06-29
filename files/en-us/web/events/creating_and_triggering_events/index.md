@@ -148,4 +148,10 @@ function simulateClick() {
 - {{domxref("EventTarget.dispatchEvent()")}}
 - {{domxref("EventTarget.addEventListener()")}}
 
-<section id="Quick_links"><ul><li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li><li><a href="/en-US/docs/Web/Events/Event_handlers">Event handlers (overview)</a></li><li><a href="/en-US/docs/Web/Events">Event reference</a></li></ul></section>
+<section id="Quick_links">
+  <ol>
+    <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
+    <li><a href="/en-US/docs/Web/Events/Event_handlers">Event handlers (overview)</a></li>
+    <li><a href="/en-US/docs/Web/Events">Event reference</a></li>
+  </ol>
+</section>

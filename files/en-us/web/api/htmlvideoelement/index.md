@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement
 slug: Web/API/HTMLVideoElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -23,15 +24,15 @@ The list of [supported media formats](/en-US/docs/Web/Media/Formats) varies from
 _Inherits properties from its ancestor interfaces, {{domxref("HTMLMediaElement")}}, and {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLVideoElement.height")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("height", "video")}} HTML attribute, which specifies the height of the display area, in CSS pixels.
+  - : A string that reflects the {{htmlattrxref("height", "video")}} HTML attribute, which specifies the height of the display area, in CSS pixels.
 - {{domxref("HTMLVideoElement.poster")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("poster", "video")}} HTML attribute, which specifies an image to show while no video data is available.
+  - : A string that reflects the {{htmlattrxref("poster", "video")}} HTML attribute, which specifies an image to show while no video data is available.
 - {{domxref("HTMLVideoElement.videoHeight")}} {{readonlyInline}}
   - : Returns an unsigned integer value indicating the intrinsic height of the resource in CSS pixels, or 0 if no media is available yet.
 - {{domxref("HTMLVideoElement.videoWidth")}} {{readonlyInline}}
   - : Returns an unsigned integer value indicating the intrinsic width of the resource in CSS pixels, or 0 if no media is available yet.
 - {{domxref("HTMLVideoElement.width")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("width", "video")}} HTML attribute, which specifies the width of the display area, in CSS pixels.
+  - : A string that reflects the {{htmlattrxref("width", "video")}} HTML attribute, which specifies the width of the display area, in CSS pixels.
 - {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
   - : The `autoPictureInPicture` attribute will automatically enter and leave the picture-in-picture mode for a video element when the user switches tab and/or applications
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
@@ -81,9 +82,9 @@ _Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from its
 _Inherits events from its parent, {{domxref("HTMLMediaElement")}}, and from its ancestor {{domxref("HTMLElement")}}._ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
 - {{DOMxRef("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}}
-  - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it enters Picture-in-Picture mode. The associated event handler is {{DOMxRef("HTMLVideoElement.onenterpictureinpicture")}}
+  - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it enters Picture-in-Picture mode.
 - {{DOMxRef("HTMLVideoElement.leavepictureinpicture_event", "leavepictureinpicture")}}
-  - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it leaves Picture-in-Picture mode. The associated event handler is {{DOMxRef("HTMLVideoElement.onleavepictureinpicture")}}
+  - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it leaves Picture-in-Picture mode.
 
 ## Specifications
 

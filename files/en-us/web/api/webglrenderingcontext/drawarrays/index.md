@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.drawArrays()
 slug: Web/API/WebGLRenderingContext/drawArrays
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,7 +17,7 @@ The **`WebGLRenderingContext.drawArrays()`** method of the [WebGL API](/en-US/do
 ## Syntax
 
 ```js
-void gl.drawArrays(mode, first, count);
+drawArrays(mode, first, count)
 ```
 
 ### Parameters
@@ -35,14 +36,14 @@ void gl.drawArrays(mode, first, count);
     - [`gl.TRIANGLE_FAN`](https://en.wikipedia.org/wiki/Triangle_fan)
     - `gl.TRIANGLES`: Draws a triangle for a group of three vertices.
 
-- first
+- `first`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the starting index in the array of vector points.
-- count
+- `count`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of indices to be rendered.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

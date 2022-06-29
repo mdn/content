@@ -1,6 +1,7 @@
 ---
 title: ImageData()
 slug: Web/API/ImageData/ImageData
+page-type: web-api-constructor
 tags:
   - API
   - Canvas
@@ -21,11 +22,12 @@ This constructor is the preferred way of creating such an object in a
 ## Syntax
 
 ```js
-new ImageData(width, height);
-new ImageData(width, height, settings);
-new ImageData(dataArray, width);
-new ImageData(dataArray, width, height);
-new ImageData(dataArray, width, height, settings);
+new ImageData(width, height)
+new ImageData(width, height, settings)
+
+new ImageData(dataArray, width)
+new ImageData(dataArray, width, height)
+new ImageData(dataArray, width, height, settings)
 ```
 
 ### Parameters
@@ -35,12 +37,12 @@ new ImageData(dataArray, width, height, settings);
 - `height`
   - : An unsigned long representing the height of the image. This value is optional if an
     array is given: the height will be inferred from the array's size and the given width.
-- settings {{optional_inline}}
+- `settings` {{optional_inline}}
   - : An object with the following values:
 - `colorSpace`
   - : One of `"srgb"`, `"rec2020"`, or `"display-p3"`.
-- `dataArray` {{optional_inline}}
-  - : An array containing the underlying pixel representation of the image, one of {{jsxref("Uint8ClampedArray")}}, {{jsxref("Uint16Array")}}, or {{jsxref("Float32Array")}}. If no such array is given, an image with a transparent black rectangle of the specified `width` and `height` will be created.
+- `dataArray`
+  - : A {{jsxref("Uint8ClampedArray")}} containing the underlying pixel representation of the image. If no such array is given, an image with a transparent black rectangle of the specified `width` and `height` will be created.
 
 ### Return value
 

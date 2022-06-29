@@ -1,6 +1,7 @@
 ---
 title: OverconstrainedError()
 slug: Web/API/OverconstrainedError/OverconstrainedError
+page-type: web-api-constructor
 tags:
   - API
   - Audio
@@ -25,14 +26,14 @@ applied.
 ## Syntax
 
 ```js
-var OverconstrainedError = new OverconstrainedError()
+new OverconstrainedError()
 ```
 
 ### Parameters
 
-- constraint
+- `constraint`
   - : The constraint that was not satisfied.
-- message
+- `message`
   - : Text for the error's `message` property.
 
 ## Specifications

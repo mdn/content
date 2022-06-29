@@ -11,7 +11,7 @@ tags:
   - WebMechanics
   - troubleshooting
 ---
-In this article we go over various troubleshooting steps for a website and some basic actions to take in order to solve these issues.
+In this article, we go over various troubleshooting steps for a website and some basic actions to take in order to solve these issues.
 
 <table>
   <tbody>
@@ -137,7 +137,7 @@ We have listed a few simple ways to check that your website works properly, as w
 
 #### How's the performance?
 
-Does the page load fast enough? Resources like [WebPageTest.org](https://www.webpagetest.org/) or browser add-ons like [YSlow](https://addons.mozilla.org/en-US/firefox/addon/yslow/) can tell you a few interesting things:
+Does the page load fast enough? Resources like [WebPageTest.org](https://www.webpagetest.org/) or browser add-ons like [YSlow](https://github.com/marcelduran/yslow) can tell you a few interesting things:
 
 ![Yslow diagnostics](yslow-diagnostics.png)
 

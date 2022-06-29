@@ -1,6 +1,7 @@
 ---
 title: 'Window: copy event'
 slug: Web/API/Window/copy_event
+page-type: web-api-event
 tags:
   - API
   - Clipboard API
@@ -9,7 +10,7 @@ tags:
   - Web
   - Window
   - copy
-browser-compat: api.Window.copy_event
+browser-compat: api.Element.copy_event
 ---
 {{APIRef}}
 

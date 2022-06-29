@@ -1,6 +1,7 @@
 ---
 title: CSSUnitValue.value
 slug: Web/API/CSSUnitValue/value
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -17,14 +18,7 @@ browser-compat: api.CSSUnitValue.value
 The **`CSSUnitValue.value`** property of the
 {{domxref("CSSUnitValue")}} interface returns a double indicating the number of units.
 
-## Syntax
-
-```js
-var cssUnitValue = CSSUnitValue.value;
-CSSUnitValue.value = cssUnitValue;
-```
-
-### Value
+## Value
 
 A double.
 

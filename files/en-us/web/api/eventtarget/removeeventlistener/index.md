@@ -1,6 +1,7 @@
 ---
 title: EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -12,13 +13,13 @@ The **`removeEventListener()`** method of the {{domxref("EventTarget")}} interfa
 removes an event listener previously registered with {{domxref("EventTarget.addEventListener()")}} from the target.
 The event listener to be removed is identified using a combination of the event type,
 the event listener function itself, and various optional options that may affect the matching process;
-see {{anch("Matching event listeners for removal")}}.
+see [Matching event listeners for removal](#matching_event_listeners_for_removal).
 
 Calling `removeEventListener()` with arguments that do not identify any
-currently registered {{domxref("EventListener")}} on the `EventTarget` has no
+currently registered [event listener](/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback) on the `EventTarget` has no
 effect.
 
-If an {{domxref("EventListener")}} is removed from an {{domxref("EventTarget")}} while another listener of the target is processing an event, it will not be triggered by the event. However, it can be reattached.
+If an [event listener](/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback) is removed from an {{domxref("EventTarget")}} while another listener of the target is processing an event, it will not be triggered by the event. However, it can be reattached.
 
 > **Warning:** If a listener is registered twice, one with the _capture_ flag set and one without, you must remove each one separately. Removal of a capturing listener does not affect a non-capturing version of the same listener, and vice versa.
 
@@ -37,18 +38,18 @@ removeEventListener(type, listener, useCapture);
 - `type`
   - : A string which specifies the type of event for which to remove an event listener.
 - `listener`
-  - : The {{domxref("EventListener")}} function of the event handler to remove from the
+  - : The [event listener](/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback) function of the event handler to remove from the
     event target.
 - `options` {{optional_inline}}
   - : An options object that specifies characteristics about the event listener.
 
     The available options are:
 
-    - `capture`:  A boolean value that specifies whether the {{domxref("EventListener")}} to be removed is registered as a capturing listener or not. If this parameter is absent, a default value of `false` is assumed.
+    - `capture`:  A boolean value that specifies whether the [event listener](/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback) to be removed is registered as a capturing listener or not. If this parameter is absent, the default value `false` is assumed.
 
 - `useCapture` {{optional_inline}}
-  - : A boolean value that specifies whether the {{domxref("EventListener")}} to be removed is registered as a
-    capturing listener or not. If this parameter is absent, a default value of `false` is assumed.
+  - : A boolean value that specifies whether the [event listener](/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback) to be removed is registered as a
+    capturing listener or not. If this parameter is absent, the default value `false` is assumed.
 
 ### Return value
 

@@ -1,6 +1,7 @@
 ---
 title: FetchEvent.replacesClientId
 slug: Web/API/FetchEvent/replacesClientId
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -27,17 +28,11 @@ Additionally, if the fetch isn't a navigation, `replacesClientId` will be an
 empty string. This could be used to access/communicate with a client that will
 imminently be replaced, right before a navigation.
 
-## Syntax
+## Value
 
-```js
-var myReplacedClientId = fetchEvent.replacesClientId;
-```
+A string.
 
-### Value
-
-A {{domxref("DOMString")}}.
-
-## Example
+## Examples
 
 ```js
 self.addEventListener('fetch', function(event) {
@@ -55,12 +50,8 @@ self.addEventListener('fetch', function(event) {
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service
-  workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker
-  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web
-  workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

@@ -1,6 +1,7 @@
 ---
 title: GeolocationCoordinates.latitude
 slug: Web/API/GeolocationCoordinates/latitude
+page-type: web-api-instance-property
 tags:
   - API
   - Geolocation API
@@ -14,13 +15,7 @@ browser-compat: api.GeolocationCoordinates.latitude
 
 The **`GeolocationCoordinates.latitude`** read-only property is a `double` representing the latitude of the position in decimal degrees.
 
-## Syntax
-
-```js
-let lat = geolocationCoordinatesInstance.latitude
-```
-
-### Value
+## Value
 
 A `double` representing the latitude of the position in decimal degrees.
 

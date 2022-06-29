@@ -1,6 +1,7 @@
 ---
 title: Capabilities, constraints, and settings
 slug: Web/API/Media_Streams_API/Constraints
+page-type: guide
 tags:
   - Advanced
   - Audio
@@ -13,10 +14,11 @@ tags:
   - Settings
   - Video
   - WebRTC
+browser-compat: api.MediaDevices.getSupportedConstraints
 ---
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
-This article discusses the twin concepts of **constraints** and **capabilities**, as well as media settings, and includes an example we call the {{anch("Example Constraint exerciser", "Constraint Exerciser")}}. The Constraint Exerciser lets you experiment with the results of different constraint sets being applied to the audio and video tracks coming from the computer's A/V input devices (such as its webcam and microphone).
+This article discusses the twin concepts of **constraints** and **capabilities**, as well as media settings, and includes an example we call the [Constraint Exerciser](#example_constraint_exerciser). The Constraint Exerciser lets you experiment with the results of different constraint sets being applied to the audio and video tracks coming from the computer's A/V input devices (such as its webcam and microphone).
 
 Historically, writing scripts for the Web that work intimately with Web APIs has had a well-known challenge: often, your code needs to know whether or not an API exists and if so, what its limitations are on the {{Glossary("user agent")}} it's running on. Figuring this out has often been difficult, and has usually involved looking at some combination of which {{Glossary("user agent")}} (or browser) you're running on, which version it is, looking to see if certain objects exist, trying to see whether various things work or not and determining what errors occur, and so forth. The result has been a lot of very fragile code, or a reliance on libraries which figure this stuff out for you, then implement {{Glossary("polyfill", "polyfills")}} to patch the holes in the implementation on your behalf.
 
@@ -546,28 +548,11 @@ Here you can see the complete example in action.
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('Media Capture', '#constrainable-interface', 'Constrainable pattern')}}
-      </td>
-      <td>{{Spec2('Media Capture')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-### `MediaDevices.getSupportedConstraints`
-
-{{Compat("api.MediaDevices.getSupportedConstraints")}}
+{{Compat}}
 
 ## See also
 

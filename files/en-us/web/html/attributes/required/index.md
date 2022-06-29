@@ -7,7 +7,7 @@ tags:
   - Constraint validation
   - Forms
   - required
-spec-urls: https://html.spec.whatwg.org/multipage/forms.html#attr-input-required
+browser-compat: html.elements.attributes.required
 ---
 
 {{HTMLSidebar}}
@@ -70,7 +70,7 @@ Provide an indication to users informing them the form control is required. Ensu
 
 ## Browser compatibility
 
-{{Compat("html.elements.attributes.required")}}
+{{Compat}}
 
 ## See also
 

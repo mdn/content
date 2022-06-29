@@ -1,6 +1,7 @@
 ---
 title: Keyboard.lock()
 slug: Web/API/Keyboard/lock
+page-type: web-api-instance-method
 tags:
   - API
   - Keyboard API
@@ -11,7 +12,7 @@ tags:
   - lock()
 browser-compat: api.Keyboard.lock
 ---
-{{APIRef("Keyboard Map API")}}{{SeeCompatTable}}
+{{APIRef("Keyboard Map API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`lock()`** method of the
 {{domxref("Keyboard")}} interface returns a {{jsxref('Promise')}} after enabling the
@@ -22,15 +23,15 @@ system.
 ## Syntax
 
 ```js
-var promise = Keyboard.lock([keyCodes[]])
+lock()
+lock(keyCodes)
 ```
 
 ### Parameters
 
 - `keyCodes` {{optional_inline}}
   - : An {{jsxref('Array')}} of one or more key codes to lock. If no keycodes are provided
-    all keys will be locked. A list of valid code values is found in the [UI
-    Events KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system) spec.
+    all keys will be locked. A list of valid code values is found in the [UI Events KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system) spec.
 
 ### Return value
 

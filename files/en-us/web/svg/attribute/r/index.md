@@ -4,6 +4,9 @@ slug: Web/SVG/Attribute/r
 tags:
   - SVG
   - SVG Attribute
+spec-urls:
+  - https://svgwg.org/svg2-draft/geometry.html#R
+  - https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementRAttribute
 ---
 {{SVGRef}}
 
@@ -119,42 +122,4 @@ The gradient will be drawn such that the **100%** gradient stop is mapped to the
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("SVG2", "geometry.html#R", "r")}}</td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition as a geometry property</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "pservers.html#RadialGradientElementRAttribute", "r")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>
-        Definition for SVG2 paint servers <code>&#x3C;radialGradient></code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "pservers.html#RadialGradientElementRAttribute", "r")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;radialGradient></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "shapes.html#CircleElementRAttribute", "r")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;circle></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

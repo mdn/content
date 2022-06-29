@@ -1,6 +1,7 @@
 ---
 title: DOMPointReadOnly.fromPoint()
 slug: Web/API/DOMPointReadOnly/fromPoint
+page-type: web-api-static-method
 tags:
   - API
   - Coordinates
@@ -27,10 +28,10 @@ You can also create a new `DOMPointReadOnly` object using the
 ## Syntax
 
 ```js
-const point = DOMPointReadOnly.fromPoint(sourcePoint)
+fromPoint(sourcePoint)
 ```
 
-### Properties
+### Parameters
 
 - `sourcePoint`
 

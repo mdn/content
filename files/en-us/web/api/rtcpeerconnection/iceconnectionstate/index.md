@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.iceConnectionState
 slug: Web/API/RTCPeerConnection/iceConnectionState
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -33,13 +34,7 @@ that is, the {{Glossary("STUN")}} or {{Glossary("TURN")}} server.
 You can detect when this value has changed by watching for the
 {{DOMxRef("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}} event.
 
-## Syntax
-
-```js
-var state = RTCPeerConnection.iceConnectionState;
-```
-
-### Value
+## Value
 
 The current state of the ICE agent and its connection. The value is one of the following strings:
 
@@ -82,7 +77,7 @@ The current state of the ICE agent and its connection. The value is one of the f
   - : The ICE agent for this {{domxref("RTCPeerConnection")}} has shut down
     and is no longer handling requests.
 
-## Example
+## Examples
 
 ```js
 var pc = new RTCPeerConnection();

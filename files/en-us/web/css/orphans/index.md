@@ -23,6 +23,7 @@ orphans: 3;
 orphans: inherit;
 orphans: initial;
 orphans: revert;
+orphans: revert-layer;
 orphans: unset;
 ```
 

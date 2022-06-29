@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.createOffer()
 slug: Web/API/RTCPeerConnection/createOffer
+page-type: web-api-instance-method
 tags:
   - API
   - Media
@@ -34,9 +35,11 @@ offer.
 ## Syntax
 
 ```js
-aPromise = myPeerConnection.createOffer([options]);
+createOffer()
+createOffer(options)
 
-myPeerConnection.createOffer(successCallback, failureCallback, [options]) {{deprecated_inline}}
+createOffer(successCallback, failureCallback)
+createOffer(successCallback, failureCallback, options)
 ```
 
 ### Parameters
@@ -95,7 +98,7 @@ should examine the received exception to determine which occurred.
   - : Returned if examining the state of the system to determine resource availability in order to
     generate the offer failed for some reason.
 
-## Example
+## Examples
 
 Here we see a handler for the {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event which creates the
 offer and sends it to the remote system over a signaling channel.
@@ -137,8 +140,7 @@ the same one.
 
 Use {{jsxref("Promise.catch()")}} to trap and handle errors.
 
-See [Signaling and
-video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) for the complete example from which this snippet is derived; this
+See [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) for the complete example from which this snippet is derived; this
 will help you to understand how the signaling code here works.
 
 ## Specifications

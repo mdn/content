@@ -1,6 +1,7 @@
 ---
 title: ReadableStream
 slug: Web/API/ReadableStream
+page-type: web-api-interface
 tags:
   - API
   - Fetch
@@ -19,6 +20,8 @@ browser-compat: api.ReadableStream
 
 The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a readable stream of byte data. The [Fetch API](/en-US/docs/Web/API/Fetch_API) offers a concrete instance of a `ReadableStream` through the {{domxref("Response.body", "body")}} property of a {{domxref("Response")}} object.
 
+`ReadableStream` is a {{glossary("Transferable objects","transferable object")}}.
+
 ## Constructor
 
 - {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}
@@ -27,7 +30,7 @@ The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_
 ## Properties
 
 - {{domxref("ReadableStream.locked")}} {{readonlyInline}}
-  - : The `locked` getter returns whether or not the readable stream is [locked to a reader](https://streams.spec.whatwg.org/#locked-to-a-reader).
+  - : The `locked` getter returns whether or not the readable stream is locked to a reader.
 
 ## Methods
 

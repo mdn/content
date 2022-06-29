@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.canTrickleIceCandidates
 slug: Web/API/RTCPeerConnection/canTrickleIceCandidates
+page-type: web-api-instance-property
 tags:
   - API
   - ICE
@@ -35,13 +36,7 @@ property and then wait until the value of
 `"completed"` before creating and sending the initial offer. That way, the
 offer contains all of the candidates.
 
-## Syntax
-
-```js
-var canTrickle = RTCPeerConnection.canTrickleIceCandidates;
-```
-
-### Value
+## Value
 
 A boolean value that is `true` if the remote peer can accept
 trickled ICE candidates and `false` if it cannot. If no remote peer has
@@ -52,7 +47,7 @@ been established, this value is `null`.
 > description is used by the ICE agent to determine whether or not the remote peer
 > supports trickled ICE candidates.
 
-## Example
+## Examples
 
 ```js
 const pc = new RTCPeerConnection();
@@ -90,5 +85,4 @@ pc.addEventListener('icecandidate', e => (pc.canTrickleIceCandidates) && sendCan
 
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCPeerConnection.addIceCandidate()")}}
-- [Lifetime of a WebRTC
-  session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)

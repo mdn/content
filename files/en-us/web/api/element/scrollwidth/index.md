@@ -1,6 +1,7 @@
 ---
 title: Element.scrollWidth
 slug: Web/API/Element/scrollWidth
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -28,16 +29,11 @@ without a need for horizontal scrollbar, its `scrollWidth` is equal to
 > **Note:** This property will round the value to an integer. If you need a fractional value,
 > use {{ domxref("element.getBoundingClientRect()") }}.
 
-## Syntax
+## Value
 
-```js
-var xScrollWidth = element.scrollWidth;
-```
+A number.
 
-`xScrollWidth` is the width of the content of
-`element` in pixels.
-
-## Example
+## Examples
 
 ```html
 <!DOCTYPE html>
@@ -77,10 +73,10 @@ var xScrollWidth = element.scrollWidth;
     </button>
   </body>
   <script>
-    var buttonOne = document.getElementById('aButton'),
-    buttonTwo = document.getElementById('anotherButton'),
-    divOne = document.getElementById('aDiv'),
-    divTwo = document.getElementById('anotherDiv');
+    const buttonOne = document.getElementById('aButton');
+    const buttonTwo = document.getElementById('anotherButton');
+    const divOne = document.getElementById('aDiv');
+    const divTwo = document.getElementById('anotherDiv');
 
     //check to determine if an overflow is happening
     function isOverflowing(element) {
@@ -108,7 +104,7 @@ var xScrollWidth = element.scrollWidth;
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

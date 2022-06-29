@@ -1,6 +1,7 @@
 ---
 title: Using dynamic styling information
 slug: Web/API/CSS_Object_Model/Using_dynamic_styling_information
+page-type: guide
 tags:
   - API
   - Beginner
@@ -115,7 +116,7 @@ More important than the two properties noted here is the use of the `style` obje
   <title>style Property Example</title>
   <link rel="StyleSheet" href="example.css" type="text/css">
   <script type="text/javascript">
-    function stilo() {
+    function setStyle() {
       document.getElementById('d').style.color = 'orange';
     }
     function resetStyle() {
@@ -126,7 +127,7 @@ More important than the two properties noted here is the use of the `style` obje
 
  <body>
   <div id="d" class="thunder">Thunder</div>
-  <button onclick="stilo()">Click here to change text color</button>
+  <button onclick="setStyle()">Click here to change text color</button>
   <button onclick="resetStyle()">Reset text color</button>
  </body>
 </html>

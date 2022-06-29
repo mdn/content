@@ -1,6 +1,7 @@
 ---
 title: Text.wholeText
 slug: Web/API/Text/wholeText
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
@@ -19,7 +20,7 @@ This allows specifying any text node and obtaining all adjacent text as a single
 
 ## Value
 
-A {{jsxref("String")}} with the concatenated text.
+A string with the concatenated text.
 
 ## Example
 

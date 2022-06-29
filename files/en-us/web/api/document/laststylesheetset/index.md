@@ -1,6 +1,7 @@
 ---
 title: Document.lastStyleSheetSet
 slug: Web/API/Document/lastStyleSheetSet
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -19,20 +20,14 @@ The **`Document.lastStyleSheetSet`** property returns the last enabled style she
 value changes whenever the {{domxref("document.selectedStyleSheetSet")}} property is
 changed.
 
-## Syntax
+## Value
 
-```js
-var lastStyleSheetSet = document.lastStyleSheetSet
-```
-
-On return, _lastStyleSheetSet_ indicates the style sheet set that was most
-recently set. If the current style sheet set has not been changed by setting
-{{domxref("document.selectedStyleSheetSet")}}, the returned value is `null`.
+The style sheet set that was most recently set. If the current style sheet set has not been changed by setting {{domxref("document.selectedStyleSheetSet")}}, the returned value is `null`.
 
 > **Note:** This value doesn't change when
 > {{domxref("document.enableStyleSheetsForSet()")}} is called.
 
-## Example
+## Examples
 
 ```js
 let lastSheetSet = document.lastStyleSheetSet;

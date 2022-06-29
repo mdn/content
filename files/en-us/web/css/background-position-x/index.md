@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Background
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.background-position-x
@@ -47,6 +46,7 @@ background-position-x: 0px, center;
 background-position-x: inherit;
 background-position-x: initial;
 background-position-x: revert;
+background-position-x: revert-layer;
 background-position-x: unset;
 ```
 

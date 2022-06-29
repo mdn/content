@@ -41,7 +41,7 @@ Structuring a page of content ready for laying it out using CSS is a very import
 
 ## Starting point
 
-To get this assessment started, you should go and grab the [zip file containing all the starting assets](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/structuring-a-page-of-content-start/assets.zip?raw=true).
+To get this assessment started, you should go and grab the [zip file containing all the starting assets](https://raw.githubusercontent.com/mdn/learning-area/main/html/introduction-to-html/structuring-a-page-of-content-start/assets.zip).
 
 The zip file contains:
 
@@ -51,7 +51,7 @@ The zip file contains:
 
 Create the example on your local computer, or alternatively use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 
-> **Note:** If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
+> **Note:** If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
 ## Project brief
 
@@ -92,7 +92,7 @@ The following screenshot shows an example of what the homepage might look like a
 If you would like your work assessed, or are stuck and want to ask for help:
 
 1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
     - A descriptive title such as "Assessment wanted for Structuring a page of content".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.

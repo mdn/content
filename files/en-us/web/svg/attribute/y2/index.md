@@ -4,6 +4,9 @@ slug: Web/SVG/Attribute/y2
 tags:
   - SVG
   - SVG Attribute
+spec-urls:
+  - https://svgwg.org/svg2-draft/shapes.html#LineElementY2Attribute
+  - https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementY2Attribute
 ---
 {{SVGRef}}
 
@@ -48,6 +51,12 @@ For {{SVGElement('line')}}, `y2` defines the y coordinate of the ending point of
         <strong
           ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
           ></strong
         >
       </td>
@@ -95,6 +104,12 @@ For {{SVGElement('linearGradient')}}, `y2` defines the y coordinate of the endin
         <strong
           ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
           ></strong
         >
       </td>
@@ -146,42 +161,4 @@ html,body,svg { height:100% }
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "shapes.html#LineElementY2Attribute", "y2")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for <code>&#x3C;line></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "pservers.html#LinearGradientElementY2Attribute", "y2")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for <code>&#x3C;linearGradient></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "shapes.html#LineElementY2Attribute", "y2")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;line></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "pservers.html#LinearGradientElementY2Attribute", "y2")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;linearGradient></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

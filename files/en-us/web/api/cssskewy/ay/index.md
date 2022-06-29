@@ -1,6 +1,7 @@
 ---
 title: CSSSkewY.ay
 slug: Web/API/CSSSkewY/ay
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -18,13 +19,7 @@ The **`ay`** property of the
 {{domxref("CSSSkewY")}} interface gets and sets the angle used to distort the element
 along the y-axis (or ordinate).
 
-## Syntax
-
-```js
-var skeway = CSSSkewY.ay;
-```
-
-### Value
+## Value
 
 A {{domxref("CSSNumericValue")}}.
 

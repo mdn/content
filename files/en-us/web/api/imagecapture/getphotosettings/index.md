@@ -1,6 +1,7 @@
 ---
 title: ImageCapture.getPhotoSettings()
 slug: Web/API/ImageCapture/getPhotoSettings
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -24,8 +25,12 @@ configuration settings.
 ## Syntax
 
 ```js
-const settingsPromise = imageCapture.getPhotoSettings()
+getPhotoSettings()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -41,10 +46,9 @@ containing the following properties:
 - `redEyeReduction`: A boolean indicating whether the red-eye reduction
   should be used if it is available.
 
-## Example
+## Examples
 
-The following example, extracted from [Chrome's
-Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html), uses the results from
+The following example, extracted from [Chrome's Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html), uses the results from
 `getPhotoSettings()` to modify the size of an input range. This example also
 shows how the {{domxref("ImageCapture")}} object is created using a
 {{domxref("MediaStreamTrack")}} retrieved from a device's {{domxref("MediaStream")}}.
@@ -52,7 +56,7 @@ shows how the {{domxref("ImageCapture")}} object is created using a
 ```js
 const input = document.querySelector('input[type="range"]');
 
-var imageCapture;
+let imageCapture;
 
 navigator.mediaDevices.getUserMedia({video: true})
 .then(mediaStream => {

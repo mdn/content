@@ -1,6 +1,7 @@
 ---
 title: HTMLModElement
 slug: Web/API/HTMLModElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -19,9 +20,9 @@ The **`HTMLModElement`** interface provides special properties (beyond the regul
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLModElement.cite")}}
-  - : Is a {{domxref("DOMString")}} reflecting the {{htmlattrxref("cite", "del")}} HTML attribute, containing a URI of a resource explaining the change.
+  - : A string reflecting the {{htmlattrxref("cite", "del")}} HTML attribute, containing a URI of a resource explaining the change.
 - {{domxref("HTMLModElement.dateTime")}}
-  - : Is a {{domxref("DOMString")}} reflecting the {{htmlattrxref("datetime", "del")}} HTML attribute, containing a date-and-time string representing a timestamp for the change.
+  - : A string reflecting the {{htmlattrxref("datetime", "del")}} HTML attribute, containing a date-and-time string representing a timestamp for the change.
 
 ## Specifications
 

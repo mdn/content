@@ -1,6 +1,7 @@
 ---
 title: RTCDTMFToneChangeEvent.tone
 slug: Web/API/RTCDTMFToneChangeEvent/tone
+page-type: web-api-instance-property
 tags:
   - Media
   - Property
@@ -27,7 +28,7 @@ returns the DTMF character which has just begun to play, or an empty string
 
 ## Example
 
-This example establishes a handler for the {{event("tonechange")}} event which updates
+This example establishes a handler for the [`tonechange`](/en-US/docs/Web/API/RTCDTMFSender/tonechange_event) event which updates
 an element to display the currently playing tone in its content, or, if all tones have
 played, the string "\<none>".
 

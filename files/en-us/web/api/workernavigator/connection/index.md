@@ -1,6 +1,7 @@
 ---
 title: WorkerNavigator.connection
 slug: Web/API/WorkerNavigator/connection
+page-type: web-api-instance-property
 tags:
   - API
   - Connection
@@ -18,11 +19,9 @@ connection, such as the current bandwidth of the user's device or whether the co
 is metered. This could be used to select high definition content or low definition
 content based on the user's connection.
 
-## Syntax
+## Value
 
-```js
-connectionInfo = navigator.connection
-```
+A {{domxref("NetworkInformation")}} object.
 
 ## Specifications
 
@@ -34,5 +33,5 @@ connectionInfo = navigator.connection
 
 ## See also
 
-- [Online and offline events](/en-US/docs/Online_and_offline_events)
+- [Online and offline events](/en-US/docs/Web/API/Navigator/onLine)
 - [Network Information API](/en-US/docs/Web/API/Network_Information_API)

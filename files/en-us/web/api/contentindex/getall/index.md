@@ -1,6 +1,7 @@
 ---
 title: ContentIndex.getAll()
 slug: Web/API/ContentIndex/getAll
+page-type: web-api-instance-method
 tags:
   - Content
   - Content Index API
@@ -10,9 +11,10 @@ tags:
   - PWA
   - content indexing
   - getAll
+  - Experimental
 browser-compat: api.ContentIndex.getAll
 ---
-{{DefaultAPISidebar("Content Index API")}}
+{{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The **`getAll()`** method of the
 {{domxref("ContentIndex")}} interface returns a {{jsxref('Promise')}} that resolves with
@@ -21,7 +23,7 @@ an iterable list of content index entries.
 ## Syntax
 
 ```js
-var indexedContent = ContentIndex.getAll();
+getAll()
 ```
 
 ### Parameters
@@ -31,9 +33,9 @@ This method receives no parameters.
 ### Return value
 
 Returns a {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of
-`ContentDescription` items.
+`contentDescription` items.
 
-- _ContentDescription_
+- `contentDescription`
 
   - : Each item returned is an {{jsxref('Object')}} containing the following data:
 
@@ -44,11 +46,11 @@ Returns a {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of
       user-visible lists of content.
     - `description`: A {{jsxref('String')}} description of the item. Used
       in user-visible lists of content.
-    - `url`: A {{jsxref('String')}} containing the url of the corresponding
+    - `url`: A {{jsxref('String')}} containing the URL of the corresponding
       HTML document. Needs to be under the scope of the current
       {{domxref('ServiceWorker','service worker')}}.
-    - `category`: {{Optional_Inline}} A {{jsxref('String')}} defining the
-      category of content. Can be:
+    - `category` {{Optional_Inline}}: A {{jsxref('String')}} defining the
+        category of content. Can be:
 
       - `''` An empty {{jsxref('String')}}, this is the default.
       - `homepage`
@@ -56,14 +58,17 @@ Returns a {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of
       - `video`
       - `audio`
 
-    - `icons`: {{Optional_Inline}} An {{jsxref('Array')}} of image
-      resources, defined as an {{jsxref('Object')}} with the following data:
+    - `icons` {{Optional_Inline}}: An {{jsxref('Array')}} of image
+        resources, defined as an {{jsxref('Object')}} with the following data:
 
-      - `src:` A url {{jsxref('String')}} of the source image.
-      - `sizes:` {{Optional_Inline}} A {{jsxref('String')}}
-        representation of the image size.
-      - `type:` {{Optional_Inline}} The {{Glossary("MIME type")}} of the
-        image.
+      - `src`
+        - : A URL {{jsxref('String')}} of the source image.
+      - `sizes` {{Optional_Inline}}
+        - : A {{jsxref('String')}}
+            representation of the image size.
+      - `type` {{Optional_Inline}}
+        - : The {{Glossary("MIME type")}} of the
+            image.
 
 ### Exceptions
 
@@ -73,7 +78,7 @@ No exceptions are thrown. If there are no items in the Content Index, an empty
 ## Examples
 
 The below example shows an asynchronous function that retrieves items within the
-{{domxref('Content Index API','content index')}} and iterates over each entry, building
+[content index](/en-US/docs/Web/API/Content_Index_API) and iterates over each entry, building
 a list for the interface.
 
 ```js
@@ -128,9 +133,6 @@ async function createReadingList() {
 
 ## See also
 
-- [An introductory article on the
-  Content Index API](https://web.dev/content-indexing-api/)
-- [An app which uses the Content Index API to list
-  and remove 'save for later' content](https://contentindex.dev/)
-- [Service Worker API, along with
-  information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)
+- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
+- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
+- [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

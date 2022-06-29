@@ -1,6 +1,7 @@
 ---
 title: VisualViewport.height
 slug: Web/API/VisualViewport/height
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,13 +18,7 @@ The **`height`** read-only property of the
 {{domxref("VisualViewport")}} interface returns the height of the visual viewport, in
 CSS pixels.
 
-## Syntax
-
-```js
-var height = VisualViewport.height
-```
-
-### Value
+## Value
 
 A double.
 

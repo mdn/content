@@ -1,6 +1,7 @@
 ---
 title: TextDecoderStream
 slug: Web/API/TextDecoderStream
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -14,7 +15,7 @@ The **`TextDecoderStream`** interface of the {{domxref('Encoding API','','',' ')
 
 ## Constructor
 
-- {{domxref("TextDecoderStream.TextDecoderStream()")}}
+- {{domxref("TextDecoderStream.TextDecoderStream","TextDecoderStream()")}}
   - : Creates a new `TextDecoderStream` object.
 
 ## Properties

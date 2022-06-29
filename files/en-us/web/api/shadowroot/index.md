@@ -1,6 +1,7 @@
 ---
 title: ShadowRoot
 slug: Web/API/ShadowRoot
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -59,7 +60,7 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
 
 ## Examples
 
-The following snippets are taken from our [life-cycle-callbacks](https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks) example ([see it live also](https://mdn.github.io/web-components-examples/life-cycle-callbacks)), which creates an element that displays a square of a size and color specified in the element's attributes.
+The following snippets are taken from our [life-cycle-callbacks](https://github.com/mdn/web-components-examples/tree/main/life-cycle-callbacks) example ([see it live also](https://mdn.github.io/web-components-examples/life-cycle-callbacks/)), which creates an element that displays a square of a size and color specified in the element's attributes.
 
 Inside the `<custom-square>` element's class definition we include some life cycle callbacks that make a call to an external function, `updateStyle()`, which actually applies the size and color to the element. You'll see that we are passing it `this` (the custom element itself) as a parameter.
 

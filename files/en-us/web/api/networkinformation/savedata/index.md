@@ -1,6 +1,7 @@
 ---
 title: NetworkInformation.saveData
 slug: Web/API/NetworkInformation/saveData
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -18,13 +19,7 @@ The **`NetworkInformation.saveData`** read-only
 property of the {{domxref("NetworkInformation")}} interface returns `true` if
 the user has set a reduced data usage option on the user agent.
 
-## Syntax
-
-```js
-var saveData = NetworkInformation.saveData;
-```
-
-### Value
+## Value
 
 A {{jsxref('Boolean')}}.
 

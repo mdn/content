@@ -21,8 +21,7 @@ returned by {{domxref("HTMLMediaElement.play()")}} will reject with
 a {{domxref("DOMException")}}. The {{htmlattrxref("autoplay", "audio")}} attribute on
 {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements will be ignored.
 
-For more details on autoplay and autoplay blocking, see the article [Autoplay guide for media and Web Audio
-APIs](/en-US/docs/Web/Media/Autoplay_guide).
+For more details on autoplay and autoplay blocking, see the article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide).
 
 ## Syntax
 
@@ -35,7 +34,7 @@ Feature-Policy: autoplay <allowlist>;
 
 ## Default policy
 
-The default value in [Google Chrome](https://www.chromestatus.com/feature/5100524789563392) is
+The default value in [Google Chrome](https://chromestatus.com/feature/5100524789563392) is
 `'self'`.
 
 ## Specifications
@@ -50,5 +49,4 @@ The default value in [Google Chrome](https://www.chromestatus.com/feature/510052
 
 - {{HTTPHeader("Feature-Policy")}} header
 - [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
-- [Using Feature
-  Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)

@@ -1,6 +1,7 @@
 ---
 title: HTMLCollection
 slug: Web/API/HTMLCollection
+page-type: web-api-interface
 tags:
   - API
   - DOM

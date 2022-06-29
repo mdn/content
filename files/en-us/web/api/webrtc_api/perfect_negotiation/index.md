@@ -1,6 +1,7 @@
 ---
 title: 'Establishing a connection: The WebRTC perfect negotiation pattern'
 slug: Web/API/WebRTC_API/Perfect_negotiation
+page-type: guide
 tags:
   - API
   - Configure
@@ -89,7 +90,7 @@ This isn't appreciably different from older WebRTC connection establishment code
 
 ### Handling incoming tracks
 
-We next need to set up a handler for {{domxref("RTCPeerConnection.track_event", "track")}} events to handle inbound video and audio tracks that have been negotiated to be received by this peer connection. To do this, we implement the {{domxref("RTCPeerConnection")}}'s {{domxref("RTCPeerConnection.ontrack", "ontrack")}} event handler.
+We next need to set up a handler for {{domxref("RTCPeerConnection.track_event", "track")}} events to handle inbound video and audio tracks that have been negotiated to be received by this peer connection. To do this, we implement the {{domxref("RTCPeerConnection")}}'s {{domxref("RTCPeerConnection.track_event", "ontrack")}} event handler.
 
 ```js
 pc.ontrack = ({track, streams}) => {
@@ -114,7 +115,7 @@ Now we get into the true perfect negotiation logic, which functions entirely ind
 
 #### Handling the negotiationneeded event
 
-First, we implement the {{domxref("RTCPeerConnection")}} event handler {{domxref("RTCPeerConnection.onnegotiationneeded", "onnegotiationneeded")}} to get a local description and send it using the signaling channel to the remote peer.
+First, we implement the {{domxref("RTCPeerConnection")}} event handler {{domxref("RTCPeerConnection.negotiationneeded_event", "onnegotiationneeded")}} to get a local description and send it using the signaling channel to the remote peer.
 
 ```js
 let makingOffer = false;
@@ -216,7 +217,7 @@ In the past, the {{domxref("RTCPeerConnection.negotiationneeded_event", "negotia
 
 #### The old way
 
-Consider this {{domxref("RTCPeerConnection.onnegotiationneeded", "onnegotiationneeded")}} event handler:
+Consider this {{domxref("RTCPeerConnection.negotiationneeded_event", "onnegotiationneeded")}} event handler:
 
 ```js example-bad
 pc.onnegotiationneeded = async () => {
@@ -233,7 +234,7 @@ Because the {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} method
 
 #### Perfect negotiation with the updated API
 
-As shown in the section {{anch("Implementing perfect negotiation")}}, we can eliminate this problem by introducing a variable (here called `makingOffer`) which we use to indicate that we are in the process of sending an offer, and making use of the updated `setLocalDescription()` method:
+As shown in the section [Implementing perfect negotiation](#implementing_perfect_negotiation), we can eliminate this problem by introducing a variable (here called `makingOffer`) which we use to indicate that we are in the process of sending an offer, and making use of the updated `setLocalDescription()` method:
 
 ```js example-good
 let makingOffer = false;
@@ -394,8 +395,8 @@ This has a number of reliability issues and outright bugs (such as failing if th
 Now, you can use `restartIce()` to do this much more cleanly:
 
 ```js example-good
-pc.onnegotiationneeded = async options => {
-  await pc.setLocalDescription(await pc.createOffer(options));
+pc.onnegotiationneeded = async () => {
+  await pc.setLocalDescription();
   signaler.send({ description: pc.localDescription });
 };
 pc.oniceconnectionstatechange = () => {

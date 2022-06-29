@@ -19,7 +19,7 @@ JavaScript is primarily used in the browser, enabling developers to manipulate w
 
 Conceived as a server-side language by Brendan Eich (then employed by the Netscape Corporation), JavaScript soon came to Netscape Navigator 2.0 in September 1995. JavaScript enjoyed immediate success and {{glossary("Microsoft Internet Explorer", "Internet Explorer 3.0")}} introduced JavaScript support under the name JScript in August 1996.
 
-In November 1996, Netscape began working with ECMA International to make JavaScript an industry standard. Since then, the standardized JavaScript is called ECMAScript and specified under ECMA-262, whose latest (eleventh, ES2020) edition is available as of June 2020.
+In November 1996, Netscape began working with Ecma International to make JavaScript an industry standard. Since then, the standardized JavaScript is called ECMAScript and specified under ECMA-262, whose latest (twelfth, ES2021) edition is available as of June 2021.
 
 Recently, JavaScript's popularity has expanded even further through the successful [Node.js](https://nodejs.org/) platform—the most popular cross-platform JavaScript runtime environment outside the browser. Node.js - built using [Chrome's V8 JavaScript Engine](<https://en.wikipedia.org/wiki/V8_(JavaScript_engine)>) - allows developers to use JavaScript as a scripting language to automate things on a computer and build fully functional {{Glossary("HTTP")}} and {{Glossary("WebSockets")}} servers.
 
@@ -28,7 +28,7 @@ Recently, JavaScript's popularity has expanded even further through the successf
 - {{interwiki("wikipedia", "JavaScript", "JavaScript")}} on Wikipedia
 - The {{Link("/en-US/docs/Web/JavaScript/Guide")}} on MDN
 - [The "javascripting" workshop on NodeSchool](https://nodeschool.io/#workshoppers)
-- [The JavaScript course on codecademy.com](https://www.codecademy.com/tracks/javascript)
-- [The latest ECMAScript standard](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
+- [The JavaScript course on codecademy.com](https://www.codecademy.com/catalog/language/javascript)
+- [The latest ECMAScript standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
 - The {{Link("/en-US/docs/Web/JavaScript/reference")}} on MDN
 - [The _Eloquent JavaScript_ book](https://eloquentjavascript.net/)

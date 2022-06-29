@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.bufferedAmount
 slug: Web/API/RTCDataChannel/bufferedAmount
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCDataChannel
@@ -74,9 +75,7 @@ function showBufferedAmount(channel) {
 ## See also
 
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
-- [Using WebRTC data
-  channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels)
+- [Using WebRTC data channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels)
 - {{domxref("RTCDataChannel")}}
 - {{domxref("RTCDataChannel.bufferedAmountLowThreshold")}}
 - {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event
-- {{domxref("RTCDataChannel.onbufferedamountlow")}}

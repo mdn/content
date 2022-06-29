@@ -1,6 +1,7 @@
 ---
 title: OES_texture_half_float
 slug: Web/API/OES_texture_half_float
+page-type: webgl-extension
 tags:
   - API
   - Reference

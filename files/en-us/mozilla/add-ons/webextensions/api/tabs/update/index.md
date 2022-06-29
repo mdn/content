@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var updating = browser.tabs.update(
+let updating = browser.tabs.update(
   tabId,              // optional integer
   updateProperties    // object
 )
@@ -97,7 +97,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var updating = browser.tabs.update({url: "https://developer.mozilla.org"});
+let updating = browser.tabs.update({url: "https://developer.mozilla.org"});
 updating.then(onUpdated, onError);
 ```
 
@@ -113,14 +113,14 @@ function onError(error) {
 }
 
 function updateFirstTab(tabs) {
-  var updating = browser.tabs.update(tabs[0].id, {
+  let updating = browser.tabs.update(tabs[0].id, {
     active: true,
     url: "https://developer.mozilla.org"
   });
   updating.then(onUpdated, onError);
 }
 
-var querying = browser.tabs.query({currentWindow:true});
+let querying = browser.tabs.query({currentWindow:true});
 querying.then(updateFirstTab, onError);
 ```
 
@@ -130,7 +130,7 @@ querying.then(updateFirstTab, onError);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-update) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-update) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

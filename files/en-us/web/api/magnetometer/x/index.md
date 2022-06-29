@@ -1,6 +1,7 @@
 ---
 title: Magnetometer.x
 slug: Web/API/Magnetometer/x
+page-type: web-api-instance-property
 tags:
   - API
   - Generic Sensor API
@@ -28,7 +29,7 @@ instructions.
 
 A {{jsxref('Number')}}.
 
-## Example
+## Examples
 
 The magnetometer is typically read in the {{domxref('Sensor.reading_event', 'reading')}} event
 callback. In the example below this occurs sixty times a second.

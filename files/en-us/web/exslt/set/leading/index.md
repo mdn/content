@@ -31,4 +31,4 @@ A node-set containing the nodes from `nodeSet1` whose values precede the first n
 
 ## Specifications
 
-[EXSLT - SET:LEADING](http://www.exslt.org/set/functions/leading/index.html)
+[EXSLT - SET:LEADING](http://exslt.org/set/functions/leading/index.html)

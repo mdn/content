@@ -9,7 +9,9 @@ tags:
 ---
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "function statement requires a name" occurs when there is a [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function) in the code that requires a name.
+The JavaScript exception "function statement requires a name" occurs
+when there is a [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+in the code that requires a name.
 
 ## Message
 
@@ -129,5 +131,5 @@ promise.then(
 - [Functions in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Functions)
 - [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function)
 - [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
-- [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
+- {{glossary("IIFE")}}
 - [label](/en-US/docs/Web/JavaScript/Reference/Statements/label)

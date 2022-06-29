@@ -1,6 +1,7 @@
 ---
 title: NodeIterator
 slug: Web/API/NodeIterator
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -55,11 +56,6 @@ _This interface doesn't inherit any property._
 
 - {{domxref("NodeIterator.filter")}} {{readonlyInline}}
   - : Returns a {{domxref("NodeFilter")}} used to select the relevant nodes.
-- {{domxref("NodeIterator.expandEntityReferences")}} {{readonlyInline}}
-  {{deprecated_inline}}
-  - : Is a boolean value indicating if, when discarding an
-    {{domxref("EntityReference")}} its whole sub-tree must be discarded at the same
-    time.
 - {{domxref("NodeIterator.referenceNode")}} {{readonlyInline}}
   {{experimental_inline() }}
   - : Returns the {{domxref("Node")}} to which the iterator is anchored.

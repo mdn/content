@@ -1,6 +1,7 @@
 ---
 title: WindowControlsOverlayGeometryChangeEvent()
 slug: Web/API/WindowControlsOverlayGeometryChangeEvent/WindowControlsOverlayGeometryChangeEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -8,7 +9,7 @@ tags:
   - WindowControlsOverlayGeometryChangeEvent
 browser-compat: api.WindowControlsOverlayGeometryChangeEvent.WindowControlsOverlayGeometryChangeEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("Window Controls Overlay API")}}
 
 The **`WindowControlsOverlayGeometryChangeEvent()`** constructor returns a newly created
 {{domxref("WindowControlsOverlayGeometryChangeEvent")}}, representing the current geometry of a desktop Progressive Web App's title bar area.
@@ -16,22 +17,22 @@ The **`WindowControlsOverlayGeometryChangeEvent()`** constructor returns a newly
 ## Syntax
 
 ```js
-new WindowControlsOverlayGeometryChangeEvent(type, {visible: aBooleanValue, titlebarAreaRect: aDOMRectValue});
+new WindowControlsOverlayGeometryChangeEvent(type, options)
 ```
 
-### Arguments
+### Parameters
 
 _The `WindowControlsOverlayGeometryChangeEvent()` constructor also inherits arguments from
 {{domxref("Event.Event", "Event()")}}._
 
-- _type_
-  - : A {{domxref("DOMString")}} indicating the event type. Its value must be `geometrychange` and is case-sensitive.
+- `type`
+  - : A string indicating the event type. Its value must be `geometrychange` and is case-sensitive.
 - `options`
   - : An object with the following properties:
-  - `visible`
-    - : A boolean flag that's true when the `titleBarAreaRect` object's values are not 0.
-  - `titleBarAreaRect`
-    - : A {{domxref("DOMRect")}} representing the position and size of the title bar area.
+    - `visible`
+      - : A boolean flag that's true when the `titleBarAreaRect` object's values are not 0.
+    - `titleBarAreaRect`
+      - : A {{domxref("DOMRect")}} representing the position and size of the title bar area.
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: ContentIndexEvent()
 slug: Web/API/ContentIndexEvent/ContentIndexEvent
+page-type: web-api-constructor
 tags:
   - Constructor
   - Content
@@ -10,36 +11,33 @@ tags:
   - content index
   - content indexing
   - events
+  - Experimental
 browser-compat: api.ContentIndexEvent.ContentIndexEvent
 ---
-{{DefaultAPISidebar("Content Index API")}}
+{{APIRef("Content Index API")}}{{SeeCompatTable}}
 
-The **`ContentIndexEvent()`** constructor
-creates a new {{domxref("ContentIndexEvent")}} object whose type and other options are
-configured as specified.
+The **`ContentIndexEvent()`** constructor creates a new {{domxref("ContentIndexEvent")}} object
+whose type and other options are configured as specified.
 
 ## Syntax
 
 ```js
-var ContentIndexEvent = new ContentIndexEvent(type, ContentIndexEventInit);
+new ContentIndexEvent(type, options)
 ```
 
 ### Parameters
 
-- _type_
-  - : A {{domxref("DOMString")}} indicating the event which occurred. For
-    `ContentIndexEvent`, this is always `delete`.
-- _eventInitDict_ {{optional_inline}}
-
-  - : An options object containing any initialization data you want to populate the
-    `ContentIndexEvent` object with. The options are:
-
-    - `id`: The id of the indexed content you want the
-      `ContentIndexEvent` to remove.
+- `type`
+  - : A string with the name of the event.
+    It is case-sensitive and browsers always set it to `contentdelete`.
+- `options`
+  - : An object that, _in addition of the properties defined in {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}_, has the following properties:
+    - `id`
+      - : The id of the indexed content you want the {{domxref("ContentIndex")}} object to remove.
 
 ### Return value
 
-A {{domxref("ContentIndexEvent")}} object configured using the given inputs.
+A new {{domxref("ContentIndexEvent")}} object configured using the given options.
 
 ## Examples
 
@@ -65,9 +63,6 @@ ciEvent.id; // should return 'unique-content-id'
 
 ## See also
 
-- [An introductory article on the
-  Content Index API](https://web.dev/content-indexing-api/)
-- [An app which uses the Content Index API to list
-  and remove 'save for later' content](https://contentindex.dev/)
-- [Service Worker API, along with
-  information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)
+- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
+- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
+- [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

@@ -28,6 +28,7 @@ overflow-block: auto;
 overflow-block: inherit;
 overflow-block: initial;
 overflow-block: revert;
+overflow-block: revert-layer;
 overflow-block: unset;
 ```
 

@@ -18,7 +18,7 @@ The **`handler.has()`** method is a trap for the
 ## Syntax
 
 ```js
-const p = new Proxy(target, {
+new Proxy(target, {
   has: function(target, prop) {
   }
 });

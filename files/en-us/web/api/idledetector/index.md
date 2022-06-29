@@ -1,6 +1,7 @@
 ---
 title: IdleDetector
 slug: Web/API/IdleDetector
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -19,7 +20,7 @@ This interface requires a secure context.
 
 ## Constructor
 
-- {{domxref("IdleDetector.IdleDetector()")}}
+- {{domxref("IdleDetector.IdleDetector", "IdleDetector()")}}
   _ : Creates a new `IdleDetector` object.
 
 ## Properties
@@ -38,9 +39,8 @@ This attribute returns `null` before `start()` is called.
 
 ## Events
 
-- {{domxref("IdleDetector.onchange")}}
-  - : Called when the value of `userState` or `screenState` has changed. This method
-receives an `Event` object.
+- {{domxref("IdleDetector.change_event", "change")}}
+  - : Called when the value of `userState` or `screenState` has changed.
 
 ## Methods
 

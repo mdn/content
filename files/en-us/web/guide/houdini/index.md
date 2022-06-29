@@ -92,7 +92,7 @@ The CSS Typed OM exposes CSS values as typed JavaScript objects to allow their p
 
 - [CSS Typed OM reference](/en-US/docs/Web/API/CSS_Typed_OM_API)
 - [CSS Typed OM guide](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
-- [Working with the new CSS Typed Object Model](https://developers.google.com/web/updates/2018/03/cssom)
+- [Working with the new CSS Typed Object Model](https://developer.chrome.com/blog/cssom/)
 
 ### CSS Painting API
 
@@ -102,7 +102,7 @@ border, or content via the `paint()` CSS function.
 
 - [CSS Painting API reference](/en-US/docs/Web/API/CSS_Painting_API)
 - [CSS Painting API guide](/en-US/docs/Web/API/CSS_Painting_API/Guide)
-- [CSS Paint API](https://developers.google.com/web/updates/2018/01/paintapi)
+- [CSS Paint API](https://developer.chrome.com/blog/paintapi/)
 - [The CSS Paint API](https://css-tricks.com/the-css-paint-api/)
 - [Simulating Drop Shadows with the CSS Paint API](https://css-tricks.com/simulating-drop-shadows-with-the-css-paint-api/)
 - [CSS Paint API Being predictably random](https://jakearchibald.com/2020/css-paint-predictably-random/)

@@ -1,11 +1,11 @@
 ---
 title: KeyframeEffect
 slug: Web/API/KeyframeEffect
+page-type: web-api-interface
 tags:
   - API
   - Animation
   - Animations
-  - Experimental
   - Interface
   - KeyframeEffect
   - Reference
@@ -13,7 +13,7 @@ tags:
   - web animations api
 browser-compat: api.KeyframeEffect
 ---
-{{SeeCompatTable}}{{ APIRef("Web Animations") }}
+{{ APIRef("Web Animations") }}
 
 The **`KeyframeEffect`** interface of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) lets us create sets of animatable properties and values, called **keyframes.** These can then be played using the {{domxref("Animation.Animation", "Animation()")}} constructor.
 
@@ -52,10 +52,12 @@ _This interface inherits some of its methods from its parent, {{domxref("Animati
 
 ## Examples
 
-In the [Follow the White Rabbit example](http://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), the KeyframeEffect constructor is used to create a set of keyframes that dictate how the White Rabbit should animate down the hole:
+In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), the KeyframeEffect constructor is used to create a set of keyframes that dictate how the White Rabbit should animate down the hole:
 
 ```js
- var rabbitDownKeyframes = new KeyframeEffect(
+const whiteRabbit = document.getElementById('rabbit');
+
+const rabbitDownKeyframes = new KeyframeEffect(
     whiteRabbit, // element to animate
     [
       { transform: 'translateY(0%)' }, // keyframe
@@ -63,6 +65,11 @@ In the [Follow the White Rabbit example](http://codepen.io/rachelnabors/pen/eJyW
     ],
     { duration: 3000, fill: 'forwards' } // keyframe options
   );
+
+const rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
+
+// Play rabbit animation
+rabbitDownAnimation.play();
 ```
 
 ## Specifications

@@ -18,7 +18,7 @@ A `BrowserSetting` is an object representing a browser setting.
 
 It provides methods to set and get the setting's underlying value, to clear any change you've made to it, and to listen for changes to its value.
 
-Note that while this object is based on the [ChromeSetting](https://developer.chrome.com/extensions/types#type-ChromeSetting) type, this object does not distinguish between setting the value in normal browsing windows and in private browsing windows. This means that all parts of the API relating to private browsing (such as the `scope` option to `ChromeSetting.set()`) are not implemented.
+Note that while this object is based on the [ChromeSetting](https://developer.chrome.com/docs/extensions/reference/types/#type-ChromeSetting) type, this object does not distinguish between setting the value in normal browsing windows and in private browsing windows. This means that all parts of the API relating to private browsing (such as the `scope` option to `ChromeSetting.set()`) are not implemented.
 
 ## Methods
 
@@ -40,7 +40,7 @@ Note that while this object is based on the [ChromeSetting](https://developer.ch
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/extensions/types) API.
+> **Note:** This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/types/) API.
 
 <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //

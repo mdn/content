@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.options
 slug: Web/API/HTMLSelectElement/options
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLSelectElement
@@ -16,18 +17,12 @@ The **`HTMLSelectElement.options`** read-only property returns
 a {{domxref("HTMLOptionsCollection")}} of the {{HTMLElement("option")}} elements
 contained by the {{HTMLElement("select")}} element.
 
-## Syntax
-
-```js
-var options = select.options;
-```
-
-### Return value
+## Value
 
 A {{domxref("HTMLOptionsCollection")}} containing the `<option>`
 elements contained by the `<select>` element.
 
-## Example
+## Examples
 
 ### HTML
 
@@ -50,7 +45,7 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-{{EmbedLiveSample("Example", "100%", 30)}}
+{{EmbedLiveSample("Examples", "100%", 30)}}
 
 ## Specifications
 

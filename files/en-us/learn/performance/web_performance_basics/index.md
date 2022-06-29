@@ -46,7 +46,7 @@ The downside with this approach is the flash of unstyled text (FOUT.) The simple
 
 ### Javascript
 
-Avoid Javascript blocking by using the [async](/en-US/docs/Web/HTML/Element/script) or [defer](/en-US/docs/Web/HTML/Element/script) attributes, or link javascript assets after the page's DOM elements. Javascript only block rendering for elements that appear after the script tag in the DOM tree.
+Avoid Javascript blocking by using the [async](/en-US/docs/Web/HTML/Element/script) or [defer](/en-US/docs/Web/HTML/Element/script) attributes, or link JavaScript assets after the page's DOM elements. Javascript only block rendering for elements that appear after the script tag in the DOM tree.
 
 ### Web Fonts
 
@@ -60,9 +60,9 @@ If possible avoid icon web fonts and use compressed SVGs. To further optimize in
 
 ## Tools
 
-- Learn to use the [Firefox Dev Tools](/en-US/docs/Tools/Performance) to profile your site.
-- [PageSpeed Insights](https://developers.google.com/speed/docs/insights/v5/about) can analyze your page and give some general hints to improve performance.
-- [Lighthouse](https://developers.google.com/web/tools/lighthouse/) can give you a detailed breakdown of many aspects of your site including performance, SEO and accessibility.
+- Learn to use the [Firefox Dev Tools](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html) to profile your site.
+- [PageSpeed Insights](https://pagespeed.web.dev/) can analyze your page and give some general hints to improve performance.
+- [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) can give you a detailed breakdown of many aspects of your site including performance, SEO and accessibility.
 - Test your page's speed using [WebPageTest.org](https://webpagetest.org/), where you can use different real device types and locations.
 - Try the [Chrome User Experience Report](https://developers.google.com/web/tools/chrome-user-experience-report) which quantifies real user metrics.
 - Define a [performance budget](/en-US/docs/Web/Performance/Performance_budgets).

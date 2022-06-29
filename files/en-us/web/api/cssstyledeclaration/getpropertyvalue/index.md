@@ -1,6 +1,7 @@
 ---
 title: CSSStyleDeclaration.getPropertyValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyValue
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM
@@ -11,25 +12,24 @@ browser-compat: api.CSSStyleDeclaration.getPropertyValue
 {{ APIRef("CSSOM") }}
 
 The **CSSStyleDeclaration.getPropertyValue()** method interface returns a
-{{domxref('DOMString')}} containing the value of a specified CSS property.
+string containing the value of a specified CSS property.
 
 ## Syntax
 
 ```js
-var value = style.getPropertyValue(property);
+getPropertyValue(property)
 ```
 
 ### Parameters
 
-- *`property`* is a {{domxref('DOMString')}} representing the
-  property name (hyphen case) to be checked.
+- `property`
+  - : A string representing the property name (in hyphen case) to be checked.
 
 ### Return value
 
-- `value` is a {{domxref('DOMString')}} containing the value of
-  the property. If not set, returns the empty string.
+A string containing the value of the property. If not set, returns the empty string.
 
-## Example
+## Examples
 
 The following JavaScript code queries the value of the `margin` property in
 a CSS selector rule:

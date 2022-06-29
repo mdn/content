@@ -12,7 +12,7 @@ tags:
   - Reference
   - Web
   - slider
-browser-compat: html.elements.input.input-range
+browser-compat: html.elements.input.type_range
 ---
 
 {{HTMLRef("Input_types")}}
@@ -28,9 +28,9 @@ If the user's browser doesn't support type `range`, it will fall back and treat 
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} containing the string representation
+        A string containing the string representation
         of the selected numeric value; use
         {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}}
         to get the value as a number.
@@ -60,6 +60,10 @@ If the user's browser doesn't support type `range`, it will fall back and treat 
       </td>
     </tr>
     <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>Methods</strong></td>
       <td>
         {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
@@ -80,7 +84,7 @@ There is no pattern validation available; however, the following forms of automa
 
 ### Value
 
-The {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} which contains a string representation of the selected number. The value is never an empty string (`""`). The default value is halfway between the specified minimum and maximum—unless the maximum is actually less than the minimum, in which case the default is set to the value of the `min` attribute. The algorithm for determining the default value is:
+The {{htmlattrxref("value", "input")}} attribute contains a string which contains a string representation of the selected number. The value is never an empty string (`""`). The default value is halfway between the specified minimum and maximum—unless the maximum is actually less than the minimum, in which case the default is set to the value of the `min` attribute. The algorithm for determining the default value is:
 
 ```js
 defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
@@ -113,9 +117,9 @@ This value must be less than or equal to the value of the [`max`](/en-US/docs/We
 
 ### step
 
-The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping (`{{anch("min")}}` if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
+The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
 
-A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as `{{anch("min")}}` and `{{anch("max")}}`).
+A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
 > **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
 
@@ -493,5 +497,5 @@ input[type="range"] {
 - [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number)
 - {{domxref('validityState.rangeOverflow')}} and {{domxref('validityState.rangeUnderflow')}}
 - [Controlling multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
-- [Styling the range element](https://css-tricks.com/sliding-nightmare-understanding-range-input)
+- [Styling the range element](https://css-tricks.com/sliding-nightmare-understanding-range-input/)
 - [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

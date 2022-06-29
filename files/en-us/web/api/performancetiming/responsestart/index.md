@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.responseStart
 slug: Web/API/PerformanceTiming/responseStart
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility
@@ -24,11 +25,9 @@ read-only property returns an `unsigned long long` representing the moment in
 time (in milliseconds since the UNIX epoch) when the browser received the first byte of
 the response from the server, cache, or local resource.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.responseStart;
-```
+An `unsigned long long`.
 
 ## Specifications
 

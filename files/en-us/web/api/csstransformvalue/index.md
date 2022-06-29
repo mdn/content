@@ -1,6 +1,7 @@
 ---
 title: CSSTransformValue
 slug: Web/API/CSSTransformValue
+page-type: web-api-interface
 tags:
   - API
   - CSS
@@ -33,7 +34,7 @@ Below is a list of interfaces based on the `CSSTransformValue` interface.
 
 ## Constructor
 
-- {{domxref("CSSTransformValue.CSSTransformValue()")}}
+- {{domxref("CSSTransformValue.CSSTransformValue", "CSSTransformValue()")}}
   - : Creates a new `CSSTransformValue` object.
 
 ## Properties

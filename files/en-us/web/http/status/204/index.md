@@ -34,12 +34,11 @@ A 204 response is cacheable by default (an {{HTTPHeader("ETag")}} header is incl
 
 {{Compat}}
 
-## Compatibility notes
+### Compatibility notes
 
 - Although this status code is intended to describe a response with no body, servers
   may erroneously include data following the headers. The protocol allows user agents to
-  vary in how they process such responses ([discussion regarding this
-  specification text can be found here](https://github.com/httpwg/http11bis/issues/26)). This is observable in persistent
+  vary in how they process such responses ([discussion regarding this specification text can be found here](https://github.com/httpwg/http-core/issues/26)). This is observable in persistent
   connections, where the invalid body may include a distinct response to a subsequent
   request.
 

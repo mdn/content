@@ -65,7 +65,7 @@ Object.prototype.toString.call(new ValidatorClass()); // "[object Validator]"
 
 ### toStringTag available on all DOM prototype objects
 
-Due to a [WebIDL spec change](https://github.com/heycam/webidl/pull/357) in mid-2020, browsers are adding a `Symbol.toStringTag` property to all DOM prototype objects. For example, to access the `Symbol.toStringTag` property on {{domxref("HTMLButtonElement")}}:
+Due to a [WebIDL spec change](https://github.com/whatwg/webidl/pull/357) in mid-2020, browsers are adding a `Symbol.toStringTag` property to all DOM prototype objects. For example, to access the `Symbol.toStringTag` property on {{domxref("HTMLButtonElement")}}:
 
 ```js
 let test = document.createElement('button');

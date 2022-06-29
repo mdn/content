@@ -1,6 +1,7 @@
 ---
 title: NodeList.prototype.forEach()
 slug: Web/API/NodeList/forEach
+page-type: web-api-instance-method
 tags:
   - DOM
   - Iterable
@@ -60,7 +61,7 @@ node.appendChild(kid1);
 node.appendChild(kid2);
 node.appendChild(kid3);
 
-let list = node.childNodes;
+const list = node.childNodes;
 
 list.forEach(
   function(currentValue, currentIndex, listObj) {

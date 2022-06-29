@@ -1,6 +1,7 @@
 ---
 title: Using shaders to apply color in WebGL
 slug: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
+page-type: guide
 tags:
   - Graphics
   - Tutorial
@@ -126,8 +127,8 @@ Then, `drawScene()` can have the following added to it so it actually uses these
   }
 ```
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample3/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample3/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample3) | [Open this demo on a new page](https://mdn.github.io/webgl-examples/tutorial/sample3/)
+[View the complete code](https://github.com/mdn/dom-examples/webgl-examples/tree/master/tutorial/sample3) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample3/)
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}

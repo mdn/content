@@ -1,38 +1,43 @@
 ---
 title: FontFaceSetLoadEvent()
 slug: Web/API/FontFaceSetLoadEvent/FontFaceSetLoadEvent
+page-type: web-api-constructor
 tags:
   - API
   - CSSFontLoading
   - CSSOM
   - Constructor
-  - Experimental
   - FontFaceLoadEvent
   - Fonts
   - Reference
 browser-compat: api.FontFaceSetLoadEvent.FontFaceSetLoadEvent
 ---
-{{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}
+{{APIRef("CSS Font Loading API")}}
 
 The **`FontFaceSetLoadEvent()`** constructor creates a new
-{{domxref("FontFaceLoadEvent")}} object which is fired whenever a
+{{domxref("FontFaceSetLoadEvent")}} object which is fired whenever a
 {{domxref("FontFaceSet")}} loads.
 
 ## Syntax
 
 ```js
-var fontFaceSetLoadEvent = new FontFaceSetLoadEvent(type[, options])
+new FontFaceSetLoadEvent(type)
+new FontFaceSetLoadEvent(type, options)
 ```
 
 ### Parameters
 
-- _type_
-  - : The literal value `'Type'` (quotation marks included).
-- _options_ {{optional_inline}}
+- `type`
+  - : A string with the name of the event.
+    It is case-sensitive and browsers always set it to `loading`, `loadingdone`, or `loadingerror`.
+- `options` {{optional_inline}}
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
+    - `fontfaces` {{optional_inline}}
+      - : An array of {{domxref("FontFace")}} instances. It defaults to the empty array.
 
-  - : Options are as follows:
+### Return value
 
-    - `fontfaces`: An array of {{domxref("FontFace")}} instances.
+A new {{domxref("FontFaceSetLoadEvent")}} object.
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.sizes
 slug: Web/API/HTMLImageElement/sizes
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -27,16 +28,9 @@ conditions.
 Each condition is specified using the same conditional format used
 by [media queries](/en-US/docs/Web/CSS/Media_Queries).
 
-## Syntax
+## Value
 
-```js
-let sizes = htmlImageElement.sizes;
-htmlImageElement.sizes = sizes;
-```
-
-### Value
-
-A {{domxref("USVString")}} containing a comma-separated list of source size descriptors
+A string containing a comma-separated list of source size descriptors
 followed by an optional fallback size. Each **source size descriptor** is
 comprised of a media condition, then at least one whitespace character, then the
 **source size value** to use for the image when the media condition
@@ -64,7 +58,9 @@ unit, which lets you specify the width as a percentage of the viewport width
 > `100%` are not allowed, as there would be uncertainty as to what the
 > specified value is a percentage of.
 
-## Example
+## Examples
+
+### Selecting an image to fit window width
 
 In this example, a blog-like layout is created, displaying some text and an image which
 for which three size points are specified, depending on the width of the window. Three
@@ -79,7 +75,7 @@ Buttons at the bottom of the example let you actually modify the `sizes`
 property slightly, switching the largest of the three widths for the image between 40em
 and 50em.
 
-### HTML
+#### HTML
 
 ```html
 <article>
@@ -88,10 +84,10 @@ and 50em.
   <p>This is even more amazing content text. It's really spectacular.
      And fascinating. Oh, it's also clever and witty. Award-winning
      stuff, I'm sure.</p>
-  <img src="/files/16870/new-york-skyline-wide.jpg"
-       srcset="/files/16870/new-york-skyline-wide.jpg 3724w,
-               /files/16869/new-york-skyline-4by3.jpg 1961w,
-               /files/16871/new-york-skyline-tall.jpg 1060w"
+  <img src="new-york-skyline-wide.jpg"
+       srcset="new-york-skyline-wide.jpg 3724w,
+               new-york-skyline-4by3.jpg 1961w,
+               new-york-skyline-tall.jpg 1060w"
        sizes="((min-width: 50em) and (max-width: 60em)) 50em,
               ((min-width: 30em) and (max-width: 50em)) 30em,
               (max-width: 30em) 20em">
@@ -103,14 +99,13 @@ and 50em.
 </article>
 ```
 
-### CSS
+#### CSS
 
 ```css
 article {
   margin: 1em;
   max-width: 60em;
   min-width: 20em;
-  height: 100vh;
   border: 4em solid #880E4F;
   border-radius: 7em;
   padding: 1.5em;
@@ -126,7 +121,7 @@ article img {
 }
 ```
 
-### JavaScript
+#### JavaScript
 
 The JavaScript code handles the two buttons that let you toggle the third width option
 between 40em and 50em; this is done by handling the {{domxref("Element.click_event",
@@ -134,22 +129,22 @@ between 40em and 50em; this is done by handling the {{domxref("Element.click_eve
   "replace()")}} to replace the relevant portion of the `sizes` string.
 
 ```js
-let image = document.querySelector("article img");
-let break40 = document.getElementById("break40");
-let break50 = document.getElementById("break50");
+const image = document.querySelector("article img");
+const break40 = document.getElementById("break40");
+const break50 = document.getElementById("break50");
 
 break40.addEventListener("click",
-    event => image.sizes = image.sizes.replace(/50em,/, "40em,"));
+    () => image.sizes = image.sizes.replace(/50em,/, "40em,"));
 
 break50.addEventListener("click",
-    event => image.sizes = image.sizes.replace(/40em,/, "50em,"));
+    () => image.sizes = image.sizes.replace(/40em,/, "50em,"));
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample("Example", 900, 850)}}
+{{EmbedLiveSample("Selecting an image to fit window width", "", 1050)}}
 
-This result may be {{LiveSampleLink('Example', 'viewed in its own window')}}.
+The page is best {{LiveSampleLink('Selecting an image to fit window width', 'viewed in its own window')}}, so you can adjust the sizes fully.
 
 ## Specifications
 
@@ -162,9 +157,6 @@ This result may be {{LiveSampleLink('Example', 'viewed in its own window')}}.
 ## See also
 
 - [Media queries](/en-US/docs/Web/CSS/Media_Queries)
-- [Using media
-  queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Images in
-  HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Responsive
-  images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)

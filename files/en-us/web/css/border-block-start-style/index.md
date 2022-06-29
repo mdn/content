@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - border-block
   - border-block-start
@@ -32,6 +31,7 @@ border-block-start-style: groove;
 border-block-start-style: inherit;
 border-block-start-style: initial;
 border-block-start-style: revert;
+border-block-start-style: revert-layer;
 border-block-start-style: unset;
 ```
 

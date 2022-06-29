@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: alertdialog role'
 slug: Web/Accessibility/ARIA/Roles/alertdialog_role
-tags: 
+tags:
   - Alert
   - Alertdialog
   - Accessibility
@@ -9,13 +9,16 @@ tags:
   - roles
   - Reference
   - ARIA roles
+spec-urls:
+  - https://w3c.github.io/aria/#alertdialog
+  - https://w3c.github.io/aria-practices/#alertdialog
 ---
 
 The **alertdialog** role is to be used on modal alert dialogs that interrupt a user's workflow to communicate an important message and require a response.
 
 ## Description
 
-The `alertdialog` role is used to notify users of urgent information that demands the user's immediate attention. Including `role="alertdialog"` on the element containing the dialog helps assistive technology identify the content as being grouped and separated from the rest of the page content.  Examples include error messages that require confirmation and other action confirmation prompts.  
+The `alertdialog` role is used to notify users of urgent information that demands the user's immediate attention. Including `role="alertdialog"` on the element containing the dialog helps assistive technology identify the content as being grouped and separated from the rest of the page content.  Examples include error messages that require confirmation and other action confirmation prompts.
 
 As the name implies, `alertdialog` is a mashup of the [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) and [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role) roles. `alertdialog` is a type of `dialog` with similar use cases as `alert`, but for when a user response is required.
 
@@ -82,10 +85,7 @@ The code snippet above shows how to mark up an alert dialog that only provides a
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#alertdialog","ARIA: alertdialog role")}}                                             | {{Spec2('ARIA')}}  |
-| {{SpecName("ARIA Authoring Practices 1.2","#alertdialog","Alertdialog")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 

@@ -32,13 +32,13 @@ let he = new Intl.Locale("he");
 console.log(he.weekInfo); // logs {firstDay: 7, weekend: [5, 6], minimalDays: 1}
 
 let af = new Intl.Locale("af");
-console.log(af.weekInfo); // logs  {firstDay: 7, weekend: [6, 7], minimalDays: 1}
+console.log(af.weekInfo); // logs {firstDay: 7, weekend: [6, 7], minimalDays: 1}
 
 let enGB = new Intl.Locale("en-GB");
-console.log(enGB.weekInfo) // logs  {firstDay: 1, weekend: [6, 7], minimalDays: 4}
+console.log(enGB.weekInfo) // logs {firstDay: 1, weekend: [6, 7], minimalDays: 4}
 
-let msBN = new Intl.Locale("en-GB");
-console.log(msBN.weekInfo) // logs {firstDay: 7, weekend: [5, 7], minimalDays: 1}  // Brunei weekend is Friday and Sunday but not Saturday 
+let msBN = new Intl.Locale("ms-BN");
+console.log(msBN.weekInfo) // logs {firstDay: 7, weekend: [5, 7], minimalDays: 1}  // Brunei weekend is Friday and Sunday but not Saturday
 ```
 
 ## Specifications

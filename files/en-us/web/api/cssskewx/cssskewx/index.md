@@ -1,6 +1,7 @@
 ---
 title: CSSSkewX()
 slug: Web/API/CSSSkewX/CSSSkewX
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
@@ -16,13 +17,13 @@ browser-compat: api.CSSSkewX.CSSSkewX
 
 The **`CSSSkewX()`** constructor creates a new
 {{domxref("CSSSkewX")}} object which represents the
-[`skewX()`](</en-US/docs/Web/CSS/transform-function/skewX()>)
+[`skewX()`](/en-US/docs/Web/CSS/transform-function/skewX)
 value of the individual {{CSSXRef('transform')}} property in CSS.
 
 ## Syntax
 
 ```js
-var CSSSkewX = new CSSSkewX(ax);
+new CSSSkewX(ax)
 ```
 
 ### Parameters

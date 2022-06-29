@@ -1,6 +1,7 @@
 ---
 title: Using the Performance API
 slug: Web/API/Performance_API/Using_the_Performance_API
+page-type: guide
 tags:
   - Guide
   - Performance
@@ -10,7 +11,7 @@ tags:
 
 A fundamental requirement of web performance is a precise and consistent definition of _time._ The {{domxref("DOMHighResTimeStamp")}} type (a `double`) is used by all performance interfaces to hold such time values. Additionally, there must be a way to create a _timestamp_ for a specific point in time; this is done with the {{domxref("Performance.now","now()")}} method.
 
-Web performance interfaces are defined in a [suite of standards](https://www.w3.org/wiki/Web_Performance/Publications). The _base_ interface for these standards is the {{domxref("Performance")}} interface and its methods and properties are extended by different standards. This guide describes how to use the {{domxref("Performance")}} interfaces that are defined in the [High-Resolution Time](https://w3c.github.io/hr-time/) standard. Other web performance guides (listed in the {{anch("See_also","See also")}} section) describe how to use additional methods and properties of the {{domxref("Performance")}} interface.
+Web performance interfaces are defined in a [suite of standards](https://www.w3.org/wiki/Web_Performance/Publications). The _base_ interface for these standards is the {{domxref("Performance")}} interface and its methods and properties are extended by different standards. This guide describes how to use the {{domxref("Performance")}} interfaces that are defined in the [High-Resolution Time](https://w3c.github.io/hr-time/) standard. Other web performance guides (listed in the [See also](#see_also) section) describe how to use additional methods and properties of the {{domxref("Performance")}} interface.
 
 ## High precision timing
 
@@ -20,8 +21,8 @@ The following code example shows the use of {{domxref("DOMHighResTimeStamp")}} a
 
 ```js
 function calculate_time() {
-  var startTime;
-  var endTime;
+  const startTime;
+  const endTime;
 
   startTime = performance.now();
   do_task();
@@ -37,14 +38,14 @@ JSON serialization of the {{domxref("Performance")}} object is done via the {{do
 
 ```js
 function print_json() {
-  var json;
-  var o = document.getElementsByTagName("output")[0];
+  let json;
+  const o = document.getElementsByTagName("output")[0];
 
   if (window.performance.toJSON === undefined) {
     json = "window.performance.toJSON() is NOT supported";
     o.innerHTML += json + "<br>";
   } else {
-    var s;
+    const s;
     json = window.performance.toJSON();
 
     // Print the performance object
@@ -52,12 +53,12 @@ function print_json() {
     o.innerHTML = "<p>performance = " + s + "</p>";
 
     // Print the performance.timing and performance.navigation objects
-    var perf = JSON.parse(s);
+    const perf = JSON.parse(s);
 
-    var timing = perf.timing;
+    const timing = perf.timing;
     o.innerHTML += "<p>performance.timing = " + JSON.stringify(timing) + "</p>";
 
-    var navigation = perf.navigation;
+    const navigation = perf.navigation;
     o.innerHTML += "<p>performance.navigation = " + JSON.stringify(navigation) + "</p>";
   }
 }

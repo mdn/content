@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.lineJoin
 slug: Web/API/CanvasRenderingContext2D/lineJoin
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -26,16 +27,9 @@ ignored.
     "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
 > and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
 
-## Syntax
+## Value
 
-```js
-ctx.lineJoin = "bevel" || "round" || "miter";
-```
-
-### Options
-
-There are three possible values for this property: `"round"`,
-`"bevel"`, and `"miter"`. The default is `"miter"`.
+There are three possible values for this property: `"round"`, `"bevel"`, and `"miter"`. The default is `"miter"`.
 
 ![](canvas_linejoin.png)
 

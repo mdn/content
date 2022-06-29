@@ -1,6 +1,7 @@
 ---
 title: Comparison of Event Targets
 slug: Web/API/Event/Comparison_of_Event_Targets
+page-type: guide
 tags:
   - DOM
   - Gecko
@@ -31,7 +32,7 @@ There are five targets to consider:
         >
       </td>
       <td>
-        The DOM element on the left hand side of the call that triggered this
+        The DOM element on the left-hand side of the call that triggered this
         event.
       </td>
     </tr>

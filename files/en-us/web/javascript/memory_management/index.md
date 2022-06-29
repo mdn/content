@@ -193,7 +193,9 @@ Node.js offers additional options and tools for configuring and debugging memory
 
 The max amount of available heap memory can be increased with a flag:
 
-`node --max-old-space-size=6000 index.js`
+```bash
+node --max-old-space-size=6000 index.js
+```
 
 We can also expose the garbage collector for debugging memory issues using a flag and the [Chrome Debugger](https://nodejs.org/en/docs/guides/debugging-getting-started/):
 
@@ -203,4 +205,4 @@ node --expose-gc --inspect index.js
 
 #### See also
 
-- [Kangax article on how to register event handler and avoid memory leaks (2010)](https://msdn.microsoft.com/magazine/ff728624.aspx)
+- [Kangax article on how to register event handler and avoid memory leaks (2010)](https://docs.microsoft.com/en-us/previous-versions/msdn10/ff728624(v=msdn.10))

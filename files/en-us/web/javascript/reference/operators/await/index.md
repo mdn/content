@@ -36,8 +36,8 @@ If the `Promise` is rejected, the `await` expression throws the
 rejected value.
 
 If the value of the _expression_ following the `await` operator is
-not a `Promise`, it's converted to a [resolved
-Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve).
+not a `Promise`, it's converted to a
+[resolved Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve).
 
 An `await` splits execution flow, allowing the caller of the async function
 to resume execution. After the `await` defers the continuation of the async

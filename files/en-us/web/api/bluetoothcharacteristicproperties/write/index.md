@@ -1,6 +1,7 @@
 ---
 title: BluetoothCharacteristicProperties.write
 slug: Web/API/BluetoothCharacteristicProperties/write
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth
@@ -20,13 +21,7 @@ The **`write`** read-only property of the
 `boolean` that is `true` if the writing to the characteristic with
 response is permitted.
 
-## Syntax
-
-```js
-var aBoolean = BluetoothCharacteristicProperties.write;
-```
-
-### Value
+## Value
 
 A boolean value.
 

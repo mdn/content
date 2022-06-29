@@ -1,6 +1,7 @@
 ---
 title: Using the Resource Timing API
 slug: Web/API/Resource_Timing_API/Using_the_Resource_Timing_API
+page-type: guide
 tags:
   - API
   - Guide
@@ -19,9 +20,9 @@ The **Resource Timing API** provides a way to retrieve and analyze detailed netw
 
 The interface's properties create a _resource loading timeline_ with {{domxref("DOMHighResTimeStamp","high-resolution timestamps")}} for network events such as redirect start and end times, fetch start, DNS lookup start and end times, response start and end times, etc. The interface also includes other properties that provide data about the size of the fetched resource as well as the _type_ of resource that initiated the fetch.
 
-This document shows the use of Resource Timing interfaces. For more details about the interfaces, including examples, see each interface's reference page and the references in the {{anch("See also")}} section.
+This document shows the use of Resource Timing interfaces. For more details about the interfaces, including examples, see each interface's reference page and the references in the [See also](#see_also) section.
 
-A _live_ version of the examples is available on [Github](https://mdn.github.io/dom-examples/performance-apis/Using_the_Resource_Timing_API.html), as is the [source code](https://github.com/mdn/dom-examples/blob/master/performance-apis/Using_the_Resource_Timing_API.html). Pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
+A _live_ version of the examples is available on [GitHub](https://mdn.github.io/dom-examples/performance-apis/Using_the_Resource_Timing_API.html), as is the [source code](https://github.com/mdn/dom-examples/blob/master/performance-apis/Using_the_Resource_Timing_API.html). Pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
 
 ## Resource loading phases
 
@@ -106,7 +107,7 @@ function display_size_data(){
 
   var list = performance.getEntriesByType("resource");
   if (list === undefined) {
-    console.log("= Display Size Data: performance.getEntriesByType() is  NOT supported");
+    console.log("= Display Size Data: performance.getEntriesByType() is NOT supported");
     return;
   }
 
@@ -179,7 +180,7 @@ function set_resource_timing_buffer_size(n) {
 }
 ```
 
-The {{domxref("Performance")}} interface has a {{domxref("Performance.onresourcetimingbufferfull","onresourcetimingbufferfull")}} event handler that gets called (with an {{domxref("Event")}} of type {{domxref("Event.type")}} of "{{event("resourcetimingbufferfull")}}") when the browser's resource performance entry buffer is full. The following code example sets a {{domxref("Performance.onresourcetimingbufferfull","onresourcetimingbufferfull")}} event callback in the `init()` function.
+The {{domxref("Performance.resourcetimingbufferfull_event","resourcetimingbufferfull")}} event is fired at the {{domxref("Performance")}} object when the browser's resource performance entry buffer is full. The following code example sets a {{domxref("Performance.resourcetimingbufferfull_event","onresourcetimingbufferfull")}} event handler in the `init()` function.
 
 ```js
 function buffer_full(event) {
@@ -207,7 +208,7 @@ When {{Glossary("CORS")}} is in effect, many of the timing properties' values ar
 
 ## See also
 
-- [Firefox Performance Tool](/en-US/docs/Tools/Performance)
+- [Firefox Performance Tool](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
 - [Resource Timing Standard](https://w3c.github.io/resource-timing/); W3C Editor's Draft
-- [Resource Timing practical tips](http://www.stevesouders.com/blog/2014/08/21/resource-timing-practical-tips/); Steve Souders; 2014 August 21
-- [Measuring network performance with Resource Timing API](http://googledevelopers.blogspot.ca/2013/12/measuring-network-performance-with.html); Ilya Grigorik; 2013 December 11
+- [Resource Timing practical tips](https://www.stevesouders.com/blog/2014/08/21/resource-timing-practical-tips/); Steve Souders; 2014 August 21
+- [Measuring network performance with Resource Timing API](https://developers.googleblog.com/2013/12/measuring-network-performance-with.html); Ilya Grigorik; 2013 December 11

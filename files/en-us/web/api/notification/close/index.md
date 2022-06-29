@@ -1,6 +1,7 @@
 ---
 title: Notification.close()
 slug: Web/API/Notification/close
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -27,16 +28,16 @@ close/remove a previously displayed notification.
 ## Syntax
 
 ```js
-Notification.close();
+close()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -48,12 +49,12 @@ notification when the relevant content has been read on the webpage.
 
 ```js
 function spawnNotification(theBody, theIcon, theTitle) {
-  var options = {
+  const options = {
     body: theBody,
     icon: theIcon
   };
 
-  var n = new Notification(theTitle,options);
+  const n = new Notification(theTitle, options);
   document.addEventListener('visibilitychange', function() {
     if (document.visibilityState === 'visible') {
       // The tab has become visible so clear the now-stale Notification.
@@ -73,5 +74,4 @@ function spawnNotification(theBody, theIcon, theTitle) {
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

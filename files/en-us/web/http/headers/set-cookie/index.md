@@ -224,7 +224,7 @@ Set-Cookie: __Host-id=1; Secure; Path=/; Domain=example.com
 
 {{Compat}}
 
-## Compatibility notes
+### Compatibility notes
 
 - Starting with Chrome 52 and Firefox 52, insecure sites (`http:`) can't set cookies with the `Secure` attribute anymore.
 

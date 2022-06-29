@@ -1,6 +1,7 @@
 ---
 title: WorkerLocation.host
 slug: Web/API/WorkerLocation/host
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,11 +14,9 @@ browser-compat: api.WorkerLocation.host
 
 The **`host`** property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.host", "host")}} part of the worker's location.
 
-## Syntax
+## Value
 
-```js
-string = location.host;
-```
+A string.
 
 ## Examples
 

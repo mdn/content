@@ -1,6 +1,7 @@
 ---
 title: PaymentResponse.payerEmail
 slug: Web/API/PaymentResponse/payerEmail
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -21,11 +22,9 @@ when the `requestPayerEmail` option is set to `true` in the
 {{domxref('PaymentOptions')}} object passed to the
 {{domxref('PaymentRequest.PaymentRequest','PaymentRequest')}} constructor.
 
-## Syntax
+## Value
 
-```js
-var payerEmail = PaymentResponse.payerEmail;
-```
+A string.
 
 ## Browser compatibility
 

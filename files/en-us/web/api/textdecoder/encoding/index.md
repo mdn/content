@@ -1,6 +1,7 @@
 ---
-title: TextDecoder.prototype.encoding
+title: TextDecoder.encoding
 slug: Web/API/TextDecoder/encoding
+page-type: web-api-instance-property
 tags:
   - API
   - Encoding
@@ -12,8 +13,8 @@ browser-compat: api.TextDecoder.encoding
 ---
 {{APIRef("Encoding API")}}{{SeeCompatTable}}
 
-The **`TextDecoder.prototype.encoding`** read-only property
-returns a {{DOMxRef("DOMString")}} containing the name of the decoding algorithm used by
+The **`TextDecoder.encoding`** read-only property
+returns a string containing the name of the decoding algorithm used by
 the specific decoder.
 
 It can be one of the following values:
@@ -70,11 +71,9 @@ It can be one of the following values:
   between the client and server. It can happen with `ISO-2022-CN` and
   `ISO-2022-CN-ext`.
 
-## Syntax
+## Value
 
-```js
-var b = decoder.decoding;
-```
+A string.
 
 ## Specifications
 

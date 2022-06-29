@@ -14,8 +14,8 @@ browser-compat: javascript.operators.async_function
 The **`async function`** keyword can be used to define
 `async` functions inside expressions.
 
-You can also define async functions using an [async
-function statement](/en-US/docs/Web/JavaScript/Reference/Statements/async_function).
+You can also define async functions using an
+[async function statement](/en-US/docs/Web/JavaScript/Reference/Statements/async_function).
 
 ## Syntax
 

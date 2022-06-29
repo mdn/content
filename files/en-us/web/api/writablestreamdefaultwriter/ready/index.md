@@ -1,9 +1,10 @@
 ---
 title: WritableStreamDefaultWriter.ready
 slug: Web/API/WritableStreamDefaultWriter/ready
+page-type: web-api-instance-property
 tags:
   - API
-  - Method
+  - Property
   - Ready
   - Reference
   - Streams
@@ -19,22 +20,16 @@ The **`ready`** read-only property of the
 that resolves when the desired size of the stream's internal queue transitions from
 non-positive to positive, signaling that it is no longer applying backpressure.
 
-## Syntax
-
-```js
-var promise = writableStreamDefaultWriter.ready;
-```
-
-### Value
+## Value
 
 A {{jsxref("Promise")}}.
 
-## Example
+## Examples
 
 The following example shows two uses of the `ready` property. The first uses
 `ready` to ensure that the `WritableStream` is done writing and
 thus able to receive data before sending a binary chunk. The second also checks whether
-the the `WritableStream` is done writing, but this time because the writing
+the `WritableStream` is done writing, but this time because the writing
 must be finished before the writer can be closed.
 
 ```js
@@ -50,7 +45,7 @@ function sendMessage(message, writableStream) {
     .then(function() {
       defaultWriter.write(chunk)
       .then(function() {
-        console.log("Chunk written to sink.);
+        console.log("Chunk written to sink.");
       })
       .catch(function(err) {
         console.log("Chunk error: " + err);

@@ -34,7 +34,14 @@ prefix: url(bullet.png);
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<symbol>
+
+<symbol> =
+  <string>       |
+  <image>        |
+  <custom-ident>
+```
 
 ## Examples
 
@@ -82,4 +89,4 @@ prefix: url(bullet.png);
 ## See also
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles
+- {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles

@@ -37,7 +37,7 @@ the key can't be found, {{jsxref("undefined")}} is returned.
 ### Using the get() method
 
 ```js
-var wm = new WeakMap();
+const wm = new WeakMap();
 wm.set(window, 'foo');
 
 wm.get(window); // Returns "foo".

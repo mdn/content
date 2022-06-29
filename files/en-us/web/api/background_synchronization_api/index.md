@@ -1,6 +1,7 @@
 ---
 title: Background Synchronization API
 slug: Web/API/Background_Synchronization_API
+page-type: web-api-overview
 tags:
   - API
   - Background
@@ -11,6 +12,7 @@ tags:
   - Service Workers
   - Sync
   - Web Background Synchronization API
+browser-compat: api.SyncManager
 ---
 {{securecontext_header}}
 
@@ -43,7 +45,7 @@ The following additions to the {{domxref('Service Worker API')}} are specified i
 
 - {{domxref("ServiceWorkerRegistration.sync")}} {{readonlyinline}}
   - : Returns a reference to the {{domxref("SyncManager")}} interface for registering tasks to run with network connectivity.
-- {{domxref("ServiceWorkerGlobalScope.onsync")}}
+- {{domxref("ServiceWorkerGlobalScope.sync_event", "onsync")}}
   - : An event handler fired whenever a {{Event("sync")}} event occurs. This happens either immediately if the network is available or as soon as the network becomes available.
 
 ## Examples
@@ -92,12 +94,12 @@ self.addEventListener('sync', event => {
 
 ## Specifications
 
-{{Specifications("api.SyncManager")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.SyncManager")}}
+{{Compat}}
 
 ## See also
 
-- [Introducing Background Sync](https://developers.google.com/web/updates/2015/12/background-sync)
+- [Introducing Background Sync](https://developer.chrome.com/blog/background-sync/)

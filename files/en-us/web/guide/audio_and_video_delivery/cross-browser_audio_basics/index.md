@@ -192,7 +192,7 @@ The `pause()` method is used to tell the audio to pause. It takes no parameters.
 myAudio.pause();
 ```
 
-> **Note:** There is no stop method — to implement a stop function, you'd have to pause the media then set the `{{ anch("currentTime") }}` property value to 0.
+> **Note:** There is no stop method — to implement a stop function, you'd have to pause the media then set the [`currentTime`](#currenttime) property value to 0.
 
 #### canPlayType
 
@@ -627,4 +627,4 @@ The following tables list basic audio support across desktop and mobile browsers
 - [Using HTML5 audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)
 - [jPlayer](https://jPlayer.org): An open source audio and video library for jQuery and Zepto.
-- [Media Event Inspector](https://jplayer.org/HTML5.Media.Event.Inspector)
+- [Media Event Inspector](https://jplayer.org/HTML5.Media.Event.Inspector/)

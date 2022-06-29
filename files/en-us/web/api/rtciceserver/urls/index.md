@@ -1,6 +1,7 @@
 ---
 title: RTCIceServers.urls
 slug: Web/API/RTCIceServer/urls
+page-type: web-api-instance-property
 tags:
   - Experimental
   - Property
@@ -10,12 +11,7 @@ tags:
   - urls
 browser-compat: api.RTCIceServer.urls
 ---
-{{APIRef("WebRTC")}}
-
-{{draft("I'm experimenting with structure for pages documenting members of
-  dictionaries. Please contact ~~sheppy with any feedback.")}}
-
-{{SeeCompatTable}}
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The {{domxref("RTCIceServer")}} dictionary's **`urls`**
 property specifies the URL or URLs of the servers to be used for ICE negotiations. These

@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onanimationstart
 slug: Web/API/GlobalEventHandlers/onanimationstart
+page-type: web-api-instance-property
 tags:
   - API
   - Animations
@@ -89,7 +90,7 @@ which occurred.
   font: bold 1.4em "Lucida Grande", "Open Sans", sans-serif;
 }
 
- 
+
 ```
 
 Leaving out some bits of the CSS that don't matter for the discussion here, let's take

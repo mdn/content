@@ -27,7 +27,7 @@ var lm1 = new Landmark(-90, 0, "South Pole");
 var lm2 = new Landmark(-24.3756466, -128.311018, "Pitcairn Islands");
 ```
 
-Every `Landmark` has properties `location` and `description` in that order.  Each object literal storing latitude/longitude information has properties `lat` and long in that order.  Subsequent code _could_ delete a property.  But it's unlikely, so engines can produce less-optimal code in such cases.  In SpiderMonkey, the JavaScript engine in Firefox, a particular ordering of properties (and some aspects of those properties, _not_ including values) is called a _shape_.  (V8's name for the concept is _structure ID_.)  If two objects share a shape, their properties are stored identically.
+Every `Landmark` has properties `location` and `description` in that order.  Each object literal storing latitude/longitude information has properties `lat` and long in that order.  Subsequent code _could_ delete a property.  But it's unlikely, so engines can produce less-optimal code in such cases.  In SpiderMonkey, the JavaScript engine in Firefox, a particular ordering of properties (and some aspects of those properties, _not_ including values) is called a _shape_.  (V8's name for the concept is _structure ID_.) If two objects share a shape, their properties are stored identically.
 
 Internally to engines, a (simplified) version of these ideas looks like this C++:
 
@@ -106,7 +106,7 @@ Predictable property accesses _usually_ find the property a constant number of h
 
 `[[Prototype]]` mutation's adverse performance impact occurs in two phases: at the time mutation occurs, and in subsequent execution.  First, **mutating `[[Prototype]]` is slow**.  Second, **mutating `[[Prototype]]` slows down code that interacts with mutated-`[[Prototype]]` objects**.
 
-### Mutating `[[Prototype]] is slow`
+### Mutating [[Prototype]] is slow
 
 While the spec considers mutating `[[Prototype]]` to be modifying a single hidden property, real-world implementations are considerably more complex.  Both shape-changing tactics described above require examining (and modifying) more than one object.  Which approach modifies fewer objects in practice, depends upon the workload.
 

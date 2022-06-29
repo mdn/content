@@ -1,6 +1,7 @@
 ---
 title: WritableStreamDefaultWriter.releaseLock()
 slug: Web/API/WritableStreamDefaultWriter/releaseLock
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -22,7 +23,7 @@ in the same way from now on; otherwise, the writer will appear closed.
 ## Syntax
 
 ```js
-writableStreamDefaultWriter.releaseLock()
+releaseLock()
 ```
 
 ### Parameters
@@ -31,7 +32,7 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

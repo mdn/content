@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.WebAssembly.LinkError
 ---
 {{JSRef}}
 
-The **`WebAssembly.LinkError`** object indicates an error during module instantiation (besides [traps](https://webassembly.org/docs/semantics/#traps) from the start function).
+The **`WebAssembly.LinkError`** object indicates an error during module instantiation (besides [traps](https://webassembly.github.io/simd/core/intro/overview.html#trap) from the start function).
 
 ## Constructor
 
@@ -25,21 +25,21 @@ The **`WebAssembly.LinkError`** object indicates an error during module instanti
   - : Error message. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.name", "WebAssembly.LinkError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "WebAssembly.LinkError.prototype.fileName")}}
+- {{jsxref("Error.prototype.cause", "WebAssembly.LinkError.prototype.cause")}}
+  - : Error cause. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.fileName", "WebAssembly.LinkError.prototype.fileName")}} {{non-standard_inline}}
   - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "WebAssembly.LinkError.prototype.lineNumber")}}
+- {{jsxref("Error.prototype.lineNumber", "WebAssembly.LinkError.prototype.lineNumber")}} {{non-standard_inline}}
   - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "WebAssembly.LinkError.prototype.columnNumber")}}
+- {{jsxref("Error.prototype.columnNumber", "WebAssembly.LinkError.prototype.columnNumber")}} {{non-standard_inline}}
   - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "WebAssembly.LinkError.prototype.stack")}}
+- {{jsxref("Error.prototype.stack", "WebAssembly.LinkError.prototype.stack")}} {{non-standard_inline}}
   - : Stack trace. Inherited from {{jsxref("Error")}}.
 
 ## Instance methods
 
-- {{jsxref("Error.prototype.toSource", "WebAssembly.LinkError.prototype.toSource()")}}
-  - : Returns code that could eval to the same error. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.toString", "WebAssembly.LinkError.prototype.toString()")}}
-  - : Returns a string representing the specified `Error` object.. Inherited from {{jsxref("Error")}}.
+  - : Returns a string representing the specified `Error` object. Inherited from {{jsxref("Error")}}.
 
 ## Examples
 

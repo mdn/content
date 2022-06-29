@@ -1,6 +1,7 @@
 ---
 title: AddressErrors.languageCode
 slug: Web/API/AddressErrors/languageCode
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -20,15 +21,9 @@ browser-compat: api.AddressErrors.languageCode
 
 An object based on {{domxref("AddressErrors")}} includes a **`languageCode`** property when the address's {{domxref("PaymentAddress.languageCode", "languageCode")}} property couldn't be validated. The returned string explains the error and should offer suggestions for how to correct it.
 
-## Syntax
+## Value
 
-```js
-var languageError = AddressErrors.languageCode;
-```
-
-### Value
-
-If the value specified in the {{domxref("PaymentAddress")}} object's {{domxref("PaymentAddress.languageCode", "languageCode")}} property could not be validated, this property contains a {{domxref("DOMString")}} offering a human-readable explanation of the validation error and offers suggestions for correcting it.
+If the value specified in the {{domxref("PaymentAddress")}} object's {{domxref("PaymentAddress.languageCode", "languageCode")}} property could not be validated, this property contains a string offering a human-readable explanation of the validation error and offers suggestions for correcting it.
 
 This validation might be as simple as ensuring the text of the string is compliant with the syntax defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}, or as detailed as actually verifying that the specified string matches a value from a database.
 

@@ -73,7 +73,7 @@ This reverts the style of the paragraphs' {{cssxref("font")}} property to the us
 
 ## See also
 
-- CSS values for controlling inheritance: {{ cssxref("inherit") }}, {{cssxref("initial")}}, {{cssxref("unset")}}, and {{cssxref("revert")}}
+- CSS values for controlling inheritance: {{ cssxref("inherit") }}, {{cssxref("initial")}}, {{cssxref("revert")}}, {{cssxref("revert-layer")}}, and {{cssxref("unset")}}
 - [Introducing the CSS cascade](/en-US/docs/Web/CSS/Cascade)
 - [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 - {{ CSS_key_concepts() }}

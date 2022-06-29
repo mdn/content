@@ -1,6 +1,7 @@
 ---
 title: CSS numeric factory functions
 slug: Web/API/CSS/factory_functions
+page-type: web-api-static-method
 tags:
   - API
   - CSS
@@ -8,7 +9,9 @@ tags:
   - Houdini
   - Reference
   - factory function
+browser-compat: api.CSS
 ---
+{{APIRef("CSSOM")}}
 {{SeeCompatTable}}
 
 The **CSS numeric factory
@@ -16,7 +19,7 @@ functions**, such as `CSS.em()` and
 `CSS.turn()` are methods that return [CSSUnitValues](/en-US/docs/Web/API/CSSUnitValue) with the value being
 the numeric argument and the unit being the name of the method used. These
 functions create new numeric values less verbosely than using the
-{{domxref('CSSUnitValue.CSSUnitValue()')}} constructor.
+{{domxref("CSSUnitValue.CSSUnitValue", "CSSUnitValue()")}} constructor.
 
 ## Syntax
 
@@ -93,12 +96,12 @@ console.log(currentMargin.value, currentMargin.unit); // 40, 'px'
 
 ## Specifications
 
-{{Specifications("api.CSS")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.CSS")}}
+{{Compat}}
 
 ## See also
 
-- {{domxref('CSSUnitValue.CSSUnitValue()')}}
+- {{domxref("CSSUnitValue.CSSUnitValue", "CSSUnitValue()")}}

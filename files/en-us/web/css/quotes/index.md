@@ -32,6 +32,7 @@ quotes: "«" "»" "‹" "›";   /* Set two levels of quotation marks */
 quotes: inherit;
 quotes: initial;
 quotes: revert;
+quotes: revert-layer;
 quotes: unset;
 ```
 

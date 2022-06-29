@@ -1,6 +1,7 @@
 ---
 title: CSSImportRule.stylesheet
 slug: Web/API/CSSImportRule/stylesheet
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -20,13 +21,7 @@ in the form of a {{domxref("CSSStyleSheet")}} object.
 An {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule) always has
 an associated stylesheet.
 
-## Syntax
-
-```js
-var href = CSSImportRule.styleSheet;
-```
-
-### Value
+## Value
 
 A {{domxref("CSSStyleSheet")}}.
 

@@ -1,6 +1,7 @@
 ---
 title: SVGImageElement
 slug: Web/API/SVGImageElement
+page-type: web-api-interface
 tags:
   - API
   - Image
@@ -25,9 +26,9 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGImageElement.href")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given {{SVGElement("image")}} element.
 - {{domxref("SVGImageElement.crossOrigin")}}
-  - : A {{domxref("DOMString")}} corresponding to the {{SVGAttr("crossorigin")}} attribute of the given {{SVGElement("image")}} element.
+  - : A string corresponding to the {{SVGAttr("crossorigin")}} attribute of the given {{SVGElement("image")}} element.
 - {{domxref("SVGImageElement.decoding")}}
-  - : A {{domxref("DOMString")}} representing a hint given to the browser on how it should decode the image.
+  - : A string representing a hint given to the browser on how it should decode the image.
 - {{domxref("SVGImageElement.height")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given {{SVGElement("image")}} element.
 - {{domxref("SVGImageElement.preserveAspectRatio")}} {{ReadOnlyInline}}

@@ -3,6 +3,7 @@ title: scroll-padding-right
 slug: Web/CSS/scroll-padding-right
 tags:
   - CSS
+  - CSS Property
   - Reference
   - Web
   - recipe:css-property
@@ -31,6 +32,7 @@ scroll-padding-right: 10%;
 scroll-padding-right: inherit;
 scroll-padding-right: initial;
 scroll-padding-right: revert;
+scroll-padding-right: revert-layer;
 scroll-padding-right: unset;
 ```
 

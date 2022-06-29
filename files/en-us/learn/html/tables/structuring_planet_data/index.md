@@ -31,11 +31,11 @@ In our table assessment, we provide you with some data on the planets in our sol
 
 ## Starting point
 
-To start the assessment, make local copies of [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/blank-template.html), [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/minimal-table.css), and [planets-data.txt](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/planets-data.txt) in a new directory in your local computer.
+To start the assessment, make local copies of [blank-template.html](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/blank-template.html), [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/minimal-table.css), and [planets-data.txt](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/planets-data.txt) in a new directory in your local computer.
 
 Alternatively, you could use a site like [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/) to do your assessment, pasting in the HTML, CSS and JavaScript. If using an online editor that doesn't have separate JavaScript/CSS panels, feel free to put them inline `<script>` or `<style>` elements inside the HTML document.
 
-> **Note:** If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
+> **Note:** If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
 ## Project brief
 
@@ -43,7 +43,7 @@ You are working at a school; currently your students are studying the planets of
 
 ### Steps to complete
 
-The following steps describe what you need to do to complete the table example. All the data you'll need is contained in the `planets-data.txt` file. If you have trouble visualizing the data, look at the live example above, or try drawing a diagram.
+The following steps describe what you need to do to complete the table example. All the data you'll need is contained in the `planets-data.txt` file. If you have trouble visualizing the data, look at the live example below, or try drawing a diagram.
 
 1. Open your copy of `blank-template.html`, and start the table off by giving it an outer container, a table header, and a table body. You don't need a table footer for this example.
 2. Add the provided caption to your table.
@@ -72,7 +72,7 @@ You can also [see the example live here](https://mdn.github.io/learning-area/htm
 If you would like your work assessed, or are stuck and want to ask for help:
 
 1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
     - A descriptive title such as "Assessment wanted for Structuring planet data".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
@@ -85,4 +85,4 @@ If you would like your work assessed, or are stuck and want to ask for help:
 
 - [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
 - [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
-- **Structuring planet data**
+- [Structuring planet data](/en-US/docs/Learn/HTML/Tables/Structuring_planet_data)

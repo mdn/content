@@ -5,7 +5,7 @@ tags:
   - '@viewport'
   - At-rule
   - CSS
-  - Experimental
+  - Deprecated
   - Layout
   - Mobile
   - Reference
@@ -68,7 +68,11 @@ Browser support for `@viewport` is weak at this time, with support being largely
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+@viewport {
+  <group-rule-body>
+}
+```
 
 ## Examples
 

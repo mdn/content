@@ -26,6 +26,7 @@ overflow-anchor: none;
 overflow-anchor: inherit;
 overflow-anchor: initial;
 overflow-anchor: revert;
+overflow-anchor: revert-layer;
 overflow-anchor: unset;
 ```
 

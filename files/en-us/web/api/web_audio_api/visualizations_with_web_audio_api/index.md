@@ -1,15 +1,18 @@
 ---
 title: Visualizations with Web Audio API
 slug: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
+page-type: guide
 tags:
   - API
   - Web Audio API
-  - analyser
+  - analyzer
   - fft
-  - visualisation
+  - visualization
   - visualization
   - waveform
 ---
+{{DefaultAPISidebar("Web Audio API")}}
+
 One of the most interesting features of the Web Audio API is the ability to extract frequency, waveform, and other data from your audio source, which can then be used to create visualizations. This article explains how, and provides a couple of basic use cases.
 
 > **Note:** You can find working examples of all the code snippets in our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo.
@@ -62,7 +65,7 @@ Let's go on to look at some specific examples.
 
 ## Creating a waveform/oscilloscope
 
-To create the oscilloscope visualisation (hat tip to [Soledad Penadés](https://soledadpenades.com/) for the original code in [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), we first follow the standard pattern described in the previous section to set up the buffer:
+To create the oscilloscope visualization (hat tip to [Soledad Penadés](https://soledadpenades.com/) for the original code in [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), we first follow the standard pattern described in the previous section to set up the buffer:
 
 ```js
 analyser.fftSize = 2048;
@@ -134,7 +137,7 @@ Now we run through a loop, defining the position of a small segment of the wave 
       }
 ```
 
-Finally, we finish the line in the middle of the right hand side of the canvas, then draw the stroke we've defined:
+Finally, we finish the line in the middle of the right-hand side of the canvas, then draw the stroke we've defined:
 
 ```js
       canvasCtx.lineTo(canvas.width, canvas.height/2);

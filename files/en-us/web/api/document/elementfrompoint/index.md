@@ -1,6 +1,7 @@
 ---
 title: Document.elementFromPoint()
 slug: Web/API/Document/elementFromPoint
+page-type: web-api-instance-method
 tags:
   - API
   - Coordinates
@@ -53,7 +54,7 @@ elementFromPoint(x, y)
 
 The topmost {{domxref("Element")}} object located at the specified coordinates.
 
-## Example
+## Examples
 
 This example creates two buttons which let you set the current color of the paragraph
 element located under the coordinates `(2, 2)`.
@@ -84,7 +85,7 @@ one to change the color to blue, and another to change the color to red.
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 100)}}
+{{EmbedLiveSample('Examples', 400, 120)}}
 
 ## Specifications
 

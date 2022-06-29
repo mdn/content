@@ -1,6 +1,7 @@
 ---
-title: RTCIceCandidate. toJSON()
+title: RTCIceCandidate.toJSON()
 slug: Web/API/RTCIceCandidate/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Candidate
@@ -27,6 +28,10 @@ A stringified version of the object can then be obtained by calling {{jsxref("JS
 toJSON()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 <!-- RTCIceCandidateInit in spec -->
@@ -34,11 +39,11 @@ toJSON()
 A JSON object with the following properties, which have been set to the corresponding values in the `RTCIceCandidate` object:
 
 - `candidate` {{optional_inline}}
-  - : A {{domxref("DOMString")}} describing the network connectivity information for the candidate.
+  - : A string describing the network connectivity information for the candidate.
     Additional information can be found in {{domxref("RTCIceCandidate.candidate")}}.
 - `sdpMid` {{optional_inline}}
 
-  - : A {{domxref("DOMString")}} containing the identification tag of the media stream with which the candidate is associated, or `null` if there is no associated media stream.
+  - : A string containing the identification tag of the media stream with which the candidate is associated, or `null` if there is no associated media stream.
     Additional information can be found in {{domxref("RTCIceCandidate.sdpMid")}}.
 
 - `sdpMLineIndex` {{optional_inline}}
@@ -47,13 +52,13 @@ A JSON object with the following properties, which have been set to the correspo
     Additional information can be found in {{domxref("RTCIceCandidate.sdpMLineIndex")}}.
 
 - `usernameFragment` {{optional_inline}}
-  - : A {{domxref("DOMString")}} containing the username fragment (usually referred to in shorthand as "ufrag" or "ice-ufrag").
+  - : A string containing the username fragment (usually referred to in shorthand as "ufrag" or "ice-ufrag").
     This fragment, along with the ICE password ("ice-pwd"), uniquely identifies a single ongoing ICE interaction (including for any communication with the {{Glossary("STUN")}} server).
     Additional information can be found in {{domxref("RTCIceCandidate.usernameFragment")}}.
 
-> **Note:** The returned JSON object has the the same form/properties as the `candidateInfo` object that can optionally be passed to the {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate() constructor")}} to configure the candidate.
+> **Note:** The returned JSON object has the same form/properties as the `candidateInfo` object that can optionally be passed to the {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate() constructor")}} to configure the candidate.
 
-## Example
+## Examples
 
 This simple example obtains a JSON string representing an `RTCIceCandidate` found in the variable `candidate`.
 

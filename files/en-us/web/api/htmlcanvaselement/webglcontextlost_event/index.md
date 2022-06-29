@@ -1,6 +1,7 @@
 ---
 title: 'HTMLCanvasElement: webglcontextlost event'
 slug: Web/API/HTMLCanvasElement/webglcontextlost_event
+page-type: web-api-event
 tags:
   - Event
   - Reference

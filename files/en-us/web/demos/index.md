@@ -21,8 +21,7 @@ If you know of a good demonstration or application of open web technology, pleas
 
 ### Canvas
 
-- [Blob Sallad: an interactive blob using JavaScript and canvas](https://www.blobsallad.se/) ([code demos)](http://blobsallad.se/article/)
-- [3D RayCaster](https://mdn.github.io/canvas-raycaster/index.html)
+- [Blob Sallad: an interactive blob using JavaScript and canvas](https://www.blobsallad.se/) ([code demos)](https://blobsallad.se/article/)
 - [miniPaint: Image editor](https://viliusle.github.io/miniPaint/) ([source code](https://github.com/viliusle/miniPaint))
 - [Zen Photon Garden](https://zenphoton.com) ([source code](https://github.com/scanlime/zenphoton))
 - [Multi touch in canvas demo](https://maximumroulette.com/) ([source code](https://github.com/zlatnaspirala/multi-touch-canvas-handler))
@@ -50,20 +49,20 @@ If you know of a good demonstration or application of open web technology, pleas
 
 ### Virtual Reality
 
-- The Polar Sea ([source code](https://github.com/MozVR/polarsea))
-- [Sechelt fly-through](https://mixedreality.mozilla.org/sechelt/) ([source code](https://github.com/mozvr/sechelt))
+- The Polar Sea ([source code](https://github.com/MozillaReality/polarsea))
+- [Sechelt fly-through](https://mixedreality.mozilla.org/sechelt/) ([source code](https://github.com/MozillaReality/sechelt))
 
 ## CSS
 
-- [CSS floating logo "mozilla"](https://codepen.io/SoftwareRVG/pen/OXkOWj/)
+- [CSS floating logo "mozilla"](https://codepen.io/SoftwareRVGdesignS/pen/OXZOWj)
 - [CSS Blockout](https://ondras.github.io/blockout/)
-- [Rubik's cube](https://ondras.zarovi.cz/demos/rubik/)
+- [Rubik's cube](https://ondras.github.io/rubik/)
 - [Loader with blend modes](https://codepen.io/equinusocio/full/qjyXPP/)
 - [CSS-based single page application](https://dmytsv.github.io/sass-spa/index.html#home) ([source code](https://github.com/dmytsv/sass-spa))
 
 ### Transformations
 
-- [Impress.js](https://impress.github.io/impress.js) ([source code](https://github.com/impress/impress.js))
+- [Impress.js](https://impress.js.org/) ([source code](https://github.com/impress/impress.js))
 - [Flickr Polaroid Stack](https://ohiodave.com/tests/css2d/flickr.html)
 
 ## Games
@@ -87,7 +86,7 @@ If you know of a good demonstration or application of open web technology, pleas
 
 ### File API
 
-- [Slide My Text - presentation from plain text files](https://palerdot.github.io/slide-my-text/)
+- [Slide My Text - presentation from plain text files](https://palerdot.in/slide-my-text/)
 
 ### Web Workers
 

@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognition.abort()
 slug: Web/API/SpeechRecognition/abort
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -24,13 +25,13 @@ recognition service from listening to incoming audio, and doesn't attempt to ret
 abort()
 ```
 
-### Returns
-
-{{jsxref('undefined')}}.
-
 ### Parameters
 
 None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

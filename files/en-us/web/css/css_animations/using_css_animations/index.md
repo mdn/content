@@ -20,7 +20,7 @@ There are three key advantages to CSS animations over traditional script-driven 
 
 ## Configuring the animation
 
-To create a CSS animation sequence, you style the element you want to animate with the {{cssxref("animation")}} property or its sub-properties. This lets you configure the timing, duration, and other details of how the animation sequence should progress. This does **not** configure the actual appearance of the animation, which is done using the {{cssxref("@keyframes")}} at-rule as described in {{anch("Defining the animation sequence using keyframes")}} below.
+To create a CSS animation sequence, you style the element you want to animate with the {{cssxref("animation")}} property or its sub-properties. This lets you configure the timing, duration, and other details of how the animation sequence should progress. This does **not** configure the actual appearance of the animation, which is done using the {{cssxref("@keyframes")}} at-rule as described in [Defining the animation sequence using keyframes](#defining_the_animation_sequence_using_keyframes) below.
 
 The sub-properties of the {{cssxref("animation")}} property are:
 
@@ -307,7 +307,7 @@ We start with creating the CSS for the animation. This animation will last for 3
 We'll use JavaScript code to listen for all three possible animation events. This code configures our event listeners; we call it when the document is first loaded in order to set things up.
 
 ```js
-var element = document.getElementById("watchme");
+const element = document.getElementById("watchme");
 element.addEventListener("animationstart", listener, false);
 element.addEventListener("animationend", listener, false);
 element.addEventListener("animationiteration", listener, false);
@@ -325,7 +325,7 @@ The events get delivered to the `listener()` function, which is shown below.
 
 ```js
 function listener(event) {
-  var l = document.createElement("li");
+  const l = document.createElement("li");
   switch(event.type) {
     case "animationstart":
       l.textContent = `Started: elapsed time is ${event.elapsedTime}`;
@@ -379,5 +379,4 @@ And here's the live output.
 ## See also
 
 - {{domxref("AnimationEvent", "AnimationEvent")}}
-- [Detecting CSS animation support](/en-US/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support)
 - [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)

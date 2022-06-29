@@ -1,6 +1,7 @@
 ---
 title: TreeWalker.parentNode()
 slug: Web/API/TreeWalker/parentNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -20,10 +21,18 @@ node is not changed.
 ## Syntax
 
 ```js
-node = treeWalker.parentNode();
+parentNode()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+A {{domxref("Node")}} object or `null`.
+
+## Examples
 
 ```js
 var treeWalker = document.createTreeWalker(

@@ -1,6 +1,7 @@
 ---
 title: 'XRSession: select event'
 slug: Web/API/XRSession/select_event
+page-type: web-api-event
 tags:
   - API
   - Reference

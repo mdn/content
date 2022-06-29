@@ -8,7 +8,7 @@ tags:
 
 XSLT supports the concept of passing parameters to a stylesheet when executing it. This has been possible for a while when using the [XSLTProcessor](/en-US/XSLTProcessor) in JavaScript. However when using an `<?xml-stylesheet?>` processing instruction (PI) there used to be no way to provide parameters.
 
-To solve this two new PIs are implemented in [Firefox 2](/en-US/Firefox_2) (see {{ Anch("Supported versions") }} below for details), `<?xslt-param?>` and `<?xslt-param-namespace?>`. Both PIs can contain "pseudo attributes" the same way that the `xml-stylesheet` PI does.
+To solve this two new PIs are implemented in [Firefox 2](/en-US/Firefox_2) (see [Supported versions](#supported_versions) below for details), `<?xslt-param?>` and `<?xslt-param-namespace?>`. Both PIs can contain "pseudo attributes" the same way that the `xml-stylesheet` PI does.
 
 The following document passes the two parameters "color" and "size" to the stylesheet "style.xsl".
 
@@ -24,7 +24,7 @@ Note that these PIs have no effect when transformation is done using the `XSLTPr
 
 The attributes in the `xslt-param` and `xslt-param-namespace` PIs are parsed using the rules defined in [xml-stylesheet](https://www.w3.org/TR/xml-stylesheet/). Any unrecognized attributes must be ignored. Parsing of any attribute must not fail due to the presence of an unrecognized attribute as long as that attribute follows the syntax in `xml-stylesheet`.
 
-Both the `xslt-param` and the `xslt-param-namespace` PIs must appear in the prolog of the document, i.e. before the first element tag. All PIs in the prolog must be honored, both ones occurring before and onces occurring after any `xml-stylesheet` PIs.
+Both the `xslt-param` and the `xslt-param-namespace` PIs must appear in the prolog of the document, i.e. before the first element tag. All PIs in the prolog must be honored, both ones occurring before and ones occurring after any `xml-stylesheet` PIs.
 
 If there are multiple `xml-stylesheet` PIs the parameters apply to all stylesheets as a consequence of that all stylesheets are imported into a single stylesheet per the XSLT spec.reference? Note that multiple `xml-stylesheet` XSLT PIs are not supported in Firefox currently.
 

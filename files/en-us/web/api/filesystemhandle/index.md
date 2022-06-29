@@ -1,6 +1,7 @@
 ---
 title: FileSystemHandle
 slug: Web/API/FileSystemHandle
+page-type: web-api-interface
 tags:
   - Directories
   - File System Access API

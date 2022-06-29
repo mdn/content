@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognition.stop()
 slug: Web/API/SpeechRecognition/stop
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -21,16 +22,16 @@ recognition service from listening to incoming audio, and attempts to return a
 ## Syntax
 
 ```js
-stop();
+stop()
 ```
-
-### Returns
-
-{{jsxref('undefined')}}.
 
 ### Parameters
 
 None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

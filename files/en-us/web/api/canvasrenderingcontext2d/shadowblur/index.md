@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.shadowBlur
 slug: Web/API/CanvasRenderingContext2D/shadowBlur
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -23,18 +24,9 @@ default is `0` (no blur).
 > {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} properties must
 > be non-zero, as well.
 
-## Syntax
+## Value
 
-```js
-ctx.shadowBlur = level;
-```
-
-- `level`
-  - : A non-negative float specifying the level of shadow blur, where `0`
-    represents no blur and larger numbers represent increasingly more blur. This value
-    doesn't correspond to a number of pixels, and is not affected by the current
-    transformation matrix. The default value is `0`. Negative,
-    {{jsxref("Infinity")}}, and {{jsxref("NaN")}} values are ignored.
+A non-negative float specifying the level of shadow blur, where `0` represents no blur and larger numbers represent increasingly more blur. This value doesn't correspond to a number of pixels, and is not affected by the current transformation matrix. The default value is `0`. Negative, {{jsxref("Infinity")}}, and {{jsxref("NaN")}} values are ignored.
 
 ## Examples
 

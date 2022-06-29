@@ -1,6 +1,7 @@
 ---
 title: HTMLHRElement
 slug: Web/API/HTMLHRElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -20,15 +21,15 @@ The **`HTMLHRElement`** interface provides special properties (beyond those of t
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLHRElement.align")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}}, an enumerated attribute indicating alignment of the rule with respect to the surrounding context.
+  - : A string, an enumerated attribute indicating alignment of the rule with respect to the surrounding context.
 - {{domxref("HTMLHRElement.color")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} representing the name of the color of the rule.
+  - : A string representing the name of the color of the rule.
 - {{domxref("HTMLHRElement.noshade")}} {{deprecated_inline}}
-  - : Is a boolean value that sets the rule to have no shading.
+  - : A boolean value that sets the rule to have no shading.
 - {{domxref("HTMLHRElement.size")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} representing the height of the rule.
+  - : A string representing the height of the rule.
 - {{domxref("HTMLHRElement.width")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} representing the width of the rule on the page.
+  - : A string representing the width of the rule on the page.
 
 ## Methods
 

@@ -1,6 +1,7 @@
 ---
 title: Window.toolbar
 slug: Web/API/Window/toolbar
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -16,13 +17,11 @@ browser-compat: api.Window.toolbar
 The **`Window.toolbar`** property returns the toolbar object,
 which can be used to check the browser toolbar visibility.
 
-## Syntax
+## Value
 
-```js
-objRef = window.toolbar
-```
+A `toolbar` object.
 
-## Example
+## Examples
 
 The following complete HTML example demonstrates how the `visible` property
 of the `toolbar` object is used.

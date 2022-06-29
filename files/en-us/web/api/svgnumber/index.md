@@ -1,6 +1,7 @@
 ---
 title: SVGNumber
 slug: Web/API/SVGNumber
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

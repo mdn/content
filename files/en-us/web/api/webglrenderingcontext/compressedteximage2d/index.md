@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.compressedTexImage[23]D()
 slug: Web/API/WebGLRenderingContext/compressedTexImage2D
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,7 +10,9 @@ tags:
   - WebGL
   - WebGL extension
   - WebGLRenderingContext
-browser-compat: api.WebGLRenderingContext.compressedTexImage2D
+browser-compat:
+  - api.WebGLRenderingContext.compressedTexImage2D
+  - api.WebGL2RenderingContext.compressedTexImage3D
 ---
 {{APIRef("WebGL")}}
 
@@ -25,18 +28,22 @@ using these methods.
 
 ```js
 // WebGL 1:
-void gl.compressedTexImage2D(target, level, internalformat, width, height, border, ArrayBufferView? pixels);
+compressedTexImage2D(target, level, internalformat, width, height, border)
+compressedTexImage2D(target, level, internalformat, width, height, border, pixels)
 
 // Additionally available in WebGL 2:
 // read from buffer bound to gl.PIXEL_UNPACK_BUFFER
-void gl.compressedTexImage2D(target, level, internalformat, width, height, border, GLsizei imageSize, GLintptr offset);
-void gl.compressedTexImage2D(target, level, internalformat, width, height, border,
-                             ArrayBufferView srcData, optional srcOffset, optional srcLengthOverride);
+compressedTexImage2D(target, level, internalformat, width, height, border, imageSize, offset)
+compressedTexImage2D(target, level, internalformat, width, height, border, srcData)
+compressedTexImage2D(target, level, internalformat, width, height, border, srcData, srcOffset)
+compressedTexImage2D(target, level, internalformat, width, height, border, srcData, srcOffset, srcLengthOverride)
 
- // read from buffer bound to gl.PIXEL_UNPACK_BUFFER
-void gl.compressedTexImage3D(target, level, internalformat, width, height, depth, border, GLsizei imageSize, GLintptr offset);
-void gl.compressedTexImage3D(target, level, internalformat, width, height, depth, border,
-                             ArrayBufferView srcData, optional srcOffset, optional srcLengthOverride);
+// read from buffer bound to gl.PIXEL_UNPACK_BUFFER
+compressedTexImage3D(target, level, internalformat, width, height, depth, border, imageSize, offset)
+
+compressedTexImage3D(target, level, internalformat, width, height, depth, border, srcData)
+compressedTexImage3D(target, level, internalformat, width, height, depth, border, srcData, srcOffset)
+compressedTexImage3D(target, level, internalformat, width, height, depth, border, srcData, srcOffset, srcLengthOverride)
 ```
 
 ### Parameters
@@ -73,8 +80,7 @@ void gl.compressedTexImage3D(target, level, internalformat, width, height, depth
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the compressed image format. Compressed image
     formats must be enabled by [WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) before
     using this method. All values are possible for `compressedTexImage2D`. See
-    [compressed texture
-    formats](/en-US/docs/Web/API/WebGL_API/Compressed_texture_formats) for which are valid for `compressedTexImage3D`. Possible
+    [compressed texture formats](/en-US/docs/Web/API/WebGL_API/Compressed_texture_formats) for which are valid for `compressedTexImage3D`. Possible
     values:
 
     - When using the {{domxref("WEBGL_compressed_texture_s3tc")}} extension:
@@ -161,12 +167,12 @@ void gl.compressedTexImage3D(target, level, internalformat, width, height, depth
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying the offset in bytes from which to read from the
     buffer bound to `gl.PIXEL_UNPACK_BUFFER`.
 - `pixels`
-  - : An {{domxref("ArrayBufferView")}} that will be used as a data store for the
+  - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} that will be used as a data store for the
     compressed image data in memory.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -190,13 +196,7 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
 
 ## Browser compatibility
 
-### compressedTexImage2D
-
 {{Compat}}
-
-### compressedTexImage3D
-
-{{Compat("api.WebGL2RenderingContext.compressedTexImage3D")}}
 
 ## See also
 

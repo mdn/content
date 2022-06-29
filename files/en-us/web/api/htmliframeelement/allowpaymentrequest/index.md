@@ -1,6 +1,7 @@
 ---
 title: HTMLIFrameElement.allowPaymentRequest
 slug: Web/API/HTMLIFrameElement/allowPaymentRequest
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -17,16 +18,9 @@ browser-compat: api.HTMLIFrameElement.allowPaymentRequest
 
 The **`allowPaymentRequest`** property of the
 {{domxref("HTMLIFrameElement")}} interface returns a boolean value indicating
-whether the [Payment Request
-API](/en-US/docs/Web/API/Payment_Request_API) may be invoked on a cross-origin iframe.
+whether the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) may be invoked on a cross-origin iframe.
 
-## Syntax
-
-```js
-var allow = htmlIFrameElement.allowPaymentRequest
-```
-
-### Value
+## Value
 
 A boolean value.
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLFormElement.reset()
 slug: Web/API/HTMLFormElement/reset
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -14,8 +15,8 @@ browser-compat: api.HTMLFormElement.reset
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement.reset()`** method restores a form
-element's default values. This method does the same thing as clicking the form's reset
-button.
+element's default values. This method does the same thing as clicking the form's
+[`<input type="reset">`](/en-US/docs/Web/HTML/Element/input/reset) control.
 
 If a form control (such as a reset button) has a name or id of _reset_ it will
 mask the form's reset method. It does not reset other attributes in the input, such as
@@ -29,10 +30,18 @@ whatever value the {{domxref("Element.setAttribute", "setAttribute()")}} call se
 ## Syntax
 
 ```js
-HTMLFormElement.reset()
+reset()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 document.getElementById('myform').reset();

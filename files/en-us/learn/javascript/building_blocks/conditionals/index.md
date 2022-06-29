@@ -51,13 +51,13 @@ Let's look at by far the most common type of conditional statement you'll use in
 
 ### Basic if ... else syntax
 
-Basic `if...else` syntax looks like the following in {{glossary("pseudocode")}}:
+Basic `if...else` syntax looks like this:
 
-```
+```js
 if (condition) {
-  code to run if condition is true
+  /* code to run if condition is true */
 } else {
-  run some other code instead
+  /* run some other code instead */
 }
 ```
 
@@ -73,24 +73,24 @@ This code is pretty human-readable — it is saying "**if** the **condition** re
 
 You should note that you don't have to include the `else` and the second curly brace block — the following is also perfectly legal code:
 
-```
+```js
 if (condition) {
-  code to run if condition is true
+  /* code to run if condition is true */
 }
 
-run some other code
+/* run some other code */
 ```
 
 However, you need to be careful here — in this case, the second block of code is not controlled by the conditional statement, so it **always** runs, regardless of whether the condition returns `true` or `false`. This is not necessarily a bad thing, but it might not be what you want — often you want to run one block of code _or_ the other, not both.
 
-As a final point, you may sometimes see `if...else` statements written without the curly braces, in the following shorthand style:
+As a final point, while not recommended, you may sometimes see `if...else` statements written without the curly braces:
 
-```
-if (condition) code to run if condition is true
-else run some other code instead
+```js example-bad
+if (condition) /* code to run if condition is true */
+else /* run some other code instead */
 ```
 
-This is perfectly valid code, but using it is not recommended — it is much easier to read the code and work out what is going on if you use the curly braces to delimit the blocks of code, and use multiple lines and indentation.
+This syntax is perfectly valid, but it is much easier to understand the code if you use the curly braces to delimit the blocks of code, and use multiple lines and indentation.
 
 ### A real example
 
@@ -109,7 +109,7 @@ if (shoppingDone === true) {
 
 This code as shown always results in the `shoppingDone` variable returning `false`, meaning disappointment for our poor child. It'd be up to us to provide a mechanism for the parent to set the `shoppingDone` variable to `true` if the child did the shopping.
 
-> **Note:** You can see a more [complete version of this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html) (also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html).)
+> **Note:** You can see a more [complete version of this example on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/allowance-updater.html) (also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html).)
 
 ### else if
 
@@ -160,7 +160,7 @@ function setWeather() {
 3. When this function is run, we first set a variable called `choice` to the current value selected in the `<select>` element. We then use a conditional statement to show different text inside the paragraph depending on what the value of `choice` is. Notice how all the conditions are tested in `else if() {...}` blocks, except for the first one, which is tested in an `if() {...}` block.
 4. The very last choice, inside the `else {...}` block, is basically a "last resort" option — the code inside it will be run if none of the conditions are `true`. In this case, it serves to empty the text out of the paragraph if nothing is selected, for example, if a user decides to re-select the "--Make a choice--" placeholder option shown at the beginning.
 
-> **Note:** You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) on there also.)
+> **Note:** You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-else-if.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) on there also.)
 
 ### A note on comparison operators
 
@@ -360,7 +360,7 @@ function setWeather() {
 
 {{ EmbedLiveSample('A_switch_example', '100%', 100, "", "") }}
 
-> **Note:** You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html) (see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html) on there also.)
+> **Note:** You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-switch.html) (see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html) on there also.)
 
 ## Ternary operator
 
@@ -409,9 +409,9 @@ select.addEventListener('change', () => ( select.value === 'black' ) ? update('b
 
 Here we've got a {{htmlelement('select')}} element to choose a theme (black or white), plus a simple {{htmlelement('h1')}} to display a website title. We also have a function called `update()`, which takes two colors as parameters (inputs). The website's background color is set to the first provided color, and its text color is set to the second provided color.
 
-Finally, we've also got an [onchange](/en-US/docs/Web/API/GlobalEventHandlers/onchange) event listener that serves to run a function containing a ternary operator. It starts with a test condition — `select.value === 'black'`. If this returns `true`, we run the `update()` function with parameters of black and white, meaning that we end up with background color of black and text color of white. If it returns `false`, we run the `update()` function with parameters of white and black, meaning that the site color are inverted.
+Finally, we've also got an [onchange](/en-US/docs/Web/API/GlobalEventHandlers/onchange) event listener that serves to run a function containing a ternary operator. It starts with a test condition — `select.value === 'black'`. If this returns `true`, we run the `update()` function with parameters of black and white, meaning that we end up with background color of black and text color of white. If it returns `false`, we run the `update()` function with parameters of white and black, meaning that the site colors are inverted.
 
-> **Note:** You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html) on there also.)
+> **Note:** You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-ternary.html) (see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html) on there also.)
 
 ## Active learning: A simple calendar
 
@@ -648,7 +648,7 @@ In this example, you are going to take the ternary operator example we saw earli
 
 - It should accept the `choice` variable as its input expression.
 - For each case, the choice should equal one of the possible `<option> value`s that can be selected, that is, `white`, `black`, `purple`, `yellow`, or `psychedelic`.
-- For each case, the `update()` function should be run, and be passed two color values, the first one for the background color, and the second one for the text color. Remember that color values are strings, so need to be wrapped in quotes.
+- For each case, the `update()` function should be run, and be passed two color values, the first one for the background color, and the second one for the text color. Remember that color values are strings, so they need to be wrapped in quotes.
 
 If you make a mistake, you can always reset the example with the "Reset" button. If you get really stuck, press "Show solution" to see a solution.
 
@@ -677,7 +677,7 @@ const html = document.querySelector('.output');
 select.addEventListener('change', () => {
   const choice = select.value;
 
-  // ADD CONDITIONAL HERE
+  // ADD SWITCH STATEMENT
 });
 
 function update(bgColor, textColor) {

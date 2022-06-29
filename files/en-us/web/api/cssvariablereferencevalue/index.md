@@ -1,6 +1,7 @@
 ---
 title: CSSVariableReferenceValue
 slug: Web/API/CSSVariableReferenceValue
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -17,7 +18,7 @@ The **`CSSVariableReferenceValue`** interface of the {{domxref('CSS_Object_Model
 
 ## Constructor
 
-- {{domxref("CSSVariableReferenceValue.CSSVariableReferenceValue()")}}
+- {{domxref("CSSVariableReferenceValue.CSSVariableReferenceValue", "CSSVariableReferenceValue()")}}
   - : Creates a new `CSSVariableReferenceValue` object.
 
 ## Properties

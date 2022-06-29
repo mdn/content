@@ -24,7 +24,7 @@ The **`<u>`** [HTML](/en-US/docs/Web/HTML) element represents a span of inline t
 
 {{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}
 
-See the {{anch("Usage notes")}} section for further details on when it's appropriate to use `<u>` and when it isn't.
+See the [Usage notes](#usage_notes) section for further details on when it's appropriate to use `<u>` and when it isn't.
 
 <table class="properties">
   <tbody>

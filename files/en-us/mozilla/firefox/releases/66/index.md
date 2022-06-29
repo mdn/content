@@ -15,8 +15,8 @@ This article provides information about the changes in Firefox 66 that will affe
 
 ### Developer tools
 
-- JavaScript getters can now be executed from the auto-completion popup in the [Web Console](/en-US/docs/Tools/Web_Console) ({{bug(1499289)}}).
-- The Window methods {{domxref("Window.alert()", "alert()")}}, {{domxref("Window.prompt()","prompt()")}}, and {{domxref("Window.confirm()","confirm()")}} now work again in [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode), after a period of being broken ({{bug(1273997)}}).
+- JavaScript getters can now be executed from the auto-completion popup in the [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) ({{bug(1499289)}}).
+- The Window methods {{domxref("Window.alert()", "alert()")}}, {{domxref("Window.prompt()","prompt()")}}, and {{domxref("Window.confirm()","confirm()")}} now work again in [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html), after a period of being broken ({{bug(1273997)}}).
 - You can copy the output of the console to the clipboard by right-clicking and selecting "**Export visible messages to clipboard**" from the context menu.
 
 ### HTML
@@ -25,7 +25,7 @@ This article provides information about the changes in Firefox 66 that will affe
 
 #### Removals
 
-- The `x-moz-errormessage` attribute has been removed from the {{HTMLElement("input")}} element ({{bug(1513890)}}). You should use  {{domxref("Constraint_validation", "Constraint validation features", "", "1")}} to implement custom validation messages instead.
+- The `x-moz-errormessage` attribute has been removed from the {{HTMLElement("input")}} element ({{bug(1513890)}}). You should use {{domxref("Constraint_validation", "Constraint validation features", "", "1")}} to implement custom validation messages instead.
 
 ### CSS
 
@@ -42,7 +42,7 @@ This article provides information about the changes in Firefox 66 that will affe
 
 - We implemented the {{cssxref("@media/overflow-inline", "overflow-inline")}} and {{cssxref("@media/overflow-block", "overflow-block")}} media queries ({{Bug(1422235)}}).
 - {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} are now animatable, as per the rules set out in their specs ({{bug(1348519)}}).
-- We now support {{cssxref("calc()")}} with percentages for table cells and column widths ({{bug(957915)}}).
+- We now support {{cssxref("calc", "calc()")}} with percentages for table cells and column widths ({{bug(957915)}}).
 - The `min-content` and `max-content` keywords are now available unprefixed ({{bug(1322780)}}). These can be set on:
 
   - {{cssxref("width")}}
@@ -65,7 +65,7 @@ _No additions._
 
 #### Removals
 
-- We removed support for the [`xml:base`](/en-US/docs/Web/XML/xml:base) attribute ({{Bug(903372)}}).
+- We removed support for the `xml:base` attribute ({{Bug(903372)}}).
 
 ### JavaScript
 

@@ -138,7 +138,7 @@ The CSS for this simple example is also as plain as possible: it uses {{cssxref(
 
 ### app.js: The main app JavaScript
 
-The file `app.js` is run when the app is first loaded; its job is primarily to initialize the app, though it c can do other things as well. We'll look at how the app functions more closely in later articles in this guide.
+The file `app.js` is run when the app is first loaded; its job is primarily to initialize the app, though it can do other things as well. We'll look at how the app functions more closely in later articles in this guide.
 
 The first thing it does is to generate the app's displayed content using the following template:
 

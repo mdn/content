@@ -1,6 +1,7 @@
 ---
 title: Advanced animations
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
+page-type: guide
 tags:
   - Canvas
   - Graphics

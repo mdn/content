@@ -111,7 +111,7 @@ In these examples, it would probably be simpler to use the {{SVGElement("polygon
 
 ## Curve commands
 
-There are three different commands that can be used to create smooth curves. Two of those curves are [Bézier curves](/en-US/docs/Glossary/Bézier_curve), and the third is an "arc" or part of a circle. You might have already gained practical experience with Bézier curves using path tools in Inkscape, Illustrator or Photoshop. There are an infinite number of Bézier curves, but only two simple ones are available in `<path>` elements: a cubic one, called with `C`, and a quadratic one, called with `Q`.
+There are three different commands that can be used to create smooth curves. Two of those curves are [Bézier curves](/en-US/docs/Glossary/Bezier_curve), and the third is an "arc" or part of a circle. You might have already gained practical experience with Bézier curves using path tools in Inkscape, Illustrator or Photoshop. There are an infinite number of Bézier curves, but only two simple ones are available in `<path>` elements: a cubic one, called with `C`, and a quadratic one, called with `Q`.
 
 ### Bézier Curves
 
@@ -145,7 +145,7 @@ The last set of coordinates here (`x`,`y`) specify where the line should end. Th
 
 The example above creates nine cubic Bézier curves. As the curves move toward the right, the control points become spread out horizontally. As the curves move downward, they become further separated from the end points. The thing to note here is that the curve starts in the direction of the first control point, and then bends so that it arrives along the direction of the second control point.
 
-Several Bézier curves can be stringed together to create extended, smooth shapes. Often, the control point on one side of a point will be a reflection of the control point used on the other side to keep the slope constant. In this case, a shortcut version of the cubic Bézier can be used, designated by the command `S` (or `s`).
+Several Bézier curves can be strung together to create extended, smooth shapes. Often, the control point on one side of a point will be a reflection of the control point used on the other side to keep the slope constant. In this case, a shortcut version of the cubic Bézier can be used, designated by the command `S` (or `s`).
 
 ```html
  S x2 y2, x y
@@ -153,7 +153,7 @@ Several Bézier curves can be stringed together to create extended, smooth shape
  s dx2 dy2, dx dy
 ```
 
-`S` produces the same type of curve as earlier—but if it follows another `S` command or a `C` command, the first control point is assumed to be a reflection of the one used previously. If the `S` command doesn't follow another `S` or `C` command, then the current position of the cursor is used as the first control point. In this case the result is the same as what the `Q` command would have produced with the same parameters.
+`S` produces the same type of curve as earlier—but if it follows another `S` command or a `C` command, the first control point is assumed to be a reflection of the one used previously. If the `S` command doesn't follow another `S` or `C` command, then the current position of the cursor is used as the first control point. The result is not the same as what the `Q` command would have produced with the same parameters, but is similar.
 
 An example of this syntax is shown below, and in the figure to the left the specified control points are shown in red, and the inferred control point in blue.
 
@@ -283,6 +283,6 @@ The four different paths mentioned above are determined by the next two paramete
 
 Arcs are an easy way to create pieces of circles or ellipses in drawings. For instance, a pie chart would require a different arc for each piece.
 
-If transitioning to SVG from {{HTMLElement("canvas")}}, arcs can be the hardest thing to learn, but are also much more powerful. Complete circles and ellipses are the only shapes that SVG arcs have trouble drawing. Because the start and end points for any path going around a circle are the same point, there are an infinite number of circles that could be chosen, and the actual path is undefined. It's possible to approximate them by making the start and end points of the path slightly askew, and then connecting them with another path segment. For example, it's possible to make a circle with an arc for each semi-circle. At that point, it's often easier to use a real {{SVGElement("circle")}} or {{SVGElement("ellipse")}} node instead. This interactive demo might help understand the concepts behind SVG arcs: <https://codepen.io/lingtalfi/pen/yaLWJG> (tested in chrome and firefox only, might not work in your browser)
+If transitioning to SVG from {{HTMLElement("canvas")}}, arcs can be the hardest thing to learn, but are also much more powerful. Complete circles and ellipses are the only shapes that SVG arcs have trouble drawing. Because the start and end points for any path going around a circle are the same point, there are an infinite number of circles that could be chosen, and the actual path is undefined. It's possible to approximate them by making the start and end points of the path slightly askew, and then connecting them with another path segment. For example, it's possible to make a circle with an arc for each semi-circle. At that point, it's often easier to use a real {{SVGElement("circle")}} or {{SVGElement("ellipse")}} node instead. This interactive demo might help understand the concepts behind SVG arcs: <https://codepen.io/lingtalfi/pen/yaLWJG> (tested in Chrome and Firefox only, might not work in your browser)
 
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}

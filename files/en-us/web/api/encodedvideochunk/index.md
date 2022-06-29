@@ -1,6 +1,7 @@
 ---
 title: EncodedVideoChunk
 slug: Web/API/EncodedVideoChunk
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -14,7 +15,7 @@ The **`EncodedVideoChunk`** interface of the {{domxref('WebCodecs API','','',' '
 
 ## Constructor
 
-- {{domxref("EncodedVideoChunk.EncodedVideoChunk()")}}
+- {{domxref("EncodedVideoChunk.EncodedVideoChunk", "EncodedVideoChunk()")}}
   - : Creates a new `EncodedVideoChunk` object.
 
 ## Properties

@@ -1,6 +1,7 @@
 ---
 title: MessageEvent.lastEventId
 slug: Web/API/MessageEvent/lastEventId
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -14,20 +15,14 @@ browser-compat: api.MessageEvent.lastEventId
 {{APIRef("HTML DOM")}}
 
 The **`lastEventId`** read-only property of the
-{{domxref("MessageEvent")}} interface is a {{domxref("DOMString")}} representing a
+{{domxref("MessageEvent")}} interface is a string representing a
 unique ID for the event.
 
-## Syntax
+## Value
 
-```js
-var myId = messageEvent.lastEventId;
-```
+A string representing the ID.
 
-### Value
-
-A {{domxref("DOMString")}} representing the ID.
-
-## Example
+## Examples
 
 ```js
 myWorker.onmessage = function(e) {

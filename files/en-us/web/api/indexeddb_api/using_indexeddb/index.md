@@ -1,6 +1,7 @@
 ---
 title: Using IndexedDB
 slug: Web/API/IndexedDB_API/Using_IndexedDB
+page-type: guide
 tags:
   - API
   - Advanced
@@ -63,7 +64,7 @@ We start the whole process like this:
 
 ```js
 // Let us open our database
-var request = window.indexedDB.open("MyTestDatabase", 3);
+const request = window.indexedDB.open("MyTestDatabase", 3);
 ```
 
 See that? Opening a database is just like any other operation — you have to "request" it.
@@ -97,8 +98,8 @@ Obviously, browsers do not want to allow some advertising network or malicious w
 Now, assuming that the user allowed your request to create a database, and you've received a success event to trigger the success callback; What's next? The request here was generated with a call to `indexedDB.open()`, so `request.result` is an instance of `IDBDatabase`, and you definitely want to save that for later. Your code might look something like this:
 
 ```js
-var db;
-var request = indexedDB.open("MyTestDatabase");
+let db;
+const request = indexedDB.open("MyTestDatabase");
 request.onerror = event => {
   console.log("Why didn't you allow my web app to use IndexedDB?!");
 };
@@ -123,16 +124,16 @@ One of the common possible errors when opening a database is `VER_ERR`. It indic
 
 ### Creating or updating the version of the database
 
-When you create a new database or increase the version number of an existing database (by specifying a higher version number than you did previously, when {{ anch("Opening a database") }}), the `onupgradeneeded` event will be triggered and an [IDBVersionChangeEvent](/en-US/docs/Web/API/IDBVersionChangeEvent) object will be passed to any `onversionchange` event handler set up on `request.result` (i.e., `db` in the example). In the handler for the `upgradeneeded` event, you should create the object stores needed for this version of the database:
+When you create a new database or increase the version number of an existing database (by specifying a higher version number than you did previously, when [Opening a database](#opening_a_database)), the `onupgradeneeded` event will be triggered and an [IDBVersionChangeEvent](/en-US/docs/Web/API/IDBVersionChangeEvent) object will be passed to any `onversionchange` event handler set up on `request.result` (i.e., `db` in the example). In the handler for the `upgradeneeded` event, you should create the object stores needed for this version of the database:
 
 ```js
 // This event is only implemented in recent browsers
 request.onupgradeneeded = event => {
   // Save the IDBDatabase interface
-  var db = event.target.result;
+  const db = event.target.result;
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore("name", { keyPath: "myKey" });
+  const objectStore = db.createObjectStore("name", { keyPath: "myKey" });
 };
 ```
 
@@ -218,18 +219,18 @@ Now let's look at creating an IndexedDB to store our data:
 ```js
 const dbName = "the_name";
 
-var request = indexedDB.open(dbName, 2);
+const request = indexedDB.open(dbName, 2);
 
 request.onerror = event => {
   // Handle errors.
 };
 request.onupgradeneeded = event => {
-  var db = event.target.result;
+  const db = event.target.result;
 
   // Create an objectStore to hold information about our customers. We're
   // going to use "ssn" as our key path because it's guaranteed to be
   // unique - or at least that's what I was told during the kickoff meeting.
-  var objectStore = db.createObjectStore("customers", { keyPath: "ssn" });
+  const objectStore = db.createObjectStore("customers", { keyPath: "ssn" });
 
   // Create an index to search customers by name. We may have duplicates
   // so we can't use a unique index.
@@ -243,7 +244,7 @@ request.onupgradeneeded = event => {
   // finished before adding data into it.
   objectStore.transaction.oncomplete = event => {
     // Store values in the newly created objectStore.
-    var customerObjectStore = db.transaction("customers", "readwrite").objectStore("customers");
+    const customerObjectStore = db.transaction("customers", "readwrite").objectStore("customers");
     customerData.forEach(function(customer) {
       customerObjectStore.add(customer);
     });
@@ -269,14 +270,14 @@ We can create another object store with the key generator as below:
 
 ```js
 // Open the indexedDB.
-var request = indexedDB.open(dbName, 3);
+const request = indexedDB.open(dbName, 3);
 
 request.onupgradeneeded = event => {
 
-  var db = event.target.result;
+  const db = event.target.result;
 
   // Create another object store called "names" with the autoIncrement flag set as true.
-  var objStore = db.createObjectStore("names", { autoIncrement : true });
+  const objStore = db.createObjectStore("names", { autoIncrement : true });
 
   // Because the "names" object store has the key generator, the key for the name value is generated automatically.
   // The added records would be like:
@@ -310,7 +311,7 @@ You can speed up data access by using the right scope and mode in the transactio
 If you've just created a database, then you probably want to write to it. Here's what that looks like:
 
 ```js
-var transaction = db.transaction(["customers"], "readwrite");
+const transaction = db.transaction(["customers"], "readwrite");
 // Note: Older experimental implementations use the deprecated constant IDBTransaction.READ_WRITE instead of "readwrite".
 // In case you want to support such an implementation, you can write:
 // var transaction = db.transaction(["customers"], IDBTransaction.READ_WRITE);
@@ -318,7 +319,7 @@ var transaction = db.transaction(["customers"], "readwrite");
 
 The `transaction()` function takes two arguments (though one is optional) and returns a transaction object. The first argument is a list of object stores that the transaction will span. You can pass an empty array if you want the transaction to span all object stores, but don't do it because the spec says an empty array should generate an InvalidAccessError. If you don't specify anything for the second argument, you get a read-only transaction. Since you want to write to it here you need to pass the `"readwrite"` flag.
 
-Now that you have a transaction you need to understand its lifetime. Transactions are tied very closely to the event loop. If you make a transaction and return to the event loop without using it then the transaction will become inactive. The only way to keep the transaction active is to make a request on it. When the request is finished you'll get a DOM  event and, assuming that the request succeeded, you'll have another opportunity to extend the transaction during that callback. If you return to the event loop without extending the transaction then it will become inactive, and so on. As long as there are pending requests the transaction remains active. Transaction lifetimes are really very simple but it might take a little time to get used to. A few more examples will help, too. If you start seeing `TRANSACTION_INACTIVE_ERR` error codes then you've messed something up.
+Now that you have a transaction you need to understand its lifetime. Transactions are tied very closely to the event loop. If you make a transaction and return to the event loop without using it then the transaction will become inactive. The only way to keep the transaction active is to make a request on it. When the request is finished you'll get a DOM event and, assuming that the request succeeded, you'll have another opportunity to extend the transaction during that callback. If you return to the event loop without extending the transaction then it will become inactive, and so on. As long as there are pending requests the transaction remains active. Transaction lifetimes are really very simple but it might take a little time to get used to. A few more examples will help, too. If you start seeing `TRANSACTION_INACTIVE_ERR` error codes then you've messed something up.
 
 Transactions can receive DOM events of three different types: `error`, `abort`, and `complete`. We've talked about the way that `error` events bubble, so a transaction receives error events from any requests that are generated from it. A more subtle point here is that the default behavior of an error is to abort the transaction in which it occurred. Unless you handle the error by first calling `stopPropagation()` on the error event then doing something else, the entire transaction is rolled back. This design forces you to think about and handle errors, but you can always add a catchall error handler to the database if fine-grained error handling is too cumbersome. If you don't handle an error event or if you call `abort()` on the transaction, then the transaction is rolled back and an `abort` event is fired on the transaction. Otherwise, after all pending requests have completed, you'll get a `complete` event. If you're doing lots of database operations, then tracking the transaction rather than individual requests can certainly aid your sanity.
 
@@ -334,23 +335,23 @@ transaction.onerror = event => {
   // Don't forget to handle errors!
 };
 
-var objectStore = transaction.objectStore("customers");
+const objectStore = transaction.objectStore("customers");
 customerData.forEach(customer => {
-  var request = objectStore.add(customer);
+  const request = objectStore.add(customer);
   request.onsuccess = event => {
     // event.target.result === customer.ssn;
   };
 });
 ```
 
-The `result` of a request generated from a call to `add()` is the key of the value that was added. So in this case, it should equal the `ssn` property of the object that was added, since the object store uses the `ssn` property for the key path. Note that the `add()` function requires that no object already be in the database with the same key. If you're trying to modify an existing entry, or you don't care if one exists already, you can use the `put()` function, as shown below in the {{ anch("Updating an entry in the database") }} section.
+The `result` of a request generated from a call to `add()` is the key of the value that was added. So in this case, it should equal the `ssn` property of the object that was added, since the object store uses the `ssn` property for the key path. Note that the `add()` function requires that no object already be in the database with the same key. If you're trying to modify an existing entry, or you don't care if one exists already, you can use the `put()` function, as shown below in the [Updating an entry in the database](#updating_an_entry_in_the_database) section.
 
 ### Removing data from the database
 
 Removing data is very similar:
 
 ```js
-var request = db.transaction(["customers"], "readwrite")
+const request = db.transaction(["customers"], "readwrite")
                 .objectStore("customers")
                 .delete("444-44-4444");
 request.onsuccess = event => {
@@ -363,9 +364,9 @@ request.onsuccess = event => {
 Now that the database has some info in it, you can retrieve it in several ways. First, the simple `get()`. You need to provide the key to retrieve the value, like so:
 
 ```js
-var transaction = db.transaction(["customers"]);
-var objectStore = transaction.objectStore("customers");
-var request = objectStore.get("444-44-4444");
+const transaction = db.transaction(["customers"]);
+const objectStore = transaction.objectStore("customers");
+const request = objectStore.get("444-44-4444");
 request.onerror = event => {
   // Handle errors!
 };
@@ -395,20 +396,20 @@ Note that you can speed up data access by limiting the scope and mode in the tra
 Now we've retrieved some data, updating it and inserting it back into the IndexedDB is pretty simple. Let's update the previous example somewhat:
 
 ```js
-var objectStore = db.transaction(["customers"], "readwrite").objectStore("customers");
-var request = objectStore.get("444-44-4444");
+const objectStore = db.transaction(["customers"], "readwrite").objectStore("customers");
+const request = objectStore.get("444-44-4444");
 request.onerror = event => {
   // Handle errors!
 };
 request.onsuccess = event => {
   // Get the old value that we want to update
-  var data = event.target.result;
+  const data = event.target.result;
 
   // update the value(s) in the object that you want to change
   data.age = 42;
 
   // Put this updated object back into the database.
-  var requestUpdate = objectStore.put(data);
+  const requestUpdate = objectStore.put(data);
   requestUpdate.onerror = event => {
      // Do something with the error
   };
@@ -427,10 +428,10 @@ So here we're creating an `objectStore` and requesting a customer record out of 
 Using `get()` requires that you know which key you want to retrieve. If you want to step through all the values in your object store, then you can use a cursor. Here's what it looks like:
 
 ```js
-var objectStore = db.transaction("customers").objectStore("customers");
+const objectStore = db.transaction("customers").objectStore("customers");
 
 objectStore.openCursor().onsuccess = event => {
-  var cursor = event.target.result;
+  const cursor = event.target.result;
   if (cursor) {
     console.log("Name for SSN " + cursor.key + " is " + cursor.value.name);
     cursor.continue();
@@ -446,10 +447,10 @@ The `openCursor()` function takes several arguments. First, you can limit the ra
 One common pattern with cursors is to retrieve all objects in an object store and add them to an array, like this:
 
 ```js
-var customers = [];
+const customers = [];
 
 objectStore.openCursor().onsuccess = event => {
-  var cursor = event.target.result;
+  const cursor = event.target.result;
   if (cursor) {
     customers.push(cursor.value);
     cursor.continue();
@@ -479,7 +480,7 @@ Storing customer data using the SSN as a key is logical since the SSN uniquely i
 // objectStore.createIndex("name", "name");
 // Otherwise you will get DOMException.
 
-var index = objectStore.index("name");
+const index = objectStore.index("name");
 
 index.get("Donna").onsuccess = event => {
   console.log("Donna's SSN is " + event.target.result.ssn);
@@ -493,7 +494,7 @@ If you need to access all the entries with a given `name` you can use a cursor. 
 ```js
 // Using a normal cursor to grab whole customer record objects
 index.openCursor().onsuccess = event => {
-  var cursor = event.target.result;
+  const cursor = event.target.result;
   if (cursor) {
     // cursor.key is a name, like "Bill", and cursor.value is the whole object.
     console.log("Name: " + cursor.key + ", SSN: " + cursor.value.ssn + ", email: " + cursor.value.email);
@@ -503,7 +504,7 @@ index.openCursor().onsuccess = event => {
 
 // Using a key cursor to grab customer record object keys
 index.openKeyCursor().onsuccess = event => {
-  var cursor = event.target.result;
+  const cursor = event.target.result;
   if (cursor) {
     // cursor.key is a name, like "Bill", and cursor.value is the SSN.
     // No way to directly get the rest of the stored object.
@@ -519,23 +520,23 @@ If you would like to limit the range of values you see in a cursor, you can use 
 
 ```js
 // Only match "Donna"
-var singleKeyRange = IDBKeyRange.only("Donna");
+const singleKeyRange = IDBKeyRange.only("Donna");
 
 // Match anything past "Bill", including "Bill"
-var lowerBoundKeyRange = IDBKeyRange.lowerBound("Bill");
+const lowerBoundKeyRange = IDBKeyRange.lowerBound("Bill");
 
 // Match anything past "Bill", but don't include "Bill"
-var lowerBoundOpenKeyRange = IDBKeyRange.lowerBound("Bill", true);
+const lowerBoundOpenKeyRange = IDBKeyRange.lowerBound("Bill", true);
 
 // Match anything up to, but not including, "Donna"
-var upperBoundOpenKeyRange = IDBKeyRange.upperBound("Donna", true);
+const upperBoundOpenKeyRange = IDBKeyRange.upperBound("Donna", true);
 
 // Match anything between "Bill" and "Donna", but not including "Donna"
-var boundKeyRange = IDBKeyRange.bound("Bill", "Donna", false, true);
+const boundKeyRange = IDBKeyRange.bound("Bill", "Donna", false, true);
 
 // To use one of the key ranges, pass it in as the first argument of openCursor()/openKeyCursor()
 index.openCursor(boundKeyRange).onsuccess = event => {
-  var cursor = event.target.result;
+  const cursor = event.target.result;
   if (cursor) {
     // Do something with the matches.
     cursor.continue();
@@ -547,7 +548,7 @@ Sometimes you may want to iterate in descending order rather than in ascending o
 
 ```js
 objectStore.openCursor(boundKeyRange, "prev").onsuccess = event => {
-  var cursor = event.target.result;
+  const cursor = event.target.result;
   if (cursor) {
     // Do something with the entries.
     cursor.continue();
@@ -559,7 +560,7 @@ If you just want to specify a change of direction but not constrain the results 
 
 ```js
 objectStore.openCursor(null, "prev").onsuccess = event => {
-  var cursor = event.target.result;
+  const cursor = event.target.result;
   if (cursor) {
     // Do something with the entries.
     cursor.continue();
@@ -571,7 +572,7 @@ Since the "name" index isn't unique, there might be multiple entries where `name
 
 ```js
 index.openKeyCursor(null, "nextunique").onsuccess = event => {
-  var cursor = event.target.result;
+  const cursor = event.target.result;
   if (cursor) {
     // Do something with the entries.
     cursor.continue();
@@ -586,7 +587,7 @@ Please see "[IDBCursor Constants](/en-US/docs/Web/API/IDBCursor#constants)" for 
 When your web app changes in such a way that a version change is required for your database, you need to consider what happens if the user has the old version of your app open in one tab and then loads the new version of your app in another. When you call `open()` with a greater version than the actual version of the database, all other open databases must explicitly acknowledge the request before you can start making changes to the database (an `onblocked` event is fired until they are closed or reloaded). Here's how it works:
 
 ```js
-var openReq = mozIndexedDB.open("MyTestDatabase", 2);
+const openReq = mozIndexedDB.open("MyTestDatabase", 2);
 
 openReq.onblocked = event => {
   // If some other tab is loaded with the database, then it needs to be closed
@@ -601,7 +602,7 @@ openReq.onupgradeneeded = event => {
 };
 
 openReq.onsuccess = event => {
-  var db = event.target.result;
+  const db = event.target.result;
   useDatabase(db);
   return;
 };
@@ -625,7 +626,7 @@ You should also listen for `VersionError` errors to handle the situation where a
 
 IndexedDB uses the same-origin principle, which means that it ties the store to the origin of the site that creates it (typically, this is the site domain or subdomain), so it cannot be accessed by any other origin.
 
-Third party window content (e.g. {{htmlelement("iframe")}} content) cannot access IndexedDB if the browser is set to [never accept third party cookies](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (see {{bug("1147821")}}.)
+Third party window content (e.g. {{htmlelement("iframe")}} content) cannot access IndexedDB if the browser is set to [never accept third party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection?redirectslug=disable-third-party-cookies&redirectlocale=en-US) (see {{bug("1147821")}}.)
 
 ## Warning about browser shutdown
 
@@ -686,12 +687,12 @@ Further reading for you to find out more information if desired.
 ### Tutorials and guides
 
 - [Databinding UI Elements with IndexedDB](https://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
-- [IndexedDB — The Store in Your Browser](https://msdn.microsoft.com/scriptjunkie/gg679063.aspx)
+- [IndexedDB — The Store in Your Browser](https://docs.microsoft.com/en-us/previous-versions/msdn10/gg679063(v=msdn.10))
 
 ### Libraries
 
 - [localForage](https://localforage.github.io/localForage/): A Polyfill providing a simple name:value syntax for client-side data storage, which uses IndexedDB in the background, but falls back to WebSQL and then localStorage in browsers that don't support IndexedDB.
-- [dexie.js](https://www.dexie.org/): A wrapper for IndexedDB that allows much faster code development via nice, simple syntax.
+- [dexie.js](https://dexie.org/): A wrapper for IndexedDB that allows much faster code development via nice, simple syntax.
 - [IDB](https://github.com/jakearchibald/idb): A tiny library that mostly mirrors the IndexedDB API but with small usability improvements.
 - [ZangoDB](https://github.com/erikolson186/zangodb): A MongoDB-like interface for IndexedDB that supports most of the familiar filtering, projection, sorting, updating and aggregation features of MongoDB.
 - [JsStore](https://jsstore.net/): A simple and advanced IndexedDB wrapper having SQL like syntax.

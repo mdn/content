@@ -1,6 +1,7 @@
 ---
 title: URL.toString()
 slug: Web/API/URL/toString
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -13,7 +14,7 @@ browser-compat: api.URL.toString
 {{ApiRef("URL API")}}
 
 The **`URL.toString()`** {{Glossary("stringifier")}} method returns a
-{{domxref("USVString")}} containing the whole URL. It is effectively a read-only version
+string containing the whole URL. It is effectively a read-only version
 of {{domxref("URL.href")}}.
 
 {{AvailableInWorkers}}
@@ -21,12 +22,16 @@ of {{domxref("URL.href")}}.
 ## Syntax
 
 ```js
-const href = url.toString()
+toString()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

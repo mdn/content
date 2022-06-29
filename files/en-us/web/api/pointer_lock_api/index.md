@@ -1,6 +1,7 @@
 ---
 title: Pointer Lock API
 slug: Web/API/Pointer_Lock_API
+page-type: web-api-overview
 tags:
   - API
   - Advanced
@@ -8,6 +9,7 @@ tags:
   - Reference
   - mouse lock
   - pointer lock
+browser-compat: api.Element.requestPointerLock
 ---
 {{DefaultAPISidebar("Pointer Lock API")}}
 
@@ -229,19 +231,15 @@ function canvasDraw() {
 
 Pointer lock can only lock one iframe at a time. If you lock one iframe, you cannot try to lock another iframe and transfer the target to it; pointer lock will error out. To avoid this limitation, first unlock the locked iframe, and then lock the other.
 
-While iframes work by default, "sandboxed" iframes block Pointer lock. The ability to avoid this limitation, in the form of the attribute/value combination `<iframe sandbox="allow-pointer-lock">`, is expected to appear in Chrome soon.
+While iframes work by default, "sandboxed" iframes block Pointer lock. To avoid this limitation, use `<iframe sandbox="allow-pointer-lock">`.
 
 ## Specifications
 
-| Specification                                      |
-| -------------------------------------------------- |
-| [Pointer Lock](https://w3c.github.io/pointerlock/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `Element.requestPointerLock`
-
-{{Compat("api.Element.requestPointerLock")}}
+{{Compat}}
 
 ## See also
 

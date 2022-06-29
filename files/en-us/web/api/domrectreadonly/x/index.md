@@ -1,6 +1,7 @@
 ---
 title: DOMRectReadOnly.x
 slug: Web/API/DOMRectReadOnly/x
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -14,13 +15,7 @@ browser-compat: api.DOMRectReadOnly.x
 
 The **`x`** read-only property of the **`DOMRectReadOnly`** interface represents the x coordinate of the `DOMRect`'s origin.
 
-## Syntax
-
-```js
-var recX = DOMRect.x;
-```
-
-### Value
+## Value
 
 A double.
 

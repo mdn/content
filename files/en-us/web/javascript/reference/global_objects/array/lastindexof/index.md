@@ -45,8 +45,8 @@ The last index of the element in the array; **-1** if not found.
 ## Description
 
 `lastIndexOf` compares `searchElement` to elements of the Array
-using [strict
-equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (the same method used by the `===`, or triple-equals, operator).
+using [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+(the same method used by the `===`, or triple-equals, operator).
 
 ## Examples
 
@@ -55,7 +55,7 @@ equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (the s
 The following example uses `lastIndexOf` to locate values in an array.
 
 ```js
-var numbers = [2, 5, 9, 2];
+const numbers = [2, 5, 9, 2];
 numbers.lastIndexOf(2);     // 3
 numbers.lastIndexOf(7);     // -1
 numbers.lastIndexOf(2, 3);  // 3
@@ -71,11 +71,11 @@ element in a given array, using {{jsxref("Array.prototype.push", "push")}} to ad
 to another array as they are found.
 
 ```js
-var indices = [];
-var array = ['a', 'b', 'a', 'c', 'a', 'd'];
-var element = 'a';
-var idx = array.lastIndexOf(element);
-while (idx != -1) {
+const indices = [];
+const array = ['a', 'b', 'a', 'c', 'a', 'd'];
+const element = 'a';
+let idx = array.lastIndexOf(element);
+while (idx !== -1) {
   indices.push(idx);
   idx = (idx > 0 ? array.lastIndexOf(element, idx - 1) : -1);
 }
@@ -84,7 +84,7 @@ console.log(indices);
 // [4, 2, 0]
 ```
 
-Note that we have to handle the case `idx == 0` separately here because the
+Note that we have to handle the case `idx === 0` separately here because the
 element will always be found regardless of the `fromIndex` parameter if it is
 the first element of the array. This is different from the
 {{jsxref("Array.prototype.indexOf", "indexOf")}} method.

@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - border-block
   - border-block-end
@@ -31,6 +30,7 @@ border-block-end-width: thick;
 border-block-end-width: inherit;
 border-block-end-width: initial;
 border-block-end-width: revert;
+border-block-end-width: revert-layer;
 border-block-end-width: unset;
 ```
 

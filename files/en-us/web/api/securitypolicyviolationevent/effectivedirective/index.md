@@ -1,10 +1,10 @@
 ---
 title: SecurityPolicyViolationEvent.effectiveDirective
 slug: Web/API/SecurityPolicyViolationEvent/effectiveDirective
+page-type: web-api-instance-property
 tags:
   - API
   - CSP
-  - Experimental
   - HTTP
   - Property
   - Reference
@@ -13,24 +13,18 @@ tags:
   - effectiveDirective
 browser-compat: api.SecurityPolicyViolationEvent.effectiveDirective
 ---
-{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
+{{HTTPSidebar}}
 
 The **`effectiveDirective`** read-only property of the
-{{domxref("SecurityPolicyViolationEvent")}} interface is a {{domxref("DOMString")}}
+{{domxref("SecurityPolicyViolationEvent")}} interface is a string
 representing the directive whose enforcement uncovered the violation.
 
-## Syntax
+## Value
 
-```js
-let effDir = violationEventInstance.effectiveDirective;
-```
-
-### Value
-
-A {{domxref("DOMString")}} representing the directive whose enforcement uncovered the
+A string representing the directive whose enforcement uncovered the
 violation.
 
-## Example
+## Examples
 
 ```js
 document.addEventListener("securitypolicyviolation", (e) => {

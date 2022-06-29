@@ -1,6 +1,7 @@
 ---
 title: ScreenOrientation
 slug: Web/API/ScreenOrientation
+page-type: web-api-interface
 tags:
   - API
   - Interface

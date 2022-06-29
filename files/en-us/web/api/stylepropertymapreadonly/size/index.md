@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMapReadOnly.size
 slug: Web/API/StylePropertyMapReadOnly/size
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -15,20 +16,14 @@ browser-compat: api.StylePropertyMapReadOnly.size
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`size`** read-only property of the
-{{domxref("StylePropertyMapReadOnly")}} interface returns an unsinged long integer
+{{domxref("StylePropertyMapReadOnly")}} interface returns an unsigned long integer
 containing the size of the `StylePropertyMapReadOnly` object.
 
-## Syntax
-
-```js
-var size = StylePropertyMapReadOnly.size
-```
-
-### Value
+## Value
 
 An unsigned long integer.
 
-## Example
+## Examples
 
 Here we use the size property to return the total entries within the button elements
 {{domxref('Element.computedStyleMap()','computedStyleMap')}}.

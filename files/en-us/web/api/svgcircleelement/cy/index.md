@@ -1,6 +1,7 @@
 ---
 title: SVGCircleElement.cy
 slug: Web/API/SVGCircleElement/cy
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -16,17 +17,11 @@ The **`cy`** read-only property of the {{domxref("SVGCircleElement")}} interface
 
 If unspecified, the effect is as if the value is set to `0`.
 
-## Syntax
-
-```js
-var yCoordinate = element.cy;
-```
-
-### Value
+## Value
 
 An {{domxref("SVGAnimatedLength")}} representing the y-coordinate of the circle's center.
 
-## Example
+## Examples
 
 ### SVG
 
@@ -43,7 +38,7 @@ const circle = document.getElementById('circle');
 console.log(circle.cy);
 ```
 
-{{EmbedLiveSample("Example", "200", "200")}}
+{{EmbedLiveSample("Examples", "200", "200")}}
 
 ## Specifications
 

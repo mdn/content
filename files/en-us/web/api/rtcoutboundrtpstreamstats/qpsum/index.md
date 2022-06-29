@@ -1,6 +1,7 @@
 ---
 title: RTCOutboundRtpStreamStats.qpSum
 slug: Web/API/RTCOutboundRtpStreamStats/qpSum
+page-type: web-api-instance-property
 tags:
   - API
   - Encoding
@@ -32,13 +33,7 @@ this sender has produced to date on the video track corresponding to this
 In general, the higher this
 number is, the more heavily compressed the video data is.
 
-## Syntax
-
-```js
-var qpSum = RTCOutboundRtpStreamStats.qpSum;
-```
-
-### Value
+## Value
 
 An unsigned 64-bit integer value which indicates the sum of the quantization parameter
 (QP) value for every frame sent so far on the track described by the
@@ -60,18 +55,17 @@ It's important to keep in mind that the value of QP can change periodically—ev
 frame—so it's difficult to know for certain how substantial the compression is. The best
 you can do is make an estimate. You can use the value of
 {{domxref("RTCSentRtpStreamStats.framesEncoded")}} to get the number of frames that have
-been encoded so far, and compute an average from there. See {{anch("Calculating average
-  quantization")}} below for a function that does this.
+been encoded so far, and compute an average from there. See [Calculating average quantization](#calculating_average_quantization) below for a function that does this.
 
 Also, the exact meaning of the QP value depends on the {{Glossary("codec")}} being
 used. For example, for the VP8 codec, the QP value can be anywhere from 1 to 127 and is
 found in the frame header element `"y_ac_qi"`, whose value is defined in
-{{RFC(6386, "19.2")}}. H.264 uses a QP which ranges from 0 to 51; in this case, it's an
+{{RFC(6386, "", "19.2")}}. H.264 uses a QP which ranges from 0 to 51; in this case, it's an
 index used to derive a scaling matrix used during the quantization process.
 Additionally, QP is not likely to be the only parameter the codec uses to adjust the
 compression. See the individual codec specifications for details.
 
-## Example
+## Examples
 
 ### Calculating average quantization
 

@@ -1,6 +1,7 @@
 ---
 title: 'Window: transitionend event'
 slug: Web/API/Window/transitionend_event
+page-type: web-api-event
 tags:
   - API
   - Reference
@@ -59,7 +60,7 @@ window.ontransitionend = () => {
 };
 ```
 
-[See a live example of this event.](/en-US/docs/Web/API/HTMLElement/transitionend_event#Live_example)
+[See a live example of this event.](/en-US/docs/Web/API/HTMLElement/transitionend_event#live_example)
 
 ## Specifications
 

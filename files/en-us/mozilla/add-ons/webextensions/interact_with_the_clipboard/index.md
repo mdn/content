@@ -12,6 +12,9 @@ tags:
   - WebExtensions
   - copy
   - paste
+browser-compat:
+  - api.Clipboard
+  - webextensions.api.clipboard
 ---
 {{AddonSidebar}}
 
@@ -78,7 +81,7 @@ To make the `"copy"` button copy the contents of the {{HTMLElement("input")}} el
 
 ```js
 function copy() {
-  var copyText = document.querySelector("#input");
+  let copyText = document.querySelector("#input");
   copyText.select();
   document.execCommand("copy");
 }
@@ -92,7 +95,7 @@ However, let's say that instead you trigger the copy from an alarm:
 
 ```js
 function copy() {
-  var copyText = document.querySelector("#input");
+  let copyText = document.querySelector("#input");
   copyText.select();
   document.execCommand("copy");
 }
@@ -156,7 +159,7 @@ To set the content of the {{HTMLElement("textarea")}} element with the ID `"outp
 
 ```js
 function paste() {
-  var pasteText = document.querySelector("#output");
+  let pasteText = document.querySelector("#output");
   pasteText.focus();
   document.execCommand("paste");
   console.log(pasteText.textContent);
@@ -171,13 +174,7 @@ Firefox supports the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/
 
 ## Browser compatibility
 
-### navigator.clipboard
-
-{{Compat("api.Clipboard")}}
-
-### clipboard.setImageData
-
-{{Compat("webextensions.api.clipboard")}}
+{{Compat}}
 
 ## See also
 

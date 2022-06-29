@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.crossOrigin
 slug: Web/API/HTMLImageElement/crossOrigin
+page-type: web-api-instance-property
 tags:
   - API
   - CORS
@@ -22,16 +23,9 @@ interface's **`crossOrigin`** attribute is a string which
 specifies the Cross-Origin Resource Sharing ({{Glossary("CORS")}}) setting to use when
 retrieving the image.
 
-## Syntax
+## Value
 
-```js
-htmlImageElement.crossOrigin = crossOriginMode;
-let crossOriginMode = htmlImageElement.crossOrigin;
-```
-
-### Value
-
-A {{domxref("DOMString")}} of a keyword specifying the CORS mode to use when fetching
+A string of a keyword specifying the CORS mode to use when fetching
 the image resource. If you don't specify `crossOrigin`, the image is fetched
 without CORS (the fetch `no-cors` mode).
 
@@ -51,7 +45,7 @@ Permitted values are:
 If `crossOrigin` is an empty string (`""`),
 the `anonymous` mode is selected.
 
-## Example
+## Examples
 
 In this example, a new {{HTMLElement("img")}} element is created and added to the
 document, loading the image with the Anonymous state; the image will be loaded using
@@ -125,7 +119,7 @@ output {
 
 ### Result
 
-{{EmbedLiveSample("Example", 600, 260)}}
+{{EmbedLiveSample("Examples", 600, 260)}}
 
 ## Specifications
 

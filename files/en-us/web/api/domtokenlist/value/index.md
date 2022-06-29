@@ -1,6 +1,7 @@
 ---
 title: DOMTokenList.value
 slug: Web/API/DOMTokenList/value
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference

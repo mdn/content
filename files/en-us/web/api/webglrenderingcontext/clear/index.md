@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.clear()
 slug: Web/API/WebGLRenderingContext/clear
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -23,7 +24,7 @@ method.
 ## Syntax
 
 ```js
-void gl.clear(mask);
+clear(mask)
 ```
 
 ### Parameters
@@ -39,7 +40,7 @@ void gl.clear(mask);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

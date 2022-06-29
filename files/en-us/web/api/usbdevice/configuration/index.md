@@ -1,6 +1,7 @@
 ---
 title: USBDevice.configuration
 slug: Web/API/USBDevice/configuration
+page-type: web-api-instance-property
 tags:
   - API
   - Configuration
@@ -10,6 +11,7 @@ tags:
   - USBDevice
   - WebUSB
   - WebUSB API
+  - Experimental
 browser-compat: api.USBDevice.configuration
 ---
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
@@ -18,17 +20,11 @@ The **`configuration`** read only property of the
 {{domxref("USBDevice")}} interface returns a {{domxref("USBConfiguration")}} object for
 the currently selected interface for a paired USB device.
 
-## Syntax
-
-```js
-var USBConfiguration = USBDevice.configuration
-```
-
-### Value
+## Value
 
 A {{domxref("USBConfiguration")}} object.
 
-## Example
+## Examples
 
 The following example uses this property to test for the existence of a
 USBConfiguration property to select a configuration before claiming an interface.

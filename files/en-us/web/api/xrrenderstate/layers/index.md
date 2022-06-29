@@ -1,6 +1,7 @@
 ---
 title: XRRenderState.layers
 slug: Web/API/XRRenderState/layers
+page-type: web-api-instance-property
 tags:
   - API
   - Property

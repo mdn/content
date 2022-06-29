@@ -22,16 +22,16 @@ To understand common patterns, it helps to read browser documentation. If you ar
 ### Browser vendor documentation
 
 - Mozilla: You're in the right place, just browse MDN
-- Microsoft: [Internet Explorer Standards Support Documentation](https://msdn.microsoft.com/library/ff410218%28v=vs.85%29.aspx)
+- Microsoft: [Internet Explorer Standards Support Documentation](https://docs.microsoft.com/en-us/openspecs/ie_standards/ms-iestandlp/8aea05e3-8c1e-4a9a-9614-31f71e679457)
 - WebKit: Because there are several different editions of this engine, things are a little trickier.
 
-  - [The WebKit blog](https://www.webkit.org/blog/) and [Planet WebKit](https://planet.webkit.org/) aggregate the best articles by WebKit core developers.
-  - [Chrome platform status site](https://www.chromestatus.com/features) is also important.
+  - [The WebKit blog](https://webkit.org/blog/) and [Planet WebKit](https://planet.webkit.org/) aggregate the best articles by WebKit core developers.
+  - [Chrome platform status site](https://chromestatus.com/features) is also important.
   - As well as [the Apple web site.](https://developer.apple.com/technologies/safari/)
 
 ## Make things simple
 
-Because [HTML forms](/en-US/docs/Learn/Forms) involves complex interaction, there is one rule of thumb: keep it simple, also known as the "[KISS principal](https://en.wikipedia.org/wiki/KISS_principle)". There are so many cases where we want forms that are "nicer" or "with advanced functionality", but building efficient HTML Forms is not a question of design or technology. Rather, it's about simplicity, intuitiveness, and ease of user interaction. The tutorial, [forms usability on UX For The Masses,](https://www.uxforthemasses.com/forms-usability/) explains it well.
+Because [HTML forms](/en-US/docs/Learn/Forms) involves complex interaction, there is one important rule: keep it simple, also known as the "[KISS principal](https://en.wikipedia.org/wiki/KISS_principle)". There are so many cases where we want forms that are "nicer" or "with advanced functionality", but building efficient HTML Forms is not a question of design or technology. Rather, it's about simplicity, intuitiveness, and ease of user interaction. The tutorial, [forms usability on UX For The Masses,](https://www.uxforthemasses.com/forms-usability/) explains it well.
 
 ### Graceful degradation is web developer's best friend
 
@@ -137,7 +137,7 @@ One of the big issues with HTML Forms is styling form widgets with CSS. Form con
 
 It's generally a good idea to not alter the default appearance of form control because altering one CSS property value may alter some input types but not others. For example, if you declare `input { font-size: 2rem; }`, it will impact `number`, `date`, and `text`, but not `color` or `range`. If you alter a property, that may impact the appearance of the widget in unexpected ways. For example, `[value] { background-color: #ccc; }` may have been used to target every {{HTMLElement("input")}} with a `value` attribute, but changing the background-color or border radius on a {{HTMLElement("meter")}} will lead to likely unexpected results that differ across browsers. You can declare {{cssxref('appearance', 'appearance: none;')}} to remove the browser styles, but that generally defeats the purpose: as you lose all styling, removing the default look and feel your visitors are used to.
 
-To summarize, when it comes to styling form control widgets, the side effects of styling them with CSS can be unpredictable. So don't. As you can see from the complexity of the [Property compatibility table for form widgets](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls) article, it's very difficult. Even if it's still possible to do a few adjustments on text elements (such as sizing or font color), there are always side effects. The best approach remains to not style HTML Form widgets at all. But you can still apply styles to all the surrounding items. And, if you must alter the default styles of your form widgets, define a style guide to ensure consistency among all your form controls so user experience is not destroyed. You can also investigate some hard techniques such as [rebuilding widgets with JavaScript](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls). But in that case, do not hesitate to [charge your client for such foolishness](https://www.smashingmagazine.com/2011/11/03/but-the-client-wants-ie-6-support/).
+To summarize, when it comes to styling form control widgets, the side effects of styling them with CSS can be unpredictable. So don't. As you can see from the complexity of the [Property compatibility table for form widgets](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls) article, it's very difficult. Even if it's still possible to do a few adjustments on text elements (such as sizing or font color), there are always side effects. The best approach remains to not style HTML Form widgets at all. But you can still apply styles to all the surrounding items. And, if you must alter the default styles of your form widgets, define a style guide to ensure consistency among all your form controls so user experience is not destroyed. You can also investigate some hard techniques such as [rebuilding widgets with JavaScript](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls). But in that case, do not hesitate to [charge your client for such foolishness](https://www.smashingmagazine.com/2011/11/but-the-client-wants-ie-6-support/).
 
 ## Feature detection and polyfills
 

@@ -8,6 +8,9 @@ tags:
   - Reference
   - ARIA roles
   - option role
+spec-urls:
+  - https://w3c.github.io/aria/#option
+  - https://w3c.github.io/aria-practices/#Listbox
 ---
 The `option` role is used for selectable items in a `listbox`.
 
@@ -21,7 +24,29 @@ The `option` role is for identifying selectable choices of a `listbox`. Options 
 
 Authors can also explicitly provide an accessible name by specifying [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) to the element with the `option` role. If using `aria-label` or `aria-labelledby`, and the option also displays a visible text label, authors must ensure they adhere to <a href="https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html">WCAG Success Criterion 2.5.3 Label in Name</a>.
 
-It is highly recommended to use a {{HTMLElement('select')}} element or an  {{HTMLElement('input')}} element with the `checkbox` or `radio` type instead, when possible. These native HTML elements provide keyboard interactivity to manage focus for all the descendants for you automatically.
+It is highly recommended to use a {{HTMLElement('select')}} element or an {{HTMLElement('input')}} element with the `checkbox` or `radio` type instead, when possible. These native HTML elements provide keyboard interactivity to manage focus for all the descendants for you automatically.
+
+### All descendants are presentational
+
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `option`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `option` element as it is a role that does not support semantic children.
+
+For example, consider the following `option` element, which contains a heading.
+
+```html
+<div role="option"><h3>Title of my option</h3></div>
+```
+
+Because descendants of `option` are presentational, the following code is equivalent:
+
+```html
+<div role="option"><h3 role="presentation">Title of my option</h3></div>
+```
+
+From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
+
+```html
+<div role="option">Title of my option</div>
+```
 
 ### Associated ARIA roles, states, and properties
 
@@ -66,22 +91,7 @@ It is highly recommended to use a {{HTMLElement('select')}} element or an  {{HTM
 
 ## Specifications
 
-<table>
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("ARIA","#option","ARIA option role")}}</td>
-      <td>{{Spec2('ARIA')}}</td>
-    </tr>
-    <tr>
-      <td>{{SpecName("ARIA Authoring Practices 1.2","#Listbox","option in a Listbox example")}}</td>
-      <td>{{Spec2('ARIA Authoring Practices 1.2')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 

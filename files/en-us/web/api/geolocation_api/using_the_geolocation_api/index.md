@@ -1,6 +1,7 @@
 ---
 title: Using the Geolocation API
 slug: Web/API/Geolocation_API/Using_the_Geolocation_API
+page-type: guide
 tags:
   - Geolocation API
   - Guide
@@ -28,7 +29,7 @@ if('geolocation' in navigator) {
 
 To obtain the user's current location, you can call the {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} method. This initiates an asynchronous request to detect the user's position, and queries the positioning hardware to get up-to-date information. When the position is determined, the defined callback function is executed. You can optionally provide a second callback function to be executed if an error occurs. A third, optional, parameter is an options object where you can set the maximum age of the position returned, the time to wait for a request, and if you want high accuracy for the position.
 
-> **Note:** By default, {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} tries to answer as fast as possible with a low accuracy result. It is useful if you need a quick answer regardless of the accuracy. Devices with a GPS, for example, can take a minute or more to get a GPS fix, so less accurate data (IP location or wifi) may be returned to `getCurrentPosition()`.
+> **Note:** By default, {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} tries to answer as fast as possible with a low accuracy result. It is useful if you need a quick answer regardless of the accuracy. Devices with a GPS, for example, can take a minute or more to get a GPS fix, so less accurate data (IP location or Wi-Fi) may be returned to `getCurrentPosition()`.
 
 ```js
 navigator.geolocation.getCurrentPosition((position) => {

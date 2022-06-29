@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicy.name
 slug: Web/API/TrustedTypePolicy/name
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,15 +14,9 @@ browser-compat: api.TrustedTypePolicy.name
 
 The **`name`** read-only property of the {{domxref("TrustedTypePolicy")}} interface returns the name of the policy.
 
-## Syntax
+## Value
 
-```js
-var name = TrustedTypePolicy.name;
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing the name of the policy.
+A string containing the name of the policy.
 
 ## Examples
 

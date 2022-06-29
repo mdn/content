@@ -29,8 +29,8 @@ TypeError: Cannot redefine property: "x" (Chrome)
 It was attempted to redefine a property, but that property is [non-configurable](/en-US/docs/Web/JavaScript/Data_structures#properties). The
 `configurable` attribute controls whether the property can be deleted from
 the object and whether its attributes (other than `writable`) can be changed.
-Usually, properties in an object created by an [object
-initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) are configurable. However, for example, when using
+Usually, properties in an object created by an
+[object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) are configurable. However, for example, when using
 {{jsxref("Object.defineProperty()")}}, the property isn't configurable by default.
 
 ## Examples

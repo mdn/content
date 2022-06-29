@@ -36,7 +36,7 @@ Positioning allows you to take elements out of normal document flow and make the
   </tbody>
 </table>
 
-We'd like you to do the following exercises on your local computer. If possible, grab a copy of [`0_basic-flow.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/0_basic-flow.html) from our GitHub repo ([source code here](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/0_basic-flow.html)) and use that as a starting point.
+We'd like you to do the following exercises on your local computer. If possible, grab a copy of [`0_basic-flow.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/0_basic-flow.html) from our GitHub repo ([source code here](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/0_basic-flow.html)) and use that as a starting point.
 
 ## Introducing positioning
 
@@ -65,7 +65,7 @@ Now add the following rule to the bottom of your CSS:
 
 If you save and refresh, you'll see no difference at all, except for the updated background color of the 2nd paragraph. This is fine — as we said before, static positioning is the default behavior!
 
-> **Note:** You can see the example at this point live at [`1_static-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html)).
+> **Note:** You can see the example at this point live at [`1_static-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/1_static-positioning.html)).
 
 ## Relative positioning
 
@@ -132,7 +132,7 @@ span {
 
 Cool, huh? Ok, so this probably wasn't what you were expecting. Why has it moved to the bottom and to the right if we specified _top_ and _left_? This may seem counterintuitive. You need to think of it as if there's an invisible force that pushes the specified side of the positioned box, moving it in the opposite direction. So, for example, if you specify `top: 30px;`, it's as if a force will push the top of the box, causing it to move downwards by 30px.
 
-> **Note:** You can see the example at this point live at [`2_relative-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/2_relative-positioning.html)).
+> **Note:** You can see the example at this point live at [`2_relative-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/2_relative-positioning.html)).
 
 ## Absolute positioning
 
@@ -196,7 +196,7 @@ Second, notice that the position of the element has changed. This is because {{c
 
 > **Note:** Yes, margins still affect positioned elements. Margin collapsing doesn't, however.
 
-> **Note:** You can see the example at this point live at [`3_absolute-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/3_absolute-positioning.html)).
+> **Note:** You can see the example at this point live at [`3_absolute-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/3_absolute-positioning.html)).
 
 ### Positioning contexts
 
@@ -255,7 +255,7 @@ span {
 
 The positioned element now sits relative to the {{htmlelement("body")}} element.
 
-> **Note:** You can see the example at this point live at [`4_positioning-context.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html) ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/4_positioning-context.html)).
+> **Note:** You can see the example at this point live at [`4_positioning-context.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html) ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/4_positioning-context.html)).
 
 ### Introducing z-index
 
@@ -337,7 +337,7 @@ p:nth-of-type(1) {
 
 Note that `z-index` only accepts unitless index values; you can't specify that you want one element to be 23 pixels up the Z-axis — it doesn't work like that. Higher values will go above lower values and it's up to you what values you use. Using values of 2 or 3 would give the same effect as values of 300 or 40000.
 
-> **Note:** You can see an example for this live at [`5_z-index.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html) ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/5_z-index.html)).
+> **Note:** You can see an example for this live at [`5_z-index.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html) ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/5_z-index.html)).
 
 ## Fixed positioning
 
@@ -426,7 +426,7 @@ p:nth-of-type(1) {
 
 {{ EmbedLiveSample('Fixed_positioning', '100%', 400) }}
 
-> **Note:** You can see an example for this live at [`6_fixed-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html)).
+> **Note:** You can see an example for this live at [`6_fixed-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/6_fixed-positioning.html)).
 
 ## Sticky positioning
 
@@ -567,7 +567,7 @@ body {
 
 Sticky elements are "sticky" relative to the nearest ancestor with a "scrolling mechanism", which is determined by its ancestors' [position](/en-US/docs/Web/CSS/position) property.
 
-> **Note:** You can see this example live at [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html)).
+> **Note:** You can see this example live at [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/7_sticky-positioning.html)).
 
 ## Test your skills!
 
@@ -577,12 +577,12 @@ You've reached the end of this article, but can you remember the most important 
 
 I'm sure you had fun playing with basic positioning. While it's not an ideal method to use for entire layouts, there are many specific objectives it's suited for.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
-
 ## See also
 
 - The {{cssxref("position")}} property reference.
 - [Practical positioning examples](/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples), for some more useful ideas.
+
+{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
 
 ## In this module
 
@@ -591,10 +591,10 @@ I'm sure you had fun playing with basic positioning. While it's not an ideal met
 - [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
 - [Grid](/en-US/docs/Learn/CSS/CSS_layout/Grids)
 - [Floats](/en-US/docs/Learn/CSS/CSS_layout/Floats)
-- Positioning
+- [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
 - [Multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
 - [Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
 - [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
 - [Legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
 - [Supporting older browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension assessment](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
+- [Fundamental layout comprehension](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

@@ -1,6 +1,7 @@
 ---
 title: SourceBufferList.length
 slug: Web/API/SourceBufferList/length
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -19,17 +20,11 @@ The **`length`** read-only property of the
 {{domxref("SourceBufferList")}} interface returns the number of
 {{domxref("SourceBuffer")}} objects in the list.
 
-## Syntax
-
-```js
-var myListLength = sourceBufferList.length;
-```
-
-### Value
+## Value
 
 An unsigned long number.
 
-## Example
+## Examples
 
 TBD
 

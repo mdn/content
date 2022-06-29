@@ -23,3 +23,7 @@ spec-urls: https://drafts.csswg.org/css-ruby/
 ## Specifications
 
 {{Specifications}}
+
+## See Also
+
+- {{HTMLElement('ruby')}}

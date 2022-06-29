@@ -1,6 +1,7 @@
 ---
 title: XPathEvaluator.evaluate()
 slug: Web/API/XPathEvaluator/evaluate
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -20,23 +21,26 @@ executes an XPath expression on the given node or document and returns an
 ## Syntax
 
 ```js
-XPathResult XPathEvaluator.evaluate(expression, contextNode, resolver, type, result);
+evaluate(expression, contextNode)
+evaluate(expression, contextNode, resolver)
+evaluate(expression, contextNode, resolver, type)
+evaluate(expression, contextNode, resolver, type, result)
 ```
 
 ### Parameters
 
-- expression
-  - : A {{domxref("DOMString")}} representing the XPath expression to be parsed and
+- `expression`
+  - : A string representing the XPath expression to be parsed and
     evaluated.
-- contextNode
+- `contextNode`
   - : A {{domxref("Node")}} representing the context to use for evaluating the expression.
-- resolver {{optional_inline}}
+- `resolver` {{optional_inline}}
   - : Permits translation of all prefixes, including the `xml` namespace
     prefix, within the XPath expression into appropriate namespace URIs.
-- type {{optional_inline}}
+- `type` {{optional_inline}}
   - : Specifies the type of result to be returned by evaluating the expression. This must
     be one of the {{domxref("XPathResult", "XPathResult", "Constants")}}.
-- result {{optional_inline}}
+- `result` {{optional_inline}}
   - : Allows to specify a result object which may be reused and returned by this method.
     If this is specified as `null` or the implementation does not reuse the
     specified result, a new result object will be returned.
@@ -77,7 +81,7 @@ If the provided context node is not a type permitted as an XPath context node or
 request type is not permitted by the {{domxref("XPathEvaluator")}}, a
 {{domxref("DOMException")}} of type `NOT_SUPPORTED_ERR` is raised.
 
-## Example
+## Examples
 
 The following example shows the use of the `evaluate()` method.
 
@@ -98,7 +102,7 @@ document.querySelector("output").textContent = result.snapshotLength;
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

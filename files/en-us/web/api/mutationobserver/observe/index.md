@@ -1,6 +1,7 @@
 ---
 title: MutationObserver.observe()
 slug: Web/API/MutationObserver/observe
+page-type: web-api-instance-method
 tags:
   - API
   - Attribute Changes
@@ -30,7 +31,7 @@ To stop the `MutationObserver` (so that none of its callbacks will be triggered 
 ## Syntax
 
 ```js
-mutationObserver.observe(target, options)
+observe(target, options)
 ```
 
 ### Parameters
@@ -53,8 +54,7 @@ mutationObserver.observe(target, options)
       - : Set to `true` to monitor the target node (and, if `subtree` is `true`, its descendants) for the addition of new child nodes or removal of existing child nodes.
         The default value is `false`.
     - `attributes` {{optional_inline}}
-      - : Set to `true` to watch for changes to the value of attributes on the node or nodes being monitored.
-      - The default value is `true` if either of `attributeFilter` or `attributeOldValue` is specified, otherwise the default value is `false`.
+      - : Set to `true` to watch for changes to the value of attributes on the node or nodes being monitored. The default value is `true` if either of `attributeFilter` or `attributeOldValue` is specified, otherwise the default value is `false`.
     - `attributeFilter` {{optional_inline}}
       - : An array of specific attribute names to be monitored.
         If this property isn't included, changes to all attributes cause mutation notifications.
@@ -71,7 +71,7 @@ mutationObserver.observe(target, options)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -159,9 +159,9 @@ function callback(mutationList) {
   });
 }
 
-var userListElement = document.querySelector("#userlist");
+const userListElement = document.querySelector("#userlist");
 
-var observer = new MutationObserver(callback);
+const observer = new MutationObserver(callback);
 observer.observe(userListElement, {
   attributeFilter: [ "status", "username" ],
   attributeOldValue: true,

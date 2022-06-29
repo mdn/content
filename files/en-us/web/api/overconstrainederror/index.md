@@ -1,6 +1,7 @@
 ---
 title: OverconstrainedError
 slug: Web/API/OverconstrainedError
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -21,7 +22,7 @@ The **`OverconstrainedError`** interface of the [Media Capture and Streams API](
 
 ## Constructor
 
-- {{domxref("OverconstrainedError.OverconstrainedError()")}}
+- {{domxref("OverconstrainedError.OverconstrainedError", "OverconstrainedError()")}}
   - : Creates a new `OverconstrainedError` object.
 
 ## Properties

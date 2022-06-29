@@ -46,6 +46,10 @@ Number(undefined)  // NaN
 - [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number)
   - : Creates a new `Number` value.
 
+When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Number")}} object, which is **not** a primitive. For example, `typeof new Number(42) === "object"`, and `new Number(42) !== 42` (although `new Number(42) == 42`).
+
+> **Warning:** You should rarely find yourself using `Number` as a constructor.
+
 ## Static properties
 
 - {{jsxref("Number.EPSILON")}}
@@ -113,7 +117,7 @@ const notANum        = Number.NaN
 
 ### Integer range for Number
 
-The following example shows the minimum and maximum integer values that can be represented as `Number` object. (More details on this are described in the ECMAScript standard, chapter _[6.1.6 The Number Type](https://tc39.github.io/ecma262/#sec-ecmascript-language-types-number-type)._)
+The following example shows the minimum and maximum integer values that can be represented as `Number` object. (More details on this are described in the ECMAScript standard, chapter _[6.1.6 The Number Type](https://tc39.es/ecma262/#sec-ecmascript-language-types-number-type)._)
 
 ```js
 const biggestInt  = Number.MAX_SAFE_INTEGER  //  (2**53 - 1) =>  9007199254740991

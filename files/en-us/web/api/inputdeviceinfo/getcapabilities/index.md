@@ -1,6 +1,7 @@
 ---
 title: InputDeviceInfo.getCapabilities()
 slug: Web/API/InputDeviceInfo/getCapabilities
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,7 +17,7 @@ The **`getCapabilities()`** method of the {{domxref("InputDeviceInfo")}} interfa
 ## Syntax
 
 ```js
-InputDeviceInfo.getCapabilities();
+getCapabilities()
 ```
 
 ### Parameters
@@ -28,38 +29,38 @@ None.
 A `MediaTrackCapabilities` object containing the following members:
 
 - `deviceId`
-  - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) object containing the device ID.
+  - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) object containing the device ID.
 - `groupId`
-  - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) object containing a group ID.
+  - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) object containing a group ID.
 - `autoGainControl`>
-  - : A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainBoolean) object reporting if the source can do auto gain control.
+  - : A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) object reporting if the source can do auto gain control.
     If the feature can be controlled by a script the source will report both true and false as possible values.
 - `channelCount`
-  - : A [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong) containing the channel count or range of channel counts.
+  - : A [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#constrainulong) containing the channel count or range of channel counts.
 - `echoCancellation`
-  - : A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainBoolean) object reporting if the source can do echo cancellation.
+  - : A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) object reporting if the source can do echo cancellation.
     If the feature can be controlled by a script the source will report both true and false as possible values.
 - `latency`
-  - : A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble) containing the latency or range of latencies.
+  - : A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble) containing the latency or range of latencies.
 - `noiseSuppression`
-  - : A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainBoolean) object reporting if the source can do noise suppression.
+  - : A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) object reporting if the source can do noise suppression.
     If the feature can be controlled by a script the source will report both true and false as possible values.
 - `sampleRate`
-  - : A [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong) containing the sample rate or range of sample rates.
+  - : A [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#constrainulong) containing the sample rate or range of sample rates.
 - `sampleSize`
-  - : A [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong) containing the sample size or range of sample sizes.
+  - : A [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#constrainulong) containing the sample size or range of sample sizes.
 - `aspectRatio`
-  - : A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble) containing the video aspect ratio (width in pixels divided by height in pixels) or range of aspect ratios.
+  - : A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble) containing the video aspect ratio (width in pixels divided by height in pixels) or range of aspect ratios.
 - `facingMode`
-  - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) object containing the camera facing mode. A camera may report multiple facings, for example "left" and "user".
+  - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) object containing the camera facing mode. A camera may report multiple facings, for example "left" and "user".
 - `frameRate`
-  - : A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble) containing the frame rate or range of frame rates which are acceptable.
+  - : A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble) containing the frame rate or range of frame rates which are acceptable.
 - `height`
-  - : A [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong) containing the video height or range of heights in pixels.
+  - : A [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#constrainulong) containing the video height or range of heights in pixels.
 - `width`
-  - : A [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong) containing the video width or range of widths in pixels.
+  - : A [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#constrainulong) containing the video width or range of widths in pixels.
 - `resizeMode`
-  - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) object containing the mode or an array of modes the UA can use to derive the resolution of the video track.
+  - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) object containing the mode or an array of modes the UA can use to derive the resolution of the video track.
 
 > **Note:** If the user has not granted permission to access the input device an empty object will be returned.
 

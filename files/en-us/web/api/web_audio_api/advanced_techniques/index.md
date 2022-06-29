@@ -1,6 +1,7 @@
 ---
 title: 'Advanced techniques: Creating and sequencing audio'
 slug: Web/API/Web_Audio_API/Advanced_techniques
+page-type: guide
 tags:
   - API
   - Advanced
@@ -483,7 +484,7 @@ function playSample(audioContext, audioBuffer, time) {
 }
 ```
 
-> **Note:** The sound file was [sourced from soundbible.com](http://soundbible.com/1573-DTMF-Tones.html).
+> **Note:** The sound file was [sourced from soundbible.com](https://soundbible.com/1573-DTMF-Tones.html).
 
 ## Playing the audio in time
 

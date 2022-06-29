@@ -1,6 +1,7 @@
 ---
 title: CDATASection
 slug: Web/API/CDATASection
+page-type: web-api-interface
 tags:
   - Interface
   - Reference

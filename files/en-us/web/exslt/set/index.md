@@ -8,10 +8,6 @@ tags:
 ---
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
-The EXSLT Sets package offers functions that let you perform set manipulation. The namespace for these functions is `http://exslt.org/sets`.
+The EXSLT Sets package offers functions that let you perform set manipulation. The namespace for these functions is `http://exslt.org/set`.
 
 {{SubpagesWithSummaries}}
-
-## Browser compatibility
-
-{{Compat("xslt.exslt.set")}}

@@ -1,6 +1,7 @@
 ---
 title: PannerNode.orientationX
 slug: Web/API/PannerNode/orientationX
+page-type: web-api-instance-property
 tags:
   - PannerNode
   - Property
@@ -35,15 +36,7 @@ The {{domxref("AudioParam")}} contained by this property is read only; however, 
 can still change the value of the parameter by assigning a new value to its
 {{domxref("AudioParam.value")}} property.
 
-## Syntax
-
-```js
-var orientationX = PannerNode.orientationX;
-
-PannerNode.orientationX.value = newOrientationX;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioParam")}} whose `value` is the X component of the
 direction in which the audio source is facing, in 3D Cartesian coordinate space.
@@ -157,6 +150,5 @@ osc.start(0);
 ## See also
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web
-  Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Web Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - {{domxref("PannerNode")}}

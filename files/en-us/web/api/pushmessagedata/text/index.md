@@ -1,6 +1,7 @@
 ---
 title: PushMessageData.text()
 slug: Web/API/PushMessageData/text
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -20,16 +21,16 @@ The **`text()`** method of the {{domxref("PushMessageData")}} interface extracts
 ## Syntax
 
 ```js
-var myText = pushEvent.data.text();
+text()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

@@ -98,7 +98,7 @@ This element should not be used for dates prior to the introduction of the Grego
 
 The _datetime value_ (the machine-readable value of the datetime) is the value of the element's `datetime` attribute, which must be in the proper format (see below). If the element does not have a `datetime` attribute, **it must not have any element descendants**, and the _datetime value_ is the element's child text content.
 
-### Valid datetime Values
+### Valid datetime values
 
 - a valid year string
   - : `2011`
@@ -153,7 +153,7 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 
 #### Output
 
-{{EmbedLiveSample('Simple_example', 250, 60)}}
+{{EmbedLiveSample('Simple_example', 250, 80)}}
 
 ### `datetime` example
 
@@ -166,7 +166,7 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 
 #### Output
 
-{{EmbedLiveSample('datetime_example', 250, 60)}}
+{{EmbedLiveSample('datetime_example', 250, 80)}}
 
 ## Specifications
 

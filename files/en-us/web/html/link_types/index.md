@@ -336,6 +336,23 @@ In HTML, link types indicate the relationship between two documents, in which on
     <tr>
       <td>
         <code
+          ><a href="/en-US/docs/Web/HTML/Link_types/me">me</a></code
+        >
+      </td>
+      <td>
+        Indicates that the current document is represented by the person to which
+        the me value links. The me value is commonly used in distributed forms
+        of verification such as <a href="https://microformats.org/wiki/RelMeAuth">
+        RelMeAuth</a>.
+      </td>
+      <td>{{HTMLElement("link")}}, {{HTMLElement("a")}}</td>
+      <td>
+        {{HTMLElement("area")}}, {{HTMLElement("form")}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
           ><a href="/en-US/docs/Web/HTML/Link_types/modulepreload"
             >modulepreload</a
           ></code

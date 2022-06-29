@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.stencilMask()
 slug: Web/API/WebGLRenderingContext/stencilMask
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -20,7 +21,7 @@ back stencil writemasks to different values.
 ## Syntax
 
 ```js
-void gl.stencilMask(mask);
+stencilMask(mask)
 ```
 
 ### Parameters
@@ -31,7 +32,7 @@ void gl.stencilMask(mask);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

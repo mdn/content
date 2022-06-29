@@ -215,8 +215,8 @@ H
 
 - {{CSSxRef(":has", ":has()")}} {{Experimental_Inline}}
 - {{CSSxRef(":host")}}
-- {{CSSxRef(":host()")}}
-- {{CSSxRef(":host-context()")}} {{Experimental_Inline}}
+- {{CSSxRef(":host", ":host()")}}
+- {{CSSxRef(":host-context", ":host-context()")}} {{Experimental_Inline}}
 - {{CSSxRef(":hover")}}
 
 I

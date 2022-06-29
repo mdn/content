@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.stencilFuncSeparate()
 slug: Web/API/WebGLRenderingContext/stencilFuncSeparate
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -21,12 +22,12 @@ multipass rendering to achieve special effects.
 ## Syntax
 
 ```js
-void gl.stencilFuncSeparate(face, func, ref, mask);
+stencilFuncSeparate(face, func, ref, mask)
 ```
 
 ### Parameters
 
-- face
+- `face`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying whether the front and/or back stencil state is
     updated. The possible values are:
@@ -41,19 +42,13 @@ void gl.stencilFuncSeparate(face, func, ref, mask);
     `gl.ALWAYS`. The possible values are:
 
     - `gl.NEVER`: Never pass.
-    - `gl.LESS`: Pass if
-      `(ref & mask) < (stencil & mask)`.
-    - `gl.EQUAL`: Pass if
-      `(ref & mask) = (stencil & mask)`.
-    - `gl.LEQUAL`: Pass if
-      `(ref & mask) <= (stencil & mask)`.
-    - `gl.GREATER`: Pass if
-      `(ref & mask) > (stencil & mask)`.
-    - `gl.NOTEQUAL`: Pass if
-      `(ref & mask) != (stencil & mask)`.
-    - `gl.GEQUAL`: Pass if
-      `(ref & mask) >= (stencil & mask)`.
-    - `gl.ALWAYS`: Always pass.
+    - `gl.LESS`: Pass if `(ref & mask) < (stencil & mask)`.
+    - `gl.EQUAL`: Pass if `(ref & mask) = (stencil & mask)`.
+    - `gl.LEQUAL`:  Pass if `(ref & mask) <= (stencil & mask)`.
+    - `gl.GREATER`:  Pass if `(ref & mask) > (stencil & mask)`.
+    - `gl.NOTEQUAL`:  Pass if `(ref & mask) != (stencil & mask)`.
+    - `gl.GEQUAL`:  Pass if `(ref & mask) >= (stencil & mask)`.
+    - `gl.ALWAYS`:  Always pass.
 
 - `ref`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the reference value for the stencil test. This
@@ -65,7 +60,7 @@ void gl.stencilFuncSeparate(face, func, ref, mask);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

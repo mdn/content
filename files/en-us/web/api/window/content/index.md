@@ -1,6 +1,7 @@
 ---
 title: Window.content
 slug: Web/API/Window/content
+page-type: web-api-instance-property
 ---
 {{APIRef}}{{non-standard_header}}
 

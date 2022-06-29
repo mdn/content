@@ -1,8 +1,12 @@
 ---
 title: Device Memory API
 slug: Web/API/Device_Memory_API
+page-type: web-api-overview
 tags:
   - Device Memory API
+browser-compat:
+  - api.Navigator.deviceMemory
+  - http.headers.Device-Memory
 ---
 {{DefaultAPISidebar("Device Memory API")}}{{securecontext_header}}{{SeeCompatTable}}
 
@@ -26,19 +30,11 @@ You may also use the [Client Hints](/en-US/docs/Web/HTTP/Client_hints) HTTP Head
 
 ## Specifications
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("Device Memory")}} | {{Spec2("Device Memory")}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-### JavaScript interface
-
-{{Compat("api.Navigator.deviceMemory")}}
-
-### Client Hints extension
-
-{{Compat("http.headers.Device-Memory")}}
+{{Compat}}
 
 ## See also
 

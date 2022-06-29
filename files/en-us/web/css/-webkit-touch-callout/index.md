@@ -58,7 +58,7 @@ When a target is touched and held on iOS, Safari displays a callout information 
 
 ## Specifications
 
-Not part of any standard. Apple has a [description in the Safari CSS Reference](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout).
+Not part of any standard. Apple has a [description in the Safari CSS Reference](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout).
 
 ## Browser compatibility
 

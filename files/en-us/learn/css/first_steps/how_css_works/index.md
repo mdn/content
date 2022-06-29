@@ -8,7 +8,7 @@ tags:
   - Learn
 ---
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Styling_a_biography_page", "Learn/CSS/First_steps")}}
 
 We have learned the basics of CSS, what it is for and how to write simple stylesheets. In this lesson we will take a look at how a browser takes CSS and HTML and turns that into a webpage.
 
@@ -124,7 +124,7 @@ The browser will parse the HTML and create a DOM from it, then parse the CSS. Si
 
 The updated output is as follows:
 
-{{EmbedLiveSample('Applying_CSS_to_the_DOM', '100%', 55)}}
+{{EmbedLiveSample('Applying_CSS_to_the_DOM', '100%', 90)}}
 
 In our [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS) article in the next module we will be using browser DevTools to debug CSS problems, and will learn more about how the browser interprets CSS.
 
@@ -167,16 +167,16 @@ This works particularly well when you want to use a value that is quite new and 
 
 We will look at many more ways to support varying browsers in later lessons.
 
-## And finally
+## Summary
 
-You've nearly finished this module; we only have one more thing to do. In the next article you'll [use your new knowledge](/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge) to restyle an example, testing out some CSS in the process.
+You've nearly finished this module — we only have one more thing to do. In the [Styling a biography page assessment](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page) you'll use your new knowledge to restyle an example, testing out some CSS in the process.
 
-{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Styling_a_biography_page", "Learn/CSS/First_steps")}}
 
 ## In this module
 
-1. [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
-3. [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. How CSS works
-5. [Using your new knowledge](/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+- [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
+- [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
+- [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+- [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
+- [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page)

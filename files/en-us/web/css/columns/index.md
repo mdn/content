@@ -41,6 +41,7 @@ columns: auto auto;
 columns: inherit;
 columns: initial;
 columns: revert;
+columns: revert-layer;
 columns: unset;
 ```
 

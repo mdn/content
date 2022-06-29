@@ -30,6 +30,7 @@ initial-letter-align: ideographic;
 initial-letter-align: inherit;
 initial-letter-align: initial;
 initial-letter-align: revert;
+initial-letter-align: revert-layer;
 initial-letter-align: unset;
 ```
 

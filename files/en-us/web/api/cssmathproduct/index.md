@@ -1,6 +1,7 @@
 ---
 title: CSSMathProduct
 slug: Web/API/CSSMathProduct
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -20,7 +21,7 @@ The **`CSSMathProduct`** interface of the {{domxref('CSS_Object_Model#css_typed_
 
 ## Constructor
 
-- {{domxref("CSSMathProduct.CSSMathProduct()")}}
+- {{domxref("CSSMathProduct.CSSMathProduct", "CSSMathProduct()")}}
   - : Creates a new `CSSMathProduct` object.
 
 ## Properties

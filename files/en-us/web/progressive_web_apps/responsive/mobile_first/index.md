@@ -41,7 +41,7 @@ On top of everything else, you must consider the kinds of situations mobile devi
 
 When developing mobile app layouts, you often run into problems with navigation menus. The concept is the same regardless of the target device — you want to provide a mechanism for users to search for things and get to different views/pages of the application — but because mobile screens are so much smaller, a reasonable desktop navigation can spoil the experience by filling up most of the initial view of the app, covering up the content.
 
-There several ways to solve the problem of navigation getting in the way on mobile, a few of which I'll discuss here. The main objective is to put the content first and to hide away the navigation until the user really needs it.
+There are several ways to solve the problem of navigation getting in the way on mobile, a few of which I'll discuss here. The main objective is to put the content first and to hide away the navigation until the user really needs it.
 
 First of all, you can consider a different navigation mechanism on mobile. So, if you were planning to have a vertical navigation menu on desktop, you might replace this on mobile with a select menu containing the options, or even a single button that when pressed brings the navigation options up in an overlay.
 
@@ -55,7 +55,7 @@ To actually implement responsive/adaptive designs, you will need to enlist a cer
 
 ## A simple example
 
-To demonstrate the concepts, I wanted to cover in this article, I created a very simple app containing a nav menu, heading and single column of text. You can see my [mobile first example running live](https://chrisdavidmills.github.io/good-read/www/), or grab the code to [play with it on Github](https://github.com/chrisdavidmills/good-read). To make my simple example I created a sample app structure from a [Mozilla Mortar](https://github.com/mozilla/mortar) template. I installed the Volo automation tool by running the following on the command line
+To demonstrate the concepts, I wanted to cover in this article, I created a very simple app containing a nav menu, heading and single column of text. You can see my [mobile first example running live](https://chrisdavidmills.github.io/good-read/www/), or grab the code to [play with it on GitHub](https://github.com/chrisdavidmills/good-read). To make my simple example I created a sample app structure from a [Mozilla Mortar](https://github.com/mozilla/mortar) template. I installed the Volo automation tool by running the following on the command line
 
 ```bash
 sudo npm install -g volo

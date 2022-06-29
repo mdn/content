@@ -1,6 +1,7 @@
 ---
 title: Crypto
 slug: Web/API/Crypto
+page-type: web-api-interface
 tags:
   - API
   - Code

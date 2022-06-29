@@ -46,7 +46,9 @@ findIndex(function(element, index, array) { /* ... */ }, thisArg)
 
 - `callbackFn`
 
-  - : Function to execute on each value in the typed array, taking three arguments:
+  - : Function to execute on each value in the typed array.
+
+    The function is called with the following arguments:
 
     - `element`
       - : The current element being processed in the typed array.
@@ -100,7 +102,7 @@ number (or returns `-1` if there is no prime number).
 
 ```js
 function isPrime(element, index, array) {
-  var start = 2;
+  let start = 2;
   while (start <= Math.sqrt(element)) {
     if (element % start++ < 1) {
       return false;
@@ -109,8 +111,8 @@ function isPrime(element, index, array) {
   return element > 1;
 }
 
-var uint8 = new Uint8Array([4, 6, 8, 12]);
-var uint16 = new Uint16Array([4, 6, 7, 12]);
+const uint8 = new Uint8Array([4, 6, 8, 12]);
+const uint16 = new Uint16Array([4, 6, 7, 12]);
 
 console.log(uint8.findIndex(isPrime)); // -1, not found
 console.log(uint16.findIndex(isPrime)); // 2

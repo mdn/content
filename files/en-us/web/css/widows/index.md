@@ -23,6 +23,7 @@ widows: 3;
 widows: inherit;
 widows: initial;
 widows: revert;
+widows: revert-layer;
 widows: unset;
 ```
 

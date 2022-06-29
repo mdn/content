@@ -1,6 +1,7 @@
 ---
 title: CSSMathMax
 slug: Web/API/CSSMathMax
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -19,7 +20,7 @@ The **`CSSMathMax`** interface of the {{domxref('CSS_Object_Model#css_typed_obje
 
 ## Constructor
 
-- {{domxref("CSSMathMax.CSSMathMax()")}}
+- {{domxref("CSSMathMax.CSSMathMax", "CSSMathMax()")}}
   - : Creates a new `CSSMathMax` object.
 
 ## Properties

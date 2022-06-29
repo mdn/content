@@ -1,13 +1,14 @@
 ---
 title: 'SVGGraphicsElement: copy event'
 slug: Web/API/SVGGraphicsElement/copy_event
+page-type: web-api-event
 tags:
   - API
   - Event
   - Reference
   - SVG
   - SVG OM
-browser-compat: api.SVGGraphicsElement.copy_event
+browser-compat: api.Element.copy_event
 ---
 {{APIRef}}
 
@@ -38,7 +39,7 @@ The **`copy`** event fires on {{domxref("SVGGraphicsElement", "SVGGraphicsElemen
 
 The event's default action is to copy the selection (if any) to the clipboard.
 
-A handler for this event can _modify_ the clipboard contents by calling {{domxref("DataTransfer.setData", "setData(format, data)")}} on the event's  {{domxref("ClipboardEvent.clipboardData")}} property, and cancelling the event's default action using [`event.preventDefault()`](/en-US/docs/Web/API/Event/preventDefault).
+A handler for this event can _modify_ the clipboard contents by calling {{domxref("DataTransfer.setData", "setData(format, data)")}} on the event's {{domxref("ClipboardEvent.clipboardData")}} property, and cancelling the event's default action using [`event.preventDefault()`](/en-US/docs/Web/API/Event/preventDefault).
 
 However, the handler cannot _read_ the clipboard data.
 

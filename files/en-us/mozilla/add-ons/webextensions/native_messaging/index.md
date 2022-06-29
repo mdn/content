@@ -10,7 +10,7 @@ tags:
 
 Password managers: The native application manages, stores, and encrypts passwords. Then the native application communicates with the extension to populate web forms.
 
-Native messaging also enables extensions to access resources that are not accessible through WebExtension APIs (e.g, particular hardwares).
+Native messaging also enables extensions to access resources that are not accessible through WebExtension APIs (e.g, particular hardware).
 
 The native application is not installed or managed by the browser. The native application is installed, using the underlying operating system's installation machinery. Create a JSON file called the "host manifest" or "app manifest". Install the JSON file in a defined location. The app manifest file will describe how the browser can connect to the native application.
 
@@ -23,7 +23,7 @@ After installing, the extension can exchange JSON messages with the native appli
 Support for native messaging in extensions is mostly compatible with Chrome, with two main differences:
 
 - The app manifest lists `allowed_extensions` as an array of app IDs, while Chrome lists `allowed_origins`, as an array of `"chrome-extension"` URLs.
-- The app manifest is stored in a different location [compared to Chrome](https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location).
+- The app manifest is stored in a different location [compared to Chrome](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-location).
 
 There's a complete example in the ["`native-messaging`" directory](https://github.com/mdn/webextensions-examples/tree/master/native-messaging) of the `"webextensions-examples"` repository on GitHub. Most example code in this article is taken from that example.
 
@@ -95,7 +95,7 @@ For example, here's a manifest for the `"ping_pong"` native application:
 
 This allows the extension whose ID is `"ping_pong@example.org"` to connect, by passing the name `"ping_pong"` into the relevant {{WebExtAPIRef("runtime")}} API function. The application itself is at `"/path/to/native-messaging/app/ping_pong.py"`.
 
-> **Note:** Chrome identifies allowed extensions with another key: `allowed_origins`, using the ID of the WebExtension. Refer to [Chrome documentation for more details](https://developer.chrome.com/apps/nativeMessaging#native-messaging-host) and see [Chrome incompatibilities below](#chrome_incompatibilities).
+> **Note:** Chrome identifies allowed extensions with another key: `allowed_origins`, using the ID of the WebExtension. Refer to [Chrome documentation for more details](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host) and see [Chrome incompatibilities below](#chrome_incompatibilities).
 
 ### Windows setup
 
@@ -129,7 +129,7 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"
 
 The browser finds the extension based on registry keys which are located in a specific location. You need to add them either programmatically with your final application or manually if you are using the example from GitHub. For more details, refer to [Manifest location](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#manifest_location).
 
-Following with the `ping_pong` example, if using Firefox (see [this page for Chrome](https://developer.chrome.com/apps/nativeMessaging#native-messaging-host-location)), two registry entries should be created for the messaging to work:
+Following with the `ping_pong` example, if using Firefox (see [this page for Chrome](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-location)), two registry entries should be created for the messaging to work:
 
 - `HKEY_CURRENT_USER\Software\Mozilla\NativeMessagingHosts\ping_pong`
 
@@ -175,7 +175,7 @@ Here's an example background script that establishes a connection with the `"pin
 /*
 On startup, connect to the "ping_pong" app.
 */
-var port = browser.runtime.connectNative("ping_pong");
+let port = browser.runtime.connectNative("ping_pong");
 
 /*
 Listen for messages from the app.
@@ -224,7 +224,7 @@ On a click on the browser action, send the app a message.
 */
 browser.browserAction.onClicked.addListener(() => {
   console.log("Sending:  ping");
-  var sending = browser.runtime.sendNativeMessage(
+  let sending = browser.runtime.sendNativeMessage(
     "ping_pong",
     "ping");
   sending.then(onResponse, onError);
@@ -262,7 +262,7 @@ You can quickly get started sending and receiving messages with this NodeJS code
     };
 
     const processData = () => {
-        // Create one big buffer with all all the chunks
+        // Create one big buffer with all the chunks
         const stringData = Buffer.concat(chunks);
 
         // The browser will emit the size as a header of the payload,

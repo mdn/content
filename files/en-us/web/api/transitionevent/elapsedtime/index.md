@@ -1,29 +1,27 @@
 ---
 title: TransitionEvent.elapsedTime
 slug: Web/API/TransitionEvent/elapsedTime
+page-type: web-api-instance-property
 tags:
   - API
   - CSS
   - CSS3 Transitions
   - CSSOM
-  - Experimental
   - Property
   - Reference
   - TransitionEvent
 browser-compat: api.TransitionEvent.elapsedTime
 ---
-{{ apiref("CSSOM") }} {{SeeCompatTable}}
+{{ apiref("CSSOM") }}
 
 The **`TransitionEvent.elapsedTime`** read-only property is a
 `float` giving the amount of time the animation has been running, in seconds,
 when this event fired. This value is not affected by the {{cssxref("transition-delay")}}
 property.
 
-## Syntax
+## Value
 
-```js
-name = TransitionEvent.elapsedTime
-```
+A number.
 
 ## Specifications
 

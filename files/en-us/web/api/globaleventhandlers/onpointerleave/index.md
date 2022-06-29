@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onpointerleave
 slug: Web/API/GlobalEventHandlers/onpointerleave
+page-type: web-api-instance-property
 tags:
   - API
   - GlobalEventHandlers
@@ -27,7 +28,7 @@ the [Pointer Events API](/en-US/docs/Web/API/Pointer_events).
 ```js
 EventTarget.onpointerleave = leaveHandler;
 
-var leaveHandler = EventTarget.onpointerleave;
+const leaveHandler = EventTarget.onpointerleave;
 ```
 
 ### Value
@@ -49,7 +50,7 @@ function leaveHandler(ev) {
  // Process the pointerleave event
 }
 function init() {
- var el=document.getElementById("target1");
+ const el=document.getElementById("target1");
  el.onpointerleave = leaveHandler;
 }
 </script>
@@ -60,8 +61,7 @@ function init() {
 </html>
 ```
 
-See [Using Pointer
-Events](/en-US/docs/Web/API/Pointer_events/Using_Pointer_Events) for additional details.
+See [Using Pointer Events](/en-US/docs/Web/API/Pointer_events/Using_Pointer_Events) for additional details.
 
 ## Specifications
 
@@ -74,8 +74,7 @@ Events](/en-US/docs/Web/API/Pointer_events/Using_Pointer_Events) for additional 
 ## See also
 
 - [Pointer events](/en-US/docs/Web/API/Pointer_events)
-- [Using pointer
-  events](/en-US/docs/Web/API/Pointer_events/Using_Pointer_Events)
+- [Using pointer events](/en-US/docs/Web/API/Pointer_events/Using_Pointer_Events)
 - [`Document: pointerleave`](/en-US/docs/Web/API/Document/pointerleave_event)
   event
 - [`HTMLElement: pointerleave`](/en-US/docs/Web/API/HTMLElement/pointerleave_event)

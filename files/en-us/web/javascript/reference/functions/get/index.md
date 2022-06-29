@@ -46,9 +46,9 @@ setter in conjunction to create a type of pseudo-property.
 Note the following when working with the `get` syntax:
 
 - It can have an identifier which is either a number or a string;
-- It must have exactly zero parameters (see [Incompatible ES5
-  change: literal getter and setter functions must now have exactly zero or one
-  arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) for more information);
+- It must have exactly zero parameters
+  (see [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/)
+  for more information);
 - It must not appear in an object literal with another `get` e.g. the following is forbidden
 
   ```js example-bad
@@ -141,7 +141,7 @@ of calculating the value until the value is needed. If it is never needed, you n
 the cost.
 
 An additional optimization technique to lazify or delay the calculation of a property
-value and cache it for later access are **smart (or "[memoized](https://en.wikipedia.org/wiki/Memoization)") getters**.
+value and cache it for later access are _smart_ (or _[memoized](https://en.wikipedia.org/wiki/Memoization)_) getters.
 The value is calculated the first time the getter is called, and is then cached so
 subsequent accesses return the cached value without recalculating it. This is useful in
 the following situations:
@@ -218,5 +218,4 @@ console.log(
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object/__defineGetter__", "__defineGetter__")}}
 - {{jsxref("Object/__defineSetter__", "__defineSetter__")}}
-- [Defining
-  Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters) in JavaScript Guide
+- [Defining getters and setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters) in JavaScript Guide

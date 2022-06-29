@@ -1,6 +1,7 @@
 ---
 title: EncodedAudioChunk.copyTo()
 slug: Web/API/EncodedAudioChunk/copyTo
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,17 +17,17 @@ The **`copyTo()`** method of the {{domxref("EncodedAudioChunk")}} interface copi
 ## Syntax
 
 ```js
-EncodedAudioChunk.copyTo(destination)
+copyTo(destination)
 ```
 
 ### Parameters
 
 - `destination`
-  - : A {{domxref("BufferSource")}} that the data can be copied to.
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} that the data can be copied to.
 
-### Return Value
+### Return value
 
-{{jsxref("Undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

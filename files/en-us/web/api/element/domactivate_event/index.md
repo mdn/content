@@ -1,6 +1,7 @@
 ---
 title: 'Element: DOMActivate event'
 slug: Web/API/Element/DOMActivate_event
+page-type: web-api-event
 tags:
   - API
   - DOM
@@ -50,8 +51,8 @@ The **`DOMActivate`** event is fired at an element when it becomes active, such 
   <!-- ECMAScript to change the radius -->
   <script type="application/ecmascript"><![CDATA[
     function change(evt) {
-      var circle = evt.target;
-      var currentRadius = circle.getFloatTrait("r");
+      const circle = evt.target;
+      const currentRadius = circle.getFloatTrait("r");
       if (currentRadius == 100)
         circle.setFloatTrait("r", currentRadius * 2);
       else

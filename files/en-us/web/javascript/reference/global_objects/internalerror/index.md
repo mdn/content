@@ -30,13 +30,15 @@ Example cases are mostly when something is too large, e.g.:
   - : Error message. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.name", "InternalError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "InternalError.prototype.fileName")}}
+- {{jsxref("Error.prototype.cause", "InternalError.prototype.cause")}}
+  - : Error cause. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.fileName", "InternalError.prototype.fileName")}} {{non-standard_inline}}
   - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "InternalError.prototype.lineNumber")}}
+- {{jsxref("Error.prototype.lineNumber", "InternalError.prototype.lineNumber")}} {{non-standard_inline}}
   - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "InternalError.prototype.columnNumber")}}
+- {{jsxref("Error.prototype.columnNumber", "InternalError.prototype.columnNumber")}} {{non-standard_inline}}
   - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "InternalError.prototype.stack")}}
+- {{jsxref("Error.prototype.stack", "InternalError.prototype.stack")}} {{non-standard_inline}}
   - : Stack trace. Inherited from {{jsxref("Error")}}.
 
 ## Examples
@@ -55,7 +57,7 @@ function loop(x) {
 loop(0);
 ```
 
-Setting this condition to an extremely high value, won't work:
+Setting this condition to an extremely high value, may not work:
 
 ```js example-bad
 function loop(x) {

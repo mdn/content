@@ -1,16 +1,16 @@
 ---
 title: Selection.toString()
 slug: Web/API/Selection/toString
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - HTML Editing
   - Method
   - Reference
   - Selection
 browser-compat: api.Selection.toString
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`Selection.toString()`** method returns a string
 currently being represented by the selection object, i.e. the currently selected text.
@@ -18,8 +18,12 @@ currently being represented by the selection object, i.e. the currently selected
 ## Syntax
 
 ```js
-sel.toString()
+toString()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

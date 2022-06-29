@@ -1,6 +1,7 @@
 ---
 title: WebGLSampler
 slug: Web/API/WebGLSampler
+page-type: web-api-interface
 tags:
   - API
   - Experimental

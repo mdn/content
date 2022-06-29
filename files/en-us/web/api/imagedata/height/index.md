@@ -1,6 +1,7 @@
 ---
 title: ImageData.height
 slug: Web/API/ImageData/height
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -14,13 +15,11 @@ browser-compat: api.ImageData.height
 The readonly **`ImageData.height`** property returns the number
 of rows in the {{domxref("ImageData")}} object.
 
-## Syntax
+## Value
 
-```js
-imageData.height
-```
+A number.
 
-## Example
+## Examples
 
 This example creates an `ImageData` object that is 200 pixels wide and 100
 pixels tall. Thus, the `height` property is `100`.

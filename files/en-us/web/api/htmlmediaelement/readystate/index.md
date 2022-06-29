@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.readyState
 slug: Web/API/HTMLMediaElement/readyState
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -15,13 +16,7 @@ browser-compat: api.HTMLMediaElement.readyState
 The **`HTMLMediaElement.readyState`** property indicates the
 readiness state of the media.
 
-## Syntax
-
-```js
-var readyState = audioOrVideo.readyState;
-```
-
-### Value
+## Value
 
 An `unsigned short`. Possible values are:
 
@@ -88,7 +83,7 @@ audio will play.
 ```
 
 ```js
-var obj = document.getElementById('example');
+const obj = document.getElementById('example');
 
 obj.addEventListener('loadeddata', function() {
 

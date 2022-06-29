@@ -1,6 +1,7 @@
 ---
 title: Storage.length
 slug: Web/API/Storage/length
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -16,17 +17,11 @@ The **`length`** read-only property of the
 {{domxref("Storage")}} interface returns the number of data items stored in a given
 `Storage` object.
 
-## Syntax
-
-```js
-length = storage.length;
-```
-
-### Return value
+## Value
 
 The number of items stored in the `Storage` object.
 
-## Example
+## Examples
 
 The following function adds three data items to the local storage for the current
 domain, then returns the number of items in the storage:
@@ -53,5 +48,4 @@ function populateStorage() {
 
 ## See also
 
-- [Using the
-  Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

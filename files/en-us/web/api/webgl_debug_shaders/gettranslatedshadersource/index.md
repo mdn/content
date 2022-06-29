@@ -1,6 +1,7 @@
 ---
 title: WEBGL_debug_shaders.getTranslatedShaderSource()
 slug: Web/API/WEBGL_debug_shaders/getTranslatedShaderSource
+page-type: webgl-extension-method
 tags:
   - API
   - Method
@@ -18,12 +19,12 @@ you to debug a translated shader.
 ## Syntax
 
 ```js
-gl.getExtension('WEBGL_debug_shaders').getTranslatedShaderSource(shader);
+getTranslatedShaderSource(shader)
 ```
 
 ### Parameters
 
-- shader
+- `shader`
   - : A {{domxref("WebGLShader")}} to get the translated source from.
 
 ### Return value

@@ -1,6 +1,7 @@
 ---
 title: NavigatorUAData
 slug: Web/API/NavigatorUAData
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -52,7 +53,7 @@ navigator.userAgentData.getHighEntropyValues(
   "model",
   "platform",
   "platformVersion",
-  "uaFullVersion"])
+  "fullVersionList"])
   .then(ua => { console.log(ua) });
 ```
 

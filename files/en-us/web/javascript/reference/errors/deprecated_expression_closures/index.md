@@ -9,8 +9,8 @@ tags:
 {{jsSidebar("Errors")}}
 
 The JavaScript warning "expression closures are deprecated" occurs when the
-non-standard [expression
-closure](/en-US/docs/Web/JavaScript/Reference/Operators/Expression_closures) syntax (shorthand function syntax) is used.
+non-standard [expression closure](/en-US/docs/Web/JavaScript/Reference/Operators/Expression_closures)
+syntax (shorthand function syntax) is used.
 
 ## Message
 
@@ -24,8 +24,8 @@ Warning. JavaScript execution won't be halted.
 
 ## What went wrong?
 
-The non-standard [expression
-closure](/en-US/docs/Web/JavaScript/Reference/Operators/Expression_closures) syntax (shorthand function syntax) is deprecated and shouldn't be used
+The non-standard [expression closure](/en-US/docs/Web/JavaScript/Reference/Operators/Expression_closures)
+syntax (shorthand function syntax) is deprecated and shouldn't be used
 anymore. This syntax will be removed entirely in [bug 1083458](https://bugzilla.mozilla.org/show_bug.cgi?id=1083458) and
 scripts using it will throw a {{jsxref("SyntaxError")}} then.
 
@@ -59,8 +59,7 @@ var obj = {
 
 ### Standard syntax using arrow functions
 
-Alternatively, you can use [arrow
-functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions):
+Alternatively, you can use [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions):
 
 ```js example-good
 var x = () => 1;
@@ -77,8 +76,7 @@ var obj = {
 };
 ```
 
-With ES2015 [method
-definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions), this can be converted to:
+With ES2015 [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions), this can be converted to:
 
 ```js example-good
 var obj = {
@@ -89,9 +87,6 @@ var obj = {
 
 ## See also
 
-- [Expression
-  closures](/en-US/docs/Web/JavaScript/Reference/Operators/Expression_closures)
-- [Arrow
-  functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
-- [Method
-  definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
+- [Expression closures](/en-US/docs/Web/JavaScript/Reference/Operators/Expression_closures)
+- [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- [Method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
