@@ -395,7 +395,7 @@ Now in order to create a complete sample `traps` list, for didactic purposes, we
 */
 
 const docCookies = new Proxy(docCookies, {
-  get (oTarget, sKey) {
+  get: function (oTarget, sKey) {
     return oTarget[sKey] || oTarget.getItem(sKey) || undefined;
   },
   set: function (oTarget, sKey, vValue) {
