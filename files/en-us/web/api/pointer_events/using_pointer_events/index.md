@@ -178,9 +178,9 @@ In order to make each touch's drawing look different, the `colorForTouch()` func
 
 ```js
 function colorForTouch(touch) {
-  const r = touch.pointerId % 16;
-  const g = Math.floor(touch.pointerId / 3) % 16;
-  const b = Math.floor(touch.pointerId / 7) % 16;
+  let r = touch.pointerId % 16;
+  let g = Math.floor(touch.pointerId / 3) % 16;
+  let b = Math.floor(touch.pointerId / 7) % 16;
   r = r.toString(16); // make it a hex digit
   g = g.toString(16); // make it a hex digit
   b = b.toString(16); // make it a hex digit
