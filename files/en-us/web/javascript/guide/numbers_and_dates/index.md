@@ -106,8 +106,8 @@ The following table summarizes the `Number` object's properties.
 
 | Property                                             | Description                                                                                                                                        |
 | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Number.MAX_VALUE")}}             | The largest representable number (`±1.7976931348623157e+308`)                                                                                      |
-| {{jsxref("Number.MIN_VALUE")}}             | The smallest representable number (`±5e-324`)                                                                                                      |
+| {{jsxref("Number.MAX_VALUE")}}             | The largest positive representable number (`1.7976931348623157e+308`)                                                                                      |
+| {{jsxref("Number.MIN_VALUE")}}             | The smallest positive representable number (`5e-324`)                                                                                                      |
 | {{jsxref("Number.NaN")}}                     | Special "not a number" value                                                                                                                       |
 | {{jsxref("Number.NEGATIVE_INFINITY")}} | Special negative infinite value; returned on overflow                                                                                              |
 | {{jsxref("Number.POSITIVE_INFINITY")}} | Special positive infinite value; returned on overflow                                                                                              |

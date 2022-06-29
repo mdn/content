@@ -48,21 +48,21 @@ The following example checks all `PerformanceEntry` properties to see if the bro
 ```js
 function print_PerformanceEntries() {
   // Use getEntries() to get a list of all performance entries
-  var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
+  const p = performance.getEntries();
+  for (let i=0; i < p.length; i++) {
     console.log("PerformanceEntry[" + i + "]");
     print_PerformanceEntry(p[i]);
   }
 }
 function print_PerformanceEntry(perfEntry) {
-  var properties = ["name",
+  const properties = ["name",
                     "entryType",
                     "startTime",
                     "duration"];
 
-  for (var i=0; i < properties.length; i++) {
+  for (let i=0; i < properties.length; i++) {
     // Check each property
-    var supported = properties[i] in perfEntry;
+    const supported = properties[i] in perfEntry;
     if (supported) {
       var value = perfEntry[properties[i]];
       console.log("... " + properties[i] + " = " + value);

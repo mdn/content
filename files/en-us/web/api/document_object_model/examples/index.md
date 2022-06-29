@@ -303,12 +303,12 @@ function showEventProperties(e) {
     cell.appendChild(document.createTextNode(text));
   }
 
-  const e = e || window.event;
-  document.getElementById('eventType').innerHTML = e.type;
+  const event = e || window.event;
+  document.getElementById('eventType').innerHTML = event.type;
 
   const table = document.createElement('table');
   const thead = table.createTHead();
-  const row = thead.insertRow(-1);
+  let row = thead.insertRow(-1);
   const labelList = ['#', 'Property', 'Value'];
   const len = labelList.length;
 
@@ -319,12 +319,12 @@ function showEventProperties(e) {
   const tbody = document.createElement('tbody');
   table.appendChild(tbody);
 
-  for (let p in e) {
+  for (let p in event) {
     row = tbody.insertRow(-1);
     row.className = (row.rowIndex % 2)? 'odd':'even';
     addCell(row, row.rowIndex);
     addCell(row, p);
-    addCell(row, e[p]);
+    addCell(row, event[p]);
   }
 
   document.body.appendChild(table);

@@ -67,7 +67,7 @@ Highlights:
 - {{domxref("XMLHttpRequest.responseURL")}} has been adapted to the latest spec and doesn't include the fragment (`'#xyz'`) of the URL, if relevant ({{bug(1073882)}}).
 - The internal, non-standard, `File.mozFullPath` property is no more visible from content ({{bug(1048293)}}).
 - The constructor of {{domxref("File")}} has been extended to match the specification ({{bug(1047483)}}).
-- An experimental implementation of `AbortablePromise`, a promise that can be aborted by a different entity that the one who created it, has been added. It is prefixed with `Moz` and controlled by the `dom.abortablepromise.enabled`property, defaulting to `false` ({{bug(1035060)}}).
+- An experimental implementation of `AbortablePromise`, a promise that can be aborted by a different entity that the one who created it, has been added. It is prefixed with `Moz` and controlled by the `dom.abortablepromise.enabled` property, defaulting to `false` ({{bug(1035060)}}).
 - The non-standard {{domxref("Navigator.mozIsLocallyAvailable")}} property has been removed ({{bug(1066826)}}).
 - The preference `network.websocket.enabled,` `true` by default, has been removed; [Websocket](/en-US/docs/Web/API/WebSockets_API) API cannot be deactivated anymore ({{bug(1091016)}}).
 - The non-standard methods and properties of {{domxref("Crypto")}} have been removed ({{bug(1030963)}}). Only methods and properties defined in the standard WebCrypto API are left.

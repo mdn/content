@@ -41,6 +41,19 @@ No notable changes.
 
 ### WebDriver conformance
 
+#### WebDriver BiDi
+
+- There are some improvements to Webdriver BiDi's `browsingContext.navigate`
+  - Fixed edge cases where the navigation could incorrectly timeout ({{bug(1766217)}}).
+  - Added support for hash changes ({{bug(1763127)}}).
+  - Added support navigation to error pages ({{bug(1763124)}}).
+
+#### Marionette
+
+- Allow marionette to connect to a windowless instance of Firefox  ({{bug(1726465)}}).
+- Fixed issue where `WebDriver:Navigate` with a PageLoadStrategy of "none" returns before navigation has started  ({{bug(1754132)}}).
+- Fixed a potential race condition in `WebDriver:SwitchToWindow` when switching to a different tab  ({{bug(1749666)}}).
+
 ## Changes for add-on developers
 
 - The {{WebExtAPIRef("scripting")}} API, which provides features to execute script, insert and remove CSS, and manage the registration of content scripts is now available to Manifest V2 extensions ({{bug(1766615)}}).

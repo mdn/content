@@ -471,7 +471,7 @@
 /en-US/docs/CSS/Attribute_selectors	/en-US/docs/Web/CSS/Attribute_selectors
 /en-US/docs/CSS/Aural	/en-US/docs/Web/CSS/@media/aural
 /en-US/docs/CSS/CSS3_Columns	/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
-/en-US/docs/CSS/CSS_Properties_Reference	/en-US/docs/Web/CSS/CSS_Properties_Reference
+/en-US/docs/CSS/CSS_Properties_Reference	/en-US/docs/Web/CSS/Reference#index
 /en-US/docs/CSS/CSS_Reference	/en-US/docs/Web/CSS/Reference
 /en-US/docs/CSS/CSS_Reference/Mozilla_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/CSS/CSS_Reference/Webkit_Extensions	/en-US/docs/Web/CSS/Webkit_Extensions
@@ -3618,6 +3618,7 @@
 /en-US/docs/Glossary/Serialize	/en-US/docs/Glossary/Serialization
 /en-US/docs/Glossary/Spartan	/en-US/docs/Glossary/Microsoft_Edge
 /en-US/docs/Glossary/Static_property	/en-US/docs/Glossary/property/JavaScript
+/en-US/docs/Glossary/Symbol	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /en-US/docs/Glossary/Transmission_Control_Protocol_(TCP)	/en-US/docs/Glossary/TCP
 /en-US/docs/Glossary/URI/www_vs_non-www_URLs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 /en-US/docs/Glossary/WWW	/en-US/docs/Glossary/World_Wide_Web
@@ -10528,6 +10529,7 @@
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Examples	/en-US/docs/Web/Accessibility/ARIA/ARIA_Test_Cases
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Complementary_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Alert_Role
+/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role	/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/en-US/docs/web/Accessibility/ARIA/Attributes/aria-activedescendant
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute/	/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby/
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute/	/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden/
@@ -10543,13 +10545,23 @@
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute/	/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin/
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute/	/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow/
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute/	/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext/
+/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_article_role	/en-US/docs/Web/Accessibility/ARIA/Roles/article_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_banner_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role	/en-US/docs/Web/Accessibility/ARIA/Roles/button_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_checkbox_role	/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role	/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role
+/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role	/en-US/docs/Web/Accessibility/ARIA/Roles/group_role
+/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role	/en-US/docs/Web/Accessibility/ARIA/Roles/link_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role	/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role
+/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role	/en-US/docs/Web/Accessibility/ARIA/Roles/log_role
+/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role	/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role
+/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role	/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role
+/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role	/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role
+/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role	/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role
+/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role	/en-US/docs/Web/Accessibility/ARIA/Roles/status_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_switch_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Switch_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_textbox_role	/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role
+/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role	/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-acceleratorkey	/en-US/docs/Web/HTML/Global_attributes/x-ms-acceleratorkey
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-format-detection	/en-US/docs/Web/HTML/Global_attributes/x-ms-format-detection
 /en-US/docs/Web/Accessibility/ARIA/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA/forms/Basic_form_hints
@@ -10963,6 +10975,7 @@
 /en-US/docs/Web/CSS/CSS_Logical_Properties/Logical_properties_for_floating_and_positioning	/en-US/docs/Web/CSS/CSS_Logical_Properties/Floating_and_positioning
 /en-US/docs/Web/CSS/CSS_Logical_Properties/Logical_properties_for_margins,_borders_and_paddin	/en-US/docs/Web/CSS/CSS_Logical_Properties/Margins_borders_padding
 /en-US/docs/Web/CSS/CSS_Masks	/en-US/docs/Web/CSS/CSS_Masking
+/en-US/docs/Web/CSS/CSS_Properties_Reference	/en-US/docs/Web/CSS/Reference#index
 /en-US/docs/Web/CSS/CSS_Reference	/en-US/docs/Web/CSS/Reference
 /en-US/docs/Web/CSS/CSS_Reference/Mozilla_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/Web/CSS/CSS_Reference/Webkit_Extensions	/en-US/docs/Web/CSS/Webkit_Extensions

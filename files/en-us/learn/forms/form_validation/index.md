@@ -688,7 +688,7 @@ The HTML is almost the same; we just removed the HTML validation features.
     </label>
   </p>
   <!-- Some legacy browsers need to have the `type` attribute
-       explicitly set to `submit` on the `button`element -->
+       explicitly set to `submit` on the `button` element -->
   <button type="submit">Submit</button>
 </form>
 ```

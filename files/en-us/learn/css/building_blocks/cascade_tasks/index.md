@@ -18,7 +18,7 @@ The aim of this skill test is to assess whether you understand universal propert
 
 ## Task
 
-In this task, we want you to use one of the special values we looked at in the [controlling inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#controlling_inheritance) section to write a declaration in a new rule that will reset the background color back to white, without using an actual color value.
+In this task, we want you to use one of the special values we looked at in the [controlling inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#controlling_inheritance) section. To write a declaration in a new rule that will reset the background color to white, without using an actual color value and without touching the lightgreen declaration, use the cascade layer order to make the links rebeccapurple.
 
 Your final result should look like the image below:
 
