@@ -91,18 +91,18 @@ const importObject = {
   }
 };
 
-const obj = await WebAssembly.instantiateStreaming(fetch("example.wasm"), importObject);
-
-try {
-  console.log(obj.instance.exports.run());
-} catch(e) {
-  console.error(e);
-  // Check we have the right tag for the exception
-  // If so, use getArg() to inspect it
-  if (e.is(tagToImport)) {
-    console.log(`getArg 0 : ${e.getArg(tagToImport, 0)}`);
-  }
-}
+WebAssembly.instantiateStreaming(fetch("example.wasm"), importObject)
+  .then(obj => {
+    console.log(obj.instance.exports.run());
+  })
+  .catch(e => {
+    console.error(e);
+    // Check we have the right tag for the exception
+    // If so, use getArg() to inspect it
+    if (e.is(tagToImport)) {
+      console.log(`getArg 0 : ${e.getArg(tagToImport, 0)}`);
+    }
+  });
 
 /* Log output
 example.js:40 WebAssembly.Exception: wasm exception
