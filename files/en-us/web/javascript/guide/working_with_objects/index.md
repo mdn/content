@@ -61,7 +61,7 @@ myCar['model'] = 'Mustang';
 myCar['year'] = 1969;
 ```
 
-An object property name can be any valid JavaScript string, or anything that can be _converted_ to a string, including an empty string. However, any property name that is not a valid JavaScript identifier cannot use dot notation. For example, a property name that has a space or a hyphen, that starts with a number, or that is held inside a variable can only be accessed using by the square bracket notation. This notation is also very useful when property names are to be dynamically determined, i.e. not determined until runtime. Examples are as follows:
+An object property name can be any valid JavaScript string, or anything that can be _converted_ to a string, including an empty string. However, any property name that is not a valid JavaScript identifier cannot use dot notation. For example, a property name that has a space or a hyphen, that starts with a number, or that is held inside a variable can only be accessed using the square bracket notation. This notation is also very useful when property names are to be dynamically determined, i.e. not determinable until runtime. Examples are as follows:
 
 ```js
 // four variables are created and assigned in a single go,
