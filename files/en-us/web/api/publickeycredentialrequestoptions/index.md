@@ -37,7 +37,7 @@ None.
 ## Examples
 
 ```js
-var options = {
+const options = {
   challenge: new Uint8Array([/* bytes sent from the server */]),
   rpId: "example.com", /* will only work if the current domain
                          is something like foo.example.com */

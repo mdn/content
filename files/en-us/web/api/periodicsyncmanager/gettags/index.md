@@ -23,7 +23,7 @@ currently registered for periodic syncing.
 ## Syntax
 
 ```js
-var tags = PeriodicSyncManager.getTags();
+const tags = PeriodicSyncManager.getTags();
 ```
 
 ### Parameters

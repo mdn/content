@@ -40,7 +40,7 @@ The following demo uses the WebVR API to update the view of a simple {{domxref("
 
 ```js
 function setView() {
-  var posState = gPositionSensor.getImmediateState();
+  const posState = gPositionSensor.getImmediateState();
   if(posState.hasPosition) {
     posPara.textContent = 'Position: x' + roundToTwo(posState.position.x) + " y"
                                 + roundToTwo(posState.position.y) + " z"

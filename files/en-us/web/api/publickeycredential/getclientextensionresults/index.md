@@ -56,7 +56,7 @@ and their results from the processing.
 ## Examples
 
 ```js
-var publicKey = {
+const publicKey = {
   // Here are the extensions (as "inputs")
   extensions: {
     "loc": true, // This extension has been defined to include location information in attestation
@@ -82,7 +82,7 @@ var publicKey = {
 
 navigator.credentials.create({ publicKey })
   .then(function (newCredentialInfo) {
-    var myBuffer = newCredentialInfo.getClientExtensionResults();
+    const myBuffer = newCredentialInfo.getClientExtensionResults();
     // myBuffer will contain the result of any of the processing of the "loc" and "uvi" extensions
   }).catch(function (err) {
      console.error(err);

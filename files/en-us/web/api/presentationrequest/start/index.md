@@ -21,7 +21,7 @@ user to select a display and grant permission to use that display.
 ## Syntax
 
 ```js
-var promise = presentationRequest.start()
+const promise = presentationRequest.start()
 promise.then(function(PresentationConnection) { /* ... */ })
        .catch(function(error) { ...})
 ```

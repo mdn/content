@@ -32,7 +32,7 @@ identifier is expected to be globally unique and is appointed for the current
 ## Examples
 
 ```js
-var options = {
+const options = {
   challenge: new Uint8Array(26) /* from the server */,
   rp: {
     name: "Example CORP",
@@ -53,7 +53,7 @@ var options = {
 
 navigator.credentials.create({  publicKey: options })
   .then(function (pubKeyCredential) {
-    var rawId = pubKeyCredential.rawId;
+    const rawId = pubKeyCredential.rawId;
     // Do something with rawId
 }).catch(function (err) {
   // Deal with any error

@@ -53,17 +53,17 @@ Example codes below highlight the usage of main features of the Presentation API
 <button id="presentBtn" style="display: none;">Present</button>
 <script>
   // The Present button is visible if at least one presentation display is available
-  var presentBtn = document.getElementById("presentBtn");
+  const presentBtn = document.getElementById("presentBtn");
   // It is also possible to use relative presentation URL e.g. "presentation.html"
-  var presUrls = ["http://example.com/presentation.html",
+  const presUrls = ["http://example.com/presentation.html",
                   "http://example.net/alternate.html"];
   // show or hide present button depending on display availability
-  var handleAvailabilityChange = function(available) {
+  const handleAvailabilityChange = function(available) {
     presentBtn.style.display = available ? "inline" : "none";
   };
   // Promise is resolved as soon as the presentation display availability is
   // known.
-  var request = new PresentationRequest(presUrls);
+  const request = new PresentationRequest(presUrls);
   request.getAvailability().then(function(availability) {
     // availability.value may be kept up-to-date by the controlling UA as long
     // as the availability object is alive. It is advised for the web developers
@@ -103,9 +103,9 @@ Example codes below highlight the usage of main features of the Presentation API
 <!-- controller.html -->
 <button id="reconnectBtn" style="display: none;">Reconnect</button>
 <script>
-  var reconnect = function () {
+  const reconnect = function () {
     // read presId from localStorage if exists
-    var presId = localStorage["presId"];
+    const presId = localStorage["presId"];
     // presId is mandatory when reconnecting to a presentation.
     if (!!presId) {
       request.reconnect(presId)
@@ -217,7 +217,7 @@ Example codes below highlight the usage of main features of the Presentation API
 ```html
 <!-- presentation.html -->
 <script>
-  var addConnection = function(connection) {
+  const addConnection = function(connection) {
     this.onmessage = function (message) {
       if (message.data == "say hello")
         this.send("hello");
@@ -249,8 +249,8 @@ Example codes below highlight the usage of main features of the Presentation API
 <!-- presentation.html -->
 <script>
   connection.onmessage = function (message) {
-    var messageObj = JSON.parse(message.data);
-    var spanElt = document.createElement("SPAN");
+    const messageObj = JSON.parse(message.data);
+    const spanElt = document.createElement("SPAN");
     spanElt.lang = messageObj.lang;
     spanElt.textContent = messageObj.string;
     document.appendChild(spanElt);

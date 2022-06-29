@@ -88,7 +88,7 @@ The {{domxref("Permissions.query()")}} method takes a `PermissionDescriptor` dic
 Starting in Firefox 47, you can now revoke existing permissions, using the {{domxref("Permissions.revoke()")}} method. This works in exactly the same way as the {{domxref("Permissions.query()")}} method, except that it causes an existing permission to be reverted back to its default state when the promise successfully resolves (which is usually `prompt`). See the following code in our demo:
 
 ```js
-var revokeBtn = document.querySelector('.revoke');
+const revokeBtn = document.querySelector('.revoke');
 
   ...
 

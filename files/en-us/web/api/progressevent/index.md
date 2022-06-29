@@ -44,7 +44,7 @@ _Also inherits methods from its parent {{domxref("Event")}}._
 The following example adds a `ProgressEvent` to a new {{domxref("XMLHTTPRequest")}} and uses it to display the status of the request.
 
 ```js
-var progressBar = document.getElementById("p"),
+const progressBar = document.getElementById("p"),
     client = new XMLHttpRequest()
 client.open("GET", "magical-unicorns")
 client.onprogress = function(pe) {

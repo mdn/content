@@ -43,7 +43,7 @@ This code snippet is taken from a [push messaging and notification sample](https
       .then(function(subscription) {
         // Enable any UI which subscribes / unsubscribes from
         // push messages.
-        var pushButton = document.querySelector('.js-push-button');
+        const pushButton = document.querySelector('.js-push-button');
         pushButton.disabled = false;
 
         if (!subscription) {

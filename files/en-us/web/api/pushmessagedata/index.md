@@ -40,7 +40,7 @@ None.
 
 ```js
 self.addEventListener('push', function(event) {
-  var obj = event.data.json();
+  const obj = event.data.json();
 
   if(obj.action === 'subscribe' || obj.action === 'unsubscribe') {
     fireNotification(obj, event);
