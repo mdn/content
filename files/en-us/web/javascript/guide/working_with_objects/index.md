@@ -113,7 +113,7 @@ console.log(myObj.myString); //[Log] This key is in variable str
 This allows accessing any property as determined at runtime:
 
 ```js
-let propertyName = 'make';
+const propertyName = 'make';
 myCar[propertyName] = 'Ford';
 
 // access different properties by changing the contents of the variable
@@ -130,7 +130,7 @@ You can use the bracket notation with [`for...in`](/en-US/docs/Web/JavaScript/Re
 ```js
 function showProps(obj, objName) {
   let result = '';
-  for (let i in obj) {
+  for (const i in obj) {
     // obj.hasOwnProperty() is used to exclude properties from the object's prototype chain
     if (obj.hasOwnProperty(i)) {
       result += `${objName}.${i} = ${obj[i]}\n`;
