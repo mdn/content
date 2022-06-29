@@ -225,6 +225,7 @@ You can import styles and create layers based on specific conditions using [medi
 
 There is no equivalent, yet, for the {{HTMLElement('link')}} method of linking stylesheets. Creating a `layer` attribute is being considered, but, as of this writing (July 2022), there is no specification or support. For now, use `@import` to import a stylesheet into a layer when you can’t use `@layer` within the stylesheet.
 
+# END OF NEW CONTENT. STILL A DRAFT
 
 ## Test your skills!
 
