@@ -197,7 +197,7 @@ These functions are used to send event activity to the application's window (to 
 
 ```js
 // Log events flag
-const logEvents = false;
+let logEvents = false;
 
 // Logging/debugging functions
 function enableLog(ev) {
