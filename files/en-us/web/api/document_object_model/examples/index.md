@@ -308,7 +308,7 @@ function showEventProperties(e) {
 
   const table = document.createElement('table');
   const thead = table.createTHead();
-  var row = thead.insertRow(-1);
+  let row = thead.insertRow(-1);
   const labelList = ['#', 'Property', 'Value'];
   const len = labelList.length;
 
