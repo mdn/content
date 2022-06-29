@@ -21,7 +21,7 @@ function log(s) {
 }
 function do_work (n) {
   for (let i=0 ; i < n; i++) {
-     const m = Math.random();
+     const m = Math.random(); // This is an example of work taking some time
   }
 }
 function print_perf_entry(pe) {
