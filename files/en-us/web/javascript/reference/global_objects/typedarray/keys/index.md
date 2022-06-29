@@ -35,11 +35,11 @@ A new _array iterator_ object.
 ### Iteration using for...of loop
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArray = arr.keys();
+const arr = new Uint8Array([10, 20, 30, 40, 50]);
+const eArray = arr.keys();
 // your browser must support for..of loop
 // and let-scoped variables in for loops
-for (let n of eArray) {
+for (const n of eArray) {
   console.log(n);
 }
 ```
