@@ -16,7 +16,7 @@ The **`TypedArray.name`** property represents a string value of the typed array 
 
 ## Description
 
-`TypedArray` objects differ from each other in the number of bytes per element and in the way the bytes are interpreted. The `name` property describes of what data type the array consists. The first part can be `Int` for "integer" or `Uint` for an "unsigned integer", also `Float` for "floating point" is used. The second part is a number describing the bit-size of the array. Finally, the object type is `Array`, with `ClampedArray` as a special case. Please see {{jsxref("Uint8ClampedArray")}} for more details.
+`TypedArray` objects differ from each other in the number of bytes per element and in the way the bytes are interpreted. The `name` property describes of what data type the array consists. The first part can be `Int` for "integer" or `Uint` for an "unsigned integer", also `Float` for "floating point" is used. The second part is a number describing the bit-size of the array. The array name can also start with `Big` to indicate that the values are {{jsxref("BigInt")}}. Finally, the object type is `Array`, with `ClampedArray` as a special case. Please see {{jsxref("Uint8ClampedArray")}} for more details.
 
 ## Examples
 
@@ -32,6 +32,8 @@ Int32Array.name;        // "Int32Array"
 Uint32Array.name;       // "Uint32Array"
 Float32Array.name;      // "Float32Array"
 Float64Array.name;      // "Float64Array"
+BigInt64Array.name;     // "BigInt64Array"
+BigUint64Array.name;    // "BigUint64Array"
 ```
 
 ## Specifications
