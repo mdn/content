@@ -284,14 +284,11 @@ Let's recap briefly on how we use data tables. A table can be a handy tool, for 
   </caption>
   <tbody>
     <tr>
-      <td></td>
-      <td></td>
+      <td colspan="2" rowspan="2"></td>
       <th colspan="3" scope="colgroup">Clothes</th>
       <th colspan="2" scope="colgroup">Accessories</th>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
       <th scope="col">Trousers</th>
       <th scope="col">Skirts</th>
       <th scope="col">Dresses</th>
