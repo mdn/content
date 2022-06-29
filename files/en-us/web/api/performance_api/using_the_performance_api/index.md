@@ -58,7 +58,7 @@ function print_json() {
     const timing = perf.timing;
     o.innerHTML += "<p>performance.timing = " + JSON.stringify(timing) + "</p>";
 
-    var navigation = perf.navigation;
+    const navigation = perf.navigation;
     o.innerHTML += "<p>performance.navigation = " + JSON.stringify(navigation) + "</p>";
   }
 }
