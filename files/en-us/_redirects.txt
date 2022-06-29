@@ -471,7 +471,7 @@
 /en-US/docs/CSS/Attribute_selectors	/en-US/docs/Web/CSS/Attribute_selectors
 /en-US/docs/CSS/Aural	/en-US/docs/Web/CSS/@media/aural
 /en-US/docs/CSS/CSS3_Columns	/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
-/en-US/docs/CSS/CSS_Properties_Reference	/en-US/docs/Web/CSS/CSS_Properties_Reference
+/en-US/docs/CSS/CSS_Properties_Reference	/en-US/docs/Web/CSS/Reference#index
 /en-US/docs/CSS/CSS_Reference	/en-US/docs/Web/CSS/Reference
 /en-US/docs/CSS/CSS_Reference/Mozilla_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/CSS/CSS_Reference/Webkit_Extensions	/en-US/docs/Web/CSS/Webkit_Extensions
