@@ -113,7 +113,7 @@ console.log(uintc8.length); // 2
 console.log(uintc8.BYTES_PER_ELEMENT); // 1
 
 // From an array
-const arr = new Uint8ClampedArray([21,31]);
+const arr = new Uint8ClampedArray([21, 31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
@@ -126,9 +126,9 @@ const buffer = new ArrayBuffer(8);
 const z = new Uint8ClampedArray(buffer, 1, 4);
 
 // From an iterable
-const iterable = function*(){ yield* [1,2,3]; }();
-const uintc8Arr = new Uint8ClampedArray(iterable);
-// Uint8ClampedArray[1, 2, 3]
+const iterable = function*() { yield* [1, 2, 3]; }();
+const uintc8FromIterable = new Uint8ClampedArray(iterable);
+// Uint8ClampedArray [1, 2, 3]
 ```
 
 ## Specifications
