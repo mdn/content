@@ -63,6 +63,7 @@ The Number type is a [double-precision 64-bit binary format IEEE 754 value](http
 > **Note:** You can check if a number is within the range of safe integers using {{jsxref("Number.isSafeInteger()")}}. Outside the range from {{jsxref("Number.MIN_SAFE_INTEGER")}} to {{jsxref("Number.MAX_SAFE_INTEGER")}}, JavaScript can no longer safely represent integers; they will instead be represented by a double-precision floating point approximation.
 
 Values outside the range ±(2^-1074 to 2^1024) are automatically converted:
+
 - Positive values greater than {{jsxref("Number.MAX_VALUE")}} are converted to `+Infinity`.
 - Positive values smaller than {{jsxref("Number.MIN_VALUE")}} are converted to `+0`.
 - Negative values smaller than -{{jsxref("Number.MAX_VALUE")}} are converted to `-Infinity`.
