@@ -45,20 +45,16 @@ function print_json() {
     json = "window.performance.toJSON() is NOT supported";
     o.innerHTML += json + "<br>";
   } else {
-    const s;
     json = window.performance.toJSON();
 
     // Print the performance object
-    s = JSON.stringify(json);
-    o.innerHTML = "<p>performance = " + s + "</p>";
+    o.innerHTML = "<p>performance = " + JSON.stringify(json) + "</p>";
 
     // Print the performance.timing and performance.navigation objects
-    const perf = JSON.parse(s);
-
-    const timing = perf.timing;
+    const timing = json.timing;
     o.innerHTML += "<p>performance.timing = " + JSON.stringify(timing) + "</p>";
 
-    const navigation = perf.navigation;
+    const navigation = json.navigation;
     o.innerHTML += "<p>performance.navigation = " + JSON.stringify(navigation) + "</p>";
   }
 }
