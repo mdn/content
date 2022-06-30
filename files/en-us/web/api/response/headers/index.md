@@ -1,4 +1,4 @@
-const---
+---
 title: Response.headers
 slug: Web/API/Response/headers
 page-type: web-api-instance-property

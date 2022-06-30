@@ -1,4 +1,4 @@
-const---
+---
 title: Response()
 slug: Web/API/Response/Response
 page-type: web-api-constructor
