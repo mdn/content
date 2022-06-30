@@ -39,12 +39,12 @@ A {{domxref("DocumentFragment")}} object.
 ## Examples
 
 ```js
-var tagString = "<div>I am a div node</div>";
-var range = document.createRange();
+const tagString = "<div>I am a div node</div>";
+const range = document.createRange();
 
 // Make the parent of the first div in the document become the context node
 range.selectNode(document.getElementsByTagName("div").item(0));
-var documentFragment = range.createContextualFragment(tagString);
+const documentFragment = range.createContextualFragment(tagString);
 document.body.appendChild(documentFragment);
 ```
 

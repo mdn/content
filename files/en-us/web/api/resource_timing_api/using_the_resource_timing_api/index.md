@@ -46,17 +46,17 @@ function calculate_load_times() {
   }
 
   // Get a list of "resource" performance entries
-  var resources = performance.getEntriesByType("resource");
+  const resources = performance.getEntriesByType("resource");
   if (resources === undefined || resources.length <= 0) {
     console.log("= Calculate Load Times: there are NO `resource` performance records");
     return;
   }
 
   console.log("= Calculate Load Times");
-  for (var i=0; i < resources.length; i++) {
+  for (const i=0; i < resources.length; i++) {
     console.log("== Resource[" + i + "] - " + resources[i].name);
     // Redirect time
-    var t = resources[i].redirectEnd - resources[i].redirectStart;
+    const t = resources[i].redirectEnd - resources[i].redirectStart;
     console.log("... Redirect time = " + t);
 
     // DNS time
@@ -105,7 +105,7 @@ function display_size_data(){
     return;
   }
 
-  var list = performance.getEntriesByType("resource");
+  const list = performance.getEntriesByType("resource");
   if (list === undefined) {
     console.log("= Display Size Data: performance.getEntriesByType() is NOT supported");
     return;
@@ -113,7 +113,7 @@ function display_size_data(){
 
   // For each "resource", display its *Size property values
   console.log("= Display Size Data");
-  for (var i=0; i < list.length; i++) {
+  for (const i=0; i < list.length; i++) {
     console.log("== Resource[" + i + "] - " + list[i].name);
     if ("decodedBodySize" in list[i])
       console.log("... decodedBodySize[" + i + "] = " + list[i].decodedBodySize);
@@ -147,7 +147,7 @@ function clear_resource_timings() {
   }
   // Check if Performance.clearResourceTiming() is supported
   console.log ("= Print performance.clearResourceTimings()");
-  var supported = typeof performance.clearResourceTimings == "function";
+  const supported = typeof performance.clearResourceTimings == "function";
   if (supported) {
     console.log("... Performance.clearResourceTimings() = supported");
     performance.clearResourceTimings();
@@ -156,7 +156,7 @@ function clear_resource_timings() {
     return;
   }
   // getEntries should now return zero
-  var p = performance.getEntriesByType("resource");
+  const p = performance.getEntriesByType("resource");
   if (p.length == 0)
     console.log("... Performance data buffer cleared");
   else
@@ -170,7 +170,7 @@ function set_resource_timing_buffer_size(n) {
   }
   // Check if Performance.setResourceTimingBufferSize() is supported
   console.log ("= performance.setResourceTimingBufferSize()");
-  var supported = typeof performance.setResourceTimingBufferSize == "function";
+  const supported = typeof performance.setResourceTimingBufferSize == "function";
   if (supported) {
     console.log("... Performance.setResourceTimingBufferSize() = supported");
     performance.setResourceTimingBufferSize(n);
@@ -190,9 +190,9 @@ function buffer_full(event) {
 
 function init() {
   // load some image to trigger "resource" fetch events
-  var image1 = new Image();
+  const image1 = new Image();
   image1.src = "https://developer.mozilla.org/static/img/opengraph-logo.png";
-  var image2 = new Image();
+  const image2 = new Image();
   image2.src = "http://mozorg.cdn.mozilla.net/media/img/firefox/firefox-256.e2c1fc556816.jpg"
 
   // Set a callback if the resource buffer becomes filled

@@ -1,4 +1,4 @@
----
+const---
 title: Response()
 slug: Web/API/Response/Response
 page-type: web-api-constructor
@@ -60,9 +60,9 @@ In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/maste
 we create a new `Response` object using the constructor, passing it a new {{domxref("Blob")}} as a body, and an init object containing a custom `status` and `statusText`:
 
 ```js
-var myBlob = new Blob();
-var init = { "status" : 200 , "statusText" : "SuperSmashingGreat!" };
-var myResponse = new Response(myBlob,init);
+const myBlob = new Blob();
+const init = { "status" : 200 , "statusText" : "SuperSmashingGreat!" };
+const myResponse = new Response(myBlob,init);
 ```
 
 ## Specifications
