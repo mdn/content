@@ -70,6 +70,8 @@ function print_PerformanceEntry(entry) {
     }
   }
 }
+
+print_PerformanceEntries();
 ```
 
 ## Specifications
