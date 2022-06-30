@@ -51,11 +51,11 @@ function print_PerformanceEntries() {
   const entries = performance.getEntries();
   entries.forEach((entry, i) => {
     console.log("PerformanceEntry[" + i + "]");
-    print_PerformanceEntry(p[i]);
+    print_PerformanceEntry(entry);
   }
 }
 
-function print_PerformanceEntry(perfEntry) {
+function print_PerformanceEntry(entry) {
   const properties = ["name",
                     "entryType",
                     "startTime",
@@ -63,9 +63,9 @@ function print_PerformanceEntry(perfEntry) {
 
   for (const prop of properties) {
     // Check each property
-    const supported = prop in perfEntry;
+    const supported = prop in entry;
     if (supported) {
-      console.log("... " + prop + " = " + perfEntry[prop]);
+      console.log("... " + prop + " = " + entry[prop]);
     } else {
       console.log("... " + prop + " is NOT supported");
     }
