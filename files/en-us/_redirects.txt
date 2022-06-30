@@ -6,7 +6,6 @@
 # FROM-URL	TO-URL
 /en-US/docs/-moz-locale-dir(ltr)	/en-US/docs/Web/CSS/:-moz-locale-dir(ltr)
 /en-US/docs/-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir(rtl)
-/en-US/docs//Web/API/MouseEvent/region	/en-US/docs/web/api/mouseevent
 /en-US/docs/::file-selector-button	/en-US/docs/Web/CSS/::file-selector-button
 /en-US/docs/<img>	/en-US/docs/Web/HTML/Element/Img
 /en-US/docs/AJAX	/en-US/docs/Web/Guide/AJAX
@@ -1290,7 +1289,7 @@
 /en-US/docs/DOM/Event/CustomEvent	/en-US/docs/Web/API/CustomEvent
 /en-US/docs/DOM/Event/UIEvent	/en-US/docs/Web/API/UIEvent
 /en-US/docs/DOM/Event/UIEvent/KeyEvent	/en-US/docs/Web/API/KeyboardEvent
-/en-US/docs/DOM/Event/UIEvent/MouseEvent	/en-US/docs/web/api/mouseevent
+/en-US/docs/DOM/Event/UIEvent/MouseEvent	/en-US/docs/Web/API/MouseEvent
 /en-US/docs/DOM/EventListener	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/DOM/EventTarget	/en-US/docs/Web/API/EventTarget
 /en-US/docs/DOM/EventTarget.addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
@@ -1395,7 +1394,7 @@
 /en-US/docs/DOM/MediaQueryListListener	/en-US/docs/Web/API/MediaQueryList
 /en-US/docs/DOM/MediaStream	/en-US/docs/Web/API/MediaStream
 /en-US/docs/DOM/MediaStreamTrack	/en-US/docs/Web/API/MediaStreamTrack
-/en-US/docs/DOM/MouseEvent	/en-US/docs/web/api/mouseevent
+/en-US/docs/DOM/MouseEvent	/en-US/docs/Web/API/MouseEvent
 /en-US/docs/DOM/MouseScrollEvent	/en-US/docs/Web/API/MouseScrollEvent
 /en-US/docs/DOM/MouseWheelEvent	/en-US/docs/Web/API/WheelEvent
 /en-US/docs/DOM/Mozilla_event_reference	/en-US/docs/Web/Events
@@ -7972,7 +7971,7 @@
 /en-US/docs/Web/API/Event/CustomEvent	/en-US/docs/Web/API/CustomEvent
 /en-US/docs/Web/API/Event/UIEvent	/en-US/docs/Web/API/UIEvent
 /en-US/docs/Web/API/Event/UIEvent/KeyEvent	/en-US/docs/Web/API/KeyboardEvent
-/en-US/docs/Web/API/Event/UIEvent/MouseEvent	/en-US/docs/web/api/mouseevent
+/en-US/docs/Web/API/Event/UIEvent/MouseEvent	/en-US/docs/Web/API/MouseEvent
 /en-US/docs/Web/API/Event/createEvent	/en-US/docs/Web/API/Document/createEvent
 /en-US/docs/Web/API/Event/deepPath	/en-US/docs/Web/API/Event/composedPath
 /en-US/docs/Web/API/Event/detail	/en-US/docs/Web/API/UIEvent/detail
