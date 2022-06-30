@@ -33,6 +33,10 @@ flex-basis: 10em;
 flex-basis: 3px;
 flex-basis: auto;
 
+/* Specify <'percentage'> */
+flex-basis: 50%;
+flex-basis: 33.33%;
+
 /* Intrinsic sizing keywords */
 flex-basis: max-content;
 flex-basis: min-content;
