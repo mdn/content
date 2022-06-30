@@ -413,7 +413,9 @@ const docCookies = new Proxy(docCookies, {
     return key in target || target.hasItem(key);
   },
   defineProperty(target, key, descriptor) {
-    if (descriptor && 'value' in descriptor) { target.setItem(key, descriptor.value); }
+    if (descriptor && 'value' in descriptor) {
+      target.setItem(key, descriptor.value);
+    }
     return target;
   },
   getOwnPropertyDescriptor(target, key) {
