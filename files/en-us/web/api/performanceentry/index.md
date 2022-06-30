@@ -48,26 +48,26 @@ The following example checks all `PerformanceEntry` properties to see if the bro
 ```js
 function print_PerformanceEntries() {
   // Use getEntries() to get a list of all performance entries
-  const p = performance.getEntries();
-  for (let i=0; i < p.length; i++) {
+  const entries = performance.getEntries();
+  entries.forEach((entry, i) => {
     console.log("PerformanceEntry[" + i + "]");
     print_PerformanceEntry(p[i]);
   }
 }
+
 function print_PerformanceEntry(perfEntry) {
   const properties = ["name",
                     "entryType",
                     "startTime",
                     "duration"];
 
-  for (let i=0; i < properties.length; i++) {
+  for (const prop of properties) {
     // Check each property
-    const supported = properties[i] in perfEntry;
+    const supported = prop in perfEntry;
     if (supported) {
-      var value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
+      console.log("... " + prop + " = " + perfEntry[prop]);
     } else {
-      console.log("... " + properties[i] + " is NOT supported");
+      console.log("... " + prop + " is NOT supported");
     }
   }
 }
