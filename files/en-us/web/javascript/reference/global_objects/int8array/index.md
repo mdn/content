@@ -125,7 +125,7 @@ const buffer = new ArrayBuffer(8);
 const z = new Int8Array(buffer, 1, 4);
 
 // From an iterable
-const iterable = function*(){ yield* [1, 2, 3]; }();
+const iterable = function*() { yield* [1, 2, 3]; }();
 const int8FromIterable = new Int8Array(iterable);
 // Int8Array [1, 2, 3]
 ```
