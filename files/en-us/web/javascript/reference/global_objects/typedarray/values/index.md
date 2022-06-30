@@ -10,73 +10,58 @@ tags:
   - TypedArray
   - TypedArrays
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>values()</code></strong> method returns a new <code>Array Iterator</code> object that contains the values for each index in the array.</p>
+The **`values()`** method returns a new `Array Iterator` object that contains the values for each index in the array.
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-values.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-values.html")}}
 
+## Syntax
 
+```js
+values()
+```
 
-<h2 id="Syntax">Syntax</h2>
+### Return value
 
-<pre class="syntaxbox"><code><var>arr</var>.values()</code></pre>
+A new **`Array Iterator`** object.
 
-<h3 id="Return_value">Return value</h3>
+## Examples
 
-<p>A new <code><strong>Array Iterator</strong></code> object.</p>
+### Iteration using for...of loop
 
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Iteration_using_for...of_loop">Iteration using <code>for...of</code> loop</h3>
-
-<pre class="brush: js">var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArray = arr.values();
-// your browser must support for..of loop
-// and let-scoped variables in for loops
-for (let n of eArray) {
+```js
+const arr = new Uint8Array([10, 20, 30, 40, 50]);
+const values = arr.values();
+for (const n of values) {
   console.log(n);
 }
-</pre>
+```
 
-<h3 id="Alternative_iteration">Alternative iteration</h3>
+### Alternative iteration
 
-<pre class="brush: js">var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArr = arr.values();
-console.log(eArr.next().value); // 10
-console.log(eArr.next().value); // 20
-console.log(eArr.next().value); // 30
-console.log(eArr.next().value); // 40
-console.log(eArr.next().value); // 50
-</pre>
+```js
+const arr = new Uint8Array([10, 20, 30, 40, 50]);
+const values = arr.values();
+console.log(values.next().value); // 10
+console.log(values.next().value); // 20
+console.log(values.next().value); // 30
+console.log(values.next().value); // 40
+console.log(values.next().value); // 50
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.values', '%TypedArray%.prototype.values()')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
+## See also
 
-<p>{{Compat("javascript.builtins.TypedArray.values")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
- <li>{{jsxref("TypedArray")}}</li>
- <li>{{jsxref("TypedArray.prototype.entries()")}}</li>
- <li>{{jsxref("TypedArray.prototype.keys()")}}</li>
- <li>{{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}</li>
-</ul>
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- {{jsxref("TypedArray")}}
+- {{jsxref("TypedArray.prototype.entries()")}}
+- {{jsxref("TypedArray.prototype.keys()")}}
+- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
