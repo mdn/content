@@ -43,15 +43,22 @@ The **`PerformanceEntry`** object encapsulates a single performance metric that 
 
 ## Example
 
-The following example checks all `PerformanceEntry` properties to see if the browser supports them and if so, write their values to the console.
+The following example checks all `PerformanceEntry` properties to see if the browser supports them and if so, shows their values.
+
+```html hidden
+<pre id='output'></pre>
+```
 
 ```js
+const output = document.getElementById('output');
+
 function printPerformanceEntries() {
   // Use getEntries() to get a list of all performance entries
   const entries = performance.getEntries();
+
   entries.forEach((entry, i) => {
-    document.body.textContent += `PerformanceEntry[${i}]`;
-    print_PerformanceEntry(entry);
+    output.textContent += `\n PerformanceEntry[${i}] \n`;
+    printPerformanceEntry(entry);
   });
 }
 
@@ -64,9 +71,9 @@ function printPerformanceEntry(entry) {
   for (const prop of properties) {
     // Check each property
     if (prop in entry) {
-      document.body.textContent += `... ${prop} = ${entry[prop]}`;
+      output.textContent += `... ${prop} = ${entry[prop]} \n`;
     } else {
-      document.body.textContent += `... ${prop} is NOT supported`;
+      output.textContent += `... ${prop} is NOT supported \n`;
     }
   }
 }
