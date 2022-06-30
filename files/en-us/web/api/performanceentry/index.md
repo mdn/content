@@ -55,7 +55,7 @@ function printPerformanceEntries() {
   });
 }
 
-function print_PerformanceEntry(entry) {
+function printPerformanceEntry(entry) {
   const properties = ["name",
                     "entryType",
                     "startTime",
@@ -71,7 +71,7 @@ function print_PerformanceEntry(entry) {
   }
 }
 
-print_PerformanceEntries();
+printPerformanceEntries();
 ```
 
 {{ EmbedLiveSample("Example", "100%", "400px") }}
