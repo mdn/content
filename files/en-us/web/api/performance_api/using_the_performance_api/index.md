@@ -38,24 +38,22 @@ JSON serialization of the {{domxref("Performance")}} object is done via the {{do
 
 ```js
 function print_json() {
-  let json;
-  const o = document.getElementsByTagName("output")[0];
+  const output = document.getElementsByTagName("output")[0];
 
   if (window.performance.toJSON === undefined) {
-    json = "window.performance.toJSON() is NOT supported";
-    o.innerHTML += json + "<br>";
+    output.textContent += `window.performance.toJSON() is NOT supported`;
   } else {
-    json = window.performance.toJSON();
+    const json = window.performance.toJSON();
 
     // Print the performance object
-    o.innerHTML = "<p>performance = " + JSON.stringify(json) + "</p>";
+    output.textContent = `performance = ${JSON.stringify(json)} \n`;
 
     // Print the performance.timing and performance.navigation objects
     const timing = json.timing;
-    o.innerHTML += "<p>performance.timing = " + JSON.stringify(timing) + "</p>";
+    output.textContent += `performance.timing = ${JSON.stringify(timing)} \n`;
 
     const navigation = json.navigation;
-    o.innerHTML += "<p>performance.navigation = " + JSON.stringify(navigation) + "</p>";
+    output.textContent += `performance.navigation = ${JSON.stringify(navigation)} \n`;
   }
 }
 ```
