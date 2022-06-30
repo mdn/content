@@ -123,7 +123,7 @@ When used in the context of a `<picture>` element, the browser will fall back to
 
 The `<source>` element is an **empty element (or void element)**, which means that it not only has no content but also has no closing tag. That is, you _never_ use "`</source>`" in your HTML.
 
-For information about image formats supported by web browsers and guidance on selecting appropriate formats to use, see our [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types) on the web. For details on the video and audio media types, you can use, see the [Guide to media types formats used on the web](/en-US/docs/Web/Media/Formats).
+For information about image formats supported by web browsers and guidance on selecting appropriate formats to use, see our [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types) on the web. For details on the video and audio media types you can use, see the [Guide to media types formats used on the web](/en-US/docs/Web/Media/Formats).
 
 ## Examples
 
