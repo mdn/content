@@ -421,10 +421,10 @@ const docCookies = new Proxy(docCookies, {
   getOwnPropertyDescriptor(target, key) {
     const value = target.getItem(key);
     return value ? {
-      value: value,
+      value,
       writable: true,
       enumerable: true,
-      configurable: false
+      configurable: false,
     } : undefined;
   },
 });
