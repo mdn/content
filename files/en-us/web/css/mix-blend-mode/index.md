@@ -647,7 +647,7 @@ circle { mix-blend-mode: screen; }
 
 ### Using mix-blend-mode with text
 
-This example uses `mix-blend-mode` to blend text color with he background color of its parent element.
+This example uses `mix-blend-mode` to blend text color with the background color of its parent element.
 
 #### HTML
 
