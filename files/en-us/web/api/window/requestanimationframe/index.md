@@ -103,7 +103,9 @@ function step(timestamp) {
 
   if (elapsed < 2000) { // Stop the animation after 2 seconds
     previousTimeStamp = timestamp;
-    if (!done) window.requestAnimationFrame(step);
+    if (!done) {
+      window.requestAnimationFrame(step);
+    }
   }
 }
 
