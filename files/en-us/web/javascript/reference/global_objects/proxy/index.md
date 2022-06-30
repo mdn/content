@@ -395,31 +395,31 @@ Now in order to create a complete sample `traps` list, for didactic purposes, we
 */
 
 const docCookies = new Proxy(docCookies, {
-  get(oTarget, sKey) {
-    return oTarget[sKey] || oTarget.getItem(sKey) || undefined;
+  get(target, key) {
+    return target[key] || target.getItem(key) || undefined;
   },
-  set(oTarget, sKey, vValue) {
-    if (sKey in oTarget) { return false; }
-    return oTarget.setItem(sKey, vValue);
+  set(target, key, value) {
+    if (key in target) { return false; }
+    return target.setItem(key, value);
   },
-  deleteProperty(oTarget, sKey) {
-    if (!sKey in oTarget) { return false; }
-    return oTarget.removeItem(sKey);
+  deleteProperty(target, key) {
+    if (!key in target) { return false; }
+    return target.removeItem(key);
   },
-  ownKeys(oTarget) {
-    return oTarget.keys();
+  ownKeys(target) {
+    return target.keys();
   },
-  has(oTarget, sKey) {
-    return sKey in oTarget || oTarget.hasItem(sKey);
+  has(target, key) {
+    return key in target || target.hasItem(key);
   },
-  defineProperty(oTarget, sKey, oDesc) {
-    if (oDesc && 'value' in oDesc) { oTarget.setItem(sKey, oDesc.value); }
-    return oTarget;
+  defineProperty(target, key, descriptor) {
+    if (descriptor && 'value' in descriptor) { target.setItem(key, descriptor.value); }
+    return target;
   },
-  getOwnPropertyDescriptor(oTarget, sKey) {
-    const vValue = oTarget.getItem(sKey);
-    return vValue ? {
-      value: vValue,
+  getOwnPropertyDescriptor(target, key) {
+    const value = target.getItem(key);
+    return value ? {
+      value: value,
       writable: true,
       enumerable: true,
       configurable: false
