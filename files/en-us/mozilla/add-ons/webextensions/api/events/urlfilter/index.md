@@ -72,7 +72,7 @@ However, note that these last two patterns will not match the last component of 
 
   - : `string`. Matches if the URL (without fragment identifier) matches a specified [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions). Port numbers are stripped from the URL if they match the default port number.
 
-    - For example: `urlMatches: "^[^:]*:(?://)?(?:[^/]*\\.)?mozilla\\.org/.*$"` matches "https\://mozilla.org/", "https\://developer.mozilla.org/", but not "https\://developer.fakemozilla.org/".
+    - For example: `urlMatches: "^[^:]*:(?:\/\/)?(?:[^/]*\.)?mozilla\.org\/.*$"` matches "https\://mozilla.org/", "https\://developer.mozilla.org/", but not "https\://developer.fakemozilla.org/".
 
 - `originAndPathMatches`{{optional_inline}}
   - : `string`. Matches if the URL without query segment and fragment identifier matches a specified [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions). Port numbers are stripped from the URL if they match the default port number.
