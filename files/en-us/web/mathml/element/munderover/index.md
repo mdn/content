@@ -25,16 +25,6 @@ It uses the following syntax: `<munderover> base underscript overscript </munder
 - align {{deprecated_inline}}
   - : The alignment of both underscript and overscript. Possible values are: `left`, `center`, and `right`.
     This attribute is deprecated and will be removed in the future. Use CSS [`text-align`](/en-US/docs/Web/CSS/text-align) instead.
-- class, id, style
-  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
-- `displaystyle`
-  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`. See also `movablelimits` on {{ MathMLElement("mo") }}.
-- href
-  - : Used to set a hyperlink to a specified URI.
-- mathbackground
-  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
-- mathcolor
-  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
 
 ## Examples
 

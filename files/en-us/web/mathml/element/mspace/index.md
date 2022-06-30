@@ -14,16 +14,10 @@ The MathML `<mspace>` element is used to display a blank space, whose size is se
 
 ## Attributes
 
-- class, id, style
-  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
 - depth
   - : The desired depth (below the baseline) of the space (see [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) for values and units).
-- `displaystyle`
-  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`. See also `movablelimits` on {{ MathMLElement("mo") }}.
 - height
   - : The desired height (above the baseline) of the space (see [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) for values and units).
-- mathbackground
-  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
 - width
   - : The desired width of the space (see [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) for values and units).
 

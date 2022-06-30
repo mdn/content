@@ -60,3 +60,8 @@ math {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{cssxref("math-depth")}}
+- {{cssxref("font-size")}}
