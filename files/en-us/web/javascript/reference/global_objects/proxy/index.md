@@ -395,28 +395,28 @@ Now in order to create a complete sample `traps` list, for didactic purposes, we
 */
 
 const docCookies = new Proxy(docCookies, {
-  get: function (oTarget, sKey) {
+  get(oTarget, sKey) {
     return oTarget[sKey] || oTarget.getItem(sKey) || undefined;
   },
-  set: function (oTarget, sKey, vValue) {
+  set(oTarget, sKey, vValue) {
     if (sKey in oTarget) { return false; }
     return oTarget.setItem(sKey, vValue);
   },
-  deleteProperty: function (oTarget, sKey) {
+  deleteProperty(oTarget, sKey) {
     if (!sKey in oTarget) { return false; }
     return oTarget.removeItem(sKey);
   },
-  ownKeys: function (oTarget) {
+  ownKeys(oTarget) {
     return oTarget.keys();
   },
-  has: function (oTarget, sKey) {
+  has(oTarget, sKey) {
     return sKey in oTarget || oTarget.hasItem(sKey);
   },
-  defineProperty: function (oTarget, sKey, oDesc) {
+  defineProperty(oTarget, sKey, oDesc) {
     if (oDesc && 'value' in oDesc) { oTarget.setItem(sKey, oDesc.value); }
     return oTarget;
   },
-  getOwnPropertyDescriptor: function (oTarget, sKey) {
+  getOwnPropertyDescriptor(oTarget, sKey) {
     const vValue = oTarget.getItem(sKey);
     return vValue ? {
       value: vValue,
