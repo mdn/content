@@ -3,7 +3,7 @@ title: 'XML: Extensible Markup Language'
 slug: Web/XML
 tags:
   - Draft
-  - Landing
+  - Landing Learn to Love Love to Learn 
   - Web
   - XML
 ---
