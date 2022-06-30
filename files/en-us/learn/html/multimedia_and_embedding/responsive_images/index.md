@@ -101,10 +101,11 @@ So, what is the problem that we want to solve with resolution switching? We want
 We can however use two new attributes — {{htmlattrxref("srcset", "img")}} and {{htmlattrxref("sizes", "img")}} — to provide several additional source images along with hints to help the browser pick the right one. You can see an example of this in our [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) example on GitHub (see also [the source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/responsive.html)):
 
 ```html
-<img srcset="elva-fairy-480w.jpg 480w,
-             elva-fairy-800w.jpg 800w"
-     sizes="(max-width: 600px) 480px,
-            800px"
+<img srcset=
+    "elva-fairy-480w.jpg 480w,
+     elva-fairy-800w.jpg 800w"
+     sizes=
+    "(max-width: 600px) 480px, 800px"
      src="elva-fairy-800w.jpg"
      alt="Elva dressed as a fairy">
 ```
@@ -155,9 +156,10 @@ Older browsers that don't support these features will just ignore them. Instead,
 If you're supporting multiple display resolutions, but everyone sees your image at the same real-world size on the screen, you can allow the browser to choose an appropriate resolution image by using `srcset` with x-descriptors and without `sizes` — a somewhat easier syntax! You can find an example of what this looks like in [srcset-resolutions.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) (see also [the source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)):
 
 ```html
-<img srcset="elva-fairy-320w.jpg,
-             elva-fairy-480w.jpg 1.5x,
-             elva-fairy-640w.jpg 2x"
+<img srcset=
+     "elva-fairy-320w.jpg,
+      elva-fairy-480w.jpg 1.5x,
+      elva-fairy-640w.jpg 2x"
      src="elva-fairy-640w.jpg"
      alt="Elva dressed as a fairy">
 ```
