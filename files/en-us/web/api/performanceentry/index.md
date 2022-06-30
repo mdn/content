@@ -63,8 +63,7 @@ function print_PerformanceEntry(entry) {
 
   for (const prop of properties) {
     // Check each property
-    const supported = prop in entry;
-    if (supported) {
+    if (prop in entry) {
       console.log("... " + prop + " = " + entry[prop]);
     } else {
       console.log("... " + prop + " is NOT supported");
