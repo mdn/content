@@ -52,7 +52,7 @@ function print_PerformanceEntries() {
   entries.forEach((entry, i) => {
     console.log("PerformanceEntry[" + i + "]");
     print_PerformanceEntry(entry);
-  }
+  })
 }
 
 function print_PerformanceEntry(entry) {
