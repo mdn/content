@@ -67,19 +67,6 @@ new Uint8Array([1, 2, 3]).fill(4, 1, 1);   // Uint8Array [1, 2, 3]
 new Uint8Array([1, 2, 3]).fill(4, -3, -2); // Uint8Array [4, 2, 3]
 ```
 
-## Polyfill
-
-Since there is no global object with the name _TypedArray_, polyfilling must be
-done on an "as needed" basis. Use the following "polyfill" along with the
-{{jsxref("Array.prototype.fill()")}} polyfill.
-
-```js
-// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.fill
-if (!Uint8Array.prototype.fill) {
-  Uint8Array.prototype.fill = Array.prototype.fill;
-}
-```
-
 ## Specifications
 
 {{Specifications}}
