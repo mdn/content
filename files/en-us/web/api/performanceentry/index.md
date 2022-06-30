@@ -74,6 +74,8 @@ function print_PerformanceEntry(entry) {
 print_PerformanceEntries();
 ```
 
+{{ EmbedLiveSample("Example", "100%", "400px") }}
+
 ## Specifications
 
 {{Specifications}}
