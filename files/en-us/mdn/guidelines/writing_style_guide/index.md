@@ -426,9 +426,9 @@ To fix this, use gender-neutral pronouns:
 
 _A confirmation dialog appears, asking the user if they allow the Web page to make use of their Web cam._
 
-> **Note:** MDN allows the use of this very common syntax (which is controversial among usage authorities) to make up for the lack of a neutral gender in English.
+> **Note:** MDN allows the use of the very common syntax known as "[singular 'they.'](https://en.wikipedia.org/wiki/Singular_they)"
 >
-> The use of the third-person plural as a gender neutral pronoun (that is, using "they," "them", "their," and "theirs") is an accepted practice, commonly known as "[singular 'they.'](https://en.wikipedia.org/wiki/Singular_they)"
+> The use of the third-person plural as a gender neutral pronoun (that is, using "they," "them", "their," and "theirs") is an accepted practice to make up for the lack of a neutral gender in English.
 
 Making the users plural:
 
