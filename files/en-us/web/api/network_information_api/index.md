@@ -52,7 +52,7 @@ let preloadVideo = true;
 const connection = navigator.connection;
 if (connection) {
   if (connection.effectiveType === 'slow-2g') {
-      preloadVideo = false;
+    preloadVideo = false;
   }
 }
 ```
