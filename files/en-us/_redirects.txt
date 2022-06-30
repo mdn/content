@@ -8692,7 +8692,7 @@
 /en-US/docs/Web/API/MouseEvent.metaKey	/en-US/docs/Web/API/MouseEvent/metaKey
 /en-US/docs/Web/API/MouseEvent.movementX	/en-US/docs/Web/API/MouseEvent/movementX
 /en-US/docs/Web/API/MouseEvent.movementY	/en-US/docs/Web/API/MouseEvent/movementY
-/en-US/docs/Web/API/MouseEvent.region	/en-US/docs/Web/API/MouseEvent/region
+/en-US/docs/Web/API/MouseEvent.region	/en-US/docs/Web/API/MouseEvent
 /en-US/docs/Web/API/MouseEvent.relatedTarget	/en-US/docs/Web/API/MouseEvent/relatedTarget
 /en-US/docs/Web/API/MouseEvent.screenX	/en-US/docs/Web/API/MouseEvent/screenX
 /en-US/docs/Web/API/MouseEvent.screenY	/en-US/docs/Web/API/MouseEvent/screenY
@@ -8700,6 +8700,7 @@
 /en-US/docs/Web/API/MouseEvent.which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/Web/API/MouseEvent/MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN	/en-US/docs/Web/API/MouseEvent/WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN
 /en-US/docs/Web/API/MouseEvent/MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN	/en-US/docs/Web/API/MouseEvent/WEBKIT_FORCE_AT_MOUSE_DOWN
+/en-US/docs/Web/API/MouseEvent/region	/en-US/docs/Web/API/MouseEvent
 /en-US/docs/Web/API/MouseEvent/which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/Web/API/MouseWheelEvent	/en-US/docs/Web/API/WheelEvent
 /en-US/docs/Web/API/MsAudioCategory	/en-US/docs/Web/API/HTMLAudioElement/msAudioCategory
