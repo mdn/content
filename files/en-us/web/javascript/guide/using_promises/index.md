@@ -266,7 +266,15 @@ Sequential composition is possible using some clever JavaScript:
   });
 ```
 
-Basically, we reduce an array of asynchronous functions down to a promise chain equivalent to: `Promise.resolve().then(func1).then(func2).then(func3);`
+Basically, we reduce an array of asynchronous functions down to a promise chain. The code above is equivalent to:
+
+```js
+Promise.resolve()
+  .then(func1)
+  .then(func2)
+  .then(func3)
+  .then((result3) => { /* use result3 */ });
+```
 
 This can be made into a reusable compose function, which is common in functional programming:
 
