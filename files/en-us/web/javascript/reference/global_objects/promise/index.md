@@ -133,7 +133,7 @@ To illustrate this a bit further we can take a look at how an [`<iframe>`](/en-U
 <script> // we have a realm here as well
   const bound = frames[0].postMessage.bind(
     frames[0], "some data", "*");
-    // bound is a built-in function -- there is no user
+    // bound is a built-in function — there is no user
     // code on the stack, so which realm do we use?
   window.setTimeout(bound);
   // this still works, because we use the youngest
@@ -149,8 +149,8 @@ The same concept applies to promises. If we modify the above example a little bi
 <script> // we have a realm here as well
   const bound = frames[0].postMessage.bind(
     frames[0], "some data", "*");
-    // bound is a built in function -- there is no user
-    // code on the stack -- which realm do we use?
+    // bound is a built in function — there is no user
+    // code on the stack — which realm do we use?
   Promise.resolve(undefined).then(bound);
   // this still works, because we use the youngest
   // realm (the incumbent) on the stack
