@@ -57796,17 +57796,6 @@
       "teoli"
     ]
   },
-  "Web/API/MouseEvent/region": {
-    "modified": "2020-10-15T21:31:59.545Z",
-    "contributors": [
-      "hinell",
-      "mfluehr",
-      "sideshowbarker",
-      "fscholz",
-      "Sebastianz",
-      "teoli"
-    ]
-  },
   "Web/API/MouseEvent/relatedTarget": {
     "modified": "2020-10-15T21:25:14.588Z",
     "contributors": [
