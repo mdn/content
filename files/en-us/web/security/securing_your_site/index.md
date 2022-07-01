@@ -38,7 +38,7 @@ There are a number of things you can do to help secure your site. This article o
 ## See also
 
 - [Open Web Application Security Project (OWASP)](https://owasp.org/)
-- [Mozilla Web Security Cheat Sheet](https://infosec.mozilla.org/guidelines/web_security/en-US/docs/)
+- [Mozilla Web Security Cheat Sheet](https://infosec.mozilla.org/guidelines/web_security.html#web-security-cheat-sheet)
 - [Cross-site scripting on OWASP](https://owasp.org/www-community/attacks/xss/)
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

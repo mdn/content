@@ -69,22 +69,23 @@ console.log(int8.length); // 2
 console.log(int8.BYTES_PER_ELEMENT); // 1
 
 // From an array
-const arr = new Int8Array([21,31]);
-console.log(arr[1]); // 31
+const x = new Int8Array([21, 31]);
+console.log(x[1]); // 31
 
 // From another TypedArray
-const x = new Int8Array([21, 31]);
 const y = new Int8Array(x);
 console.log(y[0]); // 21
 
 // From an ArrayBuffer
 const buffer = new ArrayBuffer(8);
 const z = new Int8Array(buffer, 1, 4);
+console.log(z.byteOffset); // 1
 
 // From an iterable
-const iterable = function*(){ yield* [1,2,3]; }();
-const int8_from_iterable = new Int8Array(iterable);
-// Int8Array[1, 2, 3]
+const iterable = function*() { yield* [1, 2, 3]; }();
+const int8FromIterable = new Int8Array(iterable);
+console.log(int8FromIterable);
+// Int8Array [1, 2, 3]
 ```
 
 ## Specifications
