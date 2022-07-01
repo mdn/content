@@ -3,6 +3,7 @@ title: Float32Array
 slug: Web/JavaScript/Reference/Global_Objects/Float32Array
 tags:
   - Class
+  - Float32Array
   - JavaScript
   - TypedArray
   - TypedArrays
