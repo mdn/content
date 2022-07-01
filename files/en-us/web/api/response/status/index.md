@@ -1,4 +1,4 @@
-var---
+---
 title: Response.status
 slug: Web/API/Response/status
 page-type: web-api-instance-property
