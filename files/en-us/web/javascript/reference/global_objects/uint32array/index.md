@@ -3,6 +3,7 @@ title: Uint32Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint32Array
 tags:
   - Class
+  - Uint32Array
   - JavaScript
   - TypedArray
   - TypedArrays
