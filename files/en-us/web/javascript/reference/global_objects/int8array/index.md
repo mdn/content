@@ -127,6 +127,7 @@ console.log(z.byteOffset); // 1
 // From an iterable
 const iterable = function*() { yield* [1, 2, 3]; }();
 const int8FromIterable = new Int8Array(iterable);
+console.log(int8FromIterable);
 // Int8Array [1, 2, 3]
 ```
 
