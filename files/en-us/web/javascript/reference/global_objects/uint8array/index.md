@@ -3,10 +3,10 @@ title: Uint8Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array
 tags:
   - Class
+  - Uint8Array
   - JavaScript
   - TypedArray
   - TypedArrays
-  - Uint8Array
   - Polyfill
 browser-compat: javascript.builtins.Uint8Array
 ---
