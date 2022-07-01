@@ -28,7 +28,7 @@ new File(bits, name, options)
     object such as an {{jsxref("Array")}}, having {{jsxref("ArrayBuffer")}}s,
     {{jsxref("TypedArray")}}s, {{jsxref("DataView")}}s, {{domxref("Blob")}}s, strings,
     or a mix of any of such elements, that will be put inside the {{domxref("File")}}.
-    Note that strings here are encoded as UTF-8, unlike the usual JS UTF-16 strings.
+    Note that strings here are encoded as UTF-8, unlike the usual JavaScript UTF-16 strings.
 - `name`
   - : A string representing the file name or the path to the file.
 - `options` {{optional_inline}}
