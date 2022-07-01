@@ -56,7 +56,7 @@ addEventListener(type, listener, useCapture);
 - `listener`
   - : The object that receives a notification (an object that implements the
     {{domxref("Event")}} interface) when an event of the specified type occurs. This must
-    be an object with a `handleEvent()` method, or a JavaScript
+    be `null`, an object with a `handleEvent()` method, or a JavaScript
     [function](/en-US/docs/Web/JavaScript/Guide/Functions). See
     [The event listener callback](#the_event_listener_callback) for details on the callback itself.
 - `options` {{optional_inline}}
@@ -64,21 +64,21 @@ addEventListener(type, listener, useCapture);
   - : An object that specifies characteristics about the event listener. The available
     options are:
 
-    - `capture`
+    - `capture` {{optional_inline}}
       - : A boolean value indicating that events of this type will be dispatched
         to the registered `listener` before being dispatched to any
         `EventTarget` beneath it in the DOM tree. If not specified, defaults to `false`.
-    - `once`
+    - `once` {{optional_inline}}
       - : A boolean value indicating that the `listener`
         should be invoked at most once after being added. If `true`, the
         `listener` would be automatically removed when invoked. If not specified, defaults to `false`.
-    - `passive`
+    - `passive` {{optional_inline}}
       - : A boolean value that, if `true`, indicates that the function
         specified by `listener` will never call
         {{domxref("Event.preventDefault", "preventDefault()")}}. If a passive listener
         does call `preventDefault()`, the user agent will do nothing other than
         generate a console warning. If not specified, defaults to `false` – except that in browsers other than Safari and Internet Explorer, defaults to `true` for the {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events. See [Improving scrolling performance with passive listeners](#improving_scrolling_performance_with_passive_listeners) to learn more.
-    - `signal`
+    - `signal` {{optional_inline}}
       - : An {{domxref("AbortSignal")}}. The listener will be removed when the given `AbortSignal` object's {{domxref("AbortController/abort()", "abort()")}} method is called. If not specified, no `AbortSignal` is associated with the listener.
 
 - `useCapture` {{optional_inline}}
@@ -96,7 +96,7 @@ addEventListener(type, listener, useCapture);
     > **Note:** For event listeners attached to the event target, the event is in the target phase, rather than the capturing and bubbling phases.
     > Event listeners in the _capturing_ phase are called before event listeners in any non-capturing phases.
 
-- `wantsUntrusted` {{optional_inline}} {{Non-standard_inline}}
+- `wantsUntrusted` {{optional_inline}} {{non-standard_inline}}
   - : A Firefox (Gecko)-specific parameter. If `true`, the listener receives
     synthetic events dispatched by web content (the default is `false` for
     browser {{glossary("chrome")}} and `true` for regular web pages). This
@@ -104,7 +104,7 @@ addEventListener(type, listener, useCapture);
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+{{jsxref("undefined")}}.
 
 ## Usage notes
 
@@ -478,6 +478,41 @@ Click the outer, middle, inner containers respectively to see how the options wo
 Before using a particular value in the `options` object, it's a
 good idea to ensure that the user's browser supports it, since these are an addition
 that not all browsers have supported historically. See [Safely detecting option support](#safely_detecting_option_support) for details.
+
+### Event listener with multiple options
+
+The `options` parameter may have multiple properties set.
+
+#### HTML
+
+```html
+<button id="example-button">You have not clicked this button.</button>
+```
+
+#### JavaScript
+
+```js
+const button = document.getElementById("example-button");
+
+button.addEventListener(
+  "click",
+  (_event) => {
+    button.textContent = "You have clicked this button.";
+  }, {
+    capture: false,
+    passive: true,
+    once: true
+  }
+);
+```
+
+Take notice that multiple properties have values set. In this particular example,
+the event handler function will not be called more than once, *and* it may not
+call {{domxref("Event.preventDefault", "preventDefault()")}} on its event argument.
+
+#### Result
+
+{{EmbedLiveSample('Event_listener_with_multiple_options')}}
 
 ## Other notes
 
