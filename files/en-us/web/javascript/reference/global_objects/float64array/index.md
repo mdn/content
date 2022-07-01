@@ -127,6 +127,7 @@ console.log(z.byteOffset); // 8
 // From an iterable
 const iterable = function*() { yield* [1, 2, 3]; }();
 const float64FromIterable = new Float64Array(iterable);
+console.log(float64FromIterable);
 // Float64Array [1, 2, 3]
 ```
 
