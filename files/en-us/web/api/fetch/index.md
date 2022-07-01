@@ -74,7 +74,7 @@ fetch(resource, init)
       - : Any body that you want to add to your request:
         this can be a {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}},
         a {{domxref("FormData")}}, a {{domxref("URLSearchParams")}}, string object or literal,
-        or a {{domxref("ReadableStream")}} object.
+        or a {{domxref("ReadableStream")}} object. This latest possibility is still experimental; check the [compatibility information](/en-US/docs/Web/API/Request#browser_compatibility) to verify you can use it.
         Note that a request using the `GET` or `HEAD` method cannot have a body.
     - `mode`
       - : The mode you want to use for the request, e.g., `cors`,
