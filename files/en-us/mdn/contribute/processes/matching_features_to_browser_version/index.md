@@ -316,7 +316,7 @@ Before Opera switched to Chromium, it used an engine developed by Opera called P
 
 ### Blink (Chromium)
 
-After Opera 12.10, Edge adopted the Blink engine, becoming based upon Chromium. The version number jumped to 15. The Blink engine version became Opera's version plus 13 -- that is, Opera 15 used Blink 28 (15+13=28) -- until Opera Desktop 69 and Opera Android 43. The browser files within the browser-compat-data project contain a mapping of Opera versions to Chromium/Blink versions; see [browsers/opera.json](https://github.com/mdn/browser-compat-data/blob/main/browsers/opera.json) and [browsers/opera_android.json](https://github.com/mdn/browser-compat-data/blob/main/browsers/opera_android.json).
+After Opera 12.10, Edge adopted the Blink engine, becoming based upon Chromium. The version number jumped to 15. The Blink engine version became Opera's version plus 13 — that is, Opera 15 used Blink 28 (15+13=28) — until Opera Desktop 69 and Opera Android 43. The browser files within the browser-compat-data project contain a mapping of Opera versions to Chromium/Blink versions; see [browsers/opera.json](https://github.com/mdn/browser-compat-data/blob/main/browsers/opera.json) and [browsers/opera_android.json](https://github.com/mdn/browser-compat-data/blob/main/browsers/opera_android.json).
 
 While most features will be the same between all Chromium browsers, there may be some exceptions. Here are some resources to help you identify those:
 
