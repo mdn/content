@@ -3,6 +3,7 @@ title: Int16Array
 slug: Web/JavaScript/Reference/Global_Objects/Int16Array
 tags:
   - Class
+  - Int16Array
   - JavaScript
   - TypedArray
   - TypedArrays
