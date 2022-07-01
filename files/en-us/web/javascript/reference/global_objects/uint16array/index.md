@@ -3,10 +3,10 @@ title: Uint16Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint16Array
 tags:
   - Class
+  - Uint16Array
   - JavaScript
   - TypedArray
   - TypedArrays
-  - Uint16Array
   - Polyfill
 browser-compat: javascript.builtins.Uint16Array
 ---
