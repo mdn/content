@@ -1,6 +1,7 @@
 ---
 title: XRWebGLLayer.getNativeFramebufferScaleFactor() static method
 slug: Web/API/XRWebGLLayer/getNativeFramebufferScaleFactor
+page-type: web-api-static-method
 tags:
   - API
   - AR

@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.createShader()
 slug: Web/API/WebGLRenderingContext/createShader
+page-type: web-api-instance-method
 tags:
   - API
   - Graphics

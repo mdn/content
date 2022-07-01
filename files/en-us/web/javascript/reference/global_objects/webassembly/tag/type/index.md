@@ -15,8 +15,6 @@ browser-compat: javascript.builtins.WebAssembly.Tag.type
 
 The **`type()`** prototype method of the [`Tag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag) object can be used to get the sequence of data types associated with the tag.
 
-The returned object will be the same as was originally passed into the [`Tag()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag/Tag).
-
 ## Syntax
 
 ```js
@@ -31,7 +29,7 @@ None
 
 An object with a property named `parameters` that references the array of data types associated with this [`Tag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag).
 
-This is the same as the `type` object that was originally passed into the [`Tag()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag/Tag).
+This is a copy of the `type` object that was originally passed into the [`Tag()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag/Tag).
 
 ## Examples
 
@@ -42,7 +40,7 @@ The result is printed to the console:
 const tag = new WebAssembly.Tag({ parameters: ["i32", "i64"] });
 console.log(tag.type());
 
-//Console output:
+// Console output:
 // Object { parameters: (2) […] }
 //   parameters: Array [ "i32", "i64" ]
 //   <prototype>: Object { … }

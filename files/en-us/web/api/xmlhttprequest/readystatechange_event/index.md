@@ -1,6 +1,7 @@
 ---
 title: 'XMLHttpRequest: readystatechange event'
 slug: Web/API/XMLHttpRequest/readystatechange_event
+page-type: web-api-event
 tags:
   - API
   - Event

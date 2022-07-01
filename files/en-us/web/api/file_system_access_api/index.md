@@ -12,7 +12,11 @@ tags:
   - Landing
   - Overview
   - working with files
-spec-urls: https://fs.spec.whatwg.org/
+browser-compat:
+  - api.FileSystemHandle
+  - api.FileSystemFileHandle
+  - api.FileSystemDirectoryHandle
+  - api.FileSystemWritableFileStream
 ---
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
@@ -175,10 +179,7 @@ writableStream.write({ type: "truncate", size: size })
 
 ## Browser compatibility
 
-{{Compat("api.FileSystemHandle")}}
-{{Compat("api.FileSystemFileHandle")}}
-{{Compat("api.FileSystemDirectoryHandle")}}
-{{Compat("api.FileSystemWritableFileStream")}}
+{{Compat}}
 
 ## See also
 

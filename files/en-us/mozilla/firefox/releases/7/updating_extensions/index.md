@@ -45,7 +45,7 @@ These changes won't affect compatibility (we weren't kidding when we said there 
 
 ### Unloading JavaScript code modules
 
-The new [`Components.utils.unload()`](/en-US/docs/Components.utils.unload) method lets you unload JavaScript code modules previously loaded by calling [`Components.utils.load()`](</en-US/docs/Components.utils.load()>). This can be particularly handy with [restartless (bootstrapped) extensions](/en-US/docs/Extensions/Bootstrapped_extensions), so that you can unload an old version of a code module when a new version of your add-on is installed.
+The new `Components.utils.unload()` method lets you unload JavaScript code modules previously loaded by calling `Components.utils.load()`. This can be particularly handy with restartless (bootstrapped) extensions, so that you can unload an old version of a code module when a new version of your add-on is installed.
 
 ### Inline preferences
 

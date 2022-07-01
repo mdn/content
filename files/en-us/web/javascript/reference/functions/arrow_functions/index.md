@@ -161,20 +161,20 @@ parentheses around expression:
 params => ({foo: "a"}) // returning the object {foo: "a"}
 ```
 
-[Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) are supported:
+[Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) are supported, and always require parentheses:
 
 ```js
 (a, b, ...r) => expression
 ```
 
-[Default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) are supported:
+[Default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) are supported, and always require parentheses:
 
 ```js
 (a=400, b=20, c) => expression
 ```
 
 [Destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-within params supported:
+within params is supported, and always requires parentheses:
 
 ```js
 ([a, b] = [10, 20]) => a + b;  // result is 30

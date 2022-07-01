@@ -1,6 +1,7 @@
 ---
 title: XRSessionEvent()
 slug: Web/API/XRSessionEvent/XRSessionEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -36,7 +37,7 @@ new XRSessionEvent(type, options)
 
 - `type`
   - :  A string with the name of the event.
-    It is case-sensitive and browsers set it to `end`or `visibilitychange`.
+    It is case-sensitive and browsers set it to `end` or `visibilitychange`.
 - `options`
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
     - `session`

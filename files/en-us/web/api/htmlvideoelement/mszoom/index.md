@@ -44,7 +44,7 @@ space of the video object.
 This examples gets a Video object and sets the `msZoom` property to true.
 
 ```js
-    var myVideo = document.getElementById("videoTag1");
+    const myVideo = document.getElementById("videoTag1");
        myVideo.msZoom = true;
        myVideo.play();
 ```

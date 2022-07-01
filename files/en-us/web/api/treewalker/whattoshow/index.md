@@ -1,6 +1,7 @@
 ---
 title: TreeWalker.whatToShow
 slug: Web/API/TreeWalker/whatToShow
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

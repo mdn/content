@@ -1,6 +1,7 @@
 ---
 title: Fundamentals of WebXR
 slug: Web/API/WebXR_Device_API/Fundamentals
+page-type: guide
 tags:
   - API
   - AR
@@ -112,8 +113,6 @@ There are two basic types of AR device:
 - Devices which use transparent glasses to allow the user to see the world, while overlaying the rendered image atop the scene. The user is, thus, directly viewing the real world instead of a series of digital photos of it.
 
 Both types of device should be capable of also presenting VR sessions. WebXR doesn't generally care which type of device you're using, and the rendering process is almost exactly the same as for VR, except you don't erase the background or skybox before rendering each frame.
-
-For more information about using WebXR to create augmented reality experiences, see [Augmented reality with WebXR](/en-US/docs/Web/API/WebXR_Device_API/Augmented_reality).
 
 ## Types of WebXR hardware
 

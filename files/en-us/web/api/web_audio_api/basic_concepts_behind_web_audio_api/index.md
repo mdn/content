@@ -1,6 +1,7 @@
 ---
 title: Basic concepts behind Web Audio API
 slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
+page-type: guide
 tags:
   - Audio
   - Beginner

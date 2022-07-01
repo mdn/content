@@ -1,6 +1,7 @@
 ---
 title: 'XRSystem: isSessionSupported()'
 slug: Web/API/XRSystem/isSessionSupported
+page-type: web-api-instance-method
 tags:
   - API
   - AR

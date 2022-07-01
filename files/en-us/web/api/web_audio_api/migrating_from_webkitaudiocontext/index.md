@@ -1,6 +1,7 @@
 ---
 title: Migrating from webkitAudioContext
 slug: Web/API/Web_Audio_API/Migrating_from_webkitAudioContext
+page-type: guide
 tags:
   - API
   - Audio

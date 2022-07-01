@@ -27,7 +27,7 @@ The {{domxref("HTMLVideoElement")}} and {{domxref("HTMLAudioElement")}} elements
 _This interface also inherits properties from its ancestors {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
 
 - {{domxref("HTMLMediaElement.audioTracks")}}
-  - : A {{domxref("AudioTrackList")}} that lists the {{domxref("AudioTrack")}} objects contained in the element.
+  - : An {{domxref("AudioTrackList")}} that lists the {{domxref("AudioTrack")}} objects contained in the element.
 - {{domxref("HTMLMediaElement.autoplay")}}
 
   - : A boolean value that reflects the {{htmlattrxref("autoplay", "video")}} HTML attribute, indicating whether playback should automatically begin as soon as enough media is available to do so without interruption.
@@ -158,7 +158,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}_ , defined in the 
 - {{domxref("HTMLMediaElement.abort_event", 'abort')}}
   - : Fired when the resource was not fully loaded, but not as the result of an error.
 - {{domxref("HTMLMediaElement.canplay_event", 'canplay')}}
-  - : Fired when the user agent can play the media, but estimates that **not** enough data has been loaded to play the media up to its end without having to stop for further buffering of content
+  - : Fired when the user agent can play the media, but estimates that **not** enough data has been loaded to play the media up to its end without having to stop for further buffering of content.
 - {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}}
   - : Fired when the user agent can play the media, and estimates that enough data has been loaded to play the media up to its end without having to stop for further buffering of content.
 - {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}}
@@ -172,15 +172,15 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}_ , defined in the 
 - {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}
   - : Fired when the first frame of the media has finished loading.
 - {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}}
-  - : Fired when the metadata has been loaded
+  - : Fired when the metadata has been loaded.
 - {{domxref("HTMLMediaElement.loadstart_event", 'loadstart')}}
   - : Fired when the browser has started to load a resource.
 - {{domxref("HTMLMediaElement.pause_event", 'pause')}}
   - : Fired when a request to pause play is handled and the activity has entered its paused state, most commonly occurring when the media's {{domxref("HTMLMediaElement.pause()")}} method is called.
 - {{domxref("HTMLMediaElement.play_event", 'play')}}
-  - : Fired when the `paused` property is changed from `true` to `false`, as a result of the {{domxref("HTMLMediaElement.play()")}} method, or the `autoplay` attribute
+  - : Fired when the `paused` property is changed from `true` to `false`, as a result of the {{domxref("HTMLMediaElement.play()")}} method, or the `autoplay` attribute.
 - {{domxref("HTMLMediaElement.playing_event", "playing")}}
-  - : Fired when playback is ready to start after having been paused or delayed due to lack of data
+  - : Fired when playback is ready to start after having been paused or delayed due to lack of data.
 - {{domxref("HTMLMediaElement.progress_event", "progress")}}
   - : Fired periodically as the browser loads a resource.
 - {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}
@@ -188,9 +188,9 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}_ , defined in the 
 - {{domxref("HTMLMediaElement.resize_event", 'resize ')}}
   - : Fired when one or both of the `videoWidth` and `videoHeight` properties have just been updated.
 - {{domxref("HTMLMediaElement.seeked_event", 'seeked ')}}
-  - : Fired when a seek operation completes
+  - : Fired when a seek operation completes.
 - {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}
-  - : Fired when a seek operation begins
+  - : Fired when a seek operation begins.
 - {{domxref("HTMLMediaElement.stalled_event", 'stalled')}}
   - : Fired when the user agent is trying to fetch media data, but data is unexpectedly not forthcoming.
 - {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}
@@ -214,8 +214,8 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}_ , defined in the 
 
 ### References
 
-- {{HTMLElement("video")}} and {{HTMLElement("audio")}} HTML elements.
-- {{domxref("HTMLVideoElement")}} and {{domxref("HTMLAudioElement")}} interfaces, derived from `HTMLMediaElement`.
+- {{HTMLElement("video")}} and {{HTMLElement("audio")}} HTML elements
+- {{domxref("HTMLVideoElement")}} and {{domxref("HTMLAudioElement")}} interfaces, derived from `HTMLMediaElement`
 
 ### Guides
 

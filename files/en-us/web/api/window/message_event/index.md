@@ -1,6 +1,7 @@
 ---
 title: 'Window: message event'
 slug: Web/API/Window/message_event
+page-type: web-api-event
 tags:
   - Event
 browser-compat: api.Window.message_event

@@ -1,6 +1,7 @@
 ---
 title: USBDevice.controlTransferOut()
 slug: Web/API/USBDevice/controlTransferOut
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - controlTransferOut
+  - Experimental
 browser-compat: api.USBDevice.controlTransferOut
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}

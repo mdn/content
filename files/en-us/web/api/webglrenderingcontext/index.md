@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext
 slug: Web/API/WebGLRenderingContext
+page-type: web-api-interface
 tags:
   - 2D
   - 3D

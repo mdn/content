@@ -1,6 +1,7 @@
 ---
 title: Window.moveBy()
 slug: Web/API/Window/moveBy
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View

@@ -1,6 +1,7 @@
 ---
 title: Visual Viewport API
 slug: Web/API/Visual_Viewport_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental

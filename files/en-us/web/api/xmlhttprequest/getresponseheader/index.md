@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.getResponseHeader()
 slug: Web/API/XMLHttpRequest/getResponseHeader
+page-type: web-api-instance-method
 tags:
   - API
   - Examine Header

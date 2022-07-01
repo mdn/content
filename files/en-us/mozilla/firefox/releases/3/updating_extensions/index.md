@@ -40,7 +40,7 @@ Firefox 3 supports new properties in the install manifest to specify localized d
 
 ## Step 2: Ensure you are providing secure updates
 
-If you are hosting addons yourself and not on a secure add-on hosting provider like [addons.mozilla.org](https://addons.mozilla.org) then you must provide a secure method of updating your add-on. This will either involve hosting your updates on an SSL website, or using cryptographic keys to sign the update information. Read [Securing Updates](/en-US/docs/Extension_Versioning,_Update_and_Compatibility#Securing_Updates) for more information.
+If you are hosting addons yourself and not on a secure add-on hosting provider like [addons.mozilla.org](https://addons.mozilla.org) then you must provide a secure method of updating your add-on. This will either involve hosting your updates on an SSL website, or using cryptographic keys to sign the update information. Read [Securing Updates](/en-US/docs/Extension_Versioning,_Update_and_Compatibility#securing_updates) for more information.
 
 ## Step 3: Deal with changed APIs
 
@@ -158,7 +158,7 @@ _Add simple changes you had to make while updating your extension to work with F
   1. XML PIs are now added to a XUL document's DOM. This means {{ Domxref("document.firstChild") }} is no longer guaranteed to be the root element. If you need to get the root document in your script, use {{ Domxref("document.documentElement") }} instead.
   2. `<?xml-stylesheet ?>` and `<?xul-overlay ?>` processing instructions now have no effect outside the document prolog.
 
-- `window.addEventListener("load", myFunc, true)` is not fired when loading web content (browser page loads). This is due to {{ Bug(296639) }} which changes the way inner and outer windows communicate. The simple fix here is to use `gBrowser.addEventListener("load", myFunc, true)` as described [here](/en-US/docs/Code_snippets/Tabbed_browser#Detecting_page_load) and works in Firefox 2 as well.
+- `window.addEventListener("load", myFunc, true)` is not fired when loading web content (browser page loads). This is due to {{ Bug(296639) }} which changes the way inner and outer windows communicate. The simple fix here is to use `gBrowser.addEventListener("load", myFunc, true)` as described [here](/en-US/docs/Code_snippets/Tabbed_browser#detecting_page_load) and works in Firefox 2 as well.
 - `content.window.getSelection()` gives an object (which can be converted to a string by `toString()`), unlike the now deprecated `content.document.getSelection()` which returns a string
 - `event.preventBubble()` was deprecated in Firefox 2 and has been removed in Firefox 3. Use [`event.stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation), which works in Firefox 2 as well.
 - Timers that are initiated using `setTimeout()` are now blocked by modal windows due to the fix made for {{ Bug(52209) }}. You may use `nsITimer` instead.

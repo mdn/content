@@ -38,7 +38,7 @@ If you measure the time it takes to parse CSS, you'll be amazed at how fast brow
 
 ### Render Tree
 
-The render tree captures both the content and the styles: the DOM and CSSOM trees are combined into the render tree. To construct the render tree, the browser checks every node, starting from root of the DOM tree, and determine which CSS rules are attached.
+The render tree captures both the content and the styles: the DOM and CSSOM trees are combined into the render tree. To construct the render tree, the browser checks every node, starting from root of the DOM tree, and determines which CSS rules are attached.
 
 The render tree only captures visible content. The head section (generally) doesn't contain any visible information, and is therefore not included in the render tree. If there's a `display: none;` set on an element, neither it, nor any of its descendants, are in the render tree.
 

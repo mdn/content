@@ -105,7 +105,7 @@ tags:
 
 ### WebRTC
 
-- The {{domxref("RTCPeerConnection.removeStream()")}} method has been removed. It was deprecated back in Firefox 22, and has been throwing a `NotSupportedError` {{domxref("DOMException")}}for a long time. You need to use {{domxref("RTCPeerConnection.removeTrack()")}} instead, for each track on the stream.
+- The {{domxref("RTCPeerConnection.removeStream()")}} method has been removed. It was deprecated back in Firefox 22, and has been throwing a `NotSupportedError` {{domxref("DOMException")}} for a long time. You need to use {{domxref("RTCPeerConnection.removeTrack()")}} instead, for each track on the stream.
 - WebRTC now supports the VP9 codec by default. When added in Firefox 46, VP9 was disabled by default, but when enabled was the preferred codec; however, it has been moved to be the second choice (after VP8) due to its current level of CPU usage.
 - The method {{domxref("HTMLMediaElement.captureStream()")}}, which returns a {{domxref("MediaStream")}} containing the content of the specified {{HTMLElement("video")}} or {{HTMLElement("audio")}}. It's worth noting that this is prefixed still as `mozCaptureStream()`, and that it doesn't yet exactly match the spec.
 

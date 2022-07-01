@@ -1,6 +1,7 @@
 ---
 title: Touch.force
 slug: Web/API/Touch/force
+page-type: web-api-instance-property
 tags:
   - API
   - Property

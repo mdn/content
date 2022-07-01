@@ -1,6 +1,7 @@
 ---
 title: XPathResult.resultType
 slug: Web/API/XPathResult/resultType
+page-type: web-api-instance-property
 tags:
   - API
   - DOM XPath API
@@ -142,7 +143,7 @@ document.querySelector("output").textContent =
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples', 400, 70)}}
 
 ## Specifications
 

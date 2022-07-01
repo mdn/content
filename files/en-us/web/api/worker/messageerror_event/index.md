@@ -1,6 +1,7 @@
 ---
 title: 'Worker: messageerror event'
 slug: Web/API/Worker/messageerror_event
+page-type: web-api-event
 tags:
   - API
   - Worker

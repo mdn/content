@@ -150,7 +150,7 @@ The position of the thumb is the maximum value minus the current value times the
 }
 ```
 
-For this example to work, we have to write a script to handle all keyboard and pointer events, including event listeners for `pointermove`, `pointerup`, `focus`, `blur`, and `keydown`, and provide styles for the default state and when the thumb and slider receive focus. The position of the thumb, the `aria-valuenow` and`aria-valuetext` values, and the inner text of the element with the {{HTMLattrxref('id')}} "temperatureValue" need to be updated every time <kbd>ArrowLeft</kbd>, <kbd>ArrowDown</kbd>, <kbd>ArrowRight</kbd>, <kbd>ArrowUp</kbd>, <kbd>Home</kbd>, <kbd>End</kbd>, and, optionally, <kbd>PageDown</kbd> and <kbd>PageUp</kbd> keys are released and when the user drags the thumb or otherwise clicks on the temperature slider.
+For this example to work, we have to write a script to handle all keyboard and pointer events, including event listeners for `pointermove`, `pointerup`, `focus`, `blur`, and `keydown`, and provide styles for the default state and when the thumb and slider receive focus. The position of the thumb, the `aria-valuenow` and `aria-valuetext` values, and the inner text of the element with the {{HTMLattrxref('id')}} "temperatureValue" need to be updated every time <kbd>ArrowLeft</kbd>, <kbd>ArrowDown</kbd>, <kbd>ArrowRight</kbd>, <kbd>ArrowUp</kbd>, <kbd>Home</kbd>, <kbd>End</kbd>, and, optionally, <kbd>PageDown</kbd> and <kbd>PageUp</kbd> keys are released and when the user drags the thumb or otherwise clicks on the temperature slider.
 
 Using semantic HTML, this could have been written as:
 
@@ -176,7 +176,7 @@ There are a few ways to make a range input vertical. In this example, we used [C
 | Right and Up arrows | Increase the selected value by one step |
 | Left and Down arrows | Decrease the selected value by one step|
 | Page Up | (Optional) increase the value by a set amount greater than one step |
-| Page Up and Page Down | (Optional) decrease the value by a set amount greater than one step |
+| Page Down | (Optional) decrease the value by a set amount greater than one step |
 | Home | Set the slider to the minimum value. |
 | End | Set the slider to the maximum value. |
 

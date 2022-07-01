@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.bindFramebuffer()
 slug: Web/API/WebGLRenderingContext/bindFramebuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: WebXR Device API
 slug: Web/API/WebXR_Device_API
+page-type: web-api-overview
 tags:
   - API
   - AR

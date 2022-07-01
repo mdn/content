@@ -1,6 +1,7 @@
 ---
 title: WindowClient.focus()
 slug: Web/API/WindowClient/focus
+page-type: web-api-instance-method
 tags:
   - API
   - Client

@@ -1,6 +1,7 @@
 ---
 title: XRTransientInputHitTestResult.inputSource
 slug: Web/API/XRTransientInputHitTestResult/inputSource
+page-type: web-api-instance-property
 tags:
   - API
   - AR

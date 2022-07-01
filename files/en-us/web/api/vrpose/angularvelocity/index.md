@@ -1,6 +1,7 @@
 ---
 title: VRPose.angularVelocity
 slug: Web/API/VRPose/angularVelocity
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

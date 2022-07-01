@@ -1,6 +1,7 @@
 ---
 title: Window.screenX
 slug: Web/API/Window/screenX
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View

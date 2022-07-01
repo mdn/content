@@ -1,6 +1,7 @@
 ---
 title: 'Window: animationiteration event'
 slug: Web/API/Window/animationiteration_event
+page-type: web-api-event
 tags:
   - API
   - Animation

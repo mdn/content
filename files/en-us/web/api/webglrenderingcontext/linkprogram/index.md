@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.linkProgram()
 slug: Web/API/WebGLRenderingContext/linkProgram
+page-type: web-api-instance-method
 tags:
   - API
   - Method

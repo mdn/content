@@ -1,6 +1,7 @@
 ---
 title: TransformStream
 slug: Web/API/TransformStream
+page-type: web-api-interface
 tags:
   - API
   - Interface

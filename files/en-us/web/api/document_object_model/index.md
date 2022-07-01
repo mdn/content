@@ -36,7 +36,6 @@ To learn more about what the DOM is and how it represents documents, see our art
 - {{DOMxRef("DOMError")}} {{Deprecated_Inline}}
 - {{DOMxRef("DOMException")}}
 - {{DOMxRef("DOMImplementation")}}
-- {{DOMxRef("DOMString")}}
 - {{DOMxRef("DOMTimeStamp")}}
 - {{DOMxRef("DOMStringList")}}
 - {{DOMxRef("DOMTokenList")}}

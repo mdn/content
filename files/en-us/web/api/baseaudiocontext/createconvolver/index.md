@@ -47,21 +47,21 @@ crowd, so the reverb effect applied is really deep and echoey.
 For applied examples/information, check out our [Voice-change-O-matic demo](https://mdn.github.io/voice-change-o-matic/) ([see app.js](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js) for relevant code).
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var convolver = audioCtx.createConvolver();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const convolver = audioCtx.createConvolver();
 
   ...
 
 // grab audio track via XHR for convolver node
 
-var soundSource, concertHallBuffer;
+let soundSource, concertHallBuffer;
 
 ajaxRequest = new XMLHttpRequest();
 ajaxRequest.open('GET', 'concert-crowd.ogg', true);
 ajaxRequest.responseType = 'arraybuffer';
 
 ajaxRequest.onload = function() {
-  var audioData = ajaxRequest.response;
+  const audioData = ajaxRequest.response;
   audioCtx.decodeAudioData(audioData, function(buffer) {
       concertHallBuffer = buffer;
       soundSource = audioCtx.createBufferSource();

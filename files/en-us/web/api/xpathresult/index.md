@@ -1,6 +1,7 @@
 ---
 title: XPathResult
 slug: Web/API/XPathResult
+page-type: web-api-interface
 tags:
   - API
   - DOM XPath API

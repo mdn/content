@@ -35,10 +35,10 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("CSSStyleSheet")}}.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NotAllowedError`
-  - : Thrown if the stylesheet was not created using the {{domxref("CSSStyleSheet.CSSStyleSheet()","CSSStyleSheet()")}} constructor.
-- {{domxref("DOMException")}} `NotAllowedError`
-  - : If the stylesheet is flagged as unmodifiable.
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if one of these two conditions is met:
+    - The stylesheet was not created using the {{domxref("CSSStyleSheet.CSSStyleSheet()","CSSStyleSheet()")}} constructor.
+    - The stylesheet is flagged as unmodifiable.
 
 ## Examples
 

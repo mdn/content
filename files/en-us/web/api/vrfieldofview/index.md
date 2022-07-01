@@ -1,6 +1,7 @@
 ---
 title: VRFieldOfView
 slug: Web/API/VRFieldOfView
+page-type: web-api-interface
 tags:
   - API
   - Experimental

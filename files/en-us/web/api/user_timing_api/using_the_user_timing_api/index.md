@@ -1,6 +1,7 @@
 ---
 title: Using the User Timing API
 slug: Web/API/User_Timing_API/Using_the_User_Timing_API
+page-type: guide
 tags:
   - Guide
   - Web Performance

@@ -1,6 +1,7 @@
 ---
 title: 'Window: vrdisplaydeactivate event'
 slug: Web/API/Window/vrdisplaydeactivate_event
+page-type: web-api-event
 tags:
   - Reference
   - WebVR

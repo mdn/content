@@ -411,6 +411,7 @@ body,html {
 a {
   flex: 1;
   text-decoration: none;
+  outline: none;
   text-align: center;
   line-height: 3;
   color: black;

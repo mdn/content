@@ -46,8 +46,7 @@ After the `clientDataJSON` object is converted from an
     id_ to be a suffix of this value.
 - `tokenBindingId` {{optional_inline}}
 
-  - : An object describing the state of [the
-    token binding protocol](https://datatracker.ietf.org/doc/html/rfc8471) for the communication with the relying party. It has
+  - : An object describing the state of [the token binding protocol](https://datatracker.ietf.org/doc/html/rfc8471) for the communication with the relying party. It has
     two properties:
 
     - `status`: A string which is either `"supported"` which

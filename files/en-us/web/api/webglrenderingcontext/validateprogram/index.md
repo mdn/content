@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.validateProgram()
 slug: Web/API/WebGLRenderingContext/validateProgram
+page-type: web-api-instance-method
 tags:
   - API
   - Method

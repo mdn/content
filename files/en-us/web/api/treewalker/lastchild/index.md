@@ -1,6 +1,7 @@
 ---
 title: TreeWalker.lastChild()
 slug: Web/API/TreeWalker/lastChild
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

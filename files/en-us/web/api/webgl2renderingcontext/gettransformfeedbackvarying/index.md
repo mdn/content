@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.getTransformFeedbackVarying()
 slug: Web/API/WebGL2RenderingContext/getTransformFeedbackVarying
+page-type: web-api-instance-method
 tags:
   - API
   - Method

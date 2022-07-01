@@ -13,7 +13,7 @@ browser-compat: javascript.statements.let
 ---
 {{jsSidebar("Statements")}}
 
-The **`let`** statement declares a block-scoped local variable,
+The **`let`** declaration declares a block-scoped local variable,
 optionally initializing it to a value.
 
 {{EmbedInteractiveExample("pages/js/statement-let.html")}}
@@ -56,8 +56,13 @@ globally (in the top-most scope).
 
 An explanation of why the name "**let**" was chosen can be found [here](https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri).
 
-> **Note:** Many issues with `let` variables can be avoided by declaring them at the
-> top of the scope in which they are used (doing so may impact readability).
+Many issues with `let` variables can be avoided by declaring them at the top of the scope in which they are used (doing so may impact readability).
+
+Unlike `var`, `let` begins _Declarations_, not _Statements_. That means you cannot use a lone `let` declaration as the body of a block (which makes sense, since there's no way to access the variable).
+
+```js
+if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
+```
 
 ## Examples
 
@@ -99,55 +104,6 @@ let y = 'global';
 console.log(this.x); // "global"
 console.log(this.y); // undefined
 ```
-
-### Emulating private members
-
-In dealing with {{Glossary("Constructor", "constructors")}} it is possible to use the
-**`let`** bindings to share one or more private members without
-using [closures](/en-US/docs/Web/JavaScript/Closures):
-
-```js
-var Thing;
-
-{
-  let privateScope = new WeakMap();
-  let counter = 0;
-
-  Thing = function() {
-    this.someProperty = 'foo';
-
-    privateScope.set(this, {
-      hidden: ++counter,
-    });
-  };
-
-  Thing.prototype.showPublic = function() {
-    return this.someProperty;
-  };
-
-  Thing.prototype.showPrivate = function() {
-    return privateScope.get(this).hidden;
-  };
-}
-
-console.log(typeof privateScope);
-// "undefined"
-
-var thing = new Thing();
-
-console.log(thing);
-// Thing {someProperty: "foo"}
-
-thing.showPublic();
-// "foo"
-
-thing.showPrivate();
-// 1
-```
-
-The same privacy pattern with closures over local variables can be created with
-`var`, but those need a function scope (typically an {{Glossary("IIFE")}} in
-the module pattern) instead of just a block scope like in the example above.
 
 ### Redeclarations
 
@@ -205,7 +161,7 @@ The variable is initialized with a value when execution reaches the line of code
 If no initial value was specified with the variable declaration, it will be initialized with a value of `undefined`.
 
 This differs from {{jsxref("Statements/var", "var", "var_hoisting")}} variables, which will return a value of `undefined` if they are accessed before they are declared.
-The code below demonstrates the different result when `let` and `var` are accessed in code before the line in which the are declared.
+The code below demonstrates the different result when `let` and `var` are accessed in code before the line in which they are declared.
 
 ```js example-bad
 { // TDZ starts at beginning of scope

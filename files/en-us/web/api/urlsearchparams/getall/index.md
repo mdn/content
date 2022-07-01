@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.getAll()
 slug: Web/API/URLSearchParams/getAll
+page-type: web-api-instance-method
 tags:
   - API
   - Method

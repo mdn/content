@@ -1,6 +1,7 @@
 ---
 title: WheelEvent.deltaX
 slug: Web/API/WheelEvent/deltaX
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

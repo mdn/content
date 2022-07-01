@@ -1,6 +1,7 @@
 ---
 title: XRInputSource.profiles
 slug: Web/API/XRInputSource/profiles
+page-type: web-api-instance-property
 tags:
   - API
   - AR

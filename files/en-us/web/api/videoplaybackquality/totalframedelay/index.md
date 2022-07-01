@@ -1,6 +1,7 @@
 ---
 title: VideoPlaybackQuality.totalFrameDelay
 slug: Web/API/VideoPlaybackQuality/totalFrameDelay
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

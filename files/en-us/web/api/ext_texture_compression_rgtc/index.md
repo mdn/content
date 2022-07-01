@@ -1,6 +1,7 @@
 ---
 title: EXT_texture_compression_rgtc
 slug: Web/API/EXT_texture_compression_rgtc
+page-type: webgl-extension
 tags:
   - API
   - Reference

@@ -115,7 +115,7 @@ baselines.forEach((baseline, index) => {
 
 #### Result
 
-{{ EmbedLiveSample('', 900, 200) }}
+{{ EmbedLiveSample('Comparison of property values on the same line', 900, 200) }}
 
 ## Specifications
 

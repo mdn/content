@@ -1,6 +1,7 @@
 ---
 title: XMLSerializer.serializeToString()
 slug: Web/API/XMLSerializer/serializeToString
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

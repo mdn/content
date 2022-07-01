@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.abort()
 slug: Web/API/XMLHttpRequest/abort
+page-type: web-api-instance-method
 tags:
   - AJAX
   - API

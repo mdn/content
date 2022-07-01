@@ -29,7 +29,7 @@ None.
 
 ### Return value
 
-A {{domxref("DOMRequest")}} object to handle the success or failure of the method call.
+A `DOMRequest` object to handle the success or failure of the method call.
 
 If the method call is successful, the request's `result` will be an array of
 [PushRegistration](#pushregistration) objects.
@@ -75,4 +75,3 @@ This feature is not part of any specification anymore. It is no longer on track 
 ## See also
 
 - {{domxref("PushManager")}}
-- {{domxref("DOMRequest")}}

@@ -1,6 +1,7 @@
 ---
 title: WritableStreamDefaultWriter.close()
 slug: Web/API/WritableStreamDefaultWriter/close
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -118,8 +119,7 @@ const writableStream = new WritableStream({
 sendMessage("Hello, world.", writableStream);
 ```
 
-You can find the full code in our [Simple writer
-example](https://mdn.github.io/dom-examples/streams/simple-writer/).
+You can find the full code in our [Simple writer example](https://mdn.github.io/dom-examples/streams/simple-writer/).
 
 ## Specifications
 

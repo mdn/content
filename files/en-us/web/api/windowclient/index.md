@@ -1,6 +1,7 @@
 ---
 title: WindowClient
 slug: Web/API/WindowClient
+page-type: web-api-interface
 tags:
   - API
   - Client

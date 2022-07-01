@@ -1,6 +1,7 @@
 ---
 title: WorkerNavigator
 slug: Web/API/WorkerNavigator
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

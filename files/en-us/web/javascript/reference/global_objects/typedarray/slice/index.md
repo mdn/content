@@ -77,26 +77,6 @@ uint8.slice(-2);  // Uint8Array [ 2, 3 ]
 uint8.slice(0,1); // Uint8Array [ 1 ]
 ```
 
-## Polyfill
-
-Since there is no global object with the name _TypedArray_, polyfilling must be
-done on an "as needed" basis.
-
-```js
-if (!Uint8Array.prototype.slice) {
-  Object.defineProperty(Uint8Array.prototype, 'slice', {
-    value: function (begin, end)
-     {
-        return new Uint8Array(Array.prototype.slice.call(this, begin, end));
-     }
-  });
-}
-```
-
-If you need to support truly obsolete JavaScript engines that don't support
-{{jsxref("Object.defineProperty")}}, it's best not to polyfill
-`TypedArray.prototype` methods at all, as you can't make them non-enumerable.
-
 ## Specifications
 
 {{Specifications}}

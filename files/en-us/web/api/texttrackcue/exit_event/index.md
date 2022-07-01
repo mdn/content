@@ -1,6 +1,7 @@
 ---
 title: 'TextTrackCue: exit event'
 slug: Web/API/TextTrackCue/exit_event
+page-type: web-api-event
 tags:
   - API
   - Event

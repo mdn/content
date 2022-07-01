@@ -1,6 +1,7 @@
 ---
 title: WebGLActiveInfo.name
 slug: Web/API/WebGLActiveInfo/name
+page-type: web-api-instance-property
 tags:
   - API
   - Property

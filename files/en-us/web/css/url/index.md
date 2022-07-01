@@ -86,7 +86,7 @@ The **`url()`** function can be included as a value for
       - : References the ID of an [SVG shape](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes) -- `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect` -- using the shape's geometry as the path.
 
 - `<url-modifier>` {{Experimental_Inline}}
-  - : In the future, the `url()` function may support specifying a modifier, an identifier or a functional notation, which alters the meaning of the URL string.This is not supported and not fully defined in the specification.
+  - : In the future, the `url()` function may support specifying a modifier, an identifier or a functional notation, which alters the meaning of the URL string. This is not supported and not fully defined in the specification.
 
 ### Formal syntax
 

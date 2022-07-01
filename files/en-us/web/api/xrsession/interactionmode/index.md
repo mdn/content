@@ -1,6 +1,7 @@
 ---
 title: XRSession.interactionMode
 slug: Web/API/XRSession/interactionMode
+page-type: web-api-instance-property
 tags:
   - API
   - AR

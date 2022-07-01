@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.bindBuffer()
 slug: Web/API/WebGLRenderingContext/bindBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method

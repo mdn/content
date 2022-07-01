@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.overrideMimeType()
 slug: Web/API/XMLHttpRequest/overrideMimeType
+page-type: web-api-instance-method
 tags:
   - API
   - File Type

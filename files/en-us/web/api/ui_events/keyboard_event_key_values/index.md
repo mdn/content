@@ -1,6 +1,7 @@
 ---
 title: Key values for keyboard events
 slug: Web/API/UI_Events/Keyboard_event_key_values
+page-type: guide
 tags:
   - Characters
   - DOM

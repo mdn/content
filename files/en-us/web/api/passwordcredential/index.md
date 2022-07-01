@@ -46,7 +46,7 @@ None.
 ## Examples
 
 ```js
-var cred = new PasswordCredential({
+const cred = new PasswordCredential({
   id: id,
   password: password,
   name: name,

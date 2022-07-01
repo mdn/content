@@ -1,6 +1,7 @@
 ---
 title: 'Worker: message event'
 slug: Web/API/Worker/message_event
+page-type: web-api-event
 tags:
   - API
   - Worker

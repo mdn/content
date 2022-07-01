@@ -1,6 +1,7 @@
 ---
 title: 'Window: vrdisplayfocus event'
 slug: Web/API/Window/vrdisplayfocus_event
+page-type: web-api-event
 tags:
   - Reference
   - WebVR

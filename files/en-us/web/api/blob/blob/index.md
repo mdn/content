@@ -26,10 +26,11 @@ new Blob(array, options)
 ### Parameters
 
 - `array`
-  - : An {{jsxref("Array")}} of {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}},
-    {{domxref("Blob")}}, string objects, or a mix of any of such
-    objects, that will be put inside the {{domxref("Blob")}}. `USVString`
-    objects are encoded as UTF-8.
+  - : An {{jsxref("Array")}} of {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}},
+    a {{domxref("Blob")}}, string objects, or a mix of any of such
+    objects, that will be put inside the {{domxref("Blob")}}.
+    Note that strings objects here are encoded as UTF-8, unlike the usual JS UTF-16 strings.
+
 - `options` {{optional_inline}}
   - : An object which may specify any of the following properties:
     - `type` {{optional_inline}}
@@ -48,7 +49,7 @@ A new {{domxref("Blob")}} object containing the specified data.
 ## Examples
 
 ```js
-const array = ['<a id="a"><b id="b">hey!</b></a>']; // an array consisting of a single DOMString
+const array = ['<a id="a"><b id="b">hey!</b></a>']; // an array consisting of a single string
 const blob = new Blob(array, {type : 'text/html'}); // the blob
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Generating HTML
 slug: Web/API/XSLTProcessor/Generating_HTML
+page-type: guide
 ---
 ## Generating HTML
 

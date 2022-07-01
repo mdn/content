@@ -405,7 +405,7 @@ This rather long block of code completely resets everything to how it was at the
 
 **At this point you should have a fully working (simple) game — congratulations!**
 
-All we have left to do now in this article is talk about a few other important code features that you've already seen, although you may have not realized it.
+All we have left to do now in this article is to talk about a few other important code features that you've already seen, although you may have not realized it.
 
 ### Loops
 

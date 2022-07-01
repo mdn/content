@@ -1,6 +1,7 @@
 ---
 title: XRView.transform
 slug: Web/API/XRView/transform
+page-type: web-api-instance-property
 tags:
   - API
   - AR

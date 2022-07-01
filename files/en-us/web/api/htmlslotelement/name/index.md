@@ -19,7 +19,7 @@ that users can fill with their own markup.
 
 ## Value
 
-A {{domxref('DOMString','string')}}.
+A string.
 
 ## Examples
 

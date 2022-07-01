@@ -1,6 +1,7 @@
 ---
 title: Window.location
 slug: Web/API/Window/location
+page-type: web-api-instance-property
 tags:
   - API
   - HTML

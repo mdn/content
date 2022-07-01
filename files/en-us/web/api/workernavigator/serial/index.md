@@ -1,6 +1,7 @@
 ---
 title: WorkerNavigator.serial
 slug: Web/API/WorkerNavigator/serial
+page-type: web-api-instance-property
 tags:
   - API
   - Property

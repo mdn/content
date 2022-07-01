@@ -1,6 +1,7 @@
 ---
 title: 'Window: vrdisplaypointerrestricted event'
 slug: Web/API/Window/vrdisplaypointerrestricted_event
+page-type: web-api-event
 tags:
   - Reference
   - Web VR

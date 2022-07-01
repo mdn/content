@@ -1,6 +1,7 @@
 ---
 title: Window.setImmediate()
 slug: Web/API/Window/setImmediate
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

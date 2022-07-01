@@ -1,6 +1,7 @@
 ---
 title: Web Workers API
 slug: Web/API/Web_Workers_API
+page-type: web-api-overview
 tags:
   - API
   - Overview

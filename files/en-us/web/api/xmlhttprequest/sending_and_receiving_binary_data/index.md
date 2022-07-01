@@ -1,6 +1,7 @@
 ---
 title: Sending and Receiving Binary Data
 slug: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
+page-type: guide
 tags:
   - AJAX
   - FileReader

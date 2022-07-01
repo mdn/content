@@ -1,6 +1,7 @@
 ---
 title: WebGLContextEvent.statusMessage
 slug: Web/API/WebGLContextEvent/statusMessage
+page-type: web-api-instance-property
 tags:
   - API
   - Property

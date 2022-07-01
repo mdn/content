@@ -1,6 +1,7 @@
 ---
 title: XRLayerEvent.layer
 slug: Web/API/XRLayerEvent/layer
+page-type: web-api-instance-property
 tags:
   - API
   - Property

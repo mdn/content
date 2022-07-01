@@ -1,6 +1,7 @@
 ---
 title: USB.requestDevice()
 slug: Web/API/USB/requestDevice
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebUSB
   - WebUSB API
   - getDevices()
+  - Experimental
 browser-compat: api.USB.requestDevice
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}

@@ -1,11 +1,13 @@
 ---
 title: USBConnectionEvent()
 slug: Web/API/USBConnectionEvent/USBConnectionEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
   - Reference
   - USBConnectionEvent
+  - Experimental
 browser-compat: api.USBConnectionEvent.USBConnectionEvent
 ---
 {{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}

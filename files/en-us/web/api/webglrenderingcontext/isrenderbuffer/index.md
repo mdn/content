@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.isRenderbuffer()
 slug: Web/API/WebGLRenderingContext/isRenderbuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method

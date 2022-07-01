@@ -1,6 +1,7 @@
 ---
 title: XPathResult.invalidIteratorState
 slug: Web/API/XPathResult/invalidIteratorState
+page-type: web-api-instance-property
 tags:
   - API
   - DOM XPath API
@@ -47,7 +48,7 @@ document.querySelector("output").textContent = result.invalidIteratorState ? "in
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples', 400, 70)}}
 
 ## Specifications
 

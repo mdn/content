@@ -1,6 +1,7 @@
 ---
 title: XRQuadLayer
 slug: Web/API/XRQuadLayer
+page-type: web-api-interface
 tags:
   - API
   - AR

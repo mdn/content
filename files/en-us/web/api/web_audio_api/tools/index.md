@@ -1,6 +1,7 @@
 ---
 title: Tools for analyzing Web Audio usage
 slug: Web/API/Web_Audio_API/Tools
+page-type: guide
 tags:
   - API
   - Audio

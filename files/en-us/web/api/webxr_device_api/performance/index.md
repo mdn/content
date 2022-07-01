@@ -1,6 +1,7 @@
 ---
 title: WebXR performance guide
 slug: Web/API/WebXR_Device_API/Performance
+page-type: guide
 tags:
   - API
   - Guide

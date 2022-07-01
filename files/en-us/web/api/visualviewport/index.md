@@ -1,6 +1,7 @@
 ---
 title: VisualViewport
 slug: Web/API/VisualViewport
+page-type: web-api-interface
 tags:
   - API
   - Interface

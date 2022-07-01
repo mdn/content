@@ -1,6 +1,7 @@
 ---
 title: Web Audio API
 slug: Web/API/Web_Audio_API
+page-type: web-api-overview
 tags:
   - API
   - Audio

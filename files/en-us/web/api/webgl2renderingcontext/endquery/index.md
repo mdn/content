@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.endQuery()
 slug: Web/API/WebGL2RenderingContext/endQuery
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: USBDevice.selectAlternateInterface()
 slug: Web/API/USBDevice/selectAlternateInterface
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - selectAlternateInterface
+  - Experimental
 browser-compat: api.USBDevice.selectAlternateInterface
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}

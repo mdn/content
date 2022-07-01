@@ -1,6 +1,7 @@
 ---
 title: 'Window: popstate event'
 slug: Web/API/Window/popstate_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -61,7 +62,11 @@ Browsers tend to handle the `popstate` event differently on page load. Chrome (p
 
 ## When popstate is sent
 
-When the transition occurs, either due to the user triggering the browser's "Back" button or otherwise, the `popstate` event is near the end of the process to transition to the new location. It happens after the new location has loaded (if needed), displayed, made visible, and so on, after the {{domxref("Window.pageshow_event", "pageshow")}} event is sent, but before the persisted user state information is restored and the {{domxref("Window.hashchange_event", "hashchange")}} event is sent.
+It’s important to first understand that — to combat unwanted pop-ups — browsers may not fire the `popstate` event at all unless the page has been interacted with.
+
+This section describes the steps that browsers follow in the cases where they _do_ potentially fire the `popstate` event (that is, in the cases where the page has been interacted with).
+
+When a navigation occurs — either due to the user triggering the browser's <kbd>Back</kbd> button or otherwise — the `popstate` event is near the end of the process to navigate to the new location. It happens after the new location has loaded (if needed), displayed, made visible, and so on — after the {{domxref("Window.pageshow_event", "pageshow")}} event is sent, but before the persisted user state information is restored and the {{domxref("Window.hashchange_event", "hashchange")}} event is sent.
 
 To better understand when the `popstate` event is fired, consider this simplified sequence of events that occurs when the current history entry changes due to either the user navigating the site or the history being traversed programmatically. Here, the transition is changing the current history entry to one we'll refer to as **new-entry**. The current page's session history stack entry will be referred to as **current-entry**.
 

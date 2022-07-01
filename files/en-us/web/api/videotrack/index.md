@@ -1,6 +1,7 @@
 ---
 title: VideoTrack
 slug: Web/API/VideoTrack
+page-type: web-api-interface
 tags:
   - HTML
   - HTML DOM

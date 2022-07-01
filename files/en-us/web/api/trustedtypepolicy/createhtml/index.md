@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicy.createHTML()
 slug: Web/API/TrustedTypePolicy/createHTML
+page-type: web-api-instance-method
 tags:
   - API
   - Method

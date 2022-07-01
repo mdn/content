@@ -1,6 +1,7 @@
 ---
 title: 'XMLHttpRequest: loadstart event'
 slug: Web/API/XMLHttpRequest/loadstart_event
+page-type: web-api-event
 tags:
   - API
   - Event

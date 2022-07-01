@@ -21,7 +21,7 @@ the `PaymentResponse()` constructor by details.id.
 
 ## Value
 
-A {{domxref('DOMString')}}.
+A string.
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: ValidityState.badInput
 slug: Web/API/ValidityState/badInput
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints API

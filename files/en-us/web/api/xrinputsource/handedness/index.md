@@ -1,6 +1,7 @@
 ---
 title: XRInputSource.handedness
 slug: Web/API/XRInputSource/handedness
+page-type: web-api-instance-property
 tags:
   - API
   - AR

@@ -1,6 +1,7 @@
 ---
 title: Window.openDialog()
 slug: Web/API/Window/openDialog
+page-type: web-api-instance-method
 tags:
   - API
   - Gecko

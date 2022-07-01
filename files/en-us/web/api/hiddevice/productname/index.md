@@ -8,9 +8,10 @@ tags:
   - Reference
   - productName
   - HIDDevice
+  - Experimental
 browser-compat: api.HIDDevice.productName
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`productName`** read-only property of the {{domxref("HIDDevice")}} interface returns the product name of the connected HID device.
 

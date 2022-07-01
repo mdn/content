@@ -61,15 +61,15 @@ objects we need, one containing the input frequencies, and two to receive the ou
 magnitude and phase values:
 
 ```js
-var myFrequencyArray = new Float32Array(5);
+const myFrequencyArray = new Float32Array(5);
 myFrequencyArray[0] = 1000;
 myFrequencyArray[1] = 2000;
 myFrequencyArray[2] = 3000;
 myFrequencyArray[3] = 4000;
 myFrequencyArray[4] = 5000;
 
-var magResponseOutput = new Float32Array(5);
-var phaseResponseOutput = new Float32Array(5);
+const magResponseOutput = new Float32Array(5);
+const phaseResponseOutput = new Float32Array(5);
 ```
 
 Next we create a {{ htmlelement("ul") }} element in our HTML to contain our results,
@@ -82,7 +82,7 @@ and grab a reference to it in our JavaScript:
 ```
 
 ```js
-var freqResponseOutput = document.querySelector('.freq-response-output');
+const freqResponseOutput = document.querySelector('.freq-response-output');
 ```
 
 Finally, after creating our filter, we use `getFrequencyResponse()` to
@@ -90,10 +90,10 @@ generate the response data and put it in our arrays, then loop through each data
 output them in a human-readable list at the bottom of the page:
 
 ```js
-var feedforwardCoefficients = [0.1, 0.2, 0.3, 0.4, 0.5];
-var feedbackCoefficients = [0.5, 0.4, 0.3, 0.2, 0.1];
+const feedforwardCoefficients = [0.1, 0.2, 0.3, 0.4, 0.5];
+const feedbackCoefficients = [0.5, 0.4, 0.3, 0.2, 0.1];
 
-var iirFilter = audioCtx.createIIRFilter(feedforwardCoefficients, feedbackCoefficients);
+const iirFilter = audioCtx.createIIRFilter(feedforwardCoefficients, feedbackCoefficients);
 
   ...
 
@@ -101,7 +101,7 @@ function calcFrequencyResponse() {
   iirFilter.getFrequencyResponse(myFrequencyArray, magResponseOutput, phaseResponseOutput);
 
   for(i = 0; i <= myFrequencyArray.length-1;i++){
-    var listItem = document.createElement('li');
+    const listItem = document.createElement('li');
     listItem.innerHTML = '<strong>' + myFrequencyArray[i] + 'Hz</strong>: Magnitude ' + magResponseOutput[i] + ', Phase ' + phaseResponseOutput[i] + ' radians.';
     freqResponseOutput.appendChild(listItem);
   }

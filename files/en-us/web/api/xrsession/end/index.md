@@ -1,6 +1,7 @@
 ---
 title: XRSession.end()
 slug: Web/API/XRSession/end
+page-type: web-api-instance-method
 tags:
   - API
   - AR

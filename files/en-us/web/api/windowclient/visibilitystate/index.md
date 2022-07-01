@@ -1,6 +1,7 @@
 ---
 title: WindowClient.visibilityState
 slug: Web/API/WindowClient/visibilityState
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

@@ -1,6 +1,7 @@
 ---
 title: URL
 slug: Web/API/URL
+page-type: web-api-interface
 tags:
   - API
   - Address

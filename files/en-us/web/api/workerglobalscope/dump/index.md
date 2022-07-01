@@ -1,6 +1,7 @@
 ---
 title: WorkerGlobalScope.dump()
 slug: Web/API/WorkerGlobalScope/dump
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: XRViewerPose.views
 slug: Web/API/XRViewerPose/views
+page-type: web-api-instance-property
 tags:
   - 3D
   - API

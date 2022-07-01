@@ -1,6 +1,7 @@
 ---
 title: XRHitTestResult
 slug: Web/API/XRHitTestResult
+page-type: web-api-interface
 tags:
   - API
   - Interface

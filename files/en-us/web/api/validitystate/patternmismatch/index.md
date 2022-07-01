@@ -1,6 +1,7 @@
 ---
 title: ValidityState.patternMismatch
 slug: Web/API/ValidityState/patternMismatch
+page-type: web-api-instance-property
 tags:
   - API
   - Constraint Validation API

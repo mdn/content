@@ -1,6 +1,7 @@
 ---
 title: USBDevice.clearHalt()
 slug: Web/API/USBDevice/clearHalt
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - clearHalt
+  - Experimental
 browser-compat: api.USBDevice.clearHalt
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}

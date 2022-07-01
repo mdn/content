@@ -35,8 +35,6 @@ border-inline-end-color: unset;
 
 Related properties are {{cssxref("border-block-start-color")}}, {{cssxref("border-block-end-color")}}, and {{cssxref("border-inline-start-color")}}, which define the other border colors of the element.
 
-{{cssinfo}}
-
 ### Values
 
 - `<'color'>`

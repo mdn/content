@@ -1,6 +1,7 @@
 ---
 title: Boilerplate 1
 slug: Web/API/WebGL_API/By_example/Boilerplate_1
+page-type: guide
 tags:
   - Beginner
   - Example

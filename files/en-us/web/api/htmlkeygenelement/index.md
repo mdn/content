@@ -42,40 +42,14 @@ The {{HTMLElement("keygen")}} elements expose the **`HTMLKeygenElement`** interf
 
 ## Methods
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Name &#x26; Arguments</th>
-      <th scope="col">Return</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>checkValidity()</code></td>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"
-            >Boolean</a
-          ></code
-        >
-      </td>
-      <td>
-        Always returns true because <code>keygen</code> objects are never
-        candidates for constraint validation.
-      </td>
-    </tr>
-    <tr>
-      <td><code>setCustomValidity(in DOMString error)</code></td>
-      <td><code>void</code></td>
-      <td>
-        Sets a custom validity message for the element. If this message is not
-        the empty string, then the element is suffering from a custom validity
-        error, and does not validate.
-      </td>
-    </tr>
-  </tbody>
-</table>
+- `checkValidity()`
+  - : Always returns the boolean value `true` because `HTMLKeygenElement` objects are never candidates for constraint validation.
+- `setCustomValidity()`
+  - : Takes a string as parameter and sets it as the custom validity message for the element. If this message is not the empty string, then the element is suffering from a custom validity error, and does not validate.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

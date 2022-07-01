@@ -1,6 +1,7 @@
 ---
 title: Using textures in WebGL
 slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
+page-type: guide
 tags:
   - Tutorial
   - WebGL
@@ -270,9 +271,9 @@ function drawScene(gl, programInfo, buffers, texture, deltaTime) {
 
 At this point, the rotating cube should be good to go.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample6/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample6/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample6) | [Open this demo on a new page](https://mdn.github.io/webgl-examples/tutorial/sample6/)
+[View the complete code](https://github.com/mdn/dom-examples/webgl-examples/tree/master/tutorial/sample6) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample6/)
 
 ## Cross-domain textures
 

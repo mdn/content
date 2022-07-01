@@ -1,6 +1,7 @@
 ---
 title: WakeLock
 slug: Web/API/WakeLock
+page-type: web-api-interface
 tags:
   - Interface
   - Reference

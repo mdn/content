@@ -1,6 +1,7 @@
 ---
 title: XPathEvaluator.createExpression()
 slug: Web/API/XPathEvaluator/createExpression
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

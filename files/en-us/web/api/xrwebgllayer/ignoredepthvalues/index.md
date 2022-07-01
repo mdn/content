@@ -1,6 +1,7 @@
 ---
 title: XRWebGLLayer.ignoreDepthValues
 slug: Web/API/XRWebGLLayer/ignoreDepthValues
+page-type: web-api-instance-property
 tags:
   - 3D
   - API

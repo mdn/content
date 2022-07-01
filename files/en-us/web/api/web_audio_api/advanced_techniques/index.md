@@ -1,6 +1,7 @@
 ---
 title: 'Advanced techniques: Creating and sequencing audio'
 slug: Web/API/Web_Audio_API/Advanced_techniques
+page-type: guide
 tags:
   - API
   - Advanced

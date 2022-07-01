@@ -40,6 +40,8 @@ Because `exp()` is a static method of `Math`, you always use it
 as `Math.exp()`, rather than as a method of a `Math` object you
 created (`Math` is not a constructor).
 
+Beware that `e` to the power of a number very close to 0 will be very close to 1 and suffer from loss of precision. In this case, you may want to use {{jsxref("Math.expm1")}} instead, and obtain a much higher-precision fractional part of the answer.
+
 ## Examples
 
 ### Using Math.exp()

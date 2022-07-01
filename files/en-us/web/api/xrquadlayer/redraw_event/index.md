@@ -1,6 +1,7 @@
 ---
 title: 'XRQuadLayer: redraw event'
 slug: Web/API/XRQuadLayer/redraw_event
+page-type: web-api-event
 tags:
   - API
   - Event

@@ -1,6 +1,7 @@
 ---
 title: TreeWalker.previousNode()
 slug: Web/API/TreeWalker/previousNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

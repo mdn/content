@@ -1,6 +1,7 @@
 ---
 title: XMLDocument
 slug: Web/API/XMLDocument
+page-type: web-api-interface
 tags:
   - API
   - DOM

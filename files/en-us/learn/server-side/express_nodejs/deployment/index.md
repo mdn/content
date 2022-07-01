@@ -20,10 +20,7 @@ Now you've created (and tested) an awesome [LocalLibrary](/en-US/docs/Learn/Serv
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Complete all previous tutorial topics, including
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms"
-          >Express Tutorial Part 6: Working with forms</a
-        >.
+        Complete all previous tutorial topics, including <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a>.
       </td>
     </tr>
     <tr>
@@ -264,6 +261,8 @@ There are a lot of ways to work with git. One easy workflow is to first set up a
     - Choose your preferred license in the _Add license_ selection list.
     - Check **Initialize this repository with a README**.
 
+> **Warning:** The default “Public” will make *all* the code you submit public—including your database username and password! Either select “Private” or, if you’re hoping to show off your library project, configure the database so that it *only* reads from the environment variables, and does not have the database URI hard-coded in the app.
+
 4. Press **Create repository**.
 5. Click the green "**Clone or download**" button on your new repo page.
 6. Copy the URL value from the text field inside the dialog box that appears (it should be something like: **https\://github.com/_\<your_git_user_id>_/express-locallibrary-tutorial.git**).
@@ -464,7 +463,17 @@ Setting MONGODB_URI and restarting limitless-tor-18923... done, v13
 MONGODB_URI: mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true
 ```
 
-> **Note:** On some operating systems you may need to set the URL between single quotation marks (e.g. `heroku config:set MONGODB_URI='mongodb+srv://...'`).
+> **Note:**
+>
+> - Special characters in usernames and passwords must be HTML encoded.
+>   Affected characters include: `:`, `/`, `?`, `#`, `[`, `]`, `@`.
+>   For example, if the password was `cool@pas&word` then you would set MONGODB_URI using:
+>
+>   ```
+>   heroku config:set MONGODB_URI=mongodb+srv://cooluser:cool%40pas%26word@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true
+>   ```
+>
+> - On some operating systems you may need to set the URL between single quotation marks (e.g. `heroku config:set MONGODB_URI='mongodb+srv://...'`).
 
 You can inspect your configuration variables at any time using the `heroku config` command — try this now:
 

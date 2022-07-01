@@ -1,6 +1,7 @@
 ---
 title: UIEvent.view
 slug: Web/API/UIEvent/view
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

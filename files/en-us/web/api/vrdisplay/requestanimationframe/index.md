@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.requestAnimationFrame()
 slug: Web/API/VRDisplay/requestAnimationFrame
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated

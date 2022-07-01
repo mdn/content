@@ -53,26 +53,6 @@ See [Outputting text to the console](/en-US/docs/Web/API/console#outputting_text
 
 None ({{jsxref("undefined")}}).
 
-## Difference between log() and dir()
-
-You might ask yourself what's the difference between {{domxref("console.dir()")}} and
-`console.log()`.
-
-Another useful difference in Chrome exists when sending DOM elements to the console.
-
-![](dozdcyr.png)
-
-Notice:
-
-- `console.log` prints the element in an HTML-like tree
-- `console.dir` prints the element in a JSON-like tree
-
-Specifically, `console.log` gives special treatment to DOM elements, whereas
-`console.dir` does not. This is often useful when trying to see the full
-representation of the DOM JS object.
-
-There's more information in the [Chrome Console API reference](https://developer.chrome.com/docs/devtools/console/api/#consoledirobject) about this and other functions.
-
 ## Logging objects
 
 Don't use `console.log(obj)`, use

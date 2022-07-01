@@ -83,5 +83,5 @@ input {
 ## See also
 
 - {{CSSxRef(":focus")}}
-- {{CSSxRef(":focus-visible")}} {{Experimental_Inline}}
+- {{CSSxRef(":focus-visible")}}
 - [Grab your user's attention with the focus-within selector](https://dev.to/vtrpldn/grab-your-user-s-attention-with-the-focus-within-css-selector-4d4)

@@ -1,6 +1,7 @@
 ---
 title: WorkerNavigator.permissions
 slug: Web/API/WorkerNavigator/permissions
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

@@ -1,6 +1,7 @@
 ---
 title: WorkerNavigator.userAgent
 slug: Web/API/WorkerNavigator/userAgent
+page-type: web-api-instance-property
 tags:
   - API
   - WorkerNavigator

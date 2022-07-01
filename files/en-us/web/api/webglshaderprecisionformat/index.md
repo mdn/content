@@ -1,6 +1,7 @@
 ---
 title: WebGLShaderPrecisionFormat
 slug: Web/API/WebGLShaderPrecisionFormat
+page-type: web-api-interface
 tags:
   - API
   - Reference

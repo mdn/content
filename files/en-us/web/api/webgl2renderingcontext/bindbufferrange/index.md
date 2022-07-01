@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.bindBufferRange()
 slug: Web/API/WebGL2RenderingContext/bindBufferRange
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: Window.pageYOffset
 slug: Web/API/Window/pageYOffset
+page-type: web-api-instance-property
 tags:
   - API
   - Alias
@@ -162,7 +163,7 @@ The result follows. Note that the frame's contents have been scrolled to show th
 section named "Overview", and that the value of the `pageYOffset` property is
 shown with the corresponding value.
 
-{{EmbedLiveSample("Example", 650, 500)}}
+{{EmbedLiveSample("Examples", 650, 500)}}
 
 ## Specifications
 

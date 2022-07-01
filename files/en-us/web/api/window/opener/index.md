@@ -1,6 +1,7 @@
 ---
 title: Window.opener
 slug: Web/API/Window/opener
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

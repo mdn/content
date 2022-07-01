@@ -1,6 +1,7 @@
 ---
 title: UIEvent.which
 slug: Web/API/UIEvent/which
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

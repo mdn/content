@@ -1,6 +1,7 @@
 ---
 title: VideoPlaybackQuality.creationTime
 slug: Web/API/VideoPlaybackQuality/creationTime
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

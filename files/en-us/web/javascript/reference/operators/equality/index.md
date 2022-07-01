@@ -127,6 +127,18 @@ const s = d.toString(); // for example: "Sun Dec 17 1995 03:24:00 GMT-0800 (Paci
 console.log(d == s);    //true
 ```
 
+### Comparing arrays and strings
+
+```js
+const a = [1, 2, 3];
+const b = "1,2,3";
+a == b; // true, `a` converts to string
+
+const c = [true, 0.5, "hey"];
+const d = c.toString(); // "true,0.5,hey"
+c == d; // true
+```
+
 ## Specifications
 
 {{Specifications}}

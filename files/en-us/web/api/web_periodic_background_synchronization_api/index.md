@@ -1,6 +1,7 @@
 ---
 title: Web Periodic Background Synchronization API
 slug: Web/API/Web_Periodic_Background_Synchronization_API
+page-type: web-api-overview
 tags:
   - API
   - Background

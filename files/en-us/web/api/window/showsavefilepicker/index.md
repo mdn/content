@@ -1,6 +1,7 @@
 ---
 title: Window.showSaveFilePicker()
 slug: Web/API/Window/showSaveFilePicker
+page-type: web-api-instance-method
 tags:
   - Directory
   - File

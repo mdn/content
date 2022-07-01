@@ -15,14 +15,7 @@ The **`cssFloat`** property of the {{domxref("CSSStyleDeclaration")}} interface 
 
 When setting, it invokes {{DOMxRef("CSSStyleDeclaration.setProperty()")}} with `float` as the first argument, and the given value as the second argument. The given value must be a valid value for the {{cssxref("float")}} property.
 
-## Syntax
-
-```js
-var float = CSSStyleDeclaration.cssFloat();
-CSSStyleDeclaration.cssFloat = "right"
-```
-
-### Value
+## Value
 
 A string.
 

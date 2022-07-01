@@ -1,6 +1,7 @@
 ---
 title: 'Window: transitionrun event'
 slug: Web/API/Window/transitionrun_event
+page-type: web-api-event
 tags:
   - API
   - Reference

@@ -1,6 +1,7 @@
 ---
 title: XRInputSource.targetRaySpace
 slug: Web/API/XRInputSource/targetRaySpace
+page-type: web-api-instance-property
 tags:
   - API
   - AR

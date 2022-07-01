@@ -1,6 +1,7 @@
 ---
 title: Worker.postMessage()
 slug: Web/API/Worker/postMessage
+page-type: web-api-instance-method
 tags:
   - API
   - JavaScript

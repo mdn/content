@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
+page-type: web-api-interface
 tags:
   - AJAX
   - API

@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.disableVertexAttribArray()
 slug: Web/API/WebGLRenderingContext/disableVertexAttribArray
+page-type: web-api-instance-method
 tags:
   - API
   - Method

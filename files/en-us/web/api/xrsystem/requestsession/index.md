@@ -1,6 +1,7 @@
 ---
 title: 'XRSystem: requestSession()'
 slug: Web/API/XRSystem/requestSession
+page-type: web-api-instance-method
 tags:
   - API
   - AR

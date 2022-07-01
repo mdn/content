@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.upload
 slug: Web/API/XMLHttpRequest/upload
+page-type: web-api-instance-property
 tags:
   - AJAX
   - API

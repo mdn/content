@@ -1,6 +1,7 @@
 ---
 title: WebGLVertexArrayObject
 slug: Web/API/WebGLVertexArrayObject
+page-type: web-api-interface
 tags:
   - API
   - Reference

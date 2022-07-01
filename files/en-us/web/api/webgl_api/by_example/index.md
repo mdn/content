@@ -1,6 +1,7 @@
 ---
 title: WebGL by example
 slug: Web/API/WebGL_API/By_example
+page-type: guide
 tags:
   - Beginner
   - Example

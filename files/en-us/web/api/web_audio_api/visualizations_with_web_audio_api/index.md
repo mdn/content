@@ -1,6 +1,7 @@
 ---
 title: Visualizations with Web Audio API
 slug: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
+page-type: guide
 tags:
   - API
   - Web Audio API

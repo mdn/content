@@ -1,6 +1,7 @@
 ---
 title: TouchEvent
 slug: Web/API/TouchEvent
+page-type: web-api-interface
 tags:
   - API
   - DOM

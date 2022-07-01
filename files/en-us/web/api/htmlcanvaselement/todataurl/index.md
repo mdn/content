@@ -62,8 +62,8 @@ Given this {{HTMLElement("canvas")}} element:
 You can get a data-URL of the canvas with the following lines:
 
 ```js
-var canvas = document.getElementById('canvas');
-var dataURL = canvas.toDataURL();
+const canvas = document.getElementById('canvas');
+const dataURL = canvas.toDataURL();
 console.log(dataURL);
 // "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNby
 // blAAAADElEQVQImWNgoBMAAABpAAFEI8ARAAAAAElFTkSuQmCC"
@@ -72,10 +72,10 @@ console.log(dataURL);
 ### Setting image quality with jpegs
 
 ```js
-var fullQuality = canvas.toDataURL('image/jpeg', 1.0);
+const fullQuality = canvas.toDataURL('image/jpeg', 1.0);
 // data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ...9oADAMBAAIRAxEAPwD/AD/6AP/Z"
-var mediumQuality = canvas.toDataURL('image/jpeg', 0.5);
-var lowQuality = canvas.toDataURL('image/jpeg', 0.1);
+const mediumQuality = canvas.toDataURL('image/jpeg', 0.5);
+const lowQuality = canvas.toDataURL('image/jpeg', 0.1);
 ```
 
 ### Example: Dynamically change images
@@ -104,11 +104,11 @@ function showGrayImg() {
 }
 
 function removeColors() {
-  var aImages = document.getElementsByClassName('grayscale'),
+  const aImages = document.getElementsByClassName('grayscale'),
       nImgsLen = aImages.length,
       oCanvas = document.createElement('canvas'),
       oCtx = oCanvas.getContext('2d');
-  for (var nWidth, nHeight, oImgData, oGrayImg, nPixel, aPix, nPixLen, nImgId = 0; nImgId < nImgsLen; nImgId++) {
+  for (let nWidth, nHeight, oImgData, oGrayImg, nPixel, aPix, nPixLen, nImgId = 0; nImgId < nImgsLen; nImgId++) {
     oColorImg = aImages[nImgId];
     nWidth = oColorImg.offsetWidth;
     nHeight = oColorImg.offsetHeight;

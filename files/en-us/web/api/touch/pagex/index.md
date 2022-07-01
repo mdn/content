@@ -1,6 +1,7 @@
 ---
 title: Touch.pageX
 slug: Web/API/Touch/pageX
+page-type: web-api-instance-property
 tags:
   - API
   - Property

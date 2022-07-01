@@ -1,6 +1,7 @@
 ---
 title: XRLightEstimate.sphericalHarmonicsCoefficients
 slug: Web/API/XRLightEstimate/sphericalHarmonicsCoefficients
+page-type: web-api-instance-property
 tags:
   - API
   - AR

@@ -364,19 +364,14 @@ Adding a new document is relatively straightforward, especially if you can
 start by copying the `index.html` or `index.md` of a similar document.
 There are only a few things to keep in mind:
 
-- Documents can be authored in either Markdown or HTML. However, we're converting
-  the site to Markdown one section at a time, and don't want to mix authoring
-  formats within a section. At this point we have only converted the JavaScript
-  documentation. So if you are adding a new document under
-  `files/en-us/web/javascript`, make it a Markdown file. Otherwise, make it an
-  HTML file.
+- Documents must be authored in Markdown.
 - Remember that a document is represented by an `index.html` or `index.md` file
   within its own folder.
 - Determine where in the document hierarchy your document belongs. For
   example, if you're
   creating a new CSS document for a new property `foo`, you'll want to create
   a new folder
-  `files/en-us/web/css/foo/` and its `files/en-us/web/css/foo/index.html` file.
+  `files/en-us/web/css/foo/` and its `files/en-us/web/css/foo/index.md` file.
 - Remember that a document's `index.html` or `index.md` file must start with
   front-matter that defines the `title`, `slug`, and
   [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag)
@@ -397,8 +392,7 @@ As we outlined above, the step-by-step process in general would be:
     git checkout -b my-add
     ```
 
-1. Create one or more new document folders, each with their own `index.html`
-or `index.md` file.
+1. Create one or more new document folders, each with their own `index.md` file.
 
 1. Add and commit your new files, as well as push your new branch to your fork:
 

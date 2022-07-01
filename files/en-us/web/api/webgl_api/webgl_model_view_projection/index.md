@@ -1,6 +1,7 @@
 ---
 title: WebGL model view projection
 slug: Web/API/WebGL_API/WebGL_model_view_projection
+page-type: guide
 tags:
   - 3D
   - Graphics
@@ -325,8 +326,6 @@ box.draw({
 ```
 
 ### The results
-
-[View on JSFiddle](https://jsfiddle.net/mff99yu)
 
 ![The results of using homogeneous coordinates to move the boxes around in WebGL.](part2.png)
 

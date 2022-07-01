@@ -1,6 +1,7 @@
 ---
 title: 'Window: transitioncancel event'
 slug: Web/API/Window/transitioncancel_event
+page-type: web-api-event
 tags:
   - API
   - Event

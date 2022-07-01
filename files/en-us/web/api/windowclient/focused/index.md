@@ -1,6 +1,7 @@
 ---
 title: WindowClient.focused
 slug: Web/API/WindowClient/focused
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

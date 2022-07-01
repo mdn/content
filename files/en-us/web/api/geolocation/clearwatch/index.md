@@ -37,10 +37,12 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var id, target, option;
+let id;
+let target;
+let option;
 
 function success(pos) {
-  var crd = pos.coords;
+  const crd = pos.coords;
 
   if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
     console.log('Congratulations, you\'ve reached the target!');

@@ -1,6 +1,7 @@
 ---
 title: 'Window: vrdisplayconnect event'
 slug: Web/API/Window/vrdisplayconnect_event
+page-type: web-api-event
 tags:
   - Event
   - Reference

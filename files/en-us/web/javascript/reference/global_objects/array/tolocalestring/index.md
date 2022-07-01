@@ -73,7 +73,7 @@ if (!Array.prototype.toLocaleString) {
       // 5. Let firstElement be ? Get(A, "0").
       const firstElement = a[0];
       // 6. If firstElement is undefined or null, then
-      //  a.Let R be the empty String.
+      //  a. Let R be the empty String.
       // 7. Else,
       //  a. Let R be ?
       //     ToString(?

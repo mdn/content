@@ -21,7 +21,7 @@ displayed height of the resource in CSS pixels.
 
 ## Value
 
-A {{domxref('DOMString')}}.
+A string.
 
 ## Specifications
 

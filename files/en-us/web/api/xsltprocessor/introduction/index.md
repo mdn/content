@@ -1,6 +1,7 @@
 ---
 title: Introduction
 slug: Web/API/XSLTProcessor/Introduction
+page-type: guide
 ---
 ## Introduction
 

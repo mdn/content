@@ -1,6 +1,7 @@
 ---
 title: Animating textures in WebGL
 slug: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
+page-type: guide
 tags:
   - Media
   - Tutorial
@@ -144,9 +145,9 @@ In the definition of `render()` if `copyVideo` is true, then we call `updateText
 
 That's all there is to it!
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8) | [Open this demo on a new page](https://mdn.github.io/webgl-examples/tutorial/sample8/)
+[View the complete code](https://github.com/mdn/dom-examples/webgl-examples/tree/master/tutorial/sample8) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/)
 
 ## See also
 

@@ -40,7 +40,7 @@ Besides the generic `Error` constructor, there are other core error constructors
 
 ## Constructor
 
-- [`Error()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error)
+- {{jsxref("Error/Error", "Error()")}}
   - : Creates a new `Error` object.
 
 ## Static methods
@@ -64,7 +64,7 @@ Besides the generic `Error` constructor, there are other core error constructors
 - {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
   - : A non-standard Mozilla property for the column number in the line that raised this error.
 - {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
-  - : A non-standard Mozilla property for a stack trace.
+  - : A non-standard property for a stack trace.
 
 ## Instance methods
 
@@ -145,6 +145,8 @@ try {
 }
 ```
 
+> **Note:** If you are making a library, you should prefer to use error cause to discriminate between different errors emitted — rather than asking your consumers to parse the error message. See the [error cause page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause) for an example.
+
 [Custom error types](#custom_error_types) can also use the [`cause`](#error.prototype.cause) property, provided the subclasses' constructor passes the `options` parameter when calling `super()`:
 
 ```js
@@ -172,27 +174,27 @@ See ["What's a good way to extend Error in JavaScript?"](https://stackoverflow.c
 class CustomError extends Error {
   constructor(foo = 'bar', ...params) {
     // Pass remaining arguments (including vendor specific ones) to parent constructor
-    super(...params)
+    super(...params);
 
     // Maintains proper stack trace for where our error was thrown (only available on V8)
     if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, CustomError)
+      Error.captureStackTrace(this, CustomError);
     }
 
-    this.name = 'CustomError'
+    this.name = 'CustomError';
     // Custom debugging information
-    this.foo = foo
-    this.date = new Date()
+    this.foo = foo;
+    this.date = new Date();
   }
 }
 
 try {
-  throw new CustomError('baz', 'bazMessage')
+  throw new CustomError('baz', 'bazMessage');
 } catch(e) {
-  console.error(e.name)    //CustomError
-  console.error(e.foo)     //baz
-  console.error(e.message) //bazMessage
-  console.error(e.stack)   //stacktrace
+  console.error(e.name);    // CustomError
+  console.error(e.foo);     // baz
+  console.error(e.message); // bazMessage
+  console.error(e.stack);   // stacktrace
 }
 ```
 
@@ -202,37 +204,27 @@ try {
 
 ```js
 function CustomError(foo, message, fileName, lineNumber) {
-  let instance = new Error(message, fileName, lineNumber);
-  instance.name = 'CustomError';
+  var instance = new Error(message, fileName, lineNumber);
   instance.foo = foo;
-  Object.setPrototypeOf(instance, Object.getPrototypeOf(this));
+  Object.setPrototypeOf(instance, CustomError.prototype);
   if (Error.captureStackTrace) {
     Error.captureStackTrace(instance, CustomError);
   }
   return instance;
 }
 
-CustomError.prototype = Object.create(Error.prototype, {
-  constructor: {
-    value: Error,
-    enumerable: false,
-    writable: true,
-    configurable: true
-  }
-});
+Object.setPrototypeOf(CustomError.prototype, Error.prototype);
 
-if (Object.setPrototypeOf){
-  Object.setPrototypeOf(CustomError, Error);
-} else {
-  CustomError.__proto__ = Error;
-}
+Object.setPrototypeOf(CustomError, Error);
+
+CustomError.prototype.name = 'CustomError';
 
 try {
   throw new CustomError('baz', 'bazMessage');
-} catch(e){
-  console.error(e.name); //CustomError
-  console.error(e.foo); //baz
-  console.error(e.message); //bazMessage
+} catch(e) {
+  console.error(e.name); // CustomError
+  console.error(e.foo); // baz
+  console.error(e.message); // bazMessage
 }
 ```
 

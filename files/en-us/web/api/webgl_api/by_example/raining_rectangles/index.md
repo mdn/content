@@ -1,6 +1,7 @@
 ---
 title: Raining rectangles
 slug: Web/API/WebGL_API/By_example/Raining_rectangles
+page-type: guide
 tags:
   - Beginner
   - Example

@@ -101,7 +101,7 @@ transition.addEventListener('transitionend', function() {
 });
 ```
 
-{{ EmbedLiveSample('Examples', '100%', '150px') }}
+{{ EmbedLiveSample('Live example', '100%', '170') }}
 
 The difference is that:
 

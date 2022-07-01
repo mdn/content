@@ -1,6 +1,7 @@
 ---
 title: Window.getComputedStyle()
 slug: Web/API/Window/getComputedStyle
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View

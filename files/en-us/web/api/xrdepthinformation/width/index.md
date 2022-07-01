@@ -1,6 +1,7 @@
 ---
 title: XRDepthInformation.width
 slug: Web/API/XRDepthInformation/width
+page-type: web-api-instance-property
 tags:
   - API
   - AR

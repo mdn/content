@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.setRequestHeader()
 slug: Web/API/XMLHttpRequest/setRequestHeader
+page-type: web-api-instance-method
 tags:
   - API
   - HTTP

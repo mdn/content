@@ -35,7 +35,7 @@ These examples will show you how to add hour cycle data to your {{jsxref("Intl/L
 
 ### Adding an hour cycle via the locale string
 
-In the [Unicode locale string spec](https://www.unicode.org/reports/tr35/), the hour cycle is a locale string "extension subtag". These subtags add additional data about the locale, and are added to locale identifiers by using the `-u` extension key. Thus, the hour cycle type can be added to the initial locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Locale")}} constructor. To add the hour cycle type, first add the `-u` extension key to the string. Next, add the `-hc` extension key to indicate that you are adding an hour cycle. Finally, add the hour cycle type to the string.
+In the [Unicode locale string spec](https://www.unicode.org/reports/tr35/), the hour cycle is a locale string "extension subtag". These subtags add additional data about the locale, and are added to locale identifiers by using the `-u` extension key. Thus, the hour cycle type can be added to the initial locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. To add the hour cycle type, first add the `-u` extension key to the string. Next, add the `-hc` extension key to indicate that you are adding an hour cycle. Finally, add the hour cycle type to the string.
 
 ```js
 let locale = new Intl.Locale("fr-FR-u-hc-h23");
@@ -44,7 +44,7 @@ console.log(locale.hourCycle); // Prints "h23"
 
 ### Adding an hour cycle via the configuration object argument
 
-The {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} constructor has an optional configuration object argument, which can contain any of several extension types, including hour cycle types. Set the `hourCycle` property of the configuration object to your desired hour cycle type, and then pass it into the constructor.
+The {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor has an optional configuration object argument, which can contain any of several extension types, including hour cycle types. Set the `hourCycle` property of the configuration object to your desired hour cycle type, and then pass it into the constructor.
 
 ```js
 let locale = new Intl.Locale("en-US", { hourCycle: "h12" });

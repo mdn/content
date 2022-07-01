@@ -1,6 +1,7 @@
 ---
 title: 'Window: animationend event'
 slug: Web/API/Window/animationend_event
+page-type: web-api-event
 tags:
   - API
   - Animation

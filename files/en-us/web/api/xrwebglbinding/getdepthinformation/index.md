@@ -1,6 +1,7 @@
 ---
 title: XRWebGLBinding.getDepthInformation()
 slug: Web/API/XRWebGLBinding/getDepthInformation
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: Touch.clientY
 slug: Web/API/Touch/clientY
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

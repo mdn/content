@@ -1,6 +1,7 @@
 ---
 title: VideoEncoder.encode()
 slug: Web/API/VideoEncoder/encode
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -31,7 +32,7 @@ encode(frame, options)
 
 ### Return value
 
-{{jsxref("Undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

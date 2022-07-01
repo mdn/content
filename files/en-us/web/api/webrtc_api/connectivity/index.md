@@ -1,6 +1,7 @@
 ---
 title: WebRTC connectivity
 slug: Web/API/WebRTC_API/Connectivity
+page-type: guide
 tags:
   - API
   - Advanced

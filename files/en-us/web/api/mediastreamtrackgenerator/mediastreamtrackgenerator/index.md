@@ -22,7 +22,7 @@ new MediaStreamTrackGenerator(options)
 ### Parameters
 
 - `options`
-  - : An object containing the property `kind`, which is a {{domxref("DOMString", "string")}} with one of the following values:
+  - : An object containing the property `kind`, which is one of the following strings:
     - `"audio"`
       - : Specifies that the stream accepts {{domxref("AudioTrack")}} objects.
     - `"video"`
