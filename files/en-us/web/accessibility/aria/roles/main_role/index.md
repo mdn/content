@@ -31,7 +31,7 @@ By classifying and labeling sections of a page, structural information conveyed 
 
 There should only be one `main` landmark role per document.
 
-The {{HTMLElement('main')}} element has a role of `main`. Developers should use semantic HTML -- in this case {{HTMLElement('main')}} -- over using ARIA.
+The {{HTMLElement('main')}} element has a role of `main`. Developers should use semantic HTML — in this case {{HTMLElement('main')}} — over using ARIA.
 
 ### Associated ARIA roles, states, and properties
 

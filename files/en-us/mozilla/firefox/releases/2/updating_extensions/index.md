@@ -11,7 +11,7 @@ This article provides information that will be useful to developers that wish to
 
 ## Step 1: Update the install manifest
 
-The first step -- and, for most extensions, the only one that will be needed -- is to update the [install manifest](/en-US/Install_Manifests) file, install.rdf, to indicate compatibility with Firefox 2.
+The first step — and, for most extensions, the only one that will be needed — is to update the [install manifest](/en-US/Install_Manifests) file, install.rdf, to indicate compatibility with Firefox 2.
 
 Find the line indicating the maximum compatible version of Firefox (which, for Firefox 1.5, might look like this):
 
