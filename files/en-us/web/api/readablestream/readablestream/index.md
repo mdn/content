@@ -13,7 +13,7 @@ browser-compat: api.ReadableStream.ReadableStream
 
 The **`ReadableStream()`** constructor creates and returns a readable stream object from the given handlers.
 
-Note that while parameters are technically optional, omitting the `underlyingSource` will result in a stream that has no source, and that can't be read from (readers return a promise that will never be resolved).
+Note that while all parameters are technically optional, omitting the `underlyingSource` will result in a stream that has no source, and that can't be read from (readers return a promise that will never be resolved).
 
 ## Syntax
 
