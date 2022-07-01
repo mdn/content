@@ -10,6 +10,9 @@ tags:
   - fit-content
   - float
   - grid
+browser-compat:
+  - css.properties.grid-template-areas
+  - css.properties.float
 ---
 {{CSSRef}}
 
@@ -71,12 +74,4 @@ What you will need to do is remove any margins applied to the item, and any widt
 
 ## Browser compatibility
 
-The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
-
-### grid-template-areas
-
-{{Compat("css.properties.grid-template-areas")}}
-
-### float
-
-{{Compat("css.properties.float")}}
+{{Compat}}

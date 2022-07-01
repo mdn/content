@@ -28,7 +28,7 @@ the [Pointer Events API](/en-US/docs/Web/API/Pointer_events).
 ```js
 EventTarget.onpointerleave = leaveHandler;
 
-var leaveHandler = EventTarget.onpointerleave;
+const leaveHandler = EventTarget.onpointerleave;
 ```
 
 ### Value
@@ -50,7 +50,7 @@ function leaveHandler(ev) {
  // Process the pointerleave event
 }
 function init() {
- var el=document.getElementById("target1");
+ const el=document.getElementById("target1");
  el.onpointerleave = leaveHandler;
 }
 </script>

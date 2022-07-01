@@ -12,7 +12,7 @@ tags:
 The JavaScript exception "is not iterable" occurs when the value which is given as the
 right-hand side of [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement),
 as argument of a function such as {{jsxref("Promise.all")}} or {{jsxref("TypedArray.from")}},
-or as the right-hand side of an array [destructuring assignement](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment),
+or as the right-hand side of an array [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment),
 is not an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
 
 ## Message
@@ -30,7 +30,7 @@ TypeError: 'x' is not a function or its return value is not iterable (Chrome)
 
 The value which is given as the right-hand side of [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement),
 or as argument of a function such as {{jsxref("Promise.all")}} or {{jsxref("TypedArray.from")}},
-or as the right-hand side of an array [destructuring assignement](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment),
+or as the right-hand side of an array [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment),
 is not an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
 An iterable can be a built-in iterable type such as
 {{jsxref("Array")}}, {{jsxref("String")}} or {{jsxref("Map")}}, a generator result, or
@@ -137,7 +137,7 @@ returns an object which is an iterator, which is to say it must have a next meth
 ```js example-bad
 const myEmptyIterable = {
     [Symbol.iterator]() {
-        return [] // [] is iterable, but it is not an iterator -- it has no next method.
+        return [] // [] is iterable, but it is not an iterator — it has no next method.
     }
 }
 

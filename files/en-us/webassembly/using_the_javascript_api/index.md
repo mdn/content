@@ -40,7 +40,7 @@ Let's run through some examples that explain how to use the WebAssembly JavaScri
 4. In the second line, you will see that the import has a two-level namespace — the internal function `$i` is imported from `imports.imported_func`. We need to reflect this two-level namespace in JavaScript when writing the object to be imported into the wasm module. Create a `<script></script>` element in your HTML file, and add the following code to it:
 
     ```js
-    var importObject = {
+    const importObject = {
       imports: { imported_func: arg => console.log(arg) }
     };
     ```
@@ -102,7 +102,7 @@ Let's start exploring this by looking at a quick example.
 2. Now add the following line to the top of your script, to create a memory instance:
 
     ```js
-    var memory = new WebAssembly.Memory({initial:10, maximum:100});
+    const memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
     ```
 
     The unit of `initial` and `maximum` is WebAssembly pages — these are fixed to 64KB in size. This means that the above memory instance has an initial size of 640KB, and a maximum size of 6.4MB.
@@ -123,15 +123,15 @@ Let's start exploring this by looking at a quick example.
 
 ### Growing memory
 
-A memory instance can be grown by calls to {{jsxref("Memory.prototype.grow()")}}, where again the argument is specified in units of WebAssembly pages:
+A memory instance can be grown by calls to [`Memory.prototype.grow()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow), where again the argument is specified in units of WebAssembly pages:
 
 ```js
 memory.grow(1);
 ```
 
-If a maximum value was supplied upon creation of the memory instance, attempts to grow past this maximum will throw a {{jsxref("WebAssembly.RangeError")}} exception. The engine takes advantage of this supplied upper-bounds to reserve memory ahead of time, which can make resizing more efficient.
+If a maximum value was supplied upon creation of the memory instance, attempts to grow past this maximum will throw a {{jsxref("RangeError")}} exception. The engine takes advantage of this supplied upper-bounds to reserve memory ahead of time, which can make resizing more efficient.
 
-Note: Since an {{jsxref("ArrayBuffer")}}'s byteLength is immutable, after a successful {{jsxref("Memory.prototype.grow()")}} operation the buffer getter will return a new ArrayBuffer object (with the new byteLength) and any previous ArrayBuffer objects become "detached", or disconnected from the underlying memory they previously pointed to.
+Note: Since an {{jsxref("ArrayBuffer")}}'s byteLength is immutable, after a successful [`Memory.prototype.grow()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow) operation the buffer getter will return a new ArrayBuffer object (with the new byteLength) and any previous ArrayBuffer objects become "detached", or disconnected from the underlying memory they previously pointed to.
 
 Just like functions, linear memories can be defined inside a module or imported. Similarly, a module may also optionally export its memory. This means that JavaScript can get access to the memory of a WebAssembly instance either by creating a new `WebAssembly.Memory` and passing it in as an import or by receiving a Memory export (via [`Instance.prototype.exports`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports)).
 
@@ -155,13 +155,13 @@ Let's make the above assertions clearer by looking at a more involved memory exa
 3. Since this module exports its memory, given an Instance of this module called instance we can use an exported function `accumulate()` to create and populate an input array directly in the module instance's linear memory (`mem`). Add the following into your code, where indicated:
 
     ```js
-    var i32 = new Uint32Array(memory.buffer);
+    const i32 = new Uint32Array(memory.buffer);
 
-    for (var i = 0; i < 10; i++) {
+    for (let i = 0; i < 10; i++) {
       i32[i] = i;
     }
 
-    var sum = results.instance.exports.accumulate(0, 10);
+    const sum = results.instance.exports.accumulate(0, 10);
     console.log(sum);
     ```
 
@@ -207,7 +207,7 @@ Let's look at a simple table example — a WebAssembly module that creates and e
 4. Now let's access the data in the tables — add the following lines to your code in the indicated place:
 
     ```js
-    var tbl = results.instance.exports.tbl;
+    const tbl = results.instance.exports.tbl;
     console.log(tbl.get(0)());  // 13
     console.log(tbl.get(1)());  // 42
     ```

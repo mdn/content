@@ -11,6 +11,7 @@ tags:
   - Reference
   - Video
   - artist
+  - Property
 browser-compat: api.MediaMetadata.artist
 ---
 {{SeeCompatTable}}{{APIRef("Media Session API")}}
@@ -19,14 +20,7 @@ The **`artist`** property of the
 {{domxref("MediaMetaData")}} interface returns or sets the name of the artist, group,
 creator, etc., of the media to be played.
 
-## Syntax
-
-```js
-var artist = mediaMetadata.artist
-mediaMetadata.artist = artist
-```
-
-### Value
+## Value
 
 A {{jsxref("String")}} containing the name of the artist.
 

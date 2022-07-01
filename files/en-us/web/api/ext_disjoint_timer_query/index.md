@@ -1,6 +1,7 @@
 ---
 title: EXT_disjoint_timer_query
 slug: Web/API/EXT_disjoint_timer_query
+page-type: webgl-extension
 tags:
   - API
   - Reference

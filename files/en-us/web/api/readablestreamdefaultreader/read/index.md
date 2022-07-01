@@ -54,8 +54,7 @@ stream chunks not ending on line boundaries for example.
 In this example `stream` is a previously-created custom
 `ReadableStream`. It is read using a
 {{domxref("ReadableStreamDefaultReader")}} created using `getReader()`. (see
-our [Simple
-random stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/) for the full code). Each chunk is read sequentially and
+our [Simple random stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/) for the full code). Each chunk is read sequentially and
 output to the UI as an array of UTF-8 bytes, until the stream has finished being read,
 at which point we return out of the recursive function and print the entire stream to
 another part of the UI.

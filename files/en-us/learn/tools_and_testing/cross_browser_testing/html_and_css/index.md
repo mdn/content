@@ -197,7 +197,7 @@ button:active {
 }
 ```
 
-Here we are providing an [RGBA](</en-US/docs/Web/CSS/color_value#rgba()>) {{cssxref("background-color")}} that changes opacity on hover to give the user a hint that the button is interactive, and some semi-transparent inset {{cssxref("box-shadow")}} shades to give the button a bit of texture and depth. The trouble is that RGBA colors and box shadows don't work in IE versions older than 9 — in older versions the background just wouldn't show up at all so the text would be unreadable, no good at all!
+Here we are providing an [RGBA](/en-US/docs/Web/CSS/color_value/rgba) {{cssxref("background-color")}} that changes opacity on hover to give the user a hint that the button is interactive, and some semi-transparent inset {{cssxref("box-shadow")}} shades to give the button a bit of texture and depth. The trouble is that RGBA colors and box shadows don't work in IE versions older than 9 — in older versions the background just wouldn't show up at all so the text would be unreadable, no good at all!
 
 ![](unreadable-button.png)
 
@@ -290,7 +290,7 @@ background-image: linear-gradient(to right,green,yellow);
 
 The first line shows a {{cssxref("transform")}} property with a `-webkit-` prefix — this was needed to make transforms work in Chrome, etc. until the feature was finalized and such browsers added a prefix-free version of the property (at the time of writing, Chrome supported both versions).
 
-The last three lines show three different versions of the [`linear-gradient()`](</en-US/docs/Web/CSS/linear-gradient()>) function, which is used to generate a linear gradient in the background of an element:
+The last three lines show three different versions of the [`linear-gradient()`](/en-US/docs/Web/CSS/linear-gradient) function, which is used to generate a linear gradient in the background of an element:
 
 1. The first one has a `-moz-` prefix, and shows a slightly older version of the syntax (Firefox)
 2. The second one has a `-webkit-` prefix, and shows an even older, proprietary version of the syntax (this is actually from a really old version of the WebKit engine).
@@ -408,7 +408,7 @@ There are many other issues you'll encounter with HTML and CSS, making knowledge
 
 Among the best sources of support information are the Mozilla Developer Network (that's where you are now!), [stackoverflow.com](https://stackoverflow.com/), and [caniuse.com](https://caniuse.com/).
 
-To use the Mozilla Developer Network (MDN), most people do a search engine search of the technology they are trying to find information on, plus the term "mdn", for example "mdn HTML5 video". MDN contains several useful types of content:
+To use the Mozilla Developer Network (MDN), most people do a search engine search of the technology they are trying to find information on, plus the term "mdn", for example, "mdn HTML5 video". MDN contains several useful types of content:
 
 - Reference material with browser support information for client-side web technologies, e.g. the [\<video> reference page](/en-US/docs/Web/HTML/Element/video).
 - Other supporting reference material, e.g. the [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats),

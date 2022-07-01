@@ -7,7 +7,11 @@ tags:
   - Guide
   - Overview
   - Reference
-spec-urls: https://drafts.csswg.org/css-conditional/
+browser-compat:
+  - css.at-rules.document
+  - css.at-rules.import
+  - css.at-rules.media
+  - css.at-rules.supports
 ---
 {{CSSRef}}
 
@@ -28,18 +32,4 @@ spec-urls: https://drafts.csswg.org/css-conditional/
 
 ## Browser compatibility
 
-### `@document` rule
-
-{{Compat("css.at-rules.document")}}
-
-### `@import` rule
-
-{{Compat("css.at-rules.import")}}
-
-### `@media` rule
-
-{{Compat("css.at-rules.media")}}
-
-### `@supports` rule
-
-{{Compat("css.at-rules.supports")}}
+{{Compat}}

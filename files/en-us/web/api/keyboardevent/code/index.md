@@ -39,7 +39,7 @@ The code values for Windows, Linux, and macOS are list on the [KeyboardEvent: co
 ```html
 <p>Press keys on the keyboard to see what the KeyboardEvent's key and code
    values are for each one.</p>
-<div id="output">
+<div id="output" tabindex="0">
 </div>
 ```
 
@@ -49,6 +49,11 @@ The code values for Windows, Linux, and macOS are list on the [KeyboardEvent: co
 #output {
   font-family: Arial, Helvetica, sans-serif;
   border: 1px solid black;
+  width: 95%;
+  margin: auto;
+}
+#output:focus-visible {
+  outline: 3px solid dodgerblue;
 }
 ```
 
@@ -59,12 +64,13 @@ window.addEventListener("keydown", function(event) {
   const p = document.createElement("p");
   p.textContent = `KeyboardEvent: key='${event.key}' | code='${event.code}'`;
   document.getElementById("output").appendChild(p);
+  window.scrollTo(0, document.body.scrollHeight);
 }, true);
 ```
 
 #### Try it out
 
-To ensure that keystrokes go to the sample, click in the output box below before pressing keys.
+To ensure that keystrokes go to the sample, click or focus the output box below before pressing keys.
 
 {{ EmbedLiveSample('Exercising_KeyboardEvent', 600, 300) }}
 
@@ -76,10 +82,9 @@ This example establishes an event listener for {{event("keydown")}} events that 
 
 ```html
 <p>Use the WASD (ZQSD on AZERTY) keys to move and steer.</p>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="world">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="world" tabindex="0">
   <polygon id="spaceship" points="15,0 0,30 30,30"/>
 </svg>
-<script>refresh();</script>
 ```
 
 #### CSS
@@ -92,7 +97,9 @@ This example establishes an event listener for {{event("keydown")}} events that 
   width: 400px;
   height: 400px;
 }
-
+.world:focus-visible {
+  outline: 5px solid dodgerblue;
+}
 #spaceship {
   fill: orange;
   stroke: red;
@@ -155,6 +162,7 @@ function refresh() {
 
   spaceship.setAttribute("transform", transform);
 }
+refresh();
 ```
 
 Finally, the `addEventListener()` method is used to start listening for {{event("keydown")}} events, acting on each key by updating the ship position and rotation angle, then calling `refresh()` to draw the ship at its new position and angle.
@@ -190,14 +198,18 @@ window.addEventListener("keydown", function(event) {
 
   refresh();
 
-  // Consume the event so it doesn't get handled twice
-  event.preventDefault();
+  if (event.code !== "Tab")
+  {
+    // Consume the event so it doesn't get handled twice,
+    // as long as the user isn't trying to move focus away
+    event.preventDefault();
+  }
 }, true);
 ```
 
 #### Try it out
 
-To ensure that keystrokes go to the sample code, click inside the black game play field below before pressing keys.
+To ensure that keystrokes go to the sample code, click or focus the black game play field below before pressing keys.
 
 {{EmbedLiveSample("Handle_keyboard_events_in_a_game", 420, 460)}}
 

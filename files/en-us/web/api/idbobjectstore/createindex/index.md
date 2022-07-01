@@ -98,10 +98,10 @@ database structure if a database with a higher version number is loaded.
 full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
-var db;
+let db;
 
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // Two event handlers for opening the database.
 DBOpenRequest.onerror = function(event) {
@@ -125,14 +125,14 @@ DBOpenRequest.onsuccess = function(event) {
 // was submitted with window.indexedDB.open(). (See above.)
 // It is only implemented in recent browsers.
 DBOpenRequest.onupgradeneeded = function(event) {
-  var db = event.target.result;
+  const db = event.target.result;
 
   db.onerror = function(event) {
     note.innerHTML += '<li>Error loading database.</li>';
   };
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  const objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
 
   // define what data items the objectStore will contain
 

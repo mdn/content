@@ -44,7 +44,7 @@ function ismetaKey(e) {
 
 #### Result
 
-{{ EmbedLiveSample('Example', 400, 90) }}
+{{ EmbedLiveSample('Examples', 400, 90) }}
 
 ## Specifications
 

@@ -8,9 +8,10 @@ tags:
   - Reference
   - getAll()
   - CookieStore
+  - Experimental
 browser-compat: api.CookieStore.getAll
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 The **`getAll()`** method of the {{domxref("CookieStore")}} interface returns a list of cookies that match the name or options passed to it. Passing no parameters will return all cookies for the current context.
 

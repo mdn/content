@@ -35,8 +35,7 @@ getActiveUniforms(program, uniformIndices, pname)
 
     - `gl.UNIFORM_TYPE`
       - : Returns an {{jsxref("Array")}} of
-        {{domxref("WebGL_API/Types", "GLenum")}} indicating the [types
-        of the uniforms](/en-US/docs/Web/API/WebGLRenderingContext/getUniform#return_value).
+        {{domxref("WebGL_API/Types", "GLenum")}} indicating the [types of the uniforms](/en-US/docs/Web/API/WebGLRenderingContext/getUniform#return_value).
     - `gl.UNIFORM_SIZE`
       - : Returns an {{jsxref("Array")}} of
         {{domxref("WebGL_API/Types", "GLuint")}} indicating the sizes of the uniforms.

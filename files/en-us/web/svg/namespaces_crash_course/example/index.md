@@ -184,9 +184,9 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
     // Turn this into a class.
     new Mote();
 
-    // Mote::applyForce() -- Adjust velocity
+    // Mote::applyForce() — Adjust velocity
     // towards the given position.
-    // Warning: Pseudo-physics -- not really
+    // Warning: Pseudo-physics — not really
     // governed by any /real/ physical principles.
     Mote.prototype.applyForce = function(pos, mag)
     {
@@ -201,7 +201,7 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
         this.vy -= mag;
     }
 
-    // Mote::capVelocity() -- Apply an upper limit
+    // Mote::capVelocity() — Apply an upper limit
     // on mote velocity.
     Mote.prototype.capVelocity = function()
     {
@@ -218,7 +218,7 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
         this.vy = -max;
     }
 
-    // Mote::capPosition() -- Apply an upper/lower limit
+    // Mote::capPosition() — Apply an upper/lower limit
     // on mote position.
     Mote.prototype.capPosition = function()
     {
@@ -234,7 +234,7 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
         this.y = dims[1]-1;
     }
 
-    // Mote::move() -- move a mote, update the screen.
+    // Mote::move() — move a mote, update the screen.
     Mote.prototype.move = function()
     {
       // Apply attraction to cursor.

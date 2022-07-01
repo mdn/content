@@ -58,11 +58,11 @@ Once you have drawn content into a canvas, you can convert it into a file of any
 The code snippet below, for example, takes the image in the {{HTMLElement("canvas")}} element whose ID is "canvas", obtains a copy of it as a PNG image, then appends a new {{HTMLElement("img")}} element to the document, whose source image is the one created using the canvas.
 
 ```js
-var canvas = document.getElementById('canvas');
+const canvas = document.getElementById('canvas');
 
 canvas.toBlob(function(blob) {
-  var newImg = document.createElement('img'),
-      url = URL.createObjectURL(blob);
+  const newImg = document.createElement('img');
+  const url = URL.createObjectURL(blob);
 
   newImg.onload = function() {
     // no longer need to read the blob so it's revoked
@@ -88,9 +88,9 @@ Windows XP doesn't support converting from PNG to ico, so it uses bmp instead.
 A download link is created by setting the download attribute. The value of the download attribute is the name it will use as the file name.
 
 ```js
-var canvas = document.getElementById('canvas');
-var d = canvas.width;
-ctx = canvas.getContext('2d');
+const canvas = document.getElementById('canvas');
+const d = canvas.width;
+const ctx = canvas.getContext('2d');
 ctx.beginPath();
 ctx.moveTo(d / 2, 0);
 ctx.lineTo(d, d);
@@ -101,7 +101,7 @@ ctx.fill();
 
 function blobCallback(iconName) {
   return function(b) {
-    var a = document.createElement('a');
+    const a = document.createElement('a');
     a.textContent = 'Download';
     document.body.appendChild(a);
     a.style.display = 'block';

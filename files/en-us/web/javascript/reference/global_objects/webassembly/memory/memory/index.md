@@ -54,6 +54,8 @@ new WebAssembly.Memory(memoryDescriptor)
   thrown.
 - If `maximum` is specified and is smaller than `initial`, a
   {{jsxref("RangeError")}} is thrown.
+- If `shared` is present and `true`, yet `maximum` is not specified, a
+  {{jsxref("TypeError")}} is thrown.
 
 ## Examples
 
@@ -68,7 +70,10 @@ property will return an
 [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
 
 ```js
-var memory = new WebAssembly.Memory({initial:10, maximum:100});
+const memory = new WebAssembly.Memory({
+  initial: 10,
+  maximum: 100
+});
 ```
 
 The second way to get a `WebAssembly.Memory` object is to have it exported
@@ -81,11 +86,11 @@ function and uses it to sum some values.
 ```js
 WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
 .then(obj => {
-  var i32 = new Uint32Array(memory.buffer);
-  for (var i = 0; i < 10; i++) {
+  const i32 = new Uint32Array(memory.buffer);
+  for (let i = 0; i < 10; i++) {
     i32[i] = i;
   }
-  var sum = obj.instance.exports.accumulate(0, 10);
+  const sum = obj.instance.exports.accumulate(0, 10);
   console.log(sum);
 });
 ```
@@ -97,7 +102,11 @@ You can create a [shared memory](/en-US/docs/WebAssembly/Understanding_the_text_
 by passing `shared: true` in the constructor's initialization object:
 
 ```js
-let memory = new WebAssembly.Memory({initial:10, maximum:100, shared:true});
+const memory = new WebAssembly.Memory({
+  initial: 10,
+  maximum: 100,
+  shared: true
+});
 ```
 
 This memory's `buffer` property will return a

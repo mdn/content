@@ -11,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - deviceClass
+  - Experimental
 browser-compat: api.USBDevice.deviceClass
 ---
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}

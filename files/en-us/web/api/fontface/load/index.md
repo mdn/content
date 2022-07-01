@@ -57,7 +57,7 @@ font_file.load().then( () => {
   // font loaded successfully!
   mycanvas.width = 650;
   mycanvas.height = 100;
-  var ctx = mycanvas.getContext('2d')
+  const ctx = mycanvas.getContext('2d')
 
   ctx.font = '36px "FontFamily Style Bitter"'
   ctx.fillText('Bitter font loaded', 20, 50)

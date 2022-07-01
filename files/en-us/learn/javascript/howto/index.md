@@ -198,7 +198,7 @@ For more information on JavaScript debugging, see [Handling common JavaScript pr
 
 - [What are event handlers and how do you use them?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_handler_properties)
 - [What are inline event handlers?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#inline_event_handlers_%e2%80%94_don%27t_use_these)
-- [What does the `addEventListener()` function do, and how do you use it?](</en-US/docs/Learn/JavaScript/Building_blocks/Events#addeventlistener()_and_removeeventlistener()>)
+- [What does the `addEventListener()` function do, and how do you use it?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#using_addeventlistener)
 - [Which mechanism should I use to add event code to my web pages?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#what_mechanism_should_i_use)
 - [What are event objects, and how do you use them?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_objects)
 - [How do you prevent default event behavior?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#preventing_default_behavior)

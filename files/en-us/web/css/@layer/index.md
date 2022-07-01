@@ -17,10 +17,10 @@ The **`@layer`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rul
 ## Syntax
 
 ```css
-@layer layer-name {rules};
+@layer layer-name {rules}
 @layer layer-name;
 @layer layer-name, layer-name, layer-name;
-@layer {rules};
+@layer {rules}
 ```
 
 where:

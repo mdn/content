@@ -84,7 +84,7 @@ This example finds a {{HTMLElement("video")}} element in the document and resets
 calling `load()`.
 
 ```js
-var mediaElem = document.querySelector("video");
+const mediaElem = document.querySelector("video");
 mediaElem.load();
 ```
 

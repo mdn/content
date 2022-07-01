@@ -486,7 +486,7 @@ This guideline centers around helping users enter correct information when requi
 
 ## See also
 
-- [WCAG](en-US/docs/Web/Accessibility/Understanding_WCAG)
+- [WCAG](/en-US/docs/Web/Accessibility/Understanding_WCAG)
 
   1. [Perceivable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
   2. [Operable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable)

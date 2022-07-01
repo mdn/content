@@ -148,8 +148,8 @@ Quantifiers indicate numbers of characters or expressions to match.
 ### Repeated pattern
 
 ```js
-var wordEndingWithAs = /\w+a+\b/;
-var delicateMessage = "This is Spartaaaaaaa";
+const wordEndingWithAs = /\w+a+\b/;
+const delicateMessage = "This is Spartaaaaaaa";
 
 console.table(delicateMessage.match(wordEndingWithAs)); // [ "Spartaaaaaaa" ]
 ```
@@ -157,24 +157,24 @@ console.table(delicateMessage.match(wordEndingWithAs)); // [ "Spartaaaaaaa" ]
 ### Counting characters
 
 ```js
-var singleLetterWord = /\b\w\b/g;
-var notSoLongWord = /\b\w{1,6}\b/g;
-var loooongWord = /\b\w{13,}\b/g;
+const singleLetterWord = /\b\w\b/g;
+const notSoLongWord = /\b\w{2,6}\b/g;
+const loooongWord = /\b\w{13,}\b/g;
 
-var sentence = "Why do I have to learn multiplication table?";
+const sentence = "Why do I have to learn multiplication table?";
 
 console.table(sentence.match(singleLetterWord)); // ["I"]
-console.table(sentence.match(notSoLongWord));    // [ "Why", "do", "I", "have", "to", "learn", "table" ]
+console.table(sentence.match(notSoLongWord));    // [ "Why", "do", "have", "to", "learn", "table" ]
 console.table(sentence.match(loooongWord));      // ["multiplication"]
 ```
 
 ### Optional character
 
 ```js
-var britishText = "He asked his neighbour a favour.";
-var americanText = "He asked his neighbor a favor.";
+const britishText = "He asked his neighbour a favour.";
+const americanText = "He asked his neighbor a favor.";
 
-var regexpEnding = /\w+ou?r/g;
+const regexpEnding = /\w+ou?r/g;
 // \w+ One or several letters
 // o   followed by an "o",
 // u?  optionally followed by a "u"
@@ -190,8 +190,8 @@ console.table(americanText.match(regexpEnding));
 ### Greedy versus non-greedy
 
 ```js
-var text = "I must be getting somewhere near the center of the earth.";
-var greedyRegexp = /[\w ]+/;
+const text = "I must be getting somewhere near the center of the earth.";
+const greedyRegexp = /[\w ]+/;
 // [\w ]      a letter of the latin alphabet or a whitespace
 //      +     one or several times
 
@@ -199,7 +199,7 @@ console.log(text.match(greedyRegexp)[0]);
 // "I must be getting somewhere near the center of the earth"
 // almost all of the text matches (leaves out the dot character)
 
-var nonGreedyRegexp = /[\w ]+?/; // Notice the question mark
+const nonGreedyRegexp = /[\w ]+?/; // Notice the question mark
 console.log(text.match(nonGreedyRegexp));
 // "I"
 // The match is the smallest one possible

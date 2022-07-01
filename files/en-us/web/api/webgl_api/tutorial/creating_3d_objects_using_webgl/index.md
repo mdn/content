@@ -177,8 +177,8 @@ mat4.rotate(modelViewMatrix, modelViewMatrix, cubeRotation * .7, [0, 1, 0]);
 
 At this point, we now have an animated cube rotating, its six faces rather vividly colored.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample5/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample5/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample5) | [Open this demo on a new page](https://mdn.github.io/webgl-examples/tutorial/sample5/)
+[View the complete code](https://github.com/mdn/dom-examples/webgl-examples/tree/master/tutorial/sample5) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample5/)
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}

@@ -1,7 +1,6 @@
 ---
 title: Getting browser microphone permission
-slug: >-
-  Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission
+slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission
 page-type: guide
 ---
 {{WebRTCSidebar}}{{PreviousMenuNext("Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Show_hide_html")}}
@@ -25,7 +24,7 @@ After you've created the peer, you'll want to get the browser's permission to ac
     Let's explain the most important lines:
 
     - `window.localStream = stream` attaches the `MediaStream` object (which we have assigned to `stream` on the previous line) to the window as the `localStream`.
-    - `window.localAudio.srcObject = stream` sets the [`<audio>` element](/en-US/docs/Web/HTML/Element/audio) with the ID of `localAudio`'s `src` attribute to be the `MediaStream`returned by the promise so that it will play our stream.
+    - `window.localAudio.srcObject = stream` sets the [`<audio>` element](/en-US/docs/Web/HTML/Element/audio) with the ID of `localAudio`'s `src` attribute to be the `MediaStream` returned by the promise so that it will play our stream.
     - `window.localAudio.autoplay = true` sets the `autoplay` attribute of the `<audio>` element to true, so that the audio plays automatically.
 
     > **Warning:** If you've done some sleuthing online, you may have come across [`navigator.getUserMedia`](/en-US/docs/Web/API/Navigator/getUserMedia) and assumed you can use that instead of `navigator.MediaDevices.getUserMedia`. You'd be wrong. The former is a deprecated method, which requires callbacks as well as constraints as arguments. The latter uses a promise so you don't need to use callbacks.

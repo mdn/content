@@ -687,7 +687,7 @@ table.standard-table td {
 ```html
 <svg style="position: absolute; top: -999999px" xmlns="http://www.w3.org/2000/svg">
   <filter id="svgHueRotate">
-    <feColorMatrix type="hueRotate" values="[angle]"/>
+    <feColorMatrix type="hueRotate" values="90"/>
   </filter>
 </svg>
 ```

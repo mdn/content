@@ -163,7 +163,3 @@ Additions to the ECMAScript core for language-sensitive functionalities.
 - {{JSxRef("WebAssembly.CompileError")}}
 - {{JSxRef("WebAssembly.LinkError")}}
 - {{JSxRef("WebAssembly.RuntimeError")}}
-
-### Other
-
-- {{JSxRef("Functions/arguments", "arguments")}}
