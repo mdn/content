@@ -51,31 +51,10 @@ expression returns `false`:
 'Blue Whale'.includes('blue')  // returns false
 ```
 
-However, you emulate a case insensitive match by changing the case of the original string:
+You can work around this constraint by transforming both the original string and the search string to all lowercase:
 
 ```js
 'Blue Whale'.toLowerCase().includes('blue')  // returns true
-```
-
-## Polyfill
-
-This method has been added to the ECMAScript 2015 specification and may not be
-available in all JavaScript implementations yet.
-
-However, you can easily polyfill this method:
-
-```js
-if (!String.prototype.includes) {
-  String.prototype.includes = function(search, start) {
-    'use strict';
-
-    if (search instanceof RegExp) {
-      throw TypeError('first argument must not be a RegExp');
-    }
-    if (start === undefined) { start = 0; }
-    return this.indexOf(search, start) !== -1;
-  };
-}
 ```
 
 ## Examples
