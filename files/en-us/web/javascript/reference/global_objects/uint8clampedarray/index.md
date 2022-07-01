@@ -3,6 +3,7 @@ title: Uint8ClampedArray
 slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 tags:
   - Class
+  - Uint8ClampedArray
   - JavaScript
   - TypedArray
   - TypedArrays
