@@ -3,6 +3,7 @@ title: Float64Array
 slug: Web/JavaScript/Reference/Global_Objects/Float64Array
 tags:
   - Class
+  - Float64Array
   - JavaScript
   - TypedArray
   - TypedArrays
