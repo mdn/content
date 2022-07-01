@@ -53,7 +53,7 @@ function calculate_load_times() {
   }
 
   console.log("= Calculate Load Times");
-  for (const i=0; i < resources.length; i++) {
+  for (let i=0; i < resources.length; i++) {
     console.log("== Resource[" + i + "] - " + resources[i].name);
     // Redirect time
     const t = resources[i].redirectEnd - resources[i].redirectStart;
@@ -113,7 +113,7 @@ function display_size_data(){
 
   // For each "resource", display its *Size property values
   console.log("= Display Size Data");
-  for (const i=0; i < list.length; i++) {
+  for (let i=0; i < list.length; i++) {
     console.log("== Resource[" + i + "] - " + list[i].name);
     if ("decodedBodySize" in list[i])
       console.log("... decodedBodySize[" + i + "] = " + list[i].decodedBodySize);

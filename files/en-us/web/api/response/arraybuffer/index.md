@@ -59,7 +59,7 @@ when it is already playing (this would cause an error.)
 
 ```js
 function getData() {
-  source = audioCtx.createBufferSource();
+ const source = audioCtx.createBufferSource();
 
   const myRequest = new Request('viper.ogg');
 

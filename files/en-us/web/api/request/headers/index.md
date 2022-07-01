@@ -49,7 +49,7 @@ const myInit = {
 
 const myRequest = new Request('flowers.jpg', myInit);
 
-myContentType = myRequest.headers.get('Content-Type'); // returns 'image/jpeg'
+const myContentType = myRequest.headers.get('Content-Type'); // returns 'image/jpeg'
 ```
 
 ## Specifications

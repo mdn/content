@@ -67,9 +67,9 @@ fetch(url).then(response => {
   const toMatch = caseInsensitive ? searchTerm.toLowerCase() : searchTerm;
   const bufferSize = Math.max(toMatch.length - 1, contextBefore);
 
-  const bytesReceived = 0;
-  const buffer = '';
-  const matchFoundAt = -1;
+  let bytesReceived = 0;
+  let buffer = '';
+  let matchFoundAt = -1;
 
   return reader.read().then(function process(result) {
     if (result.done) {
