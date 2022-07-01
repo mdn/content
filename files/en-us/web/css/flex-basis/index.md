@@ -31,6 +31,7 @@ The image below shows how the Firefox [Flexbox Inspector](https://firefox-source
 /* Specify <'width'> */
 flex-basis: 10em;
 flex-basis: 3px;
+flex-basis: 50%;
 flex-basis: auto;
 
 /* Intrinsic sizing keywords */
