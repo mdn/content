@@ -137,7 +137,7 @@ returns an object which is an iterator, which is to say it must have a next meth
 ```js example-bad
 const myEmptyIterable = {
     [Symbol.iterator]() {
-        return [] // [] is iterable, but it is not an iterator -- it has no next method.
+        return [] // [] is iterable, but it is not an iterator — it has no next method.
     }
 }
 

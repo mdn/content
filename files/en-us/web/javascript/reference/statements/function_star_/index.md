@@ -41,8 +41,8 @@ function* name([param[, param[, ... param]]]) {
 Generators are functions that can be exited and later re-entered. Their context
 (variable bindings) will be saved across re-entrances.
 
-Generators in JavaScript -- especially when combined with Promises -- are a very
-powerful tool for asynchronous programming as they mitigate -- if not entirely eliminate
+Generators in JavaScript — especially when combined with Promises — are a very
+powerful tool for asynchronous programming as they mitigate — if not entirely eliminate
 \-- the problems with callbacks, such as [Callback Hell](http://callbackhell.com/) and
 [Inversion of Control](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/).
 However, an even simpler solution to these problems can be achieved
@@ -65,7 +65,7 @@ finish (i.e. the `done` property of the object returned by it will be set to
 `true`). If a value is returned, it will be set as the `value`
 property of the object returned by the generator.
 Much like a `return` statement, an error thrown inside the generator will
-make the generator finished -- unless caught within the generator's body.
+make the generator finished — unless caught within the generator's body.
 When a generator is finished, subsequent `next()` calls will not execute any
 of that generator's code, they will just return an object of this form:
 `{value: undefined, done: true}`.
@@ -270,6 +270,6 @@ for(let power of powers(2)){
 - Other web resources:
 
   - [Regenerator](https://facebook.github.io/regenerator/) an ES2015 generator compiler to ES5
-  - [Forbes Lindesay: Promises and Generators: control flow utopia -- JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s)
+  - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s)
   - [Task.js](https://github.com/mozilla/task.js)
   - [Iterating generators asynchronously](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch4.md#iterating-generators-asynchronously)
