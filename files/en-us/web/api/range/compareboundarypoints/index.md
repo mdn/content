@@ -53,9 +53,6 @@ A number, `-1`, `0`, or `1`, indicating whether the
 ## Examples
 
 ```js
-let range;
-let sourceRange;
-let compare;
 range = document.createRange();
 range.selectNode(document.getElementsByTagName("div")[0]);
 sourceRange = document.createRange();
