@@ -104,7 +104,7 @@ Heuristic caching is a workaround that came in being before `Cache-Control` supp
 
 Stored HTTP responses have two states: **fresh** and **stale**. The _fresh_ state usually indicates that the response is still valid and can be reused, while the _stale_ state means that the cached response has already expired.
 
-The criterion for determining when a response is fresh and when it is stale is **age**. In HTTP, age is the time elapsed since the response was generated. This is similar to the {{(Glossary("TTL")}} in other caching mechanisms.
+The criterion for determining when a response is fresh and when it is stale is **age**. In HTTP, age is the time elapsed since the response was generated. This is similar to the {{Glossary("TTL")}} in other caching mechanisms.
 
 Take the following example (604800 seconds is one week).
 
