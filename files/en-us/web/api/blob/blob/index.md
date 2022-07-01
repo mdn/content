@@ -30,7 +30,7 @@ new Blob(array, options)
     object such as an {{jsxref("Array")}}, having {{jsxref("ArrayBuffer")}}s,
     {{jsxref("TypedArray")}}s, {{jsxref("DataView")}}s, {{domxref("Blob")}}s, strings,
     or a mix of any of such elements, that will be put inside the {{domxref("Blob")}}.
-    Note that strings here are encoded as UTF-8, unlike the usual JS UTF-16 strings.
+    Note that strings here are encoded as UTF-8, unlike the usual JavaScript UTF-16 strings.
 
 - `options` {{optional_inline}}
   - : An object which may specify any of the following properties:
