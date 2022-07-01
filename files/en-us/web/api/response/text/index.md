@@ -53,7 +53,7 @@ for(let i = 0; i <= myLinks.length-1; i++) {
 
 function getData(pageId) {
   console.log(pageId);
-  const myRequest = new Request(pageId + '.txt');
+  var myRequest = new Request(pageId + '.txt');
   fetch(myRequest).then(function(response) {
     return response.text().then(function(text) {
       myArticle.innerHTML = text;

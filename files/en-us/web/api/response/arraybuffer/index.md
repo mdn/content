@@ -59,9 +59,9 @@ when it is already playing (this would cause an error.)
 
 ```js
 function getData() {
- const source = audioCtx.createBufferSource();
+ var source = audioCtx.createBufferSource();
 
-  const myRequest = new Request('viper.ogg');
+  var myRequest = new Request('viper.ogg');
 
   fetch(myRequest).then(function(response) {
     return response.arrayBuffer();

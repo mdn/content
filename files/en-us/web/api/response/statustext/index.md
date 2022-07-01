@@ -33,14 +33,14 @@ We then fetch this request using {{domxref("fetch()")}}, extract a blob from the
 Note that at the top of the `fetch()` block we log the response `statusText` value to the console.
 
 ```js
-const myImage = document.querySelector('img');
+var myImage = document.querySelector('img');
 
-const myRequest = new Request('flowers.jpg');
+var myRequest = new Request('flowers.jpg');
 
 fetch(myRequest).then(function(response) {
   console.log(response.statusText); // returns "OK" if the response returned successfully
   response.blob().then(function(myBlob) {
-    const objectURL = URL.createObjectURL(myBlob);
+    var objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });
 });

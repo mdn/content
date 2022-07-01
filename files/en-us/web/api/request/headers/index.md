@@ -47,9 +47,9 @@ const myInit = {
   cache: 'default'
 };
 
-const myRequest = new Request('flowers.jpg', myInit);
+var myRequest = new Request('flowers.jpg', myInit);
 
-const myContentType = myRequest.headers.get('Content-Type'); // returns 'image/jpeg'
+var myContentType = myRequest.headers.get('Content-Type'); // returns 'image/jpeg'
 ```
 
 ## Specifications

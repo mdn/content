@@ -31,15 +31,15 @@ create an object URL out of it using {{domxref("URL.createObjectURL")}}, and dis
 Note that at the top of the `fetch()` block, we log the response headers to the console.
 
 ```js
-const myImage = document.querySelector('img');
+var myImage = document.querySelector('img');
 
-const myRequest = new Request('flowers.jpg');
+var myRequest = new Request('flowers.jpg');
 
 fetch(myRequest).then(function(response) {
   // for each response header, log an array with header name as key
   console.log(...response.headers);
   response.blob().then(function(myBlob) {
-    const objectURL = URL.createObjectURL(myBlob);
+    var objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });
 });
