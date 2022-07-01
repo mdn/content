@@ -68,7 +68,7 @@ Three of these algorithms — RSASSA-PKCS1-v1_5, RSA-PSS, and ECDSA — are
 key for signing and the public key for verification.
 These systems all use a [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms)
 to hash the message to a short fixed size before signing.
-The choice of digest algorithm is passed into the
+Except for ECDSA (for which it is passed in the `algorithm` object), the choice of digest algorithm is passed into the
 {{domxref("SubtleCrypto.generateKey()", "generateKey()")}} or {{domxref("SubtleCrypto.importKey()", "importKey()")}} functions.
 
 The fourth algorithm — HMAC — uses the same algorithm and key for signing and for
