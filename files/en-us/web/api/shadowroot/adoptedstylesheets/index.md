@@ -20,7 +20,7 @@ The **`adoptedStyleSheets`** property of the {{domxref("ShadowRoot")}} interface
 The same constructed stylesheet can be adopted by multiple {{domxref("ShadowRoot")}} instances, and by the parent document (using the {{domxref("Document.adoptedStyleSheets")}} property).
 Changing an adopted stylesheet will affect all the adopting objects.
 
-Stylesheets in the property are considered along with the shadow DOM's other stylesheets.
+Stylesheets in the `adoptedStyleSheets` property are considered along with the shadow DOM's other stylesheets.
 For the purpose of determining the final computed CSS of any element, they are considered to have been added _after_ the other stylesheets in the shadow DOM ([`ShadowRoot.styleSheets`](/en-US/docs/Web/API/Document/styleSheets)).
 
 Only stylesheets created using the [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet), and from within the same parent {{domxref("Document")}} as the shadow root, may be adopted.
@@ -31,7 +31,7 @@ Only stylesheets created using the [`CSSStyleSheet()` constructor](/en-US/docs/W
 The value is an array of {{domxref("CSSStyleSheet()")}} instances that must have been created using the {{domxref("CSSStyleSheet.CSSStyleSheet()", "CSSStyleSheet()")}} constructor within the context of the shadow root's parent {{domxref("Document")}}.
 
 If the array needs to be modified, then a new array must be assigned (in-place mutations like `push()` will throw an exception).
-Note however that the {{domxref("CSSStyleSheet()")}} instances themselves can be modified, and these changes will apply wherever the stylesheet is adopted.
+Note, however, that the {{domxref("CSSStyleSheet()")}} instances themselves can be modified, and these changes will apply wherever the stylesheet is adopted.
 
 ## Examples
 
@@ -67,7 +67,7 @@ Below we append a new rule to the same sheet using {{domxref("CSSStyleSheet.inse
 
 ### Append a new stylesheet 
 
-To append a whole new stylesheet to the `adoptedStyleSheets` property we have to create and assign a new combined array.
+To _append_ a stylesheet to the `adoptedStyleSheets` property we have to create and assign a new array that contains both the original stylesheets in the property and the new style sheet.
 This is demonstrated for our shadow root object below using spread-syntax:
 
 ```js

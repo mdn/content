@@ -200,4 +200,3 @@ instead of {{domxref("CSSStyleSheet.deleteRule","deleteRule()")}} and
 
 - {{domxref("CSSStyleSheet.deleteRule")}}
 - [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
-- [Cross-Browser CSS-rules ordering (CSS1)](https://www-archive.mozilla.org/docs/web-developer/css1technote/css1tojs.html#priority)
