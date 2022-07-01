@@ -17,7 +17,7 @@ The **`ignoreBOM`** read-only property of the {{domxref("TextDecoderStream")}} i
 
 ## Value
 
-A {{jsxref("boolean")}}, initially `false`
+A {{jsxref("boolean")}}, initially `false`.
 
 ## Examples
 
