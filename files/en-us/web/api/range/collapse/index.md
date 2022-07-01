@@ -41,7 +41,7 @@ None ({{jsxref("undefined")}}).
 ```js
 const range = document.createRange();
 
-referenceNode = document.getElementsByTagName("div").item(0);
+const referenceNode = document.getElementsByTagName("div").item(0);
 range.selectNode(referenceNode);
 range.collapse(true);
 ```
