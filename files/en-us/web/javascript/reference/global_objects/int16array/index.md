@@ -127,6 +127,7 @@ console.log(z.byteOffset); // 2
 // From an iterable
 const iterable = function*() { yield* [1, 2, 3]; }();
 const int16FromIterable = new Int16Array(iterable);
+console.log(int16FromIterable);
 // Int16Array [1, 2, 3]
 ```
 
