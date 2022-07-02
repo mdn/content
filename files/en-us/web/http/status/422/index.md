@@ -8,9 +8,7 @@ tags:
   - Reference
   - Status code
   - WebDAV
-spec-urls: 
-  - https://www.rfc-editor.org/rfc/rfc9110#name-422-unprocessable-content
-  - https://www.rfc-editor.org/rfc/rfc4918#section-11.2
+spec-urls: https://httpwg.org/specs/rfc9110.html#status.422
 ---
 {{HTTPSidebar}}
 
