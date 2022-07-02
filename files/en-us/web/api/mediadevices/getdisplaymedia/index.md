@@ -146,3 +146,4 @@ add the video track from the stream.
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}: Capturing media from a
   camera and/or microphone
+- [xataio/screenshot](https://github.com/xataio/screenshot): an open-source JavaScript library that provides a simpler API on top of the MediaDevices API to enable screen sharing on web pages and applications.
