@@ -45,13 +45,9 @@ _`Clipboard` is based on the {{domxref("EventTarget")}} interface, and includes 
 
 ## Clipboard availability
 
-The asynchronous clipboard API is a relatively recent addition, and the process of implementing it in browsers is not yet complete. Due to both potential security concerns and technical complexities, the process of integrating this API is happening gradually in most browsers.
+The asynchronous clipboard API is a relatively recent addition, and the process of implementing it in browsers is not yet complete. Due to both potential security concerns and technical complexities, the process of integrating this API is happening gradually in most browsers. See the [browser compatibility](#browser_compatibility) section below for more information.
 
-For example, Firefox does not yet support the `'clipboard-read'` and `'clipboard-write'` permissions, so access to the methods that access and change the contents of the clipboard are restricted in other ways.
-
-For Firefox WebExtensions, you can request the `'clipboardRead'` and `'clipboardWrite'` permissions to be able to use {{domxref("Clipboard.readText", "readText()")}} and {{domxref("Clipboard.writeText", "writeText()")}}. Content scripts applied on HTTP sites do not have access to the clipboard object. See [extensions in Firefox 63](https://blog.mozilla.org/addons/2018/08/31/extensions-in-firefox-63/).
-
-In addition to these, {{domxref("Clipboard.read", "read()")}} and {{domxref("Clipboard.write", "write()")}} are disabled by default in Firefox and require changing a preference to enable them. Check the compatibility tables for each method before using it.
+In browser extensions, you can access the system clipboard using the WebExtension [`clipboard`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/clipboard) API.
 
 ## Specifications
 
