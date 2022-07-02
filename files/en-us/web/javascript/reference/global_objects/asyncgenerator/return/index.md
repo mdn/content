@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.AsyncGenerator.return
 ---
 {{JSRef}}
 
-The **`return()`** method returns the given value and finishes the generator.
+The **`return()`** method of an async generator acts as if a `return` statement is inserted in the generator's body at the current suspended position, which finishes the generator and allows the generator to perform any cleanup tasks when combined with a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally-block) block.
 
 ## Syntax
 
@@ -27,7 +27,18 @@ asyncGen.return(value)
 
 ### Return value
 
-Returns a {{jsxref("Promise")}} which resolves with the value that is given as an argument.
+A {{jsxref("Promise")}} which resolves with an {{jsxref("Global_Objects/Object", "Object")}} with two properties:
+
+- `done`
+  - : A boolean value:
+    - `true` if the generator function's control flow has reached the end.
+    - `false` if the generator function's control flow hasn't reached the end and can produce more values. This can only happen if the `return` is captured in a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally-block) and there are more `yield` expressions in the `finally` block.
+- `value`
+  - : The value that is given as an argument, or, if the `yield` expression is wrapped in a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally-block), the value yielded/returned from the `finally` block.
+
+## Description
+
+The `return()` method, when called, can be seen as if a `return value;` statement is inserted in the generator's body at the current suspended position, where `value` is the value passed to the `return()` method. Therefore, in a typical flow, calling `return(value)` will return `{ done: true, value: value }`. However, if the `yield` expression is wrapped in a `try...finally` block, the control flow doesn't exit the function body, but proceeds to the `finally` block instead. In this case, the value returned may be different, and `done` may even be `false`, if there are more `yield` expressions within the `finally` block.
 
 ## Examples
 

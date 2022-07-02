@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.AsyncGenerator.throw
 ---
 {{JSRef}}
 
-The **`throw()`** method forces a generator to throw an exception.
+The **`throw()`** method of an async generator acts as if a `throw` statement is inserted in the generator's body at the current suspended position, which informs the generator of an error condition and allows it to handle the error, or perform cleanup and close itself.
 
 ## Syntax
 
@@ -27,12 +27,16 @@ asyncGen.throw(exception)
 
 ### Return value
 
-A {{jsxref("Promise")}} which when resolved returns an {{jsxref("Object")}} with two properties:
+If the thrown error is not caught, it will return a {{jsxref("Promise")}} which rejects with the exception passed in.
+
+If the exception is caught by a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) and the generator resumes to yield more values, it will return a {{jsxref("Promise")}} which resolves with an {{jsxref("Global_Objects/Object", "Object")}} with two properties:
 
 - `done`
-  - : A {{jsxref("Boolean")}} value: `true` if the iterator is past the end of the iterated sequence. In this case `value` optionally specifies the _return value_ of the iterator. `false` if the iterator was able to produce the next value in the sequence.
+  - : A boolean value:
+    - `true` if the generator function's control flow has reached the end.
+    - `false` if the generator function is able to produce more values.
 - `value`
-  - : Any JavaScript value returned by the iterator. Can be omitted when `done` is `true`.
+  - : The value yielded from the next `yield` expression.
 
 ## Examples
 
@@ -44,7 +48,7 @@ The following example shows a simple generator and an error that is thrown using
 async function* createAsyncGenerator() {
   while (true) {
     try {
-       yield 42;
+      yield 42;
     } catch (e) {
       console.log(new Error(e));
     }
