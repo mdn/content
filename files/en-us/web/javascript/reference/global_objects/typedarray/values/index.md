@@ -24,7 +24,7 @@ values()
 
 ### Return value
 
-A new **`Array Iterator`** object.
+A new _array iterator_ object.
 
 ## Examples
 
