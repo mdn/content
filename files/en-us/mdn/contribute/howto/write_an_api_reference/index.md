@@ -41,7 +41,7 @@ Before starting to document an API, you should have available:
    Good places to find them are:
 
     - Your internal company address book, if you work for a relevant company.
-    - A public mailing list that is involved in the discussion of that API, such as Mozilla's [dev-platform](https://groups.google.com/a/mozilla.org/g/dev-platform/) or [dev-webapi](https://lists.mozilla.org/listinfo/dev-webapi) lists, or a W3C list like [public-webapps](https://lists.w3.org/Archives/Public/public-webapps/).
+    - A public mailing list that is involved in the discussion of that API, such as Mozilla's [dev-platform](https://groups.google.com/a/mozilla.org/g/dev-platform/) or a W3C list like [public-webapps](https://lists.w3.org/Archives/Public/public-webapps/).
     - The spec itself. For example, the [Web Audio API spec](https://webaudio.github.io/web-audio-api/) lists the authors and their contact details at the top.
 
 ### Take some time to play with the API
