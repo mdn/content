@@ -27,7 +27,7 @@ getReader(options)
 
 - `options` {{optional_inline}}
 
-  - : An options object containing the following properties:
+  - : An object containing the following properties:
 
     - `mode` {{optional_inline}}
 
