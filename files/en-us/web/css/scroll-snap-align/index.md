@@ -2,8 +2,9 @@
 title: scroll-snap-align
 slug: Web/CSS/scroll-snap-align
 tags:
-  - Advanced
   - CSS
+  - CSS Property
+  - Web
   - Example
   - NeedsLiveSample
   - Reference
