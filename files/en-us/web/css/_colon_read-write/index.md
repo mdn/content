@@ -15,15 +15,7 @@ browser-compat: css.selectors.read-write
 
 The **`:read-write`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element (such as `input` or `textarea`) that is editable by the user.
 
-```css
-input:read-write, textarea:read-write {
-  background-color: #bbf;
-}
-
-p:read-write {
-  background-color: #bbf;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-read-write.html", "tabbed-shorter")}}
 
 ## Syntax
 
