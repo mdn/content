@@ -18,7 +18,6 @@ After constructing a stylesheet the {{domxref("CSSStyleSheet.replace()")}}, {{do
 A stylesheet created using this method is referred to as a "constructed stylesheet".
 A constructed stylesheet can be shared between a document and its shadow DOM subtrees using {{domxref("ShadowRoot.adoptedStyleSheets")}} and {{domxref("Document.adoptedStyleSheets")}}.
 
-
 ## Syntax
 
 ```js
