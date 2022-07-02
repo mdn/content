@@ -51,8 +51,7 @@ function print_start_and_end_properties(perfEntry) {
 
   for (let i=0; i < properties.length; i++) {
     // check each property
-    const supported = properties[i] in perfEntry;
-    if (supported) {
+    if (properties[i] in perfEntry) {
       const value = perfEntry[properties[i]];
       console.log("... " + properties[i] + " = " + value);
     } else {
