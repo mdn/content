@@ -15,6 +15,8 @@ The **`async function*`** declaration defines an _async generator function_, whi
 
 {{EmbedInteractiveExample("pages/js/expressions-async-function-asterisk.html", "taller")}}
 
+You can also define async generator functions using the {{jsxref("AsyncGeneratorFunction")}} constructor or the [`async function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function*) syntax.
+
 ## Syntax
 
 ```js
@@ -36,11 +38,36 @@ async function* name([param[, param[, ..., param]]]) {
 
 ## Description
 
-TODO
+An async generator function combines the features of [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) and [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*). You can use both the [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) and [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) keywords within the function body. This empowers you to handle asynchronous tasks ergonomically with `await`, while leveraging the lazy nature of generator functions.
+
+Unlike normal generator functions declared with `function*`, an async generator function return an {{jsxref("Global_Objects/AsyncGenerator","AsyncGenerator")}} object, which conforms to the [async iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols). Every call to `next()` returns a {{jsxref("Promise")}} that resolves to the iterator result object.
 
 ## Examples
 
-TODO
+### Using an async generator function to read a series of files
+
+In this example, we read a series of files and only access its content when requested, using Node's [`fs/promises`](https://nodejs.org/dist/latest-v18.x/docs/api/fs.html) module.
+
+```js
+async function* readFiles() {
+  const files = await fs.readdir('.');
+  for (const file of files) {
+    const stats = await fs.stat(file);
+    if (stats.isFile()) {
+      yield {
+        name: file,
+        content: await fs.readFile(file, 'utf8'),
+      };
+    }
+  }
+}
+
+const files = readFiles();
+console.log((await files.next()).value);
+// { name: 'file1.txt', content: '...' }
+console.log((await files.next()).value);
+// { name: 'file2.txt', content: '...' }
+```
 
 ## Specifications
 
