@@ -50,7 +50,7 @@ console.log(x);
 
 For people from other languages (e.g. C, Java) where blocks create scopes, the above code should throw an error on the `console.log` line, because we are outside the scope of `x` in either block. However, because blocks don't create scopes for `var`, the `var` statements here actually create a global variable. There is also [a practical example](#creating_closures_in_loops_a_common_mistake) introduced below that illustrates how this can cause actual bugs when combined with closures.
 
-In ES6, JavaScript introduced the `let` and `const` declarations, which, among other things like [temporary dead zones](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz), allow you to create block-scoped variables.
+In ES6, JavaScript introduced the `let` and `const` declarations, which, among other things like [temporal dead zones](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz), allow you to create block-scoped variables.
 
 ```js
 if (Math.random() > 0.5) {
@@ -140,7 +140,7 @@ Here's the JavaScript:
 ```js
 function makeSizer(size) {
   return function () {
-    document.body.style.fontSize = size + 'px';
+    document.body.style.fontSize = `${size}px`;
   };
 }
 
