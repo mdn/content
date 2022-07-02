@@ -70,7 +70,7 @@ The basic approach for implementing a web component generally looks something li
 
   - : The following extensions are defined:
 
-    - The {{htmlattrxref("is")}} global HTML attribute: Allows you to specify that a standard HTML element should behave like a registered custom built-in element.
+    - The [`is`](/en-US/docs/Web/HTML/Global_attributes/is) global HTML attribute: Allows you to specify that a standard HTML element should behave like a registered custom built-in element.
     - The "is" option of the {{domxref("Document.createElement()")}} method: Allows you to create an instance of a standard HTML element that behaves like a given registered custom built-in element.
 
 - CSS pseudo-classes
