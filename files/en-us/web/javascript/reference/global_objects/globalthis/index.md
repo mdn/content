@@ -55,16 +55,31 @@ const globalObject =
   (function () { return this; })() ||
   Function('return this')();
 
-if (typeof globalObject.setTimeout !== 'function') {	
-  // no setTimeout in this environment!	
+if (typeof globalObject.Intl === 'undefined') {
+  // No Intl in this environment; define our own on the global scope
+  Object.defineProperty(globalObject, 'Intl', {
+    value: {
+      // Our Intl implementation
+    },
+    enumerable: false,
+    configurable: true,
+    writable: true,
+  });
 }
 ```
 
 With `globalThis` available, the additional search for the global across environments is not necessary anymore:
 
 ```js
-if (typeof globalThis.setTimeout !== 'function') {
-  // no setTimeout in this environment!
+if (typeof globalThis.Intl === 'undefined') {
+  Object.defineProperty(globalThis, 'Intl', {
+    value: {
+      // Our Intl implementation
+    },
+    enumerable: false,
+    configurable: true,
+    writable: true,
+  });
 }
 ```
 
