@@ -25,7 +25,6 @@ Where the resolution of rules considers stylesheet order, `adoptedStyleSheets` a
 
 Only stylesheets created using the [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet) within the context of the current {{domxref("Document")}} may be adopted.
 
-
 ## Value
 
 The value is an array of {{domxref("CSSStyleSheet()")}} instances that must have been created using the {{domxref("CSSStyleSheet.CSSStyleSheet()", "CSSStyleSheet()")}} constructor within the context of the same {{domxref("Document")}}.
@@ -33,12 +32,10 @@ The value is an array of {{domxref("CSSStyleSheet()")}} instances that must have
 If the array needs to be modified, then a new array must be assigned (in-place mutations like `push()` will throw an exception).
 Note however that the {{domxref("CSSStyleSheet()")}} instances themselves can be modified, and these changes will apply wherever the stylesheet is adopted.
 
-
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
   - : One of the {{domxref("CSSStyleSheet")}} instances in the array was not created using the [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet) or was constructed in a different document than the current document, such as one in a frame.
-
 
 ## Examples
 
@@ -57,14 +54,14 @@ sheet.replaceSync('a { color: red; }');
 document.adoptedStyleSheets = [sheet];
 ```
 
-We can append a new rule to the stylesheet using {{domxref("CSSStyleSheet.insertRule()")}}. 
+We can append a new rule to the stylesheet using {{domxref("CSSStyleSheet.insertRule()")}}.
 
 ```js
  sheet.insertRule("* { background-color: blue; }");
  // The document will now have blue background.
 ```
 
-### Append a new stylesheet 
+### Append a new stylesheet
 
 To append a whole new stylesheet to the `adoptedStyleSheets` property we have to create and assign a new combined array.
 This is demonstrated below using spread-syntax:
