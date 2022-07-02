@@ -12,7 +12,7 @@ tags:
 ---
 {{JSRef}}
 
-The **`values()`** method returns a new `Array Iterator` object that contains the values for each index in the array.
+The **`values()`** method returns a new _array iterator_ object that contains the values for each index in the array.
 
 {{EmbedInteractiveExample("pages/js/typedarray-values.html")}}
 
