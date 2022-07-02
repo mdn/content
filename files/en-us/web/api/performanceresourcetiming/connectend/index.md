@@ -52,7 +52,7 @@ function print_start_and_end_properties(perfEntry) {
     // check each property
     const supported = properties[i] in perfEntry;
     if (supported) {
-      var value = perfEntry[properties[i]];
+      const value = perfEntry[properties[i]];
       console.log("... " + properties[i] + " = " + value);
     } else {
       console.log("... " + properties[i] + " = NOT supported");
