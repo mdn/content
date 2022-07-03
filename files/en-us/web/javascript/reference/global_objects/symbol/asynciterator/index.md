@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Symbol.asyncIterator
 ---
 {{JSRef}}
 
-The **`Symbol.asyncIterator`** well-known symbol specifies the default [AsyncIterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator) for an object. If this property is set on an object, it is an async iterable and can be used in a [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) loop.
+The **`Symbol.asyncIterator`** well-known symbol specifies the default [`AsyncIterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator) for an object. If this property is set on an object, it is an async iterable and can be used in a [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) loop.
 
 ## Description
 
