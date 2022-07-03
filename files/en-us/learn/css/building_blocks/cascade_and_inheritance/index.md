@@ -182,7 +182,7 @@ Let's now have a look at how the browser will calculate specificity. We already 
 
 The amount of specificity a selector has is measured using three different values (or components), which can be thought of as ID, CLASS, and ELEMENT columns in the hundreds, tens, and ones place:
 
-- **Indentifiers**: Score one in this column for each ID selector contained inside the overall selector.
+- **Identifiers**: Score one in this column for each ID selector contained inside the overall selector.
 - **Classes**: Score one in this column for each class selector, attribute selector, or pseudo-class contained inside the overall selector.
 - **Elements**: Score one in this column for each element selector or pseudo-element contained inside the overall selector.
 
