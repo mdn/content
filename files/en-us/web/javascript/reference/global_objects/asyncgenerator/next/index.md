@@ -61,6 +61,7 @@ asyncGen.next().then(res => console.log(res));    // "Object { value: undefined,
 In this example, `next` is called with a value.
 
 > **Note:** The first call does not log anything, because the generator was not yielding anything initially.
+
 ```js
 async function* createAsyncGenerator() {
   while (true) {
@@ -75,8 +76,10 @@ asyncGen.next(2).then(res => console.log(res));    // { value: null, done: false
 
 ### Using next() with a list
 
+In this example, `getPage` takes a list and "paginates" it into chunks of size `pageSize`. Each call to `next` will yield one such chunk.
+
 ```js
-async function* getPage(pageSize = 1, list) {
+async function* getPage(list, pageSize = 1) {
   let output = [];
   let index = 0;
   while (index < list.length) {
@@ -91,7 +94,7 @@ async function* getPage(pageSize = 1, list) {
   }
 }
 const list = [1, 2, 3, 4, 5, 6, 7, 8];
-const page = getPage(3, list);             // AsyncGenerator { }
+const page = getPage(list, 3);             // AsyncGenerator { }
 page.next().then(res => console.log(res)); // Object { value: [1, 2, 3], done: false }
 page.next().then(res => console.log(res)); // Object { value: [4, 5, 6], done: false }
 page.next().then(res => console.log(res)); // Object { value: [7, 8], done: false }

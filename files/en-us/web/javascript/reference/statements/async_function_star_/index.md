@@ -1,5 +1,5 @@
 ---
-title: async function* statement
+title: async function*
 slug: Web/JavaScript/Reference/Statements/async_function*
 tags:
    - Function
@@ -25,16 +25,16 @@ async function* name([param[, param[, ..., param]]]) {
 }
 ```
 
-> **Note:** Async generators do not have arrow function counterparts.
+> **Note:** Async generator functions do not have arrow function counterparts.
 
 ### Parameters
 
 - `name`
   - : The function name.
 - `param` {{optional_inline}}
-  - : The name of an argument to be passed to the function. A function can have up to 255 arguments.
+  - : The name of a formal parameter for the function.
 - `statements`
-  - : The statements which comprise the body of the function.
+  - : The statements comprising the body of the function.
 
 ## Description
 
@@ -81,8 +81,8 @@ gen.next()
 In this example, we read a series of files and only access its content when requested, using Node's [`fs/promises`](https://nodejs.org/dist/latest-v18.x/docs/api/fs.html) module.
 
 ```js
-async function* readFiles() {
-  const files = await fs.readdir('.');
+async function* readFiles(directory) {
+  const files = await fs.readdir(directory);
   for (const file of files) {
     const stats = await fs.stat(file);
     if (stats.isFile()) {
@@ -94,11 +94,11 @@ async function* readFiles() {
   }
 }
 
-const files = readFiles();
+const files = readFiles('.');
 console.log((await files.next()).value);
-// { name: 'file1.txt', content: '...' }
+// Possible output: { name: 'file1.txt', content: '...' }
 console.log((await files.next()).value);
-// { name: 'file2.txt', content: '...' }
+// Possible output: { name: 'file2.txt', content: '...' }
 ```
 
 ## Specifications

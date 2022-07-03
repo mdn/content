@@ -29,6 +29,10 @@ function* name([param[, param[, ... param]]]) {
 }
 ```
 
+> **Note:** Generator functions do not have arrow function counterparts.
+
+### Parameters
+
 - `name`
   - : The function name.
 - `param` {{optional_inline}}
