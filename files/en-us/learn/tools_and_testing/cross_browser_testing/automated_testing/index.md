@@ -394,7 +394,7 @@ Once you sign in to LambdaTest, you will be routed to the LambdaTest Dashboard. 
 
 Let's get started with a Sauce Labs Trial.
 
-1. Create a [Sauce Labs trial account](https://saucelabs.com/sign-up/trial).
+1. Create a Sauce Labs trial account.
 2. Sign in. This should happen automatically after you verify your e-mail address.
 
 #### The basics: Manual tests
