@@ -81,37 +81,6 @@ Math.acosh(2);   // 1.3169578969248166
 
 For values less than 1 `Math.acosh()` returns {{jsxref("NaN")}}.
 
-## Polyfill
-
-For all <math><semantics><mrow><mi>x</mi>
-<mo>≥</mo>
-<mn>1</mn>
-</mrow><annotation encoding="TeX">x \geq 1</annotation>
-</semantics></math>, we have <math>
-<semantics><mrow><mo lspace="0em" rspace="thinmathspace">arcosh</mo>
-<mo stretchy="false">(</mo>
-<mi>x</mi>
-<mo stretchy="false">)</mo>
-<mo>=</mo>
-<mo lspace="0em" rspace="0em">ln</mo>
-<mrow><mo>(</mo>
-<mrow><mi>x</mi>
-<mo>+</mo>
-<msqrt><mrow><msup><mi>x</mi>
-<mn>2</mn>
-</msup><mo>-</mo>
-<mn>1</mn>
-</mrow></msqrt></mrow><mo>)</mo>
-</mrow></mrow><annotation encoding="TeX">\operatorname {arcosh} (x) = \ln \left(x + \sqrt{x^{2} -
-1} \right)</annotation>
-</semantics></math> and so this can be emulated with the following function:
-
-```js
-Math.acosh = Math.acosh || function(x) {
-  return Math.log(x + Math.sqrt(x * x - 1));
-};
-```
-
 ## Specifications
 
 {{Specifications}}
