@@ -23,9 +23,9 @@ Object.getPrototypeOf(async function*(){}).constructor
 ## Syntax
 
 ```js
-new GeneratorFunction(functionBody)
-new GeneratorFunction(arg1, functionBody)
-new GeneratorFunction(arg1, arg2, functionBody)
+new AsyncGeneratorFunction(functionBody)
+new AsyncGeneratorFunction(arg1, functionBody)
+new AsyncGeneratorFunction(arg1, arg2, functionBody)
 ```
 
 ### Parameters
