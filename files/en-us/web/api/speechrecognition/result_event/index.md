@@ -48,7 +48,7 @@ This code is excerpted from our [Speech color changer](https://github.com/mdn/do
 You can use the `result` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+const recognition = new SpeechRecognition();
 
 recognition.addEventListener('result', function(event) {
   const color = event.results[0][0].transcript;
