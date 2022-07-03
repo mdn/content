@@ -65,7 +65,7 @@ Event handlers are registered for the following pointer events: {{domxref("HTMLE
 ```js
 function set_handlers(name) {
  // Install event handlers for the given element
- const el=document.getElementById(name);
+ const el = document.getElementById(name);
  el.onpointerdown = pointerdown_handler;
  el.onpointermove = pointermove_handler;
 

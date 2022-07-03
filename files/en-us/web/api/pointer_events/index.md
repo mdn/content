@@ -239,7 +239,7 @@ This example registers a handler for every event type for the given element.
     function lostcapture_handler(event) { }
 
     function init() {
-      const el=document.getElementById("target");
+      const el = document.getElementById("target");
       // Register pointer event handlers
       el.onpointerover = over_handler;
       el.onpointerenter = enter_handler;

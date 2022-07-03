@@ -30,10 +30,7 @@ self.addEventListener('push', function(event) {
     return;
   }
 
-  const data = {};
-  if (event.data) {
-    data = event.data.json();
-  }
+  const data = event.data?.json() ?? {}
   const title = data.title || "Something Has Happened";
   const message = data.message || "Here's something you might want to check out.";
   const icon = "images/new-notification.png";
