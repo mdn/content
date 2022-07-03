@@ -496,10 +496,8 @@ const button = document.getElementById("example-button");
 
 button.addEventListener(
   "click",
-  (_event) => {
-    button.textContent = "You have clicked this button.";
-  }, {
-    capture: false,
+  () => button.textContent = "You have clicked this button.",
+  {
     passive: true,
     once: true
   }
