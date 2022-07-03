@@ -36,7 +36,7 @@ for(i = 0; i < voices.length ; i++) {
   option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
 
   if(voices[i].default) {
-    option.textContent += ' -- DEFAULT';
+    option.textContent += ' — DEFAULT';
   }
 
   console.log(voices[i].localService);

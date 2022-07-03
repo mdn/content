@@ -60,7 +60,7 @@ Here are some notes on the classes we use:
 [`nsTextAccessible`](http://lxr.mozilla.org/seamonkey/find?string=nstextaccessible) serves 2 purposes
 
 - it is used by `nsHyperTextAccessible` to collect information about itself
-- it is still exposed in MSAA for backward compatibility by old windows assistive technologies. Those AT's don't yet know about any `IAccessibleText` yet, and want to see the hierarchy how they always did -- with text in leaf nodes.
+- it is still exposed in MSAA for backward compatibility by old windows assistive technologies. Those AT's don't yet know about any `IAccessibleText` yet, and want to see the hierarchy how they always did — with text in leaf nodes.
 
 ## How does an AT deal with text
 

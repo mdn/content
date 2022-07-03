@@ -109,7 +109,7 @@ the two objects have different purposes:
   **set** styles on that element, or inspect styles directly added to it
   from JavaScript manipulation or the global `style` attribute.
 
-The first argument must be an {{domxref("Element")}}. non-elements, like a
+The first argument must be an {{domxref("Element")}}. Non-elements, like a
 {{DOMxRef("Text")}} node, will throw an error.
 
 ## defaultView

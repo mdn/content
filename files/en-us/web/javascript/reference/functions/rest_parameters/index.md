@@ -89,9 +89,9 @@ for converting a set of arguments to an array.
 
 function f(a, b) {
   let normalArray = Array.prototype.slice.call(arguments)
-  // -- or --
+  // — or —
   let normalArray = [].slice.call(arguments)
-  // -- or --
+  // — or —
   let normalArray = Array.from(arguments)
 
   let first = normalArray.shift()  // OK, gives the first argument

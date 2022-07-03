@@ -51,7 +51,7 @@ function (a){
   return a + 100;
 }
 
-// 2. Remove the body braces and word "return" -- the return is implied.
+// 2. Remove the body braces and word "return" — the return is implied.
 (a) => a + 100;
 
 // 3. Remove the argument parentheses

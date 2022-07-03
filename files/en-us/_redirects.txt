@@ -7021,7 +7021,7 @@
 /en-US/docs/Transforming_XML_with_XSLT/Mozilla_XSLT_XPath_Reference/Elements/xsl/when	/en-US/docs/Web/XSLT/Element/when
 /en-US/docs/Transforming_XML_with_XSLT/Mozilla_XSLT_XPath_Reference/Elements/xsl/with-param	/en-US/docs/Web/XSLT/Element/with-param
 /en-US/docs/Transforming_XML_with_XSLT/Mozilla_XSLT_XPath_Reference/Functions	/en-US/docs/Web/XPath/Functions
-/en-US/docs/Transforming_XML_with_XSLT/Resources	/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/Resources
+/en-US/docs/Transforming_XML_with_XSLT/Resources	/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT
 /en-US/docs/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference	/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference
 /en-US/docs/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes	/en-US/docs/Web/XPath/Axes
 /en-US/docs/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/ancestor	/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/ancestor
@@ -7146,7 +7146,7 @@
 /en-US/docs/Transforming_XML_with_XSLT:Mozilla_XSLT_XPath_Reference:Elements:xsl:when	/en-US/docs/Web/XSLT/Element/when
 /en-US/docs/Transforming_XML_with_XSLT:Mozilla_XSLT_XPath_Reference:Elements:xsl:with-param	/en-US/docs/Web/XSLT/Element/with-param
 /en-US/docs/Transforming_XML_with_XSLT:Mozilla_XSLT_XPath_Reference:Functions	/en-US/docs/Web/XPath/Functions
-/en-US/docs/Transforming_XML_with_XSLT:Resources	/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/Resources
+/en-US/docs/Transforming_XML_with_XSLT:Resources	/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT
 /en-US/docs/Transforming_XML_with_XSLT:The_Netscape_XSLT/XPath_Reference	/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference
 /en-US/docs/Transforming_XML_with_XSLT:The_Netscape_XSLT/XPath_Reference:Axes	/en-US/docs/Web/XPath/Axes
 /en-US/docs/Transforming_XML_with_XSLT:The_Netscape_XSLT/XPath_Reference:Axes:ancestor	/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/ancestor
@@ -12309,6 +12309,7 @@
 /en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/Mozilla_XSLT_XPath_Reference/Axes/self	/en-US/docs/Web/XPath/Axes/self
 /en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/Mozilla_XSLT_XPath_Reference/Elements	/en-US/docs/Web/XSLT/Element
 /en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/Mozilla_XSLT_XPath_Reference/Functions	/en-US/docs/Web/XPath/Functions
+/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/Resources	/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT
 /en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes	/en-US/docs/Web/XPath/Axes
 /en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Functions	/en-US/docs/Web/XPath/Functions
 /en-US/docs/Web/XSLT/apply-imports	/en-US/docs/Web/XSLT/Element/apply-imports
