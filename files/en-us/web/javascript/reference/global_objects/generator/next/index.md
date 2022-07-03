@@ -38,19 +38,12 @@ generatorObject.next(value)
 
 An {{jsxref("Object")}} with two properties:
 
-- `done` (boolean)
-
-  - : Has the value `true` if the iterator is past the end of the iterated
-    sequence. In this case `value` optionally specifies the _return
-    value_ of the iterator.
-
-    Has the value `false` if the iterator was able to produce the next value
-    in the sequence. This is equivalent of not specifying the `done` property
-    altogether.
-
+- `done`
+  - : A boolean value:
+    - `true` if the generator is past the end of its control flow. In this case `value` specifies the _return value_ of the generator (which may be undefined).
+    - `false` if the generator is able to produce more values.
 - `value`
-  - : Any JavaScript value returned by the iterator. Can be omitted when `done`
-    is `true`.
+  - : Any JavaScript value yielded or returned by the generator.
 
 ## Examples
 

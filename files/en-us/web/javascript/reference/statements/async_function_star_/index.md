@@ -44,6 +44,38 @@ Unlike normal generator functions declared with `function*`, an async generator 
 
 ## Examples
 
+### Declaring an async generator function
+
+Async generator functions always produce promises of results — even when each `yield` step is synchronous.
+
+```js
+async function* myGenerator(step) {
+  await new Promise((resolve) => setTimeout(resolve, 10));
+  yield 0;
+  yield step;
+  yield step * 2;
+}
+
+const gen = myGenerator(2);
+gen.next()
+  .then((res) => {
+    console.log(res); // { value: 0, done: false }
+    return gen.next();
+  })
+  .then((res) => {
+    console.log(res); // { value: 2, done: false }
+    return gen.next();
+  })
+  .then((res) => {
+    console.log(res); // { value: 4, done: false }
+    return gen.next();
+  });
+  .then((res) => {
+    console.log(res); // { value: undefined, done: true }
+    return gen.next();
+  });
+```
+
 ### Using an async generator function to read a series of files
 
 In this example, we read a series of files and only access its content when requested, using Node's [`fs/promises`](https://nodejs.org/dist/latest-v18.x/docs/api/fs.html) module.
