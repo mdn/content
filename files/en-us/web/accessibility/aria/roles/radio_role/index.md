@@ -17,20 +17,18 @@ A radio button is a checkable input that when associated with other radio button
 ```html
 <div role="radiogroup" aria-labelledby="legend25" id="radiogroup25">
   <p id="legend25">Ipsum and lorem?</p>
-  <ul>
-    <li>
-      <span role="radio" aria-checked="false" tabindex="0" aria-labelledby="q25_radio1-label" data-value="True"></span>
-      <label id="q25_radio1-label">True</label>
-    </li>
-    <li>
-      <span role="radio" aria-checked="false" tabindex="0" aria-labelledby="q25_radio2-label" data-value="False"></span>
-      <label id="q25_radio2-label">False</label>
-    </li>
-    <li>
-      <span role="radio" aria-checked="true" tabindex="0" aria-labelledby="q25_radio3-label" data-value="huh?"></span>
-      <label id="q25_radio3-label">What is the question?</label>
-    </li>
-  </ul>
+  <div>
+    <span role="radio" aria-checked="false" tabindex="0" aria-labelledby="q25_radio1-label" data-value="True"></span>
+    <label id="q25_radio1-label">True</label>
+  </div>
+  <div>
+    <span role="radio" aria-checked="false" tabindex="0" aria-labelledby="q25_radio2-label" data-value="False"></span>
+    <label id="q25_radio2-label">False</label>
+  </div>
+  <div>
+    <span role="radio" aria-checked="true" tabindex="0" aria-labelledby="q25_radio3-label" data-value="huh?"></span>
+    <label id="q25_radio3-label">What is the question?</label>
+  </div>
 </div>
 ```
 
@@ -41,20 +39,18 @@ The `role` attribute only adds semantics; all of the functionality that comes na
 ```html
 <fieldset>
   <legend>Ipsum and lorem?</legend>
-  <ul>
-    <li>
-      <input type="radio" value="True" id="q25_radio1" name="q25">
-      <label for="q25_radio1">True</label>
-    </li>
-    <li>
-      <input type="radio" value="False" id="q25_radio2" name="q25">
-      <label for="q25_radio2">False</label>
-    </li>
-    <li>
-      <input type="radio" value="huh?" id="q25_radio3"  name="q25" checked>
-      <label for="q25_radio3">What is the question?</label>
-    </li>
-  </ul>
+  <div>
+    <input type="radio" value="True" id="q25_radio1" name="q25">
+    <label for="q25_radio1">True</label>
+  </div>
+  <div>
+    <input type="radio" value="False" id="q25_radio2" name="q25">
+    <label for="q25_radio2">False</label>
+  </div>
+  <div>
+    <input type="radio" value="huh?" id="q25_radio3"  name="q25" checked>
+    <label for="q25_radio3">What is the question?</label>
+  </div>
 </fieldset>
 ```
 
