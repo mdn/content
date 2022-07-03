@@ -48,10 +48,10 @@ This code is excerpted from our [Speech color changer](https://github.com/mdn/do
 You can use the `result` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
 recognition.addEventListener('result', function(event) {
-  var color = event.results[0][0].transcript;
+  const color = event.results[0][0].transcript;
   diagnostic.textContent = 'Result received: ' + color + '.';
   bg.style.backgroundColor = color;
 });
@@ -61,7 +61,7 @@ Or use the `onresult` event handler property:
 
 ```js
 recognition.onresult = function(event) {
-  var color = event.results[0][0].transcript;
+  const color = event.results[0][0].transcript;
   diagnostic.textContent = 'Result received: ' + color + '.';
   bg.style.backgroundColor = color;
 }
