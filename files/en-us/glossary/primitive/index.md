@@ -50,7 +50,8 @@ console.log(bar);               // baz
 bar.toUpperCase();
 console.log(bar);               // baz
 
-// Assignment gives the primitive a new (not a mutated) value
+// Assignment gives the variable a new primitive value,
+// but still doesn't mutate the original string
 bar = bar.toUpperCase();       
 console.log(bar);               // BAZ
 
