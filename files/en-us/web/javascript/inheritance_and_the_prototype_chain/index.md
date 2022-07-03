@@ -303,7 +303,7 @@ const c = Object.create(b);
 // c ---> b ---> a ---> Object.prototype ---> null
 
 const d = Object.create(null);
-// d ---> null
+// d ---> {}
 console.log(d.hasOwnProperty);
 // undefined, because d doesn't inherit from Object.prototype
 ```
