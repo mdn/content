@@ -99,7 +99,7 @@ For a full explanation and more details of the demo this is taken from, see [Usi
 
 ## Tools and techniques
 
-The first WebVR experiments and demos used Three.js as it's probably the most popular 3D engine for the web. See the [VREffect](https://github.com/mrdoob/three.js/blob/master/examples/js/effects/VREffect.js) and [VRControls](https://github.com/mrdoob/three.js/blob/master/examples/js/controls/VRControls.js) functions available on the Three.js GitHub to help you implement and handle WebVR with Three.js.
+The first WebVR experiments and demos used Three.js as it's probably the most popular 3D engine for the web. See the [VREffect](https://github.com/mrdoob/three.js/blob/ca521eb4af7554e760f14d8fe8b451c8ff34deb8/examples/js/effects/VREffect.js) and [VRControls](https://github.com/mrdoob/three.js/blob/abdd1713c606135bc35028c6021698b52f27872b/examples/js/controls/VRControls.js) functions available on the Three.js GitHub to help you implement and handle WebVR with Three.js.
 
 ![](sechelt.jpg)
 
