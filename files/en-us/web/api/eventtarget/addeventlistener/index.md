@@ -481,7 +481,9 @@ that not all browsers have supported historically. See [Safely detecting option 
 
 ### Event listener with multiple options
 
-The `options` parameter may have multiple properties set.
+You can set more than one of the options in the `options` parameter. In the following example we are setting two options:
+- `passive`, to assert that the handler will not call {{domxref("Event.preventDefault", "preventDefault()")}} 
+- `once`, to ensure that the event handler will only be called once.
 
 #### HTML
 
@@ -503,10 +505,6 @@ button.addEventListener(
   }
 );
 ```
-
-Take notice that multiple properties have values set. In this particular example,
-the event handler function will not be called more than once, *and* it may not
-call {{domxref("Event.preventDefault", "preventDefault()")}} on its event argument.
 
 #### Result
 
