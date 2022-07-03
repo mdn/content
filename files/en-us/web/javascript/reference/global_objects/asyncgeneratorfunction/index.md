@@ -55,7 +55,7 @@ Invoking the `AsyncGeneratorFunction` constructor as a function (without using t
 The following example uses the `AsyncGeneratorFunction` constructor to create an async generator function.
 
 ```js
-const AsyncGeneratorFunction = Object.getPrototypeOf(async function*(){}).constructor;
+const AsyncGeneratorFunction = Object.getPrototypeOf(async function*() {}).constructor;
 const createAsyncGenerator = new AsyncGeneratorFunction('a', 'yield a * 2');
 const asyncGen = createAsyncGenerator(10);
 asyncGen.next().then(res => console.log(res.value)); // 20
