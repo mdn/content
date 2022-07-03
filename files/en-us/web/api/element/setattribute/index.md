@@ -83,7 +83,6 @@ This demonstrates two things:
 
 - The first call to `setAttribute()` above shows changing the `name` attribute's value to "helloButton".
   You can see this using your browser's page inspector ([Chrome](https://developer.chrome.com/docs/devtools/css/),
-  [Edge](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/dom-explorer),
   [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), [Safari](https://support.apple.com/en-us/guide/safari-developer/welcome/mac)).
 - To set the value of a Boolean attribute, such as `disabled`, you can specify any value.
   An empty string or the name of the attribute are recommended values.
