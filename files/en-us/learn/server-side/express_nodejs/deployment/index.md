@@ -261,9 +261,9 @@ There are a lot of ways to work with git. One easy workflow is to first set up a
     - Choose your preferred license in the _Add license_ selection list.
     - Check **Initialize this repository with a README**.
 
-    > **Warning:** The default “Public” access will make *all* the source code — including your database username and password —  visible to anyone on the internet! Make sure the source code reads all the credentials *only* from environment variables, and does not have any credentials hard-coded.
+    > **Warning:** The default "Public" access will make _all_ source code — including your database username and password — visible to anyone on the internet! Make sure the source code reads credentials _only_ from environment variables and does not have any credentials hard-coded.
     >
-    > Otherwise, select the “Private” option to allow only selected people to see the source code.
+    > Otherwise, select the "Private" option to allow only selected people to see the source code.
 
 4. Press **Create repository**.
 5. Click the green "**Clone or download**" button on your new repo page.
