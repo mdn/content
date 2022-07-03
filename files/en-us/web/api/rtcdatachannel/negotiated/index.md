@@ -29,7 +29,7 @@ See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Creat
 ## Syntax
 
 ```js
-var negotiated = aDataChannel.negotiated;
+const negotiated = aDataChannel.negotiated;
 ```
 
 ### Value

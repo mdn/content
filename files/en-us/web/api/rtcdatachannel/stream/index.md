@@ -29,7 +29,7 @@ created, either by the user agent (if {{domxref("RTCDataChannel.negotiated")}} i
 ## Syntax
 
 ```js
-var stream = aDataChannel.stream;
+const stream = aDataChannel.stream;
 ```
 
 ### Value
@@ -40,7 +40,7 @@ uniquely identifies the data channel.
 ## Example
 
 ```js
-var dataChannel = pc.createDataChannel("SampleChannel");
+const dataChannel = pc.createDataChannel("SampleChannel");
 
 console.log("Data channel stream ID: " + dataChannel.stream);
 ```

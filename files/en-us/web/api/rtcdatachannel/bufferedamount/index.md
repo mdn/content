@@ -38,7 +38,7 @@ there's room to buffer them.
 ## Syntax
 
 ```js
-var amount = aDataChannel.bufferedAmount;
+const amount = aDataChannel.bufferedAmount;
 ```
 
 ### Value
@@ -53,7 +53,7 @@ The snippet below includes a function which changes the contents of a block with
 {{domxref("RTCDataChannel")}}.
 
 ```js
-var dc = peerConnection.createDataChannel("File Transfer");
+const dc = peerConnection.createDataChannel("File Transfer");
 
 /* ... */
 

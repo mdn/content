@@ -28,7 +28,7 @@ the type specified by the `binaryType`.
 ## Syntax
 
 ```js
-var type = aDataChannel.binaryType;
+const type = aDataChannel.binaryType;
 
 aDataChannel.binaryType = type;
 ```
@@ -51,7 +51,7 @@ events which constructs a string representing the received data as a list of hex
 byte values.
 
 ```js
-var dc = peerConnection.createDataChannel("Binary");
+const dc = peerConnection.createDataChannel("Binary");
 dc.binaryType = "arraybuffer";
 
 dc.onmessage = function(event) {

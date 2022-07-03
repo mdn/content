@@ -23,7 +23,7 @@ up.
 ## Syntax
 
 ```js
-var lifetime = aDataChannel.maxPacketLifeTime;
+const lifetime = aDataChannel.maxPacketLifeTime;
 ```
 
 ### Value

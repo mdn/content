@@ -24,7 +24,7 @@ on the object passed as {{domxref("RTCPeerConnection.createDataChannel()")}}'s `
 ## Syntax
 
 ```js
-var ordered = aDataChannel.ordered;
+const ordered = aDataChannel.ordered;
 ```
 
 A boolean value which is `true` if in-order delivery is
@@ -33,8 +33,8 @@ guaranteed and is otherwise `false`.
 ## Example
 
 ```js
-var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("my channel");
+const pc = new RTCPeerConnection();
+const dc = pc.createDataChannel("my channel");
 
 if (!dc.ordered) {
   // Handle unordered messaging

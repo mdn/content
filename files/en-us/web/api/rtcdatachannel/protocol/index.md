@@ -28,7 +28,7 @@ another is raw binary or even some other format.
 ## Syntax
 
 ```js
-var subProtocol = aDataChannel.protocol;
+const subProtocol = aDataChannel.protocol;
 ```
 
 ### Value
@@ -39,8 +39,8 @@ channel. If none has been established, this is an empty string ("").
 ## Example
 
 ```js
-var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("my channel", {
+const pc = new RTCPeerConnection();
+const dc = pc.createDataChannel("my channel", {
            protocol: "json"
 });
 

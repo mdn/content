@@ -24,7 +24,7 @@ reliable.
 ## Syntax
 
 ```js
-var reliable = aDataChannel.reliable;
+const reliable = aDataChannel.reliable;
 ```
 
 ### Value

@@ -23,7 +23,7 @@ returns the DTMF character which has just begun to play, or an empty string
 ## Syntax
 
 ```js
- var tone = dtmfToneChangeEvent.tone;
+ const tone = dtmfToneChangeEvent.tone;
 ```
 
 ## Example

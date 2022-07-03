@@ -31,7 +31,7 @@ browser.
 ## Syntax
 
 ```js
-var id = aDataChannel.id;
+const id = aDataChannel.id;
 ```
 
 ### Value
@@ -49,8 +49,8 @@ This can be also useful for logging and debugging purposes.
 ## Example
 
 ```js
-var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("my channel");
+const pc = new RTCPeerConnection();
+const dc = pc.createDataChannel("my channel");
 
 console.log("Channel id: " + dc.id);
 ```

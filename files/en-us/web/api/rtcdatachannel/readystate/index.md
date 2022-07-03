@@ -18,7 +18,7 @@ The read-only `RTCDataChannel` property **`readyState`** returns a string which 
 ## Syntax
 
 ```js
-var state = aDataChannel.readyState;
+const state = aDataChannel.readyState;
 ```
 
 ### Values
@@ -48,8 +48,8 @@ A string indicating the current state of the underlying data transport, which is
 ## Example
 
 ```js
-var dataChannel = peerConnection.createDataChannel("File Transfer");
-var sendQueue = [];
+const dataChannel = peerConnection.createDataChannel("File Transfer");
+const sendQueue = [];
 
 function sendMessage(msg) {
   switch(dataChannel.readyState) {

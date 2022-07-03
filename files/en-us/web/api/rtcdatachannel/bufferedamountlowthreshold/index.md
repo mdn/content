@@ -32,7 +32,7 @@ messages are actually sent, this value is reduced accordingly.
 ## Syntax
 
 ```js
-var threshold = aDataChannel.bufferedAmountLowThreshold;
+const threshold = aDataChannel.bufferedAmountLowThreshold;
 
 aDataChannel.bufferedAmountLowThreshold = threshold;
 ```
@@ -50,7 +50,7 @@ handler for the {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamo
 send more data into the buffer by calling {{domxref("RTCDataChannel.send", "send()")}}.
 
 ```js
-var dc = peerConnection.createDataChannel("File Transfer");
+const dc = peerConnection.createDataChannel("File Transfer");
 dc.bufferedAmountLowThreshold = 65535;
 
 dc.onbufferedamountlow = function() {

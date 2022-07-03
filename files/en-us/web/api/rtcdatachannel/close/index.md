@@ -62,8 +62,8 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("my channel");
+const pc = new RTCPeerConnection();
+const dc = pc.createDataChannel("my channel");
 
 dc.onmessage = function (event) {
   console.log("received: " + event.data);

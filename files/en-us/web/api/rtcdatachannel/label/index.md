@@ -30,7 +30,7 @@ A unique ID can be found in the {{domxref("RTCDataChannel.id", "id")}} property.
 ## Syntax
 
 ```js
-var name = aDataChannel.label;
+const name = aDataChannel.label;
 ```
 
 ### Value
@@ -45,8 +45,8 @@ This sample creates a data channel on an {{domxref("RTCPeerConnection")}}, then,
 time later, sets the content of a UI element to display the channel's name.
 
 ```js
-var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("my channel");
+const pc = new RTCPeerConnection();
+const dc = pc.createDataChannel("my channel");
 
 /* ... */
 

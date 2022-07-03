@@ -24,7 +24,7 @@ by calling {{domxref("RTCPeerConnection.createDataChannel()")}}, using the
 ## Syntax
 
 ```js
-var tries = aDataChannel.maxRetransmits;
+const tries = aDataChannel.maxRetransmits;
 ```
 
 ### Value
