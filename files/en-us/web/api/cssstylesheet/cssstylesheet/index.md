@@ -79,7 +79,7 @@ Below we append a new rule to the same sheet using {{domxref("CSSStyleSheet.inse
 ```
 
 The same sheet can be shared with multiple shadow subtrees in the same document.
-For more exmaples see {{domxref("ShadowRoot.adoptedStyleSheets")}}.
+For more examples see {{domxref("ShadowRoot.adoptedStyleSheets")}}.
 
 ## Specifications
 
