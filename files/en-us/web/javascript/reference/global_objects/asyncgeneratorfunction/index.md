@@ -17,7 +17,7 @@ The **`AsyncGeneratorFunction` constructor** creates a new {{jsxref("Statements/
 Note that `AsyncGeneratorFunction` is not a global object. It could be obtained by evaluating the following code.
 
 ```js
-Object.getPrototypeOf(async function*(){}).constructor
+const AsyncGeneratorFunction = Object.getPrototypeOf(async function*() {}).constructor;
 ```
 
 ## Syntax
@@ -31,9 +31,9 @@ new AsyncGeneratorFunction(arg1, arg2, functionBody)
 ### Parameters
 
 - `arg1`, `arg2`, ... `argN`
-  - : Names to be used by the function as formal argument names. Each argument parameter must be a {{jsxref('String')}} that is a valid JavaScript identifier or a comma-separated list of such strings. For example: `"x"`, `"theValue"`, or `"a, b"`.
+  - : Names to be used by the function as formal argument names. Each argument parameter must be a {{jsxref("String")}} that is a valid JavaScript identifier or a comma-separated list of such strings. For example: `"x"`, `"theValue"`, or `"a, b"`.
 - `functionBody`
-  - : A {{jsxref('String')}} containing the JavaScript statements comprising the function definition.
+  - : A {{jsxref("String")}} containing the JavaScript statements comprising the function definition.
 
 ## Description
 
@@ -45,7 +45,7 @@ All arguments passed to the function are treated as the names of the identifiers
 > 
 > When running them, they will only be able to access their own local variables and global ones, not the ones from the scope in which the `AsyncGeneratorFunction` constructor was called.
 >
-> This is different from using {{jsxref("Global_Objects/eval", "eval")}} with code for a generator function expression.
+> This is different from using {{jsxref("Global_Objects/eval", "eval")}} with code for an async generator function expression.
 Invoking the `AsyncGeneratorFunction` constructor as a function (without using the `new` operator) has the same effect as invoking it as a constructor.
 
 ## Examples
