@@ -50,7 +50,7 @@ The markup is as follows:
 </x-deck>
 ```
 
-> **Note:** These weird x- elements may be unfamiliar; they are part of [Brick](https://mozbrick.github.io/), Mozilla's UI element library for mobile web apps. We have used Brick to create the mobile layout for Snapshot, which you will read more about below.
+> **Note:** These weird x- elements may be unfamiliar; they are part of [Brick](https://github.com/mozbrick/brick), Mozilla's UI element library for mobile web apps. We have used Brick to create the mobile layout for Snapshot, which you will read more about below.
 
 To get these sitting side-by-side we have used the following rules:
 
@@ -249,7 +249,7 @@ Next up, the `font-size` of the buttons is set to `6.8vw`. Why? Because the top-
 
 Last, we have used `flex: 1;` to make the buttons always take up the same proportion of space on the line. Let's have a look at the mobile layout, in the below image.
 
-![single column layout for mobile app view, with three buttons to navigate between cards, an image viewer, and a Save Picture button at the button.](mobile-layout.png)But there are more tricks up our sleeves for this mobile app layout! As mentioned above, we used [Mozilla Brick](https://mozilla.github.io/brick/), a collection of ready-rolled mobile UI components, in the making of the mobile app layout. In particular, we used the [deck](https://mozilla.github.io/brick/docs.html#deck) component for the nice transition effect between cards when the buttons are pressed. For more on using Brick, read [Mozilla Brick: ready made UI components](/en-US/docs/Web/Apps/app_layout/Mozilla_Brick_ready_made_UI_components).
+![single column layout for mobile app view, with three buttons to navigate between cards, an image viewer, and a Save Picture button at the button.](mobile-layout.png)But there are more tricks up our sleeves for this mobile app layout! As mentioned above, we used [Mozilla Brick](https://github.com/mozbrick/brick), a collection of ready-rolled mobile UI components, in the making of the mobile app layout. In particular, we used the [deck](https://github.com/mozbrick/brick/tree/master/dist/brick-deck/dist) component for the nice transition effect between cards when the buttons are pressed.
 
 What's more relevant to this article is that we didn't want the Brick CSS and JavaScript files being applied to the markup unless we were looking at the mobile app view. To achieve this, we applied the Brick CSS to the page using a separate {{HTMLElement("link")}} element with a `media` attribute:
 
