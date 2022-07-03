@@ -170,26 +170,6 @@ Math.clz32(true);        // 31
 Math.clz32(3.5);         // 30
 ```
 
-## Polyfill
-
-The following polyfill is the most efficient.
-
-```js
-if (!Math.clz32) Math.clz32 = (function(log, LN2){
-  return function(x) {
-    // Let n be ToUint32(x).
-    // Let p be the number of leading zero bits in
-    // the 32-bit binary representation of n.
-    // Return p.
-    var asUint = x >>> 0;
-    if (asUint === 0) {
-      return 32;
-    }
-    return 31 - (log(asUint) / LN2 | 0) |0; // the "| 0" acts like math.floor
-  };
-})(Math.log, Math.LN2);
-```
-
 ## Specifications
 
 {{Specifications}}
