@@ -17,7 +17,7 @@ The **`Generator`** object is returned by a {{JSxRef("Statements/function*", "ge
 
 ## Constructor
 
-This object cannot be instantiated directly. Instead, a `Generator` instance can be returned from a [generator function](/en-US/docs/Web/JavaScript/Reference/Statements/function*):
+The `Generator` constructor is not available globally. Instances of `Generator` must be returned from [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*):
 
 ```js
 function* generator() {

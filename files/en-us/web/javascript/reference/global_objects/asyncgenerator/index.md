@@ -15,11 +15,11 @@ browser-compat: javascript.builtins.AsyncGenerator
 
 The **`AsyncGenerator`** object is returned by an {{jsxref("Statements/async_function*", "async generator function", "", 1)}} and it conforms to both the [async iterable protocol and the async iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols).
 
-Async generators always yield a {{jsxref("Promise")}} object.
+Async generator methods always yield {{jsxref("Promise")}} objects.
 
 ## Constructor
 
-This object cannot be instantiated directly. Instead, an `AsyncGenerator` instance can be returned from an {{jsxref("Statements/async_function*", "async generator function", "", "1")}}.
+The `AsyncGenerator` constructor is not available globally. Instances of `AsyncGenerator` must be returned from [async generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*)
 
 ```js
 async function* createAsyncGenerator() {
