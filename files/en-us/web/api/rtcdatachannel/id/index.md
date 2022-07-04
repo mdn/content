@@ -28,13 +28,7 @@ browser.
 > {{domxref("RTCDataChannel.stream", "stream")}}. Code that uses that property needs to
 > be updated.
 
-## Syntax
-
-```js
-const id = aDataChannel.id;
-```
-
-### Value
+## Value
 
 An `unsigned short` value (that is, an integer between 0 and 65,535) which
 uniquely identifies the data channel.
