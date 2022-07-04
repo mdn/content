@@ -54,7 +54,7 @@ This method is inherited by every object descended from `Object`, but can be ove
 
 ## Parameters
 
-By default `toString()` takes no parameters. However, objects that inherit from `Object` may override it with their own implementation that do take parameters. For example, the `toString()` methods implemented by {{jsxref("Number")}} and {{jsxref("BigInt")}} take an optional `radix` parameter.
+By default `toString()` takes no parameters. However, objects that inherit from `Object` may override it with their own implementation that do take parameters. For example, the [`Number.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) and [`BigInt.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) methods take an optional `radix` parameter.
 
 ## Examples
 

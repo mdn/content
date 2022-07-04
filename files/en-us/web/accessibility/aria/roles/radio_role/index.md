@@ -259,15 +259,15 @@ No JavaScript (or even CSS) would be needed had we used semantic HTML element wi
   <legend>Should you be using the <code>radio</code> role or <code>&lt;input type="radio"><code>?</legend>
   <ul>
     <li>
-      <input type="radio" name="bestPractices" id="ariaLabel" value="True"/>
+      <input type="radio" name="bestPractices" id="ariaLabel" value="True" />
       <label for="ariaLabel">ARIA role</label>
     </li>
     <li>
-      <input type="radio" name="bestPractices" id="htmllabel" value="False"></span>
+      <input type="radio" name="bestPractices" id="htmllabel" value="False" />
       <label for="htmllabel">HTML <code>&lt;input type="radio"><code></label>
     </li>
   </ul>
-</div>
+</fieldset>
 ```
 
 ## Best practices
