@@ -40,7 +40,21 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-TBD.
+The example in [Using readable byte streams > Creating a readable socket push byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams#creating_a_readable_socket_push_byte_stream) shows how you might use `error()` to manually trigger a stream error if another part of the system it relies on fails.
+
+Specifically, the underlying source `start()` method calls `readRepeatedly()` to perform all setup operations and to make a request for data.
+This returns a promise.
+If there are any errors thrown when reading the data they will be caught by the chained `catch()` function.
+In `catch()` we then call `error()` on the controller, passing the reason from the underlying source.
+
+```js
+    start(controller) {
+      readRepeatedly().catch(e => controller.error(e));
+          
+      function readRepeatedly() {
+        return socket.select2().then(() => {
+          // ...
+```
 
 ## Specifications
 
@@ -49,3 +63,7 @@ TBD.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)

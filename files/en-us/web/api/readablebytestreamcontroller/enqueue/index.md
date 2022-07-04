@@ -13,7 +13,7 @@ browser-compat: api.ReadableByteStreamController.enqueue
 ---
 {{APIRef("Streams")}}
 
-The **`enqueue()`** method of the {{domxref("ReadableByteStreamController")}} interface enqueues a given chunk on the associated stream (the chunk is copied into the stream's internal queues).
+The **`enqueue()`** method of the {{domxref("ReadableByteStreamController")}} interface enqueues a given chunk on the associated readable byte stream (the chunk is copied into the stream's internal queues).
 
 This should only be used to transfer data to the queue when {{domxref("ReadableByteStreamController.byobRequest","byobRequest")}} is `null`.
 
@@ -40,7 +40,20 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-TBD.
+The example in [Using readable byte streams > Creating a readable socket push byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams#creating_a_readable_socket_push_byte_stream) shows how you can use `enqueue()` to copy data to the stream if there is no outstanding {{domxref("ReadableByteStreamController.byobRequest","byobRequest")}}.
+If there is a `byobRequest` then it must be used!
+
+The code below shows data being read into an `ArrayBuffer` using a "hypothetical" `socket.readInto()` method and then enqueued (but only if data was actually copied):
+
+```js
+const buffer = new ArrayBuffer(DEFAULT_CHUNK_SIZE);
+bytesRead = socket.readInto(buffer, 0, DEFAULT_CHUNK_SIZE);
+if (bytesRead === 0) {
+  controller.close();
+} else {
+  controller.enqueue(new Uint8Array(buffer, 0, bytesRead));
+}
+```
 
 ## Specifications
 
@@ -49,3 +62,7 @@ TBD.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)

@@ -28,7 +28,9 @@ The value will be `null` if the stream has errored and `0` if it is closed.
 
 ## Examples
 
-TBD.
+The [A readable stream with an underlying push source and backpressure support](https://streams.spec.whatwg.org/#example-rs-push-backpressure) example in the spec provides a good example of using `desiredSize` to manually detect when the stream is full and apply backpressure.
+
+While the example uses a default source, the concepts are exactly the same as for readable byte sources.
 
 ## Specifications
 

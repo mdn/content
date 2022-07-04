@@ -271,7 +271,6 @@ function makeSocketStream(host, port) {
     start(controller) {
       readRepeatedly().catch(e => controller.error(e));
           
-
       function readRepeatedly() {
         return socket.select2().then(() => {
           // Since the socket can become readable even when there’s
@@ -312,6 +311,9 @@ function makeSocketStream(host, port) {
   });
 }
 ```
+
+Note that `readRepeatedly()` returns a promise, and we use this to catch any errors from setting up or handling the read operation.
+The errors are then passed to the controller as shown above (see `readRepeatedly().catch(e => controller.error(e));`).
 
 A `cancel()` method is provided at the end to close the underlying source; the `pull()` callback is not needed, and is therefore not implemented.
 

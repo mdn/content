@@ -41,7 +41,20 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-TBD.
+The example in [Using readable byte streams > Creating a readable socket push byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams#creating_a_readable_socket_push_byte_stream) how we might close the stream when there is no more data.
+
+The relevant code is reproduced below.
+This relies on the hypothetical `readInto()` method returning 0 bytes only when there is no more data.
+
+```js
+bytesRead = socket.readInto(v.buffer, v.byteOffset, v.byteLength);
+if (bytesRead === 0) {
+  controller.close();
+}
+```
+
+After calling close, the stream will be closed, and any consumers signalled.
+For example if using a {{domxref("ReadableStreamBYOBReader")}} any {{domxref("ReadableStreamBYOBReader.read()","read()")}} requests would resolve with `done: true` and the promise from {{domxref("ReadableStreamBYOBReader.closed")}} would also be resolved.
 
 ## Specifications
 
@@ -50,3 +63,7 @@ TBD.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)
