@@ -120,14 +120,14 @@ handled properly, then create an Object URL of it and display it in an
 {{htmlelement("img")}} element.
 
 ```js
-var myImage = document.querySelector('img');
+let myImage = document.querySelector('img');
 
-var myRequest = new Request('flowers.jpg');
+const myRequest = new Request('flowers.jpg');
 
 fetch(myRequest).then(function(response) {
   return response.blob();
 }).then(function(response) {
-  var objectURL = URL.createObjectURL(response);
+  let objectURL = URL.createObjectURL(response);
   myImage.src = objectURL;
 });
 ```
@@ -136,17 +136,17 @@ In our [Fetch Request with init example](https://github.com/mdn/fetch-examples/t
 invoke `fetch()`:
 
 ```js
-var myImage = document.querySelector('img');
+let myImage = document.querySelector('img');
 
-var myHeaders = new Headers();
+let myHeaders = new Headers();
 myHeaders.append('Content-Type', 'image/jpeg');
 
-var myInit = { method: 'GET',
+const myInit = { method: 'GET',
                headers: myHeaders,
                mode: 'cors',
                cache: 'default' };
 
-var myRequest = new Request('flowers.jpg',myInit);
+const myRequest = new Request('flowers.jpg',myInit);
 
 fetch(myRequest).then(function(response) {
   ...
@@ -165,14 +165,14 @@ fetch(myRequest,myInit).then(function(response) {
 You can also use an object literal as `headers` in `init`.
 
 ```js
-var myInit = { method: 'GET',
+const myInit = { method: 'GET',
                headers: {
                    'Content-Type': 'image/jpeg'
                },
                mode: 'cors',
                cache: 'default' };
 
-var myRequest = new Request('flowers.jpg', myInit);
+const myRequest = new Request('flowers.jpg', myInit);
 ```
 
 You may also pass a {{domxref("Request")}} object to the `Request()`
@@ -180,7 +180,7 @@ constructor to create a copy of the Request (This is similar to calling the
 {{domxref("Request.clone","clone()")}} method.)
 
 ```js
-var copy = new Request(myRequest);
+const copy = new Request(myRequest);
 ```
 
 > **Note:** This last usage is probably only useful in [ServiceWorkers](/en-US/docs/Web/API/Service_Worker_API).
