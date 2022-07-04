@@ -25,15 +25,7 @@ When a binary message is received on the data channel, the resulting
 {{DOMxRef("RTCDataChannel.message_event", "message")}} event's {{domxref("MessageEvent.data")}} property is an object of
 the type specified by the `binaryType`.
 
-## Syntax
-
-```js
-const type = aDataChannel.binaryType;
-
-aDataChannel.binaryType = type;
-```
-
-### Value
+## Value
 
 A string that can have one of these values:
 
