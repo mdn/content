@@ -21,7 +21,7 @@ The value can be of any type. You should not make assumptions that the error you
 
 ## Examples
 
-### Rethrowing an error with a `cause`
+### Rethrowing an error with a cause
 
 It is sometimes useful to catch an error and re-throw it with a new message.
 In this case you should pass the original error into the constructor for the new `Error`, as shown.

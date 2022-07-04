@@ -51,12 +51,11 @@ Besides the generic `Error` constructor, there are other core error constructors
 ## Instance properties
 
 - {{jsxref("Error.prototype.message")}}
-  - : Error message.
+  - : Error message. For user-created `Error` objects, this is the string provided as the constructor's first argument.
 - {{jsxref("Error.prototype.name")}}
-  - : Error name.
+  - : Error name. This is determined by the constructor function.
 - {{jsxref("Error.prototype.cause")}}
-  - : Error cause.
-     If an error is caught and re-thrown, this property should contain the original error.
+  - : Error cause indicating the reason why the current error is thrown — usually another caught error. For user-created `Error` objects, this is the value provided as the `cause` property of the constructor's second argument.
 - {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
   - : A non-standard Mozilla property for the path to the file that raised this error.
 - {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
