@@ -21,11 +21,7 @@ This is set when the {{domxref("RTCDataChannel")}} is created,
 by setting the `ordered` property
 on the object passed as {{domxref("RTCPeerConnection.createDataChannel()")}}'s `options` parameter.
 
-## Syntax
-
-```js
-const ordered = aDataChannel.ordered;
-```
+## Value
 
 A boolean value which is `true` if in-order delivery is
 guaranteed and is otherwise `false`.
