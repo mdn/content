@@ -48,10 +48,10 @@ Those objects are anonymous JavaScript objects with the following properties:
 ## Examples
 
 ```js
-var req = navigator.push.unregister(pushEndpoint);
+const req = navigator.push.unregister(pushEndpoint);
 
 req.onsuccess = function(e) {
-  var endpoint = req.result;
+  const endpoint = req.result;
   debug("Unregistered endpoint: " + endpoint );
 }
 

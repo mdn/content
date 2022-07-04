@@ -35,7 +35,7 @@ An {{jsxref("ArrayBuffer")}}.
 
 ```js
 self.addEventListener('push', function(event) {
-  var buffer = event.data.arrayBuffer();
+  const buffer = event.data.arrayBuffer();
 
   // do something with your array buffer
 });
