@@ -29,15 +29,7 @@ messages are actually sent, this value is reduced accordingly.
 
 > **Note:** `bufferedamountlow` events are not fired after the data channel is closed.
 
-## Syntax
-
-```js
-const threshold = aDataChannel.bufferedAmountLowThreshold;
-
-aDataChannel.bufferedAmountLowThreshold = threshold;
-```
-
-### Value
+## Value
 
 The number of queued outgoing data bytes below which the buffer is considered to be
 "low."
