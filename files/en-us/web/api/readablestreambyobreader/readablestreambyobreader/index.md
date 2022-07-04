@@ -39,7 +39,12 @@ An instance of the {{domxref("ReadableStreamBYOBReader")}} object.
 
 ## Examples
 
-TBD
+The constructor is rarely called directly.
+Instead call {{domxref("ReadableStream.getReader()")}} as shown:
+
+```js
+const reader = stream.getReader({mode: "byob"});
+```
 
 ## Specifications
 

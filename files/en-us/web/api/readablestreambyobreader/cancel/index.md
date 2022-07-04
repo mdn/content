@@ -41,7 +41,16 @@ A {{jsxref("Promise")}}, which fulfills with the value given in the `reason` par
 
 ## Examples
 
-TBD.
+This example code calls the `cancel()` method when a button is pressed, passing the string "user choice" as a reason.
+The promise resolves when cancellation completes.
+
+```js
+button.addEventListener('click',  () => 
+  { reader.cancel("user choice").then( () => { console.log(`cancel complete`) }) } 
+);
+```
+
+Note that this code can be seen running in the [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams#result) example code (press the **Cancel stream** button).
 
 ## Specifications
 
@@ -50,3 +59,7 @@ TBD.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)

@@ -46,7 +46,76 @@ The `read()` method differs in that it provide a view into which data should be 
 
 ## Examples
 
-TBD.
+The example below is taken from the live examples in [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams#examples).
+
+First create the reader using {{domxref("ReadableStream.getReader()")}} on the stream, specifying `mode: "byob"` in the options parameter.
+As this is a "Bring Your Own Buffer" reader, we also need to create an `ArrayBuffer` to read into.
+
+```js
+const reader = stream.getReader({mode: "byob"});
+let buffer = new ArrayBuffer(4000);
+```
+
+A function that uses the reader is shown below.
+This calls the `read()` method recursively to read data into the buffer.
+The method takes a [`Uint8Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) [typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) which is a view over the part of the original array buffer that has not yet been written.
+The parameters of the view are calculated from the data that was received in previous calls, which define an offset into the original array buffer.
+
+```js
+readStream(reader);
+
+function readStream(reader) {
+  let bytesReceived = 0;
+  let offset =  0;
+
+  while (offset < buffer.byteLength) {    
+    // read() returns a promise that resolves when a value has been received
+    reader.read( new Uint8Array(buffer, offset, buffer.byteLength - offset) ).then(function processBytes({ done, value }) {
+      // Result objects contain two properties:
+        // done  - true if the stream has already given all its data.
+        // value - some data. Always undefined when done is true.
+      
+      if (done) {
+        // There is no more data in the stream
+        return;
+      }
+
+      buffer = value.buffer;
+      offset += value.byteLength;
+      bytesReceived += value.byteLength;
+
+      // Read some more, and call this function again
+      return reader.read( new Uint8Array(buffer, offset, buffer.byteLength - offset) ).then(processBytes);
+    });
+  }
+}
+```
+
+When there is no more data in the stream, the `read()` method resolves with an object with the property `done` set to `true`, and the function returns.
+
+The {{domxref("ReadableStreamBYOBReader.closed")}} property returns a promise that can be used to monitor for the stream being closed or errored, or the reader lock being released.
+
+```js
+reader.closed
+  .then( () => { /* Resolved - code to handle stream closing */ } )
+  .catch( () => { /* Rejected - code to handle error */ } );
+```
+
+To cancel the stream call {{domxref("ReadableStreamBYOBReader.cancel()")}}, optionally specifying a _reason_.
+This returns a promise that will resolve when the stream has been cancelled.
+When the stream is cancelled the controller will in turn call `cancel()` on the underlying source, passing in the optional reason.
+
+The example code in [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams#examples) calls the cancel method when a button is pressed, as shown:
+
+```js
+button.addEventListener('click', () => { reader.cancel("user choice").then( () => { console.log(`cancel complete`) }) } );
+```
+
+The consumer can also call `releaseLock()` to release the reader's hold on the stream, but only when no read is pending:
+
+```js
+reader.releaseLock();
+```
 
 ## Specifications
 
@@ -55,3 +124,7 @@ TBD.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)

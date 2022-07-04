@@ -384,9 +384,11 @@ Note however that this can only be called when there is no outsanding read reque
 
 The {{domxref("ReadableStreamBYOBReader.closed")}} property returns a promise that will resolve when the stream is closed, and reject if there is an error.
 While no errors are expected in this case, the following code should log the completion case.
+
 ```js
-reader.closed.then( () => { logConsumer("ReadableStreamBYOBReader.closed: resolved")} )
-  .catch( (err) => {  logConsumer(`ReadableStreamBYOBReader.closed: rejected: $(err)`)} );
+reader.closed
+  .then( () => { logConsumer("ReadableStreamBYOBReader.closed: resolved")} )
+  .catch( () => { logConsumer("ReadableStreamBYOBReader.closed: rejected:")} );
 ```
 
 #### Result
