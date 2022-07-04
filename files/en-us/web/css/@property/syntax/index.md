@@ -22,7 +22,7 @@ syntax: '<color>'; /* accepts a color */
 
 syntax: '<length> | <percentage>'; /* accepts lengths or percentages but not calc expressions with a combination of the two */
 
-syntax: 'small | medium | large'; /* accepts one of these values set as custom idents. */
+syntax: 'small | medium | large'; /* accepts one of these values set as custom indents. */
 
 syntax: '*'; /* any valid token */
 ```
