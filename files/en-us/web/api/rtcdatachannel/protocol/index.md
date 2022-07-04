@@ -25,13 +25,7 @@ The ability for each channel to have a defined subprotocol lets your app, for ex
 use JSON objects as messages on one channel while another channel is plaintext and
 another is raw binary or even some other format.
 
-## Syntax
-
-```js
-const subProtocol = aDataChannel.protocol;
-```
-
-### Value
+## Value
 
 A string identifying the app-defined subprotocol being used for exchanging data on the
 channel. If none has been established, this is an empty string ("").
