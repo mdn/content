@@ -27,13 +27,7 @@ A unique ID can be found in the {{domxref("RTCDataChannel.id", "id")}} property.
 > **Note:** A data channel's label is set when the channel is created by calling
 > {{domxref("RTCPeerConnection.createDataChannel()")}}. It cannot be changed after that.
 
-## Syntax
-
-```js
-const name = aDataChannel.label;
-```
-
-### Value
+## Value
 
 A string identifier assigned by the Web site or app when the data channel was created,
 as specified when {{domxref("RTCPeerConnection.createDataChannel()")}} was called to
