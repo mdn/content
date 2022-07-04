@@ -35,13 +35,7 @@ property, the user agent fires the {{DOMxRef("RTCDataChannel.bufferedamountlow_e
 be used, for example, to implement code which queues more messages to be sent whenever
 there's room to buffer them.
 
-## Syntax
-
-```js
-const amount = aDataChannel.bufferedAmount;
-```
-
-### Value
+## Value
 
 The number of bytes of data currently queued to be sent over the data channel but have
 not yet been sent.
