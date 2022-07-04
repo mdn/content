@@ -27,7 +27,7 @@ To understand common patterns, it helps to read browser documentation. If you ar
 
   - [The WebKit blog](https://webkit.org/blog/) and [Planet WebKit](https://planet.webkit.org/) aggregate the best articles by WebKit core developers.
   - [Chrome platform status site](https://chromestatus.com/features) is also important.
-  - As well as [the Apple web site.](https://developer.apple.com/technologies/safari/)
+  - As well as [the Apple web site.](https://developer.apple.com/safari/resources/)
 
 ## Make things simple
 
