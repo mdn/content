@@ -190,11 +190,8 @@ Here are some popular editors:
       <td>Free</td>
       <td>Windows, Mac, Linux</td>
       <td>
-        <a
-          href="https://mail.gnome.org/mailman/listinfo/gedit-list"
-          rel="external"
-          >Mailing list</a
-        >, <a href="irc://irc.gnome.org/%23gedit">IRC</a>
+        <a href="https://discourse.gnome.org/tag/gedit"
+          rel="external">Discourse</a>, <a href="irc://irc.gnome.org/%23gedit">IRC</a>
       </td>
       <td>
         <a href="https://help.gnome.org/users/gedit/stable/">Online Manual</a>
