@@ -26,13 +26,7 @@ created, either by the user agent (if {{domxref("RTCDataChannel.negotiated")}} i
 > If you have code that uses `stream`, you will need to update, since
 > browsers have begun to remove support for `stream`.
 
-## Syntax
-
-```js
-const stream = aDataChannel.stream;
-```
-
-### Value
+## Value
 
 An `unsigned short` value (that is, an integer between 0 and 65,535) which
 uniquely identifies the data channel.
