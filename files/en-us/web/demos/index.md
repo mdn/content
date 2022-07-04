@@ -46,6 +46,7 @@ If you know of a good demonstration or application of open web technology, pleas
 - [Aquarium](https://webglsamples.org/aquarium/aquarium.html)
 - [Dynamic cubemap](https://webglsamples.org/dynamic-cubemap/dynamic-cubemap.html)
 - [Kai 'Opua](https://collinhover.github.io/kaiopua/) ([source code](https://github.com/collinhover/kaiopua))
+- [Matrix-engine](https://maximumroulette.com/apps/matrix-engine/examples-build.html) ([source code](https://github.com/zlatnaspirala/matrix-engine))
 
 ### Virtual Reality
 
