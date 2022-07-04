@@ -148,16 +148,13 @@ class MockUnderlyingFileHandle {
   width: 50%;
   overflow-wrap: break-word;
 }
-// hr {
-//  clear: both;
-// }
+button {
+  display: block;
+}
 ```
 
 ```html hidden
-<!-- <h2>Final result</h2> 
-<p>Waiting ...</p>
-<hr>
--->
+<button>Cancel stream</button>
 <div class="input">
   <h2>Underlying source</h2>
   <ul>
@@ -174,7 +171,7 @@ class MockUnderlyingFileHandle {
 // Store reference to lists, paragraph and button
 const list1 = document.querySelector('.input ul');
 const list2 = document.querySelector('.output ul');
-//const para = document.querySelector('p');
+const button = document.querySelector('button');
 
 // Create empty string in which to store final result
 let result = "";
@@ -239,10 +236,11 @@ function makeReadableByteFileStream(filename) {
         logSource(`pull() with byobRequest. Transfer ${bytesRead} bytes`);
       }
     },
-    cancel() {
+    cancel(reason) {
       // This is called if the stream is cancelled (via reader or controller).
       // Clean up any resources
       fileHandle.close();
+      logSource(`cancel() with reason: ${reason}`);
     }
   });
 }
@@ -287,6 +285,12 @@ function readStream(reader) {
     });
   }
 }
+```
+
+Lastly, we add a handler that will cancel the stream if a button is clicked (other HTML and code for the button not shown).
+
+```js
+button.addEventListener('click', () => { reader.cancel("user choice").then( () => { logConsumer(`reader.cancel complete`) }) } );
 ```
 
 #### Result
@@ -376,16 +380,13 @@ class MockUnderlyingFileHandle {
   width: 50%;
   overflow-wrap: break-word;
 }
-// hr {
-//  clear: both;
-// }
+button {
+  display: block;
+}
 ```
 
 ```html hidden
-<!-- <h2>Final result</h2> 
-<p>Waiting ...</p>
-<hr>
--->
+<button>Cancel stream</button>
 <div class="input">
   <h2>Underlying source</h2>
   <ul>
@@ -396,13 +397,14 @@ class MockUnderlyingFileHandle {
   <ul>
   </ul>
 </div>
+
 ```
 
 ```js hidden
 // Store reference to lists, paragraph and button
 const list1 = document.querySelector('.input ul');
 const list2 = document.querySelector('.output ul');
-//const para = document.querySelector('p');
+const button = document.querySelector('button');
 
 // Create empty string in which to store final result
 let result = "";
@@ -457,10 +459,11 @@ function makeReadableByteFileStream(filename) {
         logSource(`pull() with byobRequest. Transfer ${bytesRead} bytes`);
       }
     },
-    cancel() {
+    cancel(reason) {
       // This is called if the stream is cancelled (via reader or controller).
       // Clean up any resources
       fileHandle.close();
+      logSource(`cancel() with reason: ${reason}`);
     },
     autoAllocateChunkSize: DEFAULT_CHUNK_SIZE // Only relevant if using a default reader
   });
@@ -499,6 +502,12 @@ function readStream(reader) {
     return reader.read().then(processText);
   });
 }
+```
+
+Lastly, we add a handler that will cancel the stream if a button is clicked (other HTML and code for the button not shown).
+
+```js
+button.addEventListener('click', () => { reader.cancel("user choice").then( () => { logConsumer(`reader.cancel complete`) }) } );
 ```
 
 #### Result
@@ -586,16 +595,13 @@ class MockUnderlyingFileHandle {
   width: 50%;
   overflow-wrap: break-word;
 }
-// hr {
-//  clear: both;
-// }
+ button {
+  display: block;
+}
 ```
 
 ```html hidden
-<!-- <h2>Final result</h2> 
-<p>Waiting ...</p>
-<hr>
--->
+<button>Cancel stream</button>
 <div class="input">
   <h2>Underlying source</h2>
   <ul>
@@ -612,7 +618,7 @@ class MockUnderlyingFileHandle {
 // Store reference to lists, paragraph and button
 const list1 = document.querySelector('.input ul');
 const list2 = document.querySelector('.output ul');
-//const para = document.querySelector('p');
+const button = document.querySelector('button');
 
 // Create empty string in which to store final result
 let result = "";
@@ -639,6 +645,7 @@ Note below that to support this case, in `pull()` we need to check if the `byobR
 ```js
 const stream = makeReadableByteFileStream("dummy file.txt")
 const DEFAULT_CHUNK_SIZE = 300;
+
 function makeReadableByteFileStream(filename) {
   let fileHandle;
   let position = 0;
@@ -683,10 +690,11 @@ function makeReadableByteFileStream(filename) {
         
       }
     },
-    cancel() {
+    cancel(reason) {
       // This is called if the stream is cancelled (via reader or controller).
       // Clean up any resources
       fileHandle.close();
+      logSource(`cancel() with reason: ${reason}`);
     }  
   });
 }
@@ -694,6 +702,7 @@ function makeReadableByteFileStream(filename) {
 
 ```js hidden
 const reader = stream.getReader();
+
 readStream(reader);
 
 function readStream(reader) {
@@ -719,6 +728,10 @@ function readStream(reader) {
     return reader.read().then(processText);
   });
 }
+```
+
+```js hidden
+button.addEventListener('click', () => { reader.cancel("user choice").then( () => { logConsumer(`reader.cancel complete`) }) } );
 ```
 
 #### Result
@@ -863,16 +876,13 @@ class MockHypotheticalSocket {
   width: 50%;
   overflow-wrap: break-word;
 }
-// hr {
-//  clear: both;
-// }
+button {
+  display: block;
+}
 ```
 
 ```html hidden
-<!-- <h2>Final result</h2> 
-<p>Waiting ...</p>
-<hr>
--->
+<button>Cancel stream</button>
 <div class="input">
   <h2>Underlying source</h2>
   <ul>
@@ -889,7 +899,7 @@ class MockHypotheticalSocket {
 // Store reference to lists, paragraph and button
 const list1 = document.querySelector('.input ul');
 const list2 = document.querySelector('.output ul');
-//const para = document.querySelector('p');
+const button = document.querySelector('button');
 
 // Create empty string in which to store final result
 let result = "";
@@ -975,7 +985,7 @@ function makeSocketStream(host, port) {
 
     cancel() {
       socket.close();
-      logSource(`socket closed`);
+      logSource(`cancel(): socket closed`);
     }
   });
 }
@@ -1033,6 +1043,12 @@ function readStream(reader) {
     });
   }
 }
+```
+
+Lastly, we add a handler that will cancel the stream if a button is clicked (other HTML and code for the button not shown).
+
+```js
+button.addEventListener('click', () => { reader.cancel("user choice").then( () => { logConsumer(`reader.cancel complete`) }) } );
 ```
 
 #### Result
