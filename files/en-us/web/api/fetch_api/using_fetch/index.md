@@ -27,6 +27,7 @@ The `fetch` specification differs from `jQuery.ajax()` in the following signific
 - Unless `fetch()` is called with the [`credentials`](/en-US/docs/Web/API/fetch#credentials) option set to `include`, `fetch()`:
   - won't send cookies in cross-origin requests
   - won't set any cookies sent back in cross-origin responses
+  - As of August 2018, the default credentials policy changed to same-origin. Firefox was also modified in version 61.0b13)
 
 A basic fetch request is really simple to set up. Have a look at the following code:
 
