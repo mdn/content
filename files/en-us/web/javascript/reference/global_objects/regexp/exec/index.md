@@ -222,7 +222,7 @@ property ({{jsxref("RegExp.prototype.test()", "test()")}} will also advance the
 {{jsxref("RegExp.lastIndex", "lastIndex")}} property). Note that the
 {{jsxref("RegExp.lastIndex", "lastIndex")}} property will not be reset when searching a
 different string, it will start its search at its existing {{jsxref("RegExp.lastIndex",
-  "lastIndex")}} .
+  "lastIndex")}}.
 
 For example, assume you have this script:
 
