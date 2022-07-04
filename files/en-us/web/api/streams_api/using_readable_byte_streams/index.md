@@ -277,10 +277,8 @@ function readStream(reader) {
 
       buffer = value.buffer;
       offset += value.byteLength;
-
       bytesReceived += value.byteLength;
 
-      //const chunk = value;
       logConsumer(`Read ${bytesReceived} bytes: ${value}`);
       result += value;
 
@@ -1043,3 +1041,9 @@ The logging from the underlying push source (left) and consumer (right) are show
 Not the period in the middle where data is equeued rather than transferred as a zero-copy operation.
 
 {{EmbedLiveSample("Underlying push source with default reader","100%","500px")}}
+
+## See also
+
+- [Streams API concepts](/en-US/docs/Web/API/Streams_API/Concepts)
+- [Streams concepts and usage overview](/en-US/docs/Web/API/Streams_API#concepts_and_usage)
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
