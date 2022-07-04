@@ -52,18 +52,19 @@ asyncGen.next()
 The following example iterates over an async generator, logging values 1–6 to the console at decreasing time intervals.
 
 ```js
-function waitFor(time, value) {
+function delayedValue(time, value) {
   return new Promise((resolve, reject) => {
     setTimeout(() => resolve(value), time);
   });
 }
+
 async function* generate() {
-  yield await waitFor(1000, 1);
-  yield await waitFor(2000, 2);
-  yield await waitFor(400, 3);
-  yield await waitFor(800, 4);
-  yield await waitFor(150, 5);
-  yield await waitFor(50, 6);
+  yield await delayedValue(1000, 1);
+  yield await delayedValue(2000, 2);
+  yield await delayedValue(400, 3);
+  yield await delayedValue(800, 4);
+  yield await delayedValue(150, 5);
+  yield await delayedValue(50, 6);
   console.log('All done!');
 }
 async function main() {
