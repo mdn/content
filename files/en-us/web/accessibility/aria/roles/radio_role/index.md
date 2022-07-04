@@ -54,7 +54,7 @@ The `role` attribute only adds semantics; all of the functionality that comes na
 </fieldset>
 ```
 
-The native HTML radio ([`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)) form control has two states ("checked" or "not checked"). Similarly, an element with `role="radio"` can expose two states through the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute: `true` representing the checked state, and `false` representing the unchecked state. The `aria-checked` value of `mixed` is not valid to use for a radio button.
+The native HTML radio form control ([`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)) has two states ("checked" or "not checked"). Similarly, an element with `role="radio"` can expose two states through the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute: `true` representing the checked state, and `false` representing the unchecked state. The `aria-checked` value of `mixed` is not valid to use for a radio button.
 
 If a radio button is checked, the radio element has `aria-checked` set to `true`. If it is not checked, it has `aria-checked` set to `false`.
 
