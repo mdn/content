@@ -52,7 +52,7 @@ const dc = peerConnection.createDataChannel("File Transfer");
 /* ... */
 
 function showBufferedAmount(channel) {
-  let el = document.getElementById("bufferSize");
+  const = document.getElementById("bufferSize");
 
   el.innerHTML = channel.bufferedAmount + " bytes";
 }

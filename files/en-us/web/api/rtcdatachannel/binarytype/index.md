@@ -47,7 +47,7 @@ const dc = peerConnection.createDataChannel("Binary");
 dc.binaryType = "arraybuffer";
 
 dc.onmessage = function(event) {
-  let byteArray = new Uint8Array(event.data);
+  const byteArray = new Uint8Array(event.data);
   let hexString = "";
 
   byteArray.forEach(function(byte) {

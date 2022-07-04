@@ -80,7 +80,7 @@ const pc = new RTCPeerConnection();
 const dc = pc.createDataChannel("BackChannel");
 
 function sendMessage(msg) {
-  let obj = {
+  const obj = {
     "message": msg,
     "timestamp": new Date()
   }
