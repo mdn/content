@@ -74,7 +74,7 @@ dc.onopen = function () {
   console.log("datachannel open");
 };
 
-dc.onclose = function (
+dc.onclose = function () {
   console.log("datachannel close");
 };
 
