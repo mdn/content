@@ -147,7 +147,13 @@ function isValidJSON(text) {
 
 ### The finally-block
 
-The `finally`-block contains statements to execute after the `try`-block and `catch`-block(s) execute, but before the statements following the `try...catch...finally`-block. Control flow will always enter the `finally` block, either immediately after the `try`-block (when no exceptions were thrown) or `catch`-block (when an exception was thrown) finishes execution normally, or immediately before a control-flow statement (`return`, `throw`, `break`, `continue`) is executed in the `try`- or `catch`-block. If an exception is thrown from the `try`-block, the statements in the `finally`-block execute even if no `catch`-block handles the exception, in which case the exception is still thrown immediately after the `finally` block finishes executing.
+The `finally`-block contains statements to execute after the `try`-block and `catch`-block(s) execute, but before the statements following the `try...catch...finally`-block. Control flow will always enter the `finally` block, which can proceed in one of the following ways:
+
+- Immediately before the `try`-block finishes execution normally (and no exceptions were thrown);
+- Immediately before the `catch`-block finishes execution normally;
+- Immediately before a control-flow statement (`return`, `throw`, `break`, `continue`) is executed in the `try`- or `catch`-block.
+
+If an exception is thrown from the `try`-block, even when there's no `catch`-block to handle the exception, the `finally`-block still executes, in which case the exception is still thrown immediately after the `finally` block finishes executing.
 
 The following example shows one use case for the `finally`-block. The code
 opens a file and then executes statements that use the file; the
