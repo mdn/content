@@ -49,7 +49,22 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-TBD.
+The view to be transferred must be of the same type as {{domxref("ReadableStreamBYOBRequest.view")}}, have the same underlying buffer and byte offset, and be the same or smaller byteLength.
+
+Constructors, such as [Uint8Array()](2/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/Uint8Array) are provided for typed arrays that allow buffers to be created from `view` using its properties.
+For example, below `newView` would be an appropriate buffer, provided `CHUNK_SIZE` is less than `view`'s byteLength.
+
+```js
+const v = controller.byobRequest.view;
+const newView = new Uint8Array(v.buffer, v.byteOffset, CHUNK_SIZE);
+```
+
+Data might then be read into the new view (using the "hypothetical" `readInto()` method), and sent using `respondWithNewView()`:
+
+```js
+bytesRead = socket.readInto(newView);
+controller.byobRequest.respondWithNewView(newView);
+```
 
 ## Specifications
 
@@ -58,3 +73,7 @@ TBD.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)
