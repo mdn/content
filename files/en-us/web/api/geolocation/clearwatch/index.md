@@ -39,7 +39,7 @@ None ({{jsxref("undefined")}}).
 ```js
 let id;
 let target;
-let option;
+let options;
 
 function success(pos) {
   const crd = pos.coords;
