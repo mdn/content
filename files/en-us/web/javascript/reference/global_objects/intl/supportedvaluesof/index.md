@@ -114,4 +114,4 @@ try {
 ## See also
 
 - {{jsxref("Global_Objects/Intl", "Intl")}}
-- [A polyfill of `Intl.supportedValuesOf` in proposal TC39](https://github.com/tc39/proposal-intl-enumeration/tree/master/polyfill)
+- [A polyfill of `Intl.supportedValuesOf` in FormatJS](https://github.com/formatjs/formatjs/tree/main/packages/intl-enumerator)
