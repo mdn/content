@@ -74,8 +74,7 @@ output.textContent += `child's  root: ${child.getRootNode().nodeName} \n\n`;  //
 
 // create a ShadowRoot
 const shadowRoot = shadowHost.attachShadow({mode:'open'});
-shadowRoot.innerHTML = '<style>div{background:#2bb8aa;}</style>'
-      + '<div class="shadowChild">shadowChild</div>';
+shadowRoot.innerHTML = '<style>div{background:#2bb8aa;}</style><div class="shadowChild">shadowChild</div>';
 const shadowChild = shadowRoot.querySelector('.shadowChild');
 
 // The default value of composed is false
