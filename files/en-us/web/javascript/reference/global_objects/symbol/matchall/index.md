@@ -34,7 +34,6 @@ This method exists for customizing match behavior within {{jsxref("RegExp")}} su
 ### Using Symbol.matchAll
 
 ```js
-let re = /[0-9]+/g;
 let str = '2016-01-02|2019-03-07';
 
 const numbers = {
