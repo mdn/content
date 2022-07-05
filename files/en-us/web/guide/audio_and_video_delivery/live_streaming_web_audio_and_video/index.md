@@ -168,7 +168,7 @@ Although you can install software like GStreamer, SHOUTcast and Icecast you will
 ## See also
 
 - [HTTP Live Streaming](https://en.wikipedia.org/wiki/HTTP_Live_Streaming)
-- [HLS Browser Support](https://www.jwplayer.com/html5/hls)
+- [HLS Browser Support](https://www.jwplayer.com/blog/hls-in-html5)
 - [HTTP Live Streaming JavaScript player](https://github.com/RReverser/mpegts)
 - [The Basics of HTTP Live Streaming](https://larryjordan.com/articles/basics-of-http-live-streaming/)
 - [DASH Adaptive Streaming for HTML 5 Video](/en-US/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video)
