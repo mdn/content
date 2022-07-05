@@ -115,8 +115,10 @@ console.log(m);        // will log 12
 You can also rename named exports to avoid naming conflicts:
 
 ```js
-export { myFunction as function1,
-         myVariable as variable };
+export {
+  myFunction as function1,
+  myVariable as variable,
+};
 ```
 
 ### Re-exporting / Aggregating
@@ -128,23 +130,23 @@ single module concentrating various exports from various modules.
 This can be achieved with the "export from" syntax:
 
 ```js
-export { default as function1,
-         function2 } from 'bar.js';
+export {
+  default as function1,
+  function2,
+} from 'bar.js';
 ```
 
 Which is comparable to a combination of import and export:
 
 ```js
-import { default as function1,
-         function2 } from 'bar.js';
+import { default as function1, function2 } from 'bar.js';
 export { function1, function2 };
 ```
 
 But where `function1` and `function2` do not become available
 inside the current module.
 
-> **Note:** The following is syntactically invalid despite its import
-> equivalent:
+> **Note:** The following is syntactically invalid despite its import equivalent:
 
 ```js
 import DefaultExport from 'bar.js'; // Valid
@@ -181,15 +183,15 @@ function cube(x) {
 
 const foo = Math.PI + Math.SQRT2;
 
-var graph = {
+const graph = {
   options: {
-      color:'white',
-      thickness:'2px'
+    color: 'white',
+    thickness: '2px',
   },
-  draw: function() {
-      console.log('From graph draw function');
+  draw() {
+    console.log('From graph draw function');
   }
-}
+};
 
 export { cube, foo, graph };
 ```
@@ -200,8 +202,8 @@ Then in the top-level module included in your HTML page, we could have:
 import { cube, foo, graph } from './my-module.js';
 
 graph.options = {
-    color:'blue',
-    thickness:'3px'
+  color: 'blue',
+  thickness: '3px',
 };
 
 graph.draw();
@@ -251,15 +253,15 @@ This is what it would look like using code snippets:
 
 ```js
 // In childModule1.js
-let myFunction = ...; // assign something useful to myFunction
-let myVariable = ...; // assign something useful to myVariable
-export {myFunction, myVariable};
+const myFunction = ...; // assign something useful to myFunction
+const myVariable = ...; // assign something useful to myVariable
+export { myFunction, myVariable };
 ```
 
 ```js
 // In childModule2.js
-let myClass = ...; // assign something useful to myClass
-export myClass;
+const myClass = ...; // assign something useful to myClass
+export { myClass };
 ```
 
 ```js
