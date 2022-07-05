@@ -45,8 +45,14 @@ Besides the generic `Error` constructor, there are other core error constructors
 
 ## Static methods
 
-- {{JSxRef("Error.captureStackTrace()")}}
-  - : A non-standard **V8** function that creates the {{JSxRef("Error.prototype.stack", "stack")}} property on an Error instance.
+- `Error.captureStackTrace()` {{non-standard_inline}}
+  - : A non-standard V8 function that creates the {{JSxRef("Error.prototype.stack", "stack")}} property on an Error instance.
+
+- `Error.stackTraceLimit` {{non-standard_inline}}
+  - : A non-standard V8 numerical property that limits how many stack frames to include in an error stacktrace.
+
+- `Error.prepareStackTrace()` {{non-standard_inline}} {{optional_inline}}
+  - : A non-standard V8 function that, if provided by usercode, is called by the V8 JavaScript engine for thrown exceptions, allowing the user to provide custom formatting for stacktraces.
 
 ## Instance properties
 
@@ -240,3 +246,4 @@ try {
 - [A polyfill of `Error`](https://github.com/zloirock/core-js#ecmascript-error) with modern behavior like support `cause` is available in [`core-js`](https://github.com/zloirock/core-js)
 - {{JSxRef("Statements/throw", "throw")}}
 - {{JSxRef("Statements/try...catch", "try...catch")}}
+- The [V8 documentation](https://v8.dev/docs/stack-trace-api) for `Error.captureStackTrace()`, `Error.stackTraceLimit`, and `Error.prepareStackTrace()`.
