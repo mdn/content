@@ -27,6 +27,17 @@ BigInt(value);
 > **Note:** `BigInt()` is not used with the
 > {{JSxRef("Operators/new", "new")}} operator.
 
+### Exceptions
+
+- {{jsxref("RangeError")}}:
+  - : If the argument is a non-integral number.
+
+- {{jsxref("TypeError")}}:
+  - : If the argument cannot be converted to a primitive, or if after conversion to a primitive, the result is an object, {{jsxref("undefined")}}, {{jsxref("null")}}, {{jsxref("symbol")}}.
+
+- {{jsxref("SyntaxError")}}:
+  - : If the argument is a string that cannot be parsed as a `BigInt`.
+
 ## Examples
 
 ### Creating a new BigInt
