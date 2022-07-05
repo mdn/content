@@ -98,13 +98,15 @@ The following example returns the index of the first element in the array that i
 
 ```js
 function isPrime(element) {
-  let start = 2;
-  while (start <= Math.sqrt(element)) {
-    if (element % start++ < 1) {
+  if (element % 2 === 0 || element < 2) {
+    return false;
+  }
+  for (let factor = 3; factor <= Math.sqrt(element); factor += 2) {
+    if (element % factor === 0) {
       return false;
     }
   }
-  return element > 1;
+  return true;
 }
 
 console.log([4, 6, 8, 9, 12].findIndex(isPrime)); // -1, not found
