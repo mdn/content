@@ -43,7 +43,7 @@ The `try` statement always starts with a `try`-block. Then, a `catch`-block, a `
 - `try...finally`
 - `try...catch...finally`
 
-Unlike other constructs like [`if`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) or [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for), the `try`, `catch`, and `finally` blocks must be _blocks_, instead of single statements.
+Unlike other constructs such as [`if`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) or [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for), the `try`, `catch`, and `finally` blocks must be _blocks_, instead of single statements.
 
 ```js example-bad
 try doSomething(); // SyntaxError
