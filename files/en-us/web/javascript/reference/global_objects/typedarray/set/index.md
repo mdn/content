@@ -44,10 +44,10 @@ set(typedarray, targetOffset)
 
 ### Exceptions
 
-A {{jsxref("RangeError")}}, if the `array` or `typedarray` is too large to
-fit in the typed array.  
-A {{jsxref("RangeError")}}, if the `targetOffset` is set such as it would store
-beyond the end of the typed array.
+- {{jsxref("RangeError")}}
+  - : Thrown if one of the two conditions is met:
+    - The `array` or `typedarray` is too large to fit in the typed array.  
+    - The `targetOffset` is set such as it would store beyond the end of the typed array.
 
 ## Examples
 
