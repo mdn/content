@@ -92,13 +92,15 @@ The following example finds the value of the last element in the typed array tha
 
 ```js
 function isPrime(element) {
-  let start = 2;
-  while (start <= Math.sqrt(element)) {
-    if (element % start++ < 1) {
+  if (element % 2 === 0 || element < 2) {
+    return false;
+  }
+  for (let factor = 3; factor <= Math.sqrt(element); factor += 2) {
+    if (element % factor === 0) {
       return false;
     }
   }
-  return element > 1;
+  return true;
 }
 
 let uint8 = new Uint8Array([4, 6, 8, 12]);
