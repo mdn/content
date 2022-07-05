@@ -70,6 +70,14 @@ In the following example, `setAttribute()` is used to set attributes on a
 <button>Hello World</button>
 ```
 
+```css hidden
+button {
+  height: 30px;
+  width: 100px;
+  margin: 1em;
+}
+```
+
 ### JavaScript
 
 ```js
