@@ -3,7 +3,6 @@ title: Array.prototype.findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 tags:
   - Array
-  - ECMAScript 2015
   - JavaScript
   - Method
   - Prototype

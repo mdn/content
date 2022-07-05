@@ -2,7 +2,6 @@
 title: TypedArray.prototype.findLast()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findLast
 tags:
-  - ECMAScript 2015
   - JavaScript
   - Method
   - Prototype

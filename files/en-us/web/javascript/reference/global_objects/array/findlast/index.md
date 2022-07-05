@@ -3,7 +3,6 @@ title: Array.prototype.findLast()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 tags:
   - Array
-  - ECMAScript 2015
   - JavaScript
   - Method
   - Prototype

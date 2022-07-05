@@ -2,7 +2,6 @@
 title: TypedArray.prototype.findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findLastIndex
 tags:
-  - ECMAScript 2015
   - JavaScript
   - Method
   - Prototype
