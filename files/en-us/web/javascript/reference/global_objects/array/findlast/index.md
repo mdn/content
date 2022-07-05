@@ -24,7 +24,7 @@ If you need to find:
 - the _index_ of the last matching element in the array, use {{jsxref("Array.findLastIndex", "findLastIndex()")}}.
 - the _index of a value_, use {{jsxref("Array.prototype.indexOf()")}}.
   (It's similar to {{jsxref("Array.findIndex", "findIndex()")}}, but checks each element for equality with the value instead of using a testing function.)
-- if a value _exists_ in an array, use {{jsxref("Array.prototype.includes()")}}.
+- whether a value _exists_ in an array, use {{jsxref("Array.prototype.includes()")}}.
   Again, it checks each element for equality with the value instead of using a testing function.
 - if any element satisfies the provided testing function, use {{jsxref("Array.prototype.some()")}}.
 
