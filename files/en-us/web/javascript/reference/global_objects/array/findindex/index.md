@@ -3,7 +3,6 @@ title: Array.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 tags:
   - Array
-  - ECMAScript 2015
   - JavaScript
   - Method
   - Prototype
@@ -98,13 +97,14 @@ Elements that are {{jsxref("Operators/delete", "deleted")}} are still visited.
 The following example returns the index of the first element in the array that is a prime number, or `-1` if there is no prime number.
 
 ```js
-function isPrime(num) {
-  for (let i = 2; num > i; i++) {
-    if (num % i == 0) {
+function isPrime(element) {
+  let start = 2;
+  while (start <= Math.sqrt(element)) {
+    if (element % start++ < 1) {
       return false;
     }
   }
-  return num > 1;
+  return element > 1;
 }
 
 console.log([4, 6, 8, 9, 12].findIndex(isPrime)); // -1, not found
