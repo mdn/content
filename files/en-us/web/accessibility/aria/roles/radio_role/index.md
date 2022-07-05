@@ -110,7 +110,7 @@ From the assistive technology user's perspective, the heading does not exist sin
   - : Move focus into and out of the radio group. When focus moves into a radio group, and a radio button is already checked, focus is set on the checked button. If none of the radio buttons are checked, focus is set on the first radio button in the group.
 
 - <kbd>Space</kbd>
-  - : Checks the radio if not already checked. Unchecks a previously checked radio button in the radio group. 
+  - : Checks the radio if not already checked. Unchecks a previously checked radio button in the radio group.
 
 - <kbd>Right Arrow</kbd> and <kbd>Down Arrow</kbd>
   - : Move focus to and checks the next radio button in the group, unchecking the previously focused radio button. If focus is on the last radio button, focus moves to the first radio button.
