@@ -387,6 +387,5 @@ const fct2 = eval(fctStr2)  // return a function
 
 ## See also
 
-- {{jsxref("Global_Objects/uneval", "uneval()")}}
 - [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
 - [WebExtensions: Using eval in content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#using_eval_in_content_scripts)
