@@ -73,23 +73,23 @@ In the following example, `setAttribute()` is used to set attributes on a
 ### JavaScript
 
 ```js
-var b = document.querySelector("button");
+const button = document.querySelector("button");
 
-b.setAttribute("name", "helloButton");
-b.setAttribute("disabled", "");
+button.setAttribute("name", "helloButton");
+button.setAttribute("disabled", "");
 ```
+
+{{ EmbedLiveSample('Examples', '300', '50') }}
 
 This demonstrates two things:
 
 - The first call to `setAttribute()` above shows changing the `name` attribute's value to "helloButton".
-  You can see this using your browser's page inspector ([Chrome](https://developer.chrome.com/docs/devtools/css/),
-  [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), [Safari](https://support.apple.com/en-us/guide/safari-developer/welcome/mac)).
+  You can see this using your browser's page inspector ([Chrome](https://developer.chrome.com/docs/devtools/dom/properties/), [Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/css/inspect), 
+  [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html), [Safari](https://support.apple.com/en-us/guide/safari-developer/welcome/mac)).
 - To set the value of a Boolean attribute, such as `disabled`, you can specify any value.
   An empty string or the name of the attribute are recommended values.
   All that matters is that if the attribute is present at all, _regardless of its actual value_, its value is considered to be `true`.
   The absence of the attribute means its value is `false`. By setting the value of the `disabled` attribute to the empty string (`""`), we are setting `disabled` to `true`, which results in the button being disabled.
-
-{{ EmbedLiveSample('Examples', '300', '50') }}
 
 {{DOMAttributeMethods}}
 
