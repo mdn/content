@@ -170,7 +170,7 @@ try {
 }
 ```
 
-Control flow statements (`return`, `throw`, `break`, `continue`) in the `finally` block will "mask" any completion value of the `try`-block or `catch`-block. In this example, the `try`-block tries to return 1, but before returning, the control flow is yielded to the `finally`-block first, so the `finally`-block's return value is returned instead.
+Control flow statements (`return`, `throw`, `break`, `continue`) in the `finally` block will "mask" any completion value of the `try` block or `catch` block. In this example, the `try` block tries to return 1, but before returning, the control flow is yielded to the `finally` block first, so the `finally` block's return value is returned instead.
 
 ```js
 function doIt() {
