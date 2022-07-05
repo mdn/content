@@ -57,7 +57,7 @@ throws an exception, control is immediately shifted to the `catch`-block. If
 no exception is thrown in the `try`-block, the `catch`-block is
 skipped.
 
-The `finally`-block will always execute before control flow exits the `try...catch...finally` construct. It always executes, regardless of whether an exception was thrown or caught.
+The `finally` block will always execute before control flow exits the `try...catch...finally` construct. It always executes, regardless of whether an exception was thrown or caught.
 
 You can nest one or more `try` statements. If an inner `try`
 statement does not have a `catch`-block, the enclosing `try`
