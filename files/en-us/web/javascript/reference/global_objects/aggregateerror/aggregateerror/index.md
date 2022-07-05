@@ -31,7 +31,7 @@ new AggregateError(errors, message, options)
   - : An object that has the following properties:
     - `cause` {{optional_inline}}
       - : A property indicating the specific cause of the error.
-          When catching and re-throwing an error with a more-specific or useful error message, this property should be used to pass the original error.
+          When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
 
 ## Examples
 
