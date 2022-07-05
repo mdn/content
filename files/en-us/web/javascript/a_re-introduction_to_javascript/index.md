@@ -343,7 +343,7 @@ for (let i = 0; i < 5; i++) {
 JavaScript also contains two other prominent for loops: [`for`...`of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
 
 ```js
-for (let value of array) {
+for (const value of array) {
   // do something with value
 }
 ```
@@ -351,7 +351,7 @@ for (let value of array) {
 and [`for`...`in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in):
 
 ```js
-for (let property in object) {
+for (const property in object) {
   // do something with object property
 }
 ```
