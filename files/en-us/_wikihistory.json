@@ -139949,24 +139949,6 @@
       "Sebastianz"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/uneval": {
-    "modified": "2020-10-15T21:23:46.043Z",
-    "contributors": [
-      "ExE-Boss",
-      "fscholz",
-      "Zearin_Galaurum",
-      "SphinxKnight",
-      "nmve",
-      "eduardoboucas",
-      "Dan-Dascalescu",
-      "x2357",
-      "MatthewKastor",
-      "Sheppy",
-      "ethertank",
-      "daniel_kontos",
-      "Jens_Verneuer"
-    ]
-  },
   "Web/JavaScript/Reference/Iteration_protocols": {
     "modified": "2020-11-07T16:08:06.331Z",
     "contributors": [
