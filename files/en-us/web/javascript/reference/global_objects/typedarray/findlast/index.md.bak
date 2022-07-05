@@ -1,0 +1,162 @@
+---
+title: TypedArray.prototype.findLast()
+slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findLast
+tags:
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - TypedArray
+  - TypedArrays
+  - findLast
+  - Polyfill
+browser-compat: javascript.builtins.TypedArray.findlast
+---
+{{JSRef}}
+
+The **`findLast()`** method returns the last element in a typed array that satisfies the provided testing function.
+If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
+_TypedArray_ is one of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
+
+See also the {{jsxref("TypedArray.findLastIndex", "findLastIndex()")}} method, which returns the index of the found element instead of its value.
+
+{{EmbedInteractiveExample("pages/js/typedarray-find.html")}}
+
+## Syntax
+
+```js
+// Arrow function
+findLast((element) => { /* ... */ } )
+findLast((element, index) => { /* ... */ } )
+findLast((element, index, array) => { /* ... */ } )
+
+// Callback function
+findLast(callbackFn)
+findLast(callbackFn, thisArg)
+
+// Inline callback function
+findLast(function(element) { /* ... */ })
+findLast(function(element, index) { /* ... */ })
+findLast(function(element, index, array){ /* ... */ })
+findLast(function(element, index, array) { /* ... */ }, thisArg)
+```
+
+### Parameters
+
+- `callbackFn`
+
+  - : Function to execute on each element in the typed array.
+
+    The function is called with the following arguments:
+
+    - `element`
+      - : The current element in the typed array.
+    - `index`
+      - : The index (position) of the current element in the typed array.
+    - `array`
+      - : The typed array that `findLast()` was called on.
+
+    The callback must return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found.
+
+- `thisArg` {{optional_inline}}
+  - : Object to use as {{jsxref("Operators/this", "this")}} when executing `callbackFn`.
+
+### Return value
+
+The element in the typed array with the highest index value that satisfies the provided testing function; {{jsxref("undefined")}} if no matching value is found.
+
+## Description
+
+The `findLast()` method executes the `callbackFn` function once for each index of the typed array in descending order until the `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value.
+If a truthy value is returned by the callback, `findLast()` immediately returns the value of that element.
+Otherwise, `findLast()` returns {{jsxref("undefined")}}.
+`callbackFn` is invoked only for indexes of the typed array which have assigned values; it is not invoked for indexes which have been deleted or which have never been assigned values. 
+
+`callbackFn` is invoked with three arguments: the value of the element, the index of the element, and the typed array object being traversed.
+
+If a `thisArg` parameter is provided to `findLast()`, it will be used as the `this` for each invocation of the `callbackFn`.
+If it is not provided, then {{jsxref("undefined")}} is used.
+
+`findLast()` does not mutate the typed array on which it is called.
+
+The range of elements processed by `findLast()` is set before the first invocation of `callbackFn`.
+Elements that are appended to the typed array after the call to `findLast()` begins will not be visited by `callbackFn`.
+If an existing, unvisited element of the typed array is changed by `callbackFn`, its value passed to the visiting `callbackFn` will be the value at the time that `findLast()` visits that element's index; elements that are deleted are not visited.
+
+## Examples
+
+### Find a prime number in a typed array
+
+The following example finds an element in the typed array that is a prime number (or returns {{jsxref("undefined")}} if there is no prime number).
+
+```js
+function isPrime(element, index, array) {
+  let start = 2;
+  while (start <= Math.sqrt(element)) {
+    if (element % start++ < 1) {
+      return false;
+    }
+  }
+  return element > 1;
+}
+
+const uint8 = new Uint8Array([4, 5, 8, 12]);
+console.log(uint8.find(isPrime)); // 5
+```
+
+### Nonexistent and deleted elements are visited
+
+The following examples show that all elements _are_ visited,
+and that the value passed to the callback is their value when visited:
+
+```js
+// Declare array with no elements at indexes 2, 3, and 4
+const uint8 = new Uint8Array([0,1,,,,5,6]);
+
+// Shows all indexes, not just those with assigned values
+uint8.findLast(function(value, index) {
+  console.log(`Visited index ${index} with value ${value}`);
+});
+
+// Shows all indexes, including deleted
+uint8.findLast(function(value, index) {
+  // Delete element 5 on first iteration
+  if (index === 6) {
+    console.log("Set uint8[3] to 44");
+    uint8[3] = 44;
+  }
+  // Element 5 is still visited even though deleted
+  console.log(`Visited index ${index} with value ${value}`);
+});
+// expected output:
+// > "Visited index 6 with value 6"
+// > "Visited index 5 with value 5"
+// > "Visited index 4 with value 0"
+// > "Visited index 3 with value 0"
+// > "Visited index 2 with value 0"
+// > "Visited index 1 with value 1"
+// > "Visited index 0 with value 0"
+// > "Deleting uint8[5] with value 5"
+// > "Visited index 6 with value 6"
+// > "Visited index 5 with value 5"
+// > "Visited index 4 with value 0"
+// > "Visited index 3 with value 44"
+// > "Visited index 2 with value 0"
+// > "Visited index 1 with value 1"
+// > "Visited index 0 with value 0"
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [Polyfill of `TypedArray.prototype.find` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- {{jsxref("TypedArray.prototype.findIndex()")}}
+- {{jsxref("TypedArray.prototype.every()")}}
