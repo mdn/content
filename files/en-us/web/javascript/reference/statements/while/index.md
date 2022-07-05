@@ -45,8 +45,8 @@ The following `while` loop iterates as long as `n` is less than
 three.
 
 ```js
-var n = 0;
-var x = 0;
+let n = 0;
+let x = 0;
 
 while (n < 3) {
   n++;
@@ -72,7 +72,9 @@ Consider the following example, which iterates over a document's comments, loggi
 
 ```js example-bad
 const iterator = document.createNodeIterator(
-  document, NodeFilter.SHOW_COMMENT);
+  document,
+  NodeFilter.SHOW_COMMENT,
+);
 let currentNode;
 while (currentNode = iterator.nextNode()) {
   console.log(currentNode.textContent.trim());

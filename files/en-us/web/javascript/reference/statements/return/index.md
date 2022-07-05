@@ -35,7 +35,7 @@ where `x` is a number.
 function square(x) {
    return x * x;
 }
-var demo = square(3);
+const demo = square(3);
 // demo will equal 9
 ```
 
@@ -90,13 +90,13 @@ A function immediately stops at the point where `return` is called.
 
 ```js
 function counter() {
-  for (var count = 1; ; count++) {  // infinite loop
+  for (let count = 1; ; count++) {  // infinite loop
     console.log(count + 'A'); // until 5
-      if (count === 5) {
-        return;
-      }
-      console.log(count + 'B');  // until 4
+    if (count === 5) {
+      return;
     }
+    console.log(count + 'B');  // until 4
+  }
   console.log(count + 'C');  // never appears
 }
 
@@ -123,7 +123,7 @@ function magic() {
   return function calc(x) { return x * 42; };
 }
 
-var answer = magic();
+const answer = magic();
 answer(1337); // 56154
 ```
 
