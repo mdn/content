@@ -69,8 +69,8 @@ or an Array's [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/
 (or anything which correctly iterates UTF-16 surrogates) to iterate the string, using `codePointAt(0)` to get the code point of each element.
 
 ```js
-for (let codePoint of '\ud83d\udc0e\ud83d\udc71\u2764') {
-   console.log(codePoint.codePointAt(0).toString(16))
+for (const codePoint of '\ud83d\udc0e\ud83d\udc71\u2764') {
+  console.log(codePoint.codePointAt(0).toString(16))
 }
 // '1f40e', '1f471', '2764'
 ```

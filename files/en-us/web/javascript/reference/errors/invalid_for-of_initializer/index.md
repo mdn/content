@@ -33,7 +33,7 @@ The head of a [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...o
 ### Invalid `for-of` loop
 
 ```js example-bad
-let iterable = [10, 20, 30];
+const iterable = [10, 20, 30];
 
 for (let value = 50 of iterable) {
   console.log(value);
@@ -48,7 +48,7 @@ for (let value = 50 of iterable) {
 You need to remove the initializer (`value = 50`) in the head of the `for-of` loop. Maybe you intended to make 50 an offset value, in that case you could add it to the loop body, for example.
 
 ```js example-good
-let iterable = [10, 20, 30];
+const iterable = [10, 20, 30];
 
 for (let value of iterable) {
   value += 50;
