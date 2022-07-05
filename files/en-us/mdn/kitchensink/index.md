@@ -233,7 +233,7 @@ When you request to access a {{Glossary("URL")}}, the gateway server can relay y
 
 - JavaScript {{jsxref("Array")}} on MDN
 
-Listening for mouse movement is even easier than listening for key presses: all we need is the listener for the {{event("mousemove")}} event.
+Listening for mouse movement is even easier than listening for key presses: all we need is the listener for the {{domxref("Element/mousemove_event", "mousemove")}} event.
 ...just below the `keyup event`:
 
 ## Browser compatibility
