@@ -34,7 +34,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
         <p>
           A character class. Matches any one of the enclosed characters. You can
           specify a range of characters by using a hyphen, but if the hyphen
-          appears as the first or last character enclosed in the square brackets
+          appears as the first or last character enclosed in the square brackets,
           it is taken as a literal hyphen to be included in the character class
           as a normal character.
         </p>
