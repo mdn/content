@@ -44,7 +44,7 @@ We could abbreviate this to "be kind". This is our number one bit of advice for 
 Be kind to the other contributors on the project, and it will be a happier and more productive place. This includes:
 
 - Thanking people if they help you.
-- Congratulating people where appropriate (for example, if they land their first-ever pull request, or fix a particularly difficult bug).
+- Congratulating people where appropriate (for example, when they land their first pull request or fix a particularly difficult bug).
 - Always responding respectfully to people, even if you feel like the answer to their question was a bit obvious, or that they are repeating themselves.
 - Trying to help people to do better next time, in a supportive way, e.g. during pull request reviews or as you answer their questions. Saying "this is wrong" or "here is the answer" is nowhere near as helpful as saying "This is OK, but I feel that this would be better if you tried doing it more like this, here's a blog post for more ideas" or "you can find the answer here; also check out this link for more common answers".
 
