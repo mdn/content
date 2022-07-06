@@ -193,7 +193,7 @@ pip3 list
 
 ## Using Django inside a Python virtual environment
 
-The libraries we'll use for creating our virtual environments are [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (Linux and macOS) and [virtualenvwrapper-win](https://pypi.org//virtualenvwrapper-win) (Windows), which in turn both use the [virtualenv](https://virtualenv.pypa.io/en/latest/) tool. The wrapper tools creates a consistent interface for managing interfaces on all platforms.
+The libraries we'll use for creating our virtual environments are [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (Linux and macOS) and [virtualenvwrapper-win](https://pypi.org/project/virtualenvwrapper-win/) (Windows), which in turn both use the [virtualenv](https://virtualenv.pypa.io/en/latest/) tool. The wrapper tools creates a consistent interface for managing interfaces on all platforms.
 
 ### Installing the virtual environment software
 
