@@ -54,7 +54,7 @@ A string's `substr()` method extracts `length` characters from the string, count
 - `substr()`'s `start` index will wrap to the end of the string if it is negative, while `substring()` will clamp it to `0`.
 - Negative lengths in `substr()` are treated as zero, while `substring()` will swap the two indexes if `end` is less than `start`.
 
-In some sense, `substr()` is closer to the [`String.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice) method than to `String.prototype.substring()`, because the indexes of `slice()` also wrap around the string's boundaries, and negative lengths return empty strings. Still, there is no trivial way to migrate `substr()` to either `slice()` or `substring()` without essentially writing a polyfill for `substr()`, so the actual refactored code depends on the knowledge of the range of `a` and `b`.
+In some sense, `substr()` is closer to the [`String.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice) method than to `String.prototype.substring()`, because the indexes of `slice()` also wrap around the string's boundaries, and negative lengths return empty strings. Still, there is no trivial way to migrate `substr()` to either `slice()` or `substring()` without essentially writing a polyfill for `substr()`, so the actual refactored code depends on the knowledge of the range of `a` and `b`. For example, naïvely rewriting `str.substr(a, l)` to `str.slice(a, a + l)` will fail for `a = -3, l = -1` — `substr()` returns an empty string, while `slice()` returns the third last character.
 
 ## Examples
 
