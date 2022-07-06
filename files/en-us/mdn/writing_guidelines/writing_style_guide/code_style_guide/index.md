@@ -1,12 +1,10 @@
 ---
 title: Guidelines for styling code examples
-slug: 
+slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
+page-type: mdn-writing-guide
 tags:
-  - Code
-  - General
-  - Guide
-  - Guidelines
-  - MDN Meta
+  - meta
+  - writing-guide
 ---
 {{MDNSidebar}}
 

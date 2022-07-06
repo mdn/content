@@ -1,7 +1,12 @@
-
+---
 title: MDN Web Docs writing style guide
-
-<!-- Captured -->
+slug: MDN/Writing_guidelines/Writing_style_guide
+page-type: mdn-writing-guide
+tags:
+  - meta
+  - writing-guide
+---
+{{MDNSidebar}}
 
 This writing style guide describes how content should be written, organized, spelled, and formatted on MDN Web Docs.
 

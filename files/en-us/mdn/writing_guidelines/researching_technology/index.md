@@ -1,4 +1,12 @@
-# Researching a technology
+---
+title: Researching a technology
+slug: MDN/Writing_guidelines/Research_technology
+page-type: mdn-writing-guide
+tags:
+  - meta
+  - writing-guide
+---
+{{MDNSidebar}}
 
 This guide gives you some handy information about approaching how to document technologies.
 
