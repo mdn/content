@@ -21,9 +21,9 @@ The `BooleanDelta` type of the {{WebExtAPIRef("downloads")}} API represents the 
 
 Values of this type are objects. They contain the following properties:
 
-- `current`{{optional_inline}}
+- `current` {{optional_inline}}
   - : A `boolean` representing the current boolean value.
-- `previous`{{optional_inline}}
+- `previous` {{optional_inline}}
   - : A `boolean` representing the previous boolean value.
 
 ## Browser compatibility
