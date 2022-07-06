@@ -104,7 +104,7 @@ addEventListener(type, listener, useCapture);
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Usage notes
 
