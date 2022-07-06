@@ -51,7 +51,7 @@ filter(function(element, index, array) { /* ... */ }, thisArg)
     - `array`
       - : The array on which `filter()` was called.
 
-- `thisArg`{{optional_inline}}
+- `thisArg` {{optional_inline}}
   - : Value to use as `this` when executing `callbackFn`.
 
 ### Return value

@@ -25,7 +25,7 @@ encode(frame, options)
 
 - `frame`
   - : A {{domxref("VideoFrame")}} object.
-- `options`{{Optional_Inline}}
+- `options` {{optional_inline}}
   - : An object containing the following member:
     - `keyFrame`
       - : A {{jsxref("boolean")}}, defaulting to `false` giving the user agent flexibility to decide if this frame should be encoded as a key frame. If `true` this indicates that the given frame must be encoded as a key frame.

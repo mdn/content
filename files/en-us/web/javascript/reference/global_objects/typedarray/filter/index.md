@@ -46,7 +46,7 @@ filter(function(element, index, array) { /* ... */ }, thisArg)
 
     The function is called with the following arguments: `(element, index, array)`.
     Return `true` to keep the element, `false` otherwise.
-- `thisArg`{{optional_inline}}
+- `thisArg` {{optional_inline}}
   - : Value to use as `this` when executing `callbackFn`.
 
 ### Return value

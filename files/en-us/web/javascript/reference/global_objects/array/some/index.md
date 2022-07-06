@@ -53,7 +53,7 @@ some(function(element, index, array) { /* ... */ }, thisArg)
     - `array`
       - : The array `some()` was called upon.
 
-- `thisArg`{{optional_inline}}
+- `thisArg` {{optional_inline}}
   - : A value to use as `this` when executing `callbackFn`.
 
 ### Return value

@@ -54,7 +54,7 @@ map(function(element, index, array) { /* ... */ }, thisArg)
     - `array`
       - : The array `map` was called upon.
 
-- `thisArg`{{optional_inline}}
+- `thisArg` {{optional_inline}}
   - : Value to use as `this` when executing `callbackFn`.
 
 ### Return value
