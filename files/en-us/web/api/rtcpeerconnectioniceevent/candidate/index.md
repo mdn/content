@@ -24,7 +24,7 @@ of the {{domxref("RTCPeerConnectionIceEvent")}} interface returns the
 ## Syntax
 
 ```js
- var candidate = event.candidate;
+ const candidate = event.candidate;
 ```
 
 ### Value
