@@ -71,7 +71,7 @@ It is also possible to ignore the standard HTTP Caching spec protocols in favor 
 Cache-Control: no-store
 ```
 
-For example, Varnish Cache uses VCL (Varnish Configuration Language, a type of DSL) logic to handle cache storage, while service workers in combination with the Cache API allow you to create that logic in JavaScript.
+For example, Varnish Cache uses VCL (Varnish Configuration Language, a type of {{Glossary("DSL/Domain_specific_language", "DSL")}}) logic to handle cache storage, while service workers in combination with the Cache API allow you to create that logic in JavaScript.
 
 That means if a managed cache intentionally ignores a `no-store` directive, there is no need to perceive it as being "non-compliant" with the standard. What you should do is, avoid using kitchen-sink headers, but carefully read the documentation of whatever managed-cache mechanism you're using, and ensure you're controlling the cache properly in the ways provided by the mechanism you've chosen to use.
 
