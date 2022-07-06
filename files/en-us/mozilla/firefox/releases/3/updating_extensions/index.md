@@ -12,7 +12,7 @@ Before going further, there's one helpful hint we can offer: if the only change 
 
 ## Step 1: Update the install manifest
 
-The first step -- and, for most extensions, the only one that will be needed -- is to update the [install manifest](/en-US/docs/Install_Manifests) file, [`install.rdf`](/en-US/docs/Creating_a_Skin_for_Firefox/install.rdf), to indicate compatibility with Firefox 3.
+The first step — and, for most extensions, the only one that will be needed — is to update the [install manifest](/en-US/docs/Install_Manifests) file, [`install.rdf`](/en-US/docs/Creating_a_Skin_for_Firefox/install.rdf), to indicate compatibility with Firefox 3.
 
 Find the line indicating the maximum compatible version of Firefox (which, for Firefox 2, might look like this):
 

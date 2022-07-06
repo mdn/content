@@ -18,6 +18,7 @@ non-existent variable is referenced.
 ```js
 new ReferenceError()
 new ReferenceError(message)
+new ReferenceError(message, options)
 new ReferenceError(message, fileName)
 new ReferenceError(message, fileName, lineNumber)
 ```
@@ -26,6 +27,11 @@ new ReferenceError(message, fileName, lineNumber)
 
 - `message` {{optional_inline}}
   - : Human-readable description of the error.
+- `options` {{optional_inline}}
+  - : An object that has the following properties:
+    - `cause` {{optional_inline}}
+      - : A property indicating the specific cause of the error.
+          When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
 - `fileName` {{optional_inline}} {{non-standard_inline}}
   - : The name of the file containing the code that caused the exception.
 - `lineNumber` {{optional_inline}} {{non-standard_inline}}

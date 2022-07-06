@@ -26,10 +26,11 @@ new Blob(array, options)
 ### Parameters
 
 - `array`
-  - : An {{jsxref("Array")}} of {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}},
-    a {{domxref("Blob")}}, string objects, or a mix of any of such
-    objects, that will be put inside the {{domxref("Blob")}}.
-    Note that strings objects here are encoded as UTF-8, unlike the usual JS UTF-16 strings.
+  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
+    object such as an {{jsxref("Array")}}, having {{jsxref("ArrayBuffer")}}s,
+    {{jsxref("TypedArray")}}s, {{jsxref("DataView")}}s, {{domxref("Blob")}}s, strings,
+    or a mix of any of such elements, that will be put inside the {{domxref("Blob")}}.
+    Note that strings here are encoded as UTF-8, unlike the usual JavaScript UTF-16 strings.
 
 - `options` {{optional_inline}}
   - : An object which may specify any of the following properties:

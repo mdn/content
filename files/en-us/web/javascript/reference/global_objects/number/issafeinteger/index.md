@@ -54,14 +54,6 @@ Number.isSafeInteger(testValue)
 The boolean value `true` if the given value is a number that is a
 safe integer. Otherwise `false`.
 
-## Polyfill
-
-```js
-Number.isSafeInteger = Number.isSafeInteger || function (value) {
-   return Number.isInteger(value) && Math.abs(value) <= Number.MAX_SAFE_INTEGER;
-};
-```
-
 ## Examples
 
 ### Using isSafeInteger

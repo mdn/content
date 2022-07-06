@@ -64,8 +64,6 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
   - : The X coordinate of the mouse pointer relative to the whole document.
 - {{domxref("MouseEvent.pageY")}} {{readonlyinline}}
   - : The Y coordinate of the mouse pointer relative to the whole document.
-- {{domxref("MouseEvent.region")}} {{readonlyinline}}
-  - : Returns the id of the hit region affected by the event. If no hit region is affected, `null` is returned.
 - {{domxref("MouseEvent.relatedTarget")}} {{readonlyinline}}
   - : The secondary target for the event, if there is one.
 - {{domxref("MouseEvent.screenX")}} {{readonlyinline}}

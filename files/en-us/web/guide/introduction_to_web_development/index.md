@@ -51,8 +51,8 @@ For another (overlapping) set of links to learning resources, see the [MDN Learn
 #### Advanced
 
 - [Learning advanced JavaScript](https://johnresig.com/apps/learn/) — John Resig's guide to advanced JavaScript
-- [Crockford on Advanced JavaScript](https://uk.screen.yahoo.com/watch/111585/1027823) — a three part video series on advanced JavaScript concepts
-- [JavaScript Garden](https://bonsaiden.github.io/JavaScript-Garden/) — Documentation of the most quirky parts of JavaScript.
+- [Crockford on Advanced JavaScript](https://www.youtube.com/watch?v=DwYPG6vreJg) — a video on advanced JavaScript concepts
+- [JavaScript Garden](https://bonsaiden.github.io/JavaScript-Garden/) — documentation of the most quirky parts of JavaScript
 
 ## Resources
 

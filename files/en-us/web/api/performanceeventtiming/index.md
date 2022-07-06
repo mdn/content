@@ -32,12 +32,12 @@ The `PerformanceEventTiming` interface of the Event Timing API provides timing i
 - {{event("keydown")}}
 - {{event("keypress")}}
 - {{event("keyup")}}
-- {{event("mousedown")}}
-- {{event("mouseenter")}}
-- {{event("mouseleave")}}
-- {{event("mouseout")}}
-- {{event("mouseover")}}
-- {{event("mouseup")}}
+- {{domxref("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/mouseenter_event", "mouseenter")}}
+- {{domxref("Element/mouseleave_event", "mouseleave")}}
+- {{domxref("Element/mouseout_event", "mouseout")}}
+- {{domxref("Element/mouseover_event", "mouseover")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
 - {{domxref("HTMLElement/pointerover_event", "pointerover")}}
 - {{domxref("HTMLElement/pointerenter_event", "pointerenter")}}
 - {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}

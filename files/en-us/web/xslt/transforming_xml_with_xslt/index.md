@@ -134,10 +134,6 @@ Our focus here is on the second type of stylesheet that Gecko supports: the XSLT
   - [Tutorials/Examples](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#tutorials.2fexamples)
   - [Other](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#other)
 
-## Resources
-
-[Resources](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/Resources)
-
 ## Original Document Information
 
 - Copyright Information: Copyright © 2001-2003 Netscape. All rights reserved.

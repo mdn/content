@@ -21,9 +21,11 @@ The **`EvalError`** object indicates an error regarding the global {{jsxref("Glo
 ## Instance properties
 
 - {{jsxref("Error.prototype.message", "EvalError.prototype.message")}}
-  - : Error message.
+  - : Error message. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.name", "EvalError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.cause", "EvalError.prototype.cause")}}
+  - : Error cause. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.fileName", "EvalError.prototype.fileName")}} {{non-standard_inline}}
   - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.lineNumber", "EvalError.prototype.lineNumber")}} {{non-standard_inline}}

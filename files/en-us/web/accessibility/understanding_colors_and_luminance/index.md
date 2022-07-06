@@ -240,7 +240,7 @@ A complete color theory and color design guide is beyond the scope of this docum
 
 ### Color terms
 
-The world standard in terms of colorimetry (measuring color) is the **CIE**, and their [interactive glossary](http://eilv.cie.co.at) is filled with color information.
+The world standard in terms of colorimetry (measuring color) is the **CIE**, and their [interactive glossary](http://cie.co.at/e-ilv) is filled with color information.
 
 > **Note:** Tip: when searching the CIE glossary use the UK spelling of "colour."
 

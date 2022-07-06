@@ -62,7 +62,7 @@ Browsers tend to handle the `popstate` event differently on page load. Chrome (p
 
 ## When popstate is sent
 
-It’s important to first understand that — to combat unwanted pop-ups — browsers may not fire the `popstate` event at all unless the page has been interacted with.
+It's important to first understand that — to combat unwanted pop-ups — browsers may not fire the `popstate` event at all unless the page has been interacted with.
 
 This section describes the steps that browsers follow in the cases where they _do_ potentially fire the `popstate` event (that is, in the cases where the page has been interacted with).
 

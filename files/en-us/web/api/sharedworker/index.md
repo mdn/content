@@ -101,4 +101,3 @@ onconnect = function(e) {
 ## See also
 
 - {{domxref("Worker")}}
-- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

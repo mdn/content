@@ -46,7 +46,7 @@ function setResourceTimingBufferSize(maxSize) {
     log("Browser does not support Web Performance");
     return;
   }
-  var supported = typeof performance.setResourceTimingBufferSize == "function";
+  const supported = typeof performance.setResourceTimingBufferSize == "function";
   if (supported) {
     log("... Performance.setResourceTimingBufferSize() = Yes");
     performance.setResourceTimingBufferSize(maxSize);

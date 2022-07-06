@@ -180,34 +180,6 @@ george(); // 'Hello guys!!'
 const dict = Object.setPrototypeOf({}, null);
 ```
 
-## Polyfill
-
-Using the older {{jsxref("Object.prototype.__proto__")}} property, we can easily define
-`Object.setPrototypeOf` if it isn't available already:
-
-```js
-if (!Object.setPrototypeOf) {
-    // Only works in Chrome and FireFox, does not work in IE:
-     Object.prototype.setPrototypeOf = function(obj, proto) {
-         if(obj.__proto__) {
-             obj.__proto__ = proto;
-             return obj;
-         } else {
-             // If you want to return prototype of Object.create(null):
-             var Fn = function() {
-                 for (var key in obj) {
-                     Object.defineProperty(this, key, {
-                         value: obj[key],
-                     });
-                 }
-             };
-             Fn.prototype = proto;
-             return new Fn();
-         }
-     }
-}
-```
-
 ## Specifications
 
 {{Specifications}}
@@ -218,6 +190,7 @@ if (!Object.setPrototypeOf) {
 
 ## See also
 
+- [Polyfill of `Object.setPrototypeOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Reflect.setPrototypeOf()")}}
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.getPrototypeOf()")}}

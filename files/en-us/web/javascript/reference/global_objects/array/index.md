@@ -69,9 +69,13 @@ In JavaScript, arrays aren't [primitives](/en-US/docs/Glossary/Primitive) but ar
 - {{jsxref("Array.prototype.filter()")}}
   - : Returns a new array containing all elements of the calling array for which the provided filtering function returns `true`.
 - {{jsxref("Array.prototype.find()")}}
-  - : Returns the found `element` in the calling array, if some element in the array satisfies the testing function, or `undefined` if not found.
+  - : Returns the value of the first element in the array that satisfies the provided testing function, or `undefined` if no appropriate element is found.
 - {{jsxref("Array.prototype.findIndex()")}}
-  - : Returns the found index in the calling array, if an element in the array satisfies the testing function, or `-1` if not found.
+  - : Returns the index of the first element in the array that satisfies the provided testing function, or `-1` if no appropriate element was found.
+- {{jsxref("Array.prototype.findLast()")}}
+  - : Returns the value of the last element in the array that satisfies the provided testing function, or `undefined` if no appropriate element is found.
+- {{jsxref("Array.prototype.findLastIndex()")}}
+  - : Returns the index of the last element in the array that satisfies the provided testing function, or `-1` if no appropriate element was found.
 - {{jsxref("Array.prototype.flat()")}}
   - : Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
 - {{jsxref("Array.prototype.flatMap()")}}

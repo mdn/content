@@ -105,55 +105,6 @@ console.log(this.x); // "global"
 console.log(this.y); // undefined
 ```
 
-### Emulating private members
-
-In dealing with {{Glossary("Constructor", "constructors")}} it is possible to use the
-**`let`** bindings to share one or more private members without
-using [closures](/en-US/docs/Web/JavaScript/Closures):
-
-```js
-var Thing;
-
-{
-  let privateScope = new WeakMap();
-  let counter = 0;
-
-  Thing = function() {
-    this.someProperty = 'foo';
-
-    privateScope.set(this, {
-      hidden: ++counter,
-    });
-  };
-
-  Thing.prototype.showPublic = function() {
-    return this.someProperty;
-  };
-
-  Thing.prototype.showPrivate = function() {
-    return privateScope.get(this).hidden;
-  };
-}
-
-console.log(typeof privateScope);
-// "undefined"
-
-var thing = new Thing();
-
-console.log(thing);
-// Thing {someProperty: "foo"}
-
-thing.showPublic();
-// "foo"
-
-thing.showPrivate();
-// 1
-```
-
-The same privacy pattern with closures over local variables can be created with
-`var`, but those need a function scope (typically an {{Glossary("IIFE")}} in
-the module pattern) instead of just a block scope like in the example above.
-
 ### Redeclarations
 
 Redeclaring the same variable within the same function or block scope raises a
@@ -290,7 +241,7 @@ function go(n) {
   // n here is defined!
   console.log(n); // Object {a: [1,2,3]}
 
-  for (let n of n.a) { // ReferenceError
+  for (const n of n.a) { // ReferenceError
     console.log(n);
   }
 }
