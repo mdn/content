@@ -76,7 +76,7 @@ Events have three functions:
         - `error`
           - : `string`. The error code. This is an internal error code, and is not guaranteed to stay the same or be consistent from one browser to another.
 
-- `filter`{{optional_inline}}
+- `filter` {{optional_inline}}
 
   - : `object`. An object containing a single property `url`, which is an `Array` of {{WebExtAPIRef("events.UrlFilter")}} objects.
 
