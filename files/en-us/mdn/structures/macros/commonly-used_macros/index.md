@@ -226,7 +226,7 @@ Example:
 
 - `isCustomObject`{{ReadOnlyInline}}
   - : Indicates, if `true`, that the object is a custom one.
-- `parameterX`{{Optional_Inline}}
+- `parameterX` {{optional_inline}}
   - : Blah blah blah...
 
 ## Status and compatibility indicators

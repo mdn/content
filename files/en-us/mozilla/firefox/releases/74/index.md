@@ -46,7 +46,7 @@ _No changes._
 
 #### Removals
 
-- The {{jsxref("Object.toSource()")}} method and the global function {{jsxref("uneval()")}} are no longer available for use by web content or extensions ([bug 1565170](https://bugzilla.mozilla.org/show_bug.cgi?id=1565170)).
+- The `Object.toSource()` method and the global function `uneval()` are no longer available for use by web content or extensions ([bug 1565170](https://bugzilla.mozilla.org/show_bug.cgi?id=1565170)).
 
 ### APIs
 

@@ -15,15 +15,7 @@ browser-compat: css.selectors.read-only
 
 The **`:read-only`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element (such as `input` or `textarea`) that is not editable by the user.
 
-```css
-input:read-only, textarea:read-only {
-  background-color: #ccc;
-}
-
-p:read-only {
-  background-color: #ccc;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-read-only.html", "tabbed-shorter")}}
 
 ## Syntax
 

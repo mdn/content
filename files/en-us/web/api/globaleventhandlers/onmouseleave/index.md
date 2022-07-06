@@ -14,7 +14,7 @@ browser-compat: api.GlobalEventHandlers.onmouseleave
 
 The **`onmouseleave`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
-processing {{event("mouseleave")}} events.
+processing {{domxref("Element/mouseleave_event", "mouseleave")}} events.
 
 The `mouseleave` event is fired when a pointing device (usually a mouse) is
 moved off the element that has the listener attached.
@@ -39,5 +39,5 @@ specifying the handler for the event.
 
 ## See also
 
-- {{event("mouseleave")}}
+- {{domxref("Element/mouseleave_event", "mouseleave")}}
 - [DOM event handlers](/en-US/docs/Web/Events/Event_handlers)

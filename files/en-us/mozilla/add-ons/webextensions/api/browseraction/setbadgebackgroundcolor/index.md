@@ -43,9 +43,9 @@ browser.browserAction.setBadgeBackgroundColor(
         - a `{{WebExtAPIRef('browserAction.ColorArray')}}` object.
         - `null`. If a `tabId` is specified, it removes the tab-specific badge background color so that the tab inherits the global badge background color. Otherwise it reverts the global badge background color to the default value.
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Sets the badge background color only for the given tab. The color is reset when the user navigates this tab to a new page.
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. Sets the badge background color only for the given tab.
 
 <!---->

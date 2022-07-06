@@ -122737,7 +122737,7 @@
       "SphinxKnight"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges": {
+  "Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences": {
     "modified": "2020-07-18T10:38:09.718Z",
     "contributors": [
       "ItaHeld90",
@@ -126977,28 +126977,6 @@
       "Mingun"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/toSource": {
-    "modified": "2020-10-15T21:12:21.309Z",
-    "contributors": [
-      "evilpie",
-      "alattalatta",
-      "mfuji09",
-      "fscholz",
-      "erikadoyle",
-      "behnammodi",
-      "eduardoboucas",
-      "Mingun",
-      "Sheppy",
-      "ethertank",
-      "trevorh",
-      "Sevenspade",
-      "Mgjbot",
-      "Yuichirou",
-      "Ptak82",
-      "Maian",
-      "Dria"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Array/toString": {
     "modified": "2020-10-20T12:40:16.604Z",
     "contributors": [
@@ -127514,27 +127492,6 @@
     "contributors": [
       "fscholz",
       "wbamberg"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Boolean/toSource": {
-    "modified": "2020-10-15T21:08:22.450Z",
-    "contributors": [
-      "fscholz",
-      "JamesCatt",
-      "evilpie",
-      "wbamberg",
-      "Jedipedia",
-      "eduardoboucas",
-      "Mingun",
-      "Sheppy",
-      "ethertank",
-      "berkerpeksag",
-      "Sevenspade",
-      "Mgjbot",
-      "Yuichirou",
-      "Maian",
-      "Marcoos",
-      "Dria"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Boolean/toString": {
@@ -129064,22 +129021,6 @@
       "Dria"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Date/toSource": {
-    "modified": "2020-10-15T21:12:18.290Z",
-    "contributors": [
-      "fscholz",
-      "evilpie",
-      "teoli",
-      "eduardoboucas",
-      "Mingun",
-      "Sheppy",
-      "ethertank",
-      "Sevenspade",
-      "Ptak82",
-      "Maian",
-      "Dria"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Date/toString": {
     "modified": "2020-10-25T01:10:32.913Z",
     "contributors": [
@@ -129952,30 +129893,6 @@
       "Andrea@3site.it",
       "Seant23",
       "Andreas Wuest"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Function/toSource": {
-    "modified": "2020-11-06T15:40:45.102Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "JamesCatt",
-      "evilpie",
-      "mfluehr",
-      "nrebhun",
-      "eduardoboucas",
-      "teoli",
-      "Mingun",
-      "denim2x",
-      "rvighne",
-      "Sheppy",
-      "ethertank",
-      "techlivezheng",
-      "Mgjbot",
-      "Waldo",
-      "Sevenspade",
-      "Maian",
-      "Dria"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Function/toString": {
@@ -133156,23 +133073,6 @@
       "Mook"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Number/toSource": {
-    "modified": "2020-10-15T21:08:27.274Z",
-    "contributors": [
-      "fscholz",
-      "evilpie",
-      "Yialo",
-      "eduardoboucas",
-      "Mingun",
-      "Sheppy",
-      "ethertank",
-      "berkerpeksag",
-      "Sevenspade",
-      "Waldo",
-      "Mgjbot",
-      "Potappo"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Number/toString": {
     "modified": "2020-11-03T12:22:29.405Z",
     "contributors": [
@@ -134352,33 +134252,6 @@
       "Ptak82",
       "Nickolay",
       "Maian"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Object/toSource": {
-    "modified": "2020-12-06T15:04:37.877Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "JamesCatt",
-      "evilpie",
-      "wbamberg",
-      "Jedipedia",
-      "claudepache",
-      "ZeroUnderscoreOu",
-      "eduardoboucas",
-      "Mingun",
-      "TTO",
-      "Timeroot",
-      "Sheppy",
-      "ethertank",
-      "Potappo",
-      "Jorend",
-      "Mgjbot",
-      "Sevenspade",
-      "Ptak82",
-      "Maian",
-      "Hao2lian",
-      "Dria"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Object/toString": {
@@ -136067,26 +135940,6 @@
       "evilpie",
       "Brettz9",
       "Mgjbot",
-      "Maian",
-      "Dria"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/RegExp/toSource": {
-    "modified": "2020-10-15T21:04:56.327Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "evilpie",
-      "Yialo",
-      "eduardoboucas",
-      "teoli",
-      "Mingun",
-      "Sheppy",
-      "ethertank",
-      "ziyunfei",
-      "Sevenspade",
-      "Mgjbot",
-      "Potappo",
       "Maian",
       "Dria"
     ]
@@ -137995,26 +137848,6 @@
       "Dria"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/String/toSource": {
-    "modified": "2020-10-15T21:12:06.610Z",
-    "contributors": [
-      "fscholz",
-      "evilpie",
-      "teoli",
-      "jameshkramer",
-      "eduardoboucas",
-      "chrisdavidmills",
-      "PawelCzarnota",
-      "Mingun",
-      "Sheppy",
-      "ethertank",
-      "Sevenspade",
-      "Mgjbot",
-      "Diablownik",
-      "Maian",
-      "Dria"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/String/toString": {
     "modified": "2020-10-15T21:12:10.796Z",
     "contributors": [
@@ -138368,17 +138201,6 @@
       "ZeikJT",
       "The-Quill",
       "arai"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Symbol/toSource": {
-    "modified": "2020-11-22T12:29:29.352Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "evilpie",
-      "wbamberg",
-      "teoli",
-      "eduardoboucas"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Symbol/toString": {
@@ -140125,24 +139947,6 @@
       "x2357",
       "Ms2ger",
       "Sebastianz"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/uneval": {
-    "modified": "2020-10-15T21:23:46.043Z",
-    "contributors": [
-      "ExE-Boss",
-      "fscholz",
-      "Zearin_Galaurum",
-      "SphinxKnight",
-      "nmve",
-      "eduardoboucas",
-      "Dan-Dascalescu",
-      "x2357",
-      "MatthewKastor",
-      "Sheppy",
-      "ethertank",
-      "daniel_kontos",
-      "Jens_Verneuer"
     ]
   },
   "Web/JavaScript/Reference/Iteration_protocols": {

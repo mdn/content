@@ -31,7 +31,7 @@ This API is also available as `browser.extension.getExtensionTabs()`.
 
 ### Parameters
 
-- `windowId`{{optional_inline}}
+- `windowId` {{optional_inline}}
   - : `integer`.
 
 ### Return value

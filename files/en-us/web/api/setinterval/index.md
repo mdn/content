@@ -49,7 +49,7 @@ setInterval(func, delay, arg0, arg1, /* ... ,*/ argN)
     compiled and executed every `delay` milliseconds. This syntax is _not
     recommended_ for the same reasons that make using {{jsxref("Global_Objects/eval", "eval()")}} a
     security risk.
-- `delay`{{optional_inline}}
+- `delay` {{optional_inline}}
   - : The time, in milliseconds (thousandths of a second), the timer should delay in
     between executions of the specified function or code. Defaults to 0 if not specified. See [Delay restrictions](#delay_restrictions)
     below for details on the permitted range of `delay` values.

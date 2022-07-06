@@ -45,9 +45,9 @@ This API is also available as `chrome.browserAction.setBadgeText()`.
 
         If a `windowId` is specified, `null` removes the window-specific badge text so that the tab inherits the global badge text. Otherwise it reverts the global badge text to `""`.
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Set the badge text only for the given tab. The text is reset when the user navigates this tab to a new page.
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. Set the badge text for the given window.
 
 <!---->

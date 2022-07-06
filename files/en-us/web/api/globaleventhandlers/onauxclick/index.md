@@ -19,8 +19,8 @@ The **`onauxclick`** property of the
 processing {{event("auxclick")}} events.
 
 The `auxclick` event is raised when a non-primary button has been pressed on
-an input device (e.g., a middle mouse button). It fires after the {{event("mousedown")}}
-and {{event("mouseup")}} events, in that order.
+an input device (e.g., a middle mouse button). It fires after the {{domxref("Element/mousedown_event", "mousedown")}}
+and {{domxref("Element/mouseup_event", "mouseup")}} events, in that order.
 
 > **Note:** Browser vendors are implementing this property as part of a
 > plan to improve compatibility with regards to button behaviors. Specifically, event

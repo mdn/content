@@ -130,7 +130,7 @@ criterion was met**.
 See example here:
 
 ```js
-var foo = 0;
+const foo = 0;
 switch (foo) {
   case -1:
     console.log('negative 1');
@@ -155,7 +155,7 @@ Yes, you can! JavaScript will drop you back to the `default` if it can't
 find a match:
 
 ```js
-var foo = 5;
+const foo = 5;
 switch (foo) {
   case 2:
     console.log(2);
@@ -185,7 +185,7 @@ This is an example of a single operation sequential `case` statement, where
 four different values perform exactly the same.
 
 ```js
-var Animal = 'Giraffe';
+const Animal = 'Giraffe';
 switch (Animal) {
   case 'Cow':
   case 'Giraffe':
@@ -208,8 +208,8 @@ not have to be numerically sequential. In JavaScript, you can even mix in defini
 strings into these `case` statements as well.
 
 ```js
-var foo = 1;
-var output = 'Output: ';
+const foo = 1;
+let output = 'Output: ';
 switch (foo) {
   case 0:
     output += 'So ';

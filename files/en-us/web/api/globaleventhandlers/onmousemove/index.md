@@ -15,7 +15,7 @@ browser-compat: api.GlobalEventHandlers.onmousemove
 
 The **`onmousemove`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("mousemove")}} events.
+processes {{domxref("Element/mousemove_event", "mousemove")}} events.
 
 The `mousemove` event fires when the user moves the mouse.
 
@@ -110,4 +110,4 @@ handler with draggable objects — [view the example in action](https://media.pr
 
 ## See also
 
-- {{event("mousemove")}} event
+- {{domxref("Element/mousemove_event", "mousemove")}} event

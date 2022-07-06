@@ -31,7 +31,7 @@ new AudioEncoder(init)
           - : An integer representing the number of frame samples per second.
         - `numberOfChannels`
           - : An integer representing the number of audio channels.
-        - `description`{{Optional_Inline}}
+        - `description` {{optional_inline}}
           - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing a sequence of codec specific bytes, commonly known as extradata.
     - `error`
       - : A callback which takes an {{jsxref("Error")}} object as its only argument.

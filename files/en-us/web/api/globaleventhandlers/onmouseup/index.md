@@ -15,7 +15,7 @@ browser-compat: api.GlobalEventHandlers.onmouseup
 
 The **`onmouseup`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("mouseup")}} events.
+processes {{domxref("Element/mouseup_event", "mouseup")}} events.
 
 The `mouseup` event fires when the user releases the mouse button.
 
@@ -116,4 +116,4 @@ document.onmouseup = release;
 
 ## See also
 
-- {{event("mouseup")}} event
+- {{domxref("Element/mouseup_event", "mouseup")}} event

@@ -71,7 +71,7 @@ Within a keyframe, `animating-timing-function` is an at-rule-specific descriptor
 - `ease-in`
   - : Equal to `cubic-bezier(0.42, 0, 1.0, 1.0)`, starts off slowly, with the speed of the transition of the animating property increasing until complete.
 - `ease-out`
-  - : Equal to `cubic-bezier(0, 0, 0.58, 1.0)`, starts quickly, slowing down the animation continues. •
+  - : Equal to `cubic-bezier(0, 0, 0.58, 1.0)`, starts quickly, slowing down the animation continues.
 - `ease-in-out`
   - : Equal to `cubic-bezier(0.42, 0, 0.58, 1.0)`, with the animating properties slowly transitioning, speeding up, and then slowing down again.
 - `cubic-bezier(p1, p2, p3, p4)`

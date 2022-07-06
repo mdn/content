@@ -708,8 +708,6 @@ JavaScript has several top-level, built-in functions:
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
   - : The **`eval()`** method evaluates JavaScript code represented as a string.
-- {{jsxref("Global_Objects/uneval", "uneval()")}}
-  - : The **`uneval()`** method creates a string representation of the source code of an {{jsxref("Object")}}.
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}
   - : The global **`isFinite()`** function determines whether the passed value is a finite number. If needed, the parameter is first converted to a number.
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}

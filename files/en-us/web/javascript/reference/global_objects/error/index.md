@@ -45,18 +45,23 @@ Besides the generic `Error` constructor, there are other core error constructors
 
 ## Static methods
 
-- {{JSxRef("Error.captureStackTrace()")}}
-  - : A non-standard **V8** function that creates the {{JSxRef("Error.prototype.stack", "stack")}} property on an Error instance.
+- `Error.captureStackTrace()` {{non-standard_inline}}
+  - : A non-standard V8 function that creates the {{JSxRef("Error.prototype.stack", "stack")}} property on an Error instance.
+
+- `Error.stackTraceLimit` {{non-standard_inline}}
+  - : A non-standard V8 numerical property that limits how many stack frames to include in an error stacktrace.
+
+- `Error.prepareStackTrace()` {{non-standard_inline}} {{optional_inline}}
+  - : A non-standard V8 function that, if provided by usercode, is called by the V8 JavaScript engine for thrown exceptions, allowing the user to provide custom formatting for stacktraces.
 
 ## Instance properties
 
 - {{jsxref("Error.prototype.message")}}
-  - : Error message.
+  - : Error message. For user-created `Error` objects, this is the string provided as the constructor's first argument.
 - {{jsxref("Error.prototype.name")}}
-  - : Error name.
+  - : Error name. This is determined by the constructor function.
 - {{jsxref("Error.prototype.cause")}}
-  - : Error cause.
-     If an error is caught and re-thrown, this property should contain the original error.
+  - : Error cause indicating the reason why the current error is thrown — usually another caught error. For user-created `Error` objects, this is the value provided as the `cause` property of the constructor's second argument.
 - {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
   - : A non-standard Mozilla property for the path to the file that raised this error.
 - {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
@@ -241,3 +246,4 @@ try {
 - [A polyfill of `Error`](https://github.com/zloirock/core-js#ecmascript-error) with modern behavior like support `cause` is available in [`core-js`](https://github.com/zloirock/core-js)
 - {{JSxRef("Statements/throw", "throw")}}
 - {{JSxRef("Statements/try...catch", "try...catch")}}
+- The [V8 documentation](https://v8.dev/docs/stack-trace-api) for `Error.captureStackTrace()`, `Error.stackTraceLimit`, and `Error.prepareStackTrace()`.

@@ -23,11 +23,11 @@ decode(options)
 
 ### Parameters
 
-- `options`{{Optional_Inline}}
+- `options` {{optional_inline}}
   - : An object containing the following members:
-    - `frameIndex`{{Optional_Inline}}
+    - `frameIndex` {{optional_inline}}
       - : An integer representing the index of the frame to decode. Defaults to `0` (the first frame).
-    - `completeFramesOnly`{{Optional_Inline}}
+    - `completeFramesOnly` {{optional_inline}}
       - : A {{jsxref("boolean")}} defaulting to `true`. When `false` indicates that for progressive images the decoder may output an image with reduced detail. When `false`, the promise returned by `decode()` will resolve exactly once for each new level of detail.
 
 ### Return value
