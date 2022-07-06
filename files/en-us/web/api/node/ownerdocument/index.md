@@ -30,6 +30,16 @@ const d = p.ownerDocument;
 const html = d.documentElement;
 ```
 
+
+```js
+// a node that is itself a document
+
+documen;
+documen.documentElement;
+// null
+```
+
+
 ## Specifications
 
 {{Specifications}}
