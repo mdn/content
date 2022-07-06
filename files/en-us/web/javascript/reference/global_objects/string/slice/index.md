@@ -41,10 +41,10 @@ A new string containing the extracted section of the string.
 `slice()` extracts up to but not including `indexEnd`. For example, `str.slice(1, 4)` extracts the second character through the fourth character (characters indexed `1`, `2`, and `3`).
 
 - If `indexStart >= str.length`, an empty string is returned.
-- If `indexStart < 0`, the index starts counting from the end of the string. More formally, in this case the substring starts at `max(indexStart + str.length, 0)`.
+- If `indexStart < 0`, the index is counted from the end of the string. More formally, in this case, the substring starts at `max(indexStart + str.length, 0)`.
 - If `indexStart` is omitted, undefined, or cannot be converted to a number (using {{jsxref('Number', 'Number(indexStart)')}}), it's treated as `0`.
 - If `indexEnd` is omitted, undefined, or cannot be converted to a number (using {{jsxref('Number', 'Number(indexEnd)')}}), or if `indexEnd >= str.length`, `slice()` extracts to the end of the string.
-- If `indexEnd < 0`, the index starts counting from the end of the string. More formally, in this case the substring starts at `max(indexEnd + str.length, 0)`.
+- If `indexEnd < 0`, the index is counted from the end of the string. More formally, in this case, the substring ends at `max(indexEnd + str.length, 0)`.
 - If `indexEnd <= indexStart` after normalizing negative values (i.e. `indexEnd` represents a character that's before `indexStart`), an empty string is returned.
 
 ## Examples
@@ -71,9 +71,10 @@ The following example uses `slice()` with negative indexes.
 
 ```js
 const str = 'The morning is upon us.';
-str.slice(-3);      // returns 'us.'
-str.slice(-3, -1);  // returns 'us'
-str.slice(0, -1);   // returns 'The morning is upon us'
+str.slice(-3);     // returns 'us.'
+str.slice(-3, -1); // returns 'us'
+str.slice(0, -1);  // returns 'The morning is upon us'
+str.slice(4, -1);  // returns 'morning is upon us'
 ```
 
 This example counts backwards from the end of the string by `11` to find the

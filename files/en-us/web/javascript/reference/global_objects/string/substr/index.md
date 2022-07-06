@@ -15,6 +15,8 @@ browser-compat: javascript.builtins.String.substr
 
 The **`substr()`** method returns a portion of the string, starting at the specified index and extending for a given number of characters afterwards.
 
+> **Note:** `substr()` is not part of the main ECMAScript specification — it's defined in [Annex B: Additional ECMAScript Features for Web Browsers](https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers), which is normative optional for non-browser runtimes. Therefore, people are advised to use the standard [`String.prototype.substring()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring) and [`String.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice) methods instead to make their code maximally cross-platform friendly. The [`String.prototype.substring()` page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring#the_difference_between_substring_and_substr) has some comparisons between the three methods.
+
 {{EmbedInteractiveExample("pages/js/string-substr.html")}}
 
 ## Syntax
@@ -46,15 +48,7 @@ A string's `substr()` method extracts `length` characters from the string, count
 - If `length < 0`, an empty string is returned.
 - For both `start` and `length`, {{jsxref("NaN")}} is treated as `0`.
 
-> **Note:** In Microsoft JScript, negative values of the `start` argument are not considered to refer to the end of the string.
-
-`substr()` is not part of the main ECMAScript specification — it's defined in [Annex B: Additional ECMAScript Features for Web Browsers](https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers), which is normative optional for non-browser runtimes. Therefore, people are advised to use the standard [`String.prototype.substring()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring) method instead. They differ in the following ways:
-
-- The two parameters of `substr()` are `start` and `length`, while for `substring()`, they are `start` and `end`.
-- `substr()`'s `start` index will wrap to the end of the string if it is negative, while `substring()` will clamp it to `0`.
-- Negative lengths in `substr()` are treated as zero, while `substring()` will swap the two indexes if `end` is less than `start`.
-
-In some sense, `substr()` is closer to the [`String.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice) method than to `String.prototype.substring()`, because the indexes of `slice()` also wrap around the string's boundaries, and negative lengths return empty strings. Still, there is no trivial way to migrate `substr()` to either `slice()` or `substring()` without essentially writing a polyfill for `substr()`, so the actual refactored code depends on the knowledge of the range of `a` and `b`. For example, naïvely rewriting `str.substr(a, l)` to `str.slice(a, a + l)` will fail for `a = -3, l = -1` — `substr()` returns an empty string, while `slice()` returns the third last character.
+Although you are encouraged to avoid using `substr()`, there is no trivial way to migrate `substr()` to either `slice()` or `substring()` in legacy code without essentially writing a polyfill for `substr()`. For example, `str.substr(a, l)`, `str.slice(a, a + l)`, and `str.substring(a, a + l)` all have different results when `str = "01234", a = 1, l = -2` — `substr()` returns an empty string, `slice()` returns `"123"`, while `substring()` returns `"0"`. The actual refactoring path depends on the knowledge of the range of `a` and `l`.
 
 ## Examples
 

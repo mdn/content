@@ -93,15 +93,15 @@ console.log(anyString5);
 
 ### The difference between substring() and substr()
 
-There's a subtle difference between the `substring()` and
+There are subtle differences between the `substring()` and
 {{jsxref("String.substr", "substr()")}} methods, so you should be careful not to get
 them confused.
 
-The arguments of `substring()` represent the starting and ending indexes,
-while the arguments of `substr()` represent the starting index and the number
-of characters to include in the returned string.
+- The two parameters of `substr()` are `start` and `length`, while for `substring()`, they are `start` and `end`.
+- `substr()`'s `start` index will wrap to the end of the string if it is negative, while `substring()` will clamp it to `0`.
+- Negative lengths in `substr()` are treated as zero, while `substring()` will swap the two indexes if `end` is less than `start`.
 
-Furthermore, `substr()` is considered a **legacy feature in ECMAScript**, so it is best to avoid using it if possible.
+Furthermore, `substr()` is considered a _legacy feature in ECMAScript_, so it is best to avoid using it if possible.
 
 ```js
 const text = 'Mozilla';
