@@ -489,21 +489,50 @@ You can set more than one of the options in the `options` parameter. In the foll
 
 ```html
 <button id="example-button">You have not clicked this button.</button>
+<button id="reset-button">Click this button to reset the above button.</button>
 ```
 
 #### JavaScript
 
 ```js
-const button = document.getElementById("example-button");
+const buttonToBeClicked = document.getElementById("example-button");
 
-button.addEventListener(
+const resetButton = document.getElementById("reset-button");
+
+// the text that the button is initalized with
+const intialText = buttonToBeClicked.textContent;
+
+// the text that the button contains after being clicked
+const clickedText = "You have clicked this button.";
+
+// we hoist the event listener callback function
+// to prevent having duplicate listeners attached
+function eventListener() {
+  buttonToBeClicked.textContent = clickedText;
+}
+
+function addListener() {
+  buttonToBeClicked.addEventListener(
+    "click",
+    eventListener,
+    {
+      passive: true,
+      once: true
+    }
+  );
+}
+
+// when the reset button is clicked, the example button is reset,
+// and allowed to have its state updated again
+resetButton.addEventListener(
   "click",
-  () => button.textContent = "You have clicked this button.",
-  {
-    passive: true,
-    once: true
+  () => {
+    button.textContent = intialText;
+    addListener();
   }
 );
+
+addListener();
 ```
 
 #### Result
