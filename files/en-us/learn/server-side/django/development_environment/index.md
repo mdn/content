@@ -295,7 +295,7 @@ At this point, you may see a bunch of scripts being run (the same scripts as for
 
 #### Windows 10 virtual environment setup
 
-Installing [virtualenvwrapper-win](https://pypi.org/virtualenvwrapper-win) is even simpler than setting up *virtualenvwrapper* because you don't need to configure where the tool stores virtual environment information (there is a default value). All you need to do is run the following command in the command prompt:
+Installing [virtualenvwrapper-win](https://pypi.org/project/virtualenvwrapper-win/) is even simpler than setting up *virtualenvwrapper* because you don't need to configure where the tool stores virtual environment information (there is a default value). All you need to do is run the following command in the command prompt:
 
 ```bash
 pip3 install virtualenvwrapper-win
