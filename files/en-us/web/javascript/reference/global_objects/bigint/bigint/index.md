@@ -30,7 +30,7 @@ BigInt(value);
 ### Exceptions
 
 - {{jsxref("RangeError")}}:
-  - : If the argument is a non-integral number.
+  - : Thrown if the parameter is a non-integral number.
 
 - {{jsxref("TypeError")}}:
   - : Thrown if at least one of these conditions is met:
