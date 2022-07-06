@@ -382,7 +382,7 @@ If-Modified-Since: Tue, 22 Feb 2022 20:20:20 GMT
 
 (The requests from Chrome, Edge, and Firefox look very much like the above; the requests from Safari will look a bit different.)
 
-The `max-age=0` directive in the request specifies “reuse of responses with an age of 0 or less” — so in effect, intermediate stored responses are not reused.
+The `max-age=0` directive in the request specifies "reuse of responses with an age of 0 or less" — so in effect, intermediate stored responses are not reused.
 
 As a result, a request is validated by `If-None-Match` and `If-Modified-Since`.
 

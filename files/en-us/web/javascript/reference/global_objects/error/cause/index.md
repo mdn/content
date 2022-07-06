@@ -38,7 +38,7 @@ For a more detailed example see [Error > Differentiate between similar errors](/
 
 ### Providing structured data as the error cause
 
-Error messages written for human consumption may be inappropriate for machine parsing — since they’re subject to rewording or punctuation changes that may break any existing parsing written to consume them. So when throwing an error from a function, as an alternative to a human-readable error message, you can instead provide the cause as structured data, for machine parsing.
+Error messages written for human consumption may be inappropriate for machine parsing — since they're subject to rewording or punctuation changes that may break any existing parsing written to consume them. So when throwing an error from a function, as an alternative to a human-readable error message, you can instead provide the cause as structured data, for machine parsing.
 
 ```js
 function makeRSA(p, q) {
