@@ -23,7 +23,7 @@ Even better reasons might include:
 - I use this tool all the time and found a bug in it/want to help make it better.
 - I want to help other people use the tool more successfully.
 - I want to help other people contribute to the project more successfully.
-- I want to improve own skills.
+- I want to improve my skills.
 - I want to publicly demonstrate my skills as part of my college or university course.
 - I want to publicly demonstrate my skills to improve my chances of getting a job.
 
