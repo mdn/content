@@ -133,7 +133,7 @@ color: #ff0;
 color: #fff;
 ```
 
-The [sass/vars/\_color-palette.scss](https://github.com/mdn/mdn-minimalist/blob/main/sass/vars/_mdn-web-docs-palette.scss) file in the [mdn-minimalist](https://github.com/mdn/mdn-minimalist) repository has a set of useful colors that complement the overall MDN design.
+The [sass/vars/\_mdn-web-docs-palette.scss](https://github.com/mdn/mdn-minimalist/blob/main/sass/vars/_mdn-web-docs-palette.scss) file in the [mdn-minimalist](https://github.com/mdn/mdn-minimalist) repository has a set of useful colors that complement the overall MDN design.
 
 ### Highlight good and bad practice examples
 
