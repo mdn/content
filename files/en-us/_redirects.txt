@@ -5391,6 +5391,7 @@
 /en-US/docs/Link_prefetching_FAQ	/en-US/docs/Web/HTTP/Link_prefetching_FAQ
 /en-US/docs/Localization	/en-US/docs/Glossary/Localization
 /en-US/docs/MDC:How_to_Help	/en-US/docs/MDN/Contribute
+/en-US/docs/MDN/About	/en-US/docs/MDN/Writing_guidelines
 /en-US/docs/MDN/At_ten/Contributing_to_MDN	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN/Contribute/Code_sample_guidelines	/en-US/docs/MDN/Guidelines/Code_guidelines
 /en-US/docs/MDN/Contribute/Content	/en-US/docs/MDN/Guidelines
