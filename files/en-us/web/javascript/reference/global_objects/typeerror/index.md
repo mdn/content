@@ -27,7 +27,7 @@ A `TypeError` may be thrown when:
 ## Instance properties
 
 - {{jsxref("Error.prototype.message", "TypeError.prototype.message")}}
-  - : Error message.
+  - : Error message. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.name", "TypeError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.cause", "TypeError.prototype.cause")}}

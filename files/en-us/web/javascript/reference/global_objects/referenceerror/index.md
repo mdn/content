@@ -21,7 +21,7 @@ The **`ReferenceError`** object represents an error when a variable that doesn't
 ## Instance properties
 
 - {{jsxref("Error.prototype.message", "ReferenceError.prototype.message")}}
-  - : Error message.
+  - : Error message. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.name", "ReferenceError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.cause", "ReferenceError.prototype.cause")}}

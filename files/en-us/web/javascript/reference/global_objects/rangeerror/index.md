@@ -30,7 +30,7 @@ This can be encountered when:
 ## Instance properties
 
 - {{jsxref("Error.prototype.message", "RangeError.prototype.message")}}
-  - : Error message.
+  - : Error message. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.name", "RangeError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.cause", "RangeError.prototype.cause")}}
