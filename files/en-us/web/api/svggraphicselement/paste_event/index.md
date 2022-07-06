@@ -8,7 +8,7 @@ tags:
   - Reference
   - SVG
   - SVG OM
-browser-compat: api.SVGGraphicsElement.paste_event
+browser-compat: api.Element.paste_event
 ---
 {{APIRef}}
 

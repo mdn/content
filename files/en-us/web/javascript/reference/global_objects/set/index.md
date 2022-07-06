@@ -113,17 +113,25 @@ console.log(mySet1)
 ```js
 // iterate over items in set
 // logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-for (let item of mySet1) console.log(item)
+for (const item of mySet1) {
+  console.log(item);
+}
 
 // logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-for (let item of mySet1.keys()) console.log(item)
+for (const item of mySet1.keys()) {
+  console.log(item);
+}
 
 // logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-for (let item of mySet1.values()) console.log(item)
+for (const item of mySet1.values()) {
+  console.log(item);
+}
 
 // logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
 // (key and value are the same here)
-for (let [key, value] of mySet1.entries()) console.log(key)
+for (const [key, value] of mySet1.entries()) {
+  console.log(key);
+}
 
 // convert Set object to an Array object, with Array.from
 const myArr = Array.from(mySet1) // [1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}]
@@ -144,9 +152,9 @@ const intersection = new Set([...mySet1].filter(x => mySet2.has(x)))
 const difference = new Set([...mySet1].filter(x => !mySet2.has(x)))
 
 // Iterate set entries with forEach()
-mySet2.forEach(function(value) {
-  console.log(value)
-})
+mySet2.forEach((value) => {
+  console.log(value);
+});
 
 // 1
 // 2
@@ -158,50 +166,50 @@ mySet2.forEach(function(value) {
 
 ```js
 function isSuperset(set, subset) {
-    for (let elem of subset) {
-        if (!set.has(elem)) {
-            return false
-        }
+  for (const elem of subset) {
+    if (!set.has(elem)) {
+      return false;
     }
-    return true
+  }
+  return true;
 }
 
 function union(setA, setB) {
-    let _union = new Set(setA)
-    for (let elem of setB) {
-        _union.add(elem)
-    }
-    return _union
+  const _union = new Set(setA);
+  for (const elem of setB) {
+    _union.add(elem);
+  }
+  return _union;
 }
 
 function intersection(setA, setB) {
-    let _intersection = new Set()
-    for (let elem of setB) {
-        if (setA.has(elem)) {
-            _intersection.add(elem)
-        }
+  const _intersection = new Set();
+  for (const elem of setB) {
+    if (setA.has(elem)) {
+      _intersection.add(elem);
     }
-    return _intersection
+  }
+  return _intersection;
 }
 
 function symmetricDifference(setA, setB) {
-    let _difference = new Set(setA)
-    for (let elem of setB) {
-        if (_difference.has(elem)) {
-            _difference.delete(elem)
-        } else {
-            _difference.add(elem)
-        }
+  const _difference = new Set(setA);
+  for (const elem of setB) {
+    if (_difference.has(elem)) {
+      _difference.delete(elem);
+    } else {
+      _difference.add(elem);
     }
-    return _difference
+  }
+  return _difference;
 }
 
 function difference(setA, setB) {
-    let _difference = new Set(setA)
-    for (let elem of setB) {
-        _difference.delete(elem)
-    }
-    return _difference
+  const _difference = new Set(setA);
+  for (const elem of setB) {
+    _difference.delete(elem);
+  }
+  return _difference;
 }
 
 // Examples
@@ -219,15 +227,15 @@ difference(setA, setC)          // returns Set {1, 2}
 ### Relation with Array objects
 
 ```js
-let myArray = ['value1', 'value2', 'value3']
+const myArray = ['value1', 'value2', 'value3'];
 
 // Use the regular Set constructor to transform an Array into a Set
-let mySet = new Set(myArray)
+const mySet = new Set(myArray);
 
 mySet.has('value1')     // returns true
 
 // Use the spread operator to transform a set into an Array.
-console.log([...mySet]) // Will show you exactly the same Array as myArray
+console.log([...mySet]); // Will show you exactly the same Array as myArray
 ```
 
 ### Remove duplicate elements from the array
@@ -245,9 +253,9 @@ console.log([...new Set(numbers)])
 ### Relation with Strings
 
 ```js
-let text = 'India'
+const text = 'India';
 
-const mySet = new Set(text)  // Set(5) {'I', 'n', 'd', 'i', 'a'}
+const mySet = new Set(text);  // Set(5) {'I', 'n', 'd', 'i', 'a'}
 mySet.size  // 5
 
 //case sensitive & duplicate omission
@@ -260,9 +268,7 @@ new Set("firefox")  // Set(6) { "f", "i", "r", "e", "o", "x" }
 ```js
 const array = Array
   .from(document.querySelectorAll('[id]'))
-  .map(function(e) {
-      return e.id
-  });
+  .map((e) => e.id);
 
 const set = new Set(array);
 console.assert(set.size == array.length);

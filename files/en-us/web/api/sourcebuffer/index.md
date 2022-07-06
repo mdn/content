@@ -48,7 +48,7 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 - {{domxref("SourceBuffer.abort()")}}
   - : Aborts the current segment and resets the segment parser.
 - {{domxref("SourceBuffer.appendBuffer()")}}
-  - : Appends media segment data from an {{jsxref("ArrayBuffer")}} or {{domxref("ArrayBufferView")}} object to the `SourceBuffer`.
+  - : Appends media segment data from an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object to the `SourceBuffer`.
 - {{domxref("SourceBuffer.appendBufferAsync()")}} {{experimental_inline}}
   - : Starts the process of asynchronously appending the specified buffer to the `SourceBuffer`. Returns a {{jsxref("Promise")}} which is fulfilled once the buffer has been appended.
 - {{domxref("SourceBuffer.appendStream()")}}

@@ -420,7 +420,7 @@ function node_after( sib )
  */
 function last_child( par )
 {
-  var res=par.lastChild;
+  let res=par.lastChild;
   while (res) {
     if (!is_ignorable(res)) return res;
     res = res.previousSibling;
@@ -440,7 +440,7 @@ function last_child( par )
  */
 function first_child( par )
 {
-  var res=par.firstChild;
+  let res=par.firstChild;
   while (res) {
     if (!is_ignorable(res)) return res;
     res = res.nextSibling;
@@ -459,7 +459,7 @@ function first_child( par )
  */
 function data_of( txt )
 {
-  var data = txt.textContent;
+  let data = txt.textContent;
   // Use ECMA-262 Edition 3 String and RegExp features
   data = data.replace(/[\t\n\r ]+/g, " ");
   if (data.charAt(0) == " ")
@@ -475,7 +475,7 @@ function data_of( txt )
 The following code demonstrates the use of the functions above. It iterates over the children of an element (whose children are all elements) to find the one whose text is `"This is the third paragraph"`, and then changes the class attribute and the contents of that paragraph.
 
 ```js
-var cur = first_child(document.getElementById("test"));
+const cur = first_child(document.getElementById("test"));
 while (cur)
 {
   if (data_of(cur.firstChild) == "This is the third paragraph.")

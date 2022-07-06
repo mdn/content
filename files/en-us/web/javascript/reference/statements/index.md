@@ -80,8 +80,6 @@ For an alphabetical listing see the sidebar on the left.
   - : Used to export functions to make them available for imports in external modules, and other scripts.
 - {{jsxref("Statements/import", "import")}}
   - : Used to import functions exported from an external module, another script.
-- [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Statements/import.meta)
-  - : Exposes context-specific metadata to a JavaScript module.
 - {{jsxref("Statements/label", "label", "", 1)}}
   - : Provides a statement with an identifier that you can refer to using a `break` or `continue` statement.
 - {{jsxref("Statements/with", "with")}}

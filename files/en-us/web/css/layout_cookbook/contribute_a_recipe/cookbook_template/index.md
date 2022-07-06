@@ -45,7 +45,7 @@ _Include this is there are any specific things to watch out for in regard to acc
 
 ## Browser compatibility
 
-_List the key properties you used in the `browser-compat` frontmatter metadata key. Then use the `{{Compat}}` macro in this section to automatically generate a compatibility table for the listed properties._
+_List the key properties you used in the `browser-compat` frontmatter metadata key. Then use the `\{{Compat}}` macro in this section to automatically generate a compatibility table for the listed properties._
 
 ## See also
 

@@ -19,7 +19,7 @@ the {{domxref("MediaStream")}} associated with the event.
 ## Syntax
 
 ```js
- var stream = event.stream;
+ const stream = event.stream;
 ```
 
 ## Example

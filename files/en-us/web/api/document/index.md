@@ -31,6 +31,9 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 
 - {{DOMxRef("Document.activeElement")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef('Element')}} that currently has focus.
+- {{DOMxRef("Document.adoptedStyleSheets")}}
+  - : Add an array of constructed stylesheets to be used by the document.
+    These stylesheets may also be shared with shadow DOM subtrees of the same document.
 - {{DOMxRef("Document.body")}}
   - : Returns the {{HTMLElement("body")}} or {{htmlelement("frameset")}} node of the current document.
 - {{DOMxRef("Document.characterSet")}}{{ReadOnlyInline}}

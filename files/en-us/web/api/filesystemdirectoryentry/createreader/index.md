@@ -52,7 +52,7 @@ function readDirectory(directory) {
         getEntries();
       }
     }, function(error) {
-      /* handle error -- error is a FileError object */
+      /* handle error — error is a FileError object */
     });
   };
 

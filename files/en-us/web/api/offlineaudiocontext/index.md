@@ -65,8 +65,8 @@ At this point we create another audio context, create an {{domxref("AudioBufferS
 ```js
 // define online and offline audio context
 
-var audioCtx = new AudioContext();
-var offlineCtx = new OfflineAudioContext(2,44100*40,44100);
+const audioCtx = new AudioContext();
+const offlineCtx = new OfflineAudioContext(2,44100*40,44100);
 
 source = offlineCtx.createBufferSource();
 
@@ -81,7 +81,7 @@ function getData() {
   request.responseType = 'arraybuffer';
 
   request.onload = function() {
-    var audioData = request.response;
+    const audioData = request.response;
 
     audioCtx.decodeAudioData(audioData, function(buffer) {
       myBuffer = buffer;
@@ -91,7 +91,7 @@ function getData() {
       //source.loop = true;
       offlineCtx.startRendering().then(function(renderedBuffer) {
         console.log('Rendering completed successfully');
-        var song = audioCtx.createBufferSource();
+        const song = audioCtx.createBufferSource();
         song.buffer = renderedBuffer;
 
         song.connect(audioCtx.destination);

@@ -50,7 +50,7 @@ Since the launch of the new Yari MDN platform on December 14 2020, there is curr
 
 If you wish to contribute to this wiki, you must make your documentation available under the Attribution-ShareAlike license (or occasionally an alternative license already specified by the page you are editing), and your code samples available under [Creative Commons CC-0](https://creativecommons.org/publicdomain/zero/1.0/) (a Public Domain dedication). Adding to this wiki means you agree that your contributions will be made available under those licenses.
 
-Some older content was made available under a license other than those described above; these are indicated at the bottom of each page by way of an [Alternate License Block](/Archive/Meta_docs/Examples/Alternate_License_Block).
+Some older content was made available under a license other than those described above; these are indicated at the bottom of each page by way of an _Alternate License Block_.
 
 > **Warning:** No new pages may be created using alternate licenses.
 

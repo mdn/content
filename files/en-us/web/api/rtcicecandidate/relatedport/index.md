@@ -43,7 +43,7 @@ For host candidates, `relatedPort` is `null`, meaning the field is not included 
 
 The related address and port are not used by ICE itself, and are only present for
 diagnostic and Quality-of-Service purposes. They may in fact be omitted for security
-reasons, but if present can be a useful tool during debugging. See the [Example](#example), which shows a bit of this.
+reasons, but if present can be a useful tool during debugging. See the [Example](#examples), which shows a bit of this.
 
 Here's an {{Glossary("SDP")}} attribute line (a-line) describing an ICE candidate
 discovered by the STUN server:
@@ -69,7 +69,7 @@ var relIP = candidate.relatedAddress;
 var relPort = candidate.relatedPort;
 
 if (relIP && relPort) {
-  console.log("Candidate type '" + type + "' -- contact address: " + ip + " " + port + ", related address: " + relIP + " " + relPort);
+  console.log("Candidate type '" + type + "' — contact address: " + ip + " " + port + ", related address: " + relIP + " " + relPort);
 } else {
   console.log("Host candidate address is " + ip + " " + port);
 }

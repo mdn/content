@@ -93,7 +93,5 @@ function logScroll(e) {
 
 ## See also
 
-- [Document: `scroll`
-  event](/en-US/docs/Web/API/Document/scroll_event)
-- [Element: `scroll`
-  event](/en-US/docs/Web/API/Element/scroll_event)
+- [Document: `scroll` event](/en-US/docs/Web/API/Document/scroll_event)
+- [Element: `scroll` event](/en-US/docs/Web/API/Element/scroll_event)

@@ -29,11 +29,14 @@ drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
 
 - `image`
   - : An element to draw into the context. The specification permits any canvas image
-    source ({{domxref("CanvasImageSource")}}), specifically, a
-    {{domxref("CSSImageValue")}}, an {{domxref("HTMLImageElement")}}, an
-    {{domxref("SVGImageElement")}}, an {{domxref("HTMLVideoElement")}}, an
-    {{domxref("HTMLCanvasElement")}}, an {{domxref("ImageBitmap")}}, or an
-    {{domxref("OffscreenCanvas")}}.
+    source, specifically,
+    an {{domxref("HTMLImageElement")}},
+    an {{domxref("SVGImageElement")}},
+    an {{domxref("HTMLVideoElement")}},
+    an {{domxref("HTMLCanvasElement")}},
+    an {{domxref("ImageBitmap")}},
+    an {{domxref("OffscreenCanvas")}},
+    or a {{domxref("VideoFrame")}}.
 - `sx` {{optional_inline}}
   - : The x-axis coordinate of the top left corner of the sub-rectangle of the source
     `image` to draw into the destination context. Use the 3- or 5-argument syntax
@@ -184,11 +187,9 @@ function drawImageActualSize() {
   the coordinate values was non-finite or zero. As per the specification, this no longer
   happens.
 - Gecko 9.0 {{ geckoRelease("9.0") }} now correctly supports CORS for drawing images
-  across domains without [tainting the
-  canvas](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
+  across domains without [tainting the canvas](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
 - Gecko 11.0 {{ geckoRelease("11.0") }} now allows SVG-as-an-image to be drawn into a
-  canvas without [tainting the
-  canvas](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
+  canvas without [tainting the canvas](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
 
 ## Notes
 

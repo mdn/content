@@ -96,16 +96,16 @@ addStylesheetRules([
 ]);
 */
 function addStylesheetRules (rules) {
-  var styleEl = document.createElement('style');
+  const styleEl = document.createElement('style');
 
   // Append <style> element to <head>
   document.head.appendChild(styleEl);
 
   // Grab style element's sheet
-  var styleSheet = styleEl.sheet;
+  const styleSheet = styleEl.sheet;
 
-  for (var i = 0; i < rules.length; i++) {
-    var j = 1,
+  for (let i = 0; i < rules.length; i++) {
+    let j = 1,
         rule = rules[i],
         selector = rule[0],
         propStr = '';
@@ -115,8 +115,8 @@ function addStylesheetRules (rules) {
       j = 0;
     }
 
-    for (var pl = rule.length; j < pl; j++) {
-      var prop = rule[j];
+    for (let pl = rule.length; j < pl; j++) {
+      const prop = rule[j];
       propStr += prop[0] + ': ' + prop[1] + (prop[2] ? ' !important' : '') + ';\n';
     }
 
@@ -199,7 +199,4 @@ instead of {{domxref("CSSStyleSheet.deleteRule","deleteRule()")}} and
 ## See also
 
 - {{domxref("CSSStyleSheet.deleteRule")}}
-- [Cross-Browser
-  CSS-rules ordering (CSS1)](https://www-archive.mozilla.org/docs/web-developer/css1technote/css1tojs.html#priority)
-- [Quirksmode -
-  CSS](https://www.quirksmode.org/dom/w3c_css.html)
+- [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)

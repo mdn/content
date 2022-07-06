@@ -70,17 +70,17 @@ The syntax of each layer is as follows:
 ### Values
 
 - `<attachment>`
-  - : See {{cssxref("background-attachment")}}
+  - : See {{cssxref("background-attachment")}}.
 - `<box>`
-  - : See {{cssxref("background-clip")}} and {{cssxref("background-origin")}}
+  - : See {{cssxref("background-clip")}} and {{cssxref("background-origin")}}.
 - `<background-color>`
-  - : See {{cssxref("background-color")}}
+  - : See {{cssxref("background-color")}}.
 - `<bg-image>`
-  - : See {{Cssxref("background-image")}}
+  - : See {{Cssxref("background-image")}}.
 - `<position>`
-  - : See {{cssxref("background-position")}}
+  - : See {{cssxref("background-position")}}.
 - `<repeat-style>`
-  - : See {{cssxref("background-repeat")}}
+  - : See {{cssxref("background-repeat")}}.
 - `<bg-size>`
   - : See {{cssxref("background-size")}}.
 

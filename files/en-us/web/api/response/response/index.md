@@ -30,7 +30,9 @@ new Response(body, options)
     the default value), or one of:
 
     - {{domxref("Blob")}}
-    - {{domxref("BufferSource")}}
+    - {{jsxref("ArrayBuffer")}}
+    - {{jsxref("TypedArray")}}
+    - {{jsxref("DataView")}}
     - {{domxref("FormData")}}
     - {{domxref("ReadableStream")}}
     - {{domxref("URLSearchParams")}}

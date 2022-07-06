@@ -154,15 +154,15 @@ In addition to methods to read and alter individual components of the local date
 
 The following examples show several ways to create JavaScript dates:
 
-> **Note:** Parsing of date strings with the `Date` constructor (and `Date.parse`, they are equivalent) is strongly discouraged due to browser differences and inconsistencies.
+> **Note:** When parsing date strings with the `Date` constructor (and `Date.parse`, they are equivalent), always make sure that the input conforms to the [ISO 8601 format](https://tc39.es/ecma262/#sec-date-time-string-format) (`YYYY-MM-DDTHH:mm:ss.sssZ`) — the parsing behavior with other formats is implementation-defined and may not work across all browsers. A library can help if many different formats are to be accommodated.
 
 ```js
-let today = new Date()
-let birthday = new Date('December 17, 1995 03:24:00')
-let birthday = new Date('1995-12-17T03:24:00')
-let birthday = new Date(1995, 11, 17)            // the month is 0-indexed
-let birthday = new Date(1995, 11, 17, 3, 24, 0)
-let birthday = new Date(628021800000)            // passing epoch timestamp
+const today = new Date()
+const birthday = new Date('December 17, 1995 03:24:00') // DISCOURAGED: may not work in all runtimes
+const birthday = new Date('1995-12-17T03:24:00')   // This is ISO8601-compliant and will work reliably
+const birthday = new Date(1995, 11, 17)            // the month is 0-indexed
+const birthday = new Date(1995, 11, 17, 3, 24, 0)
+const birthday = new Date(628021800000)            // passing epoch timestamp
 ```
 
 ### To get Date, Month and Year or Time

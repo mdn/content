@@ -14,7 +14,7 @@ browser-compat: api.GlobalEventHandlers.onmouseenter
 
 The **`onmouseenter`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
-processing {{event("mouseenter")}} events.
+processing {{domxref("Element/mouseenter_event", "mouseenter")}} events.
 
 The `mouseenter` event is fired when a pointing device (usually a mouse) is
 moved over the element that has the listener attached.
@@ -39,5 +39,5 @@ specifying the handler for the event.
 
 ## See also
 
-- {{event("mouseenter")}}
+- {{domxref("Element/mouseenter_event", "mouseenter")}}
 - [DOM event handlers](/en-US/docs/Web/Events/Event_handlers)

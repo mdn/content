@@ -119,11 +119,11 @@ The following example shows minimal functionality and focuses instead on showing
 complete context of instantiating a `PaymentRequest` object.
 
 ```js
-var supportedInstruments = [{
+const supportedInstruments = [{
  supportedMethods: 'https://example.com/pay'
 }];
 
-var details = {
+const details = {
   total: {label: 'Donation', amount: {currency: 'USD', value: '65.00'}},
   displayItems: [
     {
@@ -141,10 +141,10 @@ var details = {
   ]
 };
 
-var options = {requestShipping: true};
+const options = {requestShipping: true};
 
 try {
-  var request = new PaymentRequest(supportedInstruments, details, options);
+  const request = new PaymentRequest(supportedInstruments, details, options);
   // Add event listeners here.
   // Call show() to trigger the browser's payment flow.
   request.show().then(function(instrumentResponse) {

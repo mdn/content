@@ -51,8 +51,8 @@ For another (overlapping) set of links to learning resources, see the [MDN Learn
 #### Advanced
 
 - [Learning advanced JavaScript](https://johnresig.com/apps/learn/) — John Resig's guide to advanced JavaScript
-- [Crockford on Advanced JavaScript](https://uk.screen.yahoo.com/watch/111585/1027823) — a three part video series on advanced JavaScript concepts
-- [JavaScript Garden](https://bonsaiden.github.io/JavaScript-Garden/) — Documentation of the most quirky parts of JavaScript.
+- [Crockford on Advanced JavaScript](https://www.youtube.com/watch?v=DwYPG6vreJg) — a video on advanced JavaScript concepts
+- [JavaScript Garden](https://bonsaiden.github.io/JavaScript-Garden/) — documentation of the most quirky parts of JavaScript
 
 ## Resources
 
@@ -65,6 +65,6 @@ For another (overlapping) set of links to learning resources, see the [MDN Learn
 - [Tizag CSS Tutorials](http://www.tizag.com/cssT/)
   - : An easy-to-follow reference for those wishing to learn CSS through short, concise tutorials.
 - [jQuery Fundamentals](http://jqfundamentals.com/)
-  - : An open-source reference book featuring detailed introductions to both JavaScript and JQuery for beginners.
+  - : An open-source reference book featuring detailed introductions to both JavaScript and jQuery for beginners.
 - [JavaScript From Null: A Video Series](https://code.tutsplus.com/tutorials/javascript-from-null-video-series--net-8066)
   - : A video series on JavaScript for absolute beginners looking for more 'visual'-based learning

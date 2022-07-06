@@ -7,11 +7,12 @@ tags:
   - Interface
   - Reference
   - CookieStore
+  - Experimental
 browser-compat: api.CookieStore
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
-The **`CookieStore`** interface of the {{domxref('Cookie Store API')}} provides methods for getting and setting cookies asynchronously from either a page or a service worker.
+The **`CookieStore`** interface of the ['Cookie Store API'](/en-US/docs/Web/API/Cookie_Store_API) provides methods for getting and setting cookies asynchronously from either a page or a service worker.
 
 The `CookieStore` is accessed via attributes in the global scope in a {{domxref("Window")}} or {{domxref("ServiceWorkerGlobalScope")}} context. Therefore there is no constructor.
 
@@ -30,7 +31,7 @@ The `CookieStore` is accessed via attributes in the global scope in a {{domxref(
 
 ## Events
 
-- {{domxref("CookieStore.change_event")}}
+- {{domxref("CookieStore.change_event", "change")}}
   - : The `change` event fires when a change is made to any cookie.
 
 ## Examples

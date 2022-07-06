@@ -1,6 +1,7 @@
 ---
 title: WEBGL_compressed_texture_etc
 slug: Web/API/WEBGL_compressed_texture_etc
+page-type: webgl-extension
 tags:
   - API
   - Reference

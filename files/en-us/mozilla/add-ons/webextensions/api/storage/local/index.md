@@ -15,7 +15,7 @@ browser-compat: webextensions.api.storage.local
 ---
 {{AddonSidebar()}}
 
-Represents the `local` storage area. Items in `local` storage are local to the machine the extension was installed on.
+Represents the `local` storage area. Items in `local` storage are local to the machine the extension is installed on.
 
 The browser may restrict the amount of data that an extension can store in the local storage area. For example:
 
@@ -24,30 +24,37 @@ The browser may restrict the amount of data that an extension can store in the l
 
 When the extension is uninstalled, its associated local storage is cleared.
 
-Also in Firefox, you can prevent the browser from clearing local storage on uninstall by visiting `about:config` and setting the following two browser preferences to `true`: `"keepUuidOnUninstall"` and `"keepStorageOnUninstall"`. This feature is provided to help developers test their extensions. Extensions themselves are not able to change these preferences.
+Also, in Firefox, you can prevent the browser from clearing local storage on uninstall by visiting `about:config` and setting these browser preferences to `true`: `"keepUuidOnUninstall"` and `"keepStorageOnUninstall"`. This feature is provided to help developers test their extensions. Extensions themselves are not able to change these preferences.
 
-Although this API is similar to {{domxref("Window.localStorage")}} it is recommended that you don't use `Window.localStorage` in extension code. Firefox will clear data stored by extensions using the localStorage API in various scenarios where users clear their browsing history and data for privacy reasons, while data saved using the `storage.local` API will be correctly persisted in these scenarios.
+Although this API is similar to {{domxref("Window.localStorage")}}, it is recommended that you don't use `Window.localStorage` in extension code. Firefox clears data stored by extensions using the localStorage API in various scenarios where users clear their browsing history and data for privacy reasons. Data saved using the `storage.local` API is correctly persisted in these scenarios.
 
 ## Methods
 
 The `local` object implements the methods defined on the {{WebExtAPIRef("storage.StorageArea")}} type:
 
-- {{WebExtAPIRef("storage.StorageArea.get()")}}
+- {{WebExtAPIRef("storage.StorageArea.get()", "storage.local.get()")}}
   - : Retrieves one or more items from the storage area.
-- {{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}}
-  - : Gets the amount of storage space (in bytes) used one or more items being stored in the storage area.
-- {{WebExtAPIRef("storage.StorageArea.set()")}}
-  - : Stores one or more items in the storage area. If the item already exists, its value will be updated. When you set a value, the {{WebExtAPIRef("storage.onChanged")}} event will fire.
-- {{WebExtAPIRef("storage.StorageArea.remove()")}}
+- {{WebExtAPIRef("storage.StorageArea.getBytesInUse()", "storage.local.getBytesInUse()")}}
+  - : Gets the amount of storage space (in bytes) used for one or more items in the storage area.
+- {{WebExtAPIRef("storage.StorageArea.set()", "storage.local.set()")}}
+  - : Stores one or more items in the storage area. If the item exists, its value is updated.
+- {{WebExtAPIRef("storage.StorageArea.remove()", "storage.local.remove()")}}
   - : Removes one or more items from the storage area.
-- {{WebExtAPIRef("storage.StorageArea.clear()")}}
+- {{WebExtAPIRef("storage.StorageArea.clear()", "storage.local.clear()")}}
   - : Removes all items from the storage area.
+
+## Events
+
+The `local` object implements the events defined on the {{WebExtAPIRef("storage.StorageArea")}} type:
+
+- {{WebExtAPIRef("storage.StorageArea.onChanged", "storage.local.onChanged")}}
+  - : Fires when one or more items in the storage area change.
+
+{{WebExtExamples}}
 
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/#property-local) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 >

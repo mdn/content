@@ -7,9 +7,10 @@ tags:
   - Interface
   - Reference
   - HIDInputReportEvent
+  - Experimental
 browser-compat: api.HIDInputReportEvent
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`HIDInputReportEvent`** interface of the {{domxref('WebHID API')}} is passed to {{domxref("HIDDevice.inputreport_event")}} when an input report is received from any associated HID device.
 

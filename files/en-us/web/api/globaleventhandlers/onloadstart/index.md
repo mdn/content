@@ -18,7 +18,7 @@ browser-compat: api.GlobalEventHandlers.onloadstart
 
 The **`onloadstart`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing
-the code to be called when the {{event("loadstart")}} event is raised (when progress has
+the code to be called when the {{domxref("HTMLMediaElement/loadstart_event", "loadstart")}} event is raised (when progress has
 begun on the loading of a resource.)
 
 ## Syntax

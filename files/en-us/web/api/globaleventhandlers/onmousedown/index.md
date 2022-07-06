@@ -15,7 +15,7 @@ browser-compat: api.GlobalEventHandlers.onmousedown
 
 The **`onmousedown`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("mousedown")}} events.
+processes {{domxref("Element/mousedown_event", "mousedown")}} events.
 
 The `mousedown` event fires when the user presses a mouse button.
 
@@ -111,4 +111,4 @@ document.onmouseup = hideView;
 
 ## See also
 
-- {{event("mousedown")}} event
+- {{domxref("Element/mousedown_event", "mousedown")}} event

@@ -14,4 +14,4 @@ Minimally interactive is defined as when some, but not necessarily all, UI eleme
 
 ## More information
 
-First interactive is a variation of [Time to Interactive](/en-US/docs/Glossary/Time_to_interactive), which is split into _First Interactive_ and _Consistently Interactive_. These metrics have been proposed by the Web Incubator Community Group and are already being used in various tools. This metric has been called _First CPU Idle_ since [Lighthouse 3.0](https://developers.google.com/web/tools/lighthouse/)
+First interactive is a variation of [Time to Interactive](/en-US/docs/Glossary/Time_to_interactive), which is split into _First Interactive_ and _Consistently Interactive_. These metrics have been proposed by the Web Incubator Community Group and are already being used in various tools. This metric has been called _First CPU Idle_ since [Lighthouse 3.0](https://developer.chrome.com/docs/lighthouse/overview/)

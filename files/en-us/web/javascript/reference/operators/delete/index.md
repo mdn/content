@@ -171,9 +171,7 @@ console.log(delete func); // false
 
 ### Cross-browser notes
 
-Although ECMAScript makes iteration order of objects implementation-dependent, it may
-appear that all major browsers support an iteration order based on the earliest added
-property coming first (at least for properties not on the prototype). However, in the
+As of modern ECMAScript specification, the traversal order of object properties is well-defined and stable across implementations. However, in the
 case of Internet Explorer, when one uses `delete` on a property, some
 confusing behavior results, preventing other browsers from using simple objects like
 object literals as ordered associative arrays. In Explorer, while the property
@@ -182,10 +180,7 @@ property with the same name, the property will be iterated in its _old_
 position--not at the end of the iteration sequence as one might expect after having
 deleted the property and then added it back.
 
-If you want to use an ordered associative array in a cross-browser environment, use a
-{{jsxref("Map")}} object if available, or simulate this structure with two separate
-arrays (one for the keys and the other for the values), or build an array of
-single-property objects, etc.
+If you want to use an ordered associative array with support of old runtimes, use a {{jsxref("Map")}} object if available (through a polyfill, for example), or simulate this structure with two separate arrays (one for the keys and the other for the values), or build an array of single-property objects, etc.
 
 ## Examples
 

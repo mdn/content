@@ -327,8 +327,6 @@ box.draw({
 
 ### The results
 
-[View on JSFiddle](https://jsfiddle.net/mff99yu)
-
 ![The results of using homogeneous coordinates to move the boxes around in WebGL.](part2.png)
 
 ### Exercises

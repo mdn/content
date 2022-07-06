@@ -1,6 +1,7 @@
 ---
 title: WEBGL_multi_draw.multiDrawElementsInstancedWEBGL()
 slug: Web/API/WEBGL_multi_draw/multiDrawElementsInstancedWEBGL
+page-type: webgl-extension-method
 tags:
   - Method
   - Reference

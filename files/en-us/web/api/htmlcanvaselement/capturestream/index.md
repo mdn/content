@@ -59,7 +59,7 @@ var stream = canvasElt.captureStream(25); // 25 FPS
 // Do things to the stream
 // E.g. Send it to another computer using an RTCPeerConnection
 //      pc is an RTCPeerConnection created elsewhere
-pc.addStream(stream);
+stream.getTracks().forEach(track => pc.addTrack(track, stream));
 ```
 
 ## Specifications

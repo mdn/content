@@ -70,11 +70,11 @@ The following media query will only set the body to 12pt if the page is printed.
 }
 ```
 
-> **Note:** the media type here is different from the so-called {{glossary("MIME type")}}.
+> **Note:** The media type here is different from the so-called {{glossary("MIME type")}}.
 
-> **Note:** there were a number of other media types defined in the Level 3 Media Queries specification; these have been deprecated and should be avoided.
+> **Note:** There were a number of other media types defined in the Level 3 Media Queries specification; these have been deprecated and should be avoided.
 
-> **Note:** Media types are optional; if you do not indicate a media type in your media query then the media query will default to being for all media types.
+> **Note:** Media types are optional; if you do not indicate a media type in your media query, then the media query will default to being for all media types.
 
 ### Media feature rules
 
@@ -346,7 +346,7 @@ This CSS gives us a two-column layout inside the article, of the article content
 
 [Open step 2](https://mdn.github.io/css-examples/learn/media-queries/step2.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/step2.html).
 
-Lets continue to expand the width until we feel there is enough room for the sidebar to also form a new column. Inside a media query we'll make the main element into a two column grid. We then need to remove the {{cssxref("margin-bottom")}} on the article in order that the two sidebars align with each other, and we'll add a {{cssxref("border")}} to the top of the footer. Typically these small tweaks are the kind of thing you will do to make the design look good at each breakpoint.
+Let's continue to expand the width until we feel there is enough room for the sidebar to also form a new column. Inside a media query we'll make the main element into a two column grid. We then need to remove the {{cssxref("margin-bottom")}} on the article in order that the two sidebars align with each other, and we'll add a {{cssxref("border")}} to the top of the footer. Typically these small tweaks are the kind of thing you will do to make the design look good at each breakpoint.
 
 **Again, add the below code into the bottom of your step1.html CSS.**
 
@@ -442,7 +442,7 @@ With the example open in your browser, make the screen wider and narrower to see
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find a test to verify that you've retained this information before you move on — see [Test your skills: Responsive Web Design](/en-US/docs/Learn/CSS/CSS_layout/rwd_skills).
+You've reached the end of this article, but can you remember the most important information? You can find a test to verify that you've retained this information before you move on — see [Test your skills: Responsive web design and media queries](/en-US/docs/Learn/CSS/CSS_layout/rwd_skills).
 
 ## Summary
 

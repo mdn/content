@@ -164,8 +164,7 @@ The scope of a function is the function in which it is declared (or the entire p
 > This means that function hoisting only works with function _declarations_—not with function _expressions_.
 >
 > ```js example-bad
-> console.log(square)    // square is hoisted with an initial value undefined.
-> console.log(square(5)) // Uncaught TypeError: square is not a function
+> console.log(square)    // ReferenceError: Cannot access 'square' before initialization
 > const square = function(n) {
 >   return n * n;
 > }
@@ -498,7 +497,7 @@ getCode();    // Returns the apiCode
 
 > **Note:** There are a number of pitfalls to watch out for when using closures!
 >
-> If an enclosed function defines a variable with the same name as a variable in the outer scope, then there is no way to refer to the variable in the outer scope again. (The inner scope variable "overrides" the outer one, until the program exits the inner scope.)
+> If an enclosed function defines a variable with the same name as a variable in the outer scope, then there is no way to refer to the variable in the outer scope again. (The inner scope variable "overrides" the outer one, until the program exits the inner scope. It can be thought of as a [name conflict](#name_conflicts).)
 >
 > ```js example-bad
 > var createPet = function(name) {  // The outer function defines a variable called "name".
@@ -691,8 +690,6 @@ JavaScript has several top-level, built-in functions:
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
   - : The **`eval()`** method evaluates JavaScript code represented as a string.
-- {{jsxref("Global_Objects/uneval", "uneval()")}}
-  - : The **`uneval()`** method creates a string representation of the source code of an {{jsxref("Object")}}.
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}
   - : The global **`isFinite()`** function determines whether the passed value is a finite number. If needed, the parameter is first converted to a number.
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}

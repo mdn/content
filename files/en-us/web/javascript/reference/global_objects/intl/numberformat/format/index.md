@@ -38,6 +38,13 @@ format(number)
 The `format` getter function formats a number into a string according to the
 locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object.
 
+> **Note:** Numbers in JavaScript suffer from loss of precision if they are too big or too small, making the text representation inaccurate. If you are formatting an integer larger than {{jsxref("Number.MAX_SAFE_INTEGER")}}, prefer using a {{jsxref("BigInt")}} instead.
+>
+> ```js
+> new Intl.NumberFormat('en-US').format(1234567891234567891) // 1,234,567,891,234,568,000
+> new Intl.NumberFormat('en-US').format(1234567891234567891n) // 1,234,567,891,234,567,891
+> ```
+
 ## Examples
 
 ### Using format

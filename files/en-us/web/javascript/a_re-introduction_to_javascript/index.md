@@ -261,7 +261,7 @@ An important difference between JavaScript and other languages like Java is that
 
 ## Operators
 
-JavaScript's numeric operators are `+`, `-`, `*`, `/` and `%` which is the remainder operator ([which is the same as modulo](/en-US/docs/Web/JavaScript/Reference/Operators#remainder_%28%29).) Values are assigned using `=`, and there are also compound assignment statements such as `+=` and `-=`. These extend out to `x = x operator y`.
+JavaScript's numeric operators are `+`, `-`, `*`, `/` and `%` which is the [remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder). Values are assigned using `=`, and there are also compound assignment statements such as `+=` and `-=`. These extend out to `x = x operator y`.
 
 ```js
 x += 5;
@@ -343,7 +343,7 @@ for (let i = 0; i < 5; i++) {
 JavaScript also contains two other prominent for loops: [`for`...`of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
 
 ```js
-for (let value of array) {
+for (const value of array) {
   // do something with value
 }
 ```
@@ -351,7 +351,7 @@ for (let value of array) {
 and [`for`...`in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in):
 
 ```js
-for (let property in object) {
+for (const property in object) {
   // do something with object property
 }
 ```

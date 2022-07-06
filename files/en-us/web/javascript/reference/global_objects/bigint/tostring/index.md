@@ -25,7 +25,7 @@ toString(radix)
 
 ### Parameters
 
-- `radix`{{optional_inline}}
+- `radix` {{optional_inline}}
   - : Optional. An integer in the range 2 through 36 specifying the base to use for
     representing numeric values.
 

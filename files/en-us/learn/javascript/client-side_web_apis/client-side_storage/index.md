@@ -583,7 +583,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
     // Fetch the MP4 and WebM versions of the video using the fetch() function,
     // then expose their response bodies as blobs
     const mp4Blob = fetch(`videos/${video.name}.mp4`).then(response => response.blob());
-    const webmBlob = fetch(`videos/${video.name}.mp4`).then(response => response.blob());
+    const webmBlob = fetch(`videos/${video.name}.webm`).then(response => response.blob());
 
     // Only run the next code when both promises have fulfilled
     Promise.all([mp4Blob, webmBlob]).then(values => {
@@ -732,7 +732,7 @@ self.addEventListener('fetch', e => {
 
 And that is it for our service worker.
 There is a whole load more you can do with them — for a lot more detail, see the [service worker cookbook](https://github.com/mdn/serviceworker-cookbook).
-Many thanks to Paul Kinlan for his article [Adding a Service Worker and Offline into your Web App](https://developers.google.com/web/fundamentals/codelabs/offline/), which inspired this example.
+Many thanks to Paul Kinlan for his article [Adding a Service Worker and Offline into your Web App](https://developers.google.com/codelabs/pwa-training/pwa03--going-offline#0), which inspired this example.
 
 #### Testing the example offline
 

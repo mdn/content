@@ -11,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - transferIn
+  - Experimental
 browser-compat: api.USBDevice.transferIn
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}

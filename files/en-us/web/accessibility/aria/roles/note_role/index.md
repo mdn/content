@@ -35,7 +35,7 @@ The `note` role can be added to parenthetic or ancillary content if no other nat
 ....
 ```
 
-If the above Wikipedia style entry for Madam C.J. Walker, the hilite box `note` could have been a {{HTMLElement('blockquote')}} if it contained a quote or {{HTMLElement('figcaption')}} in a {{HTMLElement('figure')}} if there was an associated image. In this case, as neither of those made sense, the `note` role was added to add semantics to the parenthetic content.
+In the above Wikipedia style entry for Madam C.J. Walker, the `hilitebox` with role `note` could have been a {{HTMLElement('blockquote')}} if it contained a quote or {{HTMLElement('figcaption')}} in a {{HTMLElement('figure')}} if there was an associated image. In this case, as neither of those made sense, the `note` role was added to add semantics to the parenthetic content.
 
 ## Specifications
 

@@ -33,9 +33,9 @@ The [WebXR Device API's](/en-US/docs/Web/API/WebXR_Device_API) **`XRInputSource`
 - {{domxref('XRInputSource.handedness', 'handedness')}}{{readonlyInline}}
   - : A string that indicates which hand the device represented by this `XRInputSource` is being used in, if any. The value will be `left`, `right`, or `none`.
 - {{domxref('XRInputSource.profiles', 'profiles')}}{{readonlyInline}}
-  - : An array of `DOMString` objects, each specifying the name of an input profile describing the preferred visual representation and behavior of this input source.
+  - : An array of strings, each specifying the name of an input profile describing the preferred visual representation and behavior of this input source.
 - {{domxref('XRInputSource.targetRayMode', 'targetRayMode')}}{{readonlyInline}}
-  - : A `DOMString` indicating the methodology used to produce the target ray: `gaze`, `tracked-pointer`, or `screen`.
+  - : A string indicating the methodology used to produce the target ray: `gaze`, `tracked-pointer`, or `screen`.
 - {{domxref('XRInputSource.targetRaySpace', 'targetRaySpace')}}{{readonlyInline}}
   - : An {{domxref("XRSpace")}} object defining the origin of the target ray and the direction in which it extends. This space is established using the method defined by `targetRayMode`.
 

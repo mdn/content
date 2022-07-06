@@ -52,7 +52,7 @@ check each key to see if it is in the array. If not, we delete it using
 
 ```js
 this.addEventListener('activate', function(event) {
-  var cachesToKeep = ['v2'];
+  const cachesToKeep = ['v2'];
 
   event.waitUntil(
     caches.keys().then(function(keyList) {

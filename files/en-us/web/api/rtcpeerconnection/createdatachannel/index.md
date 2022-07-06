@@ -169,8 +169,7 @@ channel.onmessage = function(event) {
 ```
 
 For a more thorough example showing how the connection and channel are established, see
-[A simple
-RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample).
+[A simple RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample).
 
 ## Specifications
 
@@ -183,6 +182,5 @@ RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_samp
 ## See also
 
 - {{domxref("RTCDataChannel")}}
-- [A simple
-  RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
+- [A simple RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
 - {{domxref("RTCPeerConnection")}}

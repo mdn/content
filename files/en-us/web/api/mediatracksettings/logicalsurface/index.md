@@ -19,6 +19,7 @@ tags:
   - display
   - logicalSurface
   - screen
+  - Property
 browser-compat: api.MediaTrackSettings.logicalSurface
 ---
 {{APIRef("Media Capture and Streams")}}
@@ -30,13 +31,7 @@ not necessarily entirely onscreen, or may even be off-screen, such as windows' b
 buffers (where only part of the buffer is visible without scrolling the containing
 window) and offscreen rendering contexts.
 
-## Syntax
-
-```js
-isLogicalSurface = mediaTrackSettings.logicalSurface;
-```
-
-### Value
+## Value
 
 A Boolean value which is `true` if the video track in the stream of captured
 video is taken from a logical display surface.

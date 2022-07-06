@@ -62,7 +62,5 @@ const periodicSync = self.registration.periodicSync;
 
 ## See also
 
-- [Richer offline experiences with
-  the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
-- [A
-  Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)
+- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

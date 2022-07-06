@@ -157,7 +157,7 @@ This logs `'oranges are round, and oranges are juicy'`.
 ### Switching words in a string
 
 The following script switches the words in the string. For the replacement text, the
-script uses [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
+script uses [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)
 and the `$1` and `$2` replacement patterns.
 
 ```js
@@ -181,7 +181,7 @@ transform the case and concatenate the hyphen before returning.
 
 ```js
 function styleHyphenFormat(propertyName) {
-  function upperToHyphenLower(match, string, offset) {
+  function upperToHyphenLower(match, offset, string) {
     return (offset > 0 ? '-' : '') + match.toLowerCase();
   }
   return propertyName.replace(/[A-Z]/g, upperToHyphenLower);

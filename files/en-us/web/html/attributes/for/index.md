@@ -7,9 +7,9 @@ tags:
   - HTML
   - for
   - Reference
-spec-urls:
-  - https://html.spec.whatwg.org/multipage/forms.html#attr-label-for
-  - https://html.spec.whatwg.org/multipage/form-elements.html#attr-output-for
+browser-compat:
+  - html.elements.label.for
+  - html.elements.output.for
 ---
 
 {{HTMLSidebar}}
@@ -43,10 +43,4 @@ See examples of usage on the element pages for {{htmlelement("label")}} and {{ht
 
 ## Browser compatibility
 
-### Support with label
-
-{{Compat("html.elements.label.for")}}
-
-### Support with output
-
-{{Compat("html.elements.output.for")}}
+{{Compat}}

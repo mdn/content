@@ -66,7 +66,7 @@ function testBreak(x) {
 
 The following code has a `break` statement that terminates the
 {{jsxref("Statements/switch", "switch")}} statement when a case is matched and the
-corresponding code has ran
+corresponding code has run.
 
 ```js
 const food = "sushi";

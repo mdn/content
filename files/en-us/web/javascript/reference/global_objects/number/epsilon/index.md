@@ -32,14 +32,6 @@ z = 0.1;
 equal = (Math.abs(x - y + z) < Number.EPSILON);
 ```
 
-## Polyfill
-
-```js
-if (Number.EPSILON === undefined) {
-    Number.EPSILON = Math.pow(2, -52);
-}
-```
-
 ## Specifications
 
 {{Specifications}}
