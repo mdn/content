@@ -29,9 +29,9 @@ isConfigSupported(config)
 
 A {{jsxref("Promise")}} that resolves with an object containing the following members:
 
-- `supported`{{Optional_Inline}}
+- `supported` {{optional_inline}}
   - : A boolean value which is `true` if the given config is supported by the encoder.
-- `config`{{Optional_Inline}}
+- `config` {{optional_inline}}
   - : A copy of the given config with all the fields recognized by the encoder.
 
 ### Exceptions

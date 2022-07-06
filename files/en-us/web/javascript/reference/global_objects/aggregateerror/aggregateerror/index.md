@@ -25,7 +25,7 @@ new AggregateError(errors, message, options)
 
 - `errors`
   - : An iterable of errors, may not actually be {{JSxRef("Error")}} instances.
-- `message`{{optional_inline}}
+- `message` {{optional_inline}}
   - : An optional human-readable description of the aggregate error.
 - `options` {{optional_inline}}
   - : An object that has the following properties:

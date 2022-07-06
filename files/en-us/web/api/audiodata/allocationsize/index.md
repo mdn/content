@@ -26,9 +26,9 @@ allocationSize(options)
   - : An object containing the following:
     - `planeIndex`
       - : The index of the plane to return the size of.
-    - `frameOffset`{{optional_inline}}
+    - `frameOffset` {{optional_inline}}
       - : An integer giving an offset into the plane data indicating which plane to begin from. Defaults to `0`.
-    - `frameCount`{{optional_inline}}
+    - `frameCount` {{optional_inline}}
       - : An integer giving the number of frames to return the size of. If omitted then all frames in the plane will be used, beginning with the frame specified in `frameOffset`.
 
 ### Return value
