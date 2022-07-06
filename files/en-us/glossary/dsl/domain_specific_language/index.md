@@ -6,7 +6,7 @@ tags:
   - Glossary
   - ProgrammingLanguage
 ---
-A **domain-specific language (DSL)** is a type of computer language of limited scope, designed to address a particular problem within an application domain.
+A **Domain-Specific Language (DSL)** is a type of computer language of limited scope, designed to address a particular problem within an application domain.
 
 Contrast DSLs with *general-purpose languages (GPLs)*, which are designed to address various problems across domains.
 
