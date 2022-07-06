@@ -66,7 +66,7 @@ At this point, you have enough code that the WebGL context should successfully i
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample1/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/dom-examples/webgl-examples/tree/master/tutorial/sample1) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample1/)
+[View the complete code](https://github.com/mdn/dom-examples/tree/master/webgl-examples/tutorial/sample1) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample1/)
 
 ## See also
 
