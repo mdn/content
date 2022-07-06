@@ -21,11 +21,11 @@ Defines zoom settings for a tab: {{WebExtAPIRef("tabs.ZoomSettingsMode", "mode")
 
 Values of this type are objects. They contain the following properties:
 
-- `defaultZoomFactor`{{optional_inline}}
+- `defaultZoomFactor` {{optional_inline}}
   - : `number`. The default zoom level for the current tab. Note that this is only used in {{WebExtAPIRef("tabs.getZoomSettings")}}.
-- `mode`{{optional_inline}}
+- `mode` {{optional_inline}}
   - : {{WebExtAPIRef('tabs.ZoomSettingsMode')}}. Defines whether zoom changes are handled by the browser, by the extension, or are disabled.
-- `scope`{{optional_inline}}
+- `scope` {{optional_inline}}
   - : {{WebExtAPIRef('tabs.ZoomSettingsScope')}}. Defines whether zoom changes will persist for the page's origin, or only take effect in this tab.
 
 ## Browser compatibility

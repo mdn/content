@@ -29,13 +29,13 @@ let uninstallingSelf = browser.management.uninstallSelf(
 
 ### Parameters
 
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
 
   - : `object`. Object which may two properties, both optional:
 
-    - `showConfirmDialog`{{optional_inline}}
+    - `showConfirmDialog` {{optional_inline}}
       - : Boolean. If `showConfirmDialog` is `true`, the browser will show a dialog asking the user to confirm that the add-on should be uninstalled. Defaults to `false`.
-    - `dialogMessage`{{optional_inline}}
+    - `dialogMessage` {{optional_inline}}
       - : String. An extra message that will be displayed in the confirmation dialog.
 
 ### Return value

@@ -31,9 +31,9 @@ let highlighting = browser.tabs.highlight(
 
   - : `object`.
 
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. ID of the window that contains the tabs.
-    - `populate`{{optional_inline}}
+    - `populate` {{optional_inline}}
 
       - : `boolean`. Defaults to `true`. If set to `false`, the {{WebExtAPIRef('windows.Window')}} object won't have a `tabs` property containing a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs open in the window.
 
