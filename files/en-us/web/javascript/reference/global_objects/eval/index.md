@@ -394,7 +394,7 @@ code.
 
 ## Examples
 
-### Using `eval`
+### Using eval()
 
 In the following code, both of the statements containing `eval()` return 42.
 The first evaluates the string `"x + y + 1"`; the second evaluates the string
@@ -408,7 +408,7 @@ eval('x + y + 1'); // returns 42
 eval(z);           // returns 42
 ```
 
-### eval returns the completion value of statements
+### eval() returns the completion value of statements
 
 `eval()` returns the completion value of statements. For `if`, it would be the last expression or statement evaluated.
 
@@ -448,7 +448,7 @@ const str = "if (x === 5) {console.log('z is 42'); z = 42; x = 420; } else z = 0
 console.log('x is ', eval(str)); // z is 42  x is 420
 ```
 
-### eval as a string defining function requires "(" and ")" as prefix and suffix
+### eval() as a string defining function requires "(" and ")" as prefix and suffix
 
 ```js
 // This is a function declaration
