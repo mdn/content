@@ -302,7 +302,7 @@ Then we establish the position of the square plane by loading the identity posit
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/dom-examples/webgl-examples/tree/master/tutorial/sample2) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample2/)
+[View the complete code](https://github.com/mdn/dom-examples/tree/master/webgl-examples/tutorial/sample2) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample2/)
 
 ## Matrix utility operations
 
