@@ -127,8 +127,8 @@ This example shows how to create a data channel and set up handlers for the
 ```js
 // Offerer side
 
-var pc = new RTCPeerConnection(options);
-var channel = pc.createDataChannel("chat");
+const pc = new RTCPeerConnection(options);
+const channel = pc.createDataChannel("chat");
 channel.onopen = function(event) {
   channel.send('Hi you!');
 }
@@ -140,9 +140,9 @@ channel.onmessage = function(event) {
 ```js
 // Answerer side
 
-var pc = new RTCPeerConnection(options);
+const pc = new RTCPeerConnection(options);
 pc.ondatachannel = function(event) {
-  var channel = event.channel;
+  const channel = event.channel;
     channel.onopen = function(event) {
     channel.send('Hi back!');
   }
@@ -158,8 +158,8 @@ agreed-upon id (0 here):
 ```js
 // Both sides
 
-var pc = new RTCPeerConnection(options);
-var channel = pc.createDataChannel("chat", {negotiated: true, id: 0});
+const pc = new RTCPeerConnection(options);
+const channel = pc.createDataChannel("chat", {negotiated: true, id: 0});
 channel.onopen = function(event) {
   channel.send('Hi!');
 }
