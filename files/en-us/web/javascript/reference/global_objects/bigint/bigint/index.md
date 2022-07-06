@@ -38,7 +38,7 @@ BigInt(value);
     - After conversion to a primitive, the result is {{jsxref("undefined")}}, {{jsxref("Operators/null", "null")}}, {{jsxref("symbol")}}.
 
 - {{jsxref("SyntaxError")}}:
-  - : If the argument is a string that cannot be parsed as a `BigInt`.
+  - : Thrown if the parameter is a string that cannot be parsed as a `BigInt`.
 
 ## Examples
 
