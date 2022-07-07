@@ -1929,7 +1929,7 @@
 /en-US/docs/DOM/element.onmouseout	/en-US/docs/Web/API/GlobalEventHandlers/onmouseout
 /en-US/docs/DOM/element.onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
 /en-US/docs/DOM/element.onpaste	/en-US/docs/Web/API/HTMLElement/paste_event
-/en-US/docs/DOM/element.onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
+/en-US/docs/DOM/element.onresize	/en-US/docs/Web/API/Window/resize_event
 /en-US/docs/DOM/element.onscroll	/en-US/docs/Web/API/GlobalEventHandlers/onscroll
 /en-US/docs/DOM/element.onwheel	/en-US/docs/Web/API/GlobalEventHandlers/onwheel
 /en-US/docs/DOM/element.outerHTML	/en-US/docs/Web/API/Element/outerHTML
@@ -2196,8 +2196,8 @@
 /en-US/docs/DOM/window.onmouseover	/en-US/docs/Web/API/GlobalEventHandlers/onmouseover
 /en-US/docs/DOM/window.onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
 /en-US/docs/DOM/window.onpopstate	/en-US/docs/Web/API/Window/popstate_event
-/en-US/docs/DOM/window.onreset	/en-US/docs/Web/API/GlobalEventHandlers/onreset
-/en-US/docs/DOM/window.onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
+/en-US/docs/DOM/window.onreset	/en-US/docs/Web/API/HTMLFormElement/reset_event
+/en-US/docs/DOM/window.onresize	/en-US/docs/Web/API/Window/resize_event
 /en-US/docs/DOM/window.onscroll	/en-US/docs/Web/API/GlobalEventHandlers/onscroll
 /en-US/docs/DOM/window.onselect	/en-US/docs/Web/API/GlobalEventHandlers/onselect
 /en-US/docs/DOM/window.onsubmit	/en-US/docs/Web/API/GlobalEventHandlers/onsubmit
@@ -2422,7 +2422,7 @@
 /en-US/docs/DOM:element.onmouseout	/en-US/docs/Web/API/GlobalEventHandlers/onmouseout
 /en-US/docs/DOM:element.onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
 /en-US/docs/DOM:element.onpaste	/en-US/docs/Web/API/HTMLElement/paste_event
-/en-US/docs/DOM:element.onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
+/en-US/docs/DOM:element.onresize	/en-US/docs/Web/API/Window/resize_event
 /en-US/docs/DOM:element.onscroll	/en-US/docs/Web/API/GlobalEventHandlers/onscroll
 /en-US/docs/DOM:element.ownerDocument	/en-US/docs/Web/API/Node/ownerDocument
 /en-US/docs/DOM:element.parentNode	/en-US/docs/Web/API/Node/parentNode
@@ -2629,8 +2629,8 @@
 /en-US/docs/DOM:window.onmouseover	/en-US/docs/Web/API/GlobalEventHandlers/onmouseover
 /en-US/docs/DOM:window.onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
 /en-US/docs/DOM:window.onpopstate	/en-US/docs/Web/API/Window/popstate_event
-/en-US/docs/DOM:window.onreset	/en-US/docs/Web/API/GlobalEventHandlers/onreset
-/en-US/docs/DOM:window.onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
+/en-US/docs/DOM:window.onreset	/en-US/docs/Web/API/HTMLFormElement/reset_event
+/en-US/docs/DOM:window.onresize	/en-US/docs/Web/API/Window/resize_event
 /en-US/docs/DOM:window.onscroll	/en-US/docs/Web/API/GlobalEventHandlers/onscroll
 /en-US/docs/DOM:window.onselect	/en-US/docs/Web/API/GlobalEventHandlers/onselect
 /en-US/docs/DOM:window.onsubmit	/en-US/docs/Web/API/GlobalEventHandlers/onsubmit
@@ -3165,7 +3165,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/element.onmouseout	/en-US/docs/Web/API/GlobalEventHandlers/onmouseout
 /en-US/docs/Document_Object_Model_(DOM)/element.onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
 /en-US/docs/Document_Object_Model_(DOM)/element.onpaste	/en-US/docs/Web/API/HTMLElement/paste_event
-/en-US/docs/Document_Object_Model_(DOM)/element.onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
+/en-US/docs/Document_Object_Model_(DOM)/element.onresize	/en-US/docs/Web/API/Window/resize_event
 /en-US/docs/Document_Object_Model_(DOM)/element.onscroll	/en-US/docs/Web/API/GlobalEventHandlers/onscroll
 /en-US/docs/Document_Object_Model_(DOM)/element.outerHTML	/en-US/docs/Web/API/Element/outerHTML
 /en-US/docs/Document_Object_Model_(DOM)/element.removeAttribute	/en-US/docs/Web/API/Element/removeAttribute
@@ -3353,8 +3353,8 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.onmouseover	/en-US/docs/Web/API/GlobalEventHandlers/onmouseover
 /en-US/docs/Document_Object_Model_(DOM)/window.onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
 /en-US/docs/Document_Object_Model_(DOM)/window.onpopstate	/en-US/docs/Web/API/Window/popstate_event
-/en-US/docs/Document_Object_Model_(DOM)/window.onreset	/en-US/docs/Web/API/GlobalEventHandlers/onreset
-/en-US/docs/Document_Object_Model_(DOM)/window.onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
+/en-US/docs/Document_Object_Model_(DOM)/window.onreset	/en-US/docs/Web/API/HTMLFormElement/reset_event
+/en-US/docs/Document_Object_Model_(DOM)/window.onresize	/en-US/docs/Web/API/Window/resize_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onscroll	/en-US/docs/Web/API/GlobalEventHandlers/onscroll
 /en-US/docs/Document_Object_Model_(DOM)/window.onselect	/en-US/docs/Web/API/GlobalEventHandlers/onselect
 /en-US/docs/Document_Object_Model_(DOM)/window.onsubmit	/en-US/docs/Web/API/GlobalEventHandlers/onsubmit
@@ -7845,8 +7845,8 @@
 /en-US/docs/Web/API/Document/onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
 /en-US/docs/Web/API/Document/onoffline	/en-US/docs/Web/API/Window/offline_event
 /en-US/docs/Web/API/Document/ononline	/en-US/docs/Web/API/Window/online_event
-/en-US/docs/Web/API/Document/onreset	/en-US/docs/Web/API/GlobalEventHandlers/onreset
-/en-US/docs/Web/API/Document/onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
+/en-US/docs/Web/API/Document/onreset	/en-US/docs/Web/API/HTMLFormElement/reset_event
+/en-US/docs/Web/API/Document/onresize	/en-US/docs/Web/API/Window/resize_event
 /en-US/docs/Web/API/Document/onscroll	/en-US/docs/Web/API/GlobalEventHandlers/onscroll
 /en-US/docs/Web/API/Document/onselect	/en-US/docs/Web/API/GlobalEventHandlers/onselect
 /en-US/docs/Web/API/Document/onselectionchange	/en-US/docs/Web/API/GlobalEventHandlers/onselectionchange
@@ -8145,6 +8145,8 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenchange	/en-US/docs/Web/API/Document/fullscreenchange_event
 /en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenerror	/en-US/docs/Web/API/Document/fullscreenerror_event
 /en-US/docs/Web/API/GlobalEventHandlers/onpointerdown/drag	/en-US/docs/Web/API/GlobalEventHandlers/ondrag
+/en-US/docs/Web/API/GlobalEventHandlers/onreset	/en-US/docs/Web/API/HTMLFormElement/reset_event
+/en-US/docs/Web/API/GlobalEventHandlers/onresize	/en-US/docs/Web/API/Window/resize_event
 /en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()	/en-US/docs/Web/API/fetch
 /en-US/docs/Web/API/GlobalFetch/fetch	/en-US/docs/Web/API/fetch
 /en-US/docs/Web/API/Guide/Events/Creating_and_triggering_events	/en-US/docs/Web/Events/Creating_and_triggering_events
@@ -8223,8 +8225,8 @@
 /en-US/docs/Web/API/HTMLElement/onmouseover	/en-US/docs/Web/API/GlobalEventHandlers/onmouseover
 /en-US/docs/Web/API/HTMLElement/onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
 /en-US/docs/Web/API/HTMLElement/onpaste	/en-US/docs/Web/API/HTMLElement/paste_event
-/en-US/docs/Web/API/HTMLElement/onreset	/en-US/docs/Web/API/GlobalEventHandlers/onreset
-/en-US/docs/Web/API/HTMLElement/onresize	/en-US/docs/Web/API/GlobalEventHandlers/onreset
+/en-US/docs/Web/API/HTMLElement/onreset	/en-US/docs/Web/API/HTMLFormElement/reset_event
+/en-US/docs/Web/API/HTMLElement/onresize	/en-US/docs/Web/API/HTMLFormElement/reset_event
 /en-US/docs/Web/API/HTMLElement/onscroll	/en-US/docs/Web/API/GlobalEventHandlers/onscroll
 /en-US/docs/Web/API/HTMLElement/onselect	/en-US/docs/Web/API/GlobalEventHandlers/onselect
 /en-US/docs/Web/API/HTMLElement/onsubmit	/en-US/docs/Web/API/GlobalEventHandlers/onsubmit
@@ -8243,7 +8245,7 @@
 /en-US/docs/Web/API/HTMLFormElement.target	/en-US/docs/Web/API/HTMLFormElement/target
 /en-US/docs/Web/API/HTMLFormElement/invalid_event	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Web/API/HTMLFormElement/submit/submit_event	/en-US/docs/Web/API/HTMLFormElement/submit_event
-/en-US/docs/Web/API/HTMLFrameSetElement/onafterprint	/en-US/docs/Web/API/GlobalEventHandlers/onreset
+/en-US/docs/Web/API/HTMLFrameSetElement/onafterprint	/en-US/docs/Web/API/HTMLFormElement/reset_event
 /en-US/docs/Web/API/HTMLFrameSetElement/onbeforeunload	/en-US/docs/Web/API/Window/beforeunload_event
 /en-US/docs/Web/API/HTMLFrameSetElement/onhashchange	/en-US/docs/Web/API/Window/hashchange_event
 /en-US/docs/Web/API/HTMLFrameSetElement/onlanguagechange	/en-US/docs/Web/API/Window/languagechange_event
@@ -9260,8 +9262,8 @@
 /en-US/docs/Web/API/SVGElement/onmouseout	/en-US/docs/Web/API/GlobalEventHandlers/onmouseout
 /en-US/docs/Web/API/SVGElement/onmouseover	/en-US/docs/Web/API/GlobalEventHandlers/onmouseover
 /en-US/docs/Web/API/SVGElement/onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
-/en-US/docs/Web/API/SVGElement/onreset	/en-US/docs/Web/API/GlobalEventHandlers/onreset
-/en-US/docs/Web/API/SVGElement/onresize	/en-US/docs/Web/API/GlobalEventHandlers/onreset
+/en-US/docs/Web/API/SVGElement/onreset	/en-US/docs/Web/API/HTMLFormElement/reset_event
+/en-US/docs/Web/API/SVGElement/onresize	/en-US/docs/Web/API/HTMLFormElement/reset_event
 /en-US/docs/Web/API/SVGElement/onscroll	/en-US/docs/Web/API/GlobalEventHandlers/onscroll
 /en-US/docs/Web/API/SVGElement/onselect	/en-US/docs/Web/API/GlobalEventHandlers/onselect
 /en-US/docs/Web/API/SVGElement/onsubmit	/en-US/docs/Web/API/GlobalEventHandlers/onsubmit
@@ -9804,8 +9806,8 @@
 /en-US/docs/Web/API/Window/onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
 /en-US/docs/Web/API/Window/onpopstate	/en-US/docs/Web/API/Window/popstate_event
 /en-US/docs/Web/API/Window/onrejectionhandled	/en-US/docs/Web/API/Window/rejectionhandled_event
-/en-US/docs/Web/API/Window/onreset	/en-US/docs/Web/API/GlobalEventHandlers/onreset
-/en-US/docs/Web/API/Window/onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
+/en-US/docs/Web/API/Window/onreset	/en-US/docs/Web/API/HTMLFormElement/reset_event
+/en-US/docs/Web/API/Window/onresize	/en-US/docs/Web/API/Window/resize_event
 /en-US/docs/Web/API/Window/onselect	/en-US/docs/Web/API/GlobalEventHandlers/onselect
 /en-US/docs/Web/API/Window/onstorage	/en-US/docs/Web/API/Window/storage_event
 /en-US/docs/Web/API/Window/onsubmit	/en-US/docs/Web/API/GlobalEventHandlers/onsubmit
@@ -10156,7 +10158,7 @@
 /en-US/docs/Web/API/element.onmouseout	/en-US/docs/Web/API/GlobalEventHandlers/onmouseout
 /en-US/docs/Web/API/element.onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
 /en-US/docs/Web/API/element.onpaste	/en-US/docs/Web/API/HTMLElement/paste_event
-/en-US/docs/Web/API/element.onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
+/en-US/docs/Web/API/element.onresize	/en-US/docs/Web/API/Window/resize_event
 /en-US/docs/Web/API/element.onscroll	/en-US/docs/Web/API/GlobalEventHandlers/onscroll
 /en-US/docs/Web/API/element.onwheel	/en-US/docs/Web/API/GlobalEventHandlers/onwheel
 /en-US/docs/Web/API/element.outerHTML	/en-US/docs/Web/API/Element/outerHTML
@@ -10453,8 +10455,8 @@
 /en-US/docs/Web/API/window.onmouseover	/en-US/docs/Web/API/GlobalEventHandlers/onmouseover
 /en-US/docs/Web/API/window.onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
 /en-US/docs/Web/API/window.onpopstate	/en-US/docs/Web/API/Window/popstate_event
-/en-US/docs/Web/API/window.onreset	/en-US/docs/Web/API/GlobalEventHandlers/onreset
-/en-US/docs/Web/API/window.onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
+/en-US/docs/Web/API/window.onreset	/en-US/docs/Web/API/HTMLFormElement/reset_event
+/en-US/docs/Web/API/window.onresize	/en-US/docs/Web/API/Window/resize_event
 /en-US/docs/Web/API/window.onscroll	/en-US/docs/Web/API/GlobalEventHandlers/onscroll
 /en-US/docs/Web/API/window.onselect	/en-US/docs/Web/API/GlobalEventHandlers/onselect
 /en-US/docs/Web/API/window.onsubmit	/en-US/docs/Web/API/GlobalEventHandlers/onsubmit
@@ -12871,7 +12873,7 @@
 /en-US/docs/onmousemove	/en-US/docs/Web/API/GlobalEventHandlers/onmousemove
 /en-US/docs/onmouseout	/en-US/docs/Web/API/GlobalEventHandlers/onmouseout
 /en-US/docs/onmouseup	/en-US/docs/Web/API/GlobalEventHandlers/onmouseup
-/en-US/docs/onresize	/en-US/docs/Web/API/GlobalEventHandlers/onresize
+/en-US/docs/onresize	/en-US/docs/Web/API/Window/resize_event
 /en-US/docs/ownerDocument	/en-US/docs/Web/API/Node/ownerDocument
 /en-US/docs/ownerNode	/en-US/docs/Web/API/StyleSheet/ownerNode
 /en-US/docs/paint-order	/en-US/docs/Web/SVG/Attribute/paint-order
