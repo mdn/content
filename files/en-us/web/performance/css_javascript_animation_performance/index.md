@@ -69,7 +69,7 @@ let rafId;
 button.addEventListener('click', () => {
   if (toggleStatus) {
     animationType.textContent = ' requestAnimationFrame';
-    for(const child of boxContainer.children) {
+    for (const child of boxContainer.children) {
       child.classList.remove('css-animation');
     }
     rafId = window.requestAnimationFrame(animate);
@@ -77,7 +77,7 @@ button.addEventListener('click', () => {
   } else {
     window.cancelAnimationFrame(rafId);
     animationType.textContent = ' CSS animation';
-    for(const child of boxContainer.children) {
+    for (const child of boxContainer.children) {
       child.classList.add('css-animation');
     }
   }
