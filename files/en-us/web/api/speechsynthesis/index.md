@@ -70,8 +70,8 @@ const synth = window.speechSynthesis;
 
 const inputForm = document.querySelector('form');
 const inputTxt = document.querySelector('.txt');
-cosnt voiceSelect = document.querySelector('select');
-cosnt pitch = document.querySelector('#pitch');
+const voiceSelect = document.querySelector('select');
+const pitch = document.querySelector('#pitch');
 const pitchValue = document.querySelector('.pitch-value');
 const rate = document.querySelector('#rate');
 const rateValue = document.querySelector('.rate-value');
