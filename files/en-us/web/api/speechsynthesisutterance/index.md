@@ -75,15 +75,14 @@ After defining some necessary variables, we retrieve a list of the voices availa
 Inside the `inputForm.onsubmit` handler, we stop the form submitting with {{domxref("Event.preventDefault","preventDefault()")}}, use the {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "constructor")}} to create a new utterance instance containing the text from the text {{htmlelement("input")}}, set the utterance's {{domxref("SpeechSynthesisUtterance.voice","voice")}} to the voice selected in the {{htmlelement("select")}} element, and start the utterance speaking via the {{domxref("SpeechSynthesis.speak()")}} method.
 
 ```js
-var synth = window.speechSynthesis;
-var voices = synth.getVoices();
+const synth = window.speechSynthesis;
+const voices = synth.getVoices();
 
-var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('input');
-var voiceSelect = document.querySelector('select');
+const inputForm = document.querySelector('form');
+const inputTxt = document.querySelector('input');
+const voiceSelect = document.querySelector('select');
 
-for(var i = 0; i < voices.length; i++) {
-  var option = document.createElement('option');
+for(let i = 0; i < voices.length; i++const option = document.createElement('option');
   option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
   option.value = i;
   voiceSelect.appendChild(option);
@@ -92,7 +91,7 @@ for(var i = 0; i < voices.length; i++) {
 inputForm.onsubmit = function(event) {
   event.preventDefault();
 
-  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
+  const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   utterThis.voice = voices[voiceSelect.value];
   synth.speak(utterThis);
   inputTxt.blur();
