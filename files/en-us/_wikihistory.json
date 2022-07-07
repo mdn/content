@@ -13683,6 +13683,39 @@
       "chrisdavidmills"
     ]
   },
+  "MDN/Guidelines/Conventions_definitions": {
+    "modified": "2020-10-29T08:58:29.399Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Sheppy",
+      "jswisher",
+      "accidentalmeme",
+      "ExE-Boss",
+      "wbamberg",
+      "duduindo"
+    ]
+  },
+  "MDN/Guidelines/Does_this_belong_on_MDN": {
+    "modified": "2020-09-30T15:27:13.393Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09",
+      "jswisher",
+      "wbamberg",
+      "Sheppy",
+      "heathhamilton"
+    ]
+  },
+  "MDN/Guidelines/Editorial": {
+    "modified": "2020-09-30T15:27:13.756Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "Sheppy",
+      "suterj",
+      "jswisher"
+    ]
+  },
   "MDN/Guidelines/Video": {
     "modified": "2020-09-30T15:27:13.970Z",
     "contributors": [

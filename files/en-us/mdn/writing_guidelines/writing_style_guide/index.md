@@ -405,8 +405,7 @@ The following are some recommended practices when writing a code example for MDN
   - A short description preceding the example code that states the specifics of the example to which you want to draw reader's attention. For example, "In the example below, two cascade layers are defined in the CSS, `base` and `special`. "
   - An explanation after the example code that describes the result and how the code works.
 - If you are working with a large piece of example code, it may make sense to break it up into smaller logical parts so that they can be described individually.
-- When adding [live samples](/en-US/docs/MDN/Structures/Live_samples) <!--link to be revised-->, it's helpful to be aware that all of the {{HTMLElement("pre")}} blocks in the area that contains the sample are concatenated together before running the example, which lets you break any or all of the HTML, CSS, and JavaScript into multiple segments, each optionally with its own descriptions, headings, and so forth.
-This makes documenting code incredibly powerful and flexible.
+- When adding [live samples](/en-US/docs/MDN/Structures/Live_samples) <!--link to be revised-->, it's helpful to be aware that all of the {{HTMLElement("pre")}} blocks in the area that contains the sample are concatenated together before running the example, which lets you break any or all of the HTML, CSS, and JavaScript into multiple segments, each optionally with its own descriptions, headings, and so forth. This makes documenting code incredibly powerful and flexible.
 
 To learn about how to style or format code examples for MDN Web Docs, see [Guidelines for styling code examples](/en-US/docs/MDN/Guidelines/Code_guidelines). <!--link to be revised-->
 

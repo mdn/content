@@ -1,12 +1,10 @@
 ---
 title: Guidelines for styling JavaScript code examples
-slug: 
+slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
+page-type: mdn-writing-guide
 tags:
-  - Code
-  - Guide
-  - Guidelines
-  - JavaScript
-  - MDN Meta
+  - meta
+  - writing-guide
 ---
 {{MDNSidebar}}
 

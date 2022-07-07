@@ -1,12 +1,10 @@
 ---
-title: Guidelines for styling shell prompt examples
-slug: MDN/Guidelines/Code_guidelines/Shell
+title: Guidelines for styling shell prompt code examples
+slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell
+page-type: mdn-writing-guide
 tags:
-  - Code
-  - Guide
-  - Guidelines
-  - MDN Meta
-  - Shell
+  - meta
+  - writing-guide
 ---
 {{MDNSidebar}}
 

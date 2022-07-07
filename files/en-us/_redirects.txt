@@ -5393,7 +5393,7 @@
 /en-US/docs/MDC:How_to_Help	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN/About	/en-US/docs/MDN/Writing_guidelines
 /en-US/docs/MDN/At_ten/Contributing_to_MDN	/en-US/docs/MDN/Contribute
-/en-US/docs/MDN/Contribute/Code_sample_guidelines	/en-US/docs/MDN/Guidelines/Code_guidelines
+/en-US/docs/MDN/Contribute/Code_sample_guidelines	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 /en-US/docs/MDN/Contribute/Content	/en-US/docs/MDN/Guidelines
 /en-US/docs/MDN/Contribute/Content/Content_blocks	/en-US/docs/MDN/Contribute/Markdown_in_MDN
 /en-US/docs/MDN/Contribute/Content/Custom_macros	/en-US/docs/MDN/Structures/Macros/Commonly-used_macros
@@ -5420,6 +5420,14 @@
 /en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/Shell	/en-US/docs/MDN/Guidelines/Code_guidelines/Shell
 /en-US/docs/MDN/Contribute/Guidelines/Code_samples	/en-US/docs/MDN/Guidelines/Code_guidelines
 /en-US/docs/MDN/Contribute/Guidelines/Content	/en-US/docs/MDN/Writing_guidelines/What_we_write
+/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
+/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/CSS	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
+/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/General	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
+/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
+/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/JavaScript	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
+/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/Shell	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell
+/en-US/docs/MDN/Contribute/Guidelines/Code_samples	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
+/en-US/docs/MDN/Contribute/Guidelines/Content	/en-US/docs/MDN/Guidelines/Does_this_belong_on_MDN
 /en-US/docs/MDN/Contribute/Guidelines/Content_blocks	/en-US/docs/MDN/Contribute/Markdown_in_MDN
 /en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions	/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /en-US/docs/MDN/Contribute/Guidelines/Custom_macros	/en-US/docs/MDN/Structures/Macros/Commonly-used_macros
@@ -5442,7 +5450,7 @@
 /en-US/docs/MDN/Contribute/Howto/Notices	/en-US/docs/MDN/Structures/Banners_and_notices
 /en-US/docs/MDN/Contribute/Processes/Locating_browser-specific_information	/en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_version
 /en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_versiosn	/en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_version
-/en-US/docs/MDN/Contribute/Sample_app_coding_guidelines	/en-US/docs/MDN/Guidelines/Code_guidelines
+/en-US/docs/MDN/Contribute/Sample_app_coding_guidelines	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 /en-US/docs/MDN/Contribute/Sample_server	/en-US/docs/MDN/Tools/Sample_server
 /en-US/docs/MDN/Contribute/Structures	/en-US/docs/MDN/Structures
 /en-US/docs/MDN/Contribute/Structures/:-ms-input-placeholder_pseudo-class	/en-US/docs/Web/CSS/:placeholder-shown
@@ -5496,6 +5504,13 @@
 /en-US/docs/MDN/Guidelines/Conventions_definitions	/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /en-US/docs/MDN/Guidelines/Does_this_belong_on_MDN	/en-US/docs/MDN/Writing_guidelines/What_we_write
 /en-US/docs/MDN/Guidelines/Editorial	/en-US/docs/MDN/Writing_guidelines/What_we_write
+/en-US/docs/MDN/Guidelines/Code_guidelines	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
+/en-US/docs/MDN/Guidelines/Code_guidelines/CSS	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
+/en-US/docs/MDN/Guidelines/Code_guidelines/General	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
+/en-US/docs/MDN/Guidelines/Code_guidelines/HTML	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
+/en-US/docs/MDN/Guidelines/Code_guidelines/JavaScript	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
+/en-US/docs/MDN/Guidelines/Code_guidelines/Shell	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell
+/en-US/docs/MDN/Guidelines/Content	/en-US/docs/MDN/Guidelines/Does_this_belong_on_MDN
 /en-US/docs/MDN/JavaScript	/en-US/docs/Web/JavaScript
 /en-US/docs/MDN/Kuma	/en-US/docs/MDN/Yari
 /en-US/docs/MDN/Kuma/API	/en-US/docs/MDN/Tools/Unsupported_GET_API
