@@ -489,7 +489,7 @@ You can set more than one of the options in the `options` parameter. In the foll
 
 ```html
 <button id="example-button">You have not clicked this button.</button>
-<button id="reset-button">Click this button to reset the above button.</button>
+<button id="reset-button">Click this button to reset the first button.</button>
 ```
 
 #### JavaScript
