@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.WebAssembly.Memory
 
 The **`WebAssembly.Memory`** object is a resizable {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}} that holds the raw bytes of memory accessed by a {{jsxref("WebAssembly.Instance")}}.
 
-A memory object created by JavaScript or in WebAssembly code will be accessible and mutable from both JavaScript and WebAssembly, provided that the code constructed the object, or has been given the object.
+Both WebAssembly JavaScript can create Memory objects. If you want to access the memory created in JS from Wasm or vice versa, you can pass a reference to the memory from one side to the other.
 
 ## Constructor
 
