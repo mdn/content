@@ -68,10 +68,10 @@ Accessing the `buffer` property after calling `grow`, will yield an `ArrayBuffer
 const memory = new WebAssembly.Memory({
   initial: 1
 });
-const bytes = new Uint8Array(memory.buffer);
+const oldMemoryView = new Uint8Array(memory.buffer);
 memory.grow(1);
 // the array is empty!
-console.log(bytes); // Uint8Array []
+console.log(oldMemoryView); // Uint8Array []
 ```
 
 ```js example-good
@@ -79,9 +79,9 @@ const memory = new WebAssembly.Memory({
   initial: 1
 });
 memory.grow(1);
-const bytes = new Uint8Array(memory.buffer);
+const currentMemoryView = new Uint8Array(memory.buffer);
 // the array is full of zeros
-console.log(bytes); // Uint8Array(131072) [ 0, 0, 0, ... ]
+console.log(currentMemoryView); // Uint8Array(131072) [ 0, 0, 0, ... ]
 // 131072 = 64KiB * 2
 ```
 
