@@ -80,7 +80,7 @@ const memory = new WebAssembly.Memory({
 });
 memory.grow(1);
 const bytes = new Uint8Array(memory.buffer);
-console.log(bytes); // Uint8Array(131072) []
+console.log(bytes); // Uint8Array(131072) [ ... ]
 // 131072 = 64KiB * 2
 ```
 
