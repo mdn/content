@@ -76,7 +76,7 @@ const pitchValue = document.querySelector('.pitch-value');
 const rate = document.querySelector('#rate');
 const rateValue = document.querySelector('.rate-value');
 
-let voices = [];
+const voices = [];
 
 function populateVoiceList() {
   voices = synth.getVoices();
