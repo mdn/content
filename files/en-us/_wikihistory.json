@@ -44992,24 +44992,6 @@
       "AFBarstow"
     ]
   },
-  "Web/API/GlobalEventHandlers/onreset": {
-    "modified": "2020-10-15T21:18:29.382Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "fscholz",
-      "erikadoyle",
-      "jpmedley",
-      "caoruiy",
-      "cvrebert",
-      "teoli",
-      "kosvrouvas",
-      "libreGeekingKid",
-      "Sheppy",
-      "Callek",
-      "alecananian"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onscroll": {
     "modified": "2020-10-15T21:06:53.109Z",
     "contributors": [

@@ -143,8 +143,6 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("progress")}} event is raised.
 - {{domxref("GlobalEventHandlers.onratechange")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("ratechange")}} event is raised.
-- {{domxref("GlobalEventHandlers.onreset")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("reset")}} event is raised.
 - {{domxref("GlobalEventHandlers.onscroll")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("scroll")}} event is raised.
 - {{domxref("GlobalEventHandlers.onsecuritypolicyviolation")}}
