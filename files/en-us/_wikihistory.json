@@ -45010,26 +45010,6 @@
       "alecananian"
     ]
   },
-  "Web/API/GlobalEventHandlers/onresize": {
-    "modified": "2020-10-15T21:06:27.989Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "mfluehr",
-      "fscholz",
-      "Garbee",
-      "cvrebert",
-      "mrec",
-      "teoli",
-      "kosvrouvas",
-      "libreGeekingKid",
-      "Sheppy",
-      "ziyunfei",
-      "Rikdc",
-      "Jabez",
-      "alecananian"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onscroll": {
     "modified": "2020-10-15T21:06:53.109Z",
     "contributors": [
