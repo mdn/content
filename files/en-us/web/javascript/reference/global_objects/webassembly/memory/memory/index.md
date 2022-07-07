@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.WebAssembly.Memory.Memory
 ---
 {{JSRef}}
 
-The **`WebAssembly.Memory()`** constructor creates a new `Memory` object whose {{jsxref("WebAssembly/Memory/buffer","buffer")}} property is a resizable [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or `SharedArrayBuffer` that holds the raw bytes of memory accessed by a WebAssembly `Instance`.
+The **`WebAssembly.Memory()`** constructor creates a new `Memory` object whose {{jsxref("WebAssembly/Memory/buffer", "buffer")}} property is a resizable {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}} that holds the raw bytes of memory accessed by a {{jsxref("WebAssembly.Instance")}}.
 
 A memory object created by JavaScript or in WebAssembly code will be accessible and mutable from both JavaScript and WebAssembly, provided that the code constructed the object, or has been given the object.
 
@@ -42,34 +42,18 @@ new WebAssembly.Memory(memoryDescriptor)
 
 ### Exceptions
 
-- If `memoryDescriptor` is an object, a {{jsxref("TypeError")}} is
-  thrown.
+- If `memoryDescriptor` is an object, a {{jsxref("TypeError")}} is thrown.
 - If `initial` is not specified, a {{jsxref("TypeError")}} is thrown.
-- If `maximum` is specified and is smaller than `initial`, a
-  {{jsxref("RangeError")}} is thrown.
-- If `shared` is present and `true`, yet `maximum` is not specified, a
-  {{jsxref("TypeError")}} is thrown.
+- If `maximum` is specified and is smaller than `initial`, a {{jsxref("RangeError")}} is thrown.
+- If `shared` is present and `true`, yet `maximum` is not specified, a {{jsxref("TypeError")}} is thrown.
 
 ## Examples
 
 ### Creating a new Memory instance
 
-There are two ways to get a `WebAssembly.Memory` object. The first way is to
-construct it from JavaScript. The following example creates a new WebAssembly Memory
-instance with an initial size of 10 pages (640KiB), and a maximum size of 100 pages
-(6.4MiB). Its
-[`buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer)
-property will return an
-[`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
+There are two ways to get a `WebAssembly.Memory` object: construct it from JavaScript, or have it exported by a WebAssembly module. 
 
-```js
-const memory = new WebAssembly.Memory({
-  initial: 10,
-  maximum: 100
-});
-```
-
-The second way to get a `WebAssembly.Memory` object is to have it exported by a WebAssembly module. The following example (see [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) on GitHub, and [view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) fetches and instantiates the loaded memory.wasm bytecode using the {{jsxref("WebAssembly.instantiateStreaming()")}} method, while importing the memory created in the line above. It then stores some values in that memory, exports a function, and uses the exported function to sum those values.
+The following example (see [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) on GitHub, and [view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) creates a new WebAssembly Memory instance with an initial size of 10 pages (640KiB), and a maximum size of 100 pages (6.4MiB). The example fetches and instantiates the loaded memory.wasm bytecode using the {{jsxref("WebAssembly.instantiateStreaming()")}} method, while importing the memory created in the line above. It then stores some values in that memory, exports a function, and uses the exported function to sum those values. The `Memory` object's {{jsxref("WebAssembly.Memory.prototype.buffer", "buffer")}} property will return an {{jsxref("ArrayBuffer")}}.
 
 ```js
 const memory = new WebAssembly.Memory({
@@ -103,7 +87,7 @@ const memory = new WebAssembly.Memory({
 ```
 
 This memory's `buffer` property will return a
-[`SharedArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer).
+{{jsxref("SharedArrayBuffer")}}.
 
 ## Specifications
 
