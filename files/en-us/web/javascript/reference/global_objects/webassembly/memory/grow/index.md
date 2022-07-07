@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.WebAssembly.Memory.grow
 ---
 {{JSRef}}
 
-The **`grow()`** prototype method of the [`Memory`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) object increases the size of the memory instance by a specified number of WebAssembly pages.
+The **`grow()`** prototype method of the {{jexref("WebAssembly.Memory")}} object increases the size of the memory instance by a specified number of WebAssembly pages.
 
 ## Syntax
 
@@ -62,7 +62,7 @@ Note the return value of `grow()` here is the previous number of WebAssembly pag
 
 Every call to `grow` will detach any references to the old `buffer`, even for `grow(0)`!
 Detachment means that the {{jsxref("ArrayBuffer")}}'s `byteLength` becomes zero, and it no longer has bytes accessible to JavaScript.
-Accessing the `buffer` property after calling `grow` will yield an `ArrayBuffer` with the correct length.
+Accessing the `buffer` property after calling `grow`, will yield an `ArrayBuffer` with the correct length.
 
 ```js example-bad
 const memory = new WebAssembly.Memory({
@@ -80,7 +80,8 @@ const memory = new WebAssembly.Memory({
 });
 memory.grow(1);
 const bytes = new Uint8Array(memory.buffer);
-console.log(bytes); // Uint8Array(131072) [ ... ]
+// the array is full of zeros
+console.log(bytes); // Uint8Array(131072) [ 0, 0, 0, ... ]
 // 131072 = 64KiB * 2
 ```
 
