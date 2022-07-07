@@ -1,31 +1,26 @@
 ---
 title: 'Experimental, deprecated and obsolete'
-slug: MDN/Writing_guide/Experimental_deprecated_obsolete
+slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
 page-type: mdn-writing-guide
 tags:
   - meta
   - writing-guide
 ---
-
 {{MDNSidebar}}
 
-## Terms used on MDN Web Docs to label a technology
+These terms are commonly associated with technologies and specifications and are used on MDN Web Docs to label a technology. These are also defined in our [Browser compatibility project](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information).
 
-<!--content copied from /en-us/mdn/guidelines/conventions_definitions -->
-
-These terms are commonly associated with technologies and specifications. These are also defined in our [Browser compatibility project](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information).
-
-### Deprecated
+## Deprecated
 
 The term **deprecated** on MDN Web Docs is used to mark an API or technology that is no longer recommended. A deprecated API or technology might be removed in the future or might only be kept for compatibility purposes and may still work. We recommend to avoid using the functionality marked as deprecated.
 
-### Obsolete
+## Obsolete
 
 On MDN Web Docs, the term **obsolete** was used to mark an API or technology that is not only no longer recommended but is also no longer implemented in browsers. The term was, however, confusing. It was similar to **deprecated** but it's distinction from **deprecated** ws not very helpful.
 
 > **Note:** We do not use the term **obsolete** on MDN Web Docs anymore. If you come across any instances, they should be removed or replaced with the term **deprecated**.
 
-### Experimental
+## Experimental
 
 The term **experimental** can mean different things depending on the context you hear or read it in.
 When a technology is described as experimental on MDN Web Docs, it means that the technology is nascent and immature and is currently _in the process_ of being added to the web platform (or being considered for addition).
@@ -46,6 +41,8 @@ Usually, if a technology is supported across several major browsers, the specifi
 And some technologies might have a stable specification and be well-used but might not have native support in browsers ([IMSC](/en-US/docs/Related/IMSC), for example). <!-- need to revisit link -->
 
 A feature or technology that is not marked **experimental** or **deprecated** is said to be on a **standards track**, meaning the feature is part of an active specification or specification process.
+
+## Removal guidelines
 
 Sometimes during the development of a new specification or over the course of the evolution of living standards such as HTML, new elements, methods, properties, and so forth are added to the specification, kept there for a while, and then removed. Sometimes this happens very quickly, and sometimes these new items remain in the specification for months or even years before being removed. This can make it tricky to decide how to handle the removal of the item from the specification.
 
