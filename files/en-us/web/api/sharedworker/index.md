@@ -47,7 +47,7 @@ In our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/ma
 The following code snippet shows creation of a `SharedWorker` object using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. Both scripts contain this:
 
 ```js
-var myWorker = new SharedWorker('worker.js');
+const myWorker = new SharedWorker('worker.js');
 ```
 
 Both scripts then access the worker through a {{domxref("MessagePort")}} object created using the {{domxref("SharedWorker.port")}} property. If the onmessage event is attached using addEventListener, the port is manually started using its `start()` method:
@@ -79,10 +79,10 @@ Inside the worker we use the {{domxref("SharedWorkerGlobalScope.connect_event", 
 
 ```js
 onconnect = function(e) {
-  var port = e.ports[0];
+  const port = e.ports[0];
 
   port.addEventListener('message', function(e) {
-    var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+    const workerResult = 'Result: ' + (e.data[0] * e.data[1]);
     port.postMessage(workerResult);
   });
 
