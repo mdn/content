@@ -52,9 +52,9 @@ const memory = new WebAssembly.Memory({
 
 WebAssembly.instantiateStreaming(fetch("memory.wasm"), { js: { mem: memory } })
 .then(obj => {
-  const u32 = new Uint32Array(memory.buffer);
+  const summands = new Uint32Array(memory.buffer);
   for (let i = 0; i < 10; i++) {
-    u32[i] = i;
+    summands[i] = i;
   }
   const sum = obj.instance.exports.accumulate(0, 10);
   console.log(sum);
@@ -66,8 +66,8 @@ The second way to get a WebAssembly.Memory object is to have it exported by a We
 ```js
 WebAssembly.instantiateStreaming(fetch("memory.wasm"))
 .then(obj => {
-  const u32 = new Uint32Array(obj.instance.exports.memory.buffer);
-  console.log(u32[0]);
+  const values = new Uint32Array(obj.instance.exports.memory.buffer);
+  console.log(values[0]);
 });
 ```
 
