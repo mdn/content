@@ -527,7 +527,7 @@ function addListener() {
 resetButton.addEventListener(
   "click",
   () => {
-    button.textContent = intialText;
+    buttonToBeClicked.textContent = intialText;
     addListener();
   }
 );
