@@ -76,15 +76,13 @@ the entire tree. For example, let's say you want to move the entire
     git checkout -b my-move
     ```
 
-2. Perform the move (which will delete and modify existing files, as well
-as create new files).
+2. Perform the move (which will delete and modify existing files, as well as create new files).
 
     ```sh
     yarn content move Learn/Accessibility Learn/A11y
     ```
 
-3. Add and commit all of the deleted, created, and modified files, as well as
-push your branch to your fork.
+3. Add and commit all of the deleted, created, and modified files, as well as push your branch to your fork.
 
     ```sh
     git commit -a
@@ -117,8 +115,7 @@ that you'd like to delete has child documents (i.e. it represents a
 document tree), you must also specify the `-r, --recursive` option, otherwise
 the command will fail.
 
-> **Important:** You need to use the `yarn content delete` command to delete pages from MDN Web Docs. Don't
-just delete their directories from the repo. The `yarn content delete` command also handles other necessary changes such as updating the `_wikihistory.json` file.
+> **Note:** You need to use the `yarn content delete` command to delete pages from MDN Web Docs. Don't just delete their directories from the repo. The `yarn content delete` command also handles other necessary changes such as updating the `_wikihistory.json` file.
 
 
 For example, if you want to delete the
@@ -148,8 +145,7 @@ entire `/en-US/Learn/Accessibility` tree, you'd perform the following steps:
     yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
     ```
 
-4. Add and commit all of the deleted files, as well as
-push your branch to your fork.
+4. Add and commit all of the deleted files, as well as push your branch to your fork.
 
     ```sh
     git commit -a
@@ -158,15 +154,11 @@ push your branch to your fork.
 
 5. Create your pull request.
 
+> **Note:** If the slug of the page you wish to delete contains special characters, include it in quotes, like so:
+
 ```sh
 yarn content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"
 ```
-
-    > **Note:** If the slug of the page you wish to delete contains special characters, include it in quotes, like so:
-
-    ```sh
-    yarn content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"
-    ```
 
 Removing content from MDN Web Docs will inevitably result in updating existing content as well, as a lot of articles link to others, the removed content will be referenced elsewhere.
 

@@ -5404,7 +5404,7 @@
 /en-US/docs/MDN/Contribute/Content/Quicklinks	/en-US/docs/MDN/Structures/Quicklinks
 /en-US/docs/MDN/Contribute/Content/Specification_tables	/en-US/docs/MDN/Structures/Specification_tables
 /en-US/docs/MDN/Contribute/Content/Style_guide	/en-US/docs/MDN/Guidelines/Writing_style_guide
-/en-US/docs/MDN/Contribute/Creating_and_editing_pages	/en-US/docs/MDN/Contribute/Howto/Create_and_edit_pages
+/en-US/docs/MDN/Contribute/Creating_and_editing_pages	/en-US/docs/MDN/Writing_guidelines/Creating_moving_deleting
 /en-US/docs/MDN/Contribute/Documentation_priorities	https://mdn-contributor-docs.mozilla.org/legacy/documentation-priorities/
 /en-US/docs/MDN/Contribute/Does_this_belong	/en-US/docs/MDN/Guidelines/Does_this_belong_on_MDN
 /en-US/docs/MDN/Contribute/Editor/Live_samples	/en-US/docs/MDN/Structures/Live_samples
@@ -5437,6 +5437,7 @@
 /en-US/docs/MDN/Contribute/How_to_document_a_CSS_property	/en-US/docs/MDN/Contribute/Howto/Document_a_CSS_property
 /en-US/docs/MDN/Contribute/Howto/Compatibility_tables	/en-US/docs/MDN/Structures/Compatibility_tables
 /en-US/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example	/en-US/docs/mdn/contribute/howto/create_an_interactive_exercise_to_help_learning_the_web
+/en-US/docs/MDN/Contribute/Howto/Create_and_edit_pages	/en-US/docs/MDN/Writing_guidelines/Creating_moving_deleting
 /en-US/docs/MDN/Contribute/Howto/How_to_document_a_CSS_property	/en-US/docs/MDN/Contribute/Howto/Document_a_CSS_property
 /en-US/docs/MDN/Contribute/Howto/Notices	/en-US/docs/MDN/Structures/Banners_and_notices
 /en-US/docs/MDN/Contribute/Processes/Locating_browser-specific_information	/en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_version
