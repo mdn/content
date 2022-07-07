@@ -442,7 +442,7 @@ the global scope (which all functions inherit).
  */
 var p = 5;
 function myFunc() {
-    let p = 9;
+    var p = 9;
 
     function decl() {
         console.log(p);
@@ -497,9 +497,9 @@ if (x === 0) {           // source element
    function boo() {}     // not a source element
 }
 function foo() {         // source element
-   const y = 20;           // source element
+   let y = 2;           // source element
    function bar() {}     // source element
-   while (y === 10) {    // source element
+   while (y < 10) {    // source element
       function blah() {} // not a source element
       y++;               // not a source element
    }
@@ -586,7 +586,7 @@ A safer way to define functions conditionally is to assign a function expression
 variable:
 
 ```js
-let zero;
+var zero;
 if (shouldDefineZero) {
    zero = function() {
       console.log("This is zero.");
