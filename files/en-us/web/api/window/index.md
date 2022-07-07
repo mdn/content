@@ -350,8 +350,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Called when the pointer enters the window.
 - {{domxref("GlobalEventHandlers.onmouseup")}}
   - : Called when ANY mouse button is released.
-- {{domxref("GlobalEventHandlers.onreset")}}
-  - : Called when a form is reset.
 - {{domxref("GlobalEventHandlers.onscroll")}}
   - : Called when the scroll bar is moved via ANY means. If the resource fully fits in the window, then this event cannot be invoked.
 - {{domxref("GlobalEventHandlers.onwheel")}}
