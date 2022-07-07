@@ -344,9 +344,9 @@ Libraries currently exist for the following formats :
 
 ## Examples
 
-- [Various Web Audio API (and other) examples](https://github.com/mdn/)
+- [Various Web Audio API (and other) examples](https://github.com/mdn/webaudio-examples)
 - [THREE.js Video Cube example](https://github.com/chrisdavidmills/threejs-video-cube)
-- [Convolution Effects in Real-Time](https://chromium.googlecode.com/svn/trunk/samples/audio/convolution-effects.html)
+- [Convolution Effects in Real-Time](https://github.com/cwilso/web-audio-samples/blob/master/samples/audio/convolution-effects.html)
 
 ## See also
 
