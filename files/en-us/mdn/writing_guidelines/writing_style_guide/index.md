@@ -50,8 +50,7 @@ In a guide or tutorial, the introductory paragraph(s) should inform the reader a
   > **`CanvasRenderingContext2D.strokeText()`** draws a string.
 
 - **Example of long introduction**: This example has an updated introduction, but now it's far too long.
-Too much detail is included, and the text delves too deeply into describing other methods and properties.
-
+  Too much detail is included, and the text delves too deeply into describing other methods and properties.
   > Instead, the introduction should focus on the `strokeText()` method and should refer to the appropriate guides where the other details are described.
   >
   > When called, the Canvas 2D API method **`CanvasRenderingContext2D.strokeText()`** strokes the characters in the specified string beginning at the coordinates specified, using the current pen color.
@@ -289,7 +288,7 @@ Do not use "curly" quotes and quotation marks. On MDN Web Docs, we only use stra
 - If curly quotes or apostrophes make their way into code snippets—even inline ones—readers may copy and paste them, expecting them to function (which they will not).
 >
 - **Correct**: Please don't use "curly quotes."
-- **Incorrect**: Please don't use “curly quotes.”
+- **Incorrect**: Please don’t use “curly quotes.”
 
 #### Commas
 

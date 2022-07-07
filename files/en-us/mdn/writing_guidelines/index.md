@@ -17,8 +17,8 @@ Here are the guidelines for what we document and how we do it on MDN Web Docs.
     - [Inclusion criteria](/en_US/docs/MDN/Writing_guidelines/What_we_write/Inclusion_criteria)
       - : This section provides an in-depth criteria for content to be included on MDN Web Docs, the application process for including new documentation, and expectations and guidelines for a party applying.
 
-- [Writing style guide](/en_US/docs/MDN/Writing_guidelines/What_we_write)
-  - : The writing style guide covers the language and style we use to write on MDN Web Docs.
+- [Writing style guide](/en_US/docs/MDN/Writing_guidelines/Writing_style_guide)
+  - : The writing style guide covers the language and style we use to write on MDN Web Docs. It also covers how to format code examples.
 
 - [How to write](/en_US/docs/MDN/Writing_guidelines/How_to_write)
   - : This section covers all the information for creating and editing pages, including certain processes and techniques we adhere to. This page includes information on getting started, a general overview into how pages are structured, and where to find how-tos on specific tasks. This section also includes:
