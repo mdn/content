@@ -19,16 +19,21 @@ The **`buffer`** prototype property of the {{jsxref("WebAssembly.Memory")}} obje
 
 ### Using buffer
 
-The following example (see [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) on GitHub, and [view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) fetches and instantiates the loaded memory.wasm byte code using the {{jsxref("WebAssembly.instantiateStreaming()")}} method, while importing the memory created in the line above. It then stores some values in that memory, then exports a function and uses it to sum some values.
+The following example (see [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) on GitHub, and [view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) fetches and instantiates the loaded memory.wasm bytecode using the {{jsxref("WebAssembly.instantiateStreaming()")}} method, while importing the memory created in the line above. It then stores some values in that memory, exports a function, and then uses it to sum those values.
 
 ```js
-WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
+const memory = new WebAssembly.Memory({
+  initial: 10,
+  maximum: 100
+});
+
+WebAssembly.instantiateStreaming(fetch("memory.wasm"), { js: { mem: memory } })
 .then(obj => {
-  var i32 = new Uint32Array(memory.buffer);
-  for (var i = 0; i < 10; i++) {
-    i32[i] = i;
+  const u32 = new Uint32Array(memory.buffer);
+  for (let i = 0; i < 10; i++) {
+    u32[i] = i;
   }
-  var sum = obj.instance.exports.accumulate(0, 10);
+  const sum = obj.instance.exports.accumulate(0, 10);
   console.log(sum);
 });
 ```
