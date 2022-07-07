@@ -424,6 +424,36 @@ For per-user visibility, store the manifest in:
 ~/Library/Application Support/Mozilla/PKCS11Modules/<name>.json
 ```
 
+### macOS (Thunderbird)
+
+For global visibility, store the manifest in:
+
+```
+/Library/Application Support/Mozilla/NativeMessagingHosts/<name>.json
+```
+
+```
+/Library/Application Support/Mozilla/ManagedStorage/<name>.json
+```
+
+```
+/Library/Application Support/Mozilla/PKCS11Modules/<name>.json
+```
+
+For per-user visibility, store the manifest in:
+
+```
+~/Library/Mozilla/NativeMessagingHosts/<name>.json
+```
+
+```
+~/Library/Mozilla/ManagedStorage/<name>.json
+```
+
+```
+~/Library/Mozilla/PKCS11Modules/<name>.json
+```
+
 ### Linux
 
 For global visibility, store the manifest in either:
