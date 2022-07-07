@@ -41,7 +41,7 @@ The number of minutes returned by `getTimezoneOffset()` is positive if the local
 
 ### Varied results in Daylight Saving Time (DST) regions
 
-In a region that annually shifts in and out of Daylight Saving Time (DST), the number of minutes returned by calling `getTimezoneOffset()` can be non-uniform as `date` varies.
+In a region that annually shifts in and out of Daylight Saving Time (DST), the number of minutes returned by calling `getTimezoneOffset()` can be non-uniform as, `date` varies.
 
 > **Note:** `getTimezoneOffset()`'s behavior will never differ based on the time when the code is run — its behavior is always consistent when running in the same region. Only the value of `date` affects the result.
 
