@@ -56,7 +56,7 @@ scope of the function
 
 ```js example-bad
 function numbers() {
-  var num1 = 2,
+  const num1 = 2,
       num2 = 3;
   return num1 + num2;
 }
@@ -69,7 +69,7 @@ which it is defined. In other words, a function defined in the global scope can 
 all variables defined in the global scope.
 
 ```js example-good
-var num1 = 2,
+const num1 = 2,
     num2 = 3;
 
 function numbers() {

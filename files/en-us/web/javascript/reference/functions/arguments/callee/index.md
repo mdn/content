@@ -54,9 +54,9 @@ did not. To get around this `arguments.callee` was added so you could do
 However, this was actually a really bad solution as this (in conjunction with other `arguments`, `callee`, and `caller` issues) make inlining and tail recursion impossible in the general case (you can achieve it in select cases through tracing, etc., but even the best code is suboptimal due to checks that would not otherwise be necessary.) The other major issue is that the recursive call will get a different `this` value, e.g.:
 
 ```js
-var global = this;
+const global = this;
 
-var sillyFunction = function(recursed) {
+const sillyFunction = function(recursed) {
     if (!recursed) { return arguments.callee(true); }
     if (this !== global) {
         alert('This is: ' + this);
@@ -107,7 +107,7 @@ function create() {
    };
 }
 
-var result = create()(5); // returns 120 (5 * 4 * 3 * 2 * 1)
+const result = create()(5); // returns 120 (5 * 4 * 3 * 2 * 1)
 ```
 
 ### A use of `arguments.callee` with no good alternative
@@ -116,12 +116,12 @@ However, in a case like the following, there are not alternatives to `arguments.
 
 ```js
 function createPerson(sIdentity) {
-    var oPerson = new Function('alert(arguments.callee.identity);');
+    const oPerson = new Function('alert(arguments.callee.identity);');
     oPerson.identity = sIdentity;
     return oPerson;
 }
 
-var john = createPerson('John Smith');
+const john = createPerson('John Smith');
 
 john();
 ```

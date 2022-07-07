@@ -57,14 +57,14 @@ applied to any object.
 ### Deprecated syntax
 
 ```js example-bad
-var num = 15;
+const num = 15;
 String.replace(num, /5/, '2');
 ```
 
 ### Standard syntax
 
 ```js example-good
-var num = 15;
+const num = 15;
 String(num).replace(/5/, '2');
 ```
 
@@ -79,7 +79,7 @@ The following is a shim to provide support to non-supporting browsers:
 (function() {
   'use strict';
 
-  var i,
+  let i,
     // We could also build the array of methods with the following, but the
     //   getOwnPropertyNames() method is non-shimable:
     // Object.getOwnPropertyNames(String).filter(function(methodName) {
@@ -94,7 +94,7 @@ The following is a shim to provide support to non-supporting browsers:
     ],
     methodCount = methods.length,
     assignStringGeneric = function(methodName) {
-      var method = String.prototype[methodName];
+      const method = String.prototype[methodName];
       String[methodName] = function(arg1) {
         return method.apply(arg1, Array.prototype.slice.call(arguments, 1));
       };
