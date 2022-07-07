@@ -17,7 +17,7 @@ browser-compat: api.Element.keydown_event
 
 The **`keydown`** event is fired when a key is pressed.
 
-Unlike the {{Event("keypress")}} event, the `keydown` event is fired for all keys, regardless of whether they produce a character value.
+Unlike the {{domxref("Element/keypress_event", "keypress")}} event, the `keydown` event is fired for all keys, regardless of whether they produce a character value.
 
 <table class="properties">
   <tbody>

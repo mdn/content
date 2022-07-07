@@ -333,11 +333,11 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.oninput")}}
   - : Called when the value of an \<input> element changes.
 - {{domxref("GlobalEventHandlers.onkeydown")}}
-  - : Called when you begin pressing ANY key. See {{event("keydown")}} event.
+  - : Called when you begin pressing ANY key. See {{domxref("Element/keydown_event", "keydown")}} event.
 - {{domxref("GlobalEventHandlers.onkeypress")}}
-  - : Called when a key (except Shift, Fn, and CapsLock) is in pressed position. See {{event("keypress")}} event.
+  - : Called when a key (except Shift, Fn, and CapsLock) is in pressed position. See {{domxref("Element/keypress_event", "keypress")}} event.
 - {{domxref("GlobalEventHandlers.onkeyup")}}
-  - : Called when you finish releasing ANY key. See {{event("keyup")}} event.
+  - : Called when you finish releasing ANY key. See {{domxref("Element/keyup_event", "keyup")}} event.
 - {{domxref("GlobalEventHandlers.onload")}}
   - : Called after all resources and the DOM are fully loaded. WILL NOT get called when the page is loaded from cache, such as with back button.
 - {{domxref("GlobalEventHandlers.onmousedown")}}

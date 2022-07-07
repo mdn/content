@@ -16,7 +16,7 @@ browser-compat: api.GlobalEventHandlers.onkeypress
 
 The **`onkeypress`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("keypress")}} events.
+processes {{domxref("Element/keypress_event", "keypress")}} events.
 
 The `keypress` event _should_ fire when the user presses a key on the
 keyboard. However, in practice browsers do not fire `keypress` events for
@@ -176,7 +176,7 @@ The following JavaScript function will do something after the user types the wor
 
 ## See also
 
-- {{Event("keypress")}} event
+- {{domxref("Element/keypress_event", "keypress")}} event
 - Related event handlers
 
   - {{domxref("GlobalEventHandlers.onkeydown")}}

@@ -122,7 +122,7 @@ tags:
 - Support for UTF-16 has been removed from {{domxref("TextEncoder")}} ({{bug(1257877)}}).
 - {{domxref("RTCStatsReport")}} is now a true `maplike` interface: in addition to {{domxref("RTCStatsReport.forEach()", "forEach()")}}, {{domxref("RTCStatsReport.get()", "get()")}}, and {{domxref("RTCStatsReport.has()", "has()")}}, the methods {{domxref("RTCStatsReport.entries", "entries()")}}, {{domxref("RTCStatsReport.values", "values()")}}, {{domxref("RTCStatsReport.keys()", "keys()")}}, as well as the {{domxref("RTCStatsReport.size", "size")}} getter have been implemented ({{bug(906986)}}).
 - The {{domxref("Request.cache")}} property has been added allowing to control the cache behavior ({{bug(1120715)}}).
-- Handling of dead keys on Mac OS X has been changed to work the same as other platforms; they no longer fire a {{event("keypress")}} event when no text is generated when the focused element isn't editable (when the focused element is editable, dead key causes composition events instead of keyboard events on Mac OS X). Also, like on other platforms, the value of {{domxref("KeyboardEvent.key")}} is now `"Dead"` for dead keypresses which don't generate text in other situations.
+- Handling of dead keys on Mac OS X has been changed to work the same as other platforms; they no longer fire a {{domxref("Element/keypress_event", "keypress")}} event when no text is generated when the focused element isn't editable (when the focused element is editable, dead key causes composition events instead of keyboard events on Mac OS X). Also, like on other platforms, the value of {{domxref("KeyboardEvent.key")}} is now `"Dead"` for dead keypresses which don't generate text in other situations.
 
 ## HTTP
 
