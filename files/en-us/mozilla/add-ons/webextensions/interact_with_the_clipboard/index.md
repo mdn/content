@@ -146,7 +146,7 @@ navigator.clipboard.readText().then(clipText =>
 
 ### Using execCommand()
 
-To use {{domxref("Document.execCommand()","document.execCommand(&#34;paste&#34;)")}} your extension needs the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). This is the case even if you're using the `"paste"` command from within a user-generated event handler, such as {{event("click")}} or {{event("keypress")}}.
+To use {{domxref("Document.execCommand()","document.execCommand(&#34;paste&#34;)")}} your extension needs the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). This is the case even if you're using the `"paste"` command from within a user-generated event handler, such as {{event("click")}} or {{domxref("Element/keypress_event", "keypress")}}.
 
 Consider HTML that includes something like this:
 

@@ -29,9 +29,9 @@ The `PerformanceEventTiming` interface of the Event Timing API provides timing i
 - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
 - {{domxref("HTMLElement/drop_event", "drop")}}
 - {{event("input")}}
-- {{event("keydown")}}
-- {{event("keypress")}}
-- {{event("keyup")}}
+- {{domxref("Element/keydown_event", "keydown")}}
+- {{domxref("Element/keypress_event", "keypress")}}
+- {{domxref("Element/keyup_event", "keyup")}}
 - {{domxref("Element/mousedown_event", "mousedown")}}
 - {{domxref("Element/mouseenter_event", "mouseenter")}}
 - {{domxref("Element/mouseleave_event", "mouseleave")}}
