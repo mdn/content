@@ -440,7 +440,7 @@ the global scope (which all functions inherit).
  *     3. function constructor
  * each of which will log 'p'
  */
-let p = 5;
+var p = 5;
 function myFunc() {
     let p = 9;
 
