@@ -28,9 +28,9 @@ If the resize event is triggered too many times for your application, see [Optim
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('resize', event => { });
+addEventListener('resize', (event) => {});
 
-onresize = event => { };
+onresize = (event) => {};
 ```
 
 ## Event type
