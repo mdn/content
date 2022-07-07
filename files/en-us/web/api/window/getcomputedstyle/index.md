@@ -32,7 +32,7 @@ getComputedStyle(element, pseudoElt)
 
 - `element`
   - : The {{DOMxRef("Element")}} for which to get the computed style.
-- `pseudoElt`{{Optional_Inline}}
+- `pseudoElt` {{optional_inline}}
   - : A string specifying the pseudo-element to match. Omitted (or `null`) for
     real elements.
 

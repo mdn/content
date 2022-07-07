@@ -55,23 +55,6 @@ console.log(str.endsWith('to be'))      // false
 console.log(str.endsWith('to be', 19))  // true
 ```
 
-## Polyfill
-
-This method has been added to the ECMAScript 6 specification and may not be available
-in all JavaScript implementations yet. However, you can polyfill
-`String.prototype.endsWith()` with the following snippet:
-
-```js
-if (!String.prototype.endsWith) {
-  String.prototype.endsWith = function(search, this_len) {
-    if (this_len === undefined || this_len > this.length) {
-      this_len = this.length;
-    }
-    return this.substring(this_len - search.length, this_len) === search;
-  };
-}
-```
-
 ## Specifications
 
 {{Specifications}}

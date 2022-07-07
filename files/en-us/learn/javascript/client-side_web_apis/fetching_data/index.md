@@ -63,7 +63,7 @@ So instead of the traditional model, many websites use JavaScript APIs to reques
 
 ![Using fetch to update pages](fetch-update.svg)
 
-The main API here is the [Fetch API](/en-US/docs/Web/API/Fetch_API). This enables JavaScript running in a page to make an [HTTP](/en-US/docs/Web/HTTP) request to a server to retrieve specific resources. When the server provides them, the JavaScript can use the data to update the page, typically by using [DOM manipulation APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents). The data requested is often [JSON](/en-US/docs/Learn/JavaScript/Objects/JSON). which is a good format for transferring structured data, but can also be HTML or just text.
+The main API here is the [Fetch API](/en-US/docs/Web/API/Fetch_API). This enables JavaScript running in a page to make an [HTTP](/en-US/docs/Web/HTTP) request to a server to retrieve specific resources. When the server provides them, the JavaScript can use the data to update the page, typically by using [DOM manipulation APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents). The data requested is often [JSON](/en-US/docs/Learn/JavaScript/Objects/JSON), which is a good format for transferring structured data, but can also be HTML or just text.
 
 This is a common pattern for data-driven sites such as Amazon, YouTube, eBay, and so on. With this model:
 

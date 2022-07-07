@@ -344,9 +344,10 @@ let products = new Proxy([
       return obj.length;
     }
 
-    let result, types = {};
+    let result;
+    const types = {};
 
-    for (let product of obj) {
+    for (const product of obj) {
       if (product.name === prop) {
         result = product;
       }

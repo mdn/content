@@ -30,7 +30,7 @@ convertToBlob(options)
 
 ### Parameters
 
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object with the following properties:
     - `type`

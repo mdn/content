@@ -29,9 +29,9 @@ let capturing = browser.tabs.captureTab(
 
 ### Parameters
 
-- `tabId`{{optional_inline}}
+- `tabId` {{optional_inline}}
   - : `integer`. ID of the tab to capture. Defaults to the active tab in the current window.
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
   - : {{WebExtAPIRef('extensionTypes.ImageDetails')}}.
 
 ### Return value

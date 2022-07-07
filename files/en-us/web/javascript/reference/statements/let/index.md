@@ -241,7 +241,7 @@ function go(n) {
   // n here is defined!
   console.log(n); // Object {a: [1,2,3]}
 
-  for (let n of n.a) { // ReferenceError
+  for (const n of n.a) { // ReferenceError
     console.log(n);
   }
 }

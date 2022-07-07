@@ -20,7 +20,7 @@ The **`credentials`** read-only property of the {{domxref("Request")}} interface
 
 ## Value
 
-A `RequestCredentials` dictionary value indicating whether the user agent should send cookies from the other domain in the case of cross-origin requests. Possible values are:
+A `RequestCredentials` dictionary value indicating whether the user agent should send or receive cookies from the other domain in the case of cross-origin requests. Possible values are:
 
 - `omit`
   - : Never send or receive cookies.

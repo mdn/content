@@ -279,7 +279,7 @@ The required steps are:
 3. If your web host doesn't allow the `FollowSymlinks` option, you need to comment it out or remove it, and then uncomment the `Options +SymLinksIfOwnerMatch` line, but be aware of the [performance impact](https://httpd.apache.org/docs/current/misc/perf-tuning.html#symlinks)
 
     - Some cloud hosting services will require you set `RewriteBase`
-    - See [Rackspace FAQ](https://www.rackspace.com/knowledge_center/frequently-asked-question/why-is-modrewrite-not-working-on-my-site) and the [HTTPD documentation](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewritebase)
+    - See [Rackspace FAQ](https://web.archive.org/web/20151223141222/http://www.rackspace.com/knowledge_center/frequently-asked-question/why-is-modrewrite-not-working-on-my-site) and the [HTTPD documentation](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewritebase)
     - Depending on how your server is set up, you may also need to use the [`RewriteOptions`](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewriteoptions) directive to enable some options for the rewrite engine
 
 ```bash
@@ -511,7 +511,7 @@ Use services like the ones below to check your Referrer Policy:
 
 ## Disable TRACE HTTP Method
 
-The [TRACE](/en-US/docs/Web/HTTP/Methods/TRACE) method, while seemingly harmless, can be successfully leveraged in some scenarios to steal legitimate users' credentials. See [A Cross-Site Tracing (XST) attack](https://owasp.org/www-community/attacks/Cross_Site_Tracing) and [OWASP Web Security Testing Guide](<https://www.owasp.org/index.php/Test_HTTP_Methods_(OTG-CONFIG-006)>)
+The [TRACE](/en-US/docs/Web/HTTP/Methods/TRACE) method, while seemingly harmless, can be successfully leveraged in some scenarios to steal legitimate users' credentials. See [A Cross-Site Tracing (XST) attack](https://owasp.org/www-community/attacks/Cross_Site_Tracing) and [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/06-Test_HTTP_Methods#test-xst-potential)
 
 Modern browsers now prevent TRACE requests made via JavaScript, however, other ways of sending TRACE requests with browsers have been discovered, such as using Java.
 

@@ -30,15 +30,12 @@ self.addEventListener('push', function(event) {
     return;
   }
 
-  var data = {};
-  if (event.data) {
-    data = event.data.json();
-  }
-  var title = data.title || "Something Has Happened";
-  var message = data.message || "Here's something you might want to check out.";
-  var icon = "images/new-notification.png";
+  const data = event.data?.json() ?? {}
+  const title = data.title || "Something Has Happened";
+  const message = data.message || "Here's something you might want to check out.";
+  const icon = "images/new-notification.png";
 
-  var notification = new Notification(title, {
+  const notification = new Notification(title, {
     body: message,
     tag: 'simple-push-demo-notification',
     icon: icon

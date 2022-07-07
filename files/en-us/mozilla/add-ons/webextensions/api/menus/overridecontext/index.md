@@ -35,11 +35,11 @@ browser.menus.overrideContext(
 
     - `showDefaults` {{optional_inline}}
       - : `boolean`. Whether to also include default menu items in the menu.
-    - `context`{{optional_inline}}
+    - `context` {{optional_inline}}
       - : `string`. ContextType to override, to allow menu items from other extensions in the menu. Currently only `'bookmark'` and `'tab'` are supported. `showDefaults` cannot be used with this option.
-    - `bookmarkId`{{optional_inline}}
+    - `bookmarkId` {{optional_inline}}
       - : `string`. Required when context is `'bookmark'`. Requires 'bookmark' permission.
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Required when context is `'tab'`. Requires 'tabs' permission.
 
 ## Examples

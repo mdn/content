@@ -28,7 +28,7 @@ arguments[Symbol.iterator]()
 function f() {
   // your browser must support for..of loop
   // and let-scoped variables in for loops
-  for (let letter of arguments) {
+  for (const letter of arguments) {
     console.log(letter);
   }
 }

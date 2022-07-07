@@ -63,33 +63,6 @@ Because `cbrt()` is a static method of `Math`, you always use it
 as `Math.cbrt()`, rather than as a method of a `Math` object you
 created (`Math` is not a constructor).
 
-## Polyfill
-
-For all <math><semantics><mrow><mi>x</mi>
-<mo>≥</mo>
-<mn>0</mn>
-</mrow><annotation encoding="TeX">x \geq 0</annotation>
-</semantics></math>, have <math><semantics><mrow><mroot><mi>x</mi>
-<mn>3</mn>
-</mroot><mo>=</mo>
-<msup><mi>x</mi>
-<mrow><mn>1</mn>
-<mo>/</mo>
-<mn>3</mn>
-</mrow></msup></mrow><annotation encoding="TeX">\sqrt[3]{x} = x^{1/3}</annotation>
-</semantics></math> so this can be emulated by the following function:
-
-```js
-if (!Math.cbrt) {
-  Math.cbrt = (function(pow) {
-    return function cbrt(x){
-      // ensure negative numbers remain negative:
-      return x < 0 ? -pow(-x, 1/3) : pow(x, 1/3);
-    };
-  })(Math.pow); // localize Math.pow to increase efficiency
-}
-```
-
 ## Examples
 
 ### Using Math.cbrt()

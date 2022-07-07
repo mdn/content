@@ -238,7 +238,7 @@ function foo() {
 
 In the following example, the variable name `baz` is hoisted — due to [variable hoisting](#variable_hoisting) — but because a function is assigned to `baz` using a function expression rather than `baz` being defined with a function declaration, the function can't be called before it's defined, because it's not hoisted.
 
-Thus, the `baz()` call below throws a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) with _“baz is not a function”_, because the function assigned to `baz` isn't hoisted — while the `console.log(baz)` call doesn't throw a [`ReferenceError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError) but instead logs [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined), because the _variable_ `baz` is still hoisted even though the function assigned to it isn't. (But the value of `baz` is undefined, since nothing has yet been assigned to it).
+Thus, the `baz()` call below throws a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) with _"baz is not a function"_, because the function assigned to `baz` isn't hoisted — while the `console.log(baz)` call doesn't throw a [`ReferenceError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError) but instead logs [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined), because the _variable_ `baz` is still hoisted even though the function assigned to it isn't. (But the value of `baz` is undefined, since nothing has yet been assigned to it).
 
 ```js example-bad
 // Doesn't throw ReferenceError

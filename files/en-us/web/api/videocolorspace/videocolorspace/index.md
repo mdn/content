@@ -24,25 +24,25 @@ new VideoColorSpace(init)
 
 All values default to `null` when they are not present.
 
-- `init`{{Optional_Inline}}
+- `init` {{optional_inline}}
   - : A dictionary object containing the following:
-    - `primaries`{{Optional_Inline}}
+    - `primaries` {{optional_inline}}
       - : One of the following strings:
         - `"bt709"`
         - `"bt470bg"`
         - `"smpte170m"`
-    - `transfer`{{Optional_Inline}}
+    - `transfer` {{optional_inline}}
       - : One of the following strings:
         - `"bt709"`
         - `"smpte170m"`
         - `"iec61966-2-1"`
-    - `matrix`{{Optional_Inline}}
+    - `matrix` {{optional_inline}}
       - : One of the following strings:
         - `"rgb"`
         - `"bt709"`
         - `"bt470bg"`
         - `"smpte170m"`
-    - `fullRange`{{Optional_Inline}}
+    - `fullRange` {{optional_inline}}
       - : A {{jsxref("Boolean")}}, `true` if full-range color values are used in the video.
 
 ## Examples

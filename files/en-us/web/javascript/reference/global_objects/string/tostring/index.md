@@ -73,5 +73,4 @@ console.log(x.toString(2)); // logs '1101'
 
 ## See also
 
-- {{jsxref("Object.prototype.toSource()")}}
 - {{jsxref("String.prototype.valueOf()")}}

@@ -24,7 +24,7 @@ The {{domxref("GlobalEventHandlers")}} event handler
 pressed. This event can be sent to {{domxref("Window")}}, {{domxref("Document")}}, and
 {{domxref("Element")}} objects.
 
-This is functionally equivalent to the {{event("mousedown")}} event when generated due
+This is functionally equivalent to the {{domxref("Element/mousedown_event", "mousedown")}} event when generated due
 to user activity with a mouse or mouse-compatible device. If the
 `pointerdown` event isn't canceled through a call to
 {{domxref("Event.preventDefault", "preventDefault()")}}, most user agents will fire a

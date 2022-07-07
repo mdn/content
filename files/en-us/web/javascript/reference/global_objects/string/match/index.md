@@ -40,7 +40,7 @@ An {{jsxref("Array")}} whose contents depend on the presence or absence of the g
 
 - If the `g` flag is used, all results matching the complete regular
   expression will be returned, but capturing groups will not.
-- if the `g` flag is not used, only the first complete match and its
+- If the `g` flag is not used, only the first complete match and its
   related capturing groups are returned. In this case, the returned item will have
   additional properties as described below.
 
@@ -51,7 +51,7 @@ As explained above, some results contain additional properties as described belo
 - `groups`
   - : An object of named capturing groups whose keys are the names and values are the
     capturing groups or {{jsxref("undefined")}} if no named capturing groups were defined.
-    See [Groups and Ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) for more information.
+    See [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences) for more information.
 - `index`
   - : The index of the search at which the result was found.
 - `input`

@@ -63,10 +63,10 @@ the candidate's type, address (`ip` and {{domxref("RTCIceCandidate.port",
   "relatedAddress")}} and `relatedPort`).
 
 ```js
-var ip = candidate.ip;
-var port = candidate.port;
-var relIP = candidate.relatedAddress;
-var relPort = candidate.relatedPort;
+const ip = candidate.ip;
+const port = candidate.port;
+const relIP = candidate.relatedAddress;
+const relPort = candidate.relatedPort;
 
 if (relIP && relPort) {
   console.log("Candidate type '" + type + "' — contact address: " + ip + " " + port + ", related address: " + relIP + " " + relPort);
