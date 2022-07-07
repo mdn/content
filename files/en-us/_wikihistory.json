@@ -13358,38 +13358,6 @@
       "Jeremie"
     ]
   },
-  "MDN/Contribute/Howto/Document_a_CSS_property": {
-    "modified": "2020-02-18T19:54:27.563Z",
-    "contributors": [
-      "jswisher",
-      "SphinxKnight",
-      "wbamberg",
-      "mfluehr",
-      "fscholz",
-      "teoli",
-      "Sebastianz",
-      "stephaniehobson",
-      "dharkness",
-      "FredB",
-      "Sheppy"
-    ]
-  },
-  "MDN/Contribute/Howto/Document_an_HTTP_header": {
-    "modified": "2020-10-15T21:47:59.093Z",
-    "contributors": [
-      "jpmedley",
-      "wbamberg",
-      "Jeremie",
-      "fscholz"
-    ]
-  },
-  "MDN/Contribute/Howto/Document_web_errors": {
-    "modified": "2019-01-16T22:58:13.741Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz"
-    ]
-  },
   "MDN/Contribute/Howto/Migrate_external_content_to_MDN": {
     "modified": "2019-07-15T08:26:43.504Z",
     "contributors": [
@@ -13408,43 +13376,6 @@
       "hamasaki"
     ]
   },
-  "MDN/Contribute/Howto/Tag": {
-    "modified": "2020-03-25T16:30:08.477Z",
-    "contributors": [
-      "Sheppy",
-      "jswisher",
-      "FeRDNYC",
-      "kenj115188",
-      "sideshowbarker",
-      "ExE-Boss",
-      "mfuji09",
-      "wbamberg",
-      "lucian95",
-      "johnjago",
-      "KadirTopal",
-      "pqpace",
-      "SphinxKnight",
-      "Bodo1445",
-      "helperman",
-      "devanshmanu",
-      "dkocho4",
-      "Uemmra3",
-      "ganshenhai",
-      "Jeremie",
-      "kiloan.com",
-      "Riyaj786",
-      "Andrew_Pfeiffer",
-      "dio",
-      "dwj83624",
-      "marowilson",
-      "fscholz",
-      "Newser",
-      "vernvernvern",
-      "maybe",
-      "teoli",
-      "markg"
-    ]
-  },
   "MDN/Contribute/Howto/Update_the_CSS_JSON_DB": {
     "modified": "2019-03-23T22:47:20.816Z",
     "contributors": [
@@ -13455,78 +13386,6 @@
       "prayash",
       "jswisher",
       "teoli"
-    ]
-  },
-  "MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary": {
-    "modified": "2020-12-14T04:30:45.303Z",
-    "contributors": [
-      "mfuji09",
-      "ohaver",
-      "cadorej",
-      "wbamberg",
-      "Sheppy",
-      "jswisher",
-      "Aleksej",
-      "fscholz",
-      "Andrew_Pfeiffer",
-      "Jeremie",
-      "hbloomer",
-      "nasifmdtanjim"
-    ]
-  },
-  "MDN/Contribute/Howto/Write_an_API_reference": {
-    "modified": "2019-05-03T10:17:00.872Z",
-    "contributors": [
-      "Sheppy",
-      "wbamberg",
-      "stephaniehobson",
-      "Jedipedia",
-      "jpmedley",
-      "chrisdavidmills",
-      "fscholz",
-      "Sebastianz",
-      "jswisher",
-      "essymo",
-      "maybe",
-      "ifilin",
-      "AFBarstow",
-      "teoli",
-      "ChrisL"
-    ]
-  },
-  "MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file": {
-    "modified": "2019-10-01T06:57:46.015Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Bzbarsky",
-      "fscholz",
-      "wbamberg",
-      "Sheppy",
-      "xfq",
-      "teoli",
-      "overholt",
-      "markg",
-      "jswisher",
-      "jryans"
-    ]
-  },
-  "MDN/Contribute/Howto/Write_an_API_reference/Sidebars": {
-    "modified": "2020-09-30T09:04:08.085Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Zearin_Galaurum",
-      "Sheppy",
-      "wbamberg",
-      "Thw0rted"
-    ]
-  },
-  "MDN/Contribute/Howto/Write_for_SEO": {
-    "modified": "2020-04-29T13:47:45.328Z",
-    "contributors": [
-      "arjenlgill",
-      "wbamberg",
-      "Sheppy",
-      "Havvy"
     ]
   },
   "MDN/Contribute/Localize": {
@@ -14155,6 +14014,138 @@
       "wbamberg",
       "Sheppy",
       "jswisher"
+    ]
+  },
+  "MDN/Writing_guidelines/Howto/Document_a_CSS_property": {
+    "modified": "2020-02-18T19:54:27.563Z",
+    "contributors": [
+      "jswisher",
+      "SphinxKnight",
+      "wbamberg",
+      "mfluehr",
+      "fscholz",
+      "teoli",
+      "Sebastianz",
+      "stephaniehobson",
+      "dharkness",
+      "FredB",
+      "Sheppy"
+    ]
+  },
+  "MDN/Writing_guidelines/Howto/Document_an_HTTP_header": {
+    "modified": "2020-10-15T21:47:59.093Z",
+    "contributors": [
+      "jpmedley",
+      "wbamberg",
+      "Jeremie",
+      "fscholz"
+    ]
+  },
+  "MDN/Writing_guidelines/Howto/Document_web_errors": {
+    "modified": "2019-01-16T22:58:13.741Z",
+    "contributors": [
+      "wbamberg",
+      "fscholz"
+    ]
+  },
+  "MDN/Writing_guidelines/Howto/Tag": {
+    "modified": "2020-03-25T16:30:08.477Z",
+    "contributors": [
+      "Sheppy",
+      "jswisher",
+      "FeRDNYC",
+      "kenj115188",
+      "sideshowbarker",
+      "ExE-Boss",
+      "mfuji09",
+      "wbamberg",
+      "lucian95",
+      "johnjago",
+      "KadirTopal",
+      "pqpace",
+      "SphinxKnight",
+      "Bodo1445",
+      "helperman",
+      "devanshmanu",
+      "dkocho4",
+      "Uemmra3",
+      "ganshenhai",
+      "Jeremie",
+      "kiloan.com",
+      "Riyaj786",
+      "Andrew_Pfeiffer",
+      "dio",
+      "dwj83624",
+      "marowilson",
+      "fscholz",
+      "Newser",
+      "vernvernvern",
+      "maybe",
+      "teoli",
+      "markg"
+    ]
+  },
+  "MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_Glossary": {
+    "modified": "2020-12-14T04:30:45.303Z",
+    "contributors": [
+      "mfuji09",
+      "ohaver",
+      "cadorej",
+      "wbamberg",
+      "Sheppy",
+      "jswisher",
+      "Aleksej",
+      "fscholz",
+      "Andrew_Pfeiffer",
+      "Jeremie",
+      "hbloomer",
+      "nasifmdtanjim"
+    ]
+  },
+  "MDN/Writing_guidelines/Howto/Write_an_API_reference": {
+    "modified": "2019-05-03T10:17:00.872Z",
+    "contributors": [
+      "Sheppy",
+      "wbamberg",
+      "stephaniehobson",
+      "Jedipedia",
+      "jpmedley",
+      "chrisdavidmills",
+      "fscholz",
+      "Sebastianz",
+      "jswisher",
+      "essymo",
+      "maybe",
+      "ifilin",
+      "AFBarstow",
+      "teoli",
+      "ChrisL"
+    ]
+  },
+  "MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file": {
+    "modified": "2019-10-01T06:57:46.015Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Bzbarsky",
+      "fscholz",
+      "wbamberg",
+      "Sheppy",
+      "xfq",
+      "teoli",
+      "overholt",
+      "markg",
+      "jswisher",
+      "jryans"
+    ]
+  },
+  "MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars": {
+    "modified": "2020-09-30T09:04:08.085Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Zearin_Galaurum",
+      "Sheppy",
+      "wbamberg",
+      "Thw0rted"
     ]
   },
   "MDN/Yari": {

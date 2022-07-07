@@ -1,6 +1,6 @@
 ---
 title: How to document an HTTP header
-slug: MDN/Contribute/Howto/Document_an_HTTP_header
+slug: MDN/Writing_guidelines/Howto/Document_an_HTTP_header
 tags:
   - Howto
   - MDN

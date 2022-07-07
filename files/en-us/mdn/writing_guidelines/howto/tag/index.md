@@ -1,6 +1,6 @@
 ---
 title: How to properly tag pages
-slug: MDN/Contribute/Howto/Tag
+slug: MDN/Writing_guidelines/Howto/Tag
 tags:
   - Beginner
   - Contribute

@@ -1,6 +1,6 @@
 ---
 title: How to write and reference an entry in the glossary
-slug: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
+slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_Glossary
 tags:
   - Contributing
   - Definition

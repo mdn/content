@@ -1,6 +1,6 @@
 ---
 title: API reference sidebars
-slug: MDN/Contribute/Howto/Write_an_API_reference/Sidebars
+slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
 tags:
   - API
   - Documentation

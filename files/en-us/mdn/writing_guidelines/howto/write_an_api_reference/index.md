@@ -1,6 +1,6 @@
 ---
 title: How to write an API reference
-slug: MDN/Contribute/Howto/Write_an_API_reference
+slug: MDN/Writing_guidelines/Howto/Write_an_API_reference
 tags:
   - API
   - Documentation
