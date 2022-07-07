@@ -14,6 +14,8 @@ The **`WebAssembly.Memory()`** constructor creates a new `Memory` object whose {
 
 A memory object created by JavaScript or in WebAssembly code will be accessible and mutable from both JavaScript and WebAssembly, provided that the code constructed the object, or has been given the object.
 
+Both WebAssembly JavaScript can create Memory objects. If you want to access the memory created in JS from Wasm or vice versa, you can pass a reference to the memory from one side to the other.
+
 ## Syntax
 
 ```js
