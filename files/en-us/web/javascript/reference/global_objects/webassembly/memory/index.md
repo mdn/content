@@ -21,19 +21,19 @@ A memory object created by JavaScript or in WebAssembly code will be accessible 
 
 ## Instance properties
 
-- [`Memory.prototype.buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer)
+- {{jsxref("WebAssembly/Memory/buffer", "Memory.prototype.buffer")}}
   - : An accessor property that returns the buffer contained in the memory.
 
 ## Instance methods
 
-- [`Memory.prototype.grow()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow)
+- {{jsxref("WebAssembly/Memory/grow", "Memory.prototype.grow()")}}
   - : Increases the size of the memory instance by a specified number of WebAssembly pages (each one is 64KB in size). Detaches the previous `buffer`.
 
 ## Examples
 
 ### Creating a new Memory object
 
-There are two ways to get a `WebAssembly.Memory` object. The first way is to construct it from JavaScript. The following snippet creates a new WebAssembly Memory instance with an initial size of 10 pages (640KiB), and a maximum size of 100 pages (6.4MiB). Its [`buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer) property will return an {{jsxref("ArrayBuffer")}}.
+There are two ways to get a `WebAssembly.Memory` object. The first way is to construct it from JavaScript. The following snippet creates a new WebAssembly Memory instance with an initial size of 10 pages (640KiB), and a maximum size of 100 pages (6.4MiB). Its {{jsxref("WebAssembly/Memory/buffer", "buffer")}} property will return an {{jsxref("ArrayBuffer")}}.
 
 ```js
 const memory = new WebAssembly.Memory({
