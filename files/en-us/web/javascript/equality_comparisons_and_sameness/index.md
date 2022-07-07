@@ -17,16 +17,16 @@ tags:
 
 There are four equality algorithms in ES2015:
 
-- Abstract Equality Comparison (`==`)
-- Strict Equality Comparison (`===`): used by `Array.prototype.indexOf`, `Array.prototype.lastIndexOf`, and `case`-matching
-- SameValueZero: used by `%TypedArray%` and `ArrayBuffer` constructors, as well as `Map` and `Set` operations, and also `String.prototype.includes` and `Array.prototype.includes` since ES2016
-- SameValue: used in all other places
+- [IsLooselyEqual](https://tc39.es/ecma262/#sec-islooselyequal) (`==`)
+- [IsStrictlyEqual](https://tc39.es/ecma262/#sec-isstrictlyequal) (`===`): used by `Array.prototype.indexOf`, `Array.prototype.lastIndexOf`, and `case`-matching
+- [SameValueZero](https://tc39.es/ecma262/#sec-samevaluezero): used by `%TypedArray%` and `ArrayBuffer` constructors, as well as `Map` and `Set` operations, and also `String.prototype.includes` and `Array.prototype.includes` since ES2016
+- [SameValue](https://tc39.es/ecma262/#sec-samevalue): used in all other places
 
 JavaScript provides three different value-comparison operations:
 
-- [===](/en-US/docs/Web/JavaScript/Reference/Operators#identity) - Strict Equality Comparison ("strict equality", "identity", "triple equals")
-- [==](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators) - Abstract Equality Comparison ("loose equality", "double equals")
-- {{jsxref("Object.is")}} provides SameValue (new in ES2015).
+- [===](/en-US/docs/Web/JavaScript/Reference/Operators#identity) — IsStrictlyEqual ("strict equality", "identity", "triple equals")
+- [==](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators) — IsLooselyEqual ("loose equality", "double equals")
+- {{jsxref("Object.is")}} — SameValue.
 
 Which operation you choose depends on what sort of comparison you are looking to perform. Briefly:
 
@@ -148,12 +148,6 @@ Same-value equality is provided by the {{jsxref("Object.is")}} method.
 ## Same-value-zero equality
 
 Similar to same-value equality, but +0 and -0 are considered equal.
-
-## Abstract equality, strict equality, and same value in the specification
-
-In ES5, the comparison performed by [`==`](/en-US/docs/Web/JavaScript/Reference/Operators) is described in [Section 11.9.3, The Abstract Equality Algorithm](https://262.ecma-international.org/5.1/#sec-11.9.3). The [`===`](/en-US/docs/Web/JavaScript/Reference/Operators) comparison is [11.9.6, The Strict Equality Algorithm](https://262.ecma-international.org/5.1/#sec-11.9.6). (Go look at these. They're brief and readable. Hint: read the strict equality algorithm first.) ES5 also describes, in [Section 9.12, The SameValue Algorithm](https://262.ecma-international.org/5.1/#sec-9.12) for use internally by the JS engine. It's largely the same as the Strict Equality Algorithm, except that 11.9.6.4 and 9.12.4 differ in handling {{jsxref("Number")}}s. ES2015 proposes to expose this algorithm through {{jsxref("Object.is")}}.
-
-We can see that with double and triple equals, with the exception of doing a type check upfront in 11.9.6.1, the Strict Equality Algorithm is a subset of the Abstract Equality Algorithm, because 11.9.6.2–7 correspond to 11.9.3.1.a–f.
 
 ## A model for understanding equality comparisons?
 
