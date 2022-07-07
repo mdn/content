@@ -10,6 +10,24 @@ tags:
 
 MDN Web Docs contains _browser-neutral_ documentation that enables web developers to write _browser-agnostic_ code. In this article, you'll find information about whether or not a given topic and/or type of content should be included on MDN Web Docs.
 
+## Editorial Policies
+
+This describes the policies set by the Mozilla MDN staff to govern the content on MDN web docs. All contributors to MDN web docs are expected to abide by these policies.
+
+### Relevance
+
+All content on MDN must be relevant to the technology section in which it appears. Spam (commercial advertisement) and other irrelevant content will never be accepted onto the site. Contributors who keep trying to submit spam may be banned from MDN at the discretion of Mozilla staff.
+
+Outbound links to commercial sites that are relevant to the topic from which they are linked will be judged on a case-by-case basis. Their value in aiding web developers must outweigh the commercial benefit to the linked site.
+
+### Neutrality
+
+Article content on MDN must maintain a [neutral point-of-view](https://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view), reporting on browser variations without editorial bias. Derogatory comments about any browser or user agent is not acceptable.
+
+### Open web topics
+
+Web technologies to be documented on MDN should be on a standards track, and be implemented by at least one rendering engine. Variations in browser support are documented in the [browser compatibility](/en-US/docs/MDN/Structures/Compatibility_tables) section of an article.
+
 ## Suggesting content
 
 If you'd like to suggest content for MDN Web Docs, please make sure you read this page before submitting to ensure what you are suggesting is appropriate.

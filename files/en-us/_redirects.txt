@@ -5424,7 +5424,7 @@
 /en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions	/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /en-US/docs/MDN/Contribute/Guidelines/Custom_macros	/en-US/docs/MDN/Structures/Macros/Commonly-used_macros
 /en-US/docs/MDN/Contribute/Guidelines/Does_this_belong_on_MDN	/en-US/docs/MDN/Writing_guidelines/What_we_write
-/en-US/docs/MDN/Contribute/Guidelines/Editorial	/en-US/docs/MDN/Guidelines/Editorial
+/en-US/docs/MDN/Contribute/Guidelines/Editorial	/en-US/docs/MDN/Writing_guidelines/What_we_write
 /en-US/docs/MDN/Contribute/Guidelines/Layout/API_landing_page	/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference
 /en-US/docs/MDN/Contribute/Guidelines/Layout/Reference_page	/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference
 /en-US/docs/MDN/Contribute/Guidelines/Layout/Reference_subpage	/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference
@@ -5495,6 +5495,7 @@
 /en-US/docs/MDN/Guidelines/Content	/en-US/docs/MDN/Writing_guidelines/What_we_write
 /en-US/docs/MDN/Guidelines/Conventions_definitions	/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /en-US/docs/MDN/Guidelines/Does_this_belong_on_MDN	/en-US/docs/MDN/Writing_guidelines/What_we_write
+/en-US/docs/MDN/Guidelines/Editorial	/en-US/docs/MDN/Writing_guidelines/What_we_write
 /en-US/docs/MDN/JavaScript	/en-US/docs/Web/JavaScript
 /en-US/docs/MDN/Kuma	/en-US/docs/MDN/Yari
 /en-US/docs/MDN/Kuma/API	/en-US/docs/MDN/Tools/Unsupported_GET_API
