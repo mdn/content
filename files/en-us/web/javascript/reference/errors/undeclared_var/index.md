@@ -65,7 +65,7 @@ To make "bar" a declared variable, you can add the [`var`](/en-US/docs/Web/JavaS
 ```js example-good
 function foo() {
   'use strict';
-  var bar = true;
+  const bar = true;
 }
 foo();
 ```
