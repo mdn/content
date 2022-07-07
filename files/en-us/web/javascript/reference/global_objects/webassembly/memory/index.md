@@ -21,7 +21,7 @@ A memory object created by JavaScript or in WebAssembly code will be accessible 
 
 ## Instance properties
 
-- [`Memory.prototype.buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory)
+- [`Memory.prototype.buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer)
   - : An accessor property that returns the buffer contained in the memory.
 
 ## Instance methods
