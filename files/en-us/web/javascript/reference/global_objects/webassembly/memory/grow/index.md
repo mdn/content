@@ -32,7 +32,7 @@ The previous size of the memory, in units of WebAssembly pages.
 
 ### Exceptions
 
-- {{jsxref("RangeError")}}: The current size added with `pageIncrease` should not exceed the Memory instance's maximum size capacity.
+- {{jsxref("RangeError")}}: If the current size added with `pageIncrease` exceeds the Memory instance's maximum size capacity.
 
 ## Examples
 
