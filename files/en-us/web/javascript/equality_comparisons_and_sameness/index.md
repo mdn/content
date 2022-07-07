@@ -15,7 +15,7 @@ tags:
 ---
 {{jsSidebar("Intermediate")}}
 
-There are four equality algorithms in ES2015:
+There are four equality algorithms in JavaScript:
 
 - [IsLooselyEqual](https://tc39.es/ecma262/#sec-islooselyequal) (`==`)
 - [IsStrictlyEqual](https://tc39.es/ecma262/#sec-isstrictlyequal) (`===`): used by `Array.prototype.indexOf`, `Array.prototype.lastIndexOf`, and `case`-matching
