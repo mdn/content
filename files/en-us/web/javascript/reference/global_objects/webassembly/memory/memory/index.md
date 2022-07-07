@@ -10,15 +10,9 @@ browser-compat: javascript.builtins.WebAssembly.Memory.Memory
 ---
 {{JSRef}}
 
-The **`WebAssembly.Memory()`** constructor creates a new
-`Memory` object whose {{jsxref("WebAssembly/Memory/buffer","buffer")}}
-property is a resizable
-[`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-or `SharedArrayBuffer` that holds the raw bytes of memory accessed by a
-WebAssembly `Instance`.
+The **`WebAssembly.Memory()`** constructor creates a new `Memory` object whose {{jsxref("WebAssembly/Memory/buffer","buffer")}} property is a resizable [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or `SharedArrayBuffer` that holds the raw bytes of memory accessed by a WebAssembly `Instance`.
 
-A memory created by JavaScript or in WebAssembly code will be accessible and mutable
-from both JavaScript and WebAssembly.
+A memory object created by JavaScript or in WebAssembly code will be accessible and mutable from both JavaScript and WebAssembly, provided that the code constructed the object, or has been given the object.
 
 ## Syntax
 
@@ -42,16 +36,15 @@ new WebAssembly.Memory(memoryDescriptor)
         `maximum`, but shared memories do.
     - `shared` {{optional_inline}}
       - : A boolean value that defines whether the memory is a shared memory or not. If
-        set to `true`, it is a shared memory. The default is
-        `false`.
+        set to `true`, it is a shared memory. The default is `false`.
 
-> **Note:** A WebAssembly page has a constant size of 65,536 bytes, i.e.,
-> 64KiB.
+> **Note:** A WebAssembly page has a constant size of 65,536 bytes, i.e., 64KiB.
 
 ### Exceptions
 
-- If `memoryDescriptor` is not of type object, a {{jsxref("TypeError")}} is
+- If `memoryDescriptor` is an object, a {{jsxref("TypeError")}} is
   thrown.
+- If `initial` is not specified, a {{jsxref("TypeError")}} is thrown.
 - If `maximum` is specified and is smaller than `initial`, a
   {{jsxref("RangeError")}} is thrown.
 - If `shared` is present and `true`, yet `maximum` is not specified, a
@@ -76,19 +69,19 @@ const memory = new WebAssembly.Memory({
 });
 ```
 
-The second way to get a `WebAssembly.Memory` object is to have it exported
-by a WebAssembly module. The following example (see [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html)
-on GitHub, and [view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) fetches and instantiates the loaded memory.wasm byte code using the
-{{jsxref("WebAssembly.instantiateStreaming()")}} method, while importing the memory
-created in the line above. It then stores some values in that memory, then exports a
-function and uses it to sum some values.
+The second way to get a `WebAssembly.Memory` object is to have it exported by a WebAssembly module. The following example (see [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) on GitHub, and [view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) fetches and instantiates the loaded memory.wasm byte code using the {{jsxref("WebAssembly.instantiateStreaming()")}} method, while importing the memory created in the line above. It then stores some values in that memory, exports a function, and uses the exported function to sum those values.
 
 ```js
-WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
+const memory = new WebAssembly.Memory({
+  initial: 10,
+  maximum: 100
+});
+
+WebAssembly.instantiateStreaming(fetch("memory.wasm"), { js: { mem: memory } })
 .then(obj => {
-  const i32 = new Uint32Array(memory.buffer);
+  const u32 = new Uint32Array(memory.buffer);
   for (let i = 0; i < 10; i++) {
-    i32[i] = i;
+    u32[i] = i;
   }
   const sum = obj.instance.exports.accumulate(0, 10);
   console.log(sum);
@@ -99,7 +92,7 @@ WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
 
 By default, WebAssembly memories are unshared.
 You can create a [shared memory](/en-US/docs/WebAssembly/Understanding_the_text_format#shared_memories)
-by passing `shared: true` in the constructor's initialization object:
+from JavaScript by passing `shared: true` in the constructor's initialization object:
 
 ```js
 const memory = new WebAssembly.Memory({
