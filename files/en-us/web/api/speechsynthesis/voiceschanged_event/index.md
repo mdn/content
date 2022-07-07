@@ -51,7 +51,7 @@ Or use the `onvoiceschanged` event handler property:
 const synth = window.speechSynthesis;
 synth.onvoiceschanged = function() {
   const voices = synth.getVoices();
-  for(i = 0; i < voices.length ; i++) {
+  for(let i = 0; i < voices.length ; i++) {
     const option = document.createElement('option');
     option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
     option.setAttribute('data-lang', voices[i].lang);
