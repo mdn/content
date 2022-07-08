@@ -25,7 +25,7 @@ With the popularity of Oculus Rift and a lot of other devices in production comi
 
 The [WebVR API](/en-US/docs/Web/API/WebVR_API) is the central API for capturing information on VR Devices connected to a computer and headset position/orientation/velocity/acceleration information, and converting that into useful data you can use in your games and other applications.
 
-> **Note:** There are of course other APIs useful for creating games, for example [The Gamepad API](/en-US/docs/Web/API/Gamepad_API) for control inputs, and the [Device Orientation API](/en-US/docs/Web/API/Detecting_device_orientation) for handling display orientation on mobile.
+> **Note:** There are of course other APIs useful for creating games, for example [The Gamepad API](/en-US/docs/Web/API/Gamepad_API) for control inputs, and the [Device Orientation API](/en-US/docs/Web/Events/Detecting_device_orientation) for handling display orientation on mobile.
 
 ### Browser support and spec status
 
@@ -99,7 +99,7 @@ For a full explanation and more details of the demo this is taken from, see [Usi
 
 ## Tools and techniques
 
-The first WebVR experiments and demos used Three.js as it's probably the most popular 3D engine for the web. See the [VREffect](https://github.com/mrdoob/three.js/blob/master/examples/js/effects/VREffect.js) and [VRControls](https://github.com/mrdoob/three.js/blob/master/examples/js/controls/VRControls.js) functions available on the Three.js GitHub to help you implement and handle WebVR with Three.js.
+The first WebVR experiments and demos used Three.js as it's probably the most popular 3D engine for the web. See the [VREffect](https://github.com/mrdoob/three.js/blob/ca521eb4af7554e760f14d8fe8b451c8ff34deb8/examples/js/effects/VREffect.js) and [VRControls](https://github.com/mrdoob/three.js/blob/abdd1713c606135bc35028c6021698b52f27872b/examples/js/controls/VRControls.js) functions available on the Three.js GitHub to help you implement and handle WebVR with Three.js.
 
 ![](sechelt.jpg)
 

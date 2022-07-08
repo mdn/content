@@ -4,6 +4,7 @@ slug: Web/SVG/Attribute/pathLength
 tags:
   - SVG
   - SVG Attribute
+spec-urls: https://svgwg.org/svg2-draft/paths.html#PathLengthAttribute
 ---
 {{SVGRef}}
 
@@ -234,28 +235,4 @@ For {{SVGElement('rect')}}, `pathLength` lets authors specify a total length for
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "paths.html#PathLengthAttribute", "pathLength")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "paths.html#PathLengthAttribute", "pathLength")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

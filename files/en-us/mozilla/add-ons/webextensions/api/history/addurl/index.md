@@ -35,12 +35,12 @@ let addingUrl = browser.history.addUrl(
 
     - `url`
       - : `string`. The URL to add.
-    - `title`{{optional_inline}}
+    - `title` {{optional_inline}}
       - : string: The title of the page. If this is not supplied, the title will be recorded as `null`.
-    - `transition`{{optional_inline}}
+    - `transition` {{optional_inline}}
       - : {{WebExtAPIRef("history.TransitionType")}}. Describes how the browser navigated to the page on this occasion. If this is not supplied, a transition type of "link" will be recorded.
-    - `visitTime`{{optional_inline}}
-      - : `number` or `string` or `object`. A value indicating a date and time.  This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso/home/standards/iso8601.htm), or the number of milliseconds since the epoch. Sets the visit time to this value. If this is not supplied, the current time will be recorded.
+    - `visitTime` {{optional_inline}}
+      - : `number` or `string` or `object`. A value indicating a date and time.  This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso-8601-date-and-time-format.html), or the number of milliseconds since the epoch. Sets the visit time to this value. If this is not supplied, the current time will be recorded.
 
 ### Return value
 
@@ -110,7 +110,7 @@ addingUrl.then(onAdded);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/extensions/history#method-addUrl) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/history/#method-addUrl) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

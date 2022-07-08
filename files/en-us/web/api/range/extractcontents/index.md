@@ -1,6 +1,7 @@
 ---
 title: Range.extractContents()
 slug: Web/API/Range/extractContents
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -41,9 +42,9 @@ None ({{jsxref("undefined")}}).
 ### Basic example
 
 ```js
-var range = document.createRange();
+const range = document.createRange();
 range.selectNode(document.getElementsByTagName("div").item(0));
-var documentFragment = range.extractContents();
+const documentFragment = range.extractContents();
 document.body.appendChild(documentFragment);
 ```
 

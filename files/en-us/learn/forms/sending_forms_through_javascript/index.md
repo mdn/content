@@ -121,7 +121,7 @@ Here's the live result:
 
 Building an HTTP request by hand can be overwhelming. Fortunately, the [XMLHttpRequest specification](https://www.w3.org/TR/XMLHttpRequest/) provides a newer, simpler way to handle form data requests with the {{domxref("FormData","FormData")}} object.
 
-The {{domxref("FormData","FormData")}} object can be used to build form data for transmission, or to get the data within a form element to manage how it's sent. Note that {{domxref("FormData","FormData")}} objects are "write only", which means you can change them, but not retrieve their contents.
+The {{domxref("FormData","FormData")}} object can be used to build form data for transmission, or to get the data within a form element to manage how it's sent.
 
 Using this object is detailed in [Using FormData Objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects), but here are two examples:
 
@@ -234,7 +234,7 @@ You can even get more involved with the process by using the form's {{domxref("H
 
 If you use a {{domxref("FormData","FormData")}} object with a form that includes `<input type="file">` widgets, the data will be processed automatically. But to send binary data by hand, there's extra work to do.
 
-There are many sources for binary data, including {{domxref("FileReader")}}, {{domxref("HTMLCanvasElement","Canvas")}}, and [WebRTC](/en-US/docs/Web/API/Navigator/getUserMedia). Unfortunately, some legacy browsers can't access binary data or require complicated workarounds. To learn more about the `FileReader` API, see [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications).
+There are many sources for binary data, including {{domxref("FileReader")}}, {{domxref("HTMLCanvasElement","Canvas")}}, and [WebRTC](/en-US/docs/Web/API/Navigator/getUserMedia). Unfortunately, some legacy browsers can't access binary data or require complicated workarounds. To learn more about the `FileReader` API, see [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications).
 
 The least complicated way of sending binary data is by using {{domxref("FormData","FormData")}}'s `append()` method, demonstrated above. If you have to do it by hand, it's trickier.
 

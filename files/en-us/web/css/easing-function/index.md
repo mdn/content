@@ -11,7 +11,7 @@ tags:
   - Layout
   - Reference
   - easing-function
-spec-urls: https://drafts.csswg.org/css-easing/#typedef-easing-function
+browser-compat: css.types.easing-function
 ---
 {{CSSRef}}
 
@@ -32,7 +32,7 @@ However, certain properties will restrict the output if it goes outside an allow
 ### Easing functions
 
 The value of an `<easing-function>` type describes the easing function using one of the three types that
-CSS supports: linear, the subset of the [cubic Bézier curves](/en-US/docs/Glossary/Bézier_curve) that are functions, and staircase functions. The most useful of these functions are given a keyword that allows them to be easily referenced.
+CSS supports: linear, the subset of the [cubic Bézier curves](/en-US/docs/Glossary/Bezier_curve) that are functions, and staircase functions. The most useful of these functions are given a keyword that allows them to be easily referenced.
 
 #### The linear class of easing functions
 
@@ -46,7 +46,7 @@ The interpolation is done at a constant rate from beginning to end. This keyword
 
 ![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' A curved line extends from the origin to the X 1 Y 1 position. The X 0 Y 0 point of the line is labeled  'P₀ = (0, 0)'. Extending from the X 0 Y 0 point is a Bezier handle labeled 'P₁ = (0.075, 0.75)'. The X 1 Y 1 point of the line is labeled 'P₃ = (1, 1)'. Extending from the X 1 Y 1 point is a Bezier handle labeled 'P₂ = (0.0875, 0.36)'.](cubic-bezier-example.png)
 
-The `cubic-bezier()` functional notation defines a [cubic Bézier curve](/en-US/docs/Glossary/Bézier_curve). As these curves are continuous, they are often used to smooth down the start and end of the interpolation and are therefore sometimes called _easing functions_.
+The `cubic-bezier()` functional notation defines a [cubic Bézier curve](/en-US/docs/Glossary/Bezier_curve). As these curves are continuous, they are often used to smooth down the start and end of the interpolation and are therefore sometimes called _easing functions_.
 
 A cubic Bézier curve is defined by four points P0, P1, P2, and P3. P0 and P3 are the start and the end of the curve and, in CSS these points are fixed as the coordinates are ratios (the abscissa the ratio of time, the ordinate the ratio of the output range). P0 is `(0, 0)` and represents the initial time or position and the initial state, P3 is `(1, 1)` and represents the final time or position and the final state.
 
@@ -95,7 +95,7 @@ The interpolation starts abruptly, and then progressively slows down towards the
 
 #### The steps() class of easing functions
 
-The `steps()` functional notation defines a [step function](https://en.wikipedia.org/wiki/Step_function) dividing the domain of output values in equidistant steps.This subclass of step functions are sometimes also called _staircase functions_.
+The `steps()` functional notation defines a [step function](https://en.wikipedia.org/wiki/Step_function) dividing the domain of output values in equidistant steps. This subclass of step functions are sometimes also called _staircase functions_.
 
 ##### Syntax
 
@@ -321,7 +321,7 @@ steps(0, jump-none)
 
 ## Browser compatibility
 
-{{Compat("css.types.easing-function", 2)}}
+{{Compat}}
 
 ## See also
 

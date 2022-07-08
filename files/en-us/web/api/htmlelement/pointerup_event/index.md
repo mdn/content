@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: pointerup event'
 slug: Web/API/HTMLElement/pointerup_event
+page-type: web-api-event
 tags:
   - Event
   - HTML DOM

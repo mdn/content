@@ -1,6 +1,7 @@
 ---
 title: PushSubscription.endpoint
 slug: Web/API/PushSubscription/endpoint
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -16,7 +17,7 @@ browser-compat: api.PushSubscription.endpoint
 {{SeeCompatTable}}{{APIRef("Push API")}}
 
 The **`endpoint`** read-only property of the
-{{domxref("PushSubscription")}} interface returns a {{domxref("USVString")}} containing
+{{domxref("PushSubscription")}} interface returns a string containing
 the endpoint associated with the push subscription.
 
 The endpoint takes the form of a custom URL pointing to a push server, which can be
@@ -26,7 +27,7 @@ others do not hijack it and abuse the push functionality.
 
 ## Value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

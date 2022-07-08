@@ -1,6 +1,7 @@
 ---
 title: Response.url
 slug: Web/API/Response/url
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch
@@ -17,7 +18,7 @@ The value of the `url` property will be the final URL obtained after any redirec
 
 ## Value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

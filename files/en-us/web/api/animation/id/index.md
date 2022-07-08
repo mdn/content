@@ -1,6 +1,7 @@
 ---
 title: Animation.id
 slug: Web/API/Animation/id
+page-type: web-api-instance-property
 tags:
   - API
   - Animation

@@ -1,6 +1,7 @@
 ---
 title: XPathResult.singleNodeValue
 slug: Web/API/XPathResult/singleNodeValue
+page-type: web-api-instance-property
 tags:
   - API
   - DOM XPath API
@@ -52,7 +53,7 @@ document.querySelector("output").textContent = result.singleNodeValue.localName;
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples', 400, 70)}}
 
 ## Specifications
 

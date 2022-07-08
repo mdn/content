@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: pointerdown event'
 slug: Web/API/HTMLElement/pointerdown_event
+page-type: web-api-event
 tags:
   - Event
   - HTML DOM

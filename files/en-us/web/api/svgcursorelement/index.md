@@ -1,6 +1,7 @@
 ---
 title: SVGCursorElement
 slug: Web/API/SVGCursorElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

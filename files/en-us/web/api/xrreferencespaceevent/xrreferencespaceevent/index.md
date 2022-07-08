@@ -1,6 +1,7 @@
 ---
 title: XRReferenceSpaceEvent()
 slug: Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
+page-type: web-api-constructor
 tags:
   - API
   - AR
@@ -28,26 +29,23 @@ constructor is used to create a new {{domxref("XRReferenceSpaceEvent")}} object,
 represents an event regarding the state of a WebXR reference space object,
 {{domxref("XRReferenceSpace")}}.
 
-Currently, only the {{domxref("XRReferenceSpace.reset_event", "reset")}} event is
-defined using this type.
-
 ## Syntax
 
 ```js
-new XRReferenceSpaceEvent(type, eventInitDict)
+new XRReferenceSpaceEvent(type, options)
 ```
 
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} indicating the event type which has occurred. Currently,
-    this is always `reset`.
-- `eventInitDict`
-
-  - : An object to configure the event. The properties are:
-
-    - `referenceSpace`: The {{domxref("XRReferenceSpace")}} from which the event originates.
-    - `transform`: An {{domxref("XRRigidTransform")}} which maps the old coordinate system (from before the changes indicated by this event) to the new coordinate system.
+  - :  A string with the name of the event.
+    It is case-sensitive and browsers always set it to `reset`.
+- `options`
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
+    - `referenceSpace`
+      - : The {{domxref("XRReferenceSpace")}} from which the event originates.
+    - `transform`
+      - : An {{domxref("XRRigidTransform")}} which maps the old coordinate system (from before the changes indicated by this event) to the new coordinate system.
 
 ### Return value
 

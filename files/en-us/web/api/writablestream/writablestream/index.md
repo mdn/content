@@ -1,6 +1,7 @@
 ---
 title: WritableStream()
 slug: Web/API/WritableStream/WritableStream
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -61,7 +62,7 @@ new WritableStream(underlyingSink, queuingStrategy)
         `abort()` will be called even if writes are queued up — those chunks
         will be thrown away. If this process is asynchronous, it can return a promise to
         signal success or failure. The `reason` parameter contains a
-        {{domxref("DOMString")}} describing why the stream was aborted.
+        string describing why the stream was aborted.
 
 - `queuingStrategy` {{optional_inline}}
 
@@ -161,8 +162,7 @@ const writableStream = new WritableStream({
 sendMessage("Hello, world.", writableStream);
 ```
 
-You can find the full code in our [Simple writer
-example](https://mdn.github.io/dom-examples/streams/simple-writer/).
+You can find the full code in our [Simple writer example](https://mdn.github.io/dom-examples/streams/simple-writer/).
 
 ### Backpressure
 

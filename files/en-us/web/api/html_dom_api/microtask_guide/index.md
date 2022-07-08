@@ -1,6 +1,7 @@
 ---
 title: Using microtasks in JavaScript with queueMicrotask()
 slug: Web/API/HTML_DOM_API/Microtask_guide
+page-type: guide
 tags:
   - API
   - Batch
@@ -289,7 +290,6 @@ log("Main program started");
 setTimeout(callback, 0);
 log(`10! equals ${doWork()}`);
 log("Main program exiting");
-log("Regular timeout callback has run");
 ```
 
 #### Result
@@ -301,9 +301,6 @@ log("Regular timeout callback has run");
 - [In depth: Microtasks and the JavaScript runtime environment](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth)
 - {{domxref("queueMicrotask()")}}
 - [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
-
-  - [General asynchronous programming concepts](/en-US/docs/Learn/JavaScript/Asynchronous/Concepts)
   - [Introducing asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
-  - [Cooperative asynchronous JavaScript: Timeouts and intervals](/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
+  - [Cooperative asynchronous JavaScript: Timeouts and intervals](/en-US/docs/Learn/JavaScript/Asynchronous)
   - [Graceful asynchronous programming with Promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
-  - [Choosing the right approach](/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)

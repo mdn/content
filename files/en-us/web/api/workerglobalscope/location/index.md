@@ -1,6 +1,7 @@
 ---
 title: WorkerGlobalScope.location
 slug: Web/API/WorkerGlobalScope/location
+page-type: web-api-instance-property
 tags:
   - API
   - Location

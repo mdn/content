@@ -139,4 +139,4 @@ The MathML `<mn>` element represents a numeric literal which is normally a seque
 
 ## Gecko-specific notes
 
-- Some `mathvariant` values are only implemented starting with Gecko 28.0 {{ geckoRelease("28.0") }} and require appropriate [math fonts](/en-US/docs/Mozilla/MathML_Project/Fonts).
+- Some `mathvariant` values are only implemented starting with Gecko 28.0 {{ geckoRelease("28.0") }} and require appropriate [math fonts](/en-US/docs/Web/MathML/Fonts).

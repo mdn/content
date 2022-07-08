@@ -55,7 +55,9 @@ animation-duration: unset;
 
 ## Examples
 
-### The animation has an animation-duration of 0.7 seconds
+### Setting animation duration
+
+This animation has an animation-duration of 0.7 seconds.
 
 #### HTML
 
@@ -71,6 +73,9 @@ animation-duration: unset;
   border-radius: 10px;
   width: 100px;
   height: 100px;
+}
+
+.box:hover {
   animation-name: rotate;
   animation-duration: 0.7s;
 }
@@ -87,7 +92,9 @@ animation-duration: unset;
 
 #### Result
 
-{{EmbedLiveSample("Examples","100%","250")}}
+Hover over the rectangle to start the animation.
+
+{{EmbedLiveSample("Setting animation duration","100%","250")}}
 
 See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for more examples.
 

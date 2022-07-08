@@ -27,8 +27,54 @@ class ChildClass extends ParentClass { /* ... */ }
 The `extends` keyword can be used to subclass custom classes as well as
 built-in objects.
 
-The `.prototype` of the extension must be an {{jsxref("Object")}} or
-{{jsxref("null")}}.
+Any constructor that can be called with `new` (that is, it has the `prototype` property) can be the candidate for the parent class.
+
+```js
+function OldStyleClass() {
+  this.someProperty = 1;
+}
+OldStyleClass.prototype.someMethod = function () {};
+
+class ChildClass extends OldStyleClass {}
+
+class ModernClass {
+  someProperty = 1;
+  someMethod() {}
+}
+
+class AnotherChildClass extends ModernClass {}
+```
+
+The `.prototype` of the `ParentClass` must be an {{jsxref("Object")}} or {{jsxref("null")}}.
+
+```js
+function ParentClass() {}
+ParentClass.prototype = 3;
+
+class ChildClass extends ParentClass {}
+// Uncaught TypeError: Class extends value does not have valid prototype property 3
+```
+
+> **Note:** You would rarely worry about this in practice, because a non-object `prototype` doesn't behave as it should anyway.
+>
+> ```js
+> function ParentClass() {}
+> ParentClass.prototype = 3;
+> console.log(Object.getPrototypeOf(new ParentClass()));
+> // Logs "[Object: null prototype] {}": not actually a number!
+> ```
+
+`extends` will set the prototype for both `ChildClass` and `ChildClass.prototype`.
+
+```js
+class ParentClass {}
+class ChildClass extends ParentClass {}
+
+// Allows inheritance of static properties
+Object.getPrototypeOf(ChildClass) === ParentClass;
+// Allows inheritance of instance properties
+Object.getPrototypeOf(ChildClass.prototype) === ParentClass.prototype;
+```
 
 ## Examples
 

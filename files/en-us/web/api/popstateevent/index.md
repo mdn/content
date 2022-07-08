@@ -1,6 +1,7 @@
 ---
 title: PopStateEvent
 slug: Web/API/PopStateEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface

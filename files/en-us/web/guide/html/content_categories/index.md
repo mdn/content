@@ -1,5 +1,5 @@
 ---
-title: Content  categories
+title: Content categories
 slug: Web/Guide/HTML/Content_categories
 tags:
   - Advanced

@@ -1,6 +1,7 @@
 ---
 title: SubtleCrypto.deriveBits()
 slug: Web/API/SubtleCrypto/deriveBits
+page-type: web-api-instance-method
 tags:
   - API
   - Crypto
@@ -218,4 +219,4 @@ deriveBitsButton.addEventListener("click", () => {
 - [HKDF specification](https://datatracker.ietf.org/doc/html/rfc5869).
 - [NIST guidelines for password-based key derivation](https://csrc.nist.gov/publications/detail/sp/800-132/final).
 - [Password storage cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html).
-- [Advice on choosing an iteration count for PBKDF2](https://security.stackexchange.com/questions/3959/recommended-of-iterations-when-using-pkbdf2-sha256/3993#3993).
+- [Advice on choosing an iteration count for PBKDF2](https://security.stackexchange.com/questions/3959/recommended-of-iterations-when-using-pbkdf2-sha256/3993#3993).

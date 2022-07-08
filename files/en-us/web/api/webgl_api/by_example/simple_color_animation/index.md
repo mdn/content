@@ -1,6 +1,7 @@
 ---
 title: Simple color animation
 slug: Web/API/WebGL_API/By_example/Simple_color_animation
+page-type: guide
 tags:
   - Beginner
   - Example

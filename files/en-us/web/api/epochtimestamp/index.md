@@ -6,6 +6,7 @@ tags:
   - DOM
   - Interface
   - Reference
+spec-urls: https://w3c.github.io/hr-time/#the-epochtimestamp-typedef
 ---
 {{APIRef("DOM")}}
 
@@ -15,6 +16,4 @@ This was previously known as {{domxref("DOMTimeStamp")}}.
 
 ## Specifications
 
-| Specification                                                                        | Status                   | Comment               |
-| ------------------------------------------------------------------------------------ | ------------------------ | --------------------- |
-| {{SpecName("Highres Time Level 3", "#the-epochtimestamp-typedef", "EpochTimeStamp")}} | {{Spec2("Highres Time Level 3")}} | Initial specification |
+{{Specifications}}

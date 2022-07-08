@@ -11,7 +11,7 @@ This document outlines the criteria for inclusion that a technology must pass be
 
 The MDN Web Docs remit is to document web standards technologies, or more specifically technologies that follow our standard guidelines of [when to document new technologies](/en-US/docs/MDN/Guidelines/Conventions_definitions#when_to_document_new_technologies) — the short version of this is that we document technologies on MDN Web Docs when they are specified in a specification published by a reliable standards body, and are supported in at least one browser.
 
-These criteria signify enough interest, stability, and intent to implement by the web industry at large that we think they are a safe bet to document without wasting our time. Any earlier than that, and they may be cancelled due to lack of interest, or be so unstable that they will change significantly, meaning lots of rewriting (which we try to avoid where possible).
+These criteria signify enough interest, stability, and intent to be implemented by the web industry at large that we think they are a safe bet to document without wasting our time. Any earlier than that, and they may be cancelled due to lack of interest, or be so unstable that they will change significantly, which means lots of rewriting (which we try to avoid where possible).
 
 ## Non-web standards technologies
 

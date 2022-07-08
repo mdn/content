@@ -1,6 +1,7 @@
 ---
 title: Window.forward()
 slug: Web/API/Window/forward
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -30,7 +31,7 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

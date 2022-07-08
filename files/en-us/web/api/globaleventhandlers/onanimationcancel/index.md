@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onanimationcancel
 slug: Web/API/GlobalEventHandlers/onanimationcancel
+page-type: web-api-instance-property
 tags:
   - API
   - Animation

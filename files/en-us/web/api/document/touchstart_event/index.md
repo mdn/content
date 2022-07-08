@@ -1,6 +1,7 @@
 ---
 title: 'Document: touchstart event'
 slug: Web/API/Document/touchstart_event
+page-type: web-api-event
 tags:
   - Document
   - Event

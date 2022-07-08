@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onpointerout
 slug: Web/API/GlobalEventHandlers/onpointerout
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -15,7 +16,7 @@ browser-compat: api.GlobalEventHandlers.onpointerout
 
 The **`onpointerout`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("pointerout")}} events.
+processes {{domxref("HTMLElement/pointerout_event", "pointerout")}} events.
 
 ## Syntax
 

@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.getTransceivers()
 slug: Web/API/RTCPeerConnection/getTransceivers
+page-type: web-api-instance-method
 tags:
   - API
   - Media
@@ -59,7 +60,6 @@ pc.getTransceivers().forEach(transceiver => {
 ## See also
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Signaling and
-  video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
+- [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
 - {{domxref("RTCPeerConnection.addTransceiver()")}}
 - {{jsxref("Array.forEach()")}}

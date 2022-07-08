@@ -90,7 +90,7 @@ p.small {
 
 #### Result
 
-{{ EmbedLiveSample('Setting_the_small-caps_font_variant', '', '', '', 'Web/CSS/font-variant') }}
+{{ EmbedLiveSample('Setting the small-caps font variant') }}
 
 ## Specifications
 

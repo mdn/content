@@ -1,6 +1,7 @@
 ---
 title: PointerEvent.pointerId
 slug: Web/API/PointerEvent/pointerId
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -25,7 +26,7 @@ A number.
 ## Examples
 
 The following code snippet compares a previously saved `pointerId` with the
-one of the {{event("pointerdown")}} event that was just fired.
+one of the {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event that was just fired.
 
 ```js
 let id; // Let's assume that this is a previously saved pointerId

@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement
 slug: Web/API/HTMLSelectElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -32,7 +33,7 @@ _This interface inherits the properties of {{domxref("HTMLElement")}}, and of {{
 - {{domxref("HTMLSelectElement.multiple")}}
   - : A boolean value reflecting the {{htmlattrxref("multiple", "select")}} HTML attribute, which indicates whether multiple items can be selected.
 - {{domxref("HTMLSelectElement.name")}}
-  - : A {{domxref("DOMString")}} reflecting the {{htmlattrxref("name", "select")}} HTML attribute, containing the name of this control used by servers and DOM search functions.
+  - : A string reflecting the {{htmlattrxref("name", "select")}} HTML attribute, containing the name of this control used by servers and DOM search functions.
 - {{domxref("HTMLSelectElement.options")}}{{ReadOnlyInline}}
   - : An {{domxref("HTMLOptionsCollection")}} representing the set of {{HTMLElement("option")}} ({{domxref("HTMLOptionElement")}}) elements contained by this element.
 - {{domxref("HTMLSelectElement.required")}}
@@ -44,13 +45,13 @@ _This interface inherits the properties of {{domxref("HTMLElement")}}, and of {{
 - {{domxref("HTMLSelectElement.size")}}
   - : A `long` reflecting the {{htmlattrxref("size", "select")}} HTML attribute, which contains the number of visible items in the control. The default is 1, unless `multiple` is `true`, in which case it is 4.
 - {{domxref("HTMLSelectElement.type")}}{{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} representing the form control's type. When `multiple` is `true`, it returns `"select-multiple"`; otherwise, it returns `"select-one"`.
+  - : A string representing the form control's type. When `multiple` is `true`, it returns `"select-multiple"`; otherwise, it returns `"select-one"`.
 - {{domxref("HTMLSelectElement.validationMessage")}}{{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} representing a localized message that describes the validation constraints that the control does not satisfy (if any). This attribute is the empty string if the control is not a candidate for constraint validation (`willValidate` is false), or it satisfies its constraints.
+  - : A string representing a localized message that describes the validation constraints that the control does not satisfy (if any). This attribute is the empty string if the control is not a candidate for constraint validation (`willValidate` is false), or it satisfies its constraints.
 - {{domxref("HTMLSelectElement.validity")}}{{ReadOnlyInline}}
   - : A {{domxref("ValidityState")}} reflecting the validity state that this control is in.
 - {{domxref("HTMLSelectElement.value")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form control. Returns the `value` property of the first selected option element if there is one, otherwise the empty string.
+  - : A string reflecting the value of the form control. Returns the `value` property of the first selected option element if there is one, otherwise the empty string.
 - {{domxref("HTMLSelectElement.willValidate")}}{{ReadOnlyInline}}
   - : A boolean value that indicates whether the button is a candidate for constraint validation. It is `false` if any conditions bar it from constraint validation.
 

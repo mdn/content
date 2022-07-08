@@ -1,6 +1,7 @@
 ---
 title: RTCIceServer.credential
 slug: Web/API/RTCIceServer/credential
+page-type: web-api-instance-property
 tags:
   - Credential
   - Experimental

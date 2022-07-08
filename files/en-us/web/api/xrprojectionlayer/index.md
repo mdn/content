@@ -1,6 +1,7 @@
 ---
 title: XRProjectionLayer
 slug: Web/API/XRProjectionLayer
+page-type: web-api-interface
 tags:
   - API
   - AR

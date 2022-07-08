@@ -6,6 +6,9 @@ tags:
   - NeedsExample
   - SVG
   - SVG Attribute
+spec-urls:
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fecolormatrix-values
+  - https://svgwg.org/specs/animations/#ValuesAttribute
 ---
 {{SVGRef}}
 
@@ -93,46 +96,4 @@ For the {{SVGElement("feColorMatrix")}} element, `values` is a list of numbers i
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-fecolormatrix-values", "values for &lt;feColorMatrix&gt;")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#ValuesAttribute", "values for &lt;animate&gt;, &lt;animateColor&gt;, &lt;animateMotion&gt;, and &lt;animateTransform&gt;")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feColorMatrixValuesAttribute", "values for &lt;feColorMatrix&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;feColorMatrix></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "animate.html#ValuesAttribute", "values for &lt;animate&gt;, &lt;animateColor&gt;, &lt;animateMotion&gt;, and &lt;animateTransform&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Initial definition for <code>&#x3C;animate></code>,
-        <code>&#x3C;animateColor></code>, <code>&#x3C;animateMotion></code>, and
-        <code>&#x3C;animateTransform></code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

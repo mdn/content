@@ -1,6 +1,7 @@
 ---
 title: DOMImplementation.createDocumentType()
 slug: Web/API/DOMImplementation/createDocumentType
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -26,12 +27,12 @@ createDocumentType(qualifiedNameStr, publicId, systemId)
 ### Parameters
 
 - `qualifiedNameStr`
-  - : Is a string containing the qualified name, like
+  - : A string containing the qualified name, like
     `svg:svg`.
 - `publicId`
-  - : Is a string containing the `PUBLIC` identifier.
+  - : A string containing the `PUBLIC` identifier.
 - `systemId`
-  - : Is a string containing the `SYSTEM` identifiers.
+  - : A string containing the `SYSTEM` identifiers.
 
 ### Return value
 

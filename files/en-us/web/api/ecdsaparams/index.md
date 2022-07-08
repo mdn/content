@@ -1,12 +1,16 @@
 ---
 title: EcdsaParams
 slug: Web/API/EcdsaParams
+page-type: web-api-interface
 tags:
   - API
   - Dictionary
   - EcdsaParams
   - Reference
   - Web Crypto API
+browser-compat:
+  - api.SubtleCrypto.sign
+  - api.SubtleCrypto.verify
 ---
 {{ APIRef("Web Crypto API") }}
 
@@ -32,28 +36,13 @@ See the examples for {{domxref("SubtleCrypto.sign()")}} or {{domxref("SubtleCryp
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{ SpecName('Web Crypto API', '#dfn-EcdsaParams', 'SubtleCrypto.EcdsaParams') }}
-      </td>
-      <td>{{ Spec2('Web Crypto API') }}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
 Browsers that support the "ECDSA" algorithm for the {{domxref("SubtleCrypto.sign()")}} and {{domxref("SubtleCrypto.verify()")}} methods will support this type.
 
-{{Compat("api.SubtleCrypto.sign")}}
+{{Compat}}
 
 ## See also
 

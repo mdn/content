@@ -35,15 +35,15 @@ let port = browser.runtime.connect(
 
 ### Parameters
 
-- `extensionId`{{optional_inline}}
+- `extensionId` {{optional_inline}}
   - : `string`. The ID of the extension to connect to. If the target has set an ID explicitly using the [applications](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in manifest.json, then `extensionId` should have that value. Otherwise it should have the ID that was generated for the target.
-- `connectInfo`{{optional_inline}}
+- `connectInfo` {{optional_inline}}
 
   - : `object`. Details of the connection:
 
-    - `name`{{optional_inline}}
+    - `name` {{optional_inline}}
       - : `string`. Will be passed into {{WebExtAPIRef("runtime.onConnect")}} for processes that are listening for the connection event.
-    - `includeTlsChannelId`{{optional_inline}}
+    - `includeTlsChannelId` {{optional_inline}}
       - : `boolean`. Whether the TLS channel ID will be passed into {{WebExtAPIRef("runtime.onConnectExternal")}} for processes that are listening for the connection event.
 
 ### Return value
@@ -112,7 +112,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-connect) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-connect) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

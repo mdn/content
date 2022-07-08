@@ -17,7 +17,7 @@ browser-compat: webextensions.api.cookies.onChanged
 
 The `onChanged` event of the {{WebExtAPIRef("cookies")}} API fires when a cookie that the extension can access is set or removed.
 
-> **Note:** When [storage partitioning](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#Storage_partitioning) is active, `cookies.Cookie.partitionKey` contains the description of the cookie's storage partition. When modifying cookies, it's important to pass this value to {{WebExtAPIRef("cookies.set()")}} or {{WebExtAPIRef("cookies.remove()")}} to ensure the extension works with the correct cookie.
+> **Note:** When [storage partitioning](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) is active, `cookies.Cookie.partitionKey` contains the description of the cookie's storage partition. When modifying cookies, it's important to pass this value to {{WebExtAPIRef("cookies.set()")}} or {{WebExtAPIRef("cookies.remove()")}} to ensure the extension works with the correct cookie.
 
 Note that updating a cookie's properties is implemented as a two step process:
 

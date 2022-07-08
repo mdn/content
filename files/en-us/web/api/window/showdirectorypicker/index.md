@@ -1,6 +1,7 @@
 ---
 title: Window.showDirectoryPicker()
 slug: Web/API/Window/showDirectoryPicker
+page-type: web-api-instance-method
 tags:
   - Directory
   - File
@@ -8,9 +9,10 @@ tags:
   - Method
   - Window
   - working with files
+  - Experimental
 browser-compat: api.Window.showDirectoryPicker
 ---
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}{{SeeCompatTable}}
 
 The **`showDirectoryPicker()`** method of the
 {{domxref("Window")}} interface displays a directory picker which allows the user to
@@ -24,7 +26,20 @@ var FileSystemDirectoryHandle = window.showDirectoryPicker();
 
 ### Parameters
 
-None.
+- `options` {{optional_inline}}
+
+  - : An object containing options, which are as follows:
+
+    - `id`
+      - : By specifying an ID, the browser can remember different directories for different
+        IDs. If the same ID is used for another picker, the picker opens in the same
+        directory.
+    - `mode`
+      - : A string that defaults to `"read"` for read-only access or `"readwrite"` for read
+        and write access to the directory.
+    - `startIn`
+      - : A `FileSystemHandle` or a well known directory (`"desktop"`, `"documents"`,
+        `"downloads"`, `"music"`, `"pictures"`, or `"videos"`) to open the dialog in.
 
 ### Return value
 
@@ -59,6 +74,5 @@ async function getDir() {
 
 ## See also
 
-- [File System Access API](/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

@@ -1,6 +1,7 @@
 ---
 title: PaymentResponse.methodName
 slug: Web/API/PaymentResponse/methodName
+page-type: web-api-instance-property
 tags:
   - API
   - Commerce
@@ -26,7 +27,7 @@ to process payments.
 
 ## Value
 
-A {{domxref("DOMString")}} uniquely identifying the payment handler being used to
+A string uniquely identifying the payment handler being used to
 process the payment. This may be either a standardized identifier, or a URL used by the
 payment processor to handle payments. See
 {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant
@@ -40,7 +41,7 @@ real-world implementation this data would then be sent to a payment server.
 
 ```js
 payment.show().then(paymentResponse => {
-  var paymentData = {
+  const paymentData = {
     // payment method string
     method: paymentResponse.methodName,
     // payment details as you requested

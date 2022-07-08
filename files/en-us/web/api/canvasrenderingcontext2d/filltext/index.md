@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.fillText()
 slug: Web/API/CanvasRenderingContext2D/fillText
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

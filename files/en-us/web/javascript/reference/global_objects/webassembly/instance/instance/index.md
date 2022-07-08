@@ -28,13 +28,22 @@ new WebAssembly.Instance(module, importObject)
 
 ### Parameters
 
-- _module_
+- `module`
   - : The {{jsxref("WebAssembly.Module")}} object to be instantiated.
-- _importObject_ {{optional_inline}}
+- `importObject` {{optional_inline}}
   - : An object containing the values to be imported into the newly-created
     `Instance`, such as functions or {{jsxref("WebAssembly.Memory")}} objects.
     There must be one matching property for each declared import of `module` or
     else a {{jsxref("WebAssembly.LinkError")}} is thrown.
+
+#### Exceptions
+
+- If either of the parameters are not of the correct type or structure, a
+  {{jsxref("TypeError")}} is thrown.
+- If the operation fails, one of
+  {{jsxref("WebAssembly.CompileError")}}, {{jsxref("WebAssembly.LinkError")}}, or
+  {{jsxref("WebAssembly.RuntimeError")}} are thrown, depending on the cause of the failure.
+- Some browsers may throw a {{jsxref("RangeError")}}, as they prohibit compilation and instantiation of Wasm with large buffers on the UI thread.
 
 ## Examples
 

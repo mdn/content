@@ -54,7 +54,9 @@ animation-play-state: unset;
 
 ## Examples
 
-### The animation is paused
+### Pausing an animation
+
+This animation is paused, but runs when you hover over it.
 
 #### HTML
 
@@ -72,7 +74,12 @@ animation-play-state: unset;
   height: 100px;
   animation-name: rotate;
   animation-duration: 0.7s;
+  animation-iteration-count: infinite;
   animation-play-state: paused;
+}
+
+.box:hover {
+  animation-play-state: running;
 }
 
 @keyframes rotate {
@@ -87,7 +94,9 @@ animation-play-state: unset;
 
 #### Result
 
-{{EmbedLiveSample("Examples","100%","250")}}
+Hover over the rectangle to play the animation.
+
+{{EmbedLiveSample("Pausing an animation","100%","250")}}
 
 See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples.
 

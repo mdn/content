@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.nackCount
 slug: Web/API/RTCInboundRtpStreamStats/nackCount
+page-type: web-api-instance-property
 tags:
   - API
   - NACK

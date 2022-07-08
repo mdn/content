@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.blendFuncSeparate()
 slug: Web/API/WebGLRenderingContext/blendFuncSeparate
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -40,7 +41,7 @@ blendFuncSeparate(srcRGB, dstRGB, srcAlpha, dstAlpha)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

@@ -1,6 +1,7 @@
 ---
 title: GestureEvent
 slug: Web/API/GestureEvent
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -9,7 +10,7 @@ tags:
   - Reference
 browser-compat: api.GestureEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 {{Non-standard_header()}}
 

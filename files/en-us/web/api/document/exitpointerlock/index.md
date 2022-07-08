@@ -1,6 +1,7 @@
 ---
 title: Document.exitPointerLock()
 slug: Web/API/Document/exitPointerLock
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

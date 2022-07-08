@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ondragover
 slug: Web/API/GlobalEventHandlers/ondragover
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -11,7 +12,7 @@ browser-compat: api.GlobalEventHandlers.ondragover
 {{ApiRef("HTML DOM")}}
 
 A {{domxref("GlobalEventHandlers","global event handler")}} for the
-{{event("dragover")}} event.
+{{domxref("HTMLElement/dragover_event", "dragover")}} event.
 
 ## Syntax
 
@@ -147,4 +148,4 @@ button.addEventListener("click", () => {
 
 ## See also
 
-- {{event("dragover")}}
+- {{domxref("HTMLElement/dragover_event", "dragover")}}

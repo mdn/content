@@ -1,6 +1,7 @@
 ---
 title: CharacterData.replaceData()
 slug: Web/API/CharacterData/replaceData
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference

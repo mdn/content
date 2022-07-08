@@ -42,7 +42,7 @@ You can control the individual components of the transition with the following s
 - {{cssxref("transition-delay")}}
   - : Defines how long to wait between the time a property is changed and the transition actually begins.
 
-The shorthand CSS syntax is written as follows:
+The `transition` shorthand CSS syntax is written as follows:
 
 ```css
 div {

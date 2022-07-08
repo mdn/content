@@ -1,6 +1,7 @@
 ---
 title: XRFrame.createAnchor()
 slug: Web/API/XRFrame/createAnchor
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: NavigatorUAData.getHighEntropyValues()
 slug: Web/API/NavigatorUAData/getHighEntropyValues
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -42,15 +43,15 @@ getHighEntropyValues(hints)
 A {{jsxref("Promise")}} that resolves to an object containing some or all of the following values (based on the hints requested):
 
 - `architecture`
-  - : A {{domxref("DOMString","string")}} containing the platform architecture. For example, `"x86"`.
+  - : A string containing the platform architecture. For example, `"x86"`.
 - `bitness`
-  - : A {{domxref("DOMString","string")}} containing the architecture bitness. For example, `"64"`.
+  - : A string containing the architecture bitness. For example, `"64"`.
 - `model`
-  - : A {{domxref("DOMString","string")}} containing the device model. For example, `"Pixel 2XL"`.
+  - : A string containing the device model. For example, `"Pixel 2XL"`.
 - `platformVersion`
-  - : A {{domxref("DOMString","string")}} containing the platform version. For example, `"10.0"`.
+  - : A string containing the platform version. For example, `"10.0"`.
 - `uaFullVersion` {{deprecated_inline}}
-  - : A {{domxref("DOMString","string")}} containing the full browser version. For example, `"91.0.4472.124"`.
+  - : A string containing the full browser version. For example, `"91.0.4472.124"`.
 - `fullVersionList`
   - : An array of brand information containing the browser name and full version.
     For example, `"Chromium";v="91.0.4472.124","Google Chrome";v="91.0.4472.124"`.

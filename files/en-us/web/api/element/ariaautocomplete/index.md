@@ -1,6 +1,7 @@
 ---
 title: Element.ariaAutoComplete
 slug: Web/API/Element/ariaAutoComplete
+page-type: web-api-instance-property
 tags:
   - API
   - Property

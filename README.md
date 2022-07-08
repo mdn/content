@@ -41,8 +41,7 @@ speed:
   [Learn web development](https://developer.mozilla.org/en-US/docs/Learn) tutorials.
 - Open source: If you've never contributed to an open source project before,
   have a read of [Basic etiquette for open source projects](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Open_source_etiquette).
-- Git and GitHub: If you are unfamiliar with these tools, [GitHub for complete
-  beginners](https://developer.mozilla.org/en-US/docs/MDN/Contribute/GitHub_beginners)
+- Git and GitHub: If you are unfamiliar with these tools, [GitHub for complete beginners](https://developer.mozilla.org/en-US/docs/MDN/Contribute/GitHub_beginners)
   will get you started.
 - MDN's repo structures: If you are not sure what repos to edit to make changes
   to the different parts of MDN's content,
@@ -62,14 +61,14 @@ There are several ways forward from this point. It's up to you.
 Here are some options:
 
 1. Go to <https://github.com/mdn/content> and just use the
-[GitHub UI](https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/managing-files-on-github).
+[GitHub UI](https://docs.github.com/en/repositories/working-with-files/managing-files).
 This is the easiest approach if you just want to make a simple change to
 a single file, like fixing a typo.
-1. Install and use the [GitHub Desktop](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-desktop)
-1. Install and use the [GitHub CLI](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-cli)
+1. Install and use the [GitHub Desktop](https://docs.github.com/en/get-started/using-github/github-desktop)
+1. Install and use the [GitHub CLI](https://docs.github.com/en/github-cli/github-cli/about-github-cli)
 1. [Install `git`](https://git-scm.com/downloads) and use it from the
 command line. You might find these resources helpful:
-    - [Using Git](https://docs.github.com/en/free-pro-team@latest/github/using-git)
+    - [Using Git](https://docs.github.com/en/get-started)
     - [`git` cheatsheet](https://training.github.com/)
 
 If you choose an option other than the GitHub UI, you want to install
@@ -80,20 +79,20 @@ If you choose an option other than the GitHub UI, you want to install
 These are some important things to keep in mind about the MDN content.
 
 - **A document's main content is written in an `index.html` or an `index.md`
-file** -- We're currently in the process of converting our content from HTML
+file** — We're currently in the process of converting our content from HTML
 into Markdown. Pages that are in HTML have their content in a file called
 "index.html". Pages that are in Markdown  have their content in a file called
 "index.md".
-- **Documents are folders** --  Documents are always
+- **Documents are folders** —  Documents are always
 represented by a folder (e.g., [`files/en-us/web/javascript`](files/en-us/web/javascript)),
 and that folder will contain the content of that specific document as an
 `index.html` or `index.md` file (e.g., [`files/en-us/web/javascript/index.md`](files/en-us/web/javascript/index.md)).
 - **Documents are hierarchical** - A document folder may contain other folders,
 where those folders would represent child documents (e.g., [`files/en-us/web/javascript/closures/index.md`](files/en-us/web/javascript/closures/index.md)).
-- **Document folders may contain image files** -- A document folder may also
+- **Document folders may contain image files** — A document folder may also
 contain image files, which are referenced within that document's
 `index.html` or `index.md` file.
-- **All redirects are specified in a single file** -- All of the redirects
+- **All redirects are specified in a single file** — All of the redirects
 are specified within [`files/en-us/_redirects.txt`](files/en-us/_redirects.txt),
 one redirect per line. Each line specifies a `from` and `to` URI
 separated by whitespace. When you move a document, you'll need to add a
@@ -103,7 +102,7 @@ Both of these tasks are done using the `yarn content move` tool — see
 - **Don't edit the `_redirects.txt` file manually!**
 If both an `index.html` or `index.md` file and a redirect exist for a document, the
 document takes precedence and the redirect is ignored.
-- **A document's `index.html` or `index.md` starts with "front-matter"** -- Each
+- **A document's `index.html` or `index.md` starts with "front-matter"** — Each
 document's `index.html` or `index.md` file must begin with some [YAML](https://en.wikipedia.org/wiki/YAML)
 called front-matter that defines some important information about the
 document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag)
@@ -136,11 +135,11 @@ and then click on the edit (pencil) button.
   to jump to its source file on GitHub.
 
 From there the GitHub UI will take your hand and
-[walk you through the rest](https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/editing-files-in-your-repository),
+[walk you through the rest](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files),
 like automatically creating a
-[fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
+[fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 and branch to commit your changes to, as well as helping you reach the
-ultimate goal, a [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests).
+ultimate goal, a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 Your pull request represents the work you want to be reviewed,
 hopefully approved, and then merged into the `main` branch of this repository.
 
@@ -166,13 +165,13 @@ moving one or more documents, the GitHub UI is not very efficient.
 You'd have to make a separate pull request for every page you want to change.
 Instead, you're going to have to use `git` or one of the other
 `git`-based approaches like the
-[GitHub Desktop](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-desktop).
+[GitHub Desktop](https://docs.github.com/en/get-started/using-github/github-desktop).
 
 1. You'll want to create a
-[fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
+[fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 of this repository, so you can freely experiment with branches and
 changes in your own copy before submitting your changes as a
-[pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests).
+[pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 Let's assume your GitHub username is `octocat`. Your fork would be a copy
 of this repository but in your own account, so
 `https://github.com/octocat/content`.
@@ -291,7 +290,7 @@ and then push the branch to your fork. Remember, the default name that
     ```
 
 1. You're now ready to create a
-[pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+[pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 1. Once you've created your pull request, sit back, relax, and wait for
 a review.
@@ -365,19 +364,14 @@ Adding a new document is relatively straightforward, especially if you can
 start by copying the `index.html` or `index.md` of a similar document.
 There are only a few things to keep in mind:
 
-- Documents can be authored in either Markdown or HTML. However, we're converting
-  the site to Markdown one section at a time, and don't want to mix authoring
-  formats within a section. At this point we have only converted the JavaScript
-  documentation. So if you are adding a new document under
-  `files/en-us/web/javascript`, make it a Markdown file. Otherwise, make it an
-  HTML file.
+- Documents must be authored in Markdown.
 - Remember that a document is represented by an `index.html` or `index.md` file
   within its own folder.
 - Determine where in the document hierarchy your document belongs. For
   example, if you're
   creating a new CSS document for a new property `foo`, you'll want to create
   a new folder
-  `files/en-us/web/css/foo/` and its `files/en-us/web/css/foo/index.html` file.
+  `files/en-us/web/css/foo/` and its `files/en-us/web/css/foo/index.md` file.
 - Remember that a document's `index.html` or `index.md` file must start with
   front-matter that defines the `title`, `slug`, and
   [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag)
@@ -398,8 +392,7 @@ As we outlined above, the step-by-step process in general would be:
     git checkout -b my-add
     ```
 
-1. Create one or more new document folders, each with their own `index.html`
-or `index.md` file.
+1. Create one or more new document folders, each with their own `index.md` file.
 
 1. Add and commit your new files, as well as push your new branch to your fork:
 
@@ -410,7 +403,7 @@ or `index.md` file.
     ```
 
 1. And finally create your
-[pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+[pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 ### Moving one or more documents
 
@@ -457,7 +450,7 @@ push your branch to your fork:
     git push -u origin my-move
     ```
 
-1. Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+1. Now you're ready to create your [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 **Important: `yarn content move` automatically adds the necessary redirect
 information to the `_redirects.txt` file so that the old location will redirect
@@ -516,7 +509,7 @@ push your branch to your fork:
     git push -u origin my-delete
     ```
 
-1. Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+1. Now you're ready to create your [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 > **Note:** If the slug of the page you wish to delete contain special
   characters, include it in quotes:

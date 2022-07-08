@@ -6,12 +6,7 @@ tags:
   - Guide
   - HTML
   - Reference
-spec-urls:
-  - https://html.spec.whatwg.org/multipage/#rel-alternate
-  - https://html.spec.whatwg.org/multipage/#the-link-is-an-alternative-stylesheet
-  - https://html.spec.whatwg.org/multipage/#attr-style-title
-  - https://html.spec.whatwg.org/multipage/#attr-meta-http-equiv-default-style
-  - https://drafts.csswg.org/cssom/#css-style-sheet-collections
+browser-compat: html.elements.link.rel.alternate_stylesheet
 ---
 {{CSSRef}}
 
@@ -59,4 +54,4 @@ Use `rel="stylesheet"` to link to the default style, and `rel="alternate stylesh
 
 ## Browser compatibility
 
-{{Compat("html.elements.link.rel.alternate_stylesheet")}}
+{{Compat}}

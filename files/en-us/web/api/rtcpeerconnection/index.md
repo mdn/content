@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection
 slug: Web/API/RTCPeerConnection
+page-type: web-api-interface
 tags:
   - API
   - Audio

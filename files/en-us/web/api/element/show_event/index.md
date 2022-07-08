@@ -1,6 +1,7 @@
 ---
 title: 'Element: show event'
 slug: Web/API/Element/show_event
+page-type: web-api-event
 tags:
   - API
   - Deprecated

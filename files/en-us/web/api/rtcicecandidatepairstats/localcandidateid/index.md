@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.localCandidateId
 slug: Web/API/RTCIceCandidatePairStats/localCandidateId
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -29,7 +30,7 @@ candidates.
 
 ## Value
 
-A {{domxref("DOMString")}} giving a unique identifier for the local
+A string giving a unique identifier for the local
 {{domxref("RTCIceCandidate")}} for the connection described by this
 `RTCIceCandidatePairStats` object.
 

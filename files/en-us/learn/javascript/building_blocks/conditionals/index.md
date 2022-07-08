@@ -51,13 +51,13 @@ Let's look at by far the most common type of conditional statement you'll use in
 
 ### Basic if ... else syntax
 
-Basic `if...else` syntax looks like the following in {{glossary("pseudocode")}}:
+Basic `if...else` syntax looks like this:
 
-```
+```js
 if (condition) {
-  code to run if condition is true
+  /* code to run if condition is true */
 } else {
-  run some other code instead
+  /* run some other code instead */
 }
 ```
 
@@ -73,24 +73,24 @@ This code is pretty human-readable — it is saying "**if** the **condition** re
 
 You should note that you don't have to include the `else` and the second curly brace block — the following is also perfectly legal code:
 
-```
+```js
 if (condition) {
-  code to run if condition is true
+  /* code to run if condition is true */
 }
 
-run some other code
+/* run some other code */
 ```
 
 However, you need to be careful here — in this case, the second block of code is not controlled by the conditional statement, so it **always** runs, regardless of whether the condition returns `true` or `false`. This is not necessarily a bad thing, but it might not be what you want — often you want to run one block of code _or_ the other, not both.
 
 As a final point, while not recommended, you may sometimes see `if...else` statements written without the curly braces:
 
-```example-bad
-if (condition) code to run if condition is true
-else run some other code instead
+```js example-bad
+if (condition) /* code to run if condition is true */
+else /* run some other code instead */
 ```
 
-This syntax is perfectly valid, but is much easier to understand the code if you use the curly braces to delimit the blocks of code, and use multiple lines and indentation.
+This syntax is perfectly valid, but it is much easier to understand the code if you use the curly braces to delimit the blocks of code, and use multiple lines and indentation.
 
 ### A real example
 
@@ -409,7 +409,7 @@ select.addEventListener('change', () => ( select.value === 'black' ) ? update('b
 
 Here we've got a {{htmlelement('select')}} element to choose a theme (black or white), plus a simple {{htmlelement('h1')}} to display a website title. We also have a function called `update()`, which takes two colors as parameters (inputs). The website's background color is set to the first provided color, and its text color is set to the second provided color.
 
-Finally, we've also got an [onchange](/en-US/docs/Web/API/GlobalEventHandlers/onchange) event listener that serves to run a function containing a ternary operator. It starts with a test condition — `select.value === 'black'`. If this returns `true`, we run the `update()` function with parameters of black and white, meaning that we end up with background color of black and text color of white. If it returns `false`, we run the `update()` function with parameters of white and black, meaning that the site color are inverted.
+Finally, we've also got an [onchange](/en-US/docs/Web/API/GlobalEventHandlers/onchange) event listener that serves to run a function containing a ternary operator. It starts with a test condition — `select.value === 'black'`. If this returns `true`, we run the `update()` function with parameters of black and white, meaning that we end up with background color of black and text color of white. If it returns `false`, we run the `update()` function with parameters of white and black, meaning that the site colors are inverted.
 
 > **Note:** You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-ternary.html) (see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html) on there also.)
 

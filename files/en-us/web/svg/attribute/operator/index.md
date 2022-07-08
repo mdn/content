@@ -6,6 +6,9 @@ tags:
   - NeedsCompatTable
   - SVG
   - SVG Attribute
+spec-urls:
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-femorphology-operator
+  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomposite-operator
 ---
 {{SVGRef}}
 
@@ -115,45 +118,4 @@ For {{SVGElement("feMorphology")}}, `operator` defines whether to erode (i.e., t
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-femorphology-operator", "operator for &lt;feMorphology&gt;")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-fecomposite-operator", "operator for &lt;feComposite&gt;")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>
-        Refers to CSS Compositing and Blending specification for the values and
-        added the <code>lighter</code> value.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feMorphologyOperatorAttribute", "operator for &lt;feMorphology&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;feMorphology></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feCompositeOperatorAttribute", "operator for &lt;feComposite&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;feComposite></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

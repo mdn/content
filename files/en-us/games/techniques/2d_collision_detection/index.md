@@ -45,7 +45,7 @@ rect2.bind("EnterFrame", function () {
 });
 ```
 
-{{ EmbedLiveSample('Axis-Aligned_Bounding_Box', '700', '300', '', 'Games/Techniques/2D_collision_detection') }}
+{{ EmbedLiveSample('Axis-Aligned_Bounding_Box', '700', '300') }}
 
 > **Note:** [Another example without Canvas or external libraries](https://jsfiddle.net/jlr7245/217jrozd/3/).
 
@@ -119,7 +119,7 @@ circle2.bind("EnterFrame", function () {
 });
 ```
 
-{{ EmbedLiveSample('Circle_Collision', '700', '300', '', 'Games/Techniques/2D_collision_detection') }}
+{{ EmbedLiveSample('Circle_Collision', '700', '300') }}
 
 > **Note:** [Here is another example without Canvas or external libraries.](https://jsfiddle.net/jlr7245/teb4znk0/20/)
 

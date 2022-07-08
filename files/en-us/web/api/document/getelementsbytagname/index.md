@@ -1,6 +1,7 @@
 ---
 title: Document.getElementsByTagName()
 slug: Web/API/Document/getElementsByTagName
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -27,15 +28,15 @@ getElementsByTagName(name)
 
 ### Parameters
 
-- _name_ is a string representing the name of the elements. The special
-  string "\*" represents all elements.
+- `name`
+  - : A string representing the name of the elements. The special
+    string `*` represents all elements.
 
 ### Return value
 
 A live {{domxref("HTMLCollection")}} of found elements in the order they appear in the tree.
 
-> **Note:** [The
-> latest W3C specification](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) says returned value is an
+> **Note:** [The latest W3C specification](https://dom.spec.whatwg.org/#interface-document) says returned value is an
 > `HTMLCollection`; however, this method returns a {{domxref("NodeList")}} in
 > WebKit browsers. See {{bug(14869)}} for details.
 
@@ -61,22 +62,22 @@ nested {{HTMLElement("div")}} elements).
   <title>getElementsByTagName example</title>
   <script>
     function getAllParaElems() {
-      var allParas = document.getElementsByTagName('p');
-      var num = allParas.length;
+      const allParas = document.getElementsByTagName('p');
+      const num = allParas.length;
       alert('There are ' + num + ' paragraph in this document');
     }
 
     function div1ParaElems() {
-      var div1 = document.getElementById('div1');
-      var div1Paras = div1.getElementsByTagName('p');
-      var num = div1Paras.length;
+      const div1 = document.getElementById('div1');
+      const div1Paras = div1.getElementsByTagName('p');
+      const num = div1Paras.length;
       alert('There are ' + num + ' paragraph in #div1');
     }
 
     function div2ParaElems() {
-      var div2 = document.getElementById('div2');
-      var div2Paras = div2.getElementsByTagName('p');
-      var num = div2Paras.length;
+      const div2 = document.getElementById('div2');
+      const div2Paras = div2.getElementsByTagName('p');
+      const num = div2Paras.length;
       alert('There are ' + num + ' paragraph in #div2');
     }
   </script>

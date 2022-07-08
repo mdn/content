@@ -1,6 +1,7 @@
 ---
 title: TaskAttributionTiming.containerName
 slug: Web/API/TaskAttributionTiming/containerName
+page-type: web-api-instance-property
 tags:
   - API
   - Long Tasks API
@@ -19,7 +20,7 @@ the whole, for a long task.
 
 ## Value
 
-A {{domxref("DOMString")}} containing the container's `name` attribute.
+A string containing the container's `name` attribute.
 
 ## Specifications
 

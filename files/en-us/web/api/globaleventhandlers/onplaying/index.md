@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onplaying
 slug: Web/API/GlobalEventHandlers/onplaying
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -39,4 +40,4 @@ specifying the handler for the event.
 ## See also
 
 - {{domxref("HTMLMediaElement/playing_event", "playing")}}
-- [DOM event handlers](/en-US/docs/Web/Guide/Events/Event_handlers)
+- [DOM event handlers](/en-US/docs/Web/Events/Event_handlers)

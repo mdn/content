@@ -1,6 +1,7 @@
 ---
 title: clearTimeout()
 slug: Web/API/clearTimeout
+page-type: web-api-global-function
 tags:
   - API
   - HTML DOM
@@ -13,6 +14,9 @@ browser-compat: api.clearTimeout
 
 The global **`clearTimeout()`** method cancels a timeout previously established
 by calling {{domxref("setTimeout()")}}.
+
+If the parameter provided does not identify a previously established action,
+this method does nothing.
 
 ## Syntax
 
@@ -86,4 +90,3 @@ exception is thrown.
 - {{domxref("setInterval()")}}
 - {{domxref("clearInterval()")}}
 - {{domxref("Window.requestAnimationFrame()")}}
-- [_Daemons_ management](/en-US/docs/JavaScript/Timers/Daemons)

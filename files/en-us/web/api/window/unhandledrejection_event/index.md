@@ -1,6 +1,7 @@
 ---
 title: 'Window: unhandledrejection event'
 slug: Web/API/Window/unhandledrejection_event
+page-type: web-api-event
 tags:
   - API
   - Event

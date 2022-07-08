@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onsubmit
 slug: Web/API/GlobalEventHandlers/onsubmit
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -26,8 +27,7 @@ target.onsubmit = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("SubmitEvent")}} object as its sole
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("SubmitEvent")}} object as its sole
 argument.
 
 ## Example

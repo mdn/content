@@ -64,29 +64,30 @@ new Uint32Array(buffer, byteOffset, length);
 
 ```js
 // From a length
-var uint32 = new Uint32Array(2);
+const uint32 = new Uint32Array(2);
 uint32[0] = 42;
 console.log(uint32[0]); // 42
 console.log(uint32.length); // 2
 console.log(uint32.BYTES_PER_ELEMENT); // 4
 
 // From an array
-var arr = new Uint32Array([21,31]);
-console.log(arr[1]); // 31
+const x = new Uint32Array([21, 31]);
+console.log(x[1]); // 31
 
 // From another TypedArray
-var x = new Uint32Array([21, 31]);
-var y = new Uint32Array(x);
+const y = new Uint32Array(x);
 console.log(y[0]); // 21
 
 // From an ArrayBuffer
-var buffer = new ArrayBuffer(16);
-var z = new Uint32Array(buffer, 0, 4);
+const buffer = new ArrayBuffer(32);
+const z = new Uint32Array(buffer, 4, 4);
+console.log(z.byteOffset); // 4
 
 // From an iterable
-var iterable = function*(){ yield* [1,2,3]; }();
-var uint32 = new Uint32Array(iterable);
-// Uint32Array[1, 2, 3]
+const iterable = function*() { yield* [1, 2, 3]; }();
+const uint32FromIterable = new Uint32Array(iterable);
+console.log(uint32FromIterable);
+// Uint32Array [1, 2, 3]
 ```
 
 ## Specifications

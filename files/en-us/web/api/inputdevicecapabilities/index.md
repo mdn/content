@@ -1,6 +1,7 @@
 ---
 title: InputDeviceCapabilities
 slug: Web/API/InputDeviceCapabilities
+page-type: web-api-interface
 tags:
   - API
   - Experimental

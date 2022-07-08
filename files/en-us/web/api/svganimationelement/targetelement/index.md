@@ -1,6 +1,7 @@
 ---
 title: SVGAnimationElement.targetElement
 slug: Web/API/SVGAnimationElement/targetElement
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

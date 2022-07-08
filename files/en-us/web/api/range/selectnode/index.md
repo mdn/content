@@ -1,6 +1,7 @@
 ---
 title: Range.selectNode()
 slug: Web/API/Range/selectNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -23,7 +24,7 @@ selectNode(referenceNode)
 
 ### Parameters
 
-- _referenceNode_
+- `referenceNode`
   - : The {{domxref("Node")}} to select within a {{domxref("Range")}}.
 
 ### Return value

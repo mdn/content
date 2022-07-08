@@ -1,6 +1,7 @@
 ---
 title: XRReferenceSpaceEvent.referenceSpace
 slug: Web/API/XRReferenceSpaceEvent/referenceSpace
+page-type: web-api-instance-property
 tags:
   - API
   - AR

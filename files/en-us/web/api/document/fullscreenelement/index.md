@@ -1,6 +1,7 @@
 ---
 title: Document.fullscreenElement
 slug: Web/API/Document/fullscreenElement
+page-type: web-api-instance-property
 tags:
   - API
   - Document

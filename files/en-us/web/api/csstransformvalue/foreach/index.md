@@ -1,6 +1,7 @@
 ---
 title: cssTransformValue.forEach()
 slug: Web/API/CSSTransformValue/forEach
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -43,9 +44,9 @@ forEach(function(currentValue, index, array) { /* ... */ }, thisArg)
 
     - `currentValue`
       - : The value of the current element being processed.
-    - `index`{{optional_inline}}
+    - `index` {{optional_inline}}
       - : The index of the current element being processed.
-    - `array`{{optional_inline}}
+    - `array` {{optional_inline}}
       - : The `CSSTransformValue` that `forEach()` is being called on.
 
 - `thisArg` {{Optional_inline}}

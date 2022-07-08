@@ -1,6 +1,7 @@
 ---
 title: PaymentRequest.abort()
 slug: Web/API/PaymentRequest/abort
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -37,9 +38,9 @@ The following example sets up a timeout to clear the payment request that might 
 been abandoned or neglected.
 
 ```js
-var request = new PaymentRequest(supportedInstruments, details, options);
+const request = new PaymentRequest(supportedInstruments, details, options);
 
-var paymentTimeout = window.setTimeout(() => {
+const paymentTimeout = window.setTimeout(() => {
   window.clearTimeout(paymentTimeout);
   request.abort().then(() => {
     print('Payment timed out after 20 minutes.');

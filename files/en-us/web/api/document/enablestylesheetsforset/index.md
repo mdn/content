@@ -1,6 +1,7 @@
 ---
 title: Document.enableStyleSheetsForSet()
 slug: Web/API/Document/enableStyleSheetsForSet
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM
@@ -26,7 +27,7 @@ enableStyleSheetsForSet(name)
 
 ### Parameters
 
-- _name_
+- `name`
   - : The name of the style sheets to enable. All style sheets with a title that match
     this name will be enabled, while all others that have a title will be disabled.
     Specify an empty string for the _name_ parameter to disable all alternate and
@@ -65,5 +66,4 @@ document.enableStyleSheetsForSet("Some style sheet set name");
 - {{domxref("document.preferredStyleSheetSet")}}
 - {{domxref("document.selectedStyleSheetSet")}}
 - {{domxref("document.enableStyleSheetsForSet()")}}
-- [Correctly
-  Using Titles With External Stylesheets](/en-US/docs/Archive/Web_Standards/Correctly_Using_Titles_With_External_Stylesheets)
+- [Correctly Using Titles With External Stylesheets](/en-US/docs/Archive/Web_Standards/Correctly_Using_Titles_With_External_Stylesheets)

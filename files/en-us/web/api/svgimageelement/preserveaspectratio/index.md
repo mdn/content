@@ -1,6 +1,7 @@
 ---
 title: SVGImageElement.preserveAspectRatio
 slug: Web/API/SVGImageElement/preserveAspectRatio
+page-type: web-api-instance-property
 tags:
   - API
   - Image

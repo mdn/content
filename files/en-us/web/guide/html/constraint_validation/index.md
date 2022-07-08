@@ -104,7 +104,7 @@ In addition to the `type` attribute described above, the following attributes ar
     </tr>
     <tr>
       <td>
-        <code>datetime</code>, <code>datetime-local</code>, <code>time</code>
+        <code>datetime-local</code>, <code>time</code>
       </td>
       <td>A valid date and time</td>
     </tr>
@@ -132,7 +132,7 @@ In addition to the `type` attribute described above, the following attributes ar
     </tr>
     <tr>
       <td>
-        <code>datetime</code>, <code>datetime-local</code>, <code>time</code>
+        <code>datetime-local</code>, <code>time</code>
       </td>
       <td>A valid date and time</td>
     </tr>
@@ -145,7 +145,7 @@ In addition to the `type` attribute described above, the following attributes ar
       <td>
         <code>text</code>, <code>search</code>, <code>url</code>,
         <code>tel</code>, <code>email</code>, <code>password</code>,
-        <code>date</code>, <code>datetime</code>, <code>datetime-local</code>,
+        <code>date</code>, <code>datetime-local</code>,
         <code>month</code>, <code>week</code>, <code>time</code>,
         <code>number</code>, <code>checkbox</code>, <code>radio</code>,
         <code>file</code>; also on the {{ HTMLElement("select") }} and
@@ -198,7 +198,7 @@ In addition to the `type` attribute described above, the following attributes ar
     </tr>
     <tr>
       <td>
-        <code>datetime</code>, <code>datetime-local</code>, <code>time</code>
+        <code>datetime-local</code>, <code>time</code>
       </td>
       <td>An integer number of seconds</td>
     </tr>

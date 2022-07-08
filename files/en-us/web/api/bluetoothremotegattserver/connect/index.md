@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTServer.connect()
 slug: Web/API/BluetoothRemoteGATTServer/connect
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth
@@ -24,13 +25,13 @@ script execution environment to connect to `this.device`.
 connect()
 ```
 
-### Return value
-
-A {{jsxref("Promise")}} that resolves to a {{domxref("BluetoothRemoteGATTServer")}}.
-
 ### Parameters
 
 None.
+
+### Return value
+
+A {{jsxref("Promise")}} that resolves to a {{domxref("BluetoothRemoteGATTServer")}}.
 
 ## Specifications
 

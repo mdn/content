@@ -1,6 +1,7 @@
 ---
 title: Window.fullScreen
 slug: Web/API/Window/fullScreen
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

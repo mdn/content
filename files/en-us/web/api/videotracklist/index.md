@@ -1,6 +1,7 @@
 ---
 title: VideoTrackList
 slug: Web/API/VideoTrackList
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

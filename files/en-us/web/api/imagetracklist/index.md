@@ -1,6 +1,7 @@
 ---
 title: ImageTrackList
 slug: Web/API/ImageTrackList
+page-type: web-api-interface
 tags:
   - API
   - Interface

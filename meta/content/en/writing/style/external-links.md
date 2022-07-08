@@ -7,8 +7,8 @@ description: >
 ---
 
 External links are allowed on MDN,
-but they require extra care to make sure they’re useful to MDN’s audience.
-If you’re considering an external link, act to minimize the risks of:
+but they require extra care to make sure they're useful to MDN's audience.
+If you're considering an external link, act to minimize the risks of:
 
 - Broken or outdated links
 - Creating an appearance of endorsement, especially for commercial products or services
@@ -32,7 +32,7 @@ Prefer links to external content that is:
 - Necessary for attribution, citation, or acknowledgement
   (e.g., as part of a Creative Commons attribution)
 - More likely to be maintained for the topic than incorporating such content into MDN itself
-  (e.g., a vendor’s release notes)
+  (e.g., a vendor's release notes)
 - Open source or community driven, like MDN itself
 
 ## Poor external links
@@ -40,7 +40,7 @@ Prefer links to external content that is:
 Poor external links lack relevance, maintainability, accessibility, or otherwise put up barriers to readers. Avoid links to external content that is:
 
 - Generic or non-specific
-  (e.g., a vendor’s home page, instead of related documentation)
+  (e.g., a vendor's home page, instead of related documentation)
 - Ephemeral or unmaintained
   (e.g., a one-time announcement)
 - Self-linking or self-promotion
@@ -59,6 +59,6 @@ Think twice before linking to resources that you have a business or personal con
 **If you have a business or personal relationship with the target of a link, you must disclose that relationship in your pull request. Failure to do so may imperil your continued participation with MDN.**
 
 Sometimes such links are relevant and appropriate.
-For example, if you’re the editor of a specification and you’re contributing to docs related to that spec,
+For example, if you're the editor of a specification and you're contributing to docs related to that spec,
 then linking to the spec is expected and acceptable.
 But you must disclose the relationship between you and the link.

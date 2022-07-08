@@ -1,6 +1,7 @@
 ---
 title: AddressErrors.recipient
 slug: Web/API/AddressErrors/recipient
+page-type: web-api-instance-property
 tags:
   - API
   - Address

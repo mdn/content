@@ -1,6 +1,7 @@
 ---
 title: 'SpeechSynthesisUtterance: resume event'
 slug: Web/API/SpeechSynthesisUtterance/resume_event
+page-type: web-api-event
 tags:
   - Event
   - Reference

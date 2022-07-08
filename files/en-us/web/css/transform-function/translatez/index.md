@@ -113,7 +113,7 @@ div {
 ```
 
 What really matters here is the class "moved"; let's take a look at what it does. First, the
-[`perspective()`](/en-US/docs/Web/CSS/transform-function/perspective()) function positions the
+[`perspective()`](/en-US/docs/Web/CSS/transform-function/perspective) function positions the
 viewer relative to the plane that lies where z=0 (in essence, the surface of the screen). A value of
 `500px` means the user is 500 pixels "in front of" the imagery located at z=0.
 

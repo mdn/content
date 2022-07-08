@@ -1,6 +1,7 @@
 ---
 title: IdleDetector
 slug: Web/API/IdleDetector
+page-type: web-api-interface
 tags:
   - API
   - Interface

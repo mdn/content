@@ -8,7 +8,7 @@ tags:
   - Experimental
   - Reference
   - image-resolution
-browser-compat: css.properties.image-resolution
+spec-urls: https://drafts.csswg.org/css-images-4/#the-image-resolution
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
@@ -81,7 +81,7 @@ Uses the resolution from the image. If the image does not have a resolution, use
 
 ## Browser compatibility
 
-{{Compat}}
+No browser currently supports this property.
 
 ## See also
 

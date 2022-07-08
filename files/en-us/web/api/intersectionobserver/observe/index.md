@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver.observe()
 slug: Web/API/IntersectionObserver/observe
+page-type: web-api-instance-method
 tags:
   - API
   - Intersection Observer

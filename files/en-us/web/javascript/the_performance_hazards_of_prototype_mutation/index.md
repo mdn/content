@@ -23,11 +23,11 @@ function Landmark(lat, lon, desc) {
   this.location = { lat: lat, long: lon };
   this.description = desc;
 }
-var lm1 = new Landmark(-90, 0, "South Pole");
-var lm2 = new Landmark(-24.3756466, -128.311018, "Pitcairn Islands");
+const lm1 = new Landmark(-90, 0, "South Pole");
+const lm2 = new Landmark(-24.3756466, -128.311018, "Pitcairn Islands");
 ```
 
-Every `Landmark` has properties `location` and `description` in that order.  Each object literal storing latitude/longitude information has properties `lat` and long in that order.  Subsequent code _could_ delete a property.  But it's unlikely, so engines can produce less-optimal code in such cases.  In SpiderMonkey, the JavaScript engine in Firefox, a particular ordering of properties (and some aspects of those properties, _not_ including values) is called a _shape_.  (V8's name for the concept is _structure ID_.)  If two objects share a shape, their properties are stored identically.
+Every `Landmark` has properties `location` and `description` in that order.  Each object literal storing latitude/longitude information has properties `lat` and long in that order.  Subsequent code _could_ delete a property.  But it's unlikely, so engines can produce less-optimal code in such cases.  In SpiderMonkey, the JavaScript engine in Firefox, a particular ordering of properties (and some aspects of those properties, _not_ including values) is called a _shape_.  (V8's name for the concept is _structure ID_.) If two objects share a shape, their properties are stored identically.
 
 Internally to engines, a (simplified) version of these ideas looks like this C++:
 
@@ -60,13 +60,13 @@ If an engine knows an object has a particular shape, it can assume _all_ propert
 Many properties don't exist _directly_ on the object: lookups often find properties on the prototype chain.  Accesses to properties on prototypes is just extra "hops" through the `prototype` field to the object containing the property.  Optimizing _correctly_ requires that no object along the way have the property, so every hop must check that object's shape.
 
 ```js
-var d = new Date();
+const d = new Date();
 d.toDateString(); // Date.prototype.toDateString
 
 function Pair(x, y) { this.x = x; this.y = y; }
 Pair.prototype.sum = function() { return this.x + this.y; };
 
-var p = new Pair(3, 7);
+const p = new Pair(3, 7);
 p.sum(); // Pair.prototype.sum
 ```
 
@@ -81,32 +81,32 @@ Predictable property accesses _usually_ find the property a constant number of h
   - : In this case, a shape match must imply that no intervening object's `[[Prototype]]` has been modified.  Therefore, when an object's `[[Prototype]]` is mutated, every object along its `[[Prototype]]` chain must also have its shape changed.
 
     ```js
-        var obj1 = {};
-        var obj2 = Object.create(obj1);
-        var obj3 = Object.create(obj2);
+    const obj1 = {};
+    const obj2 = Object.create(obj1);
+    const obj3 = Object.create(obj2);
 
-        // Objects whose shapes would change: obj3, obj2, obj1, Object.prototype
-        obj3.__proto__ = {};
-        ```
+    // Objects whose shapes would change: obj3, obj2, obj1, Object.prototype
+    Object.setPrototypeOf(obj3, {});
+    ```
 
 - The shape of the object initially accessed can be checked.
 
   - : Every object that might inherit through a changed-`[[Prototype]]` object must change, reflecting the `[[Prototype]]` mutation having happened
 
     ```js
-        var obj1 = {};
-        var obj2 = Object.create(obj1);
-        var obj3 = Object.create(obj2);
+    const obj1 = {};
+    const obj2 = Object.create(obj1);
+    const obj3 = Object.create(obj2);
 
-        // Objects whose shapes would change: obj1, obj2, obj3
-        obj1.__proto__ = {};
-        ```
+    // Objects whose shapes would change: obj1, obj2, obj3
+    Object.setPrototypeOf(obj1, {});
+    ```
 
 ## Pernicious effects of `[[Prototype]]` mutation
 
 `[[Prototype]]` mutation's adverse performance impact occurs in two phases: at the time mutation occurs, and in subsequent execution.  First, **mutating `[[Prototype]]` is slow**.  Second, **mutating `[[Prototype]]` slows down code that interacts with mutated-`[[Prototype]]` objects**.
 
-### Mutating `[[Prototype]] is slow`
+### Mutating [[Prototype]] is slow
 
 While the spec considers mutating `[[Prototype]]` to be modifying a single hidden property, real-world implementations are considerably more complex.  Both shape-changing tactics described above require examining (and modifying) more than one object.  Which approach modifies fewer objects in practice, depends upon the workload.
 
@@ -115,26 +115,28 @@ While the spec considers mutating `[[Prototype]]` to be modifying a single hidde
 The bad effects of `[[Prototype]]` mutation don't end once the mutation is complete.  Because so many property-examination operations implicitly depend on `[[Prototype]]` chains not changing, when engines observe a mutation, _an object with mutated `[[Prototype]] "taints" all code the object flows through`_.  This tainting flows through all code that ever observes a mutated-`[[Prototype]]` object.  As a near-worst-case illustration, consider these patterns of behavior:
 
 ```js
-var obj = {};
-obj.__proto__ = { x: 3 }; // gratuitous mutation
+const obj = {};
+Object.setPrototypeOf(obj, { x: 3 }); // gratuitous mutation
 
-var arr = [obj];
-for (var i = 0; i < 5; i++)
+const arr = [obj];
+for (let i = 0; i < 5; i++) {
   arr.push({ x: i });
+}
 
 function f(v, i) {
-  var elt = v[i];
-  var r =  elt.x > 2 // pessimized
+  const elt = v[i];
+  const r = elt.x > 2 // pessimized
            ? elt
            : { x: elt.x + 1 };
   return r;
 }
-var c = f(arr, 0);
+
+let c = f(arr, 0);
 c.x; // pessimized: return value has unknown properties
 c = f(arr, 1);
 c.x; // still pessimized!
 
-var arr2 = [c];
+const arr2 = [c];
 arr2[0].x; // pessimized
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: 'RTCPeerConnection: icegatheringstatechange event'
 slug: Web/API/RTCPeerConnection/icegatheringstatechange_event
+page-type: web-api-event
 tags:
   - API
   - Connection

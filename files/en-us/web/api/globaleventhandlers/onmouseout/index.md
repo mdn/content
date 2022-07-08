@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onmouseout
 slug: Web/API/GlobalEventHandlers/onmouseout
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -14,7 +15,7 @@ browser-compat: api.GlobalEventHandlers.onmouseout
 
 The **`onmouseout`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("mouseout")}} events.
+processes {{domxref("Element/mouseout_event", "mouseout")}} events.
 
 The `mouseout` event fires when the mouse leaves an element. For example,
 when the mouse moves off of an image in the web page, the `mouseout` event is

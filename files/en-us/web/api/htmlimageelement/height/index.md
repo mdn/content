@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.height
 slug: Web/API/HTMLImageElement/height
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -71,7 +72,7 @@ window.addEventListener("resize", updateHeight);
 
 ### Result
 
-{{EmbedLiveSample("Example", 640, 450)}}
+{{EmbedLiveSample("Examples", 640, 450)}}
 
 This example may be easier to try out {{LiveSampleLink('Example', 'in its own window')}}.
 

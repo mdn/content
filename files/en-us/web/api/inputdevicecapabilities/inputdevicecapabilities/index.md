@@ -1,6 +1,7 @@
 ---
-title: InputDeviceCapabilities
+title: InputDeviceCapabilities()
 slug: Web/API/InputDeviceCapabilities/InputDeviceCapabilities
+page-type: web-api-constructor
 browser-compat: api.InputDeviceCapabilities.InputDeviceCapabilities
 ---
 The `InputDeviceCapabilities()` constructor creates a new

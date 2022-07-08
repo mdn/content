@@ -1,6 +1,7 @@
 ---
 title: DOMImplementation
 slug: Web/API/DOMImplementation
+page-type: web-api-interface
 tags:
   - API
   - DOM

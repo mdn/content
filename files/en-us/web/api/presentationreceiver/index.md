@@ -1,6 +1,7 @@
 ---
 title: PresentationReceiver
 slug: Web/API/PresentationReceiver
+page-type: web-api-interface
 tags:
   - API
   - Experimental

@@ -1,6 +1,7 @@
 ---
 title: Window.print()
 slug: Web/API/Window/print
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

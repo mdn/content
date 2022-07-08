@@ -15,7 +15,7 @@ tags:
   - form
   - submit
   - submit button
-browser-compat: html.elements.input.input-submit
+browser-compat: html.elements.input.type_submit
 ---
 
 {{HTMLRef("Input_types")}}
@@ -26,7 +26,7 @@ browser-compat: html.elements.input.input-submit
   <tbody>
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
-      <td>A {{domxref("DOMString")}} used as the button's label</td>
+      <td>A string used as the button's label</td>
     </tr>
     <tr>
       <td><strong>Events</strong></td>
@@ -56,7 +56,7 @@ browser-compat: html.elements.input.input-submit
 
 ## Value
 
-An `<input type="submit">` element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} which is displayed as the button's label. Buttons do not have a true value otherwise.
+An `<input type="submit">` element's {{htmlattrxref("value", "input")}} attribute contains a string which is displayed as the button's label. Buttons do not have a true value otherwise.
 
 ### Setting the value attribute
 

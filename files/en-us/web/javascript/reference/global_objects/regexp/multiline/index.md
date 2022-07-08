@@ -27,7 +27,7 @@ You cannot change this property directly.
 ### Using multiline
 
 ```js
-var regex = new RegExp('foo', 'm');
+const regex = new RegExp('foo', 'm');
 
 console.log(regex.multiline); // true
 ```

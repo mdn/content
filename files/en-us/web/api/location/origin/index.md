@@ -1,6 +1,7 @@
 ---
 title: location.origin
 slug: Web/API/Location/origin
+page-type: web-api-instance-property
 tags:
   - API
   - Location
@@ -11,7 +12,7 @@ browser-compat: api.Location.origin
 {{APIRef("Location")}}
 
 The **`origin`** read-only property of
-the {{domxref("Location")}} interface is a {{domxref("USVString")}} containing the
+the {{domxref("Location")}} interface is a string containing the
 Unicode serialization of the origin of the represented URL.
 
 That is:
@@ -27,17 +28,15 @@ That is:
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-string = object.origin;
-```
+A string.
 
 ## Examples
 
 ```js
 // On this page, returns the origin
-var result = window.location.origin; // Returns:'https://developer.mozilla.org'
+const result = window.location.origin; // Returns:'https://developer.mozilla.org'
 ```
 
 ## Specifications

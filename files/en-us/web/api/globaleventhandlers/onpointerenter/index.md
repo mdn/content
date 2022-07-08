@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onpointerenter
 slug: Web/API/GlobalEventHandlers/onpointerenter
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler

@@ -82,22 +82,21 @@ const btn = document.querySelector('button');
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
-const WIDTH = document.documentElement.clientWidth;
-const HEIGHT = document.documentElement.clientHeight;
-
-canvas.width = WIDTH;
-canvas.height = HEIGHT;
+document.addEventListener('DOMContentLoaded', () => {
+  canvas.width = document.documentElement.clientWidth;
+  canvas.height = document.documentElement.clientHeight;
+})
 
 function random(number) {
   return Math.floor(Math.random()*number);
 }
 
 function draw() {
-  ctx.clearRect(0,0,WIDTH,HEIGHT);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   for (let i = 0; i < 100; i++) {
     ctx.beginPath();
     ctx.fillStyle = 'rgba(255,0,0,0.5)';
-    ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+    ctx.arc(random(canvas.width), random(canvas.height), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
 }
@@ -113,13 +112,12 @@ You don't have to understand all the code for now, but let's look at the part of
 for (let i = 0; i < 100; i++) {
   ctx.beginPath();
   ctx.fillStyle = 'rgba(255,0,0,0.5)';
-  ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+  ctx.arc(random(canvas.width), random(canvas.height), random(50), 0, 2 * Math.PI);
   ctx.fill();
 }
 ```
 
 - `random(x)`, defined earlier in the code, returns a whole number between `0` and `x-1`.
-- `WIDTH` and `HEIGHT` are the width and height of the inner browser window.
 
 You should get the basic idea — we are using a loop to run 100 iterations of this code, each one of which draws a circle in a random position on the page.
 The amount of code needed would be the same whether we were drawing 100 circles, 1000, or 10,000.
@@ -130,7 +128,7 @@ If we weren't using a loop here, we'd have to repeat the following code for ever
 ```js
 ctx.beginPath();
 ctx.fillStyle = 'rgba(255,0,0,0.5)';
-ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+ctx.arc(random(canvas.width), random(canvas.height), random(50), 0, 2 * Math.PI);
 ctx.fill();
 ```
 
@@ -337,7 +335,7 @@ const cats = ['Pete', 'Biggles', 'Jasmine'];
 let myFavoriteCats = 'My cats are called ';
 
 for (const cat of cats) {
-  myFavoriteCats = `${myFavoriteCats}${cat}, `
+  myFavoriteCats += `${cat}, `
 }
 
 console.log(myFavoriteCats); // "My cats are called Pete, Biggles, Jasmine, "
@@ -364,9 +362,9 @@ let myFavoriteCats = 'My cats are called ';
 
 for (let i = 0; i < cats.length; i++) {
   if (i === cats.length - 1) {   // We are at the end of the array
-    myFavoriteCats = `${myFavoriteCats}and ${cats[i]}.`
+    myFavoriteCats += `and ${cats[i]}.`
   } else {
-    myFavoriteCats = `${myFavoriteCats}${cats[i]}, `
+    myFavoriteCats += `${cats[i]}, `
   }
 }
 
@@ -975,7 +973,7 @@ You've reached the end of this article, but can you remember the most important 
 ## Conclusion
 
 This article has revealed to you the basic concepts behind, and different options available when looping code in JavaScript.
-You should now be clear on why loops are a good mechanism for dealing with repetitive code and are raring to use them in your own examples!
+You should now be clear on why loops are a good mechanism for dealing with repetitive code and raring to use them in your own examples!
 
 If there is anything you didn't understand, feel free to read through the article again, or [contact us](/en-US/docs/Learn#contact_us) to ask for help.
 

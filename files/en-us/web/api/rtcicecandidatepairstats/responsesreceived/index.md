@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.responsesReceived
 slug: Web/API/RTCIceCandidatePairStats/responsesReceived
+page-type: web-api-instance-property
 tags:
   - API
   - Connectivity

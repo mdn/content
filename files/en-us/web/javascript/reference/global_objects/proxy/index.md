@@ -185,7 +185,7 @@ function extend(sup, base) {
   base.prototype = Object.create(sup.prototype);
   base.prototype.constructor = new Proxy(base, {
     construct: function(target, args) {
-      var obj = Object.create(base.prototype);
+      const obj = Object.create(base.prototype);
       this.apply(target, obj, args);
       return obj;
     },
@@ -197,17 +197,17 @@ function extend(sup, base) {
   return base.prototype.constructor;
 }
 
-var Person = function(name) {
+const Person = function(name) {
   this.name = name;
 };
 
-var Boy = extend(Person, function(name, age) {
+const Boy = extend(Person, function(name, age) {
   this.age = age;
 });
 
 Boy.prototype.gender = 'M';
 
-var Peter = new Boy('Peter', 13);
+const Peter = new Boy('Peter', 13);
 
 console.log(Peter.gender);  // "M"
 console.log(Peter.name);    // "Peter"
@@ -344,9 +344,10 @@ let products = new Proxy([
       return obj.length;
     }
 
-    let result, types = {};
+    let result;
+    const types = {};
 
-    for (let product of obj) {
+    for (const product of obj) {
       if (product.name === prop) {
         result = product;
       }
@@ -390,39 +391,41 @@ Now in order to create a complete sample `traps` list, for didactic purposes, we
 
 ```js
 /*
-  var docCookies = ... get the "docCookies" object here:
+  const docCookies = ... get the "docCookies" object here:
   https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework
 */
 
-var docCookies = new Proxy(docCookies, {
-  get (oTarget, sKey) {
-    return oTarget[sKey] || oTarget.getItem(sKey) || undefined;
+const docCookies = new Proxy(docCookies, {
+  get(target, key) {
+    return target[key] || target.getItem(key) || undefined;
   },
-  set: function (oTarget, sKey, vValue) {
-    if (sKey in oTarget) { return false; }
-    return oTarget.setItem(sKey, vValue);
+  set(target, key, value) {
+    if (key in target) { return false; }
+    return target.setItem(key, value);
   },
-  deleteProperty: function (oTarget, sKey) {
-    if (!sKey in oTarget) { return false; }
-    return oTarget.removeItem(sKey);
+  deleteProperty(target, key) {
+    if (!key in target) { return false; }
+    return target.removeItem(key);
   },
-  ownKeys: function (oTarget, sKey) {
-    return oTarget.keys();
+  ownKeys(target) {
+    return target.keys();
   },
-  has: function (oTarget, sKey) {
-    return sKey in oTarget || oTarget.hasItem(sKey);
+  has(target, key) {
+    return key in target || target.hasItem(key);
   },
-  defineProperty: function (oTarget, sKey, oDesc) {
-    if (oDesc && 'value' in oDesc) { oTarget.setItem(sKey, oDesc.value); }
-    return oTarget;
+  defineProperty(target, key, descriptor) {
+    if (descriptor && 'value' in descriptor) {
+      target.setItem(key, descriptor.value);
+    }
+    return target;
   },
-  getOwnPropertyDescriptor: function (oTarget, sKey) {
-    var vValue = oTarget.getItem(sKey);
-    return vValue ? {
-      value: vValue,
+  getOwnPropertyDescriptor(target, key) {
+    const value = target.getItem(key);
+    return value ? {
+      value,
       writable: true,
       enumerable: true,
-      configurable: false
+      configurable: false,
     } : undefined;
   },
 });

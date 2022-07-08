@@ -1,6 +1,7 @@
 ---
 title: HTMLDetailsElement
 slug: Web/API/HTMLDetailsElement
+page-type: web-api-interface
 tags:
   - API
   - HTML
@@ -21,7 +22,7 @@ The **`HTMLDetailsElement`** interface provides special properties (beyond the r
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDetailsElement.open")}}
-  - : Is a boolean value reflecting the {{htmlattrxref("open", "details")}} HTML attribute, indicating whether or not the element's contents (not counting the {{HTMLElement("summary")}}) is to be shown to the user.
+  - : A boolean value reflecting the {{htmlattrxref("open", "details")}} HTML attribute, indicating whether or not the element's contents (not counting the {{HTMLElement("summary")}}) is to be shown to the user.
 
 ## Methods
 

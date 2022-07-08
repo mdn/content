@@ -167,8 +167,7 @@ Reporting directives control the reporting process of CSP violations. See also t
 - {{CSP("require-sri-for")}}{{experimental_inline}}
   - : Requires the use of {{Glossary("SRI")}} for scripts or styles on the page.
 - {{CSP("require-trusted-types-for")}}{{experimental_inline}}
-  - : Enforces [Trusted
-    Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/) at the DOM XSS injection sinks.
+  - : Enforces [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/) at the DOM XSS injection sinks.
 - {{CSP("trusted-types")}}{{experimental_inline}}
   - : Used to specify an allow-list of [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/)
     policies. Trusted Types allows applications to lock down DOM XSS injection sinks to
@@ -176,7 +175,7 @@ Reporting directives control the reporting process of CSP violations. See also t
 - {{CSP("upgrade-insecure-requests")}}
   - : Instructs user agents to treat all of a site's insecure URLs (those served over
     HTTP) as though they have been replaced with secure URLs (those served over HTTPS).
-    This directive is intended for web sites with large numbers of insecure legacy URLs
+    This directive is intended for websites with large numbers of insecure legacy URLs
     that need to be rewritten.
 
 ### Deprecated directives
@@ -299,8 +298,7 @@ would have occurred:
 Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
 ```
 
-See [Mozilla
-Web Security Guidelines](https://infosec.mozilla.org/guidelines/web_security#Examples_5) for more examples.
+See [Mozilla Web Security Guidelines](https://infosec.mozilla.org/guidelines/web_security#Examples_5) for more examples.
 
 ## Specifications
 

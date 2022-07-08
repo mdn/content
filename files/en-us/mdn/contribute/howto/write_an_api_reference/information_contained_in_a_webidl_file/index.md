@@ -162,7 +162,7 @@ The most common values for the `[Exposed]` are:
 - `ServiceWorker`
   - : The partial interface is available to the {{domxref('ServiceWorkerGlobalScope')}} only.
 
-Another value is possible, like `System`, but this has a [special meaning](/en-US/docs/Mozilla/WebIDL_bindings#Exposed) and doesn't need to be documented.
+Another value is possible, like `System`, but this has a [special meaning](/en-US/docs/Mozilla/WebIDL_bindings#exposed) and doesn't need to be documented.
 
 Note that these possible values are themselves defined in WebIDL files. Interfaces may have a `[Global=xyz]` annotation. It means that when an object of this type is used as a global scope, any interface, property or method, with `xyz` as a value of `[Exposed]` is available.
 
@@ -247,7 +247,7 @@ If the keyword `readonly` is present, the property can't be modified. It must be
 
 In some cases, like when some values are illegal, setting a new value can lead to an exception being raised. This is marked using the `[SetterThrows]` annotation. When this happens, the Syntax section of the property page _must_ have an Exceptions subsection. The list of exceptions and the conditions to have them thrown are listed, as textual information, in the specification of that API.
 
-Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. [Trying to set an illegal enumerated value](https://heycam.github.io/webidl/#es-enumeration) (mapped to a JavaScript {{jsxref('String')}}) raises a {{exception('TypeError')}} exception. This must be documented, but is only implicitly marked in the WebIDL document.
+Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. [Trying to set an illegal enumerated value](https://heycam.github.io/webidl/#es-enumeration) (mapped to a JavaScript {{jsxref('String')}}) raises a {{jsxref('TypeError')}} exception. This must be documented, but is only implicitly marked in the WebIDL document.
 
 It is uncommon to have getters throwing exceptions, though it happens in a few cases. In this case the `[GetterThrows]` annotation is used. Here also, the Syntax section of the property page _must_ have an Exceptions subsection.
 
@@ -372,7 +372,7 @@ The keyword `void` means that there is no return value. It is not a return value
 
 Some methods can throw exceptions. This is marked using the `[Throws]` annotation. When this happens, the Syntax section of the method page _must_ have an Exceptions subsection. The list of exceptions and the conditions to have them thrown are listed, as textual information, in the specification of that API.
 
-Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. [Trying to set an illegal enumerated value](https://heycam.github.io/webidl/#es-enumeration) (mapped to a JavaScript {{jsxref('String')}}) as a parameter will raise a {{exception('TypeError')}} exception. This must be documented, but it is only implicitly marked in the WebIDL document.
+Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. [Trying to set an illegal enumerated value](https://heycam.github.io/webidl/#es-enumeration) (mapped to a JavaScript {{jsxref('String')}}) as a parameter will raise a {{jsxref('TypeError')}} exception. This must be documented, but it is only implicitly marked in the WebIDL document.
 
 Have a look at one of these [_Exceptions_ sections](/en-US/docs/Web/API/SubtleCrypto/importKey#exceptions).
 
@@ -498,7 +498,7 @@ Some IDL members indicate special behaviors that should be noted on appropriate 
 
 ### Stringifiers
 
-In addition to adding the `toString()` method to an interface as described in [toString() and toJSON()](#tostring_and_tojson), stringifiers also indicate that an object instance, when used as a string, returns a `DOMString` other than the default. (The default is usually a JSON representation of the object). Exactly how depends on the way it is specified in the IDL. Regardless of the how, the non-default behavior should be described on the interface page.
+In addition to adding the `toString()` method to an interface as described in [toString() and toJSON()](#tostring_and_tojson), stringifiers also indicate that an object instance, when used as a string, returns a string other than the default. (The default is usually a JSON representation of the object). Exactly how depends on the way it is specified in the IDL. Regardless of the how, the non-default behavior should be described on the interface page.
 
 When the `stringifier` keyword accompanies an attribute name, referencing the object name has the same result as referencing the attribute name. Consider the following IDL:
 

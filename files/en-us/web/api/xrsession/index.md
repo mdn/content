@@ -1,6 +1,7 @@
 ---
 title: XRSession
 slug: Web/API/XRSession
+page-type: web-api-interface
 tags:
   - API
   - AR

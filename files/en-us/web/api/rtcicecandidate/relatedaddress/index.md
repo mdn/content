@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.relatedAddress
 slug: Web/API/RTCIceCandidate/relatedAddress
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -32,7 +33,7 @@ for analysis and diagnostic purposes only, and their inclusion may be blocked by
 
 ## Value
 
-A {{domxref("DOMString")}} which contains the candidate's related address. For both
+A string which contains the candidate's related address. For both
 peer and server reflexive candidates, the related address (and related port) are the
 base for that server or peer reflexive candidate. For relay candidates, the related
 address and port are set to the mapped address selected by the TURN server.

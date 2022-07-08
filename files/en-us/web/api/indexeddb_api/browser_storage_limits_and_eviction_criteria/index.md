@@ -1,6 +1,7 @@
 ---
 title: Browser storage limits and eviction criteria
 slug: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
+page-type: guide
 tags:
   - Database
   - IndexedDB
@@ -29,7 +30,7 @@ In Firefox, the following technologies make use of browser data storage to store
 
 The "last access time" of origins is updated when any of these are activated/deactivated — origin eviction will delete data for all these quota clients.
 
-In Chrome/Opera, the Quota Management API handles quota management for [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), WebSQL, and [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API).
+In Chrome/Opera, the Quota Management API handles quota management for [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), WebSQL, and [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API).
 
 ## Different types of data storage
 
@@ -95,5 +96,5 @@ We track the "last access time" for each origin using temporary storage. Once th
 
 ## See also
 
-- [Working with quota on mobile browsers](https://web.dev/storage-for-the-web/), by [Eiji Kitamura.](https://blog.agektmr.com) A detailed analysis of client-side storage on mobile browsers.
+- [Working with quota on mobile browsers](https://web.dev/storage-for-the-web/), by [Eiji Kitamura](https://blog.agektmr.com). A detailed analysis of client-side storage on mobile browsers.
 - [Storage for the web](https://web.dev/storage-for-the-web/) (https://web.dev/)

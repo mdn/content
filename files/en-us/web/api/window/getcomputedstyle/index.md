@@ -1,6 +1,7 @@
 ---
 title: Window.getComputedStyle()
 slug: Web/API/Window/getComputedStyle
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -31,7 +32,7 @@ getComputedStyle(element, pseudoElt)
 
 - `element`
   - : The {{DOMxRef("Element")}} for which to get the computed style.
-- `pseudoElt`{{Optional_Inline}}
+- `pseudoElt` {{optional_inline}}
   - : A string specifying the pseudo-element to match. Omitted (or `null`) for
     real elements.
 
@@ -50,10 +51,8 @@ object, which updates automatically when the element's styles are changed.
 
     > **Note:** Valid pseudo-element selector refers to syntactic
     > validity, e.g. `::unsupported` is considered valid, even though the
-    > pseudo-element itself is not supported.  Additionally, the latest W3 standard [explicitly
-    > supports](https://www.w3.org/TR/cssom-1/#dom-window-getcomputedstyle) only `::before` and `::after`, while the CSS
-    > WG draft [does not
-    > restrict this value](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle).  Browser compatibility may vary.
+    > pseudo-element itself is not supported.  Additionally, the latest W3 standard [explicitly supports](https://www.w3.org/TR/cssom-1/#dom-window-getcomputedstyle) only `::before` and `::after`, while the CSS
+    > WG draft [does not > restrict this value](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle).  Browser compatibility may vary.
 
 ## Examples
 
@@ -110,7 +109,7 @@ the two objects have different purposes:
   **set** styles on that element, or inspect styles directly added to it
   from JavaScript manipulation or the global `style` attribute.
 
-The first argument must be an {{domxref("Element")}}. non-elements, like a
+The first argument must be an {{domxref("Element")}}. Non-elements, like a
 {{DOMxRef("Text")}} node, will throw an error.
 
 ## defaultView
@@ -150,8 +149,7 @@ Java.
 - The returned {{DOMxRef("CSSStyleDeclaration")}} object contains active values for
   CSS property **_longhand_** names. For example,
   `border-bottom-width` instead of the `border-width` and
-  `border` [shorthand
-  property names](/en-US/docs/Web/CSS/Shorthand_properties). It is safest to query values with only longhand names like
+  `border` [shorthand property names](/en-US/docs/Web/CSS/Shorthand_properties). It is safest to query values with only longhand names like
   `font-size`. Shorthand names like `font` will not work with most
   browsers.
 - CSS property values may be accessed using the
@@ -172,9 +170,7 @@ Java.
   _used values_.
 - Returned values are sometimes deliberately inaccurate. To avoid the "CSS History
   Leak" security issue, browsers may lie about the computed styles for a visited link,
-  returning values as if the user never visited the linked URL. See [Plugging
-  the CSS History Leak](https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/) and [Privacy-related
-  changes coming to CSS :visited](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) for examples of how this is implemented.
+  returning values as if the user never visited the linked URL. See [Plugging the CSS History Leak](https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/) and [Privacy-related changes coming to CSS :visited](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) for examples of how this is implemented.
 - During [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions),
   `getComputedStyle` returns the original property value in Firefox, but the
   final property value in WebKit.

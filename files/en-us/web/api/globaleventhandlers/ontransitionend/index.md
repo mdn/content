@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ontransitionend
 slug: Web/API/GlobalEventHandlers/ontransitionend
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Transitions

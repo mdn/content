@@ -1,6 +1,7 @@
 ---
 title: Using the Permissions API
 slug: Web/API/Permissions_API/Using_the_Permissions_API
+page-type: guide
 tags:
   - API
   - Experimental
@@ -8,7 +9,7 @@ tags:
   - Guide
   - Permissions
 ---
-{{DefaultAPISidebar("Permissions API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Permissions API")}}
 
 This article provides a basic guide to using the W3C Permissions API, which provides a programmatic way to query the status of API permissions attributed to the current context.
 
@@ -87,7 +88,7 @@ The {{domxref("Permissions.query()")}} method takes a `PermissionDescriptor` dic
 Starting in Firefox 47, you can now revoke existing permissions, using the {{domxref("Permissions.revoke()")}} method. This works in exactly the same way as the {{domxref("Permissions.query()")}} method, except that it causes an existing permission to be reverted back to its default state when the promise successfully resolves (which is usually `prompt`). See the following code in our demo:
 
 ```js
-var revokeBtn = document.querySelector('.revoke');
+const revokeBtn = document.querySelector('.revoke');
 
   ...
 

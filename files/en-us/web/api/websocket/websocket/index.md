@@ -1,6 +1,7 @@
 ---
 title: WebSocket()
 slug: Web/API/WebSocket/WebSocket
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

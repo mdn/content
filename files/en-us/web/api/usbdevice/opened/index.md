@@ -1,6 +1,7 @@
 ---
 title: USBDevice.opened
 slug: Web/API/USBDevice/opened
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - opened
+  - Experimental
 browser-compat: api.USBDevice.opened
 ---
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}

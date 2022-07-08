@@ -1,6 +1,7 @@
 ---
 title: Node.nodeType
 slug: Web/API/Node/nodeType
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference

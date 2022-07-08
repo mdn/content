@@ -79,7 +79,7 @@ Most tools these days are based on {{Glossary("Node.js")}}, so you'll need to in
     npm install npm@latest -g
     ```
 
-> **Note:** If the above command fails with permissions errors, [Fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions) should sort you out.
+> **Note:** If the above command fails with permissions errors, [Fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions/) should sort you out.
 
 To start using Node/npm-based packages on your projects, you need to set up your project directories as npm projects. This is easy to do.
 
@@ -160,9 +160,9 @@ Let's look at setting up Gulp and using it to automate some testing tools.
 
 To add some real tasks to Gulp, we need to think about what we want to do. A reasonable set of basic functionalities to run on our project is as follows:
 
-- html-tidy, css-lint, and js-hint to lint and report/fix common HTML/CSS/JS errors (see [gulp-htmltidy](https://www.npmjs.com/package/gulp-htmltidy/), [gulp-csslint](https://www.npmjs.com/package/gulp-csslint/), [gulp-jshint](https://www.npmjs.com/package/gulp-jshint/)).
-- Autoprefixer to scan our CSS and add vendor prefixes only where needed (see [gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer/)).
-- babel to transpile any new JavaScript syntax features to traditional syntax that works in older browsers (see [gulp-babel](https://www.npmjs.com/package/gulp-babel/)).
+- html-tidy, css-lint, and js-hint to lint and report/fix common HTML/CSS/JS errors (see [gulp-htmltidy](https://www.npmjs.com/package/gulp-htmltidy), [gulp-csslint](https://www.npmjs.com/package/gulp-csslint), [gulp-jshint](https://www.npmjs.com/package/gulp-jshint)).
+- Autoprefixer to scan our CSS and add vendor prefixes only where needed (see [gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer)).
+- babel to transpile any new JavaScript syntax features to traditional syntax that works in older browsers (see [gulp-babel](https://www.npmjs.com/package/gulp-babel)).
 
 See the links above for full instructions on the different gulp packages we are using.
 
@@ -394,12 +394,12 @@ Once you sign in to LambdaTest, you will be routed to the LambdaTest Dashboard. 
 
 Let's get started with a Sauce Labs Trial.
 
-1. Create a [Sauce Labs trial account](https://saucelabs.com/signup/trial).
+1. Create a Sauce Labs trial account.
 2. Sign in. This should happen automatically after you verify your e-mail address.
 
 #### The basics: Manual tests
 
-The [Sauce Labs dashboard](https://saucelabs.com/beta/dashboard/manual) has a lot of options available on it. For now, make sure you are on the _Manual Tests_ tab.
+The [Sauce Labs dashboard](https://app.saucelabs.com/dashboard/manual) has a lot of options available on it. For now, make sure you are on the _Manual Tests_ tab.
 
 1. Click _Start a new manual session_.
 2. In the next screen, type in the URL of a page you want to test (use <https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html>, for example), then choose a browser/OS combination you want to test by using the different buttons and lists. There is a lot of choice, as you'll see!![](sauce-manual-session.png)
@@ -419,7 +419,7 @@ Once you stop the session, you'll return to the Manual Tests tab, where you'll s
 
 #### Advanced: The Sauce Labs API
 
-Sauce Labs has a [restful API](https://wiki.saucelabs.com/display/DOCS/The+Sauce+Labs+REST+API) that allows you to programmatically retrieve details of your account and existing tests, and annotate tests with further details, such as their pass/fail state which isn't recordable by manual testing alone. For example, you might want to run one of your own Selenium tests remotely using Sauce Labs to test a certain browser/OS combination, and then pass the test results back to Sauce Labs.
+Sauce Labs has a [restful API](https://docs.saucelabs.com/dev/api/) that allows you to programmatically retrieve details of your account and existing tests, and annotate tests with further details, such as their pass/fail state which isn't recordable by manual testing alone. For example, you might want to run one of your own Selenium tests remotely using Sauce Labs to test a certain browser/OS combination, and then pass the test results back to Sauce Labs.
 
 It has several clients available to allow you to make calls to the API using your favorite environment, be it PHP, Java, Node.js, etc.
 
@@ -465,7 +465,7 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
     });
     ```
 
-4. You'll need to fill in your Sauce Labs username and API key in the indicated places. These can be retrieved from your [User Settings](https://saucelabs.com/beta/user-settings) page. Fill these in now.
+4. You'll need to fill in your Sauce Labs username and API key in the indicated places. These can be retrieved from your [User Settings](https://app.saucelabs.com/user-settings) page. Fill these in now.
 5. Make sure everything is saved, and run your file like so:
 
     ```bash
@@ -530,7 +530,7 @@ If you go back to the main BrowserStack page, you'll find a couple of other usef
 
 #### Advanced: The BrowserStack API
 
-BrowserStack also has a [restful API](https://www.browserstack.com/automate/rest-api) that allows you to programmatically retrieve details of your account plan, sessions, builds, etc.
+BrowserStack also has a [restful API](https://www.browserstack.com/docs/automate/api-reference/selenium/introduction) that allows you to programmatically retrieve details of your account plan, sessions, builds, etc.
 
 It has several clients available to allow you to make calls to the API using your favorite environment, be it PHP, Java, Node.js, etc.
 
@@ -705,7 +705,7 @@ Let's get started with a TestingBot Trial.
 
 #### The basics: Manual tests
 
-The [TestingBot dashboard](https://saucelabs.com/beta/dashboard/manual) lists the various options you can choose from. For now, make sure you are on the *Live Web Testing* tab.
+The [TestingBot dashboard](https://app.saucelabs.com/dashboard/manual) lists the various options you can choose from. For now, make sure you are on the *Live Web Testing* tab.
 
 1. Enter the URL of the page you want to test.
 2. Choose the browser/OS combination you want to test by selecting the combination in the grid.

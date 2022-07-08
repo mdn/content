@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.align
 slug: Web/API/HTMLImageElement/align
+page-type: web-api-instance-property
 tags:
   - API
   - Align
@@ -32,7 +33,7 @@ content attribute.
 
 ## Value
 
-A {{domxref("DOMString")}} specifying one of the following strings which set the
+A string specifying one of the following strings which set the
 alignment mode for the image.
 
 #### Baseline alignment

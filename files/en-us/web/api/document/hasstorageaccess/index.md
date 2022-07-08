@@ -1,6 +1,7 @@
 ---
 title: Document.hasStorageAccess()
 slug: Web/API/Document/hasStorageAccess
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -55,9 +56,7 @@ document.hasStorageAccess().then(hasAccess => {
 ## Specifications
 
 The API is currently only at the proposal stage — the standardization process has yet
-to begin. You can currently find specification details of the API at Apple's [Introducing
-Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) blog post, and [WHATWG HTML issue 3338 — Proposal:
-Storage Access API](https://github.com/whatwg/html/issues/3338).
+to begin. You can currently find specification details of the API at Apple's [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) blog post, and [WHATWG HTML issue 3338 — Proposal: Storage Access API](https://github.com/whatwg/html/issues/3338).
 
 ## Browser compatibility
 

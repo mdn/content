@@ -1,6 +1,7 @@
 ---
 title: Document.createCDATASection()
 slug: Web/API/Document/createCDATASection
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -21,7 +22,7 @@ createCDATASection(data)
 
 ### Parameters
 
-- _data_
+- `data`
   - : A string containing the data to be added to the CDATA Section.
 
 ### Return value

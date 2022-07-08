@@ -1,6 +1,7 @@
 ---
 title: ServiceWorker.scriptURL
 slug: Web/API/ServiceWorker/scriptURL
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -18,8 +19,7 @@ Must be on the same origin as the document that registers the
 
 ## Value
 
-A {{domxref("USVString")}} (see the [WebIDL definition of
-USVString](https://heycam.github.io/webidl/#idl-USVString).)
+A string.
 
 ## Examples
 

@@ -14,7 +14,7 @@ JavaScript is a bit confusing for developers experienced in class-based language
 
 When it comes to inheritance, JavaScript only has one construct: objects. Each object has a private property which holds a link to another object called its **prototype**. That prototype object has a prototype of its own, and so on until an object is reached with `null` as its prototype. By definition, `null` has no prototype, and acts as the final link in this **prototype chain**.
 
-Nearly all objects in JavaScript are instances of {{jsxref("Object")}} which sits just below `null` on the top of a prototype chain.
+Nearly all objects in JavaScript are instances of {{jsxref("Object")}}, which has `null` as its prototype.
 
 While this confusion is often considered to be one of JavaScript's weaknesses, the prototypal inheritance model itself is, in fact, more powerful than the classic model. It is, for example, fairly trivial to build a classic model on top of a prototypal model.
 
@@ -73,7 +73,7 @@ console.log(o.d); // undefined
 // no property found, return undefined.
 ```
 
-[Code Link](https://repl.it/@khaled_hossain_code/prototype)
+[Code Link](https://replit.com/@khaled_hossain_code/prototype)
 
 Setting a property to an object creates an own property. The only exception to the getting and setting behavior rules is when there is an inherited property with a [getter or a setter](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters).
 
@@ -259,6 +259,13 @@ function f() {
 // Functions inherit from Function.prototype
 // (which has methods call, bind, etc.)
 // f ---> Function.prototype ---> Object.prototype ---> null
+
+const p = { b: 2, __proto__: o };
+
+// It is possible to point the newly created object's [[Prototype]] to
+// another object via the __proto__ literal property. (Not to be confused
+// with Object.prototype.__proto__ accessors)
+// p ---> o ---> Object.prototype ---> null
 ```
 
 ### With a constructor
@@ -374,29 +381,36 @@ const square = new Square(2);
 
 The lookup time for properties that are high up on the prototype chain can have a negative impact on the performance, and this may be significant in the code where performance is critical. Additionally, trying to access nonexistent properties will always traverse the full prototype chain.
 
-Also, when iterating over the properties of an object, **every** enumerable property that is on the prototype chain will be enumerated. To check whether an object has a property defined on _itself_ and not somewhere on its prototype chain, it is necessary to use the [`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) method which all objects inherit from `Object.prototype`. To give you a concrete example, let's take the above graph example code to illustrate it:
+Also, when iterating over the properties of an object, **every** enumerable property that is on the prototype chain will be enumerated. To check whether an object has a property defined on _itself_ and not somewhere on its prototype chain, it is necessary to use the [`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) or [`Object.hasOwn`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn) methods. All objects inherit [`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) from `Object.prototype`. To give you a concrete example, let's take the above graph example code to illustrate it:
 
 ```js
 console.log(g.hasOwnProperty('vertices'));
 // true
 
+console.log(Object.hasOwn(g, 'vertices'));
+// true
+
 console.log(g.hasOwnProperty('nope'));
 // false
 
+console.log(Object.hasOwn(g, 'nope'));
+// false
+
 console.log(g.hasOwnProperty('addVertex'));
+// false
+
+console.log(Object.hasOwn(g, 'addVertex'));
 // false
 
 console.log(Object.getPrototypeOf(g).hasOwnProperty('addVertex'));
 // true
 ```
 
-[`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) is the only thing in JavaScript which deals with properties and does **not** traverse the prototype chain.
-
 Note: It is **not** enough to check whether a property is [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined). The property might very well exist, but its value just happens to be set to `undefined`.
 
 ### Summary of methods for extending the prototype chain
 
-Here are all 4 ways and their pros/cons. All of the examples listed below create exactly the same resulting `inst` object (thus logging the same results to the console), except in different ways.
+Here are all 5 ways and their pros/cons. All of the examples listed below create exactly the same resulting `inst` object (thus logging the same results to the console), except in different ways.
 
 #### #1: New initialization
 
@@ -480,7 +494,7 @@ const proto = Object.create(
 bar.prototype = proto;
 const inst = new bar();
 console.log(inst.foo_prop);
-console.log(inst.bar_prop)
+console.log(inst.bar_prop);
 ```
 
 <table class="standard-table">
@@ -540,7 +554,7 @@ const proto = Object.setPrototypeOf(
 bar.prototype = proto;
 const inst = new bar();
 console.log(inst.foo_prop);
-console.log(inst.bar_prop)
+console.log(inst.bar_prop);
 ```
 
 <table class="standard-table">
@@ -559,12 +573,13 @@ console.log(inst.bar_prop)
     <tr>
       <th scope="row">Con(s)</th>
       <td>
-        Ill-performing. Should be deprecated. Many browsers optimize the
-        prototype and try to guess the location of the method in memory when
-        calling an instance in advance; but setting the prototype dynamically
-        disrupts all those optimizations. It might cause some browsers to
-        recompile your code for de-optimization, to make it work according to
-        the specs. Not supported in IE8 and below.
+        Ill-performing. Should be avoided if it's possible to set the prototype
+        at object creation time. Many browsers optimize the prototype and try to
+        guess the location of the method in memory when calling an instance in
+        advance; but setting the prototype dynamically disrupts all those
+        optimizations. It might cause some browsers to recompile your code for
+        de-optimization, to make it work according to the specs. Not supported
+        in IE8 and below.
       </td>
     </tr>
   </tbody>
@@ -572,15 +587,16 @@ console.log(inst.bar_prop)
 
 #### #4: Setting the {{jsxref("Object/proto","__proto__")}} property
 
+> **Warning:** `Object.prototype.__proto__` accessors are **non-standard** and deprecated. You should almost always use `Object.setPrototypeOf` instead.
+
 ```js
 // Technique 1
 function A() {}
 A.prototype.foo_prop = 'foo val';
 function bar() {}
-const proto = {
-  bar_prop: 'bar val',
-  __proto__: A.prototype
-};
+const proto = { bar_prop: 'bar val' };
+// DON'T USE THIS: for example only.
+proto.__proto__ = A.prototype;
 bar.prototype = proto;
 const inst = new bar();
 console.log(inst.foo_prop);
@@ -589,17 +605,12 @@ console.log(inst.bar_prop);
 
 ```js
 // Technique 2
-const inst = {
-  __proto__: {
-    bar_prop: 'bar val',
-    __proto__: {
-      foo_prop: 'foo val',
-      __proto__: Object.prototype
-    }
-  }
-};
+const inst = {};
+// DON'T USE THIS: for example only.
+inst.__proto__ = { bar_prop: 'bar val' };
+inst.__proto__.__proto__ = { foo_prop: 'foo val' };
 console.log(inst.foo_prop);
-console.log(inst.bar_prop)
+console.log(inst.bar_prop);
 ```
 
 <table class="standard-table">
@@ -624,7 +635,59 @@ console.log(inst.bar_prop)
         instance in advance; but setting the prototype dynamically disrupts all
         those optimizations and can even force some browsers to recompile for
         de-optimization of your code, to make it work according to the specs.
-        Not supported in IE10 and below.
+        Not supported in IE10 and below. The {{jsxref("Object/proto","__proto__")}}
+        setter is normative optional, so it may not work across all platforms.
+        You should almost always use {{jsxref("Object.setPrototypeOf")}}
+        instead.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+#### #5: Using the `__proto__` key in object initializers
+
+> **Note:** This is not to be confused with the aforementioned `Object.prototype.__proto__` accessors. `__proto__` in object literals is standardized and optimized.
+
+```js
+const inst = {
+  __proto__: {
+    bar_prop: 'bar val',
+    __proto__: {
+      foo_prop: 'foo val',
+      // This can be omitted
+      __proto__: Object.prototype
+    }
+  }
+};
+console.log(inst.foo_prop);
+console.log(inst.bar_prop);
+```
+
+<table class="standard-table">
+  <caption>
+    Pros and cons of using the <code>__proto__</code> key in <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object initializers</a>
+  </caption>
+  <tbody>
+    <tr>
+      <th scope="row">Pro(s)</th>
+      <td>
+        Supported in all modern browsers. Pointing the <code>__proto__</code>
+        key to something that is not an object only fails silently without
+        throwing an exception. Contrary to the
+        {{jsxref("Object/proto", "Object.prototype.__proto__")}} setter,
+        <code>__proto__</code> in object literal initializers is standardized
+        and optimized, and can even be more performant than
+        {{jsxref("Object.create")}}. Declaring extra own properties on the
+        object at creation is more ergonomic than
+        {{jsxref("Object.create")}}.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Con(s)</th>
+      <td>
+        Not supported in IE10 and below. Likely to be confused with
+        {{jsxref("Object/proto", "Object.prototype.__proto__")}} accessors for
+        people unaware of the difference.
       </td>
     </tr>
   </tbody>

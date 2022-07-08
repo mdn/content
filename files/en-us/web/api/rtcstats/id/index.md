@@ -1,6 +1,7 @@
 ---
 title: RTCStats.id
 slug: Web/API/RTCStats/id
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -28,7 +29,7 @@ order to monitor statistics over time for a given WebRTC object, such as an
 
 ## Value
 
-A {{domxref("DOMString")}} which uniquely identifies the object for which this
+A string which uniquely identifies the object for which this
 `RTCStats`-based object provides statistics.
 
 The format of the ID string is not defined by the specification, so you cannot reliably

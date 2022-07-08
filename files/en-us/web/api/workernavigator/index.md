@@ -1,6 +1,7 @@
 ---
 title: WorkerNavigator
 slug: Web/API/WorkerNavigator
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -30,9 +31,9 @@ _The `WorkerNavigator` interface doesn't inherit any property._
 - {{DOMxRef("WorkerNavigator.hardwareConcurrency")}}{{ReadOnlyInline}}
   - : Returns the number of logical processor cores available.
 - {{DOMxRef("WorkerNavigator.language")}} {{readonlyInline}}
-  - : Returns a {{domxref("DOMString")}} representing the preferred language of the user, usually the language of the browser UI. The `null` value is returned when this is unknown.
+  - : Returns a string representing the preferred language of the user, usually the language of the browser UI. The `null` value is returned when this is unknown.
 - {{DOMxRef("WorkerNavigator.languages")}} {{readonlyInline}} {{experimental_inline}}
-  - : Returns an array of {{domxref("DOMString")}} representing the languages known to the user, by order of preference.
+  - : Returns an array of strings representing the languages known to the user, by order of preference.
 - {{DOMxRef("WorkerNavigator.locks")}} {{Experimental_Inline}}{{ReadOnlyInline}}
   - : Returns a {{DOMxRef("LockManager")}} object which provides methods for requesting a new {{DOMxRef('Lock')}} object and querying for an existing `Lock` object.
 - {{DOMxRef("WorkerNavigator.onLine")}}{{ReadOnlyInline}}

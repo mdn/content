@@ -1,6 +1,7 @@
 ---
 title: ByteLengthQueuingStrategy.size()
 slug: Web/API/ByteLengthQueuingStrategy/size
+page-type: web-api-instance-method
 tags:
   - API
   - ByteLengthQueuingStrategy
@@ -25,7 +26,7 @@ size(chunk)
 
 ### Parameters
 
-- chunk
+- `chunk`
   - : A chunk of data being passed through the stream.
 
 ### Return value

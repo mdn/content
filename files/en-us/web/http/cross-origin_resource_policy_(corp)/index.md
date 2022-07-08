@@ -5,6 +5,7 @@ tags:
   - HTTP
   - Reference
   - Security
+browser-compat: http.headers.Cross-Origin-Resource-Policy
 ---
 {{HTTPSidebar}}
 
@@ -55,13 +56,11 @@ In response, Chromium shipped [Cross-Origin Read Blocking](https://fetch.spec.wh
 
 ## Specifications
 
-| Specification                                                                    | Status                                                                       | Comment            |
-| -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ------------------ |
-| {{SpecName("Fetch", '#cross-origin-resource-policy-header')}} | {{Spec2("Fetch", '#cross-origin-resource-policy-header')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("http.headers.Cross-Origin-Resource-Policy")}}
+{{Compat}}
 
 ## See also
 

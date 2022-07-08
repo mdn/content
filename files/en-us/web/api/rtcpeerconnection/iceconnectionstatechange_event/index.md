@@ -1,6 +1,7 @@
 ---
 title: 'RTCPeerConnection: iceconnectionstatechange event'
 slug: Web/API/RTCPeerConnection/iceconnectionstatechange_event
+page-type: web-api-event
 tags:
   - API
   - Connection

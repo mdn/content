@@ -1,6 +1,7 @@
 ---
 title: HTMLIFrameElement
 slug: Web/API/HTMLIFrameElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -33,7 +34,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.csp")}}
   - : Specifies the Content Security Policy that an embedded document must agree to enforce upon itself.
 - {{domxref("HTMLIFrameElement.fetchPriority")}}
-  - : An optional {{domxref("DOMString")}} representing a hint given to the browser on how it should prioritize fetching of the iframe document relative to other iframe documents. If this value is provided, it must be one of the possible permitted values: `high` to fetch at a high priority, `low` to fetch at a low priority, or `auto` to indicate no preference (which is the default).
+  - : An optional string representing a hint given to the browser on how it should prioritize fetching of the iframe document relative to other iframe documents. If this value is provided, it must be one of the possible permitted values: `high` to fetch at a high priority, `low` to fetch at a low priority, or `auto` to indicate no preference (which is the default).
 - {{domxref("HTMLIFrameElement.frameBorder")}} {{deprecated_inline}}
   - : A string that indicates whether to create borders between frames.
 - {{domxref("HTMLIFrameElement.height")}}

@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.msSetVideoRectangle
 slug: Web/API/HTMLVideoElement/msSetVideoRectangle
+page-type: web-api-instance-property
 tags:
   - msSetVideoRectangle
 ---

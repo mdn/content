@@ -1,6 +1,7 @@
 ---
 title: Microsoft API extensions
 slug: Web/API/Microsoft_Extensions
+page-type: landing-page
 tags:
   - API
   - API:Microsoft Extensions

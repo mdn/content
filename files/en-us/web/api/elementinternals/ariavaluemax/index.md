@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaValueMax
 slug: Web/API/ElementInternals/ariaValueMax
+page-type: web-api-instance-property
 tags:
   - API
   - Property

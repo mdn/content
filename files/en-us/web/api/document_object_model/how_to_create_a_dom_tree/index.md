@@ -1,6 +1,7 @@
 ---
 title: How to create a DOM tree
 slug: Web/API/Document_object_model/How_to_create_a_DOM_tree
+page-type: guide
 tags:
   - AJAX
   - Add-ons
@@ -91,7 +92,7 @@ doc.appendChild(peopleElem);
 
 See also the [DOM chapter of the XUL Tutorial](/en-US/docs/XUL_Tutorial/Document_Object_Model).
 
-You can automate the creation of a DOM tree using a [JXON reverse algorithm](/en-US/docs/JXON#JXON_reverse_algorithms) in association with the following JSON representation:
+You can automate the creation of a DOM tree using a [JXON reverse algorithm](/en-US/docs/JXON#jxon_reverse_algorithms) in association with the following JSON representation:
 
 ```js
 {

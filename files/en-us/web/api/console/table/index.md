@@ -1,6 +1,7 @@
 ---
 title: console.table()
 slug: Web/API/console/table
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

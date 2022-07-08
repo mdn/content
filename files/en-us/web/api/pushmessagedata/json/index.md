@@ -1,6 +1,7 @@
 ---
 title: PushMessageData.json()
 slug: Web/API/PushMessageData/json
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -34,7 +35,7 @@ The result of parsing push event data as JSON. This could be anything that can b
 
 ```js
 self.addEventListener('push', function(event) {
-  var myData = event.data.json();
+  const myData = event.data.json();
 
   // do something with your data
 });

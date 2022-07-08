@@ -259,9 +259,9 @@ let mergedObj = { ...obj1, ...obj2 }
 
 > **Warning:** Note that {{jsxref("Object.assign()")}} triggers [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set), whereas the spread operator doesn't!
 
-### Prototype mutation
+### Prototype setter
 
-A property definition of the form `__proto__: value` or `"__proto__": value` does not create a property with the name `__proto__`.  Instead, if the provided value is an object or [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null), it changes the `[[Prototype]]` of the created object to that value.  (If the value is not an object or `null`, the object is not changed.)
+A property definition of the form `__proto__: value` or `"__proto__": value` does not create a property with the name `__proto__`.  Instead, if the provided value is an object or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), it points the `[[Prototype]]` of the created object to that value.  (If the value is not an object or `null`, the object is not changed.)
 
 ```js
 let obj1 = {}
@@ -279,9 +279,9 @@ assert(Object.getPrototypeOf(obj4) === Object.prototype)
 assert(!obj4.hasOwnProperty('__proto__'))
 ```
 
-Only a single prototype mutation is permitted in an object literal. Multiple prototype mutations are a syntax error.
+Only a single prototype setter is permitted in an object literal. Multiple prototype setters are a syntax error.
 
-Property definitions that do not use "colon" notation are not prototype mutations. They are property definitions that behave identically to similar definitions using any other name.
+Property definitions that do not use "colon" notation are not prototype setters. They are property definitions that behave identically to similar definitions using any other name.
 
 ```js
 let __proto__ = 'variable'
@@ -297,6 +297,8 @@ assert(obj2.__proto__() === 'hello')
 let obj3 = {['__prot' + 'o__']: 17}
 assert(obj3.__proto__ === 17)
 ```
+
+Note that the `__proto__` key is standardized syntax, in contrast to the non-standard and non-performant {{jsxref("Object/proto", "Object.prototype.__proto__")}} accessors. It sets the `[[Prototype]]` during object creation, similar to {{jsxref("Object.create")}} — instead of mutating the prototype chain.
 
 ## Specifications
 

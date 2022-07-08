@@ -1,6 +1,7 @@
 ---
 title: TreeWalker.firstChild()
 slug: Web/API/TreeWalker/firstChild
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

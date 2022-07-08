@@ -1,6 +1,7 @@
 ---
 title: 'PaymentResponse: payerdetailchange event'
 slug: Web/API/PaymentResponse/payerdetailchange_event
+page-type: web-api-event
 tags:
   - Commerce
   - Payment Request API

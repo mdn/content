@@ -17,7 +17,7 @@ This article provides information about the changes in Firefox 64 that will affe
 
 - The [Accessibility info-bar](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#highlighting-of-ui-items) has been enhanced to include information about the color contrast ratio of text or images on the page ({{bug(1473037)}}).
 - [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) device selection is now saved between sessions ({{bug(1248619)}}).
-- Resources that are potentially affected by [Tracking Protection](/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection) are now indicated in the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) ({{bug(1333994)}}).
+- Resources that are potentially affected by [Tracking Protection](/en-US/docs/Web/Privacy/Tracking_Protection) are now indicated in the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) ({{bug(1333994)}}).
 - The [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) got improvements around entering and evaluating code:
 
   - [Autocomplete](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#autocomplete) for Console expressions is now case-insensitive ({{bug(672733)}}).

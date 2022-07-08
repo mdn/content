@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.add()
 slug: Web/API/HTMLSelectElement/add
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -23,10 +24,10 @@ add(item, before)
 
 ### Parameters
 
-- _item_
+- `item`
   - : An {{domxref("HTMLOptionElement")}} or
     {{domxref("HTMLOptGroupElement")}}
-- _before_ {{optional_inline}}
+- `before` {{optional_inline}}
   - : An element of the collection, or an index of type
     _long_, representing the _item_ should be inserted before. If this
     parameter is `null` (or the index does not exist), the new element is
@@ -39,7 +40,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `HierarchyRequestError` {{DOMxRef("DOMException")}}
-  - : Thrown if the _item_ passed to the method is an ancestor of the`{{domxref("HTMLSelectElement")}}`.
+  - : Thrown if the _item_ passed to the method is an ancestor of the {{domxref("HTMLSelectElement")}}.
 
 ## Examples
 

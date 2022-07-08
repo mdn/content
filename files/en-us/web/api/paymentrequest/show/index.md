@@ -1,6 +1,7 @@
 ---
 title: PaymentRequest.show()
 slug: Web/API/PaymentRequest/show
+page-type: web-api-instance-method
 tags:
   - API
   - Commerce
@@ -24,7 +25,7 @@ user.
 
 For security reasons, the `PaymentRequest.show()` method can't just be
 initiated at any time. It may only be called while handling events that represent user
-interactions, such as {{event("click")}}, {{event("keyup")}}, or the like.
+interactions, such as {{event("click")}}, {{domxref("Element/keyup_event", "keyup")}}, or the like.
 
 Only one payment request can be in the process of being handled at once, across all
 documents. Once one `PaymentRequest`'s `show()` method has been
@@ -72,8 +73,10 @@ show(detailsPromise)
 
         - `amount`
           - : An object describing the monetary value of the item. This object includes the following fields:
-            - `currency`: A string containing a valid 3-letter [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) currency identifier ({{interwiki("wikipedia", "ISO 4217")}}) indicating the currency used for the payment `value`.
-            - `value`: A string containing a valid decimal value representing the mount of currency constituting the payment amount. This string must only contain an optional leading "-" to indicate a negative value, then one or more digits from 0 to 9, and an optional decimal point (".", regardless of locale) followed by at least one more digit. No whitespace is permitted.
+            - `currency`
+              - : A string containing a valid 3-letter [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) currency identifier ({{interwiki("wikipedia", "ISO 4217")}}) indicating the currency used for the payment `value`.
+            - `value`
+              - : A string containing a valid decimal value representing the mount of currency constituting the payment amount. This string must only contain an optional leading "-" to indicate a negative value, then one or more digits from 0 to 9, and an optional decimal point (".", regardless of locale) followed by at least one more digit. No whitespace is permitted.
         - `label`
           - : A string specifying a human-readable name or description of the item or service being charged for. This may be displayed to the user by the {{Glossary("user agent")}}, depending on the design of the interface.
         - `pending`
@@ -119,7 +122,7 @@ Exceptions are not thrown but returned when the {{jsxref("Promise")}} rejects.
 - `SecurityError` {{domxref("DOMException")}}
   - : Returned if the call to
     `show()` was not in response to a user action, such as a {{event("click")}}
-    or {{event("keyup")}} event. Other reasons a `SecurityError` may be thrown
+    or {{domxref("Element/keyup_event", "keyup")}} event. Other reasons a `SecurityError` may be thrown
     are at the discretion of the user agent, and may include situations such as too many
     calls to `show()` being made in a short time or `show()` being
     called while payment requests are blocked by parental controls.

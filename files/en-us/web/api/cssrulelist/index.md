@@ -1,6 +1,7 @@
 ---
 title: CSSRuleList
 slug: Web/API/CSSRuleList
+page-type: web-api-interface
 tags:
   - API
   - CSSOM

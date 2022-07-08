@@ -81,8 +81,8 @@ Only one of the following two groups of properties is included:
 ### Using the `resolvedOptions` method
 
 ```js
-var de = new Intl.NumberFormat('de-DE');
-var usedOptions = de.resolvedOptions();
+const de = new Intl.NumberFormat('de-DE');
+const usedOptions = de.resolvedOptions();
 
 usedOptions.locale;                // "de-DE"
 usedOptions.numberingSystem;       // "latn"

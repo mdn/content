@@ -35,7 +35,7 @@ call(thisArg, arg1, ... , argN)
     > not be the actual value seen by the method.
     >
     > If the method is a function in {{jsxref("Strict_mode", "non-strict mode", "",
-        1)}}, {{jsxref("Global_Objects/null", "null")}} and
+        1)}}, {{jsxref("Operators/null", "null")}} and
     > {{jsxref("Global_Objects/undefined", "undefined")}} will be replaced with the
     > global object, and primitive values will be converted to objects.
 

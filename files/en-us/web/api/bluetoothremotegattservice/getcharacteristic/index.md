@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTService.getCharacteristic()
 slug: Web/API/BluetoothRemoteGATTService/getCharacteristic
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth
@@ -25,16 +26,16 @@ returns a {{jsxref("Promise")}} to an instance of
 getCharacteristic(characteristic)
 ```
 
-### Return value
-
-A {{jsxref("Promise")}} to an instance of {{domxref("BluetoothRemoteGATTCharacteristic")}}
-
 ### Parameters
 
-- characteristic
+- `characteristic`
   - : The UUID of a characteristic, for
     example `'00002a37-0000-1000-8000-00805f9b34fb'` for the Heart Rate
     Measurement characteristic.
+
+### Return value
+
+A {{jsxref("Promise")}} to an instance of {{domxref("BluetoothRemoteGATTCharacteristic")}}
 
 ## Specifications
 

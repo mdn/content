@@ -1,6 +1,7 @@
 ---
 title: HTMLElement
 slug: Web/API/HTMLElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -48,18 +49,6 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}, and implements tho
   - : Represents the rendered text content of a node and its descendants.
     As a getter, it approximates the text the user would get if they highlighted the contents of the element with the cursor and then copied it to the clipboard.
     As a setter, it replaces the content inside the selected element, converting any line breaks into {{HTMLElement("br")}} elements.
-- {{DOMxRef("HTMLElement.itemScope")}} {{Experimental_Inline}}
-  - : A boolean value representing the item scope.
-- {{DOMxRef("HTMLElement.itemType")}} {{Experimental_Inline}}{{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DOMTokenList")}}…
-- {{DOMxRef("HTMLElement.itemId")}} {{Experimental_Inline}}
-  - : A string representing the item ID.
-- {{DOMxRef("HTMLElement.itemRef")}} {{Experimental_Inline}}{{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DOMTokenList")}}…
-- {{DOMxRef("HTMLElement.itemProp")}} {{Experimental_Inline}}{{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DOMTokenList")}}…
-- {{DOMxRef("HTMLElement.itemValue")}} {{Experimental_Inline}}
-  - : Returns a {{JSxRef("Object")}} representing the item value.
 - {{DOMxRef("HTMLElement.lang")}}
   - : A string representing the language of an element's attributes, text, and element contents.
 - {{DOMxRef("HTMLElement.noModule")}}

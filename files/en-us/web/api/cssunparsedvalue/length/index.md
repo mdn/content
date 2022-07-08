@@ -1,11 +1,11 @@
 ---
 title: CSSUnparsedValue.length
 slug: Web/API/CSSUnparsedValue/length
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
   - CSSUnparsedValue
-  - Constructor
   - Experimental
   - Houdini
   - NeedsExample

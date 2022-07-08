@@ -1,6 +1,7 @@
 ---
 title: PannerNode.distanceModel
 slug: Web/API/PannerNode/distanceModel
+page-type: web-api-instance-property
 tags:
   - API
   - PannerNode
@@ -44,4 +45,4 @@ See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/cre
 ## See also
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web Audio spatialisation basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Web Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)

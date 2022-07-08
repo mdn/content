@@ -56,8 +56,8 @@ setBigUint64(byteOffset, value, littleEndian)
 ### Using the `setBigUint64` method
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+let buffer = new ArrayBuffer(8);
+let dataview = new DataView(buffer);
 dataview.setBigUint64(0, 3n);
 dataview.getBigUint64(0); // 3n
 ```

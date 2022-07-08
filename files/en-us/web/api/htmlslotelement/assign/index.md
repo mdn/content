@@ -1,6 +1,7 @@
 ---
 title: HTMLSlotElement.assign()
 slug: Web/API/HTMLSlotElement/assign
+page-type: web-api-instance-method
 tags:
   - API
   - HTMLSlotElement
@@ -8,7 +9,7 @@ tags:
   - Reference
   - Web Components
   - assign
-  - shadow dom
+  - shadow DOM
 browser-compat: api.HTMLSlotElement.assign
 ---
 {{APIRef("Shadow DOM API")}}

@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.vertexAttribIPointer()
 slug: Web/API/WebGL2RenderingContext/vertexAttribIPointer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -43,7 +44,7 @@ vertexAttribIPointer(index, size, type, stride, offset)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Description
 

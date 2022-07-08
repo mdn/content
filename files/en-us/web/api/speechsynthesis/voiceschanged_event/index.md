@@ -1,6 +1,7 @@
 ---
 title: 'SpeechSynthesis: voiceschanged event'
 slug: Web/API/SpeechSynthesis/voiceschanged_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
@@ -30,12 +31,12 @@ A generic {{DOMxRef("Event")}} with no added properties.
 This could be used to repopulate a list of voices that the user can choose between when the event fires. You can use the `voiceschanged` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-var synth = window.speechSynthesis;
+const synth = window.speechSynthesis;
 
 synth.addEventListener('voiceschanged', function() {
-  var voices = synth.getVoices();
-  for(i = 0; i < voices.length ; i++) {
-    var option = document.createElement('option');
+  const voices = synth.getVoices();
+  for(let i = 0; i < voices.length ; i++) {
+    const option = document.createElement('option');
     option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
     option.setAttribute('data-lang', voices[i].lang);
     option.setAttribute('data-name', voices[i].name);
@@ -47,11 +48,11 @@ synth.addEventListener('voiceschanged', function() {
 Or use the `onvoiceschanged` event handler property:
 
 ```js
-var synth = window.speechSynthesis;
+const synth = window.speechSynthesis;
 synth.onvoiceschanged = function() {
-  var voices = synth.getVoices();
-  for(i = 0; i < voices.length ; i++) {
-    var option = document.createElement('option');
+  const voices = synth.getVoices();
+  for(let i = 0; i < voices.length ; i++) {
+    const option = document.createElement('option');
     option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
     option.setAttribute('data-lang', voices[i].lang);
     option.setAttribute('data-name', voices[i].name);

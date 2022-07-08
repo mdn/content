@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamBYOBReader
 slug: Web/API/ReadableStreamBYOBReader
+page-type: web-api-interface
 tags:
   - API
   - Experimental

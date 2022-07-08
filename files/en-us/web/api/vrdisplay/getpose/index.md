@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.getPose()
 slug: Web/API/VRDisplay/getPose
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated

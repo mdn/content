@@ -1,6 +1,7 @@
 ---
 title: Payment processing concepts
 slug: Web/API/Payment_Request_API/Concepts
+page-type: guide
 tags:
   - API
   - Apple Pay
@@ -13,6 +14,9 @@ tags:
   - Payment Method
   - Payment Request API
   - Payments
+spec-urls:
+  - https://w3c.github.io/payment-request/
+  - https://w3c.github.io/payment-method-id/
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Payment Request API")}}
 
@@ -83,36 +87,7 @@ Thus, it's important to note that the {{Glossary("user agent")}} never sends a {
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Payment')}}</td>
-      <td>{{Spec2('Payment')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Basic Card Payment')}}</td>
-      <td>{{Spec2('Basic Card Payment')}}</td>
-      <td>
-        Defines {{domxref("BasicCardRequest")}} and
-        {{domxref("BasicCardResponse")}}.
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Payment Method Identifiers')}}</td>
-      <td>{{Spec2('Payment Method Identifiers')}}</td>
-      <td>
-        Defines payment method identifiers and how they are validated, and,
-        where applicable, minted and formally registered with the W3C.
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 

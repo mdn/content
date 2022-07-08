@@ -1,6 +1,7 @@
 ---
 title: Screen.lockOrientation()
 slug: Web/API/Screen/lockOrientation
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -86,7 +87,7 @@ doesn't indicate that the screen orientation is indeed locked: there may be a de
 
 ## Examples
 
-### Usage with a `DOMString` argument
+### Usage with a string argument
 
 ```js
 screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;

@@ -1,6 +1,7 @@
 ---
 title: CharacterData.before()
 slug: Web/API/CharacterData/before
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference

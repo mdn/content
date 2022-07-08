@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.priority
 slug: Web/API/RTCIceCandidateStats/priority
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidateStats.priority
 ---
 {{APIRef("WebRTC")}}

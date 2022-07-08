@@ -1,6 +1,7 @@
 ---
 title: Lifetime of a WebRTC session
 slug: Web/API/WebRTC_API/Session_lifetime
+page-type: guide
 tags:
   - Advanced
   - Guide
@@ -59,7 +60,7 @@ There's a sequence of things that have to happen in order to make it possible to
 4. The caller creates and shares with the receiving peer a unique identifier or token of some kind so that the call between them can be identified by the code on the signaling server. The exact contents and form of this identifier is up to you.
 5. Each peer connects to an agreed-upon signaling server, such as a WebSocket server they both know how to exchange messages with.
 6. Each peer tells the signaling server that they want to join the same WebRTC session (identified by the token established in step 4).
-7. **_descriptions, candidates, etc. -- more coming up_**
+7. **_descriptions, candidates, etc. — more coming up_**
 
 ## ICE restart
 

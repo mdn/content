@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.setSelectionRange()
 slug: Web/API/HTMLInputElement/setSelectionRange
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -24,8 +25,7 @@ toward the beginning.
 This method updates the `HTMLInputElement.selectionStart`,
 `selectionEnd`, and `selectionDirection` properties in one call.
 
-Note that according to the [WHATWG
-forms spec](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply) `selectionStart`, `selectionEnd` properties and
+Note that according to the [WHATWG forms spec](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply) `selectionStart`, `selectionEnd` properties and
 `setSelectionRange` method apply only to inputs of types text, search, URL,
 tel and password. Chrome, starting from version 33, throws an exception while accessing
 those properties and method on the rest of input types. For example, on input of type

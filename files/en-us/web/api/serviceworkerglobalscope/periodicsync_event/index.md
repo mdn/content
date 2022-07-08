@@ -1,6 +1,7 @@
 ---
 title: 'ServiceWorkerGlobalScope: periodicsync event'
 slug: Web/API/ServiceWorkerGlobalScope/periodicsync_event
+page-type: web-api-event
 tags:
   - Offline
   - PWA

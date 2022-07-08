@@ -1,6 +1,7 @@
 ---
 title: PresentationRequest()
 slug: Web/API/PresentationRequest/PresentationRequest
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -19,13 +20,13 @@ new PresentationRequest.
 ## Syntax
 
 ```js
-new PresentationRequest(url);
-  new PresentationRequest(urls);
+new PresentationRequest(url)
+new PresentationRequest(urls)
 ```
 
 ### Parameters
 
-- *url* or *urls\[]*
+- `url` or `urls\[]`
   - : A URL or array of URLs that are possible URLs used to create, or reconnect, a
     presentation for the PresentationRequest instance.
 

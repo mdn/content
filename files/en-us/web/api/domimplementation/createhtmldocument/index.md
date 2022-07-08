@@ -1,6 +1,7 @@
 ---
 title: DOMImplementation.createHTMLDocument()
 slug: Web/API/DOMImplementation/createHTMLDocument
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -30,7 +31,7 @@ createHTMLDocument(title)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A new HTML {{domxref("Document")}} object.
 
 ## Examples
 

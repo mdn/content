@@ -1,6 +1,7 @@
 ---
 title: NetworkInformation.effectiveType
 slug: Web/API/NetworkInformation/effectiveType
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -17,13 +18,7 @@ The **`effectiveType`** read-only property of the
 meaning one of 'slow-2g', '2g', '3g', or '4g'. This value is determined using a
 combination of recently observed, round-trip time and downlink values.
 
-## Syntax
-
-```js
-var effectiveType = NetworkInformation.effectiveType
-```
-
-### Value
+## Value
 
 A {{jsxref("String")}} containing one of 'slow-2g', '2g', '3g', or '4g'.
 

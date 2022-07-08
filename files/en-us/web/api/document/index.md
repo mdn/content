@@ -1,6 +1,7 @@
 ---
 title: Document
 slug: Web/API/Document
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -11,7 +12,7 @@ browser-compat: api.Document
 ---
 {{APIRef("DOM")}}
 
-The **`Document`** interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the [DOM tree](/en-US/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core).
+The **`Document`** interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the [DOM tree](/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core).
 
 The DOM tree includes elements such as {{HTMLElement("body")}} and {{HTMLElement("table")}}, among [many others](/en-US/docs/Web/HTML/Element). It provides functionality globally to the document, like how to obtain the page's URL and create new elements in the document.
 
@@ -30,6 +31,9 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 
 - {{DOMxRef("Document.activeElement")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef('Element')}} that currently has focus.
+- {{DOMxRef("Document.adoptedStyleSheets")}}
+  - : Add an array of constructed stylesheets to be used by the document.
+    These stylesheets may also be shared with shadow DOM subtrees of the same document.
 - {{DOMxRef("Document.body")}}
   - : Returns the {{HTMLElement("body")}} or {{htmlelement("frameset")}} node of the current document.
 - {{DOMxRef("Document.characterSet")}}{{ReadOnlyInline}}
@@ -127,7 +131,7 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
 _The `Document` interface is extended with additional event handlers defined in [GlobalEventHandlers](/en-US/docs/Web/API/GlobalEventHandlers#event_handlers)._
 
 - {{DOMxRef("GlobalEventHandlers.onselectionchange")}} {{Experimental_Inline}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Document/selectionchange_event", "selectionchange")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Document/selectionchange_event", "selectionchange")}} event is raised.
 
 ### Deprecated properties
 

@@ -1,12 +1,14 @@
 ---
 title: HTMLLabelElement.htmlFor
 slug: Web/API/HTMLLabelElement/htmlFor
+page-type: web-api-instance-property
 tags:
   - Forms
   - HTML DOM
   - HTMLLabelElement
   - Reference
   - htmlFor
+  - Property
 browser-compat: api.HTMLLabelElement.htmlFor
 ---
 {{APIRef("HTML DOM")}}
@@ -16,17 +18,9 @@ of the {{htmlattrxref("for", "label")}} content property. That means that this
 script-accessible property is used to set and read the value of the content property
 `for`, which is the ID of the label's associated control element.
 
-## Syntax
+## Value
 
-```js
-controlId = HTMLLabelElement.htmlFor
-
-HTMLLabelElement.htmlFor = newId
-```
-
-### Value
-
-A {{domxref("DOMString")}} which contains the ID string of the element which is
+A string which contains the ID string of the element which is
 associated with the control.
 
 > **Note:** If this property has a value, the {{domxref("HTMLLabelElement.control")}} property

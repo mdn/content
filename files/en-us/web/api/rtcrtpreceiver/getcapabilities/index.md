@@ -1,6 +1,7 @@
 ---
 title: RTCRtpReceiver.getCapabilities() static function
 slug: Web/API/RTCRtpReceiver/getCapabilities
+page-type: web-api-static-method
 tags:
   - API
   - Audio

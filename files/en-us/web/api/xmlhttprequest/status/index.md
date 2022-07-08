@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.status
 slug: Web/API/XMLHttpRequest/status
+page-type: web-api-instance-property
 tags:
   - API
   - Error
@@ -61,5 +62,5 @@ xhr.send();
 
 ## See also
 
-- List of [HTTP response codes](/en-US/docs/Web/HTTP/Response_codes)
+- List of [HTTP status](/en-US/docs/Web/HTTP/Status)
 - [HTTP](/en-US/docs/Web/HTTP)

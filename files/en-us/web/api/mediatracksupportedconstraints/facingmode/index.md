@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.facingMode
 slug: Web/API/MediaTrackSupportedConstraints/facingMode
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints
@@ -59,7 +60,7 @@ if (navigator.mediaDevices.getSupportedConstraints().facingMode) {
 
 ### Result
 
-{{ EmbedLiveSample('Example', 600, 80) }}
+{{ EmbedLiveSample('Examples', 600, 80) }}
 
 ## Specifications
 

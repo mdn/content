@@ -1,6 +1,7 @@
 ---
 title: Document.URL
 slug: Web/API/Document/URL
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -37,7 +38,7 @@ document.getElementById("url").textContent = document.URL;
 
 ### Result
 
-{{EmbedLiveSample("Example", "100%", 100)}}
+{{EmbedLiveSample("Examples", "100%", 100)}}
 
 ## Specifications
 

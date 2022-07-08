@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ontouchend
 slug: Web/API/GlobalEventHandlers/ontouchend
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

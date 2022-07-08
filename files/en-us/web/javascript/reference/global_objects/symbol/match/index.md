@@ -37,7 +37,7 @@ The following code will throw a {{jsxref("TypeError")}}:
 However, if you set `Symbol.match` to `false`, the `isRegExp` check (that uses the `match` property) will indicate that the object is not a regular expression object. The methods `startsWith` and `endsWith` won't throw a `TypeError` as a consequence.
 
 ```js
-var re = /foo/;
+const re = /foo/;
 re[Symbol.match] = false;
 '/foo/'.startsWith(re); // true
 '/baz/'.endsWith(re);   // false

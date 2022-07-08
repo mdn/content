@@ -18,7 +18,9 @@ The **`:picture-in-picture`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/d
 
 ## Syntax
 
-{{csssyntax}}
+```
+:picture-in-picture
+```
 
 ## Usage notes
 

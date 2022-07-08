@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.ownerRule
 slug: Web/API/CSSStyleSheet/ownerRule
+page-type: web-api-instance-property
 tags:
   - '@import'
   - API
@@ -71,5 +72,4 @@ for (let rule of ruleList) {
 ## See also
 
 - [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model)
-- [Using
-  dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

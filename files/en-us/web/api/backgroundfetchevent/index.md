@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchEvent
 slug: Web/API/BackgroundFetchEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface

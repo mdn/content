@@ -1,6 +1,7 @@
 ---
 title: Pointer Lock API
 slug: Web/API/Pointer_Lock_API
+page-type: web-api-overview
 tags:
   - API
   - Advanced
@@ -8,6 +9,7 @@ tags:
   - Reference
   - mouse lock
   - pointer lock
+browser-compat: api.Element.requestPointerLock
 ---
 {{DefaultAPISidebar("Pointer Lock API")}}
 
@@ -110,7 +112,7 @@ function lockError(e) {
 
 ## Extensions to mouse events
 
-The Pointer lock API extends the normal {{domxref("MouseEvent")}} interface with movement attributes. Two new attributes to mouse events—{{domxref("MouseEvent.movementX","movementX")}} and {{domxref("MouseEvent.movementY","movementY")}}—provide the change in mouse positions. The values of the parameters are the same as the difference between the values of {{domxref("MouseEvent")}} properties, {{domxref("MouseEvent.screenX","screenX")}} and {{domxref("MouseEvent.screenY","screenY")}}, which are stored in two subsequent {{event("mousemove")}} events, `eNow` and `ePrevious`. In other words, the Pointer lock parameter `movementX = eNow.screenX - ePrevious.screenX`.
+The Pointer lock API extends the normal {{domxref("MouseEvent")}} interface with movement attributes. Two new attributes to mouse events—{{domxref("MouseEvent.movementX","movementX")}} and {{domxref("MouseEvent.movementY","movementY")}}—provide the change in mouse positions. The values of the parameters are the same as the difference between the values of {{domxref("MouseEvent")}} properties, {{domxref("MouseEvent.screenX","screenX")}} and {{domxref("MouseEvent.screenY","screenY")}}, which are stored in two subsequent {{domxref("Element/mousemove_event", "mousemove")}} events, `eNow` and `ePrevious`. In other words, the Pointer lock parameter `movementX = eNow.screenX - ePrevious.screenX`.
 
 ### Locked state
 
@@ -133,8 +135,8 @@ This demo uses JavaScript to draw a ball on top of an {{ htmlelement("canvas") }
 We set initial x and y positions on the canvas:
 
 ```js
-var x = 50;
-var y = 50;
+const x = 50;
+const y = 50;
 ```
 
 The pointer lock methods are currently prefixed, so next we'll fork them for the different browser implementations.
@@ -183,9 +185,9 @@ function lockChangeAlert() {
 The updatePosition() function updates the position of the ball on the canvas (`x` and `y`), and also includes `if()` statements to check whether the ball has gone off the edges of the canvas. If so, it makes the ball wrap around to the opposite edge. It also includes a check whether a [`requestAnimationFrame()`](/en-US/docs/Web/API/window/requestAnimationFrame) call has previously been made, and if so, calls it again as required, and calls the `canvasDraw()` function that updates the canvas scene. A tracker is also set up to write out the X and Y values to the screen, for reference.
 
 ```js
-var tracker = document.getElementById('tracker');
+const tracker = document.getElementById('tracker');
 
-var animation;
+const animation;
 function updatePosition(e) {
   x += e.movementX;
   y += e.movementY;
@@ -233,15 +235,11 @@ While iframes work by default, "sandboxed" iframes block Pointer lock. To avoid 
 
 ## Specifications
 
-| Specification                                      |
-| -------------------------------------------------- |
-| [Pointer Lock](https://w3c.github.io/pointerlock/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `Element.requestPointerLock`
-
-{{Compat("api.Element.requestPointerLock")}}
+{{Compat}}
 
 ## See also
 

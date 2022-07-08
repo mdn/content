@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.commit()
 slug: Web/API/WebGLRenderingContext/commit
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -29,7 +30,7 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

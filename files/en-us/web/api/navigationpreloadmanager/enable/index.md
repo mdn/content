@@ -1,6 +1,7 @@
 ---
 title: NavigationPreloadManager.enable()
 slug: Web/API/NavigationPreloadManager/enable
+page-type: web-api-instance-method
 tags:
   - API
   - Method

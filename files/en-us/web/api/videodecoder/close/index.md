@@ -1,6 +1,7 @@
 ---
 title: VideoDecoder.close()
 slug: Web/API/VideoDecoder/close
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -25,7 +26,7 @@ None.
 
 ### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

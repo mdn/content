@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.click()
 slug: Web/API/HTMLElement/click
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

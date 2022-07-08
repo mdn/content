@@ -1,6 +1,7 @@
 ---
 title: Document.childElementCount
 slug: Web/API/Document/childElementCount
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

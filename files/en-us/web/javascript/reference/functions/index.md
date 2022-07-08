@@ -663,4 +663,3 @@ are no brackets "()" after the function name so the actual function is not calle
 - {{jsxref("Functions/get", "getter")}}
 - {{jsxref("Functions/set", "setter")}}
 - {{jsxref("Functions/Method_definitions", "Method definitions")}}
-- [Functions and function scope](/en-US/docs/Web/JavaScript/Reference/Functions)

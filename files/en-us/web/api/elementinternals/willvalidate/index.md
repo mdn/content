@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.willValidate
 slug: Web/API/ElementInternals/willValidate
+page-type: web-api-instance-property
 tags:
   - API
   - Property

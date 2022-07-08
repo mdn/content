@@ -1,6 +1,7 @@
 ---
 title: InputEvent.isComposing
 slug: Web/API/InputEvent/isComposing
+page-type: web-api-instance-property
 tags:
   - API
   - InputEvent
@@ -9,7 +10,7 @@ tags:
   - Reference
 browser-compat: api.InputEvent.isComposing
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`InputEvent.isComposing`** read-only property returns a
 boolean value indicating if the event is fired after
@@ -22,7 +23,7 @@ A boolean.
 ## Examples
 
 ```js
-var inputEvent = new InputEvent('syntheticInput', false);
+const inputEvent = new InputEvent('syntheticInput', false);
 console.log(inputEvent.isComposing); // return false
 ```
 

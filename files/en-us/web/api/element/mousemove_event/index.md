@@ -1,6 +1,7 @@
 ---
 title: 'Element: mousemove event'
 slug: Web/API/Element/mousemove_event
+page-type: web-api-event
 tags:
   - API
   - DOM

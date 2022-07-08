@@ -1,6 +1,7 @@
 ---
 title: Document.xmlEncoding
 slug: Web/API/Document/xmlEncoding
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -28,8 +29,7 @@ However, Firefox 3.0 includes information on endianness (e.g., UTF-16BE for big 
 
 ## Specifications
 
-- [http://www.w3.org/TR/DOM-Level-3-Cor...ment3-encoding](https://www.w3.org/TR/DOM-Level-3-Core/core.html#Document3-encoding)
-- This has been removed from {{ spec("http://www.w3.org/TR/domcore/","DOM Core Level 4","WD") }}
+This feature is not part of any specification anymore. It is no more on track to become a standard.
 
 ## Browser compatibility
 

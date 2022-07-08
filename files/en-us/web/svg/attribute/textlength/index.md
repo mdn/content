@@ -151,31 +151,7 @@ Here's what the example looks like. Try dragging the slider around to get a feel
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "text.html#TextElementTextLengthAttribute", "textLength")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Allowed percentages and numbers as values.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "text.html#TextElementTextLengthAttribute", "textLength")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

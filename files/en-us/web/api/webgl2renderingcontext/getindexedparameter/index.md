@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.getIndexedParameter()
 slug: Web/API/WebGL2RenderingContext/getIndexedParameter
+page-type: web-api-instance-method
 tags:
   - API
   - Method

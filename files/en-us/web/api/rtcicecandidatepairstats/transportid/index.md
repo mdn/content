@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.transportId
 slug: Web/API/RTCIceCandidatePairStats/transportId
+page-type: web-api-instance-property
 tags:
   - API
   - ICE
@@ -27,7 +28,7 @@ the transport-related statistics contained in the
 
 ## Value
 
-A {{domxref("DOMString")}} which uniquely identifies the `RTCIceTransport`
+A string which uniquely identifies the `RTCIceTransport`
 object from which the transport-related data was obtained for the statistics contained
 in this {{domxref("RTCIceCandidatePairStats")}} object.
 

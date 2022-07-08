@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMapReadOnly.size
 slug: Web/API/StylePropertyMapReadOnly/size
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API

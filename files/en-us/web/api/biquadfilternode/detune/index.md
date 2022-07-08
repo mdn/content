@@ -1,6 +1,7 @@
 ---
 title: BiquadFilterNode.detune
 slug: Web/API/BiquadFilterNode/detune
+page-type: web-api-instance-property
 tags:
   - API
   - BiquadFilterNode

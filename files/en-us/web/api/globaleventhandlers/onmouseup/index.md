@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onmouseup
 slug: Web/API/GlobalEventHandlers/onmouseup
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -14,7 +15,7 @@ browser-compat: api.GlobalEventHandlers.onmouseup
 
 The **`onmouseup`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("mouseup")}} events.
+processes {{domxref("Element/mouseup_event", "mouseup")}} events.
 
 The `mouseup` event fires when the user releases the mouse button.
 
@@ -29,8 +30,7 @@ target.onmouseup = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("MouseEvent")}} object as its sole
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("MouseEvent")}} object as its sole
 argument.
 
 ## Example
@@ -79,7 +79,7 @@ reappears when you release. It uses the {{domxref("GlobalEventHandlers.onmousedo
   transition: transform .3s;
 }
 
-.depressed {
+.pressed {
   transform: translate(-50%, -50%);
 }
 ```
@@ -87,18 +87,18 @@ reappears when you release. It uses the {{domxref("GlobalEventHandlers.onmousedo
 ### JavaScript
 
 ```js
-function depress() {
-  toast.classList.add('depressed');
+function press() {
+  toast.classList.add('pressed');
 }
 
 function release() {
-  toast.classList.remove('depressed');
+  toast.classList.remove('pressed');
 }
 
 const toaster = document.querySelector('.toaster');
 const toast = document.querySelector('.toast');
 
-toaster.onmousedown = depress;
+toaster.onmousedown = press;
 document.onmouseup = release;
 ```
 
@@ -116,4 +116,4 @@ document.onmouseup = release;
 
 ## See also
 
-- {{event("mouseup")}} event
+- {{domxref("Element/mouseup_event", "mouseup")}} event

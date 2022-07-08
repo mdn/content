@@ -1,6 +1,7 @@
 ---
 title: ImageTrack.frameCount
 slug: Web/API/ImageTrack/frameCount
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -1,6 +1,7 @@
 ---
 title: 'PictureInPictureWindow: resize event'
 slug: Web/API/PictureInPictureWindow/resize_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -11,7 +12,7 @@ tags:
   - resize
 browser-compat: api.PictureInPictureWindow.resize_event
 ---
-{{APIRef}}
+{{APIRef("Picture-in-Picture API")}}
 
 The **`resize`** event fires when the floating video window has been resized.
 

@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: transitioncancel event'
 slug: Web/API/HTMLElement/transitioncancel_event
+page-type: web-api-event
 tags:
   - CSS Transitions
   - Event

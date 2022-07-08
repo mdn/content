@@ -88,7 +88,7 @@ div.example {
 
 #### Result
 
-{{ EmbedLiveSample('Setting_horizontal_box_orientation', 600, 50, '', 'Web/CSS/box-orient') }}
+{{ EmbedLiveSample('Setting horizontal box orientation', '', 100) }}
 
 ## Specifications
 

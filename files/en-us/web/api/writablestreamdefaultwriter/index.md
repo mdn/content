@@ -1,6 +1,7 @@
 ---
 title: WritableStreamDefaultWriter
 slug: Web/API/WritableStreamDefaultWriter
+page-type: web-api-interface
 tags:
   - API
   - Experimental

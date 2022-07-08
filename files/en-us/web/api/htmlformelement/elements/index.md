@@ -1,6 +1,7 @@
 ---
 title: HTMLFormElement.elements
 slug: Web/API/HTMLFormElement/elements
+page-type: web-api-instance-property
 tags:
   - API
   - Elements

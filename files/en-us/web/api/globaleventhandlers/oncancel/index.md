@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.oncancel
 slug: Web/API/GlobalEventHandlers/oncancel
+page-type: web-api-instance-property
 tags:
   - API
   - Dialog
@@ -30,8 +31,7 @@ target.oncancel = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives an {{domxref("Event")}} object as its sole
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives an {{domxref("Event")}} object as its sole
 argument.
 
 Only one `oncancel` handler can be assigned to an object at a time. You may

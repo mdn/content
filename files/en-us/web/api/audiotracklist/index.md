@@ -1,6 +1,7 @@
 ---
 title: AudioTrackList
 slug: Web/API/AudioTrackList
+page-type: web-api-interface
 tags:
   - API
   - Audio

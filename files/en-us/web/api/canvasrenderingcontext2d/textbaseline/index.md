@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.textBaseline
 slug: Web/API/CanvasRenderingContext2D/textBaseline
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -114,7 +115,7 @@ baselines.forEach((baseline, index) => {
 
 #### Result
 
-{{ EmbedLiveSample('', 900, 200) }}
+{{ EmbedLiveSample('Comparison of property values on the same line', 900, 200) }}
 
 ## Specifications
 

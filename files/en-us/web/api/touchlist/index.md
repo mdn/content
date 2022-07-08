@@ -1,6 +1,7 @@
 ---
 title: TouchList
 slug: Web/API/TouchList
+page-type: web-api-interface
 tags:
   - API
   - DOM

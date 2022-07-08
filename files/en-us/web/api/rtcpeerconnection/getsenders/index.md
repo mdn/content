@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.getSenders()
 slug: Web/API/RTCPeerConnection/getSenders
+page-type: web-api-instance-method
 tags:
   - Media
   - Method

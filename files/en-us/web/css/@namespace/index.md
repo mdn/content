@@ -42,7 +42,9 @@ In [HTML5](/en-US/docs/Glossary/HTML5), known [foreign elements](https://html.sp
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+@namespace <namespace-prefix>? [ <string> | <url> ] ;
+```
 
 ## Examples
 

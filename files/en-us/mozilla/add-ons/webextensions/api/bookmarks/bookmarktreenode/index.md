@@ -35,7 +35,7 @@ An {{jsxref("object")}} with the following properties:
   - : A {{jsxref("string")}} which specifies the ID of the parent folder. This property is not present in the root node.
 - `title`
   - : A {{jsxref("string")}} which contains the text displayed for the node in menus and lists of bookmarks.
-- `type`{{optional_inline}}
+- `type` {{optional_inline}}
   - : A {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}} object indicating whether this is a bookmark, a folder, or a separator. Defaults to `"bookmark"` unless `url` is omitted, in which case it defaults to `"folder"`.
 - `unmodifiable` {{optional_inline}}
   - : A {{jsxref("string")}} as described by the type {{WebExtAPIRef('bookmarks.BookmarkTreeNodeUnmodifiable')}}. Represents the reason that the node can't be changed. If the node can be changed, this is omitted.

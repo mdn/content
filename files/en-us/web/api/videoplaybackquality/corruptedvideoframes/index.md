@@ -1,6 +1,7 @@
 ---
 title: VideoPlaybackQuality.corruptedVideoFrames
 slug: Web/API/VideoPlaybackQuality/corruptedVideoFrames
+page-type: web-api-instance-property
 tags:
   - API
   - Corruption

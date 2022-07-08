@@ -1,6 +1,7 @@
 ---
 title: RTCTrackEvent
 slug: Web/API/RTCTrackEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface

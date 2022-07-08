@@ -1,6 +1,7 @@
 ---
 title: XRWebGLLayer.getViewport()
 slug: Web/API/XRWebGLLayer/getViewport
+page-type: web-api-instance-method
 tags:
   - API
   - AR

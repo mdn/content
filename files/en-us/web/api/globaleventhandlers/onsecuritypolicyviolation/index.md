@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onsecuritypolicyviolation
 slug: Web/API/GlobalEventHandlers/onsecuritypolicyviolation
+page-type: web-api-instance-property
 tags:
   - API
   - CSP

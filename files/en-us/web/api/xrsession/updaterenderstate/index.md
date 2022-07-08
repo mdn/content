@@ -1,6 +1,7 @@
 ---
 title: XRSession.updateRenderState()
 slug: Web/API/XRSession/updateRenderState
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -38,7 +39,7 @@ updateRenderState(state)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

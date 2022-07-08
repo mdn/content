@@ -1,12 +1,14 @@
 ---
 title: HTML Sanitizer API
 slug: Web/API/HTML_Sanitizer_API
+page-type: web-api-overview
 tags:
   - HTML Sanitizer API
   - Experimental
   - Landing
   - Web API
   - sanitize
+browser-compat: api.Sanitizer
 ---
 {{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
 
@@ -74,7 +76,7 @@ The code below demonstrates how {{domxref('Element/setHTML','Element.setHTML()')
 The `script` element is disallowed by the default sanitizer so the alert is removed.
 
 ```js
-const unsanitized_string = "abc <script>alert(1)</script> def";  // Unsanitized string of HTML
+const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // Unsanitized string of HTML
 
 const sanitizer = new Sanitizer();  // Default sanitizer;
 
@@ -91,7 +93,7 @@ console.log(target.innerHTML);
 The example below shows the same sanitization operation using the {{domxref("Sanitizer.sanitizeFor()")}} method, with the intent of later inserting the returned element into a `<div>` element:
 
 ```js
-const unsanitized_string = "abc <script>alert(1)</script> def";  // Unsanitized string of HTML
+const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // Unsanitized string of HTML
 const sanitizer = new Sanitizer();  // Default sanitizer;
 
 // Sanitize the string
@@ -114,7 +116,7 @@ document.querySelector("div#target").replaceChildren(sanitizedDiv.children);
 > but you must remember to use the correct context when the string is applied:
 >
 > ```js
-> const unsanitized_string = "abc <script>alert(1)</script> def";
+> const unsanitized_string = "abc <script>alert(1)<" + "/script> def";
 > let sanitizedString = new Sanitizer().sanitizeFor("div", unsanitized_string).innerHTML;
 > ```
 
@@ -136,23 +138,8 @@ frame_element.replaceChildren(sanitized_frame_tree);
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML Sanitizer API','#sanitizer-api')}}
-      </td>
-      <td>{{Spec2('HTML Sanitizer API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Sanitizer")}}
+{{Compat}}

@@ -1,6 +1,7 @@
 ---
 title: StyleSheet.ownerNode
 slug: Web/API/StyleSheet/ownerNode
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -18,8 +19,7 @@ with the document.
 This is usually an HTML
 [`<link>`](/en-US/docs/Web/HTML/Element/link) or
 [`<style>`](/en-US/docs/Web/HTML/Element/style) element, but
-can also return a [processing
-instruction node](/en-US/docs/Web/API/ProcessingInstruction) in the case of `<?xml-stylesheet ?>`.
+can also return a [processing instruction node](/en-US/docs/Web/API/ProcessingInstruction) in the case of `<?xml-stylesheet ?>`.
 
 ## Value
 

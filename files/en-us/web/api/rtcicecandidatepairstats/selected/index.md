@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.selected
 slug: Web/API/RTCIceCandidatePairStats/selected
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidatePairStats.selected
 ---
 {{APIRef("WebRTC")}}{{non-standard_header}}

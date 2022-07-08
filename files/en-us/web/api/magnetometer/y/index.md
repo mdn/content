@@ -1,6 +1,7 @@
 ---
 title: Magnetometer.y
 slug: Web/API/Magnetometer/y
+page-type: web-api-instance-property
 tags:
   - API
   - Generic Sensor API

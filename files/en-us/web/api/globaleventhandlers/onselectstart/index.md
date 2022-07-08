@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onselectstart
 slug: Web/API/GlobalEventHandlers/onselectstart
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -17,7 +18,7 @@ browser-compat: api.GlobalEventHandlers.onselectstart
 
 The **`onselectstart`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("selectstart")}} events.
+processes {{domxref("Document/selectstart_event", "selectstart")}} events.
 
 The `selectstart` event fires when the user starts to make a new text
 selection on a webpage.
@@ -30,8 +31,7 @@ object.onselectstart = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("FocusEvent")}} object as its sole
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("FocusEvent")}} object as its sole
 argument.
 
 ## Examples
@@ -42,8 +42,7 @@ document.onselectstart = function() {
 };
 ```
 
-For a full example, see our [Key
-quote generator](https://github.com/chrisdavidmills/selection-api-examples/#key-quote-generator-see-it-running-live) demo.
+For a full example, see our [Key quote generator](https://github.com/chrisdavidmills/selection-api-examples/#key-quote-generator-see-it-running-live) demo.
 
 ```js
 document.onselectstart = () => {
@@ -61,5 +60,5 @@ document.onselectstart = () => {
 
 ## See also
 
-- {{event("selectstart")}} event
+- {{domxref("Document/selectstart_event", "selectstart")}} event
 - Related event handler: {{domxref("GlobalEventHandlers.onselectionchange")}}

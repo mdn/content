@@ -1,6 +1,7 @@
 ---
 title: Accelerometer.y
 slug: Web/API/Accelerometer/y
+page-type: web-api-instance-property
 tags:
   - API
   - Accelerometer

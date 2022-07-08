@@ -1,6 +1,7 @@
 ---
 title: 'RTCDTMFSender: tonechange event'
 slug: Web/API/RTCDTMFSender/tonechange_event
+page-type: web-api-event
 tags:
   - DTMF
   - RTCDTMFSender
@@ -41,7 +42,7 @@ An {{domxref("RTCDTMFToneChangeEvent")}}. Inherits from {{domxref("Event")}}.
 _In addition to the properties of {{domxref("Event")}}, this interface offers the following:_
 
 - {{domxref("RTCDTMFToneChangeEvent.tone")}} {{readOnlyInline}}
-  - : A {{domxref("DOMString")}} specifying the tone which has begun playing, or an empty string (`""`) if the previous tone has finished playing.
+  - : A string specifying the tone which has begun playing, or an empty string (`""`) if the previous tone has finished playing.
 
 ## Examples
 

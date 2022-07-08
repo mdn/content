@@ -39,7 +39,7 @@ See the [`<area>` element reference page](/en-US/docs/Web/HTML/Element/area) for
 
 For any container whose contents act as a dialog box (for example, a modal dialog asking the user to make a choice or respond to an action being taken), give it a descriptive label or name, so that assistive technology users can easily discover what its purpose is.
 
-A dialog box is generally denoted by an ARIA [`role="dialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) or [`role="alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role); you can use  the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) attributes to provide a label.
+A dialog box is generally denoted by an ARIA [`role="dialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) or [`role="alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role); you can use the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) attributes to provide a label.
 
 ### Examples
 
@@ -102,7 +102,7 @@ To help the user, you can update the page title value to reflect significant pag
 
 ## Embedded content must be labeled
 
-Make sure that elements that embed content have a [title](/en-US/docs/Web/HTML/Global_attributes/title) attribute that describes the embedded content. This includes the {{htmlelement("embed")}} and  {{htmlelement("object")}} elements. These elements are often used for graphical content, much like the {{HTMLelement("img")}} element. A descriptive title helps users of assistive technology understand what the element is showing.
+Make sure that elements that embed content have a [title](/en-US/docs/Web/HTML/Global_attributes/title) attribute that describes the embedded content. This includes the {{htmlelement("embed")}} and {{htmlelement("object")}} elements. These elements are often used for graphical content, much like the {{HTMLelement("img")}} element. A descriptive title helps users of assistive technology understand what the element is showing.
 
 ## Figures with optional captions should be labeled
 
@@ -158,7 +158,7 @@ You can see a live, interactive version of this example on the [`<fieldset>` ref
 
 ## Form elements must be labeled
 
-All elements within a form must have a {{htmlelement("label")}} that identifies its purpose. This applies to all types of {{htmlelement("input")}} items, as well as {{htmlelement("button")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, {{htmlelement("textarea")}}, {{htmlelement("progress")}} and {{htmlelement("meter")}} elements, as well as any element with the [`switch` ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles/Switch_role).
+All elements within a form must have a {{htmlelement("label")}} that identifies its purpose. This applies to all types of {{htmlelement("input")}} items, as well as {{htmlelement("button")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, {{htmlelement("textarea")}}, {{htmlelement("progress")}} and {{htmlelement("meter")}} elements, as well as any element with the [`switch` ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role).
 
 The form element can be placed inside the {{htmlelement("label")}}, in which case the association between the form element and the label is obvious from the structure. Or, you can create an association between a {{htmlelement("label")}} and a form element by specifying the form element's `id` value as the value of the label's `for` attribute.
 

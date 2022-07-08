@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onanimationend
 slug: Web/API/GlobalEventHandlers/onanimationend
+page-type: web-api-instance-property
 tags:
   - API
   - Animations

@@ -1,6 +1,7 @@
 ---
 title: 'VisualViewport: scroll event'
 slug: Web/API/VisualViewport/scroll_event
+page-type: web-api-event
 tags:
   - API
   - Reference

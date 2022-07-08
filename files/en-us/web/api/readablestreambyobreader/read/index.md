@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamBYOBReader.read()
 slug: Web/API/ReadableStreamBYOBReader/read
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -24,7 +25,7 @@ read(view)
 
 ### Parameters
 
-- view
+- `view`
   - : The view to be read into.
 
 ### Return value

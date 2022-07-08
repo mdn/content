@@ -12,7 +12,7 @@ tags:
   - Reference
   - Web
   - slider
-browser-compat: html.elements.input.input-range
+browser-compat: html.elements.input.type_range
 ---
 
 {{HTMLRef("Input_types")}}
@@ -30,7 +30,7 @@ If the user's browser doesn't support type `range`, it will fall back and treat 
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} containing the string representation
+        A string containing the string representation
         of the selected numeric value; use
         {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}}
         to get the value as a number.
@@ -84,7 +84,7 @@ There is no pattern validation available; however, the following forms of automa
 
 ### Value
 
-The {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} which contains a string representation of the selected number. The value is never an empty string (`""`). The default value is halfway between the specified minimum and maximum—unless the maximum is actually less than the minimum, in which case the default is set to the value of the `min` attribute. The algorithm for determining the default value is:
+The {{htmlattrxref("value", "input")}} attribute contains a string which contains a string representation of the selected number. The value is never an empty string (`""`). The default value is halfway between the specified minimum and maximum—unless the maximum is actually less than the minimum, in which case the default is set to the value of the `min` attribute. The algorithm for determining the default value is:
 
 ```js
 defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min

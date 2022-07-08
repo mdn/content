@@ -1,6 +1,7 @@
 ---
 title: RTCDTMFToneChangeEvent
 slug: Web/API/RTCDTMFToneChangeEvent
+page-type: web-api-interface
 tags:
   - DTMF
   - Reference
@@ -21,12 +22,12 @@ The **`RTCDTMFToneChangeEvent`** interface represents events sent to indicate th
 _In addition to the properties of {{domxref("Event")}}, this interface offers the following:_
 
 - {{domxref("RTCDTMFToneChangeEvent.tone")}} {{readOnlyInline}}
-  - : A {{domxref("DOMString")}} specifying the tone which has begun playing, or an empty string (`""`) if the previous tone has finished playing.
+  - : A string specifying the tone which has begun playing, or an empty string (`""`) if the previous tone has finished playing.
 
 ## Constructors
 
 - {{domxref("RTCDTMFToneChangeEvent.RTCDTMFToneChangeEvent()", "RTCDTMFToneChangeEvent()")}}
-  - : Returns a new `RTCDTMFToneChangeEvent`. It takes two parameters, the first being a {{domxref("DOMString")}} representing the type of the event (always `"tonechange"`); the second a dictionary containing the initial state of the properties of the event.
+  - : Returns a new `RTCDTMFToneChangeEvent`. It takes two parameters, the first being a string representing the type of the event (always `"tonechange"`); the second a dictionary containing the initial state of the properties of the event.
 
 ## Methods
 

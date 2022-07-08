@@ -1,6 +1,7 @@
 ---
 title: TextDecoder
 slug: Web/API/TextDecoder
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -59,7 +60,7 @@ console.log(win1251decoder.decode(bytes)); // Привет, мир!
 _The `TextDecoder` interface doesn't inherit any properties._
 
 - {{DOMxRef("TextDecoder.encoding")}}{{ReadOnlyInline}}
-  - : A {{DOMxRef("DOMString")}} containing the name of the decoder, that is a string describing the method the `TextDecoder` will use.
+  - : A string containing the name of the decoder, that is a string describing the method the `TextDecoder` will use.
 - {{DOMxRef("TextDecoder.fatal")}}{{ReadOnlyInline}}
   - : A {{jsxref('Boolean')}} indicating whether the error mode is fatal.
 - {{DOMxRef("TextDecoder.ignoreBOM")}}{{ReadOnlyInline}}
@@ -70,7 +71,7 @@ _The `TextDecoder` interface doesn't inherit any properties._
 _The `TextDecoder` interface doesn't inherit any method_.
 
 - {{DOMxRef("TextDecoder.decode()")}}
-  - : Returns a {{DOMxRef("DOMString")}} containing the text decoded with the method of the specific `TextDecoder` object.
+  - : Returns a string containing the text decoded with the method of the specific `TextDecoder` object.
 
 ## Specifications
 

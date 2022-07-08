@@ -1,6 +1,7 @@
 ---
 title: Headers()
 slug: Web/API/Headers/Headers
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -16,7 +17,8 @@ The **`Headers()`** constructor creates a new
 ## Syntax
 
 ```js
-new Headers(init);
+new Headers()
+new Headers(init)
 ```
 
 ### Parameters

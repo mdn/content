@@ -8,9 +8,9 @@ browser-compat: svg.attributes.presentation.marker-mid
 ---
 {{SVGRef}}
 
-The **`marker-mid`** attribute defines the arrowhead or polymarker that will be drawn at all interior vertices of the given [shape](/en-US/docs/Web/SVG/Element#Shape_elements).
+The **`marker-mid`** attribute defines the arrowhead or polymarker that will be drawn at all interior vertices of the given [shape](/en-US/docs/Web/SVG/Element#shape_elements).
 
-The marker is rendered on every vertex other than the first and last vertices of the [path data](/en-US/docs/Web/SVG/Attribute/d#Path_commands).
+The marker is rendered on every vertex other than the first and last vertices of the [path data](/en-US/docs/Web/SVG/Attribute/d#path_commands).
 
 > **Note:** As a presentation attribute, `marker-mid` can be used as a CSS property.
 
@@ -72,31 +72,7 @@ html, body, svg {
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "painting.html#MarkerEndProperty", "marker-mid")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>No significant change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "painting.html#MarkerEndProperty", "marker-mid")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -38,8 +38,8 @@ The prototype of the given object. If there are no inherited properties,
 ### Using getPrototypeOf
 
 ```js
-var proto = {};
-var obj = Object.create(proto);
+const proto = {};
+const obj = Object.create(proto);
 Object.getPrototypeOf(obj) === proto; // true
 ```
 

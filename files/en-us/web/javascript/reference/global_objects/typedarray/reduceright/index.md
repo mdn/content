@@ -17,7 +17,7 @@ The **`reduceRight()`** method applies a function against an
 accumulator and each value of the typed array (from right-to-left) has to reduce it to a
 single value. This method has the same algorithm as
 {{jsxref("Array.prototype.reduceRight()")}}. _TypedArray_ is one of the
-[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 ## Syntax
 
@@ -100,7 +100,7 @@ value would be returned without calling `callbackFn`.
 ### Sum up all values within an array
 
 ```js
-var total = new Uint8Array([0, 1, 2, 3]).reduceRight(function(a, b) {
+const total = new Uint8Array([0, 1, 2, 3]).reduceRight(function(a, b) {
   return a + b;
 });
 // total == 6

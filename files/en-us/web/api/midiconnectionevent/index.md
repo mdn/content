@@ -1,6 +1,7 @@
 ---
 title: MIDIConnectionEvent
 slug: Web/API/MIDIConnectionEvent
+page-type: web-api-interface
 tags:
   - API
   - Draft

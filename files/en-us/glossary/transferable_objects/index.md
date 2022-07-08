@@ -3,6 +3,8 @@ title: Transferable objects
 slug: Glossary/Transferable_objects
 tags:
   - Transferable
+  - Serializable
+  - Structured clone
   - Workers
 ---
 
@@ -43,7 +45,7 @@ worker.postMessage(uInt8Array, [uInt8Array.buffer]);
 console.log(uInt8Array.byteLength);  // 0
 ```
 
-> **Note:** [Typed arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) like {{jsxref("Int32Array")}} and {{jsxref("Uint8Array")}}, are serializable, but not transferable.
+> **Note:** [Typed arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) like {{jsxref("Int32Array")}} and {{jsxref("Uint8Array")}}, are {{Glossary("serializable object","serializable")}}, but not transferable.
 > However their underlying buffer is an {{jsxref("ArrayBuffer")}}, which is a transferable object.
 > We could have sent `uInt8Array.buffer` in the data parameter, but not `uInt8Array` in the transfer array.
 
@@ -74,7 +76,7 @@ console.log(original.byteLength);  // 0
 
 ## Supported objects
 
-The items that can be _transferred_ are:
+The items that various specifications indicate can be _transferred_ are:
 
 - {{jsxref("ArrayBuffer")}}
 - {{domxref("MessagePort")}}
@@ -87,7 +89,10 @@ The items that can be _transferred_ are:
 - {{domxref("OffscreenCanvas")}}
 - {{domxref("RTCDataChannel")}}
 
-> **Note:** Transferrable objects are marked up in [Web IDL files](https://github.com/w3c/webref/tree/main/ed/idl) with the attribute `Transferrable`.
+Browser support should be indicated in the respective object's compatibility information by the `transferable` subfeature (see [`RTCDataChannel`](/en-US/docs/Web/API/RTCDataChannel#browser_compatibility) for an example).
+At time of writing, not all transferable objects have been updated with this information.
+
+> **Note:** Transferrable objects are marked up in [Web IDL files](https://github.com/w3c/webref/tree/main/ed/idl) with the attribute `[Transferrable]`.
 
 ## See also
 

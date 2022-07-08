@@ -1,6 +1,7 @@
 ---
 title: Locks.name
 slug: Web/API/Lock/name
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -26,7 +27,7 @@ database, it could use a lock name such as `"net_db_sync"`.
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

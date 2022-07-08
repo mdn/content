@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamBYOBRequest.view
 slug: Web/API/ReadableStreamBYOBRequest/view
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

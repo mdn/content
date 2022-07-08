@@ -1,6 +1,7 @@
 ---
 title: Option()
 slug: Web/API/HTMLOptionElement/Option
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -20,17 +21,21 @@ The **`Option()`** constructor creates a new
 ## Syntax
 
 ```js
-new Option(text, value, defaultSelected, selected);
+new Option()
+new Option(text)
+new Option(text, value)
+new Option(text, value, defaultSelected)
+new Option(text, value, defaultSelected, selected)
 ```
 
 ### Parameters
 
 - `text` {{optional_inline}}
-  - : A {{domxref("DOMString")}} representing the content of the element, i.e. the
+  - : A string representing the content of the element, i.e. the
     displayed text. If this is not specified, a default value of "" (empty string) is
     used.
 - `value` {{optional_inline}}
-  - : A {{domxref("DOMString")}} representing the value of the
+  - : A string representing the value of the
     {{domxref("HTMLOptionElement")}}, i.e. the value attribute of the equivalent
     {{htmlelement("option")}}. If this is not specified, the value of text is used as the
     value, e.g. for the associated {{htmlelement("select")}} element's value when the form
@@ -81,13 +86,13 @@ var options = [ 'zero', 'one', 'two' ];
 
 options.forEach(function(element, key) {
   if (element == 'zero') {
-    s[s.options.length] = new Option(element, s.options.length, false, false);
+    s[key] = new Option(element, s.options.length, false, false);
   }
   if (element == 'one') {
-    s[s.options.length] = new Option(element, s.options.length, true, false); // Will add the "selected" attribute
+    s[key] = new Option(element, s.options.length, true, false); // Will add the "selected" attribute
   }
   if (element == 'two') {
-    s[s.options.length] = new Option(element, s.options.length, false, true); // Just will be selected in "view"
+    s[key] = new Option(element, s.options.length, false, true); // Just will be selected in "view"
   }
 });
 

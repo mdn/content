@@ -1,6 +1,7 @@
 ---
 title: RTCIceServer
 slug: Web/API/RTCIceServer
+page-type: web-api-interface
 tags:
   - Authentication
   - Configuration
@@ -22,7 +23,7 @@ The **`RTCIceServer`** dictionary defines how to connect to a single ICE server 
 - {{domxref("RTCIceServer.credentialType", "credentialType")}} {{optional_inline}}
   - : If the `RTCIceServer` represents a TURN server, this attribute specifies what kind of `credential` is to be used when connecting. The default is `password`.
 - {{domxref("RTCIceServer.urls", "urls")}}
-  - : This **required** property is either a single {{domxref("DOMString")}} or an array of {{domxref("DOMString")}}s, each specifying a URL which can be used to connect to the server.
+  - : This **required** property is either a single string or an array of strings, each specifying a URL which can be used to connect to the server.
 - {{domxref("RTCIceServer.username", "username")}} {{optional_inline}}
   - : If the `RTCIceServer` is a TURN server, then this is the username to use during the authentication process.
 

@@ -1,6 +1,7 @@
 ---
 title: Animation.finish()
 slug: Web/API/Animation/finish
+page-type: web-api-instance-method
 tags:
   - API
   - Animation

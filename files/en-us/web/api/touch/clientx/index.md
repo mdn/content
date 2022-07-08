@@ -1,6 +1,7 @@
 ---
 title: Touch.clientX
 slug: Web/API/Touch/clientX
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

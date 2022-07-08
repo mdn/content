@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTServer.getPrimaryServices()
 slug: Web/API/BluetoothRemoteGATTServer/getPrimaryServices
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth
@@ -24,15 +25,15 @@ Bluetooth device for a specified `BluetoothServiceUUID`.
 getPrimaryServices(bluetoothServiceUUID)
 ```
 
-### Return value
-
-A {{jsxref("Promise")}} that resolves to a list of {{domxref("BluetoothRemoteGATTService")}}
-objects.
-
 ### Parameters
 
 - `bluetoothServiceUUID`
   - : A Bluetooth service universally unique identifier for a specified device.
+
+### Return value
+
+A {{jsxref("Promise")}} that resolves to a list of {{domxref("BluetoothRemoteGATTService")}}
+objects.
 
 ## Specifications
 

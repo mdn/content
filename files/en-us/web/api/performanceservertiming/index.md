@@ -1,6 +1,7 @@
 ---
 title: PerformanceServerTiming
 slug: Web/API/PerformanceServerTiming
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -17,16 +18,16 @@ This interface is restricted to the same origin, but you can use the {{HTTPHeade
 ## Properties
 
 - {{domxref('PerformanceServerTiming.description')}}{{readonlyInline}}
-  - : A {{domxref("DOMString")}} value of the server-specified metric description, or an empty string.
+  - : A string value of the server-specified metric description, or an empty string.
 - {{domxref('PerformanceServerTiming.duration')}}{{readonlyInline}}
   - : A double that contains the server-specified metric duration, or value `0.0`.
 - {{domxref('PerformanceServerTiming.name')}}{{readonlyInline}}
-  - : A {{domxref("DOMString")}} value of the server-specified metric name.
+  - : A string value of the server-specified metric name.
 
 ## Methods
 
 - {{domxref('PerformanceServerTiming.toJSON()')}}
-  - : Returns a {{domxref("DOMString")}} that is the JSON representation of the `PerformanceServerTiming` object.
+  - : Returns a string that is the JSON representation of the `PerformanceServerTiming` object.
 
 ## Example
 

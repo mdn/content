@@ -1,6 +1,7 @@
 ---
 title: Element.hasPointerCapture()
 slug: Web/API/Element/hasPointerCapture
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

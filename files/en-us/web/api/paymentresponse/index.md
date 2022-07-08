@@ -1,6 +1,7 @@
 ---
 title: PaymentResponse
 slug: Web/API/PaymentResponse
+page-type: web-api-interface
 tags:
   - API
   - Experimental

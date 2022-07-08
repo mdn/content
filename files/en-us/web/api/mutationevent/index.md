@@ -1,6 +1,7 @@
 ---
 title: MutationEvent
 slug: Web/API/MutationEvent
+page-type: web-api-interface
 tags:
   - API
   - Deprecated
@@ -10,7 +11,7 @@ tags:
   - events
 browser-compat: api.MutationEvent
 ---
-{{APIRef("DOM Events")}}{{Deprecated_Header}}
+{{APIRef("UI Events")}}{{Deprecated_Header}}
 
 > **Note:** [Mutation Events](https://www.w3.org/TR/DOM-Level-3-Events/#events-mutationevents) (W3C DOM Level 3 Events) have been deprecated in favor of [Mutation Observers](/en-US/docs/Web/API/MutationObserver) (W3C DOM4).
 

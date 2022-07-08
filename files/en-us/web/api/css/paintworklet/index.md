@@ -1,6 +1,7 @@
 ---
 title: CSS.paintWorklet (Static property)
 slug: Web/API/CSS/paintWorklet
+page-type: web-api-static-property
 tags:
   - API
   - CSS

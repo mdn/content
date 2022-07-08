@@ -106,7 +106,7 @@ const person = {
 
 From now on, we'll use this shorter syntax.
 
-An object like this is referred to as an **object literal** — we've literally written out the object contents as we've come to create it. This is in contrast to objects instantiated from classes, which we'll look at later on.
+An object like this is referred to as an **object literal** — we've literally written out the object contents as we've come to create it. This is different compared to objects instantiated from classes, which we'll look at later on.
 
 It is very common to create an object using an object literal when you want to transfer a series of structured, related data items in some manner, for example sending a request to the server to be put into a database. Sending a single object is much more efficient than sending several items individually, and it is easier to work with than an array, when you want to identify individual items by name.
 
@@ -157,7 +157,7 @@ name.first
 name.last
 ```
 
-Otherwise your methods will no longer work.
+Otherwise, your methods will no longer work.
 
 ## Bracket notation
 
@@ -296,7 +296,7 @@ This function creates and returns a new object each time we call it. The object 
 - a property `name`
 - a method `introduceSelf()`.
 
-Note that `createPerson()` takes a parameter `name` to set the value of the `name` property, but the value of the `introduceSelf()` method will be the same for all objects created using this function. This is a very common pattern for creating objects. You can see here how being able to use `this` in the definition of `introduceSelf()` enables us to use the same code for every object we create.
+Note that `createPerson()` takes a parameter `name` to set the value of the `name` property, but the value of the `introduceSelf()` method will be the same for all objects created using this function. This is a very common pattern for creating objects.
 
 Now we can create as many objects as we like, reusing the definition:
 

@@ -1,6 +1,7 @@
 ---
 title: 'Element: compositionend event'
 slug: Web/API/Element/compositionend_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
@@ -64,7 +65,7 @@ inputElement.addEventListener('compositionend', (event) => {
 body {
   padding: .2rem;
   display: grid;
-  grid-template-areas: "control  log";
+  grid-template-areas: "control log";
 }
 
 .control {

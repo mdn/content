@@ -13,7 +13,7 @@ browser-compat: javascript.statements.let
 ---
 {{jsSidebar("Statements")}}
 
-The **`let`** statement declares a block-scoped local variable,
+The **`let`** declaration declares a block-scoped local variable,
 optionally initializing it to a value.
 
 {{EmbedInteractiveExample("pages/js/statement-let.html")}}
@@ -56,8 +56,13 @@ globally (in the top-most scope).
 
 An explanation of why the name "**let**" was chosen can be found [here](https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri).
 
-> **Note:** Many issues with `let` variables can be avoided by declaring them at the
-> top of the scope in which they are used (doing so may impact readability).
+Many issues with `let` variables can be avoided by declaring them at the top of the scope in which they are used (doing so may impact readability).
+
+Unlike `var`, `let` begins _Declarations_, not _Statements_. That means you cannot use a lone `let` declaration as the body of a block (which makes sense, since there's no way to access the variable).
+
+```js
+if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
+```
 
 ## Examples
 
@@ -99,55 +104,6 @@ let y = 'global';
 console.log(this.x); // "global"
 console.log(this.y); // undefined
 ```
-
-### Emulating private members
-
-In dealing with {{Glossary("Constructor", "constructors")}} it is possible to use the
-**`let`** bindings to share one or more private members without
-using [closures](/en-US/docs/Web/JavaScript/Closures):
-
-```js
-var Thing;
-
-{
-  let privateScope = new WeakMap();
-  let counter = 0;
-
-  Thing = function() {
-    this.someProperty = 'foo';
-
-    privateScope.set(this, {
-      hidden: ++counter,
-    });
-  };
-
-  Thing.prototype.showPublic = function() {
-    return this.someProperty;
-  };
-
-  Thing.prototype.showPrivate = function() {
-    return privateScope.get(this).hidden;
-  };
-}
-
-console.log(typeof privateScope);
-// "undefined"
-
-var thing = new Thing();
-
-console.log(thing);
-// Thing {someProperty: "foo"}
-
-thing.showPublic();
-// "foo"
-
-thing.showPrivate();
-// 1
-```
-
-The same privacy pattern with closures over local variables can be created with
-`var`, but those need a function scope (typically an {{Glossary("IIFE")}} in
-the module pattern) instead of just a block scope like in the example above.
 
 ### Redeclarations
 
@@ -198,18 +154,14 @@ switch(x) {
 
 ### Temporal dead zone (TDZ)
 
-`let` variables cannot be read/written until they have been
-declared. If no initial value is specified on
-declaration, the variable is initialized with a value of
-`undefined`. Accessing the variable before the declaration results in a
-{{jsxref("ReferenceError")}}.
+A `let` or `const` variable is said to be in a "temporal dead zone" (TDZ) from the start of the block until code execution reaches the line where the variable is declared.
 
-> **Note:** This differs from {{jsxref("Statements/var", "var", "var_hoisting")}} variables,
-> which will return a value of `undefined` if they are accessed before they
-> are declared.
+While inside the TDZ, the variable has not been initialized with a value, and any attempt to access it will result in a {{jsxref("ReferenceError")}}.
+The variable is initialized with a value when execution reaches the line of code where it was declared.
+If no initial value was specified with the variable declaration, it will be initialized with a value of `undefined`.
 
-The variable is said to be in a "temporal dead zone" (TDZ) from the start of the block
-until the declaration has completed.
+This differs from {{jsxref("Statements/var", "var", "var_hoisting")}} variables, which will return a value of `undefined` if they are accessed before they are declared.
+The code below demonstrates the different result when `let` and `var` are accessed in code before the line in which they are declared.
 
 ```js example-bad
 { // TDZ starts at beginning of scope
@@ -220,11 +172,8 @@ until the declaration has completed.
 }
 ```
 
-The term "temporal" is used because the zone depends on the order of execution (time)
-rather than the order in which the code is written (position). For example, the code
-below works because, even though the function that uses the `let` variable
-appears before the variable is declared, the function is _called_ outside the
-TDZ.
+The term "temporal" is used because the zone depends on the order of execution (time) rather than the order in which the code is written (position).
+For example, the code below works because, even though the function that uses the `let` variable appears before the variable is declared, the function is _called_ outside the TDZ.
 
 ```js
 {
@@ -292,7 +241,7 @@ function go(n) {
   // n here is defined!
   console.log(n); // Object {a: [1,2,3]}
 
-  for (let n of n.a) { // ReferenceError
+  for (const n of n.a) { // ReferenceError
     console.log(n);
   }
 }
@@ -347,8 +296,9 @@ let x = 1;
 
 - {{jsxref("Statements/var", "var")}}
 - {{jsxref("Statements/const", "const")}}
+- [Hoisting > `let` and `const` hoisting](/en-US/docs/Glossary/Hoisting#let_and_const_hoisting)
 - [ES6 In Depth: `let` and `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/)
 - [Breaking changes in `let` and `const` in Firefox 44](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/)
 - [You Don't Know JS: Scope & Closures: Chapter 3: Function vs. Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md)
-- [StackOverflow: What is the Temporal Dead Zone](https://stackoverflow.com/a/33198850/1125029)?
-- [StackOverflow: What is the difference between using `let` and `var`?](https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var-to-declare-a-variable)
+- [StackOverflow: What is the Temporal Dead Zone](https://stackoverflow.com/questions/33198849/what-is-the-temporal-dead-zone/33198850)?
+- [StackOverflow: What is the difference between using `let` and `var`?](https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var)

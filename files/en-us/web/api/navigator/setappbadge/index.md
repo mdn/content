@@ -1,6 +1,7 @@
 ---
 title: Navigator.setAppBadge()
 slug: Web/API/Navigator/setAppBadge
+page-type: web-api-instance-method
 tags:
   - API
   - Badging API
@@ -23,7 +24,7 @@ setAppBadge(contents)
 
 ### Parameters
 
-- `contents`{{optional_inline}}
+- `contents` {{optional_inline}}
   - : A {{jsxref("number")}} which will be used as the value of the badge. If `contents` is `0` then the badge will be set to `nothing`, indicating a cleared badge.
 
 ### Return value

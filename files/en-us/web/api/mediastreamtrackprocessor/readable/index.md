@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrackProcessor.readable
 slug: Web/API/MediaStreamTrackProcessor/readable
+page-type: web-api-instance-property
 tags:
   - API
   - Property

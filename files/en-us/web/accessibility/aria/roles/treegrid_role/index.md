@@ -10,6 +10,9 @@ tags:
   - Treegrid role
   - composite widget role
   - treegrid
+spec-urls:
+  - https://w3c.github.io/aria/#treegrid
+  - https://w3c.github.io/aria-practices/#treegrid
 ---
 
 The `treegrid` role identifies an element as being grid whose rows can be expanded and collapsed in the same manner as for a `tree`.
@@ -21,7 +24,7 @@ The `treegrid` widget contains one or more [`row`](/en-US/docs/Web/Accessibility
 
 A `row` that can be expanded or collapsed to show or hide a set of child rows is a **parent row**. Each parent row has the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) state set on either the row element or on a cell contained in the row.
 
-The `aria-expanded` state is set to `true` when the child rows are displayed and set to `false` when the child rows are not hidden. Elements that do not control display of child rows should not have the `aria-expanded` attribute because the presence of the attribute indicates to assistive technologies that the element with the attribute is a parent.
+The `aria-expanded` state is set to `true` when the child rows are displayed and set to `false` when the child rows are hidden. Elements that do not control display of child rows should not have the `aria-expanded` attribute because the presence of the attribute indicates to assistive technologies that the element with the attribute is a parent.
 
 When your grid UI calls for rows supporting `aria-expanded` or if your grid requires supporting [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset), [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), or [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level), use `treegrid` and not `grid`.
 
@@ -154,10 +157,7 @@ It is important for all cells to be able to receive or contain keyboard focus be
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#treegrid","ARIA: treegrid role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#treegrid","treegrid role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 

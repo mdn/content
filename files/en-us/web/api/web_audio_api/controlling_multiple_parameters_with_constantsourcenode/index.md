@@ -1,6 +1,7 @@
 ---
 title: Controlling multiple parameters with ConstantSourceNode
 slug: Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode
+page-type: guide
 tags:
   - Audio
   - Example
@@ -11,7 +12,7 @@ tags:
   - Web Audio
   - Web Audio API
 ---
-{{APIRef("Web Audio API")}}
+{{DefaultAPISidebar("Web Audio API")}}
 
 This article demonstrates how to use a {{domxref("ConstantSourceNode")}} to link multiple parameters together so they share the same value, which can be changed by setting the value of the {{domxref("ConstantSourceNode.offset")}} parameter.
 
@@ -143,7 +144,7 @@ These variables are:
 - `playing`
   - : A boolean value that we'll use to keep track of whether or not we're currently playing the tones.
 
-Now let's look at the `setup()` function, which is our handler for the window's {{event("load")}} event; it handles all the initialization tasks that require the DOM to be in place.
+Now let's look at the `setup()` function, which is our handler for the window's {{domxref("Window/load_event", "load")}} event; it handles all the initialization tasks that require the DOM to be in place.
 
 ```js
 function setup() {
@@ -187,7 +188,7 @@ Once all the gain nodes are created, we create the {{domxref("ConstantSourceNode
 
 Finally, we connect all the gain nodes to the {{domxref("AudioContext")}}'s {{domxref("BaseAudioContext/destination", "destination")}}, so that any sound delivered to the gain nodes will reach the output, whether that output be speakers, headphones, a recording stream, or any other destination type.
 
-After setting the window's {{event("load")}} event handler to be the `setup()` function, the stage is set. Let's see how the action plays out.
+After setting the window's {{domxref("Window/load_event", "load")}} event handler to be the `setup()` function, the stage is set. Let's see how the action plays out.
 
 #### Toggling the oscillators on and off
 

@@ -1,6 +1,7 @@
 ---
 title: SVGPointList.numberOfItems
 slug: Web/API/SVGPointList/numberOfItems
+page-type: web-api-instance-property
 tags:
   - API
   - Property

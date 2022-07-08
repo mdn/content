@@ -99,7 +99,7 @@ The remaining space is the size of the flex container minus the size of all flex
 
 #### Result
 
-{{EmbedLiveSample('Setting_flex_item_grow_factor', '700px', '300px', '', 'Web/CSS/flex-grow')}}
+{{EmbedLiveSample('Setting flex item grow factor')}}
 
 ## Specifications
 

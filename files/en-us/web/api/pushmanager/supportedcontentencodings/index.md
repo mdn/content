@@ -1,6 +1,7 @@
 ---
 title: PushManager.supportedContentEncodings
 slug: Web/API/PushManager/supportedContentEncodings
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

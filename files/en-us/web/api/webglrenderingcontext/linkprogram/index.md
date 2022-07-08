@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.linkProgram()
 slug: Web/API/WebGLRenderingContext/linkProgram
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -29,7 +30,7 @@ linkProgram(program)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

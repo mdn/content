@@ -1,6 +1,7 @@
 ---
 title: XRSessionEvent
 slug: Web/API/XRSessionEvent
+page-type: web-api-interface
 tags:
   - API
   - AR

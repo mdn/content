@@ -13,7 +13,6 @@ tags:
   - Time
   - Week
   - datetime
-  - datetime-local
   - del
   - ins
   - month
@@ -30,7 +29,6 @@ Elements that use such formats include certain forms of the {{HTMLElement("input
 For `<input>`, the values of {{htmlattrxref("type", "input")}} that return a {{htmlattrxref("value")}} which contains a string representing a date and/or time are:
 
 - [`date`](/en-US/docs/Web/HTML/Element/input/date)
-- [`datetime`](/en-US/docs/Web/HTML/Element/input/datetime) {{deprecated_inline}}
 - [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local)
 - [`month`](/en-US/docs/Web/HTML/Element/input/month)
 - [`time`](/en-US/docs/Web/HTML/Element/input/time)

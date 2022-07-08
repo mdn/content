@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaPosInSet
 slug: Web/API/ElementInternals/ariaPosInSet
+page-type: web-api-instance-property
 tags:
   - API
   - Property

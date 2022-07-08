@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.get()
 slug: Web/API/IDBObjectStore/get
+page-type: web-api-instance-method
 tags:
   - API
   - Database
@@ -35,7 +36,7 @@ get(key)
 
 ### Parameters
 
-- key
+- `key`
   - : The key or key range that identifies the record to be retrieved.
 
 ### Return value
@@ -61,12 +62,11 @@ one specific record from object store using `get()` — a sample record with
 the key "Walk dog". Once this data object is retrieved, you could then update it using
 normal JavaScript, then put it back into the database using a
 {{domxref("IDBObjectStore.put")}} operation. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
-([view
-example live](https://mdn.github.io/to-do-notifications/).)
+([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
   note.innerHTML += '<li>Database initialized.</li>';
@@ -81,7 +81,7 @@ DBOpenRequest.onsuccess = function(event) {
 
 function getData() {
   // open a read/write db transaction, ready for retrieving the data
-  var transaction = db.transaction(["toDoList"], "readwrite");
+  const transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of the transaction completing, when everything is done
   transaction.oncomplete = function(event) {
@@ -93,16 +93,16 @@ function getData() {
   };
 
   // create an object store on the transaction
-  var objectStore = transaction.objectStore("toDoList");
+  const objectStore = transaction.objectStore("toDoList");
 
   // Make a request to get a record by key from the object store
-  var objectStoreRequest = objectStore.get("Walk dog");
+  const objectStoreRequest = objectStore.get("Walk dog");
 
   objectStoreRequest.onsuccess = function(event) {
     // report the success of our request
     note.innerHTML += '<li>Request successful.</li>';
 
-    var myRecord = objectStoreRequest.result;
+    const myRecord = objectStoreRequest.result;
   };
 
 };
@@ -124,5 +124,4 @@ function getData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

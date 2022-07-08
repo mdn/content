@@ -1,6 +1,7 @@
 ---
 title: ReadableStream.locked
 slug: Web/API/ReadableStream/locked
+page-type: web-api-instance-property
 tags:
   - API
   - Property

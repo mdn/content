@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onkeyup
 slug: Web/API/GlobalEventHandlers/onkeyup
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -14,7 +15,7 @@ browser-compat: api.GlobalEventHandlers.onkeyup
 
 The **`onkeyup`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("keyup")}} events.
+processes {{domxref("Element/keyup_event", "keyup")}} events.
 
 The `keyup` event fires when the user releases a key that was previously
 pressed.
@@ -27,8 +28,7 @@ target.onkeyup = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("KeyboardEvent")}} object as its
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("KeyboardEvent")}} object as its
 sole argument.
 
 ## Example
@@ -89,7 +89,7 @@ eventTarget.addEventListener("keyup", event => {
 
 ## See also
 
-- {{Event("keyup")}} event
+- {{domxref("Element/keyup_event", "keyup")}} event
 - Related event handlers
 
   - {{domxref("GlobalEventHandlers.onkeydown")}}

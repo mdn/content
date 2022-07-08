@@ -1,6 +1,7 @@
 ---
 title: MediaKeyStatusMap.values()
 slug: Web/API/MediaKeyStatusMap/values
+page-type: web-api-instance-method
 tags:
   - API
   - EncryptedMediaExtensions

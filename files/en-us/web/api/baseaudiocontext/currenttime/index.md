@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.currentTime
 slug: Web/API/BaseAudioContext/currentTime
+page-type: web-api-instance-property
 tags:
   - API
   - AudioContext

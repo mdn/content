@@ -1,6 +1,7 @@
 ---
 title: XRReferenceSpaceEvent.transform
 slug: Web/API/XRReferenceSpaceEvent/transform
+page-type: web-api-instance-property
 tags:
   - API
   - AR

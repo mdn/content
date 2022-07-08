@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.availableIncomingBitrate
 slug: Web/API/RTCIceCandidatePairStats/availableIncomingBitrate
+page-type: web-api-instance-property
 tags:
   - API
   - Bandwidth

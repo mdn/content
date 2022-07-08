@@ -1,6 +1,7 @@
 ---
 title: Window.prompt()
 slug: Web/API/Window/prompt
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

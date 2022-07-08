@@ -1,6 +1,7 @@
 ---
 title: Document.fullscreenEnabled
 slug: Web/API/Document/fullscreenEnabled
+page-type: web-api-instance-property
 tags:
   - API
   - Document

@@ -1,6 +1,7 @@
 ---
 title: Element.append()
 slug: Web/API/Element/append
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: console.trace()
 slug: Web/API/console/trace
+page-type: web-api-instance-method
 tags:
   - API
   - Chrome

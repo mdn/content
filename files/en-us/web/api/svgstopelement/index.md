@@ -1,6 +1,7 @@
 ---
 title: SVGStopElement
 slug: Web/API/SVGStopElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

@@ -1,6 +1,7 @@
 ---
 title: performance.getEntriesByType()
 slug: Web/API/Performance/getEntriesByType
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -26,7 +27,7 @@ getEntriesByType(type)
 
 ### Parameters
 
-- type
+- `type`
   - : The type of entry to retrieve such as "`mark`". The valid entry types are
     listed in {{domxref("PerformanceEntry.entryType")}}.
 
@@ -59,22 +60,22 @@ function usePerformanceEntryMethods() {
   performance.mark("End");
 
   // Use getEntries() to iterate through the each entry
-  var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
+  let p = performance.getEntries();
+  for (let i=0; i < p.length; i++) {
     log("Entry[" + i + "]");
     checkPerformanceEntry(p[i]);
   }
 
   // Use getEntries(name, entryType) to get specific entries
   p = performance.getEntries({name : "Begin", entryType: "mark"});
-  for (var i=0; i < p.length; i++) {
+  for (let i=0; i < p.length; i++) {
     log("Begin[" + i + "]");
     checkPerformanceEntry(p[i]);
   }
 
   // Use getEntriesByType() to get all "mark" entries
   p = performance.getEntriesByType("mark");
-  for (var i=0; i < p.length; i++) {
+  for (let i=0; i < p.length; i++) {
     log ("Mark only entry[" + i + "]: name = " + p[i].name +
          "; startTime = " + p[i].startTime +
          "; duration  = " + p[i].duration);
@@ -82,7 +83,7 @@ function usePerformanceEntryMethods() {
 
   // Use getEntriesByName() to get all "mark" entries named "Begin"
   p = performance.getEntriesByName("Begin", "mark");
-  for (var i=0; i < p.length; i++) {
+  for (let i=0; i < p.length; i++) {
     log ("Mark and Begin entry[" + i + "]: name = " + p[i].name +
          "; startTime = " + p[i].startTime +
          "; duration  = " + p[i].duration);

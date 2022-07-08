@@ -1,6 +1,7 @@
 ---
 title: PointerEvent.tangentialPressure
 slug: Web/API/PointerEvent/tangentialPressure
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -29,7 +30,7 @@ be `0`.
 
 ## Examples
 
-In this snippet, when a {{event("pointerdown")}} event is fired, different functions
+In this snippet, when a {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event is fired, different functions
 are called depending on the value of the event's `tangentialPressure`
 property.
 

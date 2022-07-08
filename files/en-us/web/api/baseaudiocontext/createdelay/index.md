@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createDelay()
 slug: Web/API/BaseAudioContext/createDelay
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext

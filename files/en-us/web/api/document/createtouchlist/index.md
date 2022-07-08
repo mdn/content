@@ -1,6 +1,7 @@
 ---
 title: Document.createTouchList()
 slug: Web/API/Document/createTouchList
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated

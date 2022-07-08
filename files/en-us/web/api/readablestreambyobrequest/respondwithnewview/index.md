@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamBYOBRequest.respondWithNewView()
 slug: Web/API/ReadableStreamBYOBRequest/respondWithNewView
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -24,12 +25,12 @@ respondWithNewView(view)
 
 ### Parameters
 
-- _view_
+- `view`
   - : xxx
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

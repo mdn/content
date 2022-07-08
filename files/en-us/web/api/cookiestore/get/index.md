@@ -1,15 +1,17 @@
 ---
 title: CookieStore.get()
 slug: Web/API/CookieStore/get
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - get()
   - CookieStore
+  - Experimental
 browser-compat: api.CookieStore.get
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 The **`get()`** method of the {{domxref("CookieStore")}} interface returns a single cookie with the given name or options object. (See below.) The method will return the first matching cookie for the passed parameters.
 
@@ -26,7 +28,7 @@ This method requires one of the following:
 
 - `name`
   - : A string with the name of a cookie.
-- options
+- `options`
 
   - : An object containing:
 

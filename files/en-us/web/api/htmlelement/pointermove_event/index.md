@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: pointermove event'
 slug: Web/API/HTMLElement/pointermove_event
+page-type: web-api-event
 tags:
   - Event
   - HTML DOM

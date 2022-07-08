@@ -5,6 +5,7 @@ tags:
   - HTTP
   - Server error
   - Status code
+spec-urls: https://www.rfc-editor.org/rfc/rfc2774#section-7
 ---
 {{HTTPSidebar}}
 
@@ -25,6 +26,4 @@ responds with the 510 status code.
 
 ## Specifications
 
-| Specification                                            | Title                       |
-| -------------------------------------------------------- | --------------------------- |
-| {{RFC("2774", "510 Not Extended" , "7")}} | An HTTP Extension Framework |
+{{Specifications}}

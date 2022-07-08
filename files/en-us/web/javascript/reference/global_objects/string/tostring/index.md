@@ -42,7 +42,7 @@ same as the {{jsxref("String.prototype.valueOf()")}} method. Using `toString()` 
 The following example displays the string value of a {{jsxref("String")}} object:
 
 ```js
-var x = new String("Hello world");
+const x = new String("Hello world");
 
 console.log(x.toString()); // logs 'Hello world'
 ```
@@ -50,7 +50,7 @@ console.log(x.toString()); // logs 'Hello world'
 The following example displays the binary value of a {{jsxref("String")}} object:
 
 ```js
-var x = new String("13");
+const x = new String("13");
 
 console.log(parseInt(x).toString(2)); // logs '1101'
 ```
@@ -58,7 +58,7 @@ console.log(parseInt(x).toString(2)); // logs '1101'
 The following example displays the binary value of a {{jsxref("Number")}} object:
 
 ```js
-var x = new Number(13);
+const x = new Number(13);
 
 console.log(x.toString(2)); // logs '1101'
 ```
@@ -73,5 +73,4 @@ console.log(x.toString(2)); // logs '1101'
 
 ## See also
 
-- {{jsxref("Object.prototype.toSource()")}}
 - {{jsxref("String.prototype.valueOf()")}}

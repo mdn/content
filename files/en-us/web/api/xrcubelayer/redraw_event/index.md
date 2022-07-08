@@ -1,6 +1,7 @@
 ---
 title: 'XRCubeLayer: redraw event'
 slug: Web/API/XRCubeLayer/redraw_event
+page-type: web-api-event
 tags:
   - API
   - Event

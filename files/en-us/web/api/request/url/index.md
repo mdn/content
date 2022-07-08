@@ -1,6 +1,7 @@
 ---
 title: Request.url
 slug: Web/API/Request/url
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch
@@ -17,7 +18,7 @@ interface contains the URL of the request.
 
 ## Value
 
-A {{domxref("USVString")}} indicating the URL of the request.
+A string indicating the URL of the request.
 
 ## Examples
 

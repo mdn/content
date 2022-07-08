@@ -1,6 +1,7 @@
 ---
 title: TextTrack.language
 slug: Web/API/TextTrack/language
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,7 +18,7 @@ This uses the same values as the HTML {{htmlattrxref("lang")}} attribute. These 
 
 ## Value
 
-A {{domxref("DOMString","string")}} containing a language identifier. For example, `"en-US"` for United States English or `"pt-BR"` for Brazilian Portuguese.
+A string containing a language identifier. For example, `"en-US"` for United States English or `"pt-BR"` for Brazilian Portuguese.
 
 ## Examples
 

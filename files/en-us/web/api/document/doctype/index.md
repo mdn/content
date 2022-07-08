@@ -1,6 +1,7 @@
 ---
 title: Document.doctype
 slug: Web/API/Document/doctype
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

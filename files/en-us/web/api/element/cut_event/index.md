@@ -1,6 +1,7 @@
 ---
 title: 'Element: cut event'
 slug: Web/API/Element/cut_event
+page-type: web-api-event
 tags:
   - API
   - Clipboard API

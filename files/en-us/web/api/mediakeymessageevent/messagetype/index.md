@@ -1,6 +1,7 @@
 ---
 title: MediaKeyMessageEvent.messageType
 slug: Web/API/MediaKeyMessageEvent/messageType
+page-type: web-api-instance-property
 tags:
   - API
   - EncryptedMediaExtensions

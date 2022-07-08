@@ -67,8 +67,8 @@ Constructing a date object with the identical time value.
 
 ```js
 // Since month is zero based, birthday will be January 10, 1995
-var birthday = new Date(1994, 12, 10);
-var copy = new Date();
+const birthday = new Date(1994, 12, 10);
+const copy = new Date();
 copy.setTime(birthday.getTime());
 ```
 
@@ -80,10 +80,10 @@ to calculate the executing time of some operations. See also {{jsxref("Date.now(
 prevent instantiating unnecessary {{jsxref("Date")}} objects.
 
 ```js
-var end, start;
+let end, start;
 
 start = new Date();
-for (var i = 0; i < 1000; i++) {
+for (let i = 0; i < 1000; i++) {
   Math.sqrt(i);
 }
 end = new Date();

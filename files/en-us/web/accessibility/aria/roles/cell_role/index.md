@@ -11,6 +11,9 @@ tags:
   - cell role
   - Reference
   - document structure role
+spec-urls:
+  - https://w3c.github.io/aria/#cell
+  - https://w3c.github.io/aria-practices/#cell
 ---
 The `cell` value of the ARIA _role_ attribute identifies an element as being a cell in a tabular container that does not contain column or row header information. To be supported, the cell must be nested in an element with the role of `row`.
 
@@ -159,10 +162,7 @@ When applied to a {{HTMLElement('td')}}, it returns cell semantics to the elemen
 
 ## Specifications
 
-| Specification                                                                            | Status                                           |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#cell","ARIA Cell Role")}}                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#cell","ARIA Cell Role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See also
 

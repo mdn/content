@@ -1,6 +1,7 @@
 ---
 title: Screen.availTop
 slug: Web/API/Screen/availTop
+page-type: web-api-instance-property
 tags:
   - API
   - API:Mozilla Extensions

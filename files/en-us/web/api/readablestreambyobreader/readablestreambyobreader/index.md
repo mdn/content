@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamBYOBReader()
 slug: Web/API/ReadableStreamBYOBReader/ReadableStreamBYOBReader
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -21,12 +22,12 @@ constructor creates and returns a `ReadableStreamBYOBReader` object instance.
 ## Syntax
 
 ```js
-new ReadableStreamBYOBReader(stream);
+new ReadableStreamBYOBReader(stream)
 ```
 
 ### Parameters
 
-- stream
+- `stream`
   - : The {{domxref("ReadableStream")}} to be read.
 
 ### Return value

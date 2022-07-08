@@ -1,6 +1,7 @@
 ---
 title: SpeechGrammarList.addFromString()
 slug: Web/API/SpeechGrammarList/addFromString
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -29,9 +30,9 @@ addFromString(string, weight)
 
 ### Parameters
 
-- string
+- `string`
   - : A string representing the grammar to be added.
-- weight {{optional_inline}}
+- `weight` {{optional_inline}}
   - : A float representing the weight of the grammar relative to other grammars present in
     the {{domxref("SpeechGrammarList")}}. The weight means the importance of this grammar,
     or the likelihood that it will be recognized by the speech recognition service. The

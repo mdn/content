@@ -1,6 +1,7 @@
 ---
 title: IDBCursorWithValue.value
 slug: Web/API/IDBCursorWithValue/value
+page-type: web-api-instance-property
 tags:
   - API
   - Database
@@ -38,13 +39,13 @@ For a complete working example, see our [IDBCursor example](https://github.com/m
 
 ```js
 function displayData() {
-  var transaction = db.transaction(['rushAlbumList'], "readonly");
-  var objectStore = transaction.objectStore('rushAlbumList');
+  const transaction = db.transaction(['rushAlbumList'], "readonly");
+  const objectStore = transaction.objectStore('rushAlbumList');
 
   objectStore.openCursor().onsuccess = function(event) {
-    var cursor = event.target.result;
+    const cursor = event.target.result;
     if(cursor) {
-      var listItem = document.createElement('li');
+      const listItem = document.createElement('li');
       listItem.innerHTML = cursor.value.albumTitle + ', ' + cursor.value.year;
       list.appendChild(listItem);
 
@@ -73,5 +74,4 @@ function displayData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

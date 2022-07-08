@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.form
 slug: Web/API/ElementInternals/form
+page-type: web-api-instance-property
 tags:
   - API
   - Property

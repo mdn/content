@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.deleteSync()
 slug: Web/API/WebGL2RenderingContext/deleteSync
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -27,7 +28,7 @@ deleteSync(sync)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

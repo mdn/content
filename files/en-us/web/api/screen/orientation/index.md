@@ -1,6 +1,7 @@
 ---
 title: Screen.orientation
 slug: Web/API/Screen/orientation
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -21,7 +22,7 @@ The **`orientation`** read-only property of the
 An instance of {{DOMxRef("ScreenOrientation")}} representing the orientation of the
 screen.
 
-Note that older, prefixed versions returned a {{DOMxRef("DOMString")}} equivalent to
+Note that older, prefixed versions returned a string equivalent to
 {{DOMxRef("ScreenOrientation.type")}}.
 
 ## Examples

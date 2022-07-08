@@ -1,6 +1,7 @@
 ---
 title: Navigator.getBattery()
 slug: Web/API/Navigator/getBattery
+page-type: web-api-instance-method
 tags:
   - API
   - Battery API

@@ -53,7 +53,7 @@ Except when using the `not` or `only` logical operators, the media type is optio
 - `screen`
   - : Intended primarily for screens.
 
-> **Note:** CSS2.1 and [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) defined several additional media types (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, and `aural`), but they were deprecated in [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) and shouldn't be used.
+> **Note:** CSS2.1 and [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) defined several additional media types (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, and `aural`), but they were deprecated in [Media Queries 4](https://drafts.csswg.org/mediaqueries/#media-types) and shouldn't be used.
 
 ### Media features
 
@@ -177,7 +177,11 @@ Because of this potential, a browser may opt to fudge the returned values in som
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+@media <media-query-list> {
+  <stylesheet>
+}
+```
 
 ## Examples
 

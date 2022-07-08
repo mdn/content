@@ -1,6 +1,7 @@
 ---
 title: HTMLFormElement.submit()
 slug: Web/API/HTMLFormElement/submit
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -20,8 +21,7 @@ This method is similar, but not identical to, activating a form's submit
 
 - No {{event("submit")}} event is raised. In particular, the form's
   {{domxref("GlobalEventHandlers.onsubmit", "onsubmit")}} event handler is not run.
-- [Constraint
-  validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) is not triggered.
+- [Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) is not triggered.
 
 The {{domxref("HTMLFormElement.requestSubmit()")}} method is identical to activating a
 form's submit {{HtmlElement("button")}} and does not have these differences.

@@ -1,6 +1,7 @@
 ---
 title: 'Document: pointerenter event'
 slug: Web/API/Document/pointerenter_event
+page-type: web-api-event
 tags:
   - API
   - Document

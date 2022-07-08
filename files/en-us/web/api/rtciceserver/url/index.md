@@ -1,6 +1,7 @@
 ---
 title: RTCIceServer.url
 slug: Web/API/RTCIceServer/url
+page-type: web-api-instance-property
 tags:
   - Experimental
   - Deprecated
@@ -39,7 +40,7 @@ var serverUrl = iceServer.url;
 iceServer.url = iceServerUrl;
 ```
 
-The value of this property is a {{domxref("DOMString")}} containing the full URL of a
+The value of this property is a string containing the full URL of a
 server to use during ICE negotiation.
 
 ## Example

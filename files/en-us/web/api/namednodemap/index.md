@@ -1,6 +1,7 @@
 ---
 title: NamedNodeMap
 slug: Web/API/NamedNodeMap
+page-type: web-api-interface
 tags:
   - Interface
   - Reference

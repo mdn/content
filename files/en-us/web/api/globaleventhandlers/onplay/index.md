@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onplay
 slug: Web/API/GlobalEventHandlers/onplay
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -56,5 +57,4 @@ function alertPlay() {
 ## See also
 
 - {{event("play")}}
-- [Information on working with
-  event handlers](/en-US/docs/Web/Guide/Events/Event_handlers)
+- [Information on working with event handlers](/en-US/docs/Web/Events/Event_handlers)

@@ -227,7 +227,7 @@ The modern {{domxref("Fetch API")}} provides the same features with a more power
 
 Another API, [server-sent events](/en-US/docs/Web/API/Server-sent_events), is a one-way service that allows a server to send events to the client, using HTTP as a transport mechanism.
 Using the {{domxref("EventSource")}} interface, the client opens a connection and establishes event handlers.
-The client browser automatically converts the messages that arrive on the HTTP stream into appropriate {{domxref("Event")}} objects, delivering them to the event handlers that have been registered for the events' {{domxref("Event.type", "type")}} if known, or to the {{domxref("EventSource.onmessage", "onmessage")}} event handler if no type-specific event handler was established.
+The client browser automatically converts the messages that arrive on the HTTP stream into appropriate {{domxref("Event")}} objects. Then it delivers them to the event handlers that have been registered for the events' {{domxref("Event.type", "type")}} if known, or to the {{domxref("EventSource.message_event", "onmessage")}} event handler if no type-specific event handler was established.
 
 ## Conclusion
 

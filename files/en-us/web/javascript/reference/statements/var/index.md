@@ -100,7 +100,7 @@ delete globalThis.x; // TypeError in strict mode. Fails silently otherwise.
 delete x;  // SyntaxError in strict mode. Fails silently otherwise.
 ```
 
-Note that in both NodeJS [CommonJS](http://www.commonjs.org/) modules and
+Note that in both NodeJS [CommonJS](https://www.commonjs.org/) modules and
 native [ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules),
 top-level variable declarations are scoped to the module, and are not, therefore added
 as properties to the global object.

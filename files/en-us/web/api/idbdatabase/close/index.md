@@ -1,6 +1,7 @@
 ---
 title: IDBDatabase.close()
 slug: Web/API/IDBDatabase/close
+page-type: web-api-instance-method
 tags:
   - API
   - Database

@@ -1,6 +1,7 @@
 ---
 title: HTMLFontElement.size
 slug: Web/API/HTMLFontElement/size
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -14,7 +15,7 @@ browser-compat: api.HTMLFontElement.size
 
 The obsolete
 **`HTMLFontElement.size`** property is a
-{{domxref("DOMString")}} that reflects the {{ htmlattrxref("size", "font") }} HTML
+string that reflects the {{ htmlattrxref("size", "font") }} HTML
 attribute. It contains either an integer number in the range of 1-7 or a relative
 value to increase/decrease the value of the {{htmlattrxref("size", "basefont")}}
 attribute of the {{HTMLElement("basefont")}} element.

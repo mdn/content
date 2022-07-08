@@ -1,6 +1,7 @@
 ---
 title: TextTrackCue.endTime
 slug: Web/API/TextTrackCue/endTime
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -1,6 +1,7 @@
 ---
 title: CSSStyleDeclaration
 slug: Web/API/CSSStyleDeclaration
+page-type: web-api-interface
 tags:
   - API
   - CSSOM
@@ -53,11 +54,11 @@ A `CSSStyleDeclaration` object can be exposed using three different APIs:
 ## Example
 
 ```js
-var styleObj = document.styleSheets[0].cssRules[0].style;
+const styleObj = document.styleSheets[0].cssRules[0].style;
 console.log(styleObj.cssText);
 
-for (var i = styleObj.length; i--;) {
-  var nameString = styleObj[i];
+for (let i = styleObj.length; i--;) {
+  const nameString = styleObj[i];
   styleObj.removeProperty(nameString);
 }
 

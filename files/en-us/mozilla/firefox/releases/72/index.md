@@ -101,7 +101,7 @@ _No changes_
 
 #### Removals
 
-- Removed the non-standard {{DOMxRef("window.mozPaintCount")}} property. ({{bug(1591968)}})
+- Removed the non-standard `window.mozPaintCount` property. ({{bug(1591968)}})
 - The {{domxref("BatteryManager")}} interface is no longer exposed to web content ({{bug(1441976)}}).
 - {{domxref("Navigator.vibrate()")}} is no longer supported in cross-origin {{htmlelement("iframe")}}s ({{bug(1591113)}}).
 - WebRTC no longer supports the `rid=` and `pt=` parameters on the `simulcast` attribute. The new syntax for a line such as "`a=simulcast: send rid=7 recv rid=8`" is now "`a=simulcast: send 7 recv 8`". The new syntax has been supported since Firefox 68, so now it's time tor retire support for the old syntax ({{bug(1470568)}}).

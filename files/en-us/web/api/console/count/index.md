@@ -1,6 +1,7 @@
 ---
 title: console.count()
 slug: Web/API/console/count
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

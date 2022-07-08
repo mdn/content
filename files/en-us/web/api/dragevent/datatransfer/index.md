@@ -1,6 +1,7 @@
 ---
 title: DragEvent.dataTransfer
 slug: Web/API/DragEvent/dataTransfer
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -23,7 +24,7 @@ A {{domxref("DataTransfer")}} object which contains the {{domxref("DragEvent","d
 ## Examples
 
 This example illustrates accessing the drag and drop data within the
-{{event("dragend")}} event handler.
+{{domxref("HTMLElement/dragend_event", "dragend")}} event handler.
 
 ```js
 function processData(d) {

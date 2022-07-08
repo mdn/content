@@ -1,6 +1,7 @@
 ---
 title: PresentationConnection.id
 slug: Web/API/PresentationConnection/id
+page-type: web-api-instance-property
 tags:
   - API
   - NeedsBrowserCompatibility

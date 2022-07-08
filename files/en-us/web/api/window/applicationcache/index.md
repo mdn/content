@@ -1,6 +1,7 @@
 ---
 title: Window.applicationCache
 slug: Web/API/Window/applicationCache
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

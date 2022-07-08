@@ -1,6 +1,7 @@
 ---
 title: Window.blur()
 slug: Web/API/Window/blur
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -24,7 +25,7 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

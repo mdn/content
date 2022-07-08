@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisVoice.voiceURI
 slug: Web/API/SpeechSynthesisVoice/voiceURI
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -20,7 +21,7 @@ the speech synthesis service for this voice.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the URI of the voice. This is a generic URI and
+A string representing the URI of the voice. This is a generic URI and
 can point to local or remote services, e.g. it could be a proprietary system URN or a URL to a remote service.
 
 ## Examples
@@ -31,7 +32,7 @@ for(i = 0; i < voices.length ; i++) {
   option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
 
   if(voices[i].default) {
-    option.textContent += ' -- DEFAULT';
+    option.textContent += ' — DEFAULT';
   }
 
   console.log(voices[i].voiceURI);

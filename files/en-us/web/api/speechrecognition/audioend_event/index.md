@@ -1,6 +1,7 @@
 ---
 title: 'SpeechRecognition: audioend event'
 slug: Web/API/SpeechRecognition/audioend_event
+page-type: web-api-event
 tags:
   - Event
   - Reference

@@ -1,6 +1,7 @@
 ---
 title: NodeList.length
 slug: Web/API/NodeList/length
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

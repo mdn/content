@@ -1,6 +1,7 @@
 ---
 title: PromiseRejectionEvent
 slug: Web/API/PromiseRejectionEvent
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

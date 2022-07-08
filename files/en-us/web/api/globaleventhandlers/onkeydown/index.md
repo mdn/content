@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onkeydown
 slug: Web/API/GlobalEventHandlers/onkeydown
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -15,7 +16,7 @@ browser-compat: api.GlobalEventHandlers.onkeydown
 
 The **`onkeydown`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("keydown")}} events.
+processes {{domxref("Element/keydown_event", "keydown")}} events.
 
 The `keydown` event fires when the user presses a keyboard key.
 
@@ -27,8 +28,7 @@ target.onkeydown = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("KeyboardEvent")}} object as its
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("KeyboardEvent")}} object as its
 sole argument.
 
 ## Example
@@ -70,8 +70,8 @@ function logKey(e) {
 
 ### Compatibility notes
 
-Since Firefox 65, the [`keyup`](/en-US/docs/Web/API/Document/keyup_event) and
-[`keydown`](/en-US/docs/Web/API/Document/keydown_event) events are now fired
+Since Firefox 65, the [`keyup`](/en-US/docs/Web/API/Element/keyup_event) and
+[`keydown`](/en-US/docs/Web/API/Element/keydown_event) events are now fired
 during IME composition, to improve cross-browser compatibility for CJKT users
 ({{bug(354358)}}. To
 ignore all `keydown` events that are part of composition, do something like
@@ -89,7 +89,7 @@ eventTarget.addEventListener("keydown", event => {
 
 ## See also
 
-- {{Event("keydown")}} event
+- {{domxref("Element/keydown_event", "keydown")}} event
 - Related event handlers
 
   - {{domxref("GlobalEventHandlers.onkeypress")}}

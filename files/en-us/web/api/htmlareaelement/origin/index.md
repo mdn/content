@@ -1,6 +1,7 @@
 ---
 title: HTMLAreaElement.origin
 slug: Web/API/HTMLAreaElement/origin
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAreaElement
@@ -13,7 +14,7 @@ browser-compat: api.HTMLAreaElement.origin
 
 The
 **`HTMLAreaElement.origin`** read-only property is a
-{{domxref("USVString")}} containing the Unicode serialization of the origin of the
+string containing the Unicode serialization of the origin of the
 represented URL.
 
 That is:

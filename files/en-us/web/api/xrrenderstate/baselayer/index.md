@@ -1,6 +1,7 @@
 ---
 title: XRRenderState.baseLayer
 slug: Web/API/XRRenderState/baseLayer
+page-type: web-api-instance-property
 tags:
   - API
   - AR

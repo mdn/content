@@ -190,16 +190,13 @@ Here are some popular editors:
       <td>Free</td>
       <td>Windows, Mac, Linux</td>
       <td>
-        <a
-          href="https://mail.gnome.org/mailman/listinfo/gedit-list"
-          rel="external"
-          >Mailing list</a
-        >, <a href="irc://irc.gnome.org/%23gedit">IRC</a>
+        <a href="https://discourse.gnome.org/tag/gedit"
+          rel="external">Discourse</a>, <a href="irc://irc.gnome.org/%23gedit">IRC</a>
       </td>
       <td>
         <a href="https://help.gnome.org/users/gedit/stable/">Online Manual</a>
       </td>
-      <td><a href="https://wiki.gnome.org/Apps/Gedit/PluginsLists">Yes</a></td>
+      <td><a href="https://wiki.gnome.org/Apps/Gedit/ThirdPartyPlugins">Yes</a></td>
     </tr>
     <tr>
       <td><a href="https://kate-editor.org/">Kate</a></td>
@@ -219,7 +216,7 @@ Here are some popular editors:
     </tr>
     <tr>
       <td>
-        <a href="https://www.activestate.com/products/komodo-ide/komodo-edit/" rel="external"
+        <a href="https://www.activestate.com/products/komodo-edit/" rel="external"
           >Komodo Edit</a
         >
       </td>
@@ -232,7 +229,7 @@ Here are some popular editors:
           >Online Manual</a
         >
       </td>
-      <td><a href="https://www.activestate.com/products/komodo-ide/resources/addons/">Yes</a></td>
+      <td><a href="https://community.komodoide.com/packages/addons/">Yes</a></td>
     </tr>
     <tr>
       <td>
@@ -248,14 +245,14 @@ Here are some popular editors:
       </td>
       <td>
         <a
-          href="https://npp-wiki.tuxfamily.org/index.php?title=Main_Page"
+          href="https://npp-user-manual.org/"
           rel="external"
-          >Wiki</a
+          >Online Manual</a
         >
       </td>
       <td>
         <a
-          href="https://npp-wiki.tuxfamily.org/index.php?title=Plugin_Central"
+          href="https://github.com/notepad-plus-plus/nppPluginList"
           rel="external"
           >Yes</a
         >
@@ -455,7 +452,7 @@ If you like _lots_ of features and your editor is slowing down because of all yo
 - [Aptana Studio](http://www.aptana.com/)
 - [Eclipse](https://www.eclipse.org/)
 - [Komodo IDE](https://www.activestate.com/products/komodo-ide/)
-- [NetBeans IDE](https://netbeans.org/)
+- [NetBeans IDE](https://netbeans.apache.org//)
 - [Visual Studio](https://visualstudio.microsoft.com/)
 - [WebStorm](https://www.jetbrains.com/webstorm/)
 
@@ -485,7 +482,7 @@ When you install a new text editor, your OS will probably continue to open text 
 - Windows
 
   - [Windows 8](https://support.microsoft.com/en-us/windows?ui=en-US&rs=en-US&ad=US)
-  - [Windows 7](https://windows.microsoft.com/en-us/windows/change-default-programs#1TC=windows-7)
+  - [Windows 7](https://support.microsoft.com/en-us/windows/change-which-programs-windows-7-uses-by-default-62fd162f-8c82-0436-806f-c60d69dcf495)
   - [older systems](https://www.lifewire.com/how-to-change-file-associations-in-windows-2624477)
 
 - [macOS](https://osxdaily.com/2013/08/08/change-default-application-open-files-mac-os-x/)
@@ -493,7 +490,7 @@ When you install a new text editor, your OS will probably continue to open text 
 
   - [Ubuntu Unity](https://askubuntu.com/questions/289337/how-can-i-change-file-association-globally)
   - [GNOME](https://help.gnome.org/users/gnome-help/stable/files-open.html.en)
-  - [KDE](https://doc.opensuse.org/documentation/html/openSUSE_113/opensuse-kdeuser/cha.kde.cust.html#pro.kde.cust.system.fileass)
+  - [KDE](https://userbase.kde.org/System_Settings/File_Associations)
 
 ## Next steps
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLStyleElement.type
 slug: Web/API/HTMLStyleElement/type
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

@@ -1,6 +1,7 @@
 ---
 title: Checking when a deadline is due
 slug: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
+page-type: guide
 tags:
   - Apps
   - Date
@@ -49,7 +50,7 @@ In this segment, we check to see if the form fields have all been filled in. If 
 
 ```js
    else {
-    var newItem = [
+    const newItem = [
       {
         taskTitle: title.value,
         hours    : hours.value,
@@ -62,7 +63,7 @@ In this segment, we check to see if the form fields have all been filled in. If 
     ];
 
     // open a read/write db transaction, ready for adding the data
-    var transaction = db.transaction(["toDoList"], "readwrite");
+    const transaction = db.transaction(["toDoList"], "readwrite");
 
     // report on the success of opening the transaction
     transaction.oncomplete = event => {
@@ -74,13 +75,13 @@ In this segment, we check to see if the form fields have all been filled in. If 
     };
 
     // create an object store on the transaction
-    var objectStore = transaction.objectStore("toDoList");
+    const objectStore = transaction.objectStore("toDoList");
 
     // add our newItem object to the object store
-    var request = objectStore.add(newItem[0]);
+    const request = objectStore.add(newItem[0]);
 ```
 
-In this section we create an object called `newItem` that stores the data in the format required to insert it into the database. The next few lines open the database transaction and provide messages to notify the user if this was successful or failed.Then an `objectStore` is created into which the new item is added. The `notified` property of the data object indicates that the to-do list item's deadline has not yet come up and been notified - more on this later!
+In this section we create an object called `newItem` that stores the data in the format required to insert it into the database. The next few lines open the database transaction and provide messages to notify the user if this was successful or failed. Then an `objectStore` is created into which the new item is added. The `notified` property of the data object indicates that the to-do list item's deadline has not yet come up and been notified - more on this later!
 
 > **Note:** The `db` variable stores a reference to the IndexedDB database instance; we can then use various properties of this variable to manipulate the data.
 
@@ -115,26 +116,26 @@ At this point our data is in the database; now we want to check whether any of t
 
 ```js
 function checkDeadlines() {
-  var now = new Date();
+  const now = new Date();
 ```
 
 First we grab the current date and time by creating a blank `Date` object. Easy huh? It's about to get a bit more complex.
 
 ```js
-  var minuteCheck  = now.getMinutes();
-  var hourCheck    = now.getHours();
-  var dayCheck     = now.getDate();
-  var monthCheck   = now.getMonth();
-  var yearCheck    = now.getFullYear();
+  const minuteCheck  = now.getMinutes();
+  const hourCheck    = now.getHours();
+  const dayCheck     = now.getDate();
+  const monthCheck   = now.getMonth();
+  const yearCheck    = now.getFullYear();
 ```
 
 The `Date` object has a number of methods to extract various parts of the date and time inside it. Here we fetch the current minutes (gives an easy numerical value), hours (gives an easy numerical value), day of the month (`getDate()` is needed for this, as `getDay()` returns the day of the week, 1-7), month (returns a number from 0-11, see below), and year (`getFullYear()` is needed; `getYear()` is deprecated, and returns a weird value that is not much use to anyone!)
 
 ```js
-   var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+   const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
 
   objectStore.openCursor().onsuccess = event => {
-    var cursor = event.target.result;
+    const cursor = event.target.result;
 
     if(cursor) {
 ```
@@ -144,16 +145,16 @@ Next we create another IndexedDB `objectStore`, and use the `openCursor()` metho
 ```js
       switch(cursor.value.month) {
         case "January":
-          var monthNumber = 0;
+          let monthNumber = 0;
           break;
         case "February":
-          var monthNumber = 1;
+          let monthNumber = 1;
           break;
 
         // other lines removed from listing for brevity
 
         case "December":
-          var monthNumber = 11;
+          let monthNumber = 11;
           break;
         default:
           alert('Incorrect month entered in database.');
@@ -187,20 +188,20 @@ The `notified == "no"` check is designed to make sure you will only get one noti
     // notification won't be set off on it again
 
     // first open up a transaction as usual
-    var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+    const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
 
     // get the to-do list object that has this title as it's title
-    var request = objectStore.get(title);
+    const request = objectStore.get(title);
 
     request.onsuccess = () => {
       // grab the data object returned as the result
-      var data = request.result;
+      const data = request.result;
 
       // update the notified value in the object to "yes"
       data.notified = "yes";
 
       // create another request that inserts the item back into the database
-      var requestUpdate = objectStore.put(data);
+      const requestUpdate = objectStore.put(data);
 
       // when this new request succeeds, run the displayData() function again to update the display
       requestUpdate.onsuccess = () => {

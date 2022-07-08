@@ -1,6 +1,7 @@
 ---
 title: CSSFontFaceRule
 slug: Web/API/CSSFontFaceRule
+page-type: web-api-interface
 tags:
   - API
   - CSSOM
@@ -11,7 +12,7 @@ browser-compat: api.CSSFontFaceRule
 ---
 {{APIRef("CSSOM")}}
 
-The **`CSSFontFaceRule`** interface represents an {{cssxref("@font-face")}} {{cssxref("at-rule")}}.
+The **`CSSFontFaceRule`** interface represents an {{cssxref("@font-face")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
 
 {{InheritanceDiagram}}
 

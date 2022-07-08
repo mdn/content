@@ -1,6 +1,7 @@
 ---
 title: DataTransferItem.getAsString()
 slug: Web/API/DataTransferItem/getAsString
+page-type: web-api-instance-method
 tags:
   - API
   - DataTransferItem
@@ -36,7 +37,7 @@ getAsString(function(data) { /* ... */ })
 
 - `callbackFn`
   - : A callback function that receives following arguments:
-    - `data` 
+    - `data`
       - : The {{domxref("DataTransferItem", "data transfer item's")}} string data.
 
 ### Return value
@@ -46,14 +47,14 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 This example shows the use of the `getAsString()` method as an _inline
-function_ in a {{event("drop")}} event handler.
+function_ in a {{domxref("HTMLElement/drop_event", "drop")}} event handler.
 
 ```js
 function drop_handler(ev) {
  console.log("Drop");
  ev.preventDefault();
- var data = ev.dataTransfer.items;
- for (var i = 0; i < data.length; i += 1) {
+ const data = ev.dataTransfer.items;
+ for (let i = 0; i < data.length; i += 1) {
    if ((data[i].kind == 'string') &&
        (data[i].type.match('^text/plain'))) {
      // This item is the target node
@@ -71,7 +72,7 @@ function drop_handler(ev) {
    } else if ((data[i].kind == 'file') &&
               (data[i].type.match('^image/'))) {
      // Drag data item is an image file
-     var f = data[i].getAsFile();
+     const f = data[i].getAsFile();
      console.log("... Drop: File ");
    }
  }

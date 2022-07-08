@@ -1,6 +1,7 @@
 ---
 title: MediaDeviceInfo.groupId
 slug: Web/API/MediaDeviceInfo/groupId
+page-type: web-api-instance-property
 tags:
   - API
   - Device
@@ -15,7 +16,7 @@ browser-compat: api.MediaDeviceInfo.groupId
 {{APIRef("Media Capture")}}
 
 The **`groupId`** readonly property of
-the {{domxref("MediaDeviceInfo")}} interface returns a {{domxref("DOMString")}} that
+the {{domxref("MediaDeviceInfo")}} interface returns a string that
 is a group identifier.
 
 Two devices have the same group identifier if they
@@ -24,7 +25,7 @@ and microphone.
 
 ## Value
 
-A {{domxref("DOMString")}} which uniquely identifies the group of related devices to
+A string which uniquely identifies the group of related devices to
 which this device belongs.
 
 ## Specifications

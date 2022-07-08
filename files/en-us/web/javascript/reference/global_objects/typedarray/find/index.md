@@ -17,7 +17,7 @@ browser-compat: javascript.builtins.TypedArray.find
 The **`find()`** method returns a value of an element in the
 typed array, if it satisfies the provided testing function. Otherwise
 {{jsxref("undefined")}} is returned. _TypedArray_ is one of the
-[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 See also the {{jsxref("TypedArray.findIndex", "findIndex()")}} method, which returns
 the **index** of a found element in the typed array instead of its value.
@@ -102,7 +102,7 @@ returns {{jsxref("undefined")}} if there is no prime number).
 
 ```js
 function isPrime(element, index, array) {
-  var start = 2;
+  let start = 2;
   while (start <= Math.sqrt(element)) {
     if (element % start++ < 1) {
       return false;
@@ -111,7 +111,7 @@ function isPrime(element, index, array) {
   return element > 1;
 }
 
-var uint8 = new Uint8Array([4, 5, 8, 12]);
+const uint8 = new Uint8Array([4, 5, 8, 12]);
 console.log(uint8.find(isPrime)); // 5
 ```
 

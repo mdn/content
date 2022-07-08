@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.username
 slug: Web/API/HTMLAnchorElement/username
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAnchorElement
@@ -11,7 +12,7 @@ browser-compat: api.HTMLAnchorElement.username
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.username`** property is a
-{{domxref("USVString")}} containing the username specified before the domain name.
+string containing the username specified before the domain name.
 
 ## Value
 

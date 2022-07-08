@@ -1,6 +1,7 @@
 ---
 title: Introduction to the File and Directory Entries API
 slug: Web/API/File_and_Directory_Entries_API/Introduction
+page-type: guide
 tags:
   - API
   - Beginner
@@ -37,7 +38,7 @@ The File and Directory Entries API is an important API for the following reasons
 - It lets users of your web app directly edit a binary file that's in their local file directory.
 - It provides a storage API that is already familiar to your users, who are used to working with file systems.
 
-For examples of features you can create with this app, see the [Sample use cases](#sample-use-cases) section.
+For examples of features you can create with this app, see the [Sample use cases](#sample_use_cases) section.
 
 ### The File and Directory Entries API and other storage APIs
 

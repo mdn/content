@@ -4,6 +4,7 @@ slug: Web/Security/Secure_Contexts
 tags:
   - Secure contexts
   - Security
+spec-urls: https://w3c.github.io/webappsec-secure-contexts/
 ---
 A **secure context** is a `Window` or `Worker` for which certain minimum standards of authentication and confidentiality are met. Many Web APIs and features are accessible only in a secure context. The primary goal of secure contexts is to prevent {{interwiki("wikipedia", "man-in-the-middle attack", "MITM attackers")}} from accessing powerful APIs that could further compromise the victim of an attack.
 
@@ -47,9 +48,7 @@ if (window.isSecureContext) {
 
 ## Specifications
 
-| Specification                            | Status                               | Comment        |
-| ---------------------------------------- | ------------------------------------ | -------------- |
-| {{SpecName('Secure Contexts')}} | {{Spec2('Secure Contexts')}} | Editor's Draft |
+{{Specifications}}
 
 ## See also
 

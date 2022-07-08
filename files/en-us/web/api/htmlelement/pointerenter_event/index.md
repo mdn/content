@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: pointerenter event'
 slug: Web/API/HTMLElement/pointerenter_event
+page-type: web-api-event
 tags:
   - Event
   - HTML DOM

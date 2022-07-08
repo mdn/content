@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.mode
 slug: Web/API/SourceBuffer/mode
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -46,7 +47,7 @@ processing either an {{domxref("SourceBuffer.appendBuffer","appendBuffer()")}} o
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ### Exceptions
 

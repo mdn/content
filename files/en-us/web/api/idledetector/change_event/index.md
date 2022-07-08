@@ -1,6 +1,7 @@
 ---
 title: 'IdleDetector: change event'
 slug: Web/API/IdleDetector/change_event
+page-type: web-api-event
 tags:
   - API
   - Event

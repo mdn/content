@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ontouchmove
 slug: Web/API/GlobalEventHandlers/ontouchmove
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -17,7 +18,7 @@ A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("tou
 ## Syntax
 
 ```js
-var moveHandler = someElement.ontouchmove;
+const moveHandler = someElement.ontouchmove;
 ```
 
 ### Return value
@@ -39,7 +40,7 @@ function moveTouch(ev) {
 }
 
 function init() {
- var el=document.getElementById("target1");
+ const el=document.getElementById("target1");
  el.ontouchmove = moveTouch;
 }
 

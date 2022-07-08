@@ -55,7 +55,6 @@ Page titles, on the other hand, may be as long as you like, within reason, and t
 
 When you need to add some articles about a topic or subject area, you will typically do so by creating a landing page, then adding subpages for each of the individual articles.
 The landing page should open with a paragraph or two describing the topic or technology, then provide a list of the subpages with descriptions of each page.
-You can automate the insertion of pages into the list using some macros we've created.
 
 For example, consider the [JavaScript](/en-US/docs/Web/JavaScript) guide, which is structured as follows:
 
@@ -99,7 +98,7 @@ It should mention the technologies and/or APIs that are being documented or disc
 This example of a summary is far too short.
 It leaves out too much information, such as what it means exactly to "stroke" text, where the text is drawn, and so forth.
 
-**`CanvasRenderingContext2D.strokeText()`** draws a string.
+> **`CanvasRenderingContext2D.strokeText()`** draws a string.
 
 ##### Example: Too long!
 
@@ -108,31 +107,31 @@ Too much detail is included, and the text delves too deeply into describing othe
 
 Instead, the summary should focus on the `strokeText()` method, and should refer to the appropriate guides where the other details are described.
 
-When called, the Canvas 2D API method **`CanvasRenderingContext2D.strokeText()`** strokes the characters in the specified string beginning at the coordinates specified, using the current pen color.
-In the terminology of computer graphics, "stroking" text means to draw the outlines of the glyphs in the string without filling in the contents of each character with color.
-
-The text is drawn using the context's current font as specified in the context's {{domxref("CanvasRenderingContext2D.font", "font")}} property.
-
-The placement of the text relative to the specified coordinates are determined by the context's `textAlign`, `textBaseline`, and `direction` properties.
-`textAlign` controls the placement of the string relative to the X coordinate specified; if the value is `"center"`, then the string is drawn starting at `x - (stringWidth / 2)`, placing the specified X-coordinate in the middle of the string.
-If the value is `"left"`, the string is drawn starting at the specified value of `x`.
-And if `textAlign` is `"right"`, the text is drawn such that it ends at the specified X-coordinate.
-
-(etc etc etc...)
-
-You can, optionally, provide a fourth parameter that lets you specify a maximum width for the string, in pixels.
-If you provide this parameter, the text is compressed horizontally or scaled (or otherwise adjusted) to fit inside a space that wide when being drawn.
-
-You can call the **`fillText()`** method to draw a string's characters as filled with color instead of only drawing the outlines of the characters.
+> When called, the Canvas 2D API method **`CanvasRenderingContext2D.strokeText()`** strokes the characters in the specified string beginning at the coordinates specified, using the current pen color.
+> In the terminology of computer graphics, "stroking" text means to draw the outlines of the glyphs in the string without filling in the contents of each character with color.
+>
+> The text is drawn using the context's current font as specified in the context's {{domxref("CanvasRenderingContext2D.font", "font")}} property.
+>
+> The placement of the text relative to the specified coordinates are determined by the context's `textAlign`, `textBaseline`, and `direction` properties.
+> `textAlign` controls the placement of the string relative to the X coordinate specified; if the value is `"center"`, then the string is drawn starting at `x - (stringWidth / 2)`, placing the specified X-coordinate in the middle of the string.
+> If the value is `"left"`, the string is drawn starting at the specified value of `x`.
+> And if `textAlign` is `"right"`, the text is drawn such that it ends at the specified X-coordinate.
+>
+> (etc etc etc...)
+>
+> You can, optionally, provide a fourth parameter that lets you specify a maximum width for the string, in pixels.
+> If you provide this parameter, the text is compressed horizontally or scaled (or otherwise adjusted) to fit inside a space that wide when being drawn.
+>
+> You can call the **`fillText()`** method to draw a string's characters as filled with color instead of only drawing the outlines of the characters.
 
 ##### Example: Much better!
 
 Here we see a much better overview for the `strokeText()` method.
 
-The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates.
-The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
-
-For more details and further examples, see {{SectionOnPage("/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Text")}} in the Learning Area as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+> The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates.
+> The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
+>
+> For more details and further examples, see {{SectionOnPage("/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Text")}} in the Learning Area as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
 #### Include all relevant examples
 
@@ -159,7 +158,7 @@ This makes documenting code incredibly powerful and flexible.
 #### Overly-short articles are hard to find
 
 If an article is "thin"—that is, too short—it may not be indexed properly (or at all) by search engines.
-As a rule of thumb, the article's body text should be at least 250–300 words.
+As a guiding principle, the article's body text should be at least 250–300 words.
 Don't artificially inflate a page, but treat this guideline as a minimum target length when possible.
 
 ### Headings
@@ -226,17 +225,6 @@ We have created a short numbered list that provides instructive steps to produce
 
 Note how the items in numbered lists read like short paragraphs.
 Because numbered lists are routinely used for instructional purposes, or to walk someone through an orderly procedure, be sure to keep each item focused: one numbered item per step.
-
-### Text formatting and styles
-
-Use the **"Formatting Styles"** drop-down list to apply predefined styles to selected content.
-
-> **Note:** The **"Note Box"** style is used to call out important notes, like this one.
-
-> **Warning:** Similarly, the **"Warning Box"** style creates warning boxes like this.
-
-Unless specifically instructed, _do not_ use the HTML `style` attribute to manually apply a style.
-If you can't do it using a predefined class, ask for help in the [MDN discussion forum](https://discourse.mozilla.org/c/mdn/236).
 
 ### Code sample style and formatting
 
@@ -513,7 +501,7 @@ There are a couple of reasons for this.
 2. If curly quotes or apostrophes make their way into code snippets—even inline ones—readers may copy and paste them, expecting them to function (which they will not).
 
 - **Correct**: Please don't use "curly quotes."
-- **Incorrect**: Please don't use “curly quotes.”
+- **Incorrect**: Please don’t use “curly quotes.”
 
 ### Spelling
 
@@ -560,7 +548,7 @@ Try to be consistent, though.
 
 ### Preferred style guides
 
-If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/)—or, failing that, the [Chicago Manual of Style](https://www.amazon.com/Chicago-Manual-Style-16th/dp/0226104206).
+If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/)—or, failing that, the [Chicago Manual of Style](https://www.amazon.com/Chicago-Manual-Style-16th/dp/0226104206).
 An [unofficial crib sheet for the Chicago Manual of Style](https://faculty.cascadia.edu/cma/HIST148/cmscrib.pdf) is available online.
 
 ### Preferred dictionary

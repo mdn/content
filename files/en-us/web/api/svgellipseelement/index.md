@@ -1,6 +1,7 @@
 ---
 title: SVGEllipseElement
 slug: Web/API/SVGEllipseElement
+page-type: web-api-interface
 tags:
   - API
   - Reference

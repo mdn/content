@@ -1,6 +1,7 @@
 ---
 title: Using the CSS Painting API
 slug: Web/API/CSS_Painting_API/Guide
+page-type: guide
 tags:
   - CSS
   - CSS Paint API
@@ -29,7 +30,7 @@ In an external script file, we employ the [`registerPaint()`](/en-US/docs/Web/AP
 registerPaint('headerHighlight', class {
 
   /*
-       define if alphatransparency  is allowed alpha
+       define if alphatransparency is allowed alpha
        is set to true by default. If set to false, all
        colors used on the canvas will be fully opaque
     */

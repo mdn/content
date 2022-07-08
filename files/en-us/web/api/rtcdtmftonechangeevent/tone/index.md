@@ -1,6 +1,7 @@
 ---
 title: RTCDTMFToneChangeEvent.tone
 slug: Web/API/RTCDTMFToneChangeEvent/tone
+page-type: web-api-instance-property
 tags:
   - Media
   - Property
@@ -19,11 +20,9 @@ returns the DTMF character which has just begun to play, or an empty string
 (`""`). if all queued tones have finished playing (that is,
 {{domxref("RTCDTMFSender.toneBuffer")}} is empty).
 
-## Syntax
+## Value
 
-```js
- var tone = dtmfToneChangeEvent.tone;
-```
+A string with the DTML character playing, or the empty string.
 
 ## Example
 

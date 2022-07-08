@@ -1,6 +1,7 @@
 ---
 title: SVGGlyphRefElement
 slug: Web/API/SVGGlyphRefElement
+page-type: web-api-interface
 tags:
   - API
   - Deprecated
@@ -20,9 +21,9 @@ The **`SVGGlyphRefElement`** interface corresponds to the {{SVGElement("glyphRef
 _This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
 - {{domxref("SVGGlyphRefElement.glyphRef")}}
-  - : A {{domxref("DOMString")}} corresponding to the {{SVGAttr("glyphRef")}} attribute of the given element.
+  - : A string corresponding to the {{SVGAttr("glyphRef")}} attribute of the given element.
 - {{domxref("SVGGlyphRefElement.format")}}
-  - : A {{domxref("DOMString")}} corresponding to the {{SVGAttr("format")}} attribute of the given element.
+  - : A string corresponding to the {{SVGAttr("format")}} attribute of the given element.
 - {{domxref("SVGGlyphRefElement.x")}}
   - : A float corresponding to the {{SVGAttr("x")}} attribute of the given element.
 - {{domxref("SVGGlyphRefElement.y")}}

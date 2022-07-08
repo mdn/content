@@ -1,6 +1,7 @@
 ---
 title: XRWebGLDepthInformation
 slug: Web/API/XRWebGLDepthInformation
+page-type: web-api-interface
 tags:
   - API
   - Interface

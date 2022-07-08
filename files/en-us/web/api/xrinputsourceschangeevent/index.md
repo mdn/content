@@ -1,6 +1,7 @@
 ---
 title: XRInputSourcesChangeEvent
 slug: Web/API/XRInputSourcesChangeEvent
+page-type: web-api-interface
 tags:
   - API
   - AR

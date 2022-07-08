@@ -1,6 +1,7 @@
 ---
 title: FileSystem
 slug: Web/API/FileSystem
+page-type: web-api-interface
 tags:
   - API
   - File API
@@ -41,6 +42,5 @@ There are two ways to get access to a `FileSystem` object:
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemEntry")}}, {{domxref("FileSystemFileEntry")}}, and {{domxref("FileSystemDirectoryEntry")}}
-- MSDN article: [WebKitFileSystem object](https://developer.mozilla.org/en-US/docs/Web/API/FileSystem)

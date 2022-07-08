@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.complete
 slug: Web/API/HTMLImageElement/complete
+page-type: web-api-instance-property
 tags:
   - API
   - Fetching

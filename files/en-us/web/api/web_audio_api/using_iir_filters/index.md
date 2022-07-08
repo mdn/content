@@ -1,6 +1,7 @@
 ---
 title: Using IIR filters
 slug: Web/API/Web_Audio_API/Using_IIR_filters
+page-type: guide
 tags:
   - API
   - Audio
@@ -11,7 +12,7 @@ tags:
 ---
 {{DefaultAPISidebar("Web Audio API")}}
 
-The **`IIRFilterNode`** interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) is an {{domxref("AudioNode")}} processor that implements a general [infinite impulse response](https://en.wikipedia.org/wiki/infinite%20impulse%20response) (IIR) filter; this type of filter can be used to implement tone control devices and graphic equalizers, and the filter response parameters can be specified, so that it can be tuned as needed. This article looks at how to implement one, and use it in a simple example.
+The **`IIRFilterNode`** interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) is an {{domxref("AudioNode")}} processor that implements a general [infinite impulse response](https://en.wikipedia.org/wiki/Infinite_impulse_response) (IIR) filter; this type of filter can be used to implement tone control devices and graphic equalizers, and the filter response parameters can be specified, so that it can be tuned as needed. This article looks at how to implement one, and use it in a simple example.
 
 ## Demo
 
@@ -152,7 +153,7 @@ iirFilter.getFrequencyResponse(myFrequencyArray, magResponseOutput, phaseRespons
 We can use this data to draw a filter frequency plot. We'll do so on a 2d canvas context.
 
 ```js
-// create a canvas element and append it to our dom
+// create a canvas element and append it to our DOM
 const canvasContainer = document.querySelector('.filter-graph');
 const canvasEl = document.createElement('canvas');
 canvasContainer.appendChild(canvasEl);

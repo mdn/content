@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.depthFunc()
 slug: Web/API/WebGLRenderingContext/depthFunc
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -44,7 +45,7 @@ depthFunc(func)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

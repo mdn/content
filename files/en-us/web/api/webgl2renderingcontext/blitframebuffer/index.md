@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.blitFramebuffer()
 slug: Web/API/WebGL2RenderingContext/blitFramebuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -49,7 +50,7 @@ blitFramebuffer(srcX0, srcY0, srcX1, srcY1,
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

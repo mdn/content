@@ -55,7 +55,7 @@ After stabilizing for another four weeks in Beta, we're ready to ship the new fe
 
 Firefox ESR is the long-term support edition of Firefox for desktop for use by organizations including schools, universities, businesses and others who need extended support for mass deployments.
 
-[Download Firefox ESR](https://www.mozilla.org/firefox/organizations/all/)
+[Download Firefox ESR](https://www.mozilla.org/en-US/firefox/all/#product-desktop-esr)
 
 ## Contents
 

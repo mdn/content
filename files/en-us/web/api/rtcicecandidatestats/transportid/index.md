@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.transportId
 slug: Web/API/RTCIceCandidateStats/transportId
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -31,7 +32,7 @@ information about this candidate was taken.
 
 ## Value
 
-A {{domxref("DOMString")}} whose value uniquely identifies the transport from which any
+A string whose value uniquely identifies the transport from which any
 transport-related information accumulated in the {{domxref("RTCIceCandidateStats")}} was
 taken. This can be used to compare candidates that would use the same transport, for
 example.

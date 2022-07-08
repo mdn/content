@@ -1,6 +1,7 @@
 ---
 title: Web Periodic Background Synchronization API
 slug: Web/API/Web_Periodic_Background_Synchronization_API
+page-type: web-api-overview
 tags:
   - API
   - Background
@@ -12,6 +13,7 @@ tags:
   - Sync
   - Web Periodic Background Synchronization API
   - periodic
+browser-compat: api.PeriodicSyncManager
 ---
 {{securecontext_header}}
 
@@ -105,13 +107,11 @@ self.addEventListener('periodicsync', event => {
 
 ## Specifications
 
-| Specification                                                                              |
-| ------------------------------------------------------------------------------------------ |
-| [Web Periodic Background Synchronization](https://wicg.github.io/periodic-background-sync/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.PeriodicSyncManager")}}
+{{Compat}}
 
 ## See also
 

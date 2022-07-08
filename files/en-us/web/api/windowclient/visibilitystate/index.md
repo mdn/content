@@ -1,6 +1,7 @@
 ---
 title: WindowClient.visibilityState
 slug: Web/API/WindowClient/visibilityState
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -21,7 +22,7 @@ This value can be one of `"hidden"`, `"visible"`, or
 
 ## Value
 
-A {{domxref("DOMString")}} (See {{domxref("Document.visibilityState")}} for values).
+A string (See {{domxref("Document.visibilityState")}} for values).
 
 ## Examples
 

@@ -335,7 +335,7 @@ The list will grow over time, but at the time of writing, the following main pac
 
 - npm at [npmjs.org](https://www.npmjs.com/)
 - pnpm at [pnpm.js.org](https://pnpm.js.org/)
-- yarn at [yarnpkg.com](https://yarnpkg.com/)
+- Yarn at [yarnpkg.com](https://yarnpkg.com/)
 
 npm and pnpm are similar from a command line point of view — in fact pnpm aims to have full parity over the argument options that npm offers. It differs in that it uses a different method for downloading and storing the packages on your computer, aiming to reduce the overall disk space required.
 
@@ -419,7 +419,7 @@ npm run dev
 
 This would run a custom script for starting our project in "development mode". In fact, we regularly include this in all projects as the local development setup tends to run slightly differently to how it would run in production.
 
-If you tried running this in your Parcel test project from earlier it would (likely) claim the "dev script is missing". This is because npm, yarn (and the like) are looking for a property called dev in the `scripts` property of your `package.json` file.
+If you tried running this in your Parcel test project from earlier it would (likely) claim the "dev script is missing". This is because npm, Yarn (and the like) are looking for a property called dev in the `scripts` property of your `package.json` file.
 
 Parcel can run a development server using the command `parcel serve filename.html`, and we'd like to use that often during our development.
 
@@ -470,7 +470,7 @@ This brings us to the end of our tour of package managers. Our next move is to b
 ## See also
 
 - [npm scripts reference](https://docs.npmjs.com/cli/v8/using-npm/scripts/)
-- [package.json reference](https://docs.npmjs.com/cli/v8/configuring-npm/package-json)
+- [package.json reference](https://docs.npmjs.com/cli/v8/configuring-npm/package-json/)
 
 ## In this module
 

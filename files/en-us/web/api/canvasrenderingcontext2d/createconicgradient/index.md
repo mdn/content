@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.createConicGradient()
 slug: Web/API/CanvasRenderingContext2D/createConicGradient
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

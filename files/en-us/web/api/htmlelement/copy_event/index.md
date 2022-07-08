@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: copy event'
 slug: Web/API/HTMLElement/copy_event
+page-type: web-api-event
 tags:
   - API
   - Clipboard API
@@ -9,7 +10,7 @@ tags:
   - Reference
   - Web
   - copy
-browser-compat: api.HTMLElement.copy_event
+browser-compat: api.Element.copy_event
 ---
 {{ APIRef("HTML DOM") }}
 
@@ -36,7 +37,7 @@ A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
 - {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
-  - : Is a {{domxref("DataTransfer")}} object containing the data affected by the user-initiated {{domxref("HTMLElement/cut_event", "cut")}}, {{domxref("HTMLElement/copy_event", "copy")}}, or {{domxref("HTMLElement/paste_event", "paste")}} operation, along with its MIME type.
+  - : A {{domxref("DataTransfer")}} object containing the data affected by the user-initiated {{domxref("HTMLElement/cut_event", "cut")}}, {{domxref("HTMLElement/copy_event", "copy")}}, or {{domxref("HTMLElement/paste_event", "paste")}} operation, along with its MIME type.
 
 ## Example
 

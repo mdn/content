@@ -1,6 +1,7 @@
 ---
 title: MouseScrollEvent
 slug: Web/API/MouseScrollEvent
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -11,7 +12,7 @@ tags:
   - Reference
 browser-compat: api.MouseScrollEvent
 ---
-{{APIRef("DOM Events")}}{{ non-standard_header() }}{{deprecated_header}}
+{{APIRef("UI Events")}}{{ non-standard_header() }}{{deprecated_header}}
 
 The **`MouseScrollEvent`** interface represents events that occur due to the user moving a mouse wheel or similar input device.
 

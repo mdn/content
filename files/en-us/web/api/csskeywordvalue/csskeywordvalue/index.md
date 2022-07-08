@@ -1,6 +1,7 @@
 ---
 title: CSSKeywordValue()
 slug: Web/API/CSSKeywordValue/CSSKeywordValue
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
@@ -25,7 +26,7 @@ new CSSKeywordValue(val)
 
 ### Parameters
 
-- value
+- `value`
   - : Sets or returns the value of the new `CSSKeywordValue`.
 
 ### Exceptions
@@ -38,8 +39,7 @@ new CSSKeywordValue(val)
 The following example resets the CSS {{cssxref('display')}} property to its defaults,
 setting the inline
 [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute
-to `style="display: initial"` if viewed in the [developer tools
-inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/select_an_element/index.html).
+to `style="display: initial"` if viewed in the [developer tools inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/select_an_element/index.html).
 
 ```css hidden
 #myElement {

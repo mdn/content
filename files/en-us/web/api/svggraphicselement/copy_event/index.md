@@ -1,13 +1,14 @@
 ---
 title: 'SVGGraphicsElement: copy event'
 slug: Web/API/SVGGraphicsElement/copy_event
+page-type: web-api-event
 tags:
   - API
   - Event
   - Reference
   - SVG
   - SVG OM
-browser-compat: api.SVGGraphicsElement.copy_event
+browser-compat: api.Element.copy_event
 ---
 {{APIRef}}
 

@@ -135,7 +135,7 @@ new Example(); // ['constructor', 'first', 'second']
 ### Derived classes
 
 Unlike base class constructors, derived constructors have no initial `this`
-binding. Calling  {{jsxref("Operators/super", "super()")}} creates a `this`
+binding. Calling {{jsxref("Operators/super", "super()")}} creates a `this`
 binding within the constructor and essentially has the effect of evaluating the
 following line of code, where Base is the inherited class:
 
@@ -503,8 +503,8 @@ for (var i = 0; i < elements.length; i++) {
 
 ### In an inline event handler
 
-When the code is called from an inline [on-event handler](/en-US/docs/Web/Guide/Events/Event_handlers), its
-`this` is set to the DOM element on which the listener is placed:
+When the code is called from an inline [on-event handler](/en-US/docs/Web/Events/Event_handlers),
+its `this` is set to the DOM element on which the listener is placed:
 
 ```html
 <button onclick="alert(this.tagName.toLowerCase());">

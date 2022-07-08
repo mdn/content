@@ -1,6 +1,7 @@
 ---
 title: FeaturePolicy.allowsFeature()
 slug: Web/API/FeaturePolicy/allowsFeature
+page-type: web-api-instance-method
 browser-compat: api.FeaturePolicy.allowsFeature
 ---
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}

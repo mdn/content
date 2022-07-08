@@ -1,6 +1,7 @@
 ---
 title: IIRFilterNode
 slug: Web/API/IIRFilterNode
+page-type: web-api-interface
 tags:
   - API
   - Audio

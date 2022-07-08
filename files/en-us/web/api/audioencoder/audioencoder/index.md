@@ -1,6 +1,7 @@
 ---
 title: AudioEncoder.AudioEncoder()
 slug: Web/API/AudioEncoder/AudioEncoder
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -15,7 +16,7 @@ The **`AudioEncoder()`** constructor creates a new {{domxref("AudioEncoder")}} o
 ## Syntax
 
 ```js
-new AudioEncoder(init);
+new AudioEncoder(init)
 ```
 
 ### Parameters
@@ -25,13 +26,13 @@ new AudioEncoder(init);
     - `output`
       - : A callback which takes a {{domxref("EncodedAudioChunk")}} object as the first argument, and an optional metadata object as the second. The metadata object has one member, `decoderConfig` which has an object as its value containing:
         - `codec`
-          - : A {{domxref("DOMString","string")}} containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry).
+          - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry).
         - `sampleRate`
           - : An integer representing the number of frame samples per second.
         - `numberOfChannels`
           - : An integer representing the number of audio channels.
-        - `description`{{Optional_Inline}}
-          - : A {{domxref("BufferSource")}} containing a sequence of codec specific bytes, commonly known as extradata.
+        - `description` {{optional_inline}}
+          - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing a sequence of codec specific bytes, commonly known as extradata.
     - `error`
       - : A callback which takes an {{jsxref("Error")}} object as its only argument.
 

@@ -52,8 +52,8 @@ beyond the end of the typed array.
 ### Using set()
 
 ```js
-var buffer = new ArrayBuffer(8);
-var uint8 = new Uint8Array(buffer);
+const buffer = new ArrayBuffer(8);
+const uint8 = new Uint8Array(buffer);
 
 uint8.set([1, 2, 3], 3);
 

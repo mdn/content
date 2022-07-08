@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.country
 slug: Web/API/PaymentAddress/country
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -26,7 +27,7 @@ Some examples of valid `country` values: `"US"`,
 
 ## Value
 
-A {{domxref("DOMString")}} which contains the ISO3166-1 alpha-2 code identifying the
+A string which contains the ISO3166-1 alpha-2 code identifying the
 country in which the address is located, or an empty string if no country is available,
 which frequently can be assumed to mean "same country as the site owner."
 
@@ -46,7 +47,6 @@ validation error that occurred and, if possible, suggests how to fix it.
 
 ## See also
 
-- [Using
-  the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - {{domxref("PaymentRequestUpdateEvent.updateWith")}}
 - {{domxref("AddressErrors.country")}}

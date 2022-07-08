@@ -1,6 +1,7 @@
 ---
 title: Window
 slug: Web/API/Window
+page-type: web-api-interface
 tags:
   - API
   - Browser
@@ -41,7 +42,7 @@ See also the [DOM Interfaces](/en-US/docs/Web/API/Document_Object_Model).
 - {{domxref("StaticRange")}} {{experimental_inline}} {{readonlyinline}}
   - : Returns a {{domxref('StaticRange.StaticRange','StaticRange()')}} constructor which creates a {{domxref('StaticRange')}} object.
 - {{domxref("Worker")}}
-  - : Used for creating a [Web worker.](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+  - : Used for creating a [Web worker](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
 - {{domxref("XMLSerializer")}}
   - : Converts a DOM tree into XML or HTML source.
 
@@ -67,6 +68,8 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the document that the window contains.
 - {{domxref("Window.event")}} {{deprecated_inline}} {{readOnlyInline}}
   - : Returns the **current event**, which is the event currently being handled by the JavaScript code's context, or `undefined` if no event is currently being handled. The {{domxref("Event")}} object passed directly to event handlers should be used instead whenever possible.
+- {{domxref("Window.external")}} {{deprecated_inline}} {{readOnlyInline}}
+  - : Returns an object with functions for adding external search providers to the browser.
 - {{domxref("Window.frameElement")}} {{readOnlyInline}}
   - : Returns the element in which the window is embedded, or null if the window is not embedded.
 - {{domxref("Window.frames")}} {{readOnlyInline}}
@@ -110,7 +113,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - {{domxref("Window.scrollX","Window.pageXOffset")}} {{readOnlyInline}}
   - : An alias for {{domxref("window.scrollX")}}.
 - {{domxref("Window.scrollY","Window.pageYOffset")}} {{readOnlyInline}}
-  - : An alias for {{domxref("window.scrollY")}}
+  - : An alias for {{domxref("window.scrollY")}}.
 - {{domxref("Window.parent")}} {{readOnlyInline}}
   - : Returns a reference to the parent of the current window or subframe.
 - {{domxref("Window.performance")}} {{readOnlyInline}}
@@ -163,7 +166,10 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - {{domxref("indexedDB")}} {{readonlyInline}}
   - : Provides a mechanism for applications to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.
 - {{domxref("origin")}} {{readOnlyinline}}
-  - : Returns the global object's origin, serialized as a string. (This does not yet appear to be implemented in any browser.)
+  - : Returns the global object's origin, serialized as a string.
+- {{domxref("Window.scheduler")}} {{readOnlyInline}}
+  - : Returns the {{domxref("Scheduler")}} object associated with the current context.
+    This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
 
 ### Deprecated properties
 
@@ -171,10 +177,6 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the content element in the current window. Since Firefox 57 (initially Nightly-only), both versions are only available from chrome (privileged) code, and not available to the web anymore.
 - {{domxref("Window.defaultStatus")}} {{deprecated_inline}}
   - : Gets/sets the status bar text for the given window.
-- {{domxref("Window.dialogArguments")}} {{deprecated_inline}} {{ReadOnlyInline}}
-  - : Gets the arguments passed to the window (if it's a dialog box) at the time {{domxref("window.showModalDialog()")}} was called. This is an `nsIArray`.
-- {{domxref("Window.mozPaintCount")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Returns the number of times the current document has been rendered to the screen in this window. This can be used to compute rendering performance.
 - {{domxref("Window.orientation")}} {{readOnlyInline}} {{deprecated_inline}}
   - : Returns the orientation in degrees (in 90 degree increments) of the viewport relative to the device's natural orientation.
 - {{domxref("Window.returnValue")}} {{deprecated_inline}}
@@ -243,7 +245,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("Window.scrollTo()")}}
   - : Scrolls to a particular set of coordinates in the document.
 - {{domxref("Window.setImmediate()")}} {{Non-standard_inline}}
-  - : Executes a function after the browser has finished other heavy tasks
+  - : Executes a function after the browser has finished other heavy tasks.
 - {{domxref("Window.setResizable()")}} {{Non-standard_inline}}
   - : Toggles a user's ability to resize a window.
 - {{domxref("Window.sizeToContent()")}} {{Non-standard_inline}}
@@ -315,31 +317,27 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 ### Event handlers implemented from elsewhere
 
 - {{domxref("GlobalEventHandlers.onabort")}}
-  - : Called when the loading of a resource has been aborted, such as by a user canceling the load while it is still in progress
-- {{domxref("GlobalEventHandlers.onblur")}}
-  - : Called after the window loses focus, such as due to a popup.
+  - : Called when the loading of a resource has been aborted, such as by a user canceling the load while it is still in progress.
 - {{domxref("GlobalEventHandlers.onchange")}}
   - : An event handler property for change events on the window.
 - {{domxref("GlobalEventHandlers.onclick")}}
-  - : Called after the ANY mouse button is pressed & released
+  - : Called after the ANY mouse button is pressed & released.
 - {{domxref("GlobalEventHandlers.ondblclick")}}
   - : Called when a double click is made with ANY mouse button.
 - {{domxref("GlobalEventHandlers.onclose")}}
-  - : Called after the window is closed
+  - : Called after the window is closed.
 - {{domxref("GlobalEventHandlers.oncontextmenu")}}
-  - : Called when the RIGHT mouse button is pressed
+  - : Called when the RIGHT mouse button is pressed.
 - {{domxref("GlobalEventHandlers.onerror")}}
-  - : Called when a resource fails to load OR when an error occurs at runtime. See {{event("error")}} event.
-- {{domxref("GlobalEventHandlers.onfocus")}}
-  - : Called after the window receives or regains focus. See {{event("focus")}} events.
+  - : Called when a resource fails to load OR when an error occurs at runtime. See {{domxref("Window/error_event", "error")}} event.
 - {{domxref("GlobalEventHandlers.oninput")}}
-  - : Called when the value of an \<input> element changes
+  - : Called when the value of an \<input> element changes.
 - {{domxref("GlobalEventHandlers.onkeydown")}}
-  - : Called when you begin pressing ANY key. See {{event("keydown")}} event.
+  - : Called when you begin pressing ANY key. See {{domxref("Element/keydown_event", "keydown")}} event.
 - {{domxref("GlobalEventHandlers.onkeypress")}}
-  - : Called when a key (except Shift, Fn, and CapsLock) is in pressed position. See {{event("keypress")}} event.
+  - : Called when a key (except Shift, Fn, and CapsLock) is in pressed position. See {{domxref("Element/keypress_event", "keypress")}} event.
 - {{domxref("GlobalEventHandlers.onkeyup")}}
-  - : Called when you finish releasing ANY key. See {{event("keyup")}} event.
+  - : Called when you finish releasing ANY key. See {{domxref("Element/keyup_event", "keyup")}} event.
 - {{domxref("GlobalEventHandlers.onload")}}
   - : Called after all resources and the DOM are fully loaded. WILL NOT get called when the page is loaded from cache, such as with back button.
 - {{domxref("GlobalEventHandlers.onmousedown")}}
@@ -349,23 +347,19 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.onmouseout")}}
   - : Called when the pointer leaves the window.
 - {{domxref("GlobalEventHandlers.onmouseover")}}
-  - : Called when the pointer enters the window
+  - : Called when the pointer enters the window.
 - {{domxref("GlobalEventHandlers.onmouseup")}}
-  - : Called when ANY mouse button is released
-- {{domxref("GlobalEventHandlers.onreset")}}
-  - : Called when a form is reset
-- {{domxref("GlobalEventHandlers.onresize")}}
-  - : Called continuously as you are resizing the window.
+  - : Called when ANY mouse button is released.
 - {{domxref("GlobalEventHandlers.onscroll")}}
-  - : Called when the scroll bar is moved via ANY means. If the resource fully fits in the window, then this event cannot be invoked
+  - : Called when the scroll bar is moved via ANY means. If the resource fully fits in the window, then this event cannot be invoked.
 - {{domxref("GlobalEventHandlers.onwheel")}}
-  - : Called when the mouse wheel is rotated around any axis
+  - : Called when the mouse wheel is rotated around any axis.
 - {{domxref("GlobalEventHandlers.onselect")}}
-  - : Called after text in an input field is selected
+  - : Called after text in an input field is selected.
 - {{domxref("GlobalEventHandlers.onselectionchange")}}
-  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("selectionchange")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the `selectionchange` event is raised.
 - {{domxref("GlobalEventHandlers.onsubmit")}}
-  - : Called when a form is submitted
+  - : Called when a form is submitted.
 
 ## Events
 
@@ -443,7 +437,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
     Also available via the {{domxref("GlobalEventHandlers/onblur", "onblur")}} property.
 - {{domxref("Window/focus_event", "focus")}}
   - : Fired when an element has gained focus.
-    Also available via the {{domxref("GlobalEventHandlers/onfocus", "onfocus")}} property
+    Also available via the {{domxref("GlobalEventHandlers/onfocus", "onfocus")}} property.
 
 ### Gamepad events
 

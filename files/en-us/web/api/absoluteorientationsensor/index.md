@@ -1,6 +1,7 @@
 ---
 title: AbsoluteOrientationSensor
 slug: Web/API/AbsoluteOrientationSensor
+page-type: web-api-interface
 tags:
   - API
   - AbsoluteOrientationSensor

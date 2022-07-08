@@ -48,13 +48,13 @@ initialized to 0.
 constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
 
 ```js example-bad
-var sab = SharedArrayBuffer(1024);
+const sab = SharedArrayBuffer(1024);
 // TypeError: calling a builtin SharedArrayBuffer constructor
 // without new is forbidden
 ```
 
 ```js example-good
-var sab = new SharedArrayBuffer(1024);
+const sab = new SharedArrayBuffer(1024);
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: 'Element: securitypolicyviolation event'
 slug: Web/API/Element/securitypolicyviolation_event
+page-type: web-api-event
 tags:
   - CSP
   - API

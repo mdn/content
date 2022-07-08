@@ -1,6 +1,7 @@
 ---
 title: 'Element: select event'
 slug: Web/API/Element/select_event
+page-type: web-api-event
 tags:
   - Element
   - Event

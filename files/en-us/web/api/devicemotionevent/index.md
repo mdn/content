@@ -1,6 +1,7 @@
 ---
 title: DeviceMotionEvent
 slug: Web/API/DeviceMotionEvent
+page-type: web-api-interface
 tags:
   - API
   - Device Orientation
@@ -12,9 +13,9 @@ tags:
   - Reference
 browser-compat: api.DeviceMotionEvent
 ---
-{{APIRef("Device Orientation Events")}}{{SeeCompatTable}}
+{{APIRef("Device Orientation Events")}}
 
-The `DeviceMotionEvent` provides web developers with information about the speed of changes for the device's position and orientation.
+The **`DeviceMotionEvent`** interface provides web developers with information about the speed of changes for the device's position and orientation.
 
 > **Warning:** Currently, Firefox and Chrome do not handle the coordinates the same way. Take care about this while using them.
 

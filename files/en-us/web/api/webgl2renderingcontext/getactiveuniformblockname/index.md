@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.getActiveUniformBlockName()
 slug: Web/API/WebGL2RenderingContext/getActiveUniformBlockName
+page-type: web-api-instance-method
 tags:
   - API
   - Method

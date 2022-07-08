@@ -1,6 +1,7 @@
 ---
 title: PerformanceElementTiming.element
 slug: Web/API/PerformanceElementTiming/element
+page-type: web-api-instance-property
 tags:
   - API
   - Property

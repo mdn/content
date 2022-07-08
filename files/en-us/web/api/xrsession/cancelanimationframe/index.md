@@ -1,6 +1,7 @@
 ---
 title: XRSession.cancelAnimationFrame()
 slug: Web/API/XRSession/cancelAnimationFrame
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -38,7 +39,7 @@ cancelAnimationFrame(handle)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Usage notes
 

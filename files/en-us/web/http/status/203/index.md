@@ -7,6 +7,7 @@ tags:
   - Reference
   - Status code
   - Successful response
+spec-urls: https://httpwg.org/specs/rfc7231.html#section-6.3.4
 ---
 {{HTTPSidebar}}
 
@@ -29,9 +30,7 @@ status code.
 
 ## Specifications
 
-| Specification                                                                        | Title                                                         |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "203 Non-Authoritative Information" , "6.3.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## See also
 

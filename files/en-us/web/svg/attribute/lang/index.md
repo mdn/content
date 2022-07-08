@@ -50,37 +50,7 @@ You can use this attribute with any SVG element.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "struct.html#LangAttribute", "lang")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>
-        Made the {{SVGAttr("lang")}} attribute (without namespace)
-        available on all elements and defined the interaction between both.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "fonts.html#GlyphElementLangAttribute", "lang")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Deprecated definition of the attribute for
-        {{SVGElement("glyph")}} elements
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

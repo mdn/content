@@ -1,6 +1,7 @@
 ---
 title: 'Document: touchmove event'
 slug: Web/API/Document/touchmove_event
+page-type: web-api-event
 tags:
   - API
   - DOM

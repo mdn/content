@@ -1,6 +1,7 @@
 ---
 title: XRInputSource.gripSpace
 slug: Web/API/XRInputSource/gripSpace
+page-type: web-api-instance-property
 tags:
   - API
   - AR

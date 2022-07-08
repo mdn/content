@@ -1,6 +1,7 @@
 ---
 title: TaskAttributionTiming.containerId
 slug: Web/API/TaskAttributionTiming/containerId
+page-type: web-api-instance-property
 tags:
   - API
   - Long Tasks API
@@ -19,7 +20,7 @@ the whole, for a long task.
 
 ## Value
 
-A {{domxref("DOMString")}} containing the containers `id` attribute.
+A string containing the containers `id` attribute.
 
 ## Specifications
 

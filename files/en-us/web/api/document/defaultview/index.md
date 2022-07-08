@@ -1,6 +1,7 @@
 ---
 title: Document.defaultView
 slug: Web/API/Document/defaultView
+page-type: web-api-instance-property
 tags:
   - API
   - Document

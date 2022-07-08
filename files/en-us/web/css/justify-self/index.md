@@ -190,7 +190,7 @@ article {
 
 ## Specifications
 
-{{Specifications("css.properties.justify-self.grid_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

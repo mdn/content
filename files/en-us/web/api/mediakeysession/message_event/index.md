@@ -1,6 +1,7 @@
 ---
 title: 'MediaKeySession: message event'
 slug: Web/API/MediaKeySession/message_event
+page-type: web-api-event
 tags:
   - message
   - API
@@ -33,8 +34,11 @@ An {{domxref("MediaKeyMessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-{{page("/en-US/docs/Web/API/MediaKeyMessageEvent", "Properties")}}
-
+- {{domxref("MediaKeyMessageEvent.message")}} {{readonlyinline}}
+  - : Returns an {{jsxref("ArrayBuffer")}} with a message from the content decryption module. Messages vary by key system.
+- {{domxref("MediaKeyMessageEvent.messageType")}} {{readonlyinline}}
+  - : Indicates the type of message. May be one of `license-request`, `license-renewal`, `license-release`, or `individualization-request`.
+  
 ## Specifications
 
 {{Specifications}}

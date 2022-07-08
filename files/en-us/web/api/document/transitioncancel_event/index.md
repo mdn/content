@@ -1,6 +1,7 @@
 ---
 title: 'Document: transitioncancel event'
 slug: Web/API/Document/transitioncancel_event
+page-type: web-api-event
 tags:
   - API
   - CSS Transitions
@@ -61,7 +62,7 @@ document.ontransitioncancel = () => {
 };
 ```
 
-[See a live example of this event.](/en-US/docs/Web/API/HTMLElement/transitioncancel_event#live_example)
+[See a live example of this event](/en-US/docs/Web/API/HTMLElement/transitioncancel_event#live_example).
 
 ## Specifications
 

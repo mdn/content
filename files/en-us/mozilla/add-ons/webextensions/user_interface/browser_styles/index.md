@@ -8,6 +8,12 @@ tags:
   - Extensions
   - Guide
   - WebExtensions
+browser-compat:
+  - webextensions.manifest.action
+  - webextensions.manifest.browser_action
+  - webextensions.manifest.page_action
+  - webextensions.manifest.sidebar_action
+  - webextensions.manifest.options_ui
 ---
 {{AddonSidebar}}
 
@@ -109,7 +115,7 @@ Most styles are automatically applied, but some elements require you to add the 
 
 ## Browser compatibility
 
-{{Compat("webextensions.browser_style")}}
+{{Compat}}
 
 ## Firefox Panel Components
 

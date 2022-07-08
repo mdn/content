@@ -1,6 +1,7 @@
 ---
 title: Navigator.hardwareConcurrency
 slug: Web/API/Navigator/hardwareConcurrency
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

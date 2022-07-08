@@ -113,9 +113,19 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
 
 ## Tables
 
-| Specification                                                                                | Status                           | Comment |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName("HTML WHATWG", "#link-type-dns-prefetch", "dns-prefetch")}} | {{Spec2("HTML WHATWG")}} |         |
+### Markdown table
+
+| Constant name                | Value  | Description |
+| ---------------------------- | ------ | ----------- |
+| `QUERY_COUNTER_BITS_EXT`     | 0x8864 | The number of bits used to hold the query result for the given target. |
+| `CURRENT_QUERY_EXT`          | 0x8865 | The currently active query. |
+| `QUERY_RESULT_EXT`           | 0x8866 | The query result. |
+| `QUERY_RESULT_AVAILABLE_EXT` | 0x8867 | A Boolean indicating whether a query result is available. |
+| `TIME_ELAPSED_EXT`           | 0x88BF | Elapsed time (in nanoseconds). |
+| `TIMESTAMP_EXT`              | 0x8E28 | The current time. |
+| `GPU_DISJOINT_EXT`           | 0x8FBB | A Boolean indicating whether the GPU performed any disjoint operation. |
+
+### HTML table
 
 <table class="properties">
   <tbody>
@@ -208,13 +218,6 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
         </p>
       </td>
     </tr>
-    <tr>
-      <td>
-        {{SpecName('Fetch','#forbidden-response-header-name','forbidden-response-header-name')}}
-      </td>
-      <td>{{spec2('Fetch')}}</td>
-      <td></td>
-    </tr>
   </tbody>
 </table>
 
@@ -230,7 +233,7 @@ When you request to access a {{Glossary("URL")}}, the gateway server can relay y
 
 - JavaScript {{jsxref("Array")}} on MDN
 
-Listening for mouse movement is even easier than listening for key presses: all we need is the listener for the {{event("mousemove")}} event.
+Listening for mouse movement is even easier than listening for key presses: all we need is the listener for the {{domxref("Element/mousemove_event", "mousemove")}} event.
 ...just below the `keyup event`:
 
 ## Browser compatibility
@@ -291,7 +294,7 @@ this.color("blue");
 
 </pre></div>
 
-{{ EmbedLiveSample('Rect_code', '700', '300', '', 'Games/Techniques/2D_collision_detection') }}
+{{ EmbedLiveSample('Rect_code', '700', '300') }}
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 

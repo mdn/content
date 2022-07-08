@@ -38,17 +38,17 @@ You cannot change this property directly.
 ### Using `dotAll`
 
 ```js
-var str1 = 'bar\nexample foo example';
+const str1 = 'bar\nexample foo example';
 
-var regex1 = new RegExp('bar.example','s');
+const regex1 = new RegExp('bar.example','s');
 
 console.log(regex1.dotAll); // Output: true
 
 console.log(str1.replace(regex1,'')); // Output: foo example
 
-var str2 = 'bar\nexample foo example';
+const str2 = 'bar\nexample foo example';
 
-var regex2 = new RegExp('bar.example');
+const regex2 = new RegExp('bar.example');
 
 console.log(regex2.dotAll); // Output: false
 

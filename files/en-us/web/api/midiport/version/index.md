@@ -1,6 +1,7 @@
 ---
 title: MIDIPort.version
 slug: Web/API/MIDIPort/version
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`version`** read-only property of the {{domxref("MIDIPort")}} interface re
 
 ## Value
 
-A {{domxref("DOMString","string")}} containing the version of the port.
+A string containing the version of the port.
 
 ## Examples
 

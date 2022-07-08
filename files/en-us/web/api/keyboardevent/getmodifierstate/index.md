@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.getModifierState()
 slug: Web/API/KeyboardEvent/getModifierState
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -10,7 +11,7 @@ tags:
   - getModifierState
 browser-compat: api.KeyboardEvent.getModifierState
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`KeyboardEvent.getModifierState()`** method returns the
 current state of the specified modifier key: `true` if the modifier is active
@@ -19,19 +20,19 @@ current state of the specified modifier key: `true` if the modifier is active
 ## Syntax
 
 ```js
-getModifierState(keyArg)
+getModifierState(key)
 ```
-
-### Return value
-
-A boolean value
 
 ### Parameters
 
-- _`keyArg`_
+- `key`
   - : A modifier key value. The value must be one of the {{domxref("KeyboardEvent.key")}}
     values which represent modifier keys, or the string `"Accel"`
     {{deprecated_inline}}. This is case-sensitive.
+
+### Return value
+
+A boolean.
 
 ## Modifier keys on Internet Explorer
 

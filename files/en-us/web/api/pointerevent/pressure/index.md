@@ -1,6 +1,7 @@
 ---
 title: PointerEvent.pressure
 slug: Web/API/PointerEvent/pressure
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -22,7 +23,7 @@ The normalized pressure of the pointer input in the range of `0` to `1`, inclusi
 
 ## Examples
 
-In this snippet, when a {{event("pointerdown")}} event is fired, different functions
+In this snippet, when a {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event is fired, different functions
 are called depending on the value of the event's `pressure` property.
 
 ```js

@@ -1,6 +1,7 @@
 ---
 title: Streams API concepts
 slug: Web/API/Streams_API/Concepts
+page-type: guide
 tags:
   - API
   - Streams

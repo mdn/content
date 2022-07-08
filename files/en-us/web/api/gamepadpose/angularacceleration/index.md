@@ -1,6 +1,7 @@
 ---
 title: GamepadPose.angularAcceleration
 slug: Web/API/GamepadPose/angularAcceleration
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

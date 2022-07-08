@@ -1,6 +1,7 @@
 ---
 title: 'HTMLTrackElement: cuechange event'
 slug: Web/API/HTMLTrackElement/cuechange_event
+page-type: web-api-event
 tags:
   - API
   - Accessibility

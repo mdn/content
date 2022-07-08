@@ -1,6 +1,7 @@
 ---
 title: TextTrackCueList
 slug: Web/API/TextTrackCueList
+page-type: web-api-interface
 tags:
   - API
   - Interface

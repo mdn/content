@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.removeStream()
 slug: Web/API/RTCPeerConnection/removeStream
+page-type: web-api-instance-method
 tags:
   - Deprecated
   - Media

@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.texStorage3D()
 slug: Web/API/WebGL2RenderingContext/texStorage3D
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -82,7 +83,7 @@ texStorage3D(target, levels, internalformat, width, height, depth)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -100,7 +100,7 @@ Although this tutorial doesn't mention them, it is possible to build React compo
 
 While routing is traditionally handled by a server and not an application on the user's computer, it is possible to configure a web application to read and update the browser's location, and render certain user interfaces. This is called client-side routing. It's possible to create many unique routes for your application (such as `/home`, `/dashboard`, or `login/`).
 
-The React community has produced two major libraries for client-side routing: [React Router](https://reacttraining.com/react-router/) and [Reach Router](https://reach.tech/router/).
+The React community has produced two major libraries for client-side routing: [React Router](https://reactrouter.com/) and [Reach Router](https://reach.tech/router/).
 
 - React Router is well-suited to applications with complex routing needs, and it meets some edge cases better than Reach Router. React Router is a larger library, however.
 - Reach Router is well-suited to simpler applications, and automatically manages focus as the user navigates from page to page.

@@ -1,6 +1,7 @@
 ---
 title: WritableStreamDefaultWriter.releaseLock()
 slug: Web/API/WritableStreamDefaultWriter/releaseLock
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -31,7 +32,7 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

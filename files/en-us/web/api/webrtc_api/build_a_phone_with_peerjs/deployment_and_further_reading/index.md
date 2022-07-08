@@ -1,6 +1,7 @@
 ---
 title: Deployment and further reading
 slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading
+page-type: guide
 ---
 {{WebRTCSidebar}}
 

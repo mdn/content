@@ -1,6 +1,7 @@
 ---
 title: File.lastModifiedDate
 slug: Web/API/File/lastModifiedDate
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

@@ -1,6 +1,7 @@
 ---
 title: Document.createEntityReference()
 slug: Web/API/Document/createEntityReference
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

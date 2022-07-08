@@ -12,6 +12,7 @@ tags:
   - Responsive Design
   - Web
   - matchMedia
+browser-compat: api.MediaQueryList
 ---
 {{CSSRef}}
 
@@ -87,9 +88,7 @@ mediaQueryList.removeEventListener('change', handleOrientationChange);
 
 ## Browser compatibility
 
-### `MediaQueryList` interface
-
-{{Compat("api.MediaQueryList")}}
+{{Compat}}
 
 ## See also
 

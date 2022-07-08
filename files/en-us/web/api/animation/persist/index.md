@@ -1,6 +1,7 @@
 ---
 title: Animation.persist()
 slug: Web/API/Animation/persist
+page-type: web-api-instance-method
 tags:
   - API
   - Animation

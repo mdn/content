@@ -79,7 +79,7 @@ The following shapes are supported. All `<basic-shape>` values use functional no
 
     Each pair argument in the list represents _xi_ and _yi_ - the x and y axis coordinates of the vertex of the polygon at position i.
 
-- `path()`
+- `{{cssxref("path","path()")}}`
 
   - : Defines a shape using an SVG {{SVGAttr("fill-rule")}} and an SVG [path definition](/en-US/docs/Web/SVG/Attribute/d).
 

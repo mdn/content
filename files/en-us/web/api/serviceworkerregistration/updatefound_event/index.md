@@ -1,6 +1,7 @@
 ---
 title: 'ServiceWorkerRegistration: updatefound event'
 slug: Web/API/ServiceWorkerRegistration/updatefound_event
+page-type: web-api-event
 tags:
   - API
   - Event

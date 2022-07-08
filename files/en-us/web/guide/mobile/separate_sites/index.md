@@ -21,7 +21,7 @@ Even more important than that, though, is the fact that user-agent detection is 
 
 ## When it is right to choose this option
 
-![](sumo_screenshot.png)Firstly, if your target audience includes users on older or low-end [feature phones](https://www.cnet.com/8301-17918_1-10461614-85.html "Feature Phones Definition"), it is worth noting that you may need to employ this strategy [to some degree](https://www.passani.it/gap/#adaptation "Mobile Adaptation") no matter what. This is because the default browsers on some feature-phones do not support the same markup that you would use to code a website targeted at the desktop, but instead understand formats like [XHTML-MP](https://en.wikipedia.org/wiki/XHTML_Mobile_Profile) or the older [WML](https://en.wikipedia.org/wiki/Wireless_Markup_Language).
+![](sumo_screenshot.png)Firstly, if your target audience includes users on older or low-end [feature phones](https://www.cnet.com/tech/mobile/the-411-feature-phones-vs-smartphones/ "Feature Phones Definition"), it is worth noting that you may need to employ this strategy [to some degree](https://www.passani.it/gap/#adaptation "Mobile Adaptation") no matter what. This is because the default browsers on some feature-phones do not support the same markup that you would use to code a website targeted at the desktop, but instead understand formats like [XHTML-MP](https://en.wikipedia.org/wiki/XHTML_Mobile_Profile) or the older [WML](https://en.wikipedia.org/wiki/Wireless_Markup_Language).
 
 This factor aside, there is one case where this strategy really shines over other methods. If the functionality you would like to provide to your users on mobile devices is extremely different from that on a desktop, then using separate sites is likely to be the [most practical choice](https://tripleodeon.com/2010/10/not-a-mobile-web-merely-a-320px-wide-one/). This is because you have the option of sending completely separate HTML, JavaScript, and CSS to phones and PCs.
 
@@ -29,7 +29,7 @@ Another case where you may be forced to use this approach is if you cannot, for 
 
 ## Examples
 
-Most of the major Web applications you see in the wild have chosen this path, including [Facebook](https://m.facebook.com/) and [YouTube](https://m.youtube.com/). In fact, Mozilla picked this strategy for the mobile versions of [addons.mozilla.org](https://addons.mozilla.org/) (AMO) and [support.mozilla.org](https://support.mozilla.com/) (SUMO). If you'd like to see the source code behind an example of this approach in action, feel free to check out the [GitHub repository for AMO](https://github.com/jbalogh/zamboni/) or [SUMO](https://github.com/jsocol/kitsune).
+Most of the major Web applications you see in the wild have chosen this path, including [Facebook](https://m.facebook.com/) and [YouTube](https://m.youtube.com/). In fact, Mozilla picked this strategy for the mobile versions of [addons.mozilla.org](https://addons.mozilla.org/) (AMO) and [support.mozilla.org](https://support.mozilla.org/) (SUMO). If you'd like to see the source code behind an example of this approach in action, feel free to check out the [GitHub repository for AMO](https://github.com/jbalogh/zamboni/).
 
 ## Approaches to mobile Web development
 

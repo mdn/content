@@ -1,6 +1,7 @@
 ---
 title: Introduction to the Real-time Transport Protocol (RTP)
 slug: Web/API/WebRTC_API/Intro_to_RTP
+page-type: guide
 tags:
   - API
   - Connectivity

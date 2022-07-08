@@ -1,6 +1,7 @@
 ---
 title: PresentationRequest
 slug: Web/API/PresentationRequest
+page-type: web-api-interface
 tags:
   - API
   - Experimental

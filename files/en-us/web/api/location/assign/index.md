@@ -1,6 +1,7 @@
 ---
 title: location.assign()
 slug: Web/API/Location/assign
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -34,7 +35,7 @@ assign(url)
 ### Parameters
 
 - `url`
-  - : Is a string containing the URL of the page to navigate to.
+  - : A string containing the URL of the page to navigate to.
 
 ### Return value
 

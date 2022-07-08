@@ -45,13 +45,7 @@ _Include this is there are any specific things to watch out for in regard to acc
 
 ## Browser compatibility
 
-The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
-
-_Include the compat data for key properties you used, as in the example below which includes align-items._
-
-### align-items
-
-{{Compat("css.properties.align-items")}}
+_List the key properties you used in the `browser-compat` frontmatter metadata key. Then use the `\{{Compat}}` macro in this section to automatically generate a compatibility table for the listed properties._
 
 ## See also
 

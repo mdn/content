@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.deleteShader()
 slug: Web/API/WebGLRenderingContext/deleteShader
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -25,12 +26,12 @@ deleteShader(shader)
 
 ### Parameters
 
-- shader
+- `shader`
   - : A {{domxref("WebGLShader")}} object to delete.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

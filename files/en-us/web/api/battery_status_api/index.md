@@ -1,6 +1,7 @@
 ---
 title: Battery Status API
 slug: Web/API/Battery_Status_API
+page-type: web-api-overview
 tags:
   - API
   - Apps

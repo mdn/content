@@ -26,7 +26,7 @@ WebAssembly.Module.exports(module)
 
 ### Parameters
 
-- _module_
+- `module`
   - : A {{jsxref("WebAssembly.Module")}} object.
 
 ### Return value

@@ -1,6 +1,7 @@
 ---
 title: AuthenticatorAttestationResponse.getTransports()
 slug: Web/API/AuthenticatorAttestationResponse/getTransports
+page-type: web-api-instance-method
 tags:
   - API
   - AuthenticatorAttestationResponse
@@ -44,17 +45,15 @@ authenticator or nothing if this information is not available. The elements of t
 lexicographical order. Their values may be :
 
 - `"usb"`: the authenticator can be contacted via a removable USB link
-- `"nfc"`: the authenticator may be used over [NFC (Near Field
-  Communication)](https://en.wikipedia.org/wiki/Near-field_communication)
-- `"ble"`: the authenticator may be used over [BLE (Bluetooth Low
-  Energy)](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy)
+- `"nfc"`: the authenticator may be used over [NFC (Near Field Communication)](https://en.wikipedia.org/wiki/Near-field_communication)
+- `"ble"`: the authenticator may be used over [BLE (Bluetooth Low Energy)](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy)
 - `"internal"`: the authenticator is specifically bound to the client
   device (cannot be removed).
 
 ## Examples
 
 ```js
-var publicKey = {
+const publicKey = {
   challenge: /* from the server */,
   rp: {
     name: "Example CORP",
@@ -75,7 +74,7 @@ var publicKey = {
 
 navigator.credentials.create({ publicKey })
   .then(function (newCredentialInfo) {
-    var transports = newCredentialInfo.response.getTransports();
+    const transports = newCredentialInfo.response.getTransports();
     console.table(transports); // may be something like ["internal", "nfc", "usb"]
   }).catch(function (err) {
      console.error(err);

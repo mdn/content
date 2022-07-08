@@ -1,6 +1,7 @@
 ---
 title: 'PermissionStatus: change event'
 slug: Web/API/PermissionStatus/change_event
+page-type: web-api-event
 tags:
   - API
   - Event

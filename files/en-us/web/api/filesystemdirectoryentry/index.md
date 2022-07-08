@@ -1,6 +1,7 @@
 ---
 title: FileSystemDirectoryEntry
 slug: Web/API/FileSystemDirectoryEntry
+page-type: web-api-interface
 tags:
   - API
   - File API
@@ -75,7 +76,7 @@ _This interface inherits methods from its parent interface, {{domxref("FileSyste
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemDirectoryReader")}}
 - {{domxref("FileSystemEntry")}}
 - {{domxref("FileSystemFileEntry")}}

@@ -1,6 +1,7 @@
 ---
 title: CacheStorage.delete()
 slug: Web/API/CacheStorage/delete
+page-type: web-api-instance-method
 tags:
   - API
   - CacheStorage
@@ -51,7 +52,7 @@ check each key to see if it is in the array. If not, we delete it using
 
 ```js
 this.addEventListener('activate', function(event) {
-  var cachesToKeep = ['v2'];
+  const cachesToKeep = ['v2'];
 
   event.waitUntil(
     caches.keys().then(function(keyList) {
@@ -75,7 +76,6 @@ this.addEventListener('activate', function(event) {
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("caches")}}

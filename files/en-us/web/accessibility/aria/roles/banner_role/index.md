@@ -6,6 +6,9 @@ tags:
   - ARIA role
   - Accessibility
   - Reference
+spec-urls:
+  - https://w3c.github.io/aria/#banner
+  - https://w3c.github.io/aria-practices/#aria_lh_banner
 ---
 
 The `banner` role is for defining a global site header, which usually includes a logo, company name, search feature, and possibly the global navigation or a slogan. It is generally located at the top of the page.
@@ -66,10 +69,7 @@ While it is best to use the `header` element and ensure it is not a descendant o
 
 ## Specifications
 
-| Specification                                                                                                | Status                                           |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ |
-| {{SpecName("ARIA","#banner","ARIA: banner role")}}                                         | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_banner","Banner landmark role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See also
 

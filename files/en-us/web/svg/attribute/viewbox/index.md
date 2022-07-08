@@ -4,6 +4,7 @@ slug: Web/SVG/Attribute/viewBox
 tags:
   - SVG
   - SVG Attribute
+spec-urls: https://svgwg.org/svg2-draft/coords.html#ViewBoxAttribute
 ---
 {{SVGRef}}
 
@@ -292,28 +293,4 @@ For {{SVGElement('view')}}, `viewBox` defines the position and dimension for the
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "coords.html#ViewBoxAttribute", "viewBox")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "coords.html#ViewBoxAttribute", "viewBox")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

@@ -1,6 +1,7 @@
 ---
 title: PerformanceEventTiming
 slug: Web/API/PerformanceEventTiming
+page-type: web-api-interface
 tags:
   - API
   - Event Timing API
@@ -21,31 +22,31 @@ The `PerformanceEventTiming` interface of the Event Timing API provides timing i
 - {{event("compositionupdate")}}
 - {{event("contextmenu")}}
 - {{event("dblclick")}}
-- {{event("dragend")}}
-- {{event("dragenter")}}
-- {{event("dragleave")}}
-- {{event("dragover")}}
-- {{event("dragstart")}}
-- {{event("drop")}}
+- {{domxref("HTMLElement/dragend_event", "dragend")}}
+- {{domxref("HTMLElement/dragenter_event", "dragenter")}}
+- {{domxref("HTMLElement/dragleave_event", "dragleave")}}
+- {{domxref("HTMLElement/dragover_event", "dragover")}}
+- {{domxref("HTMLElement/dragstart_event", "dragstart")}}
+- {{domxref("HTMLElement/drop_event", "drop")}}
 - {{event("input")}}
-- {{event("keydown")}}
-- {{event("keypress")}}
-- {{event("keyup")}}
-- {{event("mousedown")}}
-- {{event("mouseenter")}}
-- {{event("mouseleave")}}
-- {{event("mouseout")}}
-- {{event("mouseover")}}
-- {{event("mouseup")}}
-- {{event("pointerover")}}
-- {{event("pointerenter")}}
-- {{event("pointerdown")}}
-- {{event("pointerup")}}
-- {{event("pointercancel")}}
-- {{event("pointerout")}}
-- {{event("pointerleave")}}
-- {{event("gotpointercapture")}}
-- {{event("lostpointercapture")}}
+- {{domxref("Element/keydown_event", "keydown")}}
+- {{domxref("Element/keypress_event", "keypress")}}
+- {{domxref("Element/keyup_event", "keyup")}}
+- {{domxref("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/mouseenter_event", "mouseenter")}}
+- {{domxref("Element/mouseleave_event", "mouseleave")}}
+- {{domxref("Element/mouseout_event", "mouseout")}}
+- {{domxref("Element/mouseover_event", "mouseover")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
+- {{domxref("HTMLElement/pointerover_event", "pointerover")}}
+- {{domxref("HTMLElement/pointerenter_event", "pointerenter")}}
+- {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}
+- {{domxref("HTMLElement/pointerup_event", "pointerup")}}
+- {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}
+- {{domxref("HTMLElement/pointerout_event", "pointerout")}}
+- {{domxref("HTMLElement/pointerleave_event", "pointerleave")}}
+- {{domxref("HTMLElement/gotpointercapture_event", "gotpointercapture")}}
+- {{domxref("HTMLElement/lostpointercapture_event", "lostpointercapture")}}
 - {{event("touchstart")}}
 - {{event("touchend")}}
 - {{event("touchcancel")}}

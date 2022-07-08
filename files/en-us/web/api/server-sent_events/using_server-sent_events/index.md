@@ -1,6 +1,7 @@
 ---
 title: Using server-sent events
 slug: Web/API/Server-sent_events/Using_server-sent_events
+page-type: guide
 tags:
   - Advanced
   - Communication
@@ -10,6 +11,7 @@ tags:
   - Server Sent Events
   - Server-sent events
   - messaging
+browser-compat: api.EventSource
 ---
 {{DefaultAPISidebar("Server Sent Events")}}
 
@@ -57,7 +59,7 @@ evtSource.addEventListener("ping", function(event) {
 
 This code is similar, except that it will be called automatically whenever the server sends a message with the `event` field set to "ping"; it then parses the JSON in the `data` field and outputs that information.
 
-> **Warning:** When **not used over HTTP/2**, SSE suffers from a limitation to the maximum number of open connections, which can be especially painful when opening multiple tabs, as the limit is _per browser_ and is set to a very low number (6). The issue has been marked as "Won't fix" in [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) and [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896). This limit is per browser + domain, which means that you can open 6 SSE connections across all of the tabs to `www.example1.com` and another 6 SSE connections to `www.example2.com` (per [Stackoverflow](https://stackoverflow.com/a/5326159/1905229)). When using HTTP/2, the maximum number of simultaneous _HTTP streams_ is negotiated between the server and the client (defaults to 100).
+> **Warning:** When **not used over HTTP/2**, SSE suffers from a limitation to the maximum number of open connections, which can be especially painful when opening multiple tabs, as the limit is _per browser_ and is set to a very low number (6). The issue has been marked as "Won't fix" in [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) and [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896). This limit is per browser + domain, which means that you can open 6 SSE connections across all of the tabs to `www.example1.com` and another 6 SSE connections to `www.example2.com` (per [Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)). When using HTTP/2, the maximum number of simultaneous _HTTP streams_ is negotiated between the server and the client (defaults to 100).
 
 ## Sending events from the server
 
@@ -103,7 +105,7 @@ The code above generates an event every second, with the event type "ping". Each
 The loop will keep running independent of the connection status, so a check is included
 to break the loop if the connection has been closed (e.g. client closes the page).
 
-> **Note:** You can find a full example that uses the code shown in this article on GitHub — see [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> **Note:** You can find a full example that uses the code shown in this article on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events).
 
 ## Error handling
 
@@ -200,6 +202,4 @@ data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 
 ## Browser compatibility
 
-### `EventSource`
-
-{{Compat("api.EventSource")}}
+{{Compat}}

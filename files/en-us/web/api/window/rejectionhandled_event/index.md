@@ -1,6 +1,7 @@
 ---
 title: 'Window: rejectionhandled event'
 slug: Web/API/Window/rejectionhandled_event
+page-type: web-api-event
 tags:
   - API
   - Event

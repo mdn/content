@@ -1,6 +1,7 @@
 ---
 title: 'RTCDataChannel: message event'
 slug: Web/API/RTCDataChannel/message_event
+page-type: web-api-event
 tags:
   - API
   - Data Channel
@@ -49,9 +50,9 @@ _Also inherits properties from its parent interface, {{domxref("Event")}}._
 - {{domxref("MessageEvent.data")}} {{readonlyInline}}
   - : The data sent by the message emitter.
 - {{domxref("MessageEvent.origin")}} {{readonlyInline}}
-  - : A {{domxref("USVString")}} representing the origin of the message emitter.
+  - : A string representing the origin of the message emitter.
 - {{domxref("MessageEvent.lastEventId")}} {{readonlyInline}}
-  - : A {{domxref("DOMString")}} representing a unique ID for the event.
+  - : A string representing a unique ID for the event.
 - {{domxref("MessageEvent.source")}} {{readonlyInline}}
   - : A reference to the message emitter, one of {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}}.
 - {{domxref("MessageEvent.ports")}} {{readonlyInline}}

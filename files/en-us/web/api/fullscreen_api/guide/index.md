@@ -1,6 +1,7 @@
 ---
 title: Guide to the Fullscreen API
 slug: Web/API/Fullscreen_API/Guide
+page-type: guide
 tags:
   - API
   - Drawing
@@ -13,6 +14,9 @@ tags:
   - full screen
   - fullscreen
   - screen
+browser-compat:
+  - api.Document.fullscreen
+  - api.Document.fullscreenEnabled
 ---
 {{DefaultAPISidebar("Fullscreen API")}}
 
@@ -179,19 +183,11 @@ For the moment not all browsers are implementing the unprefixed version of the A
 
 ## Specifications
 
-| Specification                        | Status                           | Comment          |
-| ------------------------------------ | -------------------------------- | ---------------- |
-| {{SpecName("Fullscreen")}} | {{Spec2("Fullscreen")}} | Initial version. |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `Document.fullscreen`
-
-{{Compat("api.Document.fullscreen")}}
-
-### `Document.fullscreenEnabled`
-
-{{Compat("api.Document.fullscreenEnabled")}}
+{{Compat}}
 
 ## See also
 

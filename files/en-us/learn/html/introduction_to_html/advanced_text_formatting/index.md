@@ -281,7 +281,7 @@ There is a {{htmlelement("cite")}} element, but this is meant to contain the tit
 </blockquote>
 
 <p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
-for short quotations that don't require paragraph breaks.</q> -- <a href="/en-US/docs/Web/HTML/Element/q">
+for short quotations that don't require paragraph breaks.</q> — <a href="/en-US/docs/Web/HTML/Element/q">
 <cite>MDN q page</cite></a>.</p>
 ```
 

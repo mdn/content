@@ -1,6 +1,7 @@
 ---
 title: XRViewport
 slug: Web/API/XRViewport
+page-type: web-api-interface
 tags:
   - API
   - AR

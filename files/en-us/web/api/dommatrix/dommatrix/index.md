@@ -1,6 +1,7 @@
 ---
 title: DOMMatrix()
 slug: Web/API/DOMMatrix/DOMMatrix
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -26,7 +27,7 @@ new DOMMatrix(init)
 
 ### Parameters
 
-- init {{optional_inline}}
+- `init` {{optional_inline}}
   - : An array of numbers specifying the matrix you want to create, or a CSS transform string.
 
     In case an array of numbers is passed, the behavior depends on the length of the array:

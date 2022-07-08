@@ -1,6 +1,7 @@
 ---
 title: Gamepad
 slug: Web/API/Gamepad
+page-type: web-api-interface
 tags:
   - API
   - Gamepad API
@@ -32,7 +33,7 @@ A Gamepad object can be returned in one of two ways: via the `gamepad` property 
 - {{domxref("Gamepad.vibrationActuator")}} {{readonlyInline}}
   - : A {{domxref("GamepadHapticActuator")}} object, which represents haptic feedback hardware available on the controller.
 - {{domxref("Gamepad.id")}} {{readonlyInline}}
-  - : A {{domxref("DOMString")}} containing identifying information about the controller.
+  - : A string containing identifying information about the controller.
 - {{domxref("Gamepad.index")}} {{readonlyInline}}
   - : An integer that is auto-incremented to be unique for each device currently connected to the system.
 - {{domxref("Gamepad.mapping")}} {{readonlyInline}}

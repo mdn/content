@@ -1,6 +1,7 @@
 ---
 title: ShadowRoot.innerHTML
 slug: Web/API/ShadowRoot/innerHTML
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -18,7 +19,7 @@ interface sets or returns a reference to the DOM tree inside the
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

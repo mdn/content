@@ -1,6 +1,7 @@
 ---
 title: PushSubscriptionOptions
 slug: Web/API/PushSubscriptionOptions
+page-type: web-api-interface
 tags:
   - API
   - Interface

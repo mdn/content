@@ -1,6 +1,7 @@
 ---
 title: PerformanceElementTiming.id
 slug: Web/API/PerformanceElementTiming/id
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`id`** read-only property of the {{domxref("PerformanceElementTiming")}} i
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

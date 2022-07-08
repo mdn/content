@@ -13,7 +13,7 @@ tags:
 
 2. [<dfn>Web Content Accessibility Guidelines (WCAG)</dfn> 1.0](https://www.w3.org/TR/WAI-WEBCONTENT/)
 
-    Another important set of guidelines from the W3C _Web Accessibility Initiative (WAI)_. The European Union is looking to base their upcoming accessibility regulations on these guidelines. These guidelines are discussed on the [<abbr title="Web Accessibility Initiative">WAI</abbr> interest group discussion list](https://www.w3.org/WAI/IG/).
+    Another important set of guidelines from the W3C _Web Accessibility Initiative (WAI)_. The European Union is looking to base their upcoming accessibility regulations on these guidelines. These guidelines are discussed on the [<abbr title="Web Accessibility Initiative">WAI</abbr> interest group discussion list](https://www.w3.org/WAI/about/groups/waiig/#mailinglist).
 
 ## How-to's
 
@@ -33,23 +33,17 @@ tags:
 
 ### Automated Checking & Repair
 
-1. [Cynthia says™](https://www.contentquality.com/)
-
-    from HiSoftware® Company
-
-    "Cynthia says™" is a free online webpage accessibility validation service that is designed to identify errors in webpage related to Section 508 standards and/or the WCAG guidelines. It can perform a "Complete Webpage Quality Check" for accessibility, privacy, searchability, metadata and even alt text attribute quality. The web author chooses the guidelines (as a basis for errors and warnings) to be used by "Cynthia says™": Section 508, WCAG Priorities 1, 2 and 3. The output data report is displayed in a clear and well structured table where each and all checkpoints are identified and described (along with an helpful clickable link to the related reference guideline) into logical groups and according to measurable results: passed, warning, failed for automated verification, warning for manual verification, not selected, not available, not related, etc.
-
-2. [Accessibility Valet](http://valet.webthing.com/access/url.html)
+1. [Accessibility Valet](http://valet.webthing.com/access/url.html)
 
     from WebThing
 
-3. [<dfn>WAVE 4.0 beta (Web Accessibility Versatile Evaluator)</dfn>](https://wave.webaim.org/) from [WebAIM](https://webaim.org/)
+2. [<dfn>WAVE 4.0 beta (Web Accessibility Versatile Evaluator)</dfn>](https://wave.webaim.org/) from [WebAIM](https://webaim.org/)
 
     WAVE 4.0 beta is another powerful, free online webpage accessibility validation service that identifies accessibility errors and reports accessibility warnings about webpage related to Section 508 standards and/or the WCAG guidelines. Its purpose is to aid humans in the web accessibility evaluation process. Rather than providing a complex technical report, WAVE 4.0 shows the original web page with embedded icons and indicators that reveal the accessibility information within your page. You can get accessibility report for errors, warnings. You can view the structure and order view of the document. You can see a text-only view and outline view of the document.
 
     You can install a custom WAVE toolbar in Firefox for a quick, easy and convenient evaluation of web pages directly within Firefox. You can also add a WAVE bookmarklet in Firefox or even WAVE direct links for checking a webpage.
 
-4. [HTML advanced validator](http://users.skynet.be/mgueury/mozilla/index.html) (Firefox extension)</a>
+3. [HTML advanced validator](http://users.skynet.be/mgueury/mozilla/index.html) (Firefox extension)</a>
 
     by Marc Gueury
 
@@ -59,10 +53,10 @@ tags:
 
     The HTML advanced validator may also be downloaded from [Firefox Add-ons: HTML Validator](https://addons.mozilla.org/en-US/firefox/addon/html-validator/).
 
-5. [Color contrast analyzer](https://juicystudio.com/services/colourcontrast.php#contrast)
+4. [Luminosity Color Contrast Ratio Analyser](https://juicystudio.com/services/luminositycontrastratio.php)
 
     by Juicy Studio
-    How can a web author establish easily and quickly if the background color and foreground (text) color in use in his webpages have sufficient color contrast difference and sufficient color brightness difference? [Color contrast analyzer](https://juicystudio.com/services/colourcontrast.php#contrast) is an excellent tool for such task. Effective color contrast and effective color brightness difference have a **decisive importance for reading**, furthermore for people with partial color deficiency (see the excellent examples in [Effective Color Contrast](https://lighthouseguild.org/effective-color-contrast-and-making-text-legible/) by Lighthouse International).
+    How can a web author establish easily and quickly if the background color and foreground (text) color in use in his webpages have sufficient color contrast difference and sufficient color brightness difference? [Luminosity Color Contrast Ratio Analyser](https://juicystudio.com/services/luminositycontrastratio.php) is an excellent tool for such task. Effective color contrast and effective color brightness difference have a **decisive importance for reading**, furthermore for people with partial color deficiency (see the excellent examples in [Effective Color Contrast](https://lighthouseguild.org/effective-color-contrast-and-making-text-legible/) by Lighthouse International).
 
     The [Juicy Studio CSS analyzer](https://juicystudio.com/services/csstest.php) will also analyze and report the color contrast and color brightness differences involved in your stylesheets.
 
@@ -86,5 +80,5 @@ We have two discussion lists, which can be read via a newsgroup reader, as a mai
 
 | Purpose              | Newsgroup                                                                              | Mailing list                                                                      | Google group                                                                  |
 | -------------------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| Developer discussion | [mozilla.dev.accessibility](news://news.mozilla.org/mozilla.dev.accessibility)         | [subscribe/unsubscribe](https://lists.mozilla.org/listinfo/dev-accessibility)     | [Google group](https://groups.google.com/d/forum/mozilla.dev.accessibility)     |
-| End user support     | [mozilla.support.accessibility](news://news.mozilla.org/mozilla.support.accessibility) | [subscribe/unsubscribe](https://lists.mozilla.org/listinfo/support-accessibility) | [Google group](https://groups.google.com/d/forum/mozilla.support.accessibility) |
+| Developer discussion | [mozilla.dev.accessibility](news://news.mozilla.org/mozilla.dev.accessibility)         | [subscribe/unsubscribe](https://lists.mozilla.org/listinfo/dev-accessibility)     | [Discourse group](https://discourse.mozilla.org/c/a11y/)     |
+| End user support     | [mozilla.support.accessibility](news://news.mozilla.org/mozilla.support.accessibility) | [subscribe/unsubscribe](https://lists.mozilla.org/listinfo/support-accessibility) |  |

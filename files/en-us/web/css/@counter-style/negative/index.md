@@ -38,7 +38,14 @@ If the counter value is negative, the symbol provided as value for the descripto
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<symbol> <symbol>?
+
+<symbol> =
+  <string>       |
+  <image>        |
+  <custom-ident>
+```
 
 ## Examples
 
@@ -72,7 +79,7 @@ If the counter value is negative, the symbol provided as value for the descripto
 
 #### Result
 
-{{ EmbedLiveSample('Rendering_negative_counters', '', '', '', 'Web/CSS/@counter-style/negative') }}
+{{ EmbedLiveSample('Rendering negative counters') }}
 
 ## Specifications
 

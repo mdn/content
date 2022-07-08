@@ -1,6 +1,7 @@
 ---
 title: Gamepad.displayId
 slug: Web/API/Gamepad/displayId
+page-type: web-api-instance-property
 tags:
   - API
   - Gamepad

@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: transitionstart event'
 slug: Web/API/HTMLElement/transitionstart_event
+page-type: web-api-event
 tags:
   - CSS Transitions
   - Event
@@ -100,7 +101,7 @@ transition.addEventListener('transitionend', function() {
 });
 ```
 
-{{ EmbedLiveSample('Examples', '100%', '150px') }}
+{{ EmbedLiveSample('Live example', '100%', '170') }}
 
 The difference is that:
 

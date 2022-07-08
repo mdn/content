@@ -87,9 +87,9 @@ Possible types are the following:
 directly:
 
 ```js
-var number = 3500;
+const number = 3500;
 
-var formatter = new Intl.NumberFormat('de-DE', {
+const formatter = new Intl.NumberFormat('de-DE', {
   style: 'currency',
   currency: 'EUR'
 });
@@ -125,7 +125,7 @@ a [switch statement](/en-US/docs/Web/JavaScript/Reference/Statements/switch),
 [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals), and {{jsxref("Array.prototype.reduce()")}}.
 
 ```js
-var numberString = formatter.formatToParts(number).map(({type, value}) => {
+const numberString = formatter.formatToParts(number).map(({type, value}) => {
   switch (type) {
     case 'currency': return `<strong>${value}</strong>`;
     default : return value;

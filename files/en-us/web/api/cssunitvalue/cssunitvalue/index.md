@@ -1,6 +1,7 @@
 ---
 title: CSSUnitValue()
 slug: Web/API/CSSUnitValue/CSSUnitValue
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
@@ -26,10 +27,10 @@ new CSSUnitValue()
 
 ### Parameters
 
-- value
+- `value`
   - : Returns a double indicating the number of units.
-- unit
-  - : Returns a {{jsxref('USVString')}} indicating the type of unit.
+- `unit`
+  - : Returns a string indicating the type of unit.
 
 ## Examples
 

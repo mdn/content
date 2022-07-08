@@ -1,6 +1,7 @@
 ---
 title: USBDevice.releaseInterface()
 slug: Web/API/USBDevice/releaseInterface
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - releaseInterface
+  - Experimental
 browser-compat: api.USBDevice.releaseInterface
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
@@ -26,7 +28,7 @@ releaseInterface(interfaceNumber)
 
 ### Parameters
 
-- interfaceNumber
+- `interfaceNumber`
   - : The device-specific index of the currently-claimed interface.
 
 ### Return value

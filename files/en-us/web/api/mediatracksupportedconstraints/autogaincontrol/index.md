@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.autoGainControl
 slug: Web/API/MediaTrackSupportedConstraints/autoGainControl
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -70,7 +71,7 @@ if (navigator.mediaDevices.getSupportedConstraints().autoGainControl) {
 
 ### Result
 
-{{ EmbedLiveSample('Example', 600, 80) }}
+{{ EmbedLiveSample('Examples', 600, 80) }}
 
 ## Specifications
 

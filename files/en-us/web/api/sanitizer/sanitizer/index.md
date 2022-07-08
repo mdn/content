@@ -1,6 +1,7 @@
 ---
 title: Sanitizer()
 slug: Web/API/Sanitizer/Sanitizer
+page-type: web-api-constructor
 tags:
   - Sanitizer
   - Constructor
@@ -59,7 +60,7 @@ To simplify the presentation the result that is shown is actually the _innerHTML
 This example shows the result of sanitizing a string with disallowed `script` element using the default sanitizer (in a `div` context).
 
 ```js
-let unsanitized = "abc <script>alert(1)</script> def"
+const unsanitized = "abc <script>alert(1)<" + "/script> def";
 const sanitized =  new Sanitizer().sanitizeFor("div", unsanitized);
 // Result (innerHTML of 'sanitized'): script will be removed: "abc alert(1) def"
 ```

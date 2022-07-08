@@ -1,6 +1,7 @@
 ---
 title: StorageManager.estimate()
 slug: Web/API/StorageManager/estimate
+page-type: web-api-instance-method
 tags:
   - API
   - Method

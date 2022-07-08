@@ -27,19 +27,19 @@ You cannot change this property directly.
 ### Using global
 
 ```js
-var regex = new RegExp('foo', 'g');
+const regex = new RegExp('foo', 'g');
 
 console.log(regex.global);  // true
 
-var str = 'fooexamplefoo';
+const str = 'fooexamplefoo';
 
-var str1 = str.replace(regex, '');
+const str1 = str.replace(regex, '');
 
 console.log(str1);  // Output: example
 
-var regex1 = new RegExp('foo');
+const regex1 = new RegExp('foo');
 
-var str2 = str.replace(regex1, '');
+const str2 = str.replace(regex1, '');
 
 console.log(str2);  // Output: examplefoo
 ```

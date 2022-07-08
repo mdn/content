@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.firCount
 slug: Web/API/RTCInboundRtpStreamStats/firCount
+page-type: web-api-instance-property
 tags:
   - API
   - FIR

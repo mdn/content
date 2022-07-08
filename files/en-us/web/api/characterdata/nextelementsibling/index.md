@@ -1,6 +1,7 @@
 ---
 title: CharacterData.nextElementSibling
 slug: Web/API/CharacterData/nextElementSibling
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference

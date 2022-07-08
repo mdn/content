@@ -26,7 +26,7 @@ The `\{{Specifications}}` macro does all the work and generates a table containi
 It checks the page's front matter for the `browser-compat` property to determine for which feature to load specifications.
 
 If the page has a front-matter, like `browser-compat: css.property.text-align`,
-then the macro get the specifications for {{cssxref("text-align")}} and renders them in a table:
+then the macro gets the specifications for {{cssxref("text-align")}} and renders them in a table:
 
 ### Specifications
 

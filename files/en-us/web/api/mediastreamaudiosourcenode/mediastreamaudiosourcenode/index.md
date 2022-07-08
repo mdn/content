@@ -1,6 +1,7 @@
 ---
 title: MediaStreamAudioSourceNode()
 slug: Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode
+page-type: web-api-constructor
 tags:
   - API
   - Audio
@@ -12,8 +13,7 @@ browser-compat: api.MediaStreamAudioSourceNode.MediaStreamAudioSourceNode
 ---
 {{APIRef("Web Audio API")}}
 
-The [Web Audio
-API](/en-US/docs/Web/API/Web_Audio_API)'s **`MediaStreamAudioSourceNode()`** constructor
+The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)'s **`MediaStreamAudioSourceNode()`** constructor
 creates and returns a new {{domxref("MediaStreamAudioSourceNode")}} object which uses
 the first audio track of a given {{domxref("MediaStream")}} as its source.
 
@@ -25,7 +25,7 @@ the first audio track of a given {{domxref("MediaStream")}} as its source.
 ## Syntax
 
 ```js
-new MediaStreamAudioSourceNode(context, options);
+new MediaStreamAudioSourceNode(context, options)
 ```
 
 ### Parameters
@@ -35,8 +35,7 @@ new MediaStreamAudioSourceNode(context, options);
     be associated with.
 - `options`
 
-  - : An object defining the properties you
-    want the `MediaStreamAudioSourceNode` to have:
+  - : An object defining the properties you want the `MediaStreamAudioSourceNode` to have:
 
     - `mediaStream`
       - : A required property which specifies the {{domxref("MediaStream")}} from which to obtain audio for the node.
@@ -59,7 +58,7 @@ access to the user's camera, then creates a new
 
 ```js
 // define variables
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // getUserMedia block - grab stream
 // put it into a MediaStreamAudioSourceNode
@@ -70,11 +69,11 @@ if (navigator.mediaDevices.getUserMedia) {
          audio: true,
          video: false
       }).then(function(stream) {
-        var options = {
+        const options = {
           mediaStream : stream
         }
 
-        var source = new MediaStreamAudioSourceNode(audioCtx, options);
+        const source = new MediaStreamAudioSourceNode(audioCtx, options);
         source.connect(audioCtx.destination);
       }).catch(function(err) {
        console.log('The following gUM error occurred: ' + err);

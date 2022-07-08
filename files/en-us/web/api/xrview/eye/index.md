@@ -1,6 +1,7 @@
 ---
 title: XRView.eye
 slug: Web/API/XRView/eye
+page-type: web-api-instance-property
 tags:
   - API
   - AR

@@ -152,7 +152,7 @@ When a function is called, the arguments to the call are held in the array-like 
 When modifying prototypes with hooks, pass `this` and the arguments (the call state) to the current behavior by calling `apply()` on the function. This pattern can be used for any prototype, such as `Node.prototype`, `Function.prototype`, etc.
 
 ```js
-var current = Object.prototype.valueOf;
+const current = Object.prototype.valueOf;
 
 // Since my property "-prop-value" is cross-cutting and isn't always
 // on the same prototype chain, I want to modify Object.prototype:
@@ -172,7 +172,7 @@ Object.prototype.valueOf = function() {
 Since JavaScript doesn't exactly have sub-class objects, prototype is a useful workaround to make a "base class" object of certain functions that act as objects. For example:
 
 ```js
-var Person = function(name) {
+const Person = function(name) {
   this.name = name;
   this.canTalk = true;
 };
@@ -183,7 +183,7 @@ Person.prototype.greet = function() {
   }
 };
 
-var Employee = function(name, title) {
+const Employee = function(name, title) {
   Person.call(this, name);
   this.title = title;
 };
@@ -199,7 +199,7 @@ Employee.prototype.greet = function() {
   }
 };
 
-var Customer = function(name) {
+const Customer = function(name) {
   Person.call(this, name);
 };
 
@@ -208,7 +208,7 @@ Customer.prototype.constructor = Customer; //If you don't set Object.prototype.c
                                            //it will take prototype.constructor of Person (parent).
                                            //To avoid that, we set the prototype.constructor to Customer (child).
 
-var Mime = function(name) {
+const Mime = function(name) {
   Person.call(this, name);
   this.canTalk = false;
 };
@@ -218,11 +218,11 @@ Mime.prototype.constructor = Mime; //If you don't set Object.prototype.construct
                                    //it will take prototype.constructor of Person (parent).
                                    //To avoid that, we set the prototype.constructor to Mime (child).
 
-var bob = new Employee('Bob', 'Builder');
-var joe = new Customer('Joe');
-var rg = new Employee('Red Green', 'Handyman');
-var mike = new Customer('Mike');
-var mime = new Mime('Mime');
+const bob = new Employee('Bob', 'Builder');
+const joe = new Customer('Joe');
+const rg = new Employee('Red Green', 'Handyman');
+const mike = new Customer('Mike');
+const mime = new Mime('Mime');
 
 bob.greet();
 // Hi, I am Bob, the Builder

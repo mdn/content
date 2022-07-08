@@ -1,6 +1,7 @@
 ---
 title: AudioData()
 slug: Web/API/AudioData/AudioData
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -15,7 +16,7 @@ The **`AudioData()`** constructor creates a new {{domxref("AudioData")}} object 
 ## Syntax
 
 ```js
-new AudioData(init);
+new AudioData(init)
 ```
 
 ### Parameters

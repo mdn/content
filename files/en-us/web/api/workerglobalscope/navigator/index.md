@@ -1,6 +1,7 @@
 ---
 title: WorkerGlobalScope.navigator
 slug: Web/API/WorkerGlobalScope/navigator
+page-type: web-api-instance-property
 tags:
   - API
   - Navigator

@@ -1,6 +1,7 @@
 ---
 title: BluetoothCharacteristicProperties.writeWithoutResponse
 slug: Web/API/BluetoothCharacteristicProperties/writeWithoutResponse
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth

@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.getResponseHeader()
 slug: Web/API/XMLHttpRequest/getResponseHeader
+page-type: web-api-instance-method
 tags:
   - API
   - Examine Header
@@ -41,7 +42,7 @@ getResponseHeader(headerName)
 
 ### Parameters
 
-- _headerName_
+- `headerName`
   - : A string indicating the name of the header you want to return the
     text value of.
 
@@ -85,8 +86,7 @@ client.onreadystatechange = function() {
 
 ## See also
 
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - [HTTP headers](/en-US/docs/Web/HTTP/Headers)
 - {{DOMxRef("XMLHttpRequest.getAllResponseHeaders", "getAllResponseHeaders()")}}
 - {{DOMxRef("XMLHttpRequest.response", "response")}}

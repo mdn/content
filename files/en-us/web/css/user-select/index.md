@@ -129,5 +129,6 @@ user-select: unset;
 
 ## See also
 
+- [Polyfill for `user-select: contain`](https://github.com/github/user-select-contain-polyfill)
 - {{Cssxref("::selection")}} pseudo-element
 - The JavaScript {{domxref("Selection")}} object

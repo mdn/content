@@ -1,6 +1,7 @@
 ---
 title: RTCOutboundRtpStreamStats.perDscpPacketsSent
 slug: Web/API/RTCOutboundRtpStreamStats/perDscpPacketsSent
+page-type: web-api-instance-property
 tags:
   - API
   - DSCP

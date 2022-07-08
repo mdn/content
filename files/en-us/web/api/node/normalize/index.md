@@ -1,6 +1,7 @@
 ---
 title: Node.normalize()
 slug: Web/API/Node/normalize
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference

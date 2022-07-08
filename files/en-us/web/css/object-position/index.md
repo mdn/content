@@ -43,8 +43,7 @@ object-position: 10ch 8em;
 /* Edge offsets values */
 object-position: bottom 10px right 20px;
 object-position: right 3em bottom 10px;
-object-position: bottom 10px right;
-object-position: top right 10px;
+object-position: top 0 right 10px;
 
 /* Global values */
 object-position: inherit;

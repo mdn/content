@@ -1,6 +1,7 @@
 ---
 title: RTCRemoteOutboundRtpStreamStats.localId
 slug: Web/API/RTCRemoteOutboundRtpStreamStats/localId
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -32,7 +33,7 @@ sides of the same synchronization source (SSRC).
 
 ## Value
 
-A {{domxref("DOMString")}} which can be compared to the value of an
+A string which can be compared to the value of an
 {{domxref("RTCInboundRtpStreamStats")}} object's
 {{domxref("RTCInboundRtpStreamStats.remoteId", "remoteId")}} property to see if the two
 represent statistics for each of the two sides of the same set of data received by the
@@ -182,7 +183,7 @@ Here's what's going on in the `networkTestStop()` function: after calling
 the {{domxref("RTCPeerConnection")}} method {{domxref("RTCPeerConnection.getStats",
   "getStats()")}} to get the latest statistics report for the connection and storing it in
 `endReport`,  This is an {{domxref("RTCStatsReport")}} object, which maps
-strings taken from the {{domxref("RTCStatsType")}} enumerated type to objects of the
+strings to objects of the
 corresponding {{domxref("RTCStats")}}-based type.
 
 Now we can begin to process the results, starting with the ending statistics found in
@@ -243,9 +244,7 @@ and `networkTestStop()`).
 
 ### Try it and fork it
 
-This example is [available
-on Glitch for you to try out](https://websocket-webrtc-chat-with-stats.glitch.me), examine, or remix.  You can also [access
-it directly](https://33030790-3517-4d21-9b93-511347fa1ebd@api.glitch.com/git/websocket-webrtc-chat-with-stats) using Glitch's Git server.
+This example is [available on Glitch for you to try out](https://websocket-webrtc-chat-with-stats.glitch.me), examine, or remix.  You can also [access it directly](https://33030790-3517-4d21-9b93-511347fa1ebd@api.glitch.com/git/websocket-webrtc-chat-with-stats) using Glitch's Git server.
 
 [Remix It](https://glitch.com/edit/?utm_content=project_websocket-webrtc-chat-with-stats&utm_source=remix_this&utm_medium=button&utm_campaign=glitchButton#!/remix/websocket-webrtc-chat-with-stats)
 

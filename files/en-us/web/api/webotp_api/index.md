@@ -1,11 +1,13 @@
 ---
 title: WebOTP API
 slug: Web/API/WebOTP_API
+page-type: web-api-overview
 tags:
   - API
   - WebOTP
   - Overview
   - Reference
+spec-urls: https://wicg.github.io/web-otp/
 ---
 {{securecontext_header}}{{DefaultAPISidebar("WebOTP API")}}
 
@@ -59,9 +61,7 @@ if ('OTPCredential' in window) {
 
 ## Specifications
 
-| Specification                                 |
-| --------------------------------------------- |
-| [WebOTP API](https://wicg.github.io/web-otp/) |
+{{Specifications}}
 
 ## See also
 

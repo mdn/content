@@ -1,6 +1,7 @@
 ---
 title: XRRay()
 slug: Web/API/XRRay/XRRay
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

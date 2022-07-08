@@ -37,7 +37,11 @@ A couple of scenarios where a fallback style will be used are:
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<counter-style-name>
+
+<counter-style-name> = <custom-ident>
+```
 
 ## Examples
 

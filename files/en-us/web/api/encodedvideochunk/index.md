@@ -1,6 +1,7 @@
 ---
 title: EncodedVideoChunk
 slug: Web/API/EncodedVideoChunk
+page-type: web-api-interface
 tags:
   - API
   - Interface

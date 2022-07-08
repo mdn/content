@@ -1,6 +1,7 @@
 ---
 title: 'Document: pointerleave event'
 slug: Web/API/Document/pointerleave_event
+page-type: web-api-event
 tags:
   - API
   - Document

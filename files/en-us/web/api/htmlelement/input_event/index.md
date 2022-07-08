@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: input event'
 slug: Web/API/HTMLElement/input_event
+page-type: web-api-event
 tags:
   - Content
   - Edit

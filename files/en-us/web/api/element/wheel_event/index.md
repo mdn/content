@@ -1,6 +1,7 @@
 ---
 title: 'Element: wheel event'
 slug: Web/API/Element/wheel_event
+page-type: web-api-event
 tags:
   - API
   - DOM

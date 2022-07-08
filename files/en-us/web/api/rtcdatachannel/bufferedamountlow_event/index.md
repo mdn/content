@@ -1,6 +1,7 @@
 ---
 title: 'RTCDataChannel: bufferedamountlow event'
 slug: Web/API/RTCDataChannel/bufferedamountlow_event
+page-type: web-api-event
 tags:
   - API
   - Buffer

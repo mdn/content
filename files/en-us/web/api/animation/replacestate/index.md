@@ -1,6 +1,7 @@
 ---
 title: Animation.replaceState
 slug: Web/API/Animation/replaceState
+page-type: web-api-instance-property
 tags:
   - API
   - Animation
@@ -18,9 +19,12 @@ The read-only **`Animation.replaceState`** property of the [Web Animations API](
 
 A string that represents the replace state of the animation. The value can be one of:
 
-- `active`: The initial value of the animation's replace state; when the animation has been removed by the browser's [Automatically removing filling animations](/en-US/docs/Web/API/Animation#automatically_removing_filling_animations) behavior.
-- `persisted`: The animation has been explicitly persisted by invoking {{domxref("Animation.persist()")}} on it.
-- `removed`: The animation has been explicitly removed.
+- `active`
+  - : The initial value of the animation's replace state; when the animation has been removed by the browser's [Automatically removing filling animations](/en-US/docs/Web/API/Animation#automatically_removing_filling_animations) behavior.
+- `persisted`
+  - : The animation has been explicitly persisted by invoking {{domxref("Animation.persist()")}} on it.
+- `removed`
+  - : The animation has been explicitly removed.
 
 ## Examples
 

@@ -63,9 +63,9 @@ However, getting comfortable with JavaScript is more challenging than getting co
 
 ### What happened?
 
-The heading text changed to _Hello world!_ using JavaScript. You did this by using a function called `{{domxref("Document.querySelector", "querySelector()")}}` to grab a reference to your heading, and then store it in a variable called `myHeading`. This is similar to what we did using CSS selectors. When you want to do something to an element, you need to select it first.
+The heading text changed to _Hello world!_ using JavaScript. You did this by using a function called {{domxref("Document.querySelector", "querySelector()")}} to grab a reference to your heading, and then store it in a variable called `myHeading`. This is similar to what we did using CSS selectors. When you want to do something to an element, you need to select it first.
 
-Following that, the code set the value of the `myHeading` variable's `{{domxref("Node.textContent", "textContent")}}` property (which represents the content of the heading) to _Hello world!_.
+Following that, the code set the value of the `myHeading` variable's {{domxref("Node.textContent", "textContent")}} property (which represents the content of the heading) to _Hello world!_.
 
 > **Note:** Both of the features you used in this exercise are parts of the [Document Object Model (DOM) API](/en-US/docs/Web/API/Document_Object_Model), which has the capability to manipulate documents.
 
@@ -229,7 +229,7 @@ An `{{Glossary("operator")}}` is a mathematical symbol that produces a result ba
       <td><code>let myVariable = 'Bob';</code></td>
     </tr>
     <tr>
-      <th scope="row">Equality</th>
+      <th scope="row">Strict equality</th>
       <td>
         This performs a test to see if two values are equal. It returns a
         <code>true</code>/<code>false</code> (Boolean) result.
@@ -287,7 +287,7 @@ if(iceCream === 'chocolate') {
 }
 ```
 
-The expression inside the `if( ... )` is the test. This uses the identity operator (as described above) to compare the variable `iceCream` with the string `chocolate` to see if the two are equal. If this comparison returns `true`, the first block of code runs. If the comparison is not true, the second block of code—after the `else` statement—runs instead.
+The expression inside the `if( ... )` is the test. This uses the strict equality operator (as described above) to compare the variable `iceCream` with the string `chocolate` to see if the two are equal. If this comparison returns `true`, the first block of code runs. If the comparison is not true, the second block of code—after the `else` statement—runs instead.
 
 ### Functions
 
@@ -455,7 +455,7 @@ Next, let's change the page title to a personalized welcome message when the use
 
 ### A user name of null?
 
-When you run the example and get the dialog box that prompts you to enter your user name, try pressing the _Cancel_ button. You should end up with a title that reads _Mozilla is cool, null_. This happens because—when you cancel the prompt—the value is set as [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null). _Null_ is a special value in JavaScript that refers to the absence of a value.
+When you run the example and get the dialog box that prompts you to enter your user name, try pressing the _Cancel_ button. You should end up with a title that reads _Mozilla is cool, null_. This happens because—when you cancel the prompt—the value is set as [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null). _Null_ is a special value in JavaScript that refers to the absence of a value.
 
 Also, try clicking _OK_ without entering a name. You should end up with a title that reads _Mozilla is cool,_ for fairly obvious reasons.
 

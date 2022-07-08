@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.beginTransformFeedback()
 slug: Web/API/WebGL2RenderingContext/beginTransformFeedback
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -35,7 +36,7 @@ beginTransformFeedback(primitiveMode)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

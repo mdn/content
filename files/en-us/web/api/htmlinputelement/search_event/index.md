@@ -1,6 +1,7 @@
 ---
 title: 'HTMLInputElement: search event'
 slug: Web/API/HTMLInputElement/search_event
+page-type: web-api-event
 tags:
   - API
   - Event

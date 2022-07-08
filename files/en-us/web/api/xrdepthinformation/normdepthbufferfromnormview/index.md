@@ -1,6 +1,7 @@
 ---
 title: XRDepthInformation.normDepthBufferFromNormView
 slug: Web/API/XRDepthInformation/normDepthBufferFromNormView
+page-type: web-api-instance-property
 tags:
   - API
   - AR

@@ -1,6 +1,7 @@
 ---
 title: PerformanceObserver
 slug: Web/API/PerformanceObserver
+page-type: web-api-interface
 tags:
   - API
   - Interface

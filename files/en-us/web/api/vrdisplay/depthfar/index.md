@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.depthFar
 slug: Web/API/VRDisplay/depthFar
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

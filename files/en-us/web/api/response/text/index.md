@@ -1,6 +1,7 @@
 ---
 title: Response.text()
 slug: Web/API/Response/text
+page-type: web-api-instance-method
 tags:
   - API
   - Fetch

@@ -1,6 +1,7 @@
 ---
 title: VideoDecoder.flush()
 slug: Web/API/VideoDecoder/flush
+page-type: web-api-instance-method
 tags:
   - API
   - Method

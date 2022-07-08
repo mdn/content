@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.isPresenting
 slug: Web/API/VRDisplay/isPresenting
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

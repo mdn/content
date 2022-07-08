@@ -223,7 +223,7 @@ format&#x3C;/code>.</pre
       <td>{{HTMLElement("video")}}</td>
       <td id="video-example">
         <pre class="brush: html">
-&#x3C;video controls  width="250"
+&#x3C;video controls width="250"
   src="https://archive.org/download/ElephantsDream/ed_hd.ogv" >
   The &#x3C;code>video&#x3C;/code> element is unsupported.
 &#x3C;/video></pre

@@ -1,6 +1,7 @@
 ---
 title: CSSUnitValue
 slug: Web/API/CSSUnitValue
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -27,7 +28,7 @@ The **`CSSUnitValue`** interface of the {{domxref('CSS_Object_Model#css_typed_ob
 - {{domxref('CSSUnitValue.value')}}
   - : Returns a double indicating the number of units.
 - {{domxref('CSSUnitValue.unit')}}
-  - : Returns a {{jsxref('USVString')}} indicating the type of unit.
+  - : Returns a string indicating the type of unit.
 
 ### Event handlers
 

@@ -1,6 +1,7 @@
 ---
 title: Window.location
 slug: Web/API/Window/location
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -17,7 +18,7 @@ The **`Window.location`** read-only property returns a
 document.
 
 Though `Window.location` is a _read-only_ `Location`
-object, you can also assign a {{domxref("DOMString")}} to it. This means that you can
+object, you can also assign a string to it. This means that you can
 work with `location` as if it were a string in most cases:
 `location = 'http://www.example.com'` is a synonym of
 `location.href = 'http://www.example.com'`.
@@ -42,8 +43,7 @@ Whenever a new value is assigned to the location object, a document will be load
 using the URL as if `location.assign()` had been called with the modified
 URL.
 
-Note that [navigation-related
-sandbox flags](https://html.spec.whatwg.org/multipage/browsers.html#allowed-to-navigate) may result in an exception being thrown and the navigation failing.
+Note that [navigation-related sandbox flags](https://html.spec.whatwg.org/multipage/browsers.html#allowed-to-navigate) may result in an exception being thrown and the navigation failing.
 
 ```js
 location.assign("http://www.mozilla.org"); // or

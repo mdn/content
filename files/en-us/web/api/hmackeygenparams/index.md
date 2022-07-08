@@ -1,12 +1,14 @@
 ---
 title: HmacKeyGenParams
 slug: Web/API/HmacKeyGenParams
+page-type: web-api-interface
 tags:
   - API
   - Dictionary
   - HmacKeyGenParams
   - Reference
   - Web Crypto API
+spec-urls: https://w3c.github.io/webcrypto/#dfn-HmacKeyGenParams
 ---
 {{ APIRef("Web Crypto API") }}
 
@@ -15,9 +17,9 @@ The **`HmacKeyGenParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/AP
 ## Properties
 
 - `name`
-  - : A {{domxref("DOMString")}}. This should be set to `HMAC`.
+  - : A string. This should be set to `HMAC`.
 - `hash`
-  - : A {{domxref("DOMString")}} representing the name of the [digest function](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) to use. You can pass any of `SHA-1`, `SHA-256`, `SHA-384`, or `SHA-512` here.
+  - : A string representing the name of the [digest function](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) to use. You can pass any of `SHA-1`, `SHA-256`, `SHA-384`, or `SHA-512` here.
 - `length` {{optional_inline}}
   - : A `Number` — the length in bits of the key. If this is omitted, the length of the key is equal to the block size of the hash function you have chosen. Unless you have a good reason to use a different length, omit this property and use the default.
 
@@ -27,22 +29,7 @@ See the examples for {{domxref("SubtleCrypto.generateKey()")}}.
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{ SpecName('Web Crypto API', '#dfn-HmacKeyGenParams', 'SubtleCrypto.HmacKeyGenParams') }}
-      </td>
-      <td>{{ Spec2('Web Crypto API') }}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,6 +1,7 @@
 ---
 title: CSSRule.cssText
 slug: Web/API/CSSRule/cssText
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -22,8 +23,7 @@ set it _does absolutely nothing_, and doesn't even omit a warning or error.
 Furthermore, it has no settable sub-properties. Therefore, to modify it, use the
 stylesheet's {{domxref("CSSRuleList", "cssRules")}}`[index]` properties
 {{domxref("CSSStyleRule.selectorText", ".selectorText")}} and
-{{domxref("CSSStyleRule.style", ".style")}} (or its sub-properties). See [Using
-dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information) for details.
+{{domxref("CSSStyleRule.style", ".style")}} (or its sub-properties). See [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information) for details.
 
 ## Value
 

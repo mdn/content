@@ -1,6 +1,7 @@
 ---
 title: HTML Drag and Drop API
 slug: Web/API/HTML_Drag_and_Drop_API
+page-type: web-api-overview
 tags:
   - Advanced
   - Guide
@@ -9,6 +10,7 @@ tags:
   - XUL
   - drag and drop
   - events
+spec-urls: https://html.spec.whatwg.org/multipage/#dnd
 ---
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
@@ -16,7 +18,7 @@ tags:
 
 The user may select _draggable_ elements with a mouse, drag those elements to a _droppable_ element, and drop them by releasing the mouse button. A translucent representation of the _draggable_ elements follows the pointer during the drag operation.
 
-For web sites, extensions, and XUL applications, you can customize which elements can become _draggable_, the type of feedback the _draggable_ elements produce, and the _droppable_ elements.
+You can customize which elements can become _draggable_, the type of feedback the _draggable_ elements produce, and the _droppable_ elements.
 
 This overview of HTML Drag and Drop includes a description of the interfaces, basic steps to add drag-and-drop support to an application, and an interoperability summary of the interfaces.
 
@@ -186,7 +188,7 @@ For more information, see:
 
 ### Define the drag's data
 
-The application is free to include any number of data items in a drag operation. Each data item is a {{domxref("DOMString","string")}} of a particular `type` — typically a MIME type such as `text/html`.
+The application is free to include any number of data items in a drag operation. Each data item is a string of a particular `type` — typically a MIME type such as `text/html`.
 
 Each {{domxref("DragEvent","drag event")}} has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property that _holds_ the event's data. This property (which is a {{domxref("DataTransfer")}} object) also has methods to _manage_ drag data. The {{domxref("DataTransfer.setData","setData()")}} method is used to add an item to the drag data, as shown in the following example.
 
@@ -333,9 +335,7 @@ As can be seen in the [DataTransferItem interface's Browser Compatibility table]
 
 ## Specifications
 
-| **Specification**                                | **Status**                       | **Comment** |
-| ------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#dnd")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## See also
 

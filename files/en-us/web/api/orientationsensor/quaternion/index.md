@@ -1,6 +1,7 @@
 ---
 title: OrientationSensor.quaternion
 slug: Web/API/OrientationSensor/quaternion
+page-type: web-api-instance-property
 tags:
   - API
   - Generic Sensor API

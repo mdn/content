@@ -1,6 +1,7 @@
 ---
 title: 'Document: animationstart event'
 slug: Web/API/Document/animationstart_event
+page-type: web-api-event
 tags:
   - API
   - Animation
@@ -59,7 +60,7 @@ document.onanimationstart = () => {
 };
 ```
 
-[See a live example of this event.](/en-US/docs/Web/API/HTMLElement/animationstart_event#live_example)
+[See a live example of this event](/en-US/docs/Web/API/HTMLElement/animationstart_event#live_example).
 
 ## Specifications
 

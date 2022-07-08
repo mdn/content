@@ -1,6 +1,7 @@
 ---
 title: LargestContentfulPaint
 slug: Web/API/LargestContentfulPaint
+page-type: web-api-interface
 tags:
   - API
   - Interface

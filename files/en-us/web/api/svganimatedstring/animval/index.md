@@ -1,6 +1,7 @@
 ---
 title: SVGAnimatedString.animVal
 slug: Web/API/SVGAnimatedString/animVal
+page-type: web-api-instance-property
 browser-compat: api.SVGAnimatedString.animVal
 ---
 {{APIRef("SVG")}}

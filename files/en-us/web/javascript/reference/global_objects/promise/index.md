@@ -64,22 +64,22 @@ Handling a rejected promise in each `.then()` has consequences further down the 
 
 ```js
 myPromise
-.then(handleResolvedA)
-.then(handleResolvedB)
-.then(handleResolvedC)
-.catch(handleRejectedAny);
+  .then(handleResolvedA)
+  .then(handleResolvedB)
+  .then(handleResolvedC)
+  .catch(handleRejectedAny);
 ```
 
-Using {{JSxRef("Functions/Arrow_functions", "Arrow Function Expressions", "", 1)}} for the callback functions, an implementation of a promise chain might look something like this:
+Using {{JSxRef("Functions/Arrow_functions", "Arrow Function Expressions", "", 1)}} for the callback functions, implementation of the promise chain might look something like this:
 
 ```js
-promise1
-.then(value => { return value + ' and bar'; })
-.then(value => { return value + ' and bar again'; })
-.then(value => { return value + ' and again'; })
-.then(value => { return value + ' and again'; })
-.then(value => { console.log(value) })
-.catch(err => { console.log(err) });
+myPromise
+  .then(value => { return value + ' and bar'; })
+  .then(value => { return value + ' and bar again'; })
+  .then(value => { return value + ' and again'; })
+  .then(value => { return value + ' and again'; })
+  .then(value => { console.log(value) })
+  .catch(err => { console.log(err) });
 ```
 
 The termination condition of a promise determines the "settled" state of the next promise in the chain. A "resolved" state indicates a successful completion of the promise, while a "rejected" state indicates a lack of success. The return value of each resolved promise in the chain is passed along to the next `.then()`, while the reason for rejection is passed along to the next rejection-handler function in the chain.
@@ -133,7 +133,7 @@ To illustrate this a bit further we can take a look at how an [`<iframe>`](/en-U
 <script> // we have a realm here as well
   const bound = frames[0].postMessage.bind(
     frames[0], "some data", "*");
-    // bound is a built-in function -- there is no user
+    // bound is a built-in function — there is no user
     // code on the stack, so which realm do we use?
   window.setTimeout(bound);
   // this still works, because we use the youngest
@@ -149,8 +149,8 @@ The same concept applies to promises. If we modify the above example a little bi
 <script> // we have a realm here as well
   const bound = frames[0].postMessage.bind(
     frames[0], "some data", "*");
-    // bound is a built in function -- there is no user
-    // code on the stack -- which realm do we use?
+    // bound is a built in function — there is no user
+    // code on the stack — which realm do we use?
   Promise.resolve(undefined).then(bound);
   // this still works, because we use the youngest
   // realm (the incumbent) on the stack

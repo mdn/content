@@ -1,6 +1,7 @@
 ---
 title: ANGLE_instanced_arrays.vertexAttribDivisorANGLE()
 slug: Web/API/ANGLE_instanced_arrays/vertexAttribDivisorANGLE
+page-type: web-api-instance-method
 tags:
   - ANGLE_instanced_arrays
   - API

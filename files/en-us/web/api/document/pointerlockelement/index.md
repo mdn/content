@@ -1,6 +1,7 @@
 ---
 title: Document.pointerLockElement
 slug: Web/API/Document/pointerLockElement
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

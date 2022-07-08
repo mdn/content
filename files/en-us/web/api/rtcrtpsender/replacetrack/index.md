@@ -1,6 +1,7 @@
 ---
 title: RTCRtpSender.replaceTrack()
 slug: Web/API/RTCRtpSender/replaceTrack
+page-type: web-api-instance-method
 tags:
   - Audio
   - Media
@@ -109,7 +110,7 @@ navigator.mediaDevices
   .then(function(stream) {
     let videoTrack = stream.getVideoTracks()[0];
     PCs.forEach(function(pc) {
-      var sender = pc.getSenders().find(function(s) {
+      const sender = pc.getSenders().find(function(s) {
         return s.track.kind == videoTrack.kind;
       });
       console.log('found sender:', sender);

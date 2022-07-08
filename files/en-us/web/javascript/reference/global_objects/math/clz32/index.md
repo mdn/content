@@ -59,17 +59,17 @@ zeros.
 Consider the following 32-bit word:
 
 ```js
-var a = 32776;   // 00000000000000001000000000001000 (16 leading zeros)
+const a = 32776;   // 00000000000000001000000000001000 (16 leading zeros)
 Math.clz32(a);   // 16
 
-var b = ~32776;  // 11111111111111110111111111110111 (32776 inverted, 0 leading zeros)
+const b = ~32776;  // 11111111111111110111111111110111 (32776 inverted, 0 leading zeros)
 Math.clz32(b);   // 0 (this is equal to how many leading one's there are in a)
 ```
 
 Using this logic, a `clon` function can be created as follows:
 
 ```js
-var clz = Math.clz32;
+const clz = Math.clz32;
 function clon(integer){
     return clz(~integer);
 }
@@ -80,7 +80,7 @@ fills in all the high bits with the lowest filled bit, then negates the bits to 
 all higher set bits so that `clz` can then be used.
 
 ```js example-bad
-var clz = Math.clz32;
+const clz = Math.clz32;
 function ctrz(integer){ // count trailing zeros
     // 1. fill in all the higher bits after the first one
     integer |= integer << 16;
@@ -128,9 +128,9 @@ Make these helper functions into ASM.JS module; then, you have a true performanc
 masterpiece. Situations like these are exactly what ASM.JS was designed for.
 
 ```js
-var countTrailsMethods = (function(stdlib, foreign, heap) {
+const countTrailsMethods = (function(stdlib, foreign, heap) {
     "use asm";
-    var clz = stdlib.Math.clz32;
+    const clz = stdlib.Math.clz32;
     function ctrz(integer) { // count trailing zeros
         integer = integer | 0; // coerce to an integer
         // 1. fill in all the higher bits after the first one
@@ -150,8 +150,8 @@ var countTrailsMethods = (function(stdlib, foreign, heap) {
     // unfortunately, ASM.JS demands slow crummy objects:
     return {a: ctrz, b: ctron};
 })(window, null, null);
-var ctrz = countTrailsMethods.a;
-var ctron = countTrailsMethods.b;
+const ctrz = countTrailsMethods.a;
+const ctron = countTrailsMethods.b;
 ```
 
 ## Examples
@@ -163,31 +163,11 @@ Math.clz32(1);           // 31
 Math.clz32(1000);        // 22
 Math.clz32();            // 32
 
-var stuff = [NaN, Infinity, -Infinity, 0, -0, false, null, undefined, 'foo', {}, []];
+const stuff = [NaN, Infinity, -Infinity, 0, -0, false, null, undefined, 'foo', {}, []];
 stuff.every(n => Math.clz32(n) == 32);  // true
 
 Math.clz32(true);        // 31
 Math.clz32(3.5);         // 30
-```
-
-## Polyfill
-
-The following polyfill is the most efficient.
-
-```js
-if (!Math.clz32) Math.clz32 = (function(log, LN2){
-  return function(x) {
-    // Let n be ToUint32(x).
-    // Let p be the number of leading zero bits in
-    // the 32-bit binary representation of n.
-    // Return p.
-    var asUint = x >>> 0;
-    if (asUint === 0) {
-      return 32;
-    }
-    return 31 - (log(asUint) / LN2 | 0) |0; // the "| 0" acts like math.floor
-  };
-})(Math.log, Math.LN2);
 ```
 
 ## Specifications

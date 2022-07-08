@@ -43,7 +43,7 @@ Before you get started with working on any particular repo, follow these steps:
 2. While you are at it, install the other required dependencies for working locally with MDN — [Node.js](https://nodejs.org/en/download/) and [yarn](https://classic.yarnpkg.com/en/docs/install).
 
     1. Install Node.js by following the above link and downloading and installing the latest version for your computer.
-    2. Once you've installed Node.js, install yarn by running `npm install --global yarn`.
+    2. Once you've installed Node.js, install Yarn by running `npm install --global yarn`.
 
 3. Create a separate directory somewhere on your computer to store all of your Git repos in, which is easy to find and navigate to on the command line. A directory called mdn-git inside your home/user directory would be suitable.
 4. [Sign up for a GitHub account](https://github.com/join) if you don't already have one. You'll need this to contribute to MDN's repos.
@@ -232,7 +232,7 @@ That's it! You have now created a new branch to do your work in. This branch is 
 Tips:
 
 - Make sure that you always update your main branch to be in sync with the mozilla main branch, as discussed in the previous section, before creating a new branch.
-- Make sure that you always create your new branch based on main, and not some other branch.To do this, makes sure that the branch button shows "main" before starting the process. If you don't, your new branch will likely be really out of date, which will create content problems.
+- Make sure that you always create your new branch based on main, and not some other branch. To do this, makes sure that the branch button shows "main" before starting the process. If you don't, your new branch will likely be really out of date, which will create content problems.
 
 ### Get your branch locally and switch to it
 

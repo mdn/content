@@ -1,6 +1,7 @@
 ---
 title: performance.setResourceTimingBufferSize()
 slug: Web/API/Performance/setResourceTimingBufferSize
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -28,7 +29,7 @@ setResourceTimingBufferSize(maxSize)
 
 ### Parameters
 
-- maxSize
+- `maxSize`
   - : A `number` representing the maximum number of
     {{domxref("PerformanceEntry","performance entry")}} objects the browser should hold in
     its performance entry buffer.
@@ -45,7 +46,7 @@ function setResourceTimingBufferSize(maxSize) {
     log("Browser does not support Web Performance");
     return;
   }
-  var supported = typeof performance.setResourceTimingBufferSize == "function";
+  const supported = typeof performance.setResourceTimingBufferSize == "function";
   if (supported) {
     log("... Performance.setResourceTimingBufferSize() = Yes");
     performance.setResourceTimingBufferSize(maxSize);

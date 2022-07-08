@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisVoice.name
 slug: Web/API/SpeechSynthesisVoice/name
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -20,7 +21,7 @@ represents the voice.
 
 ## Value
 
-A {{domxref("DOMString")}} representing the name of the voice.
+A string representing the name of the voice.
 
 ## Examples
 
@@ -30,7 +31,7 @@ for(i = 0; i < voices.length ; i++) {
   option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
 
   if(voices[i].default) {
-    option.textContent += ' -- DEFAULT';
+    option.textContent += ' — DEFAULT';
   }
 
   option.setAttribute('data-lang', voices[i].lang);

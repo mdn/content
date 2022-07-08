@@ -1,6 +1,7 @@
 ---
 title: Element.ariaMultiSelectable
 slug: Web/API/Element/ariaMultiSelectable
+page-type: web-api-instance-property
 tags:
   - API
   - Property

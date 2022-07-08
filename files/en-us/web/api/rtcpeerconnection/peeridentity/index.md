@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.peerIdentity
 slug: Web/API/RTCPeerConnection/peerIdentity
+page-type: web-api-instance-property
 tags:
   - API
   - Authentication
@@ -20,7 +21,7 @@ browser-compat: api.RTCPeerConnection.peerIdentity
 The read-only {{domxref("RTCPeerConnection")}} property
 **`peerIdentity`** returns a JavaScript {{jsxref("Promise")}}
 that resolves to an {{domxref("RTCIdentityAssertion")}} which contains a
-{{domxref("DOMString")}} identifying the remote peer. Once this promise
+string identifying the remote peer. Once this promise
 resolves successfully, the resulting identity is the **target peer
 identity** and cannot change for the duration of the connection.
 

@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams()
 slug: Web/API/URLSearchParams/URLSearchParams
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -19,20 +20,17 @@ new {{domxref("URLSearchParams")}} object.
 ## Syntax
 
 ```js
-new URLSearchParams(init);
+new URLSearchParams()
+new URLSearchParams(init)
 ```
 
 ### Parameters
 
-_`init`_ {{optional_inline}}
-
-One of:
-
-- A {{domxref("USVString")}}, which will be parsed from
-  `application/x-www-form-urlencoded` format. A leading `'?'`
-  character is ignored.
-- A literal sequence of name-value string pairs, or any object — such as a {{domxref("FormData")}} object — with an [iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterators) that produces a sequence of string pairs. Note that {{domxref("File")}} entries will be serialized as `[object File]` rather than as their filename (as they would in an `application/x-www-form`-urlencoded form).
-- A record of {{domxref("USVString")}} keys and {{domxref("USVString")}} values.
+- `init` {{optional_inline}}
+  - : One of:
+    - A string, which will be parsed from `application/x-www-form-urlencoded` format. A leading `'?'` character is ignored.
+    - A literal sequence of name-value string pairs, or any object — such as a {{domxref("FormData")}} object — with an [iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterators) that produces a sequence of string pairs. Note that {{domxref("File")}} entries will be serialized as `[object File]` rather than as their filename (as they would in an `application/x-www-form-urlencoded` form).
+    - A record of string keys and string values. Note that nesting is not supported.
 
 ### Return value
 
@@ -41,7 +39,7 @@ A {{domxref("URLSearchParams")}} object instance.
 ## Examples
 
 The following example shows how to create a {{domxref("URLSearchParams")}} object from
-a URL string.
+various inputs.
 
 ```js
 // Retrieve params via url.search, passed into ctor

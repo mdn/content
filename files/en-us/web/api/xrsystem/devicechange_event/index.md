@@ -1,6 +1,7 @@
 ---
 title: 'XRSystem: devicechange event'
 slug: Web/API/XRSystem/devicechange_event
+page-type: web-api-event
 tags:
   - API
   - AR
@@ -42,7 +43,7 @@ Triggered whenever the availability of immersive XR devices has changed. For exa
 
 ### Use cases
 
-You can use this event to, for example, monitor for the availability of a WebXR-compatible device so that you can enable a UI element which the user can use to activate immersive mode. This is shown in the [example](#example) below.
+You can use this event to, for example, monitor for the availability of a WebXR-compatible device so that you can enable a UI element which the user can use to activate immersive mode. This is shown in the [example](#examples) below.
 
 ## Examples
 

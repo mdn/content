@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.stencilFunc()
 slug: Web/API/WebGLRenderingContext/stencilFunc
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -55,7 +56,7 @@ stencilFunc(func, ref, mask)
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

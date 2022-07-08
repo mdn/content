@@ -1,6 +1,7 @@
 ---
 title: XRCylinderLayer.radius
 slug: Web/API/XRCylinderLayer/radius
+page-type: web-api-instance-property
 tags:
   - API
   - Property

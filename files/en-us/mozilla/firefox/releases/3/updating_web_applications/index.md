@@ -51,7 +51,7 @@ See {{Bug(434718)}}, especially its NOT A CASE FOR THE BUG TEMPLATE - The follow
 
 ### Chrome access
 
-In prior versions of Firefox, any web page could load scripts or images from chrome using the `chrome://` protocol. Among other things, this made it possible for sites to detect the presence of add-ons -- which could be used to breach a user's security by bypassing add-ons that add security features to the browser.
+In prior versions of Firefox, any web page could load scripts or images from chrome using the `chrome://` protocol. Among other things, this made it possible for sites to detect the presence of add-ons — which could be used to breach a user's security by bypassing add-ons that add security features to the browser.
 
 Firefox 3 only allows web content to access items in the `chrome://browser/` and `chrome://toolkit/` spaces. These files are intended to be accessible by web content. All other chrome content is now blocked from access by the web.
 
@@ -77,7 +77,7 @@ In prior versions of Firefox, there were cases in which when the user submitted 
 
 ### Using remote JARs in frames
 
-Using code in JAR files loaded from other domains is no longer allowed in frames; this mitigates a [potential attack vector](https://www.mozilla.org/security/announce/2008/mfsa2008-23.html).
+Using code in JAR files loaded from other domains is no longer allowed in frames; this mitigates a [potential attack vector](https://www.mozilla.org/en-US/security/advisories/mfsa2008-23/).
 
 ### Changes to same-origin policy for file: URIs
 

@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue.parse()
 slug: Web/API/CSSNumericValue/parse
+page-type: web-api-static-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -26,7 +27,7 @@ parse(cssText)
 
 ### Parameters
 
-- cssText
+- `cssText`
   - : a string containing numeric and unit parts.
 
 ### Return value

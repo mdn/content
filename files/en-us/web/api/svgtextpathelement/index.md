@@ -1,6 +1,7 @@
 ---
 title: SVGTextPathElement
 slug: Web/API/SVGTextPathElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

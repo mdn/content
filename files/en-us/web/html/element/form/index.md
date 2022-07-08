@@ -103,7 +103,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     > **Note:** **This attribute was removed in HTML5 and should not be used.** Instead, use the {{htmlattrxref("accept", "input")}} attribute on `<input type=file>` elements.
 
 - {{htmlattrdef("accept-charset")}}
-  - : Space-separated [character encodings](/en-US/docs/Web/Guide/Localizations_and_character_encodings) the server accepts. The browser uses them in the order in which they are listed. The default value means [the same encoding as the page](/en-US/docs/Web/HTTP/Headers/Content-Encoding).
+  - : Space-separated {{Glossary("character encoding", "character encodings")}} the server accepts. The browser uses them in the order in which they are listed. The default value means [the same encoding as the page](/en-US/docs/Web/HTTP/Headers/Content-Encoding).
     (In previous versions of HTML, character encodings could also be delimited by commas.)
 - {{htmlattrdef("autocapitalize")}} {{non-standard_inline}}
 

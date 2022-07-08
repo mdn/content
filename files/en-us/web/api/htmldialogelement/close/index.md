@@ -1,6 +1,7 @@
 ---
 title: HTMLDialogElement.close()
 slug: Web/API/HTMLDialogElement/close
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -28,13 +29,13 @@ close(returnValue)
 
 ### Parameters
 
-- returnValue {{optional_inline}}
+- `returnValue` {{optional_inline}}
   - : A string representing an updated value for the
     {{domxref("HTMLDialogElement.returnValue")}} of the dialog.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -70,9 +71,9 @@ button.
 
   <script>
     (function() {
-      var updateButton = document.getElementById('updateDetails');
-      var cancelButton = document.getElementById('cancel');
-      var dialog = document.getElementById('favDialog');
+      const updateButton = document.getElementById('updateDetails');
+      const cancelButton = document.getElementById('cancel');
+      const dialog = document.getElementById('favDialog');
       dialog.returnValue = 'favAnimal';
 
       function openCheck(dialog) {
@@ -100,8 +101,7 @@ button.
 ```
 
 > **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html)
-> ([see it live
-> also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
+> ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: PaymentRequestEvent
 slug: Web/API/PaymentRequestEvent
+page-type: web-api-interface
 tags:
   - API
   - Experimental

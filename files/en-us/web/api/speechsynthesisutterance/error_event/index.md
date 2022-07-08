@@ -1,6 +1,7 @@
 ---
 title: 'SpeechSynthesisUtterance: error event'
 slug: Web/API/SpeechSynthesisUtterance/error_event
+page-type: web-api-event
 tags:
   - Event
   - Reference

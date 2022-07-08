@@ -1,6 +1,7 @@
 ---
 title: 'HTMLVideoElement: enterpictureinpicture event'
 slug: Web/API/HTMLVideoElement/enterpictureinpicture_event
+page-type: web-api-event
 tags:
   - API
   - Event

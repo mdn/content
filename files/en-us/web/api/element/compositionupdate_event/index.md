@@ -1,6 +1,7 @@
 ---
 title: 'Element: compositionupdate event'
 slug: Web/API/Element/compositionupdate_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
@@ -64,7 +65,7 @@ inputElement.addEventListener('compositionupdate', (event) => {
 body {
   padding: .2rem;
   display: grid;
-  grid-template-areas: "control  log";
+  grid-template-areas: "control log";
 }
 
 .control {

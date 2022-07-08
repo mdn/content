@@ -1,6 +1,7 @@
 ---
 title: 'Document: readystatechange event'
 slug: Web/API/Document/readystatechange_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
@@ -50,7 +51,7 @@ A generic {{domxref("Event")}}.
 ```css hidden
 body {
   display: grid;
-  grid-template-areas: "control  log";
+  grid-template-areas: "control log";
 }
 
 .controls {

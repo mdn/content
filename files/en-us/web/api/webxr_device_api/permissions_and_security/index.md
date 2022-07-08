@@ -1,6 +1,7 @@
 ---
 title: WebXR permissions and security
 slug: Web/API/WebXR_Device_API/Permissions_and_security
+page-type: guide
 ---
 {{DefaultAPISidebar("WebXR Device API")}}
 

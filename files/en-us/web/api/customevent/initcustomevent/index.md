@@ -1,6 +1,7 @@
 ---
 title: CustomEvent.initCustomEvent()
 slug: Web/API/CustomEvent/initCustomEvent
+page-type: web-api-instance-method
 tags:
   - Deprecated
   - Method
@@ -32,10 +33,10 @@ event.initCustomEvent(type, canBubble, cancelable, detail);
 - `type`
   - : A string containing the name of the event.
 - `canBubble`
-  - : Is a boolean value indicating whether the event bubbles up through the DOM
+  - : A boolean value indicating whether the event bubbles up through the DOM
     or not.
 - `cancelable`
-  - : Is a boolean value indicating whether the event is cancelable.
+  - : A boolean value indicating whether the event is cancelable.
 - `detail`
   - : Any data that will be available to the handler through the {{domxref("CustomEvent.detail")}} property.
 

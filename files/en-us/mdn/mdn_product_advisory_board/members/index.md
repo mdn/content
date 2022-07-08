@@ -24,7 +24,7 @@ Current members of the MDN Product Advisory Board are:
   **Head of Product CE, Marketing Operations, Mozilla**
   - : Hermina Condei leads product management and engineering for MDN Web Docs and platform engineering for SUMO, at Mozilla. Over the past years, she's driven company-wide projects focused on access and identity management for employees and community. She also led the product team in the Open Innovation Group**,** with a focus on managing internal and external stakeholders for the team's portfolio of projects.
 - **Dominique Hazael-Massieux**
-  W3C Web Technology Expert including [Telecommunications Vertical champion](https://www.w3.org/Telco/), [Web Real-Time Communications Working Group](https://www.w3.org/groups/wg/webrtc), [Device and Sensors Working Group](https://www.w3.org/2009/dap/)
+  W3C Web Technology Expert including [Telecommunications Vertical champion](https://www.w3.org/Telco/), [Web Real-Time Communications Working Group](https://www.w3.org/groups/wg/webrtc), [Device and Sensors Working Group](https://www.w3.org/das/)
   - : Dominique Hazael-Massieux is part of the W3C staff, where he leads W3C efforts in developer relationship. Dom has been working for W3C since 2000, and in addition to devrel, is currently involved in the standardization of WebRTC, device APIs and WebVR.
 - **Brian Kardell**
   Developer Advocate, Igalia

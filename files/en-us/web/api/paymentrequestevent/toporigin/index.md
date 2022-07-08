@@ -1,6 +1,7 @@
 ---
 title: PaymentRequestEvent.topOrigin
 slug: Web/API/PaymentRequestEvent/topOrigin
+page-type: web-api-instance-property
 tags:
   - API
   - Payment Request API
@@ -19,7 +20,7 @@ the {{domxref("PaymentRequest")}} object was initialized.
 
 ## Value
 
-A USVString
+A string
 
 ## Specifications
 

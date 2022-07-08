@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.postalCode
 slug: Web/API/PaymentAddress/postalCode
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -31,7 +32,7 @@ in India.
 
 ## Value
 
-A {{domxref("DOMString")}} which contains the postal code portion of the address. A
+A string which contains the postal code portion of the address. A
 postal code is a string (either numeric or alphanumeric) which is used by a postal
 service to optimize mail routing and delivery.
 
@@ -45,7 +46,4 @@ codes.
 
 ## See also
 
-- Universal Postal Union: [Post
-  code lookup service](https://www.upu.int/en/resources/postcodes/looking-up-a-postcode.html)
-- Universal Postal Union: [Universal
-  Post\*Code® Database](https://www.upu.int/en/resources/postcodes/universal-postcoder-database.html)
+- Universal Postal Union: [Universal Post\*Code® Database](https://www.upu.int/en/Postal-Solutions/Programmes-Services/Addressing-Solutions)

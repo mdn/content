@@ -1,6 +1,7 @@
 ---
 title: TrustedHTML.toString()
 slug: Web/API/TrustedHTML/toString
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -25,7 +26,7 @@ None.
 
 ### Return value
 
-A {{domxref("DOMString","string")}} containing the sanitized HTML.
+A string containing the sanitized HTML.
 
 ## Examples
 

@@ -1,6 +1,9 @@
 ---
 title: MediaRecorder.videoBitsPerSecond
 slug: Web/API/MediaRecorder/videoBitsPerSecond
+page-type: web-api-instance-property
+tags:
+- Property
 browser-compat: api.MediaRecorder.videoBitsPerSecond
 ---
 {{SeeCompatTable}}{{APIRef("MediaStream Recording")}}
@@ -12,13 +15,7 @@ bit rate in use.
 This may differ from the bit rate specified in the
 constructor, if it was provided.
 
-## Syntax
-
-```js
-var videoBitsPerSecond = MediaRecorder.videoBitsPerSecond
-```
-
-### Value
+## Value
 
 A {{jsxref("Number")}} (unsigned long).
 

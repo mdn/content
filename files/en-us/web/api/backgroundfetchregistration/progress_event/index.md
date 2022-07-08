@@ -1,6 +1,7 @@
 ---
 title: 'BackgroundFetchRegistration: progress event'
 slug: Web/API/BackgroundFetchRegistration/progress_event
+page-type: web-api-event
 tags:
   - progress
   - API

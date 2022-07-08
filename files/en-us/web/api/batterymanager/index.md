@@ -1,6 +1,7 @@
 ---
 title: BatteryManager
 slug: Web/API/BatteryManager
+page-type: web-api-interface
 tags:
   - API
   - Battery API

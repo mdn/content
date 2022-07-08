@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.pathname
 slug: Web/API/HTMLAnchorElement/pathname
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAnchorElement
@@ -11,7 +12,7 @@ browser-compat: api.HTMLAnchorElement.pathname
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.pathname`** property is a
-{{domxref("USVString")}} containing an initial `'/'` followed by the path of
+string containing an initial `'/'` followed by the path of
 the URL not including the query string or fragment (or the empty string if there is no
 path).
 

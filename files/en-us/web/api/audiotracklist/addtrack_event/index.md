@@ -1,6 +1,7 @@
 ---
 title: 'AudioTrackList: addtrack event'
 slug: Web/API/AudioTrackList/addtrack_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -39,7 +40,10 @@ An {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-{{page("/en-us/docs/Web/API/TrackEvent", "Properties")}}
+_`TrackEvent` is based on {{domxref("Event")}}, so properties of `Event` are also available on `TrackEvent` objects._
+
+- {{domxref("TrackEvent.track", "track")}} {{ReadOnlyInline}}
+  - : The DOM track object the event is in reference to. If not `null`, this is always an object of one of the media track types: {{domxref("AudioTrack")}}, {{domxref("VideoTrack")}}, or {{domxref("TextTrack")}}).
 
 ## Description
 

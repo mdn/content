@@ -77,6 +77,8 @@ If you need the natural log of 2 or 10, use the constants {{jsxref("Math.LN2")}}
 other bases, use Math.log(x) / Math.log(otherBase) as in the example below; you might
 want to precalculate 1 / Math.log(otherBase).
 
+Beware that positive numbers very close to 1 can suffer from loss of precision and make its natural logarithm less accurate. In this case, you may want to use {{jsxref("Math.log1p")}} instead.
+
 ## Examples
 
 ### Using Math.log()

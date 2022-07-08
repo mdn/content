@@ -1,6 +1,7 @@
 ---
 title: WheelEvent.deltaMode
 slug: Web/API/WheelEvent/deltaMode
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -10,7 +11,7 @@ tags:
   - WheelEvent
 browser-compat: api.WheelEvent.deltaMode
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`WheelEvent.deltaMode`** read-only property returns an
 `unsigned long` representing the unit of the delta values scroll amount.

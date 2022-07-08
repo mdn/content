@@ -1,6 +1,7 @@
 ---
 title: AudioData.numberOfChannels
 slug: Web/API/AudioData/numberOfChannels
+page-type: web-api-instance-property
 tags:
   - API
   - Property

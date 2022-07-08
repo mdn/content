@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.uniformMatrix[234]x[234]fv()
 slug: Web/API/WebGL2RenderingContext/uniformMatrix
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -61,18 +62,18 @@ uniformMatrix4fv(location, transpose, data, srcOffset, srcLength)
 
 ### Parameters
 
-- location
+- `location`
   - : A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform
     attribute to modify.
-- transpose
+- `transpose`
   - : A {{domxref("WebGL_API/Types", "GLboolean")}} specifying whether to transpose the matrix. Must be
     `false`.
-- data
+- `data`
   - : A {{jsxref("Float32Array")}} of float values.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

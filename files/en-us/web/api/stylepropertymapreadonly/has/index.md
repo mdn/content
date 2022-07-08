@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMapReadOnly.has()
 slug: Web/API/StylePropertyMapReadOnly/has
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -26,7 +27,7 @@ has(property)
 
 ### Parameters
 
-- property
+- `property`
   - : The name of a property.
 
 ### Return value

@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.sdpMLineIndex
 slug: Web/API/RTCIceCandidate/sdpMLineIndex
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate

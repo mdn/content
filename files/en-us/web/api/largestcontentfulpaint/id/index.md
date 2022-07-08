@@ -1,6 +1,7 @@
 ---
 title: LargestContentfulPaint.id
 slug: Web/API/LargestContentfulPaint/id
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`id`** read-only property of the {{domxref("LargestContentfulPaint")}} int
 
 ## Value
 
-A {{domxref("DOMString","string")}} containing the ID of the element.
+A string containing the ID of the element.
 
 ## Examples
 

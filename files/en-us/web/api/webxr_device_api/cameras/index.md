@@ -1,6 +1,7 @@
 ---
 title: 'Viewpoints and viewers: Simulating cameras in WebXR'
 slug: Web/API/WebXR_Device_API/Cameras
+page-type: guide
 tags:
   - 3D
   - API

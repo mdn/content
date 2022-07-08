@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.movementY
 slug: Web/API/MouseEvent/movementY
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -14,7 +15,7 @@ tags:
   - pointer lock
 browser-compat: api.MouseEvent.movementY
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`movementY`** read-only property of the {{domxref("MouseEvent")}} interface provides the difference in the Y coordinate of the mouse pointer between the given event and the previous {{domxref("Element/mousemove_event", "mousemove")}} event.
 In other words, the value of the property is computed like this: `currentEvent.movementY = currentEvent.screenY - previousEvent.screenY`.
@@ -48,7 +49,7 @@ document.addEventListener('mousemove', logMovement);
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

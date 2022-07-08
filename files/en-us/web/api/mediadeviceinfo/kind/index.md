@@ -1,6 +1,7 @@
 ---
 title: MediaDeviceInfo.kind
 slug: Web/API/MediaDeviceInfo/kind
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -18,7 +19,7 @@ either "videoinput", "audioinput" or "audiooutput".
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Specifications
 

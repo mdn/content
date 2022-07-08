@@ -1,6 +1,7 @@
 ---
 title: WebGL model view projection
 slug: Web/API/WebGL_API/WebGL_model_view_projection
+page-type: guide
 tags:
   - 3D
   - Graphics
@@ -195,7 +196,7 @@ box.draw({
 
 #### The results
 
-[View on JSFiddle](https://jsfiddle.net/mff99yu5)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/mff99yu5/)
 
 ![The results of drawing to clip space using WebGL.](part1.png)
 
@@ -326,8 +327,6 @@ box.draw({
 
 ### The results
 
-[View on JSFiddle](https://jsfiddle.net/mff99yu)
-
 ![The results of using homogeneous coordinates to move the boxes around in WebGL.](part2.png)
 
 ### Exercises
@@ -391,7 +390,7 @@ gl_Position = model * vec4(position, 1.0);
 
 ### The results
 
-[View on JSFiddle](https://jsfiddle.net/5jofzgsh)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/5jofzgsh/)
 
 ![Using a model matrix](part3.png)
 
@@ -427,7 +426,7 @@ gl_Position = vec4(transformedPosition.xyz, w);
 
 ### The results
 
-[View on JSFiddle](https://jsfiddle.net/vk9r8h2c)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/vk9r8h2c/)
 
 ![Filling the W component and creating some projection.](part4.png)
 
@@ -530,7 +529,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 ### The results
 
-[View on JSFiddle](https://jsfiddle.net/zwyLLcbw)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/zwyLLcbw/)
 
 ![A simple projection matrix](part5.png)
 
@@ -625,7 +624,7 @@ Additionally (not shown), the position and scale matrices of the model have been
 
 ### The results
 
-[View on JSFiddle](https://jsfiddle.net/Lzxw7e1q)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/Lzxw7e1q/)
 
 ![A true perspective matrix](part6.png)
 
@@ -688,7 +687,7 @@ After this step, the GPU pipeline will clip the out of range vertices, and send 
 
 ### The results
 
-[View on JSFiddle](https://jsfiddle.net/86fd797g)
+[View on JSFiddle](https://jsfiddle.net/tatumcreative/86fd797g/)
 
 ![The view matrix](part7.png)
 

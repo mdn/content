@@ -1,6 +1,7 @@
 ---
 title: Window.sizeToContent()
 slug: Web/API/Window/sizeToContent
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -13,7 +14,7 @@ browser-compat: api.Window.sizeToContent
 
 The **`Window.sizeToContent()`** method sizes the window
 according to its content. In order for it to work, the DOM content should be loaded when
-this function is called—for example, once the {{event("DOMContentLoaded")}} event has
+this function is called—for example, once the {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event has
 been thrown.
 
 Since Firefox 20, the minimal size of the window is clamped to prevent the window from

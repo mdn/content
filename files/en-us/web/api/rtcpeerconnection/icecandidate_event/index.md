@@ -1,6 +1,7 @@
 ---
 title: 'RTCPeerConnection: icecandidate event'
 slug: Web/API/RTCPeerConnection/icecandidate_event
+page-type: web-api-event
 tags:
   - API
   - Candidate
@@ -54,7 +55,7 @@ The majority of `icecandidate` events are fired to indicate that a new candidate
 
 ```js
 rtcPeerConnection.onicecandidate = (event) => {
-  if (event.candidate) {
+  if (event.candidate !== null) {
     sendCandidateToRemotePeer(event.candidate)
   } else {
     /* there are no more candidates coming during this negotiation */

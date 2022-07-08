@@ -1,6 +1,7 @@
 ---
 title: ResizeObserverSize
 slug: Web/API/ResizeObserverSize
+page-type: web-api-interface
 tags:
   - API
   - Interface

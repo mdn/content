@@ -6,6 +6,7 @@ tags:
   - Reference
   - Status code
   - Success response
+spec-urls: https://httpwg.org/specs/rfc7231.html#section-6.3.3
 ---
 {{HTTPSidebar}}
 
@@ -27,9 +28,7 @@ for cases where another process or server handles the request, or for batch proc
 
 ## Specifications
 
-| Specification                                            | Title                                                         |
-| -------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "202 Accepted" , "6.3.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## See also
 

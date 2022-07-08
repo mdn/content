@@ -291,4 +291,4 @@ SVG attribute reference pages also do not include syntax sections.
 
 ## See also
 
-- [Markdown in MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Markdown_in_MDN#example_code_blocks)
+- [Markdown in MDN](/en-US/docs/MDN/Contribute/Markdown_in_MDN#example_code_blocks)

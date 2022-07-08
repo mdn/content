@@ -1,6 +1,7 @@
 ---
 title: NDEFMessage
 slug: Web/API/NDEFMessage
+page-type: web-api-interface
 tags:
   - NDEF
   - Reference

@@ -1,6 +1,7 @@
 ---
 title: AbortSignal
 slug: Web/API/AbortSignal
+page-type: web-api-interface
 tags:
   - API
   - AbortSignal
@@ -153,4 +154,4 @@ catch (e) {
 ## See also
 
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
-- [Abortable Fetch](https://developers.google.com/web/updates/2017/09/abortable-fetch) by Jake Archibald
+- [Abortable Fetch](https://developer.chrome.com/blog/abortable-fetch/) by Jake Archibald

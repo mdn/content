@@ -1,6 +1,7 @@
 ---
 title: Serial
 slug: Web/API/Serial
+page-type: web-api-interface
 tags:
   - API
   - Interface

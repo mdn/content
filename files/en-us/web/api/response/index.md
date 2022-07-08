@@ -1,6 +1,7 @@
 ---
 title: Response
 slug: Web/API/Response
+page-type: web-api-interface
 tags:
   - API
   - Fetch

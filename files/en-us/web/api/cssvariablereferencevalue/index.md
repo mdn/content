@@ -1,6 +1,7 @@
 ---
 title: CSSVariableReferenceValue
 slug: Web/API/CSSVariableReferenceValue
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API

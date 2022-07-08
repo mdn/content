@@ -1,6 +1,7 @@
 ---
 title: EncodedAudioChunk.type
 slug: Web/API/EncodedAudioChunk/type
+page-type: web-api-instance-property
 tags:
   - API
   - Property

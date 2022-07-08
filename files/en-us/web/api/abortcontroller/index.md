@@ -1,6 +1,7 @@
 ---
 title: AbortController
 slug: Web/API/AbortController
+page-type: web-api-interface
 tags:
   - API
   - AbortController
@@ -82,4 +83,4 @@ You can find a [full working example on GitHub](https://github.com/mdn/dom-examp
 ## See also
 
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
-- [Abortable Fetch](https://developers.google.com/web/updates/2017/09/abortable-fetch) by Jake Archibald
+- [Abortable Fetch](https://developer.chrome.com/blog/abortable-fetch/) by Jake Archibald

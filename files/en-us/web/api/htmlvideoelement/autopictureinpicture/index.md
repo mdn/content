@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.autoPictureInPicture
 slug: Web/API/HTMLVideoElement/autoPictureInPicture
+page-type: web-api-instance-property
 tags:
   - API
   - HTML

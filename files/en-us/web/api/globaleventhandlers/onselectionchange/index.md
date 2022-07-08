@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onselectionchange
 slug: Web/API/GlobalEventHandlers/onselectionchange
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -90,5 +91,5 @@ myinput.addEventListener("selectionchange", () => {
 
 ## See also
 
-- {{event("selectionchange")}} event
+- {{domxref("Document/selectionchange_event", "selectionchange")}} event
 - Related event handler: {{domxref("GlobalEventHandlers.onselectstart")}}

@@ -1,6 +1,7 @@
 ---
 title: CSSRule
 slug: Web/API/CSSRule
+page-type: web-api-interface
 tags:
   - API
   - CSSOM

@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onchange
 slug: Web/API/GlobalEventHandlers/onchange
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -29,8 +30,7 @@ This may be done, for example, by clicking outside of the control or by using th
 target.onchange = functionRef;
 ```
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives an {{domxref("Event")}} object as its sole
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives an {{domxref("Event")}} object as its sole
 argument.
 
 ## Example

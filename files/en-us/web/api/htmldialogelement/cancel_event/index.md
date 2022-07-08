@@ -1,6 +1,7 @@
 ---
 title: 'HTMLDialogElement: cancel event'
 slug: Web/API/HTMLDialogElement/cancel_event
+page-type: web-api-event
 tags:
   - API
   - Event

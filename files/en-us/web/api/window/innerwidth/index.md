@@ -1,6 +1,7 @@
 ---
 title: Window.innerWidth
 slug: Web/API/Window/innerWidth
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View

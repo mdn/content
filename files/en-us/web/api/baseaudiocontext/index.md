@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext
 slug: Web/API/BaseAudioContext
+page-type: web-api-interface
 tags:
   - API
   - Audio

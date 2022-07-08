@@ -18,7 +18,9 @@ The **`::-moz-page`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/We
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+::-moz-page
+```
 
 ## Specifications
 

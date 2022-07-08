@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.type
 slug: Web/API/HTMLSelectElement/type
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

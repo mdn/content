@@ -1,6 +1,7 @@
 ---
 title: 'MediaStreamTrack: mute event'
 slug: Web/API/MediaStreamTrack/mute_event
+page-type: web-api-event
 tags:
   - API
   - Audio

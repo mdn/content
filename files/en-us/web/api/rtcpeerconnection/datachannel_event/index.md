@@ -1,6 +1,7 @@
 ---
 title: 'RTCPeerConnection: datachannel event'
 slug: Web/API/RTCPeerConnection/datachannel_event
+page-type: web-api-event
 tags:
   - Channels
   - Connection

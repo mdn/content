@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onkeypress
 slug: Web/API/GlobalEventHandlers/onkeypress
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -15,7 +16,7 @@ browser-compat: api.GlobalEventHandlers.onkeypress
 
 The **`onkeypress`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("keypress")}} events.
+processes {{domxref("Element/keypress_event", "keypress")}} events.
 
 The `keypress` event _should_ fire when the user presses a key on the
 keyboard. However, in practice browsers do not fire `keypress` events for
@@ -32,8 +33,7 @@ target.onkeypress = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("KeyboardEvent")}} object as its
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("KeyboardEvent")}} object as its
 sole argument.
 
 ## Examples
@@ -150,8 +150,7 @@ The following JavaScript function will do something after the user types the wor
 
 ### Browser compatibility notes
 
-- The `keypress` event is no longer fired for [non-printable
-  keys](</en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>) (see {{bug(968056)}} for Firefox 65's implementation of this), except for
+- The `keypress` event is no longer fired for [non-printable keys](</en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>) (see {{bug(968056)}} for Firefox 65's implementation of this), except for
   the
 
   <kbd>Enter</kbd>
@@ -177,7 +176,7 @@ The following JavaScript function will do something after the user types the wor
 
 ## See also
 
-- {{Event("keypress")}} event
+- {{domxref("Element/keypress_event", "keypress")}} event
 - Related event handlers
 
   - {{domxref("GlobalEventHandlers.onkeydown")}}

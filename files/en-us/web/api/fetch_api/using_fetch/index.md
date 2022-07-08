@@ -1,6 +1,7 @@
 ---
 title: Using the Fetch API
 slug: Web/API/Fetch_API/Using_Fetch
+page-type: guide
 tags:
   - API
   - BODY
@@ -25,7 +26,8 @@ The `fetch` specification differs from `jQuery.ajax()` in the following signific
 - The Promise returned from `fetch()` **won't reject on HTTP error status** even if the response is an HTTP 404 or 500. Instead, as soon as the server responds with headers, the Promise will resolve normally (with the {{domxref("Response/ok", "ok")}} property of the response set to false if the response isn't in the range 200–299), and it will only reject on network failure or if anything prevented the request from completing.
 - Unless `fetch()` is called with the [`credentials`](/en-US/docs/Web/API/fetch#credentials) option set to `include`, `fetch()`:
   - won't send cookies in cross-origin requests
-  - won’t set any cookies sent back in cross-origin responses
+  - won't set any cookies sent back in cross-origin responses
+  - As of August 2018, the default credentials policy changed to same-origin. Firefox was also modified in version 61.0b13)
 
 A basic fetch request is really simple to set up. Have a look at the following code:
 
@@ -401,9 +403,11 @@ The {{domxref("Response.Response","Response()")}} constructor takes two optional
 Both requests and responses may contain body data. A body is an instance of any of the following types:
 
 - {{jsxref("ArrayBuffer")}}
-- {{domxref("ArrayBufferView")}} (Uint8Array and friends)
-- {{domxref("Blob")}}/{{domxref("File")}}
-- string
+- {{jsxref("TypedArray")}} (Uint8Array and friends)
+- {{jsxref("DataView")}}
+- {{domxref("Blob")}}
+- {{domxref("File")}}
+- {{jsxref("String")}}, or a string literal
 - {{domxref("URLSearchParams")}}
 - {{domxref("FormData")}}
 

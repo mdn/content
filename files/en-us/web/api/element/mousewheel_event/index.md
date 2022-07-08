@@ -1,6 +1,7 @@
 ---
 title: 'Element: mousewheel event'
 slug: Web/API/Element/mousewheel_event
+page-type: web-api-event
 tags:
   - DOM
   - Deprecated

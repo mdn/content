@@ -33,16 +33,24 @@ new WebAssembly.Module(bufferSource)
 
 ### Parameters
 
-- _bufferSource_
+- `bufferSource`
   - : A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
     containing the binary code of the .wasm module you want to compile.
+
+#### Exceptions
+
+- If the parameter is not of the correct type or structure, a
+  {{jsxref("TypeError")}} is thrown.
+- If compilation fails, the constructor rejects with a
+  {{jsxref("WebAssembly.CompileError")}}.
+- Some browsers may throw a {{jsxref("RangeError")}}, as they prohibit compilation and instantiation of Wasm with large buffers on the UI thread.
 
 ## Examples
 
 ### Synchronously compiling a WebAssembly module
 
 ```js
-var importObject = {
+const importObject = {
   imports: {
     imported_func: function(arg) {
       console.log(arg);

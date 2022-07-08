@@ -30,7 +30,7 @@ TypeError: Cannot assign to read only property '0' of [object Array] (Chrome)
 ## What went wrong?
 
 The global variable or object property that was assigned to is a read-only property.
-(Technically, it is a [non-writable data property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Writable_attribute).)
+(Technically, it is a [non-writable data property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#writable_attribute).)
 
 This error happens only in [strict mode code](/en-US/docs/Web/JavaScript/Reference/Strict_mode). In
 non-strict code, the assignment is silently ignored.

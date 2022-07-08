@@ -1,6 +1,7 @@
 ---
 title: MutationObserver()
 slug: Web/API/MutationObserver/MutationObserver
+page-type: web-api-constructor
 tags:
   - API
   - Changes
@@ -46,7 +47,7 @@ new MutationObserver(callback)
     2. the {{domxref("MutationObserver")}} which invoked the
         `callback`.
 
-    See the [example](#example) below for more details.
+    See the [examples](#examples) below for more details.
 
 ### Return value
 

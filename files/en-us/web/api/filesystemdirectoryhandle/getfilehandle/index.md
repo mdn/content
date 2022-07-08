@@ -1,6 +1,7 @@
 ---
 title: FileSystemDirectoryHandle.getFileHandle()
 slug: Web/API/FileSystemDirectoryHandle/getFileHandle
+page-type: web-api-instance-method
 tags:
   - Directory
   - File
@@ -19,21 +20,23 @@ directory the method is called.
 ## Syntax
 
 ```js
-var FileSystemFileHandle = FileSystemDirectoryHandle.getFileHandle(name);
+getFileHandle(name)
+getFileHandle(name, options)
 ```
 
 ### Parameters
 
-- _name_
-  - : A {{domxref('USVString')}} representing the {{domxref('FileSystemHandle.name')}} of
+- `name`
+  - : A string representing the {{domxref('FileSystemHandle.name')}} of
     the file you wish to retrieve.
-- _options_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object with the following properties:
 
-    - `create`: A {{jsxref('Boolean')}}. Default `false`. When
-      set to `true` if the file is not found, one with the specified name
-      will be created and returned.
+    - `create`
+      - : A {{jsxref('Boolean')}}. Default `false`. When
+        set to `true` if the file is not found, one with the specified name
+        will be created and returned.
 
 ### Return value
 
@@ -75,5 +78,4 @@ const fileHandle = currentDirHandle.getFileHandle(fileName, {create: true});
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

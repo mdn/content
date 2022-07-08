@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.bindRenderbuffer()
 slug: Web/API/WebGLRenderingContext/bindRenderbuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -24,19 +25,20 @@ bindRenderbuffer(target, renderbuffer)
 
 ### Parameters
 
-- target
+- `target`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
 
-    - `gl.RENDERBUFFER`: Buffer data storage for single images in a
-      renderable internal format.
+    - `gl.RENDERBUFFER`
+      - : Buffer data storage for single images in a
+        renderable internal format.
 
-- renderbuffer
+- `renderbuffer`
   - : A {{domxref("WebGLRenderbuffer")}} object to bind.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

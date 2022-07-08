@@ -1,6 +1,7 @@
 ---
 title: 'AbortSignal: abort event'
 slug: Web/API/AbortSignal/abort_event
+page-type: web-api-event
 tags:
   - API
   - Event

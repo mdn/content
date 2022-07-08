@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: emptied event'
 slug: Web/API/HTMLMediaElement/emptied_event
+page-type: web-api-event
 tags:
   - Audio
   - Event

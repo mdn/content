@@ -1,6 +1,7 @@
 ---
 title: 'Element: mousedown event'
 slug: Web/API/Element/mousedown_event
+page-type: web-api-event
 tags:
   - API
   - DOM

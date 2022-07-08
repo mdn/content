@@ -94,7 +94,7 @@ necessary.
 // {0: 1, 3: 1, length: 5}
 
 // ES2015 Typed Arrays are subclasses of Array
-var i32a = new Int32Array([1, 2, 3, 4, 5])
+const i32a = new Int32Array([1, 2, 3, 4, 5])
 
 i32a.copyWithin(0, 2)
 // Int32Array [3, 4, 5, 4, 5]

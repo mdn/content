@@ -1,6 +1,7 @@
 ---
 title: Clipboard API
 slug: Web/API/Clipboard_API
+page-type: web-api-overview
 tags:
   - API
   - Async Clipboard API
@@ -14,6 +15,10 @@ tags:
   - Reference
   - copy
   - paste
+browser-compat:
+  - api.Clipboard
+  - api.ClipboardEvent
+  - api.ClipboardItem
 ---
 {{DefaultAPISidebar("Clipboard API")}}
 
@@ -22,6 +27,11 @@ The **Clipboard API** provides the ability to respond to clipboard commands (cut
 > **Note:** This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
 
 This API is designed to supersede accessing the clipboard using {{domxref("document.execCommand()")}}.
+
+> **Note:** The **clipboard** is a data buffer that is used for short-term, data storage and/or data transfers, this can be between documents or applications
+> It is usually implemented as an anonymous, temporary [data buffer](https://en.wikipedia.org/wiki/Data_buffer), sometimes called the paste buffer, that can be accessed from most or all programs within the environment via defined [programming interfaces](https://en.wikipedia.org/wiki/Application_programming_interface).
+>
+> A typical application accesses clipboard functionality by mapping [user input](https://en.wikipedia.org/wiki/User_input) such as [keybindings](https://en.wikipedia.org/wiki/Keybinding), [menu selections](<https://en.wikipedia.org/wiki/Menu_(computing)>), etc. to these interfaces.
 
 ## Accessing the clipboard
 
@@ -45,21 +55,11 @@ This snippet fetches the text from the clipboard and appends it to the first ele
 
 ## Specifications
 
-{{Specifications("api.Clipboard")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-### Clipboard
-
-{{Compat("api.Clipboard")}}
-
-### ClipboardEvent
-
-{{Compat("api.ClipboardEvent")}}
-
-### ClipboardItem
-
-{{Compat("api.ClipboardItem")}}
+{{Compat}}
 
 ## See also
 

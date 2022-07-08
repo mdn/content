@@ -1,6 +1,7 @@
 ---
 title: Connecting the peers
 slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers
+page-type: guide
 ---
 {{WebRTCSidebar}}
 

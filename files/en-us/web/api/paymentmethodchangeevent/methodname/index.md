@@ -1,6 +1,7 @@
 ---
 title: PaymentMethodChangeEvent.methodName
 slug: Web/API/PaymentMethodChangeEvent/methodName
+page-type: web-api-instance-property
 tags:
   - API
   - Commerce
@@ -25,7 +26,7 @@ within the payment handler are described by the `PaymentMethodChangeEvent`.
 
 ## Value
 
-A {{domxref("DOMString")}} which uniquely identifies the currently-selected payment
+A string which uniquely identifies the currently-selected payment
 handler. This may be a string chosen from the list of standardized payment method
 identifiers, or a URL used by the payment processing service. See
 {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API", "Payment method

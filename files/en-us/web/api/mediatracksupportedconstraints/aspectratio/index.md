@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.aspectRatio
 slug: Web/API/MediaTrackSupportedConstraints/aspectRatio
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints
@@ -60,7 +61,7 @@ if (navigator.mediaDevices.getSupportedConstraints().aspectRatio) {
 
 ### Result
 
-{{ EmbedLiveSample('Example', 600, 80) }}
+{{ EmbedLiveSample('Examples', 600, 80) }}
 
 ## Specifications
 

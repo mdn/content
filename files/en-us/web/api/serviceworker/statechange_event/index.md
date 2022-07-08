@@ -1,6 +1,7 @@
 ---
 title: 'ServiceWorker: statechange event'
 slug: Web/API/ServiceWorker/statechange_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -30,9 +31,7 @@ A generic {{domxref("Event")}}.
 
 ## Examples
 
-This code snippet is from the [service
-worker registration-events sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([live
-demo](https://googlechrome.github.io/samples/service-worker/registration-events/)). The code listens for any change in the {{domxref("ServiceWorker.state")}}
+This code snippet is from the [service worker registration-events sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([live demo](https://googlechrome.github.io/samples/service-worker/registration-events/)). The code listens for any change in the {{domxref("ServiceWorker.state")}}
 and returns its value.
 
 ```js

@@ -1,6 +1,7 @@
 ---
 title: EyeDropper
 slug: Web/API/EyeDropper
+page-type: web-api-interface
 tags:
   - API
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: Largest Contentful Paint API
 slug: Web/API/Largest_Contentful_Paint_API
+page-type: web-api-overview
 tags:
   - API
   - LargestContentfulPaint

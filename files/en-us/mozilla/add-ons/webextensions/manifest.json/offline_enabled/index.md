@@ -24,6 +24,10 @@ browser-compat: webextensions.manifest.offline_enabled
       <td>No</td>
     </tr>
     <tr>
+      <th scope="row">Manifest version</th>
+      <td>2</td>
+    </tr>
+    <tr>
       <th scope="row">Example</th>
       <td><pre class="brush: json">"offline_enabled": true</pre></td>
     </tr>

@@ -1,6 +1,7 @@
 ---
 title: USBDevice.serialNumber
 slug: Web/API/USBDevice/serialNumber
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - serialNumber
+  - Experimental
 browser-compat: api.USBDevice.serialNumber
 ---
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}

@@ -1,6 +1,7 @@
 ---
 title: RTCRtpReceiver.getContributingSources()
 slug: Web/API/RTCRtpReceiver/getContributingSources
+page-type: web-api-instance-method
 tags:
   - API
   - CSRC

@@ -27,7 +27,7 @@ animation: slidein 3s linear 1s;
 animation: slidein 3s;
 ```
 
-A [description of which properties are animatable](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#which_css_properties_are_animatable) is available; it's worth noting that this description is also valid for [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
+A [description of which properties are animatable](/en-US/docs/Web/CSS/CSS_animated_properties) is available; it's worth noting that this description is also valid for [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
 
 ## Constituent properties
 
@@ -51,7 +51,7 @@ Each individual animation is specified as:
 - zero or one occurrences of the following values:
 
   - {{cssxref("&lt;single-transition-easing-function&gt;")}}
-  - {{cssxref("animation", "&lt;single-animation-iteration-count&gt;", "#single-animation-iteration-coun")}}
+  - {{cssxref("animation", "&lt;single-animation-iteration-count&gt;", "#single-animation-iteration-count")}}
   - {{cssxref("animation", "&lt;single-animation-direction&gt;", "#single-animation-direction")}}
   - {{cssxref("animation", "&lt;single-animation-fill-mode&gt;", "#single-animation-fill-mode")}}
   - {{cssxref("animation", "&lt;single-animation-play-state&gt;", "#single-animation-play-state")}}

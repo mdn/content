@@ -1,6 +1,7 @@
 ---
 title: AddressErrors.phone
 slug: Web/API/AddressErrors/phone
+page-type: web-api-instance-property
 tags:
   - API
   - Address

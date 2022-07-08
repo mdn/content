@@ -1,6 +1,7 @@
 ---
 title: SVGLineElement
 slug: Web/API/SVGLineElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

@@ -1,6 +1,7 @@
 ---
 title: DedicatedWorkerGlobalScope.postMessage()
 slug: Web/API/DedicatedWorkerGlobalScope/postMessage
+page-type: web-api-instance-method
 tags:
   - API
   - DedicatedWorkerGlobalScope
@@ -53,7 +54,7 @@ Inside the handler a calculation is done from which a result message is created;
 ```js
 onmessage = function(e) {
   console.log('Message received from main script');
-  var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+  const workerResult = 'Result: ' + (e.data[0] * e.data[1]);
   console.log('Posting message back to main script');
   postMessage(workerResult);
 }
@@ -61,7 +62,7 @@ onmessage = function(e) {
 
 In the main script, `onmessage` would have to be called on a `Worker object`, whereas inside the worker script you just need `onmessage` because the worker is effectively the global scope ({{domxref("DedicatedWorkerGlobalScope")}}).
 
-For a full example, see our [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](https://mdn.github.io/simple-web-worker/)).
+For a full example, see our [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
 
 > **Note:** `postMessage()` can only send a single object at once. As seen above, if you want to pass multiple values you can send an array.
 

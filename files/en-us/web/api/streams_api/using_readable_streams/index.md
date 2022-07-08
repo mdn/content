@@ -1,6 +1,7 @@
 ---
 title: Using readable streams
 slug: Web/API/Streams_API/Using_readable_streams
+page-type: guide
 tags:
   - API
   - Controller

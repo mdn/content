@@ -1,6 +1,7 @@
 ---
 title: 'Document: keypress event'
 slug: Web/API/Document/keypress_event
+page-type: web-api-event
 tags:
   - DOM
   - Deprecated

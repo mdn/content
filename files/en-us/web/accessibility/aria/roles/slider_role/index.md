@@ -10,8 +10,8 @@ tags:
   - widget role
   - widget
   - slider role
+spec-urls: https://w3c.github.io/aria/#slider
 ---
-
 The `slider` role defines an input where the user selects a value from within a given range.
 
 ## Description
@@ -58,7 +58,7 @@ Sliders have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA
 
 Unlike the read-only `meter` and `progressbar` roles, a `slider` is an input, accepting user interaction. In addition to including the {{htmlattrxref('tabindex')}} attribute to enable slider focus, keyboard and pointer device support must be implemented.
 
-The slider represents the range of possible values. The position of the slider thumb along the slider represents the current value. User actions that must be supported include changing the value by dragging the thumb or clicking the slider for pointing devices and using directional keys such as arrow keys for the keyboard users. See [keyboard interactions](#Keyboard_interactions) below.
+The slider represents the range of possible values. The position of the slider thumb along the slider represents the current value. User actions that must be supported include changing the value by dragging the thumb or clicking the slider for pointing devices and using directional keys such as arrow keys for the keyboard users. See [keyboard interactions](#keyboard_interactions) below.
 
 > **Note:** It is recommended to use native [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) elements rather than the `slider` role. User agents provide a stylized widget for the range input element, based on the current `value` as it relates to the minimum and maximum values. When using non-semantic elements, all features of the native semantic element need to be recreated with ARIA attributes, JavaScript and CSS.
 
@@ -145,12 +145,12 @@ The position of the thumb is the maximum value minus the current value times the
   position: absolute;
   height: 1rem;
   width: 2rem;
-  background-color: currentColor;
+  background-color: currentcolor;
   left: -0.5rem;
 }
 ```
 
-For this example to work, we have to write a script to handle all keyboard and pointer events, including event listeners for `pointermove`, `pointerup`, `focus`, `blur`, and `keydown`, and provide styles for the default state and when the thumb and slider receive focus. The position of the thumb, the `aria-valuenow` and`aria-valuetext` values, and the inner text of the element with the {{HTMLattrxref('id')}} "temperatureValue" need to be updated every time <kbd>ArrowLeft</kbd>, <kbd>ArrowDown</kbd>, <kbd>ArrowRight</kbd>, <kbd>ArrowUp</kbd>, <kbd>Home</kbd>, <kbd>End</kbd>, and, optionally, <kbd>PageDown</kbd> and <kbd>PageUp</kbd> keys are released and when the user drags the thumb or otherwise clicks on the temperature slider.
+For this example to work, we have to write a script to handle all keyboard and pointer events, including event listeners for `pointermove`, `pointerup`, `focus`, `blur`, and `keydown`, and provide styles for the default state and when the thumb and slider receive focus. The position of the thumb, the `aria-valuenow` and `aria-valuetext` values, and the inner text of the element with the {{HTMLattrxref('id')}} "temperatureValue" need to be updated every time <kbd>ArrowLeft</kbd>, <kbd>ArrowDown</kbd>, <kbd>ArrowRight</kbd>, <kbd>ArrowUp</kbd>, <kbd>Home</kbd>, <kbd>End</kbd>, and, optionally, <kbd>PageDown</kbd> and <kbd>PageUp</kbd> keys are released and when the user drags the thumb or otherwise clicks on the temperature slider.
 
 Using semantic HTML, this could have been written as:
 
@@ -176,7 +176,7 @@ There are a few ways to make a range input vertical. In this example, we used [C
 | Right and Up arrows | Increase the selected value by one step |
 | Left and Down arrows | Decrease the selected value by one step|
 | Page Up | (Optional) increase the value by a set amount greater than one step |
-| Page Up and Page Down | (Optional) decrease the value by a set amount greater than one step |
+| Page Down | (Optional) decrease the value by a set amount greater than one step |
 | Home | Set the slider to the minimum value. |
 | End | Set the slider to the maximum value. |
 
@@ -194,9 +194,7 @@ It is recommended to use a native {{HTMLElement("input")}} of type `range`, [`<i
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#slider","ARIA: slider role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: Using XMLHttpRequest
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
+page-type: guide
 tags:
   - AJAX
   - AJAXfile
@@ -14,6 +15,7 @@ tags:
   - XHR
   - XML
   - XMLHttpRequest
+browser-compat: api.XMLHttpRequest
 ---
 {{APIRef("XMLHttpRequest")}}
 
@@ -26,8 +28,7 @@ of both common and more obscure use cases for `XMLHttpRequest` are included.
 
 To send an HTTP request, create an `XMLHttpRequest` object, open a URL, and
 send the request. After the transaction completes, the object will contain useful
-information such as the response body and the [HTTP
-status](/en-US/docs/Web/HTTP/Status) of the result.
+information such as the response body and the [HTTP status](/en-US/docs/Web/HTTP/Status) of the result.
 
 ```js
 function reqListener () {
@@ -48,8 +49,7 @@ asynchronously or synchronously. The type of request is dictated by the optional
 {{domxref("XMLHttpRequest.open()")}} method. If this argument is `true` or
 not specified, the `XMLHttpRequest` is processed asynchronously, otherwise
 the process is handled synchronously. A detailed discussion and demonstrations of these
-two types of requests can be found on the [synchronous
-and asynchronous requests](/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) page. Do not use synchronous requests outside Web
+two types of requests can be found on the [synchronous and asynchronous requests](/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) page. Do not use synchronous requests outside Web
 Workers.
 
 > **Note:** Starting with Gecko 30.0 {{ geckoRelease("30.0")
@@ -63,8 +63,7 @@ Workers.
 
 ## Handling responses
 
-There are several types of [response
-attributes](https://xhr.spec.whatwg.org/) defined by the living standard specification for the
+There are several types of [response attributes](https://xhr.spec.whatwg.org/) defined by the living standard specification for the
 {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}} constructor. These tell
 the client making the `XMLHttpRequest` important information about the status
 of the response. Some cases where dealing with non-text response types may involve some
@@ -79,8 +78,7 @@ There are four primary ways of analyzing this XML document:
 
 1. Using [XPath](/en-US/docs/Web/XPath) to address (or point to) parts of
     it.
-2. Manually [Parsing and
-    serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML) to strings or objects.
+2. Manually [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML) to strings or objects.
 3. Using {{domxref("XMLSerializer")}} to serialize **DOM trees to strings or to
     files**.
 4. {{jsxref("RegExp")}} can be used if you always know the content of the XML document
@@ -90,8 +88,7 @@ There are four primary ways of analyzing this XML document:
 
 > **Note:** `XMLHttpRequest` can now interpret HTML for you
 > using the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} property. Read the
-> article about [HTML
-> in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) to learn how to do this.
+> article about [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) to learn how to do this.
 
 ### Processing a responseText property containing an HTML document
 
@@ -101,13 +98,12 @@ containing the raw HTML. This could prove difficult to manipulate and analyze. T
 three primary ways to analyze and parse this raw HTML string:
 
 1. Use the `XMLHttpRequest.responseXML` property as covered in the article
-    [HTML in
-    XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
+    [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
 2. Inject the content into the body of a [document fragment](/en-US/docs/Web/API/DocumentFragment) via
     `fragment.body.innerHTML` and traverse the DOM of the fragment.
 3. {{jsxref("RegExp")}} can be used if you always know the content of the HTML
     `responseText` beforehand. You might want to remove line breaks, if you use
-    RegExp to scan with regard to linebreaks. However, this method is a "last resort"
+    `RegExp` to scan with regard to line breaks. However, this method is a "last resort"
     since if the HTML code changes slightly, the method will likely fail.
 
 ## Handling binary data
@@ -148,8 +144,7 @@ oReq.responseType = "arraybuffer";
 oReq.send();
 ```
 
-For more examples check out the [Sending and
-Receiving Binary Data](/en-US/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data) page
+For more examples check out the [Sending and Receiving Binary Data](/en-US/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data) page
 
 ## Monitoring progress
 
@@ -158,8 +153,7 @@ occur while the request is being processed. This includes periodic progress
 notifications, error notifications, and so forth.
 
 Support for DOM {{event("progress")}} event monitoring of `XMLHttpRequest`
-transfers follows the [specification for progress
-events](https://xhr.spec.whatwg.org/#interface-progressevent): these events implement the {{domxref("ProgressEvent")}} interface. The
+transfers follows the [specification for progress events](https://xhr.spec.whatwg.org/#interface-progressevent): these events implement the {{domxref("ProgressEvent")}} interface. The
 actual events you can monitor to determine the state of an ongoing transfer are:
 
 - {{event("progress")}}
@@ -373,9 +367,8 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
     for (var nIdx = 0; nIdx < nBytes; nIdx++) {
       ui8Data[nIdx] = sData.charCodeAt(nIdx) & 0xff;
     }
-    /* send as ArrayBufferView...: */
+    /* send: */
     this.send(ui8Data);
-    /* ...or as ArrayBuffer (legacy)...: this.send(ui8Data.buffer); */
   };
 }
 
@@ -676,8 +669,7 @@ user keyed data. The transmitted data is in the same format the form's
 `submit()` method uses to send data, if the form's encoding type were set to
 "multipart/form-data". FormData objects can be utilized in a number of ways with an
 `XMLHttpRequest`. For examples, and explanations of how one can utilize
-FormData with XMLHttpRequests, see the [Using FormData
-Objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects) page. For didactic purposes here is **a _translation_ of [the previous example](#a_little_vanilla_framework) transformed to use the
+FormData with XMLHttpRequests, see the [Using FormData Objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects) page. For didactic purposes here is **a _translation_ of [the previous example](#a_little_vanilla_framework) transformed to use the
 `FormData` API**. Note the brevity of the code:
 
 ```html
@@ -806,8 +798,7 @@ function AJAXSubmit (oFormElement) {
 
 > **Note:** As we said, **{{domxref("FormData")}}
 > objects are not [stringifiable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)objects**. If you want to stringify a submitted data, use [the previous _pure_-AJAX example](#a_little_vanilla_framework). Note
-> also that, although in this example there are some `file` {{
-  HTMLElement("input") }} fields, **when you submit a form through the
+> also that, although in this example there are some `file` {{ HTMLElement("input") }} fields, **when you submit a form through the
 > `FormData` API you do not need to use the {{domxref("FileReader")}} API
 > also**: files are automatically loaded and uploaded.
 
@@ -903,15 +894,14 @@ If you conclude with an XMLHttpRequest receiving `status=0` and
 `statusText=null`, this means the request was not allowed to be performed. It
 was
 [`UNSENT`](https://xhr.spec.whatwg.org/#dom-xmlhttprequest-unsent).
-A likely cause for this is when the [`XMLHttpRequest`
-origin](https://www.w3.org/TR/2010/CR-XMLHttpRequest-20100803/#xmlhttprequest-origin) (at the creation of the XMLHttpRequest) has changed when the XMLHttpRequest
+A likely cause for this is when the [`XMLHttpRequest` origin](https://www.w3.org/TR/2010/CR-XMLHttpRequest-20100803/#xmlhttprequest-origin) (at the creation of the XMLHttpRequest) has changed when the XMLHttpRequest
 is subsequently `open()`. This case can happen, for example, when one has an
 XMLHttpRequest that gets fired on an onunload event for a window, the expected
 XMLHttpRequest is created when the window to be closed is still there, and finally
 sending the request (in other words, `open()`) when this window has lost its
 focus and another window gains focus. The most effective way to avoid this problem is to
 set a listener on the new window's {{event("activate")}} event which is set once the
-terminated window has its {{event("unload")}} event triggered.
+terminated window has its {{domxref("Window/unload_event", "unload")}} event triggered.
 
 ## Workers
 
@@ -920,22 +910,17 @@ Setting `overrideMimeType` does not work from a {{domxref("Worker")}}. See
 
 ## Specifications
 
-{{Specifications("api.XMLHttpRequest")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.XMLHttpRequest")}}
+{{Compat}}
 
 ## See also
 
-1. [MDN AJAX introduction](/en-US/docs/Web/Guide/AJAX/Getting_Started)
-1. [HTML in
-    XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-1. [HTTP access control](/en-US/docs/Web/HTTP/CORS)
-1. [XMLHttpRequest -
-    REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
-1. [Microsoft documentation](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
-1. ["Using the XMLHttpRequest
-    Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
-1. [The `XMLHttpRequest` object:
-    WHATWG specification](https://xhr.spec.whatwg.org/)
+- [MDN AJAX introduction](/en-US/docs/Web/Guide/AJAX/Getting_Started)
+- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [HTTP access control](/en-US/docs/Web/HTTP/CORS)
+- [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
+- ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
+- [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)

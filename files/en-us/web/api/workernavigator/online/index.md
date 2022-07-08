@@ -1,6 +1,7 @@
 ---
 title: WorkerNavigator.onLine
 slug: Web/API/WorkerNavigator/onLine
+page-type: web-api-instance-property
 tags:
   - API
   - DOM Reference
@@ -61,7 +62,7 @@ always come out as `false`/`undefined`.
 ### Listening for changes in network status
 
 To see changes in the network state, use
-[`addEventListener`](/en-US/docs/DOM/element.addEventListener) to
+[`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) to
 listen for the events on `online` and `offline`, as
 in the following example:
 

@@ -1,6 +1,7 @@
 ---
 title: Request.integrity
 slug: Web/API/Request/integrity
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch

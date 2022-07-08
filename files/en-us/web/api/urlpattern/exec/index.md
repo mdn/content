@@ -1,6 +1,7 @@
 ---
 title: URLPattern.exec()
 slug: Web/API/URLPattern/exec
+page-type: web-api-instance-method
 tags:
   - API
   - Method

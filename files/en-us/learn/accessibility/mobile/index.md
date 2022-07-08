@@ -99,7 +99,7 @@ To get to these menus:
 1. Access the global menu by quickly swiping down, and then right.
 2. Access the local menu by quickly swiping up, and then right.
 3. Swipe left and right to cycle between the different options.
-4. Once you've selected the option you want, double-click to choose that option.
+4. Once you've selected the option you want, double-tap to choose that option.
 
 For details on all the options available under the global and local context menus, see [Use global and local context menus](https://support.google.com/accessibility/android/answer/6007066).
 
@@ -276,7 +276,7 @@ In this article, we have provided you with some details about common mobile acce
 
 ## See also
 
-- [Guidelines For Mobile Web Development](https://www.smashingmagazine.com/guidelines-for-mobile-web-development/) — A list of articles in _Smashing Magazine_ covering different techniques for mobile web design.
+- [Guidelines For Mobile Web Development](https://www.smashingmagazine.com/2012/07/guidelines-for-mobile-web-development/) — A list of articles in _Smashing Magazine_ covering different techniques for mobile web design.
 - [Make your site work on touch devices](https://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644) — Useful article about using touch events to get interactions working on mobile devices.
 
 {{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}

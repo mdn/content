@@ -1,6 +1,7 @@
 ---
 title: MediaStreamEvent
 slug: Web/API/MediaStreamEvent
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -23,7 +24,7 @@ _A {{domxref("MediaStreamEvent")}} being an {{domxref("Event")}}, this event als
 ## Constructors
 
 - {{domxref("MediaStreamEvent.MediaStreamEvent()", "MediaStreamEvent()")}}
-  - : Returns a new `MediaStreamEvent`. It takes two parameters, the first being a {{domxref("DOMString")}} representing the type of the event; the second a dictionary containing the {{domxref("MediaStream")}} it refers to.
+  - : Returns a new `MediaStreamEvent`. It takes two parameters, the first being a string representing the type of the event; the second a dictionary containing the {{domxref("MediaStream")}} it refers to.
 
 ## Methods
 

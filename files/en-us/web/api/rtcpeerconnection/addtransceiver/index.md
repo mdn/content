@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.addTransceiver()
 slug: Web/API/RTCPeerConnection/addTransceiver
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -57,6 +58,9 @@ None ({{jsxref("undefined")}}).
 - {{jsxref("TypeError")}}
   - : Thrown if `trackOrKind` was not either `"audio"` or `"video"`.
 
+- {{jsxref("RangeError")}}
+  - : Thrown if any of the `sendEncodings` encodings have a {{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}} value less than 0.0.
+
 ## Specifications
 
 {{Specifications}}
@@ -68,7 +72,6 @@ None ({{jsxref("undefined")}}).
 ## See also
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Introduction to the Real-time
-  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - {{domxref("RTCPeerConnection.addTrack()")}} also creates transceivers
 - {{domxref("RTCRtpReceiver")}} and {{domxref("RTCRtpSender")}}

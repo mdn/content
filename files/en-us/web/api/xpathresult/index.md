@@ -1,6 +1,7 @@
 ---
 title: XPathResult
 slug: Web/API/XPathResult
+page-type: web-api-interface
 tags:
   - API
   - DOM XPath API
@@ -31,7 +32,7 @@ Since XPath expressions can result in a variety of result types, this interface 
 - {{domxref("XPathResult.snapshotLength")}}{{readonlyInline}}
   - : The number of nodes in the result snapshot.
 - {{domxref("XPathResult.stringValue")}}{{readonlyInline}}
-  - : A {{domxref("DOMString", "string")}} representing the value of the result if `resultType` is `STRING_TYPE`.
+  - : A string representing the value of the result if `resultType` is `STRING_TYPE`.
 
 ## Methods
 

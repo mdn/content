@@ -1,6 +1,7 @@
 ---
 title: RTCRtpEncodingParameters.scaleResolutionDownBy
 slug: Web/API/RTCRtpEncodingParameters/scaleResolutionDownBy
+page-type: web-api-instance-property
 tags:
   - API
   - Codec

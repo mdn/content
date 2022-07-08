@@ -1,6 +1,7 @@
 ---
 title: CSSPrimitiveValue
 slug: Web/API/CSSPrimitiveValue
+page-type: web-api-interface
 tags:
   - API
   - CSSOM
@@ -30,7 +31,7 @@ Conversions are allowed between absolute values (from millimeters to centimeters
 
 ## Properties
 
-_Inherits properties from its parent, `{{DOMxRef("CSSValue")}}`_.
+_Inherits properties from its parent, {{DOMxRef("CSSValue")}}_.
 
 - {{DOMxRef("CSSPrimitiveValue.primitiveType")}} {{readonlyInline}}
 

@@ -1,6 +1,7 @@
 ---
 title: Element.toggleAttribute()
 slug: Web/API/Element/toggleAttribute
+page-type: web-api-instance-method
 tags:
   - API
   - Element

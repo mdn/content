@@ -1,6 +1,7 @@
 ---
 title: NavigatorUAData
 slug: Web/API/NavigatorUAData
+page-type: web-api-interface
 tags:
   - API
   - Interface

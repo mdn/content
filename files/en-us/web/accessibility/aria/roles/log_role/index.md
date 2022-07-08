@@ -10,6 +10,7 @@ tags:
   - log
   - log role
   - ARIA log
+spec-urls: https://w3c.github.io/aria/#log
 ---
 
 The `log` role is used to identify an element that creates a [live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) where new information is added in a meaningful order and old information may disappear.
@@ -42,9 +43,7 @@ With an area that has scrolling text, such as a stock ticker, the [`marquee`](/e
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#log","ARIA: log role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

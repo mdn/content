@@ -1,6 +1,7 @@
 ---
 title: Ajax navigation example
 slug: Web/API/History_API/Example
+page-type: guide
 ---
 This is an example of an AJAX website composed only of three pages (_first_page.php_, _second_page.php_ and _third_page.php_). To see how it works, please create the following files (or git clone [https://github.com/giabao/mdn-ajax-nav-example.git](https://github.com/giabao/mdn-ajax-nav-example) ):
 
@@ -212,7 +213,7 @@ const ajaxRequest = new (function () {
     }
 
     function ajaxLoad () {
-        var vMsg, nStatus = this.status;
+        const vMsg, nStatus = this.status;
         switch (nStatus) {
             case 200:
                 vMsg = JSON.parse(this.responseText);
@@ -293,7 +294,7 @@ const ajaxRequest = new (function () {
     function init () {
         oPageInfo.title = document.title;
         history.replaceState(oPageInfo, oPageInfo.title, oPageInfo.url);
-        for (var oLink, nIdx = 0, nLen = document.links.length; nIdx < nLen; document.links[nIdx++].onclick = processLink);
+        for (let oLink, nIdx = 0, nLen = document.links.length; nIdx < nLen; document.links[nIdx++].onclick = processLink);
     }
 
     const
@@ -372,7 +373,7 @@ const ajaxRequest = new (function () {
             511: "Network Authentication Required"
         };
 
-    var
+    const
 
         oReq, bIsLoading = false, bUpdateURL = false;
 

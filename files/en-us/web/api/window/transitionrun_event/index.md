@@ -1,6 +1,7 @@
 ---
 title: 'Window: transitionrun event'
 slug: Web/API/Window/transitionrun_event
+page-type: web-api-event
 tags:
   - API
   - Reference
@@ -61,7 +62,7 @@ window.ontransitionrun = () => {
 };
 ```
 
-[See a live example of this event.](/en-US/docs/Web/API/HTMLElement/transitionrun_event#Live_example)
+[See a live example of this event.](/en-US/docs/Web/API/HTMLElement/transitionrun_event#live_example)
 
 ## Specifications
 

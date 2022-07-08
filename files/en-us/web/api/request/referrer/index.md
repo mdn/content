@@ -1,6 +1,7 @@
 ---
 title: Request.referrer
 slug: Web/API/Request/referrer
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch
@@ -21,7 +22,7 @@ Request. (e.g., `client`, `no-referrer`, or a URL.)
 
 ## Value
 
-A {{domxref("DOMString")}} representing the request's referrer.
+A string representing the request's referrer.
 
 ## Examples
 

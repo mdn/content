@@ -1,6 +1,7 @@
 ---
 title: AbstractRange
 slug: Web/API/AbstractRange
+page-type: web-api-interface
 tags:
   - Interface
   - Reference

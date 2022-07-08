@@ -1,6 +1,7 @@
 ---
 title: Element.animate()
 slug: Web/API/Element/animate
+page-type: web-api-instance-method
 tags:
   - API
   - Animation
@@ -36,8 +37,8 @@ animate(keyframes, options)
   - : Either an **integer representing the animation's duration** (in
     milliseconds), **or** an Object containing one or more timing properties described in the [`KeyframeEffect()` options parameter](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#parameters) and/or the following options:
 
-    - `id {{optional_inline}}`
-      - : A property unique to `animate()`: a [`DOMString`](/en-US/docs/Web/API/DOMString)
+    - `id` {{optional_inline}}
+      - : A property unique to `animate()`: a string
         with which to reference the animation.
 
 ### Return value
@@ -105,8 +106,7 @@ newspaper.addEventListener('click', () => {
 
 ### Down the Rabbit Hole demo
 
-In the demo [Down the
-Rabbit Hole (with the Web Animation API)](https://codepen.io/rachelnabors/pen/rxpmJL/?editors=0010), we use the convenient
+In the demo [Down the Rabbit Hole (with the Web Animation API)](https://codepen.io/rachelnabors/pen/rxpmJL/?editors=0010), we use the convenient
 `animate()` method to immediately create and play an animation on the
 `#tunnel` element to make it flow upwards, infinitely. Notice the array of
 objects passed as keyframes and also the timing options block.
@@ -127,8 +127,7 @@ document.getElementById("tunnel").animate([
 
 In newer browser versions, you are able to set a beginning or end state for an
 animation only (i.e. a single keyframe), and the browser will infer the other end of the
-animation if it is able to. For example, consider [this
-simple animation](https://mdn.github.io/dom-examples/web-animations-api/implicit-keyframes.html) — the Keyframe object looks like so:
+animation if it is able to. For example, consider [this simple animation](https://mdn.github.io/dom-examples/web-animations-api/implicit-keyframes.html) — the Keyframe object looks like so:
 
 ```js
 let rotate360 = [

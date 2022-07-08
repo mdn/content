@@ -1,6 +1,7 @@
 ---
 title: 'Document: pointerup event'
 slug: Web/API/Document/pointerup_event
+page-type: web-api-event
 tags:
   - API
   - Document

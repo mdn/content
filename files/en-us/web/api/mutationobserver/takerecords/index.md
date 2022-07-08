@@ -1,6 +1,7 @@
 ---
 title: MutationObserver.takeRecords()
 slug: Web/API/MutationObserver/takeRecords
+page-type: web-api-instance-method
 tags:
   - API
   - Attribute Changes
@@ -41,7 +42,7 @@ None.
 
 ### Return value
 
-An array {{domxref("MutationRecord")}} objects, each describing one change applied to
+An array of {{domxref("MutationRecord")}} objects, each describing one change applied to
 the observed portion of the document's DOM tree.
 
 > **Note:** The queue of mutations which have occurred, but not been

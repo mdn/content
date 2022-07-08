@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.rect()
 slug: Web/API/CanvasRenderingContext2D/rect
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

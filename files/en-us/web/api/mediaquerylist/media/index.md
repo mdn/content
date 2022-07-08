@@ -1,6 +1,7 @@
 ---
 title: MediaQueryList.media
 slug: Web/API/MediaQueryList/media
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -14,12 +15,12 @@ browser-compat: api.MediaQueryList.media
 {{APIRef("CSSOM")}}
 
 The **`media`** read-only property of the
-{{DOMxRef("MediaQueryList")}} interface is a {{DOMxRef("DOMString")}} representing a
+{{DOMxRef("MediaQueryList")}} interface is a string representing a
 serialized media query.
 
 ## Value
 
-A {{DOMxRef("DOMString")}} representing a serialized media query.
+A string representing a serialized media query.
 
 ## Examples
 
@@ -73,8 +74,7 @@ A simple `<span>` to receive the output.
 ## See also
 
 - [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from
-  code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

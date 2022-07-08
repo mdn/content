@@ -1,6 +1,7 @@
 ---
 title: RTCIceServers.urls
 slug: Web/API/RTCIceServer/urls
+page-type: web-api-instance-property
 tags:
   - Experimental
   - Property

@@ -1,6 +1,7 @@
 ---
 title: Document.scripts
 slug: Web/API/Document/scripts
+page-type: web-api-instance-property
 tags:
   - API
   - Document

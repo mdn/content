@@ -1,6 +1,7 @@
 ---
 title: MIDIInput
 slug: Web/API/MIDIInput
+page-type: web-api-interface
 tags:
   - API
   - Draft

@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onmousemove
 slug: Web/API/GlobalEventHandlers/onmousemove
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -14,7 +15,7 @@ browser-compat: api.GlobalEventHandlers.onmousemove
 
 The **`onmousemove`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("mousemove")}} events.
+processes {{domxref("Element/mousemove_event", "mousemove")}} events.
 
 The `mousemove` event fires when the user moves the mouse.
 
@@ -26,8 +27,7 @@ target.onmousemove = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("MouseEvent")}} object as its sole
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("MouseEvent")}} object as its sole
 argument.
 
 ## Examples
@@ -98,8 +98,7 @@ links.forEach(link => {
 ### Draggable elements
 
 We also have an example available showing the use of the `onmousemove` event
-handler with draggable objects — [view the
-example in action](https://mdn.mozillademos.org/files/5031/draggable_elements.html).
+handler with draggable objects — [view the example in action](https://media.prod.mdn.mozit.cloud/attachments/2013/03/05/5031/5692db994e59bae0b1c9e66f7df259b9/draggable_elements.html).
 
 ## Specifications
 
@@ -111,4 +110,4 @@ example in action](https://mdn.mozillademos.org/files/5031/draggable_elements.ht
 
 ## See also
 
-- {{event("mousemove")}} event
+- {{domxref("Element/mousemove_event", "mousemove")}} event

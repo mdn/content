@@ -22,7 +22,9 @@ A resource is playing even if in buffering state or paused for any reason other 
 
 ## Syntax
 
-{{csssyntax}}
+```
+:playing
+```
 
 ## Examples
 

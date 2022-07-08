@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming
 slug: Web/API/PerformanceResourceTiming
+page-type: web-api-interface
 tags:
   - DOM
   - Interface
@@ -34,9 +35,9 @@ This interface extends the following {{domxref("PerformanceEntry")}} properties 
 The interface also supports the following properties which are listed in the order in which they are recorded for the fetching of a single resource. An alphabetical listing is shown in the navigation, at left.
 
 - {{domxref('PerformanceResourceTiming.initiatorType')}}{{readonlyInline}}
-  - : A {{domxref("DOMString","string")}} representing the _type_ of resource that initiated the performance entry, as specified in {{domxref('PerformanceResourceTiming.initiatorType')}}.
+  - : A string representing the _type_ of resource that initiated the performance entry, as specified in {{domxref('PerformanceResourceTiming.initiatorType')}}.
 - {{domxref('PerformanceResourceTiming.nextHopProtocol')}}{{readonlyInline}}
-  - : A {{domxref("DOMString","string")}} representing the _network protocol_ used to fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
+  - : A string representing the _network protocol_ used to fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
 - {{domxref('PerformanceResourceTiming.workerStart')}}{{readonlyInline}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} immediately before dispatching the {{domxref("FetchEvent")}} if a Service Worker thread is already running, or immediately before starting the Service Worker thread if it is not already running. If the resource is not intercepted by a Service Worker the property will always return 0.
 - {{domxref('PerformanceResourceTiming.redirectStart')}}{{readonlyInline}}
@@ -73,7 +74,7 @@ The interface also supports the following properties which are listed in the ord
 ## Methods
 
 - {{domxref("PerformanceResourceTiming.toJSON()")}}
-  - : Returns a {{domxref("DOMString")}} that is the JSON representation of the {{domxref("PerformanceResourceTiming")}} object.
+  - : Returns a string that is the JSON representation of the {{domxref("PerformanceResourceTiming")}} object.
 
 ## Example
 

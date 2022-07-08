@@ -1,15 +1,17 @@
 ---
 title: NDEFReadingEvent.message
 slug: Web/API/NDEFReadingEvent/message
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
+  - Experimental
   - message
   - NDEFReadingEvent
 browser-compat: api.NDEFReadingEvent.message
 ---
-{{securecontext_header}}{{APIRef()}}
+{{securecontext_header}}{{APIRef()}}{{SeeCompatTable}}
 
 The **`message`** property of the {{domxref("NDEFReadingEvent")}} interface returns an {{DOMxRef("NDEFMessage")}} object containing the received message.
 

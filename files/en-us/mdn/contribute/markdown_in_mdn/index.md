@@ -12,6 +12,29 @@ This page describes how we use Markdown to write documentation on MDN. We have c
 
 The baseline for MDN Markdown is GitHub-Flavored Markdown (GFM): <https://github.github.com/gfm/>. This means that for anything not otherwise specified in this page, you can refer to the GFM specification. GFM in turn is a superset of CommonMark ([https://spec.commonmark.org/](https://spec.commonmark.org/)).
 
+## Links
+
+The GFM specification defines two basic types of links:
+
+- [inline links](https://github.github.com/gfm/#inline-link), in which the destination is given immediately after the link text
+- [reference links](https://github.github.com/gfm/#reference-link), in which the destination is defined elsewhere in the document.
+
+On MDN we allow only inline links.
+
+This is the correct way to write GFM links on MDN:
+
+```md example-good
+[Macarons](https://en.wikipedia.org/wiki/Macaron) are delicious but tricky to make.
+```
+
+This is an incorrect way to write links on MDN:
+
+```md example-bad
+[Macarons][macaron] are delicious but tricky to make.
+
+[macaron]: https://en.wikipedia.org/wiki/Macaron
+```
+
 ## Example code blocks
 
 In GFM and CommonMark, authors can use "code fences" to demarcate `<pre>` blocks. The opening code fence may be followed by some text that is called the "info string". From the spec:
@@ -26,9 +49,10 @@ It's permissible for the info string to contain multiple words, like:
 ```
 ````
 
-In MDN, writers will use code fences for example code blocks. They must specify the language of the code sample using the first word of the info string, and this will be used to provide syntax highlighting for the block. The following words will be supported:
+In MDN, writers will use code fences for example code blocks. They must specify the language of the code sample using the first word of the info string, and this will be used to provide syntax highlighting for the block. The following words are supported:
 
 - `bash`
+- `batch`
 - `cpp` (for C/C++)
 - `css`
 - `html`
@@ -151,7 +175,7 @@ This HTML will be rendered as a highlighted box, like:
 ##### Callouts
 
 ```plain
-> **Callout:** **This is how you write a callout**.
+> **Callout:** **This is how you write a callout.**
 >
 > It can have multiple paragraphs.
 ```
@@ -178,7 +202,7 @@ This HTML will be rendered as a highlighted box, like:
 For example, if we want to use "Warnung" for "Warning" in German, then in German pages we would write:
 
 ```plain
-> Warnung: So schreibt man eine Warnung.
+> **Warnung:** So schreibt man eine Warnung.
 ```
 
 ...and this will produce:
@@ -249,11 +273,11 @@ Each of these top-level GFM `<li>` elements will be transformed into a
 For example, this is a `<dl>`:
 
 ````plain
-* term1
-    * : My description of term1
+- term1
+    - : My description of term1
 
-* `term2`
-    * : My description of term2
+- `term2`
+    - : My description of term2
 
       It can have multiple paragraphs, and code blocks too:
 
@@ -313,8 +337,8 @@ Definition lists written using this syntax must consist of pairs of `<dt>`/`<dd>
 As a workaround for cases where an author needs to associate multiple `<dt>` items with a single `<dd>`, consider providing them as a single `<dt>` that holds multiple terms, separated by commas, like this:
 
 ```plain
-* `param1`, `param2`, `param3`
-    * : My description of params 1, 2, and 3
+- `param1`, `param2`, `param3`
+    - : My description of params 1, 2, and 3
 ```
 
 The rationale for the syntax described here is that it works well enough with tools that expect CommonMark (for example, Prettier or GitHub previews) while being reasonably easy to write and to parse.

@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisEvent.name
 slug: Web/API/SpeechSynthesisEvent/name
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -19,7 +20,7 @@ the name of the [SSML](https://www.w3.org/TR/speech-synthesis/#S3.3.2) marker re
 
 ## Value
 
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

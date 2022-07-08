@@ -223,9 +223,9 @@ let x = 3;
 
 ### Function hoisting
 
-Functions are hoisted if they’re defined using [function _declarations_](/en-US/docs/Web/JavaScript/Reference/Statements/function) — but functions are not hoisted if they’re defined using [function _expressions_](/en-US/docs/Web/JavaScript/Reference/Operators/function).
+Functions are hoisted if they're defined using [function _declarations_](/en-US/docs/Web/JavaScript/Reference/Statements/function) — but functions are not hoisted if they're defined using [function _expressions_](/en-US/docs/Web/JavaScript/Reference/Operators/function).
 
-The following example shows how, due to function hoisting, the function `foo` can be called even before it’s defined — because the `foo` function is defined using a function declaration.
+The following example shows how, due to function hoisting, the function `foo` can be called even before it's defined — because the `foo` function is defined using a function declaration.
 
 ```js example-good
 foo(); // "bar"
@@ -236,12 +236,12 @@ function foo() {
 }
 ```
 
-In the following example, the variable name `baz` is hoisted — due to [variable hoisting](#variable_hoisting) — but because a function is assigned to `baz` using a function expression rather than `baz` being defined with a function declaration, the function can’t be called before it’s defined, because it’s not hoisted.
+In the following example, the variable name `baz` is hoisted — due to [variable hoisting](#variable_hoisting) — but because a function is assigned to `baz` using a function expression rather than `baz` being defined with a function declaration, the function can't be called before it's defined, because it's not hoisted.
 
-Thus, the `baz()` call below throws a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) with _“baz is not a function”_, because the function assigned to `baz` isn’t hoisted — while the `console.log(baz)` call doesn’t throw a [`ReferenceError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError) but instead logs [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined), because the _variable_ `baz` is still hoisted even though the function assigned to it isn’t. (But the value of `baz` is undefined, since nothing has yet been assigned to it).
+Thus, the `baz()` call below throws a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) with _"baz is not a function"_, because the function assigned to `baz` isn't hoisted — while the `console.log(baz)` call doesn't throw a [`ReferenceError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError) but instead logs [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined), because the _variable_ `baz` is still hoisted even though the function assigned to it isn't. (But the value of `baz` is undefined, since nothing has yet been assigned to it).
 
 ```js example-bad
-// Doesn’t throw ReferenceError
+// Doesn't throw ReferenceError
 console.log(baz) // undefined
 
 // Throws 'TypeError: baz is not a function'
@@ -351,13 +351,14 @@ In expressions involving numeric and string values with the `+` operator, JavaSc
 ```js
 x = 'The answer is ' + 42 // "The answer is 42"
 y = 42 + ' is the answer' // "42 is the answer"
+z = '37' + 7 // "377"
 ```
 
 With all other operators, JavaScript does _not_ convert numeric values to strings. For example:
 
 ```js
 '37' - 7 // 30
-'37' + 7 // "377"
+'37' * 7 // 259
 ```
 
 ### Converting strings to numbers
@@ -412,23 +413,24 @@ If an array is created using a literal in a top-level script, JavaScript interpr
 
 #### Extra commas in array literals
 
-You do not have to specify all elements in an array literal. If you put two commas in a row, the array fills in the value `undefined` for the unspecified elements. The following example creates the `fish` array:
+If you put two commas in a row in an array literal, the array leaves an empty slot for the unspecified element. The following example creates the `fish` array:
 
 ```js
 let fish = ['Lion', , 'Angel'];
 ```
 
-This array has two elements with values and one empty element:
+When you log this array, you will see:
 
-- `fish[0]` is "Lion"
-- `fish[1]` is `undefined`
-- `fish[2]` is "Angel"
+```js
+console.log(fish);
+// [ 'Lion', <1 empty item>, 'Angel' ]
+```
+
+Note that the second item is "empty", which is not exactly the same as the actual `undefined` value. When using array-traversing methods like [`Array.prototype.map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), empty slots are skipped. However, index-accessing `fish[1]` still returns `undefined`.
 
 If you include a trailing comma at the end of the list of elements, the comma is ignored.
 
 In the following example, the `length` of the array is three. There is no `myList[3]`. All other commas in the list indicate a new element.
-
-> **Note:** Trailing commas can create errors in older browser versions and it is a best practice to remove them.
 
 ```js
 let myList = ['home', , 'school', ];
@@ -437,7 +439,7 @@ let myList = ['home', , 'school', ];
 In the following example, the `length` of the array is four, and `myList[0]` and `myList[2]` are missing.
 
 ```js
-let myList = [ ,'home', , 'school'];
+let myList = [, 'home', , 'school'];
 ```
 
 In the following example, the `length` of the array is four, and `myList[1]` and `myList[3]` are missing. **Only the last comma is ignored.**
@@ -446,9 +448,23 @@ In the following example, the `length` of the array is four, and `myList[1]` and
 let myList = ['home', , 'school', , ];
 ```
 
+> **Note:** Trailing commas help keep git diffs clean when you have a multi-line array, because appending an item to the end only adds one line, but does not modify the previous line.
+>
+> ```diff
+> const myList = [
+>   "home",
+>   "school",
+> + "hospital",
+> ];
+> ```
+
 Understanding the behavior of extra commas is important to understanding JavaScript as a language.
 
-However, when writing your own code, you should explicitly declare the missing elements as `undefined`. Doing this increases your code's clarity and maintainability.
+However, when writing your own code, you should explicitly declare the missing elements as `undefined`, or at least insert a comment to highlight its absence. Doing this increases your code's clarity and maintainability.
+
+```js
+let myList = ['home', /* empty */, 'school', /* empty */, ];
+```
 
 ### Boolean literals
 
@@ -628,18 +644,71 @@ Template literals provide syntactic sugar for constructing strings. (This is sim
  quoted strings cannot.`
 
 // String interpolation
-var name = 'Bob', time = 'today';
+const name = 'Bob', time = 'today';
 `Hello ${name}, how are you ${time}?`
 ```
 
-[Tagged templates](/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates) are a compact syntax for specifying a template literal along with a call to a "tag" function for parsing it; the name of the template tag function precedes the template literal — as in the following example, where the template tag function is named "`myTag`":
+[Tagged templates](/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates) are a compact syntax for specifying a template literal along with a call to a "tag" function for parsing it. A tagged template is just a more succinct and semantic way to invoke a function that processes a string and a set of relevant values. The name of the template tag function precedes the template literal — as in the following example, where the template tag function is named `print`. The `print` function will interpolate the arguments and serialize any objects or arrays that may come up, avoiding the pesky `[object Object]`.
 
 ```js
-let myTag = (str, name, age) => `${str[0]}${name}${str[1]}${age}${str[2]}`;
-let [name, age] = ['Mika', 28];
-myTag`Participant "${ name }" is ${ age } years old.`;
-// Participant "Mika" is 28 years old.
+const formatArg = (arg) => {
+  if (Array.isArray(arg)) {
+    // Print a bulleted list
+    return arg.map((part) => `- ${part}`).join("\n");
+  }
+  if (arg.toString === Object.prototype.toString) {
+    // This object will be serialized to "[object Object]".
+    // Let's print something nicer.
+    return JSON.stringify(arg);
+  }
+  return arg;
+}
+
+const print = (segments, ...args) => {
+  // For any well-formed template literal, there will always be N args and
+  // (N+1) string segments.
+  let message = segments[0];
+  segments.slice(1).forEach((segment, index) => {
+    message += formatArg(args[index]) + segment;
+  });
+  console.log(message);
+}
+
+const todos = [
+  "Learn JavaScript",
+  "Learn Web APIs",
+  "Set up my website",
+  "Profit!",
+];
+
+const progress = { javascript: 20, html: 50, css: 10 };
+
+print`I need to do:
+${todos}
+My current progress is: ${progress}
+`;
+
+// I need to do:
+// - Learn JavaScript
+// - Learn Web APIs
+// - Set up my website
+// - Profit!
+// My current progress is: {"javascript":20,"html":50,"css":10}
 ```
+
+Since tagged template literals are just sugar of function calls, you can re-write the above as an equivalent function call:
+
+```js
+print(["I need to do:\n", "\nMy current progress is: ", "\n"], todos, progress);
+```
+
+This may be reminiscent of the `console.log`-style interpolation:
+
+```js
+console.log("I need to do:\n%o\nMy current progress is: %o\n", todos, progress);
+```
+
+You can see how the tagged template reads more naturally than a traditional "formatter" function, where the variables and the template itself have to be declared separately.
 
 #### Using special characters in strings
 

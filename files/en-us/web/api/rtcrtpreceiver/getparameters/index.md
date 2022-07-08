@@ -1,6 +1,7 @@
 ---
 title: RTCRtpReceiver.getParameters()
 slug: Web/API/RTCRtpReceiver/getParameters
+page-type: web-api-instance-method
 tags:
   - API
   - Configuration

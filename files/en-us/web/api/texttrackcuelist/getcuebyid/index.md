@@ -1,6 +1,7 @@
 ---
 title: TextTrackCueList.getCueById()
 slug: Web/API/TextTrackCueList/getCueById
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -23,7 +24,7 @@ getCueById(id)
 
 ### Parameters
 
-- id
+- `id`
   - : A string which is an identifier for the cue.
 
 ### Return value

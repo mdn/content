@@ -1,6 +1,7 @@
 ---
 title: HTMLAreaElement.search
 slug: Web/API/HTMLAreaElement/search
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAreaElement
@@ -11,7 +12,7 @@ browser-compat: api.HTMLAreaElement.search
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.search`** property is a search
-string, also called a _query string_, that is {{domxref("USVString")}} containing
+string, also called a _query string_, that is a string containing
 a `'?'` followed by the parameters of the URL.
 
 Modern browsers provide

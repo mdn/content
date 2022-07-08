@@ -1,6 +1,7 @@
 ---
 title: DOMStringMap
 slug: Web/API/DOMStringMap
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

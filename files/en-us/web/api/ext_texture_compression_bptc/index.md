@@ -1,6 +1,7 @@
 ---
 title: EXT_texture_compression_bptc
 slug: Web/API/EXT_texture_compression_bptc
+page-type: webgl-extension
 tags:
   - API
   - Reference

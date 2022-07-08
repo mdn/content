@@ -1,6 +1,7 @@
 ---
 title: PresentationConnection.url
 slug: Web/API/PresentationConnection/url
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -20,7 +21,7 @@ reconnect to the presentation.
 
 ## Value
 
-A {{domxref("USVString")}} containing a URL.
+A string containing a URL.
 
 ## Specifications
 

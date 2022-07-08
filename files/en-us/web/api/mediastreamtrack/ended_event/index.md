@@ -1,6 +1,7 @@
 ---
 title: 'MediaStreamTrack: ended event'
 slug: Web/API/MediaStreamTrack/ended_event
+page-type: web-api-event
 tags:
   - Audio
   - Event

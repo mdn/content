@@ -1,6 +1,7 @@
 ---
 title: CSSUnparsedValue()
 slug: Web/API/CSSUnparsedValue/CSSUnparsedValue
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
@@ -26,8 +27,8 @@ new CSSUnparsedValue(members)
 
 ### Parameters
 
-- members
-  - : An array whose values must be either a {{domxref('USVString')}} or a
+- `members`
+  - : An array whose values must be either a string or a
     {{domxref('CSSVariableReferenceValue')}}.
 
 ## Examples

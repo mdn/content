@@ -1,6 +1,7 @@
 ---
 title: MediaQueryListEvent
 slug: Web/API/MediaQueryListEvent
+page-type: web-api-interface
 tags:
   - API
   - CSSOM View
@@ -28,7 +29,7 @@ _The `MediaQueryListEvent` interface inherits properties from its parent interfa
 - {{DOMxRef("MediaQueryListEvent.matches")}}{{ReadOnlyInline}}
   - : A boolean value that is `true` if the {{DOMxRef("document")}} currently matches the media query list, or `false` if not.
 - {{DOMxRef("MediaQueryListEvent.media")}}{{ReadOnlyInline}}
-  - : A {{DOMxRef("DOMString")}} representing a serialized media query.
+  - : A string representing a serialized media query.
 
 ## Methods
 

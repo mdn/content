@@ -1,6 +1,7 @@
 ---
 title: 'ServiceWorkerContainer: error event'
 slug: Web/API/ServiceWorkerContainer/error_event
+page-type: web-api-event
 tags:
   - API
   - Experimental

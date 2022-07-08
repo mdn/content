@@ -1,6 +1,7 @@
 ---
 title: Window.openDialog()
 slug: Web/API/Window/openDialog
+page-type: web-api-instance-method
 tags:
   - API
   - Gecko
@@ -21,7 +22,7 @@ differently.
 The optional parameters, if present, are bundled up in a JavaScript {{jsxref("Array")}}
 object and added to the newly created window as a property named
 {{domxref("window.arguments")}}. They may be referenced in the JavaScript of the window
-at any time, including during the execution of a {{event("load")}} handler. These
+at any time, including during the execution of a {{domxref("Window/load_event", "load")}} handler. These
 parameters may be used, then, to pass arguments to and from the dialog window.
 
 The call to `openDialog()` returns immediately. If you want the call to
@@ -103,8 +104,8 @@ var food  = window.arguments[0];
 var price = window.arguments[1];
 ```
 
-Note that you can access this property from within anywhere in the dialog code. ([Another
-example](/en-US/Add-ons/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog)).
+Note that you can access this property from within anywhere in the dialog code.
+([Another example](/en-US/docs/Mozilla/Add-ons/Code_snippets/Dialogs_and_Prompts#passing_arguments_and_displaying_a_dialog)).
 
 #### Returning values from the dialog
 
@@ -146,7 +147,6 @@ This is not part of any specification.
 
 ## See also
 
-- [Another
-  example](/en-US/Add-ons/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog)
+- [Another example](/en-US/docs/Mozilla/Add-ons/Code_snippets/Dialogs_and_Prompts#passing_arguments_and_displaying_a_dialog)
 - [`window.importDialog`](/en-US/docs/Archive/Web/Window.importDialog)
   (mobile) {{deprecated_inline}}

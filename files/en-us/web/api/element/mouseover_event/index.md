@@ -1,6 +1,7 @@
 ---
 title: 'Element: mouseover event'
 slug: Web/API/Element/mouseover_event
+page-type: web-api-event
 tags:
   - API
   - Cursor

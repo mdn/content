@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onmouseover
 slug: Web/API/GlobalEventHandlers/onmouseover
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -14,7 +15,7 @@ browser-compat: api.GlobalEventHandlers.onmouseover
 
 The **`onmouseover`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("mouseover")}} events.
+processes {{domxref("Element/mouseover_event", "mouseover")}} events.
 
 The `mouseover` event fires when the user moves the mouse over a particular
 element.

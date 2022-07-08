@@ -1,6 +1,7 @@
 ---
 title: Gyroscope.y
 slug: Web/API/Gyroscope/y
+page-type: web-api-instance-property
 tags:
   - API
   - Generic Sensor API

@@ -1,6 +1,7 @@
 ---
 title: VRStageParameters.sittingToStandingTransform
 slug: Web/API/VRStageParameters/sittingToStandingTransform
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

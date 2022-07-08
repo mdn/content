@@ -1,6 +1,7 @@
 ---
 title: PerformanceEntry.name
 slug: Web/API/PerformanceEntry/name
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -50,7 +51,7 @@ the value of {{domxref("PerformanceEntry.entryType")}}, as shown by the table be
       </td>
     </tr>
     <tr>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td>{{domxref('PerformanceMark')}}</td>
       <td><code>mark</code></td>
       <td>
@@ -59,7 +60,7 @@ the value of {{domxref("PerformanceEntry.entryType")}}, as shown by the table be
       </td>
     </tr>
     <tr>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td>{{domxref('PerformanceMeasure')}}</td>
       <td><code>measure</code></td>
       <td>
@@ -68,7 +69,7 @@ the value of {{domxref("PerformanceEntry.entryType")}}, as shown by the table be
       </td>
     </tr>
     <tr>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td>{{domxref('PerformancePaintTiming')}}</td>
       <td><code>paint</code></td>
       <td>
@@ -98,29 +99,29 @@ function run_PerformanceEntry() {
   performance.mark("End");
 
   // Use getEntries() to iterate through the each entry
-  var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
+  const p = performance.getEntries();
+  for (let i=0; i < p.length; i++) {
     log("Entry[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
 }
 function check_PerformanceEntry(obj) {
-  var properties = ["name", "entryType", "startTime", "duration"];
-  var methods = ["toJSON"];
+  const properties = ["name", "entryType", "startTime", "duration"];
+  const methods = ["toJSON"];
 
-  for (var i=0; i < properties.length; i++) {
+  for (let i=0; i < properties.length; i++) {
     // check each property
-    var supported = properties[i] in obj;
+    const supported = properties[i] in obj;
     if (supported)
       log("..." + properties[i] + " = " + obj[properties[i]]);
     else
       log("..." + properties[i] + " = Not supported");
   }
-  for (var i=0; i < methods.length; i++) {
+  for (let i=0; i < methods.length; i++) {
     // check each method
-    var supported = typeof obj[methods[i]] == "function";
+    const supported = typeof obj[methods[i]] == "function";
     if (supported) {
-      var js = obj[methods[i]]();
+      const js = obj[methods[i]]();
       log("..." + methods[i] + "() = " + JSON.stringify(js));
     } else {
       log("..." + methods[i] + " = Not supported");

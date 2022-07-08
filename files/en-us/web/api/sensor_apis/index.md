@@ -1,6 +1,7 @@
 ---
 title: Sensor APIs
 slug: Web/API/Sensor_APIs
+page-type: web-api-overview
 tags:
   - API
   - Generic Sensor API
@@ -9,6 +10,7 @@ tags:
   - Sensor
   - Sensor APIs
   - Sensors
+browser-compat: api.Sensor
 ---
 {{APIRef("Sensor API")}}
 
@@ -167,15 +169,8 @@ magSensor.start();
 
 ## Specifications
 
-| Specification                                                   |
-| --------------------------------------------------------------- |
-| [Generic Sensor API](https://w3c.github.io/sensors/)            |
-| [Accelerometer](https://w3c.github.io/accelerometer/)           |
-| [Ambient Light Sensor](https://w3c.github.io/ambient-light/)    |
-| [Gyroscope](https://w3c.github.io/gyroscope/)                   |
-| [Magnetometer](https://w3c.github.io/magnetometer/)             |
-| [Orientation Sensor](https://w3c.github.io/orientation-sensor/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Sensor")}}
+{{Compat}}

@@ -1,6 +1,7 @@
 ---
 title: AuthenticatorResponse
 slug: Web/API/AuthenticatorResponse
+page-type: web-api-interface
 tags:
   - API
   - Authentication
@@ -36,13 +37,13 @@ None.
 ### Getting an AuthenticatorAssertionResponse
 
 ```js
-var options = {
+const options = {
   challenge: new Uint8Array([/* bytes sent from the server */])
 };
 
 navigator.credentials.get({ "publicKey": options })
     .then(function (credentialInfoAssertion) {
-    var assertionResponse = credentialInfoAssertion.response;
+    const assertionResponse = credentialInfoAssertion.response;
     // send assertion response back to the server
     // to proceed with the control of the credential
 }).catch(function (err) {
@@ -53,7 +54,7 @@ navigator.credentials.get({ "publicKey": options })
 ### Getting an AuthenticatorAttestationResponse
 
 ```js
-var publicKey = {
+const publicKey = {
   challenge: /* from the server */,
   rp: {
     name: "Example CORP",
@@ -74,7 +75,7 @@ var publicKey = {
 
 navigator.credentials.create({ publicKey })
   .then(function (newCredentialInfo) {
-    var attestationResponse = newCredentialInfo.response;
+    const attestationResponse = newCredentialInfo.response;
   }).catch(function (err) {
      console.error(err);
   });

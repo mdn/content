@@ -29,13 +29,13 @@ let uninstallingSelf = browser.management.uninstallSelf(
 
 ### Parameters
 
-- `options{{optional_inline}}`
+- `options` {{optional_inline}}
 
   - : `object`. Object which may two properties, both optional:
 
-    - `showConfirmDialog{{optional_inline}}`
+    - `showConfirmDialog` {{optional_inline}}
       - : Boolean. If `showConfirmDialog` is `true`, the browser will show a dialog asking the user to confirm that the add-on should be uninstalled. Defaults to `false`.
-    - `dialogMessage{{optional_inline}}`
+    - `dialogMessage` {{optional_inline}}
       - : String. An extra message that will be displayed in the confirmation dialog.
 
 ### Return value
@@ -83,7 +83,7 @@ uninstalling.then(null, onCanceled);
 
 > **Note:**
 >
-> This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/extensions/management#method-uninstallSelf) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
+> This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/management/#method-uninstallSelf) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

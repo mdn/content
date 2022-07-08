@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.deleteBuffer()
 slug: Web/API/WebGLRenderingContext/deleteBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -23,12 +24,12 @@ deleteBuffer(buffer)
 
 ### Parameters
 
-- buffer
+- `buffer`
   - : A {{domxref("WebGLBuffer")}} object to delete.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: StyleSheet.media
 slug: Web/API/StyleSheet/media
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -24,7 +25,7 @@ A read-only array-like `MediaList` object.
 <head>
 <link rel="stylesheet" href="document.css" type="text/css" media="screen" />
 <style rel="stylesheet" type="text/css" media="screen, print">
-body  { background-color: snow; }
+body { background-color: snow; }
 </style>
 </head>
 <body>

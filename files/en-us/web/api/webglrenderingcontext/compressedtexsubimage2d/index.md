@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.compressedTexSubImage2D()
 slug: Web/API/WebGLRenderingContext/compressedTexSubImage2D
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -145,12 +146,12 @@ compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, 
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying the offset in bytes from which to read from the
     buffer bound to `gl.PIXEL_UNPACK_BUFFER`.
 - `srcData`
-  - : An {{domxref("ArrayBufferView")}} that be used as a data store for the compressed
+  - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} that will be used as a data store for the compressed
     image data in memory.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

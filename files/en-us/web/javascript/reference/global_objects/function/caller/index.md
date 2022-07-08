@@ -45,8 +45,8 @@ stop.caller === g && f.caller === g && g.caller === f
 so if you tried to get the stack trace in the `stop()` function like this:
 
 ```js
-var f = stop;
-var stack = 'Stack trace:';
+let f = stop;
+let stack = 'Stack trace:';
 while (f) {
   stack += '\n' + f.name;
   f = f.caller;

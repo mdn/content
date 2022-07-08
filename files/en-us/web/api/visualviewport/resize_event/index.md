@@ -1,6 +1,7 @@
 ---
 title: 'VisualViewport: resize event'
 slug: Web/API/VisualViewport/resize_event
+page-type: web-api-event
 tags:
   - API
   - Reference

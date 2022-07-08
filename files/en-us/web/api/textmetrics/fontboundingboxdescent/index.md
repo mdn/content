@@ -1,6 +1,7 @@
 ---
 title: TextMetrics.fontBoundingBoxDescent
 slug: Web/API/TextMetrics/fontBoundingBoxDescent
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

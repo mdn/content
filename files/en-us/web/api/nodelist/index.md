@@ -1,6 +1,7 @@
 ---
 title: NodeList
 slug: Web/API/NodeList
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -36,7 +37,7 @@ console.log(child_nodes.length); // outputs "3"
 
 ### Static NodeLists
 
-In other cases, the `NodeList` is _static,_ where any changes in the DOM does not affect the content of the collection. The ubiquitous {{domxref("document.querySelectorAll()")}} method returns a _static_ `NodeList`.
+In other cases, the `NodeList` is _static,_ where any changes in the DOM do not affect the content of the collection. The ubiquitous {{domxref("document.querySelectorAll()")}} method returns a _static_ `NodeList`.
 
 It's good to keep this distinction in mind when you choose how to iterate over the items in the `NodeList`, and whether you should cache the list's `length`.
 

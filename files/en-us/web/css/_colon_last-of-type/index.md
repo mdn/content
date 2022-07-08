@@ -14,19 +14,13 @@ browser-compat: css.selectors.last-of-type
 
 The **`:last-of-type`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the last element of its type among a group of sibling elements.
 
-```css
-/* Selects any <p> that is the last element
-   of its type among its siblings */
-p:last-of-type {
-  color: lime;
-}
-```
-
-> **Note:** As originally defined, the selected element had to have a parent. Beginning with Selectors Level 4, this is no longer required.
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-last-of-type.html", "tabbed-shorter")}}
 
 ## Syntax
 
-{{csssyntax}}
+```
+:last-of-type
+```
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: 'EventSource: open event'
 slug: Web/API/EventSource/open_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -57,5 +58,5 @@ evtSource.onopen = (e) => {
 
 - [Using server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
 - {{event("open")}}
-- {{event("error")}}
+- {{domxref("EventSource/error_event", "error")}}
 - {{event("message")}}

@@ -1,6 +1,7 @@
 ---
 title: 'Element: dblclick event'
 slug: Web/API/Element/dblclick_event
+page-type: web-api-event
 tags:
   - API
   - DOM

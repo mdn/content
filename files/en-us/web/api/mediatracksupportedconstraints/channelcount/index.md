@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.channelCount
 slug: Web/API/MediaTrackSupportedConstraints/channelCount
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints
@@ -60,7 +61,7 @@ if (navigator.mediaDevices.getSupportedConstraints().channelCount) {
 
 ### Result
 
-{{ EmbedLiveSample('Example', 600, 80) }}
+{{ EmbedLiveSample('Examples', 600, 80) }}
 
 ## Specifications
 

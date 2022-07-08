@@ -1,6 +1,7 @@
 ---
 title: Animation.updatePlaybackRate()
 slug: Web/API/Animation/updatePlaybackRate
+page-type: web-api-instance-method
 tags:
   - API
   - Animation
@@ -42,7 +43,7 @@ updatePlaybackRate(playbackRate)
 
 ### Parameters
 
-- playbackRate
+- `playbackRate`
   - : The new speed to set. This may be a positive number (to speed up or slow down
     the animation), a negative number (to make it play backwards), or zero (to
     effectively pause the animation).

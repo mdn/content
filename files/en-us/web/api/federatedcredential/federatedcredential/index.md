@@ -1,6 +1,7 @@
 ---
 title: FederatedCredential()
 slug: Web/API/FederatedCredential/FederatedCredential
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -26,12 +27,13 @@ new FederatedCredential(init)
 
 ### Parameters
 
-- _init_
+- `init`
 
   - : Options are:
 
-    - `provider`: A string; identifying the credential
-      provider.
+    - `provider`
+      - : A string; identifying the credential
+        provider.
 
 ## Specifications
 

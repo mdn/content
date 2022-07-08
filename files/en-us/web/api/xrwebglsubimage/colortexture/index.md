@@ -1,6 +1,7 @@
 ---
 title: XRWebGLSubImage.colorTexture
 slug: Web/API/XRWebGLSubImage/colorTexture
+page-type: web-api-instance-property
 tags:
   - API
   - Property

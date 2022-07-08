@@ -1,6 +1,7 @@
 ---
 title: MediaKeySession
 slug: Web/API/MediaKeySession
+page-type: web-api-interface
 tags:
   - API
   - Audio

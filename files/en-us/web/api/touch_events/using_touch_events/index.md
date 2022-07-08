@@ -1,6 +1,7 @@
 ---
 title: Using Touch Events
 slug: Web/API/Touch_events/Using_Touch_Events
+page-type: guide
 tags:
   - Guide
   - TouchEvent
@@ -125,7 +126,7 @@ The implementation status of pointer events in browsers is [relatively high](htt
 The following documents describe how to use touch events and include example code:
 
 - {{domxref("Touch_events","Touch Events Overview")}}
-- [Implement Custom Gestures](https://developers.google.com/web/fundamentals/design-and-ux/input/touch)
+- [Implement Custom Gestures](https://web.dev/add-touch-to-your-site/)
 - [Add touch screen support to your website (The easy way)](https://www.codicode.com/art/easy_way_to_add_touch_support_to_your_website.aspx)
 
 Touch event demonstrations:

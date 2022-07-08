@@ -1,6 +1,7 @@
 ---
 title: 'RTCIceTransport: gatheringstatechange event'
 slug: Web/API/RTCIceTransport/gatheringstatechange_event
+page-type: web-api-event
 tags:
   - Connection
   - Connectivity

@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.types
 slug: Web/API/DataTransfer/types
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -12,8 +13,8 @@ browser-compat: api.DataTransfer.types
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransfer.types`** read-only property returns an
-array of the drag data formats (as {{domxref("DOMString","strings")}}) that were set in
-the {{event("dragstart")}} event. The order of the formats is the same order as the data
+array of the drag data formats (as strings) that were set in
+the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event. The order of the formats is the same order as the data
 included in the drag operation.
 
 The formats are Unicode strings giving the type or format of the data, generally given
@@ -22,8 +23,8 @@ by a MIME type. Some values that are not MIME types are special-cased for legacy
 
 ## Value
 
-An array of the data formats used in the drag operation. Each format is
-{{domxref("DOMString","string")}}. If the drag operation included no data, this list
+An array of the data formats used in the drag operation. Each format is a
+string. If the drag operation included no data, this list
 will be empty. If any files are included in the drag operation, then one of the types
 will be the string `Files`.
 
@@ -59,17 +60,17 @@ function drop_handler(ev) {
  console.log("drop: target.id = " + ev.target.id);
  ev.preventDefault();
  // Get the id of the target and add the moved element to the target's DOM
- var data = ev.dataTransfer.getData("text");
+ const data = ev.dataTransfer.getData("text");
  ev.target.appendChild(document.getElementById(data));
  // Print each format type
  if (ev.dataTransfer.types != null) {
-   for (var i=0; i < ev.dataTransfer.types.length; i++) {
+   for (let i=0; i < ev.dataTransfer.types.length; i++) {
      console.log("... types[" + i + "] = " + ev.dataTransfer.types[i]);
    }
  }
  // Print each item's "kind" and "type"
  if (ev.dataTransfer.items != null) {
-   for (var i=0; i < ev.dataTransfer.items.length; i++) {
+   for (let i=0; i < ev.dataTransfer.items.length; i++) {
      console.log("... items[" + i + "].kind = " + ev.dataTransfer.items[i].kind + " ; type = " + ev.dataTransfer.items[i].type);
    }
  }

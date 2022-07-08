@@ -15,7 +15,7 @@ Why a re-introduction? Because [JavaScript](/en-US/docs/Glossary/JavaScript) is 
 
 It's useful to start with an overview of the language's history. JavaScript was created in 1995 by Brendan Eich while he was an engineer at Netscape. JavaScript was first released with Netscape 2 early in 1996. It was originally going to be called LiveScript, but it was renamed in an ill-fated marketing decision that attempted to capitalize on the popularity of Sun Microsystem's Java language — despite the two having very little in common. This has been a source of confusion ever since.
 
-Several months later, Microsoft released JScript with Internet Explorer 3. It was a mostly-compatible JavaScript work-alike. Several months after that, Netscape submitted JavaScript to [Ecma International](https://www.ecma-international.org/), a European standards organization, which resulted in the first edition of the [ECMAScript](/en-US/docs/Glossary/ECMAScript) standard that year. The standard received a significant update as [ECMAScript edition 3](https://www.ecma-international.org/publications/standards/Ecma-262.htm) in 1999, and it has stayed pretty much stable ever since. The fourth edition was abandoned, due to political differences concerning language complexity. Many parts of the fourth edition formed the basis for ECMAScript edition 5, published in December of 2009, and for the 6th major edition of the standard, published in June of 2015.
+Several months later, Microsoft released JScript with Internet Explorer 3. It was a mostly-compatible JavaScript work-alike. Several months after that, Netscape submitted JavaScript to [Ecma International](https://www.ecma-international.org/), a European standards organization, which resulted in the first edition of the [ECMAScript](/en-US/docs/Glossary/ECMAScript) standard that year. The standard received a significant update as ECMAScript edition 3 in 1999. The fourth edition was abandoned, due to political differences concerning language complexity. Many parts of the fourth edition formed the basis for ECMAScript edition 5, published in December 2009, and for the 6th major edition of the standard, published in June 2015. Since then a yearly edition has been published. For example, the [12th edition](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/) was published in June 2021.
 
 > **Note:** Because it is more familiar, we will refer to ECMAScript as "JavaScript" from this point on.
 
@@ -261,7 +261,7 @@ An important difference between JavaScript and other languages like Java is that
 
 ## Operators
 
-JavaScript's numeric operators are `+`, `-`, `*`, `/` and `%` which is the remainder operator ([which is the same as modulo](/en-US/docs/Web/JavaScript/Reference/Operators#remainder_%28%29).) Values are assigned using `=`, and there are also compound assignment statements such as `+=` and `-=`. These extend out to `x = x operator y`.
+JavaScript's numeric operators are `+`, `-`, `*`, `/` and `%` which is the [remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder). Values are assigned using `=`, and there are also compound assignment statements such as `+=` and `-=`. These extend out to `x = x operator y`.
 
 ```js
 x += 5;
@@ -343,7 +343,7 @@ for (let i = 0; i < 5; i++) {
 JavaScript also contains two other prominent for loops: [`for`...`of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
 
 ```js
-for (let value of array) {
+for (const value of array) {
   // do something with value
 }
 ```
@@ -351,7 +351,7 @@ for (let value of array) {
 and [`for`...`in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in):
 
 ```js
-for (let property in object) {
+for (const property in object) {
   // do something with object property
 }
 ```

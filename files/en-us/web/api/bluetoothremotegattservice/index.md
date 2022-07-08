@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTService
 slug: Web/API/BluetoothRemoteGATTService
+page-type: web-api-interface
 tags:
   - API
   - Bluetooth

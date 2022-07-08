@@ -1,6 +1,7 @@
 ---
 title: DOMImplementation.createDocument()
 slug: Web/API/DOMImplementation/createDocument
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -24,10 +25,10 @@ createDocument(namespaceURI, qualifiedNameStr, documentType)
 ### Parameters
 
 - `namespaceURI`
-  - : Is a string containing the namespace URI of the document to be
+  - : A string containing the namespace URI of the document to be
     created, or `null` if the document doesn't belong to one.
 - `qualifiedNameStr`
-  - : Is a string containing the qualified name, that is an optional
+  - : A string containing the qualified name, that is an optional
     prefix and colon plus the local root element name, of the document to be created.
 - `documentType` {{optional_inline}}
   - : Is the {{domxref("DocumentType")}} of the document to be created. It defaults to

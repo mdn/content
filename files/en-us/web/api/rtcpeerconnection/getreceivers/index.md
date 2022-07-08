@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.getReceivers()
 slug: Web/API/RTCPeerConnection/getReceivers
+page-type: web-api-instance-method
 tags:
   - Media
   - Method

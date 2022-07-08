@@ -1,6 +1,7 @@
 ---
 title: Starting up and shutting down a WebXR session
 slug: Web/API/WebXR_Device_API/Startup_and_shutdown
+page-type: guide
 tags:
   - 3D
   - API

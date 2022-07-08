@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.deleteRow()
 slug: Web/API/HTMLTableElement/deleteRow
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM

@@ -32,7 +32,7 @@ concat(value0, value1, ... , valueN)
 - `valueN` {{optional_inline}}
   - : Arrays and/or values to concatenate into a new array. If all
     `valueN` parameters are omitted, `concat` returns a
-    [shallow copy](/en-us/docs/Glossary/Shallow_copy) of the existing array on which it is called. See the description below
+    [shallow copy](/en-US/docs/Glossary/Shallow_copy) of the existing array on which it is called. See the description below
     for more details.
 
 ### Return value
@@ -41,13 +41,11 @@ A new {{jsxref("Array")}} instance.
 
 ## Description
 
-The `concat` method creates a new array consisting of the elements in the
-object on which it is called, followed in order by, for each argument, the elements of
-that argument (if the argument is an array) or the argument itself (if the argument is
-not an array). It does not recurse into nested array arguments.
+The `concat` method creates a new array. The array will first be populated by the elements in the
+object on which it is called. Then, for each argument, its value will be concatenated into the array — for normal objects or primitives, the argument itself will become an element of the final array; for arrays or array-like objects with the property [`Symbol.isConcatSpreadable`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable) set to a truthy value, each element of the argument will be independently added to the final array. The `concat` method does not recurse into nested array arguments.
 
 The `concat` method does not alter `this` or any of the arrays
-provided as arguments but instead returns a [shallow copy](/en-us/docs/Glossary/Shallow_copy) that contains copies of the
+provided as arguments but instead returns a [shallow copy](/en-US/docs/Glossary/Shallow_copy) that contains copies of the
 same elements combined from the original arrays. Elements of the original arrays are
 copied into the new array as follows:
 
@@ -127,6 +125,17 @@ num1[0].push(4);
 
 console.log(numbers);
 // results in [[1, 4], 2, [3]]
+```
+
+### Concatenating array-like objects with Symbol.isConcatSpreadable
+
+`concat` does not treat all array-like objects as arrays by default — only if `Symbol.isConcatSpreadable` is set to a truthy value (e.g. `true`).
+
+```js
+const obj1 = { 0: 1, 1: 2, 2: 3, length: 3 };
+const obj2 = { 0: 1, 1: 2, 2: 3, length: 3, [Symbol.isConcatSpreadable]: true };
+console.log([0].concat(obj1, obj2));
+// [ 0, { '0': 1, '1': 2, '2': 3, length: 3 }, 1, 2, 3 ]
 ```
 
 ## Specifications

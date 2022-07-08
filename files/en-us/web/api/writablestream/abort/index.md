@@ -1,6 +1,7 @@
 ---
 title: WritableStream.abort()
 slug: Web/API/WritableStream/abort
+page-type: web-api-instance-method
 tags:
   - API
   - Method

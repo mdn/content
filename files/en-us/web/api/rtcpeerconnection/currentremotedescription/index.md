@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.currentRemoteDescription
 slug: Web/API/RTCPeerConnection/currentRemoteDescription
+page-type: web-api-instance-property
 tags:
   - API
   - Media

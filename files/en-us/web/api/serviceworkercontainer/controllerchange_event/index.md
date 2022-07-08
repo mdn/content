@@ -1,6 +1,7 @@
 ---
 title: 'ServiceWorkerContainer: controllerchange event'
 slug: Web/API/ServiceWorkerContainer/controllerchange_event
+page-type: web-api-event
 tags:
   - API
   - Experimental

@@ -1,6 +1,7 @@
 ---
 title: Using DTMF with WebRTC
 slug: Web/API/WebRTC_API/Using_DTMF
+page-type: guide
 tags:
   - API
   - DTMF

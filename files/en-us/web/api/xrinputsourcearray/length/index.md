@@ -1,6 +1,7 @@
 ---
 title: XRInputSourceArray.length
 slug: Web/API/XRInputSourceArray/length
+page-type: web-api-instance-property
 tags:
   - API
   - AR

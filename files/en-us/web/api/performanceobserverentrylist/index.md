@@ -1,6 +1,7 @@
 ---
 title: PerformanceObserverEntryList
 slug: Web/API/PerformanceObserverEntryList
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -28,9 +29,9 @@ Note: this interface is exposed to {{domxref("Window")}} and {{domxref("Worker")
 ```js
 // Create observer for all performance event types
 // list is of type PerformanceObserveEntryList
-var observe_all = new PerformanceObserver(function(list, obs) {
-   var perfEntries = list.getEntries();
-   for (var i = 0; i < perfEntries.length; i++) {
+const observe_all = new PerformanceObserver(function(list, obs) {
+   const perfEntries = list.getEntries();
+   for (let i = 0; i < perfEntries.length; i++) {
       print_perf_entry(perfEntries[i]);
       // do something with it
    }

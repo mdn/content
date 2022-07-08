@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTCharacteristic.writeValue()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/writeValue
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth
@@ -24,14 +25,14 @@ The **`BluetoothRemoteGATTCharacteristic.writeValue()`** method sets a {{domxref
 writeValue(value)
 ```
 
+### Parameters
+
+- `value`
+  - : An {{jsxref("ArrayBuffer")}}.
+
 ### Return value
 
 A {{jsxref("Promise")}}.
-
-### Parameters
-
-- value
-  - : An {{jsxref("ArrayBuffer")}}.
 
 ## Specifications
 

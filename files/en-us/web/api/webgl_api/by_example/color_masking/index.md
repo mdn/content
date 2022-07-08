@@ -1,6 +1,7 @@
 ---
 title: Color masking
 slug: Web/API/WebGL_API/By_example/Color_masking
+page-type: guide
 tags:
   - Beginner
   - Example

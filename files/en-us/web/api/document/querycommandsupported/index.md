@@ -1,6 +1,7 @@
 ---
 title: Document.queryCommandSupported()
 slug: Web/API/Document/queryCommandSupported
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: 'Element: touchstart event'
 slug: Web/API/Element/touchstart_event
+page-type: web-api-event
 tags:
   - Event
   - Touch Events

@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaValueNow
 slug: Web/API/ElementInternals/ariaValueNow
+page-type: web-api-instance-property
 tags:
   - API
   - Property

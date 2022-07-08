@@ -1,6 +1,7 @@
 ---
 title: PublicKeyCredential
 slug: Web/API/PublicKeyCredential
+page-type: web-api-interface
 tags:
   - API
   - Authentication
@@ -44,7 +45,7 @@ The **`PublicKeyCredential`** interface provides information about a public key 
 Here, we use {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} to generate a new credential.
 
 ```js
-var publicKey = {
+const publicKey = {
   challenge: /* from the server */,
   rp: {
     name: "Example CORP",
@@ -65,8 +66,8 @@ var publicKey = {
 
 navigator.credentials.create({ publicKey })
   .then(function (newCredentialInfo) {
-    var response = newCredentialInfo.response;
-    var clientExtensionsResults = newCredentialInfo.getClientExtensionResults();
+    const response = newCredentialInfo.response;
+    const clientExtensionsResults = newCredentialInfo.getClientExtensionResults();
   }).catch(function (err) {
      console.error(err);
   });
@@ -77,7 +78,7 @@ navigator.credentials.create({ publicKey })
 Here, we fetch an existing credential from an authenticator, using {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}.
 
 ```js
-var options = {
+const options = {
   challenge: new Uint8Array([/* bytes sent from the server */])
 };
 

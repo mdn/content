@@ -1,6 +1,7 @@
 ---
 title: 'Document: pointerover event'
 slug: Web/API/Document/pointerover_event
+page-type: web-api-event
 tags:
   - Document
   - Event

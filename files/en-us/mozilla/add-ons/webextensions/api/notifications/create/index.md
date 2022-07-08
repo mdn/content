@@ -36,7 +36,7 @@ let creating = browser.notifications.create(
 
 ### Parameters
 
-- `id`{{optional_inline}}
+- `id` {{optional_inline}}
   - : `string`. This is used to refer to this notification in {{WebExtAPIRef("notifications.update()")}}, {{WebExtAPIRef("notifications.clear()")}}, and event listeners. If you omit this argument or pass an empty string, then a new ID will be generated for this notification. If the ID you provide matches the ID of an existing notification from this extension, then the other notification will be cleared.
 - `options`
   - : {{WebExtAPIRef('notifications.NotificationOptions')}}. Defines the notification's content and behavior.
@@ -88,6 +88,6 @@ browser.browserAction.onClicked.addListener(()=> {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications#method-create) API.
+> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/#method-create) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

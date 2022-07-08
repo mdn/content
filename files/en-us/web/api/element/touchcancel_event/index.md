@@ -1,6 +1,7 @@
 ---
 title: 'Element: touchcancel event'
 slug: Web/API/Element/touchcancel_event
+page-type: web-api-event
 tags:
   - Event
   - Touch Events

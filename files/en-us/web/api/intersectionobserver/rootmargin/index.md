@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver.rootMargin
 slug: Web/API/IntersectionObserver/rootMargin
+page-type: web-api-instance-property
 tags:
   - API
   - Intersection Observer

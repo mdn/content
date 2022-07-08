@@ -1,6 +1,7 @@
 ---
 title: Window.alert()
 slug: Web/API/Window/alert
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -31,7 +32,7 @@ alert(message)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -69,6 +70,3 @@ Alternatively {{HTMLElement("dialog")}} element can be used to display alerts.
 - {{HTMLElement("dialog")}} element
 - {{domxref("window.confirm","confirm")}}
 - {{domxref("window.prompt","prompt")}}
-- For [Mozilla Chrome](/en-US/docs/Glossary/Chrome) see
-  {{ifmethod("nsIPromptService","alert")}} and
-  {{ifmethod("nsIPromptService","alertCheck")}}

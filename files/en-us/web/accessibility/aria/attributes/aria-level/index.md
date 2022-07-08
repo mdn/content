@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-level
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-level
 ---
 
 The `aria-level` attribute defines the hierarchical level of an element within a structure.
@@ -61,9 +62,7 @@ Used in roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-level","ARIA: aria-level Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLAreaElement.host
 slug: Web/API/HTMLAreaElement/host
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAreaElement
@@ -11,7 +12,7 @@ browser-compat: api.HTMLAreaElement.host
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.host`** property is a
-{{domxref("USVString")}} containing the host, that is the _hostname_, and then,
+string containing the host, that is the _hostname_, and then,
 if the _port_ of the URL is nonempty, a `':'`, and the _port_
 of the URL.
 

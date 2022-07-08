@@ -1,6 +1,7 @@
 ---
 title: 'Document: pointerlockchange event'
 slug: Web/API/Document/pointerlockchange_event
+page-type: web-api-event
 tags:
   - Document
   - Event

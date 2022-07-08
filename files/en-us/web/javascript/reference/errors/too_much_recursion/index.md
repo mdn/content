@@ -113,7 +113,7 @@ get name(){
 ```
 
 To avoid this problem, make sure that the property being assigned to inside the setter
-function is different from the one that initially triggered the setter.The same goes
+function is different from the one that initially triggered the setter. The same goes
 for the getter.
 
 ```js
@@ -134,4 +134,4 @@ console.log(tony);
 ## See also
 
 - {{Glossary("Recursion")}}
-- [Recursive functions](/en-US/docs/Web/JavaScript/Guide/Functions#Recursion)
+- [Recursive functions](/en-US/docs/Web/JavaScript/Guide/Functions#recursion)

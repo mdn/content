@@ -125,17 +125,3 @@ document.addEventListener('click', function (e) {
 ```
 
 You can see a more advanced example of such a tweak on [the Canvas API page](/en-US/docs/Web/API/Canvas_API#javascript).
-
-### Code from outside the page
-
-The previous example is okay if you want to embed basic active learning content. However, if you want to deal with complex code, it can become a bit awkward to deal with that `hidden` class wrapper.
-
-So another option is to write the code of your learning content on an MDN page and then embed it into another page. To do this we can still use the [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) macro, but we'll also have to pass it the page from where to extract your code.
-
-Let's how that sample looks when configured as if it were being embedded from a remote origin:
-
-Click on the following square to randomly change its color or just type a hexadecimal code color
-
-{{EmbedLiveSample('The_example', 120, 125, '', 'MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example')}}
-
-This time, if you take a look at that page's source, you'll see no hidden code. If you want to see the code, just go to [the page that hosts it](/en-US/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web/distant_example).

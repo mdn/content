@@ -1,6 +1,7 @@
 ---
 title: CloseEvent
 slug: Web/API/CloseEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface

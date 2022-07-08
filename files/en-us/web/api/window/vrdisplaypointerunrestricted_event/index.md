@@ -1,6 +1,7 @@
 ---
 title: 'Window: vrdisplaypointerunrestricted event'
 slug: Web/API/Window/vrdisplaypointerunrestricted_event
+page-type: web-api-event
 tags:
   - Reference
   - WebVR
@@ -53,7 +54,7 @@ window.addEventListener('vrdisplaypointerunrestricted', function() {
 });
 ```
 
-Or use the [`onvrdisplaypointerunrestricted`](/en-US/docs/Web/API/Window/onvrdisplaypointerunrestricted) event handler property:
+Or use the `onvrdisplaypointerunrestricted` event handler property:
 
 ```js
 window.onvrdisplaypointerunrestricted = function() {

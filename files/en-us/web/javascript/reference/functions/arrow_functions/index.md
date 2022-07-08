@@ -20,7 +20,7 @@ There are differences between _arrow functions_ and _traditional functions_, as 
 
 - Arrow functions don't have their own bindings to
   [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) or [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super),
-  and should not be used as [`methods`](/en-US/docs/Glossary/Method).
+  and should not be used as [methods](/en-US/docs/Glossary/Method).
 - Arrow functions don't have access to the [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keyword.
 - Arrow functions aren't suitable for
   [`call`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call),
@@ -51,7 +51,7 @@ function (a){
   return a + 100;
 }
 
-// 2. Remove the body braces and word "return" -- the return is implied.
+// 2. Remove the body braces and word "return" — the return is implied.
 (a) => a + 100;
 
 // 3. Remove the argument parentheses
@@ -161,20 +161,20 @@ parentheses around expression:
 params => ({foo: "a"}) // returning the object {foo: "a"}
 ```
 
-[Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) are supported:
+[Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) are supported, and always require parentheses:
 
 ```js
 (a, b, ...r) => expression
 ```
 
-[Default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) are supported:
+[Default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) are supported, and always require parentheses:
 
 ```js
 (a=400, b=20, c) => expression
 ```
 
 [Destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-within params supported:
+within params is supported, and always requires parentheses:
 
 ```js
 ([a, b] = [10, 20]) => a + b;  // result is 30
@@ -301,9 +301,7 @@ const bound = add.bind(obj)
 console.log(bound(1, 2, 3)) // result 2026
 ```
 
-Perhaps the greatest benefit of using Arrow functions is with DOM-level methods
-(`setTimeout`, `setInterval`, `addEventListener`) that usually required some kind of closure,
-call, apply or bind to ensure the function executed in the proper scope.
+Perhaps the greatest benefit of using Arrow functions is with methods like {{domxref("setTimeout()")}} and {{domxref("EventTarget/addEventListener()", "EventTarget.addEventListener()")}} that usually require some kind of closure, call, apply or bind to ensure that the function is executed in the proper scope.
 
 #### Traditional function example
 

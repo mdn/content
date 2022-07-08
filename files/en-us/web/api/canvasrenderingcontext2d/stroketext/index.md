@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.strokeText()
 slug: Web/API/CanvasRenderingContext2D/strokeText
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas

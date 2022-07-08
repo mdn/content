@@ -1,6 +1,7 @@
 ---
 title: WritableStreamDefaultController.error()
 slug: Web/API/WritableStreamDefaultController/error
+page-type: web-api-instance-method
 tags:
   - API
   - Error
@@ -24,18 +25,18 @@ the underlying sink.
 ## Syntax
 
 ```js
-error(e)
+error(message)
 ```
 
 ### Parameters
 
-- e
+- `message`
   - : A string representing the error you want future interactions to
     fail with.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

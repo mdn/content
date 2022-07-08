@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaRoleDescription
 slug: Web/API/ElementInternals/ariaRoleDescription
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -37,4 +38,4 @@ this.internals_.ariaRoleDescription = "My custom widget";
 
 {{Compat}}
 
-- [ARIA: application role](/en-US/docs/Web/Accessibility/ARIA/Roles/Application_Role)
+- [ARIA: application role](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)

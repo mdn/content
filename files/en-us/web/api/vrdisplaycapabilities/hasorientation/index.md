@@ -1,6 +1,7 @@
 ---
 title: VRDisplayCapabilities.hasOrientation
 slug: Web/API/VRDisplayCapabilities/hasOrientation
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

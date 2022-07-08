@@ -1,6 +1,7 @@
 ---
 title: reportError()
 slug: Web/API/reportError
+page-type: web-api-global-function
 tags:
   - API
   - Method
@@ -32,7 +33,7 @@ reportError(throwable)
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -53,7 +54,7 @@ The following code shows how you might create and report an error, and how it ma
 Note that the handler assigned to `onerror` must return `true` to stop the event propagating further.
 
 ```js
-var newError = new Error('Some error message', "someFile.js", 11);
+const newError = new Error('Some error message', "someFile.js", 11);
 self.reportError(newError);
 
 window.onerror = function(message, source, lineno, colno, error) {

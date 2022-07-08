@@ -1,6 +1,7 @@
 ---
 title: NetworkInformation
 slug: Web/API/NetworkInformation
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -65,4 +66,4 @@ _This interface also inherits methods of its parent, {{domxref("EventTarget")}}.
 
 ## See also
 
-- [Online and offline events](/en-US/docs/Online_and_offline_events)
+- [Online and offline events](/en-US/docs/Web/API/Navigator/onLine)

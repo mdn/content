@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTCharacteristic
 slug: Web/API/BluetoothRemoteGATTCharacteristic
+page-type: web-api-interface
 tags:
   - API
   - Bluetooth

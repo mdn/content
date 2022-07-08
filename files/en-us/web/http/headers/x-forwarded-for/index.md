@@ -18,7 +18,7 @@ The **`X-Forwarded-For`** (XFF) request header is a de-facto standard header for
 When a client connects directly to a server, the
 client's IP address is sent to the server (and is often written to server
 access logs). But if a client connection passes through any [forward or reverse](https://en.wikipedia.org/wiki/Proxy_server) proxies, the server only
-sees the final proxy's IP address, which is often of little use. That’s especially true if
+sees the final proxy's IP address, which is often of little use. That's especially true if
 the final proxy is a load balancer which is part of the same installation
 as the server. So, to provide a more-useful client IP address to the server, the `X-Forwarded-For` request header is
 used.
@@ -33,7 +33,7 @@ For detailed guidance on using this header, see the [Parsing](#parsing) and [Sel
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <td>no</td>
     </tr>
   </tbody>
 </table>
@@ -48,13 +48,13 @@ header.
 
 The `X-Forwarded-For` header is untrustworthy when no trusted reverse proxy (e.g., a load balancer) is between the client and
 server. If the client and all proxies are benign and well-behaved, then the list of IP addresses in the header
-has the meaning described in the [Directives](#directives) section. But if there’s a risk the client or any proxy
-is malicious or misconfigured, then it’s possible any part (or the entirety) of the header may have been
+has the meaning described in the [Directives](#directives) section. But if there's a risk the client or any proxy
+is malicious or misconfigured, then it's possible any part (or the entirety) of the header may have been
 spoofed (and may not be a list or contain IP addresses at all).
 
 If any trusted reverse proxies are between the client and
 server, the final `X-Forwarded-For` IP addresses (one for each trusted proxy) are trustworthy, as they
-were added by trusted proxies. (That’s true as long as the server is _only_
+were added by trusted proxies. (That's true as long as the server is _only_
 accessible through those proxies and not also directly).
 
 Any security-related use of `X-Forwarded-For` (such as for rate limiting or IP-based
@@ -100,8 +100,7 @@ X-Forwarded-For: 203.0.113.195,2001:db8:85a3:8d3:1319:8a2e:370:7348,150.172.238.
 Improper parsing of the `X-Forwarded-For` header can result in spoofed values being used
 for security-related purposes, resulting in the negative consequences mentioned above.
 
-There may be multiple `X-Forwarded-For` headers present in a request (per [RFC
-2616](https://datatracker.ietf.org/doc/html/rfc2616#section-4.2)). The IP addresses in
+There may be multiple `X-Forwarded-For` headers present in a request (per [RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-4.2)). The IP addresses in
 these headers must be treated as a single list, starting with the first IP address of the
 first header and continuing to the last IP address of the last header. There are two ways
 of making this single list:
@@ -122,8 +121,7 @@ When choosing the `X-Forwarded-For` client IP address closest to the client (unt
 and _not_ for security-related purposes), the first IP from the leftmost that is _a valid
 address_ and _not private/internal_ should be selected. ("Valid" because spoofed values
 may not be IP addresses at all; "not internal/private" because clients may have used
-proxies on their internal network, which may have added addresses from the [private IP
-space](https://en.wikipedia.org/wiki/Private_network).)
+proxies on their internal network, which may have added addresses from the [private IP space](https://en.wikipedia.org/wiki/Private_network).)
 
 When choosing the first _trustworthy_ `X-Forwarded-For` client IP address, additional
 configuration is required. There are two common methods:

@@ -85,6 +85,7 @@ A JSON string representing the given value, or undefined.
 - All the other {{JSxRef("Object")}} instances (including {{JSxRef("Map")}},
   {{JSxRef("Set")}}, {{JSxRef("WeakMap")}}, and {{JSxRef("WeakSet")}}) will have only
   their enumerable properties serialized.
+  - Enumerable properties are visited using the same algorithm as [`Object.keys`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys), which has a well-defined order and is stable across implementations. For example, `JSON.stringify` on the same object will always produce the same string, and `JSON.parse(JSON.stringify(obj))` would produce an object with the same key ordering as the original (assuming the object is completely JSON-serializable).
 
 ## Examples
 
@@ -197,7 +198,7 @@ function replacer(key, value) {
   return value;
 }
 
-var foo = {foundation: 'Mozilla', model: 'box', week: 45, transport: 'car', month: 7};
+const foo = {foundation: 'Mozilla', model: 'box', week: 45, transport: 'car', month: 7};
 JSON.stringify(foo, replacer);
 // '{"week":45,"month":7}'
 ```
@@ -254,7 +255,7 @@ behavior: instead of the object being serialized, the value returned by the
 For example:
 
 ```js
-var obj = {
+const obj = {
     data: 'data',
 
     toJSON (key) {
@@ -316,7 +317,7 @@ function jsFriendlyJSONStringify (s) {
         replace(/\u2029/g, '\\u2029');
 }
 
-var s = {
+const s = {
     a: String.fromCharCode(0x2028),
     b: String.fromCharCode(0x2029)
 };
@@ -334,14 +335,10 @@ eval('(' + jsFriendlyJSONStringify(s) + ')');
 alert(jsFriendlyJSONStringify(s)); // {"a":"\u2028","b":"\u2029"}
 ```
 
-> **Note:** Properties of non-array objects are not guaranteed to be
-> stringified in any particular order. Do not rely on ordering of properties within the
-> same object within the stringification.
-
 ```js
-var a = JSON.stringify({ foo: "bar", baz: "quux" })
+const a = JSON.stringify({ foo: "bar", baz: "quux" })
 //'{"foo":"bar","baz":"quux"}'
-var b = JSON.stringify({ baz: "quux", foo: "bar" })
+const b = JSON.stringify({ baz: "quux", foo: "bar" })
 //'{"baz":"quux","foo":"bar"}'
 console.log(a !== b) // true
 
@@ -357,7 +354,7 @@ the applicability of `JSON.stringify()`:
 
 ```js
 // Creating an example of JSON
-var session = {
+const session = {
   'screens': [],
   'state': true
 };
@@ -374,7 +371,7 @@ localStorage.setItem('session', JSON.stringify(session));
 
 // Example of how to transform the String generated through
 // JSON.stringify() and saved in localStorage in JSON object again
-var restoredSession = JSON.parse(localStorage.getItem('session'));
+const restoredSession = JSON.parse(localStorage.getItem('session'));
 
 // Now restoredSession variable contains the object that was saved
 // in localStorage
@@ -417,5 +414,5 @@ result of `JSON.stringify` do you need to carefully handle
 
 ## See also
 
-- [Polyfill of modern `JSON.stringify` behavior (symbol and well-formed unicode) in `core-js`](https://github.com/zloirock/core-js#ecmascript-function)
+- [Polyfill of modern `JSON.stringify` behavior (symbol and well-formed unicode) in `core-js`](https://github.com/zloirock/core-js#ecmascript-json)
 - {{JSxRef("JSON.parse()")}}

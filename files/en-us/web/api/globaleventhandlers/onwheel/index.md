@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onwheel
 slug: Web/API/GlobalEventHandlers/onwheel
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -33,8 +34,7 @@ target.onwheel = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("WheelEvent")}} object as its sole
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("WheelEvent")}} object as its sole
 argument.
 
 ## Examples
@@ -109,7 +109,5 @@ document.onwheel = zoom;
 
 ## See also
 
-- [Document: `wheel`
-  event](/en-US/docs/Web/API/Document/wheel_event)
-- [Element: `wheel`
-  event](/en-US/docs/Web/API/Element/wheel_event)
+- [Document: `wheel` event](/en-US/docs/Web/API/Document/wheel_event)
+- [Element: `wheel` event](/en-US/docs/Web/API/Element/wheel_event)

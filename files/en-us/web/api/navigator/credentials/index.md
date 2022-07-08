@@ -1,6 +1,7 @@
 ---
 title: Navigator.credentials
 slug: Web/API/Navigator/credentials
+page-type: web-api-instance-property
 tags:
   - API
   - CredentialsContainer

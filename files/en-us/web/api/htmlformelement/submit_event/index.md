@@ -1,6 +1,7 @@
 ---
 title: 'HTMLFormElement: submit event'
 slug: Web/API/HTMLFormElement/submit_event
+page-type: web-api-event
 tags:
   - API
   - Event

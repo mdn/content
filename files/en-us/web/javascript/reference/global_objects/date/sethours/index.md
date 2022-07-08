@@ -68,7 +68,7 @@ seconds.
 ### Using setHours()
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setHours(7);
 ```
 

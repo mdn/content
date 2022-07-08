@@ -91,7 +91,7 @@ svg{
   /* if I remove this rule the pen won't work properly on Chrome for Mac, FF, Safari
   Will still work properly on Chrome for PC & Opera*/
   transform-box: fill-box;
-  /*Alternatively  I can use transform-origin:15px 15px;*/
+  /*Alternatively I can use transform-origin:15px 15px;*/
   /*+++++++++++++++++++++++++++*/
   animation: rotateBox 3s linear infinite;
 }
