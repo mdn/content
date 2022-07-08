@@ -12,7 +12,7 @@ tags:
   - Window
 browser-compat: api.caches
 ---
-{{APIRef()}}
+{{APIRef("Service Workers API")}}
 
 The global **`caches`** read-only property returns the {{domxref("CacheStorage")}} object associated with the current context.
 This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
