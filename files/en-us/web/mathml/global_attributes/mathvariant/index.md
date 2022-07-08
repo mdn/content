@@ -107,7 +107,7 @@ are by convention italic, no special classes are used by default.
 ## Browser compatibility
 
 {{Compat}}
-
+On Firefox, some `mathvariant` values are only implemented starting with Firefox 28 and require appropriate [math fonts](/en-US/docs/Web/MathML/Fonts).
 ## See also
 
 - All [global attributes](/en-US/docs/Web/MathML/Global_attributes).
