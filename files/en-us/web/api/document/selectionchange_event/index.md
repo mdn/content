@@ -19,7 +19,7 @@ This event is not cancelable and does not bubble.
 
 The event can be handled by adding an event listener for `selectionchange` or using the `onselectionchange` event handler.
 
-> **Note:** This event is not quite the same as the `selectionchange` events fired when the text selection in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element is changed.
+> **Note:** This event is not quite the same as the `selectionchange` events fired when the text selection in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element is changed. See {{domxref("HTMLInputElement.selectionchange_event")}} for more details.
 
 ## Syntax
 
