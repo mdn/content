@@ -39,7 +39,7 @@ math-depth: unset;
 - `auto-add`
   - : Set to the inherited `math-depth` plus 1 when inherited [math-style](/en-US/docs/Web/CSS/math-style) is `compact`.
 - `add({{cssxref("&lt;integer&gt;")}})`
-  - : Set to the inherited `math-depth` plus specified integer.
+  - : Set to the inherited `math-depth` plus the specified integer.
 - {{cssxref("&lt;integer&gt;")}}
   - : Set to the specified integer.
 
