@@ -82,38 +82,26 @@ The [`Window`](/en-US/docs/Web/API/Window) interface's `open()` method takes a U
 
 Note that remote URLs won't load immediately. When `window.open()` returns, the window always contains `about:blank`. The actual fetching of the URL is deferred and starts after the current script block finishes executing. The window creation and the loading of the referenced resource are done asynchronously.
 
-## Exemples
+## Examples
 
 The following example demonstrates how to implement the `popup` feature.
 
 ```js
-let windowObjectReference;
-let windowFeatures = "popup";
-
-function openRequestedPopup() {
-  windowObjectReference = window.open("https://www.mozilla.org/", "mozillaWindow", windowFeatures);
-}
+const windowFeatures = "popup";
+window.open("https://www.mozilla.org/", "mozillaWindow", windowFeatures);
 ```
 
 We can also control the size and position of the new window.
 
 ```js
-let windowObjectReference;
-let windowFeatures = "left=100,top=100,width=320,height=320";
-
-function openRequestedPopup() {
-  windowObjectReference = window.open("https://www.mozilla.org/", "mozillaWindow", windowFeatures);
-}
+const windowFeatures = "left=100,top=100,width=320,height=320";
+window.open("https://www.mozilla.org/", "mozillaWindow", windowFeatures);
 ```
 
 Alternatively, we can open a new tab by omitting window features.
 
 ```js
-let windowObjectReference;
-
-function openRequestedPopup() {
-  windowObjectReference = window.open("https://www.mozilla.org/", "mozillaTab");
-}
+window.open("https://www.mozilla.org/", "mozillaTab");
 ```
 
 ## Best practices
@@ -121,17 +109,15 @@ function openRequestedPopup() {
 ```js
 let windowObjectReference = null; // global variable
 function openWikipediaPopup() {
-  if(windowObjectReference == null || windowObjectReference.closed)
+  if(windowObjectReference == null || windowObjectReference.closed) {
   /* if the pointer to the window object in memory does not exist
      or if such pointer exists but the window was closed */
-  {
     windowObjectReference = window.open("https://www.wikipedia.org/",
    "WikipediaWindowName", "popup");
     /* then create it. The new window will be created and
        will be brought on top of any other window. */
   }
-  else
-  {
+  else {
     windowObjectReference.focus();
     /* else the window reference must exist and the window
        is not closed; therefore, we can bring it back on top of any other
@@ -152,14 +138,9 @@ function openWikipediaPopup() {
 
 The above code solves a few usability problems related to links opening secondary window. The purpose of the `return false` in the code is to cancel default action of the link: if the `onclick` event handler is executed, then there is no need to execute the default action of the link. But if JavaScript support is disabled or non-existent on the user's browser, then the `onclick` event handler is ignored and the browser loads the referenced resource in the target frame or window that has the name `"WikipediaWindowName"`. If no frame nor window has the name `"WikipediaWindowName"`, then the browser will create a new window and will name it `"WikipediaWindowName"`.
 
-More reading on the use of the `target` attribute:
+> **Note:** For more details about the `target` attribute, see [`<a>`](/en-US/docs/Web/HTML/Element/a#attr-target) or [`<form>`](/en-US/docs/Web/HTML/Element/form#attr-target).
 
-[HTML 4.01 Target attribute specifications](https://www.w3.org/TR/html401/present/frames.html#h-16.3.2)
-
-[How do I create a link that opens a new window?](https://www.htmlhelp.com/faq/html/links.html#new-window)
-
-You can also parameterize the function to make it versatile, functional in more
-situations, therefore re-usable in scripts and webpages:
+You can also parameterize a function to make it versatile, functional in more situations, therefore re-usable in scripts and webpages:
 
 ```js
 let windowObjectReference = null; // global variable
@@ -181,8 +162,7 @@ function openRequestedPopup(url, windowName) {
 >Wikipedia, a free encyclopedia</a></p>
 ```
 
-You can also make such function able to open only 1 secondary window and to reuse such
-single secondary window for other links in this manner:
+You can also make such function able to open only 1 secondary window and to reuse such single secondary window for other links in this manner:
 
 ```js
 let windowObjectReference = null; // global variable
@@ -229,7 +209,7 @@ function openRequestedSinglePopup(url) {
   close the window?
   - : You cannot. **New windows not opened by JavaScript cannot as a rule be closed by JavaScript.** The JavaScript Console in Mozilla-based browsers will report the warning message: `"Scripts may not close windows that were not opened by script."` Otherwise the history of URLs visited during the browser session would be lost.
 
-    More on the [`window.close()`](/en-US/docs/Web/API/window/close()) method.
+    More on the [`window.close()`](/en-US/docs/Web/API/window/close) method.
 
 - How can I bring back the window if it is minimized or behind another window?
   - : First check for the existence of the window object reference of such window and if it exists and if it has not been closed, then use the [`focus()`](/en-US/docs/Web/API/Window/focus) method. There is no other reliable way. You can examine an [example explaining how to use the `focus()` method](#best_practices).
@@ -288,12 +268,6 @@ If you want to offer to open a link in a new window, then follow tested and reco
 - "javascript:" links also interfere with "mouse gestures" features implemented in browsers.
 - Protocol scheme "javascript:" will be reported as an error by link validators and link checkers.
 
-**Further reading:**
-
-- [Top Ten Web-Design Mistakes of 2002](https://www.useit.com/alertbox/20021223.html), 6. JavaScript in Links, Jakob Nielsen, December 2002
-- [Links & JavaScript Living Together in Harmony](https://evolt.org/article/Links_and_JavaScript_Living_Together_in_Harmony/17/20938/), Jeff Howden, February 2002
-- [comp.lang.javascript newsgroup discussion FAQ on "javascript:" links](https://jibbering.com/faq/#FAQ4_24)
-
 #### Never use `<a href="#" onclick="window.open(…);">`
 
 Such pseudo-link also breaks accessibility of links. **Always use a real URL for the `href` attribute value** so that if JavasScript support is disabled or inexistent or if the user agent does not support opening of secondary window (like MS-Web TV, text browsers, etc), then such user agents will still be able to load the referenced resource according to its default mode of opening/handling a referenced resource. This form of code also interferes with advanced features in tab-capable browsers: eg. middle-click on links, Ctrl+click on links, Ctrl+Enter on links, "mouse gestures" features.
@@ -304,15 +278,11 @@ Identify links that will open new windows in a way that helps navigation for use
 
 The purpose is to warn users in advance of context changes to minimize confusion on the user's part: changing the current window or popping up new windows can be very disorienting to users (Back toolbar button is disabled).
 
-> "Users often don't notice that a new window has opened, especially if they are using a small monitor where the windows are maximized to fill up the screen. So a user who tries to return to the origin will be confused by a grayed out _Back_ button." quote from [The Top Ten New Mistakes of Web Design](https://www.useit.com/alertbox/990530.html): 2. Opening New Browser Windows, Jakob Nielsen, May 1999
-
 When extreme changes in context are explicitly identified before they occur, then the users can determine if they wish to proceed or so they can be prepared for the change: not only they will not be confused or feel disoriented, but more experienced users can better decide how to open such links (in a new window or not, in the same window, in a new tab or not, in "background" or not).
 
 **References**
 
 - "If your link spawns a new window, or causes another windows to 'pop up' on your display, or move the focus of the system to a new frame or window, then the nice thing to do is to tell the user that something like that will happen." [World Wide Web Consortium Accessibility Initiative regarding popups](https://www.w3.org/WAI/wcag-curric/sam77-0.htm)
-- "Use link titles to provide users with a preview of where each link will take them, before they have clicked on it." [Ten Good Deeds in Web Design](https://www.useit.com/alertbox/991003.html), Jakob Nielsen, October 1999
-- [Using Link Titles to Help Users Predict Where They Are Going](https://www.useit.com/alertbox/980111.html), Jakob Nielsen, January 1998
 
 #### Always use the `target` attribute
 
