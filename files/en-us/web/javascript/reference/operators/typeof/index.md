@@ -217,7 +217,7 @@ example, `typeof []` , is `'object'`, as well as
 For greater specificity in checking types, here we present a custom `type(value)` function, which mostly mimics the behavior of `typeof`, but for non-primitives (i.e. objects and functions), it returns a more granular type name where possible.
 
 ```js
-function type(obj) {
+function type(value) {
   if (typeof value !== "object" && typeof value !== "function") {
     return typeof value;
   }
