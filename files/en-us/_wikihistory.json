@@ -45062,27 +45062,6 @@
       "teoli"
     ]
   },
-  "Web/API/GlobalEventHandlers/onsubmit": {
-    "modified": "2020-10-15T21:06:50.687Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "erikadoyle",
-      "jpmedley",
-      "DmitryK",
-      "cvrebert",
-      "Sebastianz",
-      "teoli",
-      "kosvrouvas",
-      "kscarfone",
-      "Sheppy",
-      "ziyunfei",
-      "Jabez",
-      "Teymour",
-      "Callek",
-      "alecananian"
-    ]
-  },
   "Web/API/GlobalEventHandlers/ontouchcancel": {
     "modified": "2020-11-13T00:52:38.720Z",
     "contributors": [

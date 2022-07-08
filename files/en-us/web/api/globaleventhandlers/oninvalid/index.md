@@ -37,7 +37,7 @@ argument.
 ## Example
 
 This example demonstrates `oninvalid` and
-{{domxref("GlobalEventHandlers.onsubmit", "onsubmit")}} event handlers on a form.
+{{domxref("HTMLFormElement.onsubmit", "onsubmit")}} event handlers on a form.
 
 ### HTML
 
