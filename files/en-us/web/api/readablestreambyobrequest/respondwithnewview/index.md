@@ -16,8 +16,10 @@ browser-compat: api.ReadableStreamBYOBRequest.respondWithNewView
 The **`respondWithNewView()`** method of the {{domxref("ReadableStreamBYOBRequest")}} interface specifies a new view that the consumer of the associated readable byte stream should write to instead of {{domxref("ReadableStreamBYOBRequest.view")}}.
 
 The new view must be an {{domxref("ArrayBufferView")}} that provides a view onto the same backing memory region as {{domxref("ReadableStreamBYOBRequest.view")}}.
-
 After this method is called, the view that was passed into the method will be transferred and no longer modifiable.
+
+The method is intended for use cases where an underlying byte source needs to transfer a `byobRequest.view` internally before finishing its response.
+For example, the source may transfer the BYOB view to a separate worker thread, and wait for the worker to transfer it back once it has been filled.
 
 ## Syntax
 

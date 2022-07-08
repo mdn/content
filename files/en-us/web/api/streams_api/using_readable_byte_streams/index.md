@@ -49,8 +49,9 @@ This signals that the data should be transferred, and the pending read request b
 After calling `respond()` the `view` can no longer be written.
 
 There is also an additional method {{domxref("ReadableStreamBYOBRequest.respondWithNewView()")}} to which an underlying source can pass a "new" view containing data to be transferred.
-Note however that this new view must be over the _same_ memory buffer as the original, and from the same starting offset.
-In other words, this method gives developers another way to send less than the full allocated buffer size (the other way being to specify the length in `respond()`).
+This new view must be over the _same_ memory buffer as the original, and from the same starting offset.
+This method might be used if the underlying byte source needs to first transfer the view to a worker thread to populate (for example) and then get it back before responding to the `byobRequest`.
+In most cases this method will not be needed.
 
 Readable byte streams are normally read using a {{domxref("ReadableStreamBYOBReader")}}, which can be obtained by calling {{domxref("ReadableStream.getReader()")}} on the stream, specifying `mode: "byob"` in the options parameter.
 
