@@ -84,7 +84,7 @@ The MathML `<mo>` element represents an operator in a broad sense. Besides opera
 
 {{Compat}}
 
-## Gecko-specific notes
+### Gecko-specific notes
 
 - Starting with Gecko 16.0 {{ geckoRelease("16.0") }} the default values for `lspace` and `rspace` have been corrected to match the MathML3 specification. They now default to the constant `thickmathspace` (5/18em).
 - Any [linebreaking](https://www.w3.org/TR/MathML3/chapter3.html#presm.lbattrs) or [indentation attributes](https://www.w3.org/TR/MathML3/chapter3.html#presm.lbindent.attrs) are not implemented yet. See {{ bug("534962") }}.
