@@ -23,7 +23,7 @@ For an introduction to regular expressions, read the [Regular Expressions chapte
 There are two ways to create a `RegExp` object: a _literal notation_ and a _constructor_.
 
 - The _literal notation_ takes a pattern between two slashes, followed by optional flags, after the second slash.
-- The _constructor function_ takes either a string or a `RegExp` object as its first parameter and a string of optional flags as its second parameter. 
+- The _constructor function_ takes either a string or a `RegExp` object as its first parameter and a string of optional flags as its second parameter.
 
 The following three expressions create the same regular expression object:
 
@@ -33,9 +33,9 @@ let re = new RegExp('ab+c', 'i') // constructor with string pattern as first arg
 let re = new RegExp(/ab+c/, 'i') // constructor with regular expression literal as first argument (Starting with ECMAScript 6)
 ```
 
-Before regular expressions can be used, they have to be compiled. This process allows them to perform matches more efficiently. More about the process can be found in [dotnet docs](https://docs.microsoft.com/en-us/dotnet/standard/base-types/compilation-and-reuse-in-regular-expressions). 
+Before regular expressions can be used, they have to be compiled. This process allows them to perform matches more efficiently. More about the process can be found in [dotnet docs](https://docs.microsoft.com/en-us/dotnet/standard/base-types/compilation-and-reuse-in-regular-expressions).
 
-The literal notation results in compilation of the regular expression when the expression is evaluated. On the other hand, the constructor of the `RegExp` object, `new RegExp('ab+c')`, results in runtime compilation of the regular expression. 
+The literal notation results in compilation of the regular expression when the expression is evaluated. On the other hand, the constructor of the `RegExp` object, `new RegExp('ab+c')`, results in runtime compilation of the regular expression.
 
 Use a string as the first argument to the `RegExp()` constructor when you want to [build the regular expression from dynamic input](#Building_a_regular_expression_from_dynamic_inputs).
 
