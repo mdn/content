@@ -43,10 +43,10 @@ A `byobRequest` is only made available when a read request is made on a readable
 An underlying byte source that needs to transfer data must check the `byobRequest` property and, if it is available, use it to transfer data.
 If the property is `null`, incoming data should instead be added to the stream's internal queues using {{domxref("ReadableByteStreamController.enqueue()")}} (this is the only way to transfer data when using a "default" stream).
 
-The {{domxref("ReadableStreamBYOBRequest")}} has a {{domxref("ReadableStreamBYOBRequest.view","view")}} property, which is a view on the buffer allocated for transfer (the size of this buffer may be set using [`autoAllocateChunkSize`](/en-US/docs/Web/API/ReadableStream/ReadableStream#autoallocatechunksize) if desired).
+The {{domxref("ReadableStreamBYOBRequest")}} has a {{domxref("ReadableStreamBYOBRequest.view","view")}} property, which is a view on the buffer allocated for transfer.
 Data from an underlying source should be written into this property, and then the underlying source must call {{domxref("ReadableStreamBYOBRequest.respond()","respond()")}} indicating the number of bytes written.
 This signals that the data should be transferred, and the pending read request by the consumer resolved.
-After calling the `respond()` the `view` can no longer be written.
+After calling `respond()` the `view` can no longer be written.
 
 There is also an additional method {{domxref("ReadableStreamBYOBRequest.respondWithNewView()")}} to which an underlying source can pass a "new" view containing data to be transferred.
 Note however that this new view must be over the _same_ memory buffer as the original, and from the same starting offset.
@@ -64,10 +64,10 @@ Other than the differences outlined above, the controller and underlying source 
 
 ### Underlying push source with byte reader
 
-This live example shows how to create a byte readstream with a _push_ underlying byte source, and read it using a byte reader.
+This live example shows how to create a readable byte stream with a _push_ underlying byte source, and read it using a byte reader.
 
-Unlike with a pull underlying byte source data can arrive at any time.
-Therefore the underlying source must use `controller.byobResponse` to transfer incoming data if one exists, and otherwise enqueue the data into the stream's internal queues.
+Unlike with a pull underlying byte source, data can arrive at any time.
+Therefore the underlying source must use `controller.byobRequest` to transfer incoming data if one exists, and otherwise enqueue the data into the stream's internal queues.
 Further, since the data can arrive at any time the monitoring behaviour is set up in the `underlyingSource.start()` callback function.
 
 The example is highly influenced by a push byte source example in the stream specification.
@@ -121,7 +121,8 @@ class MockHypotheticalSocket {
         this.data_read += numberBytesRecieved;
         this.socketdata = this.randomByteArray(numberBytesRecieved);
         resultobj["bytesRead"] = numberBytesRecieved;
-        resolve(resultobj); }, 500);
+        resolve(resultobj);
+      }, 500);
     });
   }
 
@@ -136,7 +137,7 @@ class MockHypotheticalSocket {
       for (let i = 0; i < length_data; i++) {
         myview[i]=this.socketdata[i];
       }
-    this.socketdata = null; // Clear "socket" data after reading
+      this.socketdata = null; // Clear "socket" data after reading
     }
     return length_data;
   }
@@ -859,7 +860,7 @@ These are made as zero-copy transfers.
 
 ### Underlying pull source with default reader and no allocation
 
-For completeness, we can also use a default reader with a byte source that does not that does not support automatical buffer allocation.
+For completeness, we can also use a default reader with a byte source that does not support automatic buffer allocation.
 
 ```js hidden
 class MockUnderlyingFileHandle {
