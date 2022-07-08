@@ -60,7 +60,7 @@ function myFunc(theObject) {
  * create and initialize a new Object;
  * assign reference to it to 'mycar'
  */
-var mycar = {
+const mycar = {
   brand: "Honda",
   model: "Accord",
   year: 1998
@@ -94,7 +94,7 @@ There is a special syntax for declaring functions
 
 ```js
 function name([param[, param[, ... param]]]) {
-   statements
+  statements
 }
 ```
 
@@ -117,7 +117,7 @@ scope, therefore they cannot be used before they appear in the code.
 
 ```js
 function [name]([param[, param[, ... param]]]) {
-   statements
+  statements
 }
 ```
 
@@ -133,8 +133,8 @@ Here is an example of an **anonymous** function expression (the
 `name` is not used):
 
 ```js
-var myFunction = function() {
-    statements
+const myFunction = function () {
+  statements
 }
 ```
 
@@ -142,8 +142,8 @@ It is also possible to provide a name inside the definition in order to create a
 **named** function expression:
 
 ```js
-var myFunction = function namedFunction() {
-    statements
+const myFunction = function namedFunction() {
+  statements
 }
 ```
 
@@ -159,7 +159,7 @@ When functions are used only once, a common pattern is an [IIFE (Immediately Inv
 
 ```js
 (function() {
-    statements
+  statements
 })();
 ```
 
@@ -172,7 +172,7 @@ There is a special syntax for generator function declarations (see
 
 ```js
 function* name([param[, param[, ... param]]]) {
-   statements
+  statements
 }
 ```
 
@@ -191,7 +191,7 @@ details):
 
 ```js
 function* [name]([param[, param[, ... param]]]) {
-   statements
+  statements
 }
 ```
 
@@ -210,7 +210,7 @@ An arrow function expression has a shorter syntax and lexically binds its `this`
 
 ```js
 ([param[, param]]) => {
-   statements
+  statements
 }
 
 param => expression
@@ -324,9 +324,9 @@ similar to the getters and setters.
 See [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) for more information.
 
 ```js
-var obj = {
+const obj = {
   foo() {},
-  bar() {}
+  bar() {},
 };
 ```
 
@@ -338,7 +338,7 @@ A function defined with the `Function` _constructor_ assigned to the
 variable `multiply`:
 
 ```js
-var multiply = new Function('x', 'y', 'return x * y');
+const multiply = new Function('x', 'y', 'return x * y');
 ```
 
 A _function declaration_ of a function named `multiply`:
@@ -353,17 +353,17 @@ A _function expression_ of an anonymous function assigned to the variable
 `multiply`:
 
 ```js
-var multiply = function(x, y) {
-   return x * y;
+const multiply = function (x, y) {
+  return x * y;
 };
 ```
 
-A _function expression_ of a function named `func_name` assigned to
+A _function expression_ of a function named `funcName` assigned to
 the variable `multiply`:
 
 ```js
-var multiply = function func_name(x, y) {
-   return x * y;
+const multiply = function funcName(x, y) {
+  return x * y;
 };
 ```
 
@@ -374,12 +374,10 @@ All do approximately the same thing, with a few subtle differences:
 There is a distinction between the function name and the variable the function is
 assigned to. The function name cannot be changed, while the variable the function is
 assigned to can be reassigned. The function name can be used only within the function's
-body. Attempting to use it outside the function's body results in an error (or
-`undefined` if the function name was previously declared via a
-`var` statement). For example:
+body. Attempting to use it outside the function's body results in an error (or get another value, if the same name is declared elsewhere). For example:
 
 ```js
-var y = function x() {};
+const y = function x() {};
 alert(x); // throws an error
 ```
 
@@ -395,8 +393,8 @@ also creates a variable with the same name as the function name. Thus, unlike th
 defined by function expressions, functions defined by function declarations can be
 accessed by their name in the scope they were defined in:
 
-A function defined by '`new Function'` does not have a function name.
-However, the serialized form of the function shows as if it has the name "anonymous."
+A function defined by `new Function` does not have a function name.
+However, the serialized form of the function shows as if it has the name "anonymous".
 For example, `alert(new Function())` outputs:
 
 ```js
@@ -409,7 +407,7 @@ variable that can be accessed within the function. For example, the following wo
 result in an error:
 
 ```js
-var foo = new Function("alert(anonymous);");
+const foo = new Function("alert(anonymous);");
 foo();
 ```
 
@@ -418,9 +416,9 @@ constructor, a function defined by a function declaration can be used before the
 function declaration itself. For example:
 
 ```js
-foo(); // alerts FOO!
+foo(); // logs "FOO!"
 function foo() {
-   alert('FOO!');
+  console.log('FOO!');
 }
 ```
 
@@ -440,21 +438,22 @@ the global scope (which all functions inherit).
  *     3. function constructor
  * each of which will log 'p'
  */
+// var declarations create properties on the global object
 var p = 5;
 function myFunc() {
-    var p = 9;
+  const p = 9;
 
-    function decl() {
-        console.log(p);
-    }
-    var expr = function() {
-        console.log(p);
-    };
-    var cons = new Function('\tconsole.log(p);');
+  function decl() {
+    console.log(p);
+  }
+  const expr = function () {
+    console.log(p);
+  };
+  const cons = new Function('\tconsole.log(p);');
 
-    decl();
-    expr();
-    cons();
+  decl();
+  expr();
+  cons();
 }
 myFunc();
 
@@ -479,7 +478,7 @@ within the function generated by parsing a `Function constructor` 's string
 aren't parsed repeatedly. For example:
 
 ```js
-var foo = (new Function("var bar = \'FOO!\';\nreturn(function() {\n\talert(bar);\n});"))();
+const foo = (new Function("var bar = \'FOO!\';\nreturn(function() {\n\talert(bar);\n});"))();
 foo(); // The segment "function() {\n\talert(bar);\n}" of the function body string is not re-parsed.
 ```
 
@@ -491,18 +490,18 @@ function expression. A function declaration ceases to be one when it either:
   element" is a non-nested statement in the script or a function body:
 
 ```js
-var x = 0;               // source element
+let x = 0;               // source element
 if (x === 0) {           // source element
-   x = 10;               // not a source element
-   function boo() {}     // not a source element
+  x = 10;                // not a source element
+  function boo() {}      // not a source element
 }
 function foo() {         // source element
-   var y = 20;           // source element
-   function bar() {}     // source element
-   while (y === 10) {    // source element
-      function blah() {} // not a source element
-      y++;               // not a source element
-   }
+  let y = 2;             // source element
+  function bar() {}      // source element
+  while (y < 10) {       // source element
+    function blah() {}   // not a source element
+    y++;                 // not a source element
+  }
 }
 ```
 
@@ -519,18 +518,18 @@ function foo() {}
 x = function hello() {}
 
 if (x) {
-   // function expression
-   function world() {}
+  // function expression
+  function world() {}
 }
 
 // function declaration
 function a() {
-   // function declaration
-   function b() {}
-   if (0) {
-      // function expression
-      function c() {}
-   }
+  // function declaration
+  function b() {}
+  if (0) {
+    // function expression
+    function c() {}
+  }
 }
 ```
 
@@ -566,9 +565,9 @@ In non-strict code, function declarations inside blocks behave strangely. For ex
 
 ```js
 if (shouldDefineZero) {
-   function zero() {     // DANGER: compatibility risk
-      console.log("This is zero.");
-   }
+  function zero() {     // DANGER: compatibility risk
+    console.log("This is zero.");
+  }
 }
 ```
 
@@ -586,11 +585,13 @@ A safer way to define functions conditionally is to assign a function expression
 variable:
 
 ```js
+// Using a var makes it available as a global variable,
+// with closer behavior to a top-level function declaration
 var zero;
 if (shouldDefineZero) {
-   zero = function() {
-      console.log("This is zero.");
-   };
+  zero = function () {
+    console.log("This is zero.");
+  };
 }
 ```
 
@@ -604,22 +605,22 @@ number padded with leading zeros.
 ```js
 // This function returns a string padded with leading zeros
 function padZeros(num, totalLen) {
-   var numStr = num.toString();             // Initialize return value as string
-   var numZeros = totalLen - numStr.length; // Calculate no. of zeros
-   for (var i = 1; i <= numZeros; i++) {
-      numStr = "0" + numStr;
-   }
-   return numStr;
+  let numStr = num.toString();             // Initialize return value as string
+  const numZeros = totalLen - numStr.length; // Calculate no. of zeros
+  for (let i = 1; i <= numZeros; i++) {
+    numStr = "0" + numStr;
+  }
+  return numStr;
 }
 ```
 
 The following statements call the padZeros function.
 
 ```js
-var result;
-result = padZeros(42,4); // returns "0042"
-result = padZeros(42,2); // returns "42"
-result = padZeros(5,4);  // returns "0005"
+let result;
+result = padZeros(42, 4); // returns "0042"
+result = padZeros(42, 2); // returns "42"
+result = padZeros(5, 4);  // returns "0005"
 ```
 
 ### Determining whether a function exists
@@ -630,11 +631,11 @@ object has a property called `noFunc` that is a function. If so, it is used;
 otherwise, some other action is taken.
 
 ```js
- if ('function' === typeof window.noFunc) {
-   // use noFunc()
- } else {
-   // do something else
- }
+if (typeof window.noFunc === 'function') {
+  // use noFunc()
+} else {
+  // do something else
+}
 ```
 
 Note that in the `if` test, a reference to `noFunc` is used—there
