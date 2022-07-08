@@ -242,7 +242,7 @@ class DerivedWithConstructor extends Base {
 const instance2 = new DerivedWithConstructor(); // Logs 1
 ```
 
-> **Note:** Before the class fields specification was finalized with the [[Define]] semantic, most transpilers, including [Babel](https://babeljs.io/) and [tsc](https://www.typescriptlang.org/), transformed class fields to the `DerivedWithConstructor` form, which has caused subtle bugs after class fields were standardized.
+> **Note:** Before the class fields specification was finalized with the `[[Define]]` semantic, most transpilers, including [Babel](https://babeljs.io/) and [tsc](https://www.typescriptlang.org/), transformed class fields to the `DerivedWithConstructor` form, which has caused subtle bugs after class fields were standardized.
 
 ### Public methods
 
