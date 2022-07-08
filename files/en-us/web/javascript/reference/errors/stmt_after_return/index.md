@@ -70,7 +70,7 @@ function f() {
 
 ```js example-good
 function f() {
-  const x = 3;
+  let x = 3;
   x += 4;
   x -= 3;
   return x;  // OK: return after all other statements
