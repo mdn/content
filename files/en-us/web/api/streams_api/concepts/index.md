@@ -70,7 +70,7 @@ There are two methods that facilitate this:
 - {{domxref("ReadableStream.pipeThrough()")}} — pipes the stream through a **transform stream**, potentially transforming the data format along the way.
   This might be used, for example, to encode or decode video frames, compress or decompress data, or otherwise convert data from one form to another.
 
-  A transform stream consists of a pair of streams: a readable stream from which data is read and a writeable stream into which it is written, along with appropriate mechanisms to ensure that new data is made available to read as soon as data is written.
+  A transform stream consists of a pair of streams: a readable stream from which data is read and a writable stream into which it is written, along with appropriate mechanisms to ensure that new data is made available to read as soon as data is written.
 
   {{domxref("TransformStream")}} is a concrete implementation of a transform stream, but any object `pipeThrough()` that has the same readable stream and writable stream properties.
 - {{domxref("ReadableStream.pipeTo()")}} — pipes to a writable stream that acts as the end point of the pipe chain.

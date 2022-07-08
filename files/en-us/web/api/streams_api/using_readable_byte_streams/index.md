@@ -27,7 +27,7 @@ This article explains how readable byte streams compare to normal "default" stre
 
 ## Overview
 
-Readable streams provides a consistent interface for streaming data from some underlying source, such as a file or socket, to a consumer, such as a reader, transform stream or writeable stream.
+Readable streams provides a consistent interface for streaming data from some underlying source, such as a file or socket, to a consumer, such as a reader, transform stream or writable stream.
 In a normal readable stream, data from the underlying source always passes to a consumer through the internal queues.
 A readable byte stream differs in that if the internal queues are empty, the underlying source can write directly to the consumer (an efficient zero-copy transfer).
 

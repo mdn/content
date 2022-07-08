@@ -16,7 +16,7 @@ browser-compat: api.ReadableByteStreamController.desiredSize
 The **`desiredSize`** read-only property of the {{domxref("ReadableByteStreamController")}} interface returns the number of bytes required to fill the stream's internal queue to its "desired size".
 
 The value is used by the stream to indicate a preferred flow rate to the underlying source.
-Sources that support thottling or pausing their inflow of data (not all do!) should control the inflow such that `desiredSize` of the stream buffer is kept positive and as close to zero as possible.
+Sources that support throttling or pausing their inflow of data (not all do!) should control the inflow such that `desiredSize` of the stream buffer is kept positive and as close to zero as possible.
 
 The `desiredSize` is used to apply [backpressure](/en-US/docs/Web/API/Streams_API/Concepts#backpressure) from downstream consumers.
 

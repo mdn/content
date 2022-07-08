@@ -41,7 +41,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 The example in [Using readable byte streams > Creating a readable socket push byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams#creating_a_readable_socket_push_byte_stream) shows how you can use `enqueue()` to copy data to the stream if there is no outstanding {{domxref("ReadableByteStreamController.byobRequest","byobRequest")}}.
-If there is a `byobRequest` then it must be used!
+If there is a `byobRequest` then it should be used!
 
 The code below shows data being read into an `ArrayBuffer` using a "hypothetical" `socket.readInto()` method and then enqueued (but only if data was actually copied):
 

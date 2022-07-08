@@ -13,7 +13,7 @@ browser-compat: api.ReadableByteStreamController
 ---
 {{APIRef("Streams")}}
 
-The **`ReadableByteStreamController`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a controller for a [readable byte stream](TBD).
+The **`ReadableByteStreamController`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a controller for a [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams).
 It allows control of the state and internal queue of a {{domxref("ReadableStream")}} with an underlying byte source, and enables efficient zero-copy transfer of data from the underlying source to a consumer when the stream's internal queue is empty.
 
 An instance of this controller type is created if an `underlyingSource` object with the property `type="bytes"` is passed as an argument to the [`ReadableStream()` constructor](/en-US/docs/Web/API/ReadableStream/ReadableStream#type).
@@ -32,7 +32,7 @@ It is also enabled when using a default reader and [`autoAllocateChunkSize`](/en
 An underlying byte source can also use the controller to [`close()`](#readablebytestreamcontroller.close) the stream when all the data has been sent and report errors from the underlying source using [`error()`](#readablebytestreamcontroller.error).
 The controller's [`desiredSize`](#readablebytestreamcontroller.desiredsize) property is used to apply "backpressure", informing the underlying source of the size of the internal queue (small values indicate that the queue is filling up, hinting to the underlying source that it is be desirable to pause or throttle the inflow).
 
-Note that even though the controller is primarily used by the underlying controller, there is no reason it cannot be stored used by other parts of the system to signal the stream.
+Note that even though the controller is primarily used by the underlying byte source, there is no reason it cannot be stored used by other parts of the system to signal the stream.
 
 ## Constructor
 
