@@ -104,8 +104,8 @@ Function expressions are convenient when passing a function as an argument to an
 ```js
 function map(f, a) {
   const result = [];
-  for (let i = 0; i !== a.length; i++) {
-    result[i] = f(a[i]);
+  for (const v of a) {
+    result[i] = f(v);
   }
   return result;
 }
@@ -116,8 +116,8 @@ In the following code, the function receives a function defined by a function ex
 ```js
 function map(f, a) {
   const result = [];
-  for (let i = 0; i !== a.length; i++) {
-    result[i] = f(a[i]);
+  for (const v of a) {
+    result[i] = f(v);
   }
   return result;
 }
@@ -189,7 +189,7 @@ A function can call itself. For example, here is a function that computes factor
 
 ```js
 function factorial(n) {
-  if ((n === 0) || (n === 1)) {
+  if (n === 0 || n === 1) {
     return 1;
   } else {
     return n * factorial(n - 1);
@@ -374,12 +374,9 @@ function outside(x) {
   }
   return inside;
 }
-const fn_inside = outside(3); // Think of it like: give me a function that adds 3 to whatever you give it
-
-const result = fn_inside(5); // returns 8
-
+const fnInside = outside(3); // Think of it like: give me a function that adds 3 to whatever you give it
+const result = fnInside(5); // returns 8
 const result1 = outside(3)(5); // returns 8
-
 ```
 
 ### Preservation of variables
@@ -469,19 +466,21 @@ const createPet = function (name) {
   let sex;
 
   const pet = {
-    setName: function (newName) {
+    // setName(newName) is equivalent to setName: function (newName)
+    // in this context
+    setName(newName) {
       name = newName;
     },
 
-    getName: function () {
+    getName() {
       return name;
     },
 
-    getSex: function () {
+    getSex() {
       return sex;
     },
 
-    setSex: function (newSex) {
+    setSex(newSex) {
       if (typeof newSex === 'string' &&
         (newSex.toLowerCase() === 'male' || newSex.toLowerCase() === 'female')) {
         sex = newSex;
@@ -522,7 +521,7 @@ getCode();    // Returns the apiCode
 > ```js example-bad
 > const createPet = function (name) {  // The outer function defines a variable called "name".
 >   return {
->     setName: function (name) {    // The enclosed function also defines a variable called "name".
+>     setName(name) {    // The enclosed function also defines a variable called "name".
 >       name = name;               // How do we access the "name" defined by the outer function?
 >     }
 >   }
@@ -586,12 +585,12 @@ In the past, the general strategy for setting defaults was to test parameter val
 In the following example, if no value is provided for `b`, its value would be `undefined` when evaluating `a*b`, and a call to `multiply` would normally have returned `NaN`. However, this is prevented by the second line in this example:
 
 ```js
-function multiply(multiplier, ...theArgs) {
-  return theArgs.map(x => multiplier * x);
+function multiply(a, b) {
+  b = typeof b !== 'undefined' ?  b : 1;
+  return a * b;
 }
 
-const arr = multiply(2, 1, 2, 3);
-console.log(arr); // [2, 4, 6]
+multiply(5); // 5
 ```
 
 #### With default parameters (post-ECMAScript 2015)
@@ -616,7 +615,7 @@ In the following example, the function `multiply` uses _rest parameters_ to coll
 
 ```js
 function multiply(multiplier, ...theArgs) {
-  return theArgs.map(x => multiplier * x);
+  return theArgs.map((x) => multiplier * x);
 }
 
 const arr = multiply(2, 1, 2, 3);
@@ -645,7 +644,7 @@ const a2 = a.map(function(s) { return s.length; });
 
 console.log(a2); // logs [8, 6, 7, 9]
 
-const a3 = a.map(s => s.length);
+const a3 = a.map((s) => s.length);
 
 console.log(a3); // logs [8, 6, 7, 9]
 ```
@@ -675,7 +674,7 @@ In ECMAScript 3/5, this issue was fixed by assigning the value in `this` to a va
 ```js
 function Person() {
   const self = this; // Some choose `that` instead of `self`.
-                   // Choose one and be consistent.
+                     // Choose one and be consistent.
   self.age = 0;
 
   setInterval(function growUp() {
@@ -695,7 +694,7 @@ function Person() {
   this.age = 0;
 
   setInterval(() => {
-    this.age++; // |this| properly refers to the person object
+    this.age++; // `this` properly refers to the person object
   }, 1000);
 }
 
