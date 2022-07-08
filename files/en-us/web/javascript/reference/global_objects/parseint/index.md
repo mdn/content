@@ -29,7 +29,7 @@ parseInt(string, radix)
   - : A string starting with an integer. Leading {{glossary("whitespace")}} in this argument is ignored.
 - `radix` {{optional_inline}}
 
-  - : An integer between `2` and `36` that represents the _radix_ (the base in mathematical numeral systems) of the `string`. If not provided, the radix will be inferred based on `string`'s value. Be careful—this does NOT always default to `10`! The [description below](#description) explains in more detail what happens when `radix` is not provided.
+  - : An integer between `2` and `36` that represents the _radix_ (the base in mathematical numeral systems) of the `string`. If outside this range, the function will always return `NaN`. If `0` or not provided, the radix will be inferred based on `string`'s value. Be careful — this does NOT always default to `10`! The [description below](#description) explains in more detail what happens when `radix` is not provided.
 
 ### Return value
 
@@ -49,7 +49,7 @@ The `parseInt` function converts its first argument to a string, parses that str
 
 If not `NaN`, the return value will be the integer that is the first argument taken as a number in the specified `radix`. (For example, a `radix` of `10` converts from a decimal number, `8` converts from octal, `16` from hexadecimal, and so on.)
 
-A value passed as the `radix` argument is coerced to a Number (if necessary). If it's unprovided, or if the value becomes 0, `NaN` or `Infinity` (undefined is coerced to `NaN`), JavaScript assumes the following:
+A value passed as the `radix` argument is {{glossary("Type_coercion", "coerced"}} to a `Number` (if necessary). If it's unprovided, or if the value becomes 0, `NaN` or `Infinity` (`undefined` is coerced to `NaN`), JavaScript assumes the following:
 
 1. If the input `string`, with leading whitespace and possible `+`/`-` signs removed, begins with `0x` or `0X` (a zero, followed by lowercase or uppercase X), `radix` is assumed to be `16` and the rest of the string is parsed as a hexadecimal number.
 2. If the input `string` begins with any other value, the radix is `10` (decimal).
@@ -60,7 +60,7 @@ Else if the radix value (coerced if necessary) is not in range \[2, 36] (inclusi
 
 For radices above `10`, letters of the English alphabet indicate numerals greater than `9`. For example, for hexadecimal numbers (base `16`), `A` through `F` are used. The letters are case-insensitive.
 
-`parseInt` understands exactly two signs: `+` for positive, and `-` for negative (since ECMAScript 1). It is done as an initial step in the parsing after whitespace is removed. If no signs are found, the algorithm moves to the following step; otherwise, it removes the sign and runs the number-parsing on the rest of the string.
+`parseInt` understands exactly two signs: `+` for positive, and `-` for negative. It is done as an initial step in the parsing after whitespace is removed. If no signs are found, the algorithm moves to the following step; otherwise, it removes the sign and runs the number-parsing on the rest of the string.
 
 If `parseInt` encounters a character that is not a numeral in the specified `radix`, it ignores it and all succeeding characters and returns the integer value parsed up to that point. For example, although `1e3` technically encodes an integer (and will be correctly parsed to the integer `1000` by [`parseFloat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat)), `parseInt("1e3", 10)` returns `1`, because `e` is not a valid numeral in base 10. Because `.` is not a numeral either, the return value will always be an integer.
 
