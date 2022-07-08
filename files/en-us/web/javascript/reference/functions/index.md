@@ -374,9 +374,7 @@ All do approximately the same thing, with a few subtle differences:
 There is a distinction between the function name and the variable the function is
 assigned to. The function name cannot be changed, while the variable the function is
 assigned to can be reassigned. The function name can be used only within the function's
-body. Attempting to use it outside the function's body results in an error (or
-`undefined` if the function name was previously declared via a
-`var` statement). For example:
+body. Attempting to use it outside the function's body results in an error (or get another value, if the same name is declared elsewhere). For example:
 
 ```js
 const y = function x() {};
@@ -395,8 +393,8 @@ also creates a variable with the same name as the function name. Thus, unlike th
 defined by function expressions, functions defined by function declarations can be
 accessed by their name in the scope they were defined in:
 
-A function defined by '`new Function'` does not have a function name.
-However, the serialized form of the function shows as if it has the name "anonymous."
+A function defined by `new Function` does not have a function name.
+However, the serialized form of the function shows as if it has the name "anonymous".
 For example, `alert(new Function())` outputs:
 
 ```js
