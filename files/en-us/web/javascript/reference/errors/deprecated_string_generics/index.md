@@ -68,44 +68,6 @@ const num = 15;
 String(num).replace(/5/, '2');
 ```
 
-## Shim
-
-The following is a shim to provide support to non-supporting browsers:
-
-```js
-/*globals define*/
-// Assumes all supplied String instance methods already present
-// (one may use shims for these if not available)
-(function() {
-  'use strict';
-
-  let i,
-    // We could also build the array of methods with the following, but the
-    //   getOwnPropertyNames() method is non-shimable:
-    // Object.getOwnPropertyNames(String).filter(function(methodName) {
-    //   return typeof String[methodName] === 'function';
-    // });
-    methods = [
-      'contains', 'substring', 'toLowerCase', 'toUpperCase', 'charAt',
-      'charCodeAt', 'indexOf', 'lastIndexOf', 'startsWith', 'endsWith',
-      'trim', 'trimLeft', 'trimRight', 'toLocaleLowerCase', 'normalize',
-      'toLocaleUpperCase', 'localeCompare', 'match', 'search', 'slice',
-      'replace', 'split', 'substr', 'concat', 'localeCompare'
-    ],
-    methodCount = methods.length,
-    assignStringGeneric = function(methodName) {
-      const method = String.prototype[methodName];
-      String[methodName] = function(arg1) {
-        return method.apply(arg1, Array.prototype.slice.call(arguments, 1));
-      };
-    };
-
-  for (i = 0; i < methodCount; i++) {
-    assignStringGeneric(methods[i]);
-  }
-}());
-```
-
 ## See also
 
 - {{jsxref("String")}}
