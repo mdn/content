@@ -55,7 +55,7 @@ In other words, this method gives developers another way to send less than the f
 Readable byte streams are normally read using a {{domxref("ReadableStreamBYOBReader")}}, which can be obtained by calling {{domxref("ReadableStream.getReader()")}} on the stream, specifying `mode: "byob"` in the options parameter.
 
 A readable byte stream can also be read using a default reader ({{domxref("ReadableStreamDefaultReader")}}), but in this case `byobRequest` objects are only created when automatic buffer allocation is enabled for the stream ([`autoAllocateChunkSize`](/en-US/docs/Web/API/ReadableStream/ReadableStream#autoallocatechunksize) was set for the stream's `underlyingSource`).
-Note that the size indicated by `autoAllocateChunkSize` is used for the buffer size in this case; for a byte reader the size is set by the consumer.
+Note that the size indicated by `autoAllocateChunkSize` is used for the buffer size in this case; for a byte reader the buffer used is supplied by the consumer.
 If the property was not specified, the default reader will still "work" but the underlying source will never be offered a `byobRequest`, and all data will be transferred through the stream's internal queues.
 
 Other than the differences outlined above, the controller and underlying source for bytes streams are very similar to those for default streams, [and are used in much the same way](/en-US/docs/Web/API/Streams_API/Using_readable_streams).
