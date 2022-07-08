@@ -211,7 +211,7 @@ Fun huh? Let's move on, look at the basics of WebDriver syntax, in a bit more de
 
 ## WebDriver syntax crash course
 
-Let's have a look at a few key features of the webdriver syntax. For more complete details, you should consult the [selenium-webdriver JavaScript API reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/) for a detailed reference, and the Selenium main documentation's [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/) and [WebDriver: Advanced Usage](https://www.selenium.dev/docs/04_webdriver_advanced.jsp) pages, which contain multiple examples to learn from written in different languages.
+Let's have a look at a few key features of the webdriver syntax. For more complete details, you should consult the [selenium-webdriver JavaScript API reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/) for a detailed reference and the Selenium main documentation's [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/), which contain multiple examples to learn from written in different languages.
 
 ### Starting a new test
 
