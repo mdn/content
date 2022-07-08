@@ -18,6 +18,10 @@ When writing a MathML expression, you should group elements within an `<mrow>` i
 - It allows for more intelligent line-breaking and indentation.
 - It simplifies the interpretation of the expression by automated systems such as computer algebra systems and audio renderers.
 
+## Attributes
+
+This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
 ## Examples
 
 ```html

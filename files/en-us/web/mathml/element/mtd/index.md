@@ -14,6 +14,8 @@ The MathML `<mtd>` element represents a cell in a table or a matrix. It may only
 
 ## Attributes
 
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
 - columnalign
   - : Specifies the horizontal alignment of this cell and overrides values specified by {{ MathMLElement("mtable") }} or {{ MathMLElement("mtr") }}.
     Possible values are: `left`, `center` and `right`.

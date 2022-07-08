@@ -15,6 +15,8 @@ The deprecated MathML `<mfenced>` element used to provide the possibility to add
 
 ## Attributes
 
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
 - `close`
   - : A string for the closing delimiter. The default value is `")`" and any white space is trimmed.
 - `open`

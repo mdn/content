@@ -14,6 +14,8 @@ The MathML `<munder>` element is used to attach an accent or a limit under an ex
 
 ## Attributes
 
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
 - accentunder
   - : If `true`, the element is an _accent_, which is drawn closer to the base expression.
     If `false` (default value), the element is a _limit_ under the base expression.

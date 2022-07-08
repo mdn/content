@@ -13,6 +13,8 @@ The top-level element in MathML is `<math>`. Every valid MathML instance must be
 
 ## Attributes
 
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
 In addition to the following attributes, the `<math>` element accepts any attributes of the {{ MathMLElement("mstyle") }} element.
 
 - display

@@ -12,6 +12,10 @@ browser-compat: mathml.elements.mi
 
 The MathML `<mi>` element indicates that the content should be rendered as an **identifier** such as function names, variables or symbolic constants. You can also have arbitrary text in it to mark up terms.
 
+## Attributes
+
+This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
 ## Examples
 
 ```html

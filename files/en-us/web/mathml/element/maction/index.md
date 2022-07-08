@@ -14,6 +14,8 @@ The MathML **`<maction>`** element provides a possibility to bind actions to (su
 
 ## Attributes
 
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
 - actiontype
 
   - : The action which specifies what happens for this element. Possible values are:

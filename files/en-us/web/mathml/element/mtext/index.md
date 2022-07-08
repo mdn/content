@@ -14,6 +14,10 @@ The MathML \<mtext> element is used to render arbitrary text with _no_ notationa
 
 To display text _with_ notational meaning, use {{ MathMLElement("mi") }} and {{ MathMLElement("mo") }} instead.
 
+## Attributes
+
+This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
 ## Examples
 
 ```html
