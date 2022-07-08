@@ -6,7 +6,6 @@ tags:
   - API
   - Cache
   - Cache API
-  - Experimental
   - Interface
   - Offline
   - Reference
