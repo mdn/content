@@ -54,7 +54,7 @@ Warnings will not be shown for semicolon-less returns if these statements follow
 
 ```js example-bad
 function f() {
-  const x = 3;
+  let x = 3;
   x += 4;
   return x;   // return exits the function immediately
   x -= 3;     // so this line will never run; it is unreachable
