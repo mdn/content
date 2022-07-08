@@ -34,18 +34,20 @@ The **`mathsize`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) 
 
 ## Notes on MathML versions
 
-* In MathML 3 and earlier versions, keywords `small`, `normal`, and `big` as
-  well as the MathML3-specific syntax for lengths were supported.
-  Since MathML Core, the syntax matches CSS
-  {{cssxref("&lt;length-percentage&gt;")}} values.
 
-* This attribute was designed for MathML applications that are not CSS-aware.
-  Since MathML Core, use of equivalent CSS is recommended instead.
 
 
 ## Specifications
 
 {{Specifications}}
+
+- In MathML 3 and earlier versions, keywords `small`, `normal`, and `big` as
+  well as the MathML3-specific syntax for lengths was supported.
+  Since MathML Core, the syntax matches CSS
+  {{cssxref("&lt;length-percentage&gt;")}} values.
+
+* This attribute was designed for MathML applications that are not CSS-aware.
+  Since MathML Core, the use of equivalent CSS is recommended instead.
 
 ## Browser compatibility
 
