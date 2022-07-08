@@ -587,7 +587,9 @@ A safer way to define functions conditionally is to assign a function expression
 variable:
 
 ```js
-let zero;
+// Using a var makes it available as a global variable,
+// with closer behavior to a top-level function declaration
+var zero;
 if (shouldDefineZero) {
   zero = function () {
     console.log("This is zero.");
