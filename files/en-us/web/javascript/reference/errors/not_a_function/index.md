@@ -72,7 +72,7 @@ which will work with {{jsxref("Array")}} objects only.
 ```js example-bad
 const obj = { a: 13, b: 37, c: 42 };
 
-obj.map(function(num) {
+obj.map(function (num) {
   return num * 2;
 });
 
@@ -84,7 +84,7 @@ Use an array instead:
 ```js example-good
 const numbers = [1, 4, 9];
 
-numbers.map(function(num) {
+numbers.map(function (num) {
   return num * 2;
 });
 
@@ -97,14 +97,14 @@ Sometimes when making a class, you may have a property and a function with the s
 name. Upon calling the function, the compiler thinks that the function ceases to exist.
 
 ```js example-bad
-const Dog = function () {
+function Dog() {
  this.age = 11;
  this.color = "black";
  this.name = "Ralph";
  return this;
 }
 
-Dog.prototype.name = function(name) {
+Dog.prototype.name = function (name) {
  this.name = name;
  return this;
 }
@@ -116,14 +116,14 @@ myNewDog.name("Cassidy"); //Uncaught TypeError: myNewDog.name is not a function
 Use a different property name instead:
 
 ```js example-good
-const Dog = function () {
+function Dog() {
  this.age = 11;
  this.color = "black";
  this.dogName = "Ralph"; //Using this.dogName instead of .name
  return this;
 }
 
-Dog.prototype.name = function(name) {
+Dog.prototype.name = function (name) {
  this.dogName = name;
  return this;
 }
