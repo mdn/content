@@ -16,6 +16,8 @@ The MathML `<mtable>` element allows you to create tables or matrices. Inside a 
 
 ## Attributes
 
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
 - align
 
   - : Specifies the **vertical** alignment of the table with respect to its environment.

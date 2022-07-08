@@ -16,6 +16,8 @@ It uses the following syntax: `<munderover> base underscript overscript </munder
 
 ## Attributes
 
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
 - accent
   - : If `true`, the overscript is an _accent_, which is drawn closer to the base expression.
     If `false` (default value), the overscript is a _limit_ over the base expression.

@@ -14,6 +14,8 @@ The MathML `<mtr>` element represents a row in a table or a matrix. It may only 
 
 ## Attributes
 
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
 - columnalign
   - : Overrides the horizontal alignment of cells specified by {{ MathMLElement("mtable") }} for this row.
     Possible values are: `left`, `center` and `right`.

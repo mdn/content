@@ -14,6 +14,8 @@ The MathML `<mo>` element represents an operator in a broad sense. Besides opera
 
 ## Attributes
 
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
 - accent
   - : If the operator is used as an [under](/en-US/docs/Web/MathML/Element/munder)- or [overscript](/en-US/docs/Web/MathML/Element/mover) this attribute specifies whether the operator should be treated as an accent.
     Allowed values are `true` or `false`.

@@ -26,6 +26,10 @@ After the base expression you can specify a postsubscript and a postsuperscript.
 
 ## Attributes
 
+## Attributes
+
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
 - `subscriptshift` {{deprecated_inline}}
   - : The minimum space by which to shift the subscript below the baseline of the expression, as a [CSS length](/en-US/docs/Web/CSS/length).
     This property is deprecated and will be removed in the future.

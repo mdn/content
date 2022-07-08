@@ -31,6 +31,8 @@ The rules of determining the visible child in a `<semantics>` element are the fo
 
 ## Attributes
 
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
 The following attributes can be set on `<annotation>` and `<annotation-xml>`:
 
 - definitionURL

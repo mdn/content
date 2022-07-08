@@ -14,6 +14,8 @@ The MathML `<mstyle>` element is used change the style of its children. It accep
 
 ## Attributes
 
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
 - `infixlinebreakstyle`
   - : Specifies the default `linebreakstyle` to use for infix operators. The values `before`, `after` and `duplicate` are allowed.
 - `scriptminsize`
