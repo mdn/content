@@ -439,9 +439,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{DOMxRef("Document/selectionchange_event", "selectionchange")}}
   - : Fired when the current text selection on a document is changed.
     Also available via the {{DOMxRef("GlobalEventHandlers/onselectionchange", "onselectionchange")}} property.
-- {{DOMxRef("Document/selectstart_event", "selectstart")}}
-  - : Fired when the user begins a new selection.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onselectstart", "onselectstart")}} property.
 
 ### Touch events
 
