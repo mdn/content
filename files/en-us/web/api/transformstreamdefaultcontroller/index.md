@@ -66,7 +66,7 @@ const transformContent = {
 
 class AnyToU8Stream extends TransformStream {
   constructor() {
-    super({...transformContent, textencoder: new TextEncoder() })
+    super({...transformContent, textencoder: new TextEncoder()})
   }
 }
 ```
