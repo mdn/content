@@ -59,13 +59,14 @@ const transformContent = {
       default:
         controller.enqueue(this.textencoder.encode(String(chunk)))
         break
+    }
   },
   flush() { /* do any destructor work here */ }
 }
 
 class AnyToU8Stream extends TransformStream {
   constructor() {
-    super({...transformContent, textencoder: new TextEncoder()})
+    super({...transformContent, textencoder: new TextEncoder() })
   }
 }
 ```
