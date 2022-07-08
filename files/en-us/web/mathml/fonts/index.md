@@ -11,6 +11,8 @@ This page describes how users can install such math fonts to properly display Ma
 
 ## Installation instructions
 
+As a general rule of thumb, it is recommended to install both _Latin Modern Math_ (which uses [Computer Modern](https://en.wikipedia.org/wiki/Computer_Modern) style popular for math formulas) and _STIX Two Math_ (which has large unicode coverage for scientific characters). In the next sections, you will find detailed instructions to install these fonts in various operating systems.
+
 ### Windows
 
 Install the _Latin Modern Math_ and _STIX Two Math_ fonts as follows:
@@ -43,6 +45,11 @@ Install the _STIX Two Math_ font as follows:
 > **Note:** A deprecated version of _STIX_ is preinstalled starting with OS X Lion (version 10.7). Although some browsers are able to make use of it, it is strongly recommended to follow the instructions above for optimal math rendering.
 
 ### Linux
+
+Below, you can find commands to execute on popular Linux distributions
+in order to install the _Latin Modern Math_ and _STIX Two Math_ fonts from your
+package manager. Alternative approaches are also provided if your Linux
+distribution does not provide dedicated packages for these fonts.
 
 #### Debian-based distributions (including Ubuntu and Mint)
 
@@ -112,6 +119,9 @@ You must use the [MathML-fonts add-on](https://addons.mozilla.org/firefox/addon/
 On other systems, consider installing a [font with a MATH table](#fonts_with_a_math_table) using your package manager. Note that these fonts are generally delivered with TeX distributions such as [TeX Live](https://www.tug.org/texlive/), but you might need to follow specific instructions so that your system is aware of the fonts. As a last resort, install the [MathML fonts add-on](https://addons.mozilla.org/firefox/addon/mathml-fonts/).
 
 ## Advanced setup
+
+In the next sections, you will find other useful tips for installation and
+configuration of fonts for MathML.
 
 ### Arabic mathematical alphabetic symbols
 
