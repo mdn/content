@@ -47,7 +47,7 @@ property to `30`. For more details see also the
 function Archiver() {
   const temperature = null;
   Object.defineProperty(this, 'temperature', {
-    get: function() {
+    get() {
       console.log('get!');
       return temperature;
     }
@@ -69,15 +69,15 @@ example like this:
 "use strict";
 
 function Archiver() {
-  const temperature = null;
+  let temperature = null;
   const archive = [];
 
   Object.defineProperty(this, 'temperature', {
-    get: function() {
+    get() {
       console.log('get!');
       return temperature;
     },
-    set: function(value) {
+    set(value) {
       temperature = value;
       archive.push({ val: temperature });
     }
