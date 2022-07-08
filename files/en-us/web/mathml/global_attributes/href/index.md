@@ -37,15 +37,13 @@ The **`href`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) crea
 </math>
 ```
 
-## Notes on MathML versions
-
-* `href` is defined in MathML 3 on all elements but is currently not integrated into MathML Core.
-
-* MathML 2 had no direct support for linking, and instead followed the W3C Recommendation ["XML Linking Language"](https://www.w3.org/TR/2010/REC-xlink11-20100506/) in defining links using the `xlink:href` attribute.
-
 ## Specifications
 
 {{Specifications}}
+
+- `href` is defined in MathML 3 on all elements but is currently not integrated into MathML Core.
+
+- MathML 2 had no direct support for linking, and instead followed the W3C Recommendation ["XML Linking Language"](https://www.w3.org/TR/2010/REC-xlink11-20100506/) in defining links using the `xlink:href` attribute.
 
 ## Browser compatibility
 
