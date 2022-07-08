@@ -25,7 +25,7 @@ If a chunk of data is supplied, the `value` property will contain a new view.
 This will be a view over the same buffer/backing memory (and of the same type) as the original `view` passed to the `read()` method, now populated with the new chunk of data.
 Note that once the promise resolves, the original `view` passed to the method will be detached and no longer usable.
 The promise will resolve with a `value: undefined` if the stream has been cancelled.
-In this case the backing memory region of `view` is discarded and not returned to the caller.
+In this case the backing memory region of `view` is discarded and not returned to the caller (all previously read data in the view's buffer is lost).
 
 The `done` property indicates whether or not more data is expected.
 The value is set `true` if the stream is closed or cancelled, and `false` otherwise.
