@@ -19,9 +19,11 @@ The **`math-depth`** property describes a notion of _depth_ for each element of 
 /* Keyword values */
 math-depth: auto-add;
 
-/*
+/* Relative values */
 math-depth: add(2);
 math-depth: add(-2);
+
+/* Absolute value */
 math-depth: 4;
 
 /* Global values */
