@@ -226,7 +226,7 @@ function type(value) {
   }
 
   if (
-    Object.getPrototypeOf(obj) === Function.prototype &&
+    Object.getPrototypeOf(value) === Function.prototype &&
     /^class/.test(String(value))
   ) {
     return "class";
