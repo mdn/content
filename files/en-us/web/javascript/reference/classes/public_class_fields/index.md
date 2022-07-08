@@ -146,7 +146,7 @@ Like properties, field names may be computed.
 const PREFIX = 'prefix'
 
 class ClassWithComputedFieldName {
-    [`${PREFIX}Field`] = 'prefixed field'
+  [`${PREFIX}Field`] = 'prefixed field'
 }
 
 const instance = new ClassWithComputedFieldName()
@@ -178,6 +178,71 @@ console.log(base.anotherBaseInstanceField)
 console.log(sub.subInstanceField)
 // expected output: "base method output"
 ```
+
+Because instance fields of a class are added before the respective constructor runs, you can access the fields' values within the constructor.
+
+```js
+class ClassWithInstanceField {
+  instanceField = 'instance field';
+
+  constructor() {
+    console.log(this.instanceField);
+    this.instanceField = 'new value';
+  }
+}
+
+const instance = new ClassWithInstanceField(); // Logs "instance field"
+console.log(instance.instanceField); // "new value"
+```
+
+However, because instance fields of a derived class are defined after `super()` returns, the base class's constructor does not have access to the derived class's fields.
+
+```js
+class Base {
+  constructor() {
+    console.log('Base constructor:', this.field);
+  }
+}
+
+class Derived extends Base {
+  field = 1;
+  constructor() {
+    super();
+    console.log('Derived constructor:', this.field);
+  }
+}
+
+const instance = new Derived();
+// Base constructor: undefined
+// Derived constructor: 1
+```
+
+Because class fields are added using the [[Define]] semantic (which is essentially {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}), field declarations in derived classes do not invoke setters in the base class. This behavior differs from using `this.field = ...` in the constructor.
+
+```js
+class Base {
+  set field(val) {
+    console.log(val);
+  }
+}
+
+class DerivedWithField extends Base {
+  field = 1;
+}
+
+const instance = new DerivedWithField(); // No log
+
+class DerivedWithConstructor extends Base {
+  constructor() {
+    super();
+    this.field = 1;
+  }
+}
+
+const instance2 = new DerivedWithConstructor(); // Logs 1
+```
+
+> **Note:** Before the class fields specification was finalized with the [[Define]] semantic, most transpilers, including [Babel](https://babeljs.io/) and [tsc](https://www.typescriptlang.org/), transformed class fields to the `DerivedWithConstructor` form, which has caused subtle bugs after class fields were standardized.
 
 ### Public methods
 
