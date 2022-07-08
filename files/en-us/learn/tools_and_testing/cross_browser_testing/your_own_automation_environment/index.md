@@ -409,7 +409,7 @@ When you run it, you should now see the test execute and the browser instance sh
 
 ## Test best practices
 
-There has been a lot written about best practices for writing tests. You can find some good background information at [Test Design Considerations](https://www.selenium.dev/docs/06_test_design_considerations.jsp). In general, you should make sure that your tests are:
+There has been a lot written about best practices for writing tests. You can find some good background information at [Test Practices](https://www.selenium.dev/documentation/test_practices/). In general, you should make sure that your tests are:
 
 1. Using good locator strategies: When you are [Interacting with the document](#interacting_with_the_document), make sure that you use locators and page objects that are unlikely to change — if you have a testable element that you want to perform a test on, make sure that it has a stable ID, or position on the page that can be selected using a CSS selector, which isn't going to just change with the next site iteration. You want to make your tests as non-brittle as possible, i.e. they won't just break when something changes.
 2. Write atomic tests: Each test should test one thing only, making it easy to keep track of what test file is testing which criterion. As an example, the `google_test.js` test we looked at above is pretty good, as it just tests a single thing — whether the title of a search results page is set correctly. We could work on giving it a better name so it is easier to work out what it does if we add more google tests. Perhaps `results_page_title_set_correctly.js` would be slightly better?
