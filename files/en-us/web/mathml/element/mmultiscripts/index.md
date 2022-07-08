@@ -26,8 +26,6 @@ After the base expression you can specify a postsubscript and a postsuperscript.
 
 ## Attributes
 
-## Attributes
-
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
 - `subscriptshift` {{deprecated_inline}}
