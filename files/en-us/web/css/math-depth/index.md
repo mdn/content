@@ -11,7 +11,7 @@ browser-compat: css.properties.math-depth
 ---
 {{CSSRef}}
 
-The `math-depth` property describes a notion of "depth" for each element of a mathematical formula, with respect to the top-level container of that formula. Concretely, this is used to determine the computed value of the [font-size](/en-US/docs/Web/CSS/font-size) property when its specified value is `math`.
+The **`math-depth`** property describes a notion of _depth_ for each element of a mathematical formula, with respect to the top-level container of that formula. Concretely, this is used to determine the computed value of the [font-size](/en-US/docs/Web/CSS/font-size) property when its specified value is `math`.
 
 ## Syntax
 
