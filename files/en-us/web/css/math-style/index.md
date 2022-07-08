@@ -9,7 +9,7 @@ tags:
   - math-style
 browser-compat: css.properties.math-style
 ---
-{{MDNSidebar}}
+{{CSSRef}}
 
 The `math-style` property indicates whether MathML equations should render with normal or compact height.
 
