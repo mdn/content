@@ -464,7 +464,7 @@ function C() {
   this.a = 37;
 }
 
-const o = new C();
+let o = new C();
 console.log(o.a); // 37
 
 function C2() {
