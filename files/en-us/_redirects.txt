@@ -8148,7 +8148,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onreset	/en-US/docs/Web/API/HTMLFormElement/reset_event
 /en-US/docs/Web/API/GlobalEventHandlers/onresize	/en-US/docs/Web/API/Window/resize_event
 /en-US/docs/Web/API/GlobalEventHandlers/onselectionchange	/en-US/docs/Web/API/Document/selectionchange_event
-/en-US/docs/Web/API/GlobalEventHandlers/onselectstart	/en-US/docs/Web/API/HTMLInputElement/selectstart_event
+/en-US/docs/Web/API/GlobalEventHandlers/onselectstart	/en-US/docs/Web/API/Document/selectstart_event
 /en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()	/en-US/docs/Web/API/fetch
 /en-US/docs/Web/API/GlobalFetch/fetch	/en-US/docs/Web/API/fetch
 /en-US/docs/Web/API/Guide/Events/Creating_and_triggering_events	/en-US/docs/Web/Events/Creating_and_triggering_events
