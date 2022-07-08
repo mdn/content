@@ -15,7 +15,7 @@ browser-compat: api.GlobalEventHandlers.oninput
 
 The **`oninput`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("input")}} events on the {{HTMLElement("input")}},
+processes {{domxref("HTMLElement/input_event", "input")}} events on the {{HTMLElement("input")}},
 {{HTMLElement("select")}}, and {{HTMLElement("textarea")}} elements. It also handles
 these events on elements where {{domxref("HTMLElement.contentEditable",
   "contenteditable")}} or {{domxref("Document.designMode", "designMode")}} are turned on.
@@ -83,4 +83,4 @@ working with older browsers:
 
 ## See also
 
-- {{event("input")}} event
+- {{domxref("HTMLElement/input_event", "input")}} event
