@@ -113,6 +113,3 @@ are by convention italic, no special classes are used by default.
 - All [global attributes](/en-US/docs/Web/MathML/Global_attributes).
 - {{cssxref("text-transform")}}
 
-## Gecko-specific notes
-
-- Some `mathvariant` values are only implemented starting with Gecko 28.0 (Firefox 28.0 / Thunderbird 28.0 / SeaMonkey 2.25) and require appropriate [math fonts](/en-US/docs/Web/MathML/Fonts).
