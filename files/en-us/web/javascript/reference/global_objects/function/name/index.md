@@ -160,7 +160,7 @@ const fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // logs "Foo"
 ```
 
-> **Warning:** The script interpreter will set the built-in `Function.name` property only if a function does not have an own property called _name_ (see section [9.2.11 of the ECMAScript2015 Language Specification](https://262.ecma-international.org/6.0/#sec-setfunctionname)). However, ES2015 specifies the _static_ keyword such that static methods will be set as OwnProperty of the class constructor function (ECMAScript2015, [14.5.14.21.b](https://262.ecma-international.org/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://262.ecma-international.org/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation)).
+> **Warning:** JavaScript will set the function's `name` property only if a function does not have an own property called `name` (see [the language spec's `SetFunctionName` Abstract Operation](https://tc39.es/ecma262/#sec-setfunctionname)). However, classes' [static members](/en-US/docs/Web/JavaScript/Reference/Classes/static) will be set as own properties of the class constructor function.
 
 Therefore we can't obtain the class name for virtually any class with a static method property `name()`:
 

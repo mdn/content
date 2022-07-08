@@ -279,4 +279,4 @@ Further resources on adaptive streaming.
 Adaptive streaming examples
 
 - [ITEC – Dynamic Adaptive Streaming over HTTP](https://dash.itec.aau.at/dash-dataset/)
-- [MPEG DASH Media Source Demo](https://dash-mse-test.appspot.com/media.html)
+- [MPEG DASH Media Source Demo](https://web.archive.org/web/20170703160817/https://dash-mse-test.appspot.com/media.html)

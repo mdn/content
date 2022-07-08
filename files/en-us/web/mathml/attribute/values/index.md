@@ -13,8 +13,8 @@ browser-compat: mathml.attribute_values
 
 In addition to [CSS data types](/en-US/docs/Web/CSS/CSS_Types), some MathML attributes accept the following types:
 
-* `<unsigned-integer>`: An [`<integer>`](/en-US/docs/Web/CSS/integer), whose first character is neither U+002D HYPHEN-MINUS character (-) nor U+002B PLUS SIGN (+); for example `1234`.
-* `<boolean>`: A string `true` or `false` representing a boolean value.
+- `<unsigned-integer>`: An [`<integer>`](/en-US/docs/Web/CSS/integer), whose first character is neither U+002D HYPHEN-MINUS character (-) nor U+002B PLUS SIGN (+); for example `1234`.
+- `<boolean>`: A string `true` or `false` representing a boolean value.
 
 ## Legacy MathML lengths
 
@@ -71,6 +71,6 @@ veryverythickmathspace => 0.3888888888888889em
 
 ## Gecko-specific notes
 
-* [Namedspace binding is deprecated](https://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1) in MathML3 and has been removed in Gecko 15.0 {{ geckoRelease("15.0") }} ([bug 673759](https://bugzilla.mozilla.org/show_bug.cgi?id=673759)).
-* Non-zero unitless length values are no longer supported in Gecko 70.0 {{ geckoRelease("70.0") }} ([bug 673759](https://bugzilla.mozilla.org/show_bug.cgi?id=1574749)).
-* Numbers ending with a dot are no longer supported in Gecko 70.0 {{ geckoRelease("70.0") }} ([bug 673759](https://bugzilla.mozilla.org/show_bug.cgi?id=1575596)).
+- [Namedspace binding is deprecated](https://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1) in MathML3 and has been removed in Gecko 15.0 {{ geckoRelease("15.0") }} ([bug 673759](https://bugzilla.mozilla.org/show_bug.cgi?id=673759)).
+- Non-zero unitless length values are no longer supported in Gecko 70.0 {{ geckoRelease("70.0") }} ([bug 673759](https://bugzilla.mozilla.org/show_bug.cgi?id=1574749)).
+- Numbers ending with a dot are no longer supported in Gecko 70.0 {{ geckoRelease("70.0") }} ([bug 673759](https://bugzilla.mozilla.org/show_bug.cgi?id=1575596)).

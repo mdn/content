@@ -20,7 +20,7 @@ browser-compat: api.KeyboardEvent
 ---
 {{APIRef("UI Events")}}
 
-**`KeyboardEvent`** objects describe a user interaction with the keyboard; each event describes a single interaction between the user and a key (or combination of a key with modifier keys) on the keyboard. The event type ({{event('keydown')}}, {{event('keypress')}}, or {{event('keyup')}}) identifies what kind of keyboard activity occurred.
+**`KeyboardEvent`** objects describe a user interaction with the keyboard; each event describes a single interaction between the user and a key (or combination of a key with modifier keys) on the keyboard. The event type ({{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keypress_event", "keypress")}}, or {{domxref("Element/keyup_event", "keyup")}}) identifies what kind of keyboard activity occurred.
 
 > **Note:** `KeyboardEvent` events just indicate what interaction the user had with a key on the keyboard at a low level, providing no contextual meaning to that interaction. When you need to handle text input, use the {{event("input")}} event instead. Keyboard events may not be fired if the user is using an alternate means of entering text, such as a handwriting system on a tablet or graphics tablet.
 
@@ -205,19 +205,19 @@ _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and
 
 The following events are based on the `KeyboardEvent` type. They can be delivered to any object which implements {{domxref("GlobalEventHandlers")}}, including {{domxref("Element")}}, {{domxref("Document")}}, and {{domxref("Window")}}. In the list below, each event links to the documentation for the `Document` handler for the event, which applies generally to all of the recipients.
 
-- {{domxref("Document.keydown_event", "keydown")}}
+- {{domxref("Element.keydown_event", "keydown")}}
   - : A key has been pressed.
-- {{domxref("Document.keyup_event", "keyup")}}
+- {{domxref("Element.keyup_event", "keyup")}}
   - : A key has been released.
 
 ### Obsolete events
 
-- {{domxref("Document.keypress_event", "keypress")}} {{deprecated_inline}}
+- {{domxref("Element.keypress_event", "keypress")}} {{deprecated_inline}}
   - : A key that normally produces a character value has been pressed. This event was highly device-dependent and is obsolete. You should not use it.
 
 ## Usage notes
 
-There are three types of keyboard events: {{event("keydown")}}, {{event("keypress")}}, and {{event("keyup")}}. For most keys, Gecko dispatches a sequence of key events like this:
+There are three types of keyboard events: {{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keypress_event", "keypress")}}, and {{domxref("Element/keyup_event", "keyup")}}. For most keys, Gecko dispatches a sequence of key events like this:
 
 1. When the key is first pressed, the `keydown` event is sent.
 2. If the key is not a modifier key, the `keypress` event is sent.

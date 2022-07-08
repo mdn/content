@@ -29,20 +29,19 @@ This lets you avoid duplicating code in both the promise's {{jsxref("Promise.the
 promise.finally(onFinally);
 
 promise.finally(() => {
-   // Code that will run after promise is settled (fulfilled or rejected)
+  // Code that will run after promise is settled (fulfilled or rejected)
 });
 ```
 
 ### Parameters
 
 - `onFinally`
-  - : A {{jsxref("Function")}} called when the `Promise` is settled.
+  - : A {{jsxref("Function")}} called when the `Promise` is settled. This handler receives no parameters.
 
 ### Return value
 
 Returns an equivalent {{jsxref("Promise")}} with its `finally` handler set to the specified function.
-If the handler throws an error, that promise will be rejected
-with that value instead.
+If the handler throws an error or returns a rejected promise, the promise returned by `finally()` will be rejected with that value instead. Otherwise, the return value of the handler does not affect the state of the original promise.
 
 ## Description
 
@@ -53,7 +52,7 @@ The `finally()` method is very similar to calling
 `.then(onFinally, onFinally)`, however, there are a couple of differences:
 
 - When creating a function inline, you can pass it once, instead of being forced to
-  either declare it twice, or create a variable for it
+  either declare it twice, or create a variable for it.
 - A `finally` callback will not receive any argument. This use case
   is for precisely when you _do not care_ about the rejection reason, or the
   fulfillment value, and so there's no need to provide it.
@@ -62,12 +61,12 @@ The `finally()` method is very similar to calling
   - Unlike `Promise.resolve(2).then(() => 77, () => {})` (which
     will return a resolved promise with the result `77`),
     `Promise.resolve(2).finally(() => 77)` will return a
-    new resolved promise with the result `2`.
+    new fulfilled promise with the result `2`.
   - Similarly, unlike `Promise.reject(3).then(() => {}, () => 88)`
-    (which will return a rejected promise with the reason `88`),
+    (which will return a fulfilled promise with the value `88`),
     `Promise.reject(3).finally(() => 88)` will return a rejected promise
-    with the reason `3`.  
-  - But, either `Promise.reject(3).finally(() => throw 99)` or
+    with the reason `3`.
+  - But, both `Promise.reject(3).finally(() => {throw 99})` and
     `Promise.reject(3).finally(() => Promise.reject(99))` will reject the returned promise
     with the reason `99`.
 
