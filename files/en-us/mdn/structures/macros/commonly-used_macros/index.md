@@ -224,7 +224,7 @@ They typically link back to the main page of the reference/guide/tutorial (this 
 Usage: `\{{Optional_Inline}}` or `\{{ReadOnlyInline}}`.
 Example:
 
-- `isCustomObject`{{ReadOnlyInline}}
+- `isCustomObject` {{ReadOnlyInline}}
   - : Indicates, if `true`, that the object is a custom one.
 - `parameterX` {{optional_inline}}
   - : Blah blah blah...
