@@ -148,11 +148,11 @@ function list() {
 let list1 = list(1, 2, 3) // [1, 2, 3]
 ```
 
-Binding can be done with the {{jsxref("Function.prototype.call", "call()")}} method of
+<!-- Binding can be done with the {{jsxref("Function.prototype.call", "call()")}} method of
 {{jsxref("Function")}} and it can also be reduced using
 `[].slice.call(arguments)` instead of
 `Array.prototype.slice.call`.
-
+ -->
 Anyway, it can be simplified using {{jsxref("Function.prototype.bind", "bind")}}.
 
 ```js
