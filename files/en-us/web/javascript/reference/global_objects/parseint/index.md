@@ -49,7 +49,7 @@ The `parseInt` function converts its first argument to a string, parses that str
 
 If not `NaN`, the return value will be the integer that is the first argument taken as a number in the specified `radix`. (For example, a `radix` of `10` converts from a decimal number, `8` converts from octal, `16` from hexadecimal, and so on.)
 
-A value passed as the `radix` argument is {{glossary("Type_coercion", "coerced"}} to a `Number` (if necessary). If it's unprovided, or if the value becomes 0, `NaN` or `Infinity` (`undefined` is coerced to `NaN`), JavaScript assumes the following:
+A value passed as the `radix` argument is {{glossary("Type_coercion", "coerced")}} to a `Number` (if necessary). If it's unprovided, or if the value becomes 0, `NaN` or `Infinity` (`undefined` is coerced to `NaN`), JavaScript assumes the following:
 
 1. If the input `string`, with leading whitespace and possible `+`/`-` signs removed, begins with `0x` or `0X` (a zero, followed by lowercase or uppercase X), `radix` is assumed to be `16` and the rest of the string is parsed as a hexadecimal number.
 2. If the input `string` begins with any other value, the radix is `10` (decimal).
