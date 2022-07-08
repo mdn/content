@@ -94,7 +94,7 @@ There is a special syntax for declaring functions
 
 ```js
 function name([param[, param[, ... param]]]) {
-   statements
+  statements
 }
 ```
 
@@ -117,7 +117,7 @@ scope, therefore they cannot be used before they appear in the code.
 
 ```js
 function [name]([param[, param[, ... param]]]) {
-   statements
+  statements
 }
 ```
 
@@ -133,8 +133,8 @@ Here is an example of an **anonymous** function expression (the
 `name` is not used):
 
 ```js
-const myFunction = function() {
-    statements
+const myFunction = function () {
+  statements
 }
 ```
 
@@ -143,7 +143,7 @@ It is also possible to provide a name inside the definition in order to create a
 
 ```js
 const myFunction = function namedFunction() {
-    statements
+  statements
 }
 ```
 
@@ -159,7 +159,7 @@ When functions are used only once, a common pattern is an [IIFE (Immediately Inv
 
 ```js
 (function() {
-    statements
+  statements
 })();
 ```
 
@@ -172,7 +172,7 @@ There is a special syntax for generator function declarations (see
 
 ```js
 function* name([param[, param[, ... param]]]) {
-   statements
+  statements
 }
 ```
 
@@ -191,7 +191,7 @@ details):
 
 ```js
 function* [name]([param[, param[, ... param]]]) {
-   statements
+  statements
 }
 ```
 
@@ -210,7 +210,7 @@ An arrow function expression has a shorter syntax and lexically binds its `this`
 
 ```js
 ([param[, param]]) => {
-   statements
+  statements
 }
 
 param => expression
@@ -326,7 +326,7 @@ See [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_d
 ```js
 const obj = {
   foo() {},
-  bar() {}
+  bar() {},
 };
 ```
 
@@ -353,17 +353,17 @@ A _function expression_ of an anonymous function assigned to the variable
 `multiply`:
 
 ```js
-const multiply = function(x, y) {
-   return x * y;
+const multiply = function (x, y) {
+  return x * y;
 };
 ```
 
-A _function expression_ of a function named `func_name` assigned to
+A _function expression_ of a function named `funcName` assigned to
 the variable `multiply`:
 
 ```js
-const multiply = function func_name(x, y) {
-   return x * y;
+const multiply = function funcName(x, y) {
+  return x * y;
 };
 ```
 
@@ -418,9 +418,9 @@ constructor, a function defined by a function declaration can be used before the
 function declaration itself. For example:
 
 ```js
-foo(); // alerts FOO!
+foo(); // logs "FOO!"
 function foo() {
-   alert('FOO!');
+  console.log('FOO!');
 }
 ```
 
@@ -440,21 +440,22 @@ the global scope (which all functions inherit).
  *     3. function constructor
  * each of which will log 'p'
  */
+// var declarations create properties on the global object
 var p = 5;
 function myFunc() {
-    var p = 9;
+  const p = 9;
 
-    function decl() {
-        console.log(p);
-    }
-    const expr = function() {
-        console.log(p);
-    };
-    const cons = new Function('\tconsole.log(p);');
+  function decl() {
+    console.log(p);
+  }
+  const expr = function () {
+    console.log(p);
+  };
+  const cons = new Function('\tconsole.log(p);');
 
-    decl();
-    expr();
-    cons();
+  decl();
+  expr();
+  cons();
 }
 myFunc();
 
@@ -493,16 +494,16 @@ function expression. A function declaration ceases to be one when it either:
 ```js
 let x = 0;               // source element
 if (x === 0) {           // source element
-   x = 10;               // not a source element
-   function boo() {}     // not a source element
+  x = 10;                // not a source element
+  function boo() {}      // not a source element
 }
 function foo() {         // source element
-   let y = 2;           // source element
-   function bar() {}     // source element
-   while (y < 10) {    // source element
-      function blah() {} // not a source element
-      y++;               // not a source element
-   }
+  let y = 2;             // source element
+  function bar() {}      // source element
+  while (y < 10) {       // source element
+    function blah() {}   // not a source element
+    y++;                 // not a source element
+  }
 }
 ```
 
@@ -519,18 +520,18 @@ function foo() {}
 x = function hello() {}
 
 if (x) {
-   // function expression
-   function world() {}
+  // function expression
+  function world() {}
 }
 
 // function declaration
 function a() {
-   // function declaration
-   function b() {}
-   if (0) {
-      // function expression
-      function c() {}
-   }
+  // function declaration
+  function b() {}
+  if (0) {
+    // function expression
+    function c() {}
+  }
 }
 ```
 
@@ -566,9 +567,9 @@ In non-strict code, function declarations inside blocks behave strangely. For ex
 
 ```js
 if (shouldDefineZero) {
-   function zero() {     // DANGER: compatibility risk
-      console.log("This is zero.");
-   }
+  function zero() {     // DANGER: compatibility risk
+    console.log("This is zero.");
+  }
 }
 ```
 
@@ -586,11 +587,11 @@ A safer way to define functions conditionally is to assign a function expression
 variable:
 
 ```js
-var zero;
+let zero;
 if (shouldDefineZero) {
-   zero = function() {
-      console.log("This is zero.");
-   };
+  zero = function () {
+    console.log("This is zero.");
+  };
 }
 ```
 
@@ -604,12 +605,12 @@ number padded with leading zeros.
 ```js
 // This function returns a string padded with leading zeros
 function padZeros(num, totalLen) {
-   const numStr = num.toString();             // Initialize return value as string
-   const numZeros = totalLen - numStr.length; // Calculate no. of zeros
-   for (let i = 1; i <= numZeros; i++) {
-      numStr = "0" + numStr;
-   }
-   return numStr;
+  let numStr = num.toString();             // Initialize return value as string
+  const numZeros = totalLen - numStr.length; // Calculate no. of zeros
+  for (let i = 1; i <= numZeros; i++) {
+    numStr = "0" + numStr;
+  }
+  return numStr;
 }
 ```
 
@@ -617,9 +618,9 @@ The following statements call the padZeros function.
 
 ```js
 let result;
-result = padZeros(42,4); // returns "0042"
-result = padZeros(42,2); // returns "42"
-result = padZeros(5,4);  // returns "0005"
+result = padZeros(42, 4); // returns "0042"
+result = padZeros(42, 2); // returns "42"
+result = padZeros(5, 4);  // returns "0005"
 ```
 
 ### Determining whether a function exists
@@ -630,11 +631,11 @@ object has a property called `noFunc` that is a function. If so, it is used;
 otherwise, some other action is taken.
 
 ```js
- if ('function' === typeof window.noFunc) {
-   // use noFunc()
- } else {
-   // do something else
- }
+if (typeof window.noFunc === 'function') {
+  // use noFunc()
+} else {
+  // do something else
+}
 ```
 
 Note that in the `if` test, a reference to `noFunc` is used—there
