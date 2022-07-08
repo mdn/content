@@ -34,7 +34,7 @@ Install the _Latin Modern Math_ font as follows:
 2. Extract the ZIP archive, move inside the `latinmodern-math-1959` directory and then inside the `otf` directory. You will find a `latinmodern-math` font file.
 3. Double-click the `latinmodern-math` font file click the **Install font** button from the window that opens.
 
-> **Note:** If you are using macOS 13 Ventura (version 13) or higher then _STIX Two Math_ is already pre-installed and you can skip the steps below.
+> **Note:** If you are using macOS Ventura (version 13) or higher then _STIX Two Math_ is already pre-installed and you can skip the steps below.
 
 Install the _STIX Two Math_ font as follows:
 
