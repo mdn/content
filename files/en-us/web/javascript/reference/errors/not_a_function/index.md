@@ -159,18 +159,15 @@ Ensure you are importing the module correctly.
 An example helpers library (`helpers.js`)
 
 ```js
-let helpers = function () { };
+const helpers = function () { };
 
 helpers.groupBy = function (objectArray, property) {
-  return objectArray.reduce(function (acc, obj) {
+  return objectArray.reduce((acc, obj) => {
     const key = obj[property];
-    if (!acc[key]) {
-      acc[key] = [];
-    }
+    acc[key] ??= [];
     acc[key].push(obj);
     return acc;
-  },
-{});
+  }, {});
 }
 
 export default helpers;
@@ -179,7 +176,7 @@ export default helpers;
 The correct import usage (`App.js`):
 
 ```js
-import helpers from './helpers'
+import helpers from './helpers';
 ```
 
 ## See also
