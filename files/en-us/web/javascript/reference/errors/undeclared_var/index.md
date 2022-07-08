@@ -60,7 +60,7 @@ foo(); // ReferenceError: assignment to undeclared variable bar
 
 ### Valid cases
 
-To make "bar" a declared variable, you can add the [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) keyword in front of it.
+To make "bar" a declared variable, you can add the [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/var) keyword in front of it.
 
 ```js example-good
 function foo() {
