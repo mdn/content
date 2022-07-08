@@ -67,7 +67,7 @@ The `finally()` method is very similar to calling
     (which will return a rejected promise with the reason `88`),
     `Promise.reject(3).finally(() => 88)` will return a rejected promise
     with the reason `3`.  
-  - But, either `Promise.reject(3).finally(() => throw 99)` or
+  - But, either `Promise.reject(3).finally(() => {throw 99})` or
     `Promise.reject(3).finally(() => Promise.reject(99))` will reject the returned promise
     with the reason `99`.
 
