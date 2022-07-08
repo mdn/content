@@ -20,8 +20,9 @@ The **`math-depth`** property describes a notion of _depth_ for each element of 
 math-depth: auto-add;
 
 /*
-math-depth: add(<integer>);
-math-depth: <integer>;
+math-depth: add(2);
+math-depth: add(-2);
+math-depth: 4;
 
 /* Global values */
 math-depth: inherit;
