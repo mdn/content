@@ -42,18 +42,16 @@ The **`mathbackground`** [global attribute](/en-US/docs/Web/MathML/Global_attrib
 - {{cssxref("&lt;color&gt;")}}
   - : The uniform color of the background.
 
-## Notes on MathML versions
-
-* In MathML 3 and earlier versions, a more limited set of values was supported.
-  Since MathML Core, the syntax matches CSS {{cssxref("&lt;color&gt;")}}
-  values.
-
-* This attribute was designed for MathML applications that are not CSS-aware.
-  Since MathML Core, use of equivalent CSS is recommended instead.
-
 ## Specifications
 
 {{Specifications}}
+
+- In MathML 3 and earlier versions, a more limited set of values was supported.
+  Since MathML Core, the syntax matches CSS {{cssxref("&lt;color&gt;")}}
+  values.
+
+- This attribute was designed for MathML applications that are not CSS-aware.
+  Since MathML Core, the use of equivalent CSS is recommended instead.
 
 ## Browser compatibility
 
