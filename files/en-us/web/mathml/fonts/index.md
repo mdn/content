@@ -117,7 +117,7 @@ On other systems, consider installing a [font with a MATH table](#fonts_with_a_m
 
 Currently, very few fonts have appropriate glyphs for the Arabic Mathematical Alphabetic Symbols. If you are likely to need these characters, we recommend to install the _XITS_ or [Amiri](https://www.amirifont.org/) fonts.
 
-### Installation without Administrator Privilege
+### Installation without administrator privilege
 
 If you need to install fonts on a system without administrator privilege, the easiest option is to use math font the [MathML-fonts add-on](https://addons.mozilla.org/firefox/addon/mathml-fonts/). Note that using the add-on is not optimal since it forces your Gecko browser to load a CSS stylesheet on each page you visit as well as Web math fonts on all pages with MathML content.
 
