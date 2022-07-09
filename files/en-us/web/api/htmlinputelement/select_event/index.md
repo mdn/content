@@ -1,7 +1,6 @@
 ---
-title: 'Element: select event'
-slug: Web/API/Element/select_event
-page-type: web-api-event
+title: 'HTMLInputElement: select event'
+slug: Web/API/HTMLInputElement/select_event
 tags:
   - Element
   - Event
@@ -9,7 +8,8 @@ tags:
   - NeedsCompatTable
   - Reference
   - UIEvent
-browser-compat: api.Element.select_event
+browser-compat: api.HTMLInputElement.select_event
+page-type: web-api-event
 ---
 {{APIRef}}
 
