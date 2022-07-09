@@ -20,7 +20,7 @@ processing {{domxref("HTMLElement/change_event", "change")}} events.
 `change` events fire when the user commits a value change to a form control.
 This may be done, for example, by clicking outside of the control or by using the <kbd>Tab</kbd> key to switch to a different control.
 
-> **Note:** Unlike {{domxref("GlobalEventHandlers.oninput", "oninput")}},
+> **Note:** Unlike {{domxref("HTMLElement.input_event", "oninput")}},
 > the `onchange` event handler is not necessarily called for each alteration
 > to an element's `value`.
 

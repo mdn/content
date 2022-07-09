@@ -330,8 +330,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Called when the RIGHT mouse button is pressed.
 - {{domxref("GlobalEventHandlers.onerror")}}
   - : Called when a resource fails to load OR when an error occurs at runtime. See {{domxref("Window/error_event", "error")}} event.
-- {{domxref("GlobalEventHandlers.oninput")}}
-  - : Called when the value of an \<input> element changes.
 - {{domxref("GlobalEventHandlers.onkeydown")}}
   - : Called when you begin pressing ANY key. See {{domxref("Element/keydown_event", "keydown")}} event.
 - {{domxref("GlobalEventHandlers.onkeypress")}}
