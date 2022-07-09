@@ -155,7 +155,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 
 - Adding tokens to the User-Agent string
   - : It is now possible for applications, extensions, and vendors to all add tokens to the User-Agent string (using default preferences) without overwriting each other.
-    See [documentation](https://www.mozilla.org/build/revised-user-agent-strings.html). {{bug(274928)}}
+    See [documentation](/en-US/docs/Web/HTTP/Headers/User-Agent). {{bug(274928)}}
 
 - Toolkit chrome registry
   - : Chrome registration has been significantly improved to use simple plaintext chrome registration manifests, and no longer keeps the chrome.rdf/overlayinfo cache.
