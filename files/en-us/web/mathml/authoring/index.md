@@ -310,4 +310,4 @@ In [Thunderbird](https://www.thunderbird.net/en-US/) and [SeaMonkey](https://www
 
 ### Optical character and handwriting recognitions
 
-[Inftyreader](https://www.inftyreader.org/) is able to perform some optical character recognition, including translation of mathematical equations into MathML. Other tools can do handwriting recognition such as the [Windows Math Input Panel](<https://msdn.microsoft.com/library/windows/desktop/dd371698(v=vs.85).aspx>) or the online converter [Web Equation](https://webdemo.myscript.com/views/math.html).
+[Inftyreader](https://www.inftyreader.org/) is able to perform some optical character recognition, including translation of mathematical equations into MathML. Other tools can do handwriting recognition such as the [Windows Math Input Panel](https://msdn.microsoft.com/library/windows/desktop/dd371698(v=vs.85).aspx) or the online converter [Web Equation](https://webdemo.myscript.com/views/math.html).
