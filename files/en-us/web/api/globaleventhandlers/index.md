@@ -129,8 +129,6 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("seeked")}} event is raised.
 - {{domxref("GlobalEventHandlers.onseeking")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("seeking")}} event is raised.
-- {{domxref("GlobalEventHandlers.onselect")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("select")}} event is raised.
 - {{domxref("GlobalEventHandlers.onselectstart")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Document/selectstart_event", "selectstart")}} event is raised, i.e. when the user starts to make a new text selection on a web page.
 - {{domxref("GlobalEventHandlers.onselectionchange")}}

@@ -39943,23 +39943,6 @@
       "irenesmith"
     ]
   },
-  "Web/API/Element/select_event": {
-    "modified": "2020-10-15T21:19:30.777Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "chrisdavidmills",
-      "irenesmith",
-      "fscholz",
-      "DGruenwald",
-      "teoli",
-      "klez",
-      "Sheppy",
-      "ethertank",
-      "Yuan.Xulei",
-      "louisremi"
-    ]
-  },
   "Web/API/Element/setAttribute": {
     "modified": "2020-10-15T21:14:02.361Z",
     "contributors": [
@@ -44718,25 +44701,6 @@
       "Spocke"
     ]
   },
-  "Web/API/GlobalEventHandlers/onselect": {
-    "modified": "2020-10-15T21:06:33.971Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfluehr",
-      "fscholz",
-      "erikadoyle",
-      "jpmedley",
-      "cvrebert",
-      "teoli",
-      "kscarfone",
-      "Sheppy",
-      "ziyunfei",
-      "Jabez",
-      "Nickolay",
-      "Mw22",
-      "alecananian"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onselectionchange": {
     "modified": "2020-10-15T21:51:39.271Z",
     "contributors": [
@@ -47903,6 +47867,23 @@
       "jakobc",
       "kscarfone",
       "Krinkle"
+    ]
+  },
+  "Web/API/HTMLInputElement/select_event": {
+    "modified": "2020-10-15T21:19:30.777Z",
+    "contributors": [
+      "mfuji09",
+      "mfluehr",
+      "chrisdavidmills",
+      "irenesmith",
+      "fscholz",
+      "DGruenwald",
+      "teoli",
+      "klez",
+      "Sheppy",
+      "ethertank",
+      "Yuan.Xulei",
+      "louisremi"
     ]
   },
   "Web/API/HTMLInputElement/setRangeText": {
