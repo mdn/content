@@ -1,5 +1,5 @@
 ---
-title: Grid
+title: Grid (CSS)
 slug: Glossary/Grid
 tags:
   - CSS
