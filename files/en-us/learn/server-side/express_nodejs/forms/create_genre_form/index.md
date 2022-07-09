@@ -24,8 +24,8 @@ const { body,validationResult } = require("express-validator");
 >
 > ```js
 > validator = require("express-validator");
-> body = validator.body();
-> validationResult = validator.validationResult();
+> body = validator.body;
+> validationResult = validator.validationResult;
 > ```
 
 ## Controller—get route
