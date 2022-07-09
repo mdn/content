@@ -13,18 +13,10 @@ The top-level element in MathML is `<math>`. Every valid MathML instance must be
 
 ## Attributes
 
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
 In addition to the following attributes, the `<math>` element accepts any attributes of the {{ MathMLElement("mstyle") }} element.
 
-- class, id, style
-  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
-- dir
-  - : Overall directionality of formulas. Possible values are either `ltr` (left to right) or `rtl` (right to left).
-- href
-  - : Used to set a hyperlink to a specified URI.
-- mathbackground
-  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
-- mathcolor
-  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
 - display
 
   - : This enumerated attribute specifies how the enclosed MathML markup should be rendered. It can have one of the following values:
