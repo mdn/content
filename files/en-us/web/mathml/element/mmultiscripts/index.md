@@ -26,16 +26,8 @@ After the base expression you can specify a postsubscript and a postsuperscript.
 
 ## Attributes
 
-- `class`, `id`, `style`
-  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
-- `displaystyle`
-  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`. See also `movablelimits` on {{ MathMLElement("mo") }}.
-- `href`
-  - : Used to set a hyperlink to a specified URI.
-- `mathbackground`
-  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
-- `mathcolor`
-  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
 - `subscriptshift` {{deprecated_inline}}
   - : The minimum space by which to shift the subscript below the baseline of the expression, as a [CSS length](/en-US/docs/Web/CSS/length).
     This property is deprecated and will be removed in the future.

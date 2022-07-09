@@ -15,7 +15,7 @@ browser-compat: api.GlobalEventHandlers.onchange
 
 The **`onchange`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) for
-processing {{event("change")}} events.
+processing {{domxref("HTMLElement/change_event", "change")}} events.
 
 `change` events fire when the user commits a value change to a form control.
 This may be done, for example, by clicking outside of the control or by using the <kbd>Tab</kbd> key to switch to a different control.
@@ -73,4 +73,4 @@ function handleChange(e) {
 
 ## See also
 
-- {{event("change")}} event
+- {{domxref("HTMLElement/change_event", "change")}} event

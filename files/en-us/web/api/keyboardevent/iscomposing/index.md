@@ -39,5 +39,5 @@ console.log(kbdEvent.isComposing); // return false
 
 ## See also
 
-- {{ event("compositionstart") }} and {{ event("compositionend")}}
+- {{domxref("Element/compositionstart_event", "compositionstart")}} and {{domxref("Element/compositionend_event", "compositionend")}}
 - {{domxref("KeyboardEvent")}}

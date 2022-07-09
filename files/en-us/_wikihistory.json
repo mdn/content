@@ -45062,52 +45062,6 @@
       "teoli"
     ]
   },
-  "Web/API/GlobalEventHandlers/ontouchcancel": {
-    "modified": "2020-11-13T00:52:38.720Z",
-    "contributors": [
-      "mfuji09",
-      "sideshowbarker",
-      "mfluehr",
-      "fscholz",
-      "jpmedley",
-      "rolfedh",
-      "AFBarstow"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ontouchend": {
-    "modified": "2020-11-13T00:35:52.234Z",
-    "contributors": [
-      "mfuji09",
-      "sideshowbarker",
-      "fscholz",
-      "jpmedley",
-      "rolfedh",
-      "AFBarstow"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ontouchmove": {
-    "modified": "2020-12-11T12:17:32.413Z",
-    "contributors": [
-      "peterbe",
-      "vmodha",
-      "sideshowbarker",
-      "fscholz",
-      "jpmedley",
-      "rolfedh",
-      "AFBarstow"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ontouchstart": {
-    "modified": "2020-10-15T21:39:43.733Z",
-    "contributors": [
-      "sideshowbarker",
-      "mfluehr",
-      "fscholz",
-      "jpmedley",
-      "rolfedh",
-      "AFBarstow"
-    ]
-  },
   "Web/API/GlobalEventHandlers/ontransitioncancel": {
     "modified": "2020-12-12T15:52:56.127Z",
     "contributors": [
