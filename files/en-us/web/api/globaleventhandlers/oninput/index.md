@@ -21,7 +21,7 @@ these events on elements where {{domxref("HTMLElement.contentEditable",
   "contenteditable")}} or {{domxref("Document.designMode", "designMode")}} are turned on.
 
 > **Note:** Unlike `oninput`, the
-> {{domxref("GlobalEventHandlers.onchange", "onchange")}} event handler is not
+> {{domxref("HTMLElement.change_event", "onchange")}} event handler is not
 > necessarily called for each alteration to an element's `value`.
 
 ## Syntax

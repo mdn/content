@@ -318,8 +318,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 
 - {{domxref("GlobalEventHandlers.onabort")}}
   - : Called when the loading of a resource has been aborted, such as by a user canceling the load while it is still in progress.
-- {{domxref("GlobalEventHandlers.onchange")}}
-  - : An event handler property for change events on the window.
 - {{domxref("GlobalEventHandlers.onclick")}}
   - : Called after the ANY mouse button is pressed & released.
 - {{domxref("GlobalEventHandlers.ondblclick")}}

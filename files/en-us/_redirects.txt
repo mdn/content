@@ -1915,7 +1915,7 @@
 /en-US/docs/DOM/element.onafterscriptexecute	/en-US/docs/Web/API/Document/afterscriptexecute_event
 /en-US/docs/DOM/element.onbeforescriptexecute	/en-US/docs/Web/API/Document/beforescriptexecute_event
 /en-US/docs/DOM/element.onblur	/en-US/docs/Web/API/Window/blur_event
-/en-US/docs/DOM/element.onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
+/en-US/docs/DOM/element.onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/DOM/element.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/DOM/element.oncopy	/en-US/docs/Web/API/HTMLElement/copy_event
 /en-US/docs/DOM/element.oncut	/en-US/docs/Web/API/HTMLElement/cut_event
@@ -2175,7 +2175,7 @@
 /en-US/docs/DOM/window.onbeforeprint	/en-US/docs/Web/API/Window/beforeprint_event
 /en-US/docs/DOM/window.onbeforeunload	/en-US/docs/Web/API/Window/beforeunload_event
 /en-US/docs/DOM/window.onblur	/en-US/docs/Web/API/Window/blur_event
-/en-US/docs/DOM/window.onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
+/en-US/docs/DOM/window.onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/DOM/window.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/DOM/window.onclose	/en-US/docs/Web/API/GlobalEventHandlers/onclose
 /en-US/docs/DOM/window.oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
@@ -2408,7 +2408,7 @@
 /en-US/docs/DOM:element.offsetParent	/en-US/docs/Web/API/HTMLElement/offsetParent
 /en-US/docs/DOM:element.offsetWidth	/en-US/docs/Web/API/HTMLElement/offsetWidth
 /en-US/docs/DOM:element.onblur	/en-US/docs/Web/API/Window/blur_event
-/en-US/docs/DOM:element.onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
+/en-US/docs/DOM:element.onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/DOM:element.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/DOM:element.oncopy	/en-US/docs/Web/API/HTMLElement/copy_event
 /en-US/docs/DOM:element.oncut	/en-US/docs/Web/API/HTMLElement/cut_event
@@ -2612,7 +2612,7 @@
 /en-US/docs/DOM:window.onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/DOM:window.onbeforeunload	/en-US/docs/Web/API/Window/beforeunload_event
 /en-US/docs/DOM:window.onblur	/en-US/docs/Web/API/Window/blur_event
-/en-US/docs/DOM:window.onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
+/en-US/docs/DOM:window.onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/DOM:window.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/DOM:window.onclose	/en-US/docs/Web/API/GlobalEventHandlers/onclose
 /en-US/docs/DOM:window.oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
@@ -3151,7 +3151,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/element.onafterscriptexecute	/en-US/docs/Web/API/Document/afterscriptexecute_event
 /en-US/docs/Document_Object_Model_(DOM)/element.onbeforescriptexecute	/en-US/docs/Web/API/Document/beforescriptexecute_event
 /en-US/docs/Document_Object_Model_(DOM)/element.onblur	/en-US/docs/Web/API/Window/blur_event
-/en-US/docs/Document_Object_Model_(DOM)/element.onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
+/en-US/docs/Document_Object_Model_(DOM)/element.onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Document_Object_Model_(DOM)/element.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/Document_Object_Model_(DOM)/element.oncopy	/en-US/docs/Web/API/HTMLElement/copy_event
 /en-US/docs/Document_Object_Model_(DOM)/element.oncut	/en-US/docs/Web/API/HTMLElement/cut_event
@@ -3333,7 +3333,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onbeforeunload	/en-US/docs/Web/API/Window/beforeunload_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onblur	/en-US/docs/Web/API/Window/blur_event
-/en-US/docs/Document_Object_Model_(DOM)/window.onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
+/en-US/docs/Document_Object_Model_(DOM)/window.onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/Document_Object_Model_(DOM)/window.onclose	/en-US/docs/Web/API/GlobalEventHandlers/onclose
 /en-US/docs/Document_Object_Model_(DOM)/window.oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
@@ -7829,7 +7829,7 @@
 /en-US/docs/Web/API/Document/onafterscriptexecute	/en-US/docs/Web/API/Document/afterscriptexecute_event
 /en-US/docs/Web/API/Document/onbeforescriptexecute	/en-US/docs/Web/API/Document/beforescriptexecute_event
 /en-US/docs/Web/API/Document/onblur	/en-US/docs/Web/API/Window/blur_event
-/en-US/docs/Web/API/Document/onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
+/en-US/docs/Web/API/Document/onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Web/API/Document/onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/Web/API/Document/oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
 /en-US/docs/Web/API/Document/ondblclick	/en-US/docs/Web/API/GlobalEventHandlers/ondblclick
@@ -8099,7 +8099,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers.click	/en-US/docs/Web/API/Element/click_event
 /en-US/docs/Web/API/GlobalEventHandlers.onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Web/API/GlobalEventHandlers.onblur	/en-US/docs/Web/API/Window/blur_event
-/en-US/docs/Web/API/GlobalEventHandlers.onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
+/en-US/docs/Web/API/GlobalEventHandlers.onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Web/API/GlobalEventHandlers.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/Web/API/GlobalEventHandlers.onclose	/en-US/docs/Web/API/GlobalEventHandlers/onclose
 /en-US/docs/Web/API/GlobalEventHandlers.oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
@@ -8142,6 +8142,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onblur	/en-US/docs/Web/API/Window/blur_event
 /en-US/docs/Web/API/GlobalEventHandlers/oncanplay	/en-US/docs/Web/API/HTMLMediaElement/canplay_event
 /en-US/docs/Web/API/GlobalEventHandlers/oncanplaythrough	/en-US/docs/Web/API/HTMLMediaElement/canplaythrough_event
+/en-US/docs/Web/API/GlobalEventHandlers/onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Web/API/GlobalEventHandlers/oncuechange	/en-US/docs/Web/API/TextTrack/cuechange_event
 /en-US/docs/Web/API/GlobalEventHandlers/ondragexit	/en-US/docs/Web/API/GlobalEventHandlers/ondragleave
 /en-US/docs/Web/API/GlobalEventHandlers/ondurationchange	/en-US/docs/Web/API/HTMLMediaElement/durationchange_event
@@ -8227,7 +8228,7 @@
 /en-US/docs/Web/API/HTMLElement/invalid_event	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Web/API/HTMLElement/onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Web/API/HTMLElement/onblur	/en-US/docs/Web/API/Window/blur_event
-/en-US/docs/Web/API/HTMLElement/onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
+/en-US/docs/Web/API/HTMLElement/onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Web/API/HTMLElement/onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/Web/API/HTMLElement/oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
 /en-US/docs/Web/API/HTMLElement/oncopy	/en-US/docs/Web/API/HTMLElement/copy_event
@@ -9267,7 +9268,7 @@
 /en-US/docs/Web/API/SVGElement/dataset	/en-US/docs/Web/API/HTMLElement/dataset
 /en-US/docs/Web/API/SVGElement/onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Web/API/SVGElement/onblur	/en-US/docs/Web/API/Window/blur_event
-/en-US/docs/Web/API/SVGElement/onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
+/en-US/docs/Web/API/SVGElement/onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Web/API/SVGElement/onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/Web/API/SVGElement/oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
 /en-US/docs/Web/API/SVGElement/ondblclick	/en-US/docs/Web/API/GlobalEventHandlers/ondblclick
@@ -9800,7 +9801,7 @@
 /en-US/docs/Web/API/Window/onbeforeprint	/en-US/docs/Web/API/Window/beforeprint_event
 /en-US/docs/Web/API/Window/onbeforeunload	/en-US/docs/Web/API/Window/beforeunload_event
 /en-US/docs/Web/API/Window/onblur	/en-US/docs/Web/API/Window/blur_event
-/en-US/docs/Web/API/Window/onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
+/en-US/docs/Web/API/Window/onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Web/API/Window/onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/Web/API/Window/oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
 /en-US/docs/Web/API/Window/ondblclick	/en-US/docs/Web/API/GlobalEventHandlers/ondblclick
@@ -10164,7 +10165,7 @@
 /en-US/docs/Web/API/element.onafterscriptexecute	/en-US/docs/Web/API/Document/afterscriptexecute_event
 /en-US/docs/Web/API/element.onbeforescriptexecute	/en-US/docs/Web/API/Document/beforescriptexecute_event
 /en-US/docs/Web/API/element.onblur	/en-US/docs/Web/API/Window/blur_event
-/en-US/docs/Web/API/element.onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
+/en-US/docs/Web/API/element.onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Web/API/element.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/Web/API/element.oncopy	/en-US/docs/Web/API/HTMLElement/copy_event
 /en-US/docs/Web/API/element.oncut	/en-US/docs/Web/API/HTMLElement/cut_event
@@ -10454,7 +10455,7 @@
 /en-US/docs/Web/API/window.onbeforeprint	/en-US/docs/Web/API/Window/beforeprint_event
 /en-US/docs/Web/API/window.onbeforeunload	/en-US/docs/Web/API/Window/beforeunload_event
 /en-US/docs/Web/API/window.onblur	/en-US/docs/Web/API/Window/blur_event
-/en-US/docs/Web/API/window.onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
+/en-US/docs/Web/API/window.onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Web/API/window.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/Web/API/window.onclose	/en-US/docs/Web/API/GlobalEventHandlers/onclose
 /en-US/docs/Web/API/window.oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu

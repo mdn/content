@@ -44123,26 +44123,6 @@
       "Guillaume-Heras"
     ]
   },
-  "Web/API/GlobalEventHandlers/onchange": {
-    "modified": "2020-10-15T21:06:29.702Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "erikadoyle",
-      "jpmedley",
-      "cvrebert",
-      "groovecoder",
-      "teoli",
-      "kosvrouvas",
-      "kscarfone",
-      "Nickolay",
-      "ethertank",
-      "Sheppy",
-      "ziyunfei",
-      "Mgjbot",
-      "Tmetro"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onclick": {
     "modified": "2020-12-12T15:56:24.635Z",
     "contributors": [
