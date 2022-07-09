@@ -241,7 +241,7 @@ function type(value) {
     return value[Symbol.toStringTag];
   }
 
-  // The name of the constructor, for example `Array`, `GeneratorFunction`,
+  // The name of the constructor; for example `Array`, `GeneratorFunction`,
   // `Number`, `String`, `Boolean` or `MyCustomObject`
   if (
     typeof value.constructor.name === "string" &&
