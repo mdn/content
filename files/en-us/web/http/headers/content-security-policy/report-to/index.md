@@ -97,5 +97,3 @@ Content-Security-Policy: ...; report-to endpoint-1
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
-- {{HTTPHeader("Report-To")}}
-- {{HTTPHeader("Reporting-Endpoints")}}
