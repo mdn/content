@@ -111,7 +111,71 @@ doSomething()
   .catch(failureCallback);
 ```
 
-**Important:** Always return results, otherwise callbacks won't catch the result of a previous promise (with arrow functions `() => x` is short for `() => { return x; }`).
+**Important:** Always return results, otherwise callbacks won't catch the result of a previous promise (with arrow functions `() => x` is short for `() => { return x; }`). If the previous handler started a promise but did not return it, there's no way to track its settlement anymore, and the promise is said to be "floating".
+
+```js example-bad
+doSomething()
+  .then((url) => {
+    // I forgot to return this...
+    fetch(url);
+  })
+  .then((result) => {
+    // result is undefined, because nothing is returned from
+    // the previous handler.
+    // There's no way to know the return value of the fetch()
+    // call anymore, or whether it succeeded at all.
+  });
+```
+
+This may be worse if you have race conditions — if the promise from the last handler is not returned, the next `then` handler will be called early, and any value it reads may be incomplete.
+
+```js example-bad
+const listOfIngredients = [];
+
+doSomething()
+  .then((url) => {
+    // I forgot to return this...
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        listOfIngredients.push(data);
+      });
+  })
+  .then(() => {
+    console.log(listOfIngredients);
+    // Always [], because the fetch request hasn't completed yet.
+  });
+```
+
+Therefore, as a rule of thumb, whenever your operation encounters a promise, return it and defer its handling to the next `then` handler.
+
+```js example-good
+const listOfIngredients = [];
+
+doSomething()
+  .then((url) => {
+    return fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        listOfIngredients.push(data);
+      });
+  })
+  .then(() => {
+    console.log(listOfIngredients);
+  });
+
+// OR
+
+doSomething()
+  .then((url) => fetch(url))
+  .then((res) => res.json())
+  .then((data) => {
+    listOfIngredients.push(data);
+  })
+  .then(() => {
+    console.log(listOfIngredients);
+  });
+```
 
 ### Chaining after a catch
 
