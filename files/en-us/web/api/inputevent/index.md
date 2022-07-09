@@ -34,7 +34,7 @@ _This interface inherits properties from its parents, {{DOMxRef("UIEvent")}} and
 - {{DOMxRef("InputEvent.inputType")}}{{ReadOnlyInline}}
   - : Returns the type of change for editable content such as, for example, inserting, deleting, or formatting text. See the property page for a complete list of input types.
 - {{DOMxRef("InputEvent.isComposing")}}{{ReadOnlyInline}}
-  - : Returns a {{JSxRef("Boolean")}} value indicating if the event is fired after {{event("compositionstart")}} and before {{event("compositionend")}}.
+  - : Returns a {{JSxRef("Boolean")}} value indicating if the event is fired after {{domxref("Element/compositionstart_event", "compositionstart")}} and before {{domxref("Element/compositionend_event", "compositionend")}}.
 
 ## Methods
 

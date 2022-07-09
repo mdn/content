@@ -17,9 +17,9 @@ The `PerformanceEventTiming` interface of the Event Timing API provides timing i
 - {{event("auxclick")}}
 - {{domxref("HTMLElement/beforeinput_event", "beforeinput")}}
 - {{event("click")}}
-- {{event("compositionend")}}
-- {{event("compositionstart")}}
-- {{event("compositionupdate")}}
+- {{domxref("Element/compositionend_event", "compositionend")}}
+- {{domxref("Element/compositionstart_event", "compositionstart")}}
+- {{domxref("Element/compositionupdate_event", "compositionupdate")}}
 - {{event("contextmenu")}}
 - {{event("dblclick")}}
 - {{domxref("HTMLElement/dragend_event", "dragend")}}
