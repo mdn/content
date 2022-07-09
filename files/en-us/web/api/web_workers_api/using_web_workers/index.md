@@ -55,7 +55,7 @@ if (window.Worker) {
 Creating a new worker is simple. All you need to do is call the {{domxref("Worker.Worker", "Worker()")}} constructor, specifying the URI of a script to execute in the worker thread ([main.js](https://github.com/mdn/dom-examples/blob/master/web-workers/simple-web-worker/main.js)):
 
 ```js
-var myWorker = new Worker('worker.js');
+const myWorker = new Worker('worker.js');
 ```
 
 ### Sending messages to and from a dedicated worker
@@ -81,7 +81,7 @@ In the worker, we can respond when the message is received by writing an event h
 ```js
 onmessage = function(e) {
   console.log('Message received from main script');
-  var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+  const workerResult = 'Result: ' + (e.data[0] * e.data[1]);
   console.log('Posting message back to main script');
   postMessage(workerResult);
 }
@@ -163,7 +163,7 @@ Here we'll concentrate on the differences between dedicated and shared workers. 
 Spawning a new shared worker is pretty much the same as with a dedicated worker, but with a different constructor name (see [index.html](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker/index.html) and [index2.html](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker/index2.html)) — each one has to spin up the worker using code like the following:
 
 ```js
-var myWorker = new SharedWorker('worker.js');
+const myWorker = new SharedWorker('worker.js');
 ```
 
 One big difference is that with a shared worker you have to communicate via a `port` object — an explicit port is opened that the scripts can use to communicate with the worker (this is done implicitly in the case of dedicated workers).
@@ -187,10 +187,10 @@ Now, on to the worker. There is a bit more complexity here as well ([worker.js](
 
 ```js
 onconnect = function(e) {
-  var port = e.ports[0];
+  const port = e.ports[0];
 
   port.onmessage = function(e) {
-    var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+    const workerResult = 'Result: ' + (e.data[0] * e.data[1]);
     port.postMessage(workerResult);
   }
 }
@@ -247,22 +247,22 @@ function emulateMessage(vVal) {
 // Tests
 
 // test #1
-var example1 = new Number(3);
+const example1 = new Number(3);
 console.log(typeof example1); // object
 console.log(typeof emulateMessage(example1)); // number
 
 // test #2
-var example2 = true;
+const example2 = true;
 console.log(typeof example2); // boolean
 console.log(typeof emulateMessage(example2)); // boolean
 
 // test #3
-var example3 = new String('Hello World');
+const example3 = new String('Hello World');
 console.log(typeof example3); // object
 console.log(typeof emulateMessage(example3)); // string
 
 // test #4
-var example4 = {
+const example4 = {
     'name': 'John Smith',
     "age": 43
 };
@@ -274,7 +274,7 @@ function Animal(sType, nAge) {
     this.type = sType;
     this.age = nAge;
 }
-var example5 = new Animal('Cat', 3);
+const example5 = new Animal('Cat', 3);
 alert(example5.constructor); // Animal
 alert(emulateMessage(example5).constructor); // Object
 ```
@@ -284,7 +284,7 @@ A value that is cloned and not shared is called _message_. As you will probably 
 **example.html**: (the main page):
 
 ```js
-var myWorker = new Worker('my_task.js');
+const myWorker = new Worker('my_task.js');
 
 myWorker.onmessage = function(oEvent) {
   console.log('Worker said : ' + oEvent.data);
@@ -315,7 +315,7 @@ First, we create a `QueryableWorker` class that takes the URL of the worker, a d
 
 ```js
 function QueryableWorker(url, defaultListener, onError) {
-    var instance = this,
+    const instance = this,
         worker = new Worker(url),
         listeners = {};
 
@@ -381,7 +381,7 @@ worker.onmessage = function(event) {
 Now onto the worker. First we need to have the methods to handle the two simple operations:
 
 ```js
-var queryableFunctions = {
+const queryableFunctions = {
     getDifference: function(a, b) {
         reply('printStuff', a - b);
     },
@@ -446,9 +446,9 @@ Here are the full implementation:
         * defaultListener: the default listener executed only when the Worker calls the postMessage() function directly
      */
     function QueryableWorker(url, defaultListener, onError) {
-      var instance = this,
-      worker = new Worker(url),
-      listeners = {};
+      const instance = this,
+      const worker = new Worker(url),
+      let listeners = {};
 
       this.defaultListener = defaultListener || function() {};
 
@@ -497,7 +497,7 @@ Here are the full implementation:
     }
 
     // your custom "queryable" worker
-    var myTask = new QueryableWorker('my_task.js');
+    const myTask = new QueryableWorker('my_task.js');
 
     // your custom "listeners"
     myTask.addListener('printStuff', function (result) {
@@ -522,7 +522,7 @@ Here are the full implementation:
 **my_task.js** (the worker):
 
 ```js
-var queryableFunctions = {
+const queryableFunctions = {
   // example #1: get the difference between two numbers:
   getDifference: function(nMinuend, nSubtrahend) {
       reply('printStuff', nMinuend - nSubtrahend);
@@ -564,8 +564,8 @@ For example, when transferring an {{jsxref("ArrayBuffer")}} from your main app t
 
 ```js
 // Create a 32MB "file" and fill it.
-var uInt8Array = new Uint8Array(1024 * 1024 * 32); // 32MB
-for (var i = 0; i < uInt8Array.length; ++i) {
+const uInt8Array = new Uint8Array(1024 * 1024 * 32); // 32MB
+for (let i = 0; i < uInt8Array.length; ++i) {
   uInt8Array[i] = i;
 }
 worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
@@ -583,14 +583,14 @@ There is not an "official" way to embed the code of a worker within a web page, 
 <title>MDN Example - Embedded worker</title>
 <script type="text/js-worker">
   // This script WON'T be parsed by JS engines because its MIME type is text/js-worker.
-  var myVar = 'Hello World!';
+  const myVar = 'Hello World!';
   // Rest of your worker code goes here.
 </script>
 <script type="text/javascript">
   // This script WILL be parsed by JS engines because its MIME type is text/javascript.
   function pageLog(sMsg) {
     // Use a fragment: browser will only render/reflow once.
-    var oFragm = document.createDocumentFragment();
+    let oFragm = document.createDocumentFragment();
     oFragm.appendChild(document.createTextNode(sMsg));
     oFragm.appendChild(document.createElement('br'));
     document.querySelector('#logDisplay').appendChild(oFragm);
@@ -609,7 +609,7 @@ There is not an "official" way to embed the code of a worker within a web page, 
   // In the past...:
   // blob builder existed
   // ...but now we use Blob...:
-  var blob = new Blob(Array.prototype.map.call(document.querySelectorAll('script[type=\'text\/js-worker\']'), function (oScript) { return oScript.textContent; }),{type: 'text/javascript'});
+  const blob = new Blob(Array.prototype.map.call(document.querySelectorAll('script[type=\'text\/js-worker\']'), function (oScript) { return oScript.textContent; }),{type: 'text/javascript'});
 
   // Creating a new document.worker property containing all our "text/js-worker" scripts.
   document.worker = new Worker(window.URL.createObjectURL(blob));
@@ -632,7 +632,7 @@ It is also worth noting that you can also convert a function into a Blob, then g
 
 ```js
 function fn2workerURL(fn) {
-  var blob = new Blob(['('+fn.toString()+')()'], {type: 'text/javascript'})
+  const blob = new Blob(['('+fn.toString()+')()'], {type: 'text/javascript'})
   return URL.createObjectURL(blob)
 }
 ```
@@ -704,10 +704,10 @@ The worker sets the property `onmessage` to a function which will receive messag
   <p id="result"></p>
 
   <script language="javascript">
-    var form = document.querySelector('form');
-    var input = document.querySelector('input[type="number"]');
-    var result = document.querySelector('p#result');
-    var worker = new Worker('fibonacci.js');
+    let form = document.querySelector('form');
+    let input = document.querySelector('input[type="number"]');
+    let result = document.querySelector('p#result');
+    let worker = new Worker('fibonacci.js');
 
     worker.onmessage = function(event) {
       result.textContent = event.data;

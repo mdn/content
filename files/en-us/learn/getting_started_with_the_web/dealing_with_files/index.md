@@ -51,7 +51,7 @@ To make files talk to one another, you have to provide a file path between them 
 
     ```html
     <!DOCTYPE html>
-    <html>
+    <html lang="en-US">
       <head>
         <meta charset="utf-8">
         <title>My test page</title>

@@ -23,7 +23,7 @@ setSignals(options)
 
 ### Parameters
 
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object with any of the following values:
 

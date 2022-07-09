@@ -11,6 +11,7 @@ tags:
   - USBDevice
   - WebUSB
   - WebUSB API
+  - Experimental
 browser-compat: api.USBDevice.configuration
 ---
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}

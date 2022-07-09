@@ -173,8 +173,7 @@ api.free_result(resultPointer);
 
 Depending on the size of your image, you might run into an error where wasm can't grow the memory enough to accommodate both the input and the output image:
 
-![
-  Screenshot of the DevTools console showing an error.](error.png)
+![Screenshot of the DevTools console showing an error.](error.png)
 
 Luckily, the solution to this problem is in the error message. You just need to add `-s ALLOW_MEMORY_GROWTH=1` to your compilation command.
 

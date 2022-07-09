@@ -60,17 +60,17 @@ function drop_handler(ev) {
  console.log("drop: target.id = " + ev.target.id);
  ev.preventDefault();
  // Get the id of the target and add the moved element to the target's DOM
- var data = ev.dataTransfer.getData("text");
+ const data = ev.dataTransfer.getData("text");
  ev.target.appendChild(document.getElementById(data));
  // Print each format type
  if (ev.dataTransfer.types != null) {
-   for (var i=0; i < ev.dataTransfer.types.length; i++) {
+   for (let i=0; i < ev.dataTransfer.types.length; i++) {
      console.log("... types[" + i + "] = " + ev.dataTransfer.types[i]);
    }
  }
  // Print each item's "kind" and "type"
  if (ev.dataTransfer.items != null) {
-   for (var i=0; i < ev.dataTransfer.items.length; i++) {
+   for (let i=0; i < ev.dataTransfer.items.length; i++) {
      console.log("... items[" + i + "].kind = " + ev.dataTransfer.items[i].kind + " ; type = " + ev.dataTransfer.items[i].type);
    }
  }

@@ -41,7 +41,7 @@ The **`WebAssembly.Table()`** object is a JavaScript wrapper object — an array
 The following example (see table2.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) and [live version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)) creates a new WebAssembly Table instance with an initial size of 2 elements. We then print out the table length and contents of the two indexes (retrieved via {{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}} to show that the length is two and both elements are {{jsxref("null")}}.
 
 ```js
-var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
+const tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
 console.log(tbl.length);  // "2"
 console.log(tbl.get(0));  // "null"
 console.log(tbl.get(1));  // "null"
@@ -50,9 +50,9 @@ console.log(tbl.get(1));  // "null"
 We then create an import object that contains the table:
 
 ```js
-var importObj = {
+const importObj = {
   js: {
-    tbl:tbl
+    tbl: tbl
   }
 };
 ```

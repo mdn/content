@@ -99,11 +99,11 @@ the `Notification()` constructor.
 
 ```js
 function spawnNotification(body, icon, title) {
-  var options = {
+  const options = {
       body: body,
       icon: icon
   }
-  var notification = new Notification(title, options);
+  const notification = new Notification(title, options);
 }
 ```
 
@@ -126,8 +126,7 @@ notifications from a service worker. See the
 
 ### Internet Explorer notes
 
-Version 38.14352 and higher of MS Edge Notification API is supported. [Wikipedia - MS
-Edge](https://en.wikipedia.org/wiki/Microsoft_Edge#Release_history)
+Version 38.14352 and higher of MS Edge Notification API is supported. [Wikipedia - MS Edge](https://en.wikipedia.org/wiki/Microsoft_Edge#Release_history)
 
 IE 11 and lower isn't supported.
 

@@ -10,7 +10,7 @@ This page explains how to write mathematics using the MathML language. Just like
 
 Mathematical notations are even more complex with structures like fractions, square roots or matrices that are likely to require their own tags. As a consequence, good MathML authoring tools are more important and we describe some tools below. In particular, the Mozilla MathML team has been developing [TeXZilla](https://github.com/fred-wang/TeXZilla/), a Javascript Unicode LaTeX-to-MathML converter that is intended to be used in many scenarios described here. Of course, the list is by no means exhaustive and you are invited to check out the [W3C MathML software list](https://www.w3.org/wiki/Math_Tools) where you can find various other tools.
 
-Note that by design, MathML is well-integrated in HTML5 and in particular you can use usual Web features like CSS, DOM, Javascript or SVG. This is out of the scope of this document but anyone with basic knowledge of Web languages will easily be able to mix these features with MathML. Check out [our demos](/en-US/docs/Mozilla/MathML_Project#Sample_MathML_Documents) and [MathML references](/en-US/docs/Web/MathML) for more details.
+Note that by design, MathML is well-integrated in HTML5 and in particular you can use usual Web features like CSS, DOM, Javascript or SVG. This is out of the scope of this document but anyone with basic knowledge of Web languages will easily be able to mix these features with MathML. Check out [our demos](/en-US/docs/Mozilla/MathML_Project#sample_mathml_documents) and [MathML references](/en-US/docs/Web/MathML) for more details.
 
 ## Using MathML
 
@@ -88,7 +88,7 @@ var isWebKit = ua.indexOf('AppleWebKit') > -1 && ua.indexOf('Chrome') === -1;
 
 In order to get a good layout or to allow different style, it's important to have mathematical fonts available. It's always good to provide a link to [MDN's Font Instructions](/en-US/docs/Web/MathML/Fonts), so that your visitors can verify whether they have appropriate fonts installed on their system. It's also good to provide a fallback with Web fonts.
 
-Prior to Gecko 31.0 {{GeckoRelease("31.0")}}, it was a bit tedious to setup math fonts, see the [font instructions for Mozilla 2.0](/en-US/docs/Mozilla/MathML_Project/FontsMozilla2.0#MathML_Font_Selection_with_CSS). For Gecko 31.0 {{GeckoRelease("31.0")}}, this is much simpler and is compatible with any Web rendering engine with MathML support. For example, here is a minimal stylesheet to use Latin Modern for the text and Latin Modern Math for the mathematics:
+Prior to Gecko 31.0 {{GeckoRelease("31.0")}}, it was a bit tedious to setup math fonts, see the [font instructions for Mozilla 2.0](/en-US/docs/Mozilla/MathML_Project/FontsMozilla2.0#mathml_font_selection_with_css). For Gecko 31.0 {{GeckoRelease("31.0")}}, this is much simpler and is compatible with any Web rendering engine with MathML support. For example, here is a minimal stylesheet to use Latin Modern for the text and Latin Modern Math for the mathematics:
 
 ```css
 @namespace url('http://www.w3.org/1999/xhtml');

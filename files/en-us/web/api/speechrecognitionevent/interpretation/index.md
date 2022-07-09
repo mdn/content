@@ -34,7 +34,7 @@ by the speech recognition system, `null` will be returned.
 
 ```js
 recognition.onresult = function(event) {
-  var color = event.results[0][0].transcript;
+  const color = event.results[0][0].transcript;
   diagnostic.textContent = 'Result received: ' + color + '.';
   bg.style.backgroundColor = color;
   console.log(event.interpretation);

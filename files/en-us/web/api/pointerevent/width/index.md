@@ -35,7 +35,7 @@ This example illustrates using the {{domxref("PointerEvent")}} interface's
 ```js
 target.addEventListener("pointerdown", function(ev) {
    // Calculate the contact area
-   var area = ev.width * ev.height;
+   const area = ev.width * ev.height;
  }, false);
 ```
 

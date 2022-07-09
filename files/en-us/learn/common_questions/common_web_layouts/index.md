@@ -106,7 +106,7 @@ This is a good example of a classic layout supporting some design creativity. Si
 
 ### A much trickier layout
 
-**The [Opera de Paris](https://www.operadeparis.fr/en/saison-2014-2015/opera/la-boheme-puccini)**.
+**The Opera de Paris**.
 
 ![An example of a tricky layout.](screenshot-opera.jpg)        ![This is a 2 column layout but the header is overlapping the main content.](screenshot-opera-overlay.jpg)
 

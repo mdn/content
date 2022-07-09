@@ -15,7 +15,7 @@ browser-compat: api.GlobalEventHandlers.onkeyup
 
 The **`onkeyup`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("keyup")}} events.
+processes {{domxref("Element/keyup_event", "keyup")}} events.
 
 The `keyup` event fires when the user releases a key that was previously
 pressed.
@@ -89,7 +89,7 @@ eventTarget.addEventListener("keyup", event => {
 
 ## See also
 
-- {{Event("keyup")}} event
+- {{domxref("Element/keyup_event", "keyup")}} event
 - Related event handlers
 
   - {{domxref("GlobalEventHandlers.onkeydown")}}

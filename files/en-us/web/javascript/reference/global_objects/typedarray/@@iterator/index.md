@@ -37,7 +37,7 @@ The array **iterator** function, which is the
 const arr = new Uint8Array([10, 20, 30, 40, 50]);
 // your browser must support for..of loop
 // and let-scoped variables in for loops
-for (let n of arr) {
+for (const n of arr) {
   console.log(n);
 }
 ```

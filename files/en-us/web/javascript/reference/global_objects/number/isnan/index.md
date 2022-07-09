@@ -74,17 +74,6 @@ Number.isNaN('');
 Number.isNaN(' ');
 ```
 
-## Polyfill
-
-The following works because NaN is the only value in JavaScript which is not equal to
-itself.
-
-```js
-Number.isNaN = Number.isNaN || function isNaN(input) {
-    return typeof input === 'number' && input !== input;
-}
-```
-
 ## Specifications
 
 {{Specifications}}

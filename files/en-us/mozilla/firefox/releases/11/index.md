@@ -37,7 +37,7 @@ Firefox 11 shipped on March 13, 2012. This article provides information about th
 ### CSS
 
 - the [`text-size-adjust`](/en-US/docs/Web/CSS/text-size-adjust) property is now supported
-- [CSS3](/en-US/docs/CSS/CSS3) [Conditional Rules](/en-US/docs/CSS/CSS3#Conditional_Rules) are now better supported: nested statements can now be added to [@media](/en-US/docs/Web/CSS/@media), [@-moz-document](/en-US/docs/Web/CSS/@document). (See [CSS Syntax](/en-US/docs/Web/CSS/Syntax) and [CSS at-rules](/en-US/docs/Web/CSS/At-rule)).
+- [CSS3](/en-US/docs/CSS/CSS3) [Conditional Rules](/en-US/docs/CSS/CSS3#conditional_rules) are now better supported: nested statements can now be added to [@media](/en-US/docs/Web/CSS/@media), [@-moz-document](/en-US/docs/Web/CSS/@document). (See [CSS Syntax](/en-US/docs/Web/CSS/Syntax) and [CSS at-rules](/en-US/docs/Web/CSS/At-rule)).
 
 ### JavaScript
 
@@ -80,7 +80,7 @@ _No change._
 ### Network
 
 - The change in Firefox 8 that removed support for double quote characters as delimiters for {{rfc(2231)}} and {{rfc(5987)}} has been reverted, as this broke some sites, including Outlook Web Access.
-- The user agent string in HTTP headers now includes an identifier that [lets the server know if the Firefox accessing it is a phone or a tablet](/en-US/docs/Gecko_user_agent_string_reference#Mobile_and_Tablet_indicators).
+- The user agent string in HTTP headers now includes an identifier that [lets the server know if the Firefox accessing it is a phone or a tablet](/en-US/docs/Gecko_user_agent_string_reference#mobile_and_tablet_indicators).
 
 ### Developer tools
 
@@ -94,7 +94,7 @@ _No change._
 
 #### NetUtil.jsm
 
-- [`readInputStreamToString()`](</en-US/docs/JavaScript_code_modules/NetUtil.jsm#readInputStreamToString()>) has a new, optional, parameter to configure the character set interpretation while reading the input stream.
+- [`readInputStreamToString()`](https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/NetUtil.html) has a new, optional, parameter to configure the character set interpretation while reading the input stream.
 
 #### New JavaScript code modules
 

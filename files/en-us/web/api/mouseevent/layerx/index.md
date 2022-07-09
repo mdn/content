@@ -35,8 +35,8 @@ An integer value in pixels for the x-coordinate of the mouse
 <script type="text/javascript">
 
 function showCoords(evt){
-  var form = document.forms.form_coords;
-  var parent_id = evt.target.parentNode.id;
+  const form = document.forms.form_coords;
+  const parent_id = evt.target.parentNode.id;
   form.parentId.value = parent_id;
   form.pageXCoords.value = evt.pageX;
   form.pageYCoords.value = evt.pageY;

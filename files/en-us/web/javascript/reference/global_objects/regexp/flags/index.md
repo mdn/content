@@ -33,19 +33,6 @@ Flags in the `flags` property are sorted alphabetically (from left to right, e.g
 /bar/myu.flags;  // "muy"
 ```
 
-## Polyfill
-
-```js
-if (RegExp.prototype.flags === undefined) {
-  Object.defineProperty(RegExp.prototype, 'flags', {
-    configurable: true,
-    get: function() {
-      return this.toString().match(/[gimsuy]*$/)[0];
-    }
-  });
-}
-```
-
 ## Specifications
 
 {{Specifications}}

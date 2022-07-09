@@ -31,8 +31,7 @@ setValueAtTime(value, startTime)
     given time.
 - `startTime`
   - : A double representing the time (in seconds) after the {{domxref("AudioContext")}}
-    was first created that the change in value will happen. A {{jsxref("TypeError")}} is
-    thrown if this value is negative.
+    was first created that the change in value will happen. If the time is less than {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}, the change happens immediately. A {{jsxref("TypeError")}} is thrown if this value is negative.
 
 ### Return value
 

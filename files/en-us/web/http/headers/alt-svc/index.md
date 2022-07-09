@@ -28,12 +28,12 @@ Alt-Svc: <protocol-id>=<alt-authority>; ma=<max-age>; persist=1
   - : The {{Glossary("ALPN")}} protocol identifier. Examples include `h2` for HTTP/2 and `h3-25` for draft 25 of the HTTP/3 protocol.
 - `<alt-authority>`
   - : The quoted string specifying the alternative authority which consists of an optional host override, a colon, and a mandatory port number.
-- `ma=<max-age>`{{Optional_Inline}}
+- `ma=<max-age>` {{optional_inline}}
   - : The number of seconds for which the alternative service is considered fresh.
     If omitted, it defaults to 24 hours.
     Alternative service entries can be cached for up to _\<max-age>_ seconds, minus the age of the response (from the {{httpheader("Age")}} header).
     Once the cached entry expires, the client can no longer use this alternative service for new connections.
-- `persist=1`{{Optional_Inline}}
+- `persist=1` {{optional_inline}}
   - : Usually cached alternative service entries are cleared on network configuration changes.
     Use of the `persist=1` parameter requests that the entry not be deleted by such changes.
 

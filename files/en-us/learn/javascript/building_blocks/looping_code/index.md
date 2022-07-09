@@ -335,7 +335,7 @@ const cats = ['Pete', 'Biggles', 'Jasmine'];
 let myFavoriteCats = 'My cats are called ';
 
 for (const cat of cats) {
-  myFavoriteCats = `${myFavoriteCats}${cat}, `
+  myFavoriteCats += `${cat}, `
 }
 
 console.log(myFavoriteCats); // "My cats are called Pete, Biggles, Jasmine, "
@@ -362,9 +362,9 @@ let myFavoriteCats = 'My cats are called ';
 
 for (let i = 0; i < cats.length; i++) {
   if (i === cats.length - 1) {   // We are at the end of the array
-    myFavoriteCats = `${myFavoriteCats}and ${cats[i]}.`
+    myFavoriteCats += `and ${cats[i]}.`
   } else {
-    myFavoriteCats = `${myFavoriteCats}${cats[i]}, `
+    myFavoriteCats += `${cats[i]}, `
   }
 }
 

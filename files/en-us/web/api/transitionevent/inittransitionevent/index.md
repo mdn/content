@@ -8,7 +8,6 @@ tags:
   - CSS3 Transitions
   - CSSOM
   - Deprecated
-  - Experimental
   - Method
   - Reference
   - TransitionEvent

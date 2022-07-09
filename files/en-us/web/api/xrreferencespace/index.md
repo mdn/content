@@ -33,7 +33,7 @@ All reference spaces—with the sole exception being bounded reference spaces—
 
 ## Properties
 
-_`XRReferenceSpace`inherits the properties of {{domxref("EventTarget")}} but defines no additional properties._
+_`XRReferenceSpace` inherits the properties of {{domxref("EventTarget")}} but defines no additional properties._
 
 ## Methods
 

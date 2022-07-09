@@ -45,9 +45,7 @@ block in which it is declared. Global constants do **not** become
 properties of the {{domxref("window")}} object, unlike {{jsxref("Statements/var",
   "var")}} variables.
 
-An initializer for a constant is required. You must specify its value in the same
-statement in which it's declared. (This makes sense, given that it can't be changed
-later.)
+An initializer for a constant is required. You must specify its value in the same declaration. (This makes sense, given that it can't be changed later.)
 
 The **`const` declaration** creates a read-only reference to a
 value. It does **not** mean the value it holds is immutable—just that the
@@ -59,6 +57,12 @@ All the considerations about the
 apply to both {{jsxref("Statements/let", "let")}} and `const`.
 
 A constant cannot share its name with a function or a variable in the same scope.
+
+Unlike `var`, `const` begins _Declarations_, not _Statements_. That means you cannot use a lone `const` declaration as the body of a block (which makes sense, since there's no way to access the variable).
+
+```js
+if (true) const a = 1; // SyntaxError: Unexpected token 'const'
+```
 
 ## Examples
 

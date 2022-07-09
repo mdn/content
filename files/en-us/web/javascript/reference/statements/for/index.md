@@ -23,7 +23,7 @@ be executed in the loop.
 
 ```js
 for ([initialization]; [condition]; [final-expression])
-   statement
+  statement
 ```
 
 - `initialization`
@@ -38,11 +38,9 @@ for ([initialization]; [condition]; [final-expression])
     The result of this expression is discarded.
 
 - `condition`
-  - : An expression to be evaluated before each loop iteration. If this expression
-    [evaluates to true](/en-US/docs/Glossary/Truthy), `statement` is executed. This conditional
-    test is optional. If omitted, the condition always evaluates to true. If the
-    expression [evaluates to false](/en-US/docs/Glossary/Falsy), execution skips to the first expression following the
-    `for` construct.
+  - : An expression to be evaluated before each loop iteration. If this expression [evaluates to true](/en-US/docs/Glossary/Truthy), `statement` is executed. If the expression [evaluates to false](/en-US/docs/Glossary/Falsy), execution exits the loop and goes to the first statement after the `for` construct.
+
+    This conditional test is optional. If omitted, the condition always evaluates to true.
 - `final-expression`
   - : An expression to be evaluated at the end of each loop iteration. This occurs before
     the next evaluation of `condition`. Generally used to update or
@@ -65,8 +63,8 @@ less than nine, performs the two succeeding statements, and increments `i` by
 
 ```js
 for (let i = 0; i < 9; i++) {
-   console.log(i);
-   // more statements
+  console.log(i);
+  // more statements
 }
 ```
 
@@ -78,10 +76,10 @@ For example, in the `initialization` block it is not required to
 initialize variables:
 
 ```js
-var i = 0;
+let i = 0;
 for (; i < 9; i++) {
-    console.log(i);
-    // more statements
+  console.log(i);
+  // more statements
 }
 ```
 
@@ -92,9 +90,9 @@ infinite loop.
 
 ```js
 for (let i = 0;; i++) {
-   console.log(i);
-   if (i > 3) break;
-   // more statements
+  console.log(i);
+  if (i > 3) break;
+  // more statements
 }
 ```
 
@@ -104,7 +102,7 @@ You can also omit all three blocks. Again, make sure to use a
 point.
 
 ```js
-var i = 0;
+let i = 0;
 
 for (;;) {
   if (i > 3) break;
@@ -112,6 +110,55 @@ for (;;) {
   i++;
 }
 ```
+
+However, in the case where you are not fully using all three expression positions — especially if you are not declaring variables with the first expression but mutating something in the upper scope — consider using a [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) loop instead, which makes the intention clearer.
+
+```js
+let i = 0;
+
+while (i <= 3) {
+  console.log(i);
+  i++;
+}
+```
+
+### Lexical declarations in the initialization block is scoped to the for loop
+
+Declaring a variable within the initialization block has important differences from declaring it in the upper [scope](/en-US/docs/Glossary/Scope), especially when creating a [closure](/en-US/docs/Web/JavaScript/Closures) within the loop body. For example, for the code below:
+
+```js
+for (let i = 0; i < 3; i++) {
+  setTimeout(() => {
+    console.log(i);
+  }, 1000);
+}
+```
+
+…it logs `0`, `1`, and `2`, as expected. However, if the variable is defined in the upper scope:
+
+```js
+let i = 0;
+for (; i < 3; i++) {
+  setTimeout(() => {
+    console.log(i);
+  }, 1000);
+}
+```
+
+…it logs `3`, `3`, and `3`. The reason is that each `setTimeout` creates a new closure that closes over the `i` variable, but if the `i` is not scoped to the loop body, all closures will reference the same variable when they eventually get called — and due to the asynchronous nature of [`setTimeout`](/en-US/docs/Web/API/setTimeout), it will happen after the loop has already exited, causing the value of `i` in all queued callbacks' bodies to have the value of `3`.
+
+This also happens if you use a `var` statement as the initialization, because variables declared with `var` are only function-scoped, but not lexically scoped (i.e. they can't be scoped to the loop body).
+
+```js
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    console.log(i);
+  }, 1000);
+}
+// Logs 3, 3, 3
+```
+
+The scoping effect of the initialization block can be understood as if the declaration happens within the loop body, but just happens to be accessible within the `condition` and `final-expression` parts.
 
 ### Using for without a statement
 
@@ -121,20 +168,14 @@ use of a `statement` section, a semicolon is used instead.
 
 ```js
 function showOffsetPos(sId) {
-
-  var nLeft = 0, nTop = 0;
-
+  let nLeft = 0, nTop = 0;
   for (
-
-    var oItNode = document.getElementById(sId); /* initialization */
-
+    let oItNode = document.getElementById(sId); /* initialization */
     oItNode; /* condition */
-
     nLeft += oItNode.offsetLeft, nTop += oItNode.offsetTop, oItNode = oItNode.offsetParent /* final-expression */
-
   ); /* semicolon */
 
-  console.log('Offset position of \'' + sId + '\' element:\n left: ' + nLeft + 'px;\n top: ' + nTop + 'px;');
+  console.log(`Offset position of '${sId}' element:\n left: ${nLeft}px;\n top: ${nTop}px;`);
 
 }
 
@@ -151,6 +192,20 @@ showOffsetPos('content');
 > **Note:** This is one of the few cases in JavaScript where
 > **the semicolon is mandatory**. Indeed, without the semicolon the line that
 > follows the cycle declaration will be considered a statement.
+
+### Using for with two iterating variables
+
+You can create two counters that are updated simultaneously in a for loop using the [comma operator](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator).
+
+```js
+const arr = [1, 2, 3, 4, 5, 6];
+for (let l = 0, r = arr.length - 1; l < r; l++, r--) {
+  console.log(arr[l], arr[r]);
+}
+// 1 6
+// 2 5
+// 3 4
+```
 
 ## Specifications
 

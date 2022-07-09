@@ -37,20 +37,12 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when an {{event("animationstart")}} event is sent, indicating that a [CSS animation](/en-US/docs/Web/CSS/CSS_Animations) has started playing.
 - {{domxref("GlobalEventHandlers.onauxclick")}} {{Non-standard_inline}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when an {{event("auxclick")}} event is sent, indicating that a non-primary button has been pressed on an input device (e.g. a middle mouse button).
-- {{domxref("GlobalEventHandlers.onblur")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("blur")}} event is raised.
 - {{domxref("GlobalEventHandlers.onerror")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the `error` event is raised.
-- {{domxref("GlobalEventHandlers.onfocus")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("focus")}} event is raised.
 - {{domxref("GlobalEventHandlers.oncancel")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("cancel")}} event is raised.
-- {{domxref("GlobalEventHandlers.oncanplay")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("canplay")}} event is raised.
-- {{domxref("GlobalEventHandlers.oncanplaythrough")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("canplaythrough")}} event is raised.
 - {{domxref("GlobalEventHandlers.onchange")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("change")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/change_event", "change")}} event is raised.
 - {{domxref("GlobalEventHandlers.onclick")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("click")}} event is raised.
 - {{domxref("GlobalEventHandlers.onclose")}}
@@ -73,10 +65,8 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event is raised.
 - {{domxref("GlobalEventHandlers.ondrop")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/drop_event", "drop")}} event is raised.
-- {{domxref("GlobalEventHandlers.ondurationchange")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("durationchange")}} event is raised.
 - {{domxref("GlobalEventHandlers.onemptied")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("emptied")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/emptied_event", "emptied")}} event is raised.
 - {{domxref("GlobalEventHandlers.onended")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("ended")}} event is raised.
 - {{domxref("GlobalEventHandlers.onformdata")}}
@@ -84,15 +74,15 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
 - {{domxref("GlobalEventHandlers.ongotpointercapture")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/gotpointercapture_event", "gotpointercapture")}} event type is raised.
 - {{domxref("GlobalEventHandlers.oninput")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("input")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/input_event", "input")}} event is raised.
 - {{domxref("GlobalEventHandlers.oninvalid")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("invalid")}} event is raised.
 - {{domxref("GlobalEventHandlers.onkeydown")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("keydown")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Element/keydown_event", "keydown")}} event is raised.
 - {{domxref("GlobalEventHandlers.onkeypress")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("keypress")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Element/keypress_event", "keypress")}} event is raised.
 - {{domxref("GlobalEventHandlers.onkeyup")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("keyup")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Element/keyup_event", "keyup")}} event is raised.
 - {{domxref("GlobalEventHandlers.onload")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Window/load_event", "load")}} event is raised.
 - {{domxref("GlobalEventHandlers.onloadeddata")}}
@@ -102,23 +92,23 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
 - {{domxref("GlobalEventHandlers.onloadend")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("loadend")}} event is raised (when progress has stopped on the loading of a resource.)
 - {{domxref("GlobalEventHandlers.onloadstart")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("loadstart")}} event is raised (when progress has begun on the loading of a resource.)
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/loadstart_event", "loadstart")}} event is raised (when progress has begun on the loading of a resource.)
 - {{domxref("GlobalEventHandlers.onlostpointercapture")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/lostpointercapture_event", "lostpointercapture")}} event type is raised.
 - {{domxref("GlobalEventHandlers.onmousedown")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("mousedown")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Element/mousedown_event", "mousedown")}} event is raised.
 - {{domxref("GlobalEventHandlers.onmouseenter")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("mouseenter")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Element/mouseenter_event", "mouseenter")}} event is raised.
 - {{domxref("GlobalEventHandlers.onmouseleave")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("mouseleave")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Element/mouseleave_event", "mouseleave")}} event is raised.
 - {{domxref("GlobalEventHandlers.onmousemove")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("mousemove")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Element/mousemove_event", "mousemove")}} event is raised.
 - {{domxref("GlobalEventHandlers.onmouseout")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("mouseout")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Element/mouseout_event", "mouseout")}} event is raised.
 - {{domxref("GlobalEventHandlers.onmouseover")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("mouseover")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Element/mouseover_event", "mouseover")}} event is raised.
 - {{domxref("GlobalEventHandlers.onmouseup")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("mouseup")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Element/mouseup_event", "mouseup")}} event is raised.
 - {{domxref("GlobalEventHandlers.onmousewheel")}} {{Non-standard_inline}} {{Deprecated_inline}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("mousewheel")}} event is raised. Deprecated. Use `onwheel` instead.
 - {{ domxref("GlobalEventHandlers.onwheel") }}
@@ -153,10 +143,6 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("progress")}} event is raised.
 - {{domxref("GlobalEventHandlers.onratechange")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("ratechange")}} event is raised.
-- {{domxref("GlobalEventHandlers.onreset")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("reset")}} event is raised.
-- {{domxref("GlobalEventHandlers.onresize")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("resize")}} event is raised.
 - {{domxref("GlobalEventHandlers.onscroll")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("scroll")}} event is raised.
 - {{domxref("GlobalEventHandlers.onsecuritypolicyviolation")}}
@@ -182,17 +168,9 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
 - {{domxref("GlobalEventHandlers.onsuspend")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("suspend")}} event is raised.
 - {{domxref("GlobalEventHandlers.ontimeupdate")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("timeupdate")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/timeupdate_event", "timeupdate")}} event is raised.
 - {{domxref("GlobalEventHandlers.onvolumechange")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("volumechange")}} event is raised.
-- {{domxref("GlobalEventHandlers.ontouchcancel")}} {{Non-standard_inline}} {{Experimental_inline}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("touchcancel")}} event is raised.
-- {{domxref("GlobalEventHandlers.ontouchend")}} {{Non-standard_inline}} {{Experimental_inline}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("touchend")}} event is raised.
-- {{domxref("GlobalEventHandlers.ontouchmove")}} {{Non-standard_inline}} {{Experimental_inline}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("touchmove")}} event is raised.
-- {{domxref("GlobalEventHandlers.ontouchstart")}} {{Non-standard_inline}} {{Experimental_inline}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Element/touchstart_event", "touchstart")}} event is raised.
 - {{domxref("GlobalEventHandlers.ontransitioncancel")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{event("transitioncancel")}} event is sent, indicating that a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) has been cancelled.
 - {{domxref("GlobalEventHandlers.ontransitionend")}}

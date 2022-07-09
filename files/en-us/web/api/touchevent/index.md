@@ -100,19 +100,6 @@ It's important to note that in many cases, both touch and mouse events get sent 
 
 The exception to this is Chrome, starting with version 56 (desktop, Chrome for Android, and Android webview), where the default value for the `passive` option for {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} is `true` and calls to {{domxref("Event.preventDefault","preventDefault()")}} will have no effect. To override this behavior, you need to set the `passive` option to `false`, after which calling {{domxref("Event.preventDefault","preventDefault()")}} will work as specified. The change to treat listeners as `passive` by default prevents the listener from blocking page rendering while a user is scrolling. A demo is available on the [Chrome Developer](https://developer.chrome.com/blog/passive-event-listeners/) site.
 
-## GlobalEventHandlers
-
-The {{domxref("GlobalEventHandlers")}} mixin defines these events as global events that are available on any element in the DOM that the user can interact with.
-
-- {{domxref("GlobalEventHandlers.ontouchstart")}} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler", "", 1)}} for the {{domxref("Element/touchstart_event", "touchstart")}} event.
-- {{domxref("GlobalEventHandlers.ontouchend")}} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler", "", 1)}} for the {{domxref("Element/touchend_event", "touchend")}} event.
-- {{domxref("GlobalEventHandlers.ontouchmove")}} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler", "", 1)}} for the {{domxref("Element/touchmove_event", "touchmove")}} event.
-- {{domxref("GlobalEventHandlers.ontouchcancel")}} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler", "", 1)}} for the {{domxref("Element/touchcancel_event", "touchcancel")}} event.
-
 ## Example
 
 See the [example on the main Touch events article](/en-US/docs/Web/API/Touch_events#example).

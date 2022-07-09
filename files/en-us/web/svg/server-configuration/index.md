@@ -4,4 +4,4 @@ slug: Web/SVG/Server-configuration
 tags:
   - SVG
 ---
-See <http://wiki.svg.org/Server_Configuration>
+See [SVG Server Settings](https://www.w3.org/services/svg-server/).

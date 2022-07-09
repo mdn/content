@@ -143,7 +143,7 @@ There are other types of control available, for example [`mapquest.searchControl
 
 ### Adding a custom marker
 
-Adding a marker (icon) at a certain point on the map is easy — you just use the [`L.marker()`](https://leafletjs.com/reference-1.3.0.html#marker) method (which seems to be documented in the related Leaflet.js docs). Add the following code to your example, again inside `window.onload`:
+Adding a marker (icon) at a certain point on the map is easy — you just use the [`L.marker()`](https://leafletjs.com/reference.html#marker) method (which seems to be documented in the related Leaflet.js docs). Add the following code to your example, again inside `window.onload`:
 
 ```js
 L.marker([53.480759, -2.242631], {

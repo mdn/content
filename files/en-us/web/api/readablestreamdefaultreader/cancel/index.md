@@ -53,8 +53,7 @@ parameter.
 
 In the following simple example, a previously-created custom
 `ReadableStream` is read using a {{domxref("ReadableStreamDefaultReader")}}
-created using `getReader()`. (this code is based on our [Simple random
-stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/)). Each chunk is read sequentially and output to the UI, until the
+created using `getReader()`. (this code is based on our [Simple random stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/)). Each chunk is read sequentially and output to the UI, until the
 stream has finished being read, at which point we return out of the recursive function
 and print the entire stream to another part of the UI.
 

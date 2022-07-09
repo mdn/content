@@ -15,6 +15,28 @@ This page lists features of JavaScript that are deprecated (that is, still avail
 
 These deprecated features can still be used, but should be used with caution because they are expected to be removed entirely sometime in the future. You should work to remove their use from your code.
 
+Some of these deprecated features are listed in the [Annex B](https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers) section of the ECMAScript specification. This section is described as normative optional — that is, web browser hosts must implement these features, while non-web hosts may not. These features are likely stable because removing them will cause backward compatibility issues and break legacy websites. (JavaScript has the design goal of "don't break the web".) Still, they are not cross-platform portable and may not be supported by all analysis tools, so you are advised to not use them, as the introduction of Annex B states:
+
+> … Programmers should not use or assume the existence of these features and behaviors when writing new ECMAScript code. …
+
+Some others, albeit in the main spec body, are also marked as normative optional and should not be depended on.
+
+### HTML comments
+
+JavaScript source, if parsed as scripts, allows HTML-like comments, as if the script is part of a `<script>` tag.
+
+The following is valid JavaScript when running in a web browser (or Node.js, which uses the V8 engine powering Chrome):
+
+```js
+<!-- comment
+console.log("a"); <!-- another comment
+console.log("b");
+--> More comment
+// Logs "a" and "b"
+```
+
+`<!--` and `-->` both act like `//`, i.e. starting line comments. `-->` is only valid at the start of a line (to avoid ambiguity with a postfix decrement followed by a greater than operator), while `<!--` can occur anywhere in the line.
+
 ### RegExp properties
 
 the following properties are deprecated. This does not affect their use in {{jsxref("String.replace", "replacement strings", "", 1)}}:
@@ -118,6 +140,8 @@ The following are now properties of `RegExp` instances, no longer of the `RegExp
 - {{jsxref("Object.watch", "watch")}} and {{jsxref("Object.unwatch", "unwatch")}} are deprecated. Use {{jsxref("Proxy")}} instead.
 - `__iterator__` is deprecated.
 - {{jsxref("Object.noSuchMethod", "__noSuchMethod__")}} is deprecated. Use {{jsxref("Proxy")}} instead.
+- The [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) accessors are deprecated. Use [`Object.getPrototypeOf`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf) and [`Object.setPrototypeOf`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) instead. This does not apply to the `__proto__` literal key in object literals.
+- The [`Object.prototype.__defineGetter__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__), [`Object.prototype.__defineSetter__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__), [`Object.prototype.__lookupGetter__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__), and [`Object.prototype.__lookupSetter__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) methods are deprecated. Use [`Object.getOwnPropertyDescriptor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor) and [`Object.defineProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) instead.
 
 ### Date methods
 
@@ -149,7 +173,8 @@ The following are now properties of `RegExp` instances, no longer of the `RegExp
 - HTML wrapper methods like {{jsxref("String.prototype.fontsize")}} and {{jsxref("String.prototype.big")}}.
 - {{jsxref("String.prototype.quote")}} is removed from Firefox 37.
 - non standard `flags` parameter in {{jsxref("String.prototype.search")}}, {{jsxref("String.prototype.match")}}, and {{jsxref("String.prototype.replace")}} are deprecated.
-- {{jsxref("String.prototype.substr")}} probably won't be removed anytime soon, but it's defined in [Annex B](https://262.ecma-international.org/9.0/#sec-string) of the ECMA-262 standard, whose [introduction](https://262.ecma-international.org/9.0/#sec-additional-ecmascript-features-for-web-browsers) states: "… Programmers should not use or assume the existence of these features and behaviors when writing new ECMAScript code. …"
+- {{jsxref("String.prototype.substr")}} probably won't be removed anytime soon, but it's defined in Annex B and hence normative optional.
+- {{jsxref("String.prototype.trimLeft")}} and {{jsxref("String.prototype.trimRight")}} should be replaced with {{jsxref("String.prototype.trimStart")}} and {{jsxref("String.prototype.trimEnd")}}.
 
 ## Obsolete features
 
@@ -170,7 +195,7 @@ These obsolete features have been entirely removed from JavaScript and can no lo
 
 | Property                                                             | Description                 |
 | -------------------------------------------------------------------- | --------------------------- |
-| {{jsxref("Global_Objects/Function/arity", "arity")}} | Number of formal arguments. |
+| {{jsxref("Global_Objects/Function/arity", "arity")}} | Number of formal arguments. Use [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length) instead. |
 
 ### String
 
@@ -208,7 +233,6 @@ These obsolete features have been entirely removed from JavaScript and can no lo
 ### Statements
 
 - {{jsxref("Statements/for_each...in", "for each...in")}} is deprecated. Use {{jsxref("Statements/for...of", "for...of")}} instead.
-- Destructuring {{jsxref("Statements/for...in", "for...in")}} is deprecated. Use {{jsxref("Statements/for...of", "for...of")}} instead.
 - let blocks and let expressions are obsolete.
 
 ### Sharp variables

@@ -41,7 +41,7 @@ None ({{jsxref("undefined")}}).
   to {{jsxref("WebAssembly/Table/length","Table.prototype.length")}}, a
   {{jsxref("RangeError")}} is thrown.
 - If _value_ is not an exported WebAssembly function or
-  [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null),
+  [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null),
   a {{jsxref("TypeError")}} is thrown.
 
 ## Examples
@@ -76,7 +76,7 @@ var importObj = {
 Finally, we load and instantiate a wasm module (table2.wasm) using the
 {{jsxref("WebAssembly.instantiateStreaming()")}}, log the table length, and invoke the
 two referenced functions that are now stored in the table (the table2.wasm module (see
-[text representation](https://github.com/mdn/webassembly-examples/blob/master/text-format-examples/table2.was))
+[text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat))
 adds two function references to the table, both of which print out
 a simple value):
 

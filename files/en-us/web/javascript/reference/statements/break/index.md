@@ -49,10 +49,10 @@ the value 3 \* `x`.
 
 ```js
 function testBreak(x) {
-  var i = 0;
+  let i = 0;
 
   while (i < 6) {
-    if (i == 3) {
+    if (i === 3) {
       break;
     }
     i += 1;
@@ -66,7 +66,7 @@ function testBreak(x) {
 
 The following code has a `break` statement that terminates the
 {{jsxref("Statements/switch", "switch")}} statement when a case is matched and the
-corresponding code has ran
+corresponding code has run.
 
 ```js
 const food = "sushi";
@@ -127,11 +127,11 @@ block that the `break` statements are intended to break out of.
 
 ```js
 function testBreak(x) {
-  var i = 0;
+  let i = 0;
 
   while (i < 6) {
-    if (i == 3) {
-      (function() {
+    if (i === 3) {
+      (function () {
         break;
       })();
     }

@@ -71,7 +71,7 @@ TypeError: 1 is not an object // ES5 code
 1                             // ES2015 code
 ```
 
-An {{domxref("ArrayBufferView")}} with elements will cause a {{jsxref("TypeError")}},
+A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} with elements will cause a {{jsxref("TypeError")}},
 as they are views over memory and will definitely cause other possible issues:
 
 ```js

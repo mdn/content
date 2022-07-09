@@ -18,6 +18,7 @@ tags:
   - start
 browser-compat: api.MediaRecorder.start
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 The {{domxref("MediaRecorder")}} method
@@ -32,7 +33,7 @@ been recorded, an event will be delivered to let you act upon the recorded media
 a new `Blob` is created to record the next slice of the media.
 
 Assuming the `MediaRecorder`'s {{domxref("MediaRecorder.state", "state")}}
-is `inactive`, `start()` sets the `state`  to
+is `inactive`, `start()` sets the `state` to
 `recording`, then begins capturing media from the input stream. A
 `Blob` is created and the data is collected in it until the time slice period
 elapses or the source media ends. Each time a `Blob` is filled up to that
@@ -53,8 +54,8 @@ data gathering stops. A final {{domxref("MediaRecorder.dataavailable_event", "da
 ## Syntax
 
 ```js
-start()
-start(timeslice)
+start();
+start(timeslice);
 ```
 
 ### Parameters
@@ -120,7 +121,7 @@ handler to respond to these errors.
 ## See also
 
 - [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
-  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/web-dictaphone/).)
+- [Web Dictaphone](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder +
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/media/web-dictaphone/).)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}

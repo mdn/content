@@ -77,7 +77,7 @@ Inline scripts can be expensive for page loading since the parser must assume th
 
 ### Use modern CSS and valid markup
 
-Use of modern CSS reduces the amount of markup, can reduce the need for (spacer) images, in terms of layout, and can very often replace images of stylized text -- that "cost" much more than the equivalent text-and-CSS.
+Use of modern CSS reduces the amount of markup, can reduce the need for (spacer) images, in terms of layout, and can very often replace images of stylized text — that "cost" much more than the equivalent text-and-CSS.
 
 Using valid markup has other advantages. First, browsers will have no need to perform error-correction when parsing the HTML (this is aside from the philosophical issue of whether to allow format variation in user input and then programmatically "correct" or normalize it; or whether, instead, to enforce a strict, no-tolerance input format).
 

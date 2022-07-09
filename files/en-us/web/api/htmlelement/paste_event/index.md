@@ -10,7 +10,7 @@ tags:
   - Reference
   - Web
   - paste
-browser-compat: api.HTMLElement.paste_event
+browser-compat: api.Element.paste_event
 ---
 {{ APIRef("HTML DOM") }}
 

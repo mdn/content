@@ -61,8 +61,8 @@ This example is extracted from this [Simple Image Capture demo](https://simpl.in
 {{domxref("ImageCapture")}} object.
 
 ```js
-var takePhotoButton = document.querySelector('button#takePhoto');
-var canvas = document.querySelector('canvas');
+let takePhotoButton = document.querySelector('button#takePhoto');
+let canvas = document.querySelector('canvas');
 
 takePhotoButton.onclick = takePhoto;
 

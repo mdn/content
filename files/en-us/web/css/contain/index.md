@@ -18,6 +18,8 @@ browser-compat: css.properties.contain
 
 The **`contain`** [CSS](/en-US/docs/Web/CSS) property allows an author to indicate that an element and its contents are, as much as possible, _independent_ of the rest of the document tree. This allows the browser to recalculate layout, style, paint, size, or any combination of them for a limited area of the DOM and not the entire page, leading to obvious performance benefits.
 
+{{EmbedInteractiveExample("pages/css/contain.html")}}
+
 This property is useful on pages that contain a lot of widgets that are all independent, as it can be used to prevent each widget's internals from having side effects outside of the widget's bounding-box.
 
 > **Note:** If applied (with value: `paint`, `strict` or `content`), this property creates:

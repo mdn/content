@@ -8,6 +8,7 @@ tags:
   - Reference
   - USB
   - WebUSB
+  - Experimental
 browser-compat: api.USB.connect_event
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}

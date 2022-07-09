@@ -20,7 +20,7 @@ generator.
 ## Syntax
 
 ```js
-next(value)
+generatorObject.next(value)
 ```
 
 ### Parameters

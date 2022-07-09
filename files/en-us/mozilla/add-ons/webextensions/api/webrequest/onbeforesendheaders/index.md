@@ -77,7 +77,7 @@ Events have three functions:
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A set of filters that restricts the events that will be sent to this listener.
-- `extraInfoSpec`{{optional_inline}}
+- `extraInfoSpec` {{optional_inline}}
 
   - : `array` of `string`. Extra options for the event. You can pass any of the following values:
 
@@ -132,7 +132,7 @@ Events have three functions:
     - `failoverTimeout`
       - : `integer`. Failover timeout in seconds. If the proxy connection fails, the proxy will not be used again for this period.
 
-- `requestHeaders`{{optional_inline}}
+- `requestHeaders` {{optional_inline}}
   - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. The HTTP request headers that will be sent with this request.
 - `requestId`
   - : `string`. The ID of the request. Request IDs are unique within a browser session, so you can use them to relate different events associated with the same request.

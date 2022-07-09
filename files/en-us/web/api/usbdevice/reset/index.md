@@ -11,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - reset
+  - Experimental
 browser-compat: api.USBDevice.reset
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}

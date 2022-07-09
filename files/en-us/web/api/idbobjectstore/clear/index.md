@@ -58,7 +58,7 @@ full working example, see our [To-do Notifications](https://github.com/mdn/to-do
 
 ```js
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
   note.innerHTML += '<li>Database initialized.</li>';
@@ -73,7 +73,7 @@ DBOpenRequest.onsuccess = function(event) {
 
 function clearData() {
   // open a read/write db transaction, ready for clearing the data
-  var transaction = db.transaction(["toDoList"], "readwrite");
+  const transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of the transaction completing, when everything is done
   transaction.oncomplete = function(event) {
@@ -85,10 +85,10 @@ function clearData() {
   };
 
   // create an object store on the transaction
-  var objectStore = transaction.objectStore("toDoList");
+  const objectStore = transaction.objectStore("toDoList");
 
   // Make a request to clear all the data out of the object store
-  var objectStoreRequest = objectStore.clear();
+  const objectStoreRequest = objectStore.clear();
 
   objectStoreRequest.onsuccess = function(event) {
     // report the success of our request

@@ -72,12 +72,12 @@ When an error occurs in a script, loaded from a [different origin](/en-US/docs/W
 
 ```js
 window.onerror = function (msg, url, lineNo, columnNo, error) {
-  var string = msg.toLowerCase();
-  var substring = 'script error';
+  const string = msg.toLowerCase();
+  const substring = 'script error';
   if (string.indexOf(substring) > -1){
     alert('Script Error: See Browser Console for Detail');
   } else {
-    var message = [
+    const message = [
       'Message: ' + msg,
       'URL: ' + url,
       'Line: ' + lineNo,

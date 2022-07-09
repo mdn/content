@@ -29,7 +29,7 @@ let gettingSessions = browser.sessions.getRecentlyClosed(
 
 ### Parameters
 
-- `filter`{{optional_inline}}
+- `filter` {{optional_inline}}
   - : `object`. A {{WebExtAPIRef("sessions.Filter")}} object that limits the set of sessions returned.
 
 ### Return value

@@ -44,8 +44,8 @@ element. For simplicity it does not show how to instantiate the
 {{domxref("ImageCapture")}} object.
 
 ```js
-var grabFrameButton = document.querySelector('button#grabFrame');
-var canvas = document.querySelector('canvas');
+let grabFrameButton = document.querySelector('button#grabFrame');
+let canvas = document.querySelector('canvas');
 
 grabFrameButton.onclick = grabFrame;
 

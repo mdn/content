@@ -100,8 +100,7 @@ X-Forwarded-For: 203.0.113.195,2001:db8:85a3:8d3:1319:8a2e:370:7348,150.172.238.
 Improper parsing of the `X-Forwarded-For` header can result in spoofed values being used
 for security-related purposes, resulting in the negative consequences mentioned above.
 
-There may be multiple `X-Forwarded-For` headers present in a request (per [RFC
-2616](https://datatracker.ietf.org/doc/html/rfc2616#section-4.2)). The IP addresses in
+There may be multiple `X-Forwarded-For` headers present in a request (per [RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-4.2)). The IP addresses in
 these headers must be treated as a single list, starting with the first IP address of the
 first header and continuing to the last IP address of the last header. There are two ways
 of making this single list:
@@ -122,8 +121,7 @@ When choosing the `X-Forwarded-For` client IP address closest to the client (unt
 and _not_ for security-related purposes), the first IP from the leftmost that is _a valid
 address_ and _not private/internal_ should be selected. ("Valid" because spoofed values
 may not be IP addresses at all; "not internal/private" because clients may have used
-proxies on their internal network, which may have added addresses from the [private IP
-space](https://en.wikipedia.org/wiki/Private_network).)
+proxies on their internal network, which may have added addresses from the [private IP space](https://en.wikipedia.org/wiki/Private_network).)
 
 When choosing the first _trustworthy_ `X-Forwarded-For` client IP address, additional
 configuration is required. There are two common methods:
