@@ -44869,25 +44869,6 @@
       "Spocke"
     ]
   },
-  "Web/API/GlobalEventHandlers/onselect": {
-    "modified": "2020-10-15T21:06:33.971Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfluehr",
-      "fscholz",
-      "erikadoyle",
-      "jpmedley",
-      "cvrebert",
-      "teoli",
-      "kscarfone",
-      "Sheppy",
-      "ziyunfei",
-      "Jabez",
-      "Nickolay",
-      "Mw22",
-      "alecananian"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onselectionchange": {
     "modified": "2020-10-15T21:51:39.271Z",
     "contributors": [

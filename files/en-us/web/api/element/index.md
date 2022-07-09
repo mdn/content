@@ -315,7 +315,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{domxref("Element/select_event", "select")}}
   - : Fired when some text has been selected.
-    Also available via the {{DOMxRef("GlobalEventHandlers.onselect", "onselect")}} property.
 - {{domxref("Element/show_event", "show")}} {{deprecated_inline}}
   - : Fired when a {{domxref("Element/contextmenu_event", "contextmenu")}} event was fired on/bubbled to an element that has a [`contextmenu`](/en-US/docs/Web/HTML/Global_attributes/contextmenu) attribute.
     Also available via the {{DOMxRef("GlobalEventHandlers.onshow", "onshow")}} property.

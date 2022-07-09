@@ -15,33 +15,21 @@ browser-compat: api.Element.select_event
 
 The **`select`** event fires when some text has been selected.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>
-        {{domxref("UIEvent")}} if generated from a user interface,
-        {{domxref("Event")}} otherwise
-      </td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers.onselect", "onselect")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 The event is not available for all elements in all languages. For example, in HTML, `select` events can be dispatched only on form `{{HtmlElement('input/text', '&lt;input type="text"&gt;')}}` and {{HtmlElement("textarea")}} elements.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('select', (event) => {});
+
+onselect = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -67,7 +55,7 @@ input.addEventListener('select', logSelection);
 
 ### onselect equivalent
 
-You can also set up the event handler using the {{domxref("GlobalEventHandlers.onselect", "onselect")}} property:
+You can also set up the event handler using the `onselect` property:
 
 ```js
 input.onselect = logSelection;
