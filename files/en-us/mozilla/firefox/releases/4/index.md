@@ -392,7 +392,7 @@ Several changes were made to the [`<xul:tabbrowser>`](/en-US/docs/Mozilla/Tech/X
 
 #### Remote XUL support removed
 
-Remote XUL is no longer supported; this affects XUL documents being served through HTTP; also, you can no longer load XUL documents using `file://` URLs unless you create the preference `dom.allow_XUL_XBL_for_file` and set it to `true`. There is, however, a whitelist feature that can be used to allow specific domains to load remote XUL. The [Remote XUL Manager extension](https://addons.mozilla.org/en-US/firefox/addon/235281/) lets you manage this whitelist.
+Remote XUL is no longer supported; this affects XUL documents being served through HTTP; also, you can no longer load XUL documents using `file://` URLs unless you create the preference `dom.allow_XUL_XBL_for_file` and set it to `true`. There is, however, a whitelist feature that can be used to allow specific domains to load remote XUL.
 
 #### Miscellaneous XUL changes
 
