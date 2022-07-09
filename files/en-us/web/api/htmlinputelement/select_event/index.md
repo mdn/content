@@ -15,8 +15,6 @@ page-type: web-api-event
 
 The **`select`** event fires when some text has been selected.
 
-The event is not available for all elements in all languages. For example, in HTML, `select` events can be dispatched only on form `{{HtmlElement('input/text', '&lt;input type="text"&gt;')}}` and {{HtmlElement("textarea")}} elements.
-
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
