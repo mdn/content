@@ -44,7 +44,7 @@ In this example, an [munder](/en-US/docs/Web/MathML/Element/munder) element is u
 
 ## Notes on MathML versions
 
-* MathML Core relies on `math-style` to implement the `displaystyle` attribute, but implementations of older MathML versions may follow a different approach to implement similar behavior.
+- MathML Core relies on `math-style` to implement the `displaystyle` attribute, but implementations of older MathML versions may follow a different approach to implement similar behavior.
 
 ## Specifications
 

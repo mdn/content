@@ -23,7 +23,7 @@ You can access `CacheStorage` through the global
 
 `Cache` objects are searched in creation order.
 
-> **Note:** {{domxref("CacheStorage.match()", "caches.match()")}} is a convenience method. 
+> **Note:** {{domxref("CacheStorage.match()", "caches.match()")}} is a convenience method.
 > Equivalent functionality is to call {{domxref("cache.match()")}} on each cache (in the order returned by {{domxref("CacheStorage.keys()", "caches.keys()")}}) until a {{domxref("Response")}} is returned.
 
 ## Syntax
