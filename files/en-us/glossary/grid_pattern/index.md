@@ -1,10 +1,10 @@
 ---
- title: Grid (ARIA)
- slug: Glossary/Grid_pattern
- tags:
-   - Accessibility
-   - ARIA
-   - Glossary
+title: Grid (ARIA)
+slug: Glossary/Grid_pattern
+tags:
+  - Accessibility
+  - ARIA
+  - Glossary
 ---
 A **Grid** is an ARIA design pattern describing a type of composite user interface widget.  A grid widget is a generic container that groups page elements for data or layout purposes.
  
