@@ -34,9 +34,6 @@ The **`mathsize`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) 
 
 ## Notes on MathML versions
 
-
-
-
 ## Specifications
 
 {{Specifications}}
@@ -46,7 +43,7 @@ The **`mathsize`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) 
   Since MathML Core, the syntax matches CSS
   {{cssxref("&lt;length-percentage&gt;")}} values.
 
-* This attribute was designed for MathML applications that are not CSS-aware.
+- This attribute was designed for MathML applications that are not CSS-aware.
   Since MathML Core, the use of equivalent CSS is recommended instead.
 
 ## Browser compatibility

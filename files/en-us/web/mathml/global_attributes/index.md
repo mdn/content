@@ -35,9 +35,9 @@ In addition to the basic MathML global attributes, the following global attribut
     - `auto`, which lets the user agent decide. It uses a basic algorithm as it parses the characters inside the element until it finds a character with a strong directionality, then it applies that directionality to the whole element.
 
 - [`displaystyle`](/en-US/docs/Web/MathML/Global_attributes/displaystyle):
-    - : a boolean setting the [math-style](/en-US/docs/Web/CSS/math-style) for the element.
-      - `true`, which means `normal`.
-      - `false`, which means `compact`.
+  - : a boolean setting the [math-style](/en-US/docs/Web/CSS/math-style) for the element.
+    - `true`, which means `normal`.
+    - `false`, which means `compact`.
 
 - [`id`](/en-US/docs/Web/HTML/Global_attributes/id)
   - : Defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a fragment identifier), scripting, or styling (with CSS).

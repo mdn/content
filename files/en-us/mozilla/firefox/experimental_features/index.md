@@ -1536,7 +1536,6 @@ The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Sched
 This is enabled on Firefox Nightly (only) from Firefox 101.
 No preference is provided to allow it to be enabled in other releases.
 
-
 ## Security and privacy
 
 ### Block plain text requests from Flash on encrypted pages
