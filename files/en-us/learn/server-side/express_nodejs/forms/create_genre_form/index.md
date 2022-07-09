@@ -14,7 +14,7 @@ This sub article shows how we define our page to create `Genre` objects (this is
 
 To use the _express-validator_ in our controllers we have to _require_ the functions we want to use from the `'express-validator'` module.
 
-Open `/controllers/genreController.js`, and add the following line at the top of the file:
+Open **/controllers/genreController.js**, and add the following line at the top of the file:
 
 ```js
 const { body, validationResult } = require("express-validator");
