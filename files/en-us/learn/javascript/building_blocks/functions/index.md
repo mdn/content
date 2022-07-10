@@ -126,7 +126,7 @@ We needed this function because the browser's built-in [Math.random()](/en-US/do
 
 ## Invoking functions
 
-You are probably clear on this by now, but just in case ... to actually use a function after it has been defined, you've got to run — or invoke — it. This is done by including the name of the function in the code somewhere, followed by parentheses.
+You are probably clear on this by now, but just in case, to actually use a function after it has been defined, you've got to run — or invoke — it. This is done by including the name of the function in the code somewhere, followed by parentheses.
 
 ```js
 function myFunction() {
@@ -216,7 +216,7 @@ This is called an **anonymous function**, because it has no name. You'll often s
 
 For example, let's say you want to run some code when the user types into a text box. To do this you can call the {{domxref("EventTarget/addEventListener", "addEventListener()")}} function of the text box. This function expects you to pass it (at least) two parameters:
 
-- the name of the event to listen for, which in this case is {{domxref("Document/keydown_event", "keydown")}}
+- the name of the event to listen for, which in this case is {{domxref("Element/keydown_event", "keydown")}}
 - a function to run when the event happens.
 
 When the user presses a key, the browser will call the function you provided, and will pass it a parameter containing information about this event, including the particular key that the user pressed:

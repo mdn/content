@@ -53,9 +53,7 @@ the level of site, so for example two storage access grants for
 single exception against the limit.
 
 At the time of a `requestStorageAccess()` call, if the requesting origin has
-storage access to...
-
-...fewer sites than the maximum and has been interacted with as a first party in the last 30 days:
+storage access to fewer sites than the maximum and has been interacted with as a first party in the last 30 days:
 
 - The user is not prompted.
 - The origin is given an ephemeral storage access grant for the current top-level

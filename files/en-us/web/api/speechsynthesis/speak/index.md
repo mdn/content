@@ -41,15 +41,15 @@ we (amongst other things) create a new utterance containing this text, then spea
 passing it into `speak()` as a parameter.
 
 ```js
-var synth = window.speechSynthesis;
+const synth = window.speechSynthesis;
 
   ...
 
 inputForm.onsubmit = function(event) {
   event.preventDefault();
 
-  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+  const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
+  const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
   for(let i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];

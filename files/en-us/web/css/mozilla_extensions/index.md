@@ -277,7 +277,7 @@ Property: {{CSSxRef("background-image")}}
 
 Property: {{CSSxRef("border-color")}}
 
-- `-moz-use-text-color`{{deprecated_inline}} (removed in {{bug(1306214)}}); use {{CSSxRef("color_value#currentcolor_keyword","currentcolor")}} instead.
+- `-moz-use-text-color` {{deprecated_inline}} (removed in {{bug(1306214)}}); use {{CSSxRef("color_value#currentcolor_keyword","currentcolor")}} instead.
 
 ### order-style and outline-style
 

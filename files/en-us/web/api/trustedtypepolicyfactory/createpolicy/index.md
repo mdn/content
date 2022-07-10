@@ -32,7 +32,7 @@ createPolicy(policyName, policyOptions)
 
 - `policyName`
   - : A string with the name of the policy.
-- `policyOptions`{{optional_inline}}
+- `policyOptions` {{optional_inline}}
 
   - : User-defined functions for converting strings into trusted values.
 

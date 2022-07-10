@@ -17,7 +17,7 @@ The following guidelines cover how to write Shell prompts on MDN pages.
 A shell is a program that waits for you to type in a command and then press the return key. To indicate which commands you should type, MDN documentation lists them in a code block, similar to code examples. Such a block looks like this:
 
 ```bash example-good
-# This may take a while...
+# This may take a while…
 hg clone https://hg.mozilla.org/mozilla-central/ firefox
 cd firefox
 ```

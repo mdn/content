@@ -173,6 +173,7 @@ _No changes._
 - When an add-on attempts to add a bookmark folder to the root folder, the resulting error message is now much more intuitive ({{bug(1512171)}}).
 - The promise returned by [`browser.tabs.duplicate()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/duplicate) now resolves immediately, before the tabs are completely loaded ({{bug(1394376)}}).
 - Support has been added for chrome.storage.managed, allowing web extension settings to be implemented via enterprise policy ({{bug(1230802)}}).
+- `proxyAuthorization` and `connectionIsolation` in {{WebExtAPIRef("proxy.onRequest")}} now apply only to HTTPS proxies ({{bug(1549368)}}.
 
 ### Manifest changes
 

@@ -108,7 +108,7 @@ orderButton.addEventListener("click", function() {
 }, false);
 ```
 
-This script sets up a {{event("click")}} event listener on the "Order Now" button. When
+This script sets up a {{domxref("Element/click_event", "click")}} event listener on the "Order Now" button. When
 clicked, the event handler fetches the list of selected options using
 `selectedOptions`, then iterates over the options in the list. A string is
 constructed to list the ordered items, with logic to build the list using proper English

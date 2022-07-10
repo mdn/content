@@ -47,7 +47,7 @@ If you want to prevent the default action of mouse wheel events, it's not enough
 
 On Gecko 17 (Firefox 17) or later, you need to call `preventDefault()` of `wheel` events which must be fired for every native event.
 
-Use the standardized {{event("wheel")}} event if available.
+Use the standardized {{domxref("Element/wheel_event","wheel")}} event if available.
 
 ## Properties
 

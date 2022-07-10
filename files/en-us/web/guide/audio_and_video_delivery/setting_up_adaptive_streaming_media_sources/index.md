@@ -206,7 +206,7 @@ it might be wise to provide a fallback:
 </video>
 ```
 
-> **Note:** MPEG-DASH playback relies on [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) and browser support for [Media Source Extensions](https://w3c.github.io/media-source/), see the latest [dash.js reference player](https://dashif.org/reference/players/javascript/index.html).
+> **Note:** MPEG-DASH playback relies on [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) and browser support for [Media Source Extensions](https://w3c.github.io/media-source/), see the latest [dash.js reference player](https://reference.dashif.org/dash.js/v4.4.0/samples/dash-if-reference-player/index.html).
 
 ## HLS Encoding
 
@@ -279,4 +279,4 @@ Further resources on adaptive streaming.
 Adaptive streaming examples
 
 - [ITEC – Dynamic Adaptive Streaming over HTTP](https://dash.itec.aau.at/dash-dataset/)
-- [MPEG DASH Media Source Demo](https://dash-mse-test.appspot.com/media.html)
+- [MPEG DASH Media Source Demo](https://web.archive.org/web/20170703160817/https://dash-mse-test.appspot.com/media.html)

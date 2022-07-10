@@ -26,15 +26,15 @@ configure(config)
   - : An object containing the following members:
     - `codec`
       - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#video-codec-registry).
-    - `description`{{Optional_Inline}}
+    - `description` {{optional_inline}}
       - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing a sequence of codec specific bytes, commonly known as extradata.
-    - `codedWidth`{{Optional_Inline}}
+    - `codedWidth` {{optional_inline}}
       - : An integer representing the width of the {{domxref("VideoFrame")}} in pixels, including any non-visible padding, before any ratio adjustments.
-    - `codedHeight`{{Optional_Inline}}
+    - `codedHeight` {{optional_inline}}
       - : An integer representing the height of the {{domxref("VideoFrame")}} in pixels, including any non-visible padding, before any ratio adjustments.
-    - `displayAspectWidth`{{Optional_Inline}}
+    - `displayAspectWidth` {{optional_inline}}
       - : An integer representing the horizontal dimension of the {{domxref("VideoFrame")}} in pixels when displayed.
-    - `displayAspectHeight`{{Optional_Inline}}
+    - `displayAspectHeight` {{optional_inline}}
       - : An integer representing the vertical dimension of the {{domxref("VideoFrame")}} in pixels when displayed.
     - `colorSpace`
       - : An object. representing a {{domxref("VideoColorSpace")}}, containing the following members:

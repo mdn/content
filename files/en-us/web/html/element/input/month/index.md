@@ -296,7 +296,7 @@ For example:
 - `mm-yyyy` (07-2022)
 - `yyyy-mm` (2022-07)
 - `Month yyyy` (July 2022)
-- ... and so forth.
+- and so forth…
 
 One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute on your `month` input.
 Even though the `month` input doesn't use it, if the browser falls back to treating it like a `text` input, the pattern will be used.

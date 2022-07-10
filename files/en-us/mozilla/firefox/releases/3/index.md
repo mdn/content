@@ -239,8 +239,8 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 ### Security and privacy
 
 - **One-click site information.** Want to know more about the site you're visiting? Click the site's icon in the location bar to see who owns it. Identify information is prominently displayed and easier than ever to understand.
-- **Malware protection.** Firefox 3 warns you if you arrive at a web site that is known to install viruses, spyware, trojans, or other dangerous software (known as malware). You can see what the warning looks like by [clicking here](https://www.mozilla.org/en-US/firefox/its-an-attack.html).
-- **Web forgery protection enhanced.** Now when you visit a page that's suspected of being a forgery, you're shown a special page instead of the contents of the page with a warning. [Click here](https://www.mozilla.org/en-US/firefox/its-a-trap.html) to see what it looks like.
+- **Malware protection.** Firefox 3 warns you if you arrive at a web site that is known to install viruses, spyware, trojans, or other dangerous software (known as malware).
+- **Web forgery protection enhanced.** Now when you visit a page that's suspected of being a forgery, you're shown a special page instead of the contents of the page with a warning.
 - **Easier to understand SSL errors.** The errors presented when an invalid SSL certificate is encountered have been clarified to make it easier to understand what the problem is.
 - **Out-of-date add-on protection.** Firefox 3 now automatically checks add-on and plugin versions and disables older, insecure versions.
 - **Secure add-on updates.** Add-on update security has been improved by disallowing add-ons that use an insecure update mechanism.

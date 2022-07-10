@@ -63,4 +63,4 @@ There are currently no built-in JavaScript objects that have the `[Symbol.asyncI
 ## See also
 
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [for await... of](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of)
+- [for await...of](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of)

@@ -15,7 +15,7 @@ browser-compat: api.GlobalEventHandlers.oncontextmenu
 
 The **`oncontextmenu`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("contextmenu")}} events.
+processes {{domxref("Element/contextmenu_event", "contextmenu")}} events.
 
 The `contextmenu` event typically fires when the right mouse button is
 clicked on the window. Unless the default behavior is prevented, the browser context
@@ -143,4 +143,4 @@ if a `contextmenu` event handler is defined.
 
 ## See also
 
-- {{event("contextmenu")}} event
+- {{domxref("Element/contextmenu_event", "contextmenu")}} event

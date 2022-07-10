@@ -21,7 +21,7 @@ Examples: [Amazon Assistant for Firefox](https://addons.mozilla.org/en-US/firefo
 
 ![](myweb_new_tab_add_on.png)
 
-Examples: [MyWeb New Tab](https://addons.mozilla.org/en-US/firefox/addon/myweb-new-tab/), [Tabliss](https://addons.mozilla.org/en-US/firefox/addon/tabliss/), and [VivaldiFox](https://addons.mozilla.org/en-US/firefox/addon/vivaldifox/)
+Examples: [MyWeb New Tab](https://chrome.google.com/webstore/detail/myweb-new-tab/cnbiadnhebmicjcbpgajglfemclnlagh), [Tabliss](https://addons.mozilla.org/en-US/firefox/addon/tabliss/), and [VivaldiFox](https://addons.mozilla.org/en-US/firefox/addon/vivaldifox/)
 
 **Add or remove content from web pages**: You might want to help users block intrusive ads from web pages, provide access to a travel guide whenever a country or city is mentioned in a web page, or reformat page content to offer a consistent reading experience. With the ability to access and update both a page's HTML and CSS, extensions can help users see the web the way they want to.
 
@@ -37,9 +37,7 @@ Examples: [Swimlanes for Trello](https://addons.mozilla.org/en-US/firefox/addon/
 
 **Games**: Offer traditional computer games with off-line play features, or explore new game possibilities; for example, by incorporating gameplay into everyday browsing.
 
-![](asteroids_in_popup_add_on_.png)
-
-Examples: [Asteroids in Popup](https://addons.mozilla.org/en-US/firefox/addon/asteroids-in-popup/), [Solitaire Card Game New Tab](https://addons.mozilla.org/en-US/firefox/addon/solitaire-card-game-new-tab/), and [2048 Prime](https://addons.mozilla.org/en-US/firefox/addon/2048-prime/).
+Examples: [Solitaire Card Game](https://addons.mozilla.org/en-US/firefox/addon/solitaire-spider-freecell/), and [2048 Prime](https://addons.mozilla.org/en-US/firefox/addon/2048-prime/).
 
 **Add development tools**: You may provide web development tools as your business or have developed a useful technique or approach to web development that you want to share. Either way, you can enhance the built-in Firefox developer tools by adding a new tab to the developer toolbar.
 
@@ -49,7 +47,7 @@ Examples: [Web Developer](https://addons.mozilla.org/en-US/firefox/addon/web-dev
 
 Extensions for Firefox are built using the [WebExtensions APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions), a cross-browser system for developing extensions. To a large extent, the API is compatible with the [extension API](https://developer.chrome.com/docs/extensions/reference/) supported by Google Chrome and Opera. Extensions written for these browsers will in most cases run in Firefox or Microsoft Edge with just a few [changes](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). The API is also fully compatible with [multiprocess Firefox](/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox).
 
-If you have ideas or questions, or need help [migrating a legacy add-on to WebExtensions APIs](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/), you can reach us on the [dev-addons mailing list](https://mail.mozilla.org/listinfo/dev-addons) or in the [Add-ons room](https://chat.mozilla.org/#/room/#addons:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix).
+If you have ideas or questions, or need help [migrating a legacy add-on to WebExtensions APIs](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/), you can reach us on the [Add-ons Discourse](https://discourse.mozilla.org/c/add-ons/35) or in the [Add-ons room](https://chat.mozilla.org/#/room/#addons:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix).
 
 ## What's next?
 
