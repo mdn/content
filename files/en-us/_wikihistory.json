@@ -44324,12 +44324,6 @@
       "alecananian"
     ]
   },
-  "Web/API/GlobalEventHandlers/onformdata": {
-    "modified": "2020-10-15T22:24:47.547Z",
-    "contributors": [
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/GlobalEventHandlers/ongotpointercapture": {
     "modified": "2020-10-15T21:51:24.512Z",
     "contributors": [
