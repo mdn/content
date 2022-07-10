@@ -179,7 +179,15 @@ It is no wonder that objects are sometimes called **associative arrays** — the
 
 Dot notation is generally preferred over bracket notation because it is more succint and easier to read.
 However there are some cases where you have to use brackets.
-For example, if an object property name is defined at runtime then you can't use dot notation to access the value, but you can pass the name as a variable inside brackets.
+For example, if an object property name is defined at runtime then you can't use dot notation to access the value, but you can pass the name as a variable inside brackets as shown with `input` below:
+
+```js
+const person = {
+  name: ['Bob', 'Smith'],
+  age: 32
+}
+const input = prompt('Get name or age?')
+console.log(person[input])
 
 ## Setting object members
 
