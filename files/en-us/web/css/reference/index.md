@@ -23,7 +23,7 @@ style-rule ::=
     }
 ```
 
-… where :
+Where :
 
 ```css
 selectors-list ::=
