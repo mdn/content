@@ -52,7 +52,3 @@ This event is not on any standards track.
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("GlobalEventHandlers.onshow", "onshow")}}
