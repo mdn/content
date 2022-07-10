@@ -45,7 +45,7 @@ session.requestAnimationFrame(function(frame) {
     if (view.isFirstPersonObserver) {
       renderFPO();
     } else {
-      render());
+      render();
     }
   }
 });

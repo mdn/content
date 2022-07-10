@@ -62,7 +62,7 @@ function onXRFrame(time, xrFrame) {
     if (resultsPerInputSource.inputSource == myPreferredInputSource) {
       // act on hit test results from the preferred input source
     }
-  }
+  });
  }
  ```
 
