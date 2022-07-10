@@ -185,10 +185,10 @@ It is possible to process/render an audio graph very quickly in the background â
 
 - {{domxref("OfflineAudioContext")}}
   - : The **`OfflineAudioContext`** interface is an {{domxref("AudioContext")}} interface representing an audio-processing graph built from linked together {{domxref("AudioNode")}}s. In contrast with a standard `AudioContext`, an `OfflineAudioContext` doesn't really render the audio but rather generates it, _as fast as it can_, in a buffer.
-- {{event("complete")}} (event)
+- {{domxref("OfflineAudioContext/complete_event", "complete")}} (event)
   - : The `complete` event is fired when the rendering of an {{domxref("OfflineAudioContext")}} is terminated.
 - {{domxref("OfflineAudioCompletionEvent")}}
-  - : The `OfflineAudioCompletionEvent` represents events that occur when the processing of an {{domxref("OfflineAudioContext")}} is terminated. The {{event("complete")}} event uses this interface.
+  - : The `OfflineAudioCompletionEvent` represents events that occur when the processing of an {{domxref("OfflineAudioContext")}} is terminated. The {{domxref("OfflineAudioContext/complete_event", "complete")}} event uses this interface.
 
 ## Guides and tutorials
 
