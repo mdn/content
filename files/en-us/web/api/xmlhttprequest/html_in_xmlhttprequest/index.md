@@ -68,7 +68,7 @@ There are two challenges to detecting exactly if a browser supports HTML parsing
 
 Thus, to detect HTML support, a test HTML file is needed on the server. This test file is small and is not well-formed XML:
 
-```js
+```html
 <title>&amp;&<</title>
 ```
 
