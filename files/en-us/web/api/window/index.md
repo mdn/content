@@ -322,8 +322,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Called after the ANY mouse button is pressed & released.
 - {{domxref("GlobalEventHandlers.ondblclick")}}
   - : Called when a double click is made with ANY mouse button.
-- {{domxref("GlobalEventHandlers.onclose")}}
-  - : Called after the window is closed.
 - {{domxref("GlobalEventHandlers.oncontextmenu")}}
   - : Called when the RIGHT mouse button is pressed.
 - {{domxref("GlobalEventHandlers.onerror")}}

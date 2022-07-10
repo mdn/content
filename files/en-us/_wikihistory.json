@@ -44151,22 +44151,6 @@
       "JesseW"
     ]
   },
-  "Web/API/GlobalEventHandlers/onclose": {
-    "modified": "2020-10-15T21:15:09.999Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "jpmedley",
-      "cvrebert",
-      "Sebastianz",
-      "teoli",
-      "SphinxKnight",
-      "kscarfone",
-      "Sheppy",
-      "Djc8080",
-      "alecananian"
-    ]
-  },
   "Web/API/GlobalEventHandlers/oncontextmenu": {
     "modified": "2020-10-15T21:04:57.192Z",
     "contributors": [

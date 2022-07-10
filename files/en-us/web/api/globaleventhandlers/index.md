@@ -41,8 +41,6 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the `error` event is raised.
 - {{domxref("GlobalEventHandlers.onclick")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Element/click_event", "click")}} event is raised.
-- {{domxref("GlobalEventHandlers.onclose")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("close")}} event is raised.
 - {{domxref("GlobalEventHandlers.oncontextmenu")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Element/contextmenu_event", "contextmenu")}} event is raised.
 - {{domxref("GlobalEventHandlers.ondblclick")}}
