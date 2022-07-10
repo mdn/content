@@ -125,7 +125,7 @@ _No changes._
 
 - Command `WebDriver:ElementSendKeys` has been made WebDriver conforming for file uploads ({{bug(1448792)}}).
 - User prompts as raised by `beforeunload` events are automatically dismissed for `WebDriver:Get`, `WebDriver:Back`, `WebDriver:Forward`, `WebDriver:Refresh`, and `WebDriver:Close` commands ({{bug(1434872)}}).
-- `WebDriver:PerformActions` for `Ctrl` + `Click` synthesizes a {{event("contextmenu")}} event ({{bug(1421323)}}).
+- `WebDriver:PerformActions` for `Ctrl` + `Click` synthesizes a {{domxref("Element/contextmenu_event", "contextmenu")}} event ({{bug(1421323)}}).
 
 #### API changes
 

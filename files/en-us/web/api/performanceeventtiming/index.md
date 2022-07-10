@@ -14,14 +14,14 @@ browser-compat: api.PerformanceEventTiming
 ---
 The `PerformanceEventTiming` interface of the Event Timing API provides timing information for the event types listed below.
 
-- {{event("auxclick")}}
+- {{domxref("Element/auxclick_event", "auxclick")}}
 - {{domxref("HTMLElement/beforeinput_event", "beforeinput")}}
-- {{event("click")}}
+- {{domxref("Element/click_event", "click")}}
 - {{domxref("Element/compositionend_event", "compositionend")}}
 - {{domxref("Element/compositionstart_event", "compositionstart")}}
 - {{domxref("Element/compositionupdate_event", "compositionupdate")}}
-- {{event("contextmenu")}}
-- {{event("dblclick")}}
+- {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("Element/dblclick_event", "dblclick")}}
 - {{domxref("HTMLElement/dragend_event", "dragend")}}
 - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
 - {{domxref("HTMLElement/dragleave_event", "dragleave")}}

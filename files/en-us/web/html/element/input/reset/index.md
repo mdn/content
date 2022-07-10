@@ -18,7 +18,7 @@ browser-compat: html.elements.input.type_reset
 
 {{HTMLRef("Input_types")}}
 
-{{HTMLElement("input")}} elements of type **`reset`** are rendered as buttons, with a default {{event("click")}} event handler that resets all of the inputs in the form to their initial values.
+{{HTMLElement("input")}} elements of type **`reset`** are rendered as buttons, with a default {{domxref("Element/click_event", "click")}} event handler that resets all of the inputs in the form to their initial values.
 
 {{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}
 

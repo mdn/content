@@ -247,7 +247,7 @@ startButton.addEventListener("click", function() {
 }, false);
 ```
 
-When a {{event("click")}} event occurs, here's what happens:
+When a {{domxref("Element/click_event", "click")}} event occurs, here's what happens:
 
 - Lines 2-4
   - : {{domxref("MediaDevices.getUserMedia")}} is called to request a new {{domxref("MediaStream")}} that has both video and audio tracks. This is the stream we'll record.
@@ -268,7 +268,7 @@ When a {{event("click")}} event occurs, here's what happens:
 
 ### Handling the stop button
 
-The last bit of code adds a handler for the {{event("click")}} event on the stop button using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
+The last bit of code adds a handler for the {{domxref("Element/click_event", "click")}} event on the stop button using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
 stopButton.addEventListener("click", function() {

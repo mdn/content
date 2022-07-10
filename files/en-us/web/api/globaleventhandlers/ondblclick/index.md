@@ -15,10 +15,10 @@ browser-compat: api.GlobalEventHandlers.ondblclick
 
 The **`ondblclick`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("dblclick")}} events on the given element.
+processes {{domxref("Element/dblclick_event", "dblclick")}} events on the given element.
 
 The `dblclick` event is raised when the user double clicks an element. It
-fires after two {{event("click")}} events.
+fires after two {{domxref("Element/click_event", "click")}} events.
 
 ## Syntax
 
@@ -74,7 +74,7 @@ function logDoubleClick(e) {
 
 ## See also
 
-- {{event("dblclick")}} event
+- {{domxref("Element/dblclick_event", "dblclick")}} event
 - Related event handlers
 
   - {{domxref("GlobalEventHandlers.onauxclick")}}

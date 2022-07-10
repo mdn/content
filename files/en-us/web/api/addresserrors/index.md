@@ -206,7 +206,7 @@ The final step is to call the event's {{domxref("PaymentRequestUpdateEvent.updat
 
 ##### Setting up the Donate Now button
 
-This code creates a handler for the {{domxref("Window/load_event", "load")}} event on the {{domxref("Window", "window")}} which in turn adds the needed {{event("click")}} event handler to the "Donate Now" button so that clicking it starts the payment process.
+This code creates a handler for the {{domxref("Window/load_event", "load")}} event on the {{domxref("Window", "window")}} which in turn adds the needed {{domxref("Element/click_event", "click")}} event handler to the "Donate Now" button so that clicking it starts the payment process.
 
 ```js
 window.addEventListener("load", function(ev) {
