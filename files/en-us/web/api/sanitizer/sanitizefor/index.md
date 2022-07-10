@@ -65,7 +65,7 @@ console.log( (sanitizedDiv instanceof HTMLDivElement) );
 console.log(sanitizedDiv.innerHTML)
 // "abc  def"
 
-// At some point later ...
+// At some point later …
 
 // Get the element to update. This must be a div to match our sanitizeFor() context.
 // Set its content to be the children of our sanitized element.

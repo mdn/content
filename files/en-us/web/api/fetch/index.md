@@ -309,7 +309,7 @@ const myRequest = new Request('flowers.jpg');
 
 fetch(myRequest, myInit)
   .then((response) => {
-    // ...
+    // …
   });
 ```
 

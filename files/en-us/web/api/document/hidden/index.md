@@ -31,7 +31,7 @@ var boolean = document.hidden
 ```js
 document.addEventListener("visibilitychange", function() {
   console.log( document.hidden );
-  // Modify behavior...
+  // Modify behavior…
 });
 ```
 

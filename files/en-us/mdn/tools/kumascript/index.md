@@ -315,7 +315,7 @@ This is probably a temporary failure of the KumaScript service. If you Refresh t
 On some pages, you'll see a scripting error like this:
 
 ```plain
-Syntax error at line 436, column 461: Expected valid JSON object as the parameter of the preceding macro but...
+Syntax error at line 436, column 461: Expected valid JSON object as the parameter of the preceding macro but…
 ```
 
 If you edit the page, you'll probably see a macro like this at the bottom of the page:
@@ -349,7 +349,7 @@ You can read the contents of an attached file by using the `mdn.getFileContent()
 ```js
 <%
   let contents = mdn.getFileContent(fileUrl);
-  // ... do stuff with the contents ...
+  // do stuff with the contents…
 %>
 ```
 

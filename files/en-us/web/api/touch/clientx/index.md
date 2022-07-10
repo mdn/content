@@ -57,7 +57,7 @@ src.addEventListener('touchend', function(e) {
   deltaX = e.changedTouches[0].clientX - clientX;
   deltaY = e.changedTouches[0].clientY - clientY;
 
-  // Process the data ...
+  // Process the data …
 }, false);
 ```
 
