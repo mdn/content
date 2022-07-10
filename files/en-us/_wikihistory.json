@@ -44113,16 +44113,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/GlobalEventHandlers/oncancel": {
-    "modified": "2020-10-15T21:43:50.314Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "wbamberg",
-      "rolfedh",
-      "Guillaume-Heras"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onclick": {
     "modified": "2020-12-12T15:56:24.635Z",
     "contributors": [

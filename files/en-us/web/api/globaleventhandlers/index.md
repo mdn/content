@@ -39,8 +39,6 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when an {{event("auxclick")}} event is sent, indicating that a non-primary button has been pressed on an input device (e.g. a middle mouse button).
 - {{domxref("GlobalEventHandlers.onerror")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the `error` event is raised.
-- {{domxref("GlobalEventHandlers.oncancel")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("cancel")}} event is raised.
 - {{domxref("GlobalEventHandlers.onclick")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("click")}} event is raised.
 - {{domxref("GlobalEventHandlers.onclose")}}
