@@ -147,7 +147,7 @@ There are other issues too beyond accessibility — it is harder to style the co
 
 #### Using clear language
 
-The language you use can also affect accessibility. In general, you should use clear language that is not overly complex and doesn't use unnecessary jargon or slang terms. This not only benefits people with cognitive or other disabilities; it benefits readers for whom the text is not written in their first language, younger people … everyone, in fact! Apart from this, you should try to avoid using language and characters that don't get read out clearly by the screen reader. For example:
+The language you use can also affect accessibility. In general, you should use clear language that is not overly complex and doesn't use unnecessary jargon or slang terms. This not only benefits people with cognitive or other disabilities; it benefits readers for whom the text is not written in their first language, younger people…, everyone, in fact! Apart from this, you should try to avoid using language and characters that don't get read out clearly by the screen reader. For example:
 
 - Don't use dashes if you can avoid it. Instead of writing 5–7, write 5 to 7.
 - Expand abbreviations — instead of writing Jan, write January.

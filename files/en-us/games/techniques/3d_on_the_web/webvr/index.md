@@ -103,7 +103,7 @@ The first WebVR experiments and demos used Three.js as it's probably the most po
 
 ![](sechelt.jpg)
 
-Boris Smus has written about the concept of [Responsive WebVR](https://smus.com/responsive-vr/), where a single web game can be played on various devices like laptops without VR hardware, PCs with Oculus Rift, or smartphones inside Google Cardboard and still deliver a unique and valuable experience across all of them. It's like responsive design, but applied to the VR world — write once and run in any VR headset … or without it. You can check the [WebVR Boilerplate](https://github.com/borismus/webvr-boilerplate) sources — it's a good example to start learning WebVR from, and a starting point for any web-based VR experience.
+Boris Smus has written about the concept of [Responsive WebVR](https://smus.com/responsive-vr/), where a single web game can be played on various devices like laptops without VR hardware, PCs with Oculus Rift, or smartphones inside Google Cardboard and still deliver a unique and valuable experience across all of them. It's like responsive design but applied to the VR world — write once and run in any VR headset, or without it. You can check the [WebVR Boilerplate](https://github.com/borismus/webvr-boilerplate) sources — it's a good example to start learning WebVR from, and a starting point for any web-based VR experience.
 
 There's also a markup framework called [A-Frame](https://aframe.io/) that offers simple building blocks for WebVR, so you can rapidly build and experiment with VR websites and games: read the [Building up a basic demo with A-Frame](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) tutorial for more details.
 

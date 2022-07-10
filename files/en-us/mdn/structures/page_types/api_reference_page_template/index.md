@@ -93,10 +93,10 @@ _Also inherits methods from its parent interface, {{DOMxRef("NameOfParentInterfa
 Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
 - [`eventname1`](#)
-  - : Fired when … include description of when event fires.
+  - : Fired when (include the description of when the event fires).
     Also available via the `oneventname1` property.
 - [`eventname2`](#)
-  - : Fired when … include description of when event fires.
+  - : Fired when _(include a description of when the event fires)_.
     Also available via the `oneventname2` property.
 - etc.
   - : Fired when ...
