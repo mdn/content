@@ -129,7 +129,7 @@ console.log("immediate logging");
 
 ### Thenables
 
-The JavaScript ecosystem has made multiple Promise implementations long before it became part of the language. Despite being represented differently internally, at the minimum, all Promise-like objects implement the _Thenable_ interface. A thenable implements the [`.then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) method, which is called with two callbacks: one for when the promise is fulfilled, one for when it's rejected. Promises are thenables as well.
+The JavaScript ecosystem had made multiple Promise implementations long before it became part of the language. Despite being represented differently internally, at the minimum, all Promise-like objects implement the _Thenable_ interface. A thenable implements the [`.then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) method, which is called with two callbacks: one for when the promise is fulfilled, one for when it's rejected. Promises are thenables as well.
 
 To interoperate with the existing Promise implementations, the language allows using thenables in place of promises. For example, [`Promise.resolve`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) will not only resolve promises, but also trace thenables.
 
