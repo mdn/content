@@ -541,8 +541,8 @@ The corresponding code for keyboard input might look something like this:
 ```js
 document.addEventListener("keydown", event => {
   switch(event.key) {
-    case: "a":
-    case: "A":
+    case "a":
+    case "A":
       avatar.posDelta.x -= ACCEL_X;
       break;
     case "d":

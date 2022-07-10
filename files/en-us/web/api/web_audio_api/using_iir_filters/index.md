@@ -97,7 +97,7 @@ And the `click` event listener starts like so:
 playButton.addEventListener('click', function() {
     if (this.dataset.playing === 'false') {
         srcNode = playSourceNode(audioCtx, sample);
-        ...
+        // ...
 }, false);
 ```
 
@@ -114,7 +114,7 @@ filterButton.addEventListener('click', function() {
     if (this.dataset.filteron === 'false') {
         srcNode.disconnect(audioCtx.destination);
         srcNode.connect(iirfilter).connect(audioCtx.destination);
-        ...
+        // ...
 }, false);
 ```
 

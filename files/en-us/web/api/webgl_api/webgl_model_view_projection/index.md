@@ -219,7 +219,7 @@ The obvious question is "why the extra dimension?" It turns out that this additi
 A three dimensional point is defined in a typical Cartesian coordinate system. The added fourth dimension changes this point into a {{interwiki("wikipedia", "homogeneous coordinates", "homogeneous coordinate")}}. It still represents a point in 3D space and it can easily be demonstrated how to construct this type of coordinate through a pair of simple functions.
 
 ```js
-function cartesianToHomogeneous(point)
+function cartesianToHomogeneous(point) {
   let x = point[0];
   let y = point[1];
   let z = point[2];
@@ -272,7 +272,7 @@ var data = new Float32Array([
 
 Then the vertex shader uses the 4 dimensional point passed in.
 
-```js
+```glsl
 attribute vec4 position;
 
 void main() {
@@ -409,7 +409,7 @@ An easy way to start getting some perspective on our model of the cube is to tak
 
 The shader code looks like this.
 
-```js
+```glsl
 // First transform the point
 vec4 transformedPosition = model * vec4(position, 1.0);
 

@@ -117,9 +117,9 @@ function getXR(usePolyfill) {
   return tempXR;
 }
 
-const xr = getXR("no");  // Get the native XRSystem object
-const xr = getXR("yes"); // Always returns an XRSystem from the polyfill
-const xr = getXR("if-needed"); // Use the polyfill only if navigator.xr missing
+const xr1 = getXR("no");  // Get the native XRSystem object
+const xr2 = getXR("yes"); // Always returns an XRSystem from the polyfill
+const xr3 = getXR("if-needed"); // Use the polyfill only if navigator.xr missing
 ```
 
 The returned `XRSystem` object can then be used according to the documentation provided here on MDN. The global variable `webxrPolyfill` is used only to retain a reference to the polyfill in order to ensure that it remains available until you no longer need it. Setting it to `null` signals that the polyfill can be garbage collected when no objects depending on it are using it anymore.
