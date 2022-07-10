@@ -2177,7 +2177,7 @@
 /en-US/docs/DOM/window.onblur	/en-US/docs/Web/API/Window/blur_event
 /en-US/docs/DOM/window.onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/DOM/window.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
-/en-US/docs/DOM/window.onclose	/en-US/docs/Web/API/GlobalEventHandlers/onclose
+/en-US/docs/DOM/window.onclose	/en-US/docs/Web/API/HTMLDialogElement/close_event
 /en-US/docs/DOM/window.oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
 /en-US/docs/DOM/window.ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
 /en-US/docs/DOM/window.ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
@@ -2614,7 +2614,7 @@
 /en-US/docs/DOM:window.onblur	/en-US/docs/Web/API/Window/blur_event
 /en-US/docs/DOM:window.onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/DOM:window.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
-/en-US/docs/DOM:window.onclose	/en-US/docs/Web/API/GlobalEventHandlers/onclose
+/en-US/docs/DOM:window.onclose	/en-US/docs/Web/API/HTMLDialogElement/close_event
 /en-US/docs/DOM:window.oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
 /en-US/docs/DOM:window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/DOM:window.onerror	/en-US/docs/Web/API/GlobalEventHandlers/onerror
@@ -3335,7 +3335,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.onblur	/en-US/docs/Web/API/Window/blur_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
-/en-US/docs/Document_Object_Model_(DOM)/window.onclose	/en-US/docs/Web/API/GlobalEventHandlers/onclose
+/en-US/docs/Document_Object_Model_(DOM)/window.onclose	/en-US/docs/Web/API/HTMLDialogElement/close_event
 /en-US/docs/Document_Object_Model_(DOM)/window.oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
 /en-US/docs/Document_Object_Model_(DOM)/window.ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
 /en-US/docs/Document_Object_Model_(DOM)/window.ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
@@ -8101,7 +8101,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers.onblur	/en-US/docs/Web/API/Window/blur_event
 /en-US/docs/Web/API/GlobalEventHandlers.onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Web/API/GlobalEventHandlers.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
-/en-US/docs/Web/API/GlobalEventHandlers.onclose	/en-US/docs/Web/API/GlobalEventHandlers/onclose
+/en-US/docs/Web/API/GlobalEventHandlers.onclose	/en-US/docs/Web/API/HTMLDialogElement/close_event
 /en-US/docs/Web/API/GlobalEventHandlers.oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
 /en-US/docs/Web/API/GlobalEventHandlers.ondblclick	/en-US/docs/Web/API/GlobalEventHandlers/ondblclick
 /en-US/docs/Web/API/GlobalEventHandlers.onerror	/en-US/docs/Web/API/GlobalEventHandlers/onerror
@@ -8142,6 +8142,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/oncanplay	/en-US/docs/Web/API/HTMLMediaElement/canplay_event
 /en-US/docs/Web/API/GlobalEventHandlers/oncanplaythrough	/en-US/docs/Web/API/HTMLMediaElement/canplaythrough_event
 /en-US/docs/Web/API/GlobalEventHandlers/onchange	/en-US/docs/Web/API/HTMLElement/change_event
+/en-US/docs/Web/API/GlobalEventHandlers/onclose	/en-US/docs/Web/API/HTMLDialogElement/close_event
 /en-US/docs/Web/API/GlobalEventHandlers/oncuechange	/en-US/docs/Web/API/TextTrack/cuechange_event
 /en-US/docs/Web/API/GlobalEventHandlers/ondragexit	/en-US/docs/Web/API/GlobalEventHandlers/ondragleave
 /en-US/docs/Web/API/GlobalEventHandlers/ondurationchange	/en-US/docs/Web/API/HTMLMediaElement/durationchange_event
@@ -10460,7 +10461,7 @@
 /en-US/docs/Web/API/window.onblur	/en-US/docs/Web/API/Window/blur_event
 /en-US/docs/Web/API/window.onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Web/API/window.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
-/en-US/docs/Web/API/window.onclose	/en-US/docs/Web/API/GlobalEventHandlers/onclose
+/en-US/docs/Web/API/window.onclose	/en-US/docs/Web/API/HTMLDialogElement/close_event
 /en-US/docs/Web/API/window.oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
 /en-US/docs/Web/API/window.ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
 /en-US/docs/Web/API/window.ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
