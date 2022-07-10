@@ -61,8 +61,6 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event is raised.
 - {{domxref("GlobalEventHandlers.ondrop")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/drop_event", "drop")}} event is raised.
-- {{domxref("GlobalEventHandlers.onemptied")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/emptied_event", "emptied")}} event is raised.
 - {{domxref("GlobalEventHandlers.onformdata")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) for processing {{domxref("HTMLFormElement/formdata_event", "formdata")}} events, fired after the entry list representing the form's data is constructed.
 - {{domxref("GlobalEventHandlers.ongotpointercapture")}}

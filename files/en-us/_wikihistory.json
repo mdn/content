@@ -44275,16 +44275,6 @@
       "AFBarstow"
     ]
   },
-  "Web/API/GlobalEventHandlers/onemptied": {
-    "modified": "2020-10-15T21:44:06.259Z",
-    "contributors": [
-      "fscholz",
-      "sideshowbarker",
-      "wbamberg",
-      "rolfedh",
-      "Guillaume-Heras"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onerror": {
     "modified": "2020-10-15T21:07:20.884Z",
     "contributors": [
