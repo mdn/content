@@ -70,7 +70,7 @@ Similarly, shorthands handling properties related to corners of a box, like {{cs
 
 ## Background properties
 
-A background with the following properties ...
+Consider a background with the following properties
 
 ```css
 background-color: #000;
@@ -79,7 +79,7 @@ background-repeat: no-repeat;
 background-position: left top;
 ```
 
-… can be shortened to just one declaration:
+These four declarations can be shortened to just one:
 
 ```css
 background: #000 url(images/bg.gif) no-repeat left top;
@@ -91,7 +91,7 @@ See {{cssxref("background")}} for more detailed information, including CSS3 prop
 
 ## Font properties
 
-The following declarations ...
+Consider the following declarations:
 
 ```css
 font-style: italic;
@@ -101,7 +101,7 @@ line-height: 1.2;
 font-family: Arial, sans-serif;
 ```
 
-… can be shortened to the following:
+This 5 statements can be shortened to the following:
 
 ```css
 font: italic bold .8em/1.2 Arial, sans-serif;
@@ -111,7 +111,7 @@ This shorthand declaration is actually equivalent to the longhand declarations a
 
 ## Border properties
 
-With borders, the width, color, and style can be simplified into one declaration. For example, the following CSS ...
+With borders, the width, color, and style can be simplified into one declaration. For example, consider the following CSS:
 
 ```css
 border-width: 1px;
@@ -119,7 +119,7 @@ border-style: solid;
 border-color: #000;
 ```
 
-… can be simplified as:
+It can be simplified as:
 
 ```css
 border: 1px solid #000;
@@ -127,7 +127,7 @@ border: 1px solid #000;
 
 ## Margin and padding properties
 
-Shorthand versions of margin and padding values work similarly; the margin property allows for shorthand values to be specified using one, two, three, or four values. The following CSS declarations ...
+Shorthand versions of margin and padding values work similarly; the margin property allows for shorthand values to be specified using one, two, three, or four values. Consider the following CSS declarations:
 
 ```css
 margin-top: 10px;
@@ -136,7 +136,7 @@ margin-bottom: 10px;
 margin-left: 5px;
 ```
 
-… are the same as the following declaration using the four value shorthand. Note that the values are in clockwise order, beginning at the top: top, right, bottom, then left (TRBL, the consonants in "trouble").
+They are the same as the following declaration using the four value shorthand. Note that the values are in clockwise order, beginning at the top: top, right, bottom, then left (TRBL, the consonants in "trouble").
 
 ```css
 margin: 10px 5px 10px 5px;
