@@ -61,7 +61,7 @@ _Inherits properties from its parent, {{domxref("AudioScheduledSourceNode")}}, a
 ### Event handlers
 
 - {{domxref("OscillatorNode.onended")}}
-  - : Sets the event handler for the {{event("ended")}} event, which fires when the tone has stopped playing.
+  - : Sets the event handler for the {{domxref("AudioScheduledSourceNode/ended_event", "ended")}} event, which fires when the tone has stopped playing.
 
 ## Methods
 

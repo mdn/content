@@ -283,7 +283,7 @@ Let's implement probably the most important control — the play/pause button.
     media.addEventListener('ended', stopMedia);
     ```
 
-    The {{domxref("Element/click_event", "click")}} event is obvious — we want to stop the video by running our `stopMedia()` function when the stop button is clicked. We do however also want to stop the video when it finishes playing — this is marked by the {{event("ended")}} event firing, so we also set up a listener to run the function on that event firing too.
+    The {{domxref("Element/click_event", "click")}} event is obvious — we want to stop the video by running our `stopMedia()` function when the stop button is clicked. We do however also want to stop the video when it finishes playing — this is marked by the {{domxref("HTMLMediaElement/ended_event", "ended")}} event firing, so we also set up a listener to run the function on that event firing too.
 
 2. Next, let's define `stopMedia()` — add the following function below `playPauseMedia()`:
 
