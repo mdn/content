@@ -22,7 +22,7 @@ BigInt(value);
 ### Parameters
 
 - `value`
-  - : The numeric value of the object being created. May be a string, an integer, a boolean, or another BigInt.
+  - : The numeric value of the object being created. It may be a string, an integer, a boolean, or another `BigInt`.
 
 > **Note:** `BigInt()` is not used with the
 > {{JSxRef("Operators/new", "new")}} operator.
