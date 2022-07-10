@@ -22,14 +22,14 @@ border-top-style: dotted;
 border-top: thick green;
 ```
 
-... is actually the same as ...
+… is actually the same as ...
 
 ```css
 border-top-style: dotted;
 border-top: none thick green;
 ```
 
-... and the value of {{cssxref("border-top-style")}} given before `border-top` is ignored. Since the default value of {{cssxref("border-top-style")}} is `none`, not specifying the `border-style` part results in no border.
+… and the value of {{cssxref("border-top-style")}} given before `border-top` is ignored. Since the default value of {{cssxref("border-top-style")}} is `none`, not specifying the `border-style` part results in no border.
 
 ## Constituent properties
 

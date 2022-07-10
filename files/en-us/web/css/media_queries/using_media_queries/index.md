@@ -144,13 +144,13 @@ The `not` is evaluated last in the following query:
 @media not all and (monochrome) { ... }
 ```
 
-... so that the above query is evaluated like this:
+… so that the above query is evaluated like this:
 
 ```css
 @media not (all and (monochrome)) { ... }
 ```
 
-... rather than like this:
+… rather than like this:
 
 ```css example-bad
 @media (not all) and (monochrome) { ... }
@@ -162,7 +162,7 @@ As another example, the following media query:
 @media not screen and (color), print and (color) { ... }
 ```
 
-... is evaluated like this:
+… is evaluated like this:
 
 ```css
 @media (not (screen and (color))), print and (color) { ... }

@@ -22,14 +22,14 @@ border-bottom-style: dotted;
 border-bottom: thick green;
 ```
 
-... is actually the same as ...
+… is actually the same as ...
 
 ```css
 border-bottom-style: dotted;
 border-bottom: none thick green;
 ```
 
-... and the value of {{cssxref("border-bottom-style")}} given before `border-bottom` is ignored. Since the default value of {{cssxref("border-bottom-style")}} is `none`, not specifying the `border-style` part results in no border.
+… and the value of {{cssxref("border-bottom-style")}} given before `border-bottom` is ignored. Since the default value of {{cssxref("border-bottom-style")}} is `none`, not specifying the `border-style` part results in no border.
 
 ## Constituent properties
 

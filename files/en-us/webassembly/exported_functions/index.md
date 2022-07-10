@@ -14,7 +14,7 @@ tags:
 
 Exported WebAssembly functions are how WebAssembly functions are represented in JavaScript. This article describes what they are in a little more detail.
 
-## Exported... what?
+## Exported… what?
 
 Exported WebAssembly functions are basically just JavaScript wrappers that represent WebAssembly functions in JavaScript. When you call them, you get some activity in the background to convert the arguments into types that wasm can work with (for example converting JavaScript numbers to Int32), the arguments are passed to the function inside your wasm module, the function is invoked, and the result is converted and passed back to JavaScript.
 

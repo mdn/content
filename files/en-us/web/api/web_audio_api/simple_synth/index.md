@@ -247,7 +247,7 @@ function createNoteTable() {
   noteFreq[1]["B"] = 61.735412657015513;
 ```
 
-... several octaves not shown for brevity ...
+… several octaves not shown for brevity ...
 
 ```js hidden
   noteFreq[2]["C"] = 65.406391325149658;

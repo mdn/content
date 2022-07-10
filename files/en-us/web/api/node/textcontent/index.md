@@ -78,14 +78,14 @@ Given this HTML fragment:
 <div id="divA">This is <span>some</span> text!</div>
 ```
 
-... you can use `textContent` to get the element's text content:
+… you can use `textContent` to get the element's text content:
 
 ```js
 let text = document.getElementById('divA').textContent;
 // The text variable is now: 'This is some text!'
 ```
 
-... or set the element's text content:
+… or set the element's text content:
 
 ```js
 document.getElementById('divA').textContent = 'This text is different!';

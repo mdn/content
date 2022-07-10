@@ -159,7 +159,7 @@ dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
 }
 ```
 
-... can be replaced with:
+… can be replaced with:
 
 ```css
 /* 3-deep (or more) unordered lists use a square */

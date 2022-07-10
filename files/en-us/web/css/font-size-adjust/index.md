@@ -39,7 +39,7 @@ font-size: 14px;
 font-size-adjust: 0.5;
 ```
 
-... is really specifying that the lowercase letters of the font should be `7px` high (0.5 × 14px).  This will still produce reasonable results in browsers that do not support `font-size-adjust`, where a `14px` font will be used.
+… is really specifying that the lowercase letters of the font should be `7px` high (0.5 × 14px).  This will still produce reasonable results in browsers that do not support `font-size-adjust`, where a `14px` font will be used.
 
 ## Syntax
 

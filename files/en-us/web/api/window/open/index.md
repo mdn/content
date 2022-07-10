@@ -280,7 +280,7 @@ function openRequestedSinglePopup(url) {
     can also be disabled. Moving and resizing a window remotely on the user's screen via
     script will very often annoy the users, will disorient the user, and will be wrong at
     best. The web author expects to have full control of (and can decide about) every
-    position and size aspects of the users' browser window ... which is not true.
+    position and size aspects of the users' browser window, which is not true.
 
 - How do I know whether a window I opened is still open?
   - : You can test for the existence of the window object reference which is the returned

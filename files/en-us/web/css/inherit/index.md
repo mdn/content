@@ -40,7 +40,7 @@ In this example, the `h2` elements inside the sidebar might be different colors.
 div#current { color: blue; }
 ```
 
-... it would be blue.
+… it would be blue.
 
 ## Specifications
 

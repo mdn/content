@@ -22,14 +22,14 @@ border-right-style: dotted;
 border-right: thick green;
 ```
 
-... is actually the same as ...
+… is actually the same as ...
 
 ```css
 border-right-style: dotted;
 border-right: none thick green;
 ```
 
-... and the value of {{cssxref("border-right-style")}} given before `border-right` is ignored. Since the default value of {{cssxref("border-right-style")}} is `none`, not specifying the `border-style` part results in no border.
+… and the value of {{cssxref("border-right-style")}} given before `border-right` is ignored. Since the default value of {{cssxref("border-right-style")}} is `none`, not specifying the `border-style` part results in no border.
 
 ## Constituent properties
 

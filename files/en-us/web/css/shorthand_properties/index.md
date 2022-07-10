@@ -79,7 +79,7 @@ background-repeat: no-repeat;
 background-position: left top;
 ```
 
-... can be shortened to just one declaration:
+… can be shortened to just one declaration:
 
 ```css
 background: #000 url(images/bg.gif) no-repeat left top;
@@ -101,7 +101,7 @@ line-height: 1.2;
 font-family: Arial, sans-serif;
 ```
 
-... can be shortened to the following:
+… can be shortened to the following:
 
 ```css
 font: italic bold .8em/1.2 Arial, sans-serif;
@@ -119,7 +119,7 @@ border-style: solid;
 border-color: #000;
 ```
 
-... can be simplified as:
+… can be simplified as:
 
 ```css
 border: 1px solid #000;
@@ -136,7 +136,7 @@ margin-bottom: 10px;
 margin-left: 5px;
 ```
 
-... are the same as the following declaration using the four value shorthand. Note that the values are in clockwise order, beginning at the top: top, right, bottom, then left (TRBL, the consonants in "trouble").
+… are the same as the following declaration using the four value shorthand. Note that the values are in clockwise order, beginning at the top: top, right, bottom, then left (TRBL, the consonants in "trouble").
 
 ```css
 margin: 10px 5px 10px 5px;

@@ -29,13 +29,13 @@ A typical example of an inherited property is the {{ Cssxref("color") }} propert
 p { color: green; }
 ```
 
-... and the markup:
+… and the markup:
 
 ```html
 <p>This paragraph has <em>emphasized text</em> in it.</p>
 ```
 
-... the words "emphasized text" will appear green, since the `em` element has inherited the value of the {{ Cssxref("color") }} property from the `p` element. It does _not_ get the initial value of the property (which is the color that is used for the root element when the page specifies no color).
+… the words "emphasized text" will appear green, since the `em` element has inherited the value of the {{ Cssxref("color") }} property from the `p` element. It does _not_ get the initial value of the property (which is the color that is used for the root element when the page specifies no color).
 
 ## Non-inherited properties
 
@@ -47,13 +47,13 @@ A typical example of a non-inherited property is the {{ Cssxref("border") }} pro
  p { border: medium solid; }
 ```
 
-... and the markup:
+… and the markup:
 
 ```html
   <p>This paragraph has <em>emphasized text</em> in it.</p>
 ```
 
-... the words "emphasized text" will not have a border (since the initial value of {{ Cssxref("border-style") }} is `none`).
+… the words "emphasized text" will not have a border (since the initial value of {{ Cssxref("border-style") }} is `none`).
 
 ## Notes
 
