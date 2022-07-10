@@ -157,7 +157,7 @@ Instead, you should try to use {{domxref("window.requestAnimationFrame()")}}. Th
 
 #### Make events immediate
 
-As old-school, accessibility-aware Web developers we love click events since they also support keyboard input. On mobile devices, these are too slow. You should use {{event("touchstart")}} and {{event("touchend")}} instead. The reason is that these don't have a delay that makes the interaction with the app appear sluggish. If you test for touch support first, you don't sacrifice accessibility, either. For example, the Financial Times uses a library called [fastclick](https://github.com/ftlabs/fastclick) for that purpose, which is available for you to use.
+As old-school, accessibility-aware Web developers we love click events since they also support keyboard input. On mobile devices, these are too slow. You should use {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchend_event", "touchend")}} instead. The reason is that these don't have a delay that makes the interaction with the app appear sluggish. If you test for touch support first, you don't sacrifice accessibility, either. For example, the Financial Times uses a library called [fastclick](https://github.com/ftlabs/fastclick) for that purpose, which is available for you to use.
 
 #### Keep your interface simple
 

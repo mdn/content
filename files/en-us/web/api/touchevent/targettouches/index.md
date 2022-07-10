@@ -16,7 +16,7 @@ browser-compat: api.TouchEvent.targetTouches
 ---
 {{ APIRef("Touch Events") }}
 
-The **`targetTouches`** read-only property is a {{ domxref("TouchList") }} listing all the {{ domxref("Touch") }} objects for touch points that are still in contact with the touch surface **and** whose {{event("touchstart")}} event occurred inside the same target {{ domxref("element") }} as the current target element.
+The **`targetTouches`** read-only property is a {{ domxref("TouchList") }} listing all the {{ domxref("Touch") }} objects for touch points that are still in contact with the touch surface **and** whose {{domxref("Element/touchstart_event", "touchstart")}} event occurred inside the same target {{ domxref("element") }} as the current target element.
 
 ## Value
 
