@@ -500,8 +500,8 @@ const buttonToBeClicked = document.getElementById("example-button");
 
 const resetButton = document.getElementById("reset-button");
 
-// the text that the button is initalized with
-const intialText = buttonToBeClicked.textContent;
+// the text that the button is initialized with
+const initialText = buttonToBeClicked.textContent;
 
 // the text that the button contains after being clicked
 const clickedText = "You have clicked this button.";
@@ -528,7 +528,7 @@ function addListener() {
 resetButton.addEventListener(
   "click",
   () => {
-    buttonToBeClicked.textContent = intialText;
+    buttonToBeClicked.textContent = initialText;
     addListener();
   }
 );

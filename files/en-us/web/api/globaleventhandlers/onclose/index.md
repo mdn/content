@@ -53,4 +53,3 @@ it's more flexible.
 
 - {{event("close")}} event
 - HTML {{HTMLElement("dialog")}} element
-- Related event handler: {{domxref("GlobalEventHandlers.oncancel")}}

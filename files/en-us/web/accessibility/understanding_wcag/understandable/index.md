@@ -224,7 +224,7 @@ This guideline focuses on making user interfaces intuitive and understandable.
         </p>
       </td>
       <td>
-        {{domxref("GlobalEventHandlers.oninput")}} is useful here.
+        {{domxref("HTMLElement.oninput")}} is useful here.
       </td>
     </tr>
     <tr>
