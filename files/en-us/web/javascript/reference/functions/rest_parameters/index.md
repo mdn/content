@@ -114,7 +114,7 @@ In this example, the first argument is mapped to `a` and the second to
 `b`, so these named arguments are used as normal.
 
 However, the third argument, `manyMoreArgs`, will be an array that contains
-the third, fourth, fifth, sixth … nth — as many arguments that the user includes.
+the third, fourth, fifth, sixth, …, nth — as many arguments that the user includes.
 
 ```js
 function myFun(a, b, ...manyMoreArgs) {
