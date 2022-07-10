@@ -44167,28 +44167,6 @@
       "alecananian"
     ]
   },
-  "Web/API/GlobalEventHandlers/oncontextmenu": {
-    "modified": "2020-10-15T21:04:57.192Z",
-    "contributors": [
-      "irenesmith",
-      "mfluehr",
-      "sideshowbarker",
-      "fscholz",
-      "erikadoyle",
-      "jpmedley",
-      "cvrebert",
-      "Skoua",
-      "teoli",
-      "kosvrouvas",
-      "kscarfone",
-      "Sheppy",
-      "ethertank",
-      "Brettz9",
-      "ziyunfei",
-      "Rob W",
-      "Ryatt"
-    ]
-  },
   "Web/API/GlobalEventHandlers/ondblclick": {
     "modified": "2020-10-15T21:03:47.416Z",
     "contributors": [

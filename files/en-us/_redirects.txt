@@ -2178,7 +2178,7 @@
 /en-US/docs/DOM/window.onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/DOM/window.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/DOM/window.onclose	/en-US/docs/Web/API/GlobalEventHandlers/onclose
-/en-US/docs/DOM/window.oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
+/en-US/docs/DOM/window.oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/DOM/window.ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
 /en-US/docs/DOM/window.ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
 /en-US/docs/DOM/window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
@@ -2615,7 +2615,7 @@
 /en-US/docs/DOM:window.onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/DOM:window.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/DOM:window.onclose	/en-US/docs/Web/API/GlobalEventHandlers/onclose
-/en-US/docs/DOM:window.oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
+/en-US/docs/DOM:window.oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/DOM:window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/DOM:window.onerror	/en-US/docs/Web/API/GlobalEventHandlers/onerror
 /en-US/docs/DOM:window.onfocus	/en-US/docs/Web/API/Window/focus_event
@@ -3336,7 +3336,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/Document_Object_Model_(DOM)/window.onclose	/en-US/docs/Web/API/GlobalEventHandlers/onclose
-/en-US/docs/Document_Object_Model_(DOM)/window.oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
+/en-US/docs/Document_Object_Model_(DOM)/window.oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/Document_Object_Model_(DOM)/window.ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
 /en-US/docs/Document_Object_Model_(DOM)/window.ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
 /en-US/docs/Document_Object_Model_(DOM)/window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
@@ -7831,7 +7831,7 @@
 /en-US/docs/Web/API/Document/onblur	/en-US/docs/Web/API/Window/blur_event
 /en-US/docs/Web/API/Document/onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Web/API/Document/onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
-/en-US/docs/Web/API/Document/oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
+/en-US/docs/Web/API/Document/oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/Web/API/Document/ondblclick	/en-US/docs/Web/API/GlobalEventHandlers/ondblclick
 /en-US/docs/Web/API/Document/onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/Web/API/Document/onfullscreenchange	/en-US/docs/Web/API/Document/fullscreenchange_event
@@ -8102,7 +8102,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers.onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Web/API/GlobalEventHandlers.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/Web/API/GlobalEventHandlers.onclose	/en-US/docs/Web/API/GlobalEventHandlers/onclose
-/en-US/docs/Web/API/GlobalEventHandlers.oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
+/en-US/docs/Web/API/GlobalEventHandlers.oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/Web/API/GlobalEventHandlers.ondblclick	/en-US/docs/Web/API/GlobalEventHandlers/ondblclick
 /en-US/docs/Web/API/GlobalEventHandlers.onerror	/en-US/docs/Web/API/GlobalEventHandlers/onerror
 /en-US/docs/Web/API/GlobalEventHandlers.onfocus	/en-US/docs/Web/API/Window/focus_event
@@ -8142,6 +8142,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/oncanplay	/en-US/docs/Web/API/HTMLMediaElement/canplay_event
 /en-US/docs/Web/API/GlobalEventHandlers/oncanplaythrough	/en-US/docs/Web/API/HTMLMediaElement/canplaythrough_event
 /en-US/docs/Web/API/GlobalEventHandlers/onchange	/en-US/docs/Web/API/HTMLElement/change_event
+/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/Web/API/GlobalEventHandlers/oncuechange	/en-US/docs/Web/API/TextTrack/cuechange_event
 /en-US/docs/Web/API/GlobalEventHandlers/ondragexit	/en-US/docs/Web/API/GlobalEventHandlers/ondragleave
 /en-US/docs/Web/API/GlobalEventHandlers/ondurationchange	/en-US/docs/Web/API/HTMLMediaElement/durationchange_event
@@ -8232,7 +8233,7 @@
 /en-US/docs/Web/API/HTMLElement/onblur	/en-US/docs/Web/API/Window/blur_event
 /en-US/docs/Web/API/HTMLElement/onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Web/API/HTMLElement/onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
-/en-US/docs/Web/API/HTMLElement/oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
+/en-US/docs/Web/API/HTMLElement/oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/Web/API/HTMLElement/oncopy	/en-US/docs/Web/API/HTMLElement/copy_event
 /en-US/docs/Web/API/HTMLElement/oncut	/en-US/docs/Web/API/HTMLElement/cut_event
 /en-US/docs/Web/API/HTMLElement/ondblclick	/en-US/docs/Web/API/GlobalEventHandlers/ondblclick
@@ -9272,7 +9273,7 @@
 /en-US/docs/Web/API/SVGElement/onblur	/en-US/docs/Web/API/Window/blur_event
 /en-US/docs/Web/API/SVGElement/onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Web/API/SVGElement/onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
-/en-US/docs/Web/API/SVGElement/oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
+/en-US/docs/Web/API/SVGElement/oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/Web/API/SVGElement/ondblclick	/en-US/docs/Web/API/GlobalEventHandlers/ondblclick
 /en-US/docs/Web/API/SVGElement/onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/Web/API/SVGElement/oninput	/en-US/docs/Web/API/HTMLElement/input_event
@@ -9805,7 +9806,7 @@
 /en-US/docs/Web/API/Window/onblur	/en-US/docs/Web/API/Window/blur_event
 /en-US/docs/Web/API/Window/onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Web/API/Window/onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
-/en-US/docs/Web/API/Window/oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
+/en-US/docs/Web/API/Window/oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/Web/API/Window/ondblclick	/en-US/docs/Web/API/GlobalEventHandlers/ondblclick
 /en-US/docs/Web/API/Window/ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
 /en-US/docs/Web/API/Window/ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
@@ -10460,7 +10461,7 @@
 /en-US/docs/Web/API/window.onchange	/en-US/docs/Web/API/HTMLElement/change_event
 /en-US/docs/Web/API/window.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/Web/API/window.onclose	/en-US/docs/Web/API/GlobalEventHandlers/onclose
-/en-US/docs/Web/API/window.oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
+/en-US/docs/Web/API/window.oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/Web/API/window.ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
 /en-US/docs/Web/API/window.ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
 /en-US/docs/Web/API/window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
