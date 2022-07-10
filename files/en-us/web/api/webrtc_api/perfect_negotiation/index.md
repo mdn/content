@@ -209,7 +209,7 @@ On the other hand, if the received message contains an ICE candidate, we deliver
 
 ## Making negotiation perfect
 
-If you're curious what makes perfect negotiation so... perfect... this section is for you. Here, we'll look at each change made to the WebRTC API and to best practice recommendations to make perfect negotiation possible.
+If you're curious what makes perfect negotiation _so perfect_, this section is for you. Here, we'll look at each change made to the WebRTC API and to best practice recommendations to make perfect negotiation possible.
 
 ### Glare-free setLocalDescription()
 
