@@ -328,8 +328,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Called when the RIGHT mouse button is pressed.
 - {{domxref("GlobalEventHandlers.onerror")}}
   - : Called when a resource fails to load OR when an error occurs at runtime. See {{domxref("Window/error_event", "error")}} event.
-- {{domxref("GlobalEventHandlers.oninput")}}
-  - : Called when the value of an \<input> element changes.
 - {{domxref("GlobalEventHandlers.onload")}}
   - : Called after all resources and the DOM are fully loaded. WILL NOT get called when the page is loaded from cache, such as with back button.
 - {{domxref("GlobalEventHandlers.onscroll")}}

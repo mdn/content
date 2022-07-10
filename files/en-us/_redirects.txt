@@ -2185,7 +2185,7 @@
 /en-US/docs/DOM/window.onerror	/en-US/docs/Web/API/GlobalEventHandlers/onerror
 /en-US/docs/DOM/window.onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/DOM/window.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
-/en-US/docs/DOM/window.oninput	/en-US/docs/Web/API/GlobalEventHandlers/oninput
+/en-US/docs/DOM/window.oninput	/en-US/docs/Web/API/HTMLElement/input_event
 /en-US/docs/DOM/window.onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/DOM/window.onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/DOM/window.onkeyup	/en-US/docs/Web/API/Element/keyup_event
@@ -3343,7 +3343,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.onerror	/en-US/docs/Web/API/GlobalEventHandlers/onerror
 /en-US/docs/Document_Object_Model_(DOM)/window.onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
-/en-US/docs/Document_Object_Model_(DOM)/window.oninput	/en-US/docs/Web/API/GlobalEventHandlers/oninput
+/en-US/docs/Document_Object_Model_(DOM)/window.oninput	/en-US/docs/Web/API/HTMLElement/input_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onkeyup	/en-US/docs/Web/API/Element/keyup_event
@@ -7836,7 +7836,7 @@
 /en-US/docs/Web/API/Document/onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/Web/API/Document/onfullscreenchange	/en-US/docs/Web/API/Document/fullscreenchange_event
 /en-US/docs/Web/API/Document/onfullscreenerror	/en-US/docs/Web/API/Document/fullscreenerror_event
-/en-US/docs/Web/API/Document/oninput	/en-US/docs/Web/API/GlobalEventHandlers/oninput
+/en-US/docs/Web/API/Document/oninput	/en-US/docs/Web/API/HTMLElement/input_event
 /en-US/docs/Web/API/Document/onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/Document/onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/Document/onkeyup	/en-US/docs/Web/API/Element/keyup_event
@@ -8106,7 +8106,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers.ondblclick	/en-US/docs/Web/API/GlobalEventHandlers/ondblclick
 /en-US/docs/Web/API/GlobalEventHandlers.onerror	/en-US/docs/Web/API/GlobalEventHandlers/onerror
 /en-US/docs/Web/API/GlobalEventHandlers.onfocus	/en-US/docs/Web/API/Window/focus_event
-/en-US/docs/Web/API/GlobalEventHandlers.oninput	/en-US/docs/Web/API/GlobalEventHandlers/oninput
+/en-US/docs/Web/API/GlobalEventHandlers.oninput	/en-US/docs/Web/API/HTMLElement/input_event
 /en-US/docs/Web/API/GlobalEventHandlers.onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/GlobalEventHandlers.onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/GlobalEventHandlers.onkeyup	/en-US/docs/Web/API/Element/keyup_event
@@ -8147,6 +8147,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/ondragexit	/en-US/docs/Web/API/GlobalEventHandlers/ondragleave
 /en-US/docs/Web/API/GlobalEventHandlers/ondurationchange	/en-US/docs/Web/API/HTMLMediaElement/durationchange_event
 /en-US/docs/Web/API/GlobalEventHandlers/onfocus	/en-US/docs/Web/API/Window/focus_event
+/en-US/docs/Web/API/GlobalEventHandlers/oninput	/en-US/docs/Web/API/HTMLElement/input_event
 /en-US/docs/Web/API/GlobalEventHandlers/onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/GlobalEventHandlers/onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/GlobalEventHandlers/onkeyup	/en-US/docs/Web/API/Element/keyup_event
@@ -8235,7 +8236,7 @@
 /en-US/docs/Web/API/HTMLElement/oncut	/en-US/docs/Web/API/HTMLElement/cut_event
 /en-US/docs/Web/API/HTMLElement/ondblclick	/en-US/docs/Web/API/GlobalEventHandlers/ondblclick
 /en-US/docs/Web/API/HTMLElement/onfocus	/en-US/docs/Web/API/Window/focus_event
-/en-US/docs/Web/API/HTMLElement/oninput	/en-US/docs/Web/API/GlobalEventHandlers/oninput
+/en-US/docs/Web/API/HTMLElement/oninput	/en-US/docs/Web/API/HTMLElement/input_event
 /en-US/docs/Web/API/HTMLElement/onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/HTMLElement/onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/HTMLElement/onkeyup	/en-US/docs/Web/API/Element/keyup_event
@@ -9273,7 +9274,7 @@
 /en-US/docs/Web/API/SVGElement/oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
 /en-US/docs/Web/API/SVGElement/ondblclick	/en-US/docs/Web/API/GlobalEventHandlers/ondblclick
 /en-US/docs/Web/API/SVGElement/onfocus	/en-US/docs/Web/API/Window/focus_event
-/en-US/docs/Web/API/SVGElement/oninput	/en-US/docs/Web/API/GlobalEventHandlers/oninput
+/en-US/docs/Web/API/SVGElement/oninput	/en-US/docs/Web/API/HTMLElement/input_event
 /en-US/docs/Web/API/SVGElement/onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/SVGElement/onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/SVGElement/onkeyup	/en-US/docs/Web/API/Element/keyup_event
@@ -10465,7 +10466,7 @@
 /en-US/docs/Web/API/window.onerror	/en-US/docs/Web/API/GlobalEventHandlers/onerror
 /en-US/docs/Web/API/window.onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/Web/API/window.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
-/en-US/docs/Web/API/window.oninput	/en-US/docs/Web/API/GlobalEventHandlers/oninput
+/en-US/docs/Web/API/window.oninput	/en-US/docs/Web/API/HTMLElement/input_event
 /en-US/docs/Web/API/window.onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/window.onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/window.onkeyup	/en-US/docs/Web/API/Element/keyup_event

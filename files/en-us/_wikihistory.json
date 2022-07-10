@@ -44364,30 +44364,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/GlobalEventHandlers/oninput": {
-    "modified": "2020-10-15T21:06:49.037Z",
-    "contributors": [
-      "mfluehr",
-      "sideshowbarker",
-      "fscholz",
-      "agriffis",
-      "roryokane",
-      "jpmedley",
-      "erikadoyle",
-      "Chealer",
-      "Sebastianz",
-      "skube",
-      "teoli",
-      "trevorh",
-      "MHasan",
-      "xwlee",
-      "kscarfone",
-      "Sheppy",
-      "ziyunfei",
-      "paul.irish",
-      "hectorsan68"
-    ]
-  },
   "Web/API/GlobalEventHandlers/oninvalid": {
     "modified": "2020-10-15T21:44:05.936Z",
     "contributors": [
