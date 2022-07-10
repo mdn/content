@@ -98,7 +98,7 @@ We'll apply it to this HTML:
 </div>
 ```
 
-… which leads us to this:
+This produces the following result:
 
 {{EmbedLiveSample("First_steps_with_custom_properties",600,180)}}
 
