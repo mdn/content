@@ -126,7 +126,7 @@ We needed this function because the browser's built-in [Math.random()](/en-US/do
 
 ## Invoking functions
 
-You are probably clear on this by now, but just in case ... to actually use a function after it has been defined, you've got to run — or invoke — it. This is done by including the name of the function in the code somewhere, followed by parentheses.
+You are probably clear on this by now, but just in case … to actually use a function after it has been defined, you've got to run — or invoke — it. This is done by including the name of the function in the code somewhere, followed by parentheses.
 
 ```js
 function myFunction() {

@@ -84,7 +84,7 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 ### Syntax errors round two
 
 1. Save your page and refresh, and you should see the error has gone.
-2. Now if you try to enter a guess and press the Submit guess button, you'll see ... another error! ![](variable-is-null.png)
+2. Now if you try to enter a guess and press the Submit guess button, you'll see … another error! ![](variable-is-null.png)
 3. This time the error being reported is "TypeError: lowOrHi is null", on line 78.
 
     > **Note:** [`Null`](/en-US/docs/Glossary/Null) is a special value that means "nothing", or "no value". So `lowOrHi` has been declared and initialized, but not with any meaningful value — it has no type or value.

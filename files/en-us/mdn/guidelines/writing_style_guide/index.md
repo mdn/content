@@ -306,8 +306,8 @@ They also ensure correct linking to detailed documentation.
 
 - In regular text (i.e., text outside of notes or parentheses), use the English equivalent of the abbreviation.
 
-  - **Correct**: ... web browsers, and so on.
-  - **Incorrect**: ... web browsers, etc.
+  - **Correct**: … web browsers, and so on.
+  - **Incorrect**: … web browsers, etc.
   - **Correct**: Web browsers such as Firefox can be used ...
   - **Incorrect**: Web browsers e.g. Firefox can be used ...
 
