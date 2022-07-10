@@ -82,7 +82,7 @@ An inline element that contains line breaks styled with:
 <span class="example">The<br>quick<br>orange fox</span>
 ```
 
-… results in:
+This results in:
 
 ![A screenshot of the rendering of an inline element styled with box-decoration-break:slice and styles given in the example.](box-decoration-break-inline-slice.png)
 
@@ -93,7 +93,7 @@ Adding `box-decoration-break: clone` to the above styles:
 box-decoration-break: clone;
 ```
 
-… results in:
+This one results in:
 
 ![A screenshot of the rendering of an inline element styled with box-decoration-break:clone and styles given in the example](box-decoration-break-inline-clone.png)
 
