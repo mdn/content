@@ -33,7 +33,7 @@ This method returns immediately, returning a {{jsxref("Promise")}}, whose fulfil
 handler is called when the seek operation is complete. In addition, a
 {{event("seeked")}} event is sent to let interested parties know that a seek has taken
 place. If the seek fails because the media is already at the last frame, a
-{{event("seeked")}} event occurs, followed immediately by an {{event("ended")}} event.
+{{event("seeked")}} event occurs, followed immediately by an {{domxref("HTMLMediaElement/ended_event", "ended")}} event.
 
 If there is no video on the media element, or the media isn't seekable, nothing
 happens.
