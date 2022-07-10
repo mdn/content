@@ -58,7 +58,7 @@ var elementStyle = element.style;
 var computedStyle = window.getComputedStyle(element, null);
 
 for (prop in elementStyle) {
-  if (elementStyle.hasOwnProperty(prop)) {
+  if (Object.hasOwn(elementStyle, prop)) {
     out += "  " + prop + " = '" + elementStyle[prop] + "' > '" + computedStyle[prop] + "'\n";
   }
 }

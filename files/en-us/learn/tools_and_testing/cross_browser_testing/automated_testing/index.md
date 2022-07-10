@@ -450,7 +450,7 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
         myAccount.getJobs(function (err, jobs) {
           // Get a list of all your jobs
           for (let k in jobs) {
-            if ( jobs.hasOwnProperty( k )) {
+            if (Object.hasOwn(jobs, k)) {
               myAccount.showJob(jobs[k].id, function (err, res) {
                 let str = res.id + ": Status: " + res.status;
                 if (res.error) {

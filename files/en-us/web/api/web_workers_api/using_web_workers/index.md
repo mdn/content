@@ -369,8 +369,8 @@ We finish QueryableWorker with the `onmessage` method. If the worker has the cor
 ```js
 worker.onmessage = function(event) {
     if (event.data instanceof Object &&
-        event.data.hasOwnProperty('queryMethodListener') &&
-        event.data.hasOwnProperty('queryMethodArguments')) {
+        Object.hasOwn(event.data, 'queryMethodListener') &&
+        Object.hasOwn(event.data, 'queryMethodArguments')) {
         listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
     } else {
         this.defaultListener.call(instance, event.data);
@@ -414,8 +414,8 @@ And the `onmessage` method is now trivial:
 ```js
 onmessage = function(event) {
     if (event.data instanceof Object &&
-        event.data.hasOwnProperty('queryMethod') &&
-        event.data.hasOwnProperty('queryMethodArguments')) {
+        Object.hasOwn(event.data, 'queryMethod') &&
+        Object.hasOwn(event.data, 'queryMethodArguments')) {
         queryableFunctions[event.data.queryMethod]
             .apply(self, event.data.queryMethodArguments);
     } else {
@@ -487,8 +487,8 @@ Here are the full implementation:
 
       worker.onmessage = function(event) {
         if (event.data instanceof Object &&
-          event.data.hasOwnProperty('queryMethodListener') &&
-          event.data.hasOwnProperty('queryMethodArguments')) {
+          Object.hasOwn(event.data, 'queryMethodListener') &&
+          Object.hasOwn(event.data, 'queryMethodArguments')) {
           listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
         } else {
           this.defaultListener.call(instance, event.data);
@@ -546,7 +546,7 @@ function reply() {
 }
 
 onmessage = function(oEvent) {
-  if (oEvent.data instanceof Object && oEvent.data.hasOwnProperty('queryMethod') && oEvent.data.hasOwnProperty('queryMethodArguments')) {
+  if (oEvent.data instanceof Object && Object.hasOwn(oEvent.data, 'queryMethod') && Object.hasOwn(oEvent.data, 'queryMethodArguments')) {
     queryableFunctions[oEvent.data.queryMethod].apply(self, oEvent.data.queryMethodArguments);
   } else {
     defaultReply(oEvent.data);

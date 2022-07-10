@@ -47,7 +47,7 @@ foo.bar; // ReferenceError: reference to undefined property "bar"
 To avoid the error, you need to either add a definition for `bar` to the
 object or check for the existence of the `bar` property before trying to
 access it; ways to do that include using the {{jsxref("Operators/in", "in")}} operator,
-or the {{jsxref("Object.prototype.hasOwnProperty()")}} method, like this:
+or the {{jsxref("Object.hasOwn()")}} method, like this:
 
 ```js example-good
 var foo = {};
@@ -59,7 +59,7 @@ console.log(foo.bar); // "moon"
 
 // Test to be sure bar exists before accessing it
 
-if (foo.hasOwnProperty('bar')) {
+if (Object.hasOwn(foo, 'bar')) {
   console.log(foo.bar);
 }
 ```
