@@ -22,10 +22,10 @@ browser-compat: api.GlobalEventHandlers.onanimationcancel
 
 The **`onanimationcancel`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
-processing {{event("animationcancel")}} events.
+processing {{domxref("HTMLElement/animationcancel_event", "animationcancel")}} events.
 
 An `animationcancel` event is sent when a [CSS animation](/en-US/docs/Web/CSS/CSS_Animations) unexpectedly aborts, that
-is, any time it stops running without sending an {{event("animationend")}} event. This
+is, any time it stops running without sending an {{domxref("HTMLElement/animationend_event", "animationend")}} event. This
 can happen, for example, when the {{cssxref("animation-name")}} is changed such that the
 animation is removed, or when the animating node is hidden—either directly or because
 any of its containing nodes are hidden—using CSS.
@@ -40,7 +40,7 @@ target.onanimationcancel = {{jsxref("Function")}}
 
 ### Value
 
-A {{jsxref("Function")}} to be called when an {{event("animationcancel")}} event occurs
+A {{jsxref("Function")}} to be called when an {{domxref("HTMLElement/animationcancel_event", "animationcancel")}} event occurs
 indicating that a CSS animation has begun on the _`target`_, where the
 target object is an HTML element ({{domxref("HTMLElement")}}), document
 ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as
@@ -170,7 +170,7 @@ function log(msg, event) {
 ```
 
 Then we set up the `handleCancelEvent()` function, which is called in
-response to the {{event("animationcancel")}} event, as set up in the HTML above. All we
+response to the {{domxref("HTMLElement/animationcancel_event", "animationcancel")}} event, as set up in the HTML above. All we
 do here is log information to the console, but you might find other use cases, such as
 starting a new animation or effect, or terminating some dependent operation.
 
@@ -197,7 +197,7 @@ document.getElementById('toggleBox').addEventListener('click', function() {
 ```
 
 Toggling the box to `display: none` has the effect of aborting its
-animation. In browsers that support {{event("animationcancel")}}, the event is fired and
+animation. In browsers that support {{domxref("HTMLElement/animationcancel_event", "animationcancel")}}, the event is fired and
 this handler is called.
 
 ### Result
@@ -219,5 +219,5 @@ will cause a message to be displayed about the event.
 
 ## See also
 
-- The {{event("animationcancel")}} event this event handler is triggered by.
+- The {{domxref("HTMLElement/animationcancel_event", "animationcancel")}} event this event handler is triggered by.
 - {{domxref("AnimationEvent")}}
