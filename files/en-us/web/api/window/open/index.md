@@ -120,7 +120,7 @@ function openRequestedPopup() {
 
 ## Best practices
 
-```js
+```html
 <script type="text/javascript">
 var windowObjectReference = null; // global variable
 function openFFPromotionPopup() {
@@ -171,7 +171,7 @@ More reading on the use of the target attribute:
 You can also parameterize the function to make it versatile, functional in more
 situations, therefore re-usable in scripts and webpages:
 
-```js
+```html
 <script type="text/javascript">
 var windowObjectReference = null; // global variable
 function openRequestedPopup(url, windowName) {
@@ -194,7 +194,7 @@ function openRequestedPopup(url, windowName) {
 You can also make such function able to open only 1 secondary window and to reuse such
 single secondary window for other links in this manner:
 
-```js
+```html
 <script type="text/javascript">
 var windowObjectReference = null; // global variable
 var PreviousUrl; /* global variable that will store the

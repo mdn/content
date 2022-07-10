@@ -60,7 +60,7 @@ Or use the `onvrdisplaydisconnect` event handler property:
 window.onvrdisplaydisconnect = function() {
   info.textContent = 'Display disconnected.';
   reportDisplays();
-);
+};
 ```
 
 ## Specifications

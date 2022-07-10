@@ -19,7 +19,7 @@ The **`delete()`** method of the {{domxref("XRAnchor")}} interface removes an an
 ## Syntax
 
 ```js
-delete()
+anchor.delete()
 ```
 
 ### Parameters
