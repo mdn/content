@@ -63,7 +63,7 @@ There isn't any method in an Object itself to delete its own properties (such as
 - {{jsxref("Object.getPrototypeOf","Object.getPrototypeOf()")}}
   - : Returns the prototype (internal `[[Prototype]]` property) of the specified object.
 - {{jsxref("Object.is","Object.is()")}}
-  - : Compares if two values are the same value. Equates all `NaN` values (which differs from both Abstract Equality Comparison and Strict Equality Comparison).
+  - : Compares if two values are the same value. Equates all `NaN` values (which differs from both `IsLooselyEqual` used by [`==`](/en-US/docs/Web/JavaScript/Reference/Operators/Equality) and `IsStrictlyEqual` used by [`===`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)).
 - {{jsxref("Object.isExtensible","Object.isExtensible()")}}
   - : Determines if extending of an object is allowed.
 - {{jsxref("Object.isFrozen","Object.isFrozen()")}}

@@ -15,18 +15,18 @@ tags:
 ---
 {{jsSidebar("Intermediate")}}
 
-There are four equality algorithms in ES2015:
+There are four equality algorithms in JavaScript:
 
-- Abstract Equality Comparison (`==`)
-- Strict Equality Comparison (`===`): used by `Array.prototype.indexOf`, `Array.prototype.lastIndexOf`, and `case`-matching
-- SameValueZero: used by `%TypedArray%` and `ArrayBuffer` constructors, as well as `Map` and `Set` operations, and also `String.prototype.includes` and `Array.prototype.includes` since ES2016
-- SameValue: used in all other places
+- [IsLooselyEqual](https://tc39.es/ecma262/#sec-islooselyequal) (`==`)
+- [IsStrictlyEqual](https://tc39.es/ecma262/#sec-isstrictlyequal) (`===`): used by `Array.prototype.indexOf`, `Array.prototype.lastIndexOf`, and `case`-matching
+- [SameValueZero](https://tc39.es/ecma262/#sec-samevaluezero): used by `%TypedArray%` and `ArrayBuffer` constructors, as well as `Map` and `Set` operations, and also `String.prototype.includes` and `Array.prototype.includes` since ES2016
+- [SameValue](https://tc39.es/ecma262/#sec-samevalue): used in all other places
 
 JavaScript provides three different value-comparison operations:
 
-- [===](/en-US/docs/Web/JavaScript/Reference/Operators#identity) - Strict Equality Comparison ("strict equality", "identity", "triple equals")
-- [==](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators) - Abstract Equality Comparison ("loose equality", "double equals")
-- {{jsxref("Object.is")}} provides SameValue (new in ES2015).
+- [===](/en-US/docs/Web/JavaScript/Reference/Operators#identity) — IsStrictlyEqual ("strict equality", "identity", "triple equals")
+- [==](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators) — IsLooselyEqual ("loose equality", "double equals")
+- {{jsxref("Object.is")}} — SameValue.
 
 Which operation you choose depends on what sort of comparison you are looking to perform. Briefly:
 
@@ -36,7 +36,7 @@ Which operation you choose depends on what sort of comparison you are looking to
 
 Note that the distinction between these all have to do with their handling of primitives; none of them compares whether the parameters are conceptually similar in structure. For any non-primitive objects `x` and `y` which have the same structure but are distinct objects themselves, all of the above forms will evaluate to `false`.
 
-## Strict equality using `===`
+## Strict equality using ===
 
 Strict equality compares two values for equality. Neither value is implicitly converted to some other value before being compared. If the values have different types, the values are considered unequal. If the values have the same type, are not numbers, and have the same value, they're considered equal. Finally, if both values are numbers, they're considered equal if they're both not `NaN` and are the same value, or if one is `+0` and one is `-0`.
 
@@ -149,17 +149,11 @@ Same-value equality is provided by the {{jsxref("Object.is")}} method.
 
 Similar to same-value equality, but +0 and -0 are considered equal.
 
-## Abstract equality, strict equality, and same value in the specification
-
-In ES5, the comparison performed by [`==`](/en-US/docs/Web/JavaScript/Reference/Operators) is described in [Section 11.9.3, The Abstract Equality Algorithm](https://262.ecma-international.org/5.1/#sec-11.9.3). The [`===`](/en-US/docs/Web/JavaScript/Reference/Operators) comparison is [11.9.6, The Strict Equality Algorithm](https://262.ecma-international.org/5.1/#sec-11.9.6). (Go look at these. They're brief and readable. Hint: read the strict equality algorithm first.) ES5 also describes, in [Section 9.12, The SameValue Algorithm](https://262.ecma-international.org/5.1/#sec-9.12) for use internally by the JS engine. It's largely the same as the Strict Equality Algorithm, except that 11.9.6.4 and 9.12.4 differ in handling {{jsxref("Number")}}s. ES2015 proposes to expose this algorithm through {{jsxref("Object.is")}}.
-
-We can see that with double and triple equals, with the exception of doing a type check upfront in 11.9.6.1, the Strict Equality Algorithm is a subset of the Abstract Equality Algorithm, because 11.9.6.2–7 correspond to 11.9.3.1.a–f.
-
 ## A model for understanding equality comparisons?
 
-Prior to ES2015, you might have said of double equals and triple equals that one is an "enhanced" version of the other. For example, someone might say that double equals is an extended version of triple equals, because the former does everything that the latter does, but with type conversion on its operands. E.g., `6 == "6"`. (Alternatively, someone might say that double equals is the baseline, and triple equals is an enhanced version, because it requires the two operands to be the same type, so it adds an extra constraint. Which one is the better model for understanding depends on how you choose to view things.)
+People often compare double equals and triple equals by saying one is an "enhanced" version of the other. For example, double equals could be said as an extended version of triple equals, because the former does everything that the latter does, but with type conversion on its operands — for example, `6 == "6"`. Alternatively, it can be claimed that double equals is the baseline, and triple equals is an enhanced version, because it requires the two operands to be the same type, so it adds an extra constraint.
 
-However, this way of thinking about the built-in sameness operators is not a model that can be stretched to allow a place for ES2015's {{jsxref("Object.is")}} on this "spectrum". {{jsxref("Object.is")}} isn't "looser" than double equals or "stricter" than triple equals, nor does it fit somewhere in between (i.e., being both stricter than double equals, but looser than triple equals). We can see from the sameness comparisons table below that this is due to the way that {{jsxref("Object.is")}} handles {{jsxref("NaN")}}. Notice that if `Object.is(NaN, NaN)` evaluated to `false`, we _could_ say that it fits on the loose/strict spectrum as an even stricter form of triple equals, one that distinguishes between `-0` and `+0`. The {{jsxref("NaN")}} handling means this is untrue, however. Unfortunately, {{jsxref("Object.is")}} has to be thought of in terms of its specific characteristics, rather than its looseness or strictness with regard to the equality operators.
+However, this way of thinking implies that the equality comparisons form a one-dimensional "spectrum" where "totally strict" lies on one end and "totally loose" lies on the other. This model falls short with {{jsxref("Object.is")}}, because it isn't "looser" than double equals or "stricter" than triple equals, nor does it fit somewhere in between (i.e., being both stricter than double equals, but looser than triple equals). We can see from the sameness comparisons table below that this is due to the way that {{jsxref("Object.is")}} handles {{jsxref("NaN")}}. Notice that if `Object.is(NaN, NaN)` evaluated to `false`, we _could_ say that it fits on the loose/strict spectrum as an even stricter form of triple equals, one that distinguishes between `-0` and `+0`. The {{jsxref("NaN")}} handling means this is untrue, however. Unfortunately, {{jsxref("Object.is")}} has to be thought of in terms of its specific characteristics, rather than its looseness or strictness with regard to the equality operators.
 
 | x                   | y                   | `==`       | `===`      | `Object.is` | `SameValueZero` |
 | ------------------- | ------------------- | ---------- | ---------- | ----------- | --------------- |

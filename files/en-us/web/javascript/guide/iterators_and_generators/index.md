@@ -85,7 +85,7 @@ The function can be called as many times as desired, and returns a new Generator
 We can now adapt the example from above. The behavior of this code is identical, but the implementation is much easier to write and read.
 
 ```js
-function* makeRangeIterator(start = 0, end = 100, step = 1) {
+function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
     let iterationCount = 0;
     for (let i = start; i < end; i += step) {
         iterationCount++;

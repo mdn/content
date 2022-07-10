@@ -14,16 +14,8 @@ The MathML `<menclose>` element renders its content inside an enclosing notation
 
 ## Attributes
 
-- class, id, style
-  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
-- `displaystyle`
-  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`. See also `movablelimits` on {{ MathMLElement("mo") }}.
-- href
-  - : Used to set a hyperlink to a specified URI.
-- mathbackground
-  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
-- mathcolor
-  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
 - notation
 
   - : A list of notations, separated by white space, to apply to the child elements. The symbols are each drawn as if the others are not present, and therefore may overlap. Possible values are:

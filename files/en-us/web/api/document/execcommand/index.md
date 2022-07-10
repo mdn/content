@@ -138,7 +138,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `styleWithCSS`
       - : Replaces the `useCSS` command. `true` modifies/generates `style` attributes in markup, false generates presentational elements.
     - `AutoUrlDetect`
-      - : Changes the browser auto-link behavior (Internet Explorer only)
+      - : Changes the browser auto-link behavior (Internet Explorer only).
 
 - `aShowDefaultUI`
   - : A boolean value indicating whether the default user interface should be shown. This is not implemented in Mozilla.

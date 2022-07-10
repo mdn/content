@@ -117,11 +117,9 @@ superHeroes['members'][1]['powers'][2]
 
 1. First we have the variable name — `superHeroes`.
 2. Inside that we want to access the `members` property, so we use `["members"]`.
-3. `members` contains an array populated by objects.
-   We want to access the second object inside the array, so we use `[1]`.
-5. Inside this object, we want to access the `powers` property, so we use `["powers"]`.
-6. Inside the `powers` property is an array containing the selected hero's superpowers.
-   We want the third one, so we use `[2]`.
+3. `members` contains an array populated by objects. We want to access the second object inside the array, so we use `[1]`.
+4. Inside this object, we want to access the `powers` property, so we use `["powers"]`.
+5. Inside the `powers` property is an array containing the selected hero's superpowers. We want the third one, so we use `[2]`.
 
 > **Note:** We've made the JSON seen above available inside a variable in our [JSONTest.html](https://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) example (see the [source code](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/JSONTest.html)).
 > Try loading this up and then accessing data inside the variable via your browser's JavaScript console.
