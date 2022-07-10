@@ -133,8 +133,6 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("slotchange")}} event is raised.
 - {{domxref("GlobalEventHandlers.onstalled")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("stalled")}} event is raised.
-- {{domxref("GlobalEventHandlers.onsubmit")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("submit")}} event is raised.
 - {{domxref("GlobalEventHandlers.onsuspend")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("suspend")}} event is raised.
 - {{domxref("GlobalEventHandlers.ontimeupdate")}}
