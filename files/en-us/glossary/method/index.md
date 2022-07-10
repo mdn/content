@@ -10,6 +10,8 @@ A **method** is a {{glossary("function")}} which is a {{glossary("property")}} o
 
 > **Note:** In JavaScript functions themselves are objects, so, in that context, a method is actually an {{glossary("object reference")}} to a function.
 
+When `F` is said to be a _method_ of `O`, it often means that `F` uses `O` as its [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) binding. Function properties that do not have different behaviors based on their `this` value (or those that don't have a dynamic `this` binding at all — like [bound functions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) and [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)) may not be universally recognized as methods.
+
 ## See also
 
 - {{InterWiki("wikipedia","Method (computer programming)")}} in Wikipedia
