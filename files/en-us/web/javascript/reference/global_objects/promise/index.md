@@ -15,8 +15,6 @@ browser-compat: javascript.builtins.Promise
 
 The **`Promise`** object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
 
-{{AvailableInWorkers}}
-
 To learn about the way promises work and how you can use them, we advise you to read [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) first.
 
 ## Description
@@ -31,19 +29,29 @@ A `Promise` is in one of these states:
 
 A pending promise can either be _fulfilled_ with a value or _rejected_ with a reason (error). When either of these options happens, the associated handlers queued up by a promise's `then` method are called. If the promise has already been fulfilled or rejected when a corresponding handler is attached, the handler will be called, so there is no race condition between an asynchronous operation completing and its handlers being attached.
 
-As the `{{JSxRef("Promise.then", "Promise.prototype.then()")}}` and `{{JSxRef("Promise.catch", "Promise.prototype.catch()")}}` methods return promises, they can be chained.
+A promise is said to be _settled_ if it is either fulfilled or rejected, but not pending. Its state at this instant is also called its _eventual state_, which can either be "fulfilled with some value" or "rejected with some reason".
 
 ![](promises.png)
 
-> **Note:** Several other languages have mechanisms for lazy evaluation and deferring a computation, which they also call "promises", e.g. Scheme. Promises in JavaScript represent processes that are already happening, which can be chained with callback functions. If you are looking to lazily evaluate an expression, consider using a function with no arguments e.g. `f = () => expression` to create the lazily-evaluated expression, and `f()` to evaluate the expression immediately.
+You will also hear the term _resolved_ used with promises — this means that the promise is settled or "locked-in" to match the eventual state of another promise, and further resolving or rejecting it has no effect. The [States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) document from the original Promise proposal contains more details about promise terminology. Colloquially, "resolved" promises are often equivalent to "fulfilled" promises, but as illustrated in "States and fates", resolved promises can be pending or rejected as well. For example:
 
-> **Note:** A promise is said to be _settled_ if it is either fulfilled or rejected, but not pending. You will also hear the term _resolved_ used with promises — this means that the promise is settled or "locked-in" to match the state of another promise. [States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) contain more details about promise terminology.
+```js
+new Promise((resolveOuter) => {
+  resolveOuter(new Promise((resolveInner) => {
+    setTimeout(resolveInner, 1000);
+  }));
+})
+```
+
+This promise is already _resolved_ at the time when it's created (because the `resolveOuter` is called synchronously), but it is resolved with another promise, and therefore won't be _fulfilled_ until 1 second later, when the inner promise fulfills. In practice, the "resolution" is often done behind the scenes and not observable, and only its fulfillment or rejection are.
+
+> **Note:** Several other languages have mechanisms for lazy evaluation and deferring a computation, which they also call "promises", e.g. Scheme. Promises in JavaScript represent processes that are already happening, which can be chained with callback functions. If you are looking to lazily evaluate an expression, consider using a function with no arguments e.g. `f = () => expression` to create the lazily-evaluated expression, and `f()` to evaluate the expression immediately.
 
 ### Chained Promises
 
-The methods `{{jsxref("Promise.prototype.then()")}}`, `{{jsxref("Promise.prototype.catch()")}}`, and `{{jsxref("Promise.prototype.finally()")}}` are used to associate further action with a promise that becomes settled.
+The methods `{{jsxref("Promise.prototype.then()")}}`, `{{jsxref("Promise.prototype.catch()")}}`, and `{{jsxref("Promise.prototype.finally()")}}` are used to associate further action with a promise that becomes settled. As the `{{JSxRef("Promise.then", "Promise.prototype.then()")}}` and `{{JSxRef("Promise.catch", "Promise.prototype.catch()")}}` methods return promises, they can be chained.
 
-The `.then()` method takes up to two arguments; the first argument is a callback function for the resolved case of the promise, and the second argument is a callback function for the rejected case. Each `.then()` returns a newly generated promise object, which can optionally be used for chaining; for example:
+The `.then()` method takes up to two arguments; the first argument is a callback function for the fulfilled case of the promise, and the second argument is a callback function for the rejected case. Each `.then()` returns a newly generated promise object, which can optionally be used for chaining; for example:
 
 ```js
 const myPromise = new Promise((resolve, reject) => {
@@ -53,20 +61,20 @@ const myPromise = new Promise((resolve, reject) => {
 });
 
 myPromise
-  .then(handleResolvedA, handleRejectedA)
-  .then(handleResolvedB, handleRejectedB)
-  .then(handleResolvedC, handleRejectedC);
+  .then(handleFulfilledA, handleRejectedA)
+  .then(handleFulfilledB, handleRejectedB)
+  .then(handleFulfilledC, handleRejectedC);
 ```
 
 Processing continues to the next link of the chain even when a `.then()` lacks a callback function that returns a Promise object. Therefore, a chain can safely omit every _rejection_ callback function until the final `.catch()`.
 
-Handling a rejected promise in each `.then()` has consequences further down the promise chain. Sometimes there is no choice, because an error must be handled immediately. In such cases we must throw an error of some type to maintain error state down the chain. On the other hand, in the absence of an immediate need, it is simpler to leave out error handling until a final `.catch()` statement. A `.catch()` is really just a `.then()` without a slot for a callback function for the case when the promise is resolved.
+Handling a rejected promise in each `.then()` has consequences further down the promise chain. Sometimes there is no choice, because an error must be handled immediately. In such cases we must throw an error of some type to maintain error state down the chain. On the other hand, in the absence of an immediate need, it is simpler to leave out error handling until a final `.catch()` statement. A `.catch()` is really just a `.then()` without a slot for a callback function for the case when the promise is fulfilled.
 
 ```js
 myPromise
-  .then(handleResolvedA)
-  .then(handleResolvedB)
-  .then(handleResolvedC)
+  .then(handleFulfilledA)
+  .then(handleFulfilledB)
+  .then(handleFulfilledC)
   .catch(handleRejectedAny);
 ```
 
@@ -82,7 +90,7 @@ myPromise
   .catch(err => { console.log(err) });
 ```
 
-The termination condition of a promise determines the "settled" state of the next promise in the chain. A "resolved" state indicates a successful completion of the promise, while a "rejected" state indicates a lack of success. The return value of each resolved promise in the chain is passed along to the next `.then()`, while the reason for rejection is passed along to the next rejection-handler function in the chain.
+The termination condition of a promise determines the "settled" state of the next promise in the chain. A "fulfilled" state indicates a successful completion of the promise, while a "rejected" state indicates a lack of success. The return value of each fulfilled promise in the chain is passed along to the next `.then()`, while the reason for rejection is passed along to the next rejection-handler function in the chain.
 
 The promises of a chain are nested like Russian dolls, but get popped like the top of a stack. The first promise in the chain is most deeply nested and is the first to pop.
 
@@ -107,16 +115,37 @@ const promiseC = promiseA.then(handleFulfilled2, handleRejected2);
 An action can be assigned to an already "settled" promise. In that case, the action (if appropriate) will be performed at the first asynchronous opportunity. Note that promises are guaranteed to be asynchronous. Therefore, an action for an already "settled" promise will occur only after the stack has cleared and a clock-tick has passed. The effect is much like that of `setTimeout(action,10)`.
 
 ```js
-const promiseA = new Promise( (resolutionFunc,rejectionFunc) => {
+const promiseA = new Promise((resolutionFunc, rejectionFunc) => {
     resolutionFunc(777);
 });
 // At this point, "promiseA" is already settled.
-promiseA.then( (val) => console.log("asynchronous logging has val:",val) );
+promiseA.then((val) => console.log("asynchronous logging has val:", val));
 console.log("immediate logging");
 
 // produces output in this order:
 // immediate logging
 // asynchronous logging has val: 777
+```
+
+### Thenables
+
+The JavaScript ecosystem has made multiple Promise implementations long before it became part of the language. Despite being represented differently internally, at the minimum, all Promise-like objects implement the _Thenable_ interface. A thenable implements the [`.then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) method, which is called with two callbacks: one for when the promise is fulfilled, one for when it's rejected. Promises are thenables as well.
+
+To interoperate with the existing Promise implementations, the language allows using thenables in place of promises. For example, [`Promise.resolve`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) will not only resolve promises, but also trace thenables.
+
+```js
+const aThenable = {
+  then(onFulfilled, onRejected) {
+    onFulfilled({
+      // The thenable is fulfilled with another thenable
+      then(onFulfilled, onRejected) {
+        onFulfilled(42);
+      },
+    });
+  },
+};
+
+Promise.resolve(aThenable); // A promise fulfilled with 42
 ```
 
 ### Incumbent settings object tracking
@@ -194,25 +223,25 @@ In the above example, the inner text of the `<iframe>` will be updated only if t
 
 - {{JSxRef("Promise.all", "Promise.all(iterable)")}}
 
-  - : Wait for all promises to be resolved, or for any to be rejected.
+  - : Wait for all promises to be fulfilled, or for any to be rejected.
 
-    If the returned promise resolves, it is resolved with an aggregating array of the values from the resolved promises, in the same order as defined in the iterable of multiple promises.
+    If the returned promise fulfills, it is fulfilled with an aggregating array of the values from the fulfilled promises, in the same order as defined in the iterable of multiple promises.
 
     If it rejects, it is rejected with the reason from the first promise in the iterable that was rejected.
 
 - {{JSxRef("Promise.allSettled", "Promise.allSettled(iterable)")}}
 
-  - : Wait until all promises have settled (each may resolve or reject).
+  - : Wait until all promises have settled (each may fulfill or reject).
 
-    Returns a Promise that resolves after all of the given promises is either fulfilled or rejected, with an array of objects that each describe the outcome of each promise.
+    Returns a Promise that fulfills after all of the given promises is either fulfilled or rejected, with an array of objects that each describe the outcome of each promise.
 
 - {{JSxRef("Promise.any", "Promise.any(iterable)")}}
-  - : Takes an iterable of Promise objects and, as soon as one of the promises in the iterable fulfills, returns a single promise that resolves with the value from that promise.
+  - : Takes an iterable of Promise objects and, as soon as one of the promises in the iterable fulfills, returns a single promise that fulfills with the value from that promise.
 - {{JSxRef("Promise.race", "Promise.race(iterable)")}}
 
   - : Wait until any of the promises is fulfilled or rejected.
 
-    If the returned promise resolves, it is resolved with the value of the first promise in the iterable that resolved.
+    If the returned promise fulfills, it is fulfilled with the value of the first promise in the iterable that fulfilled.
 
     If it rejects, it is rejected with the reason from the first promise that was rejected.
 
