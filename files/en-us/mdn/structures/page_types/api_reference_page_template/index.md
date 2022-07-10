@@ -99,7 +99,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fired when _(include a description of when the event fires)_.
     Also available via the `oneventname2` property.
 - etc.
-  - : Fired when ...
+  - : Fired when…
 
 ## Examples
 
