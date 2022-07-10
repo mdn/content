@@ -44,7 +44,7 @@ delete object['property']
 ### Return value
 
 `true` for all cases except when the property is an
-{{jsxref("Object.hasOwn", "own")}} {{jsxref("Errors/Cant_delete", "non-configurable")}} property, in which case, `false` is returned in
+{{jsxref("Object.hasOwn")}} {{jsxref("Errors/Cant_delete", "non-configurable")}} property, in which case, `false` is returned in
 non-strict mode.
 
 ### Exceptions
