@@ -36,17 +36,17 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
 - {{domxref("GlobalEventHandlers.onanimationstart")}} {{Non-standard_inline}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when an {{event("animationstart")}} event is sent, indicating that a [CSS animation](/en-US/docs/Web/CSS/CSS_Animations) has started playing.
 - {{domxref("GlobalEventHandlers.onauxclick")}} {{Non-standard_inline}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when an {{event("auxclick")}} event is sent, indicating that a non-primary button has been pressed on an input device (e.g. a middle mouse button).
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when an {{domxref("Element/auxclick_event", "auxclick")}} event is sent, indicating that a non-primary button has been pressed on an input device (e.g. a middle mouse button).
 - {{domxref("GlobalEventHandlers.onerror")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the `error` event is raised.
 - {{domxref("GlobalEventHandlers.onclick")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("click")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Element/click_event", "click")}} event is raised.
 - {{domxref("GlobalEventHandlers.onclose")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("close")}} event is raised.
 - {{domxref("GlobalEventHandlers.oncontextmenu")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("contextmenu")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Element/contextmenu_event", "contextmenu")}} event is raised.
 - {{domxref("GlobalEventHandlers.ondblclick")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("dblclick")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Element/dblclick_event", "dblclick")}} event is raised.
 - {{domxref("GlobalEventHandlers.ondrag")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/drag_event", "drag")}} event is raised.
 - {{domxref("GlobalEventHandlers.ondragend")}}

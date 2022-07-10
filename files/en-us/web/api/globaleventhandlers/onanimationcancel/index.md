@@ -182,7 +182,7 @@ function handleCancelEvent(event) {
 
 Then we add a method to handle toggle {{cssxref("display")}} between
 `flex` and `none` and establish it
-as the handler for a {{event("click")}} event on the "Hide/Show" the Box button:
+as the handler for a {{domxref("Element/click_event", "click")}} event on the "Hide/Show" the Box button:
 
 ```js
 document.getElementById('toggleBox').addEventListener('click', function() {

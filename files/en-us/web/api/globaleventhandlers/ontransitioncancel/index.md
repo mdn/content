@@ -59,7 +59,7 @@ events to detect when the transition begins and ends, to cause a text update to 
 during the transition. This could also be used to trigger animations or other effects,
 to allow chaining of reactions.
 
-In addition, we also use a {{event("click")}} event to make the box disappear
+In addition, we also use a {{domxref("Element/click_event", "click")}} event to make the box disappear
 (`display: none;`), showing how it triggers the {{event("transitioncancel")}}
 event to fire.
 
