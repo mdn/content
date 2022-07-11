@@ -142,7 +142,7 @@ console.log(target.a);
 //  (The operation has been properly forwarded!)
 ```
 
-Note that while this "no-op" works for plain JavaScript objects, it does not work for native objects like DOM Elements, [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) objects, or anything that has internal slots. See [no private property forwarding](#no_private_property_forwarding) for more information.
+Note that while this "no-op" works for plain JavaScript objects, it does not work for native objects, such as DOM elements, [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) objects, or anything that has internal slots. See [no private property forwarding](#no_private_property_forwarding) for more information.
 
 ### No private property forwarding
 
