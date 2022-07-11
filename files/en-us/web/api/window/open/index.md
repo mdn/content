@@ -121,7 +121,6 @@ function openRequestedPopup() {
 ## Best practices
 
 ```js
-<script type="text/javascript">
 var windowObjectReference = null; // global variable
 function openFFPromotionPopup() {
   if(windowObjectReference == null || windowObjectReference.closed)
@@ -142,8 +141,9 @@ function openFFPromotionPopup() {
        the window or to reload the referenced resource. */
   };
 }
-</script>
-(...)
+```
+
+```html
 <p><a
  href="http://www.spreadfirefox.com/"
  target="PromoteFirefoxWindowName"
@@ -172,7 +172,6 @@ You can also parameterize the function to make it versatile, functional in more
 situations, therefore re-usable in scripts and webpages:
 
 ```js
-<script type="text/javascript">
 var windowObjectReference = null; // global variable
 function openRequestedPopup(url, windowName) {
   if(windowObjectReference == null || windowObjectReference.closed) {
@@ -181,8 +180,9 @@ function openRequestedPopup(url, windowName) {
     windowObjectReference.focus();
   };
 }
-</script>
-(...)
+```
+
+```html
 <p><a
  href="http://www.spreadfirefox.com/"
  target="PromoteFirefoxWindow"
@@ -195,7 +195,6 @@ You can also make such function able to open only 1 secondary window and to reus
 single secondary window for other links in this manner:
 
 ```js
-<script type="text/javascript">
 var windowObjectReference = null; // global variable
 var PreviousUrl; /* global variable that will store the
                     url currently in the secondary window */
@@ -217,8 +216,9 @@ function openRequestedSinglePopup(url) {
   /* explanation: we store the current url in order to compare url
      in the event of another call of this function. */
 }
-</script>
-(...)
+```
+
+```html
 <p><a
  href="http://www.spreadfirefox.com/"
  target="SingleSecondaryWindowName"

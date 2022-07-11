@@ -76,7 +76,7 @@ General containers and definitions that shape audio graphs in Web Audio API usag
   - : Provides a map-like interface to a group of {{domxref("AudioParam")}} interfaces, which means it provides the methods `forEach()`, `get()`, `has()`, `keys()`, and `values()`, as well as a `size` property.
 - {{domxref("BaseAudioContext")}}
   - : The **`BaseAudioContext`** interface acts as a base definition for online and offline audio-processing graphs, as represented by {{domxref("AudioContext")}} and {{domxref("OfflineAudioContext")}} respectively. You wouldn't use `BaseAudioContext` directly â€” you'd use its features via one of these two inheriting interfaces.
-- The {{event("ended")}} event
+- The {{domxerf("AudioScheduledSourceNode/ended_event", "ended")}} event
   - : The `ended` event is fired when playback has stopped because the end of the media was reached.
 
 ### Defining audio sources
@@ -185,10 +185,10 @@ It is possible to process/render an audio graph very quickly in the background â
 
 - {{domxref("OfflineAudioContext")}}
   - : The **`OfflineAudioContext`** interface is an {{domxref("AudioContext")}} interface representing an audio-processing graph built from linked together {{domxref("AudioNode")}}s. In contrast with a standard `AudioContext`, an `OfflineAudioContext` doesn't really render the audio but rather generates it, _as fast as it can_, in a buffer.
-- {{event("complete")}} (event)
+- {{domxref("OfflineAudioContext/complete_event", "complete")}} (event)
   - : The `complete` event is fired when the rendering of an {{domxref("OfflineAudioContext")}} is terminated.
 - {{domxref("OfflineAudioCompletionEvent")}}
-  - : The `OfflineAudioCompletionEvent` represents events that occur when the processing of an {{domxref("OfflineAudioContext")}} is terminated. The {{event("complete")}} event uses this interface.
+  - : The `OfflineAudioCompletionEvent` represents events that occur when the processing of an {{domxref("OfflineAudioContext")}} is terminated. The {{domxref("OfflineAudioContext/complete_event", "complete")}} event uses this interface.
 
 ## Guides and tutorials
 

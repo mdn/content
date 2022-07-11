@@ -29,7 +29,7 @@ formData.append("accountnum", 123456); // number 123456 is immediately converted
 formData.append("userfile", fileInputElement.files[0]);
 
 // JavaScript file-like object
-const content = '<a id="a"><b id="b">hey!</b></a>'; // the body of the new file...
+const content = '<a id="a"><b id="b">hey!</b></a>'; // the body of the new file…
 const blob = new Blob([content], { type: "text/xml"});
 
 formData.append("webmasterfile", blob);

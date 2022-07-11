@@ -24,7 +24,7 @@ browser-compat: api.GlobalEventHandlers.onanimationend
 
 The **`onanimationend`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
-processing {{event("animationend")}} events.
+processing {{domxref("HTMLElement/animationend_event", "animationend")}} events.
 
 The `animationend` event fires when a [CSS animation](/en-US/docs/Web/CSS/CSS_Animations)
 reaches the end of its active period (which is calculated as
@@ -39,7 +39,7 @@ target.onanimationend = Function
 
 ### Value
 
-A {{jsxref("Function")}} to be called when an {{event("animationend")}} event occurs
+A {{jsxref("Function")}} to be called when an {{domxref("HTMLElement/animationend_event", "animationend")}} event occurs
 indicating that a CSS animation has ended on the _`target`_, where the
 target object is an HTML element ({{domxref("HTMLElement")}}), document
 ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as
@@ -60,6 +60,6 @@ See [`GlobalEventHandlers.onanimationstart`](/en-US/docs/Web/API/GlobalEventHand
 
 ## See also
 
-- The {{event("animationend")}} event, which triggers this event handler
+- The {{domxref("HTMLElement/animationend_event", "animationend")}} event, which triggers this event handler
 - {{domxref("AnimationEvent")}}
-- The {{event("animationstart")}} event
+- The {{domxref("HTMLElement/animationstart_event", "animationstart")}} event

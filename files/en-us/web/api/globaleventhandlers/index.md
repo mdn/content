@@ -28,21 +28,19 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
 - {{domxref("GlobalEventHandlers.onabort")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/abort_event", "abort")}} event is raised.
 - {{domxref("GlobalEventHandlers.onanimationcancel")}} {{Non-standard_inline}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when an {{event("animationcancel")}} event is sent, indicating that a running [CSS animation](/en-US/docs/Web/CSS/CSS_Animations) has been canceled.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when an {{domxref("HTMLElement/animationcancel_event", "animationcancel")}} event is sent, indicating that a running [CSS animation](/en-US/docs/Web/CSS/CSS_Animations) has been canceled.
 - {{domxref("GlobalEventHandlers.onanimationend")}} {{Non-standard_inline}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when an {{event("animationend")}} event is sent, indicating that a [CSS animation](/en-US/docs/Web/CSS/CSS_Animations) has stopped playing.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when an {{domxref("HTMLElement/animationend_event", "animationend")}} event is sent, indicating that a [CSS animation](/en-US/docs/Web/CSS/CSS_Animations) has stopped playing.
 - {{domxref("GlobalEventHandlers.onanimationiteration")}} {{Non-standard_inline}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when an {{event("animationiteration")}} event has been sent, indicating that a [CSS animation](/en-US/docs/Web/CSS/CSS_Animations) has begun playing a new iteration of the animation sequence.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when an {{domxref("HTMLElement/animationiteration_event", "animationiteration")}} event has been sent, indicating that a [CSS animation](/en-US/docs/Web/CSS/CSS_Animations) has begun playing a new iteration of the animation sequence.
 - {{domxref("GlobalEventHandlers.onanimationstart")}} {{Non-standard_inline}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when an {{event("animationstart")}} event is sent, indicating that a [CSS animation](/en-US/docs/Web/CSS/CSS_Animations) has started playing.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when an {{domxref("HTMLElement/animationstart_event", "animationstart")}} event is sent, indicating that a [CSS animation](/en-US/docs/Web/CSS/CSS_Animations) has started playing.
 - {{domxref("GlobalEventHandlers.onauxclick")}} {{Non-standard_inline}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when an {{domxref("Element/auxclick_event", "auxclick")}} event is sent, indicating that a non-primary button has been pressed on an input device (e.g. a middle mouse button).
 - {{domxref("GlobalEventHandlers.onerror")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the `error` event is raised.
 - {{domxref("GlobalEventHandlers.onclick")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Element/click_event", "click")}} event is raised.
-- {{domxref("GlobalEventHandlers.onclose")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("close")}} event is raised.
 - {{domxref("GlobalEventHandlers.oncontextmenu")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Element/contextmenu_event", "contextmenu")}} event is raised.
 - {{domxref("GlobalEventHandlers.ondblclick")}}
@@ -61,8 +59,6 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event is raised.
 - {{domxref("GlobalEventHandlers.ondrop")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/drop_event", "drop")}} event is raised.
-- {{domxref("GlobalEventHandlers.onemptied")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/emptied_event", "emptied")}} event is raised.
 - {{domxref("GlobalEventHandlers.onformdata")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) for processing {{domxref("HTMLFormElement/formdata_event", "formdata")}} events, fired after the entry list representing the form's data is constructed.
 - {{domxref("GlobalEventHandlers.ongotpointercapture")}}
@@ -138,13 +134,13 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
 - {{domxref("GlobalEventHandlers.onvolumechange")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("volumechange")}} event is raised.
 - {{domxref("GlobalEventHandlers.ontransitioncancel")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{event("transitioncancel")}} event is sent, indicating that a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) has been cancelled.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}} event is sent, indicating that a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) has been cancelled.
 - {{domxref("GlobalEventHandlers.ontransitionend")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{event("transitionend")}} event is sent, indicating that a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) has finished playing.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{domxref("HTMLElement/transitionend_event", "transitionend")}} event is sent, indicating that a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) has finished playing.
 - {{domxref("GlobalEventHandlers.ontransitionrun")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{event("transitionrun")}} event is sent, indicating that a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) is running, though not necessarily started.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{domxref("HTMLElement/transitionrun_event", "transitionrun")}} event is sent, indicating that a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) is running, though not necessarily started.
 - {{domxref("GlobalEventHandlers.ontransitionstart")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{event("transitionstart")}} event is sent, indicating that a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) has started transitioning.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{domxref("HTMLElement/transitionstart_event", "transitionstart")}} event is sent, indicating that a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) has started transitioning.
 - {{domxref("GlobalEventHandlers.onwaiting")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("waiting")}} event is raised.
 

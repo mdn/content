@@ -19,7 +19,7 @@ browser-compat: api.GlobalEventHandlers.onanimationstart
 ---
 {{APIRef("CSS3 Animations")}}
 
-An event handler for the {{event("animationstart")}} event. This event is sent when a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) starts to play.
+An event handler for the {{domxref("HTMLElement/animationstart_event", "animationstart")}} event. This event is sent when a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) starts to play.
 
 ## Syntax
 
@@ -30,7 +30,7 @@ target.onanimationstart = Function
 
 ### Value
 
-A {{jsxref("Function")}} to be called when an {{event("animationstart")}} event occurs
+A {{jsxref("Function")}} to be called when an {{domxref("HTMLElement/animationstart_event", "animationstart")}} event occurs
 indicating that a CSS animation has begun on the _`target`_, where the
 target object is an HTML element ({{domxref("HTMLElement")}}), document
 ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as
@@ -163,8 +163,8 @@ function log(msg, event) {
 };
 ```
 
-Then we set up the event handlers for the {{event("animationstart")}} and
-{{event("animationend")}} events:
+Then we set up the event handlers for the {{domxref("HTMLElement/animationstart_event", "animationstart")}} and
+{{domxref("HTMLElement/animationend_event", "animationend")}} events:
 
 ```js
 let box = document.getElementById("box");
@@ -209,5 +209,5 @@ Assembled together, you get this:
 
 ## See also
 
-- The {{event("animationstart")}} event this event handler is triggered by.
+- The {{domxref("HTMLElement/animationstart_event", "animationstart")}} event this event handler is triggered by.
 - {{domxref("AnimationEvent")}}

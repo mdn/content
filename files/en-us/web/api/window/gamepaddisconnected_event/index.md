@@ -27,7 +27,7 @@ Alternatively, you can use the `window.ongamepaddisconnected` event handler prop
 ```js
 window.ongamepaddisconnected = event => {
     console.log('Lost connection with the gamepad.');
-});
+};
 ```
 
 ## Specifications
