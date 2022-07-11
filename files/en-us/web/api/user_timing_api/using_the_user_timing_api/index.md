@@ -164,7 +164,7 @@ function display_measures(ev) {
   // Display each measure using getEntries()
   let entries = performance.getEntries();
   let j=0;
-  for (let i=0; i < entries.length; i++) {
+  for (let i = 0; i < entries.length; i++) {
     if (entries[i].entryType == "measure") {
       if (j == 0) { log("= getEntries()", 1); j++ }
       log("... [" + i + "] = " + entries[i].name, 1);
