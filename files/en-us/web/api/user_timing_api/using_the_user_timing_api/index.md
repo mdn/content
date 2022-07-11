@@ -140,7 +140,7 @@ function create_measures(ev) {
 
   // Log the marks and measures
   const marks = ["mark-A", "mark-B", "mark-C", "mark-D"];
-  for (let i=0; i < marks.length; i++)
+  for (let i = 0; i < marks.length; i++)
     log("... Created mark = " + marks[i], 1);
   const measures = ["measures-1", "measures-2"];
   for (let i = 0; i < measures.length; i++)
