@@ -30,7 +30,7 @@ SyntaxError: for-in loop variable declaration may not have an initializer. (Chro
 ## What went wrong?
 
 The head of a [for...in](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop contains an initializer expression.
-That is, a variable is declared and assigned a value |`for (const i = 0 in obj)`|.
+That is, a variable is declared and assigned a value `for (const i = 0 in obj)`.
 In non-strict mode, this head declaration is silently ignored and behaves like `for (const i in obj)`.
 In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), however, a `SyntaxError` is thrown.
 
