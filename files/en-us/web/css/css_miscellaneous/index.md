@@ -9,7 +9,7 @@ tags:
 ---
 {{CSSRef}}
 
-These pages contain CSS properties that don't fit in any other categories, are experimental, or are supported in browsers though not included in a CSS specification.
+These pages contain CSS properties that are supported by browsers but either aren't included in a CSS specification, don't fit into any other CSS categories, or are experimental.
 
 ## Reference
 
