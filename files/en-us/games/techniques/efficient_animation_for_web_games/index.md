@@ -38,7 +38,7 @@ function doAnimation(timestamp) {
       progress = timestamp - startTime;
   }
 
-  // Do animation …
+  // Perform the animation
   if (progress < animationLength) {
       requestAnimationFrame(doAnimation);
   }
