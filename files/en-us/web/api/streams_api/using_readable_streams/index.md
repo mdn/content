@@ -332,7 +332,7 @@ function teeStream() {
 
 ## Pipe chains
 
-A newer feature of streams is the ability to pipe streams into one another (called a [pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains)). This involves two methods — {{domxref("ReadableStream.pipeThrough()")}}, which pipes a readable stream through a writer/reader pair to transform one data format into another, and {{domxref("ReadableStream.pipeTo()")}}, which pipes a readable stream to a writer acting as an end point for the pipe chain.
+Another feature of streams is the ability to pipe streams into one another (called a [pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains)). This involves two methods — {{domxref("ReadableStream.pipeThrough()")}}, which pipes a readable stream through a writer/reader pair to transform one data format into another, and {{domxref("ReadableStream.pipeTo()")}}, which pipes a readable stream to a writer acting as an end point for the pipe chain.
 
 We do have have a simple example called [Unpack Chunks of a PNG](https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream) ([see it live also](https://mdn.github.io/dom-examples/streams/png-transform-stream/)) that fetches an image as a stream, then pipes it through to a custom PNG transform stream that retrieves PNG chunks out of a binary data stream.
 
