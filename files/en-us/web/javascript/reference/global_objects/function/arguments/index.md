@@ -15,7 +15,7 @@ The **`function.arguments`** property refers to an array-like object correspondi
 
 ## Description
 
-The syntax `function.arguments` is deprecated. The recommended way to access the {{jsxref("Functions/arguments", "arguments")}} object available within functions is to refer to the variable {{jsxref("Functions/arguments", "arguments")}}.
+The property `function.arguments` is deprecated. The recommended way to access the `arguments` object available within functions is to refer to the variable {{jsxref("Functions/arguments", "arguments")}}.
 
 In the case of recursion, i.e. if function `f` appears several times on the call stack, the value of `f.arguments` represents the arguments corresponding to the most recent invocation of the function.
 
