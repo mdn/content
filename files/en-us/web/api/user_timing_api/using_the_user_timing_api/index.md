@@ -180,7 +180,7 @@ function display_measures(ev) {
 
   // Display each measure using getEntriesName() - have to look for each measure separately
   entries = performance.getEntriesByName("measure-1","measure");
-  for (let i=0; i < entries.length; i++) {
+  for (let i = 0; i < entries.length; i++) {
     if (i == 0) log("= getEntriesByName('measure-1', 'measure')", 1);
     log("... " + entries[i].name, 1);
   }
