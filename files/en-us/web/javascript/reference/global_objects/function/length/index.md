@@ -1,5 +1,5 @@
 ---
-title: Function.length
+title: Function.prototype.length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
 tags:
   - Function
