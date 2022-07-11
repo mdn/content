@@ -148,7 +148,8 @@ In our example:
 - The next two constants store references to the form text input and submit button and are used to control submitting the guess later on.
 
   ```html
-  <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
+  <label for="guessField">Enter a guess: </label>
+  <input type="text" id="guessField" class="guessField">
   <input type="submit" value="Submit guess" class="guessSubmit">
   ```
 
