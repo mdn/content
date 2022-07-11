@@ -41,17 +41,17 @@ The result of calling the function with the specified **`this`** value and argum
 
 ## Description
 
-> **Note:** While the syntax of this function is almost identical to that of {{jsxref("Function.call", "call()")}}, the fundamental difference is that `call()` accepts an **argument list**, while `apply()` accepts a **single array of arguments**.
+> **Note:** While the syntax of this function is almost identical to that of {{jsxref("Function.prototype.call()", "call()")}}, the fundamental difference is that `call()` accepts an **argument list**, while `apply()` accepts a **single array of arguments**.
 
-> **Note:** When the first argument is undefined or null a similar outcome can be achieved using the array [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
+> **Note:** When the first argument is `undefined` or `null` a similar outcome can be achieved using the array [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
 
 You can assign a different `this` object when calling an existing function. `this` refers to the current object (the calling object). With `apply`, you can write a method once, and then inherit it in another object, without having to rewrite the method for the new object.
 
-`apply` is very similar to {{jsxref("Function.call", "call()")}}, except for the type of arguments it supports. You use an arguments array instead of a list of arguments (parameters). With `apply`, you can also use an array literal, for example, `func.apply(this, ['eat', 'bananas'])`, or an {{jsxref("Array")}} object, for example, `func.apply(this, new Array('eat', 'bananas'))`.
+`apply` is very similar to `call()`, except for the type of arguments it supports. You use an arguments array instead of a list of arguments (parameters). With `apply`, you can also use an array literal, for example, `func.apply(this, ['eat', 'bananas'])`, or an {{jsxref("Array")}} object, for example, `func.apply(this, new Array('eat', 'bananas'))`.
 
-You can also use {{jsxref("Functions/arguments", "arguments")}} for the `argsArray` parameter. {{jsxref("Functions/arguments", "arguments")}} is a local variable of a function. It can be used for all unspecified arguments of the called object. Thus, you do not have to know the arguments of the called object when you use the `apply` method. You can use `arguments` to pass all the arguments to the called object. The called object is then responsible for handling the arguments.
+You can also use {{jsxref("Functions/arguments", "arguments")}} for the `argsArray` parameter. `arguments` is a local variable of a function. It can be used for all unspecified arguments of the called object. Thus, you do not have to know the arguments of the called object when you use the `apply` method. You can use `arguments` to pass all the arguments to the called object. The called object is then responsible for handling the arguments.
 
-Since ECMAScript 5th Edition, you can also use any kind of object which is array-like. In practice, this means it's going to have a `length` property, and integer ("index") properties in the range `(0..length - 1)`. For example, you could use a {{domxref("NodeList")}}, or a custom object like `{ 'length': 2, '0': 'eat', '1': 'bananas' }`.
+Since ECMAScript 5th Edition, you can also use any kind of object which is array-like. In practice, this means that it needs to have a `length` property, and integer ("index") properties in the range `(0..length - 1)`. For example, you could use a {{domxref("NodeList")}}, or a custom object like `{ 'length': 2, '0': 'eat', '1': 'bananas' }`.
 
 > **Note:** Many older browsers—including Chrome <17 and Internet Explorer <9—don't accept array-like objects, and will throw an exception.
 
@@ -59,11 +59,11 @@ Since ECMAScript 5th Edition, you can also use any kind of object which is array
 
 ### Using apply to append an array to another
 
-You can use `push` to append an element to an array. And, because `push` accepts a variable number of arguments, you can also push multiple elements at once.
+You can use {{jsxref("Array.prototype.push()")}} to append an element to an array. And, because `push()` accepts a variable number of arguments, you can also push multiple elements at once.
 
-But, if you pass an array to `push`, it will actually add that array as a single element, instead of adding the elements individually. So you end up with an array inside an array.
+But, if you pass an array to `push()`, it will actually add that array as a single element, instead of adding the elements individually. So you end up with an array inside an array.
 
-What if that is not what you want? `concat` does have the desired behavior in this case, but it does not append to the _existing_ array—it instead creates and returns a new array.
+What if that is not what you want? {{jsxref("Array.prototype.concat()")}} does have the desired behavior in this case, but it does not append to the _existing_ array—it instead creates and returns a new array.
 
 But you wanted to append to the existing array. So what now? Write a loop? Surely not?
 
@@ -80,7 +80,7 @@ console.info(array); // ["a", "b", 0, 1, 2]
 
 Clever usage of `apply` allows you to use built-in functions for some tasks that would probably have otherwise been written by looping over the array values.
 
-As an example, here are `Math.max`/`Math.min`, used to find out the maximum/minimum value in an array.
+As an example, here are [`Math.max`](/docs/Web/JavaScript/Reference/Global_Objects/Math/max)/[`Math.min`](/docs/Web/JavaScript/Reference/Global_Objects/Math/min), used to find out the maximum/minimum value in an array.
 
 ```js
 // min/max number in an array
