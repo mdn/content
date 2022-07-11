@@ -185,7 +185,7 @@ function display_measures(ev) {
     log("... " + entries[i].name, 1);
   }
   entries = performance.getEntriesByName("measure-2","measure");
-  for (let i=0; i < entries.length; i++) {
+  for (let i = 0; i < entries.length; i++) {
     if (i == 0) log("= getEntriesByName('measure-2', 'measure')", 1);
     log("... " + entries[i].name, 1);
   }
