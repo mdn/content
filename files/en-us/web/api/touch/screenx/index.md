@@ -28,12 +28,12 @@ In following simple code snippet, we assume the user initiates multiple touch co
 
 ```js
 // Register a touchstart listeners for the 'source' element
-var src = document.getElementById("source");
+const src = document.getElementById("source");
 
 src.addEventListener('touchstart', function(e) {
   // Iterate through the touch points and log each screenX/Y coordinate.
   // The unit of each coordinate is CSS pixels.
-  var i;
+  let i;
   for (i=0; i < e.touches.length; i++) {
     console.log("touchpoint[" + i + "].screenX = " + e.touches[i].screenX);
     console.log("touchpoint[" + i + "].screenY = " + e.touches[i].screenY);
