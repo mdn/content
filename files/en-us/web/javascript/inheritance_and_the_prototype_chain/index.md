@@ -24,7 +24,7 @@ Although classes are now widely adopted and have become a new paradigm in JavaSc
 
 JavaScript objects are dynamic "bags" of properties (referred to as **own properties**). JavaScript objects have a link to a prototype object. When trying to access a property of an object, the property will not only be sought on the object but on the prototype of the object, the prototype of the prototype, and so on until either a property with a matching name is found or the end of the prototype chain is reached.
 
-> **Note:** Following the ECMAScript standard, the notation `someObject.[[Prototype]]` is used to designate the prototype of `someObject`. Since ECMAScript 2015, the `[[Prototype]]` is accessed using the accessors {{jsxref("Object.getPrototypeOf()")}} and {{jsxref("Object.setPrototypeOf()")}}. This is equivalent to the JavaScript accessor [`__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) which is non-standard but de-facto implemented by many runtimes. To avoid confusion while keeping it succinct, in our notation we will avoid using `obj.__proto__` but use `obj.[[Prototype]]` instead. This corresponds to `Object.getPrototypeOf(obj)`.
+> **Note:** Following the ECMAScript standard, the notation `someObject.[[Prototype]]` is used to designate the prototype of `someObject`. Since ECMAScript 2015, the `[[Prototype]]` is accessed using the accessors {{jsxref("Object.getPrototypeOf()")}} and {{jsxref("Object.setPrototypeOf()")}}. This is equivalent to the JavaScript accessor [`__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) which is non-standard but de-facto implemented by many JavaScript engines. To avoid confusion while keeping it succinct, in our notation we will avoid using `obj.__proto__` but use `obj.[[Prototype]]` instead. This corresponds to `Object.getPrototypeOf(obj)`.
 >
 > It should not be confused with the `func.prototype` property of functions, which instead specifies the `[[Prototype]]` to be assigned to all _instances_ of objects created by the given function when used as a constructor. We will discuss the `prototype` property of constructor functions in [a later section](#constructors).
 
@@ -278,7 +278,7 @@ However, this is not the case for user-defined constructors, nor for modern cons
 
 ```js
 Map.prototype.get(1)
-// Uncaught TypeError: Method Map.prototype.get called on incompatible receiver #<Map>
+// Uncaught TypeError: get method called on incompatible Map.prototype
 ```
 
 ### Building longer inheritance chains
@@ -289,7 +289,7 @@ The `Constructor.prototype` property will become the `[[Prototype]]` of the cons
 function Constructor() {}
 
 const obj = new Constructor();
-// obj --> Constructor.prototype --> Object.prototype --> null
+// obj ---> Constructor.prototype ---> Object.prototype ---> null
 ```
 
 To build longer prototype chains, we can set the `[[Prototype]]` of `Constructor.prototype` via the [`Object.setPrototypeOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) function.
@@ -439,12 +439,12 @@ function doSomething() {}
 doSomething.prototype.foo = 'bar';
 const doSomeInstancing = new doSomething();
 doSomeInstancing.prop = 'some value';
-console.log('doSomeInstancing.prop:      ', doSomeInstancing.prop);
-console.log('doSomeInstancing.foo:       ', doSomeInstancing.foo);
-console.log('doSomething.prop:           ', doSomething.prop);
-console.log('doSomething.foo:            ', doSomething.foo);
-console.log('doSomething.prototype.prop: ', doSomething.prototype.prop);
-console.log('doSomething.prototype.foo:  ', doSomething.prototype.foo);
+console.log('doSomeInstancing.prop:     ', doSomeInstancing.prop);
+console.log('doSomeInstancing.foo:      ', doSomeInstancing.foo);
+console.log('doSomething.prop:          ', doSomething.prop);
+console.log('doSomething.foo:           ', doSomething.foo);
+console.log('doSomething.prototype.prop:', doSomething.prototype.prop);
+console.log('doSomething.prototype.foo: ', doSomething.prototype.foo);
 ```
 
 This results in the following:
@@ -498,7 +498,7 @@ const p = { b: 2, __proto__: o };
     <tr>
       <th scope="row">Pro(s)</th>
       <td>
-        Supported in all modern runtimes. Pointing the <code>__proto__</code>
+        Supported in all modern engines. Pointing the <code>__proto__</code>
         key to something that is not an object only fails silently without
         throwing an exception. Contrary to the
         {{jsxref("Object/proto", "Object.prototype.__proto__")}} setter,
