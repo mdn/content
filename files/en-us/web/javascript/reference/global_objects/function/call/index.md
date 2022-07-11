@@ -35,8 +35,8 @@ call(thisArg, arg1, ... , argN)
     > not be the actual value seen by the method.
     >
     > If the method is a function in {{jsxref("Strict_mode", "non-strict mode", "",
-        1)}}, {{jsxref("Operators/null", "null")}} and
-    > {{jsxref("Global_Objects/undefined", "undefined")}} will be replaced with the
+        1)}}, {{jsxref("null")}} and
+    > {{jsxref("undefined")}} will be replaced with the
     > global object, and primitive values will be converted to objects.
 
 - `arg1, arg2, ...argN` {{optional_inline}}
@@ -57,7 +57,7 @@ With `call()`, you can write a method once and then inherit it in another
 object, without having to rewrite the method for the new object.
 
 > **Note:** While the syntax of this function is almost identical to that
-> of {{jsxref("Function.prototype.apply", "apply()")}}, the fundamental difference is
+> of {{jsxref("Function.prototype.apply()", "apply()")}}, the fundamental difference is
 > that `call()` accepts an **argument list**, while
 > `apply()` accepts a **single array of arguments**.
 
@@ -148,10 +148,10 @@ first argument. If the first argument is not passed, the value of `this` is
 bound to the global object.
 
 ```js
-var sData = 'Wisen';
+const sData = 'Wisen';
 
 function display() {
-  console.log('sData value is %s ', this.sData);
+  console.log('sData value is %s', this.sData);
 }
 
 display.call();  // sData value is Wisen
@@ -163,10 +163,10 @@ display.call();  // sData value is Wisen
 ```js
 'use strict';
 
-var sData = 'Wisen';
+const sData = 'Wisen';
 
 function display() {
-  console.log('sData value is %s ', this.sData);
+  console.log('sData value is %s', this.sData);
 }
 
 display.call(); // Cannot read the property of 'sData' of undefined
