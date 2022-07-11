@@ -57,7 +57,7 @@ For intrinsic object methods and functions, `someName` is the initial name of th
 
 > **Note:** This means using [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) on native function strings is a guaranteed syntax error.
 
-If the `toString()` method is called on a function created by the `Function` constructor, `toString()` returns the source code of a synthesized function declaration named "anonymous" using the provided parameters and function body. For example, `Function("a", "b", "return a + b").toString()` will return 
+If the `toString()` method is called on a function created by the `Function` constructor, `toString()` returns the source code of a synthesized function declaration named "anonymous" using the provided parameters and function body. For example, `Function("a", "b", "return a + b").toString()` will return:
 
 ```js
 "function anonymous(a,b\n) {\nreturn a + b\n}"
