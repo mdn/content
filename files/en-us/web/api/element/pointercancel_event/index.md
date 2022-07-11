@@ -1,19 +1,21 @@
 ---
-title: 'Document: pointercancel event'
-slug: Web/API/Document/pointercancel_event
-page-type: web-api-event
+title: 'Element: pointercancel event'
+slug: Web/API/Element/pointercancel_event
 tags:
-  - API
-  - Document
   - Event
+  - HTML DOM
+  - Element
+  - Pointer Events
   - PointerEvent
-  - onpointercancel
+  - Reference
   - pointercancel
-browser-compat: api.Document.pointercancel_event
+  - user input
+browser-compat: api.Element.pointercancel_event
+page-type: web-api-event
 ---
 {{APIRef}}
 
-The **`pointercancel`** event is fired when the browser determines that there are unlikely to be any more pointer events, or if after the {{domxref("Document/pointerdown_event", "pointerdown")}} event is fired, the pointer is then used to manipulate the viewport by panning, zooming, or scrolling.
+The **`pointercancel`** event is fired when the browser determines that there are unlikely to be any more pointer events, or if after the {{domxref("Element/pointerdown_event", "pointerdown")}} event is fired, the pointer is then used to manipulate the viewport by panning, zooming, or scrolling.
 
 Some examples of situations that will trigger a `pointercancel` event:
 
@@ -22,7 +24,7 @@ Some examples of situations that will trigger a `pointercancel` event:
 - The browser decides that the user started pointer input accidentally. This can happen if, for example, the hardware supports palm rejection to prevent a hand resting on the display while using a stylus from accidentally triggering events.
 - The {{cssxref("touch-action")}} CSS property prevents the input from continuing.
 
-> **Note:** After the `pointercancel` event is fired, the browser will also send {{domxref("Document/pointerout_event", "pointerout")}} followed by {{domxref("Document/pointerleave_event", "pointerleave")}}.
+> **Note:** After the `pointercancel` event is fired, the browser will also send {{domxref("Element/pointerout_event", "pointerout")}} followed by {{domxref("Element/pointerleave_event", "pointerleave")}}.
 
 ## Syntax
 
@@ -70,16 +72,20 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 Using `addEventListener()`:
 
 ```js
-document.addEventListener('pointercancel', (event) => {
-  console.log('Pointer event cancelled')
+const para = document.querySelector('p');
+
+para.addEventListener('pointercancel', (event) => {
+  console.log('Pointer event cancelled');
 });
 ```
 
 Using the `onpointercancel` event handler property:
 
 ```js
-document.onpointercancel = (event) => {
-  console.log('Pointer event cancelled')
+const para = document.querySelector('p');
+
+para.onpointercancel = (event) => {
+  console.log('Pointer event cancelled');
 };
 ```
 
@@ -95,14 +101,14 @@ document.onpointercancel = (event) => {
 
 - Related events
 
-  - {{domxref("Document/gotpointercapture_event", "gotpointercapture")}}
-  - {{domxref("Document/lostpointercapture_event", "lostpointercapture")}}
-  - {{domxref("Document/pointerover_event", "pointerover")}}
-  - {{domxref("Document/pointerenter_event", "pointerenter")}}
-  - {{domxref("Document/pointerdown_event", "pointerdown")}}
-  - {{domxref("Document/pointermove_event", "pointermove")}}
-  - {{domxref("Document/pointerup_event", "pointerup")}}
-  - {{domxref("Document/pointerout_event", "pointerout")}}
-  - {{domxref("Document/pointerleave_event", "pointerleave")}}
+  - [`gotpointercapture`](/en-US/docs/Web/API/HTMLElement/gotpointercapture_event)
+  - [`lostpointercapture`](/en-US/docs/Web/API/HTMLElement/lostpointercapture_event)
+  - [`pointerover`](/en-US/docs/Web/API/Element/pointerover_event)
+  - [`pointerenter`](/en-US/docs/Web/API/Element/pointerenter_event)
+  - [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event)
+  - [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event)
+  - [`pointerup`](/en-US/docs/Web/API/Element/pointerup_event)
+  - [`pointerout`](/en-US/docs/Web/API/Element/pointerout_event)
+  - [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)
 
-- This event on `Element` targets: {{domxref("Element/pointercancel_event", "pointercancel")}} event
+- This event on `Document` targets: [`pointercancel`](/en-US/docs/Web/API/Document/pointercancel_event) event
