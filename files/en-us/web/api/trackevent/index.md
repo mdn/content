@@ -48,7 +48,7 @@ _`TrackEvent` has no methods of its own; however, it is based on {{domxref("Even
 This example sets up a function, `handleTrackEvent()`, which is called for any `addtrack` or `removetrack` event on the first {{HTMLElement("video")}} element found in the document.
 
 ```js
-var videoElem = document.querySelector("video");
+const videoElem = document.querySelector("video");
 
 videoElem.videoTracks.addEventListener("addtrack", handleTrackEvent, false);
 videoElem.videoTracks.addEventListener("removetrack", handleTrackEvent, false);
@@ -58,7 +58,7 @@ videoElem.textTracks.addEventListener("addtrack", handleTrackEvent, false);
 videoElem.textTracks.addEventListener("removetrack", handleTrackEvent, false);
 
 function handleTrackEvent(event) {
-  var trackKind;
+  const trackKind;
 
   if (event.target instanceof(VideoTrackList)) {
     trackKind = "video";
