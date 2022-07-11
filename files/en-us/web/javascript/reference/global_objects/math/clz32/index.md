@@ -132,7 +132,7 @@ function ctron(integer) {
 }
 ```
 
-These helper functions can be made into an [asm.js](/docs/Games/Tools/asm.js) module for a possible improvement in performance.
+These helper functions can be made into an [asm.js](/en-US/docs/Games/Tools/asm.js) module for a possible improvement in performance.
 
 ```js
 const countTrailsMethods = (function(stdlib, foreign, heap) {
