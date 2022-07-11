@@ -383,7 +383,8 @@ button.addEventListener('click', () => { reader.cancel("user choice").then( () =
 ```
 
 {{domxref("ReadableStreamBYOBReader.releaseLock()")}} can be used to release the reader without cancelling the stream.
-Note however that this can only be called when there is no outsanding read request.
+Note however that any outstanding read requests will immediately be rejected.
+A new reader can be acquired later on to read the remaining chunks.
 
 #### Monitoring for stream for close/error
 
