@@ -53,7 +53,7 @@ The example shown here handles the `devicechange` event by toggling the availabi
 if (navigator.xr) {
   navigator.xr.addEventListener("devicechange", event => {
     navigator.xr.isSessionSupported("immersive-vr")
-    .then(immersiveOK) => {
+    .then((immersiveOK) => {
       if (immersiveOK) {
         enableXRButton.disabled = false;
       } else {

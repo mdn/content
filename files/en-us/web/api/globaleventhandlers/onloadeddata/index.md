@@ -14,7 +14,7 @@ browser-compat: api.GlobalEventHandlers.onloadeddata
 
 The **`onloadeddata`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
-processing {{event("loadeddata")}} events.
+processing {{domxref("HTMLMediaElement/loadeddata_event", "loadeddata")}} events.
 
 The `loadeddata` event is fired when the first frame of the media has
 finished loading.
@@ -39,5 +39,5 @@ specifying the handler for the event.
 
 ## See also
 
-- {{event("loadeddata")}}
+- {{domxref("HTMLMediaElement/loadeddata_event", "loadeddata")}}
 - [DOM event handlers](/en-US/docs/Web/Events/Event_handlers)

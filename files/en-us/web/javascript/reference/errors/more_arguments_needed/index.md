@@ -37,19 +37,19 @@ The {{jsxref("Object.create()")}} method requires at least one argument and the
 {{jsxref("Object.setPrototypeOf()")}} method requires at least two arguments:
 
 ```js example-bad
-var obj = Object.create();
+const obj = Object.create();
 // TypeError: Object.create requires at least 1 argument, but only 0 were passed
 
-var obj = Object.setPrototypeOf({});
+const obj2 = Object.setPrototypeOf({});
 // TypeError: Object.setPrototypeOf requires at least 2 arguments, but only 1 were passed
 ```
 
 You can fix this by setting {{jsxref("null")}} as the prototype, for example:
 
 ```js example-good
-var obj = Object.create(null);
+const obj = Object.create(null);
 
-var obj = Object.setPrototypeOf({}, null);
+const obj2 = Object.setPrototypeOf({}, null);
 ```
 
 ## See also

@@ -1008,14 +1008,6 @@
       "properties": [
         "GlobalEventHandlers.ongotpointercapture",
         "GlobalEventHandlers.onlostpointercapture",
-        "GlobalEventHandlers.onpointerdown",
-        "GlobalEventHandlers.onpointermove",
-        "GlobalEventHandlers.onpointerup",
-        "GlobalEventHandlers.onpointercancel",
-        "GlobalEventHandlers.onpointerover",
-        "GlobalEventHandlers.onpointerout",
-        "GlobalEventHandlers.onpointerenter",
-        "GlobalEventHandlers.onpointerleave",
         "Navigator.maxTouchPoints"
       ],
       "events": [

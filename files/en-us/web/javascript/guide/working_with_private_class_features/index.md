@@ -106,21 +106,21 @@ class BadIdeas {
 There is another limitation: you can't declare private fields or methods via [object literals](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#using_object_initializers). You might be used to something like this:
 
 ```js
-var planet = {
+const planet = {
   name: 'Terra',
   radiusKm: 6371,
-  radiusMiles: 3959
+  radiusMiles: 3959,
 };
 ```
 
 If you try to include a private class feature when doing this, an error will be thrown.
 
 ```js example-bad
-var planet = {
+const planet = {
   name: 'Terra',
   radiusKm: 6371,
   radiusMiles: 3959,
-  #secret: 'central inner core'
+  #secret: 'central inner core',
 };
 // result:
 // "Uncaught SyntaxError: Unexpected identifier"
@@ -135,7 +135,7 @@ class colorMixer {
   static #blue  = "rgba(0,0,1,1)";
   #mixedColor;
   constructor() {
-    …
+    // …
   }
 }
 ```

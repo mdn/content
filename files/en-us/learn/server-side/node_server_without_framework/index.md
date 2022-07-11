@@ -97,7 +97,7 @@ Afterward is the function for creating the server. `https.createServer` returns 
 
 ```js
 http.createServer(function (request, response) {
-    ...
+    // …
 }).listen(8125);
 console.log('Server running at http://127.0.0.1:8125/');
 ```
@@ -143,7 +143,7 @@ Lastly, we respond to the client with the file information. This function reads 
 
 ```js
 fs.readFile(filePath, function(error, content) {
-    ...
+    // …
 });
 ```
 

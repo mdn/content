@@ -44,7 +44,7 @@ The same snippet, but using `addEventListener()`:
 ```js
 self.addEventListener('online', function() {
   console.log('Your worker is now online');
-}
+});
 ```
 
 ## Specifications

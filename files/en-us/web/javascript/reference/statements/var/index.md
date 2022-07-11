@@ -112,7 +112,7 @@ to a value, the scope chain is searched. This means that properties on the globa
 are conveniently visible from every scope, without having to qualify the names with
 `globalThis.` or `window.` or `global.`.
 
-So you can just type:
+Because the global object has a `String` property (`globalThis.hasOwnProperty('String')`), you can use the following code:
 
 ```js
 function foo() {

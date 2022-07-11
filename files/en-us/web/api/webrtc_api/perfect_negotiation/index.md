@@ -395,9 +395,18 @@ This has a number of reliability issues and outright bugs (such as failing if th
 Now, you can use `restartIce()` to do this much more cleanly:
 
 ```js example-good
+let makingOffer = false;
+
 pc.onnegotiationneeded = async () => {
-  await pc.setLocalDescription();
-  signaler.send({ description: pc.localDescription });
+  try {
+    makingOffer = true;
+    await pc.setLocalDescription();
+    signaler.send({ description: pc.localDescription });
+  } catch(err) {
+    console.error(err);
+  } finally {
+    makingOffer = false;
+  }
 };
 pc.oniceconnectionstatechange = () => {
   if (pc.iceConnectionState === "failed") {

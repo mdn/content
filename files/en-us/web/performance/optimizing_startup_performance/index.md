@@ -16,7 +16,7 @@ Instead, you should write your code so that your app creates a [Web worker](/en-
 
 Why is it important to be asynchronous? Other than the reasons suggested above, consider the impact of a non-responsive page or user interface. The user is unable to cancel if they launched your app by mistake. If the app is being run in a browser, it's possible the user may get an "unresponsive app" or "slow script" notification. You should present some kind of interface, such as a progress bar, so that the user knows how much longer they'll need to wait while your app starts up.
 
-## Where there's a will...
+## Where there's a will…
 
 If you're starting your project from scratch, it's usually pretty easy to just write everything the "right way," making appropriate bits of the code asynchronous. All pure startup calculations should be performed in background threads, while you keep the run-time of main thread events as short as possible. Include a progress indicator so the user knows what's going on and how long they'll be waiting. In theory, anyway, it should be pretty easy to design your new app to start up nicely.
 

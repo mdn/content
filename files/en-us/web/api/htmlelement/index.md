@@ -157,28 +157,20 @@ Listen to these events using `addEventListener()` or by assigning an event liste
     Also available via the {{domxref("GlobalEventHandlers/onlostpointercapture", "onlostpointercapture")}} property.
 - {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}
   - : Fired when a pointer event is canceled.
-    Also available via the {{domxref("GlobalEventHandlers/onpointercancel", "onpointercancel")}} property.
 - {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}
   - : Fired when a pointer becomes active.
-    Also available via the {{domxref("GlobalEventHandlers/onpointerdown", "onpointerdown")}} property.
 - {{domxref("HTMLElement/pointerenter_event", "pointerenter")}}
   - : Fired when a pointer is moved into the hit test boundaries of an element or one of its descendants.
-    Also available via the {{domxref("GlobalEventHandlers/onpointerenter", "onpointerenter")}} property.
 - {{domxref("HTMLElement/pointerleave_event", "pointerleave")}}
   - : Fired when a pointer is moved out of the hit test boundaries of an element.
-    Also available via the {{domxref("GlobalEventHandlers/onpointerleave", "onpointerleave")}} property.
 - {{domxref("HTMLElement/pointermove_event", "pointermove")}}
   - : Fired when a pointer changes coordinates.
-    Also available via the {{domxref("GlobalEventHandlers/onpointermove", "onpointermove")}} property.
 - {{domxref("HTMLElement/pointerout_event", "pointerout")}}
   - : Fired when a pointer is moved out of the _hit test_ boundaries of an element (among other reasons).
-    Also available via the {{domxref("GlobalEventHandlers/onpointerout", "onpointerout")}} property.
 - {{domxref("HTMLElement/pointerover_event", "pointerover")}}
   - : Fired when a pointer is moved into an element's hit test boundaries.
-    Also available via the {{domxref("GlobalEventHandlers/onpointerover", "onpointerover")}} property.
 - {{domxref("HTMLElement/pointerup_event", "pointerup")}}
   - : Fired when a pointer is no longer active.
-    Also available via the {{domxref("GlobalEventHandlers/onpointerup", "onpointerup")}} property.
 
 ### Transition events
 

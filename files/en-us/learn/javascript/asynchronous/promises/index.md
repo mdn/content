@@ -237,7 +237,7 @@ Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
   });
 ```
 
-...then we can expect the `catch()` handler to run, and we should see something like:
+Then we can expect the `catch()` handler to run, and we should see something like:
 
 ```
 Failed to fetch: TypeError: Failed to fetch

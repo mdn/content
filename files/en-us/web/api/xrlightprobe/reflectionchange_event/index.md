@@ -55,7 +55,7 @@ The `reflectionchange` event is also available using the `onreflectionchange` ev
 ```js
 lightProbe.onreflectionchange = event => {
   glCubeMap = glBinding.getReflectionCubeMap(lightProbe);
-});
+};
 ```
 
 ## Specifications

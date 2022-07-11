@@ -44,15 +44,15 @@ Read-only properties are not super common, but they can be created using
 
 ```js example-bad
 'use strict';
-var obj = Object.freeze({name: 'Elsa', score: 157});
+const obj = Object.freeze({ name: 'Elsa', score: 157 });
 obj.score = 0;  // TypeError
 
 'use strict';
-Object.defineProperty(this, 'LUNG_COUNT', {value: 2, writable: false});
+Object.defineProperty(this, 'LUNG_COUNT', { value: 2, writable: false });
 LUNG_COUNT = 3;  // TypeError
 
 'use strict';
-var frozenArray = Object.freeze([0, 1, 2]);
+const frozenArray = Object.freeze([0, 1, 2]);
 frozenArray[0]++;  // TypeError
 ```
 
@@ -78,12 +78,8 @@ undefined = function() {};  // TypeError: "undefined" is read-only
 
 ```js example-good
 'use strict';
-var obj = Object.freeze({name: 'Score', points: 157});
-obj = {name: obj.name, points: 0};   // replacing it with a new object works
-
-'use strict';
-var LUNG_COUNT = 2;  // a `var` works, because it's not read-only
-LUNG_COUNT = 3;  // ok (anatomically unlikely, though)
+let obj = Object.freeze({ name: 'Score', points: 157 });
+obj = { name: obj.name, points: 0 };   // replacing it with a new object works
 ```
 
 ## See also

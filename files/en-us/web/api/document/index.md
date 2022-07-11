@@ -412,34 +412,24 @@ Listen to these events using `addEventListener()` or by assigning an event liste
     Also available via the {{DOMxRef("GlobalEventHandlers/onlostpointercapture", "onlostpointercapture")}} property.
 - {{DOMxRef("Document/pointercancel_event", "pointercancel")}}
   - : Fired when a pointer event is canceled.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onpointercancel", "onpointercancel")}} property.
 - {{DOMxRef("Document/pointerdown_event", "pointerdown")}}
   - : Fired when a pointer becomes active.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onpointerdown", "onpointerdown")}} property.
 - {{DOMxRef("Document/pointerenter_event", "pointerenter")}}
   - : Fired when a pointer is moved into the hit test boundaries of an element or one of its descendants.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onpointerenter", "onpointerenter")}} property.
 - {{DOMxRef("Document/pointerleave_event", "pointerleave")}}
   - : Fired when a pointer is moved out of the hit test boundaries of an element.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onpointerleave", "onpointerleave")}} property.
 - {{DOMxRef("Document/pointerlockchange_event", "pointerlockchange")}}
   - : Fired when the pointer is locked/unlocked.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onpointerlockchange", "onpointerlockchange")}} property.
 - {{DOMxRef("Document/pointerlockerror_event", "pointerlockerror")}}
   - : Fired when locking the pointer failed.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onpointerlockerror", "onpointerlockerror")}} property.
 - {{DOMxRef("Document/pointermove_event", "pointermove")}}
   - : Fired when a pointer changes coordinates.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onpointermove", "onpointermove")}} property.
 - {{DOMxRef("Document/pointerout_event", "pointerout")}}
   - : Fired when a pointer is moved out of the _hit test_ boundaries of an element (among other reasons).
-    Also available via the {{DOMxRef("GlobalEventHandlers/onpointerout", "onpointerout")}} property.
 - {{DOMxRef("Document/pointerover_event", "pointerover")}}
   - : Fired when a pointer is moved into an element's hit test boundaries.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onpointerover", "onpointerover")}} property.
 - {{DOMxRef("Document/pointerup_event", "pointerup")}}
   - : Fired when a pointer is no longer active.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onpointerup", "onpointerup")}} property.
 
 ### Selection events
 

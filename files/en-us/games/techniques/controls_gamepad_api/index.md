@@ -168,7 +168,7 @@ buttonPressed: function(button, hold) {
   var newPress = false;
   // loop through pressed buttons
   for(var i=0,s=gamepadAPI.buttonsStatus.length; i<s; i++) {
-    // if we found the button we're looking for...
+    // if we found the button we're looking for…
     if(gamepadAPI.buttonsStatus[i] == button) {
       // set the boolean variable to true
       newPress = true;

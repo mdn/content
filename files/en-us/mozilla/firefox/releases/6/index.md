@@ -80,7 +80,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 
 ### JavaScript
 
-- In the past, it was possible to use the `new` operator on several built-in functions (eval, parseInt, Date.parse...) that should not have allowed it, according to the specification. This behavior is no longer supported. Using the `new` operator in this way was never officially supported and was not widely done, so it's unlikely that this change affects you.
+- In the past, it was possible to use the `new` operator on several built-in functions (`eval()`, `parseInt()`, `Date.parse()`, …) that should not have allowed it, according to the specification. This behavior is no longer supported. Using the `new` operator in this way was never officially supported and was not widely done, so it's unlikely that this change affects you.
 - ECMAScript 2015 [WeakMaps](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) have been added as a prototype implementation.
 
 ### SVG
