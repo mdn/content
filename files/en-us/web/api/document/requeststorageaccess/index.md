@@ -70,7 +70,7 @@ storage access to fewer sites than the maximum and has been interacted with as a
   - Not persisted to disk (e.g. will not persist if the browser crashes).
   - Reset after 24 hours in the case of a long-running browser session.
 
-...equal or more sites than the maximum or has not been interacted with as a first party in the last 30 days::
+When equal or more sites than the maximum or has not been interacted with as a first party in the last 30 days:
 
 - The user is prompted
 - If the user clicks "Allow" or "Allow on any site" the request is resolved.

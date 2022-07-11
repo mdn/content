@@ -30,10 +30,7 @@ For more information, see the guide on [Using HTTP cookies](/en-US/docs/Web/HTTP
       <td>no</td>
     </tr>
     <tr>
-      <th scope="row">
-        <a href="https://fetch.spec.whatwg.org/#forbidden-response-header-name"
-          >Forbidden response-header name</a>
-      </th>
+      <th scope="row">{{Glossary("Forbidden response header name")}}</th>
       <td>yes</td>
     </tr>
   </tbody>

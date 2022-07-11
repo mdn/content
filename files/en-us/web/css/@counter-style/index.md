@@ -125,8 +125,7 @@ Which will produce lists like this:
 Ⓒ Three
 Ⓓ Four
 Ⓔ Five
-...
-...
+…
 Ⓨ Twenty-five
 Ⓩ Twenty-six
 27 Twenty-seven

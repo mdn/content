@@ -108,7 +108,7 @@ pRange.selectNodeContents(document.querySelector("#entry1 p"));
 
 Since we wish to select the entire contents of the `<p>` element, including its descendants, this works perfectly.
 
-If we wish to instead copy the text "An interesting thing..." from the {{HTMLElement("section")}}'s heading (an {{HTMLElement("Heading_Elements", "h2")}} element) through the end of the letters "ve" in the {{HTMLElement("em")}} within the paragraph below it, the following code would work:
+If we wish to instead copy the text "An interesting thing…" from the {{HTMLElement("section")}}'s heading (an {{HTMLElement("Heading_Elements", "h2")}} element) through the end of the letters "ve" in the {{HTMLElement("em")}} within the paragraph below it, the following code would work:
 
 ```html
 let r = document.createRange();
@@ -129,7 +129,7 @@ In this example, the start of the specified range is found within the text node 
 
 The range's end is located below the {{HTMLElement("p")}} element, so that will be needed within the new fragment. So will the text node containing the word "A", since that's included in the range. Finally, an `<em>` and a text node below it will be added below the `<p>` as well.
 
-The contents of the text nodes are then determined by the offsets into those text nodes given when calling {{domxref("Range.setStart", "setStart()")}} and {{domxref("Range.setEnd", "setEnd()")}}. Given the offset of 11 into the heading's text, that node will contain "An interesting thing...". Similarly, the last text node will contain "ve", given the request for the first two characters of the ending node.
+The contents of the text nodes are then determined by the offsets into those text nodes given when calling {{domxref("Range.setStart", "setStart()")}} and {{domxref("Range.setEnd", "setEnd()")}}. Given the offset of 11 into the heading's text, that node will contain "An interesting thing…". Similarly, the last text node will contain "ve", given the request for the first two characters of the ending node.
 
 The resulting document fragment looks like this:
 

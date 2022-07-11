@@ -20,7 +20,7 @@ _The CSS interface is a utility interface and no object of this type can be crea
 
 ### Static properties
 
-- {{DOMxRef("CSS.paintWorklet")}} {{Experimental_Inline}}{{SecureContext_Inline}}
+- {{DOMxRef("CSS.paintWorklet")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Provides access to the Worklet responsible for all the classes related to painting.
 
 ## Methods

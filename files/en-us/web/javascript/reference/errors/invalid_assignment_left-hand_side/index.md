@@ -40,7 +40,7 @@ if (Math.PI = 3 || Math.PI = 4) {
 }
 // ReferenceError: invalid assignment left-hand side
 
-var str = 'Hello, '
+const str = 'Hello, '
 += 'is it me '
 += 'you\'re looking for?';
 // ReferenceError: invalid assignment left-hand side
@@ -54,7 +54,7 @@ if (Math.PI == 3 || Math.PI == 4) {
   console.log('no way!');
 }
 
-var str = 'Hello, '
+const str = 'Hello, '
 + 'from the '
 + 'other side!';
 ```

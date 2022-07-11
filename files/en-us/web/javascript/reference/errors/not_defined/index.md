@@ -43,7 +43,7 @@ The "foo" variable isn't defined anywhere. It needs to be some string, so that t
 {{jsxref("String.prototype.substring()")}} method will work.
 
 ```js example-good
-var foo = 'bar';
+const foo = 'bar';
 foo.substring(1); // "ar"
 ```
 

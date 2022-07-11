@@ -90,7 +90,7 @@ Further information — at this point, include a few more paragraphs explaining 
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("attribute1")}}{{Deprecated_inline}}{{experimental_inline}}
+- {{htmlattrdef("attribute1")}} {{Deprecated_inline}} {{experimental_inline}}
   - : Include description here of what the attribute does. Include one term and definition for each attribute. If the attribute is not experimental/deprecated, remove the relevant macro calls.
 - {{htmlattrdef("attribute2")}}
   - : etc.

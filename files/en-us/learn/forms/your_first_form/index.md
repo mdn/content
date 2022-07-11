@@ -295,7 +295,7 @@ Let's look at some of our form code again:
     <textarea id="msg" name="user_message"></textarea>
   </li>
 
-  ...
+…
 ```
 
 In our example, the form will send 3 pieces of data named "`user_name`", "`user_email`", and "`user_message`".

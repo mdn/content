@@ -12,7 +12,7 @@ tags:
 The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception
 "for-in loop head declarations may not have initializers"
 occurs when the head of a [for...in](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) contains
-an initializer expression, such as |`for (var i = 0 in obj)`|. This is not
+an initializer expression, such as |`for (const i = 0 in obj)`|. This is not
 allowed in for-in loops in strict mode.
 
 ## Message
@@ -30,8 +30,8 @@ SyntaxError: for-in loop variable declaration may not have an initializer. (Chro
 ## What went wrong?
 
 The head of a [for...in](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop contains an initializer expression.
-That is, a variable is declared and assigned a value |`for (var i = 0 in obj)`|.
-In non-strict mode, this head declaration is silently ignored and behaves like `|for (var i in obj)|`.
+That is, a variable is declared and assigned a value `for (const i = 0 in obj)`.
+In non-strict mode, this head declaration is silently ignored and behaves like `for (const i in obj)`.
 In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), however, a `SyntaxError` is thrown.
 
 ## Examples
@@ -41,9 +41,9 @@ This example throws a `SyntaxError`:
 ```js example-bad
 "use strict";
 
-var obj = {a: 1, b: 2, c: 3 };
+const obj = { a: 1, b: 2, c: 3 };
 
-for (var i = 0 in obj) {
+for (const i = 0 in obj) {
   console.log(obj[i]);
 }
 
@@ -57,9 +57,9 @@ You can remove the initializer (`i = 0`) in the head of the for-in loop.
 ```js example-good
 "use strict";
 
-var obj = {a: 1, b: 2, c: 3 };
+const obj = { a: 1, b: 2, c: 3 };
 
-for (var i in obj) {
+for (const i in obj) {
   console.log(obj[i]);
 }
 ```
@@ -72,9 +72,9 @@ instead of a `for-in` loop to iterate an {{jsxref("Array")}}? The
 `for` loop allows you to set an initializer then as well:
 
 ```js example-good
-var arr = [ "a", "b", "c" ]
+const arr = ["a", "b", "c"];
 
-for (var i = 2; i < arr.length; i++) {
+for (let i = 2; i < arr.length; i++) {
   console.log(arr[i]);
 }
 

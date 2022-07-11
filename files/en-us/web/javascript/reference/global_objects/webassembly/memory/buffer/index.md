@@ -23,14 +23,14 @@ The following example (see [memory.html](https://github.com/mdn/webassembly-exam
 
 ```js
 WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
-.then(obj => {
-  var i32 = new Uint32Array(memory.buffer);
-  for (var i = 0; i < 10; i++) {
-    i32[i] = i;
-  }
-  var sum = obj.instance.exports.accumulate(0, 10);
-  console.log(sum);
-});
+  .then((obj) => {
+    const i32 = new Uint32Array(memory.buffer);
+    for (let i = 0; i < 10; i++) {
+      i32[i] = i;
+    }
+    const sum = obj.instance.exports.accumulate(0, 10);
+    console.log(sum);
+  });
 ```
 
 ## Specifications

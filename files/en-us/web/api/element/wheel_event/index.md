@@ -95,7 +95,7 @@ el.onwheel = zoom;
 The event handler can also be set up using the {{domxref("EventTarget/addEventListener", "addEventListener()")}} method:
 
 ```js
-el.addEventListener('wheel', zoom);
+el.addEventListener('wheel', zoom, { passive: false });
 ```
 
 ## Specifications
