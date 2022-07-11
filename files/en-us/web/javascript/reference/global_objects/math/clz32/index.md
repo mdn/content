@@ -132,8 +132,7 @@ function ctron(integer) {
 }
 ```
 
-Make these helper functions into an [asm.js](/docs/Games/Tools/asm.js) module; then, you have a true performance
-masterpiece. Situations like these are exactly what ASM.JS was designed for.
+These helper functions can be made into an [asm.js](/docs/Games/Tools/asm.js) module for a possible improvement in performance.
 
 ```js
 const countTrailsMethods = (function(stdlib, foreign, heap) {
