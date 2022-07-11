@@ -5,14 +5,13 @@ page-type: web-api-interface
 tags:
   - API
   - CacheStorage
-  - Experimental
   - Interface
   - Reference
   - Service Workers
   - ServiceWorker
 browser-compat: api.CacheStorage
 ---
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{APIRef("Service Workers API")}}
 
 The **`CacheStorage`** interface represents the storage for {{domxref("Cache")}} objects.
 
@@ -53,7 +52,8 @@ You can access `CacheStorage` through the global {{domxref("caches")}} property.
 
 ## Examples
 
-This code snippet is from the MDN [sw-test example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/).) This service worker script waits for an {{domxref("InstallEvent")}} to fire, then runs {{domxref("ExtendableEvent.waitUntil","waitUntil")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using {{domxref("Cache.addAll")}} to add a series of assets to it.
+This code snippet is from the MDN [sw-test example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/).)
+This service worker script waits for an {{domxref("InstallEvent")}} to fire, then runs {{domxref("ExtendableEvent.waitUntil","waitUntil")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using {{domxref("Cache.addAll")}} to add a series of assets to it.
 
 In the second code block, we wait for a {{domxref("FetchEvent")}} to fire. We construct a custom response like so:
 

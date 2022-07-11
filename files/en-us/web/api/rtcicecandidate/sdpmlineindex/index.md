@@ -36,10 +36,6 @@ indicating which media source is associated with the candidate, or `null` if no 
 > value of `null` for either `sdpMid` or
 > `sdpMLineIndex` will throw a {{jsxref("TypeError")}} exception.
 
-## Examples
-
-...
-
 ## Specifications
 
 {{Specifications}}

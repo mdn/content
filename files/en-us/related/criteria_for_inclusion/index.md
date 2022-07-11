@@ -25,7 +25,7 @@ Therefore, if you want to consider a non-web standard technology for inclusion i
 
 ## The criteria
 
-To be applicable for consideration, technologies should...
+To be applicable for consideration, technologies should…
 
 ### Be open and not proprietary
 

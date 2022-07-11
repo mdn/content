@@ -173,7 +173,7 @@ You might also notice that the button isn't usable using only the keyboard — t
 These test criteria are useful, because:
 
 - They give you a set of steps to follow when you are performing tests.
-- They can be easily turned into sets of instructions for user groups to follow when carrying out tests (e.g. "try to active the button using your mouse, and then the keyboard...") — see [User testing](#user_testing), below.
+- They can be easily turned into sets of instructions for user groups to follow when carrying out tests (e.g. "try to active the button using your mouse, and then the keyboard…") — see [User testing](#user_testing), below.
 - They can also provide a basis for writing automated tests. It is easier to write such tests if you know exactly what you want to test, and what the success conditions are (see [Selenium](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment#selenium), later in the series).
 
 ## Putting together a testing lab

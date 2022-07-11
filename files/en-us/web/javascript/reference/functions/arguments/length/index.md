@@ -25,7 +25,7 @@ In this example we define a function that can add two or more numbers together.
 ```js
 function adder(base /*, n2, ... */) {
   base = Number(base);
-  for (var i = 1; i < arguments.length; i++) {
+  for (let i = 1; i < arguments.length; i++) {
     base += Number(arguments[i]);
   }
   return base;

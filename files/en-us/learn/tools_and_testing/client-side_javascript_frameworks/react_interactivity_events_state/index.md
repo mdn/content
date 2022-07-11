@@ -337,7 +337,7 @@ function addTask(name) {
 
 Now you can use the browser to add a task to our data! Type anything into the form and click "Add" (or press the <kbd>Enter</kbd> key) and you'll see your new todo item appear in the UI!
 
-**However, we have another problem**: our `addTask()` function is giving each task the same `id`. This is bad for accessibility, and makes it impossible for React to tell future tasks apart with the `key` prop. In fact, React will give you a warning in your DevTools console — "Warning: Encountered two children with the same key..."
+**However, we have another problem**: our `addTask()` function is giving each task the same `id`. This is bad for accessibility, and makes it impossible for React to tell future tasks apart with the `key` prop. In fact, React will give you a warning in your DevTools console — "Warning: Encountered two children with the same key…"
 
 We need to fix this. Making unique identifiers is a hard problem – one for which the JavaScript community has written some helpful libraries. We'll use [nanoid](https://github.com/ai/nanoid) because it's tiny, and it works.
 

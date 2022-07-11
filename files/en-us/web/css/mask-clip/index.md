@@ -66,13 +66,13 @@ One or more of the keyword values listed below, separated by commas.
   - : Uses the nearest SVG viewport as reference box. If a [`viewBox`](/en-US/docs/Web/SVG/Attribute/viewBox) attribute is specified for the element creating the SVG viewport, the reference box is positioned at the origin of the coordinate system established by the `viewBox` attribute and the dimension of the reference box is set to the width and height values of the `viewBox` attribute.
 - `no-clip`
   - : The painted content is not clipped.
-- `border`{{non-standard_inline}}
+- `border` {{non-standard_inline}}
   - : This keyword behaves the same as `border-box`.
-- `padding`{{non-standard_inline}}
+- `padding` {{non-standard_inline}}
   - : This keyword behaves the same as `padding-box`.
-- `content`{{non-standard_inline}}
+- `content` {{non-standard_inline}}
   - : This keyword behaves the same as `content-box`.
-- `text`{{non-standard_inline}}
+- `text` {{non-standard_inline}}
   - : This keyword clips the mask image to the text of the element.
 
 ## Formal definition

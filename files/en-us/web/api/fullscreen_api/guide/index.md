@@ -61,7 +61,7 @@ On the other hand, if you're trying to emulate WebKit's behavior on Gecko, you n
 
 ### Notification
 
-When fullscreen mode is successfully engaged, the document which contains the element receives a {{Event("fullscreenchange")}} event. When fullscreen mode is exited, the document again receives a {{Event("fullscreenchange")}} event. Note that the {{Event("fullscreenchange")}} event doesn't provide any information itself as to whether the document is entering or exiting fullscreen mode, but if the document has a non null {{DOMxRef("document.fullscreenElement", "fullscreenElement")}}, you know you're in fullscreen mode.
+When fullscreen mode is successfully engaged, the document which contains the element receives a {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} event. When fullscreen mode is exited, the document again receives a {{domxref("Document/fullscreenchange_event", "fullscreenchange")}} event. Note that the {{domxref("Document/fullscreenchange_event", "fullscreenchange")}} event doesn't provide any information itself as to whether the document is entering or exiting fullscreen mode, but if the document has a non null {{DOMxRef("document.fullscreenElement", "fullscreenElement")}}, you know you're in fullscreen mode.
 
 ### When a fullscreen request fails
 

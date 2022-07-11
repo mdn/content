@@ -42,7 +42,7 @@ If so ensure they are safe and that no better alternatives are available.
 | Name                     | Risk Level | Problem                                                            | Solution                                            |
 | ------------------------ | ---------- | ------------------------------------------------------------------ | --------------------------------------------------- |
 | eval                     | Very High  | Invokes JavaScript parser - dangerous if used with untrusted input | Avoid eval if at all possible.                      |
-| setTimeout(string, time) | Very High  | Acts like eval                                                     | Use setTimeout(function, time, param1, param2, ...) |
+| setTimeout(string, time) | Very High  | Acts like eval                                                     | Use setTimeout(function, time, param1, param2, …) |
 
 ## C++ - Dangerous Functions
 

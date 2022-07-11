@@ -43,16 +43,16 @@ Non-configurable properties are not super common, but they can be created using
 
 ```js example-bad
 'use strict';
-var obj = Object.freeze({name: 'Elsa', score: 157});
+const obj = Object.freeze({name: 'Elsa', score: 157});
 delete obj.score;  // TypeError
 
 'use strict';
-var obj = {};
+const obj = {};
 Object.defineProperty(obj, 'foo', {value: 2, configurable: false});
 delete obj.foo;  // TypeError
 
 'use strict';
-var frozenArray = Object.freeze([0, 1, 2]);
+const frozenArray = Object.freeze([0, 1, 2]);
 frozenArray.pop();  // TypeError
 ```
 

@@ -80,7 +80,7 @@ browser-compat: path.to.feature.NameOfTheElement
 
 {{SeeCompatTable}}{{Deprecated_Header}}{{HTMLRef}}
 
-The **`<insert_the_element_name>`** [HTML](/en-US/docs/Web/HTML) element does ... _insert a summary paragraph naming the element and saying what it does (ideally 1 or 2 short sentences)_.
+The **`<insert_the_element_name>`** [HTML](/en-US/docs/Web/HTML) element does  _(insert a summary paragraph naming the element and saying what it does, ideally 1 or 2 short sentences)_.
 
 \\{{EmbedInteractiveExample("pages/tabbed/nameOfElement.html", "tabbed-standard")}}
 
@@ -90,7 +90,7 @@ Further information — at this point, include a few more paragraphs explaining 
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("attribute1")}}{{Deprecated_inline}}{{experimental_inline}}
+- {{htmlattrdef("attribute1")}} {{Deprecated_inline}} {{experimental_inline}}
   - : Include description here of what the attribute does. Include one term and definition for each attribute. If the attribute is not experimental/deprecated, remove the relevant macro calls.
 - {{htmlattrdef("attribute2")}}
   - : etc.
@@ -101,8 +101,8 @@ Include a table of the events fired on this type of element, if any.
 
 | Event name | Fired when                          |
 | ---------- | ----------------------------------- |
-| event 1    | Explain briefly when it is fired... |
-| event 2    | Explain briefly when it is fired... |
+| event 1    | Explain briefly when it is fired |
+| event 2    | Explain briefly when it is fired |
 | etc.       |                                     |
 
 ## Examples

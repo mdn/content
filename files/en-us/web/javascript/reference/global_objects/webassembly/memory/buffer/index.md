@@ -28,14 +28,15 @@ const memory = new WebAssembly.Memory({
 });
 
 WebAssembly.instantiateStreaming(fetch("memory.wasm"), { js: { mem: memory } })
-.then(obj => {
-  const summands = new Uint32Array(memory.buffer);
-  for (let i = 0; i < 10; i++) {
-    summands[i] = i;
-  }
-  const sum = obj.instance.exports.accumulate(0, 10);
-  console.log(sum);
-});
+  .then(obj => {
+    const summands = new Uint32Array(memory.buffer);
+    for (let i = 0; i < 10; i++) {
+      summands[i] = i;
+    }
+    const sum = obj.instance.exports.accumulate(0, 10);
+    console.log(sum);
+  });
+
 ```
 
 ## Specifications

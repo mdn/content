@@ -7,7 +7,8 @@ tags:
 ---
 {{MathMLRef}}
 
-This is an alphabetical list of MathML attributes. More details for each attribute are available on particular [element pages](/en-US/docs/Web/MathML/Element).
+This is an alphabetical list of MathML attributes. More details for each attribute are available on relevant [MathML element pages](/en-US/docs/Web/MathML/Element)
+and on the [global attributes page](/en-US/docs/Web/MathML/Global_attributes).
 
 Notes:
 

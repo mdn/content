@@ -28,7 +28,7 @@ A string representing the object.
 
 ## Description
 
-An object's `toString()` method is most commonly invoked when that object undergoes...
+An object's `toString()` method is most commonly invoked when that object undergoes:
 
 - explicit {{Glossary("type conversion")}} to a string (for example, `{{jsxref("String/String", "String")}}(myObject)`)
 - implicit {{Glossary("type coercion")}} into a string (for example, `myObject + "hello world"`)

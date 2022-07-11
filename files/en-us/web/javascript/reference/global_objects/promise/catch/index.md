@@ -43,7 +43,7 @@ p.catch(function(reason) {
 
     The Promise returned by `catch()` is rejected if
     `onRejected` throws an error or returns a Promise which is
-    itself rejected; otherwise, it is resolved.
+    itself rejected; otherwise, it is fulfilled.
 
 ### Return value
 

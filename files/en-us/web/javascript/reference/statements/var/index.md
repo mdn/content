@@ -81,7 +81,7 @@ In the global context, a variable declared using `var` is added as a
 non-configurable property of the global object. This means its property descriptor
 cannot be changed and it cannot be deleted using {{JSxRef("Operators/delete", "delete")}}. The corresponding
 name is also added to a list on the internal `[[VarNames]]` slot on the
-[global environment record](https://262.ecma-international.org/10.0/#sec-global-environment-records)
+[global environment record](https://tc39.es/ecma262/#sec-global-environment-records)
 (which forms part of the global lexical environment). The list
 of names in `[[VarNames]]` enables the runtime to distinguish between global
 variables and straightforward properties on the global object.
@@ -112,7 +112,7 @@ to a value, the scope chain is searched. This means that properties on the globa
 are conveniently visible from every scope, without having to qualify the names with
 `globalThis.` or `window.` or `global.`.
 
-So you can just type:
+Because the global object has a `String` property (`globalThis.hasOwnProperty('String')`), you can use the following code:
 
 ```js
 function foo() {
@@ -120,10 +120,6 @@ function foo() {
 }
 ```
 
-...because
-
-```js
-globalThis.hasOwnProperty('String') // true
 ```
 
 So the global object will ultimately be searched for unqualified identifiers. You don't

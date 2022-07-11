@@ -155,7 +155,7 @@ Finally, the `width` and `height` of both the video and the canvas are set to ma
 
 #### Handle clicks on the button
 
-To capture a still photo each time the user clicks the `startbutton`, we need to add an event listener to the button, to be called when the {{event("click")}} event is issued:
+To capture a still photo each time the user clicks the `startbutton`, we need to add an event listener to the button, to be called when the {{domxref("Element/click_event", "click")}} event is issued:
 
 ```js
     startbutton.addEventListener('click', function(ev){

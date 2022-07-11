@@ -87,7 +87,7 @@ Below is an example that uses `tts:fillLineGap`:
 
 {{EmbedGHLiveSample("imsc/fillLineGap/fillLineGap.html", '100%', '256px')}}
 
-... and an example that uses `ebutts:linePadding`:
+… and an example that uses `ebutts:linePadding`:
 
 {{EmbedGHLiveSample("imsc/linePadding/linePadding.html", '100%', '256px')}}
 

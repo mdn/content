@@ -185,7 +185,6 @@ let playAttempt = setInterval(() => {
 
 In the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), a web site or app can start playing audio using the `start()` method on a source node linked to the {{domxref("AudioContext")}}. Doing so outside the context of handling a user input event is subject to autoplay rules.
 
-_More content will come soon; autoplay blocking is still being worked on at Mozilla. If others have it already, they are welcome to pitch in with this section..._
 
 ## The autoplay feature policy
 
