@@ -65,9 +65,9 @@ function renderImage(result) {
 
   const track = imageDecoder.tracks.selectedTrack;
 
-  // We check complete here since `frameCount` won't be stable until all data
-  // has been received. This may cause us to receive a RangeError during the
-  // decode() call below which needs to be handled.
+  // We check complete here since `frameCount` won't be stable until all
+  // data has been received. This may cause us to receive a RangeError
+  // during the decode() call below which needs to be handled.
   if (imageDecoder.complete) {
     if (track.frameCount == 1)
       return;
@@ -85,11 +85,13 @@ function renderImage(result) {
               },
               result.image.duration / 1000.0))
       .catch(e => {
-        // We can end up requesting an imageIndex past the end since we're using
-        // a ReadableStream from fetch(), when this happens just wrap around.
+        // We can end up requesting an imageIndex past the end since
+        // we're using a ReadableStream from fetch(), when this happens
+        // just wrap around.
         if (e instanceof RangeError) {
           imageIndex = 0;
-          imageDecoder.decode({frameIndex: imageIndex}).then(renderImage);
+          imageDecoder.decode({frameIndex: imageIndex})
+              .then(renderImage);
         } else {
           throw e;
         }
@@ -97,7 +99,8 @@ function renderImage(result) {
 }
 
 function decodeImage(imageByteStream) {
-  imageDecoder = new ImageDecoder({data: imageByteStream, type: 'image/gif'});
+  imageDecoder = new ImageDecoder(
+      {data: imageByteStream, type: 'image/gif'});
   imageDecoder.decode({frameIndex: imageIndex}).then(renderImage);
 }
 
