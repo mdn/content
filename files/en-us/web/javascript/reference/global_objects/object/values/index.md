@@ -40,13 +40,6 @@ An array containing the given object's own enumerable property values.
 property values found on the object. The ordering of the properties is the same as that
 given by looping over the property values of the object manually.
 
-## Polyfill
-
-To add compatible `Object.values` support in older environments that do not
-natively support it, you can find a Polyfill in the [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries)
-or in the [es-shims/Object.values](https://github.com/es-shims/Object.values)
-repositories.
-
 ## Examples
 
 ### Using Object.values

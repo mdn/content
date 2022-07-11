@@ -130,7 +130,7 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
     <tr>
       <td>
-        <code><a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPHeader.ejs">HTTPHeader</a></code>
+        <code><a href="https://github.com/mdn/yari/blob/main/kumascript/macros/httpheader.ejs">HTTPHeader</a></code>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> (/Web/HTTP/Headers).
@@ -224,10 +224,10 @@ They typically link back to the main page of the reference/guide/tutorial (this 
 Usage: `\{{Optional_Inline}}` or `\{{ReadOnlyInline}}`.
 Example:
 
-- `isCustomObject`{{ReadOnlyInline}}
+- `isCustomObject` {{ReadOnlyInline}}
   - : Indicates, if `true`, that the object is a custom one.
-- `parameterX`{{Optional_Inline}}
-  - : Blah blah blah...
+- `parameterX` {{optional_inline}}
+  - : Blah blah blah…
 
 ## Status and compatibility indicators
 

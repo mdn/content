@@ -1,6 +1,7 @@
 ---
 title: API landing page template
 slug: MDN/Structures/Page_types/API_landing_page_template
+page-type: web-api-overview
 tags:
   - API
   - Landing
@@ -21,6 +22,7 @@ tags:
 > ---
 > title: NameOfTheAPI API
 > slug: Web/API/NameOfTheAPI_API
+> page-type: web-api-overview
 > tags:
 >   - API
 >   - NameOfTheAPI API
@@ -40,6 +42,8 @@ tags:
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
 >     This will be formatted like `Web/API/NameOfTheAPI_API`.
 >     For example, the [WebXR Device API](/en-US/docs/Web/API/WebVR_API)'s slug is `Web/API/WebXR_Device_API`.
+> - **page-type**
+>   - : The `page-type` key for Web/API landing pages is always `web-api-overview`.
 > - **tags**
 >   - : Always include the following tags: **API**, **Reference**, **Landing**,  the _name of the API_ (e.g. **WebXR Device API**).
 >
@@ -105,8 +109,8 @@ In this section, describe the API's purpose and usage cases in a bit more detail
 What problems does it solve? What concepts does it involve? How do you use it, from a high level perspective?
 
 Don't go into a lot of detail in this section, and don't include code examples.
-If there are a lot of concepts to explain around this API, you should explain them in a separate "Fundamentals ..." or "Concepts..." article (e.g. [Fundamentals of WebXR](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals)).
-For a practical usage guide with code examples, you should include a "Usage..." article in your API docs (e.g. [Using the WebVR API](/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API)).
+If there are a lot of concepts to explain around this API, you should explain them in a separate "Fundamentals" or "Concepts" article (e.g. [Fundamentals of WebXR](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals)).
+For a practical usage guide with code examples, you should include a "Usage…" article in your API docs (e.g. [Using the WebVR API](/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API)).
 
 To help improve content discoverability and {{Glossary("SEO")}}, keep the following tips in mind:
 
@@ -133,21 +137,37 @@ The _name of interface_ extends the following APIs, adding the listed features.
 
 ## Examples
 
-Fill in a simple example that nicely shows a typical usage of the API, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information).
+### A descriptive heading
 
-This text should be replaced with a brief description of what the example demonstrates.
+Each example must have an H3 heading naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
 
-```js
-my code block
-```
+See our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information.
 
-If you've included an example directly in the page as shown above, and that example is longer than 4-5 lines or so, consider following the example with a step-by-step explanation of what it's doing, so that new programmers can learn more easily, and to help smooth the learning curve for complicated subjects.
-
-And/or include a list of links to useful code samples that live elsewhere:
-
-- x
-- y
-- z
+> **Note:** Sometimes you will want to link to examples given on another page.
+>
+> **Scenario 1:** If you have some examples on this page and some more examples on another page:
+>
+> Include an H3 heading (`###`) for each example on this page and then a final H3 heading (`###`) with the text "More examples", under which you can link to the examples on other pages. For example:
+>
+>  ```md
+>  ## Examples
+>
+>  ### Using the fetch API
+>  ... example of Fetch
+>
+>  ### More examples
+>  ...links to more examples on other pages
+>  ```
+>
+> **Scenario 2:** If you _only_ have examples on another page and none on this page:
+>
+> Don't add any H3 headings; just add the links directly under the H2 heading "Examples". For example:
+>
+>  ```md
+>   ## Examples
+>
+>   For examples of this API, see [the page on fetch()](https://example.org).
+>
 
 ## Specifications
 

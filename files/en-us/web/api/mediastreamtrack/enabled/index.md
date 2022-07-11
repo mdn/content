@@ -37,14 +37,7 @@ data, such as a scenario in which frames have been lost in transit.
 > **Note:** If the track has been disconnected, the value of this property
 > can be changed, but has no effect.
 
-## Syntax
-
-```js
-const enabledFlag = track.enabled
-track.enabled = [true | false]
-```
-
-### Value
+## Value
 
 When `true`, `enabled` indicates that the track is permitted to
 render its actual media to the output. When `enabled` is set to
@@ -66,7 +59,7 @@ computers turns off while the track is muted in this way.
 
 ## Example
 
-This example demonstrates a {{event("click")}} event handler for a pause button.
+This example demonstrates a {{domxref("Element/click_event", "click")}} event handler for a pause button.
 
 ```js
 pauseButton.onclick = function(evt) {

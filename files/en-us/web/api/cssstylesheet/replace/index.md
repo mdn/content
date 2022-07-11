@@ -27,7 +27,7 @@ replace(text)
 - `text`
   - : A string containing the style rules to replace the content of the stylesheet. If the string does not contain a parseable list of rules, then the value will be set to an empty string.
 
-> **Note:** If any of the rules passed in `text` are an external stylesheet imported with the {{cssxref("@import")}} rule, those rules will be removed, and a warning printed to the console.
+    > **Note:** If any of the rules passed in `text` are an external stylesheet imported with the {{cssxref("@import")}} rule, those rules will be removed, and a warning printed to the console.
 
 ### Return value
 
@@ -35,10 +35,10 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("CSSStyleSheet")}}.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NotAllowedError`
-  - : Thrown if the stylesheet was not created using the {{domxref("CSSStyleSheet.CSSStyleSheet()","CSSStyleSheet()")}} constructor.
-- {{domxref("DOMException")}} `NotAllowedError`
-  - : If the stylesheet is flagged as unmodifiable.
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if one of these two conditions is met:
+    - The stylesheet was not created using the {{domxref("CSSStyleSheet.CSSStyleSheet()","CSSStyleSheet()")}} constructor.
+    - The stylesheet is flagged as unmodifiable.
 
 ## Examples
 

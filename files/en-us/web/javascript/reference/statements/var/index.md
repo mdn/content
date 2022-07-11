@@ -81,7 +81,7 @@ In the global context, a variable declared using `var` is added as a
 non-configurable property of the global object. This means its property descriptor
 cannot be changed and it cannot be deleted using {{JSxRef("Operators/delete", "delete")}}. The corresponding
 name is also added to a list on the internal `[[VarNames]]` slot on the
-[global environment record](https://262.ecma-international.org/10.0/#sec-global-environment-records)
+[global environment record](https://tc39.es/ecma262/#sec-global-environment-records)
 (which forms part of the global lexical environment). The list
 of names in `[[VarNames]]` enables the runtime to distinguish between global
 variables and straightforward properties on the global object.

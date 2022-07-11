@@ -137,8 +137,6 @@ See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples
 
 {{Specifications}}
 
-<!-- {{Specifications}} -->
-
 ## Browser compatibility
 
 {{Compat}}

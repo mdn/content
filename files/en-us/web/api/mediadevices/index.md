@@ -56,16 +56,16 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 'use strict';
 
 // Put variables in global scope to make them available to the browser console.
-var video = document.querySelector('video');
-var constraints = window.constraints = {
+const video = document.querySelector('video');
+const constraints = window.constraints = {
   audio: false,
   video: true
 };
-var errorElement = document.querySelector('#errorMsg');
+const errorElement = document.querySelector('#errorMsg');
 
 navigator.mediaDevices.getUserMedia(constraints)
 .then(function(stream) {
-  var videoTracks = stream.getVideoTracks();
+  const videoTracks = stream.getVideoTracks();
   console.log('Got stream with constraints:', constraints);
   console.log('Using video device: ' + videoTracks[0].label);
   stream.onremovetrack = function() {

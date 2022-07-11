@@ -51,26 +51,17 @@ Also welcome are topics that cut across technologies but are relevant to Web dev
 
 ## What topics don't belong on MDN Web Docs?
 
-In general, anything that isn't an open web standard does not belong on MDN. The below sections provide more specifics.
+In general, anything that isn't an open web standard does not belong on MDN. The sections below provide more detail.
 
 ### Mozilla products
 
-Documentation in this category includes information on both how to work with Mozilla products, as a developer, and how to contribute to these open-source projects.
+MDN Web Docs doesn't host documentation for Mozilla products anymore.
 
-While MDN Web Docs contains a large quantity of Mozilla product documentation, the focus of new content development is on open web standards. We are in the process of determining what to do about this content, so it may not make sense to create new Mozilla product documentation on MDN Web Docs. If you are working on a Mozilla product (or project that may become a product), talk to a member of the [MDN staff team](https://wiki.mozilla.org/Engagement/MDN_Durable_Team) to discuss possible avenues for documenting your product. Also, see the section on [Cases for documenting elsewhere](#cases_for_documenting_elsewhere), below.
+In particular, the following products have their own documentation site:
 
-- [Firefox browser](/en-US/docs/Mozilla/Firefox)
-
-  - [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
-  - [Add-ons](/en-US/docs/Mozilla/Add-ons)
-  - [Building and configuring Firefox](/en-US/docs/Mozilla/Developer_guide/Build_Instructions)
-  - etc.
-
-- [The Mozilla platform](/en-US/docs/Mozilla)
-
-  - [Gecko](/en-US/docs/Mozilla/Gecko)
-  - [SpiderMonkey](https://firefox-source-docs.mozilla.org/js/)
-  - etc.
+- [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+- [Building and configuring Firefox](https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html)
+- [SpiderMonkey](https://firefox-source-docs.mozilla.org/js/)
 
 ### What else?
 
@@ -90,4 +81,4 @@ Here are some examples of types of documents that should _not_ be placed on MDN:
 - Design documents
 - Project proposals
 - Specifications or standards
-- Promotional material, advertising, or [personal information](#about_your_profile)
+- Promotional material, advertising, or personal information

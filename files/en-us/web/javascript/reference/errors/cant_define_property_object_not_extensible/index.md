@@ -45,7 +45,7 @@ ignored.
 ```js example-bad
 'use strict';
 
-var obj = {};
+const obj = {};
 Object.preventExtensions(obj);
 
 obj.x = 'foo';
@@ -57,7 +57,7 @@ sloppy mode, a call to {{jsxref("Object.defineProperty()")}} throws when adding 
 property to a non-extensible object.
 
 ```js example-bad
-var obj = { };
+const obj = { };
 Object.preventExtensions(obj);
 
 Object.defineProperty(obj,
@@ -75,7 +75,7 @@ need it.
 ```js example-good
 'use strict';
 
-var obj = {};
+const obj = {};
 obj.x = 'foo'; // add property first and only then prevent extensions
 
 Object.preventExtensions(obj);

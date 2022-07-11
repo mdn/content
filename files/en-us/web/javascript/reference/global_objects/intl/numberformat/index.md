@@ -86,7 +86,7 @@ console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
 
 ### Using options
 
-The results can be customized using the `options` argument:
+The results can be customized using the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) argument:
 
 ```js
 const number = 123456.789;
@@ -102,24 +102,23 @@ console.log(new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' 
 // limit to three significant digits
 console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(number));
 // → 1,23,000
-```
 
-### Using style and unit
-
-```js
+// Formatting with units
 console.log(new Intl.NumberFormat('pt-PT',  {
-    style: 'unit',
-    unit: 'kilometer-per-hour'
+  style: 'unit',
+  unit: 'kilometer-per-hour'
 }).format(50));
 // → 50 km/h
 
 console.log((16).toLocaleString('en-GB', {
-    style: 'unit',
-    unit: 'liter',
-    unitDisplay: 'long'
+  style: 'unit',
+  unit: 'liter',
+  unitDisplay: 'long',
 }));
 // → 16 litres
 ```
+
+For an exhaustive list of options, see the [`Intl.NumberFormat()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) page.
 
 ## Specifications
 

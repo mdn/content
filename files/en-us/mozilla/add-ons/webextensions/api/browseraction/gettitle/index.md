@@ -35,9 +35,9 @@ let gettingTitle = browser.browserAction.getTitle(
 
   - : An object with the following properties:
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Specify the tab to get the title from.
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. Specify the window to get the title from.
 
 <!---->

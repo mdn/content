@@ -52,7 +52,7 @@ browser.sidebarAction.setPanel(
         - If `windowId` is specified, and the window has a window-specific panel set, then the window will inherit the global panel.
         - Otherwise, the global panel will be reset to the manifest panel.
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Sets the panel only for the given tab.
     - `windowId` {{optional_inline}}
       - : `integer`. Sets the panel only for the given window.

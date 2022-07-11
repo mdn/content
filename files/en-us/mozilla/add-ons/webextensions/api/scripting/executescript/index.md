@@ -46,7 +46,7 @@ let results = await browser.scripting.executeScript(
       - : `array` of `string`. An array of path of the JS files to inject, relative to the extension's root directory. Exactly one of `files` and `func` must be specified.
     - `func`
       - : `function`. A JavaScript function to inject. This function is serialized and then deserialized for injection. This means that any bound parameters and execution context are lost. Exactly one of `files` and `func` must be specified.
-    - `injectImmediately`{{optional_inline}}
+    - `injectImmediately` {{optional_inline}}
       - : `boolean`. Whether the injection into the target is triggered as soon as possible, but not necessarily prior to page load.
     - `target`
       - : {{WebExtAPIRef("scripting.InjectionTarget")}}. Details specifying the target to inject the script into.
@@ -61,9 +61,9 @@ Each `InjectionResult` object has these properties:
 
 - `frameId`
   - : `number`. The frame ID associated with the injection.
-- `result`{{optional_inline}}
+- `result` {{optional_inline}}
   - : `any`. The result of the script execution.
-- `error`{{optional_inline}}
+- `error` {{optional_inline}}
   - : `object`. When the injection fails, details of the failure errors.
     - `message`
       - : `string`. A message explaining why the injection failed.

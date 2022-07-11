@@ -16,17 +16,17 @@ browser-compat: api.GlobalEventHandlers.onauxclick
 
 The **`onauxclick`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) for
-processing {{event("auxclick")}} events.
+processing {{domxref("Element/auxclick_event", "auxclick")}} events.
 
 The `auxclick` event is raised when a non-primary button has been pressed on
-an input device (e.g., a middle mouse button). It fires after the {{event("mousedown")}}
-and {{event("mouseup")}} events, in that order.
+an input device (e.g., a middle mouse button). It fires after the {{domxref("Element/mousedown_event", "mousedown")}}
+and {{domxref("Element/mouseup_event", "mouseup")}} events, in that order.
 
 > **Note:** Browser vendors are implementing this property as part of a
 > plan to improve compatibility with regards to button behaviors. Specifically, event
-> behavior is being updated so that {{Event("click")}} only fires for primary button
-> clicks (e.g., left mouse button), while {{Event("auxclick")}} fires for non-primary
-> button clicks. Historically, {{Event("click")}} has generally fired for the click of
+> behavior is being updated so that {{domxref("Element/click_event", "click")}} only fires for primary button
+> clicks (e.g., left mouse button), while {{domxref("Element/auxclick_event", "auxclick")}} fires for non-primary
+> button clicks. Historically, {{domxref("Element/click_event", "click")}} has generally fired for the click of
 > _any_ device input button, although with browser behavior being somewhat
 > inconsistent.
 
@@ -56,20 +56,20 @@ foreground (text) color. You can see the two functions in action by trying the d
 with a multi-button mouse ([see it live on GitHub](https://mdn.github.io/dom-examples/auxclick/); also [see the source code](https://github.com/mdn/dom-examples/blob/master/auxclick/index.html)).
 
 ```js
-var button = document.querySelector('button');
-var html = document.querySelector('html');
+const button = document.querySelector('button');
+const html = document.querySelector('html');
 
 function random(number) {
   return Math.floor(Math.random() * number);
 }
 
 button.onclick = function() {
-  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
   button.style.backgroundColor = rndCol;
 };
 
 button.onauxclick = function() {
-  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
   button.style.color = rndCol;
 }
 ```
@@ -88,7 +88,7 @@ button.onauxclick = function() {
 
 ## See also
 
-- {{event("auxclick")}} event
+- {{domxref("Element/auxclick_event", "auxclick")}} event
 - Related event handlers
 
   - {{domxref("GlobalEventHandlers.onclick")}}

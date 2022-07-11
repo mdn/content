@@ -66,7 +66,7 @@ You can use any of them, as they will have similar functionality, though some ar
 
 If you want to include video or audio into your website, you can either embed online services (for example YouTube, Vimeo, or Dailymotion), or include your own videos (see below for bandwidth costs).
 
-For audio files, you can find free software ([Audacity](https://www.audacityteam.org/), [Wavosaur](https://www.wavosaur.com/)), or paying up to a few hundred dollars ([Sound Forge](https://www.magix.com/us/music-editing/sound-forge/), [Adobe Audition](https://www.adobe.com/products/audition.html)). Likewise, video-editing software can be free ([PiTiVi](https://www.pitivi.org/), [OpenShot](https://www.openshot.org/) for Linux, [iMovie](https://www.apple.com/imovie/) for Mac), less than $100 ([Adobe Premiere Elements](https://www.adobe.com/us/products/premiere-elements.html)), or several hundred dollars ([Adobe Premiere Pro](https://www.adobe.com/products/premiere.html), [Avid Media Composer](https://www.avid.com/media-composer), [Final Cut Pro](https://www.apple.com/final-cut-pro/)). The software you received with your digital camera may cover all your needs.
+For audio files, you can find free software ([Audacity](https://www.audacityteam.org/), [Wavosaur](https://www.wavosaur.com/)), or paying up to a few hundred dollars ([Sound Forge](https://www.magix.com/us/music-editing/sound-forge/), [Adobe Audition](https://www.adobe.com/products/audition.html)). Likewise, video-editing software can be free ([PiTiVi](https://www.pitivi.org/), [OpenShot](https://www.openshot.org/) for Linux, [iMovie](https://www.apple.com/imovie/) for Mac), less than $100 ([Adobe Premiere Elements](https://www.adobe.com/products/premiere-elements.html)), or several hundred dollars ([Adobe Premiere Pro](https://www.adobe.com/products/premiere.html), [Avid Media Composer](https://www.avid.com/media-composer), [Final Cut Pro](https://www.apple.com/final-cut-pro/)). The software you received with your digital camera may cover all your needs.
 
 ### Publishing tools
 
@@ -140,10 +140,10 @@ Here, costs depend on multiple factors, such as:
 - Is this a simple website with a few pages of text? Or a more complex, thousand-pages-long website?
 - Will you want to update it regularly? Or will it be a static website?
 - Must the website connect to your company's IT structure to gather content (say, internal data)?
-- Do you want some shiny new feature that is the rage of the moment? At the time of writing, clients are seeking single pages with complex parallax
-- Will you need the agency to think up user stories or solve complex {{Glossary("UX")}} problems? For example, creating a strategy to engage users, or A/B testing to choose a solution among several ideas
+- Do you want some shiny new feature that is popular at the moment? At the time of writing, clients are seeking single pages with complex parallax.
+- Will you need the agency to think up user stories or solve complex {{Glossary("UX")}} problems? For example, creating a strategy to engage users, or A/B testing to choose a solution among several ideas.
 
-...and for hosting:
+And for hosting you need ot consider following choices:
 
 - Do you want redundant servers, in case your server goes down?
 - Is 95% reliability adequate, or do you need professional, around-the-clock service?

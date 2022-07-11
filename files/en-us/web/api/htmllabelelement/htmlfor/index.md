@@ -8,6 +8,7 @@ tags:
   - HTMLLabelElement
   - Reference
   - htmlFor
+  - Property
 browser-compat: api.HTMLLabelElement.htmlFor
 ---
 {{APIRef("HTML DOM")}}
@@ -17,15 +18,7 @@ of the {{htmlattrxref("for", "label")}} content property. That means that this
 script-accessible property is used to set and read the value of the content property
 `for`, which is the ID of the label's associated control element.
 
-## Syntax
-
-```js
-controlId = HTMLLabelElement.htmlFor
-
-HTMLLabelElement.htmlFor = newId
-```
-
-### Value
+## Value
 
 A string which contains the ID string of the element which is
 associated with the control.

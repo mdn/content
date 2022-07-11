@@ -27,6 +27,7 @@ The `fetch` specification differs from `jQuery.ajax()` in the following signific
 - Unless `fetch()` is called with the [`credentials`](/en-US/docs/Web/API/fetch#credentials) option set to `include`, `fetch()`:
   - won't send cookies in cross-origin requests
   - won't set any cookies sent back in cross-origin responses
+  - As of August 2018, the default credentials policy changed to same-origin. Firefox was also modified in version 61.0b13)
 
 A basic fetch request is really simple to set up. Have a look at the following code:
 
@@ -402,9 +403,11 @@ The {{domxref("Response.Response","Response()")}} constructor takes two optional
 Both requests and responses may contain body data. A body is an instance of any of the following types:
 
 - {{jsxref("ArrayBuffer")}}
-- {{domxref("ArrayBufferView")}} (Uint8Array and friends)
-- {{domxref("Blob")}}/{{domxref("File")}}
-- string
+- {{jsxref("TypedArray")}} (Uint8Array and friends)
+- {{jsxref("DataView")}}
+- {{domxref("Blob")}}
+- {{domxref("File")}}
+- {{jsxref("String")}}, or a string literal
 - {{domxref("URLSearchParams")}}
 - {{domxref("FormData")}}
 

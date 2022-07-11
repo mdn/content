@@ -57,13 +57,13 @@ Events have three functions:
   - : The function called when this event occurs. The function is passed the following arguments:
 
     - `details`
-      - : [`object`](#details). Details of the request. This will include response headers if you have included `"responseHeaders"` in `extraInfoSpec`.
+      - : [`object`](#details_2). Details of the request. This will include response headers if you have included `"responseHeaders"` in `extraInfoSpec`.
 
     Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If `"blocking"` is specified in the `extraInfoSpec` parameter, the event listener will return a `BlockingResponse` object, and can set its `responseHeaders` property. In Firefox, the return value can be a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to a  `BlockingResponse`.
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A set of filters that restricts the events that are sent to this listener.
-- `extraInfoSpec`{{optional_inline}}
+- `extraInfoSpec` {{optional_inline}}
 
   - : `array` of `string`. Extra options for the event. You can pass any of the following values:
 
@@ -133,7 +133,7 @@ Events have three functions:
 
 - `requestId`
   - : `string`. The ID of the request. Request IDs are unique within a browser session, so you can use them to relate different events associated with the same request.
-- `responseHeaders`{{optional_inline}}
+- `responseHeaders` {{optional_inline}}
   - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. The HTTP response headers that were received for this request.
 - `statusCode`
   - : `integer`. Standard HTTP status code returned by the server.

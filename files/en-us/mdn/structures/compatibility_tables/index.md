@@ -74,7 +74,7 @@ Now, whenever you want to update your fork, you can do so by:
 Next, go to your remote fork (it will be at `https://github.com/your-username/browser-compat-data`) and create a new branch to store your changes for this data addition. This can be done by:
 
 1. Clicking on the "Branch: Main" button.
-2. Entering a new branch name into the "Find or create a branch..." text field.
+2. Entering a new branch name into the "Find or create a branch…" text field.
 3. Pressing the resulting "Create branch _name-of-branch_ from Main" button.
 
 For example, if you were wanting to add data for the WebVR API, you'd create a branch called something like "webvr".

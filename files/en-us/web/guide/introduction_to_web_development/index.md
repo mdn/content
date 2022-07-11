@@ -20,7 +20,6 @@ For another (overlapping) set of links to learning resources, see the [MDN Learn
 
 - [The basics of Hypertext Mark-up Language (HTML)](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started) — what exactly is HTML?
 - [Basic structure of a web page](https://www.sitepoint.com/basic-structure-of-a-web-page/) — the doctype and document 'tree'
-- [Fundamental HTML elements](https://www.sitepoint.com/elements/) — structural, head, list, form elements and more, explained by category.
 - [HTML beginners tutorial](https://htmldog.com/guides/html/beginner/) — a tutorial and exercise that recap and take you through the basics you've learned above.
 - [HTML elements reference guide](/en-US/docs/Web/HTML/Element) — a comprehensive guide to HTML elements with details on how browsers support them
 
@@ -51,8 +50,8 @@ For another (overlapping) set of links to learning resources, see the [MDN Learn
 #### Advanced
 
 - [Learning advanced JavaScript](https://johnresig.com/apps/learn/) — John Resig's guide to advanced JavaScript
-- [Crockford on Advanced JavaScript](https://uk.screen.yahoo.com/watch/111585/1027823) — a three part video series on advanced JavaScript concepts
-- [JavaScript Garden](https://bonsaiden.github.io/JavaScript-Garden/) — Documentation of the most quirky parts of JavaScript.
+- [Crockford on Advanced JavaScript](https://www.youtube.com/watch?v=DwYPG6vreJg) — a video on advanced JavaScript concepts
+- [JavaScript Garden](https://bonsaiden.github.io/JavaScript-Garden/) — documentation of the most quirky parts of JavaScript
 
 ## Resources
 
@@ -65,6 +64,6 @@ For another (overlapping) set of links to learning resources, see the [MDN Learn
 - [Tizag CSS Tutorials](http://www.tizag.com/cssT/)
   - : An easy-to-follow reference for those wishing to learn CSS through short, concise tutorials.
 - [jQuery Fundamentals](http://jqfundamentals.com/)
-  - : An open-source reference book featuring detailed introductions to both JavaScript and JQuery for beginners.
+  - : An open-source reference book featuring detailed introductions to both JavaScript and jQuery for beginners.
 - [JavaScript From Null: A Video Series](https://code.tutsplus.com/tutorials/javascript-from-null-video-series--net-8066)
   - : A video series on JavaScript for absolute beginners looking for more 'visual'-based learning

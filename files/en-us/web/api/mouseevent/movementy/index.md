@@ -49,7 +49,7 @@ document.addEventListener('mousemove', logMovement);
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

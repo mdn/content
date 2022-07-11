@@ -21,16 +21,16 @@ The following example shows the use of the `height` and `width` properties along
 <title>width/height example</title>
 <script>
 function init() {
-  var arrImages = new Array(3);
+  const arrImages = new Array(3);
 
   arrImages[0] = document.getElementById("image1");
   arrImages[1] = document.getElementById("image2");
   arrImages[2] = document.getElementById("image3");
 
-  var objOutput = document.getElementById("output");
-  var strHtml = "<ul>";
+  const objOutput = document.getElementById("output");
+  let strHtml = "<ul>";
 
-  for (var i = 0; i < arrImages.length; i++) {
+  for (let i = 0; i < arrImages.length; i++) {
     strHtml += "<li>image" + (i+1) +
             ": height=" + arrImages[i].height +
             ", width=" + arrImages[i].width +
@@ -112,7 +112,7 @@ In this simple example, some basic style properties of an HTML paragraph element
 
 <script>
 function changeText() {
-  var p = document.getElementById("pid");
+  const p = document.getElementById("pid");
 
   p.style.color = "blue"
   p.style.fontSize = "18pt"
@@ -136,10 +136,10 @@ function changeText() {
 The {{domxref("document.styleSheets", "styleSheets")}} property on the {{domxref("document")}} object returns a list of the stylesheets that have been loaded on that document. You can access these stylesheets and their rules individually using the stylesheet, style, and {{domxref("CSSRule")}} objects, as demonstrated in this example, which prints out all of the style rule selectors to the console.
 
 ```js
-var ss = document.styleSheets;
+const ss = document.styleSheets;
 
-for(var i = 0; i < ss.length; i++) {
-  for(var j = 0; j < ss[i].cssRules.length; j++) {
+for(let i = 0; i < ss.length; i++) {
+  for(let j = 0; j < ss[i].cssRules.length; j++) {
     dump( ss[i].cssRules[j].selectorText + "\n" );
   }
 }
@@ -225,19 +225,19 @@ This example demonstrates how the {{domxref("window.getComputedStyle")}} method 
 
 <script>
 function cStyles() {
-  var RefDiv = document.getElementById("d1");
-  var txtHeight = document.getElementById("t1");
-  var h_style = document.defaultView.getComputedStyle(RefDiv, null).getPropertyValue("height");
+  const RefDiv = document.getElementById("d1");
+  const txtHeight = document.getElementById("t1");
+  const h_style = document.defaultView.getComputedStyle(RefDiv, null).getPropertyValue("height");
 
   txtHeight.value = h_style;
 
-  var txtWidth = document.getElementById("t2");
-  var w_style = document.defaultView.getComputedStyle(RefDiv, null).getPropertyValue("width");
+  const txtWidth = document.getElementById("t2");
+  const w_style = document.defaultView.getComputedStyle(RefDiv, null).getPropertyValue("width");
 
   txtWidth.value = w_style;
 
-  var txtBackgroundColor = document.getElementById("t3");
-  var b_style = document.defaultView.getComputedStyle(RefDiv, null).getPropertyValue("background-color");
+  const txtBackgroundColor = document.getElementById("t3");
+  const b_style = document.defaultView.getComputedStyle(RefDiv, null).getPropertyValue("background-color");
 
   txtBackgroundColor.value = b_style;
 }
@@ -299,32 +299,32 @@ td { padding: 2px 10px 2px 10px; }
 
 function showEventProperties(e) {
   function addCell(row, text) {
-    var cell = row.insertCell(-1);
+    const cell = row.insertCell(-1);
     cell.appendChild(document.createTextNode(text));
   }
 
-  var e = e || window.event;
-  document.getElementById('eventType').innerHTML = e.type;
+  const event = e || window.event;
+  document.getElementById('eventType').innerHTML = event.type;
 
-  var table = document.createElement('table');
-  var thead = table.createTHead();
-  var row = thead.insertRow(-1);
-  var labelList = ['#', 'Property', 'Value'];
-  var len = labelList.length;
+  const table = document.createElement('table');
+  const thead = table.createTHead();
+  let row = thead.insertRow(-1);
+  const labelList = ['#', 'Property', 'Value'];
+  const len = labelList.length;
 
-  for (var i=0; i<len; i++) {
+  for (let i=0; i<len; i++) {
     addCell(row, labelList[i]);
   }
 
-  var tbody = document.createElement('tbody');
+  const tbody = document.createElement('tbody');
   table.appendChild(tbody);
 
-  for (var p in e) {
+  for (let p in event) {
     row = tbody.insertRow(-1);
     row.className = (row.rowIndex % 2)? 'odd':'even';
     addCell(row, row.rowIndex);
     addCell(row, p);
-    addCell(row, e[p]);
+    addCell(row, event[p]);
   }
 
   document.body.appendChild(table);
@@ -358,12 +358,12 @@ To add a row and some cells to an existing table:
 </table>
 
 <script>
-var table = document.getElementById('table0');
-var row = table.insertRow(-1);
-var cell,
-    text;
+const table = document.getElementById('table0');
+const row = table.insertRow(-1);
+let cell;
+let text;
 
-for (var i = 0; i < 2; i++) {
+for (let i = 0; i < 2; i++) {
   cell = row.insertCell(-1);
   text = 'Row ' + row.rowIndex + ' Cell ' + i;
   cell.appendChild(document.createTextNode(text));

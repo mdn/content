@@ -100,9 +100,9 @@ Explorer 9 and higher with the following code:
   }
 
     // Polyfills DOM4 MouseEvent
-  var MouseEventPolyfill = function (eventType, params) {
+  const MouseEventPolyfill = function (eventType, params) {
     params = params || { bubbles: false, cancelable: false };
-    var mouseEvent = document.createEvent('MouseEvent');
+    const mouseEvent = document.createEvent('MouseEvent');
     mouseEvent.initMouseEvent(eventType,
       params.bubbles,
       params.cancelable,

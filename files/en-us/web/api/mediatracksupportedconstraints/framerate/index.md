@@ -32,7 +32,7 @@ The `frameRate` constraint can be used to establish acceptable upper and
 lower bounds on the video frame rate for a new video track, or to specify an exact frame
 rate that must be provided for the request to succeed. Checking the value of this
 property lets you determine if the user agent allows constraining the video track
-configuration by frame rate. See the [example](#example) to see how this can
+configuration by frame rate. See the [example](#examples) to see how this can
 be used.
 
 ## Value
@@ -79,7 +79,7 @@ if (navigator.mediaDevices.getSupportedConstraints().frameRate) {
 
 The output, showing if your browser supports the `frameRate` constraint, is:
 
-{{ EmbedLiveSample('Example', 600, 80) }}
+{{ EmbedLiveSample('Examples', 600, 80) }}
 
 While this example is trivial, you can replace the simple output of "Supported" vs.
 "Not supported" with code to provide alternative methods for presenting the audiovisual

@@ -239,7 +239,7 @@ This example registers a handler for every event type for the given element.
     function lostcapture_handler(event) { }
 
     function init() {
-      var el=document.getElementById("target");
+      const el = document.getElementById("target");
       // Register pointer event handlers
       el.onpointerover = over_handler;
       el.onpointerenter = enter_handler;
@@ -266,7 +266,7 @@ This example illustrates accessing all of a pointer event's properties.
 ```html
 <html>
   <script>
-    var id = -1;
+    const id = -1;
 
     function process_id(event) {
       // Process this event based on the event's identifier
@@ -292,7 +292,7 @@ This example illustrates accessing all of a pointer event's properties.
 
     function down_handler(ev) {
       // Calculate the touch point's contact area
-      var area = ev.width * ev.height;
+      const area = ev.width * ev.height;
 
       // Compare cached id with this event's id and process accordingly
       if (id == ev.identifier) process_id(ev);
@@ -323,7 +323,7 @@ This example illustrates accessing all of a pointer event's properties.
     }
 
     function init() {
-      var el=document.getElementById("target");
+      const el=document.getElementById("target");
       // Register pointerdown handler
       el.onpointerdown = down_handler;
     }

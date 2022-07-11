@@ -45,10 +45,10 @@ forEach(function(currentValue, index, array) { /* ... */ }, thisArg)
 
     - `currentValue`
       - : The value of the current element being processed.
-    - `index`{{optional_inline}}
+    - `index` {{optional_inline}}
       - : The index of the current element being processed.
-    - `array`{{optional_inline}}
-      - : The StylePropertyMapReadOnly that`forEach()` is being called on.
+    - `array` {{optional_inline}}
+      - : The StylePropertyMapReadOnly that `forEach()` is being called on.
 
 - `thisArg` {{Optional_inline}}
   - : Value to use as **`this`** (i.e the reference

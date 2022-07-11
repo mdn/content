@@ -126,5 +126,4 @@ for (let i = 0; i < lineCap.length; i++) {
 - The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.lineWidth")}}
 - {{domxref("CanvasRenderingContext2D.lineJoin")}}
-- [Applying
-  styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)
+- [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)

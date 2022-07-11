@@ -117,7 +117,8 @@ These are all technically optional, but it is strongly encouraged that instead o
    > Where possible, these are now described as objects in the places where they are used.
 8. `"types"` — an array of typedefs and enumerated types defined by the API.
    You may choose to only list those that are of special importance or are referenced from multiple pages, in order to keep the list short.
-   "RTCSctpTransportState" creates a link to [https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransportState](/en-US/docs/Web/API/RTCSctpTransport/state).
+   > **Note:** MDN is moving away from separately documenting typedefs.
+   > Where possible, these are now described as values in the places where they are used.
 9. `"callbacks"` — the value is an array containing a list of all the defined callback types for the API.
    You may find it unnecessary to use this group at all, even on APIs that include callback types, as often they are not useful to document separately.
 

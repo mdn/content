@@ -200,7 +200,7 @@ let mc = {
   },
 
   createConfiguration: function () {
-    var size = document.getElementById('size').value.split('x');
+    const size = document.getElementById('size').value.split('x');
     mc.videoConfiguration = {
       type: 'file',
       video: {
@@ -216,18 +216,18 @@ let mc = {
   testIt: function () {
     let content = '';
     navigator.mediaCapabilities.decodingInfo(mc.videoConfiguration).then(result => {
-      var li = document.createElement('li'),
+      const li = document.createElement('li'),
         mcv = mc.videoConfiguration.video;
       content = 'A ' + mcv.width + 'x' + mcv.height + ', ' + mcv.contentType + ' at ' +
         mcv.framerate  + 'fps and ' +  mcv.bitrate + ' bps video ' +
         (result.supported ? ' IS ' : 'IS NOT ') + ' supported, ' +
         (result.smooth ? ' IS ' : ' is NOT ') + ' smooth, and' +
         (result.powerEfficient ? ' IS ' : ' IS NOT ') + 'power efficient.';
-      var ul = document.getElementById("results")
+      const ul = document.getElementById("results")
       li.innerHTML = content;
       ul.appendChild(li);
     }).catch((error) => {
-        var li = document.createElement('li'),
+        const li = document.createElement('li'),
             ul = document.getElementById("results");
         li.innerText = 'Codec ' + mc.videoConfiguration.video.contentType + ' threw an error: ' + error;
         ul.appendChild(li);

@@ -22,7 +22,7 @@ The **`RsaPssParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/We
 
   - : A `long` integer representing the length of the random salt to use, in bytes.
 
-    [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) says that "Typical salt lengths" are either 0 or the length of the output of the [digest algorithm](/en-US/docs/Web/API/SubtleCrypto#digest_algorithms) that was selected when this key was [generated](/en-US/docs/Web/API/SubtleCrypto/generateKey). For example, if you use [SHA-256](/en-US/docs/Web/API/SubtleCrypto#sha-256) as the digest algorithm, this could be 32.
+    [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) says that "Typical salt lengths" are either 0 or the length of the output of the [digest algorithm](/en-US/docs/Web/API/SubtleCrypto#supported_algorithms) that was selected when this key was [generated](/en-US/docs/Web/API/SubtleCrypto/generateKey). For example, if you use [SHA-256](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) as the digest algorithm, this could be 32.
 
     The maximum size of `saltLength` is given by:
 

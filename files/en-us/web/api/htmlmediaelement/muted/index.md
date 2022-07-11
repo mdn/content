@@ -23,7 +23,7 @@ not muted.
 ## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 console.log(obj.muted); // false
 ```
 

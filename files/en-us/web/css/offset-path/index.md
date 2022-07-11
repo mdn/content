@@ -52,7 +52,7 @@ offset-path: unset;
 - `ray()`
   - : Taking up to three values, defines a path that is a line segment starting from the position of the box and proceeds in the direction defined by the specified angle similar to the CSS gradient angle where `0deg` is up, with positive angles increasing in the clockwise direction, with the size value being similar to the CSS radial gradient size values from `closest-side` to `farthest-corner`, and the keyterm `contain`.
 - `url()`
-  - : References the ID of an SVG shape -- `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect` -- using the shape's geometry as the path.
+  - : References the ID of an SVG shape — `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect` — using the shape's geometry as the path.
 - `<basic-shape>`
 
   - : Specifies a [CSS shape](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes) including `circle()`, `ellipse()`, `inset()`, `polygon()`, or `path()`.

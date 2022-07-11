@@ -32,12 +32,12 @@ The following snippet is intended to fire a silent notification; a simple
 {{DOMxRef("Notification.Notification","Notification()")}} constructor.
 
 ```js
-var options = {
+const options = {
   body: 'Do you like my body?',
   silent: true
 }
 
-var n = new Notification('Test notification', options);
+const n = new Notification('Test notification', options);
 
 console.log(n.silent) // should log true
 ```

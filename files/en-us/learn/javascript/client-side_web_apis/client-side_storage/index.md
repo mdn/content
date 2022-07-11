@@ -549,7 +549,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
 
 2. To start with, once the database is successfully opened we run an `init()` function. This loops through the different video names, trying to load a record identified by each name from the `videos` database.
 
-    If each video is found in the database (checked by seeing whether `request.result` evaluates to `true` — if the record is not present, it will be `undefined`), its video files (stored as blobs) and the video name are passed straight to the `displayVideo()` function to place them in the UI. If not, the video name is passed to the `fetchVideoFromNetwork()` function to ... you guessed it — fetch the video from the network.
+    If each video is found in the database (checked by seeing whether `request.result` evaluates to `true` — if the record is not present, it will be `undefined`), its video files (stored as blobs) and the video name are passed straight to the `displayVideo()` function to place them in the UI. If not, the video name is passed to the `fetchVideoFromNetwork()` function to, you guessed it, fetch the video from the network.
 
     ```js
     function init() {
@@ -583,7 +583,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
     // Fetch the MP4 and WebM versions of the video using the fetch() function,
     // then expose their response bodies as blobs
     const mp4Blob = fetch(`videos/${video.name}.mp4`).then(response => response.blob());
-    const webmBlob = fetch(`videos/${video.name}.mp4`).then(response => response.blob());
+    const webmBlob = fetch(`videos/${video.name}.webm`).then(response => response.blob());
 
     // Only run the next code when both promises have fulfilled
     Promise.all([mp4Blob, webmBlob]).then(values => {
@@ -732,7 +732,7 @@ self.addEventListener('fetch', e => {
 
 And that is it for our service worker.
 There is a whole load more you can do with them — for a lot more detail, see the [service worker cookbook](https://github.com/mdn/serviceworker-cookbook).
-Many thanks to Paul Kinlan for his article [Adding a Service Worker and Offline into your Web App](https://developers.google.com/web/fundamentals/codelabs/offline/), which inspired this example.
+Many thanks to Paul Kinlan for his article [Adding a Service Worker and Offline into your Web App](https://developers.google.com/codelabs/pwa-training/pwa03--going-offline#0), which inspired this example.
 
 #### Testing the example offline
 

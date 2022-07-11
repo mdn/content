@@ -53,7 +53,7 @@ dBOpenRequest.addEventListener('upgradeneeded', event => {
   console.log(`Upgrading to version ${db.version}`);
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
 
   // define what data items the objectStore will contain
   objectStore.createIndex('hours', 'hours', { unique: false });
@@ -75,7 +75,7 @@ dBOpenRequest.onupgradeneeded = event => {
   console.log(`Upgrading to version ${db.version}`);
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
 
   // define what data items the objectStore will contain
   objectStore.createIndex('hours', 'hours', { unique: false });

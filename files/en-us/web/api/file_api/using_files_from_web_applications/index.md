@@ -1,6 +1,7 @@
 ---
 title: Using files from web applications
 slug: Web/API/File_API/Using_files_from_web_applications
+page-type: guide
 tags:
   - File API
 ---
@@ -51,7 +52,7 @@ Individual {{DOMxRef("File")}} objects can be retrieved by accessing the list as
 ```js
 for (let i = 0, numFiles = fileList.length; i < numFiles; i++) {
   const file = fileList[i];
-  // ...
+  // …
 }
 ```
 

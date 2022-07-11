@@ -83,7 +83,7 @@ For example, this CSS will apply styles only if your browser's {{glossary("viewp
 @media (max-width: 12450px) { ... }
 ```
 
-If you create a media feature query without specifying a value, the nested styles will be used as long as the feature's value is not zero (or `none`, in Level 4).
+If you create a media feature query without specifying a value, the nested styles will be used as long as the feature's value is not zero (or `none`, in [Level 4](https://drafts.csswg.org/mediaqueries-4/)).
 For example, this CSS will apply to any device with a color screen:
 
 ```css
@@ -144,13 +144,13 @@ The `not` is evaluated last in the following query:
 @media not all and (monochrome) { ... }
 ```
 
-... so that the above query is evaluated like this:
+This means that the above query is evaluated like this:
 
 ```css
 @media not (all and (monochrome)) { ... }
 ```
 
-... rather than like this:
+It wouldn't be evaluated like this:
 
 ```css example-bad
 @media (not all) and (monochrome) { ... }
@@ -162,7 +162,7 @@ As another example, the following media query:
 @media not screen and (color), print and (color) { ... }
 ```
 
-... is evaluated like this:
+This means that the above query is evaluated like this:
 
 ```css
 @media (not (screen and (color))), print and (color) { ... }

@@ -86,9 +86,9 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`itemref`](/en-US/docs/Web/HTML/Global_attributes/itemref)
   - : Properties that are not descendants of an element with the `itemscope` attribute can be associated with the item using an `itemref`. It provides a list of element ids (not `itemid`s) with additional properties elsewhere in the document.
 - [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope)
-  - : `itemscope` (usually) works along with {{HTMLAttrxRef("itemtype")}} to specify that the HTML contained in a block is about a particular item. `itemscope` creates the Item and defines the scope of the `itemtype` associated with it. `itemtype` is a valid URL of a vocabulary (such as [schema.org](https://schema.org/)) that describes the item and its properties context.
+  - : `itemscope` (usually) works along with [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype) to specify that the HTML contained in a block is about a particular item. `itemscope` creates the Item and defines the scope of the `itemtype` associated with it. `itemtype` is a valid URL of a vocabulary (such as [schema.org](https://schema.org/)) that describes the item and its properties context.
 - [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype)
-  - : Specifies the URL of the vocabulary that will be used to define `itemprop`s (item properties) in the data structure. {{HTMLAttrxRef("itemscope")}} is used to set the scope of where in the data structure the vocabulary set by `itemtype` will be active.
+  - : Specifies the URL of the vocabulary that will be used to define `itemprop`s (item properties) in the data structure. [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope) is used to set the scope of where in the data structure the vocabulary set by `itemtype` will be active.
 - [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang)
   - : Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute contains one "language tag" (made of hyphen-separated "language subtags") in the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. [**xml:lang**](#attr-xml:lang) has priority over it.
 - [`nonce`](/en-US/docs/Web/HTML/Global_attributes/nonce)

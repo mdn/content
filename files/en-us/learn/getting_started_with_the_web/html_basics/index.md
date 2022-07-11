@@ -87,7 +87,7 @@ That wraps up the basics of individual HTML elements, but they aren't handy on t
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>My test page</title>

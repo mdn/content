@@ -41,8 +41,7 @@ execution context, potentially depending on work you need to complete. You can l
 more about how to use microtasks and why you might choose to do so in our [microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide).
 
 The importance of microtasks comes in its ability to perform tasks asynchronously but
-in a specific order. See [Using microtasks in JavaScript
-with queueMicrotask()](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) for more details.
+in a specific order. See [Using microtasks in JavaScript with queueMicrotask()](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) for more details.
 
 Microtasks are especially useful for libraries and frameworks that need to perform
 final cleanup or other just-before-rendering tasks.

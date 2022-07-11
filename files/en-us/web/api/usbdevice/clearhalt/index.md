@@ -11,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - clearHalt
+  - Experimental
 browser-compat: api.USBDevice.clearHalt
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}

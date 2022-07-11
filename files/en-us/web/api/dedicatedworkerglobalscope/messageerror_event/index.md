@@ -85,5 +85,4 @@ self.onmessageerror = (event) => {
 - {{domxref("WorkerGlobalScope")}}
 - Related events: [`message`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/message_event)
 - [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage)
-- [Using
-  channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

@@ -115,5 +115,4 @@ march();
 - The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.getLineDash()")}}
 - {{domxref("CanvasRenderingContext2D.setLineDash()")}}
-- [Applying
-  styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)
+- [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)

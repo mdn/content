@@ -55,7 +55,7 @@ A new {{domxref("MessageEvent")}} object.
 ## Examples
 
 ```js
-var myMessage = new MessageEvent('message', {
+const myMessage = new MessageEvent('message', {
   data : 'hello'
 });
 ```

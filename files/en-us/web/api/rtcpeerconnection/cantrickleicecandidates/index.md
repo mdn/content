@@ -85,5 +85,4 @@ pc.addEventListener('icecandidate', e => (pc.canTrickleIceCandidates) && sendCan
 
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCPeerConnection.addIceCandidate()")}}
-- [Lifetime of a WebRTC
-  session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)

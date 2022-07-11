@@ -296,7 +296,7 @@ class Server {
                     // To test the below code, we need to manually buffer larger messages — since the NIC's autobuffering 
                     // may be too latency-friendly for this code to run (that is, we may have only some of the bytes in this
                     // websocket frame available through client.Available).  
-                    msglen = BitConverter.ToUInt64(new byte[] { data[9], data[8], data[7], data[6], data[5], data[4], data[3], data[2] });
+                    msglen = BitConverter.ToUInt64(new byte[] { bytes[9], bytes[8], bytes[7], bytes[6], bytes[5], bytes[4], bytes[3], bytes[2] },0);
                     offset = 10;
                 }
 

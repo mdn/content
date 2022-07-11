@@ -259,5 +259,4 @@ body {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [Understanding the CSS
-  Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)
+- [Understanding the CSS Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)

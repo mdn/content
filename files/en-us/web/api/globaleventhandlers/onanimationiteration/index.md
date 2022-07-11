@@ -24,7 +24,7 @@ browser-compat: api.GlobalEventHandlers.onanimationiteration
 
 The **`onanimationiteration`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
-processing {{event("animationiteration")}} events.
+processing {{domxref("HTMLElement/animationiteration_event", "animationiteration")}} events.
 
 The `animationiteration` event is sent when a [CSS animation](/en-US/docs/Web/CSS/CSS_Animations) reaches the end of an
 iteration. An iteration ends when a single pass through the sequence of animation
@@ -40,7 +40,7 @@ target.onanimationiteration = {{jsxref("Function")}}
 
 ### Value
 
-A {{jsxref("Function")}} to be called when an {{event("animationiteration")}} event
+A {{jsxref("Function")}} to be called when an {{domxref("HTMLElement/animationiteration_event", "animationiteration")}} event
 occurs indicating that a CSS animation has reached the end of an iteration while running
 on the _`target`_, where the target object is an HTML element
 ({{domxref("HTMLElement")}}), document ({{domxref("Document")}}), or window
@@ -197,5 +197,5 @@ which iteration number is up next, until you click the button to run the next it
 
 ## See also
 
-- The {{event("animationiteration")}} event, which triggers this event handler
+- The {{domxref("HTMLElement/animationiteration_event", "animationiteration")}} event, which triggers this event handler
 - {{domxref("AnimationEvent")}}

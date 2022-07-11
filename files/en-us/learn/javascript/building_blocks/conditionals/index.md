@@ -49,7 +49,7 @@ Conditional statements allow us to represent such decision making in JavaScript,
 
 Let's look at by far the most common type of conditional statement you'll use in JavaScript — the humble [`if...else` statement](/en-US/docs/Web/JavaScript/Reference/Statements/if...else).
 
-### Basic if ... else syntax
+### Basic if...else syntax
 
 Basic `if...else` syntax looks like this:
 
@@ -197,7 +197,7 @@ if (shoppingDone) { // don't need to explicitly specify '=== true'
 }
 ```
 
-### Nesting if ... else
+### Nesting if...else
 
 It is perfectly OK to put one `if...else` statement inside another one — to nest them. For example, we could update our weather forecast application to show a further set of choices depending on what the temperature is:
 

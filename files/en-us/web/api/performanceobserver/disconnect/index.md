@@ -37,9 +37,9 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var observer = new PerformanceObserver(function(list, obj) {
-  var entries = list.getEntries();
-  for (var i=0; i < entries.length; i++) {
+const observer = new PerformanceObserver(function(list, obj) {
+  const entries = list.getEntries();
+  for (let i=0; i < entries.length; i++) {
     // Process "mark" and "frame" events
   }
 });
@@ -51,7 +51,7 @@ function perf_observer(list, observer) {
   // Disable additional performance events
   observer.disconnect();
 }
-var observer2 = new PerformanceObserver(perf_observer);
+const observer2 = new PerformanceObserver(perf_observer);
 observer2.observe({entryTypes: ["measure"]});
 ```
 

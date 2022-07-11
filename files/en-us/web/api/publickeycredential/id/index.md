@@ -31,7 +31,7 @@ A string being the [base64url encoded](/en-US/docs/Glossary/Base64) version of {
 ## Examples
 
 ```js
-var publicKey = {
+const publicKey = {
   challenge: new Uint8Array(26) /* this actually is given from the server */,
   rp: {
     name: "Example CORP",
@@ -52,7 +52,7 @@ var publicKey = {
 
 navigator.credentials.create({ publicKey })
   .then(function (newCredentialInfo) {
-    var id = newCredentialInfo.id;
+    const id = newCredentialInfo.id;
     // Do something with the id
 
     // send attestation response and client extensions

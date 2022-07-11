@@ -77,7 +77,7 @@ We've already seen the {{htmlelement("title")}} element in action — this can b
 1. To start off this active learning, we'd like you to go to our GitHub repo and download a copy of our [title-example.html page](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/title-example.html). To do this, either
 
     1. Copy and paste the code out of the page and into a new text file in your code editor, then save it in a sensible place.
-    2. Press the "Raw" button on the GitHub page, which causes the raw code to appear (possibly in a new browser tab). Next, choose your browser's *Save Page As...* menu and choose a sensible place to save the file.
+    2. Press the "Raw" button on the GitHub page, which causes the raw code to appear (possibly in a new browser tab). Next, choose your browser's *Save Page As…* menu and choose a sensible place to save the file.
 
 2. Now open the file in your browser. You should see something like this:
 
@@ -176,7 +176,7 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
 <meta property="og:title" content="Mozilla Developer Network">
 ```
 
-One effect of this is that when you link to MDN Web Docs on facebook, the link appears along with an image and description: a richer experience for users.
+One effect of this is that when you link to MDN Web Docs on Facebook, the link appears along with an image and description: a richer experience for users.
 
 ![Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description.](facebook-output.png)
 

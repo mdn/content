@@ -40,9 +40,9 @@ browser.action.setBadgeTextColor(
         - a `{{WebExtAPIRef('action.ColorArray')}}` object.
         - `null`. If a `tabId` is specified, it removes the tab-specific badge text color so that the tab inherits the global badge text color. Otherwise it reverts the global badge text color to the default value.
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Sets the badge text color only for the given tab. The color is reset when the user navigates this tab to a new page.
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. Sets the badge text color only for the given tab.
 
 <!---->

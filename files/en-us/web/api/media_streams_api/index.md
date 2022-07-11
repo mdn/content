@@ -55,17 +55,19 @@ Early versions of the Media Capture and Streams API specification included separ
 
 ## Events
 
-- {{event("addtrack")}}
-- {{event("ended")}}
+- {{domxref("MediaStream/addtrack_event", "addtrack")}}
+- {{domxref("MediaStreamTrack/ended_event", "ended")}}
 - {{event("muted")}}
 - {{domxref("MediaStreamTrack.overconstrained_event", "overconstrained")}}
-- {{event("removetrack")}}
+- {{domxref("MediaStream/removetrack_event", "removetrack")}}
 - {{event("started")}}
 - {{event("unmuted")}}
 
 ## Guides and tutorials
 
 The [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints) article discusses the concepts of **constraints** and **capabilities**, as well as media settings, and includes a [Constraint Exerciser](/en-US/docs/Web/API/Media_Streams_API/Constraints#example_constraint_exerciser) that lets you experiment with the results of different constraint sets being applied to the audio and video tracks coming from the computer's A/V input devices (such as its webcam and microphone).
+
+The [Taking still photos with getUserMedia()](/en-US/docs/Web/API/Media_Streams_API/Taking_still_photos) article shows how to use [`getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia) to access the camera on a computer or mobile phone with `getUserMedia()` support and take a photo with it.
 
 ## Browser compatibility
 

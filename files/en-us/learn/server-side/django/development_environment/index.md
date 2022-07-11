@@ -193,7 +193,7 @@ pip3 list
 
 ## Using Django inside a Python virtual environment
 
-The libraries we'll use for creating our virtual environments are [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (Linux and macOS) and [virtualenvwrapper-win](https://pypi.org//virtualenvwrapper-win) (Windows), which in turn both use the [virtualenv](https://virtualenv.pypa.io/en/latest/) tool. The wrapper tools creates a consistent interface for managing interfaces on all platforms.
+The libraries we'll use for creating our virtual environments are [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (Linux and macOS) and [virtualenvwrapper-win](https://pypi.org/project/virtualenvwrapper-win/) (Windows), which in turn both use the [virtualenv](https://virtualenv.pypa.io/en/latest/) tool. The wrapper tools creates a consistent interface for managing interfaces on all platforms.
 
 ### Installing the virtual environment software
 
@@ -295,7 +295,7 @@ At this point, you may see a bunch of scripts being run (the same scripts as for
 
 #### Windows 10 virtual environment setup
 
-Installing [virtualenvwrapper-win](https://pypi.org/virtualenvwrapper-win) is even simpler than setting up *virtualenvwrapper* because you don't need to configure where the tool stores virtual environment information (there is a default value). All you need to do is run the following command in the command prompt:
+Installing [virtualenvwrapper-win](https://pypi.org/project/virtualenvwrapper-win/) is even simpler than setting up *virtualenvwrapper* because you don't need to configure where the tool stores virtual environment information (there is a default value). All you need to do is run the following command in the command prompt:
 
 ```bash
 pip3 install virtualenvwrapper-win
@@ -360,6 +360,13 @@ py -3 -m django --version
 > In Windows _Python 3_ scripts are launched by prefixing the command with `py -3`, although this can vary depending on your specific installation. Try omitting the `-3` modifier if you encounter any problems with commands. In Linux/macOS, the command is `python3.`
 
 > **Warning:** The rest of this **module** uses the _Linux_ command for invoking Python 3 (`python3`) . If you're working on _Windows_ replace this prefix with: `py -3`
+
+## Other Python tools
+
+Experienced Python developers may install additional tools, such as linters (which help detect common errors in code).
+
+Note that you should use a [Django aware linter](https://djangopackages.org/grids/g/linters/) like [pylint-django](https://pypi.org/project/pylint-django/).
+Commonly used Python linters, such as `pylint`, may incorrectly report errors in the standard files generated for Django.
 
 ## Testing your installation
 
