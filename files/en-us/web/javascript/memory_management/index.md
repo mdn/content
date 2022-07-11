@@ -150,20 +150,7 @@ function f() {
 f();
 ```
 
-#### Real-life example
-
-Internet Explorer 6 and 7 are known to have reference-counting garbage collectors for DOM objects. Cycles are a common mistake that can generate memory leaks:
-
-```js
-var div;
-window.onload = function () {
-  div = document.getElementById('myDivElement');
-  div.circularReference = div;
-  div.lotsOfData = new Array(10000).join('*');
-};
-```
-
-In the above example, the DOM element "myDivElement" has a circular reference to itself in the "circularReference" property. If the property is not explicitly removed or nulled, a reference-counting garbage collector will always have at least one reference intact and will keep the DOM element in memory even if it was removed from the DOM tree. If the DOM element holds a large amount of data (illustrated in the above example with the "lotsOfData" property), the memory consumed by this data will never be released and can lead to memory related issues such as the browser becoming increasingly slower.
+Internet Explorer 6 and 7 are known to have reference-counting garbage collectors, which have caused memory leaks with circular references. No modern engine uses reference-counting for garbage collection anymore.
 
 ### Mark-and-sweep algorithm
 
