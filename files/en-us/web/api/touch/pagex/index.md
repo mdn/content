@@ -42,8 +42,7 @@ const src = document.getElementById("source");
 src.addEventListener('touchmove', function(e) {
   // Iterate through the touch points that have moved and log each
   // of the pageX/Y coordinates. The unit of each coordinate is CSS pixels.
-  let i;
-  for (i=0; i < e.changedTouches.length; i++) {
+  for (let i = 0; i < e.changedTouches.length; i++) {
     console.log("touchpoint[" + i + "].pageX = " + e.changedTouches[i].pageX);
     console.log("touchpoint[" + i + "].pageY = " + e.changedTouches[i].pageY);
   }
