@@ -45,7 +45,7 @@ This example code calls the `cancel()` method when a button is pressed, passing 
 The promise resolves when cancellation completes.
 
 ```js
-button.addEventListener('click',  () => 
+button.addEventListener('click', () => 
   { reader.cancel("user choice").then( () => { console.log(`cancel complete`) }) } 
 );
 ```
