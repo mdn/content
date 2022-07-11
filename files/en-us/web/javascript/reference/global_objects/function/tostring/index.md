@@ -63,7 +63,7 @@ If the `toString()` method is called on a function created by the `Function` con
 "function anonymous(a,b\n) {\nreturn a + b\n}"
 ```
 
-Since ES2018, the spec demands the return value of `toString()` to be the exact same source code as it was declared, including any whitespace and/or comments — or, if the host doesn't have the source code available for some reason, return `function someName() { [native code] }`, where `someName` is implementation-dependent. Support of this revised behavior can be found in the [compatibility table](#browser_compatibility).
+Since ES2018, the spec requires the return value of `toString()` to be the exact same source code as it was declared, including any whitespace and/or comments — or, if the host doesn't have the source code available for some reason, requires returning a native function string. Support for this revised behavior can be found in the [compatibility table](#browser_compatibility).
 
 ## Examples
 
