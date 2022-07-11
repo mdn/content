@@ -36,7 +36,7 @@ target.addEventListener('touchstart', function(ev) {
   // If this touchstart event started on element target,
   // set touch to the first item in the targetTouches list;
   // otherwise set touch to the first item in the touches list
-  const touch;
+  let touch;
 
   if (ev.targetTouches.length >= 1)
      touch = ev.targetTouches.item(0);
