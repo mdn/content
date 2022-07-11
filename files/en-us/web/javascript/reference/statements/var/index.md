@@ -112,18 +112,12 @@ to a value, the scope chain is searched. This means that properties on the globa
 are conveniently visible from every scope, without having to qualify the names with
 `globalThis.` or `window.` or `global.`.
 
-Because the global object has a `String` property (`globalThis.hasOwnProperty('String')`), you can use the following code:
+Because the global object has a `String` property (`Object.hasOwn(globalThis, 'String')`), you can use the following code:
 
 ```js
 function foo() {
   String('s') // Note the function `String` is implicitly visible
 }
-```
-
-...because
-
-```js
-Object.hasOwn(globalThis, 'String') // true
 ```
 
 So the global object will ultimately be searched for unqualified identifiers. You don't
