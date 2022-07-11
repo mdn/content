@@ -1244,7 +1244,7 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
                 Each pixel is an index into a <code>ColorMap</code> record,
                 which defines the colors used in the image. The color map lists
                 all of the red values, then all of the green values, then all of
-                the blue values (rather than <code>rgb, rgb, rgb...</code>).
+                the blue values (rather than <code>rgb, rgb, rgb…</code>).
               </td>
             </tr>
             <tr>

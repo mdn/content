@@ -134,7 +134,7 @@ The `Number` prototype provides methods for retrieving information from `Number`
 
 ## Math object
 
-The built-in {{jsxref("Math")}} object has properties and methods for mathematical constants and functions. For example, the `Math` object's `PI` property has the value of pi (3.141...), which you would use in an application as
+The built-in {{jsxref("Math")}} object has properties and methods for mathematical constants and functions. For example, the `Math` object's `PI` property has the value of pi (3.141…), which you would use in an application as
 
 ```js
 Math.PI
