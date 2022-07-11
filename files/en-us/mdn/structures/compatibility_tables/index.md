@@ -116,7 +116,7 @@ Let's look at an example. CSS property JSON files for example need the following
     "properties": {
       "border-width": {
         "__compat": {
-          ...
+          // …
         }
       }
     }
@@ -140,7 +140,7 @@ In HTML, CSS, and JS pages, you'll normally only need one feature. API interface
 
 Inside a feature `__compat` member, you need to include the following members:
 
-- `mdn_url`: Contains the URL of the reference page for this feature on MDN. Note that this needs to be written without the locale directory inside, e.g. `/docs/...` not `/en-US/docs/...`. This is added in by the macro when the data is put on the page, for localization purposes.
+- `mdn_url`: Contains the URL of the reference page for this feature on MDN. Note that this needs to be written without the locale directory inside, e.g. `/docs/…` not `/en-US/docs/…`. This is added in by the macro when the data is put on the page, for localization purposes.
 - `spec_url`: URL or array of URLs to specification(s) in which this feature is defined.
 - `support`: Contains members representing the browser support information for this feature in all the different browsers we want to report.
 - `status`: Contains members reporting the standards track status of this feature.
@@ -221,19 +221,19 @@ There is a fourth, optional, member that can go inside the `__compat` member —
   "api": {
     "AbortController": {
       "__compat": {
-        ...
+        // …
       },
       "AbortController": {
         "__compat": {
           "mdn_url": "https://developer.mozilla.org/docs/Web/API/AbortController/AbortController",
           "description": "<code>AbortController()</code> constructor",
           "support": {
-            ...
+            …
           }
         }
       }
 
-      ... etc.
+      // …
     }
   }
 }
@@ -251,11 +251,11 @@ As an example, see the [compat data](https://github.com/mdn/browser-compat-data/
     "properties": {
       "background-color": {
         "__compat": {
-          ...
+          // …
         },
         "alpha_ch_for_hex": {
           "__compat": {
-            ...
+            // …
           },
         }
       }
@@ -271,20 +271,20 @@ For an API, you've got the top two levels defined as `api.name-of-the-interface`
   "api": {
     "VRDisplay": {
       "__compat": {
-        ...
+        // …
       },
       "cancelAnimationFrame": {
         "__compat": {
-          ...
+          // …
         }
       },
       "capabilities": {
         "__compat": {
-          ...
+          // …
         }
       },
 
-      ... etc.
+      // …
 
     }
   }
@@ -478,7 +478,7 @@ For example, for the {{domxref("AbortController")}} this would be added as shown
 title: AbortController
 slug: Web/API/AbortController
 
-...
+…
 
 browser-compat: api.AbortController
 ---
