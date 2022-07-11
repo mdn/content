@@ -38,7 +38,7 @@ function onVRExitPresent () {
   }, function (err) {
     let errMsg = "exitPresent failed.";
     if (err && err.message) {
-      errMsg += "<br/>" + err.message
+      errMsg += "<br/>" + err.message;
     }
     VRSamplesUtil.addError(errMsg, 2000);
   });
