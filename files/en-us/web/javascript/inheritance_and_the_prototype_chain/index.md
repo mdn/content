@@ -10,13 +10,13 @@ tags:
 ---
 {{jsSidebar("Advanced")}}
 
-JavaScript is a bit confusing for developers experienced in class-based languages (like Java or C++), as it is dynamic and does not have static types or classes. (The [classes](/en-US/docs/Web/JavaScript/Reference/Classes) in JavaScript are only syntax sugar over the existing prototypical inheritance.)
+JavaScript is a bit confusing for developers experienced in class-based languages (like Java or C++), as it is dynamic and does not have static types.
 
 When it comes to inheritance, JavaScript only has one construct: objects. Each object has a private property which holds a link to another object called its **prototype**. That prototype object has a prototype of its own, and so on until an object is reached with `null` as its prototype. By definition, `null` has no prototype, and acts as the final link in this **prototype chain**. It is possible to mutate any member of the prototype chain or even swap out the prototype at runtime, so concepts like [static dispatching](https://en.wikipedia.org/wiki/Static_dispatch) do not exist in JavaScript.
 
-While this confusion is often considered to be one of JavaScript's weaknesses, the prototypical inheritance model itself is, in fact, more powerful than the classic model. It is, for example, fairly trivial to build a classic model on top of a prototypical model.
+While this confusion is often considered to be one of JavaScript's weaknesses, the prototypical inheritance model itself is, in fact, more powerful than the classic model. It is, for example, fairly trivial to build a classic model on top of a prototypical model — as is how [classes](/en-US/docs/Web/JavaScript/Reference/Classes) are implemented.
 
-Although classes are now widely adopted and have become a new paradigm in JavaScript, it does not bring a new inheritance pattern. While it abstracts most of the prototypical mechanism away, it is still useful to understand how prototypes under the hood.
+Although classes are now widely adopted and have become a new paradigm in JavaScript, it does not bring a new inheritance pattern. While it abstracts most of the prototypical mechanism away, it is still useful to understand how prototypes work under the hood.
 
 ## Inheritance with the prototype chain
 
@@ -76,7 +76,7 @@ console.log(o.d); // undefined
 // no property found, return undefined.
 ```
 
-Setting a property to an object creates an own property. The only exception to the getting and setting behavior rules is when there is an inherited property as a [getter or a setter](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters).
+Setting a property to an object creates an own property. The only exception to the getting and setting behavior rules is when it's intercepted by a [getter or setter](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters).
 
 Similarly, you can create longer prototype chains, and a property will be sought on all of them.
 
@@ -460,7 +460,7 @@ doSomething.prototype.foo:  bar
 
 ## Different ways of creating and mutating prototype chains
 
-We have encountered three ways to create objects and its corresponding prototype chain already: through constructor functions and `new`, through an object literal and the `__proto__` key, and through classes. There's a fourth: [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create). In addition, we will explain how prototype chains can be mutated after they are created.
+We have encountered many ways to create objects and change their prototype chains. We will systematically summarize the different ways, comparing each approach's pros and cons.
 
 ### Objects created with syntax constructs
 
@@ -545,9 +545,8 @@ const g = new Graph();
     <tr>
       <th scope="row">Pro(s)</th>
       <td>
-        Supported in all runtimes — including older runtimes (going all the way
-        back to IE 5.5). Also, it is very fast, very standard, and very
-        JIT-optimizable.
+        Supported in all engines — going all the way back to IE 5.5. Also, it
+        is very fast, very standard, and very JIT-optimizable.
       </td>
     </tr>
     <tr>
@@ -597,7 +596,7 @@ console.log(d.hasOwnProperty);
     <tr>
       <th scope="row">Pro(s)</th>
       <td>
-        Supported in all modern runtimes. Allows directly setting
+        Supported in all modern engines. Allows directly setting
         <code>[[Prototype]]</code> of an object at creation time, which permits
         the runtime to further optimize the object. Also allows the creation of
         objects without a prototype, using <code>Object.create(null)</code>.
@@ -619,9 +618,7 @@ console.log(d.hasOwnProperty);
   </tbody>
 </table>
 
-### With the class keyword
-
-ECMAScript 2015 introduced a new set of keywords implementing [classes](/en-US/docs/Web/JavaScript/Reference/Classes). The new keywords include {{jsxref("Statements/class", "class")}}, {{jsxref("Classes/constructor", "constructor")}}, {{jsxref("Classes/static", "static")}}, {{jsxref("Classes/extends", "extends")}}, and {{jsxref("Operators/super", "super")}}.
+### With classes
 
 ```js
 class Polygon {
@@ -658,7 +655,7 @@ const square = new Square(2);
     <tr>
       <th scope="row">Pro(s)</th>
       <td>
-        Supported in all modern runtimes. Very high readability and maintainability.
+        Supported in all modern engines. Very high readability and maintainability.
         <a href="/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields">Private properties</a>
         are a feature with no trivial replacement in prototypical inheritance.
       </td>
@@ -668,7 +665,7 @@ const square = new Square(2);
       <td>
         Classes, especially with private properties, are less optimized than
         traditional ones (although engine implementors are working to improve
-        this). Not supported in older runtimes and transpilers are usually
+        this). Not supported in older environments and transpilers are usually
         needed to use classes in production.
       </td>
     </tr>
@@ -694,7 +691,7 @@ Object.setPrototypeOf(obj, anotherObj);
     <tr>
       <th scope="row">Pro(s)</th>
       <td>
-        Supported in all modern runtimes. Allows the dynamic manipulation of an
+        Supported in all modern engines. Allows the dynamic manipulation of an
         object's prototype and can even force a prototype on a prototype-less
         object created with <code>Object.create(null)</code>.
       </td>
@@ -703,10 +700,10 @@ Object.setPrototypeOf(obj, anotherObj);
       <th scope="row">Con(s)</th>
       <td>
         Ill-performing. Should be avoided if it's possible to set the prototype
-        at object creation time. Many runtimes optimize the prototype and try to
+        at object creation time. Many engines optimize the prototype and try to
         guess the location of the method in memory when calling an instance in
         advance; but setting the prototype dynamically disrupts all those
-        optimizations. It might cause some runtimes to recompile your code for
+        optimizations. It might cause some engines to recompile your code for
         de-optimization, to make it work according to the specs. Not supported
         in IE8 and below.
       </td>
@@ -738,7 +735,7 @@ console.log(obj.barProp);
     <tr>
       <th scope="row">Pro(s)</th>
       <td>
-        Supported in all modern runtimes. Setting
+        Supported in all modern engines. Setting
         {{jsxref("Object/proto","__proto__")}} to something that
         is not an object only fails silently. It does not throw an exception.
       </td>
@@ -746,10 +743,10 @@ console.log(obj.barProp);
     <tr>
       <th scope="row">Con(s)</th>
       <td>
-        Non-performant and deprecated. Many runtimes optimize the prototype and
+        Non-performant and deprecated. Many engines optimize the prototype and
         try to guess the location of the method in the memory when calling an
         instance in advance; but setting the prototype dynamically disrupts all
-        those optimizations and can even force some runtimes to recompile for
+        those optimizations and can even force some engines to recompile for
         de-optimization of your code, to make it work according to the specs.
         Not supported in IE10 and below. The {{jsxref("Object/proto","__proto__")}}
         setter is normative optional, so it may not work across all platforms.
@@ -764,7 +761,7 @@ console.log(obj.barProp);
 
 The lookup time for properties that are high up on the prototype chain can have a negative impact on the performance, and this may be significant in the code where performance is critical. Additionally, trying to access nonexistent properties will always traverse the full prototype chain.
 
-Also, when iterating over the properties of an object, **every** enumerable property that is on the prototype chain will be enumerated. To check whether an object has a property defined on _itself_ and not somewhere on its prototype chain, it is necessary to use the [`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) or [`Object.hasOwn`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn) methods. All objects inherit [`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) from `Object.prototype`. To give you a concrete example, let's take the above graph example code to illustrate it:
+Also, when iterating over the properties of an object, **every** enumerable property that is on the prototype chain will be enumerated. To check whether an object has a property defined on _itself_ and not somewhere on its prototype chain, it is necessary to use the [`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) or [`Object.hasOwn`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn) methods. All objects, except those with `null` as `[[Prototype]]`, inherit [`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) from `Object.prototype` — unless it has been shadowed further down the prototype chain. To give you a concrete example, let's take the above graph example code to illustrate it:
 
 ```js
 console.log(g.hasOwnProperty('vertices'));
@@ -793,7 +790,7 @@ Note: It is **not** enough to check whether a property is [`undefined`](/en-US/d
 
 ## Conclusion
 
-JavaScript is a bit confusing for developers coming from Java or C++, as it's all dynamic, all runtime, and it has no classes at all. It's all just instances (objects). Even the "classes" we simulate are just a function object.
+JavaScript may be a bit confusing for developers coming from Java or C++, as it's all dynamic, all runtime, and it has no static types at all. Everything is either an object (instance) or a function (constructor), and even functions themselves are instances of the `Function` constructor. Even the "classes" as syntax constructs are just constructor functions at runtime.
 
 All constructor functions in JavaScript has a special property called `prototype`, which works with the `new` operator. The reference to the prototype object is copied to the internal `[[Prototype]]` property of the new instance. For example, when you do `const a1 = new A()`, JavaScript (after creating the object in memory and before running function `A()` with `this` defined to it) sets `a1.[[Prototype]] = A.prototype`. When you then access properties of the instance, JavaScript first checks whether they exist on that object directly, and if not, it looks in `[[Prototype]]`. This means that all properties defined on `prototype` are effectively shared by all instances, and you can even later change parts of `prototype` and have the changes appear in all existing instances.
 
