@@ -38,7 +38,7 @@ function create_marks(ev) {
   do_work(50000);
   performance.mark("mark-2");
   const marks = ["mark-1", "mark-2", "mark-2"];
-  for (let i=0; i < marks.length; i++)
+  for (let i = 0; i < marks.length; i++)
     log("... Created mark = " + marks[i], 0);
 }
 ```
