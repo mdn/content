@@ -151,6 +151,13 @@ function foo() { return 'bar' }
 console.log(foo + ''); // "function foo() { return 'bar' }"
 ```
 
+This source text is _exact_, including any interspersed comments (which won't be stored by the engine's internal representation otherwise).
+
+```js
+function foo/* a comment */() { return 'bar' }
+console.log(foo.toString()); // "function foo/* a comment */() { return 'bar' }"
+```
+
 ## Specifications
 
 {{Specifications}}
