@@ -1,31 +1,27 @@
 ---
-title: 'Document: pointerdown event'
-slug: Web/API/Document/pointerdown_event
-page-type: web-api-event
+title: 'Element: pointermove event'
+slug: Web/API/Element/pointermove_event
 tags:
-  - API
-  - Document
   - Event
+  - HTML DOM
+  - Element
   - PointerEvent
   - Reference
-  - onpointerdown
-  - pointerdown
-browser-compat: api.Document.pointerdown_event
+browser-compat: api.Element.pointermove_event
+page-type: web-api-event
 ---
 {{APIRef}}
 
-The `pointerdown` event is fired when a pointer becomes active. For mouse, it is fired when the device transitions from no buttons pressed to at least one button pressed. For touch, it is fired when physical contact is made with the digitizer. For pen, it is fired when the stylus makes physical contact with the digitizer.
-
-> **Note:** For touchscreen browsers that allow [direct manipulation](https://w3c.github.io/pointerevents/#dfn-direct-manipulation), a `pointerdown` event triggers [implicit pointer capture](https://w3c.github.io/pointerevents/#dfn-implicit-pointer-capture), which causes the target to capture all subsequent pointer events as if they were occurring over the capturing target. Accordingly, `pointerover`, `pointerenter`, `pointerleave`, and `pointerout` **will not fire** as long as this capture is set. The capture can be released manually by calling {{domxref('element.releasePointerCapture')}} on the target element, or it will be implicitly released after a `pointerup` or `pointercancel` event.
+The `pointermove` event is fired when a pointer changes coordinates, and the pointer has not been [canceled](/en-US/docs/Web/API/Element/pointercancel_event) by a browser [touch-action](/en-US/docs/Web/CSS/touch-action).
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pointerdown', (event) => {});
+addEventListener('pointermove', (event) => {});
 
-onpointerdown = (event) => { };
+onpointermove = (event) => { };
 ```
 
 ## Event type
@@ -59,21 +55,29 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 - {{ domxref('PointerEvent.isPrimary')}} {{readonlyInline}}
   - : Indicates if the pointer represents the primary pointer of this pointer type.
 
+## Usage notes
+
+The event, which is of type {{domxref("PointerEvent")}}, provides all the information you need to know about the user's interaction with the pointing device, including the position, movement distance, button states, and much more.
+
 ## Examples
 
-Using `addEventListener()`:
+To add a handler for `pointermove` events using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-document.addEventListener('pointerdown', (event) => {
-  console.log('Pointer down event');
+const para = document.querySelector('p');
+
+para.addEventListener('pointermove', (event) => {
+  console.log('Pointer moved');
 });
 ```
 
-Using the `onpointerdown` event handler property:
+You can also use the `onpointermove` event handler property:
 
 ```js
-document.onpointerdown = (event) => {
-  console.log('Pointer down event');
+const para = document.querySelector('p');
+
+para.onpointermove = (event) => {
+  console.log('Pointer moved');
 };
 ```
 
@@ -87,4 +91,15 @@ document.onpointerdown = (event) => {
 
 ## See also
 
-- This event on `HTMLElement` targets: {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event
+- [`gotpointercapture`](/en-US/docs/Web/API/HTMLElement/gotpointercapture_event)
+- [`lostpointercapture`](/en-US/docs/Web/API/HTMLElement/lostpointercapture_event)
+- [`pointerover`](/en-US/docs/Web/API/Element/pointerover_event)
+- [`pointerenter`](/en-US/docs/Web/API/Element/pointerenter_event)
+- [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event)
+- [`pointerup`](/en-US/docs/Web/API/Element/pointerup_event)
+- [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
+- [`pointerout`](/en-US/docs/Web/API/Element/pointerout_event)
+- [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)
+- This event on `Document` targets: [`pointermove`](/en-US/docs/Web/API/Document/pointermove_event) event
+
+Internet Explorer also used to support an event named `MSPointerHover`, which fired when a contact (normally a pen) moves over an element without touching the surface. This proprietary method is specific to Internet Explorer and, as of Internet Explorer 11, has been deprecated. Starting with IE11 the [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event) event will fire for all pen movement (regardless if its hovering or not).

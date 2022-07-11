@@ -1,16 +1,14 @@
 ---
-title: 'Document: pointerdown event'
-slug: Web/API/Document/pointerdown_event
-page-type: web-api-event
+title: 'Element: pointerdown event'
+slug: Web/API/Element/pointerdown_event
 tags:
-  - API
-  - Document
   - Event
+  - HTML DOM
+  - Element
   - PointerEvent
   - Reference
-  - onpointerdown
-  - pointerdown
-browser-compat: api.Document.pointerdown_event
+browser-compat: api.Element.pointerdown_event
+page-type: web-api-event
 ---
 {{APIRef}}
 
@@ -64,7 +62,9 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 Using `addEventListener()`:
 
 ```js
-document.addEventListener('pointerdown', (event) => {
+const para = document.querySelector('p');
+
+para.addEventListener('pointerdown', (event) => {
   console.log('Pointer down event');
 });
 ```
@@ -72,7 +72,9 @@ document.addEventListener('pointerdown', (event) => {
 Using the `onpointerdown` event handler property:
 
 ```js
-document.onpointerdown = (event) => {
+const para = document.querySelector('p');
+
+para.onpointerdown = (event) => {
   console.log('Pointer down event');
 };
 ```
@@ -87,4 +89,4 @@ document.onpointerdown = (event) => {
 
 ## See also
 
-- This event on `HTMLElement` targets: {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event
+- This event on `Document` targets: [`pointerdown`](/en-US/docs/Web/API/Document/pointerdown_event) event
