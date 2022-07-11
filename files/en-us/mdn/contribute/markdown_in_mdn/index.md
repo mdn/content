@@ -205,7 +205,7 @@ For example, if we want to use "Warnung" for "Warning" in German, then in German
 > **Warnung:** So schreibt man eine Warnung.
 ```
 
-...and this will produce:
+And this will produce:
 
 ```html
 <div class="notecard warning">

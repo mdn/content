@@ -27,25 +27,19 @@ WebXR applications involve multiple technologies which can be highly sensitive t
 
 ## Rendering tips
 
-...
-
 Talk about general stuff like limiting how many different loops there are during rendering, avoiding unnecessary drawing, etc.
 
 Can probably also include stuff from https\://github.com/immersive-web/webxr/blob/master/explainer.md#changing-the-field-of-view-for-inline-sessions
 
 ## Managing rendering quality
 
-...
-
 This section will come in part from https\://github.com/immersive-web/webxr/blob/master/explainer.md#controlling-rendering-quality
 
 ## Managing frame rate
 
-...
+Content about frame rate management.
 
 ## Managing use of depth
-
-...
 
 This section will combine information from https\://github.com/immersive-web/webxr/blob/master/explainer.md#controlling-depth-precision and https\://github.com/immersive-web/webxr/blob/master/explainer.md#preventing-the-compositor-from-using-the-depth-buffer
 
@@ -100,4 +94,4 @@ You're now protected from several possible coding mistakes, and your entire anim
 
 ## See also
 
-...
+Some helpful links.
