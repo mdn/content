@@ -41,9 +41,9 @@ Note that the distinction between these all have to do with their handling of pr
 Strict equality compares two values for equality. Neither value is implicitly converted to some other value before being compared. If the values have different types, the values are considered unequal. If the values have the same type, are not numbers, and have the same value, they're considered equal. Finally, if both values are numbers, they're considered equal if they're both not `NaN` and are the same value, or if one is `+0` and one is `-0`.
 
 ```js
-var num = 0;
-var obj = new String('0');
-var str = '0';
+const num = 0;
+const obj = new String('0');
+const str = '0';
 
 console.log(num === num); // true
 console.log(obj === obj); // true
@@ -212,11 +212,12 @@ Relying on {{jsxref("Object.is")}} when the signedness of zeros is not taken int
 The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) are available, we can have distinct instances, which don't behave identically in all contexts. For example:
 
 ```js
-var f2b = x => new Uint8Array(new Float64Array([x]).buffer);
-var b2f = x => new Float64Array(x.buffer)[0];
-var n = f2b(NaN);
+const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
+const b2f = (x) => new Float64Array(x.buffer)[0];
+// Get a byte representation of NaN
+const n = f2b(NaN);
 n[0] = 1;
-var nan2 = b2f(n);
+const nan2 = b2f(n);
 nan2;
 // > NaN
 Object.is(nan2, NaN);
