@@ -173,7 +173,7 @@ function display_measures(ev) {
 
   // Display each measure using getEntriesByType
   entries = performance.getEntriesByType("measure");
-  for (let i=0; i < entries.length; i++) {
+  for (let i = 0; i < entries.length; i++) {
     if (i == 0) log("= getEntriesByType('measure')", 1);
     log("... [" + i + "] = " + entries[i].name, 1);
   }
