@@ -208,7 +208,7 @@ const myString = "a1bc2c5d3e4f";
 console.log(myString.split(splitByNumber)); // => [ "a", "bc", "c5d", "e", "f" ]
 ```
 
-The following example uses an internal state to enforce certain behaviour, and to ensure a "valid" result is produced.
+The following example uses an internal state to enforce certain behavior, and to ensure a "valid" result is produced.
 
 ```js
 const DELIMITER = ";";
