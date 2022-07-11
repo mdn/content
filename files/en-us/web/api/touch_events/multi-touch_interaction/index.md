@@ -131,7 +131,7 @@ function start_handler(ev) {
  ev.preventDefault();
  // Cache the touch points for later processing of 2-touch pinch/zoom
  if (ev.targetTouches.length == 2) {
-   for (let i=0; i < ev.targetTouches.length; i++) {
+   for (let i = 0; i < ev.targetTouches.length; i++) {
      tpCache.push(ev.targetTouches[i]);
    }
  }
