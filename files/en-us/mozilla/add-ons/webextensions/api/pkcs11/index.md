@@ -26,7 +26,7 @@ Perform the following steps:
 1. Save the PKCS #11 module to a permanent location on your local computer
 2. Select **Tools > Options** or select the **Firefox menu** and then **Options**
 3. Once the Options page opens, select **Privacy & Security**
-4. Scroll down to the bottom of the page and under **Certificates** click or tap on **Security Devices...
+4. Scroll down to the bottom of the page and under **Certificates** click or tap on **Security Devices…
     ![](device_manager.png)**
 5. Click or tap the **Load** button
     ![](load_device_driver.png)
@@ -34,7 +34,7 @@ Perform the following steps:
 
     > **Warning:** Be careful about using international characters as there is currently a bug in Firefox where international characters may cause problems.
 
-7. Choose **Browse...** to find the location of the PKCS #11 module on your local computer, and then click or tap **OK** to confirm.
+7. Choose **Browse…** to find the location of the PKCS #11 module on your local computer, and then click or tap **OK** to confirm.
 
 ## Provisioning PKCS #11 modules
 

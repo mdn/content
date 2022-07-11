@@ -58,8 +58,8 @@ example on Glitch.
 
 In this example, we have a pair of functions: the first,
 `networkTestStart()`, captures an initial report, and the second,
-`networkTestStop()`, captures a second report, then uses the two reports to
-output some information about the network conditions... XXX ...
+`networkTestStop()`, captures a second report.
+Then the second function, uses the two reports to output some information about the network conditions.
 
 ### networkTestStart()
 
@@ -85,8 +85,7 @@ data has been collected by `networkTestStop()`.
 ### networkTestStop()
 
 The `networkTestStop()` function obtains a second report,
-`endReport`, then uses the two reports together to determine several... XXX
-...
+`endReport`, then computes and outputs the results.
 
 #### Finding paired statistics
 

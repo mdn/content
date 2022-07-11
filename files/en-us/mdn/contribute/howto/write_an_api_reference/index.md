@@ -340,7 +340,7 @@ Method pages need the following sections:
 5. **Syntax**: The syntax section should include a 2–3 line example — usually just construction of the interface, then calling of the interface method.
 
     - The syntax should be of the form:
-      - : method(param1, param2, ...)
+      - : method(param1, param2, …)
 
     The syntax section should include three subsections (see {{domxref("SubtleCrypto.sign()")}} for an example):
 

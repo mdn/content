@@ -117,7 +117,7 @@ Instead, the summary should focus on the `strokeText()` method, and should refer
 > If the value is `"left"`, the string is drawn starting at the specified value of `x`.
 > And if `textAlign` is `"right"`, the text is drawn such that it ends at the specified X-coordinate.
 >
-> (etc etc etc...)
+> (etc etc etc…)
 >
 > You can, optionally, provide a fourth parameter that lets you specify a maximum width for the string, in pixels.
 > If you provide this parameter, the text is compressed horizontally or scaled (or otherwise adjusted) to fit inside a space that wide when being drawn.
@@ -288,7 +288,7 @@ They also ensure correct linking to detailed documentation.
   - : Use the [`htmlattrdef`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs) macro (e.g., `\{{htmlattrdef("type")}})` for the definition term, so that it can be linked to from other pages easily by using the [`htmlattrxref`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs) macro (e.g., `\{{htmlattrxref("type","element")}}`) to reference attribute definitions.
 - Attribute values
   - : Use the "Inline Code" style to apply `<code>` to attribute values, and don't use quotation marks around string values, unless needed by the syntax of a code sample.
-    **For example:** "When the `type` attribute of an `<input>` element is set to `email` or `tel` ..."
+    **For example:** "When the `type` attribute of an `<input>` element is set to `email` or `tel`…"
 
 ### Latin abbreviations
 
@@ -342,8 +342,8 @@ Use full capitals and delete periods in all acronyms and abbreviations, includin
 
 On the first mention of a term on a page, expand acronyms that are likely to be unfamiliar to users. When in doubt, expand it—or better yet, link it to the article or [glossary](/en-US/docs/Glossary) entry describing the technology.
 
-- **Correct**: "XUL (XML User Interface Language) is Mozilla's XML-based language..."
-- **Incorrect**: "XUL is Mozilla's XML-based language..."
+- **Correct**: "XUL (XML User Interface Language) is Mozilla's XML-based language…"
+- **Incorrect**: "XUL is Mozilla's XML-based language…"
 
 #### Plurals of acronyms and abbreviations
 
