@@ -239,7 +239,7 @@ The `textGamepad` object holds the text saying a gamepad has been connected, and
 create() {
     // …
     var message = 'Gamepad connected! Press Y for controls';
-    var textGamepad = this.add.text(message, '…');
+    var textGamepad = this.add.text(0, 0, message);
     textGamepad.visible = false;
 }
 ```
