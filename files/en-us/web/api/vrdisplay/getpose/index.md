@@ -51,7 +51,7 @@ if(navigator.getVRDisplays) {
       console.log('Display found');
 
           // Return the current VRPose object for the display
-          var pose = vrDisplay.getPose();
+          const pose = vrDisplay.getPose();
 
           ...
 
