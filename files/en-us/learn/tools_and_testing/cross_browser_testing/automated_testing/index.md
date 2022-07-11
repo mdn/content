@@ -381,7 +381,7 @@ Once you sign in to LambdaTest, you will be routed to the LambdaTest Dashboard. 
 2. As you click on the **Real Time Testing** you will be directed to a screen where you can choose the browser configuration, browser version, OS, and screen resolution with which you want to test your website.
     ![Real Time Testing](mark-as-bug-1.png)
 3. As you click on the Start button, a loading screen will appear, providing you with a VM (Virtual Machine) based on your configurations. Once loaded, you can perform live, interactive cross-browser testing with a website.
-    [![Mark as bug](mark-as-bug-2.png)](https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-2.png)
+    [![Mark as bug](mark-as-bug-2.png)](https://web.archive.org/web/20210608014707if_/https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-2.png)
     If you notice an issue with the UI, then you can share it with your colleagues by capturing a screenshot of your VM with the screenshot button. You can also record a video of your test session by hitting the recorder button in your test session.
 4. With the in-built image editor, highlight your screenshot before you push it to your colleagues.![Highlight a bug](mark-as-bug-3.png)
 5. Using the mark as bug button you can push bugs to numerous third-party tools such as Jira, Asana, Trello, and more. That way you can log a bug directly from your test session on LambdaTest to your project management instance. Check out all the [third-party LambdaTest integrations](https://www.lambdatest.com/integrations).

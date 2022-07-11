@@ -212,7 +212,7 @@ navigator.xr.requestSession("immersive-ar", {
   domOverlay: {
     root: document.getElementById("xr-overlay")
   }
-}
+});
 ```
 
 ### Requesting a depth-sensing session

@@ -394,7 +394,7 @@ There's a lot going on here — let's discuss it bit by bit:
 - Next, we set a fixed {{cssxref("width")}} on the panel, and make its {{cssxref("height")}} the entire height of the browser viewport.
 - We also include some horizontal {{cssxref("padding")}} to space it out a bit.
 - Next we set {{cssxref("position")}}`: fixed;` on the panel so it will always appear in the same place, even if the page has content to scroll. We glue it to the {{cssxref("top")}} of the viewport, and set it so that by default it is offscreen to the {{cssxref("right")}}.
-- Finally, we set a {{cssxref("transition")}} on the element. Transitions are an interesting feature that allow you to make changes between states happen smoothly, rather than just going "on", "off" abruptly. In this case we are intending to make the panel slide smoothly onscreen when the checkbox is checked. (Or to put it another way, when the question mark icon is clicked — remember, clicking the `<label>` will check the associated checkbox! We told you it was a hack.) You will learn a lot more about...
+- Finally, we set a {{cssxref("transition")}} on the element. Transitions are an interesting feature that allow you to make changes between states happen smoothly, rather than just going "on", "off" abruptly. In this case we are intending to make the panel slide smoothly onscreen when the checkbox is checked. (Or to put it another way, when the question mark icon is clicked — remember, clicking the `<label>` will check the associated checkbox! We told you it was a hack.) You will learn a lot more about…
 
 ### Setting the checked state
 

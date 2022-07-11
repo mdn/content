@@ -1191,9 +1191,8 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
     <tr>
       <th scope="row">Specification</th>
       <td>
-        <a href="https://www.adobe.io/open/standards/TIFF.html"
-          >adobe.io/open/standards/TIFF.html</a
-        >
+        <a href="https://www.adobe.com/devnet-apps/photoshop/fileformatashtml"
+          >https://www.adobe.com/devnet-apps/photoshop/fileformatashtml/#50577413_pgfId-1035272</a>
       </td>
     </tr>
     <tr>

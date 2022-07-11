@@ -15,7 +15,7 @@ browser-compat: api.TrackEvent
 ---
 {{APIRef("HTML DOM")}}
 
-The **`TrackEvent`** interface, which is part of the HTML DOM specification, is used for events which represent changes to a set of available tracks on an HTML media element; these events are {{event("addtrack")}} and {{event("removetrack")}}.
+The **`TrackEvent`** interface, which is part of the HTML DOM specification, is used for events which represent changes to a set of available tracks on an HTML media element; these events are `addtrack` and `removetrack`.
 
 It's important not to confuse `TrackEvent` with the {{domxref("RTCTrackEvent")}} interface, which is used for tracks which are part of an {{domxref("RTCPeerConnection")}}.
 
@@ -45,7 +45,7 @@ _`TrackEvent` has no methods of its own; however, it is based on {{domxref("Even
 
 ## Example
 
-This example sets up a function, `handleTrackEvent()`, which is called for any {{event("addtrack")}} or {{event("removetrack")}} event on the first {{HTMLElement("video")}} element found in the document.
+This example sets up a function, `handleTrackEvent()`, which is called for any `addtrack` or `removetrack` event on the first {{HTMLElement("video")}} element found in the document.
 
 ```js
 var videoElem = document.querySelector("video");

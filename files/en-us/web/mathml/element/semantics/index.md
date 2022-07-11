@@ -31,12 +31,12 @@ The rules of determining the visible child in a `<semantics>` element are the fo
 
 ## Attributes
 
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
 The following attributes can be set on `<annotation>` and `<annotation-xml>`:
 
 - definitionURL
   - : The location of the annotation key symbol.
-- `displaystyle`
-  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`. See also `movablelimits` on {{ MathMLElement("mo") }}.
 - encoding
   - : The encoding of the semantic information in the annotation (e.g. "MathML-Content", "MathML-Presentation", "application/openmath+xml", "image/png")
 - cd

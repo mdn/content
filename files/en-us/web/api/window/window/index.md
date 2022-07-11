@@ -22,7 +22,7 @@ Thus, the following expressions all return the same window object:
 window.window
 window.window.window
 window.window.window.window
-// ...
+// …
 ```
 
 In web pages, the window object is also a _global object_. This means:

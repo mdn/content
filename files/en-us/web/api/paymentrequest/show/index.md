@@ -25,7 +25,7 @@ user.
 
 For security reasons, the `PaymentRequest.show()` method can't just be
 initiated at any time. It may only be called while handling events that represent user
-interactions, such as {{event("click")}}, {{event("keyup")}}, or the like.
+interactions, such as {{domxref("Element/click_event", "click")}}, {{domxref("Element/keyup_event", "keyup")}}, or the like.
 
 Only one payment request can be in the process of being handled at once, across all
 documents. Once one `PaymentRequest`'s `show()` method has been
@@ -121,8 +121,8 @@ Exceptions are not thrown but returned when the {{jsxref("Promise")}} rejects.
     {{domxref("PaymentRequest.PaymentRequest","PaymentRequest")}} constructor was called.
 - `SecurityError` {{domxref("DOMException")}}
   - : Returned if the call to
-    `show()` was not in response to a user action, such as a {{event("click")}}
-    or {{event("keyup")}} event. Other reasons a `SecurityError` may be thrown
+    `show()` was not in response to a user action, such as a {{domxref("Element/click_event", "click")}}
+    or {{domxref("Element/keyup_event", "keyup")}} event. Other reasons a `SecurityError` may be thrown
     are at the discretion of the user agent, and may include situations such as too many
     calls to `show()` being made in a short time or `show()` being
     called while payment requests are blocked by parental controls.

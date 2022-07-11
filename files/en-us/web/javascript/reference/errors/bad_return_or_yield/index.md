@@ -41,7 +41,7 @@ execution and specify a value to be returned to the function caller.
 ### Missing curly brackets
 
 ```js example-bad
-var cheer = function(score) {
+const cheer = function (score) {
   if (score === 147)
     return 'Maximum!';
   };
@@ -57,7 +57,7 @@ The curly brackets look correct at a first glance, but this code snippet is miss
 `{` after the first `if` statement. Correct would be:
 
 ```js example-good
-var cheer = function(score) {
+const cheer = function (score) {
   if (score === 147) {
     return 'Maximum!';
   }

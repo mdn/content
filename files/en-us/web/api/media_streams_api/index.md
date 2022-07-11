@@ -55,11 +55,11 @@ Early versions of the Media Capture and Streams API specification included separ
 
 ## Events
 
-- {{event("addtrack")}}
-- {{event("ended")}}
+- {{domxref("MediaStream/addtrack_event", "addtrack")}}
+- {{domxref("MediaStreamTrack/ended_event", "ended")}}
 - {{event("muted")}}
 - {{domxref("MediaStreamTrack.overconstrained_event", "overconstrained")}}
-- {{event("removetrack")}}
+- {{domxref("MediaStream/removetrack_event", "removetrack")}}
 - {{event("started")}}
 - {{event("unmuted")}}
 

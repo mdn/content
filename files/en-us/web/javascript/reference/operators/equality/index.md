@@ -26,7 +26,7 @@ x == y
 ## Description
 
 The equality operators (`==` and `!=`) use
-the [Abstract Equality Comparison Algorithm](https://262.ecma-international.org/5.1/#sec-11.9.3)
+the [`IsLooselyEqual` Abstract Operation](https://tc39.es/ecma262/#sec-islooselyequal)
 to compare two operands.
 This can be roughly summarized as follows:
 

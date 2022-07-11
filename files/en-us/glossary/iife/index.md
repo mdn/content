@@ -24,21 +24,21 @@ The name IIFE is promoted by Ben Alman in [his blog](https://web.archive.org/web
 <td>
 <pre class="brush: js notranslate">
 (function () {
-  /* ... */
+  /* … */
 })();
 </pre>
 </td>
 <td>
 <pre class="brush: js notranslate">
 (() => {
-  /* ... */
+  /* … */
 })();
 </pre>
 </td>
 <td>
 <pre class="brush: js notranslate">
 (async () => {
-  /* ... */
+  /* … */
 })();
 </pre>
 </tr>

@@ -65,7 +65,7 @@ But, if you pass an array to `push`, it will actually add that array as a single
 
 What if that is not what you want? `concat` does have the desired behavior in this case, but it does not append to the _existing_ array—it instead creates and returns a new array.
 
-But you wanted to append to the existing array... So what now? Write a loop? Surely not?
+But you wanted to append to the existing array. So what now? Write a loop? Surely not?
 
 `apply` to the rescue!
 

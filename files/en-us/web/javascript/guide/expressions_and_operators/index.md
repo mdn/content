@@ -119,15 +119,15 @@ For more complex assignments, the [destructuring assignment](/en-US/docs/Web/Jav
 object literals.
 
 ```js
-var foo = ['one', 'two', 'three'];
+const foo = ['one', 'two', 'three'];
 
 // without destructuring
-var one   = foo[0];
-var two   = foo[1];
-var three = foo[2];
+const one   = foo[0];
+const two   = foo[1];
+const three = foo[2];
 
 // with destructuring
-var [one, two, three] = foo;
+const [one, two, three] = foo;
 ```
 
 #### Evaluation and nesting
@@ -717,33 +717,33 @@ The following code shows examples of the `&&` (logical AND)
 operator.
 
 ```js
-var a1 =  true && true;     // t && t returns true
-var a2 =  true && false;    // t && f returns false
-var a3 = false && true;     // f && t returns false
-var a4 = false && (3 == 4); // f && f returns false
-var a5 = 'Cat' && 'Dog';    // t && t returns Dog
-var a6 = false && 'Cat';    // f && t returns false
-var a7 = 'Cat' && false;    // t && f returns false
+const a1 =  true && true;     // t && t returns true
+const a2 =  true && false;    // t && f returns false
+const a3 = false && true;     // f && t returns false
+const a4 = false && (3 == 4); // f && f returns false
+const a5 = 'Cat' && 'Dog';    // t && t returns Dog
+const a6 = false && 'Cat';    // f && t returns false
+const a7 = 'Cat' && false;    // t && f returns false
 ```
 
 The following code shows examples of the || (logical OR) operator.
 
 ```js
-var o1 =  true || true;     // t || t returns true
-var o2 = false || true;     // f || t returns true
-var o3 =  true || false;    // t || f returns true
-var o4 = false || (3 == 4); // f || f returns false
-var o5 = 'Cat' || 'Dog';    // t || t returns Cat
-var o6 = false || 'Cat';    // f || t returns Cat
-var o7 = 'Cat' || false;    // t || f returns Cat
+const o1 =  true || true;     // t || t returns true
+const o2 = false || true;     // f || t returns true
+const o3 =  true || false;    // t || f returns true
+const o4 = false || (3 == 4); // f || f returns false
+const o5 = 'Cat' || 'Dog';    // t || t returns Cat
+const o6 = false || 'Cat';    // f || t returns Cat
+const o7 = 'Cat' || false;    // t || f returns Cat
 ```
 
 The following code shows examples of the ! (logical NOT) operator.
 
 ```js
-var n1 = !true;  // !t returns false
-var n2 = !false; // !f returns true
-var n3 = !'Cat'; // !t returns false
+const n1 = !true;  // !t returns false
+const n2 = !false; // !f returns true
+const n3 = !'Cat'; // !t returns false
 ```
 
 #### Short-circuit evaluation
@@ -773,12 +773,12 @@ For example,
 console.log('my ' + 'string'); // console logs the string "my string".
 ```
 
-The shorthand assignment operator += can also be used to concatenate strings.
+The shorthand assignment operator `+=` can also be used to concatenate strings.
 
 For example,
 
 ```js
-var mystring = 'alpha';
+let mystring = 'alpha';
 mystring += 'bet'; // evaluates to "alphabet" and assigns this value to mystring.
 ```
 
@@ -799,7 +799,7 @@ Otherwise it has the value of `val2`. You can use the conditional operator anywh
 For example,
 
 ```js
-var status = (age >= 18) ? 'adult' : 'minor';
+const status = age >= 18 ? 'adult' : 'minor';
 ```
 
 This statement assigns the value "adult" to the variable `status` if
@@ -818,19 +818,20 @@ For example, if `a` is a 2-dimensional array with 10 elements on a side, the fol
 The code prints the values of the diagonal elements in the array:
 
 ```js
-var x = [0,1,2,3,4,5,6,7,8,9]
-var a = [x, x, x, x, x];
+const x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const a = [x, x, x, x, x];
 
-for (var i = 0, j = 9; i <= j; i++, j--)
+for (let i = 0, j = 9; i <= j; i++, j--) {
 //                                ^
   console.log('a[' + i + '][' + j + ']= ' + a[i][j]);
+}
 ```
 
 ### Unary operators
 
 A unary operation is an operation with only one operand.
 
-#### `delete`
+#### delete
 
 The [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator deletes an object's property.
 The syntax is:
@@ -878,11 +879,11 @@ The parentheses are optional.
 Suppose you define the following variables:
 
 ```js
-var myFun = new Function('5 + 2');
-var shape = 'round';
-var size = 1;
-var foo = ['Apple', 'Mango', 'Orange'];
-var today = new Date();
+const myFun = new Function('5 + 2');
+const shape = 'round';
+const size = 1;
+const foo = ['Apple', 'Mango', 'Orange'];
+const today = new Date();
 ```
 
 The `typeof` operator returns the following results for these variables:
@@ -955,7 +956,7 @@ The parentheses surrounding the expression are optional, but it is good style to
 
 A relational operator compares its operands and returns a Boolean value based on whether the comparison is true.
 
-#### `in`
+#### in
 
 The [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) returns `true` if the specified property is in the specified object.
 The syntax is:
@@ -970,7 +971,7 @@ The following examples show some uses of the `in` operator.
 
 ```js
 // Arrays
-var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+const trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 0 in trees;        // returns true
 3 in trees;        // returns true
 6 in trees;        // returns false
@@ -980,16 +981,16 @@ var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 
 // built-in objects
 'PI' in Math;          // returns true
-var myString = new String('coral');
+const myString = new String('coral');
 'length' in myString;  // returns true
 
 // Custom objects
-var mycar = { make: 'Honda', model: 'Accord', year: 1998 };
+const mycar = { make: 'Honda', model: 'Accord', year: 1998 };
 'make' in mycar;  // returns true
 'model' in mycar; // returns true
 ```
 
-#### `instanceof`
+#### instanceof
 
 The [`instanceof` operator](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) returns `true`
 if the specified object is of the specified object type. The syntax is:
@@ -1006,7 +1007,7 @@ For example, when catching exceptions, you can branch to different exception-han
 For example, the following code uses `instanceof` to determine whether `theDay` is a `Date` object. Because `theDay` is a `Date` object, the statements in the `if` statement execute.
 
 ```js
-var theDay = new Date(1995, 12, 17);
+const theDay = new Date(1995, 12, 17);
 if (theDay instanceof Date) {
   // statements to execute
 }
@@ -1070,7 +1071,7 @@ JavaScript has the following expression categories:
 
 Basic keywords and general expressions in JavaScript.
 
-#### `this`
+#### this
 
 Use the [`this` keyword](/en-US/docs/Web/JavaScript/Reference/Operators/this) to refer to the current object.
 In general, `this` refers to the calling object in a method.
@@ -1104,9 +1105,9 @@ expressions. For example, you can override multiplication and division first, th
 addition and subtraction to evaluate addition first.
 
 ```js
-var a = 1;
-var b = 2;
-var c = 3;
+const a = 1;
+const b = 2;
+const c = 3;
 
 // default precedence
 a + b * c     // 7
@@ -1125,13 +1126,13 @@ a * c + b * c // 9
 
 Left values are the destination of an assignment.
 
-#### `new`
+#### new
 
 You can use the [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) to create an instance of a user-defined object type or of one of the
 built-in object types. Use `new` as follows:
 
 ```js
-var objectName = new objectType([param1, param2, ..., paramN]);
+const objectName = new objectType([param1, param2, ..., paramN]);
 ```
 
 #### super

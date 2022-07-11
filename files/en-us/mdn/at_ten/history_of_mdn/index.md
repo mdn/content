@@ -203,7 +203,7 @@ Many more people have done amazing work on MDN:
 - Craig Cook
 - Rob Hudson
 - John Whitlock
-- ...
+- …
   And many more [Kuma contributors.](https://github.com/mdn/kuma/graphs/contributors)
 
 <!---->
@@ -219,5 +219,5 @@ Many more people have done amazing work on MDN:
 - Tooru Fujisawa
 - Karen Scarfone
 - Niklas Barning
-- ...
+- …
   And hundreds more wiki collaborators.
