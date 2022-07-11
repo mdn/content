@@ -67,7 +67,7 @@ function display_marks(ev) {
 
   // Display each mark using getEntriesByType()
   entries = performance.getEntriesByType("mark");
-  for (let i=0; i < entries.length; i++) {
+  for (let i = 0; i < entries.length; i++) {
     if (i == 0) log("= getEntriesByType('mark')", 0);
     log("... [" + i + "] = " + entries[i].name, 0);
   }
