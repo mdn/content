@@ -36,9 +36,9 @@ function onVRExitPresent () {
   vrDisplay.exitPresent().then(function () {
     // Nothing to do because we're handling things in onVRPresentChange.
   }, function (err) {
-    var errMsg = "exitPresent failed.";
+    let errMsg = "exitPresent failed.";
     if (err && err.message) {
-      errMsg += "<br/>" + err.message
+      errMsg += "<br/>" + err.message;
     }
     VRSamplesUtil.addError(errMsg, 2000);
   });
