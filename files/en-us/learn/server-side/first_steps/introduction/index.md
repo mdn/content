@@ -48,7 +48,7 @@ The request includes a URL identifying the affected resource, a method that defi
 
 Web servers wait for client request messages, process them when they arrive, and reply to the web browser with an **HTTP response** message. The response contains a status line indicating whether or not the request succeeded (e.g. "HTTP/1.1 200 OK" for success).
 
-The body of a successful response to a request would contain the requested resource (e.g. a new HTML page, or an image, etc.), which could then be displayed by the web browser.
+The body of a successful response to a request would contain the requested resource (e.g. a new HTML page, or an image), which could then be displayed by the web browser.
 
 ### Static sites
 

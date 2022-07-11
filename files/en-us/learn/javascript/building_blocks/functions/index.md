@@ -74,7 +74,7 @@ console.log(madeAString);
 // string, and returns this new string
 ```
 
-Or every time we generate a random number :
+Or every time we generate a random number:
 
 ```js
 const myNumber = Math.random();
