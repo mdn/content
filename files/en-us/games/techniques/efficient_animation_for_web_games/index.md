@@ -38,7 +38,7 @@ function doAnimation(timestamp) {
       progress = timestamp - startTime;
   }
 
-  // Do animation ...
+  // Do animation …
   if (progress < animationLength) {
       requestAnimationFrame(doAnimation);
   }
@@ -55,7 +55,7 @@ To save battery life, it is best to only draw when there are things going on, so
 ```js
 function redraw() {
   drawPending = false;
-  // Do drawing ...
+  // Do drawing …
 }
 
 var drawPending = false;

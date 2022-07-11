@@ -179,7 +179,7 @@ The button has a number of declarations that style, but the two we are most inte
 
 ```css
 button {
-  ...
+  /* … */
 
   background-color: #ff0000;
   background-color: rgba(255,0,0,1);
@@ -232,7 +232,7 @@ It isn't that simple, however — you also need to create a copy of each element
 
 ```js
 const asideElem = document.createElement('aside');
- ...
+ /* … */
 ```
 
 This sounds like a pain to deal with, but fortunately there is a {{glossary("polyfill")}} available that does the necessary fixes for you, and more besides — see [HTML5Shiv](https://github.com/aFarkas/html5shiv) for all the details (see [manual installation](https://github.com/aFarkas/html5shiv#installation) for the simplest usage).
