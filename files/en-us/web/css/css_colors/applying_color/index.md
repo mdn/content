@@ -365,7 +365,7 @@ The HTML here creates a box that contains a color picker control (with a label c
 
 #### CSS
 
-The CSS establishes a size for the box and some basic styling for appearances. The border is also established with a 2-pixel width and a border color that won't last, courtesy of the JavaScript below\...
+The CSS establishes a size for the box and some basic styling for appearances. The border is also established with a 2-pixel width and a border color.
 
 ```css
 #box {

@@ -314,7 +314,7 @@ Both of the above methods result in identical strings.
   - : Returns a new string containing characters of the calling string from (or between)
     the specified index (or indices).
 - {{jsxref("String.prototype.toLocaleLowerCase()",
-    "String.prototype.toLocaleLowerCase( [<var>locale</var>, ...<var>locales</var>])")}}
+    "String.prototype.toLocaleLowerCase( [<var>locale</var>, …<var>locales</var>])")}}
 
   - : The characters within a string are converted to lowercase while respecting the
     current locale.
@@ -323,7 +323,7 @@ Both of the above methods result in identical strings.
     {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}.
 
 - {{jsxref("String.prototype.toLocaleUpperCase()",
-    "String.prototype.toLocaleUpperCase( [<var>locale</var>, ...<var>locales</var>])")}}
+    "String.prototype.toLocaleUpperCase( [<var>locale</var>, …<var>locales</var>])")}}
 
   - : The characters within a string are converted to uppercase while respecting the
     current locale.

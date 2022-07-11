@@ -112,7 +112,7 @@ to a value, the scope chain is searched. This means that properties on the globa
 are conveniently visible from every scope, without having to qualify the names with
 `globalThis.` or `window.` or `global.`.
 
-So you can just type:
+So you can use following code:
 
 ```js
 function foo() {
@@ -120,7 +120,7 @@ function foo() {
 }
 ```
 
-...because
+Because the global object has `String` property:
 
 ```js
 globalThis.hasOwnProperty('String') // true

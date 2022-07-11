@@ -38,7 +38,7 @@ The only way to modify dynamically the value of the readonly attribute is throug
 
 ### Usability
 
-Browsers display the `readonly` attribute...
+Browsers display the `readonly` attribute…
 
 ### Constraint validation
 

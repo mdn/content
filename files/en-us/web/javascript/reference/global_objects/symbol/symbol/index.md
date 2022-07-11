@@ -55,7 +55,7 @@ coerce the string `"foo"` into a symbol. It creates a new symbol each time:
 Symbol('foo') === Symbol('foo')  // false
 ```
 
-### new Symbol(...)
+### new Symbol(…)
 
 The following syntax with the {{jsxref("Operators/new", "new")}} operator will throw a
 {{jsxref("TypeError")}}:
