@@ -121,7 +121,6 @@ sentinel and you can't prevent your Wasm program from seeing a logically truncat
 string if the JavaScript string contained U+0000. Observe:
 
 ```js
-
 const encoder = new TextEncoder();
 
 function encodeIntoWithSentinel(string, u8array, position) {
