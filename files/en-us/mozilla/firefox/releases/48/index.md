@@ -29,7 +29,7 @@ tags:
 - The {{HTMLElement("details")}} and {{HTMLElement("summary")}} elements have been activated by default on Nightly and Aurora (DevTools), but not on Beta or Release:
 
   - The default style for these elements has been adapted to match the spec ({{bug(1258657)}}).
-  - The {{event("toggle")}} event is now sent to the {{HTMLElement("details")}} element when this one is opened or closed ({{bug(1225412)}}).
+  - The {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} event is now sent to the {{HTMLElement("details")}} element when this one is opened or closed ({{bug(1225412)}}).
 
 - The {{htmlattrxref("meta", "referrer")}} attributes now also supports the `no-referrer-when-downgrade` and `origin-when-cross-origin` values ({{bug(1178337)}}).
 
