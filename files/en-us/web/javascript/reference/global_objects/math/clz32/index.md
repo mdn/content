@@ -103,7 +103,7 @@ function ctrz(integer) {
     return 32;
   }
   integer &= -integer; // equivalent to `int = int & (~int + 1)`
-  return 31 - clz(x);
+  return 31 - clz(integer);
 }
 ```
 
