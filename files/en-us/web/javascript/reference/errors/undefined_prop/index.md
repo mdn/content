@@ -38,7 +38,7 @@ In this case, the property `bar` is an undefined property, so a
 `ReferenceError` will occur.
 
 ```js example-bad
-var foo = {};
+const foo = {};
 foo.bar; // ReferenceError: reference to undefined property "bar"
 ```
 
@@ -50,7 +50,7 @@ access it; ways to do that include using the {{jsxref("Operators/in", "in")}} op
 or the {{jsxref("Object.prototype.hasOwnProperty()")}} method, like this:
 
 ```js example-good
-var foo = {};
+const foo = {};
 
 // Define the bar property
 
@@ -59,7 +59,7 @@ console.log(foo.bar); // "moon"
 
 // Test to be sure bar exists before accessing it
 
-if (foo.hasOwnProperty('bar')) {
+if (Object.hasOwn(foo, 'bar')) {
   console.log(foo.bar);
 }
 ```
