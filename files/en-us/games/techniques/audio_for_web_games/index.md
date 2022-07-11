@@ -234,35 +234,35 @@ To see this in action, let's lay out some separate tracks:
   <ul>
     <li data-loading="true">
       <a href="leadguitar.mp3" class="track">Lead Guitar</a>
-      <p class="loading-text">Loading...</p>
+      <p class="loading-text">Loading…</p>
       <button data-playing="false" aria-describedby="guitar-play-label">
         <span id="guitar-play-label">Play</span>
       </button>
     </li>
     <li data-loading="true">
       <a href="bassguitar.mp3" class="track">Bass Guitar</a>
-      <p class="loading-text">Loading...</p>
+      <p class="loading-text">Loading…</p>
       <button data-playing="false" aria-describedby="bass-play-label">
         <span id="bass-play-label">Play</span>
       </button>
     </li>
     <li data-loading="true">
       <a href="drums.mp3" class="track">Drums</a>
-      <p class="loading-text">Loading...</p>
+      <p class="loading-text">Loading…</p>
       <button data-playing="false" aria-describedby="drums-play-label">
         <span id="drums-play-label">Play</span>
       </button>
     </li>
     <li data-loading="true">
       <a href="horns.mp3" class="track">Horns</a>
-      <p class="loading-text">Loading...</p>
+      <p class="loading-text">Loading…</p>
       <button data-playing="false" aria-describedby="horns-play-label">
         <span id="horns-play-label">Play</span>
       </button>
     </li>
     <li data-loading="true">
       <a href="clav.mp3" class="track">Clavi</a>
-      <p class="loading-text">Loading...</p>
+      <p class="loading-text">Loading…</p>
       <button data-playing="false" aria-describedby="clavi-play-label">
         <span id="clavi-play-label">Play</span>
       </button>

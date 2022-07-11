@@ -16,7 +16,7 @@ The first part of this article, [Stacking without the z-index property](/en-US/d
 The `z-index` property can be specified with an integer value (positive, zero, or negative), which represents the position of the element along the z-axis. If you are not familiar with the z-axis, imagine the page as a stack of layers, each one having a number. Layers are rendered in numerical order, with larger numbers above smaller numbers.
 
 - bottom layer _(farthest from the observer)_
-- ...
+- …
 - Layer -3
 - Layer -2
 - Layer -1
@@ -24,7 +24,7 @@ The `z-index` property can be specified with an integer value (positive, zero, o
 - Layer 1
 - Layer 2
 - Layer 3
-- ...
+- …
 - top layer _(closest to the observer)_
 
 > **Note:**

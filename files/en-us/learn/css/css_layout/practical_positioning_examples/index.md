@@ -325,7 +325,7 @@ As a starting point, make a local copy of [hidden-info-panel-start.html](https:/
 <input type="checkbox" id="toggle">
 <aside>
 
-  ...
+…
 
 </aside>
 ```

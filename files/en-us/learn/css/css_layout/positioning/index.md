@@ -51,7 +51,7 @@ Static positioning is the default that every element gets. It just means "put th
 To see this (and get your example set up for future sections) first add a `class` of `positioned` to the second {{htmlelement("p")}} in the HTML:
 
 ```html
-<p class="positioned"> ... </p>
+<p class="positioned"> … </p>
 ```
 
 Now add the following rule to the bottom of your CSS:
@@ -385,7 +385,7 @@ You should now see the finished example:
 
 <p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
 
-<p class="positioned">I'm not positioned any more...</p>
+<p class="positioned">I'm not positioned any more.</p>
 
 <p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
 
