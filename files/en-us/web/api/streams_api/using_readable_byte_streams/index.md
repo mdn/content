@@ -119,10 +119,10 @@ class MockHypotheticalSocket {
 
       // Emulate slow read of data
       window.setTimeout(() => {
-        const numberBytesRecieved = this.getNumberRandomBytesSocket();
-        this.data_read += numberBytesRecieved;
-        this.socketdata = this.randomByteArray(numberBytesRecieved);
-        resultobj["bytesRead"] = numberBytesRecieved;
+        const numberBytesReceived = this.getNumberRandomBytesSocket();
+        this.data_read += numberBytesReceived;
+        this.socketdata = this.randomByteArray(numberBytesReceived);
+        resultobj["bytesRead"] = numberBytesReceived;
         resolve(resultobj);
       }, 500);
     });
