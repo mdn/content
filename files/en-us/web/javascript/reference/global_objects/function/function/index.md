@@ -13,11 +13,11 @@ browser-compat: javascript.builtins.Function.Function
 The **`Function` constructor** creates
 a new `Function` **object**. Calling the constructor directly
 can create functions dynamically, but suffers from security and similar (but far less
-significant) performance issues to {{jsxref("Global_Objects/eval")}}. However, unlike eval, the
+significant) performance issues to {{jsxref("eval()")}}. However, unlike `eval`, the
 `Function` constructor creates functions which execute in the global scope
 only.
 
-{{EmbedInteractiveExample("pages/js/function-constructor.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/function-constructor.html", "shorter")}}
 
 ## Syntax
 
