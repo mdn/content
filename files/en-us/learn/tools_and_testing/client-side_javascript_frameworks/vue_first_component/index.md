@@ -91,8 +91,8 @@ We can now begin to add actual content to our `ToDoItem`. Vue templates are curr
     ```html
     <template>
       <div>
-        <input type="checkbox" id="todo-item" />
-        <label for="todo-item">My Todo Item</label>
+        <input type="checkbox" id="to-do-item" />
+        <label for="to-do-item">My Todo Item</label>
       </div>
     </template>
     ```
