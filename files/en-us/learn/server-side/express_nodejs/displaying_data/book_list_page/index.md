@@ -71,4 +71,4 @@ Run the application (see [Testing the routes](/en-US/docs/Learn/Server-side/Expr
 ## Next steps
 
 - Return to [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of part 5: [BookInstance list page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page).
+- Proceed to the next subarticle of part 6: [BookInstance list page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page).
