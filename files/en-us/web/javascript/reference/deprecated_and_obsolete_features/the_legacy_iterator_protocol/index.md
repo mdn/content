@@ -31,10 +31,10 @@ An object is an legacy iterator when it implements a `next()` method with the fo
 
 ```js
 function makeIterator(array) {
-  var nextIndex = 0;
+  let nextIndex = 0;
 
   return {
-    next: function(){
+    next() {
       if (nextIndex < array.length) {
         return array[nextIndex++];
       else
@@ -43,7 +43,7 @@ function makeIterator(array) {
   }
 }
 
-var it = makeIterator(['yo', 'ya']);
+const it = makeIterator(['yo', 'ya']);
 
 console.log(it.next()); // 'yo'
 console.log(it.next()); // 'ya'
