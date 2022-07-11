@@ -182,41 +182,109 @@ This script displays the following:
 
 An object with a `Symbol.split` method can be used as a splitter with custom behavior.
 
+The following example splits a string using an internal state consisting of an incrementing number:
+
 ```js
-// Character used to split the string.
-const DATE_DELIMITER = "/";
-
-// Split by the delimiter, but ignore any empty values.
-const splitDate = {
+const splitByNumber = {
   [Symbol.split](str) {
-    const results = [];
+    let num = 1;
     let pos = 0;
-    let matchPos = str.indexOf(DATE_DELIMITER, pos);
-    
-    while (matchPos !== -1) {
-      let subString = str.substring(pos, matchPos);
+    const result = [];
+    while (pos < str.length) {
+      const matchPos = str.indexOf(num, pos);
+      if (matchPos === -1) {
+        result.push(str.substring(pos));
+        break;
+      }
+      result.push(str.substring(pos, matchPos));
+      pos = matchPos + String(num).length;
+      num++;
+    }
+    return result;
+  }
+};
 
-      // Ignore empty values.
-      if (subString.length > 0) {
-        results.push(subString);
+const myString = "a1bc2c5d3e4f";
+console.log(myString.split(splitByNumber)); // => [ "a", "bc", "c5d", "e", "f" ]
+```
+
+The following example uses an internal state to enforce certain behaviour, and to ensure a "valid" result is produced.
+
+```js
+const DELIMITER = ";";
+
+// Split the commands, but remove any invalid or unnecessary values.
+const splitCommands = {
+  [Symbol.split](str, lim) {
+    const results = [];
+    let state = {
+      on: false,
+      brightness: {
+        current: 2,
+        min: 1,
+        max: 3
+      }
+    };
+    let pos = 0;
+    let matchPos = str.indexOf(DELIMITER, pos);
+
+    while (matchPos !== -1) {
+      let subString = str.slice(pos, matchPos).trim();
+
+      switch (subString) {
+        case "light on":
+          // If the `on` state is already true, do nothing.
+          if (!state.on) {
+            state.on = true;
+            results.push(subString);
+          }
+          break;
+
+        case "light off":
+          // If the `on` state is already false, do nothing.
+          if (state.on) {
+            state.on = false;
+            results.push(subString);
+          }
+          break;
+
+        case "brightness up":
+          // Enforce a brightness maximum.
+          if (state.brightness.current < state.brightness.max) {
+            state.brightness.current += 1;
+            results.push(subString);
+          }
+          break;
+
+        case "brightness down":
+          // Enforce a brightness minimum.
+          if (state.brightness.current > state.brightness.min) {
+            state.brightness.current -= 1;
+            results.push(subString);
+          }
+          break;
       }
 
-      pos = matchPos += DATE_DELIMITER.length;
-      matchPos = str.indexOf(DATE_DELIMITER, pos);
-    }
-    
-    const lastSubString = str.substring(pos);
+      if (results.length === lim) {
+        break;
+      }
 
-    if (lastSubString.length > 0) {
-      results.push(lastSubString);
+      pos = matchPos + DELIMITER.length;
+      matchPos = str.indexOf(DELIMITER, pos);
+    }
+
+    // If we broke early due to reaching the split `lim`, don't add the remaining commands.
+    if (results.length < lim) {
+      results.push(str.slice(pos).trim());
     }
 
     return results;
   }
 };
 
-const dateString = "/01/01/1970";
-console.log(dateString.split(splitDate)); // => ["01", "01", "1970"]
+const commands = "light on; brightness up; brightness up; brightness up; light on; brightness down; brightness down; light off";
+console.log(commands.split(splitCommands, 3)); // => ["light on", "brightness up", "brightness down"]
+
 ```
 
 ## Specifications
