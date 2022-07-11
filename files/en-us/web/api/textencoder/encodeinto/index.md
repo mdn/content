@@ -54,12 +54,12 @@ solution is [TypedArray.prototype.subarray()](/en-US/docs/Web/JavaScript/Referen
 Observe.
 
 ```js
-var encoder = new TextEncoder;
+const encoder = new TextEncoder;
 function encodeIntoAtPosition(string, u8array, position) {
     return encoder.encodeInto(string, position ? u8array.subarray(position|0) : u8array);
 }
 
-var u8array = new Uint8Array(8);
+const u8array = new Uint8Array(8);
 encodeIntoAtPosition("hello", u8array, 2);
 console.log( "" + u8array.join() ); // 0,0,104,101,108,108,111,0
 ```
@@ -121,9 +121,9 @@ sentinel and you can't prevent your Wasm program from seeing a logically truncat
 string if the JavaScript string contained U+0000. Observe:
 
 ```js
-var encoder = new TextEncoder;
+const encoder = new TextEncoder;
 function encodeIntoWithSentinel(string, u8array, position) {
-    var stats = encoder.encodeInto(string, position ? u8array.subarray(position|0) : u8array);
+    const stats = encoder.encodeInto(string, position ? u8array.subarray(position|0) : u8array);
     if (stats.written < u8array.length) u8array[stats.written] = 0; // append null if room
     return stats;
 }
