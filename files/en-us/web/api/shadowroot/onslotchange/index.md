@@ -17,7 +17,7 @@ browser-compat: api.ShadowRoot.onslotchange
 ---
 {{ApiRef('DOM')}}{{SeeCompatTable}}
 
-The **`onslotchange`** property of the {{domxref("ShadowRoot")}} is an [event handler](/en-US/docs/Web/Events/Event_handlers) that processes {{event("slotchange")}} events.
+The **`onslotchange`** property of the {{domxref("ShadowRoot")}} is an [event handler](/en-US/docs/Web/Events/Event_handlers) that processes {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} events.
 
 The `slotchange` event is fired on {{DOMxRef("HTMLSlotElement")}} instances ({{HTMLElement("slot")}} elements) when the node(s) contained in the slot change.
 
@@ -45,6 +45,6 @@ this.shadowRoot.onslotchange = function(e) {
 ## See also
 
 - [Using templates and slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots)
-- {{event("slotchange")}} event
+- {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} event
 - {{domxref("HTMLSlotElement")}}
 - {{domxref("GlobalEventHandlers.onslotchange")}}
