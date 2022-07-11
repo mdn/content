@@ -183,26 +183,40 @@ This script displays the following:
 An object with a `Symbol.split` method can be used as a splitter with custom behavior.
 
 ```js
-const splitByNumber = {
+// Character used to split the string.
+const DATE_DELIMITER = "/";
+
+// Split by the delimiter, but ignore any empty values.
+const splitDate = {
   [Symbol.split](str) {
-    let num = 1;
+    const results = [];
     let pos = 0;
-    const result = [];
-    while (pos < str.length) {
-      const matchPos = str.indexOf(num, pos);
-      if (matchPos === -1) {
-        result.push(str.substring(pos));
-        break;
+    let matchPos = str.indexOf(DATE_DELIMITER, pos);
+    
+    while (matchPos !== -1) {
+      let subString = str.substring(pos, matchPos);
+
+      // Ignore empty values.
+      if (subString.length > 0) {
+        results.push(subString);
       }
-      result.push(str.substring(pos, matchPos));
-      pos = matchPos + String(num).length;
+
+      pos = matchPos += DATE_DELIMITER.length;
+      matchPos = str.indexOf(DATE_DELIMITER, pos);
     }
-    return result;
+    
+    const lastSubString = str.substring(pos);
+
+    if (lastSubString.length > 0) {
+      results.push(lastSubString);
+    }
+
+    return results;
   }
 };
 
-const myString = "a1bc2c5d3e4f";
-console.log(myString.split(splitByNumber)); // [ "a", "bc", "c5d", "e", "f" ]
+const dateString = "/01/01/1970";
+console.log(dateString.split(splitDate)); // => ["01", "01", "1970"]
 ```
 
 ## Specifications
