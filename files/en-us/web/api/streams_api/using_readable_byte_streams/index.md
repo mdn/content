@@ -1,6 +1,7 @@
 ---
 title: Using readable byte streams
 slug: Web/API/Streams_API/Using_readable_byte_streams
+page-type: guide
 tags:
   - API
   - Controller
