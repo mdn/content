@@ -60,7 +60,7 @@ videoElem.textTracks.addEventListener("removetrack", handleTrackEvent, false);
 function handleTrackEvent(event) {
   const trackKind;
 
-  if (event.target instanceof(VideoTrackList)) {
+  if (event.target instanceof VideoTrackList) {
     trackKind = "video";
   } else if (event.target instanceof(AudioTrackList)) {
     trackKind = "audio";
