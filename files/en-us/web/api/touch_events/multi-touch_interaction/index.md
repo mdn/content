@@ -65,7 +65,7 @@ Event handlers are registered for all four touch event types. The {{event("touch
 ```js
 function set_handlers(name) {
  // Install event handlers for the given element
- const el=document.getElementById(name);
+ const el = document.getElementById(name);
  el.ontouchstart = start_handler;
  el.ontouchmove = move_handler;
  // Use same handler for touchcancel and touchend
