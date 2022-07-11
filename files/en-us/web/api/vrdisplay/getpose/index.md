@@ -53,7 +53,7 @@ if(navigator.getVRDisplays) {
           // Return the current VRPose object for the display
           const pose = vrDisplay.getPose();
 
-          ...
+          // …
 
     }
   });
