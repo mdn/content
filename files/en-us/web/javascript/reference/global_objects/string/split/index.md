@@ -217,7 +217,7 @@ const DELIMITER = ";";
 const splitCommands = {
   [Symbol.split](str, lim) {
     const results = [];
-    let state = {
+    const state = {
       on: false,
       brightness: {
         current: 2,
