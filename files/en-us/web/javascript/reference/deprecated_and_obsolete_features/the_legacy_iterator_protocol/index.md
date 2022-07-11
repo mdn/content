@@ -30,30 +30,29 @@ An object is an legacy iterator when it implements a `next()` method with the fo
 ### Simple example with the old protocol
 
 ```js
-function makeIterator(array){
-    var nextIndex = 0;
+function makeIterator(array) {
+  var nextIndex = 0;
 
-    return {
-       next: function(){
-           if(nextIndex < array.length){
-               return array[nextIndex++];
-           else
-               throw new StopIteration();
-       }
+  return {
+    next: function(){
+      if (nextIndex < array.length) {
+        return array[nextIndex++];
+      else
+        throw new StopIteration();
     }
+  }
 }
 
 var it = makeIterator(['yo', 'ya']);
 
 console.log(it.next()); // 'yo'
 console.log(it.next()); // 'ya'
-try{
-    console.log(it.next());
-}
-catch(e){
-    if(e instanceof StopIteration){
-         // iteration over
-    }
+try {
+  console.log(it.next());
+} catch (e) {
+  if (e instanceof StopIteration) {
+    // iteration over
+  }
 }
 ```
 

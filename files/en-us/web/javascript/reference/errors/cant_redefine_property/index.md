@@ -35,13 +35,13 @@ Usually, properties in an object created by an
 
 ## Examples
 
-### Non-configurable properties created by `Object.defineProperty`
+### Non-configurable properties created by Object.defineProperty
 
 The {{jsxref("Object.defineProperty()")}} creates non-configurable properties if you
 haven't specified them as configurable.
 
 ```js example-bad
-var obj = Object.create({});
+const obj = Object.create({});
 Object.defineProperty(obj, "foo", {value: "bar"});
 
 Object.defineProperty(obj, "foo", {value: "baz"});
@@ -52,7 +52,7 @@ You will need to set the "foo" property to configurable, if you intend to redefi
 later in the code.
 
 ```js example-good
-var obj = Object.create({});
+const obj = Object.create({});
 Object.defineProperty(obj, "foo", {value: "bar", configurable: true});
 Object.defineProperty(obj, "foo", {value: "baz", configurable: true});
 ```
