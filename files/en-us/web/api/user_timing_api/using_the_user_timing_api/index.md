@@ -79,7 +79,7 @@ function display_marks(ev) {
     log("... " + entries[i].name, 0);
   }
   entries = performance.getEntriesByName("mark-2","mark");
-  for (let i=0; i < entries.length; i++) {
+  for (let i = 0; i < entries.length; i++) {
     if (i == 0) log("= getEntriesByName('mark-2', 'mark')", 0);
     log("... " + entries[i].name, 0);
   }
