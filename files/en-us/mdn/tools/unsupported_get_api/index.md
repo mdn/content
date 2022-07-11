@@ -20,7 +20,7 @@ MDN's platform, [Yari](https://github.com/mdn/yari), doesn't provide a supported
 
 Given the URL for a particular MDN article, by making an HTTP GET request to the corresponding URL with `/index.json` appended, you can retrieve associated JSON data.
 
-For example, for the following MDN article:
+For example, consider the following MDN article:
 
 [https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 

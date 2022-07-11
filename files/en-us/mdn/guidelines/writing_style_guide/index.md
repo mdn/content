@@ -117,7 +117,7 @@ Instead, the summary should focus on the `strokeText()` method, and should refer
 > If the value is `"left"`, the string is drawn starting at the specified value of `x`.
 > And if `textAlign` is `"right"`, the text is drawn such that it ends at the specified X-coordinate.
 >
-> (etc etc etc…)
+> (…)
 >
 > You can, optionally, provide a fourth parameter that lets you specify a maximum width for the string, in pixels.
 > If you provide this parameter, the text is compressed horizontally or scaled (or otherwise adjusted) to fit inside a space that wide when being drawn.

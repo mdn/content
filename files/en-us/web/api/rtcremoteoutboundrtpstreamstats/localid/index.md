@@ -59,7 +59,7 @@ example on Glitch.
 In this example, we have a pair of functions: the first,
 `networkTestStart()`, captures an initial report, and the second,
 `networkTestStop()`, captures a second report.
-Then the second function, uses the two reports to output some information about the network conditions.
+The second function uses the two reports to output some information about the network conditions.
 
 ### networkTestStart()
 

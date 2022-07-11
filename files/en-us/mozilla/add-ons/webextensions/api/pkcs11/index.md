@@ -26,8 +26,8 @@ Perform the following steps:
 1. Save the PKCS #11 module to a permanent location on your local computer
 2. Select **Tools > Options** or select the **Firefox menu** and then **Options**
 3. Once the Options page opens, select **Privacy & Security**
-4. Scroll down to the bottom of the page and under **Certificates** click or tap on **Security Devices…
-    ![](device_manager.png)**
+4. Scroll down to the bottom of the page and under **Certificates** click or tap on **Security Devices…**
+    ![](device_manager.png)
 5. Click or tap the **Load** button
     ![](load_device_driver.png)
 6. Enter a name for the security module, such as "_My Client Database_"

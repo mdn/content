@@ -60,7 +60,7 @@ concept, in outline form, is:
     (`new` {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}})
 2. Display the payment request ({{domxref("PaymentRequest.show()")}}
 3. If `show()` resolves, the returned {{domxref("PaymentResponse")}}
-    describes the requested payment and the options chosen by the user. Continue by…
+    describes the requested payment and the options chosen by the user. Continue with the following steps:
 
     1. Validate the returned response; if there are any fields whose values are not
         acceptable, call the response's {{domxref("PaymentResponse.complete",
