@@ -165,11 +165,11 @@ Note: Even though these attributes do help a lot the first time a page is loaded
 
   - `{{htmlelement('head')}}`
 
-    - `{{htmlelement('link')}}` ...
+    - `{{htmlelement('link')}}`
 
       CSS files required for page appearance. Minimize the number of files for performance while keeping unrelated CSS in separate files for maintenance.
 
-    - `{{htmlelement('script')}}` ...
+    - `{{htmlelement('script')}}`
 
       JavaScript files for functions **required** during the loading of the page, but not any interaction related JavaScript that can only run after page loads.
 
