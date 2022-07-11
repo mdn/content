@@ -55,7 +55,7 @@ To save battery life, it is best to only draw when there are things going on, so
 ```js
 function redraw() {
   drawPending = false;
-  // Do drawing …
+  // Perform the drawing
 }
 
 var drawPending = false;

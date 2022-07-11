@@ -233,7 +233,7 @@ There is a fourth, optional, member that can go inside the `__compat` member —
         }
       }
 
-      // … etc.
+      // …
     }
   }
 }
@@ -284,7 +284,7 @@ For an API, you've got the top two levels defined as `api.name-of-the-interface`
         }
       },
 
-      // … etc.
+      // …
 
     }
   }

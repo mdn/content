@@ -385,7 +385,7 @@ You should now see the finished example:
 
 <p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
 
-<p class="positioned">I'm not positioned any more…</p>
+<p class="positioned">I'm not positioned any more.</p>
 
 <p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
 
