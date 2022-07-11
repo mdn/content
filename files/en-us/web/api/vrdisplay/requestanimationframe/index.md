@@ -41,8 +41,8 @@ A long representing the handle of the `requestAnimationFrame()` call. This can t
 ## Examples
 
 ```js
-var frameData = new VRFrameData();
-var vrDisplay;
+const frameData = new VRFrameData();
+let vrDisplay;
 
 navigator.getVRDisplays().then(function(displays) {
   vrDisplay = displays[0];
@@ -64,9 +64,9 @@ function drawVRScene() {
   vrDisplay.getFrameData(frameData);
 
   // You can get the position, orientation, etc. of the display from the current frame's pose
-  var curFramePose = frameData.pose;
-  var curPos = curFramePose.position;
-  var curOrient = curFramePose.orientation;
+  const curFramePose = frameData.pose;
+  const curPos = curFramePose.position;
+  const curOrient = curFramePose.orientation;
 
   // Clear the canvas before we start drawing on it.
 
@@ -75,8 +75,8 @@ function drawVRScene() {
   // WebVR: Create the required projection and view matrix locations needed
   // for passing into the uniformMatrix4fv methods below
 
-  var projectionMatrixLocation = gl.getUniformLocation(shaderProgram, "projMatrix");
-  var viewMatrixLocation = gl.getUniformLocation(shaderProgram, "viewMatrix");
+  const projectionMatrixLocation = gl.getUniformLocation(shaderProgram, "projMatrix");
+  const viewMatrixLocation = gl.getUniformLocation(shaderProgram, "viewMatrix");
 
   // WebVR: Render the left eye's view to the left half of the canvas
   gl.viewport(0, 0, canvas.width * 0.5, canvas.height);
