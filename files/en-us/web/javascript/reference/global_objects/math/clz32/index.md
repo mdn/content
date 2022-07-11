@@ -43,7 +43,7 @@ first, then converted to a 32-bit unsigned integer.
 If the converted 32-bit unsigned integer is `0`, then return
 `32`, because all bits are `0`.
 
-This function is particularly useful for systems that compile to JS, like [Emscripten](/en-US/docs/Emscripten).
+This function is particularly useful for systems that compile to JS, like [Emscripten](https://emscripten.org).
 
 ### Count Leading Ones and beyond
 
@@ -70,7 +70,8 @@ Using this logic, a `clon` function can be created as follows:
 
 ```js
 const clz = Math.clz32;
-function clon(integer){
+
+function clon(integer) {
     return clz(~integer);
 }
 ```
@@ -81,7 +82,9 @@ all higher set bits so that `clz` can then be used.
 
 ```js example-bad
 const clz = Math.clz32;
-function ctrz(integer){ // count trailing zeros
+
+// count trailing zeros
+function ctrz(integer) {
     // 1. fill in all the higher bits after the first one
     integer |= integer << 16;
     integer |= integer << 8;
@@ -89,16 +92,19 @@ function ctrz(integer){ // count trailing zeros
     integer |= integer << 2;
     integer |= integer << 1;
     // 2. Now, inversing the bits reveals the lowest bits
-    return 32 - clz(~integer) |0; // `|0` ensures integer coercion
+    return 32 - clz(~integer);
 }
 ```
 
 However, a simpler and possibly more efficient algorithm is the following:
 
 ```js example-good
-function ctrz(integer){
-    integer >>>= 0 // ensures coercion to Uint32
-    if (integer === 0) return 32; // skipping this step would make it return -1
+function ctrz(integer) {
+    integer >>>= 0; // ensures coercion to Uint32
+    if (integer === 0) {
+        // skipping this step would make it return -1
+        return 32;
+    }
     integer &= -integer; // equivalent to `int = int & (~int + 1)`
     return 31 - clz(x);
 }
@@ -107,10 +113,12 @@ function ctrz(integer){
 Then we can define a "Count Trailing Ones" function like so:
 
 ```js
-function ctron(integer){ // count trailing ones
+function ctron(integer) {
+    // count trailing ones
     // No shift-filling-in-with-ones operator is available in
     // JavaScript, so the below code is the fastest
     return ctrz(~integer);
+
     /* Alternate implementation for demonstrational purposes:
        // 1. erase all the higher bits after the first zero
        integer &= (integer << 16) | 0xffff;
@@ -119,39 +127,44 @@ function ctron(integer){ // count trailing ones
        integer &= (integer << 2 ) | 0x0003;
        integer &= (integer << 1 ) | 0x0001;
        // 2. Now, inversing the bits reveals the lowest zeros
-       return 32 - clon(~integer) |0;
+       return 32 - clon(~integer);
     */
 }
 ```
 
-Make these helper functions into ASM.JS module; then, you have a true performance
+Make these helper functions into an [asm.js](/docs/Games/Tools/asm.js) module; then, you have a true performance
 masterpiece. Situations like these are exactly what ASM.JS was designed for.
 
 ```js
 const countTrailsMethods = (function(stdlib, foreign, heap) {
     "use asm";
     const clz = stdlib.Math.clz32;
-    function ctrz(integer) { // count trailing zeros
+
+    // count trailing zeros
+    function ctrz(integer) {
         integer = integer | 0; // coerce to an integer
         // 1. fill in all the higher bits after the first one
-        // ASMjs for some reason does not allow ^=,&=, or |=
+        // Note: asm.js prohibits compound assignment operators such as |=
         integer = integer | (integer << 16);
         integer = integer | (integer << 8);
         integer = integer | (integer << 4);
         integer = integer | (integer << 2);
         integer = integer | (integer << 1);
         // 2. Now, inversing the bits reveals the lowest bits
-        return 32 - clz(~integer) |0;
+        return 32 - clz(~integer) | 0;
     }
-    function ctron(integer) { // count trailing ones
+
+    // count trailing ones
+    function ctron(integer) {
         integer = integer | 0; // coerce to an integer
-        return ctrz(~integer) |0;
+        return ctrz(~integer) | 0;
     }
-    // unfortunately, ASM.JS demands slow crummy objects:
-    return {a: ctrz, b: ctron};
+
+    // asm.js demands plain objects:
+    return { ctrz: ctrz, ctron: ctron };
 })(window, null, null);
-const ctrz = countTrailsMethods.a;
-const ctron = countTrailsMethods.b;
+
+const { ctrz, ctron } = countTrailsMethods;
 ```
 
 ## Examples
