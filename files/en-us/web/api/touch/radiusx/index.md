@@ -37,7 +37,7 @@ src.addEventListener('touchstart', rotate);
 src.addEventListener('touchmove', rotate);
 src.addEventListener('touchend', rotate);
 
-function rotate (e) {
+function rotate(e) {
   const touch = e.changedTouches.item(0);
 
   // Turn off default event handling
