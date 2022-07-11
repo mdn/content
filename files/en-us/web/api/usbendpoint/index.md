@@ -64,7 +64,7 @@ This code identifies the correct endpoints by searching for the interface implem
 let inEndpoint = undefined;
 let outEndpoint = undefined;
 
-for (const { alternatives } of device.configuration.interfaces) {
+for (const { alternates } of device.configuration.interfaces) {
   // Only support devices with out multiple alternate interfaces.
   const alternate = alternates[0];
 

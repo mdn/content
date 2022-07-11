@@ -98,7 +98,8 @@ pattern object, or a pattern string and optional baseURL.
 
 ```js
 new URLPattern(obj);
-new URLPattern(pattern, /* (optional) */ baseURL);
+new URLPattern(pattern);
+new URLPattern(pattern, baseURL);
 ```
 
 The first type of constructor (see above) takes an object that describes the
