@@ -29,7 +29,7 @@ Given this {{HTMLElement("canvas")}} element:
 <canvas id="canvas"></canvas>
 ```
 
-... you can get a reference to the canvas element within the
+… you can get a reference to the canvas element within the
 `CanvasRenderingContext2D` by using the `canvas` property:
 
 ```js

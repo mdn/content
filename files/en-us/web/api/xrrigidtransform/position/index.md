@@ -64,7 +64,7 @@ function refSpaceCreated(refSpace) {
     xrReferenceSpace = refSpace;
   } else {
     xrReferenceSpace = refSpace.getOffsetReferenceSpace(
-      new XRRigidTransform({y: -1.5});
+      new XRRigidTransform({y: -1.5})
     );
   }
   xrSession.requestAnimationFrame(onFrame);

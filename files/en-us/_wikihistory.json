@@ -44151,44 +44151,6 @@
       "JesseW"
     ]
   },
-  "Web/API/GlobalEventHandlers/onclose": {
-    "modified": "2020-10-15T21:15:09.999Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "jpmedley",
-      "cvrebert",
-      "Sebastianz",
-      "teoli",
-      "SphinxKnight",
-      "kscarfone",
-      "Sheppy",
-      "Djc8080",
-      "alecananian"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/oncontextmenu": {
-    "modified": "2020-10-15T21:04:57.192Z",
-    "contributors": [
-      "irenesmith",
-      "mfluehr",
-      "sideshowbarker",
-      "fscholz",
-      "erikadoyle",
-      "jpmedley",
-      "cvrebert",
-      "Skoua",
-      "teoli",
-      "kosvrouvas",
-      "kscarfone",
-      "Sheppy",
-      "ethertank",
-      "Brettz9",
-      "ziyunfei",
-      "Rob W",
-      "Ryatt"
-    ]
-  },
   "Web/API/GlobalEventHandlers/ondblclick": {
     "modified": "2020-10-15T21:03:47.416Z",
     "contributors": [
@@ -44275,27 +44237,6 @@
       "AFBarstow"
     ]
   },
-  "Web/API/GlobalEventHandlers/onemptied": {
-    "modified": "2020-10-15T21:44:06.259Z",
-    "contributors": [
-      "fscholz",
-      "sideshowbarker",
-      "wbamberg",
-      "rolfedh",
-      "Guillaume-Heras"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onended": {
-    "modified": "2020-10-15T21:44:06.013Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "sideshowbarker",
-      "wbamberg",
-      "rolfedh",
-      "Guillaume-Heras"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onerror": {
     "modified": "2020-10-15T21:07:20.884Z",
     "contributors": [
@@ -44333,12 +44274,6 @@
       "SergeG",
       "Doekman",
       "alecananian"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onformdata": {
-    "modified": "2020-10-15T22:24:47.547Z",
-    "contributors": [
-      "chrisdavidmills"
     ]
   },
   "Web/API/GlobalEventHandlers/ongotpointercapture": {
@@ -44645,27 +44580,6 @@
       "crazytonyi",
       "Mgjbot",
       "Spocke"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onsubmit": {
-    "modified": "2020-10-15T21:06:50.687Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "erikadoyle",
-      "jpmedley",
-      "DmitryK",
-      "cvrebert",
-      "Sebastianz",
-      "teoli",
-      "kosvrouvas",
-      "kscarfone",
-      "Sheppy",
-      "ziyunfei",
-      "Jabez",
-      "Teymour",
-      "Callek",
-      "alecananian"
     ]
   },
   "Web/API/GlobalEventHandlers/ontransitioncancel": {

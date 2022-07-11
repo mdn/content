@@ -228,7 +228,7 @@ The `handleReceiveChannelStatusChange()` method receives as an input parameter t
 
 ### Sending messages
 
-When the user presses the "Send" button, the sendMessage() method we've established as the handler for the button's {{event("click")}} event is called. That method is simple enough:
+When the user presses the "Send" button, the sendMessage() method we've established as the handler for the button's {{domxref("Element/click_event", "click")}} event is called. That method is simple enough:
 
 ```js
   function sendMessage() {

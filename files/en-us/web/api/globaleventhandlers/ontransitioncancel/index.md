@@ -17,7 +17,7 @@ browser-compat: api.GlobalEventHandlers.ontransitioncancel
 
 The **`ontransitioncancel`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("transitioncancel")}} events.
+processes {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}} events.
 
 The `transitioncancel` event is sent when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) is cancelled. The
 transition is cancelled when:
@@ -38,7 +38,7 @@ target.ontransitioncancel = {{jsxref("Function")}}
 
 ### Value
 
-A {{jsxref("Function")}} to be called when a {{event("transitioncancel")}} event occurs
+A {{jsxref("Function")}} to be called when a {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}} event occurs
 indicating that a CSS transition has been cancelled on the
 `target`, where the target object is an HTML element
 ({{domxref("HTMLElement")}}), document ({{domxref("Document")}}), or window
@@ -54,13 +54,13 @@ value of {{cssxref("transition-duration")}}.
 
 ## Example
 
-In this example, we use the {{event("transitionrun")}} and {{event("transitionend")}}
+In this example, we use the {{domxref("HTMLElement/transitionrun_event", "transitionrun")}} and {{domxref("HTMLElement/transitionend_event", "transitionend")}}
 events to detect when the transition begins and ends, to cause a text update to occur
 during the transition. This could also be used to trigger animations or other effects,
 to allow chaining of reactions.
 
-In addition, we also use a {{event("click")}} event to make the box disappear
-(`display: none;`), showing how it triggers the {{event("transitioncancel")}}
+In addition, we also use a {{domxref("Element/click_event", "click")}} event to make the box disappear
+(`display: none;`), showing how it triggers the {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}}
 event to fire.
 
 ### HTML
@@ -153,6 +153,6 @@ move the cursor away before the transition has run to completion.
 
 ## See also
 
-- The {{event("transitioncancel")}} event this event handler is triggered by
+- The {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}} event this event handler is triggered by
 - {{domxref("TransitionEvent")}}
-- The {{event("transitionrun")}} event, which occurs when the transition begins
+- The {{domxref("HTMLElement/transitionrun_event", "transitionrun")}} event, which occurs when the transition begins

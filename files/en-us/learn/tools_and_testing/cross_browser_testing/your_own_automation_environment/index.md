@@ -635,7 +635,7 @@ Let's update our `bstack_google_test.js` demo, to show how these features work:
     });
     ```
 
-4. Finally, update the `driver.sleep(2000)` ... block near the bottom of the code to add REST API calls (again, replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values):
+4. Finally, update the `driver.sleep(2000)` block near the bottom of the code to add REST API calls (again, replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values):
 
     ```js
     driver.sleep(2000).then(function() {
@@ -761,7 +761,7 @@ To do this, you need to:
     });
     ```
 
-5. Finally, replace the `driver.sleep(2000)` ... block near the bottom of the code with the following:
+5. Finally, replace the `driver.sleep(2000)` block near the bottom of the code with the following:
 
     ```js
     driver.sleep(2000).then(function() {

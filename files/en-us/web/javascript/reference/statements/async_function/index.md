@@ -58,7 +58,7 @@ Async functions can contain zero or more {{jsxref("Operators/await", "await")}} 
 Async functions always return a promise. If the return value of an async function is
 not explicitly a promise, it will be implicitly wrapped in a promise.
 
-For example, the following:
+For example, consider the following code:
 
 ```js
 async function foo() {
@@ -66,7 +66,7 @@ async function foo() {
 }
 ```
 
-...is similar to:
+It is similar to:
 
 ```js
 function foo() {
@@ -113,7 +113,7 @@ async function foo() {
 }
 ```
 
-...is equivalent to:
+It is also equivalent to:
 
 ```js
 function foo() {

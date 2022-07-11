@@ -106,7 +106,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - The {{domxref("isSecureContext")}} property has been implemented (see {{bug(1269052)}}).
 - The [Web App Manifest](/en-US/docs/Web/Manifest) install event has been renamed appinstalled (see {{domxref("Window.appinstalled_event")}}, {{domxref("Window.appinstalled", "appinstalled")}}) to avoid confusion with the service worker install event (see {{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}}). See {{bug(1309099)}} for more details about this update.
 - The {{domxref("DataTransfer.types")}} property of the [Drag and drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) now returns a frozen array of strings rather than a {{domxref("DOMStringList")}} (see {{bug(1298243)}}).
-- The {{domxref("HTMLMediaElement/loadstart_event", "loadstart")}} and {{Event("loadend")}} events are now fired on {{htmlelement("img")}} elements (see {{bug(1264769)}}, and also see {{domxref("GlobalEventHandlers.onloadstart")}} and {{domxref("GlobalEventHandlers.onloadend")}}).
+- The {{domxref("HTMLMediaElement/loadstart_event", "loadstart")}} and {{domxref("HTMLMediaElement/loadend_event", "loadend")}} events are now fired on {{htmlelement("img")}} elements (see {{bug(1264769)}}, and also see {{domxref("GlobalEventHandlers.onloadstart")}} and {{domxref("GlobalEventHandlers.onloadend")}}).
 - The {{domxref("Notification.requireInteraction")}} of the [Notifications API](/en-US/docs/Web/API/Notifications_API) has been implemented (see {{bug(862395)}}.)
 - The {{domxref("Window.open()")}} method now has a `noopener` [window feature](/en-US/docs/Web/API/Window/open#window_functionality_features) available (see {{bug(1267339)}}), which mirrors the functionality of the `rel="noopener"` [Link type](/en-US/docs/Web/HTML/Link_types).
 - The {{domxref("CustomElementRegistry.get()")}} method of the [Web Components API](/en-US/docs/Web/Web_Components) has been implemented (see {{bug(1275838)}}).
@@ -168,7 +168,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 ### Security
 
 - When login pages (i.e those containing an [`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password) field) are created so that they would be submitted insecurely, Firefox displays an in-context warning message below the password field to warn users ({{bug(1319119)}}). Autofill is also disabled on insecure login forms ({{bug(1217152)}}). See [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords) for more details.
-- Support for SHA-1 SSL certificates has been removed; navigating to a secure page that uses a SHA-1 certificate will now result in an [Untrusted Connection](https://support.mozilla.org/t5/Documents-Archive/quot-This-Connection-is-Untrusted-quot-error-message-appears/ta-p/589) error ({{bug(1330043)}}).
+- Support for SHA-1 SSL certificates has been removed; navigating to a secure page that uses a SHA-1 certificate will now result in an `Untrusted Connection` error ({{bug(1330043)}}).
 
 ## Plugins
 

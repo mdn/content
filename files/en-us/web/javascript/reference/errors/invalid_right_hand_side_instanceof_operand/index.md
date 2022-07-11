@@ -42,8 +42,8 @@ i.e. an object which has a `prototype` property and is callable.
 42 instanceof 0;      // TypeError: invalid 'instanceof' operand 0
 
 function Foo() {}
-var f = Foo();        // Foo() is called and returns undefined
-var x = new Foo();
+const f = Foo();        // Foo() is called and returns undefined
+const x = new Foo();
 
 x instanceof f;       // TypeError: invalid 'instanceof' operand f
 x instanceof x;       // TypeError: x is not a function
@@ -59,8 +59,8 @@ typeof "test" == "string"; // true
 typeof 42 == "number"      // true
 
 function Foo() {}
-var f = Foo;               // Do not call Foo.
-var x = new Foo();
+const f = Foo;               // Do not call Foo.
+const x = new Foo();
 
 x instanceof f;            // true
 x instanceof Foo;          // true

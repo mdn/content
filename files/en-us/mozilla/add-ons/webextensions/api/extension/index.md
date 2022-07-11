@@ -24,7 +24,7 @@ Utilities related to your extension. Get URLs to resources packages with your ex
 
 ## Properties
 
-- {{WebExtAPIRef("extension.lastError")}}{{deprecated_inline}}
+- {{WebExtAPIRef("extension.lastError")}} {{deprecated_inline}}
   - : Set for the lifetime of a callback if an asynchronous extension API has resulted in an error. If no error has occurred, `lastError` will be {{jsxref("undefined")}}.
 - {{WebExtAPIRef("extension.inIncognitoContext")}}
   - : `True` for content scripts running inside incognito tabs, and for extension pages running inside an incognito process. (The latter only applies to extensions with '`split`' `incognito_behavior`.)

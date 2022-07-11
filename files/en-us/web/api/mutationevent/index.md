@@ -40,7 +40,6 @@ These events are not implemented consistently across different browsers, for exa
 - IE prior to version 9 didn't support the mutation events at all and does not implement some of them correctly in version 9 ([for example, DOMNodeInserted](http://help.dottoro.com/ljmcxjla.php))
 - WebKit doesn't support DOMAttrModified (see [webkit bug 8191](https://bugs.webkit.org/show_bug.cgi?id=8191) and [the workaround](https://engineering.silk.co/post/31921750832/mutation-events-what-happens))
 - "mutation name events", i.e. DOMElementNameChanged and DOMAttributeNameChanged are not supported in Firefox (as of version 11), and probably in other browsers as well.
-- ...
 
 Dottoro [documents browser support for mutation events](http://help.dottoro.com/ljfvvdnm.php#additionalEvents).
 

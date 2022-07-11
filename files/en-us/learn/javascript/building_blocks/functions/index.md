@@ -50,7 +50,9 @@ Pretty much anytime you make use of a JavaScript structure that features a pair 
 
 ## Built-in browser functions
 
-We've made use of functions built in to the browser a lot in this course. Every time we manipulated a text string, for example:
+We've used functions built in to the browser a lot in this course.
+
+Every time we manipulated a text string, for example:
 
 ```js
 const myText = 'I am a string';
@@ -72,7 +74,7 @@ console.log(madeAString);
 // string, and returns this new string
 ```
 
-Or every time we generated a random number:
+Or every time we generate a random number:
 
 ```js
 const myNumber = Math.random();
@@ -80,7 +82,7 @@ const myNumber = Math.random();
 // 0 and up to but not including 1, and returns that number
 ```
 
-...we were using a function!
+We were using a _function_!
 
 > **Note:** Feel free to enter these lines into your browser's JavaScript console to re-familiarize yourself with their functionality, if needed.
 
@@ -126,7 +128,7 @@ We needed this function because the browser's built-in [Math.random()](/en-US/do
 
 ## Invoking functions
 
-You are probably clear on this by now, but just in case ... to actually use a function after it has been defined, you've got to run — or invoke — it. This is done by including the name of the function in the code somewhere, followed by parentheses.
+You are probably clear on this by now, but just in case, to actually use a function after it has been defined, you've got to run — or invoke — it. This is done by including the name of the function in the code somewhere, followed by parentheses.
 
 ```js
 function myFunction() {

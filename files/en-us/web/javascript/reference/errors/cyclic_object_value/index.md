@@ -38,7 +38,7 @@ hence {{jsxref("JSON.stringify()")}} doesn't try to solve them and fails accordi
 In a circular structure like the following
 
 ```js
-var circularReference = {otherData: 123};
+const circularReference = {otherData: 123};
 circularReference.myself = circularReference;
 ```
 

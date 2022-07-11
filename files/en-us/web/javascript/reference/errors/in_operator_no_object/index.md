@@ -57,7 +57,7 @@ Make sure the object you are inspecting isn't actually {{jsxref("null")}} or
 {{jsxref("undefined")}}.
 
 ```js example-bad
-var foo = null;
+const foo = null;
 "bar" in foo;
 // TypeError: cannot use 'in' operator to search for 'bar' in 'foo' (Chrome)
 // TypeError: right-hand side of 'in' should be an object, got null (Firefox)
@@ -66,7 +66,7 @@ var foo = null;
 The `in` operator always expects an object.
 
 ```js example-good
-var foo = { baz: "bar" };
+const foo = { baz: "bar" };
 "bar" in foo; // false
 
 "PI" in Math; // true
@@ -80,7 +80,7 @@ objects. The `in` operator checks the index number, not the value at that
 index.
 
 ```js
-var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+const trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 3 in trees; // true
 "oak" in trees; // false
 ```

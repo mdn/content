@@ -209,7 +209,7 @@ This manually-maintained documentation is likely to fall out of date with the co
 
     Example using the `DOMxRef` macro: `<%- template("DOMxRef", ["Event.bubbles", "bubbles"]) %>`.
 
-    This is a JavaScript function. So, if one of the parameters is an arg variable like $2, do not put it in quotes. Like this: `<%- template("warning", [$1, $2, "baz"]) %>`. If you need to call another template from within a block of code, do not use `<%` ... `%>`. Example: `myvar = "<li>" + template("LXRSearch", ["ident", "i", $1]) + "</li>";`
+    This is a JavaScript function. So, if one of the parameters is an arg variable like $2, do not put it in quotes. Like this: `<%- template("warning", [$1, $2, "baz"]) %>`. If you need to call another template from within a block of code, do not use `<%` … `%>`. Example: `myvar = "<li>" + template("LXRSearch", ["ident", "i", $1]) + "</li>";`
 
 - `require(name)`
   - : Loads another template as a module; any output is ignored. Anything assigned to `module.exports` in the template is returned. Used in templates like so: `<% const my_module = require('MyModule'); %>`.
@@ -315,7 +315,7 @@ This is probably a temporary failure of the KumaScript service. If you Refresh t
 On some pages, you'll see a scripting error like this:
 
 ```plain
-Syntax error at line 436, column 461: Expected valid JSON object as the parameter of the preceding macro but...
+Syntax error at line 436, column 461: Expected valid JSON object as the parameter of the preceding macro but…
 ```
 
 If you edit the page, you'll probably see a macro like this at the bottom of the page:
@@ -349,7 +349,7 @@ You can read the contents of an attached file by using the `mdn.getFileContent()
 ```js
 <%
   let contents = mdn.getFileContent(fileUrl);
-  // ... do stuff with the contents ...
+  // do stuff with the contents…
 %>
 ```
 

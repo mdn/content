@@ -92,6 +92,7 @@ function drawFrame(time, frame) {
       gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 
       /* Render the scene now */
+    }
   }
 }
 ```

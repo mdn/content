@@ -50,7 +50,7 @@ This code adds a listener to the `transitionrun` event:
 
 ```js
 window.addEventListener('transitionrun', () => {
-  console.log('Transition is running but hasn't necessarily started transitioning yet');
+  console.log("Transition is running but hasn't necessarily started transitioning yet");
 });
 ```
 

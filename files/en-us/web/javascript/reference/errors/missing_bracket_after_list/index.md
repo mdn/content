@@ -33,29 +33,29 @@ closing bracket ("`]`") or a comma ("`,`") missing.
 ### Incomplete array initializer
 
 ```js example-bad
-var list = [1, 2,
+const list = [1, 2,
 
-var instruments = [
+const instruments = [
   'Ukulele',
   'Guitar',
   'Piano'
 };
 
-var data = [{foo: 'bar'} {bar: 'foo'}];
+const data = [{ foo: 'bar' } { bar: 'foo' }];
 ```
 
 Correct would be:
 
 ```js example-good
-var list = [1, 2];
+const list = [1, 2];
 
-var instruments = [
+const instruments = [
  'Ukulele',
  'Guitar',
  'Piano'
 ];
 
-var data = [{foo: 'bar'}, {bar: 'foo'}];
+const data = [{ foo: 'bar' }, { bar: 'foo' }];
 ```
 
 ## See also

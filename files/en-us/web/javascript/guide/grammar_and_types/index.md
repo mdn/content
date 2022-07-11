@@ -112,7 +112,7 @@ let y;
 You can use `undefined` to determine whether a variable has a value. In the following code, the variable `input` is not assigned a value, and the [`if`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement evaluates to `true`.
 
 ```js
-var input;
+let input;
 if (input === undefined) {
   doThis();
 } else {
@@ -123,21 +123,21 @@ if (input === undefined) {
 The `undefined` value behaves as `false` when used in a boolean context. For example, the following code executes the function `myFunction` because the `myArray` element is `undefined`:
 
 ```js
-var myArray = [];
+const myArray = [];
 if (!myArray[0]) myFunction();
 ```
 
 The `undefined` value converts to `NaN` when used in numeric context.
 
 ```js
-var a;
+let a;
 a + 2;  // Evaluates to NaN
 ```
 
 When you evaluate a {{jsxref("null")}} variable, the null value behaves as `0` in numeric contexts and as `false` in boolean contexts. For example:
 
 ```js
-var n = null;
+const n = null;
 console.log(n * 32); // Will log 0 to the console
 ```
 
@@ -333,7 +333,7 @@ JavaScript is a _dynamically typed_ language. This means you don't have to speci
 So, for example, you could define a variable as follows:
 
 ```js
-var answer = 42;
+let answer = 42;
 ```
 
 And later, you could assign the same variable a string value, for example:
@@ -533,10 +533,10 @@ An object literal is a list of zero or more pairs of property names and associat
 
 > **Warning:** Do not use an object literal at the beginning of a statement! This will lead to an error (or not behave as you expect), because the `{` will be interpreted as the beginning of a block.
 
-The following is an example of an object literal. The first element of the `car` object defines a property, `myCar`, and assigns to it a new string, "`Saturn`"; the second element, the `getCar` property, is immediately assigned the result of invoking the function `(carTypes("Honda"))`; the third element, the `special` property, uses an existing variable (`sales`).
+The following is an example of an object literal. The first element of the `car` object defines a property, `myCar`, and assigns to it a new string, `"Saturn"`; the second element, the `getCar` property, is immediately assigned the result of invoking the function `(carTypes("Honda"))`; the third element, the `special` property, uses an existing variable (`sales`).
 
 ```js
-var sales = 'Toyota';
+const sales = 'Toyota';
 
 function carTypes(name) {
   if (name === 'Honda') {
@@ -546,7 +546,7 @@ function carTypes(name) {
   }
 }
 
-var car = { myCar: 'Saturn', getCar: carTypes('Honda'), special: sales };
+const car = { myCar: 'Saturn', getCar: carTypes('Honda'), special: sales };
 
 console.log(car.myCar);   // Saturn
 console.log(car.getCar);  // Honda
@@ -556,7 +556,7 @@ console.log(car.special); // Toyota
 Additionally, you can use a numeric or string literal for the name of a property or nest an object inside another. The following example uses these options.
 
 ```js
-var car = { manyCars: {a: 'Saab', b: 'Jeep'}, 7: 'Mazda' };
+const car = { manyCars: { a: 'Saab', b: 'Jeep' }, 7: 'Mazda' };
 
 console.log(car.manyCars.b); // Jeep
 console.log(car[7]); // Mazda
@@ -567,7 +567,7 @@ Object property names can be any string, including the empty string. If the prop
 Property names that are not valid identifiers cannot be accessed as a dot (`.`) property, but _can_ be accessed and set with the array-like notation("`[]`").
 
 ```js
-var unusualPropertyNames = {
+const unusualPropertyNames = {
   '': 'An empty string',
   '!': 'Bang!'
 }
@@ -584,19 +584,19 @@ In ES2015, object literals are extended to support setting the prototype at cons
 Together, these also bring object literals and class declarations closer together, and allow object-based design to benefit from some of the same conveniences.
 
 ```js
-var obj = {
-    // __proto__
-    __proto__: theProtoObj,
-    // Shorthand for 'handler: handler'
-    handler,
-    // Methods
-    toString() {
-     // Super calls
-     return 'd ' + super.toString();
-    },
-    // Computed (dynamic) property names
-    [ 'prop_' + (() => 42)() ]: 42
-};
+const obj = {
+  // __proto__
+  __proto__: theProtoObj,
+  // Shorthand for 'handler: handler'
+  handler,
+  // Methods
+  toString() {
+   // Super calls
+    return 'd ' + super.toString();
+  },
+  // Computed (dynamic) property names
+  [ 'prop_' + (() => 42)() ]: 42,
+}
 ```
 
 ### RegExp literals
@@ -604,7 +604,7 @@ var obj = {
 A regex literal (which is defined in detail [later](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)) is a pattern enclosed between slashes. The following is an example of a regex literal.
 
 ```js
-var re = /ab+c/;
+const re = /ab+c/;
 ```
 
 ### String literals
@@ -826,7 +826,7 @@ For characters not listed in the table, a preceding backslash is ignored, but th
 You can insert a quotation mark inside a string by preceding it with a backslash. This is known as _escaping_ the quotation mark. For example:
 
 ```js
-var quote = "He read \"The Cremation of Sam McGee\" by R.W. Service.";
+const quote = "He read \"The Cremation of Sam McGee\" by R.W. Service.";
 console.log(quote);
 ```
 
@@ -839,33 +839,23 @@ He read "The Cremation of Sam McGee" by R.W. Service.
 To include a literal backslash inside a string, you must escape the backslash character. For example, to assign the file path `c:\temp` to a string, use the following:
 
 ```js
-var home = 'c:\\temp';
+const home = 'c:\\temp';
 ```
 
 You can also escape line breaks by preceding them with backslash. The backslash and line break are both removed from the value of the string.
 
 ```js
-var str = 'this string \
+const str = 'this string \
 is broken \
 across multiple \
 lines.'
 console.log(str);   // this string is broken across multiple lines.
 ```
 
-Although JavaScript does not have "heredoc" syntax, you can get close by adding a line break escape and an escaped line break at the end of each line:
-
-```js
-var poem =
-'Roses are red,\n\
-Violets are blue.\n\
-Sugar is sweet,\n\
-and so is foo.'
-```
-
 ECMAScript 2015 introduces a new type of literal, namely [**template literals**](/en-US/docs/Web/JavaScript/Reference/Template_literals). This allows for many new features, including multiline strings!
 
 ```js
-var poem =
+const poem =
 `Roses are red,
 Violets are blue.
 Sugar is sweet,

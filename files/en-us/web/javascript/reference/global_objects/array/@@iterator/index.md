@@ -52,9 +52,6 @@ return the {{jsxref("Array.prototype.values()", "values()")}} function.
 const arr = ['a', 'b', 'c'];
 const eArr = arr[Symbol.iterator]();
 const letterResult = document.getElementById('letterResult');
-// your browser must support for..of loop
-// and let-scoped variables in for loops
-// const and var could also be used
 for (const letter of eArr) {
   const li = document.createElement('li');
   li.textContent = letter;

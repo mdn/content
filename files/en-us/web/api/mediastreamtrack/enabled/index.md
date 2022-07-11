@@ -59,7 +59,7 @@ computers turns off while the track is muted in this way.
 
 ## Example
 
-This example demonstrates a {{event("click")}} event handler for a pause button.
+This example demonstrates a {{domxref("Element/click_event", "click")}} event handler for a pause button.
 
 ```js
 pauseButton.onclick = function(evt) {

@@ -74,7 +74,7 @@ The summary paragraph — start by naming the interface, saying what API it is p
 
 _Also inherits properties from its parent interface, {{DOMxRef("NameOfParentInterface")}}._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
 
-- {{DOMxRef("NameOfTheInterface.property1")}}{{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{DOMxRef("NameOfTheInterface.property1")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Include a brief description of the property and what it does here. Include one term and definition for each property. If the property is not readonly/experimental/deprecated, remove the relevant macro calls.
 - {{DOMxRef("NameOfTheInterface.property2")}}
   - : etc.
@@ -93,13 +93,13 @@ _Also inherits methods from its parent interface, {{DOMxRef("NameOfParentInterfa
 Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
 - [`eventname1`](#)
-  - : Fired when ... include description of when event fires.
+  - : Fired when (include the description of when the event fires).
     Also available via the `oneventname1` property.
 - [`eventname2`](#)
-  - : Fired when ... include description of when event fires.
+  - : Fired when _(include a description of when the event fires)_.
     Also available via the `oneventname2` property.
 - etc.
-  - : Fired when ...
+  - : Fired when…
 
 ## Examples
 

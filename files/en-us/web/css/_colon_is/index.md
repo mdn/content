@@ -139,7 +139,7 @@ function applyHandler(elem) {
 
 ### Simplifying list selectors
 
-The `:is()` pseudo-class can greatly simplify your CSS selectors. For example, the following CSS:
+The `:is()` pseudo-class can greatly simplify your CSS selectors. For example, take the following CSS:
 
 ```css
 /* 3-deep (or more) unordered lists use a square */
@@ -159,7 +159,7 @@ dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
 }
 ```
 
-... can be replaced with:
+You can replace it with:
 
 ```css
 /* 3-deep (or more) unordered lists use a square */

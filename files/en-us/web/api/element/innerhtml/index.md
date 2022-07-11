@@ -127,7 +127,7 @@ const name = "John";
 // assuming 'el' is an HTML DOM element
 el.innerHTML = name; // harmless in this case
 
-// ...
+// …
 
 name = "<script>alert('I am John in an annoying alert!')</script>";
 el.innerHTML = name; // harmless in this case
