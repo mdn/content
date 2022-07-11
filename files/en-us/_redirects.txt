@@ -8169,6 +8169,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onreset	/en-US/docs/Web/API/HTMLFormElement/reset_event
 /en-US/docs/Web/API/GlobalEventHandlers/onresize	/en-US/docs/Web/API/Window/resize_event
 /en-US/docs/Web/API/GlobalEventHandlers/onselect	/en-US/docs/Web/API/HTMLInputElement/select_event
+/en-US/docs/Web/API/GlobalEventHandlers/onslotchange	/en-US/docs/Web/API/HTMLSlotElement/slotchange_event
 /en-US/docs/Web/API/GlobalEventHandlers/onsubmit	/en-US/docs/Web/API/HTMLFormElement/submit_event
 /en-US/docs/Web/API/GlobalEventHandlers/ontouchcancel	/en-US/docs/Web/API/Element/touchcancel_event
 /en-US/docs/Web/API/GlobalEventHandlers/ontouchend	/en-US/docs/Web/API/Element/touchend_event
