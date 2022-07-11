@@ -30,16 +30,17 @@ function create_marks(ev) {
     log("Create Marks: performance.mark Not supported", 0);
     return;
   } else {
-  log("Create marks", 0);
-  // Create several performance marks including two with the same name
-  performance.mark("mark-1");
-  do_work(50000);
-  performance.mark("mark-2");
-  do_work(50000);
-  performance.mark("mark-2");
-  var marks = ["mark-1", "mark-2", "mark-2"];
-  for (var i=0; i < marks.length; i++)
-    log("... Created mark = " + marks[i], 0);
+    log("Create marks", 0);
+    // Create several performance marks including two with the same name
+    performance.mark("mark-1");
+    do_work(50000);
+    performance.mark("mark-2");
+    do_work(50000);
+    performance.mark("mark-2");
+    var marks = ["mark-1", "mark-2", "mark-2"];
+    for (var i=0; i < marks.length; i++)
+      log("... Created mark = " + marks[i], 0);
+  }
 }
 ```
 

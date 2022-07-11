@@ -52,7 +52,7 @@ if(navigator.getVRDisplays) {
           // Here it returns an array of VRLayerInit objects
           var layers = vrDisplay.getLayers();
 
-          ...
+          // ...
         });
       });
     }
@@ -62,7 +62,7 @@ if(navigator.getVRDisplays) {
 
 {{domxref("VRLayerInit")}} objects look something like this:
 
-```js
+```
 {
   leftBounds : [ ... ],
   rightBounds: [ ... ],

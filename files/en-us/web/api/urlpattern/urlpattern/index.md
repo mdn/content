@@ -51,26 +51,33 @@ new URLPattern(input, baseURL)
 ```js
 // Matching a pathname
 let pattern = new URLPattern('https://example.com/books/:id')
-    = new URLPattern(
-        '/books/:id',
-        'https://example.com',
-      )
-    = new URLPattern({
-        protocol: 'https',
-        hostname: 'example.com',
-        pathname: '/books/:id',
-      })
-    = new URLPattern({
-        pathname: '/books/:id',
-        baseURL: 'https://example.com',
-      });
+    // same as
+    new URLPattern(
+      '/books/:id',
+      'https://example.com',
+    );
+    // or
+    new URLPattern({
+      protocol: 'https',
+      hostname: 'example.com',
+      pathname: '/books/:id',
+    });
+    // or
+    new URLPattern({
+      pathname: '/books/:id',
+      baseURL: 'https://example.com',
+    });
+```
 
+```js
 // Match the protocol and hostname
 let pattern = new URLPattern({
-    protocol: 'http{s}?',
-    hostname: ':subdomain.example.com',
-  });
+  protocol: 'http{s}?',
+  hostname: ':subdomain.example.com',
+});
+```
 
+```js
 // Match all possible structured parts
 let pattern = new URLPattern({
   protocol: 'http{s}?',
@@ -91,7 +98,7 @@ pattern object, or a pattern string and optional baseURL.
 
 ```js
 new URLPattern(obj);
-new URLPattern(pattern[, baseURL]);
+new URLPattern(pattern, /* (optional) */ baseURL);
 ```
 
 The first type of constructor (see above) takes an object that describes the
