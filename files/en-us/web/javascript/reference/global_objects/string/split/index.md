@@ -229,7 +229,7 @@ const splitCommands = {
     let matchPos = str.indexOf(DELIMITER, pos);
 
     while (matchPos !== -1) {
-      let subString = str.slice(pos, matchPos).trim();
+      const subString = str.slice(pos, matchPos).trim();
 
       switch (subString) {
         case "light on":
