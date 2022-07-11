@@ -244,7 +244,7 @@ Have a look at what effect this has and remove it again when you've finished.
 - There is another value, `space-between`, which is very similar to `space-around` except that it doesn't leave any space at either end.
 
 
-The [`justify-items`](/en-US/docs/Web/CSS/justify-items) property is ignored in Flexbox layouts.
+The [`justify-items`](/en-US/docs/Web/CSS/justify-items) property is ignored in flexbox layouts.
 
 We'd like to encourage you to play with these values to see how they work before you continue.
 
