@@ -101,7 +101,7 @@ In HTML, link types indicate the relationship between two documents, in which on
         contact form.<br /><br />Although recognized, the
         {{HTMLAttrxRef("rev", "link")}} attribute on
         {{HTMLElement("a")}}, {{HTMLElement("area")}}
-        or{{HTMLElement("link")}} elements with a link type of
+        or {{HTMLElement("link")}} elements with a link type of
         <code>made</code> is incorrect and should be replaced by the
         {{HTMLAttrxRef("rel", "link")}} attribute with this link type.
       </td>

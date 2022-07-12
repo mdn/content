@@ -127,7 +127,7 @@ The required styles are those necessary to handle the three states of our contro
 ```css
 .select {
   /* This will create a positioning context for the list of options;
-     adding this to .select{{cssxref(':focus-within')}} will be a better option when fully supported
+     adding this to .select {{cssxref(':focus-within')}} will be a better option when fully supported
   */
   position: relative;
 
