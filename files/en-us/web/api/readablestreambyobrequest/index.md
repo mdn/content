@@ -54,7 +54,7 @@ None. `ReadableStreamBYOBRequest` instance is created automatically by `Readable
 
 The following code is taken from the live example in [Using readable byte streams > Creating a readable socket push byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams#creating_a_readable_socket_push_byte_stream).
 
-An push underlying byte source with data to transfer should first check that {{domxref("ReadableByteStreamController.byobRequest","controller.byobRequest")}} is non-`null`. Pul
+A push underlying byte source with data to transfer should first check that {{domxref("ReadableByteStreamController.byobRequest","controller.byobRequest")}} is non-`null`. Pul
 A pull underlying byte source would only need this check if auto chunk allocation was not enabled and it was used with a default reader.
 
 ```js
