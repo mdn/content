@@ -70,13 +70,14 @@ The `PointerEvent` interface has several event types. To determine which event f
 - {{domxref('HTMLElement/pointerenter_event', 'pointerenter')}}
   - : This event is fired when a pointing device is moved into the hit test boundaries of an element or one of its descendants, including as a result of a `pointerdown` event from a device that does not support hover (see `pointerdown`). This event type is similar to `pointerover`, but differs in that it does not bubble.
 - {{domxref('HTMLElement/pointerdown_event', 'pointerdown')}}
+
   - : The event is fired when a pointer becomes _active_. For mouse, it is fired when the device transitions from no buttons pressed to at least one button pressed. For touch, it is fired when physical contact is made with the digitizer. For pen, it is fired when the stylus makes physical contact with the digitizer.
 
-  > **Note:** For touchscreen browsers that allow [direct manipulation](https://w3c.github.io/pointerevents/#dfn-direct-manipulation), a `pointerdown` event triggers [implicit pointer capture](https://w3c.github.io/pointerevents/#dfn-implicit-pointer-capture), which causes the target to capture all subsequent pointer events as if they were occurring over the capturing target. Accordingly, `pointerover`, `pointerenter`, `pointerleave`, and `pointerout` **will not fire** as long as this capture is set. The capture can be released manually by calling {{ domxref('element.releasePointerCapture') }} on the target element, or it will be implicitly released after a `pointerup` or `pointercancel` event.
+    > **Note:** For touchscreen browsers that allow [direct manipulation](https://w3c.github.io/pointerevents/#dfn-direct-manipulation), a `pointerdown` event triggers [implicit pointer capture](https://w3c.github.io/pointerevents/#dfn-implicit-pointer-capture), which causes the target to capture all subsequent pointer events as if they were occurring over the capturing target. Accordingly, `pointerover`, `pointerenter`, `pointerleave`, and `pointerout` **will not fire** as long as this capture is set. The capture can be released manually by calling {{ domxref('element.releasePointerCapture') }} on the target element, or it will be implicitly released after a `pointerup` or `pointercancel` event.
 
 - {{domxref('HTMLElement/pointermove_event', 'pointermove')}}
   - : This event is fired when a pointer changes coordinates.
-- {{event('pointerrawupdate')}} {{Experimental_Inline}}
+- {{domxref('HTMLElement/pointerrawupdate_event', 'pointerrawupdate')}} {{Experimental_Inline}}
   - : This event is fired when any of a pointer's properties change.
 - {{domxref('HTMLElement/pointerup_event', 'pointerup')}}
   - : This event is fired when a pointer is no longer _active_.
