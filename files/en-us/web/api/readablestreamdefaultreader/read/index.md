@@ -85,7 +85,7 @@ function fetchStream() {
 ### Example 2 - handling text line by line
 
 This example shows how you might fetch a text file and handle it as a stream of text lines.
-It deals with stream chunks not ending on line boundaries and converting from `Uint8Array` to strings.
+It deals with stream chunks not ending on line boundaries, and with converting from `Uint8Array` to strings.
 
 ```js
 async function* makeTextFileLineIterator(fileURL) {
