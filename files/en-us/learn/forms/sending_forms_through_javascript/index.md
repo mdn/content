@@ -366,7 +366,7 @@ window.addEventListener( 'load', function () {
     XHR.send( data );
   }
 
-  // Geth the form element
+  // Get the form element
   const form = document.getElementById( "theForm" );
 
   // Add 'submit' event handler

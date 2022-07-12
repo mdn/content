@@ -240,7 +240,7 @@ Quotation Element</em>) indicates that the enclosed text is an extended quotatio
 To turn this into a block quote, we would just do this:
 
 ```html
-<p>Here below is a blockquote…</p>
+<p>Here is a blockquote:</p>
 <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
   <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
   Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
