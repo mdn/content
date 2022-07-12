@@ -121,7 +121,7 @@ This category contains several sub-categories:
 - submittable
   - : Elements that can be used for constructing the form data set when the form is submitted. Contains {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("keygen")}} {{deprecated_inline}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
 - resettable
-  - : Elements that can be affected when a form is reset. Contains {{HTMLElement("input")}}, {{HTMLElement("keygen")}} {{deprecated_inline}}, {{HTMLElement("output")}},{{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+  - : Elements that can be affected when a form is reset. Contains {{HTMLElement("input")}}, {{HTMLElement("keygen")}} {{deprecated_inline}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
 
 ## Secondary categories
 

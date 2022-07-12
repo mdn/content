@@ -45,7 +45,7 @@ On browsers that don't support inputs of type `email`, a `email` input falls bac
         {{htmlattrxref("maxlength", "input")}},
         {{htmlattrxref("minlength", "input")}},
         {{htmlattrxref("multiple", "input")}},
-        {{htmlattrxref("name", "input")}},{{htmlattrxref("pattern", "input")}},
+        {{htmlattrxref("name", "input")}}, {{htmlattrxref("pattern", "input")}},
         {{htmlattrxref("placeholder", "input")}},
         {{htmlattrxref("readonly", "input")}},
         {{htmlattrxref("required", "input")}},
