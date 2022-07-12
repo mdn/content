@@ -634,11 +634,11 @@ When the browser shuts down (because the user chose the Quit or Exit option), th
 
 1. Each transaction on every affected database (or all open databases, in the case of browser shutdown) is aborted with an `AbortError`. The effect is the same as if {{domxref("IDBTransaction.abort()")}} is called on each transaction.
 2. Once all of the transactions have completed, the database connection is closed.
-3. Finally, the {{domxref("IDBDatabase")}} object representing the database connection receives a {{event("close")}} event. You can use the {{domxref("IDBDatabase.close_event", "IDBDatabase.onclose")}} event handler to listen for these events, so that you know when a database is unexpectedly closed.
+3. Finally, the {{domxref("IDBDatabase")}} object representing the database connection receives a {{domxref("IDBDatabase/close_event", "close")}} event. You can use the {{domxref("IDBDatabase.close_event", "IDBDatabase.onclose")}} event handler to listen for these events, so that you know when a database is unexpectedly closed.
 
 The behavior described above is new, and is only available as of the following browser releases: Firefox 50, Google Chrome 31 (approximately).
 
-Prior to these browser versions, the transactions are aborted silently, and no {{event("close")}} event is fired, so there is no way to detect an unexpected database closure.
+Prior to these browser versions, the transactions are aborted silently, and no {{domxref("IDBDatabase/close_event", "close")}} event is fired, so there is no way to detect an unexpected database closure.
 
 Since the user can exit the browser at any time, this means that you cannot rely upon any particular transaction to complete, and on older browsers, you don't even get told when they don't complete. There are several implications of this behavior.
 
