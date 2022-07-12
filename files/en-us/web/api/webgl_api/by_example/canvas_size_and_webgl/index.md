@@ -51,12 +51,12 @@ canvas {
 ```js
 window.addEventListener("load", function() {
   "use strict"
-  var firstCanvas = document.getElementsByTagName("canvas")[0],
+  const firstCanvas = document.getElementsByTagName("canvas")[0],
     secondCanvas = document.getElementsByTagName("canvas")[1];
   firstCanvas.width = firstCanvas.clientWidth;
   firstCanvas.height = firstCanvas.clientHeight;
   [firstCanvas, secondCanvas].forEach(function(canvas) {
-    var gl = canvas.getContext("webgl")
+    const gl = canvas.getContext("webgl")
       || canvas.getContext("experimental-webgl");
     if (!gl) {
       document.querySelector("p").innerHTML =
