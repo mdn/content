@@ -73,7 +73,6 @@ The following are possible:
 
 - If the stream throws an error, the promise rejects with the relevant error.
 
-
 ### Exceptions
 
 - {{jsxref("TypeError")}}

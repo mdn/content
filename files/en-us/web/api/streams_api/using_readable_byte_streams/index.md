@@ -255,7 +255,7 @@ Since data can arrive at the socket before the consumer is ready to handle it, e
 The implementation opens the "socket" and calls `select2()` to request data.
 When the retured promise resolves the code checks if `controller.byobRequest` exists (is not `null`), and if so calls `socket.readInto()` to copy data into the request and transfer it.
 If `byobRequest` does not exist there is no outstanding request from a consuming stream that can be satisifed as as zero-copy transfer.
-In this case, `constroller.enqueue()` used to copy data to the stream internal queues. 
+In this case, `constroller.enqueue()` used to copy data to the stream internal queues.
 
 The `select2()` request for more data is reposted until a request is returned with no data.
 A this point the controller is used to close the stream.
