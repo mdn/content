@@ -82,7 +82,7 @@ _No changes._
 - {{DOMxRef("Document.createEvent", "Document.createEvent('FocusEvent')")}} is now supported ({{bug(1388069)}}).
 - The `files` property of the {{DOMxRef("HTMLInputElement")}} interface is now settable ({{bug(1384030)}}).
 - The `HTMLDocument.getSelection()` method has been moved to the {{DOMxRef("Document/getSelection","Document")}} interface so it is available to XML documents ({{bug(718711)}}).
-- The {{Event("messageerror")}} event is now implemented, and can have code run in response to it firing via event handlers implemented on message targets — see {{DOMxRef("MessagePort.messageerror_event")}}, {{DOMxRef("DedicatedWorkerGlobalScope.messageerror_event")}}, {{DOMxRef("Worker.messageerror_event")}}, {{DOMxRef("BroadcastChannel.messageerror_event")}}, and {{DOMxRef("Window.messageerror_event")}} ({{bug(1359017)}}).
+- The `messageerror` event is now implemented, and can have code run in response to it firing via event handlers implemented on message targets — see {{DOMxRef("MessagePort.messageerror_event")}}, {{DOMxRef("DedicatedWorkerGlobalScope.messageerror_event")}}, {{DOMxRef("Worker.messageerror_event")}}, {{DOMxRef("BroadcastChannel.messageerror_event")}}, and {{DOMxRef("Window.messageerror_event")}} ({{bug(1359017)}}).
 - When {{DOMxRef("Headers")}} values are iterated over, they are automatically sorted in lexicographical order, and values from duplicate header names are combined ({{bug(1396848)}}).
 
 #### DOM events
