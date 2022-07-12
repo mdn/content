@@ -58,7 +58,7 @@ function WebGLBox() {
   this.canvas.height = window.innerHeight;
   this.gl = MDN.createContext(canvas);
 
-  var gl = this.gl;
+  const gl = this.gl;
 
   // Setup a WebGL program, anything part of the MDN object is defined outside of this article
   this.webglProgram = MDN.createWebGLProgramFromIds(gl, 'vertex-shader', 'fragment-shader');
@@ -84,7 +84,7 @@ WebGLBox.prototype.draw = function(settings) {
   // Create some attribute data; these are the triangles that will end being
   // drawn to the screen. There are two that form a square.
 
-  var data = new Float32Array([
+  const data = new Float32Array([
 
     //Triangle 1
     settings.left,  settings.bottom, settings.depth,
@@ -102,10 +102,10 @@ WebGLBox.prototype.draw = function(settings) {
   // Performance Note: Creating a new array buffer for every draw call is slow.
   // This function is for illustration purposes only.
 
-  var gl = this.gl;
+  const gl = this.gl;
 
   // Create a buffer and bind the data
-  var buffer = gl.createBuffer();
+  const buffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
   gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);
 
@@ -149,7 +149,7 @@ void main() {
 With those settings included, it's time to directly draw to the screen using clip space coordinates.
 
 ```js
-var box = new WebGLBox();
+const box = new WebGLBox();
 ```
 
 First draw a red box in the middle.
@@ -257,7 +257,7 @@ To start playing with this idea the previous example can be modified to allow fo
 
 ```js
 //Redefine the triangles to use the W component
-var data = new Float32Array([
+const data = new Float32Array([
   //Triangle 1
   settings.left,  settings.bottom, settings.depth, settings.w,
   settings.right, settings.bottom, settings.depth, settings.w,
@@ -347,16 +347,16 @@ The following code sample defines a method on the `CubeDemo` object that will cr
 ```js
 CubeDemo.prototype.computeModelMatrix = function(now) {
   //Scale down by 50%
-  var scale = MDN.scaleMatrix(0.5, 0.5, 0.5);
+  const scale = MDN.scaleMatrix(0.5, 0.5, 0.5);
 
   // Rotate a slight tilt
-  var rotateX = MDN.rotateXMatrix(now * 0.0003);
+  const rotateX = MDN.rotateXMatrix(now * 0.0003);
 
   // Rotate according to time
-  var rotateY = MDN.rotateYMatrix(now * 0.0005);
+  const rotateY = MDN.rotateYMatrix(now * 0.0005);
 
   // Move slightly down
-  var position = MDN.translateMatrix(0, -0.1, 0);
+  const position = MDN.translateMatrix(0, -0.1, 0);
 
   // Multiply together, make sure and read them in opposite order
   this.transforms.model = MDN.multiplyArrayOfMatrices([
@@ -443,7 +443,7 @@ In the next section we'll take this step of copying Z into the w slot and turn i
 The last step of filling in the w component can actually be accomplished with a simple matrix. Start with the identity matrix:
 
 ```js
-var identity = [
+const identity = [
   1, 0, 0, 0,
   0, 1, 0, 0,
   0, 0, 1, 0,
@@ -457,7 +457,7 @@ MDN.multiplyPoint(identity, [2, 3, 4, 1]);
 Then move the last column's 1 up one space.
 
 ```js
-var copyZ = [
+const copyZ = [
   1, 0, 0, 0,
   0, 1, 0, 0,
   0, 0, 1, 1,
@@ -471,9 +471,9 @@ MDN.multiplyPoint(copyZ, [2, 3, 4, 1]);
 However in the last example we performed `(z + 1) * scaleFactor`:
 
 ```js
-var scaleFactor = 0.5;
+const scaleFactor = 0.5;
 
-var simpleProjection = [
+const simpleProjection = [
   1, 0, 0, 0,
   0, 1, 0, 0,
   0, 0, 1, scaleFactor,
@@ -487,10 +487,10 @@ MDN.multiplyPoint(simpleProjection, [2, 3, 4, 1]);
 Breaking it out a little further we can see how this works:
 
 ```js
-var x = (2 * 1) + (3 * 0) + (4 * 0) + (1 * 0)
-var y = (2 * 0) + (3 * 1) + (4 * 0) + (1 * 0)
-var z = (2 * 0) + (3 * 0) + (4 * 1) + (1 * 0)
-var w = (2 * 0) + (3 * 0) + (4 * scaleFactor) + (1 * scaleFactor)
+let x = (2 * 1) + (3 * 0) + (4 * 0) + (1 * 0)
+let y = (2 * 0) + (3 * 1) + (4 * 0) + (1 * 0)
+let z = (2 * 0) + (3 * 0) + (4 * 1) + (1 * 0)
+let w = (2 * 0) + (3 * 0) + (4 * scaleFactor) + (1 * scaleFactor)
 ```
 
 The last line could be simplified to:
@@ -573,8 +573,8 @@ Let's take a look at a `perspectiveMatrix()` function, which computes the perspe
 
 ```js
 MDN.perspectiveMatrix = function(fieldOfViewInRadians, aspectRatio, near, far) {
-  var f = 1.0 / Math.tan(fieldOfViewInRadians / 2);
-  var rangeInv = 1 / (near - far);
+  const f = 1.0 / Math.tan(fieldOfViewInRadians / 2);
+  const rangeInv = 1 / (near - far);
 
   return [
     f / aspectRatio, 0,                          0,   0,
@@ -600,10 +600,10 @@ In the latest version of the box demo, the `computeSimpleProjectionMatrix()` met
 
 ```js
 CubeDemo.prototype.computePerspectiveMatrix = function() {
-  var fieldOfViewInRadians = Math.PI * 0.5;
-  var aspectRatio = window.innerWidth / window.innerHeight;
-  var nearClippingPlaneDistance = 1;
-  var farClippingPlaneDistance = 50;
+  const fieldOfViewInRadians = Math.PI * 0.5;
+  const aspectRatio = window.innerWidth / window.innerHeight;
+  const nearClippingPlaneDistance = 1;
+  const farClippingPlaneDistance = 50;
 
   this.transforms.projection = MDN.perspectiveMatrix(
     fieldOfViewInRadians,
@@ -659,14 +659,14 @@ The following `computeViewMatrix()` method animates the view matrix by moving it
 
 ```js
 CubeDemo.prototype.computeViewMatrix = function(now) {
-  var moveInAndOut = 20 * Math.sin(now * 0.002);
-  var moveLeftAndRight = 15 * Math.sin(now * 0.0017);
+  const moveInAndOut = 20 * Math.sin(now * 0.002);
+  const moveLeftAndRight = 15 * Math.sin(now * 0.0017);
 
   // Move the camera around
-  var position = MDN.translateMatrix(moveLeftAndRight, 0, 50 + moveInAndOut );
+  const position = MDN.translateMatrix(moveLeftAndRight, 0, 50 + moveInAndOut );
 
   // Multiply together, make sure and read them in opposite order
-  var matrix = MDN.multiplyArrayOfMatrices([
+  const matrix = MDN.multiplyArrayOfMatrices([
     // Exercise: rotate the camera view
     position
   ]);
