@@ -44,12 +44,12 @@ recording continues into that, and so forth.
 
 When the source stream ends, `state` is set to `inactive` and
 data gathering stops. A final {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event is sent to the
-`MediaRecorder`, followed by a {{event("stop")}} event.
+`MediaRecorder`, followed by a {{domxref("MediaRecorder/stop_event", "stop")}} event.
 
 > **Note:** If the browser is unable to start recording or continue
 > recording, it will raise a {{domxref("DOMError")}} event, followed by a
 > {{domxref("MediaRecorder.dataavailable")}} event containing the `Blob` it
-> has gathered, followed by the {{domxref("MediaRecorder.stop")}} event.
+> has gathered, followed by the {{domxref("MediaRecorder/stop_event", "stop")}} event.
 
 ## Syntax
 
