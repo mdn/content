@@ -1,46 +1,50 @@
 ---
-title: 'HTMLElement: animationcancel event'
-slug: Web/API/HTMLElement/animationcancel_event
-page-type: web-api-event
+title: 'Element: animationcancel event'
+slug: Web/API/Element/animationcancel_event
 tags:
   - API
   - Animation
   - AnimationEvent
   - CSS Animations
   - Event
-  - HTMLElement
+  - Element
   - Reference
   - animationcancel
-browser-compat: api.HTMLElement.animationcancel_event
+browser-compat: api.Element.animationcancel_event
+page-type: web-api-event
 ---
 {{APIRef}}{{SeeCompatTable}}
 
-The **`animationcancel`** event is fired when a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) unexpectedly aborts. In other words, any time it stops running without sending an {{domxref("HTMLElement/animationend_event", "animationend")}} event. This might happen when the {{cssxref("animation-name")}} is changed such that the animation is removed, or when the animating node is hidden using CSS. Therefore, either directly or because any of its containing nodes are hidden.
+The **`animationcancel`** event is fired when a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) unexpectedly aborts. In other words, any time it stops running without sending an {{domxref("Element/animationend_event", "animationend")}} event. This might happen when the {{cssxref("animation-name")}} is changed such that the animation is removed, or when the animating node is hidden using CSS. Therefore, either directly or because any of its containing nodes are hidden.
 
-An event handler for this event can be added by setting the {{domxref("GlobalEventHandlers.onanimationcancel", "onanimationcancel")}} property, or using {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
+An event handler for this event can be added by setting the `onanimationcancel` property, or using {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{domxref("AnimationEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onanimationcancel","onanimationcancel")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('animationcancel', (event) => {});
+
+onanimationcancel = (event) => { };
+```
+
+## Event type
+
+An {{domxref("AnimationEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("AnimationEvent")}}
+
+## Event properties
+
+_Also inherits properties from its parent {{domxref("Event")}}_.
+
+- {{domxref("AnimationEvent.animationName")}} {{readonlyInline}}
+  - : A string containing the value of the {{cssxref("animation-name")}} that generated the animation.
+- {{domxref("AnimationEvent.elapsedTime")}} {{readonlyInline}}
+  - : A `float` giving the amount of time the animation has been running, in seconds, when this event fired, excluding any time the animation was paused. For an `animationstart` event, `elapsedTime` is `0.0` unless there was a negative value for {{cssxref("animation-delay")}}, in which case the event will be fired with `elapsedTime` containing `(-1 * delay)`.
+- {{domxref("AnimationEvent.pseudoElement")}} {{readonlyInline}}
+  - : A string, starting with `'::'`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on. If the animation doesn't run on a pseudo-element but on the element, an empty string: `''`.
 
 ## Examples
 
@@ -56,7 +60,7 @@ animated.addEventListener('animationcancel', () => {
 animated.style.display = 'none';
 ```
 
-The same, but using the {{domxref("GlobalEventHandlers/onanimationcancel","onanimationcancel")}} property instead of `addEventListener()`:
+The same, but using the `onanimationcancel` property instead of `addEventListener()`:
 
 ```js
 const animated = document.querySelector('.animated');
@@ -169,6 +173,6 @@ applyAnimation.addEventListener('click', () => {
 - [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations)
 - [Using CSS Animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - {{domxref("AnimationEvent")}}
-- Related events: {{domxref("HTMLElement/animationstart_event", "animationstart")}}, {{domxref("HTMLElement/animationend_event", "animationend")}}, {{domxref("HTMLElement/animationiteration_event", "animationiteration")}}
+- Related events: {{domxref("Element/animationstart_event", "animationstart")}}, {{domxref("Element/animationend_event", "animationend")}}, {{domxref("Element/animationiteration_event", "animationiteration")}}
 - This event on {{domxref("Document")}} targets: {{domxref("Document/animationcancel_event", "animationcancel")}}
 - This event on {{domxref("Window")}} targets: {{domxref("Window/animationcancel_event", "animationcancel")}}
