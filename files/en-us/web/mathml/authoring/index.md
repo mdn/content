@@ -237,34 +237,34 @@ latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpa
 
 ## Graphical interfaces
 
+In this section, we review a few editing tools providing graphical interfaces.
+
 ### Input box
 
-[TeXZilla](https://github.com/fred-wang/TeXZilla) has several interfaces, including a [CKEditor plugin](https://ckeditor.com/cke4/addon/texzilla) used on MDN, an [online demo](https://fred-wang.github.io/TeXZilla/), a [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/texzilla/) or a [FirefoxOS Webapp](https://marketplace.firefox.com/app/texzilla-1/). It has also been integrated into [SeaMonkey](https://www.seamonkey-project.org/) since version 2.28 and into [Thunderbird](https://www.thunderbird.net/en-US/) since version 31.[Abiword](http://abisource.org/) contains a small equation editor, based on itex2MML. Finally, [Bluegriffon](http://www.bluegriffon.com/) has an add-on to insert MathML formulas in your document, using ASCII/LaTeX-like syntax.
+A simple approach is to integrate [converters from a simple syntax](#conversion_from_a_simple_syntax) as simple input boxes for mathematics. For example,  [Thunderbird](https://www.thunderbird.net/en-US/) and [SeaMonkey](https://www.seamonkey-project.org/) provide an **Insert > Math** command that will open a popup window, with a LaTeX-to-MathML input field and a live MathML preview:
 
-![BlueGriffon](mathml-shot1.png)
+![LaTeX input box in Thunderbird ](thunderbird.png)
+
+> **Note:** You can also use the **Insert > HTML** command to paste any MathML content.
+
+[LibreOffice](https://www.libreoffice.org/)'s equation editor (File → New → Formula) shows a possible enhancement: its input box for the *StartMath* syntax provides extra equation panels to insert pre-defined mathematical constructions.
+
+![StarMath input box in Libre Office](libreoffice.png)
+
+> **Note:** To obtain libreoffice's MathML code, save the document as `mml` and open it with your favorite text editor.
 
 ### WYSIYWG editors
 
-[Firemath](https://www.firemath.info/) is an extension for Firefox that provides a WYSIWYG MathML editor. A preview of the formula is displayed using the rendering engine of Mozilla. The generated MathML code is available at the bottom. Use the text field for token elements and buttons to build advanced constructions. Once you are done, you can save your document as a XHTML page.
+Other editors provide math editing features that are directly integrated into their WYSIYWG interface. The following screenshots are taken from [LyX](https://www.lyx.org/) and [TeXmacs](https://www.texmacs.org/tmweb/home/welcome.en.html), both of them supporting HTML export:
 
-[LyX](https://www.lyx.org/) is a graphical LaTeX editor, which has built-in support for XHTML+MathML export and can be configured to use similar LaTeX-to-(X)HTML converters. You can for example, you can configure it to [use LaTeXML HTML5/EPUB export](https://github.com/brucemiller/LaTeXML/wiki/Integrating-LaTeXML-into-TeX-editors#lyx).
+![Lyx example](lyx.png)
 
-[TeXmacs](https://www.texmacs.org/tmweb/home/welcome.en.html) is a free structured editor with special facilities for mathematics, graphics and interactive sessions. TeXmacs documents can be exported in XHTML+MathML.
+![TeXmacs example](texmacs.png)
 
-![TeXmacs MathML example](tm-mathml-collage.png)
-
-[OpenOffice](https://www.openoffice.org/) and [LibreOffice](https://www.libreoffice.org/) have an equation editor (File → New → Formula). It is semi-WYSIWYG: you enter the source of the formula using the equation panel/keyboard and a preview of the formula is regularly refreshed. The editor uses its own syntax "StarMath" for the source but MathML is also generated when the document is saved. To get the MathML code, save the document as mml and open it with any text editor. Alternatively, you can extract the odf file (which is actually a zip archive) and open an XML file called `content.xml`.
-
-![Open Office Math](openoffice.png)
-
-[Amaya](https://www.w3.org/Amaya/) is the W3C's web editor, which is able to handle MathML inside XHTML documents. Use the Elements and the Special Chars panels to create various advanced mathematical constructs. Simple text such as `a+2` is automatically parsed and the appropriate MathML markup is generated. Once you are done, you can directly save your XHTML page and open it in Mozilla.
-
-## Miscellaneous tools
-
-### Mail clients
-
-In [Thunderbird](https://www.thunderbird.net/en-US/) and [SeaMonkey](https://www.seamonkey-project.org/), you can use the **Insert HTML** command to paste any MathML content, or the **Insert Math** command to use a LaTeX-to-MathML input box. Alternatively, [MathBird](http://disruptive-innovations.com/zoo/MathBird/) provides a similar input box via AsciiMath instead.
+> **Note:** By default Lyx and TeXmacs will use images of formulas in their HTML output. To choose MathML instead, [follow these instructions](https://github.com/brucemiller/LaTeXML/wiki/Integrating-LaTeXML-into-TeX-editors#lyx) for the former and select `User preference > Convert > Export mathematical formulas as MathML` for the latter.
 
 ### Optical character and handwriting recognitions
 
-[Inftyreader](https://www.inftyreader.org/) is able to perform some optical character recognition, including translation of mathematical equations into MathML. Other tools can do handwriting recognition such as the [Windows Math Input Panel](https://msdn.microsoft.com/library/windows/desktop/dd371698(v=vs.85).aspx) or the online converter [Web Equation](https://webdemo.myscript.com/views/math.html).
+A final option to enter mathematics is to rely on user interface for [Optical character recognition](https://en.wikipedia.org/wiki/Optical_character_recognition) or [Handwriting recognition](https://en.wikipedia.org/wiki/Handwriting_recognition). Some of these tools support mathematical formulas and can export them as MathML. The following screenshot shows a [demo from MyScript](https://webdemo.myscript.com/views/math/index.html):
+
+![MyScript](myscript.png)
