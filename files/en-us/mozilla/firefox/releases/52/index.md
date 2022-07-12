@@ -98,7 +98,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 ### DOM
 
-- The [Selection API](/en-US/docs/Web/API/Selection) has fully shipped, including the new {{domxref("Document/selectstart_event", "selectstart")}} and {{domxref("Document/selectionchange_event", "selectionchange")}} events (see also {{domxref("GlobalEventHandlers.onselectstart")}} and {{domxref("GlobalEventHandlers.onselectionchange")}}) ({{bug(1309612)}}).
+- The [Selection API](/en-US/docs/Web/API/Selection) has fully shipped, including the new {{domxref("Document/selectstart_event", "selectstart")}} and {{domxref("Document/selectionchange_event", "selectionchange")}} events ({{bug(1309612)}}).
 - The property {{domxref("Event.composed")}} is now supported; this Boolean value indicates whether or not the event can bubble through the shadow root into the standard DOM ({{bug(1292063)}}).
 - Only HTML elements, plus the {{SVGElement("svg")}} and {{MathMLElement("math")}} elements, can be put into full-screen mode by calling {{domxref("Element.requestFullscreen()")}} ({{bug(1305928)}}).
 - [Touch events](/en-US/docs/Web/API/Touch_events) have been reenabled on Windows desktop platforms — see {{bug(1244402)}}. (They were disabled in Firefox 24 because they broke a number of major sites; see {{bug(888304)}}.)

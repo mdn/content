@@ -16,7 +16,7 @@ browser-compat: api.Request.credentials
 ---
 {{APIRef("Fetch")}}
 
-The **`credentials`** read-only property of the {{domxref("Request")}} interface indicates whether the user agent should send cookies from the other domain in the case of cross-origin requests.
+The **`credentials`** read-only property of the {{domxref("Request")}} interface indicates whether the user agent should send or receive cookies from the other domain in the case of cross-origin requests.
 
 ## Value
 

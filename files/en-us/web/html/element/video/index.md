@@ -118,7 +118,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
   <tbody>
     <tr>
       <td>
-        {{domxref("ScriptProcessorNode.audioprocess_event","audioprocess")}}{{Deprecated_Inline}}
+        {{domxref("ScriptProcessorNode.audioprocess_event","audioprocess")}} {{Deprecated_Inline}}
       </td>
       <td>
         The input buffer of a {{DOMxRef("ScriptProcessorNode")}} is

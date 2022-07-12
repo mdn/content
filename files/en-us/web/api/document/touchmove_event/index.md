@@ -51,7 +51,7 @@ _This interface inherits properties from its parent, {{domxref("UIEvent")}} and 
   - : A Boolean value indicating whether or not the meta key was down when the touch event was fired.
 - {{domxref("TouchEvent.shiftKey")}} {{readonlyInline}}
   - : A Boolean value indicating whether or not the shift key was down when the touch event was fired.
-- {{domxref("TouchEvent.targetTouches")}}{{readonlyInline}}
+- {{domxref("TouchEvent.targetTouches")}} {{readonlyInline}}
   - : A {{domxref("TouchList")}} of all the {{domxref("Touch")}} objects that are both currently in contact with the touch surface **and** were also started on the same element that is the target of the event.
 - {{domxref("TouchEvent.touches")}} {{readonlyInline}}
   - : A {{domxref("TouchList")}} of all the {{domxref("Touch")}} objects representing all current points of contact with the surface, regardless of target or changed status.

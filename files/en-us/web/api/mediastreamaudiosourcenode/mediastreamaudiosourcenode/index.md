@@ -19,7 +19,7 @@ the first audio track of a given {{domxref("MediaStream")}} as its source.
 
 > **Note:** Another way to create a
 > `MediaStreamAudioSourceNode` is to call
-> the{{domxref("AudioContext.createMediaStreamSource()")}} method, specifying the stream
+> the {{domxref("AudioContext.createMediaStreamSource()")}} method, specifying the stream
 > from which you want to obtain audio.
 
 ## Syntax

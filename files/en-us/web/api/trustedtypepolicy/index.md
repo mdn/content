@@ -17,7 +17,7 @@ A `TrustedTypePolicy` object is created by {{domxref("TrustedTypePolicyFactory.c
 
 ## Properties
 
-- {{domxref("TrustedTypePolicy.name")}}{{ReadOnlyInline}}
+- {{domxref("TrustedTypePolicy.name")}} {{ReadOnlyInline}}
   - : A string containing the name of the policy.
 
 ## Methods

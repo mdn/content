@@ -19,20 +19,20 @@ This interface has no constructor. An `ElementInternals` object is returned when
 
 ## Properties
 
-- {{domxref("ElementInternals.shadowRoot")}}{{ReadOnlyInline}}
+- {{domxref("ElementInternals.shadowRoot")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("ShadowRoot")}} object associated with this element.
-- {{domxref("ElementInternals.form")}}{{ReadOnlyInline}}
+- {{domxref("ElementInternals.form")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("HTMLFormElement")}} associated with this element.
-- {{domxref("ElementInternals.states")}}{{ReadOnlyInline}}
+- {{domxref("ElementInternals.states")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("CustomStateSet")}} associated with this element.
-- {{domxref("ElementInternals.willValidate")}}{{ReadOnlyInline}}
+- {{domxref("ElementInternals.willValidate")}} {{ReadOnlyInline}}
   - : A boolean value which returns true if the element is a submittable element that is a candidate for
     [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation).
-- {{domxref("ElementInternals.validity")}}{{ReadOnlyInline}}
+- {{domxref("ElementInternals.validity")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ValidityState")}} object which represents the different validity states the element can be in, with respect to constraint validation.
-- {{domxref("ElementInternals.validationMessage")}}{{ReadOnlyInline}}
+- {{domxref("ElementInternals.validationMessage")}} {{ReadOnlyInline}}
   - : A string containing the validation message of this element.
-- {{domxref("ElementInternals.labels")}}{{ReadOnlyInline}}
+- {{domxref("ElementInternals.labels")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("NodeList")}} of all of the label elements associated with this element.
 
 ### Properties included from ARIA

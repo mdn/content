@@ -66,7 +66,7 @@ Most macros will also take a second argument allowing you to change the display 
         <code>\{{DOMxRef("Document")}}</code> or <code>\{{DOMxRef("document")}}</code> results in {{DOMxRef("Document")}},<br />
         <code>\{{DOMxRef("document.getElementsByName()")}}</code> result in {{DOMxRef("document.getElementsByName()")}}<br />
         <code>\{{DOMxRef("Node")}}</code> result in {{DOMxRef("Node")}}.<br />
-        You can change the display text using a second parameter: <code>\{{DOMxRef("document.getElementsByName()","getElementsByName()")}}</code> results in{{DOMxRef("document.getElementsByName()","getElementsByName()")}}.
+        You can change the display text using a second parameter: <code>\{{DOMxRef("document.getElementsByName()","getElementsByName()")}}</code> results in {{DOMxRef("document.getElementsByName()","getElementsByName()")}}.
       </td>
     </tr>
     <tr>
