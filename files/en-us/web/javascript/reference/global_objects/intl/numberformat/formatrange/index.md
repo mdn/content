@@ -8,11 +8,12 @@ tags:
   - Localization
   - Method
   - NumberFormat
+  - Experimental
   - Prototype
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.formatRange
 ---
-{{JSRef}}
+{{JSRef}} {{SeeCompatTable}}
 
 The **`Intl.NumberFormat.prototype.formatRange()`** method formats a range of
 numbers according to the locale and formatting options of the

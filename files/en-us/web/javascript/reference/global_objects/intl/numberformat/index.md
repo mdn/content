@@ -35,7 +35,7 @@ The **`Intl.NumberFormat`** object enables language-sensitive number formatting.
   - : Getter function that formats a number according to the locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object.
 - {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}
   - : Returns an {{jsxref("Array")}} of objects representing the number string in parts that can be used for custom locale-aware formatting.
-- {{jsxref("Intl/NumberFormat/formatRange", "Intl.NumberFormat.prototype.formatRange()")}}
+- {{jsxref("Intl/NumberFormat/formatRange", "Intl.NumberFormat.prototype.formatRange()")}} {{experimental_inline}}
   - : Getter function that formats a range of numbers according to the locale and formatting options of the {{jsxref("Intl.NumberFormat")}} object from which the method is called.
 - {{jsxref("Intl/NumberFormat/formatRangeToParts", "Intl.NumberFormat.prototype.formatRangeToParts()")}}
   - : Returns an {{jsxref("Array")}} of objects representing the range of number strings in parts that can be used for custom locale-aware formatting.
