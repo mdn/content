@@ -319,7 +319,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when the content of a tab has become visible or has been hidden.
 - {{DOMxRef("Document/wheel_event","wheel")}}
   - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
-    Also available via the {{DOMxRef("GlobalEventHandlers.onwheel", "onwheel")}} property.
 
 ### Animation events
 

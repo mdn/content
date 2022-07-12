@@ -36398,14 +36398,6 @@
       "JesseW"
     ]
   },
-  "Web/API/Document/wheel_event": {
-    "modified": "2020-10-15T22:17:12.540Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "irenesmith"
-    ]
-  },
   "Web/API/Document/width": {
     "modified": "2020-10-15T21:04:23.780Z",
     "contributors": [
@@ -44515,22 +44507,6 @@
       "oakgb",
       "AutumnFish",
       "Sheppy"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onwheel": {
-    "modified": "2020-10-15T21:19:37.112Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "chrisdavidmills",
-      "irenesmith",
-      "fscholz",
-      "jpmedley",
-      "MHasan",
-      "kscarfone",
-      "nairakhil13",
-      "Sheppy",
-      "Masayuki"
     ]
   },
   "Web/API/Gyroscope": {

@@ -326,8 +326,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Called after all resources and the DOM are fully loaded. WILL NOT get called when the page is loaded from cache, such as with back button.
 - {{domxref("GlobalEventHandlers.onscroll")}}
   - : Called when the scroll bar is moved via ANY means. If the resource fully fits in the window, then this event cannot be invoked.
-- {{domxref("GlobalEventHandlers.onwheel")}}
-  - : Called when the mouse wheel is rotated around any axis.
 
 ## Events
 

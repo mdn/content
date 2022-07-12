@@ -320,7 +320,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
     Also available via the {{DOMxRef("GlobalEventHandlers.onshow", "onshow")}} property.
 - {{domxref("Element/wheel_event","wheel")}}
   - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
-    Also available via the {{DOMxRef("GlobalEventHandlers.onwheel", "onwheel")}} property.
 
 ### Clipboard events
 
