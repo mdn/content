@@ -71,8 +71,6 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/loadstart_event", "loadstart")}} event is raised (when progress has begun on the loading of a resource.)
 - {{domxref("GlobalEventHandlers.onlostpointercapture")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/lostpointercapture_event", "lostpointercapture")}} event type is raised.
-- {{ domxref("GlobalEventHandlers.onwheel") }}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("wheel")}} event is raised.
 - {{domxref("GlobalEventHandlers.onpause")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/pause_event", "pause")}} event is raised.
 - {{domxref("GlobalEventHandlers.onplay")}}
