@@ -208,4 +208,4 @@ var showBookmark = (function () {
 - A similar information, but attached to the document,
   {{domxref("Document.location")}}.
 - [Manipulating the browser history](/en-US/docs/Web/API/History_API)
-- {{event("hashchange")}}
+- {{domxref("Window/hashchange_event", "hashchange")}}
