@@ -125,7 +125,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     This mitigates attacks against cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}).
 - `SameSite=<samesite-value>` {{optional_inline}}
 
-  - : Controls whether or not a cookie is sent with cross-origin requests,
+  - : Controls whether or not a cookie is sent with cross-site requests,
     providing some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).
 
     The possible attribute values are:
