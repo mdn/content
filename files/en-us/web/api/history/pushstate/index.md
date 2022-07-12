@@ -52,7 +52,7 @@ pushState(state, unused, url)
   - : This parameter exists for historical reasons, and cannot be omitted; passing an empty string is safe against future changes to the method.
 
 - `url` {{optional_inline}}
-  - : The new history entry's URL is given with this parameter. Note that the browser won't
+  - : The new history entry's URL. Note that the browser won't
     attempt to load this URL after a call to `pushState()`, but it may
     attempt to load the URL later, for instance, after the user restarts the browser. The
     new URL does not need to be absolute; if it's relative, it's resolved relative to the
