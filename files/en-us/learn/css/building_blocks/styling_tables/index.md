@@ -64,7 +64,7 @@ Let's start by looking at a typical HTML table. Well, I say typical — most HTM
       <td>London Calling</td>
     </tr>
 
-    …
+    <!-- several other great bands -->
 
     <tr>
       <th scope="row">The Stranglers</th>
