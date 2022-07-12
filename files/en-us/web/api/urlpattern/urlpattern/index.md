@@ -50,23 +50,23 @@ new URLPattern(input, baseURL)
 
 ```js
 // Matching a pathname
-let pattern = new URLPattern('https://example.com/books/:id')
-    // same as
-    new URLPattern(
-      '/books/:id',
-      'https://example.com',
-    );
-    // or
-    new URLPattern({
-      protocol: 'https',
-      hostname: 'example.com',
-      pathname: '/books/:id',
-    });
-    // or
-    new URLPattern({
-      pathname: '/books/:id',
-      baseURL: 'https://example.com',
-    });
+let pattern1 = new URLPattern('https://example.com/books/:id')
+// same as
+let pattern2 = new URLPattern(
+  '/books/:id',
+  'https://example.com',
+);
+// or
+let pattern3 = new URLPattern({
+  protocol: 'https',
+  hostname: 'example.com',
+  pathname: '/books/:id',
+});
+// or
+let pattern4 = new URLPattern({
+  pathname: '/books/:id',
+  baseURL: 'https://example.com',
+});
 ```
 
 ```js
