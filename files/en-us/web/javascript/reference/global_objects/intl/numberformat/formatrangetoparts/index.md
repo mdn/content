@@ -22,7 +22,6 @@ formatters.
 ## Syntax
 
 ```js
-formatRangeToParts()
 formatRangeToParts(startRange, endRange)
 ```
 
@@ -37,6 +36,11 @@ formatRangeToParts(startRange, endRange)
 ### Return value
 
 An {{jsxref("Array")}} of objects containing the formatted range of numbers in parts.
+
+### Exceptions
+
+- `TypeError`
+  - : Either `startRange` or `endRange` is undefined.
 
 ## Description
 
@@ -58,39 +62,36 @@ locale-specific parts. The structure of the array the `formatRangeToParts()` met
 
 Possible types are the following:
 
-- currency
-  - : The currency string, such as the symbols "$" and "€" or the name "Dollar", "Euro",
-    depending on how `currencyDisplay` is specified.
-- decimal
+- `currency`
+  - : The currency string, such as the symbols "$" and "€" or the name "Dollar", "Euro", depending on how `currencyDisplay` is specified.
+- `decimal`
   - : The decimal separator string (".").
-- fraction
+- `fraction`
   - : The fraction number.
-- group
+- `group`
   - : The group separator string (",").
-- infinity
+- `infinity`
   - : The {{jsxref("Infinity")}} string ("∞").
-- integer
+- `integer`
   - : The integer number.
-- literal
+- `literal`
   - : Any literal strings or whitespace in the formatted number.
-- minusSign
+- `minusSign`
   - : The minus sign string ("-").
-- nan
+- `nan`
   - : The {{jsxref("NaN")}} string ("NaN").
-- plusSign
+- `plusSign`
   - : The plus sign string ("+").
-- percentSign
+- `percentSign`
   - : The percent sign string ("%").
-- unit
-  - : The unit string, such as the "l" or "litres", depending on how
-    `unitDisplay` is specified.
+- `unit`
+  - : The unit string, such as the "l" or "litres", depending on how `unitDisplay` is specified.
 
 ## Examples
 
 ### Comparing formatRange and formatRangeToParts
 
-`NumberFormat` outputs localized, opaque strings that cannot be manipulated
-directly:
+`NumberFormat` outputs localized, opaque strings that cannot be manipulated directly:
 
 ```js
 const startRange = 3500;
