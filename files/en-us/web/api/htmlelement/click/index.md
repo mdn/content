@@ -67,6 +67,6 @@ function myFunction() {
 
 - Related event handlers
 
-  - {{domxref("GlobalEventHandlers.onclick")}}
-  - {{domxref("GlobalEventHandlers.ondblclick")}}
-  - {{domxref("GlobalEventHandlers.onauxclick")}}
+  - {{domxref("Element.click_event", "Element.onclick")}}
+  - {{domxref("Element.dblclick_event", "Element.ondblclick")}}
+  - {{domxref("Element.auxclick_event", "Element.onauxclick")}}

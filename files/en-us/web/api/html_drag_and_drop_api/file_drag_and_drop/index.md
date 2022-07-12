@@ -17,7 +17,7 @@ Note that {{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}} defines two
 
 ## Define the drop _zone_
 
-The _target element_ of the {{domxref("HTMLElement/drop_event", "drop")}} event needs an {{domxref("GlobalEventHandlers.ondrop","ondrop")}} global event handler. The following code snippet shows how this is done with a {{HTMLelement("div")}} element:
+The _target element_ of the {{domxref("HTMLElement/drop_event", "drop")}} event needs an `ondrop` event handler. The following code snippet shows how this is done with a {{HTMLelement("div")}} element:
 
 ```html
 <div id="drop_zone" ondrop="dropHandler(event);">
@@ -25,7 +25,7 @@ The _target element_ of the {{domxref("HTMLElement/drop_event", "drop")}} event 
 </div>
 ```
 
-Typically, an application will include a {{domxref("HTMLElement/dragover_event", "dragover")}} event handler on the drop target element and that handler will turn off the browser's default drag behavior. To add this handler, you need to include a {{domxref("GlobalEventHandlers.ondragover","ondragover")}} global event handler:
+Typically, an application will include a {{domxref("HTMLElement/dragover_event", "dragover")}} event handler on the drop target element and that handler will turn off the browser's default drag behavior. To add this handler, you need to include a {{domxref("HTMLElement.dragover_event","ondragover")}} event handler:
 
 ```html
 <div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">

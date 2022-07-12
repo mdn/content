@@ -122,7 +122,7 @@ The following examples are from the article [Video processing with WebCodecs](ht
 ```js
 const cnv = document.createElement('canvas');
 // draw something on the canvas
-…
+// ...
 let frame_from_canvas = new VideoFrame(cnv, { timestamp: 0 });
 ```
 

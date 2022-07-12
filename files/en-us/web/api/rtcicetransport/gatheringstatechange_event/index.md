@@ -88,7 +88,7 @@ pc.getSenders().forEach(sender => {
 
 ### Related RTCIceTransport events
 
-- {{event("statechange")}}
+- {{domxref("RTCIceTransport/statechange_event", "statechange")}}
 - {{domxref("RTCIceTransport.selectedcandidatepairchange_event", "selectedcandidatepairchange")}}
 
 ### Related RTCPeerConnection events

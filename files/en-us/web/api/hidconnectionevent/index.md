@@ -25,7 +25,7 @@ The **`HIDConnectionEvent`** interface of the {{domxref('WebHID API')}} represen
 
 _This interface also inherits properties from {{domxref("Event")}}._
 
-- {{domxref("HIDConnectionEvent.device")}}{{ReadOnlyInline}}
+- {{domxref("HIDConnectionEvent.device")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("HIDDevice")}} instance representing the device associated with the connection event.
 
 ## Examples

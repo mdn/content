@@ -16,7 +16,7 @@ It is an array-like object but can't be iterated over using {{jsxref("Array")}} 
 
 ## Properties
 
-- {{domxref("StyleSheetList.length")}}{{ReadOnlyInline}}
+- {{domxref("StyleSheetList.length")}} {{ReadOnlyInline}}
   - : Returns the number of {{domxref("CSSStyleSheet")}} objects in the collection.
 
 ## Methods

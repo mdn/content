@@ -92,7 +92,7 @@ The first thing we need to do is generate the array of normals for all the verti
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertexNormals),
                 gl.STATIC_DRAW);
 
-...
+  // ...
 
   return {
     position: positionBuffer,
@@ -135,7 +135,7 @@ Finally, we need to update the code that builds the uniform matrices to generate
   mat4.invert(normalMatrix, modelViewMatrix);
   mat4.transpose(normalMatrix, normalMatrix);
 
-...
+  // ...
 
   gl.uniformMatrix4fv(
       programInfo.uniformLocations.normalMatrix,

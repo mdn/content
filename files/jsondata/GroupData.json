@@ -1163,9 +1163,7 @@
     "Selection API": {
       "overview": ["Selection API"],
       "interfaces": ["Selection"],
-      "properties": [
-        "GlobalEventHandlers.onselectstart"
-      ],
+      "properties": [],
       "methods": ["Document.getSelection()", "Window.getSelection()"],
       "events": ["Document: selectionchange", "Document: selectstart"]
     },
@@ -1245,6 +1243,7 @@
       "guides": [
         "/docs/Web/API/Streams_API/Concepts",
         "/docs/Web/API/Streams_API/Using_readable_streams",
+        "/docs/Web/API/Streams_API/Using_readable_byte_streams",
         "/docs/Web/API/Streams_API/Using_writable_streams"
       ],
       "interfaces": [

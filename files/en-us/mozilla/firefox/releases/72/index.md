@@ -128,6 +128,7 @@ _No changes._
 - The [`BrowserSetting.onChange`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange) event has been implemented ({{bug(1410412)}}).
 - The [`captivePortal.canonicalURL`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/captivePortal/canonicalURL) property has been implemented ({{bug(1592932)}}).
 - The callback functions for the [`browserAction.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked) and [`pageAction.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked) events now include a `OnClickData` property containing an object whose properties describe the mouse button pressed along with any keyboard modifiers ({{bug(1405031)}}). This allows support for additional types of mouse click.
+- The {{WebExtAPIRef("browserSettings.tlsVersionRestrictionConfig")}} property has been implemented and enables the highest and lowest versions of TLS supported by the browser to be read ({{bug(1593635)}}). 
 
 ### Manifest changes
 

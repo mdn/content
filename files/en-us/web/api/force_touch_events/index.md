@@ -40,9 +40,9 @@ The following property is known to be available on the {{event("webkitmouseforce
 
 These constants are useful for determining the relative intensity of the pressure indicated by {{domxref("MouseEvent.webkitForce")}}:
 
-- {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}}{{readonlyinline}}
+- {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}} {{readonlyinline}}
   - : Minimum force necessary for a normal click
-- {{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}} {{non-standard_inline}}{{readonlyinline}}
+- {{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}} {{non-standard_inline}} {{readonlyinline}}
   - : Minimum force necessary for a force click
 
 ## Specifications

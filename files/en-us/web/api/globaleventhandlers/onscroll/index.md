@@ -22,7 +22,7 @@ scrolled, whether by the user, a [Web API](/en-US/docs/Web/API), or the
 {{glossary("user agent")}}.
 
 > **Note:** Don't confuse `onscroll` with
-> {{domxref("GlobalEventHandlers.onwheel", "onwheel")}}!
+> {{domxref("Element.wheel_event", "onwheel")}}!
 >
 > `onwheel` handles general wheel rotation, while `onscroll`
 > handles scrolling of an object's content.

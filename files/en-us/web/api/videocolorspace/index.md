@@ -20,7 +20,7 @@ The **`VideoColorSpace`** interface of the {{domxref('WebCodecs API','','',' ')}
 
 ## Properties
 
-- {{domxref("VideoColorSpace.primaries")}}{{ReadOnlyInline}}
+- {{domxref("VideoColorSpace.primaries")}} {{ReadOnlyInline}}
   - : A string containing the color primary describing the color {{glossary("gamut")}} of a video sample.
 - {{domxref("VideoColorSpace.transfer")}}
   - : A string containing the transfer characteristics of video samples.

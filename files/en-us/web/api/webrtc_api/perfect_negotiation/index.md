@@ -370,7 +370,7 @@ On the other hand, if the received message is an ICE candidate—indicated by th
 
 ### Explicit restartIce() method added
 
-The techniques previously used to trigger an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart) while handling the event{{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} have significant flaws. These flaws have made it difficult to safely and reliably trigger a restart during negotiation. The perfect negotiation improvements have fixed this by adding a new {{domxref("RTCPeerConnection.restartIce", "restartIce()")}} method to `RTCPeerConnection`.
+The techniques previously used to trigger an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart) while handling the event {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} have significant flaws. These flaws have made it difficult to safely and reliably trigger a restart during negotiation. The perfect negotiation improvements have fixed this by adding a new {{domxref("RTCPeerConnection.restartIce", "restartIce()")}} method to `RTCPeerConnection`.
 
 #### The old way
 

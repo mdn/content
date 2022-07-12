@@ -70,7 +70,7 @@ Since we've added a z-component to our vertices, we need to update the `numCompo
 // buffer into the vertexPosition attribute
 {
   const numComponents = 3;
-  ...
+  // ...
   gl.vertexAttribPointer(
       programInfo.attribLocations.vertexPosition,
       numComponents,
@@ -157,7 +157,7 @@ Next we need to add code to our `drawScene()` function to draw using the cube's 
   // Tell WebGL which indices to use to index the vertices
   gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, buffers.indices);
 
-...
+  // ...
 
   {
     const vertexCount = 36;
