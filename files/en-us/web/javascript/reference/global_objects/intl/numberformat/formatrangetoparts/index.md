@@ -138,7 +138,6 @@ formatter.formatRangeToParts(startRange, endRange)
 ]
 ```
 
-
 ## Specifications
 
 {{Specifications}}
