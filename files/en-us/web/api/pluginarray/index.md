@@ -19,7 +19,7 @@ The `PluginArray` interface is used to store a list of {{DOMxRef("Plugin")}} obj
 
 ## Properties
 
-- {{DOMxRef("PluginArray.length")}}{{ReadOnlyInline}}
+- {{DOMxRef("PluginArray.length")}} {{ReadOnlyInline}}
   - : The number of plugins in the array.
 
 ## Methods

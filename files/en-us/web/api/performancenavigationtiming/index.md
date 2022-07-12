@@ -32,7 +32,7 @@ This interface extends the following {{domxref('PerformanceEntry')}} properties 
 
 This interface also extends following {{domxref('PerformanceResourceTiming')}} properties for navigation performance entry types by qualifying and constraining them as follows:
 
-- {{domxref('PerformanceResourceTiming.initiatorType')}}{{readonlyInline}}
+- {{domxref('PerformanceResourceTiming.initiatorType')}} {{readonlyInline}}
   - : Returns `"navigation"`.
 
 The interface also supports the following properties:
