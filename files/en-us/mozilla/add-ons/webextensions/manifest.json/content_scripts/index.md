@@ -168,7 +168,7 @@ Details of all the keys you can include are given in the table below.
         <pre class="brush: json">
 "js": ["jquery.js", "my-content-script.js"]</pre
         >
-        <p>Then, <code>"my-content-script.js"</code> can use jQuery.</p>   
+        <p>Then, <code>"my-content-script.js"</code> can use jQuery.</p>
         <p>
           The files are injected after any files in
           <code><a href="#css">css</a></code

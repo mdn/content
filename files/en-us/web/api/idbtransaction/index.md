@@ -57,7 +57,7 @@ If you must ensure durability for some reason (e.g. you're storing critical data
 - {{domxref("IDBTransaction.durability")}} {{readonlyInline}}
   - : Returns the durability hint the transaction was created with.
 - {{domxref("IDBTransaction.error")}} {{readonlyInline}}
-  - : Returns a {{domxref("DOMException")}} indicating the type of error that occurred when there is an unsuccessful transaction. This property is `null` if the transaction is not finished, is finished and successfully committed, or was aborted with the{{domxref("IDBTransaction.abort()")}} function.
+  - : Returns a {{domxref("DOMException")}} indicating the type of error that occurred when there is an unsuccessful transaction. This property is `null` if the transaction is not finished, is finished and successfully committed, or was aborted with the {{domxref("IDBTransaction.abort()")}} function.
 - {{domxref("IDBTransaction.mode")}} {{readonlyInline}}
   - : The mode for isolating access to data in the object stores that are in the scope of the transaction. The default value is [`readonly`](#const_read_only).
 - {{domxref("IDBTransaction.objectStoreNames")}} {{readonlyInline}}

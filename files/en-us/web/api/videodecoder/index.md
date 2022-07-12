@@ -20,9 +20,9 @@ The **`VideoDecoder`** interface of the {{domxref('WebCodecs API','','','true')}
 
 ## Properties
 
-- {{domxref("VideoDecoder.decodeQueueSize")}}{{ReadOnlyInline}}
+- {{domxref("VideoDecoder.decodeQueueSize")}} {{ReadOnlyInline}}
   - : An integer representing the number of decode queue requests.
-- {{domxref("VideoDecoder.state")}}{{ReadOnlyInline}}
+- {{domxref("VideoDecoder.state")}} {{ReadOnlyInline}}
   - : Indicates whether the underlying codec is configured for decoding.
 
 ## Methods

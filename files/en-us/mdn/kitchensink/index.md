@@ -109,7 +109,7 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
 
 ## Interactive Examples
 
-{{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}{{EmbedInteractiveExample("pages/css/order.html")}}{{EmbedInteractiveExample("pages/js/regexp-assertions.html", "taller")}}
+{{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}} {{EmbedInteractiveExample("pages/css/order.html")}} {{EmbedInteractiveExample("pages/js/regexp-assertions.html", "taller")}}
 
 ## Tables
 

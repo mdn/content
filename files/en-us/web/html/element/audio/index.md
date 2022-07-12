@@ -90,7 +90,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
   </thead>
   <tbody>
     <tr>
-      <td>{{Event("audioprocess")}}</td>
+      <td>{{domxref("ScriptProcessorNode/audioprocess_event", "audioprocess")}}</td>
       <td>
         The input buffer of a {{DOMxRef("ScriptProcessorNode")}} is
         ready to be processed.

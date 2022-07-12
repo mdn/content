@@ -14,7 +14,7 @@ browser-compat: api.GlobalEventHandlers.onpause
 
 The **`onpause`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
-processing {{event("pause")}} events.
+processing {{domxref("HTMLMediaElement/pause_event", "pause")}} events.
 
 The `pause` event is fired when media playback has been paused.
 
@@ -38,5 +38,5 @@ specifying the handler for the event.
 
 ## See also
 
-- {{event("pause")}}
+- {{domxref("HTMLMediaElement/pause_event", "pause")}}
 - [DOM event handlers](/en-US/docs/Web/Events/Event_handlers)

@@ -87,7 +87,7 @@ An {{HTMLElement("audio")}} element using the `autoplay` attribute might look li
 
 If you rely on autoplay for anything important, or if autoplay failure will impact your app in any way, you will probably want to be able to tell when autoplay didn't begin. Unfortunately, in the case of the {{htmlattrxref("autoplay", "audio")}} attribute, recognizing whether or not autoplay successfully began is tricky. There's not an event triggered when autoplay fails. Nor is there an exception thrown or a callback you can set up or even a flag on the media element that tells you if autoplay worked. All you can really do is examine a few values and make an educated guess as to whether or not autoplay worked.
 
-A better approach, if you're able to adjust the direction you look at things from, is to instead rely on knowing that playback of the media has successfully started, instead of when it fails to start. You can do this easily, by listening for the {{event("play")}} event to be fired on the media element.
+A better approach, if you're able to adjust the direction you look at things from, is to instead rely on knowing that playback of the media has successfully started, instead of when it fails to start. You can do this easily, by listening for the {{domxref("HTMLMediaElement/play_event", "play")}} event to be fired on the media element.
 
 The `play` event is sent both when the media is resumed after being paused _and_ when autoplay occurs. That means that the first time the `play` event is fired, you know your media is being started for the first time after the page is opened.
 
@@ -184,7 +184,6 @@ let playAttempt = setInterval(() => {
 ## Autoplay using the Web Audio API
 
 In the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), a web site or app can start playing audio using the `start()` method on a source node linked to the {{domxref("AudioContext")}}. Doing so outside the context of handling a user input event is subject to autoplay rules.
-
 
 ## The autoplay feature policy
 

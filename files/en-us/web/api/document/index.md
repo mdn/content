@@ -36,45 +36,45 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
     These stylesheets may also be shared with shadow DOM subtrees of the same document.
 - {{DOMxRef("Document.body")}}
   - : Returns the {{HTMLElement("body")}} or {{htmlelement("frameset")}} node of the current document.
-- {{DOMxRef("Document.characterSet")}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.characterSet")}} {{ReadOnlyInline}}
   - : Returns the character set being used by the document.
 - {{domxref("Document.childElementCount")}} {{readonlyInline}}
   - : Returns the number of child elements of the current document.
 - {{domxref("Document.children")}} {{readonlyInline}}
   - : Returns the child elements of the current document.
-- {{DOMxRef("Document.compatMode")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.compatMode")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Indicates whether the document is rendered in _quirks_ or _strict_ mode.
-- {{DOMxRef("Document.contentType")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.contentType")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the Content-Type from the MIME Header of the current document.
-- {{DOMxRef("Document.currentScript")}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.currentScript")}} {{ReadOnlyInline}}
   - : Returns the {{HTMLElement("script")}} element whose script is currently being processed and [isn't a JavaScript module](https://github.com/whatwg/html/issues/997).
-- {{DOMxRef("Document.doctype")}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.doctype")}} {{ReadOnlyInline}}
   - : Returns the Document Type Definition (DTD) of the current document.
-- {{DOMxRef("Document.documentElement")}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.documentElement")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef("Element")}} that is a direct child of the document. For HTML documents, this is normally the {{DOMxRef("HTMLHtmlElement")}} object representing the document's {{HTMLElement("html")}} element.
-- {{DOMxRef("Document.documentURI")}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.documentURI")}} {{ReadOnlyInline}}
   - : Returns the document location as a string.
-- {{DOMxRef("Document.embeds")}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.embeds")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("HTMLCollection")}} of the embedded {{HTMLElement('embed')}} elements in the document.
 - {{domxref("Document.firstElementChild")}} {{readonlyInline}}
   - : Returns the first child element of the current document.
 - {{DOMxRef("Document.fonts")}}
   - : Returns the {{DOMxRef("FontFaceSet")}} interface of the current document.
-- {{DOMxRef("Document.forms")}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.forms")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("HTMLCollection")}} of the {{HTMLElement("form")}} elements in the document.
 - {{DOMxRef("Document.fullscreenElement")}} {{ReadOnlyInline}}
   - : The element that's currently in full screen mode for this document.
-- {{DOMxRef("Document.head")}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.head")}} {{ReadOnlyInline}}
   - : Returns the {{HTMLElement("head")}} element of the current document.
-- {{DOMxRef("Document.hidden")}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.hidden")}} {{ReadOnlyInline}}
   - : Returns a Boolean value indicating if the page is considered hidden or not.
-- {{DOMxRef("Document.images")}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.images")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("HTMLCollection")}} of the images in the document.
-- {{DOMxRef("Document.implementation")}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.implementation")}} {{ReadOnlyInline}}
   - : Returns the DOM implementation associated with the current document.
 - {{domxref("Document.lastElementChild")}} {{readonlyInline}}
   - : Returns the last child element of the current document.
-- {{DOMxRef("Document.links")}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.links")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("HTMLCollection")}} of the hyperlinks in the document.
 - {{DOMxRef("Document.mozSyntheticDocument")}} {{Non-standard_Inline}}
   - : Returns `true` only if this document is synthetic, such as a standalone image, video, audio file, or the like.
@@ -82,21 +82,21 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns the {{DOMxRef('Element')}} currently being presented in picture-in-picture mode in this document.
 - {{DOMxRef("Document.pictureInPictureEnabled")}} {{ReadOnlyInline}}
   - : Returns true if the picture-in-picture feature is enabled.
-- {{DOMxRef("Document.plugins")}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.plugins")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("HTMLCollection")}} of the available plugins.
 - {{DOMxRef("Document.pointerLockElement")}} {{ReadOnlyInline}}
   - : Returns the element set as the target for mouse events while the pointer is locked. `null` if lock is pending, pointer is unlocked, or if the target is in another document.
-- {{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef("FeaturePolicy")}} interface which provides a simple API for introspecting the feature policies applied to a specific document.
-- {{DOMxRef("Document.scripts")}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.scripts")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("HTMLCollection")}} of the {{HTMLElement("script")}} elements in the document.
-- {{DOMxRef("Document.scrollingElement")}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.scrollingElement")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{DOMxRef("Element")}} that scrolls the document.
 - {{DOMxRef("Document.styleSheets")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef('StyleSheetList')}} of {{DOMxRef('CSSStyleSheet')}} objects for stylesheets explicitly linked into, or embedded in a document.
-- {{DOMxRef("Document.timeline")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.timeline")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns timeline as a special instance of {{domxref("DocumentTimeline")}} that is automatically created on page load.
-- {{DOMxRef("Document.visibilityState")}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.visibilityState")}} {{ReadOnlyInline}}
   - : Returns a `string` denoting the visibility state of the document. Possible values are `visible`, `hidden`, `prerender`, and `unloaded`.
 
 ### Extensions for HTMLDocument
@@ -105,7 +105,7 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
 
 - {{DOMxRef("Document.cookie")}}
   - : Returns a semicolon-separated list of the cookies for that document or sets a single cookie.
-- {{DOMxRef("Document.defaultView")}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.defaultView")}} {{ReadOnlyInline}}
   - : Returns a reference to the window object.
 - {{DOMxRef("Document.designMode")}}
   - : Gets/sets the ability to edit the whole document.
@@ -113,25 +113,18 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
   - : Gets/sets directionality (rtl/ltr) of the document.
 - {{DOMxRef("Document.domain")}} {{Deprecated_Inline}}
   - : Gets/sets the domain of the current document.
-- {{DOMxRef("Document.lastModified")}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.lastModified")}} {{ReadOnlyInline}}
   - : Returns the date on which the document was last modified.
-- {{DOMxRef("Document.location")}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.location")}} {{ReadOnlyInline}}
   - : Returns the URI of the current document.
-- {{DOMxRef("Document.readyState")}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.readyState")}} {{ReadOnlyInline}}
   - : Returns loading status of the document.
-- {{DOMxRef("Document.referrer")}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.referrer")}} {{ReadOnlyInline}}
   - : Returns the URI of the page that linked to this page.
 - {{DOMxRef("Document.title")}}
   - : Sets or gets the title of the current document.
-- {{DOMxRef("Document.URL")}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.URL")}} {{ReadOnlyInline}}
   - : Returns the document location as a string.
-
-### Event handlers
-
-_The `Document` interface is extended with additional event handlers defined in [GlobalEventHandlers](/en-US/docs/Web/API/GlobalEventHandlers#event_handlers)._
-
-- {{DOMxRef("GlobalEventHandlers.onselectionchange")}} {{Experimental_Inline}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Document/selectionchange_event", "selectionchange")}} event is raised.
 
 ### Deprecated properties
 
@@ -139,13 +132,13 @@ _The `Document` interface is extended with additional event handlers defined in 
   - : Returns or sets the color of active links in the document body.
 - {{DOMxRef("Document.all")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Provides access to all elements in the document — it returns an {{DOMxRef('HTMLAllCollection')}} rooted at the document node. This is a legacy, non-standard property and should not be used.
-- {{DOMxRef("Document.anchors")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.anchors")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Returns a list of all of the anchors in the document.
-- {{DOMxRef("Document.applets")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.applets")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Returns an ordered list of the applets within a document.
 - {{DOMxRef("Document.bgColor")}} {{Deprecated_Inline}}
   - : Gets/sets the background color of the current document.
-- {{DOMxRef("Document.characterSet","Document.charset")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.characterSet","Document.charset")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Alias of {{DOMxRef("Document.characterSet")}}. Use this property instead.
 - {{DOMxRef("Document.fgColor")}} {{Deprecated_Inline}}
   - : Gets/sets the foreground color, or text color, of the current document.
@@ -153,19 +146,19 @@ _The `Document` interface is extended with additional event handlers defined in 
   - : `true` when the document is in [fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
 - {{DOMxRef("Document.height")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : Gets/sets the height of the current document.
-- {{DOMxRef("Document.characterSet", "Document.inputEncoding")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.characterSet", "Document.inputEncoding")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Alias of {{DOMxRef("Document.characterSet")}}. Use this property instead.
-- {{DOMxRef("Document.lastStyleSheetSet")}} {{deprecated_inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.lastStyleSheetSet")}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : Returns the name of the style sheet set that was last enabled. Has the value `null` until the style sheet is changed by setting the value of {{DOMxRef("Document.selectedStyleSheetSet","selectedStyleSheetSet")}}.
 - {{DOMxRef("Document.linkColor")}} {{Deprecated_Inline}}
   - : Gets/sets the color of hyperlinks in the document.
-- {{DOMxRef("Document.preferredStyleSheetSet")}} {{deprecated_inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.preferredStyleSheetSet")}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : Returns the preferred style sheet set as specified by the page author.
 - {{DOMxRef("Document.rootElement")}} {{Deprecated_Inline}}
   - : Like {{DOMxRef("Document.documentElement")}}, but only for {{SVGElement("svg")}} root elements. Use this property instead.
 - {{DOMxRef("Document.selectedStyleSheetSet")}} {{deprecated_inline}}
   - : Returns which style sheet set is currently in use.
-- {{DOMxRef("Document.styleSheetSets")}} {{deprecated_inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Document.styleSheetSets")}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : Returns a list of the style sheet sets available on the document.
 - {{DOMxRef("Document.vlinkColor")}} {{Deprecated_Inline}}
   - : Gets/sets the color of visited hyperlinks.
@@ -412,43 +405,30 @@ Listen to these events using `addEventListener()` or by assigning an event liste
     Also available via the {{DOMxRef("GlobalEventHandlers/onlostpointercapture", "onlostpointercapture")}} property.
 - {{DOMxRef("Document/pointercancel_event", "pointercancel")}}
   - : Fired when a pointer event is canceled.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onpointercancel", "onpointercancel")}} property.
 - {{DOMxRef("Document/pointerdown_event", "pointerdown")}}
   - : Fired when a pointer becomes active.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onpointerdown", "onpointerdown")}} property.
 - {{DOMxRef("Document/pointerenter_event", "pointerenter")}}
   - : Fired when a pointer is moved into the hit test boundaries of an element or one of its descendants.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onpointerenter", "onpointerenter")}} property.
 - {{DOMxRef("Document/pointerleave_event", "pointerleave")}}
   - : Fired when a pointer is moved out of the hit test boundaries of an element.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onpointerleave", "onpointerleave")}} property.
 - {{DOMxRef("Document/pointerlockchange_event", "pointerlockchange")}}
   - : Fired when the pointer is locked/unlocked.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onpointerlockchange", "onpointerlockchange")}} property.
 - {{DOMxRef("Document/pointerlockerror_event", "pointerlockerror")}}
   - : Fired when locking the pointer failed.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onpointerlockerror", "onpointerlockerror")}} property.
 - {{DOMxRef("Document/pointermove_event", "pointermove")}}
   - : Fired when a pointer changes coordinates.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onpointermove", "onpointermove")}} property.
 - {{DOMxRef("Document/pointerout_event", "pointerout")}}
   - : Fired when a pointer is moved out of the _hit test_ boundaries of an element (among other reasons).
-    Also available via the {{DOMxRef("GlobalEventHandlers/onpointerout", "onpointerout")}} property.
 - {{DOMxRef("Document/pointerover_event", "pointerover")}}
   - : Fired when a pointer is moved into an element's hit test boundaries.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onpointerover", "onpointerover")}} property.
 - {{DOMxRef("Document/pointerup_event", "pointerup")}}
   - : Fired when a pointer is no longer active.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onpointerup", "onpointerup")}} property.
 
 ### Selection events
 
 - {{DOMxRef("Document/selectionchange_event", "selectionchange")}}
   - : Fired when the current text selection on a document is changed.
     Also available via the {{DOMxRef("GlobalEventHandlers/onselectionchange", "onselectionchange")}} property.
-- {{DOMxRef("Document/selectstart_event", "selectstart")}}
-  - : Fired when the user begins a new selection.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onselectstart", "onselectstart")}} property.
 
 ### Touch events
 

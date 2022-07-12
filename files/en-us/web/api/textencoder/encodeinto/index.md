@@ -54,6 +54,7 @@ solution is [`TypedArray.prototype.subarray()`](/en-US/docs/Web/JavaScript/Refer
 
 ```js
 const encoder = new TextEncoder();
+
 function encodeIntoAtPosition(string, u8array, position) {
     return encoder.encodeInto(string, position ? u8array.subarray(position|0) : u8array);
 }
@@ -121,6 +122,7 @@ string if the JavaScript string contained U+0000. Observe:
 
 ```js
 const encoder = new TextEncoder();
+
 function encodeIntoWithSentinel(string, u8array, position) {
     const stats = encoder.encodeInto(string, position ? u8array.subarray(position|0) : u8array);
     if (stats.written < u8array.length) u8array[stats.written] = 0; // append null if room

@@ -15,7 +15,7 @@ browser-compat: api.Cache.keys
 {{APIRef("Service Workers API")}}
 
 The **`keys()`** method of the {{domxref("Cache")}} interface returns a
-{{jsxref("Promise")}} that resolves to an array of{{domxref("Request")}} objects
+{{jsxref("Promise")}} that resolves to an array of {{domxref("Request")}} objects
 representing the keys of the {{domxref("Cache")}}.
 
 The requests are returned in the same order that they were inserted.
