@@ -176,7 +176,7 @@ You've now got your function definition written into your `<script>` element jus
     btn.addEventListener('click', displayMessage);
     ```
 
-    In a similar way to our `closeBtn.addEventListener…` line inside the function, here we are calling some code in response to a button being clicked. But in this case, instead of calling an anonymous function containing some code, we are calling our `displayMessage()` function by name.
+    In a similar way to our closeBtn's click event handler, here we are calling some code in response to a button being clicked. But in this case, instead of calling an anonymous function containing some code, we are calling our `displayMessage()` function by name.
 
 6. Try saving and refreshing the page — now you should see the message box appear when you click the button.
 
