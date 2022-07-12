@@ -28,7 +28,7 @@ Using a TV remote to control the game ended up being surprisingly easy, because 
 
 ```js
 this.cursors = this.input.keyboard.createCursorKeys();
-//...
+// …
 if(this.cursors.right.isDown) {
     // move player right
 }
@@ -59,7 +59,7 @@ window.addEventListener("keydown", function(event) {
             // detonate bomb
             break;
         }
-        // ...
+        // …
     }
 }, this);
 ```
@@ -110,7 +110,7 @@ The code above is calculating and assigning the `horizontalDegree`, `verticalDeg
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // ...
+    // …
 
     if(horizontalDegree > degreeThreshold) {
         playerX -= 5;

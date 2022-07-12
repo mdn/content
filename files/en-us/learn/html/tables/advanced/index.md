@@ -52,7 +52,7 @@ You can give your table a caption by putting it inside a {{htmlelement("caption"
 <table>
   <caption>Dinosaurs in the Jurassic period</caption>
 
-  ...
+  …
 </table>
 ```
 
@@ -414,7 +414,7 @@ Returning to our spending costs example, the previous two snippets could be rewr
   <td headers="cost haircut">30</td>
 </tr>
 
-  ...
+  …
 
 </tbody>
 ```

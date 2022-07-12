@@ -276,18 +276,18 @@ There are a lot more operators to explore, but this is enough for now. See [Expr
 
 ### Conditionals
 
-Conditionals are code structures used to test if an expression returns true or not. A very common form of conditionals is the `if ... else` statement. For example:
+Conditionals are code structures used to test if an expression returns true or not. A very common form of conditionals is the `if...else` statement. For example:
 
 ```js
 let iceCream = 'chocolate';
 if(iceCream === 'chocolate') {
   alert('Yay, I love chocolate ice cream!');
 } else {
-  alert('Awwww, but chocolate is my favorite...');
+  alert('Awwww, but chocolate is my favorite…');
 }
 ```
 
-The expression inside the `if( ... )` is the test. This uses the strict equality operator (as described above) to compare the variable `iceCream` with the string `chocolate` to see if the two are equal. If this comparison returns `true`, the first block of code runs. If the comparison is not true, the second block of code—after the `else` statement—runs instead.
+The expression inside the `if()` is the test. This uses the strict equality operator (as described above) to compare the variable `iceCream` with the string `chocolate` to see if the two are equal. If this comparison returns `true`, the first block of code runs. If the comparison is not true, the second block of code—after the `else` statement—runs instead.
 
 ### Functions
 
@@ -432,7 +432,7 @@ Next, let's change the page title to a personalized welcome message when the use
 
     The `setUserName()` function contains a [`prompt()`](/en-US/docs/Web/API/Window/prompt) function, which displays a dialog box, similar to `alert()`. This `prompt()` function does more than `alert()`, asking the user to enter data, and storing it in a variable after the user clicks _OK._ In this case, we are asking the user to enter a name. Next, the code calls on an API `localStorage`, which allows us to store data in the browser and retrieve it later. We use localStorage's `setItem()` function to create and store a data item called `'name'`, setting its value to the `myName` variable which contains the user's entry for the name. Finally, we set the `textContent` of the heading to a string, plus the user's newly stored name.
 
-4. Add the `if ... else` block (below). We could call this initialization code, as it structures the app when it first loads.
+4. Add the `if...else` block (below). We could call this initialization code, as it structures the app when it first loads.
 
     ```js
     if(!localStorage.getItem('name')) {

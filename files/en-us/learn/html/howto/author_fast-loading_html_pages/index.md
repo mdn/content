@@ -95,7 +95,7 @@ Rather than deeply nesting tables as in:
 <table>
   <table>
     <table>
-          ...
+          …
     </table>
   </table>
 </table>
@@ -104,9 +104,9 @@ Rather than deeply nesting tables as in:
 use non-nested tables or divs as in
 
 ```html
-<table>...</table>
-<table>...</table>
-<table>...</table>
+<table>…</table>
+<table>…</table>
+<table>…</table>
 ```
 
 See also: [CSS Flexible Box Layout](https://www.w3.org/TR/css-flexbox-1/) and [CSS Grid Layout](https://www.w3.org/TR/css-grid-1/) specifications.
