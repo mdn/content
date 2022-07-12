@@ -629,7 +629,7 @@ In HTML, link types indicate the relationship between two documents, in which on
     <tr>
       <td>
         <code>sidebar</code>
-        {{Non-standard_Inline}}{{deprecated_inline}}
+        {{Non-standard_Inline}} {{deprecated_inline}}
       </td>
       <td>
         Indicates that the hyperlink leads to a resource that would be better
