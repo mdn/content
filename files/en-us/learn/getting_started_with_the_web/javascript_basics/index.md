@@ -378,7 +378,7 @@ In this section, you will learn how to use JavaScript and DOM API features to al
 1. Choose an image you want to feature on your example site. Ideally, the image will be the same size as the image you added previously, or as close as possible.
 2. Save this image in your `images` folder.
 3. Rename the image _firefox2.png_.
-4. Add the JavaScript below to your `main.js` file.
+4. Add the following JavaScript code to your `main.js` file.
 
     ```js
     let myImage = document.querySelector('img');
@@ -420,7 +420,7 @@ Next, let's change the page title to a personalized welcome message when the use
     let myHeading = document.querySelector('h1');
     ```
 
-3. Add the function below to set the personalized greeting. This won't do anything yet, but this will change soon.
+3. Add the following function to set the personalized greeting. This won't do anything yet, but this will change soon.
 
     ```js
     function setUserName() {
@@ -432,7 +432,7 @@ Next, let's change the page title to a personalized welcome message when the use
 
     The `setUserName()` function contains a [`prompt()`](/en-US/docs/Web/API/Window/prompt) function, which displays a dialog box, similar to `alert()`. This `prompt()` function does more than `alert()`, asking the user to enter data, and storing it in a variable after the user clicks _OK._ In this case, we are asking the user to enter a name. Next, the code calls on an API `localStorage`, which allows us to store data in the browser and retrieve it later. We use localStorage's `setItem()` function to create and store a data item called `'name'`, setting its value to the `myName` variable which contains the user's entry for the name. Finally, we set the `textContent` of the heading to a string, plus the user's newly stored name.
 
-4. Add the `if...else` block (below). We could call this initialization code, as it structures the app when it first loads.
+4. Add the following condition block. We could call this initialization code, as it structures the app when it first loads.
 
     ```js
     if(!localStorage.getItem('name')) {
