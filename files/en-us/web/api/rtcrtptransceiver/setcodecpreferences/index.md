@@ -105,6 +105,5 @@ var availReceiveCodecs = transceiver.receiver.getCapabilities("video").codecs;
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs)
-- [Introduction to the Real-time
-  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - [Web media technologies](/en-US/docs/Web/Media)

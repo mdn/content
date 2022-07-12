@@ -40,7 +40,7 @@ Inherits from: [EventTarget](/en-US/docs/Web/API/EventTarget)
 
 - {{domxref("IDBDatabase.close()")}}
   - : Returns immediately and closes the connection to a database in a separate thread.
-- `IDBDatabase.createMutableFile()` {{deprecated_inline}}{{Non-standard_Inline}}
+- `IDBDatabase.createMutableFile()` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Creates a file handle, allowing files to be stored inside an IndexedDB database.
 - {{domxref("IDBDatabase.createObjectStore()")}}
   - : Creates and returns a new object store or index.
@@ -72,7 +72,7 @@ In the following code snippet, we open a database asynchronously ({{domxref("IDB
 
 ```js
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the IDBDatabase object,
 // when the database is opened successfully, or not
@@ -96,7 +96,7 @@ DBOpenRequest.onsuccess = event => {
 // submitted via the window.indexedDB.open line above
 
 DBOpenRequest.onupgradeneeded = event => {
-  var db = event.target.result;
+  const db = event.target.result;
 
   db.onerror = function(event) {
     note.innerHTML += '<li>Error loading database.</li>';
@@ -105,7 +105,7 @@ DBOpenRequest.onupgradeneeded = event => {
   // Create an objectStore for this database using
   // IDBDatabase.createObjectStore
 
-  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  const objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
 
   // define what data items the objectStore will contain
 
@@ -124,7 +124,7 @@ DBOpenRequest.onupgradeneeded = event => {
 This next line opens up a transaction on the Database, then opens an object store that we can then manipulate the data inside of.
 
 ```js
-var objectStore = db.transaction('toDoList', 'readwrite').objectStore('toDoList');
+const objectStore = db.transaction('toDoList', 'readwrite').objectStore('toDoList');
 ```
 
 ## Specifications

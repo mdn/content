@@ -37,7 +37,7 @@ The value is a {{domxref("DOMHighResTimeStamp")}} accurate to
 
 ```js
 function getTime(event) {
-  var time = document.getElementById("time");
+  const time = document.getElementById("time");
   time.firstChild.nodeValue = event.timeStamp;
 }
 document.body.addEventListener("keypress", getTime);
@@ -61,14 +61,14 @@ event.timeStamp;
 // 1519211809934
 // 1519211810362
 // 1519211811670
-// ...
+// …
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 event.timeStamp;
 // 1519129853500
 // 1519129858900
 // 1519129864400
-// ...
+// …
 ```
 
 In Firefox, if you also enable `privacy.resistFingerprinting`, the precision

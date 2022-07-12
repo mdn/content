@@ -17,7 +17,7 @@ The `startRendering()` method of the {{ domxref("OfflineAudioContext") }}
 Interface starts rendering the audio graph, taking into account the current connections
 and the current scheduled changes.
 
-The {{event("complete")}} event (of type {{domxref("OfflineAudioCompletionEvent")}}) is
+The {{domxref("OfflineAudioContext/complete_event", "complete")}} event (of type {{domxref("OfflineAudioCompletionEvent")}}) is
 raised when the rendering is finished, containing the resulting
 {{domxref("AudioBuffer")}} in its `renderedBuffer` property.
 
@@ -63,8 +63,8 @@ graph.
 ```js
 // define online and offline audio context
 
-var audioCtx = new AudioContext();
-var offlineCtx = new OfflineAudioContext(2,44100*40,44100);
+const audioCtx = new AudioContext();
+const offlineCtx = new OfflineAudioContext(2,44100*40,44100);
 
 source = offlineCtx.createBufferSource();
 
@@ -79,7 +79,7 @@ function getData() {
   request.responseType = 'arraybuffer';
 
   request.onload = function() {
-    var audioData = request.response;
+    const audioData = request.response;
 
     audioCtx.decodeAudioData(audioData, function(buffer) {
       myBuffer = buffer;
@@ -89,8 +89,8 @@ function getData() {
       //source.loop = true;
       offlineCtx.startRendering().then(function(renderedBuffer) {
         console.log('Rendering completed successfully');
-        var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        var song = audioCtx.createBufferSource();
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const song = audioCtx.createBufferSource();
         song.buffer = renderedBuffer;
 
         song.connect(audioCtx.destination);

@@ -57,8 +57,7 @@ forEach(callback, thisArg)
 - `thisArg` {{optional_inline}}
   - : The value to be used for
     [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)
-    while executing the callback. Note that if you use [arrow function
-    notation](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (`=>`) to provide the callback, you can
+    while executing the callback. Note that if you use [arrow function notation](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (`=>`) to provide the callback, you can
     omit `thisArg`, since all arrow functions lexically bind `this`.
 
 ### Return value

@@ -12,7 +12,7 @@ browser-compat: api.Attr.ownerElement
 
 The read-only **`ownerElement`** property of the {{domxref("Attr")}} interface returns the {{domxref("Element")}} the attribute belongs to.
 
-### Value
+## Value
 
 The {{domxref("Element")}} the attribute belongs to, or `null` if the attribute is not linked to an element.
 

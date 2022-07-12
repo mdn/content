@@ -34,7 +34,7 @@ To invoke strict mode for an entire script, put the _exact_ statement `"use stri
 ```js
 // Whole-script strict mode syntax
 'use strict';
-var v = "Hi! I'm a strict mode script!";
+const v = "Hi! I'm a strict mode script!";
 ```
 
 ### Strict mode for functions
@@ -42,13 +42,13 @@ var v = "Hi! I'm a strict mode script!";
 Likewise, to invoke strict mode for a function, put the _exact_ statement `"use strict";` (or `'use strict';`) in the function's body before any other statements.
 
 ```js
-function strict() {
+function myStrictFunction() {
   // Function-level strict mode syntax
   'use strict';
   function nested() { return 'And so am I!'; }
-  return "Hi!  I'm a strict mode function!  " + nested();
+  return "Hi! I'm a strict mode function! " + nested();
 }
-function notStrict() { return "I'm not strict."; }
+function myNotStrictFunction() { return "I'm not strict."; }
 ```
 
 In strict mode, starting with ES2015, functions inside blocks are scoped to that block. Prior to ES2015, block-level functions were forbidden in strict mode.
@@ -58,10 +58,10 @@ In strict mode, starting with ES2015, functions inside blocks are scoped to that
 ECMAScript 2015 introduced [JavaScript modules](/en-US/docs/Web/JavaScript/Reference/Statements/export) and therefore a 3rd way to enter strict mode. The entire contents of JavaScript modules are automatically in strict mode, with no statement needed to initiate it.
 
 ```js
-function strict() {
+function myStrictFunction() {
     // because this is a module, I'm strict by default
 }
-export default strict;
+export default myStrictFunction;
 ```
 
 ### Strict mode for classes
@@ -97,16 +97,16 @@ var undefined = 5; // throws a TypeError
 var Infinity = 5; // throws a TypeError
 
 // Assignment to a non-writable property
-var obj1 = {};
+const obj1 = {};
 Object.defineProperty(obj1, 'x', { value: 42, writable: false });
 obj1.x = 9; // throws a TypeError
 
 // Assignment to a getter-only property
-var obj2 = { get x() { return 17; } };
+const obj2 = { get x() { return 17; } };
 obj2.x = 5; // throws a TypeError
 
 // Assignment to a new property on a non-extensible object
-var fixed = {};
+const fixed = {};
 Object.preventExtensions(fixed);
 fixed.newProp = 'ohai'; // throws a TypeError
 ```
@@ -130,18 +130,18 @@ function sum(a, a, c) { // !!! syntax error
 Fifth, a strict mode in ECMAScript 5 [forbids a `0`-prefixed octal literal or octal escape sequence](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal). Outside strict mode, a number beginning with a `0`, such as `0644`, is interpreted as an octal number (`0644 === 420`), if all digits are smaller than 8. Octal escape sequences, such as `"\45"`, which is equal to `"%"`, can be used to represent characters by extended-ASCII character code numbers in octal. In strict mode, this is a syntax error. In ECMAScript 2015, octal literals are supported by prefixing a number with "`0o`"; for example:
 
 ```js
-var a = 0o10; // ES2015: Octal
+const a = 0o10; // ES2015: Octal
 ```
 
 Novice developers sometimes believe a leading zero prefix has no semantic meaning, so they might use it as an alignment device — but this changes the number's meaning! A leading zero syntax for the octal is rarely useful and can be mistakenly used, so strict mode makes it a syntax error:
 
 ```js
 'use strict';
-var sum = 015 + // !!! syntax error
-          197 +
-          142;
+const sum = 015 + // !!! syntax error
+            197 +
+            142;
 
-var sumWithOctal = 0o10 + 8;
+const sumWithOctal = 0o10 + 8;
 console.log(sumWithOctal); // 16
 ```
 
@@ -162,7 +162,7 @@ In ECMAScript 5 strict-mode code, duplicate property names were considered a {{j
 
 ```js
 'use strict';
-var o = { p: 1, p: 2 }; // syntax error prior to ECMAScript 2015
+const o = { p: 1, p: 2 }; // syntax error prior to ECMAScript 2015
 ```
 
 ### Simplifying variable uses
@@ -173,9 +173,9 @@ First, strict mode prohibits [`with`](/en-US/docs/Web/JavaScript/Reference/State
 
 ```js
 'use strict';
-var x = 17;
+const x = 17;
 with (obj) { // !!! syntax error
-  // If this weren't strict mode, would this be var x, or
+  // If this weren't strict mode, would this be const x, or
   // would it instead be obj.x?  It's impossible in general
   // to say without running the code, so the name can't be
   // optimized.
@@ -243,13 +243,13 @@ First, the names `eval` and `arguments` can't be bound or assigned in language s
 eval = 17;
 arguments++;
 ++eval;
-var obj = { set p(arguments) { } };
-var eval;
+const obj = { set p(arguments) { } };
+let eval;
 try { } catch (arguments) { }
 function x(eval) { }
 function arguments() { }
-var y = function eval() { };
-var f = new Function('arguments', "'use strict'; return 17;");
+const y = function eval() { };
+const f = new Function('arguments', "'use strict'; return 17;");
 ```
 
 Second, strict mode code doesn't alias properties of `arguments` objects created within it. In normal code within a function whose first argument is `arg`, setting `arg` also sets `arguments[0]`, and vice versa (unless no arguments were provided or `arguments[0]` is deleted). `arguments` objects for strict mode functions store the original arguments when the function was invoked. `arguments[i]` does not track the value of the corresponding named argument, nor does a named argument track the value in the corresponding `arguments[i]`.
@@ -260,7 +260,7 @@ function f(a) {
   a = 42;
   return [a, arguments[0]];
 }
-var pair = f(17);
+const pair = f(17);
 console.assert(pair[0] === 42);
 console.assert(pair[1] === 17);
 ```
@@ -269,7 +269,7 @@ Third, `arguments.callee` is no longer supported. In normal code `arguments.call
 
 ```js
 'use strict';
-var f = function() { return arguments.callee; };
+const f = function() { return arguments.callee; };
 f(); // throws a TypeError
 ```
 
@@ -320,7 +320,7 @@ if (true) {
   f();
 }
 
-for (var i = 0; i < 5; i++) {
+for (let i = 0; i < 5; i++) {
   function f2() { } // !!! syntax error
   f2();
 }

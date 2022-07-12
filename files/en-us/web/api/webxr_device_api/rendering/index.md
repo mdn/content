@@ -147,7 +147,7 @@ Ideally, you want this code to be fast enough that it can maintain a 60 FPS fram
 
 In this version of the WebXR rendering callback, we use a very straightforward approach that works great for relatively simple projects. This pseudocode outlines that process:
 
-```js
+```
 for each view in the pose's views list:
   get the WebXR GL layer's viewport
   set the WebGL viewport to match
@@ -244,7 +244,7 @@ An advantage of WebXR's approach of using a single WebGL framebuffer to contain 
 
 The resulting pseudocode looks like this:
 
-```js
+```
 for each object in the scene
   bindProgram()
   bindUniforms()

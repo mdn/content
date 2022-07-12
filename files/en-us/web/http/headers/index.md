@@ -104,15 +104,15 @@ The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
 
 ### Device client hints
 
-- {{HTTPHeader("Content-DPR")}} {{deprecated_inline}}{{experimental_inline}}
+- {{HTTPHeader("Content-DPR")}} {{deprecated_inline}} {{experimental_inline}}
   - : _Response header_ used to confirm the image device to pixel ratio in requests where the {{HTTPHeader("DPR")}} client hint was used to select an image resource.
-- {{HTTPHeader("Device-Memory")}} {{deprecated_inline}}{{experimental_inline}}
+- {{HTTPHeader("Device-Memory")}} {{deprecated_inline}} {{experimental_inline}}
   - : Approximate amount of available client RAM memory. This is part of the [Device Memory API](/en-US/docs/Web/API/Device_Memory_API).
-- {{HTTPHeader("DPR")}} {{deprecated_inline}}{{experimental_inline}}
+- {{HTTPHeader("DPR")}} {{deprecated_inline}} {{experimental_inline}}
   - : Client device pixel ratio (DPR), which is the number of physical device pixels corresponding to every CSS pixel.
-- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}}{{experimental_inline}}
+- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}} {{experimental_inline}}
   - : A number that indicates the layout viewport width in CSS pixels. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).
-- {{HTTPHeader("Width")}} {{deprecated_inline}}{{experimental_inline}}
+- {{HTTPHeader("Width")}} {{deprecated_inline}} {{experimental_inline}}
   - : A number that indicates the desired resource width in physical pixels (i.e. intrinsic size of an image).
 
 ### Network client hints
@@ -404,7 +404,7 @@ _Learn more about CORS [here](CORS)._
   - : TBD
 - {{HTTPHeader("X-Requested-With")}}
   - : TBD
-- {{HTTPHeader("X-Robots-Tag")}}{{non-standard_inline}}
+- {{HTTPHeader("X-Robots-Tag")}} {{non-standard_inline}}
   - : The [`X-Robots-Tag`](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag) HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is effectively equivalent to `<meta name="robots" content="...">`.
 - {{HTTPHeader("X-UA-Compatible")}} {{non-standard_inline}}
   - : Used by Internet Explorer to signal which document mode to use.

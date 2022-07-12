@@ -41,7 +41,7 @@ Before starting to document an API, you should have available:
    Good places to find them are:
 
     - Your internal company address book, if you work for a relevant company.
-    - A public mailing list that is involved in the discussion of that API, such as Mozilla's [dev-platform](https://groups.google.com/a/mozilla.org/g/dev-platform/) or [dev-webapi](https://lists.mozilla.org/listinfo/dev-webapi) lists, or a W3C list like [public-webapps](https://lists.w3.org/Archives/Public/public-webapps/).
+    - A public mailing list that is involved in the discussion of that API, such as Mozilla's [dev-platform](https://groups.google.com/a/mozilla.org/g/dev-platform/) or a W3C list like [public-webapps](https://lists.w3.org/Archives/Public/public-webapps/).
     - The spec itself. For example, the [Web Audio API spec](https://webaudio.github.io/web-audio-api/) lists the authors and their contact details at the top.
 
 ### Take some time to play with the API
@@ -187,19 +187,19 @@ Creating a list of all these subpages is a good way to track them. For example:
   - AudioContext.currentTime
   - AudioContext.destination
   - AudioContext.listener
-  - ...
+  - …
   - AudioContext.createBuffer()
   - AudioContext.createBufferSource()
-  - ...
+  - …
 
 - AudioNode
 
   - AudioNode.context
   - AudioNode.numberOfInputs
   - AudioNode.numberOfOutputs
-  - ...
+  - …
   - AudioNode.connect(Param)
-  - ...
+  - …
 
 - AudioParam
 - Events (update list)
@@ -242,14 +242,15 @@ Now you should be ready to start writing your interface pages. Each interface re
    - \\{{Non-standard_header}}
 
 3. **Description**: the first paragraph of the interface page should provide a short concise description of the interface's overarching purpose. You may also want to include a couple more paragraphs if any additional description is required. If the interface is actually a dictionary, you should use that term instead of "interface".
-4. **Inheritance diagram:** Use the [`InheritanceDiagram`](https://github.com/mdn/yari/blob/main/kumascript/macros/InheritanceDiagram.ejs) macro to embed an SVG inheritance diagram for the interface.
-5. **List of properties, List of methods**: These sections should be titled "Properties" and "Methods", and provide links (using the \\{{domxref}} macro) to a reference page for each property/method of that interface, along with a description of what each one does. These should be marked up using description/definition lists, which can be created using the "Definition List", "Definition Term", and "Definition Description" buttons on the MDN editor toolbar. Each description should be short and concise — one sentence if possible. See the "Referencing other API features with the \\{{domxref}} macro" section for a quicker way to create links to other pages.
+4. **Inheritance diagram:** Use the [`\{{InheritanceDiagram}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/InheritanceDiagram.ejs) macro to embed an SVG inheritance diagram for the interface.
+5. **List of properties, List of methods**: These sections should be titled "Properties" and "Methods", and provide links (using the \\{{domxref}} macro) to a reference page for each property/method of that interface, along with a description of what each one does. These should be marked up using [description/definition lists](/en-US/docs/MDN/Contribute/Markdown_in_MDN#definition_lists). Each description should be short and concise — one sentence if possible. See the "Referencing other API features with the \\{{domxref}} macro" section for a quicker way to create links to other pages.
 
-   At the beginning of both sections, before the beginning of the list of properties/methods, indicate inheritance using the appropriate sentence, in italics:
-   _This interface doesn't implement any specific properties, but inherits properties from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
-   _This interface also inherits properties from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
-   _This interface doesn't implement any specific methods, but inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
-   _This interface also inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
+    At the beginning of both sections, before the beginning of the list of properties/methods, indicate inheritance using the appropriate sentence, in italics:
+
+    - _This interface doesn't implement any specific properties, but inherits properties from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
+    - _This interface also inherits properties from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
+    - _This interface doesn't implement any specific methods, but inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
+    - _This interface also inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
 
    > **Note:** Properties that are read-only should have the \\{{readonlyInline}} macro, which creates a nifty little "Read only" badge, included on the same line as their \\{{domxref}} links (after the use of the \\{{experimentalInline}}, \\{{non-standard_Inline}} and \\{{deprecatedInline}} macros, if some of these are needed.
 
@@ -293,20 +294,13 @@ Property pages must have the following sections:
 4. **Description**: the first paragraph of the property page should provide a short, concise description of the property's overarching purpose. You may also want to include a couple more paragraphs if any additional description is required. Obvious extra information to include is its default/initial value, and whether it's read only or not. The structure of the first sentence must be:
 
    - For read-only properties
-     - : The **`InterfaceName.property`** read-only property returns a \\{{domxref("type")}} that...
+     - : The **`InterfaceName.property`** read-only property returns a \\{{domxref("type")}} that…
    - For other properties
      - : The **`InterfaceName.property`** property is a \\{{domxref("type")}} that…
 
    > **Note:** `InterfaceName.property` should be in `<code>`, and should additionally be in bold (`<strong>`) the first time it's used.
 
-5. **Syntax**: The syntax section should show how to get the property, and how to set it, if it's not read only. Use the `syntaxbox` class for it and italics for part to be replaced by the actual variable name. For example:
-
-    ```js
-    let myType = oscillator.type;
-    oscillator.type = aType;
-    ```
-
-    The syntax section should also have a subsection — "Value", which will contain a description of the property's value. This should contain the data type of the property, and what it represents. For an example, see {{domxref("SpeechRecognition.grammars")}}
+5. **Value**: The Value section will contain a description of the property's value. This should contain the data type of the property, and what it represents. For an example, see {{domxref("SpeechRecognition.grammars")}}
 
 6. **Examples**: Include a code listing to show typical usage of the property in question. You should start with a simple example that shows how an object of the type is created and how to access the property. More complex examples can be added after such an example. In these additional examples, rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you can reference a [GitHub](https://github.com/) repo containing the full example, and you could also link to a live example created using the [GitHub gh-pages feature](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) (so long as it uses only client-side code of course.) If the example is visual, you could also use the MDN [Live Sample](/en-US/docs/MDN/Structures/Live_samples) feature to make it live and playable in the page.
 7. **Specifications table**: At this point you need to include a specifications table — see the "Creating a spec reference table" section for more details.
@@ -339,16 +333,14 @@ Method pages need the following sections:
 4. **Description**: The first paragraph of the method page should provide a short concise description of the method's overarching purpose. You may also want to include a couple more paragraphs if any additional description is required. Obvious extra information to include is its default parameter values, any theory that the method relies on, and what the parameter values do.
 
     - The beginning of the first sentence must follow the following structure:
-      - : The **InterfaceName.method()** method interface ...
+      - : The **`InterfaceName.method()`** method interface …
 
     > **Note:** `InterfaceName.method()` should be in `<code>`, and should also be in bold (`<strong>`) the first time it's used.
 
 5. **Syntax**: The syntax section should include a 2–3 line example — usually just construction of the interface, then calling of the interface method.
 
     - The syntax should be of the form:
-      - : var \<em>returnValue\</em> = \<em>ifName\</em>.method(\<em>param1\</em>, \<em>param2\</em>, ...)
-    - If the method has no return value (`void` as return value in the webidl), use:
-      - : \<em>ifName\</em>.method(\<em>param1\</em>, \<em>param2\</em>, ...)
+      - : method(param1, param2, …)
 
     The syntax section should include three subsections (see {{domxref("SubtleCrypto.sign()")}} for an example):
 
@@ -362,7 +354,7 @@ Method pages need the following sections:
 
 #### Method page examples
 
-The following are exemplary examples of Interface pages:
+The following are exemplary examples of method pages:
 
 - {{domxref("Document.getAnimations")}} from the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API).
 - {{domxref("fetch()")}} from the [Fetch API](/en-US/docs/Web/API/Fetch_API).

@@ -44,13 +44,13 @@ See the [Obtaining a StyleSheet](#obtaining_a_stylesheet) section for the variou
 
 _Inherits properties from its parent, {{domxref("StyleSheet")}}._
 
-- {{domxref("CSSStyleSheet.cssRules")}}{{ReadOnlyInline}}
+- {{domxref("CSSStyleSheet.cssRules")}} {{ReadOnlyInline}}
 
   - : Returns a live {{domxref("CSSRuleList")}} which maintains an up-to-date list of the {{domxref("CSSRule")}} objects that comprise the stylesheet.
 
-    > **Note:** In some browsers, if a stylesheet is loaded from a different domain, accessing `cssRules` results in a`SecurityError`.
+    > **Note:** In some browsers, if a stylesheet is loaded from a different domain, accessing `cssRules` results in a `SecurityError`.
 
-- {{domxref("CSSStyleSheet.ownerRule")}}{{ReadOnlyInline}}
+- {{domxref("CSSStyleSheet.ownerRule")}} {{ReadOnlyInline}}
   - : If this stylesheet is imported into the document using an {{cssxref("@import")}} rule, the `ownerRule` property returns the corresponding {{domxref("CSSImportRule")}}; otherwise, this property's value is `null`.
 
 ## Methods

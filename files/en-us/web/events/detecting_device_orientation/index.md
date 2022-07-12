@@ -9,7 +9,10 @@ tags:
   - Motion
   - Orientation
   - Reference
-spec-urls: https://w3c.github.io/deviceorientation/
+browser-compat:
+  - api.DeviceMotionEvent
+  - api.DeviceOrientationEvent
+
 ---
 {{DefaultAPISidebar("Device Orientation Events")}}
 
@@ -176,13 +179,7 @@ Finally, {{domxref("DeviceMotionEvent.interval","interval")}} represents the int
 
 ## Browser compatibility
 
-### `DeviceMotionEvent`
-
-{{Compat("api.DeviceMotionEvent")}}
-
-### `DeviceOrientationEvent`
-
-{{Compat("api.DeviceOrientationEvent")}}
+{{Compat}}
 
 ## See also
 

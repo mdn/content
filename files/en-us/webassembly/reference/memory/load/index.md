@@ -22,7 +22,7 @@ For the integer numbers, you can also load a narrower number from memory and ext
 i32.const 0
 
 ;; load the number at position 0
-memory.load
+i32.load
 ```
 
 | Instruction    | Binary opcode |

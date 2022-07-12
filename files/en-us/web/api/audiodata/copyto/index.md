@@ -23,14 +23,14 @@ copyTo(destination, options)
 ### Parameters
 
 - `destination`
-  - : The {{domxref("BufferSource","buffer")}} to copy the plane to.
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} to copy the plane to.
 - `options`
   - : An object containing the following:
     - `planeIndex`
       - : The index of the plane to copy from.
-    - `frameOffset`{{optional_inline}}
+    - `frameOffset` {{optional_inline}}
       - : An integer giving an offset into the plane data indicating which plane to begin copying from. Defaults to `0`.
-    - `frameCount`{{optional_inline}}
+    - `frameCount` {{optional_inline}}
       - : An integer giving the number of frames to copy. If omitted then all frames in the plane will be copied, beginning with the frame specified in `frameOffset`.
 
 ### Return value

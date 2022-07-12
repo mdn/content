@@ -84,7 +84,7 @@ Next, in the `draw()` function we do two things — execute the `gamepadUpdateHa
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // ...
+    // …
 
     gamepadUpdateHandler();
     if(gamepadButtonPressedHandler(0)) {
@@ -103,7 +103,7 @@ function draw() {
         alert('BOOM!');
     }
 
-    // ...
+    // …
 
     ctx.drawImage(img, playerX, playerY);
     requestAnimationFrame(draw);
@@ -237,9 +237,9 @@ The `textGamepad` object holds the text saying a gamepad has been connected, and
 
 ```js
 create() {
-    // ...
+    // …
     var message = 'Gamepad connected! Press Y for controls';
-    var textGamepad = this.add.text(message, ...);
+    var textGamepad = this.add.text(0, 0, message);
     textGamepad.visible = false;
 }
 ```
@@ -248,7 +248,7 @@ In the `update()` function, which is executed every frame, we can wait until the
 
 ```js
 update: function() {
-    // ...
+    // …
     if(GamepadAPI.active) {
         if(!this.textGamepad.visible) {
             this.textGamepad.visible = true;
@@ -284,7 +284,7 @@ When the game is started, some introductory text is shown that shows you availab
 
 ```js
 create() {
-    // ...
+    // …
     if(this.game.device.desktop) {
         if(GamepadAPI.active) {
             moveText = 'DPad or left Stick\nto move';

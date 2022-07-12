@@ -55,7 +55,7 @@ All HTTP header pages should at least have these tags: "HTTP", "Header", "Refere
 ## Step 5 – add browser compatibility information
 
 - If you have looked at other HTTP header pages, you will see that there is a \\{{compat}} macro that will fill in a browser table for you.
-- The compatibility table page is generated from structured data. If you'd like to contribute to the data, please check out <https://github.com/mdn/browser-compat-data/README.md> and send us a pull request.
+- The compatibility table page is generated from structured data. If you'd like to contribute to the data, please check out <https://github.com/mdn/browser-compat-data/blob/main/README.md> and send us a pull request.
 
 ## Step 6 – add the header to the HTTP header list
 

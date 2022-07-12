@@ -84,7 +84,7 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 ### Syntax errors round two
 
 1. Save your page and refresh, and you should see the error has gone.
-2. Now if you try to enter a guess and press the Submit guess button, you'll see ... another error! ![](variable-is-null.png)
+2. Now if you try to enter a guess and press the Submit guess button, you'll see another error! ![](variable-is-null.png)
 3. This time the error being reported is "TypeError: lowOrHi is null", on line 78.
 
     > **Note:** [`Null`](/en-US/docs/Glossary/Null) is a special value that means "nothing", or "no value". So `lowOrHi` has been declared and initialized, but not with any meaningful value — it has no type or value.
@@ -114,7 +114,7 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 7. Save and refresh, and you should now see the `console.log()` result in your console. ![](console-log-output.png) Sure enough, `lowOrHi`'s value is `null` at this point, so there is definitely a problem with line 48.
 8. Let's think about what the problem could be. Line 48 is using a [`document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) method to get a reference to an element by selecting it with a CSS selector. Looking further up our file, we can find the paragraph in question:
 
-    ```js
+    ```html
     <p class="lowOrHi"></p>
     ```
 
@@ -127,7 +127,7 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 
 1. Now if you try playing the game through again, you should get more success — the game should play through absolutely fine, until you end the game, either by guessing the right number, or by running out of guesses.
 2. At that point, the game fails again, and the same error is spat out that we got at the beginning — "TypeError: resetButton.addeventListener is not a function"! However, this time it's listed as coming from line 94.
-3. Looking at line number 94, it is easy to see that we've made the same mistake here. We again just need to change `addeventListener` to `.addEventListener`. Do this now.
+3. Looking at line number 94, it is easy to see that we've made the same mistake here. We again just need to change `addeventListener` to `addEventListener`. Do this now.
 
 ## A logic error
 

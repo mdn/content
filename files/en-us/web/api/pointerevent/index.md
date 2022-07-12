@@ -91,25 +91,6 @@ The `PointerEvent` interface has several event types. To determine which event f
 - {{domxref('HTMLElement/lostpointercapture_event', 'lostpointercapture')}}
   - : This event is fired after pointer capture is released for a pointer.
 
-## GlobalEventHandlers
-
-- {{ domxref('GlobalEventHandlers.onpointerover') }}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{domxref('HTMLElement/pointerover_event', 'pointerover')}} event.
-- {{ domxref('GlobalEventHandlers.onpointerenter') }}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{domxref('HTMLElement/pointerenter_event', 'pointerenter')}} event.
-- {{ domxref('GlobalEventHandlers.onpointerdown') }}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{domxref('HTMLElement/pointerdown_event', 'pointerdown')}} event.
-- {{ domxref('GlobalEventHandlers.onpointermove') }}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{domxref('HTMLElement/pointermove_event', 'pointermove')}} event.
-- {{ domxref('GlobalEventHandlers.onpointerup') }}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{domxref('HTMLElement/pointerup_event', 'pointerup')}} event.
-- {{ domxref('GlobalEventHandlers.onpointercancel') }}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{domxref('HTMLElement/pointercancel_event', 'pointercancel')}} event.
-- {{ domxref('GlobalEventHandlers.onpointerout') }}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{domxref('HTMLElement/pointerout_event', 'pointerout')}} event.
-- {{ domxref('GlobalEventHandlers.onpointerleave') }}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{domxref('HTMLElement/pointerleave_event', 'pointerleave')}} event.
-
 ## Example
 
 Examples of each property, event type, and global event handler are included in their respective reference pages.

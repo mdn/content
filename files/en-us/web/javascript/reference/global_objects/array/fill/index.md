@@ -50,52 +50,6 @@ The modified array, filled with `value`.
 > To use `Array.prototype.fill()` when declaring an array, make sure to assign slots to the array.
 > [See example](#using_fill_to_populate_an_empty_array).
 
-## Polyfill
-
-```js
-if (!Array.prototype.fill) {
-  Object.defineProperty(Array.prototype, 'fill', {
-    value: function(value) {
-
-      // Steps 1-2.
-      if (this == null) {
-        throw new TypeError('this is null or not defined');
-      }
-
-      let O = Object(this);
-
-      // Steps 3-5.
-      const len = O.length >>> 0;
-
-      // Steps 6-7.
-      const start = arguments[1];
-      const relativeStart = start >> 0;
-
-      // Step 8.
-      let k = relativeStart < 0 ? Math.max(len + relativeStart, 0) : Math.min(relativeStart, len);
-
-      // Steps 9-10.
-      const end = arguments[2];
-      const relativeEnd = end === undefined ? len : end >> 0;
-
-      // Step 11.
-      const finalValue = relativeEnd < 0 ? Math.max(len + relativeEnd, 0) : Math.min(relativeEnd, len);
-
-      // Step 12.
-      while (k < finalValue) {
-        O[k] = value;
-        k++;
-      }
-
-      // Step 13.
-      return O;
-    }
-  });
-}
-```
-
-If you need to support truly obsolete JavaScript engines that don't support {{jsxref("Object.defineProperty")}}, it's best not to polyfill `Array.prototype` methods at all, as you can't make them non-enumerable.
-
 ## Examples
 
 ### Using fill

@@ -66,11 +66,11 @@ Additionally, the event source itself may send messages with an event field, whi
 In this basic example, an `EventSource` is created to receive unnamed events from the server; a page with the name `sse.php` is responsible for generating the events.
 
 ```js
-var evtSource = new EventSource('sse.php');
-var eventList = document.querySelector('ul');
+const evtSource = new EventSource('sse.php');
+const eventList = document.querySelector('ul');
 
 evtSource.onmessage = function(e) {
-  var newElement = document.createElement("li");
+  const newElement = document.createElement("li");
 
   newElement.textContent = "message: " + e.data;
   eventList.appendChild(newElement);

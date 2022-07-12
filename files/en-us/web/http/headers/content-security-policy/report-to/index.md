@@ -79,6 +79,12 @@ Report-To: { "group": "endpoint-1",
 Content-Security-Policy: ...; report-to endpoint-1
 ```
 
+```
+Reporting-Endpoints: endpoint-1="https://example.com/reports"
+
+Content-Security-Policy: ...; report-to endpoint-1
+```
+
 ## Specifications
 
 {{Specifications}}

@@ -92,4 +92,4 @@ Not part of any standard.
 
 ## See also
 
-{{ cssxref("mask") }}, {{ cssxref("mask-origin") }}, {{ cssxref("-webkit-mask-attachment") }},{{ cssxref("mask-clip") }},{{ cssxref("mask-image") }},{{ cssxref("-webkit-mask-composite") }},{{ cssxref("mask-repeat") }}
+{{ cssxref("mask") }}, {{ cssxref("mask-origin") }}, {{ cssxref("-webkit-mask-attachment") }}, {{ cssxref("mask-clip") }}, {{ cssxref("mask-image") }}, {{ cssxref("-webkit-mask-composite") }}, {{ cssxref("mask-repeat") }}

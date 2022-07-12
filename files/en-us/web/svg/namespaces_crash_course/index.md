@@ -184,7 +184,7 @@ The [DOM Level 1](https://www.w3.org/TR/REC-DOM-Level-1/) recommendation was cre
     </tr>
     <tr>
       <td>
-        <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#"
+        <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttr"
           >hasAttribute</a
         >
       </td>

@@ -20,12 +20,12 @@ browser-compat: api.GlobalEventHandlers.ontransitionend
 
 The **`ontransitionend`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("transitionend")}} events.
+processes {{domxref("HTMLElement/transitionend_event", "transitionend")}} events.
 
 The `transitionend` event is sent to when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) completes.
 
 > **Note:** If the transition is removed from its target node before the transition completes
-> execution, the {{event("transitionend")}} event won't be generated. One way this can
+> execution, the {{domxref("HTMLElement/transitionend_event", "transitionend")}} event won't be generated. One way this can
 > happen is by changing the value of the {{cssxref("transition-property")}} attribute
 > which applies to the target. Another is if the {{cssxref("display")}} attribute is set
 > to `none`.
@@ -40,7 +40,7 @@ target.ontransitionend = {{jsxref("Function")}}
 
 ### Value
 
-A {{jsxref("Function")}} to be called when a {{event("transitionend")}} event occurs
+A {{jsxref("Function")}} to be called when a {{domxref("HTMLElement/transitionend_event", "transitionend")}} event occurs
 indicating that a CSS transition has completed on the `target`,
 where the target object is an HTML element ({{domxref("HTMLElement")}}), document
 ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as
@@ -55,7 +55,7 @@ should be the same as the value of {{cssxref("transition-duration")}}.
 
 ## Example
 
-In this example, we use the {{event("transitionrun")}} and {{event("transitionend")}}
+In this example, we use the {{domxref("HTMLElement/transitionrun_event", "transitionrun")}} and {{domxref("HTMLElement/transitionend_event", "transitionend")}}
 events to detect when the transition begins and ends, to cause a text update to occur
 during the transition. This could also be used to trigger animations or other effects,
 to allow chaining of reactions.
@@ -133,6 +133,6 @@ Notice what happens when you hover your mouse cursor over the box, then move it 
 
 ## See also
 
-- The {{event("transitionend")}} event this event handler is triggered by
+- The {{domxref("HTMLElement/transitionend_event", "transitionend")}} event this event handler is triggered by
 - {{domxref("TransitionEvent")}}
-- The {{event("transitionrun")}} event, which occurs when the transition begins
+- The {{domxref("HTMLElement/transitionrun_event", "transitionrun")}} event, which occurs when the transition begins

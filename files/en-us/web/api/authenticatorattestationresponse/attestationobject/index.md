@@ -48,8 +48,7 @@ properties:
 
 - `fmt`
 
-  - : A text string that indicates the format of the attStmt. The [WebAuthn
-    specification defines a number of formats](https://www.w3.org/TR/webauthn/#defined-attestation-formats); however, formats may also be defined
+  - : A text string that indicates the format of the attStmt. The [WebAuthn specification defines a number of formats](https://www.w3.org/TR/webauthn/#defined-attestation-formats); however, formats may also be defined
     in other specifications and registered in an [IANA registry](https://www.w3.org/TR/webauthn/#sctn-att-fmt-reg). Formats
     defined by WebAuthn are:
 
@@ -62,8 +61,7 @@ properties:
 
 - `attStmt`
   - : An attestation statement that is of the format defined by `"fmt"`. For
-    now, [see the
-    WebAuthn specification for details on each format](https://www.w3.org/TR/webauthn/#defined-attestation-formats).
+    now, [see the WebAuthn specification for details on each format](https://www.w3.org/TR/webauthn/#defined-attestation-formats).
 
 ## Examples
 

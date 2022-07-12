@@ -1,6 +1,7 @@
 ---
 title: EXT_disjoint_timer_query.isQueryEXT()
 slug: Web/API/EXT_disjoint_timer_query/isQueryEXT
+page-type: webgl-extension-method
 tags:
   - API
   - Method

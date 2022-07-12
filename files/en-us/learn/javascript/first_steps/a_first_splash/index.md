@@ -148,7 +148,8 @@ In our example:
 - The next two constants store references to the form text input and submit button and are used to control submitting the guess later on.
 
   ```html
-  <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
+  <label for="guessField">Enter a guess: </label>
+  <input type="text" id="guessField" class="guessField">
   <input type="submit" value="Submit guess" class="guessSubmit">
   ```
 
@@ -405,7 +406,7 @@ This rather long block of code completely resets everything to how it was at the
 
 **At this point you should have a fully working (simple) game — congratulations!**
 
-All we have left to do now in this article is talk about a few other important code features that you've already seen, although you may have not realized it.
+All we have left to do now in this article is to talk about a few other important code features that you've already seen, although you may have not realized it.
 
 ### Loops
 
@@ -514,7 +515,7 @@ Let's play with some browser objects a bit.
 
     Every element on a page has a `style` property, which itself contains an object whose properties contain all the inline CSS styles applied to that element. This allows us to dynamically set new CSS styles on elements using JavaScript.
 
-## Finished for now...
+## Finished for now…
 
 So that's it for building the example. You got to the end — well done! Try your final code out, or [play with our finished version here](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). If you can't get the example to work, check it against the [source code](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html).
 

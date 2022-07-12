@@ -65,7 +65,7 @@ But, if you pass an array to `push`, it will actually add that array as a single
 
 What if that is not what you want? `concat` does have the desired behavior in this case, but it does not append to the _existing_ array—it instead creates and returns a new array.
 
-But you wanted to append to the existing array... So what now? Write a loop? Surely not?
+But you wanted to append to the existing array. So what now? Write a loop? Surely not?
 
 `apply` to the rescue!
 
@@ -106,7 +106,7 @@ for (let i = 0; i < numbers.length; i++) {
 }
 ```
 
-But beware: by using `apply` this way, you run the risk of exceeding the JavaScript engine's argument length limit. The consequences of applying a function with too many arguments (that is, more than tens of thousands of arguments) varies across engines. (The JavaScriptCore engine has hard-coded [argument limit of 65536](https://bugs.webkit.org/show_bug.cgi?id=80797).
+But beware: by using `apply` this way, you run the risk of exceeding the JavaScript engine's argument length limit. The consequences of applying a function with too many arguments (that is, more than tens of thousands of arguments) varies across engines. (The JavaScriptCore engine has hard-coded [argument limit of 65536](https://bugs.webkit.org/show_bug.cgi?id=80797).)
 
 This is because the limit (and indeed, even the nature of any excessively-large-stack behavior) is unspecified. Some engines will throw an exception. More perniciously, others will arbitrarily limit the number of arguments actually passed to the applied function. To illustrate this latter case: if such an engine had a limit of four arguments (actual limits are of course significantly higher), it would be as if the arguments `5, 6, 2, 3` had been passed to `apply` in the examples above, rather than the full array.
 
@@ -146,7 +146,7 @@ Function.prototype.construct = function(aArgs) {
 Example usage:
 
 ```js
-function MyConstructor(arguments) {
+function MyConstructor() {
   for (let nProp = 0; nProp < arguments.length; nProp++) {
     this['property' + nProp] = arguments[nProp];
   }

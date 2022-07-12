@@ -39,7 +39,7 @@ _The {{domxref("SpeechSynthesisEvent")}} interface also inherits methods from it
 
 ```js
 utterThis.onpause = function(event) {
-  var char = event.utterance.text.charAt(event.charIndex);
+  const char = event.utterance.text.charAt(event.charIndex);
   console.log('Speech paused at character ' + event.charIndex + ' of "' +
   event.utterance.text + '", which is "' + char + '".');
 }

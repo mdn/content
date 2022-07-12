@@ -30,7 +30,9 @@ The following gets the number of explicitly set styles on the following HTML ele
 JavaScript code:
 
 ```js
-var myDiv = document.getElementById('div1'); var divStyle = myDiv.style; var len = divStyle.length; // 6
+const myDiv = document.getElementById('div1');
+const divStyle = myDiv.style;
+const len = divStyle.length; // 6
 ```
 
 ## Specifications

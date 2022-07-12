@@ -191,7 +191,7 @@ For further information on styling forms, take a look at the two articles in the
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Images and Form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_tasks).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Images and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_tasks).
 
 ## Summary
 

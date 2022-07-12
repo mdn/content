@@ -44,7 +44,7 @@ WebAssembly.instantiate(bufferSource, importObject);
 - `bufferSource`
   - : A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or
     {{jsxref("ArrayBuffer")}} containing the binary code of the .wasm module you want to
-    compile.
+    compile, or a {{jsxref("WebAssembly.Module")}}.
 - `importObject` {{optional_inline}}
   - : An object containing the values to be imported into the newly-created
     `Instance`, such as functions or {{jsxref("WebAssembly.Memory")}} objects.
@@ -64,8 +64,8 @@ fields:
 
 #### Exceptions
 
-- If either of the parameters are not of the correct type or structure, a
-  {{jsxref("TypeError")}} is thrown.
+- If either of the parameters are not of the correct type or structure,
+  the promise rejects with a {{jsxref("TypeError")}}.
 - If the operation fails, the promise rejects with a
   {{jsxref("WebAssembly.CompileError")}}, {{jsxref("WebAssembly.LinkError")}}, or
   {{jsxref("WebAssembly.RuntimeError")}}, depending on the cause of the failure.
@@ -110,21 +110,18 @@ JavaScript function into the WebAssembly Module in the process. We then call an 
 that is exported by the `Instance`.
 
 ```js
-var importObject = {
+const importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func(arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.instantiate(bytes, importObject)
-).then(result =>
-  result.instance.exports.exported_func()
-);
+fetch('simple.wasm')
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+  .then((result) => result.instance.exports.exported_func());
 ```
 
 > **Note:** You can also find this example at [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html)
@@ -139,12 +136,10 @@ compiles the loaded simple.wasm byte code using the
 {{domxref("Worker.postMessage", "postMessage()")}}.
 
 ```js
-var worker = new Worker("wasm_worker.js");
+const worker = new Worker("wasm_worker.js");
 
 WebAssembly.compileStreaming(fetch('simple.wasm'))
-.then(mod =>
-  worker.postMessage(mod)
-);
+  .then((mod) => worker.postMessage(mod));
 ```
 
 In the worker (see
@@ -155,19 +150,19 @@ instance from it using the {{jsxref("WebAssembly.instantiate()")}} method and in
 exported function from inside it.
 
 ```js
-var importObject = {
+const importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func(arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-onmessage = function(e) {
+onmessage = (e) => {
   console.log('module received from main thread');
-  var mod = e.data;
+  const mod = e.data;
 
-  WebAssembly.instantiate(mod, importObject).then(function(instance) {
+  WebAssembly.instantiate(mod, importObject).then((instance) => {
     instance.exports.exported_func();
   });
 };

@@ -19,6 +19,11 @@ The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) `AudioProcessingEvent` re
 
 {{InheritanceDiagram}}
 
+## Constructor
+
+- `AudioProcessingEvent()`
+  - : Creates a new `AudioProcessingEvent` object.
+
 ## Properties
 
 _Also implements the properties inherited from its parent, {{domxref("Event")}}_.

@@ -50,9 +50,9 @@ To convert the non-standard expression closures syntax to standard ECMAScript sy
 you can add curly braces and return statements.
 
 ```js example-good
-var x = function() { return 1; }
+const x = function() { return 1; }
 
-var obj = {
+const obj = {
   count: function() { return 1; }
 };
 ```
@@ -62,7 +62,7 @@ var obj = {
 Alternatively, you can use [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions):
 
 ```js example-good
-var x = () => 1;
+const x = () => 1;
 ```
 
 ### Standard syntax using shorthand method syntax
@@ -79,7 +79,7 @@ var obj = {
 With ES2015 [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions), this can be converted to:
 
 ```js example-good
-var obj = {
+const obj = {
   get x() { return 1 },
   set x(v) { this.v = v }
 };

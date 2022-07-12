@@ -27,14 +27,6 @@ This field does not exist in old browsers. Using it without checking its existen
 
 Because `MAX_SAFE_INTEGER` is a static property of {{jsxref("Number")}}, you always use it as `Number.MAX_SAFE_INTEGER`, rather than as a property of a {{jsxref("Number")}} object you created.
 
-## Polyfill
-
-```js
-if (!Number.MAX_SAFE_INTEGER) {
-    Number.MAX_SAFE_INTEGER = 9007199254740991; // Math.pow(2, 53) - 1;
-}
-```
-
 ## Examples
 
 ### Return value of MAX_SAFE_INTEGER

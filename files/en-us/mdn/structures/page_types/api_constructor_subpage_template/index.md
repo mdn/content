@@ -1,6 +1,7 @@
 ---
 title: API constructor subpage template
 slug: MDN/Structures/Page_types/API_constructor_subpage_template
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -24,6 +25,7 @@ browser-compat: path.to.feature.NameOfTheConstructor
 > ---
 > title: NameOfTheConstructor()
 > slug: Web/API/NameOfTheParentInterface/NameOfTheParentInterface
+> page-type: web-api-constructor
 > tags:
 >   - API
 >   - Constructor
@@ -43,6 +45,8 @@ browser-compat: path.to.feature.NameOfTheConstructor
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
 >     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheParentInterface`.
 >     Note that the name of the constructor function in the slug omits the parenthesis (it ends in `NameOfTheParentInterface` not `NameOfTheParentInterface()`).
+> - **page-type**
+>   - : The `page-type` key for Web/API constructors is always `web-api-constructor`.
 > - **tags**
 >   - : Always include the following tags: **API**, **Reference**, **Constructor**,  the _name of the API_ (e.g. **WebVR**), the name of the _parent interface_ (e.g. **IDBIndex**).
 >
@@ -113,17 +117,37 @@ This is normally just "An instance of the {{domxref("NameOfTheParentInterface")}
 
 ## Examples
 
-Fill in a simple example that nicely shows a typical usage of the constructor, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information).
+### A descriptive heading
 
-```js
-my code block
-```
+Each example must have an H3 heading naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
 
-And/or include a list of links to useful code samples that live elsewhere:
+See our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information.
 
-- x
-- y
-- z
+> **Note:** Sometimes you will want to link to examples given on another page.
+>
+> **Scenario 1:** If you have some examples on this page and some more examples on another page:
+>
+> Include an H3 heading (`###`) for each example on this page and then a final H3 heading (`###`) with the text "More examples", under which you can link to the examples on other pages. For example:
+>
+>  ```md
+>  ## Examples
+>
+>  ### Using the fetch API
+>  ... example of Fetch
+>
+>  ### More examples
+>  ...links to more examples on other pages
+>  ```
+>
+> **Scenario 2:** If you _only_ have examples on another page and none on this page:
+>
+> Don't add any H3 headings; just add the links directly under the H2 heading "Examples". For example:
+>
+>  ```md
+>   ## Examples
+>
+>   For examples of this API, see [the page on fetch()](https://example.org).
+>
 
 ## Specifications
 

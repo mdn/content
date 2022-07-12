@@ -33,7 +33,7 @@ standard WebGL framebuffer, except for the differences covered in the section
 ## Value
 
 A {{domxref("WebGLFramebuffer")}} object representing the framebuffer into which the 3D
-scene is being rendered, or `null` if the [XR compositor](en-US/docs/Web/API/WebXR_Device_API/Fundamentals#The_WebXR_compositor) is disabled for the session.
+scene is being rendered, or `null` if the [XR compositor](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#the_webxr_compositor) is disabled for the session.
 
 ## Usage notes
 

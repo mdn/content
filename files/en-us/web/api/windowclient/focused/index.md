@@ -38,13 +38,11 @@ self.addEventListener('notificationclick', function(event) {
     for (var i = 0; i < clientList.length; i++) {
       var client = clientList[i];
       if (client.url == '/' && 'focus' in client) {
-        if(!client.focused)
-          return client.focus();
-        }
+        if (!client.focused) return client.focus();
       }
     }
-    if (clients.openWindow)
-      return clients.openWindow('/');
+
+    if (clients.openWindow) return clients.openWindow('/');
   }));
 });
 ```

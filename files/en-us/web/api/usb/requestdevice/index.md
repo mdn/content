@@ -10,6 +10,7 @@ tags:
   - WebUSB
   - WebUSB API
   - getDevices()
+  - Experimental
 browser-compat: api.USB.requestDevice
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}

@@ -29,9 +29,9 @@ let goingForward = browser.tabs.goForward(
 
 ### Parameters
 
-- `tabId`{{optional_inline}}
+- `tabId` {{optional_inline}}
   - : `integer`. The ID of the tab to navigate. Defaults to the active tab of the current window.
-- `callback`{{optional_inline}}
+- `callback` {{optional_inline}}
   - : `function`. When the page navigation finishes, this function is called without parameters.
 
 ### Return value

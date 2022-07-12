@@ -164,7 +164,7 @@ fetch('./register', {
 });
 ```
 
-Then the {{domxref("onclick","GlobalEventHandlers.onclick")}} function on the _Subscribe_ button is defined:
+Then the {{domxref("Element.click_event", "onclick")}} function on the _Subscribe_ button is defined:
 
 ```js
 document.getElementById('doIt').onclick = function() {

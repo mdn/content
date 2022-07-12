@@ -120,7 +120,7 @@ The values that can be combined to form the bitmask are:
 ## Examples
 
 ```js
-var nodeIterator = document.createNodeIterator(
+const nodeIterator = document.createNodeIterator(
     document.body,
     ( NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_COMMENT | NodeFilter.SHOW_TEXT ),
     { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } }

@@ -14,30 +14,30 @@ browser-compat: api.PerformanceEventTiming
 ---
 The `PerformanceEventTiming` interface of the Event Timing API provides timing information for the event types listed below.
 
-- {{event("auxclick")}}
-- {{event("beforeinput")}}
-- {{event("click")}}
-- {{event("compositionend")}}
-- {{event("compositionstart")}}
-- {{event("compositionupdate")}}
-- {{event("contextmenu")}}
-- {{event("dblclick")}}
+- {{domxref("Element/auxclick_event", "auxclick")}}
+- {{domxref("HTMLElement/beforeinput_event", "beforeinput")}}
+- {{domxref("Element/click_event", "click")}}
+- {{domxref("Element/compositionend_event", "compositionend")}}
+- {{domxref("Element/compositionstart_event", "compositionstart")}}
+- {{domxref("Element/compositionupdate_event", "compositionupdate")}}
+- {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("Element/dblclick_event", "dblclick")}}
 - {{domxref("HTMLElement/dragend_event", "dragend")}}
 - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
 - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
 - {{domxref("HTMLElement/dragover_event", "dragover")}}
 - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
 - {{domxref("HTMLElement/drop_event", "drop")}}
-- {{event("input")}}
-- {{event("keydown")}}
-- {{event("keypress")}}
-- {{event("keyup")}}
-- {{event("mousedown")}}
-- {{event("mouseenter")}}
-- {{event("mouseleave")}}
-- {{event("mouseout")}}
-- {{event("mouseover")}}
-- {{event("mouseup")}}
+- {{domxref("HTMLElement/input_event", "input")}}
+- {{domxref("Element/keydown_event", "keydown")}}
+- {{domxref("Element/keypress_event", "keypress")}}
+- {{domxref("Element/keyup_event", "keyup")}}
+- {{domxref("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/mouseenter_event", "mouseenter")}}
+- {{domxref("Element/mouseleave_event", "mouseleave")}}
+- {{domxref("Element/mouseout_event", "mouseout")}}
+- {{domxref("Element/mouseover_event", "mouseover")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
 - {{domxref("HTMLElement/pointerover_event", "pointerover")}}
 - {{domxref("HTMLElement/pointerenter_event", "pointerenter")}}
 - {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}

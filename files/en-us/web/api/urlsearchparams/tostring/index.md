@@ -59,5 +59,4 @@ console.log(params.toString()); // Prints 'foo=1&bar=2&foo=4'
 ## See also
 
 - The {{domxref("URL")}} interface.
-- [Google
-  Developers: Easy URL manipulation with URLSearchParams](https://developer.chrome.com/blog/urlsearchparams/)
+- [Google Developers: Easy URL manipulation with URLSearchParams](https://developer.chrome.com/blog/urlsearchparams/)

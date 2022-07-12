@@ -1,6 +1,7 @@
 ---
 title: OVR_multiview2
 slug: Web/API/OVR_multiview2
+page-type: webgl-extension
 tags:
   - API
   - WebGL
@@ -47,7 +48,7 @@ This extension exposes 4 constants that can be used in [`getParameter()`](/en-US
 
 ## Examples
 
-This example is taken from the [specification](https://www.khronos.org/registry/webgl/extensions/OVR_multiview2/). See also this [three.js](https://threejs.org/examples/webvr_multiview.html) demo for a live multiview example.
+This example is taken from the [specification](https://www.khronos.org/registry/webgl/extensions/OVR_multiview2/).
 
 ```js
 const gl = document.createElement('canvas').getContext( 'webgl2', { antialias: false } );
@@ -81,6 +82,8 @@ void main() {
   gl_Position = u_viewMatrices[gl_ViewID_OVR] * inPos;
 }
 ```
+
+Also, see this [three.js](https://threejs.org/examples/?q=mult#webgl_multiple_views) demo for a live multiview example.
 
 ## Specifications
 

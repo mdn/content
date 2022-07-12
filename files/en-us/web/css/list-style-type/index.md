@@ -104,7 +104,7 @@ Note that:
   - : Han "Earthly Branch" ordinals.
 - `cjk-heavenly-stem`, `-moz-cjk-heavenly-stem`
   - : Han "Heavenly Stem" ordinals.
-- `cjk-ideographic`{{experimental_inline}}
+- `cjk-ideographic` {{experimental_inline}}
   - : Identical to `trad-chinese-informal`.
 - `devanagari`, `-moz-devanagari`
   - : Devanagari numbering.

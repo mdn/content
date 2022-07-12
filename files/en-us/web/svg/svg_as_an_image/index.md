@@ -20,7 +20,7 @@ Additionally, Gecko 2.0 {{geckoRelease("2.0")}} introduced support for using [SV
 - CSS {{cssxref("content")}}
 - SVG {{SVGElement("image")}} element
 - SVG {{SVGElement("feImage")}} element
-- Canvas [`drawImage`](/en-US/docs/Web/HTML/Canvas/Tutorial/Using_images#drawImage) function
+- Canvas [`drawImage`](/en-US/docs/Web/HTML/Canvas/Tutorial/Using_images#drawimage) function
 
 ### Restrictions
 

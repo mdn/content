@@ -71,11 +71,11 @@ fetch(resource, init)
         {{domxref("Headers")}} object or an object literal with {{jsxref("String")}}
         values. Note that [some names are forbidden](/en-US/docs/Glossary/Forbidden_header_name).
     - `body`
-      - : Any body that you want to add to your request: this can be a
-        {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}},
-        {{domxref("URLSearchParams")}}, string, or
-        {{domxref("ReadableStream")}} object. Note that a request using the
-        `GET` or `HEAD` method cannot have a body.
+      - : Any body that you want to add to your request:
+        this can be a {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}},
+        a {{domxref("FormData")}}, a {{domxref("URLSearchParams")}}, string object or literal,
+        or a {{domxref("ReadableStream")}} object. This latest possibility is still experimental; check the [compatibility information](/en-US/docs/Web/API/Request#browser_compatibility) to verify you can use it.
+        Note that a request using the `GET` or `HEAD` method cannot have a body.
     - `mode`
       - : The mode you want to use for the request, e.g., `cors`,
         `no-cors`, or `same-origin`.
@@ -309,7 +309,7 @@ const myRequest = new Request('flowers.jpg');
 
 fetch(myRequest, myInit)
   .then((response) => {
-    // ...
+    // …
   });
 ```
 

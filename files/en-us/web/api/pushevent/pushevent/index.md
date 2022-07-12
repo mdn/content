@@ -45,11 +45,11 @@ A new {{domxref("PushEvent")}} object.
 ## Examples
 
 ```js
-var dataInit = {
+const dataInit = {
   data : 'Some sample text'
 }
 
-var myPushEvent = new PushEvent('push', dataInit);
+const myPushEvent = new PushEvent('push', dataInit);
 
 myPushEvent.data.text(); // should return 'Some sample text'
 ```

@@ -85,7 +85,7 @@ function drop_handler(ev) {
  console.log("Drop");
  ev.preventDefault();
  // Get the data, which is the id of the drop target
- var data = ev.dataTransfer.getData("text");
+ const data = ev.dataTransfer.getData("text");
  ev.target.appendChild(document.getElementById(data));
  // Clear the drag data cache (for all formats/types)
  ev.dataTransfer.clearData();

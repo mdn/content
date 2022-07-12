@@ -8,19 +8,14 @@ tags:
   - Feature Policy
   - Feature-Policy
   - Reference
+  - Property
 browser-compat: api.Document.featurePolicy
 ---
 {{APIRef("Feature Policy")}}
 
 The **`featurePolicy`** read-only property of the {{domxref("Document")}} interface returns the {{domxref("FeaturePolicy")}} interface which provides a simple API for inspecting the feature policies applied to a specific document.
 
-## Syntax
-
-```js
-var policy = iframeElement.featurePolicy
-```
-
-### Value
+## Value
 
 A {{domxref("FeaturePolicy")}} object that can be used to inspect the Feature Policy settings applied to the document.
 

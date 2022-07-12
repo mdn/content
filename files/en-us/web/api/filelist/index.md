@@ -26,12 +26,12 @@ const file = document.getElementById('fileItem').files[0];
 
 ## Properties
 
-- {{DOMxRef("FileList/length", "length")}}{{ReadOnlyInline}}
+- {{DOMxRef("FileList/length", "length")}} {{ReadOnlyInline}}
   - : A read-only value indicating the number of files in the list.
 
 ## Methods
 
-- {{DOMxRef("FileList/item", "item()")}}{{ReadOnlyInline}}
+- {{DOMxRef("FileList/item", "item()")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("File")}} object representing the file at the specified index in the file list.
 
 ## Example

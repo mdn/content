@@ -50,21 +50,20 @@ function created by `Function.prototype.bind`, `toString()`
 returns a _native function string_ which looks like
 
 ```js
-"function () {\n    [native code]\n}"
+"function someName() { [native code] }"
 ```
 
-If the `toString()` method is called on a function created by the
-`Function` constructor, `toString()` returns the source code of
-a synthesized function declaration named "anonymous" using the provided parameters and
-function body.
+For intrinsic object methods and functions, `someName` is the initial name of the function; otherwise its content may be implementation-defined, but will always be in property name syntax, like `[1 + 1]`, `someName`, or `1`.
 
-It's also possible to explicitly get the string representation of a function using the
-`+` operator:
+> **Note:** This means using [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) on native function strings is a guaranteed syntax error.
+
+If the `toString()` method is called on a function created by the `Function` constructor, `toString()` returns the source code of a synthesized function declaration named "anonymous" using the provided parameters and function body. For example, `Function("a", "b", "return a + b").toString()` will return:
 
 ```js
-function foo() { return 'bar' }
-console.log(foo + ''); // "function foo() { return 'bar' }"
+"function anonymous(a,b\n) {\nreturn a + b\n}"
 ```
+
+Since ES2018, the spec requires the return value of `toString()` to be the exact same source code as it was declared, including any whitespace and/or comments — or, if the host doesn't have the source code available for some reason, requires returning a native function string. Support for this revised behavior can be found in the [compatibility table](#browser_compatibility).
 
 ## Examples
 
@@ -142,6 +141,22 @@ Object.getOwnPropertyDescriptor({
     </tr>
   </tbody>
 </table>
+
+### Getting source text of a function
+
+It is possible to get the source text of a function using the `+` operator to concatenate it with a string:
+
+```js
+function foo() { return 'bar' }
+console.log(foo + ''); // "function foo() { return 'bar' }"
+```
+
+This source text is _exact_, including any interspersed comments (which won't be stored by the engine's internal representation otherwise).
+
+```js
+function foo/* a comment */() { return 'bar' }
+console.log(foo.toString()); // "function foo/* a comment */() { return 'bar' }"
+```
 
 ## Specifications
 

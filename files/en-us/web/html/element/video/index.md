@@ -76,7 +76,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
     In Safari, you can use [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) as a fallback.
 
 - {{htmlattrdef("height")}}
-  - : The height of the video's display area, in [CSS pixels](https://drafts.csswg.org/css-values/#px) (absolute values only; [no percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes).)
+  - : The height of the video's display area, in [CSS pixels](https://drafts.csswg.org/css-values/#px) (absolute values only; [no percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)).
 - {{htmlattrdef("loop")}}
   - : A Boolean attribute; if specified, the browser will automatically seek back to the start upon reaching the end of the video.
 - {{htmlattrdef("muted")}}
@@ -118,7 +118,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
   <tbody>
     <tr>
       <td>
-        {{domxref("ScriptProcessorNode.audioprocess_event","audioprocess")}}{{Deprecated_Inline}}
+        {{domxref("ScriptProcessorNode.audioprocess_event","audioprocess")}} {{Deprecated_Inline}}
       </td>
       <td>
         The input buffer of a {{DOMxRef("ScriptProcessorNode")}} is
@@ -269,7 +269,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
       <td>
         {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}
       </td>
-      <td>Playback has stopped because of a temporary lack of data</td>
+      <td>Playback has stopped because of a temporary lack of data.</td>
     </tr>
   </tbody>
 </table>
@@ -333,7 +333,7 @@ elem.audioTracks.onremovetrack = function(event) {
 
 This code watches for audio tracks to be added to and removed from the element, and calls a hypothetical function on a track editor to register and remove the track from the editor's list of available tracks.
 
-You can also use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to listen for the {{domxref("VideoTrackList/addtrack_event", "addtrack")}} and {{event("removetrack")}} events.
+You can also use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to listen for the {{domxref("VideoTrackList/addtrack_event", "addtrack")}} and {{domxref("VideoTrackList/removetrack_event", "removetrack")}} events.
 
 ### Server support for video
 
@@ -481,7 +481,7 @@ Captions should not obstruct the main subject of the video. They can be position
           attribute: zero or more {{HTMLElement("track")}} elements,
           followed by transparent content that contains no media elements–that
           is no {{HTMLElement("audio")}} or
-          {{HTMLElement("video")}}
+          {{HTMLElement("video")}}.
         </p>
         <p>
           Else: zero or more {{HTMLElement("source")}} elements, followed
