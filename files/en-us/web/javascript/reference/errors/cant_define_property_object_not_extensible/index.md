@@ -16,10 +16,11 @@ as non-extensible.
 
 ## Message
 
-```js
-TypeError: Cannot create property for a non-extensible object (Edge)
-TypeError: can't define property "x": "obj" is not extensible (Firefox)
-TypeError: Cannot define property: "x", object is not extensible. (Chrome)
+```
+TypeError: Cannot add property x, object is not extensible (V8-based)
+TypeError: Cannot define property x, object is not extensible (V8-based)
+TypeError: can't define property "x": Object is not extensible (Firefox)
+TypeError: Attempting to define property on object that is not extensible. (Safari)
 ```
 
 ## Error type
@@ -49,7 +50,7 @@ const obj = {};
 Object.preventExtensions(obj);
 
 obj.x = 'foo';
-// TypeError: can't define property "x": "obj" is not extensible
+// TypeError: can't define property "x": Object is not extensible
 ```
 
 In both, [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) and
@@ -60,10 +61,8 @@ property to a non-extensible object.
 const obj = { };
 Object.preventExtensions(obj);
 
-Object.defineProperty(obj,
-  'x', { value: "foo" }
-);
-// TypeError: can't define property "x": "obj" is not extensible
+Object.defineProperty(obj, 'x', { value: "foo" });
+// TypeError: can't define property "x": Object is not extensible
 ```
 
 To fix this error, you will either need to remove the call to

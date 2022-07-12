@@ -14,17 +14,15 @@ operated on {{jsxref("undefined")}} or {{jsxref("null")}} values.
 
 ## Message
 
-```js
-TypeError: Unable to get property {x} of undefined or null reference (Edge)
-TypeError: can't access property {x} of {y} (Firefox)
-TypeError: {y} is undefined, can't access property {x} of it (Firefox)
-TypeError: {y} is null, can't access property {x} of it (Firefox)
-
-Examples:
-TypeError: x is undefined, can't access property "prop" of it
-TypeError: x is null, can't access property "prop" of it
-TypeError: can't access property "prop" of undefined
-TypeError: can't access property "prop" of null
+```
+TypeError: Cannot read properties of undefined (reading 'x') (V8-based)
+TypeError: Cannot read properties of null (reading 'a') (V8-based)
+TypeError: undefined has no properties (Firefox)
+TypeError: null has no properties (Firefox)
+TypeError: x is undefined (Firefox)
+TypeError: x is null (Firefox)
+TypeError: undefined is not an object (evaluating 'obj.x') (Safari)
+TypeError: null is not an object (evaluating 'obj.x') (Safari)
 ```
 
 ## Error type
@@ -43,10 +41,10 @@ value.
 ```js example-bad
 // undefined and null cases on which the substring method won't work
 const foo = undefined;
-foo.substring(1); // TypeError: x is undefined, can't access property "substring" of it
+foo.substring(1); // TypeError: foo is undefined
 
-const foo = null;
-foo.substring(1); // TypeError: x is null, can't access property "substring" of it
+const foo2 = null;
+foo2.substring(1); // TypeError: foo is null
 ```
 
 ### Fixing the issue

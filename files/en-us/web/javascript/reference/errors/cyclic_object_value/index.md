@@ -15,10 +15,10 @@ to solve them and fails accordingly.
 
 ## Message
 
-```js
+```
+TypeError: Converting circular structure to JSON (V8-based)
 TypeError: cyclic object value (Firefox)
-TypeError: Converting circular structure to JSON (Chrome and Opera)
-TypeError: Circular reference in value argument not supported (Edge)
+TypeError: JSON.stringify cannot serialize cyclic structures. (Safari)
 ```
 
 ## Error type

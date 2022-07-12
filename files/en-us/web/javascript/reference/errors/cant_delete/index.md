@@ -15,10 +15,10 @@ when it was attempted to delete a property, but that property is [non-configurab
 
 ## Message
 
-```js
-TypeError: Calling delete on 'x' is not allowed in strict mode (Edge)
-TypeError: property "x" is non-configurable and can't be deleted. (Firefox)
-TypeError: Cannot delete property 'x' of #<Object> (Chrome)
+```
+TypeError: Cannot delete property 'x' of #<Object> (V8-based)
+TypeError: property "x" is non-configurable and can't be deleted (Firefox)
+TypeError: Unable to delete property. (Safari)
 ```
 
 ## Error type
