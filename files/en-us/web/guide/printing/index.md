@@ -29,7 +29,7 @@ Add the following to your {{HTMLElement("head")}} tag.
 
 ## Detecting print requests
 
-Browsers send `beforeprint` and `afterprint` events to let content determine when printing may have occurred. You can use this to adjust the user interface presented during printing (such as by displaying or hiding user interface elements during the print process).
+Browsers send {{domxref("Window/beforeprint_event", "beforeprint")}} and {{domxref("Window/afterprint_event", "afterprint")}} events to let content determine when printing may have occurred. You can use this to adjust the user interface presented during printing (such as by displaying or hiding user interface elements during the print process).
 
 ## Examples
 
