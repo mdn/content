@@ -39,10 +39,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.1.3.tgz#0208d47fc2d823bde07e0cc6f9b16799a5a9dbb0"
   integrity sha512-5RqTIOtj/8m2yfiAT7fRtVwqDzpHkliozS86puqlceAFFuUQpYn17nIXTZ7hPVyhQ8wacCW42crCBdwscNBjFw==
 
-"@mdn/yari@1.7.14":
-  version "1.7.14"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.7.14.tgz#96c6c1f25bd406b3586b60de69fd8f7de56d6759"
-  integrity sha512-AwdFWlDLfQjuz1xT1oGJIbZt/jGYe4M5ywmjbHCBQOSXMz5iMHBVkU7e+GSz7rVba7GsUk2HzQiyiHZ4/5BzdA==
+"@mdn/yari@1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.8.0.tgz#144b5cffc6eefe9d17e7a93c2f7d3fb7ae4f357d"
+  integrity sha512-TpFG1ddiogevZkCeFhAdeppgBv0Lw8JDoGLCfhF367df+9jA2+bghGThZxziOJq6Quxi2VzgygCBlAYTft+H4A==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
@@ -50,7 +50,7 @@
     "@use-it/interval" "^1.0.0"
     "@webref/css" "^4.3.2"
     accept-language-parser "^1.5.0"
-    browser-specs "^3.14.0"
+    browser-specs "^3.16.0"
     chalk "^4.1.2"
     cheerio "^1.0.0-rc.12"
     cli-progress "^3.11.2"
@@ -63,7 +63,7 @@
     dotenv "^16.0.1"
     ejs "^3.1.8"
     express "^4.18.1"
-    fast-xml-parser "^4.0.8"
+    fast-xml-parser "^4.0.9"
     fdir "^5.2.0"
     file-type "^16.5.3"
     front-matter "^4.0.2"
@@ -577,10 +577,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^3.14.0:
-  version "3.14.0"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.14.0.tgz#b2ab3e611b848a87356e98371b34f4d1dd3c8ccc"
-  integrity sha512-Xe8nQBYzwnVOzdlApoW6hUdrMCsPe3DDNsQZSjARWHkJZ0mZf6icaPqFG0/Rangug1WaXrVI8iVJcuTt9VIwZQ==
+browser-specs@^3.16.0:
+  version "3.16.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.16.0.tgz#cfd30556b6d1391a3fa9a4ccf9159228221aef5f"
+  integrity sha512-xa4gkbnT0I+o7++92JVmlOHHqBaqusXhKrPw6jV8U5FhRwruBe8sHbdZIBfFmSIERQ6J8d+UH/r2aRLEeGIUOQ==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -1707,10 +1707,10 @@ fast-xml-parser@^3.19.0:
   dependencies:
     strnum "^1.0.4"
 
-fast-xml-parser@^4.0.8:
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-4.0.8.tgz#abf0fbfe477b90b796118bd097a3afa4b9b4673f"
-  integrity sha512-N4XqZaRMuHMvOFwFlqeBTlvrnXU+QN8wvCl2g9fHzMx2BnLoIYRDwy6XwI8FxogHMFI9OfGQBCddgckvSLTnvg==
+fast-xml-parser@^4.0.9:
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-4.0.9.tgz#3a81dab7b4952b8d38f0136d28bd055b80ed6512"
+  integrity sha512-4G8EzDg2Nb1Qurs3f7BpFV4+jpMVsdgLVuG1Uv8O2OHJfVCg7gcA53obuKbmVqzd4Y7YXVBK05oJG7hzGIdyzg==
   dependencies:
     strnum "^1.0.5"
 
