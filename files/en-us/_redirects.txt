@@ -8146,7 +8146,14 @@
 /en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/Web/API/GlobalEventHandlers/oncuechange	/en-US/docs/Web/API/TextTrack/cuechange_event
 /en-US/docs/Web/API/GlobalEventHandlers/ondblclick	/en-US/docs/Web/API/Element/dblclick_event
-/en-US/docs/Web/API/GlobalEventHandlers/ondragexit	/en-US/docs/Web/API/GlobalEventHandlers/ondragleave
+/en-US/docs/Web/API/GlobalEventHandlers/ondrag	/en-US/docs/Web/API/HTMLElement/drag_event
+/en-US/docs/Web/API/GlobalEventHandlers/ondragend	/en-US/docs/Web/API/HTMLElement/dragend_event
+/en-US/docs/Web/API/GlobalEventHandlers/ondragenter	/en-US/docs/Web/API/HTMLElement/dragenter_event
+/en-US/docs/Web/API/GlobalEventHandlers/ondragexit	/en-US/docs/Web/API/HTMLElement/dragleave_event
+/en-US/docs/Web/API/GlobalEventHandlers/ondragleave	/en-US/docs/Web/API/HTMLElement/dragleave_event
+/en-US/docs/Web/API/GlobalEventHandlers/ondragover	/en-US/docs/Web/API/HTMLElement/dragover_event
+/en-US/docs/Web/API/GlobalEventHandlers/ondragstart	/en-US/docs/Web/API/HTMLElement/dragstart_event
+/en-US/docs/Web/API/GlobalEventHandlers/ondrop	/en-US/docs/Web/API/HTMLElement/drop_event
 /en-US/docs/Web/API/GlobalEventHandlers/ondurationchange	/en-US/docs/Web/API/HTMLMediaElement/durationchange_event
 /en-US/docs/Web/API/GlobalEventHandlers/onemptied	/en-US/docs/Web/API/HTMLMediaElement/emptied_event
 /en-US/docs/Web/API/GlobalEventHandlers/onended	/en-US/docs/Web/API/HTMLMediaElement/ended_event
@@ -8168,7 +8175,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenerror	/en-US/docs/Web/API/Document/fullscreenerror_event
 /en-US/docs/Web/API/GlobalEventHandlers/onpointercancel	/en-US/docs/Web/API/Element/pointercancel_event
 /en-US/docs/Web/API/GlobalEventHandlers/onpointerdown	/en-US/docs/Web/API/Element/pointerdown_event
-/en-US/docs/Web/API/GlobalEventHandlers/onpointerdown/drag	/en-US/docs/Web/API/GlobalEventHandlers/ondrag
+/en-US/docs/Web/API/GlobalEventHandlers/onpointerdown/drag	/en-US/docs/Web/API/HTMLElement/drag_event
 /en-US/docs/Web/API/GlobalEventHandlers/onpointerenter	/en-US/docs/Web/API/Element/pointerenter_event
 /en-US/docs/Web/API/GlobalEventHandlers/onpointerleave	/en-US/docs/Web/API/Element/pointerleave_event
 /en-US/docs/Web/API/GlobalEventHandlers/onpointermove	/en-US/docs/Web/API/Element/pointermove_event
