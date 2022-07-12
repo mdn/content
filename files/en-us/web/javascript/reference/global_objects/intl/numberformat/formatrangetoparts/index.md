@@ -15,9 +15,7 @@ browser-compat: javascript.builtins.Intl.NumberFormat.formatRangeToParts
 ---
 {{JSRef}}
 
-The **`Intl.Numberformat.prototype.formatRangeToParts()`** method
-allows locale-aware formatting of strings produced by `NumberFormat`
-formatters.
+The **`Intl.Numberformat.prototype.formatRangeToParts()`** method enables locale-aware formatting of strings produced by `NumberFormat` formatters.
 
 ## Syntax
 
@@ -39,12 +37,14 @@ An {{jsxref("Array")}} of objects containing the formatted range of numbers in p
 
 ### Exceptions
 
+- {{jsxref("RangeError")}}
+  - : Thrown if `startRange` is less than `endRange`, or either value is `NaN`.
 - {{jsxref("TypeError")}}
-  - : Thrown when either `startRange` or `endRange` is undefined.
+  - : Thrown if either `startRange` or `endRange` is undefined.
 
 ## Description
 
-The `formatRangeToParts()` method is useful when custom formatting ranges of number strings.
+The `formatRangeToParts()` method is useful when you need to provide locale aware custom formatting ranges of number strings.
 It returns an {{jsxref("Array")}} of objects containing the locale-specific tokens from which it is possible to build custom strings while preserving the locale-specific parts.
 The structure of the array the `formatRangeToParts()` method returns looks like this:
 
@@ -114,10 +114,8 @@ formatter.formatRange(startRange, endRange)
 // "3.500,00–9.500,00 €"
 ```
 
-However, for many user interfaces there is a need to customize the formatting of this
-string. The `formatRangeToParts` method enables locale-aware formatting of
-strings produced by `NumberFormat` formatters by providing you the string
-in parts:
+However, for many user interfaces there is a need to customize the formatting of this string.
+The `formatRangeToParts` method enables locale-aware formatting of strings produced by `NumberFormat` formatters by providing you the string in parts:
 
 ```js
 formatter.formatRangeToParts(startRange, endRange)
@@ -139,6 +137,7 @@ formatter.formatRangeToParts(startRange, endRange)
 { type: "currency", value: "€", source: "shared" },
 ]
 ```
+
 
 ## Specifications
 
