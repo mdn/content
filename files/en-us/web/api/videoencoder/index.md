@@ -19,9 +19,9 @@ The **`VideoEncoder`** interface of the {{domxref('WebCodecs API','','','true')}
 
 ## Properties
 
-- {{domxref("VideoEncoder.encodeQueueSize")}}{{ReadOnlyInline}}
+- {{domxref("VideoEncoder.encodeQueueSize")}} {{ReadOnlyInline}}
   - : An integer representing the number of encode queue requests.
-- {{domxref("VideoEncoder.state")}}{{ReadOnlyInline}}
+- {{domxref("VideoEncoder.state")}} {{ReadOnlyInline}}
   - : Represents the state of the underlying codec and whether it is configured for encoding.
 
 ## Methods

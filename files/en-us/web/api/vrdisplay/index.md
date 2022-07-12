@@ -25,7 +25,7 @@ An array of all connected VR Devices can be returned by invoking the {{domxref("
 
 ## Properties
 
-- {{domxref("VRDisplay.capabilities")}} {{readonlyInline}}{{deprecated_inline}}
+- {{domxref("VRDisplay.capabilities")}} {{readonlyInline}} {{deprecated_inline}}
   - : Returns a {{domxref("VRDisplayCapabilities")}} object that indicates the various capabilities of the `VRDisplay`.
 - {{domxref("VRDisplay.depthFar")}} {{deprecated_inline}}
   - : Gets and sets the z-depth defining the far plane of the [eye view frustum](https://en.wikipedia.org/wiki/Viewing_frustum), i.e. the furthest viewable boundary of the scene.
