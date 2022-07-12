@@ -6,7 +6,7 @@ tags:
   - MathML
   - MathML Project
 ---
-This page explains how to write mathematics using the MathML language, which is described with tags and attributes in text format. Just like for HTML or SVG, this text can become very verbose for complex content and so requires [proper authoring tools](https://www.w3.org/wiki/Math_Tools#Authoring_tools) such as converters from a [lightweight markup language](https://en.wikipedia.org/wiki/Lightweight_markup_language) or [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG) equation editors. Some of these tools are reviewed below.
+This page explains how to write mathematics using the MathML language, which is described with tags and attributes in text format. Just like for HTML or SVG, this text can become very verbose for complex content and so requires [proper authoring tools](https://www.w3.org/wiki/Math_Tools#Authoring_tools) such as converters from a [lightweight markup language](https://en.wikipedia.org/wiki/Lightweight_markup_language) or [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG) equation editors. Many such tools are available and it is impossible to provide an exhaustive list. Instead, this article focuses on common approaches and examples.
 
 ## Using MathML
 
@@ -100,183 +100,140 @@ Several fonts are proposed and you can just select a different style, for exampl
 
 ## Conversion from a simple syntax
 
-There are many simple notations (e.g. wiki or markdown syntaxes) to generate HTML pages. The same is true for MathML: for example ASCII syntaxes as used in calculators or the more powerful LaTeX language, very popular among the scientific community. In this section, we present some of these tools to convert from a simple syntax to MathML.
-
-- pros:
-
-  - Writing mathematical expressions may only require a standard text editor.
-  - Many tools are available, some of them are compatible with the classical LaTeX-to-pdf workflow.
-  - This gives access to advanced features of LaTeX like macros.
-
-- cons:
-
-  - This may be harder to use: people must learn a syntax, typos in the code may easily lead to parsing or rendering errors etc
-  - The interface is not user-friendly: only code editor without immediate display of the mathematical expression.
-  - None of the syntax has been standardized, making cross-compatibility between converters difficult. Even the popular LaTeX language keeps having new packages added.
+In this section, we review some tools to convert MathML from a [lightweight markup language](https://en.wikipedia.org/wiki/Lightweight_markup_language) such as the popular [LaTeX](https://en.wikipedia.org/wiki/LaTeX) language.
 
 ### Client-side conversion
 
-In a Web environment, the most obvious method to convert a simple syntax into a DOM tree is to use Javascript and of course many libraries have been developed to perform that task.
+With this approach, formulas are written directly in Web pages and a JavaScript library takes care of performing their conversion to MathML. This is probably the easiest option, but it also has some issues: extra JavaScript code must be loaded and executed, authors must escape reserved characters, Web crawlers won't have access to the MathML output...
 
-- pros:
-
-  - This is very easy setup: only a few Javascript and CSS files to upload and/or a link to add to your document header.
-  - This is a pure Web-based solution: everything is done by the browsers and no other programs must be installed or compiled.
-
-- cons:
-
-  - This won't work if the visitor has Javascript disabled.
-  - The MathML code is not exposed to Web crawlers (e.g. those of math search engines or feed aggregators). In particular, your content won't show up properly on Planet.
-  - The conversion must be done at each page load, may be slow and may conflict with the HTML parsing (e.g. "<" for tags or "$" for money amounts)
-  - You may need to synchronize the Javascript converter with other Javascript programs on your page.
-
-[TeXZilla](https://github.com/fred-wang/TeXZilla) has an [\<x-tex>](https://github.com/fred-wang/x-tex) custom element, that can be used to write things like
-
-```
-<x-tex>\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1</x-tex>
-```
-
-and get it automatically converted into MathML. This is still a work-in-progress, but could be improved in the future thanks to Web Components and shadow DOM. Alternatively, you can use the more traditional [Javascript parsing of expressions at load time](https://github.com/fred-wang/TeXZilla/wiki/Advanced-Usages#parsing-tex-expressions-in-your-web-page) as all the other tools in this section do.
-
-One simple client-side conversion tools is [ASCIIMathML](https://www1.chapman.edu/~jipsen/mathml/asciimath.html). Just download the [ASCIIMathML.js](https://mathcs.chapman.edu/~jipsen/mathml/ASCIIMathML.js) script and copy it to your Web site. Then on your Web pages, add a `<script>` tag to load ASCIIMathML and the mathematical expressions delimited by `` ` `` (grave accent) will be automatically parsed and converted to MathML:
+A [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements) can be used to host the source code and ensure the corresponding MathML output is inserted and rendered via a [shadow subtree](/en-US/docs/Web/Web_Components/Using_shadow_DOM). For example, using [TeXZilla](https://github.com/fred-wang/TeXZilla)'s [`<la-tex>`](https://fred-wang.github.io/TeXZilla/examples/customElement.html) element, the [MathML example above](#mathml_in_html_pages) can just be rewritten more concisely as follows:
 
 ```html
+<!DOCTYPE html>
 <html>
-<head>
-...
-<script type="text/javascript" src="ASCIIMathML.js"></script>
-...
-</head>
-<body>
-...
-<p>blah blah `x^2 + y^2 = r^2` blah ...
-...
-```
+  <head>
+    <title>MathML in HTML5</title>
+    <script src="https://fred-wang.github.io/TeXZilla/TeXZilla-min.js"></script>
+    <script src="https://fred-wang.github.io/TeXZilla/examples/customElement.js"></script>
+  </head>
+  <body>
+    <h1>MathML in HTML5</h1>
 
-[LaTeXMathML](https://math.etsu.edu/LaTeXMathML/) is a similar script that allows to parse more LaTeX commands. The installation is similar: copy [LaTeXMathML.js](https://math.etsu.edu/LaTeXMathML/LaTeXMathML.js) and [LaTeXMathML.standardarticle.css](https://math.etsu.edu/LaTeXMathML/LaTeXMathML.standardarticle.css), add links in the header of your document and the LaTeX content of your Web page marked by the "LaTeX" class will be automatically parsed and converted to HTML+MathML:
+    <p>
+      One over square root of two (inline style):
+      <la-tex>\frac{1}{\sqrt{2}}</la-tex>
+    </p>
 
-```html
-<head>
-...
-<script type="text/javascript" src="LaTeXMathML.js"></script>
-<link rel="stylesheet" type="text/css" href="LaTeXMathML.standardarticle.css" />
-...
-</head>
-
-<body>
-...
-
-<div class="LaTeX">
-\documentclass[12pt]{article}
-
-\begin{document}
-
-\title{LaTeXML Example}
-\maketitle
-
-\begin{abstract}
-This is a sample LaTeXML document.
-\end{abstract}
-
-\section{First Section}
-
-  $$ \sum_{n=1}^{+\infty} \frac{1}{n^2} = \frac{\pi^2}{6} $$
-
-\end{document}
-</div>
-...
-```
-
-[jqMath](https://mathscribe.com/author/jqmath.html) is another script to parse a simple LaTeX-like syntax but which also accepts non-ASCII characters like `√{∑↙{n=1}↖{+∞} 6/n^2} = π²` to write <math><mrow><msqrt><mrow class="ma-repel-adj"><munderover><mo>∑</mo> <mrow><mi>n</mi> <mo>=</mo> <mn>1</mn> </mrow><mrow><mo>+</mo> <mi>∞</mi> </mrow></munderover><mfrac><mn>6</mn> <msup><mi>n</mi> <mn>2</mn> </msup></mfrac></mrow></msqrt><mo>=</mo> <mi>π²</mi> </mrow></math>. The installation is similar: download and copy the relevant [Javascript and CSS files](https://mathscribe.com/downloads/mathscribe-unix-0.4.0.zip) on your Web site and reference them in your page header (see the `COPY-ME.html` file from the zip archive for an example). One of the advantage of jqMath over the previous scripts is that it will automatically add some simple CSS rules to do the mathematical layout and make the formulas readable on browsers with limited MathML support.
-
-### Command-line programs
-
-An alternative way is to parse the simple syntax before publishing your web pages. That is, you use command-line programs to generate them and publish these static pages on your server.
-
-- pros:
-
-  - You get static Web pages: the LaTeX source don't need to be parsed at each page load, the MathML code is exposed to Web crawlers and you can put them easily on any Web server.
-  - Binary programs may run faster than Javascript programs and can be more sophisticated e.g. have a much complete LaTeX support or generate other formats like EPUB.
-  - You can keep compatibility with other tools to generate pdf e.g. you can use the same .tex source for both latex and latexml.
-
-- cons:
-
-  - This requires to install programs on your computer, which may be a bit more difficult or they may not be available on all platforms.
-  - You must run the programs on your computer and have some kind of workflow to get the Web pages at the end ; that may be a bit tedious.
-  - Binary programs are not appropriate to integrate them in a Mozilla extension or XUL application.
-
-[TeXZilla](https://github.com/fred-wang/TeXZilla) can be used [from the command line](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line) and will essentially have the same support as itex2MML described below. However, the stream filter behavior is not implemented yet.
-
-If you only want to parse simple LaTeX mathematical expressions, you might want to try tools like [itex2MML](https://golem.ph.utexas.edu/~distler/blog/itex2MML.html) or [Blahtex](http://gva.noekeon.org/blahtexml/). The latter is often available on Linux distributions. Let's consider the former, which was originally written by Paul Gartside at the beginning of the Mozilla MathML project and has been maintained by Jacques Distler since then. It's a small stream filter written in C/C++ and generated with flex and bison ; in particular it is very fast. Install flex/bison as well as the classical compiler and make tools. On Unix, you can then download itex2MML, build and install it:
-
-```bash
-wget http://golem.ph.utexas.edu/~distler/blog/files/itexToMML.tar.gz; \
-tar -xzf itexToMML.tar.gz; \
-cd itex2MML/itex-src;
-make
-sudo make install
-```
-
-Now suppose that you have a HTML page with TeX fragments delimited by dollars:
-
-```html
-input.html
-
-...
-</head>
-<body>
-  <p>$\sqrt{a^2-3c}$</p>
-  <p>$$ {\sum_{i=1}^N i} = \frac{N(N+1)}{2} $$</p>
-</body>
+    <p>
+      One over square root of two (display style):
+      <la-tex display="block">\frac{1}{\sqrt{2}}</la-tex>
+    </p>
+  </body>
 </html>
 ```
 
-Then to generate the HTML page input.html with TeX expressions replaced by MathML expressions, just do
+For authors not familiar with LaTeX, alternative input methods are available such as the [ASCIIMath](http://asciimath.org/#syntax) or [jqMath](https://mathscribe.com/author/jqmath.html) syntax. Be sure to load the JavaScript libraries and use the proper delimiters:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+...
+<!-- ASCIIMathML.js -->
+<script type="text/javascript" src="/path/to/ASCIIMathML.js"></script>
+...
+<!-- jqMath -->
+<script src="https://mathscribe.com/mathscribe/jquery-1.4.3.min.js"></script>
+<script src="https://mathscribe.com/mathscribe/jqmath-etc-0.4.6.min.js"></script>
+...
+</head>
+<body>
+...
+    <p>
+      One over square root of two (inline style, ASCIIMath): `1/(sqrt 2)`
+    </p>
+...
+    <p>
+      One over square root of two (inline style, jqMath): $1/√2$
+    </p>
+...
+    <p>
+      One over square root of two (display style, jqMath): $$1/√2$$
+    </p>
+...
+```
+
+### Command-line programs
+
+Instead of generating MathML expression at page load, you can instead rely on command line tools. This will result in pages with static MathML content that will load faster. Let's consider again a page `input.html` with content from [client-side conversion](#client-side_conversion):
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MathML in HTML5</title>
+  </head>
+  <body>
+    <h1>MathML in HTML5</h1>
+
+    <p>
+      One over square root of two (inline style):
+      $\frac{1}{\sqrt{2}}$
+    </p>
+
+    <p>
+      One over square root of two (display style):
+      $$\frac{1}{\sqrt{2}}$$
+    </p>
+  </body>
+</html>
+```
+
+That page does contain any [`script`](/en-US/docs/Web/HTML/Element/script) tag. Instead, conversion is executed via the following command line using [Node.js](https://nodejs.org/) and [TeXZilla](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line):
 
 ```bash
-cat input.html | itex2MML > output.html
+$ cat input.html | node TeXZilla.js streamfilter > output.html
 ```
 
-There are even more sophisticated tools to convert arbitrary LaTeX documents into HTML+MathML. For example [TeX4ht](https://www.tug.org/tex4ht/) is often included in TeX distributions and has an option to use MathML instead of PNG images. This command will generate an XHTML+MathML document foo.xml from a foo.tex LaTeX source:
+After running that command, a file `output.html` containing the following HTML output is created. The formulas delimited by dollars have been converted into MathML:
 
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MathML in HTML5</title>
+  </head>
+  <body>
+    <h1>MathML in HTML5</h1>
+
+    <p>
+      One over square root of two (inline style):
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics></math>
+    </p>
+
+    <p>
+      One over square root of two (display style):
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics></math>
+    </p>
+  </body>
+</html>
 ```
-mk4ht mzlatex foo.tex # Linux/Mac platforms
-mzlatex foo.tex       # Windows platform
-```
 
-Note that [tex4ebook](https://github.com/michal-h21/tex4ebook) relies on TeX4ht to generate EPUB documents.
-
-[LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) is another tool that can generate HTML5 and EPUB documents. Windows users can watch this [video tutorial](https://www.youtube.com/watch?v=Dg881w2e-lI). Given a foo.tex LaTeX file, you can use these simple commands:
+There are more sophisticated tools that aim at converting an arbitrary LaTeX document into a document with MathML content. For example, using [LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) the following commands will convert `foo.tex` into a HTML or EPUB document:
 
 ```bash
 latexmlc --dest foo.html foo.tex # Generate a HTML5 document foo.html
 latexmlc --dest foo.epub foo.tex # Generate an EPUB document foo.epub
 ```
 
-To handle the case of browsers without MathML support, you can use the `--javascript` parameter to tell LaTeXML to include one of the [fallback scripts](#fallback_for_browsers_without_mathml_support):
+`latexmlc` accepts a `--javascript` parameter that you can use to include one of the [fallback scripts](#fallback_for_browsers_without_mathml_support) mentioned above:
 
 ```bash
 latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathml.css/mspace.js foo.tex  # Add the CSS fallback
 latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpadded-min.js foo.tex # Add the MathJax fallback
 ```
 
-If your LaTeX document is big, you might want to split it into several small pages rather than putting everything in a single large page. For example, this will split the pages at the `\section` level:
-
-```bash
-latexmlc --dest foo.html --splitat=section foo.tex
-```
-
-### Server-side conversion
-
-- pros:
-
-  - Conversion is done server-side and the MathML output can be cached, which is more efficient and cleaner than client-side conversion.
-
-- cons:
-
-  - This might be a bit more difficult to set up, since you need some admin right on your server.
-
-[TeXZilla](https://github.com/fred-wang/TeXZilla), [LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) and [Mathoid](https://github.com/wikimedia/mathoid) and can be used to perform server-side LaTeX-to-MathML conversion. [Instiki](http://instiki.org/show/HomePage) and [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) are two wiki engines that support LaTeX-to-MathML conversion.
+> **Note:** Command-line tools can be used server-side e.g. [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) performs LaTeX-to-MathML conversion via [Mathoid](https://github.com/wikimedia/mathoid).
 
 ## Graphical interfaces
 
