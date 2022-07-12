@@ -165,7 +165,7 @@ const birthday = new Date(1995, 11, 17, 3, 24, 0)
 const birthday = new Date(628021800000)            // passing epoch timestamp
 ```
 
-### Formats of native toString methods
+### Formats of toString method return values
 
 ```js
 const date = new Date("2020-05-12T23:50:21.817Z");
