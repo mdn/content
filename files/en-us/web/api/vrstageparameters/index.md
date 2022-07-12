@@ -33,12 +33,12 @@ This interface is accessible through the {{domxref("VRDisplay.stageParameters")}
 ## Examples
 
 ```js
-var info = document.querySelector('p');
-var vrDisplay;
+const info = document.querySelector('p');
+let vrDisplay;
 
 navigator.getVRDisplays().then(function(displays) {
   vrDisplay = displays[0];
-  var stageParams = vrDisplay.stageParameters;
+  const stageParams = vrDisplay.stageParameters;
   // stageParams is a VRStageParameters object
 
   if(stageParams === null) {
