@@ -90,7 +90,7 @@ The WebVR API extends the following APIs, adding the listed features.
 
 #### Gamepad
 
-- {{DOMxRef("Gamepad.displayId")}}{{ReadOnlyInline}}
+- {{DOMxRef("Gamepad.displayId")}} {{ReadOnlyInline}}
   - : _Returns the {{DOMxRef("VRDisplay.displayId")}} of the associated {{DOMxRef("VRDisplay")}} — the `VRDisplay` that the gamepad is controlling the displayed scene of._
 
 #### Navigator

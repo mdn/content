@@ -24,9 +24,9 @@ The `USBIsochronousInTransferPacket` interface of the [WebUSB API](/en-US/docs/W
 
 ## Properties
 
-- {{domxref("USBIsochronousInTransferPacket.data")}}{{readonlyInline}}{{readonlyInline}}
+- {{domxref("USBIsochronousInTransferPacket.data")}} {{readonlyInline}} {{readonlyInline}}
   - : Returns a `DataView` object containing the data received from the USB device in this packet, if any.
-- {{domxref("USBIsochronousInTransferPacket.status")}}{{readonlyInline}}{{readonlyInline}}
+- {{domxref("USBIsochronousInTransferPacket.status")}} {{readonlyInline}} {{readonlyInline}}
 
   - : Returns the status of the transfer request, one of:
 
