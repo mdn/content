@@ -44,10 +44,9 @@ An {{jsxref("Array")}} of objects containing the formatted range of numbers in p
 
 ## Description
 
-The `formatRangeToParts()` method is useful when custom formatting ranges of number
-strings. It returns an {{jsxref("Array")}} of objects containing the locale-specific
-tokens from which it is possible to build custom strings while preserving the
-locale-specific parts. The structure of the array the `formatRangeToParts()` method returns looks like this:
+The `formatRangeToParts()` method is useful when custom formatting ranges of number strings.
+It returns an {{jsxref("Array")}} of objects containing the locale-specific tokens from which it is possible to build custom strings while preserving the locale-specific parts.
+The structure of the array the `formatRangeToParts()` method returns looks like this:
 
 ```js
 [
@@ -60,7 +59,7 @@ locale-specific parts. The structure of the array the `formatRangeToParts()` met
 
 ```
 
-Possible types are the following:
+Possible values for the `type` property include:
 
 - `currency`
   - : The currency string, such as the symbols "$" and "€" or the name "Dollar", "Euro", depending on how `currencyDisplay` is specified.
@@ -86,6 +85,15 @@ Possible types are the following:
   - : The percent sign string ("%").
 - `unit`
   - : The unit string, such as the "l" or "litres", depending on how `unitDisplay` is specified.
+
+Possible values for the `source` property include:
+
+- `startRange`
+  - : The object is the start part of the range.
+- `endRange`
+  - : The object is the end part of the range
+- `shared`
+  - : The object is a "shared" part of the range, such as a separator or currency.
 
 ## Examples
 
