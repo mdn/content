@@ -261,7 +261,7 @@ function calculate() {
     const newResult = `${i} x ${i} = ${i * i}`;
     results.textContent += `${newResult}\n`;
   }
-  results.textContent += '\n...finished!';
+  results.textContent += '\nFinished!';
 }
 
 const calculateBtn = document.querySelector('#calculate');
@@ -289,7 +289,7 @@ Inside the loop, we calculate the square of the current value of `i`, that is: `
 1. During the first run, `i = 1`, so we will add `1 x 1 = 1`.
 2. During the second run, `i = 2`, so we will add `2 x 2 = 4`.
 3. And so on…
-4. When `i` becomes equal to `10` we will stop running the loop and move straight to the next bit of code below the loop, printing out the `...finished!` message.
+4. When `i` becomes equal to `10` we will stop running the loop and move straight to the next bit of code below the loop, printing out the `Finished!` message on a new line.
 
 ### Looping through collections with a for loop
 

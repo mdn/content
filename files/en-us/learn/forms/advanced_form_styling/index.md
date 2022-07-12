@@ -404,7 +404,7 @@ If you really need full control over the option styling, you'll have to either u
 
 ```html
 <select id="select" name="select" multiple>
-  ...
+  …
 </select>
 ```
 
