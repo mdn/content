@@ -31073,14 +31073,6 @@
       "teoli"
     ]
   },
-  "Web/API/CloseEvent/initCloseEvent": {
-    "modified": "2020-10-15T21:39:01.058Z",
-    "contributors": [
-      "connorshea",
-      "erikadoyle",
-      "teoli"
-    ]
-  },
   "Web/API/Comment": {
     "modified": "2020-10-15T21:14:46.232Z",
     "contributors": [

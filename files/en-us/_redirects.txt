@@ -7667,6 +7667,7 @@
 /en-US/docs/Web/API/Clients/getAll	/en-US/docs/Web/API/Clients/matchAll
 /en-US/docs/Web/API/ClipboardEvent.ClipboardEvent	/en-US/docs/Web/API/ClipboardEvent/ClipboardEvent
 /en-US/docs/Web/API/ClipboardEvent.clipboardData	/en-US/docs/Web/API/ClipboardEvent/clipboardData
+/en-US/docs/Web/API/CloseEvent/initCloseEvent	/en-US/docs/Web/API/CloseEvent
 /en-US/docs/Web/API/Comment.Comment	/en-US/docs/Web/API/Comment/Comment
 /en-US/docs/Web/API/Connection	/en-US/docs/Web/API/NetworkInformation
 /en-US/docs/Web/API/Connection.bandwidth	/en-US/docs/Web/API/NetworkInformation

@@ -37,9 +37,6 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 
 _This interface also inherits methods from its parent, {{domxref("Event")}}._
 
-- {{domxref("CloseEvent.initCloseEvent()")}} {{Non-standard_inline}} {{deprecated_inline}}
-  - : Initializes the value of a `CloseEvent` created. If the event has already being dispatched, this method does nothing. Do not use this method anymore, use the {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} constructor instead.
-
 ## Specifications
 
 {{Specifications}}
