@@ -25,7 +25,7 @@ _This interface also inherits properties from its parent, {{domxref("HTMLElement
 
 - {{domxref("HTMLFormElement.elements")}} {{ReadOnlyInline}}
   - : A {{domxref("HTMLFormControlsCollection")}} holding all form controls belonging to this form element.
-- {{domxref("HTMLFormElement.length")}}{{ReadOnlyInline}}
+- {{domxref("HTMLFormElement.length")}} {{ReadOnlyInline}}
   - : A `long` reflecting the number of controls in the form.
 - {{domxref("HTMLFormElement.name")}}
   - : A string reflecting the value of the form's {{ htmlattrxref("name", "form") }} HTML attribute, containing the name of the form.

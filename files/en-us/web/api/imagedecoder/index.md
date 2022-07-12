@@ -20,13 +20,13 @@ The **`ImageDecoder`** interface of the {{domxref('WebCodecs API','','','true')}
 
 ## Properties
 
-- {{domxref("ImageDecoder.complete")}}{{ReadOnlyInline}}
+- {{domxref("ImageDecoder.complete")}} {{ReadOnlyInline}}
   - : Returns a boolean value indicating whether encoded data is completely buffered.
-- {{domxref("ImageDecoder.completed")}}{{ReadOnlyInline}}
+- {{domxref("ImageDecoder.completed")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("Promise")}} that resolves once `complete` is true.
-- {{domxref("ImageDecoder.tracks")}}{{ReadOnlyInline}}
+- {{domxref("ImageDecoder.tracks")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("ImageTrackList")}} object listing the available tracks and providing a method for selecting a track to decode.
-- {{domxref("ImageDecoder.type")}}{{ReadOnlyInline}}
+- {{domxref("ImageDecoder.type")}} {{ReadOnlyInline}}
   - : Returns a string reflecting the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) configured during construction.
 
 ## Methods
