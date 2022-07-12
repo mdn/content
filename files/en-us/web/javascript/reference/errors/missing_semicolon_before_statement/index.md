@@ -57,17 +57,17 @@ const foo = "Tom's bar";
 const foo = 'Tom\'s bar';
 ```
 
-### Declaring properties with var
+### Declaring properties with var, let, or const
 
 You **cannot** declare properties of an object or array with a
-`var` declaration.
+`var`, `let` or `const`..
 
 ```js example-bad
 const obj = {};
 const obj.foo = 'hi'; // SyntaxError missing ; before statement
 
-const array = [];
-const array[0] = 'there'; // SyntaxError missing ; before statement
+let array = [];
+let array[0] = 'there'; // SyntaxError missing ; before statement
 ```
 
 Instead, omit the `var` keyword:
@@ -76,7 +76,7 @@ Instead, omit the `var` keyword:
 const obj = {};
 obj.foo = 'hi';
 
-const array = [];
+let array = [];
 array[0] = 'there';
 ```
 
