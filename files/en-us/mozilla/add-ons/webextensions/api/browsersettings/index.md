@@ -51,6 +51,8 @@ To use this API you need to have the "browserSettings" [permission](/en-US/docs/
   - : Controls whether to override the browser theme (light or dark) when setting pages' preferred color scheme.
 - {{WebExtAPIRef("browserSettings.overrideDocumentColors")}}
   - : Controls whether the user-chosen colors override the page's colors.
+- {{WebExtAPIRef("browserSettings.tlsVersionRestrictionConfig")}}
+  - : Read the highest and lowest versions of TLS supported by the browser.
 - {{WebExtAPIRef("browserSettings.useDocumentFonts")}}
   - : Controls whether the browser will use the fonts specified by a web page or use only built-in fonts.
 - {{WebExtAPIRef("browserSettings.webNotificationsDisabled")}}
