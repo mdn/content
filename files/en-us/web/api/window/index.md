@@ -328,8 +328,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Called when the scroll bar is moved via ANY means. If the resource fully fits in the window, then this event cannot be invoked.
 - {{domxref("GlobalEventHandlers.onwheel")}}
   - : Called when the mouse wheel is rotated around any axis.
-- {{domxref("GlobalEventHandlers.onselectionchange")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the `selectionchange` event is raised.
 
 ## Events
 

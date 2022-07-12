@@ -7852,7 +7852,7 @@
 /en-US/docs/Web/API/Document/onresize	/en-US/docs/Web/API/Window/resize_event
 /en-US/docs/Web/API/Document/onscroll	/en-US/docs/Web/API/GlobalEventHandlers/onscroll
 /en-US/docs/Web/API/Document/onselect	/en-US/docs/Web/API/HTMLInputElement/select_event
-/en-US/docs/Web/API/Document/onselectionchange	/en-US/docs/Web/API/GlobalEventHandlers/onselectionchange
+/en-US/docs/Web/API/Document/onselectionchange	/en-US/docs/Web/API/Document/selectionchange_event
 /en-US/docs/Web/API/Document/onsubmit	/en-US/docs/Web/API/HTMLFormElement/submit_event
 /en-US/docs/Web/API/Document/onvisibilitychange	/en-US/docs/Web/API/Document/visibilitychange_event
 /en-US/docs/Web/API/Document/resourcetimingbufferfull_event	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
@@ -8172,6 +8172,8 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onreset	/en-US/docs/Web/API/HTMLFormElement/reset_event
 /en-US/docs/Web/API/GlobalEventHandlers/onresize	/en-US/docs/Web/API/Window/resize_event
 /en-US/docs/Web/API/GlobalEventHandlers/onselect	/en-US/docs/Web/API/HTMLInputElement/select_event
+/en-US/docs/Web/API/GlobalEventHandlers/onselectionchange	/en-US/docs/Web/API/HTMLInputElement/selectionchange_event
+/en-US/docs/Web/API/GlobalEventHandlers/onselectstart	/en-US/docs/Web/API/Document/selectstart_event
 /en-US/docs/Web/API/GlobalEventHandlers/onsubmit	/en-US/docs/Web/API/HTMLFormElement/submit_event
 /en-US/docs/Web/API/GlobalEventHandlers/ontouchcancel	/en-US/docs/Web/API/Element/touchcancel_event
 /en-US/docs/Web/API/GlobalEventHandlers/ontouchend	/en-US/docs/Web/API/Element/touchend_event
@@ -11457,7 +11459,7 @@
 /en-US/docs/Web/Events/seeking	/en-US/docs/Web/API/HTMLMediaElement/seeking_event
 /en-US/docs/Web/Events/select	/en-US/docs/Web/API/HTMLInputElement/select_event
 /en-US/docs/Web/Events/selectedcandidatepairchange	/en-US/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event
-/en-US/docs/Web/Events/selectionchange	/en-US/docs/Web/API/Document/selectionchange_event
+/en-US/docs/Web/Events/selectionchange	/en-US/docs/Web/API/HTMLInputElement/selectionchange_event
 /en-US/docs/Web/Events/selectstart	/en-US/docs/Web/API/Document/selectstart_event
 /en-US/docs/Web/Events/shippingaddresschange	/en-US/docs/Web/API/PaymentRequest/shippingaddresschange_event
 /en-US/docs/Web/Events/shippingoptionchange	/en-US/docs/Web/API/PaymentRequest/shippingoptionchange_event

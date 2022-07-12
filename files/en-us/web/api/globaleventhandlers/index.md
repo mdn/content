@@ -90,11 +90,7 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
 - {{domxref("GlobalEventHandlers.onseeked")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/seeked_event", "seeked")}} event is raised.
 - {{domxref("GlobalEventHandlers.onseeking")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/seeking_event", "seeking")}} event is raised.
-- {{domxref("GlobalEventHandlers.onselectstart")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Document/selectstart_event", "selectstart")}} event is raised, i.e. when the user starts to make a new text selection on a web page.
-- {{domxref("GlobalEventHandlers.onselectionchange")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the `selectionchange` event is raised, i.e. when the text selected on a web page changes.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("seeking")}} event is raised.
 - {{domxref("GlobalEventHandlers.onshow")}} {{Deprecated_Inline}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Element/show_event", "show")}} event is raised.
 - {{domxref("GlobalEventHandlers.onslotchange")}}

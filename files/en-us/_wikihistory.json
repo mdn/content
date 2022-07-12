@@ -44501,31 +44501,6 @@
       "Spocke"
     ]
   },
-  "Web/API/GlobalEventHandlers/onselectionchange": {
-    "modified": "2020-10-15T21:51:39.271Z",
-    "contributors": [
-      "nakhodkiin",
-      "mfluehr",
-      "fscholz",
-      "valtlai",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onselectstart": {
-    "modified": "2020-10-15T21:39:02.524Z",
-    "contributors": [
-      "kernp",
-      "mfluehr",
-      "fscholz",
-      "sideshowbarker",
-      "slayermass",
-      "valtlai",
-      "chrisdavidmills",
-      "jrmuizel",
-      "Konrud",
-      "teoli"
-    ]
-  },
   "Web/API/GlobalEventHandlers/ontransitioncancel": {
     "modified": "2020-12-12T15:52:56.127Z",
     "contributors": [
