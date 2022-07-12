@@ -18,13 +18,13 @@ A request for data will be statisfied from the stream's internal queues if there
 If the stream queues are empty, the request may be supplied as a zero-copy transfer from the underlying byte source.
 
 The method takes as an argument a view on a buffer that supplied data is to be read into, and returns a {{jsxref("Promise")}}.
-The promise resolves with an object that has properties `value` and `done` when data comes available, or if the stream is cancelled.
+The promise fulfills with an object that has properties `value` and `done` when data comes available, or if the stream is cancelled.
 If the stream is errored, the promise will be rejected with the relevant error object.
 
 If a chunk of data is supplied, the `value` property will contain a new view.
 This will be a view over the same buffer/backing memory (and of the same type) as the original `view` passed to the `read()` method, now populated with the new chunk of data.
-Note that once the promise resolves, the original `view` passed to the method will be detached and no longer usable.
-The promise will resolve with a `value: undefined` if the stream has been cancelled.
+Note that once the promise fulfills, the original `view` passed to the method will be detached and no longer usable.
+The promise will fulfill with a `value: undefined` if the stream has been cancelled.
 In this case the backing memory region of `view` is discarded and not returned to the caller (all previously read data in the view's buffer is lost).
 
 The `done` property indicates whether or not more data is expected.
@@ -43,11 +43,11 @@ read(view)
 
 ### Return value
 
-A {{jsxref("Promise")}}, which resolves/rejects with a result depending on the state of the stream.
+A {{jsxref("Promise")}}, which fulfills/rejects with a result depending on the state of the stream.
 
 The following are possible:
 
-- If a chunk is available and the stream is still active, the promise resolves with an object of the form:
+- If a chunk is available and the stream is still active, the promise fulfills with an object of the form:
 
   ```js
   { value: theChunk, done: false }
@@ -57,7 +57,7 @@ The following are possible:
   This is a view of the same type and over the same backing memory as the `view` passed to the `read()` method.
   The original `view` will be detached and no longer usable.
   
-- If the stream is closed, the promise resolves with an object of the form (where `theChunk` has the same properties as above):
+- If the stream is closed, the promise fulfills with an object of the form (where `theChunk` has the same properties as above):
 
   ```js
   { value: theChunk, done: true }
@@ -76,7 +76,7 @@ The following are possible:
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : The source object is not a `ReadableStreamBYOBReader`, the stream has no owner, the view is not an object or has become detached, or the view's length is 0.
+  - : The source object is not a `ReadableStreamBYOBReader`, the stream has no owner, the view is not an object or has become detached, the view's length is 0, or {{domxref("ReadableStreamBYOBReader.releaseLock()")}} is called (when there's is a pending read request).
 
 ## Examples
 
@@ -103,7 +103,7 @@ function readStream(reader) {
   let offset =  0;
 
   while (offset < buffer.byteLength) {    
-    // read() returns a promise that resolves when a value has been received
+    // read() returns a promise that fulfills when a value has been received
     reader.read( new Uint8Array(buffer, offset, buffer.byteLength - offset) ).then(function processBytes({ done, value }) {
       // Result objects contain two properties:
         // done  - true if the stream has already given all its data.
@@ -126,7 +126,7 @@ function readStream(reader) {
 }
 ```
 
-When there is no more data in the stream, the `read()` method resolves with an object with the property `done` set to `true`, and the function returns.
+When there is no more data in the stream, the `read()` method fulfills with an object with the property `done` set to `true`, and the function returns.
 
 ## Specifications
 
