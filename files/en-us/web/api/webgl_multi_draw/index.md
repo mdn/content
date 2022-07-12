@@ -110,18 +110,13 @@ Assumes that the indices which have been previously uploaded to the
 // multiDrawElements variant
 // let counts = new Int32Array(...);
 // let offsets = new Int32Array(...);
-ext.multiDrawElementsWEBGL(
-  gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, counts.length);
-}
+ext.multiDrawElementsWEBGL(gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, counts.length);
 
 // multiDrawElementsInstanced variant
 // let counts = new Int32Array(...);
 // let offsets = new Int32Array(...);
 // let instanceCounts = new Int32Array(...);
-ext.multiDrawElementsInstancedWEBGL(
-    gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, instanceCounts, 0,
-    counts.length);
-}
+ext.multiDrawElementsInstancedWEBGL(gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, instanceCounts, 0, counts.length);
 ```
 
 ## Specifications
