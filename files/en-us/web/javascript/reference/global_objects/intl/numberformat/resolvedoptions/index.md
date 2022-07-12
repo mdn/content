@@ -14,9 +14,7 @@ browser-compat: javascript.builtins.Intl.NumberFormat.resolvedOptions
 ---
 {{JSRef}}
 
-The **`Intl.NumberFormat.prototype.resolvedOptions()`** method
-returns a new object with properties reflecting the locale and number formatting
-options computed during initialization of this {{jsxref("Intl.NumberFormat")}} object.
+The **`Intl.NumberFormat.prototype.resolvedOptions()`** method returns a new object with properties reflecting the [locale and number formatting options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters) computed during initialization of this {{jsxref("Intl.NumberFormat")}} object.
 
 {{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-resolvedoptions.html")}}
 
@@ -30,8 +28,7 @@ resolvedOptions()
 
 ### Return value
 
-A new object with properties reflecting the locale and number formatting options
-computed during the initialization of the given {{jsxref("Intl.NumberFormat")}} object.
+A new object with properties reflecting the [locale and number formatting options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters) computed during the construction of the given {{jsxref("Intl.NumberFormat")}} object.
 
 ## Description
 
@@ -67,14 +64,10 @@ The resulting object has the following properties:
 Only one of the following two groups of properties is included:
 
 - `minimumIntegerDigits`, `minimumFractionDigits`, `maximumFractionDigits`
-  - : The values provided for these properties in the `options` argument or
-    filled in as defaults. These properties are present only if neither
-    `minimumSignificantDigits` nor `maximumSignificantDigits`
-    was provided in the `options` argument.
+  - : The values provided for these properties in the `options` argument or filled in as defaults. These properties are present only if neither `minimumSignificantDigits` nor `maximumSignificantDigits` was provided in the `options` argument.
 - `minimumSignificantDigits`, `maximumSignificantDigits`
-  - : The values provided for these properties in the `options` argument or
-    filled in as defaults. These properties are present only if at least one of them
-    was provided in the `options` argument.
+  - : The values provided for these properties in the `options` argument or filled in as defaults.
+    These properties are present only if at least one of them was provided in the `options` argument.
 
 ## Examples
 
