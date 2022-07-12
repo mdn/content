@@ -39,7 +39,7 @@ An {{jsxref("Array")}} of objects containing the formatted range of numbers in p
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown when either `startRange` or `endRange` is undefined.
 
 ## Description
