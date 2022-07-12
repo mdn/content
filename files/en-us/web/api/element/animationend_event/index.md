@@ -1,7 +1,6 @@
 ---
-title: 'HTMLElement: animationend event'
-slug: Web/API/HTMLElement/animationend_event
-page-type: web-api-event
+title: 'Element: animationend event'
+slug: Web/API/Element/animationend_event
 tags:
   - API
   - Animation
@@ -9,37 +8,42 @@ tags:
   - CSS Animations
   - CSS3 Animations
   - Event
-  - HTMLElement
+  - Element
   - Reference
   - animationend
-browser-compat: api.HTMLElement.animationend_event
+browser-compat: api.Element.animationend_event
+page-type: web-api-event
 ---
 {{APIRef}}
 
 The **`animationend`** event is fired when a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) has completed. If the animation aborts before reaching completion, such as if the element is removed from the DOM or the animation is removed from the element, the `animationend` event is not fired.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{domxref("AnimationEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onanimationend","onanimationend")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('animationend', (event) => {});
+
+onanimationend = (event) => { };
+```
+
+## Event type
+
+An {{domxref("AnimationEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("AnimationEvent")}}
+
+## Event properties
+
+_Also inherits properties from its parent {{domxref("Event")}}_.
+
+- {{domxref("AnimationEvent.animationName")}} {{readonlyInline}}
+  - : A string containing the value of the {{cssxref("animation-name")}} that generated the animation.
+- {{domxref("AnimationEvent.elapsedTime")}} {{readonlyInline}}
+  - : A `float` giving the amount of time the animation has been running, in seconds, when this event fired, excluding any time the animation was paused. For an `animationstart` event, `elapsedTime` is `0.0` unless there was a negative value for {{cssxref("animation-delay")}}, in which case the event will be fired with `elapsedTime` containing `(-1 * delay)`.
+- {{domxref("AnimationEvent.pseudoElement")}} {{readonlyInline}}
+  - : A string, starting with `'::'`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on. If the animation doesn't run on a pseudo-element but on the element, an empty string: `''`.
 
 ## Examples
 
@@ -168,6 +172,6 @@ applyAnimation.addEventListener('click', () => {
 - [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations)
 - [Using CSS Animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - {{domxref("AnimationEvent")}}
-- Related events: {{domxref("HTMLElement/animationstart_event", "animationstart")}}, {{domxref("HTMLElement/animationcancel_event", "animationcancel")}}, {{domxref("HTMLElement/animationiteration_event", "animationiteration")}}
+- Related events: {{domxref("Element/animationstart_event", "animationstart")}}, {{domxref("Element/animationcancel_event", "animationcancel")}}, {{domxref("Element/animationiteration_event", "animationiteration")}}
 - This event on {{domxref("Document")}} targets: {{domxref("Document/animationend_event", "animationend")}}
 - This event on {{domxref("Window")}} targets: {{domxref("Window/animationend_event", "animationend")}}

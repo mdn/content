@@ -33522,37 +33522,6 @@
       "JesseW"
     ]
   },
-  "Web/API/Document/animationcancel_event": {
-    "modified": "2020-10-15T22:15:04.832Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "estelle"
-    ]
-  },
-  "Web/API/Document/animationend_event": {
-    "modified": "2020-10-15T22:15:06.804Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg"
-    ]
-  },
-  "Web/API/Document/animationiteration_event": {
-    "modified": "2020-10-15T22:15:06.418Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "estelle"
-    ]
-  },
-  "Web/API/Document/animationstart_event": {
-    "modified": "2020-10-15T22:15:06.932Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "estelle"
-    ]
-  },
   "Web/API/Document/applets": {
     "modified": "2020-10-15T21:04:19.480Z",
     "contributors": [
@@ -37551,6 +37520,65 @@
       "hashedhyphen",
       "samthor",
       "teoli"
+    ]
+  },
+  "Web/API/Element/animationcancel_event": {
+    "modified": "2020-10-15T21:53:16.404Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "estelle",
+      "Sebastianz",
+      "mfluehr",
+      "david_ross",
+      "mantaroh",
+      "Sheppy"
+    ]
+  },
+  "Web/API/Element/animationend_event": {
+    "modified": "2020-10-15T21:19:51.801Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "Sebastianz",
+      "mfluehr",
+      "Sheppy",
+      "fscholz",
+      "teoli",
+      "ethertank",
+      "louisremi"
+    ]
+  },
+  "Web/API/Element/animationiteration_event": {
+    "modified": "2020-10-15T21:19:52.560Z",
+    "contributors": [
+      "mfuji09",
+      "Wind1808",
+      "wbamberg",
+      "estelle",
+      "Sebastianz",
+      "mfluehr",
+      "Sheppy",
+      "silentMood",
+      "fscholz",
+      "teoli",
+      "ethertank",
+      "louisremi"
+    ]
+  },
+  "Web/API/Element/animationstart_event": {
+    "modified": "2020-10-15T21:19:51.589Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "estelle",
+      "Sebastianz",
+      "mfluehr",
+      "Sheppy",
+      "fscholz",
+      "teoli",
+      "ethertank",
+      "louisremi"
     ]
   },
   "Web/API/Element/append": {
@@ -44174,44 +44202,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/GlobalEventHandlers/onanimationcancel": {
-    "modified": "2020-10-15T21:50:36.012Z",
-    "contributors": [
-      "wbamberg",
-      "mfluehr",
-      "fscholz",
-      "Sheppy",
-      "mantaroh",
-      "jpmedley"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onanimationend": {
-    "modified": "2020-10-15T21:50:36.001Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "jpmedley",
-      "Sheppy"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onanimationiteration": {
-    "modified": "2020-10-15T21:50:38.481Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "jstewart8053",
-      "jpmedley",
-      "Sheppy"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onanimationstart": {
-    "modified": "2020-10-15T21:50:29.524Z",
-    "contributors": [
-      "fscholz",
-      "jpmedley",
-      "Sheppy"
-    ]
-  },
   "Web/API/GlobalEventHandlers/ondrag": {
     "modified": "2020-10-15T21:40:01.258Z",
     "contributors": [
@@ -45587,65 +45577,6 @@
       "lina.sl141",
       "fscholz",
       "Krinkle"
-    ]
-  },
-  "Web/API/HTMLElement/animationcancel_event": {
-    "modified": "2020-10-15T21:53:16.404Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "estelle",
-      "Sebastianz",
-      "mfluehr",
-      "david_ross",
-      "mantaroh",
-      "Sheppy"
-    ]
-  },
-  "Web/API/HTMLElement/animationend_event": {
-    "modified": "2020-10-15T21:19:51.801Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "Sebastianz",
-      "mfluehr",
-      "Sheppy",
-      "fscholz",
-      "teoli",
-      "ethertank",
-      "louisremi"
-    ]
-  },
-  "Web/API/HTMLElement/animationiteration_event": {
-    "modified": "2020-10-15T21:19:52.560Z",
-    "contributors": [
-      "mfuji09",
-      "Wind1808",
-      "wbamberg",
-      "estelle",
-      "Sebastianz",
-      "mfluehr",
-      "Sheppy",
-      "silentMood",
-      "fscholz",
-      "teoli",
-      "ethertank",
-      "louisremi"
-    ]
-  },
-  "Web/API/HTMLElement/animationstart_event": {
-    "modified": "2020-10-15T21:19:51.589Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "estelle",
-      "Sebastianz",
-      "mfluehr",
-      "Sheppy",
-      "fscholz",
-      "teoli",
-      "ethertank",
-      "louisremi"
     ]
   },
   "Web/API/HTMLElement/beforeinput_event": {
@@ -80653,38 +80584,6 @@
       "Dria",
       "Callek",
       "JesseW"
-    ]
-  },
-  "Web/API/Window/animationcancel_event": {
-    "modified": "2020-10-15T22:15:04.827Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "estelle"
-    ]
-  },
-  "Web/API/Window/animationend_event": {
-    "modified": "2020-10-15T22:15:04.914Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "estelle"
-    ]
-  },
-  "Web/API/Window/animationiteration_event": {
-    "modified": "2020-10-15T22:15:06.660Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "estelle"
-    ]
-  },
-  "Web/API/Window/animationstart_event": {
-    "modified": "2020-10-15T22:15:08.688Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "estelle"
     ]
   },
   "Web/API/Window/appinstalled_event": {

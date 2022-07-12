@@ -27,14 +27,6 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
 
 - {{domxref("GlobalEventHandlers.onabort")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/abort_event", "abort")}} event is raised.
-- {{domxref("GlobalEventHandlers.onanimationcancel")}} {{Non-standard_inline}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when an {{domxref("HTMLElement/animationcancel_event", "animationcancel")}} event is sent, indicating that a running [CSS animation](/en-US/docs/Web/CSS/CSS_Animations) has been canceled.
-- {{domxref("GlobalEventHandlers.onanimationend")}} {{Non-standard_inline}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when an {{domxref("HTMLElement/animationend_event", "animationend")}} event is sent, indicating that a [CSS animation](/en-US/docs/Web/CSS/CSS_Animations) has stopped playing.
-- {{domxref("GlobalEventHandlers.onanimationiteration")}} {{Non-standard_inline}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when an {{domxref("HTMLElement/animationiteration_event", "animationiteration")}} event has been sent, indicating that a [CSS animation](/en-US/docs/Web/CSS/CSS_Animations) has begun playing a new iteration of the animation sequence.
-- {{domxref("GlobalEventHandlers.onanimationstart")}} {{Non-standard_inline}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when an {{domxref("HTMLElement/animationstart_event", "animationstart")}} event is sent, indicating that a [CSS animation](/en-US/docs/Web/CSS/CSS_Animations) has started playing.
 - {{domxref("GlobalEventHandlers.onerror")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the `error` event is raised.
 - {{domxref("GlobalEventHandlers.oncontextmenu")}}
