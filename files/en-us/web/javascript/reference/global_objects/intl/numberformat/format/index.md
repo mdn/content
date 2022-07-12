@@ -51,7 +51,7 @@ new Intl.NumberFormat('en-US').format("1234567891234567891") // 1,234,567,891,23
 ```
 
 > **Note:** Older versions of the specification treated strings as a {{jsxref("Number")}} rather than as a decimal.
-> Check the compatibility table for yoru browser.
+> Check the compatibility table for your browser.
 
 ## Examples
 
@@ -108,8 +108,6 @@ console.log(numberFormat.format(bigNum));
 console.log(numberFormat.format(bigNum + "E-6"));
 // → "1,000,000,000,000,000.11"
 ```
-
-
 
 ## Specifications
 
