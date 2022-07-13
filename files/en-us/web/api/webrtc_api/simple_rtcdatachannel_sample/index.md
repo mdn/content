@@ -61,17 +61,17 @@ The WebRTC API makes heavy use of {{jsxref("Promise")}}s. They make it very easy
 When the script is run, we set up a {{domxref("Window/load_event", "load")}} event listener, so that once the page is fully loaded, our `startup()` function is called.
 
 ```js
-var connectButton = null;
-var disconnectButton = null;
-var sendButton = null;
-var messageInputBox = null;
-var receiveBox = null;
+let connectButton = null;
+let disconnectButton = null;
+let sendButton = null;
+let messageInputBox = null;
+let receiveBox = null;
 
-var localConnection = null;   // RTCPeerConnection for our "local" connection
-var remoteConnection = null;  // RTCPeerConnection for the "remote"
+const localConnection = null;   // RTCPeerConnection for our "local" connection
+const remoteConnection = null;  // RTCPeerConnection for the "remote"
 
-var sendChannel = null;       // RTCDataChannel for the local (sender)
-var receiveChannel = null;    // RTCDataChannel for the remote (receiver)
+const sendChannel = null;       // RTCDataChannel for the local (sender)
+const receiveChannel = null;    // RTCDataChannel for the remote (receiver)
 
 function startup() {
   connectButton = document.getElementById('connectButton');
@@ -211,7 +211,7 @@ When the local peer experiences an open or close event, the `handleSendChannelSt
 ```js
   function handleSendChannelStatusChange(event) {
     if (sendChannel) {
-      var state = sendChannel.readyState;
+      const state = sendChannel.readyState;
 
       if (state === "open") {
         messageInputBox.disabled = false;
@@ -252,7 +252,7 @@ When the user presses the "Send" button, the sendMessage() method we've establis
 
 ```js
   function sendMessage() {
-    var message = messageInputBox.value;
+    const message = messageInputBox.value;
     sendChannel.send(message);
 
     messageInputBox.value = "";
@@ -268,8 +268,8 @@ When a "message" event occurs on the remote channel, our `handleReceiveMessage()
 
 ```js
   function handleReceiveMessage(event) {
-    var el = document.createElement("p");
-    var txtNode = document.createTextNode(event.data);
+    const el = document.createElement("p");
+    const txtNode = document.createTextNode(event.data);
 
     el.appendChild(txtNode);
     receiveBox.appendChild(el);
