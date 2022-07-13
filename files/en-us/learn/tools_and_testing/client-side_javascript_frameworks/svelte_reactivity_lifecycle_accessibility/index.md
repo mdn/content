@@ -662,7 +662,7 @@ In the previous section, while working with the `Todo` components, we had to dea
 2. And then in our markup we just need to add another `use:` directive:
 
     ```html
-    <input bind:value={name} use:selectOnFocus use:focusOnInit >
+    <input bind:value={name} use:selectOnFocus use:focusOnInit>
     ```
 
 3. Our `onEdit()` function can now be much simpler:
