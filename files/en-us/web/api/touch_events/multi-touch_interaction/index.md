@@ -55,7 +55,7 @@ The application uses {{HTMLElement("div")}} elements to represent four touch are
 const logEvents = false;
 
 // Touch Point cache
-cosnt tpCache = new Array();
+const tpCache = new Array();
 ```
 
 ### Register event handlers
@@ -247,14 +247,12 @@ function log(name, ev, printTargetIds) {
   let s = name + ": touches = " + ev.touches.length +
                 " ; targetTouches = " + ev.targetTouches.length +
                 " ; changedTouches = " + ev.changedTouches.length;
-  o.innerHTML += s + "
-";
+  o.innerHTML += s + "<br>";
 
   if (printTargetIds) {
     s = "";
     for (var i=0; i < ev.targetTouches.length; i++) {
-      s += "... id = " + ev.targetTouches[i].identifier + "
-";
+      s += "... id = " + ev.targetTouches[i].identifier + "<br>";
     }
     o.innerHTML += s;
   }
