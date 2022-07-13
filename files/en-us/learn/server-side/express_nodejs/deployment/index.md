@@ -166,7 +166,7 @@ var compression = require('compression');
 // Create the Express application object
 var app = express();
 
-...
+// …
 
 app.use(compression()); //Compress all routes
 
@@ -176,7 +176,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
 
-...
+// …
 ```
 
 > **Note:** For a high-traffic website in production you wouldn't use this middleware. Instead, you would use a reverse proxy like [Nginx](https://nginx.org/).
@@ -202,7 +202,7 @@ var helmet = require('helmet');
 var app = express();
 
 app.use(helmet());
-...
+// …
 ```
 
 > **Note:** The command above adds a _subset_ of the available headers (these make sense for most sites). You can add/disable specific headers as needed by following the [instructions for using helmet here](https://www.npmjs.com/package/helmet).
@@ -354,7 +354,7 @@ Open **package.json**, and add this information as an **engines > node** section
     "node": "12.18.4"
   },
   "private": true,
-  ...
+  // …
 ```
 
 #### Database configuration
@@ -451,7 +451,7 @@ You will recall from a preceding section that we need to [set NODE_ENV to 'produ
 
 ```bash
 >heroku config:set NODE_ENV='production'
-Setting NODE_ENV and restarting limitless-tor-18923... done, v13
+Setting NODE_ENV and restarting limitless-tor-18923… done, v13
 NODE_ENV: production
 ```
 
@@ -461,7 +461,7 @@ You can set the URI as shown (obviously, using your own URI!)
 
 ```bash
 >heroku config:set MONGODB_URI=mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true
-Setting MONGODB_URI and restarting limitless-tor-18923... done, v13
+Setting MONGODB_URI and restarting limitless-tor-18923… done, v13
 MONGODB_URI: mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true
 ```
 

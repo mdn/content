@@ -348,7 +348,7 @@ Run the _development web server_ by calling the `runserver` command (in the same
 $ python3 manage.py runserver
 
 Watching for file changes with StatReloader
-Performing system checks...
+Performing system checks…
 
 System check identified no issues (0 silenced).
 March 01, 2022 - 04:08:45

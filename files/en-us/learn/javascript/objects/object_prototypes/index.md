@@ -94,7 +94,7 @@ So when we call `myObject.toString()`, the browser:
 What is the prototype for `myObject`? To find out, we can use the function `Object.getPrototypeOf()`:
 
 ```js
-Object.getPrototypeOf(myObject); // Object {...}
+Object.getPrototypeOf(myObject); // Object { }
 ```
 
 This is an object called `Object.prototype`, and it is the most basic prototype, that all objects have by default. The prototype of `Object.prototype` is `null`, so it's at the end of the prototype chain:
@@ -113,7 +113,7 @@ do {
 } while (object);
 
 // Date.prototype
-// Object {...}
+// Object { }
 // null
 ```
 

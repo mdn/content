@@ -231,7 +231,7 @@ Each example comes with a "Reset" button, which you can use to reset the code if
 
 ### Filtering greeting messages
 
-In the first exercise we'll start you off simple — we have an array of greeting card messages, but we want to sort them to list just the Christmas messages. We want you to fill in a conditional test inside the `if( ... )` structure, to test each string and only print it in the list if it is a Christmas message.
+In the first exercise we'll start you off simple — we have an array of greeting card messages, but we want to sort them to list just the Christmas messages. We want you to fill in a conditional test inside the `if()` structure, to test each string and only print it in the list if it is a Christmas message.
 
 Think about how you could test whether the message in each case is a Christmas message. What string is present in all of those messages, and what method could you use to test whether it is present?
 

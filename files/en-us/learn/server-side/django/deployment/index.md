@@ -595,7 +595,7 @@ We set `DJANGO_SECRET_KEY` using the `config:set` command (as shown below). Reme
 ```bash
 > heroku config:set DJANGO_SECRET_KEY="eu09(ilk6@4sfdofb=b_2ht@vad*$ehh9-)3u_83+y%(+phh&="
 
-Setting DJANGO_SECRET_KEY and restarting locallibrary... done, v7
+Setting DJANGO_SECRET_KEY and restarting locallibrary… done, v7
 DJANGO_SECRET_KEY: eu09(ilk6@4sfdofb=b_2ht@vad*$ehh9-)3u_83+y%(+phh
 ```
 
@@ -604,7 +604,7 @@ We similarly set `DJANGO_DEBUG`:
 ```bash
 > heroku config:set DJANGO_DEBUG=False
 
-Setting DJANGO_DEBUG and restarting locallibrary... done, v8
+Setting DJANGO_DEBUG and restarting locallibrary… done, v8
 DJANGO_DEBUG: False
 ```
 
