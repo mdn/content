@@ -59,8 +59,6 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/progress_event", "progress")}} event is raised.
 - {{domxref("GlobalEventHandlers.onratechange")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/ratechange_event", "ratechange")}} event is raised.
-- {{domxref("GlobalEventHandlers.onscroll")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Element/scroll_event", "scroll")}} event is raised.
 - {{domxref("GlobalEventHandlers.onsecuritypolicyviolation")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the [`securitypolicyviolation`](/en-US/docs/Web/API/Element/securitypolicyviolation_event) event is raised after a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) violation.
 - {{domxref("GlobalEventHandlers.onseeked")}}

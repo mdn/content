@@ -16,30 +16,21 @@ browser-compat: api.Document.scroll_event
 
 The **`scroll`** event fires when the document view has been scrolled. For element scrolling, see {{domxref("Element/scroll_event", "Element:&nbsp;scroll&nbsp;event")}}.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>
-        {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 > **Note:** In iOS UIWebViews, `scroll` events are not fired while scrolling is taking place; they are only fired after the scrolling has completed. See [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202). Safari and WKWebViews are not affected by this bug.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('scroll', (event) => {});
+
+onscroll = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 

@@ -44384,32 +44384,6 @@
       "bershanskiy"
     ]
   },
-  "Web/API/GlobalEventHandlers/onscroll": {
-    "modified": "2020-10-15T21:06:53.109Z",
-    "contributors": [
-      "Zearin_Galaurum",
-      "mfluehr",
-      "chrisdavidmills",
-      "krosylight",
-      "sideshowbarker",
-      "fscholz",
-      "erikadoyle",
-      "jpmedley",
-      "Ende93",
-      "bryanrsmith",
-      "Sebastianz",
-      "chRyNaN",
-      "teoli",
-      "MHasan",
-      "jczaplew",
-      "kscarfone",
-      "Sheppy",
-      "ziyunfei",
-      "crazytonyi",
-      "Mgjbot",
-      "Spocke"
-    ]
-  },
   "Web/API/GlobalEventHandlers/ontransitioncancel": {
     "modified": "2020-12-12T15:52:56.127Z",
     "contributors": [

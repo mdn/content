@@ -314,7 +314,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a static {{HTMLElement("script")}} is about to start executing.
 - {{DOMxRef("Document/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
-    Also available via the {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}} property.
 - {{DOMxRef("Document/visibilitychange_event", "visibilitychange")}}
   - : Fired when the content of a tab has become visible or has been hidden.
 - {{DOMxRef("Document/wheel_event","wheel")}}
