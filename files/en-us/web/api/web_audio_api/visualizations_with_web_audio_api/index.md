@@ -122,7 +122,7 @@ const x = 0;
 Now we run through a loop, defining the position of a small segment of the wave for each point in the buffer at a certain height based on the data point value from the array, then moving the line across to the place where the next wave segment should be drawn:
 
 ```js
-      for(let i = 0; i < bufferLength; i++) {
+      for (let i = 0; i < bufferLength; i++) {
 
         const v = dataArray[i] / 128.0;
         const y = v * HEIGHT/2;
