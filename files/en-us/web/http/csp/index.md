@@ -8,7 +8,7 @@ tags:
   - Guide
   - Security
   - access
-browser-compat: http.headers.csp
+browser-compat: http.headers.Content-Security-Policy
 ---
 {{HTTPSidebar}}
 
