@@ -51,8 +51,7 @@ canvas {
 ```js
 window.addEventListener("load", function() {
   "use strict"
-  const firstCanvas = document.getElementsByTagName("canvas")[0],
-    secondCanvas = document.getElementsByTagName("canvas")[1];
+  const [ firstCanvas , secondCanvas ] = document.getElementsByTagName("canvas");
   firstCanvas.width = firstCanvas.clientWidth;
   firstCanvas.height = firstCanvas.clientHeight;
   [firstCanvas, secondCanvas].forEach(function(canvas) {
