@@ -78,7 +78,7 @@ Both end users and developers are invited for discussion on the live IRC channel
 
 We have two discussion lists, which can be read via a newsgroup reader, as a mailing list or via Google groups.
 
-| Purpose              | Newsgroup                                                                              | Mailing list                                                                      | Google group                                                                  |
+| Purpose              | Newsgroup                                                                              | Google group                                                                  |
 | -------------------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| Developer discussion | [mozilla.dev.accessibility](news://news.mozilla.org/mozilla.dev.accessibility)         | [subscribe/unsubscribe](https://lists.mozilla.org/listinfo/dev-accessibility)     | [Discourse group](https://discourse.mozilla.org/c/a11y/)     |
-| End user support     | [mozilla.support.accessibility](news://news.mozilla.org/mozilla.support.accessibility) | [subscribe/unsubscribe](https://lists.mozilla.org/listinfo/support-accessibility) |  |
+| Developer discussion | [mozilla.dev.accessibility](news://news.mozilla.org/mozilla.dev.accessibility)         | [Discourse group](https://discourse.mozilla.org/c/a11y/)     |
+| End user support     | [mozilla.support.accessibility](news://news.mozilla.org/mozilla.support.accessibility) |  |
