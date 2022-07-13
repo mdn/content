@@ -62,7 +62,7 @@ In this example the list of input and output ports are retrieved and printed to 
 
 ```js
 function listInputsAndOutputs( midiAccess ) {
-  for (let entry of midiAccess.inputs) {
+  for (const entry of midiAccess.inputs) {
     const input = entry[1];
     console.log( "Input port [type:'" + input.type + "'] id:'" + input.id +
       "' manufacturer:'" + input.manufacturer + "' name:'" + input.name +
