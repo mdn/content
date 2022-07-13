@@ -126,7 +126,7 @@ The example below shows a three-column track grid with new rows created at a min
 
 ### Glossary entries
 
-- [Grid](/en-US/docs/Glossary/Grid)
+- [Grid](/en-US/docs/Glossary/Grid/CSS)
 - [Grid lines](/en-US/docs/Glossary/Grid_Lines)
 - [Grid tracks](/en-US/docs/Glossary/Grid_Tracks)
 - [Grid cell](/en-US/docs/Glossary/Grid_Cell)
