@@ -100,7 +100,7 @@ More formally, the comparator is expected to have the following properties, in o
 - _Symmetric_: `Math.sign(compare(a, b)) === -1 * Math.sign(compare(b, a))`.
 - _Transitive_: For every given `a, b, c` true that if `Math.sign(compare(a, b)) !== -1 * Math.sign(compare(b, c))` than `Math.sign(compare(a, b) + compare(b, c)) === Math.sign(compare(a, c))` (e.g. `a<b<c` than `a<c` and `a=b<c` than `a<c`, etc.)
 
-Your sort method is probably wrong, if it only contains `1, 0` or `0, -1` as return values, because it will break the _Symmetric_ behaviour (altough the `1, 0` will seem to work in some environments).
+A comparator conforming to the rules above will always be able to return all of `1`, `0`, and `-1`. For example, if a comparator only returns `1` and 0`, or only returns `0` and `-1`, it will not be able to sort reliably because _symmetry_ is broken.
 
 The default lexicographic comparator satisfies all constraints above.
 
