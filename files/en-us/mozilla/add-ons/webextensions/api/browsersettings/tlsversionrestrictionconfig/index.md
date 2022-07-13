@@ -23,7 +23,7 @@ The object has these properties:
 - `maximum`
   - : The highest TLS version supported by the browser. Valid values are `TLSv1`, `TLSv1.1`, `TLSv1.2`, `TLSv1.3`, and `unknown`.
 
-This is a read-only setting. 
+This is a read-only setting.
 
 ## Browser compatibility
 
