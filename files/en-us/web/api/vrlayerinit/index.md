@@ -50,7 +50,7 @@ if(navigator.getVRDisplays) {
           console.log('Presenting to WebVR display');
 
           // Here it returns an array of VRLayerInit objects
-          let layers = vrDisplay.getLayers();
+          layers = vrDisplay.getLayers();
 
           ...
         });
