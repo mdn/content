@@ -340,7 +340,7 @@ src/components/Todos.svelte
    ^
 created public/build/bundle.js in 220ms
 
-[2020-07-15 04:07:43] waiting for changes…
+[2020-07-15 04:07:43] waiting for changes...
 ```
 
 Moreover, our editor can display this warning even before calling the compiler:

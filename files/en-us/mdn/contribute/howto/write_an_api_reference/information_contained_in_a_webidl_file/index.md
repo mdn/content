@@ -573,7 +573,7 @@ There can be several named constructors for a specific interface, but this is ex
 
 As of September 2019, WebIDL constructor syntax was updated. Constructor syntax no longer involves an extended attribute on the interface:
 
-```js
+```webidl
 [Constructor(DOMString str)]
     interface MyInterface {
      // …

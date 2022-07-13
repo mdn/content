@@ -289,7 +289,7 @@ At this point, try loading your page, and you'll get an idea of how Modernizr wo
 
 ```html
 <html class="js no-htmlimports sizes flash transferables applicationcache blobconstructor
-blob-constructor cookies cors and-loads-morevalues">
+blob-constructor cookies cors (and loads of more values)">
 ```
 
 It now contains a large number of classes that indicate the support status of different technology features. As an example, if the browser didn't support flexbox at all, `<html>` would be given a class name of `no-flexbox`. If it did support modern flexbox, it would get a class name of `flexbox`. If you search through the class list, you'll also see others relating to flexbox, like:
