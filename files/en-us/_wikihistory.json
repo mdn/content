@@ -36280,39 +36280,6 @@
       "mfuji09"
     ]
   },
-  "Web/API/Document/transitioncancel_event": {
-    "modified": "2020-10-15T22:15:16.592Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "estelle"
-    ]
-  },
-  "Web/API/Document/transitionend_event": {
-    "modified": "2020-10-15T22:15:15.236Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "estelle"
-    ]
-  },
-  "Web/API/Document/transitionrun_event": {
-    "modified": "2020-10-15T22:15:15.404Z",
-    "contributors": [
-      "mfuji09",
-      "sideshowbarker",
-      "wbamberg",
-      "estelle"
-    ]
-  },
-  "Web/API/Document/transitionstart_event": {
-    "modified": "2020-10-15T22:15:13.071Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "estelle"
-    ]
-  },
   "Web/API/Document/visibilityState": {
     "modified": "2020-11-10T17:15:20.166Z",
     "contributors": [
@@ -40350,6 +40317,76 @@
       "ethertank",
       "louisremi",
       "Csson"
+    ]
+  },
+  "Web/API/Element/transitioncancel_event": {
+    "modified": "2020-10-15T21:41:46.772Z",
+    "contributors": [
+      "mfuji09",
+      "mfluehr",
+      "wbamberg",
+      "estelle",
+      "teoli",
+      "chrisdavidmills",
+      "birtles",
+      "felipethome",
+      "rolfedh",
+      "fscholz",
+      "cvrebert"
+    ]
+  },
+  "Web/API/Element/transitionend_event": {
+    "modified": "2020-10-15T21:19:51.584Z",
+    "contributors": [
+      "mfuji09",
+      "Konrud",
+      "wbamberg",
+      "estelle",
+      "mfluehr",
+      "fscholz",
+      "birtles",
+      "erikadoyle",
+      "Sheppy",
+      "cvrebert",
+      "Sebastianz",
+      "nicofrand",
+      "nchase",
+      "P0lip",
+      "tagawa",
+      "teoli",
+      "ethertank",
+      "louisremi"
+    ]
+  },
+  "Web/API/Element/transitionrun_event": {
+    "modified": "2020-10-15T21:51:44.191Z",
+    "contributors": [
+      "mfuji09",
+      "sideshowbarker",
+      "Konrud",
+      "wbamberg",
+      "estelle",
+      "mfluehr",
+      "teoli",
+      "chrisdavidmills",
+      "birtles"
+    ]
+  },
+  "Web/API/Element/transitionstart_event": {
+    "modified": "2020-10-15T21:41:42.585Z",
+    "contributors": [
+      "mfuji09",
+      "Konrud",
+      "wbamberg",
+      "estelle",
+      "mfluehr",
+      "teoli",
+      "birtles",
+      "chrisdavidmills",
+      "erikadoyle",
+      "rolfedh",
+      "fscholz",
+      "cvrebert"
     ]
   },
   "Web/API/Element/webkitmouseforcechanged_event": {
@@ -44410,30 +44447,6 @@
       "Spocke"
     ]
   },
-  "Web/API/GlobalEventHandlers/ontransitioncancel": {
-    "modified": "2020-12-12T15:52:56.127Z",
-    "contributors": [
-      "bershanskiy",
-      "mfuji09",
-      "sideshowbarker",
-      "mfluehr",
-      "fscholz",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ontransitionend": {
-    "modified": "2020-12-12T15:52:00.502Z",
-    "contributors": [
-      "bershanskiy",
-      "mfuji09",
-      "sideshowbarker",
-      "mfluehr",
-      "fscholz",
-      "oakgb",
-      "AutumnFish",
-      "Sheppy"
-    ]
-  },
   "Web/API/Gyroscope": {
     "modified": "2020-10-15T22:08:47.425Z",
     "contributors": [
@@ -46228,76 +46241,6 @@
       "Sheppy",
       "Matej Lednar",
       "RodMcGuire"
-    ]
-  },
-  "Web/API/HTMLElement/transitioncancel_event": {
-    "modified": "2020-10-15T21:41:46.772Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "wbamberg",
-      "estelle",
-      "teoli",
-      "chrisdavidmills",
-      "birtles",
-      "felipethome",
-      "rolfedh",
-      "fscholz",
-      "cvrebert"
-    ]
-  },
-  "Web/API/HTMLElement/transitionend_event": {
-    "modified": "2020-10-15T21:19:51.584Z",
-    "contributors": [
-      "mfuji09",
-      "Konrud",
-      "wbamberg",
-      "estelle",
-      "mfluehr",
-      "fscholz",
-      "birtles",
-      "erikadoyle",
-      "Sheppy",
-      "cvrebert",
-      "Sebastianz",
-      "nicofrand",
-      "nchase",
-      "P0lip",
-      "tagawa",
-      "teoli",
-      "ethertank",
-      "louisremi"
-    ]
-  },
-  "Web/API/HTMLElement/transitionrun_event": {
-    "modified": "2020-10-15T21:51:44.191Z",
-    "contributors": [
-      "mfuji09",
-      "sideshowbarker",
-      "Konrud",
-      "wbamberg",
-      "estelle",
-      "mfluehr",
-      "teoli",
-      "chrisdavidmills",
-      "birtles"
-    ]
-  },
-  "Web/API/HTMLElement/transitionstart_event": {
-    "modified": "2020-10-15T21:41:42.585Z",
-    "contributors": [
-      "mfuji09",
-      "Konrud",
-      "wbamberg",
-      "estelle",
-      "mfluehr",
-      "teoli",
-      "birtles",
-      "chrisdavidmills",
-      "erikadoyle",
-      "rolfedh",
-      "fscholz",
-      "cvrebert"
     ]
   },
   "Web/API/HTMLEmbedElement": {
@@ -83208,39 +83151,6 @@
       "Jabez",
       "Dria",
       "JesseW"
-    ]
-  },
-  "Web/API/Window/transitioncancel_event": {
-    "modified": "2020-10-15T22:15:15.595Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "estelle"
-    ]
-  },
-  "Web/API/Window/transitionend_event": {
-    "modified": "2020-10-15T22:15:13.935Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "estelle"
-    ]
-  },
-  "Web/API/Window/transitionrun_event": {
-    "modified": "2020-10-15T22:15:09.669Z",
-    "contributors": [
-      "mfuji09",
-      "sideshowbarker",
-      "wbamberg",
-      "estelle"
-    ]
-  },
-  "Web/API/Window/transitionstart_event": {
-    "modified": "2020-10-15T22:15:14.296Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "estelle"
     ]
   },
   "Web/API/Window/unhandledrejection_event": {

@@ -1,16 +1,16 @@
 ---
-title: 'HTMLElement: transitionstart event'
-slug: Web/API/HTMLElement/transitionstart_event
-page-type: web-api-event
+title: 'Element: transitionstart event'
+slug: Web/API/Element/transitionstart_event
 tags:
   - CSS Transitions
   - Event
   - HTML DOM
-  - HTMLElement
+  - Element
   - Reference
   - TransitionEvent
   - transitionstart
-browser-compat: api.HTMLElement.transitionstart_event
+browser-compat: api.Element.transitionstart_event
+page-type: web-api-event
 ---
 {{APIRef}}{{SeeCompatTable}}
 
@@ -82,7 +82,7 @@ In the following example, we have a simple {{htmlelement("div")}} element, style
 }
 ```
 
-To this, we'll add some JavaScript to indicate where the {{domxref("HTMLElement/transitionstart_event", "transitionstart")}} and {{domxref("HTMLElement/transitionrun_event", "transitionrun")}} events fire.
+To this, we'll add some JavaScript to indicate where the {{domxref("Element/transitionstart_event", "transitionstart")}} and {{domxref("Element/transitionrun_event", "transitionrun")}} events fire.
 
 ```js
 const transition = document.querySelector('.transition');
@@ -118,9 +118,8 @@ The difference is that:
 
 ## See also
 
-- The {{domxref("GlobalEventHandlers.ontransitionstart")}} event handler
 - The {{domxref("TransitionEvent")}} interface
 - CSS properties: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}
-- Related events: {{domxref("HTMLElement/transitionend_event", "transitionend")}}, {{domxref("HTMLElement/transitionrun_event", "transitionrun")}}, {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}}
+- Related events: {{domxref("Element/transitionend_event", "transitionend")}}, {{domxref("Element/transitionrun_event", "transitionrun")}}, {{domxref("Element/transitioncancel_event", "transitioncancel")}}
 - This event on {{domxref("Document")}} targets: {{domxref("Document/transitionstart_event", "transitionstart")}}
 - This event on {{domxref("Window")}} targets: {{domxref("Window/transitionstart_event", "transitionstart")}}
