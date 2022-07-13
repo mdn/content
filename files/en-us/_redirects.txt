@@ -12098,10 +12098,13 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/uneval	/en-US/docs/Web/JavaScript/Reference/Global_Objects
 /en-US/docs/Web/JavaScript/Reference/Methods_Index	/en-US/docs/Web/JavaScript/Reference
 /en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators	/en-US/docs/Web/JavaScript/Reference/Operators
+/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators	/en-US/docs/Web/JavaScript/Reference/Operators#Assignment_operators
 /en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators	/en-US/docs/Web/JavaScript/Reference/Operators
 /en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators	/en-US/docs/Web/JavaScript/Reference/Operators
 /en-US/docs/Web/JavaScript/Reference/Operators/Destructing_assignment	/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+/en-US/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+/en-US/docs/Web/JavaScript/Reference/Operators/Legacy_generator_function	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators	/en-US/docs/Web/JavaScript/Reference/Operators
 /en-US/docs/Web/JavaScript/Reference/Operators/Member_Operators	/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors
 /en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator	/en-US/docs/Web/JavaScript/Reference/Operators/
@@ -12114,6 +12117,7 @@
 /en-US/docs/Web/JavaScript/Reference/Properties_Index	/en-US/docs/Web/JavaScript/Reference
 /en-US/docs/Web/JavaScript/Reference/Reserved_Words	/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords
 /en-US/docs/Web/JavaScript/Reference/Spread_operator	/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Statements/default	/en-US/docs/Web/JavaScript/Reference/Statements/switch
 /en-US/docs/Web/JavaScript/Reference/Statements/import.meta	/en-US/docs/Web/JavaScript/Reference/Operators/import.meta
 /en-US/docs/Web/JavaScript/Reference/Statements/yield	/en-US/docs/Web/JavaScript/Reference/Operators/yield

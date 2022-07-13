@@ -127,8 +127,21 @@ The following are now properties of `RegExp` instances, no longer of the `RegExp
 
 ### Legacy generator
 
-- {{jsxref("Statements/Legacy_generator_function", "Legacy generator function statement")}} and {{jsxref("Operators/Legacy_generator_function", "Legacy generator function expression")}} are deprecated. Use {{jsxref("Statements/function*", "function* statement")}} and {{jsxref("Operators/function*", "function* expression")}} instead.
-- {{jsxref("Operators/Array_comprehensions", "JS1.7/JS1.8 Array comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} and {{jsxref("Operators/Generator_comprehensions", "JS1.7/JS1.8 Generator comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} are deprecated.
+Legacy generator function statements and legacy generator function expressions are deprecated. The legacy generator function syntax reuses the `function` keyword, which automatically becomes a generator function when there are one or more `yield` expressions in the body — this is now a syntax error. Use [`function*` statements](/en-US/docs/Web/JavaScript/Reference/Statements/function*) and [`function*` expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function*) instead.
+
+Array comprehensions and generator comprehensions are deprecated.
+
+```
+// Legacy array comprehensions
+[for (x of iterable) x]
+[for (x of iterable) if (condition) x]
+[for (x of iterable) for (y of iterable) x + y]
+
+// Legacy generator comprehensions
+(for (x of iterable) x)
+(for (x of iterable) if (condition) x)
+(for (x of iterable) for (y of iterable) x + y)
+```
 
 ### Iterator
 
@@ -171,10 +184,10 @@ The following are now properties of `RegExp` instances, no longer of the `RegExp
 ### String methods
 
 - HTML wrapper methods like {{jsxref("String.prototype.fontsize")}} and {{jsxref("String.prototype.big")}}.
-- {{jsxref("String.prototype.quote")}} is removed from Firefox 37.
+- `String.prototype.quote` is removed from Firefox 37.
 - non standard `flags` parameter in {{jsxref("String.prototype.search")}}, {{jsxref("String.prototype.match")}}, and {{jsxref("String.prototype.replace")}} are deprecated.
 - {{jsxref("String.prototype.substr")}} probably won't be removed anytime soon, but it's defined in Annex B and hence normative optional.
-- {{jsxref("String.prototype.trimLeft")}} and {{jsxref("String.prototype.trimRight")}} should be replaced with {{jsxref("String.prototype.trimStart")}} and {{jsxref("String.prototype.trimEnd")}}.
+- `String.prototype.trimLeft` and `String.prototype.trimRight` should be replaced with {{jsxref("String.prototype.trimStart")}} and {{jsxref("String.prototype.trimEnd")}}.
 
 ## Obsolete features
 
