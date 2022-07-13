@@ -8121,9 +8121,9 @@
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onemptied	/en-US/docs/Web/API/HTMLMediaElement/emptied_event
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onended	/en-US/docs/Web/API/HTMLMediaElement/ended_event
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oninvalid	/en-US/docs/Web/API/GlobalEventHandlers/oninvalid
-/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadeddata	/en-US/docs/Web/API/GlobalEventHandlers/onloadeddata
-/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadedmetadata	/en-US/docs/Web/API/GlobalEventHandlers/onloadedmetadata
-/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadstart	/en-US/docs/Web/API/GlobalEventHandlers/onloadstart
+/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadeddata	/en-US/docs/Web/API/HTMLMediaElement/loadeddata_event
+/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadedmetadata	/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event
+/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadstart	/en-US/docs/Web/API/HTMLMediaElement/loadstart_event
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onmouseenter	/en-US/docs/Web/API/Element/mouseenter_event
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onmouseleave	/en-US/docs/Web/API/Element/mouseleave_event
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onmousewheel	/en-US/docs/Web/API/Element/mousewheel_event
@@ -8163,6 +8163,10 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/GlobalEventHandlers/onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/GlobalEventHandlers/onkeyup	/en-US/docs/Web/API/Element/keyup_event
+/en-US/docs/Web/API/GlobalEventHandlers/onloadeddata	/en-US/docs/Web/API/HTMLMediaElement/loadeddata_event
+/en-US/docs/Web/API/GlobalEventHandlers/onloadedmetadata	/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event
+/en-US/docs/Web/API/GlobalEventHandlers/onloadend	/en-US/docs/Web/API/HTMLMediaElement/loadend_event
+/en-US/docs/Web/API/GlobalEventHandlers/onloadstart	/en-US/docs/Web/API/HTMLMediaElement/loadstart_event
 /en-US/docs/Web/API/GlobalEventHandlers/onmousedown	/en-US/docs/Web/API/Element/mousedown_event
 /en-US/docs/Web/API/GlobalEventHandlers/onmouseenter	/en-US/docs/Web/API/Element/mouseenter_event
 /en-US/docs/Web/API/GlobalEventHandlers/onmouseleave	/en-US/docs/Web/API/Element/mouseleave_event
