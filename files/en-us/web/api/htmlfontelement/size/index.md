@@ -16,7 +16,7 @@ browser-compat: api.HTMLFontElement.size
 The obsolete
 **`HTMLFontElement.size`** property is a
 string that reflects the {{ htmlattrxref("size", "font") }} HTML
-attribute. It contains either a font size number ranging from 1 to 7 or a
+attribute. It contains either a font size ranging from 1 to 7 or a
 number relative to the default value 3, for example -2 or +1.
 
 The format of the string must follow one of the following HTML microsyntaxes:
@@ -38,7 +38,7 @@ The format of the string must follow one of the following HTML microsyntaxes:
     <tr>
       <td>Relative size string</td>
       <td>
-        <em>+x or -x, where x is a number relative to 3 (the result should be in the same range of 1-7)</em>
+        <em>+x or -x, where x is a number relative to 3 (the result should be in the range of 1-7)</em>
       </td>
       <td>
         <code>+2<br />-1</code>
