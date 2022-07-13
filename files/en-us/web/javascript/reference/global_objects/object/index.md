@@ -157,7 +157,7 @@ const current = Object.prototype.valueOf;
 // Since my property "-prop-value" is cross-cutting and isn't always
 // on the same prototype chain, I want to modify Object.prototype:
 Object.prototype.valueOf = function() {
-  if (this.hasOwnProperty('-prop-value')) {
+  if (Object.hasOwn(this, '-prop-value')) {
     return this['-prop-value'];
   } else {
     // It doesn't look like one of my objects, so let's fall back on
