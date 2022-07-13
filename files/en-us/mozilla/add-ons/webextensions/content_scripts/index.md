@@ -382,7 +382,7 @@ let ports = []
 
 function connected(p) {
   ports[p.sender.tab.id] = p
-  //...
+  // …
 }
 
 browser.runtime.onConnect.addListener(connected)

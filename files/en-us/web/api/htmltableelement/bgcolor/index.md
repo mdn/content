@@ -39,8 +39,7 @@ t.bgColor = 'lightblue';
 
 ## Specifications
 
-- [DOM Level 2
-  HTML:_HTMLTableElement_ .bgColor](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-83532985)
+- [DOM Level 2 HTML:_HTMLTableElement_ .bgColor](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-83532985)
 
 ## Browser compatibility
 

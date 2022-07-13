@@ -24,9 +24,9 @@ A `CSSStyleDeclaration` object can be exposed using three different APIs:
 
 - {{DOMxRef("CSSStyleDeclaration.cssText")}}
   - : Textual representation of the declaration block, if and only if it is exposed via {{DOMxRef("HTMLElement.style")}}. Setting this attribute changes the inline style. If you want a text representation of a computed declaration block, you can get it with `JSON.stringify()`.
-- {{DOMxRef("CSSStyleDeclaration.length")}}{{ReadOnlyInline}}
+- {{DOMxRef("CSSStyleDeclaration.length")}} {{ReadOnlyInline}}
   - : The number of properties. See the {{DOMxRef("CSSStyleDeclaration.item()", 'item()')}} method below.
-- {{DOMxRef("CSSStyleDeclaration.parentRule")}}{{ReadOnlyInline}}
+- {{DOMxRef("CSSStyleDeclaration.parentRule")}} {{ReadOnlyInline}}
   - : The containing {{DOMxRef("CSSRule")}}.
 
 ### CSS Properties
@@ -54,11 +54,11 @@ A `CSSStyleDeclaration` object can be exposed using three different APIs:
 ## Example
 
 ```js
-var styleObj = document.styleSheets[0].cssRules[0].style;
+const styleObj = document.styleSheets[0].cssRules[0].style;
 console.log(styleObj.cssText);
 
-for (var i = styleObj.length; i--;) {
-  var nameString = styleObj[i];
+for (let i = styleObj.length; i--;) {
+  const nameString = styleObj[i];
   styleObj.removeProperty(nameString);
 }
 

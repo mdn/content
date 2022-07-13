@@ -52,7 +52,7 @@ for (const [index, element] of a.entries()) {
 const array = ["a", "b", "c"];
 const arrayEntries = array.entries();
 
-for (let element of arrayEntries) {
+for (const element of arrayEntries) {
   console.log(element);
 }
 

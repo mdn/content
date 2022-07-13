@@ -110,34 +110,10 @@ The theme key is an object that takes the following properties:
       <td>
         <p>Optional</p>
         <p>
-          This object has two properties that affect how the
-          <code>"additional_backgrounds"</code> images are displayed. See
-          <code><a href="#properties">properties</a></code> for details on the
-          properties that this object can contain.
+          This object has properties that affect how the
+          <code>"additional_backgrounds"</code> images are displayed and color schemes are applied. See
+          <code><a href="#properties">properties</a></code> for details on the properties that this object can contain.
         </p>
-        <ul>
-          <li>
-            <code>"additional_backgrounds_alignment":</code> an array of
-            enumeration values defining the alignment of the corresponding
-            <code>"additional_backgrounds":</code> array item.<br />The
-            alignment options include: <code>"bottom"</code>,
-            <code>"center"</code>, <code>"left"</code>, <code>"right"</code>,
-            <code>"top"</code>, <code>"center bottom"</code>,
-            <code>"center center"</code>, <code>"center top"</code>,
-            <code>"left bottom"</code>, <code>"left center"</code>,
-            <code>"left top"</code>, <code>"right bottom"</code>,
-            <code>"right center"</code>, and <code>"right top"</code>. If not
-            specified, defaults to <code>"right top"</code>.<br />Optional
-          </li>
-          <li>
-            <code>"additional_backgrounds_tiling":</code> an array of
-            enumeration values defining how the corresponding
-            <code>"additional_backgrounds":</code> array item repeats, with
-            support for <code>"no-repeat"</code>, <code>"repeat"</code>,
-            <code>"repeat-x"</code>, and <code>"repeat-y"</code>. If not
-            specified, defaults to <code>"no-repeat"</code>.<br />Optional
-          </li>
-        </ul>
       </td>
     </tr>
   </tbody>

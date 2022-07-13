@@ -12,20 +12,20 @@ This sub article shows how we define our page to create `Genre` objects (this is
 
 ## Import validation and sanitization methods
 
-To use the _express-validator_ in our controllers we have to *require* the functions we want to use from the **'express-validator**' module.
+To use the _express-validator_ in our controllers we have to _require_ the functions we want to use from the `'express-validator'` module.
 
 Open **/controllers/genreController.js**, and add the following line at the top of the file:
 
 ```js
-const { body,validationResult } = require("express-validator");
+const { body, validationResult } = require("express-validator");
 ```
 
 > **Note:** This syntax allows us to use `body` and `validationResult` as the associated middleware functions, as you will see in the post route section below. It is equivalent to:
 >
 > ```js
-> validator = require("express-validator");
-> body = validator.body();
-> validationResult = validator.validationResult();
+> const validator = require("express-validator");
+> const body = validator.body;
+> const validationResult = validator.validationResult;
 > ```
 
 ## Controller—get route
@@ -124,8 +124,10 @@ After specifying the validators we create a middleware function to extract any v
   return;
   }
   else {
-    // Data from form is valid.
-    ... <save the result/> ...
+    // Form data is valid.
+  
+    // Save the result.
+    // …
   }
 };
 ```

@@ -122,7 +122,7 @@ emp[2] = 'August West'
 > let arr = []
 > arr[3.4] = 'Oranges'
 > console.log(arr.length)                 // 0
-> console.log(arr.hasOwnProperty(3.4))    // true
+> console.log(Object.hasOwn(arr, 3.4))    // true
 > ```
 
 You can also populate an array when you create it:
@@ -137,7 +137,7 @@ let myArray = ['Mango', 'Apple', 'Orange']
 
 At the implementation level, JavaScript's arrays actually store their elements as standard object properties, using the array index as the property name.
 
-The `length` property is special. It always returns the index of the last element plus one. (In the example below, `'Dusty'` is indexed at `30`, so `cats.length` returns `30 + 1`).
+The `length` property is special. Its value is always a positive integer greater than the index of the last element if one exists. (In the example below, `'Dusty'` is indexed at `30`, so `cats.length` returns `30 + 1`).
 
 Remember, JavaScript Array indexes are 0-based: they start at `0`, not `1`. This means that the `length` property will be one more than the highest index stored in the array:
 

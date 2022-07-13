@@ -39,7 +39,7 @@ also help you to see through the jungle.
 Oftentimes, there is a missing comma in your object initializer code:
 
 ```js example-bad
-var obj = {
+const obj = {
   a: 1,
   b: { myProp: 2 }
   c: 3
@@ -49,7 +49,7 @@ var obj = {
 Correct would be:
 
 ```js example-good
-var obj = {
+const obj = {
   a: 1,
   b: { myProp: 2 },
   c: 3

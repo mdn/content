@@ -9,7 +9,7 @@ tags:
   - DecompressionStream
 browser-compat: api.DecompressionStream.DecompressionStream
 ---
-{{DefaultAPISidebar("Compression Streams API")}}
+{{APIRef("Compression Streams API")}}
 
 The **`DecompressionStream()`** constructor creates a new {{domxref("DecompressionStream")}} object which decompresses a stream of data.
 
@@ -27,6 +27,7 @@ new DecompressionStream(format)
 
     - `"gzip"`
     - `"deflate"`
+    - `"deflate-raw"`
 
 ## Exceptions
 

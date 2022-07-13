@@ -6,7 +6,6 @@ tags:
   - API
   - CSS
   - CSS3 Transitions
-  - Experimental
   - Property
   - Reference
   - TransitionEvent

@@ -11,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - isochronousTransferIn
+  - Experimental
 browser-compat: api.USBDevice.isochronousTransferIn
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}

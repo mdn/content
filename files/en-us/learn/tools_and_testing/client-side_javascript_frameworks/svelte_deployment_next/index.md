@@ -118,7 +118,7 @@ If we have a look at the `rollup.config.js` file, we can see that the Svelte com
 
 ```js
 import svelte from 'rollup-plugin-svelte';
-[...]
+// …
 import { terser } from 'rollup-plugin-terser';
 
 const production = !process.env.ROLLUP_WATCH;

@@ -66,12 +66,12 @@ button {
 ```js
 "use strict"
 window.addEventListener("load", setupAnimation, false);
-var gl,
-  timer,
-  rainingRect,
-  scoreDisplay,
-  missesDisplay;
-function setupAnimation (evt) {
+let gl;
+let timer;
+let rainingRect;
+let scoreDisplay;
+let missesDisplay;
+function setupAnimation(evt) {
   window.removeEventListener(evt.type, setupAnimation, false);
   if (!(gl = getRenderingContext()))
     return;
@@ -81,12 +81,10 @@ function setupAnimation (evt) {
   timer = setTimeout(drawAnimation, 17);
   document.querySelector("canvas")
       .addEventListener("click", playerClick, false);
-  var displays = document.querySelectorAll("strong");
-  scoreDisplay = displays[0];
-  missesDisplay = displays[1];
+  [ scoreDisplay, missesDisplay ] = document.querySelectorAll("strong");
 }
 
-var score = 0,
+let score = 0,
   misses = 0;
 function drawAnimation () {
   gl.scissor(rainingRect.position[0], rainingRect.position[1],
@@ -110,13 +108,13 @@ function playerClick (evt) {
 // In addition we need to remember that vertical position in
   // WebGL increases from bottom to top, unlike in the browser
   // window.
-  var position = [
+  const position = [
       evt.pageX - evt.target.offsetLeft,
       gl.drawingBufferHeight - (evt.pageY - evt.target.offsetTop),
     ];
   // if the click falls inside the rectangle, we caught it.
   // Increment score and create a new rectangle.
-  var diffPos = [ position[0] - rainingRect.position[0],
+  const diffPos = [ position[0] - rainingRect.position[0],
       position[1] - rainingRect.position[1] ];
   if ( diffPos[0] >= 0 && diffPos[0] < rainingRect.size[0]
       && diffPos[1] >= 0 && diffPos[1] < rainingRect.size[1] ) {
@@ -129,12 +127,12 @@ function playerClick (evt) {
 function Rectangle () {
   // Keeping a reference to the new Rectangle object, rather
   // than using the confusing this keyword.
-  var rect = this;
+  const rect = this;
   // We get three random numbers and use them for new rectangle
   // size and position. For each we use a different number,
   // because we want horizontal size, vertical size and
   // position to be determined independently.
-  var randNums = getRandomVector();
+  const randNums = getRandomVector();
   rect.size = [
     5 + 120 * randNums[0],
     5 + 120 * randNums[1]
@@ -154,13 +152,13 @@ function Rectangle () {
 
 ```js hidden
 function getRenderingContext() {
-  var canvas = document.querySelector("canvas");
+  const canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
-  var gl = canvas.getContext("webgl")
+  const gl = canvas.getContext("webgl")
     || canvas.getContext("experimental-webgl");
   if (!gl) {
-    var paragraph = document.querySelector("p");
+    const paragraph = document.querySelector("p");
     paragraph.textContent = "Failed to get WebGL context. Your browser or device may not support WebGL.";
     return null;
   }

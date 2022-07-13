@@ -61,7 +61,7 @@ of its wrapped function.
 A bound function has the following internal properties:
 
 - **`[[BoundTargetFunction]]`**
-  - : The wrapped function object
+  - : The wrapped function object.
 - **`[[BoundThis]]`**
   - : The value that is always passed as `this` value when calling the wrapped
     function.
@@ -100,7 +100,7 @@ Without special care, however, the original object is usually lost. Creating a b
 function from the function, using the original object, neatly solves this problem:
 
 ```js
-this.x = 9;    // 'this' refers to global 'window' object here in a browser
+this.x = 9;    // 'this' refers to the global object (e.g. 'window') in non-strict mode
 const module = {
   x: 81,
   getX: function() { return this.x; }
@@ -120,6 +120,10 @@ const boundGetX = retrieveX.bind(module);
 boundGetX();
 //  returns 81
 ```
+
+> **Note:** If you run this example in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) (e.g. in ECMAScript modules, or through the `"use strict"` directive), the global `this` value will be undefined, causing the `retrieveX` call to fail.
+>
+> If you run this in a Node CommonJS module, the top-scope `this` will be pointing to `module.exports` instead of `globalThis`, regardless of being in strict mode or not. However, in functions, the reference of unbound `this` still follows the rule of "`globalThis` in non-strict, `undefined` in strict". Therefore, in non-strict mode (default), `retrieveX` will return `undefined` because `this.x = 9` is writing to a different object (`module.exports`) from what `getX` is reading from (`globalThis`).
 
 ### Partially applied functions
 

@@ -34,35 +34,35 @@ exception.
 _In addition to the properties below, `Node` inherits properties from its
 parent, {{DOMxRef("EventTarget")}}_.
 
-- {{DOMxRef("Node.baseURI")}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.baseURI")}} {{ReadOnlyInline}}
   - : Returns a string representing the base URL of the document
     containing the `Node`.
-- {{DOMxRef("Node.childNodes")}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.childNodes")}} {{ReadOnlyInline}}
   - : Returns a live {{DOMxRef("NodeList")}} containing all the children of this node
     (including elements, text and comments). {{DOMxRef("NodeList")}} being live means that
     if the children of the `Node` change, the {{DOMxRef("NodeList")}} object is
     automatically updated.
-- {{DOMxRef("Node.firstChild")}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.firstChild")}} {{ReadOnlyInline}}
   - : Returns a `Node` representing the first direct child node of the node,
     or `null` if the node has no child.
-- {{DOMxRef("Node.isConnected")}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.isConnected")}} {{ReadOnlyInline}}
   - : A boolean indicating whether or not the Node is connected (directly or indirectly)
     to the context object, e.g. the {{DOMxRef("Document")}} object in the case of the
     normal DOM, or the {{DOMxRef("ShadowRoot")}} in the case of a shadow DOM.
-- {{DOMxRef("Node.lastChild")}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.lastChild")}} {{ReadOnlyInline}}
   - : Returns a `Node` representing the last direct child node of the node,
     or `null` if the node has no child.
-- {{DOMxRef("Node.nextSibling")}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.nextSibling")}} {{ReadOnlyInline}}
   - : Returns a `Node` representing the next node in the tree, or
     `null` if there isn't such node.
-- {{DOMxRef("Node.nodeName")}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.nodeName")}} {{ReadOnlyInline}}
   - : Returns a string containing the name of the `Node`. The
     structure of the name will differ with the node type. E.g. An
     {{DOMxRef("HTMLElement")}} will contain the name of the corresponding tag, like
     `'audio'` for an {{DOMxRef("HTMLAudioElement")}}, a {{DOMxRef("Text")}}
     node will have the `'#text'` string, or a {{DOMxRef("Document")}} node will
     have the `'#document'` string.
-- {{DOMxRef("Node.nodeType")}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.nodeType")}} {{ReadOnlyInline}}
   - : Returns an `unsigned short` representing the type of the node. Possible
     values are:
 
@@ -80,18 +80,18 @@ parent, {{DOMxRef("EventTarget")}}_.
 
 - {{DOMxRef("Node.nodeValue")}}
   - : Returns / Sets the value of the current node.
-- {{DOMxRef("Node.ownerDocument")}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.ownerDocument")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef("Document")}} that this node belongs to. If the node is itself
     a document, returns `null`.
-- {{DOMxRef("Node.parentNode")}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.parentNode")}} {{ReadOnlyInline}}
   - : Returns a `Node` that is the parent of this node. If there is no such
     node, like if this node is the top of the tree or if doesn't participate in a tree,
     this property returns `null`.
-- {{DOMxRef("Node.parentElement")}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.parentElement")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("Element")}} that is the parent of this node. If the node has
     no parent, or if that parent is not an {{DOMxRef("Element")}}, this property returns
     `null`.
-- {{DOMxRef("Node.previousSibling")}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.previousSibling")}} {{ReadOnlyInline}}
   - : Returns a `Node` representing the previous node in the tree, or
     `null` if there isn't such node.
 - {{DOMxRef("Node.textContent")}}
@@ -99,7 +99,7 @@ parent, {{DOMxRef("EventTarget")}}_.
 
 ## Methods
 
-_In addition to the properties below, `Node` inherits methods from its
+_In addition to the methods below, `Node` inherits methods from its
 parent, {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("Node.appendChild()")}}

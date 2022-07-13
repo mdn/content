@@ -103,7 +103,7 @@ three primary ways to analyze and parse this raw HTML string:
     `fragment.body.innerHTML` and traverse the DOM of the fragment.
 3. {{jsxref("RegExp")}} can be used if you always know the content of the HTML
     `responseText` beforehand. You might want to remove line breaks, if you use
-    RegExp to scan with regard to linebreaks. However, this method is a "last resort"
+    `RegExp` to scan with regard to line breaks. However, this method is a "last resort"
     since if the HTML code changes slightly, the method will likely fail.
 
 ## Handling binary data
@@ -152,11 +152,11 @@ For more examples check out the [Sending and Receiving Binary Data](/en-US/docs/
 occur while the request is being processed. This includes periodic progress
 notifications, error notifications, and so forth.
 
-Support for DOM {{event("progress")}} event monitoring of `XMLHttpRequest`
+Support for DOM {{domxref("XMLHttpRequest/progress_event", "progress")}} event monitoring of `XMLHttpRequest`
 transfers follows the [specification for progress events](https://xhr.spec.whatwg.org/#interface-progressevent): these events implement the {{domxref("ProgressEvent")}} interface. The
 actual events you can monitor to determine the state of an ongoing transfer are:
 
-- {{event("progress")}}
+- {{domxref("XMLHttpRequest/progress_event", "progress")}}
   - : The amount of data that has been retrieved has changed.
 - {{domxref("XMLHttpRequest/load_event", "load")}}
   - : The transfer is complete; all data is now in the `response`
@@ -367,9 +367,8 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
     for (var nIdx = 0; nIdx < nBytes; nIdx++) {
       ui8Data[nIdx] = sData.charCodeAt(nIdx) & 0xff;
     }
-    /* send as ArrayBufferView...: */
+    /* send: */
     this.send(ui8Data);
-    /* ...or as ArrayBuffer (legacy)...: this.send(ui8Data.buffer); */
   };
 }
 
@@ -901,7 +900,7 @@ XMLHttpRequest that gets fired on an onunload event for a window, the expected
 XMLHttpRequest is created when the window to be closed is still there, and finally
 sending the request (in other words, `open()`) when this window has lost its
 focus and another window gains focus. The most effective way to avoid this problem is to
-set a listener on the new window's {{event("activate")}} event which is set once the
+set a listener on the new window's {{domxref("Element/DOMActivate_event", "DOMActivate")}} event which is set once the
 terminated window has its {{domxref("Window/unload_event", "unload")}} event triggered.
 
 ## Workers

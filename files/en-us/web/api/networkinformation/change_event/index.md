@@ -14,7 +14,7 @@ browser-compat: api.NetworkInformation.change_event
 ---
 {{apiref("Network Information API")}}{{SeeCompatTable}}
 
-The **`change`** event fires when connection information changes, and the {{event("change")}}
+The **`change`** event fires when connection information changes, and the {{domxref("HTMLElement/change_event", "change")}}
 is received by the {{domxref("NetworkInformation")}} object.
 
 ## Syntax
@@ -35,7 +35,7 @@ A generic {{domxref("Event")}}.
 
 ```js
 // Get the connection type.
-var type = navigator.connection.type;
+const type = navigator.connection.type;
 
 function changeHandler(e) {
    // Handle change of connection type here.

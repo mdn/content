@@ -232,13 +232,13 @@ After getting a reference to the {{HTMLElement("ul")}} which contains the list o
 
 > **Note:** Obviously, it would be more efficient to update the list by adding and removing individual users instead of rebuilding the whole list every time it changes, but this is good enough for the purposes of this example.
 
-Then we iterate over the array of user names using {{jsxref("Array.forEach", "forEach()")}}. For each name, we create a new {{HTMLElement("li")}} element, then create a new text node containing the user name using {{domxref("Document.createTextNode", "createTextNode()")}}. That text node is added as a child of the `<li>` element. Next, we set a handler for the {{event("click")}} event on the list item, that clicking on a user name calls our `invite()` method, which we'll look at in the next section.
+Then we iterate over the array of user names using {{jsxref("Array.forEach", "forEach()")}}. For each name, we create a new {{HTMLElement("li")}} element, then create a new text node containing the user name using {{domxref("Document.createTextNode", "createTextNode()")}}. That text node is added as a child of the `<li>` element. Next, we set a handler for the {{domxref("Element/click_event", "click")}} event on the list item, that clicking on a user name calls our `invite()` method, which we'll look at in the next section.
 
 Finally, we append the new item to the `<ul>` that contains all of the user names.
 
 #### Starting a call
 
-When the user clicks on a username they want to call, the `invite()` function is invoked as the event handler for that {{event("click")}} event:
+When the user clicks on a username they want to call, the `invite()` function is invoked as the event handler for that {{domxref("Element/click_event", "click")}} event:
 
 ```js
 const mediaConstraints = {
@@ -357,7 +357,7 @@ The first three of these event handlers are required; you have to handle them to
 - {{domxref("RTCPeerConnection.negotiationneeded_event", "onnegotiationneeded")}}
   - : This function is called whenever the WebRTC infrastructure needs you to start the session negotiation process anew. Its job is to create and send an offer, to the callee, asking it to connect with us. See [Starting negotiation](#starting_negotiation) to see how we handle this.
 - {{domxref("RTCPeerConnection.removetrack_event", "onremovetrack")}}
-  - : This counterpart to `ontrack` is called to handle the {{event("removetrack")}} event; it's sent to the `RTCPeerConnection` when the remote peer removes a track from the media being sent. See [Handling the removal of tracks](#handling_the_removal_of_tracks).
+  - : This counterpart to `ontrack` is called to handle the {{domxref("MediaStream/removetrack_event", "removetrack")}} event; it's sent to the `RTCPeerConnection` when the remote peer removes a track from the media being sent. See [Handling the removal of tracks](#handling_the_removal_of_tracks).
 - {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "oniceconnectionstatechange")}}
   - : The {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}} event is sent by the ICE layer to let you know about changes to the state of the ICE connection. This can help you know when the connection has failed, or been lost. We'll look at the code for this example in [ICE connection state](#ice_connection_state) below.
 - {{domxref("RTCPeerConnection.icegatheringstatechange_event", "onicegatheringstatechange")}}
@@ -534,7 +534,7 @@ Once this code has completed, finally the video being sent by the other peer is 
 
 ##### Handling the removal of tracks
 
-Your code receives a {{event("removetrack")}} event when the remote peer removes a track from the connection by calling {{domxref("RTCPeerConnection.removeTrack()")}}. Our handler for `"removetrack"` is:
+Your code receives a {{domxref("MediaStream/removetrack_event", "removetrack")}} event when the remote peer removes a track from the connection by calling {{domxref("RTCPeerConnection.removeTrack()")}}. Our handler for `"removetrack"` is:
 
 ```js
 function handleRemoveTrackEvent(event) {

@@ -54,7 +54,7 @@ retrieve a track for passing to the {{domxref("ImageCapture.ImageCapture",
   "ImageCapture()")}} constructor.
 
 ```js
-var imageCapture;
+let imageCapture;
 
 navigator.mediaDevices.getUserMedia({video: true})
 .then(mediaStream => {

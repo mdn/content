@@ -23,9 +23,9 @@ An `array` of `object`s. Each object has the following properties:
 
 - `name`
   - : `string`. Name of the HTTP header.
-- `value`{{optional_inline}}
+- `value` {{optional_inline}}
   - : `string`. Value of the HTTP header if it can be represented by UTF-8. Either this property or `binaryValue` must be present.
-- `binaryValue`{{optional_inline}}
+- `binaryValue` {{optional_inline}}
   - : `array` of `integer`. Value of the HTTP header if it cannot be represented by UTF-8, represented as bytes (0..255). Either this property or `value` must be present.
 
 ## Browser compatibility

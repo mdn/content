@@ -32,12 +32,12 @@ created, then the notification is fired using the `Notification()`
 constructor.
 
 ```js
-var options = {
+const options = {
   body: 'Do you like my body?',
   lang: 'en-US'
 }
 
-var n = new Notification('Test notification',options);
+const n = new Notification('Test notification',options);
 
 console.log(n.lang) // should return 'en-US'
 ```

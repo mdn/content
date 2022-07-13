@@ -44,7 +44,7 @@ delete object['property']
 ### Return value
 
 `true` for all cases except when the property is an
-{{jsxref("Object.hasOwnProperty", "own")}} {{jsxref("Errors/Cant_delete", "non-configurable")}} property, in which case, `false` is returned in
+{{jsxref("Object.hasOwn")}} {{jsxref("Errors/Cant_delete", "non-configurable")}} property, in which case, `false` is returned in
 non-strict mode.
 
 ### Exceptions
@@ -90,7 +90,7 @@ However, it is important to consider the following scenarios:
 The following snippet gives a simple example:
 
 ```js
-var Employee = {
+const Employee = {
   age: 28,
   name: 'abc',
   designation: 'developer'
@@ -111,8 +111,8 @@ effect, and will return `false`. In strict mode this will raise a
 `TypeError`.
 
 ```js
-var Employee = {};
-Object.defineProperty(Employee, 'name', {configurable: false});
+const Employee = {};
+Object.defineProperty(Employee, 'name', { configurable: false });
 
 console.log(delete Employee.name);  // returns false
 ```
@@ -171,9 +171,7 @@ console.log(delete func); // false
 
 ### Cross-browser notes
 
-Although ECMAScript makes iteration order of objects implementation-dependent, it may
-appear that all major browsers support an iteration order based on the earliest added
-property coming first (at least for properties not on the prototype). However, in the
+As of modern ECMAScript specification, the traversal order of object properties is well-defined and stable across implementations. However, in the
 case of Internet Explorer, when one uses `delete` on a property, some
 confusing behavior results, preventing other browsers from using simple objects like
 object literals as ordered associative arrays. In Explorer, while the property
@@ -182,10 +180,7 @@ property with the same name, the property will be iterated in its _old_
 position--not at the end of the iteration sequence as one might expect after having
 deleted the property and then added it back.
 
-If you want to use an ordered associative array in a cross-browser environment, use a
-{{jsxref("Map")}} object if available, or simulate this structure with two separate
-arrays (one for the keys and the other for the values), or build an array of
-single-property objects, etc.
+If you want to use an ordered associative array with support of old runtimes, use a {{jsxref("Map")}} object if available (through a polyfill, for example), or simulate this structure with two separate arrays (one for the keys and the other for the values), or build an array of single-property objects, etc.
 
 ## Examples
 
@@ -194,7 +189,7 @@ single-property objects, etc.
 adminName = 'xyz';
 
 // Creates the property empCount on the global scope.
-// Since we are using var, this is marked as non-configurable. The same is true of let and const.
+// Since we are using var, this is marked as non-configurable.
 var empCount = 43;
 
 EmployeeDetails = {
@@ -233,7 +228,7 @@ function f() {
 }
 ```
 
-### `delete` and the prototype chain
+### delete and the prototype chain
 
 In the following example, we delete an own property of an object while a property with
 the same name is available on the prototype chain:
@@ -245,7 +240,7 @@ function Foo() {
 
 Foo.prototype.bar = 42;
 
-var foo = new Foo();
+const foo = new Foo();
 
 // foo.bar is associated with the
 // own property.
@@ -278,11 +273,9 @@ longer in the array. In the following example, `trees[3]` is removed with
 `delete`.
 
 ```js
-var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+const trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 delete trees[3];
-if (3 in trees) {
-    // this is not executed
-}
+console.log(3 in trees); // false
 ```
 
 If you want an array element to exist but have an undefined value, use the
@@ -291,11 +284,9 @@ following example, `trees[3]` is assigned the value `undefined`,
 but the array element still exists:
 
 ```js
-var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+const trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 trees[3] = undefined;
-if (3 in trees) {
-    // this is executed
-}
+console.log(3 in trees); // true
 ```
 
 If instead, you want to remove an array element by changing the contents of the array,
@@ -304,8 +295,8 @@ use the {{jsxref("Array.splice()", "splice()")}} method. In the following exampl
 {{jsxref("Array.splice()", "splice()")}}:
 
 ```js
-var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
-trees.splice(3,1);
+const trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+trees.splice(3, 1);
 console.log(trees); // ["redwood", "bay", "cedar", "maple"]
 ```
 

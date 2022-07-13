@@ -75,7 +75,7 @@ Highlights:
 
 #### Events
 
-- The non-standard {{domxref("CloseEvent.initCloseEvent()")}} method and the ability to create a {{domxref("CloseEvent")}} using the {{domxref("Document/createEvent", "document.createEvent('CloseEvent')")}} method has been removed; use the standard constructor, {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} instead ({{bug(1161950)}}).
+- The non-standard `initCloseEvent()` method of the {{domxref("CloseEvent")}} event and the ability to create a {{domxref("CloseEvent")}} using the {{domxref("Document/createEvent", "document.createEvent('CloseEvent')")}} method has been removed; use the standard constructor, {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} instead ({{bug(1161950)}}).
 - On Desktop, {{domxref("PointerEvent")}} is now activated by default in Nightly; it is not activated in Developer Edition, Beta or Release and won't be for at least some versions ({{bug(1166347)}}).
 - The unprefixed version of {{domxref("MouseEvent.movementX")}} and {{domxref("MouseEvent.movementY")}} have been added; the prefixed versions are deprecated and will be removed at some point in the future ({{bug(1164981)}}).
 
@@ -113,7 +113,7 @@ Highlights:
 - {{domxref("MessagePort")}} and {{domxref("MessageChannel")}} now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API), and are enabled by default in all contexts ({{bug(952139)}}) and ({{bug(911972)}}).
 - The User Timing API is now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ({{bug(1155761)}}).
 - The [Notifications API](/en-US/docs/Web/API/Notifications_API) is now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ({{bug(916893)}}).
-- {{domxref("DOMRequest")}} and {{domxref("DOMCursor")}} are now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ({{bug(1167650)}}).
+- `DOMRequest` and `DOMCursor` are now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ({{bug(1167650)}}).
 - The [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) has been completely implemented and is now enabled by default ({{bug(1149381)}}).
 - Shared workers can no longer be shared between private (i.e. browsing in a private window) and non-private documents (see {{bug(1177621)}}).
 - The {{domxref("URLUtilsSearchParams.searchParams")}} property is now read-only ({{bug(1174731)}}).

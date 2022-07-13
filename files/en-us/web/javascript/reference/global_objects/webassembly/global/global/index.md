@@ -28,10 +28,10 @@ new WebAssembly.Global(descriptor, value)
     - `value`: A string representing the
       data type of the global. This can be any one of:
       - `i32`: A 32-bit integer.
-      - `i64`: A 64-bit integer.
+      - `i64`: A 64-bit integer. (In JavaScript, this is represented as a {{jsxref("BigInt")}})
       - `f32`: A 32-bit floating point number.
       - `f64`: A 64-bit floating point number.
-      - `v128`: A 128-bit vector - note that although this is in the specification, in chrome this produces a {{jsxref("TypeError")}}.
+      - `v128`: A 128-bit vector - note that although this is in the specification, in Chrome this produces a {{jsxref("TypeError")}}.
       - `externref`: A host reference.
       - `anyfunc`: A function reference.
     - `mutable`: A boolean value that determines whether the global is

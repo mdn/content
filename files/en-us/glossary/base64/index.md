@@ -180,7 +180,7 @@ function UTF8ArrToStr (aBytes) {
     nPart = aBytes[nIdx];
     sView += String.fromCodePoint(
       nPart > 251 && nPart < 254 && nIdx + 5 < nLen ? /* six bytes */
-        /* (nPart - 252 << 30) may be not so safe in ECMAScript! So...: */
+        /* (nPart - 252 << 30) may be not so safe in ECMAScript! So…: */
         (nPart - 252) * 1073741824 + (aBytes[++nIdx] - 128 << 24) + (aBytes[++nIdx] - 128 << 18) + (aBytes[++nIdx] - 128 << 12) + (aBytes[++nIdx] - 128 << 6) + aBytes[++nIdx] - 128
       : nPart > 247 && nPart < 252 && nIdx + 4 < nLen ? /* five bytes */
         (nPart - 248 << 24) + (aBytes[++nIdx] - 128 << 18) + (aBytes[++nIdx] - 128 << 12) + (aBytes[++nIdx] - 128 << 6) + aBytes[++nIdx] - 128
@@ -203,7 +203,7 @@ function strToUTF8Arr (sDOMStr) {
 
   var aBytes, nChr, nStrLen = sDOMStr.length, nArrLen = 0;
 
-  /* mapping... */
+  /* mapping… */
 
   for (var nMapIdx = 0; nMapIdx < nStrLen; nMapIdx++) {
     nChr = sDOMStr.codePointAt(nMapIdx);
@@ -217,7 +217,7 @@ function strToUTF8Arr (sDOMStr) {
 
   aBytes = new Uint8Array(nArrLen);
 
-  /* transcription... */
+  /* transcription… */
 
   for (var nIdx = 0, nChrIdx = 0; nIdx < nArrLen; nChrIdx++) {
     nChr = sDOMStr.codePointAt(nChrIdx);
@@ -299,4 +299,11 @@ var myBuffer = base64DecToArr("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29ya
 alert(myBuffer.byteLength);
 ```
 
-> **Note:** The function `base64DecToArr(sBase64[, nBlocksSize])` returns an [`uint8Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) of bytes. If your aim is to build a buffer of 16-bit / 32-bit / 64-bit raw data, use the `nBlocksSize` argument, which is the number of bytes of which the `uint8Array.buffer.bytesLength` property must result a multiple (`1` or omitted for ASCII, [binary strings](/en-US/docs/Web/API/DOMString/Binary) or UTF-8-encoded strings, `2` for UTF-16 strings, `4` for UTF-32 strings).
+> **Note:** The function `base64DecToArr(sBase64[, nBlocksSize])` returns
+> an [`uint8Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) of bytes.
+> If your aim is to build a buffer of 16-bit / 32-bit / 64-bit raw data,
+> use the `nBlocksSize` argument,
+> which is the number of bytes of which the `uint8Array.buffer.bytesLength` property must result a multiple
+> (`1` or omitted for ASCII, binary strings
+> (i.e., a string in which each character in the string is treated as a byte of binary data)
+> or UTF-8-encoded strings, `2` for UTF-16 strings, `4` for UTF-32 strings).

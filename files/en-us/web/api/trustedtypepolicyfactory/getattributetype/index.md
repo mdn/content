@@ -28,9 +28,9 @@ getAttributeType(tagName, attribute, elementNS, attrNS)
   - : A string containing the name of an HTML tag.
 - `attribute`
   - : A string containing an attribute.
-- `elementNS`{{optional_inline}}
+- `elementNS` {{optional_inline}}
   - : A string containing a namespace, if empty defaults to the HTML namespace.
-- `attrNS`{{optional_inline}}
+- `attrNS` {{optional_inline}}
   - : A string containing a namespace, if empty defaults to null.
 
 ### Return value

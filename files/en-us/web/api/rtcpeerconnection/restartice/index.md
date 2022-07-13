@@ -108,7 +108,5 @@ just a regular renegotiation.
 ## See also
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Lifetime of a WebRTC
-  session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
-- [Signaling and
-  video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
+- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)

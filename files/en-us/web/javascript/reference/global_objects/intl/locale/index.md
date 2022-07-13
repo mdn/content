@@ -77,7 +77,7 @@ Traditionally, the Intl API used strings to represent locales, just as Unicode d
 
 ### Basic usage
 
-At its very simplest, the {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} constructor takes a locale identifier string as its argument:
+At its very simplest, the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor takes a locale identifier string as its argument:
 
 ```js
 let us = new Intl.Locale('en-US');

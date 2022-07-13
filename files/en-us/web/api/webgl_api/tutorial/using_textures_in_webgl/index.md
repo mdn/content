@@ -148,7 +148,7 @@ At this point, the texture is loaded and ready to use. But before we can use it,
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(textureCoordinates),
                 gl.STATIC_DRAW);
 
-...
+  // ...
   return {
     position: positionBuffer,
     textureCoord: textureCoordBuffer,
@@ -265,15 +265,17 @@ Lastly, add `texture` as a parameter to the `drawScene()` function, both where i
 
 ```js
 drawScene(gl, programInfo, buffers, texture, deltaTime);
-...
+// ...
 function drawScene(gl, programInfo, buffers, texture, deltaTime) {
+  // ...
+}
 ```
 
 At this point, the rotating cube should be good to go.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample6/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample6/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample6) | [Open this demo on a new page](https://mdn.github.io/webgl-examples/tutorial/sample6/)
+[View the complete code](https://github.com/mdn/dom-examples/tree/master/webgl-examples/tutorial/sample6) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample6/)
 
 ## Cross-domain textures
 

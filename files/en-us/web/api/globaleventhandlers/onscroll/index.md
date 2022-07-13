@@ -22,7 +22,7 @@ scrolled, whether by the user, a [Web API](/en-US/docs/Web/API), or the
 {{glossary("user agent")}}.
 
 > **Note:** Don't confuse `onscroll` with
-> {{domxref("GlobalEventHandlers.onwheel", "onwheel")}}!
+> {{domxref("Element.wheel_event", "onwheel")}}!
 >
 > `onwheel` handles general wheel rotation, while `onscroll`
 > handles scrolling of an object's content.
@@ -41,7 +41,7 @@ target.onscroll = functionRef
 
 Only one `onscroll` handler can be assigned to an object at a time.
 
-For greater flexibility, you can pass a {{event("scroll")}} event to the
+For greater flexibility, you can pass a {{domxref("Element/scroll_event", "scroll")}} event to the
 {{domxref("EventTarget.addEventListener()")}} method instead.
 
 ## Example
@@ -93,7 +93,5 @@ function logScroll(e) {
 
 ## See also
 
-- [Document: `scroll`
-  event](/en-US/docs/Web/API/Document/scroll_event)
-- [Element: `scroll`
-  event](/en-US/docs/Web/API/Element/scroll_event)
+- [Document: `scroll` event](/en-US/docs/Web/API/Document/scroll_event)
+- [Element: `scroll` event](/en-US/docs/Web/API/Element/scroll_event)

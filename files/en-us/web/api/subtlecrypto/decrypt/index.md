@@ -38,7 +38,7 @@ decrypt(algorithm, key, data)
   - : A {{domxref("CryptoKey")}} containing the key to be used for decryption.
     If using RSA-OAEP, this is the `privateKey` property of the {{domxref("CryptoKeyPair")}} object.
 - `data`
-  - : A {{domxref("BufferSource")}} containing the data to be decrypted (also known as {{glossary("ciphertext")}}).
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing the data to be decrypted (also known as {{glossary("ciphertext")}}).
 
 ### Return value
 

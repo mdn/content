@@ -50,7 +50,7 @@ The following are only reserved when they are found in strict mode code:
 The `enum` identifier is generally reserved.
 
 ```js example-bad
-var enum = { RED: 0, GREEN: 1, BLUE: 2 };
+const enum = { RED: 0, GREEN: 1, BLUE: 2 };
 // SyntaxError: enum is a reserved identifier
 ```
 
@@ -58,15 +58,15 @@ In strict mode code, more identifiers are reserved.
 
 ```js example-bad
 "use strict";
-var package = ["potatoes", "rice", "fries"];
+const package = ["potatoes", "rice", "fries"];
 // SyntaxError: package is a reserved identifier
 ```
 
 You'll need to rename these variables.
 
 ```js example-good
-var colorEnum = { RED: 0, GREEN: 1, BLUE: 2 };
-var list = ["potatoes", "rice", "fries"];
+const colorEnum = { RED: 0, GREEN: 1, BLUE: 2 };
+const list = ["potatoes", "rice", "fries"];
 ```
 
 ### Update older browsers

@@ -41,8 +41,8 @@ Assertions include boundaries, which indicate the beginnings and endings of line
             <strong>Note:</strong> This character has a different meaning when
             it appears at the start of a
             <a
-              href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges"
-              >range</a
+              href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes"
+              >character class</a
             >.
           </p>
         </div>
@@ -221,7 +221,7 @@ let fruitsStartsWithA = fruits.filter(fruit => /^A/.test(fruit));
 console.log(fruitsStartsWithA); // [ 'Apple', 'Avocado' ]
 ```
 
-In the second example `^` is used both for matching at the beginning of input and for creating negated or complemented character class when used within [groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges).
+In the second example `^` is used both for matching at the beginning of input and for creating negated or complemented character class when used within [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes).
 
 ```js
 let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
@@ -269,9 +269,9 @@ For example, `/\d+(?!\.)/` matches a number only if it is not followed by a deci
 console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
 ```
 
-### Different meaning of '?!' combination usage in Assertions and Ranges
+### Different meaning of '?!' combination usage in assertions and character classes
 
-Different meaning of `?!` combination usage in [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) `/x(?!y)/` and [Ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) `[^?!]`.
+The `?!` combination has different meanings in assertions like `/x(?!y)/` and [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) like `[^?!]`.
 
 ```js
 let orangeNotLemon = "Do you want to have an orange? Yes, I do not want to have a lemon!";
@@ -300,7 +300,7 @@ console.log(ripe_oranges); // [ 'ripe orange A ', 'ripe orange C' ]
   - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
   - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
   - [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
-  - [Groups and ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
+  - [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)
 
 - [The `RegExp()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 - [Assertions in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-assertion)

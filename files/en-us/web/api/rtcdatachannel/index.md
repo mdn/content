@@ -93,7 +93,7 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 _Also inherits methods from {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("RTCDataChannel.close", "close()")}}
-  - : Closes the{{domxref("RTCDataChannel")}}.
+  - : Closes the {{domxref("RTCDataChannel")}}.
     Either peer is permitted to call this method
     to initiate closure of the channel.
 - {{DOMxRef("RTCDataChannel.send", "send()")}}
@@ -126,8 +126,8 @@ The underlying data format is defined by the IEEE specification [SDP Offer/Answe
 ## Example
 
 ```js
-var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("my channel");
+const pc = new RTCPeerConnection();
+const dc = pc.createDataChannel("my channel");
 
 dc.onmessage = function (event) {
   console.log("received: " + event.data);

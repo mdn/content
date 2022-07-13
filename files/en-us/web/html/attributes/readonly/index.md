@@ -7,7 +7,9 @@ tags:
   - Constraint validation
   - Forms
   - required
-spec-urls: https://html.spec.whatwg.org/multipage/forms.html#attr-input-readonly
+browser-compat:
+  - html.elements.input.attributes.readonly
+  - html.elements.textarea.readonly
 ---
 
 {{HTMLSidebar}}
@@ -36,7 +38,7 @@ The only way to modify dynamically the value of the readonly attribute is throug
 
 ### Usability
 
-Browsers display the `readonly` attribute...
+Browsers display the `readonly` attribute.
 
 ### Constraint validation
 
@@ -79,7 +81,7 @@ If the element is read-only, then the element's value can not be updated by the 
 
 ## Browser compatibility
 
-{{Compat("html.elements.attributes.readonly")}}
+{{Compat}}
 
 ## See also
 

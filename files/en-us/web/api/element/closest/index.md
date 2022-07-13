@@ -68,51 +68,6 @@ console.log(el.closest("article > div")); // <div id="div-01">
 console.log(el.closest(":not(div)")); // <article>
 ```
 
-## Polyfill
-
-For browsers that do not support `Element.closest()`, but carry support for
-`element.matches()` (or a prefixed equivalent, meaning IE9+), a polyfill
-exists:
-
-```js
-if (!Element.prototype.matches) {
-  Element.prototype.matches =
-    Element.prototype.msMatchesSelector ||
-    Element.prototype.webkitMatchesSelector;
-}
-
-if (!Element.prototype.closest) {
-  Element.prototype.closest = function(s) {
-    var el = this;
-
-    do {
-      if (Element.prototype.matches.call(el, s)) return el;
-      el = el.parentElement || el.parentNode;
-    } while (el !== null && el.nodeType === 1);
-    return null;
-  };
-}
-```
-
-However, if you really do require IE 8 support, then the following polyfill will do the
-job very slowly, but eventually. However, it will only support CSS 2.1 selectors in IE
-8, and it can cause severe lag spikes in production websites.
-
-```js
-if (window.Element && !Element.prototype.closest) {
-  Element.prototype.closest = function(s) {
-    var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-        i,
-        el = this;
-    do {
-      i = matches.length;
-      while (--i >= 0 && matches.item(i) !== el) {};
-    } while ((i < 0) && (el = el.parentElement));
-    return el;
-  };
-}
-```
-
 ## Specifications
 
 {{Specifications}}

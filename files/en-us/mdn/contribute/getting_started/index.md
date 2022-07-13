@@ -17,9 +17,9 @@ Every part of MDN (docs, demos, and the site itself) is created by an open commu
 
 ## 4 simple steps to MDN
 
-MDN is an open source resource where **anyone** can add and edit content. You don't need to be a programmer or know a lot about technologies. There are plenty of things that need to be done, from the simple (proofreading and correcting typos) to the complex (writing API documentation).
+MDN is an open-source resource where **anyone** can add and edit content. You don't need to be a programmer or know a lot about technologies. There are plenty of things that need to be done, from the simple (proofreading and correcting typos) to the complex (writing API documentation).
 
-Contributing is easy and safe. Even if you make a mistake, it's easily fixed. Even if you don't know exactly how things should look, or your grammar isn't all that good, don't worry about it! We have a team of people whose job it is to make sure that MDN's contents are as good as possible. Someone will be along to make sure your work is tidy and well-written. Share what you know and follow your strengths.
+Contributing is easy and safe. Even if you make a mistake, it's easily fixed. Even if you don't know exactly how things should look, or your grammar isn't all that good, don't worry about it! We have a team of people whose job is to make sure that MDN's contents are as good as possible. Someone will be along to make sure your work is tidy and well-written. Share what you know and follow your strengths.
 
 ### Step 1: Create a GitHub account
 
@@ -51,6 +51,6 @@ topics, we'd advise you to look at the provided links to help you get up to
 speed:
 
 - Web technologies: If you are new to HTML, CSS, JavaScript, etc., check out our [Learn web development](/en-US/docs/Learn) tutorials.
-- Open source: If you've never contributed to an open source project before, have a read of [Basic etiquette for open source projects](/en-US/docs/MDN/Contribute/Open_source_etiquette).
+- Open source: If you've never contributed to an open-source project before, have a read of [Basic etiquette for open source projects](/en-US/docs/MDN/Contribute/Open_source_etiquette).
 - Git and GitHub: If you are unfamiliar with these tools, [GitHub for complete beginners](/en-US/docs/MDN/Contribute/GitHub_beginners) will get you started.
 - MDN's repo structures: If you are not sure what repos to edit to make changes to the different parts of MDN's content, [Where is everything on MDN?](/en-US/docs/MDN/Contribute/Where_is_everything) will point you towards the correct places.

@@ -51,7 +51,7 @@ See {{Bug(434718)}}, especially its NOT A CASE FOR THE BUG TEMPLATE - The follow
 
 ### Chrome access
 
-In prior versions of Firefox, any web page could load scripts or images from chrome using the `chrome://` protocol. Among other things, this made it possible for sites to detect the presence of add-ons -- which could be used to breach a user's security by bypassing add-ons that add security features to the browser.
+In prior versions of Firefox, any web page could load scripts or images from chrome using the `chrome://` protocol. Among other things, this made it possible for sites to detect the presence of add-ons — which could be used to breach a user's security by bypassing add-ons that add security features to the browser.
 
 Firefox 3 only allows web content to access items in the `chrome://browser/` and `chrome://toolkit/` spaces. These files are intended to be accessible by web content. All other chrome content is now blocked from access by the web.
 

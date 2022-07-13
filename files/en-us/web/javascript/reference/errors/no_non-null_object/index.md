@@ -53,13 +53,13 @@ A valid property descriptor object might look like this:
 Object.defineProperty({}, 'key', { value: 'foo', writable: false });
 ```
 
-### `WeakMap` and `WeakSet` objects require object keys
+### WeakMap and WeakSet objects require object keys
 
 {{jsxref("WeakMap")}} and {{jsxref("WeakSet")}} objects store object keys. You can't
 use other types as keys.
 
 ```js example-bad
-var ws = new WeakSet();
+const ws = new WeakSet();
 ws.add('foo');
 // TypeError: "foo" is not a non-null object
 ```
@@ -67,7 +67,7 @@ ws.add('foo');
 Use objects instead:
 
 ```js example-good
-ws.add({foo: 'bar'});
+ws.add({ foo: 'bar' });
 ws.add(window);
 ```
 

@@ -51,7 +51,7 @@ are not a constructor: {{jsxref("Math")}}, {{jsxref("JSON")}}, {{jsxref("Symbol"
 ### Invalid cases
 
 ```js example-bad
-var Car = 1;
+const Car = 1;
 new Car();
 // TypeError: Car is not a constructor
 
@@ -62,7 +62,7 @@ new Symbol();
 // TypeError: Symbol is not a constructor
 
 function* f() {};
-var obj = new f;
+const obj = new f;
 // TypeError: f is not a constructor
 ```
 
@@ -83,7 +83,7 @@ function Car(make, model, year) {
 Now you can create an object called `mycar` as follows:
 
 ```js
-var mycar = new Car('Eagle', 'Talon TSi', 1993);
+const mycar = new Car('Eagle', 'Talon TSi', 1993);
 ```
 
 ### In Promises

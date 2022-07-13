@@ -9,6 +9,9 @@ tags:
   - cookbook
   - flexbox
   - lists
+browser-compat:
+  - css.properties.justify-content
+  - css.properties.align-items
 ---
 {{CSSRef}}
 
@@ -38,15 +41,7 @@ To align the content horizontally, I use the {{cssxref("align-items")}} property
 
 ## Browser compatibility
 
-The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
-
-### justify-content
-
-{{Compat("css.properties.justify-content")}}
-
-### align-items
-
-{{Compat("css.properties.align-items")}}
+{{Compat}}
 
 ## See also
 

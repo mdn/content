@@ -43,7 +43,7 @@ The "foo" variable isn't defined anywhere. It needs to be some string, so that t
 {{jsxref("String.prototype.substring()")}} method will work.
 
 ```js example-good
-var foo = 'bar';
+const foo = 'bar';
 foo.substring(1); // "ar"
 ```
 
@@ -56,7 +56,7 @@ scope of the function
 
 ```js example-bad
 function numbers() {
-  var num1 = 2,
+  const num1 = 2,
       num2 = 3;
   return num1 + num2;
 }
@@ -69,7 +69,7 @@ which it is defined. In other words, a function defined in the global scope can 
 all variables defined in the global scope.
 
 ```js example-good
-var num1 = 2,
+const num1 = 2,
     num2 = 3;
 
 function numbers() {

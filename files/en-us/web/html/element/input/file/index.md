@@ -44,9 +44,9 @@ browser-compat: html.elements.input.type_file
     <tr>
       <td><strong>Additional Attributes</strong></td>
       <td>
-        {{htmlattrxref("accept", "input/file")}},
-        {{htmlattrxref("capture", "input/file")}},
-        {{htmlattrxref("multiple", "input/file")}}
+        <a href="#accept" aria-current="page"><code>accept</code></a>,
+        <a href="#capture" aria-current="page"><code>capture</code></a>,
+        <a href="#multiple" aria-current="page"><code>multiple</code></a>
       </td>
     </tr>
     <tr>

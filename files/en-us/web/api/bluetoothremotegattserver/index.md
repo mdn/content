@@ -19,11 +19,11 @@ Server on a remote device.
 
 ## Properties
 
-- {{DOMxRef("BluetoothRemoteGATTServer.connected")}}{{ReadOnlyInline}}
+- {{DOMxRef("BluetoothRemoteGATTServer.connected")}} {{ReadOnlyInline}}
   - : A boolean value that returns true while this script execution environment is
     connected to `this.device`. It can be false while the user agent is
     physically connected.
-- {{DOMxRef("BluetoothRemoteGATTServer.device")}}{{ReadOnlyInline}}
+- {{DOMxRef("BluetoothRemoteGATTServer.device")}} {{ReadOnlyInline}}
   - : A reference to the {{DOMxRef("BluetoothDevice")}} running the server.
 
 ## Methods

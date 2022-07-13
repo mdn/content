@@ -7,9 +7,10 @@ tags:
   - Constructor
   - Reference
   - CookieChangeEvent
+  - Experimental
 browser-compat: api.CookieChangeEvent.CookieChangeEvent
 ---
-{{securecontext_header}}{{APIRef("Cookie Store API")}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 The **`CookieChangeEvent()`** constructor creates a new {{domxref("CookieChangeEvent")}} object
 which is the event type passed to {{domxref("CookieStore/change_event", "CookieStore.onchange()")}}.

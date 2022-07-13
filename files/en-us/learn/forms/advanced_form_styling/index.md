@@ -237,7 +237,7 @@ input[type="checkbox"]:disabled {
 }
 ```
 
-You'll find more out about such pseudo-classes and more in the [next article](/en-US/docs/Learn/Forms/UI_pseudo-classes); the above ones do the following:
+You'll find out more about such pseudo-classes and more in the [next article](/en-US/docs/Learn/Forms/UI_pseudo-classes); the above ones do the following:
 
 - `:checked` — the checkbox (or radio button) is in a checked state — the user has clicked/activated it.
 - `:disabled` — the checkbox (or radio button) is in a disabled state — it cannot be interacted with.
@@ -404,7 +404,7 @@ If you really need full control over the option styling, you'll have to either u
 
 ```html
 <select id="select" name="select" multiple>
-  ...
+  …
 </select>
 ```
 

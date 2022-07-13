@@ -36,8 +36,8 @@ sendBeacon(url, data)
 - `url`
   - : The URL that will receive the _data_. Can be relative or absolute.
 - `data` {{Optional_inline}}
-  - : A {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}},
-    string, {{domxref("FormData")}}, or {{domxref("URLSearchParams")}}
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("Blob")}},
+    a string literal or object, a {{domxref("FormData")}} or a {{domxref("URLSearchParams")}}
     object containing the data to send.
 
 ### Return values

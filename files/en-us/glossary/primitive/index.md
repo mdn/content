@@ -21,10 +21,9 @@ For example, below it looks like `toUpperCase()` and `length` are methods and pr
 
 ```js
 let mystring = "lower case string";
-mystring.toUpperCase();
-console.log(mystring);
-// 'LOWER CASE STRING'
-console.log(mystring.length)
+console.log(mystring.toUpperCase()); // 'LOWER CASE STRING'
+console.log(mystring); // Still 'lower case string' as toUpperCase() didn't modify mystring.
+console.log(mystring.length);
 // 17
 ```
 
@@ -51,7 +50,8 @@ console.log(bar);               // baz
 bar.toUpperCase();
 console.log(bar);               // baz
 
-// Assignment gives the primitive a new (not a mutated) value
+// Assignment gives the variable a new primitive value,
+// but still doesn't mutate the original string
 bar = bar.toUpperCase();       
 console.log(bar);               // BAZ
 

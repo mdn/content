@@ -149,11 +149,11 @@ channel.addEventListener('message', event => {
 
 ### Result
 
-{{ EmbedLiveSample('Sender', '100%', '170px','' ,'' , 'dummy') }}
+{{ EmbedLiveSample('Sender', '100%', 220) }}
 
-{{ EmbedLiveSample('Receiver_1', '100%', '150px','' ,'' , 'dummy') }}
+{{ EmbedLiveSample('Receiver_1', '100%', 160) }}
 
-{{ EmbedLiveSample('Receiver_2', '100%', '150px','' ,'' , 'dummy') }}
+{{ EmbedLiveSample('Receiver_2', '100%', 160) }}
 
 ## Specifications
 

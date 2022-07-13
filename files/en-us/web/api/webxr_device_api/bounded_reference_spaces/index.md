@@ -72,7 +72,7 @@ Before actually attempting to create a bounded reference space, you need to crea
 ```js
 async function onActivateXRButton(event) {
   if (!xrSession) {
-    navigator.xr.requestSession("immersive-vr"), {
+    navigator.xr.requestSession("immersive-vr", {
       requiredFeatures: ["local-floor"],
       optionalFeatures: ["bounded-floor"]
     }).then((session) => {

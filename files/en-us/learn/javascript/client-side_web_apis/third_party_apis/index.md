@@ -57,9 +57,9 @@ Browser APIs are built into the browser — you can access them from JavaScript 
 
 ```js
 const audioCtx = new AudioContext();
-  ...
+// …
 const audioElement = document.querySelector('audio');
-  ...
+// …
 const audioSource = audioCtx.createMediaElementSource(audioElement);
 // etc.
 ```
@@ -143,7 +143,7 @@ There are other types of control available, for example [`mapquest.searchControl
 
 ### Adding a custom marker
 
-Adding a marker (icon) at a certain point on the map is easy — you just use the [`L.marker()`](https://leafletjs.com/reference-1.3.0.html#marker) method (which seems to be documented in the related Leaflet.js docs). Add the following code to your example, again inside `window.onload`:
+Adding a marker (icon) at a certain point on the map is easy — you just use the [`L.marker()`](https://leafletjs.com/reference.html#marker) method (which seems to be documented in the related Leaflet.js docs). Add the following code to your example, again inside `window.onload`:
 
 ```js
 L.marker([53.480759, -2.242631], {
@@ -343,7 +343,7 @@ There's a lot of code here; let's explain it step by step:
 - If some articles are returned, we, first of all, create all the elements that we want to use to display each news story, insert the right contents into each one, and then insert them into the DOM at the appropriate places. To work out which properties in the article objects contained the right data to show, we consulted the Article Search API reference (see [NYTimes APIs](https://developer.nytimes.com/apis)). Most of these operations are fairly obvious, but a few are worth calling out:
 
   - We used a [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop to go through all the keywords associated with each article, and insert each one inside its own {{htmlelement("span")}}, inside a `<p>`. This was done to make it easy to style each one.
-  - We used an `if()` block (`if(current.multimedia.length > 0) { ... }`) to check whether each article has any images associated with it (some stories don't.) We display the first image only if it exists (otherwise an error would be thrown).
+  - We used an `if ()` block (`if (current.multimedia.length > 0) { }`) to check whether each article has any images associated with it, as some stories don't. We display the first image only if it exists; otherwise, an error would be thrown.
 
 ### Wiring up the pagination buttons
 

@@ -261,7 +261,7 @@ let mergedObj = { ...obj1, ...obj2 }
 
 ### Prototype setter
 
-A property definition of the form `__proto__: value` or `"__proto__": value` does not create a property with the name `__proto__`.  Instead, if the provided value is an object or [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null), it points the `[[Prototype]]` of the created object to that value.  (If the value is not an object or `null`, the object is not changed.)
+A property definition of the form `__proto__: value` or `"__proto__": value` does not create a property with the name `__proto__`.  Instead, if the provided value is an object or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), it points the `[[Prototype]]` of the created object to that value.  (If the value is not an object or `null`, the object is not changed.)
 
 ```js
 let obj1 = {}
@@ -276,7 +276,7 @@ assert(Object.getPrototypeOf(obj3) === protoObj)
 
 let obj4 = {__proto__: 'not an object or null'}
 assert(Object.getPrototypeOf(obj4) === Object.prototype)
-assert(!obj4.hasOwnProperty('__proto__'))
+assert(!Object.hasOwn(obj4, '__proto__'))
 ```
 
 Only a single prototype setter is permitted in an object literal. Multiple prototype setters are a syntax error.
@@ -288,7 +288,7 @@ let __proto__ = 'variable'
 
 let obj1 = {__proto__}
 assert(Object.getPrototypeOf(obj1) === Object.prototype)
-assert(obj1.hasOwnProperty('__proto__'))
+assert(Object.hasOwn(obj1, '__proto__'))
 assert(obj1.__proto__ === 'variable')
 
 let obj2 = {__proto__() { return 'hello'; }}

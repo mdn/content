@@ -362,7 +362,7 @@ It's always good to be consistent — with yourself, and with others if possible
 
 Most event objects have a standard set of properties and methods available on the event object; see the {{domxref("Event")}} object reference for a full list.
 
-Some event objects add extra properties that are relevant to that particular type of event. For example, the {{domxref("Document/keydown_event", "keydown")}} event fires when the user presses a key. Its event object is a {{domxref("KeyboardEvent")}}, which is a specialized `Event` object with a `key` property that tells you which key was pressed:
+Some event objects add extra properties that are relevant to that particular type of event. For example, the {{domxref("Element/keydown_event", "keydown")}} event fires when the user presses a key. Its event object is a {{domxref("KeyboardEvent")}}, which is a specialized `Event` object with a `key` property that tells you which key was pressed:
 
 ```html
 <input id="textBox" type="text">
@@ -739,7 +739,7 @@ You can try making a local copy of the [show-video-box.html source code](https:/
 > **Note:** Why bother with both capturing and bubbling? Well, in the bad old days when browsers were much less cross-compatible than they are now, Netscape only used event capturing, and Internet Explorer used only event bubbling.
 > When the W3C decided to try to standardize the behavior and reach a consensus, they ended up with this system that included both, which is the one modern browsers implemented.
 
-> **Note:** As mentioned above, by default all event handlers are registered in the bubbling phase, and this makes more sense most of the time.
+> **Note:** As mentioned above, by default almost all event handlers are registered in the bubbling phase, and this makes more sense most of the time.
 > If you really want to register an event in the capturing phase instead, you can do so by registering your handler using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener), and setting the optional third property to `true`.
 
 ### Event delegation

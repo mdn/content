@@ -102,7 +102,7 @@ In addition, keep these specifics in mind:
 - Don't include padding spaces after opening brackets or before closing brackets — `(myVar)`, not `( myVar )`.
 - All statements must end with semicolons (";"). We require them in all of our code samples even though they're technically optional in JavaScript because we feel that it leads to code that is clearer and more precise about where each statement ends.
 - Use single quotes in JavaScript, wherever single quotes are needed in syntax.
-- There should be no space between a control statement keyword, function, or loop keyword and its opening parenthesis (e.g. `if() { ... }`, `function myFunc() { ... }, for(...) { ... }`).
+- There should be no space between a control statement keyword, function, or loop keyword and its opening parenthesis (e.g. `if() { }`, `function myFunc() { }, for() { }`).
 - There should be a space between the parentheses and the opening curly brace in such cases as described in the previous bullet.
 
 ### JavaScript comments
@@ -463,7 +463,7 @@ Use `extends` for inheritance:
 
 ```js example-good
 class Teacher extends Person {
-  ...
+  // …
 }
 ```
 

@@ -40,4 +40,4 @@ DELETE /idX/delete HTTP/1.1   -> Returns 404
 
 - Definition of [idempotent](https://datatracker.ietf.org/doc/html/rfc7231#section-4.2.2) in the HTTP specification.
 - Description of common idempotent methods: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("TRACE")}}
-- Description of common non-idempotent methods: {{HTTPMethod("POST")}},{{HTTPMethod("PATCH")}}, {{HTTPMethod("CONNECT")}}
+- Description of common non-idempotent methods: {{HTTPMethod("POST")}}, {{HTTPMethod("PATCH")}}, {{HTTPMethod("CONNECT")}}

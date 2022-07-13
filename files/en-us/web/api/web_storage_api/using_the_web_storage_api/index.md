@@ -9,7 +9,9 @@ tags:
   - Web Storage API
   - localStorage
   - sessionStorage
-spec-urls: https://html.spec.whatwg.org/multipage/webstorage.html#webstorage
+browser-compat:
+  - api.Window.localStorage
+  - api.Window.sessionStorage
 ---
 {{DefaultAPISidebar("Web Storage API")}}
 
@@ -54,10 +56,10 @@ Here is a function that detects whether localStorage is both supported and avail
 
 ```js
 function storageAvailable(type) {
-    var storage;
+    let storage;
     try {
         storage = window[type];
-        var x = '__storage_test__';
+        const x = '__storage_test__';
         storage.setItem(x, x);
         storage.removeItem(x);
         return true;
@@ -131,9 +133,9 @@ For example:
 
 ```js
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  const currentColor = localStorage.getItem('bgcolor');
+  const currentFont = localStorage.getItem('font');
+  const currentImage = localStorage.getItem('image');
 
   document.getElementById('bgcolor').value = currentColor;
   document.getElementById('font').value = currentFont;
@@ -204,13 +206,7 @@ Web Storage also provides a couple of simple methods to remove data. We don't us
 
 ## Browser compatibility
 
-### `Window.localStorage`
-
-{{Compat("api.Window.localStorage")}}
-
-### `Window.sessionStorage`
-
-{{Compat("api.Window.sessionStorage")}}
+{{Compat}}
 
 All browsers have varying capacity levels for both localStorage and sessionStorage. Here is a [detailed rundown of all the storage capacities for various browsers](http://dev-test.nemikor.com/web-storage/support-test/).
 

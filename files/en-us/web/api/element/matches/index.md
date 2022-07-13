@@ -25,7 +25,7 @@ matches(selectorString)
 ### Parameters
 
 - `selectors`
-  - : A string of valid [CSS selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors) to test the {{domxref("Element")}} against.
+  - : A string containing valid [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) to test the {{domxref("Element")}} against.
 
 ### Return value
 
@@ -34,7 +34,7 @@ matches(selectorString)
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - : Thrown if the `selectors` is not a valid CSS selector.
+  - : Thrown if `selectors` cannot be parsed as a CSS selector list.
 
 ## Examples
 

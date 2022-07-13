@@ -894,7 +894,7 @@ For {{SVGElement('use')}}, `width` defines the horizontal length for the referen
   </tbody>
 </table>
 
-> **Note:** `width`has no effect on `use` elements, unless the element referenced has a [viewbox](/en-US/docs/Web/SVG/Attribute/viewBox) - i.e. they only have an effect when `use` refers to a `svg` or `symbol` element.
+> **Note:** `width` has no effect on `use` elements, unless the element referenced has a [viewbox](/en-US/docs/Web/SVG/Attribute/viewBox) - i.e. they only have an effect when `use` refers to a `svg` or `symbol` element.
 
 > **Note:** Starting with SVG2, `width` is a *Geometry Property* meaning this attribute can also be used as a CSS property for used elements.
 

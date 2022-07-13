@@ -45,17 +45,17 @@ Also, certain methods, such as {{jsxref("Object.create()")}} or
 
 ```js example-bad
 // undefined and null cases on which the substring method won't work
-var foo = undefined;
+const foo = undefined;
 foo.substring(1); // TypeError: foo is undefined
 
-var foo = null;
+const foo = null;
 foo.substring(1); // TypeError: foo is null
 
 // Certain methods might require a specific type
-var foo = {}
+const foo = {}
 Symbol.keyFor(foo); // TypeError: foo is not a symbol
 
-var foo = 'bar'
+const foo = 'bar'
 Object.create(foo); // TypeError: "foo" is not an object or null
 ```
 
@@ -71,8 +71,8 @@ if (foo !== undefined) {
 }
 
 if (typeof foo !== 'undefined') {
-  // The same good idea, but don't use this implementation - it can bring problems
-  // because of the confusion between truly undefined and undeclared variables.
+  // The same idea, but prefer to use the one above - this one
+  // allows typos which accidentally test an undeclared variable.
 }
 ```
 

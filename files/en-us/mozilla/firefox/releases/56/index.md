@@ -53,7 +53,7 @@ _No changes._
 
 #### DOM events
 
-- {{domxref("GlobalEventHandlers.onwheel")}} is now available on {{domxref("HTMLElement")}} — it wasn't before ({{bug(1370550)}}).
+- `onwheel` is now available on {{domxref("HTMLElement.onwheel", "HTMLElement")}} — it wasn't before ({{bug(1370550)}}).
 
 #### Media and WebRTC
 
@@ -63,7 +63,7 @@ _No changes._
 #### Canvas and WebGL
 
 - The {{domxref("CanvasRenderingContext2D.drawImage()")}} method has been updated so that smoothing occurs when downscaling even if `imageSmoothingEnabled` is `false`. This is not mandatory as per spec, but follows Chrome's behavior. See {{bug(1360415)}}.
-- An {{domxref("SVGImageElement")}} can now be used as a {{domxref("CanvasImageSource")}}, e.g. as the image source in a {{domxref("CanvasRenderingContext2D.drawImage","drawImage()")}} call ({{bug(1382027)}}).
+- An {{domxref("SVGImageElement")}} can now be used as the image source in a {{domxref("CanvasRenderingContext2D.drawImage","drawImage()")}} call ({{bug(1382027)}}).
 
 ### Security
 

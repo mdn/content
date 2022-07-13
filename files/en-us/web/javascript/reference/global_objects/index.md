@@ -47,7 +47,6 @@ These global functions—functions which are called globally, rather than on an 
 
   - {{JSxRef("Global_Objects/escape", "escape()")}} {{Deprecated_Inline}}
   - {{JSxRef("Global_Objects/unescape", "unescape()")}} {{Deprecated_Inline}}
-  - {{JSxRef("Global_Objects/uneval", "uneval()")}} {{Deprecated_Inline}}
 
 ### Fundamental objects
 
@@ -163,7 +162,3 @@ Additions to the ECMAScript core for language-sensitive functionalities.
 - {{JSxRef("WebAssembly.CompileError")}}
 - {{JSxRef("WebAssembly.LinkError")}}
 - {{JSxRef("WebAssembly.RuntimeError")}}
-
-### Other
-
-- {{JSxRef("Functions/arguments", "arguments")}}

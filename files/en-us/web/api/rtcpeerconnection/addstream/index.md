@@ -52,7 +52,7 @@ the connection.
 navigator.mediaDevices.getUserMedia(
   { video: true, audio: true },
   function (stream) {
-    var pc = new RTCPeerConnection();
+    const pc = new RTCPeerConnection();
     pc.addStream(stream);
   }
 );
@@ -65,7 +65,7 @@ code to instead use the {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} 
 
 ```js
 navigator.getUserMedia({ video: true, audio: true }, function (stream) {
-  var pc = new RTCPeerConnection();
+  const pc = new RTCPeerConnection();
   stream.getTracks().forEach(function (track) {
     pc.addTrack(track, stream);
   });

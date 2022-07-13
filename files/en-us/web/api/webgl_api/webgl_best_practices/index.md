@@ -547,7 +547,7 @@ function clientWaitAsync(gl, sync, flags, interval_ms) {
       }
       resolve();
     }
-    test());
+    test();
   });
 }
 

@@ -98,7 +98,7 @@ document.querySelectorAll("button").forEach((button) => {
 
 Click the button next to each input type to show its picker.
 
-{{EmbedLiveSample("Showing the normal pickers","100%", "140px")}}
+{{EmbedLiveSample("Normal input pickers", "100%", "140px")}}
 
 ### showPicker() for a datalist input
 

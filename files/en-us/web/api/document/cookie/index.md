@@ -174,7 +174,7 @@ document.cookie = "test2=World; SameSite=None; Secure";
 const cookieValue = document.cookie
   .split('; ')
   .find(row => row.startsWith('test2='))
-  .split('=')[1];
+  ?.split('=')[1];
 
 function showCookieValue() {
   const output = document.getElementById('cookie-value')

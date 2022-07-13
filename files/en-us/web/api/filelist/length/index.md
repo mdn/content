@@ -1,6 +1,7 @@
 ---
 title: FileList.length
 slug: Web/API/FileList/length
+page-type: web-api-instance-property
 tags:
   - API
   - File API

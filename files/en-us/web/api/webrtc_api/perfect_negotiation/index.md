@@ -209,7 +209,7 @@ On the other hand, if the received message contains an ICE candidate, we deliver
 
 ## Making negotiation perfect
 
-If you're curious what makes perfect negotiation so... perfect... this section is for you. Here, we'll look at each change made to the WebRTC API and to best practice recommendations to make perfect negotiation possible.
+If you're curious what makes perfect negotiation _so perfect_, this section is for you. Here, we'll look at each change made to the WebRTC API and to best practice recommendations to make perfect negotiation possible.
 
 ### Glare-free setLocalDescription()
 
@@ -370,7 +370,7 @@ On the other hand, if the received message is an ICE candidate—indicated by th
 
 ### Explicit restartIce() method added
 
-The techniques previously used to trigger an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart) while handling the event{{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} have significant flaws. These flaws have made it difficult to safely and reliably trigger a restart during negotiation. The perfect negotiation improvements have fixed this by adding a new {{domxref("RTCPeerConnection.restartIce", "restartIce()")}} method to `RTCPeerConnection`.
+The techniques previously used to trigger an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart) while handling the event {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} have significant flaws. These flaws have made it difficult to safely and reliably trigger a restart during negotiation. The perfect negotiation improvements have fixed this by adding a new {{domxref("RTCPeerConnection.restartIce", "restartIce()")}} method to `RTCPeerConnection`.
 
 #### The old way
 
@@ -395,9 +395,18 @@ This has a number of reliability issues and outright bugs (such as failing if th
 Now, you can use `restartIce()` to do this much more cleanly:
 
 ```js example-good
-pc.onnegotiationneeded = async options => {
-  await pc.setLocalDescription(await pc.createOffer(options));
-  signaler.send({ description: pc.localDescription });
+let makingOffer = false;
+
+pc.onnegotiationneeded = async () => {
+  try {
+    makingOffer = true;
+    await pc.setLocalDescription();
+    signaler.send({ description: pc.localDescription });
+  } catch(err) {
+    console.error(err);
+  } finally {
+    makingOffer = false;
+  }
 };
 pc.oniceconnectionstatechange = () => {
   if (pc.iceConnectionState === "failed") {

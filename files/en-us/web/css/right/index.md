@@ -68,7 +68,7 @@ The effect of `right` depends on how the element is positioned (i.e., the value 
 - When `position` is set to `sticky`, the `right` property is used to compute the sticky-constraint rectangle.
 - When `position` is set to `static`, the `right` property has _no effect_.
 
-When both {{cssxref("left")}} and `right` are defined, if not prevented from doing so by other properties, the element will stretch to satisfy both. If the element cannot stretch to satisfy both -- for example, if a `width` is declared -- the position of the element is _over-constrained_. When this is the case, the `left` value has precedence when the container is left-to-right; the `right` value has precedence when the container is right-to-left.
+When both {{cssxref("left")}} and `right` are defined, if not prevented from doing so by other properties, the element will stretch to satisfy both. If the element cannot stretch to satisfy both — for example, if a `width` is declared — the position of the element is _over-constrained_. When this is the case, the `left` value has precedence when the container is left-to-right; the `right` value has precedence when the container is right-to-left.
 
 ## Formal definition
 

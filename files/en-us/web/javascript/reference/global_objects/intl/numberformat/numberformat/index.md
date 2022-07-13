@@ -160,7 +160,7 @@ new Intl.NumberFormat(locales, options)
         - "`short`" (e.g., `16 l`)
         - "`narrow`" (e.g., `16l`)
 
-    - `useGrouping`
+    - `useGrouping` {{experimental_inline}}
       - : Whether to use grouping separators, such as thousands separators or
         thousand/lakh/crore separators. The default is `auto`.
 
@@ -170,7 +170,7 @@ new Intl.NumberFormat(locales, options)
         - "`min2`": display grouping separators when there are at least 2 digits in a group
         - "`true`": alias for `always`
 
-    - `roundingMode`
+    - `roundingMode` {{experimental_inline}}
       - : Options for rounding modes reflecting the [ICU user guide](https://unicode-org.github.io/icu/userguide/format_parse/numbers/rounding-modes.html). The default is `halfExpand`.
 
         - "`ceil`": toward +∞
@@ -183,14 +183,14 @@ new Intl.NumberFormat(locales, options)
         - "`halfTrunc`": ties toward 0
         - "`halfEven`": ties toward the value with even cardinality
 
-    - `roundingPriority`
+    - `roundingPriority` {{experimental_inline}}
       - : Options for control rounding behavior:
 
         - "`auto`": the significant digits always win a conflict
         - "`morePrecision`": the result with more precision wins a conflict
         - "`lessPrecision`": the result with less precision wins a conflict
 
-    - `roundingIncrement`
+    - `roundingIncrement` {{experimental_inline}}
       - : Specifies the rounding-increment precision. Must be one of the following integers:
         "`1`", " `2`", "`5`", "`10`", "`20`", " `25`", "`50`", "`100`", "`200`", "`250`", "`500`", "`1000`", "`2000`", "`2500`", " `5000`".
         > **Note:** The `roundingIncrement` option controls the rounding increment to be used when formatting numbers:
@@ -216,7 +216,7 @@ new Intl.NumberFormat(locales, options)
         > If you set `minimumFractionDigits` and `maximumFractionDigits`, they must set them to the same value; otherwise a `RangeError` is thrown.
         >
 
-    - `trailingZeroDisplay`
+    - `trailingZeroDisplay` {{experimental_inline}}
       - : A string expressing the strategy for displaying trailing zeros on whole numbers. The default is "`auto`".
 
         - "`auto`": keep trailing zeros according to minimumFractionDigits and minimumSignificantDigits

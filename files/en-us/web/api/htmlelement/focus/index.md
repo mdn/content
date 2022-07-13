@@ -53,17 +53,16 @@ None ({{jsxref("undefined")}}).
 #### JavaScript
 
 ```js
-focusMethod = function getFocus() {
+document.getElementById("focusButton").addEventListener("click", () => {
   document.getElementById("myTextField").focus();
-}
+});
 ```
 
 #### HTML
 
 ```html
-<input type="text" id="myTextField" value="Text field.">
-<p></p>
-<button type="button" onclick="focusMethod()">Click me to focus on the text field!</button>
+<input id="myTextField" value="Text field.">
+<button id="focusButton">Click me to focus on the text field!</button>
 ```
 
 #### Result
@@ -75,17 +74,16 @@ focusMethod = function getFocus() {
 #### JavaScript
 
 ```js
-focusMethod = function getFocus() {
+document.getElementById("focusButton").addEventListener("click", () => {
   document.getElementById("myButton").focus();
-}
+});
 ```
 
 #### HTML
 
 ```html
-<button type="button" id="myButton">Click Me!</button>
-<p></p>
-<button type="button" onclick="focusMethod()">Click me to focus on the button!</button>
+<button id="myButton">Click Me!</button>
+<button id="focusButton">Click me to focus on the button!</button>
 ```
 
 #### Result

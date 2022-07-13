@@ -60,7 +60,7 @@ function getData() {
   request.responseType = 'arraybuffer';
 
   request.onload = function() {
-    var audioData = request.response;
+    const audioData = request.response;
 
     audioCtx.decodeAudioData(audioData, function(buffer) {
         myBuffer = buffer;

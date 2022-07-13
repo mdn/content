@@ -145,7 +145,7 @@ Try to place light sources in realistic locations for the setting and the mood y
 
 ### Realism in player interactions with light
 
-If your light source is located within the scene, you probably should try to ensure the viewer's avatar can't physically intersect with the light source. The results could be... strange.
+If your light source is located within the scene, you probably should try to ensure the viewer's avatar can't physically intersect with the light source. The results could be strange.
 
 If the viewer's avatar is meant to have physical form, it should have a model, even if the viewer can never see it, so that light interacts with the avatar correctly. Minimally, this means the avatar should cast an appropriate shadow; however, depending on factors such as whether or not the avatar can be seen and the materials, texturing, and other attributes of the its model—including, especially, its reflectivity—the avatar may also need to reflect light, as well as potentially affect the coloration of the light reflected off of it.
 

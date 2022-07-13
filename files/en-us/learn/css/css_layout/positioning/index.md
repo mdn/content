@@ -51,7 +51,7 @@ Static positioning is the default that every element gets. It just means "put th
 To see this (and get your example set up for future sections) first add a `class` of `positioned` to the second {{htmlelement("p")}} in the HTML:
 
 ```html
-<p class="positioned"> ... </p>
+<p class="positioned"> … </p>
 ```
 
 Now add the following rule to the bottom of your CSS:
@@ -192,7 +192,7 @@ First of all, note that the gap where the positioned element should be in the do
 
 Second, notice that the position of the element has changed. This is because {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} behave in a different way with absolute positioning. Rather than positioning the element based on its relative position within the normal document flow, they specify the distance the element should be from each of the containing element's sides. So in this case, we are saying that the absolutely positioned element should sit 30px from the top of the "containing element" and 30px from the left. (In this case, the "containing element" is the **initial containing block**. See the section below for more information)
 
-> **Note:** You can use {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} to resize elements if you need to. Try setting `top: 0; bottom: 0; left: 0; right: 0;` and `margin: 0;` on your positioned elements and see what happens! Put it back again afterwards...
+> **Note:** You can use {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} to resize elements if you need to. Try setting `top: 0; bottom: 0; left: 0; right: 0;` and `margin: 0;` on your positioned elements and see what happens! Put it back again afterwards…
 
 > **Note:** Yes, margins still affect positioned elements. Margin collapsing doesn't, however.
 
@@ -385,7 +385,7 @@ You should now see the finished example:
 
 <p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
 
-<p class="positioned">I'm not positioned any more...</p>
+<p class="positioned">I'm not positioned any more.</p>
 
 <p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
 
