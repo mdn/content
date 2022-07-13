@@ -14,7 +14,7 @@ The **`grid-auto-rows`** CSS property specifies the size of an implicitly-create
 
 {{EmbedInteractiveExample("pages/css/grid-auto-rows.html")}}
 
-If a grid item is positioned into a row that is not explicitly sized by {{cssxref("grid-template-rows")}}, implicit {{glossary("grid", "grid")}} tracks are created to hold it. This can happen either by explicitly positioning into a row that is out of range, or by the auto-placement algorithm creating additional rows.
+If a grid item is positioned into a row that is not explicitly sized by {{cssxref("grid-template-rows")}}, implicit {{glossary("Grid/CSS", "grid")}} tracks are created to hold it. This can happen either by explicitly positioning into a row that is out of range, or by the auto-placement algorithm creating additional rows.
 
 ## Syntax
 
