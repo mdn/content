@@ -109,7 +109,7 @@ _No changes_
 ### Security
 
 - Opting-out of MIME sniffing using {{HTTPHeader("X-Content-Type-Options")}} is now also applied to top-level documents if a {{HTTPHeader("Content-type")}} is provided. This can cause HTML web pages to be downloaded instead of being rendered when they are served with a MIME type other than `text/html`. Make sure to set both headers correctly. ({{bug(1591932)}}).
-- Dropped the support for [HTTP Public Key Pinning (HPKP)](/en-US/docs/Web/HTTP/Public_Key_Pinning) because of the low adoption rate and interoperability risk. The {{HTTPHeader("Public-Key-Pins")}} and {{HTTPHeader("Public-Key-Pins-Report-Only")}} headers are now silently ignored {{bug(1412438)}}.
+- Dropped the support for HTTP Public Key Pinning (HPKP) because of the low adoption rate and interoperability risk. The `Public-Key-Pins` and `Public-Key-Pins-Report-Only` headers are now silently ignored {{bug(1412438)}}.
 
 ### Plugins
 

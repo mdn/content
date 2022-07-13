@@ -99,9 +99,9 @@ We also need to build an array of colors for each of the 24 vertices. This code 
 
   // Convert the array of colors into a table for all the vertices.
 
-  var colors = [];
+  const colors = [];
 
-  for (var j = 0; j < faceColors.length; ++j) {
+  for (let j = 0; j < faceColors.length; ++j) {
     const c = faceColors[j];
 
     // Repeat each color four times for the four vertices of the face

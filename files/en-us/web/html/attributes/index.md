@@ -300,7 +300,6 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     <tr>
       <td><code>color</code></td>
       <td>
-        {{ HTMLElement("basefont") }},
         {{ HTMLElement("font") }}, {{ HTMLElement("hr") }}
       </td>
       <td>

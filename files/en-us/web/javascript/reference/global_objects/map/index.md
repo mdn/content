@@ -25,6 +25,8 @@ A `Map` object iterates its elements in insertion order — a
 {{jsxref("Statements/for...of", "for...of")}} loop returns an
 array of `[key, value]` for each iteration.
 
+The specification requires maps to be implemented "that, on average, provide access times that are sublinear on the number of elements in the collection". Therefore, it could be represented internally as a hash table (with O(1) lookup), a search tree (with O(log(N)) lookup), or any other data structure, as long as the complexity is better than O(N).
+
 ### Key equality
 
 - Key equality is based on the

@@ -3674,8 +3674,8 @@
 /en-US/docs/HTML/Element/base-redirect-1	/en-US/docs/Web/HTML/Element/base
 /en-US/docs/HTML/Element/base-redirect-2	/en-US/docs/Web/HTML/Element/base
 /en-US/docs/HTML/Element/base-redirect-3	/en-US/docs/Web/HTML/Element/base
-/en-US/docs/HTML/Element/basefont	/en-US/docs/Web/HTML/Element/basefont
-/en-US/docs/HTML/Element/basefont-redirect-1	/en-US/docs/Web/HTML/Element/basefont
+/en-US/docs/HTML/Element/basefont	/en-US/docs/Web/CSS/CSS_Fonts
+/en-US/docs/HTML/Element/basefont-redirect-1	/en-US/docs/Web/CSS/CSS_Fonts
 /en-US/docs/HTML/Element/bdi	/en-US/docs/Web/HTML/Element/bdi
 /en-US/docs/HTML/Element/bdi-redirect-1	/en-US/docs/Web/HTML/Element/bdi
 /en-US/docs/HTML/Element/bdo	/en-US/docs/Web/HTML/Element/bdo
@@ -3938,7 +3938,7 @@
 /en-US/docs/HTML:Element:area	/en-US/docs/Web/HTML/Element/area
 /en-US/docs/HTML:Element:b	/en-US/docs/Web/HTML/Element/b
 /en-US/docs/HTML:Element:base	/en-US/docs/Web/HTML/Element/base
-/en-US/docs/HTML:Element:basefont	/en-US/docs/Web/HTML/Element/basefont
+/en-US/docs/HTML:Element:basefont	/en-US/docs/Web/CSS/CSS_Fonts
 /en-US/docs/HTML:Element:bdo	/en-US/docs/Web/HTML/Element/bdo
 /en-US/docs/HTML:Element:bgcound	/en-US/docs/Web/HTML/Element/bgsound
 /en-US/docs/HTML:Element:bgsound	/en-US/docs/Web/HTML/Element/bgsound
@@ -8203,6 +8203,7 @@
 /en-US/docs/Web/API/HTMLAreaElement.rel	/en-US/docs/Web/API/HTMLAreaElement/rel
 /en-US/docs/Web/API/HTMLAreaElement.relList	/en-US/docs/Web/API/HTMLAreaElement/relList
 /en-US/docs/Web/API/HTMLAreaElement/referrer	/en-US/docs/Web/API/HTMLAreaElement/referrerPolicy
+/en-US/docs/Web/API/HTMLBaseFontElement	/en-US/docs/Web/CSS/CSS_Fonts
 /en-US/docs/Web/API/HTMLBodyElement/onafterprint	/en-US/docs/Web/API/Window/afterprint_event
 /en-US/docs/Web/API/HTMLBodyElement/onbeforeunload	/en-US/docs/Web/API/Window/beforeunload_event
 /en-US/docs/Web/API/HTMLBodyElement/onhashchange	/en-US/docs/Web/API/Window/hashchange_event
@@ -11730,6 +11731,7 @@
 /en-US/docs/Web/HTML/Element/Video/ended_event	/en-US/docs/Web/API/HTMLMediaElement/ended_event
 /en-US/docs/Web/HTML/Element/Video/loadeddata_event	/en-US/docs/Web/API/HTMLMediaElement/loadeddata_event
 /en-US/docs/Web/HTML/Element/audio/playing_event	/en-US/docs/Web/API/HTMLMediaElement/playing_event
+/en-US/docs/Web/HTML/Element/basefont	/en-US/docs/Web/CSS/CSS_Fonts
 /en-US/docs/Web/HTML/Element/h1	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h1–h6	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h2	/en-US/docs/Web/HTML/Element/Heading_Elements
@@ -11790,12 +11792,15 @@
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/wake-lock	/en-US/docs/Web/HTTP/Headers/Feature-Policy/screen-wake-lock
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/webauthn	/en-US/docs/Web/HTTP/Headers/Feature-Policy/publickey-credentials-get
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/xr	/en-US/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
+/en-US/docs/Web/HTTP/Headers/Public-Key-Pins	/en-US/docs/Web/HTTP/Headers/Expect-CT
+/en-US/docs/Web/HTTP/Headers/Public-Key-Pins-Report-Only	/en-US/docs/Web/HTTP/Headers/Expect-CT
 /en-US/docs/Web/HTTP/Headers/Ranges	/en-US/docs/Web/HTTP/Headers/Range
 /en-US/docs/Web/HTTP/Headers/Set-Cookie2	/en-US/docs/Web/HTTP/Headers/Set-Cookie
 /en-US/docs/Web/HTTP/History_of_HTTP_versions	/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
 /en-US/docs/Web/HTTP/Index	/en-US/docs/Web/HTTP
 /en-US/docs/Web/HTTP/Pipelining_FAQ	/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x
 /en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
+/en-US/docs/Web/HTTP/Public_Key_Pinning	/en-US/docs/Web/Security/Certificate_Transparency
 /en-US/docs/Web/HTTP/Response_codes	/en-US/docs/Web/HTTP/Status
 /en-US/docs/Web/HTTP/Server-Side_Access_Control	/en-US/docs/Web/HTTP/CORS
 /en-US/docs/Web/HTTP/Status/416_Range_Not_Satisfiable	/en-US/docs/Web/HTTP/Status/416
@@ -12095,10 +12100,13 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/uneval	/en-US/docs/Web/JavaScript/Reference/Global_Objects
 /en-US/docs/Web/JavaScript/Reference/Methods_Index	/en-US/docs/Web/JavaScript/Reference
 /en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators	/en-US/docs/Web/JavaScript/Reference/Operators
+/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators	/en-US/docs/Web/JavaScript/Reference/Operators#Assignment_operators
 /en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators	/en-US/docs/Web/JavaScript/Reference/Operators
 /en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators	/en-US/docs/Web/JavaScript/Reference/Operators
 /en-US/docs/Web/JavaScript/Reference/Operators/Destructing_assignment	/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+/en-US/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+/en-US/docs/Web/JavaScript/Reference/Operators/Legacy_generator_function	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators	/en-US/docs/Web/JavaScript/Reference/Operators
 /en-US/docs/Web/JavaScript/Reference/Operators/Member_Operators	/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors
 /en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator	/en-US/docs/Web/JavaScript/Reference/Operators/
@@ -12111,6 +12119,7 @@
 /en-US/docs/Web/JavaScript/Reference/Properties_Index	/en-US/docs/Web/JavaScript/Reference
 /en-US/docs/Web/JavaScript/Reference/Reserved_Words	/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords
 /en-US/docs/Web/JavaScript/Reference/Spread_operator	/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Statements/default	/en-US/docs/Web/JavaScript/Reference/Statements/switch
 /en-US/docs/Web/JavaScript/Reference/Statements/import.meta	/en-US/docs/Web/JavaScript/Reference/Operators/import.meta
 /en-US/docs/Web/JavaScript/Reference/Statements/yield	/en-US/docs/Web/JavaScript/Reference/Operators/yield
@@ -12340,7 +12349,7 @@
 /en-US/docs/Web/Security/Do_not_track_field_guide/Tutorials/3_Collecting_aggregate_data_based_on_DNT	/en-US/docs/Web/HTTP/Headers/DNT
 /en-US/docs/Web/Security/Do_not_track_field_guide/Tutorials/Additional_resources	/en-US/docs/Web/HTTP/Headers/DNT
 /en-US/docs/Web/Security/HTTP_strict_transport_security	/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
-/en-US/docs/Web/Security/Public_Key_Pinning	/en-US/docs/Web/HTTP/Public_Key_Pinning
+/en-US/docs/Web/Security/Public_Key_Pinning	/en-US/docs/Web/Security/Certificate_Transparency
 /en-US/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types	/en-US/docs/Learn/Server-side/Configuring_server_MIME_types
 /en-US/docs/Web/WebGL	/en-US/docs/Web/API/WebGL_API
 /en-US/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context	/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
