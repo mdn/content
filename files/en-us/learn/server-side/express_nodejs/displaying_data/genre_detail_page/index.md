@@ -121,7 +121,7 @@ Run the application and open your browser to `http://localhost:3000/`. Select th
 > ```js
 > exports.genre_detail = function(req, res, next) {
 >     var id = mongoose.Types.ObjectId(req.params.id);
->     ...
+>     // …
 > ```
 
 ## Next steps

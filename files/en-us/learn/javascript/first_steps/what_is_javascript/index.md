@@ -358,7 +358,7 @@ In the internal example, you can see this structure around the code:
 
 ```js
 document.addEventListener('DOMContentLoaded', () => {
-  ...
+  // …
 });
 ```
 
