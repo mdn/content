@@ -8184,6 +8184,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onpointerup	/en-US/docs/Web/API/Element/pointerup_event
 /en-US/docs/Web/API/GlobalEventHandlers/onreset	/en-US/docs/Web/API/HTMLFormElement/reset_event
 /en-US/docs/Web/API/GlobalEventHandlers/onresize	/en-US/docs/Web/API/Window/resize_event
+/en-US/docs/Web/API/GlobalEventHandlers/onsecuritypolicyviolation	/en-US/docs/Web/API/Element/securitypolicyviolation_event
 /en-US/docs/Web/API/GlobalEventHandlers/onselect	/en-US/docs/Web/API/HTMLInputElement/select_event
 /en-US/docs/Web/API/GlobalEventHandlers/onselectionchange	/en-US/docs/Web/API/HTMLInputElement/selectionchange_event
 /en-US/docs/Web/API/GlobalEventHandlers/onselectstart	/en-US/docs/Web/API/Document/selectstart_event
