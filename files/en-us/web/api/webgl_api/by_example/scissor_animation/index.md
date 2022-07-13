@@ -68,9 +68,9 @@ button {
 window.addEventListener("load", setupAnimation, false);
 // Variables to hold the WebGL context, and the color and
 // position of animated squares.
-var gl,
-  color = getRandomColor(),
-  position;
+let gl;
+const color = getRandomColor(),
+let position;
 
 function setupAnimation (evt) {
   window.removeEventListener(evt.type, setupAnimation, false);
@@ -85,8 +85,8 @@ function setupAnimation (evt) {
   // drawing buffer.
   position = [0, gl.drawingBufferHeight];
 
-  var button = document.querySelector("button");
-  var timer;
+  const button = document.querySelector("button");
+  let timer;
   function startAnimation(evt) {
     button.removeEventListener(evt.type, startAnimation, false);
     button.addEventListener("click", stopAnimation, false);
@@ -104,8 +104,8 @@ function setupAnimation (evt) {
 }
 
 // Variables to hold the size and velocity of the square.
-var size = [60, 60],
-  velocity = 3.0;
+let size = [60, 60];
+let velocity = 3.0;
 function drawAnimation () {
   gl.scissor(position[0], position[1], size[0] , size[1]);
   gl.clear(gl.COLOR_BUFFER_BIT);
@@ -136,13 +136,13 @@ function getRandomColor() {
 
 ```js hidden
 function getRenderingContext() {
-  var canvas = document.querySelector("canvas");
+  const canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
-  var gl = canvas.getContext("webgl")
+  const gl = canvas.getContext("webgl")
     || canvas.getContext("experimental-webgl");
   if (!gl) {
-    var paragraph = document.querySelector("p");
+    const paragraph = document.querySelector("p");
     paragraph.textContent = "Failed to get WebGL context."
       + "Your browser or device may not support WebGL.";
     return null;
