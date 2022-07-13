@@ -71,7 +71,7 @@ let timer;
 let rainingRect;
 let scoreDisplay;
 let missesDisplay;
-function setupAnimation (evt) {
+function setupAnimation(evt) {
   window.removeEventListener(evt.type, setupAnimation, false);
   if (!(gl = getRenderingContext()))
     return;
