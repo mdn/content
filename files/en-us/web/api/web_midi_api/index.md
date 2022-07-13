@@ -69,7 +69,7 @@ function listInputsAndOutputs( midiAccess ) {
       "' version:'" + input.version + "'" );
   }
 
-  for (let entry of midiAccess.outputs) {
+  for (const entry of midiAccess.outputs) {
     const output = entry[1];
     console.log( "Output port [type:'" + output.type + "'] id:'" + output.id +
       "' manufacturer:'" + output.manufacturer + "' name:'" + output.name +
