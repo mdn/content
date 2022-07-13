@@ -14,7 +14,7 @@ The **`grid-auto-columns`** CSS property specifies the size of an implicitly-cre
 
 {{EmbedInteractiveExample("pages/css/grid-auto-columns.html")}}
 
-If a grid item is positioned into a column that is not explicitly sized by {{cssxref("grid-template-columns")}}, implicit {{glossary("grid", "grid")}} tracks are created to hold it. This can happen either by explicitly positioning into a column that is out of range, or by the auto-placement algorithm creating additional columns.
+If a grid item is positioned into a column that is not explicitly sized by {{cssxref("grid-template-columns")}}, implicit {{glossary("Grid/CSS", "grid")}} tracks are created to hold it. This can happen either by explicitly positioning into a column that is out of range, or by the auto-placement algorithm creating additional columns.
 
 ## Syntax
 
