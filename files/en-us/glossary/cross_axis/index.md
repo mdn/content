@@ -44,4 +44,4 @@ Alignment of items on the cross axis is achieved with the `align-items` property
   - {{Glossary("Flex")}}
   - {{Glossary("Flex Container")}}
   - {{Glossary("Flex Item")}}
-  - {{Glossary("Grid")}}
+  - {{Glossary("Grid/CSS")}}
