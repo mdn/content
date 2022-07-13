@@ -140,16 +140,16 @@ class C { // Class declaration
 lbl: console.log(1); // Label
 ```
 
-In JavaScript, the production of identifiers can be described by the regex `/[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*/u` (excluding unicode escape sequences). `\p{ID_Start}` includes any character with property "ID_Start", and `\p{ID_Continue}` includes any character with property "ID_Continue". `$` and `_` are allowed anywhere in a JavaScript identifier, while \<ZWNJ> and \<ZWJ> (described in [format-control characters](#format-control_characters)) are not allowed at the start.
+In JavaScript, the range of identifiers can be described by the regex `/[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*/u` (excluding unicode escape sequences). `\p{ID_Start}` includes any character with property "ID_Start", and `\p{ID_Continue}` includes any character with property "ID_Continue". `$` and `_` are allowed anywhere in a JavaScript identifier, while \<ZWNJ> and \<ZWJ> (described in [format-control characters](#format-control_characters)) are not allowed at the start.
 
-In addition, JavaScript allows using [Unicode escape sequences](#unicode_escape_sequences) in the form of `\u0000` or `\u{000000}` in identifiers, which encode the same string value as the actual Unicode characters. For example, 你好 and \u4f60\u597d are the same identifiers:
+In addition, JavaScript allows using [Unicode escape sequences](#unicode_escape_sequences) in the form of `\u0000` or `\u{000000}` in identifiers, which encode the same string value as the actual Unicode characters. For example, `你好` and `\u4f60\u597d` are the same identifiers:
 
 ```js
 const 你好 = "Hello";
 console.log(\u4f60\u597d); // Hello
 ```
 
-Not all places accept the full range of identifiers. Certain productions require using identifiers names that are not reserved words (introduced in the next section), such as _FunctionDeclaration_, _FunctionExpression_, _VariableDeclaration_ and so on.
+Not all places accept the full range of identifiers. Certain syntaxes, such as function declarations, function expressions, and variable declarations. require using identifiers names that are not [reserved words](#reserved_keywords).
 
 ```js
 function import() {} // Illegal: import is a reserved word.
@@ -161,7 +161,7 @@ _Keywords_ are identifiers that have special meanings in JavaScript. For example
 
 A _reserved word_ is a keyword that cannot be used as an identifier for variable declarations, function declarations, etc. Not all keywords are reserved — for example, `async` can be used as an identifier anywhere. Some keywords are only _contextually reserved_ — for example, `await` is only reserved within the body of an async function, and `let` is only reserved in strict mode code, or `const`- and `let`-declarations.
 
-Identifiers are always compared by _string value_. For example, this is still a syntax error:
+Identifiers are always compared by _string value_, so escape sequences are interpreted. For example, this is still a syntax error:
 
 ```js example-bad
 const els\u{65} = 1;
@@ -308,6 +308,7 @@ The decimal exponential literal is specified by the following format: `beN`; whe
 175e-2 // => 1.75
 1e3    // => 1000
 1e-3   // => 0.001
+1E3    // => 1000
 ```
 
 #### Binary
@@ -544,17 +545,17 @@ const a = 1 /* ; */ // ASI here
 
 This rule is a complement to the previous rule, specifically for the case where there's no "offending token" but the end of input stream.
 
-3\. When a statement with restricted productions in the grammar is followed by a line terminator, a semicolon is inserted. These statements with "no LineTerminator here" rules are (the _italicized_ text is not the same as the nonterminal names in the spec — they are only used here for illustration):
+3\. When the grammar forbids line terminators in some place but a line terminator is found, a semicolon is inserted. These places include:
 
-- _Expression_ [here] `++`, _Expression_ [here] `--`
-- `continue`[here] _Label_
-- `break` [here] _Label_
-- `return` [here] _Expression_
-- `throw` [here] _Expression_
-- `yield` [here] _Expression_
-- `yield` [here] `*` _Expression_
-- _Parameters_ [here] `=>` _FunctionBody_
-- `async` [here] `function`, `async` [here] _PropertyName_, `async` [here] `function*`, `async` [here] `*` _PropertyName_, `async` [here] _Parameters_ [here] `=>` _FunctionBody_
+- `expr <here> ++`, `expr <here> --`
+- `continue <here> lbl`
+- `break <here> lbl`
+- `return <here> expr`
+- `throw <here> expr`
+- `yield <here> expr`
+- `yield <here> * expr`
+- `(param) <here> => {}`
+- `async <here> function`, `async <here> prop()`, `async <here> function*`, `async <here> *prop()`, `async <here> (param) <here> => {}`
 
 Here `++` is not treated as a [postfix operator](/en-US/docs/Web/JavaScript/Reference/Operators#increment) applying to variable `b`, because a line terminator occurs between `b` and `++`.
 
@@ -580,9 +581,9 @@ return;
 a + b;
 ```
 
-In addition, some line breaks, when removed, still make the program valid grammar around that point, and therefore do not trigger ASI:
+Note that ASI would only be triggered if a line break separates tokens that would otherwise produce invalid syntax. If the next token can be parsed as part of a valid structure, semicolons would not be inserted. For example:
 
-```js
+```js example-bad
 const a = 1
 (1).toString()
 
@@ -592,7 +593,7 @@ const b = 1
 
 Because `()` can be seen as a function call, it would usually not trigger ASI. Similarly, `[]` may be a member access. The code above is equivalent to:
 
-```js
+```js example-bad
 const a = 1(1).toString()
 
 const b = 1[1, 2, 3].forEach(console.log)
@@ -602,7 +603,7 @@ Therefore, you would get errors like "1 is not a function" and "Cannot read prop
 
 Within classes, class fields and generator methods can be a pitfall as well.
 
-```js
+```js example-bad
 class A {
   a = 1
   *gen() {}
@@ -611,7 +612,7 @@ class A {
 
 It is seen as:
 
-```js
+```js example-bad
 class A {
   a = 1 * gen() {}
 }
