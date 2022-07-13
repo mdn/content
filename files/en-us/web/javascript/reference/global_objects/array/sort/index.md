@@ -97,7 +97,7 @@ More formally, the comparator is expected to have the following properties, in o
 - _Pure_: The comparator does not mutate the objects being compared or any external state. (This is important because there's no guarantee _when_ and _how_ the comparator will be called, so any particular call should not produce visible effects to the outside.)
 - _Stable_: The comparator returns the same result with the same pair of input.
 - _Reflexive_: `compare(a, a) === 0`.
-- _Symmetric_: `Math.sign(compare(a, b)) === -1 * Math.sign(compare(b, a))`.
+- _Symmetric_: `compare(a, b)` and `compare(b, a)` must both be `0` or have opposite signs.
 - _Transitive_: For every given `a, b, c` true that if `Math.sign(compare(a, b)) !== -1 * Math.sign(compare(b, c))` than `Math.sign(compare(a, b) + compare(b, c)) === Math.sign(compare(a, c))` (e.g. `a<b<c` than `a<c` and `a=b<c` than `a<c`, etc.)
 
 A comparator conforming to the rules above will always be able to return all of `1`, `0`, and `-1`. For example, if a comparator only returns `1` and 0`, or only returns `0` and `-1`, it will not be able to sort reliably because _symmetry_ is broken.
