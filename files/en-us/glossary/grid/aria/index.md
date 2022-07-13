@@ -1,6 +1,6 @@
 ---
 title: Grid (ARIA)
-slug: Glossary/Grid/ARIA_grid
+slug: Glossary/Grid/ARIA
 tags:
   - Accessibility
   - ARIA
