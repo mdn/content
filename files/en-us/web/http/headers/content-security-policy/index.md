@@ -8,7 +8,7 @@ tags:
   - Reference
   - Security
   - header
-browser-compat: http.headers.csp.Content-Security-Policy
+browser-compat: http.headers.Content-Security-Policy
 ---
 {{HTTPSidebar}}
 

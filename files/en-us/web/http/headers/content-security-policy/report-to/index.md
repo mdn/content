@@ -9,7 +9,7 @@ tags:
   - Reporting
   - Security
   - report-to
-browser-compat: http.headers.csp.Content-Security-Policy.report-to
+browser-compat: http.headers.Content-Security-Policy.report-to
 ---
 {{HTTPSidebar}}
 

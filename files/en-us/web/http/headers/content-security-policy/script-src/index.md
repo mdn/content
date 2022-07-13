@@ -12,7 +12,7 @@ tags:
   - Security
   - script-src
   - source
-browser-compat: http.headers.csp.Content-Security-Policy.script-src
+browser-compat: http.headers.Content-Security-Policy.script-src
 ---
 {{HTTPSidebar}}
 

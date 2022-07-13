@@ -10,7 +10,7 @@ tags:
   - Security
   - connect-src
   - source
-browser-compat: http.headers.csp.Content-Security-Policy.connect-src
+browser-compat: http.headers.Content-Security-Policy.connect-src
 ---
 {{HTTPSidebar}}
 
