@@ -4613,7 +4613,7 @@
 /en-US/docs/JavaScript/Reference/Global_Objects/parseFloat	/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat
 /en-US/docs/JavaScript/Reference/Global_Objects/parseInt	/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
 /en-US/docs/JavaScript/Reference/Global_Objects/undefined	/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined
-/en-US/docs/JavaScript/Reference/Global_Objects/uneval	/en-US/docs/Web/JavaScript/Reference/Global_Objects
+/en-US/docs/JavaScript/Reference/Global_Objects/uneval	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/JavaScript/Reference/Global_Properties/undefined	/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined
 /en-US/docs/JavaScript/Reference/Objects/Array/constructor	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 /en-US/docs/JavaScript/Reference/Objects/Array/isArray	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray
@@ -12095,7 +12095,7 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/null	/en-US/docs/Web/JavaScript/Reference/Operators/null
-/en-US/docs/Web/JavaScript/Reference/Global_Objects/uneval	/en-US/docs/Web/JavaScript/Reference/Global_Objects
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/uneval	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Methods_Index	/en-US/docs/Web/JavaScript/Reference
 /en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators	/en-US/docs/Web/JavaScript/Reference/Operators
 /en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
