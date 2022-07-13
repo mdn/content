@@ -451,7 +451,7 @@ You will recall from a preceding section that we need to [set NODE_ENV to 'produ
 
 ```bash
 >heroku config:set NODE_ENV='production'
-Setting NODE_ENV and restarting limitless-tor-18923… done, v13
+Setting NODE_ENV and restarting limitless-tor-18923... done, v13
 NODE_ENV: production
 ```
 
@@ -461,7 +461,7 @@ You can set the URI as shown (obviously, using your own URI!)
 
 ```bash
 >heroku config:set MONGODB_URI=mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true
-Setting MONGODB_URI and restarting limitless-tor-18923… done, v13
+Setting MONGODB_URI and restarting limitless-tor-18923... done, v13
 MONGODB_URI: mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true
 ```
 
