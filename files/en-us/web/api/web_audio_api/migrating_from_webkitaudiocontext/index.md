@@ -161,7 +161,7 @@ osc.type = "square";     // square waveform
 osc.type = "sawtooth";   // sawtooth waveform
 osc.type = "triangle";   // triangle waveform
 osc.setPeriodicWave(table);  // Note: setWaveTable has been renamed to setPeriodicWave!
-var isCustom = (osc.type == "custom"); // isCustom will be true
+const isCustom = (osc.type == "custom"); // isCustom will be true
 ```
 
 ### BiquadFilterNode.type
