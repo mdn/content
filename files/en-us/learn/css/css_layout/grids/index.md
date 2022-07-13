@@ -440,7 +440,7 @@ aside {
 
 {{ EmbedLiveSample('Line-based_placement', '100%', 600) }}
 
-> **Note:** You can also use the value `-1` to target the end column or row line, then count inwards from the end using negative values. Note also that lines count always from the edges of the explicit grid, not the [implicit grid](/en-US/docs/Glossary/Grid).
+> **Note:** You can also use the value `-1` to target the end column or row line, then count inwards from the end using negative values. Note also that lines count always from the edges of the explicit grid, not the [implicit grid](/en-US/docs/Glossary/Grid/CSS).
 
 ## Positioning with grid-template-areas
 
