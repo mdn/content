@@ -58,7 +58,7 @@ videoElem.textTracks.addEventListener("addtrack", handleTrackEvent, false);
 videoElem.textTracks.addEventListener("removetrack", handleTrackEvent, false);
 
 function handleTrackEvent(event) {
-  const trackKind;
+  let trackKind;
 
   if (event.target instanceof VideoTrackList) {
     trackKind = "video";
