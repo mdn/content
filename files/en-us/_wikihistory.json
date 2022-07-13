@@ -44895,17 +44895,6 @@
       "Jürgen Jeka"
     ]
   },
-  "Web/API/HTMLBaseFontElement": {
-    "modified": "2020-10-15T21:23:42.358Z",
-    "contributors": [
-      "fscholz",
-      "Sebastianz",
-      "erikadoyle",
-      "kollishivagangadhar",
-      "teoli",
-      "kscarfone"
-    ]
-  },
   "Web/API/HTMLBodyElement": {
     "modified": "2020-10-15T21:10:58.284Z",
     "contributors": [
@@ -110264,24 +110253,6 @@
       "Mgjbot",
       "PablO",
       "Victory"
-    ]
-  },
-  "Web/HTML/Element/basefont": {
-    "modified": "2020-10-15T21:12:05.448Z",
-    "contributors": [
-      "Sheppy",
-      "teoli",
-      "erikadoyle",
-      "fscholz",
-      "kscarfone",
-      "avsaro",
-      "ethertank",
-      "cers",
-      "jswisher",
-      "George3",
-      "Mgjbot",
-      "PablO",
-      "Ptak82"
     ]
   },
   "Web/HTML/Element/bdi": {

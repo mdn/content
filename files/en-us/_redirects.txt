@@ -3674,8 +3674,8 @@
 /en-US/docs/HTML/Element/base-redirect-1	/en-US/docs/Web/HTML/Element/base
 /en-US/docs/HTML/Element/base-redirect-2	/en-US/docs/Web/HTML/Element/base
 /en-US/docs/HTML/Element/base-redirect-3	/en-US/docs/Web/HTML/Element/base
-/en-US/docs/HTML/Element/basefont	/en-US/docs/Web/HTML/Element/basefont
-/en-US/docs/HTML/Element/basefont-redirect-1	/en-US/docs/Web/HTML/Element/basefont
+/en-US/docs/HTML/Element/basefont	/en-US/docs/Web/CSS/CSS_Fonts
+/en-US/docs/HTML/Element/basefont-redirect-1	/en-US/docs/Web/CSS/CSS_Fonts
 /en-US/docs/HTML/Element/bdi	/en-US/docs/Web/HTML/Element/bdi
 /en-US/docs/HTML/Element/bdi-redirect-1	/en-US/docs/Web/HTML/Element/bdi
 /en-US/docs/HTML/Element/bdo	/en-US/docs/Web/HTML/Element/bdo
@@ -3938,7 +3938,7 @@
 /en-US/docs/HTML:Element:area	/en-US/docs/Web/HTML/Element/area
 /en-US/docs/HTML:Element:b	/en-US/docs/Web/HTML/Element/b
 /en-US/docs/HTML:Element:base	/en-US/docs/Web/HTML/Element/base
-/en-US/docs/HTML:Element:basefont	/en-US/docs/Web/HTML/Element/basefont
+/en-US/docs/HTML:Element:basefont	/en-US/docs/Web/CSS/CSS_Fonts
 /en-US/docs/HTML:Element:bdo	/en-US/docs/Web/HTML/Element/bdo
 /en-US/docs/HTML:Element:bgcound	/en-US/docs/Web/HTML/Element/bgsound
 /en-US/docs/HTML:Element:bgsound	/en-US/docs/Web/HTML/Element/bgsound
@@ -8203,6 +8203,7 @@
 /en-US/docs/Web/API/HTMLAreaElement.rel	/en-US/docs/Web/API/HTMLAreaElement/rel
 /en-US/docs/Web/API/HTMLAreaElement.relList	/en-US/docs/Web/API/HTMLAreaElement/relList
 /en-US/docs/Web/API/HTMLAreaElement/referrer	/en-US/docs/Web/API/HTMLAreaElement/referrerPolicy
+/en-US/docs/Web/API/HTMLBaseFontElement	/en-US/docs/Web/CSS/CSS_Fonts
 /en-US/docs/Web/API/HTMLBodyElement/onafterprint	/en-US/docs/Web/API/Window/afterprint_event
 /en-US/docs/Web/API/HTMLBodyElement/onbeforeunload	/en-US/docs/Web/API/Window/beforeunload_event
 /en-US/docs/Web/API/HTMLBodyElement/onhashchange	/en-US/docs/Web/API/Window/hashchange_event
@@ -11730,6 +11731,7 @@
 /en-US/docs/Web/HTML/Element/Video/ended_event	/en-US/docs/Web/API/HTMLMediaElement/ended_event
 /en-US/docs/Web/HTML/Element/Video/loadeddata_event	/en-US/docs/Web/API/HTMLMediaElement/loadeddata_event
 /en-US/docs/Web/HTML/Element/audio/playing_event	/en-US/docs/Web/API/HTMLMediaElement/playing_event
+/en-US/docs/Web/HTML/Element/basefont	/en-US/docs/Web/CSS/CSS_Fonts
 /en-US/docs/Web/HTML/Element/h1	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h1–h6	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h2	/en-US/docs/Web/HTML/Element/Heading_Elements
