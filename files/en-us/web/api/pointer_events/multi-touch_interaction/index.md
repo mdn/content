@@ -53,9 +53,9 @@ To support multi-touch interaction, preserving a pointer's event state during va
 const logEvents = false;
 
 // Event caches, one per touch target
-const evCache1 = new Array();
-const evCache2 = new Array();
-const evCache3 = new Array();
+const evCache1 = [];
+const evCache2 = [];
+const evCache3 = [];
 ```
 
 ### Register event handlers

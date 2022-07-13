@@ -247,7 +247,7 @@ The {{jsxref("Array")}} object has the following methods:
 {{jsxref("Array.concat", "concat()")}} joins two or more arrays and returns a new array.
 
 ```js
-let myArray = new Array('1', '2', '3')
+let myArray = ['1', '2', '3']
 myArray = myArray.concat('a', 'b', 'c')
 // myArray is now ["1", "2", "3", "a", "b", "c"]
 ```
@@ -255,21 +255,21 @@ myArray = myArray.concat('a', 'b', 'c')
 {{jsxref("Array.join", "join(delimiter = ',')")}} joins all elements of an array into a string.
 
 ```js
-let myArray = new Array('Wind', 'Rain', 'Fire')
+let myArray = ['Wind', 'Rain', 'Fire']
 let list = myArray.join(' - ') // list is "Wind - Rain - Fire"
 ```
 
 {{jsxref("Array.push", "push()")}} adds one or more elements to the end of an array and returns the resulting `length` of the array.
 
 ```js
-let myArray = new Array('1', '2')
+let myArray = ['1', '2']
 myArray.push('3')  // myArray is now ["1", "2", "3"]
 ```
 
 {{jsxref("Array.pop", "pop()")}} removes the last element from an array and returns that element.
 
 ```js
-let myArray = new Array('1', '2', '3')
+let myArray = ['1', '2', '3']
 let last = myArray.pop()
 // myArray is now ["1", "2"], last = "3"
 ```
@@ -277,7 +277,7 @@ let last = myArray.pop()
 {{jsxref("Array.shift", "shift()")}} removes the first element from an array and returns that element.
 
 ```js
-let myArray = new Array('1', '2', '3')
+let myArray = ['1', '2', '3']
 let first = myArray.shift()
 // myArray is now ["2", "3"], first is "1"
 ```
@@ -285,7 +285,7 @@ let first = myArray.shift()
 {{jsxref("Array.unshift", "unshift()")}} adds one or more elements to the front of an array and returns the new length of the array.
 
 ```js
-let myArray = new Array('1', '2', '3')
+let myArray = ['1', '2', '3']
 myArray.unshift('4', '5')
 // myArray becomes ["4", "5", "1", "2", "3"]
 ```
@@ -293,7 +293,7 @@ myArray.unshift('4', '5')
 {{jsxref("Array.slice", "slice(start_index, up_to_index)")}} extracts a section of an array and returns a new array.
 
 ```js
-let myArray = new Array('a', 'b', 'c', 'd', 'e')
+let myArray = ['a', 'b', 'c', 'd', 'e']
 myArray = myArray.slice(1, 4)  // starts at index 1 and extracts all elements
                                // until index 3, returning [ "b", "c", "d"]
 ```
@@ -301,7 +301,7 @@ myArray = myArray.slice(1, 4)  // starts at index 1 and extracts all elements
 {{jsxref("Array.splice", "splice(index, count_to_remove, addElement1, addElement2, ...)")}} removes elements from an array and (optionally) replaces them. It returns the items which were removed from the array.
 
 ```js
-let myArray = new Array('1', '2', '3', '4', '5')
+let myArray = ['1', '2', '3', '4', '5']
 myArray.splice(1, 3, 'a', 'b', 'c', 'd')
 // myArray is now ["1", "a", "b", "c", "d", "5"]
 // This code started at index one (or where the "2" was),
@@ -312,7 +312,7 @@ myArray.splice(1, 3, 'a', 'b', 'c', 'd')
 {{jsxref("Array.reverse", "reverse()")}} transposes the elements of an array, in place: the first array element becomes the last and the last becomes the first. It returns a reference to the array.
 
 ```js
-let myArray = new Array('1', '2', '3')
+let myArray = ['1', '2', '3']
 myArray.reverse()
 // transposes the array so that myArray = ["3", "2", "1"]
 ```
@@ -320,7 +320,7 @@ myArray.reverse()
 {{jsxref("Array.sort", "sort()")}} sorts the elements of an array in place, and returns a reference to the array.
 
 ```js
-let myArray = new Array('Wind', 'Rain', 'Fire')
+let myArray = ['Wind', 'Rain', 'Fire']
 myArray.sort()
 // sorts the array so that myArray = ["Fire", "Rain", "Wind"]
 ```

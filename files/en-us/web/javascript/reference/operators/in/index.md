@@ -80,7 +80,7 @@ let mycar = {make: 'Honda', model: 'Accord', year: 1998}
 delete mycar.make
 'make' in mycar   // returns false
 
-let trees = new Array('redwood', 'bay', 'cedar', 'oak', 'maple')
+let trees = ['redwood', 'bay', 'cedar', 'oak', 'maple']
 delete trees[3]
 3 in trees  // returns false
 ```
@@ -95,7 +95,7 @@ mycar.make = undefined
 ```
 
 ```js
-let trees = new Array('redwood', 'bay', 'cedar', 'oak', 'maple')
+let trees = ['redwood', 'bay', 'cedar', 'oak', 'maple']
 trees[3] = undefined
 3 in trees  // returns true
 ```
