@@ -97,8 +97,10 @@ More formally, the comparator is expected to have the following properties, in o
 - _Pure_: The comparator does not mutate the objects being compared or any external state. (This is important because there's no guarantee _when_ and _how_ the comparator will be called, so any particular call should not produce visible effects to the outside.)
 - _Stable_: The comparator returns the same result with the same pair of input.
 - _Reflexive_: `compare(a, a) === 0`.
-- _Symmetric_: If `compare(a, b) === 0`, then `compare(b, a) === 0`.
-- _Transitive_: If `compare(a, b)` and `compare(b, c)` are both positive, zero, or negative, then `compare(a, c)` has the same positivity as the previous two.
+- _Symmetric_: `Math.sign(compare(a, b)) === -1 * Math.sign(compare(b, a))`.
+- _Transitive_: For every given `a, b, c` true that if `Math.sign(compare(a, b)) !== -1 * Math.sign(compare(b, c))` than `Math.sign(compare(a, b) + compare(b, c)) === Math.sign(compare(a, c))` (e.g. `a<b<c` than `a<c` and `a=b<c` than `a<c`, etc.)
+
+Your sort method is probably wrong, if it only contains `1, 0` or `0, -1` as return values, because it will break the _Symmetric_ behaviour (altough the `1, 0` will seem to work in some environments).
 
 The default lexicographic comparator satisfies all constraints above.
 
