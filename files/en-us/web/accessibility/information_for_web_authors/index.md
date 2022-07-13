@@ -67,18 +67,3 @@ tags:
 Dynamic web content is not accessible, because it uses vanilla {{HTMLElement('div')}}'s and {{HTMLElement('span')}}'s combined with Javascript rather than declarative markup to describe the behavior of custom widgets such as menus and tree views. These widgets are usually not even keyboard focusable. Furthermore, assistive technologies do not understand what these widgets are supposed to be, or what state they are in or what they are capable of.
 
 This document tackles such difficulties and shows several interactive desktop-style widgets such as tree views, menu bars and spreadsheets which are accessible both with the keyboard and assistive technologies such as screen readers, screen magnifiers and alternative input devices.
-
-## Join the Mozilla Accessibility Community
-
-### Live Chat
-
-Both end users and developers are invited for discussion on the live IRC channel at [irc.mozilla.org/#accessibility](irc://moznet/%23accessibility). Since this is a worldwide effort, there is always a good chance to find someone to chat with there, day or night.
-
-### Newsgroup and Mailing List
-
-We have two discussion lists, which can be read via a newsgroup reader, as a mailing list or via Google groups.
-
-| Purpose              | Newsgroup                                                                              | Mailing list                                                                      | Google group                                                                  |
-| -------------------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| Developer discussion | [mozilla.dev.accessibility](news://news.mozilla.org/mozilla.dev.accessibility)         | [subscribe/unsubscribe](https://lists.mozilla.org/listinfo/dev-accessibility)     | [Discourse group](https://discourse.mozilla.org/c/a11y/)     |
-| End user support     | [mozilla.support.accessibility](news://news.mozilla.org/mozilla.support.accessibility) | [subscribe/unsubscribe](https://lists.mozilla.org/listinfo/support-accessibility) |  |
