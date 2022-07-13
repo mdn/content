@@ -68,7 +68,7 @@ button {
 window.addEventListener("load", setupAnimation, false);
 // Variables to hold the WebGL context, and the color and
 // position of animated squares.
-const gl;
+let gl;
 const color = getRandomColor(),
 let position;
 
