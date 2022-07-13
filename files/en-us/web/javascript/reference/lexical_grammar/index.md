@@ -128,7 +128,7 @@ You must only use the `#!` comment style to specify a JavaScript interpreter. In
 
 ## Identifiers
 
-An _identifier_ is used to assign a name to a value. Identifiers can be used in various places:
+An _identifier_ is used to link a name to a value. Identifiers can be used in various places:
 
 ```js
 const decl = 1; // Variable declaration
@@ -142,7 +142,7 @@ lbl: console.log(1); // Label
 
 In JavaScript, the production of identifiers can be described by the regex `/[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*/u` (excluding unicode escape sequences). `\p{ID_Start}` includes any character with property "ID_Start", and `\p{ID_Continue}` includes any character with property "ID_Continue". `$` and `_` are allowed anywhere in a JavaScript identifier, while \<ZWNJ> and \<ZWJ> (described in [format-control characters](#format-control_characters)) are not allowed at the start.
 
-In addition, JavaScript allows using [unicode escape sequences](#unicde_escape_sequences) in the form of `\u0000` or `\u{000000}` in identifiers, which encode the same string value as the actual unicode characters. For example:
+In addition, JavaScript allows using [Unicode escape sequences](#unicode_escape_sequences) in the form of `\u0000` or `\u{000000}` in identifiers, which encode the same string value as the actual Unicode characters. For example, 你好 and \u4f60\u597d are the same identifiers:
 
 ```js
 const 你好 = "Hello";
@@ -157,7 +157,9 @@ function import() {} // Illegal: import is a reserved word.
 
 ## Keywords
 
-_Keywords_ are identifiers that have special meanings in JavaScript. For example, the keyword [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) before a function declaration indicates that the function is asynchronous. A _reserved word_ is a keyword that cannot be used as an identifier for variable declarations, function declarations, etc. Not all keywords are reserved — for example, `async` can be used as identifier anywhere. Some keywords are only _contextually reserved_ — for example, `await` is only reserved within the body of an async function, and `let` is only reserved in strict mode code or `const`- or `let`-declarations.
+_Keywords_ are identifiers that have special meanings in JavaScript. For example, the keyword [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) before a function declaration indicates that the function is asynchronous.
+
+A _reserved word_ is a keyword that cannot be used as an identifier for variable declarations, function declarations, etc. Not all keywords are reserved — for example, `async` can be used as an identifier anywhere. Some keywords are only _contextually reserved_ — for example, `await` is only reserved within the body of an async function, and `let` is only reserved in strict mode code, or `const`- and `let`-declarations.
 
 Identifiers are always compared by _string value_. For example, this is still a syntax error:
 
@@ -293,7 +295,7 @@ The [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type) and [BigInt
 0777 // parsed as octal, 511 in decimal
 ```
 
-Note that decimal literals can start with a zero (`0`) followed by another decimal digit, but if all digits after the leading `0` are smaller than 8, the number is interpreted as an octal number. `0`-prefixed number literals, whether interpreted as octal or decimal, will cause a syntax error in strict mode — use the `0o` prefix instead.
+Note that decimal literals can start with a zero (`0`) followed by another decimal digit, but if all digits after the leading `0` are smaller than 8, the number is interpreted as an octal number. Moreover, number literals prefixed with `0`, whether interpreted as octal or decimal, will cause a syntax error in strict mode — so, use the `0o` prefix instead.
 
 ##### Exponential
 
@@ -508,7 +510,7 @@ Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements) mu
 - `continue`, `break`, `throw`
 - `return`
 
-The ECMAScript specification mentions [three rules of semicolon insertion](https://tc39.es/ecma262/#sec-rules-of-automatic-semicolon-insertion).
+There are three cases when semicolon are automatically inserted:
 
 1\. When a token not allowed by the grammar is encountered, and it's separated from the previous token by at least one [line terminator](#line_terminators), or the token is "}", then a semicolon is inserted before the token.
 
@@ -525,7 +527,7 @@ The ECMAScript specification mentions [three rules of semicolon insertion](https
 // each consisting of a number literal
 ```
 
-Specially, the ending ")" of [`do...while`](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) is taken care of by this rule as well.
+The ending ")" of [`do...while`](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) is taken care of as a special case by this rule as well.
 
 ```js
 do {
