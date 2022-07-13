@@ -43,8 +43,6 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/loadeddata_event", "loadeddata")}} event is raised.
 - {{domxref("GlobalEventHandlers.onloadedmetadata")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/loadedmetadata_event", "loadedmetadata")}} event is raised.
-- {{domxref("GlobalEventHandlers.onloadend")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/loadend_event", "loadend")}} event is raised (when progress has stopped on the loading of a resource.)
 - {{domxref("GlobalEventHandlers.onloadstart")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/loadstart_event", "loadstart")}} event is raised (when progress has begun on the loading of a resource.)
 - {{domxref("GlobalEventHandlers.onlostpointercapture")}}
