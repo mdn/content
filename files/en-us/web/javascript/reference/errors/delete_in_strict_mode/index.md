@@ -15,10 +15,10 @@ The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-o
 
 ## Message
 
-```js
-SyntaxError: Calling delete on expression not allowed in strict mode (Edge)
-SyntaxError: applying the 'delete' operator to an unqualified name is deprecated (Firefox)
+```
 SyntaxError: Delete of an unqualified identifier in strict mode. (Chrome)
+SyntaxError: applying the 'delete' operator to an unqualified name is deprecated (Firefox)
+SyntaxError: Cannot delete unqualified property 'a' in strict mode. (Safari)
 ```
 
 ## Error type

@@ -14,7 +14,7 @@ The JavaScript exception "x can't be converted to BigInt" occurs when attempting
 ## Message
 
 ```
-TypeError: Cannot convert null to a BigInt (Chromium-based)
+TypeError: Cannot convert null to a BigInt (V8-based)
 TypeError: can't convert null to BigInt (Firefox)
 TypeError: Invalid argument type in ToBigInt operation (Safari)
 ```

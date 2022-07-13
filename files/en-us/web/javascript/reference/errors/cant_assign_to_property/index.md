@@ -15,9 +15,10 @@ such as a [symbol](/en-US/docs/Glossary/Symbol), a [string](/en-US/docs/Glossary
 
 ## Message
 
-```js
-TypeError: can't assign to property "x" on {y}: not an object (Firefox)
-TypeError: Cannot create property 'x' on {y} (Chrome)
+```
+TypeError: Cannot create property 'x' on number '1' (V8-based)
+TypeError: can't assign to property "x" on 1: not an object (Firefox)
+TypeError: Attempted to assign to readonly property. (Safari)
 ```
 
 ## Error type
