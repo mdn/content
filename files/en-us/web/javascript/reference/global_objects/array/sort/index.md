@@ -100,7 +100,7 @@ More formally, the comparator is expected to have the following properties, in o
 - _Symmetric_: `compare(a, b)` and `compare(b, a)` must both be `0` or have opposite signs.
 - _Transitive_: For every given `a, b, c` true that if `Math.sign(compare(a, b)) !== -1 * Math.sign(compare(b, c))` than `Math.sign(compare(a, b) + compare(b, c)) === Math.sign(compare(a, c))` (e.g. `a<b<c` than `a<c` and `a=b<c` than `a<c`, etc.)
 
-A comparator conforming to the constraints above will always be able to return all of `1`, `0`, and `-1`, or consistently return `0`. For example, if a comparator only returns `1` and `0`, or only returns `0` and `-1`, it will not be able to sort reliably because _symmetry_ is broken. Comparators always returning `0` will cause the array to not be changed at all, but is reliable nonetheless.
+A comparator conforming to the constraints above will always be able to return all of `1`, `0`, and `-1`, or consistently return `0`. For example, if a comparator only returns `1` and `0`, or only returns `0` and `-1`, it will not be able to sort reliably because _symmetry_ is broken. A comparator that always returns `0` will cause the array to not be changed at all, but is reliable nonetheless.
 
 The default lexicographic comparator satisfies all constraints above.
 
