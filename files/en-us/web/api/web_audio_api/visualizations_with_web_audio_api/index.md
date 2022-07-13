@@ -188,7 +188,7 @@ We also set a `barHeight` variable, and an `x` variable to record how far across
 
 ```js
 const barWidth = (WIDTH / bufferLength) * 2.5;
-const barHeight;
+let barHeight;
 const x = 0;
 ```
 
