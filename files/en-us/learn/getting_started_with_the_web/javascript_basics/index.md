@@ -17,7 +17,7 @@ This article helps you get started with JavaScript and furthers your understandi
 ## What is JavaScript?
 
 {{Glossary("JavaScript")}} is a powerful programming language that can add interactivity to a website.
-It was invented by Brendan Eich (co-founder of the Mozilla project, the Mozilla Foundation, the Mozilla Corporation, and CEO of Brave Software.).
+It was invented by Brendan Eich.
 
 JavaScript is versatile and beginner-friendly.
 With more experience, you'll be able to create games, animated 2D and 3D graphics, comprehensive database-driven apps, and much more!
