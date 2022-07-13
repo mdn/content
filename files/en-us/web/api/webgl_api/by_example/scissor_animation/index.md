@@ -85,7 +85,7 @@ function setupAnimation (evt) {
   // drawing buffer.
   position = [0, gl.drawingBufferHeight];
 
-  vconst button = document.querySelector("button");
+  const button = document.querySelector("button");
   let timer;
   function startAnimation(evt) {
     button.removeEventListener(evt.type, startAnimation, false);
