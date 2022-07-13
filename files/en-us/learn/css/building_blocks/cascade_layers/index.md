@@ -13,9 +13,9 @@ tags:
 ---
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
 
-The aim of this lesson is to develop your understanding of some of the most fundamental concepts of CSS — the cascade, specificity, and inheritance — which control how CSS is applied to HTML and how conflicts between style declarations are resolved.
+The aim of this lesson is to improve your understanding of some of the most fundamental concepts of CSS — the cascade, specificity, and inheritance — and introduce you to cascade layers.
 
-While working through this lesson may seem less relevant immediately and a little more academic than some other parts of the course, an understanding of these concepts will save you from a lot of pain later on! We encourage you to work through this section carefully and check that you understand the concepts before moving on.
+While working through this lesson may seem less relevant immediately and a little more academic than some other parts of the course, an understanding of these concepts will save you from a lot of pain.  Cascade layers are most relevant when working with CSS from multiple sources, conflicting CSS selectors and competing specificity, or any time you considering using [`!important`](/en-US/docs/Web/CSS/important).
 
 <table>
   <tbody>
@@ -33,21 +33,22 @@ While working through this lesson may seem less relevant immediately and a littl
         >, HTML basics (study
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
-        >), and an idea of how CSS works (study
-        <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>.)
+        >), an idea of how CSS works (study
+        <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>, and an understanding of <a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">the cascade and specificity</a>.)
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To learn about the cascade and specificity, and how inheritance works in
-        CSS.
+        To fully understand the CSS cascade and how cascade layers work.
       </td>
     </tr>
   </tbody>
 </table>
 
-For each property applied to an element, there can only be one value. While the name of this document is a specific color and font size, if you inspect that heading in your browser developer tools “styles” panel, you may notice that there are styles crossed out. The crossed-out styles are the property values that were not applied (even if the value is the same as the current value) due to the cascade. 
+For each property applied to an element, there can only be one value. While the name of this document is a specific color and font size, if you inspect that heading in your browser developer tools “styles” panel, you may notice that there are styles crossed out. The crossed-out styles are the property values that were not applied (even if the value is the same as the current value) due to the cascade. Cascade layers are explicit specificity containers providing simpler and greater control over which CSS declarations end up being crossed out, enablind the developer to prioritize sections of CSS without having to fight specificity. 
+
+To understand cascade layers it is helpful to understand the cascade:
  
 ## Review: Cascade 
  
@@ -65,7 +66,7 @@ For each step, only the declarations “still in the running” move on to “co
  
 ### Origin and cascade
  
-There are three [cascade origin types](/en-US/docs/Web/CSS/cascade#origin_types): user-agent stylesheets, user stylesheets, and author stylesheets. The browser sorts each declaration by origin and importance. There are six origin buckets, plus properties that are transitioning or animating, listed in order of lowest precedence (user-agent normal styles) to highest (user-agent important styles and styles being transitioned): 
+There are three [cascade origin types](/en-US/docs/Web/CSS/cascade#origin_types): user-agent stylesheets, user stylesheets, and author stylesheets. The browser sorts each declaration by origin and importance into size origin buckets. There are eight levels of precedence: the six origin buckets,properties that are transitioning, and properties that are animating. The order of precedence goes from normal user-agent styles which have the lowest precedence to important user-agent styles and styles being transitioned which have the highest precedence: 
 
 1. user-agent normal styles
 2. user normal styles
@@ -76,9 +77,9 @@ There are three [cascade origin types](/en-US/docs/Web/CSS/cascade#origin_types)
 7. user-agent important styles
 8. styles being transitioned
    
-Ignoring animating and transitioning styles, user-agent normal styles have the lowest precedence; user-agent important styles the greatest. The browser is the user-agent. The user is the site visitor. The author is you, the developer. Styles declared directly on an element with the {{HTMLElement('style')}} element are author styles.
+The browser is the user-agent. The user is the site visitor. The author is you, the developer. Styles declared directly on an element with the {{HTMLElement('style')}} element are author styles. Ignoring animating and transitioning styles, user-agent normal styles have the lowest precedence; user-agent important styles the greatest. 
 
-For each property, the declaration that “wins” is the one from the origin with precedence based on the weight (normal or important). If the origin has cascade layers, cascade layer precedence comes into play. The value from the layer with greatest precedence gets applied. If the winning layer has more than one property declaration for an element, the specificity of the selectors for those competing property values are compared. 
+For each property, the declaration that “wins” is the one from the origin with precedence based on the weight (normal or important). If the origin has cascade layers, cascade layer precedence comes into play. The value from the layer with greatest precedence gets applied. If the winning layer has more than one property declaration for an element, the [specificity](/en-US/docs/Web/CSS/Specificity) of the selectors for those competing property values are compared. Specificity is never compared between selectors from different layers or origins. 
  
 The important thing to note is that browsers only consider specificity after determining [cascade origin and importance](/en-US/docs/Web/CSS/Cascade). In other words, for competing property declarations, specificity is only relevant and compared between selectors from the one [cascade origin and layer](/en-US/docs/Web/CSS/@layer) that has precedence for the property. 
  
