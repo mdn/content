@@ -89,9 +89,9 @@ window.addEventListener("load", function setupAnimation (evt) {
   const timer = setInterval(drawAnimation, 1000);
 
   const mask = [true, true, true];
-  const redtoggle = document.querySelector("#red-toggle"),
-    greentoggle = document.querySelector("#green-toggle"),
-    bluetoggle = document.querySelector("#blue-toggle");
+  const redtoggle = document.querySelector("#red-toggle");
+  const greentoggle = document.querySelector("#green-toggle");
+  const bluetoggle = document.querySelector("#blue-toggle");
   redtoggle.addEventListener("click", setColorMask, false);
   greentoggle.addEventListener("click", setColorMask, false);
   bluetoggle.addEventListener("click", setColorMask, false);
