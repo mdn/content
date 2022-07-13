@@ -152,7 +152,7 @@ osc.type = osc.SQUARE;   // square waveform
 osc.type = osc.SAWTOOTH; // sawtooth waveform
 osc.type = osc.TRIANGLE; // triangle waveform
 osc.setWaveTable(table);
-var isCustom = (osc.type == osc.CUSTOM); // isCustom will be true
+const isCustom = (osc.type == osc.CUSTOM); // isCustom will be true
 
 // New standard AudioContext code:
 const osc = context.createOscillator();
