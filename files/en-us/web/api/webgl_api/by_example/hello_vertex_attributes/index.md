@@ -93,7 +93,7 @@ function setupWebGL (evt) {
   gl.shaderSource(vertexShader,source);
   gl.compileShader(vertexShader);
   source = document.querySelector("#fragment-shader").innerHTML
-  cosnt fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+  const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
   gl.shaderSource(fragmentShader,source);
   gl.compileShader(fragmentShader);
   program = gl.createProgram();
