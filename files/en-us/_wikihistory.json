@@ -118346,26 +118346,6 @@
       "fscholz"
     ]
   },
-  "Web/HTTP/Headers/Public-Key-Pins": {
-    "modified": "2020-10-15T21:50:45.282Z",
-    "contributors": [
-      "fscholz",
-      "bershanskiy",
-      "Malvoz",
-      "jpmedley",
-      "teoli"
-    ]
-  },
-  "Web/HTTP/Headers/Public-Key-Pins-Report-Only": {
-    "modified": "2020-10-15T21:50:47.115Z",
-    "contributors": [
-      "fscholz",
-      "bershanskiy",
-      "raulsiles",
-      "arlenyan",
-      "teoli"
-    ]
-  },
   "Web/HTTP/Headers/Range": {
     "modified": "2020-10-15T21:51:40.546Z",
     "contributors": [
@@ -119158,48 +119138,6 @@
       "xeonchen",
       "rolfedh",
       "duncanmcdonald"
-    ]
-  },
-  "Web/HTTP/Public_Key_Pinning": {
-    "modified": "2020-11-16T11:34:29.135Z",
-    "contributors": [
-      "chrisdavidmills",
-      "124434",
-      "mfuji09",
-      "fscholz",
-      "bershanskiy",
-      "Malvoz",
-      "FranklinYu",
-      "BigBlueHat",
-      "sbeam313",
-      "e-nomem",
-      "dante2428",
-      "Scruffy",
-      "vcsjones",
-      "Sephr",
-      "David263",
-      "hashedhyphen",
-      "rugk",
-      "JesseNaranjo",
-      "jeremiahlee",
-      "Severus_",
-      "jvehent",
-      "jpmedley",
-      "kmaglione",
-      "craigfrancis",
-      "Tom_D",
-      "Sheppy",
-      "teoli",
-      "keeler",
-      "Vilican",
-      "vszakats",
-      "exploide",
-      "kscarfone",
-      "synapt",
-      "ajkj",
-      "evilpie",
-      "ttaubert",
-      "freddyb"
     ]
   },
   "Web/HTTP/Range_requests": {

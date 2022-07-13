@@ -11790,12 +11790,15 @@
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/wake-lock	/en-US/docs/Web/HTTP/Headers/Feature-Policy/screen-wake-lock
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/webauthn	/en-US/docs/Web/HTTP/Headers/Feature-Policy/publickey-credentials-get
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/xr	/en-US/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
+/en-US/docs/Web/HTTP/Headers/Public-Key-Pins	/en-US/docs/Web/HTTP/Headers/Expect-CT
+/en-US/docs/Web/HTTP/Headers/Public-Key-Pins-Report-Only	/en-US/docs/Web/HTTP/Headers/Expect-CT
 /en-US/docs/Web/HTTP/Headers/Ranges	/en-US/docs/Web/HTTP/Headers/Range
 /en-US/docs/Web/HTTP/Headers/Set-Cookie2	/en-US/docs/Web/HTTP/Headers/Set-Cookie
 /en-US/docs/Web/HTTP/History_of_HTTP_versions	/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
 /en-US/docs/Web/HTTP/Index	/en-US/docs/Web/HTTP
 /en-US/docs/Web/HTTP/Pipelining_FAQ	/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x
 /en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
+/en-US/docs/Web/HTTP/Public_Key_Pinning	/en-US/docs/Web/Security/Certificate_Transparency
 /en-US/docs/Web/HTTP/Response_codes	/en-US/docs/Web/HTTP/Status
 /en-US/docs/Web/HTTP/Server-Side_Access_Control	/en-US/docs/Web/HTTP/CORS
 /en-US/docs/Web/HTTP/Status/416_Range_Not_Satisfiable	/en-US/docs/Web/HTTP/Status/416
@@ -12340,7 +12343,7 @@
 /en-US/docs/Web/Security/Do_not_track_field_guide/Tutorials/3_Collecting_aggregate_data_based_on_DNT	/en-US/docs/Web/HTTP/Headers/DNT
 /en-US/docs/Web/Security/Do_not_track_field_guide/Tutorials/Additional_resources	/en-US/docs/Web/HTTP/Headers/DNT
 /en-US/docs/Web/Security/HTTP_strict_transport_security	/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
-/en-US/docs/Web/Security/Public_Key_Pinning	/en-US/docs/Web/HTTP/Public_Key_Pinning
+/en-US/docs/Web/Security/Public_Key_Pinning	/en-US/docs/Web/Security/Certificate_Transparency
 /en-US/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types	/en-US/docs/Learn/Server-side/Configuring_server_MIME_types
 /en-US/docs/Web/WebGL	/en-US/docs/Web/API/WebGL_API
 /en-US/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context	/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
