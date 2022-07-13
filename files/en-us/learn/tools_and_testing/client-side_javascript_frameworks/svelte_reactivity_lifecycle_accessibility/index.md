@@ -236,7 +236,7 @@ const checkAllTodos = (completed) => {
 
 In this case we are using the [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) method, which returns a new array with the results of executing the provided function for each item. The function returns a copy of each to-do using [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and overwrites the property of the completed value accordingly. This solution has the added benefit of returning a new array with new objects, completely avoiding mutating the original `todos` array.
 
-> **Note:** Svelte allows us to specify different options that affect how the compiler works. The `<svelte:options immutable={true}/>` option tells the compiler that you promise not to mutate any objects. This allows it to be less conservative about checking whether values have changed and generate simpler and more performant code. For more information on `<svelte:options...>`, check the [Svelte options documentation](https://svelte.dev/docs#svelte_options).
+> **Note:** Svelte allows us to specify different options that affect how the compiler works. The `<svelte:options immutable={true}/>` option tells the compiler that you promise not to mutate any objects. This allows it to be less conservative about checking whether values have changed and generate simpler and more performant code. For more information on `<svelte:options>`, check the [Svelte options documentation](https://svelte.dev/docs#svelte_options).
 
 All of these solutions involve an assignment in which the updated variable is on the left side of the equation. Any of this techniques will allow Svelte to notice that our `todos` array has been modified.
 
@@ -662,7 +662,7 @@ In the previous section, while working with the `Todo` components, we had to dea
 2. And then in our markup we just need to add another `use:` directive:
 
     ```html
-    <input bind:value={name} use:selectOnFocus use:focusOnInit ...
+    <input bind:value={name} use:selectOnFocus use:focusOnInit >
     ```
 
 3. Our `onEdit()` function can now be much simpler:
@@ -749,7 +749,7 @@ First we'll extract the status heading to its own component.
     <TodosStatus {todos} />
     ```
 
-5. You can also do a bit of cleanup, removing the `totalTodos` and `completedTodos` variables from `Todos.svelte`. Just remove the `$: totalTodos = ...` and the `$: completedTodos = ...` lines, and also remove the reference to `totalTodos` when we calculate `newTodoId` and use `todos.length` instead. To do this, replace the block that begins with `let newTodoId` with this:
+5. You can also do a bit of cleanup, removing the `totalTodos` and `completedTodos` variables from `Todos.svelte`. Just remove the `$: totalTodos = …` and the `$: completedTodos = …` lines, and also remove the reference to `totalTodos` when we calculate `newTodoId` and use `todos.length` instead. To do this, replace the block that begins with `let newTodoId` with this:
 
     ```js
     $: newTodoId = todos.length ? Math.max(...todos.map(t => t.id)) + 1 : 1
@@ -763,7 +763,7 @@ So far we saw how to send information to a component via props, and how a compon
 
 So we need the `TodosStatus` component to expose a method that its parent can call to give focus to it. It's a very common scenario that a component needs to expose some behavior or information to the consumer; let's see how to achieve it with Svelte.
 
-We've already seen that Svelte uses `export let var = ...` to [declare props](https://svelte.dev/docs#1_export_creates_a_component_prop). But if instead of using `let` you export a `const`, `class`, or `function`, it is read-only outside the component. Function expressions are valid props, however. In the following example, the first three declarations are props, and the rest are exported values:
+We've already seen that Svelte uses `export let var = …` to [declare props](https://svelte.dev/docs#1_export_creates_a_component_prop). But if instead of using `let` you export a `const`, `class`, or `function`, it is read-only outside the component. Function expressions are valid props, however. In the following example, the first three declarations are props, and the rest are exported values:
 
 ```js
 <script>
