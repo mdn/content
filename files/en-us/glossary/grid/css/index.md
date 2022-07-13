@@ -1,6 +1,6 @@
 ---
 title: Grid (CSS)
-slug: Glossary/Grid/CSS_grid
+slug: Glossary/Grid/CSS
 tags:
   - CSS
   - CSS Grid
