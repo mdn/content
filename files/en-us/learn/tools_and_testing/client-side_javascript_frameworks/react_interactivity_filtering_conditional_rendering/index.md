@@ -89,7 +89,7 @@ In order to allow users to edit a task, we have to provide a user interface for 
 import React, { useState } from "react";
 ```
 
-We'll now use this to set an `isEditing` state, the default state of which should be `false`. Add the following line just inside the top of your `Todo(props) { … }` component definition:
+We'll now use this to set an `isEditing` state, the default state of which should be `false`. Add the following line just inside the top of your `Todo(props) { }` component definition:
 
 ```js
 const [isEditing, setEditing] = useState(false);

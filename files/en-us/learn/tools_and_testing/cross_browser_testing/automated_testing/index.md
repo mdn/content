@@ -597,7 +597,7 @@ function getBuilds(){
         hashed_id: <string>
       }
     },
-    ...
+    // …
   ]
   */
 };
@@ -653,7 +653,7 @@ function getSessionsInBuild(build){
         har_logs_url: <string>
       }
     },
-    ...
+    // …
   ]
   */
 }

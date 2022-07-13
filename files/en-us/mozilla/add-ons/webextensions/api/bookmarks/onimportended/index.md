@@ -51,11 +51,11 @@ Events have three functions:
 
 ```js
 function handleImportBegan() {
-  console.log("Importing...");
+  console.log("Importing…");
 }
 
 function handleImportEnded() {
-  console.log("...finished.");
+  console.log("Import finished.");
 }
 
 function handleClick() {
