@@ -35,7 +35,6 @@ Below you will find links to documentation, examples, and tools to work with Mat
 - [W3C Math Home](https://www.w3.org/Math/)
 - [Raise issues on GitHub w3c/mathml repository](https://github.com/w3c/mathml/issues)
 - [www-math w3.org mail archive](https://lists.w3.org/Archives/Public/www-math/)
-- [Wiki used by Mozilla contributors](https://wiki.mozilla.org/MathML:Home_Page)
 
 ## Tools
 
