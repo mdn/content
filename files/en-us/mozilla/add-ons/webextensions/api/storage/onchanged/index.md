@@ -15,9 +15,9 @@ browser-compat: webextensions.api.storage.onChanged
 ---
 {{AddonSidebar()}}
 
-Fired when {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}} executes against a storage area.
+Fired when {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}, {{WebExtAPIRef('storage.StorageArea.remove','storageArea.remove')}}, or {{WebExtAPIRef('storage.StorageArea.clear','storageArea.clear')}} executes against a storage area.
 
-As this event is triggered by {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}, it's possible to receive a callback when there is no change to the underlying data. Also, the information returned includes all keys within the storage area {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}} ran against. Your code needs to determine what changes have occurred by examining the content of the `changes` argument.
+When this event is triggered by {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}, it's possible to receive a callback when there is no change to the underlying data. Also, the information returned includes all keys within the storage area {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}} ran against. The extension can determine the changes that occurred by examining the content of the `changes` argument received by the `onChanged` listeners.
 
 ## Syntax
 
