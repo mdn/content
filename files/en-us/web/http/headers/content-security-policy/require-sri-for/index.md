@@ -9,7 +9,7 @@ tags:
   - Security
   - Subresource Integrity
   - require-sri-for
-browser-compat: http.headers.csp.Content-Security-Policy.require-sri-for
+browser-compat: http.headers.Content-Security-Policy.require-sri-for
 ---
 {{deprecated_header}}
 

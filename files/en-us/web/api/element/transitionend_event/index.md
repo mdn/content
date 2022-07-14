@@ -1,16 +1,16 @@
 ---
-title: 'HTMLElement: transitionend event'
-slug: Web/API/HTMLElement/transitionend_event
-page-type: web-api-event
+title: 'Element: transitionend event'
+slug: Web/API/Element/transitionend_event
 tags:
   - CSS Transitions
   - Event
   - HTML DOM
-  - HTMLElement
+  - Element
   - Reference
   - TransitionEvent
   - transitionend
-browser-compat: api.HTMLElement.transitionend_event
+browser-compat: api.Element.transitionend_event
+page-type: web-api-event
 ---
 {{APIRef}}
 
@@ -88,7 +88,7 @@ In the following example, we have a simple {{htmlelement("div")}} element, style
 }
 ```
 
-To this, we'll add some JavaScript to indicate that the [`transitionstart`](/en-US/docs/Web/API/HTMLElement/transitionstart_event), [`transitionrun`](/en-US/docs/Web/API/HTMLElement/transitionrun_event), [`transitioncancel`](/en-US/docs/Web/API/Window/transitioncancel_event) and `transitionend` events fire. In this example, to cancel the transition, stop hovering over the transitioning box before the transition ends. For the transition end event to fire, stay hovered over the transition until the transition ends.
+To this, we'll add some JavaScript to indicate that the [`transitionstart`](/en-US/docs/Web/API/Element/transitionstart_event), [`transitionrun`](/en-US/docs/Web/API/Element/transitionrun_event), [`transitioncancel`](/en-US/docs/Web/API/Window/transitioncancel_event) and `transitionend` events fire. In this example, to cancel the transition, stop hovering over the transitioning box before the transition ends. For the transition end event to fire, stay hovered over the transition until the transition ends.
 
 ```js
 const message = document.querySelector('.message');
@@ -129,9 +129,8 @@ If the `transitioncancel` event is fired, the `transitionend` event will not fir
 
 ## See also
 
-- The {{domxref("GlobalEventHandlers.ontransitionend")}} event handler
 - The {{domxref("TransitionEvent")}} interface
 - CSS properties: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}
-- Related events: {{domxref("HTMLElement/transitionrun_event", "transitionrun")}}, {{domxref("HTMLElement/transitionstart_event", "transitionstart")}}, {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}}
+- Related events: {{domxref("Element/transitionrun_event", "transitionrun")}}, {{domxref("Element/transitionstart_event", "transitionstart")}}, {{domxref("Element/transitioncancel_event", "transitioncancel")}}
 - This event on {{domxref("Document")}} targets: {{domxref("Document/transitionend_event", "transitionend")}}
 - This event on {{domxref("Window")}} targets: {{domxref("Window/transitionend_event", "transitionend")}}
