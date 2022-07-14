@@ -194,7 +194,7 @@ Here we create:
 - an object `personPrototype`, which has a `greet()` method
 - a `Person()` constructor function which initializes the name of the person to create.
 
-We then set the `Person` function's `prototype` property to point to `personPrototype` using [Object.assign](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) to put a new function inside the prototype.
+We then put the methods defined in `personPrototype` onto the `Person` function's `prototype` property using [Object.assign](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign).
 
 
 After this code, objects created using `Person()` will get `personPrototype` as their prototype.
