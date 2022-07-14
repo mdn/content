@@ -21,7 +21,7 @@ the device and the User Agent. Effectively, this is the maximum number of elemen
 
 ## Value
 
-An integer {{JSxRef("Number")}} which indicates the largest number of notification
+An integer number which indicates the largest number of notification
 actions that can be presented to the user by the User Agent and the device.
 
 ## Examples
