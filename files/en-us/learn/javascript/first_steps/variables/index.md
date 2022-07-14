@@ -208,6 +208,18 @@ Again, this is a sensible language decision. There is no reason to redeclare var
 
 For these reasons and more, we recommend that you use `let` in your code, rather than `var`. There is no reason to use `var`, unless you need to support Internet Explorer 10 or older with your code.
 
+> **Note:** If you are trying this code in your browser's console, prefer to copy & paste each of the code blocks here as a whole. There's a [feature in Chrome's console](https://goo.gle/devtools-const-repl) where variable re-declarations with `let` and `const` are allowed:
+>
+> ```
+> > let myName = 'Chris';
+>   let myName = 'Bob';
+> // As one input: SyntaxError: Identifier 'myName' has already been declared
+>
+> > let myName = 'Chris';
+> > let myName = 'Bob';
+> // As two inputs: both succeed
+> ```
+
 ## Updating a variable
 
 Once a variable has been initialized with a value, you can change (or update) that value by giving it a different value. Try entering the following lines into your console:

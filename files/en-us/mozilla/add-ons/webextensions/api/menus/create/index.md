@@ -26,7 +26,7 @@ For compatibility with other browsers, Firefox makes this method available via t
 ```js
 browser.menus.create(
   createProperties, // object
-  function() {...}  // optional function
+  function() { }  // optional function
 )
 ```
 

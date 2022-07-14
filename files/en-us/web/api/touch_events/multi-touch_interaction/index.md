@@ -55,7 +55,7 @@ The application uses {{HTMLElement("div")}} elements to represent four touch are
 const logEvents = false;
 
 // Touch Point cache
-cosnt tpCache = new Array();
+cosnt tpCache = [];
 ```
 
 ### Register event handlers
@@ -111,7 +111,7 @@ function handle_pinch_zoom(ev) {
    }
    else {
      // empty tpCache
-     tpCache = new Array();
+     tpCache = [];
    }
  }
 }

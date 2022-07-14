@@ -11,7 +11,7 @@ tags:
   - Security
   - child-src
   - source
-browser-compat: http.headers.csp.Content-Security-Policy.child-src
+browser-compat: http.headers.Content-Security-Policy.child-src
 ---
 {{HTTPSidebar}}
 

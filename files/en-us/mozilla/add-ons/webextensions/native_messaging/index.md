@@ -284,8 +284,8 @@ You can quickly get started sending and receiving messages with this NodeJS code
             flushChunksQueue();
 
             const json = JSON.parse(contentWithoutSize);
-            // Do something with the data...
-            }
+            // Do something with the data…
+         }
     };
 
     process.stdin.on('readable', () => {

@@ -1521,7 +1521,7 @@
 /en-US/docs/DOM/Mozilla_event_reference/touchend	/en-US/docs/Web/API/Document/touchend_event
 /en-US/docs/DOM/Mozilla_event_reference/touchmove	/en-US/docs/Web/API/Document/touchmove_event
 /en-US/docs/DOM/Mozilla_event_reference/touchstart	/en-US/docs/Web/API/Document/touchstart_event
-/en-US/docs/DOM/Mozilla_event_reference/transitionend	/en-US/docs/Web/API/HTMLElement/transitionend_event
+/en-US/docs/DOM/Mozilla_event_reference/transitionend	/en-US/docs/Web/API/Element/transitionend_event
 /en-US/docs/DOM/Mozilla_event_reference/unload	/en-US/docs/Web/API/Window/unload_event
 /en-US/docs/DOM/Mozilla_event_reference/upgradeneeded_indexedDB	/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event
 /en-US/docs/DOM/Mozilla_event_reference/versionchange_indexedDB	/en-US/docs/Web/API/IDBDatabase/versionchange_event
@@ -3674,8 +3674,8 @@
 /en-US/docs/HTML/Element/base-redirect-1	/en-US/docs/Web/HTML/Element/base
 /en-US/docs/HTML/Element/base-redirect-2	/en-US/docs/Web/HTML/Element/base
 /en-US/docs/HTML/Element/base-redirect-3	/en-US/docs/Web/HTML/Element/base
-/en-US/docs/HTML/Element/basefont	/en-US/docs/Web/HTML/Element/basefont
-/en-US/docs/HTML/Element/basefont-redirect-1	/en-US/docs/Web/HTML/Element/basefont
+/en-US/docs/HTML/Element/basefont	/en-US/docs/Web/CSS/CSS_Fonts
+/en-US/docs/HTML/Element/basefont-redirect-1	/en-US/docs/Web/CSS/CSS_Fonts
 /en-US/docs/HTML/Element/bdi	/en-US/docs/Web/HTML/Element/bdi
 /en-US/docs/HTML/Element/bdi-redirect-1	/en-US/docs/Web/HTML/Element/bdi
 /en-US/docs/HTML/Element/bdo	/en-US/docs/Web/HTML/Element/bdo
@@ -3938,7 +3938,7 @@
 /en-US/docs/HTML:Element:area	/en-US/docs/Web/HTML/Element/area
 /en-US/docs/HTML:Element:b	/en-US/docs/Web/HTML/Element/b
 /en-US/docs/HTML:Element:base	/en-US/docs/Web/HTML/Element/base
-/en-US/docs/HTML:Element:basefont	/en-US/docs/Web/HTML/Element/basefont
+/en-US/docs/HTML:Element:basefont	/en-US/docs/Web/CSS/CSS_Fonts
 /en-US/docs/HTML:Element:bdo	/en-US/docs/Web/HTML/Element/bdo
 /en-US/docs/HTML:Element:bgcound	/en-US/docs/Web/HTML/Element/bgsound
 /en-US/docs/HTML:Element:bgsound	/en-US/docs/Web/HTML/Element/bgsound
@@ -4613,7 +4613,7 @@
 /en-US/docs/JavaScript/Reference/Global_Objects/parseFloat	/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat
 /en-US/docs/JavaScript/Reference/Global_Objects/parseInt	/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
 /en-US/docs/JavaScript/Reference/Global_Objects/undefined	/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined
-/en-US/docs/JavaScript/Reference/Global_Objects/uneval	/en-US/docs/Web/JavaScript/Reference/Global_Objects
+/en-US/docs/JavaScript/Reference/Global_Objects/uneval	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/JavaScript/Reference/Global_Properties/undefined	/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined
 /en-US/docs/JavaScript/Reference/Objects/Array/constructor	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 /en-US/docs/JavaScript/Reference/Objects/Array/isArray	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray
@@ -6223,7 +6223,7 @@
 /en-US/docs/Mozilla_event_reference/touchend	/en-US/docs/Web/API/Document/touchend_event
 /en-US/docs/Mozilla_event_reference/touchmove	/en-US/docs/Web/API/Document/touchmove_event
 /en-US/docs/Mozilla_event_reference/touchstart	/en-US/docs/Web/API/Document/touchstart_event
-/en-US/docs/Mozilla_event_reference/transitionend	/en-US/docs/Web/API/HTMLElement/transitionend_event
+/en-US/docs/Mozilla_event_reference/transitionend	/en-US/docs/Web/API/Element/transitionend_event
 /en-US/docs/Mozilla_event_reference/unload	/en-US/docs/Web/API/Window/unload_event
 /en-US/docs/Mozilla_event_reference/upgradeneeded_indexedDB	/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event
 /en-US/docs/Mozilla_event_reference/versionchange_indexedDB	/en-US/docs/Web/API/IDBDatabase/versionchange_event
@@ -7862,6 +7862,10 @@
 /en-US/docs/Web/API/Document/onvisibilitychange	/en-US/docs/Web/API/Document/visibilitychange_event
 /en-US/docs/Web/API/Document/resourcetimingbufferfull_event	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
 /en-US/docs/Web/API/Document/timeline/currentTime	/en-US/docs/Web/API/AnimationTimeline/currentTime
+/en-US/docs/Web/API/Document/transitioncancel_event	/en-US/docs/Web/API/Element/transitioncancel_event
+/en-US/docs/Web/API/Document/transitionend_event	/en-US/docs/Web/API/Element/transitionend_event
+/en-US/docs/Web/API/Document/transitionrun_event	/en-US/docs/Web/API/Element/transitionrun_event
+/en-US/docs/Web/API/Document/transitionstart_event	/en-US/docs/Web/API/Element/transitionstart_event
 /en-US/docs/Web/API/Document/wheel_event	/en-US/docs/Web/API/Element/wheel_event
 /en-US/docs/Web/API/DocumentFragment.DocumentFragment	/en-US/docs/Web/API/DocumentFragment/DocumentFragment
 /en-US/docs/Web/API/DocumentFragment.querySelector	/en-US/docs/Web/API/DocumentFragment/querySelector
@@ -8185,6 +8189,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onreset	/en-US/docs/Web/API/HTMLFormElement/reset_event
 /en-US/docs/Web/API/GlobalEventHandlers/onresize	/en-US/docs/Web/API/Window/resize_event
 /en-US/docs/Web/API/GlobalEventHandlers/onscroll	/en-US/docs/Web/API/Element/scroll_event
+/en-US/docs/Web/API/GlobalEventHandlers/onsecuritypolicyviolation	/en-US/docs/Web/API/Element/securitypolicyviolation_event
 /en-US/docs/Web/API/GlobalEventHandlers/onselect	/en-US/docs/Web/API/HTMLInputElement/select_event
 /en-US/docs/Web/API/GlobalEventHandlers/onselectionchange	/en-US/docs/Web/API/HTMLInputElement/selectionchange_event
 /en-US/docs/Web/API/GlobalEventHandlers/onselectstart	/en-US/docs/Web/API/Document/selectstart_event
@@ -8193,6 +8198,8 @@
 /en-US/docs/Web/API/GlobalEventHandlers/ontouchend	/en-US/docs/Web/API/Element/touchend_event
 /en-US/docs/Web/API/GlobalEventHandlers/ontouchmove	/en-US/docs/Web/API/Element/touchmove_event
 /en-US/docs/Web/API/GlobalEventHandlers/ontouchstart	/en-US/docs/Web/API/Element/touchstart_event
+/en-US/docs/Web/API/GlobalEventHandlers/ontransitioncancel	/en-US/docs/Web/API/Element/transitioncancel_event
+/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend	/en-US/docs/Web/API/Element/transitionend_event
 /en-US/docs/Web/API/GlobalEventHandlers/onwheel	/en-US/docs/Web/API/Element/wheel_event
 /en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()	/en-US/docs/Web/API/fetch
 /en-US/docs/Web/API/GlobalFetch/fetch	/en-US/docs/Web/API/fetch
@@ -8204,6 +8211,7 @@
 /en-US/docs/Web/API/HTMLAreaElement.rel	/en-US/docs/Web/API/HTMLAreaElement/rel
 /en-US/docs/Web/API/HTMLAreaElement.relList	/en-US/docs/Web/API/HTMLAreaElement/relList
 /en-US/docs/Web/API/HTMLAreaElement/referrer	/en-US/docs/Web/API/HTMLAreaElement/referrerPolicy
+/en-US/docs/Web/API/HTMLBaseFontElement	/en-US/docs/Web/CSS/CSS_Fonts
 /en-US/docs/Web/API/HTMLBodyElement/onafterprint	/en-US/docs/Web/API/Window/afterprint_event
 /en-US/docs/Web/API/HTMLBodyElement/onbeforeunload	/en-US/docs/Web/API/Window/beforeunload_event
 /en-US/docs/Web/API/HTMLBodyElement/onhashchange	/en-US/docs/Web/API/Window/hashchange_event
@@ -8289,6 +8297,10 @@
 /en-US/docs/Web/API/HTMLElement/pointerout_event	/en-US/docs/Web/API/Element/pointerout_event
 /en-US/docs/Web/API/HTMLElement/pointerover_event	/en-US/docs/Web/API/Element/pointerover_event
 /en-US/docs/Web/API/HTMLElement/pointerup_event	/en-US/docs/Web/API/Element/pointerup_event
+/en-US/docs/Web/API/HTMLElement/transitioncancel_event	/en-US/docs/Web/API/Element/transitioncancel_event
+/en-US/docs/Web/API/HTMLElement/transitionend_event	/en-US/docs/Web/API/Element/transitionend_event
+/en-US/docs/Web/API/HTMLElement/transitionrun_event	/en-US/docs/Web/API/Element/transitionrun_event
+/en-US/docs/Web/API/HTMLElement/transitionstart_event	/en-US/docs/Web/API/Element/transitionstart_event
 /en-US/docs/Web/API/HTMLFormControlsCollection.namedItem	/en-US/docs/Web/API/HTMLFormControlsCollection/namedItem
 /en-US/docs/Web/API/HTMLFormElement.acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
 /en-US/docs/Web/API/HTMLFormElement.action	/en-US/docs/Web/API/HTMLFormElement/action
@@ -9895,6 +9907,10 @@
 /en-US/docs/Web/API/Window/setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Web/API/Window/setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages	/en-US/docs/Web/OpenSearch
+/en-US/docs/Web/API/Window/transitioncancel_event	/en-US/docs/Web/API/Element/transitioncancel_event
+/en-US/docs/Web/API/Window/transitionend_event	/en-US/docs/Web/API/Element/transitionend_event
+/en-US/docs/Web/API/Window/transitionrun_event	/en-US/docs/Web/API/Element/transitionrun_event
+/en-US/docs/Web/API/Window/transitionstart_event	/en-US/docs/Web/API/Element/transitionstart_event
 /en-US/docs/Web/API/WindowBase64.atob	/en-US/docs/Web/API/atob
 /en-US/docs/Web/API/WindowBase64.btoa	/en-US/docs/Web/API/btoa
 /en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/en-US/docs/Glossary/Base64
@@ -11513,10 +11529,10 @@
 /en-US/docs/Web/Events/touchmove	/en-US/docs/Web/API/Document/touchmove_event
 /en-US/docs/Web/Events/touchstart	/en-US/docs/Web/API/Document/touchstart_event
 /en-US/docs/Web/Events/track	/en-US/docs/Web/API/RTCPeerConnection/track_event
-/en-US/docs/Web/Events/transitioncancel	/en-US/docs/Web/API/HTMLElement/transitioncancel_event
-/en-US/docs/Web/Events/transitionend	/en-US/docs/Web/API/HTMLElement/transitionend_event
-/en-US/docs/Web/Events/transitionrun	/en-US/docs/Web/API/HTMLElement/transitionrun_event
-/en-US/docs/Web/Events/transitionstart	/en-US/docs/Web/API/HTMLElement/transitionstart_event
+/en-US/docs/Web/Events/transitioncancel	/en-US/docs/Web/API/Element/transitioncancel_event
+/en-US/docs/Web/Events/transitionend	/en-US/docs/Web/API/Element/transitionend_event
+/en-US/docs/Web/Events/transitionrun	/en-US/docs/Web/API/Element/transitionrun_event
+/en-US/docs/Web/Events/transitionstart	/en-US/docs/Web/API/Element/transitionstart_event
 /en-US/docs/Web/Events/unhandledrejection	/en-US/docs/Web/API/Window/unhandledrejection_event
 /en-US/docs/Web/Events/unload	/en-US/docs/Web/API/Window/unload_event
 /en-US/docs/Web/Events/unmute	/en-US/docs/Web/API/MediaStreamTrack/unmute_event
@@ -11731,6 +11747,7 @@
 /en-US/docs/Web/HTML/Element/Video/ended_event	/en-US/docs/Web/API/HTMLMediaElement/ended_event
 /en-US/docs/Web/HTML/Element/Video/loadeddata_event	/en-US/docs/Web/API/HTMLMediaElement/loadeddata_event
 /en-US/docs/Web/HTML/Element/audio/playing_event	/en-US/docs/Web/API/HTMLMediaElement/playing_event
+/en-US/docs/Web/HTML/Element/basefont	/en-US/docs/Web/CSS/CSS_Fonts
 /en-US/docs/Web/HTML/Element/h1	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h1–h6	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h2	/en-US/docs/Web/HTML/Element/Heading_Elements
@@ -11928,6 +11945,7 @@
 /en-US/docs/Web/JavaScript/Reference/Classes/Class_fields	/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /en-US/docs/Web/JavaScript/Reference/Code_comments	/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /en-US/docs/Web/JavaScript/Reference/Data_types	/en-US/docs/Web/JavaScript/Data_structures
+/en-US/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope	/en-US/docs/Web/JavaScript/Reference/Functions
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode
 /en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode/Transitioning_to_strict_mode	/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
@@ -12070,7 +12088,6 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat/resolvedOptions	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat/supportedLocalesOf	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf
-/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/keys	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/values
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
@@ -12096,7 +12113,7 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/null	/en-US/docs/Web/JavaScript/Reference/Operators/null
-/en-US/docs/Web/JavaScript/Reference/Global_Objects/uneval	/en-US/docs/Web/JavaScript/Reference/Global_Objects
+/en-US/docs/Web/JavaScript/Reference/Global_Objects/uneval	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Methods_Index	/en-US/docs/Web/JavaScript/Reference
 /en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators	/en-US/docs/Web/JavaScript/Reference/Operators
 /en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
@@ -12293,7 +12310,7 @@
 /en-US/docs/Web/Reference/Events/touchend	/en-US/docs/Web/API/Document/touchend_event
 /en-US/docs/Web/Reference/Events/touchmove	/en-US/docs/Web/API/Document/touchmove_event
 /en-US/docs/Web/Reference/Events/touchstart	/en-US/docs/Web/API/Document/touchstart_event
-/en-US/docs/Web/Reference/Events/transitionend	/en-US/docs/Web/API/HTMLElement/transitionend_event
+/en-US/docs/Web/Reference/Events/transitionend	/en-US/docs/Web/API/Element/transitionend_event
 /en-US/docs/Web/Reference/Events/unload	/en-US/docs/Web/API/Window/unload_event
 /en-US/docs/Web/Reference/Events/upgradeneeded_indexedDB	/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event
 /en-US/docs/Web/Reference/Events/versionchange_indexedDB	/en-US/docs/Web/API/IDBDatabase/versionchange_event

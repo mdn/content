@@ -169,7 +169,7 @@ Finally, we chain `.addTo(map)` to the end of the chain to actually add the mark
 
 Have a play with the other options shown in the documentation and see what you can come up with! Mapquest provides some pretty advanced functionality, such as directions, searching, etc.
 
-> **Note:** If you have trouble getting the example to work, check your code against our [finished version](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/finished/script.js) (also [see it running live here](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/finished/)).
+> **Note:** If you have trouble getting the example to work, check your code against our [finished version](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/finished/script.js).
 
 ## A RESTful API — NYTimes
 

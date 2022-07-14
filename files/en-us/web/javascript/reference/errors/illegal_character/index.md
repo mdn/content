@@ -14,7 +14,7 @@ unexpected token that doesn't belong at this position in the code.
 
 ## Message
 
-```js
+```
 SyntaxError: Invalid character (Edge)
 SyntaxError: illegal character (Firefox)
 SyntaxError: Invalid or unexpected token (Chrome)
