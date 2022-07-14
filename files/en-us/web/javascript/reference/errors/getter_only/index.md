@@ -15,10 +15,10 @@ to set a new value to a property for which only a [getter](/en-US/docs/Web/JavaS
 
 ## Message
 
-```js
-TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
+```
+TypeError: Cannot set property x of #<Object> which has only a getter (V8-based)
 TypeError: setting getter-only property "x" (Firefox)
-TypeError: Cannot set property "prop" of #<Object> which has only a getter (Chrome)
+TypeError: Attempted to assign to readonly property. (Safari)
 ```
 
 ## Error type

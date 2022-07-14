@@ -10,11 +10,11 @@ tags:
 
 The JavaScript warning "expression closures are deprecated" occurs when the
 non-standard [expression closure](/en-US/docs/Web/JavaScript/Reference/Operators/Expression_closures)
-syntax (shorthand function syntax) is used.
+syntax (shorthand function syntax) is used. This syntax is now removed and the warning message is obsolete.
 
 ## Message
 
-```js
+```
 Warning: expression closures are deprecated
 ```
 

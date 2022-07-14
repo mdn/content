@@ -10,11 +10,11 @@ tags:
 
 The JavaScript warning "Date.prototype.toLocaleFormat is deprecated; consider using
 Intl.DateTimeFormat instead" occurs when the non-standard
-{{jsxref("Date.prototype.toLocaleFormat")}} method is used.
+{{jsxref("Date.prototype.toLocaleFormat")}} method is used. `toLocaleFormat` is now removed and this warning message is obsolete.
 
 ## Message
 
-```js
+```
 Warning: Date.prototype.toLocaleFormat is deprecated; consider using Intl.DateTimeFormat instead
 ```
 
