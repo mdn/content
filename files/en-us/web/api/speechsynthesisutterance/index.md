@@ -82,7 +82,8 @@ const inputForm = document.querySelector('form');
 const inputTxt = document.querySelector('input');
 const voiceSelect = document.querySelector('select');
 
-for(let i = 0; i < voices.length; i++const option = document.createElement('option');
+for(let i = 0; i < voices.length; i++) {
+  const option = document.createElement('option');
   option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
   option.value = i;
   voiceSelect.appendChild(option);
