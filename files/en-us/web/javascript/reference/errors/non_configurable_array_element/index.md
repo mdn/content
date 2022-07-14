@@ -15,9 +15,10 @@ of an array, but one of the array's elements is [non-configurable](/en-US/docs/W
 
 ## Message
 
-```js
+```
+TypeError: Cannot delete property '1' of [object Array] (V8-based)
 TypeError: can't delete non-configurable array element (Firefox)
-TypeError: Cannot delete property '2' of [object Array] (Chrome)
+TypeError: Unable to delete property. (Safari)
 ```
 
 ## Error type

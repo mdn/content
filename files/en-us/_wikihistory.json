@@ -122460,13 +122460,6 @@
       "jonathanKingston"
     ]
   },
-  "Web/JavaScript/Reference/Errors/Cant_access_property": {
-    "modified": "2020-04-16T11:27:48.452Z",
-    "contributors": [
-      "fscholz",
-      "arai"
-    ]
-  },
   "Web/JavaScript/Reference/Errors/Cant_assign_to_property": {
     "modified": "2020-04-16T11:32:34.404Z",
     "contributors": [
