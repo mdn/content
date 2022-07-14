@@ -241,7 +241,7 @@ class Server {
     public static void Main() {
         string ip = "127.0.0.1";
         int port = 80;
-        var server = new TcpListener(IPAddress.Parse(ip), port);
+        const server = new TcpListener(IPAddress.Parse(ip), port);
 
         server.Start();
         Console.WriteLine("Server has started on {0}:{1}, Waiting for a connection...", ip, port);
@@ -340,7 +340,7 @@ class Server {
 <script>
     // http://www.websocket.org/echo.html
 
-    var button = document.querySelector("button"),
+    const button = document.querySelector("button"),
         output = document.querySelector("#output"),
         textarea = document.querySelector("textarea"),
         // wsUri = "ws://echo.websocket.org/",
@@ -376,7 +376,7 @@ class Server {
     }
 
     function onClickButton() {
-        var text = textarea.value;
+        const text = textarea.value;
 
         text && doSend(text);
         textarea.value = "";
