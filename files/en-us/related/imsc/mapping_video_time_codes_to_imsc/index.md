@@ -51,7 +51,7 @@ The two attributes that must be included to use the frames method are `frameRate
 
 ```xml
 <tt ttp:frameRate="24" ttp:frameRateMultiplier="1000 1001">
-  <!-- … -->
+  …
 </tt>
 ```
 

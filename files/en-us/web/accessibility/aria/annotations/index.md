@@ -52,7 +52,7 @@ We have already alluded to the difference between these two above — `aria-desc
 `aria-describedby` is appropriate for associating an element with a simple text description, where you don't have much in the way of meaningful semantics contained within. For example:
 
 ```html
-<p id="description-id">An extended text description of some kind…</p>
+<p id="description-id">An extended text description of some kind.</p>
 
 <div aria-describedby="description-id">
   <!-- Some kind of UI feature that needs an accessible description  -->
