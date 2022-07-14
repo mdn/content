@@ -143,7 +143,7 @@ Here, costs depend on multiple factors, such as:
 - Do you want some shiny new feature that is popular at the moment? At the time of writing, clients are seeking single pages with complex parallax.
 - Will you need the agency to think up user stories or solve complex {{Glossary("UX")}} problems? For example, creating a strategy to engage users, or A/B testing to choose a solution among several ideas.
 
-And for hosting you need ot consider following choices:
+And for hosting you need to consider following choices:
 
 - Do you want redundant servers, in case your server goes down?
 - Is 95% reliability adequate, or do you need professional, around-the-clock service?
