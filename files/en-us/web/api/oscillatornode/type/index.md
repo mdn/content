@@ -49,7 +49,7 @@ available values are:
 ## Examples
 
 The following example shows basic usage of an {{ domxref("AudioContext") }} to create
-an oscillator node. For an applied example, check out our [Violent Theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) ([see app.js](https://github.com/mdn/webaudio-examples/violent-theremin/scripts/app.js) for relevant code).
+an oscillator node. For an applied example, check out our [Violent Theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) ([see app.js](https://github.com/mdn/webaudio-examples/blob/master/violent-theremin/scripts/app.js) for relevant code).
 
 ```js
 // create web audio api context
