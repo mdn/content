@@ -181,13 +181,13 @@ exampleSocket.onmessage = function(event) {
       setUsername();
       break;
     case "username":
-      text = "<b>User <em>" + msg.name + "</em> signed in at " + timeStr + "</b><br>";
+      text = "User <em>" + msg.name + "</em> signed in at " + timeStr + "<br>";
       break;
     case "message":
-      text = "(" + timeStr + ") <b>" + msg.name + "</b>: " + msg.text + "<br>";
+      text = "(" + timeStr + ") " + msg.name + ": " + msg.text + "<br>";
       break;
     case "rejectusername":
-      text = "<b>Your username has been set to <em>" + msg.name + "</em> because the name you chose is in use.</b><br>"
+      text = "Your username has been set to <em>" + msg.name + "</em> because the name you chose is in use.<br>"
       break;
     case "userlist":
       var ul = "";
