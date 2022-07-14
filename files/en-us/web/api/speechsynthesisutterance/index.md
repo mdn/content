@@ -76,7 +76,6 @@ Inside the `inputForm.onsubmit` handler, we stop the form submitting with {{domx
 
 ```js
 const synth = window.speechSynthesis;
-const voices = synth.getVoices();
 
 const inputForm = document.querySelector('form');
 const inputTxt = document.querySelector('input');
