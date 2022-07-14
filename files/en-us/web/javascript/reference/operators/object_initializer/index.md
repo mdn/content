@@ -31,7 +31,7 @@ let a = 'foo', b = 42, c = {}
 let o = {a: a, b: b, c: c}
 
 let o = {
-  property (parameters) {},
+  property(parameters) {},
   get property() {},
   set property(value) {}
 };

@@ -42,7 +42,7 @@ For example, you can define a button in the `create()` function:
 ```js
 create() {
   // …
-  var buttonEnclave = this.add.button(10, 10, 'logo-enclave', this.clickEnclave, this);
+  const buttonEnclave = this.add.button(10, 10, 'logo-enclave', this.clickEnclave, this);
   // …
 }
 ```

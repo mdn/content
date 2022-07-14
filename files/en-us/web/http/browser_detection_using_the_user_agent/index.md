@@ -64,7 +64,7 @@ Problems like these can be avoided by testing for support of the feature itself 
 
 <!-- prettier-ignore -->
 ```js
-let isLookBehindSupported = false;
+var isLookBehindSupported = false;
 
 try {
     new RegExp("(?<=)");
@@ -75,7 +75,7 @@ try {
     // isLookBehindSupported remains false.
 }
 
-const splitUpString = isLookBehindSupported ? function(str) {
+var splitUpString = isLookBehindSupported ? function(str) {
     return (""+str).split(new RegExp("(?<=[A-Z])"));
 } : function(str) {
     return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);

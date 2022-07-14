@@ -56,9 +56,8 @@ const processor = {
       return;
     }
     this.computeFrame();
-    const self = this;
-    setTimeout(function () {
-      self.timerCallback();
+    setTimeout(() => {
+      this.timerCallback();
     }, 16); // roughly 60 frames per second
   },
 
@@ -66,12 +65,11 @@ const processor = {
     this.video = document.getElementById("my-video");
     this.c1 = document.getElementById("my-canvas");
     this.ctx1 = this.c1.getContext("2d");
-    const self = this;
 
-    this.video.addEventListener("play", function() {
-      self.width = self.video.width;
-      self.height = self.video.height;
-      self.timerCallback();
+    this.video.addEventListener("play", () => {
+      this.width = this.video.width;
+      this.height = this.video.height;
+      this.timerCallback();
     }, false);
   },
 
