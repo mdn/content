@@ -149,20 +149,20 @@ and {{jsxref("Array.prototype.join()")}}.
 ```js
 const dateString = formatter.formatToParts(date).map(({type, value}) => {
   switch (type) {
-    case 'dayPeriod': return `<b>${value}</b>`;
+    case 'dayPeriod': return `<em>${value}</em>`;
     default : return value;
   }
 }).join('');
 ```
 
-This will make the day period bold, when using the `formatToParts()` method.
+This will emphasize the day period when using the `formatToParts()` method.
 
 ```js
 console.log(formatter.format(date));
 // "Monday, 12/17/2012, 3:00:42.000 AM"
 
 console.log(dateString);
-// "Monday, 12/17/2012, 3:00:42.000 <b>AM</b>"
+// "Monday, 12/17/2012, 3:00:42.000 <em>AM</em>"
 ```
 
 ### Named Years and Mixed calendars
