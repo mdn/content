@@ -15,7 +15,7 @@ to access an object property which doesn't exist.
 
 ## Message
 
-```js
+```
 ReferenceError: reference to undefined property "x" (Firefox)
 ```
 

@@ -15,10 +15,10 @@ in the code that requires a name.
 
 ## Message
 
-```js
-Syntax Error: Expected identifier (Edge)
-SyntaxError: function statement requires a name [Firefox]
-SyntaxError: Unexpected token ( [Chrome]
+```
+SyntaxError: Function statements require a function name (V8-based)
+SyntaxError: function statement requires a name (Firefox)
+SyntaxError: Function statements must have a name. (Safari)
 ```
 
 ## Error type
