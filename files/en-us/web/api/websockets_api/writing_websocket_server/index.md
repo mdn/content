@@ -241,7 +241,7 @@ class Server {
     public static void Main() {
         string ip = "127.0.0.1";
         int port = 80;
-        const server = new TcpListener(IPAddress.Parse(ip), port);
+        var server = new TcpListener(IPAddress.Parse(ip), port);
 
         server.Start();
         Console.WriteLine("Server has started on {0}:{1}, Waiting for a connection...", ip, port);
