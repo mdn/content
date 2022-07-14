@@ -184,8 +184,9 @@ function Person(name) {
   this.name = name;
 }
 
-Person.prototype = personPrototype;
-Person.prototype.constructor = Person;
+Object.assign(Person.prototype, personPrototype);
+// or
+// Person.prototype.greet = personPrototype.greet;
 ```
 
 Here we create:
@@ -193,10 +194,8 @@ Here we create:
 - an object `personPrototype`, which has a `greet()` method
 - a `Person()` constructor function which initializes the name of the person to create.
 
-We then set the `Person` function's `prototype` property to point to `personPrototype`.
+We then set the `Person` function's `prototype` property to point to `personPrototype` using [Object.assign](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) to put a new function inside the prototype.
 
-The last line (`Person.prototype.constructor = Person;`) sets the prototype's `constructor` property to the function used to create `Person` objects.
-This is required because after setting `Person.prototype = personPrototype;` the property points to the constructor for the `personPrototype`, which is `Object` rather than `Person` (because `personPrototype` was constructed as an object literal).
 
 After this code, objects created using `Person()` will get `personPrototype` as their prototype.
 
