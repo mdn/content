@@ -1,5 +1,5 @@
 ---
-title: Function.name
+title: Function.prototype.name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
 tags:
   - ECMAScript 2015
@@ -19,7 +19,7 @@ A {{jsxref("Function")}} object's read-only **`name`** property indicates the fu
 
 ## JavaScript compressors and minifiers
 
-> **Warning:** Be careful when using `Function.name` and source code transformations, such as those carried out by JavaScript compressors (minifiers) or obfuscators. These tools are often used as part of a JavaScript build pipeline to reduce the size of a program prior to deploying it to production. Such transformations often change a function's name at build-time.
+> **Warning:** Be careful when using the `name` property, and using source code transformations, such as those carried out by JavaScript compressors (minifiers) or obfuscators. These tools are often used as part of a JavaScript build pipeline to reduce the size of a program prior to deploying it to production. Such transformations often change a function's name at build-time.
 
 Source code such as:
 
@@ -46,7 +46,7 @@ if (b.constructor.name === 'Foo') {
 }
 ```
 
-In the uncompressed version, the program runs into the truthy-branch and logs "`'foo' is an instance of 'Foo'`". Whereas, in the compressed version it behaves differently, and runs into the else-branch. If you rely on `Function.name`, like in the example above, make sure your build pipeline doesn't change function names, or don't assume a function to have a particular name.
+In the uncompressed version, the program runs into the truthy-branch and logs "`'foo' is an instance of 'Foo'`". Whereas, in the compressed version it behaves differently, and runs into the else-branch. If you rely on the `name` property, like in the example above, make sure your build pipeline doesn't change function names, or don't assume a function to have a particular name.
 
 ## Examples
 
@@ -120,14 +120,14 @@ To change it, use {{jsxref("Object.defineProperty()")}}.
 
 ```js
 const o = {
-  foo(){}
+  foo() {}
 };
 o.foo.name; // "foo";
 ```
 
 ### Bound function names
 
-{{jsxref("Function.bind()")}} produces a function whose name is "bound " plus the function name.
+{{jsxref("Function.prototype.bind()")}} produces a function whose name is "bound " plus the function name.
 
 ```js
 function foo() {};
@@ -202,13 +202,14 @@ If a {{jsxref("Symbol")}} is used a function name and the symbol has a descripti
 ```js
 let sym1 = Symbol("foo");
 let sym2 = Symbol();
+
 let o = {
   [sym1]: function(){},
   [sym2]: function(){}
 };
 
 o[sym1].name; // "[foo]"
-o[sym2].name; // ""
+o[sym2].name; // "[]"
 ```
 
 ## Specifications
@@ -221,5 +222,5 @@ o[sym2].name; // ""
 
 ## See also
 
-- A polyfill for functions `.name` property is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-function)
+- A polyfill for functions' `.name` property is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-function)
 - {{jsxref("Function")}}
