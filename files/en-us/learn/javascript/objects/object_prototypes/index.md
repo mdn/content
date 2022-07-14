@@ -197,7 +197,7 @@ Here we create:
 We then put the methods defined in `personPrototype` onto the `Person` function's `prototype` property using [Object.assign](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign).
 
 
-After this code, objects created using `Person()` will get `personPrototype` as their prototype.
+After this code, objects created using `Person()` will get `Person.prototype` as their prototype, which automatically contains the `greet` method.
 
 ```js
 const reuben = new Person('Reuben');
