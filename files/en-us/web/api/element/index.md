@@ -308,7 +308,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
     Also available via the {{domxref("GlobalEventHandlers/onerror", "onerror")}} property.
 - {{domxref("Element/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
-    Also available via the {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}} property.
 - {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
   - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
 
