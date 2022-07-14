@@ -9,6 +9,7 @@ tags:
   - Reference
   - Web MIDI API
 spec-urls: https://webaudio.github.io/web-midi-api/
+browser-compat: api.navigator.requestMIDIAccess
 ---
 {{DefaultAPISidebar("Web MIDI API")}}{{SecureContext_Header}}
 
