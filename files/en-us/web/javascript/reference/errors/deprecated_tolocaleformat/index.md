@@ -10,7 +10,7 @@ tags:
 
 The JavaScript warning "Date.prototype.toLocaleFormat is deprecated; consider using
 Intl.DateTimeFormat instead" occurs when the non-standard
-{{jsxref("Date.prototype.toLocaleFormat")}} method is used. `toLocaleFormat` is now removed and this warning message is obsolete.
+`Date.prototype.toLocaleFormat()` method is used. `toLocaleFormat()` is now removed and this warning message is obsolete.
 
 ## Message
 
@@ -24,7 +24,7 @@ Warning. JavaScript execution won't be halted.
 
 ## What went wrong?
 
-The non-standard {{jsxref("Date.prototype.toLocaleFormat")}} method is deprecated and
+The non-standard `Date.prototype.toLocaleFormat()` method is deprecated and
 shouldn't be used anymore. It uses a format string in the same format expected by the
 `strftime()` function in C. **The function is no longer available in
 Firefox 58+**.
@@ -33,7 +33,7 @@ Firefox 58+**.
 
 ### Deprecated syntax
 
-The {{jsxref("Date.prototype.toLocaleFormat")}} method is deprecated and will be
+The `Date.prototype.toLocaleFormat()` method is deprecated and will be
 removed (no cross-browser support, available in Firefox only).
 
 ```js example-bad
@@ -114,6 +114,5 @@ console.log(date);
 
 ## See also
 
-- {{jsxref("Date.prototype.toLocaleFormat")}}
 - {{jsxref("Date.prototype.toLocaleDateString")}}
 - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
