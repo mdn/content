@@ -29,7 +29,7 @@ A {{domxref("NodeFilter")}} object.
 var treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
 nodeFilter = treeWalker.filter; // document.body in this case

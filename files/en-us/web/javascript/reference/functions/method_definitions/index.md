@@ -48,10 +48,10 @@ Given the following code:
 
 ```js
 const obj = {
-  foo: function() {
+  foo() {
     // ...
   },
-  bar: function() {
+  bar() {
     // ...
   }
 }

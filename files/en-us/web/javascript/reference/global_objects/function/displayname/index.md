@@ -47,7 +47,7 @@ You can define a function with a display name in a {{jsxref("Functions", "functi
 
 ```js
 const object = {
-  someMethod: function() {}
+  someMethod() {}
 };
 
 object.someMethod.displayName = 'someMethod';
@@ -65,7 +65,7 @@ You can dynamically change the `displayName` of a function:
 ```js
 const object = {
   // anonymous
-  someMethod: function(value) {
+  someMethod(value) {
     arguments.callee.displayName = 'someMethod (' + value + ')';
   }
 };

@@ -50,23 +50,23 @@ We can set up our video player and `<canvas>` element like this:
 This code handles altering the frames.
 
 ```js
-var processor = {
-  timerCallback: function() {
+const processor = {
+  timerCallback() {
     if (this.video.paused || this.video.ended) {
       return;
     }
     this.computeFrame();
-    var self = this;
+    const self = this;
     setTimeout(function () {
       self.timerCallback();
     }, 16); // roughly 60 frames per second
   },
 
-  doLoad: function() {
+  doLoad() {
     this.video = document.getElementById("my-video");
     this.c1 = document.getElementById("my-canvas");
     this.ctx1 = this.c1.getContext("2d");
-    var self = this;
+    const self = this;
 
     this.video.addEventListener("play", function() {
       self.width = self.video.width;
@@ -75,13 +75,13 @@ var processor = {
     }, false);
   },
 
-  computeFrame: function() {
+  computeFrame() {
     this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
-    var frame = this.ctx1.getImageData(0, 0, this.width, this.height);
-    var l = frame.data.length / 4;
+    const frame = this.ctx1.getImageData(0, 0, this.width, this.height);
+    const l = frame.data.length / 4;
 
-    for (var i = 0; i < l; i++) {
-      var grey = (frame.data[i * 4 + 0] + frame.data[i * 4 + 1] + frame.data[i * 4 + 2]) / 3;
+    for (let i = 0; i < l; i++) {
+      const grey = (frame.data[i * 4 + 0] + frame.data[i * 4 + 1] + frame.data[i * 4 + 2]) / 3;
 
       frame.data[i * 4 + 0] = grey;
       frame.data[i * 4 + 1] = grey;

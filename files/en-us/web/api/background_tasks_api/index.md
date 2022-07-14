@@ -45,7 +45,7 @@ window.requestIdleCallback = window.requestIdleCallback || function(handler) {
   return setTimeout(function() {
     handler({
       didTimeout: false,
-      timeRemaining: function() {
+      timeRemaining() {
         return Math.max(0, 50.0 - (Date.now() - startTime));
       }
     });
@@ -242,7 +242,7 @@ window.requestIdleCallback = window.requestIdleCallback || function(handler) {
   return setTimeout(function() {
     handler({
       didTimeout: false,
-      timeRemaining: function() {
+      timeRemaining() {
         return Math.max(0, 50.0 - (Date.now() - startTime));
       }
     });

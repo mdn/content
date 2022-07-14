@@ -251,7 +251,7 @@ Using the built-in `require()` method, you can load a template as a module to sh
 ```js
 <%
 module.exports = {
-    add: function (a, b) {
+    add(a, b) {
         return a + b;
     }
 }

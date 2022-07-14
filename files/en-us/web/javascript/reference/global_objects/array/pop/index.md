@@ -85,7 +85,7 @@ Note that in this example, we don't create an array to store a collection of obj
 ```js
 const collection = {
     length: 0,
-    addElements: function(...elements) {
+    addElements(...elements) {
         // obj.length will be incremented automatically
         // every time an element is added.
 
@@ -93,7 +93,7 @@ const collection = {
         // the new value of length property.
         return [].push.call(this, ...elements);
     },
-    removeElement: function() {
+    removeElement() {
         // obj.length will be decremented automatically
         // every time an element is removed.
 

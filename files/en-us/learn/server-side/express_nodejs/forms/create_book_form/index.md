@@ -28,10 +28,10 @@ exports.book_create_get = function(req, res, next) {
 
     // Get all authors and genres, which we can use for adding to our book.
     async.parallel({
-        authors: function(callback) {
+        authors(callback) {
             Author.find(callback);
         },
-        genres: function(callback) {
+        genres(callback) {
             Genre.find(callback);
         },
     }, function(err, results) {
@@ -89,10 +89,10 @@ exports.book_create_post = [
 
             // Get all authors and genres for form.
             async.parallel({
-                authors: function(callback) {
+                authors(callback) {
                     Author.find(callback);
                 },
-                genres: function(callback) {
+                genres(callback) {
                     Genre.find(callback);
                 },
             }, function(err, results) {

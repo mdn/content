@@ -100,7 +100,7 @@ execution context in any way we want.
 let obj = {
     length: 0,
 
-    addElem: function addElem(elem) {
+    addElem(elem) {
         // obj.length is automatically incremented
         // every time an element is added.
         [].push.call(this, elem)

@@ -19,7 +19,7 @@ The **`handler.deleteProperty()`** method is a trap for the
 
 ```js
 new Proxy(target, {
-  deleteProperty: function(target, property) {
+  deleteProperty(target, property) {
   }
 });
 ```
@@ -68,7 +68,7 @@ The following code traps the {{jsxref("Operators/delete", "delete")}} operator.
 
 ```js
 const p = new Proxy({}, {
-  deleteProperty: function(target, prop) {
+  deleteProperty(target, prop) {
     if (prop in target){
       delete target[prop]
       console.log('property removed: ' + prop)

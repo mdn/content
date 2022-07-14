@@ -103,7 +103,7 @@ function from the function, using the original object, neatly solves this proble
 this.x = 9;    // 'this' refers to the global object (e.g. 'window') in non-strict mode
 const module = {
   x: 81,
-  getX: function() { return this.x; }
+  getX() { return this.x; }
 };
 
 module.getX();
