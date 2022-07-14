@@ -101,6 +101,10 @@ function startLoggingMIDIInput( midiAccess, indexOfPort ) {
 
 {{Specifications}}
 
+## Browser compatibility
+
+{{Compat}}
+
 ## See also
 
 - [Introduction to Web MIDI](https://code.tutsplus.com/tutorials/introduction-to-web-midi--cms-25220)
