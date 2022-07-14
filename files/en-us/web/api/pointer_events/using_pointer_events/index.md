@@ -66,7 +66,7 @@ This sets up all the event listeners for our {{HTMLElement("canvas")}} element s
 We'll keep track of the touches in-progress.
 
 ```js
-const ongoingTouches = new Array();
+const ongoingTouches = [];
 ```
 
 When a {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event occurs, indicating that a new touch on the surface has occurred, the `handleStart()` function below is called.

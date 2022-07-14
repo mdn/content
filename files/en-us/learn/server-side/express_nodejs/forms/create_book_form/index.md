@@ -53,11 +53,11 @@ Find the exported `book_create_post()` controller method and replace it with the
 exports.book_create_post = [
     // Convert the genre to an array.
     (req, res, next) => {
-        if(!(req.body.genre instanceof Array)){
+        if(!(Array.isArray(req.body.genre))){
             if(typeof req.body.genre ==='undefined')
             req.body.genre = [];
             else
-            req.body.genre = new Array(req.body.genre);
+            req.body.genre = [req.body.genre];
         }
         next();
     },
@@ -127,11 +127,11 @@ The main difference with respect to the other form handling code is how we sanit
 ```js
 // Convert the genre to an array.
 (req, res, next) => {
-    if(!(req.body.genre instanceof Array)){
+    if(!(Array.isArray(req.body.genre))){
         if(typeof req.body.genre === 'undefined')
         req.body.genre = [];
         else
-        req.body.genre = new Array(req.body.genre);
+        req.body.genre = [req.body.genre];
     }
     next();
 },
