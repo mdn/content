@@ -29,13 +29,9 @@ call(thisArg, arg1, ... , argN)
 
   - : The value to use as `this` when calling `func`.
 
-    > **Note:** In certain cases, `thisArg` may
-    > not be the actual value seen by the method.
+    > **Note:** In certain cases, `this` may not be the actual value seen by the method.
     >
-    > If the method is a function in {{jsxref("Strict_mode", "non-strict mode", "",
-        1)}}, {{jsxref("null")}} and
-    > {{jsxref("undefined")}} will be replaced with the
-    > global object, and primitive values will be converted to objects.
+    > If the method is a function in {{jsxref("Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("null")}} and {{jsxref("undefined")}} will be replaced with the global object, and primitive values will be converted to objects.
 
 - `arg1, arg2, ...argN` {{optional_inline}}
   - : Arguments for the function.
