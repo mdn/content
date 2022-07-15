@@ -49,30 +49,43 @@ You can assign a different `this` object when calling an existing function. `thi
 
 `apply` is very similar to `call()`, except for the type of arguments it supports. You use an arguments array instead of a list of arguments (parameters) — for example, `func.apply(this, ['eat', 'bananas'])`.
 
-You can also use {{jsxref("Functions/arguments", "arguments")}} for the `argsArray` parameter. `arguments` is a local variable of a function. It can be used for all unspecified arguments of the called object. Thus, you do not have to know the arguments of the called object when you use the `apply` method. You can use `arguments` to pass all the arguments to the called object. The called object is then responsible for handling the arguments.
+You can also use any kind of object which is array-like as the second parameter. In practice, this means that it needs to have a `length` property, and integer ("index") properties in the range `(0..length - 1)`. For example, you could use a {{domxref("NodeList")}}, or a custom object like `{ 'length': 2, '0': 'eat', '1': 'bananas' }`. You can also use {{jsxref("Functions/arguments", "arguments")}}, for example:
 
-Since ECMAScript 5th Edition, you can also use any kind of object which is array-like. In practice, this means that it needs to have a `length` property, and integer ("index") properties in the range `(0..length - 1)`. For example, you could use a {{domxref("NodeList")}}, or a custom object like `{ 'length': 2, '0': 'eat', '1': 'bananas' }`.
+```js
+function wrapper() {
+  return anotherFn.apply(null, arguments);
+}
+```
 
-> **Note:** Many older browsers—including Chrome <17 and Internet Explorer <9—don't accept array-like objects, and will throw an exception.
+With the [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) and parameters [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), this can be rewritten as:
+
+```js
+function wrapper(...args) {
+  return anotherFn(...args);
+}
+```
 
 ## Examples
 
 ### Using apply to append an array to another
 
-You can use {{jsxref("Array.prototype.push()")}} to append an element to an array. And, because `push()` accepts a variable number of arguments, you can also push multiple elements at once.
+You can use {{jsxref("Array.prototype.push()")}} to append an element to an array. Because `push()` accepts a variable number of arguments, you can also push multiple elements at once. But if you pass an array to `push()`, it will actually add that array as a single element, instead of adding the elements individually, ending up with an array inside an array. On the other hand, {{jsxref("Array.prototype.concat()")}} does have the desired behavior in this case, but it does not append to the _existing_ array—it instead creates and returns a new array.
 
-But, if you pass an array to `push()`, it will actually add that array as a single element, instead of adding the elements individually. So you end up with an array inside an array.
-
-What if that is not what you want? {{jsxref("Array.prototype.concat()")}} does have the desired behavior in this case, but it does not append to the _existing_ array—it instead creates and returns a new array.
-
-But you wanted to append to the existing array. So what now? Write a loop? Surely not?
-
-`apply` to the rescue!
+In this case, you can use `apply` to implicitly "spread" an array as a series of arguments.
 
 ```js
 const array = ['a', 'b'];
 const elements = [0, 1, 2];
 array.push.apply(array, elements);
+console.info(array); // ["a", "b", 0, 1, 2]
+```
+
+The safe effect can be achieved with the spread syntax.
+
+```js
+const array = ['a', 'b'];
+const elements = [0, 1, 2];
+array.push(...elements);
 console.info(array); // ["a", "b", 0, 1, 2]
 ```
 
@@ -117,54 +130,19 @@ function minOfArray(arr) {
   let min = Infinity;
   let QUANTUM = 32768;
 
-  for (let i = 0, len = arr.length; i < len; i += QUANTUM) {
-    const submin = Math.min.apply(null,
-                                arr.slice(i, Math.min(i+QUANTUM, len)));
+  for (let i = 0; i < arr.length; i += QUANTUM) {
+    const submin = Math.min.apply(
+      null,
+      arr.slice(i, Math.min(i + QUANTUM, arr.length)),
+    );
     min = Math.min(submin, min);
   }
 
   return min;
 }
 
-let min = minOfArray([5, 6, 2, 3, 7]);
+const min = minOfArray([5, 6, 2, 3, 7]);
 ```
-
-### Using apply to chain constructors
-
-You can use `apply` to chain {{jsxref("Operators/new", "constructors", "", 1)}} for an object (similar to Java).
-
-In the following example we will create a global {{jsxref("Function")}} method called `construct`, which will enable you to use an array-like object with a constructor instead of an arguments list.
-
-```js
-Function.prototype.construct = function(aArgs) {
-  let oNew = Object.create(this.prototype);
-  this.apply(oNew, aArgs);
-  return oNew;
-};
-```
-
-Example usage:
-
-```js
-function MyConstructor() {
-  for (let nProp = 0; nProp < arguments.length; nProp++) {
-    this['property' + nProp] = arguments[nProp];
-  }
-}
-
-let myArray = [4, 'Hello world!', false];
-let myInstance = MyConstructor.construct(myArray);
-
-console.log(myInstance.property1);                // logs 'Hello world!'
-console.log(myInstance instanceof MyConstructor); // logs 'true'
-console.log(myInstance.constructor);              // logs 'MyConstructor'
-```
-
-> **Note:** This non-native `construct()` method will not work with some native constructors; like {{jsxref("Date")}}, for example. In these cases you have to use the {{jsxref("Function.prototype.bind()")}} method.
->
-> For example, imagine having an array like the following, to be used with {{jsxref("Date")}} constructor: `[2012, 11, 4]`; in this case you have to write something like: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()`.
->
-> This is not the best way to do things, and probably not to be used in any production environment.
 
 ## Specifications
 
