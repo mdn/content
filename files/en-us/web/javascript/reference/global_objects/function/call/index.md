@@ -130,7 +130,8 @@ function greet() {
 }
 
 const obj = {
-  animal: 'cats', sleepDuration: '12 and 16 hours'
+  animal: 'cats',
+  sleepDuration: '12 and 16 hours',
 };
 
 greet.call(obj);  // cats typically sleep between 12 and 16 hours
@@ -147,10 +148,10 @@ bound to the global object.
 var sData = 'Wisen';
 
 function display() {
-  console.log('sData value is %s', this.sData);
+  console.log(`sData value is ${this.sData}`);
 }
 
-display.call(); // logs sData value is Wisen
+display.call(); // logs "sData value is Wisen"
 ```
 
 In strict mode, the value of `this` will be `undefined`.
@@ -161,7 +162,7 @@ In strict mode, the value of `this` will be `undefined`.
 var sData = 'Wisen';
 
 function display() {
-  console.log('sData value is %s', this.sData);
+  console.log(`sData value is ${this.sData}`);
 }
 
 display.call(); // throws TypeError: Cannot read the property of 'sData' of undefined
