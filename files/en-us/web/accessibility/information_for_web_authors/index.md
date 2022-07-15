@@ -40,7 +40,7 @@ Use a tool to quickly check for common errors in your browser.
 * [<abbr>WAVE</abbr>](http://wave.webaim.org/extension/)
 
 
-Tools to integrate into your build process , programmatically adding accessibility tests so you can catch errors as you develop your web application: 
+Tools to integrate into your build process, programmatically adding accessibility tests so you can catch errors as you develop your web application: 
 
 * [axe-core](https://github.com/dequelabs/axe-core)
 * [jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
