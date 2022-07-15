@@ -34,17 +34,14 @@ The result of calling the function with the specified `this` value and arguments
 
 ## Description
 
+> **Note:** This function is almost identical to {{jsxref("Function.prototype.apply()", "apply()")}}, except that `call()` accepts an **argument list**, while `apply()` accepts a **single array of arguments** — for example, `func.apply(this, ['eat', 'bananas'])` vs. `func.call(this, 'eat', 'bananas')`.
+
 The `call()` allows for a function/method belonging to one object to be
 assigned and called for a different object.
 
 `call()` provides a new value of `this` to the function/method.
 With `call()`, you can write a method once and then inherit it in another
 object, without having to rewrite the method for the new object.
-
-> **Note:** While the syntax of this function is almost identical to that
-> of {{jsxref("Function.prototype.apply()", "apply()")}}, the fundamental difference is
-> that `call()` accepts an **argument list**, while
-> `apply()` accepts a **single array of arguments**.
 
 ## Examples
 

@@ -34,13 +34,9 @@ The result of calling the function with the specified `this` value and arguments
 
 ## Description
 
-> **Note:** While the syntax of this function is almost identical to that of {{jsxref("Function.prototype.call()", "call()")}}, the fundamental difference is that `call()` accepts an **argument list**, while `apply()` accepts a **single array of arguments**.
-
-> **Note:** When the first argument is `undefined` or `null`, a similar outcome can be achieved using the parameters [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
+> **Note:** This function is almost identical to {{jsxref("Function.prototype.call()", "call()")}}, except that `call()` accepts an **argument list**, while `apply()` accepts a **single array of arguments** — for example, `func.apply(this, ['eat', 'bananas'])` vs. `func.call(this, 'eat', 'bananas')`.
 
 You can assign a different `this` object when calling an existing function. `this` refers to the current object (the calling object). With `apply`, you can write a method once, and then inherit it in another object, without having to rewrite the method for the new object.
-
-`apply` is very similar to `call()`, except for the type of arguments it supports. You use an arguments array instead of a list of arguments (parameters) — for example, `func.apply(this, ['eat', 'bananas'])`.
 
 You can also use any kind of object which is array-like as the second parameter. In practice, this means that it needs to have a `length` property, and integer ("index") properties in the range `(0..length - 1)`. For example, you could use a {{domxref("NodeList")}}, or a custom object like `{ 'length': 2, '0': 'eat', '1': 'bananas' }`. You can also use {{jsxref("Functions/arguments", "arguments")}}, for example:
 
@@ -50,13 +46,15 @@ function wrapper() {
 }
 ```
 
-With the [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) and parameters [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), this can be rewritten as:
+With the [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) and parameter [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), this can be rewritten as:
 
 ```js
 function wrapper(...args) {
   return anotherFn(...args);
 }
 ```
+
+In general, `fn.apply(null, args)` is equivalent to `fn(...args)` with the parameter spread syntax.
 
 ## Examples
 

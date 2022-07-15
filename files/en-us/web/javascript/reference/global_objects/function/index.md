@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Function
 ---
 {{JSRef}}
 
-Every JavaScript function is actually a `Function` object. This can be seen with the code `(function(){}).constructor === Function`, which returns true.
+Every JavaScript function is actually a `Function` object. This can be seen with the code `(function () {}).constructor === Function`, which returns true.
 
 ## Constructor
 
@@ -50,19 +50,20 @@ Every JavaScript function is actually a `Function` object. This can be seen with
 Functions created with the `Function` constructor do not create closures to their creation contexts; they always are created in the global scope. When running them, they will only be able to access their own local variables and global ones, not the ones from the scope in which the `Function` constructor was created. This is different from using {{jsxref("Global_Objects/eval", "eval()")}} with code for a function expression.
 
 ```js
-const x = 10;
+// Create a global property with `var`
+var x = 10;
 
 function createFunction1() {
-    const x = 20;
-    return new Function('return x;'); // this |x| refers to global |x|
+  const x = 20;
+  return new Function('return x;'); // this `x` refers to global `x`
 }
 
 function createFunction2() {
-    const x = 20;
-    function f() {
-        return x; // this |x| refers to the local |x| above
-    }
-    return f;
+  const x = 20;
+  function f() {
+    return x; // this `x` refers to the local `x` above
+  }
+  return f;
 }
 
 const f1 = createFunction1();

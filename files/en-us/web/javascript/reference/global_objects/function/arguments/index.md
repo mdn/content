@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.Function.arguments
 ---
 {{JSRef}} {{deprecated_header}}
 
-> **Warning:** The `arguments` property is deprecated. The recommended way to access the `arguments` object available within functions is to refer to the variable {{jsxref("Functions/arguments", "arguments")}}.
+> **Warning:** The `arguments` property of {{jsxref("Function")}} objects is deprecated. The recommended way to access the `arguments` object is to refer to the variable {{jsxref("Functions/arguments", "arguments")}} available within functions.
 
 A {{jsxref("Function")}} object's **`arguments`** property refers to an array-like object corresponding to the arguments passed to a function. For [strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), async function, and generator function callers, accessing the `arguments` property throws an exception.
 
