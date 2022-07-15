@@ -15,7 +15,7 @@ A {{jsxref("Function")}} object's **`length`** property indicates the number of 
 
 ## Description
 
-A {{jsxref("Function")}} object's `length` property of a function object, indicates how many arguments that the function expects, i.e. the number of formal parameters. This number excludes the {{jsxref("Functions/rest_parameters", "rest parameter", "", 1)}} and only includes parameters before the first one with a default value. By contrast, {{jsxref("Functions/arguments/length", "arguments.length")}} is local to a function and provides the number of arguments actually passed to the function.
+A {{jsxref("Function")}} object's `length` property indicates how many arguments the function expects, i.e. the number of formal parameters. This number excludes the {{jsxref("Functions/rest_parameters", "rest parameter", "", 1)}} and only includes parameters before the first one with a default value. By contrast, {{jsxref("Functions/arguments/length", "arguments.length")}} is local to a function and provides the number of arguments actually passed to the function.
 
 ### Data property of the Function constructor
 
@@ -23,7 +23,7 @@ The {{jsxref("Function")}} constructor is itself a `Function` object. Its `lengt
 
 ### Property of the Function prototype object
 
-The length property of the {{jsxref("Function")}} prototype object has a value of `0`.
+Due to historical reasons, `Function.prototype` is a callable itself. The `length` property of `Function.prototype` has a value of `0`.
 
 ## Examples
 
