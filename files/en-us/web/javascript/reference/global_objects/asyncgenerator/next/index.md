@@ -83,16 +83,17 @@ function sleep(time) {
 async function* createAsyncGenerator() {
   while (true) {
     await sleep(500);
-    const value = yield null;
+    const value = yield;
     console.log(value);
   }
 }
 
 async function main() {
   const asyncGen = createAsyncGenerator();
-  console.log(await asyncGen.next(1));    // { value: null, done: false }
+  // No log at this step: the first value sent through `next` is lost
+  console.log(await asyncGen.next(1));    // { value: undefined, done: false }
   // Logs 2: the value sent through `next`
-  console.log(await asyncGen.next(2));    // { value: null, done: false }
+  console.log(await asyncGen.next(2));    // { value: undefined, done: false }
 }
 
 main();

@@ -24,14 +24,17 @@ const AsyncGeneratorFunction = Object.getPrototypeOf(async function*() {}).const
 
 ```js
 new AsyncGeneratorFunction(functionBody)
-new AsyncGeneratorFunction(arg1, functionBody)
-new AsyncGeneratorFunction(arg1, arg2, functionBody)
+new AsyncGeneratorFunction(arg1, …, argN, functionBody)
 ```
 
 ### Parameters
 
-- `arg1`, `arg2`, ... `argN`
-  - : Names to be used by the function as formal argument names. Each argument parameter must be a {{jsxref("String")}} that is a valid JavaScript identifier or a comma-separated list of such strings. For example: `"x"`, `"theValue"`, or `"a, b"`.
+- `argN` {{optional_inline}}
+
+  - : Names to be used by the function as formal argument names. Each must be a string that corresponds to a valid JavaScript parameter (any of plain [identifier](/en-US/docs/Glossary/Identifier), [rest parameter](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameter, optionally with a default), or a list of such strings separated with commas.
+
+    As the parameters are parsed in the same way as function declarations, whitespace and comments are accepted. For example: `"x", "theValue = 42", "[a, b] /* numbers */"` — or `"x, theValue = 42, [a, b] /* numbers */"`. (`"x, theValue = 42", "[a, b]"` is also correct, though very confusing to read.)
+
 - `functionBody`
   - : A {{jsxref("String")}} containing the JavaScript statements comprising the function definition.
 

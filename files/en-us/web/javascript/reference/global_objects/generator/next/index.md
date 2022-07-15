@@ -72,24 +72,13 @@ In this example, `getPage` takes a list and "paginates" it into chunks of size `
 
 ```js
 function* getPage(list, pageSize = 1) {
-  let output = [];
-  let index = 0;
-
-  while (index < list.length) {
-    output = [];
-    for (let i = index; i < index + pageSize; i++) {
-      if (list[i]) {
-        output.push(list[i]);
-      }
-    }
-
-    yield output;
-    index += pageSize;
+  for (let index = 0; index < list.length; index += pageSize) {
+    yield list.slice(index, pageSize);
   }
 }
 
-list = [1, 2, 3, 4, 5, 6, 7, 8]
-const page = getPage(list, 3);              // Generator { }
+const list = [1, 2, 3, 4, 5, 6, 7, 8]
+const page = getPage(list, 3);            // Generator { }
 
 page.next();                              // Object {value: (3) [1, 2, 3], done: false}
 page.next();                              // Object {value: (3) [4, 5, 6], done: false}
@@ -101,19 +90,19 @@ page.next();                              // Object {value: undefined, done: tru
 
 In this example, `next` is called with a value.
 
-Note that the first call does not log anything, because the generator was not yielding
-anything initially.
+> **Note:** The first call does not log anything, because the generator was not yielding anything initially.
 
 ```js
 function* gen() {
   while (true) {
-    let value = yield null;
+    const value = yield;
     console.log(value);
   }
 }
 
 const g = gen();
 g.next(1);
+// No log at this step: the first value sent through `next` is lost
 // "{ value: null, done: false }"
 g.next(2);
 // 2
