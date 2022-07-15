@@ -47,7 +47,7 @@ The result of calling the function with the specified **`this`** value and argum
 
 You can assign a different `this` object when calling an existing function. `this` refers to the current object (the calling object). With `apply`, you can write a method once, and then inherit it in another object, without having to rewrite the method for the new object.
 
-`apply` is very similar to `call()`, except for the type of arguments it supports. You use an arguments array instead of a list of arguments (parameters). With `apply`, you can also use an array literal, for example, `func.apply(this, ['eat', 'bananas'])`, or an {{jsxref("Array")}} object, for example, `func.apply(this, new Array('eat', 'bananas'))`.
+`apply` is very similar to `call()`, except for the type of arguments it supports. You use an arguments array instead of a list of arguments (parameters) — for example, `func.apply(this, ['eat', 'bananas'])`.
 
 You can also use {{jsxref("Functions/arguments", "arguments")}} for the `argsArray` parameter. `arguments` is a local variable of a function. It can be used for all unspecified arguments of the called object. Thus, you do not have to know the arguments of the called object when you use the `apply` method. You can use `arguments` to pass all the arguments to the called object. The called object is then responsible for handling the arguments.
 
