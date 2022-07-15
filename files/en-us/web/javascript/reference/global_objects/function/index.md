@@ -24,7 +24,7 @@ Every JavaScript function is actually a `Function` object. This can be seen with
 - {{jsxref("Function.prototype.caller")}} {{Deprecated_Inline}}
   - : Specifies the function that invoked the currently executing function.
     This property is deprecated, and is only functional for some non-strict functions.
-- {{jsxref("Function.prototype.displayName")}}
+- {{jsxref("Function.prototype.displayName")}} {{non-standard_inline}} {{optional_inline}}
   - : The display name of the function.
 - {{jsxref("Function.prototype.length")}}
   - : Specifies the number of arguments expected by the function.
@@ -39,7 +39,7 @@ Every JavaScript function is actually a `Function` object. This can be seen with
   - : Creates a new function that, when called, has its `this` keyword set to a provided value, optionally with a given sequence of arguments preceding any provided when the new function is called.
 - {{jsxref("Function.prototype.call()")}}
   - : Calls a function with a given `this` value and optional arguments.
-- {{jsxref("Function.prototype.toString()", "Function.prototype.toString()")}}
+- {{jsxref("Function.prototype.toString()")}}
   - : Returns a string representing the source code of the function.
     Overrides the {{jsxref("Object.prototype.toString")}} method.
 
@@ -54,13 +54,13 @@ const x = 10;
 
 function createFunction1() {
     const x = 20;
-    return new Function('return x;'); // this |x| refers global |x|
+    return new Function('return x;'); // this |x| refers to global |x|
 }
 
 function createFunction2() {
     const x = 20;
     function f() {
-        return x; // this |x| refers local |x| above
+        return x; // this |x| refers to the local |x| above
     }
     return f;
 }
