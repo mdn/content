@@ -5,7 +5,7 @@ tags:
   - Function
   - JavaScript
   - Property
-browser-compat: javascript.builtins.Function.prototype
+spec-urls: https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-function-instances-prototype
 ---
 {{JSRef}}
 
@@ -101,10 +101,6 @@ console.log(new Dog("Jack").species); // "dog"
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 
