@@ -19,7 +19,7 @@ A {{jsxref("Function")}} object's read-only **`name`** property indicates the fu
 
 ## JavaScript compressors and minifiers
 
-> **Warning:** Be careful when using the `name` property, and using source code transformations, such as those carried out by JavaScript compressors (minifiers) or obfuscators. These tools are often used as part of a JavaScript build pipeline to reduce the size of a program prior to deploying it to production. Such transformations often change a function's name at build-time.
+> **Warning:** Be careful when using the `name` property with source code transformations, such as those carried out by JavaScript compressors (minifiers) or obfuscators. These tools are often used as part of a JavaScript build pipeline to reduce the size of a program prior to deploying it to production. Such transformations often change a function's name at build-time.
 
 Source code such as:
 
