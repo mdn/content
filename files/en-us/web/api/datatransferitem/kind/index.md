@@ -48,12 +48,12 @@ function drop_handler(ev) {
    } else if ((data[i].kind == 'string') &&
               (data[i].type.match('^text/html'))) {
      // Drag data item is HTML
-     console.log("... Drop: HTML");
+     console.log("… Drop: HTML");
    } else if ((data[i].kind == 'file') &&
               (data[i].type.match('^image/'))) {
      // Drag data item is an image file
      const f = data[i].getAsFile();
-     console.log("... Drop: File ");
+     console.log("… Drop: File ");
    }
  }
 }
