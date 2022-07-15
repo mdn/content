@@ -159,18 +159,18 @@ jobs:
         with:
           path: yari/deployer/.venv
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}
+          
+      - name: Checkout Yari
+        uses: actions/checkout@v3
+        with:
+          repository: mdn/yari
+          path: yari
 
       - name: Install poetry dependencies
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: |
           cd yari/deployer
           poetry install --no-interaction --no-root
-
-      - name: Checkout Yari
-        uses: actions/checkout@v3
-        with:
-          repository: mdn/yari
-          path: yari
 
       - name: Install Deployer
         run: |
