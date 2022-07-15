@@ -36,7 +36,7 @@ bind(thisArg, arg1, ... , argN)
     if the bound function is constructed using the {{jsxref("Operators/new", "new")}}
     operator.
 
-    > **Note:** In certain cases, `this` may not be the actual value seen by the method.
+    > **Note:** The `thisArg` may not be the actual `this` value seen by the function.
     >
     > If the method is a function in {{jsxref("Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("Operators/null", "null")}} and {{jsxref("undefined")}} will be replaced with the global object, and primitive values will be converted to objects.
 
