@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.Function.apply
 ---
 {{JSRef}}
 
-The **`apply()`** method calls a function with a given `this` value, and `arguments` provided as an array (or an [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
+The **`apply()`** method calls the specified function with a given `this` value, and `arguments` provided as an array (or an [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
 
 {{EmbedInteractiveExample("pages/js/function-apply.html")}}
 
@@ -27,7 +27,9 @@ apply(thisArg, argsArray)
 
   - : The value of `this` provided for the call to `func`.
 
-    Note that `this` may not be the actual value seen by the method: if the method is a function in {{jsxref("Strict_mode", "non-strict mode", "", 1)}} code, {{jsxref("null")}} and {{jsxref("undefined")}} will be replaced with the global object, and primitive values will be boxed. This argument is required.
+    > **Note:** In certain cases, `this` may not be the actual value seen by the method.
+    >
+    > If the method is a function in {{jsxref("Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("null")}} and {{jsxref("undefined")}} will be replaced with the global object, and primitive values will be converted to objects.
 
 - `argsArray` {{optional_inline}}
 
@@ -80,7 +82,7 @@ console.info(array); // ["a", "b", 0, 1, 2]
 
 Clever usage of `apply` allows you to use built-in functions for some tasks that would probably have otherwise been written by looping over the array values.
 
-As an example, here are [`Math.max`](/docs/Web/JavaScript/Reference/Global_Objects/Math/max)/[`Math.min`](/docs/Web/JavaScript/Reference/Global_Objects/Math/min), used to find out the maximum/minimum value in an array.
+As an example, here are {{jsxref("Global_Objects/Math/max", "Math.max")}}/{{jsxref("Global_Objects/Math/min", "Math.min")}}, used to find out the maximum/minimum value in an array.
 
 ```js
 // min/max number in an array
@@ -160,9 +162,9 @@ console.log(myInstance instanceof MyConstructor); // logs 'true'
 console.log(myInstance.constructor);              // logs 'MyConstructor'
 ```
 
-> **Note:** This non-native `Function.construct` method will not work with some native constructors; like {{jsxref("Date")}}, for example. In these cases you have to use the {{jsxref("Function.prototype.bind")}} method.
+> **Note:** This non-native `construct()` method will not work with some native constructors; like {{jsxref("Date")}}, for example. In these cases you have to use the {{jsxref("Function.prototype.bind()")}} method.
 >
-> For example, imagine having an array like the following, to be used with {{jsxref("Global_Objects/Date", "Date")}} constructor: `[2012, 11, 4]`; in this case you have to write something like: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()`.
+> For example, imagine having an array like the following, to be used with {{jsxref("Date")}} constructor: `[2012, 11, 4]`; in this case you have to write something like: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()`.
 >
 > This is not the best way to do things, and probably not to be used in any production environment.
 
