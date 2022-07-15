@@ -163,7 +163,7 @@ var showBookmark = (function () {
    */
    nDuration = 200, nFrames = 10;
 
-  function _next () {
+  function _next() {
   if (_itFrame > nFrames) { clearInterval(_scrollId); _scrollId = -1; return; }
   _isBot = true;
   document.documentElement.scrollTop = Math.round(_scrollY + (_nodeY - _scrollY) * _itFrame / nFrames);
