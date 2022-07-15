@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.Function.arguments
 ---
 {{JSRef}} {{deprecated_header}}
 
-A {{jsxref("Function")}} object's **`arguments`** property refers to an array-like object corresponding to the arguments passed to a function. For {{jsxref("Strict_mode", "strict")}}, async function and generator function callers, accessing the `arguments` property throws an exception.
+A {{jsxref("Function")}} object's **`arguments`** property refers to an array-like object corresponding to the arguments passed to a function. For {{jsxref("/en-US/docs/Web/JavaScript/Reference/Strict_mode", "strict")}}, async function and generator function callers, accessing the `arguments` property throws an exception.
 
 ## Description
 
