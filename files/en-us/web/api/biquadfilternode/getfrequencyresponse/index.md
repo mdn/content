@@ -102,7 +102,7 @@ biquadFilter.type = "lowshelf";
 biquadFilter.frequency.value = 1000;
 biquadFilter.gain.value = range.value;
 
-  ...
+// …
 
 function calcFrequencyResponse() {
   biquadFilter.getFrequencyResponse(myFrequencyArray,magResponseOutput,phaseResponseOutput);
