@@ -18,28 +18,19 @@ The **`call()`** method calls the function with a given `this` value and argumen
 ```js
 call()
 call(thisArg)
-call(thisArg, arg1)
-call(thisArg, arg1, arg2)
-call(thisArg, arg1, ... , argN)
+call(thisArg, arg1, …, argN)
 ```
 
 ### Parameters
 
-- `thisArg` {{optional_inline}}
-
-  - : The value to use as `this` when calling `func`.
-
-    > **Note:** The `thisArg` may not be the actual `this` value seen by the function.
-    >
-    > If the method is a function in {{jsxref("Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("Operators/null", "null")}} and {{jsxref("undefined")}} will be replaced with the global object, and primitive values will be converted to objects.
-
-- `arg1, arg2, ...argN` {{optional_inline}}
+- `thisArg`
+  - : The value to use as `this` when calling `func`. If the function is not in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) will be replaced with the global object, and primitive values will be converted to objects. 
+- `arg1, …, argN` {{optional_inline}}
   - : Arguments for the function.
 
 ### Return value
 
-The result of calling the function with the specified
-**`this`** value and arguments.
+The result of calling the function with the specified `this` value and arguments.
 
 ## Description
 

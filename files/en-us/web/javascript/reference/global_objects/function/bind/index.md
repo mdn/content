@@ -23,27 +23,15 @@ is called.
 
 ```js
 bind(thisArg)
-bind(thisArg, arg1)
-bind(thisArg, arg1, arg2)
-bind(thisArg, arg1, ... , argN)
+bind(thisArg, arg1, …, argN)
 ```
 
 ### Parameters
 
 - `thisArg`
-  - : The value to be passed as the `this` parameter to the target function
-    `func` when the bound function is called. The value is ignored
-    if the bound function is constructed using the {{jsxref("Operators/new", "new")}}
-    operator.
-
-    > **Note:** The `thisArg` may not be the actual `this` value seen by the function.
-    >
-    > If the method is a function in {{jsxref("Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("Operators/null", "null")}} and {{jsxref("undefined")}} will be replaced with the global object, and primitive values will be converted to objects.
-
-- `arg1, arg2, ...argN`
-  {{optional_inline}}
-  - : Arguments to prepend to arguments provided to the bound function when invoking
-    `func`.
+  - : The value to be passed as the `this` parameter to the target function `func` when the bound function is called. If the function is not in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) will be replaced with the global object, and primitive values will be converted to objects. The value is ignored if the bound function is constructed using the {{jsxref("Operators/new", "new")}} operator. 
+- `arg1, …, argN` {{optional_inline}}
+  - : Arguments to prepend to arguments provided to the bound function when invoking `func`.
 
 ### Return value
 

@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.Function.caller
 ---
 {{JSRef}} {{deprecated_header}}
 
-A {{jsxref("Function")}} object's **`caller`** property returns the function that invoked the specified function. For {{jsxref("Strict_mode", "strict")}}, async function and generator function callers, accessing the `caller` property throws an exception.
+A {{jsxref("Function")}} object's **`caller`** property returns the function that invoked the specified function. For [strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), async function, and generator function callers, accessing the `caller` property throws an exception.
 
 ## Description
 

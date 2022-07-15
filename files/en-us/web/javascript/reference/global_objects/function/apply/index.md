@@ -24,20 +24,13 @@ apply(thisArg, argsArray)
 ### Parameters
 
 - `thisArg`
-
-  - : The value of `this` provided for the call to `func`.
-
-    > **Note:** The `thisArg` may not be the actual `this` value seen by the function.
-    >
-    > If the method is a function in {{jsxref("Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("Operators/null", "null")}} and {{jsxref("undefined")}} will be replaced with the global object, and primitive values will be converted to objects.
-
+  - : The value of `this` provided for the call to `func`. If the function is not in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) will be replaced with the global object, and primitive values will be converted to objects.
 - `argsArray` {{optional_inline}}
-
-  - : An array-like object, specifying the arguments with which `func` should be called, or {{jsxref("Operators/null", "null")}} or {{jsxref("undefined")}} if no arguments should be provided to the function.
+  - : An array-like object, specifying the arguments with which `func` should be called, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) if no arguments should be provided to the function.
 
 ### Return value
 
-The result of calling the function with the specified **`this`** value and arguments.
+The result of calling the function with the specified `this` value and arguments.
 
 ## Description
 
@@ -80,7 +73,7 @@ array.push.apply(array, elements);
 console.info(array); // ["a", "b", 0, 1, 2]
 ```
 
-The safe effect can be achieved with the spread syntax.
+The same effect can be achieved with the spread syntax.
 
 ```js
 const array = ['a', 'b'];
