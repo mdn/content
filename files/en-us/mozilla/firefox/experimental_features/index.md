@@ -64,7 +64,7 @@ The {{domxref("HTMLElement")}} property {{DOMxRef("HTMLElement.inert")}} is a {{
 
 ### Layout for input type="search"
 
-Layout for `input type="search"` has been updated. This causes a search field to have a clear icon once someone starts typing in it, to match other browser implementations. (See {{bug(558594)}} for more details)
+Layout for `input type="search"` has been updated. This causes a search field to have a clear icon once someone starts typing in it, to match other browser implementations. (See {{bug(558594)}} for more details.)
 
 <table>
   <thead>
@@ -433,7 +433,7 @@ The {{cssxref("math-style")}} property indicates whether MathML equations should
 
 The {{cssxref('@scroll-timeline')}} at-rule and {{cssxref('animation-timeline')}} property allow you to define animations that are linked to container scroll progress (rather than time).
 Once specified, a scroll timeline is associated with a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) by using the `animation-timeline` property.
-For more information see {{bug(1676791)}} and {{bug(1676782)}}
+For more information see {{bug(1676791)}} and {{bug(1676782)}}.
 
 <table>
   <thead>
@@ -1151,7 +1151,7 @@ The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} i
 
 #### ClipboardRead
 
-The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxref('Clipboard')}} interface is also now available under the `dom.events.asyncClipboard.read` preference, when previously it was under `dom.events.asyncClipboard.clipboardItem`. (See ({{bug(1701512)}}) for more details.)
+The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxref('Clipboard')}} interface is also now available under the `dom.events.asyncClipboard.read` preference, when previously it was under `dom.events.asyncClipboard.clipboardItem`. (See {{bug(1701512)}} for more details.)
 
 <table>
   <thead>
@@ -1191,7 +1191,7 @@ The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxr
 
 #### HTML Sanitizer API
 
-The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. Default elements within each configuration property (those to be sanitized) are still under consideration. Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}}) for more information. See {{bug('1673309')}} for more details.
+The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. Default elements within each configuration property (those to be sanitized) are still under consideration. Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}} for more information). See {{bug('1673309')}} for more details.
 
 <table>
   <thead>
@@ -1351,12 +1351,12 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
 
 #### ElementInternals: Form associated custom element methods and properties
 
-New {{domxref("ElementInternals")}} properties and methods that allow a custom elements to interact with a form:
+New {{domxref("ElementInternals")}} properties and methods that allow custom elements to interact with a form:
 
-- property: {{domxref("ElementInternals.form","form")}} gets the form associated with the element
-- property: {{domxref("ElementInternals.labels","labels")}} gets the list of labels associated with the element
-- property: {{domxref("ElementInternals.willValidate", "willValidate")}} checks if a custom form element will be validated.
-- method: {{domxref("ElementInternals.setFormValue()","setFormValue()")}} set the sanitized value and user-entered data, if needed.
+- {{domxref("ElementInternals.form","form")}} property gets the form associated with the element.
+- {{domxref("ElementInternals.labels","labels")}} property gets the list of labels associated with the element.
+- {{domxref("ElementInternals.willValidate", "willValidate")}} property checks if a custom form element will be validated.
+- {{domxref("ElementInternals.setFormValue()","setFormValue()")}} method sets the sanitized value and user-entered data, if needed.
 
 See these bugs for details: {{bug(1556362)}}, {{bug(1556373)}}, {{bug(1556365)}}, {{bug(1556449)}}.
 
