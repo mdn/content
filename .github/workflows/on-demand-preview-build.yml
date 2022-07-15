@@ -166,6 +166,12 @@ jobs:
           cd yari/deployer
           poetry install --no-interaction --no-root
 
+      - name: Checkout Yari
+        uses: actions/checkout@v3
+        with:
+          repository: mdn/yari
+          path: yari
+
       - name: Install Deployer
         run: |
           cd yari/deployer
