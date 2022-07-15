@@ -22,7 +22,11 @@ function inside an expression.
 ## Syntax
 
 ```js
-function* [name]([param1[, param2[, ..., paramN]]]) {
+function* (param1, param2, …, paramN) {
+  statements
+}
+
+function* name(param1, param2, …, paramN) {
   statements
 }
 ```
@@ -35,7 +39,7 @@ function* [name]([param1[, param2[, ..., paramN]]]) {
 - `paramN` {{optional_inline}}
   - : The name of an argument to be passed to the function. A function can have up to 255
     arguments.
-- `statements`
+- `statements` {{optional_inline}}
   - : The statements which comprise the body of the function.
 
 ## Description

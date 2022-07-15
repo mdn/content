@@ -19,7 +19,11 @@ The **`async function*`** keywords can be used to define an asynchronous generat
 ## Syntax
 
 ```js
-async function* [name]([param1[, param2[, ..., paramN]]]) {
+async function* (param1, param2, …, paramN) {
+  statements
+}
+
+async function* name(param1, param2, …, paramN) {
   statements
 }
 ```
@@ -30,7 +34,7 @@ async function* [name]([param1[, param2[, ..., paramN]]]) {
   - : The function name. Can be omitted, in which case the function is _anonymous_. The name is only local to the function body.
 - `paramN` {{optional_inline}}
   - : The name of an argument to be passed to the function. A function can have up to 255 arguments.
-- `statements`
+- `statements` {{optional_inline}}
   - : The statements which comprise the body of the function.
 
 ## Description

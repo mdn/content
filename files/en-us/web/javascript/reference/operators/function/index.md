@@ -22,7 +22,11 @@ You can also define functions using the {{jsxref("Function/Function", "Function"
 The expression is not allowed at the start of a statement.
 
 ```js
-function [name]([param1[, param2[, ..., paramN]]]) {
+function (param1, param2, …, paramN) {
+  statements
+}
+
+function name(param1, param2, …, paramN) {
   statements
 }
 ```

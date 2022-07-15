@@ -41,9 +41,9 @@ asyncGen.next()
 - {{jsxref("AsyncGenerator.prototype.next()")}}
   - : Returns a {{jsxref("Promise")}} which will be resolved with the given value yielded by the {{jsxref("Operators/yield", "yield")}} expression.
 - {{jsxref("AsyncGenerator.prototype.return()")}}
-  - : Returns a {{jsxref("Promise")}} which will be resolved with the given value yielded by the {{jsxref("Operators/yield", "yield")}} expression and finishes the generator.
+  - : Acts as if a `return` statement is inserted in the generator's body at the current suspended position, which finishes the generator and allows the generator to perform any cleanup tasks when combined with a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally-block) block.
 - {{jsxref("AsyncGenerator.prototype.throw()")}}
-  - : Returns a {{jsxref("Promise")}} that is rejected with an exception thrown from (or uncaught from) within the async generator function and finishes the generator unless the exception is caught within that generator.
+  - : Acts as if a `throw` statement is inserted in the generator's body at the current suspended position, which informs the generator of an error condition and allows it to handle the error, or perform cleanup and close itself.
 
 ## Examples
 
@@ -67,11 +67,13 @@ async function* generate() {
   yield await delayedValue(50, 6);
   console.log('All done!');
 }
+
 async function main() {
   for await (const value of generate()) {
     console.log('value', value);
   }
 }
+
 main()
   .catch((e) => console.error('error', e));
 ```

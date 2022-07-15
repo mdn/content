@@ -26,7 +26,7 @@ is less efficient than declaring a generator function with a
 {{jsxref("Statements/function*", "function* expression")}} and calling it within your
 code, because such functions are parsed with the rest of the code.
 
-All arguments passed to the function are treated as the names of the identifiers of the
+All arguments passed to the function, except the last, are treated as the names of the identifiers of the
 parameters in the function to be created, in the order in which they are passed.
 
 > **Note:** {{jsxref("Statements/function*", "generator functions", "", "1")}}

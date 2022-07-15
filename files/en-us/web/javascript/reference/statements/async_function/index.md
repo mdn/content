@@ -21,8 +21,8 @@ Async functions may also be defined {{jsxref("Operators/async_function", "as
 ## Syntax
 
 ```js
-async function name([param[, param[, ...param]]]) {
-   statements
+async function name(param1, param2, …, paramN) {
+  statements
 }
 ```
 
@@ -30,9 +30,9 @@ async function name([param[, param[, ...param]]]) {
 
 - `name`
   - : The function's name.
-- `param`
+- `param` {{optional_inline}}
   - : The name of an argument to be passed to the function.
-- `statements`
+- `statements` {{optional_inline}}
   - : The statements comprising the body of the function. The `await`
     mechanism may be used.
 

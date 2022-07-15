@@ -20,7 +20,7 @@ You can also define async generator functions using the {{jsxref("AsyncGenerator
 ## Syntax
 
 ```js
-async function* name([param[, param[, ..., param]]]) {
+async function* name(param1, param2, …, paramN) {
   statements
 }
 ```
@@ -33,7 +33,7 @@ async function* name([param[, param[, ..., param]]]) {
   - : The function name.
 - `param` {{optional_inline}}
   - : The name of a formal parameter for the function.
-- `statements`
+- `statements` {{optional_inline}}
   - : The statements comprising the body of the function.
 
 ## Description

@@ -39,7 +39,7 @@ new AsyncGeneratorFunction(arg1, arg2, functionBody)
 
 Async generator function objects created with the `AsyncGeneratorFunction` constructor are parsed when the function is created. This is less efficient than declaring a generator function with an {{jsxref("Operators/async_function*", "async function* expression")}} and calling it within your code, because such functions are parsed with the rest of the code.
 
-All arguments passed to the function are treated as the names of the identifiers of the parameters in the function to be created, in the order in which they are passed.
+All arguments passed to the function, except the last, are treated as the names of the identifiers of the parameters in the function to be created, in the order in which they are passed.
 
 > **Note:** Async generator functions created with the `AsyncGeneratorFunction` constructor do not create closures to their creation contexts; they are always created in the global scope.
 > 

@@ -20,7 +20,11 @@ You can also define async functions using an
 ## Syntax
 
 ```js
-async function [name]([param1[, param2[, ..., paramN]]]) {
+async function (param1, param2, …, paramN) {
+  statements
+}
+
+async function name(param1, param2, …, paramN) {
   statements
 }
 ```
@@ -29,12 +33,12 @@ As of ES2015, you can also use [arrow functions](/en-US/docs/Web/JavaScript/Refe
 
 ### Parameters
 
-- `name`
+- `name` {{optional_inline}}
   - : The function name. Can be omitted, in which case the function is _anonymous_.
     The name is only local to the function body.
-- `paramN`
+- `paramN` {{optional_inline}}
   - : The name of an argument to be passed to the function.
-- `statements`
+- `statements` {{optional_inline}}
   - : The statements which comprise the body of the function.
 
 ## Description
