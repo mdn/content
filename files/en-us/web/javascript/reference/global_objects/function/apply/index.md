@@ -29,11 +29,11 @@ apply(thisArg, argsArray)
 
     > **Note:** In certain cases, `this` may not be the actual value seen by the method.
     >
-    > If the method is a function in {{jsxref("Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("null")}} and {{jsxref("undefined")}} will be replaced with the global object, and primitive values will be converted to objects.
+    > If the method is a function in {{jsxref("Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("Operators/null", "null")}} and {{jsxref("undefined")}} will be replaced with the global object, and primitive values will be converted to objects.
 
 - `argsArray` {{optional_inline}}
 
-  - : An array-like object, specifying the arguments with which `func` should be called, or {{jsxref("null")}} or {{jsxref("undefined")}} if no arguments should be provided to the function.
+  - : An array-like object, specifying the arguments with which `func` should be called, or {{jsxref("Operators/null", "null")}} or {{jsxref("undefined")}} if no arguments should be provided to the function.
 
     Starting with ECMAScript 5 these arguments can be a generic array-like object instead of an array. See below for [browser compatibility](#browser_compatibility) information.
 
