@@ -22,9 +22,8 @@ There are two protocols: The [iterable protocol](#the_iterable_protocol) and the
 
 In order to be **iterable**, an object must implement the **`@@iterator`** method, meaning that the object (or one of the objects up its [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)) must have a property with a `@@iterator` key which is available via constant {{jsxref("Symbol.iterator")}}:
 
-| Property            | Value                                                                                                           |
-| ------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `[Symbol.iterator]` | A zero-argument function that returns an object, conforming to the [iterator protocol](#the_iterator_protocol). |
+- `[Symbol.iterator]`
+  - : A zero-argument function that returns an object, conforming to the [iterator protocol](#the_iterator_protocol).
 
 Whenever an object needs to be iterated (such as at the beginning of a {{jsxref("Statements/for...of", "for...of")}} loop), its `@@iterator` method is called with no arguments, and the returned **iterator** is used to obtain the values to be iterated.
 
@@ -87,9 +86,8 @@ There are another pair of protocols used for async iteration, named **async iter
 
 An object implements the async iterable protocol when it implements the following methods:
 
-| Property            | Value                                                                                                           |
-| ------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `[Symbol.asyncIterator]` | A zero-argument function that returns an object, conforming to the async iterator protocol. |
+- [`[Symbol.asyncIterator]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator)
+  - : A zero-argument function that returns an object, conforming to the async iterator protocol.
 
 An object implements the async iterator protocol when it implements the following methods:
 
