@@ -35,8 +35,6 @@ apply(thisArg, argsArray)
 
   - : An array-like object, specifying the arguments with which `func` should be called, or {{jsxref("Operators/null", "null")}} or {{jsxref("undefined")}} if no arguments should be provided to the function.
 
-    Starting with ECMAScript 5 these arguments can be a generic array-like object instead of an array. See below for [browser compatibility](#browser_compatibility) information.
-
 ### Return value
 
 The result of calling the function with the specified **`this`** value and arguments.
