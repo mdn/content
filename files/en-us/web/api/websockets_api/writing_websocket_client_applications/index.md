@@ -181,7 +181,7 @@ exampleSocket.onmessage = function(event) {
       setUsername();
       break;
     case "username":
-      text = "User <em>" + msg.name + "</em> signed in at " + timeStr + "<br>";
+      text = `User <em>${msg.name}</em> signed in at ${timeStr}<br>`;
       break;
     case "message":
       text = "(" + timeStr + ") " + msg.name + ": " + msg.text + "<br>";
