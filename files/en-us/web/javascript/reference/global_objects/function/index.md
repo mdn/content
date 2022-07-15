@@ -30,6 +30,8 @@ Every JavaScript function is actually a `Function` object. This can be seen with
   - : Specifies the number of arguments expected by the function.
 - {{jsxref("Function.prototype.name")}}
   - : The name of the function.
+- {{jsxref("Function.prototype.prototype")}}
+  - : Used when the function is used as a constructor with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. It will become the new object's prototype.
 
 ## Instance methods
 
