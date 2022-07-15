@@ -1,0 +1,126 @@
+name: On Demand Preview Build
+
+on:
+  workflow_dispatch:
+    inputs:
+      notes:
+        description: "Notes"
+        required: false
+        default: "Default on demand preview build"
+
+      # This is very useful when combined with the "Use workflow from"
+      # feature that is built into the "Run workflow" button on
+      # https://github.com/mdn/yari/actions?query=workflow%3A%22Production+Build%22
+      # If you override the deployment prefix to something like the name
+      # of the branch, you can deploy that entire branch to its own prefix
+      # in S3 which means that it can be fully hosted as its own site.
+      deployment_prefix:
+        description: "Deployment prefix"
+        required: false
+        default: "contributor-docs"
+
+jobs:
+  on-demand-preview-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Download artifact"
+        uses: actions/github-script@v6
+        with:
+          script: |
+            var artifacts = await github.rest.actions.listWorkflowRunArtifacts({
+               owner: context.repo.owner,
+               repo: context.repo.repo,
+               run_id: ${{github.event.workflow_run.id }},
+            });
+            var matchArtifacts = artifacts.data.artifacts.filter((artifact) => {
+              return artifact.name == "build"
+            });
+            if (matchArtifacts.length === 0) {
+              console.warn(
+                'No artifacts to download probably just means nothing ' +
+                'was built in the "PR test" workflow. That\'s OK. ' +
+                'This is actually not a genuine CI error.'
+              );
+              throw new Error(
+                'No matched build artifacts. ' +
+                'Perhaps nothing built in the "PR test" workflow'
+              );
+            }
+            var matchArtifact = matchArtifacts[0];
+            var download = await github.rest.actions.downloadArtifact({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                artifact_id: matchArtifact.id,
+                archive_format: 'zip',
+            });
+            var fs = require('fs');
+            fs.writeFileSync('${{github.workspace}}/build.zip', Buffer.from(download.data));
+
+      - name: Unzip what was downloaded
+        run: |
+          unzip build.zip -d build
+
+      - uses: actions/checkout@v3
+        with:
+          repository: mdn/yari
+          path: yari
+
+      - name: Install Python
+        id: setup-python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+
+      # See https://www.peterbe.com/plog/install-python-poetry-github-actions-faster
+      - name: Load cached ~/.local
+        uses: actions/cache@v3
+        with:
+          path: ~/.local
+          # the trailing number is used to increase for getting
+          # a different cache key when this file changes
+          key: dotlocal-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-0
+
+      - name: Install Python poetry
+        uses: snok/install-poetry@v1.3
+        with:
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+
+      - name: Load cached venv
+        id: cached-poetry-dependencies
+        uses: actions/cache@v3
+        with:
+          path: yari/deployer/.venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}
+
+      - name: Install poetry dependencies
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        run: |
+          cd yari/deployer
+          poetry install --no-interaction --no-root
+
+      - name: Install Deployer
+        run: |
+          cd yari/deployer
+          poetry install --no-interaction
+
+      - name: Deploy and analyze built content
+        env:
+          BUILD_OUT_ROOT: ${{ github.workspace }}/build
+          DEPLOYMENT_PREIFIX: ${{ github.event.inputs.deployment_prefix }}
+
+          DEPLOYER_BUCKET_NAME: mdn-content-dev
+          AWS_ACCESS_KEY_ID: ${{ secrets.DEPLOYER_DEV_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOYER_DEV_AWS_SECRET_ACCESS_KEY }}
+          DEPLOYER_LOG_EACH_SUCCESSFUL_UPLOAD: false
+
+        run: |
+          echo "ON DEMAND PREVIEW DEPLOY: $DEPLOYMENT_PREIFIX"
+
+          cd yari/deployer
+
+          poetry run deployer upload \
+            --prefix="$DEPLOYMENT_PREIFIX" \
+            --default-cache-control 0 \
+            "$BUILD_OUT_ROOT"
