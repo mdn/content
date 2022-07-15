@@ -34,13 +34,14 @@ async function* asyncGeneratorFunction() {}
 function* generatorFunction() {}
 ```
 
-Instead, [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*)' `prototype` property is used when they are _called_ without `new`. The `prototype` property will become the returned [`Generator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) object's prototype.
+Instead, [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*)' `prototype` property is used when they are called _without_ `new`. The `prototype` property will become the returned [`Generator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) object's prototype.
 
-The following functions do not have `prototype`, and are therefore ineligible as constructors, even if a `prototype` property is manually assigned:
+The following functions do not have `prototype`, and are therefore ineligible as constructors, even if a `prototype` property is later manually assigned:
 
 ```js
 const method = { foo() {} }.foo;
 const arrowFunction = () => {};
+const boundFunction = (function () {}).bind(null);
 async function asyncFunction() {}
 ```
 
