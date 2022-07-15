@@ -22,8 +22,6 @@ MathML elements implement the {{domxref("MathMLElement")}} class.
 ### A
 
 - {{MathMLElement("maction")}} (Bound actions to sub-expressions)
-- {{MathMLElement("maligngroup")}} (Alignment group)
-- {{MathMLElement("malignmark")}} (Alignment points)
 
 ### E
 
@@ -38,10 +36,6 @@ MathML elements implement the {{domxref("MathMLElement")}} class.
 ### I
 
 - {{MathMLElement("mi")}} (Identifier)
-
-### L
-
-- {{MathMLElement("mlongdiv")}} (Long division notation)
 
 ### M
 
@@ -69,14 +63,8 @@ MathML elements implement the {{domxref("MathMLElement")}} class.
 ### S
 
 - {{MathMLElement("ms")}} (String literal)
-- {{MathMLElement("mscarries")}} (Annotations such as carries)
-- {{MathMLElement("mscarry")}} (Single carry, child element of {{MathMLElement("mscarries")}})
-- {{MathMLElement("msgroup")}} (Grouped rows of {{MathMLElement("mstack")}} and {{MathMLElement("mlongdiv")}} elements)
-- {{MathMLElement("msline")}} (Horizontal lines inside {{MathMLElement("mstack")}} elements)
 - {{MathMLElement("mspace")}} (Space)
 - {{MathMLElement("msqrt")}} (Square root without an index)
-- {{MathMLElement("msrow")}} (Rows in {{MathMLElement("mstack")}} elements)
-- {{MathMLElement("mstack")}} (Stacked alignment)
 - {{MathMLElement("mstyle")}} (Style change)
 - {{MathMLElement("msub")}} (Subscript)
 - {{MathMLElement("msup")}} (Superscript)
@@ -142,21 +130,9 @@ MathML elements implement the {{domxref("MathMLElement")}} class.
 
 ### Tabular math
 
-- {{MathMLElement("maligngroup")}}
-- {{MathMLElement("malignmark")}}
 - {{MathMLElement("mtable")}}
 - {{MathMLElement("mtd")}}
 - {{MathMLElement("mtr")}}
-
-### Elementary math
-
-- {{MathMLElement("mlongdiv")}}
-- {{MathMLElement("mscarries")}}
-- {{MathMLElement("mscarry")}}
-- {{MathMLElement("msgroup")}}
-- {{MathMLElement("msline")}}
-- {{MathMLElement("msrow")}}
-- {{MathMLElement("mstack")}}
 
 ### Uncategorized elements
 

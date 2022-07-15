@@ -276,7 +276,7 @@ assert(Object.getPrototypeOf(obj3) === protoObj)
 
 let obj4 = {__proto__: 'not an object or null'}
 assert(Object.getPrototypeOf(obj4) === Object.prototype)
-assert(!obj4.hasOwnProperty('__proto__'))
+assert(!Object.hasOwn(obj4, '__proto__'))
 ```
 
 Only a single prototype setter is permitted in an object literal. Multiple prototype setters are a syntax error.
@@ -288,7 +288,7 @@ let __proto__ = 'variable'
 
 let obj1 = {__proto__}
 assert(Object.getPrototypeOf(obj1) === Object.prototype)
-assert(obj1.hasOwnProperty('__proto__'))
+assert(Object.hasOwn(obj1, '__proto__'))
 assert(obj1.__proto__ === 'variable')
 
 let obj2 = {__proto__() { return 'hello'; }}

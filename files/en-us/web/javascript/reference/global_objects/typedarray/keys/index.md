@@ -47,8 +47,8 @@ for (const n of eArray) {
 ### Alternative iteration
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArr = arr.keys();
+const arr = new Uint8Array([10, 20, 30, 40, 50]);
+const eArr = arr.keys();
 console.log(eArr.next().value); // 0
 console.log(eArr.next().value); // 1
 console.log(eArr.next().value); // 2

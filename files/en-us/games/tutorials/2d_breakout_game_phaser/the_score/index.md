@@ -26,7 +26,7 @@ We will use a separate variable for storing the score and Phaser's `text()` meth
 Add two new variables right after the previously defined ones:
 
 ```js
-// ...
+// …
 var scoreText;
 var score = 0;
 ```

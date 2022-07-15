@@ -33,7 +33,7 @@ A {{domxref("MIDIConnectionEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-- {{domxref("MIDIConnectionEvent.port")}}{{readonlyinline}}
+- {{domxref("MIDIConnectionEvent.port")}} {{readonlyinline}}
   - : Returns a reference to a {{domxref("MIDIPort")}} instance for a port that has been connected or disconnected.
 
 ## Example

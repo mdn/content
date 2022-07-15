@@ -57,9 +57,9 @@ Browser APIs are built into the browser — you can access them from JavaScript 
 
 ```js
 const audioCtx = new AudioContext();
-  ...
+// …
 const audioElement = document.querySelector('audio');
-  ...
+// …
 const audioSource = audioCtx.createMediaElementSource(audioElement);
 // etc.
 ```
@@ -169,7 +169,7 @@ Finally, we chain `.addTo(map)` to the end of the chain to actually add the mark
 
 Have a play with the other options shown in the documentation and see what you can come up with! Mapquest provides some pretty advanced functionality, such as directions, searching, etc.
 
-> **Note:** If you have trouble getting the example to work, check your code against our [finished version](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/finished/script.js) (also [see it running live here](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/finished/)).
+> **Note:** If you have trouble getting the example to work, check your code against our [finished version](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/finished/script.js).
 
 ## A RESTful API — NYTimes
 
@@ -343,7 +343,7 @@ There's a lot of code here; let's explain it step by step:
 - If some articles are returned, we, first of all, create all the elements that we want to use to display each news story, insert the right contents into each one, and then insert them into the DOM at the appropriate places. To work out which properties in the article objects contained the right data to show, we consulted the Article Search API reference (see [NYTimes APIs](https://developer.nytimes.com/apis)). Most of these operations are fairly obvious, but a few are worth calling out:
 
   - We used a [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop to go through all the keywords associated with each article, and insert each one inside its own {{htmlelement("span")}}, inside a `<p>`. This was done to make it easy to style each one.
-  - We used an `if()` block (`if(current.multimedia.length > 0) { ... }`) to check whether each article has any images associated with it (some stories don't.) We display the first image only if it exists (otherwise an error would be thrown).
+  - We used an `if ()` block (`if (current.multimedia.length > 0) { }`) to check whether each article has any images associated with it, as some stories don't. We display the first image only if it exists; otherwise, an error would be thrown.
 
 ### Wiring up the pagination buttons
 

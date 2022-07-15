@@ -62,9 +62,9 @@ The `contain` property is specified as either one of the following:
 - `none`
   - : Indicates the element renders as normal, with no containment applied.
 - `strict`
-  - : Indicates that all containment rules except `style` are applied to the element. This is equivalent to `contain: size layout paint`.
+  - : Indicates that all containment rules are applied to the element. This is equivalent to `contain: size layout paint style`.
 - `content`
-  - : Indicates that all containment rules except `size` and `style` are applied to the element. This is equivalent to `contain: layout paint`.
+  - : Indicates that all containment rules except `size` are applied to the element. This is equivalent to `contain: layout paint style`.
 - `size`
   - : Indicates that the element can be sized without the need to examine its descendants' sizes.
 - `layout`

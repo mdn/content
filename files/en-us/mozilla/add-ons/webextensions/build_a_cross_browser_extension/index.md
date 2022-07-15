@@ -66,7 +66,7 @@ So, for example, this `manifest.json` code makes the polyfill available to backg
 
 ```json
 {
- // ...
+ // …
  "background": {
    "scripts": [
      "browser-polyfill.js",

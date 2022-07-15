@@ -109,7 +109,7 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
 
 ## Interactive Examples
 
-{{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}{{EmbedInteractiveExample("pages/css/order.html")}}{{EmbedInteractiveExample("pages/js/regexp-assertions.html", "taller")}}
+{{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}} {{EmbedInteractiveExample("pages/css/order.html")}} {{EmbedInteractiveExample("pages/js/regexp-assertions.html", "taller")}}
 
 ## Tables
 
@@ -234,7 +234,6 @@ When you request to access a {{Glossary("URL")}}, the gateway server can relay y
 - JavaScript {{jsxref("Array")}} on MDN
 
 Listening for mouse movement is even easier than listening for key presses: all we need is the listener for the {{domxref("Element/mousemove_event", "mousemove")}} event.
-...just below the `keyup event`:
 
 ## Browser compatibility
 

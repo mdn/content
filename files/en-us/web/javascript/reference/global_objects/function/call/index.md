@@ -148,6 +148,7 @@ first argument. If the first argument is not passed, the value of `this` is
 bound to the global object.
 
 ```js
+// var creates a property on the global object
 var sData = 'Wisen';
 
 function display() {
@@ -157,8 +158,7 @@ function display() {
 display.call();  // sData value is Wisen
 ```
 
-> **Note:** In strict mode, the value of `this` will be
-> `undefined`. See below.
+In strict mode, the value of `this` will be `undefined`.
 
 ```js
 'use strict';

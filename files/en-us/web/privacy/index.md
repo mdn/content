@@ -116,16 +116,6 @@ There are several web technologies and features at play to manage privacy and se
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/HTTP/Public_Key_Pinning">HTTP Public Key Pinning</a> (HPKP)
-      </td>
-      <td>
-        HPKP is used by servers to instruct a client to associate a specific
-        public key with the server going forward in order to decrease the
-        likelihood of man-in-the-middle attacks
-      </td>
-    </tr>
-    <tr>
-      <td>
         <a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">HTTP Strict Transport Security</a> (HSTS)
       </td>
       <td>

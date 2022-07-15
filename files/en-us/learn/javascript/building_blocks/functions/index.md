@@ -50,7 +50,9 @@ Pretty much anytime you make use of a JavaScript structure that features a pair 
 
 ## Built-in browser functions
 
-We've made use of functions built in to the browser a lot in this course. Every time we manipulated a text string, for example:
+We've used functions built in to the browser a lot in this course.
+
+Every time we manipulated a text string, for example:
 
 ```js
 const myText = 'I am a string';
@@ -72,7 +74,7 @@ console.log(madeAString);
 // string, and returns this new string
 ```
 
-Or every time we generated a random number:
+Or every time we generate a random number:
 
 ```js
 const myNumber = Math.random();
@@ -80,7 +82,7 @@ const myNumber = Math.random();
 // 0 and up to but not including 1, and returns that number
 ```
 
-...we were using a function!
+We were using a _function_!
 
 > **Note:** Feel free to enter these lines into your browser's JavaScript console to re-familiarize yourself with their functionality, if needed.
 
@@ -452,7 +454,7 @@ Let's look at a real example to demonstrate scoping.
 
     This time the `a()` and `b()` calls will throw that annoying [ReferenceError: _variable name_ is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error into the console — this is because the `output()` calls and the variables they are trying to print are not in the same function scopes — the variables are effectively invisible to those function calls.
 
-> **Note:** The same scoping rules do not apply to loop (e.g. `for() { ... }`) and conditional blocks (e.g. `if() { ... }`) — they look very similar, but they are not the same thing! Take care not to get these confused.
+> **Note:** The same scoping rules do not apply to loop (e.g. `for() { }`) and conditional blocks (e.g. `if() { }`) — they look very similar, but they are not the same thing! Take care not to get these confused.
 
 > **Note:** The [ReferenceError: "x" is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error is one of the most common you'll encounter. If you get this error and you are sure that you have defined the variable in question, check what scope it is in.
 

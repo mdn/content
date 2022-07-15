@@ -151,14 +151,14 @@ To make it into a good example, you insert `example-good` just before the closin
 
 ```html
 <pre class="brush: js example-good">
-  ...
+ …
 ```
 
 To make it into a bad example, you insert `example-bad` just before the closing quote of the `class` attribute:
 
 ```html
 <pre class="brush: js example-bad">
-  ...
+  …
 ```
 
 We would like to encourage you to use these. You don't need to use these everywhere — only when you are specifically calling out good and bad practices in your code.

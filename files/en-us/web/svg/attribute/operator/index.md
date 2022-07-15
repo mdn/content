@@ -88,7 +88,7 @@ For {{SVGElement("feComposite")}}, `operator` defines the compositing operation 
     `result = k1*i1*i2 + k2*i1 + k3*i2 + k4`
 
     where:
-    `i1` and `i2` indicate the corresponding pixel channel values of the input image, which map to `in` and `in2` respectively, and {{SVGAttr("k1")}},{{SVGAttr("k2")}},{{SVGAttr("k3")}},and {{SVGAttr("k4")}} indicate the values of the attributes with the same name.
+    `i1` and `i2` indicate the corresponding pixel channel values of the input image, which map to `in` and `in2` respectively, and {{SVGAttr("k1")}}, {{SVGAttr("k2")}}, {{SVGAttr("k3")}}, and {{SVGAttr("k4")}} indicate the values of the attributes with the same name.
 
 ## feMorphology
 

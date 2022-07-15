@@ -124,8 +124,10 @@ After specifying the validators we create a middleware function to extract any v
   return;
   }
   else {
-    // Data from form is valid.
-    ... <save the result/> ...
+    // Form data is valid.
+  
+    // Save the result.
+    // …
   }
 };
 ```

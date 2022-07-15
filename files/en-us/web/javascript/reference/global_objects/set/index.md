@@ -20,6 +20,8 @@ The **`Set`** object lets you store unique values of any type, whether {{Glossar
 
 `Set` objects are collections of values. You can iterate through the elements of a set in insertion order. A value in the `Set` **may only occur once**; it is unique in the `Set`'s collection.
 
+The specification requires sets to be implemented "that, on average, provide access times that are sublinear on the number of elements in the collection". Therefore, it could be represented internally as a hash table (with O(1) lookup), a search tree (with O(log(N)) lookup), or any other data structure, as long as the complexity is better than O(N).
+
 ### Value equality
 
 Because each value in the `Set` has to be unique, the value equality will be checked. In an earlier version of ECMAScript specification, this was not based on the same algorithm as the one used in the `===` operator. Specifically, for `Set`s, `+0` (which is strictly equal to `-0`) and `-0` were different values. However, this was changed in the ECMAScript 2015 specification. See _"Key equality for -0 and 0"_ in the [browser compatibility](#browser_compatibility) table for details.

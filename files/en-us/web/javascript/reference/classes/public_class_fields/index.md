@@ -60,7 +60,7 @@ class ClassWithStaticField {
   static staticField
 }
 
-console.assert(ClassWithStaticField.hasOwnProperty('staticField'))
+console.assert(Object.hasOwn(ClassWithStaticField, 'staticField'))
 console.log(ClassWithStaticField.staticField)
 // expected output: "undefined"
 ```
@@ -135,7 +135,7 @@ class ClassWithInstanceField {
 }
 
 const instance = new ClassWithInstanceField()
-console.assert(instance.hasOwnProperty('instanceField'))
+console.assert(Object.hasOwn(instance, 'instanceField'))
 console.log(instance.instanceField)
 // expected output: "undefined"
 ```

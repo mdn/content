@@ -90,7 +90,7 @@ Further information — at this point, include a few more paragraphs explaining 
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("attribute1")}}{{Deprecated_inline}}{{experimental_inline}}
+- {{htmlattrdef("attribute1")}} {{Deprecated_inline}} {{experimental_inline}}
   - : Include description here of what the attribute does. Include one term and definition for each attribute. If the attribute is not experimental/deprecated, remove the relevant macro calls.
 - {{htmlattrdef("attribute2")}}
   - : etc.
@@ -123,10 +123,10 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_exam
 >  ## Examples
 >
 >  ### Using the fetch API
->  ... example of Fetch
+>  Example of Fetch
 >
 >  ### More examples
->  ...links to more examples on other pages
+>  Links to more examples on other pages
 >  ```
 >
 > **Scenario 2:** If you _only_ have examples on another page and none on this page:

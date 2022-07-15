@@ -47,7 +47,7 @@ function () {
 You can use a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function) (assignment) instead:
 
 ```js example-good
-var greet = function() {
+const greet = function () {
   return 'Hello world';
 };
 ```
@@ -90,7 +90,7 @@ If you intended to create a method of an object, you will need to create an obje
 The following syntax without a name after the `function` keyword is valid then.
 
 ```js example-good
-var greeter = {
+const greeter = {
   german: function () {
     return "Moin";
   }
@@ -104,10 +104,10 @@ Brackets and commas can quickly get confusing.
 
 ```js example-bad
 promise.then(
-  function() {
+  function () {
     console.log("success");
   });
-  function() {
+  function () {
     console.log("error");
 }
 // SyntaxError: function statement requires a name
@@ -115,14 +115,14 @@ promise.then(
 
 Correct would be:
 
-```json example-good
+```js example-good
 promise.then(
-  function() {
+  function () {
     console.log("success");
   },
-  function() {
+  function () {
     console.log("error");
-  }
+  },
 );
 ```
 

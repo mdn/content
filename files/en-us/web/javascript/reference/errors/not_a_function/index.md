@@ -14,9 +14,8 @@ value from a function, but the value is not actually a function.
 
 ## Message
 
-```js
-TypeError: Object doesn't support property or method {x} (Edge)
-TypeError: "x" is not a function
+```
+TypeError: "x" is not a function. (V8-based & Firefox & Safari)
 ```
 
 ## Error type

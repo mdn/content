@@ -80,7 +80,7 @@ class MyModelName(models.Model):
 
     # Fields
     my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
-    ...
+    # …
 
     # Metadata
     class Meta:

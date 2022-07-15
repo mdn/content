@@ -74,7 +74,7 @@ The summary paragraph — start by naming the interface, saying what API it is p
 
 _Also inherits properties from its parent interface, {{DOMxRef("NameOfParentInterface")}}._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
 
-- {{DOMxRef("NameOfTheInterface.property1")}}{{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{DOMxRef("NameOfTheInterface.property1")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Include a brief description of the property and what it does here. Include one term and definition for each property. If the property is not readonly/experimental/deprecated, remove the relevant macro calls.
 - {{DOMxRef("NameOfTheInterface.property2")}}
   - : etc.
@@ -119,10 +119,10 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_exam
 >  ## Examples
 >
 >  ### Using the fetch API
->  ... example of Fetch
+>  Example of Fetch
 >
 >  ### More examples
->  ...links to more examples on other pages
+>  Links to more examples on other pages
 >  ```
 >
 > **Scenario 2:** If you _only_ have examples on another page and none on this page:

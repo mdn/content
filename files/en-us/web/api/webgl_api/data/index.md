@@ -35,7 +35,7 @@ There are three kinds of "variable" or data storage available in GLSL, each of w
 
 ```js
 //init colors
-    var vertexColors = [
+    const vertexColors = [
         vec4( 0.0, 0.0, 0.0, 1.0 ),  // black
         vec4( 1.0, 0.0, 0.0, 1.0 ),  // red
         vec4( 1.0, 1.0, 0.0, 1.0 ),  // yellow
@@ -45,7 +45,7 @@ There are three kinds of "variable" or data storage available in GLSL, each of w
         vec4( 1.0, 1.0, 0.0, 1.0 ),  // yellow
         vec4( 0.0, 1.0, 0.0, 1.0 ),  // green
     ];
-    var cBuffer = gl.createBuffer();
+    const cBuffer = gl.createBuffer();
 ```
 
 ```js
@@ -54,7 +54,7 @@ There are three kinds of "variable" or data storage available in GLSL, each of w
     gl.bindBuffer( gl.ARRAY_BUFFER, cBuffer );
     gl.bufferData( gl.ARRAY_BUFFER, flatten(vertexColors), gl.STATIC_DRAW );
 
-    var vColor = gl.getAttribLocation( program, "vColor" );
+    const vColor = gl.getAttribLocation( program, "vColor" );
     gl.vertexAttribPointer( vColor, 4, gl.FLOAT, false, 0, 0 );
     gl.enableVertexAttribArray( vColor );
 ```

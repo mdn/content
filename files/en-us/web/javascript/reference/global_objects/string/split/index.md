@@ -182,6 +182,8 @@ This script displays the following:
 
 An object with a `Symbol.split` method can be used as a splitter with custom behavior.
 
+The following example splits a string using an internal state consisting of an incrementing number:
+
 ```js
 const splitByNumber = {
   [Symbol.split](str) {
@@ -196,13 +198,93 @@ const splitByNumber = {
       }
       result.push(str.substring(pos, matchPos));
       pos = matchPos + String(num).length;
+      num++;
     }
     return result;
   }
 };
 
 const myString = "a1bc2c5d3e4f";
-console.log(myString.split(splitByNumber)); // [ "a", "bc", "c5d", "e", "f" ]
+console.log(myString.split(splitByNumber)); // => [ "a", "bc", "c5d", "e", "f" ]
+```
+
+The following example uses an internal state to enforce certain behavior, and to ensure a "valid" result is produced.
+
+```js
+const DELIMITER = ";";
+
+// Split the commands, but remove any invalid or unnecessary values.
+const splitCommands = {
+  [Symbol.split](str, lim) {
+    const results = [];
+    const state = {
+      on: false,
+      brightness: {
+        current: 2,
+        min: 1,
+        max: 3
+      }
+    };
+    let pos = 0;
+    let matchPos = str.indexOf(DELIMITER, pos);
+
+    while (matchPos !== -1) {
+      const subString = str.slice(pos, matchPos).trim();
+
+      switch (subString) {
+        case "light on":
+          // If the `on` state is already true, do nothing.
+          if (!state.on) {
+            state.on = true;
+            results.push(subString);
+          }
+          break;
+
+        case "light off":
+          // If the `on` state is already false, do nothing.
+          if (state.on) {
+            state.on = false;
+            results.push(subString);
+          }
+          break;
+
+        case "brightness up":
+          // Enforce a brightness maximum.
+          if (state.brightness.current < state.brightness.max) {
+            state.brightness.current += 1;
+            results.push(subString);
+          }
+          break;
+
+        case "brightness down":
+          // Enforce a brightness minimum.
+          if (state.brightness.current > state.brightness.min) {
+            state.brightness.current -= 1;
+            results.push(subString);
+          }
+          break;
+      }
+
+      if (results.length === lim) {
+        break;
+      }
+
+      pos = matchPos + DELIMITER.length;
+      matchPos = str.indexOf(DELIMITER, pos);
+    }
+
+    // If we broke early due to reaching the split `lim`, don't add the remaining commands.
+    if (results.length < lim) {
+      results.push(str.slice(pos).trim());
+    }
+
+    return results;
+  }
+};
+
+const commands = "light on; brightness up; brightness up; brightness up; light on; brightness down; brightness down; light off";
+console.log(commands.split(splitCommands, 3)); // => ["light on", "brightness up", "brightness down"]
+
 ```
 
 ## Specifications

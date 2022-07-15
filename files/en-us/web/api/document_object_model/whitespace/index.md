@@ -127,7 +127,7 @@ Inside this context, whitespace character processing can be summarized as follow
     <h1>◦Hello◦<span>World!</span>◦</h1>
     ```
 
-5. And finally, sequences of spaces at the beginning and end of a line are removed, so we finally get this:
+5. And finally, sequences of spaces at the beginning and end of an element are removed, so we finally get this:
 
     ```html
     <h1>Hello◦<span>World!</span></h1>

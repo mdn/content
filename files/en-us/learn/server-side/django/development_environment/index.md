@@ -232,7 +232,7 @@ At this point you should see a bunch of scripts being run as shown below:
 ```bash
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/premkproject
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/postmkproject
-...
+# …
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/preactivate
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/postactivate
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/get_env_details
@@ -313,7 +313,7 @@ Now you can create a new virtual environment with the `mkvirtualenv` command. As
 $ mkvirtualenv my_django_environment
 
 Running virtualenv with interpreter /usr/bin/python3
-...
+# …
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get_env_details
 (my_django_environment) ubuntu@ubuntu:~$
 ```
@@ -389,7 +389,7 @@ We can run the _development web server_ from within this folder using **manage.p
 ```bash
 $ python3 manage.py runserver
 Watching for file changes with StatReloader
-Performing system checks...
+Performing system checks…
 
 System check identified no issues (0 silenced).
 

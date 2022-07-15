@@ -243,7 +243,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
     </tr>
     <tr>
       <td>
-        {{domxref("HTMLTextAreaElement.labels")}}{{ReadOnlyInline}}
+        {{domxref("HTMLTextAreaElement.labels")}} {{ReadOnlyInline}}
       </td>
       <td>
         {{domxref("NodeList")}}: Returns a list of label elements
@@ -331,7 +331,7 @@ Listen to these events using {{domxref("EventTarget/addEventListener", "addEvent
 
 - {{domxref("HTMLElement/input_event", "input")}} event
   - : Fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
-- {{domxref("HTMLTextAreaElement/selectionchange_event", "selectionchange")}} event{{experimental_inline}}
+- {{domxref("HTMLTextAreaElement/selectionchange_event", "selectionchange")}} event {{experimental_inline}}
   - : Fires when the text selection in a {{HTMLElement("textarea")}} element has been changed.
 
 ## Examples
