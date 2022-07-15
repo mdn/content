@@ -19,7 +19,7 @@ The **`matches()`** method of the {{domxref("Element")}} interface tests whether
 ## Syntax
 
 ```js
-matches(selectorString)
+matches(selectors)
 ```
 
 ### Parameters
