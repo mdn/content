@@ -63,7 +63,7 @@ insert the value of `location.pathname` into the hash:
 
 ```js
 function reloadPageWithHash() {
-  var initialPage = location.pathname;
+  const initialPage = location.pathname;
   location.replace('http://example.com/#' + initialPage);
 }
 ```
@@ -72,8 +72,8 @@ function reloadPageWithHash() {
 
 ```js
 function showLoc() {
-  var oLocation = location, aLog = ["Property (Typeof): Value", "location (" + (typeof oLocation) + "): " + oLocation ];
-  for (var sProp in oLocation){
+  const oLocation = location, aLog = ["Property (Typeof): Value", "location (" + (typeof oLocation) + "): " + oLocation ];
+  for (let sProp in oLocation){
   aLog.push(sProp + " (" + (typeof oLocation[sProp]) + "): " + (oLocation[sProp] || "n/a"));
   }
   alert(aLog.join("\n"));
@@ -155,8 +155,8 @@ span.intLink {
 …the same thing but with an animated page scroll:
 
 ```js
-var showBookmark = (function () {
-  var  _useHash, _scrollX, _scrollY, _nodeX, _nodeY, _itFrame, _scrollId = -1, _bookMark,
+const showBookmark = (function () {
+  const  _useHash, _scrollX, _scrollY, _nodeX, _nodeY, _itFrame, _scrollId = -1, _bookMark,
    /*
    * nDuration: the duration in milliseconds of each frame
    * nFrames: number of frames for each scroll
@@ -181,7 +181,7 @@ var showBookmark = (function () {
   else if (window.attachEvent) { window.attachEvent("onscroll", _chkOwner); }
 
   return function (sBookmark, bUseHash) {
-    var oNode = document.querySelector(sBookmark);
+    const oNode = document.querySelector(sBookmark);
   _scrollY = document.documentElement.scrollTop;
   _scrollX = document.documentElement.scrollLeft;
   _bookMark = sBookmark;
