@@ -23,22 +23,22 @@ This interface is accessible through the {{domxref("VRDisplay.stageParameters")}
 
 ## Properties
 
-- {{domxref("VRStageParameters.sittingToStandingTransform")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRStageParameters.sittingToStandingTransform")}} {{deprecated_inline}} {{readonlyInline}}
   - : Contains a matrix that transforms the sitting-space view matrices of {{domxref("VRFrameData")}} to standing-space.
-- {{domxref("VRStageParameters.sizeX")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRStageParameters.sizeX")}} {{deprecated_inline}} {{readonlyInline}}
   - : _Returns the width_ of the play-area bounds in meters.
-- {{domxref("VRStageParameters.sizeY")}} {{deprecated_inline}}{{readonlyInline}}
+- {{domxref("VRStageParameters.sizeY")}} {{deprecated_inline}} {{readonlyInline}}
   - : _Returns the depth_ of the play-area bounds in meters.
 
 ## Examples
 
 ```js
-var info = document.querySelector('p');
-var vrDisplay;
+const info = document.querySelector('p');
+let vrDisplay;
 
 navigator.getVRDisplays().then(function(displays) {
   vrDisplay = displays[0];
-  var stageParams = vrDisplay.stageParameters;
+  const stageParams = vrDisplay.stageParameters;
   // stageParams is a VRStageParameters object
 
   if(stageParams === null) {

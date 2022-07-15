@@ -21,12 +21,12 @@ To create a **WebGLShader** use {{domxref("WebGLRenderingContext.createShader")}
 ```js
 function createShader (gl, sourceCode, type) {
   // Compiles either a shader of type gl.VERTEX_SHADER or gl.FRAGMENT_SHADER
-  var shader = gl.createShader( type );
+  const shader = gl.createShader( type );
   gl.shaderSource( shader, sourceCode );
   gl.compileShader( shader );
 
   if ( !gl.getShaderParameter(shader, gl.COMPILE_STATUS) ) {
-    var info = gl.getShaderInfoLog( shader );
+    const info = gl.getShaderInfoLog( shader );
     throw 'Could not compile WebGL program. \n\n' + info;
   }
   return shader;
@@ -42,26 +42,26 @@ See {{domxref("WebGLProgram")}} for information on attaching the shaders.
 Note that there are many other strategies for writing and accessing shader source code strings. These example are for illustration purposes only.
 
 ```js
-var vertexShaderSource =
+const vertexShaderSource =
   'attribute vec4 position;\n' +
   'void main() {\n' +
   '  gl_Position = position;\n' +
   '}\n';
 
 //Use the createShader function from the example above
-var vertexShader = createShader(gl, vertexShaderSource, gl.VERTEX_SHADER)
+const vertexShader = createShader(gl, vertexShaderSource, gl.VERTEX_SHADER)
 ```
 
 ### Creating a fragment shader
 
 ```js
-var fragmentShaderSource =
+const fragmentShaderSource =
   'void main() {\n' +
   '  gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);\n' +
   '}\n';
 
 //Use the createShader function from the example above
-var fragmentShader = createShader(gl, fragmentShaderSource, gl.FRAGMENT_SHADER)
+const fragmentShader = createShader(gl, fragmentShaderSource, gl.FRAGMENT_SHADER)
 ```
 
 ## Specifications

@@ -190,16 +190,13 @@ Here are some popular editors:
       <td>Free</td>
       <td>Windows, Mac, Linux</td>
       <td>
-        <a
-          href="https://mail.gnome.org/mailman/listinfo/gedit-list"
-          rel="external"
-          >Mailing list</a
-        >, <a href="irc://irc.gnome.org/%23gedit">IRC</a>
+        <a href="https://discourse.gnome.org/tag/gedit"
+          rel="external">Discourse</a>, <a href="irc://irc.gnome.org/%23gedit">IRC</a>
       </td>
       <td>
         <a href="https://help.gnome.org/users/gedit/stable/">Online Manual</a>
       </td>
-      <td><a href="https://wiki.gnome.org/Apps/Gedit/PluginsLists">Yes</a></td>
+      <td><a href="https://wiki.gnome.org/Apps/Gedit/ThirdPartyPlugins">Yes</a></td>
     </tr>
     <tr>
       <td><a href="https://kate-editor.org/">Kate</a></td>
@@ -219,7 +216,7 @@ Here are some popular editors:
     </tr>
     <tr>
       <td>
-        <a href="https://www.activestate.com/products/komodo-ide/komodo-edit/" rel="external"
+        <a href="https://www.activestate.com/products/komodo-edit/" rel="external"
           >Komodo Edit</a
         >
       </td>
@@ -232,7 +229,7 @@ Here are some popular editors:
           >Online Manual</a
         >
       </td>
-      <td><a href="https://www.activestate.com/products/komodo-ide/resources/addons/">Yes</a></td>
+      <td><a href="https://community.komodoide.com/packages/addons/">Yes</a></td>
     </tr>
     <tr>
       <td>
@@ -248,14 +245,14 @@ Here are some popular editors:
       </td>
       <td>
         <a
-          href="https://npp-wiki.tuxfamily.org/index.php?title=Main_Page"
+          href="https://npp-user-manual.org/"
           rel="external"
-          >Wiki</a
+          >Online Manual</a
         >
       </td>
       <td>
         <a
-          href="https://npp-wiki.tuxfamily.org/index.php?title=Plugin_Central"
+          href="https://github.com/notepad-plus-plus/nppPluginList"
           rel="external"
           >Yes</a
         >
@@ -323,27 +320,25 @@ Here are some popular editors:
     <tr>
       <td>
         <a
-          href="https://www.barebones.com/products/textwrangler/"
+          href="https://www.barebones.com/products/bbedit/"
           rel="external"
-          >TextWrangler</a
-        >
+          >BBEdit</a>
       </td>
       <td>Closed source</td>
       <td>Free</td>
       <td>Mac</td>
       <td>
         <a
-          href="https://www.barebones.com/support/textwrangler/faqs.html"
+          href="https://www.barebones.com/support/bbedit/"
           rel="external"
           >FAQ</a
-        >,
-        <a href="https://groups.google.com/forum/#!forum/textwrangler">Forum</a>
+        >
       </td>
       <td>
         <a
-          href="http://ash.barebones.com/TextWrangler_User_Manual.pdf"
+          href="https://www.barebones.com/products/bbedit/features.html"
           rel="external"
-          >PDF Manual</a
+          >Online Manual</a
         >
       </td>
       <td>No</td>
@@ -493,7 +488,7 @@ When you install a new text editor, your OS will probably continue to open text 
 
   - [Ubuntu Unity](https://askubuntu.com/questions/289337/how-can-i-change-file-association-globally)
   - [GNOME](https://help.gnome.org/users/gnome-help/stable/files-open.html.en)
-  - [KDE](https://doc.opensuse.org/documentation/html/openSUSE_113/opensuse-kdeuser/cha.kde.cust.html#pro.kde.cust.system.fileass)
+  - [KDE](https://userbase.kde.org/System_Settings/File_Associations)
 
 ## Next steps
 

@@ -50,7 +50,7 @@ flatMap(function(currentValue, index, array) { /* ... */ }, thisArg)
     - `array`
       - : The array `flatMap` was called upon.
 
-- `thisArg`{{optional_inline}}
+- `thisArg` {{optional_inline}}
   - : Value to use as `this` when executing `callbackFn`.
 
 ### Return value

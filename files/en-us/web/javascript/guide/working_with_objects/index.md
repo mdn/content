@@ -61,46 +61,68 @@ myCar['model'] = 'Mustang';
 myCar['year'] = 1969;
 ```
 
-An object property name can be any valid JavaScript string, or anything that can be converted to a string, including the empty string. However, any property name that is not a valid JavaScript identifier (for example, a property name that has a space or a hyphen, or that starts with a number) can only be accessed using the square bracket notation. This notation is also very useful when property names are to be dynamically determined (when the property name is not determined until runtime). Examples are as follows:
+An object property name can be any valid JavaScript string, or anything that can be _converted_ to a string, including an empty string. However, any property name that is not a valid JavaScript identifier cannot use dot notation. For example, a property name that has a space or a hyphen, that starts with a number, or that is held inside a variable can only be accessed using the square bracket notation. This notation is also very useful when property names are to be dynamically determined, i.e. not determinable until runtime. Examples are as follows:
 
 ```js
 // four variables are created and assigned in a single go,
 // separated by commas
-const myObj = new Object(),
+const myObj = {},
       str = 'myString',
       rand = Math.random(),
-      anotherObj = new Object();
+      anotherObj = {};
 
 // Now, creating additional properties.
 myObj.type              = 'Dot syntax for a key named type';
-myObj['date created']   = 'This key is a string with a space';
-myObj[str]              = 'This key is held in the variable str';
+myObj['date created']   = 'This key has a space';
+myObj[str]              = 'This key is in variable str';
 myObj[rand]             = 'A random number is the key here';
-myObj[anotherObj]       = 'This key is the name of object anotherObj';
+myObj[anotherObj]       = 'This key is object anotherObj';
 myObj['']               = 'This key is an empty string';
 
-console.log( myObj);
-console.log( myObj.myString );
+console.log(myObj);
+console.log(myObj.myString);
 
-/* 
-[Log] {type: "Dot syntax for a key named type", date created: "This key is a string with a space", myString: "This key is held in the variable str", 0.9803286397184368: "A random number is the key here", [object Object]: "This key is the name of object anotherObj", …} 
-[Log] This key is held in the variable str
-*/
+/*
+[Log] Object
+    : "This key is an empty string"
+    0.8916485437228595: "A random number is the key here"
+    [object Object]: "This key is object anotherObj"
+    date created: "This key has a space"
+    myString: "This key is in variable str"
+    type: "Dot syntax for a key named type"
+*/ 
+// notice that in the log, the order of the properties listed is not the same as the order they were created.
 
+// [Log] This key is in variable str
 ```
 
-All keys in the square bracket notation are converted to strings, unless they're Symbols. JavaScript object property names (keys) can only be strings or Symbols. For example, in the above code, when the key `anotherObj` is added to the `myObj`, JavaScript will call the {{jsxref("Object.toString", "anotherObj.toString()")}} method, and use this result string as the new key.
+JavaScript object property names (keys) can only be strings or Symbols — all keys in the square bracket notation are converted to strings unless they are Symbols. For example, in the above code, when the key `anotherObj` is added to the `myObj`, JavaScript will call the {{jsxref("Object.toString", "toString()")}} method of `anotherObj`, and use the resulting string as the new key.
 
-Side note: At some point, private names will also be added as the [class fields proposal](https://github.com/tc39/proposal-class-fields) progresses, but you won't use them with `[]` form.
-
-You can also access properties by using a string value that is stored in a variable:
+You can also access properties with a string value stored in a variable. The variable must be passed in bracket notation. In the example above, the variable `str` held `"myString"` and it is `"myString"` that is the property name. Therefore, `myObj.str` will return as undefined.
 
 ```js
-let propertyName = 'make';
+str = 'myString';
+myObj[str] = 'This key is in variable str';
+
+console.log(myObj.str); //[Log] undefined
+
+console.log(myObj[str]); //[Log] This key is in variable str
+console.log(myObj.myString); //[Log] This key is in variable str
+```
+
+This allows accessing any property as determined at runtime:
+
+```js
+const propertyName = 'make';
 myCar[propertyName] = 'Ford';
 
+// access different properties by changing the contents of the variable
 propertyName = 'model';
 myCar[propertyName] = 'Mustang';
+
+console.log(myCar);
+
+// [Log] {make: 'Ford', model: 'Mustang'}
 ```
 
 You can use the bracket notation with [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) to iterate over all the enumerable properties of an object. To illustrate how this works, the following function displays the properties of the object when you pass the object and the object's name as arguments to the function:
@@ -108,9 +130,9 @@ You can use the bracket notation with [`for...in`](/en-US/docs/Web/JavaScript/Re
 ```js
 function showProps(obj, objName) {
   let result = '';
-  for (let i in obj) {
-    // obj.hasOwnProperty() is used to filter out properties from the object's prototype chain
-    if (obj.hasOwnProperty(i)) {
+  for (const i in obj) {
+    // obj.hasOwn is used to exclude properties from the object's prototype chain and only show "own properties"
+    if (Object.hasOwn(obj, i)) {
       result += `${objName}.${i} = ${obj[i]}\n`;
     }
   }
@@ -118,7 +140,7 @@ function showProps(obj, objName) {
 }
 ```
 
-So, the function call `showProps(myCar, 'myCar')` would print the following:
+The term "own property" refers to the properties of the object, but excluding those of the prototype chain. So, the function call `showProps(myCar, 'myCar')` would print the following:
 
 ```
 myCar.make = Ford
@@ -130,9 +152,9 @@ myCar.year = 1969
 
 There are three native ways to list/traverse object properties:
 
-- [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops. This method traverses all of the enumerable properties of an object as well as its prototype chain.
-- {{jsxref("Object.keys", "Object.keys(myObj)")}}. This method returns an array with only the enumerable property names ("keys") in the object `myObj`, but not those in the prototype chain.
-- {{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(myObj)")}}. This method returns an array containing all the property names in the object `myObj`, regardless of if they are enumerable or not.
+- [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops. This method traverses all of the enumerable string properties of an object as well as its prototype chain.
+- {{jsxref("Object.keys", "Object.keys(myObj)")}}. This method returns an array with only the enumerable own string property names ("keys") in the object `myObj`, but not those in the prototype chain.
+- {{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(myObj)")}}. This method returns an array containing all the own string property names in the object `myObj`, regardless of if they are enumerable or not.
 
 There is no native way to list "hidden" properties (properties in the prototype chain which are not accessible through the object, because another property has the same name earlier in the prototype chain). However, this can be achieved with the following function:
 
@@ -384,7 +406,7 @@ car2.displayCar();
 
 ## Using `this` for object references
 
-JavaScript has a special keyword, [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), that you can use within a method to refer to the current object. For example, suppose you have 2 objects, `Manager`and `Intern`. Each object have their own `name`, `age` and `job`. In the function `sayHi()`, notice there is `this.name`. When added to the 2 objects they can be called and prints the `'Hello, My name is'` then adds the `name` value from that specific object. As shown below.
+JavaScript has a special keyword, [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), that you can use within a method to refer to the current object. For example, suppose you have 2 objects, `Manager` and `Intern`. Each object have their own `name`, `age` and `job`. In the function `sayHi()`, notice there is `this.name`. When added to the 2 objects they can be called and prints the `'Hello, My name is'` then adds the `name` value from that specific object. As shown below.
 
 ```js
 const Manager = {

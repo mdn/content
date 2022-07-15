@@ -47,7 +47,7 @@ openDialog(url, name, features, arg0, arg1, /* ... ,*/ argN)
   - : The window name. See {{domxref("window.open()")}} description for detailed information.
 - `features` {{optional_inline}}
   - : See {{domxref("window.open()")}} for details.
-- `arg1`, `arg2`, ...
+- `arg1`, `arg2`, …
   - : The arguments to be passed to the new window (optional).
 
 ### Return value

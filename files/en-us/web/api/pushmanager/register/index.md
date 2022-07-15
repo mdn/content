@@ -40,10 +40,10 @@ which is the endpoint URL.
 ## Examples
 
 ```js
-var req = navigator.push.register();
+const req = navigator.push.register();
 
 req.onsuccess = function(e) {
-  var endpoint = req.result;
+  const endpoint = req.result;
   debug("New endpoint: " + endpoint );
 }
 

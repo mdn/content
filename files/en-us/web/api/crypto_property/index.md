@@ -57,7 +57,7 @@ genRandomNumbers = function getRandomNumbers() {
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

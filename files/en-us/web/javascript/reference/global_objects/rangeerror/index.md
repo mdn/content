@@ -30,9 +30,11 @@ This can be encountered when:
 ## Instance properties
 
 - {{jsxref("Error.prototype.message", "RangeError.prototype.message")}}
-  - : Error message.
+  - : Error message. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.name", "RangeError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.cause", "RangeError.prototype.cause")}}
+  - : Error cause. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.fileName", "RangeError.prototype.fileName")}} {{non-standard_inline}}
   - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.lineNumber", "RangeError.prototype.lineNumber")}} {{non-standard_inline}}

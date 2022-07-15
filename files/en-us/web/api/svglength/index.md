@@ -94,8 +94,8 @@ An `SVGLength` object can be designated as read only, which means that attempts 
 <svg height="200" onload="start();" version="1.1" width="200" xmlns="http://www.w3.org/2000/svg">
   <script type="text/javascript"><![CDATA[
 function start() {
-  var rect = document.getElementById("myRect");
-  var val  = rect.x.baseVal;
+  const rect = document.getElementById("myRect");
+  const val  = rect.x.baseVal;
 
   // read x in pixel and cm units
   console.log("value: " + val.value +

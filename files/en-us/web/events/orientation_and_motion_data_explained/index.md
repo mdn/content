@@ -43,7 +43,7 @@ Rotation is described about any given axis in terms of the number of degrees of 
 
 ### Alpha
 
-Rotation around the z axis -- that is, twisting the device -- causes the **alpha** rotation angle to change:
+Rotation around the z axis — that is, twisting the device — causes the **alpha** rotation angle to change:
 
 ![](alpha.png)
 
@@ -51,7 +51,7 @@ The alpha angle is 0° when top of the device is pointed directly toward the Ear
 
 ### Beta
 
-Rotation around the x axis -- that is, tipping the device away from or toward the user -- causes the **beta** rotation angle to change:
+Rotation around the x axis — that is, tipping the device away from or toward the user — causes the **beta** rotation angle to change:
 
 ![Positive beta pitches the device forward toward the user.](beta2.png)
 
@@ -59,7 +59,7 @@ The beta angle is 0° when the device's top and bottom are the same distance fro
 
 ### Gamma
 
-Rotation around the y axis -- that is, tilting the device toward the left or right -- causes the **gamma** rotation angle to change:
+Rotation around the y axis — that is, tilting the device toward the left or right — causes the **gamma** rotation angle to change:
 
 ![](gamma.png)
 

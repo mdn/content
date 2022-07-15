@@ -98,7 +98,7 @@ We'll apply it to this HTML:
 </div>
 ```
 
-... which leads us to this:
+This produces the following result:
 
 {{EmbedLiveSample("First_steps_with_custom_properties",600,180)}}
 
@@ -170,7 +170,7 @@ Custom properties do inherit. This means that if no value is set for a custom pr
 </div>
 ```
 
-... with the following CSS:
+… with the following CSS:
 
 ```css
 .two {

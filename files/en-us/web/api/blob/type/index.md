@@ -65,7 +65,7 @@ input.addEventListener('change', (event) => {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

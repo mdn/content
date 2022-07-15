@@ -23,7 +23,7 @@ browser-compat: api.MediaStreamTrackAudioSourceNode.MediaStreamTrackAudioSourceN
 
 The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)'s **`MediaStreamTrackAudioSourceNode()`** constructor creates and returns a new {{domxref("MediaStreamTrackAudioSourceNode")}} object whose audio is taken from the {{domxref("MediaStreamTrack")}} specified in the given options object.
 
-Another way to create a `MediaStreamTrackAudioSourceNode` is to call the{{domxref("AudioContext.createMediaStreamTrackSource()")}} method, specifying the {{domxref("MediaStreamTrack")}} from which you want to obtain audio.
+Another way to create a `MediaStreamTrackAudioSourceNode` is to call the {{domxref("AudioContext.createMediaStreamTrackSource()")}} method, specifying the {{domxref("MediaStreamTrack")}} from which you want to obtain audio.
 
 ## Syntax
 

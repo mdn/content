@@ -56,7 +56,7 @@ The newly inserted rule's index within the stylesheet's rule-list.
   - : Thrown if `index` > `{{domxref("CSSRuleList", "", "", "1")}}.length`.
 - `HierarchyRequestError` {{domxref("DOMException")}}
   - : Thrown if `rule` cannot be inserted at `index` `0` due to some CSS constraint.
-- `SyntaxError`{{domxref("DOMException")}}
+- `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if more than one rule is given in the `rule` parameter.
 - `HierarchyRequestError` {{domxref("DOMException")}}
   - : Thrown if trying to insert an {{cssxref("@import")}} at-rule after a style rule.
@@ -199,5 +199,4 @@ instead of {{domxref("CSSStyleSheet.deleteRule","deleteRule()")}} and
 ## See also
 
 - {{domxref("CSSStyleSheet.deleteRule")}}
-- [Cross-Browser CSS-rules ordering (CSS1)](https://www-archive.mozilla.org/docs/web-developer/css1technote/css1tojs.html#priority)
-- [Quirksmode - CSS](https://www.quirksmode.org/dom/w3c_css.html)
+- [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)

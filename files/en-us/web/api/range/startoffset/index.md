@@ -31,10 +31,10 @@ A number.
 ## Examples
 
 ```js
-var range = document.createRange();
+const range = document.createRange();
 range.setStart(startNode,startOffset);
 range.setEnd(endNode,endOffset);
-var startRangeOffset = range.startOffset;
+const startRangeOffset = range.startOffset;
 ```
 
 ## Specifications

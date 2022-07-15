@@ -128,9 +128,9 @@ WAI-ARIA adds the [`role` attribute](https://www.w3.org/TR/wai-aria-1.1/#role_de
 
 ```html
 <header>
-  <h1>...</h1>
+  <h1>…</h1>
   <nav>
-    <ul>...</ul>
+    <ul>…</ul>
     <form>
       <!-- search form  -->
     </form>
@@ -138,11 +138,11 @@ WAI-ARIA adds the [`role` attribute](https://www.w3.org/TR/wai-aria-1.1/#role_de
 </header>
 
 <main>
-  <article>...</article>
-  <aside>...</aside>
+  <article>…</article>
+  <aside>…</aside>
 </main>
 
-<footer>...</footer>
+<footer>…</footer>
 ```
 
 If you try testing the example with a screenreader in a modern browser, you'll already get some useful information. For example, VoiceOver gives you the following:
@@ -164,9 +164,9 @@ Let's improve it by the use of some ARIA features. First, we'll add some [`role`
 
 ```html
 <header>
-  <h1>...</h1>
+  <h1>…</h1>
   <nav role="navigation">
-    <ul>...</ul>
+    <ul>…</ul>
     <form role="search">
       <!-- search form  -->
     </form>
@@ -174,11 +174,11 @@ Let's improve it by the use of some ARIA features. First, we'll add some [`role`
 </header>
 
 <main>
-  <article role="article">...</article>
-  <aside role="complementary">...</aside>
+  <article role="article">…</article>
+  <aside role="complementary">…</aside>
 </main>
 
-<footer>...</footer>
+<footer>…</footer>
 ```
 
 We've also given you a bonus feature in this example — the {{htmlelement("input")}} element has been given the attribute [`aria-label`](https://www.w3.org/TR/wai-aria-1.1/#aria-label), which gives it a descriptive label to be read out by a screenreader, even though we haven't included a {{htmlelement("label")}} element. In cases like these, this is very useful — a search form like this one is a very common, easily recognized feature, and adding a visual label would spoil the page design.
@@ -371,13 +371,13 @@ To improve things, we've created a new version of the example called [aria-tabbe
 </ul>
 <div class="panels">
   <article class="active-panel" role="tabpanel" aria-hidden="false">
-    ...
+    …
   </article>
   <article role="tabpanel" aria-hidden="true">
-    ...
+    …
   </article>
   <article role="tabpanel" aria-hidden="true">
-    ...
+    …
   </article>
 </div>
 ```

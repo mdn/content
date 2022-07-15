@@ -165,7 +165,7 @@ P
 
 This example demonstrates how events fire and are handled in the DOM in a very simple way. When the BODY of this HTML document loads, an event listener is registered with the top row of the TABLE. The event listener handles the event by executing the function stopEvent, which changes the value in the bottom cell of the table.
 
-However, stopEvent also calls an event object method, {{domxref("event.stopPropagation")}}, which keeps the event from bubbling any further up into the DOM. Note that the table itself has an {{domxref("GlobalEventHandlers.onclick","onclick")}} event handler that ought to display a message when the table is clicked. But the stopEvent method has stopped propagation, and so after the data in the table is updated, the event phase is effectively ended, and an alert box is displayed to confirm this.
+However, stopEvent also calls an event object method, {{domxref("event.stopPropagation")}}, which keeps the event from bubbling any further up into the DOM. Note that the table itself has an {{domxref("Element.click_event","onclick")}} event handler that ought to display a message when the table is clicked. But the stopEvent method has stopped propagation, and so after the data in the table is updated, the event phase is effectively ended, and an alert box is displayed to confirm this.
 
 ```html
 <!DOCTYPE html>
@@ -303,12 +303,12 @@ function showEventProperties(e) {
     cell.appendChild(document.createTextNode(text));
   }
 
-  const e = e || window.event;
-  document.getElementById('eventType').innerHTML = e.type;
+  const event = e || window.event;
+  document.getElementById('eventType').innerHTML = event.type;
 
   const table = document.createElement('table');
   const thead = table.createTHead();
-  const row = thead.insertRow(-1);
+  let row = thead.insertRow(-1);
   const labelList = ['#', 'Property', 'Value'];
   const len = labelList.length;
 
@@ -319,12 +319,12 @@ function showEventProperties(e) {
   const tbody = document.createElement('tbody');
   table.appendChild(tbody);
 
-  for (let p in e) {
+  for (let p in event) {
     row = tbody.insertRow(-1);
     row.className = (row.rowIndex % 2)? 'odd':'even';
     addCell(row, row.rowIndex);
     addCell(row, p);
-    addCell(row, e[p]);
+    addCell(row, event[p]);
   }
 
   document.body.appendChild(table);

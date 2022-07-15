@@ -39,7 +39,7 @@ let settingIcon = browser.browserAction.setIcon(
 
   - : `object`. An object containing either `imageData` or `path` properties, and optionally a `tabId` property.
 
-    - `imageData`{{optional_inline}}
+    - `imageData` {{optional_inline}}
 
       - : `{{WebExtAPIRef('browserAction.ImageDataType')}}` or `object`. This is either a single `ImageData` object or a dictionary object.
 
@@ -54,7 +54,7 @@ let settingIcon = browser.browserAction.setIcon(
 
         The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
 
-    - `path`{{optional_inline}}
+    - `path` {{optional_inline}}
 
       - : `string` or `object`. This is either a relative path to an icon file or it is a dictionary object.
 
@@ -69,9 +69,9 @@ let settingIcon = browser.browserAction.setIcon(
 
         The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Sets the icon only for the given tab. The icon is reset when the user navigates this tab to a new page.
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. Sets the icon for the given window.
 
 <!---->

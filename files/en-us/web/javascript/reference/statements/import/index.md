@@ -63,7 +63,7 @@ all of them. Below are examples to clarify the syntax.
 
 `import` declarations are only permitted at the top-level of modules, and can only be present in module files. If an `import` declaration is encountered in non-module contexts (for example, script files, `eval`, `new Function`, which all have "script" or "function" as parsing goals), a `SyntaxError` is thrown. To load modules in non-module contexts, use the [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import) syntax instead.
 
-`import` declarations are designed to be syntactically rigid (for example, only string literal specifiers, only permitted at top-level, all bindings must be identifiers...), which allows modules to be statically analyzed and synchronously linked before getting evaluated. This is the key to making modules asynchronous by nature, powering features like [top-level await](/en-US/docs/Web/JavaScript/Guide/Modules#top_level_await).
+`import` declarations are designed to be syntactically rigid (for example, only string literal specifiers, only permitted at the top-level, as all bindings must be identifiers), which allows modules to be statically analyzed and synchronously linked before getting evaluated. This is the key to making modules asynchronous by nature, powering features like [top-level await](/en-US/docs/Web/JavaScript/Guide/Modules#top_level_await).
 
 ### Import an entire module's contents
 
@@ -229,7 +229,7 @@ getUsefulContents('http://www.example.com',
 
 - {{JSxRef("Statements/export", "export")}}
 - [Dynamic imports](/en-US/docs/Web/JavaScript/Reference/Operators/import)
-- [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Statements/import.meta)
+- [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)
 - Limin Zhu, Brian Terlson and Microsoft Edge Team:
   [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)
 - Hacks blog post by Jason Orendorff: [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)

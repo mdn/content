@@ -136,6 +136,7 @@ If the MASK bit was set (and it should be, for client-to-server messages), read 
 var DECODED = "";
 for (var i = 0; i < ENCODED.length; i++) {
     DECODED[i] = ENCODED[i] ^ MASK[i % 4];
+}
 ```
 
 Now you can figure out what **DECODED** means depending on your application.
@@ -144,7 +145,7 @@ Now you can figure out what **DECODED** means depending on your application.
 
 The FIN and opcode fields work together to send a message split up into separate frames. This is called message fragmentation. Fragmentation is only available on opcodes `0x0` to `0x2`.
 
-Recall that the opcode tells what a frame is meant to do. If it's `0x1`, the payload is text. If it's `0x2`, the payload is binary data. However, if it's `0x0,` the frame is a continuation frame; this means the server should concatenate the frame's payload to the last frame it received from that client.Here is a rough sketch, in which a server reacts to a client sending text messages. The first message is sent in a single frame, while the second message is sent across three frames. FIN and opcode details are shown only for the client:
+Recall that the opcode tells what a frame is meant to do. If it's `0x1`, the payload is text. If it's `0x2`, the payload is binary data. However, if it's `0x0,` the frame is a continuation frame; this means the server should concatenate the frame's payload to the last frame it received from that client. Here is a rough sketch, in which a server reacts to a client sending text messages. The first message is sent in a single frame, while the second message is sent across three frames. FIN and opcode details are shown only for the client:
 
 ```
 Client: FIN=1, opcode=0x1, msg="hello"

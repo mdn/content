@@ -47,7 +47,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The following code snippet shows the creation of a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor. When either of two form inputs (`first` and `second`) have their values changed, {{event("change")}} events invoke `postMessage()` to send the value of both inputs to the current worker.
+The following code snippet shows the creation of a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor. When either of two form inputs (`first` and `second`) have their values changed, {{domxref("HTMLElement/change_event", "change")}} events invoke `postMessage()` to send the value of both inputs to the current worker.
 
 ```js
 var myWorker = new Worker('worker.js');

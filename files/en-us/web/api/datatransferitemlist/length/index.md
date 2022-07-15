@@ -115,7 +115,7 @@ div {
 
 ### Result
 
-{{EmbedLiveSample('Example', 100, 250)}}
+{{EmbedLiveSample('Examples', 100, 250)}}
 
 ## Specifications
 

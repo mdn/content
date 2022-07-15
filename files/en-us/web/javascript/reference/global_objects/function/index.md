@@ -33,12 +33,12 @@ Every JavaScript function is actually a `Function` object. This can be seen with
 
 ## Instance methods
 
-- {{jsxref("Function.prototype.apply()", "Function.prototype.apply(<var>thisArg</var> [, <var>argsArray</var>])")}}
-  - : Calls a function and sets its `this` to the provided `thisArg`. Arguments can be passed as an {{jsxref("Array")}} object.
-- {{jsxref("Function.prototype.bind()", "Function.prototype.bind(<var>thisArg</var>[, <var>arg1</var>[, <var>arg2</var>[, ...<var>argN</var>]]])")}}
-  - : Creates a new function which, when called, has its `this` set to the provided `thisArg`. Optionally, a given sequence of arguments will be prepended to arguments provided the newly-bound function is called.
-- {{jsxref("Function.prototype.call()", "Function.prototype.call(<var>thisArg</var>[, <var>arg1</var>, <var>arg2</var>, ...<var>argN</var>])")}}
-  - : Calls a function and sets its `this` to the provided value. Arguments can be passed as they are.
+- {{jsxref("Function.prototype.apply()")}}
+  - : Calls a function with a given `this` value and optional arguments provided as an array (or an [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
+- {{jsxref("Function.prototype.bind()")}}
+  - : Creates a new function that, when called, has its `this` keyword set to a provided value, optionally with a given sequence of arguments preceding any provided when the new function is called.
+- {{jsxref("Function.prototype.call()")}}
+  - : Calls a function with a given `this` value and optional arguments.
 - {{jsxref("Function.prototype.toString()", "Function.prototype.toString()")}}
   - : Returns a string representing the source code of the function.
     Overrides the {{jsxref("Object.prototype.toString")}} method.

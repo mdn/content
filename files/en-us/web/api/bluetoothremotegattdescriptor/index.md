@@ -19,14 +19,14 @@ which provides further information about a characteristic's value.
 
 ## Properties
 
-- {{DOMxRef("BluetoothRemoteGATTDescriptor.characteristic")}}{{ReadOnlyInline}}
+- {{DOMxRef("BluetoothRemoteGATTDescriptor.characteristic")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef("BluetoothRemoteGATTCharacteristic")}} this descriptor belongs
     to.
-- {{DOMxRef("BluetoothRemoteGATTDescriptor.uuid")}}{{ReadOnlyInline}}
+- {{DOMxRef("BluetoothRemoteGATTDescriptor.uuid")}} {{ReadOnlyInline}}
   - : Returns the UUID of the characteristic descriptor, for
     example '`00002902-0000-1000-8000-00805f9b34fb`' for theClient
     Characteristic Configuration descriptor.
-- {{DOMxRef("BluetoothRemoteGATTDescriptor.value")}}{{ReadOnlyInline}}
+- {{DOMxRef("BluetoothRemoteGATTDescriptor.value")}} {{ReadOnlyInline}}
   - : Returns the currently cached descriptor value. This value gets updated when the
     value of the descriptor is read.
 

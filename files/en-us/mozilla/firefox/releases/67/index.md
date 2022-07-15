@@ -50,7 +50,7 @@ This article provides information about the changes in Firefox 67 that will affe
 - The following Developer Tools have been deprecated (see [Deprecated tools](https://firefox-source-docs.mozilla.org/devtools-user/deprecated_tools/index.html) for details):
 
   - WebIDE ({{bug(1539462)}}).
-  - Connect... page ({{bug(1539462)}}).
+  - Connect… page ({{bug(1539462)}}).
 
 ### HTML
 

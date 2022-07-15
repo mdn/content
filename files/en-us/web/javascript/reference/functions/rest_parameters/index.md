@@ -89,9 +89,9 @@ for converting a set of arguments to an array.
 
 function f(a, b) {
   let normalArray = Array.prototype.slice.call(arguments)
-  // -- or --
+  // — or —
   let normalArray = [].slice.call(arguments)
-  // -- or --
+  // — or —
   let normalArray = Array.from(arguments)
 
   let first = normalArray.shift()  // OK, gives the first argument
@@ -114,7 +114,7 @@ In this example, the first argument is mapped to `a` and the second to
 `b`, so these named arguments are used as normal.
 
 However, the third argument, `manyMoreArgs`, will be an array that contains
-the third, fourth, fifth, sixth ... nth — as many arguments that the user includes.
+the third, fourth, fifth, sixth, …, nth — as many arguments that the user includes.
 
 ```js
 function myFun(a, b, ...manyMoreArgs) {

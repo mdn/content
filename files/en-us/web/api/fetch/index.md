@@ -44,7 +44,7 @@ rather than the directive of the resources it's retrieving.
 
 ```js
 fetch(resource)
-fetch(resource, init)
+fetch(resource, options)
 ```
 
 ### Parameters
@@ -56,7 +56,7 @@ fetch(resource, init)
     - A string or any other object with a {{Glossary("stringifier")}} — including a {{domxref("URL")}} object — that provides the URL of the resource you want to fetch.
     - A {{domxref("Request")}} object.
 
-- `init` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object containing any custom settings that you want to apply to the request. The
     possible options are:
@@ -74,7 +74,7 @@ fetch(resource, init)
       - : Any body that you want to add to your request:
         this can be a {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}},
         a {{domxref("FormData")}}, a {{domxref("URLSearchParams")}}, string object or literal,
-        or a {{domxref("ReadableStream")}} object.
+        or a {{domxref("ReadableStream")}} object. This latest possibility is still experimental; check the [compatibility information](/en-US/docs/Web/API/Request#browser_compatibility) to verify you can use it.
         Note that a request using the `GET` or `HEAD` method cannot have a body.
     - `mode`
       - : The mode you want to use for the request, e.g., `cors`,
@@ -309,7 +309,7 @@ const myRequest = new Request('flowers.jpg');
 
 fetch(myRequest, myInit)
   .then((response) => {
-    // ...
+    // …
   });
 ```
 

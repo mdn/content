@@ -269,7 +269,7 @@ Since this image has an explicit 100 pixel height, the 3:4 ratio explicitly sets
 
 #### Source: No fixed dimensions with intrinsic ratio
 
-When an intrinsic ratio is specified, but no dimensions, rule 4 is applied -- except that rule 2 also applies. The image is therefore rendered just like for the `contain` case.
+When an intrinsic ratio is specified, but no dimensions, rule 4 is applied — except that rule 2 also applies. The image is therefore rendered just like for the `contain` case.
 
 ```css
 background: url(no-dimensions-1x1-ratio.svg);

@@ -43,6 +43,8 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
+const note = document.getElementById('notifications');
+
 // open a read/write db transaction, ready for adding the data
 const transaction = db.transaction(["myDB"], "readwrite");
 

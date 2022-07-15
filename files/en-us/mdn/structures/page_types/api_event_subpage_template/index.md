@@ -105,9 +105,9 @@ You could copy most of this from the property's summary on the corresponding API
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('NameOfTheEvent', event => { });
+addEventListener('NameOfTheEvent', (event) => {});
 
-onNameOfTheEvent = event => { };
+onNameOfTheEvent = (event) => { };
 ```
 
 ## Event type
@@ -162,10 +162,10 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_exam
 >  ## Examples
 >
 >  ### Using the fetch API
->  ... example of Fetch
+>  Example of Fetch
 >
 >  ### More examples
->  ...links to more examples on other pages
+>  Links to more examples on other pages
 >  ```
 >
 > **Scenario 2:** If you _only_ have examples on another page and none on this page:

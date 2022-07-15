@@ -10,7 +10,7 @@ tags:
   - Reference
   - Web
   - Window
-browser-compat: api.Window.cut_event
+browser-compat: api.Element.cut_event
 ---
 {{APIRef}}
 

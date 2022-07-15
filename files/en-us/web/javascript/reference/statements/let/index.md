@@ -105,55 +105,6 @@ console.log(this.x); // "global"
 console.log(this.y); // undefined
 ```
 
-### Emulating private members
-
-In dealing with {{Glossary("Constructor", "constructors")}} it is possible to use the
-**`let`** bindings to share one or more private members without
-using [closures](/en-US/docs/Web/JavaScript/Closures):
-
-```js
-var Thing;
-
-{
-  let privateScope = new WeakMap();
-  let counter = 0;
-
-  Thing = function() {
-    this.someProperty = 'foo';
-
-    privateScope.set(this, {
-      hidden: ++counter,
-    });
-  };
-
-  Thing.prototype.showPublic = function() {
-    return this.someProperty;
-  };
-
-  Thing.prototype.showPrivate = function() {
-    return privateScope.get(this).hidden;
-  };
-}
-
-console.log(typeof privateScope);
-// "undefined"
-
-var thing = new Thing();
-
-console.log(thing);
-// Thing {someProperty: "foo"}
-
-thing.showPublic();
-// "foo"
-
-thing.showPrivate();
-// 1
-```
-
-The same privacy pattern with closures over local variables can be created with
-`var`, but those need a function scope (typically an {{Glossary("IIFE")}} in
-the module pattern) instead of just a block scope like in the example above.
-
 ### Redeclarations
 
 Redeclaring the same variable within the same function or block scope raises a
@@ -210,7 +161,7 @@ The variable is initialized with a value when execution reaches the line of code
 If no initial value was specified with the variable declaration, it will be initialized with a value of `undefined`.
 
 This differs from {{jsxref("Statements/var", "var", "var_hoisting")}} variables, which will return a value of `undefined` if they are accessed before they are declared.
-The code below demonstrates the different result when `let` and `var` are accessed in code before the line in which the are declared.
+The code below demonstrates the different result when `let` and `var` are accessed in code before the line in which they are declared.
 
 ```js example-bad
 { // TDZ starts at beginning of scope
@@ -290,7 +241,7 @@ function go(n) {
   // n here is defined!
   console.log(n); // Object {a: [1,2,3]}
 
-  for (let n of n.a) { // ReferenceError
+  for (const n of n.a) { // ReferenceError
     console.log(n);
   }
 }

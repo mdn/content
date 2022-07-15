@@ -52,7 +52,7 @@ filepicker.addEventListener('change', (event) => {
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 > **Note:** Based on the current implementation, browsers won't actually read the bytestream of a file to determine its media type.
 > It is assumed based on the file extension; a PNG image file renamed to .txt would give "_text/plain_" and not "_image/png_". Moreover, `file.type` is generally reliable only for common file types like images, HTML documents, audio and video.

@@ -42,7 +42,7 @@ A {{jsxref("Promise")}} which resolves once access to the port has been successf
 The following example shows an output port being opened.
 
 ```js
-var output = midiAccess.outputs.get(portID);
+const output = midiAccess.outputs.get(portID);
 output.open(); // opens the port
 ```
 

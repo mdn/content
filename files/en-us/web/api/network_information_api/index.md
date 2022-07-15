@@ -33,12 +33,11 @@ The interface consists of a single {{domxref("NetworkInformation")}} object, an 
 This example watches for changes to the user's connection.
 
 ```js
-var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-var type = connection.effectiveType;
+let type = navigator.connection.effectiveType;
 
 function updateConnectionStatus() {
   console.log("Connection type changed from " + type + " to " + connection.effectiveType);
-  type = connection.effectiveType;
+  type = navigation.connection.effectiveType;
 }
 
 connection.addEventListener('change', updateConnectionStatus);
@@ -50,7 +49,7 @@ The connection object is useful for deciding whether to preload resources that t
 
 ```js
 let preloadVideo = true;
-var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+const connection = navigator.connection;
 if (connection) {
   if (connection.effectiveType === 'slow-2g') {
     preloadVideo = false;

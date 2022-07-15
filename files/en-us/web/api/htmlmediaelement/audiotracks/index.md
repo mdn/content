@@ -58,9 +58,9 @@ The HTML establishes the element itself.
 The JavaScript code handles muting the video element's audio tracks.
 
 ```js
-var video = document.getElementById("video");
+const video = document.getElementById("video");
 
-for (var i = 0; i < video.audioTracks.length; i += 1) {
+for (let i = 0; i < video.audioTracks.length; i += 1) {
   video.audioTracks[i].enabled = false;
 }
 ```

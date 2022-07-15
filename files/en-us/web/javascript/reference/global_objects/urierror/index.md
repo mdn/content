@@ -21,9 +21,11 @@ The **`URIError`** object represents an error when a global URI handling functio
 ## Instance properties
 
 - {{jsxref("Error.prototype.message", "URIError.prototype.message")}}
-  - : Error message.
+  - : Error message. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.name", "URIError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.cause", "URIError.prototype.cause")}}
+  - : Error cause. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.fileName", "URIError.prototype.fileName")}} {{non-standard_inline}}
   - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.lineNumber", "URIError.prototype.lineNumber")}} {{non-standard_inline}}

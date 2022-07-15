@@ -78,11 +78,11 @@ browser.userScripts.onBeforeScript.addListener(function (script) {
     myCustomAPIMethod(param1, param2) {
       // Custom methods exported from the API script can use
       // the WebExtensions APIs available to content scripts.
-      browser.runtime.sendMessage(...);
-      ...
+      browser.runtime.sendMessage(/* … */);
+      // …
 
       return 123; // primitive values can be returned directly
-      ...
+      // …
 
       // Non primitive values have to be exported explicitly
       // using the export method provided by the script API
@@ -92,7 +92,7 @@ browser.userScripts.onBeforeScript.addListener(function (script) {
           nestedProp: "nestedValue",
         },
         // Explicitly exported objects can also provide methods.
-        objMethod() { ... }
+        objMethod() { /* … */ }
       })
     },
 

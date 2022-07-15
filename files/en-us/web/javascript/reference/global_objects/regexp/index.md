@@ -22,8 +22,8 @@ For an introduction to regular expressions, read the [Regular Expressions chapte
 
 There are two ways to create a `RegExp` object: a _literal notation_ and a _constructor_.
 
-- **The literal notation's** parameters are enclosed between slashes and do not use quotation marks.
-- **The constructor function's** parameters are not enclosed between slashes but do use quotation marks.
+- The _literal notation_ takes a pattern between two slashes, followed by optional flags, after the second slash.
+- The _constructor function_ takes either a string or a `RegExp` object as its first parameter and a string of optional flags as its second parameter.
 
 The following three expressions create the same regular expression object:
 
@@ -33,9 +33,11 @@ let re = new RegExp('ab+c', 'i') // constructor with string pattern as first arg
 let re = new RegExp(/ab+c/, 'i') // constructor with regular expression literal as first argument (Starting with ECMAScript 6)
 ```
 
-The literal notation results in compilation of the regular expression when the expression is evaluated. Use literal notation when the regular expression will remain constant. For example, if you use literal notation to construct a regular expression used in a loop, the regular expression won't be recompiled on each iteration.
+Before regular expressions can be used, they have to be compiled. This process allows them to perform matches more efficiently. More about the process can be found in [dotnet docs](https://docs.microsoft.com/en-us/dotnet/standard/base-types/compilation-and-reuse-in-regular-expressions).
 
-The constructor of the regular expression object—for example, `new RegExp('ab+c')`—results in runtime compilation of the regular expression. Use the constructor function when you know the regular expression pattern will be changing, or you don't know the pattern and obtain it from another source, such as user input.
+The literal notation results in compilation of the regular expression when the expression is evaluated. On the other hand, the constructor of the `RegExp` object, `new RegExp('ab+c')`, results in runtime compilation of the regular expression.
+
+Use a string as the first argument to the `RegExp()` constructor when you want to [build the regular expression from dynamic input](#Building_a_regular_expression_from_dynamic_inputs).
 
 ### Flags in constructor
 
@@ -213,6 +215,16 @@ console.log(/^https?:\/\/(.+?)\./.exec(url)[1]); // logs 'xxx'
 ```
 
 > **Note:** Instead of using regular expressions for parsing URLs, it is usually better to use the browsers built-in URL parser by using the [URL API](/en-US/docs/Web/API/URL_API).
+
+### Building a regular expression from dynamic inputs
+
+```js
+const breakfasts = ['bacon', 'eggs', 'oatmeal', 'toast', 'cereal'];
+const order = 'Let me get some bacon and eggs, please';
+
+order.match(new RegExp(`\\b(${breakfasts.join('|')})\\b`, 'g')); 
+// Returns ['bacon', 'eggs']
+```
 
 ## Specifications
 

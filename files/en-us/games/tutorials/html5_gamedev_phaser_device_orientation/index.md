@@ -136,9 +136,9 @@ Ball.Preloader.prototype = {
         this.load.setPreloadSprite(this.preloadBar);
 
         this.load.image('ball', 'img/ball.png');
-        // ...
+        // …
         this.load.spritesheet('button-start', 'img/button-start.png', 146, 51);
-        // ...
+        // …
         this.load.audio('audio-bounce', ['audio/bounce.ogg', 'audio/bounce.mp3', 'audio/bounce.m4a']);
     },
     create: function() {
@@ -330,7 +330,7 @@ this.levelData = [
         { x: 200, y: 320, t: 'h' },
         { x: 72, y: 150, t: 'w' }
     ],
-    // ...
+    // …
 ];
 ```
 

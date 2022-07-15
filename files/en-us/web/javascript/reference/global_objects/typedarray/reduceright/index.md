@@ -100,7 +100,7 @@ value would be returned without calling `callbackFn`.
 ### Sum up all values within an array
 
 ```js
-var total = new Uint8Array([0, 1, 2, 3]).reduceRight(function(a, b) {
+const total = new Uint8Array([0, 1, 2, 3]).reduceRight(function(a, b) {
   return a + b;
 });
 // total == 6

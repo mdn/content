@@ -105,10 +105,7 @@ None.
 // let counts = new Int32Array(...);
 // let offsets = new Int32Array(...);
 // let instanceCounts = new Int32Array(...);
-ext.multiDrawElementsInstancedWEBGL(
-    gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, instanceCounts, 0,
-    counts.length);
-}
+ext.multiDrawElementsInstancedWEBGL(gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, instanceCounts, 0, counts.length);
 ```
 
 ## Specifications

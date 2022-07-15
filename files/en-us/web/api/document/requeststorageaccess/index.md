@@ -53,9 +53,7 @@ the level of site, so for example two storage access grants for
 single exception against the limit.
 
 At the time of a `requestStorageAccess()` call, if the requesting origin has
-storage access to...
-
-...fewer sites than the maximum and has been interacted with as a first party in the last 30 days:
+storage access to fewer sites than the maximum and has been interacted with as a first party in the last 30 days:
 
 - The user is not prompted.
 - The origin is given an ephemeral storage access grant for the current top-level
@@ -72,7 +70,7 @@ storage access to...
   - Not persisted to disk (e.g. will not persist if the browser crashes).
   - Reset after 24 hours in the case of a long-running browser session.
 
-...equal or more sites than the maximum or has not been interacted with as a first party in the last 30 days::
+When equal or more sites than the maximum or has not been interacted with as a first party in the last 30 days:
 
 - The user is prompted
 - If the user clicks "Allow" or "Allow on any site" the request is resolved.

@@ -119,7 +119,7 @@ fetch(request)
   })
   .then(response => {
     console.debug(response);
-    // ...
+    // …
   }).catch(error => {
     console.error(error);
   });

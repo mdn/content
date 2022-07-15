@@ -99,11 +99,11 @@ the `Notification()` constructor.
 
 ```js
 function spawnNotification(body, icon, title) {
-  var options = {
+  const options = {
       body: body,
       icon: icon
   }
-  var notification = new Notification(title, options);
+  const notification = new Notification(title, options);
 }
 ```
 

@@ -92,7 +92,7 @@ Layers will be presented in the order they are given in the `layers` array, with
 ```js
 const xrSession = navigator.xr.requestSession("immersive-ar", {
   optionalFeatures: ["layers"]
-}
+});
 
 function onXRSessionStarted(xrSession) {
   const glCanvas = document.createElement("canvas");

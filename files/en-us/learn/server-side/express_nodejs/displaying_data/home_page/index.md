@@ -42,8 +42,8 @@ The index controller function needs to fetch information about how many `Book`, 
 >
 > ```js
 > SomeModel.countDocuments({ a_model_field: 'match_value' }, function (err, count) {
->  // ... do something if there is an err
->  // ... do something with the count if there was no error
+>  // Do something if there is an err
+>  // Do something with the count if there was no error
 >  });
 > ```
 

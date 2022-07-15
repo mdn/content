@@ -175,7 +175,7 @@ function clock() {
 
   // write Hours
   ctx.save();
-  ctx.rotate(hr * (Math.PI / 6) + (Math.PI / 360) * min + (Math.PI / 21600) *sec);
+  ctx.rotate((Math.PI / 6) * hr + (Math.PI / 360) * min + (Math.PI / 21600) * sec);
   ctx.lineWidth = 14;
   ctx.beginPath();
   ctx.moveTo(-20, 0);

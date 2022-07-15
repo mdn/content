@@ -12,22 +12,20 @@ browser-compat: api.MediaStream.id
 ---
 {{APIRef("Media Capture and Streams")}}
 
-The **`MediaStream.id()`** read-only property is a
+The **`MediaStream.id`** read-only property is a
 string containing 36 characters denoting a unique identifier (GUID)
 for the object.
 
-## Syntax
+## Value
+
+A string.
+
+## Examples
 
 ```js
-const id = mediaStream.id;
-```
+const promise = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
 
-## Example
-
-```js
-const p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
-
-p.then(function(stream) {
+promise.then(function(stream) {
    console.log(stream.id);
 })
 ```

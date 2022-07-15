@@ -38,7 +38,7 @@ let moving = browser.tabs.move(
 
   - : `object`. An object that specifies where to move the tab(s).
 
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. The ID of the window to which you want to move the tab(s). If you omit this, then each tab in `tabIds` will be moved to `index` in its current window. If you include this, and `tabIds` contains more than one tab, then the first tab in `tabIds` will be moved to `index`, and the other tabs will follow it in the order given in `tabIds`.
     - `index`
 

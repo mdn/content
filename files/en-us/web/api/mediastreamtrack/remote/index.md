@@ -19,11 +19,9 @@ one. It returns a boolean value that is `true` if the track
 is sourced remotely (that is, sourced by an {{domxref("RTCPeerConnection")}}), or
 `false` if it is sourced locally.
 
-## Syntax
+## Value
 
-```js
-const bool = track.remote;
-```
+A boolean.
 
 ## Browser compatibility
 

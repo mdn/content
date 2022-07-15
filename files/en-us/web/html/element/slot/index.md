@@ -44,7 +44,7 @@ The **`<slot>`** [HTML](/en-US/docs/Web/HTML) element—part of the [Web Compone
     </tr>
     <tr>
       <th scope="row">Events</th>
-      <td>{{event("slotchange")}}</td>
+      <td>{{domxref("HTMLSlotElement/slotchange_event", "slotchange")}}</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>

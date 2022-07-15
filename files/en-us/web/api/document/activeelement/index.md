@@ -78,7 +78,7 @@ textarea2.addEventListener('mouseup', onMouseUp, false);
 
 ### Result
 
-{{ EmbedLiveSample('Example', '400', '400') }}
+{{ EmbedLiveSample('Examples', '400', '400') }}
 
 ## Specifications
 

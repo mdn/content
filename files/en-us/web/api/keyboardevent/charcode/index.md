@@ -15,7 +15,7 @@ browser-compat: api.KeyboardEvent.charCode
 
 The **`charCode`** read-only property of the
 {{domxref("KeyboardEvent")}} interface returns the Unicode value of a character key
-pressed during a {{Event("keypress")}} event.
+pressed during a {{domxref("Element/keypress_event", "keypress")}} event.
 
 > **Warning:** Do not use this property, as it is deprecated. Instead, get the
 > Unicode value of the character using the {{domxref("KeyboardEvent.key", "key")}}
@@ -48,11 +48,11 @@ input.addEventListener('keypress', function(e) {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Notes
 
-- In a {{Event("keypress")}} event, the Unicode value of the key pressed is stored in
+- In a {{domxref("Element/keypress_event", "keypress")}} event, the Unicode value of the key pressed is stored in
   either the {{ domxref("KeyboardEvent.keyCode", "keyCode") }} or `charCode`
   property, but never both. If the key pressed generates a character (e.g., 'a'),
   `charCode` is set to the code of that character; `charCode`
@@ -67,8 +67,8 @@ input.addEventListener('keypress', function(e) {
 - When one or more modifier keys are pressed, there are some complex rules for
   `charCode`. See [Gecko Keypress Event](/en-US/docs/Gecko_Keypress_Event)
   for details.
-- `charCode` is never set in the {{Event("keydown")}} and
-  {{Event("keyup")}} events. In these cases, `keyCode` is set instead.
+- `charCode` is never set in the {{domxref("Element/keydown_event", "keydown")}} and
+  {{domxref("Element/keyup_event", "keyup")}} events. In these cases, `keyCode` is set instead.
 - To get the code of the key regardless of whether it was stored in
   `keyCode` or `charCode`, query the {{
     domxref("KeyboardEvent.which", "which") }} property.

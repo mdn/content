@@ -234,7 +234,7 @@ browser.runtime.onStartup.addListener(function() {
 
 ### Record state changes
 
-As scripts now open and close as needed, use the storage API to set and return states and values. Use {{WebExtAPIRef("storage.local")}} `set`to update on the local machine.
+As scripts now open and close as needed, use the storage API to set and return states and values. Use {{WebExtAPIRef("storage.local")}} `set` to update on the local machine.
 
 ```js
 browser.storage.local.set({ variable: variableInformation });
