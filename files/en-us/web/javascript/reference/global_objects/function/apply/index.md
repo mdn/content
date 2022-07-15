@@ -43,7 +43,7 @@ The result of calling the function with the specified **`this`** value and argum
 
 > **Note:** While the syntax of this function is almost identical to that of {{jsxref("Function.prototype.call()", "call()")}}, the fundamental difference is that `call()` accepts an **argument list**, while `apply()` accepts a **single array of arguments**.
 
-> **Note:** When the first argument is `undefined` or `null` a similar outcome can be achieved using the array [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
+> **Note:** When the first argument is `undefined` or `null`, a similar outcome can be achieved using the parameters [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
 
 You can assign a different `this` object when calling an existing function. `this` refers to the current object (the calling object). With `apply`, you can write a method once, and then inherit it in another object, without having to rewrite the method for the new object.
 
