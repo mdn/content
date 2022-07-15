@@ -1353,10 +1353,10 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
 
 New {{domxref("ElementInternals")}} properties and methods that allow custom elements to interact with a form:
 
-- {{domxref("ElementInternals.form","form")}} property gets the form associated with the element.
-- {{domxref("ElementInternals.labels","labels")}} property gets the list of labels associated with the element.
-- {{domxref("ElementInternals.willValidate", "willValidate")}} property checks if a custom form element will be validated.
-- {{domxref("ElementInternals.setFormValue()","setFormValue()")}} method sets the sanitized value and user-entered data, if needed.
+- The {{domxref("ElementInternals.form","form")}} property gets the form associated with the element.
+- The {{domxref("ElementInternals.labels","labels")}} property gets the list of labels associated with the element.
+- The {{domxref("ElementInternals.willValidate", "willValidate")}} property checks if a custom form element will be validated.
+- The {{domxref("ElementInternals.setFormValue()","setFormValue()")}} method sets the sanitized value and user-entered data, if needed.
 
 See these bugs for details: {{bug(1556362)}}, {{bug(1556373)}}, {{bug(1556365)}}, {{bug(1556449)}}.
 
