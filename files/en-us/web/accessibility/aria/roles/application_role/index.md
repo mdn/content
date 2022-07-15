@@ -15,7 +15,7 @@ spec-urls:
 The `application` role indicates to assistive technologies that an element _and all of its children_ should be treated similar to a desktop application, and no traditional HTML interpretation techniques should be used. This role should only be used to define very dynamic and desktop-like web applications. Most mobile and desktop web apps _are not_ considered applications for this purpose.
 
 ```html
-<div role="application" aria-label="...">...</div>
+<div role="application" aria-label="…">…</div>
 ```
 
 By specifying the `application` role, it indicates this `div` element and all of its descendants are to be treated like they are part of a desktop application.
