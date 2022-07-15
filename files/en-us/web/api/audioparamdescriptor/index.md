@@ -49,7 +49,7 @@ class WhiteNoiseProcessor extends AudioWorkletProcessor {
     }]
   }
 
-...
+// …
 }
 ```
 

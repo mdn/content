@@ -88,7 +88,7 @@ if (navigator.mediaDevices.getUserMedia) {
 source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
-  ...
+// …
 
 mute.onclick = voiceMute;
 
