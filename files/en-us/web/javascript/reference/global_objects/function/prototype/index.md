@@ -27,14 +27,14 @@ console.log(Object.getPrototypeOf(inst) === Ctor.prototype); // true
 
 You can read [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#constructors) for more information about the interactions between a constructor function's `prototype` property and the resulting object's prototype.
 
-A function having a `prototype` property is not sufficient for it to be eligible as a constructor. Generator functions have a `prototype` property, but cannot be called with `new`:
+A function having a `prototype` property is not sufficient for it to be eligible as a constructor. [Generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*) have a `prototype` property, but cannot be called with `new`:
 
 ```js
 async function* asyncGeneratorFunction() {}
 function* generatorFunction() {}
 ```
 
-Instead, [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*)' `prototype` property is used when they are called _without_ `new`. The `prototype` property will become the returned [`Generator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) object's prototype.
+Instead, generator functions' `prototype` property is used when they are called _without_ `new`. The `prototype` property will become the returned [`Generator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) object's prototype.
 
 The following functions do not have `prototype`, and are therefore ineligible as constructors, even if a `prototype` property is later manually assigned:
 
