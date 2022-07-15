@@ -26,7 +26,7 @@ The **`dir`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) is an
   </msup>
 </math>
 
-<!---- Maghreb/Machrek style -->
+<!-- Maghreb/Machrek style -->
 <math dir="rtl">
   <msqrt>
     <mi>س</mi>
