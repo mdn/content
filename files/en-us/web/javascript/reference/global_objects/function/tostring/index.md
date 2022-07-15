@@ -27,9 +27,9 @@ A string representing the source code of the function.
 
 ## Description
 
-The {{jsxref("Function")}} prototype overrides the {{jsxref("Object.prototype.toString()",
-    "toString()")}} method inherited from {{jsxref("Object")}}; it does not inherit
-{{jsxref("Object.prototype.toString")}}. For user-defined `Function`
+The {{jsxref("Function")}} object overrides the {{jsxref("Object.prototype.toString",
+    "toString")}} method inherited from {{jsxref("Object")}}; it does not inherit
+{{jsxref("Object.prototype.toString")}}. For user-defined {{jsxref("Function")}}
 objects, the `toString` method returns a string containing the source text
 segment which was used to define the function.
 
@@ -45,10 +45,9 @@ The `toString()` method will throw a {{jsxref("TypeError")}} exception
 Function.prototype.toString.call('foo'); // TypeError
 ```
 
-If the `toString()` method is called on built-in function objects, a
-function created by {{jsxref("Function.prototype.bind()")}}, or
-other non-JavaScript functions, then `toString()` returns a
-_native function string_ which looks like
+If the `toString()` method is called on built-in function objects or a
+function created by `Function.prototype.bind`, `toString()`
+returns a _native function string_ which looks like
 
 ```js
 "function () {\n    [native code]\n}"
