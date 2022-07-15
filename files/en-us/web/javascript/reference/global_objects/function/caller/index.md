@@ -14,7 +14,7 @@ A {{jsxref("Function")}} object's **`caller`** property returns the function tha
 
 ## Description
 
-If the function `f` was invoked by the top-level code, the value of `f.caller` is {{jsxref("null")}}, otherwise it's the function that called `f`.
+If the function `f` was invoked by the top-level code, the value of `f.caller` is {{jsxref("Operators/null", "null")}}, otherwise it's the function that called `f`.
 
 This property replaces the obsolete {{jsxref("Functions/arguments/caller", "arguments.caller")}} property of the {{jsxref("Functions/arguments", "arguments")}} object.
 
