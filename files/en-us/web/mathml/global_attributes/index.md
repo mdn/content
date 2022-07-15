@@ -26,13 +26,12 @@ In addition to the basic MathML global attributes, the following global attribut
   - : A space-separated list of the classes of the element. Classes allows CSS and JavaScript to select and access specific elements via the [class selectors](/en-US/docs/Web/CSS/Class_selectors) or functions like the method {{DOMxRef("Document.getElementsByClassName()")}}.
 - [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*)
   - : Forms a class of attributes, called custom data attributes, that allow proprietary information to be exchanged between the [MathML](/en-US/docs/Web/MathML) and its {{glossary("DOM")}} representation that may be used by scripts. All such custom data are available via the {{DOMxRef("MathMLElement")}} interface of the element the attribute is set on. The {{DOMxRef("HTMLElement.dataset")}} property gives access to them.
-- [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir)
+- [`dir`](/en-US/docs/Web/MathML/Global_attributes/dir)
 
-  - : An enumerated attribute indicating the directionality of the element's text. It can have the following values:
+  - : An enumerated attribute indicating the directionality of the MathML element. It can have the following values:
 
-    - `ltr`, which means _left to right_ and is to be used for languages that are written from the left to the right (like English);
-    - `rtl`, which means _right to left_ and is to be used for languages that are written from the right to the left (like Arabic);
-    - `auto`, which lets the user agent decide. It uses a basic algorithm as it parses the characters inside the element until it finds a character with a strong directionality, then it applies that directionality to the whole element.
+    - `ltr`, which means _left to right_ and is used to render mathematical expressions from the left to the right (e.g. English or Moroccan style);
+    - `rtl`, which means _right to left_ and is used to render mathematical expressions from the right to the left (e.g. Maghreb or Machrek style);
 
 - [`displaystyle`](/en-US/docs/Web/MathML/Global_attributes/displaystyle):
   - : a boolean setting the [math-style](/en-US/docs/Web/CSS/math-style) for the element.

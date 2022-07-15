@@ -1,5 +1,5 @@
 ---
-title: Function.caller
+title: Function.prototype.caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 tags:
   - Deprecated
@@ -10,11 +10,11 @@ browser-compat: javascript.builtins.Function.caller
 ---
 {{JSRef}} {{deprecated_header}}
 
-The **`function.caller`** property returns the function that invoked the specified function. It returns `null` for strict, async function and generator function callers.
+A {{jsxref("Function")}} object's **`caller`** property returns the function that invoked the specified function. For [strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), async function, and generator function callers, accessing the `caller` property throws an exception.
 
 ## Description
 
-If the function `f` was invoked by the top level code, the value of `f.caller` is {{jsxref("null")}}, otherwise it's the function that called `f`. It's also `null` for strict, async function and generator function callers.
+If the function `f` was invoked by the top-level code, the value of `f.caller` is {{jsxref("Operators/null", "null")}}, otherwise it's the function that called `f`.
 
 This property replaces the obsolete {{jsxref("Functions/arguments/caller", "arguments.caller")}} property of the {{jsxref("Functions/arguments", "arguments")}} object.
 
@@ -57,7 +57,7 @@ the loop would never stop.
 
 ## Examples
 
-### Checking the value of a function's `caller` property
+### Checking the value of a function's caller property
 
 The following code checks the value a function's `caller` property.
 
@@ -81,5 +81,5 @@ Not part of any standard.
 
 ## See also
 
-- {{jsxref("Function.name", "Function.name")}}
+- {{jsxref("Function.prototype.name")}}
 - {{jsxref("Functions/arguments", "arguments")}}

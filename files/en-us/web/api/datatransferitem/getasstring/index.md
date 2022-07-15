@@ -24,13 +24,13 @@ given callback with the drag data item's string data as the argument if the item
 
 ```js
 // Arrow function
-getAsString((data) => { /* ... */ } )
+getAsString((data) => { /* … */ } )
 
 // Callback function
 getAsString(callbackFn)
 
 // Inline callback function
-getAsString(function(data) { /* ... */ })
+getAsString(function(data) { /* … */ })
 ```
 
 ### Parameters
@@ -64,16 +64,16 @@ function drop_handler(ev) {
    } else if ((data[i].kind == 'string') &&
               (data[i].type.match('^text/html'))) {
      // Drag data item is HTML
-     console.log("... Drop: HTML");
+     console.log("… Drop: HTML");
    } else if ((data[i].kind == 'string') &&
               (data[i].type.match('^text/uri-list'))) {
      // Drag data item is URI
-     console.log("... Drop: URI");
+     console.log("… Drop: URI");
    } else if ((data[i].kind == 'file') &&
               (data[i].type.match('^image/'))) {
      // Drag data item is an image file
      const f = data[i].getAsFile();
-     console.log("... Drop: File ");
+     console.log("… Drop: File ");
    }
  }
 }

@@ -97,7 +97,7 @@ In order to be oriented about what we're trying to accomplish, let's have a look
 </p>
 
 <div id="container">
-  <div class="label">Decoding quantum filament tachyon emissions...</div>
+  <div class="label">Decoding quantum filament tachyon emissions…</div>
 
   <progress id="progress" value="0"></progress>
 

@@ -32,7 +32,7 @@ Later on, using the `aborted` property, we check whether or not the signal has b
 var controller = new AbortController();
 var signal = controller.signal;
 
-// ...
+// …
 
 signal.aborted ? console.log(`Request aborted with reason: ${signal.reason}`) : console.log('Request not aborted');
 ```
