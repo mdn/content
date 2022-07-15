@@ -11,7 +11,7 @@ tags:
 
     Guide to accessibility semantics defined by the Accessible Rich Internet Application (<abbr>ARIA</abbr>) specification to create accessible web experiences. Describes how to apply accessibility semantics to common design patterns and widgets, providing design patterns and functional examples.
 
-2. [<dfn>Web Content Accessibility Guidelines (<abbr>WCAG</abbr>)</dfn>](https://www.w3.org/WAI/standards-guidelines/wcag/)
+2. [Web Content Accessibility Guidelines (<abbr>WCAG</abbr>)](https://www.w3.org/WAI/standards-guidelines/wcag/)
 
     Another important set of guidelines from the W3C _Web Accessibility Initiative (<abbr>WAI</abbr>)_. The European Union is looking to base their upcoming accessibility regulations on these guidelines. These guidelines are discussed on the [<abbr>WAI</abbr> interest group discussion list](https://www.w3.org/WAI/about/groups/waiig/#mailinglist).
 
