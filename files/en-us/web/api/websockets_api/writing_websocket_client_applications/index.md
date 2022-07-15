@@ -70,7 +70,7 @@ protocol of "protocolOne" is named in the request for the socket in this example
 this can be omitted.
 
 ```js
-var exampleSocket = new WebSocket("wss://www.example.com/socketserver", "protocolOne");
+const exampleSocket = new WebSocket("wss://www.example.com/socketserver", "protocolOne");
 ```
 
 On return, {{domxref("WebSocket.readyState", "exampleSocket.readyState")}} is
@@ -81,7 +81,7 @@ If you want to open a connection and are flexible about the protocols you suppor
 can specify an array of protocols:
 
 ```js
-var exampleSocket = new WebSocket("wss://www.example.com/socketserver", ["protocolOne", "protocolTwo"]);
+const exampleSocket = new WebSocket("wss://www.example.com/socketserver", ["protocolOne", "protocolTwo"]);
 ```
 
 Once the connection is established (that is, `readyState` is
@@ -127,7 +127,7 @@ implemented using packets of JSON-encapsulated data:
 // Send text to all users through the server
 function sendText() {
   // Construct a msg object containing the data the server needs to process the message from the chat client.
-  var msg = {
+  const msg = {
     type: "message",
     text: document.getElementById("text").value,
     id:   clientID,
@@ -169,11 +169,11 @@ The code that interprets these incoming messages might look like this:
 
 ```js
 exampleSocket.onmessage = function(event) {
-  var f = document.getElementById("chatbox").contentDocument;
-  var text = "";
-  var msg = JSON.parse(event.data);
-  var time = new Date(msg.date);
-  var timeStr = time.toLocaleTimeString();
+  const f = document.getElementById("chatbox").contentDocument;
+  let text = "";
+  const msg = JSON.parse(event.data);
+  const time = new Date(msg.date);
+  const timeStr = time.toLocaleTimeString();
 
   switch(msg.type) {
     case "id":
@@ -190,8 +190,8 @@ exampleSocket.onmessage = function(event) {
       text = "<b>Your username has been set to <em>" + msg.name + "</em> because the name you chose is in use.</b><br>"
       break;
     case "userlist":
-      var ul = "";
-      for (i=0; i < msg.users.length; i++) {
+      let ul = "";
+      for (let i=0; i < msg.users.length; i++) {
         ul += msg.users[i] + "<br>";
       }
       document.getElementById("userlistbox").innerHTML = ul;
