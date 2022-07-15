@@ -34,13 +34,12 @@ bind(thisArg, arg1, ... , argN)
   - : The value to be passed as the `this` parameter to the target function
     `func` when the bound function is called. The value is ignored
     if the bound function is constructed using the {{jsxref("Operators/new", "new")}}
-    operator. When using `bind` to create a function (supplied as a callback)
-    inside a `setTimeout`, any primitive value passed as
-    `thisArg` is converted to object. If no arguments are provided
-    to `bind`, or if the `thisArg` is
-    `null` or `undefined`, the
-    `this` of the executing scope is treated as the
-    `thisArg` for the new function.
+    operator.
+
+    > **Note:** In certain cases, `this` may not be the actual value seen by the method.
+    >
+    > If the method is a function in {{jsxref("Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("null")}} and {{jsxref("undefined")}} will be replaced with the global object, and primitive values will be converted to objects.
+
 - `arg1, arg2, ...argN`
   {{optional_inline}}
   - : Arguments to prepend to arguments provided to the bound function when invoking
