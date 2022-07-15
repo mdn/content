@@ -35,7 +35,7 @@ function reqListener () {
   console.log(this.responseText);
 }
 
-var oReq = new XMLHttpRequest();
+const oReq = new XMLHttpRequest();
 oReq.addEventListener("load", reqListener);
 oReq.open("GET", "http://www.example.org/example.txt");
 oReq.send();
@@ -116,7 +116,7 @@ binary data. These involve utilizing the {{domxref("XMLHttpRequest.overrideMimeT
 workable solution.
 
 ```js
-var oReq = new XMLHttpRequest();
+const oReq = new XMLHttpRequest();
 oReq.open("GET", url);
 // retrieve data unprocessed as a binary string
 oReq.overrideMimeType("text/plain; charset=x-user-defined");
@@ -133,10 +133,10 @@ For example, consider this snippet, which uses the `responseType` of
 object, which stores the raw binary data.
 
 ```js
-var oReq = new XMLHttpRequest();
+const oReq = new XMLHttpRequest();
 
 oReq.onload = function(e) {
-  var arraybuffer = oReq.response; // not responseText
+  const arraybuffer = oReq.response; // not responseText
   /* ... */
 }
 oReq.open("GET", url);
@@ -162,7 +162,7 @@ actual events you can monitor to determine the state of an ongoing transfer are:
   - : The transfer is complete; all data is now in the `response`
 
 ```js
-var oReq = new XMLHttpRequest();
+const oReq = new XMLHttpRequest();
 
 oReq.addEventListener("progress", updateProgress);
 oReq.addEventListener("load", transferComplete);
@@ -176,7 +176,7 @@ oReq.open();
 // progress on transfers from the server to the client (downloads)
 function updateProgress (oEvent) {
   if (oEvent.lengthComputable) {
-    var percentComplete = oEvent.loaded / oEvent.total * 100;
+    const percentComplete = oEvent.loaded / oEvent.total * 100;
     // ...
   } else {
     // Unable to compute progress information since the total size is unknown
@@ -215,7 +215,7 @@ The upload events are fired on the `XMLHttpRequest.upload` object, as shown
 below:
 
 ```js
-var oReq = new XMLHttpRequest();
+const oReq = new XMLHttpRequest();
 
 oReq.upload.addEventListener("progress", updateProgress);
 oReq.upload.addEventListener("load", transferComplete);
@@ -363,8 +363,8 @@ ways to _submit_, and to **upload files**:
 
 if (!XMLHttpRequest.prototype.sendAsBinary) {
   XMLHttpRequest.prototype.sendAsBinary = function(sData) {
-    var nBytes = sData.length, ui8Data = new Uint8Array(nBytes);
-    for (var nIdx = 0; nIdx < nBytes; nIdx++) {
+    const nBytes = sData.length, ui8Data = new Uint8Array(nBytes);
+    for (let nIdx = 0; nIdx < nBytes; nIdx++) {
       ui8Data[nIdx] = sData.charCodeAt(nIdx) & 0xff;
     }
     /* send: */
@@ -386,7 +386,7 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 |*|   AJAXSubmit(HTMLFormElement);
 \*/
 
-var AJAXSubmit = (function () {
+const AJAXSubmit = (function () {
 
   function ajaxSuccess () {
     /* console.log("AJAXSubmit - Success!"); */
@@ -397,7 +397,7 @@ var AJAXSubmit = (function () {
 
   function submitData (oData) {
     /* the AJAX request... */
-    var oAjaxReq = new XMLHttpRequest();
+    const oAjaxReq = new XMLHttpRequest();
     oAjaxReq.submittedData = oData;
     oAjaxReq.onload = ajaxSuccess;
     if (oData.technique === 0) {
@@ -410,7 +410,7 @@ var AJAXSubmit = (function () {
       oAjaxReq.open("post", oData.receiver, true);
       if (oData.technique === 3) {
         /* enctype is multipart/form-data */
-        var sBoundary = "---------------------------" + Date.now().toString(16);
+        const sBoundary = "---------------------------" + Date.now().toString(16);
         oAjaxReq.setRequestHeader("Content-Type", "multipart\/form-data; boundary=" + sBoundary);
         oAjaxReq.sendAsBinary("--" + sBoundary + "\r\n" +
             oData.segments.join("--" + sBoundary + "\r\n") + "--" + sBoundary + "--\r\n");
@@ -444,7 +444,7 @@ var AJAXSubmit = (function () {
   }
 
   function SubmitRequest (oTarget) {
-    var nFile, sFieldType, oField, oSegmReq, oFile, bIsPost = oTarget.method.toLowerCase() === "post";
+    const nFile, sFieldType, oField, oSegmReq, oFile, bIsPost = oTarget.method.toLowerCase() === "post";
     /* console.log("AJAXSubmit - Serializing form..."); */
     this.contentType = bIsPost && oTarget.enctype ? oTarget.enctype : "application\/x-www-form-urlencoded";
     this.technique = bIsPost ?
@@ -452,8 +452,8 @@ var AJAXSubmit = (function () {
     this.receiver = oTarget.action;
     this.status = 0;
     this.segments = [];
-    var fFilter = this.technique === 2 ? plainEscape : escape;
-    for (var nItem = 0; nItem < oTarget.elements.length; nItem++) {
+    const fFilter = this.technique === 2 ? plainEscape : escape;
+    for (let nItem = 0; nItem < oTarget.elements.length; nItem++) {
       oField = oTarget.elements[nItem];
       if (!oField.hasAttribute("name")) { continue; }
       sFieldType = oField.nodeName.toUpperCase() === "INPUT" && oField.hasAttribute("type") ?
@@ -687,14 +687,14 @@ function ajaxSuccess () {
 
 function AJAXSubmit (oFormElement) {
   if (!oFormElement.action) { return; }
-  var oReq = new XMLHttpRequest();
+  const oReq = new XMLHttpRequest();
   oReq.onload = ajaxSuccess;
   if (oFormElement.method.toLowerCase() === "post") {
     oReq.open("post", oFormElement.action);
     oReq.send(new FormData(oFormElement));
   } else {
-    var oField, sFieldType, nFile, sSearch = "";
-    for (var nItem = 0; nItem < oFormElement.elements.length; nItem++) {
+    let oField, sFieldType, nFile, sSearch = "";
+    for (let nItem = 0; nItem < oFormElement.elements.length; nItem++) {
       oField = oFormElement.elements[nItem];
       if (!oField.hasAttribute("name")) { continue; }
       sFieldType = oField.nodeName.toUpperCase() === "INPUT" && oField.hasAttribute("type") ?
@@ -809,7 +809,7 @@ function getHeaderTime () {
   console.log(this.getResponseHeader("Last-Modified"));  /* A valid GMTString date or null */
 }
 
-var oReq = new XMLHttpRequest();
+const oReq = new XMLHttpRequest();
 oReq.open("HEAD" /* use HEAD if you only need the headers! */, "yourpage.html");
 oReq.onload = getHeaderTime;
 oReq.send();
@@ -821,8 +821,8 @@ Let's create two functions:
 
 ```js
 function getHeaderTime () {
-  var nLastVisit = parseFloat(window.localStorage.getItem('lm_' + this.filepath));
-  var nLastModified = Date.parse(this.getResponseHeader("Last-Modified"));
+  const nLastVisit = parseFloat(window.localStorage.getItem('lm_' + this.filepath));
+  const nLastModified = Date.parse(this.getResponseHeader("Last-Modified"));
 
   if (isNaN(nLastVisit) || nLastModified > nLastVisit) {
     window.localStorage.setItem('lm_' + this.filepath, Date.now());
@@ -831,7 +831,7 @@ function getHeaderTime () {
 }
 
 function ifHasChanged(sURL, fCallback) {
-  var oReq = new XMLHttpRequest();
+  const oReq = new XMLHttpRequest();
   oReq.open("HEAD" /* use HEAD - we only need the headers! */, sURL);
   oReq.callback = fCallback;
   oReq.filepath = sURL;
@@ -876,7 +876,7 @@ bypassing the cache.
 You can automatically adjust URLs using the following code:
 
 ```js
-var oReq = new XMLHttpRequest();
+const oReq = new XMLHttpRequest();
 
 oReq.open("GET", url + ((/\?/).test(url) ? "&" : "?") + (new Date()).getTime());
 oReq.send(null);
