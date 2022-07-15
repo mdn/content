@@ -14,7 +14,7 @@
     "build": "env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build yari-build"
   },
   "dependencies": {
-    "@mdn/yari": "1.9.0",
+    "@mdn/yari": "1.10.0",
     "cross-env": "7.0.3",
     "env-cmd": "10.1.0"
   }
