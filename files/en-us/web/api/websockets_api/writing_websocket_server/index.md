@@ -340,9 +340,9 @@ class Server {
 <script>
     // http://www.websocket.org/echo.html
 
-    var button = document.querySelector("button"),
-        output = document.querySelector("#output"),
-        textarea = document.querySelector("textarea"),
+    const button = document.querySelector("button"),
+    const output = document.querySelector("#output"),
+    const textarea = document.querySelector("textarea"),
         // wsUri = "ws://echo.websocket.org/",
         wsUri = "ws://127.0.0.1/",
         websocket = new WebSocket(wsUri);
@@ -376,7 +376,7 @@ class Server {
     }
 
     function onClickButton() {
-        var text = textarea.value;
+        const text = textarea.value;
 
         text && doSend(text);
         textarea.value = "";
