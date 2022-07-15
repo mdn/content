@@ -44,16 +44,25 @@ A {{jsxref("Promise")}} which when resolved returns an {{jsxref("Object")}} with
 The following example shows a simple generator and the object that the `next` method returns:
 
 ```js
-async function* createAsyncGenerator() {
-  yield await Promise.resolve(1);
-  yield await Promise.resolve(2);
-  yield await Promise.resolve(3);
+// An async task. Pretend it's doing something more useful
+// in practice.
+function delayedValue(time, value) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve(value), time);
+  });
 }
+
+async function* createAsyncGenerator() {
+  yield delayedValue(500, 1);
+  yield delayedValue(500, 2);
+  yield delayedValue(500, 3);
+}
+
 const asyncGen = createAsyncGenerator();
-asyncGen.next().then(res => console.log(res));    // "Object { value: 1, done: false }"
-asyncGen.next().then(res => console.log(res));    // "Object { value: 2, done: false }"
-asyncGen.next().then(res => console.log(res));    // "Object { value: 3, done: false }"
-asyncGen.next().then(res => console.log(res));    // "Object { value: undefined, done: true }"
+asyncGen.next().then((res) => console.log(res));    // { value: 1, done: false }
+asyncGen.next().then((res) => console.log(res));    // { value: 2, done: false }
+asyncGen.next().then((res) => console.log(res));    // { value: 3, done: false }
+asyncGen.next().then((res) => console.log(res));    // { value: undefined, done: true }
 ```
 
 ### Sending values to the generator
@@ -63,42 +72,30 @@ In this example, `next` is called with a value.
 > **Note:** The first call does not log anything, because the generator was not yielding anything initially.
 
 ```js
+// An async task. Pretend it's doing something more useful
+// in practice.
+function sleep(time) {
+  return new Promise((resolve, reject) => {
+    setTimeout(resolve, time);
+  });
+}
+
 async function* createAsyncGenerator() {
   while (true) {
-    const value = yield await Promise.resolve(null);
+    await sleep(500);
+    const value = yield null;
     console.log(value);
   }
 }
-const asyncGen = createAsyncGenerator();
-asyncGen.next(1).then(res => console.log(res));    // { value: null, done: false }
-asyncGen.next(2).then(res => console.log(res));    // { value: null, done: false }
-```
 
-### Using next() with a list
-
-In this example, `getPage` takes a list and "paginates" it into chunks of size `pageSize`. Each call to `next` will yield one such chunk.
-
-```js
-async function* getPage(list, pageSize = 1) {
-  let output = [];
-  let index = 0;
-  while (index < list.length) {
-    output = [];
-    for (let i = index; i < index + pageSize; i++) {
-      if (list[i]) {
-        output.push(list[i]);
-      }
-    }
-    yield await Promise.resolve(output);
-    index += pageSize;
-  }
+async function main() {
+  const asyncGen = createAsyncGenerator();
+  console.log(await asyncGen.next(1));    // { value: null, done: false }
+  // Logs 2: the value sent through `next`
+  console.log(await asyncGen.next(2));    // { value: null, done: false }
 }
-const list = [1, 2, 3, 4, 5, 6, 7, 8];
-const page = getPage(list, 3);             // AsyncGenerator { }
-page.next().then(res => console.log(res)); // Object { value: [1, 2, 3], done: false }
-page.next().then(res => console.log(res)); // Object { value: [4, 5, 6], done: false }
-page.next().then(res => console.log(res)); // Object { value: [7, 8], done: false }
-page.next().then(res => console.log(res)); // Object { value: undefined, done: true }
+
+main();
 ```
 
 ## Specifications

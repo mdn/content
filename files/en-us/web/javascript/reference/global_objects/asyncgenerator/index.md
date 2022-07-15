@@ -49,9 +49,11 @@ asyncGen.next()
 
 ### Async generator iteration
 
-The following example iterates over an async generator, logging values 1–6 to the console at decreasing time intervals.
+The following example iterates over an async generator, logging values 1–6 to the console at decreasing time intervals. Notice how each time a Promise is yielded, but it's automatically resolved within the `for await...of` loop.
 
 ```js
+// An async task. Pretend it's doing something more useful
+// in practice.
 function delayedValue(time, value) {
   return new Promise((resolve, reject) => {
     setTimeout(() => resolve(value), time);
@@ -59,12 +61,12 @@ function delayedValue(time, value) {
 }
 
 async function* generate() {
-  yield await delayedValue(1000, 1);
-  yield await delayedValue(2000, 2);
-  yield await delayedValue(400, 3);
-  yield await delayedValue(800, 4);
-  yield await delayedValue(150, 5);
-  yield await delayedValue(50, 6);
+  yield delayedValue(2000, 1);
+  yield delayedValue(100, 2);
+  yield delayedValue(500, 3);
+  yield delayedValue(250, 4);
+  yield delayedValue(125, 5);
+  yield delayedValue(50, 6);
   console.log('All done!');
 }
 
@@ -75,7 +77,7 @@ async function main() {
 }
 
 main()
-  .catch((e) => console.error('error', e));
+  .catch((e) => console.error(e));
 ```
 
 ## Specifications

@@ -42,6 +42,18 @@ An async generator function combines the features of [async functions](/en-US/do
 
 Unlike normal generator functions declared with `function*`, an async generator function return an {{jsxref("Global_Objects/AsyncGenerator","AsyncGenerator")}} object, which conforms to the [async iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols). Every call to `next()` returns a {{jsxref("Promise")}} that resolves to the iterator result object.
 
+When a promise is yielded from an async generator, the iterator result promise's eventual state will match that of the yielded promise. For example:
+
+```js
+async function* foo() {
+  yield Promise.reject(1);
+}
+
+foo().next().catch((e) => console.error(e));
+```
+
+`1` will be logged, because if the yielded promise rejects, the iterator result will reject as well. The `value` property of an async generator's resolved result will not be another promise.
+
 ## Examples
 
 ### Declaring an async generator function

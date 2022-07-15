@@ -49,9 +49,9 @@ The following example defines an unnamed asynchronous generator function and ass
 
 ```js
 const x = async function* (y) {
-  yield await Promise.resolve(y * y);
+  yield Promise.resolve(y * y);
 };
-x(6).next().then(res => console.log(res.value)); // logs 36
+x(6).next().then((res) => console.log(res.value)); // logs 36
 ```
 
 ## Specifications

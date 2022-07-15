@@ -45,19 +45,29 @@ If the exception is caught by a [`try...catch`](/en-US/docs/Web/JavaScript/Refer
 The following example shows a simple generator and an error that is thrown using the `throw` method. An error can be caught by a {{jsxref("Statements/try...catch", "try...catch")}} block as usual.
 
 ```js
+// An async task. Pretend it's doing something more useful
+// in practice.
+function sleep(time) {
+  return new Promise((resolve, reject) => {
+    setTimeout(resolve, time);
+  });
+}
+
 async function* createAsyncGenerator() {
   while (true) {
     try {
+      await sleep(500);
       yield 42;
     } catch (e) {
-      console.log(new Error(e));
+      console.error(e);
     }
   }
 }
+
 const asyncGen = createAsyncGenerator();
-asyncGen.next(1).then(res => console.log(res));    // { value: 42, done: false }
-asyncGen.throw(new Error('Something went wrong'))  // Error: 'Error: Something went wrong
-  .then(res => console.log(res));                  // { value: 42, done: false }
+asyncGen.next(1).then((res) => console.log(res));    // { value: 42, done: false }
+asyncGen.throw(new Error('Something went wrong'))    // Error: Something went wrong
+  .then((res) => console.log(res));                  // { value: 42, done: false }
 ```
 
 ## Specifications

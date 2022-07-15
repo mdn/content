@@ -47,15 +47,24 @@ The `return()` method, when called, can be seen as if a `return value;` statemen
 The following example shows a simple async generator and the `return` method.
 
 ```js
-async function* createAsyncGenerator() {
-  yield await Promise.resolve(1);
-  yield await Promise.resolve(2);
-  yield await Promise.resolve(3);
+// An async task. Pretend it's doing something more useful
+// in practice.
+function delayedValue(time, value) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve(value), time);
+  });
 }
+
+async function* createAsyncGenerator() {
+  yield delayedValue(500, 1);
+  yield delayedValue(500, 2);
+  yield delayedValue(500, 3);
+}
+
 const asyncGen = createAsyncGenerator();
-asyncGen.next().then(res => console.log(res));        // { value: 1, done: false }
-asyncGen.return('foo').then(res => console.log(res)); // { value: "foo", done: true }
-asyncGen.next().then(res => console.log(res));        // { value: undefined, done: true }
+asyncGen.next().then((res) => console.log(res));        // { value: 1, done: false }
+asyncGen.return('foo').then((res) => console.log(res)); // { value: "foo", done: true }
+asyncGen.next().then((res) => console.log(res));        // { value: undefined, done: true }
 ```
 
 ### Using return() once a generator is complete
