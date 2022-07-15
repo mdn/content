@@ -283,7 +283,7 @@ In the following piece of code, `slice()` is a bound function to the
 {{jsxref("Function.prototype.apply()", "apply()")}} function of
 {{jsxref("Function")}}, with the `this` value set to the
 {{jsxref("Array.prototype.slice()", "slice()")}} function of
-{{jsxref("Array.prototype")}}. This means that additional `apply()` calls can
+`Array.prototype`. This means that additional `apply()` calls can
 be eliminated:
 
 ```js
