@@ -66,7 +66,7 @@ You can dynamically change the `displayName` of a function:
 const object = {
   // anonymous
   someMethod: function someMethod(value) {
-    someMethod.displayName = 'someMethod (' + value + ')';
+    someMethod.displayName = `someMethod (${value})`;
   }
 };
 
