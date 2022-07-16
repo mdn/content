@@ -67,8 +67,8 @@ let sendButton = null;
 let messageInputBox = null;
 let receiveBox = null;
 
-const localConnection = null;   // RTCPeerConnection for our "local" connection
-const remoteConnection = null;  // RTCPeerConnection for the "remote"
+let localConnection = null;   // RTCPeerConnection for our "local" connection
+let remoteConnection = null;  // RTCPeerConnection for the "remote"
 
 const sendChannel = null;       // RTCDataChannel for the local (sender)
 const receiveChannel = null;    // RTCDataChannel for the remote (receiver)
