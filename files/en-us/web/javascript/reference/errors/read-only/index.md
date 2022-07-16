@@ -15,17 +15,15 @@ property that was assigned to is a read-only property.
 
 ## Message
 
-```js
-TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
+```
+TypeError: Cannot assign to read only property 'x' of #<Object> (V8-based)
 TypeError: "x" is read-only (Firefox)
-TypeError: 0 is read-only (Firefox)
-TypeError: Cannot assign to read only property 'x' of #<Object> (Chrome)
-TypeError: Cannot assign to read only property '0' of [object Array] (Chrome)
+TypeError: Attempted to assign to readonly property. (Safari)
 ```
 
 ## Error type
 
-{{jsxref("TypeError")}}
+{{jsxref("TypeError")}} in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) only.
 
 ## What went wrong?
 
