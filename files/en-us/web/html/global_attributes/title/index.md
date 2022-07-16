@@ -15,13 +15,13 @@ The **`title`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) conta
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-title.html","tabbed-shorter")}}
 
-Some typical uses:
+The main use of the `title` attribute is to label {{HTMLElement("iframe")}} elements for assistive technology.
 
-- Labeling {{HTMLElement("iframe")}} elements for assistive technology
-- Providing a programmatically associated label for an {{HTMLElement("input")}} element as a fallback for a real {{HTMLElement("label")}}
-- Labeling controls in [data tables](/en-US/docs/Web/HTML/Element/table)
+The `title` attribute may also be used to controls in [data tables](/en-US/docs/Web/HTML/Element/table). 
 
-Additional semantics are attached to the `title` attributes of the {{HTMLElement("link")}}, {{HTMLElement("abbr")}}, {{HTMLElement("input")}}, and {{HTMLElement("menuitem")}} elements.
+The `title` attribute, when added to [`<link rel="stylesheet">`](/en-US/docs/Web/HTML/Element/link), creates an alternate stylesheet. When defining an alternative style sheet with `<link rel="alternate">` the attribute is required and must be set to a non-empty string. 
+
+While `title` can be used to provide a programmatically associated label for an {{HTMLElement("input")}} element, this is not good practice. Use a {{HTMLElement("label")}} instead.
 
 ## Multiline titles
 
