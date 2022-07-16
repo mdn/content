@@ -67,10 +67,10 @@ We start by wrapping the whole script in an anonymous function to avoid global v
 
   const streaming = false;
 
-  const video = null;
-  const canvas = null;
-  const photo = null;
-  const startbutton = null;
+  let video = null;
+  let canvas = null;
+  let photo = null;
+  let startbutton = null;
 ```
 
 Those variables are:
