@@ -22,7 +22,7 @@ if (window.XMLHttpRequest) {
     let request = new XMLHttpRequest();
 } else {
     //IE 5 and 6 will use the ActiveX control
-    let request = new ActiveXObject("Microsoft.XMLHTTP");
+    var request = new ActiveXObject("Microsoft.XMLHTTP");
 }
 ```
 
