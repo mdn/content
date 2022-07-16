@@ -54,8 +54,8 @@ to the video element referenced by the variable `videoElem`.
 
 ```js
 async function capture() {
-  let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
-  let displayMediaOptions = {
+  const supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
+  const displayMediaOptions = {
     video: {},
     audio: false
   };
