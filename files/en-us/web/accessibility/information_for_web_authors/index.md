@@ -39,14 +39,15 @@ Use a tool to quickly check for common errors in your browser.
 - [Accessibility Insights](https://accessibilityinsights.io/)
 - [<abbr>WAVE</abbr>](http://wave.webaim.org/extension/)
 
-Tools to integrate into your build process, programmatically adding accessibility tests so you can catch errors as you develop your web application:
+Tools to integrate into your build process, programmatically adding accessibility tests, so you can catch errors as you develop your web application:
 
 - [axe-core](https://github.com/dequelabs/axe-core)
 - [jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
 - [Lighthouse Audits](https://github.com/GoogleChrome/lighthouse/blob/master/docs/readme.md#using-programmatically)
 - [AccessLint.js](https://github.com/accesslint/accesslint.js/tree/master)
 
-Continuous integration tools find accessibility issues in your GitHub pull requests
+Continuous integration tools to find accessibility issues in your GitHub pull requests:
+
 - [AccessLint](https://www.accesslint.com/)
 
 While best to test your web applications with real users, you can simulate color blindness, low vision, low and contrast, and zooming. You should always test your site with out a mouse and touch to test keyboard navigation. You may also want to try your site using voice commands. Try disabling your mouse and using browser extensions like [Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla)
