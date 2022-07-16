@@ -55,8 +55,7 @@ Using `addEventListener()`:
 const video = document.querySelector('video');
 
 video.addEventListener('loadedmetadata', (event) => {
-  console.log('The duration and dimensions ' + '
-      of the media and tracks are now known. ');
+  console.log('The duration and dimensions of the media and tracks are now known.');
 });
 ```
 
@@ -66,8 +65,7 @@ Using the `onloadedmetadata` event handler property:
 const video = document.querySelector('video');
 
 video.onloadedmetadata = (event) => {
-  console.log('The duration and dimensions ' + '
-      of the media and tracks are now known. ');
+  console.log('The duration and dimensions of the media and tracks are now known.');
 };
 ```
 

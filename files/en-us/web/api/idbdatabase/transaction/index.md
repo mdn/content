@@ -124,7 +124,7 @@ transaction on the database. For a complete example, see our
 [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
-const db;
+let db;
 
 // Let us open our database
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);

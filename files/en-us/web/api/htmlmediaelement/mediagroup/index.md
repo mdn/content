@@ -21,7 +21,7 @@ A string.
 
 ## Examples
 
-```js
+```
 ...
 ```
 

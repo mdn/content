@@ -53,7 +53,7 @@ transaction.oncomplete = event => {
   note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
 };
 
-transaction.onerror = event {
+transaction.onerror = event => {
   note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
 };
 

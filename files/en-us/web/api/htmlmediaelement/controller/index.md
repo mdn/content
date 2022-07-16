@@ -21,7 +21,7 @@ A `MediaController` object or `null` if no media controller is assigned to the e
 
 ## Examples
 
-```js
+```
 ...
 ```
 
