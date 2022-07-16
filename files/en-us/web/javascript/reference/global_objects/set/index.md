@@ -18,7 +18,7 @@ The **`Set`** object lets you store unique values of any type, whether {{Glossar
 
 ## Description
 
-`Set` objects are collections of values. You can iterate through the elements of a set in insertion order. A value in the `Set` **may only occur once**; it is unique in the `Set`'s collection.
+`Set` objects are collections of values. You can iterate through the elements of a set in insertion order. The insertion order corresponds to the order in which each element was inserted in to the `Set` by the `Set.prototype.add()` method. A value in the `Set` **may only occur once**; it is unique in the `Set`'s collection.
 
 The specification requires sets to be implemented "that, on average, provide access times that are sublinear on the number of elements in the collection". Therefore, it could be represented internally as a hash table (with O(1) lookup), a search tree (with O(log(N)) lookup), or any other data structure, as long as the complexity is better than O(N).
 
@@ -105,38 +105,40 @@ mySet1.has(5)       // false, 5 has been removed
 
 mySet1.size         // 4, since we just removed one value
 
+mySet1.add(5)       // Set [1, 'some text', {...}, {...}, 5] - a previously deleted item will be added as a new item, it will not retain its original position before deletion
+
 console.log(mySet1)
-// logs Set(4) [ 1, "some text", {…}, {…} ] in Firefox
-// logs Set(4) { 1, "some text", {…}, {…} } in Chrome
+// logs Set(5) [ 1, "some text", {…}, {…}, 5 ] in Firefox
+// logs Set(5) { 1, "some text", {…}, {…}, 5 } in Chrome
 ```
 
 ### Iterating Sets
 
 ```js
 // iterate over items in set
-// logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
+// logs the elements in insertion order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}, 5
 for (const item of mySet1) {
   console.log(item);
 }
 
-// logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
+// logs the elements in insertion order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}, 5
 for (const item of mySet1.keys()) {
   console.log(item);
 }
 
-// logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
+// logs the elements in insertion order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}, 5
 for (const item of mySet1.values()) {
   console.log(item);
 }
 
-// logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
+// logs the elements in insertion order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}, 5
 // (key and value are the same here)
 for (const [key, value] of mySet1.entries()) {
   console.log(key);
 }
 
 // convert Set object to an Array object, with Array.from
-const myArr = Array.from(mySet1) // [1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}]
+const myArr = Array.from(mySet1) // [1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}, 5]
 
 // the following will also work if run in an HTML document
 mySet1.add(document.body)

@@ -12,8 +12,9 @@ browser-compat: javascript.builtins.Set.add
 ---
 {{JSRef}}
 
-The **`add()`** method appends a new element with a specified
-value to the end of a `Set` object.
+The **`add()`** method inserts a new element with a specified
+value in to a `Set` object, unless the value is already represented
+by an element of the `Set`.
 
 {{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}
 
