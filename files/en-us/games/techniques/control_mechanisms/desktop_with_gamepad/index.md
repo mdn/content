@@ -128,14 +128,14 @@ First off, we'll create a small library that will take care of handling the inpu
 var GamepadAPI = {
     active: false,
     controller: {},
-    connect: function(event) {},
-    disconnect: function(event) {},
-    update: function() {},
+    connect(event) {},
+    disconnect(event) {},
+    update() {},
     buttons: {
         layout: [],
         cache: [],
         status: [],
-        pressed: function(button, state) {}
+        pressed(button, state) {}
     }
     axes: {
         status: []
@@ -159,7 +159,7 @@ The `pressed()` function gets the input data and sets the information about it i
 After the gamepad is connected, the information about the controller is stored in the object:
 
 ```js
-connect: function(event) {
+connect(event) {
     GamepadAPI.controller = event.gamepad;
     GamepadAPI.active = true;
 },
@@ -168,7 +168,7 @@ connect: function(event) {
 The `disconnect` function removes the information from the object:
 
 ```js
-disconnect: function(event) {
+disconnect(event) {
     delete GamepadAPI.controller;
     GamepadAPI.active = false;
 },
@@ -177,7 +177,7 @@ disconnect: function(event) {
 The `update()` function is executed in the update loop of the game on every frame, so it contains the latest information on the pressed buttons:
 
 ```js
-update: function() {
+update() {
   GamepadAPI.buttons.cache = [];
   for(var k=0; k<GamepadAPI.buttons.status.length; k++) {
     GamepadAPI.buttons.cache[k] = GamepadAPI.buttons.status[k];
@@ -209,7 +209,7 @@ The function above clears the buttons cache, and copies their status from the pr
 The `button.pressed()` function detects the actual button presses:
 
 ```js
-pressed: function(button, hold) {
+pressed(button, hold) {
   var newPress = false;
   for(var i=0,s=GamepadAPI.buttons.status.length; i<s; i++) {
     if(GamepadAPI.buttons.status[i] == button) {
@@ -247,7 +247,7 @@ create() {
 In the `update()` function, which is executed every frame, we can wait until the controller is actually connected, so the proper text can be shown. Then we can keep the track of the information about pressed buttons by using the `Gamepad.update()` method, and react to the given information:
 
 ```js
-update: function() {
+update() {
     // …
     if(GamepadAPI.active) {
         if(!this.textGamepad.visible) {

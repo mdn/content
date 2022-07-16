@@ -74,7 +74,7 @@ Object.getOwnPropertyNames(obj).forEach(
 // non-enumerable property
 const my_obj = Object.create({}, {
   getFoo: {
-    value: function() { return this.foo; },
+    value() { return this.foo; },
     enumerable: false
   }
 });

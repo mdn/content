@@ -109,7 +109,7 @@ When an inherited function is executed, the value of [`this`](/en-US/docs/Web/Ja
 ```js
 const parent = {
   value: 2,
-  method: function () {
+  method() {
     return this.value + 1;
   }
 };

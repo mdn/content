@@ -97,7 +97,7 @@ To append a setter to an _existing_ object, use
 const o = {a: 0};
 
 Object.defineProperty(o, 'b', {
-  set: function(x) { this.a = x / 2; }
+  set(x) { this.a = x / 2; }
 });
 
 o.b = 10;

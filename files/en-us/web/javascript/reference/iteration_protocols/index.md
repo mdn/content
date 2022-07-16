@@ -71,10 +71,10 @@ Optionally, the iterator can also implement the **`return(value)`** and **`throw
 > ```js
 > // Satisfies both the Iterator Protocol and Iterable
 > const myIterator = {
->   next: function () {
+>   next() {
 >     // ...
 >   },
->   [Symbol.iterator]: function () {
+>   [Symbol.iterator] () {
 >     return this;
 >   },
 > };
@@ -117,7 +117,7 @@ const someString = new String("hi");
 someString[Symbol.iterator] = function () {
   return {
     // this is the iterator object, returning a single element (the string "bye")
-    next: function () {
+    next() {
       return this._first
         ? {
             value: "bye",
@@ -286,7 +286,7 @@ nonWellFormedIterable[Symbol.iterator] = () => 1;
 function makeIterator(array) {
   let nextIndex = 0;
   return {
-    next: function () {
+    next() {
       return nextIndex < array.length
         ? {
             value: array[nextIndex++],
@@ -312,7 +312,7 @@ console.log(it.next().done); // true
 function idMaker() {
   let index = 0;
   return {
-    next: function () {
+    next() {
       return {
         value: index++,
         done: false,
