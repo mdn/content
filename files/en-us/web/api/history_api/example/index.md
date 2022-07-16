@@ -346,14 +346,14 @@ const ajaxRequest = new (function () {
         closeReq();
     }
 
-    function filterURL(sURL, sViewMode) {
+    function filterURL(url, viewMode) {
         return (
-            sURL.replace(searchRegex, "") +
+            url.replace(searchRegex, "") +
             (
                 "?" +
-                sURL
+                url
                     .replace(hostRegex, "&")
-                    .replace(viewRegex, sViewMode ? "&" + viewKey + "=" + sViewMode : "")
+                    .replace(viewRegex, viewMode ? "&" + viewKey + "=" + viewMode : "")
                     .slice(1)
             ).replace(endQstMarkRegex, "")
         );
@@ -396,10 +396,8 @@ const ajaxRequest = new (function () {
     function init() {
         pageInfo.title = document.title;
         history.replaceState(pageInfo, pageInfo.title, pageInfo.url);
-        for (
-            let oLink, nIdx = 0, nLen = document.links.length;
-            nIdx < nLen;
-            document.links[nIdx++].onclick = processLink
+        for (const link of document.links) {
+            link.onclick = processLink;
         );
     }
 
@@ -416,11 +414,7 @@ const ajaxRequest = new (function () {
         getPage();
     };
 
-    window.addEventListener
-        ? addEventListener("load", init, false)
-        : window.attachEvent
-        ? attachEvent("onload", init)
-        : (onload = init);
+    window.addEventListener("load", init, false);
 
     // Public methods
 
