@@ -71,7 +71,7 @@ The promise is rejected immediately if the signal is already aborted, or if the 
 Otherwise it completes normally and then resolves the promise.
 
 ```js
-function myCoolPromiseAPI(/* … , */ {signal}) {
+function myCoolPromiseAPI(/* … ,*/ {signal}) {
   return new Promise((resolve, reject) => {
     // If the signal is already aborted, immediately throw in order to reject the promise.
     if (signal.aborted) {
