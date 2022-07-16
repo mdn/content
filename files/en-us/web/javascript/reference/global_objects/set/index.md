@@ -50,7 +50,7 @@ The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) m
 ## Instance methods
 
 - {{jsxref("Set.add", "Set.prototype.add(<var>value</var>)")}}
-  - : Appends `value` to the `Set` object. Returns the `Set` object with added value.
+  - : Inserts a new element with a specified value in to a `Set` object, if there isn't an element with the same value already in the `Set`.
 - {{jsxref("Set.prototype.clear()")}}
   - : Removes all elements from the `Set` object.
 - {{jsxref("Set.delete", "Set.prototype.delete(<var>value</var>)")}}

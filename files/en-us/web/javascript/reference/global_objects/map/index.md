@@ -21,7 +21,7 @@ either a key or a value.
 
 ## Description
 
-`Map` objects are collections of key-value pairs. A key in the `Map` **may only occur once**; it is unique in the `Map`'s collection. You can iterate through the elements of a map in insertion order. The _insertion order_ corresponds to the order in which each key-value pair was inserted into the map by the [`set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/set) method successfully (that is, there wasn't an identical key already in the map when `set()` was called).
+`Map` objects are collections of key-value pairs. A key in the `Map` **may only occur once**; it is unique in the `Map`'s collection. A `Map` object is iterated by key-value pairs — a {{jsxref("Statements/for...of", "for...of")}} loop returns a 2-member array of `[key, value]` for each iteration. Iteration happens in _insertion order_, which corresponds to the order in which each key-value pair was first inserted into the map by the [`set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/set) method (that is, there wasn't a key with the same value already in the map when `set()` was called).
 
 The specification requires maps to be implemented "that, on average, provide access times that are sublinear on the number of elements in the collection". Therefore, it could be represented internally as a hash table (with O(1) lookup), a search tree (with O(log(N)) lookup), or any other data structure, as long as the complexity is better than O(N).
 
