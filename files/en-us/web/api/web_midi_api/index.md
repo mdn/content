@@ -9,6 +9,7 @@ tags:
   - Reference
   - Web MIDI API
 spec-urls: https://webaudio.github.io/web-midi-api/
+browser-compat: api.Navigator.requestMIDIAccess
 ---
 {{DefaultAPISidebar("Web MIDI API")}}{{SecureContext_Header}}
 
@@ -99,6 +100,10 @@ function startLoggingMIDIInput( midiAccess, indexOfPort ) {
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
