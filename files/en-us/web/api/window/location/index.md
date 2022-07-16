@@ -155,7 +155,14 @@ span.intLink {
 
 ```js
 const showBookmark = (function () {
-  const  _useHash, _scrollX, _scrollY, _nodeX, _nodeY, _itFrame, _scrollId = -1, _bookMark,
+  let _useHash;
+  let _scrollX;
+  let _scrollY;
+  let _nodeX;
+  let _nodeY;
+  let _itFrame;
+  let _scrollId = -1;
+  let _bookMark;
    /*
    * nDuration: the duration in milliseconds of each frame
    * nFrames: number of frames for each scroll
