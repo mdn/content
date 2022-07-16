@@ -17,6 +17,8 @@ browser-compat: api.HTMLSlotElement.assign
 The **`assign()`** method of the
 {{domxref("HTMLSlotElement")}} interface sets the slot's **manually assigned nodes** to an ordered set of slottables. The manually assigned nodes set is initially empty until nodes are assigned using `assign()`.
 
+Please note that you cannot mix declarative and imperative slot assignment. Therefore, for this to work, the shadow tree needs to have been created with the `slotAssignment: "manual"` option.
+
 ## Syntax
 
 ```js
