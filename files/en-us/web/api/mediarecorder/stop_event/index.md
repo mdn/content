@@ -40,24 +40,20 @@ A generic {{domxref("Event")}}.
 ## Example
 
 ```js
-...
+mediaRecorder.onstop = function(e) {
+  console.log("data available after MediaRecorder.stop() called.");
 
-  mediaRecorder.onstop = function(e) {
-    console.log("data available after MediaRecorder.stop() called.");
+  const audio = document.createElement('audio');
+  audio.controls = true;
+  const blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
+  const audioURL = window.URL.createObjectURL(blob);
+  audio.src = audioURL;
+  console.log("recorder stopped");
+}
 
-    const audio = document.createElement('audio');
-    audio.controls = true;
-    const blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
-    const audioURL = window.URL.createObjectURL(blob);
-    audio.src = audioURL;
-    console.log("recorder stopped");
-  }
-
-  mediaRecorder.ondataavailable = function(e) {
-    chunks.push(e.data);
-  }
-
-...
+mediaRecorder.ondataavailable = function(e) {
+  chunks.push(e.data);
+}
 ```
 
 ## Specifications
