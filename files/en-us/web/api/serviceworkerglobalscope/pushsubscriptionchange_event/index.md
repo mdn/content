@@ -75,7 +75,8 @@ self.onpushsubscriptionchange = event => {
   event.waitUntil(swRegistration.pushManager.subscribe(event.oldSubscription.options)
     .then(subscription => {
       /* ... */
-    )
+    })
+  )
 };
 ```
 

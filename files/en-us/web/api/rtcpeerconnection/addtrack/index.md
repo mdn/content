@@ -94,7 +94,7 @@ each track from the stream to the peer connection, without specifying a stream f
 track:
 
 ```js
-async openCall(pc) {
+async function openCall(pc) {
   const gumStream = await navigator.mediaDevices.getUserMedia(
                           {video: true, audio: true});
   for (const track of gumStream.getTracks()) {
@@ -156,7 +156,7 @@ device's camera and microphone input over an {{domxref("RTCPeerConnection")}} to
 remote peer:
 
 ```js
-async openCall(pc) {
+async function openCall(pc) {
   const gumStream = await navigator.mediaDevices.getUserMedia(
                           {video: true, audio: true});
   for (const track of gumStream.getTracks()) {
@@ -168,7 +168,7 @@ async openCall(pc) {
 The remote peer might then use a {{DOMxRef("RTCPeerConnection/track_event", "track")}} event handler that looks like this:
 
 ```js
-pc.ontrack = ({streams: [stream]} => videoElem.srcObject = stream;
+pc.ontrack = ({streams: [stream]}) => videoElem.srcObject = stream;
 ```
 
 This sets the video element's current stream to the one that contains the track that's

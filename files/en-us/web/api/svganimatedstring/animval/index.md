@@ -13,7 +13,7 @@ AnimVal attribute or animVal property contains the same value as the {{domxref("
 ## Syntax
 
 ```js
-var = object.animVal
+var currentValue = object.animVal
 ```
 
 ## Specifications

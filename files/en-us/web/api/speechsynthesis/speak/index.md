@@ -43,7 +43,7 @@ passing it into `speak()` as a parameter.
 ```js
 const synth = window.speechSynthesis;
 
-  ...
+// ...
 
 inputForm.onsubmit = function(event) {
   event.preventDefault();

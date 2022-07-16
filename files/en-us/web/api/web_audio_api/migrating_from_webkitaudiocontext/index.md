@@ -153,7 +153,9 @@ osc.type = osc.SAWTOOTH; // sawtooth waveform
 osc.type = osc.TRIANGLE; // triangle waveform
 osc.setWaveTable(table);
 const isCustom = (osc.type == osc.CUSTOM); // isCustom will be true
+```
 
+```js
 // New standard AudioContext code:
 const osc = context.createOscillator();
 osc.type = "sine";       // sine waveform
@@ -179,7 +181,9 @@ filter.type = filter.HIGHSHELF; // highshelf filter
 filter.type = filter.PEAKING;   // peaking filter
 filter.type = filter.NOTCH;     // notch filter
 filter.type = filter.ALLPASS;   // allpass filter
+```
 
+```js
 // New standard AudioContext code:
 const filter = context.createBiquadFilter();
 filter.type = "lowpass";        // lowpass filter
@@ -201,7 +205,9 @@ filter.type = "allpass";        // allpass filter
 const panner = context.createPanner();
 panner.panningModel = panner.EQUALPOWER;  // equalpower panning
 panner.panningModel = panner.HRTF;        // HRTF panning
+```
 
+```js
 // New standard AudioContext code:
 const panner = context.createPanner();
 panner.panningModel = "equalpower";       // equalpower panning
@@ -218,7 +224,9 @@ const panner = context.createPanner();
 panner.distanceModel = panner.LINEAR_DISTANCE;      // linear distance model
 panner.distanceModel = panner.INVERSE_DISTANCE;     // inverse distance model
 panner.distanceModel = panner.EXPONENTIAL_DISTANCE; // exponential distance model
+```
 
+```js
 // Mew standard AudioContext code:
 const panner = context.createPanner();
 panner.distanceModel = "linear";                    // linear distance model
@@ -241,7 +249,9 @@ src.buffer = someBuffer;
 src.gain.value = 0.5;
 src.connect(context.destination);
 src.noteOn(0);
+```
 
+```js
 // New standard AudioContext code:
 const src = context.createBufferSource();
 src.buffer = someBuffer;
@@ -263,7 +273,9 @@ src.buffer = someBuffer;
 src.buffer.gain = 0.5;
 src.connect(context.destination);
 src.noteOn(0);
+```
 
+```js
 // New standard AudioContext code:
 const src = context.createBufferSource();
 src.buffer = someBuffer;
@@ -306,7 +318,9 @@ The `playbackState` attribute of {{domxref("AudioBufferSourceNode")}} and {{domx
 const src = context.createBufferSource();
 // Some time later...
 const isFinished = (src.playbackState == src.FINISHED_STATE);
+```
 
+```js
 // New AudioContext code:
 const src = context.createBufferSource();
 function endedHandler(event) {
@@ -357,7 +371,7 @@ could be rewritten like that:
     return sources.length;
   }
   const src0 = context.createBufferSource();
-  const src0 = context.createBufferSource();
+  const src1 = context.createBufferSource();
   // Set buffers and other parameters...
   startSource(src0, 0);
   startSource(src1, 0);
@@ -374,7 +388,9 @@ The {{domxref("WaveTable")}} interface has been renamed to {{domxref("PeriodicWa
 const osc = context.createOscillator();
 const table = context.createWaveTable(realArray, imaginaryArray);
 osc.setWaveTable(table);
+```
 
+```js
 // New standard AudioContext code:
 const osc = context.createOscillator();
 const table = context.createPeriodicWave(realArray, imaginaryArray);
