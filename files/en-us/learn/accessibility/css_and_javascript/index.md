@@ -117,7 +117,7 @@ You will however rarely need to style emphasis elements in any significant way. 
 An element that allows an abbreviation, acronym, or initialization to be associated with its expansion:
 
 ```html
-<p>Web content is marked up using <abbr title="Hypertext Markup Language">HTML</abbr>.</p>
+<p>Web content is marked up using Hypertext Markup Language, or <abbr>HTML</abbr>.</p>
 ```
 
 Again, you might want to style it in some simple way:
