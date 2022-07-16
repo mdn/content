@@ -19,7 +19,7 @@ However, if you need to also support Internet Explorer 6 and older, you need to 
 ```js
 if (window.XMLHttpRequest) {
     //Firefox, Opera, IE7, and other browsers will use the native object
-    let request = new XMLHttpRequest();
+    var request = new XMLHttpRequest();
 } else {
     //IE 5 and 6 will use the ActiveX control
     var request = new ActiveXObject("Microsoft.XMLHTTP");
