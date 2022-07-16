@@ -76,10 +76,10 @@ The first WebVR-related code you'll meet is this following block:
 // WebVR variables
 
 const frameData = new VRFrameData();
-const vrDisplay;
+let vrDisplay;
 const btn = document.querySelector('.stop-start');
-const normalSceneFrame;
-const vrSceneFrame;
+let normalSceneFrame;
+let vrSceneFrame;
 
 const poseStatsBtn = document.querySelector('.pose-stats');
 const poseStatsSection = document.querySelector('section');
