@@ -389,7 +389,7 @@ The next bit of the code has nothing to do with WebVR — it just updates the ro
 ```js
   // Update the rotation for the next draw, if it's time to do so.
 
-  var currentTime = (new Date).getTime();
+  let currentTime = (new Date).getTime();
   if (lastCubeUpdateTime) {
     const delta = currentTime - lastCubeUpdateTime;
 
