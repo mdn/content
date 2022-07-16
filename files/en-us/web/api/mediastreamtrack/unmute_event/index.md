@@ -61,7 +61,7 @@ musicTrack.onmute = event => {
   document.getElementById("timeline-widget").style.backgroundColor = "#aaa";
 }
 
-musicTrack.mute = event = > {
+musicTrack.mute = event => {
   document.getElementById("timeline-widget").style.backgroundColor = "#fff";
 }
 ```

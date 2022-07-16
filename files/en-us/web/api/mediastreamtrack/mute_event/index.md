@@ -63,7 +63,7 @@ musicTrack.onmute = event => {
   document.getElementById("timeline-widget").style.backgroundColor = "#aaa";
 }
 
-musicTrack.onunmute = event = > {
+musicTrack.onunmute = event => {
   document.getElementById("timeline-widget").style.backgroundColor = "#fff";
 }
 ```
