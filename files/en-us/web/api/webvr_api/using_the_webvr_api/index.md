@@ -91,7 +91,7 @@ const linVelStats = document.querySelector('.lin-vel');
 const linAccStats = document.querySelector('.lin-acc');
 const angVelStats = document.querySelector('.ang-vel');
 const angAccStats = document.querySelector('.ang-acc');
-const poseStatsDisplayed = false;
+let poseStatsDisplayed = false;
 ```
 
 Let's briefly explain these:
