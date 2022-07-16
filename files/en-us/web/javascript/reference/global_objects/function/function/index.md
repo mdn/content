@@ -23,7 +23,9 @@ only.
 
 ```js
 new Function(functionBody)
-new Function(arg1, …, argN, functionBody)
+new Function(arg0, functionBody)
+new Function(arg0, arg1, functionBody)
+new Function(arg0, arg1, /* … ,*/ argN, functionBody)
 ```
 
 ### Parameters

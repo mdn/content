@@ -22,11 +22,23 @@ function inside an expression.
 ## Syntax
 
 ```js
-function* (param1, param2, …, paramN) {
+function* (param0) {
+  statements
+}
+function* (param0, param1) {
+  statements
+}
+function* (param0, param1, /* … ,*/ paramN) {
   statements
 }
 
-function* name(param1, param2, …, paramN) {
+function* name(param0) {
+  statements
+}
+function* name(param0, param1) {
+  statements
+}
+function* name(param0, param1, /* … ,*/ paramN) {
   statements
 }
 ```

@@ -20,11 +20,23 @@ You can also define async functions using an
 ## Syntax
 
 ```js
-async function (param1, param2, …, paramN) {
+async function (param0) {
+  statements
+}
+async function (param0, param1) {
+  statements
+}
+async function (param0, param1, /* … ,*/ paramN) {
   statements
 }
 
-async function name(param1, param2, …, paramN) {
+async function name(param0) {
+  statements
+}
+async function name(param0, param1) {
+  statements
+}
+async function name(param0, param1, /* … ,*/ paramN) {
   statements
 }
 ```

@@ -24,7 +24,13 @@ constructor, or the function expression syntax.
 ## Syntax
 
 ```js
-function* name(param1, param2, …, paramN) {
+function* name(param0) {
+  statements
+}
+function* name(param0, param1) {
+  statements
+}
+function* name(param0, param1, /* … ,*/ paramN) {
   statements
 }
 ```

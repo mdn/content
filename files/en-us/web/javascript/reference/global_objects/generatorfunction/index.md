@@ -22,7 +22,9 @@ const GeneratorFunction = Object.getPrototypeOf(function*() {}).constructor;
 
 ```js
 new GeneratorFunction(functionBody)
-new GeneratorFunction(arg1, …, argN, functionBody)
+new GeneratorFunction(arg0, functionBody)
+new GeneratorFunction(arg0, arg1, functionBody)
+new GeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
 ```
 
 ### Parameters

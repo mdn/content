@@ -21,7 +21,13 @@ Async functions may also be defined {{jsxref("Operators/async_function", "as
 ## Syntax
 
 ```js
-async function name(param1, param2, …, paramN) {
+async function name(param0) {
+  statements
+}
+async function name(param0, param1) {
+  statements
+}
+async function name(param0, param1, /* … ,*/ paramN) {
   statements
 }
 ```

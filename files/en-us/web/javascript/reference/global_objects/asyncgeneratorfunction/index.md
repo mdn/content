@@ -24,7 +24,9 @@ const AsyncGeneratorFunction = Object.getPrototypeOf(async function*() {}).const
 
 ```js
 new AsyncGeneratorFunction(functionBody)
-new AsyncGeneratorFunction(arg1, …, argN, functionBody)
+new AsyncGeneratorFunction(arg0, functionBody)
+new AsyncGeneratorFunction(arg0, arg1, functionBody)
+new AsyncGeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
 ```
 
 ### Parameters
