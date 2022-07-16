@@ -20,9 +20,9 @@ The `article` role indicates a section of a page that could easily stand on its 
   <h2>Heading of the segment</h2>
   <p>Paragraph for the segment.</p>
   <p>Another paragraph.</p>
-... controls to interact with the article, share it, etc. ...
+  Controls to interact with the article, share it, etc.
 </div>
-<div role="article"> ... </div>
+<div role="article"> … </div>
 ```
 
 This example shows two articles side by side on one page that could be structured similarly and are related.
@@ -36,9 +36,9 @@ Don't use `role="article"`. Instead use the `<article>` element.
   <h2>Heading of the segment</h2>
   <p>Paragraph for the segment.</p>
   <p>Another paragraph.</p>
-... controls to interact with the article, share it, etc. ...
+  Controls to interact with the article, share it, etc.
 </article>
-<article> ... </article>
+<article> … </article>
 ```
 
 ## Description

@@ -14,8 +14,8 @@ reduce function is used.
 
 ## Message
 
-```js
-TypeError: reduce of empty array with no initial value
+```
+TypeError: Reduce of empty array with no initial value (V8-based & Firefox & Safari)
 ```
 
 ## Error type

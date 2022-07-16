@@ -411,7 +411,7 @@ paint(ctx, size, props, args) {
     ctx.fillStyle = 'transparent';
     ctx.strokeStyle = color;
   }
-  ...
+  // …
 }
 ```
 
@@ -452,15 +452,15 @@ Now we can access the type and value properties, meaning we can get the number o
 ```js
 paint(ctx, size, props, args) {
 
-    const strokeWidth = args[1];
+  const strokeWidth = args[1];
 
-    if (strokeWidth.unit === 'px') {
-      ctx.lineWidth = strokeWidth.value;
-    } else {
-      ctx.lineWidth = 1.0;
-    }
+  if (strokeWidth.unit === 'px') {
+    ctx.lineWidth = strokeWidth.value;
+  } else {
+    ctx.lineWidth = 1.0;
+  }
 
-  ...
+  // …
 }
 ```
 

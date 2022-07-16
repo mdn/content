@@ -75,23 +75,23 @@ The first WebVR-related code you'll meet is this following block:
 ```js
 // WebVR variables
 
-var frameData = new VRFrameData();
-var vrDisplay;
-var btn = document.querySelector('.stop-start');
-var normalSceneFrame;
-var vrSceneFrame;
+const frameData = new VRFrameData();
+let vrDisplay;
+const btn = document.querySelector('.stop-start');
+let normalSceneFrame;
+let vrSceneFrame;
 
-var poseStatsBtn = document.querySelector('.pose-stats');
-var poseStatsSection = document.querySelector('section');
+const poseStatsBtn = document.querySelector('.pose-stats');
+const poseStatsSection = document.querySelector('section');
 poseStatsSection.style.visibility = 'hidden'; // hide it initially
 
-var posStats = document.querySelector('.pos');
-var orientStats = document.querySelector('.orient');
-var linVelStats = document.querySelector('.lin-vel');
-var linAccStats = document.querySelector('.lin-acc');
-var angVelStats = document.querySelector('.ang-vel');
-var angAccStats = document.querySelector('.ang-acc');
-var poseStatsDisplayed = false;
+const posStats = document.querySelector('.pos');
+const orientStats = document.querySelector('.orient');
+const linVelStats = document.querySelector('.lin-vel');
+const linAccStats = document.querySelector('.lin-acc');
+const angVelStats = document.querySelector('.ang-vel');
+const angAccStats = document.querySelector('.ang-acc');
+let poseStatsDisplayed = false;
 ```
 
 Let's briefly explain these:
@@ -188,8 +188,8 @@ We then do some simple math to calculate the total width of the VRDisplay render
 ```js
                 // Set the canvas size to the size of the vrDisplay viewport
 
-                var leftEye = vrDisplay.getEyeParameters('left');
-                var rightEye = vrDisplay.getEyeParameters('right');
+                const leftEye = vrDisplay.getEyeParameters('left');
+                const rightEye = vrDisplay.getEyeParameters('right');
 
                 canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
                 canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);
@@ -271,9 +271,9 @@ Now we retrieve the current {{domxref("VRPose")}} from the {{domxref("VRFrameDat
 ```js
   // You can get the position, orientation, etc. of the display from the current frame's pose
 
-  var curFramePose = frameData.pose;
-  var curPos = curFramePose.position;
-  var curOrient = curFramePose.orientation;
+  const curFramePose = frameData.pose;
+  const curPos = curFramePose.position;
+  const curOrient = curFramePose.orientation;
   if(poseStatsDisplayed) {
     displayPoseStats(curFramePose);
   }
@@ -293,8 +293,8 @@ We now render the view for both the left and right eyes. First of all we need to
   // WebVR: Create the required projection and view matrix locations needed
   // for passing into the uniformMatrix4fv methods below
 
-  var projectionMatrixLocation = gl.getUniformLocation(shaderProgram, "projMatrix");
-  var viewMatrixLocation = gl.getUniformLocation(shaderProgram, "viewMatrix");
+  const projectionMatrixLocation = gl.getUniformLocation(shaderProgram, "projMatrix");
+  const viewMatrixLocation = gl.getUniformLocation(shaderProgram, "viewMatrix");
 ```
 
 The next rendering step involves:
@@ -389,9 +389,9 @@ The next bit of the code has nothing to do with WebVR — it just updates the ro
 ```js
   // Update the rotation for the next draw, if it's time to do so.
 
-  var currentTime = (new Date).getTime();
+  let currentTime = (new Date).getTime();
   if (lastCubeUpdateTime) {
-    var delta = currentTime - lastCubeUpdateTime;
+    const delta = currentTime - lastCubeUpdateTime;
 
     cubeRotation += (30 * delta) / 1000.0;
   }
@@ -415,12 +415,12 @@ First of all, we store the six different property values obtainable from the {{d
 
 ```js
 function displayPoseStats(pose) {
-  var pos = pose.position;
-  var orient = pose.orientation;
-  var linVel = pose.linearVelocity;
-  var linAcc = pose.linearAcceleration;
-  var angVel = pose.angularVelocity;
-  var angAcc = pose.angularAcceleration;
+  const pos = pose.position;
+  const orient = pose.orientation;
+  const linVel = pose.linearVelocity;
+  const linAcc = pose.linearAcceleration;
+  const angVel = pose.angularVelocity;
+  const angAcc = pose.angularAcceleration;
 ```
 
 We then write out the data into the information box, updating it on every frame. We've clamped each value to three decimal places using [`toFixed()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed), as the values are hard to read otherwise.

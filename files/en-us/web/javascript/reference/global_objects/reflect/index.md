@@ -58,7 +58,7 @@ Some of these methods are also the same as corresponding methods on {{jsxref("Ob
 const duck = {
   name: 'Maurice',
   color: 'white',
-  greeting: function() {
+  greeting() {
     console.log(`Quaaaack! My name is ${this.name}`);
   }
 }

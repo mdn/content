@@ -54,10 +54,10 @@ Congratulations, you've just created your first object. Job done! But this is an
 const person = {
   name: ['Bob', 'Smith'],
   age: 32,
-  bio: function() {
+  bio() {
     console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
   },
-  introduceSelf: function() {
+  introduceSelf() {
     console.log(`Hi! I'm ${this.name[0]}.`);
   }
 };

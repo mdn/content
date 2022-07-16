@@ -78,7 +78,7 @@ the same.
 ```js
 async function f2() {
   const thenable = {
-    then: function(resolve, _reject) {
+    then(resolve, _reject) {
       resolve('resolved!')
     }
   };

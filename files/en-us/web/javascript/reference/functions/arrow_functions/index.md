@@ -194,7 +194,7 @@ functions. Let's see what happens when we try to use them as methods:
 const obj = { // does not create a new scope
   i: 10,
   b: () => console.log(this.i, this),
-  c: function () {
+  c() {
     console.log(this.i, this);
   },
 }
@@ -341,7 +341,7 @@ Perhaps the greatest benefit of using Arrow functions is with methods like {{dom
 ```js
 const obj = {
   count: 10,
-  doSomethingLater: function () {
+  doSomethingLater() {
     setTimeout(function () { // the function executes on the window scope
       this.count++;
       console.log(this.count);
@@ -357,7 +357,7 @@ obj.doSomethingLater(); // console prints "NaN", because the property "count" is
 ```js
 const obj = {
   count: 10,
-  doSomethingLater: function () {
+  doSomethingLater () {
     // The traditional function binds "this" to the "obj" context.
     setTimeout(() => {
       // Since the arrow function doesn't have its own binding and
@@ -456,6 +456,9 @@ const func = () => { foo: 1 };
 
 const func2 = () => { foo: function() {} };
 // SyntaxError: function statement requires a name
+
+const func3 = () => { foo() {} };
+// SyntaxError: Unexpected token '{'
 ```
 
 This is because the code inside braces ({}) is parsed as a sequence of statements (i.e.

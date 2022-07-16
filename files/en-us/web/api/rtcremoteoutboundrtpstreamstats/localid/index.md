@@ -243,7 +243,7 @@ and `networkTestStop()`).
 
 ### Try it and fork it
 
-This example is [available on Glitch for you to try out](https://websocket-webrtc-chat-with-stats.glitch.me), examine, or remix.  You can also [access it directly](https://33030790-3517-4d21-9b93-511347fa1ebd@api.glitch.com/git/websocket-webrtc-chat-with-stats) using Glitch's Git server.
+This example is [available on Glitch for you to try out](https://websocket-webrtc-chat-with-stats.glitch.me), examine, or remix.
 
 [Remix It](https://glitch.com/edit/?utm_content=project_websocket-webrtc-chat-with-stats&utm_source=remix_this&utm_medium=button&utm_campaign=glitchButton#!/remix/websocket-webrtc-chat-with-stats)
 

@@ -254,7 +254,7 @@ This would look like the following:
 ```js
 var importObject = {
   console: {
-    log: function(arg) {
+    log(arg) {
       console.log(arg);
     }
   }

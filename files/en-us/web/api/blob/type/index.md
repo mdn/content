@@ -28,7 +28,7 @@ sure it's one of a given set of image file types.
 
 ```html
 <input type="file" id="input" multiple>
-<output id="output">Choose image files...</output>
+<output id="output">Choose image files…</output>
 ```
 
 ```css hidden
@@ -51,7 +51,7 @@ input.addEventListener('change', (event) => {
   const files = event.target.files;
 
   if (files.length === 0) {
-    output.innerText = 'Choose image files...';
+    output.innerText = 'Choose image files…';
     return;
   }
 

@@ -40,7 +40,7 @@ element: "`<blink>str</blink>`".
 
 ### Using blink()
 
-The following example uses string methods to change the formatting of a string:
+The following example uses deprecated string methods to change the formatting of a string:
 
 ```js
 const worldString = 'Hello, world';

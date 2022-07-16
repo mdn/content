@@ -37,7 +37,7 @@ try {
 
 function getConnectionStats() {
   myPeerConnection.getStats(null).then(stats => {
-    var statsOutput = "";
+    let statsOutput = "";
 
     stats.forEach(report => {
       if (report.type === "inbound-rtp" && report.kind === "video") {

@@ -53,7 +53,7 @@ you can add curly braces and return statements.
 const x = function() { return 1; }
 
 const obj = {
-  count: function() { return 1; }
+  count() { return 1; }
 };
 ```
 

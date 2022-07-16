@@ -175,7 +175,7 @@ the cloneInto call must include
 the `cloneFunctions` option.
 */
 let messenger = {
-  notify: function(message) {
+  notify(message) {
     browser.runtime.sendMessage({
       content: "Object method call: " + message
     });

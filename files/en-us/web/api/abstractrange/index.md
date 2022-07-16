@@ -81,11 +81,11 @@ To illustrate this, consider the HTML below:
   </div>
   <article>
     <section class="entry" id="entry1">
-      <h2>Section 1: An interesting thing...</h2>
-      <p>A <em>very</em> interesting thing happened on the way to the forum...</p>
+      <h2>Section 1: An interesting thing…</h2>
+      <p>A <em>very</em> interesting thing happened on the way to the forum…</p>
       <aside class="callout">
         <h2>Aside</h2>
-        <p>An interesting aside to share with you...</p>
+        <p>An interesting aside to share with you…</p>
       </aside>
     </section>
   </article>
@@ -99,7 +99,7 @@ After loading the HTML and constructing the DOM representation of the document, 
 
 In this diagram, the nodes representing HTML elements are shown in green. Eah row beneath them shows the next layer of depth into the DOM tree. Blue nodes are text nodes, containing the text that gets shown onscreen. Each element's contents are linked below it in the tree, potentially spawning a series of branches below as elements include other elements and text nodes.
 
-If you want to create a range that incorporates the contents of the {{HTMLElement("p")}} element whose contents are `"A <em>very</em> interesting thing happened on the way to the forum..."`, you can do so like this:
+If you want to create a range that incorporates the contents of the {{HTMLElement("p")}} element whose contents are `"A <em>very</em> interesting thing happened on the way to the forum…"`, you can do so like this:
 
 ```js
 let pRange = document.createRange();
