@@ -444,7 +444,12 @@ const AJAXSubmit = (function () {
   }
 
   function SubmitRequest (oTarget) {
-    const nFile, sFieldType, oField, oSegmReq, oFile, bIsPost = oTarget.method.toLowerCase() === "post";
+    let nFile;
+    let sFieldType; 
+    let oField;
+    let oSegmReq;
+    let oFile;
+    const bIsPost = oTarget.method.toLowerCase() === "post";
     /* console.log("AJAXSubmit - Serializing form..."); */
     this.contentType = bIsPost && oTarget.enctype ? oTarget.enctype : "application\/x-www-form-urlencoded";
     this.technique = bIsPost ?
