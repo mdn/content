@@ -70,8 +70,8 @@ let receiveBox = null;
 let localConnection = null;   // RTCPeerConnection for our "local" connection
 let remoteConnection = null;  // RTCPeerConnection for the "remote"
 
-const sendChannel = null;       // RTCDataChannel for the local (sender)
-const receiveChannel = null;    // RTCDataChannel for the remote (receiver)
+let sendChannel = null;       // RTCDataChannel for the local (sender)
+let receiveChannel = null;    // RTCDataChannel for the remote (receiver)
 
 function startup() {
   connectButton = document.getElementById('connectButton');
