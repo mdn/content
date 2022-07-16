@@ -17,7 +17,7 @@ The **`title`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) conta
 
 The main use of the `title` attribute is to label {{HTMLElement("iframe")}} elements for assistive technology.
 
-The `title` attribute may also be used to controls in [data tables](/en-US/docs/Web/HTML/Element/table). 
+The `title` attribute may also be used to label controls in [data tables](/en-US/docs/Web/HTML/Element/table). 
 
 The `title` attribute, when added to [`<link rel="stylesheet">`](/en-US/docs/Web/HTML/Element/link), creates an alternate stylesheet. When defining an alternative style sheet with `<link rel="alternate">` the attribute is required and must be set to a non-empty string. 
 
