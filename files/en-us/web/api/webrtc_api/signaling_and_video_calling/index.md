@@ -63,7 +63,6 @@ Our original chat demo didn't support sending messages to a specific user. The n
 ```js
 if (sendToClients) {
   const msgString = JSON.stringify(msg);
-  let i;
 
   if (msg.target && msg.target.length !== 0) {
     sendToOneUser(msg.target, msgString);
