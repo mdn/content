@@ -52,7 +52,7 @@ The first notable code is as follows:
 ```js
 let initialRun = true;
 
-if(navigator.getVRDisplays && navigator.getGamepads) {
+if (navigator.getVRDisplays && navigator.getGamepads) {
   info.textContent = 'WebVR API and Gamepad API supported.'
   reportDisplays();
 } else {
