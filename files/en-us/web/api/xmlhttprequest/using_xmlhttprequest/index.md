@@ -363,7 +363,8 @@ ways to _submit_, and to **upload files**:
 
 if (!XMLHttpRequest.prototype.sendAsBinary) {
   XMLHttpRequest.prototype.sendAsBinary = function(sData) {
-    const nBytes = sData.length, ui8Data = new Uint8Array(nBytes);
+    const nBytes = sData.length;
+    const ui8Data = new Uint8Array(nBytes);
     for (let nIdx = 0; nIdx < nBytes; nIdx++) {
       ui8Data[nIdx] = sData.charCodeAt(nIdx) & 0xff;
     }
