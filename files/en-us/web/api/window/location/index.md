@@ -63,8 +63,7 @@ insert the value of `location.pathname` into the hash:
 
 ```js
 function reloadPageWithHash() {
-  const initialPage = location.pathname;
-  location.replace('http://example.com/#' + initialPage);
+  location.replace(`http://example.com/#${location.pathname}`);
 }
 ```
 
