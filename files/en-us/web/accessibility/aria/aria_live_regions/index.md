@@ -105,7 +105,7 @@ Here is a screenshot of VoiceOver on Mac announcing the update (via subtitles) t
 
 ## Roles with implicit live region attributes
 
-Elements with the following [`role="..."`](/en-US/docs/Web/Accessibility/ARIA/Roles) values act as live regions by default:
+Elements with the following [`role="…"`](/en-US/docs/Web/Accessibility/ARIA/Roles) values act as live regions by default:
 
 <table style="width: 100%;">
  <thead>
@@ -196,7 +196,7 @@ One way around this would be to first clear all the contents of the live region 
 
 ```html
 <div id="clock" role="timer" aria-live="polite" aria-atomic="true">
-  ...
+  …
 </div>
 ```
 

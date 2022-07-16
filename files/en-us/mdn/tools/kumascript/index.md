@@ -59,7 +59,7 @@ Hello #2
 Macro syntax takes the following general form:
 
 ```js
-\{{templateName("arg0", "arg1", ..., "argN")}}
+\{{templateName("arg0", "arg1", /* …, */ "argN")}}
 ```
 
 Macro syntax follows these rules:
@@ -110,7 +110,7 @@ KumaScript templates are processed by an [embedded JavaScript template engine](h
   <% } %>
   ```
 
-  Note how the JavaScript code is contained in `<% ... %>`, and output happens in the space between `%> ... <%`. The `for` loop in JS can begin with one `<% %>` block, transition to output mode, and finish up in a second `<% %>` JS block.
+  Note how the JavaScript code is contained in `<% … %>`, and output happens in the space between `%> … <%`. The `for` loop in JS can begin with one `<% %>` block, transition to output mode, and finish up in a second `<% %>` JS block.
 
 - For more details on EJS syntax, [check out the upstream module documentation](https://ejs.co).
 
@@ -201,7 +201,7 @@ This manually-maintained documentation is likely to fall out of date with the co
 
 - `md5(string)`
   - : Returns an MD5 hex digest of the given string.
-- `template("name", ["arg0", "arg1", ..., "argN"])`
+- `template("name", ["arg0", "arg1", …, "argN"])`
 
   - : Executes and returns the result of the named template with the given list of parameters.
 
@@ -251,7 +251,7 @@ Using the built-in `require()` method, you can load a template as a module to sh
 ```js
 <%
 module.exports = {
-    add: function (a, b) {
+    add(a, b) {
         return a + b;
     }
 }
@@ -321,7 +321,7 @@ Syntax error at line 436, column 461: Expected valid JSON object as the paramete
 If you edit the page, you'll probably see a macro like this at the bottom of the page:
 
 ```plain
-\{{ wiki.languages({ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", ... }) }}
+\{{ wiki.languages({ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", … }) }}
 ```
 
 To fix the problem, just delete the macro. Or, replace the curly braces on either side with HTML comments `<!-- -->` to preserve the information, like so:

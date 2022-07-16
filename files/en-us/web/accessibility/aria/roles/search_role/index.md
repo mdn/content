@@ -57,7 +57,7 @@ If there is more than one `search` landmark role in a document, provide a label 
   <!-- search input -->
 </form>
 
-...
+…
 
 <form id="page-search" role="search" aria-label="On this page">
   <!-- search input -->
@@ -75,7 +75,7 @@ If a `search` landmark role in a document is repeated in a document, and both la
   </form>
 </header>
 
-...
+…
 
 <footer>
   <form id="site-search-bottom" role="search" aria-label="Sitewide">

@@ -10,8 +10,7 @@ browser-compat: javascript.builtins.Function.toString
 ---
 {{JSRef}}
 
-The **`toString()`** method returns a string representing the
-source code of the function.
+The **`toString()`** method returns a string representing the source code of the specified {{jsxref("Function")}}.
 
 {{EmbedInteractiveExample("pages/js/function-tostring.html")}}
 
@@ -27,14 +26,14 @@ A string representing the source code of the function.
 
 ## Description
 
-The {{jsxref("Function")}} object overrides the {{jsxref("Object.prototype.toString",
-    "toString")}} method inherited from {{jsxref("Object")}}; it does not inherit
-{{jsxref("Object.prototype.toString")}}. For user-defined {{jsxref("Function")}}
+The {{jsxref("Function")}} object overrides the `toString()` method
+inherited from {{jsxref("Object")}}; it does not inherit
+{{jsxref("Object.prototype.toString")}}. For user-defined `Function`
 objects, the `toString` method returns a string containing the source text
 segment which was used to define the function.
 
 JavaScript calls the `toString` method automatically when a
-{{jsxref("Function")}} is to be represented as a text value, e.g. when a function is
+`Function` is to be represented as a text value, e.g. when a function is
 concatenated with a string.
 
 The `toString()` method will throw a {{jsxref("TypeError")}} exception
@@ -42,12 +41,13 @@ The `toString()` method will throw a {{jsxref("TypeError")}} exception
 `this` value object is not a `Function` object.
 
 ```js example-bad
-Function.prototype.toString.call('foo'); // TypeError
+Function.prototype.toString.call('foo'); // throws TypeError
 ```
 
-If the `toString()` method is called on built-in function objects or a
-function created by `Function.prototype.bind`, `toString()`
-returns a _native function string_ which looks like
+If the `toString()` method is called on built-in function objects, a
+function created by {{jsxref("Function.prototype.bind()")}}, or
+other non-JavaScript functions, then `toString()` returns a
+_native function string_ which looks like
 
 ```js
 "function someName() { [native code] }"

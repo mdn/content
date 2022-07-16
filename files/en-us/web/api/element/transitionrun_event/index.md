@@ -1,17 +1,17 @@
 ---
-title: 'HTMLElement: transitionrun event'
-slug: Web/API/HTMLElement/transitionrun_event
-page-type: web-api-event
+title: 'Element: transitionrun event'
+slug: Web/API/Element/transitionrun_event
 tags:
   - CSS Transitions
   - Event
   - HTML DOM
-  - HTMLElement
+  - Element
   - Reference
   - Transitions
   - Web
   - transitionrun
-browser-compat: api.HTMLElement.transitionrun_event
+browser-compat: api.Element.transitionrun_event
+page-type: web-api-event
 ---
 {{APIRef}}{{SeeCompatTable}}
 
@@ -83,7 +83,7 @@ In the following example, we have a simple {{htmlelement("div")}} element, style
 }
 ```
 
-To this, we'll add some JavaScript to indicate where the {{domxref("HTMLElement/transitionstart_event", "transitionstart")}} and {{domxref("HTMLElement/transitionrun_event", "transitionrun")}} events fire.
+To this, we'll add some JavaScript to indicate where the {{domxref("Element/transitionstart_event", "transitionstart")}} and {{domxref("Element/transitionrun_event", "transitionrun")}} events fire.
 
 ```js
 const el = document.querySelector('.transition');
@@ -121,9 +121,8 @@ The `transitionrun` will occur even if the transition is canceled before the del
 
 ## See also
 
-- The {{domxref("GlobalEventHandlers.ontransitionrun")}} event handler
 - The {{domxref("TransitionEvent")}} interface
 - CSS properties: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}
-- Related events: {{domxref("HTMLElement/transitionend_event", "transitionend")}}, {{domxref("HTMLElement/transitionstart_event", "transitionstart")}}, {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}}
+- Related events: {{domxref("Element/transitionend_event", "transitionend")}}, {{domxref("Element/transitionstart_event", "transitionstart")}}, {{domxref("Element/transitioncancel_event", "transitioncancel")}}
 - This event on {{domxref("Document")}} targets: {{domxref("Document/transitionrun_event", "transitionrun")}}
 - This event on {{domxref("Window")}} targets: {{domxref("Window/transitionrun_event", "transitionrun")}}

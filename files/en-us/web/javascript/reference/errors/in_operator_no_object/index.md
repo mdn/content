@@ -16,10 +16,10 @@ used to check if a property is in an object.
 
 ## Message
 
-```js
-TypeError: Invalid operand to 'in' (Edge)
-TypeError: right-hand side of 'in' should be an object, got 'x' (Firefox)
-TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
+```
+TypeError: Cannot use 'in' operator to search for 'x' in 'y' (V8-based & Firefox)
+TypeError: right-hand side of 'in' should be an object, got null (Firefox)
+TypeError: "y" is not an Object. (evaluating '"x" in "y"') (Safari)
 ```
 
 ## Error type

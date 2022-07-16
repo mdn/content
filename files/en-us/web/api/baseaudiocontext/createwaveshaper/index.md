@@ -49,7 +49,7 @@ node. For applied examples/information, check out our [Voice-change-O-matic](htt
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const distortion = audioCtx.createWaveShaper();
 
-  ...
+// …
 
 function makeDistortionCurve(amount) {
   const k = typeof amount === 'number' ? amount : 50,
@@ -65,7 +65,7 @@ function makeDistortionCurve(amount) {
   return curve;
 };
 
-  ...
+// …
 
 distortion.curve = makeDistortionCurve(400);
 distortion.oversample = '4x';

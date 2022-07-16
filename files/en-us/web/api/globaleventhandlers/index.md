@@ -59,10 +59,6 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/progress_event", "progress")}} event is raised.
 - {{domxref("GlobalEventHandlers.onratechange")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/ratechange_event", "ratechange")}} event is raised.
-- {{domxref("GlobalEventHandlers.onscroll")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Element/scroll_event", "scroll")}} event is raised.
-- {{domxref("GlobalEventHandlers.onsecuritypolicyviolation")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the [`securitypolicyviolation`](/en-US/docs/Web/API/Element/securitypolicyviolation_event) event is raised after a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) violation.
 - {{domxref("GlobalEventHandlers.onseeked")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/seeked_event", "seeked")}} event is raised.
 - {{domxref("GlobalEventHandlers.onseeking")}}
@@ -79,14 +75,6 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/timeupdate_event", "timeupdate")}} event is raised.
 - {{domxref("GlobalEventHandlers.onvolumechange")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/volumechange_event", "volumechange")}} event is raised.
-- {{domxref("GlobalEventHandlers.ontransitioncancel")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}} event is sent, indicating that a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) has been cancelled.
-- {{domxref("GlobalEventHandlers.ontransitionend")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{domxref("HTMLElement/transitionend_event", "transitionend")}} event is sent, indicating that a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) has finished playing.
-- {{domxref("GlobalEventHandlers.ontransitionrun")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{domxref("HTMLElement/transitionrun_event", "transitionrun")}} event is sent, indicating that a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) is running, though not necessarily started.
-- {{domxref("GlobalEventHandlers.ontransitionstart")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{domxref("HTMLElement/transitionstart_event", "transitionstart")}} event is sent, indicating that a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) has started transitioning.
 - {{domxref("GlobalEventHandlers.onwaiting")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement.waiting_event", "waiting")}} event is raised.
 

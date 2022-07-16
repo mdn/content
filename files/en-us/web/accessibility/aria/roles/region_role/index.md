@@ -68,7 +68,7 @@ If there is more than one `region` landmark role in a document, provide a unique
   <!-- content -->
 </div>
 
-...
+…
 
 <div role="region" aria-labelledby="please-reconsider">
   <h3 id="please-reconsider">Please reconsider your document structure</h3>

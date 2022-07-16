@@ -92,7 +92,7 @@ Right after that we use the Leap's `loop` method to get the information held in 
 
 ```js
 Leap.loop({
-    hand: function(hand) {
+    hand(hand) {
         horizontalDegree = Math.round(hand.roll() * toDegrees);
         verticalDegree = Math.round(hand.pitch() * toDegrees);
         grabStrength = hand.grabStrength;
@@ -178,7 +178,7 @@ Cylon.robot({
   devices: {
     makey: { driver: 'makey-button', pin: 2 }
   },
-  work: function(my) {
+  work(my) {
     my.makey.on('push', function() {
       console.log("Button pushed!");
     });

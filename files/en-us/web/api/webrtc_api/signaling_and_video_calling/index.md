@@ -44,8 +44,8 @@ First up is the addition of the function `sendToOneUser()`. As the name suggests
 
 ```js
 function sendToOneUser(target, msgString) {
-  var isUnique = true;
-  var i;
+  const isUnique = true;
+  let i;
 
   for (i=0; i < connectionArray.length; i++) {
     if (connectionArray[i].username === target) {
@@ -62,8 +62,7 @@ Our original chat demo didn't support sending messages to a specific user. The n
 
 ```js
 if (sendToClients) {
-  var msgString = JSON.stringify(msg);
-  var i;
+  const msgString = JSON.stringify(msg);
 
   if (msg.target && msg.target.length !== 0) {
     sendToOneUser(msg.target, msgString);
@@ -198,7 +197,7 @@ Throughout our code, we call `sendToServer()` in order to send messages to the s
 
 ```js
 function sendToServer(msg) {
-  var msgJSON = JSON.stringify(msg);
+  const msgJSON = JSON.stringify(msg);
 
   connection.send(msgJSON);
 }
@@ -212,15 +211,14 @@ The code which handles the `"userlist"` message calls `handleUserlistMsg()`. Her
 
 ```js
 function handleUserlistMsg(msg) {
-  var i;
-  var listElem = document.querySelector(".userlistbox");
+  const listElem = document.querySelector(".userlistbox");
 
   while (listElem.firstChild) {
     listElem.removeChild(listElem.firstChild);
   }
 
   msg.users.forEach(function(username) {
-    var item = document.createElement("li");
+    const item = document.createElement("li");
     item.appendChild(document.createTextNode(username));
     item.addEventListener("click", invite, false);
 
@@ -242,7 +240,7 @@ Finally, we append the new item to the `<ul>` that contains all of the user name
 When the user clicks on a username they want to call, the `invite()` function is invoked as the event handler for that {{domxref("Element/click_event", "click")}} event:
 
 ```js
-var mediaConstraints = {
+const mediaConstraints = {
   audio: true, // We want an audio track
   video: true // ...and we want a video track
 };
@@ -251,7 +249,7 @@ function invite(evt) {
   if (myPeerConnection) {
     alert("You can't start a call because you already have one open!");
   } else {
-    var clickedUsername = evt.target.textContent;
+    const clickedUsername = evt.target.textContent;
 
     if (clickedUsername === myUsername) {
       alert("I'm afraid I can't let you talk to yourself. That would be weird.");
@@ -418,12 +416,12 @@ When the offer arrives, the callee's `handleVideoOfferMsg()` function is called 
 
 ```js
 function handleVideoOfferMsg(msg) {
-  var localStream = null;
+  let localStream = null;
 
   targetUsername = msg.name;
   createPeerConnection();
 
-  var desc = new RTCSessionDescription(msg.sdp);
+  const desc = new RTCSessionDescription(msg.sdp);
 
   myPeerConnection.setRemoteDescription(desc).then(function () {
     return navigator.mediaDevices.getUserMedia(mediaConstraints);
@@ -441,7 +439,7 @@ function handleVideoOfferMsg(msg) {
     return myPeerConnection.setLocalDescription(answer);
   })
   .then(function() {
-    var msg = {
+    const msg = {
       name: myUsername,
       target: targetUsername,
       type: "video-answer",
@@ -501,7 +499,7 @@ The signaling server delivers each ICE candidate to the destination peer using w
 
 ```js
 function handleNewICECandidateMsg(msg) {
-  var candidate = new RTCIceCandidate(msg.candidate);
+  const candidate = new RTCIceCandidate(msg.candidate);
 
   myPeerConnection.addIceCandidate(candidate)
     .catch(reportError);
@@ -539,8 +537,8 @@ Your code receives a {{domxref("MediaStream/removetrack_event", "removetrack")}}
 
 ```js
 function handleRemoveTrackEvent(event) {
-  var stream = document.getElementById("received_video").srcObject;
-  var trackList = stream.getTracks();
+  const stream = document.getElementById("received_video").srcObject;
+  const trackList = stream.getTracks();
 
   if (trackList.length == 0) {
     closeVideoCall();
@@ -579,8 +577,8 @@ The `closeVideoCall()` function, shown below, is responsible for stopping the st
 
 ```js
 function closeVideoCall() {
-  var remoteVideo = document.getElementById("received_video");
-  var localVideo = document.getElementById("local_video");
+  const remoteVideo = document.getElementById("received_video");
+  const localVideo = document.getElementById("local_video");
 
   if (myPeerConnection) {
     myPeerConnection.ontrack = null;

@@ -52,10 +52,10 @@ The content is handled as raw text data (since nothing here is overriding the de
 {{domxref("XMLHttpRequest.responseType", "responseType")}}).
 
 ```js
-var url = 'somePage.html'; //A local page
+const url = 'somePage.html'; //A local page
 
 function load(url, callback) {
-  var xhr = new XMLHttpRequest();
+  const xhr = new XMLHttpRequest();
 
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4) {

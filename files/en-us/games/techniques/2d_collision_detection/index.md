@@ -73,7 +73,7 @@ var dim1 = {x: 5, y: 5}
 var dim2 = {x: 20, y: 20}
 
 Crafty.c("Circle", {
-   circle: function(radius, color) {
+   circle(radius, color) {
         this.radius = radius;
         this.w = this.h = radius * 2;
         this.color = color || "#000000";
@@ -82,7 +82,7 @@ Crafty.c("Circle", {
         return this;
    },
 
-   draw: function() {
+   draw() {
        var ctx = Crafty.canvas.context;
        ctx.save();
        ctx.fillStyle = this.color;

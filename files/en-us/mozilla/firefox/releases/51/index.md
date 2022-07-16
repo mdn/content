@@ -128,7 +128,7 @@ tags:
 ### Events
 
 - Firefox now supports the {{domxref("Element.onanimationstart", "onanimationstart")}}, {{domxref("Element.onanimationiteration", "onanimationiteration")}}, and {{domxref("Element.onanimationstart", "onanimationstart")}} event handlers, in addition to supporting the corresponding events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} ({{bug(911987)}}).
-- Firefox now supports the {{domxref("GlobalEventHandlers.ontransitionend", "ontransitionend")}} event handler ({{bug(911987)}}).
+- Firefox now supports the {{domxref("Element.transitionend_event", "ontransitionend")}} event handler ({{bug(911987)}}).
 
 ### Security
 

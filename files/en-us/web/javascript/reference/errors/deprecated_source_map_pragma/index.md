@@ -15,7 +15,7 @@ The JavaScript warning "Using `//@` to indicate sourceURL pragmas is deprecated.
 
 ## Message
 
-```js
+```
 Warning: SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
 
 Warning: SyntaxError: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead

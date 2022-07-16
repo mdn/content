@@ -879,7 +879,7 @@ try {
       {},
       "passive",
       {
-        get: function() { passiveIfSupported = { passive: true }; }
+        get() { passiveIfSupported = { passive: true }; }
       }
     )
   );

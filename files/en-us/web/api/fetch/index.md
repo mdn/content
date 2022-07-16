@@ -44,7 +44,7 @@ rather than the directive of the resources it's retrieving.
 
 ```js
 fetch(resource)
-fetch(resource, init)
+fetch(resource, options)
 ```
 
 ### Parameters
@@ -56,7 +56,7 @@ fetch(resource, init)
     - A string or any other object with a {{Glossary("stringifier")}} — including a {{domxref("URL")}} object — that provides the URL of the resource you want to fetch.
     - A {{domxref("Request")}} object.
 
-- `init` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object containing any custom settings that you want to apply to the request. The
     possible options are:

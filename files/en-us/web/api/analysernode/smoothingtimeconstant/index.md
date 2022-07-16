@@ -38,7 +38,7 @@ analyser.minDecibels = -90;
 analyser.maxDecibels = -10;
 analyser.smoothingTimeConstant = 0.85;
 
-  ...
+// …
 
 analyser.fftSize = 256;
 const bufferLength = analyser.frequencyBinCount;

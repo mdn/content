@@ -44,7 +44,7 @@ window.addEventListener("beforeinstallprompt", function(e) {
   }
 
   // The event was re-dispatched in response to our request
-  // ...
+  // …
 });
 ```
 

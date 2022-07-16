@@ -21,7 +21,7 @@ For example, getting a property on an object:
 
 ```js
 let handler = {
-  get: function(target, name) {
+  get(target, name) {
     return name in target ? target[name] : 42
   }
 }
@@ -412,7 +412,7 @@ Afterwards, any operation on the proxy leads to a {{jsxref("TypeError")}}.
 
 ```js
 let revocable = Proxy.revocable({}, {
-  get: function(target, name) {
+  get(target, name) {
     return '[[' + name + ']]'
   }
 })
