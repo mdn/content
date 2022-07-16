@@ -47,8 +47,7 @@ An {{jsxref("ArrayBuffer")}}.
 ## Examples
 
 ```js
-reg.pushManager.getSubscription()
-  .then(function(subscription) {
+reg.pushManager.getSubscription().then(function(subscription) {
   // Enable any UI which subscribes / unsubscribes from
   // push messages.
 
@@ -72,7 +71,8 @@ reg.pushManager.getSubscription()
   const key = subscription.getKey('p256dh');
   const auth = subscription.getKey('auth');
 
-    ...
+  // ...
+});
 ```
 
 ## Specifications

@@ -90,13 +90,13 @@ Starting in Firefox 47, you can now revoke existing permissions, using the {{dom
 ```js
 const revokeBtn = document.querySelector('.revoke');
 
-  ...
+// ...
 
 revokeBtn.onclick = function() {
   revokePermission();
 }
 
-  ...
+// ...
 
 function revokePermission() {
   navigator.permissions.revoke({name:'geolocation'}).then(function(result) {

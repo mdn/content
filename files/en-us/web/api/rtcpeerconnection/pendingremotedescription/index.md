@@ -40,7 +40,7 @@ not there's a description change being processed.
 
 ```js
 var pc = new RTCPeerConnection();
-…
+// ...
 var sd = pc.pendingRemoteDescription;
 if (sd) {
   // There's a description change underway!
