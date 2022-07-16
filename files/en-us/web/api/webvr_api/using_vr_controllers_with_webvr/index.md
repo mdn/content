@@ -50,7 +50,7 @@ We've written up a simple example to demonstrate — see our [vr-controller-basi
 The first notable code is as follows:
 
 ```js
-const initialRun = true;
+let initialRun = true;
 
 if(navigator.getVRDisplays && navigator.getGamepads) {
   info.textContent = 'WebVR API and Gamepad API supported.'
