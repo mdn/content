@@ -46,7 +46,7 @@ In this example, we use {{domxref("EventTarget.addEventListener", "addEventListe
 ```js
 pc.addEventListener("negotiationneeded", ev => {
   pc.createOffer()
-  .then(offer => pc.setLocalDescription(offer))
+  .then((offer) => pc.setLocalDescription(offer))
   .then(() => sendSignalingMessage({
     type: "video-offer",
     sdp: pc.localDescription
@@ -64,12 +64,12 @@ You can also set an event handler for the `negotiationneeded` event by assigning
 ```js
 pc.onnegotiationneeded = ev => {
   pc.createOffer()
-  .then(offer => pc.setLocalDescription(offer))
+  .then((offer) => pc.setLocalDescription(offer))
   .then(() => sendSignalingMessage({
     type: "video-offer",
     sdp: pc.localDescription
   }))
-  .catch(err => {
+  .catch((err) => {
     /* handle error */
   });
 };

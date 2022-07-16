@@ -44,7 +44,7 @@ new ResizeObserver(callback)
 
     ```js
     function callback(entries, observer) {
-      for (let entry of entries) {
+      for (const entry of entries) {
         // Do something to each entry
         // and possibly something to the observer itself
       }
