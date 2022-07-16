@@ -45,7 +45,7 @@ the action.
 var flg = document.queryCommandSupported("SelectAll");
 
 if(flg) {
-  // ...Do something
+  // Do something…
 }
 ```
 
