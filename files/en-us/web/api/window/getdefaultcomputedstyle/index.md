@@ -83,8 +83,8 @@ pseudo-elements (e.g., {{cssxref("::before")}} or {{cssxref("::after")}}).
 <h3>generated content</h3>
 
 <script>
-  const h3       = document.querySelector('h3')
-  const result   = getDefaultComputedStyle(h3, ':after').content;
+  const h3 = document.querySelector('h3');
+  const result = getDefaultComputedStyle(h3, ':after').content;
 
   console.log('the generated content is: ', result); // returns 'none'
 </script>
