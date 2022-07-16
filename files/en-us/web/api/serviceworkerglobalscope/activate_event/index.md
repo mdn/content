@@ -58,7 +58,7 @@ You can also set up the event handler using the `onactivate` property:
 
 ```js
 globalScope.onactivate = function(event) {
-  ...
+  // ...
 };
 ```
 

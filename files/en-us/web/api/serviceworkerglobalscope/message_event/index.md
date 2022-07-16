@@ -91,7 +91,7 @@ self.onmessage = event => {
   console.log(`The client sent me a message: ${event.data}`);
 
   event.source.postMessage("Hi client");
-});
+};
 ```
 
 ## Specifications
