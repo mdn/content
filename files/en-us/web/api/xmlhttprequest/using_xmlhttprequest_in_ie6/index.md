@@ -11,7 +11,7 @@ tags:
 In all modern browsers, you can create a new XMLHttpRequest object using the following code:
 
 ```js
-const request = new XMLHttpRequest()
+var request = new XMLHttpRequest()
 ```
 
 However, if you need to also support Internet Explorer 6 and older, you need to extend your code like this:
