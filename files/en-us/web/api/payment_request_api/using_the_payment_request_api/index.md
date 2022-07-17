@@ -152,7 +152,7 @@ In the following snippet we do just this — depending on whether the user can m
 
 ```js
 const checkoutButton = document.getElementById('checkout-button');
-checkoutButton.innerText = "Loading...";
+checkoutButton.innerText = "Loading…";
 if (window.PaymentRequest) {
   let request = new PaymentRequest(buildSupportedPaymentMethodNames(),
       buildShoppingCartDetails());
@@ -181,7 +181,8 @@ If the checkout flow needs to know whether {{domxref("PaymentRequest.canMakePaym
 // The page has loaded. Should the page use PaymentRequest?
 // If PaymentRequest fails, should the page fallback to manual
 // web form checkout?
-const supportedPaymentMethods = [ /* ... */ ];
+const supportedPaymentMethods = [ /* supported methods */ ];
+
 let shouldCallPaymentRequest = true;
 let fallbackToLegacyOnPaymentRequestFailure = false;
 (new PaymentRequest(supportedPaymentMethods,

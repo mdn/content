@@ -51,7 +51,7 @@ if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
   console.error('Unsupported MIME type or codec: ', mimeCodec);
 }
 
-// ...
+// …
 ```
 
 ## Browser compatibility
