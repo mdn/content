@@ -480,7 +480,7 @@ if (isset($_FILES['myFile'])) {
 </head>
 <body>
     <div>
-        <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">Drag & drop your file here…</div>
+        <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">Drag & drop your file here</div>
     </div>
 </body>
 </html>

@@ -22,9 +22,8 @@ A boolean value, which is `true` if the event bubbles up through the DOM tree.
 
 ```js
 function handleInput(e) {
-  // Check whether the event bubbles
+  // Check whether the event bubbles passes the event along
   if (!e.bubbles) {
-    // Passes the event along
     passItOn(e);
   }
 
