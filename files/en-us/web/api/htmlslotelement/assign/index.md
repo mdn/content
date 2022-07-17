@@ -24,7 +24,7 @@ Please note that you cannot mix declarative and imperative slot assignment. Ther
 ```js
 assign(node1)
 assign(node1, node2)
-assign(node1, node2, /* ... ,*/ nodeN)
+assign(node1, node2, /* … ,*/ nodeN)
 ```
 
 ### Parameters

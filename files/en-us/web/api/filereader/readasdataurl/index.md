@@ -45,7 +45,7 @@ None ({{jsxref("undefined")}}).
 
 ```html
 <input type="file" onchange="previewFile()"><br>
-<img src="" height="200" alt="Image preview...">
+<img src="" height="200" alt="Image preview">
 ```
 
 ### JavaScript

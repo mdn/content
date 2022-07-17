@@ -49,8 +49,7 @@ class CustomCheckbox extends HTMLElement {
     super();
     this.internals_ = this.attachInternals();
   }
-
-  /* ... */
+  // …
 }
 
 window.customElements.define("custom-checkbox", CustomCheckbox);

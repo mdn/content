@@ -32,7 +32,7 @@ To see an example of how `toURL()` works, see the [method description](#tourl). 
 // Taking care of the browser-specific prefixes.
 window.requestFileSystem  = window.requestFileSystem || window.webkitRequestFileSystem;
 
-// ...
+// …
 
 // Opening a file system with temporary storage
 window.requestFileSystem(TEMPORARY, 1024*1024 /*1MB*/, function(fs) {
