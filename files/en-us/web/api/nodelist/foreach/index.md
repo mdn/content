@@ -21,7 +21,8 @@ insertion order.
 ## Syntax
 
 ```js
-someNodeList.forEach(callback[, thisArg]);
+someNodeList.forEach(callback);
+someNodeList.forEach(callback, thisArg);
 ```
 
 ### Parameters

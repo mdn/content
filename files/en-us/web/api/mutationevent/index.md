@@ -63,7 +63,7 @@ You can register a listener for mutation events using {{DOMxRef("EventTarget.add
 
 ```js
 element.addEventListener("DOMNodeInserted", function (event) {
-  // ...
+  // …
 }, false);
 ```
 

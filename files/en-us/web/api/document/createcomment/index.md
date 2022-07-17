@@ -27,7 +27,7 @@ createComment(data)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A new {{domxref("Comment")}} object.
 
 ## Examples
 

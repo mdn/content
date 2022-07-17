@@ -21,8 +21,8 @@ The following code example shows the use of {{domxref("DOMHighResTimeStamp")}} a
 
 ```js
 function calculate_time() {
-  const startTime;
-  const endTime;
+  let startTime;
+  let endTime;
 
   startTime = performance.now();
   do_task();

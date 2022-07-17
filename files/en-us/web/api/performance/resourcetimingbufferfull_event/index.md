@@ -43,6 +43,9 @@ function init() {
   // Set a callback if the resource buffer becomes filled
   performance.onresourcetimingbufferfull = buffer_full;
 }
+```
+
+```html
 <body onload="init()">
 ```
 

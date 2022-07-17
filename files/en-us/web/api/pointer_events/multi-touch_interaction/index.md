@@ -244,8 +244,7 @@ function log(name, ev) {
   const s = name + ": pointerID = " + ev.pointerId +
                 " ; pointerType = " + ev.pointerType +
                 " ; isPrimary = " + ev.isPrimary;
-  o.innerHTML += s + "
-";
+  o.innerHTML += s + "<br>";
 }
 
 function clearLog(event) {

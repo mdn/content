@@ -149,7 +149,7 @@ var myInit = { method: 'GET',
 var myRequest = new Request('flowers.jpg',myInit);
 
 fetch(myRequest).then(function(response) {
-  ...
+  // ...
 });
 ```
 
@@ -158,7 +158,7 @@ the same effect, e.g.:
 
 ```js
 fetch(myRequest,myInit).then(function(response) {
-  ...
+  // ...
 });
 ```
 

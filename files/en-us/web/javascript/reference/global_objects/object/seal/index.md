@@ -62,7 +62,7 @@ properties changed.
 
 ```js
 const obj = {
-  prop: function() {},
+  prop() {},
   foo: 'bar'
 };
 
@@ -84,7 +84,7 @@ obj.foo = 'quux';
 // But you can't convert data properties to accessors,
 // or vice versa.
 Object.defineProperty(obj, 'foo', {
-  get: function() { return 'g'; }
+  get() { return 'g'; }
 }); // throws a TypeError
 
 // Now any changes, other than to property values,

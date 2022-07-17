@@ -165,7 +165,7 @@ function startRecording(stream, lengthInMS) {
 
   recorder.ondataavailable = event => data.push(event.data);
   recorder.start();
-  log(recorder.state + " for " + (lengthInMS/1000) + " seconds...");
+  log(recorder.state + " for " + (lengthInMS/1000) + " seconds…");
 
   let stopped = new Promise((resolve, reject) => {
     recorder.onstop = resolve;

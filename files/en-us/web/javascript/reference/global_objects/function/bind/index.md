@@ -29,7 +29,7 @@ bind(thisArg, arg1, …, argN)
 ### Parameters
 
 - `thisArg`
-  - : The value to be passed as the `this` parameter to the target function `func` when the bound function is called. If the function is not in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) will be replaced with the global object, and primitive values will be converted to objects. The value is ignored if the bound function is constructed using the {{jsxref("Operators/new", "new")}} operator. 
+  - : The value to be passed as the `this` parameter to the target function `func` when the bound function is called. If the function is not in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) will be replaced with the global object, and primitive values will be converted to objects. The value is ignored if the bound function is constructed using the {{jsxref("Operators/new", "new")}} operator.
 - `arg1, …, argN` {{optional_inline}}
   - : Arguments to prepend to arguments provided to the bound function when invoking `func`.
 
@@ -90,7 +90,7 @@ function from the function, using the original object, neatly solves this proble
 this.x = 9;    // 'this' refers to the global object (e.g. 'window') in non-strict mode
 const module = {
   x: 81,
-  getX: function() { return this.x; }
+  getX() { return this.x; }
 };
 
 module.getX();

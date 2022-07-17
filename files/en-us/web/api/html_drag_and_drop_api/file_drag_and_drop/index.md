@@ -21,7 +21,7 @@ The _target element_ of the {{domxref("HTMLElement/drop_event", "drop")}} event 
 
 ```html
 <div id="drop_zone" ondrop="dropHandler(event);">
-  <p>Drag one or more files to this Drop Zone ...</p>
+  <p>Drag one or more files to this <i>drop zone</i>.</p>
 </div>
 ```
 
@@ -29,7 +29,7 @@ Typically, an application will include a {{domxref("HTMLElement/dragover_event",
 
 ```html
 <div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
-  <p>Drag one or more files to this Drop Zone ...</p>
+  <p>Drag one or more files to this <i>drop zone</i>.</p>
 </div>
 ```
 
@@ -66,13 +66,13 @@ function dropHandler(ev) {
       // If dropped items aren't files, reject them
       if (ev.dataTransfer.items[i].kind === 'file') {
         const file = ev.dataTransfer.items[i].getAsFile();
-        console.log('... file[' + i + '].name = ' + file.name);
+        console.log('… file[' + i + '].name = ' + file.name);
       }
     }
   } else {
     // Use DataTransfer interface to access the file(s)
     for (let i = 0; i < ev.dataTransfer.files.length; i++) {
-      console.log('... file[' + i + '].name = ' + ev.dataTransfer.files[i].name);
+      console.log('… file[' + i + '].name = ' + ev.dataTransfer.files[i].name);
     }
   }
 }

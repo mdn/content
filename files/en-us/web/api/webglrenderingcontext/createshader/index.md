@@ -32,7 +32,7 @@ createShader(type)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A new ({{domxref("WebGLShader")}}).
 
 ## Examples
 

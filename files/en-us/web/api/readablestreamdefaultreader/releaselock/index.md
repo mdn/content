@@ -45,11 +45,11 @@ None ({{jsxref("undefined")}}).
 function fetchStream() {
   const reader = stream.getReader();
 
-  ...
+  // ...
 
   reader.releaseLock()
 
-  ...
+  // ...
 }
 ```
 

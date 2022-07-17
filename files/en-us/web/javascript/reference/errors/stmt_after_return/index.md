@@ -14,7 +14,7 @@ semicolon-less return statement but including an expression directly after.
 
 ## Message
 
-```js
+```
 Warning: unreachable code after return statement (Firefox)
 ```
 

@@ -83,7 +83,7 @@ Variables and methods can infer the name of an anonymous function from its synta
 ```js
 const f = function() {};
 const object = {
-  someMethod: function() {}
+  someMethod() {}
 };
 
 console.log(f.name); // "f"
@@ -204,8 +204,8 @@ const sym1 = Symbol("foo");
 const sym2 = Symbol();
 
 const o = {
-  [sym1]: function(){},
-  [sym2]: function(){}
+  [sym1](){},
+  [sym2](){}
 };
 
 o[sym1].name; // "[foo]"

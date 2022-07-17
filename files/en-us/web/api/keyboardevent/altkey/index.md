@@ -23,7 +23,7 @@ A boolean value
 
 ## Examples
 
-```js
+```html
 <html>
 <head>
 <title>altKey example</title>

@@ -47,7 +47,7 @@ You can define a function with a display name in a {{jsxref("Functions", "functi
 
 ```js
 const object = {
-  someMethod: function() {}
+  someMethod() {}
 };
 
 object.someMethod.displayName = 'someMethod';

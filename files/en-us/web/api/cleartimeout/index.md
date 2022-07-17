@@ -49,12 +49,12 @@ one second, the alert only appears once.
 
 ```js
 const alarm = {
-  remind: function(aMessage) {
+  remind(aMessage) {
     alert(aMessage);
     this.timeoutID = undefined;
   },
 
-  setup: function() {
+  setup() {
     if (typeof this.timeoutID === 'number') {
       this.cancel();
     }
@@ -64,7 +64,7 @@ const alarm = {
     }.bind(this), 1000, 'Wake up!');
   },
 
-  cancel: function() {
+  cancel() {
     clearTimeout(this.timeoutID);
   }
 };

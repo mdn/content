@@ -24,16 +24,26 @@ constructor, or the function expression syntax.
 ## Syntax
 
 ```js
-function* name([param[, param[, ... param]]]) {
-   statements
+function* name(param0) {
+  statements
+}
+function* name(param0, param1) {
+  statements
+}
+function* name(param0, param1, /* … ,*/ paramN) {
+  statements
 }
 ```
+
+> **Note:** Generator functions do not have arrow function counterparts.
+
+### Parameters
 
 - `name`
   - : The function name.
 - `param` {{optional_inline}}
   - : The name of a formal parameter for the function.
-- `statements`
+- `statements` {{optional_inline}}
   - : The statements comprising the body of the function.
 
 ## Description

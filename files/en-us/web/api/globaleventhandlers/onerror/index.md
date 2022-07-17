@@ -29,7 +29,7 @@ For historical reasons, different arguments are passed to `window.onerror` and `
 ### window\.onerror
 
 ```js
-window.onerror = function(message, source, lineno, colno, error) { /* ... */ };
+window.onerror = function(message, source, lineno, colno, error) { /* … */ };
 ```
 
 Function parameters:
@@ -45,7 +45,7 @@ When the function returns `true`, this prevents the firing of the default event 
 ### window\.addEventListener('error')
 
 ```js
-window.addEventListener('error', function(event) { /* ... */ })
+window.addEventListener('error', function(event) { /* … */ })
 ```
 
 `event` of type {{domxref("ErrorEvent")}} contains all the information about the event and the error.
@@ -53,7 +53,7 @@ window.addEventListener('error', function(event) { /* ... */ })
 ### element.onerror
 
 ```js
-element.onerror = function(event) { /* ... */ }
+element.onerror = function(event) { /* … */ }
 ```
 
 `element.onerror` accepts a function with a single argument of type {{domxref("Event")}}.

@@ -55,7 +55,7 @@ function onExitPip() {
 
 video.addEventListener("leavepictureinpicture", onExitPip, false);
 
-button.onclick = function() => {
+button.onclick = () => {
   if (document.pictureInPictureElement) {
     document.exitPictureInPicture();
   }
@@ -74,7 +74,7 @@ function onExitPip() {
 
 video.onleavepictureinpicture = onExitPip;
 
-button.onclick = function() => {
+button.onclick = () => {
   if (document.pictureInPictureElement) {
     document.exitPictureInPicture();
   }

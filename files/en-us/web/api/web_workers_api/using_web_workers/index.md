@@ -382,10 +382,10 @@ Now onto the worker. First we need to have the methods to handle the two simple 
 
 ```js
 const queryableFunctions = {
-    getDifference: function(a, b) {
+    getDifference(a, b) {
         reply('printStuff', a - b);
     },
-    waitSomeTime: function() {
+    waitSomeTime() {
         setTimeout(function() {
             reply('doAlert', 3, 'seconds');
         }, 3000);
@@ -524,11 +524,11 @@ Here are the full implementation:
 ```js
 const queryableFunctions = {
   // example #1: get the difference between two numbers:
-  getDifference: function(nMinuend, nSubtrahend) {
+  getDifference(nMinuend, nSubtrahend) {
       reply('printStuff', nMinuend - nSubtrahend);
   },
   // example #2: wait three seconds
-  waitSomeTime: function() {
+  waitSomeTime() {
       setTimeout(function() { reply('doAlert', 3, 'seconds'); }, 3000);
   }
 };

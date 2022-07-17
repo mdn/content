@@ -47,8 +47,6 @@ about media types and how they're used in web content and by web browsers.
 ## Examples
 
 ```js
-...
-
 if (navigator.mediaDevices) {
   console.log('getUserMedia supported.');
 
@@ -66,11 +64,12 @@ if (navigator.mediaDevices) {
       m = mediaRecorder;
 
       m.mimeType; // would return 'video/mp4'
-      ...
+      // …
     })
     .catch(function(error) {
       console.log(error.message);
     });
+}
 ```
 
 Changing line 14 to the following causes `MediaRecorder` to try to use AVC

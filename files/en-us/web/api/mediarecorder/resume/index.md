@@ -54,19 +54,15 @@ effect.
 ## Examples
 
 ```js
-...
-
-  pause.onclick = function() {
-    if(MediaRecorder.state === "recording") {
-      mediaRecorder.pause();
-      // recording paused
-    } else if(MediaRecorder.state === "paused") {
-      mediaRecorder.resume();
-      // resume recording
-    }
+pause.onclick = function() {
+  if(MediaRecorder.state === "recording") {
+    mediaRecorder.pause();
+    // recording paused
+  } else if(MediaRecorder.state === "paused") {
+    mediaRecorder.resume();
+    // resume recording
   }
-
-...
+}
 ```
 
 ## Specifications
