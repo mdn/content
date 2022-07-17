@@ -46,7 +46,7 @@ function use_PerformanceEntry_methods() {
   console.log("PerformanceEntry tests…");
 
   if (performance.mark === undefined) {
-    console.error("performance.mark Not supported");
+    console.error("The property performance.mark is not supported");
     return;
   }
 
