@@ -126,7 +126,7 @@ You can also set up an event handler for `error` events using the `RTCDataChanne
 dc.onerror = ev => {
   const err = ev.error;
 
-  /* ... */
+  // …
 }
 ```
 

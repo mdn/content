@@ -78,7 +78,7 @@ dc.onclose = function () {
   console.log("datachannel close");
 };
 
-// Now negotiate the connection and so forth...
+// Now negotiate the connection and so forth…
 ```
 
 ## Specifications
