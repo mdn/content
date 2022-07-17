@@ -45,9 +45,9 @@ const myImage = document.querySelector('img');
 
 const myRequest = new Request('flowers.jpg');
 
-fetch(myRequest).then(function(response) {
+fetch(myRequest).then((response) => {
   console.log(response.type); // returns basic by default
-  response.blob().then(function(myBlob) {
+  response.blob().then((myBlob) => {
     const objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });

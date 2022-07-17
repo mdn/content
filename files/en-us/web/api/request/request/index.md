@@ -80,14 +80,18 @@ new Request(input, options)
 
     If you construct a new `Request` from an existing `Request`, any options you set in the _init_ object for the new request replace any corresponding options set in the original `Request`. For example:
 
-       ```js
-       const oldRequest = new Request('https://github.com/mdn/content/issues/12959',
-         { headers: { 'From': 'webmaster@example.org'}});
-       oldRequest.headers.get("From"); // "webmaster@example.org"
-       const newRequest = new Request(oldRequest,
-         { headers: { 'From': 'developer@example.org'}});
-       newRequest.headers.get('From') // "developer@example.org"
-       ```
+    ```js
+    const oldRequest = new Request(
+      'https://github.com/mdn/content/issues/12959',
+      { headers: { 'From': 'webmaster@example.org' } },
+    );
+    oldRequest.headers.get("From"); // "webmaster@example.org"
+    const newRequest = new Request(
+      oldRequest,
+      { headers: { 'From': 'developer@example.org' } },
+    );
+    newRequest.headers.get('From'); // "developer@example.org"
+    ```
 
 ## Errors
 
@@ -124,12 +128,12 @@ const myImage = document.querySelector('img');
 
 const myRequest = new Request('flowers.jpg');
 
-fetch(myRequest).then(function(response) {
-  return response.blob();
-}).then(function(response) {
-  const objectURL = URL.createObjectURL(response);
-  myImage.src = objectURL;
-});
+fetch(myRequest)
+  .then((response) => response.blob())
+  .then((response) => {
+    const objectURL = URL.createObjectURL(response);
+    myImage.src = objectURL;
+  });
 ```
 
 In our [Fetch Request with init example](https://github.com/mdn/fetch-examples/tree/master/fetch-request-with-init) (see [Fetch Request init live](https://mdn.github.io/fetch-examples/fetch-request-with-init/)) we do the same thing except that we pass in an init object when we
@@ -141,15 +145,17 @@ const myImage = document.querySelector('img');
 const myHeaders = new Headers();
 myHeaders.append('Content-Type', 'image/jpeg');
 
-const myInit = { method: 'GET',
-               headers: myHeaders,
-               mode: 'cors',
-               cache: 'default' };
+const myOptions = {
+  method: 'GET',
+  headers: myHeaders,
+  mode: 'cors',
+  cache: 'default',
+};
 
-const myRequest = new Request('flowers.jpg',myInit);
+const myRequest = new Request('flowers.jpg', myOptions);
 
-fetch(myRequest).then(function(response) {
-  ...
+fetch(myRequest).then((response) => {
+  // …
 });
 ```
 
@@ -157,22 +163,24 @@ Note that you could also pass the init object into the `fetch` call to get
 the same effect, e.g.:
 
 ```js
-fetch(myRequest,myInit).then(function(response) {
-  ...
+fetch(myRequest, myOptions).then((response) => {
+  // …
 });
 ```
 
 You can also use an object literal as `headers` in `init`.
 
 ```js
-const myInit = { method: 'GET',
-               headers: {
-                   'Content-Type': 'image/jpeg'
-               },
-               mode: 'cors',
-               cache: 'default' };
+const myOptions = {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'image/jpeg',
+  },
+  mode: 'cors',
+  cache: 'default',
+};
 
-const myRequest = new Request('flowers.jpg', myInit);
+const myRequest = new Request('flowers.jpg', myOptions);
 ```
 
 You may also pass a {{domxref("Request")}} object to the `Request()`

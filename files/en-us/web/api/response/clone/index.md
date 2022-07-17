@@ -60,15 +60,15 @@ const image2 = document.querySelector('.img2');
 
 const myRequest = new Request('flowers.jpg');
 
-fetch(myRequest).then(function(response) {
+fetch(myRequest).then((response) => {
   const response2 = response.clone();
 
-  response.blob().then(function(myBlob) {
+  response.blob().then((myBlob) => {
     const objectURL = URL.createObjectURL(myBlob);
     image1.src = objectURL;
   });
 
-  response2.blob().then(function(myBlob) {
+  response2.blob().then((myBlob) => {
     const objectURL = URL.createObjectURL(myBlob);
     image2.src = objectURL;
   });

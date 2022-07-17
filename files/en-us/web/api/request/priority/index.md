@@ -37,7 +37,7 @@ In the following snippet, we create a new request using the
 at a low priority, then save the priority of the request in a variable:
 
 ```js
-const myRequest = new Request('/background-api-call', {priority: 'low'});
+const myRequest = new Request('/background-api-call', { priority: 'low' });
 const myPriority = myRequest.priority; // "low"
 ```
 

@@ -61,8 +61,8 @@ we create a new `Response` object using the constructor, passing it a new {{domx
 
 ```js
 const myBlob = new Blob();
-const init = { "status" : 200 , "statusText" : "SuperSmashingGreat!" };
-const myResponse = new Response(myBlob,init);
+const myOptions = { status: 200, statusText: 'SuperSmashingGreat!' };
+const myResponse = new Response(myBlob, myOptions);
 ```
 
 ## Specifications
