@@ -81,7 +81,7 @@ async function handlePayment() {
   try {
     let payResponse = await payRequest.show();
 
-    while (payResponse has errors) {
+    while (validate(payResponse)) {
       /* let the user edit the payment information,
          wait until they submit */
       await response.retry();

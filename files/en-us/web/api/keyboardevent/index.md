@@ -277,12 +277,6 @@ Before Gecko 5.0 {{geckoRelease('5.0')}}, keyboard handling was less consistent 
 ## Example
 
 ```js
-<!DOCTYPE html>
-<html>
-<head>
-<script>
-'use strict';
-
 document.addEventListener('keydown', (event) => {
   const keyName = event.key;
 
@@ -309,13 +303,6 @@ document.addEventListener('keyup', (event) => {
     alert('Control key was released');
   }
 }, false);
-
-</script>
-</head>
-
-<body>
-</body>
-</html>
 ```
 
 ## Specifications

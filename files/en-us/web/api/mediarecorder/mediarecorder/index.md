@@ -84,7 +84,6 @@ recorded media data will be stored in an MP4 wrapper (so if you gather the chunk
 media data and save them to disk, they will be in an MP4 file).
 
 ```js
-...
 if (navigator.mediaDevices.getUserMedia) {
   const constraints = { audio: true, video: true };
   const chunks = [];
@@ -98,7 +97,7 @@ if (navigator.mediaDevices.getUserMedia) {
     const mediaRecorder = new MediaRecorder(stream,options);
     m = mediaRecorder;
 
-...
+    // ...
   }
 }
 ```

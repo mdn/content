@@ -233,7 +233,7 @@ that may have performance implications you don't want to deal with:
 
 ```js
 function validateResponse(response) {
-  if (checkAllValues(response) {
+  if (checkAllValues(response)) {
     response.complete("success");
   } else {
     response.complete("fail");

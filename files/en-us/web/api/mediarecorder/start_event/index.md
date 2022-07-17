@@ -38,19 +38,15 @@ A generic {{domxref("Event")}}.
 ## Example
 
 ```js
-...
+record.onclick = function() {
+  mediaRecorder.start();
+  console.log("recorder started");
+}
 
-  record.onclick = function() {
-    mediaRecorder.start();
-    console.log("recorder started");
-  }
-
-  mediaRecorder.onstart = function() {
-    // do something in response to
-    // recording being started
-  }
-
-...
+mediaRecorder.onstart = function() {
+  // do something in response to
+  // recording being started
+}
 ```
 
 ## Properties

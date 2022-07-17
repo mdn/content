@@ -33,7 +33,7 @@ In the following code snippet, we create a directory called "Documents."
 window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
 window.directoryEntry = window.directoryEntry || window.webkitDirectoryEntry;
 
-...
+// ...
 
 function onFs(fs){
   fs.root.getDirectory('Documents', {create:true}, function(directoryEntry){
