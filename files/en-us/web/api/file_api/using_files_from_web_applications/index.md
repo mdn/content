@@ -430,7 +430,7 @@ Before actually transferring the data, several preparatory steps are taken:
 
 This example, which uses PHP on the server side and JavaScript on the client side, demonstrates asynchronous uploading of a file.
 
-```js
+```php
 <?php
 if (isset($_FILES['myFile'])) {
     // Example:

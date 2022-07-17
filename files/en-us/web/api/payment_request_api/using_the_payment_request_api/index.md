@@ -181,11 +181,11 @@ If the checkout flow needs to know whether {{domxref("PaymentRequest.canMakePaym
 // The page has loaded. Should the page use PaymentRequest?
 // If PaymentRequest fails, should the page fallback to manual
 // web form checkout?
-const supportedPaymentMethods = ...
+const supportedPaymentMethods = [ /* ... */ ];
 let shouldCallPaymentRequest = true;
 let fallbackToLegacyOnPaymentRequestFailure = false;
 (new PaymentRequest(supportedPaymentMethods,
-    {total: {label: 'Stub', amount: {currency: 'USD', value: '0.01'}}})
+    {total: {label: 'Stub', amount: {currency: 'USD', value: '0.01'}}}))
 .canMakePayment()
 .then(function(result) {
   shouldCallPaymentRequest = result;
@@ -292,8 +292,7 @@ Some use cases (e.g., paying for fuel at a service station) involve pre-authoriz
 The merchant code would look like this:
 
 ```js
-let paymentRequest = new PaymentRequest(
-    [{supportedMethods: 'https://example.com/preauth'}], ...);
+let paymentRequest = new PaymentRequest([{supportedMethods: 'https://example.com/preauth'}], details);
 // Send `CanMakePayment` event to the payment handler.
 paymentRequest.canMakePayment()
     .then(function(res) {
@@ -314,7 +313,7 @@ The payment handler would include the following code:
 ```js
 self.addEventListener('canmakepayment', function(evt) {
   // Pre-authorize here.
-  let preAuthSuccess = ...;
+  let preAuthSuccess = true;
   evt.respondWith(preAuthSuccess);
 });
 ```

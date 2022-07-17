@@ -55,7 +55,7 @@ function onEnterPip() {
 
 video.addEventListener('enterpictureinpicture', onEnterPip, false);
 
-button.onclick = function() => {
+button.onclick = () => {
   video.requestPictureInPicture();
 }
 ```
@@ -72,7 +72,7 @@ function onEnterPip() {
 
 video.onenterpictureinpicture = onEnterPip;
 
-button.onclick = function() => {
+button.onclick = () => {
   video.requestPictureInPicture();
 }
 ```
