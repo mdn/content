@@ -32,7 +32,7 @@ function print_perf_entry(pe) {
 }
 function print_PerformanceEntries() {
   if (performance.mark === undefined) {
-    log("... performance.mark Not supported");
+    log("performance.mark Not supported");
     return;
   }
 
@@ -95,9 +95,9 @@ function print_PerformanceEntry(ev) {
       var supported = properties[j] in p[i];
       if (supported) {
         var pe = p[i];
-        log("... " + properties[j] + " = " + pe[properties[j]]);
+        log("… " + properties[j] + " = " + pe[properties[j]]);
       } else {
-        log("... " + properties[j] + " = Not supported");
+        log("… " + properties[j] + " = Not supported");
       }
     }
   }

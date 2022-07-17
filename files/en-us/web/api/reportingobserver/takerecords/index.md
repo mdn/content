@@ -45,7 +45,7 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 observer.observe()
 
-// ...
+// …
 
 let records = observer.takeRecords();
 console.log(records);

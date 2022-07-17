@@ -48,10 +48,10 @@ function setResourceTimingBufferSize(maxSize) {
   }
   const supported = typeof performance.setResourceTimingBufferSize == "function";
   if (supported) {
-    log("... Performance.setResourceTimingBufferSize() = Yes");
+    log("… Performance.setResourceTimingBufferSize() = Yes");
     performance.setResourceTimingBufferSize(maxSize);
   } else {
-    log("... Performance.setResourceTimingBufferSize() = NOT supported");
+    log("… Performance.setResourceTimingBufferSize() = NOT supported");
   }
 }
 ```

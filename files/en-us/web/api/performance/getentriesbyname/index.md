@@ -47,10 +47,10 @@ A list of {{domxref("PerformanceEntry")}} objects that have the specified
 
 ```js
 function use_PerformanceEntry_methods() {
-  log("PerformanceEntry tests ...");
+  log("PerformanceEntry tests…");
 
   if (performance.mark === undefined) {
-    log("... performance.mark Not supported");
+    log("performance.mark Not supported");
     return;
   }
 
