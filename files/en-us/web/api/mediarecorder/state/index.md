@@ -32,7 +32,7 @@ A string containing one of the following values:
 ## Examples
 
 ```js
-...
+// …
 
   record.onclick = function() {
     mediaRecorder.start();
@@ -41,7 +41,7 @@ A string containing one of the following values:
     console.log("recorder started");
   }
 
-...
+// …
 ```
 
 ## Specifications

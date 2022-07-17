@@ -53,14 +53,14 @@ is "inactive" — it makes no sense to stop media capture if it is already stopp
 ## Examples
 
 ```js
-...
+// …
 
   stop.onclick = function() {
     mediaRecorder.stop();
     console.log("recorder stopped, data available");
   }
 
-...
+// …
 ```
 
 ## Specifications

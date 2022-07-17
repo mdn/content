@@ -59,7 +59,7 @@ recording is not occurring.
 ## Examples
 
 ```js
-...
+// …
 
   captureMedia.onclick = function() {
     mediaRecorder.requestData();
@@ -68,7 +68,7 @@ recording is not occurring.
     // in new Blob
   }
 
-...
+// …
 ```
 
 ## Specifications

@@ -63,7 +63,7 @@ A generic {{domxref("Event")}}.
 ## Example
 
 ```js
-...
+// …
   const chunks = [];
 
   mediaRecorder.onstop = function(e) {
@@ -81,7 +81,7 @@ A generic {{domxref("Event")}}.
     chunks.push(e.data);
   }
 
-...
+// …
 ```
 
 ## Specifications
