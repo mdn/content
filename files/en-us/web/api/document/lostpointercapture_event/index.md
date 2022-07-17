@@ -15,28 +15,21 @@ browser-compat: api.Document.lostpointercapture_event
 
 The **`lostpointercapture`** event is fired when a [captured pointer](/en-US/docs/Web/API/Pointer_events#pointer_capture) is released.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("PointerEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onlostpointercapture", "onlostpointercapture")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('lostpointercapture', (event) => {});
+
+onlostpointercapture = (event) => { };
+```
+
+## Event type
+
+An {{domxref("PointerEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("PointerEvent")}}
 
 ## Examples
 
@@ -80,7 +73,6 @@ para.addEventListener('pointerdown', (event) => {
 
 - Related events
 
-  - {{domxref("Document/lostpointercapture_event", "lostpointercapture")}}
   - {{domxref("Document/pointerover_event", "pointerover")}}
   - {{domxref("Document/pointerenter_event", "pointerenter")}}
   - {{domxref("Document/pointerdown_event", "pointerdown")}}
@@ -90,5 +82,4 @@ para.addEventListener('pointerdown', (event) => {
   - {{domxref("Document/pointerout_event", "pointerout")}}
   - {{domxref("Document/pointerleave_event", "pointerleave")}}
 
-- {{domxref("GlobalEventHandlers.onlostpointercapture")}} event handler property
-- This event on `HTMLElement` targets: {{domxref("HTMLElement/lostpointercapture_event", "lostpointercapture")}} event
+- This event on `Element` targets: {{domxref("Element/lostpointercapture_event", "lostpointercapture")}} event

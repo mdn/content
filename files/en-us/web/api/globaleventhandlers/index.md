@@ -33,8 +33,6 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Element/contextmenu_event", "contextmenu")}} event is raised.
 - {{domxref("GlobalEventHandlers.onformdata")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) for processing {{domxref("HTMLFormElement/formdata_event", "formdata")}} events, fired after the entry list representing the form's data is constructed.
-- {{domxref("GlobalEventHandlers.ongotpointercapture")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/gotpointercapture_event", "gotpointercapture")}} event type is raised.
 - {{domxref("GlobalEventHandlers.oninvalid")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLInputElement/invalid_event", "invalid")}} event is raised.
 - {{domxref("GlobalEventHandlers.onload")}}
@@ -47,8 +45,6 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/loadend_event", "loadend")}} event is raised (when progress has stopped on the loading of a resource.)
 - {{domxref("GlobalEventHandlers.onloadstart")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/loadstart_event", "loadstart")}} event is raised (when progress has begun on the loading of a resource.)
-- {{domxref("GlobalEventHandlers.onlostpointercapture")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLElement/lostpointercapture_event", "lostpointercapture")}} event type is raised.
 - {{domxref("GlobalEventHandlers.onpause")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/pause_event", "pause")}} event is raised.
 - {{domxref("GlobalEventHandlers.onplay")}}
