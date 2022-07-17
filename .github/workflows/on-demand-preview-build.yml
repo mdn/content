@@ -35,35 +35,8 @@ jobs:
       - name: Install all yarn packages
         run: |
           yarn --frozen-lockfile
-          
-      - name: Config git core.quotePath
-        run: |
-          # If you don't do this, the get-diff-action won't be able to
-          # notice files that contain non-ascii characters.
-          # I.e.
-          #
-          #    ▶ git status
-          #    Changes not staged for commit:
-          #    ...
-          #   modified:   "files/en-us/glossary/b\303\251zier_curve/index.html"
-          #
-          # But after you set `core.quotePath` you get:
-          #
-          #    ▶ git status
-          #    Changes not staged for commit:
-          #    ...
-          #   modified:   "files/en-us/glossary/bézier_curve/index.html"
-          #
-          # Now, this gets used by the `git diff ...` inside get-diff-action.
-          git config --global core.quotePath false
-      - uses: technote-space/get-diff-action@v6.1.0
-        id: git_diff_content
-        with:
-          PATTERNS: files/**/*.+(html|md)
-          SET_ENV_NAME: GIT_DIFF_CONTENT
 
-      - name: Build changed content
-        if: ${{ env.GIT_DIFF_CONTENT }}
+      - name: Build content
         env:
           CONTENT_ROOT: ${{ github.workspace }}/files
 
@@ -103,12 +76,11 @@ jobs:
           # you don't need that script as a writer. It's only used in CI
           # and it can't use the default CONTENT_ROOT that gets set in
           # package.json.
-          yarn build ${{ env.GIT_DIFF_CONTENT }}
+          yarn build
           echo "Disk usage size of build/"
           du -sh $BUILD_OUT_ROOT
           
       - name: Merge static assets with built documents
-        if: ${{ env.GIT_DIFF_CONTENT }}
         run: |
           rsync -a node_modules/@mdn/yari/client/build/ build/
           # Now that build/ directory contains everything you need to deploy
