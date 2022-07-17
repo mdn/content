@@ -60,7 +60,6 @@ const observer = new PerformanceObserver(function(list) {
     for (let i = 0; i < perfEntries.length; i++) {
         // Process long task notifications:
         // report back for analytics and monitoring
-        // …
     }
 });
 // register observer for long task notifications

@@ -54,10 +54,8 @@ effect.
 ## Examples
 
 ```js
-// …
-
   pause.onclick = function() {
-    if(MediaRecorder.state === "recording") {
+    if (mediaRecorder.state === "recording") {
       mediaRecorder.pause();
       // recording paused
     } else if(MediaRecorder.state === "paused") {
@@ -65,8 +63,6 @@ effect.
       // resume recording
     }
   }
-
-// …
 ```
 
 ## Specifications

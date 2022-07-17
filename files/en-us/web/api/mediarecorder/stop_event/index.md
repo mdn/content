@@ -40,8 +40,6 @@ A generic {{domxref("Event")}}.
 ## Example
 
 ```js
-// …
-
   mediaRecorder.onstop = function(e) {
     console.log("data available after MediaRecorder.stop() called.");
 
@@ -56,8 +54,6 @@ A generic {{domxref("Event")}}.
   mediaRecorder.ondataavailable = function(e) {
     chunks.push(e.data);
   }
-
-// …
 ```
 
 ## Specifications

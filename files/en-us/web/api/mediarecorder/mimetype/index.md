@@ -47,8 +47,6 @@ about media types and how they're used in web content and by web browsers.
 ## Examples
 
 ```js
-// …
-
 if (navigator.mediaDevices) {
   console.log('getUserMedia supported.');
 

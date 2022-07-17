@@ -38,8 +38,6 @@ A generic {{domxref("Event")}}.
 ## Example
 
 ```js
-// …
-
   record.onclick = function() {
     mediaRecorder.start();
     console.log("recorder started");
@@ -49,8 +47,6 @@ A generic {{domxref("Event")}}.
     // do something in response to
     // recording being started
   }
-
-// …
 ```
 
 ## Properties

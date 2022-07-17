@@ -59,16 +59,12 @@ recording is not occurring.
 ## Examples
 
 ```js
-// …
-
   captureMedia.onclick = function() {
     mediaRecorder.requestData();
     // makes snapshot available of data so far
     // ondataavailable fires, then capturing continues
     // in new Blob
   }
-
-// …
 ```
 
 ## Specifications

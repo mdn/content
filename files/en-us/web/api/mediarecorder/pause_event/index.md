@@ -58,8 +58,6 @@ A generic {{domxref("Event")}}.
     // do something in response to
     // recording being resumed
   }
-
-// …
 ```
 
 ## Properties

@@ -32,16 +32,12 @@ A string containing one of the following values:
 ## Examples
 
 ```js
-// …
-
   record.onclick = function() {
     mediaRecorder.start();
     console.log(mediaRecorder.state);
     // Will return "recording"
     console.log("recorder started");
   }
-
-// …
 ```
 
 ## Specifications

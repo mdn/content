@@ -28,13 +28,9 @@ A function reference.
 ## Examples
 
 ```js
-// …
-
   mediaRecorder.onwarning = function(e) {
     console.log("A warning has been raised: " + e.message);
   }
-
-// …
 ```
 
 ## Browser compatibility

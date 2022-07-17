@@ -37,10 +37,8 @@ A generic {{domxref("Event")}}.
 ## Example
 
 ```js
-// …
-
   pause.onclick = function() {
-    if(MediaRecorder.state === "recording") {
+    if (mediaRecorder.state === "recording") {
       mediaRecorder.pause();
       // recording paused
     } else if(MediaRecorder.state === "paused") {
@@ -58,8 +56,6 @@ A generic {{domxref("Event")}}.
     // do something in response to
     // recording being resumed
   }
-
-// …
 ```
 
 ## Properties

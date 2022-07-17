@@ -100,14 +100,10 @@ handler to respond to these errors.
 ## Examples
 
 ```js
-// …
-
   record.onclick = function() {
     mediaRecorder.start();
     console.log("recorder started");
   }
-
-// …
 ```
 
 ## Specifications
