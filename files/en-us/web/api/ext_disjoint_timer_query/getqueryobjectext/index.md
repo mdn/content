@@ -46,7 +46,7 @@ const ext = gl.getExtension('EXT_disjoint_timer_query');
 const query = ext.createQueryEXT();
 ext.beginQueryEXT(ext.TIME_ELAPSED_EXT, query);
 
-// ... drawing ...
+// drawing…
 
 ext.endQueryEXT(ext.TIME_ELAPSED_EXT);
 

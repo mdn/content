@@ -42,7 +42,7 @@ var startQuery = ext.createQueryEXT();
 var endQuery = ext.createQueryEXT();
 ext.queryCounterEXT(startQuery, ext.TIMESTAMP_EXT);
 
-// ...
+// …
 
 ext.queryCounterEXT(endQuery, ext.TIMESTAMP_EXT);
 ```
