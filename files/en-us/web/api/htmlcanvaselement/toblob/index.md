@@ -78,7 +78,7 @@ Note that here we're creating a PNG image; if you add a second parameter to the 
 For example, to get the image in JPEG format:
 
 ```js
-canvas.toBlob(function(blob){ /*...*/ }, 'image/jpeg', 0.95); // JPEG at 95% quality
+canvas.toBlob(function(blob){ /* … */ }, 'image/jpeg', 0.95); // JPEG at 95% quality
 ```
 
 ### Convert a canvas to an ico (Mozilla only)

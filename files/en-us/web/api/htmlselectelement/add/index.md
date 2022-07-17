@@ -73,10 +73,8 @@ sel.add(opt2, null);
 The before parameter is optional. So the following is accepted.
 
 ```js
-...
 sel.add(opt1);
 sel.add(opt2);
-...
 ```
 
 ### Append to an Existing Collection
@@ -111,9 +109,7 @@ sel.add(opt, null);
 The before parameter is optional. So the following is accepted.
 
 ```js
-...
 sel.add(opt);
-...
 ```
 
 ### Inserting to an Existing Collection

@@ -27,19 +27,22 @@ The MediaStream passed into the `MediaRecorder()` constructor when the
 
 ```js
 if (navigator.getUserMedia) {
-   console.log('getUserMedia supported.');
-   navigator.getUserMedia (
-      // constraints - only audio needed for this app
-      {
-         audio: true
-      },
+  console.log('getUserMedia supported.');
+  navigator.getUserMedia(
+    // constraints - only audio needed for this app
+    {
+      audio: true,
+    },
 
-      // Success callback
-      function(stream) {
-           const mediaRecorder = new MediaRecorder(stream);
+    // Success callback
+    function (stream) {
+      const mediaRecorder = new MediaRecorder(stream);
 
-           const myStream = mediaRecorder.stream;
-           console.log(myStream);
+      const myStream = mediaRecorder.stream;
+      console.log(myStream);
+    }
+  );
+}
 ```
 
 ## Specifications

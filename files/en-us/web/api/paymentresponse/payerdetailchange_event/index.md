@@ -124,7 +124,7 @@ You could also set up the event handler using the `addEventListener()` method:
 
 ```js
 response.addEventListener("payerdetailchange", async ev => {
-  ...
+  // …
 }
 ```
 

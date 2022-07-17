@@ -69,6 +69,7 @@ if (navigator.mediaDevices) {
     .catch(function(error) {
       console.log(error.message);
     });
+}
 ```
 
 Changing line 14 to the following causes `MediaRecorder` to try to use AVC
