@@ -482,7 +482,8 @@ that not all browsers have supported historically. See [Safely detecting option 
 ### Event listener with multiple options
 
 You can set more than one of the options in the `options` parameter. In the following example we are setting two options:
-- `passive`, to assert that the handler will not call {{domxref("Event.preventDefault", "preventDefault()")}} 
+
+- `passive`, to assert that the handler will not call {{domxref("Event.preventDefault", "preventDefault()")}}
 - `once`, to ensure that the event handler will only be called once.
 
 #### HTML
@@ -499,8 +500,8 @@ const buttonToBeClicked = document.getElementById("example-button");
 
 const resetButton = document.getElementById("reset-button");
 
-// the text that the button is initalized with
-const intialText = buttonToBeClicked.textContent;
+// the text that the button is initialized with
+const initialText = buttonToBeClicked.textContent;
 
 // the text that the button contains after being clicked
 const clickedText = "You have clicked this button.";
@@ -527,7 +528,7 @@ function addListener() {
 resetButton.addEventListener(
   "click",
   () => {
-    buttonToBeClicked.textContent = intialText;
+    buttonToBeClicked.textContent = initialText;
     addListener();
   }
 );
@@ -567,7 +568,7 @@ my_element.addEventListener('click', (e) => {
 })
 ```
 
-If an event handler (for example, {{domxref("GlobalEventHandlers.onclick",
+If an event handler (for example, {{domxref("Element.click_event",
   "onclick")}}) is specified on an element in the HTML source, the JavaScript code in the
 attribute value is effectively wrapped in a handler function that binds the value of
 `this` in a manner consistent with the `addEventListener()`; an
@@ -575,7 +576,7 @@ occurrence of `this` within the code represents a reference to the element.
 
 ```html
 <table id="my_table" onclick="console.log(this.id);"><!-- `this` refers to the table; logs 'my_table' -->
-  ...
+  …
 </table>
 ```
 
@@ -588,7 +589,7 @@ shown in the following example:
   function logID() { console.log(this.id); }
 </script>
 <table id="my_table" onclick="logID();"><!-- when called, `this` will refer to the global object -->
-  ...
+  …
 </table>
 ```
 
@@ -636,10 +637,10 @@ const Something = function(element) {
     console.log(this.name); // 'Something Good', as this is bound to newly created object
     switch(event.type) {
       case 'click':
-        // some code here...
+        // some code here…
         break;
       case 'dblclick':
-        // some code here...
+        // some code here…
         break;
     }
   };
@@ -675,10 +676,10 @@ class SomeClass {
     console.log(this.name);
     switch(e.keyCode) {
       case 5:
-        // some code here...
+        // some code here…
         break;
       case 6:
-        // some code here...
+        // some code here…
         break;
     }
   }
@@ -878,7 +879,7 @@ try {
       {},
       "passive",
       {
-        get: function() { passiveIfSupported = { passive: true }; }
+        get() { passiveIfSupported = { passive: true }; }
       }
     )
   );

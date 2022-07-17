@@ -139,15 +139,10 @@ var shaderMaterial = new THREE.ShaderMaterial( {
 
 This shader material takes the code from the scripts and applies it to the object the material is assigned to.
 
-Then, in the line that defines the cube we need to replace the `basicMaterial`:
+Then, in the line that defines the cube we need to replace the `basicMaterial` with the newly created `shaderMaterial`:
 
 ```js
-var cube = new THREE.Mesh(boxGeometry, basicMaterial);
-```
-
-...with the newly created `shaderMaterial`:
-
-```js
+// var cube = new THREE.Mesh(boxGeometry, basicMaterial);
 var cube = new THREE.Mesh(boxGeometry, shaderMaterial);
 ```
 

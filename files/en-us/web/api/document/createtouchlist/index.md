@@ -22,7 +22,7 @@ The **`Document.createTouchList()`** method creates and returns a new {{DOMxRef(
 ```js
 createTouchList(touch1)
 createTouchList(touch1, touch2)
-createTouchList(touch1, touch2, /* ... ,*/ touchN)
+createTouchList(touch1, touch2, /* … ,*/ touchN)
 ```
 
 ### Parameters

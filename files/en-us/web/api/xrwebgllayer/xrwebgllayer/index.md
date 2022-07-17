@@ -98,7 +98,7 @@ xrSession.updateRenderState({
      framebufferScaleFactor: 0.5,
      ignoreDepthValues: true,
      stencil: false
-  });
+  })
 });
 ```
 

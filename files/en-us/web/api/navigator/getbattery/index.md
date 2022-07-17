@@ -57,7 +57,7 @@ This method doesn't throw true exceptions; instead, it rejects the returned prom
 ## Examples
 
 This example fetches the current charging state of the battery and establishes a
-handler for the {{Event("chargingchange")}} event, so that the charging state is
+handler for the {{domxref("BatteryManager/chargingchange_event", "chargingchange")}} event, so that the charging state is
 recorded whenever it changes.
 
 ```js

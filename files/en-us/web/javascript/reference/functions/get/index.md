@@ -102,7 +102,7 @@ To append a getter to an existing object later at any time, use
 ```js
 const o = {a: 0};
 
-Object.defineProperty(o, 'b', { get: function() { return this.a + 1; } });
+Object.defineProperty(o, 'b', { get() { return this.a + 1; } });
 
 console.log(o.b) // Runs the getter, which yields a + 1 (which is 1)
 ```

@@ -23,14 +23,15 @@ Object.getPrototypeOf(async function(){}).constructor
 ## Syntax
 
 ```js
+new AsyncFunction(functionBody)
 new AsyncFunction(arg0, functionBody)
 new AsyncFunction(arg0, arg1, functionBody)
-new AsyncFunction(arg0, arg1, ...argN, functionBody)
+new AsyncFunction(arg0, arg1, /* … ,*/ argN, functionBody)
 ```
 
 ### Parameters
 
-- `arg1, arg2, ... argN`
+- `argN` {{optional_inline}}
 
   - : Names to be used by the function as formal argument names. Each must be a string that corresponds to a valid JavaScript parameter (any of plain [identifier](/en-US/docs/Glossary/Identifier), [rest parameter](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameter, optionally with a default), or a list of such strings separated with commas.
 
@@ -47,7 +48,7 @@ less efficient than declaring an async function with an
 {{jsxref("Statements/async_function", "async function expression")}} and calling it
 within your code, because such functions are parsed with the rest of the code.
 
-All arguments passed to the function are treated as the names of the identifiers of the
+All arguments passed to the function, except the last, are treated as the names of the identifiers of the
 parameters in the function to be created, in the order in which they are passed.
 
 > **Note:** {{jsxref("Statements/async_function", "async functions", "",

@@ -31,14 +31,14 @@ The following simple code snippet, registers a single handler for the {{domxref(
 ```
 
 ```js
-var src = document.getElementById("src");
+const src = document.getElementById("src");
 
 src.addEventListener('touchstart', rotate);
 src.addEventListener('touchmove', rotate);
 src.addEventListener('touchend', rotate);
 
-function rotate (e) {
-  var touch = e.changedTouches.item(0);
+function rotate(e) {
+  const touch = e.changedTouches.item(0);
 
   // Turn off default event handling
   e.preventDefault();

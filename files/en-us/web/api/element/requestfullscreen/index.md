@@ -26,7 +26,7 @@ mode.
 
 It's not guaranteed that the element will be put into full screen mode. If permission
 to enter full screen mode is granted, the returned {{JSxRef("Promise")}} will resolve
-and the element will receive a {{Event("fullscreenchange")}} event to let it know that
+and the element will receive a {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} event to let it know that
 it's now in full screen mode. If permission is denied, the promise is rejected and the
 element receives a {{Event('fullscreenerror')}} event instead. If the element has been
 detached from the original document, then the document receives these events instead.
@@ -106,7 +106,7 @@ successful by using the {{jsxref("Promise")}} returned by
 `requestFullscreen()`, as seen in the [examples](#examples) below.
 
 To learn when other code has toggled fullscreen mode on and off, you should establish
-listeners for the {{event("fullscreenchange")}} event on the {{domxref("Document")}}.
+listeners for the {{domxref("Document/fullscreenchange_event", "fullscreenchange")}} event on the {{domxref("Document")}}.
 It's also important to listen for `fullscreenchange` to be aware when, for
 example, the user manually toggles fullscreen mode, or when the user switches
 applications, causing your application to temporarily exit fullscreen mode.

@@ -28,11 +28,11 @@ Find the exported `author_detail()` controller method and replace it with the fo
 exports.author_detail = function(req, res, next) {
 
     async.parallel({
-        author: function(callback) {
+        author(callback) {
             Author.findById(req.params.id)
               .exec(callback)
         },
-        authors_books: function(callback) {
+        authors_books(callback) {
           Book.find({ 'author': req.params.id },'title summary')
           .exec(callback)
         },

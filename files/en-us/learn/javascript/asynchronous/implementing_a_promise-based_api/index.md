@@ -20,7 +20,7 @@ In the last article we discussed how to use APIs that return promises. In this a
     </tr>
     <tr>
       <th scope="row">Objective:</th>
-      <td>To understand how implement promise-based APIs.</td>
+      <td>To understand how to implement promise-based APIs.</td>
     </tr>
   </tbody>
 </table>

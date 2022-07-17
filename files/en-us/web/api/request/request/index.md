@@ -155,7 +155,7 @@ const myOptions = {
 const myRequest = new Request('flowers.jpg', myOptions);
 
 fetch(myRequest).then((response) => {
-  // …
+  // ...
 });
 ```
 
@@ -164,7 +164,7 @@ the same effect, e.g.:
 
 ```js
 fetch(myRequest, myOptions).then((response) => {
-  // …
+  // ...
 });
 ```
 

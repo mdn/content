@@ -91,7 +91,7 @@ There are two ways to create a `RegExp` object: a _literal notation_
 and a _constructor_.
 
 - The _literal notation_ takes a pattern between two slashes, followed by optional flags, after the second slash.
-- The _constructor function_ takes either a string or a `RegExp` object as its first parameter and a string of optional flags as its second parameter. 
+- The _constructor function_ takes either a string or a `RegExp` object as its first parameter and a string of optional flags as its second parameter.
 
 The following three expressions create the same regular expression:
 
@@ -101,9 +101,9 @@ new RegExp(/ab+c/, 'i') // literal notation
 new RegExp('ab+c', 'i') // constructor
 ```
 
-Before regular expressions can be used, they have to be compiled. This process allows them to perform matches more efficiently. There are two ways to compile and get a `RegExp` object. 
+Before regular expressions can be used, they have to be compiled. This process allows them to perform matches more efficiently. There are two ways to compile and get a `RegExp` object.
 
-The literal notation results in compilation of the regular expression when the expression is evaluated. On the other hand, the constructor of the `RegExp` object, `new RegExp('ab+c')`, results in runtime compilation of the regular expression. 
+The literal notation results in compilation of the regular expression when the expression is evaluated. On the other hand, the constructor of the `RegExp` object, `new RegExp('ab+c')`, results in runtime compilation of the regular expression.
 
 Use a string as the first argument to the `RegExp()` constructor when you want to [build the regular expression from dynamic input](#Building_a_regular_expression_from_dynamic_inputs).
 

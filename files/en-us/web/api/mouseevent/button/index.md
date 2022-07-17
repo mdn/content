@@ -45,7 +45,7 @@ Others may have many buttons mapped to different functions and button values.
 ### HTML
 
 ```html
-<button id="button" oncontextmenu="event.preventDefault();">Click here with your mouse...</button>
+<button id="button" oncontextmenu="event.preventDefault();">Click here with your mouse…</button>
 <p id="log"></p>
 ```
 

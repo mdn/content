@@ -17,9 +17,10 @@ is not an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_proto
 
 ## Message
 
-```js
-TypeError: 'x' is not iterable (Firefox, Chrome)
-TypeError: 'x' is not a function or its return value is not iterable (Chrome)
+```
+TypeError: object is not iterable (cannot read property Symbol(Symbol.iterator)) (V8-based)
+TypeError: x is not iterable (Firefox)
+TypeError: undefined is not a function (near '...[x]...') (Safari)
 ```
 
 ## Error type
@@ -168,4 +169,4 @@ Array.from(myEmptyIterable);  // []
 - {{jsxref("Object.entries")}}
 - {{jsxref("Map")}}
 - [generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generators)
-- [for…of](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
+- [for...of](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)

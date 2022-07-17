@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Object.assign
 
 The **`Object.assign()`** method
 copies all {{jsxref("Object/propertyIsEnumerable", "enumerable", "", 1)}}
-{{jsxref("Object/hasOwnProperty", "own properties", "", 1)}} from one or more
+{{jsxref("Object/hasOwn", "own properties", "", 1)}} from one or more
 _source objects_ to a _target object_. It returns the modified target
 object.
 

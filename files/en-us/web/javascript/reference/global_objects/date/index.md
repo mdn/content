@@ -165,6 +165,22 @@ const birthday = new Date(1995, 11, 17, 3, 24, 0)
 const birthday = new Date(628021800000)            // passing epoch timestamp
 ```
 
+### Formats of toString method return values
+
+```js
+const date = new Date("2020-05-12T23:50:21.817Z");
+date.toString()               // Tue May 12 2020 18:50:21 GMT-0500 (Central Daylight Time)
+date.toDateString()           // Tue May 12 2020
+date.toTimeString()           // 18:50:21 GMT-0500 (Central Daylight Time)
+date.toISOString()            // 2020-05-12T23:50:21.817Z
+date.toUTCString()            // Tue, 12 May 2020 23:50:21 GMT
+date.toGMTString()            // Tue, 12 May 2020 23:50:21 GMT
+date.toJSON()                 // 2020-05-12T23:50:21.817Z
+date.toLocaleString()         // 5/12/2020, 6:50:21 PM
+date.toLocaleDateString()     // 5/12/2020
+date.toLocaleTimeString()     // 6:50:21 PM
+```
+
 ### To get Date, Month and Year or Time
 
 ```js

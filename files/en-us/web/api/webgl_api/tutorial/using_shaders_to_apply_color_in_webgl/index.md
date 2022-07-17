@@ -21,7 +21,7 @@ Let's say we want to render a gradient in which each corner of the square is a d
 
 ```js
 function initBuffers(){
-  ...
+  // ...
   const colors = [
     1.0,  1.0,  1.0,  1.0,    // white
     1.0,  0.0,  0.0,  1.0,    // red
@@ -100,7 +100,8 @@ Next, it's necessary to add code to look up the attribute location for the color
       vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),
       vertexColor: gl.getAttribLocation(shaderProgram, 'aVertexColor'),
     },
-    ...
+    // ...
+  }
 ```
 
 Then, `drawScene()` can have the following added to it so it actually uses these colors when drawing the square:

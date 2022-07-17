@@ -125,11 +125,11 @@ pc.script.create('boxAnimation', function (app) {
 
     BoxAnimation.prototype = {
         // Called once after all resources are loaded and before the first update
-        initialize: function () {
+        initialize() {
         },
 
         // Called every frame, dt is time in seconds since last update
-        update: function (dt) {
+        update(dt) {
         }
     };
 

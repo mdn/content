@@ -49,7 +49,7 @@ The snippet below includes a function which changes the contents of a block with
 ```js
 const dc = peerConnection.createDataChannel("File Transfer");
 
-/* ... */
+// …
 
 function showBufferedAmount(channel) {
   const el = document.getElementById("bufferSize");

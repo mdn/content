@@ -42,7 +42,7 @@ time later, sets the content of a UI element to display the channel's name.
 const pc = new RTCPeerConnection();
 const dc = pc.createDataChannel("my channel");
 
-/* ... */
+// …
 
 document.getElementById("channel-name").innerHTML =
           "<span class='channelName'>" + dc.label + "</span>";

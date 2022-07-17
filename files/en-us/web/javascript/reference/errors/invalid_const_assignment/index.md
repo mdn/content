@@ -15,11 +15,10 @@ declarations can't be re-assigned or redeclared.
 
 ## Message
 
-```js
-TypeError: invalid assignment to const "x" (Firefox)
-TypeError: Assignment to constant variable. (Chrome)
-TypeError: Assignment to const (Edge)
-TypeError: Redeclaration of const 'x' (IE)
+```
+TypeError: Assignment to constant variable. (V8-based)
+TypeError: invalid assignment to const 'x' (Firefox)
+TypeError: Attempted to assign to readonly property. (Safari)
 ```
 
 ## Error type
@@ -63,7 +62,7 @@ const COLUMNS = 80;
 const WIDE_COLUMNS = 120;
 ```
 
-#### `const`, `let` or `var`?
+#### const, let or var?
 
 Do not use const if you weren't meaning to declare a constant. Maybe you meant to
 declare a block-scoped variable with
@@ -76,7 +75,7 @@ let columns = 80;
 
 // ...
 
-let columns = 120;
+columns = 120;
 ```
 
 #### Scoping
@@ -92,7 +91,7 @@ function setupBigScreenEnvironment() {
 }
 ```
 
-### `const` and immutability
+### const and immutability
 
 The `const` declaration creates a read-only reference to a value. It does
 **not** mean the value it holds is immutable, just that the variable

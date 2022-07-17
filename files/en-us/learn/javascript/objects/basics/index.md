@@ -14,9 +14,7 @@ In this article, we'll look at fundamental JavaScript object syntax, and revisit
         Basic computer literacy, a basic understanding of HTML and CSS,
         familiarity with JavaScript basics (see
         <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
-          >Building blocks</a
-        >).
+        <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>).
       </td>
     </tr>
     <tr>
@@ -56,10 +54,10 @@ Congratulations, you've just created your first object. Job done! But this is an
 const person = {
   name: ['Bob', 'Smith'],
   age: 32,
-  bio: function() {
+  bio() {
     console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
   },
-  introduceSelf: function() {
+  introduceSelf() {
     console.log(`Hi! I'm ${this.name[0]}.`);
   }
 };
@@ -161,21 +159,35 @@ Otherwise, your methods will no longer work.
 
 ## Bracket notation
 
-There is another way to access object properties — using bracket notation. Instead of using these:
+Bracket notation provides an alternative way to access object properties.
+Instead of using [dot notation](#dot_notation) like this:
 
 ```js
 person.age
 person.name.first
 ```
 
-You can use
+You can instead use brackets:
 
 ```js
 person['age']
 person['name']['first']
 ```
 
-This looks very similar to how you access the items in an array, and it is basically the same thing — instead of using an index number to select an item, you are using the name associated with each member's value. It is no wonder that objects are sometimes called **associative arrays** — they map strings to values in the same way that arrays map numbers to values.
+This looks very similar to how you access the items in an array, and it is basically the same thing — instead of using an index number to select an item, you are using the name associated with each member's value.
+It is no wonder that objects are sometimes called **associative arrays** — they map strings to values in the same way that arrays map numbers to values.
+
+Dot notation is generally preferred over bracket notation because it is more succint and easier to read.
+However there are some cases where you have to use brackets.
+For example, if an object property name is defined at runtime then you can't use dot notation to access the value, but you can pass the name as a variable inside brackets as shown with `input` below:
+
+```js
+const person = {
+  name: ['Bob', 'Smith'],
+  age: 32
+}
+const input = prompt('Get name or age?')
+console.log(person[input])
 
 ## Setting object members
 

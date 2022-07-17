@@ -22,7 +22,7 @@ Microsoft browsers (Internet Explorer, and in a few cases, Microsoft Edge) suppo
 - {{DOMxRef("MSManipulationEvent")}}
 - {{Event("MSManipulationStateChanged")}}
 - {{DOMxRef("Touch.MsManipulationViewsEnabled")}}
-- {{Event("MSPointerHover")}} {{Deprecated_Inline}}
+- `MSPointerHover` {{Deprecated_Inline}}
 
 ## Media APIs
 

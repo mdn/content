@@ -66,9 +66,9 @@ The following example decodes the first frame repeatedly until its complete:
 ```js
 let complete = false;
 while (!complete) {
-  // The promise returned by `decode()` will only resolve when a new level of
-  // detail is available or the frame is complete. I.e., calling `decode()` in a
-  // loop like this is won't needlessly spin.
+  // The promise returned by `decode()` will only resolve when a new
+  // level of detail is available or the frame is complete. I.e.,
+  // calling `decode()` in a loop like this is won't needlessly spin.
   let result = await imageDecode.decode({completeFramesOnly: false});
 
   // Do something with `result.image`.

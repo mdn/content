@@ -308,7 +308,7 @@ The [Searchfox](https://searchfox.org/) website provides another method you can 
 
 ## Opera
 
-_If you have insights into locating release versions for changes to Opera, please consider helping us write this section..._
+_If you have insights into locating release versions for changes to Opera, please consider helping us write this section…_
 
 ### Presto
 

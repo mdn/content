@@ -243,6 +243,8 @@ Have a look at what effect this has and remove it again when you've finished.
 - The value we've used above, `space-around`, is useful — it distributes all the items evenly along the main axis with a bit of space left at either end.
 - There is another value, `space-between`, which is very similar to `space-around` except that it doesn't leave any space at either end.
 
+The [`justify-items`](/en-US/docs/Web/CSS/justify-items) property is ignored in flexbox layouts.
+
 We'd like to encourage you to play with these values to see how they work before you continue.
 
 ## Ordering flex items

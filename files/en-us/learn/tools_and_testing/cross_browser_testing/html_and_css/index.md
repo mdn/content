@@ -79,7 +79,7 @@ However, it is not very convenient to have to copy and paste your code over to a
 Many code editors have linter plugins. GitHub's [Atom](https://atom.io/) code editor for example has a rich plugin ecosystem available, with many linting options. To show you an example of how such plugins generally work:
 
 1. Install Atom (if you haven't got an up-to-date version already installed) — download it from the Atom page linked above.
-2. Go to Atom's _Preferences..._ dialog (e.g. by Choosing _Atom > Preferences..._ on Mac, or _File > Preferences..._ on Windows/Linux) and choose the _Install_ option in the left-hand menu.
+2. Go to Atom's _Preferences…_ dialog (e.g. by Choosing _Atom > Preferences…_ on Mac, or _File > Preferences…_ on Windows/Linux) and choose the _Install_ option in the left-hand menu.
 3. In the _Search packages_ text field, type "lint" and press Enter/Return to search for linting-related packages.
 4. You should see a package called **lint** at the top of the list. Install this first (using the _Install_ button), as other linters rely on it to work. After that, install the **linter-csslint** plugin for linting CSS, and the **linter-tidy** plugin for linting HTML.
 5. After the packages have finished installing, try loading up an HTML file and a CSS file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.
@@ -179,7 +179,7 @@ The button has a number of declarations that style, but the two we are most inte
 
 ```css
 button {
-  ...
+  /* … */
 
   background-color: #ff0000;
   background-color: rgba(255,0,0,1);
@@ -232,7 +232,7 @@ It isn't that simple, however — you also need to create a copy of each element
 
 ```js
 const asideElem = document.createElement('aside');
- ...
+ /* … */
 ```
 
 This sounds like a pain to deal with, but fortunately there is a {{glossary("polyfill")}} available that does the necessary fixes for you, and more besides — see [HTML5Shiv](https://github.com/aFarkas/html5shiv) for all the details (see [manual installation](https://github.com/aFarkas/html5shiv#installation) for the simplest usage).

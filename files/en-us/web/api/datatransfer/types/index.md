@@ -65,13 +65,13 @@ function drop_handler(ev) {
  // Print each format type
  if (ev.dataTransfer.types != null) {
    for (let i=0; i < ev.dataTransfer.types.length; i++) {
-     console.log("... types[" + i + "] = " + ev.dataTransfer.types[i]);
+     console.log("… types[" + i + "] = " + ev.dataTransfer.types[i]);
    }
  }
  // Print each item's "kind" and "type"
  if (ev.dataTransfer.items != null) {
    for (let i=0; i < ev.dataTransfer.items.length; i++) {
-     console.log("... items[" + i + "].kind = " + ev.dataTransfer.items[i].kind + " ; type = " + ev.dataTransfer.items[i].type);
+     console.log("… items[" + i + "].kind = " + ev.dataTransfer.items[i].kind + " ; type = " + ev.dataTransfer.items[i].type);
    }
  }
 }

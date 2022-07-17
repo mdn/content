@@ -668,7 +668,7 @@ The properties and elements returned from this match are as follows:
       <td><code>"dbBd"</code></td>
     </tr>
     <tr>
-      <td><code>[1], ...[n]</code><br />{{ReadOnlyInline}}</td>
+      <td><code>[1], …[n]</code><br />{{ReadOnlyInline}}</td>
       <td>
         Elements that specify the parenthesized substring matches (if included)
         in the regular expression. The number of possible parenthesized

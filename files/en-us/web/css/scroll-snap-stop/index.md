@@ -4,6 +4,7 @@ slug: Web/CSS/scroll-snap-stop
 tags:
   - CSS
   - CSS Scroll Snap
+  - CSS Property
   - Reference
   - Web
   - recipe:css-property

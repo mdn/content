@@ -52,7 +52,7 @@ fetchPromise.then( response => {
   console.log(`Received response: ${response.status}`);
 });
 
-console.log("Started request...");
+console.log("Started request…");
 ```
 
 Here we are:
@@ -66,11 +66,11 @@ The complete output should be something like:
 
 ```
 Promise { <state>: "pending" }
-Started request...
+Started request…
 Received response: 200
 ```
 
-Note that `Started request...` is logged before we receive the response. Unlike a synchronous function, `fetch()` returns while the request is still going on, enabling our program to stay responsive. The response shows the `200` (OK) [status code](/en-US/docs/Web/HTTP/Status), meaning that our request succeeded.
+Note that `Started request…` is logged before we receive the response. Unlike a synchronous function, `fetch()` returns while the request is still going on, enabling our program to stay responsive. The response shows the `200` (OK) [status code](/en-US/docs/Web/HTTP/Status), meaning that our request succeeded.
 
 This probably seems a lot like the example in the last article, where we added event handlers to the {{domxref("XMLHttpRequest")}} object. Instead of that, we're passing a handler into the `then()` method of the returned promise.
 
@@ -237,7 +237,7 @@ Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
   });
 ```
 
-...then we can expect the `catch()` handler to run, and we should see something like:
+Then we can expect the `catch()` handler to run, and we should see something like:
 
 ```
 Failed to fetch: TypeError: Failed to fetch

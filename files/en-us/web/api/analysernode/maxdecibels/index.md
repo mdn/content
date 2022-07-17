@@ -36,7 +36,7 @@ const analyser = audioCtx.createAnalyser();
 analyser.minDecibels = -90;
 analyser.maxDecibels = -10;
 
-  ...
+// …
 
 analyser.fftSize = 256;
 const bufferLength = analyser.frequencyBinCount;

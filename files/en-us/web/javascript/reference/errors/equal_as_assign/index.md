@@ -15,7 +15,7 @@ equality (`==`).
 
 ## Message
 
-```js
+```
 Warning: SyntaxError: test for equality (==) mistyped as assignment (=)?
 ```
 

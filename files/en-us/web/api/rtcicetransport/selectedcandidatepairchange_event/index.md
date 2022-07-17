@@ -86,7 +86,7 @@ iceTransport.onselectedcandidatepairchange = ev => {
 
 ### Related RTCIceTransport events
 
-- {{event("statechange")}}
+- {{domxref("RTCIceTransport/statechange_event", "statechange")}}
 - {{domxref("RTCIceTransport.gatheringstatechange_event", "gatheringstatechange")}}
 
 ### Related RTCPeerConnection events

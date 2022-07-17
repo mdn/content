@@ -68,7 +68,7 @@ function handleMessage(e) {
   para.innerHTML = e.data;
 }
 
-// in the iframe...
+// in the iframe…
 
 window.addEventListener('message', function (event) {
   const messagePort = event.ports?.[0];

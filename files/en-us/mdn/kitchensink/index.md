@@ -14,7 +14,7 @@ tags:
 The **kitchensink** is a page that _attempts_ to incorporate every possible content element and Yari macro.
 
 This page attempts to be the complete intersection of every other page. Not in terms of the text but in terms of the styles and macros.
-Let's start with some notes...
+Let's start with some notes…
 
 Text that uses the `<kbd>` tag: <kbd>Shift</kbd>
 
@@ -26,7 +26,7 @@ Text that uses the `<kbd>` tag: <kbd>Shift</kbd>
 
 {{PreviousMenuNext("Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard", "Games/Techniques/Control_mechanisms/Other", "Games/Techniques/Control_mechanisms")}}
 
-### Another one...
+### Another one…
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Extra_lives", "Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}
 
@@ -109,7 +109,7 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
 
 ## Interactive Examples
 
-{{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}{{EmbedInteractiveExample("pages/css/order.html")}}{{EmbedInteractiveExample("pages/js/regexp-assertions.html", "taller")}}
+{{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}} {{EmbedInteractiveExample("pages/css/order.html")}} {{EmbedInteractiveExample("pages/js/regexp-assertions.html", "taller")}}
 
 ## Tables
 
@@ -234,7 +234,6 @@ When you request to access a {{Glossary("URL")}}, the gateway server can relay y
 - JavaScript {{jsxref("Array")}} on MDN
 
 Listening for mouse movement is even easier than listening for key presses: all we need is the listener for the {{domxref("Element/mousemove_event", "mousemove")}} event.
-...just below the `keyup event`:
 
 ## Browser compatibility
 

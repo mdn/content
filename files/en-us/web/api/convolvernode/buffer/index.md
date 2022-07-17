@@ -29,7 +29,7 @@ An {{domxref("AudioBuffer")}}.
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const convolver = audioCtx.createConvolver();
 
-  ...
+// …
 
 // grab audio track via XHR for convolver node
 
@@ -51,7 +51,7 @@ ajaxRequest.onload = function() {
 
 ajaxRequest.send();
 
-  ...
+// …
 
 convolver.buffer = concertHallBuffer;
 ```
