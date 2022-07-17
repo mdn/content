@@ -128,7 +128,7 @@ You must only use the `#!` comment style to specify a JavaScript interpreter. In
 
 ## Identifiers
 
-An _identifier_ is used to link a name to a value. Identifiers can be used in various places:
+An _identifier_ is used to link a value with a name. Identifiers can be used in various places:
 
 ```js
 const decl = 1; // Variable declaration
@@ -149,7 +149,7 @@ const 你好 = "Hello";
 console.log(\u4f60\u597d); // Hello
 ```
 
-Not all places accept the full range of identifiers. Certain syntaxes, such as function declarations, function expressions, and variable declarations. require using identifiers names that are not [reserved words](#reserved_keywords).
+Not all places accept the full range of identifiers. Certain syntaxes, such as function declarations, function expressions, and variable declarations require using identifiers names that are not [reserved words](#reserved_keywords).
 
 ```js
 function import() {} // Illegal: import is a reserved word.
