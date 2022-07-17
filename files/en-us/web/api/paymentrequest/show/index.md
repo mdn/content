@@ -299,7 +299,7 @@ async function requestPayment() {
     },
   };
   const response = await request.show(updatedDetails);
-  // Check response, etc...
+  // Check response, etc.
 }
 
 document.getElementById("buyButton").onclick = requestPayment;
