@@ -21,7 +21,7 @@ The _target element_ of the {{domxref("HTMLElement/drop_event", "drop")}} event 
 
 ```html
 <div id="drop_zone" ondrop="dropHandler(event);">
-  <p>Drag one or more files to this Drop Zone…</p>
+  <p>Drag one or more files to this <i>drop zone</i>.</p>
 </div>
 ```
 
@@ -29,7 +29,7 @@ Typically, an application will include a {{domxref("HTMLElement/dragover_event",
 
 ```html
 <div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
-  <p>Drag one or more files to this Drop Zone…</p>
+  <p>Drag one or more files to this <i>drop zone</i>.</p>
 </div>
 ```
 
