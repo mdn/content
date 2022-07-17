@@ -64,7 +64,7 @@ if (navigator.mediaDevices) {
       m = mediaRecorder;
 
       m.mimeType; // would return 'video/mp4'
-      // ...
+      // …
     })
     .catch(function(error) {
       console.log(error.message);

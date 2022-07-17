@@ -95,7 +95,7 @@ const feedbackCoefficients = [0.5, 0.4, 0.3, 0.2, 0.1];
 
 const iirFilter = audioCtx.createIIRFilter(feedforwardCoefficients, feedbackCoefficients);
 
-// ...
+// …
 
 function calcFrequencyResponse() {
   iirFilter.getFrequencyResponse(myFrequencyArray, magResponseOutput, phaseResponseOutput);
