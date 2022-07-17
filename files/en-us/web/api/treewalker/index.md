@@ -69,7 +69,9 @@ _This interface doesn't inherit any method._
     let walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ALL);
     let node = walker.firstChild(); // nodeName: "#text"
     ```
+
     But if we do:
+
     ```js
     let walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT);
     let node = walker.firstChild(); // nodeName: "DIV"
