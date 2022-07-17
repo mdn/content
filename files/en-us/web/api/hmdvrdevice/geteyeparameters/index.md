@@ -49,7 +49,7 @@ if ( vrHMD.getEyeParameters !== undefined ) {
     eyeFOVL = eyeParamsL.recommendedFieldOfView;
     eyeFOVR = eyeParamsR.recommendedFieldOfView;
 } else {
-  ...
+  // …
 }
 ```
 

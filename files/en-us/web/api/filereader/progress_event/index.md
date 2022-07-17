@@ -61,7 +61,7 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
                accept="image/png, image/jpeg">
     </div>
 
-    <img src="" class="preview" height="200" alt="Image preview...">
+    <img src="" class="preview" height="200" alt="Image preview…">
 
     <div class="event-log">
         <label>Event log:</label>
