@@ -27,7 +27,7 @@ createComment(data)
 
 ### Return value
 
-A [Comment](/en-US/docs/Web/API/Comment) node.
+A new {{domxref("Comment")}} object.
 
 ## Examples
 
