@@ -86,8 +86,6 @@ Let's run through an example to get you started with using a package manager and
 
 [Parcel](https://parceljs.org/) is another tool that developers commonly use in their development process. Parcel is clever in that it can watch the contents of our code for calls to dependencies and automatically installs any dependencies it sees that our code needs. It can also automatically build our code.
 
-In our previous chapter we installed Prettier as a global tool. Here however, let's use npm to install Parcel as a local tool, as best practices dictate. We'll install it as part of an experimental app.
-
 ### Setting up the app as an npm package
 
 First of all, create a new directory to store our experimental app in, somewhere sensible that you'll find again. We'll call it parcel-experiment, but you can call it whatever you like:
