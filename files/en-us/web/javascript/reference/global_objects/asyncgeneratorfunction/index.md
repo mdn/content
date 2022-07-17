@@ -47,7 +47,7 @@ Async generator function objects created with the `AsyncGeneratorFunction` const
 All arguments passed to the function, except the last, are treated as the names of the identifiers of the parameters in the function to be created, in the order in which they are passed.
 
 > **Note:** Async generator functions created with the `AsyncGeneratorFunction` constructor do not create closures to their creation contexts; they are always created in the global scope.
-> 
+>
 > When running them, they will only be able to access their own local variables and global ones, not the ones from the scope in which the `AsyncGeneratorFunction` constructor was called.
 >
 > This is different from using {{jsxref("Global_Objects/eval", "eval")}} with code for an async generator function expression.
