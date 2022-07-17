@@ -91,7 +91,7 @@ if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supp
     facingMode: { exact: "user" }
   };
 
-  myTrack.applyConstraints(constraints).then(function() => {
+  myTrack.applyConstraints(constraints).then(() => {
     /* do stuff if constraints applied successfully */
   }).catch(function(reason) {
     /* failed to apply constraints; reason is why */

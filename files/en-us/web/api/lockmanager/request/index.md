@@ -124,7 +124,7 @@ The `do_write()` function use the same lock but in `'exclusive'` mode which will
 This applies across event handlers, tabs, or workers.
 
 ```js
-function do_write() {
+async function do_write() {
   await navigator.locks.request('my_resource', {mode: 'exclusive'}, async lock => {
     // Write code here.
   });

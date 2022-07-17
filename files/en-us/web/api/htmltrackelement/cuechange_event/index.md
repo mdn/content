@@ -63,7 +63,7 @@ let textTrackElem = document.getElementById("texttrack");
 
 textTrackElem.oncuechange = event => {
   let cues = event.target.track.activeCues;
-});
+};
 ```
 
 ## Specifications

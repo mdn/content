@@ -67,7 +67,7 @@ if (navigator.mediaDevices.getUserMedia) {
       video: false
     }).then(function(stream) {
       let options = {
-        mediaStreamTrack: stream.getAudioTracks()[0];
+        mediaStreamTrack: stream.getAudioTracks()[0]
       }
 
       let source = new MediaStreamTrackAudioSourceNode(audioCtx, options);

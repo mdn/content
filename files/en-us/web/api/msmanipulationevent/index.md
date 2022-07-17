@@ -37,7 +37,7 @@ This proprietary method is specific to Internet Explorer.
 
 ## Example
 
-```js
+```
 interface MSManipulationEvent extends UIEvent {
     readonly currentState: number;
     readonly inertiaDestinationX: number;
