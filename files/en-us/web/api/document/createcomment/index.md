@@ -27,7 +27,7 @@ createComment(data)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A [Comment](/en-US/docs/Web/API/Comment) node.
 
 ## Examples
 
