@@ -47,10 +47,12 @@ The following example shows how to use the `finish()` method and catch an `Inval
 interfaceElement.addEventListener("mousedown", function() {
   try {
     player.finish();
-  } catch(e if e instanceof InvalidState) {
-    console.log("finish() called on paused or finished animation.");
-  } catch(e);
-    logMyErrors(e); //pass exception object to error handler
+  } catch(e) {
+    if (e instanceof InvalidState) {
+      console.log("finish() called on paused or finished animation.");
+    } else {
+      logMyErrors(e); //pass exception object to error handler
+    }
   }
 });
 ```

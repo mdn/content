@@ -27,7 +27,7 @@ console.
 warn(obj1)
 warn(obj1, /* …, */ objN)
 warn(msg)
-warn(msg, subst1, /* …, */ substN])
+warn(msg, subst1, /* …, */ substN)
 ```
 
 ### Parameters
