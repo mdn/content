@@ -83,7 +83,7 @@ Possible values for the `source` property include:
 - `startRange`
   - : The object is the start part of the range.
 - `endRange`
-  - : The object is the end part of the range
+  - : The object is the end part of the range.
 - `shared`
   - : The object is a "shared" part of the range, such as a separator or currency.
 
