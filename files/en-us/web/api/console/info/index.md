@@ -24,7 +24,7 @@ next to these items in the Web console's log.
 info(obj1)
 info(obj1, /* …, */ objN)
 info(msg)
-info(msg, subst1, /* …, */ substN])
+info(msg, subst1, /* …, */ substN)
 ```
 
 ### Parameters

@@ -80,7 +80,7 @@ being built. If the value you specify isn't a {{domxref("Blob")}}, [`ArrayBuffer
 or [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String),
 the value is coerced to a string before being appended to the blob.
 
-```js
+```
 void append(
   in ArrayBuffer data
 );
