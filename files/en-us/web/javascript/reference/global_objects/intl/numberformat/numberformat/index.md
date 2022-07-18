@@ -63,13 +63,13 @@ new Intl.NumberFormat(locales, options)
         There is no default value; if the `style` is `"currency"`, the `currency` property must be provided.
     - `currencyDisplay`
 
-      - : How to display the currency in currency formatting. Possible values are:
+      - : How to display the currency in currency formatting.
+         Possible values are:
 
-        - `"symbol"` to use a localized currency symbol such as €, this is the default value,
-        - `"narrowSymbol"` to use a narrow format symbol ("$100" rather than "US$100"),
-        - `"code"` to use the ISO currency code,
-        - `"name"` to use a localized currency name such as
-          `"dollar"`,
+        - `"symbol"` to use a localized currency symbol such as €, this is the default value.
+        - `"narrowSymbol"` to use a narrow format symbol ("$100" rather than "US$100").
+        - `"code"` to use the ISO currency code.
+        - `"name"` to use a localized currency name such as `"dollar"`.
 
     - `currencySign`
       - : In many locales, accounting format means to wrap the number with parentheses instead of appending a minus sign.
@@ -82,9 +82,9 @@ new Intl.NumberFormat(locales, options)
 
       - : The formatting that should be displayed for the number, the defaults is `"standard"`
 
-        - `"standard"` plain number formatting
+        - `"standard"` plain number formatting.
         - `"scientific"` return the order-of-magnitude for formatted number.
-        - `"engineering"` return the exponent of ten when divisible by three
+        - `"engineering"` return the exponent of ten when divisible by three.
         - `"compact"` string representing exponent; defaults to using the "short" form.
 
     - `numberingSystem`
@@ -107,8 +107,8 @@ new Intl.NumberFormat(locales, options)
 
         - `"decimal"` for plain number formatting.
         - `"currency"` for currency formatting.
-        - `"percent"` for percent formatting
-        - `"unit"` for unit formatting
+        - `"percent"` for percent formatting.
+        - `"unit"` for unit formatting.
 
     - `unit`
       - : The unit to use in `unit` formatting, Possible values are core
@@ -123,39 +123,39 @@ new Intl.NumberFormat(locales, options)
       - : The unit formatting style to use in `unit` formatting, the
         defaults is `"short"`.
 
-        - `"long"` (e.g., `16 litres`)
-        - `"short"` (e.g., `16 l`)
-        - `"narrow"` (e.g., `16l`)
+        - `"long"` (e.g., `16 litres`).
+        - `"short"` (e.g., `16 l`).
+        - `"narrow"` (e.g., `16l`).
 
     - `useGrouping` {{experimental_inline}}
       - : Whether to use grouping separators, such as thousands separators or
         thousand/lakh/crore separators. The default is `auto`.
 
-        - `"always"`: display grouping separators even if the locale prefers otherwise
-        - `"auto"`: display grouping separators based on the locale preference, which may also be dependent on the currency
-        - `false`: do not display grouping separators
-        - `"min2"`: display grouping separators when there are at least 2 digits in a group
-        - `true`: alias for `always`
+        - `"always"`: display grouping separators even if the locale prefers otherwise.
+        - `"auto"`: display grouping separators based on the locale preference, which may also be dependent on the currency.
+        - `false`: do not display grouping separators.
+        - `"min2"`: display grouping separators when there are at least 2 digits in a group.
+        - `true`: alias for `always`.
 
     - `roundingMode` {{experimental_inline}}
       - : Options for rounding modes reflecting the [ICU user guide](https://unicode-org.github.io/icu/userguide/format_parse/numbers/rounding-modes.html). The default is `halfExpand`.
 
-        - `"ceil"`: toward +∞
-        - `"floor"`: toward -∞
-        - `"expand"`: away from 0
-        - `"trunc"`: toward 0
-        - `"halfCeil"`: ties toward +∞
-        - `"halfFloor"`: ties toward -∞
-        - `"halfExpand"`: ties away from 0
-        - `"halfTrunc"`: ties toward 0
-        - `"halfEven"`: ties toward the value with even cardinality
+        - `"ceil"`: toward +∞.
+        - `"floor"`: toward -∞.
+        - `"expand"`: away from 0.
+        - `"trunc"`: toward 0.
+        - `"halfCeil"`: ties toward +∞.
+        - `"halfFloor"`: ties toward -∞.
+        - `"halfExpand"`: ties away from 0.
+        - `"halfTrunc"`: ties toward 0.
+        - `"halfEven"`: ties toward the value with even cardinality.
 
     - `roundingPriority` {{experimental_inline}}
       - : Options for control rounding behavior:
 
-        - `"auto"`: the significant digits always win a conflict
-        - `"morePrecision"`: the result with more precision wins a conflict
-        - `"lessPrecision"`: the result with less precision wins a conflict
+        - `"auto"`: the significant digits always win a conflict.
+        - `"morePrecision"`: the result with more precision wins a conflict.
+        - `"lessPrecision"`: the result with less precision wins a conflict.
 
     - `roundingIncrement` {{experimental_inline}}
       - : Specifies the rounding-increment precision. Must be one of the following integers:
@@ -208,26 +208,22 @@ new Intl.NumberFormat(locales, options)
         provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list_one.xml)
         (2 if the list doesn't provide that information).
     - `maximumFractionDigits`
-      - : The maximum number of fraction digits to use. Possible values are from 0
-        to 20; the default for plain number formatting is the larger of
-        `minimumFractionDigits` and 3; the default for currency
-        formatting is the larger of `minimumFractionDigits` and the
-        number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list_one.xml)
-        (2 if the list doesn't provide that information); the default for percent formatting is the larger of
-        `minimumFractionDigits` and 0.
+      - : The maximum number of fraction digits to use.
+         Possible values are from 0 to 20; the default for plain number formatting is the larger of `minimumFractionDigits` and 3;
+         the default for currency formatting is the larger of `minimumFractionDigits` and the number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list_one.xml) (2 if the list doesn't provide that information);
+         the default for percent formatting is the larger of `minimumFractionDigits` and 0.
     - `minimumSignificantDigits`
-      - : The minimum number of significant digits to use. Possible values are from
-        1 to 21; the default is 1.
+      - : The minimum number of significant digits to use.
+        Possible values are from 1 to 21; the default is 1.
     - `maximumSignificantDigits`
-      - : The maximum number of significant digits to use. Possible values are from
-        1 to 21; the default is 21.
+      - : The maximum number of significant digits to use.
+        Possible values are from 1 to 21; the default is 21.
 
 ## Examples
 
 ### Basic usage
 
-In basic use without specifying a locale, a formatted string in the default locale and
-with default options is returned.
+In basic use without specifying a locale, a formatted string in the default locale and with default options is returned.
 
 ```js
 let amount = 3500;
@@ -249,8 +245,8 @@ new Intl.NumberFormat('en-US', {style: 'percent'}).format(amount);
 
 ### Unit formatting
 
-If the `style` is `'unit'`, a `unit` property must be
-provided. Optionally, `unitDisplay` controls the unit formatting.
+If the `style` is `'unit'`, a `unit` property must be provided.
+Optionally, `unitDisplay` controls the unit formatting.
 
 ```js
 let amount = 3500;
@@ -290,8 +286,7 @@ new Intl.NumberFormat('bn', {
 
 ### Scientific, engineering or compact notations
 
-Scientific and compact notation are represented by the `notation` option and
-can be formatted like this:
+Scientific and compact notation are represented by the `notation` option and can be formatted like this:
 
 ```js
 new Intl.NumberFormat('en-US', { notation: "scientific" }).format(987654321);
@@ -334,8 +329,7 @@ new Intl.NumberFormat("en-US", {
 // → '+55%'
 ```
 
-Note that when the currency sign is "accounting", parentheses might be used instead of
-a minus sign:
+Note that when the currency sign is "accounting", parentheses might be used instead of a minus sign:
 
 ```js
 new Intl.NumberFormat('bn', {
