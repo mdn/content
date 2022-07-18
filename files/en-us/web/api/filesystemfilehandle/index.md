@@ -46,20 +46,20 @@ const pickerOpts = {
     {
       description: 'Images',
       accept: {
-        'image/*': ['.png', '.gif', '.jpeg', '.jpg']
-      }
+        'image/*': ['.png', '.gif', '.jpeg', '.jpg'],
+      },
     },
   ],
   excludeAcceptAllOption: true,
-  multiple: false
+  multiple: false,
 };
 
 async function getTheFile() {
   // open file picker
   const [fileHandle] = await window.showOpenFilePicker(pickerOpts);
-
   // get file contents
   const fileData = await fileHandle.getFile();
+  return fileData;
 }
 ```
 
