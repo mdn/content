@@ -76,7 +76,7 @@ The code below shows how to format the roubles currency for a Russian locale:
 const options = { style: 'currency', currency: 'RUB' };
 const numberFormat = new Intl.NumberFormat('ru-RU', options);
 console.log(numberFormat.format(654321.987));
-// → "654 321,99 руб."
+// → "654 321,99 ₽"
 ```
 
 ### Using format with map
