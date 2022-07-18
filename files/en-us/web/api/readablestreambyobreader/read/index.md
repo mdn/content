@@ -14,7 +14,7 @@ browser-compat: api.ReadableStreamBYOBReader.read
 {{APIRef("Streams")}}
 
 The **`read()`** method of the {{domxref("ReadableStreamBYOBReader")}} interface is used to read data into a view on a user-supplied buffer from an associated [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams).
-A request for data will be statisfied from the stream's internal queues if there is any data present.
+A request for data will be satisfied from the stream's internal queues if there is any data present.
 If the stream queues are empty, the request may be supplied as a zero-copy transfer from the underlying byte source.
 
 The method takes as an argument a view on a buffer that supplied data is to be read into, and returns a {{jsxref("Promise")}}.

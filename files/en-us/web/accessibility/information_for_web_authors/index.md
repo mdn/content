@@ -21,7 +21,7 @@ tags:
 
 ## How-to's
 
-1. [Accessiblity for frontend developers](https://accessibility.digital.gov/front-end/getting-started/)
+1. [Accessibility for frontend developers](https://accessibility.digital.gov/front-end/getting-started/)
 
     A brief guide from the U.S. General Services administration’s Technology Transformation Services covering several accessibility topics with links to "how-to" videos and to related WCAG references.
 
