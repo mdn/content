@@ -62,9 +62,7 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
 - {{domxref("GlobalEventHandlers.onseeking")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("seeking")}} event is raised.
 - {{domxref("GlobalEventHandlers.onshow")}} {{Deprecated_Inline}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Element/show_event", "show")}} event is raised.
-- {{domxref("GlobalEventHandlers.onslotchange")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} event is raised.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("show")}} event is raised.
 - {{domxref("GlobalEventHandlers.onstalled")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLMediaElement/stalled_event", "stalled")}} event is raised.
 - {{domxref("GlobalEventHandlers.onsuspend")}}
