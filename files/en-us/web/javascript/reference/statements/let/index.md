@@ -228,7 +228,7 @@ a `ReferenceError` because initialization of `let foo` has not
 completed — it is still in the temporal dead zone.
 
 This phenomenon can be confusing in a situation like the following. The instruction
-`let n of n.a` is already inside the private scope of the for loop's block.
+`const n of n.a` is already inside the private scope of the for loop's block.
 So, the identifier `n.a` is resolved to the property '`a`' of the
 '`n`' object located in the first part of the instruction itself
 (`const n`).
