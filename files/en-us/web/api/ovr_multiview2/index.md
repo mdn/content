@@ -66,7 +66,7 @@ gl.bindTexture(gl.TEXTURE_2D_ARRAY, depthStencilTex);
 gl.texStorage3D(gl.TEXTURE_2D_ARRAY, 1, gl.DEPTH32F_STENCIL8, 512, 512, 2);
 
 ext.framebufferTextureMultiviewOVR(gl.DRAW_FRAMEBUFFER, gl.DEPTH_STENCIL_ATTACHMENT, depthStencilTex, 0, 0, 2);
-gl.drawElements(...);  // draw will be broadcasted to the layers of colorTex and depthStencilTex.
+gl.drawElements(/* … */);  // draw will be broadcasted to the layers of colorTex and depthStencilTex.
 ```
 
 Shader code

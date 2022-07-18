@@ -25,7 +25,7 @@ This method prepends a child to a `DocumentFragment`. To prepend to an arbitrary
 ```js
 prepend(param1)
 prepend(param1, param2)
-prepend(param1, param2, /* ... ,*/ paramN)
+prepend(param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parameters

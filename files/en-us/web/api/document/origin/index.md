@@ -35,7 +35,7 @@ var origin = document.origin;
 // On "about:blank", returns:'null'
 
 var origin = document.origin;
-// On "data:text/html,<b>foo</b>", returns:'null'
+// On "data:text/html,<p>foo</p>", returns:'null'
 ```
 
 ## Browser compatibility

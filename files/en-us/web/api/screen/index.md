@@ -57,7 +57,7 @@ _Also inherits methods from its parent {{domxref("EventTarget")}}_.
 - {{DOMxRef("Screen.unlockOrientation")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Unlock the screen orientation (only works in fullscreen or for installed apps)
 
-### Events
+## Events
 
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} {{Deprecated_Inline}}
   - : Fires when the screen orientation changes.

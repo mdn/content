@@ -14,11 +14,14 @@ somewhere and wasn't provided. {{jsxref("null")}} is not an object and won't wor
 
 ## Message
 
-```js
-TypeError: Invalid descriptor for property {x} (Edge)
-TypeError: "x" is not a non-null object (Firefox)
-TypeError: Property description must be an object: "x" (Chrome)
-TypeError: Invalid value used in weak set (Chrome)
+```
+TypeError: Property description must be an object: x (V8-based)
+TypeError: Property descriptor must be an object, got "x" (Firefox)
+TypeError: Property description must be an object. (Safari)
+
+TypeError: Invalid value used in weak set (V8-based)
+TypeError: WeakSet value must be an object, got "x" (Firefox)
+TypeError: Attempted to add a non-object value to a WeakSet (Safari)
 ```
 
 ## Error type

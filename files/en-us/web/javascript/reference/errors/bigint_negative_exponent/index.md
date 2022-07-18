@@ -14,7 +14,7 @@ The JavaScript exception "BigInt negative exponent" occurs when a {{jsxref("BigI
 ## Message
 
 ```
-RangeError: Exponent must be positive (Chromium-based)
+RangeError: Exponent must be positive (V8-based)
 RangeError: BigInt negative exponent (Firefox)
 RangeError: Negative exponent is not allowed (Safari)
 ```

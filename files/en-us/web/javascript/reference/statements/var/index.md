@@ -95,7 +95,7 @@ operator on a global variable.
 ```js
 'use strict';
 var x = 1;
-globalThis.hasOwnProperty('x'); // true
+Object.hasOwn(globalThis, 'x'); // true
 delete globalThis.x; // TypeError in strict mode. Fails silently otherwise.
 delete x;  // SyntaxError in strict mode. Fails silently otherwise.
 ```
@@ -112,14 +112,12 @@ to a value, the scope chain is searched. This means that properties on the globa
 are conveniently visible from every scope, without having to qualify the names with
 `globalThis.` or `window.` or `global.`.
 
-Because the global object has a `String` property (`globalThis.hasOwnProperty('String')`), you can use the following code:
+Because the global object has a `String` property (`Object.hasOwn(globalThis, 'String')`), you can use the following code:
 
 ```js
 function foo() {
   String('s') // Note the function `String` is implicitly visible
 }
-```
-
 ```
 
 So the global object will ultimately be searched for unqualified identifiers. You don't
@@ -130,7 +128,7 @@ scope chain, assume you want to create a property with that name on the global o
 
 ```js
 foo = 'f' // In non-strict mode, assumes you want to create a property named `foo` on the global object
-globalThis.hasOwnProperty('foo') // true
+Object.hasOwn(globalThis, 'foo') // true
 ```
 
 In ECMAScript 5, this behavior was changed for [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).

@@ -30,10 +30,10 @@ property instead.
 
 ```js
 var iceServer = {
-                  ...
-                  url = iceServerUrl,
-                  ...
-                };
+  // ...
+  url: iceServerUrl,
+  // ...
+};
 
 var serverUrl = iceServer.url;
 

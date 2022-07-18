@@ -320,27 +320,25 @@ Here are some popular editors:
     <tr>
       <td>
         <a
-          href="https://www.barebones.com/products/textwrangler/"
+          href="https://www.barebones.com/products/bbedit/"
           rel="external"
-          >TextWrangler</a
-        >
+          >BBEdit</a>
       </td>
       <td>Closed source</td>
       <td>Free</td>
       <td>Mac</td>
       <td>
         <a
-          href="https://www.barebones.com/support/textwrangler/faqs.html"
+          href="https://www.barebones.com/support/bbedit/"
           rel="external"
           >FAQ</a
-        >,
-        <a href="https://groups.google.com/forum/#!forum/textwrangler">Forum</a>
+        >
       </td>
       <td>
         <a
-          href="http://ash.barebones.com/TextWrangler_User_Manual.pdf"
+          href="https://www.barebones.com/products/bbedit/features.html"
           rel="external"
-          >PDF Manual</a
+          >Online Manual</a
         >
       </td>
       <td>No</td>

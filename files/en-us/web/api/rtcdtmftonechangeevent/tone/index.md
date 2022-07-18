@@ -53,5 +53,5 @@ dtmfSender.ontonechange = function( ev ) {
 
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - [Using DTMF with WebRTC](/en-US/docs/Web/API/WebRTC_API/Using_DTMF)
-- {{event("toneevent")}}
+- {{domxref("RTCDTMFSender/tonechange_event", "tonechange")}}
 - {{domxref("RTCDTMFToneChangeEvent")}}

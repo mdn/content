@@ -51,10 +51,10 @@ There are two important events to use along with the Gamepad API — `gamepadcon
 var gamepadAPI = {
   controller: {},
   turbo: false,
-  connect: function() {},
-  disconnect: function() {},
-  update: function() {},
-  buttonPressed: function() {},
+  connect() {},
+  disconnect() {},
+  update() {},
+  buttonPressed() {},
   buttons: [],
   buttonsCache: [],
   buttonsStatus: [],
@@ -84,7 +84,7 @@ Due to security policy, you have to interact with the controller first while the
 Both functions are fairly simple:
 
 ```js
-connect: function(evt) {
+connect(evt) {
   gamepadAPI.controller = evt.gamepad;
   gamepadAPI.turbo = true;
   console.log('Gamepad connected.');
@@ -94,7 +94,7 @@ connect: function(evt) {
 The `connect()` function takes the event as a parameter and assigns the `gamepad` object to the `gamepadAPI.controller` variable. We are using only one gamepad for this game, so it's a single object instead of an array of gamepads. We then set the `turbo` property to `true`. (We could use the `gamepad.connected` boolean for this purpose, but we wanted to have a separate variable for turning on Turbo mode without needing to have a gamepad connected, for reasons explained above.)
 
 ```js
-disconnect: function(evt) {
+disconnect(evt) {
   gamepadAPI.turbo = false;
   delete gamepadAPI.controller;
   console.log('Gamepad disconnected.');
@@ -121,7 +121,7 @@ The `index` variable is useful if we're connecting more than one controller and 
 Beside `connect()` and `disconnect()`, there are two more methods in the `gamepadAPI` object: `update()` and `buttonPressed()`. `update()` is executed on every frame inside the game loop, to update the actual status of the gamepad object regularly:
 
 ```js
-update: function() {
+update() {
   // clear the buttons cache
   gamepadAPI.buttonsCache = [];
   // move the buttons status from the previous frame to the cache
@@ -164,7 +164,7 @@ On every frame, `update()` saves buttons pressed during the previous frame to th
 The `buttonPressed()` method is also placed in the main game loop to listen for button presses. It takes two parameters — the button we want to listen to and the (optional) way to tell the game that holding the button is accepted. Without it you'd have to release the button and press it again to have the desired effect.
 
 ```js
-buttonPressed: function(button, hold) {
+buttonPressed(button, hold) {
   var newPress = false;
   // loop through pressed buttons
   for(var i=0,s=gamepadAPI.buttonsStatus.length; i<s; i++) {

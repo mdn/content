@@ -93,7 +93,7 @@ _No change._
 
 #### New APIs
 
-- In SVG, the {{domxref("SVGStyleElement")}} interface now implements the `LinkStyle` mixin ){{bug(1239128)}}.
+- In SVG, the {{domxref("SVGStyleElement")}} interface now implements the `LinkStyle` mixin ) {{bug(1239128)}}.
 
 #### Miscellaneous
 

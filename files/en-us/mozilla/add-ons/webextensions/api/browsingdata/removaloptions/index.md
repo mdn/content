@@ -30,9 +30,9 @@ Values of this type are objects. They contain the following properties:
 
 - `hostnames` {{optional_inline}}
 
-  - : `Array` of `string`. This property only applies to cookies and local storage items. Only remove cookies and local storage items which are associated with these hostnames.
+  - : `Array` of `string`. This property applies to cookie, indexedDB, local storage, and service worker registration items. Remove only cookie, indexedDB, local storage, and service worker registration items associated with these hostnames.
 
-    You must pass in just a hostname here, without protocol (for example: "google.com" not https\://google.com"). You can use the [`URL`](/en-US/docs/Web/API/URL) interface to parse a raw URL and retrieve just the hostname. Items associated with subdomains of a given hostname will _not_ be removed: you must explicitly list subdomains.
+    You must pass in just a hostname here, without protocol (for example, "google.com" not "https\://google.com"). You can use the [`URL`](/en-US/docs/Web/API/URL) interface to parse a raw URL and retrieve the hostname. Items associated with subdomains of a given hostname are _not_ removed: you must explicitly list subdomains.
 
 - `originTypes` {{optional_inline}}
 

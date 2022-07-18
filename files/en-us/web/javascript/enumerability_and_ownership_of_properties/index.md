@@ -58,7 +58,7 @@ Note that this is not the most efficient algorithm for all cases, but useful for
 const SimplePropertyRetriever = {
   getOwnEnumerables(obj) {
     return this._getPropertyNames(obj, true, false, this._enumerable);
-      // Or could use for..in filtered with hasOwnProperty or just this: return Object.keys(obj);
+      // Or could use for..in filtered with Object.hasOwn or just this: return Object.keys(obj);
   },
   getOwnNonenumerables(obj) {
     return this._getPropertyNames(obj, true, false, this._notEnumerable);
@@ -128,4 +128,5 @@ const SimplePropertyRetriever = {
 - [`Object.getOwnPropertySymbols()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols)
 - [`Object.keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
 - [`Object.getOwnPropertyDescriptors()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors)
+- [`Object.hasOwn()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)
 - [`Reflect.ownKeys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys)

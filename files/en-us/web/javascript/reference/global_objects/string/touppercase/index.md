@@ -53,7 +53,7 @@ This method will convert any non-string value to a string, when you set its
 
 ```js
 const a = String.prototype.toUpperCase.call({
-  toString: function toString() {
+  toString() {
     return 'abcdef';
   }
 });

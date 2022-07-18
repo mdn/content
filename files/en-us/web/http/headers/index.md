@@ -304,15 +304,6 @@ _Learn more about CORS [here](CORS)._
 - {{HTTPHeader("X-XSS-Protection")}}
   - : Enables cross-site scripting filtering.
 
-### HTTP Public Key Pinning (HPKP)
-
-{{Glossary("HPKP", "HTTP Public Key Pinning")}} has been deprecated and removed in favor of Certificate Transparency and {{HTTPHeader("Expect-CT")}}.
-
-- {{HTTPHeader("Public-Key-Pins")}}
-  - : Associates a specific cryptographic public key with a certain web server to decrease the risk of {{Glossary("MITM")}} attacks with forged certificates.
-- {{HTTPHeader("Public-Key-Pins-Report-Only")}}
-  - : Sends reports to the report-uri specified in the header and does still allow clients to connect to the server even if the pinning is violated.
-
 ### Fetch metadata request headers
 
 {{Glossary("Fetch metadata request header", "Fetch metadata request headers")}} provides information about the context from which the request originated. This allows a server to make decisions about whether a request should be allowed based on where the request came from and how the resource will be used.

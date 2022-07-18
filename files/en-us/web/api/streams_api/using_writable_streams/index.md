@@ -49,8 +49,8 @@ const stream = new WritableStream({
 
   }
 }, {
-  highWaterMark,
-  size()
+  highWaterMark: 3,
+  size: () => 1
 });
 ```
 

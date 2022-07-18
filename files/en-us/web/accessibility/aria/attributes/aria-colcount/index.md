@@ -62,7 +62,7 @@ The first rule of ARIA use is "if you can use a native feature with the semantic
       <td>New York</td>
       <td>14127</td>
     </tr>
-    ...
+    …
   </tbody>
 </table>
 ```

@@ -33,6 +33,7 @@ Printing `form.length` to the console, gives us the value of {{domxref("HTMLForm
 ```js
 class CustomCheckbox extends HTMLElement {
   static formAssociated = true;
+  #internals;
 
   constructor() {
     super();

@@ -50,9 +50,9 @@ We've written up a simple example to demonstrate — see our [vr-controller-basi
 The first notable code is as follows:
 
 ```js
-var initialRun = true;
+let initialRun = true;
 
-if(navigator.getVRDisplays && navigator.getGamepads) {
+if (navigator.getVRDisplays && navigator.getGamepads) {
   info.textContent = 'WebVR API and Gamepad API supported.'
   reportDisplays();
 } else {
@@ -66,10 +66,10 @@ Here we first use a tracking variable, `initialRun`, to note that this is the fi
 function reportDisplays() {
   navigator.getVRDisplays().then(function(displays) {
       console.log(displays.length + ' displays');
-    for(var i = 0; i < displays.length; i++) {
-      var cap = displays[i].capabilities;
+    for(let i = 0; i < displays.length; i++) {
+      const cap = displays[i].capabilities;
       // cap is a VRDisplayCapabilities object
-      var listItem = document.createElement('li');
+      const listItem = document.createElement('li');
       listItem.innerHTML = '<strong>Display ' + (i+1) + '</strong>'
                    + '<br>VR Display ID: ' + displays[i].displayId
                    + '<br>VR Display Name: ' + displays[i].displayName
@@ -97,11 +97,11 @@ The `reportGamepads()` function looks like this:
 
 ```js
 function reportGamepads() {
-    var gamepads = navigator.getGamepads();
+    const gamepads = navigator.getGamepads();
     console.log(gamepads.length + ' controllers');
-    for(var i = 0; i < gamepads.length; ++i) {
-        var gp = gamepads[i];
-        var listItem = document.createElement('li');
+    for (let i = 0; i < gamepads.length; ++i) {
+        const gp = gamepads[i];
+        const listItem = document.createElement('li');
         listItem.classList = 'gamepad';
         listItem.innerHTML = '<strong>Gamepad ' + gp.index + '</strong> (' + gp.id + ')'
                  + '<br>Associated with VR Display ID: ' + gp.displayId
@@ -135,8 +135,8 @@ At the end of our example we first include the `removeGamepads()` function:
 
 ```js
 function removeGamepads() {
-    var gpLi = document.querySelectorAll('.gamepad');
-    for(var i = 0; i < gpLi.length; i++) {
+    const gpLi = document.querySelectorAll('.gamepad');
+    for (let i = 0; i < gpLi.length; i++) {
     list.removeChild(gpLi[i]);
     }
 
@@ -179,13 +179,13 @@ We'll explore the code differences in this version below — see [webgl-demo.js]
 Inside the `drawVRScene()` function, you'll find this bit of code:
 
 ```js
-var gamepads = navigator.getGamepads();
-var gp = gamepads[0];
+const gamepads = navigator.getGamepads();
+const gp = gamepads[0];
 
 if(gp) {
-  var gpPose = gp.pose;
-  var curPos = gpPose.position;
-  var curOrient = gpPose.orientation;
+  const gpPose = gp.pose;
+  const curPos = gpPose.position;
+  const curOrient = gpPose.orientation;
   if(poseStatsDisplayed) {
     displayPoseStats(gpPose);
   }
@@ -230,12 +230,12 @@ In the `displayPoseStats()` function, we grab all of the data we want to display
 
 ```js
 function displayPoseStats(pose) {
-  var pos = pose.position;
-  var orient = pose.orientation;
-  var linVel = pose.linearVelocity;
-  var linAcc = pose.linearAcceleration;
-  var angVel = pose.angularVelocity;
-  var angAcc = pose.angularAcceleration;
+  const pos = pose.position;
+  const orient = pose.orientation;
+  const linVel = pose.linearVelocity;
+  const linAcc = pose.linearAcceleration;
+  const angVel = pose.angularVelocity;
+  const angAcc = pose.angularAcceleration;
 
   if(pose.hasPosition) {
     posStats.textContent = 'Position: x ' + pos[0].toFixed(3) + ', y ' + pos[1].toFixed(3) + ', z ' + pos[2].toFixed(3);

@@ -132,7 +132,7 @@ After this, the authentication steps are:
 
 ```js
 // sample arguments for registration
-var createCredentialDefaultArgs = {
+const createCredentialDefaultArgs = {
     publicKey: {
         // Relying Party (a.k.a. - Service):
         rp: {
@@ -163,7 +163,7 @@ var createCredentialDefaultArgs = {
 };
 
 // sample arguments for login
-var getCredentialDefaultArgs = {
+const getCredentialDefaultArgs = {
     publicKey: {
         timeout: 60000,
         // allowCredentials: [newCredential] // see below
@@ -181,7 +181,7 @@ navigator.credentials.create(createCredentialDefaultArgs)
 
         // normally the credential IDs available for an account would come from a server
         // but we can just copy them from above...
-        var idList = [{
+        const idList = [{
             id: cred.rawId,
             transports: ["usb", "nfc", "ble"],
             type: "public-key"

@@ -32,7 +32,7 @@ No notable changes.
 - [Transform streams](/en-US/docs/Web/API/TransformStream) are now supported, allowing you to pipe from {{domxref("ReadableStream")}} to a {{domxref("WritableStream")}}, executing a transformation on the chunks.
   The update includes the new interfaces [`TransformStream`](/en-US/docs/Web/API/TransformStream) and [`TransformStreamDefaultController`](/en-US/docs/Web/API/TransformStreamDefaultController) and the method [`ReadableStream.pipeThrough()`](/en-US/docs/Web/API/ReadableStream/pipeThrough) ({{bug(1767507)}}).
 
-- [Readable byte streams](/en-US/docs/Web/API/Streams_API#bytestream-related_interfaces) are now supported, allowing efficient zero-byte transfer of data from an underlying byte source to a consumer (bypassing the stream's internal queues).
+- [Readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams) are now supported, allowing efficient zero-byte transfer of data from an underlying byte source to a consumer (bypassing the stream's internal queues).
   The new interfaces are {{domxref("ReadableStreamBYOBReader")}}, {{domxref("ReadableByteStreamController")}} and {{domxref("ReadableStreamBYOBRequest")}} ({{bug(1767342)}}).
 
 #### DOM

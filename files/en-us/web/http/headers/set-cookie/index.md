@@ -125,14 +125,14 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     This mitigates attacks against cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}).
 - `SameSite=<samesite-value>` {{optional_inline}}
 
-  - : Controls whether or not a cookie is sent with cross-origin requests,
+  - : Controls whether or not a cookie is sent with cross-site requests,
     providing some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).
 
     The possible attribute values are:
 
     - `Strict`
       - : means that the browser sends the cookie only for same-site requests, that is, requests originating from the same site that set the cookie.
-        If a request originates from a URL different from the current one, no cookies with the `SameSite=Strict` attribute are sent.
+        If a request originates from a different domain or scheme (even with the same domain), no cookies with the `SameSite=Strict` attribute are sent.
 
     - `Lax`
       - : means that the cookie is not sent on cross-site requests, such as on requests to load images or frames, but is sent when a user is navigating to the origin site from an external site (for example, when following a link).

@@ -27,9 +27,9 @@ or more JavaScript objects.
 
 ```js
 log(obj1)
-log(obj1, /* ..., */ objN)
+log(obj1, /* …, */ objN)
 log(msg)
-log(msg, subst1, /* ..., */ substN])
+log(msg, subst1, /* …, */ substN])
 ```
 
 ### Parameters

@@ -159,7 +159,7 @@ This example registers a handler for every event type for the given element.
     }
   </script>
   <body onload="init();">
-    <div id="target"> Touch me ... </div>
+    <div id="target"> Touch me… </div>
   </body>
 </html>
 ```
@@ -234,7 +234,7 @@ This example illustrates accessing all of a pointer event's properties.
     }
   </script>
   <body onload="init();">
-    <div id="target"> Touch me ... </div>
+    <div id="target"> Touch me… </div>
   </body>
 </html>
 ```
@@ -287,7 +287,7 @@ The following example shows pointer capture being set on an element.
   }
 </script>
 <body onload="init();">
-  <div id="target"> Touch me ... </div>
+  <div id="target"> Touch me… </div>
 </body>
 </html>
 ```
@@ -317,7 +317,7 @@ The following example shows a pointer capture being released (when a {{domxref("
     }
   </script>
   <body onload="init();">
-    <div id="target"> Touch me ... </div>
+    <div id="target"> Touch me… </div>
   </body>
 </html>
 ```
@@ -333,7 +333,7 @@ In the following example, the browser's default touch behavior is disabled for t
 ```html
 <html>
   <body>
-    <div style="touch-action:none;">Can't touch this ... </div>
+    <div style="touch-action:none;">Can't touch this… </div>
   </body>
 </html>
 ```

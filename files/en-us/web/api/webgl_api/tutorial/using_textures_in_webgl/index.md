@@ -148,7 +148,7 @@ At this point, the texture is loaded and ready to use. But before we can use it,
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(textureCoordinates),
                 gl.STATIC_DRAW);
 
-...
+  // ...
   return {
     position: positionBuffer,
     textureCoord: textureCoordBuffer,
@@ -265,8 +265,10 @@ Lastly, add `texture` as a parameter to the `drawScene()` function, both where i
 
 ```js
 drawScene(gl, programInfo, buffers, texture, deltaTime);
-...
+// ...
 function drawScene(gl, programInfo, buffers, texture, deltaTime) {
+  // ...
+}
 ```
 
 At this point, the rotating cube should be good to go.

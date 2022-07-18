@@ -52,7 +52,7 @@ new WebAssembly.Module(bufferSource)
 ```js
 const importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func(arg) {
       console.log(arg);
     }
   }

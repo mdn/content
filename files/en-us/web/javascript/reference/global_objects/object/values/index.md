@@ -58,7 +58,7 @@ const arrayLikeObj2 = { 100: 'a', 2: 'b', 7: 'c' };
 console.log(Object.values(arrayLikeObj2 )); // ['b', 'c', 'a']
 
 // getFoo is property which isn't enumerable
-const my_obj = Object.create({}, { getFoo: { value: function() { return this.foo; } } });
+const my_obj = Object.create({}, { getFoo: { value() { return this.foo; } } });
 my_obj.foo = 'bar';
 console.log(Object.values(my_obj)); // ['bar']
 

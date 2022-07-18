@@ -249,7 +249,7 @@ In the markup section you can insert any HTML you like, and in addition you can 
 </main>
 ```
 
-Svelte also supports tags like `{#if...}`, `{#each...}`, and `{#await...}` — these examples allow you to conditionally render a portion of the markup, iterate through a list of elements, and work with async values, respectively.
+Svelte also supports tags like `{#if}`, `{#each}`, and `{#await}` — these examples allow you to conditionally render a portion of the markup, iterate through a list of elements, and work with async values, respectively.
 
 ### The `<style>` section
 
@@ -289,7 +289,7 @@ You can see this in action by opening `localhost:5042` in a new browser tab, rig
 
 When compiling the app, Svelte changes our `h1` styles definition to `h1.svelte-1tky8bj`, and then modifies every `<h1>` element in our component to `<h1 class="svelte-1tky8bj">`, so that it picks up the styles as required.
 
-> **Note:** You can override this behavior and apply styles to a selector globally using the `:global(...)` modifier (see the [Svelte `<style>` docs](https://svelte.dev/docs#style) for more information).
+> **Note:** You can override this behavior and apply styles to a selector globally using the `:global()` modifier (see the [Svelte `<style>` docs](https://svelte.dev/docs#style) for more information).
 
 ## Making a couple of changes
 

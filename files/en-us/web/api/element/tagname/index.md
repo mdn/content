@@ -47,7 +47,7 @@ inherits from {{domxref("Node")}}.
 ### HTML
 
 ```html
-<span id="born">When I was born...</span>
+<span id="born">When I was born…</span>
 ```
 
 ### JavaScript

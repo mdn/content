@@ -15,8 +15,9 @@ for [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Ac
 
 ## Message
 
-```js
-SyntaxError: missing name after . operator
+```
+SyntaxError: missing name after . operator (Firefox)
+SyntaxError: Unexpected token '['. Expected a property name after '.'. (Safari)
 ```
 
 ## Error type

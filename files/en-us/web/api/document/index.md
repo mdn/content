@@ -126,13 +126,6 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
 - {{DOMxRef("Document.URL")}} {{ReadOnlyInline}}
   - : Returns the document location as a string.
 
-### Event handlers
-
-_The `Document` interface is extended with additional event handlers defined in [GlobalEventHandlers](/en-US/docs/Web/API/GlobalEventHandlers#event_handlers)._
-
-- {{DOMxRef("GlobalEventHandlers.onselectionchange")}} {{Experimental_Inline}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("Document/selectionchange_event", "selectionchange")}} event is raised.
-
 ### Deprecated properties
 
 - {{DOMxRef("Document.alinkColor")}} {{Deprecated_Inline}}
@@ -321,12 +314,10 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a static {{HTMLElement("script")}} is about to start executing.
 - {{DOMxRef("Document/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
-    Also available via the {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}} property.
 - {{DOMxRef("Document/visibilitychange_event", "visibilitychange")}}
   - : Fired when the content of a tab has become visible or has been hidden.
 - {{DOMxRef("Document/wheel_event","wheel")}}
   - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
-    Also available via the {{DOMxRef("GlobalEventHandlers.onwheel", "onwheel")}} property.
 
 ### Animation events
 
@@ -436,9 +427,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{DOMxRef("Document/selectionchange_event", "selectionchange")}}
   - : Fired when the current text selection on a document is changed.
     Also available via the {{DOMxRef("GlobalEventHandlers/onselectionchange", "onselectionchange")}} property.
-- {{DOMxRef("Document/selectstart_event", "selectstart")}}
-  - : Fired when the user begins a new selection.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onselectstart", "onselectstart")}} property.
 
 ### Touch events
 

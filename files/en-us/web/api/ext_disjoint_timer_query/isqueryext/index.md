@@ -39,7 +39,7 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether the given objec
 var ext = gl.getExtension('EXT_disjoint_timer_query');
 var query = ext.createQueryEXT();
 
-// ...
+// …
 
 ext.isQueryEXT(query);
 ```

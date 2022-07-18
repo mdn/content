@@ -52,7 +52,7 @@ First a brief overview of [HTML Forms](/en-US/docs/Learn/Forms). Consider a simp
 
 ![Simple name field example in HTML form](form_example_name_field.png)
 
-The form is defined in HTML as a collection of elements inside `<form>...</form>` tags, containing at least one `input` element of `type="submit"`.
+The form is defined in HTML as a collection of elements inside `<form>…</form>` tags, containing at least one `input` element of `type="submit"`.
 
 ```html
 <form action="/team_name_url/" method="post">

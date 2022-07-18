@@ -58,6 +58,7 @@ look at the value of {{domxref("RTCIceCandidate.tcpType", "tcpType")}} to see if
 if (candidate.protocol == "tcp") {
   if (candidate.tcpType == "so") {
     adjustForSimultaneousOpen(candidate);
+  }
 }
 ```
 

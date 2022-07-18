@@ -53,16 +53,16 @@ Consider the following
 
 ```js
 function drawScene(gl, view, programInfo, buffers, texture, deltaTime) {
-  ...
+  // ...
   for (object in scene) {
-    let vertexList = ...
+    let vertexList = [/* ... */];
     let normalMatrix = mat4.create();
     let modelViewMatrix = mat4.create();
-    let objectMatrix = mat4.
+    let objectMatrix = mat4.create();
 
     // Apply rotation updates to the object if needed
 
-    mat4.rotate(
+    mat4.rotate(/* ... */);
   }
 }
 ```
@@ -72,14 +72,14 @@ This renders a scene. But it's inefficient, because it allocates as local variab
 A simple change can optimize this significantly:
 
 ```js
-const vertexList = ...
+const vertexList = [/* ... */];
 const normalMatrix = mat4.create();
 const modelViewMatrix = mat4.create();
 
 function drawScene(gl, view, programInfo, buffers, texture, deltaTime) {
-  ...
+  // ...
   for (object in scene) {
-    ...
+    // ...
   }
 }
 ```

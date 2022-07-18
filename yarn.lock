@@ -34,23 +34,23 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@^5.1.3":
-  version "5.1.3"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.1.3.tgz#0208d47fc2d823bde07e0cc6f9b16799a5a9dbb0"
-  integrity sha512-5RqTIOtj/8m2yfiAT7fRtVwqDzpHkliozS86puqlceAFFuUQpYn17nIXTZ7hPVyhQ8wacCW42crCBdwscNBjFw==
+"@mdn/browser-compat-data@^5.1.4":
+  version "5.1.4"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.1.4.tgz#47ef4e0a1a3480dbcfbd1526d50da9c4c255a9ae"
+  integrity sha512-ubzosY7Qps/AYYYXABNDIVNc+C//z3uVBSOQ6TOuvAtgPzEb0nsmfOmuj8UrTsXrKxXoG2ySEPxvs2HeJNnKFQ==
 
-"@mdn/yari@1.7.14":
-  version "1.7.14"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.7.14.tgz#96c6c1f25bd406b3586b60de69fd8f7de56d6759"
-  integrity sha512-AwdFWlDLfQjuz1xT1oGJIbZt/jGYe4M5ywmjbHCBQOSXMz5iMHBVkU7e+GSz7rVba7GsUk2HzQiyiHZ4/5BzdA==
+"@mdn/yari@1.10.0":
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.10.0.tgz#ca61ceb028e5c794aff6bc790ffb4aa13c88f116"
+  integrity sha512-dzEAvSgvRhP9xXRNVVRa5hQonBv9wUDqXDLQu2itzJ1+RiM2NjBhLi/zplIDVXnERDwfH9Cx8JnZdgUiEhPN+Q==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
-    "@mdn/browser-compat-data" "^5.1.3"
+    "@mdn/browser-compat-data" "^5.1.4"
     "@use-it/interval" "^1.0.0"
     "@webref/css" "^4.3.2"
     accept-language-parser "^1.5.0"
-    browser-specs "^3.14.0"
+    browser-specs "^3.16.0"
     chalk "^4.1.2"
     cheerio "^1.0.0-rc.12"
     cli-progress "^3.11.2"
@@ -63,7 +63,7 @@
     dotenv "^16.0.1"
     ejs "^3.1.8"
     express "^4.18.1"
-    fast-xml-parser "^4.0.8"
+    fast-xml-parser "^4.0.9"
     fdir "^5.2.0"
     file-type "^16.5.3"
     front-matter "^4.0.2"
@@ -74,7 +74,7 @@
     hast-util-to-text "^2.0.1"
     html-react-parser "^2.0.0"
     http-proxy-middleware "^2.0.6"
-    image-size "^1.0.1"
+    image-size "^1.0.2"
     image-type "^4.1.0"
     imagemin "^7.0.1"
     imagemin-gifsicle "^7.0.0"
@@ -86,11 +86,11 @@
     js-yaml "^4.1.0"
     klaw-sync "^6.0.0"
     loglevel "^1.8.0"
-    lru-cache "^7.12.0"
+    lru-cache "^7.13.0"
     md5-file "^5.0.0"
     mdast-util-from-markdown "^0.8.5"
     mdast-util-phrasing "^2.0.0"
-    mdn-data "^2.0.27"
+    mdn-data "^2.0.28"
     node-gettext "^3.0.0"
     open "^8.4.0"
     open-editor "^3.0.0"
@@ -577,10 +577,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^3.14.0:
-  version "3.14.0"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.14.0.tgz#b2ab3e611b848a87356e98371b34f4d1dd3c8ccc"
-  integrity sha512-Xe8nQBYzwnVOzdlApoW6hUdrMCsPe3DDNsQZSjARWHkJZ0mZf6icaPqFG0/Rangug1WaXrVI8iVJcuTt9VIwZQ==
+browser-specs@^3.16.0:
+  version "3.16.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-3.16.0.tgz#cfd30556b6d1391a3fa9a4ccf9159228221aef5f"
+  integrity sha512-xa4gkbnT0I+o7++92JVmlOHHqBaqusXhKrPw6jV8U5FhRwruBe8sHbdZIBfFmSIERQ6J8d+UH/r2aRLEeGIUOQ==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -1707,10 +1707,10 @@ fast-xml-parser@^3.19.0:
   dependencies:
     strnum "^1.0.4"
 
-fast-xml-parser@^4.0.8:
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-4.0.8.tgz#abf0fbfe477b90b796118bd097a3afa4b9b4673f"
-  integrity sha512-N4XqZaRMuHMvOFwFlqeBTlvrnXU+QN8wvCl2g9fHzMx2BnLoIYRDwy6XwI8FxogHMFI9OfGQBCddgckvSLTnvg==
+fast-xml-parser@^4.0.9:
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-4.0.9.tgz#3a81dab7b4952b8d38f0136d28bd055b80ed6512"
+  integrity sha512-4G8EzDg2Nb1Qurs3f7BpFV4+jpMVsdgLVuG1Uv8O2OHJfVCg7gcA53obuKbmVqzd4Y7YXVBK05oJG7hzGIdyzg==
   dependencies:
     strnum "^1.0.5"
 
@@ -2419,10 +2419,10 @@ ignore@^5.1.1, ignore@^5.1.4:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.1.8.tgz#f150a8b50a34289b33e22f5889abd4d8016f0e57"
   integrity sha512-BMpfD7PpiETpBl/A6S498BaIJ6Y/ABT93ETbby2fP00v4EbvPBXWEoaR1UBPKs3iR53pJY7EtZk5KACI57i1Uw==
 
-image-size@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/image-size/-/image-size-1.0.1.tgz#86d6cfc2b1d19eab5d2b368d4b9194d9e48541c5"
-  integrity sha512-VAwkvNSNGClRw9mDHhc5Efax8PLlsOGcUTh0T/LIriC8vPA3U5PdqXWqkz406MoYHMKW8Uf9gWr05T/rYB44kQ==
+image-size@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/image-size/-/image-size-1.0.2.tgz#d778b6d0ab75b2737c1556dd631652eb963bc486"
+  integrity sha512-xfOoWjceHntRb3qFCrh5ZFORYH8XCdYpASltMhZ/Q0KZiOwjdE/Yl2QCiWdwD+lygV5bMCvauzgu5PxBX/Yerg==
   dependencies:
     queue "6.0.2"
 
@@ -3010,10 +3010,10 @@ lru-cache@^4.0.1:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
-lru-cache@^7.12.0:
-  version "7.12.0"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.12.0.tgz#be2649a992c8a9116efda5c487538dcf715f3476"
-  integrity sha512-OIP3DwzRZDfLg9B9VP/huWBlpvbkmbfiBy8xmsXp4RPmE4A3MhwNozc5ZJ3fWnSg8fDcdlE/neRTPG2ycEKliw==
+lru-cache@^7.13.0:
+  version "7.13.1"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.13.1.tgz#267a81fbd0881327c46a81c5922606a2cfe336c4"
+  integrity sha512-CHqbAq7NFlW3RSnoWXLJBxCWaZVBrfa9UEHId2M3AW8iEBurbqduNexEUCGc3SHc6iCYXNJCDi903LajSVAEPQ==
 
 make-dir@^1.0.0, make-dir@^1.2.0:
   version "1.3.0"
@@ -3163,10 +3163,15 @@ mdn-data@2.0.14:
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.14.tgz#7113fc4281917d63ce29b43446f701e68c25ba50"
   integrity sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==
 
-mdn-data@2.0.27, mdn-data@^2.0.27:
+mdn-data@2.0.27:
   version "2.0.27"
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.27.tgz#1710baa7b0db8176d3b3d565ccb7915fc69525ab"
   integrity sha512-kwqO0I0jtWr25KcfLm9pia8vLZ8qoAKhWZuZMbneJq3jjBD3gl5nZs8l8Tu3ZBlBAHVQtDur9rdDGyvtfVraHQ==
+
+mdn-data@^2.0.28:
+  version "2.0.28"
+  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.28.tgz#5ec48e7bef120654539069e1ae4ddc81ca490eba"
+  integrity sha512-aylIc7Z9y4yzHYAJNuESG3hfhC+0Ibp/MAMiaOZgNv4pmEdFyfZhhhny4MNiAfWdBQ1RQ2mfDWmM1x8SvGyp8g==
 
 mdurl@^1.0.0:
   version "1.0.1"

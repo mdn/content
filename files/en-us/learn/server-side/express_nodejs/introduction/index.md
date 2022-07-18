@@ -212,11 +212,11 @@ If you want to export a complete object in one assignment instead of building it
 
 ```js
 module.exports = {
-  area: function(width) {
+  area(width) {
     return width * width;
   },
 
-  perimeter: function(width) {
+  perimeter(width) {
     return 4 * width;
   }
 };
@@ -274,7 +274,7 @@ There is a special routing method, `app.all()`, which will be called in response
 
 ```js
 app.all('/secret', function(req, res, next) {
-  console.log('Accessing the secret section ...');
+  console.log('Accessing the secret section…');
   next(); // pass control to the next handler
 });
 ```
@@ -308,7 +308,7 @@ To use the router in our main app file we would then `require()` the route modul
 
 ```js
 const wiki = require('./wiki.js');
-// ...
+// …
 app.use('/wiki', wiki);
 ```
 
@@ -336,7 +336,7 @@ const express = require('express');
 const logger = require('morgan');
 const app = express();
 app.use(logger('dev'));
-...
+// …
 ```
 
 > **Note:** Middleware and routing functions are called in the order that they are declared. For some middleware the order is important (for example if session middleware depends on cookie middleware, then the cookie handler must be added first). It is almost always the case that middleware is called before setting routes, or your route handlers will not have access to functionality added by your middleware.
@@ -353,7 +353,7 @@ const app = express();
 
 // An example middleware function
 let a_middleware_function = function(req, res, next) {
-  // ... perform some operations
+  // Perform some operations
   next(); // Call next() so Express will call the next middleware function in the chain.
 }
 

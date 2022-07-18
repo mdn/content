@@ -38,7 +38,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the source object is not a `ReadableStreamBYOBReader`, or a read request is pending.
+  - : Thrown if the source object is not a `ReadableStreamBYOBReader`.
 
 ## Examples
 

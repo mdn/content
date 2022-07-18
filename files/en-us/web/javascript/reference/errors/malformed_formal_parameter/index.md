@@ -16,7 +16,7 @@ constructor call is invalid somehow.
 
 ## Message
 
-```js
+```
 SyntaxError: Expected {x} (Edge)
 SyntaxError: malformed formal parameter (Firefox)
 ```

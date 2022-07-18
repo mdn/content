@@ -91,7 +91,7 @@ if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supp
     facingMode: { exact: "user" }
   };
 
-  myTrack.applyConstraints(constraints).then(function() => {
+  myTrack.applyConstraints(constraints).then(() => {
     /* do stuff if constraints applied successfully */
   }).catch(function(reason) {
     /* failed to apply constraints; reason is why */
@@ -514,7 +514,7 @@ The last significant piece of the puzzle: code that displays, for the user's ref
 ```js
 let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
 for (let constraint in supportedConstraints) {
-  if (supportedConstraints.hasOwnProperty(constraint)) {
+  if (Object.hasOwn(supportedConstraints, constraint)) {
     let elem = document.createElement("li");
 
     elem.innerHTML = "<code><a href='https://developer.mozilla.org/docs/Web/API/MediaTrackSupportedConstraints/"
