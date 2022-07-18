@@ -8124,7 +8124,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.ondurationchange	/en-US/docs/Web/API/HTMLMediaElement/durationchange_event
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onemptied	/en-US/docs/Web/API/HTMLMediaElement/emptied_event
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onended	/en-US/docs/Web/API/HTMLMediaElement/ended_event
-/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oninvalid	/en-US/docs/Web/API/GlobalEventHandlers/oninvalid
+/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oninvalid	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadeddata	/en-US/docs/Web/API/GlobalEventHandlers/onloadeddata
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadedmetadata	/en-US/docs/Web/API/GlobalEventHandlers/onloadedmetadata
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadstart	/en-US/docs/Web/API/GlobalEventHandlers/onloadstart
@@ -8164,6 +8164,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/Web/API/GlobalEventHandlers/onformdata	/en-US/docs/Web/API/HTMLFormElement/formdata_event
 /en-US/docs/Web/API/GlobalEventHandlers/oninput	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Web/API/GlobalEventHandlers/oninvalid	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Web/API/GlobalEventHandlers/onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/GlobalEventHandlers/onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/GlobalEventHandlers/onkeyup	/en-US/docs/Web/API/Element/keyup_event

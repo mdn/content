@@ -44291,17 +44291,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/GlobalEventHandlers/oninvalid": {
-    "modified": "2020-10-15T21:44:05.936Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "sideshowbarker",
-      "wbamberg",
-      "rolfedh",
-      "Guillaume-Heras"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onload": {
     "modified": "2020-10-15T21:12:46.292Z",
     "contributors": [
