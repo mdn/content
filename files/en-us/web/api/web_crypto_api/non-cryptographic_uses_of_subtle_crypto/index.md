@@ -104,7 +104,7 @@ At this point you may be thinking to yourself "*I can use this on my own website
   ```
   
   ```js example-bad
-  // tapmpered code
+  // tampered code
   if (checksum = correctCheckSum) return true;
   ```
 
