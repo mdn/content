@@ -42,7 +42,7 @@ String values passed to the `format()` function:
   In this case the value is converted to +0.
 - may include `Infinity` or `-Infinity`.
 - cannot be suffixed with `n` (the suffix used to indicate that a numeric value is a `BigInt`)
-- cannot include a numeric literal separator, such as an underscore ("_").
+- cannot include a numeric literal separator (`_`).
 
 > **Note:** Older versions of the specification parsed strings as a {{jsxref("Number")}}.
 > Check the compatibility table for your browser.
