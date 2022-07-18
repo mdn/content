@@ -109,7 +109,8 @@ It clones by recursing through the input object while maintaining a map of previ
     </tr>
     <tr>
       <td>{{domxref("DOMException")}}</td>
-      <td>Most browsers only clone the properties {{domxref("DOMException.name","name")}} and {{domxref("DOMException.message","message")}} (in theory stack traces and other attributes may also be cloned).</td>
+      <td>Browsers must serialize the properties {{domxref("DOMException.name","name")}} and {{domxref("DOMException.message","message")}}.
+      Other attributes may also be serialized/cloned.</td>
     </tr>
     <tr>
       <td><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Native <code>Error</code> types</a></td>
