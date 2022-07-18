@@ -17,6 +17,9 @@ browser-compat: javascript.builtins.Intl.NumberFormat.formatRangeToParts
 
 The **`Intl.Numberformat.prototype.formatRangeToParts()`** method enables locale-aware formatting of strings produced by `NumberFormat` formatters.
 
+It returns an {{jsxref("Array")}} of objects containing the locale-specific tokens from which it is possible to build custom strings while preserving the locale-specific parts.
+This makes it possible to provide locale-aware custom formatting ranges of number strings.
+
 ## Syntax
 
 ```js
@@ -35,18 +38,7 @@ formatRangeToParts(startRange, endRange)
 
 An {{jsxref("Array")}} of objects containing the formatted range of numbers in parts.
 
-### Exceptions
-
-- {{jsxref("RangeError")}}
-  - : Thrown if `startRange` is less than `endRange`, or either value is `NaN`.
-- {{jsxref("TypeError")}}
-  - : Thrown if either `startRange` or `endRange` is undefined.
-
-## Description
-
-The `formatRangeToParts()` method is useful when you need to provide locale aware custom formatting ranges of number strings.
-It returns an {{jsxref("Array")}} of objects containing the locale-specific tokens from which it is possible to build custom strings while preserving the locale-specific parts.
-The structure of the array the `formatRangeToParts()` method returns looks like this:
+The structure of the returned looks like this:
 
 ```js
 [
@@ -94,6 +86,13 @@ Possible values for the `source` property include:
   - : The object is the end part of the range
 - `shared`
   - : The object is a "shared" part of the range, such as a separator or currency.
+
+### Exceptions
+
+- {{jsxref("RangeError")}}
+  - : Thrown if `startRange` is less than `endRange`, or either value is `NaN`.
+- {{jsxref("TypeError")}}
+  - : Thrown if either `startRange` or `endRange` is undefined.
 
 ## Examples
 
