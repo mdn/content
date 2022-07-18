@@ -112,7 +112,7 @@ through calls to [`append()`](#append).
 
 ```js
 Blob getBlob(
-  in DOMString contentType {{optional_inline}}
+  in DOMString contentType // optional
 );
 ```
 
