@@ -75,7 +75,7 @@ represented as a text value, e.g. `console.log(new Date())`, or when a date
 is used in a string concatenation, such as
 `const today = 'Today is ' + new Date()`.
 
-`Date.prototype.toString()` much be called on {{jsxref("Date")}} instances. If the `this` value does not inherit from `Date.prototype`, a {{jsxref("TypeError")}} is thrown.
+`Date.prototype.toString()` must be called on {{jsxref("Date")}} instances. If the `this` value does not inherit from `Date.prototype`, a {{jsxref("TypeError")}} is thrown.
 
 ## Examples
 
