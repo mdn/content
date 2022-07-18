@@ -98,7 +98,7 @@ console.log(formatted.join('; '));
 Using a string we can specify very numbers that are larger than {{jsxref("Number.MAX_SAFE_INTEGER")}} without losing precision.
 
 ```js
-let numberFormat = new Intl.NumberFormat("en-US");
+const numberFormat = new Intl.NumberFormat("en-US");
 
 // Here the value is converted to a Number
 console.log(numberFormat.format(987654321987654321))
@@ -113,7 +113,7 @@ We can also use the general "E" exponent syntax for decimal strings: `#.#E#`.
 The code below creates a {{jsxref("BigInt")}},  coerces it to a string with the suffix `E-6`, and then formats it.
 
 ```js
-let numberFormat = new Intl.NumberFormat("en-US");
+const numberFormat = new Intl.NumberFormat("en-US");
 const bigNum = 1000000000000000110000n;
 console.log(numberFormat.format(bigNum));
 // → "1,000,000,000,000,000,110,000"
