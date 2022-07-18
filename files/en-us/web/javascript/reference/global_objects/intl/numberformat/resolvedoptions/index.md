@@ -36,7 +36,7 @@ The resulting object has the following properties:
   - : The BCP 47 language tag for the locale actually used.
     If any Unicode extension values were requested in the input BCP 47 language tag that led to this locale, the key-value pairs that were requested and are supported for this locale are included in `locale`.
 - `numberingSystem`
-  - : The value provided for this properties in the `options` argument, if present, or the value requested using the Unicode extension key "`nu`" or filled in as a default.
+  - : The value provided for this properties in the `options` argument, if present, or the value requested using the Unicode extension key `"nu"` or filled in as a default.
 - `notation`
   - : The value provided for this property in the `options` argument, if present, or "`standard`" filled in as a default.
 - `compactDisplay`
