@@ -45,7 +45,7 @@ The resulting object has the following properties:
 - `signDisplay`
   - : The value provided for this property in the `options` argument, or "`auto`" filled in as a default.
 - `useGrouping`
-  - : The values provided for these properties in the `options` argument or filled in as defaults.
+  - : The value provided for the [useGrouping](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#usegrouping) property in the constructor `options` argument or the default value (`"auto"`).
 - `currency`, `currencyDisplay`
   - : The values provided for these properties in the `options` argument or filled in as defaults.
     These properties are only present if `style` is "`currency`".

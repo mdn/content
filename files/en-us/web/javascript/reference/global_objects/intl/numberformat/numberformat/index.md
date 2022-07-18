@@ -33,114 +33,82 @@ new Intl.NumberFormat(locales, options)
 
 - `locales` {{optional_inline}}
 
-  - : A string with a BCP 47 language tag, or an array of such strings. For the
-    general form and interpretation of the `locales`
-    argument, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page. The following Unicode
-    extension key is allowed:
+  - : A string with a BCP 47 language tag, or an array of such strings.
+    For the general form and interpretation of the `locales` argument, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page.
+    The following Unicode extension key is allowed:
 
     - `nu`
       - : The numbering system to be used. Possible values include:
-        "`adlm`", "`ahom`", "`arab`",
-        "`arabext`", "`bali`", "`beng`",
-        "`bhks`", "`brah`", "`cakm`",
-        "`cham`", "`deva`", "`diak`",
-        "`fullwide`", "`gong`", "`gonm`",
-        "`gujr`", "`guru`", "`hanidec`",
-        "`hmng`", "`hmnp`", "`java`",
-        "`kali`", "`khmr`", "`knda`",
-        "`lana`", "`lanatham`", "`laoo`",
-        "`latn`", "`lepc`", "`limb`",
-        "`mathbold`", "`mathdbl`", "`mathmono`",
-        "`mathsanb`", "`mathsans`", "`mlym`",
-        "`modi`", "`mong`", "`mroo`",
-        "`mtei`", "`mymr`", "`mymrshan`",
-        "`mymrtlng`", "`newa`", "`nkoo`",
-        "`olck`", "`orya`", "`osma`",
-        "`rohg`", "`saur`", "`segment`",
-        "`shrd`", "`sind`", "`sinh`",
-        "`sora`", "`sund`", "`takr`",
-        "`talu`", "`tamldec`", "`telu`",
-        "`thai`", "`tibt`", "`tirh`",
-        "`vaii`", "`wara`", "`wcho`". — see
-        the [standard Unicode numeral systems list](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem).
+        `"adlm"`, `"ahom"`, `"arab"`, `"arabext"`, `"bali"`, `"beng"`, `"bhks"`, `"brah"`, `"cakm"`,
+        `"cham"`, `"deva"`, `"diak"`, `"fullwide"`, `"gong"`, `"gonm"`,
+        `"gujr"`, `"guru"`, `"hanidec"`, `"hmng"`, `"hmnp"`, `"java"`,
+        `"kali"`, `"khmr"`, `"knda"`, `"lana"`, `"lanatham"`, `"laoo"`,
+        `"latn"`, `"lepc"`, `"limb"`, `"mathbold"`, `"mathdbl"`, `"mathmono"`,
+        `"mathsanb"`, `mathsans"`, `"mlym"`, `"modi"`, `"mong"`, `"mroo"`,
+        `"mtei"`, `"mymr"`, `"mymrshan"`, `"mymrtlng"`, `"newa"`, `"nkoo"`,
+        `"olck"`, `"orya"`, `"osma"`, `"rohg"`, `"saur"`, `"segment"`,
+        `"shrd"`, `"sind"`, `"sinh"`, `"sora"`, `"sund"`, `"takr"`, `"talu"`, `"tamldec"`, `"telu"`,
+        `"thai"`, `"tibt"`, `"tirh"`, `"vaii"`, `"wara"`, `"wcho"`.
+        — see the [standard Unicode numeral systems list](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem).
 
 - `options` {{optional_inline}}
 
   - : An object with some or all of the following properties:
 
     - `compactDisplay`
-      - : Only used when `notation` is "`compact`". Takes
-        either "`short`" (default) or "`long`".
+      - : Only used when `notation` is `"compact"`. Takes either `"short"` (default) or `"long"`.
     - `currency`
-      - : The currency to use in currency formatting. Possible values are the ISO
-        4217 currency codes, such as "`USD`" for the US dollar,
-        "`EUR`" for the euro, or "`CNY`" for the Chinese RMB
+      - : The currency to use in currency formatting. Possible values are the ISO 4217 currency codes, such as `"USD"` for the US dollar, `"EUR"` for the euro, or `"CNY"` for the Chinese RMB
         — see the [Current currency & funds code list](https://www.six-group.com/en/products-services/financial-information/data-standards.html#scrollTo=currency-codes).
-        There is no default value; if the `style` is "`currency`", the `currency`
-        property must be provided.
+        There is no default value; if the `style` is `"currency"`, the `currency` property must be provided.
     - `currencyDisplay`
 
       - : How to display the currency in currency formatting. Possible values are:
 
-        - "`symbol`" to use a localized currency symbol such as
-          €, this is the default value,
-        - "`narrowSymbol`" to use a narrow format symbol ("$100"
-          rather than "US$100"),
-        - "`code`" to use the ISO currency code,
-        - "`name`" to use a localized currency name such as
-          "`dollar`",
+        - `"symbol"` to use a localized currency symbol such as €, this is the default value,
+        - `"narrowSymbol"` to use a narrow format symbol ("$100" rather than "US$100"),
+        - `"code"` to use the ISO currency code,
+        - `"name"` to use a localized currency name such as
+          `"dollar"`,
 
     - `currencySign`
-      - : In many locales, accounting format means to wrap the number with
-        parentheses instead of appending a minus sign. You can enable this
-        formatting by setting the `currencySign` option to
-        "`accounting`". The default value is "`standard`".
+      - : In many locales, accounting format means to wrap the number with parentheses instead of appending a minus sign.
+        You can enable this formatting by setting the `currencySign` option to `"accounting"`.
+        The default value is `"standard"`.
     - `localeMatcher`
-      - : The locale matching algorithm to use. Possible values are
-        "`lookup`" and "`best fit`"; the default is
-        "`best fit`". For information about this option, see the
-        {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
+      - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`.
+        For information about this option, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
     - `notation`
 
-      - : The formatting that should be displayed for the number, the defaults is
-        "`standard`"
+      - : The formatting that should be displayed for the number, the defaults is `"standard"`
 
-        - "`standard`" plain number formatting
-        - "`scientific`" return the order-of-magnitude for
-          formatted number.
-        - "`engineering`" return the exponent of ten when
-          divisible by three
-        - "`compact`" string representing exponent; defaults to using the "short" form.
+        - `"standard"` plain number formatting
+        - `"scientific"` return the order-of-magnitude for formatted number.
+        - `"engineering"` return the exponent of ten when divisible by three
+        - `"compact"` string representing exponent; defaults to using the "short" form.
 
     - `numberingSystem`
-      - : Numbering System. Possible values include: "`arab`",
-        "`arabext`", " `bali`", "`beng`",
-        "`deva`", "`fullwide`", " `gujr`",
-        "`guru`", "`hanidec`", "`khmr`", "
-        `knda`", "`laoo`", "`latn`",
-        "`limb`", "`mlym`", " `mong`",
-        "`mymr`", "`orya`", "`tamldec`", "
-        `telu`", "`thai`", "`tibt`".
+      - : Numbering System.
+        Possible values include: `"arab"`, `"arabext"`, `"bali"`, `"beng"`, `"deva"`, `"fullwide"`, `"gujr"`, `"guru"`, `"hanidec"`, `"khmr"`, `"knda"`, `"laoo"`, `"latn"`, `"limb"`, `"mlym"`, `"mong"`, `"mymr"`, `"orya"`, `"tamldec"`, `"telu"`, `"thai"`, `"tibt"`.
 
     - `signDisplay`
 
       - : When to display the sign for the number; defaults to "`auto`":
 
-        - "`always`" always display sign
-        - "`auto`" sign display for negative numbers only
-        - "`exceptZero`" sign display for positive and negative
-          numbers, but not zero
-        - "`negative`" sign display for negative numbers only, excluding negative zero. {{experimental_inline}}
-        - "`never`" never display sign
+        - `"always"` always display sign
+        - `"auto"` sign display for negative numbers only, including negative zero.
+        - `"exceptZero"` sign display for positive and negative numbers, but not zero
+        - `"negative"` sign display for negative numbers only, excluding negative zero. {{experimental_inline}}
+        - `"never"` never display sign
 
     - `style`
 
       - : The formatting style to use , the default is "`decimal`".
 
-        - "`decimal`" for plain number formatting.
-        - "`currency`" for currency formatting.
-        - "`percent`" for percent formatting
-        - "`unit`" for unit formatting
+        - `"decimal"` for plain number formatting.
+        - `"currency"` for currency formatting.
+        - `"percent"` for percent formatting
+        - `"unit"` for unit formatting
 
     - `unit`
       - : The unit to use in `unit` formatting, Possible values are core
@@ -148,47 +116,46 @@ new Intl.NumberFormat(locales, options)
         A [subset](https://tc39.es/proposal-unified-intl-numberformat/section6/locales-currencies-tz_proposed_out.html#sec-issanctionedsimpleunitidentifier)
         of units from the [full list](https://github.com/unicode-org/cldr/blob/main/common/validity/unit.xml)
         was selected for use in ECMAScript. Pairs of simple units can
-        be concatenated with "`-per-`" to make a compound unit. There
-        is no default value; if the `style` is "`unit`", the
-        `unit` property must be provided.
+        be concatenated with "`-per-`" to make a compound unit.
+        There is no default value; if the `style` is `"unit"`, the `unit` property must be provided.
     - `unitDisplay`
 
       - : The unit formatting style to use in `unit` formatting, the
-        defaults is "`short`".
+        defaults is `"short"`.
 
-        - "`long`" (e.g., `16 litres`)
-        - "`short`" (e.g., `16 l`)
-        - "`narrow`" (e.g., `16l`)
+        - `"long"` (e.g., `16 litres`)
+        - `"short"` (e.g., `16 l`)
+        - `"narrow"` (e.g., `16l`)
 
     - `useGrouping` {{experimental_inline}}
       - : Whether to use grouping separators, such as thousands separators or
         thousand/lakh/crore separators. The default is `auto`.
 
-        - "`always`": display grouping separators even if the locale prefers otherwise
-        - "`auto`": display grouping separators based on the locale preference, which may also be dependent on the currency
-        - "`false`": do not display grouping separators
-        - "`min2`": display grouping separators when there are at least 2 digits in a group
-        - "`true`": alias for `always`
+        - `"always"`: display grouping separators even if the locale prefers otherwise
+        - `"auto"`: display grouping separators based on the locale preference, which may also be dependent on the currency
+        - `false`: do not display grouping separators
+        - `"min2"`: display grouping separators when there are at least 2 digits in a group
+        - `true`: alias for `always`
 
     - `roundingMode` {{experimental_inline}}
       - : Options for rounding modes reflecting the [ICU user guide](https://unicode-org.github.io/icu/userguide/format_parse/numbers/rounding-modes.html). The default is `halfExpand`.
 
-        - "`ceil`": toward +∞
-        - "`floor`": toward -∞
-        - "`expand`": away from 0
-        - "`trunc`": toward 0
-        - "`halfCeil`": ties toward +∞
-        - "`halfFloor`": ties toward -∞
-        - "`halfExpand`": ties away from 0
-        - "`halfTrunc`": ties toward 0
-        - "`halfEven`": ties toward the value with even cardinality
+        - `"ceil"`: toward +∞
+        - `"floor"`: toward -∞
+        - `"expand"`: away from 0
+        - `"trunc"`: toward 0
+        - `"halfCeil"`: ties toward +∞
+        - `"halfFloor"`: ties toward -∞
+        - `"halfExpand"`: ties away from 0
+        - `"halfTrunc"`: ties toward 0
+        - `"halfEven"`: ties toward the value with even cardinality
 
     - `roundingPriority` {{experimental_inline}}
       - : Options for control rounding behavior:
 
-        - "`auto`": the significant digits always win a conflict
-        - "`morePrecision`": the result with more precision wins a conflict
-        - "`lessPrecision`": the result with less precision wins a conflict
+        - `"auto"`: the significant digits always win a conflict
+        - `"morePrecision"`: the result with more precision wins a conflict
+        - `"lessPrecision"`: the result with less precision wins a conflict
 
     - `roundingIncrement` {{experimental_inline}}
       - : Specifies the rounding-increment precision. Must be one of the following integers:
@@ -220,9 +187,9 @@ new Intl.NumberFormat(locales, options)
     - `trailingZeroDisplay` {{experimental_inline}}
       - : A string expressing the strategy for displaying trailing zeros on whole numbers. The default is "`auto`".
 
-        - "`auto`": keep trailing zeros according to minimumFractionDigits and minimumSignificantDigits
-        - "`stripIfInteger`": the result with more precision wins a conflict
-        - "`lessPrecision`": same as "auto", but remove the fraction digits if they are all zero
+        - `"auto"`: keep trailing zeros according to minimumFractionDigits and minimumSignificantDigits
+        - `"stripIfInteger"`: the result with more precision wins a conflict
+        - `"lessPrecision"`: same as "auto", but remove the fraction digits if they are all zero
 
     The following properties fall into two groups:
     `minimumIntegerDigits`, `minimumFractionDigits`, and
