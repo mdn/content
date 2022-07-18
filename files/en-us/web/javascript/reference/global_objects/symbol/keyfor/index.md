@@ -28,8 +28,7 @@ Symbol.keyFor(sym);
 
 ### Return value
 
-A string representing the key for the given symbol if one is found on the global
-registry; otherwise, {{jsxref("undefined")}}.
+A string representing the key for the given symbol if one is found on the [global registry](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry); otherwise, {{jsxref("undefined")}}.
 
 ## Examples
 
