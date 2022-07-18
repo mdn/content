@@ -66,7 +66,7 @@ You can also set up the event handler using the `oninstall` property:
 
 ```js
 globalScope.oninstall = function(event) {
-  ...
+  // ...
 };
 ```
 

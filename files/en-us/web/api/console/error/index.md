@@ -21,9 +21,9 @@ The **`console.error()`** method outputs an error message to the Web console.
 
 ```js
 error(obj1)
-error(obj1, /* ..., */ objN)
+error(obj1, /* …, */ objN)
 error(msg)
-error(msg, subst1, /* ..., */ substN])
+error(msg, subst1, /* …, */ substN)
 ```
 
 ### Parameters

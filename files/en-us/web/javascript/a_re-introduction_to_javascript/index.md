@@ -790,10 +790,10 @@ function makePerson(first, last) {
   return {
     first: first,
     last: last,
-    fullName: function() {
+    fullName() {
       return this.first + ' ' + this.last;
     },
-    fullNameReversed: function() {
+    fullNameReversed() {
       return this.last + ', ' + this.first;
     }
   };

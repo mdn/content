@@ -58,14 +58,16 @@ The following function adds and removes the state `--checked` to a `CustomStateS
 The state of the element can be accessed from CSS using the custom state pseudo-class `--checked`.
 
 ```js
-set checked(flag) {
-  if (flag) {
-    this._internals.states.add('--checked');
-  } else {
-    this._internals.states.delete('--checked');
-  }
+class MyCustomElement extends HTMLElement {
+  set checked(flag) {
+    if (flag) {
+      this._internals.states.add('--checked');
+    } else {
+      this._internals.states.delete('--checked');
+    }
 
-  console.log(this._internals.states.has('--checked'));
+    console.log(this._internals.states.has('--checked'));
+  }
 }
 ```
 

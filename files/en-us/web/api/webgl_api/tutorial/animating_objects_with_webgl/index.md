@@ -35,7 +35,7 @@ This rotates the modelViewMatrix by the current value of `squareRotation`, aroun
 To actually animate, we need to add code that changes the value of `squareRotation` over time. We can do that by creating a new variable to track the time at which we last animated (let's call it `then`), then adding the following code to the end of the main function
 
 ```js
-  var then = 0;
+  let then = 0;
 
   // Draw the scene repeatedly
   function render(now) {

@@ -45,7 +45,7 @@ Registering the same protocol handler more than once will pop up a different not
 
 ### Example
 
-```js
+```html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="en">
 <head>

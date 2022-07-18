@@ -430,7 +430,7 @@ Before actually transferring the data, several preparatory steps are taken:
 
 This example, which uses PHP on the server side and JavaScript on the client side, demonstrates asynchronous uploading of a file.
 
-```js
+```php
 <?php
 if (isset($_FILES['myFile'])) {
     // Example:
@@ -480,7 +480,7 @@ if (isset($_FILES['myFile'])) {
 </head>
 <body>
     <div>
-        <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">Drag & drop your file here...</div>
+        <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">Drag & drop your file here</div>
     </div>
 </body>
 </html>

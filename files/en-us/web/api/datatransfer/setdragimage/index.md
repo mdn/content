@@ -65,7 +65,7 @@ default drag image.
 
 [demo](https://codepen.io/webgeeker/full/KBzrxE/)
 
-```js
+```html
 <!DOCTYPE html>
 <html lang=en>
 <title>Example of DataTransfer.setDragImage()</title>

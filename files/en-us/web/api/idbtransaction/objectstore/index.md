@@ -101,6 +101,7 @@ function addData() {
     // has been stored successfully in the DB - for that you need transaction.onsuccess)
     note.innerHTML += '<li>Request successful.</li>';
   };
+}
 ```
 
 ## Specifications

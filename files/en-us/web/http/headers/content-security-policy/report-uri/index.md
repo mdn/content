@@ -7,7 +7,7 @@ tags:
   - HTTP
   - Reference
   - Security
-browser-compat: http.headers.csp.Content-Security-Policy.report-uri
+browser-compat: http.headers.Content-Security-Policy.report-uri
 ---
 {{HTTPSidebar}}{{deprecated_header}}
 

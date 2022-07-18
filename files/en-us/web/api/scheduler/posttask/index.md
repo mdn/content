@@ -146,7 +146,7 @@ scheduler.postTask( ()=>{ console.log('usr-vis 3 (default)'); } );
 
 The expected output is shown below: tasks are executed in priority order, and then declaration order.
 
-```js
+```
 usr-blk 1
 usr-blk 2
 usr-vis 1

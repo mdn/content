@@ -194,12 +194,12 @@ and whether decoding will be smooth and power efficient:</p>
 let mc = {
   videoConfiguration : new Object(),
 
-  tryIt: function () {
+  tryIt() {
    mc.createConfiguration();
    mc.testIt();
   },
 
-  createConfiguration: function () {
+  createConfiguration() {
     const size = document.getElementById('size').value.split('x');
     mc.videoConfiguration = {
       type: 'file',
@@ -213,7 +213,7 @@ let mc = {
     }
   },
 
-  testIt: function () {
+  testIt() {
     let content = '';
     navigator.mediaCapabilities.decodingInfo(mc.videoConfiguration).then(result => {
       const li = document.createElement('li'),

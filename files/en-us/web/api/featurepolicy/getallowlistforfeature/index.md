@@ -18,7 +18,7 @@ specific feature for the current Feature Policy.
 ## Syntax
 
 ```js
-const allowlist = FeaturePolicy.getAllowlistForFeature(<feature>)
+const allowlist = FeaturePolicy.getAllowlistForFeature(feature);
 ```
 
 ### Parameter

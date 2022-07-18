@@ -3,6 +3,7 @@ title: image-orientation
 slug: Web/CSS/image-orientation
 tags:
   - CSS
+  - CSS Property
   - Reference
   - image-orientation
   - recipe:css-property

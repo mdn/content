@@ -37,7 +37,7 @@ None ({{jsxref("undefined")}}).
 var ext = gl.getExtension('EXT_disjoint_timer_query');
 var query = ext.createQueryEXT();
 
-// ...
+// …
 
 ext.deleteQueryEXT(query);
 ```

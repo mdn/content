@@ -32,7 +32,7 @@ This example looks at the `localDescription` and displays an alert containing th
 
 ```js
 var pc = new RTCPeerConnection();
-…
+// ...
 var sd = pc.localDescription;
 if (sd) {
   alert("Local session: type='" +

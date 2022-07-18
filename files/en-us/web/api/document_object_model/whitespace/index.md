@@ -287,14 +287,14 @@ If you need to rely on `inline-block`, you could set the [`font-size`](/en-US/do
 ```css
 ul {
   font-size: 0;
-  ...
+  /* … */
 }
 
 li {
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  ...
+  /* … */
 }
 ```
 

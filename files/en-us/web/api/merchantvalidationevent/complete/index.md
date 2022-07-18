@@ -56,7 +56,8 @@ payRequest.onmerchantvalidation = event => {
 }
 
 function getValidationData(url) {
-  /* ...retrieve the validation data from the URL... */
+  // Retrieve the validation data from the URL
+  // …
 }
 ```
 

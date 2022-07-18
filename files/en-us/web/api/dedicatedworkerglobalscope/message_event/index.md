@@ -89,7 +89,7 @@ Alternatively, the script can listen for the message using [`addEventListener()`
 self.addEventListener('message', function(e) {
   result.textContent = e.data;
   console.log('Message received from worker');
-}
+});
 ```
 
 Notice how in the main script, `onmessage` has to be called on `myWorker`, whereas inside the worker script you just need `onmessage` because the worker is effectively the global scope ({{domxref("DedicatedWorkerGlobalScope")}}).

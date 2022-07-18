@@ -54,10 +54,10 @@ Congratulations, you've just created your first object. Job done! But this is an
 const person = {
   name: ['Bob', 'Smith'],
   age: 32,
-  bio: function() {
+  bio() {
     console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
   },
-  introduceSelf: function() {
+  introduceSelf() {
     console.log(`Hi! I'm ${this.name[0]}.`);
   }
 };
@@ -177,7 +177,7 @@ person['name']['first']
 This looks very similar to how you access the items in an array, and it is basically the same thing — instead of using an index number to select an item, you are using the name associated with each member's value.
 It is no wonder that objects are sometimes called **associative arrays** — they map strings to values in the same way that arrays map numbers to values.
 
-Dot notation is generally preferred over bracket notation because it is more succint and easier to read.
+Dot notation is generally preferred over bracket notation because it is more succinct and easier to read.
 However there are some cases where you have to use brackets.
 For example, if an object property name is defined at runtime then you can't use dot notation to access the value, but you can pass the name as a variable inside brackets as shown with `input` below:
 

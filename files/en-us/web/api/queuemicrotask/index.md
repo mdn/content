@@ -49,7 +49,7 @@ final cleanup or other just-before-rendering tasks.
 ## Syntax
 
 ```js
-queueMicrotask(function)
+queueMicrotask(function() {/* ... */})
 ```
 
 ### Parameters

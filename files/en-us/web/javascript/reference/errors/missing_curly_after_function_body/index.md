@@ -15,8 +15,7 @@ parenthesis are in the correct order.
 
 ## Message
 
-```js
-SyntaxError: Expected '}' (Edge)
+```
 SyntaxError: missing } after function body (Firefox)
 ```
 

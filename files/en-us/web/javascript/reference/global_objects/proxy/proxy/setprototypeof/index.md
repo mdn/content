@@ -21,7 +21,7 @@ The **`handler.setPrototypeOf()`** method is a trap for
 
 ```js
 new Proxy(target, {
-  setPrototypeOf: function(target, prototype) {
+  setPrototypeOf(target, prototype) {
   }
 });
 ```

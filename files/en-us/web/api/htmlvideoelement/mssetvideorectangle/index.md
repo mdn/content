@@ -38,7 +38,12 @@ This method does not return a value.
 ## Example
 
 ```js
-HTMLVideoElement.msSetVideoRectangle(left: 2, top: 0, right: 4, bottom: 4);
+HTMLVideoElement.msSetVideoRectangle(
+  2, // left
+  0, // top
+  4, // right
+  4, // bottom
+);
 ```
 
 ## See also

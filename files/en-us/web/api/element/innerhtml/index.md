@@ -114,7 +114,7 @@ const list = document.getElementById("list");
 list.innerHTML += `<li><a href="#">Item ${list.children.length + 1}</a></li>`;
 ```
 
-Please note that using `innerHTML` to append HTML elements (e.g. `el.innerHTML += "<a href='...'>link</a>"`) will result in the removal of any previously set event listeners.
+Please note that using `innerHTML` to append HTML elements (e.g. `el.innerHTML += "<a href='…'>link</a>"`) will result in the removal of any previously set event listeners.
 That is, after you append any HTML element that way you won't be able to listen to the previously set event listeners.
 
 ### Security considerations
@@ -171,7 +171,7 @@ function log(msg) {
   logElem.innerHTML += timeStr + ": " + msg + "<br/>";
 }
 
-log("Logging mouse events inside this container...");
+log("Logging mouse events inside this container…");
 ```
 
 The `log()` function creates the log output by getting the current time from a {{jsxref("Date")}} object using

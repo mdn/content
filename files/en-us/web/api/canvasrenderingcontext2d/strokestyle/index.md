@@ -103,8 +103,10 @@ In WebKit- and Blink-based browsers, the non-standard and deprecated method
 `ctx.setStrokeColor()` is implemented in addition to this property.
 
 ```js
-setStrokeColor(color, optional alpha);
-setStrokeColor(grayLevel, optional alpha);
+setStrokeColor(color);
+setStrokeColor(color,  alpha);
+setStrokeColor(grayLevel);
+setStrokeColor(grayLevel, alpha);
 setStrokeColor(r, g, b, a);
 setStrokeColor(c, m, y, k, a);
 ```

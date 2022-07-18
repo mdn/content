@@ -576,7 +576,7 @@ occurrence of `this` within the code represents a reference to the element.
 
 ```html
 <table id="my_table" onclick="console.log(this.id);"><!-- `this` refers to the table; logs 'my_table' -->
-  ...
+  …
 </table>
 ```
 
@@ -589,7 +589,7 @@ shown in the following example:
   function logID() { console.log(this.id); }
 </script>
 <table id="my_table" onclick="logID();"><!-- when called, `this` will refer to the global object -->
-  ...
+  …
 </table>
 ```
 
@@ -637,10 +637,10 @@ const Something = function(element) {
     console.log(this.name); // 'Something Good', as this is bound to newly created object
     switch(event.type) {
       case 'click':
-        // some code here...
+        // some code here…
         break;
       case 'dblclick':
-        // some code here...
+        // some code here…
         break;
     }
   };
@@ -676,10 +676,10 @@ class SomeClass {
     console.log(this.name);
     switch(e.keyCode) {
       case 5:
-        // some code here...
+        // some code here…
         break;
       case 6:
-        // some code here...
+        // some code here…
         break;
     }
   }
@@ -879,7 +879,7 @@ try {
       {},
       "passive",
       {
-        get: function() { passiveIfSupported = { passive: true }; }
+        get() { passiveIfSupported = { passive: true }; }
       }
     )
   );

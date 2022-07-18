@@ -16,8 +16,8 @@ as they normally do.
 
 In XML, a CDATA section looks like:
 
-```js
-<![CDATA[ ... ]]>
+```xml
+<![CDATA[ … ]]>
 ```
 
 For example:

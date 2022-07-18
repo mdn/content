@@ -77,7 +77,7 @@ async function lightBox(url) {
   lightboxControlsElem.disabled = false;
 }
 
-/* ... */
+// …
 
 function fixRedEyeCommand() {
   if (lightboxElem.style.display === "block" && lightboxImgElem.complete) {

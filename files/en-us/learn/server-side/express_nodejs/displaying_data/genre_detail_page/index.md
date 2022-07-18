@@ -26,12 +26,12 @@ Find the exported `genre_detail()` controller method and replace it with the fol
 exports.genre_detail = function(req, res, next) {
 
     async.parallel({
-        genre: function(callback) {
+        genre(callback) {
             Genre.findById(req.params.id)
               .exec(callback);
         },
 
-        genre_books: function(callback) {
+        genre_books(callback) {
             Book.find({ 'genre': req.params.id })
               .exec(callback);
         },

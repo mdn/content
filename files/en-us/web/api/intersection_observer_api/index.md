@@ -141,7 +141,7 @@ Note that it's possible to have a non-zero intersection rectangle, which can hap
 
 To get a feeling for how thresholds work, try scrolling the box below around. Each colored box within it displays the percentage of itself that's visible in all four of its corners, so you can see these ratios change over time as you scroll the container. Each box has a different set of thresholds:
 
-- The first box has a threshold for each percentage point of visibility; that is, the {{domxref("IntersectionObserver.thresholds")}} array is `[0.00, 0.01, 0.02, ..., 0.99, 1.00]`.
+- The first box has a threshold for each percentage point of visibility; that is, the {{domxref("IntersectionObserver.thresholds")}} array is `[0.00, 0.01, 0.02, /*…,*/ 0.99, 1.00]`.
 - The second box has a single threshold, at the 50% mark.
 - The third box has thresholds every 10% of visibility (0%, 10%, 20%, etc.).
 - The last box has thresholds each 25%.

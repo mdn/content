@@ -37,14 +37,16 @@ You'll see that we are passing it `this` (the custom element itself) as a
 parameter.
 
 ```js
-connectedCallback() {
-  console.log('Custom square element added to page.');
-  updateStyle(this);
-}
+class Square extends HTMLElement {
+  connectedCallback() {
+    console.log('Custom square element added to page.');
+    updateStyle(this);
+  }
 
-attributeChangedCallback(name, oldValue, newValue) {
-  console.log('Custom square element attributes changed.');
-  updateStyle(this);
+  attributeChangedCallback(name, oldValue, newValue) {
+    console.log('Custom square element attributes changed.');
+    updateStyle(this);
+  }
 }
 ```
 

@@ -60,7 +60,7 @@ console.log(Object.keys(anObj)); // console: ['2', '7', '100']
 // getFoo is a property which isn't enumerable
 const myObj = Object.create({}, {
   getFoo: {
-    value: function () { return this.foo; }
+    value() { return this.foo; }
   }
 });
 myObj.foo = 1;

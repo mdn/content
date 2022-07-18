@@ -67,7 +67,7 @@ navigator.getUserMedia({video: true}, function(stream) {
       // send the offer to a server to be forwarded to the friend you're calling.
     }, error);
   }, error);
-}
+});
 ```
 
 ## Specifications

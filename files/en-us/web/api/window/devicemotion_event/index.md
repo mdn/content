@@ -47,9 +47,9 @@ An {{domxref("DeviceMotionEvent")}}. Inherits from {{domxref("Event")}}.
 ```js
 function handleMotionEvent(event) {
 
-    var x = event.accelerationIncludingGravity.x;
-    var y = event.accelerationIncludingGravity.y;
-    var z = event.accelerationIncludingGravity.z;
+    const x = event.accelerationIncludingGravity.x;
+    const y = event.accelerationIncludingGravity.y;
+    const z = event.accelerationIncludingGravity.z;
 
     // Do something awesome.
 }

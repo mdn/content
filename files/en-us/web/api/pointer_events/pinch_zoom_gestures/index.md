@@ -42,7 +42,7 @@ Supporting a two-pointer gesture requires preserving a pointer's event state dur
 
 ```js
 // Global vars to cache event state
-const evCache = new Array();
+const evCache = [];
 const prevDiff = -1;
 ```
 
@@ -210,8 +210,7 @@ function log(prefix, ev) {
   const s = prefix + ": pointerID = " + ev.pointerId +
                 " ; pointerType = " + ev.pointerType +
                 " ; isPrimary = " + ev.isPrimary;
-  o.innerHTML += s + "
-";
+  o.innerHTML += s + "<br>";
 }
 
 function clearLog(event) {

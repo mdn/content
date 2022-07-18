@@ -165,7 +165,7 @@ You can get a `2d` context of the canvas with the following code:
 ```js
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
-console.log(ctx); // CanvasRenderingContext2D { /* ... */ }
+console.log(ctx); // CanvasRenderingContext2D { /* … */ }
 ```
 
 Now you have the [2D rendering context](/en-US/docs/Web/API/CanvasRenderingContext2D) for a canvas and you can draw within it.

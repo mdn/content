@@ -187,7 +187,7 @@ The updatePosition() function updates the position of the ball on the canvas (`x
 ```js
 const tracker = document.getElementById('tracker');
 
-const animation;
+let animation;
 function updatePosition(e) {
   x += e.movementX;
   y += e.movementY;

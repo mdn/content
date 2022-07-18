@@ -57,7 +57,7 @@ What that means to the example code is that, if an element is currently in fulls
 ### JavaScript
 
 ```js
-function fullscreenchanged = (event) => {
+function fullscreenchanged(event) {
   // document.fullscreenElement will point to the element that
   // is in fullscreen mode if there is one. If not, the value
   // of the property is null.

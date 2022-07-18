@@ -233,7 +233,7 @@ that may have performance implications you don't want to deal with:
 
 ```js
 function validateResponse(response) {
-  if (checkAllValues(response) {
+  if (checkAllValues(response)) {
     response.complete("success");
   } else {
     response.complete("fail");
@@ -299,7 +299,7 @@ async function requestPayment() {
     },
   };
   const response = await request.show(updatedDetails);
-  // Check response, etc...
+  // Check response, etc.
 }
 
 document.getElementById("buyButton").onclick = requestPayment;

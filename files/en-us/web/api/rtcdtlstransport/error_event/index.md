@@ -64,7 +64,7 @@ In this example, the {{domxref("RTCDtlsTransport.onerror", "onerror")}} event ha
 transport.onerror = ev => {
   const err = ev.error;
 
-  /* ... */
+  // …
 }
 ```
 

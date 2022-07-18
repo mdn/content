@@ -10,7 +10,7 @@ tags:
   - Reference
   - Security
   - block-all-mixed-content
-browser-compat: http.headers.csp.Content-Security-Policy.block-all-mixed-content
+browser-compat: http.headers.Content-Security-Policy.block-all-mixed-content
 ---
 {{HTTPSidebar}}{{deprecated_header}}
 
