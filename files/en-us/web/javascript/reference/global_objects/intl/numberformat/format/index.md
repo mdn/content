@@ -31,7 +31,7 @@ format(number)
 - `number`
   - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string, to format.
 
-Strings are parsed as _**string** numeric literals_ (as defined by the ECMA-262 "StringNumericLiteral" grammar).
+Strings are parsed as _**string** numeric literals_ (as defined by the ECMA-262 "[StringNumericLiteral](https://tc39.es/ecma262/#prod-StringNumericLiteral)" grammar).
 These support, among other things, the general syntax for decimal strings `#.#E#`, and non-base-10 numbers like hexadecimal and binary.
 String values passed to the `format()` function:
 
