@@ -231,7 +231,7 @@ This phenomenon can be confusing in a situation like the following. The instruct
 `let n of n.a` is already inside the private scope of the for loop's block.
 So, the identifier `n.a` is resolved to the property '`a`' of the
 '`n`' object located in the first part of the instruction itself
-(`let n`).
+(`const n`).
 
 This is still in the temporal dead zone as its declaration statement has not been
 reached and terminated.
