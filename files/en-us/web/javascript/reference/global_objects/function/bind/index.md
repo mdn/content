@@ -42,7 +42,7 @@ arguments (if provided).
 
 The `bind()` function creates a new **bound function**, which is an _exotic function object_ that wraps the original function object (in some sense, this is a [proxy](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) that traps [apply](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply)). Calling the bound function generally results in the execution of its wrapped function.
 
-A bound function, compared to a normal function, will capture the parameters passed — which include the value of `this` and the first few arguments — as its internal state. These values are stored in advance, instead of being passed at call time. You can see `const boundFn = fn.bind(thisArg, arg1, arg2)` as being equivalent to `const boundFn = (...restArgs) => fn.call(thisArg, arg1, arg2, ...restArgs)`.
+A bound function, compared to a normal function, will capture the parameters passed — which include the value of `this` and the first few arguments — as its internal state. These values are stored in advance, instead of being passed at call time. You can generally see `const boundFn = fn.bind(thisArg, arg1, arg2)` as being equivalent to `const boundFn = (...restArgs) => fn.call(thisArg, arg1, arg2, ...restArgs)`.
 
 A bound function may also be constructed using the {{jsxref("Operators/new", "new")}}
 operator. Doing so acts as though the target function had instead been constructed. The
