@@ -59,7 +59,7 @@ new Intl.NumberFormat('en-US').format(1234567891234567891) // 1,234,567,891,234,
 new Intl.NumberFormat('en-US').format(1234567891234567891n) // 1,234,567,891,234,567,891
 ```
 
-You can also pass through very large strings to be formatted as an arbitrary-precision decimal string (if you're _performing calculations) on the data you will still need to work with `BigInt`):
+You can also pass through very large strings to be formatted as an arbitrary-precision decimal string (if you're _performing calculations on the data you will still need to work with `BigInt`):
 
 ```js
 new Intl.NumberFormat('en-US').format("1234567891234567891") // 1,234,567,891,234,567,891
