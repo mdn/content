@@ -1,6 +1,7 @@
 ---
 title: 'RTCPeerConnection: icecandidate event'
 slug: Web/API/RTCPeerConnection/icecandidate_event
+page-type: web-api-event
 tags:
   - API
   - Candidate

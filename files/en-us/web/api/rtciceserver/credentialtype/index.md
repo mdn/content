@@ -1,6 +1,7 @@
 ---
 title: RTCIceServer.credentialType
 slug: Web/API/RTCIceServer/credentialType
+page-type: web-api-instance-property
 tags:
   - Authentication
   - ICE
@@ -26,10 +27,10 @@ The default is `password`.
 
 ```js
 var iceServer = {
-                  ...
-                  credentialType = newCredentialType,
-                  ...
-                };
+  // ...
+  credentialType: newCredentialType,
+  // ...
+};
 
 var credentialType = iceServer.credentialType;
 

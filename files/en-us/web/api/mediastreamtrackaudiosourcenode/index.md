@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrackAudioSourceNode
 slug: Web/API/MediaStreamTrackAudioSourceNode
+page-type: web-api-interface
 browser-compat: api.MediaStreamTrackAudioSourceNode
 ---
 {{APIRef("Web Audio API")}}

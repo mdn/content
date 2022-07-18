@@ -1,11 +1,13 @@
 ---
 title: Constraint validation API
 slug: Web/API/Constraint_validation
+page-type: web-api-overview
 tags:
   - API
   - Constraint validation
   - Landing
   - Reference
+browser-compat: api.ValidityState
 ---
 {{apiref()}}
 
@@ -106,7 +108,11 @@ In brief:
 
 ## Specifications
 
-{{Specifications("api.ValidityState")}}
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

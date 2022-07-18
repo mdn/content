@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.pageY
 slug: Web/API/MouseEvent/pageY
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

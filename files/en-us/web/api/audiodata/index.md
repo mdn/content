@@ -1,6 +1,7 @@
 ---
 title: AudioData
 slug: Web/API/AudioData
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -37,17 +38,17 @@ In planar format, the number of planes is equal to {{domxref("AudioData.numberOf
 
 ## Properties
 
-- {{domxref("AudioData.format")}}{{ReadOnlyInline}}
+- {{domxref("AudioData.format")}} {{ReadOnlyInline}}
   - : Returns the sample format of the audio.
-- {{domxref("AudioData.sampleRate")}}{{ReadOnlyInline}}
+- {{domxref("AudioData.sampleRate")}} {{ReadOnlyInline}}
   - : Returns the sample rate of the audio in Hz.
-- {{domxref("AudioData.numberOfFrames")}}{{ReadOnlyInline}}
+- {{domxref("AudioData.numberOfFrames")}} {{ReadOnlyInline}}
   - : Returns the number of frames.
-- {{domxref("AudioData.numberOfChannels")}}{{ReadOnlyInline}}
+- {{domxref("AudioData.numberOfChannels")}} {{ReadOnlyInline}}
   - : Returns the number of audio channels.
-- {{domxref("AudioData.duration")}}{{ReadOnlyInline}}
+- {{domxref("AudioData.duration")}} {{ReadOnlyInline}}
   - : Returns the duration of the audio in microseconds.
-- {{domxref("AudioData.timestamp")}}{{ReadOnlyInline}}
+- {{domxref("AudioData.timestamp")}} {{ReadOnlyInline}}
   - : Returns the timestamp of the audio in microseconds.
 
 ## Methods

@@ -15,4 +15,4 @@ tags:
 - {{interwiki("wikipedia", "MathML", "MathML")}} on Wikipedia
 - [MathML](/en-US/docs/Web/MathML)
 - [Authoring MathML](/en-US/docs/Web/MathML/Authoring)
-- [What is MathML](http://www.w3.org/Math/whatIsMathML.html)
+- [What is MathML](https://www.w3.org/Math/whatIsMathML.html)

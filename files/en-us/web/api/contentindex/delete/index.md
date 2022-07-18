@@ -1,6 +1,7 @@
 ---
 title: ContentIndex.delete()
 slug: Web/API/ContentIndex/delete
+page-type: web-api-instance-method
 tags:
   - Content
   - Content Index API
@@ -11,9 +12,10 @@ tags:
   - content index
   - content indexing
   - delete
+  - Experimental
 browser-compat: api.ContentIndex.delete
 ---
-{{DefaultAPISidebar("Content Index API")}}
+{{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The **`delete()`** method of the
 {{domxref("ContentIndex")}} interface unregisters an item from the currently indexed
@@ -25,7 +27,7 @@ content.
 ## Syntax
 
 ```js
-ContentIndex.delete(id).then(...);
+ContentIndex.delete(id).then(/* … */);
 ```
 
 ### Parameters
@@ -64,7 +66,7 @@ async function unregisterContent(article) {
 ```
 
 The `delete` method can also be used within the
-{{domxref('ServiceWorker','service worker')}} scope.
+[service worker](/en-US/docs/Web/API/ServiceWorker) scope.
 
 ```js
 self.registration.index.delete('my-id');
@@ -80,9 +82,6 @@ self.registration.index.delete('my-id');
 
 ## See also
 
-- [An introductory article on the
-  Content Index API](https://web.dev/content-indexing-api/)
-- [An app which uses the Content Index API to list
-  and remove 'save for later' content](https://contentindex.dev/)
-- [Service Worker API, along with
-  information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)
+- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
+- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
+- [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

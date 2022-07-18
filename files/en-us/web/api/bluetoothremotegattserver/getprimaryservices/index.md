@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTServer.getPrimaryServices()
 slug: Web/API/BluetoothRemoteGATTServer/getPrimaryServices
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth

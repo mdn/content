@@ -8,9 +8,12 @@ tags:
   - ARIA property
   - aria-description
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-description
 ---
 
 The global `aria-description` attribute defines a string value that describes or annotates the current element.
+
+> **Note:** `aria-description` is still in W3C Editor's Draft for ARIA 1.3. For the time being, continue to use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby), which has been supported since ARIA 1.1.
 
 ## Description
 
@@ -21,7 +24,7 @@ The global `aria-description` attribute provides a mechanism for the developer t
      aria-description="Game schedule for the Boston Red Sox 2021 Season">
     <h1>Red Sox 2021</h1>
     <div role="grid">
-        ...
+      …
     </div>
 </div>
 ```
@@ -50,9 +53,7 @@ Used in **ALL** roles.
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-description","ARIA: aria-description Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

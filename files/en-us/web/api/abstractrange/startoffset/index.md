@@ -1,6 +1,7 @@
 ---
 title: AbstractRange.startOffset
 slug: Web/API/AbstractRange/startOffset
+page-type: web-api-instance-property
 tags:
   - Property
   - Read-only

@@ -1,6 +1,7 @@
 ---
 title: PerformanceNavigation
 slug: Web/API/PerformanceNavigation
+page-type: web-api-interface
 tags:
   - API
   - Backwards compatibility

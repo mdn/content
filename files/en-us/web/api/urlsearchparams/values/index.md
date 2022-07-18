@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.values()
 slug: Web/API/URLSearchParams/values
+page-type: web-api-instance-method
 tags:
   - API
   - Iterator

@@ -1,6 +1,7 @@
 ---
 title: ReportingObserver
 slug: Web/API/ReportingObserver
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -25,11 +26,11 @@ _This interface has no properties defined on it._
 
 ## Methods
 
-- {{domxref("ReportingObserver.disconnect()")}}
+- {{domxref("ReportingObserver.disconnect()")}} {{experimental_inline}}
   - : Stops a reporting observer that had previously started observing from collecting reports.
-- {{domxref("ReportingObserver.observe()")}}
+- {{domxref("ReportingObserver.observe()")}} {{experimental_inline}}
   - : Instructs a reporting observer to start collecting reports in its report queue.
-- {{domxref("ReportingObserver.takeRecords()")}}
+- {{domxref("ReportingObserver.takeRecords()")}} {{experimental_inline}}
   - : Returns the current list of reports contained in the observer's report queue, and empties the queue.
 
 ## Events

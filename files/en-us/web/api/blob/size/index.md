@@ -1,6 +1,7 @@
 ---
 title: Blob.size
 slug: Web/API/Blob/size
+page-type: web-api-instance-property
 tags:
   - API
   - Blob
@@ -29,7 +30,7 @@ lengths in bytes.
 
 ```html
 <input type="file" id="input" multiple>
-<output id="output">Choose files...</output>
+<output id="output">Choose files…</output>
 ```
 
 ```css hidden
@@ -56,7 +57,7 @@ input.addEventListener('change', (event) => {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 
@@ -69,5 +70,4 @@ input.addEventListener('change', (event) => {
 ## See also
 
 - {{domxref("Blob")}}
-- [Using files
-  from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)

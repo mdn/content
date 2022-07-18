@@ -71,7 +71,7 @@ html, body, svg {
   - : This value specifies the length of the simple duration. The value must be greater than 0 and can be expressed with hours (`h`), minutes (`m`), seconds (`s`) or milliseconds (`ms`). It's possible to combine those time representations to create some complex durations like `hh:mm:ss.iii` or `mm:ss.iii`.
 - `media`
   - : This value specifies the simple duration as the intrinsic media duration. This is only valid for elements that define media.
-    (For [animation elements](/en-US/docs/Web/SVG/Element#Animation_elements) the attribute will be ignored if `media` is specified.)
+    (For [animation elements](/en-US/docs/Web/SVG/Element#animation_elements) the attribute will be ignored if `media` is specified.)
 - `indefinite`
   - : This value specifies the simple duration as indefinite.
 

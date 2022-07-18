@@ -1,6 +1,7 @@
 ---
 title: XRFrame
 slug: Web/API/XRFrame
+page-type: web-api-interface
 tags:
   - 3D
   - API

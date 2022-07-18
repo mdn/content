@@ -1,6 +1,7 @@
 ---
 title: XRMediaBinding
 slug: Web/API/XRMediaBinding
+page-type: web-api-interface
 tags:
   - API
   - Interface

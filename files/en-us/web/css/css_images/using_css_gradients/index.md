@@ -462,7 +462,7 @@ div {
 
 #### Example: closest-side for circles
 
-This example uses `closest-side`, which makes the circle's size to be the distance between the starting point (the center) and the closest side. The circle's radius is the distance between the center of the gradient and the closest edge, which due to the positioning of the 25% from the top and 25% from the bottom, is closest to the bottom, since the height in this case is narrower than the width.
+This example uses `closest-side`, which makes the circle's radius to be the distance between the center of the gradient and the closest side. In this case the radius is the distance between the center and the bottom edge, because the gradient is placed 25% from the left and 25% from the bottom, and the div element's height is smaller than the width.
 
 ```html hidden
 <div class="radial-circle-close"></div>

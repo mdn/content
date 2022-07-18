@@ -1,6 +1,7 @@
 ---
 title: 'RTCPeerConnection: connectionstatechange event'
 slug: Web/API/RTCPeerConnection/connectionstatechange_event
+page-type: web-api-event
 tags:
   - Event
   - RTCPeerConnection

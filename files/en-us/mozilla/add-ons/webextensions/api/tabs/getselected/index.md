@@ -32,7 +32,7 @@ let gettingSelected = browser.tabs.getSelected(
 
 ### Parameters
 
-- `windowId`{{optional_inline}}
+- `windowId` {{optional_inline}}
   - : `integer`. Defaults to the current window.
 
 ### Return value

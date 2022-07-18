@@ -1,6 +1,7 @@
 ---
 title: Controlling multiple parameters with ConstantSourceNode
 slug: Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode
+page-type: guide
 tags:
   - Audio
   - Example
@@ -11,7 +12,7 @@ tags:
   - Web Audio
   - Web Audio API
 ---
-{{APIRef("Web Audio API")}}
+{{DefaultAPISidebar("Web Audio API")}}
 
 This article demonstrates how to use a {{domxref("ConstantSourceNode")}} to link multiple parameters together so they share the same value, which can be changed by setting the value of the {{domxref("ConstantSourceNode.offset")}} parameter.
 
@@ -143,7 +144,7 @@ These variables are:
 - `playing`
   - : A boolean value that we'll use to keep track of whether or not we're currently playing the tones.
 
-Now let's look at the `setup()` function, which is our handler for the window's {{event("load")}} event; it handles all the initialization tasks that require the DOM to be in place.
+Now let's look at the `setup()` function, which is our handler for the window's {{domxref("Window/load_event", "load")}} event; it handles all the initialization tasks that require the DOM to be in place.
 
 ```js
 function setup() {
@@ -179,7 +180,7 @@ window.addEventListener("load", setup, false);
 
 First, we get access to the window's {{domxref("AudioContext")}}, stashing the reference in `context`. Then we get references to the control widgets, setting `playButton` to reference the play button and `volumeControl` to reference the slider control that the user will use to adjust the gain on the linked pair of oscillators.
 
-Then we assign a handler for the play button's {{event("click")}} event (see [Toggling the oscillators on and off](#toggling_the_oscillators_on_and_off) for more on the `togglePlay()` method), and for the volume slider's {{event("input")}} event (see [Controlling the linked oscillators](#controlling_the_linked_oscillators) to see the very short `changeVolume()` method).
+Then we assign a handler for the play button's {{domxref("Element/click_event", "click")}} event (see [Toggling the oscillators on and off](#toggling_the_oscillators_on_and_off) for more on the `togglePlay()` method), and for the volume slider's {{domxref("HTMLElement/input_event", "input")}} event (see [Controlling the linked oscillators](#controlling_the_linked_oscillators) to see the very short `changeVolume()` method).
 
 Next, the {{domxref("GainNode")}} `gainNode1` is created to handle the volume for the non-linked oscillator (`oscNode1`). We set that gain to 0.5. We also create `gainNode2` and `gainNode3`, setting their values to match `gainNode1`, then set the value of the volume slider to the same value, so it is synchronized with the gain level it controls.
 
@@ -187,7 +188,7 @@ Once all the gain nodes are created, we create the {{domxref("ConstantSourceNode
 
 Finally, we connect all the gain nodes to the {{domxref("AudioContext")}}'s {{domxref("BaseAudioContext/destination", "destination")}}, so that any sound delivered to the gain nodes will reach the output, whether that output be speakers, headphones, a recording stream, or any other destination type.
 
-After setting the window's {{event("load")}} event handler to be the `setup()` function, the stage is set. Let's see how the action plays out.
+After setting the window's {{domxref("Window/load_event", "load")}} event handler to be the `setup()` function, the stage is set. Let's see how the action plays out.
 
 #### Toggling the oscillators on and off
 

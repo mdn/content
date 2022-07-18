@@ -1,6 +1,7 @@
 ---
 title: Timing element visibility with the Intersection Observer API
 slug: Web/API/Intersection_Observer_API/Timing_element_visibility
+page-type: guide
 tags:
   - API
   - Example
@@ -479,7 +480,7 @@ function loadRandomAd(replaceBox) {
     {
       bgcolor: "lightgrey",
       title: "3.14 Shades of Gray: A novel",
-      body: "Love really does make the world go round..."
+      body: "Love really does make the world go round…"
     },
     {
       bgcolor: "#fee",

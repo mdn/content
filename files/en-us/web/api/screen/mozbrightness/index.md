@@ -1,6 +1,7 @@
 ---
 title: Screen.mozBrightness
 slug: Web/API/Screen/mozBrightness
+page-type: web-api-instance-property
 tags:
   - API
   - API:Mozilla Extensions

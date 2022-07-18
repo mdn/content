@@ -1,6 +1,7 @@
 ---
 title: XRCPUDepthInformation.getDepthInMeters()
 slug: Web/API/XRCPUDepthInformation/getDepthInMeters
+page-type: web-api-instance-method
 tags:
   - API
   - AR

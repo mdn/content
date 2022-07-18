@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnectionIceEvent
 slug: Web/API/RTCPeerConnectionIceEvent
+page-type: web-api-interface
 tags:
   - API
   - Experimental

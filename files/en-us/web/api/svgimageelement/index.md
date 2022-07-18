@@ -1,6 +1,7 @@
 ---
 title: SVGImageElement
 slug: Web/API/SVGImageElement
+page-type: web-api-interface
 tags:
   - API
   - Image

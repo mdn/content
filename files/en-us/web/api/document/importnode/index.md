@@ -1,6 +1,7 @@
 ---
 title: Document.importNode()
 slug: Web/API/Document/importNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

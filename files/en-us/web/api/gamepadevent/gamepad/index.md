@@ -1,6 +1,7 @@
 ---
 title: GamepadEvent.gamepad
 slug: Web/API/GamepadEvent/gamepad
+page-type: web-api-instance-property
 tags:
   - API
   - Gamepad API

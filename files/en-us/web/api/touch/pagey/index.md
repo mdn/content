@@ -1,6 +1,7 @@
 ---
 title: Touch.pageY
 slug: Web/API/Touch/pageY
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -36,13 +37,12 @@ are accessed via the event's {{domxref("TouchEvent.changedTouches")}} list.
 
 ```js
 // Register a touchmove listeners for the 'source' element
-var src = document.getElementById("source");
+const src = document.getElementById("source");
 
 src.addEventListener('touchmove', function(e) {
   // Iterate through the touch points that have moved and log each
   // of the pageX/Y coordinates. The unit of each coordinate is CSS pixels.
-  var i;
-  for (i=0; i < e.changedTouches.length; i++) {
+  for (let i = 0; i < e.changedTouches.length; i++) {
     console.log("touchpoint[" + i + "].pageX = " + e.changedTouches[i].pageX);
     console.log("touchpoint[" + i + "].pageY = " + e.changedTouches[i].pageY);
   }

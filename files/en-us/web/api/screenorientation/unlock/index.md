@@ -1,6 +1,7 @@
 ---
 title: ScreenOrientation.unlock()
 slug: Web/API/ScreenOrientation/unlock
+page-type: web-api-instance-method
 tags:
   - API
   - Orientation
@@ -29,7 +30,7 @@ None.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

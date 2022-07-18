@@ -19,7 +19,7 @@ The **`handler.has()`** method is a trap for the
 
 ```js
 new Proxy(target, {
-  has: function(target, prop) {
+  has(target, prop) {
   }
 });
 ```
@@ -70,7 +70,7 @@ The following code traps the {{jsxref("Operators/in", "in")}} operator.
 
 ```js
 const p = new Proxy({}, {
-  has: function(target, prop) {
+  has(target, prop) {
     console.log('called: ' + prop);
     return true;
   }
@@ -87,7 +87,7 @@ const obj = { a: 10 };
 Object.preventExtensions(obj);
 
 const p = new Proxy(obj, {
-  has: function(target, prop) {
+  has(target, prop) {
     return false;
   }
 });

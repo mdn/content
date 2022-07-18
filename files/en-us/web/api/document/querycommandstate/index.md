@@ -1,6 +1,7 @@
 ---
 title: Document.queryCommandState()
 slug: Web/API/Document/queryCommandState
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -15,7 +16,7 @@ The **`queryCommandState()`** method will tell you if the current selection has 
 ## Syntax
 
 ```js
-queryCommandState(String command)
+queryCommandState(command)
 ```
 
 ### Parameters

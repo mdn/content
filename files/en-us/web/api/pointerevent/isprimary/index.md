@@ -1,6 +1,7 @@
 ---
 title: PointerEvent.isPrimary
 slug: Web/API/PointerEvent/isPrimary
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

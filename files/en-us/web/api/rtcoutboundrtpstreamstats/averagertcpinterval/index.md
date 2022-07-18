@@ -1,6 +1,7 @@
 ---
 title: RTCOutboundRtpStreamStats.averageRtcpInterval
 slug: Web/API/RTCOutboundRtpStreamStats/averageRtcpInterval
+page-type: web-api-instance-property
 tags:
   - API
   - Media

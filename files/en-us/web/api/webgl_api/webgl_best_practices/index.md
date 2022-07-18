@@ -1,6 +1,7 @@
 ---
 title: WebGL best practices
 slug: Web/API/WebGL_API/WebGL_best_practices
+page-type: guide
 tags:
   - 2D
   - 3D
@@ -546,7 +547,7 @@ function clientWaitAsync(gl, sync, flags, interval_ms) {
       }
       resolve();
     }
-    test());
+    test();
   });
 }
 

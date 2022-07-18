@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognitionErrorEvent.message
 slug: Web/API/SpeechRecognitionErrorEvent/message
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

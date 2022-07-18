@@ -1,6 +1,7 @@
 ---
 title: PushMessageData.blob()
 slug: Web/API/PushMessageData/blob
+page-type: web-api-instance-method
 tags:
   - API
   - Blob
@@ -34,7 +35,7 @@ A {{domxref("Blob")}}.
 
 ```js
 self.addEventListener('push', function(event) {
-  var blob = event.data.blob();
+  const blob = event.data.blob();
 
   // do something with your Blob
 });

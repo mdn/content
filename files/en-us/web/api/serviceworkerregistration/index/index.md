@@ -1,6 +1,7 @@
 ---
 title: ServiceWorkerRegistration.index
 slug: Web/API/ServiceWorkerRegistration/index
+page-type: web-api-instance-property
 tags:
   - Content
   - Content Index API
@@ -43,7 +44,7 @@ if ('index' in registration) {
 }
 ```
 
-From the [service worker](/ja/docs/Web/API/ServiceWorker):
+From the [service worker](/en-US/docs/Web/API/ServiceWorker):
 
 ```js
 // service worker script
@@ -62,7 +63,5 @@ const contentIndex = self.registration.index;
 ## See also
 
 - {{domxref("Content Index API")}}
-- [An introductory article on the
-  Content Index API](https://web.dev/content-indexing-api/)
-- [An app which uses the Content Index API to list
-  and remove 'save for later' content](https://contentindex.dev/)
+- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
+- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)

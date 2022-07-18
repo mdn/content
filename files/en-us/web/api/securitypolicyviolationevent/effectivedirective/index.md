@@ -1,6 +1,7 @@
 ---
 title: SecurityPolicyViolationEvent.effectiveDirective
 slug: Web/API/SecurityPolicyViolationEvent/effectiveDirective
+page-type: web-api-instance-property
 tags:
   - API
   - CSP

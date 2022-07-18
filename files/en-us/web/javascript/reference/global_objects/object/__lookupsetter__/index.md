@@ -45,7 +45,7 @@ It is now possible to do this in a standardized way using
 ### Standard-compliant and non-standard ways to get a property setter
 
 ```js
-var obj = {
+const obj = {
   set foo(value) {
     this.bar = value;
   }

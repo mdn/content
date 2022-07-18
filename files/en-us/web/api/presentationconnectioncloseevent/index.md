@@ -1,6 +1,7 @@
 ---
 title: PresentationConnectionCloseEvent
 slug: Web/API/PresentationConnectionCloseEvent
+page-type: web-api-interface
 tags:
   - API
   - Experimental

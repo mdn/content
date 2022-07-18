@@ -1,6 +1,7 @@
 ---
 title: AudioTrackList.length
 slug: Web/API/AudioTrackList/length
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

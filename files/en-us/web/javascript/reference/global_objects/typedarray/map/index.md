@@ -17,7 +17,7 @@ The **`map()`** method creates a new typed array with the
 results of calling a provided function on every element in this typed array. This method
 has the same algorithm as {{jsxref("Array.prototype.map()")}}_._
 _TypedArray_ is one of the
-[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-map.html")}}
 

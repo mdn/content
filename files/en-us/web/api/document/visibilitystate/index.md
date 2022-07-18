@@ -1,6 +1,7 @@
 ---
 title: Document.visibilityState
 slug: Web/API/Document/visibilityState
+page-type: web-api-instance-property
 tags:
   - DOM
   - Document
@@ -54,7 +55,7 @@ var string = document.visibilityState
 ```js
 document.addEventListener("visibilitychange", function() {
   console.log( document.visibilityState );
-  // Modify behavior...
+  // Modify behavior…
 })
 ```
 

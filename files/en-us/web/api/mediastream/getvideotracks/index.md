@@ -1,6 +1,7 @@
 ---
 title: MediaStream.getVideoTracks()
 slug: Web/API/MediaStream/getVideoTracks
+page-type: web-api-instance-method
 tags:
   - API
   - Media
@@ -53,7 +54,7 @@ retrieve a track for passing to the {{domxref("ImageCapture.ImageCapture",
   "ImageCapture()")}} constructor.
 
 ```js
-var imageCapture;
+let imageCapture;
 
 navigator.mediaDevices.getUserMedia({video: true})
 .then(mediaStream => {

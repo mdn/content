@@ -1,6 +1,7 @@
 ---
 title: Animation.play()
 slug: Web/API/Animation/play
+page-type: web-api-instance-method
 tags:
   - API
   - Animation

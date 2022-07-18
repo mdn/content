@@ -36,7 +36,13 @@ font-family: examplefont;
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<family-name>
+
+<family-name> =
+  <string>        |
+  <custom-ident>+
+```
 
 ## Examples
 

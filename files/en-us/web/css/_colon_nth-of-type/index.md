@@ -14,13 +14,7 @@ browser-compat: css.selectors.nth-of-type
 
 The **`:nth-of-type()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among siblings of the same type (tag name).
 
-```css
-/* Selects every fourth <p> element
-   among any group of siblings */
-p:nth-of-type(4n) {
-  color: lime;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-of-type.html", "tabbed-shorter")}}
 
 ## Syntax
 
@@ -28,9 +22,9 @@ The `nth-of-type` pseudo-class is specified with a single argument, which repres
 
 See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
 
-### Formal syntax
-
-{{csssyntax}}
+```
+:nth-of-type( <an-plus-b> | even | odd )
+```
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: 'TextTrackList: change event'
 slug: Web/API/TextTrackList/change_event
+page-type: web-api-event
 tags:
   - Event
   - TextTrack

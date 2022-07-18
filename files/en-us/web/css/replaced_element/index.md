@@ -47,7 +47,7 @@ Note that some replaced elements, but not all, have intrinsic dimensions or a de
 
 ### Controlling object position within the content box
 
-Certain CSS properties can be used to specify how the object contained within the replaced element should be positioned within the element's box area. These are defined by the {{SpecName("CSS3 Images")}} and {{SpecName("CSS4 Images")}} specifications:
+Certain CSS properties can be used to specify how the object contained within the replaced element should be positioned within the element's box area. These are defined by the [CSS Images](https://drafts.csswg.org/css-images/) specification:
 
 - {{cssxref("object-fit")}}
   - : Specifies how the replaced element's content object should be fitted to the containing element's box.

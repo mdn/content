@@ -1,5 +1,5 @@
 ---
-title: 'aria-orientation'
+title: aria-orientation
 slug: Web/Accessibility/ARIA/Attributes/aria-orientation
 tags:
   - Accessibility
@@ -8,8 +8,8 @@ tags:
   - ARIA property
   - aria-orientation
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-orientation
 ---
-
 The `aria-orientation` attribute indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
 
 ## Description
@@ -72,15 +72,13 @@ Inherited into roles:
 - [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
 - [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role)
 - [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role)
-- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)
+- [`radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role)
 - [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role)
 - [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-orientation","ARIA: aria-orientation Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

@@ -1,6 +1,7 @@
 ---
 title: DynamicsCompressorNode.reduction
 slug: Web/API/DynamicsCompressorNode/reduction
+page-type: web-api-instance-property
 tags:
   - API
   - DynamicsCompressorNode

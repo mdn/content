@@ -1,6 +1,7 @@
 ---
 title: RTCDTMFToneChangeEvent
 slug: Web/API/RTCDTMFToneChangeEvent
+page-type: web-api-interface
 tags:
   - DTMF
   - Reference

@@ -1,6 +1,7 @@
 ---
 title: Navigator.mimeTypes
 slug: Web/API/Navigator/mimeTypes
+page-type: web-api-instance-property
 tags:
   - API
   - Property

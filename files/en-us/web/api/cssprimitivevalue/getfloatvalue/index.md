@@ -1,6 +1,7 @@
 ---
 title: CSSPrimitiveValue.getFloatValue()
 slug: Web/API/CSSPrimitiveValue/getFloatValue
+page-type: web-api-instance-method
 tags:
   - API
   - CSSPrimitiveValue
@@ -32,7 +33,7 @@ getFloatValue(unit)
 
 ### Parameters
 
-- unitType
+- `unit`
 
   - : An `unsigned short` representing the code for the unit type, in which the
     value should be returned. Valid values are:

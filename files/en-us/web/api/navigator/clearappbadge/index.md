@@ -1,6 +1,7 @@
 ---
 title: Navigator.clearAppBadge()
 slug: Web/API/Navigator/clearAppBadge
+page-type: web-api-instance-method
 tags:
   - API
   - Badging API

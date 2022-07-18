@@ -15,7 +15,9 @@ The **`:past`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Ps
 
 ## Syntax
 
-{{csssyntax}}
+```
+:past
+```
 
 ## Examples
 

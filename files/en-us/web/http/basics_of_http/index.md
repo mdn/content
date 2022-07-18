@@ -20,8 +20,8 @@ HTTP is an extensible protocol that relies on concepts like resources and Unifor
   - : A brief introduction to the concept of resources, identifiers, and locations on the web.
 - [Identifying resources on the Web](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
   - : Describes how web resources are referenced and how to locate them.
-- [Data URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
-  - : A specific kind of URI that directly embeds the resource it represents. Data URIs are very convenient, but have some caveats.
+- [Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
+  - : A specific kind of URI that directly embeds the resource it represents. Data URLs are very convenient, but have some caveats.
 - [Resource URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Resource_URLs) {{Non-standard_Inline}}
   - : Resource URLs, those prefixed with the `resource` scheme are used by Firefox and Firefox browser extensions to load resources internally, but is also available to some sites the browser connects to as well.
 - [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)

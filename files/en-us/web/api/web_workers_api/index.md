@@ -1,11 +1,13 @@
 ---
 title: Web Workers API
 slug: Web/API/Web_Workers_API
+page-type: web-api-overview
 tags:
   - API
   - Overview
   - Reference
   - Web Workers
+spec-urls: https://html.spec.whatwg.org/multipage/workers.html#workers
 ---
 {{DefaultAPISidebar("Web Workers API")}}
 
@@ -39,7 +41,7 @@ Workers run in a different global context than the current {{DOMxRef("window")}}
 - {{domxref("SharedWorkerGlobalScope")}} for shared workers
 - {{domxref("ServiceWorkerGlobalScope")}} for [service workers](/en-US/docs/Web/API/Service_Worker_API)
 
-Some of the functions (a subset) that are common to all workers and to the main thread (from `WindowOrWorkerGlobalScope`) are: {{domxref("atob", "atob()")}}, {{domxref("btoa", "btoa()")}}, {{domxref("clearInterval", "clearInterval()")}}, {{domxref("clearTimeout()")}},{{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}, {{domxref("setInterval()")}}, {{domxref("setTimeout()")}}.
+Some of the functions (a subset) that are common to all workers and to the main thread (from `WindowOrWorkerGlobalScope`) are: {{domxref("atob", "atob()")}}, {{domxref("btoa", "btoa()")}}, {{domxref("clearInterval", "clearInterval()")}}, {{domxref("clearTimeout()")}}, {{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}, {{domxref("setInterval()")}}, {{domxref("setTimeout()")}}.
 
 The following functions are **only** available to workers:
 
@@ -50,7 +52,7 @@ The following functions are **only** available to workers:
 
 > **Note:** If a listed API is supported by a platform in a particular version, then it can generally be assumed to be available in web workers. You can also test support for a particular object/function using the site: <https://worker-playground.glitch.me/>
 
-The following Web APIs are available to workers: {{domxref("Barcode_Detection_API","Barcode Detection API")}}, {{domxref("Broadcast_Channel_API","Broadcast Channel API")}}, {{domxref("Cache", "Cache API")}}, {{domxref("Channel_Messaging_API", "Channel Messaging API")}},{{domxref("Console API", "Console API")}}, [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) ({{domxref("Crypto")}}), {{domxref("CustomEvent")}}, {{domxref("Encoding_API", "Encoding API")}} ({{domxref("TextEncoder")}}, {{domxref("TextDecoder")}}, etc.), {{domxref("Fetch_API", "Fetch API")}}, {{domxref("FileReader")}}, {{domxref("FileReaderSync")}} (only works in workers!), {{domxref("FormData")}}, {{domxref("ImageData")}}, {{domxref("IndexedDB_API", "IndexedDB")}}, [Network Information API](/en-US/docs/Web/API/Network_Information_API), {{domxref("Notifications_API", "Notifications API")}}, {{domxref("Performance_API","Performance API")}} (including: {{domxref("Performance")}}, {{domxref("PerformanceEntry")}}, {{domxref("PerformanceMeasure")}}, {{domxref("PerformanceMark")}}, {{domxref("PerformanceObserver")}}, {{domxref("PerformanceResourceTiming")}}), {{jsxref("Promise")}}, [Server-sent events](/en-US/docs/Web/API/Server-sent_events), {{domxref("ServiceWorkerRegistration")}}, {{ domxref("URL_API","URL API") }} (e.g. {{ domxref("URL") }}), [WebGL](/en-US/docs/Web/API/WebGL_API) with {{domxref("OffscreenCanvas")}} (enabled behind a feature preference setting `gfx.offscreencanvas.enabled`), {{domxref("WebSocket")}}, {{domxref("XMLHttpRequest")}}.
+The following Web APIs are available to workers: {{domxref("Barcode_Detection_API","Barcode Detection API")}}, {{domxref("Broadcast_Channel_API","Broadcast Channel API")}}, {{domxref("Cache", "Cache API")}}, {{domxref("Channel_Messaging_API", "Channel Messaging API")}}, {{domxref("Console API", "Console API")}}, [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) ({{domxref("Crypto")}}), {{domxref("CustomEvent")}}, {{domxref("Encoding_API", "Encoding API")}} ({{domxref("TextEncoder")}}, {{domxref("TextDecoder")}}, etc.), {{domxref("Fetch_API", "Fetch API")}}, {{domxref("FileReader")}}, {{domxref("FileReaderSync")}} (only works in workers!), {{domxref("FormData")}}, {{domxref("ImageData")}}, {{domxref("IndexedDB_API", "IndexedDB")}}, [Network Information API](/en-US/docs/Web/API/Network_Information_API), {{domxref("Notifications_API", "Notifications API")}}, {{domxref("Performance_API","Performance API")}} (including: {{domxref("Performance")}}, {{domxref("PerformanceEntry")}}, {{domxref("PerformanceMeasure")}}, {{domxref("PerformanceMark")}}, {{domxref("PerformanceObserver")}}, {{domxref("PerformanceResourceTiming")}}), {{jsxref("Promise")}}, [Server-sent events](/en-US/docs/Web/API/Server-sent_events), {{domxref("ServiceWorkerRegistration")}}, {{ domxref("URL_API","URL API") }} (e.g. {{ domxref("URL") }}), [WebGL](/en-US/docs/Web/API/WebGL_API) with {{domxref("OffscreenCanvas")}} (enabled behind a feature preference setting `gfx.offscreencanvas.enabled`), {{domxref("WebSocket")}}, {{domxref("XMLHttpRequest")}}.
 
 Workers can also spawn other workers, so these APIs are also available: {{domxref("Worker")}}, {{domxref("WorkerGlobalScope")}}, {{domxref("WorkerLocation")}}, {{domxref("WorkerNavigator")}}.
 
@@ -76,15 +78,13 @@ Workers can also spawn other workers, so these APIs are also available: {{domxre
 We have created a couple of simple demos to show basic usage:
 
 - [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
-- [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](https://mdn.github.io/simple-shared-worker/)).
+- [Basic shared worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)).
 
 You can find out more information on how these demos work in [Using Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
 
 ## Specifications
 
-| Specification                                                                                 |
-| --------------------------------------------------------------------------------------------- |
-| [HTML Living Standard # workers](https://html.spec.whatwg.org/multipage/workers.html#workers) |
+{{Specifications}}
 
 ## See also
 

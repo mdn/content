@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onerror
 slug: Web/API/GlobalEventHandlers/onerror
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -12,11 +13,11 @@ browser-compat: api.GlobalEventHandlers.onerror
 ---
 {{ApiRef("HTML DOM")}}
 
-The **`onerror`** property of the {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that processes {{event("error")}} events.
+The **`onerror`** property of the {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that processes `error` events.
 
 Error events are fired at various targets for different kinds of errors:
 
-- When a **JavaScript runtime error** (including syntax errors and exceptions thrown within handlers) occurs, an [`error`](/en-US/docs/Web/API/Element/error_event) event using interface {{domxref("ErrorEvent")}} is fired at {{domxref("window")}} and `window.onerror()` is invoked (as well as handlers attached by {{domxref("EventTarget.addEventListener")}} (not only capturing)).
+- When a **JavaScript runtime error** (including syntax errors and exceptions thrown within handlers) occurs, an [`error`](/en-US/docs/Web/API/Window/error_event) event using interface {{domxref("ErrorEvent")}} is fired at {{domxref("window")}} and `window.onerror()` is invoked (as well as handlers attached by {{domxref("EventTarget.addEventListener")}} (not only capturing)).
 - When a resource (such as an {{HTMLElement("img")}} or {{HTMLElement("script")}}) **fails to load**, an [`error`](/en-US/docs/Web/API/Element/error_event) event using interface {{domxref("Event")}} is fired at the element that initiated the load, and the `onerror()` handler on the element is invoked. These error events do not bubble up to window, but can be handled with a {{domxref("EventTarget.addEventListener")}} configured with `useCapture` set to `true`.
 
 Installing a global `error` event handler is useful for automated collection of error reports.
@@ -28,7 +29,7 @@ For historical reasons, different arguments are passed to `window.onerror` and `
 ### window\.onerror
 
 ```js
-window.onerror = function(message, source, lineno, colno, error) { /* ... */ };
+window.onerror = function(message, source, lineno, colno, error) { /* … */ };
 ```
 
 Function parameters:
@@ -44,7 +45,7 @@ When the function returns `true`, this prevents the firing of the default event 
 ### window\.addEventListener('error')
 
 ```js
-window.addEventListener('error', function(event) { /* ... */ })
+window.addEventListener('error', function(event) { /* … */ })
 ```
 
 `event` of type {{domxref("ErrorEvent")}} contains all the information about the event and the error.
@@ -52,7 +53,7 @@ window.addEventListener('error', function(event) { /* ... */ })
 ### element.onerror
 
 ```js
-element.onerror = function(event) { /* ... */ }
+element.onerror = function(event) { /* … */ }
 ```
 
 `element.onerror` accepts a function with a single argument of type {{domxref("Event")}}.
@@ -71,12 +72,12 @@ When an error occurs in a script, loaded from a [different origin](/en-US/docs/W
 
 ```js
 window.onerror = function (msg, url, lineNo, columnNo, error) {
-  var string = msg.toLowerCase();
-  var substring = 'script error';
+  const string = msg.toLowerCase();
+  const substring = 'script error';
   if (string.indexOf(substring) > -1){
     alert('Script Error: See Browser Console for Detail');
   } else {
-    var message = [
+    const message = [
       'Message: ' + msg,
       'URL: ' + url,
       'Line: ' + lineNo,

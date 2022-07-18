@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchRegistration.uploadTotal
 slug: Web/API/BackgroundFetchRegistration/uploadTotal
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -1,6 +1,7 @@
 ---
 title: 'ServiceWorkerGlobalScope: message event'
 slug: Web/API/ServiceWorkerGlobalScope/message_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
@@ -90,7 +91,7 @@ self.onmessage = event => {
   console.log(`The client sent me a message: ${event.data}`);
 
   event.source.postMessage("Hi client");
-});
+};
 ```
 
 ## Specifications

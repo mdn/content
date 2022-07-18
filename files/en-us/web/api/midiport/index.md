@@ -1,6 +1,7 @@
 ---
 title: MIDIPort
 slug: Web/API/MIDIPort
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -18,35 +19,35 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
 
 ## Properties
 
-- {{domxref("MIDIPort.id")}}{{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMString","string")}} containing the unique ID of the port.
-- {{domxref("MIDIPort.manufacturer")}}{{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMString","string")}} containing the manufacturer of the port.
-- {{domxref("MIDIPort.name")}}{{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMString","string")}} containing the system name of the port.
-- {{domxref("MIDIPort.type")}}{{ReadOnlyInline}}
+- {{domxref("MIDIPort.id")}} {{ReadOnlyInline}}
+  - : Returns a string containing the unique ID of the port.
+- {{domxref("MIDIPort.manufacturer")}} {{ReadOnlyInline}}
+  - : Returns a string containing the manufacturer of the port.
+- {{domxref("MIDIPort.name")}} {{ReadOnlyInline}}
+  - : Returns a string containing the system name of the port.
+- {{domxref("MIDIPort.type")}} {{ReadOnlyInline}}
 
-  - : Returns a {{domxref("DOMString","string")}} containing the type of the port, one of:
+  - : Returns a string containing the type of the port, one of:
 
     - `"input"`
       - : The `MIDIPort` is an input port.
     - `"output"`
       - : The `MIDIPort` is an output port.
 
-- {{domxref("MIDIPort.version")}}{{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMString","string")}} containing the version of the port.
-- {{domxref("MIDIPort.state")}}{{ReadOnlyInline}}
+- {{domxref("MIDIPort.version")}} {{ReadOnlyInline}}
+  - : Returns a string containing the version of the port.
+- {{domxref("MIDIPort.state")}} {{ReadOnlyInline}}
 
-  - : Returns a {{domxref("DOMString","string")}} containing the state of the port, one of:
+  - : Returns a string containing the state of the port, one of:
 
     - `"disconnected"`
       - : The device that this `MIDIPort` represents is disconnected from the system.
     - `"connected"`
       - : The device that this `MIDIPort` represents is currently connected.
 
-- {{domxref("MIDIPort.connection")}}{{ReadOnlyInline}}
+- {{domxref("MIDIPort.connection")}} {{ReadOnlyInline}}
 
-  - : Returns a {{domxref("DOMString","string")}} containing the connection state of the port, one of:
+  - : Returns a string containing the connection state of the port, one of:
 
     - `"open"`
       - : The device that this `MIDIPort` represents has been opened and is available.
@@ -77,15 +78,15 @@ The following example lists input and output ports, and displays information abo
 
 ```js
 function listInputsAndOutputs( midiAccess ) {
-  for (var entry of midiAccess.inputs) {
-    var input = entry[1];
+  for (const entry of midiAccess.inputs) {
+    const input = entry[1];
     console.log( "Input port [type:'" + input.type + "'] id:'" + input.id +
       "' manufacturer:'" + input.manufacturer + "' name:'" + input.name +
       "' version:'" + input.version + "'" );
   }
 
-  for (var entry of midiAccess.outputs) {
-    var output = entry[1];
+  for (const entry of midiAccess.outputs) {
+    const output = entry[1];
     console.log( "Output port [type:'" + output.type + "'] id:'" + output.id +
       "' manufacturer:'" + output.manufacturer + "' name:'" + output.name +
       "' version:'" + output.version + "'" );
@@ -99,7 +100,7 @@ The following example takes the list of input ports and adds them to a select li
 
 ```js
 inputs.forEach( function( port, key ) {
-  var opt = document.createElement("option");
+  const opt = document.createElement("option");
   opt.text = port.name;
   document.getElementById("inputportselector").add(opt);
 });

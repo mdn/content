@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrackGenerator.writable
 slug: Web/API/MediaStreamTrackGenerator/writable
+page-type: web-api-instance-property
 tags:
   - API
   - Property

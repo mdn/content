@@ -24,7 +24,7 @@ x < y
 
 The operands are compared using the [Abstract Relational Comparison](https://tc39.es/ecma262/#sec-abstract-relational-comparison) algorithm, which is roughly summarized below:
 
-- First, objects are converted to primitives using [`Symbol.ToPrimitive`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) with the `hint` parameter be `'number'`.
+- First, objects are converted to primitives using [`Symbol.toPrimitive`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) with the `hint` parameter being `'number'`.
 - If both values are strings, they are compared as strings, based on the values of the Unicode code points they contain.
 - Otherwise JavaScript attempts to convert non-numeric types to numeric values:
 

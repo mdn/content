@@ -1,6 +1,7 @@
 ---
 title: Metadata
 slug: Web/API/Metadata
+page-type: web-api-interface
 tags:
   - API
   - File and Directory Entries API

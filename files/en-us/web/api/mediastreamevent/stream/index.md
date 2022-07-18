@@ -1,6 +1,7 @@
 ---
 title: MediaStreamEvent.stream
 slug: Web/API/MediaStreamEvent/stream
+page-type: web-api-instance-property
 tags:
   - Experimental
   - MediaStreamEvent
@@ -18,7 +19,7 @@ the {{domxref("MediaStream")}} associated with the event.
 ## Syntax
 
 ```js
- var stream = event.stream;
+ const stream = event.stream;
 ```
 
 ## Example

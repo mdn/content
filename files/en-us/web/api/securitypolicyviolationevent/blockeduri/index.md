@@ -1,6 +1,7 @@
 ---
 title: SecurityPolicyViolationEvent.blockedURI
 slug: Web/API/SecurityPolicyViolationEvent/blockedURI
+page-type: web-api-instance-property
 tags:
   - API
   - CSP

@@ -1,6 +1,7 @@
 ---
 title: Element.getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
+page-type: web-api-instance-method
 tags:
   - API
   - Boundary
@@ -125,7 +126,7 @@ Also note how the values of `x`/`left`,
 to the absolute distance from the relevant edge of the viewport to that side of the
 element, in each case.
 
-#### Scrolling
+### Scrolling
 
 This example demonstrates how bounding client rect is changing when document is scrolled.
 
@@ -180,7 +181,5 @@ update();
 ## See also
 
 - {{domxref("Element.getClientRects", "getClientRects()")}}
-- [MSDN:
-  `getBoundingClientRect`](<https://msdn.microsoft.com/library/ms536433(VS.85).aspx>)
-- [MSDN:
-  `ClientRect`](<https://msdn.microsoft.com/library/hh826029(VS.85).aspx>), an earlier version of `DOMRect`
+- [MSDN: `getBoundingClientRect`](<https://msdn.microsoft.com/library/ms536433(VS.85).aspx>)
+- [MSDN: `ClientRect`](<https://msdn.microsoft.com/library/hh826029(VS.85).aspx>), an earlier version of `DOMRect`

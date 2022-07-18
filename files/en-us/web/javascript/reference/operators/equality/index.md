@@ -26,7 +26,7 @@ x == y
 ## Description
 
 The equality operators (`==` and `!=`) use
-the [Abstract Equality Comparison Algorithm](https://262.ecma-international.org/5.1/#sec-11.9.3)
+the [`IsLooselyEqual` Abstract Operation](https://tc39.es/ecma262/#sec-islooselyequal)
 to compare two operands.
 This can be roughly summarized as follows:
 
@@ -125,6 +125,18 @@ console.log(string4 == string4); // true
 const d = new Date('December 17, 1995 03:24:00');
 const s = d.toString(); // for example: "Sun Dec 17 1995 03:24:00 GMT-0800 (Pacific Standard Time)"
 console.log(d == s);    //true
+```
+
+### Comparing arrays and strings
+
+```js
+const a = [1, 2, 3];
+const b = "1,2,3";
+a == b; // true, `a` converts to string
+
+const c = [true, 0.5, "hey"];
+const d = c.toString(); // "true,0.5,hey"
+c == d; // true
 ```
 
 ## Specifications

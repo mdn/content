@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-hidden
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-hidden
 ---
 
 The `aria-hidden` state indicates whether the element is exposed to an accessibility API.
@@ -86,9 +87,7 @@ Used in **ALL** roles
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-hidden","ARIA: aria-hidden Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

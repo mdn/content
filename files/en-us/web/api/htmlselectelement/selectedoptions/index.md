@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.selectedOptions
 slug: Web/API/HTMLSelectElement/selectedOptions
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -107,7 +108,7 @@ orderButton.addEventListener("click", function() {
 }, false);
 ```
 
-This script sets up a {{event("click")}} event listener on the "Order Now" button. When
+This script sets up a {{domxref("Element/click_event", "click")}} event listener on the "Order Now" button. When
 clicked, the event handler fetches the list of selected options using
 `selectedOptions`, then iterates over the options in the list. A string is
 constructed to list the ordered items, with logic to build the list using proper English
@@ -117,7 +118,7 @@ grammar rules (including a {{interwiki("wikipedia", "serial comma")}}).
 
 The resulting content looks like this in action:
 
-{{EmbedLiveSample("Example", 600, 250)}}
+{{EmbedLiveSample("Examples", 600, 250)}}
 
 ## Specifications
 

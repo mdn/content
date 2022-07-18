@@ -50,7 +50,9 @@ Pretty much anytime you make use of a JavaScript structure that features a pair 
 
 ## Built-in browser functions
 
-We've made use of functions built in to the browser a lot in this course. Every time we manipulated a text string, for example:
+We've used functions built in to the browser a lot in this course.
+
+Every time we manipulated a text string, for example:
 
 ```js
 const myText = 'I am a string';
@@ -72,7 +74,7 @@ console.log(madeAString);
 // string, and returns this new string
 ```
 
-Or every time we generated a random number:
+Or every time we generate a random number:
 
 ```js
 const myNumber = Math.random();
@@ -80,7 +82,7 @@ const myNumber = Math.random();
 // 0 and up to but not including 1, and returns that number
 ```
 
-...we were using a function!
+We were using a _function_!
 
 > **Note:** Feel free to enter these lines into your browser's JavaScript console to re-familiarize yourself with their functionality, if needed.
 
@@ -126,7 +128,7 @@ We needed this function because the browser's built-in [Math.random()](/en-US/do
 
 ## Invoking functions
 
-You are probably clear on this by now, but just in case ... to actually use a function after it has been defined, you've got to run — or invoke — it. This is done by including the name of the function in the code somewhere, followed by parentheses.
+You are probably clear on this by now, but just in case, to actually use a function after it has been defined, you've got to run — or invoke — it. This is done by including the name of the function in the code somewhere, followed by parentheses.
 
 ```js
 function myFunction() {
@@ -216,7 +218,7 @@ This is called an **anonymous function**, because it has no name. You'll often s
 
 For example, let's say you want to run some code when the user types into a text box. To do this you can call the {{domxref("EventTarget/addEventListener", "addEventListener()")}} function of the text box. This function expects you to pass it (at least) two parameters:
 
-- the name of the event to listen for, which in this case is {{domxref("Document/keydown_event", "keydown")}}
+- the name of the event to listen for, which in this case is {{domxref("Element/keydown_event", "keydown")}}
 - a function to run when the event happens.
 
 When the user presses a key, the browser will call the function you provided, and will pass it a parameter containing information about this event, including the particular key that the user pressed:
@@ -452,7 +454,7 @@ Let's look at a real example to demonstrate scoping.
 
     This time the `a()` and `b()` calls will throw that annoying [ReferenceError: _variable name_ is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error into the console — this is because the `output()` calls and the variables they are trying to print are not in the same function scopes — the variables are effectively invisible to those function calls.
 
-> **Note:** The same scoping rules do not apply to loop (e.g. `for() { ... }`) and conditional blocks (e.g. `if() { ... }`) — they look very similar, but they are not the same thing! Take care not to get these confused.
+> **Note:** The same scoping rules do not apply to loop (e.g. `for() { }`) and conditional blocks (e.g. `if() { }`) — they look very similar, but they are not the same thing! Take care not to get these confused.
 
 > **Note:** The [ReferenceError: "x" is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error is one of the most common you'll encounter. If you get this error and you are sure that you have defined the variable in question, check what scope it is in.
 

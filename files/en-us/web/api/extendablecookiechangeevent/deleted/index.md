@@ -1,15 +1,17 @@
 ---
 title: ExtendableCookieChangeEvent.deleted
 slug: Web/API/ExtendableCookieChangeEvent/deleted
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
   - deleted
   - ExtendableCookieChangeEvent
+  - Experimental
 browser-compat: api.ExtendableCookieChangeEvent.deleted
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 The **`deleted`** read-only property of the {{domxref("ExtendableCookieChangeEvent")}} interface returns any cookies that have been deleted by the given `ExtendableCookieChangeEvent` instance.
 

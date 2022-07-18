@@ -1,6 +1,7 @@
 ---
 title: Basic concepts behind Web Audio API
 slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
+page-type: guide
 tags:
   - Audio
   - Beginner
@@ -12,6 +13,9 @@ tags:
   - concepts
   - sound
 ---
+
+{{DefaultAPISidebar("Web Audio API")}}
+
 This article explains some of the audio theory behind how the features of the Web Audio API work, to help you make informed decisions while designing how audio is routed through your app. If you are not already a sound engineer, it will give you enough background to understand why the Web Audio API works as it does.
 
 ## Audio graphs

@@ -61,12 +61,12 @@ non-extensible.
 ```js
 // Object.preventExtensions returns the object
 // being made non-extensible.
-var obj = {};
-var obj2 = Object.preventExtensions(obj);
+const obj = {};
+const obj2 = Object.preventExtensions(obj);
 obj === obj2; // true
 
 // Objects are extensible by default.
-var empty = {};
+const empty = {};
 Object.isExtensible(empty); // === true
 
 // ...but that can be changed.
@@ -75,7 +75,7 @@ Object.isExtensible(empty); // === false
 
 // Object.defineProperty throws when adding
 // a new property to a non-extensible object.
-var nonExtensible = { removable: true };
+const nonExtensible = { removable: true };
 Object.preventExtensions(nonExtensible);
 Object.defineProperty(nonExtensible, 'new', {
   value: 8675309
@@ -94,7 +94,7 @@ fail();
 A non-extensible object's prototype is immutable:
 
 ```js
-var fixed = Object.preventExtensions({});
+const fixed = Object.preventExtensions({});
 // throws a 'TypeError'.
 fixed.__proto__ = { oh: 'hai' };
 ```

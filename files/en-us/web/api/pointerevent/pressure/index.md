@@ -1,6 +1,7 @@
 ---
 title: PointerEvent.pressure
 slug: Web/API/PointerEvent/pressure
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

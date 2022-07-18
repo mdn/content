@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onplaying
 slug: Web/API/GlobalEventHandlers/onplaying
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -13,7 +14,7 @@ browser-compat: api.GlobalEventHandlers.onplaying
 
 The **`onplaying`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
-processing {{event("playing")}} events.
+processing {{domxref("HTMLMediaElement/playing_event", "playing")}} events.
 
 The `playing` event is fired when playback is ready to start after having
 been paused or delayed due to lack of media data.
@@ -39,4 +40,4 @@ specifying the handler for the event.
 ## See also
 
 - {{domxref("HTMLMediaElement/playing_event", "playing")}}
-- [DOM event handlers](/en-US/docs/Web/Guide/Events/Event_handlers)
+- [DOM event handlers](/en-US/docs/Web/Events/Event_handlers)

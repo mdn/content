@@ -1,6 +1,7 @@
 ---
 title: WEBGL_multi_draw
 slug: Web/API/WEBGL_multi_draw
+page-type: webgl-extension
 tags:
   - API
   - Reference
@@ -37,7 +38,7 @@ When this extension is enabled:
     [`drawArrays`](/en-US/docs/Web/API/WebGLRenderingContext/drawArrays)).
 - [`ext.multiDrawElementsWEBGL()`](/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawElementsWEBGL)
   - : Renders multiple primitives from element array data (identical to multiple calls to
-    [`drawElements`](en-US/docs/Web/API/WebGLRenderingContext/drawElements)).
+    [`drawElements`](/en-US/docs/Web/API/WebGLRenderingContext/drawElements)).
 - [`ext.multiDrawArraysInstancedWEBGL()`](/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawArraysInstancedWEBGL)
   - : Renders multiple primitives from array data (identical to multiple calls to
     [`drawArraysInstanced`](/en-US/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced)).
@@ -109,18 +110,13 @@ Assumes that the indices which have been previously uploaded to the
 // multiDrawElements variant
 // let counts = new Int32Array(...);
 // let offsets = new Int32Array(...);
-ext.multiDrawElementsWEBGL(
-  gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, counts.length);
-}
+ext.multiDrawElementsWEBGL(gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, counts.length);
 
 // multiDrawElementsInstanced variant
 // let counts = new Int32Array(...);
 // let offsets = new Int32Array(...);
 // let instanceCounts = new Int32Array(...);
-ext.multiDrawElementsInstancedWEBGL(
-    gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, instanceCounts, 0,
-    counts.length);
-}
+ext.multiDrawElementsInstancedWEBGL(gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, instanceCounts, 0, counts.length);
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: PushMessageData.arrayBuffer()
 slug: Web/API/PushMessageData/arrayBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - ArrayBuffer
@@ -34,7 +35,7 @@ An {{jsxref("ArrayBuffer")}}.
 
 ```js
 self.addEventListener('push', function(event) {
-  var buffer = event.data.arrayBuffer();
+  const buffer = event.data.arrayBuffer();
 
   // do something with your array buffer
 });

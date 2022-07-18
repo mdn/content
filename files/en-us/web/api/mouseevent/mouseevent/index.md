@@ -1,6 +1,7 @@
 ---
 title: MouseEvent()
 slug: Web/API/MouseEvent/MouseEvent
+page-type: web-api-instance-property
 tags:
   - API
   - Constructor
@@ -69,7 +70,7 @@ new MouseEvent(type, options)
       - : An {{domxref("EventTarget")}}, defaulting to `null` that is the element just left
         (in case of a {{domxref("Element/mouseenter_event", "mouseenter")}} or {{domxref("Element/mouseover_event", "mouseover")}})
         or is entering (in case of a {{domxref("Element/mouseout_event", "mouseout")}} or {{domxref("Element/mouseleave_event", "mouseleave")}}).
-    - `region` {{non-standard_inline}}{{optional_inline}}
+    - `region` {{non-standard_inline}} {{optional_inline}}
       - : A string, defaulting to `null`, that is the ID of the hit region affected by the event.
         The absence of any affected hit region is represented with the `null` value.
 
@@ -99,9 +100,9 @@ Explorer 9 and higher with the following code:
   }
 
     // Polyfills DOM4 MouseEvent
-  var MouseEventPolyfill = function (eventType, params) {
+  const MouseEventPolyfill = function (eventType, params) {
     params = params || { bubbles: false, cancelable: false };
-    var mouseEvent = document.createEvent('MouseEvent');
+    const mouseEvent = document.createEvent('MouseEvent');
     mouseEvent.initMouseEvent(eventType,
       params.bubbles,
       params.cancelable,

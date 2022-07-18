@@ -1,6 +1,7 @@
 ---
 title: URLPattern
 slug: Web/API/URLPattern
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -31,28 +32,28 @@ page: [URL Pattern API](/en-US/docs/Web/API/URL_Pattern_API)
 ## Properties
 
 - {{domxref("URLPattern.hash", "hash")}}
-  - : A {{domxref("USVString")}} containing a pattern to match the _hash_ part
+  - : A string containing a pattern to match the _hash_ part
     of a URL.
 - {{domxref("URLPattern.hostname", "hostname")}}
-  - : A {{domxref("USVString")}} containing a pattern to match the _hostname_
+  - : A string containing a pattern to match the _hostname_
     part of a URL.
 - {{domxref("URLPattern.password", "password")}}
-  - : A {{domxref("USVString")}} containing a pattern to match the _password_
+  - : A string containing a pattern to match the _password_
     part of a URL.
 - {{domxref("URLPattern.pathname", "pathname")}}
-  - : A {{domxref("USVString")}} containing a pattern to match the _pathname_
+  - : A string containing a pattern to match the _pathname_
     part of a URL.
 - {{domxref("URLPattern.port", "port")}}
-  - : A {{domxref("USVString")}} containing a pattern to match the _port_ part
+  - : A string containing a pattern to match the _port_ part
     of a URL.
 - {{domxref("URLPattern.protocol", "protocol")}}
-  - : A {{domxref("USVString")}} containing a pattern to match the _protocol_
+  - : A string containing a pattern to match the _protocol_
     part of a URL.
 - {{domxref("URLPattern.search", "search")}}
-  - : A {{domxref("USVString")}} containing a pattern to match the _search_ part
+  - : A string containing a pattern to match the _search_ part
     of a URL.
 - {{domxref("URLPattern.username","username")}}
-  - : A {{domxref("USVString")}} containing a pattern to match the _username_
+  - : A string containing a pattern to match the _username_
     part of a URL.
 
 ## Methods

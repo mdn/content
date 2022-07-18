@@ -1,6 +1,7 @@
 ---
 title: XMLDocument.load()
 slug: Web/API/XMLDocument/load
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

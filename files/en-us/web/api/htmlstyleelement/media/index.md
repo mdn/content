@@ -1,6 +1,7 @@
 ---
 title: HTMLStyleElement.media
 slug: Web/API/HTMLStyleElement/media
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

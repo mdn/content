@@ -1,6 +1,7 @@
 ---
 title: PresentationConnection.state
 slug: Web/API/PresentationConnection/state
+page-type: web-api-instance-property
 tags:
   - API
   - NeedsBrowserCompatibility

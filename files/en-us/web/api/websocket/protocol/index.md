@@ -1,6 +1,7 @@
 ---
 title: WebSocket.protocol
 slug: Web/API/WebSocket/protocol
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -18,7 +19,7 @@ object, or the empty string if no connection is established.
 
 ## Value
 
-A [`DOMString`](/en-US/docs/Web/API/DOMString).
+A string.
 
 ## Specifications
 

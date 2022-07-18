@@ -10,7 +10,6 @@ tags:
   - Reference
 browser-compat: html.global_attributes.itemprop
 ---
-
 {{HTMLSidebar("Global_attributes")}}
 
 The **`itemprop`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is used to add properties to an item. Every HTML element can have an `itemprop` attribute specified, and an `itemprop` consists of a name-value pair. Each name-value pair is called a **property**, and a group of one or more properties forms an **item**. Property values are either a string or a URL and can be associated with a very wide range of elements including {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}} , {{HTMLElement("track")}}, and {{HTMLElement("video")}}.
@@ -315,7 +314,7 @@ The property value of a name-value pair is as given for the first matching case 
 
 - If the element is an `audio`, `embed`, `iframe`, `img`, `source`, `track`, or `video` element
 
-  - The value is the resulting URL string that results from parsing the value of the element's src attribute relative to the node document (part of the [Microdata DOM API](/en-US/docs/Web/API/Microdata_DOM_API)) of the element at the time the attribute is set
+  - The value is the resulting URL string that results from parsing the value of the element's src attribute relative to the node document (part of the [Microdata DOM API](/en-US/docs/Web/HTML/Microdata)) of the element at the time the attribute is set
 
 - If the element is an `a`, `area`, or `link` element
 
@@ -389,28 +388,9 @@ And the following
 </div>
 ```
 
-## Other examples
+### Representing structured data for a book
 
-### HTML
-
-```html
-<dl itemscope
-  itemtype="https://schema.org/Book"
-  itemid="urn:isbn:0-374-22848-5<">
- <dt>Title
-   <dd
-    itemprop="title">Owls of the Eastern Ice
- <dt>Author
-   <dd
-     itemprop="author">Jonathan C Slaght
- <dt>Publication date
- <dd><time
-   itemprop="datePublished"
-   datetime="2020-08-04">August 4 2020</time>
-</dl>
-```
-
-### Structured data
+This example uses microdata attributes to represent the following structured data:
 
 <table class="standard-table">
   <tbody>
@@ -437,9 +417,28 @@ And the following
   </tbody>
 </table>
 
-### Result
+#### HTML
 
-{{EmbedLiveSample('HTML_2', '', '', '', 'Web/HTML/Global_attributes/itemprop')}}
+```html
+<dl itemscope
+  itemtype="https://schema.org/Book"
+  itemid="urn:isbn:0-374-22848-5<">
+ <dt>Title
+   <dd
+    itemprop="title">Owls of the Eastern Ice
+ <dt>Author
+   <dd
+     itemprop="author">Jonathan C Slaght
+ <dt>Publication date
+ <dd><time
+   itemprop="datePublished"
+   datetime="2020-08-04">August 4 2020</time>
+</dl>
+```
+
+#### Result
+
+{{EmbedLiveSample('Representing structured data for a book')}}
 
 ## Specifications
 
@@ -452,10 +451,9 @@ And the following
 ## See also
 
 - [Other different global attributes](/en-US/docs/Web/HTML/Global_attributes)
-- Other, microdata related, global attributes:
+- Other microdata related global attributes:
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemscope")}}
-  - {{htmlattrxref("itemtype")}}
+  - [`itemid`](/en-US/docs/Web/HTML/Global_attributes/itemid)
+  - [`itemref`](/en-US/docs/Web/HTML/Global_attributes/itemref)
+  - [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope)
+  - [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype)

@@ -1,6 +1,7 @@
 ---
 title: StaticRange.startOffset
 slug: Web/API/StaticRange/startOffset
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

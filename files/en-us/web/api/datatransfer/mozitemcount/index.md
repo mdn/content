@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.mozItemCount
 slug: Web/API/DataTransfer/mozItemCount
+page-type: web-api-instance-property
 tags:
   - API
   - Non-standard
@@ -33,9 +34,9 @@ This example shows the use of the `mozItemCount` property.
 ```js
 function drop_handler(event)
 {
-  var files = [];
-  var dt = event.dataTransfer;
-  for (var i = 0; i < dt.mozItemCount; i++)
+  const files = [];
+  const dt = event.dataTransfer;
+  for (let i = 0; i < dt.mozItemCount; i++)
     files.push(dt.mozGetDataAt("application/x-moz-file", i));
 }
 ```

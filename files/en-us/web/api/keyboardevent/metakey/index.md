@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.metaKey
 slug: Web/API/KeyboardEvent/metaKey
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -43,7 +44,7 @@ function ismetaKey(e) {
 
 #### Result
 
-{{ EmbedLiveSample('Example', 400, 90) }}
+{{ EmbedLiveSample('Examples', 400, 90) }}
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: VRFieldOfView.rightDegrees
 slug: Web/API/VRFieldOfView/rightDegrees
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

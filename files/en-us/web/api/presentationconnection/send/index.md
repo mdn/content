@@ -1,6 +1,7 @@
 ---
 title: PresentationConnection.send()
 slug: Web/API/PresentationConnection/send
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

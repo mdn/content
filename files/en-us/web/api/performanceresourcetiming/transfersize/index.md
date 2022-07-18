@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.transferSize
 slug: Web/API/PerformanceResourceTiming/transferSize
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -22,8 +23,7 @@ this property returns zero.
 ## Value
 
 A `number` representing the size (in octets) of the fetched resource. The
-size includes the response header fields plus the [response payload
-body](https://httpwg.org/specs/rfc7230.html#message.body) (RFC7230).
+size includes the response header fields plus the [response payload body](https://httpwg.org/specs/rfc7230.html#message.body) (RFC7230).
 
 ## Examples
 
@@ -51,8 +51,8 @@ function log_sizes(perfEntry){
 }
 function check_PerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
-  var p = performance.getEntriesByType("resource");
-  for (var i=0; i < p.length; i++) {
+  const p = performance.getEntriesByType("resource");
+  for (let i=0; i < p.length; i++) {
     log_sizes(p[i]);
   }
 }

@@ -1,6 +1,7 @@
 ---
 title: DOMRect.fromRect()
 slug: Web/API/DOMRect/fromRect
+page-type: web-api-static-method
 tags:
   - API
   - DOMRect

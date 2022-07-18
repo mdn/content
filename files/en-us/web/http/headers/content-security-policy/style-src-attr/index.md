@@ -13,7 +13,7 @@ tags:
   - source
   - style-src
   - style-src-attr
-browser-compat: http.headers.csp.Content-Security-Policy.style-src-attr
+browser-compat: http.headers.Content-Security-Policy.style-src-attr
 ---
 {{HTTPSidebar}}
 

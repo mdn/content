@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.deleteRenderbuffer()
 slug: Web/API/WebGLRenderingContext/deleteRenderbuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -24,7 +25,7 @@ deleteRenderbuffer(renderbuffer)
 
 ### Parameters
 
-- renderbuffer
+- `renderbuffer`
   - : A {{domxref("WebGLRenderbuffer")}} object to delete.
 
 ### Return value

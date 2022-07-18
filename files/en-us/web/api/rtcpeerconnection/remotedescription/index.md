@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.remoteDescription
 slug: Web/API/RTCPeerConnection/remoteDescription
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCPeerConnection
@@ -44,7 +45,7 @@ containing the {{domxref("RTCSessionDescription")}} object's `type` and
 
 ```js
 var pc = new RTCPeerConnection();
-…
+// ...
 var sd = pc.remoteDescription;
 if (sd) {
   alert("Remote session: type='" +

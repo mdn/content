@@ -1,6 +1,7 @@
 ---
 title: DataTransferItemList.remove()
 slug: Web/API/DataTransferItemList/remove
+page-type: web-api-instance-method
 tags:
   - API
   - DataTransferItemList
@@ -86,7 +87,7 @@ function dragstart_handler(ev) {
   const dataList = ev.dataTransfer.items;
   dataList.add(ev.target.id, 'text/plain');
   // Add some other items to the drag payload
-  dataList.add('<p>... paragraph ...</p>', 'text/html');
+  dataList.add('<p>Paragraph…</p>', 'text/html');
   dataList.add('http://www.example.org','text/uri-list');
 }
 
@@ -106,13 +107,13 @@ function drop_handler(ev) {
                (item.type.match('^text/html'))) {
       // Drag data item is HTML
       item.getAsString(function (s){
-        console.log('... Drop: HTML = ' + s);
+        console.log('… Drop: HTML = ' + s);
       });
     } else if ((item.kind == 'string') &&
                (item.type.match('^text/uri-list'))) {
       // Drag data item is URI
       item.getAsString(function (s){
-        console.log('... Drop: URI = ' + s);
+        console.log('… Drop: URI = ' + s);
       });
     }
   }

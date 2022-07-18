@@ -1,6 +1,7 @@
 ---
 title: AesKeyGenParams
 slug: Web/API/AesKeyGenParams
+page-type: web-api-interface
 tags:
   - API
   - AesKeyGenParams

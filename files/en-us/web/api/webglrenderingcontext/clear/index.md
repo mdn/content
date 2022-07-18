@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.clear()
 slug: Web/API/WebGLRenderingContext/clear
+page-type: web-api-instance-method
 tags:
   - API
   - Method

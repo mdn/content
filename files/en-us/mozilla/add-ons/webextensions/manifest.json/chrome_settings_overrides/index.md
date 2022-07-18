@@ -145,8 +145,8 @@ The `chrome_settings_overrides` key is an object that may have the following pro
           <dt><code>favicon_url {{optional_inline}}</code></dt>
           <dd>
             String: URL pointing to an icon for the search engine. In Manifest V2,
-            this must be an absolute HTTP or HTTPS URL. In Manifest V3, this must 
-            reference an icon provided in the extension as a path relative to the 
+            this must be an absolute HTTP or HTTPS URL. In Manifest V3, this must
+            reference an icon provided in the extension as a path relative to the
             extension's root.
           </dd>
           <dt><code>image_url {{optional_inline}}</code></dt>

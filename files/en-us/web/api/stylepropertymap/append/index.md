@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMap.append()
 slug: Web/API/StylePropertyMap/append
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -25,10 +26,10 @@ append(property, value)
 
 ### Parameters
 
-- property
+- `property`
   - : An identifier indicating the stylistic feature (e.g. font, width, background
     color) to add.
-- value
+- `value`
   - : The value the given property should have.
 
 ### Return value

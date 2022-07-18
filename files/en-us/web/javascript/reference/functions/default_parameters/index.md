@@ -204,15 +204,16 @@ function f(a = go()) { // Throws a `ReferenceError` when `f` is invoked.
 }
 ```
 
-...and this function will print `undefined` because variable
-`var a` is hoisted only to the top of the scope created for the function body
-(and not the parent scope created for the parameter list):
+This function will print the value of the _parameter_ `a`, because the variable `var a` is hoisted only to the top of the scope created for the function body, not the parent scope created for the parameter list, so its value is not visible to `b`.
 
 ```js example-bad
 function f(a, b = () => console.log(a)) {
-  var a = 1
-  b() // Prints `undefined`, because default parameter values exist in their own scope
+  var a = 1;
+  b();
 }
+
+f(); // Logs "undefined"
+f(5); // Logs "5"
 ```
 
 ### Parameters without defaults after default parameters

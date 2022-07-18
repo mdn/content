@@ -1,6 +1,7 @@
 ---
 title: TreeWalker.whatToShow
 slug: Web/API/TreeWalker/whatToShow
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -120,7 +121,7 @@ A bitmask.
 var treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT + NodeFilter.SHOW_COMMENT + NodeFilter.SHOW_TEXT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
 if( (treeWalker.whatToShow == NodeFilter.SHOW_ALL) ||

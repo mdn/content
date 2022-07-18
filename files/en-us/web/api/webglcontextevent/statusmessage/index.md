@@ -1,6 +1,7 @@
 ---
 title: WebGLContextEvent.statusMessage
 slug: Web/API/WebGLContextEvent/statusMessage
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -16,7 +17,7 @@ The read-only **`WebGLContextEvent.statusMessage`** property contains additional
 
 ## Examples
 
-The `statusMessage` property can contain a platform dependent string with details of an event. This can occur, for example, if the {{Event("webglcontextcreationerror")}} event is fired.
+The `statusMessage` property can contain a platform dependent string with details of an event. This can occur, for example, if the {{domxref("HTMLCanvasElement/webglcontextcreationerror_event", "webglcontextcreationerror")}} event is fired.
 
 ```js
 var canvas = document.getElementById('canvas');

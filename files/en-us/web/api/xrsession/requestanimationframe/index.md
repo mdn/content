@@ -1,6 +1,7 @@
 ---
 title: XRSession.requestAnimationFrame()
 slug: Web/API/XRSession/requestAnimationFrame
+page-type: web-api-instance-method
 tags:
   - API
   - AR

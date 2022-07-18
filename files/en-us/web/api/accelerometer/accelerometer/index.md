@@ -1,6 +1,7 @@
 ---
 title: Accelerometer()
 slug: Web/API/Accelerometer/Accelerometer
+page-type: web-api-constructor
 tags:
   - API
   - Accelerometer

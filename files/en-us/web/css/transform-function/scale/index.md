@@ -22,11 +22,11 @@ done in each direction. If both coordinates are equal, the scaling is uniform (_
 ratio of the element is preserved (this is a [homothetic transformation](https://en.wikipedia.org/wiki/Homothetic_transformation)).
 
 When a coordinate value is outside the \[-1, 1] range, the element grows along that dimension; when inside, it
-shrinks. If it is negative, the result a [point reflection](https://en.wikipedia.org/wiki/Point_reflection)
-in that dimension. A value of 1 has no effect.
+shrinks. A negative value results in a [point reflection](https://en.wikipedia.org/wiki/Point_reflection)
+in that dimension. The value `1` has no effect.
 
 > **Note:** The `scale()` function only scales in 2D. To scale in 3D, use
-> [`scale3d()`](</en-US/docs/Web/CSS/transform-function/scale3d()>) instead.
+> [`scale3d()`](/en-US/docs/Web/CSS/transform-function/scale3d) instead.
 
 ## Syntax
 
@@ -44,8 +44,8 @@ scale(sx, sy)
 - `sx`
   - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the abscissa of the scaling vector.
 - `sy`
-  - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the ordinate of the scaling vector. If not defined, its default value
-    is `sx`, resulting in a uniform scaling that preserves the element's aspect ratio.
+  - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the ordinate of the scaling vector.
+    If not defined, its default value is `sx`, resulting in a uniform scaling that preserves the element's aspect ratio.
 
 <table class="standard-table">
   <thead>
@@ -142,15 +142,13 @@ migraine. If you need to include such animations on your website, you should pro
 off animations, preferably site-wide.
 
 Also, consider making use of the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature
-— use it to write a [media query](/en-US/docs/Web/CSS/Media_queries) that will turn off animations if the
+— use it to write a [media query](/en-US/docs/Web/CSS/Media_Queries) that will turn off animations if the
 user has reduced animation specified in their system preferences.
 
 Find out more:
 
-- [MDN
-  Understanding WCAG, Guideline 2.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.3_%e2%80%94_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
-- [Understanding Success Criterion
-  2.3.3 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
+- [MDN Understanding WCAG, Guideline 2.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.3_%e2%80%94_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
+- [Understanding Success Criterion 2.3.3 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
 
 ## Examples
 

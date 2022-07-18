@@ -1,6 +1,7 @@
 ---
 title: XREquirectLayer.space
 slug: Web/API/XREquirectLayer/space
+page-type: web-api-instance-property
 tags:
   - API
   - Property

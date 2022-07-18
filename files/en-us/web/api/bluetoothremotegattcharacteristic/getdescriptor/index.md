@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTCharacteristic.getDescriptor()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/getDescriptor
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth

@@ -114,7 +114,7 @@ For {{SVGElement('missing-glyph')}}, `d` is a string containing a series of path
 ## Using d as a CSS property
 
 `d` is a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation), and hence can be also be modified using CSS.
-The property takes either [path()](/en-US/docs/Web/CSS/path()) or `none`.
+The property takes either [path()](/en-US/docs/Web/CSS/path) or `none`.
 
 The example below shows how you might apply a new path on hover over an element.
 The new path is the same as the old one, but adds a line across the heart.
@@ -431,7 +431,7 @@ html,body,svg { height:100% }
 
 ### Cubic Bézier Curve
 
-*Cubic [Bézier curves](/en-US/docs/Glossary/Bézier_curve)* are smooth curve definitions using four points:
+*Cubic [Bézier curves](/en-US/docs/Glossary/Bezier_curve)* are smooth curve definitions using four points:
 
 - starting point (current point)
   - : (*P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*})
@@ -644,7 +644,7 @@ html,body,svg { height:100% }
 
 ### Quadratic Bézier Curve
 
-*Quadratic [Bézier curves](/en-US/docs/Glossary/Bézier_curve)* are smooth curve definitions using three points:
+*Quadratic [Bézier curves](/en-US/docs/Glossary/Bezier_curve)* are smooth curve definitions using three points:
 
 - starting point (current point)
   - : *P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*}

@@ -1,6 +1,7 @@
 ---
 title: 'Notification: click event'
 slug: Web/API/Notification/click_event
+page-type: web-api-event
 tags:
   - API
   - Notification
@@ -17,9 +18,8 @@ The **`click`** event of the {{domxref("Notification")}}
 interface fires when the user clicks on displayed {{domxref("Notification")}}.
 
 The default behavior is to move the focus to the viewport of the notification's related
-[browsing
-context](https://html.spec.whatwg.org/multipage/browsers.html#browsing-context). If you don't want that behavior, call {{domxref("Event/preventDefault",
-  "preventDefault()")}} on the event object.
+[browsing context](https://html.spec.whatwg.org/multipage/browsers.html#browsing-context).
+If you don't want that behavior, call {{domxref("Event/preventDefault", "preventDefault()")}} on the event object.
 
 ## Syntax
 
@@ -59,5 +59,4 @@ notification.onclick = function(event) {
 ## See also
 
 - {{domxref("Notification")}}
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

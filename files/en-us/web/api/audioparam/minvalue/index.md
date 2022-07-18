@@ -1,6 +1,7 @@
 ---
 title: AudioParam.minValue
 slug: Web/API/AudioParam/minValue
+page-type: web-api-instance-property
 tags:
   - API
   - Audio

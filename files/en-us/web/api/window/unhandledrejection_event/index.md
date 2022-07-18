@@ -1,6 +1,7 @@
 ---
 title: 'Window: unhandledrejection event'
 slug: Web/API/Window/unhandledrejection_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -83,7 +84,7 @@ Many environments (such as {{Glossary("Node.js")}}) report unhandled promise rej
 
 ```js
 window.addEventListener('unhandledrejection', function (event) {
-  // ...your code here to handle the unhandled rejection...
+  // ...your code here to handle the unhandled rejection…
 
   // Prevent the default handling (such as outputting the
   // error to the console)

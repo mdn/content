@@ -1,6 +1,7 @@
 ---
 title: 'FileReader: abort event'
 slug: Web/API/FileReader/abort_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -60,7 +61,7 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
                accept="image/png, image/jpeg">
     </div>
 
-    <img src="" class="preview" height="200" alt="Image preview...">
+    <img src="" class="preview" height="200" alt="Image preview">
 
     <div class="event-log">
         <label>Event log:</label>

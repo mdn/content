@@ -1,6 +1,7 @@
 ---
 title: XRPose.angularVelocity
 slug: Web/API/XRPose/angularVelocity
+page-type: web-api-instance-property
 tags:
   - API
   - Property

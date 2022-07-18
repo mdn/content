@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.domainLookupStart
 slug: Web/API/PerformanceResourceTiming/domainLookupStart
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -47,12 +48,12 @@ function print_start_and_end_properties(perfEntry) {
 
   for (var i=0; i < properties.length; i++) {
     // check each property
-    var supported = properties[i] in perfEntry;
+    const supported = properties[i] in perfEntry;
+    const value = perfEntry[properties[i]];
     if (supported) {
-      var value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
+      console.log("… " + properties[i] + " = " + value);
     } else {
-      console.log("... " + properties[i] + " = NOT supported");
+      console.log("… " + properties[i] + " = NOT supported");
     }
   }
 }

@@ -41,14 +41,14 @@ Several other popular name choices such as `self` and `global` were removed from
 Prior to `globalThis`, the only reliable cross-platform way to get the global object for an environment was `Function('return this')()`. However, this causes [CSP](/en-US/docs/Web/HTTP/CSP) violations in some settings, so [es6-shim](https://github.com/paulmillr/es6-shim) uses a check like this, for example:
 
 ```js
-var getGlobal = function () {
+const getGlobal = function () {
   if (typeof self !== 'undefined') { return self; }
   if (typeof window !== 'undefined') { return window; }
   if (typeof global !== 'undefined') { return global; }
   throw new Error('unable to locate global object');
 };
 
-var globals = getGlobal();
+const globals = getGlobal();
 
 if (typeof globals.setTimeout !== 'function') {
   // no setTimeout in this environment!

@@ -1,6 +1,7 @@
 ---
 title: Using dynamic styling information
 slug: Web/API/CSS_Object_Model/Using_dynamic_styling_information
+page-type: guide
 tags:
   - API
   - Beginner

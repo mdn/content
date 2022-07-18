@@ -14,7 +14,7 @@ tags:
   - Input Type
   - Number
   - Reference
-browser-compat: html.elements.input.input-image
+browser-compat: html.elements.input.type_image
 ---
 
 {{HTMLRef}}

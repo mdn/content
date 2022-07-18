@@ -1,6 +1,7 @@
 ---
 title: Headers.entries()
 slug: Web/API/Headers/entries
+page-type: web-api-instance-method
 tags:
   - API
   - Fetch API

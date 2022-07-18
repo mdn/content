@@ -1,6 +1,7 @@
 ---
 title: XSL Transformations in Mozilla FAQ
 slug: Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ
+page-type: guide
 tags:
   - Guide
   - XSLT

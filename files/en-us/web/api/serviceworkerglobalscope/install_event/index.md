@@ -1,6 +1,7 @@
 ---
 title: 'ServiceWorkerGlobalScope: install event'
 slug: Web/API/ServiceWorkerGlobalScope/install_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -65,7 +66,7 @@ You can also set up the event handler using the `oninstall` property:
 
 ```js
 globalScope.oninstall = function(event) {
-  ...
+  // ...
 };
 ```
 

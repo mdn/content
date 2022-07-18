@@ -1,6 +1,7 @@
 ---
 title: PerformanceMeasure
 slug: Web/API/PerformanceMeasure
+page-type: web-api-interface
 tags:
   - API
   - Interface

@@ -1,6 +1,7 @@
 ---
 title: SVGCircleElement.cx
 slug: Web/API/SVGCircleElement/cx
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -37,7 +38,7 @@ const circle = document.getElementById('circle');
 console.log(circle.cx);
 ```
 
-{{EmbedLiveSample("Example", "200", "200")}}
+{{EmbedLiveSample("Examples", "200", "200")}}
 
 ## Specifications
 

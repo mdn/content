@@ -1,6 +1,7 @@
 ---
 title: AudioScheduledSourceNode
 slug: Web/API/AudioScheduledSourceNode
+page-type: web-api-interface
 tags:
   - API
   - Audio

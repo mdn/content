@@ -1,6 +1,7 @@
 ---
 title: 'MediaQueryList: change event'
 slug: Web/API/MediaQueryList/change_event
+page-type: web-api-event
 tags:
   - API
   - CSSOM View
@@ -35,9 +36,9 @@ An {{domxref("MediaQueryListEvent")}}. Inherits from {{domxref("Event")}}.
 
 _The `MediaQueryListEvent` interface inherits properties from its parent interface, {{DOMxRef("Event")}}._
 
-- {{DOMxRef("MediaQueryListEvent.matches")}}{{ReadOnlyInline}}
+- {{DOMxRef("MediaQueryListEvent.matches")}} {{ReadOnlyInline}}
   - : A boolean value that is `true` if the {{DOMxRef("document")}} currently matches the media query list, or `false` if not.
-- {{DOMxRef("MediaQueryListEvent.media")}}{{ReadOnlyInline}}
+- {{DOMxRef("MediaQueryListEvent.media")}} {{ReadOnlyInline}}
   - : A string representing a serialized media query.
 
 ## Example
@@ -67,8 +68,7 @@ mql.onchange = (e) => {
 ## See also
 
 - [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from
-  code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

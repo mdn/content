@@ -172,6 +172,6 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`scaleZ()`](/en-US/docs/Web/CSS/transform-function/scaleZ())
-- [`translate3d()`](/en-US/docs/Web/CSS/transform-function/translate3d())
-- [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d())
+- [`scaleZ()`](/en-US/docs/Web/CSS/transform-function/scaleZ)
+- [`translate3d()`](/en-US/docs/Web/CSS/transform-function/translate3d)
+- [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d)

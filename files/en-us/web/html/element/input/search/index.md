@@ -9,7 +9,7 @@ tags:
   - Input Type
   - Reference
   - Search
-browser-compat: html.elements.input.input-search
+browser-compat: html.elements.input.type_search
 ---
 
 {{HTMLRef("Input_types")}}
@@ -23,7 +23,7 @@ browser-compat: html.elements.input.input-search
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing the value contained in
+        A string representing the value contained in
         the search field.
       </td>
     </tr>
@@ -68,7 +68,7 @@ browser-compat: html.elements.input.input-search
 
 ## Value
 
-The {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} representing the value contained in the search field. You can retrieve this using the {{domxref("HTMLInputElement.value")}} property in JavaScript.
+The {{htmlattrxref("value", "input")}} attribute contains a string representing the value contained in the search field. You can retrieve this using the {{domxref("HTMLInputElement.value")}} property in JavaScript.
 
 ```js
 searchTerms = mySearch.value;

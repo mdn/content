@@ -586,15 +586,15 @@ As mentioned above, you can't rely on automated tools alone for determining acce
 
 The following list provides a checklist for you to follow to make sure you've carried out the recommended accessibility testing for your project:
 
-1. Make sure your HTML is as semantically correct as possible. [Validating it](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#validation) is a good start, as is using an [Auditing tool](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#auditing_tools).
+1. Make sure your HTML is as semantically correct as possible. [Validating it](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#validation) is a good start, as is using an [Auditing tool](#auditing_tools).
 2. Check that your content makes sense when the CSS is turned off.
-3. Make sure your functionality is [keyboard accessible](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility). Test using Tab, Return/Enter, etc.
-4. Make sure your non-text content has [text alternatives](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#text_alternatives). An [Auditing tool](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#auditing_tools) is good for catching such problems.
-5. Make sure your site's [color contrast](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#color_and_color_contrast) is acceptable, using a suitable checking tool.
-6. Make sure [hidden content](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#hiding_content) is visible by screenreaders.
+3. Make sure your functionality is [keyboard accessible](#using_native_keyboard_accessibility). Test using Tab, Return/Enter, etc.
+4. Make sure your non-text content has [text alternatives](#text_alternatives). An [Auditing tool](#auditing_tools) is good for catching such problems.
+5. Make sure your site's [color contrast](#color_and_color_contrast) is acceptable, using a suitable checking tool.
+6. Make sure [hidden content](#hiding_content) is visible by screenreaders.
 7. Make sure that functionality is usable without JavaScript wherever possible.
 8. Use ARIA to improve accessibility where appropriate.
-9. Run your site through an [Auditing tool](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#auditing_tools).
+9. Run your site through an [Auditing tool](#auditing_tools).
 10. Test it with a screenreader.
 11. Include an accessibility policy/statement somewhere findable on your site to say what you did.
 

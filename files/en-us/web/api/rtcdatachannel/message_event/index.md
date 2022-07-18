@@ -1,6 +1,7 @@
 ---
 title: 'RTCDataChannel: message event'
 slug: Web/API/RTCDataChannel/message_event
+page-type: web-api-event
 tags:
   - API
   - Data Channel

@@ -11,12 +11,12 @@ tags:
   - Input Type
   - Reference
   - button
-browser-compat: html.elements.input.input-button
+browser-compat: html.elements.input.type_button
 ---
 
 {{HTMLRef("Input_types")}}
 
-{{HTMLElement("input")}} elements of type **`button`** are rendered as simple push buttons, which can be programmed to control custom functionality anywhere on a webpage as required when assigned an event handler function (typically for the {{event("click")}} event).
+{{HTMLElement("input")}} elements of type **`button`** are rendered as simple push buttons, which can be programmed to control custom functionality anywhere on a webpage as required when assigned an event handler function (typically for the {{domxref("Element/click_event", "click")}} event).
 
 {{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
 
@@ -26,7 +26,7 @@ browser-compat: html.elements.input.input-button
   <tbody>
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
-      <td>A {{domxref("DOMString")}} used as the button's label</td>
+      <td>A string used as the button's label</td>
     </tr>
     <tr>
       <td><strong>Events</strong></td>
@@ -58,7 +58,7 @@ browser-compat: html.elements.input.input-button
 
 ### Button with a value
 
-An `<input type="button">` elements' {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that is used as the button's label.
+An `<input type="button">` elements' {{htmlattrxref("value", "input")}} attribute contains a string that is used as the button's label.
 
 ```html
 <input type="button" value="Click Me">
@@ -82,7 +82,7 @@ If you don't specify a `value`, you get an empty button:
 
 ### A simple button
 
-We'll begin by creating a simple button with a {{event("click")}} event handler that starts our machine (well, it toggles the `value` of the button and the text content of the following paragraph):
+We'll begin by creating a simple button with a {{domxref("Element/click_event", "click")}} event handler that starts our machine (well, it toggles the `value` of the button and the text content of the following paragraph):
 
 ```html
 <form>
@@ -108,7 +108,7 @@ function updateButton() {
 }
 ```
 
-The script gets a reference to the {{domxref("HTMLInputElement")}} object representing the `<input>` in the DOM, saving this reference in the variable `button`. {{domxref("EventTarget.addEventListener", "addEventListener()")}} is then used to establish a function that will be run when {{event("click")}} events occur on the button.
+The script gets a reference to the {{domxref("HTMLInputElement")}} object representing the `<input>` in the DOM, saving this reference in the variable `button`. {{domxref("EventTarget.addEventListener", "addEventListener()")}} is then used to establish a function that will be run when {{domxref("Element/click_event", "click")}} events occur on the button.
 
 {{EmbedLiveSample("A_simple_button", 650, 100)}}
 

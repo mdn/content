@@ -1,6 +1,7 @@
 ---
 title: 'ServiceWorkerGlobalScope: periodicsync event'
 slug: Web/API/ServiceWorkerGlobalScope/periodicsync_event
+page-type: web-api-event
 tags:
   - Offline
   - PWA
@@ -54,7 +55,7 @@ You can also set up the event handler using the `onperiodicsync` property:
 
 ```js
 self.onperiodicsync = (event) => {
-  ...
+ // ...
 };
 ```
 

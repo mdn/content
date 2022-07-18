@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.currentRemoteDescription
 slug: Web/API/RTCPeerConnection/currentRemoteDescription
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -50,7 +51,7 @@ containing the {{domxref("RTCSessionDescription")}} object's `type` and
 
 ```js
 var pc = new RTCPeerConnection();
-…
+// ...
 var sd = pc.currentRemoteDescription;
 if (sd) {
   alert("Local session: type='" +

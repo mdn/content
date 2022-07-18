@@ -1,6 +1,7 @@
 ---
 title: Window.closed
 slug: Web/API/Window/closed
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

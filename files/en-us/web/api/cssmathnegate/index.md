@@ -1,6 +1,7 @@
 ---
 title: CSSMathNegate
 slug: Web/API/CSSMathNegate
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -24,7 +25,7 @@ The **`CSSMathNegate`** interface of the {{domxref('CSS_Object_Model#css_typed_o
 
 ## Properties
 
-- {{domxref('CSSMathNegate.value')}}{{ReadOnlyInline}}
+- {{domxref('CSSMathNegate.value')}} {{ReadOnlyInline}}
   - : Returns a {{domxref('CSSNumericValue')}} object.
 
 ## Methods

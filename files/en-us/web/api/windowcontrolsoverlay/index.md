@@ -1,6 +1,7 @@
 ---
 title: WindowControlsOverlay
 slug: Web/API/WindowControlsOverlay
+page-type: web-api-interface
 tags:
   - API
   - Window Controls Overlay
@@ -40,7 +41,7 @@ Listen to these events using {{domxref('EventTarget.addEventListener()')}} or by
 if ('windowControlsOverlay' in navigator) {
   navigator.windowControlsOverlay.addEventListener('geometrychange', event => {
     if (event.visible) {
-      var rect = event.titlebarAreaRect;
+      const rect = event.titlebarAreaRect;
       // Do something with the coordinates of the title bar area.
     }
   });

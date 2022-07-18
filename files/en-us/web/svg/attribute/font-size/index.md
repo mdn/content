@@ -59,7 +59,7 @@ html, body, svg {
   </tbody>
 </table>
 
-For a description of the values, please refer to the [CSS `font-size`](/en-US/docs/Web/CSS/font-size#Values) property.
+For a description of the values, please refer to the [CSS `font-size`](/en-US/docs/Web/CSS/font-size#values) property.
 
 ## Specifications
 

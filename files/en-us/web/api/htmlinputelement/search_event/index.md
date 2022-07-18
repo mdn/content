@@ -1,6 +1,7 @@
 ---
 title: 'HTMLInputElement: search event'
 slug: Web/API/HTMLInputElement/search_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -54,14 +55,16 @@ const input = document.querySelector('input[type="search"]');
 
 input.addEventListener('search', () => {
  console.log("The term searched for was " + input.value);
-})
+});
+```
 
+```js
 // onsearch version
 const input = document.querySelector('input[type="search"]');
 
 input.onsearch = () => {
  console.log("The term searched for was " + input.value);
-})
+};
 ```
 
 ## Specifications

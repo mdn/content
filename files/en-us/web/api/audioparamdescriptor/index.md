@@ -1,6 +1,7 @@
 ---
 title: AudioParamDescriptor
 slug: Web/API/AudioParamDescriptor
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -48,7 +49,7 @@ class WhiteNoiseProcessor extends AudioWorkletProcessor {
     }]
   }
 
-...
+// …
 }
 ```
 

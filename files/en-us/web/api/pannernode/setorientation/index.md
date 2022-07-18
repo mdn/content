@@ -1,6 +1,7 @@
 ---
 title: PannerNode.setOrientation()
 slug: Web/API/PannerNode/setOrientation
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -26,11 +27,11 @@ setOrientation(x, y, z)
 
 ### Parameters
 
-- x
+- `x`
   - : The x value of the panner's direction vector in 3D space.
-- y
+- `y`
   - : The y value of the panner's direction vector in 3D space.
-- z
+- `z`
   - : The z value of the panner's direction vector in 3D space.
 
 ### Return value

@@ -19,7 +19,7 @@ Returns all the content scripts registered with {{WebExtAPIRef("scripting.regist
 > **Note:** This method is available in Manifest V3 or higher in Chrome and Firefox 101. In Firefox 102+, this method is also available in Manifest V2.
 
 To use this API you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and permission for the page's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
- 
+
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
@@ -31,7 +31,6 @@ let scripts = await browser.scripting.getRegisteredContentScripts(
 ```
 
 ### Parameters
-
 
 - `filter` {{optional_inline}}
   - : {{WebExtAPIRef("scripting.ContentScriptFilter")}}. A filter for the registered script details to return.
@@ -76,6 +75,6 @@ console.log(scripts.map(script => script.id)); // ["script-2"]
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/extensions/scripting/#method-getRegisteredContentScripts) API.
+> **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/scripting/#method-getRegisteredContentScripts) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

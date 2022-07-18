@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.isQuery()
 slug: Web/API/WebGL2RenderingContext/isQuery
+page-type: web-api-instance-method
 tags:
   - API
   - Method

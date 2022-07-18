@@ -1,6 +1,7 @@
 ---
 title: Location
 slug: Web/API/Location
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -57,23 +58,23 @@ document.body.addEventListener('click', function (evt) {
 - {{domxref("Location.ancestorOrigins")}}
   - : A static {{domxref("DOMStringList")}} containing, in reverse order, the origins of all ancestor browsing contexts of the document associated with the given `Location` object.
 - {{domxref("Location.href")}}
-  - : A {{Glossary("stringifier")}} that returns a {{domxref("USVString")}} containing the entire URL. If changed, the associated document navigates to the new page. It can be set from a different origin than the associated document.
+  - : A {{Glossary("stringifier")}} that returns a string containing the entire URL. If changed, the associated document navigates to the new page. It can be set from a different origin than the associated document.
 - {{domxref("Location.protocol")}}
-  - : A {{domxref("USVString")}} containing the protocol scheme of the URL, including the final `':'`.
+  - : A string containing the protocol scheme of the URL, including the final `':'`.
 - {{domxref("Location.host")}}
-  - : A {{domxref("USVString")}} containing the host, that is the _hostname_, a `':'`, and the _port_ of the URL.
+  - : A string containing the host, that is the _hostname_, a `':'`, and the _port_ of the URL.
 - {{domxref("Location.hostname")}}
-  - : A {{domxref("USVString")}} containing the domain of the URL.
+  - : A string containing the domain of the URL.
 - {{domxref("Location.port")}}
-  - : A {{domxref("USVString")}} containing the port number of the URL.
+  - : A string containing the port number of the URL.
 - {{domxref("Location.pathname")}}
-  - : A {{domxref("USVString")}} containing an initial `'/'` followed by the path of the URL, not including the query string or fragment.
+  - : A string containing an initial `'/'` followed by the path of the URL, not including the query string or fragment.
 - {{domxref("Location.search")}}
-  - : A {{domxref("USVString")}} containing a `'?'` followed by the parameters or "querystring" of the URL. Modern browsers provide [URLSearchParams](/en-US/docs/Web/API/URLSearchParams/get#example) and [URL.searchParams](/en-US/docs/Web/API/URL/searchParams#example) to make it easy to parse out the parameters from the querystring.
+  - : A string containing a `'?'` followed by the parameters or "querystring" of the URL. Modern browsers provide [URLSearchParams](/en-US/docs/Web/API/URLSearchParams/get#example) and [URL.searchParams](/en-US/docs/Web/API/URL/searchParams#example) to make it easy to parse out the parameters from the querystring.
 - {{domxref("Location.hash")}}
-  - : A {{domxref("USVString")}} containing a `'#'` followed by the fragment identifier of the URL.
+  - : A string containing a `'#'` followed by the fragment identifier of the URL.
 - {{domxref("Location.origin")}} {{readOnlyInline}}
-  - : Returns a {{domxref("USVString")}} containing the canonical form of the origin of the specific location.
+  - : Returns a string containing the canonical form of the origin of the specific location.
 
 ## Methods
 
@@ -84,13 +85,13 @@ document.body.addEventListener('click', function (evt) {
 - {{domxref("Location.replace()")}}
   - : Replaces the current resource with the one at the provided URL (redirects to the provided URL). The difference from the `assign()` method and setting the `href` property is that after using `replace()` the current page will not be saved in session {{domxref("History")}}, meaning the user won't be able to use the _back_ button to navigate to it.
 - {{domxref("Location.toString()")}}
-  - : Returns a {{domxref("USVString")}} containing the whole URL. It is a synonym for {{domxref("Location.href")}}, though it can't be used to modify the value.
+  - : Returns a string containing the whole URL. It is a synonym for {{domxref("Location.href")}}, though it can't be used to modify the value.
 
 ## Examples
 
 ```js
 // location: https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container
-var loc = document.location;
+const loc = document.location;
 console.log(loc.href);      // https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container
 console.log(loc.protocol);  // https:
 console.log(loc.host);      // developer.mozilla.org:8080

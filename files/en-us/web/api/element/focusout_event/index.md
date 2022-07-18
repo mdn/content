@@ -1,6 +1,7 @@
 ---
 title: 'Element: focusout event'
 slug: Web/API/Element/focusout_event
+page-type: web-api-event
 tags:
   - API
   - DOM

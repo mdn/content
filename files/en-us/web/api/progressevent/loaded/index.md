@@ -1,6 +1,7 @@
 ---
 title: ProgressEvent.loaded
 slug: Web/API/ProgressEvent/loaded
+page-type: web-api-instance-property
 tags:
   - API
   - Progress Event

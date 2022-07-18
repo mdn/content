@@ -1,6 +1,7 @@
 ---
 title: HTMLMetaElement
 slug: Web/API/HTMLMetaElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

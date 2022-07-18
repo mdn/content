@@ -1,6 +1,7 @@
 ---
 title: XMLDocument
 slug: Web/API/XMLDocument
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -39,4 +40,4 @@ _Also inherits methods from: {{DOMxRef("Document")}}_
 
 ## See also
 
-- [The DOM interfaces index.](/en-US/docs/DOM/DOM_Reference)
+- [The Document Object Model (DOM)](/en-US/docs/Web/API/Document_Object_Model)

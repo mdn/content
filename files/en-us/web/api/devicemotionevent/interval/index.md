@@ -1,6 +1,7 @@
 ---
 title: DeviceMotionEvent.interval
 slug: Web/API/DeviceMotionEvent/interval
+page-type: web-api-instance-property
 tags:
   - API
   - Device Orientation

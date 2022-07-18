@@ -1,6 +1,7 @@
 ---
 title: AudioDecoder.close()
 slug: Web/API/AudioDecoder/close
+page-type: web-api-instance-method
 tags:
   - API
   - Method

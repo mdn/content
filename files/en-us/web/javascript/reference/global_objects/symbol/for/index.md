@@ -36,21 +36,11 @@ returned.
 ## Description
 
 In contrast to `Symbol()`, the `Symbol.for()` function creates a
-symbol available in a global symbol registry list. `Symbol.for()` does also
+symbol available in a [global symbol registry](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry) list. `Symbol.for()` does also
 not necessarily create a new symbol on every call, but checks first if a symbol with the
 given `key` is already present in the registry. In that case, that symbol is
 returned. If no symbol with the given key is found, `Symbol.for()` will
 create a new global symbol.
-
-### Global symbol registry
-
-The global symbol registry is a list with the following record structure and it is
-initialized empty:
-
-| Field name | Value                                   |
-| ---------- | --------------------------------------- |
-| [[key]]    | A string key used to identify a symbol. |
-| [[symbol]] | A symbol that is stored globally.       |
 
 ## Examples
 
@@ -65,7 +55,7 @@ Symbol.for('bar') === Symbol.for('bar'); // true
 Symbol('bar') === Symbol('bar'); // false
 
 // The key is also used as the description
-var sym = Symbol.for('mario');
+const sym = Symbol.for('mario');
 sym.toString(); // "Symbol(mario)"
 ```
 

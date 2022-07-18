@@ -7,6 +7,9 @@ tags:
   - Intro
   - Networking
   - Security
+browser-compat:
+  - html.elements.link.integrity
+  - html.elements.script.integrity
 ---
 **Subresource Integrity** (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a [CDN](/en-US/docs/Glossary/CDN)) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match.
 
@@ -59,7 +62,7 @@ shasum -b -a 384 FILENAME.js | awk '{ print $1 }' | xxd -r -p | base64
 
 In a Windows environment, you can create a tool for generating SRI hashes with the following code:
 
-```bat
+```batch
 @echo off
 set bits=384
 openssl dgst -sha%bits% -binary %1% | openssl base64 -A > tmp
@@ -72,7 +75,7 @@ pause
 To use that code:
 
 1. Save that code in a file named `sri-hash.bat` in the Windows SendTo folder in your environment (for example, `C:\Users\USER\AppData\Roaming\Microsoft\Windows\SendTo`).
-2. Right-click a file in the File Explorer, select **Send to...**, and then select `sri-hash`. You will see the integrity value in a command box.
+2. Right-click a file in the File Explorer, select **Send to…**, and then select `sri-hash`. You will see the integrity value in a command box.
 3. Select the integrity value and right-click to copy it to the Clipboard.
 4. Press any key to dismiss the command box.
 
@@ -112,16 +115,11 @@ Browsers handle SRI by doing the following:
 
 ## Specifications
 
-| Specification                                    | Status                                       | Comment |
-| ------------------------------------------------ | -------------------------------------------- | ------- |
-| {{SpecName('Subresource Integrity')}} | {{Spec2('Subresource Integrity')}} |         |
-| {{SpecName('Fetch')}}                     | {{Spec2('Fetch')}}                     |         |
+{{Specifications}}
 
 ## Browser compatibility
 
-### \<script integrity>
-
-{{Compat("html.elements.script.integrity")}}
+{{Compat}}
 
 ## See also
 

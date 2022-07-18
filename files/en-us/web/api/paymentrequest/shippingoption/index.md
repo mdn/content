@@ -1,6 +1,7 @@
 ---
 title: PaymentRequest.shippingOption
 slug: Web/API/PaymentRequest/shippingOption
+page-type: web-api-instance-property
 tags:
   - API
   - Payment Request

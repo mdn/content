@@ -1,6 +1,7 @@
 ---
 title: TextMetrics.ideographicBaseline
 slug: Web/API/TextMetrics/ideographicBaseline
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

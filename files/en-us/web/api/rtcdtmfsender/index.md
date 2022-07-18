@@ -1,6 +1,7 @@
 ---
 title: RTCDTMFSender
 slug: Web/API/RTCDTMFSender
+page-type: web-api-interface
 tags:
   - Audio
   - DTMF

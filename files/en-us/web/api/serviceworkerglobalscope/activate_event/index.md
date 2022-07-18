@@ -1,6 +1,7 @@
 ---
 title: 'ServiceWorkerGlobalScope: activate event'
 slug: Web/API/ServiceWorkerGlobalScope/activate_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -41,7 +42,7 @@ The following snippet shows how you could use an `activate` event handler to upg
 
 ```js
 globalScope.addEventListener('activate', function(event) {
-  var cacheAllowlist = ['v2'];
+  const cacheAllowlist = ['v2'];
 
   event.waitUntil(
     caches.forEach(function(cache, cacheName) {
@@ -57,7 +58,7 @@ You can also set up the event handler using the `onactivate` property:
 
 ```js
 globalScope.onactivate = function(event) {
-  ...
+  // ...
 };
 ```
 

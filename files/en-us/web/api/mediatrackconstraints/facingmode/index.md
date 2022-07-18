@@ -1,6 +1,7 @@
 ---
 title: MediaTrackConstraints.facingMode
 slug: Web/API/MediaTrackConstraints/facingMode
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints
@@ -19,7 +20,7 @@ browser-compat: api.MediaTrackConstraints.facingMode
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's
-**`facingMode`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString)
+**`facingMode`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring)
 describing the requested or mandatory constraints placed upon the value of the
 {{domxref("MediaTrackSettings.facingMode", "facingMode")}} constrainable property.
 
@@ -34,7 +35,7 @@ will never include this property.
 
 ## Value
 
-An object based on [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) specifying one or more acceptable,
+An object based on [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) specifying one or more acceptable,
 ideal, and/or exact (mandatory) facing modes are acceptable for a video track.
 
 An `exact` value in this case indicates that the specified facing mode is
@@ -65,6 +66,7 @@ pointed.
 - `"right"`
   - : The video source is facing toward the user but to their right, such as a camera
     aimed toward the user but over their right shoulder.
+
 ## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
@@ -81,8 +83,7 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Exampl
 ## See also
 
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities,
-  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}

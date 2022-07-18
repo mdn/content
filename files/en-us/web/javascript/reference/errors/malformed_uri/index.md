@@ -14,10 +14,10 @@ wasn't successful.
 
 ## Message
 
-```js
-URIError: The URI to be encoded contains invalid character (Edge)
+```
+URIError: URI malformed (V8-based)
 URIError: malformed URI sequence (Firefox)
-URIError: URI malformed (Chrome)
+URIError: String contained an illegal UTF-16 sequence. (Safari)
 ```
 
 ## Error type

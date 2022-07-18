@@ -10,6 +10,7 @@ tags:
   - tablist role
   - composite widget role
   - tablist
+spec-urls: https://w3c.github.io/aria/#tablist
 ---
 
 The `tablist` role identifies the element that serves as the container for a set of `tabs`. The tab content are referred to as `tabpanel` elements.
@@ -45,7 +46,7 @@ Elements with the `tablist` role have an implicit [`aria-orientation`](/en-US/do
 - [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
   - : When set to `true`, indicates the user may select more than one `tab` from the `tablist` descendants.
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
-  - :  If the tablist element is vertically oriented, set `aria-orientation="vertical". The default is`horizontal`.
+  - :  If the tablist element is vertically oriented, set `aria-orientation="vertical"`. The default is `horizontal`.
 
 ### Keyboard interactions
 
@@ -97,9 +98,7 @@ When focus is on a tab in a tablist with either horizontal or vertical orientati
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#tablist","ARIA: tablist role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

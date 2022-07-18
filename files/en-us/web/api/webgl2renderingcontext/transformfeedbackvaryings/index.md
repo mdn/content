@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.transformFeedbackVaryings()
 slug: Web/API/WebGL2RenderingContext/transformFeedbackVaryings
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -23,9 +24,9 @@ transformFeedbackVaryings(program, varyings, bufferMode)
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}}.
-- varyings
+- `varyings`
   - : An {{jsxref("Array")}} of string specifying the names of the
     varying variables to use.
 - `bufferMode`

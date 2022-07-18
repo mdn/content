@@ -1,6 +1,7 @@
 ---
 title: 'RTCDataChannel: error event'
 slug: Web/API/RTCDataChannel/error_event
+page-type: web-api-event
 tags:
   - API
   - Connectivity
@@ -125,7 +126,7 @@ You can also set up an event handler for `error` events using the `RTCDataChanne
 dc.onerror = ev => {
   const err = ev.error;
 
-  /* ... */
+  // …
 }
 ```
 

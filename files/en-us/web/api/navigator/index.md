@@ -1,6 +1,7 @@
 ---
 title: Navigator
 slug: Web/API/Navigator
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -103,17 +104,15 @@ _Doesn't inherit any properties._
   - : Returns the version of the browser as a string. Do not rely on this property to return the correct value.
 - {{domxref("Navigator.activeVRDisplays")}} {{readonlyInline}} {{deprecated_inline}}
   - : Returns an array containing every {{domxref("VRDisplay")}} object that is currently presenting ({{domxref("VRDisplay.ispresenting")}} is `true`).
-- {{domxref("Navigator.battery")}} {{readonlyInline}} {{deprecated_inline}}
-  - : Returns a {{domxref("BatteryManager")}} object. Use {{domxref("Navigator.getBattery()")}} instead.
 - {{domxref("Navigator.doNotTrack")}} {{readonlyInline}} {{deprecated_inline}}
   - : Reports the value of the user's do-not-track preference. When this value is "yes", your web site or application should not track the user.
-- {{domxref("Navigator.mimeTypes")}} {{readonlyInline}}{{deprecated_inline}}
+- {{domxref("Navigator.mimeTypes")}} {{readonlyInline}} {{deprecated_inline}}
   - : Returns an {{domxref("MimeTypeArray")}} listing the MIME types supported by the browser.
 - {{domxref("Navigator.oscpu")}} {{readonlyInline}} {{deprecated_inline}}
   - : Returns a string that represents the current operating system.
 - {{domxref("Navigator.platform")}} {{readonlyInline}} {{deprecated_inline}}
   - : Returns a string representing the platform of the browser. Do not rely on this function to return a significant value.
-- {{domxref("Navigator.plugins")}} {{readonlyInline}}{{deprecated_inline}}
+- {{domxref("Navigator.plugins")}} {{readonlyInline}} {{deprecated_inline}}
   - : Returns a {{domxref("PluginArray")}} listing the plugins installed in the browser.
 - {{domxref("Navigator.product")}} {{readonlyInline}} {{deprecated_inline}}
   - : Always returns `'Gecko'`, in any browser.

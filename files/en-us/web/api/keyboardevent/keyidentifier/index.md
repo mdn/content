@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.keyIdentifier
 slug: Web/API/KeyboardEvent/keyIdentifier
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: AddressErrors.organization
 slug: Web/API/AddressErrors/organization
+page-type: web-api-instance-property
 tags:
   - API
   - Address

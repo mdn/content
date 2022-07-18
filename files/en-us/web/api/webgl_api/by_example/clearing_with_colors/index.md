@@ -1,6 +1,7 @@
 ---
 title: Clearing with colors
 slug: Web/API/WebGL_API/By_example/Clearing_with_colors
+page-type: guide
 tags:
   - Beginner
   - Example
@@ -62,11 +63,11 @@ window.addEventListener("load", function setupWebGL (evt) {
   window.removeEventListener(evt.type, setupWebGL, false);
 
   // References to the document elements.
-  var paragraph = document.querySelector("p"),
+  const paragraph = document.querySelector("p"),
     canvas = document.querySelector("canvas");
 
   // Getting the WebGL rendering context.
-  var gl = canvas.getContext("webgl")
+  const gl = canvas.getContext("webgl")
     || canvas.getContext("experimental-webgl");
 
   // If failed, inform user of failure. Otherwise, initialize

@@ -10,6 +10,9 @@ tags:
   - Reference
   - Table Role
   - document structure role
+spec-urls:
+  - https://w3c.github.io/aria/#table
+  - https://w3c.github.io/aria-practices/#table
 ---
 The `table` value of the ARIA `role` attribute identifies the element containing the role as having a non-interactive table structure containing data arranged in rows and columns, similar to the native {{HTMLElement('table')}} HTML element.
 
@@ -128,10 +131,7 @@ none
 
 ## Specifications
 
-| Specification                                                                            | Status                                           |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#table","ARIA Table Role")}}                         | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#table","ARIA Table Role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See also
 

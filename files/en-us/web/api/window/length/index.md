@@ -1,6 +1,7 @@
 ---
 title: Window.length
 slug: Web/API/Window/length
+page-type: web-api-instance-property
 tags:
   - API
   - Gecko

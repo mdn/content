@@ -1,6 +1,7 @@
 ---
 title: AbortController.abort()
 slug: Web/API/AbortController/abort
+page-type: web-api-instance-method
 tags:
   - API
   - AbortController
@@ -25,13 +26,13 @@ abort(reason)
 
 ### Parameters
 
-- `reason`
+- `reason` {{optional_inline}}
   - : The reason why the operation was aborted, which can be any JavaScript value.
     If not specified, the reason is set to "AbortError" {{domxref("DOMException")}}.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -56,9 +57,9 @@ abortBtn.addEventListener('click', function() {
 });
 
 function fetchVideo() {
-  ...
+  // …
   fetch(url, {signal}).then(function(response) {
-    ...
+    // …
   }).catch(function(e) {
     reports.textContent = 'Download error: ' + e.message;
   })

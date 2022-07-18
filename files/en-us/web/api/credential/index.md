@@ -1,6 +1,7 @@
 ---
 title: Credential
 slug: Web/API/Credential
+page-type: web-api-interface
 tags:
   - API
   - Credential Management API

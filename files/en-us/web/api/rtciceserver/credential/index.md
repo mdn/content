@@ -1,6 +1,7 @@
 ---
 title: RTCIceServer.credential
 slug: Web/API/RTCIceServer/credential
+page-type: web-api-instance-property
 tags:
   - Credential
   - Experimental
@@ -25,10 +26,10 @@ other secret.
 
 ```js
 var iceServer = {
-                  ...
-                  credential = credential,
-                  ...
-                };
+  // ...
+  credential: credential,
+  // ...
+};
 
 var credential = iceServer.credential;
 

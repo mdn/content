@@ -38,8 +38,8 @@ The following example assigns the month portion of the current date to the varia
 `month`.
 
 ```js
-var today = new Date();
-var month = today.getUTCMonth();
+const today = new Date();
+const month = today.getUTCMonth();
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.iceGatheringState
 slug: Web/API/RTCPeerConnection/iceGatheringState
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCPeerConnection

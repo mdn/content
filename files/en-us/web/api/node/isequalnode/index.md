@@ -1,6 +1,7 @@
 ---
 title: Node.isEqualNode()
 slug: Web/API/Node/isEqualNode
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
@@ -28,7 +29,7 @@ isEqualNode(otherNode);
 
 ### Return value
 
-A boolean value that is `true` if the two nodes are equals, or `false`if not.
+A boolean value that is `true` if the two nodes are equals, or `false` if not.
 If `otherNode` is `null`, `isEqualNode()` always return false.
 
 ## Example

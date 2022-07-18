@@ -1,6 +1,7 @@
 ---
 title: VRStageParameters.sizeY
 slug: Web/API/VRStageParameters/sizeY
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

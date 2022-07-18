@@ -1,5 +1,5 @@
 ---
-title: 'aria-invalid'
+title: aria-invalid
 slug: Web/Accessibility/ARIA/Attributes/aria-invalid
 tags:
   - Accessibility
@@ -8,8 +8,8 @@ tags:
   - ARIA property
   - aria-invalid
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-invalid
 ---
-
 The `aria-invalid` state indicates the entered value does not conform to the format expected by the application.
 
 ## Description
@@ -22,7 +22,7 @@ The attribute should be set with JavaScript as a result of a validation process.
 
 > **Note:** When `aria-invalid` is used in conjunction with the `aria-required` attribute, `aria-invalid` should not be set to true before the form is submitted - only in response to validation.
 
-There are currently four values: in addition to `true` and `false` we have `grammar` which can be used when a grammatical is detected and `spelling` for spelling errors.  If the attribute is not present, or its value is false, or its value is an empty string, the default value of false applies. Any other value is treated as if `true` were set. It is possible that more values will be added in the future.
+There are currently four values: in addition to `true` and `false` we have `grammar` which can be used when a grammatical error is detected and `spelling` for spelling errors.  If the attribute is not present, or its value is false, or its value is an empty string, the default value of false applies. Any other value is treated as if `true` were set.
 
 ### Native HTML validation
 
@@ -121,7 +121,7 @@ Used in roles:
 - [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
 - [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
 - [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
-- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)
+- [`radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role)
 - [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
 - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
 - [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
@@ -137,9 +137,7 @@ Inherited into role:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-invalid","ARIA: aria-invalid Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

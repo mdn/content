@@ -1,6 +1,7 @@
 ---
 title: FocusEvent.relatedTarget
 slug: Web/API/FocusEvent/relatedTarget
+page-type: web-api-instance-property
 tags:
   - API
   - Event
@@ -49,8 +50,7 @@ secondary target, depending on the type of event:
   </tbody>
 </table>
 
-Note that [many elements can't have
-focus](https://stackoverflow.com/questions/42764494/blur-event-relatedtarget-returns-null/42764495), which is a common reason for `relatedTarget` to be
+Note that [many elements can't have focus](https://stackoverflow.com/questions/42764494/blur-event-relatedtarget-returns-null/42764495), which is a common reason for `relatedTarget` to be
 `null`. `relatedTarget` may also be set to `null` for
 security reasons, like when tabbing in or out of a page.
 

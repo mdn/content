@@ -1,6 +1,7 @@
 ---
 title: Using DTMF with WebRTC
 slug: Web/API/WebRTC_API/Using_DTMF
+page-type: guide
 tags:
   - API
   - DTMF
@@ -160,7 +161,7 @@ Next, the event handlers for the caller are established. We'll cover these in de
 
 Then a second `RTCPeerConnection`, this one representing the receiving end of the call, is created and stored in `receiverPC`; its `onicecandidate` event handler is set up too.
 
-If `addTrack()` is supported, we set up the receiver's `ontrack` event handler; otherwise, we set up `onaddstream`. The {{domxref("RTCPeerConnection.track_event", "track")}} and {{event("addstream")}} events are sent when media is added to the connection.
+If `addTrack()` is supported, we set up the receiver's `ontrack` event handler; otherwise, we set up `onaddstream`. The {{domxref("RTCPeerConnection.track_event", "track")}} and {{domxref("RTCPeerConnection/addstream_event", "addstream")}} events are sent when media is added to the connection.
 
 Finally, we call {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to obtain access to the caller's microphone. If successful, the function `gotStream()` is called, otherwise we log the error because calling has failed.
 
@@ -366,7 +367,7 @@ If `event.candidate` is `null`, that indicates that there are no more candidates
 
 #### Adding media to the receiver
 
-When the receiver begins to receive media, an event is delivered to the receiver's {{domxref("RTCPeerConnection")}}, `receiverPC`. As explained in [Starting the connection process](#starting_the_connection_process), the current WebRTC specification uses the {{domxref("RTCPeerConnection.track_event", "track")}} event for this, but some browsers haven't been updated to support this yet, so we also need to handle the {{event("addstream")}} event. The `handleReceiverTrackEvent()` and `handleReceiverAddStreamEvent()` methods, shown below, handle these.
+When the receiver begins to receive media, an event is delivered to the receiver's {{domxref("RTCPeerConnection")}}, `receiverPC`. As explained in [Starting the connection process](#starting_the_connection_process), the current WebRTC specification uses the {{domxref("RTCPeerConnection.track_event", "track")}} event for this, but some browsers haven't been updated to support this yet, so we also need to handle the {{domxref("RTCPeerConnection/addstream_event", "addstream")}} event. The `handleReceiverTrackEvent()` and `handleReceiverAddStreamEvent()` methods, shown below, handle these.
 
 ```js
 function handleReceiverTrackEvent(event) {

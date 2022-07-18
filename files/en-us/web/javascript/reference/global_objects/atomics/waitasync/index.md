@@ -56,7 +56,7 @@ const sab = new SharedArrayBuffer(1024);
 const int32 = new Int32Array(sab);
 ```
 
-A reading thread is sleeping and waiting on location 0 which is expected to be 0. 
+A reading thread is sleeping and waiting on location 0 which is expected to be 0.
 The `result` promise is returned immediately.
 
 ```js
@@ -71,7 +71,7 @@ Atomics.notify(int32, 0);
 // { async: false, value: "ok" }
 ```
 
-If it isn't resolving to `"ok"`, the value in the shared memory location wasn't the expected  (the promise will resolve to `"not-equal"`) or the timeout was reached (the promise will resolve to `"time-out"`). 
+If it isn't resolving to `"ok"`, the value in the shared memory location wasn't the expected  (the promise will resolve to `"not-equal"`) or the timeout was reached (the promise will resolve to `"time-out"`).
 
 ## Specifications
 

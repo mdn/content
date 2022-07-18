@@ -22,7 +22,9 @@ The **`::target-text`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/
 
 ## Syntax
 
-{{csssyntax}}
+```
+::target-text
+```
 
 ## Examples
 

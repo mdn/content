@@ -56,7 +56,7 @@ The following example displays characters at different locations in the string
 "`Brave new world`":
 
 ```js
-var anyString = 'Brave new world';
+const anyString = 'Brave new world';
 console.log("The character at index 0   is '" + anyString.charAt()   + "'");
 // No index was provided, used 0 as default
 
@@ -88,8 +88,8 @@ provides a whole character, even if the string contains characters that are not 
 Basic Multi-lingual Plane.
 
 ```js
-var str = 'A \uD87E\uDC04 Z'; // We could also use a non-BMP character directly
-for (var i = 0, chr; i < str.length; i++) {
+const str = 'A \uD87E\uDC04 Z'; // We could also use a non-BMP character directly
+for (let i = 0, chr; i < str.length; i++) {
   if ((chr = getWholeChar(str, i)) === false) {
     continue;
   }
@@ -101,7 +101,7 @@ for (var i = 0, chr; i < str.length; i++) {
 }
 
 function getWholeChar(str, i) {
-  var code = str.charCodeAt(i);
+  const code = str.charCodeAt(i);
 
   if (Number.isNaN(code)) {
     return ''; // Position not found
@@ -116,7 +116,7 @@ function getWholeChar(str, i) {
     if (str.length <= (i + 1)) {
       throw 'High surrogate without following low surrogate';
     }
-    var next = str.charCodeAt(i + 1);
+    const next = str.charCodeAt(i + 1);
       if (0xDC00 > next || next > 0xDFFF) {
         throw 'High surrogate without following low surrogate';
       }
@@ -126,7 +126,7 @@ function getWholeChar(str, i) {
   if (i === 0) {
     throw 'Low surrogate without preceding high surrogate';
   }
-  var prev = str.charCodeAt(i - 1);
+  const prev = str.charCodeAt(i - 1);
 
   // (could change last hex to 0xDB7F to treat high private
   // surrogates as single characters)

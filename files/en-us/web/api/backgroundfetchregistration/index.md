@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchRegistration
 slug: Web/API/BackgroundFetchRegistration
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -20,19 +21,19 @@ A `BackgroundFetchRegistration` instance is returned by the {{domxref("Backgroun
 
 The following properties are available synchronously, as convenience properties copied from those in the `BackgroundFetchRegistration` instance.
 
-- {{domxref("BackgroundFetchRegistration.id")}}{{ReadOnlyInline}}
-  - : A {{domxref("DOMString","string")}} containing the background fetch's ID.
-- {{domxref("BackgroundFetchRegistration.uploadTotal")}}{{ReadOnlyInline}}
+- {{domxref("BackgroundFetchRegistration.id")}} {{ReadOnlyInline}}
+  - : A string containing the background fetch's ID.
+- {{domxref("BackgroundFetchRegistration.uploadTotal")}} {{ReadOnlyInline}}
   - : A {{jsxref("number")}} containing the total number of bytes to be uploaded.
-- {{domxref("BackgroundFetchRegistration.uploaded")}}{{ReadOnlyInline}}
+- {{domxref("BackgroundFetchRegistration.uploaded")}} {{ReadOnlyInline}}
   - : A {{jsxref("number")}} containing the size in bytes successfully sent, initially `0`.
-- {{domxref("BackgroundFetchRegistration.downloadTotal")}}{{ReadOnlyInline}}
+- {{domxref("BackgroundFetchRegistration.downloadTotal")}} {{ReadOnlyInline}}
   - : A {{jsxref("number")}} containing the total size in bytes of this download. This is the value set when the background fetch was registered, or `0`.
-- {{domxref("BackgroundFetchRegistration.downloaded")}}{{ReadOnlyInline}}
+- {{domxref("BackgroundFetchRegistration.downloaded")}} {{ReadOnlyInline}}
   - : A {{jsxref("number")}} containing the size in bytes that has been downloaded, initially `0`.
-- {{domxref("BackgroundFetchRegistration.result")}}{{ReadOnlyInline}}
+- {{domxref("BackgroundFetchRegistration.result")}} {{ReadOnlyInline}}
   - : Returns an empty string initially, on completion either the string `"success"` or `"failure"`.
-- {{domxref("BackgroundFetchRegistration.failureReason")}}{{ReadOnlyInline}}
+- {{domxref("BackgroundFetchRegistration.failureReason")}} {{ReadOnlyInline}}
 
   - : One of the following strings:
 
@@ -49,7 +50,7 @@ The following properties are available synchronously, as convenience properties 
     - `"download-total-exceeded"`
       - : The provided `downloadTotal` was exceeded. This value was set when the background fetch was registered.
 
-- {{domxref("BackgroundFetchRegistration.recordsAvailable")}}{{ReadOnlyInline}}
+- {{domxref("BackgroundFetchRegistration.recordsAvailable")}} {{ReadOnlyInline}}
   - : A {{jsxref("boolean")}} indicating whether the `recordsAvailable` flag is set.
 
 ## Methods

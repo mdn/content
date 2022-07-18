@@ -1,6 +1,7 @@
 ---
 title: Document.evaluate()
 slug: Web/API/Document/evaluate
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -88,7 +89,7 @@ evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
         expression.
 
 - `result`
-  - : An existing `XPathResult` to use for the results. If set to`null` the method will create and return a new `XPathResult`.
+  - : An existing `XPathResult` to use for the results. If set to `null` the method will create and return a new `XPathResult`.
 
 ### Return value
 

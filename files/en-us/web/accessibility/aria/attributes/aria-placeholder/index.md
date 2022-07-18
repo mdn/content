@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-placeholder
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-placeholder
 ---
 
 The `aria-placeholder` attribute defines a short hint (a word or short phrase) intended to help the user with data entry when a form control has no value. The hint can be a sample value or a brief description of the expected format.
@@ -57,9 +58,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-placeholder","ARIA: aria-placeholder Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

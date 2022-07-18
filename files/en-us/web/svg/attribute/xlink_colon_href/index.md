@@ -5,30 +5,13 @@ tags:
   - NeedsCompatTable
   - SVG
   - SVG Attribute
-spec-urls:
-  - https://www.w3.org/TR/SVG11/linking.html#AElementXLinkHrefAttribute
-  - https://www.w3.org/TR/SVG11/text.html#AltGlyphElementHrefAttribute
-  - https://www.w3.org/TR/SVG11/animate.html#HrefAttribute
-  - https://www.w3.org/TR/SVG11/interact.html#CursorElementHrefAttribute
-  - https://www.w3.org/TR/SVG11/filters.html#feImageElementHrefAttribute
-  - https://www.w3.org/TR/SVG11/filters.html#FilterElementHrefAttribute
-  - https://www.w3.org/TR/SVG11/fonts.html#FontFaceUriElementHrefAttribute
-  - https://www.w3.org/TR/SVG11/text.html#GlyphRefElementHrefAttribute
-  - https://www.w3.org/TR/SVG11/struct.html#ImageElementHrefAttribute
-  - https://www.w3.org/TR/SVG11/pservers.html#LinearGradientElementHrefAttribute
-  - https://www.w3.org/TR/SVG11/animate.html#MPathElementHrefAttribute
-  - https://www.w3.org/TR/SVG11/pservers.html#PatternElementHrefAttribute
-  - https://www.w3.org/TR/SVG11/pservers.html#RadialGradientElementHrefAttribute
-  - https://www.w3.org/TR/SVG11/script.html#ScriptElementHrefAttribute
-  - https://www.w3.org/TR/SVG11/text.html#TextPathElementHrefAttribute
-  - https://www.w3.org/TR/SVG11/struct.html#UseElementHrefAttribute
-  - https://www.w3.org/TR/SVG11/text.html#TRefElementHrefAttribute
+browser-compat: svg.elements.a.xlink_href
 ---
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`xlink:href`** attribute defines a reference to a resource as a reference [IRI](/en-US/docs/Web/SVG/Content_type#iri). The exact meaning of that link depends on the context of each element using it.
 
-> **Note:** SVG 2 removed the need for the `xlink` namespace, so instead of `xlink:href` you should use {{SVGAttr("href")}}.
+> **Note:** SVG 2 removed the need for the `xlink` namespace, so instead of `xlink:href` you should use {{SVGAttr("href")}}. If you need to support earlier browser versions, the deprecated `xlink:href` attribute can be used as a fallback in addition to the `href` attribute, e.g. `<use href="some-id" xlink:href="some-id" x="5" y="5" />`.
 
 You can use this attribute with the following SVG elements:
 
@@ -512,6 +495,10 @@ For {{SVGElement("tref")}}, `xlink:href` defines a reference to an element whose
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

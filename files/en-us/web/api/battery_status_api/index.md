@@ -1,6 +1,7 @@
 ---
 title: Battery Status API
 slug: Web/API/Battery_Status_API
+page-type: web-api-overview
 tags:
   - API
   - Apps
@@ -22,7 +23,7 @@ The **Battery Status API**, more often referred to as the **Battery API**, provi
 
 - {{domxref("BatteryManager")}}
   - : Provides information about the system's battery charge level.
-- {{domxref("navigator.getBattery()")}}{{readonlyInline}}
+- {{domxref("navigator.getBattery()")}} {{readonlyInline}}
   - : Returns a {{JSxRef("Promise")}} that resolves with a {{DOMxRef("BatteryManager")}} object.
 
 ## Example

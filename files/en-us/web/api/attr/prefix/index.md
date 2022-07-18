@@ -1,6 +1,7 @@
 ---
 title: Attr.prefix
 slug: Web/API/Attr/prefix
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
@@ -19,7 +20,7 @@ Also, only the `xml` (for the `xml:lang` attribute), `xlink` (for the `xlink:hre
 
 ## Value
 
-A {{jsxref("String")}} containing the prefix of the namespace the attribute belongs too. If none, it returns `null`.
+A string containing the prefix of the namespace the attribute belongs too. If none, it returns `null`.
 
 ## Example
 

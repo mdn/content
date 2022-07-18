@@ -1,6 +1,7 @@
 ---
 title: Document.xmlVersion
 slug: Web/API/Document/xmlVersion
+page-type: web-api-instance-property
 tags:
   - API
   - DOM

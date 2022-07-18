@@ -1,6 +1,7 @@
 ---
 title: WebGLSync
 slug: Web/API/WebGLSync
+page-type: web-api-interface
 tags:
   - API
   - Experimental

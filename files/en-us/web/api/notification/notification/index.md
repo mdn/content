@@ -1,6 +1,7 @@
 ---
 title: Notification()
 slug: Web/API/Notification/Notification
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -39,32 +40,30 @@ new Notification(title, options)
         and `rtl` (although most browsers seem to ignore these settings.)
     - `lang`
       - : The notification's language, as specified using a
-        {{domxref("DOMString")}} representing a language tag
+        string representing a language tag
         according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
-        See the Sitepoint [ISO
-        2 letter language codes](https://www.sitepoint.com/iso-2-letter-language-codes/) page for a simple reference.
+        See the Sitepoint [ISO 2 letter language codes](https://www.sitepoint.com/iso-2-letter-language-codes/) page for a simple reference.
     - `badge`
-      - : A {{domxref("USVString")}} containing the URL of the image
+      - : A string containing the URL of the image
         used to represent the notification when there isn't enough space to display the
         notification itself.
     - `body`
-      - : A {{domxref("DOMString")}} representing the body text of the
+      - : A string representing the body text of the
         notification, which is displayed below the title.
     - `tag`
-      - : A {{domxref("DOMString")}} representing an identifying tag for
+      - : A string representing an identifying tag for
         the notification.
     - `icon`
-      - : A {{domxref("USVString")}} containing the URL of an icon to
+      - : A string containing the URL of an icon to
         be displayed in the notification.
     - `image`
-      - : a {{domxref("USVString")}} containing the URL of an image to
+      - : a string containing the URL of an image to
         be displayed in the notification.
     - `data`
       - : Arbitrary data that you want associated with the
         notification. This can be of any data type.
     - `vibrate`
-      - : A [vibration
-        pattern](/en-US/docs/Web/API/Vibration_API#vibration_patterns) for the device's vibration hardware to emit with the notification.
+      - : A [vibration pattern](/en-US/docs/Web/API/Vibration_API#vibration_patterns) for the device's vibration hardware to emit with the notification.
     - `renotify`
       - : A boolean value specifying whether the user
         should be notified after a new notification replaces an old one. The default is
@@ -76,9 +75,9 @@ new Notification(title, options)
     - `actions`
       - : An array of actions to display in the notification. Each element in the array is an object with the following members:
 
-        - `action`:  A {{domxref("DOMString")}} identifying a user action to be displayed on the notification.
-        - `title`:  A {{domxref("DOMString")}} containing action text to be shown to the user.
-        - `icon`:  A {{domxref("USVString")}} containing the URL of an icon to display with the action.
+        - `action`:  A string identifying a user action to be displayed on the notification.
+        - `title`:  A string containing action text to be shown to the user.
+        - `icon`:  A string containing the URL of an icon to display with the action.
 
         Appropriate responses are built using `event.action` within the
         {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
@@ -100,11 +99,11 @@ the `Notification()` constructor.
 
 ```js
 function spawnNotification(body, icon, title) {
-  var options = {
+  const options = {
       body: body,
       icon: icon
   }
-  var notification = new Notification(title, options);
+  const notification = new Notification(title, options);
 }
 ```
 
@@ -127,12 +126,10 @@ notifications from a service worker. See the
 
 ### Internet Explorer notes
 
-Version 38.14352 and higher of MS Edge Notification API is supported. [Wikipedia - MS
-Edge](https://en.wikipedia.org/wiki/Microsoft_Edge#Release_history)
+Version 38.14352 and higher of MS Edge Notification API is supported. [Wikipedia - MS Edge](https://en.wikipedia.org/wiki/Microsoft_Edge#Release_history)
 
 IE 11 and lower isn't supported.
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

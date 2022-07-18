@@ -1,6 +1,7 @@
 ---
 title: 'Document: beforescriptexecute event'
 slug: Web/API/Document/beforescriptexecute_event
+page-type: web-api-event
 tags:
  - Document
  - beforescriptexecute

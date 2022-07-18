@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchManager.get()
 slug: Web/API/BackgroundFetchManager/get
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -39,7 +40,7 @@ The following examples shows how to use `get()` to retrieve a {{domxref("Backgro
 navigator.serviceWorker.ready.then(async (swReg) => {
   const bgFetch = await swReg.backgroundFetch.get('my-fetch');
 });
-my code block
+// my code block
 ```
 
 ## Specifications

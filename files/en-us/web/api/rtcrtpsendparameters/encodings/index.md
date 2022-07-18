@@ -1,6 +1,7 @@
 ---
 title: RTCRtpSendParameters.encodings
 slug: Web/API/RTCRtpSendParameters/encodings
+page-type: web-api-instance-property
 tags:
   - API
   - Codec

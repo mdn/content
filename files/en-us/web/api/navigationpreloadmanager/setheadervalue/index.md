@@ -1,6 +1,7 @@
 ---
 title: NavigationPreloadManager.setHeaderValue()
 slug: Web/API/NavigationPreloadManager/setHeaderValue
+page-type: web-api-instance-method
 tags:
   - API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: 'PaymentRequest: merchantvalidation event'
 slug: Web/API/PaymentRequest/merchantvalidation_event
+page-type: web-api-event
 tags:
   - API
   - Commerce
@@ -17,6 +18,9 @@ tags:
   - payment
 browser-compat: api.PaymentRequest.merchantvalidation_event
 ---
+
+{{APIRef("Payment Request API")}}
+
 {{deprecated_header}}{{non-standard_header}}{{securecontext_header}}
 
 **`merchantvalidation`** events are delivered by the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to a {{domxref("PaymentRequest")}} object when a payment handler requires that the merchant requesting the purchase validate itself as permitted to use the payment handler.
@@ -60,7 +64,7 @@ request.addEventListener("merchantvalidation", event => {
     // get validation data, and complete validation;
     return await fetch(merchantServerUrl).then(response => response.text());
   }, false);
-};
+});
 
 const response = await request.show();
 ```

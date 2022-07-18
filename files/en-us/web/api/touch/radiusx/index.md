@@ -1,10 +1,10 @@
 ---
 title: Touch.radiusX
 slug: Web/API/Touch/radiusX
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
-  - Experimental
   - Mobile
   - Property
   - touch
@@ -12,13 +12,9 @@ browser-compat: api.Touch.radiusX
 ---
 {{ APIRef("Touch Events") }}
 
-## Summary
-
-Returns the X radius of the ellipse that most closely circumscribes the area of contact with the touch surface. The value is in CSS pixels of the same scale as {{ domxref("Touch.screenX") }}.
+The **`radiusX`** read-only property of the {{domxref("Touch")}} interface returns the X radius of the ellipse that most closely circumscribes the area of contact with the touch surface. The value is in CSS pixels of the same scale as {{ domxref("Touch.screenX") }}.
 
 This value, in combination with {{ domxref("Touch.radiusY") }} and {{ domxref("Touch.rotationAngle") }} constructs an ellipse that approximates the size and shape of the area of contact between the user and the screen. This may be a relatively large ellipse representing the contact between a fingertip and the screen or a small area representing the tip of a stylus, for example.
-
-> **Note:** This attribute has _not_ been formally standardized. It is specified in the {{SpecName('Touch Events 2')}} {{Spec2('Touch Events 2')}} specification and not in {{SpecName('Touch Events')}} {{Spec2('Touch Events')}}. This attribute is not widely implemented.
 
 ## Value
 
@@ -35,14 +31,14 @@ The following simple code snippet, registers a single handler for the {{domxref(
 ```
 
 ```js
-var src = document.getElementById("src");
+const src = document.getElementById("src");
 
 src.addEventListener('touchstart', rotate);
 src.addEventListener('touchmove', rotate);
 src.addEventListener('touchend', rotate);
 
-function rotate (e) {
-  var touch = e.changedTouches.item(0);
+function rotate(e) {
+  const touch = e.changedTouches.item(0);
 
   // Turn off default event handling
   e.preventDefault();

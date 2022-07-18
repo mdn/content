@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: paste event'
 slug: Web/API/HTMLElement/paste_event
+page-type: web-api-event
 tags:
   - API
   - Clipboard API
@@ -9,7 +10,7 @@ tags:
   - Reference
   - Web
   - paste
-browser-compat: api.HTMLElement.paste_event
+browser-compat: api.Element.paste_event
 ---
 {{ APIRef("HTML DOM") }}
 

@@ -1,6 +1,7 @@
 ---
 title: Web Speech API
 slug: Web/API/Web_Speech_API
+page-type: web-api-overview
 tags:
   - API
   - Landing
@@ -9,6 +10,9 @@ tags:
   - recognition
   - speech
   - synthesis
+browser-compat:
+  - api.SpeechRecognition
+  - api.SpeechSynthesis
 ---
 {{DefaultAPISidebar("Web Speech API")}}
 
@@ -36,7 +40,7 @@ For more details on using these features, see [Using the Web Speech API](/en-US/
   - : The controller interface for the recognition service; this also handles the {{domxref("SpeechRecognitionEvent")}} sent from the recognition service.
 - {{domxref("SpeechRecognitionAlternative")}}
   - : Represents a single word that has been recognized by the speech recognition service.
-- {{domxref("SpeechRecognitionError")}} {{deprecated_inline}}
+- {{domxref("SpeechRecognitionErrorEvent")}}
   - : Represents error messages from the recognition service.
 - {{domxref("SpeechRecognitionEvent")}}
   - : The event object for the {{domxref("SpeechRecognition.result_event", "result")}} and {{domxref("SpeechRecognition.nomatch_event", "nomatch")}} events, and contains all the data associated with an interim or final speech recognition result.
@@ -68,27 +72,18 @@ For more details on using these features, see [Using the Web Speech API](/en-US/
 
 ## Examples
 
-The [Web Speech API repo](https://github.com/mdn/web-speech-api/) on GitHub contains demos to illustrate speech recognition and synthesis.
+The [Web Speech API examples](https://github.com/mdn/dom-examples/tree/master/web-speech-api) on GitHub contains demos to illustrate speech recognition and synthesis.
 
 ## Specifications
 
-| Specification      |
-| ------------------ |
-| [Web Speech API](https://wicg.github.io/speech-api/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `SpeechRecognition`
-
-{{Compat("api.SpeechRecognition", 0)}}
-
-### `SpeechSynthesis`
-
-{{Compat("api.SpeechSynthesis", 0)}}
+{{Compat}}
 
 ## See also
 
 - [Using the Web Speech API](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API)
 - [SitePoint article](https://www.sitepoint.com/talking-web-pages-and-the-speech-synthesis-api/)
 - [HTML5Rocks article](https://developer.chrome.com/blog/web-apps-that-talk-introduction-to-the-speech-synthesis-api/)
-- [Demo](https://aurelio.audero.it/demo/speech-synthesis-api-demo.html) \[aurelio.audero.it]

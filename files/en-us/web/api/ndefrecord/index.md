@@ -1,6 +1,7 @@
 ---
 title: NDEFRecord
 slug: Web/API/NDEFRecord
+page-type: web-api-interface
 tags:
   - NDEF
   - Reference

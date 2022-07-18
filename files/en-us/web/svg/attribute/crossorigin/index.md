@@ -58,8 +58,6 @@ It follows the same processing rules as the HTML attribute {{htmlattrxref("cross
 
 ## Browser compatibility
 
-### \<link crossorigin>
-
 {{Compat}}
 
 <!-- TODO: This should link to an attribute of the element instead

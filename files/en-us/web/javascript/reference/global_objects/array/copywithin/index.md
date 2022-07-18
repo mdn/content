@@ -60,18 +60,15 @@ The modified array.
 
 ## Description
 
-The `copyWithin` works like C and C++'s `memmove`, and is a
+The `copyWithin()` method works like C and C++'s `memmove`, and is a
 high-performance method to shift the data of an {{jsxref("Array")}}. This especially
 applies to the {{jsxref("TypedArray/copyWithin", "TypedArray")}} method of the same
 name. The sequence is copied and pasted as one operation; pasted sequence will have the
 copied values even when the copy and paste region overlap.
 
-The `copyWithin` function is intentionally _generic_, it does not
-require that its `this` value be an {{jsxref("Array")}} object.
+The `copyWithin()` method is a mutating method. It does not alter the length of `this`, but it will change the content of `this` and create new properties, if necessary.
 
-The `copyWithin` method is a mutable method. It does not alter the length of
-`this`, but it will change its content and create new properties, if
-necessary.
+`Array.prototype.copyWithin()` is intentionally generic. It does not require that its `this` value be an {{jsxref("Array")}} object.
 
 ## Examples
 
@@ -94,7 +91,7 @@ necessary.
 // {0: 1, 3: 1, length: 5}
 
 // ES2015 Typed Arrays are subclasses of Array
-var i32a = new Int32Array([1, 2, 3, 4, 5])
+const i32a = new Int32Array([1, 2, 3, 4, 5])
 
 i32a.copyWithin(0, 2)
 // Int32Array [3, 4, 5, 4, 5]

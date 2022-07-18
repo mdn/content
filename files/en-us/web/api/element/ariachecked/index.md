@@ -1,6 +1,7 @@
 ---
 title: Element.ariaChecked
 slug: Web/API/Element/ariaChecked
+page-type: web-api-instance-property
 tags:
   - API
   - Property

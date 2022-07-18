@@ -291,9 +291,9 @@ The decimal exponential literal is specified by the following format: `beN`; whe
 Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (`0b` or `0B`). Because this syntax is new in ECMAScript 2015, see the browser compatibility table, below. If the digits after the `0b` are not 0 or 1, the following {{jsxref("SyntaxError")}} is thrown: "Missing binary digits after 0b".
 
 ```js
-var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
-var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
+const FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+const FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
+const FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
 ```
 
 #### Octal
@@ -301,8 +301,8 @@ var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
 Octal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "O" (`0o` or `0O)`. Because this syntax is new in ECMAScript 2015, see the browser compatibility table, below. If the digits after the `0o` are outside the range (01234567), the following {{jsxref("SyntaxError")}} is thrown: "Missing octal digits after 0o".
 
 ```js
-var n = 0O755; // 493
-var m = 0o644; // 420
+const n = 0O755; // 493
+const m = 0o644; // 420
 
 // Also possible with just a leading zero (see note about decimals above)
 0755
@@ -385,14 +385,14 @@ Note these limitations:
 See also {{jsxref("Object")}} and [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) for more information.
 
 ```js
-var o = { a: 'foo', b: 'bar', c: 42 };
+const o = { a: 'foo', b: 'bar', c: 42 };
 
 // shorthand notation. New in ES2015
-var a = 'foo', b = 'bar', c = 42;
-var o = {a, b, c};
+const a = 'foo', b = 'bar', c = 42;
+const o = { a, b, c };
 
 // instead of
-var o = { a: a, b: b, c: c };
+const o = { a: a, b: b, c: c };
 ```
 
 ### Array literals

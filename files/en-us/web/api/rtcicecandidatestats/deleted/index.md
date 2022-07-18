@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.deleted
 slug: Web/API/RTCIceCandidateStats/deleted
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -25,14 +26,14 @@ If this value is `true`, the candidate described by the
 {{domxref("RTCIceCandidateStats")}} object is no longer under consideration. dThe exact
 meaning varies depending on the type of candidate:
 
-- Local candidate
+- `Local candidate`
   - : A value of `true` means the candidate has been deleted as described by
     {{RFC(5245, "", "8.3")}}.
-- Host candidate
+- `Host candidate`
   - : A value of `true` indicates that the candidate's network resources have
     been released. This generally mean that any associated socket(s) have been closed and
     released.
-- Remote (TURN) candidate
+- `Remote (TURN) candidate`
   - : A value of `true` means the candidate's {{Glossary("TURN")}} allocation
     is no longer active.
 

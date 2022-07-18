@@ -1,6 +1,7 @@
 ---
 title: Navigator.oscpu
 slug: Web/API/Navigator/oscpu
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated

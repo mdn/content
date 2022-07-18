@@ -1,6 +1,7 @@
 ---
 title: DeviceMotionEvent()
 slug: Web/API/DeviceMotionEvent/DeviceMotionEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

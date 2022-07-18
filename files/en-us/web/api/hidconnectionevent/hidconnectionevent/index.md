@@ -1,6 +1,7 @@
 ---
 title: HIDConnectionEvent()
 slug: Web/API/HIDConnectionEvent/HIDConnectionEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

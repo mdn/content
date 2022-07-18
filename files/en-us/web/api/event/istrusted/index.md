@@ -1,6 +1,7 @@
 ---
 title: Event.isTrusted
 slug: Web/API/Event/isTrusted
+page-type: web-api-instance-property
 tags:
   - Property
   - Read-only

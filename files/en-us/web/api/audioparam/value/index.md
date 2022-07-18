@@ -1,6 +1,7 @@
 ---
 title: AudioParam.value
 slug: Web/API/AudioParam/value
+page-type: web-api-instance-property
 tags:
   - API
   - AudioParam
@@ -42,7 +43,7 @@ not always exactly equal what you set it to.
 Consider this example:
 
 ```js
-const source = new AudioBufferSourceNode(...);
+const source = new AudioBufferSourceNode(/* … */);
 const rate = 5.3;
 source.playbackRate.value = rate;
 console.log(source.playbackRate.value === rate);
@@ -55,7 +56,7 @@ method, which returns the single-precision value equivalent to the 64-bit JavaSc
 value specified—when setting `value`, like this:
 
 ```js
-const source = new AudioBufferSourceNode(...);
+const source = new AudioBufferSourceNode(/* … */);
 const rate = Math.fround(5.3);
 source.playbackRate.value = rate;
 console.log(source.playbackRate.value === rate);
@@ -120,8 +121,7 @@ gainNode.gain.setValueAtTime(0.4, audioCtx.currentTime);
 When changing the gain value of a {{domxref("GainNode")}}, Google Chrome prior to
 version 64 (January 2018) would perform a smooth interpolation to prevent dezippering.
 Starting with version 64, the value is changed instantly to bring it in line with the
-Web Audio spec. See [Chrome Platform
-Status](https://chromestatus.com/feature/5287995770929152) for details.
+Web Audio spec. See [Chrome Platform Status](https://chromestatus.com/feature/5287995770929152) for details.
 
 ## See also
 

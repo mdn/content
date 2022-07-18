@@ -1,6 +1,7 @@
 ---
 title: SVGFEDiffuseLightingElement
 slug: Web/API/SVGFEDiffuseLightingElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

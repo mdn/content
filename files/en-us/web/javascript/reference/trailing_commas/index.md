@@ -40,7 +40,7 @@ function parameters and to named imports and named exports.
 JavaScript ignores trailing commas in arrays:
 
 ```js
-var arr = [
+const arr = [
   1,
   2,
   3,
@@ -56,7 +56,7 @@ iterating arrays for example with {{jsxref("Array.prototype.forEach()")}} or
 {{jsxref("Array.prototype.map()")}}, array holes are skipped.
 
 ```js
-var arr = [1, 2, 3,,,];
+const arr = [1, 2, 3,,,];
 arr.length; // 5
 ```
 
@@ -65,7 +65,7 @@ arr.length; // 5
 Starting with ECMAScript 5, trailing commas in object literals are legal as well:
 
 ```js
-var object = {
+const object = {
   foo: "bar",
   baz: "qwerty",
   age: 42,
@@ -98,7 +98,7 @@ class C {
   two(a, b,) {}
 }
 
-var obj = {
+const obj = {
   one(a,) {},
   two(a, b,) {},
 };
@@ -140,17 +140,17 @@ A trailing comma is also allowed on the left-hand side when using
 [a, b,] = [1, 2];
 
 // object destructuring with trailing comma
-var o = {
+const o = {
   p: 42,
   q: true,
 };
-var {p, q,} = o;
+const {p, q,} = o;
 ```
 
 Again, when using a rest element, a {{jsxref("SyntaxError")}} will be thrown:
 
 ```js example-bad
-var [a, ...b,] = [1, 2, 3];
+const [a, ...b,] = [1, 2, 3];
 // SyntaxError: rest element may not have a trailing comma
 ```
 
@@ -189,9 +189,9 @@ Trailing commas are valid in named imports and named exports.
     C,
   } from 'D'
 
-  import { X, Y, Z } from 'W'
+  import { X, Y, Z, } from 'W'
 
-  import { A as B, C as D, E as F } from 'Z'; //Renaming imports
+  import { A as B, C as D, E as F, } from 'Z'; //Renaming imports
 ```
 
 #### named exports
@@ -200,12 +200,12 @@ Trailing commas are valid in named imports and named exports.
   export {
     A,
     B,
-    C
+    C,
   }
 
-  export { A, B, C };
+  export { A, B, C, };
 
-  export { A as B, C as D, E as F }; // Renaming exports
+  export { A as B, C as D, E as F, }; // Renaming exports
 ```
 
 ### Quantifier prefix

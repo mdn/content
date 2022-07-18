@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.deleteTexture()
 slug: Web/API/WebGLRenderingContext/deleteTexture
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -25,7 +26,7 @@ deleteTexture(texture)
 
 ### Parameters
 
-- texture
+- `texture`
   - : A {{domxref("WebGLTexture")}} object to delete.
 
 ### Return value

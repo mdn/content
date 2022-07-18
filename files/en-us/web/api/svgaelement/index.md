@@ -1,6 +1,7 @@
 ---
 title: SVGAElement
 slug: Web/API/SVGAElement
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -23,9 +24,9 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGAElement.href")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedString")}} that reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute.
 - {{domxref("SVGAElement.hreflang")}}
-  - : A {{domxref("DOMString")}} that reflects the `hreflang` attribute, indicating the language of the linked resource.
+  - : A string that reflects the `hreflang` attribute, indicating the language of the linked resource.
 - {{domxref("SVGAElement.ping")}}
-  - : A {{domxref("DOMString")}} that reflects the ping attribute, containing a space-separated list of URLs to which, when the hyperlink is followed, {{HTTPMethod("POST")}} requests with the body `PING` will be sent by the browser (in the background). Typically used for tracking.
+  - : A string that reflects the ping attribute, containing a space-separated list of URLs to which, when the hyperlink is followed, {{HTTPMethod("POST")}} requests with the body `PING` will be sent by the browser (in the background). Typically used for tracking.
 - {{domxref("SVGAElement.referrerPolicy")}}
   - : See {{domxref("HTMLAnchorElement.referrerPolicy")}}.
 - {{domxref("SVGAElement.rel")}}
@@ -35,9 +36,9 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGAElement.target")}} {{readonlyInline}}
   - : It corresponds to the {{SVGAttr("target")}} attribute of the given element.
 - {{domxref("SVGAElement.text")}}
-  - : A {{domxref("DOMString")}} being a synonym for the {{domxref("Node.textContent")}} property.
+  - : A string being a synonym for the {{domxref("Node.textContent")}} property.
 - {{domxref("SVGAElement.type")}}
-  - : A {{domxref("DOMString")}} that reflects the `type` attribute, indicating the MIME type of the linked resource.
+  - : A string that reflects the `type` attribute, indicating the MIME type of the linked resource.
 
 ## Methods
 

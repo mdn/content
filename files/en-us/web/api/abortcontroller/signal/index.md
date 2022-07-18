@@ -1,6 +1,7 @@
 ---
 title: AbortController.signal
 slug: Web/API/AbortController/signal
+page-type: web-api-instance-property
 tags:
   - API
   - AbortController
@@ -42,9 +43,9 @@ abortBtn.addEventListener('click', function() {
 });
 
 function fetchVideo() {
-  ...
+  // …
   fetch(url, {signal}).then(function(response) {
-    ...
+    // …
   }).catch(function(e) {
    reports.textContent = 'Download error: ' + e.message;
   })

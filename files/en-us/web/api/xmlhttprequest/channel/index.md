@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.channel
 slug: Web/API/XMLHttpRequest/channel
+page-type: web-api-instance-property
 tags:
   - API
   - Non-standard

@@ -1,6 +1,7 @@
 ---
 title: MediaStreamEvent
 slug: Web/API/MediaStreamEvent
+page-type: web-api-interface
 tags:
   - API
   - Experimental

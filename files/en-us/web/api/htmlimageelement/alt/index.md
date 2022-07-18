@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.alt
 slug: Web/API/HTMLImageElement/alt
+page-type: web-api-instance-property
 tags:
   - API
   - Element
@@ -120,7 +121,7 @@ p {
 }
 
 .left-margin {
-  background-color: rgb(241, 240, 237, 255);
+  background-color: rgb(241, 240, 237);
   width: 9em;
   height: 100%;
   float: left;
@@ -136,7 +137,7 @@ p {
 }
 
 .contents {
-  background-color: rgb(241, 240, 235, 255);
+  background-color: rgb(241, 240, 235);
   height: 100%;
   margin-left: 2em;
   padding-top: 1em;
@@ -173,8 +174,8 @@ instead of the icon when the icons cannot be or are intentionally not used.
 
 When an image contains information presented as a diagram, chart, graph, or map,
 the `alt` text should provide the same information, at least in summary form.
-This is true whether the /me image is in a bitmapped format such as [PNG](/en-US/docs/Web/Media/Formats/Image_types#PNG_Portable_Network_Graphics) or [JPEG](/en-US/docs/Web/Media/Formats/Image_types#JPEG_Joint_Photographic_Experts_Group_image) or in a vector format
-like [SVG](/en-US/docs/Web/Media/Formats/Image_types#SVG_Scalable_Vector_Graphics).
+This is true whether the /me image is in a bitmapped format such as [PNG](/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) or [JPEG](/en-US/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image) or in a vector format
+like [SVG](/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics).
 
 - For a map, the `alt` text could be directions to the place indicated by
   the map, similarly to how you would explain it verbally.

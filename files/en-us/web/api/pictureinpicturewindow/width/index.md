@@ -1,6 +1,7 @@
 ---
 title: PictureInPictureWindow.width
 slug: Web/API/PictureInPictureWindow/width
+page-type: web-api-instance-property
 tags:
   - API
   - Interface

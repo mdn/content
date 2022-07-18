@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.tBodies
 slug: Web/API/HTMLTableElement/tBodies
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

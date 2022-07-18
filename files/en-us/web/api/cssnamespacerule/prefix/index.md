@@ -1,6 +1,7 @@
 ---
 title: CSSNamespaceRule.prefix
 slug: Web/API/CSSNamespaceRule/prefix
+page-type: web-api-instance-property
 tags:
   - API
   - CSSNamespaceRule
@@ -29,8 +30,8 @@ The stylesheet includes two namespace rules. The first has no prefix the second 
 
 ```js
 let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].namespaceURI); an empty string ""
-console.log(myRules[1].namespaceURI); "svg"
+console.log(myRules[0].namespaceURI); // an empty string ""
+console.log(myRules[1].namespaceURI); // "svg"
 ```
 
 ## Specifications

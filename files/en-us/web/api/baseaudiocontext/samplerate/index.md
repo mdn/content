@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.sampleRate
 slug: Web/API/BaseAudioContext/sampleRate
+page-type: web-api-instance-property
 tags:
   - API
   - AudioContext
@@ -34,7 +35,7 @@ var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 // Older webkit/blink browsers require a prefix
 
-...
+// …
 
 console.log(audioCtx.sampleRate);
 ```

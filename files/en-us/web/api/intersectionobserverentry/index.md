@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserverEntry
 slug: Web/API/IntersectionObserverEntry
+page-type: web-api-interface
 tags:
   - API
   - Interface

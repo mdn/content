@@ -9,6 +9,9 @@ tags:
   - listbox role
   - composite widget role
   - NeedsContent
+spec-urls:
+  - https://w3c.github.io/aria/#listbox
+  - https://w3c.github.io/aria-practices/#Listbox
 ---
 The `listbox` role is used for lists from which a user may select one or more items which are static and, unlike HTML {{HTMLElement('select')}} elements, may contain images.
 
@@ -103,7 +106,7 @@ For further details and a full list of ARIA states and properties see the [`list
 
   , while navigating the list or an alternative model that does require modifier keys to be held while navigating in order to avoid losing selection states.
 
-  - Recommended selection model -- holding modifier keys is not necessary:
+  - Recommended selection model — holding modifier keys is not necessary:
 
     - <kbd>Space</kbd>
 
@@ -206,10 +209,7 @@ This could have more easily been handled with the native HTML {{HTMLElement('sel
 
 ## Specifications
 
-| Specification                                                                            | Status                                           |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#listbox","ARIA listbox role")}}                     | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#Listbox","Listbox Role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: Animation.ready
 slug: Web/API/Animation/ready
+page-type: web-api-instance-property
 tags:
   - API
   - Animation

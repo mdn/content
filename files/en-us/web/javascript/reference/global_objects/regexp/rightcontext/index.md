@@ -28,7 +28,7 @@ You can not use the shorthand alias with the dot property accessor (`RegExp.$'`)
 ### Using rightContext and $'
 
 ```js
-var re = /hello/g;
+const re = /hello/g;
 re.test('hello world!');
 RegExp.rightContext; // " world!"
 RegExp["$'"];       // " world!"

@@ -1,6 +1,7 @@
 ---
 title: TextDecoderStream.ignoreBOM
 slug: Web/API/TextDecoderStream/ignoreBOM
+page-type: web-api-instance-property
 tags:
   - API
   - Encoding API
@@ -16,7 +17,7 @@ The **`ignoreBOM`** read-only property of the {{domxref("TextDecoderStream")}} i
 
 ## Value
 
-A {{jsxref("boolean")}}, initially `false`
+A {{jsxref("boolean")}}, initially `false`.
 
 ## Examples
 

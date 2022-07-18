@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchRegistration.id
 slug: Web/API/BackgroundFetchRegistration/id
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`id`** read-only property of the {{domxref("BackgroundFetchRegistration")}
 
 ## Value
 
-A {{domxref("DOMString","string")}}.
+A string.
 
 ## Examples
 

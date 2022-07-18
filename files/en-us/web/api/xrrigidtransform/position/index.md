@@ -1,6 +1,7 @@
 ---
 title: XRRigidTransform.position
 slug: Web/API/XRRigidTransform/position
+page-type: web-api-instance-property
 tags:
   - 3D
   - API
@@ -63,7 +64,7 @@ function refSpaceCreated(refSpace) {
     xrReferenceSpace = refSpace;
   } else {
     xrReferenceSpace = refSpace.getOffsetReferenceSpace(
-      new XRRigidTransform({y: -1.5});
+      new XRRigidTransform({y: -1.5})
     );
   }
   xrSession.requestAnimationFrame(onFrame);

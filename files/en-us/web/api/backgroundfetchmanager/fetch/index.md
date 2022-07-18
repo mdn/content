@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchManager.fetch()
 slug: Web/API/BackgroundFetchManager/fetch
+page-type: web-api-instance-method
 tags:
   - API
   - Method

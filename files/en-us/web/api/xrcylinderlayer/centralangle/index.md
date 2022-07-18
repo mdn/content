@@ -1,6 +1,7 @@
 ---
 title: XRCylinderLayer.centralAngle
 slug: Web/API/XRCylinderLayer/centralAngle
+page-type: web-api-instance-property
 tags:
   - API
   - Property

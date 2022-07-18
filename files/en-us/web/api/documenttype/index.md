@@ -1,6 +1,7 @@
 ---
 title: DocumentType
 slug: Web/API/DocumentType
+page-type: web-api-interface
 tags:
   - API
   - DOM

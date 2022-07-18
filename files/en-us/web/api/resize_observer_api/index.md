@@ -1,6 +1,7 @@
 ---
 title: Resize Observer API
 slug: Web/API/Resize_Observer_API
+page-type: web-api-overview
 tags:
   - API
   - Draft
@@ -12,6 +13,7 @@ tags:
   - Resize Observer API
   - observe
   - size
+browser-compat: api.ResizeObserver
 ---
 {{DefaultAPISidebar("Resize Observer API")}}
 
@@ -65,11 +67,11 @@ resizeObserver.observe(document.querySelector('div'));
 
 ## Specifications
 
-{{Specifications("api.ResizeObserver")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.ResizeObserver")}}
+{{Compat}}
 
 ## See also
 

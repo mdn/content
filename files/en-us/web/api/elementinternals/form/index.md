@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.form
 slug: Web/API/ElementInternals/form
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -32,6 +33,7 @@ Printing `form.length` to the console, gives us the value of {{domxref("HTMLForm
 ```js
 class CustomCheckbox extends HTMLElement {
   static formAssociated = true;
+  #internals;
 
   constructor() {
     super();

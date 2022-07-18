@@ -1,6 +1,7 @@
 ---
 title: URL.origin
 slug: Web/API/URL/origin
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -14,7 +15,7 @@ browser-compat: api.URL.origin
 {{APIRef("URL API")}}
 
 The **`origin`** read-only property of
-the {{domxref("URL")}} interface returns a {{domxref("USVString")}} containing the
+the {{domxref("URL")}} interface returns a string containing the
 Unicode serialization of the origin of the represented URL.
 
 The exact structure
@@ -33,7 +34,7 @@ varies depending on the type of URL:
 
 ## Value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

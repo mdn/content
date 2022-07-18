@@ -1,6 +1,7 @@
 ---
 title: Background Tasks API
 slug: Web/API/Background_Tasks_API
+page-type: web-api-overview
 tags:
   - API
   - Background Tasks API
@@ -9,6 +10,7 @@ tags:
   - Overview
   - cancelIdleCallback
   - requestIdleCallback
+browser-compat: api.Window.requestIdleCallback
 ---
 {{DefaultAPISidebar("Background Tasks")}}
 
@@ -43,7 +45,7 @@ window.requestIdleCallback = window.requestIdleCallback || function(handler) {
   return setTimeout(function() {
     handler({
       didTimeout: false,
-      timeRemaining: function() {
+      timeRemaining() {
         return Math.max(0, 50.0 - (Date.now() - startTime));
       }
     });
@@ -95,7 +97,7 @@ In order to be oriented about what we're trying to accomplish, let's have a look
 </p>
 
 <div id="container">
-  <div class="label">Decoding quantum filament tachyon emissions...</div>
+  <div class="label">Decoding quantum filament tachyon emissions…</div>
 
   <progress id="progress" value="0"></progress>
 
@@ -240,7 +242,7 @@ window.requestIdleCallback = window.requestIdleCallback || function(handler) {
   return setTimeout(function() {
     handler({
       didTimeout: false,
-      timeRemaining: function() {
+      timeRemaining() {
         return Math.max(0, 50.0 - (Date.now() - startTime));
       }
     });
@@ -472,11 +474,11 @@ Below is the actual functioning result of the code above. Try it out, play with 
 
 ## Specifications
 
-{{Specifications("api.Window.requestIdleCallback")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.IdleDeadline")}}
+{{Compat}}
 
 ## See also
 

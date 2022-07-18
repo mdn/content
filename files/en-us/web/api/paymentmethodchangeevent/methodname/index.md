@@ -1,6 +1,7 @@
 ---
 title: PaymentMethodChangeEvent.methodName
 slug: Web/API/PaymentMethodChangeEvent/methodName
+page-type: web-api-instance-property
 tags:
   - API
   - Commerce
@@ -46,14 +47,14 @@ request.onpaymentmethodchange = function(ev) {
   if (ev.methodName === "https://apple.com/apple-pay") {
     switch (cardType) {
       case "visa":
-        // do Apple Pay specific handling for Visa card...
+        // do Apple Pay specific handling for Visa card…
         // methodDetails contains the card information
         const result = calculateDiscount(ev.methodDetails);
         Object.assign(newStuff, result);
         break;
     }
   }
-  // finally...
+  // finally…
   ev.updateWith(newStuff);
 };
 const response = await request.show();

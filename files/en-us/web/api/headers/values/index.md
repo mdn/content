@@ -1,6 +1,7 @@
 ---
 title: Headers.values()
 slug: Web/API/Headers/values
+page-type: web-api-instance-method
 tags:
   - API
   - Fetch API

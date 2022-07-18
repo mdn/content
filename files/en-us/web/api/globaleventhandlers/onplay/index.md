@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onplay
 slug: Web/API/GlobalEventHandlers/onplay
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -13,7 +14,7 @@ browser-compat: api.GlobalEventHandlers.onplay
 
 The **`onplay`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
-processing {{event("play")}} events.
+processing {{domxref("HTMLMediaElement/play_event", "play")}} events.
 
 ## Syntax
 
@@ -55,6 +56,5 @@ function alertPlay() {
 
 ## See also
 
-- {{event("play")}}
-- [Information on working with
-  event handlers](/en-US/docs/Web/Guide/Events/Event_handlers)
+- {{domxref("HTMLMediaElement/play_event", "play")}}
+- [Information on working with event handlers](/en-US/docs/Web/Events/Event_handlers)

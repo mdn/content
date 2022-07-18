@@ -1,6 +1,7 @@
 ---
 title: VideoFrame.displayHeight
 slug: Web/API/VideoFrame/displayHeight
+page-type: web-api-instance-property
 tags:
   - API
   - Property

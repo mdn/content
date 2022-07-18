@@ -1,6 +1,7 @@
 ---
 title: Document.queryCommandSupported()
 slug: Web/API/Document/queryCommandSupported
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -44,7 +45,7 @@ the action.
 var flg = document.queryCommandSupported("SelectAll");
 
 if(flg) {
-  // ...Do something
+  // Do something…
 }
 ```
 

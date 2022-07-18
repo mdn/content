@@ -8,6 +8,7 @@ tags:
   - NeedsExample
   - Reference
   - Web
+spec-urls: https://drafts.csswg.org/css-display/#block-formatting-context
 ---
 {{ CSSRef }}
 
@@ -113,7 +114,7 @@ section {
 
 ### Exclude external floats
 
-In the following example, we are using `display:flow-root` and floats to implement double columns layout, because an element in the normal flow that establishes a new BFC must not overlap the margin box of any floats in the same block formatting context as the element itself.
+In the following example, we are using `display:flow-root` and floats to implement double columns layout. We are able to do this because an element in the normal flow that establishes a new BFC does not overlap the margin box of any floats in the same block formatting context as the element itself.
 
 #### HTML
 
@@ -196,10 +197,7 @@ Creating a new BFC to avoid the [margin collapsing](/en-US/docs/Web/CSS/CSS_Box_
 
 ## Specifications
 
-| Specification                                                                                                    | Status                           | Comment               |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------- |
-| {{SpecName('CSS3 Display', '#block-formatting-context', 'Block Formatting Context')}} | {{Spec2('CSS3 Display')}} | define BFC(abbr) etc. |
-| {{SpecName('CSS2.1', 'visuren.html#block-formatting', 'Block Formatting Context')}} | {{Spec2('CSS2.1')}}         | Initial definition.   |
+{{Specifications}}
 
 ## See also
 

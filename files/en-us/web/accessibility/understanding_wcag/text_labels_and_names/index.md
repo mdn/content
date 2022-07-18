@@ -158,7 +158,7 @@ You can see a live, interactive version of this example on the [`<fieldset>` ref
 
 ## Form elements must be labeled
 
-All elements within a form must have a {{htmlelement("label")}} that identifies its purpose. This applies to all types of {{htmlelement("input")}} items, as well as {{htmlelement("button")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, {{htmlelement("textarea")}}, {{htmlelement("progress")}} and {{htmlelement("meter")}} elements, as well as any element with the [`switch` ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles/Switch_role).
+All elements within a form must have a {{htmlelement("label")}} that identifies its purpose. This applies to all types of {{htmlelement("input")}} items, as well as {{htmlelement("button")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, {{htmlelement("textarea")}}, {{htmlelement("progress")}} and {{htmlelement("meter")}} elements, as well as any element with the [`switch` ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role).
 
 The form element can be placed inside the {{htmlelement("label")}}, in which case the association between the form element and the label is obvious from the structure. Or, you can create an association between a {{htmlelement("label")}} and a form element by specifying the form element's `id` value as the value of the label's `for` attribute.
 

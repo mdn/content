@@ -1,6 +1,7 @@
 ---
 title: Navigator.userAgentData
 slug: Web/API/Navigator/userAgentData
+page-type: web-api-instance-property
 tags:
   - API
   - Navigator

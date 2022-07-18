@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.cancelAnimationFrame()
 slug: Web/API/VRDisplay/cancelAnimationFrame
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -32,7 +33,7 @@ cancelAnimationFrame(handle)
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -58,8 +59,8 @@ if(navigator.getVRDisplays) {
 
             // Set the canvas size to the size of the vrDisplay viewport
 
-            var leftEye = vrDisplay.getEyeParameters('left');
-            var rightEye = vrDisplay.getEyeParameters('right');
+            const leftEye = vrDisplay.getEyeParameters('left');
+            const rightEye = vrDisplay.getEyeParameters('right');
 
             canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
             canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);
@@ -71,6 +72,7 @@ if(navigator.getVRDisplays) {
             btn.textContent = 'Exit VR display';
           });
         } else {
+
           vrDisplay.exitPresent();
           console.log('Stopped presenting to WebVR display');
 
@@ -91,7 +93,7 @@ function drawVRScene() {
   // WebVR: Request the next frame of the animation
   vrSceneFrame = vrDisplay.requestAnimationFrame(drawVRScene);
 
-  ...
+  // ...
 }
 ```
 

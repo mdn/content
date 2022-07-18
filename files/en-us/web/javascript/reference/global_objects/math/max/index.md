@@ -30,7 +30,7 @@ Math.max(value0, value1, /* ... ,*/ valueN)
 
 ### Parameters
 
-- `value1`, `value2`, ... , `valueN`
+- `value1`, `value2`, … , `valueN`
   - : Zero or more numbers among which the largest value will be selected and returned.
 
 ### Return value
@@ -66,8 +66,8 @@ Math.max(-10, 20);  //  20
 element in a numeric array, by comparing each value:
 
 ```js
-var arr = [1,2,3];
-var max = arr.reduce(function(a, b) {
+const arr = [1,2,3];
+const max = arr.reduce(function(a, b) {
     return Math.max(a, b);
 }, -Infinity);
 ```
@@ -89,8 +89,8 @@ is a shorter way of writing the `apply` solution to get the
 maximum of an array:
 
 ```js
-var arr = [1, 2, 3];
-var max = Math.max(...arr);
+const arr = [1, 2, 3];
+const max = Math.max(...arr);
 ```
 
 However, both spread (`...`) and `apply` will either fail or

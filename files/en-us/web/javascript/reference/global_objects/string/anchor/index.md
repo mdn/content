@@ -52,7 +52,7 @@ doesn't even create valid markup.
 ### Using anchor()
 
 ```js
-var myString = 'Table of Contents';
+const myString = 'Table of Contents';
 
 document.body.innerHTML = myString.anchor('contents_anchor');
 ```

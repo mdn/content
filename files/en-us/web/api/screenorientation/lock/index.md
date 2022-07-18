@@ -1,6 +1,7 @@
 ---
 title: ScreenOrientation.lock()
 slug: Web/API/ScreenOrientation/lock
+page-type: web-api-instance-method
 tags:
   - API
   - Orientation
@@ -119,7 +120,10 @@ unlock_btn.addEventListener('click', () => {
 const fullscreen_btn = document.querySelector('#fullscreen_button');
 fullscreen_btn.addEventListener('click', () => {
   log.textContent+='Fullscreen pressed \n';
-  document.querySelector("#example_container").requestFullscreen();
+  const container = document.querySelector("#example_container");
+  container.requestFullscreen().catch( error => {
+      log.textContent += `${error}\n`
+  });
 } );
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: InputDeviceInfo
 slug: Web/API/InputDeviceInfo
+page-type: web-api-interface
 tags:
   - API
   - Media Streams API

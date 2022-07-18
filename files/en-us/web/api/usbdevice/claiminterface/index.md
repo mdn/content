@@ -1,6 +1,7 @@
 ---
 title: USBDevice.claimInterface()
 slug: Web/API/USBDevice/claimInterface
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - claimInterface
+  - Experimental
 browser-compat: api.USBDevice.claimInterface
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
@@ -26,9 +28,9 @@ claimInterface(interfaceNumber)
 
 ### Parameters
 
-- interfaceNumber
+- `interfaceNumber`
   - : The index of one of the interfaces supported by the device. Interfaces are
-    device-specific.
+    device specific.
 
 ### Return value
 

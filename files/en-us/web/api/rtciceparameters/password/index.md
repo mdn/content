@@ -1,6 +1,7 @@
 ---
 title: RTCIceParameters.password
 slug: Web/API/RTCIceParameters/password
+page-type: web-api-instance-property
 tags:
   - API
   - Candidates

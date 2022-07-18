@@ -59,7 +59,7 @@ This system works well, but traditionally web developers' font choices were limi
 
 ## Web fonts
 
-But there is an alternative that works very well. (It's even supported by such older browsers as IE version 6). CSS allows you to specify font files, available on the web, to be downloaded along with your website as it's accessed. This means that any browser supporting this CSS feature can display the fonts you've specifically chosen. Amazing! The syntax required looks something like this:
+But there is an alternative that works very well. (It's even supported by such older browsers as IE version 6.) CSS allows you to specify font files, available on the web, to be downloaded along with your website as it's accessed. This means that any browser supporting this CSS feature can display the fonts you've specifically chosen. Amazing! The syntax required looks something like this:
 
 First of all, you have a {{cssxref("@font-face")}} ruleset at the start of the CSS, which specifies the font file(s) to download:
 
@@ -187,7 +187,7 @@ Most of these services are easy to use, so we won't cover them in great detail. 
 
 ## @font-face in more detail
 
-Let's explore that `@font-face` syntax generated for you by fontsquirrel. This is what one of the rulesets looks like:
+Let's explore that `@font-face` syntax generated for you by Fontsquirrel. This is what one of the rulesets looks like:
 
 ```css
 @font-face {

@@ -1,6 +1,7 @@
 ---
 title: A perspective retrospective for WebXR developers
 slug: Web/API/WebXR_Device_API/Perspective
+page-type: guide
 tags:
   - 3D
   - API
@@ -55,8 +56,8 @@ Once you have the viewing frustum, you can compute the perspective projection ma
 
 ```js
 function makePerspectiveMatrix(fieldOfViewInRadians, aspectRatio, near, far) {
-  var f = 1.0 / Math.tan(fieldOfViewInRadians / 2);
-  var rangeInv = 1 / (near - far);
+  const f = 1.0 / Math.tan(fieldOfViewInRadians / 2);
+  const rangeInv = 1 / (near - far);
 
   return [
     f / aspectRatio, 0,                          0,   0,

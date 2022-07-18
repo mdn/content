@@ -1,6 +1,7 @@
 ---
 title: ImageCapture() constructor
 slug: Web/API/ImageCapture/ImageCapture
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

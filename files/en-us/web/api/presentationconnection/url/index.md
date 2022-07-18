@@ -1,6 +1,7 @@
 ---
 title: PresentationConnection.url
 slug: Web/API/PresentationConnection/url
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

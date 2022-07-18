@@ -14,6 +14,9 @@ tags:
   - custom elements
   - shadow dom
   - slot
+browser-compat:
+  - html.elements.template
+  - api.ShadowRoot
 ---
 {{DefaultAPISidebar("Web Components")}}
 
@@ -67,7 +70,7 @@ The basic approach for implementing a web component generally looks something li
 
   - : The following extensions are defined:
 
-    - The {{htmlattrxref("is")}} global HTML attribute: Allows you to specify that a standard HTML element should behave like a registered custom built-in element.
+    - The [`is`](/en-US/docs/Web/HTML/Global_attributes/is) global HTML attribute: Allows you to specify that a standard HTML element should behave like a registered custom built-in element.
     - The "is" option of the {{domxref("Document.createElement()")}} method: Allows you to create an instance of a standard HTML element that behaves like a given registered custom built-in element.
 
 - CSS pseudo-classes
@@ -143,22 +146,11 @@ We are building up a number of examples in our [web-components-examples](https:/
 
 ## Specifications
 
-### The `template` element and custom elements
-
-{{Specifications("html.elements.template")}}
-
-### The shadow DOM
-
-{{Specifications("api.ShadowRoot")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-In general:
-
-- Web components are supported by default in Firefox (version 63), Chrome, Opera, and Edge (version 79).
-- Safari supports a number of web component features, but less than the above browsers.
-
-For detailed browser support of specific features, you'll have to consult the reference pages listed above.
+{{Compat}}
 
 ## See also
 

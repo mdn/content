@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.altKey
 slug: Web/API/KeyboardEvent/altKey
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -22,7 +23,7 @@ A boolean value
 
 ## Examples
 
-```js
+```html
 <html>
 <head>
 <title>altKey example</title>

@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.Promise.any
 ---
 {{JSRef}}
 
-`Promise.any()` takes an iterable of {{JSxRef("Promise")}} objects. It returns a single promise that resolves as soon as any of the promises in the iterable fulfills, with the value of the fulfilled promise. If no promises in the iterable fulfill (if all of the given promises are rejected), then the returned promise is rejected with an {{JSxRef("AggregateError")}}, a new subclass of {{JSxRef("Error")}} that groups together individual errors.
+`Promise.any()` takes an iterable of {{JSxRef("Promise")}} objects. It returns a single promise that fulfills as soon as any of the promises in the iterable fulfills, with the value of the fulfilled promise. If no promises in the iterable fulfill (if all of the given promises are rejected), then the returned promise is rejected with an {{JSxRef("AggregateError")}}, a new subclass of {{JSxRef("Error")}} that groups together individual errors.
 
 {{EmbedInteractiveExample("pages/js/promise-any.html")}}
 
@@ -24,13 +24,13 @@ Promise.any(iterable);
 ### Parameters
 
 - `iterable`
-  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol) object, such as an {{JSxRef("Array")}}.
+  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) object, such as an {{JSxRef("Array")}}.
 
 ### Return value
 
 - An **already rejected** {{JSxRef("Promise")}} if the _iterable_ passed is empty.
-- An **asynchronously resolved** {{JSxRef("Promise")}} if the _iterable_ passed contains no promises.
-- A **pending** {{JSxRef("Promise")}} in all other cases. This returned promise is then resolved/rejected **asynchronously** (as soon as the stack is empty) when any of the promises in the given _iterable_ resolve, or if all the promises have rejected.
+- An **asynchronously fulfilled** {{JSxRef("Promise")}} if the _iterable_ passed contains no promises.
+- A **pending** {{JSxRef("Promise")}} in all other cases. This returned promise is then fulfilled/rejected **asynchronously** (as soon as the stack is empty) when any of the promises in the given _iterable_ fulfills, or if all the promises have rejected.
 
 ## Description
 
@@ -40,7 +40,7 @@ Also, unlike {{JSxRef("Promise.race()")}}, which returns the first _settled_ val
 
 ### Fulfillment
 
-The returned promise is fulfilled with **the first** resolved value (or non-promise value) in the _iterable_ passed as the argument, whether or not the other promises have rejected.
+The returned promise is fulfilled with **the first** fulfilled value (or non-promise value) in the _iterable_ passed as the argument, whether or not the other promises have rejected.
 
 - If a nonempty _iterable_ is passed, and **any** of the promises fulfill, or are not promises, then the promise returned by this method is fulfilled asynchronously.
 
@@ -54,7 +54,7 @@ If all of the passed-in promises reject, `Promise.any` asynchronously rejects wi
 
 ### First to fulfill
 
-`Promise.any()` resolves with the first promise to fulfill, even if a promise rejects first. This is in contrast to {{jsxref("Promise.race()")}}, which resolves or rejects with the first promise to settle.
+`Promise.any()` fulfills with the first promise to fulfill, even if a promise rejects first. This is in contrast to {{jsxref("Promise.race()")}}, which fulfills or rejects with the first promise to settle.
 
 ```js
 const pErr = new Promise((resolve, reject) => {

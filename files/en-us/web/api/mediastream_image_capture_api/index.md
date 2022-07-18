@@ -1,6 +1,7 @@
 ---
 title: MediaStream Image Capture API
 slug: Web/API/MediaStream_Image_Capture_API
+page-type: web-api-overview
 tags:
   - API
   - Image
@@ -9,7 +10,7 @@ tags:
   - Overview
   - Reference
   - Video
-spec-urls: https://w3c.github.io/mediacapture-image/
+browser-compat: api.ImageCapture
 ---
 {{DefaultAPISidebar("Image Capture API")}}{{SeeCompatTable}}
 
@@ -56,8 +57,6 @@ let imageCapture = new ImageCapture(track);
 
 - {{domxref("ImageCapture")}}
   - : An interface for capturing images from a photographic device referenced through a valid {{domxref("MediaStreamTrack")}}.
-- {{domxref("PhotoCapabilities")}}
-  - : Provides available configuration options for an attached photographic device. Retrieve a `PhotoCapabilities` object by calling {{domxref("ImageCapture.getPhotoCapabilities()")}}.
 
 ## Specifications
 
@@ -65,13 +64,7 @@ let imageCapture = new ImageCapture(track);
 
 ## Browser compatibility
 
-### `ImageCapture`
-
-{{Compat("api.ImageCapture")}}
-
-### `PhotoCapabilities`
-
-{{Compat("api.PhotoCapabilities")}}
+{{Compat}}
 
 ## See also
 

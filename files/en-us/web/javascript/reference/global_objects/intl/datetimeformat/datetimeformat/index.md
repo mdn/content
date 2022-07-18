@@ -321,12 +321,12 @@ console.log(new Intl.DateTimeFormat('fr', { hour: 'numeric', hourCycle: 'h12',
 Use the `timeZoneName` option to output a string for the timezone ("GMT", "Pacific Time", etc.).
 
 ```js
-var date = Date.UTC(2021, 11, 17, 3, 0, 42);
+const date = Date.UTC(2021, 11, 17, 3, 0, 42);
 const timezoneNames = ['short', 'long', 'shortOffset', 'longOffset', 'shortGeneric', 'longGeneric']
 
 for (const zoneName of timezoneNames) {
   // Do something with currentValue
-  var formatter = new Intl.DateTimeFormat('en-US', {
+  const formatter = new Intl.DateTimeFormat('en-US', {
     timeZone: 'America/Los_Angeles',
     timeZoneName: zoneName,
   });

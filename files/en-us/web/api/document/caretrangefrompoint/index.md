@@ -1,6 +1,7 @@
 ---
 title: Document.caretRangeFromPoint()
 slug: Web/API/Document/caretRangeFromPoint
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -26,9 +27,9 @@ caretRangeFromPoint(x, y)
 
 ### Parameters
 
-- _x_
+- `x`
   - : A horizontal position within the current viewport.
-- _y_
+- `y`
   - : A vertical position within the current viewport.
 
 ### Return value

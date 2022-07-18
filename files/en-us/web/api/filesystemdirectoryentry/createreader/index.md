@@ -1,6 +1,7 @@
 ---
 title: FileSystemDirectoryEntry.createReader()
 slug: Web/API/FileSystemDirectoryEntry/createReader
+page-type: web-api-instance-method
 tags:
   - API
   - File and Directory Entries API
@@ -51,7 +52,7 @@ function readDirectory(directory) {
         getEntries();
       }
     }, function(error) {
-      /* handle error -- error is a FileError object */
+      /* handle error — error is a FileError object */
     });
   };
 

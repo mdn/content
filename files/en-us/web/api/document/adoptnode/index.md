@@ -1,6 +1,7 @@
 ---
 title: Document.adoptNode()
 slug: Web/API/Document/adoptNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: WritableStreamDefaultWriter.abort()
 slug: Web/API/WritableStreamDefaultWriter/abort
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -31,7 +32,7 @@ abort(reason)
 
 ### Parameters
 
-- reason {{optional_inline}}
+- `reason` {{optional_inline}}
   - : A string representing a human-readable reason for the abort.
 
 ### Return value
@@ -50,21 +51,21 @@ parameter.
 ```js
 const writableStream = new WritableStream({
   write(chunk) {
-    ...
+    // ...
   },
   close() {
-    ...
+    // ...
   },
   abort(err) {
-    ...
+    // ...
   }
 }, queuingStrategy);
 
-...
+// ...
 
 const writer = writableStream.getWriter();
 
-...
+// ...
 
 // abort the stream when desired
 writer.abort.then((reason) => {

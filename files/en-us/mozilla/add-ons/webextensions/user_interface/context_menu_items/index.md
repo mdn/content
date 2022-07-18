@@ -42,7 +42,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
     case "log-selection":
       console.log(info.selectionText);
       break;
-    ...
+    // …
   }
 })
 ```

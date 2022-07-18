@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.isBuffer()
 slug: Web/API/WebGLRenderingContext/isBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -22,7 +23,7 @@ isBuffer(buffer)
 
 ### Parameters
 
-- buffer
+- `buffer`
   - : A {{domxref("WebGLBuffer")}} to check.
 
 ### Return value

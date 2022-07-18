@@ -1,6 +1,7 @@
 ---
 title: RTCRtpTransceiver.mid
 slug: Web/API/RTCRtpTransceiver/mid
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -38,5 +39,4 @@ m-line. This value is `null` if negotiation has not completed.
 
 ## See also
 
-- [Introduction to the Real-time
-  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)

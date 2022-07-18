@@ -1,6 +1,7 @@
 ---
 title: XRFrame.fillJointRadii()
 slug: Web/API/XRFrame/fillJointRadii
+page-type: web-api-instance-method
 tags:
   - API
   - Method

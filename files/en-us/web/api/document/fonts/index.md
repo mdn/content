@@ -1,6 +1,7 @@
 ---
 title: Document.fonts
 slug: Web/API/Document/fonts
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -9,6 +10,7 @@ tags:
   - FontFaceSet
   - Fonts
   - font
+  - Property
 browser-compat: api.Document.fonts
 ---
 {{APIRef("DOM")}}
@@ -17,13 +19,7 @@ The **`fonts`** property of the
 {{domxref("Document")}} interface returns the {{domxref("FontFaceSet")}} interface of
 the document.
 
-## Syntax
-
-```js
-let fontFaceSet = document.fonts;
-```
-
-### Value
+## Value
 
 The returned value is the {{domxref("FontFaceSet")}} interface of the document. The
 `FontFaceSet` interface is useful for loading new fonts, checking the status

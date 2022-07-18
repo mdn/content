@@ -1,6 +1,7 @@
 ---
 title: self.crypto
 slug: Web/API/crypto_property
+page-type: web-api-global-property
 tags:
   - API
   - Crypto
@@ -56,7 +57,7 @@ genRandomNumbers = function getRandomNumbers() {
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

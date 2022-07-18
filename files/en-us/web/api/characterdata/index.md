@@ -1,6 +1,7 @@
 ---
 title: CharacterData
 slug: Web/API/CharacterData
+page-type: web-api-interface
 tags:
   - Interface
   - Reference

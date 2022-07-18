@@ -1,5 +1,5 @@
 ---
-title: 'aria-disabled'
+title: aria-disabled
 slug: Web/Accessibility/ARIA/Attributes/aria-disabled
 tags:
   - Accessibility
@@ -8,8 +8,8 @@ tags:
   - ARIA property
   - aria-disabled
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-disabled
 ---
-
 The `aria-disabled` state indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
 
 ## Description
@@ -56,12 +56,12 @@ function toggleDisabled(element, status, update) {
     //element.input.disabled = false;
     element.setAttribute('aria-disabled', 'false');
     update.textContent = 'The element is now enabled.';
-    element.removeEventListener('click', onClick);
+    element.addEventListener('click', onClick);
   } else {
     //element.input.disabled = true;
     element.setAttribute('aria-disabled', 'true');
     update.textContent = 'The element is now disabled.';
-    element.addEventListener('click', onClick);
+    element.removeEventListener('click', onClick);
   }
 }
 ```
@@ -93,51 +93,49 @@ If you used just CSS to style the disabled state using an attribute selector, th
 
 Used in roles:
 
-- [`application`](/en-US/docs/Web/Accessibility/ARIA/roles/application_role)
-- [`button`](/en-US/docs/Web/Accessibility/ARIA/roles/button_role)
-- [`composite`](/en-US/docs/Web/Accessibility/ARIA/roles/composite_role)
-- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/roles/gridcell_role)
-- [`group`](/en-US/docs/Web/Accessibility/ARIA/roles/group_role)
-- [`input`](/en-US/docs/Web/Accessibility/ARIA/roles/input_role)
-- [`link`](/en-US/docs/Web/Accessibility/ARIA/roles/link_role)
-- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/roles/menuitem_role)
-- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/roles/scrollbar_role)
-- [`separator`](/en-US/docs/Web/Accessibility/ARIA/roles/separator_role)
-- [`tab`](/en-US/docs/Web/Accessibility/ARIA/roles/tab_role)
+- [`application`](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)
+- [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
+- [`composite`](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role)
+- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
+- [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
+- [`input`](/en-US/docs/Web/Accessibility/ARIA/Roles/input_role)
+- [`link`](/en-US/docs/Web/Accessibility/ARIA/Roles/link_role)
+- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
+- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
+- [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role)
+- [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
 
 Inherits into roles:
 
-- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/roles/checkbox_role)
-- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/roles/columnheader_role)
-- [`combobox`](/en-US/docs/Web/Accessibility/ARIA/roles/combobox_role)
-- [`grid`](/en-US/docs/Web/Accessibility/ARIA/roles/grid_role)
-- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/roles/listbox_role)
-- [`menu`](/en-US/docs/Web/Accessibility/ARIA/roles/menu_role)
-- [`menubar`](/en-US/docs/Web/Accessibility/ARIA/roles/menubar_role)
-- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/roles/menuitemcheckbox_role)
-- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/roles/menuitemradio_role)
-- [`option`](/en-US/docs/Web/Accessibility/ARIA/roles/option_role)
-- [`radio`](/en-US/docs/Web/Accessibility/ARIA/roles/radio_role)
-- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/roles/radiogroup_role)
-- [`row`](/en-US/docs/Web/Accessibility/ARIA/roles/row_role)
-- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/roles/rowheader_role)
-- [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/roles/searchbox_role)
-- [`select`](/en-US/docs/Web/Accessibility/ARIA/roles/select_role)
-- [`slider`](/en-US/docs/Web/Accessibility/ARIA/roles/slider_role)
-- [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/roles/spinbutton_role)
-- [`switch`](/en-US/docs/Web/Accessibility/ARIA/roles/switch_role)
-- [`tablist`](/en-US/docs/Web/Accessibility/ARIA/roles/tablist_role)
-- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/roles/textbox_role)
-- [`toolbar`](/en-US/docs/Web/Accessibility/ARIA/roles/toolbar_role)
-- [`tree`](/en-US/docs/Web/Accessibility/ARIA/roles/tree_role)
-- [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/roles/treegrid_role)
-- [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/roles/treeitem_role)
+- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
+- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
+- [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
+- [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
+- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
+- [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role)
+- [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role)
+- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
+- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
+- [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
+- [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
+- [`radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role)
+- [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
+- [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
+- [`select`](/en-US/docs/Web/Accessibility/ARIA/Roles/select_role)
+- [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
+- [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
+- [`switch`](/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role)
+- [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role)
+- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
+- [`toolbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role)
+- [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role)
+- [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
+- [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role)
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-disabled","ARIA: aria-disabled Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: volumechange event'
 slug: Web/API/HTMLMediaElement/volumechange_event
+page-type: web-api-event
 tags:
   - API
   - Audio

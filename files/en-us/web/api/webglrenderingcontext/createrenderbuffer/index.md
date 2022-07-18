@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.createRenderbuffer()
 slug: Web/API/WebGLRenderingContext/createRenderbuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method

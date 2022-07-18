@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.key
 slug: Web/API/KeyboardEvent/key
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -22,14 +23,14 @@ A string.
 Its value is determined as follows:
 
 - If the pressed key has a printed representation, the returned value is a non-empty Unicode character string containing the printable representation of the key.
-- If the pressed key is a control or special character, the returned value is one of the [pre-defined key values](/en-US/docs/Web/API/KeyboardEvent/key/Key_Values).
+- If the pressed key is a control or special character, the returned value is one of the [pre-defined key values](/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values).
 - If the `KeyboardEvent` represents the press of a [dead key](https://wikipedia.org/wiki/Dead_key), the key value must be "`Dead`".
 - Some specialty keyboard keys (such as the extended keys for controlling media on multimedia keyboards) don't generate key codes on Windows; instead, they trigger `WM_APPCOMMAND` events. These events get mapped to DOM keyboard events, and are listed among the "Virtual key codes" for Windows, even though they aren't actually key codes.
 - If the key cannot be identified, the returned value is `Unidentified`.
 
 > **Callout:**
 >
-> [See a full list of key values](/en-US/docs/Web/API/KeyboardEvent/key/Key_Values).
+> [See a full list of key values](/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values).
 
 ## KeyboardEvent sequence
 

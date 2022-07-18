@@ -1,6 +1,7 @@
 ---
 title: PerformanceServerTiming.name
 slug: Web/API/PerformanceServerTiming/name
+page-type: web-api-instance-property
 tags:
   - API
   - Property

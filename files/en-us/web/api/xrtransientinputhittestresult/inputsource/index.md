@@ -1,6 +1,7 @@
 ---
 title: XRTransientInputHitTestResult.inputSource
 slug: Web/API/XRTransientInputHitTestResult/inputSource
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -36,7 +37,7 @@ function onXRFrame(time, xrFrame) {
     if (resultsPerInputSource.inputSource == myPreferredInputSource) {
       // act on hit test results from the preferred input source
     }
-  }
+  });
  }
  ```
 

@@ -1,6 +1,7 @@
 ---
 title: 'FileReader: error event'
 slug: Web/API/FileReader/error_event
+page-type: web-api-event
 tags:
   - API
   - Error

@@ -1,6 +1,7 @@
 ---
 title: 'Screen: orientationchange event'
 slug: Web/API/Screen/orientationchange_event
+page-type: web-api-event
 tags:
   - API
   - CSSOM View

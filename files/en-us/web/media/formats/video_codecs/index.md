@@ -54,7 +54,7 @@ The following video codecs are those which are most commonly used on the web. Fo
       <th scope="row"><a href="#av1">AV1</a></th>
       <td>AOMedia Video 1</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
@@ -63,7 +63,7 @@ The following video codecs are those which are most commonly used on the web. Fo
       <td>Advanced Video Coding</td>
       <td>
         <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
@@ -74,14 +74,14 @@ The following video codecs are those which are most commonly used on the web. Fo
     <tr>
       <th scope="row"><a href="#hevc_h.265">HEVC (H.265)</a></th>
       <td>High Efficiency Video Coding</td>
-      <td><a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a></td>
+      <td><a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a></td>
     </tr>
     <tr>
       <th scope="row"><a href="#mp4v-es">MP4V-ES</a></th>
       <td>MPEG-4 Video Elemental Stream</td>
       <td>
         <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
@@ -98,7 +98,7 @@ The following video codecs are those which are most commonly used on the web. Fo
       <th scope="row"><a href="#mpeg-2_part_2_video">MPEG-2</a></th>
       <td>MPEG-2 Part 2 Visual</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime"
           >QuickTime</a
@@ -123,7 +123,7 @@ The following video codecs are those which are most commonly used on the web. Fo
       <th scope="row"><a href="#vp9">VP9</a></th>
       <td>Video Processor 9</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
@@ -621,7 +621,7 @@ For the time being, because of these factors, AV1 is not yet ready to be your fi
         <a href="https://en.wikipedia.org/wiki/ISO/IEC_base_media_file_format"
           >ISOBMFF</a
         >, MPEG-TS,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
     </tr>
@@ -795,7 +795,7 @@ In HTML content for web browsers, AVC is broadly compatible and many platforms s
       <th scope="row">Container support</th>
       <td>
         <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
@@ -923,7 +923,7 @@ H.263 is a proprietary format, with [patents](https://www.itu.int/ITU-T/recommen
       <th scope="row">Container support</th>
       <td>
         <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime"
           >QuickTime</a
         >
@@ -938,7 +938,7 @@ H.263 is a proprietary format, with [patents](https://www.itu.int/ITU-T/recommen
     </tr>
     <tr>
       <th scope="row">Supporting/Maintaining organization</th>
-      <td><a href="https://www.itu.net/">ITU</a></td>
+      <td><a href="https://www.itu.int/">ITU</a></td>
     </tr>
     <tr>
       <th scope="row">Specification</th>
@@ -1098,7 +1098,7 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
     </tr>
     <tr>
       <th scope="row">Container support</th>
-      <td><a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a></td>
+      <td><a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a></td>
     </tr>
     <tr>
       <th scope="row">
@@ -1110,7 +1110,7 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
     <tr>
       <th scope="row">Supporting/Maintaining organization</th>
       <td>
-        <a href="https://www.itu.net/">ITU</a> /
+        <a href="https://www.itu.int/">ITU</a> /
         <a href="https://mpeg.chiariglione.org/">MPEG</a>
       </td>
     </tr>
@@ -1219,7 +1219,7 @@ You almost certainly don't want to use this format, since it isn't supported in 
       <th scope="row">Container support</th>
       <td>
         <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>
       </td>
     </tr>
     <tr>
@@ -1502,7 +1502,7 @@ However, few web browsers support MPEG-2 without the support of a plugin, and wi
       <td>
         <a href="/en-US/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>,
         MPEG-TS (MPEG Transport Stream),
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime"
           >QuickTime</a
         >
@@ -1930,7 +1930,7 @@ This is especially true if you wish to use an open codec rather than a proprieta
     <tr>
       <th scope="row">Container support</th>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a>
       </td>
@@ -1969,7 +1969,7 @@ The decision as to which codec or codecs to use begins with a series of question
 
 In the sections below, we offer recommended codec selections for specific use cases. For each use case, you'll find up to two recommendations. If the codec which is considered best for the use case is proprietary or may require royalty payments, then two options are provided: first, an open and royalty-free option, followed by the proprietary one.
 
-If you are only able to offer a single version of each video, you can choose the format that's most appropriate for your needs.The first one is recommended as being a good combination of quality, performance, and compatibility. The second option will be the most broadly compatible choice, at the expense of some amount of quality, performance, and/or size.
+If you are only able to offer a single version of each video, you can choose the format that's most appropriate for your needs. The first one is recommended as being a good combination of quality, performance, and compatibility. The second option will be the most broadly compatible choice, at the expense of some amount of quality, performance, and/or size.
 
 ### Recommendations for everyday videos
 
@@ -1981,7 +1981,7 @@ First, let's look at the best options for videos presented on a typical web site
     <video controls src="filename.webm"></video>
     ```
 
-2. An **[MP4](/en-US/docs/Web/Media/Formats/Containers#mp4)** container and the **[AVC](#avc_h.264)** (**H.264**) video codec, ideally with **[AAC](/en-US/docs/Web/Media/Formats/Audio_codecs#aac)** as your audio codec. This is because the MP4 container with AVC and AAC codecs within is a broadly-supported combination—by every major browser, in fact—and the quality is typically good for most use cases. Make sure you verify your compliance with the license requirements, however.
+2. An **[MP4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4)** container and the **[AVC](#avc_h.264)** (**H.264**) video codec, ideally with **[AAC](/en-US/docs/Web/Media/Formats/Audio_codecs#aac)** as your audio codec. This is because the MP4 container with AVC and AAC codecs within is a broadly-supported combination—by every major browser, in fact—and the quality is typically good for most use cases. Make sure you verify your compliance with the license requirements, however.
 
     ```html
     <video controls>
@@ -2078,5 +2078,5 @@ The documentation for your codec choices will probably offer information you'll 
 - {{RFC(4381)}}: MIME Type Registrations for 3GPP2 Multimedia Files
 - {{RFC(4337)}}: MIME Type Registrations for MPEG-4
 - [Video codecs in Opera](https://dev.opera.com/articles/introduction-html5-video/#codecs--the-fly-in-the-ointment)
-- [Video](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement) and [audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) codecs in Internet Explorer
+- [Video](/en-US/docs/Web/API/HTMLVideoElement) and [audio](/en-US/docs/Web/HTML/Element/audio) codecs in Internet Explorer
 - [Video and audio codecs in Chrome](https://www.chromium.org/audio-video/)

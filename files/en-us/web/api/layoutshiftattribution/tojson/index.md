@@ -1,6 +1,7 @@
 ---
 title: LayoutShiftAttribution.toJSON()
 slug: Web/API/LayoutShiftAttribution/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method

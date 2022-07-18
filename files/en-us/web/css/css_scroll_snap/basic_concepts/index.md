@@ -61,8 +61,6 @@ The {{CSSxRef("scroll-snap-stop")}} property tells the browser whether it should
 
 It could be helpful in ensuring users see each section of the scroller and don't accidentally zip past them. However it could be problematic in making the scrolling experience slower if the user is looking for a particular section.
 
-> **Note:** The `scroll-snap-stop` property is currently marked at risk in the current Candidate Recommendation spec, therefore it may be removed.
-
 ## Browser compatibility
 
-The individual property pages detail the browser compatibility situation for Scroll Snap. Note that prior to Firefox 68, Firefox implemented an old version of the specification. [Read the next guide](/en-US/docs/Web/CSS/CSS_Scroll_Snap/compat) for an overview of how to write cross-browser compatible code that supports both the old and new specification.
+The individual property pages detail the browser compatibility situation for Scroll Snap.

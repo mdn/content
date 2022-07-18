@@ -98,7 +98,7 @@ We'll apply it to this HTML:
 </div>
 ```
 
-... which leads us to this:
+This produces the following result:
 
 {{EmbedLiveSample("First_steps_with_custom_properties",600,180)}}
 
@@ -170,7 +170,7 @@ Custom properties do inherit. This means that if no value is set for a custom pr
 </div>
 ```
 
-... with the following CSS:
+… with the following CSS:
 
 ```css
 .two {
@@ -193,7 +193,7 @@ Keep in mind that these are custom properties, not actual variables like you mig
 
 ## Custom property fallback values
 
-Using the [`var()`](/en-US/docs/Web/CSS/var()) function, you can define multiple **fallback values** when the given variable is not yet defined; this can be useful when working with [Custom Elements](/en-US/docs/Web/Web_Components/Using_custom_elements) and [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM).
+Using the [`var()`](/en-US/docs/Web/CSS/var) function, you can define multiple **fallback values** when the given variable is not yet defined; this can be useful when working with [Custom Elements](/en-US/docs/Web/Web_Components/Using_custom_elements) and [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM).
 
 > **Note:** Fallback values aren't used to fix the browser compatibility. If the browser doesn't support CSS custom properties, the fallback value won't help. It's just a backup for the browser which supports CSS custom properties to choose a different value if the given variable isn't defined or has an invalid value.
 
@@ -313,4 +313,4 @@ element.style.setProperty("--my-var", jsVar + 4);
 ## See also
 
 - [Custom property syntax](/en-US/docs/Web/CSS/--*)
-- [`var()`](/en-US/docs/Web/CSS/var())
+- [`var()`](/en-US/docs/Web/CSS/var)

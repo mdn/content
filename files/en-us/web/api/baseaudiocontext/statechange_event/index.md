@@ -1,6 +1,7 @@
 ---
 title: 'BaseAudioContext: statechange event'
 slug: Web/API/BaseAudioContext/statechange_event
+page-type: web-api-event
 tags:
   - API
   - Audio
@@ -32,8 +33,7 @@ A generic {{domxref("Event")}}.
 
 ## Examples
 
-The following snippet is taken from our [AudioContext states demo](https://github.com/mdn/webaudio-examples) ([see it running
-live](https://mdn.github.io/webaudio-examples/audiocontext-states/).) The `onstatechange` handler is used to log the current
+The following snippet is taken from our [AudioContext states demo](https://github.com/mdn/webaudio-examples) ([see it running live](https://mdn.github.io/webaudio-examples/audiocontext-states/).) The `onstatechange` handler is used to log the current
 {{domxref("BaseAudioContext.state", "state")}} to the console every time it changes.
 
 ```js

@@ -19,7 +19,6 @@ The new deserialized object will however be a {{glossary("deep copy")}}, so any 
 In some cases when serializing and deserializing an object, it makes sense to transfer some resources rather than creating a copy.
 Objects that can be transferred are called {{Glossary("Transferable objects")}}.
 
-
 ## Supported objects
 
 All primitive values are serializable.

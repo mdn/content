@@ -1,6 +1,7 @@
 ---
 title: DOMTokenList.remove()
 slug: Web/API/DOMTokenList/remove
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -20,7 +21,7 @@ removes the specified _tokens_ from the list.
 ```js
 remove(token1)
 remove(token1, token2)
-remove(token1, token2, /* ... ,*/ tokenN)
+remove(token1, token2, /* … ,*/ tokenN)
 ```
 
 ### Parameters

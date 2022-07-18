@@ -1,6 +1,7 @@
 ---
 title: WebRTC Statistics API
 slug: Web/API/WebRTC_Statistics_API
+page-type: web-api-overview
 tags:
   - API
   - Draft
@@ -12,6 +13,7 @@ tags:
   - Stats
   - WebRTC
   - WebRTC Statistics API
+browser-compat: api.RTCStatsReport
 ---
 {{DefaultAPISidebar("WebRTC")}}
 
@@ -35,7 +37,7 @@ try {
 
 function getConnectionStats() {
   myPeerConnection.getStats(null).then(stats => {
-    var statsOutput = "";
+    let statsOutput = "";
 
     stats.forEach(report => {
       if (report.type === "inbound-rtp" && report.kind === "video") {
@@ -67,7 +69,7 @@ The {{domxref("RTCStatsReport")}} object contains a map of named objects based o
   <thead>
     <tr>
       <th scope="row">
-        Statistic category name ({{domxref("RTCStatsType")}})
+        Statistic category name
       </th>
       <th scope="col">Description</th>
       <th scope="col">Dictionaries implemented</th>
@@ -529,11 +531,8 @@ The {{domxref("RTCStatsReport")}} object contains a map of named objects based o
 
 ## Specifications
 
-| Specification                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| [WebRTC: Real-Time Communication Between Browsers # dom-rtcstatsreport](https://w3c.github.io/webrtc-pc/#dom-rtcstatsreport) |
-| [Identifiers for WebRTC's Statistics API](https://w3c.github.io/webrtc-stats/)                                               |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.RTCStatsType")}}
+{{Compat}}

@@ -1,6 +1,7 @@
 ---
 title: Sanitizer.sanitize()
 slug: Web/API/Sanitizer/sanitize
+page-type: web-api-instance-method
 tags:
   - HTML Sanitizer API
   - Method

@@ -1,6 +1,7 @@
 ---
 title: WebGLContextEvent
 slug: Web/API/WebGLContextEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -28,7 +29,7 @@ _This interface doesn't define any own methods, but inherits methods from its pa
 
 ## Examples
 
-With the help of the {{domxref("WEBGL_lose_context")}} extension, you can simulate the {{Event("webglcontextlost")}} and {{Event("webglcontextrestored")}} events:
+With the help of the {{domxref("WEBGL_lose_context")}} extension, you can simulate the {{domxref("HTMLCanvasElement/webglcontextlost_event", "webglcontextlost")}} and {{domxref("HTMLCanvasElement/webglcontextrestored_event", "webglcontextrestored")}} events:
 
 ```js
 var canvas = document.getElementById('canvas');

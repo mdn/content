@@ -1,6 +1,7 @@
 ---
 title: WebRTC API
 slug: Web/API/WebRTC_API
+page-type: web-api-overview
 tags:
   - API
   - Audio
@@ -12,6 +13,10 @@ tags:
   - WebRTC
   - WebRTC API
   - streaming
+spec-urls:
+  - https://w3c.github.io/webrtc-pc/
+  - https://w3c.github.io/mediacapture-main/
+  - https://w3c.github.io/mediacapture-fromelement/
 ---
 {{DefaultAPISidebar("WebRTC")}}
 
@@ -183,8 +188,6 @@ These interfaces and events are related to interactivity with Public-Switched Te
 
 - [Improving compatibility using WebRTC adapter.js](/en-US/docs/Web/API/WebRTC_API/adapter.js)
   - : The WebRTC organization [provides on GitHub the WebRTC adapter](https://github.com/webrtc/adapter/) to work around compatibility issues in different browsers' WebRTC implementations. The adapter is a JavaScript shim which lets your code to be written to the specification so that it will "just work" in all browsers with WebRTC support.
-- [Taking still photos with WebRTC](/en-US/docs/Web/API/WebRTC_API/Taking_still_photos)
-  - : This article shows how to use WebRTC to access the camera on a computer or mobile phone with WebRTC support and take a photo with it.
 - [A simple RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
   - : The {{DOMxRef("RTCDataChannel")}} interface is a feature which lets you open a channel between two peers over which you may send and receive arbitrary data. The API is intentionally similar to the [WebSocket API](/en-US/docs/Web/API/WebSockets_API), so that the same programming model can be used for each.
 - [Building an internet connected phone with Peer.js](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs)
@@ -192,11 +195,7 @@ These interfaces and events are related to interactivity with Public-Switched Te
 
 ## Specifications
 
-| Specification                                                                        |
-| ------------------------------------------------------------------------------------ |
-| [WebRTC: Real-Time Communication Between Browsers](https://w3c.github.io/webrtc-pc/) |
-| [Media Capture and Streams](https://w3c.github.io/mediacapture-main/)                |
-| [Media Capture from DOM Elements](https://w3c.github.io/mediacapture-fromelement/)   |
+{{Specifications}}
 
 ### WebRTC-proper protocols
 

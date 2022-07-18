@@ -1,6 +1,7 @@
 ---
 title: Element.className
 slug: Web/API/Element/className
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -42,7 +43,7 @@ the `element` is an {{domxref("SVGElement")}}. It is better to get/set the
 `className` of an element using {{domxref("Element.getAttribute")}} and
 {{domxref("Element.setAttribute")}} if you are dealing with SVG elements. However, take
 into account that {{domxref("Element.getAttribute")}} returns
-[`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)
+[`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
 instead of `""` if the `element` has an empty [`class` attribute](/en-US/docs/Web/HTML/Global_attributes/class).
 
 ```js

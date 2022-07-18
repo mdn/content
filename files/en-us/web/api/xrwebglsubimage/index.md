@@ -1,6 +1,7 @@
 ---
 title: XRWebGLSubImage
 slug: Web/API/XRWebGLSubImage
+page-type: web-api-interface
 tags:
   - API
   - Interface

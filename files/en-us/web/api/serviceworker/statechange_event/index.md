@@ -1,6 +1,7 @@
 ---
 title: 'ServiceWorker: statechange event'
 slug: Web/API/ServiceWorker/statechange_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -30,9 +31,7 @@ A generic {{domxref("Event")}}.
 
 ## Examples
 
-This code snippet is from the [service
-worker registration-events sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([live
-demo](https://googlechrome.github.io/samples/service-worker/registration-events/)). The code listens for any change in the {{domxref("ServiceWorker.state")}}
+This code snippet is from the [service worker registration-events sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([live demo](https://googlechrome.github.io/samples/service-worker/registration-events/)). The code listens for any change in the {{domxref("ServiceWorker.state")}}
 and returns its value.
 
 ```js
@@ -51,7 +50,7 @@ if (registration.installing) {
 if (serviceWorker) {
   logState(serviceWorker.state);
   serviceWorker.addEventListener('statechange', function(e) {
-  logState(e.target.state);
+    logState(e.target.state);
   });
 }
 ```
@@ -60,7 +59,7 @@ Note that when `statechange` fires, the service worker's references may have
 changed. For example:
 
 ```js
-navigator.serviceWorker.register(..).then(function(swr) {
+navigator.serviceWorker.register("/sw.js").then(function(swr) {
   swr.installing.state == "installing"
   swr.installing.onstatechange = function() {
     swr.installing == null;

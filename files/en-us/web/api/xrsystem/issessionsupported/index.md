@@ -1,6 +1,7 @@
 ---
 title: 'XRSystem: isSessionSupported()'
 slug: Web/API/XRSystem/isSessionSupported
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -57,8 +58,7 @@ returned promise, passing to the rejection handler a {{domxref("DOMException")}}
 
 - `SecurityError`
   - : The document's origin does not have permission to use the
-    `xr-spatial-tracking` [feature
-    policy](/en-US/docs/Web/HTTP/Feature_Policy).
+    `xr-spatial-tracking` [feature policy](/en-US/docs/Web/HTTP/Feature_Policy).
 
 ## Examples
 

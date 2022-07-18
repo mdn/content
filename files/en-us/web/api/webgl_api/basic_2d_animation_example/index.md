@@ -1,6 +1,7 @@
 ---
 title: A basic 2D WebGL animation example
 slug: Web/API/WebGL_API/Basic_2D_animation_example
+page-type: guide
 tags:
   - 2D Animation
   - 2D Graphics
@@ -117,7 +118,7 @@ let previousTime = 0.0;
 let degreesPerSecond = 90.0;
 ```
 
-Initializing the program is handled through a {{event("load")}} event handler called `startup()`:
+Initializing the program is handled through a {{domxref("Window/load_event", "load")}} event handler called `startup()`:
 
 ```js
 window.addEventListener("load", startup, false);

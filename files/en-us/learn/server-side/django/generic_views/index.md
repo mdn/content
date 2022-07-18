@@ -289,7 +289,7 @@ The main parts of the syntax you will need to know for declaring the pattern mat
     </tr>
     <tr>
       <td>\d</td>
-      <td>Match a digit (0, 1, 2, ... 9)</td>
+      <td>Match a digit (0, 1, 2, … 9)</td>
     </tr>
     <tr>
       <td>\w</td>
@@ -569,7 +569,8 @@ This method is needed because you declare a `ForeignKey` (one-to many) field onl
 >
 > Last but not least, you should sort by an attribute/column that actually has an index (unique or not) on your database to avoid performance issues. Of course, this will not be necessary here (we are probably getting ahead of ourselves with so few books and users), but it is something worth keeping in mind for future projects.
 
-The second interesting (and non-obvious) thing in the template is where we set a class (`text-success`, `text-danger`, `text-warning`) to color-code the human readable status text for each book instance ("available", "maintenance", etc.). Astute readers will note that the method `BookInstance.get_status_display()` that we use to get the status text does not appear elsewhere in the code.
+The second interesting (and non-obvious) thing in the template is where we display the status text for each book instance ("available", "maintenance", etc.).
+Astute readers will note that the method `BookInstance.get_status_display()` that we use to get the status text does not appear elsewhere in the code.
 
 ```python
  <p class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">

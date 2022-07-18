@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesis.paused
 slug: Web/API/SpeechSynthesis/paused
+page-type: web-api-instance-property
 tags:
   - API
   - Property

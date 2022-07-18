@@ -1,6 +1,7 @@
 ---
 title: FileReader.readAsArrayBuffer()
 slug: Web/API/FileReader/readAsArrayBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - DOM

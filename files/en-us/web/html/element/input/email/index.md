@@ -8,7 +8,7 @@ tags:
   - HTML forms
   - Input Type
   - Reference
-browser-compat: html.elements.input.input-email
+browser-compat: html.elements.input.type_email
 ---
 
 {{HTMLRef}}
@@ -26,7 +26,7 @@ On browsers that don't support inputs of type `email`, a `email` input falls bac
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing an e-mail address, or
+        A string representing an e-mail address, or
         empty
       </td>
     </tr>
@@ -45,7 +45,7 @@ On browsers that don't support inputs of type `email`, a `email` input falls bac
         {{htmlattrxref("maxlength", "input")}},
         {{htmlattrxref("minlength", "input")}},
         {{htmlattrxref("multiple", "input")}},
-        {{htmlattrxref("name", "input")}},{{htmlattrxref("pattern", "input")}},
+        {{htmlattrxref("name", "input")}}, {{htmlattrxref("pattern", "input")}},
         {{htmlattrxref("placeholder", "input")}},
         {{htmlattrxref("readonly", "input")}},
         {{htmlattrxref("required", "input")}},
@@ -72,7 +72,7 @@ On browsers that don't support inputs of type `email`, a `email` input falls bac
 
 ## Value
 
-The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} which is automatically validated as conforming to e-mail syntax. More specifically, there are three possible value formats that will pass validation:
+The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a string which is automatically validated as conforming to e-mail syntax. More specifically, there are three possible value formats that will pass validation:
 
 1. An empty string ("") indicating that the user did not enter a value or that the value was removed.
 2. A single properly-formed e-mail address. This doesn't necessarily mean the e-mail address exists, but it is at least formatted correctly. In simple terms, this means `username@domain` or `username@domain.tld`. There's more to it than that, of course; see [Validation](#validation) for a {{Glossary("regular expression")}} that matches the e-mail address validation algorithm.

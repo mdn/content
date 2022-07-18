@@ -1,6 +1,7 @@
 ---
 title: 'Element: msContentZoom event'
 slug: Web/API/Element/msContentZoom_event
+page-type: web-api-event
 tags:
   - Event
   - Event:Microsoft Extensions

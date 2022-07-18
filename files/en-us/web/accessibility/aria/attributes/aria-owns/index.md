@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-owns
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-owns
 ---
 
 The `aria-owns` attribute identifies an element (or elements) in order to define a visual, functional, or contextual relationship between a parent and its child elements when the DOM hierarchy cannot be used to represent the relationship.
@@ -60,9 +61,7 @@ Used in **ALL** roles.
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-owns","ARIA: aria-owns Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

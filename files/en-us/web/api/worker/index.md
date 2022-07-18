@@ -1,6 +1,7 @@
 ---
 title: Worker
 slug: Web/API/Worker
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -84,7 +85,7 @@ Support varies for different types of workers. See each worker type's page for s
 
 ### Cross-origin worker error behavior
 
-In early versions of the spec, loading a cross-origin worker script threw a `SecurityError`. Nowadays, an {{event("error")}} event is thrown instead.
+In early versions of the spec, loading a cross-origin worker script threw a `SecurityError`. Nowadays, an {{domxref("Worker/error_event", "error")}} event is thrown instead.
 
 ## See also
 

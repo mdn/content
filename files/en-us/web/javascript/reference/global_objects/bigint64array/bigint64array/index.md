@@ -64,29 +64,30 @@ new BigInt64Array(buffer, byteOffset, length);
 
 ```js
 // From a length
-var bigint64 = new BigInt64Array(2);
+const bigint64 = new BigInt64Array(2);
 bigint64[0] = 42n;
 console.log(bigint64[0]); // 42n
 console.log(bigint64.length); // 2
 console.log(bigint64.BYTES_PER_ELEMENT); // 8
 
 // From an array
-var arr = new BigInt64Array([21n,31n]);
-console.log(arr[1]); // 31n
+const x = new BigInt64Array([21n, 31n]);
+console.log(x[1]); // 31n
 
 // From another TypedArray
-var x = new BigInt64Array([21n, 31n]);
-var y = new BigInt64Array(x);
+const y = new BigInt64Array(x);
 console.log(y[0]); // 21n
 
 // From an ArrayBuffer
-var buffer = new ArrayBuffer(32);
-var z = new BigInt64Array(buffer, 0, 4);
+const buffer = new ArrayBuffer(64);
+const z = new BigInt64Array(buffer, 8, 4);
+console.log(z.byteOffset); // 8
 
 // From an iterable
-var iterable = function*(){ yield* [1n, 2n, 3n]; }();
-var bigint64 = new BigInt64Array(iterable);
-// BigInt64Array[1n, 2n, 3n]
+const iterable = function*() { yield* [1n, 2n, 3n]; }();
+const bigint64FromIterable = new BigInt64Array(iterable);
+console.log(bigint64FromIterable);
+// BigInt64Array [1n, 2n, 3n]
 ```
 
 ## Specifications

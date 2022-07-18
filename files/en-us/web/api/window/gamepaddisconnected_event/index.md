@@ -1,6 +1,7 @@
 ---
 title: 'Window: gamepaddisconnected event'
 slug: Web/API/Window/gamepaddisconnected_event
+page-type: web-api-event
 browser-compat: api.Window.gamepaddisconnected_event
 ---
 {{APIRef}}
@@ -26,7 +27,7 @@ Alternatively, you can use the `window.ongamepaddisconnected` event handler prop
 ```js
 window.ongamepaddisconnected = event => {
     console.log('Lost connection with the gamepad.');
-});
+};
 ```
 
 ## Specifications

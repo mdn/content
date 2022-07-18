@@ -1,6 +1,7 @@
 ---
 title: 'Document: fullscreenerror event'
 slug: Web/API/Document/fullscreenerror_event
+page-type: web-api-event
 tags:
   - API
   - Event

@@ -38,8 +38,8 @@ The following example assigns the hours portion of the current time to the varia
 `hours`.
 
 ```js
-var today = new Date();
-var hours = today.getUTCHours();
+const today = new Date();
+const hours = today.getUTCHours();
 ```
 
 ## Specifications

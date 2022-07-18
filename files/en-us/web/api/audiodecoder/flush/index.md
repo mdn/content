@@ -1,6 +1,7 @@
 ---
 title: AudioDecoder.flush()
 slug: Web/API/AudioDecoder/flush
+page-type: web-api-instance-method
 tags:
   - API
   - Method

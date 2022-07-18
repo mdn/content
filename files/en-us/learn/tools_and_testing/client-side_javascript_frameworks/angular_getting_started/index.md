@@ -118,14 +118,14 @@ To install Angular on your local system, you need the following:
 You can use the Angular CLI to run commands in your terminal for generating, building, testing, and deploying Angular applications.
 To install the Angular CLI, run the following command in your terminal:
 
-```js
+```bash
 npm install -g @angular/cli
 ```
 
 Angular CLI commands all start with `ng`, followed by what you'd like the CLI to do.
 In the Desktop directory, use the following `ng new` command to create a new application called `todo`:
 
-```js
+```bash
 ng new todo --routing=false --style=css
 ```
 
@@ -137,13 +137,13 @@ If you are prompted to enforce stricter type checking, you can respond with yes.
 
 Navigate into your new project with the following `cd` command:
 
-```js
+```bash
 cd todo
 ```
 
 To run your `todo` application, use `ng serve`:
 
-```js
+```bash
 ng serve
 ```
 

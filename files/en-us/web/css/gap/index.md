@@ -178,7 +178,7 @@ This property is specified as a value for `<'row-gap'>` followed optionally by a
 
 ## Specifications
 
-{{Specifications("css.properties.gap.grid_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

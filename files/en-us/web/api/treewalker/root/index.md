@@ -1,6 +1,7 @@
 ---
 title: TreeWalker.root
 slug: Web/API/TreeWalker/root
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -23,7 +24,7 @@ A {{domxref("Node")}} object.
 var treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
 root = treeWalker.root; // document.body in this case

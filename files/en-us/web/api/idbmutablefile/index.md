@@ -1,24 +1,25 @@
 ---
 title: IDBMutableFile
 slug: Web/API/IDBMutableFile
+page-type: web-api-interface
 tags:
   - API
   - DOM
   - Files
   - Reference
-  - Non-standard
   - Interface
+  - Deprecated
+  - Non-standard
 browser-compat: api.IDBMutableFile
 ---
-{{APIRef("IndexedDB")}}{{non-standard_header}}
+{{APIRef("IndexedDB")}}{{deprecated_header}}
+
+> **Note:** The three non-standard interfaces {{domxref("IDBMutableFile")}}, {{domxref("IDBFileHandle")}}, and {{domxref("IDBFileRequest")}} are [disabled by default](#browser_compatibility).
+> Consider using the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
 The **`IDBMutableFile`** interface provides access in read or write mode to a file, dealing with all the necessary locks.
 
-As `IDBMutableFile` objects are bound to a fake file system built using IndexedDB, such an object is created using the {{domxref("IDBDatabase.createMutableFile()")}} method.
-
-> **Note:** The three interfaces `IDBMutableFile`, `IDBFileHandle`, and `IDBFileRequest` are deprecated and only implemented
-> for backward compatibility in Firefox. _Do not use them anymore_:
-> consider using the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
+As `IDBMutableFile` objects are bound to a fake file system built using `IndexedDB`, such an object is created using the [`IDBDatabase.createMutableFile()`](/en-US/docs/Web/API/IDBDatabase#idbdatabase.createmutablefile) method.
 
 ## Properties
 
@@ -45,7 +46,8 @@ This feature is not part of any current specification. It is no longer on track 
 
 ## Browser compatibility
 
-{{Compat}}
+This interface is not supported by any current browser.
+From Firefox 102 it is behind the preference `dom.fileHandle.enabled`.
 
 ## See also
 

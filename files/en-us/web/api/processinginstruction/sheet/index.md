@@ -1,6 +1,7 @@
 ---
 title: ProcessingInstruction.sheet
 slug: Web/API/ProcessingInstruction/sheet
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
@@ -23,7 +24,7 @@ A string containing the name of the associated stylesheet, or `null` if there ar
 ```html
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="rule.css"?>
-...
+…
 ```
 
 The `sheet` property of the processing instruction will return `rule.css`.

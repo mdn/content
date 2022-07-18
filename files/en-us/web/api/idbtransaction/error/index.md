@@ -1,6 +1,7 @@
 ---
 title: IDBTransaction.error
 slug: Web/API/IDBTransaction/error
+page-type: web-api-instance-property
 tags:
   - API
   - Database
@@ -36,13 +37,16 @@ some data to an object store. Note also the functions attached to transaction ev
 handlers to report on the outcome of the transaction opening in the event of success or
 failure. Note the `transaction.onerror = function(event) { };` block, making
 use of `transaction.error` to help in reporting what went wrong when the
-transaction was unsuccessful. For a full working example, see our [To-do
-Notifications](https://github.com/mdn/to-do-notifications/) app ([view
-example live](https://mdn.github.io/to-do-notifications/).)
+transaction was unsuccessful. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([View example live](https://mdn.github.io/to-do-notifications/)).
 
 ```js
+const note = document.getElementById('notifications');
+
+// an instance of a db object for us to store the IDB data in
+let db;
+
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = event => {
   note.innerHTML += '<li>Database initialized.</li>';
@@ -57,10 +61,10 @@ DBOpenRequest.onsuccess = event => {
 
 function addData() {
   // Create a new object ready for being inserted into the IDB
-  var newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  const newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
 
   // open a read/write db transaction, ready for adding the data
-  var transaction = db.transaction(["toDoList"], "readwrite");
+  const transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of opening the transaction
   transaction.oncomplete = event => {
@@ -72,10 +76,10 @@ function addData() {
   };
 
   // create an object store on the transaction
-  var objectStore = transaction.objectStore("toDoList");
+  const objectStore = transaction.objectStore("toDoList");
 
   // add our newItem object to the object store
-  var objectStoreRequest = objectStore.add(newItem[0]);
+  const objectStoreRequest = objectStore.add(newItem[0]);
 
   objectStoreRequest.onsuccess = event => {
     // report the success of the request (this does not mean the item

@@ -1,6 +1,7 @@
 ---
 title: PaymentRequestUpdateEvent
 slug: Web/API/PaymentRequestUpdateEvent
+page-type: web-api-interface
 tags:
   - API
   - Experimental

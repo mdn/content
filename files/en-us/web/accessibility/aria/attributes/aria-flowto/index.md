@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-flowto
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-flowto
 ---
 
 The global `aria-flowto` attribute identifies the next element (or elements) in an alternate reading order of content. This allows assistive technology to override the general default of reading in document source order at the user's discretion.
@@ -35,9 +36,7 @@ Used in **ALL** roles.
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-flowto","ARIA: aria-flowto Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

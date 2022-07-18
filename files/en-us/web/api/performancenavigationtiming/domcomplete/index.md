@@ -1,6 +1,7 @@
 ---
 title: PerformanceNavigationTiming.domComplete
 slug: Web/API/PerformanceNavigationTiming/domComplete
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -28,11 +29,11 @@ The following example illustrates this property's usage.
 ```js
 function print_nav_timing_data() {
   // Use getEntriesByType() to just get the "navigation" events
-  var perfEntries = performance.getEntriesByType("navigation");
+  const perfEntries = performance.getEntriesByType("navigation");
 
-  for (var i=0; i < perfEntries.length; i++) {
+  for (let i=0; i < perfEntries.length; i++) {
     console.log("= Navigation entry[" + i + "]");
-    var p = perfEntries[i];
+    const p = perfEntries[i];
     // DOM Properties
     console.log("DOM content loaded = " + (p.domContentLoadedEventEnd - p.domContentLoadedEventStart));
     console.log("DOM complete = " + p.domComplete);

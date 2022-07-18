@@ -1,6 +1,7 @@
 ---
 title: CSS.paintWorklet (Static property)
 slug: Web/API/CSS/paintWorklet
+page-type: web-api-static-property
 tags:
   - API
   - CSS
@@ -30,11 +31,9 @@ The following example demonstrates loading a {{DOMxRef('PaintWorklet')}} from it
 file and does so by feature detection.
 
 ```js
-<script>
-  if ('paintWorklet' in CSS) {
-    CSS.paintWorklet.addModule('checkerboard.js');
-  }
-</script>
+if ('paintWorklet' in CSS) {
+  CSS.paintWorklet.addModule('checkerboard.js');
+}
 ```
 
 ## Specifications

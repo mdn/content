@@ -13,7 +13,7 @@ tags:
   - Input Type
   - Phone Numbers
   - Reference
-browser-compat: html.elements.input.input-tel
+browser-compat: html.elements.input.type_tel
 ---
 
 {{HTMLRef("Input_types")}}
@@ -31,7 +31,7 @@ Despite the fact that inputs of type `tel` are functionally identical to standar
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing a telephone number, or
+        A string representing a telephone number, or
         empty
       </td>
     </tr>
@@ -80,7 +80,7 @@ Despite the fact that inputs of type `tel` are functionally identical to standar
 
 ## Value
 
-The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that either represents a telephone number or is an empty string (`""`).
+The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a string that either represents a telephone number or is an empty string (`""`).
 
 ## Additional attributes
 
@@ -410,7 +410,7 @@ Each input has a {{htmlattrxref("placeholder","input")}} attribute to show a hin
 </form>
 ```
 
-The JavaScript is relatively simple — it contains an {{domxref("GlobalEventHandlers.onchange", "onchange")}} event handler that, when the `<select>` value is changed, updates the `<input>` element's `pattern`, `placeholder`, and `aria-label` to suit the format of telephone numbers in that country/territory.
+The JavaScript is relatively simple — it contains an {{domxref("HTMLElement.change_event", "onchange")}} event handler that, when the `<select>` value is changed, updates the `<input>` element's `pattern`, `placeholder`, and `aria-label` to suit the format of telephone numbers in that country/territory.
 
 ```js
 var selectElem = document.querySelector("select");

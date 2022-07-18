@@ -1,6 +1,7 @@
 ---
 title: PaymentRequest.canMakePayment()
 slug: Web/API/PaymentRequest/canMakePayment
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -52,8 +53,7 @@ constructor. If the payment can't be processed, the promise receives a value of
 
 ## Examples
 
-In the following example, is [excerpted
-from a demo](https://rsolomakhin.github.io/samples/paymentrequest/can-make-payment/) that asynchronously builds a `PaymentRequest` object for
+In the following example, is [excerpted from a demo](https://rsolomakhin.github.io/samples/paymentrequest/can-make-payment/) that asynchronously builds a `PaymentRequest` object for
 both Apple Pay and Example Pay. It wraps the call to `canMakePayment()` in
 feature detection, and calls an appropriate callback depending on the resolution of the
 `Promise`.
@@ -81,7 +81,7 @@ async function initPaymentRequest() {
     return;
   }
 
-  // Otherwise... let's see if we can use Example Pay
+  // Otherwise, let's see if we can use Example Pay
   const supportsExamplePay = await new PaymentRequest(
     [{ supportedMethods: "https://example.com/pay" }],
     details

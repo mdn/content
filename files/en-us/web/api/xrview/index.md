@@ -1,6 +1,7 @@
 ---
 title: XRView
 slug: Web/API/XRView
+page-type: web-api-interface
 tags:
   - API
   - AR

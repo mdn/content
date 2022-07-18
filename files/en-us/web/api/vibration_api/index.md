@@ -1,11 +1,13 @@
 ---
 title: Vibration API
 slug: Web/API/Vibration_API
+page-type: web-api-overview
 tags:
   - API
   - Beginner
   - Mobile
   - Vibration
+browser-compat: api.Navigator.vibrate
 ---
 {{DefaultAPISidebar("Vibration API")}}
 
@@ -74,13 +76,11 @@ Of course, the snippet above doesn't take into account the array method of vibra
 
 ## Specifications
 
-| Specification                                     |
-| ------------------------------------------------- |
-| [Vibration API](https://w3c.github.io/vibration/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Navigator.vibrate")}}
+{{Compat}}
 
 ## See also
 

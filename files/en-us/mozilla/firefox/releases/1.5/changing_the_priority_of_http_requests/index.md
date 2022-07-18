@@ -9,7 +9,7 @@ tags:
 > **Warning:** The approach described in this topic is non-standard, and not recommended.
 >
 > The best way to request resources over HTTP is to use [`fetch()`](/en-US/docs/Web/API/fetch), which allows you to specify the priority in [`Request.priority`](/en-US/docs/Web/API/Request/priority).
-> You can also set the HTTP priority on [`HTMLLinkElement`](/en-US/docs/Web/API/HTMLLinkElement/fetchpriority), [`HTMLIFrameElement`](/en-US/docs/Web/API/HTMLIFrameElement/fetchpriority), and [`HTMLImageElement`](/en-US/docs/Web/API/HTMLImageElement/fetchpriority) elements (and associated tags) using the `fetchpriority` attribute.
+> You can also set the HTTP priority on [`HTMLLinkElement`](/en-US/docs/Web/API/HTMLLinkElement/fetchPriority), [`HTMLIFrameElement`](/en-US/docs/Web/API/HTMLIFrameElement/fetchPriority), and [`HTMLImageElement`](/en-US/docs/Web/API/HTMLImageElement/fetchPriority) elements (and associated tags) using the `fetchpriority` attribute.
 
 ### Introduction
 

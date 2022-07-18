@@ -312,11 +312,11 @@ If, after reading through this article you decide that you can't be bothered to 
   - : This modern video player implements subtitles in both SRT and WebVTT file formats.
 - [Playr](https://www.delphiki.com/html5/playr/)
   - : This small plugin implements subtitles, captions, and chapters as well as both WebVTT and SRT file formats.
-- [Flowplayer](https://flowplayer.com/player)
+- [Flowplayer](https://flowplayer.com/features/html5-player)
   - : HTML5 player supporting WebVTT.
 - [jwplayer](https://www.jwplayer.com/)
   - : This video player is very extensive and does a lot more than support video captions. It supports the WebVTT, SRT and DFXP formats.
-- [MediaElement.js](http://www.mediaelementjs.com/)
+- [MediaElement.js](https://www.mediaelementjs.com/)
   - : Another complete video player that also support video captions, albeit only in SRT format.
 - [LeanBack Player](https://www.leanbackplayer.com/)
   - : Yet another video player that supports WebVTT captions as well as providing other standard player functionality.

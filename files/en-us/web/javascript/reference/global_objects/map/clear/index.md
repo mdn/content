@@ -31,7 +31,7 @@ clear()
 ### Using clear()
 
 ```js
-var myMap = new Map();
+const myMap = new Map();
 myMap.set('bar', 'baz');
 myMap.set(1, 'foo');
 

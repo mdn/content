@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.isVertexArray()
 slug: Web/API/WebGL2RenderingContext/isVertexArray
+page-type: web-api-instance-method
 tags:
   - API
   - Method

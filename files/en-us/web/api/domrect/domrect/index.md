@@ -1,6 +1,7 @@
 ---
 title: DOMRect()
 slug: Web/API/DOMRect/DOMRect
+page-type: web-api-constructor
 tags:
   - API
   - Constructor

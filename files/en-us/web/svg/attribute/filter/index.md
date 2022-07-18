@@ -13,7 +13,7 @@ The **`filter`** attribute specifies the filter effects defined by the {{SVGElem
 
 > **Note:** As a presentation attribute, `filter` can be used as a CSS property. See {{cssxref("filter", "CSS filter")}} for further information.
 
-As a presentation attribute, it can be applied to any element but it only has effect on [container elements](/en-US/docs/Web/SVG/Element#Container_elements) without the {{SVGElement("defs")}} element, all [graphics elements](/en-US/docs/Web/SVG/Element#Graphics_elements) and the {{SVGElement("use")}} element.
+As a presentation attribute, it can be applied to any element but it only has effect on [container elements](/en-US/docs/Web/SVG/Element#container_elements) without the {{SVGElement("defs")}} element, all [graphics elements](/en-US/docs/Web/SVG/Element#graphics_elements) and the {{SVGElement("use")}} element.
 
 ## Example
 

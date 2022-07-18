@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -234,11 +235,6 @@ Some properties only apply to input element types that support the corresponding
     - if the {{htmlattrxref("value","input")}} cannot be converted to a number,
     - if the resulting value is above the {{htmlattrxref("max","input")}} or below the {{htmlattrxref("min","input")}}.
 
-- {{domxref("HTMLInputElement.mozSetFileArray()", "mozSetFileArray()")}} {{non-standard_inline}}
-  - : Sets the files selected on the input to the given array of {{domxref("File")}} objects. This is an alternative to `mozSetFileNameArray()` which can be used in frame scripts: a chrome script can [open files as File objects](/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) and send them via [message manager](/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox/The_message_manager).
-- {{domxref("HTMLInputElement.mozGetFileNameArray()", "mozGetFileNameArray()")}} {{non-standard_inline}}
-  - : Returns an array of all the file names from the input.
-
 ## Events
 
 Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface:
@@ -252,7 +248,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 - [`search`](/en-US/docs/Web/API/HTMLInputElement/search_event)
   - : Fired when a search is initiated on an {{HTMLElement("input")}} of `type="search"`.
     Also available via the [`onsearch`](/en-US/docs/Web/API/GlobalEventHandlers/onsearch) event handler property.
-- {{domxref("HTMLInputElement/selectionchange_event", "selectionchange")}} event{{experimental_inline}}
+- {{domxref("HTMLInputElement/selectionchange_event", "selectionchange")}} event {{experimental_inline}}
   - : Fires when the text selection in a {{HTMLElement("input")}} element has been changed.
 
 ## Specifications

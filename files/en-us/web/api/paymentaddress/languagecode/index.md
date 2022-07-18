@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.languageCode
 slug: Web/API/PaymentAddress/languageCode
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -29,13 +30,7 @@ This is used while localizing the display of the address, allowing
 the determination of the field separators and the order of fields when formatting the
 address.
 
-## Syntax
-
-```js
-var paymentLanguageCode = PaymentAddress.languageCode;
-```
-
-### Value
+## Value
 
 A string providing the {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}
 format language code indicating

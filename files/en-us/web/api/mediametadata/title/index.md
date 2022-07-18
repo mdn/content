@@ -1,6 +1,7 @@
 ---
 title: MediaMetadata.title
 slug: Web/API/MediaMetadata/title
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -43,6 +44,7 @@ if ('mediaSession' in navigator) {
       { src: 'https://dummyimage.com/512x512', sizes: '512x512', type: 'image/png' },
     ]
   });
+}
 ```
 
 ## Specifications

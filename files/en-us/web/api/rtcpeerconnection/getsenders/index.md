@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.getSenders()
 slug: Web/API/RTCPeerConnection/getSenders
+page-type: web-api-instance-method
 tags:
   - Media
   - Method
@@ -50,9 +51,9 @@ iterates over every sender, setting the corresponding media track's
 function setMuting(pc, muting) {
   let senderList = pc.getSenders();
 
-  senderList.forEach(sender) {
+  senderList.forEach((sender) => {
     sender.track.enabled = !muting;
-  }
+  });
 }
 ```
 

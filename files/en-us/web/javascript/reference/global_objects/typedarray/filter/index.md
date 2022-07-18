@@ -16,7 +16,7 @@ browser-compat: javascript.builtins.TypedArray.filter
 The **`filter()`** method creates a new typed array with all
 elements that pass the test implemented by the provided function. This method has the
 same algorithm as {{jsxref("Array.prototype.filter()")}}. _TypedArray_ is one of
-the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-filter.html")}}
 
@@ -46,7 +46,7 @@ filter(function(element, index, array) { /* ... */ }, thisArg)
 
     The function is called with the following arguments: `(element, index, array)`.
     Return `true` to keep the element, `false` otherwise.
-- `thisArg`{{optional_inline}}
+- `thisArg` {{optional_inline}}
   - : Value to use as `this` when executing `callbackFn`.
 
 ### Return value

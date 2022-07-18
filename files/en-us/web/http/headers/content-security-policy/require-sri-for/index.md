@@ -9,14 +9,13 @@ tags:
   - Security
   - Subresource Integrity
   - require-sri-for
-browser-compat: http.headers.csp.Content-Security-Policy.require-sri-for
+browser-compat: http.headers.Content-Security-Policy.require-sri-for
 ---
 {{deprecated_header}}
 
 The [HTTP](/en-US/docs/Web/HTTP) {{HTTPHeader("Content-Security-Policy")}}
 **`require-sri-for`** directive instructs the client to require
-the use of [Subresource
-Integrity](/en-US/docs/Web/Security/Subresource_Integrity) for scripts or styles on the page.
+the use of [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) for scripts or styles on the page.
 
 ## Syntax
 

@@ -1,6 +1,7 @@
 ---
 title: ProgressEvent.total
 slug: Web/API/ProgressEvent/total
+page-type: web-api-instance-property
 tags:
   - API
   - Progress Event

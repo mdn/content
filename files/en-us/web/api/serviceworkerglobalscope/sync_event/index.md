@@ -1,6 +1,7 @@
 ---
 title: 'ServiceWorkerGlobalScope: sync event'
 slug: Web/API/ServiceWorkerGlobalScope/sync_event
+page-type: web-api-event
 tags:
   - Offline
   - PWA
@@ -56,17 +57,17 @@ You can also set up the event handler using the `onsync` property:
 
 ```js
 self.onsync = event => {
-  ...
+  // ...
 };
 ```
 
 ## Specifications
 
-{{Specifications("api.SyncEvent")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.SyncEvent")}}
+{{Compat}}
 
 ## See also
 

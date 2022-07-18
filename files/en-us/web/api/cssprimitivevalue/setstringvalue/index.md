@@ -1,6 +1,7 @@
 ---
 title: CSSPrimitiveValue.setStringValue()
 slug: Web/API/CSSPrimitiveValue/setStringValue
+page-type: web-api-instance-method
 tags:
   - API
   - CSSPrimitiveValue
@@ -33,7 +34,7 @@ setStringValue(stringType, stringValue)
 
 ### Parameters
 
-- stringType
+- `stringType`
 
   - : An `unsigned short` representing the type of the value. Possible values
     are:
@@ -45,7 +46,7 @@ setStringValue(stringType, stringValue)
     | `CSS_STRING` | The value is a {{cssxref("&lt;string&gt;")}}.            |
     | `CSS_URI`    | The value is a {{cssxref("url", "url()")}}.                     |
 
-- stringValue
+- `stringValue`
   - : A string representing the new string value.
 
 ### Return value

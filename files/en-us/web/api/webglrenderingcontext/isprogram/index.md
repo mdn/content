@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.isProgram()
 slug: Web/API/WebGLRenderingContext/isProgram
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -22,7 +23,7 @@ isProgram(program)
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}} to check.
 
 ### Return value

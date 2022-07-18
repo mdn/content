@@ -1,6 +1,7 @@
 ---
 title: Animation.timeline
 slug: Web/API/Animation/timeline
+page-type: web-api-instance-property
 tags:
   - API
   - Animation

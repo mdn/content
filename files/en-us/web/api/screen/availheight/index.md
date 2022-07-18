@@ -1,6 +1,7 @@
 ---
 title: Screen.availHeight
 slug: Web/API/Screen/availHeight
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -79,4 +80,4 @@ other interface elements that reserve space.
 - {{DOMxRef("Window")}}
 - {{DOMxRef("Screen")}}
 - {{DOMxRef("Screen.availWidth")}}
-- {{DOMxRef("Window.height")}}
+- {{DOMxRef("Window.innerHeight")}}

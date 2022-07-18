@@ -1,6 +1,7 @@
 ---
 title: Document.append()
 slug: Web/API/Document/append
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -24,7 +25,7 @@ This method appends a child to a `Document`. To append to an arbitrary element i
 ```js
 append(param1)
 append(param1, param2)
-append(param1, param2, /* ... ,*/ paramN)
+append(param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parameters
@@ -46,7 +47,7 @@ None ({{jsxref("undefined")}}).
 ### Appending a root element to a document
 
 If you try to append an element to an existing HTML document,
-it might throw a `HierarchyRequestError`{{domxref("DOMException")}} given a {{HTMLElement("html")}} element already exists.
+it might throw a `HierarchyRequestError` {{domxref("DOMException")}} given a {{HTMLElement("html")}} element already exists.
 
 ```js
 let html = document.createElement("html");

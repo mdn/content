@@ -1,6 +1,7 @@
 ---
 title: OfflineAudioCompletionEvent()
 slug: Web/API/OfflineAudioCompletionEvent/OfflineAudioCompletionEvent
+page-type: web-api-constructor
 tags:
   - API
   - Audio

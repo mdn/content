@@ -45,7 +45,7 @@ Several projects exist that can create a raster image from an SVG source. [Image
 
 ## Raphael JS
 
-URL: [raphaeljs.com](http://raphaeljs.com/)
+URL: [raphaeljs.com](https://raphaeljs.com/)
 
 This is a JavaScript library, that acts as an abstraction layer between browser implementations. Notably older versions of Internet Explorer are supported by generating VML, a vector markup language, that is one of two ancestors of SVG and exists since IE 5.5.
 

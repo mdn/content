@@ -1,6 +1,7 @@
 ---
 title: 'Element: gestureend event'
 slug: Web/API/Element/gestureend_event
+page-type: web-api-event
 tags:
   - Event
   - Non-standard

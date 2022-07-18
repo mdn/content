@@ -1,6 +1,7 @@
 ---
 title: DynamicsCompressorNode.knee
 slug: Web/API/DynamicsCompressorNode/knee
+page-type: web-api-instance-property
 tags:
   - API
   - DynamicsCompressorNode

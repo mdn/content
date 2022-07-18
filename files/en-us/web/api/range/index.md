@@ -1,6 +1,7 @@
 ---
 title: Range
 slug: Web/API/Range
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -46,7 +47,7 @@ _There are no inherited methods._
   - : Collapses the `Range` to one of its boundary points.
 - {{ domxref("Range.compareBoundaryPoints()")}}
   - : Compares the boundary points of the `Range` with another `Range`.
-- {{ domxref("Range.compareNode()")}} {{deprecated_inline}}{{non-standard_inline}}
+- {{ domxref("Range.compareNode()")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Returns a constant representing whether the {{domxref("Node")}} is before, after, inside, or surrounding the range.
 - {{ domxref("Range.comparePoint()")}} {{experimental_inline}}
   - : Returns -1, 0, or 1 indicating whether the point occurs before, inside, or after the `Range`.
@@ -54,7 +55,7 @@ _There are no inherited methods._
   - : Returns a {{ domxref("DocumentFragment") }} copying the nodes of a `Range`.
 - {{ domxref("Range.cloneRange()")}}
   - : Returns a `Range` object with boundary points identical to the cloned `Range`.
-- {{ domxref("Range.createContextualFragment()")}}{{experimental_inline}}
+- {{ domxref("Range.createContextualFragment()")}} {{experimental_inline}}
   - : Returns a {{ domxref("DocumentFragment") }} created from a given string of code.
 - {{ domxref("Range.deleteContents()")}}
   - : Removes the contents of a `Range` from the {{ domxref("Document") }}.

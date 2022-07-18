@@ -1,6 +1,7 @@
 ---
 title: MerchantValidationEvent.complete()
 slug: Web/API/MerchantValidationEvent/complete
+page-type: web-api-instance-method
 tags:
   - API
   - Commerce
@@ -15,7 +16,7 @@ tags:
   - complete
 browser-compat: api.MerchantValidationEvent.complete
 ---
-{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}
+{{APIRef("Payment Request API")}}{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}
 
 The {{domxref("MerchantValidationEvent")}} method **`complete()`** takes merchant-specific information previously received from the {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} and uses it to validate the merchant.
 
@@ -55,7 +56,8 @@ payRequest.onmerchantvalidation = event => {
 }
 
 function getValidationData(url) {
-  /* ...retrieve the validation data from the URL... */
+  // Retrieve the validation data from the URL
+  // …
 }
 ```
 

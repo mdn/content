@@ -1,6 +1,7 @@
 ---
 title: CryptoKey
 slug: Web/API/CryptoKey
+page-type: web-api-interface
 tags:
   - API
   - Code

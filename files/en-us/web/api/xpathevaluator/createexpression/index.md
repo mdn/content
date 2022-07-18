@@ -1,6 +1,7 @@
 ---
 title: XPathEvaluator.createExpression()
 slug: Web/API/XPathEvaluator/createExpression
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -25,9 +26,9 @@ createExpression(expression, resolver)
 
 ### Parameters
 
-- expression
+- `expression`
   - : A string representing the XPath expression to be created.
-- resolver {{optional_inline}}
+- `resolver` {{optional_inline}}
   - : Permits translation of all prefixes, including the `xml` namespace
     prefix, within the XPath expression into appropriate namespace URIs.
 

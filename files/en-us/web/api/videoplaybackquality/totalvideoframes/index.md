@@ -1,6 +1,7 @@
 ---
 title: VideoPlaybackQuality.totalVideoFrames
 slug: Web/API/VideoPlaybackQuality/totalVideoFrames
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

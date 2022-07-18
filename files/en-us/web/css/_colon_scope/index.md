@@ -27,7 +27,9 @@ Currently, when used in a stylesheet, `:scope` is the same as {{cssxref(":root")
 
 ## Syntax
 
-{{csssyntax}}
+```
+:scope
+```
 
 ## Examples
 

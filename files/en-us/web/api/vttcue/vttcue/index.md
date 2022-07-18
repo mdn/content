@@ -1,6 +1,7 @@
 ---
 title: VTTCue()
 slug: Web/API/VTTCue/VTTCue
+page-type: web-api-constructor
 tags:
   - API
   - Accessibility

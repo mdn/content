@@ -20,14 +20,14 @@ Additionally, Gecko 2.0 {{geckoRelease("2.0")}} introduced support for using [SV
 - CSS {{cssxref("content")}}
 - SVG {{SVGElement("image")}} element
 - SVG {{SVGElement("feImage")}} element
-- Canvas [`drawImage`](/en-US/docs/Web/HTML/Canvas/Tutorial/Using_images#drawImage) function
+- Canvas [`drawImage`](/en-US/docs/Web/HTML/Canvas/Tutorial/Using_images#drawimage) function
 
 ### Restrictions
 
 For security purposes, Gecko places some restrictions on SVG content when it's being used as an image:
 
 - [JavaScript](/en-US/docs/Web/JavaScript) is disabled.
-- External resources (e.g. images, stylesheets) cannot be loaded, though they can be used if inlined through data: URIs.
+- External resources (e.g. images, stylesheets) cannot be loaded, though they can be used if inlined through data: Ls.
 - {{cssxref(":visited")}}-link styles aren't rendered.
 - Platform-native widget styling (based on OS theme) is disabled.
 

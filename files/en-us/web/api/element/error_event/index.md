@@ -1,6 +1,7 @@
 ---
 title: 'Element: error event'
 slug: Web/API/Element/error_event
+page-type: web-api-event
 tags:
   - Audio
   - DOM

@@ -1,6 +1,7 @@
 ---
 title: AddressErrors.dependentLocality
 slug: Web/API/AddressErrors/dependentLocality
+page-type: web-api-instance-property
 tags:
   - API
   - AddressErrors

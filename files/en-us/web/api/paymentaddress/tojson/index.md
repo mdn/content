@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.toJSON()
 slug: Web/API/PaymentAddress/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Payment Request

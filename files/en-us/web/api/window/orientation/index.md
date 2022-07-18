@@ -1,6 +1,7 @@
 ---
 title: Window.orientation
 slug: Web/API/Window/orientation
+page-type: web-api-instance-property
 tags:
   - NeedsContent
 browser-compat: api.Window.orientation

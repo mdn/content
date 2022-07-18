@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.connectStart
 slug: Web/API/PerformanceTiming/connectStart
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility

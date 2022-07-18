@@ -40,8 +40,8 @@ The `WeakMap` object.
 ### Using the set() method
 
 ```js
-var wm = new WeakMap();
-var obj = {};
+const wm = new WeakMap();
+const obj = {};
 
 // Add new elements to the WeakMap
 wm.set(obj, 'foo').set(window, 'bar'); // chainable

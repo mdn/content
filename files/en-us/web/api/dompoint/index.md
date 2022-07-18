@@ -1,6 +1,7 @@
 ---
 title: DOMPoint
 slug: Web/API/DOMPoint
+page-type: web-api-interface
 tags:
   - API
   - Coordinate

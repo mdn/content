@@ -1,6 +1,7 @@
 ---
 title: ServiceWorkerRegistration
 slug: Web/API/ServiceWorkerRegistration
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -74,7 +75,7 @@ if ('serviceWorker' in navigator) {
     registration.addEventListener('updatefound', function() {
       // If updatefound is fired, it means that there's
       // a new service worker being installed.
-      var installingWorker = registration.installing;
+      const installingWorker = registration.installing;
       console.log('A new service worker is being installed:',
         installingWorker);
 

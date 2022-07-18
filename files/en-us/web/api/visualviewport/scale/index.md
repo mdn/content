@@ -1,6 +1,7 @@
 ---
 title: VisualViewport.scale
 slug: Web/API/VisualViewport/scale
+page-type: web-api-instance-property
 tags:
   - API
   - Property

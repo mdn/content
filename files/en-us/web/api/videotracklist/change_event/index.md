@@ -1,6 +1,7 @@
 ---
 title: 'VideoTrackList: change event'
 slug: Web/API/VideoTrackList/change_event
+page-type: web-api-event
 tags:
   - Event
 browser-compat: api.VideoTrackList.change_event

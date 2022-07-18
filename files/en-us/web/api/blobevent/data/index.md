@@ -1,6 +1,7 @@
 ---
 title: BlobEvent.data
 slug: Web/API/BlobEvent/data
+page-type: web-api-instance-property
 tags:
   - API
   - BlobEvent

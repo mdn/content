@@ -1,6 +1,7 @@
 ---
 title: Range.selectNodeContents()
 slug: Web/API/Range/selectNodeContents
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -54,7 +55,7 @@ used to deselect it.
 #### HTML
 
 ```html
-<p id="p"><b>Use the buttons below</b> to select or deselect the contents of this paragraph.</p>
+<p id="p"><strong>Use the buttons below</strong> to select or deselect the contents of this paragraph.</p>
 <button id="select-button">Select paragraph</button>
 <button id="deselect-button">Deselect paragraph</button>
 ```

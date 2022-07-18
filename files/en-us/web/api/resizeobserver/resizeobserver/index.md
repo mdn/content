@@ -1,6 +1,7 @@
 ---
 title: ResizeObserver()
 slug: Web/API/ResizeObserver/ResizeObserver
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -42,8 +43,8 @@ new ResizeObserver(callback)
     The callback will generally follow a pattern along the lines of:
 
     ```js
-    function(entries, observer) {
-      for (let entry of entries) {
+    function callback(entries, observer) {
+      for (const entry of entries) {
         // Do something to each entry
         // and possibly something to the observer itself
       }
@@ -53,8 +54,7 @@ new ResizeObserver(callback)
 ## Examples
 
 The following snippet is taken from the [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html)
-([see
-source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)) example:
+([see source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)) example:
 
 ```js
 const resizeObserver = new ResizeObserver(entries => {

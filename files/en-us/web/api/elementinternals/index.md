@@ -1,6 +1,7 @@
 ---
 title: ElementInternals
 slug: Web/API/ElementInternals
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -18,20 +19,20 @@ This interface has no constructor. An `ElementInternals` object is returned when
 
 ## Properties
 
-- {{domxref("ElementInternals.shadowRoot")}}{{ReadOnlyInline}}
+- {{domxref("ElementInternals.shadowRoot")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("ShadowRoot")}} object associated with this element.
-- {{domxref("ElementInternals.form")}}{{ReadOnlyInline}}
+- {{domxref("ElementInternals.form")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("HTMLFormElement")}} associated with this element.
-- {{domxref("ElementInternals.states")}}{{ReadOnlyInline}}
+- {{domxref("ElementInternals.states")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("CustomStateSet")}} associated with this element.
-- {{domxref("ElementInternals.willValidate")}}{{ReadOnlyInline}}
+- {{domxref("ElementInternals.willValidate")}} {{ReadOnlyInline}}
   - : A boolean value which returns true if the element is a submittable element that is a candidate for
     [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation).
-- {{domxref("ElementInternals.validity")}}{{ReadOnlyInline}}
+- {{domxref("ElementInternals.validity")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ValidityState")}} object which represents the different validity states the element can be in, with respect to constraint validation.
-- {{domxref("ElementInternals.validationMessage")}}{{ReadOnlyInline}}
-  - : A {{domxref("DOMString","string")}} containing the validation message of this element.
-- {{domxref("ElementInternals.labels")}}{{ReadOnlyInline}}
+- {{domxref("ElementInternals.validationMessage")}} {{ReadOnlyInline}}
+  - : A string containing the validation message of this element.
+- {{domxref("ElementInternals.labels")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("NodeList")}} of all of the label elements associated with this element.
 
 ### Properties included from ARIA
@@ -113,11 +114,11 @@ The `ElementInternals` interface includes the following properties, defined on t
 - {{domxref("ElementInternals.ariaSort")}}
   - : A string reflecting the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute, which indicates if items in a table or grid are sorted in ascending or descending order.
 - {{domxref("ElementInternals.ariaValueMax")}}
-  - : A string reflecting the [`aria-valueMax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valueMax) attribute, which defines the maximum allowed value for a range widget.
+  - : A string reflecting the [`aria-valueMax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) attribute, which defines the maximum allowed value for a range widget.
 - {{domxref("ElementInternals.ariaValueMin")}}
-  - : A string reflecting the [`aria-valueMin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valueMin) attribute, which defines the minimum allowed value for a range widget.
+  - : A string reflecting the [`aria-valueMin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) attribute, which defines the minimum allowed value for a range widget.
 - {{domxref("ElementInternals.ariaValueNow")}}
-  - : A string reflecting the [`aria-valueNow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valueNow) attribute, which defines the current value for a range widget.
+  - : A string reflecting the [`aria-valueNow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) attribute, which defines the current value for a range widget.
 - {{domxref("ElementInternals.ariaValueText")}}
   - : A string reflecting the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute, which defines the human readable text alternative of aria-valuenow for a range widget.
 
@@ -145,7 +146,7 @@ class CustomCheckbox extends HTMLElement {
     this.internals_ = this.attachInternals();
   }
 
-  /* ... */
+  // …
 }
 
 window.customElements.define('custom-checkbox', CustomCheckbox);

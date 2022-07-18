@@ -1,6 +1,7 @@
 ---
 title: HTMLMenuItemElement
 slug: Web/API/HTMLMenuItemElement
+page-type: web-api-interface
 tags:
   - API
   - Deprecated

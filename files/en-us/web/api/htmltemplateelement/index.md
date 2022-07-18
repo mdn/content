@@ -1,6 +1,7 @@
 ---
 title: HTMLTemplateElement
 slug: Web/API/HTMLTemplateElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

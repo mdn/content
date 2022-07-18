@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.add()
 slug: Web/API/HTMLSelectElement/add
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -23,10 +24,10 @@ add(item, before)
 
 ### Parameters
 
-- _item_
+- `item`
   - : An {{domxref("HTMLOptionElement")}} or
     {{domxref("HTMLOptGroupElement")}}
-- _before_ {{optional_inline}}
+- `before` {{optional_inline}}
   - : An element of the collection, or an index of type
     _long_, representing the _item_ should be inserted before. If this
     parameter is `null` (or the index does not exist), the new element is
@@ -72,10 +73,8 @@ sel.add(opt2, null);
 The before parameter is optional. So the following is accepted.
 
 ```js
-...
 sel.add(opt1);
 sel.add(opt2);
-...
 ```
 
 ### Append to an Existing Collection
@@ -110,9 +109,7 @@ sel.add(opt, null);
 The before parameter is optional. So the following is accepted.
 
 ```js
-...
 sel.add(opt);
-...
 ```
 
 ### Inserting to an Existing Collection

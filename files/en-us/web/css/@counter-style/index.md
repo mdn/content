@@ -94,7 +94,9 @@ Each `@counter-style` is identified by a name and has a set of descriptors.
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+@counter-style <counter-style-name> { <declaration-list> }
+```
 
 ## Examples
 
@@ -122,14 +124,13 @@ Which will produce lists like this:
 Ⓑ Two
 Ⓒ Three
 Ⓓ Four
-Ⓔ FIve
-...
-...
-Ⓨ Twenty Five
-Ⓩ Twenty Six
-27 Twenty Seven
-28 Twenty Eight
-29 Twenty Nine
+Ⓔ Five
+…
+Ⓨ Twenty-five
+Ⓩ Twenty-six
+27 Twenty-seven
+28 Twenty-eight
+29 Twenty-nine
 30 Thirty
 
 See more examples on the [demo page](https://mdn.github.io/css-examples/counter-style-demo/).

@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createConstantSource()
 slug: Web/API/BaseAudioContext/createConstantSource
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

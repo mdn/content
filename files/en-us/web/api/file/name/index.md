@@ -1,6 +1,7 @@
 ---
 title: File.name
 slug: Web/API/File/name
+page-type: web-api-instance-property
 tags:
   - API
   - File API
@@ -50,7 +51,7 @@ filepicker.addEventListener('change', (event) => {
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 
@@ -62,5 +63,4 @@ filepicker.addEventListener('change', (event) => {
 
 ## See also
 
-- [Using files from web
-  applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)

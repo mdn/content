@@ -1,6 +1,7 @@
 ---
 title: MediaError.message
 slug: Web/API/MediaError/message
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -37,12 +38,11 @@ or a missing file to the element's {{htmlattrxref("src", "audio")}} attribute. T
 handler outputs a message to a box onscreen describing the error, including both the
 `code` and the `message`.
 
-Only the relevant parts of the code are displayed; you can [see the
-complete source code here](https://github.com/mdn/dom-examples/tree/master/media/mediaerror).
+Only the relevant parts of the code are displayed; you can [see the complete source code here](https://github.com/mdn/dom-examples/tree/master/media/mediaerror).
 
 The example creates an {{HTMLElement("audio")}} element and lets the user assign either
 a valid music file to it, or a link to a file which doesn't exist. This lets us see the
-behavior of the {{event("error")}} event handler, which is received by an event handler
+behavior of the {{domxref("HTMLMediaElement/error_event", "error")}} event handler, which is received by an event handler
 we add to the `<audio>` element itself.
 
 The error handler looks like this:
@@ -89,8 +89,7 @@ additional details. Then the resulting text is output to the log.
 
 ### Result
 
-You can try out this example below, and can [see the example in action
-outside this page here](https://mdn.github.io/dom-examples/media/mediaerror/).
+You can try out this example below, and can [see the example in action outside this page here](https://mdn.github.io/dom-examples/media/mediaerror/).
 
 {{ EmbedGHLiveSample('dom-examples/media/mediaerror', 650, 200) }}
 

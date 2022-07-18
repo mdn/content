@@ -1,6 +1,7 @@
 ---
 title: HTMLFormElement.requestSubmit()
 slug: Web/API/HTMLFormElement/requestSubmit
+page-type: web-api-instance-method
 tags:
   - API
   - HTML

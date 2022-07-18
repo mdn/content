@@ -39,7 +39,7 @@ const string3 = `Yet another string primitive`;
 const string4 = new String("A String object");
 ```
 
-String primitives and string objects can be used interchangeably in most situations.
+String primitives and string objects share many behaviors, but have other important differences and caveats.
 See "[String primitives and String objects](#string_primitives_and_string_objects)" below.
 
 String literals can be specified using single or double quotes, which are treated
@@ -109,12 +109,10 @@ Note that JavaScript distinguishes between `String` objects and
 
 String literals (denoted by double or single quotes) and strings returned from
 `String` calls in a non-constructor context (that is, called without using
-the {{jsxref("Operators/new", "new")}} keyword) are primitive strings. JavaScript
-automatically converts primitives to `String` objects, so that it's possible
-to use `String` object methods for primitive strings. In contexts where a
+the {{jsxref("Operators/new", "new")}} keyword) are primitive strings. In contexts where a
 method is to be invoked on a primitive string or a property lookup occurs, JavaScript
 will automatically wrap the string primitive and call the method or perform the property
-lookup.
+lookup on the wrapper object instead.
 
 ```js
 let s_prim = 'foo'
@@ -123,6 +121,8 @@ let s_obj = new String(s_prim)
 console.log(typeof s_prim) // Logs "string"
 console.log(typeof s_obj)  // Logs "object"
 ```
+
+> **Warning:** You should rarely find yourself using `String` as a constructor.
 
 String primitives and `String` objects also give different results when
 using {{jsxref("Global_Objects/eval", "eval()")}}. Primitives passed to
@@ -226,7 +226,7 @@ Both of the above methods result in identical strings.
 
 ## Instance methods
 
-- {{jsxref("String.prototype.at()", "String.prototype.at(<var>index</var>)")}}{{Experimental_Inline}}
+- {{jsxref("String.prototype.at()", "String.prototype.at(<var>index</var>)")}} {{Experimental_Inline}}
   - : Returns the character (exactly one UTF-16 code unit) at the specified `index`. Accepts negative integers, which count back from the last string character.
 - {{jsxref("String.prototype.charAt()", "String.prototype.charAt(<var>index</var>)")}}
   - : Returns the character (exactly one UTF-16 code unit) at the specified
@@ -395,11 +395,11 @@ It's possible to use `String` as a more reliable
 used on {{jsxref("null")}} and {{jsxref("undefined")}}. For example:
 
 ```js
-var nullVar = null;
+const nullVar = null;
 nullVar.toString();       // TypeError: nullVar is null
 String(nullVar);          // "null"
 
-var undefinedVar;
+const undefinedVar;
 undefinedVar.toString();  // TypeError: undefinedVar is undefined
 String(undefinedVar);     // "undefined"
 ```
@@ -416,5 +416,3 @@ String(undefinedVar);     // "undefined"
 
 - [Text formatting in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
 - {{jsxref("RegExp")}}
-- {{domxref("DOMString")}}
-- [Binary strings](/en-US/docs/Web/API/DOMString/Binary)

@@ -39,7 +39,7 @@ where:
 
 ## Description
 
-Imported rules must come before all other types of rules, except {{CSSxRef("@charset")}} rules. The `@import` rule is not a [nested statement](/en-US/docs/Web/CSS/Syntax#nested_statements). Therefore, it cannot be used inside [conditional group at-rules](/en-US/docs/Web/CSS/At-rule#Conditional_Group_Rules).
+Imported rules must come before all other types of rules, except {{CSSxRef("@charset")}} rules. The `@import` rule is not a [nested statement](/en-US/docs/Web/CSS/Syntax#nested_statements). Therefore, it cannot be used inside [conditional group at-rules](/en-US/docs/Web/CSS/At-rule#conditional_group_rules).
 
 So that {{glossary("user agents")}} can avoid retrieving resources for unsupported media types, authors may specify media-dependent import conditions. These conditional imports specify comma-separated [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) after the URL. In the absence of any media query, the import is unconditional. Specifying `all` for the `list-of-media-queries` has the same effect.
 
@@ -47,7 +47,11 @@ The `@import` rule can also be used to create a [cascade layer](/en-US/docs/Web/
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+@import [ <url> | <string> ]
+        [ supports( [ <supports-condition> | <declaration> ] ) ]?
+        <media-query-list>? ;
+```
 
 ## Examples
 
@@ -72,7 +76,7 @@ The two examples above show how to specify the _url_ as a `<string>` and as a `u
 
 The `@import` rules in the above examples show media-dependent conditions that will need to be true before the linked CSS rules are applied.
 
-So for instance, the last `@import` rule will load the `narrow.css` stylesheet if the user agent supports [`display: flex`](/en-US/docs/Web/CSS/display#display_flex). The [media query](en-US/docs/Web/CSS/Media_Queries/Using_media_queries), using the `and` operator, further specifies to apply the style rules only to a screen device with a maximum viewport width of 400px.
+So for instance, the last `@import` rule will load the `narrow.css` stylesheet if the user agent supports [`display: flex`](/en-US/docs/Web/CSS/display#display_flex). The [media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), using the `and` operator, further specifies to apply the style rules only to a screen device with a maximum viewport width of 400px.
 
 ### Importing CSS rules into a cascade layer
 

@@ -1,6 +1,7 @@
 ---
 title: CustomEvent
 slug: Web/API/CustomEvent
+page-type: web-api-interface
 tags:
   - Interface
   - Reference

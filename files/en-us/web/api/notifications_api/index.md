@@ -1,12 +1,14 @@
 ---
 title: Notifications API
 slug: Web/API/Notifications_API
+page-type: web-api-overview
 tags:
   - Landing
   - Notifications
   - Notifications API
   - permission
   - system
+browser-compat: api.Notification
 ---
 {{DefaultAPISidebar("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
@@ -55,13 +57,11 @@ In addition, the Notifications API spec specifies a number of additions to the [
 
 ## Specifications
 
-| Specification                                                               |
-| --------------------------------------------------------------------------- |
-| [Notifications API Living Standard](https://notifications.spec.whatwg.org/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## See also
 

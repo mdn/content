@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.setMediaKeys()
 slug: Web/API/HTMLMediaElement/setMediaKeys
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -28,7 +29,7 @@ setMediaKeys(mediaKeys)
 
 ### Parameters
 
-- mediaKeys
+- `mediaKeys`
   - : A reference to a {{domxref("MediaKeys")}} object that the
     {{domxref("HTMLMediaElement")}} can use for decryption of media data during playback.
 

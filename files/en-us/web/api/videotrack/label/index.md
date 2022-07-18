@@ -1,6 +1,7 @@
 ---
 title: VideoTrack.label
 slug: Web/API/VideoTrack/label
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -25,7 +26,7 @@ string.
 
 ## Value
 
-A {{domxref("DOMString")}} specifying the track's human-readable label, if one is
+A string specifying the track's human-readable label, if one is
 available in the track metadata. Otherwise, an empty string (`""`) is
 returned.
 
@@ -41,7 +42,7 @@ only allow certain track kinds through.
 
 ```js
 function getTrackList(el) {
-  var trackList = [];
+  let trackList = [];
   const wantedKinds = [
     "main", "alternative", "commentary"
   ];

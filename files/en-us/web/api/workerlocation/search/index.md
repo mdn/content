@@ -1,6 +1,7 @@
 ---
 title: WorkerLocation.search
 slug: Web/API/WorkerLocation/search
+page-type: web-api-instance-property
 tags:
   - API
   - Property

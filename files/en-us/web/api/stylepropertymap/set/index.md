@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMap.set()
 slug: Web/API/StylePropertyMap/set
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -24,10 +25,10 @@ set(property, value)
 
 ### Parameters
 
-- property
+- `property`
   - : An identifier indicating the stylistic feature (e.g. font, width, background
     color) to change.
-- value
+- `value`
   - : The value the given property should have.
 
 ### Return value
@@ -37,8 +38,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 This example sets the {{cssxref('padding-top')}} property, with the given value, within
-the element's [style
-attribute](/en-US/docs/Web/HTML/Global_attributes/style).
+the element's [style attribute](/en-US/docs/Web/HTML/Global_attributes/style).
 
 ```js
 // get the button element

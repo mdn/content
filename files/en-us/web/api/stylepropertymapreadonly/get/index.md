@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMapReadOnly.get()
 slug: Web/API/StylePropertyMapReadOnly/get
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -25,7 +26,7 @@ get(property)
 
 ### Parameters
 
-- property
+- `property`
   - : The name of the property to retrieve the value of.
 
 ### Return value
@@ -104,6 +105,5 @@ for ( let i = 0; i < ofInterest.length; i++ ) {
 
 ## See also
 
-- [CSS Typed Object Model API](/en-US/docs/Web/Houdini/CSS_Typed_OM)
-- [Learning Houdini: the CSS Typed
-  Object Model](/en-US/docs/Web/Houdini/learn/CSS_Typed_OM)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)
+- [Learning Houdini: the CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)

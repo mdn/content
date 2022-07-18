@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrackGenerator
 slug: Web/API/MediaStreamTrackGenerator
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -16,7 +17,7 @@ The object consumes a stream of media frames as input, which can be audio or vid
 ## Constructor
 
 - {{domxref("MediaStreamTrackGenerator.MediaStreamTrackGenerator", "MediaStreamTrackGenerator()")}}
-  - : Creates a new `MediaStreamTrackGenerator` object which accepts either {{domxref("VideoFrame")}} or {{domxref("AudioFrame")}} objects.
+  - : Creates a new `MediaStreamTrackGenerator` object which accepts either {{domxref("VideoFrame")}} or {{domxref("AudioData")}} objects.
 
 ## Properties
 

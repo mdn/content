@@ -29,7 +29,9 @@ The most obvious use of this is to put a class name only on certain custom eleme
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:host( <compound-selector> )
+```
 
 ## Examples
 

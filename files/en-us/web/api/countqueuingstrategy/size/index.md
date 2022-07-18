@@ -1,6 +1,7 @@
 ---
 title: CountQueuingStrategy.size()
 slug: Web/API/CountQueuingStrategy/size
+page-type: web-api-instance-method
 tags:
   - API
   - CountQueuingStrategy
@@ -39,10 +40,10 @@ const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 const writableStream = new WritableStream({
   // Implement the sink
   write(chunk) {
-    ...
+    // …
   },
   close() {
-    ...
+    // …
   },
   abort(err) {
     console.log("Sink error:", err);

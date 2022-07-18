@@ -24,15 +24,15 @@ The `byteLength` property is an accessor property whose set accessor function is
 ### Using the byteLength property
 
 ```js
-var buffer = new ArrayBuffer(8);
+const buffer = new ArrayBuffer(8);
 
-var uint8 = new Uint8Array(buffer);
+const uint8 = new Uint8Array(buffer);
 uint8.byteLength; // 8 (matches the byteLength of the buffer)
 
-var uint8 = new Uint8Array(buffer, 1, 5);
+const uint8 = new Uint8Array(buffer, 1, 5);
 uint8.byteLength; // 5 (as specified when constructing the Uint8Array)
 
-var uint8 = new Uint8Array(buffer, 2);
+const uint8 = new Uint8Array(buffer, 2);
 uint8.byteLength; // 6 (due to the offset of the constructed Uint8Array)
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: SVGFEMorphologyElement
 slug: Web/API/SVGFEMorphologyElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

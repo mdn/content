@@ -62,7 +62,7 @@ tags:
 ### Networking
 
 - When a error has happened during an asynchronous {{domxref("XMLHttpRequest")}}, the {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} method now returns an empty string ({{bug(1286744)}}).
-- Instead of returning a `NetworkError`, asynchronous {{domxref("XMLHttpRequest")}} that fails for CORS or other network constraints now raises an {{event("error")}} that can be caught like any other error ({{bug(709991)}}).
+- Instead of returning a `NetworkError`, asynchronous {{domxref("XMLHttpRequest")}} that fails for CORS or other network constraints now raises an {{domxref("XMLHttpRequest/error_event", "error")}} that can be caught like any other error ({{bug(709991)}}).
 - {{domxref("XMLHttpRequest.getResponseHeader()")}} and {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} now also return empty headers by default. This can be controlled via the preference `network.http.keep_empty_response_headers_as_empty_string` ({{bug(918721)}}).
 - The `only-if-cached` option has been added to [`Request.cache`](/en-US/docs/Web/API/Request/cache) ({{bug(1272436)}}).
 
@@ -90,7 +90,7 @@ tags:
 
 ### IndexedDB
 
-- A {{event("close")}} event is now sent to the {{domxref("IDBDatabase")}} object when the corresponding database is unexpectedly closed ({{bug(1151017)}}).
+- A {{domxref("IDBDatabase/close_event", "close")}} event is now sent to the {{domxref("IDBDatabase")}} object when the corresponding database is unexpectedly closed ({{bug(1151017)}}).
 
 ### Service Workers
 
@@ -103,7 +103,7 @@ tags:
 
 ### WebRTC
 
-- Adding a track to a {{domxref("MediaStream")}} now generates the {{event("addtrack")}} event as described in the specification. The event is of type {{domxref("MediaStreamTrackEvent")}} and is fired on the stream to which the track was added. You can use either {{domxref("EventTarget.addEventListener", "MediaStream.addEventListener('addtrack', ...)")}} or the `onaddtrack` property to handle `"addtrack"` events.
+- Adding a track to a {{domxref("MediaStream")}} now generates the {{domxref("MediaStream/addtrack_event", "addtrack")}} event as described in the specification. The event is of type {{domxref("MediaStreamTrackEvent")}} and is fired on the stream to which the track was added. You can use either {{domxref("EventTarget.addEventListener", "MediaStream.addEventListener('addtrack', ...)")}} or the `onaddtrack` property to handle `"addtrack"` events.
 - The {{domxref("MediaStreamTrack")}} interface now supports the {{domxref("MediaStreamTrack.ended_event", "ended")}} event and its event handler.
 - Firefox now supports the {{domxref("MediaStreamTrack.readyState")}} property, which indicates whether the track is live or permanently ended.
 - The {{domxref("MediaStreamTrack")}} methods {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}} and {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} have been implemented; these let you get the most recently applied set of customized property constraints and the actual values of all of the track's constrainable properties, respectively. The accompanying data types have been documented as well.

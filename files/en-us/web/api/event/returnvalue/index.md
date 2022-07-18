@@ -1,6 +1,7 @@
 ---
 title: Event.returnValue
 slug: Web/API/Event/returnValue
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference

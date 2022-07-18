@@ -1,6 +1,7 @@
 ---
 title: GamepadPose.hasOrientation
 slug: Web/API/GamepadPose/hasOrientation
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental

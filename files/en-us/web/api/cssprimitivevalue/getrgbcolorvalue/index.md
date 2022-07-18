@@ -1,6 +1,7 @@
 ---
 title: CSSPrimitiveValue.getRGBColorValue()
 slug: Web/API/CSSPrimitiveValue/getRGBColorValue
+page-type: web-api-instance-method
 tags:
   - API
   - CSSPrimitiveValue

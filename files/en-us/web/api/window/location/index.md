@@ -1,6 +1,7 @@
 ---
 title: Window.location
 slug: Web/API/Window/location
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -17,7 +18,7 @@ The **`Window.location`** read-only property returns a
 document.
 
 Though `Window.location` is a _read-only_ `Location`
-object, you can also assign a {{domxref("DOMString")}} to it. This means that you can
+object, you can also assign a string to it. This means that you can
 work with `location` as if it were a string in most cases:
 `location = 'http://www.example.com'` is a synonym of
 `location.href = 'http://www.example.com'`.
@@ -42,8 +43,7 @@ Whenever a new value is assigned to the location object, a document will be load
 using the URL as if `location.assign()` had been called with the modified
 URL.
 
-Note that [navigation-related
-sandbox flags](https://html.spec.whatwg.org/multipage/browsers.html#allowed-to-navigate) may result in an exception being thrown and the navigation failing.
+Note that [navigation-related sandbox flags](https://html.spec.whatwg.org/multipage/browsers.html#allowed-to-navigate) may result in an exception being thrown and the navigation failing.
 
 ```js
 location.assign("http://www.mozilla.org"); // or
@@ -63,8 +63,7 @@ insert the value of `location.pathname` into the hash:
 
 ```js
 function reloadPageWithHash() {
-  var initialPage = location.pathname;
-  location.replace('http://example.com/#' + initialPage);
+  location.replace(`http://example.com/#${location.pathname}`);
 }
 ```
 
@@ -72,8 +71,8 @@ function reloadPageWithHash() {
 
 ```js
 function showLoc() {
-  var oLocation = location, aLog = ["Property (Typeof): Value", "location (" + (typeof oLocation) + "): " + oLocation ];
-  for (var sProp in oLocation){
+  const oLocation = location, aLog = ["Property (Typeof): Value", "location (" + (typeof oLocation) + "): " + oLocation ];
+  for (let sProp in oLocation){
   aLog.push(sProp + " (" + (typeof oLocation[sProp]) + "): " + (oLocation[sProp] || "n/a"));
   }
   alert(aLog.join("\n"));
@@ -155,15 +154,22 @@ span.intLink {
 …the same thing but with an animated page scroll:
 
 ```js
-var showBookmark = (function () {
-  var  _useHash, _scrollX, _scrollY, _nodeX, _nodeY, _itFrame, _scrollId = -1, _bookMark,
+const showBookmark = (function () {
+  let _useHash;
+  let _scrollX;
+  let _scrollY;
+  let _nodeX;
+  let _nodeY;
+  let _itFrame;
+  let _scrollId = -1;
+  let _bookMark;
    /*
    * nDuration: the duration in milliseconds of each frame
    * nFrames: number of frames for each scroll
    */
    nDuration = 200, nFrames = 10;
 
-  function _next () {
+  function _next() {
   if (_itFrame > nFrames) { clearInterval(_scrollId); _scrollId = -1; return; }
   _isBot = true;
   document.documentElement.scrollTop = Math.round(_scrollY + (_nodeY - _scrollY) * _itFrame / nFrames);
@@ -181,7 +187,7 @@ var showBookmark = (function () {
   else if (window.attachEvent) { window.attachEvent("onscroll", _chkOwner); }
 
   return function (sBookmark, bUseHash) {
-    var oNode = document.querySelector(sBookmark);
+    const oNode = document.querySelector(sBookmark);
   _scrollY = document.documentElement.scrollTop;
   _scrollX = document.documentElement.scrollLeft;
   _bookMark = sBookmark;
@@ -208,4 +214,4 @@ var showBookmark = (function () {
 - A similar information, but attached to the document,
   {{domxref("Document.location")}}.
 - [Manipulating the browser history](/en-US/docs/Web/API/History_API)
-- {{event("hashchange")}}
+- {{domxref("Window/hashchange_event", "hashchange")}}

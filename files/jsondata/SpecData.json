@@ -29,6 +29,11 @@
     "url": "https://www.w3.org/TR/wai-aria-1.2/",
     "status": "CR"
   },
+  "ARIA Authoring Practices": {
+    "name": "WAI-ARIA Authoring Practices",
+    "url": "https://w3c.github.io/aria-practices/",
+    "status": "Living"
+  },
   "ARIA Authoring Practices 1.1": {
     "name": "WAI-ARIA Authoring Practices 1.1",
     "url": "https://www.w3.org/TR/wai-aria-practices-1.1/",
@@ -699,6 +704,11 @@
     "url": "https://w3c.github.io/deviceorientation/",
     "status": "ED"
   },
+  "Digest Headers": {
+    "name": "Digest Headers",
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-headers-05",
+    "status": "Draft"
+  },
   "DOM Parsing": {
     "name": "DOM Parsing and Serialization",
     "url": "https://w3c.github.io/DOM-Parsing/",
@@ -842,6 +852,11 @@
   "EyeDropper": {
     "name": "EyeDropper",
     "url": "https://wicg.github.io/eyedropper-api/",
+    "status": "Draft"
+  },
+  "Expect-CT": {
+    "name": "Expect-CT Extension for HTTP",
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-expect-ct-08",
     "status": "Draft"
   },
   "Feature Policy": {
@@ -1078,6 +1093,11 @@
     "name": "Legacy RegExp features in JavaScript",
     "url": "https://github.com/tc39/proposal-regexp-legacy-features/",
     "status": "Draft"
+  },
+  "Linked Data Platform": {
+    "name": "Linked Data Platform",
+    "url": "https://www.w3.org/TR/ldp/",
+    "status": "REC"
   },
   "Local Font Access API": {
     "name": "Local Font Access API",
@@ -1508,6 +1528,11 @@
     "name": "Accelerated Shape Detection in Images",
     "url": "https://wicg.github.io/shape-detection-api/",
     "status": "Draft"
+  },
+  "Source Map": {
+    "name": "Source Map",
+    "url": "https://sourcemaps.info/spec.html",
+    "status": "Standard"
   },
   "Static Range": {
     "name": "Static Range",

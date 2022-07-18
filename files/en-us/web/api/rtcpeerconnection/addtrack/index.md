@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.addTrack()
 slug: Web/API/RTCPeerConnection/addTrack
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -93,7 +94,7 @@ each track from the stream to the peer connection, without specifying a stream f
 track:
 
 ```js
-async openCall(pc) {
+async function openCall(pc) {
   const gumStream = await navigator.mediaDevices.getUserMedia(
                           {video: true, audio: true});
   for (const track of gumStream.getTracks()) {
@@ -155,7 +156,7 @@ device's camera and microphone input over an {{domxref("RTCPeerConnection")}} to
 remote peer:
 
 ```js
-async openCall(pc) {
+async function openCall(pc) {
   const gumStream = await navigator.mediaDevices.getUserMedia(
                           {video: true, audio: true});
   for (const track of gumStream.getTracks()) {
@@ -167,7 +168,7 @@ async openCall(pc) {
 The remote peer might then use a {{DOMxRef("RTCPeerConnection/track_event", "track")}} event handler that looks like this:
 
 ```js
-pc.ontrack = ({streams: [stream]} => videoElem.srcObject = stream;
+pc.ontrack = ({streams: [stream]}) => videoElem.srcObject = stream;
 ```
 
 This sets the video element's current stream to the one that contains the track that's
@@ -229,8 +230,7 @@ creating a new sender results in these changes:
 
 ## Examples
 
-This example is drawn from the code presented in the article [Signaling and video
-calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) and its corresponding sample code. It comes from the
+This example is drawn from the code presented in the article [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) and its corresponding sample code. It comes from the
 `handleVideoOfferMsg()` method there, which is called when an offer message
 is received from the remote peer.
 
@@ -279,6 +279,5 @@ returned by {{domxref("MediaStream.getTracks()")}} and passing them to
 ## See also
 
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
-- [Introduction to the Real-time
-  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - {{DOMxRef("RTCPeerConnection/track_event", "track")}}

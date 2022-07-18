@@ -9,7 +9,7 @@ tags:
   - Reporting
   - Security
   - report-to
-browser-compat: http.headers.csp.Content-Security-Policy.report-to
+browser-compat: http.headers.Content-Security-Policy.report-to
 ---
 {{HTTPSidebar}}
 
@@ -75,6 +75,12 @@ Report-To: { "group": "endpoint-1",
                 { "url": "https://example.com/reports" },
                 { "url": "https://backup.com/reports" }
               ] }
+
+Content-Security-Policy: ...; report-to endpoint-1
+```
+
+```
+Reporting-Endpoints: endpoint-1="https://example.com/reports"
 
 Content-Security-Policy: ...; report-to endpoint-1
 ```

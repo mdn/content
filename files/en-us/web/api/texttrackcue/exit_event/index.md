@@ -1,6 +1,7 @@
 ---
 title: 'TextTrackCue: exit event'
 slug: Web/API/TextTrackCue/exit_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -34,7 +35,7 @@ In the following example, `cue1` prints to the console when it stops being displ
 ```js
 cue1.addEventListener('enter', event => {
   console.log('Cue 1 has left the building.');
-}
+});
 ```
 
 ## Specifications

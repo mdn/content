@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.deleteSync()
 slug: Web/API/WebGL2RenderingContext/deleteSync
+page-type: web-api-instance-method
 tags:
   - API
   - Method

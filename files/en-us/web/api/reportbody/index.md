@@ -1,14 +1,16 @@
 ---
 title: ReportBody
 slug: Web/API/ReportBody
+page-type: web-api-interface
 tags:
   - API
   - Interface
   - Reference
+  - Experimental
   - ReportBody
-browser-compat: api.ReportBody
+spec-urls: https://w3c.github.io/reporting/#reportbody
 ---
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`ReportBody`** interface of the {{domxref('Reporting API','','',' ')}} represents the body of a report. Individual report types inherit from this interface, adding specific attributes relevant to the particular report.
 
@@ -22,7 +24,7 @@ An instance of `ReportBody` is returned as the value of {{domxref("Report.body")
 
 ## Methods
 
-- {{domxref("ReportBody.toJSON()")}}
+- {{domxref("ReportBody.toJSON()")}} {{experimental_inline}}
   - : A _serializer_ which returns a JSON representation of the `ReportBody` object.
 
 ## Examples
@@ -47,4 +49,4 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 ## Browser compatibility
 
-{{Compat}}
+This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).

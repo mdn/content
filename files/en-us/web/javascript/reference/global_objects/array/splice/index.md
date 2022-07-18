@@ -39,7 +39,7 @@ splice(start, deleteCount, item1, item2, itemN)
 
     If negative, it will begin that many elements from the end of the array.
     (In this case, the origin `-1`, meaning `-n` is the index of the `n`th last element, and is therefore equivalent to the index of `array.length - n`.)
-    If `start` is `negative infinity`, it will begin from index `0`.
+    If `start` is `-Infinity`, it will begin from index `0`.
 
 - `deleteCount` {{optional_inline}}
 

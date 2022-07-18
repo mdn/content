@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.uniform[1234][fi][v]()
 slug: Web/API/WebGLRenderingContext/uniform
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -48,7 +49,7 @@ uniform4iv(location, value)
 
 ### Parameters
 
-- location
+- `location`
   - : A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform
     attribute to modify.
 - `value, v0, v1, v2, v3`

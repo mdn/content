@@ -1,6 +1,7 @@
 ---
 title: 'FontFaceSet: loading event'
 slug: Web/API/FontFaceSet/loading_event
+page-type: web-api-event
 tags:
   - API
   - Property
@@ -25,7 +26,7 @@ onloading = event => { };
 
 ## Example
 
-In the following example, when the font `Ephesis` starts to load, "Font is loading..." is printed to the console.
+In the following example, when the font `Ephesis` starts to load, "Font is loading…" is printed to the console.
 
 ```js
 document.fonts.onloading = () => {

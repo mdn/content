@@ -1,15 +1,14 @@
 ---
 title: Report.body
 slug: Web/API/Report/body
+page-type: web-api-instance-property
 tags:
   - API
-  - BODY
   - Experimental
   - Property
   - Reference
-  - Report
   - Reporting API
-browser-compat: api.Report.body
+spec-urls: https://w3c.github.io/reporting/#dom-report-body
 ---
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
@@ -48,7 +47,7 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 ## Browser compatibility
 
-{{Compat}}
+This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
 
 ## See also
 

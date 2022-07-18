@@ -1,6 +1,7 @@
 ---
 title: CSSGroupingRule.insertRule()
 slug: Web/API/CSSGroupingRule/insertRule
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM
@@ -23,9 +24,9 @@ insertRule(rule, index)
 
 ### Parameters
 
-- rule
+- `rule`
   - : A string
-- index{{optional_inline}}
+- `index` {{optional_inline}}
   - : An optional index at which to insert the rule; defaults to 0.
 
 ### Return value

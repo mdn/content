@@ -1,6 +1,7 @@
 ---
 title: DynamicsCompressorNode.release
 slug: Web/API/DynamicsCompressorNode/release
+page-type: web-api-instance-property
 tags:
   - API
   - DynamicsCompressorNode

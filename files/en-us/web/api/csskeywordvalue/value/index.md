@@ -1,6 +1,7 @@
 ---
 title: CSSKeywordValue.value
 slug: Web/API/CSSKeywordValue/value
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -20,7 +21,7 @@ The **`value`** property of the
 
 ## Value
 
-A {{domxref('USVString')}}.
+A string.
 
 ### Exceptions
 

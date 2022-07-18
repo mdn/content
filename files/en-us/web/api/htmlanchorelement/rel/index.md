@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.rel
 slug: Web/API/HTMLAnchorElement/rel
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

@@ -1,6 +1,7 @@
 ---
 title: 'Element: gesturestart event'
 slug: Web/API/Element/gesturestart_event
+page-type: web-api-event
 tags:
   - Event
   - Non-standard
@@ -9,7 +10,7 @@ browser-compat: api.Element.gesturestart_event
 ---
 {{APIRef}}{{Non-standard_header}}
 
-The **`gesturestart`** event is fired when multiple fingers contact the touch surface, thus starting a new gesture. During the gesture, {{event("gesturechange")}} events will be fired. When the gesture has ended, a {{event("gestureend")}} event will be fired.
+The **`gesturestart`** event is fired when multiple fingers contact the touch surface, thus starting a new gesture. During the gesture, {{domxref("Element/gesturechange_event", "gesturechange")}} events will be fired. When the gesture has ended, a {{domxref("Element/gestureend_event", "gestureend")}} event will be fired.
 
 It is a proprietary event specific to WebKit.
 

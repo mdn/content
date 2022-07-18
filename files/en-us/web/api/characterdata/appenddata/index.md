@@ -1,6 +1,7 @@
 ---
 title: CharacterData.appendData()
 slug: Web/API/CharacterData/appendData
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference

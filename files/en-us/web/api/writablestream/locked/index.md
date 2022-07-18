@@ -1,6 +1,7 @@
 ---
 title: WritableStream.locked
 slug: Web/API/WritableStream/locked
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -23,17 +24,17 @@ A boolean value indicating whether or not the writable stream is locked.
 ```js
 const writableStream = new WritableStream({
   write(chunk) {
-    ...
+    // ...
   },
   close() {
-    ...
+    // ...
   },
   abort(err) {
-    ...
+    // ...
   }
 }, queuingStrategy);
 
-...
+// ...
 
 const writer = writableStream.getWriter();
 

@@ -1,6 +1,7 @@
 ---
 title: Color masking
 slug: Web/API/WebGL_API/By_example/Color_masking
+page-type: guide
 tags:
   - Beginner
   - Example
@@ -74,8 +75,8 @@ window.addEventListener("load", function setupAnimation (evt) {
   "use strict"
   window.removeEventListener(evt.type, setupAnimation, false);
 
-  var canvas = document.querySelector("canvas");
-  var gl = canvas.getContext("webgl")
+  const canvas = document.querySelector("canvas");
+  const gl = canvas.getContext("webgl")
       || canvas.getContext("experimental-webgl");
   if (!gl) {
     document.querySelector("p").textContent =
@@ -85,18 +86,18 @@ window.addEventListener("load", function setupAnimation (evt) {
   gl.viewport(0, 0,
     gl.drawingBufferWidth, gl.drawingBufferHeight);
 
-  var timer = setInterval(drawAnimation, 1000);
+  const timer = setInterval(drawAnimation, 1000);
 
-  var mask = [true, true, true];
-  var redtoggle = document.querySelector("#red-toggle"),
-    greentoggle = document.querySelector("#green-toggle"),
-    bluetoggle = document.querySelector("#blue-toggle");
+  const mask = [true, true, true];
+  const redtoggle = document.querySelector("#red-toggle");
+  const greentoggle = document.querySelector("#green-toggle");
+  const bluetoggle = document.querySelector("#blue-toggle");
   redtoggle.addEventListener("click", setColorMask, false);
   greentoggle.addEventListener("click", setColorMask, false);
   bluetoggle.addEventListener("click", setColorMask, false);
 
   function setColorMask(evt) {
-    var index =
+    const index =
       evt.target === greentoggle && 1
       || evt.target === bluetoggle && 2
       || 0;
@@ -110,7 +111,7 @@ window.addEventListener("load", function setupAnimation (evt) {
   };
 
   function drawAnimation () {
-    var color = getRandomColor();
+    const color = getRandomColor();
     gl.clearColor(color[0], color[1], color[2], 1.0);
     gl.clear(gl.COLOR_BUFFER_BIT);
   }

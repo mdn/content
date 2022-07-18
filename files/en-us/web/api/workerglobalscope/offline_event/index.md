@@ -1,6 +1,7 @@
 ---
 title: 'WorkerGlobalScope: offline event'
 slug: Web/API/WorkerGlobalScope/offline_event
+page-type: web-api-instance-event
 tags:
   - API
   - Event
@@ -43,7 +44,7 @@ The same snippet, but using `addEventListener()`:
 ```js
 self.addEventListener('offline', function() {
   console.log('Your worker is now offline');
-}
+});
 ```
 
 ## Specifications

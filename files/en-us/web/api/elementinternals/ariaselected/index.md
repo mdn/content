@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaSelected
 slug: Web/API/ElementInternals/ariaSelected
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -46,4 +47,4 @@ this.internals_.ariaSelected = "true";
 
 ## See also
 
-- [ARIA: tab role](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role)
+- [ARIA: tab role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)

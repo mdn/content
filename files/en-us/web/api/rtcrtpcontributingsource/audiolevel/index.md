@@ -1,6 +1,7 @@
 ---
 title: RTCRtpContributingSource.audioLevel
 slug: Web/API/RTCRtpContributingSource/audioLevel
+page-type: web-api-instance-property
 tags:
   - API
   - Media

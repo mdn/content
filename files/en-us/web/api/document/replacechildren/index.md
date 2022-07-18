@@ -1,6 +1,7 @@
 ---
 title: Document.replaceChildren()
 slug: Web/API/Document/replaceChildren
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -21,7 +22,7 @@ existing children of a `Document` with a specified new set of children.
 ```js
 replaceChildren(param1)
 replaceChildren(param1, param2)
-replaceChildren(param1, param2, /* ... ,*/ paramN)
+replaceChildren(param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parameters

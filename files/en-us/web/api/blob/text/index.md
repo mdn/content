@@ -1,6 +1,7 @@
 ---
 title: Blob.text()
 slug: Web/API/Blob/text
+page-type: web-api-instance-method
 tags:
   - API
   - Blob

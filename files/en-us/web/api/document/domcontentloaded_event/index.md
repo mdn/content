@@ -1,6 +1,7 @@
 ---
 title: 'Document: DOMContentLoaded event'
 slug: Web/API/Document/DOMContentLoaded_event
+page-type: web-api-event
 tags:
   - API
   - DOMContentLoaded

@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.getModifierState()
 slug: Web/API/MouseEvent/getModifierState
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -20,14 +21,14 @@ See {{domxref("KeyboardEvent.getModifierState","KeyboardEvent.getModifierState()
 ## Syntax
 
 ```js
-getModifierState(keyArg)
+getModifierState(key)
 ```
 
 ### Parameters
 
-- _`keyArg`_
+- `key`
   - : A modifier key value.
-    The value must be one of the {{domxref("KeyboardEvent.key")}} values which represent modifier keys or `"Accel"`{{deprecated_inline}}.
+    The value must be one of the {{domxref("KeyboardEvent.key")}} values which represent modifier keys or `"Accel"` {{deprecated_inline}}.
     This is case-sensitive.
 
 ### Return value

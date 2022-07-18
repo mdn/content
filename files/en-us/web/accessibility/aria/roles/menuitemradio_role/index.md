@@ -8,8 +8,10 @@ tags:
   - Reference
   - ARIA roles
   - menuitemradio
+spec-urls:
+  - https://w3c.github.io/aria/#menuitemradio
+  - https://w3c.github.io/aria-practices/#menu
 ---
-
 A `menuitemradio` is checkable menuitem in a set of elements with the same role, only one of which can be checked at a time.
 
 ## Description
@@ -22,7 +24,7 @@ The three menu item elements can only be contained in, or owned by, an element w
 
 When all items in a submenu are members of the same radio group, the `group` is defined by the menu element; the `group` element is not necessary.
 
-Menu items containing the role of `menuitemradio` must include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute to expose the radio button's state to assistive technology, unless using [`<input type="radio">`](/en-US/docs/Web/HTML/Element/Input/checkbox), in which case the ['checked'](/en-US/docs/Web/HTML/Element/Input/checkbox#attr-checked) attribute should be used.
+Menu items containing the role of `menuitemradio` must include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute to expose the radio button's state to assistive technology, unless using [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/checkbox), in which case the ['checked'](/en-US/docs/Web/HTML/Element/input/checkbox#attr-checked) attribute should be used.
 
 Similar to the 'checked' attribute of {{HTMLElement('input')}}s of type `radio`, the `aria-checked` attribute of a `menuitemradio` indicates whether the menu item is checked (`true`), unchecked (`false`). If missing, the value defaults to `false`. There is no `mixed` value like there is for `menuitemcheckbox`.
 
@@ -113,7 +115,7 @@ If the `menuitemradio` is in a submenu in a `menubar` or a menu opened with a me
 <li role="menuitemradio" tabindex="-1" aria-checked="false">Purple</li>
 ```
 
-The [`tabindex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) makes the `menuitemradio` focusable but not part of the page tab sequence. Had we included `aria-checked="true"` it would have indicated that the `menuitemradio` was checked, and we would have visually styled the selected state to look checked using the attribute selector `[role='menuitemradio'][aria-checked='true']`. Instead, the presence of `aria-checked="false indicates to assistive technologies that the`menuitemradio` is checkable but not currently checked. The accessible name "purple" comes from the contents.
+The [`tabindex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) makes the `menuitemradio` focusable but not part of the page tab sequence. Had we included `aria-checked="true"` it would have indicated that the `menuitemradio` was checked, and we would have visually styled the selected state to look checked using the attribute selector `[role='menuitemradio'][aria-checked='true']`. Instead, the presence of `aria-checked="false"` indicates to assistive technologies that the `menuitemradio` is checkable but not currently checked. The accessible name "purple" comes from the contents.
 
 The visual appearance of the selected state is a checked radio button which we can create using [generated content](/en-US/docs/Web/CSS/CSS_Generated_Content), making it visible and the same color as the content by synchronizing with the `aria-checked` value using CSS [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) and changing the [`background-color`](/en-US/docs/Web/CSS/background-color).
 
@@ -143,16 +145,13 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#menuitemradio","ARIA: menuitemradio role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#menu","Menu or Menu bar")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 
 - [`menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
 - [`radio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
-- [`<input type="radio">`](/en-US/docs/Web/HTML/Element/Input/radio)
+- [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)
 
 <section id="Quick_links">
 

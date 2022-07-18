@@ -1,6 +1,7 @@
 ---
 title: XRJointPose.radius
 slug: Web/API/XRJointPose/radius
+page-type: web-api-instance-property
 tags:
   - API
   - Controller

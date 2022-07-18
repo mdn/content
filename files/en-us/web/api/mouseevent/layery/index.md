@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.layerY
 slug: Web/API/MouseEvent/layerY
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -34,8 +35,8 @@ An integer value in pixels for the y-coordinate of the mouse
 <script type="text/javascript">
 
 function showCoords(evt){
-  var form = document.forms.form_coords;
-  var parent_id = evt.target.parentNode.id;
+  const form = document.forms.form_coords;
+  const parent_id = evt.target.parentNode.id;
   form.parentId.value = parent_id;
   form.pageXCoords.value = evt.pageX;
   form.pageYCoords.value = evt.pageY;

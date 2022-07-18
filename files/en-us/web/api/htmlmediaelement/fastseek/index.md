@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.fastSeek()
 slug: Web/API/HTMLMediaElement/fastSeek
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -27,7 +28,7 @@ fastSeek(time)
 
 ### Parameters
 
-- time
+- `time`
   - : A double.
 
 ### Return value

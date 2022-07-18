@@ -1,6 +1,7 @@
 ---
 title: RTCIceTransport.getSelectedCandidatePair()
 slug: Web/API/RTCIceTransport/getSelectedCandidatePair
+page-type: web-api-instance-method
 tags:
   - API
   - Candidates

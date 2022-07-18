@@ -1,6 +1,7 @@
 ---
 title: FetchEvent.preloadResponse
 slug: Web/API/FetchEvent/preloadResponse
+page-type: web-api-instance-property
 tags:
   - API
   - FetchEvent

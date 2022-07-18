@@ -1,6 +1,7 @@
 ---
 title: 'TextTrackCue: enter event'
 slug: Web/API/TextTrackCue/enter_event
+page-type: web-api-event
 tags:
   - API
   - Event

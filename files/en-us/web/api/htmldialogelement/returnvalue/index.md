@@ -1,6 +1,7 @@
 ---
 title: HTMLDialogElement.returnValue
 slug: Web/API/HTMLDialogElement/returnValue
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -55,8 +56,8 @@ dialog.
 
   <script>
     (function() {
-      var updateButton = document.getElementById('updateDetails');
-      var dialog = document.getElementById('favDialog');
+      const updateButton = document.getElementById('updateDetails');
+      const dialog = document.getElementById('favDialog');
       dialog.returnValue = 'favAnimal';
 
       function openCheck(dialog) {
@@ -86,8 +87,7 @@ dialog.
 ```
 
 > **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html)
-> ([see it live
-> also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
+> ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
 ## Specifications
 

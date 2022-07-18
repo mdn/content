@@ -1,6 +1,7 @@
 ---
 title: BeforeUnloadEvent
 slug: Web/API/BeforeUnloadEvent
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -52,7 +53,7 @@ WebKit-derived browsers don't follow the spec for the dialog box. An almost-cros
 
 ```js
 window.addEventListener("beforeunload", function (e) {
-  var confirmationMessage = "\o/";
+  const confirmationMessage = "\o/";
 
   (e || window.event).returnValue = confirmationMessage;     // Gecko + IE
   return confirmationMessage;                                /* Safari, Chrome, and other
@@ -71,8 +72,8 @@ window.addEventListener("beforeunload", function (e) {
 ## See also
 
 - {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}
-- {{Event("readystatechange")}}
-- {{Event("load")}}
-- {{Event("beforeunload")}}
-- {{Event("unload")}}
+- {{domxref("Document/readystatechange_event", "readystatechange")}}
+- {{domxref("Window/load_event", "load")}}
+- {{domxref("Window/beforeunload_event", "beforeunload")}}
+- {{domxref("Window/unload_event", "unload")}}
 - [Unloading Documents — Prompt to unload a document](https://html.spec.whatwg.org/#prompt-to-unload-a-document)

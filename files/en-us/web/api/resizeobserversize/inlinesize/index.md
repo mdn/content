@@ -1,6 +1,7 @@
 ---
 title: ResizeObserverSize.inlineSize
 slug: Web/API/ResizeObserverSize/inlineSize
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -32,7 +32,7 @@ For further examples, see [The native form widgets: Drop-down content](/en-US/do
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - {{htmlattrdef("autocomplete")}}
-  - : A {{domxref("DOMString")}} providing a hint for a {{Glossary("user agent", "user agent's")}} autocomplete feature. See [The HTML autocomplete attribute](/en-US/docs/Web/HTML/Attributes/autocomplete) for a complete list of values and details on how to use autocomplete.
+  - : A string providing a hint for a {{Glossary("user agent", "user agent's")}} autocomplete feature. See [The HTML autocomplete attribute](/en-US/docs/Web/HTML/Attributes/autocomplete) for a complete list of values and details on how to use autocomplete.
 - {{htmlattrdef("autofocus")}}
   - : This Boolean attribute lets you specify that a form control should have input focus when the page loads. Only one form element in a document can have the `autofocus` attribute.
 - {{htmlattrdef("disabled")}}

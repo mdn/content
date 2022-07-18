@@ -88,7 +88,7 @@ Also note that unwrapping is transitive: when you use `wrappedJSObject`, any pro
 XPCNativeWrapper(window.wrappedJSObject.foo);
 ```
 
-See the document on [Xray vision](/en-US/docs/Mozilla/Tech/Xray_vision) for much more detail on this.
+See the document on [Xray vision](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html) for much more detail on this.
 
 ## Sharing content script objects with page scripts
 
@@ -175,7 +175,7 @@ the cloneInto call must include
 the `cloneFunctions` option.
 */
 let messenger = {
-  notify: function(message) {
+  notify(message) {
     browser.runtime.sendMessage({
       content: "Object method call: " + message
     });

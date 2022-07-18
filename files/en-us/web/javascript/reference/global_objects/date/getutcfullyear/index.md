@@ -43,8 +43,8 @@ The following example assigns the four-digit value of the current year to the va
 `year`.
 
 ```js
-var today = new Date();
-var year = today.getUTCFullYear();
+const today = new Date();
+const year = today.getUTCFullYear();
 ```
 
 ## Specifications

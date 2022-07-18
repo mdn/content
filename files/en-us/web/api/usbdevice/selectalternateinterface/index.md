@@ -1,6 +1,7 @@
 ---
 title: USBDevice.selectAlternateInterface()
 slug: Web/API/USBDevice/selectAlternateInterface
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - WebUSB
   - WebUSB API
   - selectAlternateInterface
+  - Experimental
 browser-compat: api.USBDevice.selectAlternateInterface
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
@@ -26,10 +28,10 @@ selectAlternateInterface(interfaceNumber, alternateSetting)
 
 ### Parameters
 
-- interfaceNumber
+- `interfaceNumber`
   - : The index of one of the interfaces supported by the device. Interfaces are
     device-specific.
-- alternateSetting
+- `alternateSetting`
   - : The configuration of the selected interface.
 
 ### Return value

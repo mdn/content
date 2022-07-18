@@ -10,7 +10,7 @@ tags:
   - Input Types
   - Reference
   - hidden
-browser-compat: html.elements.input.input-hidden
+browser-compat: html.elements.input.type_hidden
 ---
 
 {{HTMLRef}}
@@ -22,7 +22,7 @@ browser-compat: html.elements.input.input-hidden
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing the value of the hidden
+        A string representing the value of the hidden
         data you want to pass back to the server.
       </td>
     </tr>
@@ -53,7 +53,7 @@ browser-compat: html.elements.input.input-hidden
 
 ## Value
 
-The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute holds a {{domxref("DOMString")}} that contains the hidden data you want to include when the form is submitted to the server. This specifically can't be edited or seen by the user via the user interface, although you could edit the value via browser developer tools.
+The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute holds a string that contains the hidden data you want to include when the form is submitted to the server. This specifically can't be edited or seen by the user via the user interface, although you could edit the value via browser developer tools.
 
 > **Warning:** While the value isn't displayed to the user in the page's content, it is visible—and can be edited—using any browser's developer tools or "View Source" functionality. Do not rely on `hidden` inputs as a form of security.
 

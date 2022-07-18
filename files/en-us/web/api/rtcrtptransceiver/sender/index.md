@@ -1,6 +1,7 @@
 ---
 title: RTCRtpTransceiver.sender
 slug: Web/API/RTCRtpTransceiver/sender
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -35,6 +36,5 @@ matches the current value of {{domxref("RTCRtpTransceiver.mid", "mid")}}.
 
 ## See also
 
-- [Introduction to the Real-time
-  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - {{domxref("RTCRtpSender")}}

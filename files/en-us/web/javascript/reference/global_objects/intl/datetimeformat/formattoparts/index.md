@@ -92,9 +92,9 @@ Possible types are the following:
 manipulated directly:
 
 ```js
-var date = Date.UTC(2012, 11, 17, 3, 0, 42);
+const date = Date.UTC(2012, 11, 17, 3, 0, 42);
 
-var formatter = new Intl.DateTimeFormat('en-us', {
+const formatter = new Intl.DateTimeFormat('en-us', {
   weekday: 'long',
   year: 'numeric',
   month: 'numeric',
@@ -147,22 +147,22 @@ a [switch statement](/en-US/docs/Web/JavaScript/Reference/Statements/switch),
 and {{jsxref("Array.prototype.join()")}}.
 
 ```js
-var dateString = formatter.formatToParts(date).map(({type, value}) => {
+const dateString = formatter.formatToParts(date).map(({type, value}) => {
   switch (type) {
-    case 'dayPeriod': return `<b>${value}</b>`;
+    case 'dayPeriod': return `<em>${value}</em>`;
     default : return value;
   }
 }).join('');
 ```
 
-This will make the day period bold, when using the `formatToParts()` method.
+This will emphasize the day period when using the `formatToParts()` method.
 
 ```js
 console.log(formatter.format(date));
 // "Monday, 12/17/2012, 3:00:42.000 AM"
 
 console.log(dateString);
-// "Monday, 12/17/2012, 3:00:42.000 <b>AM</b>"
+// "Monday, 12/17/2012, 3:00:42.000 <em>AM</em>"
 ```
 
 ### Named Years and Mixed calendars

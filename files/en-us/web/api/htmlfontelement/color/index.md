@@ -1,6 +1,7 @@
 ---
 title: HTMLFontElement.color
 slug: Web/API/HTMLFontElement/color
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

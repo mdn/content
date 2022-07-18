@@ -1,6 +1,7 @@
 ---
 title: SVGSetElement
 slug: Web/API/SVGSetElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

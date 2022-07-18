@@ -1,6 +1,7 @@
 ---
 title: PushSubscription
 slug: Web/API/PushSubscription
+page-type: web-api-interface
 tags:
   - API
   - Experimental

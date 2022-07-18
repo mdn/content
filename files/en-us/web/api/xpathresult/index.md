@@ -1,6 +1,7 @@
 ---
 title: XPathResult
 slug: Web/API/XPathResult
+page-type: web-api-interface
 tags:
   - API
   - DOM XPath API
@@ -18,20 +19,20 @@ Since XPath expressions can result in a variety of result types, this interface 
 
 ## Properties
 
-- {{domxref("XPathResult.booleanValue")}}{{readonlyInline}}
+- {{domxref("XPathResult.booleanValue")}} {{readonlyInline}}
   - : A `boolean` representing the value of the result if `resultType` is `BOOLEAN_TYPE`.
-- {{domxref("XPathResult.invalidIteratorState")}}{{readonlyInline}}
+- {{domxref("XPathResult.invalidIteratorState")}} {{readonlyInline}}
   - : Signifies that the iterator has become invalid. It is `true` if `resultType` is `UNORDERED_NODE_ITERATOR_TYPE` or `ORDERED_NODE_ITERATOR_TYPE` and the document has been modified since this result was returned.
-- {{domxref("XPathResult.numberValue")}}{{readonlyInline}}
+- {{domxref("XPathResult.numberValue")}} {{readonlyInline}}
   - : A `number` representing the value of the result if `resultType` is `NUMBER_TYPE`.
-- {{domxref("XPathResult.resultType")}}{{readonlyInline}}
+- {{domxref("XPathResult.resultType")}} {{readonlyInline}}
   - : A `number` code representing the type of the result, as defined by the type constants.
-- {{domxref("XPathResult.singleNodeValue")}}{{readonlyInline}}
+- {{domxref("XPathResult.singleNodeValue")}} {{readonlyInline}}
   - : A {{domxref("Node")}} representing the value of the single node result, which may be `null`.
-- {{domxref("XPathResult.snapshotLength")}}{{readonlyInline}}
+- {{domxref("XPathResult.snapshotLength")}} {{readonlyInline}}
   - : The number of nodes in the result snapshot.
-- {{domxref("XPathResult.stringValue")}}{{readonlyInline}}
-  - : A {{domxref("DOMString", "string")}} representing the value of the result if `resultType` is `STRING_TYPE`.
+- {{domxref("XPathResult.stringValue")}} {{readonlyInline}}
+  - : A string representing the value of the result if `resultType` is `STRING_TYPE`.
 
 ## Methods
 

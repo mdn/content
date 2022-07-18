@@ -35,9 +35,9 @@ A new iterator object.
 ### Using \[@@iterator]\()
 
 ```js
-var str = 'A\uD835\uDC68';
+const str = 'A\uD835\uDC68';
 
-var strIter = str[Symbol.iterator]();
+const strIter = str[Symbol.iterator]();
 
 console.log(strIter.next().value); // "A"
 console.log(strIter.next().value); // "\uD835\uDC68"
@@ -46,9 +46,9 @@ console.log(strIter.next().value); // "\uD835\uDC68"
 ### Using \[@@iterator]\() with for..of
 
 ```js
-var str = 'A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A';
+const str = 'A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A';
 
-for (var v of str) {
+for (const v of str) {
   console.log(v);
 }
 // "A"

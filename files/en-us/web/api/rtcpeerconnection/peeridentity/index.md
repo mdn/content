@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.peerIdentity
 slug: Web/API/RTCPeerConnection/peerIdentity
+page-type: web-api-instance-property
 tags:
   - API
   - Authentication

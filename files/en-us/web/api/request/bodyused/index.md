@@ -1,6 +1,7 @@
 ---
 title: Request.bodyUsed
 slug: Web/API/Request/bodyUsed
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch

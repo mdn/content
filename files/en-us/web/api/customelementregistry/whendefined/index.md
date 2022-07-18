@@ -1,6 +1,7 @@
 ---
 title: CustomElementRegistry.whenDefined()
 slug: Web/API/CustomElementRegistry/whenDefined
+page-type: web-api-instance-method
 tags:
   - API
   - CustomElementRegistry
@@ -42,11 +43,11 @@ content is ready to display.
 
 ```html
 <nav id="menu-container">
-  <div class="menu-placeholder">Loading...</div>
+  <div class="menu-placeholder">Loading…</div>
   <nav-menu>
     <menu-item>Item 1</menu-item>
     <menu-item>Item 2</menu-item>
-     ...
+     …
     <menu-item>Item N</menu-item>
   </nav-menu>
 </nav>

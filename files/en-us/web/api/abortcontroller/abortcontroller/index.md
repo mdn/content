@@ -1,6 +1,7 @@
 ---
 title: AbortController()
 slug: Web/API/AbortController/AbortController
+page-type: web-api-constructor
 tags:
   - API
   - AbortController
@@ -47,9 +48,9 @@ abortBtn.addEventListener('click', function() {
 });
 
 function fetchVideo() {
-  ...
+  // …
   fetch(url, {signal}).then(function(response) {
-    ...
+    // …
   }).catch(function(e) {
    reports.textContent = 'Download error: ' + e.message;
   })

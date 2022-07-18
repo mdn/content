@@ -1,6 +1,7 @@
 ---
 title: Recording a media element
 slug: Web/API/MediaStream_Recording_API/Recording_a_media_element
+page-type: guide
 tags:
   - API
   - Audio
@@ -164,7 +165,7 @@ function startRecording(stream, lengthInMS) {
 
   recorder.ondataavailable = event => data.push(event.data);
   recorder.start();
-  log(recorder.state + " for " + (lengthInMS/1000) + " seconds...");
+  log(recorder.state + " for " + (lengthInMS/1000) + " seconds…");
 
   let stopped = new Promise((resolve, reject) => {
     recorder.onstop = resolve;
@@ -238,7 +239,7 @@ startButton.addEventListener("click", function() {
   })
   .catch((error) => {
     if (error.name === "NotFoundError") {
-      log("Camera or microphone not found. Can’t record.");
+      log("Camera or microphone not found. Can't record.");
     } else {
       log(error);
     }
@@ -246,7 +247,7 @@ startButton.addEventListener("click", function() {
 }, false);
 ```
 
-When a {{event("click")}} event occurs, here's what happens:
+When a {{domxref("Element/click_event", "click")}} event occurs, here's what happens:
 
 - Lines 2-4
   - : {{domxref("MediaDevices.getUserMedia")}} is called to request a new {{domxref("MediaStream")}} that has both video and audio tracks. This is the stream we'll record.
@@ -267,7 +268,7 @@ When a {{event("click")}} event occurs, here's what happens:
 
 ### Handling the stop button
 
-The last bit of code adds a handler for the {{event("click")}} event on the stop button using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
+The last bit of code adds a handler for the {{domxref("Element/click_event", "click")}} event on the stop button using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
 stopButton.addEventListener("click", function() {

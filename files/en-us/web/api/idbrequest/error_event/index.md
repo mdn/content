@@ -1,6 +1,7 @@
 ---
 title: 'IDBRequest: error event'
 slug: Web/API/IDBRequest/error_event
+page-type: web-api-event
 tags:
   - Error
   - Event
@@ -44,7 +45,7 @@ DBOpenRequest.addEventListener('upgradeneeded', event => {
   };
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
 
   // define what data items the objectStore will contain
   objectStore.createIndex('hours', 'hours', { unique: false });
@@ -83,7 +84,7 @@ DBOpenRequest.onupgradeneeded = event => {
   };
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
 
   // define what data items the objectStore will contain
   objectStore.createIndex('hours', 'hours', { unique: false });

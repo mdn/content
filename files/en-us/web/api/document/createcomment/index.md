@@ -1,6 +1,7 @@
 ---
 title: Document.createComment()
 slug: Web/API/Document/createComment
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -21,12 +22,12 @@ createComment(data)
 
 ### Parameters
 
-- _data_
+- `data`
   - : A string containing the data to be added to the Comment.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A new {{domxref("Comment")}} object.
 
 ## Examples
 

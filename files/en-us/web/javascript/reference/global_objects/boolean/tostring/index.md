@@ -48,8 +48,8 @@ value of the boolean object.
 In the following code, `flag.toString()` returns "`true`":
 
 ```js
-var flag = new Boolean(true);
-var myVar = flag.toString();
+const flag = new Boolean(true);
+const myVar = flag.toString();
 ```
 
 ## Specifications

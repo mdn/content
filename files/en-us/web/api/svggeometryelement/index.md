@@ -1,6 +1,7 @@
 ---
 title: SVGGeometryElement
 slug: Web/API/SVGGeometryElement
+page-type: web-api-interface
 tags:
   - API
   - DOM

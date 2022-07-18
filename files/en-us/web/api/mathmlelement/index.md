@@ -1,6 +1,7 @@
 ---
 title: MathMLElement
 slug: Web/API/MathMLElement
+page-type: web-api-interface
 tags:
   - API
   - Interface

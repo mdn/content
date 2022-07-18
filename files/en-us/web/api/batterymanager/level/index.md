@@ -1,6 +1,7 @@
 ---
 title: BatteryManager.level
 slug: Web/API/BatteryManager/level
+page-type: web-api-instance-property
 tags:
   - API
   - Property

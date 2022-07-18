@@ -1,6 +1,7 @@
 ---
 title: GamepadPose
 slug: Web/API/GamepadPose
+page-type: web-api-interface
 tags:
   - API
   - Experimental

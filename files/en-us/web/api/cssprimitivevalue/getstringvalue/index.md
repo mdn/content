@@ -1,6 +1,7 @@
 ---
 title: CSSPrimitiveValue.getStringValue()
 slug: Web/API/CSSPrimitiveValue/getStringValue
+page-type: web-api-instance-method
 tags:
   - API
   - CSSPrimitiveValue

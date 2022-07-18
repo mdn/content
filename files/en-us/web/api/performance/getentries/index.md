@@ -1,6 +1,7 @@
 ---
 title: performance.getEntries()
 slug: Web/API/Performance/getEntries
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -42,10 +43,10 @@ None.
 
 ```js
 function use_PerformanceEntry_methods() {
-  console.log("PerformanceEntry tests ...");
+  console.log("PerformanceEntry tests…");
 
   if (performance.mark === undefined) {
-    console.log("... performance.mark Not supported");
+    console.error("The property performance.mark is not supported");
     return;
   }
 

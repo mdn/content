@@ -1,6 +1,7 @@
 ---
 title: Using IIR filters
 slug: Web/API/Web_Audio_API/Using_IIR_filters
+page-type: guide
 tags:
   - API
   - Audio
@@ -96,7 +97,8 @@ And the `click` event listener starts like so:
 playButton.addEventListener('click', function() {
     if (this.dataset.playing === 'false') {
         srcNode = playSourceNode(audioCtx, sample);
-        ...
+        // ...
+    }   
 }, false);
 ```
 
@@ -113,7 +115,8 @@ filterButton.addEventListener('click', function() {
     if (this.dataset.filteron === 'false') {
         srcNode.disconnect(audioCtx.destination);
         srcNode.connect(iirfilter).connect(audioCtx.destination);
-        ...
+        // ...
+    }
 }, false);
 ```
 

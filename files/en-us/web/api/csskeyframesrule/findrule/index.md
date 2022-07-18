@@ -1,6 +1,7 @@
 ---
 title: CSSKeyframesRule.findRule()
 slug: Web/API/CSSKeyframesRule/findRule
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM

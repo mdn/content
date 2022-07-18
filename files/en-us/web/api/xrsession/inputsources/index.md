@@ -1,6 +1,7 @@
 ---
 title: XRSession.inputSources
 slug: Web/API/XRSession/inputSources
+page-type: web-api-instance-property
 tags:
   - API
   - AR

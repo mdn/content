@@ -1,6 +1,7 @@
 ---
 title: CSSValueList.item()
 slug: Web/API/CSSValueList/item
+page-type: web-api-instance-method
 tags:
   - API
   - CSSValueList
@@ -35,7 +36,7 @@ item(index)
 
 ### Parameters
 
-- index
+- `index`
   - : An `unsigned long` representing the index of the CSS value within the
     collection.
 

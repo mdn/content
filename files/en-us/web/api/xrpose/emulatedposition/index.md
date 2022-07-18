@@ -1,6 +1,7 @@
 ---
 title: XRPose.emulatedPosition
 slug: Web/API/XRPose/emulatedPosition
+page-type: web-api-instance-property
 tags:
   - API
   - AR

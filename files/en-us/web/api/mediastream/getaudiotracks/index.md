@@ -1,6 +1,7 @@
 ---
 title: MediaStream.getAudioTracks()
 slug: Web/API/MediaStream/getAudioTracks
+page-type: web-api-instance-method
 tags:
   - API
   - Audio

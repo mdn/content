@@ -12,7 +12,7 @@ tags:
 
 Firefox 4 introduced support for animating [SVG](/en-US/docs/Web/SVG) using [Synchronized Multimedia Integration Language](https://www.w3.org/TR/REC-smil/) (SMIL). SMIL allows you to:
 
-- animate the numeric attributes of an element (x, y, ...)
+- animate the numeric attributes of an element (x, y, …)
 - animate transform attributes (translation or rotation)
 - animate color attributes
 - follow a motion path

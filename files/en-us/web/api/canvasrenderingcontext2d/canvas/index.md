@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.canvas
 slug: Web/API/CanvasRenderingContext2D/canvas
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -28,7 +29,7 @@ Given this {{HTMLElement("canvas")}} element:
 <canvas id="canvas"></canvas>
 ```
 
-... you can get a reference to the canvas element within the
+… you can get a reference to the canvas element within the
 `CanvasRenderingContext2D` by using the `canvas` property:
 
 ```js

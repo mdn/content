@@ -1,6 +1,7 @@
 ---
 title: MediaRecorder.isTypeSupported()
 slug: Web/API/MediaRecorder/isTypeSupported
+page-type: web-api-static-method
 tags:
   - API
   - Audio
@@ -43,7 +44,7 @@ specified format.
 ## Examples
 
 ```js
-var types = ["video/webm",
+const types = ["video/webm",
              "audio/webm",
              "video/webm\;codecs=vp8",
              "video/webm\;codecs=daala",
@@ -51,8 +52,8 @@ var types = ["video/webm",
              "audio/webm\;codecs=opus",
              "video/mpeg"];
 
-for (var i in types) {
-  console.log( "Is " + types[i] + " supported? " + (MediaRecorder.isTypeSupported(types[i]) ? "Maybe!" : "Nope :("));
+for (const type of types) {
+  console.log( "Is " + type + " supported? " + (MediaRecorder.isTypeSupported(type) ? "Maybe!" : "Nope :("));
 }
 ```
 
@@ -66,14 +67,10 @@ for (var i in types) {
 
 ## See also
 
-- [MediaStream Recording
-  API](/en-US/docs/Web/API/MediaStream_Recording_API)
-- [Using
-  the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [Guide to media types and formats on the
-  web](/en-US/docs/Web/Media/Formats)
-- [The "codecs" parameter in
-  common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
+- [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)
+- [Using the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
+- [The "codecs" parameter in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
 - {{domxref("MediaStreamTrack")}}
 - {{domxref("MediaStream")}}
 - {{domxref("MediaCapabilities")}}

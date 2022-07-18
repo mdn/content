@@ -1,6 +1,7 @@
 ---
 title: ExtendableMessageEvent
 slug: Web/API/ExtendableMessageEvent
+page-type: web-api-interface
 tags:
   - API
   - Experimental

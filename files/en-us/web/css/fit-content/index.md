@@ -66,8 +66,6 @@ block-size: fit-content
 
 ## Browser compatibility
 
-### Supported for width (and other sizing properties)
-
 {{Compat}}
 
 ## See also

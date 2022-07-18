@@ -1,6 +1,7 @@
 ---
 title: Microsoft API extensions
 slug: Web/API/Microsoft_Extensions
+page-type: landing-page
 tags:
   - API
   - API:Microsoft Extensions
@@ -21,7 +22,7 @@ Microsoft browsers (Internet Explorer, and in a few cases, Microsoft Edge) suppo
 - {{DOMxRef("MSManipulationEvent")}}
 - {{Event("MSManipulationStateChanged")}}
 - {{DOMxRef("Touch.MsManipulationViewsEnabled")}}
-- {{Event("MSPointerHover")}} {{Deprecated_Inline}}
+- `MSPointerHover` {{Deprecated_Inline}}
 
 ## Media APIs
 

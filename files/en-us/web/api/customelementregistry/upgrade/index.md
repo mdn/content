@@ -1,6 +1,7 @@
 ---
 title: CustomElementRegistry.upgrade()
 slug: Web/API/CustomElementRegistry/upgrade
+page-type: web-api-instance-method
 tags:
   - API
   - CustomElementRegistry

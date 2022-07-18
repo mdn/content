@@ -1,6 +1,7 @@
 ---
 title: AudioData.duration
 slug: Web/API/AudioData/duration
+page-type: web-api-instance-property
 tags:
   - API
   - Property

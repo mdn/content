@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTService.device
 slug: Web/API/BluetoothRemoteGATTService/device
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth

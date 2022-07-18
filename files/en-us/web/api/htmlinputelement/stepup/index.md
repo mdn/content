@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.stepUp()
 slug: Web/API/HTMLInputElement/stepUp
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -125,8 +126,8 @@ stepUp(stepIncrement)
 
 ### Parameters
 
-- _`stepIncrement`_ {{optional_inline}}
-  - : A numeric value.  If no parameter is passed, `stepIncrement` defaults to `1`.
+- `stepIncrement` {{optional_inline}}
+  - : A numeric value. If no parameter is passed, `stepIncrement` defaults to `1`.
 
 ### Return value
 

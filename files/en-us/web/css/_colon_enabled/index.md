@@ -23,7 +23,9 @@ input:enabled {
 
 ## Syntax
 
-{{csssyntax}}
+```
+:enabled
+```
 
 ## Examples
 

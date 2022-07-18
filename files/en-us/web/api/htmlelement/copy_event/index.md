@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: copy event'
 slug: Web/API/HTMLElement/copy_event
+page-type: web-api-event
 tags:
   - API
   - Clipboard API
@@ -9,7 +10,7 @@ tags:
   - Reference
   - Web
   - copy
-browser-compat: api.HTMLElement.copy_event
+browser-compat: api.Element.copy_event
 ---
 {{ APIRef("HTML DOM") }}
 

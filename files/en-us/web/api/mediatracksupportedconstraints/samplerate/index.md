@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.sampleRate
 slug: Web/API/MediaTrackSupportedConstraints/sampleRate
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints
@@ -59,7 +60,7 @@ if (navigator.mediaDevices.getSupportedConstraints().sampleRate) {
 
 ### Result
 
-{{ EmbedLiveSample('Example', 600, 80) }}
+{{ EmbedLiveSample('Examples', 600, 80) }}
 
 ## Specifications
 

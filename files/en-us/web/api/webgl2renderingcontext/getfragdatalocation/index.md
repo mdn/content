@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.getFragDataLocation()
 slug: Web/API/WebGL2RenderingContext/getFragDataLocation
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -23,9 +24,9 @@ getFragDataLocation(program, name)
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}} to query.
-- name
+- `name`
   - : A string specifying the name of the user-defined varying out
     variable.
 

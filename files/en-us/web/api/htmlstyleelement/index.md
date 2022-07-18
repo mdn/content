@@ -1,6 +1,7 @@
 ---
 title: HTMLStyleElement
 slug: Web/API/HTMLStyleElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

@@ -1,6 +1,7 @@
 ---
 title: Media Session API
 slug: Web/API/Media_Session_API
+page-type: web-api-overview
 tags:
   - Audio
   - Media
@@ -10,7 +11,7 @@ tags:
   - Overview
   - Reference
   - Video
-spec-urls: https://w3c.github.io/mediasession/
+browser-compat: api.MediaSession
 ---
 {{DefaultAPISidebar("Media Session API")}}
 
@@ -82,9 +83,9 @@ Some user agents disable autoplay for media elements on mobile devices and requi
 
 ```js
 playButton.addEventListener('pointerup', function(event) {
-  var audio = document.querySelector('audio');
+  const audio = document.querySelector('audio');
 
-  // User interacted with the page. Let's play audio...
+  // User interacted with the page. Let's play audio!
   audio.play()
   .then(_ => { /* Set up media session controls, as shown above. */ })
   .catch(error => { console.log(error) });
@@ -97,4 +98,4 @@ playButton.addEventListener('pointerup', function(event) {
 
 ## Browser compatibility
 
-{{Compat("api.MediaSession")}}
+{{Compat}}

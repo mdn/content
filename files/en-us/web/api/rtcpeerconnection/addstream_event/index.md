@@ -1,6 +1,7 @@
 ---
 title: 'RTCPeerConnection: addstream event'
 slug: Web/API/RTCPeerConnection/addstream_event
+page-type: web-api-event
 tags:
   - Event
   - Media

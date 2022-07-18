@@ -1,6 +1,7 @@
 ---
 title: PannerNode.setPosition()
 slug: Web/API/PannerNode/setPosition
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -24,11 +25,11 @@ setPosition(x, y, z)
 
 ### Parameters
 
-- x
+- `x`
   - : The x position of the panner in 3D space.
-- y
+- `y`
   - : The y position of the panner in 3D space.
-- z
+- `z`
   - : The z position of the panner in 3D space.
 
 ### Return value

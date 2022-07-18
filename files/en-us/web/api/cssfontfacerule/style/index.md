@@ -1,6 +1,7 @@
 ---
 title: CSSFontFaceRule.style
 slug: Web/API/CSSFontFaceRule/style
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM

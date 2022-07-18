@@ -1,6 +1,7 @@
 ---
 title: Encrypted Media Extensions API
 slug: Web/API/Encrypted_Media_Extensions_API
+page-type: web-api-overview
 tags:
   - API
   - EME
@@ -10,7 +11,7 @@ tags:
   - NeedsContent
   - Overview
   - Reference
-spec-urls: https://w3c.github.io/encrypted-media/
+browser-compat: api.Navigator.requestMediaKeySystemAccess
 ---
 {{DefaultAPISidebar("Encrypted Media Extensions")}}
 
@@ -35,6 +36,4 @@ The Encrypted Media Extensions API provides interfaces for controlling the playb
 
 ## Browser compatibility
 
-### Navigator.requestMediaKeySystemAccess()
-
-{{Compat("api.Navigator.requestMediaKeySystemAccess")}}
+{{Compat}}

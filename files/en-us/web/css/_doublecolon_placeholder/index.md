@@ -13,12 +13,7 @@ browser-compat: css.selectors.placeholder
 
 The **`::placeholder`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the {{htmlattrxref("placeholder","input","placeholder text",1)}} in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element.
 
-```css
-::placeholder {
-  color: blue;
-  font-size: 1.5em;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-placeholder.html", "tabbed-shorter")}}
 
 Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} pseudo-element can be used in a rule using `::placeholder` in its selector.
 
@@ -26,7 +21,9 @@ Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} 
 
 ## Syntax
 
-{{csssyntax}}
+```
+::placeholder
+```
 
 ## Accessibility concerns
 

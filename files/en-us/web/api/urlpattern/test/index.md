@@ -1,6 +1,7 @@
 ---
 title: URLPattern.test()
 slug: Web/API/URLPattern/test
+page-type: web-api-instance-method
 tags:
   - API
   - Method

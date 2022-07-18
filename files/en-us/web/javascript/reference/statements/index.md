@@ -52,6 +52,8 @@ For an alphabetical listing see the sidebar on the left.
   - : Generator Functions enable writing [iterators](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) more easily.
 - {{jsxref("Statements/async_function", "async function")}}
   - : Declares an async function with the specified parameters.
+- {{jsxref("Statements/async_function*", "async function*")}}
+  - : Asynchronous Generator Functions enable writing async [iterators](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) more easily.
 - {{jsxref("Statements/return", "return")}}
   - : Specifies the value to be returned by a function.
 - {{jsxref("Statements/class", "class")}}
@@ -80,8 +82,6 @@ For an alphabetical listing see the sidebar on the left.
   - : Used to export functions to make them available for imports in external modules, and other scripts.
 - {{jsxref("Statements/import", "import")}}
   - : Used to import functions exported from an external module, another script.
-- [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Statements/import.meta)
-  - : Exposes context-specific metadata to a JavaScript module.
 - {{jsxref("Statements/label", "label", "", 1)}}
   - : Provides a statement with an identifier that you can refer to using a `break` or `continue` statement.
 - {{jsxref("Statements/with", "with")}}

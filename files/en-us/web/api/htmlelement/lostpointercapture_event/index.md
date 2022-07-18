@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: lostpointercapture event'
 slug: Web/API/HTMLElement/lostpointercapture_event
+page-type: web-api-event
 tags:
   - Event
   - HTML DOM

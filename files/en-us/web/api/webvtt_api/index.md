@@ -1,6 +1,7 @@
 ---
 title: Web Video Text Tracks Format (WebVTT)
 slug: Web/API/WebVTT_API
+page-type: web-api-overview
 tags:
   - API
   - Intermediate
@@ -14,6 +15,9 @@ tags:
   - captions
   - subtitles
   - text tracks
+browser-compat:
+  - api.VTTCue
+  - api.TextTrack
 ---
 {{DefaultAPISidebar("WebVTT")}}
 
@@ -273,7 +277,7 @@ Some time ago in a place rather distant....
 
 ### Cue identifier
 
-The identifier is a name that identifies the cue. It can be used to reference the cue from a script. It must not contain a newline and cannot contain the string "`-->"`. It must end with a single newline. They do not have to be unique, although it is common to number them (e.g., 1, 2, 3, ...).
+The identifier is a name that identifies the cue. It can be used to reference the cue from a script. It must not contain a newline and cannot contain the string "`-->"`. It must end with a single new line. They do not have to be unique, although it is common to number them (e.g., 1, 2, 3).
 
 ##### Example 8 - Cue identifier from Example 7
 
@@ -786,19 +790,11 @@ Where p and a are the tags which are used in HTML for paragraph and link, respec
 
 ## Specifications
 
-| Specification                                                             |
-| ------------------------------------------------------------------------- |
-| [WebVTT: The Web Video Text Tracks Format](https://w3c.github.io/webvtt/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `VTTCue` interface
-
-{{Compat("api.VTTCue", 0)}}
-
-### `TextTrack` interface
-
-{{Compat("api.TextTrack", 0)}}
+{{Compat}}
 
 ### Notes
 

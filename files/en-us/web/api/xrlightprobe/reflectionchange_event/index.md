@@ -1,6 +1,7 @@
 ---
 title: 'XRLightProbe: reflectionchange event'
 slug: Web/API/XRLightProbe/reflectionchange_event
+page-type: web-api-event
 tags:
   - API
   - AR
@@ -54,7 +55,7 @@ The `reflectionchange` event is also available using the `onreflectionchange` ev
 ```js
 lightProbe.onreflectionchange = event => {
   glCubeMap = glBinding.getReflectionCubeMap(lightProbe);
-});
+};
 ```
 
 ## Specifications

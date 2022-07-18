@@ -1,6 +1,7 @@
 ---
 title: Window.event
 slug: Web/API/Window/event
+page-type: web-api-instance-property
 tags:
   - API
   - Event

@@ -8,17 +8,20 @@ tags:
   - Reference
   - ARIA roles
   - menuitem
+spec-urls:
+  - https://w3c.github.io/aria/#menuitem
+  - https://w3c.github.io/aria-practices/#menu
 ---
 
 The `menuitem` role indicates the element is an option in a set of choices contained by a `menu` or `menubar`.
 
 ## Description
 
-A `menuitem` is one of the three types of options in a set of choices contained by a [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) or [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role); the other two being [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role) and [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role). The `menuitem` is only found as a descendant of, or owned by, elements with role `menu` or `menubar`, optionally nested within an with role [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) that is contained in, or owned by, a menu. 
+A `menuitem` is one of the three types of options in a set of choices contained by a [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) or [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role); the other two being [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role) and [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role). The `menuitem` is only found as a descendant of, or owned by, elements with role `menu` or `menubar`, optionally nested within an with role [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) that is contained in, or owned by, a menu.
 
 If the `menuitem` is not a descendant of a menu in the DOM, include the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attribute on menu to indicate the relationship. If `aria-owns` is set on the menu container to include elements that are not DOM children of the container, those elements will appear in the reading order in the sequence they are referenced and after any items that are DOM children in supporting technologies. Ensure the visual focus order matches the assistive technology reading order.
 
-Every `menuitem` in a menu is focusable, whether or not it is disabled. Indicate a `menuitem` is disabled by setting [`aria-disabled="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) on the element with the role. 
+Every `menuitem` in a menu is focusable, whether or not it is disabled. Indicate a `menuitem` is disabled by setting [`aria-disabled="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) on the element with the role.
 
 If a `menuitem` has a submenu, program it to display a new sub-level menu when the menu item is activated and include [`aria-haspopup="menu"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) or with the `true` value to indicate to assistive technologies that the menu item is used to open a submenu.
 
@@ -48,7 +51,7 @@ Every `menuitem` must have an accessible name. This name comes from the element'
 - <kbd>Up Arrow</kbd>
   - : Moves focus to the previous item, optionally wrapping from the first to the last. Optionally, if the `menuitem` is in a menubar and has a submenu, opens the submenu and places focus on the last item in the submenu.
 - <kbd>Right Arrow</kbd>
-  - : If in a `menu` opened with a menubutton and not in a `menubar`, if the menuitem does not have a submenu, does nothing. When focus is in a `menubar`, moves focus to the next item, optionally wrapping from the last to the first. When focus is in a `menu` and on a `menuitem` that has a submenu, opens the submenu and places focus on its first item.When focus is in a `menu` and on an item that does not have a submenu, closes the submenu and any parent menus, moves focus to the next item in the `menubar`, and, if focus is now on a `menuitem` with a submenu, either opens the submenu of that `menuitem` without moving focus into the submenu, or opens the submenu of that `menuitem` and places focus on the first item in the submenu. 
+  - : If in a `menu` opened with a menubutton and not in a `menubar`, if the menuitem does not have a submenu, does nothing. When focus is in a `menubar`, moves focus to the next item, optionally wrapping from the last to the first. When focus is in a `menu` and on a `menuitem` that has a submenu, opens the submenu and places focus on its first item. When focus is in a `menu` and on an item that does not have a submenu, closes the submenu and any parent menus, moves focus to the next item in the `menubar`, and, if focus is now on a `menuitem` with a submenu, either opens the submenu of that `menuitem` without moving focus into the submenu, or opens the submenu of that `menuitem` and places focus on the first item in the submenu.
 - <kbd>Left Arrow</kbd>
   - : When focus is in a `menubar`, moves focus to the previous item, optionally wrapping from the first to the last. When focus is in a submenu of an item in a menu, closes the submenu and returns focus to the parent `menuitem`. When focus is in a submenu of an item in a `menubar`, closes the submenu, moves focus to the previous item in the `menubar`, and, if focus is now on a `menuitem` with a submenu, either opens the submenu of that `menuitem` without moving focus into the submenu, or opens the submenu of that `menuitem` and places focus on the first item in the submenu.
 - <kbd>Home</kbd>
@@ -64,8 +67,7 @@ Every `menuitem` must have an accessible name. This name comes from the element'
 - <kbd>Shift + Tab</kbd>
   - : Moves focus to the previous element in the tab sequence, and if the item that had focus is not in a menubar, closes its menu and all open parent menu containers.
 
-
-If a menu is opened or a menu bar receives focus as a result of a context action, <kbd>Escape</kbd> or <kbd>Enter</kbd> may return focus to the invoking context. 
+If a menu is opened or a menu bar receives focus as a result of a context action, <kbd>Escape</kbd> or <kbd>Enter</kbd> may return focus to the invoking context.
 
 Some implementations of navigation menubars may have menuitem elements that both perform a function and open a submenu. In such implementations, <kbd>Enter</kbd> and <kbd>Space</kbd> perform a navigation function while <kbd>Down Arrow</kbd>, in a horizontal menubar, opens the submenu associated with that same menuitem.
 
@@ -115,17 +117,14 @@ When items in a `menubar` are arranged vertically and items in menu containers a
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#menuitem","ARIA: menuitem role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#menu","menuitem role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 
--  [`menuitemcheckbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
--  [`menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
--  [`listitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role)
--  [`option` role](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
+- [`menuitemcheckbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
+- [`menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
+- [`listitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role)
+- [`option` role](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
 
 <section id="Quick_links">
 

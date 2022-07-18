@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.getPose()
 slug: Web/API/VRDisplay/getPose
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -49,10 +50,10 @@ if(navigator.getVRDisplays) {
       vrDisplay = displays[0];
       console.log('Display found');
 
-          // Return the current VRPose object for the display
-          var pose = vrDisplay.getPose();
+      // Return the current VRPose object for the display
+      const pose = vrDisplay.getPose();
 
-          ...
+      // ...
 
     }
   });

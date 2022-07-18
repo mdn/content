@@ -1,6 +1,7 @@
 ---
 title: WritableStreamDefaultWriter.ready
 slug: Web/API/WritableStreamDefaultWriter/ready
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -34,9 +35,9 @@ must be finished before the writer can be closed.
 ```js
 function sendMessage(message, writableStream) {
   // defaultWriter is of type WritableStreamDefaultWriter
-  var defaultWriter = writableStream.getWriter();
-  var encoder = new TextEncoder();
-  var encoded = encoder.encode(message, {stream: true});
+  const defaultWriter = writableStream.getWriter();
+  const encoder = new TextEncoder();
+  const encoded = encoder.encode(message, {stream: true});
   encoded.forEach(function(chunk) {
     // Make sure the stream and its writer are able to
     //   receive data.
@@ -44,7 +45,7 @@ function sendMessage(message, writableStream) {
     .then(function() {
       defaultWriter.write(chunk)
       .then(function() {
-        console.log("Chunk written to sink.);
+        console.log("Chunk written to sink.");
       })
       .catch(function(err) {
         console.log("Chunk error: " + err);

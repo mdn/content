@@ -1,6 +1,7 @@
 ---
 title: AudioContext()
 slug: Web/API/AudioContext/AudioContext
+page-type: web-api-constructor
 tags:
   - Audio
   - Audio Context

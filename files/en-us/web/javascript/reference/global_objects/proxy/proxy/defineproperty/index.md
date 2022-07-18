@@ -19,7 +19,7 @@ The **`handler.defineProperty()`** method is a trap for
 
 ```js
 new Proxy(target, {
-  defineProperty: function(target, property, descriptor) {
+  defineProperty(target, property, descriptor) {
   }
 });
 ```
@@ -80,7 +80,7 @@ The following code traps {{jsxref("Object.defineProperty()")}}.
 
 ```js
 const p = new Proxy({}, {
-  defineProperty: function(target, prop, descriptor) {
+  defineProperty(target, prop, descriptor) {
     console.log('called: ' + prop);
     return true;
   }

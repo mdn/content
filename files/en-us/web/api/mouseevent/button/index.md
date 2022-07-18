@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.button
 slug: Web/API/MouseEvent/button
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -44,7 +45,7 @@ Others may have many buttons mapped to different functions and button values.
 ### HTML
 
 ```html
-<button id="button" oncontextmenu="event.preventDefault();">Click here with your mouse...</button>
+<button id="button" oncontextmenu="event.preventDefault();">Click here with your mouse…</button>
 <p id="log"></p>
 ```
 
@@ -76,7 +77,7 @@ function logMouseButton(e) {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

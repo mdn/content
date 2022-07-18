@@ -8,7 +8,7 @@ tags:
   - Overview
   - Reference
   - Web
-spec-urls: https://drafts.csswg.org/css-namespaces/
+browser-compat: css.at-rules.namespace
 ---
 {{CSSRef}}
 
@@ -26,6 +26,4 @@ spec-urls: https://drafts.csswg.org/css-namespaces/
 
 ## Browser compatibility
 
-### `@namespace` rule
-
-{{Compat("css.at-rules.namespace")}}
+{{Compat}}

@@ -1,6 +1,7 @@
 ---
 title: MessageChannel()
 slug: Web/API/MessageChannel/MessageChannel
+page-type: web-api-constructor
 tags:
   - API
   - Channel messaging

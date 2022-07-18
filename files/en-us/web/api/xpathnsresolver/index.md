@@ -1,6 +1,7 @@
 ---
 title: XPathNSResolver
 slug: Web/API/XPathNSResolver
+page-type: web-api-interface
 tags:
   - API
   - DOM

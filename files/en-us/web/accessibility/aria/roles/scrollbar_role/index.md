@@ -8,13 +8,14 @@ tags:
   - Reference
   - ARIA roles
   - scrollbar
+spec-urls: https://w3c.github.io/aria/#scrollbar
 ---
 
 A `scrollbar` is a graphical object that controls the scrolling of content within a viewing area.
 
 ## Description
 
-A `scrollbar` is a range that controls what part of a viewport's content is currently visible in the viewport‘s frame; whether the viewport is a full browser size, an iframe, or any element's [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context).
+A `scrollbar` is a range that controls what part of a viewport's content is currently visible in the viewport's frame; whether the viewport is a full browser size, an iframe, or any element's [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context).
 
 ### What is scroll bar
 
@@ -72,7 +73,7 @@ Because descendants of `scrollbar` are presentational, the following code is equ
 
 ```html
 <div role="scrollbar"><h3 role="presentation">Title of my scrollbar</h3></div>
-````
+```
 
 From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
 
@@ -157,9 +158,7 @@ The above CSS means a native scroll bar will appear when the user interacts with
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#scrollbar","ARIA: scrollbar role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

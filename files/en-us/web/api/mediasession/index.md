@@ -1,6 +1,7 @@
 ---
 title: MediaSession
 slug: Web/API/MediaSession
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -77,7 +78,7 @@ const actionHandlers = [
       // set playback state
       navigator.mediaSession.playbackState = "playing";
       // update our status element
-      updateStatus(allMeta[index], 'Action: play  |  Track is playing...')
+      updateStatus(allMeta[index], 'Action: play  |  Track is playing…')
     }
   ],
   [
@@ -88,7 +89,7 @@ const actionHandlers = [
       // set playback state
       navigator.mediaSession.playbackState = "paused";
       // update our status element
-      updateStatus(allMeta[index], 'Action: pause  |  Track has been paused...');
+      updateStatus(allMeta[index], 'Action: pause  |  Track has been paused…');
     }
   ],
 ]

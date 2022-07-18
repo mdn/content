@@ -38,8 +38,8 @@ The following example assigns the seconds portion of the current time to the var
 `seconds`.
 
 ```js
-var today = new Date();
-var seconds = today.getUTCSeconds();
+const today = new Date();
+const seconds = today.getUTCSeconds();
 ```
 
 ## Specifications

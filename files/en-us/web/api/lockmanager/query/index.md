@@ -1,6 +1,7 @@
 ---
 title: LockManager.query()
 slug: Web/API/LockManager/query
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental

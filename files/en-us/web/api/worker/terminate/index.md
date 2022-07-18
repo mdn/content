@@ -1,6 +1,7 @@
 ---
 title: Worker.terminate()
 slug: Web/API/Worker/terminate
+page-type: web-api-instance-method
 tags:
   - API
   - Method

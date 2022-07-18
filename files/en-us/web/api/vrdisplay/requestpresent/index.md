@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.requestPresent()
 slug: Web/API/VRDisplay/requestPresent
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -27,7 +28,7 @@ requestPresent(layers)
 
 ### Parameters
 
-- layers
+- `layers`
   - : An array of {{domxref("VRLayerInit")}} objects representing the scene you want to present. At the moment, this can be a minimum of 0 and a maximum of 1.
 
 ### Return value
@@ -58,8 +59,8 @@ if(navigator.getVRDisplays) {
 
             // Set the canvas size to the size of the vrDisplay viewport
 
-            var leftEye = vrDisplay.getEyeParameters('left');
-            var rightEye = vrDisplay.getEyeParameters('right');
+            const leftEye = vrDisplay.getEyeParameters('left');
+            const rightEye = vrDisplay.getEyeParameters('right');
 
             canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
             canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);

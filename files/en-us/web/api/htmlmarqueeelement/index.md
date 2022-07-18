@@ -1,6 +1,7 @@
 ---
 title: HTMLMarqueeElement
 slug: Web/API/HTMLMarqueeElement
+page-type: web-api-interface
 tags:
   - API
   - Deprecated

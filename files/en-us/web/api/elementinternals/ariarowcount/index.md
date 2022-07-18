@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaRowCount
 slug: Web/API/ElementInternals/ariaRowCount
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -37,4 +38,4 @@ this.internals_.ariaRowCount = "100";
 
 {{Compat}}
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

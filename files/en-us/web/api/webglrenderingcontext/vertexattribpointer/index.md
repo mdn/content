@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.vertexAttribPointer()
 slug: Web/API/WebGLRenderingContext/vertexAttribPointer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -42,7 +43,7 @@ vertexAttribPointer(index, size, type, normalized, stride, offset)
     - `gl.UNSIGNED_SHORT`: unsigned 16-bit integer, with values in \[0,
       65535]
     - `gl.FLOAT`: 32-bit IEEE floating point number
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
       - `gl.HALF_FLOAT`: 16-bit IEEE floating point number
@@ -309,6 +310,5 @@ gl.enableVertexAttribArray(locTexUV);
 
 ## See also
 
-- [Vertex
-  Specification](https://www.khronos.org/opengl/wiki/Vertex_Specification) on the OpenGL wiki
+- [Vertex Specification](https://www.khronos.org/opengl/wiki/Vertex_Specification) on the OpenGL wiki
 - {{domxref("WebGL2RenderingContext.vertexAttribIPointer()")}}

@@ -1,6 +1,7 @@
 ---
 title: 'XMLHttpRequest: progress event'
 slug: Web/API/XMLHttpRequest/progress_event
+page-type: web-api-event
 tags:
   - API
   - Event

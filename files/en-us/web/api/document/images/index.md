@@ -1,6 +1,7 @@
 ---
 title: Document.images
 slug: Web/API/Document/images
+page-type: web-api-instance-property
 tags:
   - API
   - Document

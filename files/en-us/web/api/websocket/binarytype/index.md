@@ -1,6 +1,7 @@
 ---
 title: WebSocket.binaryType
 slug: Web/API/WebSocket/binaryType
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -16,7 +17,7 @@ binary data being received over the WebSocket connection.
 
 ## Value
 
-A {{DOMXref("DOMString")}}:
+A string:
 
 - `"blob"`
   - : Use {{domxref("Blob")}} objects for binary data. This is the default value.

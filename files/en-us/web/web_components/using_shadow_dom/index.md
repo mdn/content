@@ -38,7 +38,7 @@ This fragment produces the following DOM structure:
 
 ![](dom-screenshot.png)
 
-_Shadow_ DOM allows hidden DOM trees to be attached to elements in the regular DOM tree — this shadow DOM tree starts with a shadow root, underneath which can be attached to any elements you want, in the same way as the normal DOM.
+_Shadow_ DOM allows hidden DOM trees to be attached to elements in the regular DOM tree — this shadow DOM tree starts with a shadow root, underneath which you can attach any element, in the same way as the normal DOM.
 
 ![SVG version of the diagram showing the interaction of document, shadow root and shadow host.](shadowdom.svg)
 
@@ -88,7 +88,7 @@ shadow.appendChild(para);
 
 ## Working through a simple example
 
-Now let's walk through a simple example to demonstrate the shadow DOM in action inside a custom element — [`<popup-info>`](https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component) (see a [live example](https://mdn.github.io/web-components-examples/popup-info-box-web-component/) also). This takes an image icon and a text string, and embeds the icon into the page. When the icon is focused, it displays the text in a pop up information box to provide further in-context information. To begin with, in our JavaScript file we define a class called `PopUpInfo`, which extends `HTMLElement`:
+Now let's walk through a simple example to demonstrate the shadow DOM in action inside a custom element — [`<popup-info>`](https://github.com/mdn/web-components-examples/tree/main/popup-info-box-web-component) (see a [live example](https://mdn.github.io/web-components-examples/popup-info-box-web-component/) also). This takes an image icon and a text string, and embeds the icon into the page. When the icon is focused, it displays the text in a pop up information box to provide further in-context information. To begin with, in our JavaScript file we define a class called `PopUpInfo`, which extends `HTMLElement`:
 
 ```js
 class PopUpInfo extends HTMLElement {
@@ -213,7 +213,7 @@ customElements.define('popup-info', PopUpInfo);
 
 In the above example we apply style to the Shadow DOM using a {{htmlelement("style")}} element, but it is perfectly possible to do it by referencing an external stylesheet from a {{htmlelement("link")}} element instead.
 
-For example, take a look at this code from our [popup-info-box-external-stylesheet](https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/) example (see the [source code](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js)):
+For example, take a look at this code from our [popup-info-box-external-stylesheet](https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/) example (see the [source code](https://github.com/mdn/web-components-examples/blob/main/popup-info-box-external-stylesheet/main.js)):
 
 ```js
 // Apply external styles to the shadow DOM

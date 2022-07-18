@@ -8,6 +8,9 @@ tags:
   - Reference
   - ARIA roles
   - document structure role
+spec-urls:
+  - https://w3c.github.io/aria/#columnheader
+  - https://w3c.github.io/aria-practices/#table
 ---
 
 
@@ -61,7 +64,7 @@ JavaScript is only required if the `aria-sort` attribute is used.
     </tr>
   </thead>
   <tbody>
-    ...
+    …
   </tbody>
 </table>
 ```
@@ -80,10 +83,7 @@ Columnheader has the same semantics `<th scope="col">`.
 
 ## Specifications
 
-| Specification               | Status                                           |
-| --------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#columnheader","ARIA: columnheader role")}}| {{Spec2('ARIA')}}|
-| {{SpecName("ARIA Authoring Practices 1.2","#table","Table")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 

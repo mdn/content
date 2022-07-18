@@ -1,6 +1,7 @@
 ---
 title: 'PaymentResponse: payerdetailchange event'
 slug: Web/API/PaymentResponse/payerdetailchange_event
+page-type: web-api-event
 tags:
   - Commerce
   - Payment Request API
@@ -122,9 +123,9 @@ await response.retry({
 You could also set up the event handler using the `addEventListener()` method:
 
 ```js
-response.addEventListener("payerdetailchange", async ev => {
-  ...
-}
+response.addEventListener("payerdetailchange", async (ev) => {
+  // …
+});
 ```
 
 ## Browser compatibility

@@ -1,6 +1,7 @@
 ---
 title: ImageBitmap.close()
 slug: Web/API/ImageBitmap/close
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -35,13 +36,13 @@ None ({{jsxref("undefined")}}).
 var offscreen = new OffscreenCanvas(256, 256);
 var gl = offscreen.getContext('webgl');
 
-// ... some drawing using the gl context ...
+// Perform some drawing using the gl context
 
 var bitmap = offscreen.transferToImageBitmap();
 // ImageBitmap { width: 256, height: 256 }
 
 bitmap.close();
-// ImageBitmap { width: 0, height: 0 } -- disposed
+// ImageBitmap { width: 0, height: 0 } — disposed
 ```
 
 ## Specifications

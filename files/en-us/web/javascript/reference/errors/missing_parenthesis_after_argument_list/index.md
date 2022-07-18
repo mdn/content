@@ -15,9 +15,9 @@ string.
 
 ## Message
 
-```js
-SyntaxError: Expected ')' (Edge)
-SyntaxError: missing ) after argument list (Firefox)
+```
+SyntaxError: missing ) after argument list (V8-based & Firefox)
+Unexpected identifier 'x'. Expected ')' to end an argument list. (Safari)
 ```
 
 ## Error type

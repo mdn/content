@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.port
 slug: Web/API/RTCIceCandidateStats/port
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate

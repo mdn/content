@@ -1,6 +1,7 @@
 ---
 title: HmacKeyGenParams
 slug: Web/API/HmacKeyGenParams
+page-type: web-api-interface
 tags:
   - API
   - Dictionary

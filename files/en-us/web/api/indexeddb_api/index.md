@@ -1,6 +1,7 @@
 ---
 title: IndexedDB API
 slug: Web/API/IndexedDB_API
+page-type: web-api-overview
 tags:
   - API
   - Advanced
@@ -9,6 +10,7 @@ tags:
   - Landing
   - Reference
   - Storage
+spec-urls: https://w3c.github.io/IndexedDB/
 ---
 {{DefaultAPISidebar("IndexedDB")}}
 
@@ -81,9 +83,7 @@ This specification fires events with the following custom interface:
 
 ## Specifications
 
-| Specification                                            |
-| -------------------------------------------------------- |
-| [Indexed Database API](https://w3c.github.io/IndexedDB/) |
+{{Specifications}}
 
 ## See also
 

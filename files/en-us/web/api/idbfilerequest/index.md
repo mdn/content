@@ -1,27 +1,28 @@
 ---
 title: IDBFileRequest
 slug: Web/API/IDBFileRequest
+page-type: web-api-interface
 tags:
   - API
   - DOM
   - Files
   - Interface
-  - Non-standard
   - Reference
+  - Non-standard
+  - Deprecated
 browser-compat: api.IDBFileRequest
 ---
-{{APIRef("IndexedDB")}} {{non-standard_header}}
+{{APIRef("IndexedDB")}}{{deprecated_header}}
+
+> **Note:** The three non-standard interfaces {{domxref("IDBMutableFile")}}, {{domxref("IDBFileHandle")}}, and {{domxref("IDBFileRequest")}} are [disabled by default](#browser_compatibility).
+> Consider using the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
 The **`IDBFileRequest`** interface provides some extra properties necessary for the {{domxref("IDBFileHandle")}} objects.
-
-> **Note:** The three interfaces `IDBMutableFile`, `IDBFileHandle`, and `IDBFileRequest` are deprecated and only implemented
-> for backward compatibility in Firefox. _Do not use them anymore_:
-> consider using the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
 ## Properties
 
 _`IDBFileRequest` also inherits properties from the {{domxref("EventTarget")}} interface
-as well as the `then()` method from the defunct `DOMRequest`interface described below_.
+as well as the `then()` method from the defunct `DOMRequest` interface described below_.
 
 - {{domxref("IDBFileRequest.lockedFile")}} {{readonlyinline}}
   - : The {{domxref("IDBMutableFile")}} object from which the request was started.
@@ -42,7 +43,8 @@ This feature is not part of any current specification. It is no longer on track 
 
 ## Browser compatibility
 
-{{Compat}}
+This interface is not supported by any current browser.
+From Firefox 102 it is behind the preference `dom.fileHandle.enabled`.
 
 ## See also
 

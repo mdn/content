@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisEvent.elapsedTime
 slug: Web/API/SpeechSynthesisEvent/elapsedTime
+page-type: web-api-instance-property
 tags:
   - API
   - Property

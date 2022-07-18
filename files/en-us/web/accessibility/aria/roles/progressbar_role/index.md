@@ -10,6 +10,7 @@ tags:
   - widget role
   - widget
   - progressbar role
+spec-urls: https://w3c.github.io/aria/#progressbar
 ---
 
 The `progressbar` role defines an element that displays the progress status for tasks that take a long time.
@@ -99,9 +100,7 @@ It is recommended to use a native {{HTMLElement("progress")}} or [`<input type="
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#progressbar","ARIA: progressbar role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

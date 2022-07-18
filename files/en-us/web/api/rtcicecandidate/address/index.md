@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.address
 slug: Web/API/RTCIceCandidate/address
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -53,7 +54,7 @@ address from being exposed, but reduces the pool of available candidates to choo
 To do this, configure the ICE agent's ICE transport policy with an object confirming to the `configuration` property described in {{domxref("RTCPeerConnection.setConfiguration")}}, like this:
 
 ```js
-var rtcConfig = {
+const rtcConfig = {
   iceServers: [
     {
       urls: "turn:myturn.server.ip",

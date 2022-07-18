@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext
 slug: Web/API/WebGLRenderingContext
+page-type: web-api-interface
 tags:
   - 2D
   - 3D
@@ -303,7 +304,7 @@ The following properties and methods provide general information and functionali
 These methods manage WebGL extensions:
 
 - {{domxref("WebGLRenderingContext.getSupportedExtensions()")}}
-  - : Returns an {{jsxref("Array")}} of {{domxref("DOMString")}} elements with all the supported WebGL extensions.
+  - : Returns an {{jsxref("Array")}} of strings containing all the supported WebGL extensions.
 - {{domxref("WebGLRenderingContext.getExtension()")}}
   - : Returns an extension object.
 

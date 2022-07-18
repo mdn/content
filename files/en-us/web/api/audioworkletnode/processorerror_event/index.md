@@ -1,6 +1,7 @@
 ---
 title: 'AudioWorkletNode: processorerror event'
 slug: Web/API/AudioWorkletNode/processorerror_event
+page-type: web-api-event
 tags:
   - API
   - Audio

@@ -1,6 +1,7 @@
 ---
 title: HTMLLinkElement.rel
 slug: Web/API/HTMLLinkElement/rel
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM

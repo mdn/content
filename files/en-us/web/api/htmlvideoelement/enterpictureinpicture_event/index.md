@@ -1,6 +1,7 @@
 ---
 title: 'HTMLVideoElement: enterpictureinpicture event'
 slug: Web/API/HTMLVideoElement/enterpictureinpicture_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -54,7 +55,7 @@ function onEnterPip() {
 
 video.addEventListener('enterpictureinpicture', onEnterPip, false);
 
-button.onclick = function() => {
+button.onclick = () => {
   video.requestPictureInPicture();
 }
 ```
@@ -71,7 +72,7 @@ function onEnterPip() {
 
 video.onenterpictureinpicture = onEnterPip;
 
-button.onclick = function() => {
+button.onclick = () => {
   video.requestPictureInPicture();
 }
 ```

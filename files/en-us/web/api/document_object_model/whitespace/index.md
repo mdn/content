@@ -1,6 +1,7 @@
 ---
 title: How whitespace is handled by HTML, CSS, and in the DOM
 slug: Web/API/Document_Object_Model/Whitespace
+page-type: guide
 tags:
   - CSS
   - DOM
@@ -126,7 +127,7 @@ Inside this context, whitespace character processing can be summarized as follow
     <h1>◦Hello◦<span>World!</span>◦</h1>
     ```
 
-5. And finally, sequences of spaces at the beginning and end of a line are removed, so we finally get this:
+5. And finally, sequences of spaces at the beginning and end of an element are removed, so we finally get this:
 
     ```html
     <h1>Hello◦<span>World!</span></h1>
@@ -286,14 +287,14 @@ If you need to rely on `inline-block`, you could set the [`font-size`](/en-US/do
 ```css
 ul {
   font-size: 0;
-  ...
+  /* … */
 }
 
 li {
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  ...
+  /* … */
 }
 ```
 
@@ -419,7 +420,7 @@ function node_after( sib )
  */
 function last_child( par )
 {
-  var res=par.lastChild;
+  let res=par.lastChild;
   while (res) {
     if (!is_ignorable(res)) return res;
     res = res.previousSibling;
@@ -439,7 +440,7 @@ function last_child( par )
  */
 function first_child( par )
 {
-  var res=par.firstChild;
+  let res=par.firstChild;
   while (res) {
     if (!is_ignorable(res)) return res;
     res = res.nextSibling;
@@ -458,7 +459,7 @@ function first_child( par )
  */
 function data_of( txt )
 {
-  var data = txt.textContent;
+  let data = txt.textContent;
   // Use ECMA-262 Edition 3 String and RegExp features
   data = data.replace(/[\t\n\r ]+/g, " ");
   if (data.charAt(0) == " ")
@@ -474,7 +475,7 @@ function data_of( txt )
 The following code demonstrates the use of the functions above. It iterates over the children of an element (whose children are all elements) to find the one whose text is `"This is the third paragraph"`, and then changes the class attribute and the contents of that paragraph.
 
 ```js
-var cur = first_child(document.getElementById("test"));
+const cur = first_child(document.getElementById("test"));
 while (cur)
 {
   if (data_of(cur.firstChild) == "This is the third paragraph.")

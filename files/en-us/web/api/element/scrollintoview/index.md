@@ -1,6 +1,7 @@
 ---
 title: Element.scrollIntoView()
 slug: Web/API/Element/scrollIntoView
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM Views

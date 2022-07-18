@@ -32,7 +32,7 @@ clear()
 ### Using the clear() method
 
 ```js
-var mySet = new Set();
+const mySet = new Set();
 mySet.add(1);
 mySet.add('foo');
 

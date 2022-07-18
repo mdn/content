@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.clearRect()
 slug: Web/API/CanvasRenderingContext2D/clearRect
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -17,8 +18,7 @@ method of the Canvas 2D API erases the pixels in a rectangular area by setting t
 transparent black.
 
 > **Note:** Be aware that `clearRect()` may cause unintended
-> side effects if you're not [using
-> paths properly](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#drawing_paths). Make sure to call
+> side effects if you're not [using paths properly](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#drawing_paths). Make sure to call
 > {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} before starting to
 > draw new items after calling `clearRect()`.
 

@@ -1,6 +1,7 @@
 ---
 title: RTCRtpStreamStats.trackId
 slug: Web/API/RTCRtpStreamStats/trackId
+page-type: web-api-instance-property
 tags:
   - API
   - Property

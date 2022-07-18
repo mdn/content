@@ -1,6 +1,7 @@
 ---
 title: Worker()
 slug: Web/API/Worker/Worker
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -13,7 +14,7 @@ browser-compat: api.Worker.Worker
 
 The **`Worker()`** constructor creates a {{domxref("Worker")}} object that executes the script at the specified URL. This script must obey the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
 
-> **Note:** that there is a disagreement among browser manufacturers about whether a data URI is of the same origin or not. Though Gecko 10.0 {{ geckoRelease("10.0") }} and later accept data URIs, that's not the case in all other browsers.
+> **Note:** that there is a disagreement among browser manufacturers about whether a data URL is of the same origin or not. Though Gecko 10.0 {{ geckoRelease("10.0") }} and later accept data URLs, that's not the case in all other browsers.
 
 ## Syntax
 
@@ -25,17 +26,17 @@ new Worker(aURL, options)
 ### Parameters
 
 - `aURL`
-  - : A {{domxref("USVString")}} representing the URL of the script the worker will execute. It must obey the same-origin policy.
+  - : A string representing the URL of the script the worker will execute. It must obey the same-origin policy.
 - `options` {{optional_inline}}
 
   - : An object containing option properties that can be set when creating the object instance. Available properties are as follows:
 
     - `type`
-      - : A {{domxref("DOMString")}} specifying the type of worker to create. The value can be `classic` or `module`. If not specified, the default used is `classic`.
+      - : A string specifying the type of worker to create. The value can be `classic` or `module`. If not specified, the default used is `classic`.
     - `credentials`
-      - : A {{domxref("DOMString")}} specifying the type of credentials to use for the worker. The value can be `omit`, `same-origin`, or _`include`. If not specified, or if type is `classic`, the default used is `omit` (no credentials required)._
+      - : A string specifying the type of credentials to use for the worker. The value can be `omit`, `same-origin`, or _`include`. If not specified, or if type is `classic`, the default used is `omit` (no credentials required)._
     - `name`
-      - : A {{domxref("DOMString")}} specifying an identifying name for the {{domxref("DedicatedWorkerGlobalScope")}} representing the scope of the worker, which is mainly useful for debugging purposes.
+      - : A string specifying an identifying name for the {{domxref("DedicatedWorkerGlobalScope")}} representing the scope of the worker, which is mainly useful for debugging purposes.
 
 ### Exceptions
 
@@ -43,7 +44,7 @@ new Worker(aURL, options)
   - : Thrown if the document is not allowed to start workers, e.g. if the URL has an invalid syntax or if the same-origin policy is violated.
 - `NetworkError` {{domxref("DOMException")}}
   - : Thrown if the MIME type of the worker script is incorrect. It _should_ always be `text/javascript`
-    (for historical reasons [other JavaScript MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types) may be accepted).
+    (for historical reasons [other JavaScript MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types) may be accepted).
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if _aURL_ cannot be parsed.
 

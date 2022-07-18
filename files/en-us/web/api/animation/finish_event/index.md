@@ -1,6 +1,7 @@
 ---
 title: 'Animation: finish event'
 slug: Web/API/Animation/finish_event
+page-type: web-api-event
 tags:
   - API
   - Event

@@ -1,6 +1,7 @@
 ---
 title: TrustedScriptURL.toString()
 slug: Web/API/TrustedScriptURL/toString
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -25,7 +26,7 @@ None.
 
 ### Return value
 
-A {{domxref("DOMString","string")}} containing the sanitized URL
+A string containing the sanitized URL
 
 ## Examples
 

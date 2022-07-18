@@ -168,7 +168,7 @@ justifyContent.addEventListener("change", function (evt) {
 
 ## Specifications
 
-{{Specifications("css.properties.justify-content.grid_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

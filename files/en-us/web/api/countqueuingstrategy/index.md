@@ -1,6 +1,7 @@
 ---
 title: CountQueuingStrategy
 slug: Web/API/CountQueuingStrategy
+page-type: web-api-interface
 tags:
   - API
   - CountQueuingStrategy
@@ -36,10 +37,10 @@ const queueingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 const writableStream = new WritableStream({
   // Implement the sink
   write(chunk) {
-    ...
+    // …
   },
   close() {
-    ...
+    // …
   },
   abort(err) {
     console.log("Sink error:", err);

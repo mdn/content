@@ -47,7 +47,7 @@ To solve all those problems we use human-readable addresses called domain names.
 
 ### Structure of domain names
 
-A domain name has a simple structure made of several parts (it might be one part only, two, three...), separated by dots and **read from right to left**:
+A domain name has a simple structure made of several parts (it might be one part only, two, three…), separated by dots and **read from right to left**:
 
 ![Anatomy of the MDN domain name](structure.png)
 

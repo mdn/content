@@ -1,6 +1,7 @@
 ---
 title: 'XRSystem: requestSession()'
 slug: Web/API/XRSystem/requestSession
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -211,7 +212,7 @@ navigator.xr.requestSession("immersive-ar", {
   domOverlay: {
     root: document.getElementById("xr-overlay")
   }
-}
+});
 ```
 
 ### Requesting a depth-sensing session

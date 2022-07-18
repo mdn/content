@@ -1,6 +1,7 @@
 ---
 title: Document.pictureInPictureEnabled
 slug: Web/API/Document/pictureInPictureEnabled
+page-type: web-api-instance-property
 tags:
   - API
   - Document

@@ -1,6 +1,7 @@
 ---
 title: WebVR concepts
 slug: Web/API/WebVR_API/Concepts
+page-type: guide
 tags:
   - Acceleration
   - Apps
@@ -32,7 +33,7 @@ The first VR gaming attempts were big and expensive — in 1991 Virtuality Group
 
 ### VR in recent times
 
-So what's new? Virtual Reality hardware needs to deliver high-precision, low-latency data to deliver an acceptable user experience; computers running VR applications need to be powerful enough to handle all this information. It has not been until recently that such accuracy and power has been available at an affordable cost, if at all. Early VR prototypes cost tens of thousands of dollars, whereas more recent headsets such as the [HTC VIVE](https://www.vive.com/uk/) and [Oculus Rift](https://www.oculus.com/rift/) are available for hundreds of dollars, and cheaper solutions are available — mobile device-based solutions like [Gear VR](https://www.samsung.com/global/galaxy/gear-vr/) and [Google Cardboard](https://arvr.google.com/cardboard/).
+So what's new? Virtual Reality hardware needs to deliver high-precision, low-latency data to deliver an acceptable user experience; computers running VR applications need to be powerful enough to handle all this information. It has not been until recently that such accuracy and power has been available at an affordable cost, if at all. Early VR prototypes cost tens of thousands of dollars, whereas more recent headsets such as the [HTC VIVE](https://www.vive.com/uk/) and [Oculus Rift](https://www.oculus.com/rift/) are available for hundreds of dollars, and cheaper solutions are available — mobile device-based solutions like [Gear VR](https://www.samsung.com/global/galaxy/what-is/gear-vr/) and [Google Cardboard](https://arvr.google.com/cardboard/).
 
 On the software side, Valve has created [SteamVR](https://store.steampowered.com/search/?category1=993) software, which is compatible with the VIVE and other solutions, and serves to provide access to software, such as a usable VR UI.
 
@@ -54,7 +55,7 @@ There are two main types of setup, mobile or computer-connected. Their minimum h
 Other hardware that complements the VR experience includes:
 
 - **A hand recognition sensor**: A sensor that tracks the position and movement of your hand, allowing it to become an interesting controller, and an object in VR gameworlds. The most advanced to date is the [Leap Motion](https://www.ultraleap.com/), which works with the computer (connected to the Oculus Rift) and can also work connected to a mobile device (the latter is in an experimental phase.)
-- **A gamepad**: We can configure an XBox controller or similar to work as a keyboard in the browser — this offers further possibilities of interaction with a VR webpage. There are some gamepads that work with a mobile setup — like the [MergeVR headset](http://www.mergevr.com/) — but these are connected via Bluetooth so don't work with WebVR.
+- **A gamepad**: We can configure an XBox controller or similar to work as a keyboard in the browser — this offers further possibilities of interaction with a VR webpage. There are some gamepads that work with a mobile setup but these are connected via Bluetooth so don't work with WebVR.
 - **An eye tracking sensor (experimental)**: The FOVE project is the first headset that reads subtle eye movements.
 - **A facial expression tracker (experimental)**: Researchers at the University of Southern California and Facebook's Oculus division have been testing new ways of tracking facial expressions and transferring them to a virtual character.
 - **A more complex positional sensor system**: As an example, the HTC VIVE features two position sensors that sit in opposite corners of a space, mapping it all out and allowing VR experiences to be enjoyed in spaces of up to 5m x 5m.

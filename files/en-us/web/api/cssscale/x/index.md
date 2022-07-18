@@ -1,6 +1,7 @@
 ---
 title: CSSScale.x
 slug: Web/API/CSSScale/x
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API

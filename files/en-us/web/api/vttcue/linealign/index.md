@@ -1,6 +1,7 @@
 ---
 title: VTTCue.lineAlign
 slug: Web/API/VTTCue/lineAlign
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ The **`lineAlign`** property of the {{domxref("VTTCue")}} interface represents t
 
 ## Value
 
-A {{domxref("DOMString","string")}} containing one of the following values:
+A string containing one of the following values:
 
 - `"start"`
   - : Start alignment.

@@ -15,7 +15,7 @@ tags:
   - Reference
   - Week
   - Weeks
-browser-compat: html.elements.input.input-week
+browser-compat: html.elements.input.type_week
 ---
 
 {{HTMLRef("Input_types")}}
@@ -39,7 +39,7 @@ The Edge `week` control is somewhat more elaborate, opening up week and year pic
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing a week and year, or
+        A string representing a week and year, or
         empty
       </td>
     </tr>
@@ -83,7 +83,7 @@ The Edge `week` control is somewhat more elaborate, opening up week and year pic
 
 ## Value
 
-A {{domxref("DOMString")}} representing the value of the week/year entered into the input. The format of the date and time value used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid week string")}}.
+A string representing the value of the week/year entered into the input. The format of the date and time value used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid week string")}}.
 
 You can set a default value for the input by including a value inside the {{htmlattrxref("value", "input")}} attribute, like so:
 

@@ -1,6 +1,7 @@
 ---
 title: The WebSocket API (WebSockets)
 slug: Web/API/WebSockets_API
+page-type: web-api-overview
 tags:
   - API
   - Client
@@ -13,6 +14,7 @@ tags:
   - WebSockets
   - data
   - interactive
+browser-compat: api.WebSocket
 ---
 {{DefaultAPISidebar("Websockets API")}}
 
@@ -64,14 +66,11 @@ The **WebSocket API** is an advanced technology that makes it possible to open a
 
 ## Specifications
 
-| Specification                                                                                     |
-| ------------------------------------------------------------------------------------------------- |
-| [HTML Living Standard # network](https://websockets.spec.whatwg.org) |
-| [RFC 6455, The WebSocket Protocol](https://datatracker.ietf.org/doc/html/rfc6455)                 |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.WebSocket")}}
+{{Compat}}
 
 ## See also
 

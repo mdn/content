@@ -1,6 +1,7 @@
 ---
 title: Element.ariaPlaceholder
 slug: Web/API/Element/ariaPlaceholder
+page-type: web-api-instance-property
 tags:
   - API
   - Property

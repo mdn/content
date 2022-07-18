@@ -369,6 +369,4 @@ The special value `<all_urls>` matches all URLs under any of the supported schem
 
 ## Browser compatibility
 
-### scheme
-
 {{Compat}}

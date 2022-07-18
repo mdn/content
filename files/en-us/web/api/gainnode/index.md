@@ -1,6 +1,7 @@
 ---
 title: GainNode
 slug: Web/API/GainNode
+page-type: web-api-interface
 tags:
   - API
   - GainNode

@@ -212,19 +212,19 @@ If you want to export a complete object in one assignment instead of building it
 
 ```js
 module.exports = {
-  area: function(width) {
+  area(width) {
     return width * width;
   },
 
-  perimeter: function(width) {
+  perimeter(width) {
     return 4 * width;
   }
 };
 ```
 
-> **Note:** You can think of `exports` as a [shortcut](https://nodejs.org/en/api/modules.html#modules_exports_shortcut) to `module.exports` within a given module. In fact, `exports` is just a variable that gets initialized to the value of `module.exports` before the module is evaluated. That value is a reference to an object (empty object in this case). This means that `exports` holds a reference to the same object referenced by `module.exports`. It also means that by assigning another value to `exports` it's no longer bound to `module.exports`.
+> **Note:** You can think of `exports` as a [shortcut](https://nodejs.org/api/modules.html#modules_exports_shortcut) to `module.exports` within a given module. In fact, `exports` is just a variable that gets initialized to the value of `module.exports` before the module is evaluated. That value is a reference to an object (empty object in this case). This means that `exports` holds a reference to the same object referenced by `module.exports`. It also means that by assigning another value to `exports` it's no longer bound to `module.exports`.
 
-For a lot more information about modules see [Modules](https://nodejs.org/en/api/modules.html#modules_modules) (Node API docs).
+For a lot more information about modules see [Modules](https://nodejs.org/api/modules.html#modules_modules) (Node API docs).
 
 ### Using asynchronous APIs
 
@@ -270,11 +270,11 @@ The _Express application_ object also provides methods to define route handlers 
 
 `checkout()`, `copy()`, **`delete()`**, **`get()`**, `head()`, `lock()`, `merge()`, `mkactivity()`, `mkcol()`, `move()`, `m-search()`, `notify()`, `options()`, `patch()`, **`post()`**, `purge()`, **`put()`**, `report()`, `search()`, `subscribe()`, `trace()`, `unlock()`, `unsubscribe()`.
 
-There is a special routing method, `app.all()`, which will be called in response to any HTTP method. This is used for loading middleware functions at a particular path for all request methods. The following example (from the Express documentation) shows a handler that will be executed for requests to `/secret` irrespective of the HTTP verb used (provided it is supported by the [http module](https://nodejs.org/en/api/http.html#http_http_methods)).
+There is a special routing method, `app.all()`, which will be called in response to any HTTP method. This is used for loading middleware functions at a particular path for all request methods. The following example (from the Express documentation) shows a handler that will be executed for requests to `/secret` irrespective of the HTTP verb used (provided it is supported by the [http module](https://nodejs.org/docs/latest/api/http.html#httpmethods)).
 
 ```js
 app.all('/secret', function(req, res, next) {
-  console.log('Accessing the secret section ...');
+  console.log('Accessing the secret section…');
   next(); // pass control to the next handler
 });
 ```
@@ -308,7 +308,7 @@ To use the router in our main app file we would then `require()` the route modul
 
 ```js
 const wiki = require('./wiki.js');
-// ...
+// …
 app.use('/wiki', wiki);
 ```
 
@@ -336,7 +336,7 @@ const express = require('express');
 const logger = require('morgan');
 const app = express();
 app.use(logger('dev'));
-...
+// …
 ```
 
 > **Note:** Middleware and routing functions are called in the order that they are declared. For some middleware the order is important (for example if session middleware depends on cookie middleware, then the cookie handler must be added first). It is almost always the case that middleware is called before setting routes, or your route handlers will not have access to functionality added by your middleware.
@@ -353,7 +353,7 @@ const app = express();
 
 // An example middleware function
 let a_middleware_function = function(req, res, next) {
-  // ... perform some operations
+  // Perform some operations
   next(); // Call next() so Express will call the next middleware function in the chain.
 }
 
@@ -521,7 +521,7 @@ Of course Express is deliberately a very lightweight web application framework, 
 ## See also
 
 - [Venkat.R - Manage Multiple Node versions](https://medium.com/@ramsunvtech/manage-multiple-node-versions-e3245d5ede44)
-- [Modules](https://nodejs.org/en/api/modules.html#modules_modules) (Node API docs)
+- [Modules](https://nodejs.org/api/modules.html#modules_modules) (Node API docs)
 - [Express](https://expressjs.com/) (home page)
 - [Basic routing](https://expressjs.com/en/starter/basic-routing.html) (Express docs)
 - [Routing guide](https://expressjs.com/en/guide/routing.html) (Express docs)

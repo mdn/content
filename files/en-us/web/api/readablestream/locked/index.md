@@ -1,6 +1,7 @@
 ---
 title: ReadableStream.locked
 slug: Web/API/ReadableStream/locked
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -25,7 +26,7 @@ A {{Glossary("boolean")}} value indicating whether or not the readable stream is
 
 ```js
 const stream = new ReadableStream({
-  ...
+  // ...
 });
 
 const reader = stream.getReader();

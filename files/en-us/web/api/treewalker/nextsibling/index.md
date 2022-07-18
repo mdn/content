@@ -1,6 +1,7 @@
 ---
 title: TreeWalker.nextSibling()
 slug: Web/API/TreeWalker/nextSibling
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -35,7 +36,7 @@ A {{domxref("Node")}} object or `null`.
 var treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
 treeWalker.firstChild();

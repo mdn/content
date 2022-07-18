@@ -109,7 +109,7 @@ The {{Glossary("HTML")}} language — [which will be discussed later on](/en-US/
 - to display media such as images (with the {{HTMLElement("img")}} element), videos (with the {{HTMLElement("video")}} element), sounds and music (with the {{HTMLElement("audio")}} element), etc.;
 - to display other HTML documents with the {{HTMLElement("iframe")}} element.
 
-> **Note:** When specifying URLs to load resources as part of a page (such as when using the `<script>`, `<audio>`, `<img>`, `<video>`, and the like), you should generally only use HTTP and HTTPS URLs, with few exceptions (one notable one being `data:`; see [Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)). Using FTP, for example, is not secure and is no longer supported by modern browsers.
+> **Note:** When specifying URLs to load resources as part of a page (such as when using the `<script>`, `<audio>`, `<img>`, `<video>`, and the like), you should generally only use HTTP and HTTPS URLs, with few exceptions (one notable one being `data:`; see [Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)). Using FTP, for example, is not secure and is no longer supported by modern browsers.
 
 Other technologies, such as {{Glossary("CSS")}} or {{Glossary("JavaScript")}}, use URLs extensively, and these are really the heart of the Web.
 
@@ -210,4 +210,4 @@ Linguistic semantics are of course irrelevant to computers. You've probably ofte
 
 ## See also
 
-[Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) — Data URLs, URLs prefixed with the `data:` scheme, allow content creators to embed small files inline in documents.
+[Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) — Data URLs, URLs prefixed with the `data:` scheme, allow content creators to embed small files inline in documents.

@@ -8,6 +8,7 @@ tags:
   - ARIA property
   - aria-colindex
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-colindex
 ---
 
 The `aria-colindex` attribute defines an element's column index or position with respect to the total number of columns within a `table`, `grid`, or `treegrid`.
@@ -73,7 +74,7 @@ When using semantic table header elements and not all columns are in the DOM, th
       <td>New York</td>
       <td>14127</td>
     </tr>
-    ...
+    …
   </tbody>
 </table>
 ```
@@ -107,9 +108,7 @@ Inherits into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-colindex","ARIA: aria-colindex Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

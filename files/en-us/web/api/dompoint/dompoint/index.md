@@ -1,6 +1,7 @@
 ---
 title: DOMPoint()
 slug: Web/API/DOMPoint/DOMPoint
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
