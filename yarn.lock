@@ -39,10 +39,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.1.4.tgz#47ef4e0a1a3480dbcfbd1526d50da9c4c255a9ae"
   integrity sha512-ubzosY7Qps/AYYYXABNDIVNc+C//z3uVBSOQ6TOuvAtgPzEb0nsmfOmuj8UrTsXrKxXoG2ySEPxvs2HeJNnKFQ==
 
-"@mdn/yari@1.10.0":
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.10.0.tgz#ca61ceb028e5c794aff6bc790ffb4aa13c88f116"
-  integrity sha512-dzEAvSgvRhP9xXRNVVRa5hQonBv9wUDqXDLQu2itzJ1+RiM2NjBhLi/zplIDVXnERDwfH9Cx8JnZdgUiEhPN+Q==
+"@mdn/yari@1.10.2":
+  version "1.10.2"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.10.2.tgz#d5dee18ed291f0bac544cdefa3310574b10901bd"
+  integrity sha512-vM5Joz2tmsBY28uoL8wDjr2d2DG1S2i/GOsX9Yk0wO0bJwFq24SHUNbnMfKtYeAmUjhgauVOObYaMyzbI+A0zA==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
@@ -86,7 +86,7 @@
     js-yaml "^4.1.0"
     klaw-sync "^6.0.0"
     loglevel "^1.8.0"
-    lru-cache "^7.13.0"
+    lru-cache "^7.13.1"
     md5-file "^5.0.0"
     mdast-util-from-markdown "^0.8.5"
     mdast-util-phrasing "^2.0.0"
@@ -3010,7 +3010,7 @@ lru-cache@^4.0.1:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
-lru-cache@^7.13.0:
+lru-cache@^7.13.1:
   version "7.13.1"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.13.1.tgz#267a81fbd0881327c46a81c5922606a2cfe336c4"
   integrity sha512-CHqbAq7NFlW3RSnoWXLJBxCWaZVBrfa9UEHId2M3AW8iEBurbqduNexEUCGc3SHc6iCYXNJCDi903LajSVAEPQ==
