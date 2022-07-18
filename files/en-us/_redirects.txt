@@ -8124,10 +8124,10 @@
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.ondurationchange	/en-US/docs/Web/API/HTMLMediaElement/durationchange_event
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onemptied	/en-US/docs/Web/API/HTMLMediaElement/emptied_event
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onended	/en-US/docs/Web/API/HTMLMediaElement/ended_event
-/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oninvalid	/en-US/docs/Web/API/GlobalEventHandlers/oninvalid
-/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadeddata	/en-US/docs/Web/API/GlobalEventHandlers/onloadeddata
-/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadedmetadata	/en-US/docs/Web/API/GlobalEventHandlers/onloadedmetadata
-/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadstart	/en-US/docs/Web/API/GlobalEventHandlers/onloadstart
+/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oninvalid	/en-US/docs/Web/API/HTMLInputElement/invalid_event
+/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadeddata	/en-US/docs/Web/API/HTMLMediaElement/loadeddata_event
+/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadedmetadata	/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event
+/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadstart	/en-US/docs/Web/API/HTMLMediaElement/loadstart_event
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onmouseenter	/en-US/docs/Web/API/Element/mouseenter_event
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onmouseleave	/en-US/docs/Web/API/Element/mouseleave_event
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onmousewheel	/en-US/docs/Web/API/Element/mousewheel_event
