@@ -81,4 +81,4 @@ specification is no longer being worked on.
 
 - [Polyfill of `setImmediate` in `core-js`](https://github.com/zloirock/core-js#setimmediate)
 - {{DOMxRef("Window.clearImmediate()")}}
-- [Microsoft `setImmediate` API Demo](https://redirect.microsoft/testdrive/Performance/setImmediateSorting/Default.html)
+- [Microsoft `setImmediate` API Demo](https://jphpsf.github.io/setImmediate-shim-demo/)
