@@ -95,12 +95,12 @@ ctx.stroke();
 
 // Draw lines
 ctx.strokeStyle = 'black';
-for (let i = 0; i < lineCap.length; i++) {
+for (const lineCapVal of lineCap) {
   ctx.lineWidth = 15;
-  ctx.lineCap = lineCap[i];
+  ctx.lineCap = lineCapVal;
   ctx.beginPath();
-  ctx.moveTo(25 + i * 50, 10);
-  ctx.lineTo(25 + i * 50, 140);
+  ctx.moveTo(25 + lineCapVal * 50, 10);
+  ctx.lineTo(25 + lineCapVal * 50, 140);
   ctx.stroke();
 }
 ```
