@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchUpdateUIEvent.updateUI()
 slug: Web/API/BackgroundFetchUpdateUIEvent/updateUI
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,30 +19,30 @@ This method may only be run once, to notify the user on a failed or a successful
 ## Syntax
 
 ```js
-let updateUI = BackgroundFetchUpdateUIEvent.updateUI(options);
+updateUI(options)
 ```
 
 ### Parameters
 
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object containing any of the following:
 
-    - `icons`{{optional_inline}}
+    - `icons` {{optional_inline}}
 
       - : A list of one or more image resources, containing icons for use in the user interface. An image resource is an object containing:
 
         - `src`
-          - : A {{domxref("DOMString","string")}} which is a URL of an image.
-        - `sizes`{{optional_inline}}
-          - : A {{domxref("DOMString","string")}} which is equivalent to a {{htmlelement("link")}} `sizes` attribute.
-        - `type`{{optional_inline}}
-          - : A {{domxref("DOMString","string")}} containing an image MIME type.
-        - `label`{{optional_inline}}
-          - : A {{domxref("DOMString","string")}} providing a name for the associated image.
+          - : A string which is a URL of an image.
+        - `sizes` {{optional_inline}}
+          - : A string which is equivalent to a {{htmlelement("link")}} `sizes` attribute.
+        - `type` {{optional_inline}}
+          - : A string containing an image MIME type.
+        - `label` {{optional_inline}}
+          - : A string providing a name for the associated image.
 
-    - `title`{{optional_inline}}
-      - : A {{domxref("DOMString", "string")}} containing text to update the title of the user interface.
+    - `title` {{optional_inline}}
+      - : A string containing the new title of the user interface.
 
 ### Return value
 

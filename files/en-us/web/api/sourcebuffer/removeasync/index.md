@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.removeAsync()
 slug: Web/API/SourceBuffer/removeAsync
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -31,7 +32,7 @@ This method can only be called when {{domxref("SourceBuffer.updating", "updating
 ## Syntax
 
 ```js
-removePromise = sourceBuffer.removeAsync(start, end);
+removeAsync(start, end)
 ```
 
 ### Parameters
@@ -46,7 +47,7 @@ removePromise = sourceBuffer.removeAsync(start, end);
 A {{jsxref("Promise")}} whose fulfillment handler is executed once the buffers in the
 specified time range have been removed from the `SourceBuffer`.
 
-## Example
+## Examples
 
 This example establishes an asynchronous function, `emptySourceBuffer()`,
 which clears the contents of the specified `SourceBuffer`.
@@ -55,7 +56,7 @@ which clears the contents of the specified `SourceBuffer`.
 async function emptySourceBuffer(msBuffer) {
   await msBuffer.removeAsync(0, Infinity).catch(function(e) {
     handleException(e);
-  }
+  });
 }
 ```
 
@@ -69,8 +70,7 @@ This feature is not part of any specification. It is not on track to become a st
 
 ## See also
 
-- [Media Source Extensions
-  API](/en-US/docs/Web/API/Media_Source_Extensions_API)
+- [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API)
 - {{domxref("SourceBuffer.remove()")}}
 - {{domxref("MediaSource")}}
 - {{domxref("SourceBufferList")}}

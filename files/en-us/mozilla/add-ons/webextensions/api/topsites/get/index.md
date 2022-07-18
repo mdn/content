@@ -23,16 +23,16 @@ To determine which pages appear in the list, and the order in which they appear,
 
 The browser may then apply further filtering to this list before presenting it to the user. For example, in Firefox the "New Tab" page only lists one page per domain, and the user is able to block pages from appearing in the list.
 
-The `topSites.get()` API enables an extension to get access to this list. Called without any options, it will provide the filtered list of pages -  that is, the one that appears in the "New Tab" page. However, by providing various options it's possible for an extension to get the unfiltered list of pages.
+The `topSites.get()` API enables an extension to get access to this list. Called without any options, it will provide the filtered list of pages -  that is, the one that appears in the "New Tab" page. However, by providing various options it's possible for an extension to get the unfiltered list of pages.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-To use the topSites API you must have the "topSites" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
+To use the topSites API you must have the "topSites" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
 
 ## Syntax
 
 ```js
-var gettingTopSites = browser.topSites.get(
+let gettingTopSites = browser.topSites.get(
     options  // object
 )
 ```
@@ -83,7 +83,7 @@ function onError(error) {
   console.log(error);
 }
 
-var gettingTopSites = browser.topSites.get();
+let gettingTopSites = browser.topSites.get();
 gettingTopSites.then(logTopSites, onError);
 ```
 
@@ -100,7 +100,7 @@ function onError(error) {
   console.log(error);
 }
 
-var gettingTopSites = browser.topSites.get({
+let gettingTopSites = browser.topSites.get({
   includeBlocked: true,
   onePerDomain: false
 });
@@ -110,7 +110,7 @@ gettingTopSites.then(logTopSites, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/extensions/topSites) API.
+> **Note:** This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/topSites/) API.
 
 <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //

@@ -25,7 +25,7 @@ x === y
 
 ## Description
 
-The strict equality operators (`===` and `!==`) use the [Strict Equality Comparison Algorithm](http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.6) to compare two operands.
+The strict equality operators (`===` and `!==`) use the [`IsStrictlyEqual` Abstract Operation](https://tc39.es/ecma262/#sec-isstrictlyequal) to compare two operands.
 
 - If the operands are of different types, return `false`.
 - If both operands are objects, return `true` only if they refer to the
@@ -96,9 +96,6 @@ console.log(object1 === object1);  // true
 
 ## See also
 
-- [Equality
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
-- [Inequality
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [Strict
-  inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
+- [Equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
+- [Inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [Strict inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)

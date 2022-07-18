@@ -1,6 +1,7 @@
 ---
 title: HTMLCanvasElement.height
 slug: Web/API/HTMLCanvasElement/height
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -19,12 +20,9 @@ default value of `150` is used.
 This is one of the two properties, the other being
 {{domxref("HTMLCanvasElement.width")}}, that controls the size of the canvas.
 
-## Syntax
+## Value
 
-```js
-var pxl = canvas.height;
-canvas.height = pxl;
-```
+A number.
 
 ## Examples
 

@@ -59,8 +59,8 @@ The resulting object has the following properties:
 ### Using the resolvedOptions method
 
 ```js
-var de = new Intl.Collator('de', { sensitivity: 'base' })
-var usedOptions = de.resolvedOptions();
+const de = new Intl.Collator('de', { sensitivity: 'base' })
+const usedOptions = de.resolvedOptions();
 
 usedOptions.locale;            // "de"
 usedOptions.usage;             // "sort"

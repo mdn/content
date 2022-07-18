@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchRegistration.abort()
 slug: Web/API/BackgroundFetchRegistration/abort
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,7 +17,7 @@ The **`abort()`** method of the {{domxref("BackgroundFetchRegistration")}} inter
 ## Syntax
 
 ```js
-let status = BackgroundFetchRegistration.abort();
+abort()
 ```
 
 ### Parameters

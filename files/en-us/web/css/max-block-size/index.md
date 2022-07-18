@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Layout
   - Maximum Height
   - Maximum Width
@@ -49,6 +48,7 @@ max-block-size: fit-content(20em);
 max-block-size: inherit;
 max-block-size: initial;
 max-block-size: revert;
+max-block-size: revert-layer;
 max-block-size: unset;
 ```
 

@@ -36,7 +36,7 @@ x || y;
 ```
 
 The logical OR operator short-circuits: the second operand is only evaluated if the
-first operand doesn’t already determine the result.
+first operand doesn't already determine the result.
 
 Logical OR assignment short-circuits as well, meaning it only performs an assignment if
 the logical operation would evaluate the right-hand side. In other words,
@@ -83,11 +83,8 @@ otherwise you want to use the `??=` operator (for {{jsxref("null")}} or
 
 ## See also
 
-- [Logical OR
-  (||)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
-- [The
-  nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
-- [Bitwise
-  OR assignment (`|=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
+- [Logical OR (||)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
+- [The nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Bitwise OR assignment (`|=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
 - {{Glossary("Truthy")}}
 - {{Glossary("Falsy")}}

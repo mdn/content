@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Property
   - CSS Transforms
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.transform-style
@@ -31,6 +30,7 @@ transform-style: preserve-3d;
 transform-style: inherit;
 transform-style: initial;
 transform-style: revert;
+transform-style: revert-layer;
 transform-style: unset;
 ```
 
@@ -158,4 +158,4 @@ checkbox.addEventListener('change', () => {
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)

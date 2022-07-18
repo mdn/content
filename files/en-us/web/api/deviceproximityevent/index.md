@@ -1,6 +1,7 @@
 ---
 title: DeviceProximityEvent
 slug: Web/API/DeviceProximityEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface

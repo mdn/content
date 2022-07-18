@@ -20,7 +20,7 @@ By modifying the coordinate space, **CSS transforms** change the shape and posit
 
 CSS transforms are implemented using a set of CSS properties that let you apply affine linear transformations to HTML elements. These transformations include rotation, skewing, scaling, and translation both in the plane and in the 3D space.
 
-> **Warning:** Only elements positioned by the [box model](/en-US/docs/Web/CSS/CSS_Box_Model) can be `transform`ed. As a rule of thumb, an element is positioned by the box model if it has `display: block`.
+> **Warning:** Only elements positioned by the [box model](/en-US/docs/Web/CSS/CSS_Box_Model) can be `transform`ed. An element is positioned by the box model if it has `display: block`.
 
 ## CSS transforms properties
 
@@ -79,72 +79,72 @@ The HTML below creates four copies of the same box, with the perspective set at 
 
 ```html
 <table>
-  <tbody>
-    <tr>
-      <th><code>perspective: 250px;</code>
-      </th>
-      <th><code>perspective: 350px;</code>
-      </th>
-    </tr>
-    <tr>
-      <td>
-        <div class="container">
-          <div class="cube pers250">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
-          </div>
-        </div>
-      </td>
-      <td>
-        <div class="container">
-          <div class="cube pers350">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
-          </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <th><code>perspective: 500px;</code>
-      </th>
-      <th><code>perspective: 650px;</code>
-      </th>
-    </tr>
-    <tr>
-      <td>
-        <div class="container">
-          <div class="cube pers500">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
-          </div>
-        </div>
-      </td>
-      <td>
-        <div class="container">
-          <div class="cube pers650">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
-          </div>
-        </div>
-      </td>
-    </tr>
-  </tbody>
+  <tbody>
+    <tr>
+      <th><code>perspective: 250px;</code>
+      </th>
+      <th><code>perspective: 350px;</code>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <div class="container">
+          <div class="cube pers250">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="container">
+          <div class="cube pers350">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><code>perspective: 500px;</code>
+      </th>
+      <th><code>perspective: 650px;</code>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <div class="container">
+          <div class="cube pers500">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="container">
+          <div class="cube pers650">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -543,5 +543,5 @@ Once you have done this, you can work on the element in the 3D space.
 ## See also
 
 - [Using device orientation with 3D Transforms](/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms)
-- [Intro to CSS 3D transforms](https://desandro.github.io/3dtransforms/) (Blog post by David DeSandro)
+- [Intro to CSS 3D transforms](https://3dtransforms.desandro.com/) (Blog post by David DeSandro)
 - [CSS Transform Playground](https://css-transform.moro.es/) (Online tool to visualize CSS Transform functions)

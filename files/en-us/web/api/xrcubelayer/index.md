@@ -1,6 +1,7 @@
 ---
 title: XRCubeLayer
 slug: Web/API/XRCubeLayer
+page-type: web-api-interface
 tags:
   - API
   - AR
@@ -32,7 +33,7 @@ To present layers to the XR device, add them to the `layers` render state using 
 _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 
 - {{domxref("XRCubeLayer.space")}}
-  - : An {{domxref("XRSpace")}} representing the layer's spatial relationship with the user’s physical environment.
+  - : An {{domxref("XRSpace")}} representing the layer's spatial relationship with the user's physical environment.
 - {{domxref("XRCubeLayer.orientation")}}
   - : A {{domxref("DOMPointReadOnly")}} representing the orientation relative to the `space` property.
 

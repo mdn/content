@@ -1,6 +1,7 @@
 ---
 title: VRDisplay
 slug: Web/API/VRDisplay
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -24,7 +25,7 @@ An array of all connected VR Devices can be returned by invoking the {{domxref("
 
 ## Properties
 
-- {{domxref("VRDisplay.capabilities")}} {{readonlyInline}}{{deprecated_inline}}
+- {{domxref("VRDisplay.capabilities")}} {{readonlyInline}} {{deprecated_inline}}
   - : Returns a {{domxref("VRDisplayCapabilities")}} object that indicates the various capabilities of the `VRDisplay`.
 - {{domxref("VRDisplay.depthFar")}} {{deprecated_inline}}
   - : Gets and sets the z-depth defining the far plane of the [eye view frustum](https://en.wikipedia.org/wiki/Viewing_frustum), i.e. the furthest viewable boundary of the scene.
@@ -34,8 +35,6 @@ An array of all connected VR Devices can be returned by invoking the {{domxref("
   - : Returns an identifier for this particular VRDisplay, which is also used as an association point in the [Gamepad API](/en-US/docs/Web/API/Gamepad_API) (see {{domxref("Gamepad.displayId")}}).
 - {{domxref("VRDisplay.displayName")}} {{readonlyInline}} {{deprecated_inline}}
   - : Returns a human-readable name to identify the `VRDisplay`.
-- {{domxref("VRDisplay.hardwareUnitId")}} {{deprecated_inline}}
-  - : Returns a {{domxref("DOMString")}} defining the shared ID of the display, and any other devices that are part of that hardware set (e.g. controllers). This is no longer needed, and has been removed from the spec. Displays now use {{domxref("VRDisplay.displayId")}}, and corresponding controllers will now return the same ID under {{domxref("Gamepad.displayId")}}.
 - {{domxref("VRDisplay.isConnected")}} {{readonlyInline}} {{deprecated_inline}}
   - : Returns a boolean value indicating whether the `VRDisplay` is connected to the computer.
 - {{domxref("VRDisplay.isPresenting")}} {{readonlyInline}} {{deprecated_inline}}
@@ -90,7 +89,7 @@ if(navigator.getVRDisplays) {
 
 This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/).
 
 ## Browser compatibility
 

@@ -1,6 +1,7 @@
 ---
 title: Web-based protocol handlers
 slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
+page-type: guide
 tags:
   - Advanced
   - HTML5
@@ -24,8 +25,8 @@ Setting up a web application as a protocol handler is not a difficult process. B
 
 ```js
 navigator.registerProtocolHandler("web+burger",
-                                  "http://www.google.co.uk/?uri=%s",
-                                  "Burger handler");
+                                  "http://www.google.co.uk/?uri=%s",
+                                  "Burger handler");
 ```
 
 Where the parameters are:
@@ -44,15 +45,15 @@ Registering the same protocol handler more than once will pop up a different not
 
 ### Example
 
-```js
+```html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="en">
 <head>
   <title>Web Protocol Handler Sample - Register</title>
   <script type="text/javascript">
     navigator.registerProtocolHandler("web+burger",
-                                  "http://www.google.co.uk/?uri=%s",
-                                  "Burger handler");
+                                  "http://www.google.co.uk/?uri=%s",
+                                  "Burger handler");
   </script>
 </head>
 <body>
@@ -123,6 +124,6 @@ if ( isset ( $_GET["value"] ) ) {
 
 ## See also
 
-- [nsIProtocolHandler](/en-US/docs/XPCOM_Interface_Reference/nsIProtocolHandler) (XUL only)
-- [RegisterProtocolHandler Enhancing the Federated Web](http://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) at Mozilla Webdev
-- [Register a custom protocolHandler](https://developers.google.com/web/updates/2011/06/Registering-a-custom-protocol-handler) at Google Developers.
+- `nsIProtocolHandler` (XUL only)
+- [RegisterProtocolHandler Enhancing the Federated Web](https://blog.mozilla.org/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) at Mozilla Webdev
+- [Register a custom protocolHandler](https://web.dev/registering-a-custom-protocol-handler/) at web.dev.

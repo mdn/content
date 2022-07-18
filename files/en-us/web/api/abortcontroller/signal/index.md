@@ -1,6 +1,7 @@
 ---
 title: AbortController.signal
 slug: Web/API/AbortController/signal
+page-type: web-api-instance-property
 tags:
   - API
   - AbortController
@@ -15,13 +16,7 @@ browser-compat: api.AbortController.signal
 
 The **`signal`** read-only property of the {{domxref("AbortController")}} interface returns an {{domxref("AbortSignal")}} object instance, which can be used to communicate with/abort a DOM request as desired.
 
-## Syntax
-
-```js
-var signal = abortController.signal;
-```
-
-### Value
+## Value
 
 An {{domxref("AbortSignal")}} object instance.
 
@@ -48,9 +43,9 @@ abortBtn.addEventListener('click', function() {
 });
 
 function fetchVideo() {
-  ...
+  // …
   fetch(url, {signal}).then(function(response) {
-    ...
+    // …
   }).catch(function(e) {
    reports.textContent = 'Download error: ' + e.message;
   })

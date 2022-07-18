@@ -57,11 +57,11 @@ The resulting object has the following properties:
 
 ## Examples
 
-### Using the `resolvedOptions` method
+### Using the resolvedOptions() method
 
 ```js
-var de = new Intl.RelativeTimeFormat('de-DE');
-var usedOptions = de.resolvedOptions();
+const de = new Intl.RelativeTimeFormat('de-DE');
+const usedOptions = de.resolvedOptions();
 
 usedOptions.locale;          // "de-DE"
 usedOptions.style;           // "long"

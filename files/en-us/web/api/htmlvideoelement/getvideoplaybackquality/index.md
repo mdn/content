@@ -1,6 +1,7 @@
 ---
 title: HTMLVideoElement.getVideoPlaybackQuality()
 slug: Web/API/HTMLVideoElement/getVideoPlaybackQuality
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -31,15 +32,19 @@ The data returned can be used to evaluate the quality of the video stream.
 ## Syntax
 
 ```js
-videoPQ = videoElement.getVideoPlaybackQuality();
+getVideoPlaybackQuality()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
 A {{domxref("VideoPlaybackQuality")}} object providing information about the video
 element's current playback quality.
 
-## Example
+## Examples
 
 This example updates an element to indicate the total number of video frames that have
 elapsed so far in the playback process. This value includes any dropped or corrupted

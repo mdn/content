@@ -1,6 +1,7 @@
 ---
 title: XRCompositionLayer.mipLevels
 slug: Web/API/XRCompositionLayer/mipLevels
+page-type: web-api-instance-property
 tags:
   - API
   - Property

@@ -10,9 +10,9 @@ If you know of useful mailing lists, newsgroups, forums, or other communities re
 
 ## Ajax Workshops and Courses
 
-- [skillsmatter.com](http://skillsmatter.com/go/ajax-ria): Courses and events on JavaScript, Ajax, and Reverse Ajax technologies
+- [skillsmatter.com](https://skillsmatter.com/explore?q=ajax-ria): Courses and events on JavaScript, Ajax, and Reverse Ajax technologies
 - [telerik.com](https://www.telerik.com/forums/aspnet-ajax): An active community forum for Ajax
 - [community.tableau.com](https://community.tableau.com/search.jspa?q=ajax): Community support forum and courses available for Ajax
 - [codementor.io](https://www.codementor.io/community/search?q=ajax): Social platform with Ajax forums and tutorials
-- [lynda.com](https://www.lynda.com/search?q=ajax): Tutorials available for learning the fundamentals of Ajax
+- [LinkedIn Learning](https://www.linkedin.com/learning/search?keywords=ajax): Tutorials available for learning the fundamentals of Ajax
 - [Ajax Interview Questions and answer](https://www.onlineinterviewquestions.com/ajax-interview-questions/) Interwiki links

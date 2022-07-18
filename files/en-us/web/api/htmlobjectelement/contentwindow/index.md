@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.contentWindow
 slug: Web/API/HTMLObjectElement/contentWindow
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -18,13 +19,7 @@ the {{domxref("HTMLObjectElement")}} interface returns a {{domxref("WindowProxy"
 representing the window proxy of the object element's nested browsing context, if any;
 otherwise null.
 
-## Syntax
-
-```js
-var WindowProxy = HTMLObjectElement.contentWindow;
-```
-
-### Value
+## Value
 
 A {{domxref('WindowProxy')}}.
 

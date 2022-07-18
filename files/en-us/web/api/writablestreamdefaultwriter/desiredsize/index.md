@@ -1,6 +1,7 @@
 ---
 title: WritableStreamDefaultWriter.desiredSize
 slug: Web/API/WritableStreamDefaultWriter/desiredSize
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -17,13 +18,7 @@ The **`desiredSize`** read-only property of the
 {{domxref("WritableStreamDefaultWriter")}} interface returns the desired size required
 to fill the stream's internal queue.
 
-## Syntax
-
-```js
-var desiredSize = writableStreamDefaultWriter.desiredSize;
-```
-
-### Value
+## Value
 
 An integer. Note that this can be negative if the queue is over-full.
 
@@ -33,29 +28,29 @@ closed.
 
 ### Exceptions
 
-- TypeError
-  - : The writer’s lock is released.
+- {{jsxref("TypeError")}}
+  - : The writer's lock is released.
 
 ## Examples
 
 ```js
 const writableStream = new WritableStream({
   write(chunk) {
-    ...
+    // ...
   },
   close() {
-    ...
+    // ...
   },
   abort(err) {
-    ...
+    // ...
   }
 }, queuingStrategy);
 
-...
+// ...
 
 const writer = writableStream.getWriter();
 
-...
+// ...
 
 // return stream's desired size
 let size = writer.desiredSize;

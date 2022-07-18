@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - NeedsContent
   - Reference
   - recipe:css-property
@@ -14,6 +13,10 @@ browser-compat: css.properties.inset-inline-end
 {{CSSRef}}
 
 The **`inset-inline-end`** [CSS](/en-US/docs/Web/CSS) property defines the logical inline end inset of an element, which maps to a physical offset depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, or {{cssxref("left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
+
+{{EmbedInteractiveExample("pages/css/inset-inline-end.html")}}
+
+## Syntax
 
 ```css
 /* <length> values */
@@ -30,12 +33,11 @@ inset-inline-end: auto;
 inset-inline-end: inherit;
 inset-inline-end: initial;
 inset-inline-end: revert;
+inset-inline-end: revert-layer;
 inset-inline-end: unset;
 ```
 
 The shorthand for {{cssxref("inset-inline-start")}} and `inset-inline-end` is {{cssxref("inset-inline")}}.
-
-## Syntax
 
 ### Values
 

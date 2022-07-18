@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.signalingState
 slug: Web/API/RTCPeerConnection/signalingState
+page-type: web-api-instance-property
 tags:
   - API
   - ICE
@@ -42,13 +43,7 @@ In addition, when the value of this property changes, a
 {{DOMxRef("RTCPeerConnection/signalingstatechange_event", "signalingstatechange")}} event is sent to the {{domxref("RTCPeerConnection")}}
 instance.
 
-## Syntax
-
-```js
- var state = RTCPeerConnection.signalingState;
-```
-
-### Value
+## Value
 
 The allowed string values are:
 
@@ -89,7 +84,7 @@ The allowed string values are:
 - `closed`
   - : The {{domxref("RTCPeerConnection")}} has been closed.
 
-## Example
+## Examples
 
 ```js
 var pc = new RTCPeerConnection(configuration);
@@ -106,8 +101,7 @@ var state = pc.signalingState;
 
 ## See also
 
-- [Lifetime of a WebRTC
-  session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
 - {{domxref("RTCPeerConnection")}}
 - {{DOMxRef("RTCPeerConnection/signalingstatechange_event", "signalingstatechange")}}
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)

@@ -1,6 +1,7 @@
 ---
 title: ConvolverNode.normalize
 slug: Web/API/ConvolverNode/normalize
+page-type: web-api-instance-property
 tags:
   - API
   - ConvolverNode
@@ -23,36 +24,29 @@ set to `false`, then the convolution will be rendered with no
 pre-processing/scaling of the impulse response. Changes to this value do not take
 effect until the next time the `buffer` attribute is set.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var convolver = audioCtx.createConvolver();
-convolver.normalize = false;
-```
-
-### Value
+## Value
 
 A boolean.
 
-## Example
+## Examples
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var convolver = audioCtx.createConvolver();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const convolver = audioCtx.createConvolver();
 
-  ...
+// …
 
 // grab audio track via XHR for convolver node
 
-var soundSource, concertHallBuffer;
+let soundSource;
+let concertHallBuffer;
 
 ajaxRequest = new XMLHttpRequest();
 ajaxRequest.open('GET', 'concert-crowd.ogg', true);
 ajaxRequest.responseType = 'arraybuffer';
 
 ajaxRequest.onload = function() {
-  var audioData = ajaxRequest.response;
+  let audioData = ajaxRequest.response;
   audioCtx.decodeAudioData(audioData, function(buffer) {
       concertHallBuffer = buffer;
       soundSource = audioCtx.createBufferSource();
@@ -62,7 +56,7 @@ ajaxRequest.onload = function() {
 
 ajaxRequest.send();
 
-  ...
+// …
 
 convolver.normalize = false; // must be set before the buffer, to take effect
 convolver.buffer = concertHallBuffer;

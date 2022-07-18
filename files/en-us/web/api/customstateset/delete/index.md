@@ -1,6 +1,7 @@
 ---
 title: CustomStateSet.delete()
 slug: Web/API/CustomStateSet/delete
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,15 +17,15 @@ The **`delete()`** method of the {{domxref("CustomStateSet")}} interface deletes
 ## Syntax
 
 ```js
-CustomStateSet.delete(value)
+delete(value)
 ```
 
 ### Parameters
 
-: `value`
-  : - The value to remove from the `CustomStateSet`.
+- `value`
+  - : value to remove from the `CustomStateSet`.
 
-### Return Value
+### Return value
 
 Returns `true` if `value` was in the `CustomStateSet`; otherwise `false`.
 

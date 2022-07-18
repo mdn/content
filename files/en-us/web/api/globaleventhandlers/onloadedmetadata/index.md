@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onloadedmetadata
 slug: Web/API/GlobalEventHandlers/onloadedmetadata
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -13,7 +14,7 @@ browser-compat: api.GlobalEventHandlers.onloadedmetadata
 
 The **`onloadedmetadata`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
-processing {{event("loadedmetadata")}} events.
+processing {{domxref("HTMLMediaElement/loadedmetadata_event", "loadedmetadata")}} events.
 
 The `loadedmetadata` event is fired when the metadata has been loaded.
 
@@ -37,5 +38,5 @@ specifying the handler for the event.
 
 ## See also
 
-- {{event("loadedmetadata")}}
-- [DOM event handlers](/en-US/docs/Web/Guide/Events/Event_handlers)
+- {{domxref("HTMLMediaElement/loadedmetadata_event", "loadedmetadata")}}
+- [DOM event handlers](/en-US/docs/Web/Events/Event_handlers)

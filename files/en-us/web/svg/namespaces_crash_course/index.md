@@ -5,7 +5,7 @@ tags:
   - SVG
   - XML
 ---
-As an [XML](/en-US/docs/Glossary/XML) dialect, [SVG](/en-US/docs/Web/SVG) is namespaced. It is important to understand the concept of namespaces and how they are used if you plan to author SVG content. Versions of SVG viewers prior to the release of Firefox 1.5 unfortunately paid scant attention to namespaces, but they are essential to multi-XML dialect supporting user agents such as [Gecko](/en-US/docs/Mozilla/Gecko)-based browsers which must be very strict. Take some time to understand namespaces now and it will save you all sorts of headaches in the future.
+As an [XML](/en-US/docs/Glossary/XML) dialect, [SVG](/en-US/docs/Web/SVG) is namespaced. It is important to understand the concept of namespaces and how they are used if you plan to author SVG content. Versions of SVG viewers prior to the release of Firefox 1.5 unfortunately paid scant attention to namespaces, but they are essential to multi-XML dialect supporting user agents such as [Gecko](/en-US/docs/Glossary/Gecko)-based browsers which must be very strict. Take some time to understand namespaces now and it will save you all sorts of headaches in the future.
 
 ### Background
 
@@ -184,7 +184,7 @@ The [DOM Level 1](https://www.w3.org/TR/REC-DOM-Level-1/) recommendation was cre
     </tr>
     <tr>
       <td>
-        <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#"
+        <a href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttr"
           >hasAttribute</a
         >
       </td>

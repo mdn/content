@@ -1,6 +1,7 @@
 ---
 title: XRFrame.getJointPose()
 slug: Web/API/XRFrame/getJointPose
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -18,7 +19,7 @@ browser-compat: api.XRFrame.getJointPose
 ---
 {{APIRef("WebXR Device API")}}
 
-The **`getJointPose()`** method of the {{domxref("XRFrame")}} interface returns an {{domxref("XRJointPose")}} object providing the pose of a hand joint (see {{domxref("XRHand")}}) relative to a given base space.
+The **`getJointPose()`** method of the {{domxref("XRFrame")}} interface returns an {{domxref("XRJointPose")}} object providing the pose of a hand joint (see {{domxref("XRHand")}}) relative to a given base space.
 
 ## Syntax
 
@@ -35,8 +36,8 @@ getJointPose(joint, baseSpace)
 
 ### Return value
 
-An {{domxref("XRJointPose")}} object specifying the position and orientation of the hand joint, relative to
-the {{domxref("XRSpace")}} indicated by `baseSpace`.
+An {{domxref("XRJointPose")}} object specifying the position and orientation of the hand joint, relative to
+the {{domxref("XRSpace")}} indicated by `baseSpace`.
 
 ## Examples
 
@@ -46,11 +47,11 @@ Call `getJointPose()` with an {{domxref("XRJointSpace")}} and an {{domxref("XRRe
 
 ```js
 navigator.xr.requestSession({optionalFeatures: ["hand-tracking"]}).then(
-  // ...
+  // …
 );
 
 function renderFrame(session, frame) {
-   // ...
+   // …
 
    for (inputSource of session.inputSources) {
       if (inputSource.hand) {

@@ -1,6 +1,7 @@
 ---
 title: API constructor subpage template
 slug: MDN/Structures/Page_types/API_constructor_subpage_template
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -24,6 +25,7 @@ browser-compat: path.to.feature.NameOfTheConstructor
 > ---
 > title: NameOfTheConstructor()
 > slug: Web/API/NameOfTheParentInterface/NameOfTheParentInterface
+> page-type: web-api-constructor
 > tags:
 >   - API
 >   - Constructor
@@ -43,6 +45,8 @@ browser-compat: path.to.feature.NameOfTheConstructor
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
 >     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheParentInterface`.
 >     Note that the name of the constructor function in the slug omits the parenthesis (it ends in `NameOfTheParentInterface` not `NameOfTheParentInterface()`).
+> - **page-type**
+>   - : The `page-type` key for Web/API constructors is always `web-api-constructor`.
 > - **tags**
 >   - : Always include the following tags: **API**, **Reference**, **Constructor**,  the _name of the API_ (e.g. **WebVR**), the name of the _parent interface_ (e.g. **IDBIndex**).
 >
@@ -65,7 +69,7 @@ browser-compat: path.to.feature.NameOfTheConstructor
 > A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
 > You should update or delete them according to the advice below:
 >
-> - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)).
+> - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental).
 >   If the technology you are documenting is not experimental, you should remove this.
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 > - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete).
@@ -73,7 +77,7 @@ browser-compat: path.to.feature.NameOfTheConstructor
 > - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 >   If it isn't, then you can remove the macro call.
 >   If it is, then you should also fill in an entry for it in the [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) page.
-> - `\{{APIRef("GroupDataName")}}` — this generates the left hand reference sidebar showing quick reference links related to the current page.
+> - `\{{APIRef("GroupDataName")}}` — this generates the left-hand reference sidebar showing quick reference links related to the current page.
 >   For example, every page in the [WebVR API](/en-US/docs/Web/API/WebVR_API) has the same sidebar, which points to the other pages in the API.
 >   To generate the correct sidebar for your API, you need to add a `GroupData` entry to our GitHub repo, and include the entry's name inside the macro call in place of _GroupDataName_.
 >   See our [API reference sidebars](/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars) guide for information on how to do this.
@@ -93,10 +97,10 @@ Fill in a syntax box, according to the guidance in our [syntax sections](/en-US/
 
 ### Parameters
 
-- parameter1 {{optional_inline}}
+- `parameter1` {{optional_inline}}
   - : Include a brief description of the parameter and what it does here. Include one term and definition for each parameter.
     If the parameter is not optional, remove the \\{{optional_inline}} macro call.
-- parameter2
+- `parameter2`
   - : etc.
 
 ### Return value
@@ -113,17 +117,37 @@ This is normally just "An instance of the {{domxref("NameOfTheParentInterface")}
 
 ## Examples
 
-Fill in a simple example that nicely shows a typical usage of the constructor, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information).
+### A descriptive heading
 
-```js
-my code block
-```
+Each example must have an H3 heading naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
 
-And/or include a list of links to useful code samples that live elsewhere:
+See our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information.
 
-- x
-- y
-- z
+> **Note:** Sometimes you will want to link to examples given on another page.
+>
+> **Scenario 1:** If you have some examples on this page and some more examples on another page:
+>
+> Include an H3 heading (`###`) for each example on this page and then a final H3 heading (`###`) with the text "More examples", under which you can link to the examples on other pages. For example:
+>
+>  ```md
+>  ## Examples
+>
+>  ### Using the fetch API
+>  Example of Fetch
+>
+>  ### More examples
+>  Links to more examples on other pages
+>  ```
+>
+> **Scenario 2:** If you _only_ have examples on another page and none on this page:
+>
+> Don't add any H3 headings; just add the links directly under the H2 heading "Examples". For example:
+>
+>  ```md
+>   ## Examples
+>
+>   For examples of this API, see [the page on fetch()](https://example.org).
+>
 
 ## Specifications
 

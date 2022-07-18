@@ -57,12 +57,12 @@ In this simple example we add a listener to the {{WebExtAPIRef("notifications.on
 
 ```js
 browser.notifications.onClosed.addListener(function(notificationId) {
-  console.log('Notification ' + notificationId + ' has closed.');
+  console.log('Notification ' + notificationId + ' has closed.');
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications) API.
+> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

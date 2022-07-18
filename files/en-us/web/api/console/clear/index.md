@@ -1,6 +1,7 @@
 ---
 title: console.clear()
 slug: Web/API/console/clear
+page-type: web-api-instance-method
 tags:
   - API
   - Debugging
@@ -18,8 +19,16 @@ environment allows it.
 ## Syntax
 
 ```js
-console.clear();
+clear()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

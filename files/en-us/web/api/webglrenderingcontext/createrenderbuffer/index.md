@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.createRenderbuffer()
 slug: Web/API/WebGLRenderingContext/createRenderbuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,7 +19,7 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) creates and initializes a
 ## Syntax
 
 ```js
-WebGLRenderbuffer gl.createRenderbuffer();
+createRenderbuffer()
 ```
 
 ### Parameters

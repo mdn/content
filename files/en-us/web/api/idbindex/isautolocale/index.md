@@ -1,6 +1,7 @@
 ---
 title: IDBIndex.isAutoLocale
 slug: Web/API/IDBIndex/isAutoLocale
+page-type: web-api-instance-property
 tags:
   - API
   - Database
@@ -17,36 +18,29 @@ browser-compat: api.IDBIndex.isAutoLocale
 
 The **`isAutoLocale`** read-only property of the {{domxref("IDBIndex")}} interface returns a boolean value indicating whether the index had a `locale` value of `auto` specified upon its creation (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).)
 
-## Syntax
-
-```js
-var myIndex = objectStore.index('index');
-console.log(myIndex.isAutoLocale);
-```
-
-### Value
+## Value
 
 A boolean value.
 
-## Example
+## Examples
 
-In the following example we open a transaction and an object store, then get the index `lName` from a simple contacts database. We then open a basic cursor on the index using {{domxref("IDBIndex.openCursor")}} — this works the same as opening a cursor directly on an `ObjectStore` using {{domxref("IDBObjectStore.openCursor")}} except that the returned records are sorted based on the index, not the primary key.
+In the following example we open a transaction and an object store, then get the index `lName` from a simple contacts database. We then open a basic cursor on the index using {{domxref("IDBIndex.openCursor")}} — this works the same as opening a cursor directly on an `ObjectStore` using {{domxref("IDBObjectStore.openCursor")}} except that the returned records are sorted based on the index, not the primary key.
 
 The `isAutoLocale` value is logged to the console.
 
 ```js
 function displayDataByIndex() {
   tableEntry.innerHTML = '';
-  var transaction = db.transaction(['contactsList'], 'readonly');
-  var objectStore = transaction.objectStore('contactsList');
+  const transaction = db.transaction(['contactsList'], 'readonly');
+  const objectStore = transaction.objectStore('contactsList');
 
-  var myIndex = objectStore.index('lName');
+  const myIndex = objectStore.index('lName');
   console.log(myIndex.isAutoLocale);
 
   myIndex.openCursor().onsuccess = function(event) {
-    var cursor = event.target.result;
+    const cursor = event.target.result;
     if(cursor) {
-      var tableRow = document.createElement('tr');
+      const tableRow = document.createElement('tr');
       tableRow.innerHTML =   '<td>' + cursor.value.id + '</td>'
                            + '<td>' + cursor.value.lName + '</td>'
                            + '<td>' + cursor.value.fName + '</td>'

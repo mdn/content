@@ -25,8 +25,9 @@ The [JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Statements)
 contains exhaustive details about the statements in this chapter. The semicolon
 (`;`) character is used to separate statements in JavaScript code.
 
-Any JavaScript expression is also a statement. See [Expressions and
-operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators) for complete information about expressions.
+Any JavaScript expression is also a statement.
+See [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+for complete information about expressions.
 
 ## Block statement
 
@@ -74,7 +75,7 @@ Here, `{ x++; }` is the block statement.
 >
 > This outputs `2` because the `var x` statement within the block
 > is in the same scope as the `var x` statement before the block. (In C or
-> Java, the equivalent code would have outputted `1`.)
+> Java, the equivalent code would have output `1`.)
 >
 > **Since ECMAScript2015**, the `let` and
 > `const` variable declarations are block-scoped. See the
@@ -147,7 +148,7 @@ if (condition) {
 }
 ```
 
-In general it’s good practice to not have an `if...else` with an assignment like "`x = y`" as a condition:
+In general it's good practice to not have an `if...else` with an assignment like "`x = y`" as a condition:
 
 ```js example-bad
 if (x = y) {
@@ -178,12 +179,12 @@ conditional statement.
 > For example:
 >
 > ```js
-> var b = new Boolean(false);
+> const b = new Boolean(false);
 > if (b)         // this condition evaluates to true
 > if (b == true) // this condition evaluates to false
 > ```
 
-#### **Example**
+#### Example
 
 In the following example, the function `checkData` returns `true`
 if the number of characters in a `Text` object is three. Otherwise, it
@@ -213,15 +214,14 @@ A `switch` statement looks like this:
 ```js
 switch (expression) {
   case label_1:
-    statements_1
-    [break;]
+    statements_1;
+    break;
   case label_2:
-    statements_2
-    [break;]
+    statements_2;
+    break;
     …
   default:
-    statements_def
-    [break;]
+    statements_default;
 }
 ```
 
@@ -248,9 +248,9 @@ executed, and then continues execution at the statement following `switch`.
 If `break` is omitted, the program continues execution inside the
 `switch` statement (and will evaluate the next `case`, and so on).
 
-##### **Example**
+##### Example
 
-In the following example, if `fruittype` evaluates to
+In the following example, if `fruitType` evaluates to
 `'Bananas'`, the program matches the value with case `'Bananas'`
 and executes the associated statement. When `break` is encountered, the
 program exits the `switch` and continues execution from the statement
@@ -258,7 +258,7 @@ following `switch`. If `break` were omitted, the statement for
 `case 'Cherries'` would also be executed.
 
 ```js
-switch (fruittype) {
+switch (fruitType) {
   case 'Oranges':
     console.log('Oranges are $0.59 a pound.');
     break;
@@ -278,7 +278,7 @@ switch (fruittype) {
     console.log('Mangoes and papayas are $2.79 a pound.');
     break;
   default:
-   console.log(`Sorry, we are out of ${fruittype}.`);
+    console.log(`Sorry, we are out of ${fruitType}.`);
 }
 console.log("Is there anything else you'd like?");
 ```
@@ -298,8 +298,7 @@ are created equal. While it is common to throw numbers or strings as errors, it 
 frequently more effective to use one of the exception types specifically created for
 this purpose:
 
-- [ECMAScript
-  exceptions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types)
+- [ECMAScript exceptions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types)
 - [`DOMException`](/en-US/docs/Web/API/DOMException)
   and [`DOMError`](/en-US/docs/Web/API/DOMError)
 
@@ -319,27 +318,7 @@ code throws several exceptions of varying types:
 throw 'Error2';   // String type
 throw 42;         // Number type
 throw true;       // Boolean type
-throw {toString: function() { return "I'm an object!"; } };
-```
-
-> **Note:** You can specify an object when you throw an exception. You can
-> then reference the object's properties in the `catch` block.
-
-```js
-// Create an object type UserException
-function UserException(message) {
-  this.message = message;
-  this.name = 'UserException';
-}
-
-// Make the exception convert to a pretty string when used as a string
-// (e.g., by the error console)
-UserException.prototype.toString = function() {
-  return `${this.name}: "${this.message}"`;
-}
-
-// Create an instance of the object type and throw it
-throw new UserException('Value too high');
+throw {toString() { return "I'm an object!"; } };
 ```
 
 ### `try...catch` statement
@@ -365,7 +344,7 @@ The following example uses a `try...catch` statement. The example calls a
 function that retrieves a month name from an array based on the value passed to the
 function. If the value does not correspond to a month number
 (`1`–`12`), an exception is thrown with the value
-`"InvalidMonthNo"` and the statements in the `catch` block set the
+`'InvalidMonthNo'` and the statements in the `catch` block set the
 `monthName` variable to `'unknown'`.
 
 ```js
@@ -527,9 +506,8 @@ If an inner `try` block does _not_ have a corresponding
 2. the enclosing `try...catch` statement's `catch` block is
     checked for a match.
 
-For more information, see [nested
-try-blocks](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#nested_try-blocks) on the
-[`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
+For more information, see [nested try-blocks](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#nested_try-blocks)
+on the [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
 reference page.
 
 ### Utilizing Error objects

@@ -4,6 +4,7 @@ slug: Web/HTTP/Headers/Accept-Patch
 tags:
   - HTTP
   - Reference
+spec-urls: https://www.rfc-editor.org/rfc/rfc5789#section-3.1
 ---
 {{HTTPSidebar}}
 
@@ -55,9 +56,7 @@ Accept-Patch: application/merge-patch+json
 
 ## Specifications
 
-| Specification                                        | Title      |
-| ---------------------------------------------------- | ---------- |
-| {{RFC("5789", "Accept-Patch", "3.1")}} | HTTP PATCH |
+{{Specifications}}
 
 ## Browser compatibility
 

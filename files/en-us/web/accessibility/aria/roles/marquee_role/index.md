@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: marquee role'
 slug: Web/Accessibility/ARIA/Roles/marquee_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
@@ -10,6 +10,7 @@ tags:
   - marquee
   - ARIA marquee
   - marquee role
+spec-urls: https://w3c.github.io/aria/#marquee
 ---
 
 A `marquee` is a type of [live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) containing non-essential information which changes frequently.
@@ -34,9 +35,7 @@ The marquee is required to have an accessible name.  Use [`aria-labelledby`](/en
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#marquee","ARIA: marquee role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

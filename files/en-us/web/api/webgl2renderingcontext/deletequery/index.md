@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.deleteQuery()
 slug: Web/API/WebGL2RenderingContext/deleteQuery
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -17,7 +18,7 @@ The **`WebGL2RenderingContext.deleteQuery()`** method of the [WebGL 2 API](/en-U
 ## Syntax
 
 ```js
-void gl.deleteQuery(query);
+deleteQuery(query)
 ```
 
 ### Parameters
@@ -27,7 +28,7 @@ void gl.deleteQuery(query);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

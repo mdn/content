@@ -1,6 +1,7 @@
 ---
 title: 'SpeechSynthesisUtterance: error event'
 slug: Web/API/SpeechSynthesisUtterance/error_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
@@ -38,7 +39,7 @@ _In addition to the properties listed below, properties from the parent interfac
 - {{domxref("SpeechSynthesisErrorEvent.error", "error")}} {{readonlyinline}}
   - : Returns an error code indicating what has gone wrong with a speech synthesis attempt.
 - {{domxref("SpeechSynthesisEvent.name", "name")}} {{readonlyinline}}
-  - : Returns the name associated with certain types of events occurring as the {{domxref("SpeechSynthesisUtterance.text")}} is being spoken: the name of the [SSML](https://www.w3.org/TR/speech-synthesis/#S3.3.2) marker reached in the case of a {{event("mark")}} event, or the type of boundary reached in the case of a {{event("boundary")}} event.
+  - : Returns the name associated with certain types of events occurring as the {{domxref("SpeechSynthesisUtterance.text")}} is being spoken: the name of the [SSML](https://www.w3.org/TR/speech-synthesis/#S3.3.2) marker reached in the case of a {{domxref("SpeechSynthesisUtterance.mark_event", "mark")}} event, or the type of boundary reached in the case of a {{domxref("SpeechSynthesisUtterance.boundary_event", "boundary")}} event.
 - {{domxref("SpeechSynthesisEvent.utterance", "utterance")}} {{readonlyinline}}
   - : Returns the {{domxref("SpeechSynthesisUtterance")}} instance that the event was triggered on.
 
@@ -48,7 +49,7 @@ You can use the `error` event in an [`addEventListener`](/en-US/docs/Web/API/Eve
 
 ```js
 utterThis.addEventListener('error', function(event) {
-  console.log('An error has occurred with the speech synthesis: ' + event.error');
+  console.log('An error has occurred with the speech synthesis: ' + event.error);
 });
 ```
 
@@ -56,7 +57,7 @@ Or use the `onerror` event handler property:
 
 ```js
 utterThis.onerror = function(event) {
-  console.log('An error has occurred with the speech synthesis: ' + event.error');
+  console.log('An error has occurred with the speech synthesis: ' + event.error);
 }
 ```
 

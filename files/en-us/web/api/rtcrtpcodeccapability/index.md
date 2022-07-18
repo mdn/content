@@ -1,6 +1,7 @@
 ---
 title: RTCRtpCodecCapability
 slug: Web/API/RTCRtpCodecCapability
+page-type: web-api-interface
 tags:
   - API
   - Capability
@@ -23,13 +24,13 @@ The [WebRTC API's](/en-US/docs/Web/API/WebRTC_API) **`RTCRtpCodecCapability`** d
 ## Properties
 
 - {{domxref("RTCRtpCodecCapability.channels", "channels")}} {{optional_inline}}
-  - : An unsigned integer value indicating the maximum number of channels supported by the codec; for example, a codec that supports only mono sound would have a value of 1; stereo codecs would have a 2, etc.
+  - : An unsigned integer value indicating the maximum number of channels supported by the codec; for example, a codec that supports only mono sound would have a value of 1; stereo codecs would have a 2, etc.
 - {{domxref("RTCRtpCodecCapability.clockRate", "clockRate")}}
   - : An unsigned long integer specifying the codec's clock rate in Hertz (Hz). The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1), including their clock rates.
 - {{domxref("RTCRtpCodecCapability.mimeType", "mimeType")}}
-  - : A {{domxref("DOMString")}} indicating the codec's MIME media type and subtype. See [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
+  - : A string indicating the codec's MIME media type and subtype. See [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
 - {{domxref("RTCRtpCodecCapability.sdpFmtpLine", "sdpFmtpLine")}} {{optional_inline}}
-  - : A {{domxref("DOMString")}} giving the format specific parameters field from the `a=fmtp` line in the SDP which corresponds to the codec, if such a line exists. If there is no parameters field, this property is left out.
+  - : A string giving the format specific parameters field from the `a=fmtp` line in the SDP which corresponds to the codec, if such a line exists. If there is no parameters field, this property is left out.
 
 ## Description
 

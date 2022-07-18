@@ -1,27 +1,23 @@
 ---
 title: DeprecationReportBody.message
 slug: Web/API/DeprecationReportBody/message
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
+  - Experimental
   - message
   - DeprecationReportBody
-browser-compat: api.DeprecationReportBody.message
+spec-urls: https://wicg.github.io/deprecation-reporting/#dom-deprecationreportbody-message
 ---
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`message`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns a human-readable description of the deprecation. This typically matches the message a browser will display in its DevTools console regarding a deprecated feature.
 
-## Syntax
+## Value
 
-```js
-let message = DeprecationReportBody.message;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}}.
+A string.
 
 ## Examples
 
@@ -46,4 +42,4 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 ## Browser compatibility
 
-{{Compat}}
+This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).

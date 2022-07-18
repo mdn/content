@@ -1,6 +1,7 @@
 ---
 title: VTTRegion
 slug: Web/API/VTTRegion
+page-type: web-api-interface
 tags:
   - API
   - VTTRegion
@@ -9,7 +10,7 @@ browser-compat: api.VTTRegion
 ---
 {{APIRef("WebVTT")}}
 
-The `VTTRegion` interface—part of the API for handling WebVTT (text tracks on media presentations)—describes a portion of the video to render a {{domxref("VTTCue")}} onto.
+The `VTTRegion` interface—part of the API for handling WebVTT (text tracks on media presentations)—describes a portion of the video to render a {{domxref("VTTCue")}} onto.
 
 ## Constructor
 
@@ -19,7 +20,7 @@ The `VTTRegion` interface—part of the API for handling WebVTT (text tracks on
 ## Properties
 
 - {{domxref("VTTRegion.id")}}
-  - : A {{domxref("DOMString")}} that identifies the region.
+  - : A string that identifies the region.
 - {{domxref("VTTRegion.width")}}
   - : A `double` representing the width of the region, as a percentage of the video.
 - {{domxref("VTTRegion.lines")}}

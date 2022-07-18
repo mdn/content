@@ -1,6 +1,7 @@
 ---
 title: 'Document: copy event'
 slug: Web/API/Document/copy_event
+page-type: web-api-event
 tags:
   - API
   - Clipboard API
@@ -9,7 +10,7 @@ tags:
   - Reference
   - Web
   - copy
-browser-compat: api.Document.copy_event
+browser-compat: api.Element.copy_event
 ---
 {{APIRef}}
 

@@ -21,7 +21,7 @@ This is an asynchronous function that returns a {{JSxRef("Promise")}}.
 ## Syntax
 
 ```js
-var gettingInfo = browser.runtime.getBrowserInfo()
+let gettingInfo = browser.runtime.getBrowserInfo()
 ```
 
 ### Parameters
@@ -50,7 +50,7 @@ function gotBrowserInfo(info) {
   console.log(info.name);
 }
 
-var gettingInfo = browser.runtime.getBrowserInfo();
+let gettingInfo = browser.runtime.getBrowserInfo();
 gettingInfo.then(gotBrowserInfo);
 ```
 

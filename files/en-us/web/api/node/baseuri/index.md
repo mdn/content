@@ -1,6 +1,7 @@
 ---
 title: Node.baseURI
 slug: Web/API/Node/baseURI
+page-type: web-api-instance-property
 tags:
   - Node
   - Property
@@ -24,11 +25,11 @@ The base URL is determined as follows:
 1. By default, the base URL is the location of the document
    (as determined by {{domxref("window.location")}}).
 2. If it is an HTML Document and there is a {{HTMLElement("Base")}} element in the document,
-   the `href`value of the _first_ `Base` element with such an attribute is used instead.
+   the `href` value of the _first_ `Base` element with such an attribute is used instead.
 
 ## Value
 
-A {{jsxref("String")}} representing the base URL of the {{domxref("Node")}}.
+A string representing the base URL of the {{domxref("Node")}}.
 
 ## Examples
 

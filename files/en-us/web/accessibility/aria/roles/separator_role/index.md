@@ -1,13 +1,16 @@
 ---
 title: 'ARIA: separator role'
 slug: Web/Accessibility/ARIA/Roles/separator_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
   - Reference
   - ARIA roles
   - document structure role
+spec-urls:
+  - https://w3c.github.io/aria/#separator
+  - https://w3c.github.io/aria-practices/#range_related_properties
 ---
 
 The `separator` role indicates the element is a divider that separates and distinguishes sections of content or groups of menuitems. The implicit ARIA role the native thematic break {{HTMLElement('hr')}} element is `separator`.
@@ -20,14 +23,14 @@ Elements with the role `separator` have an implicit [`aria-orientation`](/en-US/
 
 ### Non-focusable separator
 
-A non-focusable separator is a static structural element that can be used to help visually divide two groups of menu items in a menu or to provide a horizontal rule between two sections of a page. Thematic breaks that aren't focusable  can still be perceivable by a screen reader user when using a reading cursor that does not depend on focus.
+A non-focusable separator is a static structural element that can be used to help visually divide two groups of menu items in a menu or to provide a horizontal rule between two sections of a page. Thematic breaks that aren't focusable can still be perceivable by a screen reader user when using a reading cursor that does not depend on focus.
 
 ```html
 <h2>My first blog post</h2>
-  ....
+  …
 <img src="blueline.gif" role="separator" alt="">
 <h2>Two years later, my second post</h2>
-  ....
+  …
 ```
 
 In the example, an image creates a visual separator between two blog posts. The author could have used a semantic thematic break {{HTMLElement('hr')}} element and styled it with CSS to make it blue (and not have to change the image when they change the blog's theme), or the author could have encompassed each post in the semantic {{HTMLElement('article')}} element, or both.
@@ -36,12 +39,12 @@ In the example, an image creates a visual separator between two blog posts. The 
 <section role="feed">
   <article>
     <h2>My first blog post</h2>
-    ....
+    …
   </article>
   <hr />
   <article>
     <h2>Two years later, my second post</h2>
-    ....
+    …
   </article>
 </section>
 ```
@@ -62,6 +65,28 @@ The separator role can be used to identify the element as a visual separator bet
 If the separator is focusable, providing a visible boundary between two sections of content and enabling the user to change the relative size of the sections it separates by changing its position, the value of [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) must be set to a number reflecting the current position of the separator and the value must be updated when it changes. The [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) and [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) should also be included if they aren't set to the default values of 0 and 100, respectively.
 
 An accessible name, with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) should be included if there is more than one focusable separator.
+
+### All descendants are presentational
+
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `separator`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `separator` element as it is a role that does not support semantic children.
+
+For example, consider the following `separator` element, which contains a heading.
+
+```html
+<div role="separator"><h3>Title of my separator</h3></div>
+```
+
+Because descendants of `separator` are presentational, the following code is equivalent:
+
+```html
+<div role="separator"><h3 role="presentation">Title of my separator</h3></div>
+```
+
+From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
+
+```html
+<div role="separator">Title of my separator</div>
+```
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -95,10 +120,7 @@ An accessible name, with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attri
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#separator","ARIA: separator role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_separator_role","separator role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 

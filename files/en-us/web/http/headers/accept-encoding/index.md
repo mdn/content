@@ -11,7 +11,7 @@ browser-compat: http.headers.Accept-Encoding
 ---
 {{HTTPSidebar}}
 
-The **`Accept-Encoding`** request HTTP header indicates the content encoding (usually a compression algorithm) that the client can understand.  The server uses [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) to select one of the proposal and informs the client of that choice with the {{HTTPHeader("Content-Encoding")}} response header.
+The **`Accept-Encoding`** request HTTP header indicates the content encoding (usually a compression algorithm) that the client can understand.  The server uses [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) to select one of the proposals and informs the client of that choice with the {{HTTPHeader("Content-Encoding")}} response header.
 
 Even if both the client and the server support the same compression algorithms, the server may choose not to compress the body of a response if the `identity` value is also acceptable. Two common cases lead to this:
 
@@ -67,7 +67,7 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
 - `*`
   - : Matches any content encoding not already listed in the header. This is the default value if the header is not present. This directive does not suggest that any algorithm is supported but indicates that no preference is expressed.
 - `;q=` (qvalues weighting)
-  - : Any value is placed in an order of preference expressed using a relative [quality value](/en-US/docs/Glossary/Quality_values) called _weight_.
+  - : Any value is placed in an order of preference expressed using a relative [quality value](/en-US/docs/Glossary/Quality_values) called _weight_.
 
 ## Examples
 

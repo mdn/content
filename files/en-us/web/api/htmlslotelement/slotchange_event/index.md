@@ -1,6 +1,7 @@
 ---
 title: 'HTMLSlotElement: slotchange event'
 slug: Web/API/HTMLSlotElement/slotchange_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
@@ -48,7 +49,7 @@ element.removeAttribute('slot');
 // element.assignedSlot = null
 ```
 
-The following snippet is taken from our [slotchange example](https://github.com/mdn/web-components-examples/tree/master/slotchange) ([see it live also](https://mdn.github.io/web-components-examples/slotchange/)).
+The following snippet is taken from our [slotchange example](https://github.com/mdn/web-components-examples/tree/main/slotchange) ([see it live also](https://mdn.github.io/web-components-examples/slotchange/)).
 
 ```js
 let slots = this.shadowRoot.querySelectorAll('slot');

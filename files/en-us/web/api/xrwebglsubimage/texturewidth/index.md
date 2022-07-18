@@ -1,6 +1,7 @@
 ---
 title: XRWebGLSubImage.textureWidth
 slug: Web/API/XRWebGLSubImage/textureWidth
+page-type: web-api-instance-property
 tags:
   - API
   - Property

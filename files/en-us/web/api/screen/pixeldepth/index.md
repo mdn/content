@@ -1,6 +1,7 @@
 ---
 title: Screen.pixelDepth
 slug: Web/API/Screen/pixelDepth
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -12,16 +13,13 @@ browser-compat: api.Screen.pixelDepth
 {{APIRef("CSSOM")}}
 
 Returns the bit depth of the screen. Per the CSSOM, some implementations
-return `24` for compatibility reasons. See the {{anch("Browser
-  compatibility", "browser compatibility")}} section for those that don't.
+return `24` for compatibility reasons. See the [browser compatibility](#browser_compatibility) section for those that don't.
 
-## Syntax
+## Value
 
-```js
-let depth = window.screen.pixelDepth
-```
+A number.
 
-## Example
+## Examples
 
 ```js
 // if there is not adequate bit depth

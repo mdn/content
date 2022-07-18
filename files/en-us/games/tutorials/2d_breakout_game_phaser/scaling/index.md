@@ -16,7 +16,7 @@ tags:
 
 This is the **2nd step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). You can find the source code as it should look after completing this lesson at [Gamedev-Phaser-Content-Kit/demos/lesson02.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson02.html).
 
-Scaling refers to how the game canvas will scale on different screen sizes. We can make the game scale to fit on any screen size automatically during the preload stage, so we don't have to worry about it later.
+Scaling refers to how the game canvas will scale on different screen sizes. We can make the game scale to fit on any screen size automatically during the preload stage, so we don't have to worry about it later.
 
 ## The Phaser scale object
 

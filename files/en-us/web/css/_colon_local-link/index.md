@@ -1,11 +1,11 @@
 ---
 title: ':local-link'
 slug: Web/CSS/:local-link
-browser-compat: css.selectors.local-link
+spec-urls: https://drafts.csswg.org/selectors/#local-link-pseudo
 ---
 {{ CSSRef }}
 
-The **`:local-link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents a link to the same document. Therefore an element that is the source anchor of a hyperlink whose target’s absolute URL matches the element's own document URL.
+The **`:local-link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents a link to the same document. Therefore an element that is the source anchor of a hyperlink whose target's absolute URL matches the element's own document URL.
 
 ```css
 /* Selects any <a> that links to the current document */
@@ -16,7 +16,9 @@ a:local-link {
 
 ## Syntax
 
-{{csssyntax}}
+```
+:local-link
+```
 
 ## Examples
 
@@ -45,8 +47,8 @@ a:local-link {
 
 ## Browser compatibility
 
-{{Compat}}
+This feature is a proposal integrated into the specification. Currently, no browser supports it.
 
 ## See also
 
-- Link-related pseudo-classes: {{ cssxref(":link") }},{{ cssxref(":visited") }}, {{ cssxref(":hover") }}, {{ cssxref(":active") }}
+- Link-related pseudo-classes: {{ cssxref(":link") }}, {{ cssxref(":visited") }}, {{ cssxref(":hover") }}, {{ cssxref(":active") }}, {{ cssxref(":any-link") }}

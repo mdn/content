@@ -39,10 +39,7 @@ The links in this section lead to detailed guides explaining how to do a particu
       </td>
       <td>
         Our <a href="https://github.com/mdn/content/issues">content repo</a> is
-        where people submit issues to report problems found with MDN docs
-        (you'll also find some bugs to fix at the older
-        <a href="https://github.com/mdn/sprints/">sprints repo</a>, but we'll be
-        closing it down eventually). We get a lot of content bugs, and any help
+        where people submit issues to report problems found with MDN docs. We get a lot of content bugs, and any help
         you can give in fixing them would be much appreciated.
       </td>
       <td>
@@ -100,7 +97,7 @@ The links in this section lead to detailed guides explaining how to do a particu
           >active forums</a
         >
         where people go to ask for general help, or request that their
-        assessments be marked. We’d love some help with answering posts and
+        assessments be marked. We'd love some help with answering posts and
         growing our learning community.
       </td>
       <td>
@@ -129,7 +126,7 @@ We will add more tasks here as time goes on.
 
 You can also look at priority ratings to give you an idea of what the most important work is to work on — we've started giving content bug issues labels of P0, P1, P2, P3, and P4 to signify how important they are, with lower numbers being more important than higher numbers.
 
-These are figured out during the regular MDN bug triage process, based on the [MDN documentation priority list](/en-US/docs/MDN/Contribute/Documentation_priorities).
+These are figured out during the regular MDN bug triage process, based on the [MDN documentation priority list](https://mdn-contributor-docs.mozilla.org/legacy/documentation-priorities/).
 
 ### Other task types
 
@@ -144,7 +141,7 @@ If you are more interested in code, you could try your hand at the following:
 
 - [Convert code samples to be "live"](/en-US/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live) (30 minutes)
 - [Send a code patch to the Yari codebase](https://github.com/mdn/yari) (1 hour)
-- [Write an interactive example](https://github.com/mdn/interactive-examples/blob/master/CONTRIBUTING.md) (1 hour)
+- [Write an interactive example](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md) (1 hour)
 
 If you are interested in words _and_ code, you could try your hand at the following:
 

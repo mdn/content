@@ -1,6 +1,7 @@
 ---
 title: CSSTransformValue.values()
 slug: Web/API/CSSTransformValue/values
+page-type: web-api-instance-method
 tags:
   - API
   - CSS
@@ -22,12 +23,12 @@ each index in the CSSTransformValue object.
 ## Syntax
 
 ```js
-CSSTransformValue.values();
+values()
 ```
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 

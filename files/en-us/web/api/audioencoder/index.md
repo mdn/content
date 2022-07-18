@@ -1,6 +1,7 @@
 ---
 title: AudioEncoder
 slug: Web/API/AudioEncoder
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -8,18 +9,19 @@ tags:
   - AudioEncoder
 browser-compat: api.AudioEncoder
 ---
-The **`AudioEncoder`** interface of the {{domxref('WebCodecs API','','','true')}} encodes {{domxref("AudioData")}} objects.
+{{APIRef("WebCodecs API")}}
+The **`AudioEncoder`** interface of the [WebCodecs API](/en-US/docs/Web/API/WebCodecs_API) encodes {{domxref("AudioData")}} objects.
 
 ## Constructor
 
-- {{domxref("AudioEncoder.AudioEncoder()")}}
+- {{domxref("AudioEncoder.AudioEncoder", "AudioEncoder()")}}
   - : Creates a new `AudioEncoder` object.
 
 ## Properties
 
-- {{domxref("AudioEncoder.encodeQueueSize")}}{{ReadOnlyInline}}
+- {{domxref("AudioEncoder.encodeQueueSize")}} {{ReadOnlyInline}}
   - : An integer representing the number of encode queue requests.
-- {{domxref("AudioEncoder.state")}}{{ReadOnlyInline}}
+- {{domxref("AudioEncoder.state")}} {{ReadOnlyInline}}
   - : Represents the state of the underlying codec and whether it is configured for encoding.
 
 ## Methods

@@ -20,7 +20,7 @@ The `forced-colors` media feature indicates whether or not the browser is curren
 ### Values
 
 - `none`
-  - : Forced colors mode is not active; the page’s colors are not being forced into a limited palette.
+  - : Forced colors mode is not active; the page's colors are not being forced into a limited palette.
 - `active`
   - : Indicates that forced colors mode is active. The browser provides the color palette to authors through the [CSS system color](/en-US/docs/Web/CSS/color_value#system_colors) keywords and, if appropriate, triggers the appropriate value of [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) so that authors can adapt the page. The browser selects the value for `prefers-color-scheme` based on the lightness of the `Canvas` system color (see the [color adjust spec](https://www.w3.org/TR/css-color-adjust-1/#forced) for more details).
 
@@ -56,7 +56,7 @@ The system colors that are forced for the above properties depend on the context
 > **Note:** user agents choose system colors based on native element semantics, _not_ on added ARIA roles.
 > As an example, adding `role="button"` to a `div` will **not** cause an element's color to be forced to `ButtonText`
 
-In addition to these adjustments, browsers will help ensure text legibility by drawing “backplates” behind text. This is particularly important for preserving contrast when text is placed on top of images.
+In addition to these adjustments, browsers will help ensure text legibility by drawing "backplates" behind text. This is particularly important for preserving contrast when text is placed on top of images.
 
 There are two cases where the user agent does not force the values for the above properties — when a {{cssxref("forced-color-adjust")}} value of `none` is applied to an element, or when a system color is specified by the author.
 

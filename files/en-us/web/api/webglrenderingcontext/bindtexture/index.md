@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.bindTexture()
 slug: Web/API/WebGLRenderingContext/bindTexture
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,29 +19,29 @@ The **`WebGLRenderingContext.bindTexture()`** method of the [WebGL API](/en-US/d
 ## Syntax
 
 ```js
-void gl.bindTexture(target, texture);
+bindTexture(target, texture)
 ```
 
 ### Parameters
 
-- target
+- `target`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
 
     - `gl.TEXTURE_2D`: A two-dimensional texture.
     - `gl.TEXTURE_CUBE_MAP`: A cube-mapped texture.
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
       - `gl.TEXTURE_3D`: A three-dimensional texture.
       - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
 
-- texture
+- `texture`
   - : A {{domxref("WebGLTexture")}} object to bind.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

@@ -27,7 +27,7 @@ A frame rate actually describes both the number of frames per second, and the ve
 - 24fps describes that there are 24 frames per second (0-23), and those frames play at the same speed as a real time clock.
 - 23.976fps is where things get weird. Like 24fps, it describes that there are 24 frames per second (0-23). Unlike 24fps, however, those 24 frames play at a slightly slower speed than a real time clock. As the frame rate number (23.976fps) implies, in one real time second you almost see 24 frames. It actually takes 1.001 seconds for 24 frames playing back at 23.976fps to display.
 
-In a single second this is not a big deal. As you extend to a few minutes, however, 24fps and 23.976fps will already be a few frames different from one other. As you extend to an hour, they will differ by 3.6s. Here’s some math to illustrate this:
+In a single second this is not a big deal. As you extend to a few minutes, however, 24fps and 23.976fps will already be a few frames different from one other. As you extend to an hour, they will differ by 3.6s. Here's some math to illustrate this:
 
 01:00:00:00 @ 24fps
 
@@ -50,8 +50,8 @@ That said, there is actually a different approach to describing the time express
 The two attributes that must be included to use the frames method are `frameRate` and `frameRateMultiplier`. The frame rate describes how many frames are in one second, and the multiplier is applied to the `frameRate` to describe the actual frame rate in real time seconds. To describe a frame rate of 23.976fps, the following values would be used:
 
 ```xml
-<tt ... ttp:frameRate="24" ttp:frameRateMultiplier="1000 1001">
-  ...
+<tt ttp:frameRate="24" ttp:frameRateMultiplier="1000 1001">
+  …
 </tt>
 ```
 
@@ -59,4 +59,24 @@ This is saying that there are 24 frames in a second, and those are playing back 
 
 By describing this actual frame rate, you are now able to describe time expressions in frames, or f. This is the actual frame number that the event begins and ends. Here is the same example as above, where the event begins at 01:00:00:00, and ends one second later.
 
-<section id="Quick_links"><ol><li><a href="/en-US/docs/Related/IMSC/"><strong>IMSC</strong></a></li><li class="toggle"><details open><summary>IMSC guides</summary><ol><li><a href="/en-US/docs/Related/IMSC/Basics">IMSC basics</a></li><li><a href="/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill">Using the imscJS polyfill</a></li><li><a href="/en-US/docs/Related/IMSC/Styling">Styling IMSC documents</a></li><li><a href="/en-US/docs/Related/IMSC/Subtitle_placement">Subtitle placement in IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/Namespaces">Namespaces in IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/Timing_in_IMSC">Timing in IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC">Mapping video time codes to IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/IMSC_and_other_standards">IMSC and other standards</a></li></ol></details></li></ol></section>
+<section id="Quick_links">
+  <ol>
+    <li><a href="/en-US/docs/Related/IMSC/"><strong>IMSC</strong></a></li>
+    <li class="toggle">
+      <details open>
+        <summary>IMSC guides</summary>
+        <ol>
+          <li><a href="/en-US/docs/Related/IMSC/Basics">IMSC basics</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill">Using the imscJS polyfill</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Styling">Styling IMSC documents</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Subtitle_placement">Subtitle placement in IMSC</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Namespaces">Namespaces in IMSC</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Timing_in_IMSC">Timing in IMSC</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC">Mapping video time codes to IMSC</a>
+          </li>
+          <li><a href="/en-US/docs/Related/IMSC/IMSC_and_other_standards">IMSC and other standards</a></li>
+        </ol>
+      </details>
+    </li>
+  </ol>
+</section>

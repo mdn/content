@@ -1,6 +1,7 @@
 ---
 title: RadioNodeList
 slug: Web/API/RadioNodeList
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

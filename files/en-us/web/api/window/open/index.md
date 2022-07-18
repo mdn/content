@@ -1,6 +1,7 @@
 ---
 title: Window.open()
 slug: Web/API/Window/open
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -14,309 +15,117 @@ browser-compat: api.Window.open
 ---
 {{APIRef}}
 
-The {{domxref("Window")}} interface's **`open()`** method loads
-the specified resource into the new or existing browsing context (window,
-{{HTMLElement("iframe")}} or tab) with the specified name. If the name doesn't exist,
-then a new browsing context is opened in a new tab or a new window, and the specified
-resource is loaded into it.
-
-> **Note:** For brevity, this document will generally use the term "window" as a
-> shorthand for "a browsing context in a tab or window".
+The **`open()`** method of the {{domxref('Window')}} interface loads a specified resource into a new or existing browsing context (that is, tab, window, or {{HTMLElement("iframe")}}) under a specified name.
 
 ## Syntax
 
 ```js
-var window = window.open(url, windowName, [windowFeatures]);
+open()
+open(url)
+open(url, target)
+open(url, target, windowFeatures)
 ```
 
 ### Parameters
 
-- `url`
-  - : A {{domxref("DOMString")}} indicating the URL of the resource to be loaded. This can
-    be a path or URL to an HTML page, image file, or any other resource that is supported
-    by the browser. If the empty string ("") is specified as `url`,
-    a blank page is opened into the targeted browsing context.
-- `windowName` {{optional_inline}}
+- `url` {{optional_inline}}
+  - : A string indicating the URL or path of the resource to be loaded. If an empty string (`""`) is specified or this parameter is omitted, a blank page is opened into the targeted browsing context.
 
-  - : A {{domxref("DOMString")}} specifying the name of the browsing context (window,
-    {{HTMLElement("iframe")}} or tab) into which to load the specified resource; if the
-    name doesn't indicate an existing context, a new window is created and is given the
-    name specified by `windowName`.
+- `target` {{optional_inline}}
+  - : A string, without whitespace, specifying the {{domxref("window/name", "name")}} of the browsing context the resource is being loaded into. If the name doesn't identify an existing context, a new context is created and given the specified name. The special [`target` keywords](/en-US/docs/Web/HTML/Element/a#attr-target), `_self`, `_blank`, `_parent`, and `_top`, can also be used.
 
-    This name can be used as the target for the `target` attribute of
+    This name can be used as the `target` attribute of
     {{HTMLElement("a", "", "#attr-target")}} or {{HTMLElement("form", "",
-    "#attr-target")}} elements. The name should not contain whitespace. Keep in mind that
-    this will NOT be used as the window's title.
+    "#attr-target")}} elements.
 
 - `windowFeatures` {{optional_inline}}
-  - : A {{domxref("DOMString")}} containing a comma-separated list of window features
-    given with their corresponding values in the form _name=value_ — or for boolean features, just _name_. These
-    features include options such as the window's default size and position, whether or
-    not to open a minimal popup window, and so forth. See {{anch("Window features")}}
-    below for documentation of each of the features that can be specified.
+  - : A string containing a comma-separated list of window features in the form _name=value_ — or for boolean features, just _name_. These features include options such as the window's default size and position, whether or not to open a minimal popup window, and so forth. The following options are supported:
+    - `popup`
+      - : If this feature is enabled, it requests that a minimal popup window be used. The UI features included in the popup window will be automatically decided by the browser, generally including an address bar only.
+
+        If `popup` is not enabled, and there are no window features declared, the new browsing context will be a tab.
+
+        > **Note:** Specifying any features in the _windowFeatures_ parameter, other than `noopener` or `noreferrer`, also has the effect of requesting a popup.
+
+        To enable the feature, specify `popup` either with no value at all, or else set it to `yes`, `1`, or `true`.
+
+        Example: `popup=yes`, `popup=1`, `popup=true`, and `popup` all have identical results.
+
+        > **Note:** [The `true` value was introduced in March 2022](https://github.com/whatwg/html/pull/7425).
+        > For better compatibility with older browsers, use one of the other values.
+
+    - `width` or `innerWidth`
+      - : Specifies the width of the content area, including scrollbars. The minimum required value is 100.
+
+    - `height` or `innerHeight`
+      - : Specifies the height of the content area, including scrollbars. The minimum required value is 100.
+
+    - `left` or `screenX`
+      - : Specifies the distance in pixels from the left side of the work area as defined by the user's operating system where the new window will be generated.
+
+    - `top` or `screenY`
+      - : Specifies the distance in pixels from the top side of the work area as defined by the user's operating system where the new window will be generated.
+
+    - `noopener`
+      - : If this feature is set, the new window will not have access to the originating window via {{domxref("Window.opener")}} and returns `null`.
+
+        When `noopener` is used, non-empty target names, other than `_top`, `_self`, and `_parent`, are treated like `_blank` in terms of deciding whether to open a new browsing context.
+
+    - `noreferrer`
+      - : If this feature is set, the browser will omit the {{HTTPHeader("Referer")}} header, as well as set `noopener` to true. See [`rel="noreferrer"`](/en-US/docs/Web/HTML/Link_types#noreferrer) for more information.
 
 ### Return value
 
-A `WindowProxy` object, which is basically a thin wrapper for the
-{{domxref("Window")}} object representing the newly created window, and has all its
-features available. If the window couldn't be opened, the returned value is instead
-`null`. The returned reference can be used to access properties and methods
-of the new window as long as it complies with [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) security
-requirements.
+A [WindowProxy](/en-US/docs/Glossary/WindowProxy) object. The returned reference can be used to access properties and methods of the new window as long as it complies with [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) security requirements.
 
 ## Description
 
-The `open()` method creates a new secondary browser window, similar to
-choosing New Window from the File menu. The `url` parameter
-specifies the URL to be fetched and loaded in the new window. If
-`url` is an empty string, then a new blank, empty window (URL
-`about:blank`) is created with the default toolbars of the main window.
+The {{domxref("Window")}} interface's open() method takes a URL as a parameter, and loads the resource it identifies into a new or existing tab or window. The target parameter determines which window or tab to load the resource into, and the windowFeatures parameter can be used to control the size and position of a new window, and to open the new window as a popup with minimal UI features.
 
-Note that remote URLs won't load immediately. When `window.open()` returns,
-the window always contains `about:blank`. The actual fetching of the URL is
-deferred and starts after the current script block finishes executing. The window
-creation and the loading of the referenced resource are done asynchronously.
+Note that remote URLs won't load immediately. When window.open() returns, the window always contains about:blank. The actual fetching of the URL is deferred and starts after the current script block finishes executing. The window creation and the loading of the referenced resource are done asynchronously.
 
 ## Examples
 
+The following example demonstrates how to implement the `popup` feature.
+
 ```js
-var windowObjectReference;
-var windowFeatures = "popup";
+let windowObjectReference;
+let windowFeatures = "popup";
 
 function openRequestedPopup() {
-  windowObjectReference = window.open("http://www.cnn.com/", "CNN_WindowName", windowFeatures);
+  windowObjectReference = window.open("http://www.mozilla.org/", "mozillaWindow", windowFeatures);
 }
 ```
 
-In Firefox on desktop, calling the function above creates a new browser window with a non-editable address bar and without the navigation buttons:
-![CNN's home page shown in a Firefox window with a non-editable address bar and without navigation buttons](popup.png)
+We can also control the size and position of the new window.
 
 ```js
-var windowObjectReference;
+let windowObjectReference;
+let windowFeatures = "left=100,top=100,width=320,height=320";
 
 function openRequestedPopup() {
-  windowObjectReference = window.open(
-    "http://www.domainname.ext/path/ImageFile.png",
-    "DescriptiveWindowName",
-    "left=100,top=100,width=320,height=320"
-  );
+  windowObjectReference = window.open("http://www.mozilla.org/", "mozillaWindow", windowFeatures);
 }
 ```
 
-If a window with the name already exists, then `url` is loaded
-into the _existing_ window. In this case the return value of the method is the
-existing window and `windowFeatures` is ignored. Providing an
-empty string for `url` is a way to get a reference to an open
-window by its name without changing the window's location. Otherwise the call to
-`window.open()` will just create a new window.
+Alternatively, we can open a new _tab_ by omitting window features.
 
-To open a _new_ window on every call of `window.open()`, use the
-special value `_blank` for `windowName`.
+```js
+let windowObjectReference;
 
-## Window features
-
-`windowFeatures` is an optional string containing a
-comma-separated list of requested features of the new window. After a window is opened,
-JavaScript can't be used to change the features. If `windowName`
-does not specify an existing window and the `windowFeatures`
-parameter is not provided (or if the `windowFeatures` parameter is
-an empty string), then the new secondary window will render the default toolbars of the
-main window.
-
-### Popup feature
-
-You can specify the _windowFeatures_ parameter to explicitly request that the browser use a popup window
-with minimal UI parts for the new secondary window.
-
-Whether or not to use a popup window affects the {{domxref("BarProp.visible")}} value.
-
-> **Note:** In some browsers, users can configure the browser to not to use a popup window. Also, some
-> browsers, such as mobile browsers, don't have the concept of windows.
-
-- `popup`
-
-  - : If this feature is present and enabled, it requests that the browser use a minimal pop-up
-      window for the new secondary window.
-      If this feature is present and disabled, it requests that the browser not use a minimal
-      pop-up window for the secondary window.
-
-To enable the feature, specify `popup` either with no value at all, or else set it to `yes` or `1`.
-
-Example: `popup=yes`, `popup=1`, and `popup` all have identical results.
-
-Otherwise:
-
-- To not request a popup, omit the _windowFeatures_ parameter.
-- Otherwise:
-  - Specifying any features in the _windowFeatures_ parameter other than `noopener` or `noreferrer` has the effect of also requesting a popup.
-  - Otherwise, no popup is requested.
-
-### Position and size features
-
-You can use the _windowFeatures_ parameter to control the position and size of the new secondary window,
-by specifying feature names using _name=value_ pairs.
-If any feature names are given, and the `popup` feature name is not given, it requests that the browser
-use a minimal pop-up window for the secondary window.
-
-> **Note:** In some browsers, users can override this behavior. Also, it has no effect in
-> mobile browsers, which lack the concept of windows.
-
-[Note on position and
-dimension error correction](#note_on_position_and_dimension_error_correction)
-
-#### Position
-
-> **Warning:** If only one of them is specified, the behavior is implementation-dependent, and web
-> author should not rely on it.
-
-- `left` or `screenX`
-  - : Specifies the distance the new window is placed from the left side of the work area
-    for applications of the user's operating system to the leftmost border (resizing
-    handle) of the browser window. The new window cannot be initially positioned
-    offscreen.
-- `top` or `screenY`
-  - : Specifies the distance the new window is placed from the top side of the work area
-    for applications of the user's operating system to the topmost border (resizing
-    handle) of the browser window. The new window cannot be initially positioned
-    offscreen.
-
-If the `windowFeatures` parameter is non-empty and if no position
-features are defined, then the left and top coordinates of the new window dimension will
-be 22 pixels from where the most recently rendered window was. An offset is universally
-implemented by browser manufacturers (it is 29 pixels in IE6 SP2 with the default theme)
-and its purpose is to help users to notice new windows opening. If the most recently
-used window was maximized, then there is no offset: the new window will be maximized as
-well.
-
-#### Size
-
-> **Warning:** If only one of them is specified, the behavior is implementation-dependent, and web
-> author should not rely on it.
-
-- `width` or `innerWidth`
-  - : Specifies the width of the content area, viewing area of the new secondary window in
-    pixels. The width value includes the width of the vertical scrollbar if present. The
-    width value does not include the sidebar if it is expanded. The minimum required value
-    is 100.
-- `height` or `innerHeight`
-  - : Specifies the height of the content area, viewing area of the new secondary window
-    in pixels. The height value includes the height of the horizontal scrollbar if
-    present. The height value does not include other UI parts such as location bar, title
-    bar, tab bar, etc. The minimum required value is 100.
-
-If the `windowFeatures` parameter is non-empty and no size
-features are defined, then the new window dimensions will be the same as the dimensions
-of the most recently rendered window.
-
-### Toolbar and UI parts features
-
-> **Warning:** These features are kept only for backward compatibility.
-> In modern browsers (Firefox 76 or newer, Google Chrome, Safari, Chromium Edge), the
-> following features are just a condition for whether to open a popup or not. See the [popup condition](#popup_condition) section.
-
-The following features control the visibility of each UI part.
-To enable them, either specify them with no value at all, or else set them to `yes` or `1`.
-To disable them, either omit them, or else set them to `no` or `0`.
-
-- `menubar`
-
-  - : If this feature is on, then the new secondary window renders the menubar.
-
-    If `windowFeatures` is non-empty, `menubar` defaults
-    to off.
-
-- `toolbar`
-
-  - : If this feature is on, then the new secondary window renders the toolbar buttons
-    (Back, Forward, Reload, Stop buttons).
-
-    In addition to the toolbar buttons, Firefox (before 76) will render the Tab Bar if it
-    is visible, present in the parent window. (If this feature is set to off, all toolbars
-    in the window will be invisible).
-
-    If `windowFeatures` is non-empty, `toolbar` defaults
-    to off.
-
-- `location`
-
-  - : If this feature is on, then the new secondary window renders the location bar or the
-    address bar.
-
-    If `windowFeatures` is non-empty, `location` defaults
-    to off.
-
-- `status`
-
-  - : If this feature is on, then the new secondary window has a status bar.
-
-    If `windowFeatures` is non-empty, `status` defaults
-    to off.
-
-- `resizable`
-
-  - : If this feature is on, the new secondary window will be resizable.
-
-    If `windowFeatures` is non-empty, `resizable`
-    defaults to on.
-
-    > **Note:** For accessibility reasons, it is strongly recommended to
-    > set this feature always on
-
-- `scrollbars`
-
-  - : If this feature is on, the new secondary window will show horizontal and/or vertical
-    scrollbar(s) if the document doesn't fit into the window's viewport.
-
-    If `windowFeatures` is non-empty, `scrollbars`
-    defaults to off.
-
-    See [note on scrollbars](#note_on_scrollbars).
-
-    > **Note:** For accessibility reasons, it is strongly encouraged to set
-    > this feature always on.
-
-### Window functionality features
-
-- `noopener`
-
-  - : If this feature is set, the newly-opened window will open as normal, except that it
-    will not have access back to the originating window (via {{domxref("Window.opener")}}
-    — it returns `null`). In addition, the `window.open()` call will
-    also return `null`, so the originating window will not have access to the
-    new one either. This is useful for preventing untrusted sites opened via
-    `window.open()` from tampering with the originating window, and vice versa.
-
-    Note that when `noopener` is used, nonempty target names other than
-    `_top`, `_self`, and `_parent` are all treated like
-    `_blank` in terms of deciding whether to open a new window/tab.
-
-    This is supported in modern browsers including Chrome, and Firefox 52+. See
-    [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types#noopener) for
-    more information and for browser compatibility details, including information about
-    ancillary effects.
-
-- `noreferrer`
-  - : If this feature is set, the request to load the content located at the specified URL
-    will be loaded with the request's `referrer` set to
-    `noreferrer`; this prevents the request from sending the URL of the page
-    that initiated the request to the server where the request is sent. In addition,
-    setting this feature also automatically sets
-    `noopener`. See
-    [`rel="noreferrer"`](/en-US/docs/Web/HTML/Link_types#noreferrer)
-    for additional details and compatibility information. Firefox introduced support for
-    `noreferrer` in Firefox 68.
+function openRequestedPopup() {
+  windowObjectReference = window.open("http://www.mozilla.org/", "mozillaTab");
+}
+```
 
 ## Best practices
 
 ```js
-<script type="text/javascript">
 var windowObjectReference = null; // global variable
-
 function openFFPromotionPopup() {
   if(windowObjectReference == null || windowObjectReference.closed)
   /* if the pointer to the window object in memory does not exist
      or if such pointer exists but the window was closed */
-
   {
     windowObjectReference = window.open("http://www.spreadfirefox.com/",
    "PromoteFirefoxWindowName", "popup");
@@ -332,10 +141,9 @@ function openFFPromotionPopup() {
        the window or to reload the referenced resource. */
   };
 }
-</script>
+```
 
-(...)
-
+```html
 <p><a
  href="http://www.spreadfirefox.com/"
  target="PromoteFirefoxWindowName"
@@ -347,7 +155,7 @@ function openFFPromotionPopup() {
 The above code solves a few usability problems related to links opening secondary
 window. The purpose of the `return false` in the code is to cancel default
 action of the link: if the onclick event handler is executed, then there is no need to
-execute the default action of the link. But if javascript support is disabled or
+execute the default action of the link. But if JavaScript support is disabled or
 non-existent on the user's browser, then the onclick event handler is ignored and the
 browser loads the referenced resource in the target frame or window that has the name
 "PromoteFirefoxWindowName". If no frame nor window has the name
@@ -356,19 +164,15 @@ browser loads the referenced resource in the target frame or window that has the
 
 More reading on the use of the target attribute:
 
-[HTML 4.01 Target
-attribute specifications](https://www.w3.org/TR/html401/present/frames.html#h-16.3.2)
+[HTML 4.01 Target attribute specifications](https://www.w3.org/TR/html401/present/frames.html#h-16.3.2)
 
-[How do I create a link
-that opens a new window?](https://www.htmlhelp.com/faq/html/links.html#new-window)
+[How do I create a link that opens a new window?](https://www.htmlhelp.com/faq/html/links.html#new-window)
 
 You can also parameterize the function to make it versatile, functional in more
 situations, therefore re-usable in scripts and webpages:
 
 ```js
-<script type="text/javascript">
 var windowObjectReference = null; // global variable
-
 function openRequestedPopup(url, windowName) {
   if(windowObjectReference == null || windowObjectReference.closed) {
     windowObjectReference = window.open(url, windowName, "popup");
@@ -376,10 +180,9 @@ function openRequestedPopup(url, windowName) {
     windowObjectReference.focus();
   };
 }
-</script>
+```
 
-(...)
-
+```html
 <p><a
  href="http://www.spreadfirefox.com/"
  target="PromoteFirefoxWindow"
@@ -392,11 +195,9 @@ You can also make such function able to open only 1 secondary window and to reus
 single secondary window for other links in this manner:
 
 ```js
-<script type="text/javascript">
 var windowObjectReference = null; // global variable
 var PreviousUrl; /* global variable that will store the
                     url currently in the secondary window */
-
 function openRequestedSinglePopup(url) {
   if(windowObjectReference == null || windowObjectReference.closed) {
     windowObjectReference = window.open(url, "SingleSecondaryWindowName",
@@ -411,22 +212,19 @@ function openRequestedSinglePopup(url) {
   } else {
     windowObjectReference.focus();
   };
-
   PreviousUrl = url;
   /* explanation: we store the current url in order to compare url
      in the event of another call of this function. */
 }
-</script>
+```
 
-(...)
-
+```html
 <p><a
  href="http://www.spreadfirefox.com/"
  target="SingleSecondaryWindowName"
  onclick="openRequestedSinglePopup(this.href); return false;"
  title="This link will create a new window or will re-use an already opened one"
 >Promote Firefox adoption</a></p>
-
 <p><a
  href="https://www.mozilla.org/support/firefox/faq"
  target="SingleSecondaryWindowName"
@@ -440,7 +238,7 @@ function openRequestedSinglePopup(url) {
 - How can I prevent the confirmation message asking the user whether they want to
   close the window?
 
-  - : You cannot. **New windows not opened by javascript cannot as a rule be closed
+  - : You cannot. **New windows not opened by JavaScript cannot as a rule be closed
     by JavaScript.** The JavaScript Console in Mozilla-based browsers will report
     the warning message:
     `"Scripts may not close windows that were not opened by script."` Otherwise
@@ -451,8 +249,7 @@ function openRequestedSinglePopup(url) {
 - How can I bring back the window if it is minimized or behind another window?
   - : First check for the existence of the window object reference of such window and if
     it exists and if it has not been closed, then use the [focus()](/en-US/docs/Web/API/Window/focus) method. There is no other reliable
-    way. You can examine an [example explaining how to use the
-    focus() method](#best_practices).
+    way. You can examine an [example explaining how to use the focus() method](#best_practices).
 - How do I force a maximized window?
   - : You cannot. All browser manufacturers try to make the opening of new secondary
     windows noticed by users and noticeable by users to avoid confusion, to avoid
@@ -470,7 +267,7 @@ function openRequestedSinglePopup(url) {
 
   - : You cannot reliably because the users can prevent the window from being resized by
     setting `dom.disable_window_move_resize` to `true` in
-    `about:config` or by editing accordingly their [user.js file](https://www.mozilla.org/support/firefox/edit#user).
+    `about:config` or by editing accordingly their [user.js file](https://kb.mozillazine.org/User.js_file).
 
     In general, users usually disable moving and resizing of existing windows because
     allowing authors' scripts to do so has been abused overwhelmingly in the past and the
@@ -483,7 +280,7 @@ function openRequestedSinglePopup(url) {
     can also be disabled. Moving and resizing a window remotely on the user's screen via
     script will very often annoy the users, will disorient the user, and will be wrong at
     best. The web author expects to have full control of (and can decide about) every
-    position and size aspects of the users' browser window ... which is not true.
+    position and size aspects of the users' browser window, which is not true.
 
 - How do I know whether a window I opened is still open?
   - : You can test for the existence of the window object reference which is the returned
@@ -499,7 +296,7 @@ function openRequestedSinglePopup(url) {
     window; the [opener](/en-US/docs/Web/API/Window/opener) property gives a
     secondary window a reference to its main window.
 - I cannot access the properties of the new secondary window. I always get an error in
-  the javascript console saying "Error: uncaught
+  the JavaScript console saying "Error: uncaught
   exception: Permission denied to get property
   \<property_name or method_name>. Why is that?
 
@@ -511,7 +308,7 @@ function openRequestedSinglePopup(url) {
     window, the browser in the main window will verify that the secondary window has the
     same domain name.
 
-    More reading on the cross-domain script security restriction: [http://www.mozilla.org/projects/secu...me-origin.html](https://www.mozilla.org/projects/security/components/same-origin.html)
+    More reading on the cross-domain script security restriction in the [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) article.
 
 ## Usability issues
 
@@ -549,11 +346,11 @@ recommendable usability and accessibility guidelines:
 
 "javascript:" links break accessibility and usability of webpages in every browser.
 
-- "javascript:" pseudo-links become dysfunctional when javascript support is disabled
+- "javascript:" pseudo-links become dysfunctional when JavaScript support is disabled
   or inexistent. Several corporations allow their employees to surf on the web but under
-  strict security policies: no javascript enabled, no java, no activeX, no Flash. For
+  strict security policies: no JavaScript enabled, no Java, no ActiveX, no Flash. For
   various reasons (security, public access, text browsers, etc..), about 5% to 10% of
-  users on the web surf with javascript disabled.
+  users on the web surf with JavaScript disabled.
 - "javascript:" links will interfere with advanced features in tab-capable browsers:
   eg. middle-click on links, Ctrl+click on links, tab-browsing features in extensions,
   etc.
@@ -568,17 +365,14 @@ recommendable usability and accessibility guidelines:
 
 **Further reading:**
 
-- [Top Ten Web-Design Mistakes of
-  2002](https://www.useit.com/alertbox/20021223.html), 6. JavaScript in Links, Jakob Nielsen, December 2002
-- [Links
-  & JavaScript Living Together in Harmony](https://www.evolt.org/article/Links_and_JavaScript_Living_Together_in_Harmony/17/20938/), Jeff Howden, February 2002
-- [comp.lang.javascript newsgroup
-  discussion FAQ on "javascript:" links](https://jibbering.com/faq/#FAQ4_24)
+- [Top Ten Web-Design Mistakes of 2002](https://www.useit.com/alertbox/20021223.html), 6. JavaScript in Links, Jakob Nielsen, December 2002
+- [Links & JavaScript Living Together in Harmony](https://evolt.org/article/Links_and_JavaScript_Living_Together_in_Harmony/17/20938/), Jeff Howden, February 2002
+- [comp.lang.javascript newsgroup discussion FAQ on "javascript:" links](https://jibbering.com/faq/#FAQ4_24)
 
 #### Never use `<a href="#" onclick="window.open(...);">`
 
 Such pseudo-link also breaks accessibility of links. **Always use a real URL for
-the href attribute value** so that if javascript support is disabled or
+the href attribute value** so that if JavasScript support is disabled or
 inexistent or if the user agent does not support opening of secondary window (like
 MS-Web TV, text browsers, etc), then such user agents will still be able to load the
 referenced resource according to its default mode of opening/handling a referenced
@@ -600,10 +394,8 @@ disorienting to users (Back toolbar button is disabled).
 > a small monitor where the windows are maximized to fill up the screen. So a user who
 > tries to return to the origin will be confused by a grayed out _Back_
 > button."
-> quote from [The Top Ten
-> _New_ Mistakes of Web Design](https://www.useit.com/alertbox/990530.html): 2. Opening New Browser Windows, Jakob
+> quote from [The Top Ten New Mistakes of Web Design](https://www.useit.com/alertbox/990530.html): 2. Opening New Browser Windows, Jakob
 > Nielsen, May 1999
-
 When extreme changes in context are explicitly identified before they occur, then the
 users can determine if they wish to proceed or so they can be prepared for the change:
 not only they will not be confused or feel disoriented, but more experienced users can
@@ -614,17 +406,15 @@ new tab or not, in "background" or not).
 
 - "If your link spawns a new window, or causes another windows to 'pop up' on your
   display, or move the focus of the system to a new FRAME or Window, then the nice thing
-  to do is to tell the user that something like that will happen." [World Wide Web Consortium
-  Accessibility Initiative regarding popups](https://www.w3.org/WAI/wcag-curric/sam77-0.htm)
+  to do is to tell the user that something like that will happen." [World Wide Web Consortium Accessibility Initiative regarding popups](https://www.w3.org/WAI/wcag-curric/sam77-0.htm)
 - "Use link titles to provide users with a preview of where each link will take them,
   before they have clicked on it." [Ten Good Deeds in Web Design](https://www.useit.com/alertbox/991003.html),
   Jakob Nielsen, October 1999
-- [Using Link Titles to Help Users
-  Predict Where They Are Going](https://www.useit.com/alertbox/980111.html), Jakob Nielsen, January 1998
+- [Using Link Titles to Help Users Predict Where They Are Going](https://www.useit.com/alertbox/980111.html), Jakob Nielsen, January 1998
 
 #### Always use the target attribute
 
-If javascript support is disabled or non-existent, then the user agent will create a
+If JavaScript support is disabled or non-existent, then the user agent will create a
 secondary window accordingly or will render the referenced resource according to its
 handling of the target attribute: e.g. some user agents that cannot create new windows,
 like MS Web TV, will fetch the referenced resource and append it at the end of the
@@ -660,14 +450,6 @@ ways to open links and more power to the tool they are using (a browser).
 - Unrequested popup windows
   - : Script-initiated windows opening automatically without the user's consent.
 
-## Specifications
-
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
-
 ## Notes
 
 ### Popup condition
@@ -701,8 +483,7 @@ authors:
   preference often set a minimal font size in Mozilla-based browsers.
 - web author is not aware of default margin (and/or border and/or padding) values
   applying to root element or body node in various browsers and various browser versions
-- user uses an user stylesheet ([userContent.css in
-  Mozilla-based browsers](https://www.mozilla.org/support/firefox/edit#content)) for his viewing habits that increases document box
+- user uses an user stylesheet ([userContent.css in Mozilla-based browsers](https://kb.mozillazine.org/index.php?title=UserContent.css)) for his viewing habits that increases document box
   dimensions (margin, padding, default font size)
 - user can customize individually the size (height or width) of most toolbars via
   operating system settings. E.g. window resizing borders, height of browser titlebar,
@@ -718,7 +499,7 @@ authors:
   area for applications: e.g. user resizes the Windows taskbar, user positions the
   Windows taskbar on the left side (arabic language based) or right side (Hebrew
   language), user has a permanent MS-Office quick launch toolbar, etc.
-- some operating system (Mac OS X) forces presence of toolbars that can then fool the
+- some operating system (macOS) forces presence of toolbars that can then fool the
   web author's anticipations, calculations of the effective dimensions of the browser
   window
 
@@ -731,28 +512,10 @@ applications of the user's operating system. **No part of the new window can be
 initially positioned offscreen. This is by default in all Mozilla-based browser
 releases.**
 
-[MSIE 6 SP2
-has a similar error correction mechanism](https://msdn2.microsoft.com/en-us/library/ms997645.aspx#xpsp_topic5) but it is not activated by default in all
-security levels: a security setting can disable such error correction mechanism.
+## Specifications
 
-## Tutorials
+{{Specifications}}
 
-- [JavaScript windows
-  (tutorial)](https://www.infimum.dk/HTML/JSwindows.html) by Lasse Reichstein Nielsen
-- [The perfect
-  pop-up (tutorial)](https://accessify.com/features/tutorials/the-perfect-popup/) by Ian Lloyd
-- [Popup
-  windows and Firefox (interactive demos)](https://www.gtalbot.org/FirefoxSection/Popup/PopupAndFirefox.html) by Gérard Talbot
+## Browser compatibility
 
-## References
-
-- [Links Want To Be Links](https://www.cs.tut.fi/~jkorpela/www/links.html)
-  by Jukka K. Korpela
-- [Links
-  & JavaScript Living Together in Harmony](https://www.evolt.org/article/Links_and_JavaScript_Living_Together_in_Harmony/17/20938/) by Jeff Howden
-
-## Others
-
-- [Obsolete features](/en-US/docs/Web/API/Window/open/Obsolete_features)
-- [Privileged
-  features](/en-US/docs/Web/API/Window/open/Privileged_features)
+{{Compat}}

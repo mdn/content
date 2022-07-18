@@ -1,6 +1,7 @@
 ---
 title: Navigator.registerProtocolHandler()
 slug: Web/API/Navigator/registerProtocolHandler
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -43,24 +44,28 @@ registerProtocolHandler(scheme, url, title)
 - `title` {{deprecated_inline}}
 
   - : A human-readable title string for the handler.
-    **This will be displayed to the user**, such as prompting “Allow this site to handle \[scheme] links?” or listing registered handlers in the browser’s settings.
+    **This will be displayed to the user**, such as prompting "Allow this site to handle \[scheme] links?" or listing registered handlers in the browser's settings.
 
     > **Note:** The title has been removed from the spec due to spoofing concerns.
     > The `title` should still be set because some browsers **still require it** (see the [compatibility table below](#browser_compatibility)).
     > Browsers that support the updated spec most likely will be accept but ignore the title.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
-- {{Exception("SecurityError")}}
+- `SecurityError` {{domxref("DOMException")}}
   - : The user agent blocked the registration.
     This might happen if:
 
     - The registered scheme (protocol) is invalid, such as a scheme the browser handles itself (`https:`, `about:`, etc.)
-    - The handler URL’s {{Glossary("origin")}} does not match the origin of the page calling this API.
+    - The handler URL's {{Glossary("origin")}} does not match the origin of the page calling this API.
     - The browser requires that this function is called from a secure context.
     - The browser requires that the handler's URL be over HTTPS.
 
-- {{Exception("SyntaxError")}}
+- `SyntaxError` {{domxref("DOMException")}}
   - : The `%s` placeholder is missing from the handler URL.
 
 ## Permitted schemes
@@ -73,11 +78,13 @@ A **custom scheme** may be registered as long as:
 - The custom scheme's name includes at least 1 letter after the `web+` prefix
 - The custom scheme has only lowercase ASCII letters in its name.
 
-For example, `web+burger`, as shown in the {{anch("Example")}} below.
+For example, `web+burger`, as shown in the [Example](#examples) below.
 
 Otherwise, the scheme must be one of the following:
 
 - `bitcoin`
+- `ftp`
+- `ftps`
 - `geo`
 - `im`
 - `irc`
@@ -89,6 +96,7 @@ Otherwise, the scheme must be one of the following:
 - `news`
 - `nntp`
 - `openpgp4fpr`
+- `sftp`
 - `sip`
 - `sms`
 - `smsto`
@@ -101,7 +109,7 @@ Otherwise, the scheme must be one of the following:
 
 <!-- This must match: https://html.spec.whatwg.org/multipage/system-state.html#safelisted-scheme -->
 
-## Example
+## Examples
 
 If your site is `burgers.example.com`, you can register a protocol handler for it to handle `web+burger:` links, like so:
 
@@ -117,7 +125,7 @@ This script must be run from the same origin as the handler URL (so any page at 
 
 The user will be notified that your code asked to register the protocol handler, so that they can decide whether or not to allow it. See the screenshot below for an example on `google.co.uk`:
 
-![A browser notification reads “Add Burger handler (www.google.co.uk) as an application for burger links?”, and offers an “Add Application” button and a close to ignore the handler request.](protocolregister.png)
+![A browser notification reads "Add Burger handler (www.google.co.uk) as an application for burger links?", and offers an "Add Application" button and a close to ignore the handler request.](protocolregister.png)
 
 ## Specifications
 
@@ -130,4 +138,4 @@ The user will be notified that your code asked to register the protocol handler,
 ## See also
 
 - [Web-based protocol handlers](/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers)
-- [RegisterProtocolHandler Enhancing the Federated Web](https://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) (Mozilla Webdev)
+- [RegisterProtocolHandler Enhancing the Federated Web](https://blog.mozilla.org/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) (Mozilla Webdev)

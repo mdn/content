@@ -10,8 +10,7 @@ browser-compat: javascript.statements.try_catch
 ---
 {{jsSidebar("Statements")}}
 
-The **`try...catch`** statement marks a block of statements to
-try and specifies a response should an exception be thrown.
+The **`try...catch`** statement is comprised of a `try` block and either a `catch` block, a `finally` block, or both. The code in the `try` block is executed first, and if it throws an exception, the code in the `catch` block will be executed. The code in the `finally` block will always be executed before control flow exits the entire construct.
 
 {{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}
 
@@ -20,11 +19,9 @@ try and specifies a response should an exception be thrown.
 ```js
 try {
   try_statements
-}
-catch (exception_var) {
+} catch (exception_var) {
   catch_statements
-}
-finally {
+} finally {
   finally_statements
 }
 ```
@@ -33,23 +30,25 @@ finally {
   - : The statements to be executed.
 - `catch_statements`
   - : Statement that is executed if an exception is thrown in the `try`-block.
-- `exception_var`
-  - : An optional identifier to hold an exception object for the associated
-    `catch`-block.
+- `exception_var` {{optional_inline}}
+  - : An optional identifier to hold the caught exception for the associated `catch` block. If the `catch` block does not utilize the exception's value, you can omit the `exception_var` and its surrounding parentheses, as `catch {...}`.
 - `finally_statements`
-  - : Statements that are executed after the `try` statement completes. These
-    statements execute regardless of whether an exception was thrown or caught.
+  - : Statements that are executed before control flow exits the `try...catch...finally` construct. These statements execute regardless of whether an exception was thrown or caught.
 
 ## Description
 
-The `try` statement consists of a `try`-block, which contains one
-or more statements. `{}` must always be used, even for single statements.
-A `catch`-block, a `finally`-block, or both must be present.
-This gives us three forms for the `try` statement:
+The `try` statement always starts with a `try` block. Then, a `catch` block, a `finally` block, or both must be present. This gives us three forms for the `try` statement:
 
 - `try...catch`
 - `try...finally`
 - `try...catch...finally`
+
+Unlike other constructs such as [`if`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) or [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for), the `try`, `catch`, and `finally` blocks must be _blocks_, instead of single statements.
+
+```js example-bad
+try doSomething(); // SyntaxError
+catch (e) console.log(e);
+```
 
 A `catch`-block contains statements that specify what to do if an exception
 is thrown in the `try`-block. If any statement within the
@@ -58,9 +57,7 @@ throws an exception, control is immediately shifted to the `catch`-block. If
 no exception is thrown in the `try`-block, the `catch`-block is
 skipped.
 
-The `finally`-block will always execute after the `try`-block and
-`catch`-block(s) have finished executing. It always executes, regardless of
-whether an exception was thrown or caught.
+The `finally` block will always execute before control flow exits the `try...catch...finally` construct. It always executes, regardless of whether an exception was thrown or caught.
 
 You can nest one or more `try` statements. If an inner `try`
 statement does not have a `catch`-block, the enclosing `try`
@@ -150,12 +147,13 @@ function isValidJSON(text) {
 
 ### The finally-block
 
-The `finally`-block contains statements to execute after the
-`try`-block and `catch`-block(s) execute, but before the
-statements following the `try...catch...finally`-block. Note that the
-`finally`-block executes regardless of whether an exception is thrown. Also,
-if an exception is thrown, the statements in the `finally`-block execute even
-if no `catch`-block handles the exception.
+The `finally` block contains statements to execute after the `try` block and `catch` block(s) execute, but before the statements following the `try...catch...finally` block. Control flow will always enter the `finally` block, which can proceed in one of the following ways:
+
+- Immediately before the `try` block finishes execution normally (and no exceptions were thrown);
+- Immediately before the `catch` block finishes execution normally;
+- Immediately before a control-flow statement (`return`, `throw`, `break`, `continue`) is executed in the `try` block or `catch` block.
+
+If an exception is thrown from the `try` block, even when there's no `catch` block to handle the exception, the `finally` block still executes, in which case the exception is still thrown immediately after the `finally` block finishes executing.
 
 The following example shows one use case for the `finally`-block. The code
 opens a file and then executes statements that use the file; the
@@ -171,6 +169,22 @@ try {
   closeMyFile(); // always close the resource
 }
 ```
+
+Control flow statements (`return`, `throw`, `break`, `continue`) in the `finally` block will "mask" any completion value of the `try` block or `catch` block. In this example, the `try` block tries to return 1, but before returning, the control flow is yielded to the `finally` block first, so the `finally` block's return value is returned instead.
+
+```js
+function doIt() {
+  try {
+    return 1;
+  } finally {
+    return 2;
+  }
+}
+
+doIt(); // returns 2
+```
+
+It is generally a bad idea to have control flow statements in the `finally` block. Only use it for cleanup code.
 
 ## Examples
 
@@ -195,7 +209,7 @@ try {
 ```
 
 Now, if we already caught the exception in the inner `try`-block by adding a
-`catch`-block
+`catch`-block:
 
 ```js
 try {

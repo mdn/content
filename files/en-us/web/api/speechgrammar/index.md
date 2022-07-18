@@ -1,6 +1,7 @@
 ---
 title: SpeechGrammar
 slug: Web/API/SpeechGrammar
+page-type: web-api-interface
 tags:
   - API
   - Experimental

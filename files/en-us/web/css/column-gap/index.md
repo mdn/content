@@ -37,6 +37,7 @@ column-gap: 3%;
 column-gap: inherit;
 column-gap: initial;
 column-gap: revert;
+column-gap: revert-layer;
 column-gap: unset;
 ```
 
@@ -153,7 +154,7 @@ The `column-gap` property is specified as one of the values listed below.
 
 ## Specifications
 
-{{Specifications("css.properties.column-gap.grid_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

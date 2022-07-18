@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createGain()
 slug: Web/API/BaseAudioContext/createGain
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -27,8 +28,12 @@ overall gain (or volume) of the audio graph.
 ## Syntax
 
 ```js
-var gainNode = AudioContext.createGain();
+createGain()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -37,15 +42,14 @@ audio whose volume has been adjusted in gain (volume) to a level specified by th
 {{domxref("GainNode.gain")}} [a-rate](/en-US/docs/Web/API/AudioParam#a-rate)
 parameter.
 
-## Example
+## Examples
 
 The following example shows basic usage of an {{domxref("AudioContext")}} to create a
 `GainNode`, which is then used to mute and unmute the audio when a Mute
 button is clicked by changing the `gain` property value.
 
 The below snippet wouldn't work as is — for a complete working example, check out our
-[Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo ([view
-source](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js).)
+[Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo ([view source](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js).)
 
 ```html
 <div>
@@ -84,7 +88,7 @@ if (navigator.mediaDevices.getUserMedia) {
 source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
-  ...
+// …
 
 mute.onclick = voiceMute;
 

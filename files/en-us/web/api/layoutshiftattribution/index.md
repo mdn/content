@@ -1,6 +1,7 @@
 ---
 title: LayoutShiftAttribution
 slug: Web/API/LayoutShiftAttribution
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -20,11 +21,11 @@ Instances of `LayoutShiftAttribution` are returned in an array by calling {{domx
 
 ## Properties
 
-- {{domxref("LayoutShiftAttribution.Node")}}{{ReadOnlyInline}}
+- {{domxref("LayoutShiftAttribution.Node")}} {{ReadOnlyInline}}
   - : Returns the element that has shifted (null if it has been removed).
-- {{domxref("LayoutShiftAttribution.previousRect")}}{{ReadOnlyInline}}
+- {{domxref("LayoutShiftAttribution.previousRect")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMRectReadOnly")}} object representing the position of the element before the shift.
-- {{domxref("LayoutShiftAttribution.currentRect")}}{{ReadOnlyInline}}
+- {{domxref("LayoutShiftAttribution.currentRect")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMRectReadOnly")}} object representing the position of the element after the shift.
 
 ## Methods

@@ -42,8 +42,8 @@ The index controller function needs to fetch information about how many `Book`, 
 >
 > ```js
 > SomeModel.countDocuments({ a_model_field: 'match_value' }, function (err, count) {
->  // ... do something if there is an err
->  // ... do something with the count if there was no error
+>  // Do something if there is an err
+>  // Do something with the count if there was no error
 >  });
 > ```
 
@@ -73,19 +73,19 @@ var async = require('async');
 exports.index = function(req, res) {
 
     async.parallel({
-        book_count: function(callback) {
+        book_count(callback) {
             Book.countDocuments({}, callback); // Pass an empty object as match condition to find all documents of this collection
         },
-        book_instance_count: function(callback) {
+        book_instance_count(callback) {
             BookInstance.countDocuments({}, callback);
         },
-        book_instance_available_count: function(callback) {
+        book_instance_available_count(callback) {
             BookInstance.countDocuments({status:'Available'}, callback);
         },
-        author_count: function(callback) {
+        author_count(callback) {
             Author.countDocuments({}, callback);
         },
-        genre_count: function(callback) {
+        genre_count(callback) {
             Genre.countDocuments({}, callback);
         }
     }, function(err, results) {
@@ -138,7 +138,7 @@ At this point we should have created everything needed to display the index page
 
 ![Home page - Express Local Library site](locallibary_express_home.png)
 
-> **Note:** You won't be able to _use_ the sidebar links yet because the urls, views, and templates for those pages haven't been defined. If you try you'll get errors like "NOT IMPLEMENTED: Book list" for example, depending on the link you click on. These string literals (which will be replaced with proper data) were specified in the different controllers that live inside your "controllers" file.
+> **Note:** You won't be able to _use_ the sidebar links yet because the URLs, views, and templates for those pages haven't been defined. If you try you'll get errors like "NOT IMPLEMENTED: Book list" for example, depending on the link you click on. These string literals (which will be replaced with proper data) were specified in the different controllers that live inside your "controllers" file.
 
 ## Next steps
 

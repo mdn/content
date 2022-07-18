@@ -17,7 +17,7 @@ This article provides information about the changes in Firefox 90 that will affe
 
 ### Developer Tools
 
-- The response view now shows a [preview for web fonts](/en-US/docs/Tools/Network_Monitor/request_details#response_tab) ({{bug(872078)}}).
+- The response view now shows a [preview for web fonts](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#response-tab) ({{bug(872078)}}).
 
 ### HTML
 
@@ -26,13 +26,13 @@ This article provides information about the changes in Firefox 90 that will affe
 
 ### CSS
 
-- `-webkit-image-set()` has been implemented as an alias of the standard {{cssxref("image/image-set()")}} function ({{bug(1709415)}}).
+- `-webkit-image-set()` has been implemented as an alias of the standard {{cssxref("image/image-set", "image/image-set()")}} function ({{bug(1709415)}}).
 
 ### JavaScript
 
 - [Private class static and instance fields and methods](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) are now supported by default ({{bug(1708235)}} and {{bug(1708236)}}).
 - The [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in#private_fields_and_methods) operator can now be used to [check if a class private method or field has been defined](/en-US/docs/Web/JavaScript/Guide/Working_With_Private_Class_Features#checking_if_a_private_fieldmethod_exists). This offers a more compact approach for handling potentially undefined features, as oppose to wrapping code in `try/catch` blocks ({{bug(1648090)}}).
-- Custom date/time formats specified as options to the [`Intl.DateTimeFormat()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) can now include `dayPeriod` — a value indicating that the approximate time of day (e.g. "in the morning", "at night", etc.) should be included as a `narrow`, `short`, or `long` string ({{bug(1645115)}}).
+- Custom date/time formats specified as options to the [`Intl.DateTimeFormat()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) can now include `dayPeriod` — a value indicating that the approximate time of day (e.g. "in the morning", "at night", etc.) should be included as a `narrow`, `short`, or `long` string ({{bug(1645115)}}).
 - The relative indexing method `at()` has been added to the [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) and [`TypedArray`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) global objects. ({{bug(1681371)}})
 
 ### HTTP

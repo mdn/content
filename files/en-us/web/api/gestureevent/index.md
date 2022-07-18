@@ -1,6 +1,7 @@
 ---
 title: GestureEvent
 slug: Web/API/GestureEvent
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -9,11 +10,11 @@ tags:
   - Reference
 browser-compat: api.GestureEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 {{Non-standard_header()}}
 
-The **`GestureEvent`** is a proprietary interface specific to WebKit which gives information regarding multi-touch gestures. Events using this interface include {{event("gesturestart")}}, {{event("gesturechange")}}, and {{event("gestureend")}}.
+The **`GestureEvent`** is a proprietary interface specific to WebKit which gives information regarding multi-touch gestures. Events using this interface include {{domxref("Element/gesturestart_event", "gesturestart")}}, {{domxref("Element/gesturechange_event", "gesturechange")}}, and {{domxref("Element/gestureend_event", "gestureend")}}.
 
 `GestureEvent` derives from {{domxref("UIEvent")}}, which in turn derives from {{domxref("Event")}}.
 
@@ -40,13 +41,13 @@ _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and
 
 ## Gesture event types
 
-- {{event("gesturestart")}}
-- {{event("gesturechange")}}
-- {{event("gestureend")}}
+- {{domxref("Element/gesturestart_event", "gesturestart")}}
+- {{domxref("Element/gesturechange_event", "gesturechange")}}
+- {{domxref("Element/gestureend_event", "gestureend")}}
 
 ## Specifications
 
-_Not part of any specification._ Apple has [a description at the Safari Developer Library](https://developer.apple.com/library/iad/documentation/UserExperience/Reference/GestureEventClassReference/index.html).
+_Not part of any specification._ Apple has [a description at the Safari Developer Library](https://developer.apple.com/documentation/webkitjs/gestureevent).
 
 ## Browser compatibility
 
@@ -55,9 +56,9 @@ _Not part of any specification._ Apple has [a description at the Safari Develope
 ## See also
 
 - {{domxref("MSGestureEvent")}}
-- {{event("MSGestureStart")}}
-- {{event("MSGestureEnd")}}
-- {{event("MSGestureTap")}}
-- {{event("MSGestureHold")}}
-- {{event("MSGestureChange")}}
-- {{event("MSInertiaStart")}}
+- {{domxref("Element/MSGestureStart_event", "MSGestureStart")}}
+- {{domxref("Element/MSGestureEnd_event", "MSGestureEnd")}}
+- {{domxref("Element/MSGestureTap_event", "MSGestureTap")}}
+- {{domxref("Element/MSGestureHold_event", "MSGestureHold")}}
+- {{domxref("Element/MSGestureChange_event", "MSGestureChange")}}
+- {{domxref("Element/MSInertiaStart_event", "MSInertiaStart")}}

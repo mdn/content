@@ -12,7 +12,7 @@ tags:
 
 The **`or`** instructions, are used for performing a bitwise OR, similar to the **`|`** operator in other languages.
 
-{{EmbedInteractiveExample("pages/wat/or.html")}}
+{{EmbedInteractiveExample("pages/wat/or.html", "tabbed-taller")}}
 
 ## Syntax
 

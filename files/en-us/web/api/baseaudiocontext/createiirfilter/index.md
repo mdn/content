@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createIIRFilter()
 slug: Web/API/BaseAudioContext/createIIRFilter
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -28,7 +29,7 @@ of filter.
 ## Syntax
 
 ```js
-var iirFilter = AudioContext.createIIRFilter(feedforward, feedback);
+createIIRFilter(feedforward, feedback)
 ```
 
 ### Parameters

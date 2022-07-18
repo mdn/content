@@ -23,7 +23,7 @@ The `byteLength` property is an accessor property whose set accessor function is
 ### Using byteLength
 
 ```js
-var buffer = new ArrayBuffer(8);
+const buffer = new ArrayBuffer(8);
 buffer.byteLength; // 8
 ```
 

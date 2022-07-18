@@ -14,7 +14,7 @@ tags:
 ```js
 var x; //create a variable but assign it no value
 
-console.log("x's value is", x) //logs "x's value is undefined"
+console.log("x's value is ", x) //logs "x's value is undefined"
 ```
 
 ## See also

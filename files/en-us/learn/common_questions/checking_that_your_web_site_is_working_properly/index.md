@@ -11,7 +11,7 @@ tags:
   - WebMechanics
   - troubleshooting
 ---
-In this article we go over various troubleshooting steps for a website and some basic actions to take in order to solve these issues.
+In this article, we go over various troubleshooting steps for a website and some basic actions to take in order to solve these issues.
 
 <table>
   <tbody>
@@ -55,7 +55,7 @@ If you want to know whether your website works correctly, the first thing to do 
 
 Let's look at our personal website, `http://demozilla.examplehostingprovider.net/`. It's not showing the image we expected!
 
-![Oops, the ‘unicorn’ image is missing](image-missing.png)
+![Oops, the 'unicorn' image is missing](image-missing.png)
 
 Open Firefox's Network tool (**Tools ➤ Web Developer ➤ Network**) and reload the page:
 
@@ -90,9 +90,9 @@ So what went wrong?
 
 ![Le list of images in our project](demozilla-images-list.png)
 
-At first glance, the image we asked for seems to be in the right place... but the Network tool reported a "404". It turns out that we made a typo in our HTML code: `unicorn_pics.png` rather than `unicorn_pic.png`. So correct the typo in your code editor by changing the image's `src` attribute:
+At first glance, the image we asked for seems to be in the right place but the Network tool reported a "404". It turns out that we made a typo in our HTML code: `unicorn_pics.png` rather than `unicorn_pic.png`. So correct the typo in your code editor by changing the image's `src` attribute:
 
-![Deleting the ‘s’](code-correct.png)
+![Deleting the 's'](code-correct.png)
 
 Save, [push to the server](/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server), and reload the page in your browser:
 
@@ -111,7 +111,7 @@ The most frequent errors that we find are these:
 
 #### Typos in the address
 
-We wanted to type `http://demozilla.examplehostingprovider.net/` but typed too fast and forgot an “l”:
+We wanted to type `http://demozilla.examplehostingprovider.net/` but typed too fast and forgot an "l":
 
 ![Address unreachable](cannot-find-server.png)
 
@@ -137,7 +137,7 @@ We have listed a few simple ways to check that your website works properly, as w
 
 #### How's the performance?
 
-Does the page load fast enough? Resources like [WebPageTest.org](https://www.webpagetest.org/) or browser add-ons like [YSlow](https://addons.mozilla.org/en-US/firefox/addon/yslow/) can tell you a few interesting things:
+Does the page load fast enough? Resources like [WebPageTest.org](https://www.webpagetest.org/) or browser add-ons like [YSlow](https://github.com/marcelduran/yslow) can tell you a few interesting things:
 
 ![Yslow diagnostics](yslow-diagnostics.png)
 
@@ -160,7 +160,7 @@ PING mozilla.org (63.245.215.20): 56 data bytes
 round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
 ```
 
-Just keep in mind a handy keyboard shortcut: **Ctrl+C**. Ctrl+C sends an “interrupt” signal to the runtime and tells it to stop. If you don't stop the runtime, `ping` will ping the server indefinitely.
+Just keep in mind a handy keyboard shortcut: **Ctrl+C**. Ctrl+C sends an "interrupt" signal to the runtime and tells it to stop. If you don't stop the runtime, `ping` will ping the server indefinitely.
 
 ### A simple checklist
 

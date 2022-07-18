@@ -10,6 +10,14 @@ tags:
   - Pseudo-element
   - Reference
   - Selector
+browser-compat:
+  - css.selectors.-webkit-scrollbar
+  - css.selectors.-webkit-scrollbar-button
+  - css.selectors.-webkit-scrollbar-thumb
+  - css.selectors.-webkit-scrollbar-track
+  - css.selectors.-webkit-scrollbar-track-piece
+  - css.selectors.-webkit-scrollbar-corner
+  - css.selectors.-webkit-resizer
 ---
 {{CSSRef}}{{Non-standard_Header}}
 
@@ -17,18 +25,18 @@ The `::-webkit-scrollbar` CSS pseudo-element affects the style of an element's s
 
 > **Note:** If `overflow:scroll;` is not set, no scrollbar is displayed.
 
-> **Note:** `::-webkit-scrollbar` is only available in [Blink](https://www.chromium.org/blink)- and [WebKit](https://webkit.org)-based browsers (e.g., Chrome, Edge, Opera, Safari, all browsers on iOS, and [others](https://en.wikipedia.org/wiki/List_of_web_browsers#WebKit-based)). A standardized method of styling scrollbars is available with {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}}.
+> **Note:** `::-webkit-scrollbar` is only available in [Blink](https://www.chromium.org/blink/)- and [WebKit](https://webkit.org)-based browsers (e.g., Chrome, Edge, Opera, Safari, all browsers on iOS, and [others](https://en.wikipedia.org/wiki/List_of_web_browsers#WebKit-based)). A standardized method of styling scrollbars is available with {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}}.
 
 ## CSS Scrollbar Selectors
 
-You can use the following pseudo-elements to customize various parts of the scrollbar for webkit browsers:
+You can use the following pseudo-elements to customize various parts of the scrollbar for WebKit browsers:
 
 - `::-webkit-scrollbar` — the entire scrollbar.
 - `::-webkit-scrollbar-button` — the buttons on the scrollbar (arrows pointing upwards and downwards that scroll one line at a time).
 - `::-webkit-scrollbar-thumb` — the draggable scrolling handle.
 - `::-webkit-scrollbar-track` — the track (progress bar) of the scrollbar, where there is a gray bar on top of a white bar.
 - `::-webkit-scrollbar-track-piece` — the part of the track (progress bar) not covered by the handle.
-- `::-webkit-scrollbar-corner` — the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet This is often the bottom-right corner of the browser window.
+- `::-webkit-scrollbar-corner` — the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet. This is often the bottom-right corner of the browser window.
 - `::-webkit-resizer` — the draggable resizing handle that appears at the bottom corner of some elements.
 
 ## Examples
@@ -57,7 +65,7 @@ You can use the following pseudo-elements to customize various parts of the scro
 
 /* Add a thumb */
 .mostly-customized-scrollbar::-webkit-scrollbar-thumb {
-    background: #000;
+  background: #000;
 }
 ```
 
@@ -100,37 +108,10 @@ Not part of any standard.
 
 ## Browser compatibility
 
-### `::-webkit-scrollbar`
-
-{{Compat("css.selectors.-webkit-scrollbar")}}
-
-### `::-webkit-scrollbar-button`
-
-{{Compat("css.selectors.-webkit-scrollbar-button")}}
-
-### `::-webkit-scrollbar-thumb`
-
-{{Compat("css.selectors.-webkit-scrollbar-thumb")}}
-
-### `::-webkit-scrollbar-track`
-
-{{Compat("css.selectors.-webkit-scrollbar-track")}}
-
-### `::-webkit-scrollbar-track-piece`
-
-{{Compat("css.selectors.-webkit-scrollbar-track-piece")}}
-
-### `::-webkit-scrollbar-corner`
-
-{{Compat("css.selectors.-webkit-scrollbar-corner")}}
-
-### `::-webkit-resizer`
-
-{{Compat("css.selectors.-webkit-resizer")}}
+{{Compat}}
 
 ## See also
 
 - WebKit blog on [Styling Scrollbars](https://webkit.org/blog/363/styling-scrollbars/)
-- [WebKit test](https://trac.webkit.org/export/41842/trunk/LayoutTests/scrollbars/overflow-scrollbar-combinations.html) for scrollbar styles mentioned above
 - {{CSSxRef("scrollbar-width")}}
 - {{CSSxRef("scrollbar-color")}}

@@ -1,6 +1,7 @@
 ---
 title: FocusEvent()
 slug: Web/API/FocusEvent/FocusEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -9,7 +10,7 @@ tags:
   - Reference
 browser-compat: api.FocusEvent.FocusEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`FocusEvent()`** constructor returns a newly created
 {{domxref("FocusEvent")}} object with an optional {{domxref("EventTarget")}}. When the
@@ -19,28 +20,23 @@ set to the other target.
 ## Syntax
 
 ```js
-var focusEvent = new FocusEvent(typeArg[, focusEventInit]);
+new FocusEvent(type)
+new FocusEvent(type, options)
 ```
 
-### Properties
+### Parameters
 
 _The `FocusEvent()` constructor also inherits arguments from
 {{domxref("UIEvent.UIEvent", "UIEvent()")}} and from {{domxref("Event.Event",
     "Event()")}}._
 
-- `typeArg`
-  - : Is a {{domxref("DOMString")}} representing the name of the event.
-- `focusEventInit` {{optional_inline}}
-
-  - : Is a `FocusEventInit` dictionary, having the following fields:
-
-    - `"relatedTarget"`, optional and defaulting to `null`, is
-      an {{domxref("EventTarget")}} representing the secondary target of a
-      {{domxref("FocusEvent")}}.
-
-    > **Note:** The `FocusEventInit` dictionary also accepts fields from the
-    > {{domxref("UIEvent.UIEvent", "UIEventInit")}} and {{domxref("Event.Event",
-        "EventInit")}} dictionaries.
+- `type`
+  - : A string with the name of the event.
+    It is case-sensitive and browsers set it to `blur`, `focus`, `focusin`, or `focusout`.
+- `options` {{optional_inline}}
+  - : An object that, in addition of the properties defined in {{domxref("UIEvent/UIEvent", "UIEvent()")}}, can have the following properties:
+    - `relatedTarget` {{optional_inline}}
+      - : An {{domxref("EventTarget")}} representing the secondary target of a {{domxref("FocusEvent")}}. It defaults to `null`.
 
 ## Specifications
 

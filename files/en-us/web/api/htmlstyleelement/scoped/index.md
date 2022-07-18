@@ -1,6 +1,7 @@
 ---
 title: HTMLStyleElement.scoped
 slug: Web/API/HTMLStyleElement/scoped
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -14,19 +15,16 @@ browser-compat: api.HTMLStyleElement.scoped
 ---
 {{APIRef("HTML DOM")}}{{non-standard_header}}{{deprecated_header}}
 
-The **`HTMLStyleElement.scoped`** property is a [`Boolean`](/en-US/docs/Web/API/Boolean) value indicating if the
+The **`HTMLStyleElement.scoped`** property is a boolean value indicating if the
 element applies to the whole document (`false`) or only to the parent's
 sub-tree (`true`).
 
 By default it contains the value of the {{htmlattrxref("scoped", "style")}} content
 attribute.
 
-## Syntax
+## Value
 
-```js
-value = style.scoped;
-style.scoped = true;
-```
+A boolean value.
 
 ## Browser compatibility
 

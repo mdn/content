@@ -18,7 +18,7 @@ Fired when a network request has finished and its details are available to the e
 
 The request is given as a [HAR entry object](http://www.softwareishard.com/blog/har-12-spec/#entries), which is also given an asynchronous `getContent()` method that gets the response body content.
 
-Note that although your extension can add a listener at any time, it will only start firing after the user has activated the browser's [network panel](/en-US/docs/Tools/Network_Monitor) at least once.
+Note that although your extension can add a listener at any time, it will only start firing after the user has activated the browser's [network panel](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) at least once.
 
 ## Syntax
 
@@ -61,7 +61,7 @@ function handleRequestFinished(request) {
   console.log("Server IP: ", request.serverIPAddress);
   request.getContent().then(([content, mimeType]) => {
     console.log("Content: ", content);
-    console.log("MIME type: ", mimeType);
+    console.log("MIME type: ", mimeType);
   });
 }
 
@@ -70,7 +70,7 @@ browser.devtools.network.onRequestFinished.addListener(handleRequestFinished);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) API.
+> **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv3/devtools/) API.
 
 <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //

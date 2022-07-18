@@ -56,7 +56,7 @@ Let's download and install the Paciello Group's [Color Contrast Analyser](https:
 
 For instance, let's test the colors on this page and see how we fare in the color Contrast Analyser:
 
-![Color contrast on this page: excellent!](colour-contrast.png)
+![Color contrast on this page: excellent!](color-contrast.png)
 
 The luminosity contrast ratio between text and background is 8.30:1, which exceeds the minimum standard (4.5:1) and should enable many visually-impaired people to read this page.
 
@@ -85,7 +85,7 @@ Relative units are expressed in `em`, `%` and `rem`:
 - Percent-based sizes: `%`
   - : This unit tells your browser that an element's font size must be N% of the previous element whose font size was expressed. If no parent can be found, the default font size within the browser is considered as the base size for the calculation (usually the equivalent of 16 pixels).
 - Em-based sizes: `em`
-  - : This unit is calculated the same way as percents, except that you compute in portions of 1 and not portions of 100. It is said that "em" is the width of a capital “M” in the alphabet (roughly speaking, an “M” fits into a square).
+  - : This unit is calculated the same way as percents, except that you compute in portions of 1 and not portions of 100. It is said that "em" is the width of a capital "M" in the alphabet (roughly speaking, an "M" fits into a square).
 - Rem-based sizes: `rem`
   - : This unit is proportional to the root element's font size and is expressed as portions of 1, like `em`.
 
@@ -222,5 +222,5 @@ You must also provide alternatives to multimedia content.
 
 Some users may choose to display images, but still have limited bandwidth available, especially in developing countries and on mobile devices. If you want a successful website, please compress your images. There are various tools to help you, either online or local:
 
-- **Installed software.** [ImageOptim](https://imageoptim.com/) (Mac), [OptiPNG](http://optipng.sourceforge.net/) (all platforms), [PNGcrush](http://pmt.sourceforge.net/pngcrush/) (DOS, Unix/Linux)
+- **Installed software.** [ImageOptim](https://imageoptim.com/api) (Mac), [OptiPNG](http://optipng.sourceforge.net/) (all platforms), [PNGcrush](https://pmt.sourceforge.io/pngcrush/) (DOS, Unix/Linux)
 - **Online tools.** Yahoo's [smushit!](http://smush.it/), Dynamic drive's [Online Image Optimizer](https://tools.dynamicdrive.com/imageoptimizer/) (which can convert automatically from one format to another if it's more bandwidth-efficient)

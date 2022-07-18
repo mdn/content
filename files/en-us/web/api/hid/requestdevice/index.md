@@ -1,15 +1,17 @@
 ---
 title: HID.requestDevice()
 slug: Web/API/HID/requestDevice
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - requestDevice
   - HID
+  - Experimental
 browser-compat: api.HID.requestDevice
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`requestDevice()`** method of the {{domxref("HID")}} interface requests access to a HID device.
 
@@ -18,7 +20,7 @@ The user agent will present a permission dialog including a list of connected de
 ## Syntax
 
 ```js
-HID.requestDevice(options);
+requestDevice(options)
 ```
 
 ### Parameters
@@ -27,17 +29,17 @@ HID.requestDevice(options);
 
   - : An object containing an array of filter objects for possible devices to pair with. Each filter object can have the following properties:
 
-    - `vendorId`{{Optional_Inline}}
+    - `vendorId` {{optional_inline}}
       - : An integer representing the vendorId of the requested HID device
-    - `productId`{{Optional_Inline}}
+    - `productId` {{optional_inline}}
       - : An integer representing the productId of the requested HID device.
-    - `usagePage`{{Optional_Inline}}
+    - `usagePage` {{optional_inline}}
 
       - : An integer representing the usage page component of the HID usage of the requested device. The usage for a top level collection is used to identify the device type.
 
-        Standard HID usage values can be found in the [HID Usage Tables](https://usb.org/document-library/hid-usage-tables-122) document
+        Standard HID usage values can be found in the [HID Usage Tables](https://usb.org/document-library/hid-usage-tables-13) document
 
-    - `usage`{{Optional_Inline}}
+    - `usage` {{optional_inline}}
       - : An integer representing the usage ID component of the HID usage of the requested device.
 
 > **Note:** The device filters are used to narrow the list of devices presented to the user. If no filters are present, all connected devices are shown. When one or more filters are included, a device is included if any filter matches. To match a filter, all of the rules included in that filter must match.
@@ -48,7 +50,7 @@ A {{jsxref("Promise")}} that resolves with an array of connected {{domxref("HIDD
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `SecurityError`
+- `SecurityError` {{domxref("DOMException")}}
   - : Thrown if the page does not allow access to the HID feature.
 
 ## Examples

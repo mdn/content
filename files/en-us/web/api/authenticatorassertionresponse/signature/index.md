@@ -1,6 +1,7 @@
 ---
 title: AuthenticatorAssertionResponse.signature
 slug: Web/API/AuthenticatorAssertionResponse/signature
+page-type: web-api-instance-property
 tags:
   - API
   - AuthenticatorAssertionResponse
@@ -30,13 +31,7 @@ the credential's generation.
 > **Note:** This property may only be used in top-level contexts and will
 > not be available in an {{HTMLElement("iframe")}} for example.
 
-## Syntax
-
-```js
-signature = authenticatorAssertionResponse.signature
-```
-
-### Value
+## Value
 
 An {{jsxref("ArrayBuffer")}} object which the signature of the authenticator (using its
 private key) for both {{domxref("AuthenticatorAssertionResponse.authenticatorData")}}
@@ -47,14 +42,14 @@ available from
 ## Examples
 
 ```js
-var options = {
+const options = {
   challenge: new Uint8Array(26), // will be another value, provided by the relying party server
   timeout: 60000
 };
 
 navigator.credentials.get({  publicKey: options })
   .then(function (assertionPKCred) {
-    var signature = assertionPKCred.response.signature;
+    const signature = assertionPKCred.response.signature;
 
     // Send response and client extensions to the server so that it can
     // go on with the authentication

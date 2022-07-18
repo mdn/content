@@ -1,6 +1,7 @@
 ---
 title: UIEvent.which
 slug: Web/API/UIEvent/which
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -10,22 +11,22 @@ tags:
   - Reference
 browser-compat: api.UIEvent.which
 ---
-{{ APIRef("DOM Events") }} {{Non-standard_header}}
+{{APIRef("UI Events")}} {{Non-standard_header}}
 
 The **`UIEvent.which`** read-only property of the {{domxref("UIEvent")}} interface returns a number that indicates which button was pressed on the mouse, or the numeric `keyCode` or the character code (`charCode`) of the key pressed on the keyboard.
 
 ## Value
 
-### Value for {{domxref("KeyboardEvent")}} {{non-standard_inline}}
+### Value for KeyboardEvent {{non-standard_inline}}
 
-`event.which` contains the numeric code for a particular key pressed, depending on whether an alphanumeric or non-alphanumeric key was pressed.
+For {{domxref("KeyboardEvent")}}, `event.which` contains the numeric code for a particular key pressed, depending on whether an alphanumeric or non-alphanumeric key was pressed.
 Please see deprecated {{domxref("KeyboardEvent.charCode")}} and {{domxref("KeyboardEvent.keyCode")}} for more details.
 
 > **Note:** Consider {{domxref("KeyboardEvent.key")}} or {{domxref("KeyboardEvent.code")}} for new code.
 
-### Value for {{domxref("MouseEvent")}} {{non-standard_inline}}
+### Value for MouseEvent {{non-standard_inline}}
 
-A number representing a given button:
+For {{domxref("MouseEvent")}}, `event.which` is a number representing a given button:
 
 - `0`: No button
 - `1`: Left button
@@ -37,7 +38,7 @@ In this case, the values are read from right to left.
 
 > **Note:** Consider {{domxref("MouseEvent.button")}} for new code.
 
-## Example
+## Examples
 
 ```html
 <html>

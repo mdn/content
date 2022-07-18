@@ -1,6 +1,7 @@
 ---
 title: Element.setAttributeNodeNS()
 slug: Web/API/Element/setAttributeNodeNS
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -16,13 +17,18 @@ browser-compat: api.Element.setAttributeNodeNS
 ## Syntax
 
 ```js
-replacedAttr = element.setAttributeNodeNS(attributeNode)
+setAttributeNodeNS(attributeNode)
 ```
 
-- `replacedAttr` is the replaced attribute node, if any, returned by this function.
+### Parameters
+
 - `attributeNode` is an `Attr` node.
 
-## Example
+### Return value
+
+The replaced attribute node, if any, returned by this function.
+
+## Examples
 
 ```js
 // <div id="one" xmlns:myNS="http://www.mozilla.org/ns/specialspace"
@@ -52,3 +58,8 @@ Note that if you try to set without cloning the node, Mozilla gives an NS_ERROR_
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Document.createAttribute()")}}
+- {{domxref("Document.createAttributeNS()")}}

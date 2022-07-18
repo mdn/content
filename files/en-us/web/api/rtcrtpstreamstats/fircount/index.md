@@ -1,6 +1,7 @@
 ---
 title: RTCRtpStreamStats.firCount
 slug: Web/API/RTCRtpStreamStats/firCount
+page-type: web-api-instance-property
 tags:
   - API
   - Dropped Frames
@@ -29,13 +30,7 @@ the sender.
 This is a measure of how often the stream falls behind and has to
 skip frames in order to catch up.
 
-## Syntax
-
-```js
-var firCount = RTCRtpStreamStats.firCount;
-```
-
-### Value
+## Value
 
 An integer value indicating how many FIR packets have been received by the sender
 during the current connection. This value is available only on receivers for video

@@ -1,6 +1,7 @@
 ---
 title: Document.createElement()
 slug: Web/API/Document/createElement
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -17,15 +18,19 @@ In an [HTML](/en-US/docs/Web/HTML) document, the **`document.createElement()`** 
 ## Syntax
 
 ```js
-let element = document.createElement(tagName[, options]);
+createElement(tagName)
+createElement(tagName, options)
 ```
 
 ### Parameters
 
-- _tagName_
+- `tagName`
   - : A string that specifies the type of element to be created. The {{domxref("Node.nodeName", "nodeName")}} of the created element is initialized with the value of _tagName_. Don't use qualified names (like "html:a") with this method. When called on an HTML document, `createElement()` converts _tagName_ to lower case before creating the element. In Firefox, Opera, and Chrome, `createElement(null)` works like `createElement("null")`.
-- _options_ {{optional_inline}}
-  - : An optional `ElementCreationOptions` object, containing a single property named `is`, whose value is the tag name of a custom element previously defined via `customElements.define()`. See {{anch("Web component example")}} for more details.
+- `options` {{optional_inline}}
+  - : An object with the following properties:
+    - `is`
+      - : The tag name of a custom element previously defined via `customElements.define()`.
+        See [Web component example](#web_component_example) for more details.
 
 ### Return value
 
@@ -62,10 +67,10 @@ function addElement () {
   // create a new div element
   const newDiv = document.createElement("div");
 
-  // and give it some content
+  // and give it some content
   const newContent = document.createTextNode("Hi there and greetings!");
 
-  // add the text node to the newly created div
+  // add the text node to the newly created div
   newDiv.appendChild(newContent);
 
   // add the newly created element and its content into the DOM
@@ -80,7 +85,7 @@ function addElement () {
 
 ### Web component example
 
-The following example snippet is taken from our [expanding-list-web-component](https://github.com/mdn/web-components-examples/tree/master/expanding-list-web-component) example ([see it live also](https://mdn.github.io/web-components-examples/expanding-list-web-component/)). In this case, our custom element extends the {{domxref("HTMLUListElement")}}, which represents the {{htmlelement("ul")}} element.
+The following example snippet is taken from our [expanding-list-web-component](https://github.com/mdn/web-components-examples/tree/main/expanding-list-web-component) example ([see it live also](https://mdn.github.io/web-components-examples/expanding-list-web-component/)). In this case, our custom element extends the {{domxref("HTMLUListElement")}}, which represents the {{htmlelement("ul")}} element.
 
 ```js
 // Create a class for the element
@@ -90,7 +95,7 @@ class ExpandingList extends HTMLUListElement {
     super();
 
     // constructor definition left out for brevity
-    ...
+    // …
   }
 }
 
@@ -104,7 +109,7 @@ If we wanted to create an instance of this element programmatically, we'd use a 
 let expandingList = document.createElement('ul', { is : 'expanding-list' })
 ```
 
-The new element will be given an [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute whose value is the custom element's tag name.
+The new element will be given an [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute whose value is the custom element's tag name.
 
 > **Note:** For backwards compatibility with previous versions of the [Custom Elements specification](https://www.w3.org/TR/custom-elements/), some browsers will allow you to pass a string here instead of an object, where the string's value is the custom element's tag name.
 

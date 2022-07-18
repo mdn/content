@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 68 that will affect developers. Firefox 68 was released on July 9, 2019.
+This article provides information about the changes in Firefox 68 that will affect developers. Firefox 68 was released on July 9, 2019.
 
 ## Changes for web developers
 
@@ -17,73 +17,73 @@ This article provides information about the changes in Firefox 68 that will af
 
 #### Browser/web console
 
-- The Web console now shows [more information about CSS warnings](/en-US/docs/Tools/Web_Console/Console_messages#css), including a node list of the DOM elements that used the rule ({{bug(1093953)}}).
+- The Web console now shows [more information about CSS warnings](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#css), including a node list of the DOM elements that used the rule ({{bug(1093953)}}).
 - You can now filter content in the Web console using regular expressions ({{bug(1441079)}}).
 - The Browser console now allows you to show or hide messages from the content process by setting or clearing the checkbox labeled _Show Content Messages_ ({{bug(1260877)}}).
 
 #### JavaScript debugger
 
-- You can now [Search](/en-US/docs/Tools/Debugger/How_to/Search#searching_in_all_files) in all files in the current project from the debugger by pressing `Shift` + `Ctrl` + `F` (Windows or Linux) or `Shift` + `Cmd` + `F` (macOS) ({{bug(1320325)}}).
+- You can now [Search](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/search/index.html#searching-in-all-files) in all files in the current project from the debugger by pressing `Shift` + `Ctrl` + `F` (Windows or Linux) or `Shift` + `Cmd` + `F` (macOS) ({{bug(1320325)}}).
 
 #### Network monitor
 
-- The Network monitor [request list](/en-US/docs/Tools/Network_Monitor/request_list#filtering_requests) now allows you to block a specific URL ({{bug(1151368)}}).
-- You can now resend a network request without editing the method, URL, parameters, and headers, using the [Resend](/en-US/docs/Tools/Network_Monitor/request_list#context_menu) command on the context menu ({{bug(1422014)}}).
-- The context menu of the Network monitor [Headers](/en-US/docs/Tools/Network_Monitor/request_details#headers) tab now allows you to copy all or some of the header information to the clipboard in JSON format ({{bug(1442249)}}).
+- The Network monitor [request list](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#filtering-requests) now allows you to block a specific URL ({{bug(1151368)}}).
+- You can now resend a network request without editing the method, URL, parameters, and headers, using the [Resend](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#context-menu) command on the context menu ({{bug(1422014)}}).
+- The context menu of the Network monitor [Headers](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#headers) tab now allows you to copy all or some of the header information to the clipboard in JSON format ({{bug(1442249)}}).
 
 #### Page inspector
 
-- A button has been added to the [rules panel](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#examine_css_rules) of the Page inspector that allows you to toggle the display of any print media queries ({{bug(1534984)}}).
-- The [fonts panel](/en-US/docs/Tools/Page_Inspector/How_to/Edit_fonts) now includes a slider to modify `letter-spacing` ({{bug(1536237)}}).
+- A button has been added to the [rules panel](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#examine-css-rules) of the Page inspector that allows you to toggle the display of any print media queries ({{bug(1534984)}}).
+- The [fonts panel](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_fonts/index.html) now includes a slider to modify `letter-spacing` ({{bug(1536237)}}).
 - A warning icon appears next to unsupported CSS properties or rules that have invalid values, to help you understand why certain styles are not being applied ({{bug(1306054)}}).
 
 #### Storage inspector
 
-- You can now [delete local and session storage](/en-US/docs/Tools/Storage_Inspector#local_storage_session_storage) entries by selecting the item in the storage inspector and pressing the backspace key ({{bug(1522893)}}).
+- You can now [delete local and session storage](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html#local-storage-session-storage) entries by selecting the item in the storage inspector and pressing the backspace key ({{bug(1522893)}}).
 
 #### Other
 
-- The [Accessibility Inspector](/en-US/docs/Tools/Accessibility_inspector) now includes a new _Check for issues_ feature, which will include a number of audit tools to highlight accessibility problems on your web pages. The first available check is _contrast_, for highlighting color contrast problems.
-- The preference that controls the visibility of internal extensions (system add-ons and hidden extensions) on the [about:debugging](/en-US/docs/Tools/about:debugging) page has been changed from `devtools.aboutdebugging.showSystemAddons` to `devtools.aboutdebugging.showHiddenAddons` ({{bug(1544372)}}).
-- [Responsive design mode](/en-US/docs/Tools/Responsive_Design_Mode) has been redesigned — the _Device Settings_ dialog (device selection menu > _Edit List..._) is now more intuitive and simpler to use ({{bug(1487857)}}).
+- The [Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) now includes a new _Check for issues_ feature, which will include a number of audit tools to highlight accessibility problems on your web pages. The first available check is _contrast_, for highlighting color contrast problems.
+- The preference that controls the visibility of internal extensions (system add-ons and hidden extensions) on the [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) page has been changed from `devtools.aboutdebugging.showSystemAddons` to `devtools.aboutdebugging.showHiddenAddons` ({{bug(1544372)}}).
+- [Responsive design mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) has been redesigned — the _Device Settings_ dialog (device selection menu > _Edit List…_) is now more intuitive and simpler to use ({{bug(1487857)}}).
 
 #### Removals
 
-- The "Enable add-on debugging" checkbox has been removed from the [about:debugging](/en-US/docs/Tools/about:debugging) page ({{bug(1544813)}}).
+- The "Enable add-on debugging" checkbox has been removed from the [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) page ({{bug(1544813)}}).
 
 ### HTML
 
 - The {{HTMLElement("track")}} element — represented by {{domxref("HTMLTrackElement")}} — now receives a {{domxref("HTMLTrackElement.cuechange_event", "cuechange")}} event in addition to the {{domxref("TextTrack")}} itself, if the text track is a contained by a media element ({{bug(1548731)}}).
 - {{htmlelement("link")}} elements support the `disabled` attribute again, albeit with different behavior. When `disabled` is set on a `<link>` element along with `rel="stylesheet"`, the referenced stylesheet is not loaded during page load, and will be loaded on demand when the `disabled` attribute is changed to `false` or removed ({{bug(1281135)}}).
 
-####  Removals
+#### Removals
 
 - [`<meta http-equiv="set-cookie">`](/en-US/docs/Web/HTML/Element/meta) is no longer supported ({{bug(1457503)}}).
 
 ### CSS
 
-- [CSS Scroll Snapping](/en-US/docs/Web/CSS/CSS_Scroll_Snap) has been updated to the latest version of the specification ({{bug(1312163)}}) and ({{bug(1544136)}}), this includes:
+- [CSS Scroll Snapping](/en-US/docs/Web/CSS/CSS_Scroll_Snap) has been updated to the latest version of the specification ({{bug(1312163)}}) and ({{bug(1544136)}}), this includes:
 
-  - The `scroll-padding` properties ({{bug(1373832)}})
-  - The `scroll-margin` properties ({{bug(1373833)}})
+  - The `scroll-padding` properties ({{bug(1373832)}})
+  - The `scroll-margin` properties ({{bug(1373833)}})
   - {{CSSxRef("scroll-snap-align")}} ({{bug(1373835)}})
 
 - The {{CSSxRef("-webkit-line-clamp")}} property has been implemented for compatibility with other browsers ({{bug(866102)}}).
-- Support has been added for the {{CSSxRef("::marker")}} pseudo-element ({{bug(205202)}}) and animation for `::marker` pseudos ({{bug(1538618)}})
-- We changed {{CSSxRef("color_value#currentcolor_keyword", "currentColor")}} to be a computed value (except for the {{cssxref("color")}} property)  ({{bug(760345)}}).
-- Support has been fixed for the `ch` length unit so it now matches the spec (fallback for no '0' glyph, vertical metrics) ({{bug(282126)}})
-- The  {{CSSxRef("counter-set")}} property has been implemented. ({{bug(1518201)}}).
-- We now implement list numbering using a built-in "list-item" counter; this fixes list numbering bugs ({{bug(288704)}}).
-- Selector matching and parsing support has been implemented for [`::part()`](/en-US/docs/Web/CSS/::part) ({{bug(1545430)}}) and ({{bug(1545425)}}).
-- [CSS Transforms](/en-US/docs/Web/CSS/CSS_Transforms) are now supported in indirectly rendered things e.g.)  {{SVGElement("mask")}},  {{SVGElement("marker")}},  {{SVGElement("pattern")}},  {{SVGElement("clipPath")}} ({{bug(1323962)}}).
-- While we're keeping the prefixed versions of the various gradient properties ({{cssxref("linear-gradient()")}}, {{cssxref("radial-gradient()")}}, and {{cssxref("repeating-radial-gradient()")}} available for compatibility reasons, we have revised how they're parsed so that they're handled much more like the non-prefixed versions. This means that certain existing styles won't work correctly.
+- Support has been added for the {{CSSxRef("::marker")}} pseudo-element ({{bug(205202)}}) and animation for `::marker` pseudos ({{bug(1538618)}})
+- We changed {{CSSxRef("color_value#currentcolor_keyword", "currentcolor")}} to be a computed value (except for the {{cssxref("color")}} property)  ({{bug(760345)}}).
+- Support has been fixed for the `ch` length unit so it now matches the spec (fallback for no '0' glyph, vertical metrics) ({{bug(282126)}})
+- The {{CSSxRef("counter-set")}} property has been implemented. ({{bug(1518201)}}).
+- We now implement list numbering using a built-in "list-item" counter; this fixes list numbering bugs ({{bug(288704)}}).
+- Selector matching and parsing support has been implemented for [`::part()`](/en-US/docs/Web/CSS/::part) ({{bug(1545430)}}) and ({{bug(1545425)}}).
+- [CSS Transforms](/en-US/docs/Web/CSS/CSS_Transforms) are now supported in indirectly rendered things e.g.) {{SVGElement("mask")}},  {{SVGElement("marker")}},  {{SVGElement("pattern")}},  {{SVGElement("clipPath")}} ({{bug(1323962)}}).
+- While we're keeping the prefixed versions of the various gradient properties ({{cssxref("linear-gradient", "linear-gradient()")}}, {{cssxref("radial-gradient", "radial-gradient()")}}, and {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}} available for compatibility reasons, we have revised how they're parsed so that they're handled much more like the non-prefixed versions. This means that certain existing styles won't work correctly.
 
   In particular, the complicated syntax taking both an angle and a position will no longer work, and the `to` keyword in the `<side-or-corner>` parameter is not required for the prefixed gradient properties. You are encouraged to use the standard, non-prefixed gradient properties instead, as they're now widely supported ({{bug(1547939)}}).
 
 #### Removals
 
 - {{CSSxRef("scroll-snap-coordinate")}}, {{CSSxRef("scroll-snap-destination")}}, {{CSSxRef("scroll-snap-type-x")}} and {{CSSxRef("scroll-snap-type-y")}} have been removed.
-- The {{CSSxRef("scroll-snap-type")}} property has become a longhand, so the old shorthand syntax like `scroll-snap-type:mandatory` will stop working.
+- The {{CSSxRef("scroll-snap-type")}} property has become a longhand, so the old shorthand syntax like `scroll-snap-type:mandatory` will stop working.
 
 ### SVG
 
@@ -130,9 +130,9 @@ _No changes._
 
 #### Removals
 
-- Removed the non-standard {{DOMxRef("XMLDocument.load()")}} method ({{bug(332175)}}).
+- Removed the non-standard {{DOMxRef("XMLDocument.load()")}} method ({{bug(332175)}}).
 - Removed the non-standard {{DOMxRef("XMLDocument.async")}} property ({{bug(1328138)}}).
-- The {{domxref("RTCIceCredentialType")}} `token` value has been removed ({{bug(1529595)}}).
+- The {{domxref("RTCIceServer.credentialType")}} `token` value has been removed ({{bug(1529595)}}).
 
 ### HTTP
 
@@ -144,7 +144,7 @@ _No changes._
 
 ### Security
 
-- Due to [CVE-2019-11730: Same-origin policy treats all files in a directory as having the same-origin](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730), changes have been made so that Firefox now treats files in the same directory as being from different origins. This has a number of side-effects on what will work in documents loaded via file:// URLs (see {{bug("file-fallout")}} for useful background research). For example, workers can no longer be loaded.
+- Due to [CVE-2019-11730: Same-origin policy treats all files in a directory as having the same-origin](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730), changes have been made so that Firefox now treats files in the same directory as being from different origins. This has a number of side-effects on what will work in documents loaded via file:// URLs (see {{bug("file-fallout")}} for useful background research). For example, workers can no longer be loaded.
 
 ### WebDriver conformance (Marionette)
 
@@ -173,6 +173,7 @@ _No changes._
 - When an add-on attempts to add a bookmark folder to the root folder, the resulting error message is now much more intuitive ({{bug(1512171)}}).
 - The promise returned by [`browser.tabs.duplicate()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/duplicate) now resolves immediately, before the tabs are completely loaded ({{bug(1394376)}}).
 - Support has been added for chrome.storage.managed, allowing web extension settings to be implemented via enterprise policy ({{bug(1230802)}}).
+- `proxyAuthorization` and `connectionIsolation` in {{WebExtAPIRef("proxy.onRequest")}} now apply only to HTTPS proxies ({{bug(1549368)}}.
 
 ### Manifest changes
 

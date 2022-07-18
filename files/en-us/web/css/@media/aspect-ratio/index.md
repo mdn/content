@@ -27,7 +27,7 @@ Note that, when none of the media query conditions are true, the background will
 
 ```html
 <div id='inner'>
-  Watch this element as you resize your viewport's width and height.
+  Watch this element as you resize your viewport's width and height.
 </div>
 ```
 
@@ -36,23 +36,23 @@ Note that, when none of the media query conditions are true, the background will
 ```css
 /* Minimum aspect ratio */
 @media (min-aspect-ratio: 8/5) {
-  div {
-    background: #9af; /* blue */
-  }
+  div {
+    background: #9af; /* blue */
+  }
 }
 
 /* Maximum aspect ratio */
 @media (max-aspect-ratio: 3/2) {
-  div {
-    background: #9ff;  /* cyan */
-  }
+  div {
+    background: #9ff;  /* cyan */
+  }
 }
 
 /* Exact aspect ratio, put it at the bottom to avoid override*/
 @media (aspect-ratio: 1/1) {
-  div {
-    background: #f9a; /* red */
-  }
+  div {
+    background: #f9a; /* red */
+  }
 }
 ```
 
@@ -71,7 +71,7 @@ Note that, when none of the media query conditions are true, the background will
 
 ```css hidden
 iframe{
-  display:block;
+  display:block;
 }
 ```
 
@@ -100,5 +100,5 @@ h.onchange=h.oninput=function(){
 
 ## See also
 
-- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 - [@media](/en-US/docs/Web/CSS/@media)

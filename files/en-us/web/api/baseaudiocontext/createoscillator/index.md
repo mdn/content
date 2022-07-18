@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createOscillator()
 slug: Web/API/BaseAudioContext/createOscillator
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext
@@ -24,18 +25,21 @@ waveform. It basically generates a constant tone.
 ## Syntax
 
 ```js
-var oscillatorNode = audioCtx.createOscillator();
+createOscillator()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 An {{domxref("OscillatorNode")}}.
 
-## Example
+## Examples
 
 The following example shows basic usage of an AudioContext to create an oscillator
-node. For applied examples/information, check out our [Violent Theremin demo](https://mdn.github.io/violent-theremin/) ([see
-app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) for relevant code); also see our {{domxref("OscillatorNode")}} page for
+node. For applied examples/information, check out our [Violent Theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) ([see app.js](https://github.com/mdn/webaudio-examples/blob/master/violent-theremin/scripts/app.js) for relevant code); also see our {{domxref("OscillatorNode")}} page for
 more information.
 
 ```js

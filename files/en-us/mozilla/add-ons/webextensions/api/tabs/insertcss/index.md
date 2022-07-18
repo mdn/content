@@ -17,6 +17,8 @@ browser-compat: webextensions.api.tabs.insertCSS
 
 Injects CSS into a page.
 
+> **Note:** When using Manifest V3 or higher, use {{WebExtAPIRef("scripting.insertCSS()")}} and {{WebExtAPIRef("scripting.removeCSS()")}} to insert and remove CSS.
+
 To use this API you must have the permission for the page's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
 
 You can only inject CSS into pages whose URL can be expressed using a [match pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns): meaning, its scheme must be one of "http", "https", or "file". This means that you can't inject CSS into any of the browser's built-in pages, such as about:debugging, about:addons, or the page that opens when you open a new empty tab.
@@ -30,7 +32,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var inserting = browser.tabs.insertCSS(
+let inserting = browser.tabs.insertCSS(
   tabId,           // optional integer
   details          // object
 )
@@ -44,36 +46,36 @@ var inserting = browser.tabs.insertCSS(
 
   - : An object describing the CSS to insert. It contains the following properties:
 
-    - `allFrames`{{optional_inline}}
+    - `allFrames` {{optional_inline}}
       - : `boolean`. If `true`, the CSS will be injected into all frames of the current page. If it is `false`, CSS is only injected into the top frame. Defaults to `false`.
-    - `code`{{optional_inline}}
+    - `code` {{optional_inline}}
       - : `string`. Code to inject, as a text string.
-    - `cssOrigin`{{optional_inline}}
+    - `cssOrigin` {{optional_inline}}
 
       - : `string`. This can take one of two values: "user", to add the CSS as a user stylesheet or "author" to add it as an author stylesheet. If this option is omitted, the CSS is added as an author stylesheet.
 
         - "user" enables you to prevent websites from overriding the CSS you insert: see [Cascading order](/en-US/docs/Web/CSS/Cascade#cascading_order).
-        - "author" stylesheets behave as if they appear after all author rules specified by the web page. This behavior includes any author stylesheets added dynamically by the page’s scripts, even if that addition happens after the `insertCSS` call completes.
+        - "author" stylesheets behave as if they appear after all author rules specified by the web page. This behavior includes any author stylesheets added dynamically by the page's scripts, even if that addition happens after the `insertCSS` call completes.
 
-    - `file`{{optional_inline}}
+    - `file` {{optional_inline}}
       - : `string`. Path to a file containing the code to inject. In Firefox, relative URLs are resolved relative to the current page URL. In Chrome, these URLs are resolved relative to the extension's base URL. To work cross-browser, you can specify the path as an absolute URL, starting at the extension's root, like this: `"/path/to/stylesheet.css"`.
-    - `frameId`{{optional_inline}}
-      - : `integer`. The frame where the CSS should be injected. Defaults to `0` (the top-level frame).
-    - `matchAboutBlank`{{optional_inline}}
+    - `frameId` {{optional_inline}}
+      - : `integer`. The frame where the CSS should be injected. Defaults to `0` (the top-level frame).
+    - `matchAboutBlank` {{optional_inline}}
       - : `boolean`. If `true`, the code will be injected into embedded "about:blank" and "about:srcdoc" frames if your extension has access to their parent document. The code cannot be inserted in top-level about: frames. Defaults to `false`.
-    - `runAt`{{optional_inline}}
+    - `runAt` {{optional_inline}}
       - : {{WebExtAPIRef('extensionTypes.RunAt')}}. The soonest that the code will be injected into the tab. Defaults to "document_idle".
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the CSS has been inserted. If any error occurs, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the CSS has been inserted. If any error occurs, the promise will be rejected with an error message.
 
 ## Examples
 
 This example inserts into the currently active tab CSS which is taken from a string.
 
 ```js
-var css = "body { border: 20px dotted pink; }";
+let css = "body { border: 20px dotted pink; }";
 
 browser.browserAction.onClicked.addListener(() => {
 
@@ -81,7 +83,7 @@ browser.browserAction.onClicked.addListener(() => {
     console.log(`Error: ${error}`);
   }
 
-  var insertingCSS = browser.tabs.insertCSS({code: css});
+  let insertingCSS = browser.tabs.insertCSS({code: css});
   insertingCSS.then(null, onError);
 });
 ```
@@ -95,7 +97,7 @@ browser.browserAction.onClicked.addListener(() => {
     console.log(`Error: ${error}`);
   }
 
-  var insertingCSS = browser.tabs.insertCSS(2, {file: "content-style.css"});
+  let insertingCSS = browser.tabs.insertCSS(2, {file: "content-style.css"});
   insertingCSS.then(null, onError);
 });
 ```
@@ -106,7 +108,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-insertCSS) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-insertCSS) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

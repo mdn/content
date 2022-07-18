@@ -1,14 +1,16 @@
 ---
 title: Performance Timeline
 slug: Web/API/Performance_Timeline
+page-type: web-api-overview
 tags:
   - Guide
   - Overview
   - Web Performance
+spec-urls: https://w3c.github.io/performance-timeline/
 ---
 {{DefaultAPISidebar("Performance Timeline API")}}
 
-The **Performance Timeline** API defines extensions to the {{domxref("Performance")}} interface to support client-side latency measurements within applications. The extensions provide interfaces to retrieve {{domxref("PerformanceEntry","performance entry metrics", '', 'true')}} based on specific filter criteria. The standard also includes interfaces that allow an application to define _{{anch("Performance_Observers","performance observer", '', 'true')}}_ callbacks that are notified when specific performance events are added to the browser's _performance timeline_.
+The **Performance Timeline** API defines extensions to the {{domxref("Performance")}} interface to support client-side latency measurements within applications. The extensions provide interfaces to retrieve {{domxref("PerformanceEntry","performance entry metrics", '', 'true')}} based on specific filter criteria. The standard also includes interfaces that allow an application to define _[performance observer](#performance_observers)_ callbacks that are notified when specific performance events are added to the browser's _performance timeline_.
 
 This document provides an overview of the standard's interfaces. For more details about the interfaces, see the reference pages and [Using Performance Timeline](/en-US/docs/Web/API/Performance_Timeline/Using_Performance_Timeline).
 
@@ -54,9 +56,7 @@ Performance observers were added to the `Level 2` version of the standard and we
 
 ## Specifications
 
-| Specification                                                       |
-| ------------------------------------------------------------------- |
-| [Performance Timeline](https://w3c.github.io/performance-timeline/) |
+{{Specifications}}
 
 ## Implementation status
 

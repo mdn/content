@@ -4,17 +4,17 @@ slug: Web/HTTP/Headers/Large-Allocation
 tags:
   - HTTP
   - HTTP Header
-  - Non-standard
   - Reference
   - Response Header
   - header
+  - Deprecated
+  - Non-standard
 browser-compat: http.headers.Large-Allocation
 ---
-{{HTTPSidebar}}
+{{HTTPSidebar}} {{Deprecated_Header}}
 
-The non-standard **`Large-Allocation`** response header tells
-the browser that the page being loaded is going to want to perform a large allocation.
-It is currently only implemented in Firefox, but is harmless to send to every browser.
+The non-standard **`Large-Allocation`** response header tells the browser that the page being loaded is going to want to perform a large allocation.
+It's not implemented in current versions of any browser, but is harmless to send to any browser.
 
 [WebAssembly](/en-US/docs/WebAssembly) or asm.js applications can use large
 contiguous blocks of allocated memory. For complex games, for example, these allocations
@@ -61,8 +61,7 @@ Large-Allocation: 500
 ## Troubleshooting errors
 
 The `Large-Allocation` header throws warnings or error messages when used
-incorrectly. You'll encounter them in the [web
-console](/en-US/docs/Tools/Web_Console).
+incorrectly. You'll encounter them in the [web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html).
 
 - This page was loaded in a new process due to a `Large-Allocation` header.
   - : This message means that the browser saw the `Large-Allocation` header,
@@ -70,7 +69,7 @@ console](/en-US/docs/Tools/Web_Console).
     contiguous memory.
 - A `Large-Allocation` header was ignored due to the load being triggered
   by a non-GET request.
-  - : When a {{HTTPMethod("POST")}} request is used to load a document, that load cannot
+  - : When a {{HTTPMethod("POST")}} request is used to load a document, that load cannot
     currently be redirected into a new process. This error is displayed when loading a
     document with a `Large-Allocation` header with a non-GET HTTP method. This
     could be caused due to the document being loaded by a form submission, for example.
@@ -104,15 +103,12 @@ console](/en-US/docs/Tools/Web_Console).
   - : Firefox currently only supports the `Large-Allocation` header in our
     32-bit Windows builds, as memory fragmentation is not an issue in 64-bit builds. If
     you are running a non-win32 version of Firefox, this error will appear. This check can
-    be disabled with the "dom.largeAllocation.
-
-    forceEnable" boolean preference in about:config.
+    be disabled with the `dom.largeAllocation.forceEnable` boolean preference in about:config.
 
 ## Specifications
 
 Not part of any current specifications. An explainer of the ideas behind this header
-can be found in [this
-document](https://gist.github.com/mystor/5739e222e398efc6c29108be55eb6fe3).
+can be found in [this document](https://gist.github.com/mystor/5739e222e398efc6c29108be55eb6fe3).
 
 ## Browser compatibility
 

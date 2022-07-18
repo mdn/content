@@ -1,6 +1,7 @@
 ---
 title: AudioTrack
 slug: Web/API/AudioTrack
+page-type: web-api-interface
 tags:
   - Audio
   - AudioTrack
@@ -23,13 +24,13 @@ The most common use for accessing an `AudioTrack` object is to toggle its {{domx
 - {{domxref("AudioTrack.enabled", "enabled")}}
   - : A Boolean value which controls whether or not the audio track's sound is enabled. Setting this value to `false` mutes the track's audio.
 - {{domxref("AudioTrack.id", "id")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} which uniquely identifies the track within the media. This ID can be used to locate a specific track within an audio track list by calling {{domxref("AudioTrackList.getTrackById()")}}. The ID can also be used as the fragment part of the URL if the media supports seeking by media fragment per the [Media Fragments URI specification](https://www.w3.org/TR/media-frags/).
+  - : A string which uniquely identifies the track within the media. This ID can be used to locate a specific track within an audio track list by calling {{domxref("AudioTrackList.getTrackById()")}}. The ID can also be used as the fragment part of the URL if the media supports seeking by media fragment per the [Media Fragments URI specification](https://www.w3.org/TR/media-frags/).
 - {{domxref("AudioTrack.kind", "kind")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} specifying the category into which the track falls. For example, the main audio track would have a `kind` of `"main"`.
+  - : A string specifying the category into which the track falls. For example, the main audio track would have a `kind` of `"main"`.
 - {{domxref("AudioTrack.label", "label")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} providing a human-readable label for the track. For example, an audio commentary track for a movie might have a `label` of `"Commentary with director John Q. Public and actors John Doe and Jane Eod."` This string is empty if no label is provided.
+  - : A string providing a human-readable label for the track. For example, an audio commentary track for a movie might have a `label` of `"Commentary with director John Q. Public and actors John Doe and Jane Eod."` This string is empty if no label is provided.
 - {{domxref("AudioTrack.language", "language")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} specifying the audio track's primary language, or an empty string if unknown. The language is specified as a BCP 47 ({{RFC(5646)}}) language code, such as `"en-US"` or `"pt-BR"`.
+  - : A string specifying the audio track's primary language, or an empty string if unknown. The language is specified as a BCP 47 ({{RFC(5646)}}) language code, such as `"en-US"` or `"pt-BR"`.
 - {{domxref("AudioTrack.sourceBuffer", "sourceBuffer")}} {{ReadOnlyInline}}
   - : The {{domxref("SourceBuffer")}} that created the track. Returns null if the track was not created by a {{domxref("SourceBuffer")}} or the {{domxref("SourceBuffer")}} has been removed from the {{domxref("MediaSource.sourceBuffers")}} attribute of its parent media source.
 

@@ -38,7 +38,7 @@ browser.find.find(
 
 - `queryphrase`
   - : `string`. The text to search for.
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
 
   - : `object`. An object specifying additional options. It may take any of the following properties, all optional:
 
@@ -59,7 +59,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 - `count`
   - : `integer`. The number of results found.
-- `rangeData`{{optional_inline}}
+- `rangeData` {{optional_inline}}
 
   - : `array`. If `includeRangeData` was given in the `options` parameter, then this property will be included. It is provided as an array of `RangeData` objects, one for each match. Each `RangeData` object describes where in the DOM tree the match was found. This would enable, for example, an extension to get the text surrounding each match, so as to display context for the matches.
 
@@ -78,7 +78,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
     - `endOffset`
       - : The ordinal position of the end of the match within its text node.
 
-- `rectData`{{optional_inline}}
+- `rectData` {{optional_inline}}
 
   - : `array`. If `includeRectData` was given in the `options` parameter, then this property will be included. It is an array of `RectData` objects. It contains client rectangles for all the text matched in the search, relative to the top-left of the viewport. Extensions can use this to provide custom highlighting of the results.
 
@@ -256,7 +256,7 @@ The content script:
  * Add a black DIV where the rect is.
  */
 function redactRect(rect) {
-  var redaction = document.createElement("div");
+  let redaction = document.createElement("div");
   redaction.style.backgroundColor = "black";
   redaction.style.position = "absolute";
   redaction.style.top = `${rect.top}px`;

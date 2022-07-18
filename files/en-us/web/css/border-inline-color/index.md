@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.border-inline-color
@@ -28,6 +27,7 @@ border-inline-color: #F5F6F7;
 border-inline-color: inherit;
 border-inline-color: initial;
 border-inline-color: revert;
+border-inline-color: revert-layer;
 border-inline-color: unset;
 ```
 

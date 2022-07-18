@@ -31,4 +31,4 @@ A node-set containing the nodes that are in `nodeSet1` but not in `nodeSet2`.
 
 ## Specifications
 
-[EXSLT - SET:DIFFERENCE](http://www.exslt.org/set/functions/difference/index.html)
+[EXSLT - SET:DIFFERENCE](http://exslt.org/set/functions/difference/index.html)

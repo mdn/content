@@ -1,6 +1,7 @@
 ---
 title: TrustedScriptURL
 slug: Web/API/TrustedScriptURL
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -19,7 +20,7 @@ The value of a **TrustedScriptURL** object is set when the object is created and
 - {{domxref("TrustedScriptURL.toJSON()")}}
   - : Returns a JSON representation of the stored data.
 - {{domxref("TrustedScriptURL.toString()")}}
-  - : A {{domxref("USVString","string")}} containing the sanitized URL.
+  - : A string containing the sanitized URL.
 
 ## Examples
 
@@ -27,7 +28,7 @@ The constant `sanitized` is an object created via a Trusted Types policy.
 
 ```js
 const sanitized = scriptPolicy.createScriptURL("https://example.com/my-script.js");
-console.log(sanitized;) /* a TrustedScriptURL object */
+console.log(sanitized); /* a TrustedScriptURL object */
 ```
 
 ## Specifications

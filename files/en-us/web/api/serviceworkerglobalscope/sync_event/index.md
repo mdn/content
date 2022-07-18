@@ -1,6 +1,7 @@
 ---
 title: 'ServiceWorkerGlobalScope: sync event'
 slug: Web/API/ServiceWorkerGlobalScope/sync_event
+page-type: web-api-event
 tags:
   - Offline
   - PWA
@@ -13,26 +14,32 @@ browser-compat: api.ServiceWorkerGlobalScope.sync_event
 
 The **`sync`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when the page (or worker) that registered the event with the {{domxref('SyncManager')}} is running and as soon as network connectivity is available.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("SyncEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref('ServiceWorkerGlobalScope.onsync')}}</td>
-  </tr>
- </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('sync', event => { });
+
+onsync = event => { };
+```
+
+## Event type
+
+An {{domxref("SyncEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("SyncEvent")}}
+
+## Event properties
+
+_Inherits properties from its ancestor, {{domxref("Event")}}_.
+
+- {{domxref("SyncEvent.tag")}} {{readonlyinline}}
+  - : Returns the developer-defined identifier for this `SyncEvent`.
+- {{domxref("SyncEvent.lastChance")}} {{readonlyinline}}
+  - : Returns `true` if the user agent will not make further synchronization attempts after the current attempt.
 
 ## Examples
 
@@ -46,21 +53,21 @@ self.addEventListener('sync', event => {
 });
 ```
 
-You can also set up the event handler using the {{domxref('ServiceWorkerGlobalScope.onsync')}} property:
+You can also set up the event handler using the `onsync` property:
 
 ```js
 self.onsync = event => {
-  ...
+  // ...
 };
 ```
 
 ## Specifications
 
-{{Specifications("api.SyncEvent")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.SyncEvent")}}
+{{Compat}}
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: Event()
 slug: Web/API/Event/Event
+page-type: web-api-constructor
 tags:
   - Constructor
   - Reference
@@ -13,18 +14,16 @@ The **`Event()`** constructor creates a new {{domxref("Event")}} object. An even
 ## Syntax
 
 ```js
-new Event(typeArg)
-new Event(typeArg, eventInit);
+new Event(type)
+new Event(type, options)
 ```
 
 ### Values
 
-- `typeArg`
-  - : This is a string representing the name of the event.
-- `eventInit` {{optional_inline}}
-
-  - : This is an object with the following optional fields:
-
+- `type`
+  - : A string with the name of the event.
+- `options` {{optional_inline}}
+  - : An object with the following properties:
     - `bubbles` {{optional_inline}}
       - : A boolean value indicating whether the event bubbles. The default is
         `false`.
@@ -35,6 +34,10 @@ new Event(typeArg, eventInit);
       - : A boolean value indicating whether the event will trigger listeners
         outside of a shadow root (see {{domxref("Event.composed")}} for more details). The
         default is `false`.
+
+### Return value
+
+A new {{domxref("Event")}} object.
 
 ## Example
 

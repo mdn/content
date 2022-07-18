@@ -1,13 +1,16 @@
 ---
 title: 'ARIA: columnheader role'
 slug: Web/Accessibility/ARIA/Roles/columnheader_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
   - Reference
   - ARIA roles
   - document structure role
+spec-urls:
+  - https://w3c.github.io/aria/#columnheader
+  - https://w3c.github.io/aria-practices/#table
 ---
 
 
@@ -61,7 +64,7 @@ JavaScript is only required if the `aria-sort` attribute is used.
     </tr>
   </thead>
   <tbody>
-    ...
+    …
   </tbody>
 </table>
 ```
@@ -76,14 +79,11 @@ The `aria-sort` attribute can be added to a `<th scope="col">`  even when the AR
 
 ### Prefer HTML
 
-Columnheader has the same semantics `<th scope="col">`.  
+Columnheader has the same semantics `<th scope="col">`.
 
 ## Specifications
 
-| Specification               | Status                                           |
-| --------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#columnheader","ARIA: columnheader role")}}| {{Spec2('ARIA')}}|
-| {{SpecName("ARIA Authoring Practices 1.2","#table","Table")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 
@@ -95,7 +95,7 @@ Columnheader has the same semantics `<th scope="col">`.
 - [The `<th>` element](/en-US/docs/Web/HTML/Element/th)
 - [The `<table>` element](/en-US/docs/Web/HTML/Element/table)
 - [The `<tr>` element](/en-US/docs/Web/HTML/Element/tr)
-- [The `<td>` element](/en-US/docs/Web/HTML/Element/td)  
+- [The `<td>` element](/en-US/docs/Web/HTML/Element/td)
 
 <section id="Quick_links">
 

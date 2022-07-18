@@ -1,6 +1,7 @@
 ---
 title: WorkerNavigator.userAgent
 slug: Web/API/WorkerNavigator/userAgent
+page-type: web-api-instance-property
 tags:
   - API
   - WorkerNavigator
@@ -37,15 +38,9 @@ string is user configurable. For example:
 - Safari and iCab allow users to change the browser user agent string to predefined
   Internet Explorer or Netscape strings via a menu.
 
-## Syntax
+## Value
 
-```js
-var ua = navigator.userAgent;
-```
-
-### Value
-
-A {{domxref("DOMString")}} specifying the complete user agent string the browser
+A string specifying the complete user agent string the browser
 provides both in {{Glossary("HTTP")}} headers and in response to this and other related
 methods on the {{domxref("WorkerNavigator")}} object.
 
@@ -54,13 +49,13 @@ several pieces of info. Each of these pieces of info comes from other navigator
 properties which are also settable by the user. Gecko-based browsers comply with the
 following general structure:
 
-```js
+```
 userAgent = appCodeName/appVersion number (Platform; Security; OS-or-CPU;
 Localization; rv: revision-version-number) product/productSub
 Application-Name Application-Name-version
 ```
 
-## Example
+## Examples
 
 ```js
 alert(navigator.userAgent)

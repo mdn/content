@@ -35,7 +35,7 @@ tags:
 - D3E [`KeyboardEvent.key`](/en-US/docs/Web/API/KeyboardEvent#key_names_and_char_values) is now supported, but only for non-printable keys ({{bug(842927)}}).
 - The `title` attribute of {{domxref("DOMImplementation.createHTMLDocument")}} is now optional as per updated DOM specification.
 - The ability to add a sidebar panel (`window.sidebar.addPanel`) has been dropped ({{bug(691647)}}).
-- The unprefixed {{domxref("Window.requestAnimationFrame")}} and {{domxref("Window.cancelAnimationFrame")}} methods has been added ({{bug(704063)}}). The unprefixed {{domxref("Window.requestAnimationFrame")}} receives a {{domxref("DOMHighResTimeStamp")}} as argument; the prefixed version did, and still is, received a {{domxref("DOMTimeStamp")}}({{bug(753453)}}).
+- The unprefixed {{domxref("Window.requestAnimationFrame")}} and {{domxref("Window.cancelAnimationFrame")}} methods has been added ({{bug(704063)}}). The unprefixed {{domxref("Window.requestAnimationFrame")}} receives a {{domxref("DOMHighResTimeStamp")}} as argument; the prefixed version did, and still is, received a {{domxref("DOMTimeStamp")}}({{bug(753453)}}).
 - The text argument for {{domxref("window.alert")}} and {{domxref("window.confirm")}} is now optional ({{bug(861605)}}).
 - The {{domxref("HTMLMediaElement.initialTime")}} property, removed from the spec, is no more supported ({{bug(742537)}}).
 - The {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}} constructor has been added ({{bug(848293)}}).
@@ -67,7 +67,7 @@ Addons that overlay chrome://browser/content/debugger.xul must now overlay chrom
 
 ## See also
 
-- [Firefox 23 Aurora Notes](https://www.mozilla.org/en-US/firefox/23.0a2/auroranotes/)
+- [Firefox 23 Aurora Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/23.0a2/auroranotes/)
 
 ### Older versions
 

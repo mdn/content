@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue.equals()
 slug: Web/API/CSSNumericValue/equals
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -23,17 +24,17 @@ equality to be tested quickly.
 ## Syntax
 
 ```js
-var boolean = CSSNumericValue.equals(number);
+equals(number)
 ```
 
 ### Parameters
 
-- number
-  - : Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
+- `number`
+  - : Either a number or a {{domxref('CSSNumericValue')}}.
 
 ### Return value
 
-A {{jsxref('Boolean')}}.
+A boolean value.
 
 ### Exceptions
 

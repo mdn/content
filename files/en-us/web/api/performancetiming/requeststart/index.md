@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.requestStart
 slug: Web/API/PerformanceTiming/requestStart
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility
@@ -25,11 +26,9 @@ actual document, from the server or from a cache. If the transport layer fails a
 start of the request and the connection is reopened, this property will be set to the
 time corresponding to the new request.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.requestStart;
-```
+An `unsigned long long`.
 
 ## Specifications
 

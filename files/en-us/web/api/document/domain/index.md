@@ -1,6 +1,7 @@
 ---
 title: Document.domain
 slug: Web/API/Document/domain
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -16,26 +17,46 @@ The **`domain`** property of the {{domxref("Document")}}
 interface gets/sets the domain portion of the {{glossary("origin")}} of the current
 document, as used by the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
 
-## Syntax
+## Value
 
-### Getter
+A string.
+
+## Examples
+
+### Getting the domain
+
+For code running at the URL `https://developer.mozilla.org/en-US/docs/Web`,
+this example would set `currentDomain` to the string
+"`developer.mozilla.org`".
 
 ```js
-const domainString = document.domain
+const currentDomain = document.domain;
 ```
 
 The getter for this property returns the domain portion of the current document's
 origin. In most cases, this will be the hostname portion of the document's URL. However,
 there are some exceptions:
 
-- If the page has an opaque {{glossary("origin")}}, e.g. for a page with a [data URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs), then it will
+- If the page has an opaque {{glossary("origin")}}, e.g. for a page with a [data URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), then it will
   return the empty string.
 - If the `document.domain` [setter](#setter) has been used, then
   it will return the value that was set.
 
-Usually it is better to use the {{domxref("Location.hostname")}} property instead.
+Although the getter is not dangerous in the same way that the setter is, it is likely
+simpler and more useful to use the {{domxref("Location.hostname")}} property instead.
+Then you can avoid `document.domain` entirely:
 
-### Setter
+```js
+const currentHostname = location.hostname;
+```
+
+For the URL `https://developer.mozilla.org/en-US/docs/Web`,
+`currentHostname` is also the string "`developer.mozilla.org`".
+Other alternatives that provide slightly different information are
+{{domxref("Location.host")}}, which includes the port, and
+{{domxref("origin")}}, which provides the full origin.
+
+### Setting the domain
 
 ```js
 document.domain = domainString
@@ -67,8 +88,7 @@ have not done the same thing.
 #### Deprecation
 
 The `document.domain` setter is deprecated. It undermines the security
-protections provided by the [same
-origin policy](/en-US/docs/Web/Security/Same-origin_policy), and complicates the origin model in browsers, leading to
+protections provided by the [same origin policy](/en-US/docs/Web/Security/Same-origin_policy), and complicates the origin model in browsers, leading to
 interoperability problems and security bugs.
 
 Attempting to set `document.domain` is dangerous. It opens up full access to
@@ -100,8 +120,7 @@ several cases:
   {{HTTPHeader("Feature-Policy")}} is disabled.
 - The document is inside a sandboxed {{htmlelement("iframe")}}.
 - The document has no {{glossary("browsing context")}}.
-- The document's [effective
-  domain](https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain) is `null`.
+- The document's [effective domain](https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain) is `null`.
 - The given value is neither the same as the page's current hostname, nor a parent
   domain of it.
 
@@ -118,35 +137,9 @@ modern isolation features:
   {{httpheader("Origin-Isolation")}} HTTP header
 
 Finally, setting `document.domain` does not change the origin used for
-origin-checks by some Web APIs, preventing sub-domain access via this mechanism.
-Affected APIs include (but are not limited to):
-{{domxref("Window.localStorage")}}, {{domxref("IndexedDB_API")}}, {{domxref("BroadcastChannel")}}, {{domxref("SharedWorker")}} .
-
-## Examples
-
-### Getting the domain
-
-For code running at the URL `https://developer.mozilla.org/en-US/docs/Web`,
-this example would set `currentDomain` to the string
-"`developer.mozilla.org`".
-
-```js
-const currentDomain = document.domain;
-```
-
-Although the getter is not dangerous in the same way that the setter is, it is likely
-simpler and more useful to use the {{domxref("Location.hostname")}} property instead.
-Then you can avoid `document.domain` entirely:
-
-```js
-const currentHostname = location.hostname;
-```
-
-For the URL `https://developer.mozilla.org/en-US/docs/Web`,
-`currentHostname` is also the string "`developer.mozilla.org`".
-Other alternatives that provide slightly different information are
-{{domxref("Location.host")}}, which includes the port, and
-{{domxref("origin")}}, which provides the full origin.
+origin-checks by some Web APIs, preventing sub-domain access via this mechanism.
+Affected APIs include (but are not limited to):
+{{domxref("Window.localStorage")}}, {{domxref("IndexedDB_API")}}, {{domxref("BroadcastChannel")}}, {{domxref("SharedWorker")}} .
 
 ## Specifications
 

@@ -29,7 +29,7 @@ browser-compat: css.properties.-webkit-mask-box-image
 Where:
 
 - \<mask-box-image>
-  - : `{{cssxref("&lt;uri&gt;")}} | <gradient> | none`
+  - : `{{cssxref("url", "&lt;uri&gt;")}} | <gradient> | none`
 - \<top> \<right> \<bottom> \<left>
   - : `<length> | <percentage>`
 - \<x-repeat> \<y-repeat>
@@ -92,4 +92,4 @@ Not part of any standard.
 
 ## See also
 
-{{ cssxref("-webkit-mask") }}, {{ cssxref("-webkit-mask-origin") }}, {{ cssxref("-webkit-mask-attachment") }},{{ cssxref("-webkit-mask-clip") }},{{ cssxref("-webkit-mask-image") }},{{ cssxref("-webkit-mask-composite") }},{{ cssxref("-webkit-mask-repeat") }}
+{{ cssxref("mask") }}, {{ cssxref("mask-origin") }}, {{ cssxref("-webkit-mask-attachment") }}, {{ cssxref("mask-clip") }}, {{ cssxref("mask-image") }}, {{ cssxref("-webkit-mask-composite") }}, {{ cssxref("mask-repeat") }}

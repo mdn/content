@@ -1,6 +1,7 @@
 ---
 title: VisualViewport.offsetTop
 slug: Web/API/VisualViewport/offsetTop
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,13 +18,7 @@ The **`offsetTop`** read-only property of the
 {{domxref("VisualViewport")}} interface returns the offset of the top edge of the visual
 viewport from the top edge of the layout viewport in CSS pixels.
 
-## Syntax
-
-```js
-var offsetTop = VisualViewport.offsetTop
-```
-
-### Value
+## Value
 
 A double.
 

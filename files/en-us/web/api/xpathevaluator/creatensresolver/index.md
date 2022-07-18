@@ -1,6 +1,7 @@
 ---
 title: XPathEvaluator.createNSResolver()
 slug: Web/API/XPathEvaluator/createNSResolver
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -26,12 +27,12 @@ called, also correctly resolving the implicit `xml` prefix.
 ## Syntax
 
 ```js
-XPathNSResolver XPathEvaluator.createNSResolver(nodeResolver);
+createNSResolver(nodeResolver)
 ```
 
 ### Parameters
 
-- nodeResolver
+- `nodeResolver`
   - : A {{domxref("Node")}} to be used as a context for namespace resolution.
 
 ### Return value

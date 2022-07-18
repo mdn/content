@@ -27,20 +27,20 @@ In Firefox, if this method is called from a page that is part of a private brows
 ## Syntax
 
 ```js
-var windows = browser.extension.getViews(
+let windows = browser.extension.getViews(
   fetchProperties // optional object
 )
 ```
 
 ### Parameters
 
-- `fetchProperties`{{optional_inline}}
+- `fetchProperties` {{optional_inline}}
 
   - : An object with the following properties:
 
-    - `type`{{optional_inline}}
+    - `type` {{optional_inline}}
       - : `string`. An {{WebExtAPIRef('extension.ViewType')}} indicating the type of view to get. If omitted, this function returns all views.
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. The window to restrict the search to. If omitted, this function returns all views. In Firefox version 92 and earlier, sidebar views are not matched and, therefore, not returned.
 
 ### Return value
@@ -56,9 +56,9 @@ var windows = browser.extension.getViews(
 Get all windows belonging to this extension, and log their URLs:
 
 ```js
-var windows = browser.extension.getViews();
+let windows = browser.extension.getViews();
 
-for (var extensionWindow of windows) {
+for (let extensionWindow of windows) {
   console.log(extensionWindow.location.href);
 }
 ```
@@ -66,18 +66,18 @@ for (var extensionWindow of windows) {
 Get only windows in browser tabs hosting content packaged with the extension:
 
 ```js
-var windows = browser.extension.getViews({type: "tab"});
+let windows = browser.extension.getViews({type: "tab"});
 ```
 
 Get only windows in popups:
 
 ```js
-var windows = browser.extension.getViews({type: "popup"});
+let windows = browser.extension.getViews({type: "popup"});
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/extensions/extension#method-getViews) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/#method-getViews) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

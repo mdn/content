@@ -1,6 +1,7 @@
 ---
 title: Long Tasks API
 slug: Web/API/Long_Tasks_API
+page-type: web-api-overview
 tags:
   - API
   - Experimental
@@ -13,13 +14,16 @@ tags:
   - Reference
   - TaskAttributionTiming
   - Web Performance
+browser-compat:
+  - api.PerformanceLongTaskTiming
+  - api.TaskAttributionTiming
 ---
 {{DefaultAPISidebar("Long Tasks")}}
 
 ## Motivation
 
 The experimental Long Tasks API gives us visibility into tasks that take 50 milliseconds or more.
-The 50 ms threshold comes from the [RAIL Model](https://web.dev/rail/), in particular the ["Response: process events in under 50 ms"](https://web.dev/rail/#response:-process-events-in-under-50ms) section.
+The 50 ms threshold comes from the [RAIL Model](https://web.dev/rail/), in particular the ["Response: process events in under 50 ms"](https://web.dev/rail/#response:-process-events-in-under-50ms) section.
 
 Tasks that block the main thread for 50 ms or more cause, among other issues:
 
@@ -46,17 +50,16 @@ The "culprit browsing context container", or "the container" for short, is the t
 
 ### Attributions
 
-A list of containers that the task occurred within. For tasks that don't occur within the top level page, the `containerId`, `containerName` and `containerSrc` fields may provide information as to the source of the task.
+A list of containers that the task occurred within. For tasks that don't occur within the top level page, the `containerId`, `containerName` and `containerSrc` fields may provide information as to the source of the task.
 
 ## Usage
 
 ```js
-var observer = new PerformanceObserver(function(list) {
-    var perfEntries = list.getEntries();
-    for (var i = 0; i < perfEntries.length; i++) {
+const observer = new PerformanceObserver(function(list) {
+    const perfEntries = list.getEntries();
+    for (let i = 0; i < perfEntries.length; i++) {
         // Process long task notifications:
         // report back for analytics and monitoring
-        // ...
     }
 });
 // register observer for long task notifications
@@ -74,19 +77,11 @@ observer.observe({entryTypes: ["longtask"]});
 
 ## Specifications
 
-| Specification                        | Status                           | Comment             |
-| ------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('Long Tasks')}} | {{Spec2('Long Tasks')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `PerformanceLongTaskTiming`
-
-{{Compat("api.PerformanceLongTaskTiming")}}
-
-### `TaskAttributionTiming`
-
-{{Compat("api.TaskAttributionTiming")}}
+{{Compat}}
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.toJSON()
 slug: Web/API/PaymentAddress/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Payment Request
@@ -15,20 +16,14 @@ browser-compat: api.PaymentAddress.toJSON
 {{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
 The **`toJSON()`** property of the
-{{domxref("PaymentAddress")}} interface is a standard serializer that returns a JSON
+{{domxref("PaymentAddress")}} interface is a standard serializer that returns a JSON
 representation of the PaymentAddress object's properties.
 
-## Syntax
-
-```js
-var json = PaymentAddress.toJSON()
-```
-
-### Parameters
+## Value
 
 None.
 
-### Return value
+## Value
 
 A JSON object.
 

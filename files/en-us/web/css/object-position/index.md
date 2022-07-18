@@ -25,14 +25,31 @@ You can adjust how the replaced element's object's intrinsic size (that is, its 
 ## Syntax
 
 ```css
-/* <position> values */
-object-position: center top;
-object-position: 100px 50px;
+/* Keyword values */
+object-position: top;
+object-position: bottom;
+object-position: left;
+object-position: right;
+object-position: center;
+
+/* <percentage> values */
+object-position: 25% 75%;
+
+/* <length> values */
+object-position: 0 0;
+object-position: 1cm 2cm;
+object-position: 10ch 8em;
+
+/* Edge offsets values */
+object-position: bottom 10px right 20px;
+object-position: right 3em bottom 10px;
+object-position: top 0 right 10px;
 
 /* Global values */
 object-position: inherit;
 object-position: initial;
 object-position: revert;
+object-position: revert-layer;
 object-position: unset;
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Document.adoptNode()
 slug: Web/API/Document/adoptNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -16,14 +17,14 @@ browser-compat: api.Document.adoptNode
 
 **`Document.adoptNode()`** transfers a {{Glossary("node/dom",
   "node")}} from another {{domxref("Document", "document", "", "1")}} into the method's
-document. The adopted node and its subtree is removed from its original document (if
-any), and its {{domxref("Node.ownerDocument", "ownerDocument")}} is changed to the
+document. The adopted node and its subtree are removed from their original document (if
+any), and their {{domxref("Node.ownerDocument", "ownerDocument")}} is changed to the
 current document. The node can then be inserted into the current document.
 
 ## Syntax
 
 ```js
-const importedNode = document.adoptNode(externalNode);
+adoptNode(externalNode)
 ```
 
 ### Parameters
@@ -42,7 +43,7 @@ After calling this method, `importedNode` and
 > {{domxref("Node.parentNode")}} is `null`, since it has not yet been
 > inserted into the document tree!
 
-## Example
+## Examples
 
 ```js
 const iframe = document.querySelector('iframe');

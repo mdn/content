@@ -1,6 +1,7 @@
 ---
 title: SVGSVGElement
 slug: Web/API/SVGSVGElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -17,7 +18,7 @@ The **`SVGSVGElement`** interface provides access to the properties of {{SVGElem
 
 ## Properties
 
-_This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}} and also implements the ones from {{domxref("SVGFitToViewBox")}} and {{domxref("WindowEventHandlers")}}._
+_This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}} and also implements the ones from {{domxref("SVGFitToViewBox")}}._
 
 - {{domxref("SVGSVGElement.x")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given {{SVGElement("svg")}} element.
@@ -70,7 +71,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 
 ## Methods
 
-_This interface also inherits methods from its parent, {{domxref("SVGGraphicsElement")}} and also implements the ones from {{domxref("SVGFitToViewBox")}} and {{domxref("WindowEventHandlers")}}._
+_This interface also inherits methods from its parent, {{domxref("SVGGraphicsElement")}} and also implements the ones from {{domxref("SVGFitToViewBox")}}._
 
 - {{domxref("SVGSVGElement.suspendRedraw()")}} {{deprecated_inline}}
 
@@ -103,7 +104,7 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
 - {{domxref("SVGSVGElement.pauseAnimations()")}}
   - : Suspends (i.e., pauses) all currently running animations that are defined within the SVG document fragment corresponding to this {{SVGElement("svg")}} element, causing the animation clock corresponding to this document fragment to stand still until it is unpaused.
 - {{domxref("SVGSVGElement.unpauseAnimations()")}}
-  - : Unsuspends (i.e., unpauses) currently running animations that are defined within the SVG document fragment, causing the animation clock to continue from the time at which it was suspended.
+  - : Resumes (i.e., unpauses) currently running animations that are defined within the SVG document fragment, causing the animation clock to continue from the time at which it was suspended.
 - {{domxref("SVGSVGElement.animationsPaused()")}}
   - : Returns `true` if this SVG document fragment is in a paused state.
 - {{domxref("SVGSVGElement.getCurrentTime()")}}
@@ -121,23 +122,66 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
 - {{domxref("SVGSVGElement.deselectAll()")}}
   - : Unselects any selected objects, including any selections of text strings and type-in bars.
 - {{domxref("SVGSVGElement.createSVGNumber()")}}
-  - : Creates an {{domxref("SVGNumber")}} object outside of any document trees. The object is initialized to `0`.
+  - : Creates an {{domxref("SVGNumber")}} object outside of any document trees. The object is initialized to `0`.
 - {{domxref("SVGSVGElement.createSVGLength()")}}
-  - : Creates an {{domxref("SVGLength")}} object outside of any document trees. The object is initialized to `0` user units.
+  - : Creates an {{domxref("SVGLength")}} object outside of any document trees. The object is initialized to `0` user units.
 - {{domxref("SVGSVGElement.createSVGAngle()")}}
-  - : Creates an {{domxref("SVGAngle")}} object outside of any document trees. The object is initialized to a value of `0` degrees (unitless).
+  - : Creates an {{domxref("SVGAngle")}} object outside of any document trees. The object is initialized to a value of `0` degrees (unitless).
 - {{domxref("SVGSVGElement.createSVGPoint()")}}
-  - : Creates an {{domxref("SVGPoint")}} object outside of any document trees. The object is initialized to the point `(0,0)` in the user coordinate system.
+  - : Creates an {{domxref("SVGPoint")}} object outside of any document trees. The object is initialized to the point `(0,0)` in the user coordinate system.
 - {{domxref("SVGSVGElement.createSVGMatrix()")}}
-  - : Creates an {{domxref("SVGMatrix")}} object outside of any document trees. The object is initialized to the identity matrix.
+  - : Creates an {{domxref("SVGMatrix")}} object outside of any document trees. The object is initialized to the identity matrix.
 - {{domxref("SVGSVGElement.createSVGRect()")}}
-  - : Creates an {{domxref("SVGRect")}} object outside of any document trees. The object is initialized such that all values are set to `0` user units.
+  - : Creates an {{domxref("SVGRect")}} object outside of any document trees. The object is initialized such that all values are set to `0` user units.
 - {{domxref("SVGSVGElement.createSVGTransform()")}}
-  - : Creates an {{domxref("SVGTransform")}} object outside of any document trees. The object is initialized to an identity matrix transform (`SVG_TRANSFORM_MATRIX`).
+  - : Creates an {{domxref("SVGTransform")}} object outside of any document trees. The object is initialized to an identity matrix transform (`SVG_TRANSFORM_MATRIX`).
 - {{domxref("SVGSVGElement.createSVGTransformFromMatrix()")}}
-  - : Creates an {{domxref("SVGTransform")}} object outside of any document trees. The object is initialized to the given matrix transform (i.e., `SVG_TRANSFORM_MATRIX`). The values from the parameter matrix are copied, the matrix parameter is not adopted as `SVGTransform::matrix`.
+  - : Creates an {{domxref("SVGTransform")}} object outside of any document trees. The object is initialized to the given matrix transform (i.e., `SVG_TRANSFORM_MATRIX`). The values from the parameter matrix are copied, the matrix parameter is not adopted as `SVGTransform::matrix`.
 - {{domxref("SVGSVGElement.getElementById()")}}
   - : Searches this SVG document fragment (i.e., the search is restricted to a subset of the document tree) for an Element whose `id` is given by `elementId`. If an Element is found, that Element is returned. If no such element exists, returns `null`. Behavior is not defined if more than one element has this id.
+
+## Event handlers
+
+The following {{domxref("Window")}} `onXYZ` event handler properties are also available as aliases targeting the `window` object. However, it is advised to listen to them on the `window` object directly rather than on `SVGSVGElement`.
+
+> **Note:** Using `addEventListener()` on `SVGSVGElement` will not work for the `onXYZ` event handlers listed below. Listen to the events on the {{domxref("window")}} object instead.
+
+- {{domxref("window.afterprint_event", "SVGSVGElement.onafterprint")}}
+  - : Fired after the associated document has started printing or the print preview has been closed.
+- {{domxref("window.beforeprint_event", "SVGSVGElement.onbeforeprint")}}
+  - : Fired when the associated document is about to be printed or previewed for printing.
+- {{domxref("window.beforeunload_event", "SVGSVGElement.onbeforeunload")}}
+  - : Fired when the window, the document and its resources are about to be unloaded.
+- {{domxref("window.gamepadconnected_event", "SVGSVGElement.ongamepadconnected")}}
+  - : Fired when the browser detects that a gamepad has been connected or the first time a button/axis of the gamepad is used.
+- {{domxref("window.gamepaddisconnected_event", "SVGSVGElement.ongamepaddisconnected")}}
+  - : Fired when the browser detects that a gamepad has been disconnected.
+- {{domxref("window.hashchange_event", "SVGSVGElement.onhashchange")}}
+  - : Fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the `#` symbol).
+- {{domxref("window.languagechange_event", "SVGSVGElement.onlanguagechange")}}
+  - : Fired when the user's preferred language changes.
+- {{domxref("window.message_event", "SVGSVGElement.onmessage")}}
+  - : Fired when the window receives a message, for example from a call to [`Window.postMessage()`](/en-US/docs/Web/API/Window/postMessage) from another browsing context.
+- {{domxref("window.messageerror_event", "SVGSVGElement.onmessageerror")}}
+  - : Fired when the window receives a message that can't be deserialized.
+- {{domxref("window.offline_event", "SVGSVGElement.onoffline")}}
+  - : Fired when the browser has lost access to the network and the value of {{domxref("Navigator.onLine")}} switches to `false`.
+- {{domxref("window.online_event", "SVGSVGElement.ononline")}}
+  - : Fired when the browser has gained access to the network and the value of {{domxref("Navigator.onLine")}} switches to `true`.
+- {{domxref("window.pagehide_event", "SVGSVGElement.onpagehide")}}
+  - : Fired when the browser hides the current page in the process of presenting a different page from the session's history.
+- {{domxref("window.pageshow_event", "SVGSVGElement.onpageshow")}}
+  - : Fired when the browser displays the window's document due to navigation.
+- {{domxref("window.popstate_event", "SVGSVGElement.onpopstate")}}
+  - : Fired when the active history entry changes while the user navigates the session history.
+- {{domxref("window.rejectionhandled_event", "SVGSVGElement.onrejectionhandled")}}
+  - : Fired whenever a JavaScript {{jsxref("Promise")}} is rejected and the rejection has been handled.
+- {{domxref("window.storage_event", "SVGSVGElement.onstorage")}}
+  - : Fired when a storage area (`localStorage`) has been modified in the context of another document.
+- {{domxref("window.unhandledrejection_event", "SVGSVGElement.onunhandledrejection")}}
+  - : Fired whenever a {{jsxref("Promise")}} is rejected but the rejection was not handled.
+- {{domxref("window.unload_event", "SVGSVGElement.onunload")}}
+  - : Fired when the document is being unloaded.
 
 ## Specifications
 

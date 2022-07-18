@@ -1,6 +1,7 @@
 ---
 title: IDBCursor.continuePrimaryKey()
 slug: Web/API/IDBCursor/continuePrimaryKey
+page-type: web-api-instance-method
 tags:
   - API
   - IDBCursor
@@ -24,7 +25,7 @@ without having to compare the keys one by one.
 Calling this method more than once before new cursor data has been loaded - for
 example, calling `continuePrimaryKey()` twice from the same onsuccess handler
 \- results in an `InvalidStateError` being thrown on the second call because
-the cursor’s got value flag has been unset.
+the cursor's got value flag has been unset.
 
 This method is only valid for cursors coming from an index. Using it for cursors coming
 from an object store will throw an error.
@@ -34,7 +35,7 @@ from an object store will throw an error.
 ## Syntax
 
 ```js
-cursor.continuePrimaryKey(key, primaryKey);
+continuePrimaryKey(key, primaryKey)
 ```
 
 ### Parameters
@@ -43,6 +44,10 @@ cursor.continuePrimaryKey(key, primaryKey);
   - : The key to position the cursor at.
 - `primaryKey`
   - : The primary key to position the cursor at.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -58,11 +63,11 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the cursor is currently being iterated or has iterated past its end.
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : Thrown if the The cursor's direction is not `prev` or `next`.
+  - : Thrown if the cursor's direction is not `prev` or `next`.
 
-## Example
+## Examples
 
-here’s how you can resume an iteration of all articles tagged with
+here's how you can resume an iteration of all articles tagged with
 `"javascript"` since your last visit:
 
 ```js
@@ -103,5 +108,4 @@ request.onsuccess = (event) => {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).

@@ -1,6 +1,7 @@
 ---
 title: Element.ariaRowIndexText
 slug: Web/API/Element/ariaRowIndexText
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,16 +16,9 @@ browser-compat: api.Element.ariaRowIndexText
 
 The **`ariaRowIndexText`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext) attribute, which defines a human readable text alternative of aria-rowindex.
 
-## Syntax
+## Value
 
-```js
-var ariaRowIndexText = element.ariaRowIndexText;
-element.ariaRowIndexText = ariaRowIndexText
-```
-
-### Value
-
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 
@@ -77,4 +71,4 @@ console.log(el.ariaRowIndexText); // "Updated heading row"
 
 ## See also
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

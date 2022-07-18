@@ -159,7 +159,7 @@ It also provides examples, browser compatibility information, and other importan
 
 A **conceptual page** is a _guide_ page that explains or teaches something.
 Generally, if a page contains primarily prose, and doesn't fall into another page type, it's probably a conceptual page.
-An extended discussion of a topic might be spread across multiple conceptual pages, and linked using [Next](https://github.com/mdn/kumascript/blob/master/macros/Next.ejs) and [Previous](https://github.com/mdn/kumascript/blob/master/macros/Previous.ejs) macros.
+An extended discussion of a topic might be spread across multiple conceptual pages, and linked using [Next](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs) and [Previous](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs) macros.
 
 ### Examples
 

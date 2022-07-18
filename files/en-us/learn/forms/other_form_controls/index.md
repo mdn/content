@@ -60,7 +60,7 @@ The following screenshots show default, focused, and disabled `<textarea>` eleme
 
 ![The default, focused, and disabled \<textarea> element in Firefox 71 and Safari 13 on Mac OSX and Edge 18, Yandex 14, Firefox and Chrome on Windows 10.](textarea_basic.png)
 
-> **Note:** You can find a slightly more interesting example of text area usage in the [example](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html) we put together in the first article of the series ([see the source code also](https://github.com/mdn/learning-area/blob/master/html/forms/your-first-HTML-form/first-form-styled.html)).
+> **Note:** You can find a slightly more interesting example of text area usage in the [example](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html) we put together in the first article of the series ([see the source code also](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html)).
 
 ### Controlling multi-line rendering
 
@@ -71,7 +71,7 @@ The following screenshots show default, focused, and disabled `<textarea>` eleme
 - {{htmlattrxref("rows","textarea")}}
   - : Specifies the number of visible text rows for the control. This is effectively the starting height, as it can be changed by resizing the `<textarea>`, and overridden using CSS. The default value if none is specified is 2.
 - {{htmlattrxref("wrap","textarea")}}
-  - : Specifies how the control wraps text. The values are `soft` (the default value), which means the text submitted is not wrapped but the text rendered by the browser is wrapped; `hard` (the `cols` attribute must be specified when using this value), which means both the submitted and rendered texts are wrapped, and `off`, which stops wrapping.
+  - : Specifies how the control wraps text. The values are `soft` (the default value), which means the text submitted is not wrapped but the text rendered by the browser is wrapped; `hard` (the `cols` attribute must be specified when using this value), which means both the submitted and rendered texts are wrapped, and `off`, which stops wrapping.
 
 ### Controlling textarea resizability
 
@@ -89,7 +89,7 @@ Play with the interactive example at the top of the {{cssxref("resize")}} refere
 
 Drop-down controls are a simple way to let users select from many different options without taking up much space in the user interface. HTML has two forms of drop down content: the **select box**, and the **autocomplete box**. In both cases the interaction is the same — once the control is activated, the browser displays a list of values the user can select between.
 
-> **Note:** You can find examples of all the drop-down box types on GitHub at [drop-down-content.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/drop-down-content.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/drop-down-content.html)).
+> **Note:** You can find examples of all the drop-down box types on GitHub at [drop-down-content.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/drop-down-content.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/drop-down-content.html)).
 
 ### Select box
 
@@ -115,16 +115,16 @@ The {{HTMLElement("option")}} elements can be nested inside {{HTMLElement("optgr
 
 ```html
 <select id="groups" name="groups">
-  <optgroup label="fruits">
-    <option>Banana</option>
-    <option selected>Cherry</option>
-    <option>Lemon</option>
-  </optgroup>
-  <optgroup label="vegetables">
-    <option>Carrot</option>
-    <option>Eggplant</option>
-    <option>Potato</option>
-  </optgroup>
+  <optgroup label="fruits">
+    <option>Banana</option>
+    <option selected>Cherry</option>
+    <option>Lemon</option>
+  </optgroup>
+  <optgroup label="vegetables">
+    <option>Carrot</option>
+    <option>Eggplant</option>
+    <option>Potato</option>
+  </optgroup>
 </select>
 ```
 
@@ -150,20 +150,20 @@ By default, the height of the select box is enough to display a single value. Th
 
 ### Multiple choice select box
 
-By default, a select box only lets the user select a single value. By adding the {{htmlattrxref("multiple","select")}} attribute to the {{HTMLElement("select")}} element, you can allow users to select several values, by using the default mechanism provided by the operating system (e.g. holding down <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> and clicking multiple values on desktop).
+By default, a select box only lets the user select a single value. By adding the {{htmlattrxref("multiple","select")}} attribute to the {{HTMLElement("select")}} element, you can allow users to select several values, by using the default mechanism provided by the operating system (e.g. holding down <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> and clicking multiple values on desktop).
 
 ```html
 <select id="multi" name="multi" multiple size="2">
-  <optgroup label="fruits">
-     <option>Banana</option>
-     <option selected>Cherry</option>
-     <option>Lemon</option>
-   </optgroup>
-   <optgroup label="vegetables">
-     <option>Carrot</option>
-     <option>Eggplant</option>
-     <option>Potato</option>
-   </optgroup>
+  <optgroup label="fruits">
+     <option>Banana</option>
+     <option selected>Cherry</option>
+     <option>Lemon</option>
+   </optgroup>
+   <optgroup label="vegetables">
+     <option>Carrot</option>
+     <option>Eggplant</option>
+     <option>Potato</option>
+   </optgroup>
 </select>
 ```
 
@@ -189,14 +189,14 @@ Let's look at an example.
 <label for="myFruit">What's your favorite fruit?</label>
 <input type="text" name="myFruit" id="myFruit" list="mySuggestion">
 <datalist id="mySuggestion">
-  <option>Apple</option>
-  <option>Banana</option>
-  <option>Blackberry</option>
-  <option>Blueberry</option>
-  <option>Lemon</option>
-  <option>Lychee</option>
-  <option>Peach</option>
-  <option>Pear</option>
+  <option>Apple</option>
+  <option>Banana</option>
+  <option>Blackberry</option>
+  <option>Blueberry</option>
+  <option>Lemon</option>
+  <option>Lychee</option>
+  <option>Peach</option>
+  <option>Pear</option>
 </datalist>
 ```
 
@@ -211,17 +211,17 @@ Almost all browsers support datalist, but if you are still supporting older brow
 <input type="text" id="myFruit" name="fruit" list="fruitList">
 
 <datalist id="fruitList">
-  <label for="suggestion">or pick a fruit</label>
-  <select id="suggestion" name="altFruit">
-    <option>Apple</option>
-    <option>Banana</option>
-    <option>Blackberry</option>
-    <option>Blueberry</option>
-    <option>Lemon</option>
-    <option>Lychee</option>
-    <option>Peach</option>
-    <option>Pear</option>
-  </select>
+  <label for="suggestion">or pick a fruit</label>
+  <select id="suggestion" name="altFruit">
+    <option>Apple</option>
+    <option>Banana</option>
+    <option>Blackberry</option>
+    <option>Blueberry</option>
+    <option>Lemon</option>
+    <option>Lychee</option>
+    <option>Peach</option>
+    <option>Pear</option>
+  </select>
 </datalist>
 ```
 
@@ -237,7 +237,7 @@ If you use this fallback, ensure the data for both the `<input>` and the `<selec
 
 #### Less obvious datalist uses
 
-According to [the HTML specification](https://www.w3.org/TR/html5/common-input-element-attributes.html#attr-input-list), the {{htmlattrxref("list","input")}} attribute and the {{HTMLElement("datalist")}} element can be used with any kind of widget requiring a user input. This leads to some uses of it that might seem a little non-obvious.
+According to [the HTML specification](https://html.spec.whatwg.org/multipage/input.html#attr-input-list), the {{htmlattrxref("list","input")}} attribute and the {{HTMLElement("datalist")}} element can be used with any kind of widget requiring a user input. This leads to some uses of it that might seem a little non-obvious.
 
 For example, in browsers that support `{{htmlelement("datalist")}}` on `range` input types, a small tick mark will be displayed above the range for each datalist `{{htmlelement("option")}}` value. You can see an implementation [example of this on the `<input type="range">` reference page](/en-US/docs/Web/HTML/Element/input/range#a_range_control_with_hash_marks).
 
@@ -249,7 +249,7 @@ In this case, different browsers behave differently from case to case, so consid
 
 There are a few other form features that are not as obvious as the ones we have already mentioned, but still useful in some situations, so we thought it would be worth giving them a brief mention.
 
-> **Note:** You can find the examples from this section on GitHub as [other-examples.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/other-examples.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/other-examples.html)).
+> **Note:** You can find the examples from this section on GitHub as [other-examples.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/other-examples.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/other-examples.html)).
 
 ### Meters and progress bars
 
@@ -271,7 +271,7 @@ The content inside the {{HTMLElement("progress")}} element is a fallback for bro
 
 #### Meter
 
-A meter bar represents a fixed value in a range delimited by {{htmlattrxref("max","meter")}} and {{htmlattrxref("min","meter")}} values. This value is visually rendered as a bar, and to know how this bar looks, we compare the value to some other set values:
+A meter bar represents a fixed value in a range delimited by {{htmlattrxref("max","meter")}} and {{htmlattrxref("min","meter")}} values. This value is visually rendered as a bar, and to know how this bar looks, we compare the value to some other set values:
 
 - The {{htmlattrxref("low","meter")}} and {{htmlattrxref("high","meter")}} values divide the range in three parts:
 

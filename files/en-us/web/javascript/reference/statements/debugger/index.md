@@ -48,4 +48,4 @@ statement. It is like a breakpoint in the script source.
 
 ## See also
 
-- [The Debugger in the Firefox Developer Tools](/en-US/docs/Tools/Debugger)
+- [The Debugger in the Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)

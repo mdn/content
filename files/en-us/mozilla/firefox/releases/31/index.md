@@ -14,15 +14,15 @@ tags:
 
 Highlights:
 
-- [Eyedropper tool to select colors in web pages](/en-US/docs/Tools/Eyedropper)
-- [full stack traces for console error messages](/en-US/docs/Tools/Web_Console#error_messages)
-- [editable Box Model View](/en-US/docs/Tools/Page_Inspector#box_model_view)
-- [%c formatting to style console messages](/en-US/docs/Tools/Web_Console#styling_messages)
-- ["copy as cURL" command in Network Monitor](/en-US/docs/Tools/Network_Monitor#copy_as_curl)
-- [Sublime Text keybindings in the source editor](/en-US/docs/Tools/Keyboard_shortcuts#source_editor)
-- [Option to make Network Monitor logs persistent](/en-US/docs/Tools/Network_Monitor#network_request_list)
-- [JavaScript warnings on by default in the Web Console](/en-US/docs/Tools/Web_Console#javascript_errors_and_warnings)
-- [Alt+click to expand all descendants of a node](/en-US/docs/Tools/Page_Inspector#html_pane_2)
+- [Eyedropper tool to select colors in web pages](https://firefox-source-docs.mozilla.org/devtools-user/eyedropper/index.html)
+- [full stack traces for console error messages](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html)
+- [editable Box Model View](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html)
+- [%c formatting to style console messages](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html)
+- ["copy as cURL" command in Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#copy-as-curl)
+- [Sublime Text keybindings in the source editor](https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#source-editor)
+- [Option to make Network Monitor logs persistent](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#network-request-list)
+- [JavaScript warnings on by default in the Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#javascript-errors-and-warnings)
+- [Alt+click to expand all descendants of a node](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#page-inspector-ui-tour-html-pane)
 
 [All devtools bugs fixed between Firefox 30 and Firefox 31](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2014-04-28&chfield=resolution&query_format=advanced&chfieldfrom=2014-03-17&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20App%20Manager&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&product=Firefox&list_id=10022921).
 
@@ -32,22 +32,22 @@ Highlights:
 - The {{cssxref("hyphens")}} property now support Polish hyphenation rules ({{Bug(987668)}}).
 - Removed an unwanted white space for multiple of 10,000 in Korean counter styles ({{Bug(985186)}}).
 - CSS opacity transition broken with parent pseudo :before and overflow auto ({{Bug(990340)}}).
-- The `::-moz-math-stretchy` pseudo-element has been removed ({{Bug(1000879)}}).
+- The `::-moz-math-stretchy` pseudo-element has been removed ({{Bug(1000879)}}).
 
 ### HTML
 
-- {{HTMLElement("track")}} has been implemented ({{Bug(629350)}}).
+- {{HTMLElement("track")}} has been implemented ({{Bug(629350)}}).
 
 ### JavaScript
 
-New ECMAScript 2015 features implemented:
+New ECMAScript 2015 features implemented:
 
 - New `Array` built-in: {{jsxref("Array.prototype.fill()")}} ({{Bug(911147)}})
 - New `Math` function: {{jsxref("Math.clz32()")}} ({{Bug(925123)}})
 - New `String` built-in: {{jsxref("String.prototype.normalize()")}} is available in Firefox Desktop ({{Bug(918987)}}).
 - New `Object` method {{jsxref("Object.setPrototypeOf()")}}.
 - New `Number` constants: {{jsxref("Number.MAX_SAFE_INTEGER")}} and {{jsxref("Number.MIN_SAFE_INTEGER")}}.
-- The ES2015 Proxy {{jsxref("Global_Objects/Proxy/Proxy/isExtensible", "isExtensible")}} trap have been implemented ({{bug(978235)}}).
+- The ES2015 Proxy {{jsxref("Global_Objects/Proxy/Proxy/isExtensible", "isExtensible")}} trap have been implemented ({{bug(978235)}}).
 
 ### Interfaces/APIs/DOM
 
@@ -62,13 +62,13 @@ New ECMAScript 2015 features implemented:
 - The {{domxref("CanvasRenderingContext2D.isPointInPath()")}}, {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}, {{domxref("CanvasRenderingContext2D.clip()")}}, {{domxref("CanvasRenderingContext2D.fill()")}} and {{domxref("CanvasRenderingContext2D.stroke()")}} methods have been updated to optionally accept a {{domxref("Path2D")}} object.
 - Implemented {{domxref("HTMLMediaElement.fastSeek()")}}.
 - The `Connection` interface has been renamed to {{domxref("NetworkInformation")}} and has been modified to match the new specification ({{bug(960426)}}).
-- The {{domxref("Navigator.sendBeacon()")}} has been implemented; this allows asynchronous transmission of analytics or other data in a manner that doesn't rely on the transmitting page remaining loaded, so that it can be used in an {{event("unload")}} or {{event("beforeunload")}} handler.
+- The {{domxref("Navigator.sendBeacon()")}} has been implemented; this allows asynchronous transmission of analytics or other data in a manner that doesn't rely on the transmitting page remaining loaded, so that it can be used in an {{domxref("Window/unload_event", "unload")}} or {{domxref("Window.beforeunload_event", "beforeunload")}} handler.
 
 ### MathML
 
-- Partial implementation of the [OpenType MATH table](https://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition), section 6.3.6 ({{Bug(407059)}}). For details, see the [fonts for Mozilla's MathML engine](/en-US/docs/Mozilla/MathML_Project/Fonts) and try the [MathML torture test](/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test) .
+- Partial implementation of the [OpenType MATH table](https://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition), section 6.3.6 ({{Bug(407059)}}). For details, try the [MathML torture test](/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test) .
 - The `::-moz-math-stretchy` pseudo-element has been removed ({{Bug(1000879)}}).
-- When available, the Unicode Mathematical alphanumeric characters are used for bold, italic and bold-italic mathvariants ({{Bug(930504)}}).
+- When available, the Unicode Mathematical alphanumeric characters are used for bold, italic and bold-italic math variants ({{Bug(930504)}}).
 
 ### SVG
 
@@ -80,7 +80,7 @@ _No change._
 
 ## Security
 
-- [Privileged code now gets Xray vision for `Date` instances](/en-US/docs/Xray_vision#Xrays_for_JavaScript_objects).
+- [Privileged code now gets Xray vision for `Date` instances](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xrays_for_javascript_objects).
 
 ## Changes for add-on and Mozilla developers
 
@@ -92,7 +92,7 @@ _No change._
   }
   ```
 
-- [`nsIDOMWindowUtils.sendQueryContentEvent()`](</en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#sendQueryContentEvent()>) and [`nsIDOMWindowUtils.sendSelectionSetEvent()`](/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#sendSelectionSetEvent%28%29) have `aAdditionalFlags` as optional argument. If you called `nsIDOMWindowUtils.sendSelectionSetEvent()` with `true` for `aReverse`, the behavior would be broken by this change. See [explanation of each flag](/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#Constants) (`QUERY_CONTENT_FLAG_*` and `SELECTION_SET_FLAG_*`) for the detail of `aAdditionalFlags`.
+- `nsIDOMWindowUtils.sendQueryContentEvent()`>) and `nsIDOMWindowUtils.sendSelectionSetEvent()` have `aAdditionalFlags` as optional argument. If you called `nsIDOMWindowUtils.sendSelectionSetEvent()` with `true` for `aReverse`, the behavior would be broken by this change. See [explanation of each flag](/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#constants) (`QUERY_CONTENT_FLAG_*` and `SELECTION_SET_FLAG_*`) for the detail of `aAdditionalFlags`.
 
 ### Add-on SDK
 

@@ -44,7 +44,7 @@ The script gets access to a number of objects that help the injected script inte
 ## Syntax
 
 ```js
-var evaluating = browser.devtools.inspectedWindow.eval(
+let evaluating = browser.devtools.inspectedWindow.eval(
   expression,       // string
   options           // object
 )
@@ -54,13 +54,13 @@ var evaluating = browser.devtools.inspectedWindow.eval(
 
 - `expression`
   - : `string`. The JavaScript expression to evaluate. The string must evaluate to a object that can be represented as JSON, or an exception will be thrown. For example, `expression` must not evaluate to a function.
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
 
   - : `object`. Options for the function (Note that Firefox does not yet support this options), as follows:
 
-    - `frameURL`{{optional_inline}}
+    - `frameURL` {{optional_inline}}
       - : `string`. The URL of the frame in which to evaluate the expression. If this is omitted, the expression is evaluated in the main frame of the window.
-    - `useContentScriptContext`{{optional_inline}}
+    - `useContentScriptContext` {{optional_inline}}
       - : `boolean`. If `true`, evaluate the expression in the context of any content scripts that this extension has attached to the page. If you set this option, then you must have actually attached some content scripts to the page, or a Devtools error will be thrown.
     - `contextSecurityOrigin` {{optional_inline}}
       - : `string`. Evaluate the expression in the context of a content script attached by a different extension, whose origin matches the value given here. This overrides `useContentScriptContext`.
@@ -173,7 +173,7 @@ inspectButton.addEventListener("click", () => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) API.
+> **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv3/devtools/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

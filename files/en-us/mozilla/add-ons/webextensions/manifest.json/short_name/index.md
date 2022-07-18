@@ -20,6 +20,10 @@ browser-compat: webextensions.manifest.short_name
       <td>No</td>
     </tr>
     <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
+    </tr>
+    <tr>
       <th scope="row">Example</th>
       <td><pre class="brush: json">"short_name": "My Extension"</pre></td>
     </tr>

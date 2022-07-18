@@ -18,7 +18,7 @@ Provided is a set of interfaces to discover and manipulate DOM elements in web d
 
 ## Usage
 
-So what does WebDriver let you do and what does it look like? Since WebDriver is programming language neutral, the answer to this question depends on which WebDriver client you’re using and the choice of language.
+So what does WebDriver let you do and what does it look like? Since WebDriver is programming language neutral, the answer to this question depends on which WebDriver client you're using and the choice of language.
 
 But using a popular client written in Python, your interaction with WebDriver might look like this:
 

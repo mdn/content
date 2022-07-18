@@ -1,6 +1,7 @@
 ---
 title: HTMLMenuElement
 slug: Web/API/HTMLMenuElement
+page-type: web-api-interface
 tags:
   - API
   - Experimental

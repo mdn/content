@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.crossOrigin
 slug: Web/API/HTMLImageElement/crossOrigin
+page-type: web-api-instance-property
 tags:
   - API
   - CORS
@@ -18,40 +19,33 @@ browser-compat: api.HTMLImageElement.crossOrigin
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}}
-interface's **`crossOrigin`** attribute is a string which
+interface's **`crossOrigin`** attribute is a string which
 specifies the Cross-Origin Resource Sharing ({{Glossary("CORS")}}) setting to use when
 retrieving the image.
 
-## Syntax
+## Value
 
-```js
-htmlImageElement.crossOrigin = crossOriginMode;
-let crossOriginMode = htmlImageElement.crossOrigin;
-```
-
-### Value
-
-A {{domxref("DOMString")}} of a keyword specifying the CORS mode to use when fetching
+A string of a keyword specifying the CORS mode to use when fetching
 the image resource. If you don't specify `crossOrigin`, the image is fetched
-without CORS (the fetch `no-cors` mode).
+without CORS (the fetch `no-cors` mode).
 
 Permitted values are:
 
 - `anonymous`
-  - : Requests by the {{HTMLElement("img")}} element have their {{domxref("Request.mode",
-    "mode")}} set to `cors` and their {{domxref("Request.credentials",
-    "credentials")}} mode set to `same-origin`. This means that CORS is enabled
+  - : Requests by the {{HTMLElement("img")}} element have their {{domxref("Request.mode",
+    "mode")}} set to `cors` and their {{domxref("Request.credentials",
+    "credentials")}} mode set to `same-origin`. This means that CORS is enabled
     and credentials are sent _if_ the image is fetched from the same origin from
-    which the document was loaded.
+    which the document was loaded.
 - `use-credentials`
-  - : Requests by the {{domxref("HTMLImageElement")}} will use the `cors` mode
-    and the `include` credentials mode; all image requests by the element will
+  - : Requests by the {{domxref("HTMLImageElement")}} will use the `cors` mode
+    and the `include` credentials mode; all image requests by the element will
     use CORS, regardless of what domain the fetch is from.
 
-If `crossOrigin` is an empty string (`""`),
-the `anonymous` mode is selected.
+If `crossOrigin` is an empty string (`""`),
+the `anonymous` mode is selected.
 
-## Example
+## Examples
 
 In this example, a new {{HTMLElement("img")}} element is created and added to the
 document, loading the image with the Anonymous state; the image will be loaded using
@@ -125,7 +119,7 @@ output {
 
 ### Result
 
-{{EmbedLiveSample("Example", 600, 260)}}
+{{EmbedLiveSample("Examples", 600, 260)}}
 
 ## Specifications
 

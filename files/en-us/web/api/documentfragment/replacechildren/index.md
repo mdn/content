@@ -1,6 +1,7 @@
 ---
 title: DocumentFragment.replaceChildren()
 slug: Web/API/DocumentFragment/replaceChildren
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -15,20 +16,26 @@ browser-compat: api.DocumentFragment.replaceChildren
 
 The **`DocumentFragment.replaceChildren()`** method replaces the
 existing children of a `DocumentFragment` with a specified new set of children. These
-can be {{domxref("DOMString")}} or {{domxref("Node")}} objects.
+can be string or {{domxref("Node")}} objects.
 
 ## Syntax
 
 ```js
-replaceChildren(...nodesOrDOMStrings)
+replaceChildren(param1)
+replaceChildren(param1, param2)
+replaceChildren(param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parameters
 
-- `nodesOrDOMStrings`
-  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to replace the
+- `param1`, …, `paramN`
+  - : A set of {{domxref("Node")}} or string objects to replace the
     `DocumentFragment`'s existing children with. If no replacement objects are
     specified, then the `DocumentFragment` is emptied of all child nodes.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

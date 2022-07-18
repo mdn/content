@@ -112,8 +112,8 @@ div.example {
   -webkit-box-align: center; /* WebKit */
 
   /* Pack children to the bottom of this box */
-  -moz-box-pack: end;             /* Mozilla */
-  -webkit-box-pack: end;          /* WebKit */
+  -moz-box-pack: end;             /* Mozilla */
+  -webkit-box-pack: end;          /* WebKit */
 }
 
 div.example p {

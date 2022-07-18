@@ -1,6 +1,7 @@
 ---
 title: SerialPort.getSignals()
 slug: Web/API/SerialPort/getSignals
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,7 +17,7 @@ The **`SerialPort.getSignals()`** method of the {{domxref("SerialPort")}} interf
 ## Syntax
 
 ```js
-var promise = SerialPort.getSignals();
+getSignals()
 ```
 
 ### Parameters
@@ -28,7 +29,7 @@ None.
 Returns a {{jsxref("Promise")}} that resolves with an object containing the following members:
 
 - `clearToSend`
-  - : A boolean indicating to the other end of a serial connection that is is clear to send data.
+  - : A boolean indicating to the other end of a serial connection that is clear to send data.
 - `dataCarrierDetect`
   - : A boolean that toggles the control signal needed to communicate over a serial connection.
 - `dataSetReady`

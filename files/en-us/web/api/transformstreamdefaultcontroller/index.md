@@ -1,6 +1,7 @@
 ---
 title: TransformStreamDefaultController
 slug: Web/API/TransformStreamDefaultController
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -10,13 +11,13 @@ browser-compat: api.TransformStreamDefaultController
 ---
 {{DefaultAPISidebar("Streams API")}}
 
-The **`TransformStreamDefaultController`** interface of the {{domxref('Streams API','','',' ')}} provides methods to manipulate the associated {{domxref("ReadableStream")}} and {{domxref("WritableStream")}}.
+The **`TransformStreamDefaultController`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides methods to manipulate the associated {{domxref("ReadableStream")}} and {{domxref("WritableStream")}}.
 
-When constructing a {{domxref("TransformStream")}}, the `TransformStreamDefaultController` is created. It therefore has no constructor. The way to get an instance of `TransformStreamDefaultController` is via the callback methods of {{domxref("TransformStream.TransformStream()")}}.
+When constructing a {{domxref("TransformStream")}}, the `TransformStreamDefaultController` is created. It therefore has no constructor. The way to get an instance of `TransformStreamDefaultController` is via the callback methods of {{domxref("TransformStream.TransformStream", "TransformStream()")}}.
 
 ## Properties
 
-- {{domxref("TransformStreamDefaultController.desiredSize")}}{{readonlyinline}}
+- {{domxref("TransformStreamDefaultController.desiredSize")}} {{readonlyinline}}
   - : Returns the desired size to fill the readable side of the stream's internal queue.
 
 ## Methods
@@ -58,6 +59,7 @@ const transformContent = {
       default:
         controller.enqueue(this.textencoder.encode(String(chunk)))
         break
+    }
   },
   flush() { /* do any destructor work here */ }
 }

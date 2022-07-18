@@ -1,6 +1,7 @@
 ---
 title: CSSMathValue
 slug: Web/API/CSSMathValue
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -43,7 +44,7 @@ None.
 
 ## Examples
 
-We create an element with a [`width`](/en-US/docs/Web/CSS/width) determined using a [`calc()`](</en-US/docs/Web/CSS/calc()>) function, then {{DOMxRef("console.log()")}} the `operator`.
+We create an element with a [`width`](/en-US/docs/Web/CSS/width) determined using a [`calc()`](/en-US/docs/Web/CSS/calc) function, then {{DOMxRef("console.log()")}} the `operator`.
 
 ```html
 <div>has width</div>
@@ -62,7 +63,7 @@ We add the JavaScript
 ```js
 const styleMap = document.querySelector('div').computedStyleMap();
 
-console.log( styleMap.get('width') );                  // CSSMathSum {values: CSSNumericArray, operator: "sum"}
+console.log( styleMap.get('width') );                  // CSSMathSum {values: CSSNumericArray, operator: "sum"}
 console.log( styleMap.get('width').operator );         // 'sum'
 console.log( styleMap.get('width').values[1].value );  // -20
 ```

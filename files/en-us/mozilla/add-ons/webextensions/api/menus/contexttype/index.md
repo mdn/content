@@ -28,27 +28,7 @@ Values of this type are strings. The item is displayed when the given context ap
   - : Applies when the user context-clicks an [audio](/en-US/docs/Web/HTML/Element/audio) element.
 - bookmark
 
-  - : Applies when the user context-clicks a bookmark item in the bookmarks toolbar, bookmarks menu, bookmarks sidebar (
-
-    <kbd>Ctrl</kbd>
-
-    \+
-
-    <kbd>B</kbd>
-
-    ) and the Library window (
-
-    <kbd>Ctrl</kbd>
-
-    \+
-
-    <kbd>Shift</kbd>
-
-    \+
-
-    <kbd>B</kbd>
-
-    ). The latter two are supported as of Firefox 66. Requires the "bookmarks" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in the manifest.
+  - : Applies when the user context-clicks a bookmark item in the bookmarks toolbar, bookmarks menu, bookmarks sidebar (<kbd>Ctrl</kbd>+<kbd>B</kbd>) and the Library window (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>). The latter two are supported as of Firefox 66. Requires the "bookmarks" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in the manifest.
 
 - browser_action
   - : Applies when the user context-clicks your browser action. The maximum number of items that can be added to the top-level browser action context menu is {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}, but you can add any number of items to submenus.
@@ -87,7 +67,7 @@ Note that "launcher" is not supported.
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus#type-ContextType) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/contextMenus/#type-ContextType) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
 <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //

@@ -1,10 +1,10 @@
 ---
 title: Cache.add()
 slug: Web/API/Cache/add
+page-type: web-api-instance-method
 tags:
   - API
   - Cache
-  - Experimental
   - Method
   - Reference
   - Service Workers
@@ -16,7 +16,7 @@ browser-compat: api.Cache.add
 
 The **`add()`** method of the {{domxref("Cache")}} interface takes a URL, retrieves it, and adds the resulting response object to the given cache.
 
-The `add()` method is functionally equivalent to the following:
+The `add()` method is functionally equivalent to the following:
 
 ```js
 fetch(url).then(function(response) {
@@ -34,23 +34,21 @@ For more complex operations, you'll need to use {{domxref("Cache.put","Cache.put
 ## Syntax
 
 ```js
-cache.add(request).then(function() {
-  // request has been added to the cache
-});
+add(request)
 ```
 
 ### Parameters
 
-- request
-  - : The request you want to add to the cache. This can be a  {{domxref("Request")}} object or a URL.
+- `request`
+  - : The request you want to add to the cache. This can be a {{domxref("Request")}} object or a URL.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with `undefined`.
+A {{jsxref("Promise")}} that resolves with `undefined`.
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
 
   - : The URL scheme is not `http` or `https`.
 

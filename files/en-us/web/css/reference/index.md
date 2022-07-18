@@ -23,7 +23,7 @@ style-rule ::=
     }
 ```
 
-... where :
+Where :
 
 ```css
 selectors-list ::=
@@ -68,7 +68,7 @@ The following are the various [selectors](/en-US/docs/Web/CSS/CSS_Selectors), wh
 
 **Basic selectors** are fundamental selectors; these are the most basic selectors that are frequently combined to create other, more complex selectors.
 
-- [Universal selector](/en-US/docs/Web/CSS/Universal_selectors) `*`, `ns|*`, `*|*`, `|*`
+- [Universal selector](/en-US/docs/Web/CSS/Universal_selectors) `*`
 - [Type selector](/en-US/docs/Web/CSS/Type_selectors) `elementname`
 - [Class selector](/en-US/docs/Web/CSS/Class_selectors) `.classname`
 - [ID selector](/en-US/docs/Web/CSS/ID_selectors) `#idname`
@@ -81,7 +81,7 @@ The following are the various [selectors](/en-US/docs/Web/CSS/CSS_Selectors), wh
 
 ### Combinators
 
-Combinators are selectors that establish a relationship between two or more simple selectors, such as "`A` is a child of `B`" or "`A` is adjacent to `B`."
+Combinators are selectors that establish a relationship between two or more simple selectors, such as "`A` is a child of `B`" or "`A` is adjacent to `B`", creating a complex selector.
 
 - [Adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
   - : Specifies that the elements selected by both `A` and `B` have the same parent and that the element selected by `B` immediately follows the element selected by `A` horizontally.

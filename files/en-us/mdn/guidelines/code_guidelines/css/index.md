@@ -14,32 +14,32 @@ The following guidelines cover how to write CSS for MDN code examples.
 
 ## In this article
 
-- [High-level guidelines](/en-US/docs/MDN/Guidelines/Code_guidelines/CSS#high-level_guidelines)
+- [High-level guidelines](#high-level_guidelines)
 
-  - [Don't use preprocessors](/en-US/docs/MDN/Guidelines/Code_guidelines/CSS#dont_use_preprocessors)
-  - [Don't use specific CSS methodologies](/en-US/docs/MDN/Guidelines/Code_guidelines/CSS#dont_use_specific_css_methodologies)
-  - [Use flexible/relative units](/en-US/docs/MDN/Guidelines/Code_guidelines/CSS#use_flexiblerelative_units)
-  - [Don't use resets](/en-US/docs/MDN/Guidelines/Code_guidelines/CSS#dont_use_resets)
+  - [Don't use preprocessors](#dont_use_preprocessors)
+  - [Don't use specific CSS methodologies](#dont_use_specific_css_methodologies)
+  - [Use flexible/relative units](#use_flexiblerelative_units)
+  - [Don't use resets](#dont_use_resets)
   - [Plan your CSS — avoid overriding](/en-US/docs/MDN/Guidelines/Code_guidelines/CSS#plan_your_css_%e2%80%94_avoid_overriding)
 
-- [General CSS coding style](/en-US/docs/MDN/Guidelines/Code_guidelines/CSS#general_css_coding_style)
+- [General CSS coding style](#general_css_coding_style)
 
-  - [Use expanded syntax](/en-US/docs/MDN/Guidelines/Code_guidelines/CSS#use_expanded_syntax)
-  - [Favor longhand rules over terse shorthand](/en-US/docs/MDN/Guidelines/Code_guidelines/CSS#favor_longhand_rules_over_terse_shorthand)
-  - [Use double quotes around values](/en-US/docs/MDN/Guidelines/Code_guidelines/CSS#use_double_quotes_around_values)
-  - [Spacing around function parameters](/en-US/docs/MDN/Guidelines/Code_guidelines/CSS#spacing_around_function_parameters)
-  - [CSS comments](/en-US/docs/MDN/Guidelines/Code_guidelines/CSS#css_comments)
-  - [Don't use !important](/en-US/docs/MDN/Guidelines/Code_guidelines/CSS#dont_use_!important)
+  - [Use expanded syntax](#use_expanded_syntax)
+  - [Favor longhand rules over terse shorthand](#favor_longhand_rules_over_terse_shorthand)
+  - [Use double quotes around values](#use_double_quotes_around_values)
+  - [Spacing around function parameters](#spacing_around_function_parameters)
+  - [CSS comments](#css_comments)
+  - [Don't use !important](#dont_use_!important)
 
-- [Specific CSS syntax points](/en-US/docs/MDN/Guidelines/Code_guidelines/CSS#specific_css_syntax_points)
+- [Specific CSS syntax points](#specific_css_syntax_points)
 
-  - [Turning off borders and other properties](/en-US/docs/MDN/Guidelines/Code_guidelines/CSS#turning_off_borders_and_other_properties)
-  - [Use "mobile first" media queries](/en-US/docs/MDN/Guidelines/Code_guidelines/CSS#use_mobile_first_media_queries)
+  - [Turning off borders and other properties](#turning_off_borders_and_other_properties)
+  - [Use "mobile first" media queries](#use_mobile_first_media_queries)
 
-- [Selectors](/en-US/docs/MDN/Guidelines/Code_guidelines/CSS#selectors)
+- [Selectors](#selectors)
 
-  - [Don't use ID selectors](/en-US/docs/MDN/Guidelines/Code_guidelines/CSS#dont_use_id_selectors)
-  - [Put multiple selectors on separate lines](/en-US/docs/MDN/Guidelines/Code_guidelines/CSS#put_multiple_selectors_on_separate_lines)
+  - [Don't use ID selectors](#dont_use_id_selectors)
+  - [Put multiple selectors on separate lines](#put_multiple_selectors_on_separate_lines)
 
 ## High-level guidelines
 
@@ -49,7 +49,7 @@ Don't use preprocessor syntax, e.g. [Sass](https://sass-lang.com/), [Less](https
 
 ### Don't use specific CSS methodologies
 
-In the same spirit as the previous guideline, don't write MDN example code using a specific CSS methodology such as [BEM](http://getbem.com/naming/) or [SMACSS](https://smacss.com/). Even though they are valid CSS syntax, the naming conventions can be confusing to people not familiar with those methodologies.
+In the same spirit as the previous guideline, don't write MDN example code using a specific CSS methodology such as [BEM](http://getbem.com/naming/) or [SMACSS](http://smacss.com/). Even though they are valid CSS syntax, the naming conventions can be confusing to people not familiar with those methodologies.
 
 ### Use flexible/relative units
 
@@ -233,7 +233,7 @@ Good:
 
 ```css example-good
 .editorial-summary {
-  ...
+  /* … */
 }
 ```
 
@@ -241,7 +241,7 @@ Bad:
 
 ```css example-bad
 #editorial-summary {
-  ...
+  /* … */
 }
 ```
 

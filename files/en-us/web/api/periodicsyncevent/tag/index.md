@@ -1,6 +1,7 @@
 ---
 title: PeriodicSyncEvent.tag
 slug: Web/API/PeriodicSyncEvent/tag
+page-type: web-api-instance-property
 tags:
   - Offline
   - PWA
@@ -15,18 +16,12 @@ browser-compat: api.PeriodicSyncEvent.tag
 
 The **`tag`** read-only property of the
 {{domxref("PeriodicSyncEvent")}} interface returns the developer-defined identifier for
-the {{domxref('PeriodicSyncEvent')}}. This is specified when calling the
+the {{domxref('PeriodicSyncEvent')}}. This is specified when calling the
 {{domxref('PeriodicSyncManager.register()')}} method of the
-{{domxref('PeriodicSyncManager')}} interface. Multiple tags can be used by the web app
+{{domxref('PeriodicSyncManager')}} interface. Multiple tags can be used by the web app
 to run different periodic tasks at different frequencies.
 
-## Syntax
-
-```js
-const tag = PeriodicSyncEvent.tag;
-```
-
-### Value
+## Value
 
 Returns a {{jsxref('String')}} of the defined identifier.
 
@@ -51,7 +46,5 @@ self.addEventListener('periodicsync', event => {
 
 ## See also
 
-- [Richer offline experiences with
-  the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
-- [A
-  Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)
+- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

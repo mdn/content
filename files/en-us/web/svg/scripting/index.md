@@ -69,9 +69,9 @@ You can also use `document.getElementById("svg_elem_name").getSVGDocument()`, wh
 
 When calling a JavaScript function that resides in the HTML file from an SVG file that is embedded in an HTML document, you should use `parent.functionname()` to reference the function. Although the Adobe SVG viewer plugin allows the use of `functionname()`, it's not the preferred way to do things.
 
-> **Note:** According to the [SVG wiki](http://web.archive.org/web/20100223210744/http://wiki.svg.org/Inter-Document_Communication) the `"parent"` JS variable is broken in Adobe's SVG version 6 preview plugin. The suggested workaround is to use `"top"` instead of `"parent"`. Since it is a beta version of their plugin, we can probably safely ignore this.
+> **Note:** According to the [SVG wiki](https://web.archive.org/web/20100223210744/http://wiki.svg.org/Inter-Document_Communication) the `"parent"` JS variable is broken in Adobe's SVG version 6 preview plugin. The suggested workaround is to use `"top"` instead of `"parent"`. Since it is a beta version of their plugin, we can probably safely ignore this.
 
-More information and some examples can be found on the [SVG wiki inter-document scripting page](http://web.archive.org/web/20100223210744/http://wiki.svg.org/Inter-Document_Communication).
+More information and some examples can be found on the [SVG wiki inter-document scripting page](https://web.archive.org/web/20100223210744/http://wiki.svg.org/Inter-Document_Communication).
 
 ### `setProperty` has three parameters
 
@@ -79,4 +79,4 @@ The function `svgElement.style.setProperty("fill-opacity", "0.0")` throws a DOME
 
 ### Links
 
-[SVG wiki on Scripting and Programming](http://web.archive.org/web/20100212202713/http://wiki.svg.org/Main_Page#Scripting_and_Programming)
+[SVG wiki on Scripting and Programming](https://web.archive.org/web/20100212202713/http://wiki.svg.org/Main_Page#Scripting_and_Programming)

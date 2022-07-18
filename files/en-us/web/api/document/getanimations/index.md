@@ -1,6 +1,7 @@
 ---
 title: Document.getAnimations()
 slug: Web/API/Document/getAnimations
+page-type: web-api-instance-method
 tags:
   - API
   - Animation
@@ -26,7 +27,7 @@ target elements are descendants of the document. This array includes [CSS Animat
 ## Syntax
 
 ```js
-getAnimations();
+getAnimations()
 ```
 
 ### Parameters

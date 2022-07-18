@@ -16,7 +16,7 @@ tags:
 
 This article covers how to implement static square tilemaps using the [Canvas API](/en-US/docs/Web/API/Canvas_API).
 
-> **Note:** When writing this article, we assumed previous reader knowledge of canvas basics such as how get a 2D canvas context, load images, etc., which is all explained in the [Canvas API tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial), as well as the basic information included in our [Tilemaps](/en-US/docs/Games/Techniques/Tilemaps) introduction article.
+> **Note:** When writing this article, we assumed previous reader knowledge of canvas basics such as how get a 2D canvas context, load images, etc., which is all explained in the [Canvas API tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial), as well as the basic information included in our [Tilemaps](/en-US/docs/Games/Techniques/Tilemaps) introduction article.
 
 ## The tile atlas
 
@@ -44,7 +44,7 @@ To store that map data, we can use a plain object or a custom class. For the sak
 - `tiles`: A 1-dimensional array containing the visual grid.
 - `getTile()`: A helper method that gets the tile index in a certain position.
 
-`tiles` contains the actual visual map data. We are representing the tiles with indices, assigned to the tiles dependant on their position in the atlas (e.g. `0` for the left-most tile.) However, we must account for **empty tiles**, since they are crucial for implementing layers — empty tiles are usually assigned a negative index value, `0`, or a null value. In these examples, empty tiles will be represented by index `0`, so we will shift the indices of the atlases by one (and thus the first tile of the atlas will be assigned index `1`, the second index `2`, etc.)
+`tiles` contains the actual visual map data. We are representing the tiles with indices, assigned to the tiles dependent on their position in the atlas (e.g. `0` for the left-most tile.) However, we must account for **empty tiles**, since they are crucial for implementing layers — empty tiles are usually assigned a negative index value, `0`, or a null value. In these examples, empty tiles will be represented by index `0`, so we will shift the indices of the atlases by one (and thus the first tile of the atlas will be assigned index `1`, the second index `2`, etc.)
 
 The `getTile()` helper method returns the tile contained at the specified column and row. If `tiles` were a 2D matrix, then the returned value would just be `tiles[column][row]`. However, it's usually more common to represent the grid with a 1-dimensional array. In this case, we need to map the column and row to an array index:
 
@@ -69,7 +69,7 @@ var map = {
     1, 1, 1, 1, 2, 1, 1, 1,
     1, 1, 1, 0, 0, 1, 1, 1
   ],
-  getTile: function(col, row) {
+  getTile(col, row) {
     return this.tiles[row * map.cols + col]
   }
 };
@@ -77,7 +77,7 @@ var map = {
 
 ## Rendering the map
 
-We can render the map by iterating over its columns and rows. This snippets assumes the following definitions:
+We can render the map by iterating over its columns and rows. This snippet assumes the following definitions:
 
 - `context`: A 2D canvas context.
 - `tileAtlas`: An image object containing the tile atlas.
@@ -85,22 +85,22 @@ We can render the map by iterating over its columns and rows. This snippets assu
 
 ```js
 for (var c = 0; c < map.cols; c++) {
-  for (var r = 0; r < map.rows; r++) {
-    var tile = map.getTile(c, r);
-    if (tile !== 0) { // 0 => empty tile
-      context.drawImage(
-        tileAtlas, // image
-        (tile - 1) * map.tsize, // source x
-        0, // source y
-        map.tsize, // source width
-        map.tsize, // source height
-        c * map.tsize, // target x
-        r * map.tsize, // target y
-        map.tsize, // target width
-        map.tsize // target height
-      );
-    }
-  }
+  for (var r = 0; r < map.rows; r++) {
+    var tile = map.getTile(c, r);
+    if (tile !== 0) { // 0 => empty tile
+      context.drawImage(
+        tileAtlas, // image
+        (tile - 1) * map.tsize, // source x
+        0, // source y
+        map.tsize, // source width
+        map.tsize, // source height
+        c * map.tsize, // target x
+        r * map.tsize, // target y
+        map.tsize, // target width
+        map.tsize // target height
+      );
+    }
+  }
 }
 ```
 

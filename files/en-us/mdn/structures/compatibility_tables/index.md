@@ -74,7 +74,7 @@ Now, whenever you want to update your fork, you can do so by:
 Next, go to your remote fork (it will be at `https://github.com/your-username/browser-compat-data`) and create a new branch to store your changes for this data addition. This can be done by:
 
 1. Clicking on the "Branch: Main" button.
-2. Entering a new branch name into the "Find or create a branch..." text field.
+2. Entering a new branch name into the "Find or create a branch…" text field.
 3. Pressing the resulting "Create branch _name-of-branch_ from Main" button.
 
 For example, if you were wanting to add data for the WebVR API, you'd create a branch called something like "webvr".
@@ -116,7 +116,7 @@ Let's look at an example. CSS property JSON files for example need the following
     "properties": {
       "border-width": {
         "__compat": {
-          ...
+          // …
         }
       }
     }
@@ -134,20 +134,20 @@ Other types of features work in the same way, but with different object names:
 - HTML data works in basically the same way, except that the top-level object structure is `html.elements`. See [article.json](https://github.com/mdn/browser-compat-data/blob/main/html/elements/article.json) for an example.
 - The top level object structure for JS built-in objects is `javascript.builtins`; see [Array.json](https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/Array.json) for an example.
 
-In HTML, CSS, and JS pages, you'll normally only need one feature. API interfaces work slightly differently — they always have multiple sub-features (see {{anch("Sub-features")}}, below).
+In HTML, CSS, and JS pages, you'll normally only need one feature. API interfaces work slightly differently — they always have multiple sub-features (see [Sub-features](#sub-features), below).
 
 ### Basic structure inside a feature
 
 Inside a feature `__compat` member, you need to include the following members:
 
-- `mdn_url`: Contains the URL of the reference page for this feature on MDN. Note that this needs to be written without the locale directory inside, e.g. `/docs/...` not `/en-US/docs/...`. This is added in by the macro when the data is put on the page, for localization purposes.
+- `mdn_url`: Contains the URL of the reference page for this feature on MDN. Note that this needs to be written without the locale directory inside, e.g. `/docs/…` not `/en-US/docs/…`. This is added in by the macro when the data is put on the page, for localization purposes.
 - `spec_url`: URL or array of URLs to specification(s) in which this feature is defined.
 - `support`: Contains members representing the browser support information for this feature in all the different browsers we want to report.
 - `status`: Contains members reporting the standards track status of this feature.
 
 The names of the browser members are defined in the schema (see [Browser identifiers](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#browser-identifiers)). You should use the full list of currently defined identifiers. If you wish to add another browser, talk to us first, as this could have a wide-ranging impact and should not be done without careful thought.
 
-In a basic browser compat data file, you'll only need to include "version_added" inside the browser identifier members (we'll cover {{anch("Adding_data_Advanced_cases", "Adding data: Advanced cases")}} later on). The different values you might want to include are as follows:
+In a basic browser compat data file, you'll only need to include "version_added" inside the browser identifier members (we'll cover [Adding data: Advanced cases](#adding_data_advanced_cases) later on). The different values you might want to include are as follows:
 
 - A version number: If you know the exact version in which a browser started to support your feature, use a string representing the number, e.g. `"47"`.
 - `true`: If a browser supports a feature but you don't know the exact version number, use the value `true`.
@@ -221,19 +221,19 @@ There is a fourth, optional, member that can go inside the `__compat` member —
   "api": {
     "AbortController": {
       "__compat": {
-        ...
+        // …
       },
       "AbortController": {
         "__compat": {
           "mdn_url": "https://developer.mozilla.org/docs/Web/API/AbortController/AbortController",
           "description": "<code>AbortController()</code> constructor",
           "support": {
-            ...
+            …
           }
         }
       }
 
-      ... etc.
+      // …
     }
   }
 }
@@ -251,11 +251,11 @@ As an example, see the [compat data](https://github.com/mdn/browser-compat-data/
     "properties": {
       "background-color": {
         "__compat": {
-          ...
+          // …
         },
         "alpha_ch_for_hex": {
           "__compat": {
-            ...
+            // …
           },
         }
       }
@@ -271,20 +271,20 @@ For an API, you've got the top two levels defined as `api.name-of-the-interface`
   "api": {
     "VRDisplay": {
       "__compat": {
-        ...
+        // …
       },
       "cancelAnimationFrame": {
         "__compat": {
-          ...
+          // …
         }
       },
       "capabilities": {
         "__compat": {
-          ...
+          // …
         }
       },
 
-      ... etc.
+      // …
 
     }
   }
@@ -478,7 +478,7 @@ For example, for the {{domxref("AbortController")}} this would be added as shown
 title: AbortController
 slug: Web/API/AbortController
 
-...
+…
 
 browser-compat: api.AbortController
 ---

@@ -1,6 +1,7 @@
 ---
 title: Document.dir
 slug: Web/API/Document/dir
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -11,17 +12,14 @@ browser-compat: api.Document.dir
 ---
 {{ApiRef("HTML DOM")}}
 
-The **`Document.dir`** property is a {{domxref("DOMString")}}
+The **`Document.dir`** property is a string
 representing the directionality of the text of the document, whether left to right
 (default) or right to left. Possible values are `'rtl'`, right to left, and
 `'ltr'`, left to right.
 
-## Syntax
+## Value
 
-```js
-dirStr = document.dir
-document.dir = dirStr
-```
+A string.
 
 ## Specifications
 

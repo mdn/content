@@ -1,12 +1,14 @@
 ---
 title: Notifications API
 slug: Web/API/Notifications_API
+page-type: web-api-overview
 tags:
   - Landing
   - Notifications
   - Notifications API
   - permission
   - system
+browser-compat: api.Notification
 ---
 {{DefaultAPISidebar("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
@@ -49,19 +51,17 @@ In addition, the Notifications API spec specifies a number of additions to the [
 - {{domxref("ServiceWorkerRegistration")}}
   - : Includes the {{domxref("ServiceWorkerRegistration.showNotification()")}} and {{domxref("ServiceWorkerRegistration.getNotifications()")}} method, for controlling the display of notifications.
 - {{domxref("ServiceWorkerGlobalScope")}}
-  - : Includes the {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}} handler, for firing custom functions when a notification is clicked.
+  - : Includes the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "onnotificationclick")}} handler, for firing custom functions when a notification is clicked.
 - {{domxref("NotificationEvent")}}
   - : A specific type of event object, based on {{domxref("ExtendableEvent")}}, which represents a notification that has fired.
 
 ## Specifications
 
-| Specification                                                               |
-| --------------------------------------------------------------------------- |
-| [Notifications API Living Standard](https://notifications.spec.whatwg.org/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: BeforeInstallPromptEvent.prompt()
 slug: Web/API/BeforeInstallPromptEvent/prompt
+page-type: web-api-instance-method
 tags:
   - API
   - BeforeInstallPromptEvent
@@ -17,18 +18,18 @@ install prompt at a time of their own choosing.
 ## Syntax
 
 ```js
-BeforeInstallPromptEvent.prompt()
+prompt()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 An empty {{jsxref("Promise")}}.
 
-## Example
+## Examples
 
 ```js
 var isTooSoon = true;
@@ -43,7 +44,7 @@ window.addEventListener("beforeinstallprompt", function(e) {
   }
 
   // The event was re-dispatched in response to our request
-  // ...
+  // …
 });
 ```
 

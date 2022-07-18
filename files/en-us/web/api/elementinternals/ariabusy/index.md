@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaBusy
 slug: Web/API/ElementInternals/ariaBusy
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,16 +18,9 @@ The **`ariaBusy`** property of the {{domxref("ElementInternals")}} interface ref
 
 > **Note:** Setting aria attributes on `ElementInternals` allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
 
-## Syntax
+## Value
 
-```js
-let ariaBusy = ElementInternals.ariaBusy;
-ElementInternals.ariaBusy = ariaBusy;
-```
-
-### Value
-
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : The element is being updated.

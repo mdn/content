@@ -1,6 +1,7 @@
 ---
 title: PushSubscription.toJSON()
 slug: Web/API/PushSubscription/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -23,24 +24,24 @@ providing a useful shortcut.
 ## Syntax
 
 ```js
-mySubscription = subscription.toJSON()
+toJSON()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 A JSON object. It currently only contains the subscription endpoint, as an
 `endpoint` member.
 
-## Example
+## Examples
 
 ```js
 navigator.serviceWorker.ready.then(function(reg) {
   reg.pushManager.getSubscription().then(function(subscription) {
-    var mySubscription = subscription.toJSON();
+    const mySubscription = subscription.toJSON();
     // do something with subscription details
   })
 });

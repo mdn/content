@@ -8,6 +8,9 @@ tags:
   - Overview
   - Reference
   - Responsive Design
+spec-urls:
+  - https://drafts.csswg.org/mediaqueries/
+  - https://drafts.csswg.org/css-conditional/
 ---
 {{CSSRef}}
 
@@ -49,13 +52,7 @@ You can learn more about programmatically using media queries in [Testing media 
 
 ## Specifications
 
-| Specification                                    | Status                                   | Comment            |
-| ------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS5 Media Queries')}}     | {{Spec2('CSS5 Media Queries')}} |                    |
-| {{SpecName('CSS3 Conditional')}}     | {{Spec2('CSS3 Conditional')}} |                    |
-| {{SpecName('CSS4 Media Queries')}}     | {{Spec2('CSS4 Media Queries')}} |                    |
-| {{SpecName('CSS3 Media Queries')}}     | {{Spec2('CSS3 Media Queries')}} |                    |
-| {{SpecName('CSS2.1', 'media.html')}} | {{Spec2('CSS2.1')}}                 | Initial definition |
+{{Specifications}}
 
 ## See also
 

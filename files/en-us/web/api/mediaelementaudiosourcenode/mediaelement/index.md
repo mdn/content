@@ -1,6 +1,7 @@
 ---
 title: MediaElementAudioSourceNode.mediaElement
 slug: Web/API/MediaElementAudioSourceNode/mediaElement
+page-type: web-api-instance-property
 tags:
   - API
   - MediaElementAudioSourceNode
@@ -22,13 +23,7 @@ either using the {{domxref("MediaElementAudioSourceNode.MediaElementAudioSourceN
   "MediaElementAudioSourceNode()")}} constructor or the
 {{domxref("AudioContext.createMediaElementSource()")}} method.
 
-## Syntax
-
-```js
-audioSourceElement = mediaElementAudioSourceNode.mediaElement;
-```
-
-### Value
+## Value
 
 An {{domxref("HTMLMediaElement")}} representing the element which contains the source
 of audio for the node.

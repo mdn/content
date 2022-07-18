@@ -1,6 +1,7 @@
 ---
 title: WheelEvent.deltaMode
 slug: Web/API/WheelEvent/deltaMode
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -10,7 +11,7 @@ tags:
   - WheelEvent
 browser-compat: api.WheelEvent.deltaMode
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`WheelEvent.deltaMode`** read-only property returns an
 `unsigned long` representing the unit of the delta values scroll amount.
@@ -22,13 +23,11 @@ Permitted values are:
 | `DOM_DELTA_LINE`  | `0x01` | The delta values are specified in lines.  |
 | `DOM_DELTA_PAGE`  | `0x02` | The delta values are specified in pages.  |
 
-## Syntax
+## Value
 
-```js
-var unit = event.deltaMode;
-```
+An `unsigned long`.
 
-## Example
+## Examples
 
 ```js
 var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaX": 4, "deltaMode": 0});
@@ -46,5 +45,5 @@ console.log(syntheticEvent.deltaMode);
 
 ## See also
 
-- {{ event("wheel") }}
+- {{domxref("Element/wheel_event","wheel")}}
 - {{domxref("WheelEvent")}}

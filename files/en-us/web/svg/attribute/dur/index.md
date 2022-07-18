@@ -71,39 +71,15 @@ html, body, svg {
   - : This value specifies the length of the simple duration. The value must be greater than 0 and can be expressed with hours (`h`), minutes (`m`), seconds (`s`) or milliseconds (`ms`). It's possible to combine those time representations to create some complex durations like `hh:mm:ss.iii` or `mm:ss.iii`.
 - `media`
   - : This value specifies the simple duration as the intrinsic media duration. This is only valid for elements that define media.
-    (For [animation elements](/en-US/docs/Web/SVG/Element#Animation_elements) the attribute will be ignored if `media` is specified.)
+    (For [animation elements](/en-US/docs/Web/SVG/Element#animation_elements) the attribute will be ignored if `media` is specified.)
 - `indefinite`
   - : This value specifies the simple duration as indefinite.
 
-> **Note:** the interpolation will not work if the simple duration is indefinite (although this may still be useful for {{SVGElement("set")}} elements).
+> **Note:** the {{Glossary("interpolation")}} will not work if the simple duration is indefinite (although this may still be useful for {{SVGElement("set")}} elements).
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#DurAttribute", "dur")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "animate.html#DurAttribute", "dur")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

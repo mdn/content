@@ -1,6 +1,7 @@
 ---
 title: ServiceWorkerGlobalScope.registration
 slug: Web/API/ServiceWorkerGlobalScope/registration
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,15 +14,9 @@ browser-compat: api.ServiceWorkerGlobalScope.registration
 ---
 {{APIRef("Service Workers API")}}
 
-The **`registration`** read-only property of the {{domxref("ServiceWorkerGlobalScope")}} interface returns a reference to the {{domxref("ServiceWorkerRegistration")}} object, which represents the service worker's registration.
+The **`registration`** read-only property of the {{domxref("ServiceWorkerGlobalScope")}} interface returns a reference to the {{domxref("ServiceWorkerRegistration")}} object, which represents the service worker's registration.
 
-## Syntax
-
-```js
-serviceWorkerRegistration = self.registration
-```
-
-### Value
+## Value
 
 A {{domxref("ServiceWorkerRegistration")}} object.
 

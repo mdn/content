@@ -32,6 +32,7 @@ caption-side: inline-end;
 caption-side: inherit;
 caption-side: initial;
 caption-side: revert;
+caption-side: revert-layer;
 caption-side: unset;
 ```
 

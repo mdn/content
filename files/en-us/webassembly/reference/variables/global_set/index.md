@@ -11,7 +11,7 @@ tags:
 
 The **`global.set`** instruction sets the values of a global variable.
 
-{{EmbedInteractiveExample("pages/wat/global_set.html")}}
+{{EmbedInteractiveExample("pages/wat/global_set.html", "tabbed-taller")}}
 
 ## Syntax
 

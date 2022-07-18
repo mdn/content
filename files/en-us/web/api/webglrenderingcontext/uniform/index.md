@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.uniform[1234][fi][v]()
 slug: Web/API/WebGLRenderingContext/uniform
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -25,30 +26,30 @@ object, when they are once again initialized to 0.
 ## Syntax
 
 ```js
-void gl.uniform1f(location, v0);
-void gl.uniform1fv(location, value);
-void gl.uniform1i(location, v0);
-void gl.uniform1iv(location, value);
+uniform1f(location, v0)
+uniform1fv(location, value)
+uniform1i(location, v0)
+uniform1iv(location, value)
 
-void gl.uniform2f(location, v0, v1);
-void gl.uniform2fv(location, value);
-void gl.uniform2i(location, v0, v1);
-void gl.uniform2iv(location, value);
+uniform2f(location, v0, v1)
+uniform2fv(location, value)
+uniform2i(location, v0, v1)
+uniform2iv(location, value)
 
-void gl.uniform3f(location, v0, v1, v2);
-void gl.uniform3fv(location, value);
-void gl.uniform3i(location, v0, v1, v2);
-void gl.uniform3iv(location, value);
+uniform3f(location, v0, v1, v2)
+uniform3fv(location, value)
+uniform3i(location, v0, v1, v2)
+uniform3iv(location, value)
 
-void gl.uniform4f(location, v0, v1, v2, v3);
-void gl.uniform4fv(location, value);
-void gl.uniform4i(location, v0, v1, v2, v3);
-void gl.uniform4iv(location, value);
+uniform4f(location, v0, v1, v2, v3)
+uniform4fv(location, value)
+uniform4i(location, v0, v1, v2, v3)
+uniform4iv(location, value)
 ```
 
 ### Parameters
 
-- location
+- `location`
   - : A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform
     attribute to modify.
 - `value, v0, v1, v2, v3`
@@ -65,7 +66,7 @@ void gl.uniform4iv(location, value);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

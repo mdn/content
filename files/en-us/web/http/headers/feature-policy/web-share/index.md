@@ -33,7 +33,7 @@ The default value is `'self'`.
 
 {{Compat}}
 
-Browser implementation is being discussed in <https://github.com/w3c/web-share/issues/169>.
+Browser implementation is being discussed in <https://github.com/w3c/web-share/issues/169>.
 
 ## See also
 

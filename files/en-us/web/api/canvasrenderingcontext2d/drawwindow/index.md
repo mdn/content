@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.drawWindow()
 slug: Web/API/CanvasRenderingContext2D/drawWindow
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -20,17 +21,18 @@ The contents of the window's viewport are rendered, ignoring viewport clipping a
 scrolling.
 
 This API cannot be used by Web content. It is synchronous, and as such can't capture
-cross-origin (out of process) iframes with Fission.  If you're using it from an
+cross-origin (out of process) iframes with Fission.  If you're using it from an
 extension, you should switch to {{WebExtAPIRef('tabs.captureTab')}} to capture the
-tab's image as a [data: url](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) and then render the captured image onto canvas using
-{{domxref("CanvasRenderingContext2D.drawImage")}}. If you're writing chrome code,
+tab's image as a [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) and then render the captured image onto canvas using
+{{domxref("CanvasRenderingContext2D.drawImage")}}. If you're writing chrome code,
 you probably want [WindowGlobalParent.drawSnapshot](https://searchfox.org/mozilla-central/rev/9b282b34b5/dom/chrome-webidl/WindowGlobalActors.webidl#81-98)
 from the parent process.
 
 ## Syntax
 
 ```js
-void ctx.drawWindow(window, x, y, w, h, bgColor [, flags]);
+drawWindow(window, x, y, w, h, bgColor)
+drawWindow(window, x, y, w, h, bgColor, flags)
 ```
 
 ### Parameters
@@ -47,32 +49,39 @@ void ctx.drawWindow(window, x, y, w, h, bgColor [, flags]);
   - : The height of the window.
 - `bgColor`
 
-  - : A {{domxref("DOMString")}} that specifies the color the canvas is filled with before
+  - : A string that specifies the color the canvas is filled with before
     the window is rendered into it. This color may be transparent/translucent. It is given
     as a CSS color string (for example, `rgb()` or `rgba()`).
-    Notes:
-
-    - If "`rgba(0,0,0,0)`" is used for the background color, the drawing
-      will be transparent wherever the window is transparent.
-    - Top-level browsed documents are usually not transparent because the user's
-      background-color preference is applied, but {{HTMLElement("iframe", "iframes")}}
-      are transparent if the page doesn't set a background.
-    - If an opaque color is used for the background color, rendering will be faster
-      because we won't have to compute the window's transparency.
+    > **Note:**
+    >
+    > - If "`rgba(0,0,0,0)`" is used for the background color, the drawing
+    >   will be transparent wherever the window is transparent.
+    > - Top-level browsed documents are usually not transparent because the user's
+    >   background-color preference is applied, but {{HTMLElement("iframe", "iframes")}}
+    >   are transparent if the page doesn't set a background.
+    > - If an opaque color is used for the background color, rendering will be faster
+    >   because we won't have to compute the window's transparency.
 
 - `flags` {{optional_inline}}
 
-  - : Used to better control the `drawWindow` call. Flags can be ORed together.
+  - : Used to better control the `drawWindow` call. Several flags can be set at the same time, by
+    grouping them with an _or_ (`|`) connector:
+    - `DRAWWINDOW_DRAW_CARET` (`0x01`)
+      - : Show the caret if appropriate when drawing.
+    - `DRAWWINDOW_DO_NOT_FLUSH` (`0x02`)
+      - : Do not flush pending layout notifications that could otherwise be batched up.
+    - `DRAWWINDOW_DRAW_VIEW` (`0x04`)
+      - : Draw scrollbars and scroll the viewport if they are present.
+    - `DRAWWINDOW_USE_WIDGET_LAYERS` (`0x08`)
+      - : Use the widget layer manager if available. This means hardware acceleration may be used, but it might actually be slower or lower quality than normal. It will, however, more accurately reflect the pixels rendered to the screen.
+    - `DRAWWINDOW_ASYNC_DECODE_IMAGES` (`0x10`)
+      - : Do not synchronously decode images: draw what we have.
 
-    | Constant                         | Value  | Description                                                                                                                                                                                                                         |
-    | -------------------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `DRAWWINDOW_DRAW_CARET`          | `0x01` | Show the caret if appropriate when drawing.                                                                                                                                                                                         |
-    | `DRAWWINDOW_DO_NOT_FLUSH`        | `0x02` | Do not flush pending layout notifications that could otherwise be batched up.                                                                                                                                                       |
-    | `DRAWWINDOW_DRAW_VIEW`           | `0x04` | Draw scrollbars and scroll the viewport if they are present.                                                                                                                                                                        |
-    | `DRAWWINDOW_USE_WIDGET_LAYERS`   | `0x08` | Use the widget layer manager if available. This means hardware acceleration may be used, but it might actually be slower or lower quality than normal. It will, however, more accurately reflect the pixels rendered to the screen. |
-    | `DRAWWINDOW_ASYNC_DECODE_IMAGES` | `0x10` | Do not synchronously decode images - draw what we have.                                                                                                                                                                             |
+### Return value
 
-## Example
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 This method draws a snapshot of the contents of a DOM `window` into the
 canvas. For example,
@@ -81,7 +90,7 @@ canvas. For example,
 ctx.drawWindow(window, 0, 0, 100, 200, 'rgb(255,255,255)');
 ```
 
-... would draw the contents of the current window, in the rectangle (0,0,100,200) in
+… would draw the contents of the current window, in the rectangle (0,0,100,200) in
 pixels relative to the top-left of the viewport, on a white background, into the canvas.
 By specifying "`rgba(255,255,255,0)`" as the color, the contents would be
 drawn with a transparent background (which would be slower).

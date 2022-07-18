@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.audioTracks
 slug: Web/API/SourceBuffer/audioTracks
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -19,17 +20,11 @@ The **`audioTracks`** read-only property of the
 {{domxref("SourceBuffer")}} interface returns a list of the audio tracks currently
 contained inside the `SourceBuffer`.
 
-## Syntax
-
-```js
-var myAudioTracks = sourceBuffer.audioTracks;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioTrackList")}} object.
 
-## Example
+## Examples
 
 TBD
 

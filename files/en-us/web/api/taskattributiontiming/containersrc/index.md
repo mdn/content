@@ -1,6 +1,7 @@
 ---
 title: TaskAttributionTiming.containerSrc
 slug: Web/API/TaskAttributionTiming/containerSrc
+page-type: web-api-instance-property
 tags:
   - API
   - Long Tasks API
@@ -17,15 +18,9 @@ The **`containerSrc`** readonly property of the
 attribute. A container is the iframe, embed or object etc. that is being implicated, on
 the whole, for a long task.
 
-## Syntax
+## Value
 
-```js
-var containerSrc = TaskAttributionTiming.containerSrc;
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing the container's `src` attribute.
+A string containing the container's `src` attribute.
 
 ## Specifications
 

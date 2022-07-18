@@ -1,6 +1,7 @@
 ---
 title: Hello vertex attributes
 slug: Web/API/WebGL_API/By_example/Hello_vertex_attributes
+page-type: guide
 tags:
   - Beginner
   - Example
@@ -80,19 +81,19 @@ void main() {
 ```js
 "use strict"
 window.addEventListener("load", setupWebGL, false);
-var gl,
+let gl,
   program;
 function setupWebGL (evt) {
   window.removeEventListener(evt.type, setupWebGL, false);
   if (!(gl = getRenderingContext()))
     return;
 
-  var source = document.querySelector("#vertex-shader").innerHTML;
-  var vertexShader = gl.createShader(gl.VERTEX_SHADER);
+  const source = document.querySelector("#vertex-shader").innerHTML;
+  const vertexShader = gl.createShader(gl.VERTEX_SHADER);
   gl.shaderSource(vertexShader,source);
   gl.compileShader(vertexShader);
   source = document.querySelector("#fragment-shader").innerHTML
-  var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+  const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
   gl.shaderSource(fragmentShader,source);
   gl.compileShader(fragmentShader);
   program = gl.createProgram();
@@ -104,7 +105,7 @@ function setupWebGL (evt) {
   gl.deleteShader(vertexShader);
   gl.deleteShader(fragmentShader);
   if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-    var linkErrLog = gl.getProgramInfoLog(program);
+    const linkErrLog = gl.getProgramInfoLog(program);
     cleanup();
     document.querySelector("p").innerHTML =
       "Shader program did not link successfully. "
@@ -118,10 +119,10 @@ function setupWebGL (evt) {
 
   document.querySelector("canvas").addEventListener("click",
     function (evt) {
-      var clickXrelativToCanvas =
+      const clickXRelativeToCanvas =
           evt.pageX - evt.target.offsetLeft;
-      var clickXinWebGLCoords =
-          2.0 * (clickXrelativToCanvas- gl.drawingBufferWidth/2)
+      const clickXinWebGLCoords =
+          2.0 * (clickXRelativeToCanvas- gl.drawingBufferWidth/2)
           / gl.drawingBufferWidth;
       gl.bufferData(gl.ARRAY_BUFFER,
         new Float32Array([clickXinWebGLCoords]), gl.STATIC_DRAW);
@@ -129,7 +130,7 @@ function setupWebGL (evt) {
     }, false);
 }
 
-var buffer;
+let buffer;
 function initializeAttributes() {
   gl.enableVertexAttribArray(0);
   buffer = gl.createBuffer();
@@ -150,13 +151,13 @@ function cleanup() {
 
 ```js hidden
 function getRenderingContext() {
-  var canvas = document.querySelector("canvas");
+  const canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
-  var gl = canvas.getContext("webgl")
+  const gl = canvas.getContext("webgl")
     || canvas.getContext("experimental-webgl");
   if (!gl) {
-    var paragraph = document.querySelector("p");
+    const paragraph = document.querySelector("p");
     paragraph.innerHTML = "Failed to get WebGL context."
       + "Your browser or device may not support WebGL.";
     return null;

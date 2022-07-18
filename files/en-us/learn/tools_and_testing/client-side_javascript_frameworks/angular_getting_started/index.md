@@ -108,9 +108,9 @@ To install Angular on your local system, you need the following:
 
 - **npm package manager**
 
-  Angular, the Angular CLI, and Angular applications depend on [npm packages](https://docs.npmjs.com/getting-started/what-is-npm) for many features and functions.
+  Angular, the Angular CLI, and Angular applications depend on [npm packages](https://docs.npmjs.com/getting-started/what-is-npm/) for many features and functions.
   To download and install npm packages, you need an npm package manager.
-  This guide uses the [npm client](https://docs.npmjs.com/cli/install) command line interface, which is installed with `Node.js` by default.
+  This guide uses the [npm client](https://docs.npmjs.com/cli/install/) command line interface, which is installed with `Node.js` by default.
   To check that you have the npm client installed, run `npm -v` in a terminal window.
 
 ## Set up your application
@@ -118,14 +118,14 @@ To install Angular on your local system, you need the following:
 You can use the Angular CLI to run commands in your terminal for generating, building, testing, and deploying Angular applications.
 To install the Angular CLI, run the following command in your terminal:
 
-```js
+```bash
 npm install -g @angular/cli
 ```
 
 Angular CLI commands all start with `ng`, followed by what you'd like the CLI to do.
 In the Desktop directory, use the following `ng new` command to create a new application called `todo`:
 
-```js
+```bash
 ng new todo --routing=false --style=css
 ```
 
@@ -137,13 +137,13 @@ If you are prompted to enforce stricter type checking, you can respond with yes.
 
 Navigate into your new project with the following `cd` command:
 
-```js
+```bash
 cd todo
 ```
 
 To run your `todo` application, use `ng serve`:
 
-```js
+```bash
 ng serve
 ```
 
@@ -248,7 +248,7 @@ export class AppComponent {
 ```
 
 Angular extends HTML with additional syntax that lets you insert dynamic values from your component.
-Angular automatically updates the rendered DOM when your component’s state changes.
+Angular automatically updates the rendered DOM when your component's state changes.
 One use of this feature is inserting dynamic text, as shown in the following example.
 
 ```html

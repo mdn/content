@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.latency
 slug: Web/API/MediaTrackSettings/latency
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -38,18 +39,12 @@ Because {{Glossary("RTP")}} doesn't include this information, tracks associated 
 [WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("RTCPeerConnection")}}
 will never include this property.
 
-## Syntax
-
-```js
-var latency = MediaTrackSettings.latency;
-```
-
-### Value
+## Value
 
 A double-precision floating-point number indicating the estimated latency, in seconds,
 of the audio track as currently configured.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.
@@ -65,7 +60,6 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Exampl
 ## See also
 
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities,
-  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints.latency")}}
 - {{domxref("MediaTrackSettings")}}

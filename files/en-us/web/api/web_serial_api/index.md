@@ -1,11 +1,13 @@
 ---
 title: Web Serial API
 slug: Web/API/Web_Serial_API
+page-type: web-api-overview
 tags:
   - API
   - Web Serial
   - Overview
   - Reference
+browser-compat: api.Serial
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Web Serial API")}}
 
@@ -50,7 +52,7 @@ navigator.serial.getPorts().then((ports) => {
 });
 
 button.addEventListener('click', () => {
-  const usbVendorId = ...;
+  const usbVendorId = 0xABCD;
   navigator.serial.requestPort({ filters: [{ usbVendorId }]}).then((port) => {
     // Connect to `port` or add it to the list of available ports.
   }).catch((e) => {
@@ -86,9 +88,11 @@ while (port.readable) {
 
 ## Specifications
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Web Serial API')}} | {{Spec2('Web Serial API')}} | Initial definition. |
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

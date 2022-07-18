@@ -28,7 +28,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var requesting = browser.permissions.request(
+let requesting = browser.permissions.request(
   permissions                // Permissions object
 )
 ```
@@ -81,6 +81,6 @@ document.querySelector("#request").addEventListener("click", requestPermissions)
 
 > **Note:** Currently has a [bug with requesting origins](https://bugzilla.mozilla.org/show_bug.cgi?id=1411873) and [requesting permissions on the about:addons page](https://bugzilla.mozilla.org/show_bug.cgi?id=1382953).
 
-> **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/extensions/permissions) API.
+> **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/permissions/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

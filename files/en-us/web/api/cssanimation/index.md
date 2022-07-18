@@ -1,6 +1,7 @@
 ---
 title: CSSAnimation
 slug: Web/API/CSSAnimation
+page-type: web-api-interface
 tags:
   - API
   - Animation
@@ -19,8 +20,8 @@ The **`CSSAnimation`** interface of the {{domxref('Web Animations API','','',' '
 
 Inherits methods from its ancestor {{domxref("Animation")}} and adds {{domxref("animationName")}}.
 
-- {{domxref("CSSAnimation.animationName")}}{{readonlyinline}}
-  - : Returns the animation name as a {{domxref("CSSOMString")}}.
+- {{domxref("CSSAnimation.animationName")}} {{readonlyinline}}
+  - : Returns the animation name as a string.
 
 ### Event handlers
 

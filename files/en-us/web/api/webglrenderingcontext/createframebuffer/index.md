@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.createFramebuffer()
 slug: Web/API/WebGLRenderingContext/createFramebuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,7 +19,7 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) creates and initializes a
 ## Syntax
 
 ```js
-WebGLFramebuffer gl.createFramebuffer();
+createFramebuffer()
 ```
 
 ### Parameters

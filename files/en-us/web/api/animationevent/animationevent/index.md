@@ -1,6 +1,7 @@
 ---
 title: AnimationEvent()
 slug: Web/API/AnimationEvent/AnimationEvent
+page-type: web-api-constructor
 tags:
   - API
   - AnimationEvent
@@ -12,46 +13,30 @@ browser-compat: api.AnimationEvent.AnimationEvent
 ---
 {{APIRef("Web Animations API")}}
 
-The **`AnimationEvent()`** constructor returns a newly created
-{{domxref("AnimationEvent")}}, representing an event in relation with an animation.
+The **`AnimationEvent()`** constructor returns a new {{domxref("AnimationEvent")}} object, representing an event in relation with an animation.
 
 ## Syntax
 
 ```js
-animationEvent = new AnimationEvent(type, {animationName: aPropertyName,
-                                           elapsedTime  : aFloat,
-                                           pseudoElement: aPseudoElementName});
+new AnimationEvent(type)
+new AnimationEvent(type, options)
 ```
 
 ### Parameters
 
-_The `AnimationEvent()` constructor also inherits arguments from
-{{domxref("Event.Event", "Event()")}}._
-
 - `type`
-  - : A {{domxref("DOMString")}} representing the name of the type of the
-    `AnimationEvent`. It is case-sensitive and can be:
-    `'animationstart'`, `'animationend'`, or
-    `'animationiteration'`.
-- `animationName` {{optional_inline}}
-  - : A {{domxref("DOMString")}} containing the value of the {{cssxref("animation-name")}}
-    CSS property associated with the transition. It defaults to `""`.
-- `elapsedTime` {{optional_inline}}
-  - : A `float` giving the amount of time the animation has been running, in
-    seconds, when this event fired, excluding any time the animation was paused. For an
-    `"animationstart"` event, `elapsedTime` is `0.0`
-    unless there was a negative value for {{cssxref("animation-delay")}}, in which case
-    the event will be fired with `elapsedTime` containing
-    `(-1 * delay)`. It defaults to `0.0`.
-- `pseudoElement` {{optional_inline}}
-  - : Is a {{domxref("DOMString")}}, starting with `"::"`, containing the name
-    of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on.
-    If the animation doesn't run on a pseudo-element but on the element itself, specify an
-    empty string: `""`. It defaults to `""`.
-
-### Return value
-
-A new {{domxref("AnimationEvent")}}, initialized per any provided options.
+  - : A string with the name of the type of the `AnimationEvent`.
+    It is case-sensitive and browsers set it to `animationstart`, `animationend`, or `animationiteration`.
+- `options` {{optional_inline}}
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
+    - `animationName` {{optional_inline}}
+      - : A string containing the value of the {{cssxref("animation-name")}} CSS property associated with the transition. It defaults to `""`.
+    - `elapsedTime` {{optional_inline}}
+      - : A `float` giving the amount of time the animation has been running, in seconds, when this event fired, excluding any time the animation was paused.
+        For an `animationstart` event, `elapsedTime` is `0.0` unless there was a negative value for {{cssxref("animation-delay")}},
+        in which case the event will be fired with `elapsedTime` containing `(-1 * delay)`. It defaults to `0.0`.
+    - `pseudoElement` {{optional_inline}}
+      - : A string, starting with `"::"`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on. If the animation doesn't run on a pseudo-element but on the element itself, specify an empty string: `""`. It defaults to `""`.
 
 ## Specifications
 

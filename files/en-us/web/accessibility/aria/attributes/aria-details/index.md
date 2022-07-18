@@ -1,7 +1,7 @@
 ---
-title: 'aria-details'
+title: aria-details
 slug: Web/Accessibility/ARIA/Attributes/aria-details
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -9,8 +9,8 @@ tags:
   - aria-details
   - Reference
   - longdesc
+spec-urls: https://w3c.github.io/aria/#aria-details
 ---
-
 The global `aria-details` attribute identifies the element (or elements) that provide additional information related to the object.
 
 ## Description
@@ -33,25 +33,25 @@ Unlike `aria-describedby`, elements referenced by `aria-details` are not used in
 
 ## Example
 
-When it comes to definition and term roles, the `aria-details` would be included on the [`term`](/en-US/docs/Web/Accessibility/ARIA/roles/term_role) element with the `id` of the element with a [`definition`](/en-US/docs/Web/Accessibility/ARIA/roles/definition_role) role.
+When it comes to definition and term roles, the `aria-details` would be included on the [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role) element with the `id` of the element with a [`definition`](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role) role.
 
 ```html
-<p>The <strong>cubic-bezier()<strong> functional notation defines a cubic 
-  <span role="term" aria-details="bezier bezImg">Bézier curve</span>. As 
-  these curves are continuous, they are often used to smooth down the start and 
+<p>The <strong>cubic-bezier()<strong> functional notation defines a cubic
+  <span role="term" aria-details="bezier bezImg">Bézier curve</span>. As
+  these curves are continuous, they are often used to smooth down the start and
   end of the curve and are therefore sometimes called easing functions.
 </p>
 
 <p role="definition" id="bezier">A <strong>Bézier curve</strong>,
  (Pronounced \ ˈbe-zē-ˌā \)
- <i aria-description="English pronunciation">BEH-zee-ay</i>) is a mathematically 
- described curve used in computer graphics and animation. The curve is defined 
- by a set of control points with a minimum of two. Web related graphics 
- and animations use Cubic Béziers, which are curves with four control 
+ <i aria-description="English pronunciation">BEH-zee-ay</i>) is a mathematically
+ described curve used in computer graphics and animation. The curve is defined
+ by a set of control points with a minimum of two. Web related graphics
+ and animations use Cubic Béziers, which are curves with four control
  points P<sub>0</sub>, P<sub>1</sub>, P<sub>2</sub>, and P<sub>3</sub>.
 </p>
 
-<a href="bezierExplanation.html" id="bezImg" 
+<a href="bezierExplanation.html" id="bezImg"
   aria-label="Explanation of Bézier curve in CSS timing functions">
   <img alt="Animated Bézier curve showing 4 control points." src="bezier.gif">
 </a>
@@ -68,9 +68,7 @@ Used in **ALL** roles.
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-details","ARIA: aria-details Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

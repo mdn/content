@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue.toSum()
 slug: Web/API/CSSNumericValue/toSum
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -21,12 +22,12 @@ The **`toSum()`** method of the
 ## Syntax
 
 ```js
-var cssMathSum = CSSNumericValue.toSum(units);
+toSum(units)
 ```
 
 ### Parameters
 
-- units
+- `units`
   - : The units to convert to.
 
 ### Return value
@@ -35,10 +36,8 @@ A {{domxref('CSSNumericValue')}}.
 
 ### Exceptions
 
-- SyntaxError
-  - : undefined
-- TypeError
-  - : Indicates that an invalid type was passed to the method.
+- {{jsxref("TypeError")}}
+  - : Thrown if an invalid type was passed to the method.
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: SharedWorkerGlobalScope.applicationCache
 slug: Web/API/SharedWorkerGlobalScope/applicationCache
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -14,17 +15,11 @@ browser-compat: api.SharedWorkerGlobalScope.applicationCache
 
 The **`applicationCache`** read-only property of the {{domxref("SharedWorkerGlobalScope")}} interface returns the {{domxref("ApplicationCache")}} object for the worker.
 
-## Syntax
-
-```js
-var nameObj = self.applicationCache;
-```
-
-### Value
+## Value
 
 An {{domxref("ApplicationCache")}}.
 
-## Example
+## Examples
 
 If a shared worker has an AppCache associated with it, you can return a reference to the cache using
 

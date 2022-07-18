@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.listener
 slug: Web/API/BaseAudioContext/listener
+page-type: web-api-instance-property
 tags:
   - API
   - AudioContext
@@ -18,26 +19,20 @@ The `listener` property of the {{ domxref("BaseAudioContext") }} interface
 returns an {{ domxref("AudioListener") }} object that can then be used for
 implementing 3D audio spatialization.
 
-## Syntax
-
-```js
-baseAudioContext.listener;
-```
-
-### Value
+## Value
 
 An {{ domxref("AudioListener") }} object.
 
-## Example
+## Examples
 
-> **Note:** for a full Web Audio spatialization example, see our [panner-node](https://github.com/mdn/panner-node) demo.
+> **Note:** for a full Web Audio spatialization example, see our [panner-node](https://github.com/mdn/webaudio-examples/tree/master/panner-node) demo.
 
 ```js
 var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 // Older webkit/blink browsers require a prefix
 
-...
+// …
 
 var myListener = audioCtx.listener;
 ```

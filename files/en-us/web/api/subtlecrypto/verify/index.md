@@ -1,6 +1,7 @@
 ---
 title: SubtleCrypto.verify()
 slug: Web/API/SubtleCrypto/verify
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -23,38 +24,30 @@ indicating whether the signature is valid.
 ## Syntax
 
 ```js
-const result = crypto.subtle.verify(algorithm, key, signature, data);
+verify(algorithm, key, signature, data)
 ```
 
 ### Parameters
 
-- _`algorithm`_ is a {{domxref("DOMString")}} or object defining the
-  algorithm to use, and for some algorithm choices, some extra parameters. The values
-  given for the extra parameters must match those passed into the corresponding
-  {{domxref("SubtleCrypto.sign()", "sign()")}} call.
-
-  - To use [RSASSA-PKCS1-v1_5](/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5),
-    pass the string `"RSASSA-PKCS1-v1_5"` or an object of the form
-    `{ "name": "RSASSA-PKCS1-v1_5" }`.
-  - To use [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss), pass
-    an {{domxref("RsaPssParams")}} object.
-  - To use [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa), pass an
-    {{domxref("EcdsaParams")}} object.
-  - To use [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac), pass the
-    string `"HMAC"` or an object of the form
-    `{ "name": "HMAC" }`.
-
-- `key` is a {{domxref("CryptoKey")}} containing the key that will
-  be used to verify the signature. It is the secret key for a symmetric algorithm and
-  the public key for a public-key system.
-- `signature` is a {{jsxref("ArrayBuffer")}} containing the
-  {{glossary("signature")}} to verify.
-- _`data`_ is a {{jsxref("ArrayBuffer")}} containing the data whose
-  signature is to be verified.
+- `algorithm`
+  - : A string or object defining the algorithm to use, and for some algorithm choices, some extra parameters.
+    The values given for the extra parameters must match those passed into the corresponding {{domxref("SubtleCrypto.sign()", "sign()")}} call.
+    - To use [RSASSA-PKCS1-v1_5](/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5),
+    pass the string `"RSASSA-PKCS1-v1_5"` or an object of the form `{ "name": "RSASSA-PKCS1-v1_5" }`.
+    - To use [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss), pass an {{domxref("RsaPssParams")}} object.
+    - To use [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa), pass an {{domxref("EcdsaParams")}} object.
+    - To use [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac), pass the string `"HMAC"` or an object of the form `{ "name": "HMAC" }`.
+- `key`
+  - : A {{domxref("CryptoKey")}} containing the key that will be used to verify the signature.
+    It is the secret key for a symmetric algorithm and the public key for a public-key system.
+- `signature`
+  - : A {{jsxref("ArrayBuffer")}} containing the {{glossary("signature")}} to verify.
+- `data`
+  - : A {{jsxref("ArrayBuffer")}} containing the data whose signature is to be verified.
 
 ### Return value
 
-- `result` is a {{jsxref("Promise")}} that fulfills with a
+A {{jsxref("Promise")}} that fulfills with a
   boolean value: `true` if the signature is valid, `false`
   otherwise.
 
@@ -62,7 +55,7 @@ const result = crypto.subtle.verify(algorithm, key, signature, data);
 
 The promise is rejected when the following exception is encountered:
 
-- {{exception("InvalidAccessError")}}
+- `InvalidAccessError` {{domxref("DOMException")}}
   - : Raised when the encryption key is not a key for the requested verifying algorithm or
     when trying to use an algorithm that is either unknown or isn't suitable for a verify
     operation.
@@ -75,13 +68,12 @@ method.
 
 ## Examples
 
-> **Note:** You can [try the
-> working examples](https://mdn.github.io/dom-examples/web-crypto/sign-verify/index.html) out on GitHub.
+> **Note:** You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/sign-verify/index.html) out on GitHub.
 
 ### RSASSA-PKCS1-v1_5
 
-This code uses a public key to verify a signature. [See
-the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsassa-pkcs1.js)
+This code uses a public key to verify a signature.
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsassa-pkcs1.js)
 
 ```js
 /*
@@ -118,8 +110,8 @@ async function verifyMessage(publicKey) {
 
 ### RSA-PSS
 
-This code uses a public key to verify a signature. [See
-the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsa-pss.js)
+This code uses a public key to verify a signature.
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsa-pss.js)
 
 ```js
 /*
@@ -159,8 +151,8 @@ async function verifyMessage(publicKey) {
 
 ### ECDSA
 
-This code uses a public key to verify a signature. [See
-the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/ecdsa.js)
+This code uses a public key to verify a signature.
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/ecdsa.js)
 
 ```js
 /*
@@ -200,8 +192,8 @@ async function verifyMessage(publicKey) {
 
 ### HMAC
 
-This code uses a secret key to verify a signature. [See
-the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/hmac.js)
+This code uses a secret key to verify a signature.
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/hmac.js)
 
 ```js
 /*
@@ -247,10 +239,7 @@ async function verifyMessage(key) {
 ## See also
 
 - {{domxref("SubtleCrypto.sign()")}}.
-- [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) specifies
-  RSASSA-PKCS1-v1_5.
+- [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) specifies RSASSA-PKCS1-v1_5.
 - [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) specifies RSA-PSS.
-- [FIPS-186](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf) specifies
-  ECDSA.
-- [FIPS
-  198-1](https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf) specifies HMAC.
+- [FIPS-186](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf) specifies ECDSA.
+- [FIPS 198-1](https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf) specifies HMAC.

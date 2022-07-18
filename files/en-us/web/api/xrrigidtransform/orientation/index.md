@@ -1,6 +1,7 @@
 ---
 title: XRRigidTransform.orientation
 slug: Web/API/XRRigidTransform/orientation
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -43,7 +44,7 @@ off of ground level:
 
 ```js
 xrReferenceSpace = refSpace.getOffsetReferenceSpace(
-  new XRRigidTransform({y: -2}, {x: 0.0, y: 1.0, z: 0.0, w: 1.0});
+  new XRRigidTransform({y: -2}, {x: 0.0, y: 1.0, z: 0.0, w: 1.0})
 );
 ```
 
@@ -60,7 +61,6 @@ should be facing directly along the _y_ axis.
 
 ## See also
 
-- [Movement,
-  orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion)
+- [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion)
 - {{interwiki("wikipedia", "versor", "Unit quaternions")}}
 - {{interwiki("wikipedia", "Quaternions and spatial rotation")}}

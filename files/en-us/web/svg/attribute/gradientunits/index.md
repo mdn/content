@@ -6,6 +6,9 @@ tags:
   - NeedsExample
   - SVG
   - SVG Attribute
+spec-urls:
+  - https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementGradientUnitsAttribute
+  - https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementGradientUnitsAttribute
 ---
 {{SVGRef}}
 
@@ -76,42 +79,4 @@ For {{SVGElement("radialGradient")}}, `gradientUnits` defines the coordinate sys
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "pservers.html#RadialGradientElementGradientUnitsAttribute", "gradientUnits for &lt;radialGradient&gt;")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "pservers.html#LinearGradientElementGradientUnitsAttribute", "gradientUnits for &lt;linearGradient&gt;")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "pservers.html#RadialGradientElementGradientUnitsAttribute", "gradientUnits for &lt;radialGradient&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;radialGradient></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "pservers.html#LinearGradientElementGradientUnitsAttribute", "gradientUnits for &lt;linearGradient&gt;")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;linearGradient></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

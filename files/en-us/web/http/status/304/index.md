@@ -22,7 +22,7 @@ headers {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}},
 {{HTTPHeader("Date")}}, {{HTTPHeader("ETag")}}, {{HTTPHeader("Expires")}}, and
 {{HTTPHeader("Vary")}}.
 
-> **Note:** Many [developer tools' network panels](/en-US/docs/Tools/Network_Monitor)
+> **Note:** Many [developer tools' network panels](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
 > of browsers create extraneous requests leading to `304` responses, so that
 > access to the local cache is visible to developers.
 
@@ -40,7 +40,7 @@ headers {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}},
 
 {{Compat}}
 
-## Compatibility Notes
+### Compatibility notes
 
 - Browser behavior differs if this response erroneously includes a body on persistent
   connections See [204 No Content](/en-US/docs/Web/HTTP/Status/204) for more

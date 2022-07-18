@@ -58,7 +58,7 @@ attempts to update the other parameters and the date information in the
 ### Using setFullYear()
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setFullYear(1997);
 ```
 

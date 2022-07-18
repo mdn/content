@@ -12,7 +12,7 @@ tags:
   - Search
 ---
 
-[_Microformats_](https://microformats.org/)are standards used to embed semantics and structured data in HTML, and provide an API to be used by social web applications, search engines, aggregators, and other tools. These minimal patterns of HTML are used for marking up entities that range from fundamental to domain-specific information, such as people, organizations, events, and locations.
+[_Microformats_](https://microformats.org/) are standards used to embed semantics and structured data in HTML, and provide an API to be used by social web applications, search engines, aggregators, and other tools. These minimal patterns of HTML are used for marking up entities that range from fundamental to domain-specific information, such as people, organizations, events, and locations.
 
 - To create a microformats object, h-\* class names are used in the class attribute.
 - To add a property to an object, the p-\*, u-\*, dt-\*, e-\* class names are used on one of the object's descendants.
@@ -380,13 +380,13 @@ There are some microformats that are applied to a page by using a special `rel=`
 This attribute states that the linked document represents the author of the current page.
 
 ```<a rel="author" href="https://jamesg.blog">James Gallagher</a>```
-  
+
 ### rel=license
 
 This attribute states that the linked document contains the license under which the current page is published.
 
 ```<a rel="license" href="https://mit-license.org/">MIT License</a>```
-  
+
 ### rel=nofollow
 
 This attribute states that the linked document should not be given any weight by search engine ranking algorithms that may derive from the current page. This is useful to prevent link graph algorithms from weighing a page higher than it otherwise would after seeing a link to a document.
@@ -395,7 +395,7 @@ This attribute states that the linked document should not be given any weight by
 
 ## Browser compatibility
 
-Supported in all browsers’s support for the class attribute and its DOM API.
+Supported in all browsers's support for the class attribute and its DOM API.
 
 ## See also
 

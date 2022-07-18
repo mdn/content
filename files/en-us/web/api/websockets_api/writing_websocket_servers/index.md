@@ -1,6 +1,7 @@
 ---
 title: Writing WebSocket servers
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
+page-type: guide
 tags:
   - Guide
   - HTML5
@@ -51,7 +52,7 @@ The client can solicit extensions and/or subprotocols here; see [Miscellaneous](
 
 > **Note:** All **browsers** send an [`Origin` header](/en-US/docs/Web/HTTP/CORS#origin). You can use this header for security (checking for same origin, automatically allowing or denying, etc.) and send a [403 Forbidden](/en-US/docs/Web/HTTP/Status#403) if you don't like what you see. However, be warned that non-browser agents can send a faked `Origin`. Most applications reject requests without this header.
 
-If any header is not understood or has an incorrect value, the server should send a {{HTTPStatus("400")}} ("Bad Request")} response and immediately close the socket. As usual, it may also give the reason why the handshake failed in the HTTP response body, but the message may never be displayed (browsers do not display it). If the server doesn't understand that version of WebSockets, it should send a {{HTTPHeader("Sec-WebSocket-Version")}} header back that contains the version(s) it does understand. In the example above, it indicates version 13 of the WebSocket protocol.
+If any header is not understood or has an incorrect value, the server should send a {{HTTPStatus("400")}} ("Bad Request") response and immediately close the socket. As usual, it may also give the reason why the handshake failed in the HTTP response body, but the message may never be displayed (browsers do not display it). If the server doesn't understand that version of WebSockets, it should send a {{HTTPHeader("Sec-WebSocket-Version")}} header back that contains the version(s) it does understand. In the example above, it indicates version 13 of the WebSocket protocol.
 
 The most interesting header here is {{HTTPHeader("Sec-WebSocket-Key")}}. Let's look at that next.
 
@@ -135,6 +136,7 @@ If the MASK bit was set (and it should be, for client-to-server messages), read 
 var DECODED = "";
 for (var i = 0; i < ENCODED.length; i++) {
     DECODED[i] = ENCODED[i] ^ MASK[i % 4];
+}
 ```
 
 Now you can figure out what **DECODED** means depending on your application.
@@ -143,7 +145,7 @@ Now you can figure out what **DECODED** means depending on your application.
 
 The FIN and opcode fields work together to send a message split up into separate frames. This is called message fragmentation. Fragmentation is only available on opcodes `0x0` to `0x2`.
 
-Recall that the opcode tells what a frame is meant to do. If it's `0x1`, the payload is text. If it's `0x2`, the payload is binary data. However, if it's `0x0,` the frame is a continuation frame; this means the server should concatenate the frame's payload to the last frame it received from that client.Here is a rough sketch, in which a server reacts to a client sending text messages. The first message is sent in a single frame, while the second message is sent across three frames. FIN and opcode details are shown only for the client:
+Recall that the opcode tells what a frame is meant to do. If it's `0x1`, the payload is text. If it's `0x2`, the payload is binary data. However, if it's `0x0,` the frame is a continuation frame; this means the server should concatenate the frame's payload to the last frame it received from that client. Here is a rough sketch, in which a server reacts to a client sending text messages. The first message is sent in a single frame, while the second message is sent across three frames. FIN and opcode details are shown only for the client:
 
 ```
 Client: FIN=1, opcode=0x1, msg="hello"

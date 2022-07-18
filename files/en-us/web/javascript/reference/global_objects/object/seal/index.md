@@ -61,8 +61,8 @@ properties changed.
 ### Using Object.seal
 
 ```js
-var obj = {
-  prop: function() {},
+const obj = {
+  prop() {},
   foo: 'bar'
 };
 
@@ -72,7 +72,7 @@ obj.foo = 'baz';
 obj.lumpy = 'woof';
 delete obj.prop;
 
-var o = Object.seal(obj);
+const o = Object.seal(obj);
 
 o === obj; // true
 Object.isSealed(obj); // === true
@@ -84,7 +84,7 @@ obj.foo = 'quux';
 // But you can't convert data properties to accessors,
 // or vice versa.
 Object.defineProperty(obj, 'foo', {
-  get: function() { return 'g'; }
+  get() { return 'g'; }
 }); // throws a TypeError
 
 // Now any changes, other than to property values,

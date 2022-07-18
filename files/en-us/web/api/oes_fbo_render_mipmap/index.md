@@ -1,6 +1,7 @@
 ---
 title: OES_fbo_render_mipmap
 slug: Web/API/OES_fbo_render_mipmap
+page-type: webgl-extension
 tags:
   - API
   - Reference
@@ -15,7 +16,7 @@ The `OES_fbo_render_mipmap` extension is part of the [WebGL API](/en-US/docs/Web
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-> **Note:** This extension is only available to {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}}.  
+> **Note:** This extension is only available to {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}}.
 > In WebGL2, the functionality of this extension is available in the WebGL 2 context by default.
 
 ## Examples

@@ -1,6 +1,7 @@
 ---
 title: MediaKeyStatusMap.get()
 slug: Web/API/MediaKeyStatusMap/get
+page-type: web-api-instance-method
 tags:
   - API
   - EncryptedMediaExtensions
@@ -19,15 +20,15 @@ key, or `undefined` if there is none.
 ## Syntax
 
 ```js
-var value = mediaKeyStatusMap.get(key);
+get(key)
 ```
 
 ### Parameters
 
-- key
+- `key`
   - : The key whose value you want returned.
 
-### Returns
+### Return value
 
 The value associated with the given key, or `undefined`.
 

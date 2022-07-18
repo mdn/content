@@ -1,6 +1,7 @@
 ---
 title: Document.queryCommandSupported()
 slug: Web/API/Document/queryCommandSupported
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -19,7 +20,7 @@ whether or not the specified editor command is supported by the browser.
 ## Syntax
 
 ```js
-isSupported = document.queryCommandSupported(command);
+queryCommandSupported(command)
 ```
 
 ### Parameters
@@ -44,7 +45,7 @@ the action.
 var flg = document.queryCommandSupported("SelectAll");
 
 if(flg) {
-  // ...Do something
+  // Do something…
 }
 ```
 

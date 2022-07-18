@@ -1,6 +1,7 @@
 ---
 title: DocumentType
 slug: Web/API/DocumentType
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -19,25 +20,25 @@ The **`DocumentType`** interface represents a {{domxref("Node")}} containing a d
 _Inherits properties from its parent, {{domxref("Node")}}._
 
 - {{domxref("DocumentType.internalSubset")}} {{readonlyInline}} {{deprecated_inline}}
-  - : A {{domxref("DOMString")}} of the internal subset, or `null` if there is none. Eg `"<!ELEMENT foo (bar)>"`.
+  - : A string of the internal subset, or `null` if there is none. Eg `"<!ELEMENT foo (bar)>"`.
 - {{domxref("DocumentType.name")}} {{readonlyInline}}
-  - : A {{domxref("DOMString")}}, eg `"html"` for `<!DOCTYPE HTML>`.
+  - : A string, eg `"html"` for `<!DOCTYPE HTML>`.
 - {{domxref("DocumentType.notations")}} {{readonlyInline}} {{deprecated_inline}}
   - : A {{domxref("NamedNodeMap")}} with notations declared in the DTD.
 - {{domxref("DocumentType.publicId")}} {{readonlyInline}}
-  - : A {{domxref("DOMString")}}, eg `"-//W3C//DTD HTML 4.01//EN"`, empty string for HTML5.
+  - : A string, eg `"-//W3C//DTD HTML 4.01//EN"`, empty string for HTML5.
 - {{domxref("DocumentType.systemId")}} {{readonlyInline}}
-  - : A {{domxref("DOMString")}}, eg `"http://www.w3.org/TR/html4/strict.dtd"`, empty string for HTML5.
+  - : A string, eg `"http://www.w3.org/TR/html4/strict.dtd"`, empty string for HTML5.
 
 ## Methods
 
 _Inherits methods from its parent, {{domxref("Node")}}._
 
 - {{domxref("DocumentType.after()")}}
-  - : Inserts a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
+  - : Inserts a set of {{domxref("Node")}} or string objects in the children list of the
     `DocumentType`'s parent, just after the `DocumentType` object.
 - {{domxref("DocumentType.before()")}}
-  - : Inserts a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
+  - : Inserts a set of {{domxref("Node")}} or string objects in the children list of the
     `DocumentType`'s parent, just before the `DocumentType` object.
 - {{domxref("DocumentType.remove()")}}
   - : Removes the object from its parent children list.

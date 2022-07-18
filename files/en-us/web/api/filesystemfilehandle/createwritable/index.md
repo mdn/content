@@ -1,6 +1,7 @@
 ---
 title: FileSystemFileHandle.createWritable()
 slug: Web/API/FileSystemFileHandle/createWritable
+page-type: web-api-instance-method
 tags:
   - Directory
   - File
@@ -15,10 +16,10 @@ browser-compat: api.FileSystemFileHandle.createWritable
 
 The **`createWritable()`** method of the
 {{domxref("FileSystemFileHandle")}} interface creates
-a {{domxref('FileSystemWritableFileStream')}} that can be used to write to a file.
+a {{domxref('FileSystemWritableFileStream')}} that can be used to write to a file.
 The method returns a {{jsxref('Promise')}} which resolves to this created stream.
 
-Any changes made through the stream won’t be reflected in the file represented by the
+Any changes made through the stream won't be reflected in the file represented by the
 file handle until the stream has been closed. This is typically implemented by writing
 data to a temporary file, and only replacing the file represented by file handle with
 the temporary file when the writable filestream is closed.
@@ -78,5 +79,4 @@ async function writeFile(fileHandle, contents) {
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

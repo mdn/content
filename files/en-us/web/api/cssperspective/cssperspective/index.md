@@ -1,6 +1,7 @@
 ---
 title: CSSPerspective()
 slug: Web/API/CSSPerspective/CSSPerspective
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,16 +13,16 @@ tags:
   - Houdini
 browser-compat: api.CSSPerspective.CSSPerspective
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSPerspective()`** constructor creates
-a new {{domxref("CSSPerspective")}} object representing the [perspective()](</en-US/docs/Web/CSS/transform-function/perspective()>) value of
+a new {{domxref("CSSPerspective")}} object representing the [perspective()](/en-US/docs/Web/CSS/transform-function/perspective) value of
 the individual {{CSSXref('transform')}} property in CSS.
 
 ## Syntax
 
 ```js
-var CSSPerspective = new CSSPerspective(length);
+new CSSPerspective(length)
 ```
 
 ### Parameters

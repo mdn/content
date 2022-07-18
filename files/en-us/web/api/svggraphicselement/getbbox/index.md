@@ -1,6 +1,7 @@
 ---
 title: SVGGraphicsElement.getBBox()
 slug: Web/API/SVGGraphicsElement/getBBox
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -28,12 +29,13 @@ geometry attributes on all the elements contained in the target element).
 ## Syntax
 
 ```js
-let bboxRect = object.getBBox();
+getBBox()
+getBBox(options)
 ```
 
 ### Parameters
 
-- `Options` {{experimental_inline}} {{optional_inline}}
+- `options` {{experimental_inline}} {{optional_inline}}
 
   - : An options dictionary used to control which parts of the element are included in the
     bounding box. The available options are:
@@ -57,7 +59,7 @@ The returned value is a {{domxref("SVGRect")}} object, which defines the boundin
 This value is irrespective of any transformation attribute applied to it or the parent
 elements.
 
-## Example
+## Examples
 
 ### HTML
 
@@ -104,5 +106,4 @@ rectBoundingClientRect.setAttribute('height', boundingClientRectGroup.height);
 
 ## See also
 
-- [getBBox
-  in SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html#getBBox)
+- [getBBox in SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html#getBBox)

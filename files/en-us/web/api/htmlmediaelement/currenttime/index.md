@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.currentTime
 slug: Web/API/HTMLMediaElement/currentTime
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -23,17 +24,10 @@ The {{domxref("HTMLMediaElement")}} interface's
 **`currentTime`** property specifies the current playback time
 in seconds.
 
-Changing the value of `currentTime` seeks the media to
+Changing the value of `currentTime` seeks the media to
 the new time.
 
-## Syntax
-
-```js
-var currentTime = htmlMediaElement.currentTime;
-htmlMediaElement.currentTime = 35;
-```
-
-### Value
+## Value
 
 A double-precision floating-point value indicating the current playback time in
 seconds.
@@ -53,10 +47,10 @@ a time before its timeline's earliest time.
 The length of the media in seconds can be determined using the
 {{domxref("HTMLMediaElement.duration", "duration")}} property.
 
-## Example
+## Examples
 
 ```js
-var video = document.createElement('video');
+const video = document.createElement('video');
 console.log(video.currentTime);
 ```
 

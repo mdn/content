@@ -1,6 +1,7 @@
 ---
 title: Document.origin
 slug: Web/API/Document/origin
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -20,11 +21,9 @@ The **`Document.origin`** read-only property returns the
 document's origin. In most cases, this property is equivalent to
 `document.defaultView.location.origin`.
 
-## Syntax
+## Value
 
-```js
-var origin = document.origin;
-```
+A string containing the document's origin.
 
 ## Examples
 
@@ -36,7 +35,7 @@ var origin = document.origin;
 // On "about:blank", returns:'null'
 
 var origin = document.origin;
-// On "data:text/html,<b>foo</b>", returns:'null'
+// On "data:text/html,<p>foo</p>", returns:'null'
 ```
 
 ## Browser compatibility

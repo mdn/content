@@ -1,6 +1,7 @@
 ---
 title: CompositionEvent.initCompositionEvent()
 slug: Web/API/CompositionEvent/initCompositionEvent
+page-type: web-api-instance-method
 tags:
   - API
   - CompositionEvent
@@ -10,7 +11,7 @@ tags:
   - initCompositionEvent
 browser-compat: api.CompositionEvent.initCompositionEvent
 ---
-{{deprecated_header}}{{APIRef("DOM Events")}}
+{{deprecated_header}}{{APIRef("UI Events")}}
 
 The **`initCompositionEvent()`**
 method of the {{domxref("CompositionEvent")}} interface initializes the attributes of a
@@ -22,31 +23,31 @@ method of the {{domxref("CompositionEvent")}} interface initializes the attribut
 ## Syntax
 
 ```js
- compositionEventInstance.initCompositionEvent(typeArg, canBubbleArg, cancelableArg, viewArg, dataArg, localeArg)
+initCompositionEvent(type, canBubble, cancelable, view, data, locale)
 ```
 
 ### Parameters
 
-- `typeArg`
-  - : A {{domxref("DOMString")}} representing the type of composition event; this will be
+- `type`
+  - : A string representing the type of composition event; this will be
     one of `compositionstart`, `compositionupdate`, or
     `compositionend`.
-- `canBubbleArg`
+- `canBubble`
   - : A boolean value specifying whether or not the event can bubble.
-- `cancelableArg`
+- `cancelable`
   - : A boolean value indicating whether or not the event can be canceled.
-- `viewArg`
+- `view`
   - : The {{domxref("Window")}} object from which the event was generated.
-- `dataArg`
-  - : A {{domxref("DOMString")}} representing the value of the `data`
+- `data`
+  - : A string representing the value of the `data`
     attribute.
-- `localeArg`
-  - : A {{domxref("DOMString")}} representing the value of the `locale`
+- `locale`
+  - : A string representing the value of the `locale`
     attribute.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

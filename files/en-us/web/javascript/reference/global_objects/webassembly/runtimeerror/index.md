@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.WebAssembly.RuntimeError
 ---
 {{JSRef}}
 
-The **`WebAssembly.RuntimeError`** object is the error type that is thrown whenever WebAssembly specifies a [trap](https://webassembly.org/docs/semantics/#traps).
+The **`WebAssembly.RuntimeError`** object is the error type that is thrown whenever WebAssembly specifies a [trap](https://webassembly.github.io/spec/core/intro/overview.html#trap).
 
 ## Constructor
 
@@ -25,21 +25,21 @@ The **`WebAssembly.RuntimeError`** object is the error type that is thrown whene
   - : Error message. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.name", "WebAssembly.RuntimeError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "WebAssembly.RuntimeError.prototype.fileName")}}
+- {{jsxref("Error.prototype.cause", "WebAssembly.RuntimeError.prototype.cause")}}
+  - : Error cause. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.fileName", "WebAssembly.RuntimeError.prototype.fileName")}} {{non-standard_inline}}
   - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "WebAssembly.RuntimeError.prototype.lineNumber")}}
+- {{jsxref("Error.prototype.lineNumber", "WebAssembly.RuntimeError.prototype.lineNumber")}} {{non-standard_inline}}
   - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "WebAssembly.RuntimeError.prototype.columnNumber")}}
+- {{jsxref("Error.prototype.columnNumber", "WebAssembly.RuntimeError.prototype.columnNumber")}} {{non-standard_inline}}
   - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "WebAssembly.RuntimeError.prototype.stack")}}
+- {{jsxref("Error.prototype.stack", "WebAssembly.RuntimeError.prototype.stack")}} {{non-standard_inline}}
   - : Stack trace. Inherited from {{jsxref("Error")}}.
 
 ## Instance methods
 
-- {{jsxref("Error.prototype.toSource", "WebAssembly.RuntimeError.prototype.toSource()")}}
-  - : Returns code that could eval to the same error. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.toString", "WebAssembly.RuntimeError.prototype.toString()")}}
-  - : Returns a string representing the specified `Error` object.. Inherited from {{jsxref("Error")}}.
+  - : Returns a string representing the specified `Error` object. Inherited from {{jsxref("Error")}}.
 
 ## Examples
 

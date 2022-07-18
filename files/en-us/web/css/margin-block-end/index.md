@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - NeedsContent
   - Reference
   - margin-block
@@ -34,6 +33,7 @@ margin-block-end: auto;
 margin-block-end: inherit;
 margin-block-end: initial;
 margin-block-end: revert;
+margin-block-end: revert-layer;
 margin-block-end: unset;
 ```
 

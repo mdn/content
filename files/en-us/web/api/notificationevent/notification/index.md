@@ -1,6 +1,7 @@
 ---
 title: NotificationEvent.notification
 slug: Web/API/NotificationEvent/notification
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -16,11 +17,11 @@ browser-compat: api.NotificationEvent.notification
 
 The `notification` read-only property of the {{domxref("NotificationEvent")}} interface returns the instance of the {{domxref("Notification")}} that was clicked to fire the event. The {{domxref("Notification")}} provides read-only access to many properties that were set at the instantiation time of the Notification such as `tag` and `data` attributes that allow you to store information for deferred use in the `notificationclick` event.
 
-## Returns
+## Value
 
 A {{domxref("Notification")}} object.
 
-## Example
+## Examples
 
 ```js
 self.addEventListener('notificationclick', function(event) {
@@ -37,8 +38,8 @@ self.addEventListener('notificationclick', function(event) {
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i < clientList.length; i++) {
-      var client = clientList[i];
+    for (let i = 0; i < clientList.length; i++) {
+      const client = clientList[i];
       if (client.url == '/' && 'focus' in client)
         return client.focus();
     }

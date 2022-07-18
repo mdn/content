@@ -20,11 +20,11 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 ### CSS
 
 - {{cssxref("clip-path")}} now supports [basic shapes](/en-US/docs/Web/CSS/CSS_Shapes) ({{bug(1247229)}}).
-- Firefox's implementations of CSS Flexbox and CSS alignment now implement updated spec language for interactions between the properties {{cssxref("align-items")}} and {{cssxref("align-self")}}  as well as between {{cssxref("justify-items")}} and {{cssxref("justify-self")}} ({{bug(1340309)}}).
+- Firefox's implementations of CSS Flexbox and CSS alignment now implement updated spec language for interactions between the properties {{cssxref("align-items")}} and {{cssxref("align-self")}}  as well as between {{cssxref("justify-items")}} and {{cssxref("justify-self")}} ({{bug(1340309)}}).
 - {{htmlelement("input")}} elements of types `checkbox` and `radio` with {{cssxref("appearance", "-moz-appearance")}}`: none;` set on them are now non-replaced elements, for compatibility with other browsers ({{bug(605985)}}).
 - Previously, an element styled with {{cssxref("display")}}: `inline-block` with a child element of type {{domxref("HTMLInputElement")}} styled with `display:block` had a wrong baseline ({{bug(1330962)}}). This is now fixed.
-- When Mozilla introduced dedicated content threads to Firefox (through the Electrolysis or e10s project), support for styling {{HTMLElement("option")}} elements was removed temporarily. Starting in Firefox 54, you can apply foreground and background colors to `<option>` elements again, using the {{cssxref("color")}} and {{cssxref("background-color")}} attributes. See {{bug(910022)}} for more information. Note that this is still disabled in Linux due to lack of contrast (see {{bug(1338283)}} for progress on this).
-- [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) now send the {{event("animationcancel")}} event as expected when an animation aborts prematurely ({{bug(1302648)}}).
+- When Mozilla introduced dedicated content threads to Firefox (through the Electrolysis or e10s project), support for styling {{HTMLElement("option")}} elements was removed temporarily. Starting in Firefox 54, you can apply foreground and background colors to `<option>` elements again, using the {{cssxref("color")}} and {{cssxref("background-color")}} attributes. See {{bug(910022)}} for more information. Note that this is still disabled in Linux due to lack of contrast (see {{bug(1338283)}} for progress on this).
+- [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) now send the {{domxref("HTMLElement/animationcancel_event", "animationcancel")}} event as expected when an animation aborts prematurely ({{bug(1302648)}}).
 - Transparent colors (i.e. those with an alpha channel of 0) were being serialized to the [`transparent` color keyword](/en-US/docs/Web/CSS/color_value#transparent_keyword) in certain situations; this has been fixed so that Firefox follows the spec (as well as other browsers' implementations). See ({{bug("1339394")}} for further information.
 - The proprietary `:-moz-table-border-nonzero` pseudo-class is no longer available to web content; it is now restricted to Firefox's internal UA stylesheet ({{bug(1341925)}}).
 - \[css-grid] Intrinsic content with overflow:auto overlaps in grid ({{bug(1348857)}}).
@@ -35,12 +35,12 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 - `\b` and `\B` in {{jsxref("RegExp")}} with the `"u"` (Unicode) and `"i"` (case insensitive) flags now treat U+017F (LATIN SMALL LETTER LONG S) and U+212A (KELVIN SIGN) as word characters ({{bug(1338373)}}).
 - The {{jsxref("DataView")}} constructor now throws a {{jsxref("RangeError")}} if the `byteOffset` parameter is out of {{jsxref("Number.MAX_SAFE_INTEGER")}} (>= 2 \*\* 53) ({{bug(1317382)}}).
 - The {{jsxref("Date.UTC()")}} method has been updated to conform to ECMAScript 2017 when fewer than two arguments are provided ({{bug(1050755)}}).
-- The {{jsxref("Function.prototype.toString()")}} method has been updated to match the latest [proposed specification](https://tc39.github.io/Function-prototype-toString-revision/) ({{bug(1317400)}}).
+- The {{jsxref("Function.prototype.toString()")}} method has been updated to match the latest [proposed specification](https://tc39.es/Function-prototype-toString-revision/) ({{bug(1317400)}}).
 
 ### DOM & HTML DOM
 
 - The {{domxref("URL.toJSON()")}} method has been implemented ({{bug(1337702)}}).
-- The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor now accepts a record containing {{domxref("USVString")}}s as an init object ({{bug("1331580")}}).
+- The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor now accepts a record containing strings as an init object ({{bug("1331580")}}).
 - Values returned in {{domxref("KeyboardEvent.key")}} for printable keys when the control key is also pressed have been corrected on macOS (except when the Command key is pressed) ({{bug(1342865)}}).
 - The `dom.workers.latestJSVersion` preference, which was mainly implemented to work around problems using [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) in workers (due to {{bug(855665)}}, which has since been fixed) has been removed (see {{bug(1219523)}}).
 - The {{domxref("event.timeStamp")}} property now returns a high-resolution monotonic time ({{domxref("DOMHighResTimeStamp")}}) instead of an epoch time ({{domxref("DOMTimeStamp")}}).
@@ -74,7 +74,7 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 #### Encrypted MediaExtensions API
 
 - The `MediaKeySession.keySystem` string has been removed from the specification, and as such we've taken it out of Firefox 54 ({{bug(1335555)}}).
-- Support has been added for the VP9 codec in encrypted streams using [Clear Key](https://www.w3.org/TR/encrypted-media/#clear-key) and [Widevine](http://www.widevine.com/) ({{bug(1338064)}}).
+- Support has been added for the VP9 codec in encrypted streams using [Clear Key](https://www.w3.org/TR/encrypted-media/#clear-key) and [Widevine](https://www.widevine.com/) ({{bug(1338064)}}).
 - Previously, MSE was only allowed to use WebM/VP8 video if the system was considered "fast enough." Now playback of VP8-encoded `webm/video` media is always supported, regardless of system performance.
 
 #### WebRTC

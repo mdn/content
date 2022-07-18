@@ -1,6 +1,7 @@
 ---
 title: ServiceWorkerRegistration.active
 slug: Web/API/ServiceWorkerRegistration/active
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,7 +16,7 @@ browser-compat: api.ServiceWorkerRegistration.active
 The **`active`** property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a service worker whose
 {{domxref("ServiceWorker.state")}} is `activating` or `activated`.
-This property is initially set to `null`.
+This property is initially set to `null`.
 
 An active worker controls a {{domxref("Client")}} if the client's URL
 falls within the scope of the registration (the `scope` option set when
@@ -27,13 +28,7 @@ falls within the scope of the registration (the `scope` option set when
 > runtime script error nor a force termination of the active worker prevents the active
 > worker from getting `activated`.
 
-## Syntax
-
-```js
-var serviceWorker = serviceWorkerRegistration.active;
-```
-
-### Value
+## Value
 
 A {{domxref("ServiceWorker")}} object's property, if it is currently in an
 `activating` or `activated` state.
@@ -48,11 +43,8 @@ A {{domxref("ServiceWorker")}} object's property, if it is currently in an
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker
-  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web
-  workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

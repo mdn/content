@@ -1,38 +1,39 @@
 ---
 title: BluetoothRemoteGATTDescriptor.writeValue()
 slug: Web/API/BluetoothRemoteGATTDescriptor/writeValue
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth
   - BluetoothGattDescriptor
   - BluetoothRemoteGATTDescriptor
   - Experimental
-  - Property
+  - Method
   - Reference
   - Web Bluetooth API
   - writeValue()
 browser-compat: api.BluetoothRemoteGATTDescriptor.writeValue
 ---
-{{APIRef("Web Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTDescriptor.writeValue()`**
 method sets the value property to the bytes contained in
-an {{jsxref("ArrayBuffer")}} and returns a {{jsxref("Promise")}}.
+an {{jsxref("ArrayBuffer")}} and returns a {{jsxref("Promise")}}.
 
 ## Syntax
 
 ```js
-BluetoothRemoteGATTDescriptor.writeValue(array[]).then(function() { /* ... */ })
+writeValue(array)
 ```
 
 ### Parameters
 
-- array
+- `array`
   - : Sets the value with the bytes contained in the array.
 
-### Returns
+### Return value
 
-A {{jsxref("Promise")}}.
+A {{jsxref("Promise")}}.
 
 ## Specifications
 

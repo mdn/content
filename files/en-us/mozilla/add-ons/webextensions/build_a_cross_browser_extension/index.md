@@ -35,7 +35,7 @@ There are two API namespaces in use among the main browsers:
 
 Firefox also supports the `chrome.*` namespace for APIs that are compatible with Chrome, primarily to assist with [porting](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). However, using the `browser.*` namespace is preferred. In addition to being the proposed standard, `browser.*` uses promises—a modern and convenient mechanism for handling asynchronous events.
 
-Only in the most trivial extensions is namespace likely to be the only cross-platform issue that has to be addressed. Therefore, it’s rarely, if ever, helpful to address this issue alone. The best approach is to address this with asynchronous event handling.
+Only in the most trivial extensions is namespace likely to be the only cross-platform issue that has to be addressed. Therefore, it's rarely, if ever, helpful to address this issue alone. The best approach is to address this with asynchronous event handling.
 
 ### API asynchronous event handling
 
@@ -46,7 +46,7 @@ There are two approaches to handling asynchronous events in use among the main b
 
 Firefox also supports callbacks for the APIs that support the `chrome.*` namespace. However, using promises (and the `browser.*` namespace) is recommended. Promises have been adopted as part of the proposed standard. It greatly simplifies asynchronous event handling, particularly where you need to chain events together.
 
-> **Note:** If you’re unfamiliar with the differences between these two methods, take a look at [Getting to know asynchronous JavaScript: Callbacks, Promises and Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) or the MDN [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) page.
+> **Note:** If you're unfamiliar with the differences between these two methods, take a look at [Getting to know asynchronous JavaScript: Callbacks, Promises and Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) or the MDN [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) page.
 
 #### The WebExtension browser API Polyfill
 
@@ -60,13 +60,13 @@ Then, reference `browser-polyfill.js` in:
 
 - `manifest.json`, to make it available to background and content scripts.
 - HTML documents, such as `browserAction` popups or tab pages.
-- The `executeScript` call in dynamically-injected content scripts loaded by `tabs.executeScript`, where it hasn’t been loaded using a `content_scripts` declaration in `manifest.json`.
+- The `executeScript` call in dynamically-injected content scripts loaded by `tabs.executeScript`, where it hasn't been loaded using a `content_scripts` declaration in `manifest.json`.
 
 So, for example, this `manifest.json` code makes the polyfill available to background scripts:
 
 ```json
 {
- // ...
+ // …
  "background": {
    "scripts": [
      "browser-polyfill.js",
@@ -78,18 +78,18 @@ So, for example, this `manifest.json` code makes the polyfill available to backg
 
 Your goal is to ensure that the polyfill executes in your extension before any other scripts that expect the `browser.*` API namespace execute.
 
-> **Note:** For more details and information on using the polyfill with a module bundler, see the [project’s readme on GitHub.](https://github.com/mozilla/webextension-polyfill/blob/master/README.md)
+> **Note:** For more details and information on using the polyfill with a module bundler, see the [project's readme on GitHub.](https://github.com/mozilla/webextension-polyfill/blob/master/README.md)
 
-There are other polyfill options. However, at the time of writing, none of the other options provide the coverage of the WebExtension browser API Polyfill. So, where you haven’t targeted Firefox as your first choice, your options are to accept the limitations of alternative polyfills, port to Firefox and add cross-browser support, or develop your own polyfill.
+There are other polyfill options. However, at the time of writing, none of the other options provide the coverage of the WebExtension browser API Polyfill. So, where you haven't targeted Firefox as your first choice, your options are to accept the limitations of alternative polyfills, port to Firefox and add cross-browser support, or develop your own polyfill.
 
 ### API function coverage
 
 The differences in the API functions offered in each of the main browsers fall into three broad categories:
 
 1. **Lack of support for an entire function.**
-    For example, at the time of writing, Edge didn’t support the {{WebExtAPIRef("browserSettings")}} function.
+    For example, at the time of writing, Edge didn't support the {{WebExtAPIRef("browserSettings")}} function.
 2. **Variations in the support for features within a function.**
-    For example, at the time of writing, Firefox doesn’t support the notification function method {{WebExtAPIRef("notifications.onButtonClicked")}}, while Firefox is the only browser that supports {{WebExtAPIRef("notifications.onShown")}}.
+    For example, at the time of writing, Firefox doesn't support the notification function method {{WebExtAPIRef("notifications.onButtonClicked")}}, while Firefox is the only browser that supports {{WebExtAPIRef("notifications.onShown")}}.
 3. **Proprietary functions, supporting browser-specific features.**
     For example, at the time of writing, containers was a Firefox-specific feature supported by the {{WebExtAPIRef("contextualIdentities")}} function.
 
@@ -101,7 +101,7 @@ A simple approach to addressing API differences is to limit the functions used i
 
 Instead, where there are differences among the APIs, you should either offer alternative implementations or fallback functionality. (Remember: you may also need to do this to allow for differences in API support between versions of the _same_ browser.)
 
-The use of runtime checks on the availability of a function’s features is the recommended approach to implementing alternative or fallback functionality. The benefit of performing a runtime check is that you don’t need to update and redistribute the extension to take advantage of a function when it becomes available.
+The use of runtime checks on the availability of a function's features is the recommended approach to implementing alternative or fallback functionality. The benefit of performing a runtime check is that you don't need to update and redistribute the extension to take advantage of a function when it becomes available.
 
 The following code enables you to perform a runtime check:
 
@@ -130,7 +130,7 @@ As `manifest.json` files tend to change little—except for release numbers, whi
 
 Packaging an extension for distribution through the browser extension stores is relatively straightforward. Firefox, Chrome, Edge, and Opera all use a simple zip format that requires the `manifest.json` file to be at the root of the zip package. Safari requires extensions to be packaged in a similar way to apps.
 
-For details on packaging, refer to the guidance on the respective extension’s developer portals.
+For details on packaging, refer to the guidance on the respective extension's developer portals.
 
 ### Extension publishing
 
@@ -215,6 +215,6 @@ When approaching a cross-platform extension development, the differences between
 
 The bulk of your cross-platform work is likely to focus on handling variations among the API features supported by the main browsers. Creating your `manifest.json` files should be relatively straightforward and something you can do manually. You will then need to account for the variations in the processes for submitting to each extension store.
 
-You can use [browser-extension-template](https://github.com/notlmn/browser-extension-template) to quickly set up a working project for building and publishing a browser extension.
+You can use [browser-extension-template](https://github.com/fregante/browser-extension-template) to quickly set up a working project for building and publishing a browser extension.
 
 Following the advice in this article, you should be able to create an extension that works well on all of the four main browsers, enabling you to deliver your extension features to more people.

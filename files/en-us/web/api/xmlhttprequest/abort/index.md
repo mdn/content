@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.abort()
 slug: Web/API/XMLHttpRequest/abort
+page-type: web-api-instance-method
 tags:
   - AJAX
   - API
@@ -29,7 +30,7 @@ it has already been sent. When a request is aborted, its
 ## Syntax
 
 ```js
-XMLHttpRequest.abort()
+abort()
 ```
 
 ### Parameters
@@ -38,9 +39,9 @@ None.
 
 ### Return value
 
-`undefined`
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 This example begins loading content from the MDN home page, then due to some condition,
 aborts the transfer by calling `abort()`.
@@ -68,5 +69,4 @@ if (OH_NOES_WE_NEED_TO_CANCEL_RIGHT_NOW_OR_ELSE) {
 
 ## See also
 
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)

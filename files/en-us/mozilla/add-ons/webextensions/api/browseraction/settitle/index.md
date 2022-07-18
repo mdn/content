@@ -42,9 +42,9 @@ browser.browserAction.setTitle(
         - if `windowId` is specified, and the window has a window-specific title set, then the window will inherit the global title.
         - Otherwise, the global title will be reset to the manifest title.
 
-    - `tabId`{{Optional_Inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Sets the title only for the given tab.
-    - `windowId`{{Optional_Inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. Sets the title for the given window.
 
 <!---->
@@ -70,14 +70,14 @@ function toggleTitle(title) {
 }
 
 browser.browserAction.onClicked.addListener(() => {
-  var gettingTitle = browser.browserAction.getTitle({});
+  let gettingTitle = browser.browserAction.getTitle({});
   gettingTitle.then(toggleTitle);
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#method-setTitle) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/reference/browserAction/#method-setTitle) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

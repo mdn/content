@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.imageSmoothingQuality
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingQuality
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -21,15 +22,9 @@ image smoothing.
 > {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}
 > must be `true`.
 
-## Syntax
+## Value
 
-```js
-ctx.imageSmoothingQuality = "low" || "medium" || "high"
-```
-
-### Options
-
-Possible values:
+One of the followings:
 
 - `"low"`
   - : Low quality.
@@ -38,7 +33,7 @@ Possible values:
 - `"high"`
   - : High quality.
 
-## Example
+## Examples
 
 ### Setting image smoothing quality
 

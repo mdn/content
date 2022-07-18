@@ -5,15 +5,15 @@ tags:
   - WebDriver
   - timeouts
 ---
-Associated with a [WebDriver](/en-US/docs/Web/WebDriver) session are various timeout definitions that control behavior for [script injection](/en-US/docs/Web/WebDriver/Timeouts#script), [document navigation](/en-US/docs/Web/WebDriver/Timeouts#pageload), and [element retrieval](/en-US/docs/Web/WebDriver/Timeouts#implicit).
+Associated with a [WebDriver](/en-US/docs/Web/WebDriver) session are various timeout definitions that control behavior for [script injection](#script), [document navigation](#pageload), and [element retrieval](#implicit).
 
 You will find the _[timeouts object](#payload)_ used in a few different contexts. It can be used as configuration when [creating a new session](/en-US/docs/Web/WebDriver/Commands/NewSession) through [capabilities](/en-US/docs/Web/WebDriver/Capabilities), it is returned as part of the matched, effective capabilities after the session has been created, and it is used as input and output for the [Set Timeouts](/en-US/docs/Web/WebDriver/Commands/SetTimeouts) and [Get Timeouts](/en-US/docs/Web/WebDriver/Commands/GetTimeouts) commands.
 
-The default values can be overridden when [creating the session](/en-US/docs/Web/WebDriver/Commands/NewSession) and they will be effective until the session is closed. If you call [Set Timeouts](/en-US/docs/Web/WebDriver/Commands/SetTimeouts) during the session’s lifetime, the defaults are overridden and will take effect for the lifetime of the session or until [Set Timeouts](/en-US/docs/Web/WebDriver/Commands/SetTimeouts) is called again.
+The default values can be overridden when [creating the session](/en-US/docs/Web/WebDriver/Commands/NewSession) and they will be effective until the session is closed. If you call [Set Timeouts](/en-US/docs/Web/WebDriver/Commands/SetTimeouts) during the session's lifetime, the defaults are overridden and will take effect for the lifetime of the session or until [Set Timeouts](/en-US/docs/Web/WebDriver/Commands/SetTimeouts) is called again.
 
 ## Payload
 
-The **timeouts object** is a JSON Object that either describes the current session’s timeout values, or which is used as input when configuring the timeouts:
+The **timeouts object** is a JSON Object that either describes the current session's timeout values, or which is used as input when configuring the timeouts:
 
 - `implicit`
   - : Time in milliseconds to retry the [element location strategy](/en-US/docs/Web/WebDriver/WebElement) when finding an element. This defaults to 0, meaning the strategy is run only once.
@@ -61,7 +61,7 @@ delayed_element = session.find_element_by_tag_name("p")
 
 ### Setting and getting timeouts at runtime
 
-Timeouts can also be set at runtime using the Set Timeouts command. These will override the session’s current timeouts and will take effect for the entire lifetime of the session or until a subsequent call is made to the same command:
+Timeouts can also be set at runtime using the Set Timeouts command. These will override the session's current timeouts and will take effect for the entire lifetime of the session or until a subsequent call is made to the same command:
 
 ```python
 from selenium import webdriver

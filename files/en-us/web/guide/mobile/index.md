@@ -15,12 +15,12 @@ Mobile devices have quite different hardware characteristics compared with deskt
 
 ### Working with small screens
 
-[Responsive Web Design](/en-US/docs/Web/Progressive_web_apps) is a term for a set of techniques that enables your web site to adapt its layout as its viewing environment — most obviously, the size and orientation of the screen — changes. It includes techniques such as:
+[Responsive Web Design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) is a term for a set of techniques that enables your web site to adapt its layout as its viewing environment — most obviously, the size and orientation of the screen — changes. It includes techniques such as:
 
 - fluid CSS layouts, to make the page adapt smoothly as the browser window size changes
 - the use of [media queries](/en-US/docs/Web/CSS/Media_Queries) to conditionally include CSS rules appropriate for the device screen [width](/en-US/docs/Web/CSS/@media/width) and [height](/en-US/docs/Web/CSS/@media/height)
 
-The [viewport meta tag](/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) instructs the browser to display your site at the appropriate scale for the user's device.
+The [viewport meta tag](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design#the_viewport_meta_tag) instructs the browser to display your site at the appropriate scale for the user's device.
 
 ### Working with touch screens
 
@@ -36,7 +36,7 @@ You can also make use of CSS properties to implement visual effects like [gradie
 
 ### Mobile APIs
 
-Finally, you can take advantage of the new possibilities offered by mobile devices, such as [orientation](/en-US/docs/Web/API/Detecting_device_orientation) and [geolocation](/en-US/docs/Web/API/Geolocation_API).
+Finally, you can take advantage of the new possibilities offered by mobile devices, such as [orientation](/en-US/docs/Web/Events/Detecting_device_orientation) and [geolocation](/en-US/docs/Web/API/Geolocation_API).
 
 ## Cross-browser development
 
@@ -48,11 +48,11 @@ To create web sites that will work acceptably across different mobile browsers:
 - If you do need to use these features, check whether other browsers implement their own versions of these features, and target them too.
 - For browsers that don't support these features, provide an acceptable fallback.
 
-For example, if you set a gradient as a background for some text using a vendor-prefixed property like `-webkit-linear-gradient`, it's best to include the other vendor-prefixed versions of the {{cssxref("linear-gradient()")}} property. If you don't do that, at least make sure that the default background contrasts with the text: that way, the page will at least be usable in a browser which is not targeted by your `linear-gradient` rule.
+For example, if you set a gradient as a background for some text using a vendor-prefixed property like `-webkit-linear-gradient`, it's best to include the other vendor-prefixed versions of the {{cssxref("linear-gradient", "linear-gradient()")}} property. If you don't do that, at least make sure that the default background contrasts with the text: that way, the page will at least be usable in a browser which is not targeted by your `linear-gradient` rule.
 
-See this [list of Gecko-specific properties](/en-US/docs/Web/CSS/Mozilla_Extensions), and this [list of WebKit-specific properties](/en-US/docs/Web/CSS/WebKit_Extensions), and Peter Beverloo's [table of vendor-specific properties](http://peter.sh/experiments/vendor-prefixed-css-property-overview/).
+See this [list of Gecko-specific properties](/en-US/docs/Web/CSS/Mozilla_Extensions), and this [list of WebKit-specific properties](/en-US/docs/Web/CSS/WebKit_Extensions), and Peter Beverloo's [table of vendor-specific properties](https://peter.sh/experiments/vendor-prefixed-css-property-overview/).
 
-Using tools like [CSS Lint](http://csslint.net/) can help find problems like this in code, and preprocessors like [SASS](http://sass-lang.com/) and [LESS](http://lesscss.org/) can help you to produce cross-browser code.
+Using tools like [CSS Lint](http://csslint.net/) can help find problems like this in code, and preprocessors like [SASS](https://sass-lang.com/) and [LESS](https://lesscss.org/) can help you to produce cross-browser code.
 
 ### Take care with user agent sniffing
 

@@ -17,32 +17,34 @@ The syntax section of an MDN reference page contains a syntax box defining the e
 ## API reference syntax
 
 Syntax sections for API reference pages are written manually, and may differ slightly based on the feature being documented.
-The section starts with a heading (typically {{HTMLElement("H2")}}) named "Syntax", and must be included at the top of the reference page (just below the introductory material).
-Below the heading is a code block showing the feature's exact syntax, styled using the `brush: [markup-language]` class.
+The section starts with a heading (typically level two heading `##`) named "Syntax", and must be included at the top of the reference page (just below the introductory material).
+Below the heading is a code block showing the feature's exact syntax, demarcated using code fence `` ``` [markup-language] `` class.
 
-The example below shows the source code for a typical Syntax section (for a JavaScript function):
+The example below shows the Markdown code for a typical Syntax section (for a JavaScript function):
 
-```html
-  <h2 id="Syntax">Syntax</h2>
+````
+## Syntax
 
-  <pre class="brush: js">slice();
-  slice(start);
-  slice(start, end);
-  </pre>
+```js
+slice()
+slice(start)
+slice(start, end)
 ```
+````
 
 ### General style rules
 
 A few rules to follow in terms of markup within the syntax block:
 
+- Do **not** terminate a line with semicolon `;`. Syntax sections are not meant to show runnable code. So, it makes no sense to show semicolons.
 - Do **not** use \<code> within the syntax block (or within any code sample block on MDN, either). Not only is it generally useless, but our markup does not want it, and will not render the way you want it to look if you include it.
 - Only specify the function and arguments. Example showing "corrected" examples below
 
   ```js
-  querySelector(selector);
+  querySelector(selector)
   //responseStr = element.querySelector(selector);
 
-  new IntersectionObserver(callback, options);
+  new IntersectionObserver(callback, options)
   // var observer = new IntersectionObserver(callback, options);
   ```
 
@@ -53,46 +55,46 @@ A few rules to follow in terms of markup within the syntax block:
 Start with a syntax block, like this (from the {{DOMxRef("IntersectionObserver.IntersectionObserver", "IntersectionObserver constructor")}} page):
 
 ```js
-new IntersectionObserver(callback, options);
+new IntersectionObserver(callback, options)
 ```
 
 or this (from {{DOMxRef("Document.hasStorageAccess")}}):
 
 ```js
-hasStorageAccess();
+hasStorageAccess()
 ```
 
 ##### Multiple lines/Optional parameters
 
-Methods that can be used in many different different ways should be expanded out into multiple lines, showing all possible variations.
+Methods that can be used in many different ways should be expanded out into multiple lines, showing all possible variations.
 
 Each option should be on its own line, omitting both per-option comments and assignment. For example, {{jsxref("Array.prototype.slice()")}} has two optional parameters, and would be documented as shown below:
 
 ```js
-slice();
-slice(begin);
-slice(begin, end);
+slice()
+slice(begin)
+slice(begin, end)
 ```
 
 Similarly, for {{DOMxRef("CanvasRenderingContext2D.drawImage")}}:
 
 ```js
-drawImage(image, dx, dy);
-drawImage(image, dx, dy, dWidth, dHeight);
-drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
+drawImage(image, dx, dy)
+drawImage(image, dx, dy, dWidth, dHeight)
+drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
 ```
 
 Similarly for the {{jsxref("Date")}} constructor:
 
 ```js
-new Date();
-new Date(value);
-new Date(dateString);
-new Date(year, monthIndex);
-new Date(year, monthIndex, day);
-new Date(year, monthIndex, day, hours);
-new Date(year, monthIndex, day, hours, minutes);
-new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
+new Date()
+new Date(value)
+new Date(dateString)
+new Date(year, monthIndex)
+new Date(year, monthIndex, day)
+new Date(year, monthIndex, day, hours)
+new Date(year, monthIndex, day, hours, minutes)
+new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 ```
 
 ##### Formal syntax
@@ -120,7 +122,7 @@ caches.match(request, options).then(function(response) {
 But this version is much more concise, and doesn't include the superfluous {{JSxRef("Promise.prototype.then()")}} method call:
 
 ```js
-match(request, options);
+match(request, options)
 ```
 
 ##### Callback syntax blocks
@@ -129,19 +131,19 @@ For methods with a callback function, the syntax for arrow functions, functions,
 
 ```js
 // Arrow function
-filter((currentValue) => { /* ... */ } )
-filter((currentValue, index) => { /* ... */ } )
-filter((currentValue, index, array) => { /* ... */ } )
+filter((currentValue) => { /* … */ } )
+filter((currentValue, index) => { /* … */ } )
+filter((currentValue, index, array) => { /* … */ } )
 
 // Callback function
 filter(callbackFn)
 filter(callbackFn, thisArg)
 
 // Inline callback function
-filter(function(currentValue) { /* ... */ })
-filter(function(currentValue, index) { /* ... */ })
-filter(function(currentValue, index, array){ /* ... */ })
-filter(function(currentValue, index, array) { /* ... */ }, thisArg)
+filter(function(currentValue) { /* … */ })
+filter(function(currentValue, index) { /* … */ })
+filter(function(currentValue, index, array){ /* … */ })
+filter(function(currentValue, index, array) { /* … */ }, thisArg)
 ```
 
 ##### Syntax for arbitrary number of parameters
@@ -151,7 +153,7 @@ For methods that accept an arbitrary number of parameters, the syntax block is w
 ```js
 unshift(element0)
 unshift(element0, element1)
-unshift(element0, element1, /* ... ,*/ elementN)
+unshift(element0, element1, /* … ,*/ elementN)
 ```
 
 #### Parameters section
@@ -160,11 +162,15 @@ Next, include a "Parameters" subsection, which explains what each parameter shou
 
 The name of each parameter in the list should be contained in a {{HTMLElement("code")}} block.
 
-> **Note:** If the feature does not take any parameters, you don't need to include a "Parameters" section, but you can if you wish include it with content of "None".
+> **Note:** Even if the feature does not take any parameters, you need to include a "Parameters" section, with content of "None".
 
 #### Return value section
 
-Next, include a "Return value" subsection, which explains what the return value of the constructor or method is, even if it is `undefined`. See the above links for examples.
+Next, include a "Return value" subsection, which explains what the return value of the constructor or method is. See the above links as examples.
+
+If there is no return value, use the following text:
+
+None (\\{{jsxref("undefined")}}).
 
 #### Exceptions section
 
@@ -199,7 +205,7 @@ JavaScript built-in object reference pages follow the same basic rules as API re
 
 CSS property reference pages include a "Syntax" section, which used to be found at the top of the page but is increasingly commonly found below a section containing a block of code showing typical usage of the feature, plus a live example to illustrate what the feature does (see {{CSSxRef("animation")}} for example).
 
-> **Note:** We do this because CSS formal syntax is complex, not used by many of the MDN readership, and offputting for beginners. Real syntax and examples are more useful to the majority of people.
+> **Note:** We do this because CSS formal syntax is complex, not used by many of the MDN readership, and off-putting for beginners. Real syntax and examples are more useful to the majority of people.
 
 Inside the syntax section you'll find the following contents.
 
@@ -215,7 +221,7 @@ Next, you should include a "Values" section — this contains a description list
 
 The last section, "Formal syntax", is automatically generated from the data included in the [MDN data repo](https://github.com/mdn/data)'s CSS directory. You just need to include a `CSSSyntax` macro call below the title, and it will take care of the rest.
 
-The only complication arises from making sure the data you need is present. The [properties.json](https://github.com/mdn/data/blob/master/css/properties.json) file needs to contain an entry for the property you are documenting, and the [types.json](https://github.com/mdn/data/blob/master/css/types.json) file needs to contain an entry for all of the value types used in the property's value.
+The only complication arises from making sure the data you need is present. The [properties.json](https://github.com/mdn/data/blob/main/css/properties.json) file needs to contain an entry for the property you are documenting, and the [types.json](https://github.com/mdn/data/blob/main/css/types.json) file needs to contain an entry for all of the value types used in the property's value.
 
 You need to do this by forking the [MDN data repo](https://github.com/mdn/data), cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can [find more details about using Git here](/en-US/docs/MDN/Structures/Compatibility_tables#preparing_to_add_the_data).
 
@@ -225,7 +231,7 @@ The "Syntax" section of selector reference pages is much simpler than that of pr
 
 This block is automatically generated from the data included in the [MDN data repo](https://github.com/mdn/data)'s CSS directory. You just need to include a `CSSSyntax` macro call below the title, and it will take care of the rest.
 
-The only complication arises from making sure the data you need is present. The [selectors.json](https://github.com/mdn/data/blob/master/css/selectors.json) file needs to contain an entry for the selector you are documenting.
+The only complication arises from making sure the data you need is present. The [selectors.json](https://github.com/mdn/data/blob/main/css/selectors.json) file needs to contain an entry for the selector you are documenting.
 
 You need to do this by forking the [MDN data repo](https://github.com/mdn/data), cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can [find more details about using Git here](/en-US/docs/MDN/Structures/Compatibility_tables#preparing_to_add_the_data).
 
@@ -282,3 +288,7 @@ SVG element syntax sections are non-existent — just like HTML element syntax s
 ### SVG attributes
 
 SVG attribute reference pages also do not include syntax sections.
+
+## See also
+
+- [Markdown in MDN](/en-US/docs/MDN/Contribute/Markdown_in_MDN#example_code_blocks)

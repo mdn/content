@@ -16,9 +16,9 @@ condition is written. It must appear in parenthesis after the `if` keyword.
 
 ## Message
 
-```js
-SyntaxError: Expected ')' (Edge)
+```
 SyntaxError: missing ) after condition (Firefox)
+SyntaxError: Unexpected token '{'. Expected ')' to end an 'if' condition. (Safari)
 ```
 
 ## Error type
@@ -75,8 +75,8 @@ if (done is true) {
 // SyntaxError: missing ) after condition
 ```
 
-Instead you need to use a correct [comparison
-operator](/en-US/docs/Web/JavaScript/Reference/Operators). For example:
+Instead you need to use a correct [comparison operator](/en-US/docs/Web/JavaScript/Reference/Operators).
+For example:
 
 ```js example-good
 if (done === true) {
@@ -87,7 +87,5 @@ if (done === true) {
 ## See also
 
 - [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
-- [Comparison
-  operators](/en-US/docs/Web/JavaScript/Reference/Operators)
-- [Making
-  decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Comparison operators](/en-US/docs/Web/JavaScript/Reference/Operators)
+- [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)

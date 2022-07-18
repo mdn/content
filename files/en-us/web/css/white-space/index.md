@@ -38,6 +38,7 @@ white-space: break-spaces;
 white-space: inherit;
 white-space: initial;
 white-space: revert;
+white-space: revert-layer;
 white-space: unset;
 ```
 
@@ -61,7 +62,7 @@ The `white-space` property is specified as a single keyword chosen from the list
 
     - Any sequence of preserved white space always takes up space, including at the end of the line.
     - A line breaking opportunity exists after every preserved white space character, including between white space characters.
-    - Such preserved spaces take up space and do not hang, and thus affect the box’s intrinsic sizes (min-content size and max-content size).
+    - Such preserved spaces take up space and do not hang, and thus affect the box's intrinsic sizes (min-content size and max-content size).
 
 The following table summarizes the behavior of the various `white-space` values:
 
@@ -139,7 +140,7 @@ The following table summarizes the behavior of the various `white-space` values:
 
 ## Collapsing of white space
 
-The CSS Text specification contains a [Collapsing and Transformation](https://drafts.csswg.org/css-text/#white-space-phase-1) section that precisely defines what “white space is collapsed” means, including an example with an illustration. Usually, it means reducing sequences of multiple white-space characters down to a single space character — though in some cases it means reducing them to no character (the empty string).
+The CSS Text specification contains a [Collapsing and Transformation](https://drafts.csswg.org/css-text-3/#white-space-phase-1) section that precisely defines what "white space is collapsed" means, including an example with an illustration. Usually, it means reducing sequences of multiple white-space characters down to a single space character — though in some cases it means reducing them to no character (the empty string).
 
 ## Formal definition
 

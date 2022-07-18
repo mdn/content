@@ -1,6 +1,7 @@
 ---
 title: XRLightEstimate.primaryLightDirection
 slug: Web/API/XRLightEstimate/primaryLightDirection
+page-type: web-api-instance-property
 tags:
   - API
   - AR

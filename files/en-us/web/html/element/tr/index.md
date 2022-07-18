@@ -22,19 +22,19 @@ The **`<tr>`** [HTML](/en-US/docs/Web/HTML) element defines a row of cells in a 
 
 To provide additional control over how cells fit into (or span across) columns, both `<th>` and `<td>` support the {{htmlattrxref("colspan", "td")}} attribute, which lets you specify how many columns wide the cell should be, with the default being 1. Similarly, you can use the {{htmlattrxref("rowspan", "td")}} attribute on cells to indicate they should span more than one table row.
 
-This can take a little practice to get right when building your tables. We have some {{anch("Examples", "examples")}} below, but for more examples and an in-depth tutorial, see the [HTML tables](/en-US/docs/Learn/HTML/Tables) series in our [Learn web development](/en-US/docs/Learn) area, where you'll learn how to use the table elements and their attributes to get just the right layout and formatting for your tabular data.
+This can take a little practice to get right when building your tables. We have some [examples](#examples) below, but for more examples and an in-depth tutorial, see the [HTML tables](/en-US/docs/Learn/HTML/Tables) series in our [Learn web development](/en-US/docs/Learn) area, where you'll learn how to use the table elements and their attributes to get just the right layout and formatting for your tabular data.
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes). There are also several {{anch("deprecated attributes")}}, which you should avoid but may need to know when reading older code.
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes). There are also several [deprecated attributes](#deprecated_attributes), which you should avoid but may need to know when reading older code.
 
 ### Deprecated attributes
 
 The following attributes may still be implemented in browsers but are no longer part of the HTML specification and may be missing or may not work as expected. They should be avoided.
 
-- {{HTMLAttrDef("align")}}{{deprecated_inline}}
+- {{HTMLAttrDef("align")}} {{deprecated_inline}}
 
-  - : A {{DOMxRef("DOMString")}} which specifies how the cell's context should be aligned horizontally within the cells in the row; this is shorthand for using `align` on every cell in the row individually. Possible values are:
+  - : A string which specifies how the cell's context should be aligned horizontally within the cells in the row; this is shorthand for using `align` on every cell in the row individually. Possible values are:
 
     - `left`
       - : Align the content of each cell at its left edge.
@@ -51,27 +51,27 @@ The following attributes may still be implemented in browsers but are no longer 
 
     > **Note:** Instead of using the obsolete `align` attribute, you should instead use the CSS {{CSSxRef("text-align")}} property to establish `left`, `center`, `right`, or `justify` alignment for the row's cells. To apply character-based alignment, set the CSS {{CSSxRef("text-align")}} property to the alignment character (such as `"."` or `","`).
 
-- {{HTMLAttrDef("bgcolor")}}{{deprecated_inline}}
+- {{HTMLAttrDef("bgcolor")}} {{deprecated_inline}}
 
-  - : A {{DOMxRef("DOMString")}} specifying a color to apply to the backgrounds of each of the row's cells. This can be either an [hexadecimal `#RRGGBB` or `#RGB` value](</en-US/docs/Web/CSS/color_value#rgb()>) or a [color keyword](/en-US/docs/Web/CSS/color_value#color_keywords). Omitting the attribute or setting it to `null` in JavaScript causes the row's cells to inherit the row's parent element's background color.
+  - : A string specifying a color to apply to the backgrounds of each of the row's cells. This can be either an [hexadecimal `#RRGGBB` or `#RGB` value](/en-US/docs/Web/CSS/color_value/rgb) or a [color keyword](/en-US/docs/Web/CSS/color_value#color_keywords). Omitting the attribute or setting it to `null` in JavaScript causes the row's cells to inherit the row's parent element's background color.
 
     > **Note:** The {{HTMLElement("tr")}} element should be styled using [CSS](/en-US/docs/Web/CSS). To give a similar effect as the `bgcolor` attribute, use the [CSS](/en-US/docs/Web/CSS) property {{CSSxRef("background-color")}}.
 
-- {{HTMLAttrDef("char")}}{{deprecated_inline}}
+- {{HTMLAttrDef("char")}} {{deprecated_inline}}
 
-  - : A {{DOMxRef("DOMString")}} which sets the character to align the cells in each of the row's columns on (each row's centering that uses the same character gets aligned with others using the same character . Typical values for this include a period (`"."`) or comma (`","`) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tr")}} is not set to `char`, this attribute is ignored.
+  - : A string which sets the character to align the cells in each of the row's columns on (each row's centering that uses the same character gets aligned with others using the same character . Typical values for this include a period (`"."`) or comma (`","`) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tr")}} is not set to `char`, this attribute is ignored.
 
     > **Note:** This attribute is not only obsolete, but was rarely implemented anyway. To achieve the same effect as the {{htmlattrxref("char", "tr")}} attribute, set the CSS {{CSSxRef("text-align")}} property to the same string you would specify for the `char` property, such as `text-align: "."`.
 
-- {{HTMLAttrDef("charoff")}}{{deprecated_inline}}
+- {{HTMLAttrDef("charoff")}} {{deprecated_inline}}
 
-  - : A {{DOMxRef("DOMString")}} indicating the number of characters on the tail end of the column's data should be displayed after the alignment character specified by the `char` attribute. For example, when displaying money values for currencies that use hundredths of a unit (such as the dollar, which is divided into 100 cents), you would typically specify a value of 2, so that in tandem with `char` being set to `"."`, the values in a column would be cleanly aligned on the decimal points, with the number of cents properly displayed to the right of the decimal point.
+  - : A string indicating the number of characters on the tail end of the column's data should be displayed after the alignment character specified by the `char` attribute. For example, when displaying money values for currencies that use hundredths of a unit (such as the dollar, which is divided into 100 cents), you would typically specify a value of 2, so that in tandem with `char` being set to `"."`, the values in a column would be cleanly aligned on the decimal points, with the number of cents properly displayed to the right of the decimal point.
 
     > **Note:** This attribute is obsolete, and was never widely supported anyway.
 
-- {{HTMLAttrDef("valign")}}{{deprecated_inline}}
+- {{HTMLAttrDef("valign")}} {{deprecated_inline}}
 
-  - : A {{DOMxRef("DOMString")}} specifying the vertical alignment of the text within each cell in the row. Possible values for this attribute are:
+  - : A string specifying the vertical alignment of the text within each cell in the row. Possible values for this attribute are:
 
     - `baseline`
       - : Aligns each cell's content text as closely as possible to the bottom of the cell, handling alignment of different fonts and font sizes by aligning the characters along the {{interwiki("wikipedia", "baseline")}} of the font(s) used in the row. If all of the characters in the row are the same size, the effect is the same as `bottom`.
@@ -588,4 +588,4 @@ This just sets the CSS {{CSSxRef("text-align")}} property for the last {{HTMLEle
 - {{DOMxRef("HTMLTableRowElement")}}: the interface on which `<tr>` is based.
 - Other table-related elements:
 
-  - {{HTMLElement("table")}}, {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}},{{HTMLElement("caption")}}, {{HTMLElement("col")}}, and {{HTMLElement("colgroup")}}
+  - {{HTMLElement("table")}}, {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}}, {{HTMLElement("caption")}}, {{HTMLElement("col")}}, and {{HTMLElement("colgroup")}}

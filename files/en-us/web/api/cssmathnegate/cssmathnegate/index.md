@@ -1,6 +1,7 @@
 ---
 title: CSSMathNegate()
 slug: Web/API/CSSMathNegate/CSSMathNegate
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
@@ -19,12 +20,12 @@ new {{domxref("CSSMathNegate")}} object which negates the value passed into it.
 ## Syntax
 
 ```js
-var CSSMathNegate = new CSSMathNegate(arg);
+new CSSMathNegate(arg)
 ```
 
 ### Parameters
 
-- arg
+- `arg`
   - : A {{domxref('CSSNumericValue')}}.
 
 ## Examples

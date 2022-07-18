@@ -14,7 +14,7 @@ The **`loop`** statement creates a label that can later be branched to with a `b
 
 The **`loop`** statement is the opposite of the `block` statement, in the sense that while branching to a `loop` jumps to the beginning of the loop, branching to a `block` jumps to the end of the block, that is, out of the block.
 
-{{EmbedInteractiveExample("pages/wat/loop.html")}}
+{{EmbedInteractiveExample("pages/wat/loop.html", "tabbed-taller")}}
 
 ## Syntax
 

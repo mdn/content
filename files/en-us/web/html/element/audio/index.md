@@ -17,7 +17,6 @@ tags:
   - sound
 browser-compat: html.elements.audio
 ---
-
 {{HTMLRef}}
 
 The **`<audio>`** [HTML](/en-US/docs/Web/HTML) element is used to embed sound content in documents. It may contain one or more audio sources, represented using the `src` attribute or the {{HTMLElement("source")}} element: the browser will choose the most suitable one. It can also be the destination for streamed media, using a {{domxref("MediaStream")}}.
@@ -91,7 +90,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
   </thead>
   <tbody>
     <tr>
-      <td>{{Event("audioprocess")}}</td>
+      <td>{{domxref("ScriptProcessorNode/audioprocess_event", "audioprocess")}}</td>
       <td>
         The input buffer of a {{DOMxRef("ScriptProcessorNode")}} is
         ready to be processed.
@@ -117,7 +116,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
       </td>
     </tr>
     <tr>
-      <td>{{Event("complete")}}</td>
+      <td>{{domxref("OfflineAudioContext/complete_event", "complete")}}</td>
       <td>
         The rendering of an {{DOMxRef("OfflineAudioContext")}} is
         terminated.
@@ -256,7 +255,7 @@ Other usage notes:
 - If you don't specify the `controls` attribute, the audio player won't include the browser's default controls. You can, however, create your own custom controls using JavaScript and the {{domxref("HTMLMediaElement")}} API.
 - To allow precise control over your audio content, `HTMLMediaElement`s fire many different [events](/en-US/docs/Web/API/HTMLMediaElement#events). This also provides a way to monitor the audio's fetching process so you can watch for errors or detect when enough is available to begin to play or manipulate it.
 - You can also use the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to directly generate and manipulate audio streams from JavaScript code rather than streaming pre-existing audio files.
-- `<audio>` elements can't have subtitles or captions associated with them in the same way that `<video>` elements can. See [WebVTT and Audio](https://www.iandevlin.com/blog/2015/12/html5/webvtt-and-audio) by Ian Devlin for some useful information and workarounds.
+- `<audio>` elements can't have subtitles or captions associated with them in the same way that `<video>` elements can. See [WebVTT and Audio](https://www.iandevlin.com/blog/2015/12/html5/webvtt-and-audio/) by Ian Devlin for some useful information and workarounds.
 
 A good general source of information on using HTML `<audio>` is the [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) beginner's tutorial.
 
@@ -274,7 +273,7 @@ To get a consistent look and feel across browsers, you'll need to create custom 
 
 ### Detecting addition and removal of tracks
 
-You can detect when tracks are added to and removed from an `<audio>` element using the {{event("addtrack")}} and {{event("removetrack")}} events. However, these events aren't sent directly to the `<audio>` element itself. Instead, they're sent to the track list object within the `<audio>` element's {{domxref("HTMLMediaElement")}} that corresponds to the type of track that was added to the element:
+You can detect when tracks are added to and removed from an `<audio>` element using the {{domxref("AudioTrackList/addtrack_event", "addtrack")}} and {{domxref("AudioTrackList/removetrack_event", "removetrack")}} events. However, these events aren't sent directly to the `<audio>` element itself. Instead, they're sent to the track list object within the `<audio>` element's {{domxref("HTMLMediaElement")}} that corresponds to the type of track that was added to the element:
 
 - {{domxref("HTMLMediaElement.audioTracks")}}
   - : An {{domxref("AudioTrackList")}} containing all of the media element's audio tracks. You can add a listener for `addtrack` to this object to be alerted when new audio tracks are added to the element.
@@ -301,7 +300,7 @@ elem.audioTrackList.onremovetrack = function(event) {
 
 This code watches for audio tracks to be added to and removed from the element, and calls a hypothetical function on a track editor to register and remove the track from the editor's list of available tracks.
 
-You can also use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to listen for the {{event("addtrack")}} and {{event("removetrack")}} events.
+You can also use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to listen for the {{domxref("AudioTrackList/addtrack_event", "addtrack")}} and {{domxref("AudioTrackList/removetrack_event", "removetrack")}} events.
 
 ## Examples
 
@@ -380,7 +379,6 @@ Also it's a good practice to provide some content (such as the direct download l
 </audio>
 ```
 
-- [MDN Subtitles and closed caption — Plugins](/en-US/docs/Plugins/Flash_to_HTML5/Video/Subtitles_captions)
 - [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API)
 - [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
 - [MDN Understanding WCAG, Guideline 1.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)

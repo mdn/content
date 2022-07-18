@@ -34,7 +34,7 @@ Then, in the `preload` function, load the `paddle` image by adding the following
 
 ```js
 function preload() {
-    // ...
+    // …
     game.load.image('ball', 'img/ball.png');
     game.load.image('paddle', 'img/paddle.png');
 }
@@ -42,11 +42,11 @@ function preload() {
 
 ### Adding the paddle graphic
 
-Just so we don't forget, at this point you should grab the [paddle graphic](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/paddle.png) from Github, and save it in your `/img` folder.
+Just so we don't forget, at this point you should grab the [paddle graphic](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/paddle.png) from GitHub, and save it in your `/img` folder.
 
 ### Rendering the paddle, with physics
 
-Next up, we will init our paddle by adding the following `add.sprite()` call inside the `create()` function — add it right at the bottom:
+Next up, we will initialize our paddle by adding the following `add.sprite()` call inside the `create()` function — add it right at the bottom:
 
 ```js
 paddle = game.add.sprite(game.world.width*0.5, game.world.height-5, 'paddle');
@@ -54,7 +54,7 @@ paddle = game.add.sprite(game.world.width*0.5, game.world.height-5, 'paddle');
 
 We can use the `world.width` and `world.height` values to position the paddle exactly where we want it: `game.world.width*0.5` will be right in the middle of the screen. In our case the world is the same as the Canvas, but for other types of games, like side-scrollers for example, the world will be bigger, and you can tinker with it to create interesting effects.
 
-As you'll notice if you reload your `index.html` at this point, the paddle is currently not exactly in the middle. Why? Because the anchor from which the position is calculated always starts from the top left edge of the object. We can change that to have the anchor in the middle of the paddle's width and at the bottom of it's height, so it's easier to position it against the bottom edge. Add the following line below the previous new one:
+As you'll notice if you reload your `index.html` at this point, the paddle is currently not exactly in the middle. Why? Because the anchor from which the position is calculated always starts from the top left edge of the object. We can change that to have the anchor in the middle of the paddle's width and at the bottom of its height, so it's easier to position it against the bottom edge. Add the following line below the previous new one:
 
 ```js
 paddle.anchor.set(0.5,1);
@@ -103,14 +103,14 @@ If you haven't already done so, reload your `index.html` and try it out!
 
 ## Position the ball
 
-We have the paddle working as expected, so let's position the ball on it. It's very similar to positioning the paddle — we need to have it placed in the middle of the screen horizontally and at the bottom vertically with a little offset from the bottom. To place it exactly as we want it we will set the anchor to the exact middle of the ball. Find the existing `ball = game.add.sprite( ... )` line, and replace it with the following two lines:
+We have the paddle working as expected, so let's position the ball on it. It's very similar to positioning the paddle — we need to have it placed in the middle of the screen horizontally and at the bottom vertically with a little offset from the bottom. To place it exactly as we want it we will set the anchor to the exact middle of the ball. Find the existing `ball = game.add.sprite()` line, and replace it with the following two lines:
 
 ```js
 ball = game.add.sprite(game.world.width*0.5, game.world.height-25, 'ball');
 ball.anchor.set(0.5);
 ```
 
-The velocity stays almost the same — we're just changing the second parameter's value from 150 to -150, so the ball will start the game by moving up instead of down. Find the existing `ball.body.velocity.set( ... )` line and update it to the following:
+The velocity stays almost the same — we're just changing the second parameter's value from 150 to -150, so the ball will start the game by moving up instead of down. Find the existing `ball.body.velocity.set()` line and update it to the following:
 
 ```js
 ball.body.velocity.set(150, -150);

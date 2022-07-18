@@ -1,6 +1,7 @@
 ---
 title: SVGLength
 slug: Web/API/SVGLength
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -13,7 +14,7 @@ browser-compat: api.SVGLength
 
 ## SVG length interface
 
-The `SVGLength` interface correspond to the [\<length>](/en-US/docs/SVG/Content_type#Length) basic data type.
+The `SVGLength` interface correspond to the [\<length>](/en-US/docs/Web/SVG/Content_type#length) basic data type.
 
 An `SVGLength` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
@@ -22,7 +23,7 @@ An `SVGLength` object can be designated as read only, which means that attempts 
 <table class="no-markdown">
   <tbody>
     <tr>
-      <th scope="row">Also implement</th>
+      <th scope="row">Also implement</th>
       <td><var>None</var></td>
     </tr>
     <tr>
@@ -53,7 +54,7 @@ An `SVGLength` object can be designated as read only, which means that attempts 
           <li>float <code>value</code></li>
           <li>float <code>valueInSpecifiedUnits</code></li>
           <li>
-            {{ domxref("DOMString") }} <code>valueAsString</code>
+            string <code>valueAsString</code>
           </li>
         </ul>
       </td>
@@ -77,7 +78,7 @@ An `SVGLength` object can be designated as read only, which means that attempts 
       </td>
     </tr>
     <tr>
-      <th scope="row">Normative document</th>
+      <th scope="row">Normative document</th>
       <td>
         <a href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGLength"
           >SVG 1.1 (2nd Edition)</a
@@ -93,8 +94,8 @@ An `SVGLength` object can be designated as read only, which means that attempts 
 <svg height="200" onload="start();" version="1.1" width="200" xmlns="http://www.w3.org/2000/svg">
   <script type="text/javascript"><![CDATA[
 function start() {
-  var rect = document.getElementById("myRect");
-  var val  = rect.x.baseVal;
+  const rect = document.getElementById("myRect");
+  const val  = rect.x.baseVal;
 
   // read x in pixel and cm units
   console.log("value: " + val.value +
@@ -115,10 +116,10 @@ function start() {
 }
 ]]></script>
   <rect id="myRect"
-        x="1cm" y="1cm"
-        fill="green" stroke="black" stroke-width="1"
-        width="1cm" height="1cm"
-  />
+        x="1cm" y="1cm"
+        fill="green" stroke="black" stroke-width="1"
+        width="1cm" height="1cm"
+  />
 </svg>
 ```
 
@@ -219,7 +220,7 @@ value: 26.66666603088379, valueInSpecifiedUnits 8: 0.277777761220932, valueAsStr
   <tbody>
     <tr>
       <td><code>unitType</code></td>
-      <td>unsigned short</td>
+      <td>unsigned short</td>
       <td>
         The type of the value as specified by one of the
         <code>SVG_LENGTHTYPE_*</code> constants defined on this interface.
@@ -265,7 +266,7 @@ value: 26.66666603088379, valueInSpecifiedUnits 8: 0.277777761220932, valueAsStr
     </tr>
     <tr>
       <td><code>valueAsString</code></td>
-      <td>{{ domxref("DOMString") }}</td>
+      <td>string</td>
       <td>
         <p>
           The value as a string value, in the units expressed by
@@ -280,7 +281,7 @@ value: 26.66666603088379, valueInSpecifiedUnits 8: 0.277777761220932, valueAsStr
             a {{ domxref("DOMException") }} with code
             <code>SYNTAX_ERR</code> is raised if the assigned string cannot be
             parsed as a valid
-            <a href="/en-US/docs/SVG/Content_type#Length">&#x3C;length></a>.
+            <a href="/en-US/docs/Web/SVG/Content_type#Length">&#x3C;length></a>.
           </li>
           <li>
             a {{ domxref("DOMException") }} with code

@@ -1,6 +1,7 @@
 ---
 title: SubtleCrypto.exportKey()
 slug: Web/API/SubtleCrypto/exportKey
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -13,14 +14,13 @@ browser-compat: api.SubtleCrypto.exportKey
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`exportKey()`** method of the {{domxref("SubtleCrypto")}}
-interface exports a key: that is, it takes as input a {{domxref("CryptoKey")}} object
+interface exports a key: that is, it takes as input a {{domxref("CryptoKey")}} object
 and gives you the key in an external, portable format.
 
 To export a key, the key must have {{domxref("CryptoKey.extractable")}} set to
 `true`.
 
-Keys can be exported in several formats: see [Supported
-formats](/en-US/docs/Web/API/SubtleCrypto/importKey#supported_formats) in the
+Keys can be exported in several formats: see [Supported formats](/en-US/docs/Web/API/SubtleCrypto/importKey#supported_formats) in the
 [`SubtleCrypto.importKey()`](/en-US/docs/Web/API/SubtleCrypto/importKey)
 page for details.
 
@@ -32,53 +32,54 @@ API instead.
 ## Syntax
 
 ```js
-const result = crypto.subtle.exportKey(format, key);
+exportKey(format, key)
 ```
 
 ### Parameters
 
-- _`format`_ is a string value describing the data format in which
-  the key should be exported. It can be one of the following:
-
-  - `raw`: [Raw](/en-US/docs/Web/API/SubtleCrypto/importKey#raw) format.
-  - `pkcs8`: [PKCS #8](/en-US/docs/Web/API/SubtleCrypto/importKey#pkcs_8) format.
-  - `spki`: [SubjectPublicKeyInfo](/en-US/docs/Web/API/SubtleCrypto/importKey#subjectpublickeyinfo)
-    format.
-  - `jwk`: [JSON Web Key](/en-US/docs/Web/API/SubtleCrypto/importKey#json_web_key)
-    format.
-
-- `key` is the {{domxref("CryptoKey")}} to export.
+- `format`
+  - : A string value describing the data format in which
+    the key should be exported. It can be one of the following:
+    - `raw`
+      - : [Raw](/en-US/docs/Web/API/SubtleCrypto/importKey#raw) format.
+    - `pkcs8`
+      - : [PKCS #8](/en-US/docs/Web/API/SubtleCrypto/importKey#pkcs_8) format.
+    - `spki`
+      - : [SubjectPublicKeyInfo](/en-US/docs/Web/API/SubtleCrypto/importKey#subjectpublickeyinfo) format.
+    - `jwk`
+      - : [JSON Web Key](/en-US/docs/Web/API/SubtleCrypto/importKey#json_web_key) format.
+- `key`
+  - : The {{domxref("CryptoKey")}} to export.
 
 ### Return value
 
-- `result` is a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-  - If `format` was `jwk`, then the promise fulfills
-    with a JSON object containing the key.
-  - Otherwise the promise fulfills with an
-    [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-    containing the key.
+- If `format` was `jwk`, then the promise fulfills
+  with a JSON object containing the key.
+- Otherwise the promise fulfills with an
+  [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+  containing the key.
 
 ### Exceptions
 
 The promise is rejected when one of the following exceptions is encountered:
 
-- {{exception("InvalidAccessError")}}
+- `InvalidAccessError` {{domxref("DOMException")}}
   - : Raised when trying to export a non-extractable key.
-- {{exception("NotSupported")}}
+- `NotSupported` {{domxref("DOMException")}}
   - : Raised when trying to export in an unknown format.
 - {{jsxref("TypeError")}}
   - : Raised when trying to use an invalid format.
 
 ## Examples
 
-> **Note:** You can [try the
-> working examples](https://mdn.github.io/dom-examples/web-crypto/export-key/index.html) out on GitHub.
+> **Note:** You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/export-key/index.html) out on GitHub.
 
 ### Raw export
 
 This example exports an AES key as an `ArrayBuffer` containing the bytes for
-the key. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/raw.js)
+the key. [See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/raw.js).
 
 ```js
 /*
@@ -110,19 +111,19 @@ window.crypto.subtle.generateKey(
   const exportButton = document.querySelector(".raw");
   exportButton.addEventListener("click", () => {
     exportCryptoKey(key);
-  });
+  });
 });
 ```
 
 ### PKCS #8 export
 
 This example exports an RSA private signing key as a PKCS #8 object. The exported key
-is then PEM-encoded. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/pkcs8.js)
+is then PEM-encoded. [See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/pkcs8.js).
 
 ```js
 /*
-Convert  an ArrayBuffer into a string
-from https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
+Convert an ArrayBuffer into a string
+from https://developer.chrome.com/blog/how-to-convert-arraybuffer-to-and-from-string/
 */
 function ab2str(buf) {
   return String.fromCharCode.apply(null, new Uint8Array(buf));
@@ -170,12 +171,12 @@ window.crypto.subtle.generateKey(
 ### SubjectPublicKeyInfo export
 
 This example exports an RSA public encryption key as a PEM-encoded SubjectPublicKeyInfo
-object. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/spki.js)
+object. [See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/spki.js).
 
 ```js
 /*
-Convert  an ArrayBuffer into a string
-from https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
+Convert an ArrayBuffer into a string
+from https://developer.chrome.com/blog/how-to-convert-arraybuffer-to-and-from-string/
 */
 function ab2str(buf) {
   return String.fromCharCode.apply(null, new Uint8Array(buf));
@@ -221,7 +222,7 @@ window.crypto.subtle.generateKey(
 
 ### JSON Web Key export
 
-This code exports an ECDSA private signing key as a JSON Web Key object. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/jwk.js)
+This code exports an ECDSA private signing key as a JSON Web Key object. [See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/jwk.js).
 
 ```js
 /*

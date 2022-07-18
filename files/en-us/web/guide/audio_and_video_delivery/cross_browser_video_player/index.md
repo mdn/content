@@ -15,7 +15,7 @@ Our example video player displays a clip from an open source movie called [Tears
 
 ![a shot of a video player, with several control buttons such as play, pause and stop. The video is showing a group of men fighting a group of robots.](video-player-example.png)
 
-> **Note:** You can see the [example running live](https://iandevlin.github.io/mdn/video-player/), or check out the [source code on Github](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player).
+> **Note:** You can see the [example running live](https://iandevlin.github.io/mdn/video-player/), or check out the [source code on GitHub](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player).
 
 ## HTML Markup
 
@@ -103,7 +103,7 @@ HTML5 comes with a JavaScript [Media API](/en-US/docs/Web/API/HTMLMediaElement) 
 
 Before dealing with the individual buttons, a number of initialization calls are required.
 
-To begin with, it's a good idea to first check if the browser actually supports the {{ htmlelement("video") }} element and to only setup the custom controls if it does. This is done by checking if a created {{ htmlelement("video") }} element supports [the `canPlayType()` method](https://www.w3.org/html/wg/drafts/html/master/embedded-content.html#dom-navigator-canplaytype), which any supported HTML5 {{ htmlelement("video") }} element should.
+To begin with, it's a good idea to first check if the browser actually supports the {{ htmlelement("video") }} element and to only setup the custom controls if it does. This is done by checking if a created {{ htmlelement("video") }} element supports [the `canPlayType()` method](https://html.spec.whatwg.org/multipage/media.html#dom-navigator-canplaytype), which any supported HTML5 {{ htmlelement("video") }} element should.
 
 ```js
 var supportsVideo = !!document.createElement('video').canPlayType;

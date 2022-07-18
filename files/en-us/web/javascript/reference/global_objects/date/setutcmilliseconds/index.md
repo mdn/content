@@ -44,7 +44,7 @@ object will be incremented by 1, and 100 will be used for milliseconds.
 ### Using setUTCMilliseconds()
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setUTCMilliseconds(500);
 ```
 

@@ -48,7 +48,7 @@ When launching a website, you may spend nothing, or your costs may go through th
 
 You likely have a text editor: such as, Notepad on Windows, Gedit on Linux, TextEdit on Mac. You'll have an easier time writing code if you choose an editor that color-codes, checks your syntax, and assists you with code structure.
 
-Many editors are free, for example [Atom](https://atom.io/), [Brackets](https://brackets.io/), [Bluefish](https://bluefish.openoffice.nl/), [TextWrangler](https://www.barebones.com/products/textwrangler/), [Eclipse](https://eclipse.org/), [Netbeans](https://netbeans.org/), and [Visual Studio Code](https://code.visualstudio.com/). Some, like [Sublime Text](https://www.sublimetext.com/), you can test as long as you like, but you're encouraged to pay. Some, like [PhpStorm](https://www.jetbrains.com/phpstorm/), can cost between a few dozen and 200 dollars, depending on the plan you purchase. Some of them, like [Microsoft Visual Studio](https://www.visualstudio.com/), can cost hundreds, or thousands of dollars; though Visual Studio Express is free for individual developers or open source projects. Often, for-pay editors will have a trial version.
+Many editors are free, for example [Atom](https://atom.io/), [Brackets](https://brackets.io/), [Bluefish](https://bluefish.openoffice.nl/index.html), [TextWrangler](https://www.barebones.com/products/textwrangler/), [Eclipse](https://www.eclipse.org/), [Netbeans](https://netbeans.apache.org//), and [Visual Studio Code](https://code.visualstudio.com/). Some, like [Sublime Text](https://www.sublimetext.com/), you can test as long as you like, but you're encouraged to pay. Some, like [PhpStorm](https://www.jetbrains.com/phpstorm/), can cost between a few dozen and 200 dollars, depending on the plan you purchase. Some of them, like [Microsoft Visual Studio](https://visualstudio.microsoft.com/), can cost hundreds, or thousands of dollars; though Visual Studio Express is free for individual developers or open source projects. Often, for-pay editors will have a trial version.
 
 To start, we suggest trying out several editors, to get a sense of which works best for you. If you're only writing simple {{Glossary("HTML")}}, {{Glossary("CSS")}}, and {{Glossary("Javascript")}}, go with a simple editor.
 
@@ -66,21 +66,21 @@ You can use any of them, as they will have similar functionality, though some ar
 
 If you want to include video or audio into your website, you can either embed online services (for example YouTube, Vimeo, or Dailymotion), or include your own videos (see below for bandwidth costs).
 
-For audio files, you can find free software ([Audacity](https://www.audacityteam.org/), [Wavosaur](https://www.wavosaur.com/)), or paying up to a few hundred dollars ([Sony Sound Forge](https://www.sonycreativesoftware.com/soundforge), [Adobe Audition](https://www.adobe.com/products/audition.html)). Likewise, video-editing software can be free ([PiTiVi](https://www.pitivi.org/), [OpenShot](https://www.openshot.org/) for Linux, [iMovie](https://www.apple.com/mac/imovie/) for Mac), less than $100 ([Adobe Premiere Elements](https://www.adobe.com/us/products/premiere-elements.html)), or several hundred dollars ([Adobe Premiere Pro](https://www.adobe.com/products/premiere.html), [Avid Media Composer](https://www.avid.com/US/products/family/Media-Composer), [Final Cut Pro](https://www.apple.com/final-cut-pro/)). The software you received with your digital camera may cover all your needs.
+For audio files, you can find free software ([Audacity](https://www.audacityteam.org/), [Wavosaur](https://www.wavosaur.com/)), or paying up to a few hundred dollars ([Sound Forge](https://www.magix.com/us/music-editing/sound-forge/), [Adobe Audition](https://www.adobe.com/products/audition.html)). Likewise, video-editing software can be free ([PiTiVi](https://www.pitivi.org/), [OpenShot](https://www.openshot.org/) for Linux, [iMovie](https://www.apple.com/imovie/) for Mac), less than $100 ([Adobe Premiere Elements](https://www.adobe.com/products/premiere-elements.html)), or several hundred dollars ([Adobe Premiere Pro](https://www.adobe.com/products/premiere.html), [Avid Media Composer](https://www.avid.com/media-composer), [Final Cut Pro](https://www.apple.com/final-cut-pro/)). The software you received with your digital camera may cover all your needs.
 
 ### Publishing tools
 
-You also need a way to upload files: from your hard drive to a distant web server. To do that you should use a publishing tool such as an (S)[FTP client](/en-US/docs/Glossary/FTP), [RSync](https://en.wikipedia.org/wiki/Rsync), or [Git/GitHub](https://help.github.com/articles/using-a-custom-domain-with-github-pages/).
+You also need a way to upload files: from your hard drive to a distant web server. To do that you should use a publishing tool such as an (S)[FTP client](/en-US/docs/Glossary/FTP), [RSync](https://en.wikipedia.org/wiki/Rsync), or [Git/GitHub](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
 
 Each operating system includes an (S)FTP client, as part of its file manager. Windows Explorer, Nautilus (a common Linux file manager), and the Mac Finder all include this functionality. However, people often choose dedicated (S)FTP clients to display local or remote directories side-by-side and store server passwords.
 
-If you want to install an (S)FTP client, there are several reliable and free options: for example, [FileZilla](https://filezilla-project.org/) for all platforms, [WinSCP](https://winscp.net/) for Windows, [Cyberduck](https://cyberduck.io/) for Mac or Windows, [and more](https://en.wikipedia.org/wiki/List_of_FTP_server_software).
+If you want to install an (S)FTP client, there are several reliable and free options: for example, [FileZilla](https://filezilla-project.org/) for all platforms, [WinSCP](https://winscp.net/eng/index.php) for Windows, [Cyberduck](https://cyberduck.io/) for Mac or Windows, [and more](https://en.wikipedia.org/wiki/List_of_FTP_server_software).
 
 Because FTP is inherently insecure, you should make sure to use SFTP — the secure, encrypted version of FTP that most hosting sites you'll deal with these days will offer by default — or another secure solution like Rsync over SSH.
 
 ## Browsers
 
-You either already have a browser or can get one for free. If necessary, download Firefox [here](https://www.mozilla.org/en-US/firefox/all/) or Google Chrome [here](https://www.google.com/chrome/browser/).
+You either already have a browser or can get one for free. If necessary, download Firefox [here](https://www.mozilla.org/en-US/firefox/all/) or Google Chrome [here](https://www.google.com/chrome/).
 
 ## Web access
 
@@ -103,18 +103,18 @@ Make sure that you have sufficient {{Glossary("Bandwidth", "bandwidth")}}:
 
 ### Understanding bandwidth
 
-Hosting providers charge you according to how much {{Glossary("Bandwidth", "bandwidth")}} your website consumes. This depends on how many people, and Web crawling robots, access your content during a given time, and how much server space your content takes up. This is why people usually store their videos on dedicated services such as YouTube, Dailymotion, and Vimeo. For example, your provider may have a plan that includes up to several thousand visitors per day, for “reasonable” bandwidth usage. Be careful, however as this is defined differently from one hosting provider to another. As a rule of thumb, recognize that reliable, paid, personal hosting can cost around ten to fifteen dollars per month.
+Hosting providers charge you according to how much {{Glossary("Bandwidth", "bandwidth")}} your website consumes. This depends on how many people, and Web crawling robots, access your content during a given time, and how much server space your content takes up. This is why people usually store their videos on dedicated services such as YouTube, Dailymotion, and Vimeo. For example, your provider may have a plan that includes up to several thousand visitors per day, for "reasonable" bandwidth usage. Be careful, however as this is defined differently from one hosting provider to another. Keep in mind that reliable, paid, personal hosting can cost around ten to fifteen dollars per month.
 
-> **Note:** There is no such thing as “unlimited” bandwidth. If you consume a huge amount of bandwidth, expect to pay a huge amount of money.
+> **Note:** There is no such thing as "unlimited" bandwidth. If you consume a huge amount of bandwidth, expect to pay a huge amount of money.
 
 ### Domain names
 
-Your domain name has to be purchased through a domain name provider (a registrar). Your hosting provider may also be a registrar ([1&1](https://www.1and1.com/), [Gandi](https://www.gandi.net/?lang=en) for instance are at the same time registrars and hosting providers). The domain name usually costs $5-15 per year. This cost varies depending on:
+Your domain name has to be purchased through a domain name provider (a registrar). Your hosting provider may also be a registrar ([Ionos](https://www.ionos.com/), [Gandi](https://www.gandi.net/en-US) for instance are at the same time registrars and hosting providers). The domain name usually costs $5-15 per year. This cost varies depending on:
 
 - Local obligations: some country top-level domain names are more costly, as different countries set different prices.
 - Services associated with the domain name: some registrars provide spam protection by hiding your postal address and email address behind their own addresses: the postal address can be provided in care of the registrar, and your email address can be obscured via your registrar's alias.
 
-### Do-it-yourself hosting vs. “packaged” hosting
+### Do-it-yourself hosting vs. "packaged" hosting
 
 When you want to publish a website, you could do everything by yourself: set up a database (if needed), Content Management System, or {{Glossary("CMS")}} (like [Wordpress](https://wordpress.org/), [Dotclear](https://dotclear.org/), [spip](https://www.spip.net/en_rubrique25.html), etc.), upload pre-made or your own templates.
 
@@ -139,11 +139,11 @@ Here, costs depend on multiple factors, such as:
 
 - Is this a simple website with a few pages of text? Or a more complex, thousand-pages-long website?
 - Will you want to update it regularly? Or will it be a static website?
-- Must the website connect to your company’s IT structure to gather content (say, internal data)?
-- Do you want some shiny new feature that is the rage of the moment? At the time of writing, clients are seeking single pages with complex parallax
-- Will you need the agency to think up user stories or solve complex {{Glossary("UX")}} problems? For example, creating a strategy to engage users, or A/B testing to choose a solution among several ideas
+- Must the website connect to your company's IT structure to gather content (say, internal data)?
+- Do you want some shiny new feature that is popular at the moment? At the time of writing, clients are seeking single pages with complex parallax.
+- Will you need the agency to think up user stories or solve complex {{Glossary("UX")}} problems? For example, creating a strategy to engage users, or A/B testing to choose a solution among several ideas.
 
-...and for hosting:
+And for hosting you need to consider following choices:
 
 - Do you want redundant servers, in case your server goes down?
 - Is 95% reliability adequate, or do you need professional, around-the-clock service?

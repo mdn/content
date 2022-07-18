@@ -1,6 +1,7 @@
 ---
 title: DOMPoint()
 slug: Web/API/DOMPoint/DOMPoint
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -26,7 +27,11 @@ You can also create a `DOMPoint` by calling the
 ## Syntax
 
 ```js
-point = new DOMPoint(x, y, z, w);
+new DOMPoint()
+new DOMPoint(x)
+new DOMPoint(x, y)
+new DOMPoint(x, y, z)
+new DOMPoint(x, y, z, w)
 ```
 
 ### Parameters

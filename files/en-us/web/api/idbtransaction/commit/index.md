@@ -1,6 +1,7 @@
 ---
 title: IDBTransaction.commit()
 slug: Web/API/IDBTransaction/commit
+page-type: web-api-instance-method
 tags:
   - API
   - IDBTransaction
@@ -16,14 +17,14 @@ The **`commit()`** method of the {{domxref("IDBTransaction")}} interface commits
 
 Note that `commit()` doesn't normally _have_ to be called — a transaction will automatically commit when all outstanding requests have been satisfied and no new requests have been made. `commit()` can be used to start the commit process without waiting for events from outstanding requests to be dispatched.
 
-If it is called on a transaction that is not active, it throws an {{exception("InvalidStateError")}} `DOMException`.
+If it is called on a transaction that is not active, it throws an `InvalidStateError` {{domxref("DOMException")}}.
 
 {{AvailableInWorkers}}
 
 ## Syntax
 
 ```js
-transaction.commit();
+commit()
 ```
 
 ### Parameters
@@ -32,7 +33,7 @@ None.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -42,25 +43,27 @@ Void.
 ## Examples
 
 ```js
+const note = document.getElementById('notifications');
+
 // open a read/write db transaction, ready for adding the data
-var transaction = db.transaction(["myDB"], "readwrite");
+const transaction = db.transaction(["myDB"], "readwrite");
 
 // report on the success of opening the transaction
-transaction.oncomplete = function(event) {
+transaction.oncomplete = (event) => {
   note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
 };
 
-transaction.onerror = function(event) {
+transaction.onerror = (event) => {
   note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
 };
 
 // create an object store on the transaction
-var objectStore = transaction.objectStore("myObjStore");
+const objectStore = transaction.objectStore("myObjStore");
 
 // add our newItem object to the object store
-var objectStoreRequest = objectStore.add(newItem[0]);
+const objectStoreRequest = objectStore.add(newItem[0]);
 
-objectStoreRequest.onsuccess = function(event) {
+objectStoreRequest.onsuccess = (event) => {
   // report the success of the request (this does not mean the item
   // has been stored successfully in the DB - for that you need transaction.onsuccess)
   note.innerHTML += '<li>Request successful.</li>';

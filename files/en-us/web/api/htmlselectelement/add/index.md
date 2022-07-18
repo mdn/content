@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.add()
 slug: Web/API/HTMLSelectElement/add
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -17,22 +18,29 @@ collection of `option` elements for this `select` element.
 ## Syntax
 
 ```js
-collection.add(item[, before]);
+add(item)
+add(item, before)
 ```
 
 ### Parameters
 
-- _item_ is an {{domxref("HTMLOptionElement")}} or
-  {{domxref("HTMLOptGroupElement")}}
-- _before_ is optional and an element of the collection, or an index of type
-  _long_, representing the _item_ should be inserted before. If this
-  parameter is `null` (or the index does not exist), the new element is
-  appended to the end of the collection.
+- `item`
+  - : An {{domxref("HTMLOptionElement")}} or
+    {{domxref("HTMLOptGroupElement")}}
+- `before` {{optional_inline}}
+  - : An element of the collection, or an index of type
+    _long_, representing the _item_ should be inserted before. If this
+    parameter is `null` (or the index does not exist), the new element is
+    appended to the end of the collection.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
 - `HierarchyRequestError` {{DOMxRef("DOMException")}}
-  - : Thrown if the _item_ passed to the method is an ancestor of the`{{domxref("HTMLSelectElement")}}`.
+  - : Thrown if the _item_ passed to the method is an ancestor of the {{domxref("HTMLSelectElement")}}.
 
 ## Examples
 
@@ -65,10 +73,8 @@ sel.add(opt2, null);
 The before parameter is optional. So the following is accepted.
 
 ```js
-...
 sel.add(opt1);
 sel.add(opt2);
-...
 ```
 
 ### Append to an Existing Collection
@@ -103,9 +109,7 @@ sel.add(opt, null);
 The before parameter is optional. So the following is accepted.
 
 ```js
-...
 sel.add(opt);
-...
 ```
 
 ### Inserting to an Existing Collection

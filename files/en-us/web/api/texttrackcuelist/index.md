@@ -1,6 +1,7 @@
 ---
 title: TextTrackCueList
 slug: Web/API/TextTrackCueList
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -18,7 +19,7 @@ This interface has no constructor. Retrieve an instance of this object with {{do
 
 ## Properties
 
-- {{domxref('TextTrackCueList.length')}}{{ReadOnlyInline}}
+- {{domxref('TextTrackCueList.length')}} {{ReadOnlyInline}}
   - : An `unsigned long` that is the number of cues in the list.
 
 ## Methods

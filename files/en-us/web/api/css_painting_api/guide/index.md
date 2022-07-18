@@ -1,6 +1,7 @@
 ---
 title: Using the CSS Painting API
 slug: Web/API/CSS_Painting_API/Guide
+page-type: guide
 tags:
   - CSS
   - CSS Paint API
@@ -8,7 +9,8 @@ tags:
   - Houdini
   - Learn
 ---
-The CSS Paint API is designed to enable developers to programmatically define images which can then be used anywhere a CSS image can be invoked, such as CSS [`background-image`](/en-US/docs/Web/CSS/background-image), [`border-image`](/en-US/docs/Web/CSS/border-image-source), [`mask-image`](/en-US/docs/Web/CSS/mask-image), etc.
+{{DefaultAPISidebar("CSS Painting API")}}
+The [CSS Paint API](/en-US/docs/Web/API/CSS_Painting_API) is designed to enable developers to programmatically define images which can then be used anywhere a CSS image can be invoked, such as CSS [`background-image`](/en-US/docs/Web/CSS/background-image), [`border-image`](/en-US/docs/Web/CSS/border-image-source), [`mask-image`](/en-US/docs/Web/CSS/mask-image), etc.
 
 To programmatically create an image used by a CSS stylesheet we need to work through a few steps:
 
@@ -28,7 +30,7 @@ In an external script file, we employ the [`registerPaint()`](/en-US/docs/Web/AP
 registerPaint('headerHighlight', class {
 
   /*
-       define if alphatransparency  is allowed alpha
+       define if alphatransparency is allowed alpha
        is set to true by default. If set to false, all
        colors used on the canvas will be fully opaque
     */
@@ -73,7 +75,7 @@ This can be done using the paint worklet's `addModule()` method in a `<script>` 
 
 ## Using the paint worklet
 
-In our example, the paintworklet is stored on Github. To use it, we first register it:
+In our example, the paintworklet is stored on GitHub. To use it, we first register it:
 
 ```js
 CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/01partOne/header-highlight.js');
@@ -409,7 +411,7 @@ paint(ctx, size, props, args) {
     ctx.fillStyle = 'transparent';
     ctx.strokeStyle = color;
   }
-  ...
+  // …
 }
 ```
 
@@ -445,20 +447,20 @@ When we `get` our list of argument values, we can ask specifically for a `<lengt
 static get inputArguments() { return ['*', '<length>']; }
 ```
 
-Now we can access the type and value properties, meaning we can get the number of pixels and a number type right out of the box. (Admittedly, `ctx.lineWidth` takes a float as a value rather than a value with length units, but for example's sake...)
+Now we can access the type and value properties, meaning we can get the number of pixels and a number type right out of the box. (Admittedly, `ctx.lineWidth` takes a float as a value rather than a value with length units, but for example's sake…)
 
 ```js
 paint(ctx, size, props, args) {
 
-    const strokeWidth = args[1];
+  const strokeWidth = args[1];
 
-    if (strokeWidth.unit === 'px') {
-      ctx.lineWidth = strokeWidth.value;
-    } else {
-      ctx.lineWidth = 1.0;
-    }
+  if (strokeWidth.unit === 'px') {
+    ctx.lineWidth = strokeWidth.value;
+  } else {
+    ctx.lineWidth = 1.0;
+  }
 
-  ...
+  // …
 }
 ```
 
@@ -485,7 +487,7 @@ registerPaint('hollowHighlights', class {
     // ctx   -> drawing context
     // size  -> size of the box being painted
     // props -> list of custom properties available to the element
-    // args  -> list of arguments set when calling the paint() function in the css
+    // args  -> list of arguments set when calling the paint() function in the CSS
 
     // where to start the highlight & dimensions
     const x = 0;

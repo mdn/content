@@ -38,17 +38,17 @@ The second two values reverse the items by switching the start and end lines.
 
 Remember that the start line relates to writing modes. The row-related examples above demonstrate how `row` and `row-reverse` work in a left-to-right language such as English. If you are working in a right-to-left language like Arabic then `row` would start on the right, `row-reverse` on the left.
 
-![Flex containers with Arabic letters showing how row starts from the right hand side and row-reverse from the left.](order-rtl.png)
+![Flex containers with Arabic letters showing how row starts from the right-hand side and row-reverse from the left.](order-rtl.png)
 
 This can seem like a neat way to display things in reverse order however you should be mindful that the items are only _visually_ displayed in reverse order. The specification says the following on this matter:
 
-> “Note: The reordering capabilities of flex layout intentionally affect only the visual rendering, leaving speech order and navigation based on the source order. This allows authors to manipulate the visual presentation while leaving the source order intact for non-CSS UAs and for linear models such as speech and sequential navigation.” - [Ordering and Orientation](https://www.w3.org/TR/css-flexbox-1/#flow-order)
+> "Note: The reordering capabilities of flex layout intentionally affect only the visual rendering, leaving speech order and navigation based on the source order. This allows authors to manipulate the visual presentation while leaving the source order intact for non-CSS UAs and for linear models such as speech and sequential navigation." - [Ordering and Orientation](https://www.w3.org/TR/css-flexbox-1/#flow-order)
 
 If your items were links or some other element that the user could tab to, then the tabbing order would be the order that these items appear in the document source — not your visual order.
 
 If you are using a reverse value, or otherwise reordering your items, you should consider whether you actually need to change the logical order in the source. The specification continues with a warning not to use reordering to fix issues in your source:
 
-> “Authors _must not_ use order or the \*-reverse values of flex-flow/flex-direction as a substitute for correct source ordering, as that can ruin the accessibility of the document.”
+> "Authors _must not_ use order or the \*-reverse values of flex-flow/flex-direction as a substitute for correct source ordering, as that can ruin the accessibility of the document."
 
 > **Note:** For some years Firefox had a bug whereby it would attempt to follow the visual order and not the source order, making it behave differently from other browsers. This has now been fixed. You should always take the source order as the logical order of the document as all up-to-date user agents will be following the specification and doing so.
 

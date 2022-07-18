@@ -15,9 +15,9 @@ string.
 
 ## Message
 
-```js
-SyntaxError: Expected ')' (Edge)
-SyntaxError: missing ) after argument list (Firefox)
+```
+SyntaxError: missing ) after argument list (V8-based & Firefox)
+Unexpected identifier 'x'. Expected ')' to end an argument list. (Safari)
 ```
 
 ## Error type
@@ -56,7 +56,7 @@ console.log('"Java" + "Script" = \"' + 'Java' + 'Script\");
 
 Here JavaScript thinks that you meant to have `);` inside the string and
 ignores it, and it ends up not knowing that you meant the `);` to end the
-function `console.log`. To fix this, we could put  a`'` after the
+function `console.log`. To fix this, we could put a`'` after the
 "Script" string:
 
 ```js example-good

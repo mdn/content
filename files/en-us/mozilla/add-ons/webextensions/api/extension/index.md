@@ -24,7 +24,7 @@ Utilities related to your extension. Get URLs to resources packages with your ex
 
 ## Properties
 
-- {{WebExtAPIRef("extension.lastError")}}
+- {{WebExtAPIRef("extension.lastError")}} {{deprecated_inline}}
   - : Set for the lifetime of a callback if an asynchronous extension API has resulted in an error. If no error has occurred, `lastError` will be {{jsxref("undefined")}}.
 - {{WebExtAPIRef("extension.inIncognitoContext")}}
   - : `True` for content scripts running inside incognito tabs, and for extension pages running inside an incognito process. (The latter only applies to extensions with '`split`' `incognito_behavior`.)
@@ -42,7 +42,7 @@ Utilities related to your extension. Get URLs to resources packages with your ex
 - {{WebExtAPIRef("extension.isAllowedIncognitoAccess()")}}
   - : Retrieves the state of the extension's access to Incognito-mode (as determined by the user-controlled '_Allowed in Incognito_' checkbox).
 - {{WebExtAPIRef("extension.isAllowedFileSchemeAccess()")}}
-  - : Retrieves the state of the extension's access to the `file://` scheme (as determined by the user-controlled '_Allow access to File URLs_' checkbox).
+  - : Retrieves the state of the extension's access to the `file://` scheme (as determined by the user-controlled '_Allow access to File URLs_' checkbox).
 - {{WebExtAPIRef("extension.sendRequest()")}} {{deprecated_inline}}
   - : Sends a single request to other listeners within the extension.
 - {{WebExtAPIRef("extension.setUpdateUrlData()")}}
@@ -61,7 +61,7 @@ Utilities related to your extension. Get URLs to resources packages with your ex
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/extensions/extension) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

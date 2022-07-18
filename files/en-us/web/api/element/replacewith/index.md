@@ -1,6 +1,7 @@
 ---
 title: Element.replaceWith()
 slug: Web/API/Element/replaceWith
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -13,19 +14,25 @@ browser-compat: api.Element.replaceWith
 
 The **`Element.replaceWith()`** method replaces this
 `Element` in the children list of its parent with a set of
-{{domxref("Node")}} or {{domxref("DOMString")}} objects. {{domxref("DOMString")}}
+{{domxref("Node")}} or string objects. String
 objects are inserted as equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 
 ```js
-replaceWith(...nodes)
+replaceWith(param1)
+replaceWith(param1, param2)
+replaceWith(param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parameters
 
-- `nodes`
-  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to replace.
+- `param1`, …, `paramN`
+  - : A set of {{domxref("Node")}} or string objects to replace.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

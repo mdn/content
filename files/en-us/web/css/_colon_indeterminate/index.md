@@ -33,7 +33,9 @@ Elements targeted by this selector are:
 
 ## Syntax
 
-{{csssyntax}}
+```
+:indeterminate
+```
 
 ## Examples
 

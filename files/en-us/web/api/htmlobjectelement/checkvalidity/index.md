@@ -1,6 +1,7 @@
 ---
-title: HTMLObjectElement.checkValidity
+title: HTMLObjectElement.checkValidity()
 slug: Web/API/HTMLObjectElement/checkValidity
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -21,7 +22,7 @@ is true, because object objects are never candidates for constraint validation.
 ## Syntax
 
 ```js
-const valid = HTMLObjectElement.checkValidity();
+checkValidity()
 ```
 
 ### Parameters

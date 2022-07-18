@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Object
 ---
 {{JSRef}}
 
-The **`Object`** class represents one of [JavaScript's data types](/en-US/docs/Web/JavaScript/Data_structures). It is used to store various keyed collections and more complex entities. Objects can be created using the {{jsxref("Object/Object", "Object()")}} constructor or the [object initializer / literal syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
+The **`Object`** type represents one of [JavaScript's data types](/en-US/docs/Web/JavaScript/Data_structures). It is used to store various keyed collections and more complex entities. Objects can be created using the {{jsxref("Object/Object", "Object()")}} constructor or the [object initializer / literal syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
 ## Description
 
@@ -20,8 +20,8 @@ Changes to the `Object` prototype object are seen by **all** objects through pro
 The `Object` constructor creates an object wrapper for the given value.
 
 - If the value is {{jsxref("null")}} or {{jsxref("undefined")}}, it will create and return an empty object.
-- Otherwise, it will return an object of a Type that corresponds to the given value.
 - If the value is an object already, it will return the value.
+- Otherwise, it will return an object of a Type that corresponds to the given value.
 
 When called in a non-constructor context, `Object` behaves identically to `new Object()`.
 
@@ -63,7 +63,7 @@ There isn't any method in an Object itself to delete its own properties (such as
 - {{jsxref("Object.getPrototypeOf","Object.getPrototypeOf()")}}
   - : Returns the prototype (internal `[[Prototype]]` property) of the specified object.
 - {{jsxref("Object.is","Object.is()")}}
-  - : Compares if two values are the same value. Equates all `NaN` values (which differs from both Abstract Equality Comparison and Strict Equality Comparison).
+  - : Compares if two values are the same value. Equates all `NaN` values (which differs from both `IsLooselyEqual` used by [`==`](/en-US/docs/Web/JavaScript/Reference/Operators/Equality) and `IsStrictlyEqual` used by [`===`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)).
 - {{jsxref("Object.isExtensible","Object.isExtensible()")}}
   - : Determines if extending of an object is allowed.
 - {{jsxref("Object.isFrozen","Object.isFrozen()")}}
@@ -152,12 +152,12 @@ When a function is called, the arguments to the call are held in the array-like 
 When modifying prototypes with hooks, pass `this` and the arguments (the call state) to the current behavior by calling `apply()` on the function. This pattern can be used for any prototype, such as `Node.prototype`, `Function.prototype`, etc.
 
 ```js
-var current = Object.prototype.valueOf;
+const current = Object.prototype.valueOf;
 
 // Since my property "-prop-value" is cross-cutting and isn't always
 // on the same prototype chain, I want to modify Object.prototype:
 Object.prototype.valueOf = function() {
-  if (this.hasOwnProperty('-prop-value')) {
+  if (Object.hasOwn(this, '-prop-value')) {
     return this['-prop-value'];
   } else {
     // It doesn't look like one of my objects, so let's fall back on
@@ -169,10 +169,10 @@ Object.prototype.valueOf = function() {
 }
 ```
 
-Since JavaScript doesn't exactly have sub-class objects, prototype is a useful workaround to make a “base class” object of certain functions that act as objects. For example:
+Since JavaScript doesn't exactly have sub-class objects, prototype is a useful workaround to make a "base class" object of certain functions that act as objects. For example:
 
 ```js
-var Person = function(name) {
+const Person = function(name) {
   this.name = name;
   this.canTalk = true;
 };
@@ -183,7 +183,7 @@ Person.prototype.greet = function() {
   }
 };
 
-var Employee = function(name, title) {
+const Employee = function(name, title) {
   Person.call(this, name);
   this.title = title;
 };
@@ -199,7 +199,7 @@ Employee.prototype.greet = function() {
   }
 };
 
-var Customer = function(name) {
+const Customer = function(name) {
   Person.call(this, name);
 };
 
@@ -208,7 +208,7 @@ Customer.prototype.constructor = Customer; //If you don't set Object.prototype.c
                                            //it will take prototype.constructor of Person (parent).
                                            //To avoid that, we set the prototype.constructor to Customer (child).
 
-var Mime = function(name) {
+const Mime = function(name) {
   Person.call(this, name);
   this.canTalk = false;
 };
@@ -218,11 +218,11 @@ Mime.prototype.constructor = Mime; //If you don't set Object.prototype.construct
                                    //it will take prototype.constructor of Person (parent).
                                    //To avoid that, we set the prototype.constructor to Mime (child).
 
-var bob = new Employee('Bob', 'Builder');
-var joe = new Customer('Joe');
-var rg = new Employee('Red Green', 'Handyman');
-var mike = new Customer('Mike');
-var mime = new Mime('Mime');
+const bob = new Employee('Bob', 'Builder');
+const joe = new Customer('Joe');
+const rg = new Employee('Red Green', 'Handyman');
+const mike = new Customer('Mike');
+const mime = new Mime('Mime');
 
 bob.greet();
 // Hi, I am Bob, the Builder

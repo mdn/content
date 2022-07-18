@@ -1,6 +1,7 @@
 ---
 title: AudioContext()
 slug: Web/API/AudioContext/AudioContext
+page-type: web-api-constructor
 tags:
   - Audio
   - Audio Context
@@ -32,28 +33,29 @@ new AudioContext(options);
 ### Parameters
 
 - `options` {{optional_inline}}
-  - : An object used to configure the context. See below for available properties.
-
-### Options
-
-- `latencyHint`
-
-  - : The type of playback that the context will be used for, as a predefined string (`"balanced"`, `"interactive"` or `"playback"`) or a double-precision floating-point value indicating the preferred maximum latency of the context in seconds. The user agent may or may not choose to meet this request; check the value of {{domxref("AudioContext.baseLatency")}} to determine the true latency after creating the context.
-
-    - `"balanced"`: The browser balances audio output latency and power consumption when selecting a latency value.
-    - `"interactive"` (default value): The audio is involved in interactive elements, such as responding to user actions or needing to coincide with visual cues such as a video or game action. The browser selects the lowest possible latency that doesn't cause glitches in the audio. This is likely to require increased power consumption.
-    - `"playback"`: The browser selects a latency that will maximize playback time by minimizing power consumption at the expense of latency. Useful for non-interactive playback, such as playing music.
-
-- `sampleRate`
-  - : Indicates the sample rate to use for the new context. The value must be a floating-point value indicating the sample
-    rate, in samples per second, for which to configure the new context; additionally, the
-    value must be one which is supported by {{domxref("AudioBuffer.sampleRate")}}.
-    The value is typically be between 8,000 Hz and 96,000 Hz; the default will vary depending on the output device, but the sample rate 44,100 Hz is the most common.
-    If the `sampleRate` property is not included in the options, or the options are not specified when creating the audio context, the new context's output device's preferred sample rate is used by default.
+  - : An object used to configure the context. The available properties are:
+    - `latencyHint` {{optional_inline}}
+      - : The type of playback that the context will be used for, as a predefined string (`"balanced"`, `"interactive"` or `"playback"`)
+        or a double-precision floating-point value indicating the preferred maximum latency of the context in seconds.
+        The user agent may or may not choose to meet this request;
+        check the value of {{domxref("AudioContext.baseLatency")}} to determine the true latency after creating the context.
+        - `"balanced"`: The browser balances audio output latency and power consumption when selecting a latency value.
+        - `"interactive"` (default value): The audio is involved in interactive elements,
+          such as responding to user actions or needing to coincide with visual cues such as a video or game action.
+          The browser selects the lowest possible latency that doesn't cause glitches in the audio. This is likely to require increased power consumption.
+        - `"playback"`: The browser selects a latency that will maximize playback time by minimizing power consumption at the expense of latency.
+          Useful for non-interactive playback, such as playing music.
+    - `sampleRate` {{optional_inline}}
+      - : Indicates the sample rate to use for the new context. The value must be a floating-point value indicating the sample rate,
+        in samples per second, for which to configure the new context;
+        additionally, the value must be one which is supported by {{domxref("AudioBuffer.sampleRate")}}.
+        The value will typically be between 8,000 Hz and 96,000 Hz; the default will vary depending on the output device, but the sample rate 44,100 Hz is the most common.
+        If the `sampleRate` property is not included in the options, or the options are not specified when creating the audio context,
+        the new context's output device's preferred sample rate is used by default.
 
 ### Return value
 
-The newly constructed {{domxref("AudioContext")}} instance.
+A new {{domxref("AudioContext")}} instance.
 
 ### Exceptions
 
@@ -81,7 +83,7 @@ tab_ at a time.
 #### Non-standard exceptions in Chrome
 
 If the value of the `latencyHint` property isn't valid,
-Chrome throws a `TypeError` exception with the message
+Chrome throws a {{jsxref("TypeError")}} exception with the message
 "The provided value '...' is not a valid enum value of type
 AudioContextLatencyCategory".
 
@@ -109,5 +111,4 @@ var audioCtx = new AudioContext({
 
 ## See also
 
-- {{domxref("OfflineAudioContext.OfflineAudioContext()", "new
-    OfflineAudioContext()")}} constructor
+- {{domxref("OfflineAudioContext.OfflineAudioContext()", "new OfflineAudioContext()")}} constructor

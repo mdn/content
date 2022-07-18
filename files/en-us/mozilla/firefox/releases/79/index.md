@@ -19,23 +19,23 @@ See also [Firefox 79: The safe return of shared memory, new tooling, and platfor
 
 #### Console
 
-- Network messages with response codes in the 400-499 and 500-599 ranges are now considered errors, and are displayed [even if Response or XHR filters are disabled](/en-US/docs/Tools/Web_Console/Console_messages#filtering_by_category). ({{bug(1635460)}})
-- Network messages for requests that are blocked (by the browser or an extension) are now styled with a "prohibited" icon in the [Console](/en-US/docs/Tools/Web_Console/Console_messages). ({{bug(1629875)}})
+- Network messages with response codes in the 400-499 and 500-599 ranges are now considered errors, and are displayed [even if Response or XHR filters are disabled](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#filtering-by-category). ({{bug(1635460)}})
+- Network messages for requests that are blocked (by the browser or an extension) are now styled with a "prohibited" icon in the [Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html). ({{bug(1629875)}})
 
 #### Debugger
 
-- ["Blackbox" a source file](/en-US/docs/Tools/Debugger/How_to/Ignore_a_source) is now called "ignore" a source file. ({{bug(1642811)}})
-- Inline preview is now available on [exceptions](/en-US/docs/Tools/Debugger/How_to/Breaking_on_exceptions). ({{bug(1581708)}})
+- ["Blackbox" a source file](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/ignore_a_source/index.html) is now called "ignore" a source file. ({{bug(1642811)}})
+- Inline preview is now available on [exceptions](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/breaking_on_exceptions/index.html). ({{bug(1581708)}})
 - Items in the Watch Expressions and Scopes sections now have tooltips on hover, showing their values ({{bug(1631545)}})
-- In the [Call Stack section](/en-US/docs/Tools/Debugger/UI_Tour#call_stack), there is now a context menu option to **Restart Frame**, to execute the current stack frame from its beginning. ({{bug(1594467)}})
+- In the [Call Stack section](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#call-stack), there is now a context menu option to **Restart Frame**, to execute the current stack frame from its beginning. ({{bug(1594467)}})
 
 #### Other tools
 
-- The new [Application panel](/en-US/docs/Tools/Application) is now available, which initially provides inspection and debugging support for [service workers](/en-US/docs/Web/API/Service_Worker_API) and [web app manifests](/en-US/docs/Web/Manifest).
-- The Messages tab of the Network Monitor has been merged with the [Responses tab](/en-US/docs/Tools/Network_Monitor/request_details#response_tab). ({{bug(1636421)}})
+- The new [Application panel](https://firefox-source-docs.mozilla.org/devtools-user/application/index.html) is now available, which initially provides inspection and debugging support for [service workers](/en-US/docs/Web/API/Service_Worker_API) and [web app manifests](/en-US/docs/Web/Manifest).
+- The Messages tab of the Network Monitor has been merged with the [Responses tab](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#response-tab). ({{bug(1636421)}})
 - The Accessibility Inspector is automatically turned on when you access its tab; you no longer need to explicitly enable it. ({{bug(1602075)}})
-- In [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode#controlling_responsive_design_mode), when touch simulation is enabled, mouse-drag events are now interpreted as touch-drag or swipe events. ({{bug(1621781)}})
-- When [remote debugging](/en-US/docs/Tools/about:debugging#connecting_to_a_remote_device), the URL bar now has **Back** and **Forward** buttons to help with navigation on the remote browser. ({{bug(1639425)}})
+- In [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#controlling-responsive-design-mode), when touch simulation is enabled, mouse-drag events are now interpreted as touch-drag or swipe events. ({{bug(1621781)}})
+- When [remote debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#connecting-to-a-remote-device), the URL bar now has **Back** and **Forward** buttons to help with navigation on the remote browser. ({{bug(1639425)}})
 
 ### HTML
 
@@ -81,7 +81,7 @@ See also [Firefox 79: The safe return of shared memory, new tooling, and platfor
 
 #### Media, WebRTC, and Web Audio
 
-- Firefox now supports remote timestamps on statistics records whose {{domxref("RTCStatsType")}} is `remote-outbound-rtp`. The {{domxref("RTCRemoteOutboundRtpStreamStats")}} dictionary which is used to provide these statistics now includes the {{domxref("RTCRemoteOutboundRtpStreamStats.remoteTimestamp", "remoteTimestamp")}} property, which states the timestamp on the remote peer at which the statistics were collected or generated ({{bug(1615191)}}).
+- Firefox now supports remote timestamps on statistics records whose {{domxref("RTCStats.type")}} is `remote-outbound-rtp`. The {{domxref("RTCRemoteOutboundRtpStreamStats")}} dictionary which is used to provide these statistics now includes the {{domxref("RTCRemoteOutboundRtpStreamStats.remoteTimestamp", "remoteTimestamp")}} property, which states the timestamp on the remote peer at which the statistics were collected or generated ({{bug(1615191)}}).
 
 #### Removals
 

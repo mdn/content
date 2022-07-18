@@ -1,6 +1,7 @@
 ---
 title: Element.after()
 slug: Web/API/Element/after
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -12,20 +13,26 @@ browser-compat: api.Element.after
 {{APIRef("DOM")}}
 
 The **`Element.after()`** method inserts a set of
-{{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
+{{domxref("Node")}} or string objects in the children list of the
 `Element`'s parent, just after the `Element`.
-{{domxref("DOMString")}} objects are inserted as equivalent {{domxref("Text")}} nodes.
+String objects are inserted as equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 
 ```js
-after(... nodes)
+after(node1)
+after(node1, node2)
+after(node1, node2, /* … ,*/ nodeN)
 ```
 
 ### Parameters
 
-- `nodes`
-  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.
+- `node1`, …, `nodeN`
+  - : A set of {{domxref("Node")}} or string objects to insert.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

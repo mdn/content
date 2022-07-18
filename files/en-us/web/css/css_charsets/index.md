@@ -7,6 +7,7 @@ tags:
   - Guide
   - Overview
   - Reference
+browser-compat: css.at-rules.charset
 ---
 {{CSSRef}}
 
@@ -20,12 +21,8 @@ tags:
 
 ## Specifications
 
-| Specification                                                            | Status                   | Comment            |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('CSS2.1', 'syndata.html#x57', '@charset')}} | {{Spec2('CSS2.1')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `@charset` rule
-
-{{Compat("css.at-rules.charset")}}
+{{Compat}}

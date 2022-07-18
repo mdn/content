@@ -30,6 +30,7 @@ transition-duration: 10s, 30s, 230ms;
 transition-duration: inherit;
 transition-duration: initial;
 transition-duration: revert;
+transition-duration: revert-layer;
 transition-duration: unset;
 ```
 

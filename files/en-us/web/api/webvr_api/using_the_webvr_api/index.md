@@ -1,6 +1,7 @@
 ---
 title: Using the WebVR API
 slug: Web/API/WebVR_API/Using_the_WebVR_API
+page-type: guide
 tags:
   - '1.1'
   - API
@@ -74,23 +75,23 @@ The first WebVR-related code you'll meet is this following block:
 ```js
 // WebVR variables
 
-var frameData = new VRFrameData();
-var vrDisplay;
-var btn = document.querySelector('.stop-start');
-var normalSceneFrame;
-var vrSceneFrame;
+const frameData = new VRFrameData();
+let vrDisplay;
+const btn = document.querySelector('.stop-start');
+let normalSceneFrame;
+let vrSceneFrame;
 
-var poseStatsBtn = document.querySelector('.pose-stats');
-var poseStatsSection = document.querySelector('section');
+const poseStatsBtn = document.querySelector('.pose-stats');
+const poseStatsSection = document.querySelector('section');
 poseStatsSection.style.visibility = 'hidden'; // hide it initially
 
-var posStats = document.querySelector('.pos');
-var orientStats = document.querySelector('.orient');
-var linVelStats = document.querySelector('.lin-vel');
-var linAccStats = document.querySelector('.lin-acc');
-var angVelStats = document.querySelector('.ang-vel');
-var angAccStats = document.querySelector('.ang-acc');
-var poseStatsDisplayed = false;
+const posStats = document.querySelector('.pos');
+const orientStats = document.querySelector('.orient');
+const linVelStats = document.querySelector('.lin-vel');
+const linAccStats = document.querySelector('.lin-acc');
+const angVelStats = document.querySelector('.ang-vel');
+const angAccStats = document.querySelector('.ang-acc');
+let poseStatsDisplayed = false;
 ```
 
 Let's briefly explain these:
@@ -99,7 +100,7 @@ Let's briefly explain these:
 - `vrDisplay` starts uninitialized, but will later on hold a reference to our VR headset ({{domxref("VRDisplay")}} — the central control object of the API).
 - `btn` and `poseStatsBtn` hold references to the two buttons we are using to control our app.
 - `normalSceneFrame` and `vrSceneFrame` start uninitialized, but later on will hold references to {{domxref("Window.requestAnimationFrame()")}} and {{domxref("VRDisplay.requestAnimationFrame()")}} calls — these will initiate the running of a normal rendering loop, and a special WebVR rendering loop; we'll explain the difference between these two later on.
-- The other variables store references to different parts of the VR pose data display box, which you can see in the bottom right hand corner of the UI.
+- The other variables store references to different parts of the VR pose data display box, which you can see in the bottom right-hand corner of the UI.
 
 ### Getting a reference to our VR display
 
@@ -187,8 +188,8 @@ We then do some simple math to calculate the total width of the VRDisplay render
 ```js
                 // Set the canvas size to the size of the vrDisplay viewport
 
-                var leftEye = vrDisplay.getEyeParameters('left');
-                var rightEye = vrDisplay.getEyeParameters('right');
+                const leftEye = vrDisplay.getEyeParameters('left');
+                const rightEye = vrDisplay.getEyeParameters('right');
 
                 canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
                 canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);
@@ -270,9 +271,9 @@ Now we retrieve the current {{domxref("VRPose")}} from the {{domxref("VRFrameDat
 ```js
   // You can get the position, orientation, etc. of the display from the current frame's pose
 
-  var curFramePose = frameData.pose;
-  var curPos = curFramePose.position;
-  var curOrient = curFramePose.orientation;
+  const curFramePose = frameData.pose;
+  const curPos = curFramePose.position;
+  const curOrient = curFramePose.orientation;
   if(poseStatsDisplayed) {
     displayPoseStats(curFramePose);
   }
@@ -292,8 +293,8 @@ We now render the view for both the left and right eyes. First of all we need to
   // WebVR: Create the required projection and view matrix locations needed
   // for passing into the uniformMatrix4fv methods below
 
-  var projectionMatrixLocation = gl.getUniformLocation(shaderProgram, "projMatrix");
-  var viewMatrixLocation = gl.getUniformLocation(shaderProgram, "viewMatrix");
+  const projectionMatrixLocation = gl.getUniformLocation(shaderProgram, "projMatrix");
+  const viewMatrixLocation = gl.getUniformLocation(shaderProgram, "viewMatrix");
 ```
 
 The next rendering step involves:
@@ -303,7 +304,7 @@ The next rendering step involves:
 - Running the `drawGeometry()` function, which renders the actual scene — because of what we specified in the previous two steps, we will render it for the left eye only.
 
 ```js
-  // WebVR: Render the left eye’s view to the left half of the canvas
+  // WebVR: Render the left eye's view to the left half of the canvas
   gl.viewport(0, 0, canvas.width * 0.5, canvas.height);
   gl.uniformMatrix4fv(projectionMatrixLocation, false, frameData.leftProjectionMatrix);
   gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.leftViewMatrix);
@@ -313,7 +314,7 @@ The next rendering step involves:
 We now do exactly the same thing, but for the right eye:
 
 ```js
-  // WebVR: Render the right eye’s view to the right half of the canvas
+  // WebVR: Render the right eye's view to the right half of the canvas
   gl.viewport(canvas.width * 0.5, 0, canvas.width * 0.5, canvas.height);
   gl.uniformMatrix4fv(projectionMatrixLocation, false, frameData.rightProjectionMatrix);
   gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.rightViewMatrix);
@@ -388,9 +389,9 @@ The next bit of the code has nothing to do with WebVR — it just updates the ro
 ```js
   // Update the rotation for the next draw, if it's time to do so.
 
-  var currentTime = (new Date).getTime();
+  let currentTime = (new Date).getTime();
   if (lastCubeUpdateTime) {
-    var delta = currentTime - lastCubeUpdateTime;
+    const delta = currentTime - lastCubeUpdateTime;
 
     cubeRotation += (30 * delta) / 1000.0;
   }
@@ -414,12 +415,12 @@ First of all, we store the six different property values obtainable from the {{d
 
 ```js
 function displayPoseStats(pose) {
-  var pos = pose.position;
-  var orient = pose.orientation;
-  var linVel = pose.linearVelocity;
-  var linAcc = pose.linearAcceleration;
-  var angVel = pose.angularVelocity;
-  var angAcc = pose.angularAcceleration;
+  const pos = pose.position;
+  const orient = pose.orientation;
+  const linVel = pose.linearVelocity;
+  const linAcc = pose.linearAcceleration;
+  const angVel = pose.angularVelocity;
+  const angAcc = pose.angularAcceleration;
 ```
 
 We then write out the data into the information box, updating it on every frame. We've clamped each value to three decimal places using [`toFixed()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed), as the values are hard to read otherwise.
@@ -450,9 +451,9 @@ You should note that we've used a conditional expression to detect whether the l
 
 The WebVR spec features a number of events that are fired, allowing our app code to react to changes in the state of the VR display (see [Window events](/en-US/docs/Web/API/WebVR_API#window_events)). For example:
 
-- {{event("vrdisplaypresentchange")}} — Fires when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.
-- {{event("vrdisplayconnect")}} — Fires when a compatible VR display has been connected to the computer.
-- {{event("vrdisplaydisconnect")}} — Fires when a compatible VR display has been disconnected from the computer.
+- {{domxref("Window/vrdisplaypresentchange_event", "vrdisplaypresentchange")}} — Fires when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.
+- {{domxref("Window.vrdisplayconnect_event", "vrdisplayconnect")}} — Fires when a compatible VR display has been connected to the computer.
+- {{domxref("Window.vrdisplaydisconnect_event", "vrdisplaydisconnect")}} — Fires when a compatible VR display has been disconnected from the computer.
 
 To demonstrate how they work, our simple demo includes the following example:
 

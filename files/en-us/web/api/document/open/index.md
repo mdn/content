@@ -1,6 +1,7 @@
 ---
 title: Document.open()
 slug: Web/API/Document/open
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -24,7 +25,7 @@ This does come with some side effects. For example:
 ## Syntax
 
 ```js
-document.open();
+open()
 ```
 
 ### Parameters
@@ -91,7 +92,7 @@ entry of the document being written to.
 
 This form is now obsolete; it won't throw an error, but instead just forwards to
 `document.open()` (i.e. is the equivalent of just running it with no
-arguments).  The history-replacement behavior now always happens.
+arguments).  The history-replacement behavior now always happens.
 
 ## Specifications
 

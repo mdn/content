@@ -25,7 +25,7 @@ A JavaScript date is fundamentally specified as the number of milliseconds that 
 
 > **Note:** It's important to keep in mind that while the time value at the heart of a Date object is UTC, the basic methods to fetch the date and time or its components all work in the local (i.e. host system) time zone and offset.
 
-It should be noted that the maximum `Date` is not of the same value as the maximum safe integer (`Number.MAX_SAFE_INTEGER` is 9,007,199,254,740,991). Instead, it is defined in ECMA-262 that a maximum of ±100,000,000 (one hundred million) days relative to January 1, 1970 UTC (that is, April 20, 271821 BCE \~ September 13, 275760 CE) can be represented by the standard `Date` object (equivalent to ±8,640,000,000,000,000 milliseconds).
+It should be noted that the maximum `Date` is not of the same value as the maximum safe integer (`Number.MAX_SAFE_INTEGER` is 9,007,199,254,740,991). Instead, it is defined in ECMA-262 that a maximum of ±100,000,000 (one hundred million) days relative to January 1, 1970 UTC (that is, April 20, 271821 BCE \~ September 13, 275760 CE) can be represented by the standard `Date` object (equivalent to ±8,640,000,000,000,000 milliseconds).
 
 ### Date format and time zone conversions
 
@@ -36,7 +36,7 @@ In addition to methods to read and alter individual components of the local date
 ## Constructor
 
 - {{jsxref("Date/Date", "Date()")}}
-  - : When called as a function, returns a string representation of the current date and time, exactly as `new Date().toString()` does.
+  - : When called as a function, returns a string representation of the current date and time. All arguments are ignored. The result is the same as executing `new Date().toString()`.
 - {{jsxref("Date/Date", "new Date()")}}
   - : When called as a constructor, returns a new `Date` object.
 
@@ -154,18 +154,34 @@ In addition to methods to read and alter individual components of the local date
 
 The following examples show several ways to create JavaScript dates:
 
-> **Note:** Parsing of date strings with the `Date` constructor (and `Date.parse`, they are equivalent) is strongly discouraged due to browser differences and inconsistencies.
+> **Note:** When parsing date strings with the `Date` constructor (and `Date.parse`, they are equivalent), always make sure that the input conforms to the [ISO 8601 format](https://tc39.es/ecma262/#sec-date-time-string-format) (`YYYY-MM-DDTHH:mm:ss.sssZ`) — the parsing behavior with other formats is implementation-defined and may not work across all browsers. A library can help if many different formats are to be accommodated.
 
 ```js
-let today = new Date()
-let birthday = new Date('December 17, 1995 03:24:00')
-let birthday = new Date('1995-12-17T03:24:00')
-let birthday = new Date(1995, 11, 17)            // the month is 0-indexed
-let birthday = new Date(1995, 11, 17, 3, 24, 0)
-let birthday = new Date(628021800000)            // passing epoch timestamp
+const today = new Date()
+const birthday = new Date('December 17, 1995 03:24:00') // DISCOURAGED: may not work in all runtimes
+const birthday = new Date('1995-12-17T03:24:00')   // This is ISO8601-compliant and will work reliably
+const birthday = new Date(1995, 11, 17)            // the month is 0-indexed
+const birthday = new Date(1995, 11, 17, 3, 24, 0)
+const birthday = new Date(628021800000)            // passing epoch timestamp
 ```
 
-###  To get Date, Month and Year or Time
+### Formats of toString method return values
+
+```js
+const date = new Date("2020-05-12T23:50:21.817Z");
+date.toString()               // Tue May 12 2020 18:50:21 GMT-0500 (Central Daylight Time)
+date.toDateString()           // Tue May 12 2020
+date.toTimeString()           // 18:50:21 GMT-0500 (Central Daylight Time)
+date.toISOString()            // 2020-05-12T23:50:21.817Z
+date.toUTCString()            // Tue, 12 May 2020 23:50:21 GMT
+date.toGMTString()            // Tue, 12 May 2020 23:50:21 GMT
+date.toJSON()                 // 2020-05-12T23:50:21.817Z
+date.toLocaleString()         // 5/12/2020, 6:50:21 PM
+date.toLocaleDateString()     // 5/12/2020
+date.toLocaleTimeString()     // 6:50:21 PM
+```
+
+### To get Date, Month and Year or Time
 
 ```js
 const date = new Date();

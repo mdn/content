@@ -32,9 +32,11 @@ You can style visited links, but there are limits to which styles you can use. O
 - {{ cssxref("border-color") }} (and its sub-properties)
 - {{ cssxref("column-rule-color") }}
 - {{ cssxref("outline-color") }}
+- {{ cssxref("text-decoration-color") }}
+- {{ cssxref("text-emphasis-color") }}
 - The color parts of the {{SVGAttr("fill")}} and {{SVGAttr("stroke")}} attributes
 
-In addition, even for the above styles, you won't be able to change the transparency between unvisited and visited links, as you otherwise would be able to using [`rgba()`](</en-US/docs/Web/CSS/color_value#rgba()>), [`hsla()`](</en-US/docs/Web/CSS/color_value#hsla()>), or the [`transparent`](/en-US/docs/Web/CSS/color_value#transparent_keyword) keyword.
+In addition, even for the above styles, you won't be able to change the transparency between unvisited and visited links, as you otherwise would be able to using [`rgba()`](/en-US/docs/Web/CSS/color_value/rgba), [`hsla()`](/en-US/docs/Web/CSS/color_value/hsla), or the [`transparent`](/en-US/docs/Web/CSS/color_value#transparent_keyword) keyword.
 
 Here is an example of how to use styles with the aforementioned restrictions:
 
@@ -62,6 +64,6 @@ Overall, these restrictions shouldn't affect web developers too significantly. T
 
 ## See also
 
-- [privacy-related changes coming to CSS :visited](http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) on Mozilla Hacks
-- [Plugging the CSS History Leak](http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/) on the Mozilla Security Blog
-- [Preventing attacks on a user's history through CSS :visited selectors](http://dbaron.org/mozilla/visited-privacy)
+- [privacy-related changes coming to CSS :visited](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) on Mozilla Hacks
+- [Plugging the CSS History Leak](https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/) on the Mozilla Security Blog
+- [Preventing attacks on a user's history through CSS :visited selectors](https://dbaron.org/mozilla/visited-privacy)

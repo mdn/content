@@ -1,6 +1,7 @@
 ---
 title: 'HTMLTrackElement: cuechange event'
 slug: Web/API/HTMLTrackElement/cuechange_event
+page-type: web-api-event
 tags:
   - API
   - Accessibility
@@ -62,7 +63,7 @@ let textTrackElem = document.getElementById("texttrack");
 
 textTrackElem.oncuechange = event => {
   let cues = event.target.track.activeCues;
-});
+};
 ```
 
 ## Specifications

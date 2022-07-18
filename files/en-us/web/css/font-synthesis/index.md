@@ -13,6 +13,8 @@ browser-compat: css.properties.font-synthesis
 
 The **`font-synthesis`** [CSS](/en-US/docs/Web/CSS) property controls which missing typefaces, bold, italic, or small-caps, may be synthesized by the browser.
 
+{{EmbedInteractiveExample("pages/css/font-synthesis.html")}}
+
 ## Syntax
 
 ```css
@@ -26,6 +28,7 @@ font-synthesis: weight style small-caps;
 font-synthesis: inherit;
 font-synthesis: initial;
 font-synthesis: revert;
+font-synthesis: revert-layer;
 font-synthesis: unset;
 ```
 
@@ -68,13 +71,13 @@ Most standard Western fonts include italic and bold variants, and some fonts inc
 
 ```css
 em {
-  font-weight: bold;
+  font-weight: bold;
 }
 .syn {
-  font-synthesis: style weight small-caps;
+  font-synthesis: style weight small-caps;
 }
 .no-syn {
-  font-synthesis: none;
+  font-synthesis: none;
 }
 ```
 

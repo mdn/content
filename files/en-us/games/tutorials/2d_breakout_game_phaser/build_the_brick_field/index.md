@@ -36,12 +36,12 @@ Next, let's load the image of the brick — add the following `load.image()` cal
 
 ```js
 function preload() {
-    // ...
+    // …
     game.load.image('brick', 'img/brick.png');
 }
 ```
 
-You also need to [grab the brick image from Github](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/brick.png) and save it in your `/img` directory.
+You also need to [grab the brick image from GitHub](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/brick.png) and save it in your `/img` directory.
 
 ## Drawing the bricks
 
@@ -49,12 +49,12 @@ We will place all the code for drawing the bricks inside an `initBricks` functio
 
 ```js
 function create(){
-    // ...
+    // …
     initBricks();
 }
 ```
 
-Now onto the function itself. Add the `initBricks()` function at the end of our games code, just before the closing \</script> tag, as shown below. To begin with we've included the  `brickInfo` object, as this will come in handy very soon:
+Now onto the function itself. Add the `initBricks()` function at the end of our games code, just before the closing \</script> tag, as shown below. To begin with we've included the  `brickInfo` object, as this will come in handy very soon:
 
 ```js
 function initBricks() {
@@ -117,7 +117,7 @@ var brickX = (c*(brickInfo.width+brickInfo.padding))+brickInfo.offset.left;
 var brickY = (r*(brickInfo.height+brickInfo.padding))+brickInfo.offset.top;
 ```
 
-Each `brickX` position is worked out as `brickInfo.width` plus `brickInfo.padding`, multiplied by the column number, `c`, plus the `brickInfo.offset.left`; the logic for the `brickY` is identical except that it uses the values for row number, `r`, `brickInfo.height`, and `brickInfo.offset.top`. Now every single brick can be placed in its correct place, with padding between each brick, and drawn at an offset from the left and top Canvas edges.
+Each `brickX` position is worked out as `brickInfo.width` plus `brickInfo.padding`, multiplied by the column number, `c`, plus the `brickInfo.offset.left`; the logic for the `brickY` is identical except that it uses the values for row number, `r`, `brickInfo.height`, and `brickInfo.offset.top`. Now every single brick can be placed in its correct place, with padding between each brick, and drawn at an offset from the left and top Canvas edges.
 
 ## Checking the initBricks() code
 

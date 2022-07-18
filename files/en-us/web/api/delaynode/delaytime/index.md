@@ -1,6 +1,7 @@
 ---
 title: DelayNode.delayTime
 slug: Web/API/DelayNode/delayTime
+page-type: web-api-instance-property
 tags:
   - API
   - DelayNode
@@ -16,21 +17,13 @@ The `delayTime` property of the {{ domxref("DelayNode") }} interface is an [a-ra
 
 `delayTime` is expressed in seconds, its minimal value is `0`, and its maximum value is defined by the `maxDelayTime` argument of the {{domxref("BaseAudioContext.createDelay")}} method that created it.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var myDelay = audioCtx.createDelay(5.0);
-myDelay.delayTime.value = 3.0;
-```
-
 > **Note:** Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.
 
-### Value
+## Value
 
 An {{domxref("AudioParam")}}.
 
-## Example
+## Examples
 
 See [`BaseAudioContext.createDelay()`](/en-US/docs/Web/API/BaseAudioContext/createDelay#example) for example code.
 

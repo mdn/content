@@ -1,6 +1,6 @@
 ---
 title: Forms
-slug: Web/Accessibility/ARIA/forms 
+slug: Web/Accessibility/ARIA/forms
 tags:
   - ARIA
   - Accessibility

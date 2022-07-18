@@ -1,6 +1,7 @@
 ---
 title: Document.body
 slug: Web/API/Document/body
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -15,14 +16,15 @@ The **`Document.body`** property represents the
 {{HTMLElement("body")}} or {{HTMLElement("frameset")}} node of the current document, or
 `null` if no such element exists.
 
-## Syntax
+## Value
 
-```js
-const objRef = document.body
-document.body = objRef
-```
+One of the followings:
 
-## Example
+- {{HTMLElement("body")}}
+- {{HTMLElement("frameset")}}
+- `null`
+
+## Examples
 
 ```js
 // Given this HTML: <body id="oldBodyElement"></body>

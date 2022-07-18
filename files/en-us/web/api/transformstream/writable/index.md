@@ -1,6 +1,7 @@
 ---
 title: TransformStream.writable
 slug: Web/API/TransformStream/writable
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,13 +14,7 @@ browser-compat: api.TransformStream.writable
 
 The **`writable`** read-only property of the {{domxref("TransformStream")}} interface returns the {{domxref("WritableStream")}} instance controlled by this `TransformStream`.
 
-## Syntax
-
-```js
-let writable = TransformStream.writable;
-```
-
-### Value
+## Value
 
 A {{domxref("WritableStream")}}.
 

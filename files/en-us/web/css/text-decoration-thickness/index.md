@@ -15,6 +15,8 @@ browser-compat: css.properties.text-decoration-thickness
 
 The **`text-decoration-thickness`** [CSS](/en-US/docs/Web/CSS) property sets the stroke thickness of the decoration line that is used on text in an element, such as a line-through, underline, or overline.
 
+{{EmbedInteractiveExample("pages/css/text-decoration-thickness.html")}}
+
 ## Syntax
 
 ```css
@@ -33,6 +35,7 @@ text-decoration-thickness: 10%;
 text-decoration-thickness: inherit;
 text-decoration-thickness: initial;
 text-decoration-thickness: revert;
+text-decoration-thickness: revert-layer;
 text-decoration-thickness: unset;
 ```
 

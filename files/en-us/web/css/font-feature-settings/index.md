@@ -31,6 +31,7 @@ font-feature-settings: "smcp", "swsh" 2;
 font-feature-settings: inherit;
 font-feature-settings: initial;
 font-feature-settings: revert;
+font-feature-settings: revert-layer;
 font-feature-settings: unset;
 ```
 
@@ -44,7 +45,7 @@ These lead to more effective, predictable, understandable results than `font-fea
   - : Text is laid out using default settings.
 - `<feature-tag-value>`
   - : When rendering text, the list of OpenType feature tag value is passed to the text layout engine to enable or disable font features. The tag is always a {{cssxref("&lt;string&gt;")}} of 4 ASCII characters. If it has more or less characters, or if it contains characters outside the `U+20` – `U+7E` codepoint range, the whole property is invalid.
-    The value is a positive integer. The two keywords `on` and `off` are synonyms for `1` and `0` respectively. If no value is set, the default is `1`. For non-Boolean OpenType features (e.g. [stylistic alternates](https://www.microsoft.com/typography/otspec/features_pt.htm#salt)), the value implies a particular glyph to be selected; for Boolean values, it is a switch.
+    The value is a positive integer. The two keywords `on` and `off` are synonyms for `1` and `0` respectively. If no value is set, the default is `1`. For non-Boolean OpenType features (e.g. [stylistic alternates](https://docs.microsoft.com/en-us/typography/opentype/spec/features_pt)), the value implies a particular glyph to be selected; for Boolean values, it is a switch.
 
 ## Formal definition
 
@@ -110,4 +111,4 @@ td.tabular { font-feature-settings: "tnum"; }
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/src", "src")}}
 - {{cssxref("@font-face/unicode-range", "unicode-range")}}
-- [OpenType Feature Tags](https://docs.microsoft.com/typography/opentype/spec/featurelist) list
+- [OpenType Feature Tags](https://docs.microsoft.com/en-us/typography/opentype/spec/featurelist) list

@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognition.maxAlternatives
 slug: Web/API/SpeechRecognition/maxAlternatives
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -27,8 +28,7 @@ A number representing the maximum returned alternatives for each result.
 
 ## Examples
 
-This code is excerpted from our [Speech
-color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) example.
+This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 var grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
@@ -41,7 +41,7 @@ recognition.lang = 'en-US';
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 
-...
+// ...
 ```
 
 ## Specifications

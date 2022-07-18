@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.createImageData()
 slug: Web/API/CanvasRenderingContext2D/createImageData
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -18,8 +19,8 @@ specified dimensions. All of the pixels in the new object are transparent black.
 ## Syntax
 
 ```js
-ImageData ctx.createImageData(width, height);
-ImageData ctx.createImageData(imagedata);
+createImageData(width, height)
+createImageData(imagedata)
 ```
 
 ### Parameters
@@ -106,8 +107,7 @@ ctx.putImageData(imageData, 20, 20);
 ### More examples
 
 For more examples using `createImageData()` and the `ImageData`
-object, see [Pixel
-manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas) and {{domxref("ImageData.data")}}.
+object, see [Pixel manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas) and {{domxref("ImageData.data")}}.
 
 ## Specifications
 
@@ -121,5 +121,4 @@ manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipula
 
 - The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("ImageData")}}
-- [Pixel
-  manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
+- [Pixel manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)

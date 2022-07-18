@@ -15,7 +15,7 @@ destroyed to improve in memory usage and to prevent memory leaks.
 
 ## Message
 
-```js
+```
 TypeError: can't access dead object
 ```
 
@@ -30,8 +30,8 @@ keep strong references to DOM objects after their parent document has been destr
 dead object, is holding a strong (keep alive) reference to a DOM element that persists
 even after it was destroyed in the DOM. To avoid these issues, references to DOM nodes
 in foreign document should instead be stored in an object which is specific to that
-document, and cleaned up when the document is unloaded, or stored as [weak
-references](/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.getWeakReference).
+document, and cleaned up when the document is unloaded, or stored as
+[weak references](/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.getWeakReference).
 
 ## Examples
 
@@ -60,9 +60,7 @@ catch (e) {
 
 ## See also
 
-- [What
-  does “can’t access dead object” mean?](https://blog.mozilla.org/addons/2012/09/12/what-does-cant-access-dead-object-mean/)
-- [Common
-  causes of memory leaks in extensions](/en-US/docs/Extensions/Common_causes_of_memory_leaks_in_extensions)
+- [What does "can't access dead object" mean?](https://blog.mozilla.org/addons/2012/09/12/what-does-cant-access-dead-object-mean/)
+- [Common causes of memory leaks in extensions](/en-US/docs/Extensions/Common_causes_of_memory_leaks_in_extensions)
 - [Components.utils](/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils)
 - [Zombie Compartments](/en-US/docs/Mozilla/Zombie_compartments)

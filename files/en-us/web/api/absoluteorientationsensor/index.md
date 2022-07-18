@@ -1,6 +1,7 @@
 ---
 title: AbsoluteOrientationSensor
 slug: Web/API/AbsoluteOrientationSensor
+page-type: web-api-interface
 tags:
   - API
   - AbsoluteOrientationSensor
@@ -75,7 +76,7 @@ Promise.all([navigator.permissions.query({ name: "accelerometer" }),
        .then(results => {
          if (results.every(result => result.state === "granted")) {
            sensor.start();
-           ...
+           // …
          } else {
            console.log("No permissions to use AbsoluteOrientationSensor.");
          }

@@ -1,6 +1,7 @@
 ---
 title: PeriodicWave()
 slug: Web/API/PeriodicWave/PeriodicWave
+page-type: web-api-constructor
 tags:
   - API
   - Audio
@@ -18,7 +19,8 @@ The **`PeriodicWave()`** constructor of the [Web Audio API](/en-US/docs/Web/API/
 ## Syntax
 
 ```js
-var myWave = new PeriodicWave(context, options);
+new PeriodicWave(context)
+new PeriodicWave(context, options)
 ```
 
 ### Parameters
@@ -34,49 +36,52 @@ var myWave = new PeriodicWave(context, options);
     have (It also inherits the options defined in the [PeriodicWaveConstraints](https://webaudio.github.io/web-audio-api/#idl-def-PeriodicWaveConstraints)
     dictionary.):
 
-    - `real`: A {{jsxref("Float32Array")}} containing the cosine terms
-      that you want to use to form the wave (equivalent to the `real`
-      parameter of {{domxref("BaseAudioContext.createPeriodicWave")}}).
-    - `imag`: A {{jsxref("Float32Array")}} containing the sine terms that
-      you want to use to form the wave (equivalent to the `imag` parameter of
-      {{domxref("BaseAudioContext.createPeriodicWave")}}).
-    - `channelCount`: Represents an integer used to determine how many channels are used when [up-mixing
-      and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. (See
-      {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
-      definition depend on the value of `channelCountMode`.
-    - `channelCountMode`: Represents an enumerated value describing the way channels must be matched between
-      the node's inputs and outputs. (See {{domxref("AudioNode.channelCountMode")}} for more
-      information including default values.)
-    - `channelInterpretation`: Represents an enumerated value describing the meaning of the channels. This
-      interpretation will define how audio [up-mixing
-      and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
-      The possible values are `"speakers"` or `"discrete"`. (See
-      {{domxref("AudioNode.channelCountMode")}} for more information including default
-      values.)
+    - `real`
+      - : A {{jsxref("Float32Array")}} containing the cosine terms
+        that you want to use to form the wave (equivalent to the `real`
+        parameter of {{domxref("BaseAudioContext.createPeriodicWave")}}).
+    - `imag`
+      - : A {{jsxref("Float32Array")}} containing the sine terms that
+        you want to use to form the wave (equivalent to the `imag` parameter of
+        {{domxref("BaseAudioContext.createPeriodicWave")}}).
+    - `channelCount`
+      - : Represents an integer used to determine how many channels are used when [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. (See
+        {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
+        definition depend on the value of `channelCountMode`.
+    - `channelCountMode`
+      - : Represents an enumerated value describing the way channels must be matched between
+        the node's inputs and outputs. (See {{domxref("AudioNode.channelCountMode")}} for more
+        information including default values.)
+    - `channelInterpretation`
+      - : Represents an enumerated value describing the meaning of the channels. This
+        interpretation will define how audio [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
+        The possible values are `"speakers"` or `"discrete"`. (See
+        {{domxref("AudioNode.channelCountMode")}} for more information including default
+        values.)
 
 ### Return value
 
 A new {{domxref("PeriodicWave")}} object instance.
 
-## Example
+## Examples
 
 ```js
-var real = new Float32Array(2);
-var imag = new Float32Array(2);
-var ac = new AudioContext();
+const real = new Float32Array(2);
+const imag = new Float32Array(2);
+const ac = new AudioContext();
 
 real[0] = 0;
 imag[0] = 0;
 real[1] = 1;
 imag[1] = 0;
 
-var options = {
+const options = {
   real : real,
   imag : imag,
   disableNormalization : false
 }
 
-var wave = new PeriodicWave(ac, options);
+const wave = new PeriodicWave(ac, options);
 ```
 
 ## Specifications

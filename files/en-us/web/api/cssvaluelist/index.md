@@ -1,6 +1,7 @@
 ---
 title: CSSValueList
 slug: Web/API/CSSValueList
+page-type: web-api-interface
 tags:
   - API
   - CSSOM
@@ -32,7 +33,7 @@ The items in the `CSSValueList` are accessible via an integral index, starting f
 
 _Inherits properties from its parent, {{DOMxRef("CSSValue")}}_.
 
-- {{DOMxRef("CSSValueList.length")}}{{ReadOnlyInline}}
+- {{DOMxRef("CSSValueList.length")}} {{ReadOnlyInline}}
   - : An `unsigned long` representing the number of `CSSValues` in the list.
 
 ## Methods
@@ -42,7 +43,7 @@ _Inherits properties from its parent, {{DOMxRef("CSSValue")}}_.
 
 ## Specifications
 
-This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) specification, but has been dropped from any
 standardization effort since then.
 
 It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.

@@ -31,17 +31,6 @@ The `<textarea>` element also accepts several attributes common to form `<input>
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("autocapitalize")}} {{non-standard_inline}}
-
-  - : This is a non-standard attribute supported by WebKit on iOS (therefore nearly all browsers running on iOS, including Safari, Firefox, and Chrome), which controls whether and how the text value should be automatically capitalized as it is entered/edited by the user. The non-deprecated values are available in iOS 5 and later. Possible values are:
-
-    - `none`: Completely disables automatic capitalization.
-    - `sentences`: Automatically capitalize the first letter of sentences.
-    - `words`: Automatically capitalize the first letter of words.
-    - `characters`: Automatically capitalize all characters.
-    - `on`: {{deprecated_inline}} Deprecated since iOS 5.
-    - `off`: {{deprecated_inline}} Deprecated since iOS 5.
-
 - {{htmlattrdef("autocomplete")}}
 
   - : This attribute indicates whether the value of the control can be automatically completed by the browser. Possible values are:
@@ -85,7 +74,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - {{ htmlattrdef("required") }}
   - : This attribute specifies that the user must fill in a value before submitting a form.
 - {{ htmlattrdef("rows") }}
-  - : The number of visible text lines for the control.
+  - : The number of visible text lines for the control. If it is specified, it must be a positive integer. If it is not specified, the default value is 2.
 - {{ htmlattrdef("spellcheck") }}
 
   - : Specifies whether the `<textarea>` is subject to spell checking by the underlying browser/OS. The value can be:
@@ -120,7 +109,7 @@ In most browsers, `<textarea>`s are resizable — you'll notice the drag handle 
 
 ```html
 textarea {
-  resize: none;
+  resize: none;
 }
 ```
 
@@ -183,7 +172,7 @@ This example has a placeholder set. Notice how it disappears when you start typi
 
 This example shows two `<textarea>`s — one of which is `disabled`, and one of which is `readonly`. Have a play with both and you'll see the difference in behavior — the `disabled` element is not selectable in any way (and its value is not submitted), whereas the `readonly` element is selectable and its contents copyable (and its value is submitted); you just can't edit the contents.
 
-> **Note:** In browsers other than firefox, such as chrome, the `disabled` textarea content may be selectable and copyable.
+> **Note:** In browsers other than Firefox, such as chrome, the `disabled` textarea content may be selectable and copyable.
 
 ```html
 <textarea name="textarea"

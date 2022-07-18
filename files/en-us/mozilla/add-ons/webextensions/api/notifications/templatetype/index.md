@@ -27,9 +27,9 @@ Values of this type are strings. Possible values are:
 
   - a title (`NotificationOptions.title`)
   - a message (`NotificationOptions.message`)
-  - an icon (`NotificationOptions.iconUrl`){{optional_inline}}
-  - an extra message (`NotificationOptions.contextMessage`){{optional_inline}}
-  - up to two buttons (`NotificationOptions.buttons`){{optional_inline}}
+  - an icon (`NotificationOptions.iconUrl`) {{optional_inline}}
+  - an extra message (`NotificationOptions.contextMessage`) {{optional_inline}}
+  - up to two buttons (`NotificationOptions.buttons`) {{optional_inline}}
 
 - `"image"`: everything in `"basic"` and also:
 
@@ -51,6 +51,6 @@ Currently Firefox only supports "basic" here.
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications) API.
+> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

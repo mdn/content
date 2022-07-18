@@ -32,7 +32,7 @@ When writing web pages and apps, one of the most common things you'll want to do
       <th scope="row">Objective:</th>
       <td>
         To gain familiarity with the core DOM APIs, and the other APIs commonly
-        associated with DOM and document manipulation
+        associated with DOM and document manipulation.
       </td>
     </tr>
   </tbody>
@@ -56,7 +56,7 @@ In this article we'll focus mostly on manipulating the document, but we'll show 
 
 The document currently loaded in each one of your browser tabs is represented by a document object model. This is a "tree structure" representation created by the browser that enables the HTML structure to be easily accessed by programming languages — for example the browser itself uses it to apply styling and other information to the correct elements as it renders a page, and developers like you can manipulate the DOM with JavaScript after the page has been rendered.
 
-We have created a simple example page at [dom-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example.html) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example.html)). Try opening this up in your browser — it is a very simple page containing a {{htmlelement("section")}} element inside which you can find an image, and a paragraph with a link inside. The HTML source code looks like this:
+We have created a simple example page at [dom-example.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example.html) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example.html)). Try opening this up in your browser — it is a very simple page containing a {{htmlelement("section")}} element inside which you can find an image, and a paragraph with a link inside. The HTML source code looks like this:
 
 ```html
 <!DOCTYPE html>
@@ -80,15 +80,15 @@ The DOM on the other hand looks like this:
 
 > **Note:** This DOM tree diagram was created using Ian Hickson's [Live DOM viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/).
 
-You can see here that each element and bit of text in the document has its own entry in the tree — each one is called a **node**. You will also encounter various terms used to describe the type of node, and their position in the tree in relation to one another:
+Each entry in the tree is called a **node**. You can see in the diagram above that some nodes represent elements (identified as `HTML`, `HEAD`, `META` and so on) and others represent text (identified as `#text`). There are [other types of nodes as well](/en-US/docs/Web/API/Node/nodeType), but these are the main ones you'll encounter.
 
-- **Element node**: An element, as it exists in the DOM.
+Nodes are also referred to by their position in the tree relative to other nodes:
+
 - **Root node**: The top node in the tree, which in the case of HTML is always the `HTML` node (other markup vocabularies like SVG and custom XML will have different root elements).
 - **Child node**: A node _directly_ inside another node. For example, `IMG` is a child of `SECTION` in the above example.
 - **Descendant node**: A node _anywhere_ inside another node. For example, `IMG` is a child of `SECTION` in the above example, and it is also a descendant. `IMG` is not a child of `BODY`, as it is two levels below it in the tree, but it is a descendant of `BODY`.
 - **Parent node**: A node which has another node inside it. For example, `BODY` is the parent node of `SECTION` in the above example.
 - **Sibling nodes**: Nodes that sit on the same level in the DOM tree. For example, `IMG` and `P` are siblings in the above example.
-- **Text node**: A node containing a text string.
 
 It is useful to familiarize yourself with this terminology before working with the DOM, as a number of the code terms you'll come across make use of them. You may have also come across them if you have studied CSS (e.g. descendant selector, child selector).
 
@@ -96,7 +96,7 @@ It is useful to familiarize yourself with this terminology before working with t
 
 To start learning about DOM manipulation, let's begin with a practical example.
 
-1. Take a local copy of the [dom-example.html page](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example.html) and the [image](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dinosaur.png) that goes along with it.
+1. Take a local copy of the [dom-example.html page](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example.html) and the [image](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dinosaur.png) that goes along with it.
 2. Add a `<script></script>` element just above the closing `</body>` tag.
 3. To manipulate an element inside the DOM, you first need to select it and store a reference to it inside a variable. Inside your script element, add the following line:
 
@@ -116,7 +116,7 @@ To start learning about DOM manipulation, let's begin with a practical example.
     link.href = 'https://developer.mozilla.org';
     ```
 
-Note that, as with many things in JavaScript, there are many ways to select an element and store a reference to it in a variable. {{domxref("Document.querySelector()")}} is the recommended modern approach, which is convenient because it allows you to select elements using CSS selectors. The above `querySelector()` call will match the first {{htmlelement("a")}} element that appears in the document. If you wanted to match and do things to multiple elements, you could use {{domxref("Document.querySelectorAll()")}}, which matches every element in the document that matches the selector, and stores references to them in an [array](/en-US/docs/Learn/JavaScript/First_steps/Arrays)-like object called a {{domxref("NodeList")}}.
+Note that, as with many things in JavaScript, there are many ways to select an element and store a reference to it in a variable. {{domxref("Document.querySelector()")}} is the recommended modern approach. It is convenient because it allows you to select elements using CSS selectors. The above `querySelector()` call will match the first {{htmlelement("a")}} element that appears in the document. If you wanted to match and do things to multiple elements, you could use {{domxref("Document.querySelectorAll()")}}, which matches every element in the document that matches the selector, and stores references to them in an [array](/en-US/docs/Learn/JavaScript/First_steps/Arrays)-like object called a {{domxref("NodeList")}}.
 
 There are older methods available for grabbing element references, such as:
 
@@ -213,7 +213,7 @@ The first way is to add inline styles directly onto elements you want to dynamic
     para.style.textAlign = 'center';
     ```
 
-2. Reload the page and you'll see that the styles have been applied to the paragraph. If you look at that paragraph in your browser's [Page Inspector/DOM inspector](/en-US/docs/Tools/Page_Inspector), you'll see that these lines are indeed adding inline styles to the document:
+2. Reload the page and you'll see that the styles have been applied to the paragraph. If you look at that paragraph in your browser's [Page Inspector/DOM inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), you'll see that these lines are indeed adding inline styles to the document:
 
     ```html
     <p style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;">We hope you enjoyed the ride.</p>
@@ -250,50 +250,13 @@ Which method you choose is up to you; both have their advantages and disadvantag
 
 At this point, we haven't really done anything useful! There is no point using JavaScript to create static content — you might as well just write it into your HTML and not use JavaScript. It is more complex than HTML, and creating your content with JavaScript also has other issues attached to it (such as not being readable by search engines).
 
-In the next couple of sections we will look at a couple of more practical uses of DOM APIs.
+In the next section we will look at a more practical use of DOM APIs.
 
-> **Note:** You can find our [finished version of the dom-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example-manipulated.html) demo on GitHub ([see it live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html)).
-
-## Active learning: Getting useful information from the Window object
-
-So far we've only really looked at using {{domxref("Node")}} and {{domxref("Document")}} features to manipulate documents, but there is no reason why you can't get data from other sources and use it in your UI. You just have to make sure your data is in the right format; JavaScript makes it easier than many other languages, being weakly typed — for example numbers will convert to strings automatically when you want to print them to the screen.
-
-In this example we will solve a common problem — making sure your application is as big as the window it is viewed in, whatever size it is. This is often useful in situations like games, where you want to use as much of the screen area as possible to play the game in.
-
-To start with, make a local copy of our [window-resize-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/window-resize-example.html) and [bgtile.png](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/bgtile.png) demo files. Open it and have a look — you'll see that we've got a {{htmlelement("div")}} element covering a small part of the screen, which has got a background tile applied to it. We'll use that to represent our app UI area.
-
-1. First of all, let's grab a reference to the div, and then grab the width and height of the viewport (the inner window, where your document is displayed) and store them in variables — these two values are handily contained in the {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}} properties. Add the following lines inside the existing {{htmlelement("script")}} element:
-
-    ```js
-    const div = document.querySelector('div');
-    let winWidth = window.innerWidth;
-    let winHeight = window.innerHeight;
-    ```
-
-2. Next, we'll dynamically alter the width and height of the div to equal that of the viewport. Add the following two lines below your first ones:
-
-    ```js
-    div.style.width = winWidth + 'px';
-    div.style.height = winHeight + 'px';
-    ```
-
-3. Save and try refreshing your browser — you should now see the div become as big as your viewport, whatever size of screen your are using. If you now try resizing your window to make it bigger, you'll see that the div stays the same size — we are only setting it once.
-4. How about we use an event so that the div resizes as we resize the window? The {{domxref("Window")}} object has an event available on it called resize, which is fired every time the window is resized — let's access that via the {{domxref("GlobalEventHandlers/onresize", "Window.onresize")}} event handler and rerun our sizing code each time it changes. Add the following to the bottom of your code:
-
-    ```js
-    window.onresize = function() {
-      winWidth = window.innerWidth;
-      winHeight = window.innerHeight;
-      div.style.width = winWidth + 'px';
-      div.style.height = winHeight + 'px';
-    }
-    ```
-
-> **Note:** If you get stuck, have a look at our [finished window resize example](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/window-resize-example-finished.html) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/window-resize-example-finished.html)).
+> **Note:** You can find our [finished version of the dom-example.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example-manipulated.html) demo on GitHub ([see it live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html)).
 
 ## Active learning: A dynamic shopping list
 
-To round off the article, we'd like to set you a little challenge — we want to make a simple shopping list example that allows you to dynamically add items to the list using a form input and button. When you add an item to the input and press the button:
+In this challenge we want to make a simple shopping list example that allows you to dynamically add items to the list using a form input and button. When you add an item to the input and press the button:
 
 - The item should appear in the list.
 - Each item should be given a button that can be pressed to delete that item off the list.
@@ -305,7 +268,7 @@ The finished demo will look something like this:
 
 To complete the exercise, follow the steps below, and make sure that the list behaves as described above.
 
-1. To start with, download a copy of our [shopping-list.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list.html) starting file and make a copy of it somewhere. You'll see that it has some minimal CSS, a list with a label, input, and button, and an empty list and {{htmlelement("script")}} element. You'll be making all your additions inside the script.
+1. To start with, download a copy of our [shopping-list.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list.html) starting file and make a copy of it somewhere. You'll see that it has some minimal CSS, a div with a label, input, and button, and an empty list and {{htmlelement("script")}} element. You'll be making all your additions inside the script.
 2. Create three variables that hold references to the list ({{htmlelement("ul")}}), {{htmlelement("input")}}, and {{htmlelement("button")}} elements.
 3. Create a [function](/en-US/docs/Learn/JavaScript/Building_blocks/Functions) that will run in response to the button being clicked.
 4. Inside the function body, start off by storing the current [value](/en-US/docs/Web/API/HTMLInputElement#properties) of the input element in a variable.
@@ -317,7 +280,7 @@ To complete the exercise, follow the steps below, and make sure that the list be
 10. Attach an event handler to the delete button, so that when clicked it will delete the entire list item it is inside.
 11. Finally, use the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method to focus the input element ready for entering the next shopping list item.
 
-> **Note:** If you get really stuck, have a look at our [finished shopping list](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list-finished.html) ([see it running live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html).)
+> **Note:** If you get really stuck, have a look at our [finished shopping list](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list-finished.html) ([see it running live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html).)
 
 ## Summary
 

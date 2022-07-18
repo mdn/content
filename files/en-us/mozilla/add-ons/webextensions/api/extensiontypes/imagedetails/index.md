@@ -21,11 +21,11 @@ Details about the format, quality, area and scale of a captured image.
 
 Values of this type are objects. They contain the following properties:
 
-- `format`{{optional_inline}}
+- `format` {{optional_inline}}
   - : {{WebExtAPIRef('extensionTypes.ImageFormat')}}. The format of the resulting image. Default is `"png"`.
-- `quality`{{optional_inline}}
+- `quality` {{optional_inline}}
   - : `integer`. When format is `"jpeg"`, this controls the quality of the resulting image. It is a number between 0 and 100, which is converted to a value between 0 and 1 and then used as the `encoderOptions` argument to [`HTMLCanvasElement.toDataURL()`](/en-US/docs/Web/API/HTMLCanvasElement/toDataURL). If it is omitted, 92 is used. As quality is decreased, the resulting image will have more visual artifacts, and the number of bytes needed to store it will decrease. This value is ignored for PNG images.
-- `rect`{{optional_inline}}
+- `rect` {{optional_inline}}
 
   - : An `object` specifying the area of the document to capture, in CSS pixels, relative to the page. All properties default to `0`. The properties are:
 
@@ -34,9 +34,9 @@ Values of this type are objects. They contain the following properties:
     - `width`: The width of the rectangle.
     - `height`: The height of the rectangle.
 
-    This option was introduced in Firefox 82.  If omitted, the currently visible viewport is captured.
+    This option was introduced in Firefox 82.  If omitted, the currently visible viewport is captured.
 
-- `scale`{{optional_inline}}
+- `scale` {{optional_inline}}
   - : `number`. The scale to render at, defaults to [`devicePixelRatio`](/en-US/docs/Web/API/Window/devicePixelRatio). This option was introduced in Firefox 82.
 
 ## Browser compatibility
@@ -45,7 +45,7 @@ Values of this type are objects. They contain the following properties:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.extensionTypes`](https://developer.chrome.com/extensions/extensionTypes#type-ImageDetails) API. This documentation is derived from [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.extensionTypes`](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-ImageDetails) API. This documentation is derived from [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

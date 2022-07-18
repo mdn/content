@@ -1,6 +1,7 @@
 ---
 title: CSSKeyframeRule
 slug: Web/API/CSSKeyframeRule
+page-type: web-api-interface
 tags:
   - API
   - CSS Animations
@@ -11,7 +12,7 @@ browser-compat: api.CSSKeyframeRule
 ---
 {{APIRef("CSSOM")}}
 
-The **`CSSKeyframeRule`** interface describes an object representing a set of styles for a given keyframe. It corresponds to the contents of a single keyframe of a {{cssxref("@keyframes")}} {{cssxref("at-rule")}}.
+The **`CSSKeyframeRule`** interface describes an object representing a set of styles for a given keyframe. It corresponds to the contents of a single keyframe of a {{cssxref("@keyframes")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
 
 {{InheritanceDiagram}}
 
@@ -21,7 +22,7 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
 - {{domxref("CSSKeyframeRule.keyText")}}
   - : Represents the key of the keyframe, like `'10%'`, `'75%'`. The `from` keyword maps to `'0%'` and the `to` keyword maps to `'100%'`.
-- {{domxref("CSSKeyframeRule.style")}}{{readOnlyInline}}
+- {{domxref("CSSKeyframeRule.style")}} {{readOnlyInline}}
   - : Returns a {{domxref("CSSStyleDeclaration")}} of the CSS style associated with the keyframe.
 
 ## Methods

@@ -1,6 +1,7 @@
 ---
 title: Document.createTouch()
 slug: Web/API/Document/createTouch
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -21,7 +22,7 @@ The **`Document.createTouch()`** method creates and returns a new {{DOMxRef("Tou
 ## Syntax
 
 ```js
-var touch = document.createTouch(view, target, identifier, pageX, pageY, screenX, screenY);
+createTouch(view, target, identifier, pageX, pageY, screenX, screenY)
 ```
 
 ### Parameters
@@ -66,7 +67,7 @@ var touch = document.createTouch(view, target, identifier, pageX, pageY, screenX
 - `touch`
   - : A {{DOMxRef("Touch")}} object configured as described by the input parameters.
 
-## Example
+## Examples
 
 This example illustrates using the `Document.createTouch()` method to
 create {{DOMxRef("Touch")}} objects.

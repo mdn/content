@@ -87,7 +87,7 @@ The following table shows the state of `result` after running this script:
       <td><code>"Quick Brown Fox Jumps"</code></td>
     </tr>
     <tr>
-      <td><code>[1], ...[<var>n</var>]</code></td>
+      <td><code>[1], …[<var>n</var>]</code></td>
       <td>
         <p>The parenthesized substring matches, if any.</p>
         <p>The number of possible parenthesized substrings is unlimited.</p>
@@ -147,14 +147,14 @@ The following table shows the state of `re` after running this script:
       <td><code>lastIndex</code></td>
       <td>
         <p>The index at which to start the next match.</p>
-        <p>If <code>g</code> is absent, this will always be <code>0</code>.</p>
+        <p>If <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags"><code>g</code></a> is absent, this will always be <code>0</code>.</p>
       </td>
       <td><code>25</code></td>
     </tr>
     <tr>
       <td><code>dotAll</code></td>
       <td>
-        Indicates if the <code>s</code> flag was used to let
+        Indicates if the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags"><code>s</code></a> flag was used to let
         <code>.</code> match newlines.
       </td>
       <td><code>false</code></td>
@@ -162,7 +162,7 @@ The following table shows the state of `re` after running this script:
     <tr>
       <td><code>hasIndices</code></td>
       <td>
-        Indicates if the <code>d</code> flag was used to generate an
+        Indicates if the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags"><code>d</code></a> flag was used to generate an
         <code>indices</code> property in the returned value containing start and
         end indices of the substring matches.
       </td>
@@ -170,18 +170,18 @@ The following table shows the state of `re` after running this script:
     </tr>
     <tr>
       <td><code>ignoreCase</code></td>
-      <td>Indicates if the <code>i</code> flag was used to ignore case.</td>
+      <td>Indicates if the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags"><code>i</code></a> flag was used to ignore case.</td>
       <td><code>true</code></td>
     </tr>
     <tr>
       <td><code>global</code></td>
-      <td>Indicates if the <code>g</code> flag was used for a global match.</td>
+      <td>Indicates if the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags"><code>g</code></a> flag was used for a global match.</td>
       <td><code>true</code></td>
     </tr>
     <tr>
       <td><code>multiline</code></td>
       <td>
-        Indicates if the <code>m</code> flag was used to search across multiple
+        Indicates if the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags"><code>m</code></a> flag was used to search across multiple
         lines.
       </td>
       <td><code>false</code></td>
@@ -194,7 +194,7 @@ The following table shows the state of `re` after running this script:
     <tr>
       <td><code>sticky</code></td>
       <td>
-        Indicates if the <code>y</code> flag was used to match only from the
+        Indicates if the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags"><code>y</code></a> flag was used to match only from the
         index indicated by the <code>lastIndex</code> property.
       </td>
       <td><code>false</code></td>
@@ -202,7 +202,7 @@ The following table shows the state of `re` after running this script:
     <tr>
       <td><code>unicode</code></td>
       <td>
-        Indicates if the <code>u</code> flag was used to treat the pattern as a
+        Indicates if the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags"><code>u</code></a> flag was used to treat the pattern as a
         sequence of Unicode code points.
       </td>
       <td><code>false</code></td>
@@ -214,7 +214,7 @@ The following table shows the state of `re` after running this script:
 
 ### Finding successive matches
 
-If your regular expression uses the "`g`" flag, you can use the
+If your regular expression uses the ["`g`"](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) flag, you can use the
 `exec()` method multiple times to find successive matches in the same string.
 When you do so, the search starts at the substring of `str`
 specified by the regular expression's {{jsxref("RegExp.lastIndex", "lastIndex")}}
@@ -222,7 +222,7 @@ property ({{jsxref("RegExp.prototype.test()", "test()")}} will also advance the
 {{jsxref("RegExp.lastIndex", "lastIndex")}} property). Note that the
 {{jsxref("RegExp.lastIndex", "lastIndex")}} property will not be reset when searching a
 different string, it will start its search at its existing {{jsxref("RegExp.lastIndex",
-  "lastIndex")}} .
+  "lastIndex")}}.
 
 For example, assume you have this script:
 
@@ -251,7 +251,7 @@ Found ab. Next match starts at 9
 > It will create an infinite loop if there is a match, due to the
 > {{jsxref("RegExp.lastIndex", "lastIndex")}} property being reset upon each iteration.
 >
-> Also, be sure that the global flag ("`g`") is set, or it will also cause
+> Also, be sure that the global flag (["`g`"](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags)) is set, or it will also cause
 > an infinite loop.
 >
 > In addition, when matching zero-length characters (e.g. `/^/gm`),
@@ -280,7 +280,6 @@ This will log a message containing `'hello world!'`.
 
 ## See also
 
-- [Regular
-  Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the [JavaScript
-  Guide](/en-US/docs/Web/JavaScript/Guide)
+- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the
+  [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
 - {{jsxref("RegExp")}}

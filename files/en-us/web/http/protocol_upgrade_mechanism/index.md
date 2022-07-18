@@ -32,7 +32,7 @@ Connection: upgrade
 Upgrade: example/1, foo/2
 ```
 
-Other headers may be required depending on the requested protocol; for example, [WebSocket](/en-US/docs/Web/API/WebSocket) upgrades allow additional headers to configure details about the WebSocket connection as well as to offer a degree of security in opening the connection. See {{anch("Upgrading to a WebSocket connection")}} for more details.
+Other headers may be required depending on the requested protocol; for example, [WebSocket](/en-US/docs/Web/API/WebSocket) upgrades allow additional headers to configure details about the WebSocket connection as well as to offer a degree of security in opening the connection. See [Upgrading to a WebSocket connection](#upgrading_to_a_websocket_connection) for more details.
 
 If the server decides to upgrade the connection, it sends back a {{HTTPStatus(101, "101 Switching Protocols")}} response status with an Upgrade header that specifies the protocol(s) being switched to. If it does not (or cannot) upgrade the connection, it ignores the `Upgrade` header and sends back a regular response (for example, a {{HTTPStatus(200, "200 OK")}}).
 

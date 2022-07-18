@@ -16,7 +16,7 @@ Forks are often seen in free and open source software development. This is now a
 ## See also
 
 - {{interwiki("wikipedia", "Fork_(software_development)","Fork")}} on Wikipedia
-- [How to fork a GitHub repo](https://help.github.com/articles/fork-a-repo/) (fork as in a Git context)
+- [How to fork a GitHub repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo) (fork as in a Git context)
 - {{Glossary("Fork")}} (Glossary)
 - Various "well-known" forks
 

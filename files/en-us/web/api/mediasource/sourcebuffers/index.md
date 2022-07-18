@@ -1,6 +1,7 @@
 ---
 title: MediaSource.sourceBuffers
 slug: Web/API/MediaSource/sourceBuffers
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -21,27 +22,19 @@ The **`sourceBuffers`** read-only property of the
 containing the list of {{domxref("SourceBuffer")}} objects associated with this
 `MediaSource`.
 
-## Syntax
-
-```js
-var mySourceBuffers = mediaSource.sourceBuffers;
-```
-
-### Value
+## Value
 
 A {{domxref("SourceBufferList")}}.
 
-## Example
+## Examples
 
-The following snippet is based on a simple example written by Nick Desaulniers ([view the full demo
-live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download
-the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
+The following snippet is based on a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
 
 ```js
 function sourceOpen (_) {
   //console.log(this.readyState); // open
-  var mediaSource = this;
-  var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+  const mediaSource = this;
+  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, function (buf) {
     sourceBuffer.addEventListener('updateend', function (_) {
       mediaSource.endOfStream();
@@ -53,7 +46,7 @@ function sourceOpen (_) {
   });
 };
 
-...
+// …
 ```
 
 ## Specifications

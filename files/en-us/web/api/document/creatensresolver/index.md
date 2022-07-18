@@ -1,6 +1,7 @@
 ---
 title: Document.createNSResolver()
 slug: Web/API/Document/createNSResolver
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -16,7 +17,7 @@ Creates an `XPathNSResolver` which resolves namespaces with respect to the defin
 ## Syntax
 
 ```js
-nsResolver = document.createNSResolver(node);
+createNSResolver(node)
 ```
 
 ### Parameters

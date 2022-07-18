@@ -1,6 +1,7 @@
 ---
 title: NodeIterator.pointerBeforeReferenceNode
 slug: Web/API/NodeIterator/pointerBeforeReferenceNode
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -17,20 +18,17 @@ property returns a boolean flag that indicates whether the
 after (if this value is `false`) the anchor node indicated by the
 {{domxref("NodeIterator.referenceNode")}} property.
 
-## Syntax
+## Value
+
+A boolean.
+
+## Examples
 
 ```js
-flag = nodeIterator.pointerBeforeReferenceNode;
-```
-
-## Example
-
-```js
-var nodeIterator = document.createNodeIterator(
+const nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
 flag = nodeIterator.pointerBeforeReferenceNode;
 ```

@@ -1,9 +1,9 @@
 ---
 title: Request.referrerPolicy
 slug: Web/API/Request/referrerPolicy
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Fetch
   - Property
   - Reference
@@ -18,27 +18,21 @@ The **`referrerPolicy`** read-only property of the
 referrer information, sent in the {{HTTPHeader("Referer")}} header, should be included
 with the request.
 
-## Syntax
+## Value
 
-```js
-var myReferrerPolicy = request.referrerPolicy;
-```
-
-### Value
-
-A {{domxref("DOMString")}} representing the request's `referrerPolicy`. For
-more information and possible values, see the {{HTTPHeader("Referrer-Policy")}} HTTP
+A string representing the request's `referrerPolicy`. For
+more information and possible values, see the {{HTTPHeader("Referrer-Policy")}} HTTP
 header page.
 
-## Example
+## Examples
 
 In the following snippet, we create a new request using the
-{{domxref("Request.Request()")}} constructor (for an image file in the same directory as
+{{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as
 the script), then save the request referrer policy in a variable:
 
 ```js
-var myRequest = new Request('flowers.jpg');
-var myReferrer = myRequest.referrerPolicy; // returns "" by default
+const myRequest = new Request('flowers.jpg');
+const myReferrer = myRequest.referrerPolicy; // returns "" by default
 ```
 
 ## Specifications

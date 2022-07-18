@@ -1,6 +1,7 @@
 ---
 title: Element.scrollWidth
 slug: Web/API/Element/scrollWidth
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -28,87 +29,82 @@ without a need for horizontal scrollbar, its `scrollWidth` is equal to
 > **Note:** This property will round the value to an integer. If you need a fractional value,
 > use {{ domxref("element.getBoundingClientRect()") }}.
 
-## Syntax
+## Value
 
-```js
-var xScrollWidth = element.scrollWidth;
-```
+A number.
 
-`xScrollWidth` is the width of the content of
-`element` in pixels.
-
-## Example
+## Examples
 
 ```html
 <!DOCTYPE html>
 <html>
   <head>
     <title>Example</title>
-    <style>
-      div {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-      }
+    <style>
+      div {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
 
-      #aDiv {
-        width: 100px;
-      }
+      #aDiv {
+        width: 100px;
+      }
 
-      button {
-        margin-bottom: 2em;
-      }
+      button {
+        margin-bottom: 2em;
+      }
     </style>
   </head>
 
   <body>
     <div id="aDiv">
-      FooBar-FooBar-FooBar-FooBar
-    </div>
-    <button id="aButton">
-      Check for overflow
-    </button>
+      FooBar-FooBar-FooBar-FooBar
+    </div>
+    <button id="aButton">
+      Check for overflow
+    </button>
 
-    <div id="anotherDiv">
-      FooBar-FooBar-FooBar-FooBar
-    </div>
-    <button id="anotherButton">
-      Check for overflow
-    </button>
+    <div id="anotherDiv">
+      FooBar-FooBar-FooBar-FooBar
+    </div>
+    <button id="anotherButton">
+      Check for overflow
+    </button>
   </body>
   <script>
-    var buttonOne = document.getElementById('aButton'),
-    buttonTwo = document.getElementById('anotherButton'),
-    divOne = document.getElementById('aDiv'),
-    divTwo = document.getElementById('anotherDiv');
+    const buttonOne = document.getElementById('aButton');
+    const buttonTwo = document.getElementById('anotherButton');
+    const divOne = document.getElementById('aDiv');
+    const divTwo = document.getElementById('anotherDiv');
 
     //check to determine if an overflow is happening
-    function isOverflowing(element) {
-      return (element.scrollWidth > element.offsetWidth);
-    }
+    function isOverflowing(element) {
+      return (element.scrollWidth > element.offsetWidth);
+    }
 
-    function alertOverflow(element) {
-      if (isOverflowing(element)) {
-        alert('Contents are overflowing the container.');
+    function alertOverflow(element) {
+      if (isOverflowing(element)) {
+        alert('Contents are overflowing the container.');
       } else {
-        alert('No overflows!');
-      }
-    }
+        alert('No overflows!');
+      }
+    }
 
-    buttonOne.addEventListener('click', function() {
-      alertOverflow(divOne);
-    });
+    buttonOne.addEventListener('click', function() {
+      alertOverflow(divOne);
+    });
 
-    buttonTwo.addEventListener('click', function() {
-      alertOverflow(divTwo);
-    });
+    buttonTwo.addEventListener('click', function() {
+      alertOverflow(divTwo);
+    });
   </script>
 </html>
 ```
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

@@ -6,7 +6,7 @@ tags:
   - Glossary
   - Infrastructure
 ---
-CalDAV (Calendaring extensions to {{Glossary("WebDAV")}}) is a {{glossary("protocol")}} standardized by the {{Glossary("IETF")}} and used to remotely access calendar data from a {{glossary("server")}}.
+CalDAV (Calendaring extensions to {{Glossary("WebDAV")}}) is a {{glossary("protocol")}} standardized by the {{Glossary("IETF")}} and used to remotely access calendar data from a {{glossary("server")}}.
 
 ## See also
 

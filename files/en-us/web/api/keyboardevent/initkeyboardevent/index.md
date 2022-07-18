@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent.initKeyboardEvent()
 slug: Web/API/KeyboardEvent/initKeyboardEvent
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -9,7 +10,7 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.initKeyboardEvent
 ---
-{{APIRef("DOM Events")}}{{Deprecated_Header}}
+{{APIRef("UI Events")}}{{Deprecated_Header}}
 
 The **`KeyboardEvent.initKeyboardEvent()`** method initializes
 the attributes of a keyboard event object. This method was introduced in draft of DOM
@@ -20,34 +21,38 @@ Web applications should use constructor instead of this if it's available.
 ## Syntax
 
 ```js
-kbdEvent.initKeyboardEvent(typeArg, canBubbleArg, cancelableArg,
-                           viewArg, charArg, keyArg,
-                           locationArg, modifiersListArg, repeat)
+initKeyboardEvent(type, canBubble, cancelable,
+                  view,  key, location, ctrlKey,
+                  altKey, shiftKey, metaKey)
 ```
 
 ### Parameters
 
-- _`typeArg`_
-  - : The type of keyboard event; this will be one of `keydown`,
+- `type`
+  - : The type of keyboard event; browsers always set it to one of `keydown`,
     `keypress`, or `keyup`.
-- _`canBubbleArg`_
-  - : Whether or not the event can bubble.
-- _`cancelableArg`_
-  - : Whether or not the event can be canceled.
-- _`viewArg`_
-  - : The {{domxref("WindowProxy")}} it is associated to.
-- _`keyArg`_
-  - : The value of the key attribute.
-- _`locationArg`_
-  - : The value of the location attribute.
-- _`ctrlKey`_
-  - : Whether the Control key modifier is active.
-- _`altKey`_
-  - : Whether the Alt key modifier is active.
-- _`shiftKey`_
-  - : Whether the Shift key modifier is active.
-- _`metaKey`_
-  - : Whether the Meta key modifier is active.
+- `canBubble` {{optional_inline}}
+  - : Indicates whether or not the event can bubble. Defaults to `false`.
+- `cancelable` {{optional_inline}}
+  - : Indicates whether or not the event can be canceled. Defaults to `false`.
+- `view` {{optional_inline}}
+  - : The {{domxref("WindowProxy")}} it is associated to. Defaults to `null`.
+- `key` {{optional_inline}}
+  - : The value of the key attribute. Defaults to `""`.
+- `location` {{optional_inline}}
+  - : The value of the location attribute. Defaults to `0`.
+- `ctrlKey` {{optional_inline}}
+  - : Indicates whether the control key modifier is active. Defaults to `false`.
+- `altKey` {{optional_inline}}
+  - : Indicates whether the alt key modifier is active. Defaults to `false`.
+- `shiftKey` {{optional_inline}}
+  - : Indicates whether the shift key modifier is active. Defaults to `false`.
+- `metaKey` {{optional_inline}}
+  - : Indicates whether the meta key modifier is active. Defaults to `false`.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

@@ -7,8 +7,11 @@ tags:
   - Reference
   - complementary role
   - Accessibility
+spec-urls:
+  - https://w3c.github.io/aria/#complementary
+  - https://w3c.github.io/aria-practices/#aria_lh_complementary
 ---
-The `complementary` [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#Landmark_roles) is used to designate a supporting section that relates to the main content, yet can stand alone when separated. These sections are frequently presented as sidebars or call-out boxes. If possible, use the [HTML \<aside> element](/en-US/docs/Web/HTML/Element/aside) instead.
+The `complementary` [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles) is used to designate a supporting section that relates to the main content, yet can stand alone when separated. These sections are frequently presented as sidebars or call-out boxes. If possible, use the [HTML \<aside> element](/en-US/docs/Web/HTML/Element/aside) instead.
 
 ```html
 <div role="complementary">
@@ -29,14 +32,14 @@ The `complementary` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/ARIA
 
 ```html
 <div role="complementary">
-  <h2>Trending articles</h2>
+  <h2>Trending articles</h2>
   <ul>
-     <li><a href="#">18 tweets that will make you feel all the feels</a></li>
-     <li><a href="#">Stop searching for the perfect lunch containers because I've found them</a></li>
-     <li><a href="#">The time has come to finally decide what we should be calling these foods</a></li>
-     <li><a href="#">17 really good posts we saw on Tumblr this week</a></li>
-     <li><a href="#">10 parent hacks we know work because we tried them</a></li>
-   </ul>
+     <li><a href="#">18 tweets that will make you feel all the feels</a></li>
+     <li><a href="#">Stop searching for the perfect lunch containers because I've found them</a></li>
+     <li><a href="#">The time has come to finally decide what we should be calling these foods</a></li>
+     <li><a href="#">17 really good posts we saw on Tumblr this week</a></li>
+     <li><a href="#">10 parent hacks we know work because we tried them</a></li>
+   </ul>
  </div>
 ```
 
@@ -61,7 +64,7 @@ If there is more than one `complementary` landmark role or {{HTMLElement('aside'
   <!-- content -->
 </aside>
 
-...
+…
 
 <aside id="sidebar" aria-label="Sponsors">
   <!-- content -->
@@ -80,10 +83,7 @@ Certain technologies such as browser extensions can generate lists of all landma
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#complementary","ARIA: Complementary role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_complementary","Complementary landmark role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See also
 
@@ -91,7 +91,7 @@ Certain technologies such as browser extensions can generate lists of all landma
 - [complementary (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#complementary)
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
 - [Landmark roles: Using ARIA: Roles, States, and Properties](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)
-- [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
+- [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [Aside Revisited | HTML5 Doctor](https://html5doctor.com/aside-revisited/)
 

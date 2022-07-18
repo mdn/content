@@ -1,6 +1,7 @@
 ---
 title: MessagePort.close()
 slug: Web/API/MessagePort/close
+page-type: web-api-instance-method
 tags:
   - API
   - Channel messaging
@@ -21,18 +22,18 @@ messages to that port.
 ## Syntax
 
 ```js
-port.close()
+close()
 ```
-
-### Returns
-
-{{jsxref('undefined')}}.
 
 ### Parameters
 
 None.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 In the following code block, you can see a `handleMessage` handler function,
 run when a message is sent back to this document using
@@ -64,5 +65,4 @@ channel.port1.close();
 
 ## See also
 
-- [Using
-  channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

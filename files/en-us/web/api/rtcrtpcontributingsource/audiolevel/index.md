@@ -1,6 +1,7 @@
 ---
 title: RTCRtpContributingSource.audioLevel
 slug: Web/API/RTCRtpContributingSource/audioLevel
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -22,13 +23,7 @@ level contained in the last RTP packet played from the described source.
 `audioLevel` will be the level value defined in \[RFC6465] if the RFC 6465 header extension
 is present, and otherwise null.
 
-## Syntax
-
-```js
-var audioLevel = RTCRtpContributingSource.audioLevel
-```
-
-### Value
+## Value
 
 A double-precision floating-point number which indicates the volume level of the audio
 in the most recently received RTP packet from the source described by the

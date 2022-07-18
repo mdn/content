@@ -1,13 +1,14 @@
 ---
 title: 'aria-level'
 slug: Web/Accessibility/ARIA/Attributes/aria-level
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-level
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-level
 ---
 
 The `aria-level` attribute defines the hierarchical level of an element within a structure.
@@ -46,9 +47,9 @@ If a complete set of available nodes is not present in the DOM due to dynamic lo
 ## ARIAMixin API
 
 - {{domxref("Element.ariaLevel")}}
-  - : The  [`ariaLevel`](/en-US/docs/Web/API/Element/ariaLevel) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-level` attribute.
+  - : The [`ariaLevel`](/en-US/docs/Web/API/Element/ariaLevel) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-level` attribute.
 - {{domxref("ElementInternals.ariaLevel")}}
-  - : The  [`ariaLevel`](/en-US/docs/Web/API/ElementInternals/ariaLevel) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-level` attribute.
+  - : The [`ariaLevel`](/en-US/docs/Web/API/ElementInternals/ariaLevel) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-level` attribute.
 
 ## Associated roles
 
@@ -61,9 +62,7 @@ Used in roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-level","ARIA: aria-level Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

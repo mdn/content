@@ -1,6 +1,7 @@
 ---
 title: 'RTCDtlsTransport: error event'
 slug: Web/API/RTCDtlsTransport/error_event
+page-type: web-api-event
 tags:
   - API
   - Connection
@@ -25,7 +26,7 @@ An {{domxref("RTCDtlsTransport")}} receives an `error` event when a transport-le
   <tbody>
     <tr>
       <th scope="row">Bubbles</th>
-      <td>Yes</td>
+      <td>No</td>
     </tr>
     <tr>
       <th scope="row">Cancelable</th>
@@ -63,7 +64,7 @@ In this example, the {{domxref("RTCDtlsTransport.onerror", "onerror")}} event ha
 transport.onerror = ev => {
   const err = ev.error;
 
-  /* ... */
+  // …
 }
 ```
 

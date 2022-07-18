@@ -234,35 +234,35 @@ To see this in action, let's lay out some separate tracks:
   <ul>
     <li data-loading="true">
       <a href="leadguitar.mp3" class="track">Lead Guitar</a>
-      <p class="loading-text">Loading...</p>
+      <p class="loading-text">Loading…</p>
       <button data-playing="false" aria-describedby="guitar-play-label">
         <span id="guitar-play-label">Play</span>
       </button>
     </li>
     <li data-loading="true">
       <a href="bassguitar.mp3" class="track">Bass Guitar</a>
-      <p class="loading-text">Loading...</p>
+      <p class="loading-text">Loading…</p>
       <button data-playing="false" aria-describedby="bass-play-label">
         <span id="bass-play-label">Play</span>
       </button>
     </li>
     <li data-loading="true">
       <a href="drums.mp3" class="track">Drums</a>
-      <p class="loading-text">Loading...</p>
+      <p class="loading-text">Loading…</p>
       <button data-playing="false" aria-describedby="drums-play-label">
         <span id="drums-play-label">Play</span>
       </button>
     </li>
     <li data-loading="true">
       <a href="horns.mp3" class="track">Horns</a>
-      <p class="loading-text">Loading...</p>
+      <p class="loading-text">Loading…</p>
       <button data-playing="false" aria-describedby="horns-play-label">
         <span id="horns-play-label">Play</span>
       </button>
     </li>
     <li data-loading="true">
       <a href="clav.mp3" class="track">Clavi</a>
-      <p class="loading-text">Loading...</p>
+      <p class="loading-text">Loading…</p>
       <button data-playing="false" aria-describedby="clavi-play-label">
         <span id="clavi-play-label">Play</span>
       </button>
@@ -272,7 +272,7 @@ To see this in action, let's lay out some separate tracks:
 </section>
 ```
 
-All of these tracks are the same tempo and are designed to be synchronized with each other, so we need to make sure they are loaded and available to the api _before_ we are able to play them. We can do this with JavaScript's [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) functionality.
+All of these tracks are the same tempo and are designed to be synchronized with each other, so we need to make sure they are loaded and available to the API _before_ we are able to play them. We can do this with JavaScript's [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) functionality.
 
 Once they are available to play, we need to make sure they start at the correct point that other tracks might be playing at, so they sync up.
 

@@ -1,14 +1,12 @@
 ---
 title: Window.requestFileSystem()
 slug: Web/API/Window/requestFileSystem
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
   - File
-  - File System
-  - File System API
-  - File and Directory Entry API
-  - Files
+  - File and Directory Entries API
   - Method
   - Non-standard
   - Reference
@@ -17,19 +15,20 @@ tags:
   - requestFileSystem
 browser-compat: api.Window.requestFileSystem
 ---
-{{APIRef("File System API")}} {{Deprecated_Header}} {{non-standard_header()}}
+{{APIRef("HTML DOM")}} {{Deprecated_Header}} {{non-standard_header()}}
 
 The non-standard {{domxref("Window")}} method
 **`requestFileSystem()`** method is a Google Chrome-specific
 method which lets a web site or app gain access to a sandboxed file system for its own
 use. The returned {{domxref("FileSystem")}} is then available for use with the other [file system APIs](/en-US/docs/Web/API/File_and_Directory_Entries_API).
 
-## Syntax
-
 > **Note:** This method is prefixed with `webkit` in all browsers that implement it.
 
+## Syntax
+
 ```js
-window.requestFileSystem(type, size, successCallback[, errorCallback]);
+requestFileSystem(type, size, successCallback)
+requestFileSystem(type, size, successCallback, errorCallback)
 ```
 
 ### Parameters
@@ -50,11 +49,11 @@ window.requestFileSystem(type, size, successCallback[, errorCallback]);
   - : An optional parameter specifying a function which is called if an error occurs while
     attempting to obtain the file system, or if the user denies permission to create or
     access the file system. The callback receives as input a single parameter: a
-    {{domxref("FileError")}} object describing the error.
+    `FileError` object describing the error.
 
 ### Return value
 
-`undefined`
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 
@@ -66,5 +65,4 @@ As this method was removed from the [File and Directory Entries API](https://wic
 
 ## See also
 
-- [File
-  and Directory Entries API support in Firefox](/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support)
+- [File and Directory Entries API support in Firefox](/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support)

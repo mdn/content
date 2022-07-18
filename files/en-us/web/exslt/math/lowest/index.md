@@ -29,4 +29,4 @@ A result tree fragment consisting of copies of the nodes returned by [`math:min(
 
 ## Specifications
 
-[EXSLT - MATH:LOWEST](http://www.exslt.org/math/functions/lowest/index.html)
+[EXSLT - MATH:LOWEST](http://exslt.org/math/functions/lowest/index.html)

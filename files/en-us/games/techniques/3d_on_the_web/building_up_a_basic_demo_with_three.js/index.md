@@ -108,7 +108,7 @@ You should experiment with these values and see how they change what you see in 
 
 ## Rendering the scene
 
-Everything is ready, but we still can't see anything. Although we've set-up the renderer, we still need to render everything. Our `render()` function will do this job, with a little help from [`requestAnimationFrame()`](/en-US/docs/Web/API/window/requestAnimationFrame), which causes the scene to be re-rendered constantly on every frame:
+Everything is ready, but we still can't see anything. Although we've set up the renderer, we still need to render everything. Our `render()` function will do this job, with a little help from [`requestAnimationFrame()`](/en-US/docs/Web/API/window/requestAnimationFrame), which causes the scene to be re-rendered constantly on every frame:
 
 ```js
 function render() {
@@ -268,7 +268,7 @@ Aside from rotation, and scaling, we can additionally move objects around the sc
 dodecahedron.position.y = -7*Math.sin(t*2);
 ```
 
-This will move the dodecahedron up and down, by applying the `sin()` value to the y axis on each frame, and a little adjustment to make it look cooler. Try changing these values, to see how it affects the animations.
+This will move the dodecahedron up and down, by applying the `sin()` value to the y-axis on each frame, and a little adjustment to make it look cooler. Try changing these values, to see how it affects the animations.
 
 ## Conclusion
 

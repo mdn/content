@@ -8,6 +8,7 @@ tags:
   - Reference
   - ARIA roles
   - document structure role
+spec-urls: https://w3c.github.io/aria/#generic
 ---
 
 The `generic` role creates a nameless container element which has no semantic meaning on its own.
@@ -22,7 +23,7 @@ The `generic` role is intended for use as the implicit role of generic elements 
 
 Like an element with role `presentation`, an element with `role="generic"` can provide a limited number of accessible states and properties for its descendants, such as [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) attributes. However, unlike elements with role `presentation`, `generic` elements are exposed in accessibility APIs so that assistive technologies can gather certain properties such as layout and bounds.
 
-Because the generic role is nameless, the  [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) and [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attributes are prohibited. Because the role is generic, the [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) and [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription) attributes are also prohibited.
+Because the generic role is nameless, the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) and [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attributes are prohibited. Because the role is generic, the [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) and [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription) attributes are also prohibited.
 
 > **Note:** The element with `role="generic"` should not have an accessible name or role description.
 
@@ -36,9 +37,7 @@ This role is for use by user agents and not by developers. As such, no appropria
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#generic","ARIA: generic role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

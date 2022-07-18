@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.paused
 slug: Web/API/HTMLMediaElement/paused
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -11,24 +12,18 @@ browser-compat: api.HTMLMediaElement.paused
 ---
 {{APIRef("HTML DOM")}}
 
-The read-only **`HTMLMediaElement.paused`** property
-tells whether the media element is paused.
+The read-only **`HTMLMediaElement.paused`** property
+tells whether the media element is paused.
 
-## Syntax
-
-```js
-var isPaused = audioOrVideo.paused
-```
-
-### Value
+## Value
 
 A boolean value. `true` is paused and `false` is not
 paused.
 
-## Example
+## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 console.log(obj.paused); // true
 ```
 

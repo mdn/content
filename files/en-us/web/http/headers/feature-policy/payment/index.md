@@ -14,7 +14,7 @@ browser-compat: http.headers.Feature-Policy.payment
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-The HTTP {{HTTPHeader("Feature-Policy")}} header field's `payment` directive controls whether the current document is allowed to use the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API). When this policy is disabled, the {{DOMxRef("PaymentRequest()")}} constructor will throw a {{exception("SyntaxError")}}.
+The HTTP {{HTTPHeader("Feature-Policy")}} header field's `payment` directive controls whether the current document is allowed to use the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API). When this policy is disabled, the {{DOMxRef("PaymentRequest()")}} constructor will throw a `SyntaxError` {{domxref("DOMException")}}.
 
 ## Syntax
 
@@ -31,10 +31,7 @@ The `payment` feature's default allowlist value is `'self'`.
 
 ## Specifications
 
-| Specification                            | Status                               | Comment                                                                                              |
-| ---------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('Payment')}}         | {{Spec2('Payment')}}         | See [Section 16. Feature Policy integration](https://w3c.github.io/payment-request/#feature-policy). |
-| {{SpecName('Feature Policy')}} | {{Spec2('Feature Policy')}} | Initial definition.                                                                                  |
+{{Specifications}}
 
 ## Browser compatibility
 

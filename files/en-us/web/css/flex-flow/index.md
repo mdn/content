@@ -45,6 +45,7 @@ flex-flow: column-reverse wrap-reverse;
 flex-flow: inherit;
 flex-flow: initial;
 flex-flow: revert;
+flex-flow: revert-layer;
 flex-flow: unset;
 ```
 

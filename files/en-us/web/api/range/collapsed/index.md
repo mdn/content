@@ -1,6 +1,7 @@
 ---
 title: Range.collapsed
 slug: Web/API/Range/collapsed
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -22,13 +23,11 @@ A collapsed {{domxref("Range")}} is empty (containing no content), and specifies
 single point in a DOM tree. To collapse a range, see the {{domxref("Range.collapse()")}}
 method.
 
-## Syntax
+## Value
 
-```js
-isCollapsed = range.collapsed;
-```
+A boolean.
 
-## Example
+## Examples
 
 ```js
 let range = document.createRange();

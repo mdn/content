@@ -21,11 +21,11 @@ p {
 }
 
 div.warning {
-  width: 100%;
-  border: 2px solid yellow;
-  color: white;
-  background-color: darkred;
-  padding: 0.8em 0.8em 0.6em;
+  width: 100%;
+  border: 2px solid yellow;
+  color: white;
+  background-color: darkred;
+  padding: 0.8em 0.8em 0.6em;
 }
 
 #customized {

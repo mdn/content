@@ -96,7 +96,7 @@ It's certainly not required that all abbreviations be marked up using `<abbr>`. 
 - When an abbreviation is used and you want to provide an expansion or definition outside the flow of the document's content, use `<abbr>` with an appropriate {{htmlattrxref("title")}}.
 - To define an abbreviation which may be unfamiliar to the reader, present the term using `<abbr>` and either a `title` attribute or inline text providing the definition.
 - When an abbreviation's presence in the text needs to be semantically noted, the `<abbr>` element is useful. This can be used, in turn, for styling or scripting purposes.
-- You can use `<abbr>` in concert with {{HTMLElement("dfn")}} to establish definitions for terms which are abbreviations or acronyms. See the example {{anch("Defining an abbreviation")}} below.
+- You can use `<abbr>` in concert with {{HTMLElement("dfn")}} to establish definitions for terms which are abbreviations or acronyms. See the example [Defining an abbreviation](#defining_an_abbreviation) below.
 
 ### Grammar considerations
 

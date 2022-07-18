@@ -1,6 +1,7 @@
 ---
 title: 'XRSystem: requestSession()'
 slug: Web/API/XRSystem/requestSession
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -143,13 +144,13 @@ session and initiates the animation loop.
 ```js
 navigator.xr.requestSession("immersive-vr")
 .then((xrSession) => {
-  xrSession.addEventListener('end', onXRSessionEnded);
-  // Do necessary session setup here.
-  // Begin the session’s animation loop.
-  xrSession.requestAnimationFrame(onXRAnimationFrame);
+  xrSession.addEventListener('end', onXRSessionEnded);
+  // Do necessary session setup here.
+  // Begin the session's animation loop.
+  xrSession.requestAnimationFrame(onXRAnimationFrame);
 }).catch(function(error) {
-  // "immersive-vr" sessions are not supported
-  console.warn("'immersive-vr' isn't supported, or an error occurred activating VR!");
+  // "immersive-vr" sessions are not supported
+  console.warn("'immersive-vr' isn't supported, or an error occurred activating VR!");
 });
 ```
 
@@ -211,7 +212,7 @@ navigator.xr.requestSession("immersive-ar", {
   domOverlay: {
     root: document.getElementById("xr-overlay")
   }
-}
+});
 ```
 
 ### Requesting a depth-sensing session

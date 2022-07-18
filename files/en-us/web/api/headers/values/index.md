@@ -1,9 +1,9 @@
 ---
 title: Headers.values()
 slug: Web/API/Headers/values
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Fetch API
   - Headers
   - Method
@@ -21,14 +21,18 @@ in this object. The values are {{jsxref("String")}} objects.
 ## Syntax
 
 ```js
-headers.values();
+values()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
 Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-## Example
+## Examples
 
 ```js
 // Create a test Headers object

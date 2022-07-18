@@ -91,7 +91,7 @@ tags:
  <li>get_accDescription: Get a long description of the current IAccessible. This is not really too useful.</li>
  <li>get_accRole: Get an enumerated value representing what this IAccessible is used for, for example.<br>
   is it a link, static text, editable text, a checkbox, or a table cell, etc. <strong>[important]</strong></li>
- <li>get_accState: a 32 bit field representing possible on/off states, such as focused, focusable, selected, selectable, visible, protected (for passwords), checked, etc. <strong>[important]</strong></li>
+ <li>get_accState: a 32-bit field representing possible on/off states, such as focused, focusable, selected, selectable, visible, protected (for passwords), checked, etc. <strong>[important]</strong></li>
  <li>get_accHelp: Get context sensitive help for the IAccessible.</li>
  <li>get_accHelpTopic: We don't use this, it's only if the Windows help system is used.</li>
  <li>get_accKeyboardShortcut: What is the keyboard shortcut for this IAccessible (underlined alt+combo mnemonic)</li>
@@ -337,9 +337,9 @@ tags:
 
 <h3 id="No_unique_child_ID_for_event_target_in_window">No unique child ID for event target in window</h3>
 
-<p><span class="c1">Problem</span>: MSAA expects events to be reported using NotifyWinEvent(eventNum, hWnd, worldID, childID), and there may not be an obvious way to get a window handle and a 32 bit childID for an object. You may be using windowless controls, or have an entire document with lots of objects in a given window. The child ID must be unique, because this is what the assistive technology will use to retrieve the accessible via AccessibleObjectFromEvent() which ends up using get_accChild on the accessible for the given window.</p>
+<p><span class="c1">Problem</span>: MSAA expects events to be reported using NotifyWinEvent(eventNum, hWnd, worldID, childID), and there may not be an obvious way to get a window handle and a 32-bit childID for an object. You may be using windowless controls, or have an entire document with lots of objects in a given window. The child ID must be unique, because this is what the assistive technology will use to retrieve the accessible via AccessibleObjectFromEvent() which ends up using get_accChild on the accessible for the given window.</p>
 
-<p><span class="c1">Solution</span>: In Gecko/Mozilla, we did not want to store an extra 32 bit unique ID value on every object. Instead, we hand back a 32 bit value derived from the UI object's pointer, which is unique. We ensure that the value we hand back is always negative. When the get_accChild call comes back, we check our hash table cache for that window to see if there's an accessible object still associated with that unique value. This means the client must use AccessibleObjectFromEvent immediately, because there is a danger that the object will go away, and another different object will be created with the same pointer value.That case seems extremely remote, because information from events is generally retrieved right after the event.</p>
+<p><span class="c1">Solution</span>: In Gecko/Mozilla, we did not want to store an extra 32-bit unique ID value on every object. Instead, we hand back a 32-bit value derived from the UI object's pointer, which is unique. We ensure that the value we hand back is always negative. When the get_accChild call comes back, we check our hash table cache for that window to see if there's an accessible object still associated with that unique value. This means the client must use AccessibleObjectFromEvent immediately, because there is a danger that the object will go away, and another different object will be created with the same pointer value. That case seems extremely remote, because information from events is generally retrieved right after the event.</p>
 
 <p>If you're not using a hash table to keep track of unique ID's, store the child ID's and objects for the last 50 or so events in a circular array. In practice, this is enough to keep AccessibleObjectFromEvent() happy.</p>
 
@@ -470,7 +470,7 @@ tags:
 
 <p>The assistive technology chooses which events it is interested in learning more about by calling the Win32 method AccessibleObjectFromEvent, which returns the IAccessible to the node corresponding to the child number that had been indicated from NotifyWinEvent(). This ends up asking nsDocAccessibleWrap::get_accChild() for a child IAccessible which matches the child ID we indicated through NotifyWinEvent().</p>
 
-<p>In Mozilla, we use the DOM node pointer in the accessible object as a basis for its child ID, which is also used as a hash key into our cache. We also negate the 32 bit value so that it is always &lt;0, telling us that they're really looking for the IAccessible for an event, not child number x. During the callback, we look up the original accessible node in the nsDocAccessible's cache and return it.</p>
+<p>In Mozilla, we use the DOM node pointer in the accessible object as a basis for its child ID, which is also used as a hash key into our cache. We also negate the 32-bit value so that it is always &lt;0, telling us that they're really looking for the IAccessible for an event, not child number x. During the callback, we look up the original accessible node in the nsDocAccessible's cache and return it.</p>
 
 <h2 id="Feedback">Feedback</h2>
 

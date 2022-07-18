@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.domainLookupStart
 slug: Web/API/PerformanceTiming/domainLookupStart
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility
@@ -25,11 +26,9 @@ in milliseconds since the UNIX epoch, where the domain lookup starts. If a persi
 connection is used, or the information is stored in a cache or a local resource, the
 value will be the same as {{domxref("PerformanceTiming.fetchStart")}}.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.domainLookupStart;
-```
+An `unsigned long long`.
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: 'Window: DOMContentLoaded event'
 slug: Web/API/Window/DOMContentLoaded_event
+page-type: web-api-event
 tags:
   - Event
   - Reference

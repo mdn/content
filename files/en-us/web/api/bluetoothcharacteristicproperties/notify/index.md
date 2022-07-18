@@ -1,6 +1,7 @@
 ---
 title: BluetoothCharacteristicProperties.notify
 slug: Web/API/BluetoothCharacteristicProperties/notify
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth
@@ -20,13 +21,7 @@ The **`notify`** read-only property of the
 `boolean` that is `true` if notifications of the characteristic
 value without acknowledgement is permitted.
 
-## Syntax
-
-```js
-var aBoolean = BluetoothCharacteristicProperties.notify;
-```
-
-### Value
+## Value
 
 A boolean value.
 

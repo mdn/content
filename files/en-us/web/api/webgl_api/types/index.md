@@ -1,10 +1,15 @@
 ---
 title: WebGL types
 slug: Web/API/WebGL_API/Types
+page-type: guide
 tags:
   - Reference
   - Types
   - WebGL
+spec-urls:
+  - https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.1
+  - https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.1
+  - https://www.khronos.org/registry/webgl/extensions/EXT_disjoint_timer_query/
 ---
 {{WebGLSidebar}}
 
@@ -92,12 +97,12 @@ These types are used within a {{domxref("WebGLRenderingContext")}}.
     <tr>
       <td><code>GLfloat</code></td>
       <td><code>unrestricted float</code></td>
-      <td>32-bit IEEE floating point number.</td>
+      <td>32-bit IEEE floating point number.</td>
     </tr>
     <tr>
       <td><code>GLclampf</code></td>
       <td><code>unrestricted float</code></td>
-      <td>Clamped 32-bit IEEE floating point number.</td>
+      <td>Clamped 32-bit IEEE floating point number.</td>
     </tr>
   </tbody>
 </table>
@@ -120,32 +125,7 @@ These types are used within [WebGL extensions](/en-US/docs/Web/API/WebGL_API/Usi
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL', "#5.1", "Types")}}</td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td>Initial definition</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL2', "#3.1", "Types")}}</td>
-      <td>{{Spec2('WebGL2')}}</td>
-      <td>Defines additional types.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('EXT_disjoint_timer_query', "", "GLuint64EXT")}}
-      </td>
-      <td>{{Spec2('EXT_disjoint_timer_query')}}</td>
-      <td>Adds <code>GLuint64EXT</code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 

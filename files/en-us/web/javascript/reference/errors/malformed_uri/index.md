@@ -14,10 +14,10 @@ wasn't successful.
 
 ## Message
 
-```js
-URIError: The URI to be encoded contains invalid character (Edge)
+```
+URIError: URI malformed (V8-based)
 URIError: malformed URI sequence (Firefox)
-URIError: URI malformed (Chrome)
+URIError: String contained an illegal UTF-16 sequence. (Safari)
 ```
 
 ## Error type
@@ -27,7 +27,7 @@ URIError: URI malformed (Chrome)
 ## What went wrong?
 
 URI encoding or decoding wasn't successful. An argument given to either the
-{{jsxref("decodeURI")}}, {{jsxref("encodeURI")}}, {{jsxref("encodeURIComponent")}},  or
+{{jsxref("decodeURI")}}, {{jsxref("encodeURI")}}, {{jsxref("encodeURIComponent")}},  or
 {{jsxref("decodeURIComponent")}} function was not valid, so that the function was unable
 encode or decode properly.
 

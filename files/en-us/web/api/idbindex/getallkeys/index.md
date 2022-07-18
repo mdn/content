@@ -1,6 +1,7 @@
 ---
 title: IDBIndex.getAllKeys()
 slug: Web/API/IDBIndex/getAllKeys
+page-type: web-api-instance-method
 tags:
   - API
   - IDBIndex
@@ -18,17 +19,17 @@ setting them as the `result` of the request object.
 ## Syntax
 
 ```js
-var allKeysRequest = IDBIndex.getAllKeys();
-var allKeysRequest = IDBIndex.getAllKeys(query);
-var allKeysRequest = IDBIndex.getAllKeys(query, count);
+getAllKeys()
+getAllKeys(query)
+getAllKeys(query, count)
 ```
 
 ### Parameters
 
-- *query* {{optional_inline}}
+- `query` {{optional_inline}}
   - : A key or an {{domxref("IDBKeyRange")}} identifying the keys to retrieve. If this
     value is null or missing, the browser will use an unbound key range.
-- _count_ {{optional_inline}}
+- `count` {{optional_inline}}
   - : The number records to return. If this value exceeds the number of records in the
     query, the browser will only retrieve the first item. If it is lower than
     `0` or greater than `2^32 - 1` a {{jsxref("TypeError")}}
@@ -51,7 +52,7 @@ This method may raise a {{domxref("DOMException")}} of the following types:
 A {{jsxref("TypeError")}} exception is thrown if the `count` parameter is
 not between `0` and `2^32 - 1` included.
 
-## Example
+## Examples
 
 ```js
 var myIndex = objectStore.index('index');
@@ -77,6 +78,4 @@ getAllKeysRequest.onsuccess = function() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example
-  live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).

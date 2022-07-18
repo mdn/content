@@ -269,7 +269,7 @@ Since this image has an explicit 100 pixel height, the 3:4 ratio explicitly sets
 
 #### Source: No fixed dimensions with intrinsic ratio
 
-When an intrinsic ratio is specified, but no dimensions, rule 4 is applied -- except that rule 2 also applies. The image is therefore rendered just like for the `contain` case.
+When an intrinsic ratio is specified, but no dimensions, rule 4 is applied — except that rule 2 also applies. The image is therefore rendered just like for the `contain` case.
 
 ```css
 background: url(no-dimensions-1x1-ratio.svg);
@@ -348,4 +348,4 @@ The width is set by the CSS to 150px. The `auto` value for the height is compute
 ## See also
 
 - {{cssxref("background-size")}}
-- Blog post: [Properly resizing vector image backgrounds](http://whereswalden.com/2011/10/21/properly-resizing-vector-image-backgrounds/)
+- Blog post: [Properly resizing vector image backgrounds](https://whereswalden.com/2011/10/21/properly-resizing-vector-image-backgrounds/)

@@ -68,7 +68,7 @@ Here are a few tips and tricks to help improve perceived performance:
 
 To improve perceived performance, minimize the original page load. In other words, download the content the user is going to interact with immediately first, and download the rest after "in the background". The total amount of content downloaded may actually increase, but the user only _waits_ on a very small amount, so the download feels faster.
 
-Separate interactive functionality from content, and load text, styles, and images visible at initial load. Delay, or lazy load, images or scripts that aren’t used or visible on the initial page load. Additionally, you should optimize the assets you do load. Images and video should be served in the most optimal format, compressed, and in the correct size.
+Separate interactive functionality from content, and load text, styles, and images visible at initial load. Delay, or lazy load, images or scripts that aren't used or visible on the initial page load. Additionally, you should optimize the assets you do load. Images and video should be served in the most optimal format, compressed, and in the correct size.
 
 ### Prevent jumping content and other reflows
 
@@ -104,7 +104,7 @@ By reducing the time that a user has to wait for _useful_ content, and keeping t
 - [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
 - [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
 - [Multimedia: video](/en-US/docs/Learn/Performance/video)
-- [JavaScript performance](/en-US/docs/Learn/Performance/javascript_performance)
+- [JavaScript performance](/en-US/docs/Learn/Performance/JavaScript)
 - [HTML performance features](/en-US/docs/Learn/Performance/HTML)
 - [CSS performance features](/en-US/docs/Learn/Performance/CSS)
 - [Business case for performance](/en-US/docs/Learn/Performance/business_case_for_performance)

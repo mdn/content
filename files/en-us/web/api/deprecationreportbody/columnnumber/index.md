@@ -1,27 +1,23 @@
 ---
 title: DeprecationReportBody.columnNumber
 slug: Web/API/DeprecationReportBody/columnNumber
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
+  - Experimental
   - columnNumber
   - DeprecationReportBody
-browser-compat: api.DeprecationReportBody.columnNumber
+spec-urls: https://wicg.github.io/deprecation-reporting/#dom-deprecationreportbody-columnnumber
 ---
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`columnNumber`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns the line in the source file in which the deprecated feature was used.
 
 > **Note:** This property is most useful alongside {{domxref("DeprecationReportBody.sourceFile")}} and {{domxref("DeprecationReportBody.lineNumber")}} as it enables the location of the column in that file and line where the error occurred.
 
-## Syntax
-
-```js
-let columnNumber = DeprecationReportBody.columnNumber;
-```
-
-### Value
+## Value
 
 An integer, or `null` if the column is not known.
 
@@ -50,4 +46,4 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 ## Browser compatibility
 
-{{Compat}}
+This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).

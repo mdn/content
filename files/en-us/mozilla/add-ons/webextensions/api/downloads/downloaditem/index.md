@@ -21,26 +21,26 @@ The `DownloadItem` type of the {{WebExtAPIRef("downloads")}} API represents a do
 
 Values of this type are objects. They contain the following properties:
 
-- `byExtensionId`{{optional_inline}}
+- `byExtensionId` {{optional_inline}}
   - : A `string` representing the ID of the extension that triggered the download (if it was triggered by an extension). This does not change once set. If the download was not triggered by an extension this is undefined.
-- `byExtensionName`{{optional_inline}}
+- `byExtensionName` {{optional_inline}}
   - : A `string` representing the name of the extension that triggered the download (if it was triggered by an extension). This may change if the extension changes its name or the user changes their locale. If the download was not triggered by an extension this is undefined.
 - `bytesReceived`
   - : A `number` representing the number of bytes received so far from the host during the download; this does not take file compression into consideration.
 - `canResume`
   - : A `boolean` indicating whether a currently-interrupted (e.g. paused) download can be resumed from the point where it was interrupted (`true`), or not (`false`).
-- `cookieStoreId`{{optional_inline}}
+- `cookieStoreId` {{optional_inline}}
   - : The cookie store ID of the [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) in which the download took place.
 - `danger`
   - : A string indicating whether this download is thought to be safe or known to be suspicious. Its possible values are defined in the {{WebExtAPIRef('downloads.DangerType')}} type.
-- `endTime`{{optional_inline}}
+- `endTime` {{optional_inline}}
   - : A `string` (in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format) representing the number of milliseconds between the UNIX epoch and when this download ended. This is undefined if the download has not yet finished.
-- `error`{{optional_inline}}
+- `error` {{optional_inline}}
   - : A string indicating why a download was interrupted. Possible values are defined in the {{WebExtAPIRef('downloads.InterruptReason')}} type. This is undefined if an error has not occurred.
-- `estimatedEndTime`{{optional_inline}}
+- `estimatedEndTime` {{optional_inline}}
   - : A `string` (in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format) representing the estimated number of milliseconds between the UNIX epoch and when this download is estimated to be completed. This is undefined if it is not known (in particular, it is undefined in the `DownloadItem` that's passed into {{WebExtAPIRef("downloads.onCreated")}}).
 - `exists`
-  - : A `boolean` indicating whether a downloaded file still exists (`true`) or not (`false`). This information might be out-of-date, as browsers do not automatically watch for file removal — to check whether a file exists, call the {{WebExtAPIRef('downloads.search()')}} method, filtering for the file in question.
+  - : A `boolean` indicating whether a downloaded file still exists (`true`) or not (`false`). This information might be out-of-date, as browsers do not automatically watch for file removal — to check whether a file exists, call the {{WebExtAPIRef('downloads.search()')}} method, filtering for the file in question.
 - `filename`
   - : A `string` representing the file's absolute local path.
 - `fileSize`
@@ -70,7 +70,7 @@ Values of this type are objects. They contain the following properties:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#type-DownloadItem) API.
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#type-DownloadItem) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

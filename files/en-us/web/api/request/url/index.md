@@ -1,9 +1,9 @@
 ---
 title: Request.url
 slug: Web/API/Request/url
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Fetch
   - Property
   - Reference
@@ -16,25 +16,19 @@ browser-compat: api.Request.url
 The **`url`** read-only property of the {{domxref("Request")}}
 interface contains the URL of the request.
 
-## Syntax
+## Value
 
-```js
-var myURL = request.url;
-```
+A string indicating the URL of the request.
 
-### Value
-
-A {{domxref("USVString")}} indicating the url of the request.
-
-## Example
+## Examples
 
 In the following snippet, we create a new request using the
-{{domxref("Request.Request()")}} constructor (for an image file in the same directory as
-the script), then save the url of the request in a variable:
+{{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as
+the script), then save the URL of the request in a variable:
 
 ```js
-var myRequest = new Request('flowers.jpg');
-var myURL = myRequest.url; // "https://mdn.github.io/fetch-examples/fetch-request/flowers.jpg"
+const myRequest = new Request('flowers.jpg');
+const myURL = myRequest.url; // "https://mdn.github.io/fetch-examples/fetch-request/flowers.jpg"
 ```
 
 ## Specifications

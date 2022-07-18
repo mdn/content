@@ -50,12 +50,12 @@ Below are the video codecs which are _required_ in any fully WebRTC-compliant br
   </thead>
   <tbody>
     <tr>
-      <th scope="row">{{anch("VP8")}}</th>
+      <th scope="row"><a href="#vp8">VP8</a></th>
       <td>—</td>
       <td>Chrome, Edge, Firefox, Safari (12.1+)</td>
     </tr>
     <tr>
-      <th scope="row">{{anch("AVC", "AVC / H.264")}}</th>
+      <th scope="row"><a href="#avc">AVC / H.264</a></th>
       <td>Constrained Baseline (CB)</td>
       <td>
         <p>Chrome (52+), Edge, Firefox, Safari</p>
@@ -278,7 +278,7 @@ The bit rate may be adjusted at any time. In order to avoid network congestion, 
 
 G.711 defines the format for **Pulse Code Modulation** (**PCM**) audio as a series of 8-bit integer samples taken at a sample rate of 8,000 Hz, yielding a bit rate of 64 kbps. Both {{interwiki("wikipedia", "M-law", "µ-law")}} and {{interwiki("wikipedia", "A-law")}} encodings are allowed.
 
-G.711 is [defined by the ITU](https://www.itu.int/rec/T-REC-G.711-198811-I/en) and its payload format is defined in {{RFC(3551, "4.5.14")}}.
+G.711 is [defined by the ITU](https://www.itu.int/rec/T-REC-G.711-198811-I/en) and its payload format is defined in {{RFC(3551, "", "4.5.14")}}.
 
 WebRTC requires that G.711 use 8-bit samples at the standard 64 kbps rate, even though G.711 supports some other variations. Neither G.711.0 (lossless compression), G.711.1 (wideband capability), nor any other extensions to the G.711 standard are mandated by WebRTC.
 
@@ -361,7 +361,7 @@ If the media is video, we call a method called `preferCodec()` for both the send
 
 Finally, we call the {{domxref("RTCRtpTransceiver")}}'s {{domxref("RTCRtpTransceiver.setCodecPreferences", "setCodecPreferences()")}} method to specify that the given send and receive codecs are allowed, in the newly rearranged order.
 
-That's done for each transceiver on the `RTCPeerConnection`; once all of the transceivers have been updated, we call the {{domxref("RTCPeerConnection.onnegotiationneeded", "onnegotiationneeded")}} event handler, which will create a new offer, update the local description, send the offer along to the remote peer, and so on, thereby triggering the renegotiation of the connection.
+That's done for each transceiver on the `RTCPeerConnection`; once all of the transceivers have been updated, we call the {{domxref("RTCPeerConnection.negotiationneeded_event", "onnegotiationneeded")}} event handler, which will create a new offer, update the local description, send the offer along to the remote peer, and so on, thereby triggering the renegotiation of the connection.
 
 The `preferCodec()` function called by the code above looks like this to move a specified codec to the top of the list (to be prioritized during negotiation):
 

@@ -46,7 +46,7 @@ Throws an {{jsxref("URIError")}} ("malformed URI sequence") exception when
 
 Replaces each escape sequence in the encoded URI with the character that it represents,
 but does not decode escape sequences that could not have been introduced by
-{{jsxref("encodeURI")}}. The character “`#`” is not decoded from escape
+{{jsxref("encodeURI")}}. The character "`#`" is not decoded from escape
 sequences.
 
 ## Examples
@@ -62,7 +62,7 @@ decodeURI('https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D
 
 ```js
 try {
-  var a = decodeURI('%E0%A4%A');
+  const a = decodeURI('%E0%A4%A');
 } catch(e) {
   console.error(e);
 }

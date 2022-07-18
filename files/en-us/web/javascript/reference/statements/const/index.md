@@ -14,7 +14,7 @@ browser-compat: javascript.statements.const
 
 Constants are block-scoped, much like variables declared using the
 [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)
-keyword. The value of a constant can't be changed through reassignment (i.e. by using the [assignment operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)), and it can't be redeclared (i.e. through a [variable declaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)). However, if a constant is an [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) or [array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) its properties or items can be updated or removed.
+keyword. The value of a constant can't be changed through reassignment (i.e. by using the [assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)), and it can't be redeclared (i.e. through a [variable declaration](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)). However, if a constant is an [object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) or [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) its properties or items can be updated or removed.
 
 {{EmbedInteractiveExample("pages/js/statement-const.html")}}
 
@@ -27,11 +27,11 @@ const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]];
 - `nameN`
   - : The constant's name, which can be any legal {{Glossary("identifier")}}.
 - `valueN`
-  - : The constant's value. This can be any legal [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions),
+  - : The constant's value. This can be any legal [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#expressions),
     including a function expression.
 
-The [Destructuring
-Assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax can also be used to declare variables.
+The [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+syntax can also be used to declare variables.
 
 ```js
 const { bar } = foo; // where foo = { bar:10, baz:12 };
@@ -45,20 +45,24 @@ block in which it is declared. Global constants do **not** become
 properties of the {{domxref("window")}} object, unlike {{jsxref("Statements/var",
   "var")}} variables.
 
-An initializer for a constant is required. You must specify its value in the same
-statement in which it's declared. (This makes sense, given that it can't be changed
-later.)
+An initializer for a constant is required. You must specify its value in the same declaration. (This makes sense, given that it can't be changed later.)
 
 The **`const` declaration** creates a read-only reference to a
 value. It does **not** mean the value it holds is immutable—just that the
 variable identifier cannot be reassigned. For instance, in the case where the content is
 an object, this means the object's contents (e.g., its properties) can be altered.
 
-All the considerations about the "[temporal
-dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_TDZ)" apply to both {{jsxref("Statements/let", "let")}} and
-`const`.
+All the considerations about the
+[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)
+apply to both {{jsxref("Statements/let", "let")}} and `const`.
 
 A constant cannot share its name with a function or a variable in the same scope.
+
+Unlike `var`, `const` begins _Declarations_, not _Statements_. That means you cannot use a lone `const` declaration as the body of a block (which makes sense, since there's no way to access the variable).
+
+```js
+if (true) const a = 1; // SyntaxError: Unexpected token 'const'
+```
 
 ## Examples
 
@@ -154,5 +158,4 @@ MY_ARRAY = ['B'];
 
 - {{jsxref("Statements/var", "var")}}
 - {{jsxref("Statements/let", "let")}}
-- [Constants in
-  the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Constants)
+- [Constants in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#constants)

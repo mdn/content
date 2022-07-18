@@ -1,6 +1,7 @@
 ---
 title: PointerEvent.pointerId
 slug: Web/API/PointerEvent/pointerId
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -18,21 +19,14 @@ event. The identifier is unique, being different from the identifiers of all oth
 active pointer events. Since the value may be randomly generated, it is not guaranteed
 to convey any particular meaning.
 
-## Syntax
+## Value
 
-```js
-var id = pointerEvent.pointerId;
-```
+A number.
 
-### Return value
-
-- `id`
-  - : The pointer event's unique identifier number.
-
-## Example
+## Examples
 
 The following code snippet compares a previously saved `pointerId` with the
-one of the {{event("pointerdown")}} event that was just fired.
+one of the {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event that was just fired.
 
 ```js
 let id; // Let's assume that this is a previously saved pointerId

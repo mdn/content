@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.appendBufferAsync()
 slug: Web/API/SourceBuffer/appendBufferAsync
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -20,34 +21,32 @@ browser-compat: api.SourceBuffer.appendBufferAsync
 
 The **`appendBufferAsync()`** method
 of the {{domxref("SourceBuffer")}} interface begins the process of asynchronously
-appending media segment data from an {{jsxref("ArrayBuffer")}} or
-{{domxref("ArrayBufferView")}} object to the `SourceBuffer`. It
-returns a {{jsxref("Promise")}} which is fulfilled once the buffer has been appended.
+appending media segment data from an {{jsxref("ArrayBuffer")}},
+a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object to the `SourceBuffer` object.
+It returns a {{jsxref("Promise")}} which is fulfilled once the buffer has been appended.
 
 ## Syntax
 
 ```js
-appendPromise = sourceBuffer.appendBufferAsync(source);
+appendBufferAsync(source)
 ```
 
 ### Parameters
 
 - `source`
-  - : A {{domxref("BufferSource")}} (that is, either an {{domxref("ArrayBufferView")}} or
-    {{jsxref("ArrayBuffer")}}) which contains the media segment data you want to add to
+  - : Either an {{domxref("ArrayBufferView")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object that contains the media segment data you want to add to
     the `SourceBuffer`.
 
 ### Return value
 
-A {{jsxref("Promise")}} which is fulfilled when the buffer has been added successfully
-to the `SourceBuffer`, or `null` if the request could not be
-initiated.
+A {{jsxref("Promise")}} which is fulfilled when the buffer has been added successfully to the `SourceBuffer` object,
+or `null`, if the request could not be initiated.
 
-## Example
+## Examples
 
 This simplified example async function, `fillSourceBuffer()`, takes as input
-parameters {{domxref("BufferSource")}}, `buffer`, and a
-`SourceBuffer` to which to append the source media from the buffer.
+parameters `buffer`, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}, and a
+`SourceBuffer` object to which to append the source media from the buffer.
 
 ```js
 async function fillSourceBuffer(buffer, msBuffer) {
@@ -71,8 +70,7 @@ This feature is not part of any specification. It is not on track to become a st
 
 ## See also
 
-- [Media Source Extensions
-  API](/en-US/docs/Web/API/Media_Source_Extensions_API)
+- [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API)
 - {{domxref("SourceBuffer.appendBuffer()")}}
 - {{domxref("MediaSource")}}
 - {{domxref("SourceBufferList")}}

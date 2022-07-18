@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchManager.get()
 slug: Web/API/BackgroundFetchManager/get
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -19,7 +20,7 @@ The **`get()`** method of the {{domxref("BackgroundFetchManager")}} interface re
 ## Syntax
 
 ```js
-let backgroundFetchRegistration = BackgroundFetchManager.get(id);
+get(id)
 ```
 
 ### Parameters

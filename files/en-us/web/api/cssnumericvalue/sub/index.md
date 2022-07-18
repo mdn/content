@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue.sub()
 slug: Web/API/CSSNumericValue/sub
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -21,13 +22,13 @@ The **`sub()`** method of the
 ## Syntax
 
 ```js
-var cssMathSum = CSSNumericValue.sub(number);
+sub(number)
 ```
 
 ### Parameters
 
-- number
-  - : Either a {{jsxref('Number')}} or a {{domxref('CSSMathSum')}}.
+- `number`
+  - : Either a number or a {{domxref('CSSMathSum')}}.
 
 ### Return value
 
@@ -35,8 +36,8 @@ A {{domxref('CSSMathSum')}}
 
 ### Exceptions
 
-- TypeError
-  - : Indicates that an invalid type was passed to the method.
+- {{jsxref("TypeError")}}
+  - : Thrown if an invalid type was passed to the method.
 
 ## Examples
 
@@ -45,8 +46,6 @@ let mathSum = CSS.px("23").sum(CSS.percent("4")).sum(CSS.cm("3")).sum(CSS.in("9"
 // Prints "calc(23px - 4% - 3cm - 9in)"
 console.log(mathSum.toString());
 ```
-
-And/or include a list of links to useful code samples that live elsewhere:
 
 ## Specifications
 

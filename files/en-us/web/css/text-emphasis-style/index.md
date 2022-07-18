@@ -13,6 +13,10 @@ browser-compat: css.properties.text-emphasis-style
 
 The **`text-emphasis-style`** [CSS](/en-US/docs/Web/CSS) property sets the appearance of emphasis marks. It can also be set, and reset, using the {{cssxref("text-emphasis")}} shorthand.
 
+{{EmbedInteractiveExample("pages/css/text-emphasis-style.html")}}
+
+## Syntax
+
 ```css
 /* Initial value */
 text-emphasis-style: none; /* No emphasis marks */
@@ -38,10 +42,9 @@ text-emphasis-style: open sesame;
 text-emphasis-style: inherit;
 text-emphasis-style: initial;
 text-emphasis-style: revert;
+text-emphasis-style: revert-layer;
 text-emphasis-style: unset;
 ```
-
-## Syntax
 
 ### Values
 

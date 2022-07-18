@@ -26,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var discarding = browser.tabs.discard(
+let discarding = browser.tabs.discard(
   tabIds          // integer or integer array
 )
 ```
@@ -38,7 +38,7 @@ var discarding = browser.tabs.discard(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the specified tabs have been discarded. If any error occurs (for example, invalid tab IDs), the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the specified tabs have been discarded. If any error occurs (for example, invalid tab IDs), the promise will be rejected with an error message.
 
 If the ID of the active tab is passed in, it will not be discarded, but the promise will be fulfilled and any other tabs passed in will be discarded.
 
@@ -55,7 +55,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var discarding = browser.tabs.discard(2);
+let discarding = browser.tabs.discard(2);
 discarding.then(onDiscarded, onError);
 ```
 
@@ -70,7 +70,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var discarding = browser.tabs.discard([15, 14, 1]);
+let discarding = browser.tabs.discard([15, 14, 1]);
 discarding.then(onDiscarded, onError);
 ```
 
@@ -80,7 +80,7 @@ discarding.then(onDiscarded, onError);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-discard) API.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-discard) API.
 
 <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //

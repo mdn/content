@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesis.cancel()
 slug: Web/API/SpeechSynthesis/cancel
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -25,13 +26,13 @@ If an utterance is currently being spoken, speaking will stop immediately.
 cancel()
 ```
 
-### Returns
-
-{{jsxref('undefined')}}.
-
 ### Parameters
 
 None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

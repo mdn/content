@@ -1,6 +1,7 @@
 ---
 title: PushEvent()
 slug: Web/API/PushEvent/PushEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -21,36 +22,41 @@ service worker context.
 ## Syntax
 
 ```js
-const myPushEvent = new PushEvent(type, eventInitDict);
+new PushEvent(type)
+new PushEvent(type, options)
 ```
 
 ### Parameters
 
-- _type_
-  - : A {{domxref("DOMString")}} defining the type of `PushEvent`. This can
-    be {{event("push")}} or {{event("pushsubscriptionchange")}}.
-- _eventInitDict_ {{optional_inline}}
+- `type`
+  - : A string with the name of the event.
+    It is case-sensitive and browsers set it to `push` or `pushsubscriptionchange`.
+- `options` {{optional_inline}}
+  - : An object that, _in addition of the properties defined in {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}_, can have the following properties:
+    - `data`
+      - : The data you want the `PushEvent` to contain, if any.
+        When the constructor is invoked, the {{domxref("PushEvent.data")}} property of the resulting object will be set
+        to a new {{domxref("PushMessageData")}} object containing these bytes.
 
-  - : An options object containing any initialization data you want to populate the
-    `PushEvent` object with. The options are:
+### Return value
 
-    - `data`: The data you want the `PushEvent` to
-      contain, if any. When the constructor is invoked, the
-      {{domxref("PushEvent.data")}} property of the resulting object will be set
-      to a new {{domxref("PushMessageData")}} object containing bytes extracted
-      from the `eventInitDict data` member.
+A new {{domxref("PushEvent")}} object.
 
-## Example
+## Examples
 
 ```js
-var dataInit = {
+const dataInit = {
   data : 'Some sample text'
 }
 
-var myPushEvent = new PushEvent('push', dataInit);
+const myPushEvent = new PushEvent('push', dataInit);
 
 myPushEvent.data.text(); // should return 'Some sample text'
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

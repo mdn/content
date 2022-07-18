@@ -34,13 +34,13 @@ browser.tabs.connect(
 
 - `tabId`
   - : `integer`. ID of the tab whose content scripts we want to connect to.
-- `connectInfo`{{optional_inline}}
+- `connectInfo` {{optional_inline}}
 
   - : An object with the following properties:
 
-    - `name`{{optional_inline}}
+    - `name` {{optional_inline}}
       - : `string`. Will be passed into {{WebExtAPIRef("runtime.onConnect")}} event listeners in content scripts belonging to this extension and running in the specified tab.
-    - `frameId`{{optional_inline}}
+    - `frameId` {{optional_inline}}
       - : `integer`. Open a port to a specific frame identified by `frameId` instead of all frames in the tab.
 
 ### Return value
@@ -54,7 +54,7 @@ In this example a background script listens for a click on a [browser action](/e
 ```js
 function connectToTab(tabs) {
   if (tabs.length > 0) {
-    var examplePort = browser.tabs.connect(
+    let examplePort = browser.tabs.connect(
       tabs[0].id,
       {name: "tabs-connect-example"}
     );
@@ -67,7 +67,7 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener(function() {
-  var gettingActive = browser.tabs.query({
+  let gettingActive = browser.tabs.query({
     currentWindow: true, active: true
   });
   gettingActive.then(connectToTab, onError);
@@ -80,7 +80,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-connect) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-connect) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

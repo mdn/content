@@ -16,8 +16,8 @@ The **`Object.setPrototypeOf()`** method sets the prototype
 another object or {{jsxref("null")}}.
 
 > **Warning:** Changing the `[[Prototype]]` of an object is, by
-> the nature of [how modern
-> JavaScript engines optimize property accesses](https://mathiasbynens.be/notes/prototypes), currently a very slow operation
+> the nature of [how modern JavaScript engines optimize property accesses](https://mathiasbynens.be/notes/prototypes),
+> currently a very slow operation
 > in every browser and JavaScript engine. In addition, the effects of altering
 > inheritance are subtle and far-flung, and are not limited to the time spent in the
 > `Object.setPrototypeOf(...)` statement, but may extend to
@@ -90,10 +90,10 @@ Object.appendChain = function(oChain, oProto) {
     throw new TypeError('second argument to Object.appendChain must be an object or a string');
   }
 
-  var oNewProto = oProto,
+  const oNewProto = oProto,
       oReturn = o2nd = oLast = oChain instanceof this ? oChain : new oChain.constructor(oChain);
 
-  for (var o1st = this.getPrototypeOf(o2nd);
+  for (const o1st = this.getPrototypeOf(o2nd);
     o1st !== Object.prototype && o1st !== Function.prototype;
     o1st = this.getPrototypeOf(o2nd)
   ) {
@@ -127,7 +127,7 @@ function MammalSpecies(sMammalSpecies) {
 MammalSpecies.prototype = new Mammal();
 MammalSpecies.prototype.constructor = MammalSpecies;
 
-var oCat = new MammalSpecies('Felis');
+const oCat = new MammalSpecies('Felis');
 
 console.log(oCat.isMammal); // 'yes'
 
@@ -147,11 +147,11 @@ function MySymbol() {
   this.isSymbol = 'yes';
 }
 
-var nPrime = 17;
+const nPrime = 17;
 
 console.log(typeof nPrime); // 'number'
 
-var oPrime = Object.appendChain(nPrime, new MySymbol());
+const oPrime = Object.appendChain(nPrime, new MySymbol());
 
 console.log(oPrime); // '17'
 console.log(oPrime.isSymbol); // 'yes'
@@ -165,7 +165,7 @@ function Person(sName) {
   this.identity = sName;
 }
 
-var george = Object.appendChain(new Person('George'),
+const george = Object.appendChain(new Person('George'),
                                 'console.log("Hello guys!!");');
 
 console.log(george.identity); // 'George'
@@ -177,35 +177,7 @@ george(); // 'Hello guys!!'
 ### Using Object.setPrototypeOf
 
 ```js
-var dict = Object.setPrototypeOf({}, null);
-```
-
-## Polyfill
-
-Using the older {{jsxref("Object.prototype.__proto__")}} property, we can easily define
-`Object.setPrototypeOf` if it isn't available already:
-
-```js
-if (!Object.setPrototypeOf) {
-    // Only works in Chrome and FireFox, does not work in IE:
-     Object.prototype.setPrototypeOf = function(obj, proto) {
-         if(obj.__proto__) {
-             obj.__proto__ = proto;
-             return obj;
-         } else {
-             // If you want to return prototype of Object.create(null):
-             var Fn = function() {
-                 for (var key in obj) {
-                     Object.defineProperty(this, key, {
-                         value: obj[key],
-                     });
-                 }
-             };
-             Fn.prototype = proto;
-             return new Fn();
-         }
-     }
-}
+const dict = Object.setPrototypeOf({}, null);
 ```
 
 ## Specifications
@@ -218,6 +190,7 @@ if (!Object.setPrototypeOf) {
 
 ## See also
 
+- [Polyfill of `Object.setPrototypeOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Reflect.setPrototypeOf()")}}
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.getPrototypeOf()")}}

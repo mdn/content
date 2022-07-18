@@ -1,6 +1,7 @@
 ---
 title: VideoTrack.selected
 slug: Web/API/VideoTrack/selected
+page-type: web-api-instance-property
 tags:
   - HTML DOM
   - Media
@@ -20,15 +21,7 @@ The **{{domxref("VideoTrack")}}** property
 **`selected`** controls whether or not a particular video
 track is active.
 
-## Syntax
-
-```js
-isVideoSelected = VideoTrack.selected;
-
-VideoTrack.selected = true | false;
-```
-
-### Value
+## Value
 
 The `selected` property is a Boolean whose value is `true` if the
 track is active. Only a single video track can be active at any given time, so setting

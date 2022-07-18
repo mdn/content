@@ -1,6 +1,7 @@
 ---
 title: File()
 slug: Web/API/File/File
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -16,33 +17,37 @@ object instance.
 ## Syntax
 
 ```js
-new File(bits, name[, options]);
+new File(bits, name)
+new File(bits, name, options)
 ```
 
 ### Parameters
 
 - `bits`
-  - : An {{jsxref("Array")}} of {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}},
-    {{domxref("Blob")}}, {{domxref("USVString")}} objects, or a mix of any of such
-    objects, that will be put inside the {{domxref("File")}}. `USVString`
-    objects are encoded as UTF-8.
+  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
+    object such as an {{jsxref("Array")}}, having {{jsxref("ArrayBuffer")}}s,
+    {{jsxref("TypedArray")}}s, {{jsxref("DataView")}}s, {{domxref("Blob")}}s, strings,
+    or a mix of any of such elements, that will be put inside the {{domxref("File")}}.
+    Note that strings here are encoded as UTF-8, unlike the usual JavaScript UTF-16 strings.
 - `name`
-  - : A {{domxref("USVString")}} representing the file name or the path to the file.
+  - : A string representing the file name or the path to the file.
 - `options` {{optional_inline}}
 
   - : An options object containing optional attributes for the file. Available options are
     as follows:
 
-    - `type`: A {{domxref("DOMString")}} representing the MIME type of the
-      content that will be put into the file. Defaults to a value of `"".`
-    - `lastModified`: A number representing the number of milliseconds
-      between the Unix time epoch and when the file was last modified. Defaults to a
-      value of {{jsxref("Date.now()")}}.
+    - `type`
+      - : A string representing the MIME type of the
+        content that will be put into the file. Defaults to a value of `"".`
+    - `lastModified`
+      - : A number representing the number of milliseconds
+        between the Unix time epoch and when the file was last modified. Defaults to a
+        value of {{jsxref("Date.now()")}}.
 
-## Example
+## Examples
 
 ```js
-var file = new File(["foo"], "foo.txt", {
+const file = new File(["foo"], "foo.txt", {
   type: "text/plain",
 });
 ```

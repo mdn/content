@@ -20,7 +20,7 @@ Firefox 56 was released on September 28, 2017. This article lists key changes th
 ### HTML
 
 - Implemented the `labels` property for labelable form controls, for example {{domxref("HTMLInputElement.labels")}} ({{bug(556743)}}).
-- Implemented `<link rel="preload">`; see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Preloading_content) for more details ({{bug(1222633)}}). Note that currently Firefox only supports preloading of cacheable resources.
+- Implemented `<link rel="preload">`; see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Link_types/preload) for more details ({{bug(1222633)}}). Note that currently Firefox only supports preloading of cacheable resources.
 
 ### CSS
 
@@ -53,7 +53,7 @@ _No changes._
 
 #### DOM events
 
-- {{domxref("GlobalEventHandlers.onwheel")}} is now available on {{domxref("HTMLElement")}} — it wasn't before ({{bug(1370550)}}).
+- `onwheel` is now available on {{domxref("HTMLElement.onwheel", "HTMLElement")}} — it wasn't before ({{bug(1370550)}}).
 
 #### Media and WebRTC
 
@@ -63,7 +63,7 @@ _No changes._
 #### Canvas and WebGL
 
 - The {{domxref("CanvasRenderingContext2D.drawImage()")}} method has been updated so that smoothing occurs when downscaling even if `imageSmoothingEnabled` is `false`. This is not mandatory as per spec, but follows Chrome's behavior. See {{bug(1360415)}}.
-- An {{domxref("SVGImageElement")}} can now be used as a {{domxref("CanvasImageSource")}}, e.g. as the image source in a {{domxref("CanvasRenderingContext2D.drawImage","drawImage()")}} call ({{bug(1382027)}}).
+- An {{domxref("SVGImageElement")}} can now be used as the image source in a {{domxref("CanvasRenderingContext2D.drawImage","drawImage()")}} call ({{bug(1382027)}}).
 
 ### Security
 
@@ -76,7 +76,7 @@ _No changes._
 ### Other
 
 - Gecko now encodes URLs internally as [punycode](https://en.wikipedia.org/wiki/Punycode), to avoid URL encoding problems (see {{bug("945240")}}, also see discussion in {{bug("942074")}}).
-- Firefox on Windows and Mac OS X can now be made to run in [headless mode](/en-US/docs/Mozilla/Firefox/Headless_mode) using the `-headless` flag (see {{bug(1355150)}} and {{bug(1355147)}}).
+- Firefox on Windows and macOS can now be made to run in [headless mode](/en-US/docs/Mozilla/Firefox/Headless_mode) using the `-headless` flag (see {{bug(1355150)}} and {{bug(1355147)}}).
 
 ## Removals from the web platform
 

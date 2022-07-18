@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequestEventTarget
 slug: Web/API/XMLHttpRequestEventTarget
+page-type: web-api-interface
 tags:
   - AJAX
   - API
@@ -12,7 +13,7 @@ browser-compat: api.XMLHttpRequestEventTarget
 ---
 {{APIRef("XMLHttpRequest")}}
 
-`XMLHttpRequestEventTarget` is the interface that describes the event handlers shared on {{domxref("XMLHttpRequest")}} and {{domxref("XMLHttpRequestUpload")}}. 
+`XMLHttpRequestEventTarget` is the interface that describes the event handlers shared on {{domxref("XMLHttpRequest")}} and {{domxref("XMLHttpRequestUpload")}}.
 
 You don't use `XMLHttpRequestEventTarget` directly; instead you interact with the sub classes.
 
@@ -43,7 +44,6 @@ The following events are made available to {{domxref("XMLHttpRequestUpload")}}:
 - {{domxref("XMLHttpRequestUpload/loadstart_event", "loadstart")}}
 - {{domxref("XMLHttpRequestUpload/progress_event", "progress")}}
 - {{domxref("XMLHttpRequestUpload/timeout_event", "timeout")}}
-
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.deleteFramebuffer()
 slug: Web/API/WebGLRenderingContext/deleteFramebuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -19,17 +20,17 @@ has already been deleted.
 ## Syntax
 
 ```js
-void gl.deleteFramebuffer(framebuffer);
+deleteFramebuffer(framebuffer)
 ```
 
 ### Parameters
 
-- framebuffer
+- `framebuffer`
   - : A {{domxref("WebGLFramebuffer")}} object to delete.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

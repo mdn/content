@@ -1,6 +1,7 @@
 ---
 title: 'ServiceWorkerGlobalScope: activate event'
 slug: Web/API/ServiceWorkerGlobalScope/activate_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -13,28 +14,27 @@ browser-compat: api.ServiceWorkerGlobalScope.activate_event
 
 The **`activate`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("ExtendableEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("ServiceWorkerGlobalScope.onactivate")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('activate', event => { });
+
+onactivate = event => { };
+```
+
+## Event type
+
+An {{domxref("ExtendableEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("ExtendableEvent")}}
+
+## Event properties
+
+_Doesn't implement any specific properties, but inherits properties from its parent, {{domxref("Event")}}._
 
 ## Examples
 
@@ -42,7 +42,7 @@ The following snippet shows how you could use an `activate` event handler to upg
 
 ```js
 globalScope.addEventListener('activate', function(event) {
-  var cacheAllowlist = ['v2'];
+  const cacheAllowlist = ['v2'];
 
   event.waitUntil(
     caches.forEach(function(cache, cacheName) {
@@ -54,11 +54,11 @@ globalScope.addEventListener('activate', function(event) {
 });
 ```
 
-You can also set up the event handler using the {{domxref("ServiceWorkerGlobalScope.onactivate")}} property:
+You can also set up the event handler using the `onactivate` property:
 
 ```js
 globalScope.onactivate = function(event) {
-  ...
+  // ...
 };
 ```
 

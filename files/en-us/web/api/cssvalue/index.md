@@ -1,6 +1,7 @@
 ---
 title: CSSValue
 slug: Web/API/CSSValue
+page-type: web-api-interface
 tags:
   - API
   - CSSOM
@@ -26,8 +27,8 @@ The **`CSSValue`** interface represents the current computed value of a CSS prop
 ## Properties
 
 - {{DOMxRef("CSSValue.cssText")}}
-  - : A {{DOMxRef("DOMString")}} representing the current value.
-- {{DOMxRef("CSSValue.cssValueType")}}{{ReadOnlyInline}}
+  - : A string representing the current value.
+- {{DOMxRef("CSSValue.cssValueType")}} {{ReadOnlyInline}}
 
   - : An `unsigned short` representing a code defining the type of the value. Possible values are:
 
@@ -40,7 +41,7 @@ The **`CSSValue`** interface represents the current computed value of a CSS prop
 
 ## Specifications
 
-This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) specification, but has been dropped from any
 standardization effort since then.
 
 It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.

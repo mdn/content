@@ -14,7 +14,7 @@ The **`eq`** instructions, short for *equal*, check if two numbers are equal. If
 
 Similarly, the **`eqz`** instructions check if a number is equal to zero, the **`eqz`** instructions are only available for the integer types and not for the floating point types.
 
-{{EmbedInteractiveExample("pages/wat/eq.html")}}
+{{EmbedInteractiveExample("pages/wat/eq.html", "tabbed-taller")}}
 
 ## Syntax
 

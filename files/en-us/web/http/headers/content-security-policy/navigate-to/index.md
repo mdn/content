@@ -9,7 +9,7 @@ tags:
   - Navigation
   - Reference
   - Security
-browser-compat: http.headers.csp.Content-Security-Policy.navigate-to
+browser-compat: http.headers.Content-Security-Policy.navigate-to
 ---
 {{HTTPSidebar}}
 
@@ -44,7 +44,7 @@ on what this document is allowed to navigate to.
 
 ## Syntax
 
-One or more sources can be set for the `navigate-to` policy:
+One or more sources can be set for the `navigate-to` policy:
 
 ```http
 Content-Security-Policy: navigate-to <source>;

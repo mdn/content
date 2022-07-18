@@ -27,7 +27,7 @@ You cannot change this property directly.
 ### Using ignoreCase
 
 ```js
-var regex = new RegExp('foo', 'i');
+const regex = new RegExp('foo', 'i');
 
 console.log(regex.ignoreCase); // true
 ```

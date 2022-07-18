@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.currentLocalDescription
 slug: Web/API/RTCPeerConnection/currentLocalDescription
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -37,18 +38,12 @@ the change isn't necessarily instantaneous, see
 > may specify a description which the connection is currently in the process of
 > switching over to.
 
-## Syntax
-
-```js
-sessionDescription = RTCPeerConnection.currentLocalDescription;
-```
-
-### Return value
+## Value
 
 The current description of the local end of the connection, if one has been set. If
 none has been successfully set, this value is `null`.
 
-## Example
+## Examples
 
 This example looks at the `currentLocalDescription` and displays an alert
 containing the {{domxref("RTCSessionDescription")}} object's `type` and
@@ -56,7 +51,7 @@ containing the {{domxref("RTCSessionDescription")}} object's `type` and
 
 ```js
 var pc = new RTCPeerConnection();
-…
+// ...
 var sd = pc.currentLocalDescription;
 if (sd) {
   alert("Local session: type='" +

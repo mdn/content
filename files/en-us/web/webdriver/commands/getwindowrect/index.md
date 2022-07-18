@@ -8,9 +8,9 @@ tags:
   - WebDriver
 browser-compat: webdriver.commands.GetWindowRect
 ---
-The _Get Window Rect_ [command](/en-US/docs/Web/WebDriver/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the size and position of the given [`WebElement`](/en-US/docs/Web/WebDriver/WebElement). Many [WebDriver clients](/en-US/docs/Web/WebDriver/Clients) present separate API methods for getting an element’s location and dimensions, but as an optimization they both use this primitive.
+The _Get Window Rect_ [command](/en-US/docs/Web/WebDriver/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the size and position of the given [`WebElement`](/en-US/docs/Web/WebDriver/WebElement). Many [WebDriver clients](/en-US/docs/Web/WebDriver/Clients) present separate API methods for getting an element's location and dimensions, but as an optimization they both use this primitive.
 
-The command operates on the currently selected window, and returns size and position of the operating system window. The returned [`WindowRect`](/en-US/docs/Web/WebDriver/WindowRect) can be used as input for the [Set Window Rect](/en-US/docs/Web/WebDriver/SetWindowRect) command, which is for manipulating a window’s position and dimensions.
+The command operates on the currently selected window, and returns size and position of the operating system window. The returned [`WindowRect`](/en-US/docs/Web/WebDriver/WindowRect) can be used as input for the [Set Window Rect](/en-US/docs/Web/WebDriver/SetWindowRect) command, which is for manipulating a window's position and dimensions.
 
 ## Syntax
 

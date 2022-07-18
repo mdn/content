@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.href
 slug: Web/API/HTMLAnchorElement/href
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAnchorElement
@@ -12,17 +13,12 @@ browser-compat: api.HTMLAnchorElement.href
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.href`** property is a
-{{Glossary("stringifier")}} that returns a {{domxref("USVString")}} containing the whole URL, and allows
+{{Glossary("stringifier")}} that returns a string containing the whole URL, and allows
 the href to be updated.
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = anchor.href;
-// Setter
-anchor.href = string;
-```
+A string.
 
 ## Examples
 

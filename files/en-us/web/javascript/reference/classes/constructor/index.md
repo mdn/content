@@ -10,7 +10,7 @@ browser-compat: javascript.classes.constructor
 ---
 {{jsSidebar("Classes")}}
 
-The `constructor` method is a special method of a {{jsxref("Statements/class", "class")}} for creating and initializing an object instance of that class.
+The `constructor` method is a special method of a {{jsxref("Statements/class", "class")}} for creating and initializing an object instance of that class.
 
 {{EmbedInteractiveExample("pages/js/classes-constructor.html")}}
 
@@ -118,8 +118,41 @@ try {
 }
 ```
 
-There can be only one special method with the name "`constructor`" in a class.
-Having more than one occurrence of a `constructor` method in a class will throw a {{jsxref("SyntaxError")}} error.
+There can be only one special method with the name `constructor` in a class.
+Having more than one occurrence of a `constructor` method in a class will throw a {{jsxref("SyntaxError")}} error. Having a getter or setter called `constructor` is also a {{jsxref("SyntaxError")}}.
+
+The `constructor` follows normal method syntax, so [parameter default values](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), etc. can all be used.
+
+```js
+class Person {
+  constructor(name = 'Anonymous') {
+    this.name = name;
+  }
+  introduce() {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+}
+
+const person = new Person();
+person.introduce(); // Hello, my name is Anonymous
+```
+
+The constructor must be a literal name. Computed properties cannot become constructors.
+
+```js
+class Foo {
+  // This is a computed property. It will not be picked up as a constructor.
+  ['constructor']() {
+    console.log('called');
+    this.a = 1;
+  }
+}
+
+const foo = new Foo(); // No log
+console.log(foo); // Foo {}
+foo.constructor(); // Logs "called"
+console.log(foo); // Foo { a: 1 }
+```
 
 ## Examples
 
@@ -144,7 +177,7 @@ class Square extends Polygon {
 
   set area(value) {
     this.height = value**0.5;
-    this.width = value**0.5;
+    this.width = value**0.5;
   }
 }
 ```

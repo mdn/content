@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.canPlayType()
 slug: Web/API/HTMLMediaElement/canPlayType
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -23,41 +24,37 @@ browser-compat: api.HTMLMediaElement.canPlayType
 ---
 {{APIRef("HTML DOM")}}
 
-The {{domxref("HTMLMediaElement")}} method
-**`canPlayType()`** reports how likely it is that the current
-browser will be able to play media of a given MIME type.
+The {{domxref("HTMLMediaElement")}} method **`canPlayType()`** reports how likely it is that the current browser will be able to play media of a given MIME type.
 
 > **Note:** This feature is not available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
 ## Syntax
 
 ```js
-canPlayResponse = audioOrVideo.canPlayType(mediaType);
+canPlayType(type)
 ```
 
 ### Parameters
 
-- `mediaType`
-  - : A {{domxref("DOMString")}} containing the MIME type of the media.
+- `type`
+  - : A string specifying the MIME type of the media and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) containing a comma-separated list of the supported codecs.
 
 ### Return value
 
-A {{domxref("DOMString")}} indicating how likely it is that the media can be played.
+A string indicating how likely it is that the media can be played.
 The string will be one of the following values:
 
-- `probably`
-  - : Media of the type indicated by the `mediaType` parameter is probably
-    playable on this device.
-- `maybe`
-  - : Not enough information is available to determine for sure whether or not the media
-    will play until playback is actually attempted.
 - `""` (empty string)
-  - : Media of the given type definitely can't be played on the current device.
+  - : The media cannot be played on the current device.
+- `probably`
+  - : The media is probably playable on this device.
+- `maybe`
+  - : There is not enough information to determine whether the media can play (until playback is actually attempted).
 
-## Example
+## Examples
 
 ```js
-var obj = document.createElement('video');
+let obj = document.createElement('video');
 console.log(obj.canPlayType('video/mp4')); // "maybe"
 ```
 
@@ -73,7 +70,6 @@ console.log(obj.canPlayType('video/mp4')); // "maybe"
 
 - The interface defining it, {{domxref("HTMLMediaElement")}}.
 - {{domxref("MediaCapabilities")}} in the Media Capabilities API
-- [Handling media support
-  issues in web content](/en-US/docs/Web/Media/Formats/Support_issues)
-- [Guide to media types and formats on the
-  web](/en-US/docs/Web/Media/Formats)
+- [Handling media support issues in web content](/en-US/docs/Web/Media/Formats/Support_issues)
+- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
+- [The `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter)

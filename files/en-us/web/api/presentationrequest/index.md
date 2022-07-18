@@ -1,6 +1,7 @@
 ---
 title: PresentationRequest
 slug: Web/API/PresentationRequest
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -30,7 +31,7 @@ None
 ### Event handlers
 
 - {{domxref("PresentationRequest.onconnectionavailable")}}
-  - : Fires on a successful call to {{DOMxRef("PresentationRequest.start","PresentationRequest.start()")}} or {{DOMxRef("PresentationRequest.join","PresentationRequest.join()")}}. This method provides a object with a reference to the created or joined object.
+  - : Fires on a successful call to {{DOMxRef("PresentationRequest.start","PresentationRequest.start()")}} or {{DOMxRef("PresentationRequest.join","PresentationRequest.join()")}}. This method provides a object with a reference to the created or joined object.
 
 ## Methods
 

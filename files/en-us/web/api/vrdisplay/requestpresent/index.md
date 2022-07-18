@@ -1,6 +1,7 @@
 ---
 title: VRDisplay.requestPresent()
 slug: Web/API/VRDisplay/requestPresent
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -22,14 +23,12 @@ The **`requestPresent()`** method of the {{domxref("VRDisplay")}} interface star
 ## Syntax
 
 ```js
-vrDisplayInstance.requestPresent(layers).then(function() {
-  // Do something after the presentation has begun
-});
+requestPresent(layers)
 ```
 
 ### Parameters
 
-- layers
+- `layers`
   - : An array of {{domxref("VRLayerInit")}} objects representing the scene you want to present. At the moment, this can be a minimum of 0 and a maximum of 1.
 
 ### Return value
@@ -60,8 +59,8 @@ if(navigator.getVRDisplays) {
 
             // Set the canvas size to the size of the vrDisplay viewport
 
-            var leftEye = vrDisplay.getEyeParameters('left');
-            var rightEye = vrDisplay.getEyeParameters('right');
+            const leftEye = vrDisplay.getEyeParameters('left');
+            const rightEye = vrDisplay.getEyeParameters('right');
 
             canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
             canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);
@@ -94,7 +93,7 @@ if(navigator.getVRDisplays) {
 
 This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/).
 
 ## Browser compatibility
 

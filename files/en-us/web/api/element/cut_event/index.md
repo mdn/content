@@ -1,6 +1,7 @@
 ---
 title: 'Element: cut event'
 slug: Web/API/Element/cut_event
+page-type: web-api-event
 tags:
   - API
   - Clipboard API
@@ -55,8 +56,8 @@ It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Cre
 #### HTML
 
 ```html
-<div class="source" contenteditable="true">Try cutting text from this box...</div>
-<div class="target" contenteditable="true">...and pasting it into this one</div>
+<div class="source" contenteditable="true">Cut text from this box.</div>
+<div class="target" contenteditable="true">And paste it into this one.</div>
 ```
 
 ```css hidden
@@ -84,7 +85,7 @@ source.addEventListener('cut', (event) => {
 
 #### Result
 
-{{ EmbedLiveSample('Live_example', '100%', '100px') }}
+{{ EmbedLiveSample('Live_example', '100%', '120px') }}
 
 ## Specifications
 

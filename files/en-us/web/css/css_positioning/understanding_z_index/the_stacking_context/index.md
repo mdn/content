@@ -14,7 +14,7 @@ The **stacking context** is a three-dimensional conceptualization of HTML elemen
 
 ## The stacking context
 
-In the previous part of this article, [Using z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index), the rendering order of certain elements is influenced by their `z-index` value. This occurs because these elements have special properties which cause them to form a _stacking context_.
+In the previous part of this article, [Using z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index), we showed that the rendering order of certain elements is influenced by their `z-index` value. This occurs because these elements have special properties which cause them to form a _stacking context_.
 
 A stacking context is formed, anywhere in the document, by any element in the following scenarios:
 
@@ -23,19 +23,19 @@ A stacking context is formed, anywhere in the document, by any element in the fo
 - Element with a {{cssxref("position")}} value `fixed` or `sticky` (sticky for all mobile browsers, but not older desktop).
 - Element that is a child of a [flex](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) container, with {{cssxref("z-index")}} value other than `auto`.
 - Element that is a child of a {{cssxref("grid")}} container, with {{cssxref("z-index")}} value other than `auto`.
-- Element with a {{cssxref("opacity")}} value less than `1` (See [the specification for opacity](https://www.w3.org/TR/css3-color/#transparency)).
+- Element with an {{cssxref("opacity")}} value less than `1` (See [the specification for opacity](https://www.w3.org/TR/css-color-3/#transparency)).
 - Element with a {{cssxref("mix-blend-mode")}} value other than `normal`.
 - Element with any of the following properties with value other than `none`:
 
   - {{cssxref("transform")}}
   - {{cssxref("filter")}}
+  - {{cssxref("backdrop-filter")}}
   - {{cssxref("perspective")}}
   - {{cssxref("clip-path")}}
   - {{cssxref("mask")}} / {{cssxref("mask-image")}} / {{cssxref("mask-border")}}
 
-- Element with a {{cssxref("isolation")}} value `isolate`.
-- Element with a {{cssxref("-webkit-overflow-scrolling")}} value `touch`.
-- Element with a {{cssxref("will-change")}} value specifying any property that would create a stacking context on non-initial value (see [this post](http://dev.opera.com/articles/css-will-change-property/)).
+- Element with an {{cssxref("isolation")}} value `isolate`.
+- Element with a {{cssxref("will-change")}} value specifying any property that would create a stacking context on non-initial value (see [this post](https://dev.opera.com/articles/css-will-change-property/)).
 - Element with a {{cssxref("contain")}} value of `layout`, or `paint`, or a composite value that includes either of them (i.e. `contain: strict`, `contain: content`).
 
 Within a stacking context, child elements are stacked according to the same rules previously explained. Importantly, the `z-index` values of its child stacking contexts only have meaning in this parent. Stacking contexts are treated atomically as a single unit in the parent stacking context.

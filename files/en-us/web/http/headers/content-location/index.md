@@ -11,8 +11,7 @@ browser-compat: http.headers.Content-Location
 
 The **`Content-Location`** header indicates an alternate
 location for the returned data. The principal use is to indicate the URL of a resource
-transmitted as the result of [content
-negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
+transmitted as the result of [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
 
 {{HTTPHeader("Location")}} and `Content-Location` are different.
 `Location` indicates the URL of a redirect, while
@@ -64,12 +63,11 @@ URLs for `Content-Location` depending on the request's
 | `Accept: text/plain, text/*`          | `Content-Location: /documents/foo.txt`  |
 
 These URLs are examples — the site could serve the different filetypes with any URL
-patterns it wishes, such as a [query string
-parameter](/en-US/docs/Web/API/HTMLAnchorElement/search): `/documents/foo?format=json`,
+patterns it wishes, such as a [query string parameter](/en-US/docs/Web/API/HTMLAnchorElement/search): `/documents/foo?format=json`,
 `/documents/foo?format=xml`, and so on.
 
 Then the client could remember that the JSON version is available at that particular
-URL, skipping content negotation the next time it requests that document.
+URL, skipping content negotiation the next time it requests that document.
 
 The server could also consider other [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) headers, such
 as {{HTTPHeader("Accept-Language")}}.

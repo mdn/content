@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Array.filter
 ---
 {{JSRef}}
 
-The **`filter()`** method **creates a new array** with all elements that pass the test implemented by the provided function.
+The **`filter()`** method creates a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
 
 {{EmbedInteractiveExample("pages/js/array-filter.html","shorter")}}
 
@@ -42,21 +42,21 @@ filter(function(element, index, array) { /* ... */ }, thisArg)
 
   - : Function is a predicate, to test each element of the array. Return a value that coerces to `true` to keep the element, or to `false` otherwise.
 
-    It accepts three arguments:
+    The function is called with the following arguments:
 
     - `element`
       - : The current element being processed in the array.
-    - `index`{{optional_inline}}
+    - `index`
       - : The index of the current element being processed in the array.
-    - `array`{{optional_inline}}
+    - `array`
       - : The array on which `filter()` was called.
 
-- `thisArg`{{optional_inline}}
+- `thisArg` {{optional_inline}}
   - : Value to use as `this` when executing `callbackFn`.
 
 ### Return value
 
-A new array with the elements that pass the test. If no elements pass the test, an empty array will be returned.
+A [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of the given array, filtered down to just the elements from the given array that pass the test implemented by the provided function. If no elements pass the test, an empty array will be returned.
 
 ## Description
 
@@ -112,7 +112,7 @@ console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]
 
 ### Filtering invalid entries from JSON
 
-The following example uses `filter()` to create a filtered json of all elements with non-zero, numeric `id`.
+The following example uses `filter()` to create a filtered JSON of all elements with non-zero, numeric `id`.
 
 ```js
 let arr = [
@@ -185,10 +185,10 @@ console.log(filterItems(fruits, 'an'))  // ['banana', 'mango', 'orange']
 
 ### Affecting Initial Array (modifying, appending and deleting)
 
-The following examples tests the behavior of the `filter` method when the array is modified.
+The following example tests the behavior of the `filter` method when the array is modified.
 
 ```js
-// Modifying each words
+// Modifying each word
 let words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
 
 const modifiedWords = words.filter( (word, index, arr) => {
@@ -219,7 +219,7 @@ const deleteWords = words.filter( (word, index, arr) => {
 })
 
 console.log(deleteWords)
-// Notice 'elite' is not even obtained as its been popped off `words` before filter can even get there
+// Notice 'elite' is not even obtained as it’s been popped off 'words' before filter can even get there
 // ["spray" ,"limit"]
 ```
 

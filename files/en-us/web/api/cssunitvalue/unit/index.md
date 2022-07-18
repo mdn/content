@@ -1,6 +1,7 @@
 ---
 title: CSSUnitValue.unit
 slug: Web/API/CSSUnitValue/unit
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -15,18 +16,12 @@ browser-compat: api.CSSUnitValue.unit
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSUnitValue.unit`** read-only property
-of the {{domxref("CSSUnitValue")}} interface returns a {{jsxref('USVString')}}
+of the {{domxref("CSSUnitValue")}} interface returns a string
 indicating the type of unit.
 
-## Syntax
+## Value
 
-```js
-var aString = CSSUnitValue.unit;
-```
-
-### Value
-
-A {{jsxref('USVString')}}.
+A string.
 
 ## Examples
 

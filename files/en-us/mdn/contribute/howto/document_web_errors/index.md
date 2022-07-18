@@ -8,7 +8,7 @@ tags:
 ---
 {{MDNSidebar}}
 
-The MDN [JavaScript error reference](/en-US/docs/Web/JavaScript/Reference/Errors) is a project aiming to help web developers with errors occurring in the [Developer Console](/en-US/docs/Tools/Web_Console). You can see this feature in action in Firefox — JavaScript errors contain a "Learn more" link that takes you to the JavaScript error reference containing additional advice for fixing issues.
+The MDN [JavaScript error reference](/en-US/docs/Web/JavaScript/Reference/Errors) is a project aiming to help web developers with errors occurring in the [Developer Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html). You can see this feature in action in Firefox — JavaScript errors contain a "Learn more" link that takes you to the JavaScript error reference containing additional advice for fixing issues.
 
 In order to help this project, we need to write more error documentation on MDN so that we can add more links to the tools where the messages are thrown.
 
@@ -19,9 +19,9 @@ In order to help this project, we need to write more error documentation on MDN 
 
 ## Step 1 – find an error to document
 
-- Firefox/Gecko's error messages: <https://dxr.mozilla.org/mozilla-central/source/js/src/js.msg>
+- Firefox/Gecko's error messages: <https://github.com/mozilla/gecko-dev/blob/master/js/src/jsshell.msg>
 - Edge/Chakra's error messages: <https://github.com/Microsoft/ChakraCore/blob/master/lib/Parser/rterrors.h>
-- Chrome/v8's error messages: <https://github.com/v8/v8/blob/master/src/messages.h#L75>
+- Chrome/v8's error messages: <https://chromium.googlesource.com/v8/v8.git/+/refs/heads/main/src/execution/messages.h>
 
 ## Step 2 – look at existing error docs
 

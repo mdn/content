@@ -1,6 +1,7 @@
 ---
 title: Window.resizeBy()
 slug: Web/API/Window/resizeBy
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -18,7 +19,7 @@ by a specified amount.
 ## Syntax
 
 ```js
-window.resizeBy(xDelta, yDelta)
+resizeBy(xDelta, yDelta)
 ```
 
 ### Parameters
@@ -26,7 +27,11 @@ window.resizeBy(xDelta, yDelta)
 - `xDelta` is the number of pixels to grow the window horizontally.
 - `yDelta` is the number of pixels to grow the window vertically.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 // Shrink the window
@@ -41,7 +46,7 @@ absolute terms, use {{domxref("window.resizeTo()")}}.
 ### Creating and resizing an external window
 
 For security reasons, it's no longer possible in Firefox for a website to change the
-default size of a window in a browser if the window wasn’t created by
+default size of a window in a browser if the window wasn't created by
 `window.open()`, or contains more than one tab. See the compatibility table
 for details on the change.
 

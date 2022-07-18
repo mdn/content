@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Motion Path
   - CSS Property
-  - Experimental
   - Reference
   - offset-rotate
   - recipe:css-property
@@ -37,6 +36,7 @@ offset-rotate: .5turn;
 offset-rotate: inherit;
 offset-rotate: initial;
 offset-rotate: revert;
+offset-rotate: revert-layer;
 offset-rotate: unset;
 ```
 

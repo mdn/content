@@ -1,6 +1,7 @@
 ---
 title: MediaImage
 slug: Web/API/MediaImage
+page-type: web-api-interface
 browser-compat: api.MediaImage
 ---
 {{APIRef("Media Session API")}}

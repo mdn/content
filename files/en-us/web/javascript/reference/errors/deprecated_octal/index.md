@@ -9,18 +9,20 @@ tags:
 ---
 {{jsSidebar("Errors")}}
 
-The JavaScript [strict
-mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "0-prefixed octal literals and octal escape sequences are
+The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "0-prefixed octal literals and octal escape sequences are
 deprecated; for octal literals use the "0o" prefix instead" occurs when deprecated octal
 literals and octal escape sequences are used.
 
 ## Message
 
-```js
-SyntaxError: Octal numeric literals and escape characters not allowed in strict mode (Edge)
-SyntaxError:
-"0"-prefixed octal literals and octal escape sequences are deprecated;
-for octal literals use the "0o" prefix instead
+```
+SyntaxError: Octal literals are not allowed in strict mode. (V8-based)
+SyntaxError: "0"-prefixed octal literals are deprecated; use the "0o" prefix instead (Firefox)
+SyntaxError: Decimal integer literals with a leading zero are forbidden in strict mode (Safari)
+
+SyntaxError: Octal escape sequences are not allowed in strict mode. (V8-based)
+SyntaxError: octal escape sequences can't be used in untagged template literals or in strict mode code (Firefox)
+SyntaxError: The only valid numeric escape in strict mode is '\0' (Safari)
 ```
 
 ## Error type
@@ -32,7 +34,7 @@ for octal literals use the "0o" prefix instead
 Octal literals and octal escape sequences are deprecated and will throw a
 {{jsxref("SyntaxError")}} in strict mode. With ECMAScript 2015 and later, the
 standardized syntax uses a leading zero followed by a lowercase or uppercase Latin
-letter "O" (`0o` or `0O)`.
+letter "O" (`0o` or `0O`).
 
 ## Examples
 
@@ -43,8 +45,7 @@ letter "O" (`0o` or `0O)`.
 
 03;
 
-// SyntaxError: "0"-prefixed octal literals and octal escape sequences
-// are deprecated
+// SyntaxError: "0"-prefixed octal literals are deprecated; use the "0o" prefix instead
 ```
 
 ### Octal escape sequences
@@ -54,8 +55,7 @@ letter "O" (`0o` or `0O)`.
 
 "\251";
 
-// SyntaxError: "0"-prefixed octal literals and octal escape sequences
-// are deprecated
+// SyntaxError: octal escape sequences can't be used in untagged template literals or in strict mode code
 ```
 
 ### Valid octal numbers
@@ -74,7 +74,5 @@ For octal escape sequences, you can use hexadecimal escape sequences instead:
 
 ## See also
 
-- [Lexical
-  grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#octal)
-- [Warning: 08/09 is
-  not a legal ECMA-262 octal constant](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_octal)
+- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#octal)
+- [Warning: 08/09 is not a legal ECMA-262 octal constant](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_octal)

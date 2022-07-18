@@ -1,6 +1,7 @@
 ---
 title: ProcessingInstruction
 slug: Web/API/ProcessingInstruction
+page-type: web-api-interface
 tags:
   - Interface
   - Reference
@@ -22,7 +23,7 @@ For example:
 <?xml version="1.0"?>
 ```
 
-is a processing instruction whose `target`is `xml`.
+is a processing instruction whose `target` is `xml`.
 
 {{InheritanceDiagram}}
 
@@ -35,7 +36,7 @@ _This interface also inherits properties from its parent interfaces, {{domxref("
 
 ## Methods
 
-_This interface doesn't have any specific property, but inherits properties from its parent interfaces, {{domxref("CharacterData")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
+_This interface doesn't have any specific method, but inherits methods from its parent interfaces, {{domxref("CharacterData")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
 
 ## Specifications
 

@@ -23,7 +23,7 @@ Values of this type are objects, which can contain the following properties:
 
 - `domain`
   - : A `string` representing the domain the cookie belongs to (e.g. "www\.google.com", "example.com").
-- `expirationDate`{{optional_inline}}
+- `expirationDate` {{optional_inline}}
   - : A `number` representing the expiration date of the cookie as the number of seconds since the UNIX epoch. Not provided for session cookies.
 - `firstPartyDomain`
   - : A `string` representing the first-party domain associated with the cookie. This will be an empty string if the cookie was set while first-party isolation was off. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
@@ -33,9 +33,9 @@ Values of this type are objects, which can contain the following properties:
   - : A `boolean`, `true` if the cookie is marked as HttpOnly (i.e. the cookie is inaccessible to client-side scripts), or `false` otherwise.
 - `name`
   - : A `string` representing the name of the cookie.
-- `partitionKey`{{optional_inline}}
+- `partitionKey` {{optional_inline}}
 
-  - : An `object` representing the description of the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#Storage_partitioning) containing the cookie. This object is omitted (null) if the cookie is not in partitioned storage. This object contains the following properties:
+  - : An `object` representing the description of the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) containing the cookie. This object is omitted (null) if the cookie is not in partitioned storage. This object contains the following properties:
 
     - `topLevelSite`
       - : A `string` representing the first-party URL of the cookie's storage partition, if the cookie is in storage that is partitioned by top-level site.
@@ -73,13 +73,13 @@ function logCookies(cookies) {
   }
 }
 
-var gettingAll = browser.cookies.getAll({});
+let gettingAll = browser.cookies.getAll({});
 gettingAll.then(logCookies);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#type-Cookie) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#type-Cookie) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

@@ -1,6 +1,7 @@
 ---
 title: DataTransferItem
 slug: Web/API/DataTransferItem
+page-type: web-api-interface
 tags:
   - API
   - DataTransferItem

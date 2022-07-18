@@ -1,6 +1,7 @@
 ---
 title: HTMLTrackElement.src
 slug: Web/API/HTMLTrackElement/src
+page-type: web-api-instance-property
 tags:
   - HTML
   - HTML DOM
@@ -18,15 +19,9 @@ The **`HTMLTrackElement.src`** property reflects the value of
 the {{HTMLElement("track")}} element's {{htmlattrxref("src", "track")}} attribute, which
 indicates the URL of the text track's data.
 
-## Syntax
+## Value
 
-```js
-var textTrackURL = HTMLTrackElement.src;
-```
-
-### Value
-
-A {{domxref("DOMString")}} object containing the URL of the text track data.
+A string object containing the URL of the text track data.
 
 ## Example
 

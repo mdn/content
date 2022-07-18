@@ -1,6 +1,7 @@
 ---
 title: CSSStyleDeclaration.item()
 slug: Web/API/CSSStyleDeclaration/item
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM
@@ -15,24 +16,23 @@ method interface returns a CSS property name from a {{domxref('CSSStyleDeclarati
 by index.
 
 This method doesn't throw exceptions as long as you provide
-arguments; the empty string is returned if the index is out of range and a
-`TypeError` is thrown if no argument is provided.
+arguments; the empty string is returned if the index is out of range and a
+{{jsxref("TypeError")}} is thrown if no argument is provided.
 
 ## Syntax
 
 ```js
-var propertyName = style.item(index);
+item(index)
 ```
 
 ### Parameters
 
-- _`index`_ is the index of the node to be fetched. The index is
-  zero-based.
+- `index`
+  - : The index of the node to be fetched. The index is zero-based.
 
 ### Return value
 
-- *`propertyName`* is a {{domxref('DOMString')}} that is the name of
-  the CSS property at the specified index.
+A string that is the name of the CSS property at the specified index.
 
 JavaScript has a special simpler syntax for obtaining an item from a NodeList by index:
 
@@ -40,7 +40,12 @@ JavaScript has a special simpler syntax for obtaining an item from a NodeList by
 var propertyName = style[index];
 ```
 
-## Example
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if no argument is provided.
+
+## Examples
 
 ```js
 var style = document.getElementById('div1').style;

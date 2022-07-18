@@ -1,6 +1,7 @@
 ---
 title: PannerNode.positionX
 slug: Web/API/PannerNode/positionX
+page-type: web-api-instance-property
 tags:
   - API
   - PannerNode
@@ -36,20 +37,12 @@ The {{domxref("AudioParam")}} contained by this property is read only; however, 
 can still change the value of the parameter by assigning a new value to its
 {{domxref("AudioParam.value")}} property.
 
-## Syntax
-
-```js
-var positionX = PannerNode.positionX;
-
-PannerNode.positionX.value = newPositionX;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioParam")}} whose `value` is the X coordinate of the audio
 source's position, in 3D Cartesian coordinates. The default value is 0.
 
-## Example
+## Examples
 
 The following example starts an oscillator, and pans it to the left after 1 second, to
 the right after 2 seconds, and back to the center after 3 seconds.
@@ -81,6 +74,5 @@ osc.start(0);
 ## See also
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web
-  Audio spatialisation basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Web Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - {{domxref("PannerNode")}}

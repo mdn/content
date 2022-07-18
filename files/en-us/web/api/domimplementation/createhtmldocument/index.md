@@ -1,6 +1,7 @@
 ---
 title: DOMImplementation.createHTMLDocument()
 slug: Web/API/DOMImplementation/createHTMLDocument
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -19,17 +20,22 @@ new HTML {{ domxref("Document") }}.
 ## Syntax
 
 ```js
-const newDoc = document.implementation.createHTMLDocument(title)
+createHTMLDocument()
+createHTMLDocument(title)
 ```
 
 ### Parameters
 
-- `title`  {{optional_inline}} (except in IE)
-  - : A {{domxref("DOMString")}} containing the title to give the new HTML document.
+- `title`  {{optional_inline}} (except in IE)
+  - : A string containing the title to give the new HTML document.
 
-## Example
+### Return value
 
-This example creates a new HTML document and inserts it into an {{
+A new HTML {{domxref("Document")}} object.
+
+## Examples
+
+This example creates a new HTML document and inserts it into an {{
   HTMLElement("iframe") }} in the current document.
 
 Here's the HTML for this example:
@@ -67,8 +73,8 @@ function makeDocument() {
 }
 ```
 
-The code in lines 4–12 handle creating the new HTML document and inserting some content
-into it. Line 4 uses `createHTMLDocument()` to construct a new HTML document
+The code in lines 4–12 handle creating the new HTML document and inserting some content
+into it. Line 4 uses `createHTMLDocument()` to construct a new HTML document
 whose {{ HTMLElement("title") }} is `"New Document"`. Lines 5 and 6 create a
 new paragraph element with some simple content, and then lines 8–12 handle inserting the
 new paragraph into the new document.

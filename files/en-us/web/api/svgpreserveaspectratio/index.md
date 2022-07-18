@@ -1,6 +1,7 @@
 ---
 title: SVGPreserveAspectRatio
 slug: Web/API/SVGPreserveAspectRatio
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -21,7 +22,7 @@ An `SVGPreserveAspectRatio` object can be designated as read only, which means t
 <table class="no-markdown">
   <tbody>
     <tr>
-      <th scope="row">Also implement</th>
+      <th scope="row">Also implement</th>
       <td><em>None</em></td>
     </tr>
     <tr>
@@ -95,7 +96,7 @@ An `SVGPreserveAspectRatio` object can be designated as read only, which means t
       </td>
     </tr>
     <tr>
-      <th scope="row">Normative document</th>
+      <th scope="row">Normative document</th>
       <td>
         <a
           href="https://www.w3.org/TR/SVG/coords.html#InterfaceSVGPreserveAspectRatio"
@@ -267,7 +268,7 @@ An `SVGPreserveAspectRatio` object can be designated as read only, which means t
   <tbody>
     <tr>
       <td><code>align</code></td>
-      <td>unsigned short</td>
+      <td>unsigned short</td>
       <td>
         The type of the alignment value as specified by one of the
         SVG_PRESERVEASPECTRATIO_* constants defined on this interface.
@@ -275,7 +276,7 @@ An `SVGPreserveAspectRatio` object can be designated as read only, which means t
     </tr>
     <tr>
       <td><code>meetOrSlice</code></td>
-      <td>unsigned short</td>
+      <td>unsigned short</td>
       <td>
         The type of the meet-or-slice value as specified by one of the
         SVG_MEETORSLICE_* constants defined on this interface.

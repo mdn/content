@@ -15,10 +15,7 @@ a date, and returns the number of milliseconds since January 1, 1970, 00:00:00 U
 `NaN` if the string is unrecognized or, in some cases, contains illegal date
 values (e.g. 2015-02-31).
 
-It is not recommended to use `Date.parse` as until ES5, parsing of strings
-was entirely implementation dependent. There are still many differences in how different
-hosts parse date strings, therefore date strings should be manually parsed (a library
-can help if many different formats are to be accommodated).
+As until ES5, parsing of strings was entirely implementation-dependent. After the ES5 spec, the [ISO 8601 format](https://tc39.es/ecma262/#sec-date-time-string-format) (`YYYY-MM-DDTHH:mm:ss.sssZ`) is explicitly specified, while other formats are still implementation-defined and may not work across all browsers. A library can help if many different formats are to be accommodated.
 
 {{EmbedInteractiveExample("pages/js/date-parse.html")}}
 
@@ -39,9 +36,8 @@ new Date(dateString)
 ### Parameters
 
 - `dateString`
-  - : A string representing [a simplification of the
-    ISO 8601 calendar date extended format](#date_time_string_format). (Other formats may be used, but results
-    are implementation-dependent.)
+  - : A string representing [a simplification of the ISO 8601 calendar date extended format](#date_time_string_format).
+    (Other formats may be used, but results are implementation-dependent.)
 
 ### Return value
 
@@ -52,7 +48,7 @@ doesn't represent a valid date, {{jsxref("NaN")}} is returned.
 ## Description
 
 The `parse()` method takes a date string (such as
-"`2011-10-10T14:48:00`") and returns the number of milliseconds since January
+`"2011-10-10T14:48:00"`) and returns the number of milliseconds since January
 1, 1970, 00:00:00 UTC.
 
 This function is useful for setting date values based on string values, for example in
@@ -62,12 +58,13 @@ conjunction with the {{jsxref("Date.prototype.setTime()", "setTime()")}} method 
 ### Date Time String Format
 
 The standard string representation of a date time string is a simplification of the ISO
-8601 calendar date extended format. (See the section [Date Time String
-Format](https://tc39.github.io/ecma262/#sec-date-time-string-format) in the ECMAScript specification for more details.)
+8601 calendar date extended format.
+(See the section [Date Time String Format](https://tc39.es/ecma262/#sec-date-time-string-format)
+in the ECMAScript specification for more details.)
 
-For example, "`2011-10-10`" (_date-only_ form),
-"`2011-10-10T14:48:00`" (_date-time_ form), or
-"`2011-10-10T14:48:00.000+09:00`" (_date-time_ form with milliseconds
+For example, `"2011-10-10"` (_date-only_ form),
+`"2011-10-10T14:48:00"` (_date-time_ form), or
+`"2011-10-10T14:48:00.000+09:00"` (_date-time_ form with milliseconds
 and time zone) can be passed and will be parsed. When the time zone offset is absent,
 date-only forms are interpreted as a UTC time and date-time forms are interpreted as
 local time.
@@ -111,8 +108,8 @@ new Date('2014-25-23').toISOString();
 // throws "RangeError: invalid date" in all ES5-compliant browsers
 ```
 
-SpiderMonkey's implementation-specific heuristic can be found in [`jsdate.cpp`](https://dxr.mozilla.org/mozilla-central/source/js/src/jsdate.cpp?rev=64553c483cd1#889).
-The string "`10 06 2014`" is an example of a non-conforming ISO format and
+SpiderMonkey's implementation-specific heuristic can be found in [`jsdate.cpp`](https://searchfox.org/mozilla-central/source/js/src/jsdate.cpp?rev=64553c483cd1#889).
+The string `"10 06 2014"` is an example of a non-conforming ISO format and
 thus falls back to a custom routine. See also this [rough outline](https://bugzilla.mozilla.org/show_bug.cgi?id=1023155#c6) on
 how the parsing works.
 
@@ -137,9 +134,9 @@ Date.parse('foo-bar 2014');
 > **Note:** This section contains implementation-specific behavior that can be inconsistent
 > across implementations.
 
-Given a non-standard date string of "`March 7, 2014`", `parse()`
+Given a non-standard date string of `"March 7, 2014"`, `parse()`
 assumes a local time zone, but given a simplification of the ISO 8601 calendar date
-extended format such as "`2014-03-07`", it will assume a time zone of UTC
+extended format such as `"2014-03-07"`, it will assume a time zone of UTC
 (ES5 and ECMAScript 2015). Therefore {{jsxref("Date")}} objects produced using those
 strings may represent different moments in time depending on the version of ECMAScript
 supported unless the system is set with a local time zone of UTC. This means that two
@@ -148,7 +145,7 @@ format of the string that is being converted.
 
 ## Examples
 
-### Using `Date.parse()`
+### Using Date.parse()
 
 The following calls all return `1546300800000`. The first according to ES5
 will imply UTC time, and the others are specifying UTC timezone via the ISO date

@@ -1,6 +1,7 @@
 ---
 title: ByteLengthQueuingStrategy.size()
 slug: Web/API/ByteLengthQueuingStrategy/size
+page-type: web-api-instance-method
 tags:
   - API
   - ByteLengthQueuingStrategy
@@ -14,18 +15,18 @@ browser-compat: api.ByteLengthQueuingStrategy.size
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`size()`** method of the
-{{domxref("ByteLengthQueuingStrategy")}} interface returns the given chunk’s
+{{domxref("ByteLengthQueuingStrategy")}} interface returns the given chunk's
 `byteLength` property.
 
 ## Syntax
 
 ```js
-var size = byteLengthQueuingStrategy.size(chunk);
+size(chunk)
 ```
 
 ### Parameters
 
-- chunk
+- `chunk`
   - : A chunk of data being passed through the stream.
 
 ### Return value
@@ -39,10 +40,10 @@ const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
 
 const readableStream = new ReadableStream({
   start(controller) {
-    ...
+    // …
   },
   pull(controller) {
-    ...
+    // …
   },
   cancel(err) {
     console.log("stream error:", err);

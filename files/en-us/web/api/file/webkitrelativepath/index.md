@@ -1,74 +1,69 @@
 ---
 title: File.webkitRelativePath
 slug: Web/API/File/webkitRelativePath
+page-type: web-api-instance-property
 tags:
-  - File
+  - API
   - File API
-  - File System API
-  - File and Directory Entries API
-  - Non-standard
   - Property
   - Read-only
   - Reference
-  - Web
-  - webkitRelativePath
 browser-compat: api.File.webkitRelativePath
 ---
-{{APIRef("File API")}}{{non-standard_header}}
+{{APIRef("File API")}}
 
 The **`File.webkitRelativePath`** is a read-only property that
-contains a {{domxref("USVString")}} which specifies the file's path relative to the
+contains a string which specifies the file's path relative to the
 directory selected by the user in an {{HTMLElement("input")}} element with its
 {{htmlattrxref("webkitdirectory", "input")}} attribute set.
 
-## Syntax
+## Value
 
-```js
-relativePath = File.webkitRelativePath
-```
-
-### Value
-
-A {{domxref("USVString")}} containing the path of the file relative to the ancestor
+A string containing the path of the file relative to the ancestor
 directory the user selected.
 
 ## Example
 
 In this example, a directory picker is presented which lets the user choose one or more
-directories. When the {{event("change")}} event occurs, a list of all files contained
+directories. When the {{domxref("HTMLElement/change_event", "change")}} event occurs, a list of all files contained
 within the selected directory hierarchies is generated and displayed.
 
-### HTML content
+### HTML
 
 ```html
 <input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
-<ul id="listing"></ul>
+<output id="output"></output>
 ```
 
-### JavaScript content
+```css hidden
+output {
+  display: block;
+  white-space: pre-wrap;
+}
+```
+
+### JavaScript
 
 ```js
-document.getElementById("filepicker").addEventListener("change", function(event) {
-  let output = document.getElementById("listing");
-  let files = event.target.files;
+const output = document.getElementById('output');
+const filepicker = document.getElementById('filepicker');
 
-  for (let i=0; i<files.length; i++) {
-    let item = document.createElement("li");
-    item.innerHTML = files[i].webkitRelativePath;
-    output.appendChild(item);
-  };
-}, false);
+filepicker.addEventListener('change', (event) => {
+  const files = event.target.files;
+
+  for (const file of files) {
+    output.textContent += `${file.webkitRelativePath}\n`;
+  }
+});
 ```
 
 ### Result
 
-{{ EmbedLiveSample('Example') }}
+{{EmbedLiveSample('Example')}}
 
 ## Specifications
 
 {{Specifications}}
-
-This API has no official W3C or WHATWG specification.
 
 ## Browser compatibility
 
@@ -76,7 +71,6 @@ This API has no official W3C or WHATWG specification.
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
 - {{domxref("HTMLInputElement.webkitEntries")}}
 - {{domxref("HTMLInputElement.webkitdirectory")}}

@@ -1,6 +1,7 @@
 ---
 title: GeolocationCoordinates.longitude
 slug: Web/API/GeolocationCoordinates/longitude
+page-type: web-api-instance-property
 tags:
   - API
   - GPS
@@ -25,13 +26,7 @@ the `GeolocationCoordinates` object is part of the
 {{domxref("GeolocationPosition")}} interface, which is the object type returned by
 Geolocation API functions that obtain and return a geographical position.
 
-## Syntax
-
-```js
-let longitude = geolocationCoordinatesInstance.longitude
-```
-
-### Value
+## Value
 
 The value in `longitude` is the geographical longitude of the location on
 Earth described by the `Coordinates` object, in decimal degrees. The value is
@@ -77,7 +72,7 @@ established by calling {{domxref("EventTarget.addEventListener", "addEventListen
 on the {{HTMLElement("button")}} element. When the user clicks the button, we'll fetch
 and display the location information.
 
-Upon receiving a {{event("click")}} event, we call
+Upon receiving a {{domxref("Element/click_event", "click")}} event, we call
 {{domxref("Geolocation.getCurrentPosition", "getCurrentPosition()")}} to request the
 device's current position. This is an asynchronous request, so we provide a callback
 which receives as in put a {{domxref("GeolocationPosition")}} object describing the

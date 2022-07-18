@@ -14,6 +14,8 @@ Class fields are {{ jsxref('Classes/Public_class_fields','public') }} by default
 by using a hash `#` prefix. The privacy encapsulation of these class features is
 enforced by JavaScript itself.
 
+Private members are not native to the language before this syntax existed. In prototypical inheritance, its behavior may be emulated with [`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#emulating_private_members) objects or [closures](/en-US/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures), but they can't compare to the `#` syntax in terms of ergonomics.
+
 ## Syntax
 
 ```js
@@ -96,13 +98,14 @@ class SubClass extends ClassWithPrivateField {
 }
 
 new SubClass();
-// SubClass {#privateField: 42, #subPrivateField: 23}
+// SubClass {#subPrivateField: 23}
 ```
+
+> **Note:** `#privateField` from the `ClassWithPrivateField` base class is private to `ClassWithPrivateField` and is not accessible from the derived `Subclass`.
 
 #### Private static fields
 
-Private static fields are added to the class constructor at class evaluation time.
-The limitation of static variables being called by only static methods still holds.
+Private static fields are added to the class constructor at class evaluation time. Like their public counterparts, private static fields are only accessible on the class itself or on the `this` context of static methods, but not on the `this` context of instance methods.
 
 ```js
 class ClassWithPrivateStaticField {
@@ -112,10 +115,15 @@ class ClassWithPrivateStaticField {
     ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42;
     return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
   }
+
+  publicInstanceMethod() {
+    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42;
+    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
+  }
 }
 
-console.log(ClassWithPrivateStaticField.publicStaticMethod() === 42);
-// true
+console.log(ClassWithPrivateStaticField.publicStaticMethod()); // 42
+console.log(new ClassWithPrivateStaticField().publicInstanceMethod()); // 42
 ```
 
 There is a restriction on private static fields: Only the class which
@@ -266,9 +274,7 @@ console.log(Derived.publicStaticMethod2());
 ## See also
 
 - [Working with private class features](/en-US/docs/Web/JavaScript/Guide/Working_With_Private_Class_Features)
-- [Public
-  class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
-- [The
-  Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
+- [Public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
+- [The Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
 - [Public and private class fields](https://v8.dev/features/class-fields)
   article at the v8.dev site

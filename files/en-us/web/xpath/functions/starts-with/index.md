@@ -24,11 +24,11 @@ starts-with(haystack, needle)
 
 ### Returns
 
-`true` if *`haystack`* starts with *`needle`*. Otherwise, `false`.
+`true` if *`haystack`* starts with *`needle`*. Otherwise, `false`.
 
 ### Defined
 
-[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-starts-with)
+[XPath 1.0 4.2](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-starts-with)
 
 ### Gecko support
 

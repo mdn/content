@@ -1,6 +1,7 @@
 ---
 title: RTCRtpReceiver.getParameters()
 slug: Web/API/RTCRtpReceiver/getParameters
+page-type: web-api-instance-method
 tags:
   - API
   - Configuration
@@ -29,7 +30,7 @@ the encoding and transmission of media on the receiver's
 ## Syntax
 
 ```js
-let rtpReceiveParameters = rtpReceiver.getParameters();
+getParameters()
 ```
 
 ### Parameters
@@ -44,7 +45,7 @@ of the receiver.
 ## Examples
 
 This example obtains the canonical name (CNAME) being used for {{Glossary("RTCP")}} on
-an  {{domxref("RTCRtpReceiver")}}.
+an {{domxref("RTCRtpReceiver")}}.
 
 ```js
 function getRtcpCNAME(receiver) {

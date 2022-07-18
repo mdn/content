@@ -12,7 +12,7 @@ browser-compat: http.headers.Date
 {{HTTPSidebar}}
 
 The **`Date`** general HTTP header contains the date and time
-at which the message was originated.
+at which the message originated.
 
 > **Warning:** `Date` is listed
 > in the [forbidden header names](https://fetch.spec.whatwg.org/#forbidden-header-name)
@@ -20,10 +20,10 @@ at which the message was originated.
 >
 > ```js
 > fetch('https://httpbin.org/get', {
->       'headers': {
->         'Date': (new Date()).toUTCString()
->       }
->     })
+>   'headers': {
+>     'Date': (new Date()).toUTCString()
+>   }
+> })
 > ```
 
 <table class="properties">

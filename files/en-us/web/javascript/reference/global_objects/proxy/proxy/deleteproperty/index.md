@@ -18,8 +18,8 @@ The **`handler.deleteProperty()`** method is a trap for the
 ## Syntax
 
 ```js
-const p = new Proxy(target, {
-  deleteProperty: function(target, property) {
+new Proxy(target, {
+  deleteProperty(target, property) {
   }
 });
 ```
@@ -32,7 +32,7 @@ The following parameters are passed to the `deleteProperty()` method.
 - `target`
   - : The target object.
 - `property`
-  - : The name or {{jsxref("Symbol")}} of the property to delete.
+  - : The name or {{jsxref("Symbol")}} of the property to delete.
 
 ### Return value
 
@@ -68,7 +68,7 @@ The following code traps the {{jsxref("Operators/delete", "delete")}} operator.
 
 ```js
 const p = new Proxy({}, {
-  deleteProperty: function(target, prop) {
+  deleteProperty(target, prop) {
     if (prop in target){
       delete target[prop]
       console.log('property removed: ' + prop)

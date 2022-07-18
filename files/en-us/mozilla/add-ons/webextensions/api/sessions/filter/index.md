@@ -21,7 +21,7 @@ The `Filter` object enables you to restrict the number of {{WebExtAPIRef("sessio
 
 Values of this type are objects. They contain the following properties:
 
-- `maxResults`{{optional_inline}}
+- `maxResults` {{optional_inline}}
   - : `number`. The maximum number of results to return.
 
 ## Browser compatibility
@@ -32,7 +32,7 @@ Values of this type are objects. They contain the following properties:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/extensions/sessions) API.
+> **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/sessions/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

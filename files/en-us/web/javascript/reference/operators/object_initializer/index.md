@@ -17,7 +17,7 @@ browser-compat: javascript.operators.object_initializer
 ---
 {{JsSidebar("Operators")}}
 
-Objects can be initialized using [`new Object()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object), [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create), or using the _literal_ notation (_initializer_ notation). An object initializer is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`).
+Objects can be initialized using [`new Object()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object), [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create), or using the _literal_ notation (_initializer_ notation). An object initializer is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`).
 
 {{EmbedInteractiveExample("pages/js/expressions-objectinitializer.html", "taller")}}
 
@@ -31,7 +31,7 @@ let a = 'foo', b = 42, c = {}
 let o = {a: a, b: b, c: c}
 
 let o = {
-  property: function (parameters) {},
+  property(parameters) {},
   get property() {},
   set property(value) {}
 };
@@ -61,13 +61,13 @@ let o = {
 
 ## Description
 
-An object initializer is an expression that describes the initialization of an {{jsxref("Object")}}. Objects consist of _properties_, which are used to describe an object. The values of object properties can either contain [primitive](/en-US/docs/Glossary/primitive) data types or other objects.
+An object initializer is an expression that describes the initialization of an {{jsxref("Object")}}. Objects consist of _properties_, which are used to describe an object. The values of object properties can either contain [primitive](/en-US/docs/Glossary/Primitive) data types or other objects.
 
 ### Object literal notation vs JSON
 
 The object literal notation is not the same as the **J**ava**S**cript **O**bject **N**otation ([JSON](/en-US/docs/Glossary/JSON)). Although they look similar, there are differences between them:
 
-- JSON permits _only_ property definition using `"property": value` syntax.  The property name must be double-quoted, and the definition cannot be a shorthand.
+- JSON permits _only_ property definition using `"property": value` syntax.  The property name must be double-quoted, and the definition cannot be a shorthand.
 - In JSON the values can only be strings, numbers, arrays, `true`, `false`, `null`, or another (JSON) object.
 - A function value (see "Methods" below) can not be assigned to a value in JSON.
 - Objects like {{jsxref("Date")}} will be a string after {{jsxref("JSON.parse()")}}.
@@ -145,7 +145,7 @@ let a = {x: 1, x: 2}
 console.log(a) // {x: 2}
 ```
 
-In ECMAScript 5 strict mode code, duplicate property names were considered a {{jsxref("SyntaxError")}}.  With the introduction of computed property names making duplication possible at runtime, ECMAScript 2015 has removed this restriction.
+In ECMAScript 5 strict mode code, duplicate property names were considered a {{jsxref("SyntaxError")}}.  With the introduction of computed property names making duplication possible at runtime, ECMAScript 2015 has removed this restriction.
 
 ```js
 function haveES2015DuplicatePropertySemantics() {
@@ -168,7 +168,7 @@ A property of an object can also refer to a [function](/en-US/docs/Web/JavaScrip
 
 ```js
 let o = {
-  property: function (parameters) {},
+  property(parameters) {},
   get property() {},
   set property(value) {}
 }
@@ -193,7 +193,7 @@ let o = {
 };
 ```
 
-Which is equivalent to this ES5-like notation (but note that ECMAScript 5 has no generators):
+Which is equivalent to this ES5-like notation (but note that ECMAScript 5 has no generators):
 
 ```js
 let o = {
@@ -242,7 +242,7 @@ console.log(config) // {size: 12, mobileSize: 4}
 
 ### Spread properties
 
-The [Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) proposal (stage 4) adds [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator) properties to object literals. It copies own enumerable properties from a provided object onto a new object.
+The [Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) proposal (stage 4) adds [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) properties to object literals. It copies own enumerable properties from a provided object onto a new object.
 
 Shallow-cloning (excluding `prototype`) or merging objects is now possible using a shorter syntax than {{jsxref("Object.assign()")}}.
 
@@ -259,9 +259,9 @@ let mergedObj = { ...obj1, ...obj2 }
 
 > **Warning:** Note that {{jsxref("Object.assign()")}} triggers [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set), whereas the spread operator doesn't!
 
-### Prototype mutation
+### Prototype setter
 
-A property definition of the form `__proto__: value` or `"__proto__": value` does not create a property with the name `__proto__`.  Instead, if the provided value is an object or [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null), it changes the `[[Prototype]]` of the created object to that value.  (If the value is not an object or `null`, the object is not changed.)
+A property definition of the form `__proto__: value` or `"__proto__": value` does not create a property with the name `__proto__`.  Instead, if the provided value is an object or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), it points the `[[Prototype]]` of the created object to that value.  (If the value is not an object or `null`, the object is not changed.)
 
 ```js
 let obj1 = {}
@@ -276,19 +276,19 @@ assert(Object.getPrototypeOf(obj3) === protoObj)
 
 let obj4 = {__proto__: 'not an object or null'}
 assert(Object.getPrototypeOf(obj4) === Object.prototype)
-assert(!obj4.hasOwnProperty('__proto__'))
+assert(!Object.hasOwn(obj4, '__proto__'))
 ```
 
-Only a single prototype mutation is permitted in an object literal. Multiple prototype mutations are a syntax error.
+Only a single prototype setter is permitted in an object literal. Multiple prototype setters are a syntax error.
 
-Property definitions that do not use "colon" notation are not prototype mutations. They are property definitions that behave identically to similar definitions using any other name.
+Property definitions that do not use "colon" notation are not prototype setters. They are property definitions that behave identically to similar definitions using any other name.
 
 ```js
 let __proto__ = 'variable'
 
 let obj1 = {__proto__}
 assert(Object.getPrototypeOf(obj1) === Object.prototype)
-assert(obj1.hasOwnProperty('__proto__'))
+assert(Object.hasOwn(obj1, '__proto__'))
 assert(obj1.__proto__ === 'variable')
 
 let obj2 = {__proto__() { return 'hello'; }}
@@ -297,6 +297,8 @@ assert(obj2.__proto__() === 'hello')
 let obj3 = {['__prot' + 'o__']: 17}
 assert(obj3.__proto__ === 17)
 ```
+
+Note that the `__proto__` key is standardized syntax, in contrast to the non-standard and non-performant {{jsxref("Object/proto", "Object.prototype.__proto__")}} accessors. It sets the `[[Prototype]]` during object creation, similar to {{jsxref("Object.create")}} — instead of mutating the prototype chain.
 
 ## Specifications
 

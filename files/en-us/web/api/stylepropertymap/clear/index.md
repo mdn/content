@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMap.clear()
 slug: Web/API/StylePropertyMap/clear
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -19,7 +20,7 @@ interface removes all declarations in the `StylePropertyMap`.
 ## Syntax
 
 ```js
-StylePropertyMap.clear()
+clear()
 ```
 
 ### Parameters
@@ -28,11 +29,11 @@ None.
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
-The following example removes all styles within the elements [style attribute](/en-US/docs/Web/HTML/Global_attributes/style).
+The following example removes all styles within the elements [style attribute](/en-US/docs/Web/HTML/Global_attributes/style).
 
 ```js
 // get the button element

@@ -36,7 +36,7 @@ Values of this type are objects, which can contain the following properties:
 
 ## Examples
 
-In the following snippet, the {{WebExtAPIRef("cookies.getAllCookieStores()")}} method is used to retrieve all the cookie stores currently available in the browser, and print out each cookie store ID, and the tabs that currently share each cookie store.
+In the following snippet, the {{WebExtAPIRef("cookies.getAllCookieStores()")}} method is used to retrieve all the cookie stores currently available in the browser, and print out each cookie store ID, and the tabs that currently share each cookie store.
 
 ```js
 function logStores(cookieStores) {
@@ -45,7 +45,7 @@ function logStores(cookieStores) {
   }
 }
 
-var getting = browser.cookies.getAllCookieStores();
+let getting = browser.cookies.getAllCookieStores();
 getting.then(logStores);
 ```
 
@@ -53,14 +53,14 @@ The following code snippet gets all cookie stores and then logs the total number
 
 ```js
 browser.cookies.getAllCookieStores().then((stores) => {
-  var incognitoStores = stores.map(store => store.incognito);
+  let incognitoStores = stores.map(store => store.incognito);
   console.log(`Of ${stores.length} cookie stores, ${incognitoStores.length} are incognito.`);
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#type-CookieStore) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#type-CookieStore) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

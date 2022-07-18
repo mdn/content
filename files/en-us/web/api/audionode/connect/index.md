@@ -1,6 +1,7 @@
 ---
 title: AudioNode.connect()
 slug: Web/API/AudioNode/connect
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -23,9 +24,9 @@ change the value of that parameter over time.
 ## Syntax
 
 ```js
-var destinationNode = AudioNode.connect(destination, outputIndex, inputIndex);
-
-AudioNode.connect(destination, outputIndex);
+connect(destination)
+connect(destination, outputIndex)
+connect(destination, outputIndex, inputIndex)
 ```
 
 ### Parameters
@@ -141,8 +142,7 @@ lfo.start();
 
 It is possible to connect an `AudioNode` output to more than one {{
   domxref("AudioParam") }}, and more than one AudioNode output to a single {{
-  domxref("AudioParam") }}, with multiple calls to `connect()`. [Fan-in
-and fan-out](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#fan-in_and_fan-out) are therefore supported.
+  domxref("AudioParam") }}, with multiple calls to `connect()`. [Fan-in and fan-out](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#fan-in_and_fan-out) are therefore supported.
 
 An {{ domxref("AudioParam") }} will take the rendered audio data from any
 `AudioNode` output connected to it and convert it to mono by [down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing)
@@ -166,5 +166,4 @@ frequency, and to use a {{domxref("GainNode")}} between the audio source and the
 
 ## See also
 
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

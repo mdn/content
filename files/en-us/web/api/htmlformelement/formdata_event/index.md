@@ -1,6 +1,7 @@
 ---
 title: 'HTMLFormElement: formdata event'
 slug: Web/API/HTMLFormElement/formdata_event
+page-type: web-api-event
 tags:
   - Event
   - Forms
@@ -64,7 +65,7 @@ formElem.addEventListener('formdata', (e) => {
   console.log('formdata fired');
 
   // modifies the form data
-  const formData = e.formData; 
+  const formData = e.formData;
   // formdata gets modified by the formdata event
   formData.set('field1', formData.get('field1').toLowerCase());
   formData.set('field2', formData.get('field2').toLowerCase());
@@ -78,7 +79,7 @@ formElem.onformdata = (e) => {
   console.log('formdata fired');
 
   // modifies the form data
-  const formData = e.formData; 
+  const formData = e.formData;
   formData.set('field1', formData.get('field1').toLowerCase());
   formData.set('field2', formData.get('field2').toLowerCase());
 };

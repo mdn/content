@@ -1,6 +1,7 @@
 ---
 title: Navigator.getVRDisplays()
 slug: Web/API/Navigator/getVRDisplays
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -25,9 +26,7 @@ computer.
 ## Syntax
 
 ```js
-navigator.getVRDisplays().then(function(displays) {
-  // Do something with the available VR displays
-});
+getVRDisplays()
 ```
 
 ### Parameters

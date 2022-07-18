@@ -1,6 +1,7 @@
 ---
 title: VREyeParameters
 slug: Web/API/VREyeParameters
+page-type: web-api-interface
 tags:
   - API
   - Deprecated
@@ -24,9 +25,9 @@ This interface is accessible through the {{domxref("VRDisplay.getEyeParameters()
 
 ## Properties
 
-- {{domxref("VREyeParameters.offset")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VREyeParameters.offset")}} {{deprecated_inline}} {{readonlyInline}}
   - : *Represents the o*ffset from the center point between the user's eyes to the center of the eye, measured in meters.
-- {{domxref("VREyeParameters.fieldOfView")}}  {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VREyeParameters.fieldOfView")}}  {{deprecated_inline}} {{readonlyInline}}
   - : *Describes t*he current field of view for the eye, which can vary as the user adjusts their interpupillary distance (IPD).
 - {{domxref("VREyeParameters.renderWidth")}} {{deprecated_inline}} {{readonlyInline}}
   - : Describes the recommended render target width of each eye viewport, in pixels.
@@ -48,8 +49,8 @@ navigator.getVRDisplays().then(function(displays) {
 
       // Set the canvas size to the size of the vrDisplay viewport
 
-      var leftEye = vrDisplay.getEyeParameters('left');
-      var rightEye = vrDisplay.getEyeParameters('right');
+      const leftEye = vrDisplay.getEyeParameters('left');
+      const rightEye = vrDisplay.getEyeParameters('right');
 
       canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
       canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);
@@ -64,7 +65,7 @@ navigator.getVRDisplays().then(function(displays) {
 
 This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/).
 
 ## Browser compatibility
 

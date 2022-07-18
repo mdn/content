@@ -1,6 +1,7 @@
 ---
 title: How to create a DOM tree
 slug: Web/API/Document_object_model/How_to_create_a_DOM_tree
+page-type: guide
 tags:
   - AJAX
   - Add-ons
@@ -10,9 +11,9 @@ tags:
   - NeedsUpdate
   - XML
 ---
+{{DefaultAPISidebar("DOM")}}
 
-
-This page describes how to use the [DOM Core](https://www.w3.org/TR/DOM-Level-3-Core) API in JavaScript to create and modify DOM objects. It applies to all Gecko-based applications (such as Firefox) both in privileged (extensions) and unprivileged (web pages) code.
+This page describes how to use the [DOM Core](https://www.w3.org/TR/DOM-Level-3-Core/) API in JavaScript to create and modify DOM objects. It applies to all Gecko-based applications (such as Firefox) both in privileged (extensions) and unprivileged (web pages) code.
 
 ### Dynamically creating a DOM tree
 
@@ -91,47 +92,47 @@ doc.appendChild(peopleElem);
 
 See also the [DOM chapter of the XUL Tutorial](/en-US/docs/XUL_Tutorial/Document_Object_Model).
 
-You can automate the creation of a DOM tree using a [JXON reverse algorithm](/en-US/docs/JXON#JXON_reverse_algorithms) in association with the following JSON representation:
+You can automate the creation of a DOM tree using a [JXON reverse algorithm](/en-US/docs/JXON#jxon_reverse_algorithms) in association with the following JSON representation:
 
 ```js
 {
-  "people": {
-    "person": [{
-      "address": [{
-        "@street": "321 south st",
-        "@city": "denver",
-        "@state": "co",
-        "@country": "usa"
-      }, {
-        "@street": "123 main st",
-        "@city": "arlington",
-        "@state": "ma",
-        "@country": "usa"
-      }],
-      "@first-name": "eric",
-      "@middle-initial": "H",
-      "@last-name": "jung"
-    }, {
-      "address": [{
-        "@street": "321 north st",
-        "@city": "atlanta",
-        "@state": "ga",
-        "@country": "usa"
-      }, {
-        "@street": "123 west st",
-        "@city": "seattle",
-        "@state": "wa",
-        "@country": "usa"
-      }, {
-        "@street": "321 south avenue",
-        "@city": "denver",
-        "@state": "co",
-        "@country": "usa"
-      }],
-      "@first-name": "jed",
-      "@last-name": "brown"
-    }]
-  }
+  "people": {
+    "person": [{
+      "address": [{
+        "@street": "321 south st",
+        "@city": "denver",
+        "@state": "co",
+        "@country": "usa"
+      }, {
+        "@street": "123 main st",
+        "@city": "arlington",
+        "@state": "ma",
+        "@country": "usa"
+      }],
+      "@first-name": "eric",
+      "@middle-initial": "H",
+      "@last-name": "jung"
+    }, {
+      "address": [{
+        "@street": "321 north st",
+        "@city": "atlanta",
+        "@state": "ga",
+        "@country": "usa"
+      }, {
+        "@street": "123 west st",
+        "@city": "seattle",
+        "@state": "wa",
+        "@country": "usa"
+      }, {
+        "@street": "321 south avenue",
+        "@city": "denver",
+        "@state": "co",
+        "@country": "usa"
+      }],
+      "@first-name": "jed",
+      "@last-name": "brown"
+    }]
+  }
 }
 ```
 

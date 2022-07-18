@@ -1,6 +1,7 @@
 ---
 title: WebGLProgram
 slug: Web/API/WebGLProgram
+page-type: web-api-interface
 tags:
   - API
   - GL
@@ -23,7 +24,7 @@ The **`WebGLProgram`** is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API)
 To create a `WebGLProgram`, call the GL context's {{domxref("WebGLRenderingContext.createProgram", "createProgram()")}} function. After attaching the shader programs using {{domxref("WebGLRenderingContext.attachShader", "attachShader()")}}, you link them into a usable program. This is shown in the code below.
 
 ```js
-var program = gl.createProgram();
+const program = gl.createProgram();
 
 // Attach pre-existing shaders
 gl.attachShader(program, vertexShader);

@@ -61,7 +61,7 @@ Finally, we listen for the `input` event firing on the {{ htmlelement("input") }
 
 ## defaultPlaybackRate and ratechange
 
-In addition to `playbackRate,` we also have a `defaultPlaybackRate` property available, which lets us set the default playback rate: the playback rate to which the media resets; for example, if we change the source of the video, or (in some browsers) when an `ended` event is generated.
+In addition to `playbackRate`, we also have a `defaultPlaybackRate` property available, which lets us set the default playback rate: the playback rate to which the media resets; for example, if we change the source of the video, or (in some browsers) when an `ended` event is generated.
 
 So `defaultPlaybackRate` allows us to set the playback rate _before_ playing the media, while `playbackRate` allows us to change it during media playback.
 
@@ -84,7 +84,7 @@ There is also an event available called `ratechange`, which fires every time the
 
 - Most browsers stop playing audio outside `playbackRate` bounds of 0.5 and 4, leaving the video playing silently. For most applications, it's recommended that you limit the range to between 0.5 and 4.
 - The pitch of the audio track does not change when `playBackRate` is altered.
-- Negative values will not cause the media to play in reverse.
+- Negative values will not cause the media to play in reverse.
 - IE9+ switches to the default playback rate when an `ended` event is fired.
 - Firefox generates a `ratechange` event when the media source is substituted.
 - On iOS 7 you can only affect the `playbackRate` when the media is paused (not while it's playing).

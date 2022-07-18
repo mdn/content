@@ -10,15 +10,17 @@ tags:
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing : after property id" occurs when objects are created
-using the [object
-initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) syntax. A colon (`:`) separates keys and values for the
+using the [object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) syntax.
+A colon (`:`) separates keys and values for the
 object's properties. Somehow, this colon is missing or misplaced.
 
 ## Message
 
-```js
-SyntaxError: Expected ':' (Edge)
+```
+SyntaxError: Invalid shorthand property initializer (V8-based)
 SyntaxError: missing : after property id (Firefox)
+SyntaxError: Unexpected token '='. Expected a ':' following the property name 'x'. (Safari)
+SyntaxError: Unexpected token '+'. Expected an identifier as property name. (Safari)
 ```
 
 ## Error type
@@ -27,12 +29,11 @@ SyntaxError: missing : after property id (Firefox)
 
 ## What went wrong?
 
-When creating objects with the [object
-initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) syntax, a colon (`:`) separates keys and values for the
-object's properties.
+When creating objects with the [object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) syntax,
+a colon (`:`) separates keys and values for the object's properties.
 
 ```js
-var obj = { propertyKey: 'value' };
+const obj = { propertyKey: 'value' };
 ```
 
 ## Examples
@@ -43,7 +44,7 @@ This code fails, as the equal sign can't be used this way in this object initial
 syntax.
 
 ```js example-bad
-var obj = { propertyKey = 'value' };
+const obj = { propertyKey = 'value' };
 // SyntaxError: missing : after property id
 ```
 
@@ -51,28 +52,12 @@ Correct would be to use a colon, or to use square brackets to assign a new prope
 after the object has been created already.
 
 ```js example-good
-var obj = { propertyKey: 'value' };
+const obj = { propertyKey: 'value' };
 
 // or alternatively
 
-var obj = { };
+const obj = {};
 obj['propertyKey'] = 'value';
-```
-
-### Empty properties
-
-You can't create empty properties like this:
-
-```js example-bad
-var obj = { propertyKey; };
-// SyntaxError: missing : after property id
-```
-
-If you need to define a property without a value, you might use {{jsxref("null")}} as a
-value.
-
-```js example-good
-var obj = { propertyKey: null };
 ```
 
 ### Computed properties
@@ -81,17 +66,16 @@ If you create a property key from an expression, you need to use square brackets
 Otherwise the property name can't be computed:
 
 ```js example-bad
-var obj = { 'b'+'ar': 'foo' };
+const obj = { 'b'+'ar': 'foo' };
 // SyntaxError: missing : after property id
 ```
 
 Put the expression in brackets `[]`:
 
 ```js example-good
-var obj = { ['b'+'ar']: 'foo' };
+const obj = { ['b'+'ar']: 'foo' };
 ```
 
 ## See also
 
-- [Object
-  initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)

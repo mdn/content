@@ -1,6 +1,7 @@
 ---
 title: 'Element: DOMMouseScroll event'
 slug: Web/API/Element/DOMMouseScroll_event
+page-type: web-api-event
 tags:
   - API
   - DOM
@@ -46,7 +47,7 @@ If you want to prevent the default action of mouse wheel events, it's not enough
 
 On Gecko 17 (Firefox 17) or later, you need to call `preventDefault()` of `wheel` events which must be fired for every native event.
 
-Use the standardized {{event("wheel")}} event if available.
+Use the standardized {{domxref("Element/wheel_event","wheel")}} event if available.
 
 ## Properties
 
@@ -62,7 +63,7 @@ If the event represents scrolling up by a page, the value of `detail` is -32768.
 
 Trusted events are never fired with 0.
 
-> **Note:** If the platform's native mouse wheel events only provide scroll distance by pixels, or if the speed can be customized by the user, the value is computed using the line height of the nearest scrollable ancestor element of the event's target. If that element's font size is smaller than {{pref("mousewheel.min_line_scroll_amount")}}, that preference's value is used as the line height.
+> **Note:** If the platform's native mouse wheel events only provide scroll distance by pixels, or if the speed can be customized by the user, the value is computed using the line height of the nearest scrollable ancestor element of the event's target. If that element's font size is smaller than `mousewheel.min_line_scroll_amount`, that preference's value is used as the line height.
 
 ## Browser compatibility
 

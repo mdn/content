@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisUtterance.volume
 slug: Web/API/SpeechSynthesisUtterance/volume
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -18,14 +19,7 @@ The **`volume`** property of the {{domxref("SpeechSynthesisUtterance")}} interfa
 
 If not set, the default value 1 will be used.
 
-## Syntax
-
-```js
-var myVolume = speechSynthesisUtteranceInstance.volume;
-speechSynthesisUtteranceInstance.volume = 0.5;
-```
-
-### Value
+## Value
 
 A float that represents the volume value, between 0 (lowest) and 1 (highest.)
 
@@ -34,22 +28,22 @@ If [SSML](https://www.w3.org/TR/speech-synthesis/) is used, this value will be o
 ## Examples
 
 ```js
-var synth = window.speechSynthesis;
+const synth = window.speechSynthesis;
 
-var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('input');
-var voiceSelect = document.querySelector('select');
+const inputForm = document.querySelector('form');
+const inputTxt = document.querySelector('input');
+const voiceSelect = document.querySelector('select');
 
-var voices = synth.getVoices();
+const voices = synth.getVoices();
 
-  ...
+// ...
 
 inputForm.onsubmit = function(event) {
   event.preventDefault();
 
-  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
+  const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
+  const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+  for(let i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }

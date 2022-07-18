@@ -65,7 +65,7 @@ Symbol.for('bar') === Symbol.for('bar'); // true
 Symbol('bar') === Symbol('bar'); // false
 
 // The key is also used as the description
-var sym = Symbol.for('mario');
+const sym = Symbol.for('mario');
 sym.toString(); // "Symbol(mario)"
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: RTCRtpTransceiver.stopped
 slug: Web/API/RTCRtpTransceiver/stopped
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -27,13 +28,7 @@ caused the transceiver to be stopped for some reason.
 > at the value of {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}}.
 > Its value is `stopped` if the transceiver has stopped.
 
-## Syntax
-
-```js
-var isStopped = RTCRtpTransceiver.stopped;
-```
-
-### Value
+## Value
 
 A Boolean value which is `true` if the transceiver's
 {{domxref("RTCRtpTransceiver.sender", "sender")}} will no longer send data, and its
@@ -53,5 +48,4 @@ This feature is not part of any current specification. It is no longer on track 
 ## See also
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Introduction to the Real-time
-  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)

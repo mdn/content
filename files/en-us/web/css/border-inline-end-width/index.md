@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - border-inline
   - border-inline-end
@@ -31,6 +30,7 @@ border-inline-end-width: thick;
 border-inline-end-width: inherit;
 border-inline-end-width: initial;
 border-inline-end-width: revert;
+border-inline-end-width: revert-layer;
 border-inline-end-width: unset;
 ```
 

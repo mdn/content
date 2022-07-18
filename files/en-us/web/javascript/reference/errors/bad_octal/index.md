@@ -16,9 +16,8 @@ as an octal number.
 
 ## Message
 
-```js
+```
 Warning: SyntaxError: 08 is not a legal ECMA-262 octal constant.
-Warning: SyntaxError: 09 is not a legal ECMA-262 octal constant.
 ```
 
 ## Error type
@@ -61,7 +60,5 @@ Use a leading zero followed by the letter "o";
 
 ## See also
 
-- [Lexical
-  grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#octal)
-- [SyntaxError:
-  "0"-prefixed octal literals and octal escape seq. are deprecated](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal)
+- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#octal)
+- [SyntaxError: "0"-prefixed octal literals and octal escape seq. are deprecated](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal)

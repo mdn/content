@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement
 slug: Web/API/HTMLSelectElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -23,35 +24,35 @@ _This interface inherits the properties of {{domxref("HTMLElement")}}, and of {{
   - : A boolean value reflecting the {{htmlattrxref("autofocus", "select")}} HTML attribute, which indicates whether the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form-associated element in a document can have this attribute specified.
 - {{domxref("HTMLSelectElement.disabled")}}
   - : A boolean value reflecting the {{htmlattrxref("disabled", "select")}} HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks.
-- {{domxref("HTMLSelectElement.form")}}{{ReadOnlyInline}}
+- {{domxref("HTMLSelectElement.form")}} {{ReadOnlyInline}}
   - : An {{domxref("HTMLFormElement")}} referencing the form that this element is associated with. If the element is not associated with of a {{HTMLElement("form")}} element, then it returns `null`.
-- {{domxref("HTMLSelectElement.labels")}}{{ReadOnlyInline}}
+- {{domxref("HTMLSelectElement.labels")}} {{ReadOnlyInline}}
   - : A {{domxref("NodeList")}} of {{HTMLElement("label")}} elements associated with the element.
 - {{domxref("HTMLSelectElement.length")}}
   - : An `unsigned long` The number of {{HTMLElement("option")}} elements in this `select` element.
 - {{domxref("HTMLSelectElement.multiple")}}
   - : A boolean value reflecting the {{htmlattrxref("multiple", "select")}} HTML attribute, which indicates whether multiple items can be selected.
 - {{domxref("HTMLSelectElement.name")}}
-  - : A {{domxref("DOMString")}} reflecting the {{htmlattrxref("name", "select")}} HTML attribute, containing the name of this control used by servers and DOM search functions.
-- {{domxref("HTMLSelectElement.options")}}{{ReadOnlyInline}}
-  - : An {{domxref("HTMLOptionsCollection")}} representing the set of {{HTMLElement("option")}} ({{domxref("HTMLOptionElement")}}) elements contained by this element.
+  - : A string reflecting the {{htmlattrxref("name", "select")}} HTML attribute, containing the name of this control used by servers and DOM search functions.
+- {{domxref("HTMLSelectElement.options")}} {{ReadOnlyInline}}
+  - : An {{domxref("HTMLOptionsCollection")}} representing the set of {{HTMLElement("option")}} ({{domxref("HTMLOptionElement")}}) elements contained by this element.
 - {{domxref("HTMLSelectElement.required")}}
   - : A boolean value reflecting the {{htmlattrxref("required", "select")}} HTML attribute, which indicates whether the user is required to select a value before submitting the form.
 - {{domxref("HTMLSelectElement.selectedIndex")}}
   - : A `long` reflecting the index of the first selected {{HTMLElement("option")}} element. The value `-1` indicates no element is selected.
-- {{domxref("HTMLSelectElement.selectedOptions")}}{{ReadOnlyInline}}
+- {{domxref("HTMLSelectElement.selectedOptions")}} {{ReadOnlyInline}}
   - : An {{domxref("HTMLCollection")}} representing the set of {{HTMLElement("option")}} elements that are selected.
 - {{domxref("HTMLSelectElement.size")}}
   - : A `long` reflecting the {{htmlattrxref("size", "select")}} HTML attribute, which contains the number of visible items in the control. The default is 1, unless `multiple` is `true`, in which case it is 4.
-- {{domxref("HTMLSelectElement.type")}}{{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} representing the form control's type. When `multiple` is `true`, it returns `"select-multiple"`; otherwise, it returns `"select-one"`.
-- {{domxref("HTMLSelectElement.validationMessage")}}{{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} representing a localized message that describes the validation constraints that the control does not satisfy (if any). This attribute is the empty string if the control is not a candidate for constraint validation (`willValidate` is false), or it satisfies its constraints.
-- {{domxref("HTMLSelectElement.validity")}}{{ReadOnlyInline}}
+- {{domxref("HTMLSelectElement.type")}} {{ReadOnlyInline}}
+  - : A string representing the form control's type. When `multiple` is `true`, it returns `"select-multiple"`; otherwise, it returns `"select-one"`.
+- {{domxref("HTMLSelectElement.validationMessage")}} {{ReadOnlyInline}}
+  - : A string representing a localized message that describes the validation constraints that the control does not satisfy (if any). This attribute is the empty string if the control is not a candidate for constraint validation (`willValidate` is false), or it satisfies its constraints.
+- {{domxref("HTMLSelectElement.validity")}} {{ReadOnlyInline}}
   - : A {{domxref("ValidityState")}} reflecting the validity state that this control is in.
 - {{domxref("HTMLSelectElement.value")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form control. Returns the `value` property of the first selected option element if there is one, otherwise the empty string.
-- {{domxref("HTMLSelectElement.willValidate")}}{{ReadOnlyInline}}
+  - : A string reflecting the value of the form control. Returns the `value` property of the first selected option element if there is one, otherwise the empty string.
+- {{domxref("HTMLSelectElement.willValidate")}} {{ReadOnlyInline}}
   - : A boolean value that indicates whether the button is a candidate for constraint validation. It is `false` if any conditions bar it from constraint validation.
 
 ## Methods
@@ -60,11 +61,11 @@ _This interface inherits the methods of {{domxref("HTMLElement")}}, and of {{dom
 
 - {{domxref("HTMLSelectElement.add()")}}
   - : Adds an element to the collection of `option` elements for this `select` element.
-- {{domxref("HTMLSelectElement.blur()")}}{{deprecated_inline}}
+- {{domxref("HTMLSelectElement.blur()")}} {{deprecated_inline}}
   - : Removes input focus from this element. _This method is now implemented on {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLSelectElement.checkValidity()")}}
   - : Checks whether the element has any constraints and whether it satisfies them. If the element fails its constraints, the browser fires a cancelable {{domxref("HTMLInputElement/invalid_event", "invalid")}} event at the element (and returns `false`).
-- {{domxref("HTMLSelectElement.focus()")}}{{deprecated_inline}}
+- {{domxref("HTMLSelectElement.focus()")}} {{deprecated_inline}}
   - : Gives input focus to this element. _This method is now implemented on {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLSelectElement.item()")}}
   - : Gets an item from the options collection for this {{HTMLElement("select")}} element. You can also access an item by specifying the index in array-style brackets or parentheses, without calling this method explicitly.

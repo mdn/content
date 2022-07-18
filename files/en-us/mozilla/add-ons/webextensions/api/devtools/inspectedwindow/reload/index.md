@@ -26,14 +26,14 @@ browser.devtools.inspectedWindow.reload(
 
 ### Parameters
 
-- `reloadOptions`{{optional_inline}}
+- `reloadOptions` {{optional_inline}}
 
   - : `object`. Options for the function, as follows:
 
-    - `ignoreCache`{{optional_inline}}
+    - `ignoreCache` {{optional_inline}}
       - : `boolean`. If true, this makes the reload ignore the browser cache (as if the user had pressed Shift+Ctrl+R).
-    - `userAgent`{{optional_inline}}
-      - : `string`. Set a custom user agent for the page. The string supplied here will be sent in the browser's [User-Agent](/en-US/docs/Web/HTTP/Headers/User-Agent) header, and will be returned by calls to [`navigator.userAgent`](/en-US/docs/Web/API/NavigatorID/userAgent) made by scripts running in the page.
+    - `userAgent` {{optional_inline}}
+      - : `string`. Set a custom user agent for the page. The string supplied here will be sent in the browser's [User-Agent](/en-US/docs/Web/HTTP/Headers/User-Agent) header, and will be returned by calls to [`navigator.userAgent`](/en-US/docs/Web/API/Navigator/userAgent) made by scripts running in the page.
     - `injectedScript` {{optional_inline}}
       - : `string`. Inject the given JavaScript expression into all frames in the page, before any other scripts.
 
@@ -58,7 +58,7 @@ reloadButton.addEventListener("click", () => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) API.
+> **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv3/devtools/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.indexNames
 slug: Web/API/IDBObjectStore/indexNames
+page-type: web-api-instance-property
 tags:
   - API
   - Database
@@ -20,17 +21,11 @@ in this object store.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var myindexNames = objectStore.indexNames;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMStringList")}}.
 
-## Example
+## Examples
 
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store using `add()`. After the object store has been
@@ -40,7 +35,7 @@ our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
 
 ```js
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
   note.innerHTML += '<li>Database initialized.</li>';
@@ -55,10 +50,10 @@ DBOpenRequest.onsuccess = function(event) {
 
 function addData() {
   // Create a new object ready to insert into the IDB
-  var newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  const newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
 
   // open a read/write db transaction, ready for adding the data
-  var transaction = db.transaction(["toDoList"], "readwrite");
+  const transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of the transaction completing, when everything is done
   transaction.oncomplete = function(event) {
@@ -70,11 +65,11 @@ function addData() {
   };
 
   // create an object store on the transaction
-  var objectStore = transaction.objectStore("toDoList");
+  const objectStore = transaction.objectStore("toDoList");
   console.log(objectStore.indexNames);
 
   // Make a request to add our newItem object to the object store
-  var objectStoreRequest = objectStore.add(newItem[0]);
+  const objectStoreRequest = objectStore.add(newItem[0]);
 
   objectStoreRequest.onsuccess = function(event) {
     // report the success of our request
@@ -99,5 +94,4 @@ function addData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

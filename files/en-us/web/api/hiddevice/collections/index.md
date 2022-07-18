@@ -1,25 +1,21 @@
 ---
 title: HIDDevice.collections
 slug: Web/API/HIDDevice/collections
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
   - collections
   - HIDDevice
+  - Experimental
 browser-compat: api.HIDDevice.collections
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`collections`** read-only property of the {{domxref("HIDDevice")}} interface returns an array of report formats
 
-## Syntax
-
-```js
-let collections = HIDDevice.collections;
-```
-
-### Value
+## Value
 
 An array of report formats. Each entry contains the following:
 
@@ -27,7 +23,7 @@ An array of report formats. Each entry contains the following:
 
   - : An integer representing the usage page component of the HID usage associated with this collection. The usage for a top level collection is used to identify the device type.
 
-    Standard HID usage values can be found in the [HID Usage Tables](https://usb.org/document-library/hid-usage-tables-122) document
+    Standard HID usage values can be found in the [HID Usage Tables](https://usb.org/document-library/hid-usage-tables-13) document
 
 - `usage`
   - : An integer representing the usage ID component of the HID usage associated with this collection.

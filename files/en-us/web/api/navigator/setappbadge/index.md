@@ -1,6 +1,7 @@
 ---
 title: Navigator.setAppBadge()
 slug: Web/API/Navigator/setAppBadge
+page-type: web-api-instance-method
 tags:
   - API
   - Badging API
@@ -12,17 +13,18 @@ browser-compat: api.Navigator.setAppBadge
 ---
 {{DefaultAPISidebar("Badging API")}}
 
-The **`setAppBadge()`** method of the {{domxref("Navigator")}} interface a badge on the icon associated with this app. If a value is passed to the method, this will be set as the value of the badge. Otherwise the badge will display as a dot, or other indicator as defined by the platform.
+The **`setAppBadge()`** method of the {{domxref("Navigator")}} interface sets a badge on the icon associated with this app. If a value is passed to the method, this will be set as the value of the badge. Otherwise the badge will display as a dot, or other indicator as defined by the platform.
 
 ## Syntax
 
 ```js
-let promise = Navigator.setAppBadge(contents);
+setAppBadge()
+setAppBadge(contents)
 ```
 
 ### Parameters
 
-- `contents`{{optional_inline}}
+- `contents` {{optional_inline}}
   - : A {{jsxref("number")}} which will be used as the value of the badge. If `contents` is `0` then the badge will be set to `nothing`, indicating a cleared badge.
 
 ### Return value

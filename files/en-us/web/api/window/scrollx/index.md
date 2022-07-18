@@ -1,6 +1,7 @@
 ---
 title: Window.scrollX
 slug: Web/API/Window/scrollX
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -20,13 +21,7 @@ meaning that it isn't necessarily a whole number. You can get the number of pixe
 document is scrolled vertically from the {{domxref("Window.scrollY", "scrollY")}}
 property.
 
-## Syntax
-
-```js
-var x = window.scrollX;
-```
-
-### Value
+## Value
 
 In practice, the returned value is a double-precision floating-point value indicating
 the number of pixels the document is currently scrolled horizontally from the origin,
@@ -41,7 +36,7 @@ In more technical terms, `scrollX` returns the X coordinate of the left edge
 of the current {{Glossary("viewport")}}. If there is no viewport, the returned value is
 0\.
 
-## Example
+## Examples
 
 This example checks the current horizontal scroll position of the document. If it's
 greater than 400 pixels, the window is scrolled back to the beginning.

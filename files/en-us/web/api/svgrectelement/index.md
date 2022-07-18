@@ -1,6 +1,7 @@
 ---
 title: SVGRectElement
 slug: Web/API/SVGRectElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -19,53 +20,55 @@ The `SVGRectElement` interface provides access to the properties of {{SVGElement
 
 _This interface also inherits properties from its parent, {{domxref("SVGGeometryElement")}}._
 
-- {{domxref("SVGRectElement.x")}} {{ReadOnlyInline}}
+- {{domxref("SVGRectElement.x")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given {{SVGElement("rect")}} element.
-- {{domxref("SVGRectElement.y")}} {{ReadOnlyInline}}
+- {{domxref("SVGRectElement.y")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given {{SVGElement("rect")}} element.
-- {{domxref("SVGRectElement.width")}} {{ReadOnlyInline}}
+- {{domxref("SVGRectElement.width")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given {{SVGElement("rect")}} element.
-- {{domxref("SVGRectElement.height")}} {{ReadOnlyInline}}
+- {{domxref("SVGRectElement.height")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given {{SVGElement("rect")}} element.
-- {{domxref("SVGRectElement.rx")}} {{ReadOnlyInline}}
+- {{domxref("SVGRectElement.rx")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("rx")}} attribute of the given {{SVGElement("rect")}} element.
-- {{domxref("SVGRectElement.ry")}} {{ReadOnlyInline}}
+- {{domxref("SVGRectElement.ry")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("ry")}} attribute of the given {{SVGElement("rect")}} element.
 
 ## Methods
 
 _This interface doesn't implement any specific methods, but inherits methods from its parent, {{domxref("SVGGeometryElement")}}._
 
-## Example
+## Examples
 
-Here is a simple usage of rect interface. (Changing the color of the rect interface on every click)
+### Changing the color of an SVG rectangle
 
-### SVG content
+This example sets the fill color of an `SVGRectElement` to a random value whenever the user clicks it.
+
+#### HTML
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-  <rect width="300" height="100" id="myrect" onclick="doRectClick()"
+  <rect width="300" height="100" id="myrect"
       style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
-  <text x="60" y="40" fill="white" font-size="40"
-      onclick="doRectClick();">Click Me</text>
+  <text x="60" y="40" fill="white" font-size="40">Click Me</text>
 </svg>
 ```
 
-### JavaScript content
+#### JavaScript
 
 ```js
-function doRectClick(){
-  var myrect = document.getElementById('myrect');
-  var r = Math.floor(Math.random() * 255);
-  var g = Math.floor(Math.random() * 255);
-  var b = Math.floor(Math.random() * 255);
-  myrect.style.fill = 'rgb(' + r + ', ' + g + ' , ' + b + ')';
-}
+const myRect = document.querySelector("#myrect");
+
+myRect.addEventListener('click', () => {
+  const r = Math.floor(Math.random() * 255);
+  const g = Math.floor(Math.random() * 255);
+  const b = Math.floor(Math.random() * 255);
+  myRect.style.fill = `rgb(${r}, ${g}, ${b})`;
+})
 ```
 
-_Click the rect._
+#### Result
 
-{{EmbedLiveSample('Example', '', '', '', 'Web/API/SVGRectElement')}}
+{{EmbedLiveSample('Changing the color of an SVG rectangle')}}
 
 ## Specifications
 

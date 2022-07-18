@@ -1,6 +1,7 @@
 ---
 title: Navigator
 slug: Web/API/Navigator
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -42,9 +43,9 @@ _Doesn't inherit any properties._
 - {{domxref('Navigator.keyboard')}} {{readonlyinline}} {{experimental_inline}}
   - : Returns a {{domxref('Keyboard')}} object which provides access to functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
 - {{domxref("Navigator.language")}} {{readonlyInline}}
-  - : Returns a {{domxref("DOMString")}} representing the preferred language of the user, usually the language of the browser UI. The `null` value is returned when this is unknown.
+  - : Returns a string representing the preferred language of the user, usually the language of the browser UI. The `null` value is returned when this is unknown.
 - {{domxref("Navigator.languages")}} {{readonlyInline}} {{experimental_inline}}
-  - : Returns an array of {{domxref("DOMString")}} representing the languages known to the user, by order of preference.
+  - : Returns an array of strings representing the languages known to the user, by order of preference.
 - {{domxref("Navigator.locks")}} {{readonlyinline}} {{experimental_inline}}
   - : Returns a {{domxref("LockManager")}} object that provides methods for requesting a new {{domxref('Lock')}} object and querying for an existing {{domxref('Lock')}} object.
 - {{domxref("Navigator.maxTouchPoints")}} {{readonlyInline}}
@@ -57,6 +58,8 @@ _Doesn't inherit any properties._
   - : Returns {{domxref("MediaSession")}} object which can be used to provide metadata that can be used by the browser to present information about the currently-playing media to the user, such as in a global media controls UI.
 - {{domxref("Navigator.onLine")}} {{readonlyInline}}
   - : Returns a boolean value indicating whether the browser is working online.
+- {{domxref("Navigator.pdfViewerEnabled")}} {{readonlyinline}}
+  - : Returns `true` if the browser can display PDF files inline when navigating to them, and `false` otherwise.
 - {{domxref("Navigator.permissions")}} {{readonlyinline}} {{experimental_inline}}
   - : Returns a {{domxref("Permissions")}} object that can be used to query and update permission status of APIs covered by the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 - {{domxref("Navigator.presentation")}} {{readonlyInline}} {{experimental_inline}}
@@ -98,20 +101,18 @@ _Doesn't inherit any properties._
 - {{domxref("Navigator.appName")}} {{readonlyInline}} {{deprecated_inline}}
   - : Always returns `'Netscape'`, in any browser.
 - {{domxref("Navigator.appVersion")}} {{readonlyInline}} {{deprecated_inline}}
-  - : Returns the version of the browser as a {{domxref("DOMString")}}. Do not rely on this property to return the correct value.
+  - : Returns the version of the browser as a string. Do not rely on this property to return the correct value.
 - {{domxref("Navigator.activeVRDisplays")}} {{readonlyInline}} {{deprecated_inline}}
   - : Returns an array containing every {{domxref("VRDisplay")}} object that is currently presenting ({{domxref("VRDisplay.ispresenting")}} is `true`).
-- {{domxref("Navigator.battery")}} {{readonlyInline}} {{deprecated_inline}}
-  - : Returns a {{domxref("BatteryManager")}} object. Use {{domxref("Navigator.getBattery()")}} instead.
 - {{domxref("Navigator.doNotTrack")}} {{readonlyInline}} {{deprecated_inline}}
   - : Reports the value of the user's do-not-track preference. When this value is "yes", your web site or application should not track the user.
-- {{domxref("Navigator.mimeTypes")}} {{readonlyInline}}{{deprecated_inline}}
+- {{domxref("Navigator.mimeTypes")}} {{readonlyInline}} {{deprecated_inline}}
   - : Returns an {{domxref("MimeTypeArray")}} listing the MIME types supported by the browser.
 - {{domxref("Navigator.oscpu")}} {{readonlyInline}} {{deprecated_inline}}
   - : Returns a string that represents the current operating system.
 - {{domxref("Navigator.platform")}} {{readonlyInline}} {{deprecated_inline}}
   - : Returns a string representing the platform of the browser. Do not rely on this function to return a significant value.
-- {{domxref("Navigator.plugins")}} {{readonlyInline}}{{deprecated_inline}}
+- {{domxref("Navigator.plugins")}} {{readonlyInline}} {{deprecated_inline}}
   - : Returns a {{domxref("PluginArray")}} listing the plugins installed in the browser.
 - {{domxref("Navigator.product")}} {{readonlyInline}} {{deprecated_inline}}
   - : Always returns `'Gecko'`, in any browser.
@@ -136,6 +137,8 @@ _Doesn't inherit any method._
   - : Allows web sites to register themselves as a possible handler for a given protocol.
 - {{domxref("Navigator.requestMediaKeySystemAccess()")}}
   - : Returns a {{jsxref("Promise")}} for a MediaKeySystemAccess object.
+- {{domxref("Navigator.requestMIDIAccess()")}}
+  - : Returns a {{jsxref('Promise')}} representing a request for access to MIDI devices on the user's system.
 - {{domxref("Navigator.sendBeacon()")}}
   - : Used to asynchronously transfer a small amount of data using {{Glossary("HTTP")}} from the User Agent to a web server.
 - {{domxref("Navigator.setAppBadge()")}}

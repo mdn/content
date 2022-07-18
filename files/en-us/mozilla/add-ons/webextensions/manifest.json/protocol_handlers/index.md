@@ -21,6 +21,10 @@ browser-compat: webextensions.manifest.protocol_handlers
       <td>No</td>
     </tr>
     <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
+    </tr>
+    <tr>
       <th scope="row">Example</th>
       <td>
         <pre class="brush: json">
@@ -61,11 +65,11 @@ Each protocol handler has three properties, all mandatory:
 
 ```json
 "protocol_handlers": [
-  {
-    "protocol": "magnet",
-    "name": "Magnet Extension",
-    "uriTemplate": "https://example.com/#!/%s"
-  }
+  {
+    "protocol": "magnet",
+    "name": "Magnet Extension",
+    "uriTemplate": "https://example.com/#!/%s"
+  }
 ]
 ```
 
@@ -73,11 +77,11 @@ If the protocol is not in the allowed list then it has to start with 'ext+'
 
 ```json
 "protocol_handlers": [
-  {
-    "protocol": "ext+foo",
-    "name": "Foo Extension",
-    "uriTemplate": "https://example.com/#!/%s"
-  }
+  {
+    "protocol": "ext+foo",
+    "name": "Foo Extension",
+    "uriTemplate": "https://example.com/#!/%s"
+  }
 ]
 ```
 
@@ -85,11 +89,11 @@ Handlers can also be [extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions
 
 ```json
 "protocol_handlers": [
-  {
-    "protocol": "magnet",
-    "name": "Magnet Extension",
-    "uriTemplate": "/example.xhtml#!/%s"
-  }
+  {
+    "protocol": "magnet",
+    "name": "Magnet Extension",
+    "uriTemplate": "/example.xhtml#!/%s"
+  }
 ]
 ```
 

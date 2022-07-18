@@ -1,6 +1,7 @@
 ---
 title: AbstractRange.startContainer
 slug: Web/API/AbstractRange/startContainer
+page-type: web-api-instance-property
 tags:
   - Property
   - Read-only

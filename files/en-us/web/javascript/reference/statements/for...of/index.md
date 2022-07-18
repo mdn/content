@@ -12,10 +12,11 @@ browser-compat: javascript.statements.for_of
 ---
 {{jsSidebar("Statements")}}
 
-The **`for...of` statement** creates a loop iterating over [iterable
-objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), including: built-in {{jsxref("String")}}, {{jsxref("Array")}}, array-like
-objects (e.g., {{jsxref("Functions/arguments", "arguments")}}
-or {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}},
+The **`for...of` statement** creates a loop iterating over
+[iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol),
+including: built-in {{jsxref("String")}}, {{jsxref("Array")}},
+array-like objects (e.g., {{jsxref("Functions/arguments", "arguments")}}
+or {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}},
 {{jsxref("Set")}}, and user-defined iterables. It invokes a custom iteration hook with
 statements to be executed for the value of each distinct property of the object.
 
@@ -58,7 +59,7 @@ You can use {{jsxref("Statements/let", "let")}} instead of {{jsxref("Statements/
 const iterable = [10, 20, 30];
 
 for (let value of iterable) {
-  value += 1;
+  value += 1;
   console.log(value);
 }
 // 11
@@ -226,7 +227,7 @@ for (const o of gen) {
 
 ### Iterating over other iterable objects
 
-You can also iterate over an object that explicitly implements the [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterable)
+You can also iterate over an object that explicitly implements the [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterable)
 protocol:
 
 ```js
@@ -257,11 +258,11 @@ for (const value of iterable) {
 Both `for...in` and `for...of` statements iterate over something.
 The main difference between them is in what they iterate over.
 
-The {{jsxref("Statements/for...in", "for...in")}} statement iterates over the [enumerable
-properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of an object.
+The {{jsxref("Statements/for...in", "for...in")}} statement iterates over the
+[enumerable properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of an object.
 
-The `for...of` statement iterates over values that the [iterable
-object](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterables) defines to be iterated over.
+The `for...of` statement iterates over values that the
+[iterable object](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterables) defines to be iterated over.
 
 The following example shows the difference between a `for...of` loop and a
 `for...in` loop when used with an {{jsxref("Array")}}.
@@ -278,9 +279,9 @@ for (const i in iterable) {
 }
 
 for (const i in iterable) {
-  if (iterable.hasOwnProperty(i)) {
-    console.log(i); // logs "0", "1", "2", "foo"
-  }
+  if (Object.hasOwn(iterable, i)) {
+    console.log(i); // logs "0", "1", "2", "foo"
+  }
 }
 
 for (const i of iterable) {
@@ -298,12 +299,12 @@ const iterable = [3, 5, 7];
 iterable.foo = 'hello';
 ```
 
-Every object will inherit the `objCustom` property and every object that is
-an {{jsxref("Array")}} will inherit the `arrCustom` property since these
+Every object will inherit the `objCustom` property and every object that is
+an {{jsxref("Array")}} will inherit the `arrCustom` property since these
 properties have been added to {{jsxref("Object", "Object.prototype")}} and
 {{jsxref("Array", "Array.prototype")}}, respectively. The object `iterable` inherits
-the properties `objCustom` and `arrCustom` because of [inheritance and
-the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+the properties `objCustom` and `arrCustom` because of
+[inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 ```js
 for (const i in iterable) {
@@ -311,9 +312,8 @@ for (const i in iterable) {
 }
 ```
 
-This loop logs only [enumerable
-properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of the `iterable` object. It doesn't log
-array **elements** `3`, `5`, `7` or
+This loop logs only [enumerable properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+of the `iterable` object. It doesn't log array **elements** `3`, `5`, `7` or
 `hello` because those are **not** enumerable properties, in fact
 they are not properties at all, they are **values**. It logs array
 **indexes** as well as `arrCustom` and `objCustom`,
@@ -323,14 +323,14 @@ thorough explanation of how {{jsxref("Statements/for...in", "array iteration and
 
 ```js
 for (const i in iterable) {
-  if (iterable.hasOwnProperty(i)) {
+  if (Object.hasOwn(iterable, i)) {
     console.log(i); // logs 0, 1, 2, "foo"
-  }
+  }
 }
 ```
 
 This loop is similar to the first one, but it uses
-{{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}} to check if the
+{{jsxref("Object.hasOwn()", "hasOwn()")}} to check if the
 found enumerable property is the object's own, i.e. not inherited. If it is, the
 property is logged. Properties `0`, `1`, `2` and
 `foo` are logged because they are own properties (**not
@@ -344,9 +344,9 @@ for (const i of iterable) {
 ```
 
 This loop iterates and logs **values** that `iterable`, as an
-[iterable
-object](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterables), defines to be iterated over. The object's **elements**
-`3`, `5`, `7` are shown, but none of the object's
+[iterable object](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterables),
+defines to be iterated over. The object's **elements**
+`3`, `5`, `7` are shown, but none of the object's
 **properties**.
 
 ## Specifications
@@ -361,5 +361,4 @@ object](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterables), de
 
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Map.prototype.forEach()")}}
-- {{jsxref("Object.entries()")}} – Useful when using
-  **`for...of`** over an object.
+- {{jsxref("Object.entries()")}} – Useful when using **`for...of`** over an object.

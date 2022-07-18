@@ -1,6 +1,7 @@
 ---
 title: Multi-touch interaction
 slug: Web/API/Touch_events/Multi-touch_interaction
+page-type: guide
 tags:
   - Guide
   - TouchEvent
@@ -8,9 +9,9 @@ tags:
 ---
 {{DefaultAPISidebar("Touch Events")}}
 
-The touch event interfaces support application-specific single and multi-touch interactions. However, the interfaces can be a bit tricky for programmers to use because touch events are very different from other DOM input events, such as {{domxref("MouseEvent","mouse events")}}. The application described in this guide shows how to use touch events for simple single and multi-touch interactions, the basics needed to build application-specific gestures.
+The touch event interfaces support application-specific single and multi-touch interactions. However, the interfaces can be a bit tricky for programmers to use because touch events are very different from other DOM input events, such as {{domxref("MouseEvent","mouse events")}}. The application described in this guide shows how to use touch events for simple single and multi-touch interactions, the basics needed to build application-specific gestures.
 
-A _live_ version of this application is available on [Github](https://mdn.github.io/dom-examples/touchevents/Multi-touch_interaction.html). The [source code is available on Github](https://github.com/mdn/dom-examples/tree/master/touchevents) and pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
+A _live_ version of this application is available on [GitHub](https://mdn.github.io/dom-examples/touchevents/Multi-touch_interaction.html). The [source code is available on GitHub](https://github.com/mdn/dom-examples/tree/master/touchevents) and pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
 
 ## Example
 
@@ -51,10 +52,10 @@ The application uses {{HTMLElement("div")}} elements to represent four touch are
 
 ```js
 // Log events flag
-var logEvents = false;
+const logEvents = false;
 
 // Touch Point cache
-var tpCache = new Array();
+const tpCache = [];
 ```
 
 ### Register event handlers
@@ -64,7 +65,7 @@ Event handlers are registered for all four touch event types. The {{event("touch
 ```js
 function set_handlers(name) {
  // Install event handlers for the given element
- var el=document.getElementById(name);
+ const el = document.getElementById(name);
  el.ontouchstart = start_handler;
  el.ontouchmove = move_handler;
  // Use same handler for touchcancel and touchend
@@ -92,24 +93,25 @@ function handle_pinch_zoom(ev) {
  if (ev.targetTouches.length == 2 && ev.changedTouches.length == 2) {
    // Check if the two target touches are the same ones that started
    // the 2-touch
-   var point1=-1, point2=-1;
-   for (var i=0; i < tpCache.length; i++) {
+   let point1 = -1;
+   let point2 = -1;
+   for (let i = 0; i < tpCache.length; i++) {
      if (tpCache[i].identifier == ev.targetTouches[0].identifier) point1 = i;
      if (tpCache[i].identifier == ev.targetTouches[1].identifier) point2 = i;
    }
-   if (point1 >=0 && point2 >= 0) {
+   if (point1 >= 0 && point2 >= 0) {
      // Calculate the difference between the start and move coordinates
-     var diff1 = Math.abs(tpCache[point1].clientX - ev.targetTouches[0].clientX);
-     var diff2 = Math.abs(tpCache[point2].clientX - ev.targetTouches[1].clientX);
+     const diff1 = Math.abs(tpCache[point1].clientX - ev.targetTouches[0].clientX);
+     const diff2 = Math.abs(tpCache[point2].clientX - ev.targetTouches[1].clientX);
 
      // This threshold is device dependent as well as application specific
-     var PINCH_THRESHOLD = ev.target.clientWidth / 10;
+     const PINCH_THRESHOLD = ev.target.clientWidth / 10;
      if (diff1 >= PINCH_THRESHOLD && diff2 >= PINCH_THRESHOLD)
          ev.target.style.background = "green";
    }
    else {
      // empty tpCache
-     tpCache = new Array();
+     tpCache = [];
    }
  }
 }
@@ -117,7 +119,7 @@ function handle_pinch_zoom(ev) {
 
 ### Touch start handler
 
-The {{event("touchstart")}} event handler caches touch points to support 2-touch gestures. It also calls {{domxref("Event.preventDefault","preventDefault()")}} to keep the browser from applying further event handling (for example, mouse event emulation).
+The {{event("touchstart")}} event handler caches touch points to support 2-touch gestures. It also calls {{domxref("Event.preventDefault","preventDefault()")}} to keep the browser from applying further event handling (for example, mouse event emulation).
 
 ```js
 function start_handler(ev) {
@@ -129,7 +131,7 @@ function start_handler(ev) {
  ev.preventDefault();
  // Cache the touch points for later processing of 2-touch pinch/zoom
  if (ev.targetTouches.length == 2) {
-   for (var i=0; i < ev.targetTouches.length; i++) {
+   for (let i = 0; i < ev.targetTouches.length; i++) {
      tpCache.push(ev.targetTouches[i]);
    }
  }
@@ -193,7 +195,7 @@ The application uses {{HTMLElement("div")}} elements for the touch areas and pro
 <div id="target3"> Tap, Hold or Swipe me 3</div>
 <div id="target4"> Tap, Hold or Swipe me 4</div>
 
-<!-- UI for logging/bebugging -->
+<!-- UI for logging/debugging -->
 <button id="log" onclick="enableLog(event);">Start/Stop event logging</button>
 <button id="clearlog" onclick="clearLog(event);">Clear the log</button>
 <p></p>
@@ -241,25 +243,23 @@ function enableLog(ev) {
 }
 
 function log(name, ev, printTargetIds) {
-  var o = document.getElementsByTagName('output')[0];
-  var s = name + ": touches = " + ev.touches.length +
+  const o = document.getElementsByTagName('output')[0];
+  let s = name + ": touches = " + ev.touches.length +
                 " ; targetTouches = " + ev.targetTouches.length +
                 " ; changedTouches = " + ev.changedTouches.length;
-  o.innerHTML += s + "
-";
+  o.innerHTML += s + "<br>";
 
   if (printTargetIds) {
     s = "";
     for (var i=0; i < ev.targetTouches.length; i++) {
-      s += "... id = " + ev.targetTouches[i].identifier + "
-";
+      s += "... id = " + ev.targetTouches[i].identifier + "<br>";
     }
     o.innerHTML += s;
   }
 }
 
 function clearLog(event) {
- var o = document.getElementsByTagName('output')[0];
+ const o = document.getElementsByTagName('output')[0];
  o.innerHTML = "";
 }
 ```

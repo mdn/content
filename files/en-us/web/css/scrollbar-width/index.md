@@ -12,9 +12,7 @@ browser-compat: css.properties.scrollbar-width
 ---
 {{CSSRef}}
 
-The **`scrollbar-width`** property allows the author to set the maximum thickness of an element’s scrollbars when they are shown.
-
-{{EmbedInteractiveExample("pages/css/scrollbar-width.html")}}
+The **`scrollbar-width`** property allows the author to set the maximum thickness of an element's scrollbars when they are shown.
 
 ## Syntax
 
@@ -28,6 +26,7 @@ scrollbar-width: none;
 scrollbar-width: inherit;
 scrollbar-width: initial;
 scrollbar-width: revert;
+scrollbar-width: revert-layer;
 scrollbar-width: unset;
 ```
 
@@ -65,8 +64,8 @@ Use this property with caution — setting `scrollbar-width` to `thin` or `none`
 
 WCAG criterion 2.1.1 (Keyboard) has been in place for a long time to advise on basic keyboard accessibility, and this should include scrolling of content areas. And introduced in WCAG 2.1, criterion 2.5.5 (Target Size) advises that touch targets should be at least 44px in width and height (although the problem is compounded on high-resolution screens; thorough testing is advised).
 
-- [MDN Understanding WCAG, Guideline 2.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.1_%E2%80%94_Keyboard_Accessible_Make_all_functionality_available_from_a_keyboard)
-- [MDN Understanding WCAG, Guideline 2.5 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.5_Input_Modalities_Make_it_easier_for_users_to_operate_functionality_through_various_inputs_beyond_keyboard.s/)
+- [MDN Understanding WCAG, Guideline 2.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.1_—_keyboard_accessible_make_all_functionality_available_from_a_keyboard)
+- [MDN Understanding WCAG, Guideline 2.5 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.5_input_modalities_make_it_easier_for_users_to_operate_functionality_through_various_inputs_beyond_keyboard.s/)
 - [Understanding Success Criterion 2.1.1 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/keyboard)
 - [Understanding Success Criterion 2.5.5 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
 

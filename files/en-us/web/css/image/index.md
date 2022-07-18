@@ -20,12 +20,12 @@ The **`<image>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS
 
 The `<image>` data type can be represented with any of the following:
 
-- An image denoted by the {{CSSxRef("url()", "url()")}} data type
+- An image denoted by the {{CSSxRef("url", "url()")}} data type
 - A {{CSSxRef("&lt;gradient&gt;")}} data type
-- A part of the webpage, defined by the {{CSSxRef("element()","element()")}} function
-- An image, image fragment or solid patch of color, defined by the {{CSSxRef("image/image()","image()")}} function
-- A blending of two or more images defined by the {{CSSxRef("cross-fade()","cross-fade()")}} function.
-- A selection of images chosen based on resolution defined by the {{CSSxRef("image/image-set()","image-set()")}} function.
+- A part of the webpage, defined by the {{CSSxRef("element","element()")}} function
+- An image, image fragment or solid patch of color, defined by the {{CSSxRef("image/image","image()")}} function
+- A blending of two or more images defined by the {{CSSxRef("cross-fade","cross-fade()")}} function.
+- A selection of images chosen based on resolution defined by the {{CSSxRef("image/image-set","image-set()")}} function.
 
 ## Description
 
@@ -47,7 +47,7 @@ CSS determines an object's _concrete size_ using (1) its _intrinsic dimensions_;
 | {{CSSxRef("mask-image")}}                                                                                  | ?                                                                                                             |
 | {{CSSxRef("shape-outside")}}                                                                              | ?                                                                                                             |
 | {{CSSxRef("mask-border-source")}}                                                                      | ?                                                                                                             |
-| {{CSSxRef("symbols()")}} for @counter-style                                                               | At risk feature. If supported, the browser-defined size matching the usual cursor size on the client's system |
+| {{CSSxRef("symbols", "symbols()")}} for @counter-style                                                               | At risk feature. If supported, the browser-defined size matching the usual cursor size on the client's system |
 | {{CSSxRef("content")}} for a pseudo-element ({{CSSxRef("::after")}}/{{CSSxRef("::before")}}) | A 300px × 150px rectangle                                                                                     |
 
 The concrete object size is calculated using the following algorithm:
@@ -106,7 +106,7 @@ image-set('cat.jpg' 1x, 'dog.jpg' 1x) /* every image in an image set must have a
 ## See also
 
 - {{CSSxRef("&lt;gradient&gt;")}}
-- {{CSSxRef("element()","element()")}}
-- {{CSSxRef("image/image()", "image()")}}
-- {{CSSxRef("image/image-set()","image-set()")}}
-- {{CSSxRef("cross-fade()","cross-fade()")}}
+- {{CSSxRef("element","element()")}}
+- {{CSSxRef("image/image", "image()")}}
+- {{CSSxRef("image/image-set","image-set()")}}
+- {{CSSxRef("cross-fade","cross-fade()")}}

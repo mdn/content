@@ -8,7 +8,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-Firefox 7 shipped on September 27, 2011. This article provides information about the changes that affect developers -- both of web content and of Firefox add-ons.
+Firefox 7 shipped on September 27, 2011. This article provides information about the changes that affect developers — both of web content and of Firefox add-ons.
 
 ## Changes for web developers
 
@@ -22,15 +22,15 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 
 #### Canvas
 
-- As part of the [Azure project](https://blog.mozilla.com/joe/2011/04/26/introducing-the-azure-project/) the Direct2D Azure Backend [has been implemented](https://bugzilla.mozilla.org/show_bug.cgi?id=651858) and will significantly improve the performance of the 2D canvas.
+- As part of the [Azure project](https://web.archive.org/web/20160304084025/https://blog.mozilla.org/joe/2011/04/26/introducing-the-azure-project/) the Direct2D Azure Backend [has been implemented](https://bugzilla.mozilla.org/show_bug.cgi?id=651858) and will significantly improve the performance of the 2D canvas.
 - Specifying invalid values when calling `setTransform()`, `bezierCurveTo()`, or `arcTo()` no longer throws an exception; these calls are now correctly silently ignored.
-- The [`isPointInPath()`](</en-US/docs/Web/API/CanvasRenderingContext2D#ispointinpath()>) method now correctly considers the transformation matrix when comparing the specified point to the current path.
+- The [`isPointInPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/ispointinpath) method now correctly considers the transformation matrix when comparing the specified point to the current path.
 - Calling `strokeRect()` with a zero width and height now correctly does nothing.
-- Calling [`drawImage()`](</en-US/docs/Web/API/CanvasRenderingContext2D#drawimage()>) with a zero width or height {{ HTMLElement("canvas") }} now throws `INVALID_STATE_ERR`.
-- Calling [`drawImage()`](</en-US/docs/Web/API/CanvasRenderingContext2D#drawimage()>) with non-finite coordinates no longer throws an exception.
+- Calling [`drawImage()`](/en-US/docs/Web/API/CanvasRenderingContext2D/drawimage) with a zero width or height {{ HTMLElement("canvas") }} now throws `INVALID_STATE_ERR`.
+- Calling [`drawImage()`](/en-US/docs/Web/API/CanvasRenderingContext2D/drawimage) with non-finite coordinates no longer throws an exception.
 - `toDataURL()` method now accepts a second argument to control JPEG quality.
 - Support for the non-standard `globalCompositeOperation` operations `clear` and `over` has been removed.
-- [Shadows](/en-US/docs/Canvas_tutorial/Applying_styles_and_colors#Shadows) are now only drawn for `source-over` compositing operations.
+- [Shadows](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#shadows) are now only drawn for `source-over` compositing operations.
 - You can now configure the fill rule used by canvas by setting the `mozFillRule` [attribute](/en-US/docs/Web/API/CanvasRenderingContext2D#attributes) on the context.
 - Support for the experimental `mozDash`, `mozDashOffset`, `mozCurrentTransform` and `mozCurrentTransformInverse` attributes has been added.
 - Support for the non-standard methods `mozDrawText()`, `mozMeasureText()`, `mozPathText()` and `mozTextAlongPath()` has been removed.
@@ -60,8 +60,8 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 - {{ domxref("DOMTokenList.item") }} now returns `undefined` if the `index` is out of bounds, previously it returned `null`.
 - `Node.getFeature` has been removed.
 - The `HTMLInsElement` and `HTMLDelElement` interfaces have been removed, since the {{ HTMLElement("ins") }} and {{ HTMLElement("del") }} elements actually use the {{ domxref("HTMLModElement") }} interface.
-- In a effort to conform to the upcoming [DOM4](https://www.w3.org/TR/dom/) specification where {{ domxref("Attr") }} do not inherit from {{ domxref("Node") }} anymore (it did in DOM Core 1, 2 and 3), many {{ domxref("Node") }} properties and methods on the {{ domxref("Attr") }} interface are [now reporting warnings](/en-US/docs/Web/API/Attr#deprecated_properties_and_methods) as we work toward removing them in a later version.
-- Added support for the {{ domxref("window.ondeviceorientation") }} and {{ domxref("window.ondevicemotion") }} properties on {{ domxref("window") }} objects.
+- In a effort to conform to the upcoming [DOM4](https://dom.spec.whatwg.org/) specification where {{ domxref("Attr") }} do not inherit from {{ domxref("Node") }} anymore (it did in DOM Core 1, 2 and 3), many {{ domxref("Node") }} properties and methods on the {{ domxref("Attr") }} interface are [now reporting warnings](/en-US/docs/Web/API/Attr#deprecated_properties_and_methods) as we work toward removing them in a later version.
+- Added support for the {{ domxref("window.deviceorientation_event", "ondeviceorientation") }} and {{ domxref("window.devicemotion_event", "ondevicemotion") }} properties on {{ domxref("window") }} objects.
 - {{ domxref("window.resizeTo") }}, {{ domxref("window.resizeBy") }}, {{ domxref("window.moveTo") }} , and {{ domxref("window.moveBy") }} no longer apply to the main window.
 
 ### JavaScript
@@ -76,7 +76,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 
 ### console API
 
-- Message logged with `console.log` while the [web console](/en-US/docs/Tools/Web_Console) isn't open are still logged, although they aren't displayed when the web console is opened.
+- Message logged with `console.log` while the [web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) isn't open are still logged, although they aren't displayed when the web console is opened.
 
 ### Web timing
 
@@ -100,12 +100,12 @@ These changes affect add-on developers as well as developers working on or with 
 
 #### AddonManager.jsm
 
-- The Add-on Manager has new methods for managing lists of add-ons that changed during applications startup: [`AddonManager.addStartupChange()`](</en-US/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager#addstartupchange()>), [`AddonManager.removeStartupChange()`](</en-US/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager#removestartupchange()>), and [`AddonManager.getStartupChanges()`](</en-US/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager#getstartupchanges()>).
+- The Add-on Manager has new methods for managing lists of add-ons that changed during applications startup: `AddonManager.addStartupChange()`, `AddonManager.removeStartupChange()`, and `AddonManager.getStartupChanges()`.
 
 ### XUL
 
-- {{ xulelem("tree") }} elements can now persist the state of disclosure triangles if the nodes referenced by {{ XULAttr("datasources") }} all have unique IDs specified by "id" attributes.
-- {{ xulelem("panel") }} elements can now be configured to [let the user drag them by clicking anywhere on their background](/en-US/docs/XUL/PopupGuide/Panels#Letting_panels_be_dragged_by_grabbing_the_background) by using the new {{ XULAttr("backdrag") }} attribute.
+- `<tree>` elements can now persist the state of disclosure triangles if the nodes referenced by `datasources` all have unique IDs specified by "id" attributes.
+- `<panel>` elements can now be configured to [let the user drag them by clicking anywhere on their background](/en-US/docs/XUL/PopupGuide/Panels#letting_panels_be_dragged_by_grabbing_the_background) by using the new `backdrag` attribute.
 
 ### XPCOM
 
@@ -114,7 +114,7 @@ These changes affect add-on developers as well as developers working on or with 
 
 ### Memory reporters
 
-Support has been added for multi-reporters; that is, memory reporters that gather data on request and call a callback for each generated result. See {{ interface("nsIMemoryMultiReporter") }} and {{ interface("nsIMemoryMultiReporterCallback") }} for the relevant interfaces, as well as the {{ ifmethod("nsIMemoryReporterManager", "registerMultiReporter") }} and {{ ifmethod("nsIMemoryReporterManager", "unregisterMultiReporter") }} methods.
+Support has been added for multi-reporters; that is, memory reporters that gather data on request and call a callback for each generated result. See `nsIMemoryMultiReporter` and `nsIMemoryMultiReporterCallback` for the relevant interfaces, as well as the `nsIMemoryReporterManager.registerMultiReporter()` and `nsIMemoryReporterManager.unregisterMultiReporter()` methods.
 
 ### User experience changes
 
@@ -123,30 +123,30 @@ Support has been added for multi-reporters; that is, memory reporters that gathe
 
 ### Changes to the build system
 
-- The ActiveX embedding API is no longer built and support has been removed from the build system. Supporting interfaces have also been removed; see {{ anch("Removed interfaces") }}.
+- The ActiveX embedding API is no longer built and support has been removed from the build system. Supporting interfaces have also been removed; see [Removed interfaces](#removed_interfaces).
 - You should no longer specify `-Zc:wchar_t-` when building on Windows. See the [updated Build documentation](/en-US/docs/Mozilla/Developer_guide/Build_Instructions#build_and_install) for details.
 
 ### Interface changes
 
-- {{ interface("nsISocketTransport") }} now offers a new connection flag: `DISABLE_IPV6`; this causes a socket to only attempt to connect to IPv4 addresses, ignoring any available IPv6 addresses. In addition, {{ interface("nsIDNSService") }} now offers a new resolve flag: `RESOLVE_DISABLE_IPV6`; this causes domain name resolution to only consider IPv4 hosts, ignoring any available IPv6 addresses. These changes are used to implement the ["happy eyeballs" strategy](https://datatracker.ietf.org/doc/html/draft-wing-http-new-tech-00) for improving response time when attempting to connect on hosts that support both IPv4 and IPv6 (especially those that have broken IPv6 connectivity).
-- {{ interface("inIDOMUtils") }} has two new methods, {{ ifmethod("inIDOMUtils","getChildrenForNode") }} which returns a list of child nodes of a node and {{ ifmethod("inIDOMUtils","getUsedFontFaces") }} which returns a list of font faces used in a range.
-- The `nsIMarkupDocumentViewer_MOZILLA_2_0_BRANCH` interface has been merged into the {{ interface("nsIMarkupDocumentViewer") }} interface.
-- The `nsIDOMWindow2` interface has been merged into the {{ interface("nsIDOMWindow") }} interface.
-- The `nsIDOMWindow_2_0_BRANCH` interface has been merged into the {{ interface("nsIDOMWindowInternal") }} interface.
-- {{ interface("nsINavHistoryObserver") }} methods with URI parameters now require a GUID as well.
-- The `nsISHistory_2_0_BRANCH` interface has been merged into the {{ interface("nsISHistory") }} interface.
-- {{ interface("nsITelemetry") }} has a new method, {{ ifmethod("nsITelemetry","getHistogramById") }} which returns a histogram by its ID, and a new attribute, `canRecord` which when set to `false` disables recording of telemetry statistics. Telemetry statistics are no longer recorded when in Private Browsing Mode. (see {{ bug("661574") }} and {{ bug("661573") }}) Telemetry histograms defined with {{ ifmethod("nsITelemetry","newHistogram") }} will not be reported in the telemetry ping.
-- The {{ interface("nsIMemoryReporter") }} interface has been substantially changed; if you use it, you will need to make some adjustments to your code.
-- {{ interface("nsIXMLHttpRequest") }}, headers set by {{ ifmethod("nsIXMLHttpRequest","setRequestHeader") }} are sent with the request when following a redirect. Previously these headers would not be sent.
-- {{ interface("nsIDocShell") }} has a new `allowWindowControl` attribute. If `true`, the docshell's content is allowed to control the window (that is, to move or resize the window).
-- The `nsIThreadInternal2` interface has been merged into the {{ interface("nsIThreadInternal") }} interface.
+- `nsISocketTransport` now offers a new connection flag: `DISABLE_IPV6`; this causes a socket to only attempt to connect to IPv4 addresses, ignoring any available IPv6 addresses. In addition, `nsIDNSService` now offers a new resolve flag: `RESOLVE_DISABLE_IPV6`; this causes domain name resolution to only consider IPv4 hosts, ignoring any available IPv6 addresses. These changes are used to implement the ["happy eyeballs" strategy](https://datatracker.ietf.org/doc/html/draft-wing-http-new-tech-00) for improving response time when attempting to connect on hosts that support both IPv4 and IPv6 (especially those that have broken IPv6 connectivity).
+- `inIDOMUtils` has two new methods, `inIDOMUtils.getChildrenForNode()` which returns a list of child nodes of a node and `inIDOMUtils.getUsedFontFaces()` which returns a list of font faces used in a range.
+- The `nsIMarkupDocumentViewer_MOZILLA_2_0_BRANCH` interface has been merged into the `nsIMarkupDocumentViewer` interface.
+- The `nsIDOMWindow2` interface has been merged into the `nsIDOMWindow` interface.
+- The `nsIDOMWindow_2_0_BRANCH` interface has been merged into the `nsIDOMWindowInternal` interface.
+- `nsINavHistoryObserver` methods with URI parameters now require a GUID as well.
+- The `nsISHistory_2_0_BRANCH` interface has been merged into the `nsISHistory` interface.
+- `nsITelemetry` has a new method, `nsITelemetry.getHistogramById()` which returns a histogram by its ID, and a new attribute, `canRecord` which when set to `false` disables recording of telemetry statistics. Telemetry statistics are no longer recorded when in Private Browsing Mode. (see {{ bug("661574") }} and {{ bug("661573") }}) Telemetry histograms defined with `nsITelemetry.newHistogram()` will not be reported in the telemetry ping.
+- The `nsIMemoryReporter` interface has been substantially changed; if you use it, you will need to make some adjustments to your code.
+- `nsIXMLHttpRequest`, headers set by `nsIXMLHttpRequest.setRequestHeader()` are sent with the request when following a redirect. Previously these headers would not be sent.
+- `nsIDocShell` has a new `allowWindowControl` attribute. If `true`, the docshell's content is allowed to control the window (that is, to move or resize the window).
+- The `nsIThreadInternal2` interface has been merged into the `nsIThreadInternal` interface.
 
 #### New interfaces
 
-- {{ interface("nsIDOMFontFace") }}
+- `nsIDOMFontFace`
   - : Describes a single font face.
-- {{ interface("nsIDOMFontFaceList") }}
-  - : Describes a list of font faces, each represented by {{ interface("nsIDOMFontFace") }}.
+- `nsIDOMFontFaceList`
+  - : Describes a list of font faces, each represented by `nsIDOMFontFace`.
 
 #### Removed interfaces
 
@@ -159,7 +159,7 @@ The following interfaces were implementation details that are no longer needed:
 - `nsIDOMDocumentStyle`
 - `nsIDOMNSDocument`
 - `nsIDOMNSFeatureFactory`
-- {{ interface("nsIDOMNSHTMLDocument") }}
+- `nsIDOMNSHTMLDocument`
 - `nsIDOMNSHTMLFormElement`
 - `nsIDOMNSHTMLHRElement`
 - `nsIDOMNSHTMLTextAreaElement`
@@ -169,7 +169,7 @@ The following interfaces were removed as part of the removal of the ActiveX embe
 - `DITestScriptHelper`
 - `DWebBrowserEvents`
 - `DWebBrowserEvents2`
-- {{ interface("IDispatch") }}
+- `IDispatch`
 - `IMozControlBridge`
 - `IMozPluginHostCtrl`
 - `IWebBrowser`
@@ -180,7 +180,7 @@ The following interfaces were removed as part of the removal of the ActiveX embe
 - `IXMLElementCollection`
 - `IXMLError`
 - `nsIActiveXSecurityPolicy`
-- {{ interface("nsIDispatchSupport") }}
+- `nsIDispatchSupport`
 - `nsIMozAxPlugin`
 - `nsIScriptEventHandler`
 - `nsIScriptEventManager`

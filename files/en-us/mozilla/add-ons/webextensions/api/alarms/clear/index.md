@@ -22,14 +22,14 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var clearAlarm = browser.alarms.clear(
+let clearAlarm = browser.alarms.clear(
   name                       // string
 )
 ```
 
 ### Parameters
 
-- `name`{{optional_inline}}
+- `name` {{optional_inline}}
   - : `string`. The name of the alarm to clear. If you don't supply this, the empty string "" will be used.
 
 ### Return value
@@ -43,7 +43,7 @@ function onCleared(wasCleared) {
   console.log(wasCleared);  // true/false
 }
 
-var clearAlarm = browser.alarms.clear("my-periodic-alarm");
+let clearAlarm = browser.alarms.clear("my-periodic-alarm");
 clearAlarm.then(onCleared);
 ```
 
@@ -53,6 +53,6 @@ clearAlarm.then(onCleared);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API.
+> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

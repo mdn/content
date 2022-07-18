@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.createLinearGradient()
 slug: Web/API/CanvasRenderingContext2D/createLinearGradient
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -31,7 +32,7 @@ the gradient must first be assigned to the
 ## Syntax
 
 ```js
-CanvasGradient ctx.createLinearGradient(x0, y0, x1, y1);
+createLinearGradient(x0, y0, x1, y1)
 ```
 
 The `createLinearGradient()` method is specified by four parameters defining

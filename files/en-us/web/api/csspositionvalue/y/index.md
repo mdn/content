@@ -1,6 +1,7 @@
 ---
 title: CSSPositionValue.y
 slug: Web/API/CSSPositionValue/y
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -19,19 +20,13 @@ The **`y`** property of the
 {{domxref("CSSPositionValue")}} interface returns the item's position along the
 vertical axis.
 
-## Syntax
-
-```js
-var y = CSSPositionValue.y
-```
-
-### Value
+## Value
 
 A {{domxref('CSSNumericValue')}}.
 
-## Example
+## Examples
 
-The following example positions a container `<div>` 5 pixels from the
+The following example positions a container `<div>` 5 pixels from the
 top and 10 pixels from the left of the page.
 
 ```js
@@ -48,7 +43,7 @@ console.log(position.x.value, position.y.value);
 
 ## See also
 
-- {{domxref("CSSPositionValue.CSSPositionValue")}}
+- {{domxref("CSSPositionValue.CSSPositionValue", "CSSPositionValue()")}}
 - {{domxref("CSSPositionValue.x")}}
 - [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
 - [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

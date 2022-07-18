@@ -1,6 +1,7 @@
 ---
 title: CompressionStream.writable
 slug: Web/API/CompressionStream/writable
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,17 +10,11 @@ tags:
   - CompressionStream
 browser-compat: api.CompressionStream.writable
 ---
-{{DefaultAPISidebar("Compression Streams API")}}
+{{APIRef("Compression Streams API")}}
 
 The **`writable`** read-only property of the {{domxref("CompressionStream")}} interface returns a {{domxref("WritableStream")}}.
 
-## Syntax
-
-```js
-let writableStream = CompressionStream.writable;
-```
-
-### Value
+## Value
 
 A {{domxref("WritableStream")}}.
 

@@ -1,6 +1,7 @@
 ---
 title: Element.insertAdjacentElement()
 slug: Web/API/Element/insertAdjacentElement
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -20,14 +21,14 @@ relative to the element it is invoked upon.
 ## Syntax
 
 ```js
-targetElement.insertAdjacentElement(position, element);
+insertAdjacentElement(position, element)
 ```
 
 ### Parameters
 
 - `position`
 
-  - : A {{domxref("DOMString")}} representing the position relative to the
+  - : A string representing the position relative to the
     `targetElement`; must match (case-insensitively) one of the following
     strings:
 
@@ -49,10 +50,10 @@ The element that was inserted, or `null`, if the insertion failed.
 
 ### Exceptions
 
-| Exception     | Explanation                                         |
-| ------------- | --------------------------------------------------- |
-| `SyntaxError` | The `position` specified is not a recognized value. |
-| `TypeError`   | The `element` specified is not a valid element.     |
+- `SyntaxError` {{domxref("DOMException")}}
+  - Thrown if the `position` specified is not a recognized value.
+- {{jsxref("TypeError")}}
+  - Thrown if the `element` specified is not a valid element.
 
 ### Visualization of position names
 
@@ -70,11 +71,11 @@ The element that was inserted, or `null`, if the insertion failed.
 > `afterend` positions work only if the node is in a tree and has an element
 > parent.
 
-## Example
+## Examples
 
 ```js
 beforeBtn.addEventListener('click', function() {
-  var tempDiv = document.createElement('div');
+  const tempDiv = document.createElement('div');
   tempDiv.style.backgroundColor = randomColor();
   if (activeElem) {
     activeElem.insertAdjacentElement('beforebegin', tempDiv);
@@ -83,7 +84,7 @@ beforeBtn.addEventListener('click', function() {
 });
 
 afterBtn.addEventListener('click', function() {
-  var tempDiv = document.createElement('div');
+  const tempDiv = document.createElement('div');
   tempDiv.style.backgroundColor = randomColor();
   if (activeElem) {
     activeElem.insertAdjacentElement('afterend', tempDiv);
@@ -93,8 +94,7 @@ afterBtn.addEventListener('click', function() {
 ```
 
 Have a look at our [insertAdjacentElement.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html)
-demo on GitHub (see the [source
-code](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html) too.) Here, we have a sequence of {{htmlelement("div")}} elements inside a
+demo on GitHub (see the [source code](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html) too.) Here, we have a sequence of {{htmlelement("div")}} elements inside a
 container. When one is clicked, it becomes selected and you can then press the
 _Insert before_ and _Insert after_ buttons to insert new divs before or
 after the selected element using `insertAdjacentElement()`.

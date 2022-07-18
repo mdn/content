@@ -13,8 +13,8 @@ tags:
 
 The **kitchensink** is a page that _attempts_ to incorporate every possible content element and Yari macro.
 
-This page attempts to be the complete intersection of every other page. No in terms of the text but in terms of the styles and macros.
-Let's start with some notes...
+This page attempts to be the complete intersection of every other page. Not in terms of the text but in terms of the styles and macros.
+Let's start with some notes…
 
 Text that uses the `<kbd>` tag: <kbd>Shift</kbd>
 
@@ -26,7 +26,7 @@ Text that uses the `<kbd>` tag: <kbd>Shift</kbd>
 
 {{PreviousMenuNext("Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard", "Games/Techniques/Control_mechanisms/Other", "Games/Techniques/Control_mechanisms")}}
 
-### Another one...
+### Another one…
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Extra_lives", "Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}
 
@@ -109,13 +109,23 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
 
 ## Interactive Examples
 
-{{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}{{EmbedInteractiveExample("pages/css/order.html")}}{{EmbedInteractiveExample("pages/js/regexp-assertions.html", "taller")}}
+{{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}} {{EmbedInteractiveExample("pages/css/order.html")}} {{EmbedInteractiveExample("pages/js/regexp-assertions.html", "taller")}}
 
 ## Tables
 
-| Specification                                                                                | Status                           | Comment |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName("HTML WHATWG", "#link-type-dns-prefetch", "dns-prefetch")}} | {{Spec2("HTML WHATWG")}} |         |
+### Markdown table
+
+| Constant name                | Value  | Description |
+| ---------------------------- | ------ | ----------- |
+| `QUERY_COUNTER_BITS_EXT`     | 0x8864 | The number of bits used to hold the query result for the given target. |
+| `CURRENT_QUERY_EXT`          | 0x8865 | The currently active query. |
+| `QUERY_RESULT_EXT`           | 0x8866 | The query result. |
+| `QUERY_RESULT_AVAILABLE_EXT` | 0x8867 | A Boolean indicating whether a query result is available. |
+| `TIME_ELAPSED_EXT`           | 0x88BF | Elapsed time (in nanoseconds). |
+| `TIMESTAMP_EXT`              | 0x8E28 | The current time. |
+| `GPU_DISJOINT_EXT`           | 0x8FBB | A Boolean indicating whether the GPU performed any disjoint operation. |
+
+### HTML table
 
 <table class="properties">
   <tbody>
@@ -177,7 +187,7 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
       <td><code>width</code></td>
       <td>A positive integer number, or the text <code>device-width</code></td>
       <td>
-        Defines the pixel width of the viewport that you want the web site to be
+        Defines the pixel width of the viewport that you want the website to be
         rendered at.
       </td>
     </tr>
@@ -195,7 +205,7 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
       <td><code>auto</code>, <code>contain</code> or <code>cover</code></td>
       <td>
         <p>
-          The <code>auto</code> value doesn’t affect the initial layout viewport, and the whole web page is viewable.
+          The <code>auto</code> value doesn't affect the initial layout viewport, and the whole web page is viewable.
         </p>
         <p>
           The <code>contain</code> value means that the viewport is scaled to
@@ -207,13 +217,6 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
           ensure that important content doesn't end up outside the display.
         </p>
       </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('Fetch','#forbidden-response-header-name','forbidden-response-header-name')}}
-      </td>
-      <td>{{spec2('Fetch')}}</td>
-      <td></td>
     </tr>
   </tbody>
 </table>
@@ -230,8 +233,7 @@ When you request to access a {{Glossary("URL")}}, the gateway server can relay y
 
 - JavaScript {{jsxref("Array")}} on MDN
 
-Listening for mouse movement is even easier than listening for key presses: all we need is the listener for the {{event("mousemove")}} event.
-...just below the `keyup event`:
+Listening for mouse movement is even easier than listening for key presses: all we need is the listener for the {{domxref("Element/mousemove_event", "mousemove")}} event.
 
 ## Browser compatibility
 
@@ -291,7 +293,7 @@ this.color("blue");
 
 </pre></div>
 
-{{ EmbedLiveSample('Rect_code', '700', '300', '', 'Games/Techniques/2D_collision_detection') }}
+{{ EmbedLiveSample('Rect_code', '700', '300') }}
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 

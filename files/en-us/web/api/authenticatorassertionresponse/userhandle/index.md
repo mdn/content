@@ -1,6 +1,7 @@
 ---
 title: AuthenticatorAssertionResponse.userHandle
 slug: Web/API/AuthenticatorAssertionResponse/userHandle
+page-type: web-api-instance-property
 tags:
   - API
   - AuthenticatorAssertionResponse
@@ -29,13 +30,7 @@ the creation of the `PublicKeyCredential` instance).
 > **Note:** This property may only be used in top-level contexts and will
 > not be available in an {{HTMLElement("iframe")}} for example.
 
-## Syntax
-
-```js
-userHandle = authenticatorAssertionResponse.userHandle
-```
-
-### Value
+## Value
 
 An {{jsxref("ArrayBuffer")}} object which is an opaque identifier for the current user.
 This is not human-readable and does **not** contain any personally
@@ -44,14 +39,14 @@ identifying information (e.g. username, e-mail, phone number, etc.)
 ## Examples
 
 ```js
-var options = {
+const options = {
   challenge: new Uint8Array(26), // will be another value, provided by the relying party server
   timeout: 60000
 };
 
 navigator.credentials.get({  publicKey: options })
   .then(function (assertionPKCred) {
-    var userHandle = assertionPKCred.response.userHandle;
+    const userHandle = assertionPKCred.response.userHandle;
 
     // Send response and client extensions to the server so that it can
     // go on with the authentication

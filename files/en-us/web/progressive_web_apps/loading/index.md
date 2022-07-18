@@ -10,7 +10,7 @@ tags:
 ---
 {{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
-In previous articles we covered APIs that help us make our [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) example a Progressive Web App: [Service Workers](en-US/docs/Web/Progressive_web_apps/Offline_Service_workers), [Web Manifests](/en-US/docs/Web/Progressive_web_apps/Installable_PWAs), [Notifications and Push](/en-US/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push). In this article we will go even further and improve the performance of the app by progressively loading its resources.
+In previous articles we covered APIs that help us make our [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) example a Progressive Web App: [Service Workers](/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers), [Web Manifests](/en-US/docs/Web/Progressive_web_apps/Installable_PWAs), [Notifications and Push](/en-US/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push). In this article we will go even further and improve the performance of the app by progressively loading its resources.
 
 ## First meaningful paint
 
@@ -20,7 +20,7 @@ This could be achieved by progressive loading — also known as [Lazy loading](h
 
 ## Bundling versus splitting
 
-Many visitors won't go through every single page of a website, yet the usual approach is to bundle every feature we have into one big file. A `bundle.js` file can be many megabytes, and a single `style.css` bundle can contain everything from basic CSS structure definitions to all the possible styles of every version of the site: mobile, tablet, desktop, print only, etc.
+Many visitors won't go through every single page of a website, yet the usual approach is to bundle every feature we have into one big file. A `bundle.js` file can be many megabytes, and a single `style.css` bundle can contain everything from basic CSS structure definitions to all the possible styles of every version of the site: mobile, tablet, desktop, print only, etc.
 
 It is faster to load all that information as one file rather than many small ones, but if the user doesn't need everything at the very beginning, we could load only what's crucial and then manage other resources when needed.
 
@@ -43,7 +43,7 @@ They will be downloaded and executed _after_ the document itself has been parsed
 
 This will tell the browser to load them only when the condition is met.
 
-In our js13kPWA demo app, the CSS is simple enough to leave it all in a single file with no specific rules as to how to load them. We could go even further and move everything from `style.css` to the `<style>` tag in the `<head>` of `index.html` — this would improve performance even more, but for the readability of the example we will skip that approach too.
+In our js13kPWA demo app, the CSS is simple enough to leave it all in a single file with no specific rules as to how to load them. We could go even further and move everything from `style.css` to the `<style>` tag in the `<head>` of `index.html` — this would improve performance even more, but for the readability of the example we will skip that approach too.
 
 ## Images
 
@@ -157,7 +157,7 @@ Remember about the progressive enhancement approach — offer a usable product n
 ## Final thoughts
 
 That's all for this tutorial series — we went through the [source code of the js13kPWA example app](https://github.com/mdn/pwa-examples/tree/master/js13kpwa) and learned about the use of progressive web apps features including an [Introduction](/en-US/docs/Web/Progressive_web_apps/Introduction), [PWA structure](/en-US/docs/Web/Progressive_web_apps/App_structure), [offline availability with Service Workers](/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers), [installable PWAs](/en-US/docs/Web/Progressive_web_apps/Installable_PWAs), and finally notifications.
-We also explained push with help from the [Service Worker Cookbook](https://github.com/mozilla/serviceworker-cookbook).
+We also explained push with help from the [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook).
 And in this article, we've looked into the concept of progressive loading, including an interesting example that makes use of the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API).
 
 Feel free to experiment with the code, enhance your existing app with PWA features, or build something entirely new on your own. PWAs give a huge advantage over regular web apps.

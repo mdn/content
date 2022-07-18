@@ -1,6 +1,7 @@
 ---
 title: ReportingObserver.takeRecords()
 slug: Web/API/ReportingObserver/takeRecords
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -19,8 +20,12 @@ in the observer's report queue, and empties the queue.
 ## Syntax
 
 ```js
-reportingObserverInstance.takeRecords()
+takeRecords()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -40,7 +45,7 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 observer.observe()
 
-// ...
+// …
 
 let records = observer.takeRecords();
 console.log(records);

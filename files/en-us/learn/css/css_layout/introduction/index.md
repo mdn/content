@@ -56,7 +56,7 @@ Each technique has its uses, advantages, and disadvantages. No technique is desi
 
 ## Normal flow
 
-Normal flow is how the browser lays out HTML pages by default when you do nothing to control page layout. Let's look at a quick HTML example:
+Normal flow is how the browser lays out HTML pages by default when you do nothing to control page layout. Let's look at a quick HTML example:
 
 ```html
 <p>I love my cat.</p>
@@ -78,21 +78,21 @@ Note how the HTML is displayed in the exact order in which it appears in the sou
 
 The elements that appear one below the other are described as **block** elements, in contrast to **inline** elements, which appear beside one another like the individual words in a paragraph.
 
-> **Note:** The direction in which block element contents are laid out is described as the Block Direction. The Block Direction runs vertically in a language such as English, which has a horizontal writing mode. It would run horizontally in any language with a Vertical Writing Mode, such as Japanese. The corresponding Inline Direction is the direction in which inline contents (such as a sentence) would run.
+> **Note:** The direction in which block element contents are laid out is described as the Block Direction. The Block Direction runs vertically in a language such as English, which has a horizontal writing mode. It would run horizontally in any language with a Vertical Writing Mode, such as Japanese. The corresponding Inline Direction is the direction in which inline contents (such as a sentence) would run.
 
 For many of the elements on your page, the normal flow will create exactly the layout you need. However, for more complex layouts you will need to alter this default behavior using some of the tools available to you in CSS. Starting with a well-structured HTML document is very important because you can then work with the way things are laid out by default rather than fighting against it.
 
 The methods that can change how elements are laid out in CSS are:
 
-- **The {{cssxref("display")}} property** — Standard values such as `block`, `inline` or `inline-block` can change how elements behave in normal flow, for example, by making a block-level element behave like an inline-level element (see [Types of CSS boxes](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#block_and_inline_boxes) for more information). We also have entire layout methods that are enabled via specific `display` values, for example, [CSS Grid](/en-US/docs/Learn/CSS/CSS_layout/Grids) and [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), which alter how child elements are laid out inside their parents.
-- **Floats** — Applying a {{cssxref("float")}} value such as `left` can cause block-level elements to wrap along one side of an element, like the way images sometimes have text floating around them in magazine layouts.
+- **The {{cssxref("display")}} property** — Standard values such as `block`, `inline` or `inline-block` can change how elements behave in normal flow, for example, by making a block-level element behave like an inline-level element (see [Types of CSS boxes](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#block_and_inline_boxes) for more information). We also have entire layout methods that are enabled via specific `display` values, for example, [CSS Grid](/en-US/docs/Learn/CSS/CSS_layout/Grids) and [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), which alter how child elements are laid out inside their parents.
+- **Floats** — Applying a {{cssxref("float")}} value such as `left` can cause block-level elements to wrap along one side of an element, like the way images sometimes have text floating around them in magazine layouts.
 - **The {{cssxref("position")}} property** — Allows you to precisely control the placement of boxes inside other boxes. `static` positioning is the default in normal flow, but you can cause elements to be laid out differently using other values, for example, as fixed to the top of the browser viewport.
 - **Table layout** — Features designed for styling parts of an HTML table can be used on non-table elements using `display: table` and associated properties.
 - **Multi-column layout** — The [Multi-column layout](/en-US/docs/Web/CSS/CSS_Columns) properties can cause the content of a block to layout in columns, as you might see in a newspaper.
 
 ## The display property
 
-The main methods for achieving page layout in CSS all involve specifying values for the `display` property. This property allows us to change the default way something displays. Everything in normal flow has a default value for `display`; i.e., a default way that elements are set to behave. For example, the fact that paragraphs in English display one below the other is because they are styled with `display: block`. If you create a link around some text inside a paragraph, that link remains inline with the rest of the text, and doesn’t break onto a new line. This is because the {{htmlelement("a")}} element is `display: inline` by default.
+The main methods for achieving page layout in CSS all involve specifying values for the `display` property. This property allows us to change the default way something displays. Everything in normal flow has a default value for `display`; i.e., a default way that elements are set to behave. For example, the fact that paragraphs in English display one below the other is because they are styled with `display: block`. If you create a link around some text inside a paragraph, that link remains inline with the rest of the text, and doesn't break onto a new line. This is because the {{htmlelement("a")}} element is `display: inline` by default.
 
 You can change this default display behavior. For example, the {{htmlelement("li")}} element is `display: block` by default, meaning that list items display one below the other in our English document. If we were to change the display value to `inline` they would display next to each other, as words would do in a sentence. The fact that you can change the value of `display` for any element means that you can pick HTML elements for their semantic meaning without being concerned about how they will look. The way they look is something that you can change.
 
@@ -170,7 +170,7 @@ As a simple example, we can add the {{cssxref("flex")}} property to all of our c
 
 {{ EmbedLiveSample('Setting_the_flex_property', '300', '200') }}
 
-> **Note:** This has been a very short introduction to what is possible in Flexbox. To find out more, see our [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) article.
+> **Note:** This has been a very short introduction to what is possible in Flexbox. To find out more, see our [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) article.
 
 ## Grid Layout
 
@@ -178,7 +178,7 @@ While flexbox is designed for one-dimensional layout, Grid Layout is designed fo
 
 ### Setting display: grid
 
-Similar to flexbox, we enable Grid Layout with its specific display value — `display: grid`. The below example uses similar markup to the flex example, with a container and some child elements. In addition to using `display: grid`, we also define some row and column _tracks_ for the parent using the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties respectively. We've defined three columns, each of `1fr`, as well as two rows of `100px`. We don’t need to put any rules on the child elements; they're automatically placed into the cells our grid's created.
+Similar to flexbox, we enable Grid Layout with its specific display value — `display: grid`. The below example uses similar markup to the flex example, with a container and some child elements. In addition to using `display: grid`, we also define some row and column _tracks_ for the parent using the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties respectively. We've defined three columns, each of `1fr`, as well as two rows of `100px`. We don't need to put any rules on the child elements; they're automatically placed into the cells our grid's created.
 
 ```css hidden
 * {
@@ -197,7 +197,7 @@ Similar to flexbox, we enable Grid Layout with its specific display value — `d
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 100px;
-    grid-gap: 10px;
+    gap: 10px;
 }
 ```
 
@@ -235,7 +235,7 @@ Once you have a grid, you can explicitly place your items on it, rather than rel
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 100px;
-    grid-gap: 10px;
+    gap: 10px;
 }
 
 .box1 {
@@ -274,10 +274,10 @@ Floating an element changes the behavior of that element and the block level ele
 
 The {{cssxref("float")}} property has four possible values:
 
-- `left` — Floats the element to the left.
-- `right` — Floats the element to the right.
-- `none` — Specifies no floating at all. This is the default value.
-- `inherit` — Specifies that the value of the `float` property should be inherited from the element's parent element.
+- `left` — Floats the element to the left.
+- `right` — Floats the element to the right.
+- `none` — Specifies no floating at all. This is the default value.
+- `inherit` — Specifies that the value of the `float` property should be inherited from the element's parent element.
 
 In the example below, we float a `<div>` left and give it a {{cssxref("margin")}} on the right to push the surrounding text away from it. This gives us the effect of text wrapped around the boxed element, and is most of what you need to know about floats as used in modern web design.
 
@@ -324,17 +324,17 @@ p {
 
 ## Positioning techniques
 
-Positioning allows you to move an element from where it would otherwise be placed in normal flow over to another location. Positioning isn’t a method for creating the main layouts of a page; it's more about managing and fine-tuning the position of specific items on a page.
+Positioning allows you to move an element from where it would otherwise be placed in normal flow over to another location. Positioning isn't a method for creating the main layouts of a page; it's more about managing and fine-tuning the position of specific items on a page.
 
 There are, however, useful techniques for obtaining specific layout patterns that rely on the {{cssxref("position")}} property. Understanding positioning also helps in understanding normal flow, and what it means to move an item out of the normal flow.
 
 There are five types of positioning you should know about:
 
-- **Static positioning** is the default that every element gets. It just means "put the element into its normal position in the document layout flow — nothing special to see here".
-- **Relative positioning** allows you to modify an element's position on the page, moving it relative to its position in normal flow, as well as making it overlap other elements on the page.
-- **Absolute positioning** moves an element completely out of the page's normal layout flow, like it's sitting on its own separate layer. From there, you can fix it to a position relative to the edges of the `<html>` element (or its nearest positioned ancestor element). This is useful for creating complex layout effects, such as tabbed boxes where different content panels sit on top of one another and are shown and hidden as desired, or information panels that sit off screen by default, but can be made to slide on screen using a control button.
-- **Fixed positioning** is very similar to absolute positioning except that it fixes an element relative to the browser viewport, not another element. This is useful for creating effects such as a persistent navigation menu that always stays in the same place on the screen as the rest of the content scrolls.
-- **Sticky positioning** is a newer positioning method that makes an element act like `position: static` until it hits a defined offset from the viewport, at which point it acts like `position: fixed`.
+- **Static positioning** is the default that every element gets. It just means "put the element into its normal position in the document layout flow — nothing special to see here".
+- **Relative positioning** allows you to modify an element's position on the page, moving it relative to its position in normal flow, as well as making it overlap other elements on the page.
+- **Absolute positioning** moves an element completely out of the page's normal layout flow, like it's sitting on its own separate layer. From there, you can fix it to a position relative to the edges of its closest positioned ancestor (which becomes `<html>` if no other ancestors are positioned). This is useful for creating complex layout effects, such as tabbed boxes where different content panels sit on top of one another and are shown and hidden as desired, or information panels that sit off-screen by default, but can be made to slide on screen using a control button.
+- **Fixed positioning** is very similar to absolute positioning except that it fixes an element relative to the browser viewport, not another element. This is useful for creating effects such as a persistent navigation menu that always stays in the same place on the screen as the rest of the content scrolls.
+- **Sticky positioning** is a newer positioning method that makes an element act like `position: relative` until it hits a defined offset from the viewport, at which point it acts like `position: fixed`.
 
 ### Simple positioning example
 
@@ -523,7 +523,7 @@ body {
 
 ### Sticky positioning
 
-Sticky positioning is the final positioning method that we have at our disposal. It mixes static positioning with fixed positioning. When an item has `position: sticky`, it'll scroll in normal flow until it hits offsets from the viewport that we have defined. At that point it becomes "stuck" as if it had `position: fixed` applied.
+Sticky positioning is the final positioning method that we have at our disposal. It mixes relative positioning with fixed positioning. When an item has `position: sticky`, it'll scroll in normal flow until it hits offsets from the viewport that we have defined. At that point it becomes "stuck" as if it had `position: fixed` applied.
 
 ```html hidden
 <h1>Sticky positioning</h1>
@@ -562,7 +562,7 @@ body {
 
 {{ EmbedLiveSample('Sticky_positioning', '100%', 200) }}
 
-> **Note:** to find more out about positioning, see our [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) article.
+> **Note:** To find more out about positioning, see our [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) article.
 
 ## Table layout
 
@@ -594,7 +594,7 @@ Let's look at an example. First, some simple markup that creates an HTML form. E
 
 As for the CSS, most of it's fairly ordinary except for the uses of the {{cssxref("display")}} property. The {{htmlelement("form")}}, {{htmlelement("div")}}s, and {{htmlelement("label")}}s and {{htmlelement("input")}}s have been told to display like a table, table rows, and table cells respectively. Basically, they'll act like HTML table markup, causing the labels and inputs to line up nicely by default. All we then have to do is add a bit of sizing, margin, etc., to make everything look a bit nicer and we're done.
 
-You'll notice that the caption paragraph has been given `display: table-caption;`, which makes it act like a table {{htmlelement("caption")}}, and `caption-side: bottom;` to tell the caption to sit on the bottom of the table for styling purposes, even though the markup is before the `<input>` elements in the source. This allows for a nice bit of flexibility.
+You'll notice that the caption paragraph has been given `display: table-caption;`, which makes it act like a table {{htmlelement("caption")}}, and `caption-side: bottom;` to tell the caption to sit on the bottom of the table for styling purposes, even though the markup is before the `<input>` elements in the source. This allows for a nice bit of flexibility.
 
 ```css
 html {
@@ -636,9 +636,9 @@ form p {
 
 This gives us the following result:
 
-{{ EmbedLiveSample('Table_layout', '100%', '170') }}
+{{ EmbedLiveSample('Table_layout', '100%', '200') }}
 
-You can also see this example live at [css-tables-example.html](https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/box-model-recap/css-tables-example.html) too.)
+You can also see this example live at [css-tables-example.html](https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/box-model-recap/css-tables-example.html) too.)
 
 > **Note:** Table layout, unlike the other topics of this page, won't be further covered in this module due to its legacy application.
 
@@ -686,7 +686,7 @@ body { max-width: 800px; margin: 0 auto; }
 }
 ```
 
-{{ EmbedLiveSample('Multi-column_layout', '100%', 200) }}
+{{ EmbedLiveSample('Multi-column_layout', '100%', 250) }}
 
 ## Summary
 
@@ -696,7 +696,7 @@ This article has provided a brief summary of all the layout technologies you sho
 
 ## In this module
 
-- Introduction to CSS layout
+- [Introduction to CSS layout](/en-US/docs/Learn/CSS/CSS_layout/Introduction)
 - [Normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)
 - [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
 - [Grid](/en-US/docs/Learn/CSS/CSS_layout/Grids)
@@ -707,4 +707,4 @@ This article has provided a brief summary of all the layout technologies you sho
 - [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
 - [Legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
 - [Supporting older browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension assessment](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
+- [Fundamental layout comprehension](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

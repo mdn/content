@@ -1,6 +1,7 @@
 ---
 title: PerformanceObserver.takeRecords()
 slug: Web/API/PerformanceObserver/takeRecords
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -21,7 +22,7 @@ observer, emptying it out.
 ## Syntax
 
 ```js
-var performanceEntryList = performanceObserver.takeRecords();
+takeRecords()
 ```
 
 ### Parameters
@@ -32,17 +33,17 @@ None.
 
 A list of {{domxref("PerformanceEntry")}} objects.
 
-## Example
+## Examples
 
 ```js
-var observer = new PerformanceObserver(function(list, obj) {
-  var entries = list.getEntries();
-  for (var i=0; i < entries.length; i++) {
+const observer = new PerformanceObserver(function(list, obj) {
+  const entries = list.getEntries();
+  for (let i=0; i < entries.length; i++) {
     // Process "mark" and "frame" events
   }
 });
 observer.observe({entryTypes: ["mark", "frame"]});
-var records = observer.takeRecords();
+const records = observer.takeRecords();
 console.log(records[0].name);
 console.log(records[0].startTime);
 console.log(records[0].duration);

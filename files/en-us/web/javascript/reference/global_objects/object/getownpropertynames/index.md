@@ -34,7 +34,7 @@ An array of strings that corresponds to the properties found directly in the giv
 
 ## Description
 
-`Object.getOwnPropertyNames()` returns an array whose elements are strings corresponding to the enumerable and non-enumerable properties found directly in a given object `obj`. The ordering of the enumerable properties in the array is consistent with the ordering exposed by a {{jsxref("Statements/for...in", "for...in")}} loop (or by {{jsxref("Object.keys()")}}) over the properties of the object. According to ES6, the integer keys of the object (both enumerable and non-enumerable) are added in ascending order to the array first, followed by the string keys in the order of insertion.
+`Object.getOwnPropertyNames()` returns an array whose elements are strings corresponding to the enumerable and non-enumerable properties found directly in a given object `obj`. The ordering of the enumerable properties in the array is consistent with the ordering exposed by a {{jsxref("Statements/for...in", "for...in")}} loop (or by {{jsxref("Object.keys()")}}) over the properties of the object. According to ES6, the non-negative integer keys of the object (both enumerable and non-enumerable) are added in ascending order to the array first, followed by the string keys in the order of insertion.
 
 In ES5, if the argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be coerced to an object.
 
@@ -51,12 +51,12 @@ Object.getOwnPropertyNames('foo');
 ### Using Object.getOwnPropertyNames()
 
 ```js
-var arr = ['a', 'b', 'c'];
+const arr = ['a', 'b', 'c'];
 console.log(Object.getOwnPropertyNames(arr).sort()); // .sort() is an array method.
 // logs ["0", "1", "2", "length"]
 
 // Array-like object
-var obj = { 0: 'a', 1: 'b', 2: 'c' };
+const obj = { 0: 'a', 1: 'b', 2: 'c' };
 console.log(Object.getOwnPropertyNames(obj).sort()); // .sort() is an array method.
 // logs ["0", "1", "2"]
 
@@ -72,9 +72,9 @@ Object.getOwnPropertyNames(obj).forEach(
 // 2 -> c
 
 // non-enumerable property
-var my_obj = Object.create({}, {
+const my_obj = Object.create({}, {
   getFoo: {
-    value: function() { return this.foo; },
+    value() { return this.foo; },
     enumerable: false
   }
 });
@@ -84,7 +84,7 @@ console.log(Object.getOwnPropertyNames(my_obj).sort());
 // logs ["foo", "getFoo"]
 ```
 
-If you want only the enumerable properties, see {{jsxref("Object.keys()")}} or use a {{jsxref("Statements/for...in", "for...in")}} loop (note that this will also return enumerable properties found along the prototype chain for the object unless the latter is filtered with {{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}}).
+If you want only the enumerable properties, see {{jsxref("Object.keys()")}} or use a {{jsxref("Statements/for...in", "for...in")}} loop (note that this will also return enumerable properties found along the prototype chain for the object unless the latter is filtered with {{jsxref("Object.hasOwn()", "hasOwn()")}}).
 
 Items on the prototype chain are not listed:
 
@@ -111,12 +111,12 @@ console.log(
 This uses the {{jsxref("Array.prototype.filter()")}} function to remove the enumerable keys (obtained with {{jsxref("Object.keys()")}}) from a list of all keys (obtained with `Object.getOwnPropertyNames()`) thus giving only the non-enumerable keys as output.
 
 ```js
-var target = myObject;
-var enum_and_nonenum = Object.getOwnPropertyNames(target);
-var enum_only = Object.keys(target);
-var nonenum_only = enum_and_nonenum.filter(function(key) {
-  var indexInEnum = enum_only.indexOf(key);
-  if (indexInEnum == -1) {
+const target = myObject;
+const enum_and_nonenum = Object.getOwnPropertyNames(target);
+const enum_only = Object.keys(target);
+const nonenum_only = enum_and_nonenum.filter(function(key) {
+  const indexInEnum = enum_only.indexOf(key);
+  if (indexInEnum === -1) {
     // Not found in enum_only keys,
     // meaning that the key is non-enumerable,
     // so return true so we keep this in the filter
@@ -141,7 +141,7 @@ console.log(nonenum_only);
 
 - [Polyfill of `Object.getOwnPropertyNames` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.prototype.hasOwnProperty()")}}
+- {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}
 - {{jsxref("Object.keys()")}}

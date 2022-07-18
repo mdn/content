@@ -1,10 +1,10 @@
 ---
 title: CacheStorage.has()
 slug: Web/API/CacheStorage/has
+page-type: web-api-instance-method
 tags:
   - API
   - CacheStorage
-  - Experimental
   - Method
   - Reference
   - Service Workers
@@ -18,22 +18,18 @@ The **`has()`** method of the {{domxref("CacheStorage")}}
 interface returns a {{jsxref("Promise")}} that resolves to `true` if a
 {{domxref("Cache")}} object matches the `cacheName`.
 
-You can access `CacheStorage` through the global
-{{domxref("caches")}} property.
+You can access `CacheStorage` through the global {{domxref("caches")}} property.
 
 ## Syntax
 
 ```js
-caches.has(cacheName).then(function(boolean) {
-  // true: your cache exists!
-});
+has(cacheName)
 ```
 
 ### Parameters
 
 - `cacheName`
-  - : A {{domxref("DOMString")}} representing the name of the {{domxref("Cache")}} object
-    you are looking for in the {{domxref("CacheStorage")}}.
+  - : A string representing the name of the {{domxref("Cache")}} object you are looking for in the {{domxref("CacheStorage")}}.
 
 ### Return value
 
@@ -69,7 +65,6 @@ caches.has('v1').then(function(hasCache) {
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("caches")}}

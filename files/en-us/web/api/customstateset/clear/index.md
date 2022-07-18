@@ -1,6 +1,7 @@
 ---
 title: CustomStateSet.clear()
 slug: Web/API/CustomStateSet/clear
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,14 +17,14 @@ The **`clear()`** method of the {{domxref("CustomStateSet")}} interface removes 
 ## Syntax
 
 ```js
-CustomStateSet.clear()
+clear()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 Undefined.
 

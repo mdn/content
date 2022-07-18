@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver.root
 slug: Web/API/IntersectionObserver/root
+page-type: web-api-instance-property
 tags:
   - API
   - Intersection Observer
@@ -21,13 +22,7 @@ of the {{Glossary("viewport")}} for the element which is the observer's target.
 If the `root` is `null`, then the bounds of the actual document
 viewport are used.
 
-## Syntax
-
-```js
-var root = intersectionObserver.root;
-```
-
-### Value
+## Value
 
 A {{domxref("Element")}} or {{domxref("Document")}} object whose bounding box is used
 as the bounds of the viewport for the purposes of determining how much of the target
@@ -42,7 +37,7 @@ If `root` is `null`, then the owning document is used as the
 root, and the bounds its viewport (that is, the visible area of the document) are used
 as the root bounds.
 
-## Example
+## Examples
 
 This example sets the {{cssxref("border")}} of the intersection observer's root element
 to be a 2-pixel medium green line.
@@ -61,5 +56,4 @@ observer.root.style.border = "2px solid #44aa44";
 
 ## See also
 
-- [Timing
-  element visibility with the Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
+- [Timing element visibility with the Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)

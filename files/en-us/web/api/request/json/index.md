@@ -1,6 +1,7 @@
 ---
 title: Request.json()
 slug: Web/API/Request/json
+page-type: web-api-instance-method
 tags:
   - API
   - Fetch
@@ -20,9 +21,7 @@ Note that despite the method being named `json()`, the result is not JSON but is
 ## Syntax
 
 ```js
-request.json().then(data => {
-  // do something with your data
-});
+json()
 ```
 
 ### Parameters
@@ -32,7 +31,7 @@ None.
 ### Return value
 
 A {{jsxref("Promise")}} that resolves to a JavaScript object. This object could be
-anything that can be represented by JSON — an object, an array, a string, a number...
+anything that can be represented by JSON — an object, an array, a string, a number…
 
 ## Examples
 

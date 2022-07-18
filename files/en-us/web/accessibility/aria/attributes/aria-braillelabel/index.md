@@ -1,12 +1,13 @@
 ---
 title: 'aria-braillelabel'
 slug: Web/Accessibility/ARIA/Attributes/aria-braillelabel
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-braillelabel
+spec-urls: https://w3c.github.io/aria/#aria-braillelabel
 ---
 
 The global `aria-braillelabel` property defines a string value that labels the current element, which is intended to be converted into Braille.
@@ -49,9 +50,7 @@ Used in **ALL** roles.
 
 ## Specifications
 
-| Specification         | Status            |
-| ---------------- | ---------------- |
-| {{SpecName("ARIA","#aria-braillelabel","ARIA: aria-braillelabel Attribute")}}              | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

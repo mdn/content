@@ -1,6 +1,7 @@
 ---
 title: Navigator.wakeLock
 slug: Web/API/Navigator/wakeLock
+page-type: web-api-instance-property
 tags:
   - API
   - Reference
@@ -33,5 +34,4 @@ const wakeLock = navigator.wakeLock;
 
 - {{DOMxRef("WakeLock.request","WakeLock.request()")}}
 - [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API)
-- [Blog post - Stay awake with the
-  Screen Wake Lock API](https://web.dev/wakelock/)
+- [Blog post - Stay awake with the Screen Wake Lock API](https://web.dev/wake-lock/)

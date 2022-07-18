@@ -15,9 +15,9 @@ browser-compat: javascript.grammar.trailing_commas
 
 **Trailing commas** (sometimes called "final commas") can be useful when
 adding new elements, parameters, or properties to JavaScript code. If you want to add a
-new property, you can add a new line without modifying the previously last line if that
+new property, you can add a new line without modifying the previously last line if that
 line already uses a trailing comma. This makes version-control diffs cleaner and editing
-code might be less troublesome.
+code might be less troublesome.
 
 JavaScript has allowed trailing commas in array literals since the beginning, and later
 added them to object literals, and more recently, to
@@ -40,7 +40,7 @@ function parameters and to named imports and named exports.
 JavaScript ignores trailing commas in arrays:
 
 ```js
-var arr = [
+const arr = [
   1,
   2,
   3,
@@ -56,7 +56,7 @@ iterating arrays for example with {{jsxref("Array.prototype.forEach()")}} or
 {{jsxref("Array.prototype.map()")}}, array holes are skipped.
 
 ```js
-var arr = [1, 2, 3,,,];
+const arr = [1, 2, 3,,,];
 arr.length; // 5
 ```
 
@@ -65,7 +65,7 @@ arr.length; // 5
 Starting with ECMAScript 5, trailing commas in object literals are legal as well:
 
 ```js
-var object = {
+const object = {
   foo: "bar",
   baz: "qwerty",
   age: 42,
@@ -90,8 +90,7 @@ function f(p,) {}
 (p,) => {};
 ```
 
-The trailing comma also works with [method
-definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) for classes or objects:
+The trailing comma also works with [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) for classes or objects:
 
 ```js
 class C {
@@ -99,7 +98,7 @@ class C {
   two(a, b,) {}
 }
 
-var obj = {
+const obj = {
   one(a,) {},
   two(a, b,) {},
 };
@@ -120,8 +119,7 @@ Math.max(10, 20,);
 #### Illegal trailing commas
 
 Function parameter definitions or function invocations only containing a comma will
-throw a {{Jsxref("SyntaxError")}}. Furthermore, when using a [rest
-parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), trailing commas are not allowed:
+throw a {{Jsxref("SyntaxError")}}. Furthermore, when using a [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), trailing commas are not allowed:
 
 ```js example-bad
 function f(,) {} // SyntaxError: missing formal parameter
@@ -134,25 +132,25 @@ function f(...p,) {} // SyntaxError: parameter after rest parameter
 
 ### Trailing commas in destructuring
 
-A trailing comma is also allowed on the left-hand side when using [destructuring
-assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
+A trailing comma is also allowed on the left-hand side when using
+[destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
 
 ```js
 // array destructuring with trailing comma
 [a, b,] = [1, 2];
 
 // object destructuring with trailing comma
-var o = {
+const o = {
   p: 42,
   q: true,
 };
-var {p, q,} = o;
+const {p, q,} = o;
 ```
 
 Again, when using a rest element, a {{jsxref("SyntaxError")}} will be thrown:
 
 ```js example-bad
-var [a, ...b,] = [1, 2, 3];
+const [a, ...b,] = [1, 2, 3];
 // SyntaxError: rest element may not have a trailing comma
 ```
 
@@ -191,9 +189,9 @@ Trailing commas are valid in named imports and named exports.
     C,
   } from 'D'
 
-  import { X, Y, Z } from 'W'
+  import { X, Y, Z, } from 'W'
 
-  import { A as B, C as D, E as F } from 'Z'; //Renaming imports
+  import { A as B, C as D, E as F, } from 'Z'; //Renaming imports
 ```
 
 #### named exports
@@ -202,12 +200,12 @@ Trailing commas are valid in named imports and named exports.
   export {
     A,
     B,
-    C
+    C,
   }
 
-  export { A, B, C };
+  export { A, B, C, };
 
-  export { A as B, C as D, E as F }; // Renaming exports
+  export { A as B, C as D, E as F, }; // Renaming exports
 ```
 
 ### Quantifier prefix
@@ -229,5 +227,4 @@ Trailing commas are valid in named imports and named exports.
 
 ## See also
 
-- Initial ECMAScript proposal: [trailing function
-  commas](https://github.com/tc39/proposal-trailing-function-commas) by Jeff Morrison
+- Initial ECMAScript proposal: [trailing function commas](https://github.com/tc39/proposal-trailing-function-commas) by Jeff Morrison

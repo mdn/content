@@ -1,6 +1,7 @@
 ---
 title: ConvolverNode
 slug: Web/API/ConvolverNode
+page-type: web-api-interface
 tags:
   - API
   - ConvolverNode
@@ -80,7 +81,7 @@ async function createReverb() {
     return convolver;
 }
 
-...
+// …
 
 let reverb = await createReverb();
 

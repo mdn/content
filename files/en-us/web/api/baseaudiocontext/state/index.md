@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.state
 slug: Web/API/BaseAudioContext/state
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -17,33 +18,29 @@ browser-compat: api.BaseAudioContext.state
 The `state` read-only property of the {{ domxref("BaseAudioContext") }}
 interface returns the current state of the `AudioContext`.
 
-## Syntax
+## Value
 
-```js
-baseAudioContext.state;
-```
+A string. Possible values are:
 
-### Value
-
-A {{domxref("DOMString")}}. Possible values are:
-
-- `suspended`: The audio context has been suspended (with the
-  {{domxref("AudioContext.suspend()")}} method.)
-- `running`: The audio context is running normally.
-- `closed`: The audio context has been closed (with the
-  {{domxref("AudioContext.close()")}} method.)
+- `suspended`
+  - : The audio context has been suspended (with the
+    {{domxref("AudioContext.suspend()")}} method.)
+- `running`
+  - : The audio context is running normally.
+- `closed`
+  - : The audio context has been closed (with the
+    {{domxref("AudioContext.close()")}} method.)
 
 ## Examples
 
 ### Handling state changes
 
-The following snippet is taken from our [AudioContext states demo](https://github.com/mdn/webaudio-examples) ([see it running
-live](https://mdn.github.io/webaudio-examples/audiocontext-states/).) The {{domxref("BaseAudioContext/onstatechange", "AudioContext.onstatechange")}} handler is used to log the
+The following snippet is taken from our [AudioContext states demo](https://github.com/mdn/webaudio-examples) ([see it running live](https://mdn.github.io/webaudio-examples/audiocontext-states/).) The {{domxref("BaseAudioContext.statechange_event", "onstatechange")}} handler is used to log the
 current state to the console every time it changes.
 
 ```js
 audioCtx.onstatechange = function() {
-  console.log(audioCtx.state);
+  console.log(audioCtx.state);
 }
 ```
 
@@ -59,7 +56,7 @@ function play() {
     audioCtx.resume().then(() => play());
     return;
   }
-  // ... rest of the play() function
+  // rest of the play() function
 }
 ```
 

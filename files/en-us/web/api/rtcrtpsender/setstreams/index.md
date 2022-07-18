@@ -1,6 +1,7 @@
 ---
 title: RTCRtpSender.setStreams()
 slug: Web/API/RTCRtpSender/setStreams
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -27,21 +28,22 @@ associates the sender's {{domxref("RTCRtpSender.track", "track")}} with the spec
 ## Syntax
 
 ```js
-rtcRtpSender.setStreams(mediaStream);
-rtcRtpSender.setStreams([mediaStream...]);
+setStreams()
+setStreams(mediaStream)
+setStreams(mediaStreams)
 ```
 
 ### Parameters
 
-- `mediaStream` or `[mediaStream...]` {{optional_inline}}
-  - : An {{domxref("MediaStream")}} object—or an array of multiple
+- `mediaStream` or `mediaStreams` {{optional_inline}}
+  - : An {{domxref("MediaStream")}} object or an array of multiple
     `MediaStream` objects—identifying the streams to which the
     `RTCRtpSender`'s {{domxref("RTCRtpSender.track", "track")}} belongs. If
     this parameter isn't specified, no new streams will be associated with the track.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -59,7 +61,7 @@ will be triggered by the {{domxref("RTCPeerConnection.negotiationneeded_event",
   "negotiationneeded")}} event being dispatched to the {{domxref("RTCPeerConnection")}} to
 which the sender belongs.
 
-## Example
+## Examples
 
 This example adds all of an {{domxref("RTCPeerConnection")}}'s tracks to the specified
 stream.

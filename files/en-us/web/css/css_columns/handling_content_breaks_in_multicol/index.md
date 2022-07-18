@@ -60,7 +60,7 @@ In the example below, we are using the `orphans` property to control the number 
 
 {{EmbedGHLiveSample("css-examples/multicol/fragmentation/orphans.html", '100%', 800)}}
 
-## When things don’t work as expected
+## When things don't work as expected
 
 If you have small amounts of content and are trying to control breaks in a number of ways or on several elements, your content needs to break somewhere, so you may not always get the result you intended. To some extent your use of fragmentation is always a suggestion to the browser, to control breaks in this way if it is possible.
 

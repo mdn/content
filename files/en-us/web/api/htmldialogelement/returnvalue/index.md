@@ -1,6 +1,7 @@
 ---
 title: HTMLDialogElement.returnValue
 slug: Web/API/HTMLDialogElement/returnValue
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -20,16 +21,9 @@ The **`returnValue`** property of the
 `<dialog>`, usually to indicate which button the user pressed to
 close it.
 
-## Syntax
+## Value
 
-```js
-dialogInstance.returnValue = 'myReturnValue';
-var myReturnValue = dialogInstance.returnValue;
-```
-
-### Value
-
-A {{domxref("DOMString")}} representing the `returnValue` of the dialog.
+A string representing the `returnValue` of the dialog.
 
 ## Examples
 
@@ -62,8 +56,8 @@ dialog.
 
   <script>
     (function() {
-      var updateButton = document.getElementById('updateDetails');
-      var dialog = document.getElementById('favDialog');
+      const updateButton = document.getElementById('updateDetails');
+      const dialog = document.getElementById('favDialog');
       dialog.returnValue = 'favAnimal';
 
       function openCheck(dialog) {
@@ -82,7 +76,7 @@ dialog.
         }
       }
 
-      // “Update details” button opens the <dialog> modally
+      // "Update details" button opens the <dialog> modally
       updateButton.addEventListener('click', function() {
         dialog.showModal();
         openCheck(dialog);
@@ -93,8 +87,7 @@ dialog.
 ```
 
 > **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html)
-> ([see it live
-> also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
+> ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
 ## Specifications
 

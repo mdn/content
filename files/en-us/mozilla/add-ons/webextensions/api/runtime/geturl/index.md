@@ -45,7 +45,7 @@ browser.runtime.getURL(
 Given a file packaged with the extension at "beasts/frog.html", get the full URL like this:
 
 ```js
-var fullURL = browser.runtime.getURL("beasts/frog.html");
+let fullURL = browser.runtime.getURL("beasts/frog.html");
 console.log(fullURL);
 // Returns something like:
 // moz-extension://2c127fa4-62c7-7e4f-90e5-472b45eecfdc/beasts/frog.html
@@ -53,7 +53,7 @@ console.log(fullURL);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-getURL) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-getURL) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

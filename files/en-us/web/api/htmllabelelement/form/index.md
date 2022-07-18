@@ -1,6 +1,7 @@
 ---
 title: HTMLLabelElement.form
 slug: Web/API/HTMLLabelElement/form
+page-type: web-api-instance-property
 tags:
   - Forms
   - HTML DOM
@@ -20,13 +21,7 @@ that control isn't in a form.
 
 This property is just a shortcut for `HTMLLabelElement.control.form`.
 
-## Syntax
-
-```js
-form = HTMLLabelElement.form
-```
-
-### Value
+## Value
 
 An {{domxref("HTMLFormElement")}} which represents the form with which the label's
 {{domxref("HTMLLabelElement.control", "control")}} is associated. If

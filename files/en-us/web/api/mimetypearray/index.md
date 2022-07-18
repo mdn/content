@@ -1,6 +1,7 @@
 ---
 title: MimeTypeArray
 slug: Web/API/MimeTypeArray
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -10,7 +11,7 @@ browser-compat: api.MimeTypeArray
 ---
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-The **`MimeTypeArray`** interface returns an array of {{domxref('MimeType')}} instances, each of which contains information about a supported browser plugins. This object is returned by {{domxref("Navigator.mimeTypes")}}.
+The **`MimeTypeArray`** interface returns an array of {{domxref('MimeType')}} instances, each of which contains information about a supported browser plugins. This object is returned by {{domxref("Navigator.mimeTypes")}}.
 
 ## Properties
 
@@ -29,14 +30,14 @@ The **`MimeTypeArray`** interface returns an array of {{domxref('MimeType')}} in
 The following example tests whether a plugin is available for the application/pdf mime type and if so, which plugin that is.
 
 ```js
-var mimeTypes = navigator.mimeTypes;
-var flashPlugin = mimeTypes['video/x-flv'];
+const mimeTypes = navigator.mimeTypes;
+const flashPlugin = mimeTypes['video/x-flv'];
 if (typeof flashPlugin === "undefined") {
-  var vid = document.createElement('video');
-  // Use vid.canPlayType() to test for a supported mime type.
+  const vid = document.createElement('video');
+  // Use vid.canPlayType() to test for a supported mime type.
 } else {
-  // Notify the user that flash is being deprecated and they
-  //   should upgrade their browser.
+  // Notify the user that flash is being deprecated and they
+  //   should upgrade their browser.
 }
 ```
 

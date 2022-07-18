@@ -52,4 +52,4 @@ button.svg:
 
 ## Example
 
-For an example of this solution at work see [www.codedread.com](http://www.codedread.com/).
+For an example of this solution at work see [www.codedread.com](https://www.codedread.com/).

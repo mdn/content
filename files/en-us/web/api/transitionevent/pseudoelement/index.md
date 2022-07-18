@@ -1,29 +1,27 @@
 ---
 title: TransitionEvent.pseudoElement
 slug: Web/API/TransitionEvent/pseudoElement
+page-type: web-api-instance-property
 tags:
   - API
   - CSS
   - CSS3 Transitions
   - CSSOM
-  - Experimental
   - Property
   - Reference
   - TransitionEvent
 browser-compat: api.TransitionEvent.pseudoElement
 ---
-{{ apiref("CSSOM") }} {{SeeCompatTable}}
+{{ apiref("CSSOM") }}
 
 The **`TransitionEvent.pseudoElement`** read-only property is a
-{{domxref("DOMString")}}, starting with `'::'`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on.
+string, starting with `'::'`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on.
 If the transition doesn't run on a pseudo-element but on the element, an empty string:
 ` ''``. `
 
-## Syntax
+## Value
 
-```js
-name = TransitionEvent.pseudoElement
-```
+A string.
 
 ## Specifications
 

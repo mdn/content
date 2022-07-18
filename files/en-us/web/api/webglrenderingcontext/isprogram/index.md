@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.isProgram()
 slug: Web/API/WebGLRenderingContext/isProgram
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -17,12 +18,12 @@ passed {{domxref("WebGLProgram")}} is valid, `false` otherwise.
 ## Syntax
 
 ```js
-GLboolean gl.isProgram(program);
+isProgram(program)
 ```
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}} to check.
 
 ### Return value

@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var getting = browser.cookies.getAll(
+let getting = browser.cookies.getAll(
   details                // object
 )
 ```
@@ -33,19 +33,19 @@ var getting = browser.cookies.getAll(
 
   - : An `object` containing details that can be used to match cookies to be retrieved. Included properties are as follows (see [Cookie type](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/Cookie#type) for more information on these):
 
-    - `domain`{{optional_inline}}
+    - `domain` {{optional_inline}}
       - : A `string` representing a domain that cookies must be associated with (they can be associated either with this exact domain or one of its subdomains).
-    - `firstPartyDomain`{{optional_inline}}
+    - `firstPartyDomain` {{optional_inline}}
 
       - : A `string` representing the first-party domain with which the cookie to retrieve is associated.
 
         This property must be supplied if the browser has first-party isolation enabled. You can however pass `null` in this situation. If you do this, then cookies with any value for `firstPartyDomain`, as well as cookies which do not have `firstPartyDomain` set at all, will be included in the results. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
 
-    - `name`{{optional_inline}}
+    - `name` {{optional_inline}}
       - : A `string` representing a name that the cookies should have.
-    - `partitionKey`{{optional_inline}}
+    - `partitionKey` {{optional_inline}}
 
-      - : An `object` defining which [storage partitions](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#Storage_partitioning) to return cookies from:
+      - : An `object` defining which [storage partitions](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) to return cookies from:
 
         - if omitted, returns only cookies from unpartitioned storage.
         - if included without `topLevelSite`, returns all cookies from partitioned and unpartitioned storage.
@@ -53,23 +53,23 @@ var getting = browser.cookies.getAll(
 
         This object contains:
 
-        - `topLevelSite`{{optional_inline}}
+        - `topLevelSite` {{optional_inline}}
           - : A `string` representing the first-party URL of the top-level site storage partition containing the cookies.
 
-    - `path`{{optional_inline}}
+    - `path` {{optional_inline}}
       - : A `string` representing a path — the cookies' path must be identical to this one.
-    - `secure`{{optional_inline}}
-      - : A `boolean` — filters cookies by their `secure` property, allowing you to filter secure cookies vs. non-secure cookies..
-    - `session`{{optional_inline}}
-      - : A `boolean`— filters the cookies by their `session` property, allowing you to filter session cookies vs. persistent cookies.
-    - `storeId`{{optional_inline}}
+    - `secure` {{optional_inline}}
+      - : A `boolean` — filters cookies by their `secure` property, allowing you to filter secure cookies vs. non-secure cookies.
+    - `session` {{optional_inline}}
+      - : A `boolean`— filters the cookies by their `session` property, allowing you to filter session cookies vs. persistent cookies.
+    - `storeId` {{optional_inline}}
       - : A `string` representing the cookie store to retrieve cookies from. If omitted, the current execution context's cookie store will be used.
-    - `url`{{optional_inline}}
+    - `url` {{optional_inline}}
       - : A `string` representing a URL that the retrieved cookies must be associated with.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of  `{{WebExtAPIRef('cookies.Cookie')}}` objects that match the properties given in the `details` parameter. Only unexpired cookies are returned. The cookies returned will be sorted by path length, longest to shortest. If multiple cookies have the same path length, those with the earliest creation time will be first.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of  `{{WebExtAPIRef('cookies.Cookie')}}` objects that match the properties given in the `details` parameter. Only unexpired cookies are returned. The cookies returned will be sorted by path length, longest to shortest. If multiple cookies have the same path length, those with the earliest creation time will be first.
 
 ## Browser compatibility
 
@@ -86,7 +86,7 @@ function logCookies(cookies) {
   }
 }
 
-var gettingAll = browser.cookies.getAll({
+let gettingAll = browser.cookies.getAll({
   name: "favorite-color"
 });
 gettingAll.then(logCookies);
@@ -94,7 +94,7 @@ gettingAll.then(logCookies);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#method-getAll) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#method-getAll) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

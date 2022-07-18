@@ -18,7 +18,9 @@ The **`::-moz-range-thumb`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 
 ## Syntax
 
-{{csssyntax}}
+```
+::-moz-range-thumb
+```
 
 ## Examples
 
@@ -56,7 +58,7 @@ Not part of any standard.
 
 - The pseudo-elements used by Gecko to style other parts of a range input:
 
-  - {{cssxref("::-moz-range-track")}} represents the groove in which the thumb slides.
+  - {{cssxref("::-moz-range-track")}} represents the groove in which the thumb slides.
   - {{cssxref("::-moz-range-progress")}} represents the lower portion of the track.
 
 - Similar pseudo-elements used by other browsers:
@@ -65,4 +67,4 @@ Not part of any standard.
   - {{cssxref("::-ms-thumb")}}, pseudo-element supported by Internet Explorer and Edge
 
 - [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode: Styling and scripting sliders](http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [QuirksMode: Styling and scripting sliders](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

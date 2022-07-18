@@ -4,7 +4,7 @@ slug: Web/CSS/offset-path
 tags:
   - CSS
   - CSS Motion Path
-  - Experimental
+  - CSS Property
   - Motion Path
   - Reference
   - motion-path
@@ -52,12 +52,12 @@ offset-path: unset;
 - `ray()`
   - : Taking up to three values, defines a path that is a line segment starting from the position of the box and proceeds in the direction defined by the specified angle similar to the CSS gradient angle where `0deg` is up, with positive angles increasing in the clockwise direction, with the size value being similar to the CSS radial gradient size values from `closest-side` to `farthest-corner`, and the keyterm `contain`.
 - `url()`
-  - : References the ID of an SVG shape -- `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect` -- using the shape's geometry as the path.
+  - : References the ID of an SVG shape — `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect` — using the shape's geometry as the path.
 - `<basic-shape>`
 
   - : Specifies a [CSS shape](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes) including `circle()`, `ellipse()`, `inset()`, `polygon()`, or `path()`.
 
-    - {{cssxref("path()","path()")}}
+    - {{cssxref("path","path()")}}
       - : A path string defined with SVG coordinate syntax.
 
 - `none`
@@ -65,7 +65,7 @@ offset-path: unset;
 
 ## Description
 
-This property defines a path an animated element can follow. An offset path is either a specified path with one or multiple sub-paths or the geometry of a not-styled basic shape. The element’s exact position on the offset path is determined by the {{cssxref("offset-distance")}} property. Each shape or path must define an initial position for the computed value of `0` for {{cssxref("offset-distance")}} and an initial direction which specifies the rotation of the object to the initial position.
+This property defines a path an animated element can follow. An offset path is either a specified path with one or multiple sub-paths or the geometry of a not-styled basic shape. The element's exact position on the offset path is determined by the {{cssxref("offset-distance")}} property. Each shape or path must define an initial position for the computed value of `0` for {{cssxref("offset-distance")}} and an initial direction which specifies the rotation of the object to the initial position.
 
 Early versions of the spec called this property `motion-path`. It was changed to `offset-path` because the property describes static positions, not motion.
 
@@ -163,11 +163,11 @@ The top and bottom halves of the scissors would appear in the top left of the ca
 - {{cssxref("offset-distance")}}
 - {{cssxref("offset-rotate")}}
 - [SVG \<path>](/en-US/docs/Web/SVG/Tutorial/Paths)
-- {{cssxref("path()","path()")}}
+- {{cssxref("path","path()")}}
 
 Other demos:
 
 - [Examples of the various values](https://codepen.io/team/css-tricks/pen/WZdKMq)
-- [Triangle](https://codepen.io/ericwilligers/pen/jrbJPp)
-- [Scissors](https://codepen.io/ericwilligers/pen/bwVkNa)
+- [Triangle](https://codepen.io/ericwilligers/pen/jMbJPp)
+- [Scissors](https://codepen.io/ericwilligers/pen/bwVZNa)
 - [Eyes](https://jsfiddle.net/ericwilligers/r1snqdan/)

@@ -34,7 +34,7 @@ The [`BrowserSetting.set()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types
 ## Syntax
 
 ```js
-var setting = setting.set(
+let setting = setting.set(
   details     // object
 )
 ```
@@ -71,7 +71,7 @@ function onSet(result) {
 
 browser.browserAction.onClicked.addListener(() => {
 
-    var setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
+    let setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
       value: false
     });
     setting.then(onSet);
@@ -83,7 +83,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 > **Note:**
 >
-> This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/extensions/types) API.
+> This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/types/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

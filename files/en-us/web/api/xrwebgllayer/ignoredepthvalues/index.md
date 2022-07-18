@@ -1,6 +1,7 @@
 ---
 title: XRWebGLLayer.ignoreDepthValues
 slug: Web/API/XRWebGLLayer/ignoreDepthValues
+page-type: web-api-instance-property
 tags:
   - 3D
   - API
@@ -29,16 +30,15 @@ The read-only {{domxref("XRWebGLLayer")}} property
 buffer while rendering the scene. If the depth buffer is being used to determine the
 position of vertices, this property is `false`.
 
-The value of `ignoreDepthValues` can only be set when the
-{{domxref("XRWebGLLayer")}} is instantiated, by setting the corresponding value in the [constructor's](/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer) `layerInit` parameter.
+The value of `ignoreDepthValues` can only be set when the
+{{domxref("XRWebGLLayer")}} is instantiated, by setting the corresponding value in the [constructor's](/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer) `layerInit` parameter.
 
 ## Value
 
 A Boolean value which is `true` if the WebGL context's depth buffer is being
 used while computing the locations of points in the 3D world. Otherwise, if this is
 `true`, the depth buffer's values are being used to assist in placing objects
-in the scene. Since the [XR
-compositor](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#The_WebXR_compositor) uses the depth buffer by default, this value is `false`
+in the scene. Since the [XR compositor](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#the_webxr_compositor) uses the depth buffer by default, this value is `false`
 unless explicitly set otherwise when creating the {{domxref("XRWebGLLayer")}} using its
 constructor, {{domxref("XRWebGLLayer.XRWebGLLayer", "XRWebGLLayer()")}}.
 
@@ -50,7 +50,7 @@ scene, in order to potentially improve the quality or the output as well as the 
 level for the viewer.
 
 The depth buffer is {{domxref("XRWebGLLayer.framebufferWidth", "framebufferWidth")}}
-entires wide and {{domxref("XRWebGLLayer.framebufferHeight", "framebuffer")}} entries
+entries wide and {{domxref("XRWebGLLayer.framebufferHeight", "framebuffer")}} entries
 tall. Each entry in the buffer specifies the depth at which the corresponding pixel is
 located, and has a value between 0.0 and 1.0.
 
@@ -65,13 +65,13 @@ possible to more accurately represent the scene in the 3D space.
 
 If the Web application which is using WeXR is rendering its content without using a
 depth buffer—or if the depth buffer's contents are invalid—you should disable the use of
-the depth buffer for WebXR rendering by setting `ignoreDepthValues` to true
+the depth buffer for WebXR rendering by setting `ignoreDepthValues` to true
 when creating the {{domxref("XRWebGLLayer")}}. This is demonstrated in the snippet of
 code below:
 
 ```js
 const glLayerOptions = {
-  ignoreDepthValues: true
+  ignoreDepthValues: true
 };
 
 let glLayer = new XRWebGLLayer(xrSession, gl, glLayerOptions);
@@ -90,4 +90,4 @@ let glLayer = new XRWebGLLayer(xrSession, gl, glLayerOptions);
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
 - {{domxref("WebGLLayerInit")}}
 - WebGL depth buffer related methods: {{domxref("WebGLRenderingContext.depthFunc",
-    "depthFunc()")}}, {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}}
+    "depthFunc()")}}, {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}}

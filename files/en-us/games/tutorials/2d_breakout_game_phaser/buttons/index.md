@@ -38,7 +38,7 @@ game.load.spritesheet('button', 'img/button.png', 120, 40);
 
 A single button frame is 120 pixels wide and 40 pixels high.
 
-You also need to [grab the button spritesheet from Github](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/button.png), and save it in your `/img` directory.
+You also need to [grab the button spritesheet from GitHub](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/button.png), and save it in your `/img` directory.
 
 ## Adding the button to the game
 

@@ -31,7 +31,7 @@ The **`ECT`** [Client hint](/en-US/docs/Web/HTTP/Client_hints) request header fi
   </tbody>
 </table>
 
-The value represents the "network profile" that best matches the connection's latency and bandwidth, rather than the actual mechanisms used for transferring the data. For example, `2g` might be used to represent a slow wifi connection with high latency and low bandwidth, while `4g` might be used to represent a fast fibre-based broadband network.
+The value represents the "network profile" that best matches the connection's latency and bandwidth, rather than the actual mechanisms used for transferring the data. For example, `2g` might be used to represent a slow Wi-Fi connection with high latency and low bandwidth, while `4g` might be used to represent a fast fibre-based broadband network.
 
 The hint allows a server to choose what information is sent based on the broad characteristics of the network. For example, a server might choose to send smaller versions of images and other resources on less capable connections. The value might also be used as a starting point for determining what information is sent, which is further refined using information in {{HTTPHeader("RTT")}} and {{HTTPHeader("Downlink")}} hints.
 

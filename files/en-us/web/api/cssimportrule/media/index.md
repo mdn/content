@@ -1,6 +1,7 @@
 ---
 title: CSSImportRule.media
 slug: Web/API/CSSImportRule/media
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -16,13 +17,7 @@ The read-only **`media`** property of the
 {{domxref("CSSImportRule")}} interface returns a {{domxref("MediaList")}} object,
 containing the value of the `media` attribute of the associated stylesheet.
 
-## Syntax
-
-```js
-let media = CSSImportRule.media;
-```
-
-### Value
+## Value
 
 Returns a {{domxref("MediaList")}} object.
 

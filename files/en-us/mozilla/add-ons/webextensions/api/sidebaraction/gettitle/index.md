@@ -23,7 +23,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingTitle = browser.sidebarAction.getTitle(
+let gettingTitle = browser.sidebarAction.getTitle(
   details               // object
 )
 ```
@@ -34,7 +34,7 @@ var gettingTitle = browser.sidebarAction.getTitle(
 
   - : `object`. An object with the following properties:
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Get the title for the sidebar specific to the given tab.
     - `windowId` {{optional_inline}}
       - : `integer`. Get the title for the sidebar specific to the given window.
@@ -66,7 +66,7 @@ function toggleTitle(title) {
 }
 
 browser.browserAction.onClicked.addListener(() => {
-  var gettingTitle = browser.sidebarAction.getTitle({});
+  let gettingTitle = browser.sidebarAction.getTitle({});
   gettingTitle.then(toggleTitle);
 });
 ```

@@ -61,7 +61,7 @@ In the same way, if you want to say, program some 3D graphics, it is a lot easie
 Client-side JavaScript, in particular, has many APIs available to it — these are not part of the JavaScript language itself, rather they are built on top of the core JavaScript language, providing you with extra superpowers to use in your JavaScript code. They generally fall into two categories:
 
 - **Browser APIs** are built into your web browser and are able to expose data from the browser and surrounding computer environment and do useful complex things with it. For example, the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) provides JavaScript constructs for manipulating audio in the browser — taking an audio track, altering its volume, applying effects to it, etc. In the background, the browser is actually using some complex lower-level code (e.g. C++ or Rust) to do the actual audio processing. But again, this complexity is abstracted away from you by the API.
-- **Third-party APIs** are not built into the browser by default, and you generally have to retrieve their code and information from somewhere on the Web. For example, the [Twitter API](https://dev.twitter.com/overview/documentation) allows you to do things like displaying your latest tweets on your website. It provides a special set of constructs you can use to query the Twitter service and return specific information.
+- **Third-party APIs** are not built into the browser by default, and you generally have to retrieve their code and information from somewhere on the Web. For example, the [Twitter API](https://developer.twitter.com/en/docs) allows you to do things like displaying your latest tweets on your website. It provides a special set of constructs you can use to query the Twitter service and return specific information.
 
 ![](browser.png)
 
@@ -73,7 +73,7 @@ So above, we talked about what client-side JavaScript APIs are, and how they rel
 - Browser APIs — constructs built into the browser that sits on top of the JavaScript language and allows you to implement functionality more easily.
 - Third-party APIs — constructs built into third-party platforms (e.g. Twitter, Facebook) that allow you to use some of those platform's functionality in your own web pages (for example, display your latest Tweets on your web page).
 - JavaScript libraries — Usually one or more JavaScript files containing [custom functions](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#custom_functions) that you can attach to your web page to speed up or enable writing common functionality. Examples include jQuery, Mootools and React.
-- JavaScript frameworks — The next step up from libraries, JavaScript frameworks (e.g. Angular and Ember) tend to be packages of HTML, CSS, JavaScript, and other technologies that you install and then use to write an entire web application from scratch. The key difference between a library and a framework is “Inversion of Control”. When calling a method from a library, the developer is in control. With a framework, the control is inverted: the framework calls the developer's code.
+- JavaScript frameworks — The next step up from libraries, JavaScript frameworks (e.g. Angular and Ember) tend to be packages of HTML, CSS, JavaScript, and other technologies that you install and then use to write an entire web application from scratch. The key difference between a library and a framework is "Inversion of Control". When calling a method from a library, the developer is in control. With a framework, the control is inverted: the framework calls the developer's code.
 
 ## What can APIs do?
 
@@ -84,17 +84,17 @@ There are a huge number of APIs available in modern browsers that allow you to d
 In particular, the most common categories of browser APIs you'll use (and which we'll cover in this module in greater detail) are:
 
 - **APIs for manipulating documents** loaded into the browser. The most obvious example is the [DOM (Document Object Model) API](/en-US/docs/Web/API/Document_Object_Model), which allows you to manipulate HTML and CSS — creating, removing and changing HTML, dynamically applying new styles to your page, etc. Every time you see a popup window appear on a page or some new content displayed, for example, that's the DOM in action. Find out more about these types of API in [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents).
-- **APIs that fetch data from the server** to update small sections of a webpage on their own are very commonly used. This seemingly small detail has had a huge impact on the performance and behavior of sites — if you just need to update a stock listing or list of available new stories, doing it instantly without having to reload the whole entire page from the server can make the site or app feel much more responsive and "snappy". APIs that make this possible include [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) and the [Fetch API](/en-US/docs/Web/API/Fetch_API). You may also come across the term **Ajax**, which describes this technique. Find out more about such APIs in [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data).
-- **APIs for drawing and manipulating graphics** are now widely supported in browsers — the most popular ones are [Canvas](/en-US/docs/Web/API/Canvas_API) and [WebGL](/en-US/docs/Web/API/WebGL_API), which allow you to programmatically update the pixel data contained in an HTML {{htmlelement("canvas")}} element to create 2D and 3D scenes. For example, you might draw shapes such as rectangles or circles, import an image onto the canvas, and apply a filter to it such as sepia or grayscale using the Canvas API, or create a complex 3D scene with lighting and textures using WebGL. Such APIs are often combined with APIs for creating animation loops (such as {{domxref("window.requestAnimationFrame()")}}) and others to make constantly updating scenes like cartoons and games.
+- **APIs that fetch data from the server** to update small sections of a webpage on their own are very commonly used. This seemingly small detail has had a huge impact on the performance and behavior of sites — if you just need to update a stock listing or list of available new stories, doing it instantly without having to reload the whole entire page from the server can make the site or app feel much more responsive and "snappy". The main API used for this is the [Fetch API](/en-US/docs/Web/API/Fetch_API), although older code might still use the [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) API. You may also come across the term **Ajax**, which describes this technique. Find out more about such APIs in [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data).
+- **APIs for drawing and manipulating graphics** are widely supported in browsers — the most popular ones are [Canvas](/en-US/docs/Web/API/Canvas_API) and [WebGL](/en-US/docs/Web/API/WebGL_API), which allow you to programmatically update the pixel data contained in an HTML {{htmlelement("canvas")}} element to create 2D and 3D scenes. For example, you might draw shapes such as rectangles or circles, import an image onto the canvas, and apply a filter to it such as sepia or grayscale using the Canvas API, or create a complex 3D scene with lighting and textures using WebGL. Such APIs are often combined with APIs for creating animation loops (such as {{domxref("window.requestAnimationFrame()")}}) and others to make constantly updating scenes like cartoons and games.
 - **[Audio and Video APIs](/en-US/docs/Web/Guide/Audio_and_video_delivery)** like {{domxref("HTMLMediaElement")}}, the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), and [WebRTC](/en-US/docs/Web/API/WebRTC_API) allow you to do really interesting things with multimedia such as creating custom UI controls for playing audio and video, displaying text tracks like captions and subtitles along with your videos, grabbing video from your web camera to be manipulated via a canvas (see above) or displayed on someone else's computer in a web conference, or adding effects to audio tracks (such as gain, distortion, panning, etc).
-- **Device APIs** are basically APIs for manipulating and retrieving data from modern device hardware in a way that is useful for web apps. Examples include telling the user that a useful update is available on a web app via system notifications (see the [Notifications API](/en-US/docs/Web/API/Notifications_API)) or vibration hardware (see the [Vibration API](/en-US/docs/Web/API/Vibration_API)).
-- **Client-side storage APIs** are becoming a lot more widespread in web browsers — the ability to store data on the client-side is very useful if you want to create an app that will save its state between page loads, and perhaps even work when the device is offline. There are a number of options available, e.g. simple name/value storage with the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API), and more complex tabular data storage with the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API).
+- **Device APIs** enable you to interact with device hardware: for example, accessing the device GPS to find the user's position using the [Geolocation API](/en-US/docs/Web/API/Geolocation_API).
+- **Client-side storage APIs** enable you to store data on the client-side, so you can create an app that will save its state between page loads, and perhaps even work when the device is offline. There are a number of options available, e.g. simple name/value storage with the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API), and more complex database storage with the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API).
 
 ### Common third-party APIs
 
 Third-party APIs come in a large variety; some of the more popular ones that you are likely to make use of sooner or later are:
 
-- The [Twitter API](https://dev.twitter.com/overview/documentation), which allows you to do things like displaying your latest tweets on your website.
+- The [Twitter API](https://developer.twitter.com/en/docs), which allows you to do things like displaying your latest tweets on your website.
 - Map APIs like [Mapquest](https://developer.mapquest.com/) and the [Google Maps API](https://developers.google.com/maps/) allows you to do all sorts of things with maps on your web pages.
 - The [Facebook suite of APIs](https://developers.facebook.com/docs/) enables you to use various parts of the Facebook ecosystem to benefit your app, for example by providing app login using Facebook login, accepting in-app payments, rolling out targeted ad campaigns, etc.
 - The [Telegram APIs](https://core.telegram.org/api) allows you to embed content from Telegram channels on your website, in addition to providing support for bots.
@@ -121,7 +121,7 @@ Let's return to the example of the Web Audio API — this is a fairly complex AP
 - {{domxref("MediaElementAudioSourceNode")}}, which represents an {{htmlelement("audio")}} element containing sound you want to play and manipulate inside the audio context.
 - {{domxref("AudioDestinationNode")}}, which represents the destination of the audio, i.e. the device on your computer that will actually output it — usually your speakers or headphones.
 
-So how do these objects interact? If you look at our [simple web audio example](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/web-audio/index.html) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/introduction/web-audio/)), you'll first see the following HTML:
+So how do these objects interact? If you look at our [simple web audio example](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/web-audio/index.html) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/introduction/web-audio/)), you'll first see the following HTML:
 
 ```html
 <audio src="outfoxing.mp3"></audio>
@@ -156,29 +156,29 @@ Next up we include a couple of event handlers that serve to toggle between play 
 
 ```js
 // play/pause audio
-playBtn.addEventListener('click', function() {
-    // check if context is in suspended state (autoplay policy)
-    if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
-    }
+playBtn.addEventListener('click', () => {
+  // check if context is in suspended state (autoplay policy)
+  if (audioCtx.state === 'suspended') {
+     audioCtx.resume();
+  }
 
   // if track is stopped, play it
-    if (this.getAttribute('class') === 'paused') {
-        audioElement.play();
-        this.setAttribute('class', 'playing');
-        this.textContent = 'Pause'
+  if (playBtn.getAttribute('class') === 'paused') {
+    audioElement.play();
+    playBtn.setAttribute('class', 'playing');
+    playBtn.textContent = 'Pause'
     // if track is playing, stop it
-} else if (this.getAttribute('class') === 'playing') {
-        audioElement.pause();
-        this.setAttribute('class', 'paused');
-        this.textContent = 'Play';
-    }
+} else if (playBtn.getAttribute('class') === 'playing') {
+    audioElement.pause();
+    playBtn.setAttribute('class', 'paused');
+    playBtn.textContent = 'Play';
+  }
 });
 
 // if track ends
-audioElement.addEventListener('ended', function() {
-    playBtn.setAttribute('class', 'paused');
-    playBtn.textContent = 'Play';
+audioElement.addEventListener('ended', () => {
+  playBtn.setAttribute('class', 'paused');
+  playBtn.textContent = 'Play'
 });
 ```
 
@@ -187,10 +187,11 @@ audioElement.addEventListener('ended', function() {
 Next, we create a {{domxref("GainNode")}} object using the {{domxref("BaseAudioContext/createGain", "AudioContext.createGain()")}} method, which can be used to adjust the volume of audio fed through it, and create another event handler that changes the value of the audio graph's gain (volume) whenever the slider value is changed:
 
 ```js
+// volume
 const gainNode = audioCtx.createGain();
 
-volumeSlider.addEventListener('input', function() {
-    gainNode.gain.value = this.value;
+volumeSlider.addEventListener('input', () => {
+  gainNode.gain.value = volumeSlider.value;
 });
 ```
 
@@ -233,39 +234,43 @@ Ball.prototype.draw = function() {
 };
 ```
 
-> **Note:** You can see this code in action in our [bouncing balls demo](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html) (see it [running live](https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) also).
+> **Note:** You can see this code in action in our [bouncing balls demo](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/bouncing-balls.html) (see it [running live](https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) also).
 
-### They use events to handle changes in state
+### They often use events to handle changes in state
 
 We already discussed events earlier on in the course in our [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events) article, which looks in detail at what client-side web events are and how they are used in your code. If you are not already familiar with how client-side web API events work, you should go and read this article first before continuing.
 
 Some web APIs contain no events, but most contain at least a few. The handler properties that allow us to run functions when events fire are generally listed in our reference material in separate "Event handlers" sections.
 
-We already saw a number of event handlers in use in our Web Audio API example above.
-
-To provide another example, instances of the [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) object (each one represents an HTTP request to the server to retrieve a new resource of some kind) has a number of events available on them, for example, the `load` event is fired when a response has been successfully returned containing the requested resource, and it is now available.
-
-The following code provides a simple example of how this would be used:
+We already saw a number of event handlers in use in our Web Audio API example above:
 
 ```js
-let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
-let request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
+// play/pause audio
+playBtn.addEventListener('click', () => {
+  // check if context is in suspended state (autoplay policy)
+  if (audioCtx.state === 'suspended') {
+     audioCtx.resume();
+  }
 
-request.onload = function() {
-  const superHeroes = request.response;
-  populateHeader(superHeroes);
-  showHeroes(superHeroes);
-}
+  // if track is stopped, play it
+  if (playBtn.getAttribute('class') === 'paused') {
+    audioElement.play();
+    playBtn.setAttribute('class', 'playing');
+    playBtn.textContent = 'Pause'
+    // if track is playing, stop it
+} else if (playBtn.getAttribute('class') === 'playing') {
+    audioElement.pause();
+    playBtn.setAttribute('class', 'paused');
+    playBtn.textContent = 'Play';
+  }
+});
+
+// if track ends
+audioElement.addEventListener('ended', () => {
+  playBtn.setAttribute('class', 'paused');
+  playBtn.textContent = 'Play'
+});
 ```
-
-> **Note:** You can see this code in action in our [ajax.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html) example ([see it live](https://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html) also).
-
-The first five lines specify the location of the resource we want to fetch, create a new instance of a request object using the `XMLHttpRequest()` constructor, open an HTTP `GET` request to retrieve the specified resource, specify that the response should be sent in JSON format, then send the request.
-
-The `onload` handler function then specifies what we do with the response. We know the response will be successfully returned and available after the load event has fired (unless an error occurred), so we save the response containing the returned JSON in the `superHeroes` variable, then pass it to two different functions for further processing.
 
 ### They have additional security mechanisms where appropriate
 

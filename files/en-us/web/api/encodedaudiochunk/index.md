@@ -1,6 +1,7 @@
 ---
 title: EncodedAudioChunk
 slug: Web/API/EncodedAudioChunk
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -14,18 +15,18 @@ The **`EncodedAudioChunk`** interface of the {{domxref('WebCodecs API','','',' '
 
 ## Constructor
 
-- {{domxref("EncodedAudioChunk.EncodedAudioChunk()")}}
+- {{domxref("EncodedAudioChunk.EncodedAudioChunk", "EncodedAudioChunk()")}}
   - : Creates a new `EncodedAudioChunk` object.
 
 ## Properties
 
-- {{domxref("EncodedAudioChunk.type")}}{{ReadOnlyInline}}
+- {{domxref("EncodedAudioChunk.type")}} {{ReadOnlyInline}}
   - : Returns a string indicating whether this chunk of data is a key chunk.
-- {{domxref("EncodedAudioChunk.timestamp")}}{{ReadOnlyInline}}
+- {{domxref("EncodedAudioChunk.timestamp")}} {{ReadOnlyInline}}
   - : Returns an integer representing the timestamp of the audio in microseconds.
-- {{domxref("EncodedAudioChunk.duration")}}{{ReadOnlyInline}}
+- {{domxref("EncodedAudioChunk.duration")}} {{ReadOnlyInline}}
   - : Returns an integer representing the duration of the audio in microseconds.
-- {{domxref("EncodedAudioChunk.byteLength")}}{{ReadOnlyInline}}
+- {{domxref("EncodedAudioChunk.byteLength")}} {{ReadOnlyInline}}
   - : Returns an integer representing the length of the audio in bytes.
 
 ## Methods

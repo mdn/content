@@ -1,6 +1,7 @@
 ---
 title: FileSystemWritableFileStream
 slug: Web/API/FileSystemWritableFileStream
+page-type: web-api-interface
 tags:
   - File
   - File System Access API

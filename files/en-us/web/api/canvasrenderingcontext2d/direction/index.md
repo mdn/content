@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.direction
 slug: Web/API/CanvasRenderingContext2D/direction
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -16,13 +17,7 @@ The
 **`CanvasRenderingContext2D.direction`**
 property of the Canvas 2D API specifies the current text direction used to draw text.
 
-## Syntax
-
-```js
-ctx.direction = "ltr" || "rtl" || "inherit";
-```
-
-### Options
+## Value
 
 Possible values:
 

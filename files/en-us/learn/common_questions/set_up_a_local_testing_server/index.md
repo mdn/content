@@ -39,7 +39,7 @@ This article explains how to set up a simple local testing server on your machin
 
 ## Local files vs. remote files
 
-Throughout most of the learning area, we tell you to just open your examples directly in a browser — this can be done by double clicking the HTML file, dragging and dropping it into the browser window, or choosing _File_ > _Open..._ and navigating to the HTML file. There are many ways to achieve this.
+Throughout most of the learning area, we tell you to just open your examples directly in a browser — this can be done by double clicking the HTML file, dragging and dropping it into the browser window, or choosing _File_ > _Open…_ and navigating to the HTML file. There are many ways to achieve this.
 
 If the web address path starts with `file://` followed by the path to the file on your local hard drive, a local file is being used. In contrast, if you view one of our examples hosted on GitHub (or an example on some other remote server), the web address will start with `http://` or `https://`, to show that the file has been received via HTTP.
 
@@ -109,7 +109,7 @@ Python's `http.server` (or `SimpleHTTPServer` for Python 2) module is useful, bu
 
 - To run Python server-side code, you'll need to use a Python web framework. There are many popular Python web frameworks, such as Django (a [guide](/en-US/docs/Learn/Server-side/Django) is available), [Flask](https://flask.palletsprojects.com/), and [Pyramid](https://trypyramid.com).
 - To run Node.js (JavaScript) server-side code, you'll need to use raw node or a framework built on top of it. Express is a good choice — see [Express Web Framework (Node.js/JavaScript)](/en-US/docs/Learn/Server-side/Express_Nodejs).
-- To run PHP server-side code, launch [PHP's built-in development server](https://php.net/manual/en/features.commandline.webserver.php):
+- To run PHP server-side code, launch [PHP's built-in development server](https://www.php.net/manual/en/features.commandline.webserver.php):
 
   ```bash
   $ cd path/to/your/php/code

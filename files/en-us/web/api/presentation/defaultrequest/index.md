@@ -1,6 +1,7 @@
 ---
 title: Presentation.defaultRequest
 slug: Web/API/Presentation/defaultRequest
+page-type: web-api-instance-property
 tags:
   - API
   - Presentation

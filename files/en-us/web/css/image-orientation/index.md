@@ -3,6 +3,7 @@ title: image-orientation
 slug: Web/CSS/image-orientation
 tags:
   - CSS
+  - CSS Property
   - Reference
   - image-orientation
   - recipe:css-property
@@ -19,6 +20,7 @@ image-orientation: from-image; /* Use EXIF data from the image */
 image-orientation: inherit;
 image-orientation: initial;
 image-orientation: revert;
+image-orientation: revert-layer;
 image-orientation: unset;
 ```
 
@@ -49,7 +51,7 @@ If used in conjunction with other CSS properties, such as a {{cssxref("&lt;trans
 
 ### Orienting image from image data
 
-The following image has been rotated through 180 degrees, and the `image-orientation` property is used to correct its orientation based on the  EXIF data in the image. By changing the `image-orientation` to `none` you can see the effect of the property.
+The following image has been rotated through 180 degrees, and the `image-orientation` property is used to correct its orientation based on the EXIF data in the image. By changing the `image-orientation` to `none` you can see the effect of the property.
 
 #### CSS
 

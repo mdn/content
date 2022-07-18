@@ -26,11 +26,11 @@ A string.
 
 ### Notes
 
-- The local name is the local part of an [expanded-name](https://www.w3.org/TR/xpath#dt-expanded-name).
+- The local name is the local part of an [expanded-name](https://www.w3.org/TR/xpath/#dt-expanded-name).
 
 ### Defined
 
-[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-local-name)
+[XPath 1.0 4.1](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-local-name)
 
 ### Gecko support
 

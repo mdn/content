@@ -1,6 +1,7 @@
 ---
 title: Range.startOffset
 slug: Web/API/Range/startOffset
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -23,19 +24,17 @@ the boundary point of the {{domxref("Range")}}. For other {{domxref("Node")}} ty
 To change the `startOffset` of a {{domxref("Range")}}, use the
 {{domxref("Range.setStart")}} method.
 
-## Syntax
+## Value
+
+A number.
+
+## Examples
 
 ```js
-startRangeOffset = range.startOffset;
-```
-
-## Example
-
-```js
-var range = document.createRange();
+const range = document.createRange();
 range.setStart(startNode,startOffset);
 range.setEnd(endNode,endOffset);
-var startRangeOffset = range.startOffset;
+const startRangeOffset = range.startOffset;
 ```
 
 ## Specifications

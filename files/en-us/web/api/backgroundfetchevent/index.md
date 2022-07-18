@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchEvent
 slug: Web/API/BackgroundFetchEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -10,7 +11,7 @@ browser-compat: api.BackgroundFetchEvent
 ---
 {{DefaultAPISidebar("Background Fetch API")}}
 
-The **`BackgroundFetchEvent`** interface of the {{domxref('Background Fetch API','','',' ')}} is the event type for background fetch events dispatched on the {{domxref("ServiceWorkerGlobalScope", "service worker global scope")}}.
+The **`BackgroundFetchEvent`** interface of the {{domxref('Background Fetch API','','',' ')}} is the event type for background fetch events dispatched on the {{domxref("ServiceWorkerGlobalScope", "service worker global scope")}}.
 
 It is the event type passed to `onbackgroundfetchabort` and `onbackgroundfetchclick`.
 
@@ -19,13 +20,13 @@ It is the event type passed to `onbackgroundfetchabort` and `onbackgroundfetchcl
 ## Constructor
 
 - {{domxref("BackgroundFetchEvent.BackgroundFetchEvent()", "BackgroundFetchEvent()")}}
-  - : Creates a new `BackgroundFetchEvent` object. This constructor is not typically used, as the browser creates these objects itself and provides them to background fetch event callbacks.
+  - : Creates a new `BackgroundFetchEvent` object. This constructor is not typically used, as the browser creates these objects itself and provides them to background fetch event callbacks.
 
 ## Properties
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
-- {{domxref("BackgroundFetchEvent.registration")}}{{ReadOnlyInline}}
+- {{domxref("BackgroundFetchEvent.registration")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("BackgroundFetchRegistration")}} that the event was initialized to.
 
 ### Event handlers

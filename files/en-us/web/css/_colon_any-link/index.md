@@ -4,7 +4,6 @@ slug: Web/CSS/:any-link
 tags:
   - ':any-link'
   - CSS
-  - Experimental
   - Layout
   - Links
   - Pseudo-class
@@ -18,16 +17,13 @@ browser-compat: css.selectors.any-link
 
 The **`:any-link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector represents an element that acts as the source anchor of a hyperlink, independent of whether it has been visited. In other words, it matches every {{HTMLElement("a")}} or {{HTMLElement("area")}} element that has an `href` attribute. Thus, it matches all elements that match {{cssxref(":link")}} or {{cssxref(":visited")}}.
 
-```css
-/* Selects any element that would be matched by :link or :visited */
-:any-link {
-  color: green;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-any-link.html", "tabbed-shorter")}}
 
 ## Syntax
 
-{{csssyntax}}
+```
+:any-link
+```
 
 ## Examples
 

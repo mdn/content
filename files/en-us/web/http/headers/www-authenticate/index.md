@@ -64,10 +64,10 @@ The presence of `realm`, `token68` and any other parameters depends on the defin
 WWW-Authenticate: <auth-scheme>
 WWW-Authenticate: <auth-scheme> realm=<realm>
 WWW-Authenticate: <auth-scheme> token68
-WWW-Authenticate: <auth-scheme> auth-param1=token1, ..., auth-paramN=auth-paramN-token    
+WWW-Authenticate: <auth-scheme> auth-param1=token1, ..., auth-paramN=auth-paramN-token
 WWW-Authenticate: <auth-scheme> realm=<realm> token68
-WWW-Authenticate: <auth-scheme> realm=<realm> token68 auth-param1=auth-param1-token , ..., auth-paramN=auth-paramN-token 
-WWW-Authenticate: <auth-scheme> realm=<realm> auth-param1=auth-param1-token, ..., auth-paramN=auth-paramN-token 
+WWW-Authenticate: <auth-scheme> realm=<realm> token68 auth-param1=auth-param1-token , ..., auth-paramN=auth-paramN-token
+WWW-Authenticate: <auth-scheme> realm=<realm> auth-param1=auth-param1-token, ..., auth-paramN=auth-paramN-token
 WWW-Authenticate: <auth-scheme> token68 auth-param1=auth-param1-token, ..., auth-paramN=auth-paramN-token
 ```
 
@@ -111,8 +111,8 @@ Generally you will need to check the relevant specifications for these (keys for
   - : String indicating which username/password to use.
     Minimally should include the host name, but might indicate the users or group that have access.
 - **`domain`** {{optional_inline}}
-  - : A quoted, space-separated list of URI prefixes that define all the locations where the authentication information may be be used.
-    If this key is not is not specified then the authentication information may be used anywhere on the web root.
+  - : A quoted, space-separated list of URI prefixes that define all the locations where the authentication information may be used.
+    If this key is not specified then the authentication information may be used anywhere on the web root.
 - **`nonce`**
   - : A server-specified quoted string that the server can use to control the lifetime in which particular credentials will be considered valid.
     This must be uniquely generated each time a 401 response is made, and may be regenerated more often (for example, allowing a digest to be used only once).

@@ -29,7 +29,7 @@ This value behaves slightly differently than mathematical infinity:
 - `NEGATIVE_INFINITY`, divided by any negative value except `NEGATIVE_INFINITY`, is {{jsxref("Number.POSITIVE_INFINITY", "POSITIVE_INFINITY")}}.
 - `NEGATIVE_INFINITY`, divided by any positive value except {{jsxref("Number.POSITIVE_INFINITY", "POSITIVE_INFINITY")}}, is `NEGATIVE_INFINITY`.
 - `NEGATIVE_INFINITY`, divided by either `NEGATIVE_INFINITY` or {{jsxref("Number.POSITIVE_INFINITY", "POSITIVE_INFINITY")}}, is {{jsxref("NaN")}}.
-- `x > Number.NEGATIVE_INFINITY` is true for any number _x_ that isn’t `NEGATIVE_INFINITY`.
+- `x > Number.NEGATIVE_INFINITY` is true for any number _x_ that isn't `NEGATIVE_INFINITY`.
 
 You might use the `Number.NEGATIVE_INFINITY` property to indicate an error condition that returns a finite number in case of success. Note, however, that {{jsxref("isFinite")}} would be more appropriate in such a case.
 
@@ -42,7 +42,7 @@ Because `NEGATIVE_INFINITY` is a static property of {{jsxref("Number")}}, you al
 In the following example, the variable `smallNumber` is assigned a value that is smaller than the minimum value. When the {{jsxref("Statements/if...else", "if")}} statement executes, `smallNumber` has the value `-Infinity`, so `smallNumber` is set to a more manageable value before continuing.
 
 ```js
-var smallNumber = (-Number.MAX_VALUE) * 2;
+let smallNumber = (-Number.MAX_VALUE) * 2;
 
 if (smallNumber === Number.NEGATIVE_INFINITY) {
   smallNumber = returnFinite();

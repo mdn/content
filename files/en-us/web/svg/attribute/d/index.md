@@ -15,7 +15,7 @@ The commands are [detailed below](#path_commands).
 
 You can use this attribute with the following SVG elements: [`<path>`](#path), [`<glyph>`](#path), [`<missing-glyph>`](#missing-glyph).
 
-`d` is a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation), and hence can be also be [used as a CSS property](#using_d_as_a_css_property).
+`d` is a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation), and hence can also be [used as a CSS property](#using_d_as_a_css_property).
 
 ## Example
 
@@ -114,7 +114,7 @@ For {{SVGElement('missing-glyph')}}, `d` is a string containing a series of path
 ## Using d as a CSS property
 
 `d` is a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation), and hence can be also be modified using CSS.
-The property takes either [path()](/en-US/docs/Web/CSS/path()#_flaws) or `none`.
+The property takes either [path()](/en-US/docs/Web/CSS/path) or `none`.
 
 The example below shows how you might apply a new path on hover over an element.
 The new path is the same as the old one, but adds a line across the heart.
@@ -431,7 +431,7 @@ html,body,svg { height:100% }
 
 ### Cubic Bézier Curve
 
-*Cubic [Bézier curves](/en-US/docs/Glossary/Bézier_curve)* are smooth curve definitions using four points:
+*Cubic [Bézier curves](/en-US/docs/Glossary/Bezier_curve)* are smooth curve definitions using four points:
 
 - starting point (current point)
   - : (*P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*})
@@ -644,7 +644,7 @@ html,body,svg { height:100% }
 
 ### Quadratic Bézier Curve
 
-*Quadratic [Bézier curves](/en-US/docs/Glossary/Bézier_curve)* are smooth curve definitions using three points:
+*Quadratic [Bézier curves](/en-US/docs/Glossary/Bezier_curve)* are smooth curve definitions using three points:
 
 - starting point (current point)
   - : *P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*}
@@ -1056,38 +1056,7 @@ html,body,svg { height:100% }
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("SVG2", "paths.html#DProperty", "d")}}</td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for <code>&#x3C;path></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "fonts.html#GlyphElementDAttribute", "d")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>
-        Initial definition for <code>&#x3C;glyph></code> and <code>&#x3C;missing-glyph></code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "paths.html#DAttribute", "d")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;path></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

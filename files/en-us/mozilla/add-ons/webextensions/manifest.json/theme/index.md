@@ -26,6 +26,10 @@ browser-compat: webextensions.manifest.theme
       <td>No</td>
     </tr>
     <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
+    </tr>
+    <tr>
       <th scope="row">Example</th>
       <td>
         <pre class="brush: json">
@@ -48,7 +52,7 @@ Use the theme key to define a static theme to apply to Firefox.
 
 > **Note:** If you want to include a theme with an extension, please see the {{WebExtAPIRef("theme")}} API.
 
-> **Note:** Since May 2019, themes need to be signed to be installed ({{bug(1545109)}}).  See [Signing and distributing your add-on](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#distributing-your-addon) for more details.
+> **Note:** Since May 2019, themes need to be signed to be installed ({{bug(1545109)}}).  See [Signing and distributing your add-on](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#distributing-your-addon) for more details.
 
 > **Note:** A new version of Firefox for Android, based on GeckoView, is under development. A [pre-release version](https://play.google.com/store/apps/details?id=org.mozilla.fenix) is available. The pre-release version does not support themes.
 
@@ -60,7 +64,7 @@ The following image formats are supported in all theme image properties:
 - PNG
 - APNG
 - SVG (animated SVG is supported from Firefox 59)
-- GIF (animated GIF isn’t supported)
+- GIF (animated GIF isn't supported)
 
 ## Syntax
 
@@ -106,34 +110,10 @@ The theme key is an object that takes the following properties:
       <td>
         <p>Optional</p>
         <p>
-          This object has two properties that affect how the
-          <code>"additional_backgrounds"</code> images are displayed. See
-          <code><a href="#properties">properties</a></code> for details on the
-          properties that this object can contain.
+          This object has properties that affect how the
+          <code>"additional_backgrounds"</code> images are displayed and color schemes are applied. See
+          <code><a href="#properties">properties</a></code> for details on the properties that this object can contain.
         </p>
-        <ul>
-          <li>
-            <code>"additional_backgrounds_alignment":</code> an array of
-            enumeration values defining the alignment of the corresponding
-            <code>"additional_backgrounds":</code> array item.<br />The
-            alignment options include: <code>"bottom"</code>,
-            <code>"center"</code>, <code>"left"</code>, <code>"right"</code>,
-            <code>"top"</code>, <code>"center bottom"</code>,
-            <code>"center center"</code>, <code>"center top"</code>,
-            <code>"left bottom"</code>, <code>"left center"</code>,
-            <code>"left top"</code>, <code>"right bottom"</code>,
-            <code>"right center"</code>, and <code>"right top"</code>. If not
-            specified, defaults to <code>"right top"</code>.<br />Optional
-          </li>
-          <li>
-            <code>"additional_backgrounds_tiling":</code> an array of
-            enumeration values defining how the corresponding
-            <code>"additional_backgrounds":</code> array item repeats, with
-            support for <code>"no-repeat"</code>, <code>"repeat"</code>,
-            <code>"repeat-x"</code>, and <code>"repeat-y"</code>. If not
-            specified, defaults to <code>"no-repeat"</code>.<br />Optional
-          </li>
-        </ul>
       </td>
     </tr>
   </tbody>
@@ -180,7 +160,7 @@ Images should be 200 pixels high to ensure they always fill the header space ver
         </p>
         <p>
           In Firefox for Android, <code>headerURL</code> or
-          <code>theme_frame</code>  must be specified.
+          <code>theme_frame</code>  must be specified.
         </p>
       </td>
     </tr>
@@ -195,7 +175,7 @@ Images should be 200 pixels high to ensure they always fill the header space ver
         <div class="notecard note">
           <p>
             <strong>Note:</strong> Chrome anchors the image to the top left of
-            the header and if the image doesn’t fill the header area tile the
+            the header and if the image doesn't fill the header area tile the
             image.
           </p>
         </div>
@@ -206,7 +186,7 @@ Images should be 200 pixels high to ensure they always fill the header space ver
         </p>
         <p>
           In Firefox for Android, <code>headerURL</code> or
-          <code>theme_frame</code>  must be specified.
+          <code>theme_frame</code>  must be specified.
         </p>
       </td>
     </tr>
@@ -241,7 +221,7 @@ Images should be 200 pixels high to ensure they always fill the header space ver
 
 ### colors
 
-These properties define the colors used for different parts of the browser. They are all optional (but note that `"accentcolor"` and `"textcolor"` were mandatory in Firefox before version 63).  How these properties affect the Firefox UI  is shown here:
+These properties define the colors used for different parts of the browser. They are all optional (but note that `"accentcolor"` and `"textcolor"` were mandatory in Firefox before version 63).  How these properties affect the Firefox UI is shown here:
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -301,10 +281,10 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-     "accentcolor": "red",
-     "tab_background_text": "white"
-  }
+  "colors": {
+     "accentcolor": "red",
+     "tab_background_text": "white"
+  }
 }</pre
           >
         </details>
@@ -315,7 +295,7 @@ All these properties can be specified as either a string containing any valid [C
       <td><code>bookmark_text</code></td>
       <td>
         <p>
-          The color of text and icons in the bookmark and find bars. Also, if
+          The color of text and icons in the bookmark and find bars. Also, if
           <code>tab_text</code> isn't defined it sets the color of the active
           tab text and if <code>icons</code> isn't defined the color of the
           toolbar icons. Provided as Chrome compatible alias for
@@ -337,13 +317,13 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
+  "colors": {
+    "frame": "black",
     "tab_background_text": "white",
-    "tab_text": "white",
-    "toolbar": "black",
-    "bookmark_text": "red"
-  }
+    "tab_text": "white",
+    "toolbar": "black",
+    "bookmark_text": "red"
+  }
 }</pre
           >
         </details>
@@ -363,11 +343,11 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "button_background_active": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "button_background_active": "red"
+  }
 }</pre
           >
         </details>
@@ -382,11 +362,11 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "button_background_hover": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "button_background_hover": "red"
+  }
 }</pre
           >
         </details>
@@ -400,7 +380,7 @@ All these properties can be specified as either a string containing any valid [C
         <div class="notecard note">
           <p>
             <strong>Note:</strong> Ensure the color used contrasts well with
-            those used in <code>frame</code>,  <code>frame_inactive</code>,
+            those used in <code>frame</code>,  <code>frame_inactive</code>,
             <code>button_background_active</code>, and
             <code>button_background_hover</code>.
           </p>
@@ -409,11 +389,11 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "icons": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "icons": "red"
+  }
 }</pre
           >
         </details>
@@ -430,7 +410,7 @@ All these properties can be specified as either a string containing any valid [C
         <div class="notecard note">
           <p>
             <strong>Note:</strong> Ensure the color used contrasts well with
-            those used in <code>frame</code>,  <code>frame_inactive</code>,
+            those used in <code>frame</code>,  <code>frame_inactive</code>,
             <code>button_background_active</code>, and
             <code>button_background_hover</code>.
           </p>
@@ -439,11 +419,11 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "icons_attention": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "icons_attention": "red"
+  }
 }</pre
           >
         </details>
@@ -462,10 +442,10 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "red",
-     "tab_background_text": "white"
-  }
+  "colors": {
+     "frame": "red",
+     "tab_background_text": "white"
+  }
 }</pre
           >
         </details>
@@ -485,11 +465,11 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "red",
+  "colors": {
+     "frame": "red",
      "frame_inactive": "gray",
-     "tab_text": "white"
-  }
+     "tab_text": "white"
+  }
 }</pre
           >
         </details>
@@ -509,10 +489,10 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-     "ntp_background": "red",
-     "ntp_text": "white"
-  }
+  "colors": {
+     "ntp_background": "red",
+     "ntp_text": "white"
+  }
 }</pre
           >
         </details>
@@ -533,10 +513,10 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-     "ntp_background": "red",
+  "colors": {
+     "ntp_background": "red",
      "ntp_text": "white"
-  }
+  }
 }</pre
           >
         </details>
@@ -547,18 +527,18 @@ All these properties can be specified as either a string containing any valid [C
       <td><code>popup</code></td>
       <td>
         <p>
-          The background color of popups (such as the url bar dropdown and the
+          The background color of popups (such as the URL bar dropdown and the
           arrow panels).
         </p>
         <details open>
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "popup": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "popup": "red"
+  }
 }</pre
           >
         </details>
@@ -573,13 +553,13 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "popup": "black",
-     "popup_text": "white",
-     "popup_border": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "popup": "black",
+     "popup_text": "white",
+     "popup_border": "red"
+  }
 }</pre
           >
         </details>
@@ -591,7 +571,7 @@ All these properties can be specified as either a string containing any valid [C
       <td>
         <p>
           The background color of items highlighted using the keyboard inside
-          popups (such as the selected url bar dropdown item).
+          popups (such as the selected URL bar dropdown item).
         </p>
         <div class="notecard note">
           <p>
@@ -604,12 +584,12 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "popup_highlight": "red",
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "popup_highlight": "red",
      "popup_highlight_text": "white"
-  }
+  }
 }</pre
           >
         </details>
@@ -630,12 +610,12 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "popup_highlight": "black",
-     "popup_highlight_text": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "popup_highlight": "black",
+     "popup_highlight_text": "red"
+  }
 }</pre
           >
         </details>
@@ -656,12 +636,12 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "popup": "black",
-     "popup_text": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "popup": "black",
+     "popup_text": "red"
+  }
 }</pre
           >
         </details>
@@ -676,12 +656,12 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-     "sidebar": "red",
-     "sidebar_highlight": "white",
-     "sidebar_highlight_text": "green",
+  "colors": {
+     "sidebar": "red",
+     "sidebar_highlight": "white",
+     "sidebar_highlight_text": "green",
      "sidebar_text": "white"
-  }
+  }
 }</pre
           >
         </details>
@@ -696,9 +676,9 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-     "sidebar_border": "red"
-  }
+  "colors": {
+     "sidebar_border": "red"
+  }
 }</pre
           >
         </details>
@@ -713,10 +693,10 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-     "sidebar_highlight": "red",
+  "colors": {
+     "sidebar_highlight": "red",
      "sidebar_highlight_text": "white"
-  }
+  }
 }</pre
           >
         </details>
@@ -737,10 +717,10 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
+  "colors": {
     "sidebar_highlight": "pink",
     "sidebar_highlight_text": "red",
-  }
+  }
 }</pre
           >
         </details>
@@ -761,12 +741,12 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-     "sidebar": "red",
-     "sidebar_highlight": "white",
-     "sidebar_highlight_text": "green",
+  "colors": {
+     "sidebar": "red",
+     "sidebar_highlight": "white",
+     "sidebar_highlight_text": "green",
      "sidebar_text": "white"
-  }
+  }
 }</pre
           >
         </details>
@@ -789,11 +769,11 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "tab_background_separator": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "tab_background_separator": "red"
+  }
 }</pre
           >
         </details>
@@ -824,11 +804,11 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "white",
-    "tab_background_text": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "toolbar": "white",
+    "tab_background_text": "red"
+  }
 }</pre
           >
         </details>
@@ -843,11 +823,11 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "tab_line": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "tab_line": "red"
+  }
 }</pre
           >
         </details>
@@ -862,11 +842,11 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "tab_loading": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "tab_loading": "red"
+  }
 }</pre
           >
         </details>
@@ -885,14 +865,14 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "images": {
-  "theme_frame": "weta.png"
+  "images": {
+  "theme_frame": "weta.png"
 },
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "tab_selected": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "tab_selected": "red"
+  }
 }</pre
           >
         </details>
@@ -922,15 +902,15 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "images": {
-  "theme_frame": "weta.png"
+  "images": {
+  "theme_frame": "weta.png"
 },
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "tab_selected": "white",
-     "tab_text": "red"
-  }
+  "colors": {
+     "frame": "black",
+     "tab_background_text": "white",
+     "tab_selected": "white",
+     "tab_text": "red"
+  }
 }</pre
           >
         </details>
@@ -953,11 +933,11 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "white",
-    "textcolor": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "toolbar": "white",
+    "textcolor": "red"
+  }
 }</pre
           >
         </details>
@@ -976,11 +956,11 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "red",
-    "tab_background_text": "white"
-  }
+  "colors": {
+    "frame": "black",
+    "toolbar": "red",
+    "tab_background_text": "white"
+  }
 }</pre
           >
         </details>
@@ -998,11 +978,11 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "tab_background_text": "white",
-    "toolbar_bottom_separator": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "tab_background_text": "white",
+    "toolbar_bottom_separator": "red"
+  }
 }</pre
           >
         </details>
@@ -1023,11 +1003,11 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "tab_background_text": "white",
-    "toolbar_field": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "tab_background_text": "white",
+    "toolbar_field": "red"
+  }
 }</pre
           >
         </details>
@@ -1046,14 +1026,14 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "black",
-    "tab_background_text": "white",
-    "toolbar_field": "black",
-    "toolbar_field_text": "white",
-    "toolbar_field_border": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "toolbar": "black",
+    "tab_background_text": "white",
+    "toolbar_field": "black",
+    "toolbar_field_text": "white",
+    "toolbar_field_border": "red"
+  }
 }</pre
           >
         </details>
@@ -1068,14 +1048,14 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "black",
-    "tab_background_text": "white",
-    "toolbar_field": "black",
-    "toolbar_field_text": "white",
-    "toolbar_field_border_focus": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "toolbar": "black",
+    "tab_background_text": "white",
+    "toolbar_field": "black",
+    "toolbar_field_text": "white",
+    "toolbar_field_border_focus": "red"
+  }
 }</pre
           >
         </details>
@@ -1093,14 +1073,14 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "black",
-    "tab_background_text": "white",
-    "toolbar_field": "black",
-    "toolbar_field_text": "white",
-    "toolbar_field_focus": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "toolbar": "black",
+    "tab_background_text": "white",
+    "toolbar_field": "black",
+    "toolbar_field_text": "white",
+    "toolbar_field_focus": "red"
+  }
 }</pre
           >
         </details>
@@ -1173,7 +1153,7 @@ All these properties can be specified as either a string containing any valid [C
         <p>
           Here, the <code>toolbar_field_highlight_text</code> field is used to
           set the text color to a dark medium-dark green, while the highlight
-          color is  a light green.
+          color is a light green.
         </p>
       </td>
     </tr>
@@ -1194,12 +1174,12 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "black",
-    "tab_background_text": "white",
-    "toolbar_field_separator": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "toolbar": "black",
+    "tab_background_text": "white",
+    "toolbar_field_separator": "red"
+  }
 }</pre
           >
         </details>
@@ -1229,13 +1209,13 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "black",
-    "tab_background_text": "white",
-    "toolbar_field": "black",
-    "toolbar_field_text": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "toolbar": "black",
+    "tab_background_text": "white",
+    "toolbar_field": "black",
+    "toolbar_field_text": "red"
+  }
 }</pre
           >
         </details>
@@ -1259,14 +1239,14 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "black",
-    "tab_background_text": "white",
-    "toolbar_field": "black",
-    "toolbar_field_text": "white",
-    "toolbar_field_text_focus": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "toolbar": "black",
+    "tab_background_text": "white",
+    "toolbar_field": "black",
+    "toolbar_field_text": "white",
+    "toolbar_field_text_focus": "red"
+  }
 }</pre
           >
         </details>
@@ -1277,7 +1257,7 @@ All these properties can be specified as either a string containing any valid [C
       <td><code>toolbar_text</code></td>
       <td>
         <p>
-          The color of toolbar text. This also sets the color of  text in the
+          The color of toolbar text. This also sets the color of text in the
           "Find" bar.
         </p>
         <div class="notecard note">
@@ -1290,12 +1270,12 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "tab_background_text": "white",
-    "toolbar": "black",
-    "toolbar_text": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "tab_background_text": "white",
+    "toolbar": "black",
+    "toolbar_text": "red"
+  }
 }</pre
           >
         </details>
@@ -1313,12 +1293,12 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "tab_background_text": "white",
-    "toolbar": "black",
-    "toolbar_top_separator": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "tab_background_text": "white",
+    "toolbar": "black",
+    "toolbar_top_separator": "red"
+  }
 }</pre
           >
         </details>
@@ -1336,12 +1316,12 @@ All these properties can be specified as either a string containing any valid [C
           <summary>See example</summary>
           <pre class="brush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "tab_background_text": "white",
-    "toolbar": "black",
-    "toolbar_vertical_separator": "red"
-  }
+  "colors": {
+    "frame": "black",
+    "tab_background_text": "white",
+    "toolbar": "black",
+    "toolbar_vertical_separator": "red"
+  }
 }</pre
           >
         </details>
@@ -1401,7 +1381,7 @@ Additionally, this key accepts various properties that are aliases for one of th
         <p><code>Array</code> of <code>String</code></p>
       </td>
       <td>
-        <p>Optional.</p>
+        <p>Optional</p>
         <p>
           An array of enumeration values defining the alignment of the
           corresponding <code>"additional_backgrounds":</code> array item.<br />The
@@ -1432,7 +1412,7 @@ Additionally, this key accepts various properties that are aliases for one of th
         <p><code>Array</code> of <code>String</code></p>
       </td>
       <td>
-        <p>Optional.</p>
+        <p>Optional</p>
         <p>
           An array of enumeration values defining how the corresponding
           <code>"additional_backgrounds":</code> array item repeats. Options
@@ -1445,6 +1425,48 @@ Additionally, this key accepts various properties that are aliases for one of th
           <li><code>"repeat-y"</code></li>
         </ul>
         <p>If not specified, defaults to <code>"no-repeat"</code>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>color_scheme</code></td>
+      <td>
+        <p><code>String</code></p>
+      </td>
+      <td>
+        <p>Optional</p>
+        <p>
+          Determines which color scheme is applied to the chrome (for example, context menus)
+          and content (for example, built-in pages and the preferred color scheme for web pages).
+          Options include:
+        </p>
+        <ul>
+          <li><code>"auto"</code> – a light or dark scheme based automatically on the theme.</li>
+          <li><code>"light"</code> – a light scheme.</li>
+          <li><code>"dark"</code> – a dark scheme.</li>
+          <li><code>"system"</code> – uses the system scheme.</li>
+        </ul>
+        <p>If not specified, defaults to <code>"auto"</code>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>content_color_scheme</code></td>
+      <td>
+        <p><code>String</code></p>
+      </td>
+      <td>
+        <p>Optional</p>
+        <p>
+          Determines which color scheme is applied to the content (for example, built-in pages and
+          preferred color scheme for web pages). Overrides <code>color_scheme</code>. Options
+          include:
+        </p>
+        <ul>
+          <li><code>"auto"</code> – a light or dark scheme based automatically on the theme.</li>
+          <li><code>"light"</code> – a light scheme.</li>
+          <li><code>"dark"</code> – a dark scheme.</li>
+          <li><code>"system"</code> – the system scheme.</li>
+        </ul>
+        <p>If not specified, defaults to <code>"auto"</code>.</p>
       </td>
     </tr>
   </tbody>
@@ -1504,24 +1526,24 @@ You can also fill the header with a repeated image, or images, in this case a si
 The following example uses most of the different values for `theme.colors`:
 
 ```json
-  "theme": {
-    "images": {
-      "theme_frame": "weta.png"
-    },
+  "theme": {
+    "images": {
+      "theme_frame": "weta.png"
+    },
 
-    "colors": {
-       "frame": "darkgreen",
-       "tab_background_text": "white",
-       "toolbar": "blue",
-       "bookmark_text": "cyan",
-       "toolbar_field": "orange",
+    "colors": {
+       "frame": "darkgreen",
+       "tab_background_text": "white",
+       "toolbar": "blue",
+       "bookmark_text": "cyan",
+       "toolbar_field": "orange",
        "toolbar_field_border": "white",
-       "toolbar_field_text": "green",
-       "toolbar_top_separator": "red",
-       "toolbar_bottom_separator": "white",
-       "toolbar_vertical_separator": "white"
-    }
-  }
+       "toolbar_field_text": "green",
+       "toolbar_top_separator": "red",
+       "toolbar_bottom_separator": "white",
+       "toolbar_vertical_separator": "white"
+    }
+  }
 ```
 
 It will give you a browser that looks like this:
@@ -1539,16 +1561,16 @@ In this screenshot, `"toolbar_vertical_separator"` is the white vertical line in
 In Chrome:
 
 - `colors/toolbar_text` is not used, use `colors/bookmark_text` instead.
-- `images/theme_frame` anchors the image to the top left of the header and if the image doesn’t fill the header area tile the image.
+- `images/theme_frame` anchors the image to the top left of the header and if the image doesn't fill the header area tile the image.
 - all colors must be specified as an array of RGB values, like this:
 
   ```json
   "theme": {
-    "colors": {
-       "frame": [255, 0, 0],
-       "tab_background_text": [0, 255, 0],
-       "bookmark_text": [0, 0, 255]
-    }
+    "colors": {
+       "frame": [255, 0, 0],
+       "tab_background_text": [0, 255, 0],
+       "bookmark_text": [0, 0, 255]
+    }
   }
   ```
 

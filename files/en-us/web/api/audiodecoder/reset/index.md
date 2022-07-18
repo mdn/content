@@ -1,6 +1,7 @@
 ---
 title: AudioDecoder.reset()
 slug: Web/API/AudioDecoder/reset
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,16 +17,16 @@ The **`reset()`** method of the {{domxref("AudioDecoder")}} interface resets all
 ## Syntax
 
 ```js
-AudioDecoder.reset()
+reset()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
-{{jsxref("Undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

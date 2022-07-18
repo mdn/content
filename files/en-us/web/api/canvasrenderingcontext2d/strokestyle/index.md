@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.strokeStyle
 slug: Web/API/CanvasRenderingContext2D/strokeStyle
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -15,22 +16,14 @@ The **`CanvasRenderingContext2D.strokeStyle`** property of the
 Canvas 2D API specifies the color, gradient, or pattern to use for the strokes
 (outlines) around shapes. The default is `#000` (black).
 
-> **Note:** For more examples of stroke and fill styles, see [Applying
-> styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas
-> tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
+> **Note:** For more examples of stroke and fill styles, see [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
-## Syntax
+## Value
 
-```js
-ctx.strokeStyle = color;
-ctx.strokeStyle = gradient;
-ctx.strokeStyle = pattern;
-```
-
-### Options
+One of the followings:
 
 - `color`
-  - : A {{domxref("DOMString")}} parsed as [CSS](/en-US/docs/Web/CSS)
+  - : A string parsed as [CSS](/en-US/docs/Web/CSS)
     {{cssxref("&lt;color&gt;")}} value.
 - `gradient`
   - : A {{domxref("CanvasGradient")}} object (a linear or radial gradient).

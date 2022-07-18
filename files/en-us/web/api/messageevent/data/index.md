@@ -1,6 +1,7 @@
 ---
 title: MessageEvent.data
 slug: Web/API/MessageEvent/data
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -16,22 +17,16 @@ browser-compat: api.MessageEvent.data
 The **`data`** read-only property of the
 {{domxref("MessageEvent")}} interface represents the data sent by the message emitter.
 
-## Syntax
-
-```js
-var data = messageEvent.data;
-```
-
-### Value
+## Value
 
 The data sent by the message emitter; this can be any data type.
 
-## Example
+## Examples
 
 ```js
 myWorker.onmessage = function(e) {
-  result.textContent = e.data;
-  console.log('Message received from worker');
+  result.textContent = e.data;
+  console.log('Message received from worker');
 };
 ```
 

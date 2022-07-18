@@ -32,6 +32,7 @@ text-rendering: geometricPrecision;
 text-rendering: inherit;
 text-rendering: initial;
 text-rendering: revert;
+text-rendering: revert-layer;
 text-rendering: unset;
 ```
 

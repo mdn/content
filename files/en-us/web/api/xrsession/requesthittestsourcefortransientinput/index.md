@@ -1,6 +1,7 @@
 ---
 title: XRSession.requestHitTestSourceForTransientInput()
 slug: Web/API/XRSession/requestHitTestSourceForTransientInput
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -31,12 +32,15 @@ requestHitTestSourceForTransientInput(options)
 
 - `options`
   - : An object containing configuration options, specifically:
-    - `profile`: A string specifying the [input profile name](/en-US/docs/Web/API/XRInputSource) of the transient input source that will be used to compute hit test results.
-    - `entityTypes`: {{optional_inline}} An {{jsxref("Array")}} specifying the types of entities to be used for hit test source creation. If no no entity type is specified, the array defaults to a single element with the `plane` type. Possible types:
-      - `point`: Compute hit test results based on characteristic points detected.
-      - `plane`: Compute hit test results based on real-world planes detected.
-      - `mesh`: Compute hit test results based on meshes detected.
-    - `offsetRay`: {{optional_inline}} The {{domxref("XRRay")}} object that will be used to perform hit test. If no `XRRay` object has been provided, a new `XRRay` object is constructed without any parameters.
+    - `profile`
+      - : A string specifying the [input profile name](/en-US/docs/Web/API/XRInputSource) of the transient input source that will be used to compute hit test results.
+    - `entityTypes` {{optional_inline}}
+      - : An {{jsxref("Array")}} specifying the types of entities to be used for hit test source creation. If no entity type is specified, the array defaults to a single element with the `plane` type. Possible types:
+        - `point`: Compute hit test results based on characteristic points detected.
+        - `plane`: Compute hit test results based on real-world planes detected.
+        - `mesh`: Compute hit test results based on meshes detected.
+    - `offsetRay` {{optional_inline}}
+      - : The {{domxref("XRRay")}} object that will be used to perform hit test. If no `XRRay` object has been provided, a new `XRRay` object is constructed without any parameters.
 
 ### Return value
 

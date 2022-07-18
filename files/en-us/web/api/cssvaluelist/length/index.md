@@ -1,6 +1,7 @@
 ---
 title: CSSValueList.length
 slug: Web/API/CSSValueList/length
+page-type: web-api-instance-property
 tags:
   - API
   - CSSValueList
@@ -27,19 +28,13 @@ in the list. The range of valid values of the indices is `0` to
 > - the untyped [CSS Object Model](CSS_Object_Model), widely supported, or
 > - the modern [CSS Typed Object Model API](CSS_Typed_OM_API), less supported and considered experimental.
 
-## Syntax
-
-```js
-var length = cssValueList.length;
-```
-
-### Value
+## Value
 
 An `unsigned long` representing the number of {{domxref("CSSValue")}}s.
 
 ## Specifications
 
-This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) specification, but has been dropped from any
 standardization effort since then.
 
 It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.

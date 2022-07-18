@@ -15,8 +15,7 @@ browser-compat: javascript.builtins.Intl.Locale.toString
 
 The
 **`Intl.Locale.prototype.toString()`** returns the
-Locale's full [locale
-identifier string](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier).
+Locale's full [locale identifier string](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier).
 
 {{EmbedInteractiveExample("pages/js/intl-locale-prototype-tostring.html")}}
 

@@ -1,6 +1,7 @@
 ---
 title: CloseEvent()
 slug: Web/API/CloseEvent/CloseEvent
+page-type: web-api-constructor
 tags:
   - API
   - CloseEvent
@@ -10,34 +11,32 @@ browser-compat: api.CloseEvent.CloseEvent
 ---
 {{APIRef("Websockets API")}}
 
-The **`CloseEvent()`** constructor creates a new
-{{domxref("CloseEvent")}}.
+The **`CloseEvent()`** constructor creates a new {{domxref("CloseEvent")}} object.
 
 ## Syntax
 
 ```js
-new CloseEvent(typeArg);
-new CloseEvent(typeArg, closeEventInit);
+new CloseEvent(type)
+new CloseEvent(type, options)
 ```
 
-### Values
+### Parameters
 
-- `typeArg`
-  - : Is a {{domxref("DOMString")}} representing the name of the event.
-- `closeEventInit` {{optional_inline}}
+- `type`
+  - : A string with the name of the event.
+    It is case-sensitive and browsers always set it to `close`.
+- `options` {{optional_inline}}
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
+    - `wasClean` {{optional_inline}}
+      - : A boolean value indicating if the connection has been closed cleanly or not. It defaults to `false`.
+    - `code` {{optional_inline}}
+      - : An integer representing the _connection close code_ sent by the server. It defaults to `0`.
+    - `reason` {{optional_inline}}
+      - : A string containing a human-readable reason describing why the server closed the connection. It defaults to `''`
 
-  - : Is a `CloseEventInit` dictionary, having the following fields:
+## Return value
 
-    - `"wasClean"`, optional and defaulting to `false`, of type
-      `long`, indicates if the connection has been closed cleanly or not.
-    - `"code"`, optional and defaulting to `0`, of type
-      `unsigned short`, that is the connection close code sent by the server.
-    - `"reason"`, optional and defaulting to `''`, of type
-      {{domxref("DOMString")}}, that is a human-readable reason why the server closed
-      the connection.
-
-    > **Note:** The `CloseEventInit` dictionary also accepts fields from the
-    > {{domxref("Event.Event", "EventInit")}} dictionary.
+A new {{domxref("CloseEvent")}} object.
 
 ## Specifications
 

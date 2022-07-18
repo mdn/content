@@ -38,8 +38,8 @@ We can set up our video player and `<canvas>` element like this:
 
 ```html
 <video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous">
-  <source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
-  <source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
+  <source src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
+  <source src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
 </video>
 
 <canvas id="my-canvas" width="480" height="270"></canvas>
@@ -50,38 +50,36 @@ We can set up our video player and `<canvas>` element like this:
 This code handles altering the frames.
 
 ```js
-var processor = {
-  timerCallback: function() {
+const processor = {
+  timerCallback() {
     if (this.video.paused || this.video.ended) {
       return;
     }
     this.computeFrame();
-    var self = this;
-    setTimeout(function () {
-      self.timerCallback();
+    setTimeout(() => {
+      this.timerCallback();
     }, 16); // roughly 60 frames per second
   },
 
-  doLoad: function() {
+  doLoad() {
     this.video = document.getElementById("my-video");
     this.c1 = document.getElementById("my-canvas");
     this.ctx1 = this.c1.getContext("2d");
-    var self = this;
 
-    this.video.addEventListener("play", function() {
-      self.width = self.video.width;
-      self.height = self.video.height;
-      self.timerCallback();
+    this.video.addEventListener("play", () => {
+      this.width = this.video.width;
+      this.height = this.video.height;
+      this.timerCallback();
     }, false);
   },
 
-  computeFrame: function() {
+  computeFrame() {
     this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
-    var frame = this.ctx1.getImageData(0, 0, this.width, this.height);
-    var l = frame.data.length / 4;
+    const frame = this.ctx1.getImageData(0, 0, this.width, this.height);
+    const l = frame.data.length / 4;
 
-    for (var i = 0; i < l; i++) {
-      var grey = (frame.data[i * 4 + 0] + frame.data[i * 4 + 1] + frame.data[i * 4 + 2]) / 3;
+    for (let i = 0; i < l; i++) {
+      const grey = (frame.data[i * 4 + 0] + frame.data[i * 4 + 1] + frame.data[i * 4 + 2]) / 3;
 
       frame.data[i * 4 + 0] = grey;
       frame.data[i * 4 + 1] = grey;
@@ -106,7 +104,7 @@ processor.doLoad()
 
 This is a pretty simple example showing how to manipulate video frames using a canvas. For efficiency, you should consider using {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} instead of `setTimeout()` when running on browsers that support it.
 
-You can achieve the same result by applying the {{cssxref("filter-function/grayscale()", "grayscale()")}} CSS function to the source `<video>` element.
+You can achieve the same result by applying the {{cssxref("filter-function/grayscale", "grayscale()")}} CSS function to the source `<video>` element.
 
 > **Note:** Due to potential security issues if your video is on a different domain than your code, you'll need to enable [CORS (Cross Origin Resource Sharing)](/en-US/docs/Web/HTTP/CORS) on your video server.
 
@@ -114,9 +112,9 @@ You can achieve the same result by applying the {{cssxref("filter-function/grays
 
 [WebGL](/en-US/docs/Web/API/WebGL_API) is a powerful API that uses canvas to draw hardware-accelerated 3D or 2D scenes. You can combine WebGL and the {{htmlelement("video")}} element to create video textures, which means you can put video inside 3D scenes.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-> **Note:** You can find the [source code of this demo on GitHub](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8) ([see it live](https://mdn.github.io/webgl-examples/tutorial/sample8/) also).
+> **Note:** You can find the [source code of this demo on GitHub](https://github.com/mdn/dom-examples/tree/master/webgl-examples/tutorial/sample8) ([see it live](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/) also).
 
 ### Playback rate
 
@@ -128,7 +126,7 @@ Note that the `playbackRate` property works with both `<audio>` and `<video>`, b
 
 ```html
 <video id="my-video" controls
-       src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v">
+       src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v">
 </video>
 ```
 
@@ -143,8 +141,8 @@ myVideo.playbackRate = 2;
 
 ```html hidden
 <video id="my-video" controls="true" width="480" height="270">
-  <source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
-  <source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
+  <source src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
+  <source src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
 </video>
 <div class="playable-buttons">
   <input id="edit" type="button" value="Edit" />
@@ -190,7 +188,7 @@ window.addEventListener('load', setPlaybackRate);
 
 The Web Audio API can receive audio from a variety of sources, then process it and send it back out to an {{domxref("AudioDestinationNode")}} representing the output device to which the sound is sent after processing.
 
-| If the audio source is...                                                                                                                                                                  | Use this Web Audio node type                             |
+| If the audio source is…                                                                                                                                                                  | Use this Web Audio node type                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- |
 | An audio track from an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element                                                                                   | {{domxref("MediaElementAudioSourceNode")}} |
 | A plain raw audio data buffer in memory                                                                                                                                                    | {{domxref("AudioBufferSourceNode")}}         |
@@ -228,8 +226,8 @@ filter.gain.value = 25;
 
 ```html hidden
 <video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous">
-  <source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
-  <source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
+  <source src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
+  <source src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
 </video>
 <div class="playable-buttons">
   <input id="edit" type="button" value="Edit" />
@@ -344,9 +342,9 @@ Libraries currently exist for the following formats :
 
 ## Examples
 
-- [Various Web Audio API (and other) examples](https://github.com/mdn/)
+- [Various Web Audio API (and other) examples](https://github.com/mdn/webaudio-examples)
 - [THREE.js Video Cube example](https://github.com/chrisdavidmills/threejs-video-cube)
-- [Convolution Effects in Real-Time](http://chromium.googlecode.com/svn/trunk/samples/audio/convolution-effects.html)
+- [Convolution Effects in Real-Time](https://github.com/cwilso/web-audio-samples/blob/master/samples/audio/convolution-effects.html)
 
 ## See also
 
@@ -356,9 +354,9 @@ Libraries currently exist for the following formats :
 - [HTML5 playbackRate explained](/en-US/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained)
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Web audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
-- [Using Video frames as a WebGL Texture](/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL#using_the_video_frames_as_a_texture) (You can also the [THREE.js](http://threejs.org) WebGL library (and others) to [achieve this effect](https://stemkoski.github.io/Three.js/Video.html))
+- [Using Video frames as a WebGL Texture](/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL#using_the_video_frames_as_a_texture) (You can also the [THREE.js](https://threejs.org) WebGL library (and others) to [achieve this effect](https://stemkoski.github.io/Three.js/Video.html))
 - [Animating Textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL)
-- [Developing Game Audio with the Web Audio API (Room effects and filters)](http://www.html5rocks.com/en/tutorials/webaudio/games/#toc-room)
+- [Developing Game Audio with the Web Audio API (Room effects and filters)](https://www.html5rocks.com/en/tutorials/webaudio/games/#toc-room)
 
 ### Reference
 
@@ -369,5 +367,3 @@ Libraries currently exist for the following formats :
 - [AudioContext](/en-US/docs/Web/API/AudioContext)
 - More info on [Spatial Audio](/en-US/docs/Web/API/BaseAudioContext/createPanner)
 - [Web media technologies](/en-US/docs/Web/Media)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Apps/Fundamentals/")}}

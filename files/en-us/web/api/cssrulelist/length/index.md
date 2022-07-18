@@ -1,6 +1,7 @@
 ---
 title: CSSRuleList.length
 slug: Web/API/CSSRuleList/length
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,13 +14,7 @@ browser-compat: api.CSSRuleList.length
 
 The **`length`** property of the {{domxref("CSSRuleList")}} interface returns the number of {{domxref("CSSRule")}} objects in the list.
 
-## Syntax
-
-```js
-let length = CSSRuleList.length;
-```
-
-### Value
+## Value
 
 An integer.
 

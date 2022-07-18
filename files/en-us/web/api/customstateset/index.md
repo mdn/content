@@ -1,6 +1,7 @@
 ---
 title: CustomStateSet
 slug: Web/API/CustomStateSet
+page-type: web-api-interface
 tags:
   - API
   - Interface

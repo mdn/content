@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.vertexAttribDivisor()
 slug: Web/API/WebGL2RenderingContext/vertexAttribDivisor
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -26,7 +27,7 @@ with {{domxref("WebGL2RenderingContext.drawArraysInstanced()",
 ## Syntax
 
 ```js
-void gl.vertexAttribDivisor(index, divisor);
+vertexAttribDivisor(index, divisor)
 ```
 
 ### Parameters
@@ -39,7 +40,7 @@ void gl.vertexAttribDivisor(index, divisor);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

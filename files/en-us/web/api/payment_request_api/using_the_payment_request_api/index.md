@@ -1,6 +1,7 @@
 ---
 title: Using the Payment Request API
 slug: Web/API/Payment_Request_API/Using_the_Payment_Request_API
+page-type: guide
 tags:
   - Demos
   - Examples
@@ -29,8 +30,8 @@ A payment request always starts with the creation of a new {{domxref("PaymentReq
 So for example, you could create a new `PaymentRequest` instance like so:
 
 ```js
-var request = new PaymentRequest(buildSupportedPaymentMethodData(),
-                                 buildShoppingCartDetails());
+const request = new PaymentRequest(buildSupportedPaymentMethodData(),
+                                   buildShoppingCartDetails());
 ```
 
 The functions invoked inside the constructor return the required object parameters:
@@ -93,8 +94,8 @@ new PaymentRequest(buildSupportedPaymentMethodData(),
       .then(function(result) {
         if(result) {
           // Real payment request
-          var request = new PaymentRequest(buildSupportedPaymentMethodData(),
-                                           checkoutObject);
+          const request = new PaymentRequest(buildSupportedPaymentMethodData(),
+                                             checkoutObject);
 
           request.show().then(function(paymentResponse) {
             // Here we would process the payment.
@@ -151,7 +152,7 @@ In the following snippet we do just this — depending on whether the user can m
 
 ```js
 const checkoutButton = document.getElementById('checkout-button');
-checkoutButton.innerText = "Loading...";
+checkoutButton.innerText = "Loading…";
 if (window.PaymentRequest) {
   let request = new PaymentRequest(buildSupportedPaymentMethodNames(),
       buildShoppingCartDetails());
@@ -180,11 +181,12 @@ If the checkout flow needs to know whether {{domxref("PaymentRequest.canMakePaym
 // The page has loaded. Should the page use PaymentRequest?
 // If PaymentRequest fails, should the page fallback to manual
 // web form checkout?
-const supportedPaymentMethods = ...
+const supportedPaymentMethods = [ /* supported methods */ ];
+
 let shouldCallPaymentRequest = true;
 let fallbackToLegacyOnPaymentRequestFailure = false;
 (new PaymentRequest(supportedPaymentMethods,
-    {total: {label: 'Stub', amount: {currency: 'USD', value: '0.01'}}})
+    {total: {label: 'Stub', amount: {currency: 'USD', value: '0.01'}}}))
 .canMakePayment()
 .then(function(result) {
   shouldCallPaymentRequest = result;
@@ -234,7 +236,7 @@ The code looks something like this:
 
 ```js
 checkoutButton.addEventListener('click', function() {
-  var request = new PaymentRequest(buildSupportedPaymentMethodData(),
+  const request = new PaymentRequest(buildSupportedPaymentMethodData(),
     buildShoppingCartDetails());
     request.show().then(function(paymentResponse) {
     // Here we would process the payment. For this demo, simulate immediate success:
@@ -291,8 +293,7 @@ Some use cases (e.g., paying for fuel at a service station) involve pre-authoriz
 The merchant code would look like this:
 
 ```js
-let paymentRequest = new PaymentRequest(
-    [{supportedMethods: 'https://example.com/preauth'}], ...);
+let paymentRequest = new PaymentRequest([{supportedMethods: 'https://example.com/preauth'}], details);
 // Send `CanMakePayment` event to the payment handler.
 paymentRequest.canMakePayment()
     .then(function(res) {
@@ -313,7 +314,7 @@ The payment handler would include the following code:
 ```js
 self.addEventListener('canmakepayment', function(evt) {
   // Pre-authorize here.
-  let preAuthSuccess = ...;
+  let preAuthSuccess = true;
   evt.respondWith(preAuthSuccess);
 });
 ```
@@ -325,6 +326,3 @@ This payment handler would need to live in a service worker at `https://example.
 ## See also
 
 - [Google PaymentRequest Samples](https://googlechrome.github.io/samples/paymentrequest/)
-- [Google PaymentRequest codelab](https://g.co/PaymentRequestCodeLab)
-- Ecommerce website demo and source code [VeggieShop](https://github.com/pjbazin/wpwg-demo)
-- Web Payment App demo and source code [WhiteCollar](https://github.com/pjbazin/wpwg-demo/tree/master/WhiteCollar)

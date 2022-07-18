@@ -1,6 +1,7 @@
 ---
 title: CSSPositionValue()
 slug: Web/API/CSSPositionValue/CSSPositionValue
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
@@ -21,19 +22,19 @@ properties that take a position, for example {{cssxref('object-position')}}.
 ## Syntax
 
 ```js
-cvar cssPositionValue = new CSSPositionValue(x, y)
+new CSSPositionValue(x, y)
 ```
 
 ### Parameters
 
-- x
+- `x`
   - : A position along the web page's horizontal axis.
-- y
+- `y`
   - : A position along the web page's vertical axix.
 
 ## Examples
 
-The following example positions a container `<div>` 5 pixels from the
+The following example positions a container `<div>` 5 pixels from the
 top and 10 pixels from the left of the page.
 
 ```js

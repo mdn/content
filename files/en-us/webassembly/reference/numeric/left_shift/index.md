@@ -12,7 +12,7 @@ tags:
 
 The **`shl`** instructions, short for *shift-left*, are used for performing a bitwise left-shift, similar to the **`<<`** operator in other languages.
 
-{{EmbedInteractiveExample("pages/wat/shl.html")}}
+{{EmbedInteractiveExample("pages/wat/shl.html", "tabbed-taller")}}
 
 ## Syntax
 

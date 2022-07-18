@@ -1,6 +1,7 @@
 ---
 title: VideoTrack.label
 slug: Web/API/VideoTrack/label
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -23,15 +24,9 @@ property **`label`** returns a string specifying the video
 track's human-readable label, if one is available; otherwise, it returns an empty
 string.
 
-## Syntax
+## Value
 
-```js
-var videoTrackLabel = VideoTrack.label;
-```
-
-### Value
-
-A {{domxref("DOMString")}} specifying the track's human-readable label, if one is
+A string specifying the track's human-readable label, if one is
 available in the track metadata. Otherwise, an empty string (`""`) is
 returned.
 
@@ -39,7 +34,7 @@ For example, a track whose {{domxref("VideoTrack.kind", "kind")}} is
 `"sign"` might have a `label` such as
 `"A sign-language interpretation."`.
 
-## Example
+## Examples
 
 This example returns an array of track kinds and labels for potential use in a user
 interface to select video tracks for a specified media element. The list is filtered to
@@ -47,7 +42,7 @@ only allow certain track kinds through.
 
 ```js
 function getTrackList(el) {
-  var trackList = [];
+  let trackList = [];
   const wantedKinds = [
     "main", "alternative", "commentary"
   ];

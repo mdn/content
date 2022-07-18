@@ -1,9 +1,9 @@
 ---
 title: Headers.entries()
 slug: Web/API/Headers/entries
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Fetch API
   - Headers
   - Method
@@ -22,14 +22,18 @@ contained in this object. The both the key and value of each pairs are
 ## Syntax
 
 ```js
-headers.entries();
+entries()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
 Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-## Example
+## Examples
 
 ```js
 // Create a test Headers object

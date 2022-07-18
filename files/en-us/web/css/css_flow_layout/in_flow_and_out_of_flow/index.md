@@ -32,7 +32,7 @@ Out of flow items create a new Block Formatting Context (BFC) and therefore ever
 
 ### Floated Items
 
-In this example I have a `div`, and then two paragraphs. I’ve added a background color to the paragraphs, and then floated the `div` left. The `div` is now out of flow.
+In this example I have a `div`, and then two paragraphs. I've added a background color to the paragraphs, and then floated the `div` left. The `div` is now out of flow.
 
 As a float it is first laid out according to where it would be in normal flow, then taken out of flow and moved to the left as far as possible.
 
@@ -60,7 +60,7 @@ When you do anything to remove, or shift an item from where it would be placed i
 
 ## Summary
 
-In this guide we have covered the ways to take an element out of flow in order to achieve some very specific types of positioning. In the next guide we will look at a related issue, that of creating a [Block Formatting Context](/en-US/docs/Web/Guide/CSS/Block_formatting_context), in [Formatting Contexts Explained](/en-US/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained).
+In this guide we have covered the ways to take an element out of flow in order to achieve some very specific types of positioning. In the next guide we will look at a related issue, that of creating a [Block Formatting Context](/en-US/docs/Web/Guide/CSS/Block_formatting_context), in [Formatting Contexts Explained](/en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts).
 
 ## See also
 

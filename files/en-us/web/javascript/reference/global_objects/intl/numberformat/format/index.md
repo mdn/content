@@ -38,6 +38,13 @@ format(number)
 The `format` getter function formats a number into a string according to the
 locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object.
 
+> **Note:** Numbers in JavaScript suffer from loss of precision if they are too big or too small, making the text representation inaccurate. If you are formatting an integer larger than {{jsxref("Number.MAX_SAFE_INTEGER")}}, prefer using a {{jsxref("BigInt")}} instead.
+>
+> ```js
+> new Intl.NumberFormat('en-US').format(1234567891234567891) // 1,234,567,891,234,568,000
+> new Intl.NumberFormat('en-US').format(1234567891234567891n) // 1,234,567,891,234,567,891
+> ```
+
 ## Examples
 
 ### Using format
@@ -46,8 +53,8 @@ Use the `format` getter function for formatting a single currency value,
 here for Russia:
 
 ```js
-var options = { style: 'currency', currency: 'RUB' };
-var numberFormat = new Intl.NumberFormat('ru-RU', options);
+const options = { style: 'currency', currency: 'RUB' };
+const numberFormat = new Intl.NumberFormat('ru-RU', options);
 console.log(numberFormat.format(654321.987));
 // → "654 321,99 руб."
 ```
@@ -61,9 +68,9 @@ considered a historical artefact, as part of a convention which is no longer fol
 for new features, but is preserved to maintain compatibility with existing programs.
 
 ```js
-var a = [123456.789, 987654.321, 456789.123];
-var numberFormat = new Intl.NumberFormat('es-ES');
-var formatted = a.map(n => numberFormat.format(n));
+const a = [123456.789, 987654.321, 456789.123];
+const numberFormat = new Intl.NumberFormat('es-ES');
+const formatted = a.map(n => numberFormat.format(n));
 console.log(formatted.join('; '));
 // → "123.456,789; 987.654,321; 456.789,123"
 ```

@@ -64,7 +64,7 @@ Events have three functions:
     When the user clicks the page action, hide it, and navigate the active tab to "<https://giphy.com/explore/cat>":
 
     ```js
-    var CATGIFS = "https://giphy.com/explore/cat";
+    let CATGIFS = "https://giphy.com/explore/cat";
 
     browser.pageAction.onClicked.addListener((tab) => {
       browser.pageAction.hide(tab.id);
@@ -79,7 +79,7 @@ Events have three functions:
 
     > **Note:**
     >
-    > This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction#event-onClicked) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
+    > This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/reference/pageAction/#event-onClicked) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
     >
     > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

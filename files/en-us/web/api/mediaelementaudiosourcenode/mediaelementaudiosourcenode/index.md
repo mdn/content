@@ -1,6 +1,7 @@
 ---
 title: MediaElementAudioSourceNode()
 slug: Web/API/MediaElementAudioSourceNode/MediaElementAudioSourceNode
+page-type: web-api-constructor
 tags:
   - API
   - Audio
@@ -17,47 +18,47 @@ The **`MediaElementAudioSourceNode()`** constructor creates a new {{domxref("Med
 ## Syntax
 
 ```js
-var myAudioSource = new MediaElementAudioSourceNode(context, options);
+new MediaElementAudioSourceNode(context, options)
 ```
 
 ### Parameters
 
-- _context_
+- `context`
   - : An {{domxref("AudioContext")}} representing the audio context you want the node to be associated with.
-- _options_
-
-  - : A `MediaElementAudioSourceOptions` dictionary object defining the properties you want the `MediaElementAudioSourceNode` to have:
-
-    - `mediaElement`: An {{domxref("HTMLMediaElement")}} that will be used as the source for the audio.
-    - `channelCount`: Represents an integer used to determine how many channels are used when [up-mixing
-      and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. (See
-      {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
-      definition depend on the value of `channelCountMode`.
-    - `channelCountMode`: Represents an enumerated value describing the way channels must be matched between
-      the node's inputs and outputs. (See {{domxref("AudioNode.channelCountMode")}} for more
-      information including default values.)
-    - `channelInterpretation`: Represents an enumerated value describing the meaning of the channels. This
-      interpretation will define how audio [up-mixing
-      and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
-      The possible values are `"speakers"` or `"discrete"`. (See
-      {{domxref("AudioNode.channelCountMode")}} for more information including default
-      values.)
+- `options`
+  - : An object defining the properties you want the `MediaElementAudioSourceNode` to have:
+    - `mediaElement`
+      - : An {{domxref("HTMLMediaElement")}} that will be used as the source for the audio.
+    - `channelCount`
+      - : An integer used to determine how many channels are used when [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. (See
+        {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
+        definition depend on the value of `channelCountMode`.
+    - `channelCountMode`
+      - : A string describing the way channels must be matched between
+        the node's inputs and outputs. (See {{domxref("AudioNode.channelCountMode")}} for more
+        information including default values.)
+    - `channelInterpretation`
+      - : A string describing the meaning of the channels. This
+        interpretation will define how audio [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
+        The possible values are `"speakers"` or `"discrete"`. (See
+        {{domxref("AudioNode.channelCountMode")}} for more information including default
+        values.)
 
 ### Return value
 
 A new {{domxref("MediaElementAudioSourceNode")}} object instance.
 
-## Example
+## Examples
 
 ```js
-var ac = new AudioContext();
-var mediaElement = document.createElement('audio');
+const ac = new AudioContext();
+const mediaElement = document.createElement('audio');
 
-var options = {
+const options = {
   mediaElement : mediaElement
 }
 
-var myAudioSource = new MediaElementAudioSourceNode(ac, options);
+const myAudioSource = new MediaElementAudioSourceNode(ac, options);
 ```
 
 ## Specifications

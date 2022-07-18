@@ -1,6 +1,7 @@
 ---
 title: ValidityState.patternMismatch
 slug: Web/API/ValidityState/patternMismatch
+page-type: web-api-instance-property
 tags:
   - API
   - Constraint Validation API
@@ -9,6 +10,8 @@ tags:
   - Reference
 browser-compat: api.ValidityState.patternMismatch
 ---
+{{APIRef("HTML DOM")}}
+
 The read-only **`patternMismatch`** property of a **[`ValidityState`](/en-US/docs/Web/API/ValidityState)** object indicates if the value of an {{HTMLElement("input")}}, after having been edited by the user, does not conform to the constraints set by the element's [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute.
 
 The `patternMismatch` property will be true if and only if the following conditions are all true:
@@ -41,7 +44,7 @@ input:invalid {
 }
 ```
 
-{{EmbedLiveSample("Examples", 300, 40)}}
+{{EmbedLiveSample("Examples", 300, 87)}}
 
 Note, in this case, we get a `patternMismatch` not a {{domxref('validityState.tooLong')}} or {{domxref('validityState.tooShort')}} if the values are too long or too short because it is the pattern that is dictating the length of the value. Had we used [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength) and [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength) attributes instead, we may have seen {{domxref('validityState.tooLong')}} or {{domxref('validityState.tooShort')}} being true.
 

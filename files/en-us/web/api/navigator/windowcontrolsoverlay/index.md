@@ -1,6 +1,7 @@
 ---
 title: Navigator.windowControlsOverlay
 slug: Web/API/Navigator/windowControlsOverlay
+page-type: web-api-instance-property
 tags:
   - API
   - Window Controls Overlay
@@ -26,7 +27,7 @@ of the app window.
 
 The {{domxref("WindowControlsOverlay")}} interface.
 
-## Example
+## Examples
 
 ```js
 if ('windowControlsOverlay' in navigator) {

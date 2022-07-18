@@ -34,6 +34,7 @@ text-decoration-style: wavy;
 text-decoration-style: inherit;
 text-decoration-style: initial;
 text-decoration-style: revert;
+text-decoration-style: revert-layer;
 text-decoration-style: unset;
 ```
 
@@ -49,7 +50,7 @@ text-decoration-style: unset;
   - : Draws a dashed line.
 - wavy
   - : Draws a wavy line.
-- \-moz-none{{ non-standard_inline }}
+- \-moz-none {{ non-standard_inline }}
   - : Draws no line. Use {{ cssxref("text-decoration-line") }}`: none` instead.
 
 ## Formal definition

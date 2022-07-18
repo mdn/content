@@ -7,6 +7,7 @@ tags:
   - HTTP Status Code
   - Reference
   - Status code
+spec-urls: https://www.rfc-editor.org/rfc/rfc6585#section-3
 ---
 {{HTTPSidebar}}
 
@@ -14,7 +15,7 @@ The HTTP **`428 Precondition Required`** response status code
 indicates that the server requires the request to be [conditional](/en-US/docs/Web/HTTP/Conditional_requests).
 
 Typically, this means that a required precondition header, such
-as {{HTTPHeader("If-Match")}}, **is missing**.
+as {{HTTPHeader("If-Match")}}, **is missing**.
 
 When a precondition header is **not matching** the server side state, the
 response should be {{HTTPStatus(412)}} `Precondition Failed`.
@@ -27,9 +28,7 @@ response should be {{HTTPStatus(412)}} `Precondition Failed`.
 
 ## Specifications
 
-| Specification                                                        | Title                        |
-| -------------------------------------------------------------------- | ---------------------------- |
-| {{RFC("6585", "428 Precondition Required" , "3")}} | Additional HTTP Status Codes |
+{{Specifications}}
 
 ## See also
 

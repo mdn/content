@@ -10,75 +10,41 @@ tags:
   - jank
   - responsive
   - width
+  - performance
 ---
-This article explains a change that has occurred in the way sizes are worked out on web documents when width and height attributes are set on them.
 
-This change means that the aspect ratio of the image is calculated by the browser early on and can then be used to correct the size needed to display the image before it has loaded, if CSS has been applied that causes problems with its display size. Read on to find out more.
+When the `width` and `height` attributes of an image are included on an HTML {{htmlelement("img")}} element, the aspect ratio of the image can be calculated by the browser prior to the image being loaded. This aspect ratio is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
 
 ## Jank problems when loading images
 
-In the olden days of web development, it was always seen as a good practice to add `width` and `height` attributes to your HTML {{htmlelement("img")}} elements, so that when browsers first loaded the page, they could put a correctly-sized placeholder box in the layout for each image to appear in when it finally loads.
+Browsers begin rendering content as HTML is parsed, often before all assets, including images, are downloaded. It is a good practice to add `width` and `height` attributes to your HTML {{htmlelement("img")}} elements, so that when browsers first render the page, they can reserve a correctly-sized placeholder box for each image to appear in when the images are loaded.
 
 ![Two screenshots the first without an image but with space reserved, the second showing the image loaded into the reserved space.](ar-guide.jpg)
 
-Without the `width` and `height` attributes, no placeholder space would be created, and when the image finally loaded you would get a noticeable jank in the page layout. This wasn't an attractive thing for your users to see, and could also result in performance issues due to the repainting required after each image loads, hence adding the attributes being a good idea.
+Without the `width` and `height` attributes, no placeholder space is created, creating a noticeable {{glossary('jank')}}, or layout shift, in the page when the image loads after the page is rendered. Page reflow and repaints are performance and usability issues.
 
-Let’s move forward a few years to the era of responsive design. To keep images from breaking out of their containers when the container becomes narrower than the image, developers started using CSS like the following:
-
-```css
-img {
-  max-width: 100%;
-  height: auto;
-}
-```
-
-This is really useful for responsive layouts, but unfortunately it causes the jank problem to return — the above CSS overrides the width and height attribute information, meaning that if the image has not loaded for some reason, its height will be set to 0. When the image finally loads, the same jank will occur as the page layout is shifted to make space for it.
-
-## A new way of sizing images before loading completes
-
-Recognizing the problem, a WICG community group formed to propose an [`intrinsicsize`](https://github.com/WICG/intrinsicsize-attribute) attribute. Folks from Mozilla then expanded on this thinking, working on a proposal in the CSS [Box Sizing Level 4](https://drafts.csswg.org/css-sizing-4/) draft to define an `aspect-ratio` property and propose the idea of using the `width` and `height` attributes to compute layout. Fantasai & Jen Simmons collaborated with Emilio, who worked on an experimental implementation to prove it would work.
-
-Mozilla then [brought the idea up in the WICG community group](https://github.com/WICG/intrinsicsize-attribute/issues/16) and discussed it further until representatives from Chrome were onboard with the idea.
-
-Due to this work, browsers have implemented a mechanism for sizing images before the actual image is loaded.
-The {{cssxref("aspect-ratio")}} property that applies to replaced elements, and other related elements that accept `width` and `height` attributes.
-This appears in the browser's internal UA stylesheet, similar to the following:
-
-```css
-img, input[type="image"], video, embed, iframe, marquee, object, table {
-  aspect-ratio: attr(width) / attr(height);
-}
-```
-
-This actually affects any element that acts as a container for complex or mixed visual media — {{htmlelement("embed")}}, {{htmlelement("iframe")}}, {{htmlelement("marquee")}}, {{htmlelement("object")}}, {{htmlelement("table")}}, and {{htmlelement("video")}}, in addition to actual images ({{htmlelement("img")}} and `<input type="image">`). When such an element has `width` and `height` attributes set on it, its aspect ratio will be calculated before load time, and be available to the browser.
-
-> **Note:** Currently on Firefox this effect is being limited to actual `<img>` elements, as applying to other such elements may have undesirable results. See ({{bug(1583980)}}).
-
-When the `width`/`height` of an `<img>` element — as set using HTML attributes — is overridden using CSS using something like this:
+In responsive designs, when a container is narrower than an image, the following CSS is generally used to keep images from breaking out of their containers:
 
 ```css
 img {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%;
+  height: auto;
 }
 ```
 
-The aspect ratio is then used to calculate the height and therefore the correct size is applied to the `<img>` element, meaning that the aforementioned jank will not occur when the image loads.
+While useful for responsive layouts, this causes jank when width and height information are not included, as if no height information is present when the `<img>` element is parsed but before the image has loaded, this CSS effectively has set the height to 0. When the image loads after the page has been initially rendered to the screen, the page reflows and repaints creating a layout shift as it creates space for the newly determined height.
 
-## It only works before the image loads
+Browsers have a mechanism for sizing images before the actual image is loaded. When an `<img>`, `<video>`, or `<input type="button">` element has `width` and `height` attributes set on it, its aspect ratio is calculated before load time, and is available to the browser, using the dimensions provided.
 
-The new mechanism currently only works on `<img>` elements before the image is loaded.
+The aspect ratio is then used to calculate the height and therefore the correct size is applied to the `<img>` element, meaning that the aforementioned jank will not occur, or be minimal if the listed dimensions are not fully accurate, when the image loads.
 
-Originally we were going to have the new mechanism apply the calculated sizing to `<img>` elements before and after the image has loaded. However, this caused a problem — a number of web sites actually use the `width` and `height` attributes incorrectly, setting an aspect ratio of something other than the image’s intrinsic aspect ratio.
+The aspect ratio is used to reserve space only on the image load. Once the image has loaded, the intrinsic aspect ratio of the loaded image, rather than the aspect ratio from the attributes, is used. This ensures that it displays at the correct aspect ratio even if the attribute dimensions are not accurate.
 
-Once such an image loads, if the internal aspect ratio is still applied it will result in the `<img>` not displaying the image correctly. Therefore, once the image is loaded, we start using the intrinsic aspect ratio of the loaded image rather than the aspect ratio from the attributes, so it displays at the correct aspect ratio.
-
-## Summary
-
-So there you have it — eliminating another piece of jank from web layout!
-There is no need for a web developer to do anything special to their code to take advantage of this, besides returning to the habit of using `width` and `height` attributes in their HTML. They'll just get it for free.
+While developer best practices from the last decade may have recommended omitting the `width` and `height` attributes of an image on an HTML {{htmlelement("img")}}, due to aspect ratio mapping, including these two attributes is considered a developer best practice.
 
 ## See also
 
-- [Designing an aspect ratio unit for CSS](https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/)
-- [Setting Height And Width On Images Is Important Again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/)
+- [Populating the page: how browsers work](/en-US/docs/Web/Performance/How_browsers_work)
+- CSS {{cssxref('aspect-ratio')}} property
+- [`aspect-ratio` media query](/en-US/docs/Web/CSS/@media/aspect-ratio)
+- [The `<ratio>` data type](/en-US/docs/Web/CSS/ratio)

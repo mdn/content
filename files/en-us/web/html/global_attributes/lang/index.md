@@ -10,7 +10,7 @@ browser-compat: html.global_attributes.lang
 
 {{HTMLSidebar("Global_attributes")}}
 
-The **`lang`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) helps define the language of an element: the language that non-editable elements are written in, or the language that the editable elements should be written in by the user. The attribute contains a single “language tag” in the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
+The **`lang`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) helps define the language of an element: the language that non-editable elements are written in, or the language that the editable elements should be written in by the user. The attribute contains a single "language tag" in the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
 
 > **Note:** The default value of `lang` is `unknown`, therefore it is recommended to always specify this attribute with the appropriate value.
 
@@ -33,7 +33,7 @@ A language tag is made of hyphen-separated _language subtags_, where each subtag
 - Script subtag
   - : Optional. This subtag defines the writing system used for the language, and is always 4 characters long, with the first letter capitalized. For example, French-in-Braille is `fr-Brai` and `ja-Kana` is Japanese written with the Katakana alphabet. If the language is written in a highly typical way, like English in the Latin alphabet, there is no need to use this subtag.
 - Region subtag
-  - : Optional. This subtag defines a dialect of the base language from a particular location, and is either 2 letters in ALLCAPS matching a country code, or 3 numbers matching a non-country area. For example, `es-ES` is for Spanish as spoken in Spain, and `es-013` is Spanish as spoken in Central America. “International Spanish” would just be `es`.
+  - : Optional. This subtag defines a dialect of the base language from a particular location, and is either 2 letters in ALLCAPS matching a country code, or 3 numbers matching a non-country area. For example, `es-ES` is for Spanish as spoken in Spain, and `es-013` is Spanish as spoken in Central America. "International Spanish" would just be `es`.
 
 The script subtag precedes the region subtag if both are present — `ru-Cyrl-BY` is Russian, written in the Cyrillic alphabet, as spoken in Belarus.
 
@@ -47,7 +47,7 @@ WCAG Success Criterion 3.1.2 requires that pages with **parts** in different lan
 
 The purpose of these requirements is primarily to allow assistive technologies such as screen readers to invoke the correct pronunciation.
 
-For example, the language menu on this site (MDN) includes a **`lang`** attribute for each entry:
+For example, the language menu on this site (MDN) includes a **`lang`** attribute for each entry:
 
 ```html
 <div class="dropdown-container language-menu">

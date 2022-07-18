@@ -84,7 +84,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 > **Note:** The `<hgroup>` element has been removed from the HTML5 (W3C) specification, but it still is in the WHATWG version of HTML. It is partially implemented in most browsers, though, so is unlikely to go away.
 > However, given that a key purpose of the `<hgroup>` element is to affect how headings are displayed by [the outline algorithm defined in the HTML specification](/en-US/docs/Web/HTML/Element/Heading_Elements#the_html5_outline_algorithm)—but **the HTML outline algorithm is not implemented in any browsers**—then the `<hgroup>` semantics are in practice only theoretical.
-> So the HTML5 (W3C) specification provides advice on how to mark up [Subheadings, subtitles, alternative titles and taglines](https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements) without using `<hgroup>`.
+> So the HTML5 (W3C) specification provides advice on how to mark up [Subheadings, subtitles, alternative titles and taglines](https://html.spec.whatwg.org/multipage/semantics-other.html#common-idioms-without-dedicated-elements) without using `<hgroup>`.
 
 The `<hgroup>` element allows the primary heading for a document section to be grouped with any secondary headings—such as subheadings or alternative titles—to form a _multi-level_ heading.
 

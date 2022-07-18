@@ -12,6 +12,7 @@ tags:
   - Types
   - data types
   - list
+spec-urls: https://drafts.csswg.org/css-values/
 ---
 {{CSSRef}}
 
@@ -27,7 +28,7 @@ In formal CSS syntax, data types are denoted by a keyword placed between the ine
 
 ## Textual data types
 
-These types include keywords and identifiers as well as strings, and urls.
+These types include keywords and identifiers as well as strings, and URLs.
 
 - Pre-defined keywords
   - : Keywords with a pre-defined meaning, for example the value of `collapse` for the {{cssxref("border-collapse")}} property.
@@ -44,7 +45,7 @@ These types include keywords and identifiers as well as strings, and urls.
 - `<string>`
   - : A quoted string, such as used for a value of the {{cssxref("content")}} property. See more information on the {{cssxref("&lt;string&gt;")}} type.
 - `<url>`
-  - : A pointer to a resource, for example as the value of {{cssxref("background-image")}}. See more information on the {{cssxref("url()")}} page.
+  - : A pointer to a resource, for example as the value of {{cssxref("background-image")}}. See more information on the {{cssxref("url", "url()")}} page.
 
 ## Numeric data types
 
@@ -70,7 +71,7 @@ These types are used to specify distance and other quantities.
 - `<length>`
   - : Lengths are a `<dimension>` and refer to distances. See more information on the {{cssxref("&lt;length&gt;")}} page.
 - `<angle>`
-  - : Angles are used in properties such as {{cssxref("gradient/linear-gradient()", "linear-gradient()")}} and are a `<dimension>` with one of `deg`, `grad`, `rad`, or `turn` units attached. See more information on the {{cssxref("&lt;angle&gt;")}} page.
+  - : Angles are used in properties such as {{cssxref("gradient/linear-gradient", "linear-gradient()")}} and are a `<dimension>` with one of `deg`, `grad`, `rad`, or `turn` units attached. See more information on the {{cssxref("&lt;angle&gt;")}} page.
 - `<time>`
   - : Duration units are a `<dimension>` with an `s` or `ms` unit. See more information on the {{cssxref("&lt;time&gt;")}} page.
 - `<frequency>`
@@ -80,7 +81,7 @@ These types are used to specify distance and other quantities.
 
 ## Combinations of types
 
-Some CSS properties can take a dimension or a percentage value. In this case the percentage value will be resolved to a quantity that matches the allowable dimension. Properties which can accept a percentage in addition to a dimension will use one of the types listed below.
+Some CSS properties can take a dimension or a percentage value. In this case the percentage value will be resolved to a quantity that matches the allowable dimension. Properties which can accept a percentage in addition to a dimension will use one of the types listed below.
 
 - `<length-percentage>`
   - : A type that can accept a length or a percentage as a value. See more information on the {{cssxref("&lt;length-percentage&gt;")}} page.
@@ -98,14 +99,14 @@ Some CSS properties can take a dimension or a percentage value. In this case th
 - `<color>`
   - : Specified as a keyword or a numerical color value. See more information on the {{cssxref("&lt;color&gt;")}} page.
 - `<alpha-value>`
-  - : Specifies the transparency of a color. May be a `<number>`, in which case 0 is fully transparent and 1 is fully opaque, or a `<percentage>`, in which case 0% is fully transparent and 100% fully opaque.
+  - : Specifies the transparency of a color. May be a `<number>`, in which case 0 is fully transparent and 1 is fully opaque, or a `<percentage>`, in which case 0% is fully transparent and 100% fully opaque.
 
 ## Images
 
 [The CSS Images Specification](https://www.w3.org/TR/css-images-3/) defines the data types which deal with images, including gradients.
 
 - `<image>`
-  - : A url reference to an image or a color gradient. See more information on the {{cssxref("&lt;image&gt;")}} page.
+  - : A URL reference to an image or a color gradient. See more information on the {{cssxref("&lt;image&gt;")}} page.
 - `<color-stop-list>`
   - : A list of two or more color stops with optional transition information using a color hint.
 - `<linear-color-stop>`
@@ -126,10 +127,7 @@ The {{cssxref("&lt;position&gt;")}} data type is interpreted as defined for the 
 
 ## Specifications
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{ SpecName('CSS4 Values') }} | {{ Spec2('CSS4 Values') }} |                     |
-| {{ SpecName('CSS3 Values') }} | {{ Spec2('CSS3 Values') }} | Initial definition. |
+{{Specifications}}
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: performance.now()
 slug: Web/API/Performance/now
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -38,10 +39,18 @@ are alleviated through other means.
 ## Syntax
 
 ```js
-t = performance.now();
+now()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 const t0 = performance.now();
@@ -58,14 +67,14 @@ up to microsecond precision.
 Also unlike `Date.now()`, the values returned by
 `performance.now()` always increase at a constant rate, independent of the
 system clock (which might be adjusted manually or skewed by software like NTP).
-Otherwise, `performance.timing.navigationStart + performance.now()` will be
+Otherwise, `performance.timing.navigationStart + performance.now()` will be
 approximately equal to `Date.now()`.
 
 ## Reduced time precision
 
 To offer protection against timing attacks and fingerprinting, the precision of
 `performance.now()` might get rounded depending on browser settings.
-In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by
+In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by
 default and defaults to 1ms.
 
 ```js
@@ -74,14 +83,14 @@ performance.now();
 // 8781416
 // 8781815
 // 8782206
-// ...
+// …
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 performance.now();
 // 8865400
 // 8866200
 // 8866700
-// ...
+// …
 ```
 
 In Firefox, you can also enable `privacy.resistFingerprinting` — this
@@ -113,4 +122,4 @@ of cross-origin attacks dubbed [XS-Leaks](https://github.com/xsleaks/xsleaks).
 
 ## See also
 
-- [When milliseconds are not enough: performance.now()](http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now) from HTML5 Rocks.
+- [When milliseconds are not enough: performance.now()](https://developer.chrome.com/blog/when-milliseconds-are-not-enough-performance-now/) from HTML5 Rocks.

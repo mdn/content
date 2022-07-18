@@ -33,7 +33,7 @@ myNotification.close();
 
 ## See also
 
-- [Static Method](https://www.techopedia.com/definition/24034/static-method) on Techopedia
+- [Static Method](https://www.techopedia.com/definition/24034/static-method-java) on Techopedia
 - [static](/en-US/docs/Web/JavaScript/Reference/Classes/static)
 - [MDN Web Docs Glossary](/en-US/docs/Glossary)
 

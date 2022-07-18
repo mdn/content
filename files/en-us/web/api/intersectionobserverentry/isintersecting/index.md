@@ -1,9 +1,9 @@
 ---
 title: IntersectionObserverEntry.isIntersecting
 slug: Web/API/IntersectionObserverEntry/isIntersecting
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Intersection Observer
   - Intersection Observer API
   - IntersectionObserverEntry
@@ -22,20 +22,14 @@ observer's root. If this is `true`, then, the
 intersection; if it's `false`, then you know the transition is from
 intersecting to not-intersecting.
 
-## Syntax
-
-```js
-var isIntersecting = IntersectionObserverEntry.isIntersecting;
-```
-
-### Value
+## Value
 
 A Boolean value which indicates whether the
 {{domxref("IntersectionObserverEntry.target", "target")}} element has transitioned into
 a state of intersection (`true`) or out of a state of intersection
 (`false`).
 
-## Example
+## Examples
 
 In this simple example, an intersection callback is used to update a counter of how
 many targeted elements are currently intersecting with the

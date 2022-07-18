@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.isPointInPath()
 slug: Web/API/CanvasRenderingContext2D/isPointInPath
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -19,8 +20,10 @@ the current path.
 ## Syntax
 
 ```js
-ctx.isPointInPath(x, y [, fillRule]);
-ctx.isPointInPath(path, x, y [, fillRule]);
+isPointInPath(x, y)
+isPointInPath(x, y, fillRule)
+isPointInPath(path, x, y)
+isPointInPath(path, x, y, fillRule)
 ```
 
 ### Parameters
@@ -38,8 +41,7 @@ ctx.isPointInPath(path, x, y [, fillRule]);
 
     - **`"nonzero"`**: The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule).
       Default rule.
-    - **`"evenodd"`**: The [even-odd winding
-      rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+    - **`"evenodd"`**: The [even-odd winding rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 - `path`
   - : A {{domxref("Path2D")}} path to check against. If unspecified, the current path is

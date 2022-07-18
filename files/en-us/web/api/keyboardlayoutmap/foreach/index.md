@@ -1,6 +1,7 @@
 ---
 title: KeyboardLayoutMap.forEach()
 slug: Web/API/KeyboardLayoutMap/forEach
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -15,21 +16,32 @@ browser-compat: api.KeyboardLayoutMap.forEach
 ---
 {{APIRef("Keyboard API")}}{{SeeCompatTable}}
 
-The **`forEach()`** method of the
+The **`forEach()`** method of the
 {{domxref('KeyboardLayoutMap')}} interface executes a provided function once for
 each element of the map.
 
 ## Syntax
 
 ```js
-KeyboardLayoutMap.forEach(function callback(currentValue[, index[, array]]) {
-    //your iterator
-}[, thisArg]);
+// Arrow function
+forEach((currentValue) => { /* … */ } )
+forEach((currentValue, index) => { /* … */ } )
+forEach((currentValue, index, array) => { /* … */ } )
+
+// Callback function
+forEach(callbackFn)
+forEach(callbackFn, thisArg)
+
+// Inline callback function
+forEach(function(currentValue) { /* … */ })
+forEach(function(currentValue, index) { /* … */ })
+forEach(function(currentValue, index, array){ /* … */ })
+forEach(function(currentValue, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
-- `callback`
+- `callbackFn`
 
   - : The function to execute for each element, taking three arguments:
 
@@ -38,7 +50,7 @@ KeyboardLayoutMap.forEach(function callback(currentValue[, index[, array]]) {
     - `index` {{optional_inline}}
       - : The index of the current element being processed.
     - `array` {{optional_inline}}
-      - : The KeyboardLayoutMap that `forEach()` is being called on.
+      - : The KeyboardLayoutMap that `forEach()` is being called on.
 
 - `thisArg` {{Optional_inline}}
   - : Value to use as **`this`** (i.e the reference
@@ -46,7 +58,7 @@ KeyboardLayoutMap.forEach(function callback(currentValue[, index[, array]]) {
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

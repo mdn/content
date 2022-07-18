@@ -14,9 +14,8 @@ value from a function, but the value is not actually a function.
 
 ## Message
 
-```js
-TypeError: Object doesn't support property or method {x} (Edge)
-TypeError: "x" is not a function
+```
+TypeError: "x" is not a function. (V8-based & Firefox & Safari)
 ```
 
 ## Error type
@@ -53,14 +52,14 @@ provide a function in order to have these methods working properly:
 In this case, which happens way too often, there is a typo in the method name:
 
 ```js example-bad
-let x = document.getElementByID('foo');
+const x = document.getElementByID('foo');
 // TypeError: document.getElementByID is not a function
 ```
 
 The correct function name is `getElementById`:
 
 ```js example-good
-let x = document.getElementById('foo');
+const x = document.getElementById('foo');
 ```
 
 ### Function called on the wrong object
@@ -70,9 +69,9 @@ specific objects only. In this example, {{jsxref("Array.prototype.map()")}} is u
 which will work with {{jsxref("Array")}} objects only.
 
 ```js example-bad
-let obj = {a: 13, b: 37, c: 42};
+const obj = { a: 13, b: 37, c: 42 };
 
-obj.map(function(num) {
+obj.map(function (num) {
   return num * 2;
 });
 
@@ -82,9 +81,9 @@ obj.map(function(num) {
 Use an array instead:
 
 ```js example-good
-let numbers = [1, 4, 9];
+const numbers = [1, 4, 9];
 
-numbers.map(function(num) {
+numbers.map(function (num) {
   return num * 2;
 });
 
@@ -97,38 +96,38 @@ Sometimes when making a class, you may have a property and a function with the s
 name. Upon calling the function, the compiler thinks that the function ceases to exist.
 
 ```js example-bad
-var Dog = function () {
+function Dog() {
  this.age = 11;
  this.color = "black";
  this.name = "Ralph";
  return this;
 }
 
-Dog.prototype.name = function(name) {
+Dog.prototype.name = function (name) {
  this.name = name;
  return this;
 }
 
-var myNewDog = new Dog();
+const myNewDog = new Dog();
 myNewDog.name("Cassidy"); //Uncaught TypeError: myNewDog.name is not a function
 ```
 
 Use a different property name instead:
 
 ```js example-good
-var Dog = function () {
+function Dog() {
  this.age = 11;
  this.color = "black";
  this.dogName = "Ralph"; //Using this.dogName instead of .name
  return this;
 }
 
-Dog.prototype.name = function(name) {
+Dog.prototype.name = function (name) {
  this.dogName = name;
  return this;
 }
 
-var myNewDog = new Dog();
+const myNewDog = new Dog();
 myNewDog.name("Cassidy"); //Dog { age: 11, color: 'black', dogName: 'Cassidy' }
 ```
 
@@ -159,18 +158,15 @@ Ensure you are importing the module correctly.
 An example helpers library (`helpers.js`)
 
 ```js
-let helpers = function () { };
+const helpers = function () { };
 
 helpers.groupBy = function (objectArray, property) {
-  return objectArray.reduce(function (acc, obj) {
-    var key = obj[property];
-    if (!acc[key]) {
-      acc[key] = [];
-    }
+  return objectArray.reduce((acc, obj) => {
+    const key = obj[property];
+    acc[key] ??= [];
     acc[key].push(obj);
     return acc;
-  },
-{});
+  }, {});
 }
 
 export default helpers;
@@ -179,7 +175,7 @@ export default helpers;
 The correct import usage (`App.js`):
 
 ```js
-import helpers from './helpers'
+import helpers from './helpers';
 ```
 
 ## See also

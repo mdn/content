@@ -1,6 +1,7 @@
 ---
 title: TreeWalker.previousSibling()
 slug: Web/API/TreeWalker/previousSibling
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -20,16 +21,24 @@ there is no such node, return `null` and the current node is not changed.
 ## Syntax
 
 ```js
-node = treeWalker.previousSibling();
+previousSibling()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+A {{domxref("Node")}} object or `null`.
+
+## Examples
 
 ```js
 var treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
 var node = treeWalker.previousSibling(); // returns null as there is no previous sibling

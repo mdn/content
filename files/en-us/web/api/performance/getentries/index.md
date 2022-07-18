@@ -1,6 +1,7 @@
 ---
 title: performance.getEntries()
 slug: Web/API/Performance/getEntries
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -23,11 +24,13 @@ certain types or that have certain names, see {{domxref("Performance.getEntriesB
 
 ## Syntax
 
-General syntax:
-
 ```js
-entries = window.performance.getEntries();
+getEntries()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -36,14 +39,14 @@ entries = window.performance.getEntries();
     chronological order based on the entries'
     {{domxref("PerformanceEntry.startTime","startTime")}}.
 
-## Example
+## Examples
 
 ```js
 function use_PerformanceEntry_methods() {
-  console.log("PerformanceEntry tests ...");
+  console.log("PerformanceEntry tests…");
 
   if (performance.mark === undefined) {
-    console.log("... performance.mark Not supported");
+    console.error("The property performance.mark is not supported");
     return;
   }
 

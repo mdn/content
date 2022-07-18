@@ -1,7 +1,9 @@
 ---
 title: The 'X' property
 slug: Web/API/SVGRect/The__X__property
+page-type: web-api-instance-property
 ---
+{{APIRef("SVG")}}
 The [x](https://svgwg.org/svg2-draft/geometry.html#XProperty) property describes the horizontal coordinate of the position of the element.
 
 ## Usage context
@@ -30,17 +32,17 @@ The [x](https://svgwg.org/svg2-draft/geometry.html#XProperty) property describes
     <tr>
       <td>Applies to</td>
       <td>
-        {{ SVGElement("mask") }} , ‘<a
+        {{ SVGElement("mask") }} , '<a
           href="https://svgwg.org/svg2-draft/struct.html#SVGElement"
           >svg</a
-        >’, ‘<a href="https://svgwg.org/svg2-draft/shapes.html#RectElement"
+        >', '<a href="https://svgwg.org/svg2-draft/shapes.html#RectElement"
           >rect</a
-        >’, ‘<a href="https://svgwg.org/svg2-draft/embedded.html#ImageElement"
+        >', '<a href="https://svgwg.org/svg2-draft/embedded.html#ImageElement"
           >image</a
-        >’, ‘<a
+        >', '<a
           href="https://svgwg.org/svg2-draft/embedded.html#ForeignObjectElement"
           >foreignObject</a
-        >’
+        >'
       </td>
     </tr>
     <tr>
@@ -75,7 +77,7 @@ The [x](https://svgwg.org/svg2-draft/geometry.html#XProperty) property describes
 
 A \<coordinate> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the relevant axis (the x-axis for X coordinates, the y-axis for Y coordinates). Its syntax is the same as that for [\<length>](https://www.w3.org/TR/SVG11/types.html#DataTypeLength)
 
-```js
+```go
 // Rect draws a rectangle with upper left-hand corner at x,y, with width w, and height h, with optional style
 // Standard Reference: http://www.w3.org/TR/SVG11/shapes.html#RectElement
 func (svg *SVG) Rect(x float64, y float64, w float64, h float64, s ...string) {

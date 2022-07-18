@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var searching = browser.history.search(
+let searching = browser.history.search(
   query                  // object
 )
 ```
@@ -54,9 +54,9 @@ var searching = browser.history.search(
         Specify an empty string (`""`) to retrieve all {{WebExtAPIRef("history.HistoryItem")}} objects that meet all the other criteria.
 
     - `startTime` {{optional_inline}}
-      - : `number` or `string` or `object`. A value indicating a date and time. This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso/home/standards/iso8601.htm), or the number of milliseconds since the epoch. If it is supplied, this option excludes results whose `lastVisitTime` is earlier than this time. If it is omitted, the search is limited to the last 24 hours.
+      - : `number` or `string` or `object`. A value indicating a date and time. This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso-8601-date-and-time-format.html), or the number of milliseconds since the epoch. If it is supplied, this option excludes results whose `lastVisitTime` is earlier than this time. If it is omitted, the search is limited to the last 24 hours.
     - `endTime` {{optional_inline}}
-      - : `number` or `string` or `object`. A value indicating a date and time.  This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso/home/standards/iso8601.htm), or the number of milliseconds since the epoch. If it is supplied, this option limits results to those visited before this date. If it is omitted, then all entries are considered from the start time onwards.
+      - : `number` or `string` or `object`. A value indicating a date and time.  This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso-8601-date-and-time-format.html), or the number of milliseconds since the epoch. If it is supplied, this option limits results to those visited before this date. If it is omitted, then all entries are considered from the start time onwards.
     - `maxResults` {{optional_inline}}
       - : `number`. The maximum number of results to retrieve. Defaults to 100, with a minimum value of 1. The function will throw an error if you pass it a `maxResults` value less than 1.
 
@@ -76,7 +76,7 @@ function onGot(historyItems) {
   }
 }
 
-var searching = browser.history.search({text: ""});
+let searching = browser.history.search({text: ""});
 
 searching.then(onGot);
 ```
@@ -91,7 +91,7 @@ function onGot(historyItems) {
   }
 }
 
-var searching = browser.history.search({
+let searching = browser.history.search({
    text: "",
    startTime: 0
 });
@@ -109,7 +109,7 @@ function onGot(historyItems) {
   }
 }
 
-var searching = browser.history.search({
+let searching = browser.history.search({
  text: "mozilla",
  startTime: 0,
  maxResults: 1
@@ -124,7 +124,7 @@ searching.then(onGot);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/extensions/history#method-search) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/history/#method-search) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

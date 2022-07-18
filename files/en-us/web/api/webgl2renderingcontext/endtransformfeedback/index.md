@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.endTransformFeedback()
 slug: Web/API/WebGL2RenderingContext/endTransformFeedback
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,7 +19,7 @@ operation.
 ## Syntax
 
 ```js
-void gl.endTransformFeedback();
+endTransformFeedback()
 ```
 
 ### Parameters
@@ -27,7 +28,7 @@ None.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

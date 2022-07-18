@@ -1,6 +1,7 @@
 ---
 title: TimeRanges.length
 slug: Web/API/TimeRanges/length
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -16,13 +17,11 @@ browser-compat: api.TimeRanges.length
 The **`TimeRanges.length`** read-only property returns the
 number of ranges in the object.
 
-## Syntax
+## Value
 
-```js
-length = TimeRanges.length;
-```
+A number.
 
-## Example
+## Examples
 
 Given a video element with the ID "myVideo":
 

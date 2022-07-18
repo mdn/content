@@ -1,6 +1,7 @@
 ---
 title: CharacterData.remove()
 slug: Web/API/CharacterData/remove
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference

@@ -1,6 +1,7 @@
 ---
 title: VideoDecoder
 slug: Web/API/VideoDecoder
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -14,14 +15,14 @@ The **`VideoDecoder`** interface of the {{domxref('WebCodecs API','','','true')}
 
 ## Constructor
 
-- {{domxref("VideoDecoder.VideoDecoder()")}}
+- {{domxref("VideoDecoder.VideoDecoder", "VideoDecoder()")}}
   - : Creates a new `VideoDecoder` object.
 
 ## Properties
 
-- {{domxref("VideoDecoder.decodeQueueSize")}}{{ReadOnlyInline}}
+- {{domxref("VideoDecoder.decodeQueueSize")}} {{ReadOnlyInline}}
   - : An integer representing the number of decode queue requests.
-- {{domxref("VideoDecoder.state")}}{{ReadOnlyInline}}
+- {{domxref("VideoDecoder.state")}} {{ReadOnlyInline}}
   - : Indicates whether the underlying codec is configured for decoding.
 
 ## Methods

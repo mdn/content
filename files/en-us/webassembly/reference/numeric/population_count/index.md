@@ -12,7 +12,7 @@ tags:
 
 The **`popcnt`** instructions, short for *population count*, are used to count the amount of `1`s in a numbers binary representation.
 
-{{EmbedInteractiveExample("pages/wat/popcnt.html")}}
+{{EmbedInteractiveExample("pages/wat/popcnt.html", "tabbed-taller")}}
 
 ## Syntax
 

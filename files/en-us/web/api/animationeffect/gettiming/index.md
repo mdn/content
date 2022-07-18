@@ -1,6 +1,7 @@
 ---
 title: AnimationEffect.getTiming()
 slug: Web/API/AnimationEffect/getTiming
+page-type: web-api-instance-method
 tags:
   - API
   - Animation
@@ -18,10 +19,14 @@ The `AnimationEffect.getTiming()` method of the {{domxref("AnimationEffect")}} i
 ## Syntax
 
 ```js
-animationTiming = animation.getTiming();
+getTiming()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 An object.
 

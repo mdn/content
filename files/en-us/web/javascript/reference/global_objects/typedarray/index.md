@@ -12,8 +12,8 @@ browser-compat: javascript.builtins.TypedArray
 {{JSRef}}
 
 A **_TypedArray_** object describes an array-like view of an
-underlying [binary data
-buffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). There is no global property named `TypedArray`, nor is there a
+underlying [binary data buffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
+There is no global property named `TypedArray`, nor is there a
 directly visible `TypedArray` constructor. Instead, there are a number of
 different global properties, whose values are typed array constructors for specific
 element types, listed below. On the following pages you will find common properties and
@@ -165,13 +165,17 @@ Where _TypedArray_ is a constructor for one of the concrete types.
     filtering function returns `true`. See also
     {{jsxref("Array.prototype.filter()")}}.
 - {{jsxref("TypedArray.prototype.find()")}}
-  - : Returns the found value in the array, if an element in the array satisfies the
-    provided testing function, or `undefined` if not found. See also
-    {{jsxref("Array.prototype.find()")}}.
+  - : Returns the first `element` in the array that satisfies a provided testing function, or `undefined` if no appropriate element is found.
+    See also {{jsxref("Array.prototype.find()")}}.
 - {{jsxref("TypedArray.prototype.findIndex()")}}
-  - : Returns the found index in the array, if an element in the array satisfies the
-    provided testing function or `-1` if not found. See also
-    {{jsxref("Array.prototype.findIndex()")}}.
+  - : Returns the first index value of in the array that has an element that satisfies a provided testing function, or `-1` if no appropriate element was found.
+    See also {{jsxref("Array.prototype.findIndex()")}}.
+- {{jsxref("TypedArray.prototype.findLast()")}}
+  - : Returns the value of the last element in the array that satisfies a provided testing function, or `undefined` if no appropriate element is found.
+    See also {{jsxref("Array.prototype.findLast()")}}.
+- {{jsxref("TypedArray.prototype.findLastIndex()")}}
+  - : Returns the index of the last element in the array that satisfies a provided testing function, or `-1` if no appropriate element was found.
+    See also {{jsxref("Array.prototype.findLastIndex()")}}.
 - {{jsxref("TypedArray.prototype.forEach()")}}
   - : Calls a function for each element in the array. See also
     {{jsxref("Array.prototype.forEach()")}}.
@@ -245,13 +249,13 @@ with the {{jsxref("Operators/new", "new")}} operator. Calling a `TypedArray`
 constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
 
 ```js example-bad
-var dv = Int8Array([1, 2, 3]);
+const dv = Int8Array([1, 2, 3]);
 // TypeError: calling a builtin Int8Array constructor
 // without new is forbidden
 ```
 
 ```js example-good
-var dv = new Int8Array([1, 2, 3]);
+const dv = new Int8Array([1, 2, 3]);
 ```
 
 ### Property access
@@ -265,7 +269,7 @@ objects.
 
 ```js
 // Setting and getting using standard array syntax
-var int16 = new Int16Array(2);
+const int16 = new Int16Array(2);
 int16[0] = 42;
 console.log(int16[0]); // 42
 

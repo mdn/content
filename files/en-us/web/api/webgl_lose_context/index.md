@@ -1,6 +1,7 @@
 ---
 title: WEBGL_lose_context
 slug: Web/API/WEBGL_lose_context
+page-type: webgl-extension
 tags:
   - API
   - Reference

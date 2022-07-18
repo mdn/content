@@ -14,7 +14,7 @@ tags:
 ---
 {{CSSRef}}
 
-In this article we will take a look at how Flexbox fits in with all the other CSS modules. We’ll find out which specifications you also need to take notice of if you want to learn flexbox, and find out why flexbox is different to some other modules.
+In this article we will take a look at how Flexbox fits in with all the other CSS modules. We'll find out which specifications you also need to take notice of if you want to learn flexbox, and find out why flexbox is different to some other modules.
 
 > **Note:** CSS versions 1 and 2 were a single monolithic specification where all of CSS was defined in one large document. As CSS became a more feature rich language, maintaining one huge specification became problematic, with different parts of CSS moving on at different speeds. CSS was therefore modularized, and the various CSS Specifications are different modules that make up CSS today. These modules relate to each other, and are at different stages of development.
 
@@ -82,19 +82,19 @@ If we create a very similar layout using Grid, we can control the layout in both
 
 {{EmbedGHLiveSample("css-examples/flexbox/relationship/grid-layout.html", '100%', 700)}}
 
-These examples point to another key difference between these layout methods. In Grid Layout you do the majority of sizing specification on the container, setting up tracks and then placing items into them. In flexbox, while you create a flex container and set the direction at that level, any control over item sizing needs to happen on the items themselves.
+These examples point to another key difference between these layout methods. In Grid Layout you do the majority of sizing specification on the container, setting up tracks and then placing items into them. In flexbox, while you create a flex container and set the direction at that level, any control over item sizing needs to happen on the items themselves.
 
 In some cases you could happily use either layout method, but as you become confident with both you will find each one suiting different layout needs, and you will end up with both methods in your CSS. There is rarely a right or wrong answer.
 
-As a rule of thumb, if you are adding widths to flex items in order to make items in one row of a wrapped flex container line up with the items above them you really want two-dimensional layout. In this case it is likely that the component would be better laid out using CSS Grid Layout. It isn't the case that you should use flexbox for small components and grid layout for larger ones; a tiny component can be two dimensional, and a large layout can be represented better with layout in one dimension. Try things out — we have a choice in layout method for the first time, so take advantage of it.
+As a ground rule, if you are adding widths to flex items in order to make items in one row of a wrapped flex container line up with the items above them you really want two-dimensional layout. In this case it is likely that the component would be better laid out using CSS Grid Layout. It isn't the case that you should use flexbox for small components and grid layout for larger ones; a tiny component can be two dimensional, and a large layout can be represented better with layout in one dimension. Try things out — we have a choice in layout method for the first time, so take advantage of it.
 
 For more comparisons of grid and flexbox see the article [Relationship of Grid Layout to other layout methods](/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout). This article details many of the ways that Grid Layout differs from flex layout, and demonstrates some of the extra functionality you get when using Grid Layout such as layering of items on the grid. This may also help in your decision as to which layout method to use.
 
 ## Flexbox and display: contents
 
-The `contents` value of the {{cssxref("display")}} property is a new value that is described in the spec as follows:
+The `contents` value of the {{cssxref("display")}} property is a new value that is described in the spec as follows:
 
-> “The element itself does not generate any boxes, but its children and pseudo-elements still generate boxes as normal. For the purposes of box generation and layout, the element must be treated as if it had been replaced with its children and pseudo-elements in the document tree.”
+> "The element itself does not generate any boxes, but its children and pseudo-elements still generate boxes as normal. For the purposes of box generation and layout, the element must be treated as if it had been replaced with its children and pseudo-elements in the document tree."
 
 This value of `display` controls box generation, and whether the element should generate a box that we can style and see on the page, or whether instead the box it would normally create should be removed and the child elements essentially moved up to participate in whatever layout method the parent would have been part of. This is much easier to see with an example.
 
@@ -102,9 +102,9 @@ In the following live example I have a flex container with three child elements.
 
 By adding `display: contents` to the wrapper around the nested elements, you can see that the item has disappeared from the layout, allowing the two sub-children to be laid out as if they were direct children of the flex container. You can try removing the `display: contents` line to see it return.
 
-Note that this only removes the box from the layout; the sub-children don’t become direct children in any other way. You can see that as I have used a direct child selector to add the background and borders to the flex items, this has not been applied to our nested children. They have been laid out as flex items, but as they are not direct children they do not get the other styling.
+Note that this only removes the box from the layout; the sub-children don't become direct children in any other way. You can see that as I have used a direct child selector to add the background and borders to the flex items, this has not been applied to our nested children. They have been laid out as flex items, but as they are not direct children they do not get the other styling.
 
-> **Warning:** Current implementations in most browsers will remove any element with `display: contents` from the accessibility tree (but descendants will remain). This will cause the element itself to no longer be announced by screen reading technology. This is incorrect behavior according to the specification, see [`display: contents`](/en-US/docs/Web/CSS/display#display_contents).
+> **Warning:** Current implementations in most browsers will remove any element with `display: contents` from the accessibility tree (but descendants will remain). This will cause the element itself to no longer be announced by screen reading technology. This is incorrect behavior according to the specification, see [`display: contents`](/en-US/docs/Web/CSS/display#display_contents).
 
 Also, having removed the box you cannot then use it to — for example — add a background color behind the nested sub children. If you remove `display: contents` in this live example you will see that the direct child we are removing has an orange background color. This also disappears when the box disappears.
 

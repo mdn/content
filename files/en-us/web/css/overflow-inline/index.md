@@ -28,6 +28,7 @@ overflow-inline: auto;
 overflow-inline: inherit;
 overflow-inline: initial;
 overflow-inline: revert;
+overflow-inline: revert-layer;
 overflow-inline: unset;
 ```
 

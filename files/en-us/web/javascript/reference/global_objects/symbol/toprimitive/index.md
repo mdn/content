@@ -28,13 +28,13 @@ Following example describes how `Symbol.toPrimitive` property can modify the pri
 
 ```js
 // An object without Symbol.toPrimitive property.
-var obj1 = {};
+const obj1 = {};
 console.log(+obj1);     // NaN
 console.log(`${obj1}`); // "[object Object]"
 console.log(obj1 + ''); // "[object Object]"
 
 // An object with Symbol.toPrimitive property.
-var obj2 = {
+const obj2 = {
   [Symbol.toPrimitive](hint) {
     if (hint == 'number') {
       return 10;
@@ -45,9 +45,9 @@ var obj2 = {
     return true;
   }
 };
-console.log(+obj2);     // 10        -- hint is "number"
-console.log(`${obj2}`); // "hello"   -- hint is "string"
-console.log(obj2 + ''); // "true"    -- hint is "default"
+console.log(+obj2);     // 10        — hint is "number"
+console.log(`${obj2}`); // "hello"   — hint is "string"
+console.log(obj2 + ''); // "true"    — hint is "default"
 ```
 
 ## Specifications

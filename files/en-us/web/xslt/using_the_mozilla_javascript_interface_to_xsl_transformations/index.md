@@ -32,7 +32,7 @@ function onload() {
 }
 ```
 
-{{domxref("XSLTProcessor.importStylesheet()")}} requires one argument, a DOM Node. If that node is a document node, you can pass in a full XSL Transform or a [literal result element transform](https://www.w3.org/TR/xslt#result-element-stylesheet), otherwise it must be an `xsl:stylesheet` or `xsl:transform` element.
+{{domxref("XSLTProcessor.importStylesheet()")}} requires one argument, a DOM Node. If that node is a document node, you can pass in a full XSL Transform or a [literal result element transform](https://www.w3.org/TR/xslt/#result-element-stylesheet), otherwise it must be an `xsl:stylesheet` or `xsl:transform` element.
 
 ### Transforming the document
 
@@ -46,7 +46,7 @@ You can use the {{domxref("XSLTProcessor.transformToDocument()")}} or {{domxref(
 var newDocument = processor.transformToDocument(domToBeTransformed);
 ```
 
-The resultant object depends on the [output method](https://www.w3.org/TR/xslt#output) of the stylesheet:
+The resultant object depends on the [output method](https://www.w3.org/TR/1999/REC-xslt-19991116/#output) of the stylesheet:
 
 - **html** - {{domxref("HTMLDocument")}}
 - **xml** - {{domxref("XMLDocument")}}
@@ -73,7 +73,7 @@ Transforming XHTML should work as expected though.
 
 ### Setting parameters
 
-You can control [parameters for the stylesheet](https://www.w3.org/TR/xslt#variables) using the {{domxref("XSLTProcessor.setParameter()")}}, {{domxref("XSLTProcessor.getParameter()")}}, and {{domxref("XSLTProcessor.removeParameter()")}} methods. These all take a namespace URI and a local name as the first two parameters, with {{domxref("XSLTProcessor.setParameter()")}} taking a third - the value of the parameter to be set. See [The XSLT/JavaScript Interface in Gecko](/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters) for an example.
+You can control [parameters for the stylesheet](https://www.w3.org/TR/1999/REC-xslt-19991116/#variables) using the {{domxref("XSLTProcessor.setParameter()")}}, {{domxref("XSLTProcessor.getParameter()")}}, and {{domxref("XSLTProcessor.removeParameter()")}} methods. These all take a namespace URI and a local name as the first two parameters, with {{domxref("XSLTProcessor.setParameter()")}} taking a third - the value of the parameter to be set. See [The XSLT/JavaScript Interface in Gecko](/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters) for an example.
 
 ### Resetting
 
@@ -105,7 +105,7 @@ var processor = Components.classes["@mozilla.org/document-transformer;1?type=xsl
 
 ### See also
 
-- [The XSLT JavaScript Interface in Gecko](/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko)
+- [The XSLT JavaScript Interface in Gecko](/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko)
 - [document.load()](/en-US/docs/Web/API/XMLDocument/load) regarding the loading of XML documents (as used above)
 
 ### Original Document Information

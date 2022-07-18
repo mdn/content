@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchRecord
 slug: Web/API/BackgroundFetchRecord
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -18,9 +19,9 @@ There will be one `BackgroundFetchRecord` for each resource requested by `fetch(
 
 ## Properties
 
-- {{domxref("BackgroundFetchRecord.request","request")}}{{ReadOnlyInline}}
+- {{domxref("BackgroundFetchRecord.request","request")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Request")}}.
-- {{domxref("BackgroundFetchRecord.responseReady","responseReady")}}{{ReadOnlyInline}}
+- {{domxref("BackgroundFetchRecord.responseReady","responseReady")}} {{ReadOnlyInline}}
   - : Returns a promise that resolves with a {{domxref("Response")}}.
 
 ## Examples

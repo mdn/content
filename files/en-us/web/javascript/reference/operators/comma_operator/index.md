@@ -13,7 +13,7 @@ browser-compat: javascript.operators.comma
 ---
 {{jsSidebar("Operators")}}
 
-The **comma operator** (**`,`**) evaluates each of
+The **comma operator** (**`,`**) evaluates each of
 its operands (from left to right) and returns the value of the last operand. This lets
 you create a compound expression in which multiple expressions are evaluated, with the
 compound expression's final value being the value of the rightmost of its member
@@ -30,7 +30,7 @@ expr1, expr2, expr3...
 
 ### Parameters
 
-- `expr1`, `expr2`, `expr3`...
+- `expr1`, `expr2`, `expr3`, …
   - : One or more expressions, the last of which is returned as the value of the compound
     expression.
 
@@ -52,24 +52,24 @@ once.
 The following code prints the values of the diagonal elements in the array:
 
 ```js
-for (var i = 0, j = 9; i <= 9; i++, j--)
+for (let i = 0, j = 9; i <= 9; i++, j--) {
   console.log('a[' + i + '][' + j + '] = ' + a[i][j]);
+}
 ```
 
 Note that the comma operators in assignments may appear not to have the normal effect
 of comma operators because they don't exist within an expression. In the following
 example, `a` is set to the value of `b = 3` (which is 3), but the
-`c = 4` expression still evaluates and its result returned to console (i.e.,
-4\). This is due to [operator
-precedence and associativity](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
+`c = 4` expression still evaluates and its result returned to console (i.e., 4\).
+This is due to [operator precedence and associativity](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
 
 ```js
-var a, b, c;
+let a, b, c;
 
 a = b = 3, c = 4; // Returns 4 in console
 console.log(a); // 3 (left-most)
 
-var x, y, z;
+let x, y, z;
 
 x = (y = 5, z = 6); // Returns 6 in console
 console.log(x); // 6 (right-most)
@@ -83,7 +83,7 @@ evaluated as well. So, one could do:
 
 ```js
 function myFunc() {
-  var x = 0;
+  let x = 0;
 
   return (x += 1, x); // the same as return ++x;
 }
@@ -99,5 +99,4 @@ function myFunc() {
 
 ## See also
 
-- [`for`
-  loop](/en-US/docs/Web/JavaScript/Reference/Statements/for)
+- [`for` loop](/en-US/docs/Web/JavaScript/Reference/Statements/for)

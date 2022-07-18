@@ -1,6 +1,7 @@
 ---
 title: RTCTrackEvent.receiver
 slug: Web/API/RTCTrackEvent/receiver
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -24,13 +25,7 @@ of the {{domxref("RTCTrackEvent")}} interface indicates the
 {{domxref("RTCRtpReceiver")}} which is used to receive data containing media for the
 {{domxref("RTCTrackEvent.track", "track")}} to which the event refers.
 
-## Syntax
-
-```js
-var rtpReceiver = trackEvent.receiver;
-```
-
-### Value
+## Value
 
 The {{domxref("RTCRtpTransceiver")}} which pairs the `receiver` with a
 sender and other properties which establish a single bidirectional {{Glossary("RTP", "SRTP")}}

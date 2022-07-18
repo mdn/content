@@ -49,7 +49,7 @@ Events have three functions:
 
   - : Function that will be called when this event occurs.
 
-    The `listener` function will be called with the following arguments:
+    The `listener` function will be called with the following arguments:
 
     - `details`
 
@@ -76,7 +76,7 @@ Events have three functions:
         - `error`
           - : `string`. The error code. This is an internal error code, and is not guaranteed to stay the same or be consistent from one browser to another.
 
-- `filter`{{optional_inline}}
+- `filter` {{optional_inline}}
 
   - : `object`. An object containing a single property `url`, which is an `Array` of {{WebExtAPIRef("events.UrlFilter")}} objects.
 
@@ -111,7 +111,7 @@ browser.webNavigation.onErrorOccurred.addListener(logOnErrorOccurred, filter);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.style
 slug: Web/API/HTMLElement/style
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -15,12 +16,6 @@ browser-compat: api.HTMLElement.style
 The **`style`** read-only property returns the _inline_ style of an element in the form of a {{domxref("CSSStyleDeclaration")}} object that contains a list of all styles properties for that element with values assigned for the attributes that are defined in the element's inline [`style` attribute](/en-US/docs/Web/HTML/Global_attributes/style).
 
 > **Note:** See the [CSS Properties Reference](/en-US/docs/Web/CSS/CSS_Properties_Reference) for a list of the CSS properties accessible via `style`. The `style` property has the same (and highest) priority in the CSS cascade as an inline style declaration set via the `style` attribute.
-
-## Syntax
-
-```js
-style = element.style
-```
 
 ## Value
 
@@ -63,7 +58,7 @@ var elementStyle = element.style;
 var computedStyle = window.getComputedStyle(element, null);
 
 for (prop in elementStyle) {
-  if (elementStyle.hasOwnProperty(prop)) {
+  if (Object.hasOwn(elementStyle, prop)) {
     out += "  " + prop + " = '" + elementStyle[prop] + "' > '" + computedStyle[prop] + "'\n";
   }
 }
@@ -73,13 +68,13 @@ console.log(out)
 The output would be something like:
 
 ```
-...
+…
 fontWeight = '' > 'bold'
 color = 'red' > 'rgb(255, 0, 0)'
-...
+…
 ```
 
-Note the presence of the value `bold` for `font-weight` in the computed style and the absence of it in the element's `style` property
+Note the presence of the value `bold` for `font-weight` in the computed style and the absence of it in the element's `style` property.
 
 ## Specifications
 

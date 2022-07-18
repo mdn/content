@@ -1,6 +1,7 @@
 ---
 title: Window.getDefaultComputedStyle()
 slug: Web/API/window/getDefaultComputedStyle
+page-type: web-api-instance-method
 tags:
   - API
   - CSS
@@ -17,7 +18,8 @@ styles are taken into account.
 ## Syntax
 
 ```js
-var style = window.getDefaultComputedStyle(element [, pseudoElt]);
+getDefaultComputedStyle(element)
+getDefaultComputedStyle(element, pseudoElt)
 ```
 
 ### Parameters
@@ -35,13 +37,13 @@ object. The object is of the same type as the object returned by
 {{domxref("Window.getComputedStyle()")}}, but only takes into account user-agent and
 user rules.
 
-## Example
+## Examples
 
 ### Simple example
 
 ```js
-var elem1 = document.getElementById("elemId");
-var style = window.getDefaultComputedStyle(elem1);
+const elem1 = document.getElementById("elemId");
+const style = window.getDefaultComputedStyle(elem1);
 ```
 
 ### Longer example
@@ -60,8 +62,8 @@ var style = window.getDefaultComputedStyle(elem1);
 <div id="output"></div>
 
 <script>
-  var elem = document.getElementById("elem-container");
-  var theCSSprop = window.getDefaultComputedStyle(elem).position;
+  const elem = document.getElementById("elem-container");
+  const theCSSprop = window.getDefaultComputedStyle(elem).position;
   document.getElementById("output").innerHTML = theCSSprop; // Will output "static"
 </script>
 ```
@@ -81,8 +83,8 @@ pseudo-elements (e.g., {{cssxref("::before")}} or {{cssxref("::after")}}).
 <h3>generated content</h3>
 
 <script>
-  var h3       = document.querySelector('h3'),
-      result   = getDefaultComputedStyle(h3, ':after').content;
+  const h3 = document.querySelector('h3');
+  const result = getDefaultComputedStyle(h3, ':after').content;
 
   console.log('the generated content is: ', result); // returns 'none'
 </script>

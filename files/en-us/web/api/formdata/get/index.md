@@ -1,12 +1,12 @@
 ---
 title: FormData.get()
 slug: Web/API/FormData/get
+page-type: web-api-instance-method
 tags:
   - API
   - FormData
   - Method
   - Reference
-  - XHR
   - XMLHttpRequest
 browser-compat: api.FormData.get
 ---
@@ -22,36 +22,28 @@ object. If you expect multiple values and want all of them, use the
 ## Syntax
 
 ```js
-formData.get(name);
+get(name)
 ```
 
 ### Parameters
 
 - `name`
-  - : A {{domxref("USVString")}} representing the name of the key you want to retrieve.
+  - : A string representing the name of the key you want to retrieve.
 
 ### Return value
 
-A {{domxref("FormDataEntryValue")}} containing the value. If the key doesn't exist, the
-method returns null.
+A value whose key matches the specified `name`. Otherwise, {{jsxref("null")}}.
 
-## Example
+## Examples
 
-The following line creates an empty `FormData` object:
-
-```js
-var formData = new FormData();
-```
-
-If we add two `username` values using {{domxref("FormData.append")}}:
+If we add two `username` values to a {{domxref("FormData")}} using {{domxref("FormData.append", "append()")}}:
 
 ```js
 formData.append('username', 'Chris');
 formData.append('username', 'Bob');
 ```
 
-The following `get()` function will only return the first
-`username` value appended:
+The following `get()` method will only return the first `username` value:
 
 ```js
 formData.get('username'); // Returns "Chris"
@@ -67,8 +59,5 @@ formData.get('username'); // Returns "Chris"
 
 ## See also
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using
-  FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

@@ -1,6 +1,7 @@
 ---
 title: XRAnchor
 slug: Web/API/XRAnchor
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -13,7 +14,7 @@ browser-compat: api.XRAnchor
 ---
 {{APIRef("WebXR Device API")}} {{secureContext_header}}
 
-The **`XRAnchor`** interface creates anchors which keep track of the pose that is fixed relative to the real world. With anchors, you can specify poses in the world that need to be updated to correctly reflect the evolving understanding of the world, such that the poses remain aligned with the same place in the physical world. That helps to build an illusion that the placed objects are really present in the user’s environment.
+The **`XRAnchor`** interface creates anchors which keep track of the pose that is fixed relative to the real world. With anchors, you can specify poses in the world that need to be updated to correctly reflect the evolving understanding of the world, such that the poses remain aligned with the same place in the physical world. That helps to build an illusion that the placed objects are really present in the user's environment.
 
 ## Properties
 
@@ -32,7 +33,7 @@ The **`XRAnchor`** interface creates anchors which keep track of the pose that 
 ```js
 navigator.xr.requestSession("immersive-ar", {
   requireFeatures: ["anchors"],
-}
+});
 ```
 
 ### Adding anchors
@@ -45,7 +46,7 @@ frame.createAnchor(anchorPose, referenceSpace).then((anchor) => {
   // Do stuff with the anchor (assign objects that will be relative to this anchor)
 
 }, (error) => {
-  console.error("Could not create anchor: "" + error);
+  console.error("Could not create anchor: " + error);
 });
 ```
 

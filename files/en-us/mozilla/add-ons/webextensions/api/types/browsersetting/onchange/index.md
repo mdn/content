@@ -17,7 +17,7 @@ browser-compat: webextensions.api.types.BrowserSetting.onChange
 
 The `BrowserSetting.onChange` event is fired when the setting is changed.
 
-On Firefox, it doesn’t fire if the change has been made through `about:config`.
+On Firefox, it doesn't fire if the change has been made through `about:config`.
 
 ## Syntax
 
@@ -83,7 +83,7 @@ Events have three functions:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/extensions/types) API.
+> **Note:** This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/types/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

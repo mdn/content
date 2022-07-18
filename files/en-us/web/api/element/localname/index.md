@@ -1,6 +1,7 @@
 ---
 title: Element.localName
 slug: Web/API/Element/localName
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -15,17 +16,11 @@ browser-compat: api.Element.localName
 The **`Element.localName`** read-only property returns the
 local part of the qualified name of an element.
 
-## Syntax
+## Value
 
-```js
-name = element.localName
-```
+A string representing the local part of the element's qualified name.
 
-### Return value
-
-A {{domxref("DOMString")}} representing the local part of the element's qualified name.
-
-## Example
+## Examples
 
 (Must be served with XML content type, such as `text/xml` or
 `application/xhtml+xml`.)
@@ -36,8 +31,8 @@ A {{domxref("DOMString")}} representing the local part of the element's qualifie
 <head>
   <script type="application/javascript"><![CDATA[
   function test() {
-    var text = document.getElementById('text');
-    var circle = document.getElementById('circle');
+    const text = document.getElementById('text');
+    const circle = document.getElementById('circle');
 
     text.value = "<svg:circle> has:\n" +
                  "localName = '" + circle.localName + "'\n" +

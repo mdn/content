@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: change event'
 slug: Web/API/HTMLElement/change_event
+page-type: web-api-event
 tags:
   - Change
   - Event
@@ -9,33 +10,11 @@ tags:
   - HTMLElement
   - Reference
   - Web
+browser-compat: api.HTMLElement.change_event
 ---
 {{APIRef}}
 
 The `change` event is fired for {{HTMLElement("input")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}} elements when an alteration to the element's value is committed by the user. Unlike the {{domxref("HTMLElement/input_event", "input")}} event, the `change` event is not necessarily fired for each alteration to an element's `value`.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onchange", "onchange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 Depending on the kind of element being changed and the way the user interacts with the element, the `change` event fires at a different moment:
 
@@ -45,6 +24,20 @@ Depending on the kind of element being changed and the way the user interacts wi
 - When the element loses focus after its value was changed, but not committed (e.g., after editing the value of {{HTMLElement("textarea")}} or `{{HTMLElement('input/text', '&lt;input type="text"&gt;')}}`).
 
 The HTML specification lists [the `<input>` types that should fire the `change` event](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply).
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('change', (event) => {});
+
+onchange = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -121,14 +114,14 @@ function updateValue(e) {
 
 #### Result
 
-{{ EmbedLiveSample('Text_input_element', '100%', '75px') }}
+{{ EmbedLiveSample('Text_input_element', '100%', '90px') }}
 
 ## Specifications
 
-{{Specifications("api.GlobalEventHandlers.onchange")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.GlobalEventHandlers.onchange")}}
+{{Compat}}
 
 Different browsers do not always agree whether a `change` event should be fired for certain types of interaction. For example, keyboard navigation in {{HTMLElement("select")}} elements used to never fire a `change` event in Gecko until the user hit Enter or switched the focus away from the `<select>` (see {{bug("126379")}}). Since Firefox 63 (Quantum), this behavior is consistent between all major browsers, however.

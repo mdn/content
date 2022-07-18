@@ -1,6 +1,7 @@
 ---
 title: Element.toggleAttribute()
 slug: Web/API/Element/toggleAttribute
+page-type: web-api-instance-method
 tags:
   - API
   - Element
@@ -17,19 +18,19 @@ present and adding it if it is not present) on the given element.
 ## Syntax
 
 ```js
-toggleAttribute(name);
-toggleAttribute(name, force);
+toggleAttribute(name)
+toggleAttribute(name, force)
 ```
 
 ### Parameters
 
 - `name`
-  - : A {{domxref("DOMString")}} specifying the name of the attribute to be toggled. The
+  - : A string specifying the name of the attribute to be toggled. The
     attribute name is automatically converted to all lower-case when
     `toggleAttribute()` is called on an HTML element in an HTML document.
 - `force` {{optional_inline}}
   - : A boolean value which has the following effects:
-    - if not specified at all, the `toggleAttribute` method “toggles” the attribute named `name` — removing it if it is present, or else adding it if it is not present
+    - if not specified at all, the `toggleAttribute` method "toggles" the attribute named `name` — removing it if it is present, or else adding it if it is not present
     - if true, the `toggleAttribute` method adds an attribute named `name`
     - if false, the `toggleAttribute` method removes the attribute named `name`
 
@@ -44,7 +45,7 @@ present, and `false` otherwise.
   - : The specified attribute `name` contains one or more characters which
     are not valid in attribute names.
 
-## Example
+## Examples
 
 In the following example, `toggleAttribute()` is used to toggle the
 `disabled` attribute of an {{HTMLElement("input")}}.
@@ -69,7 +70,7 @@ button.addEventListener("click", function(){
 
 ### Result
 
-{{ EmbedLiveSample('Example', '300', '50') }}
+{{ EmbedLiveSample('Examples', '300', '50') }}
 
 {{DOMAttributeMethods}}
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLIFrameElement
 slug: Web/API/HTMLIFrameElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -23,7 +24,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.allow")}} {{experimental_inline}}
   - : A list of origins the frame is allowed to display content from. This attribute also accepts the values `self` and `src` which represent the origin in the iframe's src attribute. The default value is `src`.
 - {{domxref("HTMLIFrameElement.allowfullscreen")}} {{experimental_inline}}
-  - : A boolean value indicating whether the inline frame is willing to be placed into full screen mode. See [Using full-screen mode](/en-US/docs/Web/API/Fullscreen_API) for details.
+  - : A boolean value indicating whether the inline frame is willing to be placed into full screen mode. See [Using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API) for details.
 - {{domxref("HTMLIFrameElement.allowPaymentRequest")}} {{deprecated_inline}}
   - : A boolean value indicating whether the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) may be invoked inside a cross-origin iframe.
 - {{domxref("HTMLIFrameElement.contentDocument")}} {{readonlyInline}}
@@ -32,6 +33,8 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
   - : Returns a {{domxref("WindowProxy")}}, the window proxy for the nested browsing context.
 - {{domxref("HTMLIFrameElement.csp")}}
   - : Specifies the Content Security Policy that an embedded document must agree to enforce upon itself.
+- {{domxref("HTMLIFrameElement.fetchPriority")}}
+  - : An optional string representing a hint given to the browser on how it should prioritize fetching of the iframe document relative to other iframe documents. If this value is provided, it must be one of the possible permitted values: `high` to fetch at a high priority, `low` to fetch at a low priority, or `auto` to indicate no preference (which is the default).
 - {{domxref("HTMLIFrameElement.frameBorder")}} {{deprecated_inline}}
   - : A string that indicates whether to create borders between frames.
 - {{domxref("HTMLIFrameElement.height")}}
@@ -44,7 +47,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
   - : A string being the width of the frame margin.
 - {{domxref("HTMLIFrameElement.name")}}
   - : A string that reflects the {{htmlattrxref("name", "iframe")}} HTML attribute, containing a name by which to refer to the frame.
-- {{domxref("HTMLIFrameElement.featurePolicy")}} {{readonlyinline}}{{experimental_inline}}
+- {{domxref("HTMLIFrameElement.featurePolicy")}} {{readonlyinline}} {{experimental_inline}}
   - : Returns the {{domxref("FeaturePolicy")}} interface which provides a simple API for introspecting the feature policies applied to a specific document.
 - {{domxref("HTMLIFrameElement.referrerPolicy")}} {{experimental_inline}}
   - : A string that reflects the {{htmlattrxref("referrerPolicy", "iframe")}} HTML attribute indicating which referrer to use when fetching the linked resource.

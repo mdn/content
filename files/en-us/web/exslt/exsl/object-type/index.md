@@ -10,7 +10,7 @@ tags:
 
 `exsl:object-type()` returns a string that indicates the type of the specified object.
 
-> **Note:** Most [XSLT](/en-US/docs/Web/XSLTT) object types can be coerced into each other safely; however, certain coercions to raise error conditions. In particular, treating something that\\'s not a node-set as a node-set will do so. This function lets authors of named templates and extension functions easily provide flexibility in parameter values.
+> **Note:** Most [XSLT](/en-US/docs/Web/XSLT) object types can be coerced into each other safely; however, certain coercions to raise error conditions. In particular, treating something that's not a node-set as a node-set will do so. This function lets authors of named templates and extension functions easily provide flexibility in parameter values.
 
 ## Syntax
 
@@ -36,4 +36,4 @@ The object's type, which will be one of the following:
 
 ## Specifications
 
-[EXSLT - EXSL:OBJECT-TYPE](http://www.exslt.org/exsl/functions/object-type/index.html)
+[EXSLT - EXSL:OBJECT-TYPE](http://exslt.org/exsl/functions/object-type/index.html)

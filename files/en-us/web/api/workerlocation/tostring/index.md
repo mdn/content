@@ -1,6 +1,7 @@
 ---
 title: WorkerLocation.toString()
 slug: Web/API/WorkerLocation/toString
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -11,13 +12,21 @@ browser-compat: api.WorkerLocation.toString
 ---
 {{ApiRef("WorkerLocation")}}
 
-The **`toString()`** {{Glossary("stringifier")}} method of a {{domxref("WorkerLocation")}} object returns a {{domxref("USVString")}} containing the serialized {{domxref("URL")}} for the worker’s location. It is a synonym for {{domxref("WorkerLocation.href")}}.
+The **`toString()`** {{Glossary("stringifier")}} method of a {{domxref("WorkerLocation")}} object returns a string containing the serialized {{domxref("URL")}} for the worker's location. It is a synonym for {{domxref("WorkerLocation.href")}}.
 
 ## Syntax
 
 ```js
-string = location.toString();
+toString()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

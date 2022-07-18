@@ -11,8 +11,8 @@ tags:
 The **`moz:firefoxOptions` capability** is a namespaced set of
 capabilities specific to [Firefox](https://www.mozilla.org/en-US/firefox/). It is used to control the
 behavior of Firefox and can be used as a member of
-[`alwaysMatch`](en-US/docs/Web/WebDriver/Capabilities#alwaysMatch) or as a member of one of the
-[`firstMatch`](en-US/docs/Web/WebDriver/Capabilities#firstMatch) entries.
+[`alwaysMatch`](/en-US/docs/Web/WebDriver/Capabilities#alwaysmatch) or as a member of one of the
+[`firstMatch`](/en-US/docs/Web/WebDriver/Capabilities#firstmatch) entries.
 
 It is used to define options which control how Firefox gets started and run.
 
@@ -143,7 +143,7 @@ channel, or the package name of the application embedding GeckoView, e.g. `org.m
 ##### `androidActivity` (string, optional)
 
 The fully qualified class name of the activity to be launched, e.g. `.GeckoViewActivity`. If not
-specified, the package’s default activity will be used.
+specified, the package's default activity will be used.
 
 ##### `androidDeviceSerial` (string, optional)
 
@@ -285,8 +285,7 @@ This runs the GeckoView example application as installed on the first Android em
 
 ## See also
 
-- [geckodriver’s
-  documentation on supported Firefox capabilities](https://firefox-source-docs.mozilla.org/testing/geckodriver/geckodriver/Capabilities.html#capabilities-example)
+- [geckodriver's documentation on supported Firefox capabilities](https://firefox-source-docs.mozilla.org/testing/geckodriver/Capabilities.html)
 - [Chrome-specific WebDriver capabilities](https://chromedriver.chromium.org/capabilities)
   (`goog:chromeOptions)`
 - [List of WebDriver capabilities](/en-US/docs/Web/WebDriver/Capabilities)

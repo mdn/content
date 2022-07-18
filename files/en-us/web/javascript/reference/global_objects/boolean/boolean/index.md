@@ -18,36 +18,54 @@ The **`Boolean()`** constructor is used to create
 ## Syntax
 
 ```js
-new Boolean()
 new Boolean(value)
+Boolean(value)
 ```
 
 ### Parameters
 
-- `value` {{optional_inline}}
+- `value`
   - : The initial value of the `Boolean` object.
+
+## Description
+
+When `Boolean` is called as a function, it coerces the parameter to a boolean primitive. When `Boolean` is called as a constructor (with `new`), it creates a {{jsxref("Boolean")}} object, which is **not** a primitive.
+
+> **Warning:** You should rarely find yourself using `Boolean` as a constructor.
 
 ## Examples
 
 ### Creating `Boolean` objects with an initial value of `false`
 
 ```js
-var bNoParam = new Boolean();
-var bZero = new Boolean(0);
-var bNull = new Boolean(null);
-var bEmptyString = new Boolean('');
-var bfalse = new Boolean(false);
+const bZero = new Boolean(0);
+const bNull = new Boolean(null);
+const bEmptyString = new Boolean('');
+const bfalse = new Boolean(false);
+
+typeof bfalse // "object"
+Boolean(bfalse) // true
+```
+
+Note how converting a `Boolean` object to a primitive with `Boolean()` always yields `true`, even if the object holds a value of `false`. You are therefore always advised to avoid constructing `Boolean` wrapper objects.
+
+If you need to take the primitive value out from the wrapper object, instead of using the `Boolean()` function, use the object's [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean/valueOf) method instead.
+
+```js
+const bfalse = new Boolean(false);
+
+bfalse.valueOf() // false
 ```
 
 ### Creating `Boolean` objects with an initial value of `true`
 
 ```js
-var btrue = new Boolean(true);
-var btrueString = new Boolean('true');
-var bfalseString = new Boolean('false');
-var bSuLin = new Boolean('Su Lin');
-var bArrayProto = new Boolean([]);
-var bObjProto = new Boolean({});
+const btrue = new Boolean(true);
+const btrueString = new Boolean('true');
+const bfalseString = new Boolean('false');
+const bSuLin = new Boolean('Su Lin');
+const bArrayProto = new Boolean([]);
+const bObjProto = new Boolean({});
 ```
 
 ## Specifications

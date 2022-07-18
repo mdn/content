@@ -8,6 +8,7 @@ tags:
   - Overview
   - Reference
   - Web
+browser-compat: css.at-rules.namespace
 ---
 {{CSSRef}}
 
@@ -21,12 +22,8 @@ tags:
 
 ## Specifications
 
-| Specification                            | Status                               | Comment            |
-| ---------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName("CSS3 Namespaces")}} | {{Spec2("CSS3 Namespaces")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `@namespace` rule
-
-{{Compat("css.at-rules.namespace")}}
+{{Compat}}

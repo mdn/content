@@ -1,6 +1,7 @@
 ---
 title: Navigator.doNotTrack
 slug: Web/API/Navigator/doNotTrack
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -16,7 +17,11 @@ The **`Navigator.doNotTrack`** property returns the user's Do Not Track setting,
 
 The value of the property reflects that of the {{httpheader("DNT")}} HTTP header, i.e. values of `"1"`, `"0"`, or `"unspecified"`.
 
-## Example
+## Value
+
+A number.
+
+## Examples
 
 ```js
 console.log(navigator.doNotTrack);
@@ -33,4 +38,4 @@ console.log(navigator.doNotTrack);
 
 ## See also
 
-- [The Do Not Track field guide](/en-US/docs/Web/Security/Do_not_track_field_guide)
+- [The Do Not Track field guide](/en-US/docs/Web/HTTP/Headers/DNT)

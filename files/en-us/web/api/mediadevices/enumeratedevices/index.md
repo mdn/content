@@ -1,6 +1,7 @@
 ---
 title: MediaDevices.enumerateDevices()
 slug: Web/API/MediaDevices/enumerateDevices
+page-type: web-api-instance-method
 tags:
   - API
   - MediaDevices
@@ -20,39 +21,41 @@ The list of returned devices will omit any devices for which the corresponding p
 ## Syntax
 
 ```js
-navigator.mediaDevices.enumerateDevices()
+enumerateDevices()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
 A {{ jsxref("Promise") }} that receives an array of {{domxref("MediaDeviceInfo")}} objects when the promise is fulfilled.
 Each object in the array describes one of the available media input and output devices (only device-types for which permission has been granted are "available").
-The order is significant - the default capture devices will be listed first.
+The order is significant - the default capture devices will be listed first.
 
 If enumeration fails, the promise is rejected.
 
-## Example
+## Examples
 
 Here's an example of using `enumerateDevices()`. It outputs a list of the [device IDs](/en-US/docs/Web/API/MediaDeviceInfo/deviceId), with their labels if available.
 
 ```js
 if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
   console.log("enumerateDevices() not supported.");
-  return;
-}
-
-// List cameras and microphones.
-
-navigator.mediaDevices.enumerateDevices()
-.then(function(devices) {
-  devices.forEach(function(device) {
-    console.log(device.kind + ": " + device.label +
-                " id = " + device.deviceId);
+} else {
+  // List cameras and microphones.
+  navigator.mediaDevices.enumerateDevices()
+  .then(function(devices) {
+    devices.forEach(function(device) {
+      console.log(device.kind + ": " + device.label +
+                  " id = " + device.deviceId);
+    });
+  })
+  .catch(function(err) {
+    console.log(err.name + ": " + err.message);
   });
-})
-.catch(function(err) {
-  console.log(err.name + ": " + err.message);
-});
+}
 ```
 
 This might produce:

@@ -58,23 +58,23 @@ JSON.parse('null');            // null
 ### Using the reviver parameter
 
 If a `reviver` is specified, the value computed by parsing is
-_transformed_ before being returned. Specifically, the computed value and all its
+_transformed_ before being returned. Specifically, the computed value and all its
 properties (beginning with the most nested properties and proceeding to the original
-value itself) are individually run through the `reviver`. Then it
+value itself) are individually run through the `reviver`. Then it
 is called, with the object containing the property being processed as `this`,
 and with the property name as a string, and the property value as arguments. If the
 `reviver` function returns {{jsxref("undefined")}} (or returns no
 value, for example, if execution falls off the end of the function), the property is
 deleted from the object. Otherwise, the property is redefined to be the return value.
 
-If the `reviver` only transforms some values and not others, be
+If the `reviver` only transforms some values and not others, be
 certain to return all untransformed values as-is, otherwise, they will be deleted from
 the resulting object.
 
 ```js
 JSON.parse('{"p": 5}', (key, value) =>
-  typeof value === 'number'
-    ? value * 2 // return value * 2 for numbers
+  typeof value === 'number'
+    ? value * 2 // return value * 2 for numbers
     : value     // return everything else unchanged
 );
 

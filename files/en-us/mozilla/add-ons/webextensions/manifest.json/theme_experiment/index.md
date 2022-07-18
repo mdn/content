@@ -26,6 +26,10 @@ browser-compat: webextensions.manifest.theme_experiment
       <td>No</td>
     </tr>
     <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
+    </tr>
+    <tr>
       <th scope="row">Example</th>
       <td>
         <pre class="brush: json">
@@ -53,7 +57,7 @@ This key enables the definition of experimental [`theme`](/en-US/docs/Mozilla/Ad
 - creating a stylesheet that defines mappings between internal CSS selectors for Firefox UI elements and arbitrary CSS variables. The CSS variables are then mapped in the `colors`, `images`, and `properties` objects to new `theme` key properties.
 - (without a stylesheet) using `colors`, `images`, and `properties` to map internal Firefox CSS selectors, such as `--arrowpanel-dimmed` to new `theme` key properties. This option limits experimentation to UI components that are associated with an inbuilt CSS variable.
 
-To discover the CSS selectors for Firefox UI elements or internal Firefox CSS variables use the [browser toolbox](/en-US/docs/Tools/Browser_Toolbox).
+To discover the CSS selectors for Firefox UI elements or internal Firefox CSS variables use the [browser toolbox](https://firefox-source-docs.mozilla.org/devtools-user/browser_toolbox/index.html).
 
 > **Note:** This key is only available for use in Firefox Developer Edition and Firefox Nightly channels and requires the `extensions.experiments.enabled` preference to be enabled. In Firefox 73 and earlier, the `extensions.legacy.enabled` had to be used instead.
 

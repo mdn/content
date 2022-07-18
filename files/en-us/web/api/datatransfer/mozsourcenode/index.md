@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.mozSourceNode
 slug: Web/API/DataTransfer/mozSourceNode
+page-type: web-api-instance-property
 tags:
   - API
   - Non-standard
@@ -23,27 +24,21 @@ returned.
 
 This property is {{readonlyInline}}.
 
-## Syntax
-
-```js
-dataTransfer.mozSourceNode;
-```
-
-### Return value
+## Value
 
 A {{domxref("Node")}} representing `node` where the drag originated. Returns
 `null` for external drags or if the node cannot be accessed.
 
-## Example
+## Examples
 
 This example shows the use of the `mozSourceNode` property in the
-{{event("dragend")}} event handler.
+{{domxref("HTMLElement/dragend_event", "dragend")}} event handler.
 
 ```js
 function dragend_handler(event)
 {
-  var dragData = event.dataTransfer;
-  var node = dragData.mozSourceNode;
+  const dragData = event.dataTransfer;
+  const node = dragData.mozSourceNode;
   if (node != null)
     console.log("mozSourceNode = " + dragData.mozSourceNode);
   else

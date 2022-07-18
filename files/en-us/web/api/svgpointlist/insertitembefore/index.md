@@ -1,6 +1,7 @@
 ---
 title: SVGPointList.insertItemBefore()
 slug: Web/API/SVGPointList/insertItemBefore
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,8 +17,10 @@ The **`insertItemBefore()`** method of the {{domxref("SVGPointList")}} interface
 ## Syntax
 
 ```js
-SVGPointList.insertItemBefore(obj,index);
+insertItemBefore(obj, index)
 ```
+
+### Parameters
 
 - `obj`
   - : An {{domxref("SVGPoint")}} object containing the coordinates of the point to be inserted.
@@ -30,7 +33,7 @@ The {{domxref("SVGPoint")}} object that was inserted.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NoModificationAllowedError`
+- `NoModificationAllowedError` {{domxref("DOMException")}}
   - : Thrown if the list is read-only.
 
 ## Examples

@@ -27,8 +27,8 @@ getUTCHours()
 A `number`.
 If the `Date` object represents a valid date, an integer between 0 and 23, representing the hours in the given date according
 to Coordinated Universal Time.
-Otherwise, [`NaN`](/en-us/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)
-if the `Date` object doesn’t represent a valid date.
+Otherwise, [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)
+if the `Date` object doesn't represent a valid date.
 
 ## Examples
 
@@ -38,8 +38,8 @@ The following example assigns the hours portion of the current time to the varia
 `hours`.
 
 ```js
-var today = new Date();
-var hours = today.getUTCHours();
+const today = new Date();
+const hours = today.getUTCHours();
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.createQuery()
 slug: Web/API/WebGL2RenderingContext/createQuery
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,7 +19,7 @@ information.
 ## Syntax
 
 ```js
-WebGLQuery gl.createQuery();
+createQuery()
 ```
 
 ### Parameters

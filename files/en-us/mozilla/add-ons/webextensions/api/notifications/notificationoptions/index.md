@@ -32,21 +32,21 @@ The first three properties - `type`, `title`, `message` - are mandatory in {{Web
   - : `string`. The notification's main content.
 - `title`
   - : `string`. The notification's title.
-- `iconUrl`{{optional_inline}}
+- `iconUrl` {{optional_inline}}
   - : `string`. A URL pointing to an icon to display in the notification. The URL can be: a data URL, a blob URL, a http or https URL, or the [relative URL of a file within the extension.](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#relative_urls)
-- `contextMessage`{{optional_inline}}
+- `contextMessage` {{optional_inline}}
   - : `string`. Supplementary content to display.
-- `priority`{{optional_inline}}
+- `priority` {{optional_inline}}
   - : `number`. The notification's priority: may be 0, 1, or 2. Defaults to 0 if omitted.
-- `eventTime`{{optional_inline}}
+- `eventTime` {{optional_inline}}
   - : `number`. A timestamp for the notification in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
-- `buttons`{{optional_inline}}
+- `buttons` {{optional_inline}}
 
   - : `array` of `button`. An array of up to 2 buttons to include in the notification. You can listen for button clicks using {{WebExtAPIRef("notifications.onButtonClicked")}}. Each button is specified as an object with the following properties:
 
     - `title`
       - : `string`. Title for the button.
-    - `iconUrl`{{optional_inline}}
+    - `iconUrl` {{optional_inline}}
       - : `string`. URL pointing to an icon for the button.
 
 - `imageUrl`
@@ -80,6 +80,6 @@ Note that `appIconMaskUrl` and `isClickable` are not supported.
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications) API.
+> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

@@ -13,4 +13,4 @@ the browser compatibility table on any given MDN document page, you can either
 use the `Report problems with this data on GitHub` link in the upper-right
 corner of the table on the page itself to create an issue, or go to
 <https://github.com/mdn/browser-compat-data> and
-[read more to learn how to contribute](https://github.com/mdn/browser-compat-data/blob/master/docs/contributing.md).
+[read more to learn how to contribute](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md).

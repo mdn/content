@@ -44,7 +44,7 @@ HTML is by default fast and accessible. It is our job, as developers, to ensure 
 
   - [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 
-- [Preloading content with `rel="preload"`](/en-US/docs/Web/HTML/Preloading_content) - [(https://w3c.github.io/preload/](https://w3c.github.io/preload/))
+- [Preloading content with `rel="preload"`](/en-US/docs/Web/HTML/Link_types/preload) - [(https://w3c.github.io/preload/](https://w3c.github.io/preload/))
 - `async` / `defer` attributes
 - {{htmlelement('iframe')}}
 - {{htmlelement('object')}}
@@ -63,7 +63,7 @@ HTML is by default fast and accessible. It is our job, as developers, to ensure 
 - [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
 - [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
 - [Multimedia: video](/en-US/docs/Learn/Performance/video)
-- [JavaScript performance best practices](/en-US/docs/Learn/Performance/JavaScript).
+- [JavaScript performance](/en-US/docs/Learn/Performance/JavaScript)
 - [HTML performance features](/en-US/docs/Learn/Performance/HTML)
 - [CSS performance features](/en-US/docs/Learn/Performance/CSS)
 - [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)
@@ -79,4 +79,4 @@ HTML is by default fast and accessible. It is our job, as developers, to ensure 
 
   - [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 
-- [Preloading content with `rel="preload"`](/en-US/docs/Web/HTML/Preloading_content) - [(https://w3c.github.io/preload/](https://w3c.github.io/preload/))
+- [Preloading content with `rel="preload"`](/en-US/docs/Web/HTML/Link_types/preload) - [(https://w3c.github.io/preload/](https://w3c.github.io/preload/))

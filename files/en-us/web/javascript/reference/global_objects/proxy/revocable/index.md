@@ -52,12 +52,12 @@ effect.
 ### Using Proxy.revocable
 
 ```js
-var revocable = Proxy.revocable({}, {
-  get: function(target, name) {
+const revocable = Proxy.revocable({}, {
+  get(target, name) {
     return "[[" + name + "]]";
   }
 });
-var proxy = revocable.proxy;
+const proxy = revocable.proxy;
 console.log(proxy.foo); // "[[foo]]"
 
 revocable.revoke();

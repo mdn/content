@@ -1,6 +1,7 @@
 ---
 title: NavigatorUAData.mobile
 slug: Web/API/NavigatorUAData/mobile
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,13 +14,7 @@ browser-compat: api.NavigatorUAData.mobile
 
 The **`mobile`** read-only property of the {{domxref("NavigatorUAData")}} interface returns a value indicating whether the device is a mobile device.
 
-## Syntax
-
-```js
-let mobile = NavigatorUAData.mobile;
-```
-
-### Value
+## Value
 
 A {{jsxref("Boolean")}}, `true` if this is a mobile device.
 

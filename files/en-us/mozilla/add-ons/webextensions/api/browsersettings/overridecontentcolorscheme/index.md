@@ -21,7 +21,7 @@ Firefox enables users to choose a theme for the browser UI. These themes apply e
 This object takes these values:
 
 - "light": Applies a light theme to webpages.
-- "dark": Applies a  dark theme to webpages.
+- "dark": Applies a dark theme to webpages.
 - "system": Applies a light or dark theme to webpages based on the device's theme.
 - "browser": Applies a light or dark theme to webpages based on the browser's theme.
 

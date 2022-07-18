@@ -9,6 +9,6 @@ tags:
 ---
 {{QuickLinksWithSubpages("/en-US/docs/Web/XML")}}
 
-The **Extensible Markup Language** is a strict serialization of the [Document Object Model](/en-US/docs/Web/API/Document_Object_Model).
+The **Extensible Markup Language** is a strict serialization of the [Document Object Model](/en-US/docs/Web/API/Document_Object_Model).
 
 {{LandingPageListSubpages}}

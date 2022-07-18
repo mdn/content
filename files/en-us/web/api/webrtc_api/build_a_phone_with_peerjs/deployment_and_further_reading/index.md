@@ -1,6 +1,7 @@
 ---
 title: Deployment and further reading
 slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading
+page-type: guide
 ---
 {{WebRTCSidebar}}
 
@@ -8,7 +9,7 @@ slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_readin
 
 ## Deployment
 
-The easiest place to deploy this app would be [Glitch](https://glitch.com/), since you don’t have to fiddle with configuring the port for the peer server.
+The easiest place to deploy this app would be [Glitch](https://glitch.com/), since you don't have to fiddle with configuring the port for the peer server.
 
 ## Further Reading
 

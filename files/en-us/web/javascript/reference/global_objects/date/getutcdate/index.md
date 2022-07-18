@@ -27,8 +27,8 @@ getUTCDate()
 A `number`.
 If the `Date` object represents a valid date, an integer number ranging from 1 to 31
 representing day of month for the given date, according to universal time.
-Otherwise, [`NaN`](/en-us/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)
-if the `Date` object doesn’t represent a valid date.
+Otherwise, [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)
+if the `Date` object doesn't represent a valid date.
 
 ## Examples
 
@@ -38,8 +38,8 @@ The following example assigns the day of month of the current date to the variab
 `dayOfMonth`.
 
 ```js
-var today = new Date();
-var dayOfMonth = today.getUTCDate();
+const today = new Date();
+const dayOfMonth = today.getUTCDate();
 ```
 
 ## Specifications

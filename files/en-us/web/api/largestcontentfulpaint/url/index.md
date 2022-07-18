@@ -1,6 +1,7 @@
 ---
 title: LargestContentfulPaint.url
 slug: Web/API/LargestContentfulPaint/url
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,17 +12,11 @@ browser-compat: api.LargestContentfulPaint.url
 ---
 {{DefaultAPISidebar("Largest Contentful Paint API")}}
 
-The **`url`** read-only property of the {{domxref("LargestContentfulPaint")}} interface returns the request url of the element, if the element is an image.
+The **`url`** read-only property of the {{domxref("LargestContentfulPaint")}} interface returns the request URL of the element, if the element is an image.
 
-## Syntax
+## Value
 
-```js
-let url = LargestContentfulPaint.url;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing a URL.
+A string containing a URL.
 
 ## Examples
 

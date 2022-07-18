@@ -1,6 +1,7 @@
 ---
 title: SVGImageElement.decoding
 slug: Web/API/SVGImageElement/decoding
+page-type: web-api-instance-property
 tags:
   - API
   - Image
@@ -18,16 +19,9 @@ The **`decoding`** property of the
 {{domxref("SVGImageElement")}} interface represents a hint given to the browser on how
 it should decode the image.
 
-## Syntax
+## Value
 
-```js
-var refStr = SVGImageElement.decoding
-SVGImageElement.decoding = refStr;
-```
-
-### Values
-
-A {{domxref("DOMString")}} representing the decoding hint. Possible values are:
+A string representing the decoding hint. Possible values are:
 
 - **`sync`**: Decode the image synchronously for atomic
   presentation with other content.

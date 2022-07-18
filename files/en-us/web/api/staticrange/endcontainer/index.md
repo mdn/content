@@ -1,6 +1,7 @@
 ---
 title: StaticRange.endContainer
 slug: Web/API/StaticRange/endContainer
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -17,14 +18,7 @@ browser-compat: api.StaticRange.endContainer
 
 The **`endContainer`** property of the {{domxref("StaticRange")}} interface returns the end {{domxref("Node")}} for the range.
 
-## Syntax
-
-```js
-var node = staticNode.endContainer
-staticNode.endContainer = endContainer
-```
-
-### Value
+## Value
 
 The DOM {{domxref("Node")}} which contains the final character of the range.
 

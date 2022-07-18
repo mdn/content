@@ -1,6 +1,7 @@
 ---
 title: 'WebSocket: close event'
 slug: Web/API/WebSocket/close_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -35,11 +36,11 @@ An {{domxref("CloseEvent")}}. Inherits from {{domxref("Event")}}.
 
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
-- {{domxref("CloseEvent.code", "code")}}{{readOnlyInline}}
+- {{domxref("CloseEvent.code", "code")}} {{readOnlyInline}}
   - : Returns an `unsigned short` containing the close code sent by the server.
-- {{domxref("CloseEvent.reason", "reason")}}{{readOnlyInline}}
-  - : Returns a {{domxref("DOMString")}} indicating the reason the server closed the connection. This is specific to the particular server and sub-protocol.
-- {{domxref("CloseEvent.wasClean", "wasClean")}}{{readOnlyInline}}
+- {{domxref("CloseEvent.reason", "reason")}} {{readOnlyInline}}
+  - : Returns a string indicating the reason the server closed the connection. This is specific to the particular server and sub-protocol.
+- {{domxref("CloseEvent.wasClean", "wasClean")}} {{readOnlyInline}}
   - : Returns a boolean value that Indicates whether or not the connection was cleanly closed.
 
 ## Examples

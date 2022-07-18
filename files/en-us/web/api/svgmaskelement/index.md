@@ -1,6 +1,7 @@
 ---
 title: SVGMaskElement
 slug: Web/API/SVGMaskElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

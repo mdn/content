@@ -62,8 +62,7 @@ new Intl.NumberFormat(locales, options)
         "`talu`", "`tamldec`", "`telu`",
         "`thai`", "`tibt`", "`tirh`",
         "`vaii`", "`wara`", "`wcho`". — see
-        the [standard
-        Unicode numeral systems list](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem).
+        the [standard Unicode numeral systems list](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem).
 
 - `options` {{optional_inline}}
 
@@ -76,9 +75,8 @@ new Intl.NumberFormat(locales, options)
       - : The currency to use in currency formatting. Possible values are the ISO
         4217 currency codes, such as "`USD`" for the US dollar,
         "`EUR`" for the euro, or "`CNY`" for the Chinese RMB
-        — see the [Current
-        currency & funds code list](https://www.currency-iso.org/en/home/tables/table-a1.html). There is no default value; if the
-        `style` is "`currency`", the `currency`
+        — see the [Current currency & funds code list](https://www.six-group.com/en/products-services/financial-information/data-standards.html#scrollTo=currency-codes).
+        There is no default value; if the `style` is "`currency`", the `currency`
         property must be provided.
     - `currencyDisplay`
 
@@ -132,7 +130,7 @@ new Intl.NumberFormat(locales, options)
         - "`auto`" sign display for negative numbers only
         - "`exceptZero`" sign display for positive and negative
           numbers, but not zero
-        - "`negative`" sign display for negative numbers only, excluding negative zero.
+        - "`negative`" sign display for negative numbers only, excluding negative zero. {{experimental_inline}}
         - "`never`" never display sign
 
     - `style`
@@ -146,8 +144,10 @@ new Intl.NumberFormat(locales, options)
 
     - `unit`
       - : The unit to use in `unit` formatting, Possible values are core
-        unit identifiers, defined in [UTS #35, Part 2, Section 6](https://unicode.org/reports/tr35/tr35-general.html#Unit_Elements). A [subset](https://tc39.es/proposal-unified-intl-numberformat/section6/locales-currencies-tz_proposed_out.html#sec-issanctionedsimpleunitidentifier) of units from the [full
-        list](https://github.com/unicode-org/cldr/blob/master/common/validity/unit.xml) was selected for use in ECMAScript. Pairs of simple units can
+        unit identifiers, defined in [UTS #35, Part 2, Section 6](https://unicode.org/reports/tr35/tr35-general.html#Unit_Elements).
+        A [subset](https://tc39.es/proposal-unified-intl-numberformat/section6/locales-currencies-tz_proposed_out.html#sec-issanctionedsimpleunitidentifier)
+        of units from the [full list](https://github.com/unicode-org/cldr/blob/main/common/validity/unit.xml)
+        was selected for use in ECMAScript. Pairs of simple units can
         be concatenated with "`-per-`" to make a compound unit. There
         is no default value; if the `style` is "`unit`", the
         `unit` property must be provided.
@@ -160,7 +160,7 @@ new Intl.NumberFormat(locales, options)
         - "`short`" (e.g., `16 l`)
         - "`narrow`" (e.g., `16l`)
 
-    - `useGrouping`
+    - `useGrouping` {{experimental_inline}}
       - : Whether to use grouping separators, such as thousands separators or
         thousand/lakh/crore separators. The default is `auto`.
 
@@ -170,7 +170,7 @@ new Intl.NumberFormat(locales, options)
         - "`min2`": display grouping separators when there are at least 2 digits in a group
         - "`true`": alias for `always`
 
-    - `roundingMode`
+    - `roundingMode` {{experimental_inline}}
       - : Options for rounding modes reflecting the [ICU user guide](https://unicode-org.github.io/icu/userguide/format_parse/numbers/rounding-modes.html). The default is `halfExpand`.
 
         - "`ceil`": toward +∞
@@ -183,19 +183,40 @@ new Intl.NumberFormat(locales, options)
         - "`halfTrunc`": ties toward 0
         - "`halfEven`": ties toward the value with even cardinality
 
-    - `roundingPriority`
+    - `roundingPriority` {{experimental_inline}}
       - : Options for control rounding behavior:
 
         - "`auto`": the significant digits always win a conflict
         - "`morePrecision`": the result with more precision wins a conflict
         - "`lessPrecision`": the result with less precision wins a conflict
 
-    - `roundingIncrement`
-      - : A Number in the following list:
+    - `roundingIncrement` {{experimental_inline}}
+      - : Specifies the rounding-increment precision. Must be one of the following integers:
         "`1`", " `2`", "`5`", "`10`", "`20`", " `25`", "`50`", "`100`", "`200`", "`250`", "`500`", "`1000`", "`2000`", "`2500`", " `5000`".
-        > **Note:** `roundingIncrement` option cannot be mixed with significant digits rounding or any setting of `roundingPriority` other than "auto".
+        > **Note:** The `roundingIncrement` option controls the rounding increment to be used when formatting numbers:
+        - It indicates the increment at which rounding should take place relative to the calculated rounding magnitude.
+        - It cannot be mixed with significant-digits rounding or any setting of `roundingPriority` other than `auto`.
+        >
+        > For example, if `maximumFractionDigits` is 2 and `roundingIncrement` is 5, then the number is rounded to the nearest 0.05 ("nickel rounding").
+        >
+        > ```js
+        >
+        > const nf = new Intl.NumberFormat("en-US", {
+        >   style: "currency",
+        >   currency: "USD",
+        >   maximumFractionDigits: 2,
+        >   roundingIncrement: 5
+        > });
+        >
+        > console.log(nf.format(11.29));  // > output: "$11.30"
+        > console.log(nf.format(11.25));  // > output: "$11.25"
+        > console.log(nf.format(11.22));  // > output: "$11.20"
+        > ```
+        >
+        > If you set `minimumFractionDigits` and `maximumFractionDigits`, they must set them to the same value; otherwise a `RangeError` is thrown.
+        >
 
-    - `trailingZeroDisplay`
+    - `trailingZeroDisplay` {{experimental_inline}}
       - : A string expressing the strategy for displaying trailing zeros on whole numbers. The default is "`auto`".
 
         - "`auto`": keep trailing zeros according to minimumFractionDigits and minimumSignificantDigits
@@ -216,17 +237,15 @@ new Intl.NumberFormat(locales, options)
       - : The minimum number of fraction digits to use. Possible values are from 0
         to 20; the default for plain number and percent formatting is 0; the
         default for currency formatting is the number of minor unit digits
-        provided by the [ISO
-        4217 currency code list](https://www.currency-iso.org/en/home/tables/table-a1.html) (2 if the list doesn't provide that
-        information).
+        provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list_one.xml)
+        (2 if the list doesn't provide that information).
     - `maximumFractionDigits`
       - : The maximum number of fraction digits to use. Possible values are from 0
         to 20; the default for plain number formatting is the larger of
         `minimumFractionDigits` and 3; the default for currency
         formatting is the larger of `minimumFractionDigits` and the
-        number of minor unit digits provided by the [ISO
-        4217 currency code list](https://www.currency-iso.org/en/home/tables/table-a1.html) (2 if the list doesn't provide that
-        information); the default for percent formatting is the larger of
+        number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list_one.xml)
+        (2 if the list doesn't provide that information); the default for percent formatting is the larger of
         `minimumFractionDigits` and 0.
     - `minimumSignificantDigits`
       - : The minimum number of significant digits to use. Possible values are from

@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.bindBuffer()
 slug: Web/API/WebGLRenderingContext/bindBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -17,19 +18,21 @@ The **`WebGLRenderingContext.bindBuffer()`** method of the [WebGL API](/en-US/do
 ## Syntax
 
 ```js
-void gl.bindBuffer(target, buffer);
+bindBuffer(target, buffer)
 ```
 
 ### Parameters
 
-- target
+- `target`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
 
-    - `gl.ARRAY_BUFFER`: Buffer containing vertex attributes, such as
-      vertex coordinates, texture coordinate data, or vertex color data.
-    - `gl.ELEMENT_ARRAY_BUFFER`: Buffer used for element indices.
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    - `gl.ARRAY_BUFFER`
+      - : Buffer containing vertex attributes, such as
+        vertex coordinates, texture coordinate data, or vertex color data.
+    - `gl.ELEMENT_ARRAY_BUFFER`
+      - : Buffer used for element indices.
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
       - `gl.COPY_READ_BUFFER`: Buffer for copying from one buffer object
@@ -44,12 +47,12 @@ void gl.bindBuffer(target, buffer);
       - `gl.PIXEL_UNPACK_BUFFER`: Buffer used for pixel transfer
         operations.
 
-- buffer
+- `buffer`
   - : A {{domxref("WebGLBuffer")}} to bind.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -77,7 +80,7 @@ gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 ### Getting current bindings
 
 To check the current buffer bindings, query the `ARRAY_BUFFER_BINDING`
-and `ELEMENT_ARRAY_BUFFER_BINDING` constants.
+and `ELEMENT_ARRAY_BUFFER_BINDING` constants.
 
 ```js
 gl.getParameter(gl.ARRAY_BUFFER_BINDING);

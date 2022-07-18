@@ -1,6 +1,7 @@
 ---
 title: XPathResult.snapshotLength
 slug: Web/API/XPathResult/snapshotLength
+page-type: web-api-instance-property
 tags:
   - API
   - DOM XPath API
@@ -18,13 +19,7 @@ snapshot.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var snapshotLength = result.snapshotLength;
-```
-
-### Return value
+## Value
 
 An integer value representing the number of nodes in the result snapshot.
 
@@ -36,7 +31,7 @@ In case {{domxref("XPathResult.resultType")}} is not
 `UNORDERED_NODE_SNAPSHOT_TYPE` or `ORDERED_NODE_SNAPSHOT_TYPE`, an
 {{domxref("XPathException")}} of type `TYPE_ERR` is thrown.
 
-## Example
+## Examples
 
 The following example shows the use of the `snapshotLength` property.
 
@@ -57,7 +52,7 @@ document.querySelector("output").textContent = result.snapshotLength;
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples', 400, 70)}}
 
 ## Specifications
 

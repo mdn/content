@@ -9,6 +9,7 @@ tags:
   - Layout
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-grid/
 ---
 {{CSSRef}}
 
@@ -28,9 +29,9 @@ The example below shows a three-column track grid with new rows created at a min
 }
 
 .wrapper > div {
-  border: 2px solid rgb(233,171,88);
+  border: 2px solid rgb(233 171 88);
   border-radius: 5px;
-  background-color: rgba(233,171,88,.5);
+  background-color: rgba(233 171 88 / .5);
   padding: 1em;
   color: #d9480f;
 }
@@ -90,6 +91,7 @@ The example below shows a three-column track grid with new rows created at a min
 
 ### CSS properties
 
+- {{CSSxRef("display")}}
 - {{CSSxRef("grid-template-columns")}}
 - {{CSSxRef("grid-template-rows")}}
 - {{CSSxRef("grid-template-areas")}}
@@ -108,15 +110,15 @@ The example below shows a three-column track grid with new rows created at a min
 - {{CSSxRef("row-gap")}}
 - {{CSSxRef("column-gap")}}
 - {{CSSxRef("gap")}}
-- {{CSSxRef("masonry-auto-flow")}}{{Experimental_Inline}}
-- {{CSSxRef("align-tracks")}}{{Experimental_Inline}}
-- {{CSSxRef("justify-tracks")}}{{Experimental_Inline}}
+- {{CSSxRef("masonry-auto-flow")}} {{Experimental_Inline}}
+- {{CSSxRef("align-tracks")}} {{Experimental_Inline}}
+- {{CSSxRef("justify-tracks")}} {{Experimental_Inline}}
 
 ### CSS functions
 
-- {{CSSxRef("repeat()", "repeat()")}}
-- {{CSSxRef("minmax()", "minmax()")}}
-- {{CSSxRef("fit-content()", "fit-content()")}}
+- {{CSSxRef("repeat", "repeat()")}}
+- {{CSSxRef("minmax", "minmax()")}}
+- {{CSSxRef("fit-content_function", "fit-content()")}}
 
 ### CSS data types
 
@@ -125,12 +127,12 @@ The example below shows a three-column track grid with new rows created at a min
 ### Glossary entries
 
 - [Grid](/en-US/docs/Glossary/Grid)
-- [Grid Lines](/en-US/docs/Glossary/Grid_Lines)
-- [Grid Tracks](/en-US/docs/Glossary/Grid_Tracks)
-- [Grid Cell](/en-US/docs/Glossary/Grid_Cell)
-- [Grid Area](/en-US/docs/Glossary/Grid_Areas)
+- [Grid lines](/en-US/docs/Glossary/Grid_Lines)
+- [Grid tracks](/en-US/docs/Glossary/Grid_Tracks)
+- [Grid cell](/en-US/docs/Glossary/Grid_Cell)
+- [Grid area](/en-US/docs/Glossary/Grid_Areas)
 - [Gutters](/en-US/docs/Glossary/Gutters)
-- [Grid Axis](/en-US/docs/Glossary/Grid_Axis)
+- [Grid axis](/en-US/docs/Glossary/Grid_Axis)
 - [Grid row](/en-US/docs/Glossary/Grid_Rows)
 - [Grid column](/en-US/docs/Glossary/Grid_Column)
 
@@ -145,25 +147,18 @@ The example below shows a three-column track grid with new rows created at a min
 - [Box alignment in CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
 - [CSS Grid, Logical Values and Writing Modes](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)
 - [CSS Grid Layout and accessibility](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-- [CSS Grid and progressive enhancement](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
 - [Realizing common layouts using CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
 - [Subgrid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
-- [Masonry Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout){{Experimental_Inline}}
+- [Masonry Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) {{Experimental_Inline}}
 
 ## External resources
 
-- [CSS Grid and IE11](https://tomrothe.de/posts/css_grid_and_ie11.html) ([polyfill](https://github.com/motine/css_grid_annotator))
-- [Examples from Jen Simmons](https://labs.jensimmons.com/)
-- [Grid by Example - a collection of usage examples and video tutorials](https://gridbyexample.com/)
-- [Codrops Grid Reference](https://tympanus.net/codrops/css_reference/grid/)
-- [Firefox DevTools CSS Grid Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
-- [CSS Grid Playground](https://mozilladevelopers.github.io/playground/css-grid)
-- [Grid Garden](https://cssgridgarden.com) - A game for learning CSS grid
+- [Grid by Example](https://gridbyexample.com/) - A collection of usage examples and video tutorials
+- [CSS Grid Reference - Codrops](https://tympanus.net/codrops/css_reference/grid/)
+- [CSS Grid Inspector - Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
+- [CSS Grid Playground](https://mozilladevelopers.github.io/playground/css-grid/)
+- [CSS Grid Garden](https://cssgridgarden.com) - A game for learning CSS grid
 
 ## Specifications
 
-| Specification                        | Status                           | Comment                                                                                      |
-| ------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS Grid 3")}} | {{Spec2("CSS Grid 3")}} | Adds [masonry](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout).                          |
-| {{SpecName("CSS Grid 2")}} | {{Spec2("CSS Grid 2")}} | Added [subgrids](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#subgrid). |
-| {{SpecName("CSS3 Grid")}}     | {{Spec2("CSS3 Grid")}}     | Initial definition.                                                                          |
+{{Specifications}}

@@ -44,7 +44,7 @@ This article acts as a box of tricks, providing an introduction to some interest
 
 {{cssxref("box-shadow")}} allows you to apply one or more drop shadows to an element's box. Like text shadows, box shadows are supported pretty well across browsers, including IE9+ and Edge. Users of older IE versions might just have to cope with no shadows, so just test your designs to make sure your content is legible without them.
 
-You can find the examples in this section at [box-shadow.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/box-shadow.html) too).
+You can find the examples in this section at [box-shadow.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/box-shadow.html) too).
 
 ### A simple box shadow
 
@@ -178,7 +178,7 @@ In the example below we have used two different values for filter. The `first` i
 
 The second is `grayscale()`; by using a percentage we are setting how much color we want to be removed.
 
-{{EmbedGHLiveSample("css-examples/learn/images/filter.html", '100%', 700)}}
+{{EmbedGHLiveSample("css-examples/learn/images/filter.html", '100%', 900)}}
 
 **Play with the percentage and pixel parameters in the live example to see how the images change. You could also swap the values for some others. Try `contrast(200%)`, `invert(100%)` or `hue-rotate(20deg)` on the live example above. Take a look at the MDN page for [`filter`](/en-US/docs/Web/CSS/filter) for many other options you could try.**
 
@@ -186,7 +186,7 @@ You can apply filters to any element and not just images. Some of the filter opt
 
 In this next example we are applying our filter to a box, and comparing it to a box shadow. As you can see, the drop-shadow filter follows the exact shape of the text and border dashes. The box shadow just follows the square of the box.
 
-{{EmbedGHLiveSample("css-examples/learn/images/filter-text.html", '100%', 600)}}
+{{EmbedGHLiveSample("css-examples/learn/images/filter-text.html", '100%', 700)}}
 
 ## Blend modes
 
@@ -197,7 +197,7 @@ There are two properties that use blend modes in CSS:
 - {{cssxref("background-blend-mode")}}, which blends together multiple background images and colors set on a single element.
 - {{cssxref("mix-blend-mode")}}, which blends together the element it is set on with elements it is overlapping — both background and content.
 
-You can find a lot more examples than are available here in our [blend-modes.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html) example page (see [source code](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/blend-modes.html)), and on the {{cssxref("&lt;blend-mode&gt;")}} reference page.
+You can find a lot more examples than are available here in our [blend-modes.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html) example page (see [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/blend-modes.html)), and on the {{cssxref("&lt;blend-mode&gt;")}} reference page.
 
 > **Note:** Blend modes are also very new, and slightly less well supported than filters. There is no support as yet in Edge, and Safari only supports some of the blend mode options.
 
@@ -232,7 +232,7 @@ div {
 
 The result we get is this — you can see the original on the left, and the multiply blend mode on the right:
 
-{{ EmbedLiveSample('background-blend-mode', '100%', 200) }}
+{{ EmbedLiveSample('background-blend-mode', '100%', 300) }}
 
 ### mix-blend-mode
 
@@ -299,7 +299,7 @@ article div:last-child {
 
 This gives us the following results:
 
-{{ EmbedLiveSample('mix-blend-mode', '100%', 200) }}
+{{ EmbedLiveSample('mix-blend-mode', '100%', 300) }}
 
 You can see here that the multiply mix blend has blended together not only the two background images, but also the color from the `<div>` below it too.
 
@@ -315,9 +315,9 @@ In the image below we have a pleasingly round balloon. The actual file is rectan
 
 {{EmbedGHLiveSample("css-examples/learn/images/shapes.html", '100%', 1000)}}
 
-The shape in this example is not reacting to the content of the image file. Instead, the circle function is taking its centre point from the centre of the image file, as if we had put a compass in the middle of the file and drawn a circle that fits inside the file. It is that circle that the text flows around.
+The shape in this example is not reacting to the content of the image file. Instead, the circle function is taking its center point from the center of the image file, as if we had put a compass in the middle of the file and drawn a circle that fits inside the file. It is that circle that the text flows around.
 
-> **Note:** In Firefox you can use the DevTools [Shapes Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes) to inspect Shapes.
+> **Note:** In Firefox you can use the DevTools [Shapes Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html) to inspect Shapes.
 
 The `circle()` function is just one of a few basic shapes that are defined, however there are a number of different ways to create shapes. For more information and example code for CSS Shapes see the [Guides to CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes) on MDN.
 
@@ -336,7 +336,7 @@ So why have other browsers implemented a `-webkit-` prefix? Mainly for browser c
 
 If you do want to use such features in your production work, make sure to test across browsers thoroughly and check that, where these features don't work, the site is still usable.
 
-> **Note:** For a full `-webkit-background-clip: text` code example, see [background-clip-text.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html) (see also the [source code](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html)).
+> **Note:** For a full `-webkit-background-clip: text` code example, see [background-clip-text.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html) (see also the [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/background-clip-text.html)).
 
 ## Summary
 

@@ -1,16 +1,16 @@
 ---
 title: Selection.getRangeAt()
 slug: Web/API/Selection/getRangeAt
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - HTML Editing
   - Method
   - Reference
   - Selection
 browser-compat: api.Selection.getRangeAt
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
 The **`Selection.getRangeAt()`** method returns a range object
 representing one of the ranges currently selected.
@@ -18,7 +18,7 @@ representing one of the ranges currently selected.
 ## Syntax
 
 ```js
-range = sel.getRangeAt(index)
+getRangeAt(index)
 ```
 
 ### Parameters
@@ -31,7 +31,7 @@ range = sel.getRangeAt(index)
 
 The specified {{domxref("Range")}} object.
 
-## Example
+## Examples
 
 ```js
 let ranges = [];

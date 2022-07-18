@@ -1,6 +1,7 @@
 ---
 title: Element.hasPointerCapture()
 slug: Web/API/Element/hasPointerCapture
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -20,7 +21,7 @@ pointer capture for the pointer identified by the given pointer ID.
 ## Syntax
 
 ```js
-targetElement.hasPointerCapture(pointerId);
+hasPointerCapture(pointerId)
 ```
 
 ### Parameters
@@ -44,7 +45,7 @@ capture, `false` if it doesn't.
       // Element 'target' will receive/capture further events
       el.setPointerCapture(ev.pointerId);
 
-      /* ... */
+      // …
 
       // Check whether element still has pointer capture
       let pointerCap = el.hasPointerCapture(ev.pointerId);

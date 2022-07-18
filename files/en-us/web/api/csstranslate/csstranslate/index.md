@@ -1,6 +1,7 @@
 ---
 title: CSSTranslate()
 slug: Web/API/CSSTranslate/CSSTranslate
+page-type: web-api-constructor
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,16 +13,17 @@ tags:
   - Houdini
 browser-compat: api.CSSTranslate.CSSTranslate
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSTranslate()`** constructor creates a
-new {{domxref("CSSTranslate")}} object representing the [translate()](</en-US/docs/Web/CSS/transform-function/translate()>) value of the
+new {{domxref("CSSTranslate")}} object representing the [translate()](/en-US/docs/Web/CSS/transform-function/translate) value of the
 individual {{CSSXref('transform')}} property in CSS.
 
 ## Syntax
 
 ```js
-var CSSTranslate = new CSSTranslate(x,y[,z]);
+new CSSTranslate(x, y)
+new CSSTranslate(x, y, z)
 ```
 
 ### Parameters
@@ -32,7 +34,7 @@ var CSSTranslate = new CSSTranslate(x,y[,z]);
 - {{domxref('CSSTranslate.y','y')}}
   - : A value for the y-axis of the {{domxref('CSSTranslate')}} object to be constructed.
     This must be a {{cssxref('length-percentage')}}.
-- {{domxref('CSSTranslate.z','z')}}{{optional_inline}}
+- {{domxref('CSSTranslate.z','z')}} {{optional_inline}}
 
   - : A value for the z-axis of the {{domxref('CSSTranslate')}} object to be constructed.
     This must be a {{cssxref('length')}}.

@@ -10,7 +10,7 @@ tags:
   - Security
   - connect-src
   - source
-browser-compat: http.headers.csp.Content-Security-Policy.connect-src
+browser-compat: http.headers.Content-Security-Policy.connect-src
 ---
 {{HTTPSidebar}}
 
@@ -99,7 +99,7 @@ The following connections are blocked and won't load:
 
 {{Compat}}
 
-## Compatibility notes
+### Compatibility notes
 
 - Prior to Firefox 23, `xhr-src` was used in place of the
   `connect-src` directive and only restricted the use of

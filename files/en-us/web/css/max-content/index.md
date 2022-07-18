@@ -27,6 +27,7 @@ grid-template-columns: 200px 1fr max-content;
 max-content: inherit;
 max-content: initial;
 max-content: revert;
+max-content: revert-layer;
 max-content: unset;
 ```
 
@@ -38,7 +39,7 @@ max-content: unset;
 
 ```html
 <div id="container">
-  <div class="item">Item</div>
+  <div class="item">Item</div>
   <div class="item">Item with more text in it which will overflow the fixed width box.</div>
 </div>
 ```
@@ -48,12 +49,12 @@ max-content: unset;
 ```css
 #container {
   background-color: #8cffa0;
-  padding: 10px;
-  width: 200px;
+  padding: 10px;
+  width: 200px;
 }
 
 .item {
-  width: max-content;
+  width: max-content;
   background-color: #8ca0ff;
   padding: 5px;
   margin-bottom: 1em;
@@ -108,10 +109,8 @@ max-content: unset;
 
 ## Browser compatibility
 
-### Supported for width (and other sizing properties)
-
 {{Compat}}
 
 ## See also
 
-- Related sizing keywords: {{cssxref("min-content")}}, {{cssxref("fit-content")}}
+- Related sizing keywords: {{cssxref("min-content")}}, {{cssxref("fit-content")}}

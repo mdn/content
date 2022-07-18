@@ -13,7 +13,7 @@ browser-compat: http.headers.Feature-Policy.gamepad
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header `gamepad` directive controls whether the current document is allowed to use the [Gamepad API](/en-US/docs/Web/API/Gamepad_API).
 When this policy is disabled, calls to {{domxref('Navigator.getGamepads()')}} will throw a `SecurityError` {{domxref('DOMException')}}.
-In addition, the {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} events will not fire.
+In addition, the {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} and {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} events will not fire.
 
 ## Syntax
 
@@ -68,5 +68,4 @@ iframe attributes can selectively enable features in certain frames, and not in 
 
 - {{HTTPHeader("Feature-Policy")}} header
 - [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
-- [Using Feature
-  Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)

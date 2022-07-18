@@ -1,15 +1,17 @@
 ---
-title: 'aria-busy'
+title: aria-busy
 slug: Web/Accessibility/ARIA/Attributes/aria-busy
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - aria-busy
   - aria live regions
   - aria state
+spec-urls:
+  - https://w3c.github.io/aria/#aria-busy
+  - https://w3c.github.io/aria-practices/#feed
 ---
-
 Used in [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions), the global `aria-busy` state indicates an element is being modified and that assistive technologies may want to wait until the changes are complete before informing the user about the update.
 
 When multiple parts of a live region need to be loaded before changes are announced to the user, set `aria-busy="true"` until loading is complete. Then set to `aria-busy="false"`. This prevents assistive technologies from announcing changes before updates are done.
@@ -28,7 +30,7 @@ ariaLiveElement.ariaBusy = "false";
 
 ### Within a `feed`
 
-If an element with [`feed`](/en-US/docs/Web/Accessibility/ARIA/Roles/Feed_Role) role has `aria-busy` set to `true`, the rendering changes that occur inside the feed will not be announced with the exception of user-initiated changes.
+If an element with [`feed`](/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role) role has `aria-busy` set to `true`, the rendering changes that occur inside the feed will not be announced with the exception of user-initiated changes.
 
 ### Within a `widget`
 
@@ -44,7 +46,7 @@ If changes to a rendered widget would create a state where the widget is missing
 ## ARIAMixin API
 
 - {{domxref("Element.ariaBusy")}}
-  - : The  [`ariaBusy`](/en-US/docs/Web/API/Element/ariaBusy) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-busy` attribute, which indicates whether an element is being modified.
+  - : The [`ariaBusy`](/en-US/docs/Web/API/Element/ariaBusy) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-busy` attribute, which indicates whether an element is being modified.
 
 ```html
 <div id="clock" role="timer" aria-live="polite" aria-atomic="true" aria-busy="false"></div>
@@ -63,10 +65,7 @@ Used in **ALL** roles
 
 ## Specifications
 
-| Specification         | Status            |
-| ---------------- | ---------------- |
-| {{SpecName("ARIA","#aria-busy","ARIA: aria-busy Attribute")}}              | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#feed","`aria-busy` within a `feed` role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## See Also
 

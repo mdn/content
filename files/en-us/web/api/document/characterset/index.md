@@ -1,6 +1,7 @@
 ---
 title: Document.characterSet
 slug: Web/API/Document/characterSet
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -16,23 +17,20 @@ The **`Document.characterSet`**
 read-only property returns the [character encoding](/en-US/docs/Glossary/character_encoding) of the
 document that it's currently rendered with.
 
-> **Note:** A “character set” and a “character encoding” are related, but different. Despite the
+> **Note:** A "character set" and a "character encoding" are related, but different. Despite the
 > name of this property, it returns the _encoding_.
 
 Users can override the developer-specified encoding inside the [Content-Type](/en-US/docs/Web/HTTP/Headers/Content-Type) header or inline
-like `<meta charset="utf-8">`, such as with Firefox's <kbd>View → Text
+like `<meta charset="utf-8">`, such as with Firefox's <kbd>View → Text
 Encoding</kbd> menu. This override is provided to fix incorrect developer-specified
-encodings that result in [garbled
-text](https://en.wikipedia.org/wiki/Mojibake).
+encodings that result in [garbled text](https://en.wikipedia.org/wiki/Mojibake).
 
 > **Note:** The properties `document.charset` and `document.inputEncoding`
 > are legacy aliases for `document.characterSet`. Do not use them any more.
 
-## Syntax
+## Value
 
-```js
-var string = document.characterSet;
-```
+A string.
 
 ## Examples
 

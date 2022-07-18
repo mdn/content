@@ -1,6 +1,7 @@
 ---
 title: PerformanceServerTiming.duration
 slug: Web/API/PerformanceServerTiming/duration
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,11 +14,9 @@ browser-compat: api.PerformanceServerTiming.duration
 The **`duration`** read-only property returns a double that
 contains the server-specified metric duration, or value `0.0`.
 
-## Syntax
+## Value
 
-```js
-serverTiming.duration;
-```
+A number.
 
 ## Specifications
 

@@ -61,7 +61,7 @@ You should also define your document's characterset like so:
 <meta charset="utf-8">
 ```
 
-Use UTF-8 unless you have a very good reason not to; it will cover your character needs pretty much regardless of what language you are using in your document. In addition, you should always specify the characterset as early as possible within your HTML's {{HTMLElement("head")}} block (within the first kilobyte), as it protects against a rather [nasty Internet Explorer security vulnerability](https://support.microsoft.com/kb/928847).
+Use UTF-8 unless you have a very good reason not to; it will cover your character needs pretty much regardless of what language you are using in your document. In addition, you should always specify the characterset as early as possible within your HTML's {{HTMLElement("head")}} block (within the first kilobyte), as it protects against a rather [nasty Internet Explorer security vulnerability](https://docs.microsoft.com/en-US/troubleshoot/developer/browsers/development-website/wrong-character-set-for-html-page).
 
 ### Viewport meta tag
 
@@ -169,7 +169,7 @@ Bad:
 
 ### Entity references
 
-Don’t use entity references unnecessarily — use the literal character wherever possible (you'll still need to escape characters like angle brackets and quote marks).
+Don't use entity references unnecessarily — use the literal character wherever possible (you'll still need to escape characters like angle brackets and quote marks).
 
 As an example you could just write
 

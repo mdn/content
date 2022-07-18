@@ -1,5 +1,5 @@
 ---
-title: How the Web works
+title: How the web works
 slug: Learn/Getting_started_with_the_web/How_the_Web_works
 tags:
   - Beginner
@@ -58,7 +58,7 @@ When you type a web address into your browser (for our analogy that's like walki
 
 ## Order in which component files are parsed
 
-When browsers send requests to servers for HTML files, those HTML files often contain {{htmlelement("link")}} elements referencing external [CSS](/en-US/docs/Learn/CSS) stylesheets and {{htmlelement("script")}} elements referencing external [JavaScript](/en-US/docs/Learn/JavaScript) scripts. It’s important to know the order in which those files are [parsed by the browser](/en-US/docs/Web/Performance/How_browsers_work#parsing) as the browser loads the page:
+When browsers send requests to servers for HTML files, those HTML files often contain {{htmlelement("link")}} elements referencing external [CSS](/en-US/docs/Learn/CSS) stylesheets and {{htmlelement("script")}} elements referencing external [JavaScript](/en-US/docs/Learn/JavaScript) scripts. It's important to know the order in which those files are [parsed by the browser](/en-US/docs/Web/Performance/How_browsers_work#parsing) as the browser loads the page:
 
 - The browser parses the HTML file first, and that leads to the browser recognizing any `<link>`-element references to external CSS stylesheets and any `<script>`-element references to scripts.
 - As the browser parses the HTML, it sends requests back to the server for any CSS files it has found from `<link>` elements, and any JavaScript files it has found from `<script>` elements, and from those, then parses the CSS and JavaScript.
@@ -71,7 +71,7 @@ Real web addresses aren't the nice, memorable strings you type into your address
 
 This is called an {{Glossary("IP Address", "IP address")}}, and it represents a unique location on the web. However, it's not very easy to remember, is it? That's why Domain Name Servers were invented. These are special servers that match up a web address you type into your browser (like "mozilla.org") to the website's real (IP) address.
 
-Websites can be reached directly via their IP addresses. You can find the IP address of a website by typing its domain into a tool like [IP Checker](https://ipinfo.info/html/ip_checker.php).
+Websites can be reached directly via their IP addresses. You can use a [DNS lookup tool](https://www.nslookup.io/website-to-ip-lookup/) to find the IP address of a website.
 
 ## Packets explained
 
@@ -81,7 +81,7 @@ Earlier we used the term "packets" to describe the format in which the data is s
 
 - [How the Internet works](/en-US/docs/Learn/Common_questions/How_does_the_Internet_work)
 - [HTTP — an Application-Level Protocol](https://dev.opera.com/articles/http-basic-introduction/)
-- [HTTP: Let’s GET It On!](https://dev.opera.com/articles/http-lets-get-it-on/)
+- [HTTP: Let's GET It On!](https://dev.opera.com/articles/http-lets-get-it-on/)
 - [HTTP: Response Codes](https://dev.opera.com/articles/http-response-codes/)
 
 ## Credit
@@ -99,4 +99,4 @@ Street photo: [Street composing](https://www.pinterest.com/pin/40053896058067685
 - [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
 - [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
 - [Publishing your website](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- How the web works
+- [How the web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

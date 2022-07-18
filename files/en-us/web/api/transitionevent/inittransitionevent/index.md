@@ -1,13 +1,13 @@
 ---
 title: TransitionEvent.initTransitionEvent()
 slug: Web/API/TransitionEvent/initTransitionEvent
+page-type: web-api-instance-method
 tags:
   - API
   - CSS
   - CSS3 Transitions
   - CSSOM
   - Deprecated
-  - Experimental
   - Method
   - Reference
   - TransitionEvent
@@ -17,7 +17,7 @@ browser-compat: api.TransitionEvent.initTransitionEvent
 
 The **`TransitionEvent.initTransitionEvent()`** method
 Initializes a transition event created using the deprecated
-{{domxref("Document.createEvent()", "Document.createEvent(\"TransitionEvent\")")}}
+{{domxref("Document.createEvent()", "Document.createEvent('TransitionEvent')")}}
 method.
 
 `TransitionEvent` created that way are untrusted.
@@ -31,33 +31,31 @@ method.
 ## Syntax
 
 ```js
-transitionEvent.initTransitionEvent(typeArg, canBubbleArg, cancelableArg, transitionNameArg, elapsedTimeArg);
+initTransitionEvent(type, canBubble, cancelable, transitionName, elapsedTime)
 ```
 
 ### Parameters
 
-- _typeArg_
-
-  - : Is a {{domxref("DOMString")}} identifying the specific type of transition event that
-    occurred. The following value is allowed:
-
-    | Value           | Meaning                   |
-    | --------------- | ------------------------- |
-    | `transitionend` | The transition completed. |
-
-- _canBubbleArg_
-  - : Is a boolean flag indicating if the event can bubble
-    (`true`) or not (`false)`.
-- _cancelableArg_
-  - : Is a boolean flag indicating if the event associated action can be
-    avoided (`true`) or not (`false)`.
-- _transitionNameArg_
-  - : Is a {{domxref("DOMString")}} containing the name of the CSS property associated
+- `type`
+  - : A string identifying the specific type of transition event that
+    occurred. Browsers always set it up to `transitionend`.
+- `canBubble`
+  - : A boolean flag indicating if the event can bubble
+    (`true`) or not (`false`).
+- `cancelable`
+  - : A boolean flag indicating if the event associated action can be
+    avoided (`true`) or not (`false`).
+- `transitionName`
+  - : A string containing the name of the CSS property associated
     with the transition. This value is not affected by the {{cssxref("transition-delay")}}
     property.
-- _elapsedTimeArg_
+- `elapsedTime`
   - : Is `float` giving the amount of time the transition has been running, in
     seconds, when this event fired.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.mozUserCancelled
 slug: Web/API/DataTransfer/mozUserCancelled
+page-type: web-api-instance-property
 tags:
   - API
   - Non-standard
@@ -14,35 +15,29 @@ browser-compat: api.DataTransfer.mozUserCancelled
 {{ Non-standard_header() }}
 
 The **`DataTransfer.mozUserCancelled`** property is used in the
-{{event("dragend")}} event handler to determine if the user canceled the drag or not. If
+{{domxref("HTMLElement/dragend_event", "dragend")}} event handler to determine if the user canceled the drag or not. If
 the user canceled the event, the property returns `true` and returns
-`false` otherwise. This property only applies to the {{event("dragend")}}
+`false` otherwise. This property only applies to the {{domxref("HTMLElement/dragend_event", "dragend")}}
 event.
 
 > **Note:** This property is Firefox-specific.
 
 This property is {{readonlyInline}}.
 
-## Syntax
-
-```js
-dataTransfer.mozUserCancelled;
-```
-
-### Return value
+## Value
 
 A boolean value representing `true` if the user canceled the drag
 event and returns `false` otherwise.
 
-## Example
+## Examples
 
 This example shows the use of the `mozUserCancelled` property in the
-{{event("dragend")}} event handler.
+{{domxref("HTMLElement/dragend_event", "dragend")}} event handler.
 
 ```js
 function dragend_handler(event)
 {
-  var dragData = event.dataTransfer;
+  const dragData = event.dataTransfer;
   console.log("mozUserCancelled = " + dragData.mozUserCancelled);
 }
 ```

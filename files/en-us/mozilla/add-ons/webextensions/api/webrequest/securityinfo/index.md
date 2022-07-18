@@ -29,7 +29,7 @@ Values of this type are objects. They contain the following properties:
 
 - `certificateTransparencyStatus` {{optional_inline}}
 
-  - : `String`. Indicates the [Certificate Transparency](https://www.certificate-transparency.org/) status for the connection. This may take any one of the following values:
+  - : `String`. Indicates the [Certificate Transparency](https://certificate.transparency.dev/) status for the connection. This may take any one of the following values:
 
     - "not_applicable"
     - "policy_compliant"
@@ -42,10 +42,8 @@ Values of this type are objects. They contain the following properties:
 
   - : `String`. If there was a problem with the TLS handshake (for example, the certificate had expired, or a trusted root could not be found, or a certificate was revoked) then `status` will be "broken" and the `errorMessage` property will contain a string describing the error, taken from Firefox's internal list of error codes.
 
-    Note though that at present you can only call `getSecurityInfo()` in the `onHeaderReceived` listener, and the `onHeaderReceived` event is not fired when the handshake fails. So in practice this will never be set.
+    Note though that at present you can only call `getSecurityInfo()` in the `onHeaderReceived` listener, and the `onHeaderReceived` event is not fired when the handshake fails. So in practice this will never be set.
 
-- `hpkp` {{optional_inline}}
-  - : `Boolean`. `true` if the host uses [Public Key Pinning](/en-US/docs/Web/HTTP/Public_Key_Pinning), `false` otherwise.
 - `hsts` {{optional_inline}}
   - : `Boolean`. `true` if the host uses [Strict Transport Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security), `false` otherwise.
 - `isDomainMismatch` {{optional_inline}}
@@ -79,7 +77,7 @@ Values of this type are objects. They contain the following properties:
     - "secure": the connection is a secure TLS connection
     - "weak": the connection is a TLS connection but is considered weak. You can examine `weaknessReasons` to find out the problem.
 
-    Note though that at present you can only call `getSecurityInfo()` in the `onHeaderReceived` listener, and the `onHeaderReceived` event is not fired when the handshake fails. So in practice this will never be set to "broke".
+    Note though that at present you can only call `getSecurityInfo()` in the `onHeaderReceived` listener, and the `onHeaderReceived` event is not fired when the handshake fails. So in practice this will never be set to "broke".
 
 - `weaknessReasons` {{optional_inline}}
   - : `String`. If `state` is "weak", this indicates the reason. Currently this may contain only a single value "cipher", indicating that the negotiated cipher suite is considered weak.

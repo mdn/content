@@ -1,6 +1,7 @@
 ---
 title: XRQuadLayer.transform
 slug: Web/API/XRQuadLayer/transform
+page-type: web-api-instance-property
 tags:
   - API
   - Property

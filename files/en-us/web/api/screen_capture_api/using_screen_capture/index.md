@@ -1,6 +1,7 @@
 ---
 title: Using the Screen Capture API
 slug: Web/API/Screen_Capture_API/Using_Screen_Capture
+page-type: guide
 tags:
   - API
   - Capture
@@ -15,6 +16,7 @@ tags:
   - display
   - getDisplayMedia
   - screen
+browser-compat: api.MediaDevices.getDisplayMedia
 ---
 {{DefaultAPISidebar("Screen Capture API")}}
 
@@ -54,13 +56,13 @@ function startCapture(displayMediaOptions) {
 
 Either way, the {{Glossary("user agent")}} responds by presenting a user interface that prompts the user to choose the screen area to share. Both of these implementations of `startCapture()` return the {{domxref("MediaStream")}} containing the captured display imagery.
 
-See {{anch("Options and constraints")}}, below, for more on both how to specify the type of surface you want as well as other ways to adjust the resulting stream.
+See [Options and constraints](#options_and_constraints), below, for more on both how to specify the type of surface you want as well as other ways to adjust the resulting stream.
 
 ### Example of a window allowing the user to select a display surface to capture
 
 [![Screenshot of Chrome's window for picking a source surface](chrome-screen-capture-window.png)](Chrome-Screen-Capture-Window.png)
 
-You can then use the captured stream, `captureStream`, for anything that accepts a stream as input. The {{anch("Examples", "examples")}} below show a few ways to make use of the stream.
+You can then use the captured stream, `captureStream`, for anything that accepts a stream as input. The [examples](#examples) below show a few ways to make use of the stream.
 
 ### Visible vs logical display surfaces
 
@@ -88,7 +90,7 @@ For example, if you specify a {{domxref("MediaTrackConstraints.width", "width")}
 
 While display capture is in effect, the machine which is sharing screen contents will display some form of indicator so the user is aware that sharing is taking place.
 
-> **Note:** For privacy and security reasons, screen sharing sources are not enumerable using {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}. Related to this, the {{event("devicechange")}} event is never sent when there are changes to the sources available for `getDisplayMedia()`.
+> **Note:** For privacy and security reasons, screen sharing sources are not enumerable using {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}. Related to this, the {{domxref("MediaDevices/devicechange_event", "devicechange")}} event is never sent when there are changes to the sources available for `getDisplayMedia()`.
 
 ### Capturing shared audio
 
@@ -124,7 +126,7 @@ In this example the cursor will always be visible in the capture, and the audio 
 
 Capturing audio is always optional, and even when web content requests a stream with both audio and video, the returned {{domxref("MediaStream")}} may still have only one video track, with no audio.
 
-> **Note:** Some properties are not widely implemented and might not be used by the engine. `cursor`, for example, [has limited support](/en-US/docs/Web/API/MediaTrackConstraints/cursor#browser_compatibility).
+> **Note:** Some properties are not widely implemented and might not be used by the engine. `cursor`, for example, [has limited support](/en-US/docs/Web/API/MediaTrackConstraints#browser_compatibility).
 
 ## Using the captured stream
 
@@ -162,7 +164,7 @@ First, some constants are set up to reference the elements on the page to which 
 
 The object `displayMediaOptions` contains the constraints to pass into `getDisplayMedia()`; here, the {{domxref("MediaTrackConstraints.cursor", "cursor")}} property is set to `always`, indicating that the mouse cursor should always be included in the captured media.
 
-> **Note:** Some properties are not widely implemented and might not be used by the engine. `cursor`, for example, [has limited support](/en-US/docs/Web/API/MediaTrackConstraints/cursor#browser_compatibility).
+> **Note:** Some properties are not widely implemented and might not be used by the engine. `cursor`, for example, [has limited support](/en-US/docs/Web/API/MediaTrackConstraints#browser_compatibility).
 
 Finally, event listeners are established to detect user clicks on the start and stop buttons.
 
@@ -257,7 +259,7 @@ function dumpOptionsInfo() {
 }
 ```
 
-The track list is obtained by calling {{domxref("MediaStream.getVideoTracks", "getVideoTracks()")}} on the capture'd screen's {{domxref("MediaStream")}}. The settings currently in effect are obtained using {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} and the established constraints are gotten with {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}
+The track list is obtained by calling {{domxref("MediaStream.getVideoTracks", "getVideoTracks()")}} on the captured screen's {{domxref("MediaStream")}}. The settings currently in effect are obtained using {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} and the established constraints are gotten with {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}
 
 #### HTML
 
@@ -332,6 +334,10 @@ If you're performing screen capture within an `<iframe>`, you can request permis
 <iframe src="https://mycode.example.net/etc" allow="display-capture">
 </iframe>
 ```
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

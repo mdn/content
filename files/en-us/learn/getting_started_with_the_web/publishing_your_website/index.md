@@ -46,7 +46,7 @@ In addition, you will need a {{Glossary("FTP", "File Transfer Protocol (FTP)")}}
 Some tools let you publish your website online:
 
 - [GitHub](https://github.com/) is a "social coding" site. It allows you to upload code repositories for storage in the [Git](https://git-scm.com/) **version control system.** You can then collaborate on code projects, and the system is open-source by default, meaning that anyone in the world can find your GitHub code, use it, learn from it, and improve on it. GitHub has a very useful feature called [GitHub Pages](https://pages.github.com/), which allows you to expose website code live on the web.
-- [Google App Engine](https://cloud.google.com/appengine/) is a powerful platform that lets you build and run applications on Google’s infrastructure — whether you need to build a multi-tiered web application from scratch or host a static website. See [How do you host your website on Google App Engine?](/en-US/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine) for more information.
+- [Google App Engine](https://cloud.google.com/appengine/) is a powerful platform that lets you build and run applications on Google's infrastructure — whether you need to build a multi-tiered web application from scratch or host a static website. See [How do you host your website on Google App Engine?](/en-US/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine) for more information.
 
 These options are usually free, but you may outgrow the limited feature-set.
 
@@ -79,7 +79,7 @@ Now let's examine how to easily publish your site via GitHub Pages.
 
     > **Note:** It may take a few minutes for your website to go live. If your website does not display immediately, wait a few minutes. Try again.
 
-To learn more, see [GitHub Pages Help](https://help.github.com/categories/github-pages-basics/).
+To learn more, see [GitHub Pages Help](https://docs.github.com/en/pages/getting-started-with-github-pages).
 
 ## Further reading
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.type
 slug: Web/API/HTMLSelectElement/type
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -15,18 +16,14 @@ browser-compat: api.HTMLSelectElement.type
 The **`HTMLSelectElement.type`**
 read-only property returns the form control's `type`.
 
-## Syntax
+## Value
 
-```js
-var str = selectElt.type;
-```
-
-The possible values are:
+One of the followings:
 
 - `"select-multiple"` if multiple values can be selected.
 - `"select-one"` if only one value can be selected.
 
-## Example
+## Examples
 
 ```js
 switch (select.type) {

@@ -13,7 +13,7 @@ browser-compat: http.headers.Feature-Policy.usb
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-The HTTP {{HTTPHeader("Feature-Policy")}} header `usb` directive controls whether the current document is allowed to use the WebUSB API.
+The HTTP {{HTTPHeader("Feature-Policy")}} header `usb` directive controls whether the current document is allowed to use the WebUSB API.
 
 ## Syntax
 

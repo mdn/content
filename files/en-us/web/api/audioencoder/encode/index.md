@@ -1,6 +1,7 @@
 ---
 title: AudioEncoder.encode()
 slug: Web/API/AudioEncoder/encode
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,7 +17,7 @@ The **`encode()`** method of the {{domxref("AudioEncoder")}} interface enqueues 
 ## Syntax
 
 ```js
-AudioEncoder.encode(data);
+encode(data)
 ```
 
 ### Parameters
@@ -24,15 +25,15 @@ AudioEncoder.encode(data);
 - `data`
   - : An {{domxref("AudioData")}} object.
 
-### Return Value
+### Return value
 
-{{jsxref("Undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("AudioEncoder.state","state")}} is not `"configured"`.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the `AudioData` object has been {{Glossary("Transferable Objects","transferred")}}.
 
 ## Examples

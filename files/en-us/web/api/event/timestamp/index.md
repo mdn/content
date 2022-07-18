@@ -1,6 +1,7 @@
 ---
 title: Event.timeStamp
 slug: Web/API/Event/timeStamp
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
@@ -18,7 +19,7 @@ created.
 This value is the number of milliseconds elapsed from the beginning of the time origin until the event was created. If the global object is {{domxref("Window")}}, the time origin is the moment the user clicked on the link, or the script that initiated the loading of the document. In a worker, the time origin is the moment of creation of the worker.
 
 The value is a {{domxref("DOMHighResTimeStamp")}} accurate to
-5 microseconds (0.005 ms), but the [precision is reduced](#Reduced_time_precision) to prevent fingerprinting.
+5 microseconds (0.005 ms), but the [precision is reduced](#reduced_time_precision) to prevent fingerprinting.
 
 ## Example
 
@@ -36,7 +37,7 @@ The value is a {{domxref("DOMHighResTimeStamp")}} accurate to
 
 ```js
 function getTime(event) {
-  var time = document.getElementById("time");
+  const time = document.getElementById("time");
   time.firstChild.nodeValue = event.timeStamp;
 }
 document.body.addEventListener("keypress", getTime);
@@ -60,14 +61,14 @@ event.timeStamp;
 // 1519211809934
 // 1519211810362
 // 1519211811670
-// ...
+// …
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 event.timeStamp;
 // 1519129853500
 // 1519129858900
 // 1519129864400
-// ...
+// …
 ```
 
 In Firefox, if you also enable `privacy.resistFingerprinting`, the precision

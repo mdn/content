@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.relatedTarget
 slug: Web/API/MouseEvent/relatedTarget
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -11,7 +12,7 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.relatedTarget
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`MouseEvent.relatedTarget`** read-only property is the secondary target for the mouse event, if there is one.
 
@@ -63,7 +64,7 @@ That is:
       </td>
     </tr>
     <tr>
-      <td>{{Event("dragenter")}}</td>
+      <td>{{domxref("HTMLElement/dragenter_event", "dragenter")}}</td>
       <td>
         The {{domxref("EventTarget")}} the pointing device entered to
       </td>
@@ -72,7 +73,7 @@ That is:
       </td>
     </tr>
     <tr>
-      <td>{{Event("dragleave")}}</td>
+      <td>{{domxref("HTMLElement/dragleave_event", "dragleave")}}</td>
       <td>
         The {{domxref("EventTarget")}} the pointing device exited from
       </td>
@@ -92,7 +93,7 @@ For events with no secondary target, `relatedTarget` returns
 
 An {{domxref("EventTarget")}} object or `null`.
 
-## Example
+## Examples
 
 Try moving your mouse cursor into and out of the red and blue boxes.
 
@@ -100,11 +101,11 @@ Try moving your mouse cursor into and out of the red and blue boxes.
 
 ```html
 <body id="body">
-  <div id="outer">
-    <div id="red"></div>
-    <div id="blue"></div>
-  </div>
-  <p id="log"></p>
+  <div id="outer">
+    <div id="red"></div>
+    <div id="blue"></div>
+  </div>
+  <p id="log"></p>
 </body>
 ```
 
@@ -154,13 +155,13 @@ function outListener(event) {
 function overListener(event) {
   let related = event.relatedTarget ? event.relatedTarget.id : "unknown";
 
-  log.innerText = `\ninto ${event.target.id} from ${related} ${mouseoutLog.innerText}`;
+  mouseoutLog.innerText = `\ninto ${event.target.id} from ${related} ${mouseoutLog.innerText}`;
 }
 ```
 
 ### Result
 
-{{EmbedLiveSample("Example", 700, 280)}}
+{{EmbedLiveSample("Examples", 700, 280)}}
 
 ## Specifications
 

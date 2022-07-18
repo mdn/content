@@ -25,8 +25,8 @@ Fired when a request is sent from another extension.
 chrome.extension.onRequestExternal.addListener(function(
   request,         // optional any
   sender,          // runtime.MessageSender
-  function() {...} // function
-) {...})
+  function() { } // function
+) { })
 chrome.extension.onRequestExternal.removeListener(listener)
 chrome.extension.onRequestExternal.hasListener(listener)
 ```
@@ -67,7 +67,7 @@ Events have three functions:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/extensions/extension#event-onRequestExternal) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/#event-onRequestExternal) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

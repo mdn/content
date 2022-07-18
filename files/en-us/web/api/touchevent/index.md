@@ -1,6 +1,7 @@
 ---
 title: TouchEvent
 slug: Web/API/TouchEvent
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -37,7 +38,7 @@ _This interface inherits properties from its parent, {{domxref("UIEvent")}} and 
   - : A Boolean value indicating whether or not the meta key was down when the touch event was fired.
 - {{domxref("TouchEvent.shiftKey")}} {{readonlyInline}}
   - : A Boolean value indicating whether or not the shift key was down when the touch event was fired.
-- {{domxref("TouchEvent.targetTouches")}}{{readonlyInline}}
+- {{domxref("TouchEvent.targetTouches")}} {{readonlyInline}}
   - : A {{domxref("TouchList")}} of all the {{domxref("Touch")}} objects that are both currently in contact with the touch surface **and** were also started on the same element that is the target of the event.
 - {{domxref("TouchEvent.touches")}} {{readonlyInline}}
   - : A {{domxref("TouchList")}} of all the {{domxref("Touch")}} objects representing all current points of contact with the surface, regardless of target or changed status.
@@ -97,20 +98,7 @@ There are several types of event that can be fired to indicate that touch-relate
 
 It's important to note that in many cases, both touch and mouse events get sent (in order to let non-touch-specific code still interact with the user). If you use touch events, you should call {{domxref("Event.preventDefault","preventDefault()")}} to keep the mouse event from being sent as well.
 
-The exception to this is Chrome, starting with version 56 (desktop, Chrome for android, and android webview), where the default value for the `passive` option for {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} is `true` and calls to {{domxref("Event.preventDefault","preventDefault()")}} will have no effect. To override this behavior, you need to set the `passive` option to `false`, after which calling {{domxref("Event.preventDefault","preventDefault()")}} will work as specified. The change to treat listeners as `passive` by default prevents the listener from blocking page rendering while a user is scrolling. A demo is available on the [Google Developer](https://developers.google.com/web/updates/2016/06/passive-event-listeners) site.
-
-## GlobalEventHandlers
-
-The {{domxref("GlobalEventHandlers")}} mixin defines these events as global events that are available on any element in the DOM that the user can interact with.
-
-- {{domxref("GlobalEventHandlers.ontouchstart")}} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler", "", 1)}} for the {{domxref("Element/touchstart_event", "touchstart")}} event.
-- {{domxref("GlobalEventHandlers.ontouchend")}} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler", "", 1)}} for the {{domxref("Element/touchend_event", "touchend")}} event.
-- {{domxref("GlobalEventHandlers.ontouchmove")}} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler", "", 1)}} for the {{domxref("Element/touchmove_event", "touchmove")}} event.
-- {{domxref("GlobalEventHandlers.ontouchcancel")}} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler", "", 1)}} for the {{domxref("Element/touchcancel_event", "touchcancel")}} event.
+The exception to this is Chrome, starting with version 56 (desktop, Chrome for Android, and Android webview), where the default value for the `passive` option for {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} is `true` and calls to {{domxref("Event.preventDefault","preventDefault()")}} will have no effect. To override this behavior, you need to set the `passive` option to `false`, after which calling {{domxref("Event.preventDefault","preventDefault()")}} will work as specified. The change to treat listeners as `passive` by default prevents the listener from blocking page rendering while a user is scrolling. A demo is available on the [Chrome Developer](https://developer.chrome.com/blog/passive-event-listeners/) site.
 
 ## Example
 

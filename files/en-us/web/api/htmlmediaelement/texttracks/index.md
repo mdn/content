@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.textTracks
 slug: Web/API/HTMLMediaElement/textTracks
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -41,7 +42,7 @@ more about watching for changes to a media element's track list.
 
 ## Value
 
-A {{DOMxRef("TextTrackList")}} object representing the list of text tracks included in the media element. The list of tracks can be accessed using `textTracks[n]` to get the *n*th text track from the object’s list of text tracks, or using the `textTracks`.[`getTrackById()`](/en-US/docs/Web/API/TextTrackList/getTrackById)
+A {{DOMxRef("TextTrackList")}} object representing the list of text tracks included in the media element. The list of tracks can be accessed using `textTracks[n]` to get the *n*th text track from the object's list of text tracks, or using the `textTracks`.[`getTrackById()`](/en-US/docs/Web/API/TextTrackList/getTrackById)
 method.
 
 Each track is represented by a {{DOMxRef("TextTrack")}} object which provides
@@ -76,16 +77,16 @@ The `HTMLMediaElement.textTracks` returns a
 of each English track to the console.
 
 ```js
-var tracks = document.querySelector('video').textTracks;
+const tracks = document.querySelector('video').textTracks;
 
-for (var i = 0, L = tracks.length; i < L; i++) { /* tracks.length == 10 */
-   if (tracks[i].language == 'en') {
-      console.dir(tracks[i]);
+for(const track of tracks) {
+   if (track.language === 'en') {
+      console.dir(track);
    }
 }
 ```
 
-{{EmbedLiveSample("Examples", "100%", 150)}}
+{{EmbedLiveSample("Examples", "100%", 155)}}
 
 ## Specifications
 

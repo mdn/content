@@ -98,7 +98,7 @@ To use the router module in our main app file we first `require()` the route mod
 
 ```js
 var wiki = require('./wiki.js');
-// ...
+// …
 app.use('/wiki', wiki);
 ```
 
@@ -118,7 +118,7 @@ The callback takes three arguments (usually named as shown: `req`, `res`, `next`
 
 > **Note:** Router functions are [Express middleware](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#using_middleware), which means that they must either complete (respond to) the request or call the `next` function in the chain. In the case above we complete the request using `send()`, so the `next` argument is not used (and we choose not to specify it).
 >
-> The  router function above takes a single callback, but you can specify as many callback arguments as you want, or an array of callback functions. Each function is part of the middleware chain, and will be called in the order it is added to the chain (unless a preceding function completes the request).
+> The router function above takes a single callback, but you can specify as many callback arguments as you want, or an array of callback functions. Each function is part of the middleware chain, and will be called in the order it is added to the chain (unless a preceding function completes the request).
 
 The callback function here calls [`send()`](https://expressjs.com/en/4x/api.html#res.send) on the response to return the string "About this wiki" when we receive a GET request with the path ('`/about'`). There are a [number of other response methods](https://expressjs.com/en/guide/routing.html#response-methods) for ending the request/response cycle. For example, you could call [`res.json()`](https://expressjs.com/en/4x/api.html#res.json) to send a JSON response or [`res.sendFile()`](https://expressjs.com/en/4x/api.html#res.sendFile) to send a file. The response method that we'll be using most often as we build up the library is [render()](https://expressjs.com/en/4x/api.html#res.render), which creates and returns HTML files using templates and data—we'll talk a lot more about that in a later article!
 
@@ -151,7 +151,7 @@ The route paths can also be JavaScript [regular expressions](/en-US/docs/Web/Jav
 
 ```js
 app.get(/.*fish$/, function (req, res) {
-  ...
+  // …
 })
 ```
 
@@ -171,7 +171,7 @@ app.get('/users/:userId/books/:bookId', function (req, res) {
 })
 ```
 
-The names of route parameters must be made up of “word characters” (A-Z, a-z, 0-9, and \_).
+The names of route parameters must be made up of "word characters" (A-Z, a-z, 0-9, and \_).
 
 > **Note:** The URL _/book/create_ will be matched by a route like `/book/:bookId` (which will extract a "bookId" value of '`create`'). The first route that matches an incoming URL will be used, so if you want to process `/book/create` URLs separately, their route handler must be defined before your `/book/:bookId` route.
 

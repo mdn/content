@@ -1,6 +1,7 @@
 ---
 title: ServiceWorkerRegistration.unregister()
 slug: Web/API/ServiceWorkerRegistration/unregister
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -26,8 +27,7 @@ unregistered.
 ## Syntax
 
 ```js
-serviceWorkerRegistration.unregister().then(function(boolean) {
-});
+unregister()
 ```
 
 ### Parameters
@@ -39,7 +39,7 @@ None.
 {{jsxref("Promise")}} resolves with a boolean indicating whether the service worker has
 unregistered or not.
 
-## Example
+## Examples
 
 The following simple example registers a service worker example, but then immediately
 unregisters it again:
@@ -69,11 +69,8 @@ if ('serviceWorker' in navigator) {
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker
-  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web
-  workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

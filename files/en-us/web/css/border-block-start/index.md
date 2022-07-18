@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - border-block
   - border-block-start
@@ -40,6 +39,7 @@ border-block-start: medium dashed blue;
 border-block-start: inherit;
 border-block-start: initial;
 border-block-start: revert;
+border-block-start: revert-layer;
 border-block-start: unset;
 ```
 

@@ -17,7 +17,7 @@ The separation of content and presentation is a key design feature of [XML](/en-
 
 Yet eventually much of the content stored in XML documents will need to be presented to human readers. Because a browser provides a familiar and highly flexible interface, it is an ideal mechanism for delivering such presentation versions of XML content. Built from the ground up utilizing a wide variety of XML technologies, Firefox incorporates within itself all of the mechanisms needed to process both original XML documents and the specialized stylesheets used to style and lay them out for HTML display, reducing server load with client-side processing.
 
-At present, Gecko (the layout engine behind Firefox) supports two forms of XML stylesheets. For basic control of appearance — fonts, colors, position, and so forth — Gecko uses [CSS](/en-US/docs/Web/CSS). CSS1 and CSS2 are well supported and support for the emerging CSS3 standard is under development. For further information about CSS, see [Eric Meyer's CSS pages](https://www.meyerweb.com/eric/css/).
+At present, Gecko (the layout engine behind Firefox) supports two forms of XML stylesheets. For basic control of appearance — fonts, colors, position, and so forth — Gecko uses [CSS](/en-US/docs/Web/CSS). CSS1 and CSS2 are well supported and support for the emerging CSS3 standard is under development. For further information about CSS, see [Eric Meyer's CSS pages](https://meyerweb.com/eric/css/).
 
 Our focus here is on the second type of stylesheet that Gecko supports: the XSLT stylesheet. XSLT stands for eXtensible Stylesheet Language/Transform and the name is apt. XSLT allows a stylesheet author to transform a primary XML document in two significant ways: manipulating and sorting the content, including a wholesale reordering of it if so desired, and transforming the content into a different format (and in the case of Firefox, the focus is on converting it on the fly into HTML which can then be displayed by the browser).
 
@@ -133,10 +133,6 @@ Our focus here is on the second type of stylesheet that Gecko supports: the XSLT
   - [Articles](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#articles)
   - [Tutorials/Examples](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#tutorials.2fexamples)
   - [Other](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#other)
-
-## Resources
-
-[Resources](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/Resources)
 
 ## Original Document Information
 

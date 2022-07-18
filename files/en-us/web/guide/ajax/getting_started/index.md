@@ -15,7 +15,7 @@ This article guides you through the AJAX basics and gives you some simple hands-
 
 ## What's AJAX?
 
-AJAX stands for **A**synchronous **J**avaScript **A**nd **X**ML. In a nutshell, it is the use of the [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) object to communicate with servers. It can send and receive information in various formats, including JSON, XML, HTML, and text files. AJAX’s most appealing characteristic is its "asynchronous" nature, which means it can communicate with the server, exchange data, and update the page without having to refresh the page.
+AJAX stands for **A**synchronous **J**avaScript **A**nd **X**ML. In a nutshell, it is the use of the [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) object to communicate with servers. It can send and receive information in various formats, including JSON, XML, HTML, and text files. AJAX's most appealing characteristic is its "asynchronous" nature, which means it can communicate with the server, exchange data, and update the page without having to refresh the page.
 
 The two major features of AJAX allow you to do the following:
 
@@ -171,7 +171,7 @@ In this example:
 
 > **Note:** If the `httpRequest` variable is used globally, competing functions calling `makeRequest()` can overwrite each other, causing a race condition. Declaring the `httpRequest` variable local to a [closure](/en-US/docs/Web/JavaScript/Closures) containing the AJAX functions avoids this.
 
-In the event of a communication error (such as the server going down), an exception will be thrown in the `onreadystatechange` method when accessing the response status. To mitigate this problem, you could wrap your `if...then` statement in a `try...catch`:
+In the event of a communication error (such as the server going down), an exception will be thrown in the `onreadystatechange` method when accessing the response status. To mitigate this problem, you could wrap your `if...else` statement in a `try...catch`:
 
 ```js
 function alertContents() {
@@ -203,12 +203,10 @@ First off, let's create a valid XML document that we'll request later on. The do
 </root>
 ```
 
-In the script we only need to change the request line to:
+Next, in `makeRequest()`, we need to replace `test.html` with the XML file we just created:
 
-```html
-...
-onclick="makeRequest('test.xml')">
-...
+```js
+httpRequest.open('GET', 'test.xml');
 ```
 
 Then in `alertContents()`, we need to replace the line `alert(httpRequest.responseText);` with:
@@ -281,7 +279,7 @@ function alertContents() {
 The `test.php` file should contain the following:
 
 ```php
-$name = (isset($_POST['userName'])) ? $_POST['userName'] : 'no name';
+$name = $_POST['userName'] ?? 'no name';
 $computedString = "Hi, " . $name . "!";
 $array = ['userName' => $name, 'computedString' => $computedString];
 echo json_encode($array);

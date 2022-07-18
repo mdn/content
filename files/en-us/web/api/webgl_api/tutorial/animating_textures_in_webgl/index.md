@@ -1,6 +1,7 @@
 ---
 title: Animating textures in WebGL
 slug: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
+page-type: guide
 tags:
   - Media
   - Tutorial
@@ -19,13 +20,13 @@ The first step is to create the {{ HTMLElement("video") }} element that we'll us
 
 ```js
 // will set to true when video can be copied to texture
-var copyVideo = false;
+let copyVideo = false;
 
 function setupVideo(url) {
   const video = document.createElement('video');
 
-  var playing = false;
-  var timeupdate = false;
+  let playing = false;
+  let timeupdate = false;
 
   video.autoplay = true;
   video.muted = true;
@@ -88,7 +89,7 @@ function initTexture(gl) {
                 width, height, border, srcFormat, srcType,
                 pixel);
 
-  // Turn off mips and set  wrapping to clamp to edge so it
+  // Turn off mips and set wrapping to clamp to edge so it
   // will work regardless of the dimensions of the video.
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
@@ -123,7 +124,7 @@ In the definition of `render()` if `copyVideo` is true, then we call `updateText
 
   const video = setupVideo('Firefox.mp4');
 
-  var then = 0;
+  let then = 0;
 
   // Draw the scene repeatedly
   function render(now) {
@@ -144,12 +145,12 @@ In the definition of `render()` if `copyVideo` is true, then we call `updateText
 
 That's all there is to it!
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8) | [Open this demo on a new page](https://mdn.github.io/webgl-examples/tutorial/sample8/)
+[View the complete code](https://github.com/mdn/dom-examples/tree/master/webgl-examples/tutorial/sample8) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/)
 
 ## See also
 
-- [Using audio and video in Firefox](/en-US/docs/Using_HTML5_audio_and_video)
+- [Using audio and video in Firefox](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 
 {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

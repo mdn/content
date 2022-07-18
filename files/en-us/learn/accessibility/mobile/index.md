@@ -99,7 +99,7 @@ To get to these menus:
 1. Access the global menu by quickly swiping down, and then right.
 2. Access the local menu by quickly swiping up, and then right.
 3. Swipe left and right to cycle between the different options.
-4. Once you've selected the option you want, double-click to choose that option.
+4. Once you've selected the option you want, double-tap to choose that option.
 
 For details on all the options available under the global and local context menus, see [Use global and local context menus](https://support.google.com/accessibility/android/answer/6007066).
 
@@ -184,17 +184,17 @@ Let's have a go at web browsing with VoiceOver:
 
 7. Select *Headings*. Now you'll be able to swipe up and down to move between headings on the page.
 
-> **Note:** For a more complete reference covering the VoiceOver gestures available and other hints on accessibility testing on iOS, see [Test Accessibility on Your Device with VoiceOver](https://developer.apple.com/library/content/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html#//apple_ref/doc/uid/TP40012619-CH3).
+> **Note:** For a more complete reference covering the VoiceOver gestures available and other hints on accessibility testing on iOS, see [Test Accessibility on Your Device with VoiceOver](https://developer.apple.com/library/archive/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html).
 
 ## Control mechanisms
 
 In our CSS and JavaScript accessibility article, we looked at the idea of events that are specific to a certain type of control mechanism (see [Mouse-specific events](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#mouse-specific_events)). To recap, these cause accessibility issues because other control mechanisms can't activate the associated functionality.
 
-As an example, the [click](/en-US/docs/Web/API/GlobalEventHandlers/onclick) event is good in terms of accessibility — an associated event handler can be invoked by clicking the element the handler is set on, tabbing to it and pressing Enter/Return, or tapping it on a touchscreen device. Try our [simple-button-example.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-button-example.html) example ([see it running live](https://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)) to see what we mean.
+As an example, the [click](/en-US/docs/Web/API/GlobalEventHandlers/onclick) event is good in terms of accessibility — an associated event handler can be invoked by clicking the element the handler is set on, tabbing to it and pressing Enter/Return, or tapping it on a touchscreen device. Try our [simple-button-example.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/simple-button-example.html) example ([see it running live](https://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)) to see what we mean.
 
 Alternatively, mouse-specific events such as [mousedown](/en-US/docs/Web/API/GlobalEventHandlers/onmousedown) and [mouseup](/en-US/docs/Web/API/GlobalEventHandlers/onmouseup) create problems — their event handlers cannot be invoked using non-mouse controls.
 
-If you try to control our [simple-box-drag.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-box-drag.html) ([see example live](https://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html)) example with a keyboard or touch, you'll see the problem. This occurs because we are using code such as the following:
+If you try to control our [simple-box-drag.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/simple-box-drag.html) ([see example live](https://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html)) example with a keyboard or touch, you'll see the problem. This occurs because we are using code such as the following:
 
 ```js
 div.onmousedown = function() {
@@ -219,7 +219,7 @@ div.ontouchstart = function(e) {
 panel.ontouchend = stopMove;
 ```
 
-We've provided a simple example that shows how to use the mouse and touch events together — see [multi-control-box-drag.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/multi-control-box-drag.html) ([see the example live](https://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html) also).
+We've provided a simple example that shows how to use the mouse and touch events together — see [multi-control-box-drag.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/multi-control-box-drag.html) ([see the example live](https://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html) also).
 
 > **Note:** You can also see fully functional examples showing how to implement different control mechanisms at [Implementing game control mechanisms](/en-US/docs/Games/Techniques/Control_mechanisms).
 
@@ -253,7 +253,7 @@ You should never set `user-scalable=no` if at all possible — many people rely 
 
 Because the screen is so much narrower on mobile devices, it is very common to use media queries and other technologies to make the navigation menu shrink down to a tiny icon at the top of the display — which can be pressed to reveal the menu only if it's needed — when the site is viewed on mobile. This is commonly represented by a "three horizontal lines" icon, and the design pattern is consequently known as a "hamburger menu".
 
-When implementing such a menu, you need to make sure that the control to reveal it is accessible by appropriate control mechanisms (normally touch for mobile), as discussed in {{anch("Control mechanisms")}} above, and that the rest of the page is moved out of the way or hidden in some way while the menu is being accessed, to avoid confusion with navigating it.
+When implementing such a menu, you need to make sure that the control to reveal it is accessible by appropriate control mechanisms (normally touch for mobile), as discussed in [Control mechanisms](#control_mechanisms) above, and that the rest of the page is moved out of the way or hidden in some way while the menu is being accessed, to avoid confusion with navigating it.
 
 Click here for a [good hamburger menu example](https://fritz-weisshart.de/meg_men/).
 
@@ -261,9 +261,9 @@ Click here for a [good hamburger menu example](https://fritz-weisshart.de/meg_me
 
 On mobile devices, inputting data tends to be more annoying for users than the equivalent experience on desktop computers. It is more convenient to type text into form inputs using a desktop or laptop keyboard than a touchscreen virtual keyboard or a tiny mobile physical keyboard.
 
-For this reason, it is worth trying to minimize the amount of typing needed. As an example, instead of getting users to fill out their job title each time using a regular text input, you could instead offer a {{htmlelement("select")}} menu containing the most common options (which also helps with consistency in data entry), and offer an "Other" option that displays a text field to type any outliers into. You can see a simple example of this idea in action in [common-job-types.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/common-job-types.html) (see the [common jobs example live](https://mdn.github.io/learning-area/accessibility/mobile/common-job-types.html)).
+For this reason, it is worth trying to minimize the amount of typing needed. As an example, instead of getting users to fill out their job title each time using a regular text input, you could instead offer a {{htmlelement("select")}} menu containing the most common options (which also helps with consistency in data entry), and offer an "Other" option that displays a text field to type any outliers into. You can see a simple example of this idea in action in [common-job-types.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/common-job-types.html) (see the [common jobs example live](https://mdn.github.io/learning-area/accessibility/mobile/common-job-types.html)).
 
-It is also worth considering the use of HTML5 form input types such as the date on mobile platforms as they handle them well — both Android and iOS, for example, display usable widgets that fit well with the device experience. See [html5-form-examples.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/html5-form-examples.html) for some examples (see the [HTML5 form examples live](https://mdn.github.io/learning-area/accessibility/mobile/html5-form-examples.html)) — try loading these and manipulating them on mobile devices. For example:
+It is also worth considering the use of HTML5 form input types such as the date on mobile platforms as they handle them well — both Android and iOS, for example, display usable widgets that fit well with the device experience. See [html5-form-examples.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/html5-form-examples.html) for some examples (see the [HTML5 form examples live](https://mdn.github.io/learning-area/accessibility/mobile/html5-form-examples.html)) — try loading these and manipulating them on mobile devices. For example:
 
 - Types `number`, `tel`, and `email` display suitable virtual keyboards for entering numbers/telephone numbers.
 - Types `time` and `date` display suitable pickers for selecting times and dates.
@@ -276,7 +276,7 @@ In this article, we have provided you with some details about common mobile acce
 
 ## See also
 
-- [Guidelines For Mobile Web Development](https://www.smashingmagazine.com/guidelines-for-mobile-web-development/) — A list of articles in _Smashing Magazine_ covering different techniques for mobile web design.
+- [Guidelines For Mobile Web Development](https://www.smashingmagazine.com/2012/07/guidelines-for-mobile-web-development/) — A list of articles in _Smashing Magazine_ covering different techniques for mobile web design.
 - [Make your site work on touch devices](https://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644) — Useful article about using touch events to get interactions working on mobile devices.
 
 {{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}

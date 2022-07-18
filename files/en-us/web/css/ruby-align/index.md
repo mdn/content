@@ -24,6 +24,7 @@ ruby-align: space-around;
 ruby-align: inherit;
 ruby-align: initial;
 ruby-align: revert;
+ruby-align: revert-layer;
 ruby-align: unset;
 ```
 

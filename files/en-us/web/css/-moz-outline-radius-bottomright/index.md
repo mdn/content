@@ -17,7 +17,7 @@ In Mozilla applications, the **`-moz-outline-radius-bottomright`** [CSS](/en-US/
 
 ## Syntax
 
-The value of `-moz-outline-radius-bottomright` is either a CSS {{cssxref("length", "&lt;length&gt;")}} or a [percentage](/en-US/docs/Web/CSS/percentage) of the corresponding dimensions of the border box. The {{cssxref("calc()", "calc()")}} function may be used as well.
+The value of `-moz-outline-radius-bottomright` is either a CSS {{cssxref("length", "&lt;length&gt;")}} or a [percentage](/en-US/docs/Web/CSS/percentage) of the corresponding dimensions of the border box. The {{cssxref("calc", "calc()")}} function may be used as well.
 
 ### Values
 

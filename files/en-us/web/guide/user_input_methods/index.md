@@ -33,7 +33,7 @@ Available input mechanisms depend on the capabilities of the device running the 
 
 The following is a set of recommendations and best practices for using such tools in Open Web Apps.
 
-### Decide what input mechanism you’re using
+### Decide what input mechanism you're using
 
 #### Keyboard
 
@@ -56,7 +56,7 @@ When the input device is a mouse, you can also control user input through the Po
 
 #### Finger touch
 
-When developing web applications meant to be installed on touchscreen devices, it’s a good practice to take into consideration the different capabilities in terms of screen resolution and user input. [Touch events](/en-US/docs/Web/API/Touch_events) can help you implement interactive elements and common interaction gestures on touchscreen devices.
+When developing web applications meant to be installed on touchscreen devices, it's a good practice to take into consideration the different capabilities in terms of screen resolution and user input. [Touch events](/en-US/docs/Web/API/Touch_events) can help you implement interactive elements and common interaction gestures on touchscreen devices.
 
 If you want to use touch events, you need to add event listeners and specify handler functions, which will be called when the event gets fired:
 
@@ -75,7 +75,7 @@ where `element` is the DOM element you want to register the touch events on.
 
 When dealing with devices that incorporate multiple forms of input, like mouse, finger touch and pen input, it might be hard to develop a solution that works for all these different control mechanisms. [Pointer Events](https://www.w3.org/TR/pointerevents/) help developers more easily manage events across devices by normalizing the handling of each one. A pointer can be any point of contact on the screen made by a mouse cursor, pen, touch (including multi-touch), or other pointing input device. The events for handling generic pointer input look a lot like those for mouse: `pointerdown`, `pointermove`, `pointerup`, `pointerover`, `pointerout`, etc.
 
-> **Note:** Pointer Events are not widely supported yet, but a [pointer.js polyfill](https://github.com/mozilla/pointer.js) is available on Mozilla Github.
+> **Note:** Pointer Events are not widely supported yet, but a [pointer.js polyfill](https://github.com/mozilla/pointer.js) is available on Mozilla GitHub.
 
 ### Implement controls
 
@@ -120,7 +120,7 @@ if (elem.requestFullscreen) {
 
 #### Drag & Drop
 
-[Drag & Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) allows your application’s users to click and hold the mouse button down over an element, drag it to another location, and release the mouse button to drop the element there.
+[Drag & Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) allows your application's users to click and hold the mouse button down over an element, drag it to another location, and release the mouse button to drop the element there.
 
 Here is an example that allows a section of content to be dragged.
 
@@ -141,11 +141,21 @@ in which we:
 
 In open web apps any DOM element can be made directly editable using the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute.
 
+```css hidden
+div {
+  width: 300px;
+  height: 130px;
+  border: 1px solid gray;
+}
+```
+
 ```html
 <div contenteditable="true">
     This text can be edited by the user.
 </div>
 ```
+
+{{EmbedLiveSample("contentEditable")}}
 
 > **Note:** Compatibility information, examples and other resources can be found in the [Content Editable guide](/en-US/docs/Web/Guide/HTML/Editable_content).
 
@@ -155,8 +165,6 @@ In open web apps any DOM element can be made directly editable using the [`conte
   - : This example tracks multiple touch points at a time, allowing the user to draw in a `{{htmlelement("canvas")}}` with more than one finger at a time. It will only work on a browser that supports touch events.
 - **[Simple pointer lock demo](/en-US/docs/Web/API/Pointer_Lock_API#example)**
   - : We've written a simple pointer lock demo to show you how to use it to set up a simple control system. The demo uses JavaScript to draw a ball inside a `{{htmlelement("canvas")}}` element. When you click the canvas, pointer lock is then used to remove the mouse pointer and allow you to move the ball directly using the mouse.
-- **[contentEditable demo](http://html5demos.com/contenteditable)**
-  - : This is a working example showing how contenteditable can be used to create an editable document section, the state of which is then saved using [LocalStorage](/en-US/docs/Web/API/Web_Storage_API).
 
 ## Tutorials
 

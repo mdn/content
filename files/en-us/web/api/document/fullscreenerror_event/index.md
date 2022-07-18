@@ -1,6 +1,7 @@
 ---
 title: 'Document: fullscreenerror event'
 slug: Web/API/Document/fullscreenerror_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -19,6 +20,20 @@ As with the [`fullscreenchange` event](/en-US/docs/Web/API/Document/fullscreench
 For some reasons that switching into fullscreen mode might fail, see [the guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API/Guide).
 
 This event is not cancelable.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('fullscreenerror', event => { });
+
+onfullscreenerror = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 

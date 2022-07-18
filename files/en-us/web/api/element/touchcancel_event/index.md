@@ -1,6 +1,7 @@
 ---
 title: 'Element: touchcancel event'
 slug: Web/API/Element/touchcancel_event
+page-type: web-api-event
 tags:
   - Event
   - Touch Events
@@ -13,30 +14,46 @@ browser-compat: api.Element.touchcancel_event
 ---
 {{APIRef}}
 
-The `touchcancel` event is fired when one or more touch points have been disrupted in an implementation-specific manner (for example, too many touch points are created).
+The `touchcancel` event is fired when one or more touch points have been disrupted in an implementation-specific manner (for example, too many touch points are created).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{domxref("TouchEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>
-        {{ DOMxRef("GlobalEventHandlers.ontouchcancel","ontouchcancel")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('touchcancel', (event) => {});
+
+ontouchcancel = (event) => { };
+```
+
+## Event type
+
+An {{domxref("TouchEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("TouchEvent")}}
+
+## Event properties
+
+_This interface inherits properties from its parent, {{domxref("UIEvent")}} and {{domxref("Event")}}._
+
+- {{domxref("TouchEvent.altKey")}} {{readonlyInline}}
+  - : A Boolean value indicating whether or not the alt key was down when the touch event was fired.
+- {{domxref("TouchEvent.changedTouches")}} {{readonlyInline}}
+  - : A {{domxref("TouchList")}} of all the {{domxref("Touch")}} objects representing individual points of contact whose states changed between the previous touch event and this one.
+- {{domxref("TouchEvent.ctrlKey")}} {{readonlyInline}}
+  - : A Boolean value indicating whether or not the control key was down when the touch event was fired.
+- {{domxref("TouchEvent.metaKey")}} {{readonlyInline}}
+  - : A Boolean value indicating whether or not the meta key was down when the touch event was fired.
+- {{domxref("TouchEvent.shiftKey")}} {{readonlyInline}}
+  - : A Boolean value indicating whether or not the shift key was down when the touch event was fired.
+- {{domxref("TouchEvent.targetTouches")}} {{readonlyInline}}
+  - : A {{domxref("TouchList")}} of all the {{domxref("Touch")}} objects that are both currently in contact with the touch surface **and** were also started on the same element that is the target of the event.
+- {{domxref("TouchEvent.touches")}} {{readonlyInline}}
+  - : A {{domxref("TouchList")}} of all the {{domxref("Touch")}} objects representing all current points of contact with the surface, regardless of target or changed status.
+- {{domxref("TouchEvent.rotation")}} {{non-standard_inline()}} {{readonlyInline}}
+  - : Change in rotation (in degrees) since the event's beginning. Positive values indicate clockwise rotation; negative values indicate counterclockwise rotation. Initial value: `0.0`
+- {{domxref("TouchEvent.scale")}} {{non-standard_inline()}} {{readonlyInline}}
+  - : Distance between two digits since the event's beginning. Expressed as a floating-point multiple of the initial distance between the digits at the beginning of the event. Values below 1.0 indicate an inward pinch (zoom out). Values above 1.0 indicate an outward unpinch (zoom in). Initial value: `1.0`
 
 ## Examples
 
@@ -52,5 +69,4 @@ Code samples for those events are available on the dedicated page: [Touch events
 
 ## See also
 
-- {{ domxref("GlobalEventHandlers.ontouchcancel","ontouchcancel")}}
 - This event on [`Document`](/en-US/docs/Web/API/Document) targets: [`touchcancel`](/en-US/docs/Web/API/Document/touchcancel_event)

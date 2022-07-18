@@ -1,6 +1,7 @@
 ---
 title: ReportingObserver.disconnect()
 slug: Web/API/ReportingObserver/disconnect
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -25,8 +26,16 @@ callback will return any reports. The associated observer will no longer be acti
 ## Syntax
 
 ```js
-reportingObserverInstance.disconnect()
+disconnect()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -42,7 +51,7 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 observer.observe()
 
-...
+// ...
 
 observer.disconnect()
 ```

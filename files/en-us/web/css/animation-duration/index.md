@@ -32,6 +32,7 @@ animation-duration: 10s, 35s, 230ms;
 animation-duration: inherit;
 animation-duration: initial;
 animation-duration: revert;
+animation-duration: revert-layer;
 animation-duration: unset;
 ```
 
@@ -54,7 +55,9 @@ animation-duration: unset;
 
 ## Examples
 
-### The animation has an animation-duration of 0.7 seconds
+### Setting animation duration
+
+This animation has an animation-duration of 0.7 seconds.
 
 #### HTML
 
@@ -66,27 +69,32 @@ animation-duration: unset;
 
 ```css
 .box {
-  background-color: rebeccapurple;
-  border-radius: 10px;
+  background-color: rebeccapurple;
+  border-radius: 10px;
   width: 100px;
-  height: 100px;
-  animation-name: rotate;
-  animation-duration: 0.7s;
+  height: 100px;
+}
+
+.box:hover {
+  animation-name: rotate;
+  animation-duration: 0.7s;
 }
 
 @keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("Examples","100%","250")}}
+Hover over the rectangle to start the animation.
+
+{{EmbedLiveSample("Setting animation duration","100%","250")}}
 
 See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for more examples.
 

@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Map.entries
 {{JSRef}}
 
 The **`entries()`** method returns a new
-**[Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)** object
+_[iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)_ object
 that contains the `[key, value]` pairs for each element in the `Map` object in
 insertion order. In this particular case, this iterator object is also an
 iterable, so the for-of loop can be used. When the protocol `[Symbol.iterator]`

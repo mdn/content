@@ -25,13 +25,11 @@ Feature-Policy: picture-in-picture <allowlist>;
 
 ## Default policy
 
-As of June 2019, the [spec draft](https://wicg.github.io/picture-in-picture/#feature-policy) and [Google Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=806249#c17) set default allow list to `*`.
+As of June 2019, the [spec draft](https://wicg.github.io/picture-in-picture/#feature-policy) and [Google Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=806249#c17) set default allow list to `*`.
 
 ## Specifications
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Feature Policy')}} | {{Spec2('Feature Policy')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

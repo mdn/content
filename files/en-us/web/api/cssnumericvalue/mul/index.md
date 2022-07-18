@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue.mul()
 slug: Web/API/CSSNumericValue/mul
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -21,13 +22,13 @@ the supplied value.
 ## Syntax
 
 ```js
-var cssMathProduct = CSSNumericValue.mul(number);
+mul(number)
 ```
 
 ### Parameters
 
-- number
-  - : Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
+- `number`
+  - : Either a number or a {{domxref('CSSNumericValue')}}.
 
 ### Return value
 
@@ -35,8 +36,8 @@ A {{domxref('CSSMathProduct')}}
 
 ### Exceptions
 
-- TypeError
-  - : Indicates that an invalid type was passed to the method.
+- {{jsxref("TypeError")}}
+  - : Thrown if an invalid type was passed to the method.
 
 ## Examples
 

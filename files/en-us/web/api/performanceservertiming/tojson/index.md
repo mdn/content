@@ -1,6 +1,7 @@
 ---
-title: PerformanceServerTiming.toJSON
+title: PerformanceServerTiming.toJSON()
 slug: Web/API/PerformanceServerTiming/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -13,13 +14,13 @@ browser-compat: api.PerformanceServerTiming.toJSON
 {{APIRef("Resource Timing API")}}
 
 The **`toJSON()`** method of the
-{{domxref("PerformanceServerTiming")}} interface returns a {{domxref("DOMString")}} that
+{{domxref("PerformanceServerTiming")}} interface returns a string that
 is the JSON representation of the {{domxref('PerformanceServerTiming')}} object.
 
 ## Syntax
 
 ```js
-var json = PerformanceServerTiming.toJSON()
+toJSON()
 ```
 
 ### Parameters

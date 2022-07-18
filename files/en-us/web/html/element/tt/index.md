@@ -123,7 +123,7 @@ The telnet client should display: <tt>Local Echo is on</tt></p>
 
 ## Usage notes
 
-The `<tt>` element is, by default, rendered using the browser's default non-proportional font. You can override this using CSS by creating a rule using the `tt` selector, as seen in the example {{anch("Overriding the default font")}} above.
+The `<tt>` element is, by default, rendered using the browser's default non-proportional font. You can override this using CSS by creating a rule using the `tt` selector, as seen in the example [Overriding the default font](#overriding_the_default_font) above.
 
 > **Note:** User-configured changes to the default monospace font setting may take precedence over your CSS.
 

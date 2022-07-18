@@ -1,6 +1,7 @@
 ---
 title: CSSStyleDeclaration.length
 slug: Web/API/CSSStyleDeclaration/length
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -13,18 +14,12 @@ browser-compat: api.CSSStyleDeclaration.length
 The read-only property returns an integer that represents the
 number of style declarations in this CSS declaration block.
 
-## Syntax
+## Value
 
-```js
-var num = styles.length;
-```
+An integer that provides the number of styles explicitly set on the parent of
+the instance.
 
-### Value
-
-An integer that provides the number of styles explicitly set on the parent of
-the instance.
-
-## Example
+## Examples
 
 The following gets the number of explicitly set styles on the following HTML element:
 
@@ -35,7 +30,9 @@ The following gets the number of explicitly set styles on the following HTML ele
 JavaScript code:
 
 ```js
-var myDiv = document.getElementById('div1'); var divStyle = myDiv.style; var len = divStyle.length; // 6
+const myDiv = document.getElementById('div1');
+const divStyle = myDiv.style;
+const len = divStyle.length; // 6
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: PushSubscription.expirationTime
 slug: Web/API/PushSubscription/expirationTime
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -19,13 +20,7 @@ The **`expirationTime`** read-only property of the
 of the subscription expiration time associated with the push subscription, if there is
 one, or null otherwise.
 
-## Syntax
-
-```js
-var expirationTime = pushSubscription.expirationTime
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}}.
 

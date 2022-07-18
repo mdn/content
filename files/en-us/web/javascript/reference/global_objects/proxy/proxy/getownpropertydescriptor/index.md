@@ -17,8 +17,8 @@ The **`handler.getOwnPropertyDescriptor()`** method is a trap for {{jsxref("Obje
 ## Syntax
 
 ```js
-const p = new Proxy(target, {
-  getOwnPropertyDescriptor: function(target, prop) {
+new Proxy(target, {
+  getOwnPropertyDescriptor(target, prop) {
   }
 });
 ```
@@ -66,7 +66,7 @@ The following code traps {{jsxref("Object.getOwnPropertyDescriptor()")}}.
 
 ```js
 const p = new Proxy({ a: 20}, {
-  getOwnPropertyDescriptor: function(target, prop) {
+  getOwnPropertyDescriptor(target, prop) {
     console.log('called: ' + prop);
     return { configurable: true, enumerable: true, value: 10 };
   }
@@ -82,7 +82,7 @@ The following code violates an invariant.
 const obj = { a: 10 };
 Object.preventExtensions(obj);
 const p = new Proxy(obj, {
-  getOwnPropertyDescriptor: function(target, prop) {
+  getOwnPropertyDescriptor(target, prop) {
     return undefined;
   }
 });

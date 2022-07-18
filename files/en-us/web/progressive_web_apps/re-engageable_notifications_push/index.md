@@ -21,7 +21,7 @@ They work outside of the browser window, just like service workers, so updates c
 
 ## Notifications
 
-Let's start with notifications — they can work without push, but are very useful when combined with them. Let’s look at them in isolation to begin with.
+Let's start with notifications — they can work without push, but are very useful when combined with them. Let's look at them in isolation to begin with.
 
 ### Request permission
 
@@ -38,7 +38,7 @@ button.addEventListener('click', () => {
 })
 ```
 
-This shows a popup using the operating system’s own notifications service:
+This shows a popup using the operating system's own notifications service:
 
 ![Notification of js13kPWA.](js13kpwa-notification.png)
 
@@ -72,7 +72,7 @@ A new random notification is created every 30 seconds until it becomes too annoy
 Push is more complicated than notifications — we need to subscribe to a server that will then send the data back to the app. The app's Service Worker will receive data from the push server, which can then be shown using the notifications system, or another mechanism if desired.
 
 The technology is still at a very early stage — some working examples use the Google Cloud Messaging platform, but are being rewritten to support [VAPID](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) (Voluntary Application Identification), which offers an extra layer of security for your app.
-You can examine the [Service Workers Cookbook examples](https://github.com/mozilla/serviceworker-cookbook/tree/master/push-payload), try to set up a push messaging server using [Firebase](https://firebase.google.com/), or build your own server (using Node.js for example).
+You can examine the [Service Workers Cookbook examples](https://github.com/mdn/serviceworker-cookbook/tree/master/push-payload), try to set up a push messaging server using [Firebase](https://firebase.google.com/), or build your own server (using Node.js for example).
 
 As mentioned before, to be able to receive push messages, you have to have a service worker, the basics of which are already explained in the [Making PWAs work offline with Service workers](/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers) article. Inside the service worker, a push service subscription mechanism is created.
 
@@ -84,7 +84,7 @@ Once the user is subscribed, they can receive push notifications from the server
 
 From the server-side, the whole process has to be encrypted with public and private keys for security reasons — allowing everyone to send push messages unsecured using your app would be a terrible idea. See the [Web Push data encryption test page](https://jrconlin.github.io/WebPushDataTestPage/) for detailed information about securing the server. The server stores all the information received when the user subscribed, so the messages can be sent later on when needed.
 
-To receive push messages, we can listen to the {{event("push")}} event in the Service Worker file:
+To receive push messages, we can listen to the {{domxref("ServiceWorkerGlobalScope.push_event", "push")}} event in the Service Worker file:
 
 ```js
 self.addEventListener('push', (e) => { /* ... */ });
@@ -94,13 +94,13 @@ The data can be retrieved and then shown as a notification to the user immediate
 
 ### Push example
 
-Push needs the server part to work, so we're not able to include it in the js13kPWA example hosted on GitHub Pages, as it offers hosting of static files only. It is all explained in the [Service Worker Cookbook](https://github.com/mozilla/serviceworker-cookbook) — see the [Push Payload Demo](https://github.com/mozilla/serviceworker-cookbook/tree/master/push-payload).
+Push needs the server part to work, so we're not able to include it in the js13kPWA example hosted on GitHub Pages, as it offers hosting of static files only. It is all explained in the [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook) — see the [Push Payload Demo](https://github.com/mdn/serviceworker-cookbook/tree/master/push-payload).
 
 This demo consists of three files:
 
-- [index.js](https://github.com/mozilla/serviceworker-cookbook/blob/master/push-payload/index.js), which contains the source code of our app
-- [server.js](https://github.com/mozilla/serviceworker-cookbook/blob/master/push-payload/server.js), which contains the server part (written in Node.js)
-- [service-worker.js](https://github.com/mozilla/serviceworker-cookbook/blob/master/push-payload/service-worker.js), which contains the Service Worker-specific code.
+- [index.js](https://github.com/mdn/serviceworker-cookbook/blob/master/push-payload/index.js), which contains the source code of our app
+- [server.js](https://github.com/mdn/serviceworker-cookbook/blob/master/push-payload/server.js), which contains the server part (written in Node.js)
+- [service-worker.js](https://github.com/mdn/serviceworker-cookbook/blob/master/push-payload/service-worker.js), which contains the Service Worker-specific code.
 
 Let's explore all of these
 
@@ -139,7 +139,7 @@ const vapidPublicKey = await response.text();
 const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
 ```
 
-The app fetches the server's public key and converts the response to text; then it needs to be converted to a Uint8Array (to support Chrome). To learn more about VAPID keys you can read the [Sending VAPID identified WebPush Notifications via Mozilla’s Push Service](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) blog post.
+The app fetches the server's public key and converts the response to text; then it needs to be converted to a Uint8Array (to support Chrome). To learn more about VAPID keys you can read the [Sending VAPID identified WebPush Notifications via Mozilla's Push Service](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) blog post.
 
 The app can now use the {{domxref("PushManager")}} to subscribe the new user. There are two options passed to the {{domxref("PushManager.subscribe()")}} method — the first is `userVisibleOnly: true`, which means all the notifications sent to the user will be visible to them, and the second one is the `applicationServerKey`, which contains our successfully acquired and converted VAPID key.
 
@@ -164,7 +164,7 @@ fetch('./register', {
 });
 ```
 
-Then the {{domxref("onclick","GlobalEventHandlers.onclick")}} function on the _Subscribe_ button is defined:
+Then the {{domxref("Element.click_event", "onclick")}} function on the _Subscribe_ button is defined:
 
 ```js
 document.getElementById('doIt').onclick = function() {
@@ -264,9 +264,9 @@ self.addEventListener('push', function(event) {
 });
 ```
 
-All it does is add a listener for the {{event("push")}} event, create the payload variable consisting of the text taken from the data (or create a string to use if data is empty), and then wait until the notification is shown to the user.
+All it does is add a listener for the {{domxref("ServiceWorkerGlobalScope.push_event", "push")}} event, create the payload variable consisting of the text taken from the data (or create a string to use if data is empty), and then wait until the notification is shown to the user.
 
-Feel free to explore the rest of the examples in the [Service Worker Cookbook](https://github.com/mozilla/serviceworker-cookbook) if you want to know how they are handled.
+Feel free to explore the rest of the examples in the [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook) if you want to know how they are handled.
 There's a big collection of working examples showing general use, but also web push, caching strategies, performance, working offline, and more.
 
 {{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}

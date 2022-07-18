@@ -9,7 +9,7 @@
 # ----------------------------------------------------------------------------
 # DEFAULT OWNERS
 # ----------------------------------------------------------------------------
-*    @mdn/core-yari-dev
+*    @mdn/core-dev
 
 # ----------------------------------------------------------------------------
 # DEFAULT ENGLISH CONTENT OWNER(S)
@@ -69,10 +69,10 @@
 # tries to change any one or more of these files should be escalated to the
 # owners specified here.
 # ----------------------------------------------------------------------------
-/.github/     @mdn/core-yari-dev
-/*            @mdn/core-yari-dev
-/*.md         @mdn/core-yari-dev @mdn/core-yari-content
-# These are @escattone because the auto-merge GHA workflow will assign @escattone,
-# and if we add another reviewer, the auto-merge will cease to be automatic.
-/package.json @escattone
-/yarn.lock    @escattone
+/.github/     @mdn/core-dev
+/*            @mdn/core-dev
+/*.md         @mdn/core-dev @mdn/core-yari-content
+# These are @schalkneethling because the auto-merge GHA workflow uses my PAT and will assign me.
+# If we add another reviewer, the auto-merge will cease to be automatic.
+/package.json @schalkneethling
+/yarn.lock    @schalkneethling

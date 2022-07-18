@@ -12,7 +12,7 @@ tags:
   - client-side
   - events
   - models
-  - vue
+  - Vue
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -125,7 +125,7 @@ Now when you view your running site, you should see the new form displayed.
 
 ![Our todo list app rendered with a text input to enter new todos](rendered-form-with-text-input.png)
 
-If you fill it out and click the "Add" button, the page will post the form back to the server, but this isn’t really what we want. What we actually want to do is run a method on the [`submit` event](/en-US/docs/Web/API/HTMLFormElement/submit_event) that will add the new todo to the `ToDoItem` data list defined inside `App`. To do that, we'll need to add a method to the component instance.
+If you fill it out and click the "Add" button, the page will post the form back to the server, but this isn't really what we want. What we actually want to do is run a method on the [`submit` event](/en-US/docs/Web/API/HTMLFormElement/submit_event) that will add the new todo to the `ToDoItem` data list defined inside `App`. To do that, we'll need to add a method to the component instance.
 
 ## Creating a method & binding it to an event with v-on
 
@@ -145,7 +145,7 @@ To make a method available to the `ToDoForm` component, we need to add it to the
     }
     ```
 
-2. Next we need to bind the method to our `<form>` element's `submit` event handler. Much like how Vue uses the [`v-bind`](https://vuejs.org/v2/api/#v-bind) syntax for binding attributes, Vue has a special directive for event handling: [`v-on`](https://vuejs.org/v2/api/#v-on). The `v-on` directive works via the `v-on:event="method"` syntax. And much like `v-bind`, there’s also a shorthand syntax: `@event="method"`.
+2. Next we need to bind the method to our `<form>` element's `submit` event handler. Much like how Vue uses the [`v-bind`](https://v2.vuejs.org/v2/api/#v-bind) syntax for binding attributes, Vue has a special directive for event handling: [`v-on`](https://v2.vuejs.org/v2/api/#v-on). The `v-on` directive works via the `v-on:event="method"` syntax. And much like `v-bind`, there's also a shorthand syntax: `@event="method"`.
 
     We'll use the shorthand syntax here for consistency. Add the `submit` handler to your `<form>` element like so:
 
@@ -153,14 +153,14 @@ To make a method available to the `ToDoForm` component, we need to add it to the
     <form @submit="onSubmit">
     ```
 
-3. When you run this, the app still posts the data to the server, causing a refresh. Since we're doing all of our processing on the client, there's no server to handle the postback. We also lose all local state on page refresh. To prevent the browser from posting to the server, we need to stop the event’s default action while bubbling up through the page ([`Event.preventDefault()`](/en-US/docs/Web/API/Event/preventDefault), in vanilla JavaScript). Vue has a special syntax called **event modifiers** that can handle this for us right in our template.
+3. When you run this, the app still posts the data to the server, causing a refresh. Since we're doing all of our processing on the client, there's no server to handle the postback. We also lose all local state on page refresh. To prevent the browser from posting to the server, we need to stop the event's default action while bubbling up through the page ([`Event.preventDefault()`](/en-US/docs/Web/API/Event/preventDefault), in vanilla JavaScript). Vue has a special syntax called **event modifiers** that can handle this for us right in our template.
 
     Modifiers are appended to the end of an event with a dot like so: `@event.modifier`. Here is a list of event modifiers:
 
     - `.stop`: Stops the event from propagating. Equivalent to [`Event.stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation) in regular JavaScript events.
     - `.prevent`: Prevents the event's default behavior. Equivalent to [`Event.preventDefault()`](/en-US/docs/Web/API/Event/preventDefault).
     - `.self`: Triggers the handler only if the event was dispatched from this exact element.
-    - `{.key}`: Triggers the event handler only via the specified key. [MDN has a list of valid key values](/en-US/docs/Web/API/KeyboardEvent/key/Key_Values); multi-word keys just need to be converted to kebab case (e.g. `page-down`).
+    - `{.key}`: Triggers the event handler only via the specified key. [MDN has a list of valid key values](/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values); multi-word keys just need to be converted to kebab case (e.g. `page-down`).
     - `.native`: Listens for a native event on the root (outer-most wrapping) element on your component.
     - `.once`: Listens for the event until it's been triggered once, and then no more.
     - `.left`: Only triggers the handler via the left mouse button event.
@@ -168,7 +168,7 @@ To make a method available to the `ToDoForm` component, we need to add it to the
     - `.middle`: Only triggers the handler via the middle mouse button event.
     - `.passive`: Equivalent to using the `{ passive: true }` parameter when creating an event listener in vanilla JavaScript using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener).
 
-    In this case, we need to use the `.prevent` handler to stop the browser’s default submit action. Add `.prevent` to the `@submit` handler in your template like so:
+    In this case, we need to use the `.prevent` handler to stop the browser's default submit action. Add `.prevent` to the `@submit` handler in your template like so:
 
     ```js
     <form @submit.prevent="onSubmit">
@@ -201,7 +201,7 @@ The first thing we need is a `data` property in our form to track the value of t
     };
     ```
 
-2. We now need some way to attach the value of the `new-todo-input` `<input>` field to the `label` field. Vue has a special directive for this: [`v-model`](https://vuejs.org/v2/api/#v-model). `v-model` binds to the data property you set on it and keeps it in sync with the `<input>`. `v-model` works across all the various input types, including check boxes, radios, and select inputs. To use `v-model`, you add an attribute with the structure `v-model="variable"` to the `<input>`.
+2. We now need some way to attach the value of the `new-todo-input` `<input>` field to the `label` field. Vue has a special directive for this: [`v-model`](https://v2.vuejs.org/v2/api/#v-model). `v-model` binds to the data property you set on it and keeps it in sync with the `<input>`. `v-model` works across all the various input types, including check boxes, radios, and select inputs. To use `v-model`, you add an attribute with the structure `v-model="variable"` to the `<input>`.
 
     So in our case, we would add it to our `new-todo-input` field as seen below. Do this now:
 
@@ -349,7 +349,7 @@ Now that we have the data from `ToDoForm` available in `App.vue`, we need to add
 
 There's one more thing to fix in our `ToDoForm` component — after submitting, the `<input>` still contains the old value. But this is easy to fix — because we're using `v-model` to bind the data to the `<input>` in `ToDoForm`, if we set the name parameter to equal an empty string, the input will update as well.
 
-Update your `ToDoForm` component’s `onSubmit()` method to this:
+Update your `ToDoForm` component's `onSubmit()` method to this:
 
 ```js
 onSubmit() {

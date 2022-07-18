@@ -34,11 +34,11 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 
 #### DOM4
 
-- The attribute {{ domxref("document.xmlVersion") }} (which was only gettable and not settable) has been removed as it has been deprecated in the DOM4 specification. The article for {{ domxref("document.xmlVersion") }} now suggests a way to detect whether the document is HTML or XML without using that property.
-- The attribute {{ domxref("document.xmlStandalone") }} has been removed as it has been deprecated in the DOM4 specification.
+- The attribute {{ domxref("document.xmlVersion") }} (which was only gettable and not settable) has been removed as it has been deprecated in the DOM4 specification. The article for {{ domxref("document.xmlVersion") }} now suggests a way to detect whether the document is HTML or XML without using that property.
+- The attribute `document.xmlStandalone` has been removed as it has been deprecated in the DOM4 specification.
 - The attribute {{ domxref("document.xmlEncoding") }} has been removed as it has been deprecated in the DOM4 specification.
-- The attribute {{ domxref("text.isElementContentWhiteSpace") }} has been removed as it has been deprecated in the DOM4 specification.
-- The method {{ domxref("text.replaceWholeText") }} has been removed as it has been deprecated in the DOM4 specification.
+- The attribute `text.isElementContentWhiteSpace` has been removed as it has been deprecated in the DOM4 specification.
+- The method `text.replaceWholeText` has been removed as it has been deprecated in the DOM4 specification.
 - The method {{ domxref("node.isSameNode") }} has been removed as it has been deprecated in the DOM4 specification. Instead of `node1.isSameNode(node2)`, you can use the `===` operator, like this: `node1 === node2`.
 
 #### Page Visibility API
@@ -67,7 +67,7 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 #### Web Workers
 
 - The attribute `XMLHttpRequest.responseType` and `XMLHttpRequest.response` are now available from inside [Workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#section_2).
-- The [`Worker()`](</en-US/docs/Web/API/Worker#worker()>) constructor now accepts [data URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
+- The [`Worker()`](/en-US/docs/Web/API/Worker#worker) constructor now accepts [data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
 
 #### IndexedDB
 
@@ -77,9 +77,9 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 - The [`IDBCursor.advance()`](/en-US/docs/Web/API/IDBCursor#advance) method has been added.
 - When encountering an unknown optional parameter in [`IDBObjectStore.createIndex()`](/en-US/docs/Web/API/IDBObjectStore#createindex) or [`IDBDatabase.createObjectStore()`](/en-US/docs/Web/API/IDBDatabase#createobjectstore), Gecko will not fire an exception anymore, but ignore it.
 - When [`IDBTransaction.abort()`](/en-US/docs/Web/API/IDBTransaction#abort%28%29) is called, all pending [`IDBRequest`](/en-US/docs/Web/API/IDBRequest) have their `errorCode` set to `ABORT_ERROR`.
-- The methods [`IDBObjectStore.delete()`](</en-US/docs/Web/API/IDBObjectStore#delete()>) and [`IDBCursor.delete()`](</en-US/docs/Web/API/IDBCursor#delete()>) now set the `result` attribute of the returned [`IDBRequest`](/en-US/docs/Web/API/IDBRequest) to `undefined`.
-- The method [`IDBDatabase.setVersion()`](</en-US/docs/Web/API/IDBDatabase#setversion()>) has been removed as it was removed from the latest spec. The version of the database is given through the [`IDBFactory.open()`](/en-US/docs/Web/API/IDBFactory#open) method which has been updated and the `onupgradeneeded` callback allows the schema of the database to be upgraded. The version itself has been changed from a `DOMString` to an `unsigned long long`. The [`IDBVersionChangeRequest`](/en-US/docs/IndexedDB/IDBVersionChangeRequest) interface has been removed and replaced by the new [`IDBOpenDBRequest`](/en-US/docs/Web/API/IDBOpenDBRequest) interface.
-- When opening a database with {{domxref("IDBFactory.open()")}}, if the `version` parameter is not provided and the database does not exist, then it will be created with a version of `1`.
+- The methods [`IDBObjectStore.delete()`](/en-US/docs/Web/API/IDBObjectStore/delete) and [`IDBCursor.delete()`](/en-US/docs/Web/API/IDBCursor/delete) now set the `result` attribute of the returned [`IDBRequest`](/en-US/docs/Web/API/IDBRequest) to `undefined`.
+- The method `IDBDatabase.setVersion()` has been removed as it was removed from the latest spec. The version of the database is given through the [`IDBFactory.open()`](/en-US/docs/Web/API/IDBFactory#open) method which has been updated and the `onupgradeneeded` callback allows the schema of the database to be upgraded. The version itself has been changed from a `DOMString` to an `unsigned long long`. The `IDBVersionChangeRequest` interface has been removed and replaced by the new [`IDBOpenDBRequest`](/en-US/docs/Web/API/IDBOpenDBRequest) interface.
+- When opening a database with {{domxref("IDBFactory.open()")}}, if the `version` parameter is not provided and the database does not exist, then it will be created with a version of `1`.
 - The method [`IDBFactory.deleteDatabase()`](/en-US/docs/Web/API/IDBFactory#deletedatabase%28%29) method has been added.
 - Methods that search via an {{domxref("IDBKeyRange")}} (such as {{domxref("IDBObjectStore.openCursor")}} and {{domxref("IDBIndex.getKey")}}) can accept either a single key or key range.
 
@@ -111,8 +111,8 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 
 ### Developer tools
 
-- The {{ domxref("console") }} object has two new methods,  {{ domxref("console.time()") }} and {{ domxref("console.timeEnd()") }}, which can be used to set timers on a page.
-- The new [Page Inspector](/en-US/docs/Tools/Page_Inspector) has been added, providing an excellent way to examine and manipulate the HTML and CSS behind your content.
+- The {{ domxref("console") }} object has two new methods,  {{ domxref("console.time()") }} and {{ domxref("console.timeEnd()") }}, which can be used to set timers on a page.
+- The new [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) has been added, providing an excellent way to examine and manipulate the HTML and CSS behind your content.
 
 ## Changes for Mozilla and add-on developers
 
@@ -122,27 +122,27 @@ For an overview of likely issues that may arise when updating your add-ons to su
 
 ### Manifests
 
-- Support for [`<em:strictCompatibility>`](/en-US/docs/Install_Manifests#strictCompatibility) has been added to the install manifest. It allows add-ons authors to opt in to checking the maximum version of their extension. If set to `true` the add-on will be disabled if the application version is greater than `<em:maxVersion>`. Firefox 10 defaults to add-ons being compatible, regardless of their specified maximum version. This flag overrides that preference. You should set this if your add-on does things that are likely to be broken by Firefox updates, **but not** if your add-on has a binary component, since such add-ons always get strictly checked (remember that binary components must always be recompiled for each major Firefox release).
-- If you wish to revert to the old behavior -- that is, to strict compatibility checking for all add-ons, regardless of the value of the `strictCompatibility` flag in their manifests, you can set the `extensions.strictCompatibility` preference to `true`.
+- Support for [`<em:strictCompatibility>`](/en-US/docs/Install_Manifests#strictcompatibility) has been added to the install manifest. It allows add-ons authors to opt in to checking the maximum version of their extension. If set to `true` the add-on will be disabled if the application version is greater than `<em:maxVersion>`. Firefox 10 defaults to add-ons being compatible, regardless of their specified maximum version. This flag overrides that preference. You should set this if your add-on does things that are likely to be broken by Firefox updates, **but not** if your add-on has a binary component, since such add-ons always get strictly checked (remember that binary components must always be recompiled for each major Firefox release).
+- If you wish to revert to the old behavior — that is, to strict compatibility checking for all add-ons, regardless of the value of the `strictCompatibility` flag in their manifests, you can set the `extensions.strictCompatibility` preference to `true`.
 
 ### XUL
 
-- Bootstrapped add-ons using a [chrome.manifest](/en-US/docs/Chrome_Registration) file now have the manifest file registered automatically. See the section [Adding user interface with a chrome.manifest](/en-US/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest) for details.
+- Bootstrapped add-ons using a `chrome.manifest` file now have the manifest file registered automatically. See the section [Adding user interface with a chrome.manifest](/en-US/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest) for details.
 
 ### XPConnect
 
-- Several new properties and methods have been added to [`Components.utils`](/en-US/docs/Components.utils), granting access to assorted debugging-related information.
+- Several new properties and methods have been added to `Components.utils`, granting access to assorted debugging-related information.
 
 ### Interface changes
 
-- The {{ interface("mozISpellCheckingEngine") }} and {{ interface("nsIEditorSpellCheck") }} interfaces have been updated to allow restartless add-ons to add dictionaries to the spell checker. **XXX need to [update docs](/en-US/Using_an_External_Spell-checker) on how to actually do this.**
-- The {{ ifattribute("nsIBrowserHistory", "lastPageVisited") }} attribute has been removed.
-- The `nsIDocumentViewer` interface has been merged into {{ interface("nsIContentViewer") }}.
-- The {{ interface("nsIURIFixup") }} interface has a new flag, `FIXUP_FLAG_USE_UTF8`, which lets you tell it to use UTF-8 instead of the platform character set, when doing conversions.
+- The `mozISpellCheckingEngine` and `nsIEditorSpellCheck` interfaces have been updated to allow restartless add-ons to add dictionaries to the spell checker.
+- The `nsIBrowserHistory.lastPageVisited` attribute has been removed.
+- The `nsIDocumentViewer` interface has been merged into `nsIContentViewer`.
+- The `nsIURIFixup` interface has a new flag, `FIXUP_FLAG_USE_UTF8`, which lets you tell it to use UTF-8 instead of the platform character set, when doing conversions.
 
 ### Plug-in changes
 
-- The [new variable `NPNVdocumentOrigin`](/en-US/docs/Gecko_Plugin_API_Reference/Plug-in_Development_Overview#Working_with_URLs) has been added; this returns the document origin, and is more secure than {{ domxref("window.location") }}.
+- The new variable `NPNVdocumentOrigin` has been added; this returns the document origin, and is more secure than {{ domxref("window.location") }}.
 
 ### Build system changes
 

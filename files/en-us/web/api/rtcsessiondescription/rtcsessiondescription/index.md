@@ -1,6 +1,7 @@
 ---
 title: RTCSessionDescription()
 slug: Web/API/RTCSessionDescription/RTCSessionDescription
+page-type: web-api-constructor
 tags:
   - Constructor
   - Deprecated
@@ -28,7 +29,7 @@ specified object.
 ## Syntax
 
 ```js
-sessionDescription = new RTCSessionDescription(rtcSessionDescriptionInit);
+new RTCSessionDescription(rtcSessionDescriptionInit);
 ```
 
 ### Values
@@ -40,12 +41,9 @@ sessionDescription = new RTCSessionDescription(rtcSessionDescriptionInit);
     the following properties:
 
     - `type`
-      - : **Required.** A string which is a member of the
-        `RTCSdpType` enum; it must have one of the following values:{{page("/en-US/docs/Web/API/RTCSessionDescription", "RTCSdpType")}}
+      - : **Required.** A string which is used to set the `type` property of the new `RTCSessionDescription` object.
     - `sdp`
-      - : A string containing a {{Glossary("SDP")}} message describing the session. This
-        value is an empty string (`""`) by default and may not be
-        `null`.
+      - : A string containing a {{Glossary("SDP")}} message describing the session. This value is an empty string (`""`) by default and may not be `null`.
 
 ## Example
 
@@ -69,7 +67,7 @@ navigator.getUserMedia({video: true}, function(stream) {
       // send the offer to a server to be forwarded to the friend you're calling.
     }, error);
   }, error);
-}
+});
 ```
 
 ## Specifications

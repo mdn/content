@@ -40,7 +40,7 @@ So for example, when a content script accesses the page's [window](/en-US/docs/W
 
 ## Accessing page script objects from content scripts
 
-In Firefox, DOM objects in content scripts get an extra property `wrappedJSObject`. This is an "unwrapped" version of the object, which includes any changes made to that object by any page scripts.
+In Firefox, DOM objects in content scripts get an extra property `wrappedJSObject`. This is an "unwrapped" version of the object, which includes any changes made to that object by any page scripts.
 
 Let's take a simple example. Suppose a web page loads a script:
 
@@ -61,7 +61,7 @@ The script adds an expando property to the global `window`:
 ```js
 // main.js
 
-var foo = "I'm defined in a page script!";
+let foo = "I'm defined in a page script!";
 ```
 
 Xray vision means that if a content script tries to access `foo`, it will be undefined:
@@ -88,7 +88,7 @@ Also note that unwrapping is transitive: when you use `wrappedJSObject`, any pro
 XPCNativeWrapper(window.wrappedJSObject.foo);
 ```
 
-See the document on [Xray vision](/en-US/docs/Mozilla/Tech/Xray_vision) for much more detail on this.
+See the document on [Xray vision](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html) for much more detail on this.
 
 ## Sharing content script objects with page scripts
 
@@ -174,8 +174,8 @@ Because the object contains functions,
 the cloneInto call must include
 the `cloneFunctions` option.
 */
-var messenger = {
-  notify: function(message) {
+let messenger = {
+  notify(message) {
     browser.runtime.sendMessage({
       content: "Object method call: " + message
     });
@@ -196,12 +196,12 @@ window.messenger.notify("Message from the page script!");
 
 ### Constructors from the page context
 
-On the xrayed window object pristine constructors for some built-in javascript objects such as `Object`, `Function` or `Proxy` and various DOM classes are available. `XMLHttpRequest` does not behave in this way, see the [XHR and fetch](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#xhr_and_fetch) section for details. They will create instances belonging to the page global's object hierarchy and then return an xray wrapper.
+On the xrayed window object pristine constructors for some built-in JavaScript objects such as `Object`, `Function` or `Proxy` and various DOM classes are available. `XMLHttpRequest` does not behave in this way, see the [XHR and fetch](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#xhr_and_fetch) section for details. They will create instances belonging to the page global's object hierarchy and then return an xray wrapper.
 
 Since objects created this way already belong to the page and not the content script passing them back to the page will not require additional cloning or exporting.
 
 ```js
-/* javascript built-ins */
+/* JavaScript built-ins */
 
 const objA = new Object();
 const objB = new window.Object();
@@ -215,7 +215,7 @@ console.log(
 );
 
 objA.foo = "foo";
-objB.foo = "foo";                                // xray wrappers for plain javascript objects pass through property assignments
+objB.foo = "foo";                                // xray wrappers for plain JavaScript objects pass through property assignments
 objB.wrappedJSObject.bar = "bar";                // unwrapping before assignment does not rely on this special behavior
 
 window.wrappedJSObject.objA = objA;

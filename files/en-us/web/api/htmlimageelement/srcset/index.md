@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.srcset
 slug: Web/API/HTMLImageElement/srcset
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -33,22 +34,15 @@ The `srcset` property, along with the {{domxref("HTMLImageElement.sizes",
 can be used together to make pages that use appropriate images for the rendering
 situation.
 
-## Syntax
+## Value
 
-```js
-htmlImageElement.srcset = imageCandidateStrings;
-let srcset = htmlImageElement.srcset;
-```
-
-### Value
-
-A {{domxref("USVString")}} containing a comma-separated list of one or more image
+A string containing a comma-separated list of one or more image
 candidate strings to be used when determining which image resource to present inside the
 {{HTMLElement("img")}} element represented by the
-`HTMLImageElement`_._
+`HTMLImageElement`.
 
 Each image candidate string must begin with a valid URL referencing a non-interactive
-graphic resource. This is followed by whitespace and then a condition descriptor that
+graphic resource. This is followed by whitespace and then a condition descriptor that
 indicates the circumstances in which the indicated image should be used. Space
 characters, other than the whitespace separating the URL and the corresponding condition
 descriptor, are ignored; this includes both leading and trailing space, as well as space
@@ -69,7 +63,7 @@ candidates match. Otherwise, the condition descriptor may take one of two forms:
   specifies the condition in which the corresponding image resource should be used as
   the display's pixel density. This is written by stating the pixel density as a
   positive, non-zero floating-point value followed by the lower-case letter "x". As an
-  example, to state that the corresponding  image should be used when the pixel density
+  example, to state that the corresponding image should be used when the pixel density
   is double the standard density, you can give the pixel density descriptor
   `2x` or `2.0x`.
 
@@ -78,7 +72,7 @@ multiple image candidate strings that specify the same descriptor. All of the fo
 are valid image candidate strings:
 
 ```html
-"images/team-photo.jpg 1x, images/team-photo-retina.jpg 2x, images/team-photo-full 2048w"
+"images/team-photo.jpg 1x, images/team-photo-retina.jpg 2x, images/team-photo-full.jpg 2048w"
 ```
 
 This string provides versions of an image to be used at the standard pixel density
@@ -105,7 +99,7 @@ in all other cases. Notice that the candidates may use different image types.
 For more information on what image formats are available for use in the
 {{HTMLElement("img")}} element, see [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types).
 
-## Example
+## Examples
 
 ### HTML
 
@@ -133,7 +127,7 @@ the wrap must occur.
 ```css
 .box {
   width: 200px;
-  border: 2px solid rgba(150, 150, 150, 255);
+  border: 2px solid rgb(150, 150, 150);
   padding: 0.5em;
   word-break: break-all;
 }
@@ -146,7 +140,7 @@ the wrap must occur.
 ### JavaScript
 
 The following code is run within a handler for the {{domxref("Window", "window")}}'s
-{{domxref("Window.load_event", "load")}} event.  It uses the image's
+{{domxref("Window.load_event", "load")}} event.  It uses the image's
 {{domxref("HTMLImageElement.currentSrc", "currentSrc")}} property to fetch and display
 the URL selected by the browser from the `srcset`.
 
@@ -168,10 +162,9 @@ display results in selecting the 1x or the 2x version of the image. If you happe
 have both standard and high density displays, try moving this window between them and
 reloading the page to see the results change.
 
-{{EmbedLiveSample("Example", 640, 320)}}
+{{EmbedLiveSample("Examples", 640, 320)}}
 
-For additional examples, see our guide to [responsive
-images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
+For additional examples, see our guide to [responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
 
 ## Specifications
 
@@ -183,9 +176,6 @@ images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
 
 ## See also
 
-- [Images in
-  HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Responsive
-  images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Image file type and format
-  guide](/en-US/docs/Web/Media/Formats/Image_types)
+- [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)

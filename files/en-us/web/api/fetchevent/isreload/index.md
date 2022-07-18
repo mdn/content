@@ -1,6 +1,7 @@
 ---
 title: FetchEvent.isReload
 slug: Web/API/FetchEvent/isReload
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -22,27 +23,21 @@ dispatched by the user attempting to reload the page, and `false` otherwise.
 Pressing the refresh button is a reload while clicking a link and pressing the back
 button is not.
 
-## Syntax
-
-```js
-var reloaded = FetchEvent.isReload
-```
-
-### Value
+## Value
 
 A boolean value.
 
-## Example
+## Examples
 
 ```js
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
+self.addEventListener('fetch', function (event) {
+  event.respondWith(async function () {
     if (event.isReload) {
       //Return something
     } else {
       //Return something else
-    };
-  );
+    }
+  })();
 });
 ```
 
@@ -52,11 +47,8 @@ self.addEventListener('fetch', function(event) {
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service
-  workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker
-  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

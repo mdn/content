@@ -1,6 +1,7 @@
 ---
 title: IdleDetector.userState
 slug: Web/API/IdleDetector/userState
+page-type: web-api-instance-property
 tags:
   - API
   - Property

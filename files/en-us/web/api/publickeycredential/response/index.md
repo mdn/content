@@ -1,6 +1,7 @@
 ---
 title: PublicKeyCredential.response
 slug: Web/API/PublicKeyCredential/response
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -42,13 +43,7 @@ needs both:
 > **Note:** This property may only be used in top-level contexts and will
 > not be available in an {{HTMLElement("iframe")}} for example.
 
-## Syntax
-
-```js
-response = publicKeyCredential.response
-```
-
-### Value
+## Value
 
 An {{domxref("AuthenticatorResponse")}} object containing the data a relying party's
 script will receive and which should be sent to the relying party's server in order to
@@ -58,7 +53,7 @@ validate the demand for creation or fetching. This object contains data from the
 ## Examples
 
 ```js
-var options = {
+const options = {
   challenge: new Uint8Array(16) /* from the server */,
   rp: {
     name: "Example CORP",
@@ -79,8 +74,8 @@ var options = {
 
 navigator.credentials.create({  publicKey: options })
   .then(function (pubKeyCredential) {
-    var response = pubKeyCredential.response;
-    var clientExtResults = pubKeyCredential.getClientExtensionResults();
+    const response = pubKeyCredential.response;
+    const clientExtResults = pubKeyCredential.getClientExtensionResults();
     // Send response and client extensions to the server so that it can validate
     // and create credentials
 

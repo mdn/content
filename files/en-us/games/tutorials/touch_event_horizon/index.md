@@ -19,7 +19,7 @@ This article is for Touch Event Horizon and A Game Related To It
 
 ![](tapping.png)
 
-[Github repository](https://github.com/EnclaveGames/Touch-Event-Horizon)
+[GitHub repository](https://github.com/EnclaveGames/Touch-Event-Horizon)
 
 [Live demo](https://touch.enclavegames.com/)
 
@@ -37,4 +37,4 @@ touchmove
 
 ## Summary
 
-This tutorial shows how to use Touch Events to create a game on a \<canvas>. This is a multi-player game relying on the Tap and Drag gestures.
+This tutorial shows how to use Touch Events to create a game on a \<canvas>. This is a multiplayer game relying on the Tap and Drag gestures.

@@ -21,7 +21,7 @@ Do not confuse the {{Glossary("Primitive", "primitive")}} `Boolean` values `true
 **Any** object of which the value is not {{jsxref("undefined")}} or {{jsxref("null")}}, including a `Boolean` object whose value is `false`, evaluates to `true` when passed to a conditional statement. For example, the condition in the following {{jsxref("Statements/if...else", "if")}} statement evaluates to `true`:
 
 ```js
-var x = new Boolean(false);
+const x = new Boolean(false);
 if (x) {
   // this code is executed
 }
@@ -30,41 +30,41 @@ if (x) {
 This behavior does not apply to `Boolean` primitives. For example, the condition in the following {{jsxref("Statements/if...else", "if")}} statement evaluates to `false`:
 
 ```js
-var x = false;
+const x = false;
 if (x) {
   // this code is not executed
 }
 ```
 
-Do not use a `Boolean` object to convert a non-boolean value to a boolean value. To perform this task, instead, use `Boolean` as a function, or a [double NOT operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT):
+Do not use a `Boolean` object to convert a non-boolean value to a boolean value. To perform this task, instead, use `Boolean` as a function, or a [double NOT operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT#double_not_!!):
 
 ```js
-var x = Boolean(expression);     // use this...
-var x = !!(expression);          // ...or this
-var x = new Boolean(expression); // don't use this!
+const x = Boolean(expression);     // use this...
+const x = !!(expression);          // ...or this
+const x = new Boolean(expression); // don't use this!
 ```
 
 If you specify any object, including a `Boolean` object whose value is `false`, as the initial value of a `Boolean` object, the new `Boolean` object has a value of `true`.
 
 ```js
-var myFalse = new Boolean(false);   // initial value of false
-var g = Boolean(myFalse);       // initial value of true
-var myString = new String('Hello'); // string object
-var s = Boolean(myString);      // initial value of true
+const myFalse = new Boolean(false);   // initial value of false
+const g = Boolean(myFalse);       // initial value of true
+const myString = new String('Hello'); // string object
+const s = Boolean(myString);      // initial value of true
 ```
 
 Do not use a `Boolean` object in place of a `Boolean` primitive.
 
 > **Note:** When the non-standard property [`document.all`](/en-US/docs/Web/API/Document#properties) is used as an argument for this constructor, the result is a `Boolean` object with the value `false`. This property is legacy and non-standard and should not be used.
 
-When using `==` to loosely compare an object to a boolean primitive, it’s important to have a clear understanding of what’s actually being compared. Consider the following example:
+When using `==` to loosely compare an object to a boolean primitive, it's important to have a clear understanding of what's actually being compared. Consider the following example:
 
 ```js
 if ([]) { console.log("[] is truthy")}         // logs "[] is truthy"
 if ([] == false) { console.log("[] == false")} // logs "[] == false"
 ```
 
-The reason for `[] == false` even though `[]` is truthy is: the comparison `[] == false` compares the *value* of `[]` to `false`. And to get the *value* of `[]`, the JavaScript engine first calls `[].toString()`. That results in `""`, and *that* is what’s actually compared to `false`. In other words, `[] == false` is equivalent to `"" == false`. And `""` is falsy — and so that’s what explains the behavior in the example.
+The reason for `[] == false` even though `[]` is truthy is: the comparison `[] == false` compares the *value* of `[]` to `false`. And to get the *value* of `[]`, the JavaScript engine first calls `[].toString()`. That results in `""`, and *that* is what's actually compared to `false`. In other words, `[] == false` is equivalent to `"" == false`. And `""` is falsy — and so that's what explains the behavior in the example.
 
 ## Constructor
 
@@ -83,22 +83,22 @@ The reason for `[] == false` even though `[]` is truthy is: the comparison `[] =
 ### Creating `Boolean` objects with an initial value of `false`
 
 ```js
-var bNoParam = new Boolean();
-var bZero = new Boolean(0);
-var bNull = new Boolean(null);
-var bEmptyString = new Boolean('');
-var bfalse = new Boolean(false);
+const bNoParam = new Boolean();
+const bZero = new Boolean(0);
+const bNull = new Boolean(null);
+const bEmptyString = new Boolean('');
+const bfalse = new Boolean(false);
 ```
 
 ### Creating `Boolean` objects with an initial value of `true`
 
 ```js
-var btrue = new Boolean(true);
-var btrueString = new Boolean('true');
-var bfalseString = new Boolean('false');
-var bSuLin = new Boolean('Su Lin');
-var bArrayProto = new Boolean([]);
-var bObjProto = new Boolean({});
+const btrue = new Boolean(true);
+const btrueString = new Boolean('true');
+const bfalseString = new Boolean('false');
+const bSuLin = new Boolean('Su Lin');
+const bArrayProto = new Boolean([]);
+const bObjProto = new Boolean({});
 ```
 
 ## Specifications

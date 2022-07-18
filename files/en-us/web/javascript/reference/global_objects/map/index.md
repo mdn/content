@@ -21,9 +21,9 @@ either a key or a value.
 
 ## Description
 
-A `Map` object iterates its elements in insertion order — a
-{{jsxref("Statements/for...of", "for...of")}} loop returns an
-array of `[key, value]` for each iteration.
+`Map` objects are collections of key-value pairs. A key in the `Map` **may only occur once**; it is unique in the `Map`'s collection. A `Map` object is iterated by key-value pairs — a {{jsxref("Statements/for...of", "for...of")}} loop returns a 2-member array of `[key, value]` for each iteration. Iteration happens in _insertion order_, which corresponds to the order in which each key-value pair was first inserted into the map by the [`set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/set) method (that is, there wasn't a key with the same value already in the map when `set()` was called).
+
+The specification requires maps to be implemented "that, on average, provide access times that are sublinear on the number of elements in the collection". Therefore, it could be represented internally as a hash table (with O(1) lookup), a search tree (with O(log(N)) lookup), or any other data structure, as long as the complexity is better than O(N).
 
 ### Key equality
 
@@ -42,7 +42,7 @@ array of `[key, value]` for each iteration.
 {{jsxref("Object")}} is similar to `Map`—both let you set keys to
 values, retrieve those values, delete keys, and detect whether something is
 stored at a key. For this reason (and because there were no built-in
-alternatives), `Object` has been used as `Map` historically.
+alternatives), `Object` has been used as `Map` historically.
 
 However, there are important differences that make `Map` preferable in some
 cases:
@@ -150,7 +150,7 @@ cases:
       </td>
       <td>
         <p>
-          <code>Object</code> does not implement an <a
+          <code>Object</code> does not implement an <a
             href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol"
             >iteration protocol</a
           >, and so objects are not directly iterable using the JavaScript
@@ -164,10 +164,10 @@ cases:
           <ul>
             <li>
               An object can implement the iteration protocol, or you can get an
-              iterable for an object using <a
+              iterable for an object using <a
                 href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"
                 ><code>Object.keys</code></a
-              > or <a
+              > or <a
                 href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries"
                 ><code>Object.entries</code></a
               >.

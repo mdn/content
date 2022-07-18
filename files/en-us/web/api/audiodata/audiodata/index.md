@@ -1,6 +1,7 @@
 ---
-title: AudioData.AudioData()
+title: AudioData()
 slug: Web/API/AudioData/AudioData
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -15,7 +16,7 @@ The **`AudioData()`** constructor creates a new {{domxref("AudioData")}} object 
 ## Syntax
 
 ```js
-new AudioData(init);
+new AudioData(init)
 ```
 
 ### Parameters
@@ -31,7 +32,7 @@ new AudioData(init);
         - "u8-planar"
         - "s16-planar"
         - "s32-planar"
-        - "f32-planer"
+        - "f32-planar"
     - `sampleRate`
       - : A decimal containing the sample rate in Hz.
     - `numberOfFrames`
@@ -45,7 +46,7 @@ new AudioData(init);
 
 ## Exceptions
 
-- {{domxref("DOMException")}} `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if `init` is in an incorrect format.
 
 ## Specifications

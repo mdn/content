@@ -1,6 +1,7 @@
 ---
 title: EXT_disjoint_timer_query.endQueryEXT()
 slug: Web/API/EXT_disjoint_timer_query/endQueryEXT
+page-type: webgl-extension-method
 tags:
   - API
   - Method
@@ -17,18 +18,18 @@ The **`EXT_disjoint_timer_query.endQueryEXT()`** method of the
 ## Syntax
 
 ```js
-void ext.endQueryEXT(target);
+endQueryEXT(target)
 ```
 
 ### Parameters
 
-- target
+- `target`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target of the time query. Must be
     `ext.TIME_ELAPSED_EXT`.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -37,7 +38,7 @@ var ext = gl.getExtension('EXT_disjoint_timer_query');
 var query = ext.createQueryEXT();
 ext.beginQueryEXT(ext.TIME_ELAPSED_EXT, query);
 
-// ...
+// …
 
 ext.endQueryEXT(ext.TIME_ELAPSED_EXT);
 ```

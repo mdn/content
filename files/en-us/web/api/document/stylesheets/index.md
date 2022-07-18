@@ -1,6 +1,7 @@
 ---
 title: Document.styleSheets
 slug: Web/API/Document/styleSheets
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -13,17 +14,11 @@ browser-compat: api.Document.styleSheets
 
 The **`styleSheets`** read-only property of the {{domxref("Document")}} interface returns a {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects, for stylesheets explicitly linked into or embedded in a document.
 
-## Syntax
-
-```js
-document.styleSheets
-```
-
-### Value
+## Value
 
 The returned list is ordered as follows:
 
-- StyleSheets retrieved from {{htmlelement("link")}} headers are placed first, sorted in header order.
+- StyleSheets retrieved from {{htmlelement("link")}} headers are placed first, sorted in header order.
 - StyleSheets retrieved from the DOM are placed after, sorted in [tree order](https://dom.spec.whatwg.org/#concept-tree-order).
 
 ## Examples

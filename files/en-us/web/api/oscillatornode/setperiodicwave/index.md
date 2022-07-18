@@ -1,6 +1,7 @@
 ---
 title: OscillatorNode.setPeriodicWave()
 slug: Web/API/OscillatorNode/setPeriodicWave
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -20,7 +21,7 @@ defining a periodic waveform that can be used to shape the oscillator's output, 
 ## Syntax
 
 ```js
-OscillatorNode.setPeriodicWave(wave);
+setPeriodicWave(wave)
 ```
 
 ### Parameters
@@ -29,27 +30,27 @@ OscillatorNode.setPeriodicWave(wave);
   - : A {{domxref("PeriodicWave")}} object representing the waveform to use as the shape
     of the oscillator's output.
 
-### Returns
+### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 The following example illustrates simple usage of `createPeriodicWave()`,
 recreating a sine wave from a periodic wave.
 
 ```js
-var real = new Float32Array(2);
-var imag = new Float32Array(2);
-var ac = new AudioContext();
-var osc = ac.createOscillator();
+const real = new Float32Array(2);
+const imag = new Float32Array(2);
+const ac = new AudioContext();
+const osc = ac.createOscillator();
 
 real[0] = 0;
 imag[0] = 0;
 real[1] = 1;
 imag[1] = 0;
 
-var wave = ac.createPeriodicWave(real, imag);
+const wave = ac.createPeriodicWave(real, imag);
 
 osc.setPeriodicWave(wave);
 

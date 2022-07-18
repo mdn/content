@@ -23,17 +23,17 @@ The [Gamepad API](https://www.w3.org/TR/gamepad/) is still at the Working Draft 
 
 ## Which gamepads are best?
 
-The most popular gamepads right now are those from the Xbox 360, Xbox One, PS3 and PS4 — they have been heavily tested and work well with the Gamepad API implementation in browsers across Windows and Mac OS X.
+The most popular gamepads right now are those from the Xbox 360, Xbox One, PS3 and PS4 — they have been heavily tested and work well with the Gamepad API implementation in browsers across Windows and macOS.
 
-There's also a number of other devices with various different button layouts that more or less work across browser implementations. The code discussed in this article was tested with a few gamepads, but the author's favorite configuration is a wireless Xbox 360 controller and the Firefox browser on Mac OS X.
+There's also a number of other devices with various different button layouts that more or less work across browser implementations. The code discussed in this article was tested with a few gamepads, but the author's favorite configuration is a wireless Xbox 360 controller and the Firefox browser on macOS.
 
 ## Case Study: Hungry Fridge
 
-The [GitHub Game Off II](https://github.com/blog/1674-github-game-off-ii) competition ran in November 2013 and [Enclave Games](https://enclavegames.com/) decided to take part in it. The theme for the competition was "change", so they submitted a game where you have to feed the Hungry Fridge by tapping the healthy food (apples, carrots, lettuces) and avoid the "bad" food (beer, burgers, pizza.) A countdown changes the type of food the Fridge wants to eat every few seconds, so you have to be careful and act quickly.
+The [GitHub Game Off II](https://github.blog/2013-10-30-github-game-off-ii/) competition ran in November 2013 and [Enclave Games](https://enclavegames.com/) decided to take part in it. The theme for the competition was "change", so they submitted a game where you have to feed the Hungry Fridge by tapping the healthy food (apples, carrots, lettuces) and avoid the "bad" food (beer, burgers, pizza.) A countdown changes the type of food the Fridge wants to eat every few seconds, so you have to be careful and act quickly.
 
 The second, hidden "change" implementation is the ability to transform the static Fridge into a full-blown moving, shooting and eating machine. When you connect the controller, the game significantly changes (Hungry Fridge turns into the Super Turbo Hungry Fridge) and you're able to control the armored fridge using the Gamepad API. You have to shoot down the food, but once again you also have to find the type of food the Fridge wants to eat at each point, or else you'll lose energy.
 
-The game encapsulates two totally different types of "change" — good food vs. bad food, and mobile vs. desktop.
+The game encapsulates two totally different types of "change" — good food vs. bad food, and mobile vs. desktop.
 
 ## Demo
 
@@ -51,10 +51,10 @@ There are two important events to use along with the Gamepad API — `gamepadcon
 var gamepadAPI = {
   controller: {},
   turbo: false,
-  connect: function() {},
-  disconnect: function() {},
-  update: function() {},
-  buttonPressed: function() {},
+  connect() {},
+  disconnect() {},
+  update() {},
+  buttonPressed() {},
   buttons: [],
   buttonsCache: [],
   buttonsStatus: [],
@@ -84,7 +84,7 @@ Due to security policy, you have to interact with the controller first while the
 Both functions are fairly simple:
 
 ```js
-connect: function(evt) {
+connect(evt) {
   gamepadAPI.controller = evt.gamepad;
   gamepadAPI.turbo = true;
   console.log('Gamepad connected.');
@@ -94,7 +94,7 @@ connect: function(evt) {
 The `connect()` function takes the event as a parameter and assigns the `gamepad` object to the `gamepadAPI.controller` variable. We are using only one gamepad for this game, so it's a single object instead of an array of gamepads. We then set the `turbo` property to `true`. (We could use the `gamepad.connected` boolean for this purpose, but we wanted to have a separate variable for turning on Turbo mode without needing to have a gamepad connected, for reasons explained above.)
 
 ```js
-disconnect: function(evt) {
+disconnect(evt) {
   gamepadAPI.turbo = false;
   delete gamepadAPI.controller;
   console.log('Gamepad disconnected.');
@@ -121,7 +121,7 @@ The `index` variable is useful if we're connecting more than one controller and 
 Beside `connect()` and `disconnect()`, there are two more methods in the `gamepadAPI` object: `update()` and `buttonPressed()`. `update()` is executed on every frame inside the game loop, to update the actual status of the gamepad object regularly:
 
 ```js
-update: function() {
+update() {
   // clear the buttons cache
   gamepadAPI.buttonsCache = [];
   // move the buttons status from the previous frame to the cache
@@ -164,11 +164,11 @@ On every frame, `update()` saves buttons pressed during the previous frame to th
 The `buttonPressed()` method is also placed in the main game loop to listen for button presses. It takes two parameters — the button we want to listen to and the (optional) way to tell the game that holding the button is accepted. Without it you'd have to release the button and press it again to have the desired effect.
 
 ```js
-buttonPressed: function(button, hold) {
+buttonPressed(button, hold) {
   var newPress = false;
   // loop through pressed buttons
   for(var i=0,s=gamepadAPI.buttonsStatus.length; i<s; i++) {
-    // if we found the button we're looking for...
+    // if we found the button we're looking for…
     if(gamepadAPI.buttonsStatus[i] == button) {
       // set the boolean variable to true
       newPress = true;
@@ -245,4 +245,4 @@ There were more events available in the spec than just `gamepadconnected` and `g
 
 ## Summary
 
-The Gamepad API is very easy to develop with. Now it's easier than ever to deliver a console-like experience to the browser without the need for any plugins. You can play the full version of the [Hungry Fridge](https://enclavegames.com/games/hungry-fridge/) game directly in your browser, install it from the [Firefox Marketplace](https://marketplace.firefox.com/app/hungry-fridge) or check the source code of the demo along with all the other resources on the [Gamepad API Content Kit](https://end3r.github.io/Gamepad-API-Content-Kit/)[.](https://github.com/EnclaveGames/Hungry-Fridge)
+The Gamepad API is very easy to develop with. Now it's easier than ever to deliver a console-like experience to the browser without the need for any plugins. You can play the full version of the [Hungry Fridge](https://enclavegames.com/games/hungry-fridge/) game directly in your browser, install it from the [Firefox Marketplace](https://marketplace.firefox.com/app/hungry-fridge). Check the other resources on the [Gamepad API Content Kit](https://end3r.github.io/Gamepad-API-Content-Kit/).

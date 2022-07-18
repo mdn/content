@@ -56,7 +56,7 @@ At this point we'll start adding some interactivity to our app, providing the ab
 
 Now we've got a refactored componentized version of our todo app, lets walk through how we can add the interactivity we need to make the app functional.
 
-When beginning to think about interactivity, it's good to declare what each component's goals and responsibilities are. In the below sections we’ll do this for each component, and then walk you through how the functionality can be implemented.
+When beginning to think about interactivity, it's good to declare what each component's goals and responsibilities are. In the below sections we'll do this for each component, and then walk you through how the functionality can be implemented.
 
 ## Creating todos
 
@@ -78,7 +78,7 @@ Add the new line shown below to your `header.hbs` file:
 >
 ```
 
-This new attribute is inside double curly braces, which tells you it is part of Ember's dynamic templating syntax. The first argument passed to `on` is the type of event to respond to (`keydown`), and the last argument is the event handler — the code that will run in response to the `keydown` event firing. As you may expect from dealing with [vanilla JavaScript objects](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS), the `this` keyword refers to the "context" or "scope" of the component. One component's `this` will be different from another component's `this`.
+This new attribute is inside double curly braces, which tells you it is part of Ember's dynamic templating syntax. The first argument passed to `on` is the type of event to respond to (`keydown`), and the last argument is the event handler — the code that will run in response to the `keydown` event firing. As you may expect from dealing with [vanilla JavaScript objects](/en-US/docs/Learn/JavaScript/Objects/Basics#what_is_this), the `this` keyword refers to the "context" or "scope" of the component. One component's `this` will be different from another component's `this`.
 
 We can define what is available inside `this` by generating a component class to go along with your component. This is a vanilla JavaScript class and has no special meaning to Ember, other than _extending_ from the `Component` super-class.
 
@@ -190,7 +190,7 @@ First add another `import` statement below the previous one, to make actions ava
 import { action } from '@ember/object';
 ```
 
-Update the existing `export default class TodoDataService extends Service { … }` block as follows:
+Update the existing `export default class TodoDataService extends Service { }` block as follows:
 
 ```js
 export default class TodoDataService extends Service {
@@ -200,26 +200,30 @@ export default class TodoDataService extends Service {
   add(text) {
     let newTodo = new Todo(text);
 
-    this.todos = [...this.todos, newTodo];
+    this.todos.pushObject(newTodo);
   }
 }
 ```
 
 Here, the `todos` property on the service will maintain our list of todos contained inside an array, and we'll mark it with `@tracked`, because when the value of `todos` is updated we want the UI to update as well.
 
-And just like before, the `add()` function that will be called from the template gets annotated with the `@action` decorator to bind it to the class instance. This function's contents are fairly easy to understand — when the function is invoked, a new `Todo` object instance is created with a text value of `text`, and the `todos` property value is updated to all of the current items inside the array (accessed conveniently using [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)), _plus_ the new todo.
+And just like before, the `add()` function that will be called from the template gets annotated with the `@action` decorator to bind it to the class instance.
+While this may look like familiar Javascript, you may notice that we're calling the method [`pushObject()`](https://api.emberjs.com/ember/4.2/classes/ArrayProxy/methods/filterBy?anchor=pushObject) on our `todos` array.
+This is because Ember extends Javascript's Array prototype by default, giving us convenient methods to ensure Ember's tracking system knows about these changes.
+There are dozens of these methods, including `pushObjects()`, `insertAt()`, or `popObject()`, which can be used with any type (not just Objects).
+Ember's [ArrayProxy](https://api.emberjs.com/ember/4.2/classes/ArrayProxy) also gives us more handy methods, like `isAny()`, `findBy()`, and `filterBy()` to make life easier.
 
 ## Using the service from our header component
 
 Now that we've defined a way to add todos, we can interact with this service from the `header.js` input component to actually start adding them.
 
-First of all, the service needs to be injected into the template via the `@inject` decorator, which we’ll rename to `@service` for semantic clarity. To do this, add the following `import` line to `header.js`, beneath the two existing `import` lines:
+First of all, the service needs to be injected into the template via the `@inject` decorator, which we'll rename to `@service` for semantic clarity. To do this, add the following `import` line to `header.js`, beneath the two existing `import` lines:
 
 ```js
 import { inject as service } from '@ember/service';
 ```
 
-With this import in place, we can now make the `todo-data` service available inside the `HeaderComponent` class via the `todos` object, using the `@service` decorator. Add the following line just below the opening `export...` line:
+With this import in place, we can now make the `todo-data` service available inside the `HeaderComponent` class via the `todos` object, using the `@service` decorator. Add the following line just below the opening `export…` line:
 
 ```js
 @service('todo-data') todos;
@@ -233,7 +237,7 @@ this.todos.add(text);
 
 If we try this out in the todo app in our browser (`npm start`, go to `localhost:4200`), it will look like nothing happens after hitting the <kbd>Enter</kbd> key (although the fact that the app builds without any errors is a good sign). Using the [Ember Inspector](https://guides.emberjs.com/release/ember-inspector/installation/) however, we can see that our todo was added:
 
-![The app being shown in the ember inspector, to prove that added todos are being stored by the service, even if they are not being displayed in the UI yet](todos-in-ember-inspector.gif)
+![The app being shown in the Ember inspector, to prove that added todos are being stored by the service, even if they are not being displayed in the UI yet](todos-in-ember-inspector.gif)
 
 ## Displaying our todos
 
@@ -275,7 +279,7 @@ Now we can access the data using `this.todos.all`, which is much more intuitive.
 <Todo />
 ```
 
-With a dynamic `#each` block (which is basically syntactic sugar over the top of JavaScript's [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)) that creates a `<Todo />` component for each todo available in the list of todos returned by the service’s `all()` getter:
+With a dynamic `#each` block (which is basically syntactic sugar over the top of JavaScript's [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)) that creates a `<Todo />` component for each todo available in the list of todos returned by the service's `all()` getter:
 
 ```js
 \{{#each this.todos.all as |todo|}}

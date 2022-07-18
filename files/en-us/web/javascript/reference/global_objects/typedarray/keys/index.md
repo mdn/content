@@ -35,11 +35,11 @@ A new _array iterator_ object.
 ### Iteration using for...of loop
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArray = arr.keys();
+const arr = new Uint8Array([10, 20, 30, 40, 50]);
+const eArray = arr.keys();
 // your browser must support for..of loop
 // and let-scoped variables in for loops
-for (let n of eArray) {
+for (const n of eArray) {
   console.log(n);
 }
 ```
@@ -47,8 +47,8 @@ for (let n of eArray) {
 ### Alternative iteration
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArr = arr.keys();
+const arr = new Uint8Array([10, 20, 30, 40, 50]);
+const eArr = arr.keys();
 console.log(eArr.next().value); // 0
 console.log(eArr.next().value); // 1
 console.log(eArr.next().value); // 2
@@ -74,5 +74,4 @@ console.log(eArr.next().value); // 4
 - {{jsxref("TypedArray.prototype.@@iterator()",
     "TypedArray.prototype[@@iterator]()")}}
 - [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-- [Iteration
-  protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

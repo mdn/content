@@ -1,42 +1,42 @@
 ---
 title: AnimationPlaybackEvent()
 slug: Web/API/AnimationPlaybackEvent/AnimationPlaybackEvent
+page-type: web-api-constructor
 tags:
   - API
   - Animation
   - AnimationPlaybackEvent
   - AnimationPlaybackEvent()
   - Constructor
-  - Experimental
   - Reference
   - waapi
   - web animations api
 browser-compat: api.AnimationPlaybackEvent.AnimationPlaybackEvent
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
+{{ APIRef("Web Animations") }}
 
-The **`AnimationPlaybackEvent()`** constructor of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a new `{{domxref("AnimationPlaybackEvent")}}` object instance.
+The **`AnimationPlaybackEvent()`** constructor of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a new {{domxref("AnimationPlaybackEvent")}} object instance.
 
 ## Syntax
 
 ```js
-var animationPlaybackEvent = new AnimationPlaybackEvent(type, eventInitDict);
+new AnimationPlaybackEvent(type)
+new AnimationPlaybackEvent(type, options)
 ```
 
 ### Parameters
 
-- `{{domxref("Event.type", "type")}}`
-  - : A [`DOMString`](/en-US/docs/Web/API/DOMString) representing the name of the event.
-- `eventInitDict` {{optional_inline}}
-
-  - : An optional `EventInit` dictionary object containing the following fields:
-
-    - `bubbles` {{optional_inline}}
-      - : Defaults to `false`, of type [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean), indicating if the event bubbles or not.
-    - `cancelable` {{optional_inline}}
-      - : Defaults to `false`, of type [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean), indicating if the event can be canceled or not.
+- `type`
+  - : A string with the name of the event.
+    It is case-sensitive and browsers set it to `cancel`, `finish`, or `remove`.
+- `options` {{optional_inline}}
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
     - `detail` {{optional_inline}}
-      - : Defaults to `null`, of type any — an event-dependent value associated with the event.
+      - : An event-dependent value associated with the event. Defaults to `null`.
+
+### Return value
+
+A new {{domxref("AnimationPlaybackEvent")}} object.
 
 ## Specifications
 
@@ -51,5 +51,5 @@ var animationPlaybackEvent = new AnimationPlaybackEvent(type, eventInitDict);
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
 - {{domxref("AnimationPlayBackEvent")}}
 - {{domxref("Animation.playState")}}
-- {{domxref("CustomEvent.CustomEvent")}}
-- {{domxref("Event.Event")}}
+- {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}
+- {{domxref("Event.Event", "Event()")}}

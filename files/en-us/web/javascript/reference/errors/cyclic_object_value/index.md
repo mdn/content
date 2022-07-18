@@ -9,16 +9,16 @@ tags:
 ---
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "cyclic object value" occurs when object references were found
+The JavaScript exception "cyclic object value" occurs when object references were found
 in [JSON](https://www.json.org/). {{jsxref("JSON.stringify()")}} doesn't try
 to solve them and fails accordingly.
 
 ## Message
 
-```js
+```
+TypeError: Converting circular structure to JSON (V8-based)
 TypeError: cyclic object value (Firefox)
-TypeError: Converting circular structure to JSON (Chrome and Opera)
-TypeError: Circular reference in value argument not supported (Edge)
+TypeError: JSON.stringify cannot serialize cyclic structures. (Safari)
 ```
 
 ## Error type
@@ -28,9 +28,8 @@ TypeError: Circular reference in value argument not supported (Edge)
 ## What went wrong?
 
 The [JSON format](https://www.json.org/) per se doesn't support object
-references (although an [IETF draft
-exists](https://datatracker.ietf.org/doc/html/draft-pbryan-zyp-json-ref-03)), hence {{jsxref("JSON.stringify()")}} doesn't try to solve them and fails
-accordingly.
+references (although an [IETF draft exists](https://datatracker.ietf.org/doc/html/draft-pbryan-zyp-json-ref-03)),
+hence {{jsxref("JSON.stringify()")}} doesn't try to solve them and fails accordingly.
 
 ## Examples
 
@@ -39,7 +38,7 @@ accordingly.
 In a circular structure like the following
 
 ```js
-var circularReference = {otherData: 123};
+const circularReference = {otherData: 123};
 circularReference.myself = circularReference;
 ```
 

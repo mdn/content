@@ -1,6 +1,7 @@
 ---
 title: 'HTMLInputElement: search event'
 slug: Web/API/HTMLInputElement/search_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -42,7 +43,7 @@ The **`search`** event is fired when a search is initiated using an {{HTMLElemen
   </tbody>
 </table>
 
-There are several ways a search can be initiated, such as by pressing <kbd>Enter</kbd> while the {{HTMLElement("input")}} is focused, or, if the [`incremental`](/en-US/docs/Web/HTML/Element/input#attr-incremental) attribute is present, after a UA-defined timeout elapses since the most recent keystroke (with new keystrokes resetting the timeout so the firing of the event is debounced).
+There are several ways a search can be initiated, such as by pressing <kbd>Enter</kbd> while the {{HTMLElement("input")}} is focused, or, if the [`incremental`](/en-US/docs/Web/HTML/Element/input#incremental) attribute is present, after a UA-defined timeout elapses since the most recent keystroke (with new keystrokes resetting the timeout so the firing of the event is debounced).
 
 Current UA implementations of `<input type="search">` have an additional control to clear the field. Using this control also fires the `search` event. In that case the `value` of the {{HTMLElement("input")}} element will be the empty string.
 
@@ -54,14 +55,16 @@ const input = document.querySelector('input[type="search"]');
 
 input.addEventListener('search', () => {
  console.log("The term searched for was " + input.value);
-})
+});
+```
 
+```js
 // onsearch version
 const input = document.querySelector('input[type="search"]');
 
 input.onsearch = () => {
  console.log("The term searched for was " + input.value);
-})
+};
 ```
 
 ## Specifications

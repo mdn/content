@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - min-block-size
   - recipe:css-property
@@ -38,6 +37,7 @@ min-block-size: fit-content(20em);
 min-block-size: inherit;
 min-block-size: initial;
 min-block-size: revert;
+min-block-size: revert-layer;
 min-block-size: unset;
 ```
 

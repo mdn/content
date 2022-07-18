@@ -1,6 +1,7 @@
 ---
 title: SecurityPolicyViolationEvent.columnNumber
 slug: Web/API/SecurityPolicyViolationEvent/columnNumber
+page-type: web-api-instance-property
 tags:
   - API
   - CSP
@@ -13,23 +14,17 @@ tags:
   - columnNumber
 browser-compat: api.SecurityPolicyViolationEvent.columnNumber
 ---
-{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
+{{HTTPSidebar}}"
 
 The **`columnNumber`** read-only property of the
 {{domxref("SecurityPolicyViolationEvent")}} interface is the column number in the
 document or worker at which the violation occurred.
 
-## Syntax
-
-```js
-let colNum = violationEventInstance.columnNumber;
-```
-
-### Value
+## Value
 
 A number representing the column number where the violation occurred.
 
-## Example
+## Examples
 
 ```js
 document.addEventListener("securitypolicyviolation", (e) => {

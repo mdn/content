@@ -1,6 +1,7 @@
 ---
 title: WorkerNavigator.languages
 slug: Web/API/WorkerNavigator/languages
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -14,7 +15,7 @@ browser-compat: api.WorkerNavigator.languages
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 The **`WorkerNavigator.languages`** read-only property
-returns an array of {{domxref("DOMString")}}s representing the user's preferred
+returns an array of strings representing the user's preferred
 languages. The language is described using language tags according to
 {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. In the returned
 array they are ordered by preference with the most preferred language first.
@@ -23,17 +24,15 @@ The value of {{domxref("WorkerNavigator.language","navigator.language")}} is the
 first element of the returned array.
 
 When its value changes, as the user's preferred languages are changed a
-{{event("languagechange")}} event is fired on the {{domxref("WorkerGlobalScope")}} object.
+{{domxref("Window.languagechange_event", "languagechange")}} event is fired on the {{domxref("WorkerGlobalScope")}} object.
 
 The `Accept-Language` HTTP header in every HTTP request from the user's
 browser uses the same value for the `navigator.languages` property except for
 the extra `qvalues` (quality values) field (e.g. `en-US;q=0.8`).
 
-## Syntax
+## Value
 
-```js
-preferredLanguages = globalObj.navigator.languages
-```
+An array or strings.
 
 ## Examples
 
@@ -56,4 +55,4 @@ navigator.languages  //["en-US", "zh-CN", "ja-JP"]
 
 - {{domxref("WorkerNavigator.language")}}
 - {{domxref("WorkerNavigator")}}
-- {{domxref("WorkerGlobalScope.onlanguagechange")}}
+- {{domxref("WorkerGlobalScope.languagechange_event", "languagechange")}} event

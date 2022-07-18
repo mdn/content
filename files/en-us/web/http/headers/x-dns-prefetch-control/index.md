@@ -93,8 +93,7 @@ You can reverse this setting by setting `content` to "`on`".
 
 You can force the lookup of specific hostnames without providing specific anchors using
 that hostname by using the {{ htmlattrxref("rel","link") }} attribute on the {{
-  HTMLElement("link") }} element with a [link
-type](/en-US/docs/Web/HTML/Link_types) of `dns-prefetch`:
+  HTMLElement("link") }} element with a [link type](/en-US/docs/Web/HTML/Link_types) of `dns-prefetch`:
 
 ```html
 <link rel="dns-prefetch" href="https://www.mozilla.org/contribute/">
@@ -122,4 +121,4 @@ affected.
 ## See also
 
 - [DNS Prefetching for Firefox (blog post)](https://bitsup.blogspot.com/2008/11/dns-prefetching-for-firefox.html)
-- [Google Chrome handles DNS prefetching control](https://dev.chromium.org/developers/design-documents/dns-prefetching)
+- [Google Chrome handles DNS prefetching control](https://www.chromium.org/developers/design-documents/dns-prefetching/)

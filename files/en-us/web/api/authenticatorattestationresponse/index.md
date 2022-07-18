@@ -1,6 +1,7 @@
 ---
 title: AuthenticatorAttestationResponse
 slug: Web/API/AuthenticatorAttestationResponse
+page-type: web-api-interface
 tags:
   - API
   - Authentication
@@ -23,20 +24,20 @@ This interface inherits from {{domxref("AuthenticatorResponse")}}.
 
 ## Properties
 
-- `AuthenticatorAttestationResponse.clientDataJSON` {{securecontext_inline}}{{readonlyinline}}
+- `AuthenticatorAttestationResponse.clientDataJSON` {{securecontext_inline}} {{readonlyinline}}
   - : Client data for the authentication, such as origin and challenge. The {{domxref("AuthenticatorResponse.clientDataJSON","clientDataJSON")}} property is inherited from the {{domxref("AuthenticatorResponse")}}.
-- {{domxref("AuthenticatorAttestationResponse.attestationObject")}} {{securecontext_inline}}{{readonlyinline}}
+- {{domxref("AuthenticatorAttestationResponse.attestationObject")}} {{securecontext_inline}} {{readonlyinline}}
   - : An {{jsxref("ArrayBuffer")}} containing authenticator data and an attestation statement for a newly-created key pair.
 
 ## Methods
 
-- {{domxref("AuthenticatorAttestationResponse.getTransports()")}}{{securecontext_inline}}
+- {{domxref("AuthenticatorAttestationResponse.getTransports()")}} {{securecontext_inline}}
   - : Returns an {{jsxref("Array")}} of strings describing which transport methods (e.g. `usb`, `nfc`) are believed to be supported with the authenticator. The array may be empty if the information is not available.
 
 ## Examples
 
 ```js
-var publicKey = {
+const publicKey = {
   challenge: /* from the server */,
   rp: {
     name: "Example CORP",
@@ -57,7 +58,7 @@ var publicKey = {
 
 navigator.credentials.create({ publicKey })
   .then(function (newCredentialInfo) {
-    var response = newCredentialInfo.response;
+    const response = newCredentialInfo.response;
     // Do something with the response
     // (sending it back to the relying party server maybe?)
   }).catch(function (err) {

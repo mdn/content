@@ -1,6 +1,7 @@
 ---
 title: EyeDropper()
 slug: Web/API/EyeDropper/EyeDropper
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -15,8 +16,12 @@ The **`EyeDropper()`** constructor returns a new {{DOMxRef("EyeDropper")}} objec
 ## Syntax
 
 ```js
-let eyeDropper = new EyeDropper();
+new EyeDropper()
 ```
+
+### Parameters
+
+None.
 
 ## Specifications
 

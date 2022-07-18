@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - border-inline
   - border-inline-start
@@ -40,6 +39,7 @@ border-inline-start: medium dashed green;
 border-inline-start: inherit;
 border-inline-start: initial;
 border-inline-start: revert;
+border-inline-start: revert-layer;
 border-inline-start: unset;
 ```
 

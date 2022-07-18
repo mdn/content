@@ -39,11 +39,11 @@ The **`@keyframes`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) controls the int
 
 ## Description
 
-JavaScript can access the `@keyframes` at-rule with the CSS object model interface {{domxref("CSSKeyframesRule")}}.
-
 To use keyframes, create a `@keyframes` rule with a name that is then used by the {{ cssxref("animation-name") }} property to match an animation to its keyframe declaration. Each `@keyframes` rule contains a style list of keyframe selectors, which specify percentages along the animation when the keyframe occurs, and a block containing the styles for that keyframe.
 
 You can list the keyframe percentages in any order; they will be handled in the order they should occur.
+
+JavaScript can access the `@keyframes` at-rule with the CSS object model interface {{domxref("CSSKeyframesRule")}}.
 
 ### Valid keyframe lists
 
@@ -110,7 +110,9 @@ Declarations in a keyframe qualified with `!important` are ignored.
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+@keyframes <keyframes-name> { <rule-list> }
+```
 
 ## Examples
 

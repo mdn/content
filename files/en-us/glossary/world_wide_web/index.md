@@ -25,4 +25,4 @@ Soon after inventing the Web, Tim Berners-Lee founded the {{Glossary("W3C")}} (W
 
 - [Learn the Web](/en-US/docs/Learn)
 - {{Interwiki("wikipedia", "World Wide Web")}} on Wikipedia
-- [The W3C website](https://w3.org)
+- [The W3C website](https://www.w3.org/)

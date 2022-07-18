@@ -15,10 +15,10 @@ variable name occurs as a function parameter and is then redeclared using a
 
 ## Message
 
-```js
-SyntaxError: Let/Const redeclaration (Edge)
+```
+SyntaxError: Identifier "x" has already been declared (V8-based)
 SyntaxError: redeclaration of formal parameter "x" (Firefox)
-SyntaxError: Identifier "x" has already been declared (Chrome)
+SyntaxError: Cannot declare a let variable twice: 'x'. (Safari)
 ```
 
 ## Error type
@@ -66,5 +66,4 @@ function f(arg) {
 - {{jsxref("Statements/let", "let")}}
 - {{jsxref("Statements/const", "const")}}
 - {{jsxref("Statements/var", "var")}}
-- [Declaring
-  variables](/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types#Declarations) in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
+- [Declaring variables](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations) in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)

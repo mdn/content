@@ -1,6 +1,7 @@
 ---
 title: ShadowRoot.getAnimations()
 slug: Web/API/ShadowRoot/getAnimations
+page-type: web-api-instance-method
 tags:
   - API
   - Animation
@@ -26,7 +27,7 @@ target elements are descendants of the shadow tree. This array includes [CSS Ani
 ## Syntax
 
 ```js
-getAnimations();
+getAnimations()
 ```
 
 ### Parameters

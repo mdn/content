@@ -17,14 +17,14 @@ tags:
 
 HTML uses "markup" to annotate text, images, and other content for display in a Web browser. HTML markup includes special "elements" such as {{HTMLElement("head")}}, {{HTMLElement("title")}}, {{HTMLElement("body")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("p")}}, {{HTMLElement("div")}}, {{HTMLElement("span")}}, {{HTMLElement("img")}}, {{HTMLElement("aside")}}, {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("datalist")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("nav")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("video")}}, {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("li")}} and many others.
 
-An HTML element is set off from other text in a document by "tags", which consist of the element name surrounded by "`<`" and "`>`".  The name of an element inside a tag is case insensitive. That is, it can be written in uppercase, lowercase, or a mixture. For example, the `<title>` tag can be written as `<Title>`, `<TITLE>`, or in any other way.
+An HTML element is set off from other text in a document by "tags", which consist of the element name surrounded by "`<`" and "`>`".  The name of an element inside a tag is case insensitive. That is, it can be written in uppercase, lowercase, or a mixture. For example, the `<title>` tag can be written as `<Title>`, `<TITLE>`, or in any other way. However, the convention and recommended practice is to write tags in lowercase.
 
 The articles below can help you learn more about HTML.
 
 ## Key resources
 
 - HTML Introduction
-  - : If you're new to Web development, be sure to read our [HTML Basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) article to learn what HTML is and how to use it.
+  - : If you're new to web development, be sure to read our [HTML Basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) article to learn what HTML is and how to use it.
 - HTML Tutorials
   - : For articles about how to use HTML, as well as tutorials and complete examples, check out our [HTML Learning Area](/en-US/docs/Learn/HTML).
 - HTML Reference
@@ -60,10 +60,10 @@ Our [HTML Learning Area](/en-US/docs/Learn/HTML) features multiple modules that 
   - : The {{htmlattrxref("crossorigin", "img")}} attribute, in combination with an appropriate {{glossary("CORS")}} header, allows images defined by the {{HTMLElement("img")}} element to be loaded from foreign origins and used in a {{HTMLElement("canvas")}} element as if they were being loaded from the current origin.
 - [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin)
   - : Some HTML elements that provide support for [CORS](/en-US/docs/Web/HTTP/CORS), such as {{HTMLElement("img")}} or {{HTMLElement("video")}}, have a `crossorigin` attribute (`crossOrigin` property), which lets you configure the CORS requests for the element's fetched data.
-- [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Preloading_content)
+- [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Link_types/preload)
   - : The `preload` value of the {{htmlelement("link")}} element's {{htmlattrxref("rel", "link")}} attribute allows you to write declarative fetch requests in your HTML {{htmlelement("head")}}, specifying resources that your pages will need very soon after loading, which you therefore want to start preloading early in the lifecycle of a page load, before the browser's main rendering machinery kicks in. This ensures that they are made available earlier and are less likely to block the page's first render, leading to performance improvements. This article provides a basic guide to how `preload` works.
 
-## References
+## Reference
 
 - [HTML reference](/en-US/docs/Web/HTML/Reference)
   - : HTML consists of **elements**, each of which may be modified by some number of **attributes**. HTML documents are connected to each other with [links](/en-US/docs/Web/HTML/Link_types).
@@ -86,5 +86,5 @@ Our [HTML Learning Area](/en-US/docs/Learn/HTML) features multiple modules that 
 
 ## Related topics
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
   - : This article covers most of the ways you use CSS to add color to HTML content, listing what parts of HTML documents can be colored and what CSS properties to use when doing so. Includes examples, links to palette-building tools, and more.

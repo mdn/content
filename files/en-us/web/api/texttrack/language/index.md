@@ -1,6 +1,7 @@
 ---
 title: TextTrack.language
 slug: Web/API/TextTrack/language
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,15 +16,9 @@ The **`language`** read-only property of the {{domxref("TextTrack")}} interface 
 
 This uses the same values as the HTML {{htmlattrxref("lang")}} attribute. These values are documented in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
 
-## Syntax
+## Value
 
-```js
-let language = TextTrack.language;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing a language identifier. For example, `"en-US"` for United States English or `"pt-BR"` for Brazilian Portuguese.
+A string containing a language identifier. For example, `"en-US"` for United States English or `"pt-BR"` for Brazilian Portuguese.
 
 ## Examples
 

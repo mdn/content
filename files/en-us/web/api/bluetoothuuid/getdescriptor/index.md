@@ -1,36 +1,38 @@
 ---
 title: BluetoothUUID.getDescriptor()
 slug: Web/API/BluetoothUUID/getDescriptor
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - getDescriptor
+  - Experimental
   - BluetoothUUID
 browser-compat: api.BluetoothUUID.getDescriptor
 ---
-{{APIRef("Bluetooth API")}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`getDescriptor()`**  method of the {{domxref("BluetoothUUID")}} interface returns a UUID representing a registered descriptor when passed a name or the 16- or 32-bit UUID alias.
 
 ## Syntax
 
 ```js
-BluetoothUUID.getDescriptor(name);
+getDescriptor(name)
 ```
 
 ### Parameters
 
 - `name`
-  - : A {{domxref("DOMString","string")}} containing the name of the descriptor.
+  - : A string containing the name of the descriptor.
 
-### Returns
+### Return value
 
 A 128-bit UUID.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if `name` does not appear in the registry.
 
 ## Examples

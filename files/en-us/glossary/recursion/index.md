@@ -5,11 +5,11 @@ tags:
   - CodingScripting
   - Glossary
 ---
-The act of a function calling itself, recursion is used to solve problems that contain smaller sub-problems. A recursive function can receive two inputs: a base case (ends recursion) or a recursive case (resumes recursion).
+The act of a function calling itself, recursion is used to solve problems that contain smaller sub-problems. A recursive function can receive two inputs: a base case (ends recursion) or a recursive case (resumes recursion).
 
 ## Examples
 
-### Recursive function calls itself until condition met
+### Recursive function calls itself until condition met
 
 The following Python code defines a function that takes a number, prints it, and then calls itself again with the number's value -1. It keeps going until the number is equal to 0, in which case it stops.
 

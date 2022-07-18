@@ -1,6 +1,7 @@
 ---
 title: BarcodeDetector()
 slug: Web/API/BarcodeDetector/BarcodeDetector
+page-type: web-api-constructor
 tags:
   - Barcode Detection API
   - BarcodeDetector
@@ -8,9 +9,10 @@ tags:
   - barcode
   - barcode detection
   - shape detection
+  - Experimental
 browser-compat: api.BarcodeDetector.BarcodeDetector
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
 
 The **`BarcodeDetector()`** constructor creates
 a new {{domxref("BarcodeDetector")}} object which detects linear and two-dimensional
@@ -19,20 +21,21 @@ barcodes in images.
 ## Syntax
 
 ```js
-var BarcodeDetector = new BarcodeDetector();
+new BarcodeDetector()
+new BarcodeDetector(options)
 ```
 
 ### Parameters
 
-- _barcodeDetectorOptions_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An options object containing a series of `BarcodeFormats` to search for
     in the subsequent {{domxref('BarcodeDetector.detect()','detect()')}} calls. The
     options are:
 
-    - `formats`: An {{jsxref('Array')}} of barcode formats as strings. To
-      see a full list of supported formats see the {{domxref('Barcode Detection
-        API','Barcode Detection API overview page')}}.
+    - `formats`
+      - : An {{jsxref('Array')}} of barcode formats as strings.
+        To see a full list of supported formats see the [Barcode Detection API](/en-US/docs/Web/API/Barcode_Detection_API).
 
 ## Examples
 

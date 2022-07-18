@@ -1,6 +1,7 @@
 ---
 title: AuthenticatorAttestationResponse.attestationObject
 slug: Web/API/AuthenticatorAttestationResponse/attestationObject
+page-type: web-api-instance-property
 tags:
   - API
   - AuthenticatorAttestationResponse
@@ -24,13 +25,7 @@ that corresponds to the private key that has created the attestation signature i
 known; however, there are various well known attestation public key chains for different
 ecosystems (for example, Android or TPM attestations).
 
-## Syntax
-
-```js
-attestObj = authenticatorAttestationResponse.attestationObject
-```
-
-## Properties
+## Value
 
 After decoding the [CBOR](https://datatracker.ietf.org/doc/html/rfc7049) encoded
 `ArrayBuffer`, the resulting JavaScript object will contain the following
@@ -53,8 +48,7 @@ properties:
 
 - `fmt`
 
-  - : A text string that indicates the format of the attStmt. The [WebAuthn
-    specification defines a number of formats](https://www.w3.org/TR/webauthn/#defined-attestation-formats); however, formats may also be defined
+  - : A text string that indicates the format of the attStmt. The [WebAuthn specification defines a number of formats](https://www.w3.org/TR/webauthn/#defined-attestation-formats); however, formats may also be defined
     in other specifications and registered in an [IANA registry](https://www.w3.org/TR/webauthn/#sctn-att-fmt-reg). Formats
     defined by WebAuthn are:
 
@@ -67,13 +61,12 @@ properties:
 
 - `attStmt`
   - : An attestation statement that is of the format defined by `"fmt"`. For
-    now, [see the
-    WebAuthn specification for details on each format](https://www.w3.org/TR/webauthn/#defined-attestation-formats).
+    now, [see the WebAuthn specification for details on each format](https://www.w3.org/TR/webauthn/#defined-attestation-formats).
 
 ## Examples
 
 ```js
-var publicKey = {
+const publicKey = {
   challenge: /* from the server */,
   rp: {
     name: "Example CORP",
@@ -94,7 +87,7 @@ var publicKey = {
 
 navigator.credentials.create({ publicKey })
   .then(function (newCredentialInfo) {
-    var attestationObj = newCredentialInfo.response.attestationObject;
+    const attestationObj = newCredentialInfo.response.attestationObject;
     // This will be a CBOR encoded ArrayBuffer
 
     // Do something with the response

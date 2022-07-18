@@ -50,8 +50,6 @@ Invalid frequency values:
 
 {{Specifications}}
 
-> **Note:** This data type was initially introduced in [CSS Level 2](https://www.w3.org/TR/CSS2/aural.html#q19.0) for the now-obsolete [aural](/en-US/docs/Web/CSS/@media/aural) [media type](/en-US/docs/Web/CSS/@media#media_types), where it was used to define the pitch of the voice. However, the `<frequency>` data type has been reintroduced in CSS3, though no CSS property is using it at the moment.
-
 ## Browser compatibility
 
 {{Compat}}

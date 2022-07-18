@@ -1,6 +1,7 @@
 ---
 title: Path2D.addPath()
 slug: Web/API/Path2D/addPath
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -13,13 +14,14 @@ browser-compat: api.Path2D.addPath
 {{APIRef("Canvas API")}}
 
 The **`Path2D.addPath()`** method
-of the Canvas 2D API adds one {{domxref("Path2D")}} object to another
+of the Canvas 2D API adds one {{domxref("Path2D")}} object to another
 `Path2D` object.
 
 ## Syntax
 
 ```js
-void path.addPath(path [, transform]);
+addPath(path)
+addPath(path, transform)
 ```
 
 ### Parameters
@@ -29,6 +31,10 @@ void path.addPath(path [, transform]);
 - `transform` {{optional_inline}}
   - : A {{domxref("DOMMatrix")}} to be used as the transformation matrix for the path that
     is added. (Technically a `DOMMatrixInit` object).
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

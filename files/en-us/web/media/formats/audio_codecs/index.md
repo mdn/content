@@ -48,7 +48,7 @@ The list below denotes the codecs most commonly used on the web and which contai
       <th scope="row"><a href="#aac_advanced_audio_coding">AAC</a></th>
       <td>Advanced Audio Coding</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#adts">ADTS</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>
       </td>
@@ -57,7 +57,7 @@ The list below denotes the codecs most commonly used on the web and which contai
       <th scope="row"><a href="#alac_apple_lossless_audio_codec">ALAC</a></th>
       <td>Apple Lossless Audio Codec</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime"
           >QuickTime</a
         >
@@ -73,7 +73,7 @@ The list below denotes the codecs most commonly used on the web and which contai
       <th scope="row"><a href="#flac_free_lossless_audio_codec">FLAC</a></th>
       <td>Free Lossless Audio Codec</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#flac">FLAC</a>
       </td>
@@ -103,7 +103,7 @@ The list below denotes the codecs most commonly used on the web and which contai
       <th scope="row"><a href="#mp3_mpeg-1_audio_layer_iii">MP3</a></th>
       <td>MPEG-1 Audio Layer III</td>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#adts">ADTS</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg">MPEG</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>
@@ -119,7 +119,7 @@ The list below denotes the codecs most commonly used on the web and which contai
       <td>Opus</td>
       <td>
         <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a>
       </td>
     </tr>
@@ -370,7 +370,7 @@ Below we take a brief look at each of these codecs, looking at their basic capab
 
 ### AAC (Advanced Audio Coding)
 
-The **Advanced Audio Coding** (**AAC**) codec is defined as part of the MPEG-4 (H.264) standard; specifically, as part of [MPEG-4 Part 3](https://www.iso.org/standard/53943.html) and [MPEG-2 Part 7](https://www.iso.org/standard/43345.html). Designed to be able to provide more compression with higher audio fidelity than MP3, AAC has become a popular choice, and is the standard format for audio in many types of media, including Blu-Ray discs and HDTV, as well as being the format used for songs purchased from online vendors including iTunes.
+The **Advanced Audio Coding** (**AAC**) codec is defined as part of the MPEG-4 (H.264) standard; specifically, as part of [MPEG-4 Part 3](https://www.iso.org/standard/53943.html) and [MPEG-2 Part 7](https://www.iso.org/standard/43345.html). Designed to be able to provide more compression with higher audio fidelity than MP3, AAC has become a popular choice, and is the standard format for audio in many types of media, including Blu-Ray discs and HDTV, as well as being the format used for songs purchased from online vendors including iTunes.
 
 AAC has a number of profiles that define methods of compressing audio for specific use cases, including everything from high quality surround sound to low-fidelity audio for speech-only use.
 
@@ -407,7 +407,7 @@ As a patent-encumbered format, AAC support is somewhat less predictable. For exa
       <td>48 (plus 16 Low Frequency Enhancement channels)</td>
     </tr>
     <tr>
-      <th scope="row">Audio frequency  bandwidth</th>
+      <th scope="row">Audio frequency bandwidth</th>
       <td>
         0 Hz - 96 kHz (standard audio channels)<br />0 Hz - 120 Hz (LFE
         channels)
@@ -511,7 +511,7 @@ As a patent-encumbered format, AAC support is somewhat less predictable. For exa
 
 ### ALAC (Apple Lossless Audio Codec)
 
-The **Apple Lossless Audio Codec** (**ALAC** or **Apple Lossless**) is a lossless codec developed by Apple. After initially being a closed format, Apple opened it up under an Apache license.
+The **Apple Lossless Audio Codec** (**ALAC** or **Apple Lossless**) is a lossless codec developed by Apple. After initially being a closed format, Apple opened it up under an Apache license.
 
 Cross-platform and browser support for ALAC is not very strong, making it a less than ideal choice for general usage. However, if your target is primarily macOS and iOS users, it may be worth considering, as the operating systems have integrated support for ALAC. Otherwise, FLAC is likely a better choice, if you must use a lossless codec.
 
@@ -653,7 +653,7 @@ As a speech-specific codec, AMR is essentially useless for any other content, in
       <td>1</td>
     </tr>
     <tr>
-      <th scope="row">Audio frequency  bandwidth</th>
+      <th scope="row">Audio frequency bandwidth</th>
       <td>200 Hz to 3,400 Hz</td>
     </tr>
     <tr>
@@ -755,7 +755,7 @@ FLAC is a great choice for smaller audio effects files where pristine quality an
       <td>8</td>
     </tr>
     <tr>
-      <th scope="row">Audio frequency  bandwidth</th>
+      <th scope="row">Audio frequency bandwidth</th>
       <td>Full-spectrum</td>
     </tr>
     <tr>
@@ -813,7 +813,7 @@ The **G.711** specification, published by the International Telecommunications U
 
 G.711 is not a high fidelity codec, but is instead optimized to support a wide range of voice levels (from whisper to shout) while maintaining high intelligibility and low computational complexity. G.711 uses a logarithmic companding algorithm which provides 14 bits of dynamic range in an 8-bit sample. It uses a sampling rate of 8000 samples/sec, corresponding to a bitrate of 64000 bps.
 
-There are two flavors of G.711 which indicate the exact mathematical equation for the algorithm: {{interwiki("wikipedia", "M-law", "µ-law")}} (commonly used in North America and Japan) and {{interwiki("wikipedia", "A-law")}} (common in the rest of the world). There is no substantial quality difference between the two laws, and it is simple to transcode audio from one to the other. Nevertheless, it is important to specify which law is in use in any replay application or file format. A-law audio will replay poorly if mistakenly uncompressed with the µ-law algorithm, and viceversa.
+There are two flavors of G.711 which indicate the exact mathematical equation for the algorithm: {{interwiki("wikipedia", "M-law", "µ-law")}} (commonly used in North America and Japan) and {{interwiki("wikipedia", "A-law")}} (common in the rest of the world). There is no substantial quality difference between the two laws, and it is simple to transcode audio from one to the other. Nevertheless, it is important to specify which law is in use in any replay application or file format. A-law audio will replay poorly if mistakenly uncompressed with the µ-law algorithm, and vice versa.
 
 This codec is required to be supported by all [WebRTC](/en-US/docs/Web/API/WebRTC_API) solutions because it is simple, easy to implement, widely-used, and broadly compatible across all modern computing platforms.
 
@@ -1015,7 +1015,7 @@ When MP3-format audio is stored inside an MPEG container, the resulting file is 
 
 MPEG-1 MP3 audio supports higher bit rates as well as higher sampling rates than MP3 audio in MPEG-2 files. MPEG-1 format MP3 is generally best for music or other complex audio, while MPEG-2 mode MP3 audio is acceptable for speech and other simpler sounds.
 
-The patents behind MP3 have expired, removing many or most licensing concerns around using MP3 files in your projects. That makes them a good choice for many projects.
+The patents behind MP3 have expired, removing many or most licensing concerns around using MP3 files in your projects. That makes them a good choice for many projects.
 
 <table class="standard-table">
   <tbody>
@@ -1126,7 +1126,7 @@ The patents behind MP3 have expired, removing many or most licensing concerns a
   </tbody>
 </table>
 
-For patent reasons, Firefox did not directly support MP3 prior to version 71; instead, platform-native libraries were used to support MP3. This capability was introduced on each platform in different Firefox releases:
+For patent reasons, Firefox did not directly support MP3 prior to version 71; instead, platform-native libraries were used to support MP3. This capability was introduced on each platform in different Firefox releases:
 
 <table class="standard-table" style="margin-left: 4em; max-width: 30em">
   <caption>
@@ -1435,7 +1435,7 @@ Generally, Vorbis is more efficient in terms of size and bit rate than MP3 at si
   </tbody>
 </table>
 
-## Choosing an audio codec
+## Choosing an audio codec
 
 Typically, regardless of what codec you use, it will generally get the job done, even if it's not the ideal choice, as long as you choose a codec not specifically designed for a totally different kind of source audio. Choosing a voice-only codec and trying to use it for music will not give you usable results, for instance.
 
@@ -1510,7 +1510,7 @@ In this case, it appears that FLAC is most likely the best codec to go with; ALA
 
 ## Audio encoding software
 
-There are many tools available for encoding audio. The simplest are those which are meant for ripping CDs or pulling in audio files and quickly and automatically converting them to MP3 or AAC format to store in a library, such as [iTunes](https://www.apple.com/itunes). But when developing web apps that use audio as a component of the app, such as games, you will need more control over the encoding process and more options surrounding the format used while encoding the audio.
+There are many tools available for encoding audio. The simplest are those which are meant for ripping CDs or pulling in audio files and quickly and automatically converting them to MP3 or AAC format to store in a library, such as [iTunes](https://www.apple.com/itunes/). But when developing web apps that use audio as a component of the app, such as games, you will need more control over the encoding process and more options surrounding the format used while encoding the audio.
 
 A few popular options:
 
@@ -1519,8 +1519,8 @@ A few popular options:
 - [Handbrake](https://handbrake.fr/)
   - : A highly popular open source front-end to FFmpeg which adds a graphical user interface that makes it much easier to control the wide variety of options FFmpeg offers while encoding audio and/or video. Binaries are available for macOS, Linux, and Windows.
 - [Audacity](https://www.audacityteam.org/)
-  - : An open source audio editor that supports loading audio from many different formats, editing, filtering, and adjusting the audio, and saving it back out in either the original format or a new format.  Available for macOS, Linux, and Windows.
-- [LAME](http://lame.sourceforge.net/)
+  - : An open source audio editor that supports loading audio from many different formats, editing, filtering, and adjusting the audio, and saving it back out in either the original format or a new format.  Available for macOS, Linux, and Windows.
+- [LAME](https://lame.sourceforge.io/)
   - : A high quality open source MP3 encoder with support for CBR, ABR, and VBR encoding as well as a variety of other options. Distributed only in source form by the LAME project, but can be installed using [Homebrew](https://brew.sh/) or similar tools.
 
 ## See also

@@ -78,7 +78,7 @@ If you're more interested in following the Internet Explorer/Opera model, then:
 ul {margin-left: 40px; padding-left: 0;}
 ```
 
-Of course, you can fill in your preferred values. Set both to `1.25em`, if you like -- there's no reason why you have to stick with pixel-based indentation. If you want to reset lists to have no indentation, then you still have to zero out both padding and margin:
+Of course, you can fill in your preferred values. Set both to `1.25em`, if you like — there's no reason why you have to stick with pixel-based indentation. If you want to reset lists to have no indentation, then you still have to zero out both padding and margin:
 
 ```css
 ul {margin-left: 0; padding-left: 0;}

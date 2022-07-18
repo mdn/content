@@ -14,7 +14,7 @@ In the previous [Cross browser video player article](/en-US/docs/Web/Guide/Audio
 
 ![A video player with play, stop, volume and fullscreen controls, showing an image of a soldier.](video-player-styled.png)
 
-You can find the code for the [updated, styled example](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-styled) on Github, and [view it live](https://iandevlin.github.io/mdn/video-player-styled/).
+You can find the code for the [updated, styled example](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-styled) on GitHub, and [view it live](https://iandevlin.github.io/mdn/video-player-styled/).
 
 ## Preliminary modifications from the original example
 
@@ -204,7 +204,7 @@ As mentioned in the [previous article](/en-US/docs/Web/Guide/Audio_and_video_del
 }
 ```
 
-A `.data-state` class is also used here when a {{ htmlelement("progress") }} element is being "faked";  when it's in this state the background color needs to be set. The internal {{htmlelement("span") }} element used as the actual progressing part of the faked progress bar has its width initially set to 0% (it is updated via JavaScript) and it also has its background color set.
+A `.data-state` class is also used here when a {{ htmlelement("progress") }} element is being "faked";  when it's in this state the background color needs to be set. The internal {{htmlelement("span") }} element used as the actual progressing part of the faked progress bar has its width initially set to 0% (it is updated via JavaScript) and it also has its background color set.
 
 There are some browser-specific properties that need to be set to ensure that Firefox and Chrome use the required color for the progress bar:
 

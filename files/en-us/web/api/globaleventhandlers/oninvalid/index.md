@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.oninvalid
 slug: Web/API/GlobalEventHandlers/oninvalid
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -13,7 +14,7 @@ browser-compat: api.GlobalEventHandlers.oninvalid
 
 The **`oninvalid`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("invalid")}} events.
+processes {{domxref("HTMLInputElement/invalid_event", "invalid")}} events.
 
 The `invalid` event fires when a submittable element has been checked and
 doesn't satisfy its constraints. The validity of submittable elements is checked before
@@ -30,14 +31,13 @@ var functionRef = target.oninvalid;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("Event")}} object as its sole
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("Event")}} object as its sole
 argument.
 
 ## Example
 
 This example demonstrates `oninvalid` and
-{{domxref("GlobalEventHandlers.onsubmit", "onsubmit")}} event handlers on a form.
+{{domxref("HTMLFormElement.onsubmit", "onsubmit")}} event handlers on a form.
 
 ### HTML
 
@@ -91,5 +91,5 @@ function submit(event) {
 
 ## See also
 
-- {{event("invalid")}} event
-- [DOM on-event handlers](/en-US/docs/Web/Guide/Events/Event_handlers)
+- {{domxref("HTMLInputElement/invalid_event", "invalid")}} event
+- [DOM on-event handlers](/en-US/docs/Web/Events/Event_handlers)

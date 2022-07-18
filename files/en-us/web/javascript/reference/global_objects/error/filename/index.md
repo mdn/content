@@ -21,7 +21,7 @@ This non-standard property contains the path to the file that raised this error.
 ### Using fileName
 
 ```js
-var e = new Error('Could not parse input');
+const e = new Error('Could not parse input');
 throw e;
 // e.fileName could look like "file:///C:/example.html"
 ```

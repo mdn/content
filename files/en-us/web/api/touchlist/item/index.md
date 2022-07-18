@@ -1,6 +1,7 @@
 ---
 title: TouchList.item()
 slug: Web/API/TouchList/item
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -20,7 +21,7 @@ object at the specified index in the {{ domxref("TouchList") }}.
 ## Syntax
 
 ```js
-var touchPoint = touchList.item(index);
+item(index)
 ```
 
 ### Parameters
@@ -35,21 +36,21 @@ var touchPoint = touchList.item(index);
   - : The requested {{ domxref("Touch") }} object from the {{ domxref("TouchList") }}.
     Returns `null` if the index is not less than the length of the list.
 
-## Example
+## Examples
 
 This code example illustrates the use of the {{domxref("TouchList")}} interface's
 {{domxref("TouchList.item()","item")}} method and the
 {{domxref("TouchList.length","length")}} property.
 
 ```js
-target = document.getElementById("target");
+const target = document.getElementById("target");
 
 target.addEventListener('touchstart', function(ev) {
 
   // If this touchstart event started on element target,
   // set touch to the first item in the targetTouches list;
   // otherwise set touch to the first item in the touches list
-  var touch;
+  let touch;
 
   if (ev.targetTouches.length >= 1)
      touch = ev.targetTouches.item(0);

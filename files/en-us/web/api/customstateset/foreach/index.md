@@ -1,6 +1,7 @@
 ---
 title: CustomStateSet.forEach()
 slug: Web/API/CustomStateSet/forEach
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,8 +17,8 @@ The **`forEach()`** method of the {{domxref("CustomStateSet")}} interface execut
 ## Syntax
 
 ```js
-CustomStateSet.forEach(callbackFn)
-CustomStateSet.forEach(callbackFn, thisArg)
+forEach(callbackFn)
+forEach(callbackFn, thisArg)
 ```
 
 ### Parameters
@@ -31,7 +32,7 @@ CustomStateSet.forEach(callbackFn, thisArg)
 - `thisArg`
   - : Value to use as `this` when executing `callbackFn`.
 
-### Return Value
+### Return value
 
 Undefined.
 

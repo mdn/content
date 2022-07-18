@@ -1,6 +1,7 @@
 ---
 title: Navigator.oscpu
 slug: Web/API/Navigator/oscpu
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -14,15 +15,9 @@ browser-compat: api.Navigator.oscpu
 
 The **`Navigator.oscpu`** property returns a string that identifies the current operating system.
 
-## Syntax
+## Value
 
-```js
-oscpuInfo = navigator.oscpu
-```
-
-### Value
-
-A {{domxref("DOMString")}} providing a string which identifies the operating system on which the browser is running.
+A string providing a string which identifies the operating system on which the browser is running.
 
 | Operating system              | `oscpuInfo` string format                         |
 | ----------------------------- | ------------------------------------------------- |
@@ -38,7 +33,7 @@ A {{domxref("DOMString")}} providing a string which identifies the operating sys
 
 In this table `x.y` refers to the version of the operating system
 
-## Example
+## Examples
 
 ```js
 function osInfo() {

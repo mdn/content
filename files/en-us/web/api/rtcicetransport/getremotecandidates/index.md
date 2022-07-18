@@ -1,13 +1,14 @@
 ---
 title: RTCIceTransport.getRemoteCandidates()
 slug: Web/API/RTCIceTransport/getRemoteCandidates
+page-type: web-api-instance-method
 tags:
   - API
   - Candidates
   - Connectivity
   - ICE
   - Negotiation
-  - Property
+  - Method
   - RTCIceTransport
   - Reference
   - Remote
@@ -32,7 +33,7 @@ returned by this function.
 ## Syntax
 
 ```js
-remoteCandidates = RTCIceTransport.getRemoteCandidates();
+getRemoteCandidates()
 ```
 
 ### Parameters
@@ -59,7 +60,7 @@ the list.
 ```js
 var remoteCandidates = pc.getSenders()[0].transport.transport.getRemoteCandidates();
 
-remoteCandidates.forEach(function(candidate, index)) {
+remoteCandidates.forEach(function(candidate, index) {
   console.log("Candidate " + index + ": " + candidate.candidate);
 });
 ```

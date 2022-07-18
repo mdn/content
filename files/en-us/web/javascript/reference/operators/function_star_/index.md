@@ -22,7 +22,23 @@ function inside an expression.
 ## Syntax
 
 ```js
-function* [name]([param1[, param2[, ..., paramN]]]) {
+function* (param0) {
+  statements
+}
+function* (param0, param1) {
+  statements
+}
+function* (param0, param1, /* … ,*/ paramN) {
+  statements
+}
+
+function* name(param0) {
+  statements
+}
+function* name(param0, param1) {
+  statements
+}
+function* name(param0, param1, /* … ,*/ paramN) {
   statements
 }
 ```
@@ -35,7 +51,7 @@ function* [name]([param1[, param2[, ..., paramN]]]) {
 - `paramN` {{optional_inline}}
   - : The name of an argument to be passed to the function. A function can have up to 255
     arguments.
-- `statements`
+- `statements` {{optional_inline}}
   - : The statements which comprise the body of the function.
 
 ## Description
@@ -44,7 +60,7 @@ A `function*` expression is very similar to and has almost the same syntax
 as a {{jsxref('Statements/function*', 'function* statement', "", 1)}}. The main
 difference between a `function*` expression and a `function*`
 statement is the _function name_, which can be omitted in `function*`
-expressions to create *anonymous* generator functions. See also the chapter
+expressions to create *anonymous* generator functions. See also the chapter
 about {{jsxref("Functions", "functions")}} for more information.
 
 ## Examples
@@ -72,8 +88,7 @@ let x = function*(y) {
 
 - {{jsxref("Statements/function*", "function*")}} statement
 - {{jsxref("GeneratorFunction")}} object
-- [The Iterator
-  protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
 - {{jsxref("Function")}} object

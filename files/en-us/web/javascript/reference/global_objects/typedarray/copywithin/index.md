@@ -18,8 +18,7 @@ The copy is taken from the index positions of the second and third arguments
 `start` and `end`. The
 `end` argument is optional and defaults to the length of the
 array. This method has the same algorithm as {{jsxref("Array.prototype.copyWithin")}}.
-_TypedArray_ is one of the [typed
-array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+_TypedArray_ is one of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-copywithin.html")}}
 
@@ -52,8 +51,8 @@ See {{jsxref("Array.prototype.copyWithin")}} for more details.
 ### Using copyWithin
 
 ```js
-var buffer = new ArrayBuffer(8);
-var uint8 = new Uint8Array(buffer);
+const buffer = new ArrayBuffer(8);
+const uint8 = new Uint8Array(buffer);
 uint8.set([1,2,3]);
 console.log(uint8); // Uint8Array [ 1, 2, 3, 0, 0, 0, 0, 0 ]
 uint8.copyWithin(3,0,3);

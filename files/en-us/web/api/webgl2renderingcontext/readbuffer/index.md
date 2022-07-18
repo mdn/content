@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.readBuffer()
 slug: Web/API/WebGL2RenderingContext/readBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -21,23 +22,25 @@ source for pixels for subsequent calls to
 ## Syntax
 
 ```js
-void gl.readBuffer(src);
+readBuffer(source)
 ```
 
 ### Parameters
 
-- `src`
+- `source`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying a color buffer. Possible values:
 
-    - `gl.BACK`: Reads from the back color buffer.
-    - `gl.NONE`: Reads from no color buffer.
-    - `gl.COLOR_ATTACHMENT{0-15}`: Reads from one of the 16 color
-      attachment buffers.
+    - `gl.BACK`
+      - : Reads from the back color buffer.
+    - `gl.NONE`
+      - : Reads from no color buffer.
+    - `gl.COLOR_ATTACHMENT{0-15}`
+      - : Reads from one of the 16 color attachment buffers.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

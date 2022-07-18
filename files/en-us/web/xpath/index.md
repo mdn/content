@@ -19,7 +19,7 @@ XPath is mainly used in [XSLT](/en-US/docs/Web/XSLT), but can also be used as a 
 
 XPath uses a path notation (as in URLs) for navigating through the hierarchical structure of an XML document. It uses a non-XML syntax so that it can be used in URIs and XML attribute values.
 
-> **Note:** Support for XPath varies widely; it's supported reasonably well in Firefox (although there are no plans to improve support further), while other browsers implement it to a lesser extent, if at all. If you need a polyfill, you may consider [js-xpath](https://nchc.dl.sourceforge.net/project/js-xpath/js-xpath/1.0.0/xpath.js) or [wicked-good-xpath](https://github.com/google/wicked-good-xpath).
+> **Note:** Support for XPath varies widely; it's supported reasonably well in Firefox (although there are no plans to improve support further), while other browsers implement it to a lesser extent, if at all. If you need a polyfill, you may consider [js-xpath](https://sourceforge.net/projects/js-xpath/files/js-xpath/1.0.0/xpath.js/download) or [wicked-good-xpath](https://github.com/google/wicked-good-xpath).
 
 ## Documentation
 
@@ -38,8 +38,6 @@ XPath uses a path notation (as in URLs) for navigating through the hierarchical 
 
 ## Tools
 
-- [XMLQuire (formerly known as SketchPath)](http://qutoric.com/xmlquire/)
-  - : A Graphical XPath Builder/Debugger(.NET).
 - [XPath tester](https://extendsclass.com/xpath-tester.html)
   - : An online XPath Builder/Debugger.
 
@@ -48,4 +46,17 @@ XPath uses a path notation (as in URLs) for navigating through the hierarchical 
 - [XSLT](/en-US/docs/Web/XSLT), [XML](/en-US/docs/Web/XML), [DOM](/en-US/docs/Web/API/Document_Object_Model)
 - [Comparison of CSS Selectors and XPath](/en-US/docs/Web/XPath/Comparison_with_CSS_selectors)
 
-<section id="Quick_links"><ol><li><strong><a href="/en-US/docs/Web/XSLT">XSLT</a></strong></li><li><strong><a href="/en-US/docs/Web/EXSLT">EXSLT</a></strong></li><li><strong><a href="/en-US/docs/Web/XPath">XPath</a></strong></li><li class="toggle"><details open><summary>Guides</summary><ol><li><a href="/en-US/docs/Web/XPath/Comparison_with_CSS_selectors">Comparison of CSS Selectors and XPath</a></li><li><a href="/en-US/docs/Web/XPath/Snippets">XPath snippets</a></li></ol></details></li><li class="toggle"><details open><summary><a href="/en-US/docs/Web/XPath/Axes">XPath Axes</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/XPath/Axes")}}</details></li><li class="toggle"><details open><summary><a href="/en-US/docs/Web/XPath/Functions">XPath Functions</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/XPath/Functions")}}</details></li></ol></section>
+<section id="Quick_links">
+  <ol>
+    <li><strong><a href="/en-US/docs/Web/XSLT">XSLT</a></strong></li><li><strong><a href="/en-US/docs/Web/EXSLT">EXSLT</a></strong></li>
+    <li><strong><a href="/en-US/docs/Web/XPath">XPath</a></strong></li>
+    <li class="toggle"><details open><summary>Guides</summary>
+      <ol>
+        <li><a href="/en-US/docs/Web/XPath/Comparison_with_CSS_selectors">Comparison of CSS Selectors and XPath</a></li>
+        <li><a href="/en-US/docs/Web/XPath/Snippets">XPath snippets</a></li>
+      </ol></details>
+    </li>
+    <li class="toggle"><details open><summary><a href="/en-US/docs/Web/XPath/Axes">XPath Axes</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/XPath/Axes")}}</details></li>
+    <li class="toggle"><details open><summary><a href="/en-US/docs/Web/XPath/Functions">XPath Functions</a></summary>{{ListSubpagesForSidebar("/en-US/docs/Web/XPath/Functions")}}</details></li>
+  </ol>
+</section>

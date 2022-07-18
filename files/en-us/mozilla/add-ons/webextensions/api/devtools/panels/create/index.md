@@ -21,7 +21,7 @@ This function takes: a title, a URL to an icon file, and a URL to an HTML file. 
 ## Syntax
 
 ```js
-var creating = browser.devtools.panels.create(
+let creating = browser.devtools.panels.create(
   title,       // string
   iconPath,    // string
   pagePath     // string
@@ -33,9 +33,9 @@ var creating = browser.devtools.panels.create(
 - `title`
   - : `string`. The panel's title. This will appear in the row of tabs along the top of the devtools window, and is the main way the user will be able to identify your panel.
 - `iconPath`
-  - : `string`. Specifies an icon which will be shown next to the title. It's provided as a URL to an image file that's been bundled with your extension. The URL is resolved as relative to the current extension page (unless expressed as an absolute url, e.g. "/icons/panel.png").
+  - : `string`. Specifies an icon which will be shown next to the title. It's provided as a URL to an image file that's been bundled with your extension. The URL is resolved as relative to the current extension page (unless expressed as an absolute URL, e.g. "/icons/panel.png").
 - `pagePath`
-  - : string. Specifies an HTML file that defines the actual content of the panel. It's provided as a URL to an HTML file that's been bundled with your extension. The URL is resolved as relative to the current extension page (unless expressed as an absolute url, e.g. "/devtools/panel.html"). The HTML file may include CSS and JavaScript files, just like a normal web page. The JavaScript running in the panel will be able to use the devtools APIs. See [Extending the developer tools](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools).
+  - : string. Specifies an HTML file that defines the actual content of the panel. It's provided as a URL to an HTML file that's been bundled with your extension. The URL is resolved as relative to the current extension page (unless expressed as an absolute URL, e.g. "/devtools/panel.html"). The HTML file may include CSS and JavaScript files, just like a normal web page. The JavaScript running in the panel will be able to use the devtools APIs. See [Extending the developer tools](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools).
 
 ### Return value
 
@@ -70,7 +70,7 @@ browser.devtools.panels.create(
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels) API.
+> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

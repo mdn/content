@@ -52,6 +52,7 @@ border-style: none solid dotted dashed;
 border-style: inherit;
 border-style: initial;
 border-style: revert;
+border-style: revert-layer;
 border-style: unset;
 ```
 

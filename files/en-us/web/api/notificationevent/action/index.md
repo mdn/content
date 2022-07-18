@@ -1,6 +1,7 @@
 ---
 title: NotificationEvent.action
 slug: Web/API/NotificationEvent/action
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -15,13 +16,13 @@ browser-compat: api.NotificationEvent.action
 ---
 {{APIRef("Web Notifications")}}
 
-Returns the string ID of the notification button the user clicked. This value returns an empty string if the user clicked the notification somewhere other than an action button, or the notification does not have a button. The notification id is set during the creation of the Notification via the actions array attribute and can't be modified unless the notification is replaced.
+Returns the string ID of the notification button the user clicked. This value returns an empty string if the user clicked the notification somewhere other than an action button, or the notification does not have a button. The notification id is set during the creation of the Notification via the actions array attribute and can't be modified unless the notification is replaced.
 
-## Returns
+## Value
 
-A {{domxref("DOMString")}} object.
+A string.
 
-## Example
+## Examples
 
 ```js
 self.registration.showNotification("New articles available", {

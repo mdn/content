@@ -11,7 +11,7 @@ tags:
 
 The **`local`** instruction declares a new local variable.
 
-{{EmbedInteractiveExample("pages/wat/local.html")}}
+{{EmbedInteractiveExample("pages/wat/local.html", "tabbed-taller")}}
 
 ## Syntax
 

@@ -4,6 +4,7 @@ slug: Web/CSS/scroll-padding-block
 tags:
   - CSS
   - CSS Scroll Snap
+  - CSS Property
   - Reference
   - Web
   - recipe:css-shorthand-property
@@ -41,6 +42,7 @@ scroll-padding-block: 10%;
 scroll-padding-block: inherit;
 scroll-padding-block: initial;
 scroll-padding-block: revert;
+scroll-padding-block: revert-layer;
 scroll-padding-block: unset;
 ```
 

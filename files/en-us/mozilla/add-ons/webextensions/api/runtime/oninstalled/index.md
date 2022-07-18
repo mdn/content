@@ -17,7 +17,7 @@ browser-compat: webextensions.api.runtime.onInstalled
 
 Fired when the extension is first installed, when the extension is updated to a new version, and when the browser is updated to a new version.
 
-Note that `runtime.onInstalled` is not the same as {{WebExtAPIRef("management.onInstalled")}}. The `runtime.onInstalled` event is fired only for your extension. The `browser.management.onInstalled` event is fired for any extensions.
+Note that `runtime.onInstalled` is not the same as {{WebExtAPIRef("management.onInstalled")}}. The `runtime.onInstalled` event is fired only for your extension. The `browser.management.onInstalled` event is fired for any extensions.
 
 ## Syntax
 
@@ -48,9 +48,9 @@ Events have three functions:
 
       - : An object with the following properties:
 
-        - `id`{{optional_inline}}
+        - `id` {{optional_inline}}
           - : `string`. The ID of the imported shared module extension that updated. This is present only if the `reason` value is `shared_module_update`.
-        - `previousVersion`{{optional_inline}}
+        - `previousVersion` {{optional_inline}}
           - : `string`. The previous version of the extension just updated. This is only present if the `reason` value is `update`.
         - `reason`
           - : An {{WebExtAPIRef('runtime.OnInstalledReason')}} value, stating the reason that this event is being dispatched.
@@ -78,7 +78,7 @@ browser.runtime.onInstalled.addListener(handleInstalled);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onInstalled) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#event-onInstalled) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

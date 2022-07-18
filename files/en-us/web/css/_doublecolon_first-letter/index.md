@@ -13,12 +13,7 @@ browser-compat: css.selectors.first-letter
 
 The **`::first-letter`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the first letter of the first line of a [block-level element](/en-US/docs/Web/CSS/Visual_formatting_model#block-level_elements_and_block_boxes), but only when not preceded by other content (such as images or inline tables).
 
-```css
-/* Selects the first letter of a <p> */
-p::first-letter {
-  font-size: 130%;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-first-letter.html", "tabbed-shorter")}}
 
 The first letter of an element is not always trivial to identify:
 
@@ -44,7 +39,9 @@ Only a small subset of CSS properties can be used with the `::first-letter` pseu
 
 ## Syntax
 
-{{csssyntax}}
+```
+::first-letter
+```
 
 ## Examples
 
@@ -102,7 +99,7 @@ This example illustrates the effect of `::first-letter` on special punctuation a
 <p>#The beginning of a special punctuation mark.</p>
 <p>「特殊的汉字标点符号开头。</p>
 <p>《特殊的汉字标点符号开头。</p>
-<p>“特殊的汉字标点符号开头。</p>
+<p>"特殊的汉字标点符号开头。</p>
 ```
 
 #### CSS

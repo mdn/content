@@ -1,6 +1,7 @@
 ---
 title: Document.caretRangeFromPoint()
 slug: Web/API/Document/caretRangeFromPoint
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -21,17 +22,17 @@ fragment under the specified coordinates.
 ## Syntax
 
 ```js
-var range = document.caretRangeFromPoint(float x, float y);
+caretRangeFromPoint(x, y)
 ```
 
 ### Parameters
 
-- _x_
+- `x`
   - : A horizontal position within the current viewport.
-- _y_
+- `y`
   - : A vertical position within the current viewport.
 
-### Returns
+### Return value
 
 One of the following:
 
@@ -39,15 +40,15 @@ One of the following:
 - `Null`, if _x_ or _y_ are negative, outside viewport,
   or there is no text entry node.
 
-## Example
+## Examples
 
 Click anywhere in the **Demo** paragraph below to insert a line break at the point where you click. The code for it is below the demo.
 
 ### Demo
 
-{{EmbedLiveSample('Example', '100%', '100px')}}
+{{EmbedLiveSample('Examples')}}
 
-The code below first checks for `document.caretRangeFromPoint` support, but if the browser doesn’t support that, the code then checks for {{domxref("Document.caretPositionFromPoint", "document.caretPositionFromPoint")}}, and uses that instead.
+The code below first checks for `document.caretRangeFromPoint` support, but if the browser doesn't support that, the code then checks for {{domxref("Document.caretPositionFromPoint", "document.caretPositionFromPoint")}}, and uses that instead.
 
 ### JavaScript
 

@@ -17,7 +17,7 @@ tags:
 
 This is the **11th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). You can find the source code as it should look after completing this lesson at [Gamedev-Phaser-Content-Kit/demos/lesson11.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson11.html).
 
-Having a score can also make the game more interesting — you can try to beat your own highscore, or your friend's. In this article we'll add a scoring system to our game.
+Having a score can also make the game more interesting — you can try to beat your own high score, or your friend's. In this article we'll add a scoring system to our game.
 
 We will use a separate variable for storing the score and Phaser's `text()` method to print it out onto the screen.
 
@@ -26,7 +26,7 @@ We will use a separate variable for storing the score and Phaser's `text()` meth
 Add two new variables right after the previously defined ones:
 
 ```js
-// ...
+// …
 var scoreText;
 var score = 0;
 ```

@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.attachInternals()
 slug: Web/API/HTMLElement/attachInternals
+page-type: web-api-instance-method
 tags:
   - API
   - Element
@@ -11,12 +12,12 @@ browser-compat: api.HTMLElement.attachInternals
 ---
 {{APIRef('DOM')}}
 
-The **`HTMLElement.attachInternals()`** method returns a {{domxref("ElementInternals")}} object. This method allows a [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements) to participate in HTML forms. The `ElementInternals` interface provides utilities for working with these elements in the same way you would work with any standard HTML form element, and also exposes the [Accessibility Object Model](https://wicg.github.io/aom/explainer.html) to the element.
+The **`HTMLElement.attachInternals()`** method returns an {{domxref("ElementInternals")}} object. This method allows a [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements) to participate in HTML forms. The `ElementInternals` interface provides utilities for working with these elements in the same way you would work with any standard HTML form element, and also exposes the [Accessibility Object Model](https://wicg.github.io/aom/explainer.html) to the element.
 
 ## Syntax
 
 ```js
-var internals = element.attachInternals();
+attachInternals()
 ```
 
 ### Parameters
@@ -48,11 +49,10 @@ class CustomCheckbox extends HTMLElement {
     super();
     this.internals_ = this.attachInternals();
   }
+  // …
+}
 
-  /* ... */
-
-  window.customElements.define("custom-checkbox", CustomCheckbox);
-})();
+window.customElements.define("custom-checkbox", CustomCheckbox);
 
 let element = document.getElementById("custom-checkbox");
 console.log(element.internals_.form);

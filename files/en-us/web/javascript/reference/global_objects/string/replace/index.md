@@ -16,8 +16,8 @@ browser-compat: javascript.builtins.String.replace
 The **`replace()`** method returns a
 new string with some or all matches of a `pattern` replaced by a
 `replacement`. The `pattern` can be a string or a
-{{jsxref("RegExp")}}, and the `replacement` can be a string or a function to
-be called for each match. If `pattern` is a string, only the first occurrence
+{{jsxref("RegExp")}}, and the `replacement` can be a string or a function
+called for each match. If `pattern` is a string, only the first occurrence
 will be replaced.
 
 The original string is left unchanged.
@@ -56,8 +56,8 @@ replace(substr, replacerFunction)
 - `replacerFunction` (replacement)
   - : A function to be invoked to create the new substring to be used to replace the
     matches to the given `regexp` or `substr`.
-    The arguments supplied to this function are described in the "[Specifying a function as a
-    parameter](#specifying_a_function_as_a_parameter)" section below.
+    The arguments supplied to this function are described in the
+    "[Specifying a function as a parameter](#specifying_a_function_as_a_parameter)" section below.
 
 ### Return value
 
@@ -99,7 +99,7 @@ The arguments to the function are as follows:
 | Possible name | Supplied value                                                                                                                                                                                                                                                                                                         |
 | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `match`       | The matched substring. (Corresponds to `$&` above.)                                                                                                                                                                                                                                                                    |
-| `p1, p2, ...` | The *n*th string found by a parenthesized capture group (including named capturing groups), provided the first argument to `replace()` was a {{jsxref("RegExp")}} object. (Corresponds to `$1`, `$2`, etc. above.) For example, if `/(\a+)(\b+)/`, was given, `p1` is the match for `\a+`, and `p2` for `\b+`. |
+| `p1, p2, ...` | The *n*th string found by a parenthesized capture group (including named capturing groups), provided the first argument to `replace()` was a {{jsxref("RegExp")}} object. (Corresponds to `$1`, `$2`, etc. above.) For example, if `/(\a+)(\b+)/`, was given, `p1` is the match for `\a+`, and `p2` for `\b+`. |
 | `offset`      | The offset of the matched substring within the whole string being examined. (For example, if the whole string was `'abcd'`, and the matched substring was `'bc'`, then this argument will be `1`.)                                                                                                                     |
 | `string`      | The whole string being examined.                                                                                                                                                                                                                                                                                       |
 | `groups`      | In browser versions supporting named capturing groups, will be an object whose keys are the used group names, and whose values are the matched portions (`undefined` if not matched).                                                                                                                                  |
@@ -108,11 +108,11 @@ The arguments to the function are as follows:
 {{jsxref("RegExp")}} object—and, if so, how many parenthesized submatches it specifies.)
 
 The following example will set `newString`
-to `'abc - 12345 - #$*%'`:
+to `'abc - 12345 - #$*%'`:
 
 ```js
 function replacer(match, p1, p2, p3, offset, string) {
-  // p1 is nondigits, p2 digits, and p3 non-alphanumerics
+  // p1 is non-digits, p2 digits, and p3 non-alphanumerics
   return [p1, p2, p3].join(' - ');
 }
 let newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
@@ -139,9 +139,10 @@ This logs `'Twas the night before Christmas...'`.
 
 ### Using global and ignore with replace()
 
-Global replace can only be done with a regular expression. In the following example,
-the regular expression includes the [global
-and ignore case flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags_2) which permits `replace()` to replace each
+Global replace can only be done with a regular expression. In the following example,
+the regular expression includes the
+[global and ignore case flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags)
+which permits `replace()` to replace each
 occurrence of `'apples'` in the string with `'oranges'`.
 
 ```js
@@ -156,8 +157,8 @@ This logs `'oranges are round, and oranges are juicy'`.
 ### Switching words in a string
 
 The following script switches the words in the string. For the replacement text, the
-script uses [capturing
-groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) and the `$1` and `$2` replacement patterns.
+script uses [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)
+and the `$1` and `$2` replacement patterns.
 
 ```js
 let re = /(\w+)\s(\w+)/;

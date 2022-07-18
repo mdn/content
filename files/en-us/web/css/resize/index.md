@@ -35,6 +35,7 @@ resize: inline;
 resize: inherit;
 resize: initial;
 resize: revert;
+resize: revert-layer;
 resize: unset;
 ```
 

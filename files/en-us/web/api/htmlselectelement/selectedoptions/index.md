@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.selectedOptions
 slug: Web/API/HTMLSelectElement/selectedOptions
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -25,13 +26,7 @@ element that are currently selected. The list of selected options is an
 An option is considered selected if it has an {{domxref("HTMLOptionElement.selected")}}
 attribute.
 
-## Syntax
-
-```js
-var selectedCollection = HTMLSelectElement.selectedOptions;
-```
-
-### Value
+## Value
 
 An {{domxref("HTMLCollection")}} which lists every currently selected
 {{domxref("HTMLOptionElement")}} which is either a child of the
@@ -44,7 +39,7 @@ be part of the results, but option groups are not included in the list.
 If no options are currently selected, the collection is empty and returns a
 {{domxref("HTMLCollection.length", "length")}} of 0.
 
-## Example
+## Examples
 
 In this example, a {{HTMLElement("select")}} element with a number of options is used
 to let the user order various food items.
@@ -113,7 +108,7 @@ orderButton.addEventListener("click", function() {
 }, false);
 ```
 
-This script sets up a {{event("click")}} event listener on the "Order Now" button. When
+This script sets up a {{domxref("Element/click_event", "click")}} event listener on the "Order Now" button. When
 clicked, the event handler fetches the list of selected options using
 `selectedOptions`, then iterates over the options in the list. A string is
 constructed to list the ordered items, with logic to build the list using proper English
@@ -123,7 +118,7 @@ grammar rules (including a {{interwiki("wikipedia", "serial comma")}}).
 
 The resulting content looks like this in action:
 
-{{EmbedLiveSample("Example", 600, 250)}}
+{{EmbedLiveSample("Examples", 600, 250)}}
 
 ## Specifications
 

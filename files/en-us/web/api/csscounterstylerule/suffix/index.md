@@ -1,6 +1,7 @@
 ---
 title: CSSCounterStyleRule.suffix
 slug: Web/API/CSSCounterStyleRule/suffix
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,16 +14,9 @@ browser-compat: api.CSSCounterStyleRule.suffix
 
 The **`suffix`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the value of the {{cssxref("@counter-style/suffix","suffix")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.
 
-## Syntax
+## Value
 
-```js
-let suffix = CSSCounterStyleRule.suffix;
-CSSCounterStyleRule.suffix = a;
-```
-
-### Value
-
-A {{domxref("CSSOMString")}}
+A string
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.currentRoundTripTime
 slug: Web/API/RTCIceCandidatePairStats/currentRoundTripTime
+page-type: web-api-instance-property
 tags:
   - API
   - Connectivity

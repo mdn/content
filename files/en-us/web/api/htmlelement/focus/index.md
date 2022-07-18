@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.focus()
 slug: Web/API/HTMLElement/focus
+page-type: web-api-instance-method
 tags:
   - API
   - Focus
@@ -22,7 +23,8 @@ the element which will receive keyboard and similar events by default.
 ## Syntax
 
 ```js
-element.focus(options);
+focus()
+focus(options)
 ```
 
 ### Parameters
@@ -40,6 +42,10 @@ element.focus(options);
         `preventScroll` is set to `true`, no scrolling will
         occur.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Focus on a text field
@@ -47,17 +53,16 @@ element.focus(options);
 #### JavaScript
 
 ```js
-focusMethod = function getFocus() {
+document.getElementById("focusButton").addEventListener("click", () => {
   document.getElementById("myTextField").focus();
-}
+});
 ```
 
 #### HTML
 
 ```html
-<input type="text" id="myTextField" value="Text field.">
-<p></p>
-<button type="button" onclick="focusMethod()">Click me to focus on the text field!</button>
+<input id="myTextField" value="Text field.">
+<button id="focusButton">Click me to focus on the text field!</button>
 ```
 
 #### Result
@@ -69,17 +74,16 @@ focusMethod = function getFocus() {
 #### JavaScript
 
 ```js
-focusMethod = function getFocus() {
+document.getElementById("focusButton").addEventListener("click", () => {
   document.getElementById("myButton").focus();
-}
+});
 ```
 
 #### HTML
 
 ```html
-<button type="button" id="myButton">Click Me!</button>
-<p></p>
-<button type="button" onclick="focusMethod()">Click me to focus on the button!</button>
+<button id="myButton">Click Me!</button>
+<button id="focusButton">Click me to focus on the button!</button>
 ```
 
 #### Result
@@ -124,10 +128,9 @@ focusNoScrollMethod = function getFocusWithoutScrolling() {
   must call `event.preventDefault()` to keep the focus from leaving the
   `HTMLElement`
 - Behavior of the focus in relation to different HTML features like
-  {{HTMLAttrxRef("tabindex")}} or {{Glossary("shadow tree","shadow dom", 1)}},
-  which previously remained under-specified, were recently updated (as October
-  of 2019). Checkout [WHATWG
-  blog](https://blog.whatwg.org/focusing-on-focus) for more info.
+  [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) or {{Glossary("shadow tree","shadow dom", 1)}},
+  which previously remained under-specified, were recently updated (as October
+  of 2019). Checkout [WHATWG blog](https://blog.whatwg.org/focusing-on-focus) for more info.
 
 ## Browser compatibility
 

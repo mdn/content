@@ -1,6 +1,7 @@
 ---
 title: PositionSensorVRDevice.getState()
 slug: Web/API/PositionSensorVRDevice/getState
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -15,29 +16,29 @@ browser-compat: api.PositionSensorVRDevice.getState
 ---
 {{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-The **`getState()`** method of the {{domxref("PositionSensorVRDevice")}} interface returns the current state of the position sensor for the current frame (e.g. within the current {{domxref("window.requestAnimationFrame")}} callback) or for the previous frame, contained with a {{domxref("VRPose")}} object. This is the method you'd normally want to use, vs. {{domxref("PositionSensorVRDevice.getImmediateState")}}.
+The **`getState()`** method of the {{domxref("PositionSensorVRDevice")}} interface returns the current state of the position sensor for the current frame (e.g. within the current {{domxref("window.requestAnimationFrame")}} callback) or for the previous frame, contained with a {{domxref("VRPose")}} object. This is the method you'd normally want to use, vs. {{domxref("PositionSensorVRDevice.getImmediateState")}}.
 
 ## Syntax
 
 ```js
-var myPositionState = PositionSensorVRDevice.getState();
+getState()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 A {{domxref("VRPose")}} object.
 
 ## Examples
 
-The following example is taken from our [positionsensorvrdevice](https://mdn.github.io/webvr-tests/positionsensorvrdevice/) demo, which uses the WebVR API to update the view of a simple {{domxref("CanvasRenderingContext2D","2D canvas")}} scene on each frame of a {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} loop.
+The following example uses the WebVR API to update the view of a simple {{domxref("CanvasRenderingContext2D","2D canvas")}} scene on each frame of a {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} loop.
 
 ```js
 function setView() {
-  var posState = gPositionSensor.getState();
+  const posState = gPositionSensor.getState();
   if(posState.hasPosition) {
     posPara.textContent = 'Position: x' + roundToTwo(posState.position.x) + " y"
                                 + roundToTwo(posState.position.y) + " z"

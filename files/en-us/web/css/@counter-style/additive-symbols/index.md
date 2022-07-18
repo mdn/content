@@ -30,7 +30,11 @@ When the `system` descriptor is `cyclic`, `numeric`, `alphabetic`, `symbolic`, o
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+[ <integer [0,∞]> && <symbol> ]#
+
+<symbol> = <string> | <image> | <custom-ident>
+```
 
 ## Examples
 
@@ -53,7 +57,7 @@ When the `system` descriptor is `cyclic`, `numeric`, `alphabetic`, `symbolic`, o
 ```css
 @counter-style additive-symbols-example {
   system: additive;
-  additive-symbols: V 5, IV 4, I 1;
+  additive-symbols: V 5, IV 4, I 1;
 }
 .list {
   list-style: additive-symbols-example;

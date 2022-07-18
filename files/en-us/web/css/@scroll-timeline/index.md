@@ -7,6 +7,7 @@ tags:
   - At-rule
   - CSS
   - Reference
+  - Experimental
 browser-compat: css.at-rules.scroll-timeline
 ---
 
@@ -47,7 +48,7 @@ The **`@scroll-timeline`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines an
 
 - `orientation`
 
-  - : The scroll timeline’s orientation:
+  - : The scroll timeline's orientation:
 
     - `auto`
 
@@ -77,11 +78,11 @@ The **`@scroll-timeline`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines an
     - `<length-percentage>`
       - : A comma separated list of [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) values.
     - `<element-offset>`
-      - : An element’s position determines the scroll offset.
+      - : An element's position determines the scroll offset.
 
 ## Description
 
-To use the scroll timeline, create a `@scroll-timeline` rule, which is used by the {{cssxref("animation-timeline")}} property to match an animation’s timeline to its timeline declaration.
+To use the scroll timeline, create a `@scroll-timeline` rule, which is used by the {{cssxref("animation-timeline")}} property to match an animation's timeline to its timeline declaration.
 
 Each `@scroll-timeline` rule includes properties to determine the source, orientation and scroll-offsets of the scroll timeline.
 
@@ -105,7 +106,9 @@ The `scroll-offset` property determines where, within the scrolling, the animati
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+@scroll-timeline <timeline-name> { <declaration-list> }
+```
 
 ## Examples
 

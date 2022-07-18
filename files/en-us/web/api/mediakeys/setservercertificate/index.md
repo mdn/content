@@ -1,6 +1,7 @@
 ---
 title: MediaKeys.setServerCertificate()
 slug: Web/API/MediaKeys/setServerCertificate
+page-type: web-api-instance-method
 tags:
   - API
   - EncryptedMediaExtensions
@@ -20,8 +21,17 @@ server certificate to be used to encrypt messages to the license server.
 ## Syntax
 
 ```js
-MediaKeys.setServerCertificate(serverCertificate).then(function() { /* ... */ });
+setServerCertificate(serverCertificate)
 ```
+
+### Parameters
+
+- `serverCertificate`
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} object containing the server certificate. The contents are Key System-specific. It MUST NOT contain executable code.
+
+### Return value
+
+A {{jsxref('Promise')}} that resolves to a boolean. If the Key System implementation represented by this object's cdm implementation value does not support server certificates, return a promise resolved with false.
 
 ## Specifications
 

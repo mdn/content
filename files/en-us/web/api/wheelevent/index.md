@@ -1,6 +1,7 @@
 ---
 title: WheelEvent
 slug: Web/API/WheelEvent
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -9,7 +10,7 @@ tags:
   - WheelEvent
 browser-compat: api.WheelEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`WheelEvent`** interface represents events that occur due to the user moving a mouse wheel or similar input device.
 
@@ -28,13 +29,13 @@ The **`WheelEvent`** interface represents events that occur due to the user movi
 
 _This interface inherits properties from its ancestors, {{DOMxRef("MouseEvent")}}, {{DOMxRef("UIEvent")}}, and {{DOMxRef("Event")}}._
 
-- {{DOMxRef("WheelEvent.deltaX")}}{{ReadOnlyInline}}
+- {{DOMxRef("WheelEvent.deltaX")}} {{ReadOnlyInline}}
   - : Returns a `double` representing the horizontal scroll amount.
-- {{DOMxRef("WheelEvent.deltaY")}}{{ReadOnlyInline}}
+- {{DOMxRef("WheelEvent.deltaY")}} {{ReadOnlyInline}}
   - : Returns a `double` representing the vertical scroll amount.
-- {{DOMxRef("WheelEvent.deltaZ")}}{{ReadOnlyInline}}
+- {{DOMxRef("WheelEvent.deltaZ")}} {{ReadOnlyInline}}
   - : Returns a `double` representing the scroll amount for the z-axis.
-- {{DOMxRef("WheelEvent.deltaMode")}}{{ReadOnlyInline}}
+- {{DOMxRef("WheelEvent.deltaMode")}} {{ReadOnlyInline}}
 
   - : Returns an `unsigned long` representing the unit of the `delta*` values' scroll amount. Permitted values are:
 
@@ -44,11 +45,11 @@ _This interface inherits properties from its ancestors, {{DOMxRef("MouseEvent")}
     | `WheelEvent.DOM_DELTA_LINE`  | `0x01` | The `delta*` values are specified in lines. Each mouse click scrolls a line of content, where the method used to calculate line height is browser dependent. |
     | `WheelEvent.DOM_DELTA_PAGE`  | `0x02` | The `delta*` values are specified in pages. Each mouse click scrolls a page of content.                                                                      |
 
-- {{DOMxRef("WheelEvent.wheelDelta")}}{{ReadOnlyInline}} {{deprecated_inline}}
+- {{DOMxRef("WheelEvent.wheelDelta")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns an integer (32-bit) representing the distance in pixels.
-- {{DOMxRef("WheelEvent.wheelDeltaX")}}{{ReadOnlyInline}} {{deprecated_inline}}
+- {{DOMxRef("WheelEvent.wheelDeltaX")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns an integer representing the horizontal scroll amount.
-- {{DOMxRef("WheelEvent.wheelDeltaY")}}{{ReadOnlyInline}} {{deprecated_inline}}
+- {{DOMxRef("WheelEvent.wheelDeltaY")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns an integer representing the vertical scroll amount.
 
 > **Note:** [Element: mousewheel event](/en-US/docs/Web/API/Element/mousewheel_event) has additional documentation about the deprecated properties `wheelDelta`, `wheelDeltaX`, `wheelDeltaY`.

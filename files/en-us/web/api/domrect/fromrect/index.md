@@ -1,18 +1,16 @@
 ---
 title: DOMRect.fromRect()
 slug: Web/API/DOMRect/fromRect
+page-type: web-api-static-method
 tags:
   - API
-  - DOM Reference
   - DOMRect
-  - Experimental
   - Geometry
   - Method
   - Reference
-  - fromRect()
 browser-compat: api.DOMRect.fromRect
 ---
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("Geometry Interfaces")}}
 
 The **`fromRect()`** static method of the
 {{domxref("DOMRect")}} object creates a new `DOMRect`
@@ -21,12 +19,13 @@ object with a given location and dimensions.
 ## Syntax
 
 ```js
-DOMRect.fromRect(rectangle)
+fromRect()
+fromRect(rectangle)
 ```
 
 ### Parameters
 
-- `rectangle` {{optional_inline}}
+- `rectangle` {{optional_inline}}
 
   - : An object specifying the location and dimensions of a rectangle. All properties
     default to `0`. The properties are:

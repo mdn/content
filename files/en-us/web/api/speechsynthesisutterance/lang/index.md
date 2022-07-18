@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisUtterance.lang
 slug: Web/API/SpeechSynthesisUtterance/lang
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -18,36 +19,29 @@ The **`lang`** property of the {{domxref("SpeechSynthesisUtterance")}} interface
 
 If unset, the app's (i.e. the {{htmlelement("html")}} {{htmlattrxref("lang", "html")}} value) lang will be used, or the user-agent default if that is unset too.
 
-## Syntax
+## Value
 
-```js
-var myLang = speechSynthesisUtteranceInstance.lang;
-speechSynthesisUtteranceInstance.lang = 'en-US';
-```
-
-### Value
-
-A {{domxref("DOMString")}} representing a BCP 47 language tag.
+A string representing a BCP 47 language tag.
 
 ## Examples
 
 ```js
-var synth = window.speechSynthesis;
+const synth = window.speechSynthesis;
 
-var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('input');
-var voiceSelect = document.querySelector('select');
+const inputForm = document.querySelector('form');
+const inputTxt = document.querySelector('input');
+const voiceSelect = document.querySelector('select');
 
-var voices = synth.getVoices();
+const voices = synth.getVoices();
 
-  ...
+// ...
 
 inputForm.onsubmit = function(event) {
   event.preventDefault();
 
-  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
+  const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
+  const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+  for(let i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }

@@ -12,5 +12,5 @@ An ISP (Internet Service Provider) sells Internet access, and sometimes email, w
 
 ## See also
 
-- [How the Internet works](/en-US/docs/Learn/Common_questions/How_does_the_Internet_work) (explanation for beginners)
+- [How the Internet works](/en-US/docs/Learn/Common_questions/How_does_the_Internet_work) (explanation for beginners)
 - {{interwiki("wikipedia", "Internet service provider", "Internet service provider")}} on Wikipedia

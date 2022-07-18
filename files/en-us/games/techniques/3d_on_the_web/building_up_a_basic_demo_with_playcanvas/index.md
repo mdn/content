@@ -24,7 +24,7 @@ tags:
 
 PlayCanvas has a few well-known demos published that showcase its possibilities.
 
-- [Tanx](https://playcanv.as/p/aP0oxhUr) is a multiplayer tank game where you can drive your tank around, shooting at other players as you go.
+- [Tanx](https://tanx.io/) is a multiplayer tank game where you can drive your tank around, shooting at other players as you go.
 - [Swooop](https://playcanv.as/p/JtL2iqIH) is a flying game where you pilot your plane around a magical island, collecting jewels and fuel as you go.
 - Visualizations like the [Star Lord](https://playcanv.as/b/FQbBsJTd) and [BMW i8](https://playcanv.as/p/RqJJ9oU9) also take advantage of the engine and showcase what's possible.
 

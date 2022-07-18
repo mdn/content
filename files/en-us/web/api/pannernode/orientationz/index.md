@@ -1,6 +1,7 @@
 ---
 title: PannerNode.orientationZ
 slug: Web/API/PannerNode/orientationZ
+page-type: web-api-instance-property
 tags:
   - Audio
   - PannerNode
@@ -11,7 +12,7 @@ browser-compat: api.PannerNode.orientationZ
 {{ APIRef("Web Audio API") }}
 
 The **`orientationZ`** property of the {{ domxref("PannerNode") }} interface
-indicates the Z (depth) component of the direction the audio source is facing, in 3D Cartesian coordinate space.
+indicates the Z (depth) component of the direction the audio source is facing, in 3D Cartesian coordinate space.
 
 The complete vector is defined by the position of the audio source, given as
 ({{domxref("PannerNode.positionX", "positionX")}}, {{domxref("PannerNode.positionY",
@@ -33,15 +34,7 @@ The {{domxref("AudioParam")}} contained by this property is read only; however, 
 can still change the value of the parameter by assigning a new value to its
 {{domxref("AudioParam.value")}} property.
 
-## Syntax
-
-```js
-var orientationZ = PannerNode.orientationZ;
-
-PannerNode.orientationZ.value = newOrientationZ;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioParam")}} whose `value` is the Z component of the
 direction the audio source is facing, in 3D Cartesian coordinate space.
@@ -61,6 +54,5 @@ See [`PannerNode.orientationX`](/en-US/docs/Web/API/PannerNode/orientationX#exam
 ## See also
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web
-  Audio spatialisation basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Web Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - {{domxref("PannerNode")}}

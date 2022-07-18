@@ -95,9 +95,6 @@ console.log(NaN >= 3);       // false
 
 ## See also
 
-- [Greater than
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than)
-- [Less than
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than)
-- [Less
-  than or equal operator](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)
+- [Greater than operator](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than)
+- [Less than operator](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than)
+- [Less than or equal operator](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)

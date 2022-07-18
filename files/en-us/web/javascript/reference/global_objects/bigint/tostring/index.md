@@ -25,7 +25,7 @@ toString(radix)
 
 ### Parameters
 
-- `radix`{{optional_inline}}
+- `radix` {{optional_inline}}
   - : Optional. An integer in the range 2 through 36 specifying the base to use for
     representing numeric values.
 
@@ -36,7 +36,7 @@ A string representing the specified {{jsxref("BigInt")}} object.
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : If `toString()` is given a radix less than 2 or greater than 36, a
+  - : If `toString()` is given a radix less than 2 or greater than 36, a
     {{jsxref("RangeError")}} is thrown.
 
 ## Description
@@ -67,7 +67,7 @@ complement of the `bigIntObj`.
 17n.toString();      // '17'
 66n.toString(2);     // '1000010'
 254n.toString(16);   // 'fe'
--10n.toString(2);    // -1010'
+-10n.toString(2);    // -1010'
 -0xffn.toString(2);  // '-11111111'
 ```
 
@@ -75,7 +75,7 @@ complement of the `bigIntObj`.
 
 There is no negative-zero `BigInt` as there are no negative zeros in
 integers. `-0.0` is an IEEE floating-point concept that only appears in the
-JavaScript {{jsxref("Number")}} type.
+JavaScript [`Number`](/en-US/docs/Web/JavaScript/Data_structures#number_type) type.
 
 ```js
 (-0n).toString();      // '0'

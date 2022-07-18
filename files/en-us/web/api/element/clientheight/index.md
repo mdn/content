@@ -1,6 +1,7 @@
 ---
 title: Element.clientHeight
 slug: Web/API/Element/clientHeight
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -21,23 +22,16 @@ scrollbars (if present).
 
 When `clientHeight` is used on the root element (the
 `<html>` element), (or on `<body>` if the document is
-in quirks mode), the viewport's height (excluding any scrollbar) is returned. [This
-is a special case of `clientHeight`](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-clientheight).
+in quirks mode), the viewport's height (excluding any scrollbar) is returned. [This is a special case of `clientHeight`](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-clientheight).
 
 > **Note:** This property will round the value to an integer. If you need
 > a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
 
-## Syntax
+## Value
 
-```js
-var intElemClientHeight = element.clientHeight;
-```
+A number.
 
-`intElemClientHeight` is an integer corresponding to the
-`clientHeight` of `element` in pixels. The
-`clientHeight` property is read–only.
-
-## Example
+## Examples
 
 ![](dimensions-client.png)
 
@@ -58,5 +52,4 @@ model.
 
 - {{domxref("HTMLElement.offsetHeight")}}
 - {{domxref("Element.scrollHeight")}}
-- [Determining
-  the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

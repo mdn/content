@@ -75,8 +75,8 @@ Possible types are the following:
     "`2019`".
 - second
   - : The string used for the second, for example "`07`" or "`42`".
-- timeZoneName
-  - : The string used for the name of the time zone, for example "`UTC`".
+- timeZone
+  - : The string used for the name of the time zone, for example "`UTC`". Default is the timezone of the current environment.
 - weekday
   - : The string used for the weekday, for example "`M`",
     "`Monday`", or "`Montag`".
@@ -86,20 +86,15 @@ Possible types are the following:
   - : The string used for the yearName in relevant contexts, for example
     "`geng-zi`"
 
-## Polyfill
-
-A polyfill for this feature is available in the [proposal
-repository](https://github.com/zbraniecki/proposal-intl-formatToParts).
-
 ## Examples
 
 `DateTimeFormat` outputs localized, opaque strings that cannot be
 manipulated directly:
 
 ```js
-var date = Date.UTC(2012, 11, 17, 3, 0, 42);
+const date = Date.UTC(2012, 11, 17, 3, 0, 42);
 
-var formatter = new Intl.DateTimeFormat('en-us', {
+const formatter = new Intl.DateTimeFormat('en-us', {
   weekday: 'long',
   year: 'numeric',
   month: 'numeric',
@@ -145,34 +140,36 @@ formatter.formatToParts(date);
 ```
 
 Now the information is available separately and it can be formatted and concatenated
-again in a customized way. For example by using {{jsxref("Array.prototype.map()")}}, [arrow
-functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), a [switch statement](/en-US/docs/Web/JavaScript/Reference/Statements/switch), [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals),
+again in a customized way. For example by using {{jsxref("Array.prototype.map()")}},
+[arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions),
+a [switch statement](/en-US/docs/Web/JavaScript/Reference/Statements/switch),
+[template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals),
 and {{jsxref("Array.prototype.join()")}}.
 
 ```js
-var dateString = formatter.formatToParts(date).map(({type, value}) => {
+const dateString = formatter.formatToParts(date).map(({type, value}) => {
   switch (type) {
-    case 'dayPeriod': return `<b>${value}</b>`;
+    case 'dayPeriod': return `<em>${value}</em>`;
     default : return value;
   }
 }).join('');
 ```
 
-This will make the day period bold, when using the `formatToParts()` method.
+This will emphasize the day period when using the `formatToParts()` method.
 
 ```js
 console.log(formatter.format(date));
 // "Monday, 12/17/2012, 3:00:42.000 AM"
 
 console.log(dateString);
-// "Monday, 12/17/2012, 3:00:42.000 <b>AM</b>"
+// "Monday, 12/17/2012, 3:00:42.000 <em>AM</em>"
 ```
 
 ### Named Years and Mixed calendars
 
 In some cases, calendars use named years. Chinese and Tibetan calendars, for example,
-use a 60-year [sexagenary
-cycle](https://en.wikipedia.org/wiki/Sexagenary_cycle) of named years. These years are disambiguated by relationship to
+use a 60-year [sexagenary cycle](https://en.wikipedia.org/wiki/Sexagenary_cycle) of named years.
+These years are disambiguated by relationship to
 corresponding years on the Gregorian calendar. When this is the case, the result of
 `formatToParts()` will contain an entry for `relatedYear` when a
 year would normally be present, containing the 4-digit Gregorian year, instead of an
@@ -265,3 +262,4 @@ df.formatToParts(date)
 - {{jsxref("Date.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}
+- [A polyfill of `Intl.DateTimeFormat.prototype.formatToParts` in the proposal repository](https://github.com/tc39/proposal-intl-formatToParts)

@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannelEvent
 slug: Web/API/RTCDataChannelEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -56,6 +57,5 @@ See [A simple RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDa
 
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCDataChannel")}}
-- {{domxref("RTCPeerConnection.ondatachannel")}}
 - [A simple RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
 - {{domxref("RTCPeerConnection")}} (the target interface for {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}} events)

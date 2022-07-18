@@ -1,6 +1,7 @@
 ---
 title: RTCIceServer.username
 slug: Web/API/RTCIceServer/username
+page-type: web-api-instance-property
 tags:
   - Experimental
   - Property
@@ -11,9 +12,6 @@ tags:
 browser-compat: api.RTCIceServer.username
 ---
 {{APIRef("WebRTC")}}
-
-{{draft("I'm experimenting with structure for pages documenting members of
-  dictionaries. Please contact ~~sheppy with any feedback.")}}
 
 {{SeeCompatTable}}
 
@@ -28,10 +26,10 @@ property is a string which specifies the username to use when authenticating wit
 
 ```js
 var iceServer = {
-                  ...
-                  username = username,
-                  ...
-                };
+  // ...
+  username: username,
+  // ...
+};
 
 var username = iceServer.username;
 

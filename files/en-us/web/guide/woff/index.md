@@ -6,6 +6,9 @@ tags:
   - NeedsMobileBrowserCompatibility
   - WOFF
   - WOFF2
+browser-compat:
+  - css.at-rules.font-face.WOFF
+  - css.at-rules.font-face.WOFF_2
 ---
 **WOFF** (the **Web Open Font Format**) is a web font format developed by Mozilla in concert with Type Supply, LettError, and other organizations. It uses a compressed version of the same table-based `sfnt` structure used by TrueType, OpenType, and Open Font Format, but adds metadata and private-use data structures, including predefined fields allowing foundries and vendors to provide license information if desired.
 
@@ -15,7 +18,7 @@ There are three main benefits to using WOFF:
 2. Many font vendors that are unwilling to license their TrueType or OpenType format fonts for use on the web will license WOFF format fonts. This improves availability of fonts to site designers.
 3. Both proprietary and free software browser vendors like the WOFF format, so it has the potential of becoming a truly universal, interoperable font format for the web, unlike other current font formats.
 
-There are two versions of WOFF; WOFF and WOFF2, they mostly differ in regard to the compression algorithm used. In {{cssxref("@font-face")}} they are identified by the `'woff'` and `'woff2'` format descriptor respectively.
+There are two versions of WOFF: WOFF and WOFF2. They mostly differ in regard to the compression algorithm used. In {{cssxref("@font-face")}} they are identified by the `'woff'` and `'woff2'` format descriptor respectively.
 
 ## Using WOFF
 
@@ -27,14 +30,11 @@ You can use the {{cssxref("@font-face")}} CSS property to use WOFF fonts for tex
 
 ## Specifications
 
-| Specification                            | Status                       | Comment                   |
-| ---------------------------------------- | ---------------------------- | ------------------------- |
-| {{SpecName('WOFF2.0', '', '')}} | {{Spec2('WOFF2.0')}} | New compression algorithm |
-| {{SpecName('WOFF1.0', '', '')}} | {{Spec2('WOFF1.0')}} | Initial specification.    |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("css.at-rules.font-face")}}
+{{Compat}}
 
 ## See also
 

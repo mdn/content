@@ -50,12 +50,12 @@ Events have three functions:
 
 ```js
 browser.omnibox.onInputStarted.addListener(() => {
-  console.log("User has started interacting with me.")
+  console.log("User has started interacting with me.")
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/extensions/omnibox) API.
+> **Note:** This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/omnibox/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

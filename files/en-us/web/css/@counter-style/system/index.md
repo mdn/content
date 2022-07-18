@@ -76,7 +76,17 @@ This may take one of three forms:
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+cyclic                             |
+numeric                            |
+alphabetic                         |
+symbolic                           |
+additive                           |
+[ fixed <integer>? ]               |
+[ extends <counter-style-name> ]
+
+<counter-style-name> = <custom-ident>
+```
 
 ## Examples
 
@@ -412,4 +422,4 @@ ul {
 ## See also
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols()")}}, the functional notation creating anonymous counter styles.
+- {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles.

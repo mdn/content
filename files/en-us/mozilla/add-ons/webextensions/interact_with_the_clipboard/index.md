@@ -12,6 +12,9 @@ tags:
   - WebExtensions
   - copy
   - paste
+browser-compat:
+  - api.Clipboard
+  - webextensions.api.clipboard
 ---
 {{AddonSidebar}}
 
@@ -78,7 +81,7 @@ To make the `"copy"` button copy the contents of the {{HTMLElement("input")}} el
 
 ```js
 function copy() {
-  var copyText = document.querySelector("#input");
+  let copyText = document.querySelector("#input");
   copyText.select();
   document.execCommand("copy");
 }
@@ -92,7 +95,7 @@ However, let's say that instead you trigger the copy from an alarm:
 
 ```js
 function copy() {
-  var copyText = document.querySelector("#input");
+  let copyText = document.querySelector("#input");
   copyText.select();
   document.execCommand("copy");
 }
@@ -106,7 +109,7 @@ browser.alarms.onAlarm.addListener(copy);
 
 Depending on the browser, this may not work. On Firefox, it will not work, and you'll see a message like this in your console:
 
-`document.execCommand(‘cut’/‘copy’) was denied because it was not called from inside a short running user-generated event handler.`
+`document.execCommand('cut'/'copy') was denied because it was not called from inside a short running user-generated event handler.`
 
 To enable this use case, you need to ask for the `"clipboardWrite"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). So: `"clipboardWrite"` enables you to write to the clipboard outside a short-lived event handler for a user action.
 
@@ -143,7 +146,7 @@ navigator.clipboard.readText().then(clipText =>
 
 ### Using execCommand()
 
-To use {{domxref("Document.execCommand()","document.execCommand(&#34;paste&#34;)")}} your extension needs the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). This is the case even if you're using the `"paste"` command from within a user-generated event handler, such as {{event("click")}} or {{event("keypress")}}.
+To use {{domxref("Document.execCommand()","document.execCommand(&#34;paste&#34;)")}} your extension needs the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). This is the case even if you're using the `"paste"` command from within a user-generated event handler, such as {{domxref("Element/click_event", "click")}} or {{domxref("Element/keypress_event", "keypress")}}.
 
 Consider HTML that includes something like this:
 
@@ -156,7 +159,7 @@ To set the content of the {{HTMLElement("textarea")}} element with the ID `"outp
 
 ```js
 function paste() {
-  var pasteText = document.querySelector("#output");
+  let pasteText = document.querySelector("#output");
   pasteText.focus();
   document.execCommand("paste");
   console.log(pasteText.textContent);
@@ -171,13 +174,7 @@ Firefox supports the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/
 
 ## Browser compatibility
 
-### navigator.clipboard
-
-{{Compat("api.Clipboard")}}
-
-### clipboard.setImageData
-
-{{Compat("webextensions.api.clipboard")}}
+{{Compat}}
 
 ## See also
 

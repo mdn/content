@@ -25,7 +25,7 @@ However in accessibility hierarchies such as ATK and IAccessible2, text is not e
 
 As explained above, anything that is embedded in text implements the Hyperlink interface.
 
-While it is odd to call non-link objects a link, this was a necessary compromise in the [newatk design](https://www.mozilla.org/access/unix/new-atk.html) because it is necessary to know where objects exist within their containing text. Previously the hyper link interface was really only for links, but the design could not fully represent an HTML document hierarchy. Keeping the link name of the interface is unfortunate but necessary for backwards compatibility, without introducing superfluous interfaces.
+While it is odd to call non-link objects a link, this was a necessary compromise in the [newatk design](https://website-archive.mozilla.org/www.mozilla.org/access/access/unix/new-atk.html) because it is necessary to know where objects exist within their containing text. Previously the hyper link interface was really only for links, but the design could not fully represent an HTML document hierarchy. Keeping the link name of the interface is unfortunate but necessary for backwards compatibility, without introducing superfluous interfaces.
 
 ## API comparison
 
@@ -60,7 +60,7 @@ Here are some notes on the classes we use:
 [`nsTextAccessible`](http://lxr.mozilla.org/seamonkey/find?string=nstextaccessible) serves 2 purposes
 
 - it is used by `nsHyperTextAccessible` to collect information about itself
-- it is still exposed in MSAA for backward compatibility by old windows assistive technologies. Those AT's don't yet know about any `IAccessibleText` yet, and want to see the hierarchy how they always did -- with text in leaf nodes.
+- it is still exposed in MSAA for backward compatibility by old windows assistive technologies. Those AT's don't yet know about any `IAccessibleText` yet, and want to see the hierarchy how they always did — with text in leaf nodes.
 
 ## How does an AT deal with text
 
@@ -129,4 +129,4 @@ The following magic offsets are useful to define in your code:
 
 ## More information
 
-Many more details on the Mozilla document hierarchy are in the [original design document for newatk](https://www.mozilla.org/access/unix/new-atk.html). There are also details on the [general implementation of Mozilla accessibility architecture](https://www.mozilla.org/access/architecture) (needs updating).
+Many more details on the Mozilla document hierarchy are in the [original design document for newatk](https://website-archive.mozilla.org/www.mozilla.org/access/access/unix/new-atk.html). There are also details on the [general implementation of Mozilla accessibility architecture](https://www-archive.mozilla.org/access/architecture).

@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.isBuffer()
 slug: Web/API/WebGLRenderingContext/isBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -17,12 +18,12 @@ passed {{domxref("WebGLBuffer")}} is valid and `false` otherwise.
 ## Syntax
 
 ```js
-GLboolean gl.isBuffer(buffer);
+isBuffer(buffer)
 ```
 
 ### Parameters
 
-- buffer
+- `buffer`
   - : A {{domxref("WebGLBuffer")}} to check.
 
 ### Return value

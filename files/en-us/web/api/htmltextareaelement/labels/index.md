@@ -1,6 +1,7 @@
 ---
 title: HTMLTextAreaElement.labels
 slug: Web/API/HTMLTextAreaElement/labels
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -15,18 +16,12 @@ The **`HTMLTextAreaElement.labels`** read-only property returns
 a {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with the
 {{HTMLElement("textArea")}} element.
 
-## Syntax
-
-```js
-var labelElements = textArea.labels;
-```
-
-### Return value
+## Value
 
 A {{domxref("NodeList")}} containing the `<label>` elements associated
 with the `<textArea>` element.
 
-## Example
+## Examples
 
 ### HTML
 
@@ -47,7 +42,7 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-{{EmbedLiveSample("Example", "100%", 60)}}
+{{EmbedLiveSample("Examples", "100%", 100)}}
 
 ## Specifications
 

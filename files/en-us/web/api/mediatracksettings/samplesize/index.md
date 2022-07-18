@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.sampleSize
 slug: Web/API/MediaTrackSettings/sampleSize
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -31,13 +32,7 @@ the value of {{domxref("MediaTrackSupportedConstraints.sampleSize")}} as returne
 call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var sampleSize = MediaTrackSettings.sampleSize;
-```
-
-### Value
+## Value
 
 An integer value indicating how many bits each audio sample is represented by. The most
 commonly used sample size for many years now is 16 bits per sample, which was used for
@@ -50,7 +45,7 @@ sample actually uses
   "channelCount")}} bytes of data. For example, 16-bit stereo audio requires (16/8)\*2 or 4
 bytes per sample.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.
@@ -66,7 +61,6 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Exampl
 ## See also
 
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities,
-  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints.sampleSize")}}
 - {{domxref("MediaTrackSettings")}}

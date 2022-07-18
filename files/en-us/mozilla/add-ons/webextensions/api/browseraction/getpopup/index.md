@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingPopup = browser.browserAction.getPopup(
+let gettingPopup = browser.browserAction.getPopup(
   details               // object
 )
 ```
@@ -33,9 +33,9 @@ var gettingPopup = browser.browserAction.getPopup(
 
   - : An object with the following properties:
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. The tab whose popup to get.
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. The windows whose popup to get.
 
 <!---->
@@ -60,13 +60,13 @@ function gotPopup(popupURL) {
   console.log(popupURL)
 }
 
-var gettingPopup = browser.browserAction.getPopup({});
+let gettingPopup = browser.browserAction.getPopup({});
 gettingPopup.then(gotPopup);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#method-getPopup) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/reference/browserAction/#method-getPopup) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

@@ -1,6 +1,7 @@
 ---
 title: MouseEvent
 slug: Web/API/MouseEvent
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -12,7 +13,7 @@ tags:
   - mouse
 browser-compat: api.MouseEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 The **`MouseEvent`** interface represents events that occur due to the user interacting with a pointing device (such as a mouse).
 Common events using this interface include {{domxref("Element/click_event", "click")}}, {{domxref("Element/dblclick_event", "dblclick")}}, {{domxref("Element/mouseup_event", "mouseup")}}, {{domxref("Element/mousedown_event", "mousedown")}}.
@@ -38,13 +39,17 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.button")}} {{readonlyinline}}
   - : The button number that was pressed (if applicable) when the mouse event was fired.
 - {{domxref("MouseEvent.buttons")}} {{readonlyinline}}
-  - : The buttons being depressed (if any) when the mouse event was fired.
+  - : The buttons being pressed (if any) when the mouse event was fired.
 - {{domxref("MouseEvent.clientX")}} {{readonlyinline}}
   - : The X coordinate of the mouse pointer in local (DOM content) coordinates.
 - {{domxref("MouseEvent.clientY")}} {{readonlyinline}}
   - : The Y coordinate of the mouse pointer in local (DOM content) coordinates.
 - {{domxref("MouseEvent.ctrlKey")}} {{readonlyinline}}
   - : Returns `true` if the <kbd>control</kbd> key was down when the mouse event was fired.
+- {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Returns the horizontal coordinate of the event relative to the current layer.
+- {{domxref("MouseEvent.layerY")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Returns the vertical coordinate of the event relative to the current layer.
 - {{domxref("MouseEvent.metaKey")}} {{readonlyinline}}
   - : Returns `true` if the <kbd>meta</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.movementX")}} {{readonlyinline}}
@@ -59,8 +64,6 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
   - : The X coordinate of the mouse pointer relative to the whole document.
 - {{domxref("MouseEvent.pageY")}} {{readonlyinline}}
   - : The Y coordinate of the mouse pointer relative to the whole document.
-- {{domxref("MouseEvent.region")}} {{readonlyinline}}
-  - : Returns the id of the hit region affected by the event. If no hit region is affected, `null` is returned.
 - {{domxref("MouseEvent.relatedTarget")}} {{readonlyinline}}
   - : The secondary target for the event, if there is one.
 - {{domxref("MouseEvent.screenX")}} {{readonlyinline}}
@@ -84,9 +87,9 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
 ## Constants
 
-- {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}}{{readonlyinline}}
+- {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}} {{readonlyinline}}
   - : Minimum force necessary for a normal click
-- {{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}} {{non-standard_inline}}{{readonlyinline}}
+- {{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}} {{non-standard_inline}} {{readonlyinline}}
   - : Minimum force necessary for a force click
 
 ## Methods

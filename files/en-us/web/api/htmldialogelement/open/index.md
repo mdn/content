@@ -1,6 +1,7 @@
 ---
 title: HTMLDialogElement.open
 slug: Web/API/HTMLDialogElement/open
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -20,16 +21,9 @@ The **`open`** property of the
 {{htmlattrxref("open", "dialog")}} HTML attribute, indicating whether the dialog is
 available for interaction.
 
-## Syntax
+## Value
 
-```js
-dialogInstance.open = true;
-var myOpenValue = dialogInstance.open;
-```
-
-### Value
-
-A boolean value representing the state of the {{htmlattrxref("open",
+A boolean value representing the state of the {{htmlattrxref("open",
   "dialog")}} HTML attribute. `true` means it is set, and therefore the dialog
 is shown. `false` means it not set, and therefore the dialog is not shown.
 
@@ -70,9 +64,9 @@ button.
 
   <script>
     (function() {
-      var updateButton = document.getElementById('updateDetails');
-      var cancelButton = document.getElementById('cancel');
-      var dialog = document.getElementById('favDialog');
+      const updateButton = document.getElementById('updateDetails');
+      const cancelButton = document.getElementById('cancel');
+      const dialog = document.getElementById('favDialog');
       dialog.returnValue = 'favAnimal';
 
       function openCheck(dialog) {
@@ -99,9 +93,8 @@ button.
   </script>
 ```
 
-> **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html)
-> ([see it live
-> also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
+> **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html)
+> ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
 ## Specifications
 

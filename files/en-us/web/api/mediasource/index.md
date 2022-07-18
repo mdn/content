@@ -1,6 +1,7 @@
 ---
 title: MediaSource
 slug: Web/API/MediaSource
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -31,7 +32,7 @@ The **`MediaSource`** interface of the [Media Source Extensions API](/en-US/docs
 - {{domxref("MediaSource.sourceBuffers")}} {{readonlyInline}}
   - : Returns a {{domxref("SourceBufferList")}} object containing the list of {{domxref("SourceBuffer")}} objects associated with this `MediaSource`.
 - {{domxref("MediaSource.activeSourceBuffers")}} {{readonlyInline}}
-  - : Returns a {{domxref("SourceBufferList")}} object containing a subset of the {{domxref("SourceBuffer")}} objects contained within {{domxref("MediaSource.sourceBuffers")}} — the list of objects providing the selected video track,  enabled audio tracks, and shown/hidden text tracks.
+  - : Returns a {{domxref("SourceBufferList")}} object containing a subset of the {{domxref("SourceBuffer")}} objects contained within {{domxref("MediaSource.sourceBuffers")}} — the list of objects providing the selected video track,  enabled audio tracks, and shown/hidden text tracks.
 - {{domxref("MediaSource.readyState")}} {{readonlyInline}}
   - : Returns an enum representing the state of the current `MediaSource`, whether it is not currently attached to a media element (`closed`), attached and ready to receive {{domxref("SourceBuffer")}} objects (`open`), or attached but the stream has been ended via {{domxref("MediaSource.endOfStream()")}} (`ended`.)
 - {{domxref("MediaSource.duration")}}
@@ -42,7 +43,7 @@ The **`MediaSource`** interface of the [Media Source Extensions API](/en-US/docs
 _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
 - {{domxref("MediaSource.addSourceBuffer()")}}
-  - : Creates a new {{domxref("SourceBuffer")}} of the given MIME type and adds it to the {{domxref("MediaSource.sourceBuffers")}} list.
+  - : Creates a new {{domxref("SourceBuffer")}} of the given MIME type and adds it to the {{domxref("MediaSource.sourceBuffers")}} list.
 - {{domxref("MediaSource.clearLiveSeekableRange()")}}
   - : Clears a seekable range previously set with a call to `setLiveSeekableRange()`.
 - {{domxref("MediaSource.endOfStream()")}}
@@ -71,15 +72,15 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 The following simple example loads a video with {{domxref("XMLHttpRequest")}}, playing it as soon as it can. This example was written by Nick Desaulniers and can be [viewed live here](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (you can also [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
 
 ```js
-var video = document.querySelector('video');
+const video = document.querySelector('video');
 
-var assetURL = 'frag_bunny.mp4';
+const assetURL = 'frag_bunny.mp4';
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
-var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
+const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
 if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
-  var mediaSource = new MediaSource();
+  const mediaSource = new MediaSource();
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
   mediaSource.addEventListener('sourceopen', sourceOpen);
@@ -89,8 +90,8 @@ if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
 
 function sourceOpen (_) {
   //console.log(this.readyState); // open
-  var mediaSource = this;
-  var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+  const mediaSource = this;
+  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, function (buf) {
     sourceBuffer.addEventListener('updateend', function (_) {
       mediaSource.endOfStream();
@@ -103,7 +104,7 @@ function sourceOpen (_) {
 
 function fetchAB (url, cb) {
   console.log(url);
-  var xhr = new XMLHttpRequest;
+  const xhr = new XMLHttpRequest;
   xhr.open('get', url);
   xhr.responseType = 'arraybuffer';
   xhr.onload = function () {

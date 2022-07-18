@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Masking
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.mask-repeat
@@ -37,6 +36,7 @@ mask-repeat: round repeat, space, repeat-x;
 mask-repeat: inherit;
 mask-repeat: initial;
 mask-repeat: revert;
+mask-repeat: revert-layer;
 mask-repeat: unset;
 ```
 

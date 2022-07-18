@@ -1,6 +1,7 @@
 ---
 title: Element.hasAttributes()
 slug: Web/API/Element/hasAttributes
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -18,13 +19,16 @@ attributes or not.
 ## Syntax
 
 ```js
-var result = element.hasAttributes();
+hasAttributes()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
-- `result`
-  - : holds the return value `true` or `false`.
+A boolean.
 
 ## Examples
 

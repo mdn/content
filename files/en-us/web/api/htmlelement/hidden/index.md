@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.hidden
 slug: Web/API/HTMLElement/hidden
+page-type: web-api-instance-property
 tags:
   - API
   - Attribute
@@ -38,20 +39,12 @@ Inappropriate use cases include:
 
 > **Note:** Elements that are not `hidden` must not link to elements which are.
 
-## Syntax
-
-```js
-isHidden = HTMLElement.hidden;
-
-HTMLElement.hidden = true | false;
-```
-
-### Value
+## Value
 
 A Boolean which is `true` if the element is hidden from view; otherwise, the
 value is `false`.
 
-## Example
+## Examples
 
 Here's an example where a hidden block is used to contain a thank you message that is
 displayed after a user agrees to an unusual request.
@@ -61,8 +54,8 @@ displayed after a user agrees to an unusual request.
 ```js
 document.getElementById("okButton")
         .addEventListener("click", function() {
-  document.getElementById("welcome").hidden = true;
-  document.getElementById("awesome").hidden = false;
+  document.getElementById("welcome").hidden = true;
+  document.getElementById("awesome").hidden = false;
 }, false);
 ```
 
@@ -128,7 +121,7 @@ h1 {
 
 ### Result
 
-{{ EmbedLiveSample('Example', 560, 200) }}
+{{ EmbedLiveSample('Examples', 560, 200) }}
 
 ## Specifications
 

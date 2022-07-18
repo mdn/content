@@ -16,8 +16,8 @@ For network layer context:
 
 - {{Interwiki("wikipedia", "Router (computing)")}} on Wikipedia
 
-For SPA in application layer context, most of the popular SPA frameworks has its routing library:
+For SPA in application layer context, most of the popular SPA frameworks have their routing libraries:
 
 - [Angular router](https://angular.io/guide/router)
-- [React router](https://reacttraining.com/react-router)
+- [React router](https://reactrouter.com/)
 - [Vue router](https://router.vuejs.org)

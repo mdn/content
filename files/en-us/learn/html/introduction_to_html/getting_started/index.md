@@ -44,7 +44,7 @@ In this article we cover the absolute basics of HTML. To get you started, this a
 
 ## What is HTML?
 
-{{glossary("HTML")}} (Hypertext Markup Language) is not a programming language. It is a _markup language_ that tells web browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML consists of a series of {{glossary("Element", "elements")}}, which you use to enclose, wrap, or _mark up_ different parts of content to make it appear or act in a certain way. The enclosing {{glossary("Tag", "tags")}} can make content into a hyperlink to connect to another page, italicize words, and so on. For example, consider the following line of text:
+{{glossary("HTML")}} (Hypertext Markup Language) is a _markup language_ that tells web browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML consists of a series of {{glossary("Element", "elements")}}, which you use to enclose, wrap, or _mark up_ different parts of content to make it appear or act in a certain way. The enclosing {{glossary("Tag", "tags")}} can make content into a hyperlink to connect to another page, italicize words, and so on. For example, consider the following line of text:
 
 ```
 My cat is very grumpy
@@ -223,7 +223,7 @@ The **tags have to open and close in a way that they are inside or outside one a
 There are two important categories of elements to know in HTML: block-level elements and inline elements.
 
 - Block-level elements form a visible block on a page. A block-level element appears on a new line following the content that precedes it. Any content that follows a block-level element also appears on a new line. Block-level elements are usually structural elements on the page. For example, a block-level element might represent headings, paragraphs, lists, navigation menus, or footers. A block-level element wouldn't be nested inside an inline element, but it might be nested inside another block-level element.
-- Inline elements are contained within block-level elements, and surround only small parts of the document’s content (not entire paragraphs or groupings of content). An inline element will not cause a new line to appear in the document. It is typically used with text, for example an {{htmlelement("a")}} element creates a hyperlink, and elements such as {{htmlelement("em")}} or {{htmlelement("strong")}} create emphasis.
+- Inline elements are contained within block-level elements, and surround only small parts of the document's content (not entire paragraphs or groupings of content). An inline element will not cause a new line to appear in the document. It is typically used with text, for example an {{htmlelement("a")}} element creates a hyperlink, and elements such as {{htmlelement("em")}} or {{htmlelement("strong")}} create emphasis.
 
 Consider the following example:
 
@@ -256,6 +256,8 @@ This would output the following:
 {{ EmbedLiveSample('Empty_elements', 700, 300, "", "") }}
 
 > **Note:** Empty elements are sometimes called _void elements_.
+
+> **Note:** In HTML, there is no requirement to add a `/` at the end of an empty element's tag, for example: `<img src="images/cat.jpg" alt="cat" />`. However, it is also a valid syntax and you may do this when you want your HTML to be valid XML.
 
 ## Attributes
 
@@ -430,7 +432,7 @@ As shorthand, it is acceptable to write this as follows:
 <input type="text">
 ```
 
-For reference, the example above also includes a non-disabled form input element.The HTML from the example above produces this result:
+For reference, the example above also includes a non-disabled form input element. The HTML from the example above produces this result:
 
 {{ EmbedLiveSample('Boolean_attributes', 700, 100, "", "") }}
 
@@ -531,7 +533,7 @@ If you want to experiment with writing some HTML on your local computer, you can
 3. Paste the code into the new text file.
 4. Save the file as `index.html`.
 
-> **Note:** You can also find this basic HTML template on the [MDN Learning Area Github repo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html).
+> **Note:** You can also find this basic HTML template on the [MDN Learning Area GitHub repo](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html).
 
 You can now open this file in a web browser to see what the rendered code looks like. Edit the code and refresh the browser to see what the result is. Initially the page looks like this:
 
@@ -747,14 +749,14 @@ At this point, you should understand what HTML looks like, and how it works at a
 
 ## See also
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 ## In this module
 
 - [Getting started with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [What’s in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [What's in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
 - [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
 - [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
 - [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)

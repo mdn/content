@@ -1,12 +1,14 @@
 ---
 title: 'USB: connect event'
 slug: Web/API/USB/connect_event
+page-type: web-api-event
 tags:
   - API
   - Event
   - Reference
   - USB
   - WebUSB
+  - Experimental
 browser-compat: api.USB.connect_event
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
@@ -46,7 +48,7 @@ navigator.usb.addEventListener('connect', event => {
 });
 ```
 
-Alternatively, you can use the `USB.onconnect` event handler property to establish a handler for the `connect` event:
+Alternatively, you can use the `USB.onconnect` event handler property to establish a handler for the `connect` event:
 
 ```js
 navigator.usb.onconnect = event => {

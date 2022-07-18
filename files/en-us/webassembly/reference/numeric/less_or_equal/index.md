@@ -14,7 +14,7 @@ The **`le`** instructions, short for *less or equal*, check if a number is less 
 
 The integer types have separate less or equal instructions for signed (**`le_s`**) and unsigned (**`le_u`**) numbers.
 
-{{EmbedInteractiveExample("pages/wat/le.html")}}
+{{EmbedInteractiveExample("pages/wat/le.html", "tabbed-taller")}}
 
 ## Syntax
 

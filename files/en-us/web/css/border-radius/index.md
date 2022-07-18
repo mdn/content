@@ -63,6 +63,7 @@ border-radius: 10px 5% / 20px 25em 30px 35em;
 border-radius: inherit;
 border-radius: initial;
 border-radius: revert;
+border-radius: revert-layer;
 border-radius: unset;
 ```
 

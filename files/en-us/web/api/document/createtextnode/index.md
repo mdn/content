@@ -1,6 +1,7 @@
 ---
 title: Document.createTextNode()
 slug: Web/API/Document/createTextNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -18,14 +19,19 @@ characters.
 ## Syntax
 
 ```js
-var text = document.createTextNode(data);
+createTextNode(data)
 ```
 
-- _text_ is a {{domxref("Text")}} node.
-- _data_ is a [string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
-  containing the data to be put in the text node.
+### Parameters
 
-## Example
+- `data`
+  - : A string containing the data to be put in the text node.
+
+### Return value
+
+A {{domxref("Text")}} node.
+
+## Examples
 
 ```html
 <!DOCTYPE html>
@@ -34,8 +40,8 @@ var text = document.createTextNode(data);
 <title>createTextNode example</title>
 <script>
 function addTextNode(text) {
-  var newtext = document.createTextNode(text),
-      p1 = document.getElementById("p1");
+  const newtext = document.createTextNode(text);
+  const p1 = document.getElementById("p1");
 
   p1.appendChild(newtext);
 }
@@ -54,7 +60,7 @@ function addTextNode(text) {
 </html>
 ```
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

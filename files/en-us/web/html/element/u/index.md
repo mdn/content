@@ -24,7 +24,7 @@ The **`<u>`** [HTML](/en-US/docs/Web/HTML) element represents a span of inline t
 
 {{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}
 
-See the {{anch("Usage notes")}} section for further details on when it's appropriate to use `<u>` and when it isn't.
+See the [Usage notes](#usage_notes) section for further details on when it's appropriate to use `<u>` and when it isn't.
 
 <table class="properties">
   <tbody>
@@ -213,4 +213,4 @@ cite {
 ## See also
 
 - The {{HTMLElement("span")}}, {{HTMLElement("i")}}, {{HTMLElement("em")}}, {{HTMLElement("b")}}, and {{HTMLElement("cite")}} elements should usually be used instead.
-- The CSS {{cssxref("text-decoration")}} property should be used for non-semantic underlining.
+- The CSS {{cssxref("text-decoration")}} property should be used for non-semantic underlining.

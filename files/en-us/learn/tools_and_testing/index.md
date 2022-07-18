@@ -21,7 +21,7 @@ tags:
 
 Once you've started to become comfortable programming with core web technologies (like HTML, CSS, and JavaScript), and you start to get more experience, read more resources, and learn more tips and tricks, you'll start to come across all kind of tools, from JavaScript frameworks, to testing and automation tools, and more besides. As your web projects become larger and more complex, you'll want to start taking advantage of some of these tools, working out a reliable toolchain to give your development process superpowers.
 
-On top of that, we still need to keep cross-browser support in the forefront of our minds, and make sure that our code follows best practices that allow our projects to work across different browsers and devices that our users are using to browse the Web, and be usable by people with disabilities.
+On top of that, we still need to keep cross-browser support in the forefront of our minds, and make sure that our code follows best practices that allow our projects to work across different browsers and devices that our users are using to browse the Web, and be usable by people with disabilities.
 
 Working out what tools you should be using can be a difficult process, so we have written this set of articles to inform you of what types of tool are available, what they can do for you, and how to make use of the current industry favorites.
 
@@ -38,7 +38,7 @@ Working out what tools you should be using can be a difficult process, so we hav
 
 ## Prerequisites
 
-You should really learn the basics of the core [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn/CSS), and [JavaScript](/en-US/docs/Learn/JavaScript) languages first before attempting to use many the tools detailed here. For example, you'll need to know the fundamentals of these languages before you start debugging problems in complex web code, making effective use of JavaScript frameworks, or writing tests and running them against your code using test runners.
+You should really learn the basics of the core [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn/CSS), and [JavaScript](/en-US/docs/Learn/JavaScript) languages first before attempting to use many of the tools detailed here. For example, you'll need to know the fundamentals of these languages before you start debugging problems in complex web code, making effective use of JavaScript frameworks, or writing tests and running them against your code using test runners.
 
 In addition, you should start with the first module in this topic, which gives a useful overview of the general area.
 

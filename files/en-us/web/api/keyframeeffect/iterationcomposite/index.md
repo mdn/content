@@ -1,6 +1,7 @@
 ---
 title: KeyframeEffect.iterationComposite
 slug: Web/API/KeyframeEffect/iterationComposite
+page-type: web-api-instance-property
 tags:
   - API
   - Animation
@@ -17,21 +18,13 @@ browser-compat: api.KeyframeEffect.iterationComposite
 
 The **`iterationComposite`** property of a {{domxref("KeyframeEffect")}} resolves how the animation's property value changes accumulate or override each other upon each of the animation's iterations.
 
-## Syntax
+## Value
 
-```js
-// getting
-var iterationCompositeEnumeration = keyframeEffect.iterationComposite;
+One of the followings:
 
-// setting
-keyframeEffect.iterationComposite = 'replace';
-```
-
-### Values
-
-- replace
+- `replace`
   - : The `keyframeEffect` value produced is independent of the current iteration.
-- accumulate
+- `accumulate`
   - : Subsequent iterations of the `keyframeEffect` build on the final value of the previous iteration.
 
 ## Specifications
@@ -45,4 +38,4 @@ keyframeEffect.iterationComposite = 'replace';
 ## See also
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
-- Property of both {{domxref("KeyframeEffect")}} objects.
+- Property of both {{domxref("KeyframeEffect")}} objects.

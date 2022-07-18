@@ -70,7 +70,7 @@ Storage partitions are keyed by the schemeful URL of the top-level {{glossary("S
 
 Generally, top-level documents are in unpartitioned storage, while third-party iframes are in partitioned storage. If a partition key cannot be determined, the default (unpartitioned storage) is used. For example, while all HTTP(S) sites can be used as a partition key, `moz-extension:-` URLs cannot. Therefore, iframes in Firefox's extension documents do not use partitioned storage.
 
-By default, {{WebExtAPIRef("cookies.get()")}}, {{WebExtAPIRef("cookies.getAll()")}}, {{WebExtAPIRef("cookies.set()")}}, and {{WebExtAPIRef("cookies.remove()")}} work with cookies in unpartitioned storage. To work with cookies in partitioned storage in these APIs, `topLevelSite` in `partitionKey` must be set. The exception is `getAll` where setting `partitionKey` without `topLevelSite` returned cookies in partitioned and unpartitioned storage. {{WebExtAPIRef("cookies.onChanged")}} fires for any cookie that the extension can access, including cookies in partitioned storage. To ensure that the correct cookie is modified, extensions should read the `cookie.partitionKey` property from the event and pass its value to {{WebExtAPIRef("cookies.set()")}} and {{WebExtAPIRef("cookies.remove()")}}.
+By default, {{WebExtAPIRef("cookies.get()")}}, {{WebExtAPIRef("cookies.getAll()")}}, {{WebExtAPIRef("cookies.set()")}}, and {{WebExtAPIRef("cookies.remove()")}} work with cookies in unpartitioned storage. To work with cookies in partitioned storage in these APIs, `topLevelSite` in `partitionKey` must be set. The exception is `getAll` where setting `partitionKey` without `topLevelSite` returns cookies in partitioned and unpartitioned storage. {{WebExtAPIRef("cookies.onChanged")}} fires for any cookie that the extension can access, including cookies in partitioned storage. To ensure that the correct cookie is modified, extensions should read the `cookie.partitionKey` property from the event and pass its value to {{WebExtAPIRef("cookies.set()")}} and {{WebExtAPIRef("cookies.remove()")}}.
 
 ### First-party isolation
 
@@ -121,7 +121,7 @@ When first-party isolation is off, the `firstPartyDomain` parameter is optional 
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/extensions/cookies) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 
 <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //

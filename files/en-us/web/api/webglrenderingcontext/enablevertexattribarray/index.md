@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.enableVertexAttribArray()
 slug: Web/API/WebGLRenderingContext/enableVertexAttribArray
+page-type: web-api-instance-method
 tags:
   - 3D
   - API
@@ -44,7 +45,7 @@ access the attribute, including {{domxref("WebGLRenderingContext.vertexAttribPoi
 ## Syntax
 
 ```js
-void gl.enableVertexAttribArray(index);
+enableVertexAttribArray(index)
 ```
 
 ### Parameters
@@ -57,7 +58,7 @@ void gl.enableVertexAttribArray(index);
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Errors
 
@@ -69,10 +70,9 @@ To check for errors after calling `enableVertexAttribArray()`, call
     the maximum number of entries permitted in the context's vertex attribute list, as
     indicated by the value of `WebGLRenderingContext.MAX_VERTEX_ATTRIBS`.
 
-## Example
+## Examples
 
-This code — a snippet taken from the full example [A basic 2D WebGL
-animation example](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example) — shows the use of `enableVertexArray()` to activate
+This code — a snippet taken from the full example [A basic 2D WebGL animation example](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example) — shows the use of `enableVertexArray()` to activate
 the attribute that will be used by the WebGL layer to pass individual vertexes from the
 vertex buffer into the vertex shader function.
 
@@ -89,8 +89,7 @@ gl.vertexAttribPointer(aVertexPosition, vertexNumComponents,
 gl.drawArrays(gl.TRIANGLES, 0, vertexCount);
 ```
 
-> **Note:** This code snippet is taken from [the
-> function `animateScene()`](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#drawing_and_animating_the_scene) in "A basic 2D WebGL animation example." See
+> **Note:** This code snippet is taken from [the function `animateScene()`](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#drawing_and_animating_the_scene) in "A basic 2D WebGL animation example." See
 > that article for the full sample and to see the resulting animation in action.
 
 This code sets the buffer of vertexes that will be used to draw the triangles of the
@@ -125,9 +124,7 @@ vertex shader, we're ready to draw the shape by calling
 ## See also
 
 - [Data in WebGL](/en-US/docs/Web/API/WebGL_API/Data)
-- [Adding
-  2D content to a WebGL context](/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context)
-- [A basic 2D WebGL
-  animation sample](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example)
+- [Adding 2D content to a WebGL context](/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context)
+- [A basic 2D WebGL animation sample](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example)
 - {{domxref("WebGLRenderingContext.disableVertexAttribArray",
     "disableVertexAttribArray()")}}

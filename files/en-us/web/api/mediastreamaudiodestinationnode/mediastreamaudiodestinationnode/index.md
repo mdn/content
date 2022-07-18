@@ -1,6 +1,7 @@
 ---
 title: MediaStreamAudioDestinationNode()
 slug: Web/API/MediaStreamAudioDestinationNode/MediaStreamAudioDestinationNode
+page-type: web-api-constructor
 tags:
   - API
   - Audio
@@ -17,41 +18,41 @@ The **`MediaStreamAudioDestinationNode()`** constructor of the [Web Audio API](/
 ## Syntax
 
 ```js
-var myAudioDest = new MediaStreamAudioDestinationNode(context, options);
+new MediaStreamAudioDestinationNode(context)
+new MediaStreamAudioDestinationNode(context, options)
 ```
 
 ### Parameters
 
-- _context_
+- `context`
   - : An {{domxref("AudioContext")}} representing the audio context you want the node to be associated with.
-- _options {{optional_inline}}_
+- `options` {{optional_inline}}
 
   - : An object defining the properties you want the `MediaStreamAudioDestinationNode` to have:
 
-    - `channelCount`: Represents an integer used to determine how many channels are used when [up-mixing
-      and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. (See
-      {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
-      definition depend on the value of `channelCountMode`.
-    - `channelCountMode`: Represents an enumerated value describing the way channels must be matched between
-      the node's inputs and outputs. (See {{domxref("AudioNode.channelCountMode")}} for more
-      information including default values.)
-    - `channelInterpretation`: Represents an enumerated value describing the meaning of the channels. This
-      interpretation will define how audio [up-mixing
-      and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
-      The possible values are `"speakers"` or `"discrete"`. (See
-      {{domxref("AudioNode.channelCountMode")}} for more information including default
-      values.)
+    - `channelCount`
+      - : An integer used to determine how many channels are used when
+        [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing)
+        connections to any inputs to the node. (See
+        {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
+        definition depend on the value of `channelCountMode`.
+    - `channelCountMode`
+      - : A string describing the way channels must be matched between
+        the node's inputs and outputs. (See {{domxref("AudioNode.channelCountMode")}} for more
+        information including default values.)
+    - `channelInterpretation`
+      - : A string describing the meaning of the channels. This interpretation will define how audio
+        [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing)
+        will happen. The possible values are `"speakers"` or `"discrete"`. (See
+        {{domxref("AudioNode.channelCountMode")}} for more information including default
+        values.)
 
-### Return value
-
-A new {{domxref("MediaStreamAudioDestinationNode")}} object instance.
-
-## Example
+## Examples
 
 ```js
-var ac = new AudioContext();
+const ac = new AudioContext();
 
-var myDestination = new MediaStreamAudioDestinationNode(ac);
+const myDestination = new MediaStreamAudioDestinationNode(ac);
 ```
 
 ## Specifications

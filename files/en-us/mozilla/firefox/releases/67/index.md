@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 67 that will affect developers. Firefox 67 was released on May 21, 2019.
+This article provides information about the changes in Firefox 67 that will affect developers. Firefox 67 was released on May 21, 2019.
 
 ## Changes for web developers
 
@@ -17,12 +17,12 @@ This article provides information about the changes in Firefox 67 that will af
 
 - Debugger updates:
 
-  - [Column breakpoints](/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint) allow you to select the specific point (or column) in a line of code where you want the debugger to break ({{bug(1528417)}}).
-  - [Log points](/en-US/docs/Tools/Debugger/Set_a_logpoint) allow you to log specific information to the console during code execution without pausing execution and without the need to change the code.
-  - The [map scopes feature](/en-US/docs/Tools/Debugger/Using_the_Debugger_map_scopes_feature) allows you to view the variables from the original source.
+  - [Column breakpoints](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/set_a_breakpoint/index.html) allow you to select the specific point (or column) in a line of code where you want the debugger to break ({{bug(1528417)}}).
+  - [Log points](https://firefox-source-docs.mozilla.org/devtools-user/debugger/set_a_logpoint/index.html) allow you to log specific information to the console during code execution without pausing execution and without the need to change the code.
+  - The [map scopes feature](https://firefox-source-docs.mozilla.org/devtools-user/debugger/using_the_debugger_map_scopes_feature/index.html) allows you to view the variables from the original source.
   - You can [debug worker](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#debugging_worker_threads) threads directly in the debugger.
 
-- [Web Console](/en-US/docs/Tools/Web_Console) updates:
+- [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) updates:
 
   - Navigate details in the console using the keyboard ({{bug(1424159)}}).
   - Cmd + K will now clear the console of its contents on macOS ({{bug(1532939)}}).
@@ -33,24 +33,24 @@ This article provides information about the changes in Firefox 67 that will af
   - Clicking the source link for a code file in the Console panel navigates to the Debugger if debugger knows the file ({{bug(1447244)}}).
   - When the user has filtered the contents of the console, an icon will be added to the filter text box to clear the filter ({{bug(1525821)}}).
 
-- [Network Monitor](/en-US/docs/Tools/Network_Monitor) enhancements:
+- [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) enhancements:
 
-  - The [Header](/en-US/docs/Tools/Network_Monitor/request_details#headers) panel of the Network monitor will now display a notification for resources belonging to a known tracker ({{bug(1485416)}}).
-  - In the Network monitor [request columns](/en-US/docs/Tools/Network_Monitor/request_list#network_request_columns), you can control the visible columns and column sorting. The context menu now includes a command to restore the list sort parameters to the default ({{bug(1454962)}}).
-  - You can change the [width of the columns](/en-US/docs/Tools/Network_Monitor/request_list#network_request_columns) in the Network Monitor to suit your workflow ({{bug(1358414)}}).
+  - The [Header](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#headers) panel of the Network monitor will now display a notification for resources belonging to a known tracker ({{bug(1485416)}}).
+  - In the Network monitor [request columns](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#network-request-columns), you can control the visible columns and column sorting. The context menu now includes a command to restore the list sort parameters to the default ({{bug(1454962)}}).
+  - You can change the [width of the columns](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#network-request-columns) in the Network Monitor to suit your workflow ({{bug(1358414)}}).
 
 #### Removals
 
-- The following Developer Tools panels have been removed (see [Deprecated tools](/en-US/docs/Tools/Deprecated_tools) for details):
+- The following Developer Tools panels have been removed (see [Deprecated tools](https://firefox-source-docs.mozilla.org/devtools-user/deprecated_tools/index.html) for details):
 
   - Canvas debugger ({{bug(1403938)}}).
   - Shader editor ({{bug(1342237)}}).
   - WebAudio editor ({{bug(1403944)}}).
 
-- The following Developer Tools have been deprecated (see [Deprecated tools](/en-US/docs/Tools/Deprecated_tools) for details):
+- The following Developer Tools have been deprecated (see [Deprecated tools](https://firefox-source-docs.mozilla.org/devtools-user/deprecated_tools/index.html) for details):
 
   - WebIDE ({{bug(1539462)}}).
-  - Connect... page ({{bug(1539462)}}).
+  - Connect… page ({{bug(1539462)}}).
 
 ### HTML
 
@@ -109,7 +109,7 @@ _No changes._
 
 #### Removals
 
-- The deprecated `ShadowRoot.getElementsByTagName`, `ShadowRoot.getElementsByTagNameNS`, and `ShadowRoot.getElementsByClassName` properties (part of Shadow DOM v0) have been removed ({{bug(1535438)}}).
+- The deprecated `ShadowRoot.getElementsByTagName`, `ShadowRoot.getElementsByTagNameNS`, and `ShadowRoot.getElementsByClassName` properties (part of Shadow DOM v0) have been removed ({{bug(1535438)}}).
 - [`document.createEvent("TouchEvent")`](/en-US/docs/Web/API/Document/createEvent), {{domxref("document.createTouch()")}}, {{domxref("document.createTouchList()")}}, and the `ontouch*` event handler properties have been disabled on desktop to improve web compatibility on websites where touch support is used for mobile detection ({{bug(1412485)}}). In such cases, websites have been seen to behave incorrectly or unexpectedly on touchscreen laptops.
 
 ### Security

@@ -29,6 +29,7 @@ flex-shrink: 0.6;
 flex-shrink: inherit;
 flex-shrink: initial;
 flex-shrink: revert;
+flex-shrink: revert-layer;
 flex-shrink: unset;
 ```
 

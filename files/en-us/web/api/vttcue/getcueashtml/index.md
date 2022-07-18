@@ -1,6 +1,7 @@
 ---
 title: VTTCue.getCueAsHTML()
 slug: Web/API/VTTCue/getCueAsHTML
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,7 +17,7 @@ The **`getCueAsHTML()`** method of the {{domxref("VTTCue")}} interface returns a
 ## Syntax
 
 ```js
-VTTCue.getCueAsHTML();
+getCueAsHTML()
 ```
 
 ### Parameters

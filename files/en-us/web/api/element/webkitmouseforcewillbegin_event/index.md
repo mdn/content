@@ -1,6 +1,7 @@
 ---
 title: 'Element: webkitmouseforcewillbegin event'
 slug: Web/API/Element/webkitmouseforcewillbegin_event
+page-type: web-api-event
 tags:
   - API
   - Element
@@ -21,7 +22,7 @@ browser-compat: api.Element.webkitmouseforcewillbegin_event
 ---
 {{APIRef}}{{Non-standard_header()}}
 
-Safari for macOS fires the non-standard **`webkitmouseforcewillbegin`** event at an {{domxref("Element")}} before firing the initial {{event("mousedown")}} event.
+Safari for macOS fires the non-standard **`webkitmouseforcewillbegin`** event at an {{domxref("Element")}} before firing the initial {{domxref("Element/mousedown_event", "mousedown")}} event.
 
 This offers the opportunity to tell the system not to trigger any default Force Touch actions if and when the click turns into a [Force Touch event](/en-US/docs/Web/API/Force_Touch_events).
 
@@ -48,7 +49,7 @@ To instruct macOS not to engage any default Force Touch actions if the user appl
 
 ## Specifications
 
-_Not part of any specification._ Apple has [a description at the Mac Developer Library](https://developer.apple.com/library/prerelease/mac/documentation/AppleApplications/Conceptual/SafariJSProgTopics/RespondingtoForceTouchEventsfromJavaScript.html).
+_Not part of any specification._ Apple has [a description at the Mac Developer Library](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/SafariJSProgTopics/RespondingtoForceTouchEventsfromJavaScript.html).
 
 ## Browser compatibility
 

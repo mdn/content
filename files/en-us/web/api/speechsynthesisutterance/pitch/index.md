@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisUtterance.pitch
 slug: Web/API/SpeechSynthesisUtterance/pitch
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -18,14 +19,7 @@ The **`pitch`** property of the {{domxref("SpeechSynthesisUtterance")}} interfac
 
 If unset, a default value of 1 will be used.
 
-## Syntax
-
-```js
-// default 1
-speechSynthesisUtteranceInstance.pitch = 1.5;
-```
-
-### Value
+## Value
 
 A float representing the pitch value.
 It can range between 0 (lowest) and 2 (highest), with 1 being the default pitch for the current platform or voice. Some speech synthesis engines or voices may constrain the minimum and maximum rates further.
@@ -34,22 +28,22 @@ If [SSML](https://www.w3.org/TR/speech-synthesis/) is used, this value will be o
 ## Examples
 
 ```js
-var synth = window.speechSynthesis;
+const synth = window.speechSynthesis;
 
-var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('input');
-var voiceSelect = document.querySelector('select');
+const inputForm = document.querySelector('form');
+const inputTxt = document.querySelector('input');
+const voiceSelect = document.querySelector('select');
 
-var voices = synth.getVoices();
+const voices = synth.getVoices();
 
-  ...
+// ...
 
 inputForm.onsubmit = function(event) {
   event.preventDefault();
 
-  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
+  const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
+  const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+  for(let i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }

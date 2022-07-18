@@ -1,6 +1,7 @@
 ---
 title: MSManipulationEvent
 slug: Web/API/MSManipulationEvent
+page-type: web-api-interface
 tags:
   - API
   - API:Microsoft Extensions
@@ -11,7 +12,7 @@ tags:
   - Non-standard
   - Reference
 ---
-{{APIRef("Microsoft Extensions")}}{{Non-standard_Header}}
+{{APIRef("UI Events")}}{{Non-standard_Header}}
 
 **`MSManipulationEvent`** provides contextual information when contact is made to the screen and an element is manipulated.
 
@@ -23,20 +24,20 @@ This proprietary method is specific to Internet Explorer.
 
 ### Methods
 
-{{DOMxRef("MSManipulationEvent.initMSManipulationEvent()")}}: Used to create a manipulation event that can be called from JavaScript.
+{{DOMxRef("MSManipulationEvent.initMSManipulationEvent()")}}: Used to create a manipulation event that can be called from JavaScript.
 
 ### Properties
 
 | Property                                      | Description                                                                          |
 | --------------------------------------------- | ------------------------------------------------------------------------------------ |
-| `currentState`{{ReadOnlyInline}}        | Returns the current state of a manipulation event.                                   |
-| `inertiaDestinationX`{{ReadOnlyInline}} | Represents the predicted horizontal scroll offset after the inertia phase completes. |
-| `inertiaDestinationY`{{ReadOnlyInline}} | Represents the predicted vertical scroll offset after the inertia phase completes.   |
-| `lastState`{{ReadOnlyInline}}           | Returns the last state after a manipulation change event.                            |
+| `currentState` {{ReadOnlyInline}}        | Returns the current state of a manipulation event.                                   |
+| `inertiaDestinationX` {{ReadOnlyInline}} | Represents the predicted horizontal scroll offset after the inertia phase completes. |
+| `inertiaDestinationY` {{ReadOnlyInline}} | Represents the predicted vertical scroll offset after the inertia phase completes.   |
+| `lastState` {{ReadOnlyInline}}           | Returns the last state after a manipulation change event.                            |
 
 ## Example
 
-```js
+```
 interface MSManipulationEvent extends UIEvent {
     readonly currentState: number;
     readonly inertiaDestinationX: number;

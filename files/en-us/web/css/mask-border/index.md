@@ -43,6 +43,7 @@ mask-border: url('border-mask.png') 25 / 35px / 12px space alpha;
 mask-border: inherit;
 mask-border: initial;
 mask-border: revert;
+mask-border: revert-layer;
 mask-border: unset;
 ```
 

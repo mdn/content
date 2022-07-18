@@ -1,6 +1,7 @@
 ---
 title: SVGFETileElement
 slug: Web/API/SVGFETileElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

@@ -13,14 +13,14 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.connectNative
 ---
-{{AddonSidebar()}}Connects the extension to a native application on the user's computer.This takes the name of a native application as a parameter. It starts the native application and returns a {{WebExtAPIRef("runtime.Port")}} object to the caller.The caller can then use the `Port` to exchange messages with the native application using `Port.postMessage()` and `port.onMessage`.The native application will run until it exits itself, or the caller calls `Port.disconnect()`, or the page that created the `Port` is destroyed. Once the `Port` is disconnected the browser will give the process a few seconds to exit gracefully, and then kill it if it has not exited.
+{{AddonSidebar()}}Connects the extension to a native application on the user's computer. This takes the name of a native application as a parameter. It starts the native application and returns a {{WebExtAPIRef("runtime.Port")}} object to the caller. The caller can then use the `Port` to exchange messages with the native application using `Port.postMessage()` and `port.onMessage`. The native application will run until it exits itself, or the caller calls `Port.disconnect()`, or the page that created the `Port` is destroyed. Once the `Port` is disconnected the browser will give the process a few seconds to exit gracefully, and then kill it if it has not exited.
 
 For more information, see [Native messaging](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging).
 
 ## Syntax
 
 ```js
-var port = browser.runtime.connectNative(
+let port = browser.runtime.connectNative(
   application // string
 )
 ```
@@ -46,7 +46,7 @@ This example connects to the native application "ping_pong" and starts listening
 /*
 On startup, connect to the "ping_pong" app.
 */
-var port = browser.runtime.connectNative("ping_pong");
+let port = browser.runtime.connectNative("ping_pong");
 
 /*
 Listen for messages from the app.
@@ -66,7 +66,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-connectNative) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-connectNative) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

@@ -1,6 +1,7 @@
 ---
 title: XREquirectLayer
 slug: Web/API/XREquirectLayer
+page-type: web-api-interface
 tags:
   - API
   - AR
@@ -41,7 +42,7 @@ _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 - {{domxref("XREquirectLayer.radius")}}
   - : A number indicating the radius of the sphere.
 - {{domxref("XREquirectLayer.space")}}
-  - : An {{domxref("XRSpace")}} representing the layer's spatial relationship with the user’s physical environment.
+  - : An {{domxref("XRSpace")}} representing the layer's spatial relationship with the user's physical environment.
 - {{domxref("XREquirectLayer.transform")}}
   - : An {{domxref("XRRigidTransform")}} representing the offset and orientation relative to `space`.
 - {{domxref("XREquirectLayer.upperVerticalAngle")}}

@@ -1,6 +1,7 @@
 ---
 title: BluetoothCharacteristicProperties.reliableWrite
 slug: Web/API/BluetoothCharacteristicProperties/reliableWrite
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth
@@ -21,13 +22,7 @@ the {{domxref("BluetoothCharacteristicProperties")}} interface returns a
 `boolean` that is `true` if reliable writes to the characteristic
 is permitted.
 
-## Syntax
-
-```js
-var aBoolean = BluetoothCharacteristicProperties.reliableWrite;
-```
-
-### Value
+## Value
 
 A boolean value
 

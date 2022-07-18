@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var removing = browser.cookies.remove(
+let removing = browser.cookies.remove(
   details               // object
 )
 ```
@@ -35,25 +35,25 @@ var removing = browser.cookies.remove(
 
   - : An `object` containing information to identify the cookie to remove. It contains the following properties:
 
-    - `firstPartyDomain`{{optional_inline}}
+    - `firstPartyDomain` {{optional_inline}}
       - : A `string` representing the first-party domain with which the cookie to remove is associated. This property must be supplied if the browser has first-party isolation enabled. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
     - `name`
       - : A `string` representing the name of the cookie to remove.
-    - `partitionKey`{{optional_inline}}
+    - `partitionKey` {{optional_inline}}
 
-      - : An `object` representing the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#Storage_partitioning) containing the cookie. Include this object to remove a cookie from partitioned storage. This object contains:
+      - : An `object` representing the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) containing the cookie. Include this object to remove a cookie from partitioned storage. This object contains:
 
-        - `topLevelSite`{{optional_inline}}
+        - `topLevelSite` {{optional_inline}}
           - : A `string` representing the first-party URL of the top-level site storage partition containing the cookie.
 
-    - `storeId`{{optional_inline}}
+    - `storeId` {{optional_inline}}
       - : A `string` representing the ID of the cookie store to find the cookie in. If unspecified, the cookie is looked for by default in the current execution context's cookie store.
     - `url`
       - : A `string` representing the URL associated with the cookie. If the extension does not have [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for this URL, the API call will fail.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('cookies.Cookie')}} object containing details about the cookie that's been removed. If a cookie matching the `details` parameter could not be found, the promise is fulfilled with `null`.  If the call fails for any reason, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('cookies.Cookie')}} object containing details about the cookie that's been removed. If a cookie matching the `details` parameter could not be found, the promise is fulfilled with `null`.  If the call fails for any reason, the promise will be rejected with an error message.
 
 ## Browser compatibility
 
@@ -73,20 +73,20 @@ function onError(error) {
 }
 
 function removeCookie(tabs) {
-  var removing = browser.cookies.remove({
+  let removing = browser.cookies.remove({
     url: tabs[0].url,
     name: "favorite-color"
   });
   removing.then(onRemoved, onError);
 }
 
-var getActive = browser.tabs.query({active: true, currentWindow: true});
+let getActive = browser.tabs.query({active: true, currentWindow: true});
 getActive.then(removeCookie);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#method-remove) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#method-remove) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

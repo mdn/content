@@ -1,6 +1,7 @@
 ---
 title: TextDecoderStream.encoding
 slug: Web/API/TextDecoderStream/encoding
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,17 +12,11 @@ browser-compat: api.TextDecoderStream.encoding
 ---
 {{APIRef("Encoding API")}}
 
-The **`encoding`** read-only property of the {{domxref("TextDecoderStream")}} interface returns a {{DOMxRef("DOMString")}} containing the name of the encoding algorithm used by the specific encoder.
+The **`encoding`** read-only property of the {{domxref("TextDecoderStream")}} interface returns a string containing the name of the encoding algorithm used by the specific encoder.
 
-## Syntax
+## Value
 
-```js
-var encoding = TextDecoderStream.encoding;
-```
-
-### Value
-
-A {{DOMxRef("DOMString")}}, ASCII lowercased.
+A string, ASCII lowercased.
 
 ## Examples
 

@@ -18,8 +18,8 @@ The **`handler.has()`** method is a trap for the
 ## Syntax
 
 ```js
-const p = new Proxy(target, {
-  has: function(target, prop) {
+new Proxy(target, {
+  has(target, prop) {
   }
 });
 ```
@@ -32,7 +32,7 @@ bound to the handler.
 - `target`
   - : The target object.
 - `prop`
-  - : The name or {{jsxref("Symbol")}} of the property to check for existence.
+  - : The name or {{jsxref("Symbol")}} of the property to check for existence.
 
 ### Return value
 
@@ -70,7 +70,7 @@ The following code traps the {{jsxref("Operators/in", "in")}} operator.
 
 ```js
 const p = new Proxy({}, {
-  has: function(target, prop) {
+  has(target, prop) {
     console.log('called: ' + prop);
     return true;
   }
@@ -87,7 +87,7 @@ const obj = { a: 10 };
 Object.preventExtensions(obj);
 
 const p = new Proxy(obj, {
-  has: function(target, prop) {
+  has(target, prop) {
     return false;
   }
 });

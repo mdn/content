@@ -1,6 +1,7 @@
 ---
 title: XRRay()
 slug: Web/API/XRRay/XRRay
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -27,7 +28,7 @@ new XRRay(transform)
 - `origin` {{optional_inline}}
   - : A point object defining the 3-dimensional point in space that the ray originates from, in meters. All dimensions are optional, however, if provided, the origin's `w` property must be 1.0. The object is initialized to `{ x: 0.0, y: 0.0, z: 0.0, w: 1.0 }` by default.
 - `direction` {{optional_inline}}
-  - : A vector object defining the ray’s 3-dimensional directional vector. All dimensions are optional, however, if provided, the direction's `w` property must be 0.0. The object is initialized to: `{ x: 0.0, y: 0.0, z: -1.0, w: 0.0 }` by default.
+  - : A vector object defining the ray's 3-dimensional directional vector. All dimensions are optional, however, if provided, the direction's `w` property must be 0.0. The object is initialized to: `{ x: 0.0, y: 0.0, z: -1.0, w: 0.0 }` by default.
 - `transform` {{optional_inline}}
   - : An {{domxref("XRRigidTransform")}} object representing the position and orientation of the ray.
 
@@ -37,13 +38,13 @@ A newly-created {{domxref("XRRay")}} object.
 
 ### Exceptions
 
-A `TypeError` is thrown,
+- {{jsxref("TypeError")}}
+  - : Thrown if one of the following conditions is met:
+    - all of `direction`'s `x`, `y`, and `z` coordinates are zero.
+    - `direction`'s `w` coordinate is not 0.0.
+    - `origin`'s `w` coordinate is not 1.0.
 
-- if all of `direction`'s `x`, `y`, and `z` coordinates are zero.
-- if `direction`'s `w` coordinate is not 0.0.
-- if `origin`'s `w` coordinate is not 1.0.
-
-## Example
+## Examples
 
 ### Creating `XRRay` objects
 

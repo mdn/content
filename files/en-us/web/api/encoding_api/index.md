@@ -1,17 +1,21 @@
 ---
 title: Encoding API
 slug: Web/API/Encoding_API
+page-type: web-api-overview
 tags:
   - API
   - Encoding
   - Overview
   - Reference
+browser-compat:
+  - api.TextDecoder
+  - api.TextEncoder
 ---
 {{DefaultAPISidebar("Encoding API")}}
 
 The **Encoding API** provides a mechanism for handling text in various {{Glossary("character encoding", "character encodings")}}, including legacy non-{{Glossary("UTF-8")}} encodings.
 
-The API provides four interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEncoder")}}, {{domxref("TextDecoderStream")}} and {{domxref("TextEncoderStream")}}.
+The API provides four interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEncoder")}}, {{domxref("TextDecoderStream")}} and {{domxref("TextEncoderStream")}}.
 
 {{AvailableInWorkers}}
 
@@ -22,22 +26,14 @@ The API provides four interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEnc
 - {{DOMxRef("TextDecoderStream")}}
 - {{DOMxRef("TextEncoderStream")}}
 
-## Polyfill
-
-- A [shim](https://code.google.com/p/stringencoding/) allowing to use this interface in browsers that don't support it.
-
 ## Specifications
 
-| Specification                    | Status                       | Comment             |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName("Encoding")}} | {{Spec2("Encoding")}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `TextDecoder`
+{{Compat}}
 
-{{Compat("api.TextDecoder")}}
+## See also
 
-### `TextEncoder`
-
-{{Compat("api.TextEncoder")}}
+- A [shim](https://github.com/inexorabletash/text-encoding) allowing to use this interface in browsers that don't support it

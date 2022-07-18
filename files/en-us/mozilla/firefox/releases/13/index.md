@@ -27,8 +27,8 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 
 ### JavaScript
 
-- Support for the ECMAScript 2015 [`for..of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) construct has been added.
-- Experimental support for ECMAScript 2015 [Map](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) and [Set](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) objects has been implemented.
+- Support for the ECMAScript 2015 [`for..of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) construct has been added.
+- Experimental support for ECMAScript 2015 [Map](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) and [Set](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) objects has been implemented.
 
 ### DOM
 
@@ -37,7 +37,7 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 - The {{domxref("Blob","Blob.mozSlice()")}} method has been unprefixed.
 - Support for the {{domxref("Blob")}} constructor has been added.
 - Support for `globalStorage` has been removed.
-- The new {{domxref("DOMRequest")}} interface, used for reporting the status and result of background operations, has been added.
+- The new `DOMRequest` interface, used for reporting the status and result of background operations, has been added.
 - The {{domxref("HTMLOptionElement", "HTMLOptionElement.index()")}} method now returns `0` instead of the incorrect `-1` when the {{HTMLElement("option")}} is inside a {{HTMLElement("datalist")}} HTML element.
 - {{domxref("DOMException")}} as defined in DOM Level 4 has been implemented.
 - The {{domxref("FileError")}} interface has been removed in favor of the {{domxref("DOMError")}} interface as defined in the latest FileAPI specification.
@@ -47,7 +47,7 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 
 ### UA string
 
-- Firefox for Android now has a [Tablet or Mobile token in the UA string](/en-US/docs/Gecko_user_agent_string_reference#Mobile_and_Tablet_indicators) to indicate the form factor and no longer has the Fennec token. Also, the number after "Gecko/" is now the Gecko version number instead of a frozen date.
+- Firefox for Android now has a [Tablet or Mobile token in the UA string](/en-US/docs/Gecko_user_agent_string_reference#mobile_and_tablet_indicators) to indicate the form factor and no longer has the Fennec token. Also, the number after "Gecko/" is now the Gecko version number instead of a frozen date.
 - The UA string no longer exposes the Gecko patch number or release status in the version number; that is, the version number is now always of the form "X.Y", where X is the major release number and Y the minor. For example, "13.0" or "14.1". It will no longer be something like "14.0.1b1".
 
 ### SVG
@@ -75,13 +75,13 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 
 #### Style panel improvements
 
-- Clicking the heading for any rule in the [style panel](/en-US/docs/Tools/Page_Inspector#css_pane) now opens the [Style Editor](/en-US/docs/Tools/Style_Editor) at the corresponding CSS.
-- Right-clicking on a rule in the [style panel](/en-US/docs/Tools/Page_Inspector#css_pane) now offers an option to copy the rule to the clipboard.
+- Clicking the heading for any rule in the [style panel](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#css-pane) now opens the [Style Editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) at the corresponding CSS.
+- Right-clicking on a rule in the [style panel](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#css-pane) now offers an option to copy the rule to the clipboard.
 - Entering an unknown property name, or an illegal property value, displays a warning icon next to that property.
 
 #### Scratchpad improvements
 
-- The [Scratchpad](/en-US/docs/Tools/Scratchpad) now has an option in the Help menu to take you to the MDN documentation about Scratchpad.
+- The _Scratchpad_ now has an option in the Help menu to take you to the MDN documentation about Scratchpad.
 
 ## Changes for Mozilla and add-on developers
 
@@ -106,11 +106,11 @@ Starting in Firefox 13, Firefox for Windows requires at least Windows XP Service
 
 ### Interfaces
 
-- The {{interface("nsIScreen")}} interface now supports controlling rotation through the new `rotation` attribute.
-- The {{interface("nsIPrefBranch2")}} interface has been merged into {{interface("nsIPrefBranch")}} ({{bug("718255")}}).
-- The new message manager wakeup service, implemented by {{interface("nsIMessageWakeupService")}}, has been implemented. See {{bug(591052)}}.
-- The aliases `MozOpacity`, `MozOutline`, `MozOutlineStyle`, `MozOutlineWidth`, `MozOutlineOffset`, and `MozOutlineColor`, all of which were removed in previous versions of Gecko, have been removed from {{interface("nsIDOMCSS2Properties")}}, which should have been done with the aliases were initially removed.
-- The {{interface("nsINavHistoryQueryOptions")}} attribute `excludeItemIfParentHasAnnotation` has been removed, along with the corresponding query operation. It existed to support livemarks, which no longer exist.
+- The `nsIScreen` interface now supports controlling rotation through the new `rotation` attribute.
+- The `nsIPrefBranch2` interface has been merged into `nsIPrefBranch` ({{bug("718255")}}).
+- The new message manager wakeup service, implemented by `nsIMessageWakeupService`, has been implemented. See {{bug(591052)}}.
+- The aliases `MozOpacity`, `MozOutline`, `MozOutlineStyle`, `MozOutlineWidth`, `MozOutlineOffset`, and `MozOutlineColor`, all of which were removed in previous versions of Gecko, have been removed from `nsIDOMCSS2Properties`, which should have been done with the aliases were initially removed.
+- The `nsINavHistoryQueryOptions` attribute `excludeItemIfParentHasAnnotation` has been removed, along with the corresponding query operation. It existed to support livemarks, which no longer exist.
 
 ## See also
 

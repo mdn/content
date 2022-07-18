@@ -1,6 +1,7 @@
 ---
 title: SVGFEComponentTransferElement
 slug: Web/API/SVGFEComponentTransferElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

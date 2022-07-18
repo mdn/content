@@ -23,37 +23,33 @@ Refer to [any CSS property](/en-US/docs/Web/CSS/Reference#keyword_index) definit
 
 When no value for an **inherited property** has been specified on an element, the element gets the [computed value](/en-US/docs/Web/CSS/computed_value) of that property on its parent element. Only the root element of the document gets the [initial value](/en-US/docs/Web/CSS/initial_value) given in the property's summary.
 
-A typical example of an inherited property is the {{ Cssxref("color") }} property. Given the style rules:
+A typical example of an inherited property is the {{ Cssxref("color") }} property. Consider the following style rules and the markup:
 
 ```css
 p { color: green; }
 ```
 
-... and the markup:
-
 ```html
 <p>This paragraph has <em>emphasized text</em> in it.</p>
 ```
 
-... the words "emphasized text" will appear green, since the `em` element has inherited the value of the {{ Cssxref("color") }} property from the `p` element. It does _not_ get the initial value of the property (which is the color that is used for the root element when the page specifies no color).
+The words "emphasized text" will appear green, since the `em` element has inherited the value of the {{ Cssxref("color") }} property from the `p` element. It does _not_ get the initial value of the property (which is the color that is used for the root element when the page specifies no color).
 
 ## Non-inherited properties
 
 When no value for a **non-inherited property** has been specified on an element, the element gets the [initial value](/en-US/docs/Web/CSS/initial_value) of that property (as specified in the property's summary).
 
-A typical example of a non-inherited property is the {{ Cssxref("border") }} property. Given the style rules:
+A typical example of a non-inherited property is the {{ Cssxref("border") }} property.  Consider the following style rules and the markup:
 
 ```css
  p { border: medium solid; }
 ```
 
-... and the markup:
-
 ```html
   <p>This paragraph has <em>emphasized text</em> in it.</p>
 ```
 
-... the words "emphasized text" will not have a border (since the initial value of {{ Cssxref("border-style") }} is `none`).
+The words "emphasized text" will not have a border (since the initial value of {{ Cssxref("border-style") }} is `none`).
 
 ## Notes
 
@@ -73,7 +69,7 @@ This reverts the style of the paragraphs' {{cssxref("font")}} property to the us
 
 ## See also
 
-- CSS values for controlling inheritance: {{ cssxref("inherit") }}, {{cssxref("initial")}}, {{cssxref("unset")}}, and {{cssxref("revert")}}
+- CSS values for controlling inheritance: {{ cssxref("inherit") }}, {{cssxref("initial")}}, {{cssxref("revert")}}, {{cssxref("revert-layer")}}, and {{cssxref("unset")}}
 - [Introducing the CSS cascade](/en-US/docs/Web/CSS/Cascade)
 - [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 - {{ CSS_key_concepts() }}

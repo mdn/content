@@ -21,7 +21,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingPanel = browser.sidebarAction.getPanel(
+let gettingPanel = browser.sidebarAction.getPanel(
   details               // object
 )
 ```
@@ -32,7 +32,7 @@ var gettingPanel = browser.sidebarAction.getPanel(
 
   - : `object`. An object with the following properties:
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Get the panel for the sidebar specific to the given tab.
     - `windowId` {{optional_inline}}
       - : `integer`. Get the panel for the sidebar specific to the given window.
@@ -63,7 +63,7 @@ function onGot(sidebarUrl) {
   console.log(sidebarUrl);
 }
 
-var gettingPanel = browser.sidebarAction.getPanel({});
+let gettingPanel = browser.sidebarAction.getPanel({});
 gettingPanel.then(onGot);
 ```
 

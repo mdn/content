@@ -1,6 +1,7 @@
 ---
 title: XPathResult.booleanValue
 slug: Web/API/XPathResult/booleanValue
+page-type: web-api-instance-property
 tags:
   - API
   - DOM XPath API
@@ -18,13 +19,7 @@ The read-only **`booleanValue`** property of the
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var value = result.booleanValue;
-```
-
-### Return value
+## Value
 
 The return value is the boolean value of the `XPathResult` returned by
 {{domxref("Document.evaluate()")}}.
@@ -36,7 +31,7 @@ The return value is the boolean value of the `XPathResult` returned by
 In case {{domxref("XPathResult.resultType")}} is not `BOOLEAN_TYPE`, an
 {{domxref("XPathException")}} of type `TYPE_ERR` is thrown.
 
-## Example
+## Examples
 
 The following example shows the use of the `booleanValue` property.
 
@@ -57,7 +52,7 @@ document.querySelector("output").textContent = result.booleanValue;
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples', 400, 70)}}
 
 ## Specifications
 

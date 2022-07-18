@@ -1,6 +1,7 @@
 ---
 title: Notification.actions
 slug: Web/API/Notification/actions
+page-type: web-api-instance-property
 tags:
   - API
   - Notification
@@ -23,9 +24,12 @@ The actions are set using the `actions` option of the second argument for the [`
 
 A read-only array of actions. Each element in the array is an object with the following members:
 
-- action: A {{domxref("DOMString")}} identifying a user action to be displayed on the notification.
-- title: A {{domxref("DOMString")}} containing action text to be shown to the user.
-- icon: A {{domxref("USVString")}} containing the URL of an icon to display with the action.
+- `action`
+  - : A string identifying a user action to be displayed on the notification.
+- `title`
+  - : A string containing action text to be shown to the user.
+- `icon`
+  - : A string containing the URL of an icon to display with the action.
 
 ## Specifications
 
@@ -37,6 +41,5 @@ A read-only array of actions. Each element in the array is an object with the fo
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
 - {{DOMxRef("Notification.maxActions")}}

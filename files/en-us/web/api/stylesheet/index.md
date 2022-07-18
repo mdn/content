@@ -1,6 +1,7 @@
 ---
 title: StyleSheet
 slug: Web/API/StyleSheet
+page-type: web-api-interface
 tags:
   - API
   - CSS
@@ -18,9 +19,9 @@ An object implementing the `StyleSheet` interface represents a single style shee
 ## Properties
 
 - {{domxref("StyleSheet.disabled")}}
-  - : Is a boolean value representing whether the current stylesheet has been applied or not.
+  - : A boolean value representing whether the current stylesheet has been applied or not.
 - {{domxref("StyleSheet.href")}} {{readonlyInline}}
-  - : Returns a {{domxref("DOMString")}} representing the location of the stylesheet.
+  - : Returns a string representing the location of the stylesheet.
 - {{domxref("StyleSheet.media")}} {{readonlyInline}}
   - : Returns a {{domxref("MediaList")}} representing the intended destination medium for style information.
 - {{domxref("StyleSheet.ownerNode")}} {{readonlyInline}}
@@ -28,9 +29,9 @@ An object implementing the `StyleSheet` interface represents a single style shee
 - {{domxref("StyleSheet.parentStyleSheet")}} {{readonlyInline}}
   - : Returns a {{domxref("StyleSheet")}} including this one, if any; returns `null` if there aren't any.
 - {{domxref("StyleSheet.title")}} {{readonlyInline}}
-  - : Returns a {{domxref("DOMString")}} representing the advisory title of the current style sheet.
-- {{domxref("StyleSheet.type")}}{{readonlyInline}}
-  - : Returns a {{domxref("DOMString")}} representing the style sheet language for this style sheet.
+  - : Returns a string representing the advisory title of the current style sheet.
+- {{domxref("StyleSheet.type")}} {{readonlyInline}}
+  - : Returns a string representing the style sheet language for this style sheet.
 
 ## Specifications
 

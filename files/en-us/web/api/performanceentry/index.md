@@ -1,6 +1,7 @@
 ---
 title: PerformanceEntry
 slug: Web/API/PerformanceEntry
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -29,7 +30,7 @@ The **`PerformanceEntry`** object encapsulates a single performance metric that 
 - {{domxref("PerformanceEntry.name")}} {{readonlyInline}}
   - : A value that further specifies the value returned by the {{domxref("PerformanceEntry.entryType")}} property. The value of both depends on the subtype. See property page for valid values.
 - {{domxref("PerformanceEntry.entryType")}} {{readonlyInline}}
-  - : A {{domxref("DOMString")}} representing the type of performance metric such as, for example, "`mark`". See property page for valid values.
+  - : A string representing the type of performance metric such as, for example, "`mark`". See property page for valid values.
 - {{domxref("PerformanceEntry.startTime")}} {{readonlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the starting time for the performance metric.
 - {{domxref("PerformanceEntry.duration")}} {{readonlyInline}}
@@ -42,35 +43,45 @@ The **`PerformanceEntry`** object encapsulates a single performance metric that 
 
 ## Example
 
-The following example checks all `PerformanceEntry` properties to see if the browser supports them and if so, write their values to the console.
+The following example checks all `PerformanceEntry` properties to see if the browser supports them and if so, shows their values.
+
+```html hidden
+<pre id='output'></pre>
+```
 
 ```js
-function print_PerformanceEntries() {
+const output = document.getElementById('output');
+
+function printPerformanceEntries() {
   // Use getEntries() to get a list of all performance entries
-  var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
-    console.log("PerformanceEntry[" + i + "]");
-    print_PerformanceEntry(p[i]);
-  }
+  const entries = performance.getEntries();
+
+  entries.forEach((entry, i) => {
+    output.textContent += `\n PerformanceEntry[${i}] \n`;
+    printPerformanceEntry(entry);
+  });
 }
-function print_PerformanceEntry(perfEntry) {
-  var properties = ["name",
+
+function printPerformanceEntry(entry) {
+  const properties = ["name",
                     "entryType",
                     "startTime",
                     "duration"];
 
-  for (var i=0; i < properties.length; i++) {
+  for (const prop of properties) {
     // Check each property
-    var supported = properties[i] in perfEntry;
-    if (supported) {
-      var value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
+    if (prop in entry) {
+      output.textContent += `… ${prop} = ${entry[prop]} \n`;
     } else {
-      console.log("... " + properties[i] + " is NOT supported");
+      output.textContent += `… ${prop} is NOT supported \n`;
     }
   }
 }
+
+printPerformanceEntries();
 ```
+
+{{ EmbedLiveSample("Example", "100%", "400px") }}
 
 ## Specifications
 

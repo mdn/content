@@ -1,6 +1,7 @@
 ---
 title: Service Worker API
 slug: Web/API/Service_Worker_API
+page-type: web-api-overview
 tags:
   - API
   - Landing
@@ -9,6 +10,7 @@ tags:
   - Reference
   - Service Workers
   - Workers
+spec-urls: https://w3c.github.io/ServiceWorker/
 ---
 {{ServiceWorkerSidebar}}
 
@@ -24,7 +26,7 @@ Service workers only run over HTTPS, for security reasons. Having modified netwo
 
 > **Note:** On Firefox, for testing you can run service workers over HTTP (insecurely); simply check the **Enable Service Workers over HTTP (when toolbox is open)** option in the Firefox Devtools options/gear menu.
 
-> **Note:** Unlike previous attempts in this area such as [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag), service workers don't make assumptions about what you are trying to do, but then break when those assumptions are not exactly right. Instead, service workers give you much more granular control.
+> **Note:** Unlike previous attempts in this area such as [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag/), service workers don't make assumptions about what you are trying to do, but then break when those assumptions are not exactly right. Instead, service workers give you much more granular control.
 
 > **Note:** Service workers make heavy use of [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), as generally they will wait for responses to come through, after which they will respond with a success or failure action. The promises architecture is ideal for this.
 
@@ -77,7 +79,7 @@ Service workers are also intended to be used for such things as:
 
 In the future, service workers will be able to do a number of other useful things for the web platform that will bring it closer towards native app viability. Interestingly, other specifications can and will start to make use of the service worker context, for example:
 
-- [Background synchronization](https://github.com/slightlyoff/BackgroundSync): Start up a service worker even when no users are at the site, so caches can be updated, etc.
+- [Background synchronization](https://github.com/WICG/background-sync): Start up a service worker even when no users are at the site, so caches can be updated, etc.
 - [Reacting to push messages](/en-US/docs/Web/API/Push_API): Start up a service worker to send users a message to tell them new content is available.
 - Reacting to a particular time & date.
 - Entering a geo-fence.
@@ -95,25 +97,25 @@ In the future, service workers will be able to do a number of other useful thing
 - {{DOMxRef("ExtendableEvent")}} {{Experimental_Inline}}
   - : Extends the lifetime of the `install` and `activate` events dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}}, as part of the service worker lifecycle. This ensures that any functional events (like {{DOMxRef("FetchEvent")}}) are not dispatched to the {{DOMxRef("ServiceWorker")}}, until it upgrades database schemas, and deletes outdated cache entries, etc.
 - {{DOMxRef("ExtendableMessageEvent")}} {{Experimental_Inline}}
-  - : The event object of a {{domxref("ServiceWorkerGlobalScope/message_event")}} event fired on a service worker (when a channel message is received on the {{DOMxRef("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.
+  - : The event object of a {{domxref("ServiceWorkerGlobalScope/message_event", "message")}} event fired on a service worker (when a channel message is received on the {{DOMxRef("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.
 - {{DOMxRef("FetchEvent")}} {{Experimental_Inline}}
-  - : The parameter passed into the {{DOMxRef("ServiceWorkerGlobalScope.onfetch")}} handler, `FetchEvent` represents a fetch action that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}. It contains information about the request and resulting response, and provides the {{DOMxRef("FetchEvent.respondWith", "FetchEvent.respondWith()")}} method, which allows us to provide an arbitrary response back to the controlled page.
+  - : The parameter passed into the {{DOMxRef("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} handler, `FetchEvent` represents a fetch action that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}. It contains information about the request and resulting response, and provides the {{DOMxRef("FetchEvent.respondWith", "FetchEvent.respondWith()")}} method, which allows us to provide an arbitrary response back to the controlled page.
 - {{DOMxRef("InstallEvent")}} {{Experimental_Inline}}
-  - : The parameter passed into the {{DOMxRef("ServiceWorkerGlobalScope.oninstall", "oninstall")}} handler, the `InstallEvent` interface represents an install action that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}. As a child of {{DOMxRef("ExtendableEvent")}}, it ensures that functional events such as {{DOMxRef("FetchEvent")}} are not dispatched during installation.
+  - : The parameter passed into the {{DOMxRef("ServiceWorkerGlobalScope.install_event", "oninstall")}} handler, the `InstallEvent` interface represents an install action that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}. As a child of {{DOMxRef("ExtendableEvent")}}, it ensures that functional events such as {{DOMxRef("FetchEvent")}} are not dispatched during installation.
 - {{DOMxRef("NavigationPreloadManager")}} {{Experimental_Inline}}
   - : Provides methods for managing the preloading of resources with a service worker.
 - {{DOMxRef("Navigator.serviceWorker")}}
   - : Returns a {{DOMxRef("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{DOMxRef("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
 - {{DOMxRef("NotificationEvent")}} {{Experimental_Inline}}
-  - : The parameter passed into the {{DOMxRef("ServiceWorkerGlobalScope.onnotificationclick", "onnotificationclick")}} handler, the `NotificationEvent` interface represents a notification click event that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}.
+  - : The parameter passed into the {{DOMxRef("ServiceWorkerGlobalScope.notificationclick_event", "onnotificationclick")}} handler, the `NotificationEvent` interface represents a notification click event that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}.
 - {{DOMxRef("ServiceWorker")}} {{Experimental_Inline}}
   - : Represents a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same `ServiceWorker` object.
 - {{DOMxRef("ServiceWorkerContainer")}} {{Experimental_Inline}}
   - : Provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister, and update service workers, and access the state of service workers and their registrations.
 - {{DOMxRef("ServiceWorkerGlobalScope")}}
   - : Represents the global execution context of a service worker.
-- {{DOMxRef("ServiceWorkerMessageEvent")}} {{Deprecated_Inline}}
-  - : Represents a message sent to a {{DOMxRef("ServiceWorkerGlobalScope")}}. **Note that this interface is deprecated in modern browsers. Service worker messages will now use the {{DOMxRef("MessageEvent")}} interface, for consistency with other web messaging features.**
+- {{DOMxRef("MessageEvent")}}
+  - : Represents a message sent to a {{DOMxRef("ServiceWorkerGlobalScope")}}.
 - {{DOMxRef("ServiceWorkerRegistration")}} {{Experimental_Inline}}
   - : Represents a service worker registration.
 - {{DOMxRef("SyncEvent")}} {{Non-standard_Inline}}
@@ -125,13 +127,11 @@ In the future, service workers will be able to do a number of other useful thing
 
 ## Specifications
 
-| Specification                                           |
-| ------------------------------------------------------- |
-| [Service Workers](https://w3c.github.io/ServiceWorker/) |
+{{Specifications}}
 
 ## See also
 
-- [ServiceWorker Cookbook](https://github.com/mozilla/serviceworker-cookbook)
+- [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook)
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)

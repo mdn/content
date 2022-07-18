@@ -1,6 +1,7 @@
 ---
 title: VideoFrame.clone()
 slug: Web/API/VideoFrame/clone
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,14 +17,14 @@ The **`clone()`** method of the {{domxref("VideoFrame")}} interface creates a ne
 ## Syntax
 
 ```js
-VideoFrame.clone()
+clone()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 The cloned {{domxref("VideoData")}} object.
 

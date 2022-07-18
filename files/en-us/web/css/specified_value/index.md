@@ -5,6 +5,7 @@ tags:
   - CSS
   - Guide
   - Reference
+spec-urls: https://www.w3.org/TR/CSS22/cascade.html#specified-value
 ---
 {{CSSRef}}
 
@@ -50,10 +51,7 @@ p {
 
 ## Specifications
 
-| Specification                                                                                    | Status                   | Comment             |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName("CSS2.2", "cascade.html#specified-value", "cascaded value")}} | {{Spec2("CSS2.2")}} |                     |
-| {{SpecName("CSS2.1", "cascade.html#specified-value", "cascaded value")}} | {{Spec2("CSS2.1")}} | Initial definition. |
+{{Specifications}}
 
 ## See also
 

@@ -18,8 +18,8 @@ value.
 ## Syntax
 
 ```js
-const p = new Proxy(target, {
-  get: function(target, property, receiver) {
+new Proxy(target, {
+  get(target, property, receiver) {
   }
 });
 ```
@@ -32,7 +32,7 @@ is bound to the handler.
 - `target`
   - : The target object.
 - `property`
-  - : The name or {{jsxref("Symbol")}}  of the property to get.
+  - : The name or {{jsxref("Symbol")}}  of the property to get.
 - `receiver`
   - : Either the proxy or an object that inherits from the proxy.
 
@@ -75,7 +75,7 @@ The following code traps getting a property value.
 
 ```js
 const p = new Proxy({}, {
-  get: function(target, property, receiver) {
+  get(target, property, receiver) {
     console.log('called: ' + property);
     return 10;
   }
@@ -97,7 +97,7 @@ Object.defineProperty(obj, 'a', {
 });
 
 const p = new Proxy(obj, {
-  get: function(target, property) {
+  get(target, property) {
     return 20;
   }
 });

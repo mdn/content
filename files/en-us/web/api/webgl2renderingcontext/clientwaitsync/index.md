@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.clientWaitSync()
 slug: Web/API/WebGL2RenderingContext/clientWaitSync
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,17 +19,17 @@ The **`WebGL2RenderingContext.clientWaitSync()`** method of the
 ## Syntax
 
 ```js
-GLenum gl.clientWaitSync(sync, flags, timeout);
+clientWaitSync(sync, flags, timeout)
 ```
 
 ### Parameters
 
 - `sync`
   - : A {{domxref("WebGLSync")}} object on which to wait on.
-- flags
+- `flags`
   - : A {{domxref("WebGL_API/Types", "GLbitfield")}} specifying a bitwise combination of flags controlling
     the flushing behavior. May be `gl.SYNC_FLUSH_COMMANDS_BIT`.
-- timeout
+- `timeout`
   - : A {{domxref("WebGL_API/Types", "GLint64")}} specifying a timeout (in nanoseconds) for which to wait for
     the sync object to become signaled. Must not be larger than
     `gl.MAX_CLIENT_WAIT_TIMEOUT_WEBGL`.

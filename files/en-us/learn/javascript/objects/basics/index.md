@@ -14,9 +14,7 @@ In this article, we'll look at fundamental JavaScript object syntax, and revisit
         Basic computer literacy, a basic understanding of HTML and CSS,
         familiarity with JavaScript basics (see
         <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
-          >Building blocks</a
-        >).
+        <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>).
       </td>
     </tr>
     <tr>
@@ -34,7 +32,7 @@ An object is a collection of related data and/or functionality.
 These usually consist of several variables and functions (which are called properties and methods when they are inside objects).
 Let's work through an example to understand what they look like.
 
-To begin with, make a local copy of our [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html) file. This contains very little — a {{HTMLElement("script")}} element for us to write our source code into. We'll use this as a basis for exploring basic object syntax. While working with this example you should have your [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools#the_javascript_console) open and ready to type in some commands.
+To begin with, make a local copy of our [oojs.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/introduction/oojs.html) file. This contains very little — a {{HTMLElement("script")}} element for us to write our source code into. We'll use this as a basis for exploring basic object syntax. While working with this example you should have your [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools#the_javascript_console) open and ready to type in some commands.
 
 As with many things in JavaScript, creating an object often begins with defining and initializing a variable. Try entering the following line below the JavaScript code that's already in your file, then saving and refreshing:
 
@@ -56,10 +54,10 @@ Congratulations, you've just created your first object. Job done! But this is an
 const person = {
   name: ['Bob', 'Smith'],
   age: 32,
-  bio: function() {
+  bio() {
     console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
   },
-  introduceSelf: function() {
+  introduceSelf() {
     console.log(`Hi! I'm ${this.name[0]}.`);
   }
 };
@@ -77,7 +75,7 @@ person.introduceSelf()
 
 You have now got some data and functionality inside your object, and are now able to access them with some nice simple syntax!
 
-So what is going on here? Well, an object is made up of multiple members, each of which has a name (e.g. `name` and `age` above), and a value (e.g. `['Bob', 'Smith']` and `32`). Each name/value pair must be separated by a comma, and the name and value in each case are separated by a colon. The syntax always follows this pattern:
+So what is going on here? Well, an object is made up of multiple members, each of which has a name (e.g. `name` and `age` above), and a value (e.g. `['Bob', 'Smith']` and `32`). Each name/value pair must be separated by a comma, and the name and value in each case are separated by a colon. The syntax always follows this pattern:
 
 ```js
 const objectName = {
@@ -87,7 +85,7 @@ const objectName = {
 };
 ```
 
-The value of an object member can be pretty much anything — in our person object we've got a number, an array, and two functions. The first four items are data items, and are referred to as the object's **properties**. The last two items are functions that allow the object to do something with that data, and are referred to as the object's **methods**.
+The value of an object member can be pretty much anything — in our person object we've got a number, an array, and two functions. The first two items are data items, and are referred to as the object's **properties**. The last two items are functions that allow the object to do something with that data, and are referred to as the object's **methods**.
 
 When the object's members are functions there's a simpler syntax. Instead of `bio: function()` we can write `bio()`. Like this:
 
@@ -106,7 +104,7 @@ const person = {
 
 From now on, we'll use this shorter syntax.
 
-An object like this is referred to as an **object literal** — we've literally written out the object contents as we've come to create it. This is in contrast to objects instantiated from classes, which we'll look at later on.
+An object like this is referred to as an **object literal** — we've literally written out the object contents as we've come to create it. This is different compared to objects instantiated from classes, which we'll look at later on.
 
 It is very common to create an object using an object literal when you want to transfer a series of structured, related data items in some manner, for example sending a request to the server to be put into a database. Sending a single object is much more efficient than sending several items individually, and it is easier to work with than an array, when you want to identify individual items by name.
 
@@ -157,25 +155,39 @@ name.first
 name.last
 ```
 
-Otherwise your methods will no longer work.
+Otherwise, your methods will no longer work.
 
 ## Bracket notation
 
-There is another way to access object properties — using bracket notation. Instead of using these:
+Bracket notation provides an alternative way to access object properties.
+Instead of using [dot notation](#dot_notation) like this:
 
 ```js
 person.age
 person.name.first
 ```
 
-You can use
+You can instead use brackets:
 
 ```js
 person['age']
 person['name']['first']
 ```
 
-This looks very similar to how you access the items in an array, and it is basically the same thing — instead of using an index number to select an item, you are using the name associated with each member's value. It is no wonder that objects are sometimes called **associative arrays** — they map strings to values in the same way that arrays map numbers to values.
+This looks very similar to how you access the items in an array, and it is basically the same thing — instead of using an index number to select an item, you are using the name associated with each member's value.
+It is no wonder that objects are sometimes called **associative arrays** — they map strings to values in the same way that arrays map numbers to values.
+
+Dot notation is generally preferred over bracket notation because it is more succint and easier to read.
+However there are some cases where you have to use brackets.
+For example, if an object property name is defined at runtime then you can't use dot notation to access the value, but you can pass the name as a variable inside brackets as shown with `input` below:
+
+```js
+const person = {
+  name: ['Bob', 'Smith'],
+  age: 32
+}
+const input = prompt('Get name or age?')
+console.log(person[input])
 
 ## Setting object members
 
@@ -236,7 +248,7 @@ Now try saving and refreshing, and entering the following into your text input:
 person.height
 ```
 
-Adding a property to an object using the method above isn't possible with dot notation, which can only accept a literal member name, not a variable value pointing to a name.
+Adding a property to an object using the method above isn't possible with dot notation, which can only accept a literal member name, not a variable value pointing to a name.
 
 ## What is "this"?
 
@@ -296,7 +308,7 @@ This function creates and returns a new object each time we call it. The object 
 - a property `name`
 - a method `introduceSelf()`.
 
-Note that `createPerson()` takes a parameter `name` to set the value of the `name` property, but the value of the `introduceSelf()` method will be the same for all objects created using this function. This is a very common pattern for creating objects. You can see here how being able to use `this` in the definition of `introduceSelf()` enables us to use the same code for every object we create.
+Note that `createPerson()` takes a parameter `name` to set the value of the `name` property, but the value of the `introduceSelf()` method will be the same for all objects created using this function. This is a very common pattern for creating objects.
 
 Now we can create as many objects as we like, reusing the definition:
 

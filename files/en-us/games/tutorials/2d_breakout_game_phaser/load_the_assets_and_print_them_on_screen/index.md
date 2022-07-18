@@ -22,7 +22,7 @@ Our game will feature a ball rolling around the screen, bouncing off a paddle, a
 
 ## Having a ball
 
-Let's start by creating a JavaScript variable to represent our ball. Add the following line between the game initialization code (our `var game...` block) and the `preload()` function:
+Let's start by creating a JavaScript variable to represent our ball. Add the following line between the game initialization code (our `var game` block) and the `preload()` function:
 
 ```js
 var ball;
@@ -36,16 +36,16 @@ Loading images and printing them on our canvas is a lot easier using Phaser than
 
 ```js
 function preload() {
-    // ...
+    // …
     game.load.image('ball', 'img/ball.png');
 }
 ```
 
 The first parameter we want to give the asset is the name that will be used across our game code — for example, in our `ball` variable name — so we need to make sure it is the same. The second parameter is the relative path to the graphic asset. In our case, we will load the image for our ball. (Note that the file name does not also have to be the same, but we'd recommend it, as it makes everything easier to follow.)
 
-Of course, to load the image, it must be available in our code directory. [Grab the ball image from Github](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/ball.png), and save it inside an `/img` directory in the same place as your `index.html` file.
+Of course, to load the image, it must be available in our code directory. [Grab the ball image from GitHub](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/ball.png), and save it inside an `/img` directory in the same place as your `index.html` file.
 
-Now, to show it on the screen we will use another Phaser method called `add.sprite()`;  add the following new code line inside the `create()` function as shown:
+Now, to show it on the screen we will use another Phaser method called `add.sprite()`;  add the following new code line inside the `create()` function as shown:
 
 ```js
 function create() {

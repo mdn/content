@@ -1,6 +1,7 @@
 ---
 title: CharacterData.data
 slug: Web/API/CharacterData/data
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
@@ -22,7 +23,7 @@ A string with the character information contained in the {{domxref("CharacterDat
 ### Reading a comment using data
 
 ```html
-<!-- This is an html comment !-->
+<!-- This is an HTML comment !-->
 <output id="Result"></output>
 ```
 

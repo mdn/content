@@ -30,7 +30,7 @@ The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Met
       <td>
         <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
           >Metadata content</a
-        >. If the {{htmlattrxref("itemprop")}} attribute is present:
+        >. If the <a href="/en-US/docs/Web/HTML/Global_attributes/itemprop"><code>itemprop</code></a> attribute is present:
         <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
           >flow content</a
         >,
@@ -108,13 +108,13 @@ The type of metadata provided by the `<meta>` element can be one of the followin
 - If the {{htmlattrxref("name", "meta")}} attribute is set, the `<meta>` element provides _document-level metadata_, applying to the whole page.
 - If the {{htmlattrxref("http-equiv", "meta")}} attribute is set, the `<meta>` element is a _pragma directive_, providing information equivalent to what can be given by a similarly-named HTTP header.
 - If the {{htmlattrxref("charset", "meta")}} attribute is set, the `<meta>` element is a _charset declaration_, giving the character encoding in which the document is encoded.
-- If the {{htmlattrxref("itemprop")}} attribute is set, the `<meta>` element provides _user-defined metadata_.
+- If the [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is set, the `<meta>` element provides _user-defined metadata_.
 
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-> **Note:** the attribute {{htmlattrxref("name", "meta")}} has a specific meaning for the `<meta>` element, and the {{htmlattrxref("itemprop")}} attribute must not be set on the same `<meta>` element that has any existing {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} or {{htmlattrxref("charset", "meta")}} attributes.
+> **Note:** the attribute {{htmlattrxref("name", "meta")}} has a specific meaning for the `<meta>` element, and the [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute must not be set on the same `<meta>` element that has any existing {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} or {{htmlattrxref("charset", "meta")}} attributes.
 
 - {{htmlattrdef("charset")}}
   - : This attribute declares the document's character encoding. If the attribute is present, its value must be an ASCII case-insensitive match for the string "`utf-8`", because UTF-8 is the only valid encoding for HTML5 documents. `<meta>` elements which declare a character encoding must be located entirely within the first 1024 bytes of the document.
@@ -130,7 +130,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     - `content-type`
 
-      Declares the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) and character encoding of the document. If specified, the `content` attribute must have the value "`text/html; charset=utf-8`". This is equivalent to a `<meta>` element with the {{htmlattrxref("charset", "meta")}} attribute specified, and carries the same restriction on placement within the document. **Note:** Can only be used in documents served with a `text/html` — not in documents served with an XML MIME type.
+      Declares the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) and character encoding of the document. If specified, the `content` attribute must have the value "`text/html; charset=utf-8`". This is equivalent to a `<meta>` element with the {{htmlattrxref("charset", "meta")}} attribute specified, and carries the same restriction on placement within the document. **Note:** Can only be used in documents served with a `text/html` — not in documents served with an XML MIME type.
 
     - `default-style`
 
@@ -177,3 +177,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Standard metadata names](/en-US/docs/Web/HTML/Element/meta/name)
+- [Learn: `<meta>`](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_the_meta_element)
+- [The viewport meta tag](/en-US/docs/Web/HTML/Viewport_meta_tag)

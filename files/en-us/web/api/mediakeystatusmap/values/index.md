@@ -1,6 +1,7 @@
 ---
 title: MediaKeyStatusMap.values()
 slug: Web/API/MediaKeyStatusMap/values
+page-type: web-api-instance-method
 tags:
   - API
   - EncryptedMediaExtensions
@@ -19,14 +20,14 @@ values for each element in the status map, in insertion order.
 ## Syntax
 
 ```js
-var iterator = mediaKeyStatusMap.values()
+values()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 A new iterator.
 

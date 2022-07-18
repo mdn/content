@@ -1,6 +1,7 @@
 ---
 title: NodeIterator.referenceNode
 slug: Web/API/NodeIterator/referenceNode
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -15,20 +16,17 @@ The **`NodeIterator.referenceNode`** read-only returns the
 {{domxref("Node")}} to which the iterator is anchored; as new nodes are inserted, the
 iterator remains anchored to the reference node as specified by this property.
 
-## Syntax
+## Value
+
+A {{domxref("Node")}}.
+
+## Examples
 
 ```js
-node = nodeIterator.referenceNode;
-```
-
-## Example
-
-```js
-var nodeIterator = document.createNodeIterator(
+const nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
 node = nodeIterator.referenceNode;
 ```

@@ -1,6 +1,7 @@
 ---
 title: AudioParamMap
 slug: Web/API/AudioParamMap
+page-type: web-api-interface
 tags:
   - Draft
   - Experimental
@@ -8,7 +9,7 @@ browser-compat: api.AudioParamMap
 ---
 {{APIRef("Web Audio API")}}
 
-The Web Audio API interface **`AudioParamMap`** represents a set of multiple audio parameters, each described as a mapping of a {{domxref("DOMString")}} identifying the parameter to the {{domxref("AudioParam")}} object representing its value.
+The Web Audio API interface **`AudioParamMap`** represents a set of multiple audio parameters, each described as a mapping of a string identifying the parameter to the {{domxref("AudioParam")}} object representing its value.
 
 ## Properties
 

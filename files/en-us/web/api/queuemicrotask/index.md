@@ -1,6 +1,7 @@
 ---
 title: queueMicrotask()
 slug: Web/API/queueMicrotask
+page-type: web-api-global-function
 tags:
   - API
   - HTML DOM
@@ -40,8 +41,7 @@ execution context, potentially depending on work you need to complete. You can l
 more about how to use microtasks and why you might choose to do so in our [microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide).
 
 The importance of microtasks comes in its ability to perform tasks asynchronously but
-in a specific order. See [Using microtasks in JavaScript
-with queueMicrotask()](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) for more details.
+in a specific order. See [Using microtasks in JavaScript with queueMicrotask()](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) for more details.
 
 Microtasks are especially useful for libraries and frameworks that need to perform
 final cleanup or other just-before-rendering tasks.
@@ -49,7 +49,7 @@ final cleanup or other just-before-rendering tasks.
 ## Syntax
 
 ```js
-queueMicrotask(function);
+queueMicrotask(function() {/* ... */})
 ```
 
 ### Parameters
@@ -61,7 +61,7 @@ queueMicrotask(function);
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -71,8 +71,7 @@ queueMicrotask(() => {
 })
 ```
 
-Taken from the [queueMicrotask
-spec](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing):
+Taken from the [queueMicrotask spec](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing):
 
 ```js
 MyElement.prototype.loadData = function (url) {
@@ -117,10 +116,7 @@ if (typeof self.queueMicrotask !== "function") {
 ## See also
 
 - [Polyfill of `queueMicrotask` in `core-js`](https://github.com/zloirock/core-js#queuemicrotask)
-- [Using microtasks in
-  JavaScript with queueMicrotask()](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide)
+- [Using microtasks in JavaScript with queueMicrotask()](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide)
 - [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
-- [queueMicrotask
-  explainer](https://github.com/fergald/docs/blob/master/explainers/queueMicrotask.md)
-- [Tasks,
-  microtasks, queues and schedules](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/) by Jake Archibald
+- [queueMicrotask explainer](https://github.com/fergald/docs/blob/master/explainers/queueMicrotask.md)
+- [Tasks, microtasks, queues and schedules](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/) by Jake Archibald

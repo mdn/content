@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.blitFramebuffer()
 slug: Web/API/WebGL2RenderingContext/blitFramebuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -19,9 +20,9 @@ using {{domxref("WebGLRenderingContext.bindFramebuffer()")}}.
 ## Syntax
 
 ```js
-void gl.blitFramebuffer(srcX0, srcY0, srcX1, srcY1,
-                        dstX0, dstY0, dstX1, dstY1,
-                        mask, filter);
+blitFramebuffer(srcX0, srcY0, srcX1, srcY1,
+                dstX0, dstY0, dstX1, dstY1,
+                mask, filter)
 ```
 
 ### Parameters
@@ -49,7 +50,7 @@ void gl.blitFramebuffer(srcX0, srcY0, srcX1, srcY1,
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

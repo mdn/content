@@ -21,7 +21,7 @@ the program will terminate.
 ## Syntax
 
 ```js
-throw expression; 
+throw expression;
 ```
 
 - `expression`
@@ -40,9 +40,9 @@ throw true;     // generates an exception with the value true
 throw new Error('Required');  // generates an error object with the message of Required
 ```
 
-Also note that the `throw` statement is affected by [automatic
-semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion) as no line terminator between the `throw`
-keyword and the expression is allowed.
+Also note that the `throw` statement is affected by
+[automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)
+as no line terminator between the `throw` keyword and the expression is allowed.
 
 ## Examples
 
@@ -59,7 +59,7 @@ function UserException(message) {
 }
 function getMonthName(mo) {
   mo = mo - 1; // Adjust month number for array index (1 = Jan, 12 = Dec)
-  var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
     'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   if (months[mo] !== undefined) {
     return months[mo];
@@ -68,10 +68,12 @@ function getMonthName(mo) {
   }
 }
 
+let monthName;
+
 try {
   // statements to try
-  var myMonth = 15; // 15 is out of bound to raise the exception
-  var monthName = getMonthName(myMonth);
+  const myMonth = 15; // 15 is out of bound to raise the exception
+  monthName = getMonthName(myMonth);
 } catch (e) {
   monthName = 'unknown';
   console.error(e.message, e.name); // pass exception object to err handler

@@ -1,6 +1,7 @@
 ---
 title: PaymentMethodChangeEvent.methodDetails
 slug: Web/API/PaymentMethodChangeEvent/methodDetails
+page-type: web-api-instance-property
 tags:
   - API
   - Commerce
@@ -22,13 +23,7 @@ containing any data the payment handler may provide to describe the change the u
 has made to their payment method. The value is `null` if no details
 are available.
 
-## Syntax
-
-```js
-details = paymentMethodChangeEvent.methodName;
-```
-
-### Value
+## Value
 
 An object containing any data needed to describe the changes made to the payment
 method. The contents vary depending on the actual payment method chosen, so you will
@@ -38,9 +33,9 @@ property first, then interpret the `methodDetails` after that.
 The default value is `null`, indicating that no additional details are
 available.
 
-## Example
+## Examples
 
-This example uses the {{event("paymentmethodchange")}} event to watch for changes to
+This example uses the {{domxref("PaymentRequest.paymentmethodchange_event", "paymentmethodchange")}} event to watch for changes to
 the payment method selected for Apple Pay, in order to compute a discount if the user
 chooses to use a Visa card as their payment method.
 
@@ -51,14 +46,14 @@ request.onpaymentmethodchange = function(ev) {
   if (ev.methodName === "https://apple.com/apple-pay") {
     switch (cardType) {
       case "visa":
-        // do Apple Pay specific handling for Visa card...
+        // do Apple Pay specific handling for Visa card…
         // methodDetails contains the card information
         const result = calculateDiscount(ev.methodDetails);
         Object.assign(newStuff, result);
         break;
     }
   }
-  // finally...
+  // finally…
   ev.updateWith(newStuff);
 };
 const response = await request.show();

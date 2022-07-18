@@ -1,6 +1,7 @@
 ---
 title: RemotePlayback.state
 slug: Web/API/RemotePlayback/state
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,13 +14,7 @@ browser-compat: api.RemotePlayback.state
 
 The **`state`** read-only property of the {{domxref("RemotePlayback")}} interface returns the current state of the `RemotePlayback` connection.
 
-## Syntax
-
-```js
-let state = RemotePlayback.state;
-```
-
-### Value
+## Value
 
 One of:
 

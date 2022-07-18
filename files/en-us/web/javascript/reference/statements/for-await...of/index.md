@@ -14,10 +14,9 @@ browser-compat: javascript.statements.for_await_of
 ---
 {{jsSidebar("Statements")}}
 
-The **`for await...of` statement** creates a loop iterating over async iterable objects as well as on sync iterables, including: built-in {{jsxref("String")}}, {{jsxref("Array")}}, `Array`-like objects (e.g., {{jsxref("Functions/arguments", "arguments")}} or {{DOMxRef("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, and user-defined async/sync iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object. This statement can only be used inside an {{jsxref("Statements/async_function", "async function", "", 1)}}.
+The **`for await...of` statement** creates a loop iterating over async iterable objects as well as on sync iterables, including: built-in {{jsxref("String")}}, {{jsxref("Array")}}, `Array`-like objects (e.g., {{jsxref("Functions/arguments", "arguments")}} or {{DOMxRef("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, and user-defined async/sync iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object. This statement can only be used inside an {{jsxref("Statements/async_function", "async function", "", 1)}}.
 
-> **Note:** `for await...of` doesn't work with async iterators that are not async
-> iterables.
+> **Note:** `for await...of` doesn't work with async iterators that are not async iterables.
 
 ## Syntax
 
@@ -41,31 +40,30 @@ for await (const variable of iterable) {
 You can also iterate over an object that explicitly implements async iterable protocol:
 
 ```js
+const LIMIT = 3;
+
 const asyncIterable = {
   [Symbol.asyncIterator]() {
+    let i = 0;
     return {
-      i: 0,
       next() {
-        if (this.i < 3) {
-          return Promise.resolve({ value: this.i++, done: false });
-        }
-
-        return Promise.resolve({ done: true });
+        const done = i === LIMIT;
+        const value = done ? undefined : i++;
+        return Promise.resolve({ value, done });
       },
       return() {
         // This will be reached if the consumer called 'break' or 'return' early in the loop.
-        return { done: true }
+        return { done: true };
       }
     };
   }
 };
 
-(async function() {
-   for await (let num of asyncIterable) {
-     console.log(num);
-   }
+(async () => {
+  for await (const num of asyncIterable) {
+    console.log(num);
+  }
 })();
-
 // 0
 // 1
 // 2
@@ -73,7 +71,7 @@ const asyncIterable = {
 
 ### Iterating over async generators
 
-Since the return values of async generators conform to the async iterable protocol,
+Since the return values of async generator functions conform to the async iterable protocol,
 they can be looped using `for await...of`.
 
 ```js
@@ -84,8 +82,8 @@ async function* asyncGenerator() {
   }
 }
 
-(async function() {
-  for await (let num of asyncGenerator()) {
+(async () => {
+  for await (const num of asyncGenerator()) {
     console.log(num);
   }
 })();
@@ -94,11 +92,9 @@ async function* asyncGenerator() {
 // 2
 ```
 
-For a more concrete example of iterating over an async generator using
-`for await...of`, consider iterating over data from an API.
+For a more concrete example of iterating over an async generator using `for await...of`, consider iterating over data from an API.
 
-This example first creates an async iterable for a stream of data, then uses it to find
-the size of the response from the API.
+This example first creates an async iterable for a stream of data, then uses it to find the size of the response from the API.
 
 ```js
 async function* streamAsyncIterable(stream) {
@@ -106,16 +102,15 @@ async function* streamAsyncIterable(stream) {
   try {
     while (true) {
       const { done, value } = await reader.read();
-      if (done) {
-        return;
-      }
+      if (done) return;
       yield value;
     }
   } finally {
     reader.releaseLock();
   }
 }
-// Fetches data from url and calculates response size using the async generator.
+
+// Fetches data from URL and calculates response size using the async generator.
 async function getResponseSize(url) {
   const response = await fetch(url);
   // Will hold the size of the response, in bytes.
@@ -148,8 +143,8 @@ function* generator() {
   yield 4;
 }
 
-(async function() {
-  for await (let num of generator()) {
+(async () => {
+  for await (const num of generator()) {
     console.log(num);
   }
 })();
@@ -161,7 +156,7 @@ function* generator() {
 
 // compare with for-of loop:
 
-for (let numOrPromise of generator()) {
+for (const numOrPromise of generator()) {
   console.log(numOrPromise);
 }
 // 0
@@ -187,17 +182,17 @@ function* generatorWithRejectedPromises() {
     yield 4;
     throw 5;
   } finally {
-    console.log('called finally')
+    console.log('called finally');
   }
 }
 
-(async function() {
+(async () => {
   try {
-    for await (let num of generatorWithRejectedPromises()) {
+    for await (const num of generatorWithRejectedPromises()) {
       console.log(num);
     }
   } catch (e) {
-    console.log('caught', e)
+    console.log('caught', e);
   }
 })();
 // 0
@@ -208,11 +203,11 @@ function* generatorWithRejectedPromises() {
 // compare with for-of loop:
 
 try {
-  for (let numOrPromise of generatorWithRejectedPromises()) {
+  for (const numOrPromise of generatorWithRejectedPromises()) {
     console.log(numOrPromise);
   }
 } catch (e) {
-  console.log('caught', e)
+  console.log('caught', e);
 }
 // 0
 // 1
@@ -223,21 +218,21 @@ try {
 // called finally
 ```
 
-To make  `finally` blocks of a sync generator to be always called use
-appropriate form of the loop, `for await...of` for the async generator and
+To make  `finally` blocks of a sync generator to be always called use
+the appropriate form of the loop, `for await...of` for the async generator and
 `for...of` for the sync one and await yielded promises explicitly inside the
 loop.
 
 ```js
-(async function() {
+(async () => {
   try {
-    for (let numOrPromise of generatorWithRejectedPromises()) {
+    for (const numOrPromise of generatorWithRejectedPromises()) {
       console.log(await numOrPromise);
     }
   } catch (e) {
-    console.log('caught', e)
+    console.log('caught', e);
   }
-})()
+})();
 // 0
 // 1
 // 2

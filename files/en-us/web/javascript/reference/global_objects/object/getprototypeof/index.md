@@ -38,8 +38,8 @@ The prototype of the given object. If there are no inherited properties,
 ### Using getPrototypeOf
 
 ```js
-var proto = {};
-var obj = Object.create(proto);
+const proto = {};
+const obj = Object.create(proto);
 Object.getPrototypeOf(obj) === proto; // true
 ```
 
@@ -76,5 +76,5 @@ since Opera 10.50.
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
 - {{jsxref("Object/proto","Object.prototype.__proto__")}}
-- John Resig's post on [getPrototypeOf](http://ejohn.org/blog/objectgetprototypeof/)
+- John Resig's post on [getPrototypeOf](https://johnresig.com/blog/objectgetprototypeof/)
 - {{jsxref("Reflect.getPrototypeOf()")}}

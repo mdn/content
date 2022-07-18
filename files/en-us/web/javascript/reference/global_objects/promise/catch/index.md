@@ -43,7 +43,7 @@ p.catch(function(reason) {
 
     The Promise returned by `catch()` is rejected if
     `onRejected` throws an error or returns a Promise which is
-    itself rejected; otherwise, it is resolved.
+    itself rejected; otherwise, it is fulfilled.
 
 ### Return value
 
@@ -62,8 +62,8 @@ called, passing the parameters `undefined` and the received
 ```js
 // overriding original Promise.prototype.then/catch just to add some logs
 (function(Promise){
-    var originalThen = Promise.prototype.then;
-    var originalCatch = Promise.prototype.catch;
+    const originalThen = Promise.prototype.then;
+    const originalCatch = Promise.prototype.catch;
 
     Promise.prototype.then = function(){
         console.log('> > > > > > called .then on %o with arguments: %o', this, arguments);
@@ -87,16 +87,15 @@ Promise.resolve().catch(function XXX(){});
 ## Description
 
 The `catch` method is used for error handling in promise composition. Since
-it returns a {{jsxref("Promise")}}, it [can be
-chained](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining_after_a_catch) in the same way as its sister method, {{jsxref("Promise.then",
-  "then()")}}.
+it returns a {{jsxref("Promise")}}, it [can be chained](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining_after_a_catch)
+in the same way as its sister method, {{jsxref("Promise.then", "then()")}}.
 
 ## Examples
 
 ### Using and chaining the catch method
 
 ```js
-var p1 = new Promise(function(resolve, reject) {
+const p1 = new Promise(function(resolve, reject) {
   resolve('Success');
 });
 
@@ -128,7 +127,7 @@ p1.then(function(value) {
 
 ```js
 // Throwing an error will call the catch method most of the time
-var p1 = new Promise(function(resolve, reject) {
+const p1 = new Promise(function(resolve, reject) {
   throw new Error('Uh-oh!');
 });
 
@@ -137,7 +136,7 @@ p1.catch(function(e) {
 });
 
 // Errors thrown inside asynchronous functions will act like uncaught errors
-var p2 = new Promise(function(resolve, reject) {
+const p2 = new Promise(function(resolve, reject) {
   setTimeout(function() {
     throw new Error('Uncaught Exception!');
   }, 1000);
@@ -148,7 +147,7 @@ p2.catch(function(e) {
 });
 
 // Errors thrown after resolve is called will be silenced
-var p3 = new Promise(function(resolve, reject) {
+const p3 = new Promise(function(resolve, reject) {
   resolve();
   throw new Error('Silenced Exception!');
 });
@@ -162,9 +161,9 @@ p3.catch(function(e) {
 
 ```js
 //Create a promise which would not call onReject
-var p1 = Promise.resolve("calling next");
+const p1 = Promise.resolve("calling next");
 
-var p2 = p1.catch(function (reason) {
+const p2 = p1.catch(function (reason) {
     //This is never called
     console.error("catch p1!");
     console.error(reason);

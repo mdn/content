@@ -14,20 +14,20 @@ The following code example guidelines apply to all code, whether we are talking 
 
 ## In this article
 
-- [Indentation, spacing, size](/en-US/docs/MDN/Guidelines/Code_guidelines/General#indentation_spacing_size)
+- [Indentation, spacing, size](#indentation_spacing_size)
 
-  - [Indentation](/en-US/docs/MDN/Guidelines/Code_guidelines/General#indentation)
-  - [Code line length](/en-US/docs/MDN/Guidelines/Code_guidelines/General#code_line_length)
-  - [Code block height](/en-US/docs/MDN/Guidelines/Code_guidelines/General#code_block_height)
+  - [Indentation](#indentation)
+  - [Code line length](#code_line_length)
+  - [Code block height](#code_block_height)
 
-- [Guidelines for displaying examples](/en-US/docs/MDN/Guidelines/Code_guidelines/General#guidelines_for_displaying_examples)
+- [Guidelines for displaying examples](#guidelines_for_displaying_examples)
 
-  - [Size of rendered example](/en-US/docs/MDN/Guidelines/Code_guidelines/General#size_of_rendered_example)
-  - [Use of images and other media](/en-US/docs/MDN/Guidelines/Code_guidelines/General#use_of_images_and_other_media)
-  - [Use of color](/en-US/docs/MDN/Guidelines/Code_guidelines/General#use_of_color)
-  - [Highlight good and bad practice examples](/en-US/docs/MDN/Guidelines/Code_guidelines/General#highlight_good_and_bad_practice_examples)
+  - [Size of rendered example](#size_of_rendered_example)
+  - [Use of images and other media](#use_of_images_and_other_media)
+  - [Use of color](#use_of_color)
+  - [Highlight good and bad practice examples](#highlight_good_and_bad_practice_examples)
 
-- [Writing syntax sections on reference pages](/en-US/docs/MDN/Guidelines/Code_guidelines/General#writing_syntax_sections_on_reference_pages)
+- [Writing syntax sections on reference pages](#writing_syntax_sections_on_reference_pages)
 
 ## Indentation, spacing, size
 
@@ -79,7 +79,7 @@ let tommyCat = `Said Tommy the Cat as he reeled back to clear whatever foreign
 
 ### Code block height
 
-Code blocks should be as long as they need to be, but no longer. Ideally, aim for something short like 15-25 lines. If a code block is going to be a lot longer, consider just showing the most useful snippet, and link to the full example on a GitHub repo or codepen, say.
+Code blocks should be as long as they need to be, but no longer. Ideally, aim for something short, like 15–25 lines. If a code block is going to be a lot longer, consider just showing the most useful snippet, and linking to the full example on a GitHub repo or codepen, say.
 
 ## Guidelines for displaying examples
 
@@ -89,13 +89,13 @@ The MDN main content pane is about 700px wide on desktop, so embedded MDN exampl
 
 For height, we'd recommend keeping the rendered example at below 700px in height if at all possible, for maximum onscreen legibility.
 
-You should also think about making your examples responsive to  some degree, so they are also useful on mobile devices.
+You should also think about making your examples responsive to some degree, so they are also useful on mobile devices.
 
 ### Use of images and other media
 
 Sometimes you'll want to include images or other media in an example. If you do:
 
-- Make sure their license allows you to use them. Try to use media that has a very permissive license such as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/), or at least one that is compatible with our general content license —  [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
+- Make sure their license allows you to use them. Try to use media that has a very permissive license such as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/), or at least one that is compatible with our general content license —  [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
 - For images, run them through <https://tinypng.com> or <https://imageoptim.com>, to reduce the page weight of the examples.
 - For `SVG`, run the code through [SVGOMG](https://jakearchibald.github.io/svgomg/), and ensure that the `SVG` file has an empty line at the end of the file.
 - When displaying icons on a page (e.g. via {{cssxref("background-image")}}), use icons from the [mdn-dinocons](https://github.com/mdn/mdn-dinocons) repository, where appropriate, and try to match their style in other cases.
@@ -133,7 +133,7 @@ color: #ff0;
 color: #fff;
 ```
 
-The [sass/vars/\_color-palette.scss](https://github.com/mdn/mdn-minimalist/blob/main/sass/vars/_color-palette.scss) file in the [mdn-minimalist](https://github.com/mdn/mdn-minimalist) repository has a set of useful colors that complement the overall MDN design.
+The [sass/vars/\_mdn-web-docs-palette.scss](https://github.com/mdn/mdn-minimalist/blob/main/sass/vars/_mdn-web-docs-palette.scss) file in the [mdn-minimalist](https://github.com/mdn/mdn-minimalist) repository has a set of useful colors that complement the overall MDN design.
 
 ### Highlight good and bad practice examples
 
@@ -151,14 +151,14 @@ To make it into a good example, you insert `example-good` just before the closin
 
 ```html
 <pre class="brush: js example-good">
-  ...
+ …
 ```
 
 To make it into a bad example, you insert `example-bad` just before the closing quote of the `class` attribute:
 
 ```html
 <pre class="brush: js example-bad">
-  ...
+  …
 ```
 
 We would like to encourage you to use these. You don't need to use these everywhere — only when you are specifically calling out good and bad practices in your code.

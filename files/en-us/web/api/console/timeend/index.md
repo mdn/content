@@ -1,6 +1,7 @@
 ---
 title: console.timeEnd()
 slug: Web/API/console/timeEnd
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -23,15 +24,19 @@ details and examples.
 ## Syntax
 
 ```js
-console.timeEnd(label);
+timeEnd(label)
 ```
 
 ### Parameters
 
 - `label`
   - : The name of the timer to stop. Once stopped, the elapsed time is automatically
-    displayed in the [Web console](/en-US/docs/Tools/Web_Console) along
+    displayed in the [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) along
     with an indicator that the time has ended.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -39,7 +44,7 @@ console.timeEnd(label);
 console.time("answer time");
 alert("Click to continue");
 console.timeLog("answer time");
-alert("Do a bunch of other stuff...");
+alert("Do a bunch of other stuff…");
 console.timeEnd("answer time");
 ```
 

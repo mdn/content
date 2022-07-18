@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.sctp
 slug: Web/API/RTCPeerConnection/sctp
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCPeerConnection
@@ -20,13 +21,7 @@ received. If SCTP hasn't been negotiated, this value is `null`.
 The SCTP transport is used for transmitting and receiving data for any and all
 {{domxref("RTCDataChannel")}}s on the peer connection.
 
-## Syntax
-
-```js
-var sctp = RTCPeerConnection.sctp;
-```
-
-### Value
+## Value
 
 A {{domxref("RTCSctpTransport")}} object describing the SCTP transport being used by
 the {{domxref("RTCPeerConnection")}} for transmitting and receiving on its data

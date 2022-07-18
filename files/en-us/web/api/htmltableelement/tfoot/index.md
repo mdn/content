@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.tFoot
 slug: Web/API/HTMLTableElement/tFoot
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -15,18 +16,15 @@ The **`HTMLTableElement.tFoot`** property represents the
 {{HTMLElement("tfoot")}} element of a {{HTMLElement("table")}}. Its value will be
 `null` if there is no such element.
 
-## Syntax
+## Value
 
-```js
-HTMLTableSectionElementObject = table.tFoot
-table.tFoot = HTMLTableSectionElementObject
-```
+A {{HTMLElement("tfoot")}} element or `null`.
 
-## Example
+## Examples
 
 ```js
 if (table.tFoot == my_foot) {
-  // ...
+  // …
 }
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Document.lastModified
 slug: Web/API/Document/lastModified
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -16,11 +17,9 @@ The **`lastModified`** property of the {{domxref("Document")}}
 interface returns a string containing the date and time on which the current document
 was last modified.
 
-## Syntax
+## Value
 
-```js
-var string = document.lastModified;
-```
+A string.
 
 ## Examples
 
@@ -80,12 +79,10 @@ if (isNaN(nLastVisit) || nLastModif > nLastVisit) {
 ```
 
 > **Note:** WebKit returns the time string in UTC; Gecko and
-> Internet Explorer return a time in the local timezone. (See: [Bug 4363 – document.lastModified
-> returns date in UTC time, but should return it in local time](https://bugs.webkit.org/show_bug.cgi?id=4363))
+> Internet Explorer return a time in the local timezone. (See: [Bug 4363 – document.lastModified returns date in UTC time, but should return it in local time](https://bugs.webkit.org/show_bug.cgi?id=4363))
 
 If you want to know **whether _an external page_ has changed**,
-please read [this
-paragraph about the `XMLHttpRequest()` API](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#get_last_modified_date).
+please read [this paragraph about the `XMLHttpRequest()` API](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#get_last_modified_date).
 
 ## Specifications
 

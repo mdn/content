@@ -1,6 +1,7 @@
 ---
 title: ByteLengthQueuingStrategy()
 slug: Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
+page-type: web-api-constructor
 tags:
   - API
   - ByteLengthQueuingStrategy
@@ -19,12 +20,12 @@ instance.
 ## Syntax
 
 ```js
-var byteLengthQueuingStrategy = new ByteLengthQueuingStrategy({highWaterMark});
+new ByteLengthQueuingStrategy(highWaterMark)
 ```
 
 ### Parameters
 
-- {highWaterMark}
+- `highWaterMark`
   - : An object containing a `highWaterMark` property. This is a non-negative
     integer defining the total number of chunks that can be contained in the internal
     queue before backpressure is applied.
@@ -44,10 +45,10 @@ const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
 
 const readableStream = new ReadableStream({
   start(controller) {
-    ...
+    // …
   },
   pull(controller) {
-    ...
+    // …
   },
   cancel(err) {
     console.log("stream error:", err);

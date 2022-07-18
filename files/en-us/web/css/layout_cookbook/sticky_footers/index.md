@@ -9,6 +9,11 @@ tags:
   - flexbox
   - grid
   - sticky footer
+browser-compat:
+  - css.properties.grid-template-rows
+  - css.properties.flex-direction
+  - css.properties.flex-grow
+  - css.properties.flex-shrink
 ---
 {{CSSRef}}
 
@@ -18,7 +23,7 @@ A sticky footer pattern is one where the footer of your page "sticks" to the bot
 
 ## Requirements
 
-The Sticky footer pattern needs to meet the following requirements:
+The Sticky footer pattern needs to meet the following requirements:
 
 - Footer sticks to the bottom of the viewport when content is short.
 - If the content of the page extends past the viewport bottom, the footer then sits below the content as normal.
@@ -29,13 +34,13 @@ The Sticky footer pattern needs to meet the following requirements:
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/sticky-footer--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/sticky-footer--download.html)
 
 > **Note:** In this example and the following one we are using a wrapper set to `min-height: 100%` in order that our live example works. You could also achieve this for a full page by setting a {{cssxref("min-height")}} of `100vh` on the {{htmlelement("body")}} and then using it as your grid container.
 
 ## Choices made
 
-In the above example we achieve the sticky footer using CSS Grid Layout. The `.wrapper` has a minimum height of `100%` which means it is as tall as the container it is in. We then create a single column grid layout with three rows, one row for each part of our layout.
+In the above example we achieve the sticky footer using CSS Grid Layout. The `.wrapper` has a minimum height of `100%` which means it is as tall as the container it is in. We then create a single column grid layout with three rows, one row for each part of our layout.
 
 Grid auto-placement will place our items in source order and so the header goes into the first auto sized track, the main content into the `1fr` track and the footer into the final auto sized track. The `1fr` track will take up all available space and so grows to fill the gap.
 
@@ -49,21 +54,7 @@ The flexbox example starts out in the same way, but we use `display:flex` rather
 
 ## Browser compatibility
 
-### grid-template-rows
-
-{{Compat("css.properties.grid-template-rows")}}
-
-### flex-direction
-
-{{Compat("css.properties.flex-direction")}}
-
-### flex-grow
-
-{{Compat("css.properties.flex-grow")}}
-
-### flex-shrink
-
-{{Compat("css.properties.flex-shrink")}}
+{{Compat}}
 
 ## Resources on MDN
 

@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognitionResultList.length
 slug: Web/API/SpeechRecognitionResultList/length
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -20,20 +21,14 @@ The **`length`** read-only property of the
 "array" — the number of {{domxref("SpeechRecognitionResult")}} objects in the
 list.
 
-## Syntax
-
-```js
-var myLength = speechRecognitionResultListInstance.length;
-```
-
-### Returns
+## Value
 
 A number.
 
 ## Examples
 
 This code is excerpted from our
-[Speech color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) example.
+[Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 recognition.onresult = function(event) {

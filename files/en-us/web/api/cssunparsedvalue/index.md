@@ -1,6 +1,7 @@
 ---
 title: CSSUnparsedValue
 slug: Web/API/CSSUnparsedValue
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -22,7 +23,7 @@ Custom properties are represented by `CSSUnparsedValue` and {{cssxref('var()')}}
 
 ## Constructor
 
-- {{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}
+- {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}}
   - : Creates a new `CSSUnparsedValue` object.
 
 ## Properties

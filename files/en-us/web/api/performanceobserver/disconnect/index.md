@@ -1,6 +1,7 @@
 ---
 title: PerformanceObserver.disconnect()
 slug: Web/API/PerformanceObserver/disconnect
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -22,15 +23,23 @@ events.
 ## Syntax
 
 ```js
-performanceObserver.disconnect();
+disconnect()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
-var observer = new PerformanceObserver(function(list, obj) {
-  var entries = list.getEntries();
-  for (var i=0; i < entries.length; i++) {
+const observer = new PerformanceObserver(function(list, obj) {
+  const entries = list.getEntries();
+  for (let i=0; i < entries.length; i++) {
     // Process "mark" and "frame" events
   }
 });
@@ -38,11 +47,11 @@ observer.observe({entryTypes: ["mark", "frame"]});
 
 function perf_observer(list, observer) {
   // Process the "measure" event
-  // ...
+  // …
   // Disable additional performance events
   observer.disconnect();
 }
-var observer2 = new PerformanceObserver(perf_observer);
+const observer2 = new PerformanceObserver(perf_observer);
 observer2.observe({entryTypes: ["measure"]});
 ```
 

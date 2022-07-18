@@ -1,6 +1,7 @@
 ---
 title: Range.setEnd()
 slug: Web/API/Range/setEnd
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -22,7 +23,7 @@ collapsed range with the start and end points both set to the specified end posi
 ## Syntax
 
 ```js
-range.setEnd(endNode, endOffset);
+setEnd(endNode, endOffset)
 ```
 
 ### Parameters
@@ -34,7 +35,7 @@ range.setEnd(endNode, endOffset);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -51,7 +52,7 @@ the number of characters from the start of `endNode`. For other
 {{domxref("Node")}} types, `endOffset` is the number of child nodes between
 the start of the `endNode`.
 
-## Example
+## Examples
 
 ```js
 const range = document.createRange();

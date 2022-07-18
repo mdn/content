@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.click()
 slug: Web/API/HTMLElement/click
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -11,7 +12,7 @@ browser-compat: api.HTMLElement.click
 ---
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLElement.click()`** method simulates a mouse click on
+The **`HTMLElement.click()`** method simulates a mouse click on
 an element.
 
 When `click()` is used with supported elements (such as an
@@ -22,10 +23,18 @@ events.
 ## Syntax
 
 ```js
-element.click()
+click()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 Simulate a mouse-click when moving the mouse pointer over a checkbox:
 
@@ -58,6 +67,6 @@ function myFunction() {
 
 - Related event handlers
 
-  - {{domxref("GlobalEventHandlers.onclick")}}
-  - {{domxref("GlobalEventHandlers.ondblclick")}}
-  - {{domxref("GlobalEventHandlers.onauxclick")}}
+  - {{domxref("Element.click_event", "Element.onclick")}}
+  - {{domxref("Element.dblclick_event", "Element.ondblclick")}}
+  - {{domxref("Element.auxclick_event", "Element.onauxclick")}}

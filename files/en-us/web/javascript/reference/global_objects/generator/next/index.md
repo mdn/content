@@ -20,7 +20,7 @@ generator.
 ## Syntax
 
 ```js
-next(value)
+generatorObject.next(value)
 ```
 
 ### Parameters
@@ -38,19 +38,12 @@ next(value)
 
 An {{jsxref("Object")}} with two properties:
 
-- `done` (boolean)
-
-  - : Has the value `true` if the iterator is past the end of the iterated
-    sequence. In this case `value` optionally specifies the _return
-    value_ of the iterator.
-
-    Has the value `false` if the iterator was able to produce the next value
-    in the sequence. This is equivalent of not specifying the `done` property
-    altogether.
-
+- `done`
+  - : A boolean value:
+    - `true` if the generator is past the end of its control flow. In this case `value` specifies the _return value_ of the generator (which may be undefined).
+    - `false` if the generator is able to produce more values.
 - `value`
-  - : Any JavaScript value returned by the iterator. Can be omitted when `done`
-    is `true`.
+  - : Any JavaScript value yielded or returned by the generator.
 
 ## Examples
 
@@ -75,26 +68,17 @@ g.next();      // "Object { value: undefined, done: true }"
 
 ### Using next() with a list
 
+In this example, `getPage` takes a list and "paginates" it into chunks of size `pageSize`. Each call to `next` will yield one such chunk.
+
 ```js
-function* getPage(pageSize = 1, list) {
-    let output = [];
-    let index = 0;
-
-    while (index < list.length) {
-        output = [];
-        for (let i = index; i < index + pageSize; i++) {
-            if (list[i]) {
-                output.push(list[i]);
-            }
-        }
-
-        yield output;
-        index += pageSize;
-    }
+function* getPage(list, pageSize = 1) {
+  for (let index = 0; index < list.length; index += pageSize) {
+    yield list.slice(index, pageSize);
+  }
 }
 
-list = [1, 2, 3, 4, 5, 6, 7, 8]
-var page = getPage(3, list);              // Generator { }
+const list = [1, 2, 3, 4, 5, 6, 7, 8]
+const page = getPage(list, 3);            // Generator { }
 
 page.next();                              // Object {value: (3) [1, 2, 3], done: false}
 page.next();                              // Object {value: (3) [4, 5, 6], done: false}
@@ -106,19 +90,19 @@ page.next();                              // Object {value: undefined, done: tru
 
 In this example, `next` is called with a value.
 
-Note that the first call does not log anything, because the generator was not yielding
-anything initially.
+> **Note:** The first call does not log anything, because the generator was not yielding anything initially.
 
 ```js
 function* gen() {
   while (true) {
-    let value = yield null;
+    const value = yield;
     console.log(value);
   }
 }
 
 const g = gen();
 g.next(1);
+// No log at this step: the first value sent through `next` is lost
 // "{ value: null, done: false }"
 g.next(2);
 // 2
@@ -136,5 +120,4 @@ g.next(2);
 ## See also
 
 - {{jsxref("Statements/function*", "function*")}}
-- [Iterators and
-  generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)

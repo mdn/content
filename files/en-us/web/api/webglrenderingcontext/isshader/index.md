@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.isShader()
 slug: Web/API/WebGLRenderingContext/isShader
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -17,12 +18,12 @@ passed {{domxref("WebGLShader")}} is valid, `false` otherwise.
 ## Syntax
 
 ```js
-GLboolean gl.isShader(shader);
+isShader(shader)
 ```
 
 ### Parameters
 
-- shader
+- `shader`
   - : A {{domxref("WebGLShader")}} to check.
 
 ### Return value

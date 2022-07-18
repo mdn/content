@@ -1,6 +1,7 @@
 ---
 title: LinearAccelerationSensor
 slug: Web/API/LinearAccelerationSensor
+page-type: web-api-interface
 tags:
   - API
   - Accelerometer

@@ -1,6 +1,7 @@
 ---
 title: XRDepthInformation.height
 slug: Web/API/XRDepthInformation/height
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -15,7 +16,7 @@ browser-compat: api.XRDepthInformation.height
 ---
 {{APIRef("WebXR Device API")}}
 
-The *read-only* **`height`** property of the {{DOMxRef("XRDepthInformation")}} interface contains the height of the depth buffer (number of rows).
+The *read-only* **`height`** property of the {{DOMxRef("XRDepthInformation")}} interface contains the height of the depth buffer (number of rows).
 
 ## Value
 

@@ -1,6 +1,7 @@
 ---
 title: XRInputSource.hand
 slug: Web/API/XRInputSource/hand
+page-type: web-api-instance-property
 tags:
   - API
   - Controller
@@ -20,7 +21,7 @@ browser-compat: api.XRInputSource.hand
 ---
 {{APIRef("WebXR Device API")}}
 
-The read-only **`hand`** property of the {{domxref("XRInputSource")}} interface is a {{domxref("XRHand")}} object providing access to a hand-tracking device.
+The read-only **`hand`** property of the {{domxref("XRInputSource")}} interface is a {{domxref("XRHand")}} object providing access to a hand-tracking device.
 
 ## Value
 

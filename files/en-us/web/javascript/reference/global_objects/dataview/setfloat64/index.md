@@ -50,8 +50,8 @@ setFloat64(byteOffset, value, littleEndian)
 ### Using the setFloat64 method
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const buffer = new ArrayBuffer(8);
+const dataview = new DataView(buffer);
 dataview.setFloat64(0, 3);
 dataview.getFloat64(0); // 3
 ```

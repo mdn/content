@@ -24,7 +24,7 @@ They are grouped by complexity so that you can choose the most appropriate for y
 - [Resizing background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images)
   - : CSS allows you to resize images used as an element's background.
     This tutorial describes how to achieve this in a simple way.
-- [Media queries](/en-US/docs/Web/CSS/Media_queries)
+- [Media queries](/en-US/docs/Web/CSS/Media_Queries)
   - : The size of the screens, or the kind of devices like touchscreens or printed sheets vary greatly nowadays.
     Media queries are the fundamental building blocks in achieving Web sites that render everywhere in their best quality.
 - [Understanding z-index](/en-US/docs/Web/CSS/Understanding_z-index)
@@ -37,8 +37,8 @@ After the release of CSS 2 (Level 1), new features have been added to CSS.
 Some of them are _fancy_ and are pretty self contained.
 They are easy to use for anybody with a fair knowledge of basic concepts.
 
-- [CSS Counters](/en-US/docs/Web/CSS/Counters)
-  - : Counting items and pages is an easy task in CSS. Learn to use {{cssxref("counter-reset")}}, {{cssxref("counter-increment")}}, {{cssxref("counters", "counters()")}}, and {{cssxref("counter()")}}.
+- [CSS Counters](/en-US/docs/Web/CSS/counters)
+  - : Counting items and pages is an easy task in CSS. Learn to use {{cssxref("counter-reset")}}, {{cssxref("counter-increment")}}, {{cssxref("counters", "counters()")}}, and {{cssxref("counter", "counter()")}}.
 - [CSS Animations](/en-US/docs/Web/CSS/Tutorials/Using_CSS_animations)
   - : CSS3 Animations allow you to define configurations of style, as [keyframes](/en-US/docs/Web/CSS/@keyframes), and to transition between them defining an animation.
 - [CSS Transitions](/en-US/docs/Web/CSS/Tutorials/Using_CSS_transitions)

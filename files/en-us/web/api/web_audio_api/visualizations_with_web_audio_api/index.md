@@ -1,15 +1,18 @@
 ---
 title: Visualizations with Web Audio API
 slug: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
+page-type: guide
 tags:
   - API
   - Web Audio API
-  - analyser
+  - analyzer
   - fft
-  - visualisation
+  - visualization
   - visualization
   - waveform
 ---
+{{DefaultAPISidebar("Web Audio API")}}
+
 One of the most interesting features of the Web Audio API is the ability to extract frequency, waveform, and other data from your audio source, which can then be used to create visualizations. This article explains how, and provides a couple of basic use cases.
 
 > **Note:** You can find working examples of all the code snippets in our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo.
@@ -19,8 +22,8 @@ One of the most interesting features of the Web Audio API is the ability to extr
 To extract data from your audio source, you need an {{ domxref("AnalyserNode") }}, which is created using the {{ domxref("BaseAudioContext.createAnalyser") }} method, for example:
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var analyser = audioCtx.createAnalyser();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const analyser = audioCtx.createAnalyser();
 ```
 
 This node is then connected to your audio source at some point between your source and your destination, for example:
@@ -46,8 +49,8 @@ So for example, say we are dealing with an fft size of 2048. We return the {{ do
 
 ```js
 analyser.fftSize = 2048;
-var bufferLength = analyser.frequencyBinCount;
-var dataArray = new Uint8Array(bufferLength);
+const bufferLength = analyser.frequencyBinCount;
+const dataArray = new Uint8Array(bufferLength);
 ```
 
 To actually retrieve the data and copy it into our array, we then call the data collection method we want, with the array passed as it's argument. For example:
@@ -62,12 +65,12 @@ Let's go on to look at some specific examples.
 
 ## Creating a waveform/oscilloscope
 
-To create the oscilloscope visualisation (hat tip to [Soledad Penadés](https://soledadpenades.com/) for the original code in [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), we first follow the standard pattern described in the previous section to set up the buffer:
+To create the oscilloscope visualization (hat tip to [Soledad Penadés](https://soledadpenades.com/) for the original code in [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), we first follow the standard pattern described in the previous section to set up the buffer:
 
 ```js
 analyser.fftSize = 2048;
-var bufferLength = analyser.frequencyBinCount;
-var dataArray = new Uint8Array(bufferLength);
+const bufferLength = analyser.frequencyBinCount;
+const dataArray = new Uint8Array(bufferLength);
 ```
 
 Next, we clear the canvas of what had been drawn on it before to get ready for the new visualization display:
@@ -85,7 +88,7 @@ function draw() {
 In here, we use `requestAnimationFrame()` to keep looping the drawing function once it has been started:
 
 ```js
-var drawVisual = requestAnimationFrame(draw);
+const drawVisual = requestAnimationFrame(draw);
 ```
 
 Next, we grab the time domain data and copy it into our array
@@ -112,17 +115,17 @@ canvasCtx.beginPath();
 Determine the width of each segment of the line to be drawn by dividing the canvas width by the array length (equal to the FrequencyBinCount, as defined earlier on), then define an x variable to define the position to move to for drawing each segment of the line.
 
 ```js
-var sliceWidth = WIDTH * 1.0 / bufferLength;
-var x = 0;
+const sliceWidth = WIDTH * 1.0 / bufferLength;
+const x = 0;
 ```
 
-Now we run through a loop, defining the position of a small segment of the wave for each point in the buffer at a certain height based on the data point value form the array, then moving the line across to the place where the next wave segment should be drawn:
+Now we run through a loop, defining the position of a small segment of the wave for each point in the buffer at a certain height based on the data point value from the array, then moving the line across to the place where the next wave segment should be drawn:
 
 ```js
-      for(var i = 0; i < bufferLength; i++) {
+      for (let i = 0; i < bufferLength; i++) {
 
-        var v = dataArray[i] / 128.0;
-        var y = v * HEIGHT/2;
+        const v = dataArray[i] / 128.0;
+        const y = v * HEIGHT/2;
 
         if(i === 0) {
           canvasCtx.moveTo(x, y);
@@ -134,7 +137,7 @@ Now we run through a loop, defining the position of a small segment of the wave 
       }
 ```
 
-Finally, we finish the line in the middle of the right hand side of the canvas, then draw the stroke we've defined:
+Finally, we finish the line in the middle of the right-hand side of the canvas, then draw the stroke we've defined:
 
 ```js
       canvasCtx.lineTo(canvas.width, canvas.height/2);
@@ -160,9 +163,9 @@ First, we again set up our analyser and data array, then clear the current canva
 
 ```js
 analyser.fftSize = 256;
-var bufferLength = analyser.frequencyBinCount;
+const bufferLength = analyser.frequencyBinCount;
 console.log(bufferLength);
-var dataArray = new Uint8Array(bufferLength);
+const dataArray = new Uint8Array(bufferLength);
 
 canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
 ```
@@ -184,9 +187,9 @@ Now we set our `barWidth` to be equal to the canvas width divided by the number 
 We also set a `barHeight` variable, and an `x` variable to record how far across the screen to draw the current bar.
 
 ```js
-var barWidth = (WIDTH / bufferLength) * 2.5;
-var barHeight;
-var x = 0;
+const barWidth = (WIDTH / bufferLength) * 2.5;
+let barHeight;
+const x = 0;
 ```
 
 As before, we now start a for loop and cycle through each value in the `dataArray`. For each one, we make the `barHeight` equal to the array value, set a fill color based on the `barHeight` (taller bars are brighter), and draw a bar at `x` pixels across the canvas, which is `barWidth` wide and `barHeight/2` tall (we eventually decided to cut each bar in half so they would all fit on the canvas better.)
@@ -194,7 +197,7 @@ As before, we now start a for loop and cycle through each value in the `dataArra
 The one value that needs explaining is the vertical offset position we are drawing each bar at: `HEIGHT-barHeight/2`. I am doing this because I want each bar to stick up from the bottom of the canvas, not down from the top, as it would if we set the vertical position to 0. Therefore, we instead set the vertical position each time to the height of the canvas minus `barHeight/2`, so therefore each bar will be drawn from partway down the canvas, down to the bottom.
 
 ```js
-      for(var i = 0; i < bufferLength; i++) {
+      for (let i = 0; i < bufferLength; i++) {
         barHeight = dataArray[i]/2;
 
         canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';

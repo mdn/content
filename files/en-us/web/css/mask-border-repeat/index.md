@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Masking
   - CSS Property
-  - Experimental
   - NeedsCompatTable
   - NeedsExample
   - Reference
@@ -32,6 +31,7 @@ mask-border-repeat: round stretch;
 mask-border-repeat: inherit;
 mask-border-repeat: initial;
 mask-border-repeat: revert;
+mask-border-repeat: revert-layer;
 mask-border-repeat: unset;
 ```
 

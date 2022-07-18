@@ -1,13 +1,15 @@
 ---
 title: Working with the History API
 slug: Web/API/History_API/Working_with_the_History_API
+page-type: guide
 tags:
   - Advanced
   - DOM
   - History API
   - History API Tutorial
 ---
-HTML5 introduced the {{DOMxRef("History.pushState","pushState()")}} and {{DOMxRef("History.replaceState","replaceState()")}} methods for add and modifying history entries, respectively. These methods work in conjunction with the {{domxref("WindowEventHandlers/onpopstate","onpopstate")}} event.
+{{DefaultAPISidebar("History API")}}
+HTML5 introduced the {{DOMxRef("History.pushState","pushState()")}} and {{DOMxRef("History.replaceState","replaceState()")}} methods for add and modifying history entries, respectively. These methods work in conjunction with the {{domxref("Window/popstate_event", "popstate")}} event.
 
 ## Adding and modifying history entries
 
@@ -93,7 +95,7 @@ Suppose now that the user navigates to `https://www.microsoft.com`, then clicks 
 
 A `popstate` event is dispatched to the window every time the active history entry changes. If the history entry being activated was created by a call to {{DOMxRef("History.pushState","pushState")}} or affected by a call to {{DOMxRef("History.replaceState","replaceState")}}, the `popstate` event's `state` property contains a copy of the history entry's state object.
 
-See {{ domxref("WindowEventHandlers.onpopstate") }} for sample usage.
+See {{domxref("Window/popstate_event", "popstate")}} for sample usage.
 
 ### Reading the current state
 

@@ -1,6 +1,7 @@
 ---
 title: VideoEncoder.configure()
 slug: Web/API/VideoEncoder/configure
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,7 +17,7 @@ The **`configure()`** method of the {{domxref("VideoEncoder")}} interface enqueu
 ## Syntax
 
 ```js
-VideoEncoder.configure(config)
+configure(config)
 ```
 
 ### Parameters
@@ -24,14 +25,14 @@ VideoEncoder.configure(config)
 - `config`
   - : A dictionary object containing the following members:
     - `codec`
-      - : A {{domxref("DOMString","string")}} containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry).
-    - `width`{{Optional_Inline}}
+      - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry).
+    - `width` {{optional_inline}}
       - : An integer representing the width of each output {{domxref("EncodedVideoChunk")}} in pixels, before any ratio adjustments.
-    - `height`{{Optional_Inline}}
+    - `height` {{optional_inline}}
       - : An integer representing the height of each output {{domxref("EncodedVideoChunk")}} in pixels, before any ratio adjustments.
-    - `displayWidth`{{Optional_Inline}}
+    - `displayWidth` {{optional_inline}}
       - : An integer representing the intended display width of each output {{domxref("EncodedVideoChunk")}} in pixels when displayed.
-    - `displayHeight`{{Optional_Inline}}
+    - `displayHeight` {{optional_inline}}
       - : An integer representing the vertical dimension of each output {{domxref("EncodedVideoChunk")}} in pixels when displayed.
     - `hardwareAcceleration`
       - : A hint that configures the hardware acceleration method of this codec. One of:
@@ -47,7 +48,7 @@ VideoEncoder.configure(config)
         - `"discard"` (default)
         - `"keep"`
     - `scalabilityMode`
-      - : A {{domxref("DOMString", "string")}} containing an encoding scalability mode identifier as defined in [WebRTC](https://w3c.github.io/webrtc-svc/#scalabilitymodes*).
+      - : A string containing an encoding scalability mode identifier as defined in [WebRTC](https://w3c.github.io/webrtc-svc/#scalabilitymodes*).
     - `bitrateMode`
       - : A string containing a bitrate mode. One of:
         - `"constant"`
@@ -57,13 +58,13 @@ VideoEncoder.configure(config)
         - `"quality"` (default)
         - `"realtime"`
 
-### Return Value
+### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the provided `config` is invalid.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("VideoEncoder.state","state")}} is `"closed"`.

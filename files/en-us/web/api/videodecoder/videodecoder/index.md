@@ -1,6 +1,7 @@
 ---
-title: VideoDecoder.VideoDecoder()
+title: VideoDecoder()
 slug: Web/API/VideoDecoder/VideoDecoder
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -15,7 +16,7 @@ The **`VideoDecoder()`** constructor creates a new {{domxref("VideoDecoder")}} o
 ## Syntax
 
 ```js
-new VideoDecoder();
+new VideoDecoder(init)
 ```
 
 ### Parameters

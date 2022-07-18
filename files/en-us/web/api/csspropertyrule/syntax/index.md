@@ -1,6 +1,7 @@
 ---
 title: CSSPropertyRule.syntax
 slug: Web/API/CSSPropertyRule/syntax
+page-type: web-api-instance-property
 tags:
   - API
   - CSS
@@ -15,17 +16,11 @@ browser-compat: api.CSSPropertyRule.syntax
 ---
 {{APIRef("CSS Properties and Values API")}}
 
-The read-only **`syntax`** property of the {{domxref("CSSPropertyRule")}} interface returns the literal syntax of the custom property registration represented by the {{cssxref("@property")}} rule, controlling how the property’s value is parsed at computed-value time.
+The read-only **`syntax`** property of the {{domxref("CSSPropertyRule")}} interface returns the literal syntax of the custom property registration represented by the {{cssxref("@property")}} rule, controlling how the property's value is parsed at computed-value time.
 
-## Syntax
+## Value
 
-```js
-const syntax = CSSPropertyRule.syntax;
-```
-
-### Value
-
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

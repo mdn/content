@@ -1,6 +1,7 @@
 ---
 title: TreeWalker.nextSibling()
 slug: Web/API/TreeWalker/nextSibling
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -18,16 +19,24 @@ is no such node, return `null` and the current node is not changed.
 ## Syntax
 
 ```js
-node = treeWalker.nextSibling();
+nextSibling()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+A {{domxref("Node")}} object or `null`.
+
+## Examples
 
 ```js
 var treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
 treeWalker.firstChild();

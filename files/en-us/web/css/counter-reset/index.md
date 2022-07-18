@@ -51,6 +51,7 @@ counter-reset: none;
 counter-reset: inherit;
 counter-reset: initial;
 counter-reset: revert;
+counter-reset: revert-layer;
 counter-reset: unset;
 ```
 
@@ -123,5 +124,5 @@ h1 {
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-set")}}
 - {{cssxref("@counter-style")}}
-- {{cssxref("counter()")}} and {{cssxref("counters()")}} functions
+- {{cssxref("counter", "counter()")}} and {{cssxref("counters", "counters()")}} functions
 - {{cssxref("content")}} property

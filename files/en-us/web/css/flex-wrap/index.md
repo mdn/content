@@ -15,7 +15,7 @@ The **`flex-wrap`** [CSS](/en-US/docs/Web/CSS) property sets whether flex items 
 
 {{EmbedInteractiveExample("pages/css/flex-wrap.html")}}
 
-See [Using CSS flexible boxes](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for more properties and information.
+See [Using CSS flexible boxes](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for more properties and information.
 
 ## Syntax
 
@@ -28,6 +28,7 @@ flex-wrap: wrap-reverse;
 flex-wrap: inherit;
 flex-wrap: initial;
 flex-wrap: revert;
+flex-wrap: revert-layer;
 flex-wrap: unset;
 ```
 
@@ -87,26 +88,26 @@ The following values are accepted:
 .content1,
 .content2 {
   color: #fff;
-  font: 100 24px/100px sans-serif;
+  font: 100 24px/100px sans-serif;
   height: 150px;
   width: 897px;
-  text-align: center;
+  text-align: center;
 }
 
 .content div,
 .content1 div,
 .content2 div {
-  height: 50%;
-  width: 300px;
+  height: 50%;
+  width: 300px;
 }
 .red {
-  background: orangered;
+  background: orangered;
 }
 .green {
-  background: yellowgreen;
+  background: yellowgreen;
 }
 .blue {
-  background: steelblue;
+  background: steelblue;
 }
 
 /* Flexbox Styles */
@@ -115,18 +116,18 @@ The following values are accepted:
   flex-wrap: wrap;
 }
 .content1 {
-  display: flex;
-  flex-wrap: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
 }
 .content2 {
-  display: flex;
-  flex-wrap: wrap-reverse;
+  display: flex;
+  flex-wrap: wrap-reverse;
 }
 ```
 
 #### Results
 
-{{ EmbedLiveSample('Setting_flex_container_wrap_values', '700px', '700px', '', 'Web/CSS/flex-wrap') }}
+{{ EmbedLiveSample('Setting flex container wrap values', '', '700') }}
 
 ## Specifications
 

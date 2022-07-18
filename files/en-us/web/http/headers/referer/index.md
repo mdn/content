@@ -49,7 +49,7 @@ Referer: <url>
 
 - \<url>
   - : An absolute or partial address of the web page that makes the request.
-    URL fragments (i.e. "#section") and userinfo (i.e. "username:password" in "https\://username:password\@example.com/foo/bar/") are not included.
+    URL fragments (i.e. "#section") and userinfo (i.e. "username:password" in "https\://username:password\@example.com/foo/bar/") are not included.
     Origin, path, and querystring may be included, depending on the [referrer policy](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#directives).
 
 ## Examples

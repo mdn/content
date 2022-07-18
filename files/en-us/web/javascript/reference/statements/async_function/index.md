@@ -21,18 +21,24 @@ Async functions may also be defined {{jsxref("Operators/async_function", "as
 ## Syntax
 
 ```js
-async function name([param[, param[, ...param]]]) {
-   statements
+async function name(param0) {
+  statements
+}
+async function name(param0, param1) {
+  statements
+}
+async function name(param0, param1, /* … ,*/ paramN) {
+  statements
 }
 ```
 
 ### Parameters
 
 - `name`
-  - : The function’s name.
-- `param`
+  - : The function's name.
+- `param` {{optional_inline}}
   - : The name of an argument to be passed to the function.
-- `statements`
+- `statements` {{optional_inline}}
   - : The statements comprising the body of the function. The `await`
     mechanism may be used.
 
@@ -58,7 +64,7 @@ Async functions can contain zero or more {{jsxref("Operators/await", "await")}} 
 Async functions always return a promise. If the return value of an async function is
 not explicitly a promise, it will be implicitly wrapped in a promise.
 
-For example, the following:
+For example, consider the following code:
 
 ```js
 async function foo() {
@@ -66,7 +72,7 @@ async function foo() {
 }
 ```
 
-...is similar to:
+It is similar to:
 
 ```js
 function foo() {
@@ -113,7 +119,7 @@ async function foo() {
 }
 ```
 
-...is equivalent to:
+It is also equivalent to:
 
 ```js
 function foo() {
@@ -314,7 +320,7 @@ Alternatively, you can chain the promise with `catch()`:
 
 ```js
 async function getProcessedData(url) {
-  const v = await downloadData(url).catch(e => { 
+  const v = await downloadData(url).catch(e => {
     return downloadFallbackData(url)
   })
   return processDataInWorker(v)
@@ -339,5 +345,4 @@ it's not already a promise itself (as in the examples).
 - {{jsxref("Operators/async_function", "async function expression", "", 1)}}
 - {{jsxref("AsyncFunction")}} object
 - {{jsxref("Operators/await", "await")}}
-- ["Decorating
-  Async Javascript Functions" on "innolitics.com"](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/)
+- [Decorating Async Javascript Functions](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/) on _innolitics.com_

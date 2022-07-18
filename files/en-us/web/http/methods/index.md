@@ -32,10 +32,7 @@ HTTP defines a set of **request methods** to indicate the desired action to be p
 
 ## Specifications
 
-| Specification                                        | Title                                                         | Comment                                                          |
-| ---------------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------- |
-| {{RFC("7231", "Request methods", "4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content | Specifies GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE. |
-| {{RFC("5789", "Patch method", "2")}}     | PATCH Method for HTTP                                         | Specifies PATCH.                                                 |
+{{Specifications}}
 
 ## Browser compatibility
 

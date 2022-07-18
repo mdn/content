@@ -1,6 +1,7 @@
 ---
 title: Range.selectNode()
 slug: Web/API/Range/selectNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -18,15 +19,19 @@ the parent of the _referenceNode_.
 ## Syntax
 
 ```js
-range.selectNode(referenceNode);
+selectNode(referenceNode)
 ```
 
 ### Parameters
 
-- _referenceNode_
+- `referenceNode`
   - : The {{domxref("Node")}} to select within a {{domxref("Range")}}.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 let range = document.createRange();

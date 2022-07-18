@@ -1,6 +1,7 @@
 ---
 title: IDBIndex
 slug: Web/API/IDBIndex
+page-type: web-api-interface
 tags:
   - API
   - Database
@@ -36,7 +37,7 @@ You can grab a set of keys within a range. To learn more, see {{domxref("IDBKeyR
 - {{domxref("IDBIndex.keyPath")}} {{readonlyInline}}
   - : The [key path](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path) of this index. If null, this index is not auto-populated.
 - {{domxref("IDBIndex.multiEntry")}} {{readonlyInline}}
-  - : Affects how the index behaves when the result of evaluating the index's key path yields an array. If `true`, there is one record in the index for each item in an array of keys. If `false`, then there is one record for each key that is an array.
+  - : Affects how the index behaves when the result of evaluating the index's key path yields an array. If `true`, there is one record in the index for each item in an array of keys. If `false`, then there is one record for each key that is an array.
 - {{domxref("IDBIndex.unique")}} {{readonlyInline}}
   - : If `true`, this index does not allow duplicate values for a key.
 
@@ -51,9 +52,9 @@ Inherits from: [EventTarget](/en-US/docs/Web/API/EventTarget)
 - {{domxref("IDBIndex.getKey()")}}
   - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, finds either the given key or the primary key, if `key` is an {{domxref("IDBKeyRange")}}.
 - {{domxref("IDBIndex.getAll()")}}
-  - : Returns an {{domxref("IDBRequest")}} object, in a separate thread, finds all matching values in the referenced object store that correspond to the given key or are in range, if `key` is an {{domxref("IDBKeyRange")}}.
+  - : Returns an {{domxref("IDBRequest")}} object, in a separate thread, finds all matching values in the referenced object store that correspond to the given key or are in range, if `key` is an {{domxref("IDBKeyRange")}}.
 - {{domxref("IDBIndex.getAllKeys()")}}
-  - : Returns an {{domxref("IDBRequest")}} object, in a separate thread, finds all matching keys in the referenced object store that correspond to the given key or are in range, if `key` is an {{domxref("IDBKeyRange")}}.
+  - : Returns an {{domxref("IDBRequest")}} object, in a separate thread, finds all matching keys in the referenced object store that correspond to the given key or are in range, if `key` is an {{domxref("IDBKeyRange")}}.
 - {{domxref("IDBIndex.openCursor()")}}
   - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [cursor](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor) over the specified key range.
 - {{domxref("IDBIndex.openKeyCursor()")}}
@@ -61,21 +62,21 @@ Inherits from: [EventTarget](/en-US/docs/Web/API/EventTarget)
 
 ## Example
 
-In the following example we open a transaction and an object store, then get the index `lName` from a simple contacts database. We then open a basic cursor on the index using {{domxref("IDBIndex.openCursor")}} — this works the same as opening a cursor directly on an `ObjectStore` using {{domxref("IDBObjectStore.openCursor")}} except that the returned records are sorted based on the index, not the primary key.
+In the following example we open a transaction and an object store, then get the index `lName` from a simple contacts database. We then open a basic cursor on the index using {{domxref("IDBIndex.openCursor")}} — this works the same as opening a cursor directly on an `ObjectStore` using {{domxref("IDBObjectStore.openCursor")}} except that the returned records are sorted based on the index, not the primary key.
 
-Finally, we iterate through each record, and insert the data into an HTML table. For a complete working example, see our [IndexedDB-examples demo repo](https://github.com/mdn/indexeddb-examples/tree/master/idbindex) ([View the example live](https://mdn.github.io/indexeddb-examples/idbindex).)
+Finally, we iterate through each record, and insert the data into an HTML table. For a complete working example, see our [IndexedDB-examples demo repo](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbindex) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/).)
 
 ```js
 function displayDataByIndex() {
   tableEntry.innerHTML = '';
-  var transaction = db.transaction(['contactsList'], 'readonly');
-  var objectStore = transaction.objectStore('contactsList');
+  const transaction = db.transaction(['contactsList'], 'readonly');
+  const objectStore = transaction.objectStore('contactsList');
 
-  var myIndex = objectStore.index('lName');
+  const myIndex = objectStore.index('lName');
   myIndex.openCursor().onsuccess = function(event) {
-    var cursor = event.target.result;
+   const cursor = event.target.result;
     if(cursor) {
-      var tableRow = document.createElement('tr');
+      const tableRow = document.createElement('tr');
       tableRow.innerHTML =   '<td>' + cursor.value.id + '</td>'
                            + '<td>' + cursor.value.lName + '</td>'
                            + '<td>' + cursor.value.fName + '</td>'

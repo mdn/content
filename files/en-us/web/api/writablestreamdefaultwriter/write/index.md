@@ -1,6 +1,7 @@
 ---
 title: WritableStreamDefaultWriter.write()
 slug: Web/API/WritableStreamDefaultWriter/write
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -26,12 +27,12 @@ destination.
 ## Syntax
 
 ```js
-var promise = writableStreamDefaultWriter.write(chunk);
+write(chunk)
 ```
 
 ### Parameters
 
-- chunk
+- `chunk`
   - : A block of binary data to pass to the `WritableStream`.
 
 ### Return value
@@ -42,7 +43,7 @@ writing process is initiated.
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : The target stream is not a writable stream, or it does not have an owner.
 
 ## Examples
@@ -97,11 +98,11 @@ const writableStream = new WritableStream({
   // Implement the sink
   write(chunk) {
     return new Promise((resolve, reject) => {
-      var buffer = new ArrayBuffer(2);
-      var view = new Uint16Array(buffer);
+      const buffer = new ArrayBuffer(1);
+      const view = new Uint8Array(buffer);
       view[0] = chunk;
-      var decoded = decoder.decode(view, { stream: true });
-      var listItem = document.createElement('li');
+      const decoded = decoder.decode(view, { stream: true });
+      const listItem = document.createElement('li');
       listItem.textContent = "Chunk decoded: " + decoded;
       list.appendChild(listItem);
       result += decoded;
@@ -109,7 +110,7 @@ const writableStream = new WritableStream({
     });
   },
   close() {
-    var listItem = document.createElement('li');
+    const listItem = document.createElement('li');
     listItem.textContent = "[MESSAGE RECEIVED] " + result;
     list.appendChild(listItem);
   },
@@ -121,8 +122,7 @@ const writableStream = new WritableStream({
 sendMessage("Hello, world.", writableStream);
 ```
 
-You can find the full code in our [Simple writer
-example](https://mdn.github.io/dom-examples/streams/simple-writer/).
+You can find the full code in our [Simple writer example](https://mdn.github.io/dom-examples/streams/simple-writer/).
 
 ## Specifications
 

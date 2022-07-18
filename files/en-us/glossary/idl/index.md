@@ -7,7 +7,7 @@ tags:
   - IDL
   - Interface description language
 ---
-An **IDL** (_Interface Description Language_) is a generic language used to specified objects' interfaces apart from any specific programming language.
+An **IDL** (_Interface Description Language_) is a generic language used to specified objects' interfaces apart from any specific programming language.
 
 ## Content versus IDL attributes
 
@@ -21,10 +21,10 @@ Most of the time, IDL attributes will return their values as they are really use
 
 IDL attributes are not always strings; for example, `input.maxlength` is a number (a signed long). When using IDL attributes, you read or set values of the desired type, so `input.maxlength` is always going to return a number and when you set `input.maxlength`, it wants a number. If you pass another type, it is automatically converted to a number as specified by the standard JavaScript rules for type conversion.
 
-IDL attributes can [reflect other types](https://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#reflecting-content-attributes-in-idl-attributes) such as unsigned long, URLs, booleans, etc. Unfortunately, there are no clear rules and the way IDL attributes behave in conjunction with their corresponding content attributes depends on the attribute. Most of the time, it will follow [the rules laid out in the specification](https://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#reflecting-content-attributes-in-idl-attributes), but sometimes it doesn't. HTML specifications try to make this as developer-friendly as possible, but for various reasons (mostly historical), some attributes behave oddly (`select.size`, for example) and you should read the specifications to understand how exactly they behave.
+IDL attributes can [reflect other types](https://html.spec.whatwg.org/multipage/urls-and-fetching.html#reflecting-content-attributes-in-idl-attributes) such as unsigned long, URLs, booleans, etc. Unfortunately, there are no clear rules and the way IDL attributes behave in conjunction with their corresponding content attributes depends on the attribute. Most of the time, it will follow [the rules laid out in the specification](https://html.spec.whatwg.org/multipage/urls-and-fetching.html#reflecting-content-attributes-in-idl-attributes), but sometimes it doesn't. HTML specifications try to make this as developer-friendly as possible, but for various reasons (mostly historical), some attributes behave oddly (`select.size`, for example) and you should read the specifications to understand how exactly they behave.
 
 ## See also
 
 - {{interwiki("wikipedia", "Interface description language", "IDL")}} on Wikipedia
 - [HTML attribute reference](/en-US/docs/Web/HTML/Attributes)
-- [Interface Definition Language](https://www.eecs.berkeley.edu/~messer/netappc/Supplements/10-idl.pdf)
+- [Interface Definition Language](https://people.eecs.berkeley.edu/~messer/netappc/Supplements/10-idl.pdf)

@@ -46,6 +46,7 @@ clear: inline-end;
 clear: inherit;
 clear: initial;
 clear: revert;
+clear: revert-layer;
 clear: unset;
 ```
 

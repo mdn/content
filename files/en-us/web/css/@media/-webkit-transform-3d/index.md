@@ -32,19 +32,19 @@ The **`-webkit-transform-3d`** Boolean [CSS](/en-US/docs/Web/CSS) [media feature
 
 ## Examples
 
-### Examples of media queries with -webkit-transform-3d
+### Examples of media queries with -webkit-transform-3d
 
 ```css
 @media (-webkit-transform-3d) {
-  .foo {
-    transform-style: preserve-3d;
-  }
+  .foo {
+    transform-style: preserve-3d;
+  }
 }
 
 @media (-webkit-transform-3d: 1) {
-  .foo {
-    transform-style: preserve-3d;
-  }
+  .foo {
+    transform-style: preserve-3d;
+  }
 }
 ```
 
@@ -61,6 +61,6 @@ The **`-webkit-transform-3d`** Boolean [CSS](/en-US/docs/Web/CSS) [media feature
 - {{cssxref("@media/-webkit-transform-2d", "-webkit-transform-2d")}}
 - {{cssxref("@media/-webkit-transition", "-webkit-transition")}}
 - {{cssxref("@media/-webkit-animation", "-webkit-animation")}}
-- [Test page at quirksmode.org](http://www.quirksmode.org/css/tests/mediaqueries/animation.html)
+- [Test page at quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
 
 {{ CSSRef }}

@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.ongotpointercapture
 slug: Web/API/GlobalEventHandlers/ongotpointercapture
+page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
@@ -16,7 +17,7 @@ browser-compat: api.GlobalEventHandlers.ongotpointercapture
 
 The **`ongotpointercapture`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
-processes {{event("gotpointercapture")}} events.
+processes {{domxref("HTMLElement/gotpointercapture_event", "gotpointercapture")}} events.
 
 ## Syntax
 
@@ -26,8 +27,7 @@ target.ongotpointercapture = functionRef;
 
 ### Value
 
-`functionRef` is a function name or a [function
-expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("PointerEvent")}} object as its sole
+`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("PointerEvent")}} object as its sole
 argument.
 
 ## Example

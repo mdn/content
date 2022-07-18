@@ -8,7 +8,7 @@ tags:
 ---
 Syntax specifies the required combination and sequence of {{Glossary("character","characters")}} making up correctly structured code. Syntax generally includes grammar and the rules that apply to writing it, such as indentation requirements in Python.
 
-Syntax varies from language to language (e.g., syntax is different in {{Glossary("HTML")}} and {{Glossary("JavaScript")}}). Although languages can share few similarities in terms of their syntaxes for example "operand operator operand" rule in javaScript and python. This does not mean the two languages share similarities with syntax.
+Syntax varies from language to language (e.g., syntax is different in {{Glossary("HTML")}} and {{Glossary("JavaScript")}}). Although languages can share few similarities in terms of their syntaxes for example "operand operator operand" rule in JavaScript and Python. This does not mean the two languages share similarities with syntax.
 
 Syntax applies both to programming languages (commands to the computer) and markup languages (document structure information) alike.
 

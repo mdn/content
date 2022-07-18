@@ -1,6 +1,7 @@
 ---
 title: CSSNumericArray
 slug: Web/API/CSSNumericArray
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -13,11 +14,11 @@ browser-compat: api.CSSNumericArray
 ---
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSNumericArray`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}}  contains a list of {{domxref("CSSNumericValue")}} objects.
+The **`CSSNumericArray`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}}  contains a list of {{domxref("CSSNumericValue")}} objects.
 
 ## Properties
 
-- {{domxref("CSSNumericArray.length")}} {{ReadOnlyInline}}
+- {{domxref("CSSNumericArray.length")}} {{ReadOnlyInline}}
   - : Returns how many {{domxref("CSSNumericValue")}} objects are contained within the `CSSNumericArray`.
 
 ## Examples

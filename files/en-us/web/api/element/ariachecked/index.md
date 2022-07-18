@@ -1,6 +1,7 @@
 ---
 title: Element.ariaChecked
 slug: Web/API/Element/ariaChecked
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,16 +18,9 @@ The **`ariaChecked`** property of the {{domxref("Element")}} interface reflects 
 
 > **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="checkbox"` as this element has built in semantics and does not require ARIA attributes.
 
-## Syntax
+## Value
 
-```js
-var ariaChecked = element.ariaChecked;
-element.ariaChecked = ariaChecked
-```
-
-### Value
-
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : The element is checked.

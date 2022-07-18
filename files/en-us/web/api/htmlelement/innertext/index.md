@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.innerText
 slug: Web/API/HTMLElement/innerText
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -11,38 +12,24 @@ browser-compat: api.HTMLElement.innerText
 ---
 {{APIRef("HTML DOM")}}
 
-The **`innerText`** property of the
-{{domxref("HTMLElement")}} interface represents the "rendered" text content of a node
-and its descendants.
+The **`innerText`** property of the {{domxref("HTMLElement")}} interface represents the rendered text content of a node and its descendants.
 
-As a getter, it approximates the text the user would get
-if they highlighted the contents of the element with the cursor and then copied it to
-the clipboard.
+As a getter, it approximates the text the user would get if they highlighted the contents of the element with the cursor and then copied it to the clipboard.
+As a setter this will replace the element's children with the given value, converting any line breaks into {{HTMLElement("br")}} elements.
 
-> **Note:** `innerText` is easily confused with
-> {{domxref("Node.textContent")}}, but there are important differences between the two.
-> Basically, `innerText` is aware of the rendered appearance of text, while
-> `textContent` is not.
+> **Note:** `innerText` is easily confused with {{domxref("Node.textContent")}}, but there are important differences between the two.
+> Basically, `innerText` is aware of the rendered appearance of text, while `textContent` is not.
 
-## Syntax
+## Value
 
-```js
-const renderedText = htmlElement.innerText
-htmlElement.innerText = string
-```
+A string representing the rendered text content of an element.
 
-### Value
+If the element itself is not [being rendered](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered) (for example, is detached from the document or is hidden from view), the returned value is the same as the {{domxref("Node.textContent")}} property.
 
-A {{domxref("DOMString")}} representing the rendered text content of an element. If the
-element itself is not [being
-rendered](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered) (e.g detached from the document or is hidden from view), the returned
-value is the same as the {{domxref("Node.textContent")}} property.
+## Examples
 
-## Example
-
-This example compares `innerText` with {{domxref("Node.textContent")}}. Note
-how `innerText` is aware of things like {{htmlElement("br")}} elements, and
-ignores hidden elements.
+This example compares `innerText` with {{domxref("Node.textContent")}}.
+Note how `innerText` is aware of things like {{htmlElement("br")}} elements, and ignores hidden elements.
 
 ### HTML
 
@@ -55,9 +42,9 @@ ignores hidden elements.
   <span style="display:none">HIDDEN TEXT</span>
 </p>
 <h3>Result of textContent:</h3>
-<textarea id="textContentOutput" rows="6" cols="30" readonly>...</textarea>
+<textarea id="textContentOutput" rows="6" cols="30" readonly>…</textarea>
 <h3>Result of innerText:</h3>
-<textarea id="innerTextOutput" rows="6" cols="30" readonly>...</textarea>
+<textarea id="innerTextOutput" rows="6" cols="30" readonly>…</textarea>
 ```
 
 ### JavaScript
@@ -73,7 +60,7 @@ innerTextOutput.value = source.innerText;
 
 ### Result
 
-{{EmbedLiveSample("Example", 700, 450)}}
+{{EmbedLiveSample("Examples", 700, 450)}}
 
 ## Specifications
 

@@ -1,13 +1,14 @@
 ---
 title: 'aria-rowcount'
 slug: Web/Accessibility/ARIA/Attributes/aria-rowcount
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-rowcount
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-rowcount
 ---
 
 The `aria-rowcount` attribute defines the total number of rows in a table, grid, or treegrid.
@@ -18,7 +19,7 @@ Some tables have hundreds, even millions, of rows. Even for tables with fewer ro
 
 Included on the {{HTMLElement('table')}} element or on an element with a role of [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role), the value is the number of rows in the full table, as an integer. If the total number of rows is not known, include `aria-rowcount="-1"`, which tells the browser to not count the total number of rows.
 
-If all of the rows are loaded and in the DOM, you don't need to include `aria-rowcount` as browsers automatically count the total number of rows. However, if the rows aren't all present in the DOM at any time, this attribute is needed to provide the number of rows when the full table size is known and to tell the browser to not automatically count the rows when the total number of rows is not known.  
+If all of the rows are loaded and in the DOM, you don't need to include `aria-rowcount` as browsers automatically count the total number of rows. However, if the rows aren't all present in the DOM at any time, this attribute is needed to provide the number of rows when the full table size is known and to tell the browser to not automatically count the rows when the total number of rows is not known.
 
 ## Example
 
@@ -37,7 +38,7 @@ The following example shows a grid with 24 rows, of which the first row and rows
     <div role="row" aria-rowindex="7">
       <span role="gridcell">Morgan</span>
       <span role="gridcell">Brian</span>
-      <span role="gridcell">Middfielder</span>
+      <span role="gridcell">Midfielder</span>
     </div>
     <div role="row" aria-rowindex="8">
       <span role="gridcell">Abby</span>
@@ -61,9 +62,9 @@ The following example shows a grid with 24 rows, of which the first row and rows
 ## ARIAMixin API
 
 - {{domxref("Element.ariaRowCount")}}
-  - : The  [`ariaRowCount`](/en-US/docs/Web/API/Element/ariaRowCount) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-rowcount` attribute.
+  - : The [`ariaRowCount`](/en-US/docs/Web/API/Element/ariaRowCount) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-rowcount` attribute.
 - {{domxref("ElementInternals.ariaRowCount")}}
-  - : The  [`ariaRowCount`](/en-US/docs/Web/API/ElementInternals/ariaRowCount) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-rowcount` attribute.
+  - : The [`ariaRowCount`](/en-US/docs/Web/API/ElementInternals/ariaRowCount) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-rowcount` attribute.
 
 ## Associated roles
 
@@ -78,9 +79,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-rowcount","ARIA: aria-rowcount Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

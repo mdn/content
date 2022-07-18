@@ -1,6 +1,7 @@
 ---
 title: TextEncoderStream()
 slug: Web/API/TextEncoderStream/TextEncoderStream
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -15,8 +16,12 @@ The **`TextEncoderStream()`** constructor creates a new {{domxref("TextEncoderSt
 ## Syntax
 
 ```js
-var TextEncoderStream = new TextEncoderStream();
+new TextEncoderStream()
 ```
+
+### Parameters
+
+None.
 
 ## Examples
 

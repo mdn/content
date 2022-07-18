@@ -1,6 +1,7 @@
 ---
 title: PerformanceElementTiming.naturalHeight
 slug: Web/API/PerformanceElementTiming/naturalHeight
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,13 +14,7 @@ browser-compat: api.PerformanceElementTiming.naturalHeight
 
 The **`naturalHeight`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the intrinsic height of the image element.
 
-## Syntax
-
-```js
-var height = PerformanceElementTiming.naturalHeight;
-```
-
-### Value
+## Value
 
 An unsigned 32-bit integer (unsigned long) which is the intrinsic height of the image if this is applied to an image, 0 for text.
 

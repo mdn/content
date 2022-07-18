@@ -30,6 +30,8 @@ letter-spacing: .3px;
 /* Global values */
 letter-spacing: inherit;
 letter-spacing: initial;
+letter-spacing: revert;
+letter-spacing: revert-layer;
 letter-spacing: unset;
 ```
 

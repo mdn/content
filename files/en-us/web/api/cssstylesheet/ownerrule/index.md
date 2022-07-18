@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.ownerRule
 slug: Web/API/CSSStyleSheet/ownerRule
+page-type: web-api-instance-property
 tags:
   - '@import'
   - API
@@ -26,13 +27,7 @@ corresponding to the {{cssxref("@import")}} at-rule which imported the styleshee
 the document. If the stylesheet wasn't imported into the document using
 `@import`, the returned value is `null`.
 
-## Syntax
-
-```js
-var ownerRule = cssStyleSheet.ownerRule;
-```
-
-### Value
+## Value
 
 A {{domxref("CSSImportRule")}} corresponding to the {{cssxref("@import")}} rule which
 imported the stylesheet into the document. If the stylesheet wasn't imported into the
@@ -77,5 +72,4 @@ for (let rule of ruleList) {
 ## See also
 
 - [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model)
-- [Using
-  dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

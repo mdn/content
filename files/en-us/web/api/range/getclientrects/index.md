@@ -1,6 +1,7 @@
 ---
 title: Range.getClientRects()
 slug: Web/API/Range/getClientRects
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -19,10 +20,18 @@ The **`Range.getClientRects()`** method returns a list of {{
 ## Syntax
 
 ```js
-rectList = range.getClientRects()
+getClientRects()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 range = document.createRange();

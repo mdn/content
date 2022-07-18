@@ -14,7 +14,7 @@ The approach we will use is to create a virtual property in our `BookInstance` m
 
 > **Note:** It is possible to use *luxon* to format the strings directly in our Pug templates, or we could format the string in a number of other places. Using a virtual property allows us to get the formatted date in exactly the same way as we get the `due_date` currently.
 
-> **Note:** This tutorial previously used the [moment](https://www.npmjs.com/package/moment) library for date formatting. We've moved to Luxon because moment has [declared itself "legacy"](https://momentjs.com/docs/#/-project-status/). Luxon is one of the [moment project's main recommendations](https://momentjs.com/docs/#/-project-status/recommendations/) for a great alternative library.
+> **Note:** This tutorial previously used the [moment](https://www.npmjs.com/package/moment) library for date formatting. We've moved to Luxon because moment has [declared itself "legacy"](https://momentjs.com/docs/#/-project-status/). Luxon is one of the [moment project's main recommendations](https://momentjs.com/docs/#/-project-status/recommendations/) for a great alternative library.
 
 ## Install luxon
 
@@ -33,7 +33,7 @@ npm install luxon
     const { DateTime } = require("luxon");
     ```
 
-Add the virtual property `due_back_formatted` just after the url property.
+Add the virtual property `due_back_formatted` just after the URL property.
 
 ```js
 BookInstanceSchema

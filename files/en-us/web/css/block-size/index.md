@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.block-size
@@ -38,6 +37,7 @@ block-size: auto;
 block-size: inherit;
 block-size: initial;
 block-size: revert;
+block-size: revert-layer;
 block-size: unset;
 ```
 

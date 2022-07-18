@@ -13,11 +13,7 @@ browser-compat: css.selectors.selection
 
 The **`::selection`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text).
 
-```css
-::selection {
-  background-color: cyan;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-selection.html", "tabbed-shorter")}}
 
 ## Allowable properties
 
@@ -33,11 +29,8 @@ In particular, {{CSSxRef("background-image")}} is ignored.
 
 ## Syntax
 
-```css
-/* Legacy Firefox syntax (version 61 and below) */
-::-moz-selection
-
-{{CSSSyntax}}
+```
+::selection
 ```
 
 ## Examples
@@ -83,11 +76,11 @@ p::selection {
 
 ## Accessibility concerns
 
-**Don't override selected text styles for purely aesthetic reasons** — users can customize them to suit their needs. For people experiencing cognitive concerns or who are less technologically literate, unexpected changes to selection styles may hurt their understanding of the functionality.
+**Don't override selected text styles for purely aesthetic reasons** — users can customize them to suit their needs. For people experiencing cognitive concerns or who are less technologically literate, unexpected changes to selection styles may hurt their understanding of the functionality.
 
 If overridden, it is important to ensure that the **contrast ratio** between the text and background colors of the selection is high enough that people experiencing low vision conditions can read it.
 
-Color contrast ratio is found by comparing the luminosity of the selected text and the selected text background colors. To meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag), text content must have a contrast ratio of **4.5:1**, or 3:1 for larger text such as headings. (WCAG defines large text as between `18.66px` and `24px` and [bold](/en-US/docs/Web/CSS/font-weight), or `24px` or larger.)
+Color contrast ratio is found by comparing the luminosity of the selected text and the selected text background colors. To meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/), text content must have a contrast ratio of **4.5:1**, or 3:1 for larger text such as headings. (WCAG defines large text as between `18.66px` and `24px` and [bold](/en-US/docs/Web/CSS/font-weight), or `24px` or larger.)
 
 - [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
@@ -97,7 +90,7 @@ Color contrast ratio is found by comparing the luminosity of the selected text
 
 {{Specifications}}
 
-> **Note:** `::selection` was in drafts of CSS Selectors Level 3, but it was removed in the Candidate Recommendation phase because its was under-specified (especially with nested elements) and interoperability wasn't achieved [(based on discussion in the W3C Style mailing list)](https://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html). It returned in [Pseudo-Elements Level 4](https://dev.w3.org/csswg/css-pseudo-4/).
+> **Note:** `::selection` was in drafts of CSS Selectors Level 3, but it was removed in the Candidate Recommendation phase because its was under-specified (especially with nested elements) and interoperability wasn't achieved [(based on discussion in the W3C Style mailing list)](https://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html). It returned in [Pseudo-Elements Level 4](https://drafts.csswg.org/css-pseudo-4/).
 
 ## Browser compatibility
 

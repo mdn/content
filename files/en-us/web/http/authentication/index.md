@@ -90,7 +90,7 @@ Some common authentication schemes include:
 - **Bearer**
   - : See {{rfc(6750)}}, bearer tokens to access OAuth 2.0-protected resources
 - **Digest**
-  - : See {{rfc(7616)}}. Firefox 93 and later support SHA-256 encryption. Previous versions only support MD5 hashing (not recommended).
+  - : See {{rfc(7616)}}. Firefox 93 and later support the SHA-256 algorithm. Previous versions only support MD5 hashing (not recommended).
 - **HOBA**
   - : See {{rfc(7486)}}, Section 3, **H**TTP **O**rigin-**B**ound **A**uthentication, digital-signature-based
 - **Mutual**
@@ -153,12 +153,12 @@ location /status {
 
 Many clients also let you avoid the login prompt by using an encoded URL containing the username and the password like this:
 
-```example-bad
+```plain example-bad
 https://username:password@www.example.com/
 ```
 
 **The use of these URLs is deprecated**.
-In Chrome, the `username:password@` part in URLs is even [stripped out](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7) for security reasons. In Firefox, it is checked if the site actually requires authentication and if not, Firefox will warn the user with a prompt "You are about to log in to the site “www\.example.com” with the username “username”, but the website does not require authentication. This may be an attempt to trick you."
+In Chrome, the `username:password@` part in URLs is even [stripped out](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7) for security reasons. In Firefox, it is checked if the site actually requires authentication and if not, Firefox will warn the user with a prompt "You are about to log in to the site "www\.example.com" with the username "username", but the website does not require authentication. This may be an attempt to trick you."
 
 ## See also
 

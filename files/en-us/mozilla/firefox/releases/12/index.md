@@ -16,7 +16,7 @@ Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Fi
 ### HTML
 
 - The `title` attribute now supports newline characters to allow multi-line tooltips.
-- If JavaScript is disabled, the {{HTMLElement("canvas")}} element was being rendered instead of showing the fallback content as per the [specification](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html). Now the fallback content is rendered instead.
+- If JavaScript is disabled, the {{HTMLElement("canvas")}} element was being rendered instead of showing the fallback content as per the [specification](https://html.spec.whatwg.org/multipage/canvas.html). Now the fallback content is rendered instead.
 - The `crossorigin` attribute is now supported on {{HTMLElement("video")}}.
 
 ### CSS
@@ -32,7 +32,7 @@ Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Fi
 
 - {{domxref("DOMParser")}} now supports parsing of HTML document fragments.
 - {{domxref("XMLHttpRequest")}} now supports timeouts using the `timeout` property and "timeout" event, as well as the `ontimeout` event handler on the {{domxref("XMLHttpRequestEventTarget")}} interface.
-- {{domxref("XMLHttpRequest")}} can now load from [`data:` URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
+- {{domxref("XMLHttpRequest")}} can now load from [`data:` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
 - When downloading large amounts of data, {{domxref("XMLHttpRequest")}} progress event handlers are now called periodically with the `responseType` set to "moz-blob" and the response being a {{domxref("Blob")}} containing all of the data received so far. This lets progress handlers begin processing data without having to wait for it all to arrive.
 - Gecko now supports [multi-touch](/en-US/docs/Web/API/Touch_events) (instead of just single touches at a time) on Android.
 - While editing text using an IME, the `input` event is now sent whenever the contents of the element being edited have been changed; this happens after the `compositionupdate` event has been sent to indicate that the IME's text has been changed. You can use the `input` event handler, therefore, to monitor changes to the actual content of the element.
@@ -65,12 +65,12 @@ Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Fi
 
 ### Developer tools
 
-- The [Web Console](/en-US/docs/Tools/Web_Console) now caches error messages and log entries added using {{domxref("console.log()")}} if the console isn't currently open, and displays them when the console is opened.
-- You can now reset the zoom level, panning, and rotation in the [3D view](/en-US/docs/Tools/3D_View) by pressing the "r" key.
-- You can now hide nodes in the [3D view](/en-US/docs/Tools/3D_View) by pressing the "x" key after selecting them.
-- The [source editor](/en-US/docs/Tools/Keyboard_shortcuts#source_editor) has a several new editing features and keyboard shortcuts; see [Using the Source Editor](/en-US/docs/Tools/Keyboard_shortcuts#source_editor) for details
+- The [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) now caches error messages and log entries added using {{domxref("console.log()")}} if the console isn't currently open, and displays them when the console is opened.
+- You can now reset the zoom level, panning, and rotation in the [3D view](https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html) by pressing the "r" key.
+- You can now hide nodes in the [3D view](https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html) by pressing the "x" key after selecting them.
+- The [source editor](https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#source-editor) has a several new editing features and keyboard shortcuts; see [Using the Source Editor](https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#source-editor) for details
 
-Mozilla has been working on integrating its own Web developer tools that complement the popular [Firebug](https://getfirebug.com/) add-on. You can get more information about these tools as well as see a list of resources external to Firefox that will help you with your Web development. The entire list is located at [Web developer tools](/en-US/docs/Tools).
+Mozilla has been working on integrating its own Web developer tools that complement the popular [Firebug](https://getfirebug.com/) add-on. You can get more information about these tools as well as see a list of resources external to Firefox that will help you with your Web development. The entire list is located at [Web developer tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html).
 
 ### Miscellaneous changes
 
@@ -83,15 +83,15 @@ Mozilla has been working on integrating its own Web developer tools that complem
 #### source-editor.jsm
 
 - The [`resetUndo()`](/en-US/docs/JavaScript_code_modules/source-editor.jsm#resetUndo%28%29) method was added; this lets you clear the undo stack.
-- The source editor now offers methods for providing search capability: [`find()`](</en-US/docs/JavaScript_code_modules/source-editor.jsm#find()>), [`findNext()`](</en-US/docs/JavaScript_code_modules/source-editor.jsm#findNext()>), and [`findPrevious()`](</en-US/docs/JavaScript_code_modules/source-editor.jsm#findPrevious()>).
+- The source editor now offers methods for providing search capability: [`find()`](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/source-editor.html#find()>), [`findNext()`](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/source-editor.html#findNext()>), and [`findPrevious()`](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/source-editor.html#findPrevious()>).
 
 ### XUL
 
-- The definition of the values for the {{XULAttr("chromemargin")}} attribute has changed slightly, to make it easier to make cross-platform XUL code look good on platforms with different default window border widths.
+- The definition of the values for the `chromemargin` attribute has changed slightly, to make it easier to make cross-platform XUL code look good on platforms with different default window border widths.
 
 ### XPCOM
 
-- [`nsISupports` proxies](/en-US/docs/nsISupports_proxies) are no longer supported. You should be using runnables instead; see [Making cross-thread calls using runnables](/en-US/docs/XPCOM/Making_cross-thread_calls_using_runnables).
+- `nsISupports` proxies are no longer supported. You should be using runnables instead.
 - Firefox 11 changed the behavior of [`Components.utils.getWeakReference()`](/en-US/docs/Components.utils.getWeakReference) to throw an exception when the object reference is null; the previous behavior of silently failing has been restored.
 
 ### XPConnect
@@ -100,15 +100,15 @@ Mozilla has been working on integrating its own Web developer tools that complem
 
 ### Interface changes
 
-- The `nsIScreen_MOZILLA_2_0_BRANCH` interface has been merged into {{interface("nsIScreen")}}. The APIs defined in that interface (for controlling minimum screen brightness) had not previously been documented, but now they are.
-- The {{interface("nsIScriptError2")}} interface has been merged into {{interface("nsIScriptError")}}.
-- {{ifmethod("nsIDownloadManager", "addDownload")}} is now handled asynchronously rather than synchronously.
-- The {{ifmethod("imgIContainerObserver", "frameChanged")}} method now receives as its first parameter an {{interface("imgIRequest")}} object identifying the corresponding request.
-- The {{ifmethod("nsIDOMWindowUtils", "sendTouchEvent")}} method has been added to allow synthesizing touch events.
-- You can now scroll the specified content to the vertical center of the view by specifying `SCROLL_CENTER_VERTICALLY` as the scroll constant when calling {{ifmethod("nsISelectionController", "scrollSelectionIntoView")}}.
-- The new {{ifattribute("nsIMemoryMultiReporter", "explicitNonHeap")}} attribute has been added; this is a more efficient way to obtain the sum of all of the multi-reporter's measurements that have a path that starts with "explicit" **and** are of the kind `KIND_NONHEAP`.
-- The {{ifattribute("nsIDOMWindowUtils", "paintingSuppressed")}} attribute has been added; this boolean value indicates whether or not painting is currently suppressed on the window. This is used on mobile to prevent bouncy rendering that occurs when attempts to draw the page begin before enough content is available to do so smoothly.
-- The `nsIDocCharset` and `nsIDocumentCharsetInfo` interfaces have been merged into {{interface("nsIDocShell")}}. As part of this work, the old `forcedDetector` attribute has been removed; it never did anything.
+- The `nsIScreen_MOZILLA_2_0_BRANCH` interface has been merged into `nsIScreen`. The APIs defined in that interface (for controlling minimum screen brightness) had not previously been documented, but now they are.
+- The `nsIScriptError2` interface has been merged into `nsIScriptError`.
+- `nsIDownloadManager.addDownload()` is now handled asynchronously rather than synchronously.
+- The `imgIContainerObserver.frameChanged()` method now receives as its first parameter an `imgIRequest` object identifying the corresponding request.
+- The `nsIDOMWindowUtils.sendTouchEvent()` method has been added to allow synthesizing touch events.
+- You can now scroll the specified content to the vertical center of the view by specifying `SCROLL_CENTER_VERTICALLY` as the scroll constant when calling `nsISelectionController.scrollSelectionIntoView()`.
+- The new `nsIMemoryMultiReporter.explicitNonHeap` attribute has been added; this is a more efficient way to obtain the sum of all of the multi-reporter's measurements that have a path that starts with "explicit" **and** are of the kind `KIND_NONHEAP`.
+- The `nsIDOMWindowUtils.paintingSuppressed` attribute has been added; this boolean value indicates whether or not painting is currently suppressed on the window. This is used on mobile to prevent bouncy rendering that occurs when attempts to draw the page begin before enough content is available to do so smoothly.
+- The `nsIDocCharset` and `nsIDocumentCharsetInfo` interfaces have been merged into `nsIDocShell`. As part of this work, the old `forcedDetector` attribute has been removed; it never did anything.
 
 ### SpiderMonkey
 
@@ -121,7 +121,7 @@ Mozilla has been working on integrating its own Web developer tools that complem
 
 ### Other changes
 
-- The editor component (known as [Midas](/en-US/docs/Midas)) now [only accepts events](/en-US/docs/Using_the_Editor_from_XUL#Editor_event_handling) from privileged code.
+- The editor component (known as [Midas](/en-US/docs/Midas)) now [only accepts events](/en-US/docs/Using_the_Editor_from_XUL#editor_event_handling) from privileged code.
 
 ## See also
 

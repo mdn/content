@@ -24,21 +24,21 @@ The name IIFE is promoted by Ben Alman in [his blog](https://web.archive.org/web
 <td>
 <pre class="brush: js notranslate">
 (function () {
-  /* ... */
+  /* … */
 })();
 </pre>
 </td>
 <td>
 <pre class="brush: js notranslate">
 (() => {
-  /* ... */
+  /* … */
 })();
 </pre>
 </td>
 <td>
 <pre class="brush: js notranslate">
 (async () => {
-  /* ... */
+  /* … */
 })();
 </pre>
 </tr>
@@ -121,14 +121,14 @@ console.log(secondAccount.withdraw(20));  // 0
 
 We could see the following use of IIFE in some old code, before the introduction of the statements **let** and **const**
 in **ES6** and the block scope. With the statement **var**, we have only function scopes and the global scope.
-Suppose we want to create 2 buttons with the texts Button 0 and Button 1 and we click
+Suppose we want to create 2 buttons with the texts Button 0 and Button 1 and when we click
 them, we would like them to alert 0 and 1. The following code doesn't work:
 
 ```js
 for (var i = 0; i < 2; i++) {
   const button = document.createElement('button');
   button.innerText = 'Button ' + i;
-  button.onclick = () => {
+  button.onclick = function() {
     console.log(i);
   };
   document.body.appendChild(button);
@@ -143,7 +143,7 @@ with the last value 2. To fix this problem before ES6, we could use the IIFE pat
 for (var i = 0; i < 2; i++) {
   const button = document.createElement('button');
   button.innerText = 'Button ' + i;
-  button.onclick = ((copyOfI) => {
+  button.onclick = (function(copyOfI) {
     return () => {
       console.log(copyOfI);
     };
@@ -161,7 +161,7 @@ Using the statement **let**, we could simply do:
 for (let i = 0; i < 2; i++) {
   const button = document.createElement("button");
   button.innerText = 'Button ' + i;
-  button.onclick = () => {
+  button.onclick = function() {
     console.log(i);
   };
   document.body.appendChild(button);

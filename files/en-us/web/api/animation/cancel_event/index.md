@@ -1,6 +1,7 @@
 ---
 title: 'Animation: cancel event'
 slug: Web/API/Animation/cancel_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -9,7 +10,7 @@ browser-compat: api.Animation.cancel_event
 ---
 {{ APIRef("Web Animations") }}
 
-The **`finish`** event of the {{domxref("Animation")}} interface is fired when the {{domxref("Animation.cancel()")}} method is called or when the animation enters the `"idle"` play state from another state, such as when the animation is removed from an element before it finishes playing.
+The **`cancel`** event of the {{domxref("Animation")}} interface is fired when the {{domxref("Animation.cancel()")}} method is called or when the animation enters the `"idle"` play state from another state, such as when the animation is removed from an element before it finishes playing.
 
 > **Note:** Creating a new animation that is initially idle does not trigger a `cancel` event on the new animation.
 
@@ -30,7 +31,7 @@ An {{domxref("AnimationPlaybackEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-_In addition to the properties lsited below, properties from the parent interface, {{domxref("Event")}}, are available._
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
 - {{domxref("AnimationPlaybackEvent.currentTime")}} {{readonlyinline}}
   - : The current time of the animation that generated the event.

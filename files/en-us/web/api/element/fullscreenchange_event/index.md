@@ -1,6 +1,7 @@
 ---
 title: 'Element: fullscreenchange event'
 slug: Web/API/Element/fullscreenchange_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -19,6 +20,20 @@ This event is sent to the `Element` which is transitioning into or out of fullsc
 To find out whether the `Element` is entering or exiting fullscreen mode, check the value of {{domxref("Document.fullscreenElement")}}: if this value is `null` then the element is exiting fullscreen mode, otherwise it is entering fullscreen mode.
 
 This event is not cancelable.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('fullscreenchange', event => { });
+
+onfullscreenchange = event => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 

@@ -14,7 +14,7 @@ browser-compat: webextensions.api.browsingData.settings
 ---
 {{AddonSidebar()}}
 
-Browsers have a built-in "Clear History" feature, which enables the user to clear various types of browsing data. This has a UI that enables the user to select what type of data to remove (e.g. history, downloads, ...) and how far back in time to remove data.
+Browsers have a built-in "Clear History" feature, which enables the user to clear various types of browsing data. This has a UI that enables the user to select what type of data to remove (e.g. history, downloads, …) and how far back in time to remove data.
 
 This function returns the current value of these settings.
 
@@ -25,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var getSettings = browser.browsingData.settings()
+let getSettings = browser.browsingData.settings()
 ```
 
 ### Parameters
@@ -69,7 +69,7 @@ browser.browsingData.settings().then(onGotSettings, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData) API.
+> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

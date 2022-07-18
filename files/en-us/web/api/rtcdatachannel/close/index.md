@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.close()
 slug: Web/API/RTCDataChannel/close
+page-type: web-api-instance-method
 tags:
   - API
   - Communication
@@ -43,22 +44,26 @@ The sequence of events which occurs in response to this method being called:
 ## Syntax
 
 ```js
-RTCDataChannel.close();
+close()
 ```
 
-## Parameters
+### Parameters
 
 None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Return value
 
 `undefined`.
 
-## Example
+## Examples
 
 ```js
-var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("my channel");
+const pc = new RTCPeerConnection();
+const dc = pc.createDataChannel("my channel");
 
 dc.onmessage = function (event) {
   console.log("received: " + event.data);
@@ -69,11 +74,11 @@ dc.onopen = function () {
   console.log("datachannel open");
 };
 
-dc.onclose = function (
+dc.onclose = function () {
   console.log("datachannel close");
 };
 
-// Now negotiate the connection and so forth...
+// Now negotiate the connection and so forth…
 ```
 
 ## Specifications

@@ -47,6 +47,7 @@ The process for identifying the containing block depends entirely on the value o
     2. A {{cssxref("will-change")}} value of `transform` or `perspective`
     3. A {{cssxref("filter")}} value other than `none` or a `will-change` value of `filter` (only works on Firefox).
     4. A {{cssxref("contain")}} value of `paint` (e.g. `contain: paint;`)
+    5. A {{cssxref("backdrop-filter")}} other than `none` (e.g. `backdrop-filter: blur(10px);`)
 
 > **Note:** The containing block in which the root element ({{HTMLElement("html")}}) resides is a rectangle called the **initial containing block**. It has the dimensions of the viewport (for continuous media) or the page area (for paged media).
 
@@ -108,7 +109,7 @@ p {
 
 ### Example 2
 
-In this example, the paragraph's containing block is the {{HTMLElement("body")}} element, because `<section>` is not a block container (because of `display: inline`) and doesn’t establish a formatting context.
+In this example, the paragraph's containing block is the {{HTMLElement("body")}} element, because `<section>` is not a block container (because of `display: inline`) and doesn't establish a formatting context.
 
 ```html hidden
 <body>

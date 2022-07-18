@@ -7,6 +7,7 @@ tags:
   - Input
   - Reference
   - Select
+browser-compat: html.elements.attribute.size
 ---
 
 {{HTMLSidebar}}
@@ -44,14 +45,11 @@ By adding `size` on some input types, the width of the input can be controlled. 
 
 ## Specifications
 
-| Specification                                                               | Status                   |
-| --------------------------------------------------------------------------- | ------------------------ |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-size', 'size attribute')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5.1', 'input.html#attr-size-accept', 'size attribute')}}    | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("html.elements.attribute.size")}}
+{{Compat}}
 
 ## See also
 

@@ -71,7 +71,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 The `<summary>` element's contents can be any heading content, plain text, or HTML that can be used within a paragraph.
 
-A `<summary>` element may _only_ be used as the first child of a `<details>` element. When the user clicks on the summary, the parent `<details>` element is toggled open or closed, and then a {{event("toggle")}} event is sent to the `<details>` element, which can be used to let you know when this state change occurs.
+A `<summary>` element may _only_ be used as the first child of a `<details>` element. When the user clicks on the summary, the parent `<details>` element is toggled open or closed, and then a {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} event is sent to the `<details>` element, which can be used to let you know when this state change occurs.
 
 ### Default label text
 
@@ -83,7 +83,9 @@ Per the HTML specification, the default style for `<summary>` elements includes 
 
 You can also change the style to `display: block` to remove the disclosure triangle.
 
-See the {{anch("Browser compatibility")}} section for details, as not all browsers support full functionality of this element yet.
+See the [Browser compatibility](#browser_compatibility) section for details, as not all browsers support full functionality of this element yet.
+
+For Webkit-based browsers, such as Safari, it is possible to control the icon display through the non-standard CSS pseudo-element `::-webkit-details-marker`. To remove the disclosure triangle, use `summary::-webkit-details-marker { display: none }`.
 
 ## Examples
 
@@ -108,7 +110,7 @@ A simple example showing the use of `<summary>` in a {{HTMLElement("details")}} 
 
 ### Summaries as headings
 
-You can use heading elements in `<summary>`, like this:
+You can use heading elements in `<summary>`, like this:
 
 ```html
 <details open>
@@ -129,7 +131,7 @@ This currently has some spacing issues that could be addressed using CSS.
 
 ### HTML in summaries
 
-This example adds some semantics to the `<summary>` element to indicate the label as important:
+This example adds some semantics to the `<summary>` element to indicate the label as important:
 
 ```html
 <details open>

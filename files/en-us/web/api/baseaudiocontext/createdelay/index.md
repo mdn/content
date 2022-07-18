@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createDelay()
 slug: Web/API/BaseAudioContext/createDelay
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext
@@ -24,7 +25,7 @@ which is used to delay the incoming audio signal by a certain amount of time.
 ## Syntax
 
 ```js
-var delayNode = audioCtx.createDelay(maxDelayTime);
+createDelay(maxDelayTime)
 ```
 
 ### Parameters
@@ -33,12 +34,12 @@ var delayNode = audioCtx.createDelay(maxDelayTime);
   - : The maximum amount of time, in seconds, that the audio signal can be delayed by.
     Must be less than 180 seconds, and defaults to 1 second if not specified.
 
-### Returns
+### Return value
 
 A {{domxref("DelayNode")}}. The default {{domxref("DelayNode.delayTime")}} is 0
 seconds.
 
-## Example
+## Examples
 
 We have created a simple example that allows you to play three different samples on a
 constant loop — see [create-delay](https://chrisdavidmills.github.io/create-delay/) (you can also
@@ -53,7 +54,7 @@ var audioCtx = new AudioContext();
 
 var synthDelay = audioCtx.createDelay(5.0);
 
-  ...
+// …
 
 var synthSource;
 
@@ -74,7 +75,7 @@ stopSynth.onclick = function() {
   playSynth.removeAttribute('disabled');
 }
 
-...
+// …
 
 var delay1;
 rangeSynth.oninput = function() {

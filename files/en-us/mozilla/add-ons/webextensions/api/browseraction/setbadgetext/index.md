@@ -45,9 +45,9 @@ This API is also available as `chrome.browserAction.setBadgeText()`.
 
         If a `windowId` is specified, `null` removes the window-specific badge text so that the tab inherits the global badge text. Otherwise it reverts the global badge text to `""`.
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Set the badge text only for the given tab. The text is reset when the user navigates this tab to a new page.
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. Set the badge text for the given window.
 
 <!---->
@@ -64,7 +64,7 @@ This API is also available as `chrome.browserAction.setBadgeText()`.
 Add a badge indicating how many times the user clicked the button:
 
 ```js
-var clicks = 0;
+let clicks = 0;
 
 function increment() {
   browser.browserAction.setBadgeText({text: (++clicks).toString()});
@@ -75,7 +75,7 @@ browser.browserAction.onClicked.addListener(increment);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#method-setBadgeText) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/reference/browserAction/#method-setBadgeText) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

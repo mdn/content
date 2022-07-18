@@ -1,6 +1,7 @@
 ---
 title: HTMLSlotElement.assignedElements()
 slug: Web/API/HTMLSlotElement/assignedElements
+page-type: web-api-instance-method
 tags:
   - API
   - HTMLSlotElement
@@ -22,8 +23,8 @@ If the `flatten` option is set to `true`, it returns a sequence of both the elem
 ## Syntax
 
 ```js
-HTMLSlotElement.assignedElements()
-HTMLSlotElement.assignedElements(options)
+assignedElements()
+assignedElements(options)
 ```
 
 ### Parameters

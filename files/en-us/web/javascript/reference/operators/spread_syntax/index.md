@@ -24,7 +24,7 @@ expected.
 Spread syntax can be used when all elements from an object or array need to be included
 in a list of some kind.
 
-In the above example, the defined function takes `x`, `y`, and
+In the above example, the defined function takes `x`, `y`, and
 `z` as arguments and returns the sum of these values. An array value is also
 defined.
 
@@ -75,7 +75,7 @@ For array literals:
 For object literals (new in ECMAScript 2018):
 
 ```js
-let objClone = { ...obj }; // pass all key:value pairs from an object 
+let objClone = { ...obj }; // pass all key:value pairs from an object
 ```
 
 ## Rest syntax (parameters)
@@ -259,10 +259,9 @@ arr1 = [...arr2, ...arr1];
 
 ### Spread in object literals
 
-The [Rest/Spread
-Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) proposal (ES2018) added spread properties to
-{{jsxref("Operators/Object_initializer", "object literals", 1)}}. It copies own
-enumerable properties from a provided object onto a new object.
+The [Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) proposal (ES2018)
+added spread properties to {{jsxref("Operators/Object_initializer", "object literals", 1)}}.
+It copies own enumerable properties from a provided object onto a new object.
 
 Shallow-cloning (excluding prototype) or merging of objects is now possible using a
 shorter syntax than {{jsxref("Object.assign()")}}.
@@ -278,46 +277,59 @@ let mergedObj = { ...obj1, ...obj2 };
 // Object { foo: "baz", x: 42, y: 13 }
 ```
 
-Note that {{jsxref("Object.assign()")}} triggers {{jsxref("Functions/set",
-   "setters")}}, whereas spread syntax doesn't.
-
-Note that you cannot replace or mimic the {{jsxref("Object.assign()")}} function:
+Note that {{jsxref("Object.assign()")}} can be used to mutate an object, whereas spread syntax can't.
 
 ```js
-let obj1 = { foo: 'bar', x: 42 };
-let obj2 = { foo: 'baz', y: 13 };
-const merge = ( ...objects ) => ( { ...objects } );
+const objectAssign = Object.assign({ set foo(val) { console.log(val); } }, { foo: 1 });
+// Logs "1"; objectAssign.foo is still the original setter
 
-let mergedObj1 = merge (obj1, obj2);
+const spread = { set foo(val) { console.log(val); }, ...{ foo: 1 } };
+// Nothing is logged; spread.foo is 1
+```
+
+You cannot naively re-implement the {{jsxref("Object.assign()")}} function through a single spread operator:
+
+```js
+const obj1 = { foo: 'bar', x: 42 };
+const obj2 = { foo: 'baz', y: 13 };
+const merge = (...objects) => ({ ...objects });
+
+const mergedObj1 = merge(obj1, obj2);
 // Object { 0: { foo: 'bar', x: 42 }, 1: { foo: 'baz', y: 13 } }
 
-let mergedObj2 = merge ({}, obj1, obj2);
+const mergedObj2 = merge({}, obj1, obj2);
 // Object { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 13 } }
 ```
 
-In the above example, the spread syntax does not work as one might expect: it spreads
-an _array_ of arguments into the object literal, due to the rest parameter.
+In the above example, the spread syntax does not work as one might expect: it spreads an _array_ of arguments into the object literal, due to the rest parameter. Here is an implementation of `merge` using the spread operator, whose behavior is similar to {{jsxref("Object.assign()")}}, except that it doesn't trigger setters, nor mutates any object:
+
+```js
+const obj1 = { foo: 'bar', x: 42 };
+const obj2 = { foo: 'baz', y: 13 };
+const merge = (...objects) => objects.reduce((acc, cur) => ({ ...acc, ...cur }));
+
+const mergedObj1 = merge(obj1, obj2);
+// Object { foo: 'baz', x: 42, y: 13 }
+```
 
 ### Only for iterables
 
-Objects themselves are not iterable, but they become iterable when used in an Array, or
-with iterating functions such as `map()`, `reduce()`, and
-`assign()`. When merging 2 objects together with the spread operator, it is
-assumed another iterating function is used when the merging occurs.
+Spread syntax (other than in the case of spread properties) can only be applied to [iterable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator)
+objects like {{jsxref("Array")}}, or with iterating functions such as `map()`, `reduce()`, and `assign()`.
 
-Spread syntax (other than in the case of spread properties) can be applied only to [iterable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator)
-objects:
+Many objects are not iterable, including {{JSxRef("Object")}}:
 
 ```js
 let obj = {'key1': 'value1'};
 let array = [...obj]; // TypeError: obj is not iterable
 ```
 
+To use spread syntax with these objects, you will need to provide an iterator function.
+
 ### Spread with many values
 
-When using spread syntax for function calls, be aware of the possibility of exceeding
-the JavaScript engine's argument length limit. See {{jsxref("Function.prototype.apply",
-   "apply()")}} for more details.
+When using spread syntax for function calls, be aware of the possibility of exceeding the JavaScript engine's argument length limit.
+See {{jsxref("Function.prototype.apply", "apply()")}} for more details.
 
 ## Specifications
 
@@ -329,6 +341,5 @@ the JavaScript engine's argument length limit. See {{jsxref("Function.prototype.
 
 ## See also
 
-- {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}} (also
-  ‘`...`’)
-- {{jsxref("Function.prototype.apply()")}} (also ‘`...`’)
+- {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}} (also '`...`')
+- {{jsxref("Function.prototype.apply()")}} (also '`...`')

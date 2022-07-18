@@ -1,6 +1,7 @@
 ---
 title: MediaDevices.getDisplayMedia()
 slug: Web/API/MediaDevices/getDisplayMedia
+page-type: web-api-instance-method
 tags:
   - API
   - Capture
@@ -26,16 +27,14 @@ grant permission to capture the contents of a display or portion thereof (such a
 window) as a {{domxref("MediaStream")}}.
 
 The resulting stream can then be
-recorded using the [MediaStream
-Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) or transmitted as part of a [WebRTC](/en-US/docs/Web/API/WebRTC_API) session.
+recorded using the [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) or transmitted as part of a [WebRTC](/en-US/docs/Web/API/WebRTC_API) session.
 
-See [Using the
-Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) for more details and an example.
+See [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) for more details and an example.
 
 ## Syntax
 
 ```js
-var promise = navigator.mediaDevices.getDisplayMedia(constraints);
+getDisplayMedia(constraints)
 ```
 
 ### Parameters
@@ -46,8 +45,7 @@ var promise = navigator.mediaDevices.getDisplayMedia(constraints);
     a video track, the returned stream will have one even if no video track is expressly
     requested by the `constraints` object. For more details, see the [constraints](/en-US/docs/Web/API/MediaDevices/getUserMedia#parameters)
     section under the {{domxref("MediaDevices.getUserMedia()")}} method, as well
-    as the article [Capabilities,
-    constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints).
+    as the article [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints).
 
 ### Return value
 
@@ -57,8 +55,7 @@ audio track.
 
 > **Note:** Browser support for audio tracks varies, both in terms of
 > whether or not they're supported at all by the media recorder and in terms of the
-> audio sources supported. Check the {{anch("Browser
-    compatibility", "compatibility table")}} for details for each browser.
+> audio sources supported. Check the [compatibility table](#browser_compatibility) for details for each browser.
 
 ### Exceptions
 
@@ -81,7 +78,7 @@ audio track.
 - `OverconstrainedError` {{domxref("DOMException")}}
   - : Returned if, after creating the stream, applying the specified `constraints` fails
     because no compatible stream could be generated.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Returned if the specified `constraints` include constraints which are not permitted
     when calling `getDisplayMedia()`. These unsupported constraints are
     `advanced` and any constraints which in turn have a member named
@@ -107,13 +104,12 @@ details measures browsers are required to take in order to fully support
   windows that contain browsers, and to keep a close eye on what other content might be
   getting captured and shown to other users.
 
-## Example
+## Examples
 
 In the example below, a `startCapture()` method is created which initiates
 screen capture given a set of options specified by the `displayMediaOptions`
 parameter. The options are specified in an object which specifies the preferred stream
-configuration and the [display
-surface](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture#visible_vs_logical_display_surfaces) from which video is to be captured.
+configuration and the [display surface](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture#visible_vs_logical_display_surfaces) from which video is to be captured.
 
 ```js
 async function startCapture(displayMediaOptions) {
@@ -145,8 +141,7 @@ add the video track from the stream.
 ## See also
 
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
-- [Using the
-  Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}: Capturing media from a

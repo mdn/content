@@ -22,8 +22,8 @@ name.
 
 ```js
 const obj = {
-  get property() {},
-  set property(value) {},
+  get property() {},
+  set property(value) {},
   property( parameters… ) {},
   *generator( parameters… ) {},
   async property( parameters… ) {},
@@ -31,7 +31,7 @@ const obj = {
 
   //  with computed keys
   get [property]() {},
-  set [property](value) {},
+  set [property](value) {},
   [property]( parameters… ) {},
   *[generator]( parameters… ) {},
   async [property]( parameters… ) {},
@@ -48,10 +48,10 @@ Given the following code:
 
 ```js
 const obj = {
-  foo: function() {
+  foo: function () {
     // ...
   },
-  bar: function() {
+  bar: function () {
     // ...
   }
 }
@@ -72,19 +72,17 @@ const obj = {
 
 ### Generator methods
 
-[Generator
-methods](/en-US/docs/Web/JavaScript/Reference/Statements/function*) can be defined using the shorthand syntax as well.
+[Generator methods](/en-US/docs/Web/JavaScript/Reference/Statements/function*) can be defined using the shorthand syntax as well.
 
 When doing so:
 
 - The asterisk (`*`) in the shorthand syntax must be _before_ the
   generator property name. (That is, `* g(){}` will work,
-  but `g *(){}` will not.)
+  but `g *(){}` will not.)
 - Non-generator method definitions cannot contain the `yield` keyword.
-  This means that [legacy
-  generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function) won't work either, and will throw a
-  {{jsxref("SyntaxError")}}. Always use `yield` in conjunction with the
-  asterisk (`*`).
+  This means that [legacy generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)
+  won't work either, and will throw a {{jsxref("SyntaxError")}}.
+  Always use `yield` in conjunction with the asterisk (`*`).
 
 ```js
 // Using a named property
@@ -93,7 +91,7 @@ const obj2 = {
     let index = 0
     while (true) {
       yield index++
-    }
+    }
   }
 };
 
@@ -103,7 +101,7 @@ const obj2 = {
     let index = 0
     while (true) {
       yield index++
-    }
+    }
   }
 };
 
@@ -135,8 +133,7 @@ const obj3 = {
 
 ### Async generator methods
 
-[Generator
-methods](/en-US/docs/Web/JavaScript/Reference/Statements/function*) can also be {{jsxref("Statements/async_function", "async", "", 1)}}.
+[Generator methods](/en-US/docs/Web/JavaScript/Reference/Statements/function*) can also be {{jsxref("Statements/async_function", "async", "", 1)}}.
 
 ```js
 const obj4 = {
@@ -203,7 +200,7 @@ console.log(bar.foo2())  // 2
 
 // A global function
 function foo() {
-  return 1
+  return 1
 }
 
 let name = 'foo'

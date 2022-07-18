@@ -1,6 +1,7 @@
 ---
 title: AnimationEffect.updateTiming()
 slug: Web/API/AnimationEffect/updateTiming
+page-type: web-api-instance-method
 tags:
   - API
   - Animation
@@ -18,7 +19,7 @@ The `updateTiming()` method of the {{domxref("AnimationEffect")}} interface upda
 ## Syntax
 
 ```js
-animation.updateTiming(timing);
+updateTiming(timing)
 ```
 
 ### Parameters
@@ -26,9 +27,9 @@ animation.updateTiming(timing);
 - `timing`
   - : An object containing the timing properties to update.
 
-### Return Value
+### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

@@ -124,11 +124,11 @@ As a test, you can turn off a site's CSS and see how understandable it is withou
 
 Certain HTML features can be selected using only the keyboard — this is default behavior, available since the early days of the web. The elements that have this capability are the common ones that allow user to interact with web pages, namely links, {{htmlelement("button")}}s, and form elements like {{htmlelement("input")}}.
 
-You can try this out using our [native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) example (see the [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) — open this in a new tab, and try pressing the tab key; after a few presses, you should see the tab focus start to move through the different focusable elements; the focused elements are given a highlighted default style in every browser (it differs slightly between different browsers) so that you can tell what element is focused.
+You can try this out using our [native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) example (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) — open this in a new tab, and try pressing the tab key; after a few presses, you should see the tab focus start to move through the different focusable elements; the focused elements are given a highlighted default style in every browser (it differs slightly between different browsers) so that you can tell what element is focused.
 
 ![](button-focused-unfocused.png)
 
-> **Note:** In Firefox, you can also enable an overlay that shows the page tabbing order. For more information see: [Accessibility Inspector > Show web page tabbing order](/en-US/docs/Tools/Accessibility_inspector#show_web_page_tabbing_order).
+> **Note:** In Firefox, you can also enable an overlay that shows the page tabbing order. For more information see: [Accessibility Inspector > Show web page tabbing order](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order).
 
 You can then press Enter/Return to follow a focused link or press a button (we've included some JavaScript to make the buttons alert a message), or start typing to enter text in a text input (other form elements have different controls, for example the {{htmlelement("select")}} element can have its options displayed and cycled between using the up and down arrow keys).
 
@@ -158,7 +158,7 @@ Sometimes it is not possible to avoid losing keyboard accessibility. You might h
 
 1. Create custom controls using `<button>` elements (which we can tab to by default!) and JavaScript to wire up their functionality. See [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player) for some good examples of this.
 2. Create keyboard shortcuts via JavaScript, so functionality is activated when you press certain keys on the keyboard. See [Desktop mouse and keyboard controls](/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) for some game-related examples that can be adapted for any purpose.
-3. Use some interesting tactics to fake button behavior. Take for example our [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) example (see [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Here we've given our fake `<div>` buttons the ability to be focused (including via tab) by giving each one the attribute `tabindex="0"` (see WebAIM's [tabindex article](https://webaim.org/techniques/keyboard/tabindex) for more really useful details). This allows us to tab to the buttons, but not to activate them via the Enter/Return key. To do that, we had to add the following bit of JavaScript trickery:
+3. Use some interesting tactics to fake button behavior. Take for example our [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) example (see [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Here we've given our fake `<div>` buttons the ability to be focused (including via tab) by giving each one the attribute `tabindex="0"` (see WebAIM's [tabindex article](https://webaim.org/techniques/keyboard/tabindex) for more really useful details). This allows us to tab to the buttons, but not to activate them via the Enter/Return key. To do that, we had to add the following bit of JavaScript trickery:
 
     ```js
     document.onkeydown = function(e) {
@@ -178,7 +178,7 @@ Text alternatives are very important for accessibility — if a person has a vis
 
 > **Note:** For more information, read [Text alternatives](/en-US/docs/Learn/Accessibility/HTML#text_alternatives).
 
-Missing alt text can be tested for in a number of ways, for example using accessibility {{anch("Auditing tools")}}.
+Missing alt text can be tested for in a number of ways, for example using accessibility [Auditing tools](#auditing_tools).
 
 Alt text is slightly more complex for video and audio content. There is a way to define text tracks (e.g. subtitles) and display them when video is being played, in the form of the {{htmlelement("track")}} element, and the [WebVTT](/en-US/docs/Web/API/WebVTT_API) format (see [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) for a detailed tutorial). [Browser compatibility](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video#browser_compatibility) for these features is fairly good, but if you want to provide text alternatives for audio or support older browsers, a simple text transcript presented somewhere on the page or on a separate page might be a good idea.
 
@@ -192,9 +192,9 @@ Next on our list, the form {{htmlelement("label")}} element is one of the centra
 
 > **Note:** For more information about link text and form labels, read [Meaningful text labels](/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels).
 
-Finally, a quick word about data tables. A basic data table can be written with very simple markup (see `bad-table.html` [live](https://mdn.github.io/learning-area/accessibility/html/bad-table.html), and [source](https://github.com/mdn/learning-area/blob/master/accessibility/html/bad-table.html)), but this has problems — there is no way for a screen reader user to associate rows or columns together as groupings of data — to do this you need to know what the header rows are, and if they are heading up rows, columns, etc. This can only be done visually for such a table.
+Finally, a quick word about data tables. A basic data table can be written with very simple markup (see `bad-table.html` [live](https://mdn.github.io/learning-area/accessibility/html/bad-table.html), and [source](https://github.com/mdn/learning-area/blob/main/accessibility/html/bad-table.html)), but this has problems — there is no way for a screen reader user to associate rows or columns together as groupings of data — to do this you need to know what the header rows are, and if they are heading up rows, columns, etc. This can only be done visually for such a table.
 
-If you instead look at our `punk-bands-complete.html` example ([live](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html), [source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-complete.html)), you can see a few accessibility aids at work here, such as table headers ({{htmlelement("th")}} and `scope` attributes), {{htmlelement("caption")}} element, etc.
+If you instead look at our `punk-bands-complete.html` example ([live](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html), [source](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-complete.html)), you can see a few accessibility aids at work here, such as table headers ({{htmlelement("th")}} and `scope` attributes), {{htmlelement("caption")}} element, etc.
 
 > **Note:** For more information about accessible tables, read [Accessible data tables](/en-US/docs/Learn/Accessibility/HTML#accessible_data_tables).
 
@@ -218,7 +218,7 @@ Another tip is to not rely on color alone for signposts/information, as this wil
 
 #### Hiding content
 
-There are many instances where a visual design will require that not all content is shown at once. For example, in our [Tabbed info box example](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (see [source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)) we have three panels of information, but we are [positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) them on top of one another and providing tabs that can be clicked to show each one (it is also keyboard accessible — you can alternatively use Tab and Enter/Return to select them).
+There are many instances where a visual design will require that not all content is shown at once. For example, in our [Tabbed info box example](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (see [source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)) we have three panels of information, but we are [positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) them on top of one another and providing tabs that can be clicked to show each one (it is also keyboard accessible — you can alternatively use Tab and Enter/Return to select them).
 
 ![](20191022144107.png)
 
@@ -270,7 +270,7 @@ Here's an example:
 <p><span id="LiveRegion1" aria-live="polite" aria-atomic="false"></span></p>
 ```
 
-You can see an example in action at Freedom Scientific's [ARIA (Accessible Rich Internet Applications) Live Regions](https://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm) example — the highlighted paragraph should update its content every 10 seconds, and a screenreader should read this out to the user. [ARIA Live Regions - Atomic](https://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegionsAtomic.htm) provides another useful example.
+You can see an example in action at Freedom Scientific's [ARIA (Accessible Rich Internet Applications) Live Regions](https://www.freedomscientific.com/SurfsUp/AriaLiveRegions.htm) example — the highlighted paragraph should update its content every 10 seconds, and a screenreader should read this out to the user. [ARIA Live Regions - Atomic](https://www.freedomscientific.com/SurfsUp/AriaLiveRegionsAtomic.htm) provides another useful example.
 
 We don't have space to cover WAI-ARIA in detail here, you can learn a lot more about it at [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics).
 
@@ -296,24 +296,24 @@ Let's look at an example, using Wave.
 
 ### Automation tools
 
-[Deque's aXe tool](https://www.deque.com/products/axe/) goes a bit further than the auditing tools we mentioned above. Like the others, it checks pages and returns accessibility errors. Its most immediately useful form is probably the browser extensions:
+[Deque's aXe tool](https://www.deque.com/axe/) goes a bit further than the auditing tools we mentioned above. Like the others, it checks pages and returns accessibility errors. Its most immediately useful form is probably the browser extensions:
 
-- [aXe for Chrome](https://bitly.com/aXe-Chrome)
-- [aXe for Firefox](https://bit.ly/aXe-Firefox)
+- [aXe for Chrome](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
+- [aXe for Firefox](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/)
 
 These add an accessibility tab to the browser developer tools. For example, we installed the Firefox version, then used it to audit our [bad-table.html](https://mdn.github.io/learning-area/accessibility/html/bad-table.html) example. We got the following results:
 
 ![](axe-screenshot.png)
 
-aXe is also installable using `npm`, and can be integrated with task runners like [Grunt](https://gruntjs.com/) and [Gulp](https://gulpjs.com/), automation frameworks like [Selenium](https://www.seleniumhq.org/) and [Cucumber](https://cucumber.io/), unit testing frameworks like [Jasmine](https://jasmine.github.io/), and more besides (again, see the [main aXe page](https://www.deque.com/products/axe/) for details).
+aXe is also installable using `npm`, and can be integrated with task runners like [Grunt](https://gruntjs.com/) and [Gulp](https://gulpjs.com/), automation frameworks like [Selenium](https://www.selenium.dev/) and [Cucumber](https://cucumber.io/), unit testing frameworks like [Jasmine](https://jasmine.github.io/), and more besides (again, see the [main aXe page](https://www.deque.com/axe/) for details).
 
 ### Screenreaders
 
 It is definitely worth testing with a screenreader to get used to how severely visually impaired people use the Web. There are a number of screenreaders available:
 
-- Some are paid-for commercial products, like [JAWS](https://www.freedomscientific.com/Products/Blindness/JAWS) (Windows) and [Window Eyes](http://www.gwmicro.com/window-eyes/) (Windows).
-- Some are free products, like [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](http://www.chromevox.com/) (Chrome, Windows, and Mac OS X), and [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
-- Some are built into the operating system, like [VoiceOver](https://www.apple.com/accessibility/osx/voiceover/) (Mac OS X and iOS), [ChromeVox](http://www.chromevox.com/) (on Chromebooks), and [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
+- Some are paid-for commercial products, like [JAWS](https://www.freedomscientific.com/Products/software/JAWS/) (Windows) and [Window Eyes](http://www.gwmicro.com/) (Windows).
+- Some are free products, like [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (Chrome, Windows, and macOS), and [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
+- Some are built into the operating system, like [VoiceOver](https://www.apple.com/accessibility/vision/) (macOS and iOS), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (on Chromebooks), and [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
 Generally, screen readers are separate apps that run on the host operating system and can read not only web pages, but text in other apps as well. This is not always the case (ChromeVox is a browser extension), but usually. Screenreaders tend to act in slightly different ways and have different controls, so you'll have to consult the documentation for your chosen screen reader to get all of the details — saying that, they all work in basically the same sort of way.
 
@@ -445,7 +445,7 @@ VO has many keyboard commands, and we won't list them all here. The basic ones y
   </tbody>
 </table>
 
-This seems like a lot of commands, but it isn't so bad when you get used to it, and VO regularly gives you reminders of what commands to use in certain places. Have a play with VO now; you can then go on to play with some of our examples in the {{anch("Screenreader testing")}} section.
+This seems like a lot of commands, but it isn't so bad when you get used to it, and VO regularly gives you reminders of what commands to use in certain places. Have a play with VO now; you can then go on to play with some of our examples in the [Screenreader testing](#screenreader_testing) section.
 
 #### NVDA
 
@@ -576,7 +576,7 @@ Now you've gotten used to using a screenreader, we'd like you to use it to do so
 - Look at [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html), and note how they make sense when viewed out of context. This is not the case with [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html) — they are all just "click here".
 - Look at [good-form.html](https://mdn.github.io/learning-area/accessibility/html/good-form.html), and note how the form inputs are described using their labels because we've used `<label>` elements properly. In [bad-form.html](https://mdn.github.io/learning-area/accessibility/html/bad-form.html), they get an unhelpful label along the lines of "blank".
 - Look at our [punk-bands-complete.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html) example, and see how the screenreader is able to associate columns and rows of content and read them out all together because we've defined headers properly. In [bad-table.html](https://mdn.github.io/learning-area/accessibility/html/bad-table.html), none of the cells can be associated at all. Note that NVDA seems to behave slightly strangely when you've only got a single table on a page; you could try [WebAIM's table test page](https://webaim.org/articles/nvda/tables.htm) instead.
-- Have a look at the [WAI-ARIA live regions example](https://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm) we saw earlier, and note how the screen reader will keep reading out the constantly updating section as it updates.
+- Have a look at the [WAI-ARIA live regions example](https://www.freedomscientific.com/SurfsUp/AriaLiveRegions.htm) we saw earlier, and note how the screen reader will keep reading out the constantly updating section as it updates.
 
 ### User testing
 
@@ -586,15 +586,15 @@ As mentioned above, you can't rely on automated tools alone for determining acce
 
 The following list provides a checklist for you to follow to make sure you've carried out the recommended accessibility testing for your project:
 
-1. Make sure your HTML is as semantically correct as possible. [Validating it](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#validation) is a good start, as is using an [Auditing tool](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#auditing_tools).
+1. Make sure your HTML is as semantically correct as possible. [Validating it](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#validation) is a good start, as is using an [Auditing tool](#auditing_tools).
 2. Check that your content makes sense when the CSS is turned off.
-3. Make sure your functionality is [keyboard accessible](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility). Test using Tab, Return/Enter, etc.
-4. Make sure your non-text content has [text alternatives](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#text_alternatives). An [Auditing tool](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#auditing_tools) is good for catching such problems.
-5. Make sure your site's [color contrast](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#color_and_color_contrast) is acceptable, using a suitable checking tool.
-6. Make sure [hidden content](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#hiding_content) is visible by screenreaders.
+3. Make sure your functionality is [keyboard accessible](#using_native_keyboard_accessibility). Test using Tab, Return/Enter, etc.
+4. Make sure your non-text content has [text alternatives](#text_alternatives). An [Auditing tool](#auditing_tools) is good for catching such problems.
+5. Make sure your site's [color contrast](#color_and_color_contrast) is acceptable, using a suitable checking tool.
+6. Make sure [hidden content](#hiding_content) is visible by screenreaders.
 7. Make sure that functionality is usable without JavaScript wherever possible.
 8. Use ARIA to improve accessibility where appropriate.
-9. Run your site through an [Auditing tool](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#auditing_tools).
+9. Run your site through an [Auditing tool](#auditing_tools).
 10. Test it with a screenreader.
 11. Include an accessibility policy/statement somewhere findable on your site to say what you did.
 

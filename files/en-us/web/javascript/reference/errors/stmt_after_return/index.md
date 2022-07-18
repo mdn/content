@@ -14,7 +14,7 @@ semicolon-less return statement but including an expression directly after.
 
 ## Message
 
-```js
+```
 Warning: unreachable code after return statement (Firefox)
 ```
 
@@ -38,7 +38,7 @@ meaning it can never be run.
 Why should I have semicolons after `return` statements? In the case of
 semicolon-less `return` statements, it can be unclear whether the developer
 intended to return the statement on the following line, or to stop execution and return.
-The warning indicates that there is ambiguity in the way the `return`
+The warning indicates that there is ambiguity in the way the `return`
 statement is written.
 
 Warnings will not be shown for semicolon-less returns if these statements follow it:
@@ -54,7 +54,7 @@ Warnings will not be shown for semicolon-less returns if these statements follow
 
 ```js example-bad
 function f() {
-  var x = 3;
+  let x = 3;
   x += 4;
   return x;   // return exits the function immediately
   x -= 3;     // so this line will never run; it is unreachable
@@ -70,7 +70,7 @@ function f() {
 
 ```js example-good
 function f() {
-  var x = 3;
+  let x = 3;
   x += 4;
   x -= 3;
   return x;  // OK: return after all other statements

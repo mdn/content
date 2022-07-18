@@ -28,7 +28,7 @@ PWAs can be built using any approach you like, but some will work better than th
 
 ## App shell
 
-The App shell concept is concerned with loading a minimal user interface as soon as possible and then caching it so it is available offline for subsequent visits before then loading all the contents of the app. That way, the next time someone visits the app from the device, the UI loads from the cache immediately and any new content is requested from the server (if it isn’t available in the cache already).
+The App shell concept is concerned with loading a minimal user interface as soon as possible and then caching it so it is available offline for subsequent visits before then loading all the contents of the app. That way, the next time someone visits the app from the device, the UI loads from the cache immediately and any new content is requested from the server (if it isn't available in the cache already).
 
 This structure is fast, and also feels fast as the user sees "something" instantly, instead of a loading spinner or a blank page. It also allows the website to be accessible offline if the network connection is not available.
 
@@ -45,8 +45,8 @@ The website feels like a native app with instant interaction and solid performan
 It's important to remember the PWA advantages and keep them in mind when designing the application. The app shell approach allows websites to be:
 
 - Linkable: Even though it behaves like a native app, it is still a website — you can click on the links within the page and send a URL to someone if you want to share it.
-- Progressive: Start with the "good, old basic website” and progressively add new features while remembering to detect if they are available in the browser and gracefully handle any errors that crop up if support is not available. For example, an offline mode with the help of service workers is just an extra trait that makes the website experience better, but it's still perfectly usable without it.
-- Responsive: Responsive web design also applies to progressive web apps, as both are mainly for mobile devices. There are so many varied devices with browsers — it's important to prepare your website so it works on different screen sizes, viewports or pixel densities, using technologies like [viewport meta tag](/en-US/docs/Mozilla/Mobile/Viewport_meta_tag), [CSS media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout), and [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout).
+- Progressive: Start with the "good, old basic website" and progressively add new features while remembering to detect if they are available in the browser and gracefully handle any errors that crop up if support is not available. For example, an offline mode with the help of service workers is just an extra trait that makes the website experience better, but it's still perfectly usable without it.
+- Responsive: Responsive web design also applies to progressive web apps, as both are mainly for mobile devices. There are so many varied devices with browsers — it's important to prepare your website so it works on different screen sizes, viewports or pixel densities, using technologies like [viewport meta tag](/en-US/docs/Web/HTML/Viewport_meta_tag), [CSS media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout), and [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout).
 
 ## Different concept: streams
 

@@ -448,7 +448,7 @@ The editing UI (the upper half) will contain an `<input>` field and two buttons 
 [...]
 ```
 
-When the user presses the _Edit_ button, the `editing` variable will be set to `true`, and Svelte will remove the markup in the `{:else}` part of the DOM and replace it with the markup in the `{#if...}` section.
+When the user presses the _Edit_ button, the `editing` variable will be set to `true`, and Svelte will remove the markup in the `{:else}` part of the DOM and replace it with the markup in the `{#if}` section.
 
 The `<input>`'s `value` property will be bound to the `name` variable, and the buttons to cancel and save the changes call `onCancel()` and `onSave()` respectively (we added those functions earlier):
 

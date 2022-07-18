@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.createBuffer()
 slug: Web/API/WebGLRenderingContext/createBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -17,7 +18,7 @@ The **`WebGLRenderingContext.createBuffer()`** method of the [WebGL API](/en-US/
 ## Syntax
 
 ```js
-WebGLBuffer gl.createBuffer();
+createBuffer()
 ```
 
 ### Parameters

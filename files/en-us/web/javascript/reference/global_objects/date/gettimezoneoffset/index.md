@@ -23,59 +23,63 @@ getTimezoneOffset()
 
 ### Return value
 
-The difference, in minutes, between _date_, as evaluated in the UTC time zone, and as evaluated in the local time zone.
+The difference, in minutes, between the date as evaluated in the UTC time zone and as evaluated in the local time zone. The actual local time algorithm is implementation-defined, and the return value is allowed to be zero in runtimes without appropriate data.
 
 ## Description
 
-`date.getTimezoneOffset()` returns the difference, in minutes, between _date_ as evaluated in the UTC time zone, and _date_ as evaluated in the local time zone — that is, the time zone of the host system in which the browser is being used (if the code is run from the Web in a browser), or otherwise the host system of whatever JavaScript runtime (for example, a Node.js environment) the code is executed in.
+`date.getTimezoneOffset()` returns the difference, in minutes, between `date` as evaluated in the UTC time zone and as evaluated in the local time zone — that is, the time zone of the host system in which the browser is being used (if the code is run from the Web in a browser), or otherwise the host system of whatever JavaScript runtime (for example, a Node.js environment) the code is executed in.
 
 ### Negative values and positive values
 
 The number of minutes returned by `getTimezoneOffset()` is positive if the local time zone is behind UTC, and negative if the local time zone is ahead of UTC. For example, for UTC+10, `-600` will be returned.
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="row">Current time zone</th>
-      <th scope="col">UTC-8</th>
-      <th scope="col">UTC</th>
-      <th scope="col">UTC+3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Return Value</th>
-      <td>480</td>
-      <td>0</td>
-      <td>-180</td>
-    </tr>
-  </tbody>
-</table>
+| Current time zone | Return value |
+| ----------------- | ------------ |
+| UTC-8             | 480          |
+| UTC               | 0            |
+| UTC+3             | -180         |
 
-### Varied results in Daylight Saving Time (DST) time zones
+### Varied results in Daylight Saving Time (DST) regions
 
-In a time zone that annually shifts in and out of Daylight Saving Time (DST), the number of minutes returned by calling `getTimezoneOffset()` can vary.
+In a region that annually shifts in and out of Daylight Saving Time (DST), as `date` varies, the number of minutes returned by calling `getTimezoneOffset()` can be non-uniform.
 
-Consider a given local time zone and a date _date1_ that are both in DST, and consider _minutes_, the number of minutes returned by calling `date1.getTimezoneOffset()`; then:
+> **Note:** `getTimezoneOffset()`'s behavior will never differ based on the time when the code is run — its behavior is always consistent when running in the same region. Only the value of `date` affects the result.
 
-- If the local time zone is currently in DST, but a given date _date2_ is _not_ in DST, then the number of minutes returned by `date2.getTimezoneOffset()` is _minutes_ ± 60.
-- If the local time zone is _not_ currently in DST, but a given date _date3_ is in DST, then the number of minutes returned by `date3.getTimezoneOffset()` is _minutes_ ± 60.
-
-In a time zone that doesn’t annually shift in and out of Daylight Saving Time (DST), the number of minutes returned by calling `getTimezoneOffset()` always returns the same number of minutes, regardless of the _date_ instance it’s called from.
-
-> **Note:** The above description is a simplification. In implementations, the {{InterWiki("wikipedia", "Daylight_saving_time#IANA_time_zone_database", "IANA time zone database")}} (tzdata) is used for precisely determining the effect of DST on the calculation of the time-zone difference.
+In most implementations, the [IANA time zone database](https://en.wikipedia.org/wiki/Daylight_saving_time#IANA_time_zone_database) (tzdata) is used to precisely determine the offset of the local timezone at the moment of the `date`. However, if such information is unavailable, an implementation may return zero.
 
 ## Examples
 
+### Using getTimezoneOffset()
+
 ```js
 // Create a Date instance for the current time
-let currentLocalDate = new Date();
+const currentLocalDate = new Date();
 // Create a Date instance for 03:24 GMT-0200 on May 1st in 2016
-let laborDay2016at0324GMTminus2 = new Date('May 1, 2016 03:24:00 GMT-0200');
+const laborDay2016at0324GMTminus2 = new Date('2016-05-01T03:24:00Z-02:00');
 currentLocalDate.getTimezoneOffset() === laborDay2016at0324GMTminus2.getTimezoneOffset();
 // true, always, in any timezone that doesn't annually shift in and out of DST
 // false, sometimes, in any timezone that annually shifts in and out of DST
 ```
+
+### getTimezoneOffset() and DST
+
+In regions that use DST, the return value may change based on the time of the year `date` is in. Below is the output in a runtime in New York, where the timezone is UTC-05:00.
+
+```js
+const nyOffsetSummer = new Date('2022-02-01').getTimezoneOffset(); // 300
+const nyOffsetWinter = new Date('2022-08-01').getTimezoneOffset(); // 240
+```
+
+### getTimezoneOffset() and historical data
+
+Due to historical reasons, the timezone a region is in can be constantly changing, even disregarding DST. For example, below is the output in a runtime in Shanghai, where the timezone is UTC+08:00.
+
+```js
+const shModernOffset = new Date('2022-01-27').getTimezoneOffset(); // -480
+const shHistoricalOffset = new Date('1943-01-27').getTimezoneOffset(); // -540
+```
+
+This is because during the [Sino-Japanese War](https://en.wikipedia.org/wiki/Second_Sino-Japanese_War) when Shanghai was under Japanese control, the timezone was changed to UTC+09:00 to align with Japan's (in effect, it was a "year-round DST"), and this was recorded in the IANA database.
 
 ## Specifications
 

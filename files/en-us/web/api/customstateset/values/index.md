@@ -1,6 +1,7 @@
 ---
 title: CustomStateSet.values()
 slug: Web/API/CustomStateSet/values
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,10 +17,14 @@ The **`values()`** method of the {{domxref("CustomStateSet")}} interface returns
 ## Syntax
 
 ```js
-CustomStateSet.values()
+values()
 ```
 
-### Return Value
+### Parameters
+
+None.
+
+### Return value
 
 A new iterator object containing the values for each element in the given `CustomStateSet`, in insertion order.
 

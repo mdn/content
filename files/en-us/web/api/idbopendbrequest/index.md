@@ -1,6 +1,7 @@
 ---
 title: IDBOpenDBRequest
 slug: Web/API/IDBOpenDBRequest
+page-type: web-api-interface
 tags:
   - API
   - DOM Reference
@@ -37,19 +38,19 @@ Listen to these generic and specific events using `addEventListener()` or by ass
 Events specific to this interface are:
 
 - [`blocked`](/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event)
-  - : Fired when an open connection to a database is blocking a `versionchange` transaction on the same database. Also available via the [`onblocked`](/en-US/docs/Web/API/IDBOpenDBRequest/onblocked) property.
+  - : Fired when an open connection to a database is blocking a `versionchange` transaction on the same database. Also available via the [`onblocked`](/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event) property.
 - [`upgradeneeded`](/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event)
-  - : Fired when an attempt was made to open a database with a version number higher than its current version. Also available via the [`onupgradeneeded`](/en-US/docs/Web/API/IDBOpenDBRequest/onupgradeneeded) property.
+  - : Fired when an attempt was made to open a database with a version number higher than its current version. Also available via the [`onupgradeneeded`](/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event) property.
 
 ## Example
 
 In the following example you can see the onupgradeneeded handler being used to update the database structure if a database with a higher version number is loaded. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
-var db;
+let db;
 
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these event handlers act on the database being opened.
 DBOpenRequest.onerror = function(event) {
@@ -74,14 +75,14 @@ DBOpenRequest.onsuccess = function(event) {
 // submitted via the window.indexedDB.open line above
 // it is only implemented in recent browsers
 DBOpenRequest.onupgradeneeded = function(event) {
-  var db = this.result;
+  const db = this.result;
 
   db.onerror = function(event) {
     note.innerHTML += '<li>Error loading database.</li>';
   };
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  const objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
 
   // define what data items the objectStore will contain
 

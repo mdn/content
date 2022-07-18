@@ -1,6 +1,7 @@
 ---
 title: Document.activeElement
 slug: Web/API/Document/activeElement
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -16,7 +17,7 @@ browser-compat: api.Document.activeElement
 The **`activeElement`** read-only property
 of the {{domxref("Document")}} interface returns the {{domxref("Element")}} within the DOM that currently has focus.
 
-Often `activeElement` will return a {{domxref("HTMLInputElement")}} or
+Often `activeElement` will return a {{domxref("HTMLInputElement")}} or
 {{domxref("HTMLTextAreaElement")}} object if it has the text selection at the time. If
 so, you can get more detail by using the object's `selectionStart` and `selectionEnd` properties.
 Other times the focused element might be a {{HTMLElement("select")}} element (menu) or
@@ -33,18 +34,12 @@ aren't text input elements are not typically focusable by default.
 > the same thing as selection (the currently highlighted part of the document). You can
 > get the current selection using {{domxref("window.getSelection()")}}.
 
-## Syntax
-
-```js
-element = document.activeElement
-```
-
-### Value
+## Value
 
 The {{domxref('Element')}} which currently has focus, {{HTMLElement("body")}} or
 `null` if there is no focused element.
 
-## Example
+## Examples
 
 ### HTML
 
@@ -83,7 +78,7 @@ textarea2.addEventListener('mouseup', onMouseUp, false);
 
 ### Result
 
-{{ EmbedLiveSample('Example', '400', '400') }}
+{{ EmbedLiveSample('Examples', '400', '400') }}
 
 ## Specifications
 

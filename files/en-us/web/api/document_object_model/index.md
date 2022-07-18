@@ -1,6 +1,7 @@
 ---
 title: Document Object Model (DOM)
 slug: Web/API/Document_Object_Model
+page-type: web-api-overview
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - Overview
   - Reference
   - Web
+spec-urls: https://dom.spec.whatwg.org/
 ---
 {{DefaultAPISidebar("DOM")}}
 
@@ -34,7 +36,6 @@ To learn more about what the DOM is and how it represents documents, see our art
 - {{DOMxRef("DOMError")}} {{Deprecated_Inline}}
 - {{DOMxRef("DOMException")}}
 - {{DOMxRef("DOMImplementation")}}
-- {{DOMxRef("DOMString")}}
 - {{DOMxRef("DOMTimeStamp")}}
 - {{DOMxRef("DOMStringList")}}
 - {{DOMxRef("DOMTokenList")}}
@@ -50,7 +51,6 @@ To learn more about what the DOM is and how it represents documents, see our art
 - {{DOMxRef("NodeIterator")}}
 - {{DOMxRef("NodeList")}}
 - {{DOMxRef("ProcessingInstruction")}}
-- {{DOMxRef("Selection")}} {{Experimental_Inline}}
 - {{DOMxRef("Range")}}
 - {{DOMxRef("Text")}}
 - {{DOMxRef("TextDecoder")}} {{Experimental_Inline}}
@@ -272,9 +272,7 @@ Here are the DOM APIs for data types used in the definitions of SVG properties a
 
 ## Specifications
 
-| Specification                                       |
-| --------------------------------------------------- |
-| [DOM Living Standard](https://dom.spec.whatwg.org/) |
+{{Specifications}}
 
 ## See also
 

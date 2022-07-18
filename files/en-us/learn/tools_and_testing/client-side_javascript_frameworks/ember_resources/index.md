@@ -54,7 +54,7 @@ Our final Ember article provides you with a list of resources that you can use t
   - [Tutorial: Super Rentals](https://guides.emberjs.com/release/tutorial/part-1/)
 
 - [Ember.JS API Documentation](https://api.emberjs.com/ember/release)
-- [Ember.JS Discord Server](https://discord.gg/emberjs) — a forum/chat server where you can meet the Ember community, ask for help, and help others!
+- [Ember.JS Discord Server](https://discord.com/invite/emberjs) — a forum/chat server where you can meet the Ember community, ask for help, and help others!
 
 ## General troubleshooting, gotchas, and misconceptions
 
@@ -72,8 +72,8 @@ For _framework-specific_ things, there is the [ember-inspector add-on](https://g
 - Deprecation Information
 - Render Performance
 
-For general JavaScript debugging, check out our [guides on JavaScript Debugging](/en-US/docs/Tools/Debugger)
-as well as interacting with the [browser's other debugging tools](/en-US/docs/Tools). In any default Ember
+For general JavaScript debugging, check out our [guides on JavaScript Debugging](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
+as well as interacting with the [browser's other debugging tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html). In any default Ember
 project, there will be two main JavaScript files, `vendor.js` and `{app-name}.js`. Both of
 these files are generated with sourcemaps, so when you open the `vendor.js` or `{app-name}.js` to search for relevant code, when a debugger is placed, the sourcemap will be loaded and the breakpoint will be placed in the pre-transpiled code for easier correlation to your project code.
 
@@ -85,7 +85,7 @@ Not at all. While `ember-data` solves _the most common problems_ that any app de
 data will run in to, it is possible to roll your own front-end data client. A common
 alternative is to any fully-featured front-end data client is [The Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch).
 
-Using the design patterns provided by the framework, a `Route` using `fetch()` would look something  like this:
+Using the design patterns provided by the framework, a `Route` using `fetch()` would look something like this:
 
 ```js
 import Route from '@ember/routing/route';
@@ -150,9 +150,9 @@ Which would then be called in the template like so:
 <Checkbox @data=\{{this.someData}} @onChange=\{{this.setData}} />
 ```
 
-Due to the conciseness of using `mut`, it may be desireable to reach for it. However, `mut` has unnatural semantics and has caused much confusion over the term of its existence.
+Due to the conciseness of using `mut`, it may be desirable to reach for it. However, `mut` has unnatural semantics and has caused much confusion over the term of its existence.
 
-There have been a couple of new ideas put together into the form of addons that use the public apis, [`ember-set-helper`](https://github.com/pzuraq/ember-set-helper) and [`ember-box`](https://github.com/pzuraq/ember-box). Both of these try to solve the problems of `mut`
+There have been a couple of new ideas put together into the form of addons that use the public APIs, [`ember-set-helper`](https://github.com/pzuraq/ember-set-helper) and [`ember-box`](https://github.com/pzuraq/ember-box). Both of these try to solve the problems of `mut`
 by introducing more obvious / "less magic" concepts, avoiding build-time transforms and
 implicit Glimmer VM behavior.
 

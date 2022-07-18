@@ -1,6 +1,7 @@
 ---
 title: Window.sessionStorage
 slug: Web/API/Window/sessionStorage
+page-type: web-api-instance-property
 tags:
   - APIs
   - Property
@@ -41,17 +42,11 @@ page**. In particular, data stored by a script on a site accessed with HTTP
 put in a different `sessionStorage` object from the same site accessed with
 HTTPS (e.g., <https://example.com>).
 
-The keys and the values are _always_ in the UTF-16 {{domxref("DOMString")}}
+The keys and the values are _always_ in the UTF-16 string
 format, which uses two bytes per character. As with objects, integer keys are
 automatically converted to strings.
 
-## Syntax
-
-```js
-myStorage = window.sessionStorage;
-```
-
-### Value
+## Value
 
 A {{DOMxRef("Storage")}} object which can be used to access the current origin's
 session storage space.
@@ -59,8 +54,7 @@ session storage space.
 ### Exceptions
 
 - `SecurityError`
-  - : The request violates a policy decision, or the origin is not [a valid
-    scheme/host/port tuple](/en-US/docs/Web/Security/Same-origin_policy#definition_of_an_origin) (this can happen if the origin uses the
+  - : The request violates a policy decision, or the origin is not [a valid scheme/host/port tuple](/en-US/docs/Web/Security/Same-origin_policy#definition_of_an_origin) (this can happen if the origin uses the
     `file:` or `data:` scheme, for example). For example, the user
     may have their browser configured to deny permission to persist data for the specified
     origin.
@@ -106,8 +100,7 @@ field.addEventListener("change", function() {
 });
 ```
 
-> **Note:** Please refer to the [Using the Web
-> Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) article for a full example.
+> **Note:** Please refer to the [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) article for a full example.
 
 ## Specifications
 
@@ -119,6 +112,5 @@ field.addEventListener("change", function() {
 
 ## See also
 
-- [Using the
-  Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
 - {{DOMxRef("Window.localStorage")}}

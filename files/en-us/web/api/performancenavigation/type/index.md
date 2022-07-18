@@ -1,6 +1,7 @@
 ---
 title: PerformanceNavigation.type
 slug: Web/API/PerformanceNavigation/type
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility
@@ -21,6 +22,10 @@ describing how the navigation to this page was done.
 
 > **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete).
 > Please use the {{domxref("PerformanceNavigationTiming")}} interface instead.
+
+## Value
+
+An `unsigned short`.
 
 Possible values are:
 
@@ -61,12 +66,6 @@ Possible values are:
     </tr>
   </tbody>
 </table>
-
-## Syntax
-
-```js
-type = performanceNavigation.type;
-```
 
 ## Specifications
 

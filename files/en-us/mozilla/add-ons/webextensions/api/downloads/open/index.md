@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var opening = browser.downloads.open(
+let opening = browser.downloads.open(
   downloadId      // integer
 )
 ```
@@ -57,12 +57,12 @@ function onError(error) {
 
 function openDownload(downloadItems) {
     if (downloadItems.length > 0) {
-      var opening = browser.downloads.open(downloadItems[0].id);
+      let opening = browser.downloads.open(downloadItems[0].id);
       opening.then(onOpened, onError);
     }
   }
 
-var searching = browser.downloads.search({
+let searching = browser.downloads.search({
   limit: 1,
   orderBy: ["-startTime"]
 });
@@ -72,7 +72,7 @@ searching.then(openDownload, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-open) API.
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-open) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

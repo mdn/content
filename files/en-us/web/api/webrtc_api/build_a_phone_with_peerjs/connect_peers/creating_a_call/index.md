@@ -1,12 +1,13 @@
 ---
 title: Creating a Call
 slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Creating_a_call
+page-type: guide
 ---
 {{WebRTCSidebar}}
 
 {{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Create_a_peer_connection", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call")}}
 
-Exciting times — now you’re going to give your users the ability to create calls.
+Exciting times — now you're going to give your users the ability to create calls.
 
 1. First of all, get a reference to the "Call" button that's defined in the HTML, by adding the following to the bottom of `script.js`:
 

@@ -33,39 +33,39 @@ let querying = browser.tabs.query(queryObj)
 
     See the {{WebExtAPIRef("tabs.Tab")}} documentation to learn more about these properties.
 
-    - `active`{{optional_inline}}
+    - `active` {{optional_inline}}
       - : `boolean`. Whether the tabs are active in their windows.
-    - `audible`{{optional_inline}}
+    - `audible` {{optional_inline}}
       - : `boolean`. Whether the tabs are audible.
-    - `autoDiscardable`{{optional_inline}}
+    - `autoDiscardable` {{optional_inline}}
       - : `boolean`. Whether the tabs can be discarded automatically by the browser when resources are low.
     - `cookieStoreId` {{optional_inline}}
       - : `string` or `array` of `string`. Use this to return tabs whose `tab.cookieStoreId` matches any of the `cookieStoreId` strings. This option is only available if the add-on has the `"cookies"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
-    - `currentWindow`{{optional_inline}}
+    - `currentWindow` {{optional_inline}}
       - : `boolean`. Whether the tabs are in the current window.
-    - `discarded`{{optional_inline}}
+    - `discarded` {{optional_inline}}
       - : `boolean`. Whether the tabs are discarded. A discarded tab is one whose content has been unloaded from memory, but is still visible in the tab strip. Its content gets reloaded the next time it's activated.
-    - `hidden`{{optional_inline}}
+    - `hidden` {{optional_inline}}
       - : `boolean`. Whether the tabs are hidden.
-    - `highlighted`{{optional_inline}}
+    - `highlighted` {{optional_inline}}
       - : `boolean`. Whether the tabs are highlighted.
-    - `index`{{optional_inline}}
+    - `index` {{optional_inline}}
       - : `integer`. The position of the tabs within their windows.
-    - `muted`{{optional_inline}}
+    - `muted` {{optional_inline}}
       - : `boolean`. Whether the tabs are muted.
-    - `lastFocusedWindow`{{optional_inline}}
+    - `lastFocusedWindow` {{optional_inline}}
       - : `boolean`. Whether the tabs are in the last focused window.
-    - `pinned`{{optional_inline}}
+    - `pinned` {{optional_inline}}
       - : `boolean`. Whether the tabs are pinned.
-    - `status`{{optional_inline}}
+    - `status` {{optional_inline}}
       - : {{WebExtAPIRef('tabs.TabStatus')}}. Whether the tabs have completed loading.
-    - `title`{{optional_inline}}
+    - `title` {{optional_inline}}
       - : `string`. Match page titles against a pattern. Requires the "tabs" permission or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the tab to match.
-    - `url`{{optional_inline}}
+    - `url` {{optional_inline}}
       - : `string` or `array` of `string`. Match tabs against one or more [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). Note that fragment identifiers are not matched. Requires the "tabs" permission or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the tab to match.
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. The `id` of the parent window, or {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}} for the current window.
-    - `windowType`{{optional_inline}}
+    - `windowType` {{optional_inline}}
       - : {{WebExtAPIRef('tabs.WindowType')}}. The type of window the tabs are in.
 
 ### Return value
@@ -152,7 +152,7 @@ querying.then(logTabs, onError);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-query) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-query) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

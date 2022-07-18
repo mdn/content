@@ -9,6 +9,9 @@ tags:
   - SVG Attribute
   - SVG Gradients
   - Vector Graphics
+spec-urls:
+  - https://svgwg.org/svg2-draft/shapes.html#LineElementX1Attribute
+  - https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementX1Attribute
 ---
 {{SVGRef}}
 
@@ -53,6 +56,12 @@ For {{SVGElement('line')}}, `x1` defines the x coordinate of the starting point 
         <strong
           ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
           ></strong
         >
       </td>
@@ -102,6 +111,12 @@ For {{SVGElement('linearGradient')}}, `x1` defines the x coordinate of the start
             >&#x3C;percentage></a
           ></strong
         >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></strong
+        >
       </td>
     </tr>
     <tr>
@@ -149,42 +164,4 @@ html,body,svg { height:100% }
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "shapes.html#LineElementX1Attribute", "x1")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for <code>&#x3C;line></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "pservers.html#LinearGradientElementX1Attribute", "x1")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for <code>&#x3C;linearGradient></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "shapes.html#LineElementX1Attribute", "x1")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;line></code></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "pservers.html#LinearGradientElementX1Attribute", "x1")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for <code>&#x3C;linearGradient></code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

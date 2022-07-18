@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.videoTracks
 slug: Web/API/HTMLMediaElement/videoTracks
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -28,13 +29,7 @@ the list, you can monitor it for changes to detect when new video tracks are add
 existing ones removed. See {{SectionOnPage("/en-US/docs/Web/API/VideoTrackList", "Event
   handlers")}} to learn more about watching for changes to a media element's track list.
 
-## Syntax
-
-```js
-var videoTracks = mediaElement.videoTracks;
-```
-
-### Value
+## Value
 
 A {{DOMxRef("VideoTrackList")}} object representing the list of video tracks included
 in the media element. The list of tracks can be accessed using array notation, or using

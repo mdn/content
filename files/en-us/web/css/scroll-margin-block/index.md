@@ -3,7 +3,11 @@ title: scroll-margin-block
 slug: Web/CSS/scroll-margin-block
 tags:
   - CSS
+  - CSS Property
+  - Reference
+  - Web
   - recipe:css-shorthand-property
+  - scroll-margin
   - scroll-margin-block
 browser-compat: css.properties.scroll-margin-block
 ---
@@ -31,6 +35,7 @@ scroll-margin-block: 1em .5em ;
 scroll-margin-block: inherit;
 scroll-margin-block: initial;
 scroll-margin-block: revert;
+scroll-margin-block: revert-layer;
 scroll-margin-block: unset;
 ```
 
@@ -41,7 +46,7 @@ scroll-margin-block: unset;
 
 ## Description
 
-The scroll-margin values represent outsets defining the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
+The scroll-margin values represent outsets defining the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.
 
 ## Formal definition
 

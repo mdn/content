@@ -52,7 +52,7 @@ First a brief overview of [HTML Forms](/en-US/docs/Learn/Forms). Consider a simp
 
 ![Simple name field example in HTML form](form_example_name_field.png)
 
-The form is defined in HTML as a collection of elements inside `<form>...</form>` tags, containing at least one `input` element of `type="submit"`.
+The form is defined in HTML as a collection of elements inside `<form>…</form>` tags, containing at least one `input` element of `type="submit"`.
 
 ```html
 <form action="/team_name_url/" method="post">
@@ -113,7 +113,7 @@ npm install express-validator
 
 #### Using express-validator
 
-> **Note:** The [express-validator](https://express-validator.github.io/docs/#basic-guide) guide on Github provides a good overview of the API. We recommend you read that to get an idea of all its capabilities (including using [schema validation](https://express-validator.github.io/docs/schema-validation.html) and [creating custom validators](https://express-validator.github.io/docs/custom-validators-sanitizers.html)). Below we cover just a subset that is useful for the _LocalLibrary_.
+> **Note:** The [express-validator](https://express-validator.github.io/docs/#basic-guide) guide on GitHub provides a good overview of the API. We recommend you read that to get an idea of all its capabilities (including using [schema validation](https://express-validator.github.io/docs/schema-validation.html) and [creating custom validators](https://express-validator.github.io/docs/custom-validators-sanitizers.html)). Below we cover just a subset that is useful for the _LocalLibrary_.
 
 To use the validator in our controllers, we specify the particular functions we want to import from the [express-validator](https://www.npmjs.com/package/express-validator) module, as shown below:
 

@@ -1,6 +1,7 @@
 ---
 title: TransformStreamDefaultController.error()
 slug: Web/API/TransformStreamDefaultController/error
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,13 +17,17 @@ The **`error()`** method of the {{domxref("TransformStreamDefaultController")}} 
 ## Syntax
 
 ```js
-TransformStreamDefaultController.error(reason);
+error(reason)
 ```
 
 ### Parameters
 
 - `reason`
   - : A string containing the error message to be returned on any further interaction with the stream.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

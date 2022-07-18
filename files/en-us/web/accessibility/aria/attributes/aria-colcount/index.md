@@ -1,15 +1,15 @@
 ---
-title: 'aria-colcount'
+title: aria-colcount
 slug: Web/Accessibility/ARIA/Attributes/aria-colcount
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-colcount
+spec-urls: https://w3c.github.io/aria/#aria-colcount
 ---
-
-The `aria-colcount` attribute defines the total number of columns in a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_role) when not all columns are present in the [DOM](/en-US/docs/Glossary/DOM).
+The `aria-colcount` attribute defines the total number of columns in a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role) when not all columns are present in the [DOM](/en-US/docs/Glossary/DOM).
 
 ## Description
 
@@ -19,27 +19,27 @@ If all columns in a table are present in the DOM, the `aria-colcount` attribute 
 
 When using `aria-colcount` when you have a known number of columns, make sure to also use [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) to label each column, or, if the columns are contiguous－if it's a group of columns in the original order with no breaks－label each row.
 
-The following example shows a grid with 6 columns, of which columns 1, 2, 5, and 6 are displayed to the user. The total number of columns that make up the table is set as `aria-colcount="6"` on the table itself. As the columns aren't contiguous, every [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_role) - in this case [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role) and [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role) elements - have the `aria-colindex` attribute set.
+The following example shows a grid with 6 columns, of which columns 1, 2, 5, and 6 are displayed to the user. The total number of columns that make up the table is set as `aria-colcount="6"` on the table itself. As the columns aren't contiguous, every [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) - in this case [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) and [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role) elements - have the `aria-colindex` attribute set.
 
 ```html
 <div role="grid" aria-colcount="6">
-  <div role="rowgroup">
-    <div role="row">
-      <div role="columnheader" aria-colindex="1">First name</div>
-      <div role="columnheader" aria-colindex="2">Last name</div>
-      <div role="columnheader" aria-colindex="5">City</div>
-      <div role="columnheader" aria-colindex="6">Zip</div>
-    </div>
-  </div>
-  <div role="rowgroup">
-    <div role="row">
-      <div role="gridcell" aria-colindex="1">Debra</div>
-      <div role="gridcell" aria-colindex="2">Burks</div>
-      <div role="gridcell" aria-colindex="5">New York</div>
-      <div role="gridcell" aria-colindex="6">14127</div>
-    </div>
-  </div>
-  …
+  <div role="rowgroup">
+    <div role="row">
+      <div role="columnheader" aria-colindex="1">First name</div>
+      <div role="columnheader" aria-colindex="2">Last name</div>
+      <div role="columnheader" aria-colindex="5">City</div>
+      <div role="columnheader" aria-colindex="6">Zip</div>
+    </div>
+  </div>
+  <div role="rowgroup">
+    <div role="row">
+      <div role="gridcell" aria-colindex="1">Debra</div>
+      <div role="gridcell" aria-colindex="2">Burks</div>
+      <div role="gridcell" aria-colindex="5">New York</div>
+      <div role="gridcell" aria-colindex="6">14127</div>
+    </div>
+  </div>
+  …
 </div>
 ```
 
@@ -47,23 +47,23 @@ The first rule of ARIA use is "if you can use a native feature with the semantic
 
 ```html
 <table aria-colcount="6">
-  <thead>
-    <tr>
-      <th aria-colindex="1" scope="col">First name</th>
-      <th aria-colindex="2" scope="col">Last name</th>
-      <th aria-colindex="5" scope="col">City</th>
-      <th aria-colindex="6" scope="col">Zip</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Debra</td>
-      <td>Burks</td>
-      <td>New York</td>
-      <td>14127</td>
-    </tr>
-    ...
-  </tbody>
+  <thead>
+    <tr>
+      <th aria-colindex="1" scope="col">First name</th>
+      <th aria-colindex="2" scope="col">Last name</th>
+      <th aria-colindex="5" scope="col">City</th>
+      <th aria-colindex="6" scope="col">Zip</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Debra</td>
+      <td>Burks</td>
+      <td>New York</td>
+      <td>14127</td>
+    </tr>
+    …
+  </tbody>
 </table>
 ```
 
@@ -80,14 +80,12 @@ Used in roles:
 
 Inherits into roles:
 
-- [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_role)
-- [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_role)
+- [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
+- [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-colcount","ARIA: aria-colcount Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

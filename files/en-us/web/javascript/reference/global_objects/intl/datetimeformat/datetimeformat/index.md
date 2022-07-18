@@ -172,9 +172,9 @@ new Intl.DateTimeFormat(locales, options)
     Implementations may support other subsets, and requests will be negotiated
     against all available subset-representation combinations to find the best
     match. Two algorithms are available for this negotiation and selected by the
-    `formatMatcher` property: A [fully
-    specified "`basic`" algorithm](https://www.ecma-international.org/ecma-402/1.0/#BasicFormatMatcher) and an
-    implementation-dependent "`best fit`" algorithm.
+    `formatMatcher` property:
+    A [fully specified "`basic`" algorithm](https://402.ecma-international.org/1.0/#BasicFormatMatcher)
+    and an implementation-dependent "`best fit`" algorithm.
 
     - `weekday`
 
@@ -303,7 +303,7 @@ Use the `dayPeriod` option to output a string for the times of day ("in the morn
 ```js
 let date = Date.UTC(2012, 11, 17, 4, 0, 42);
 
-console.log(new Intl.DateTimeFormat('en-GB', { hour: 'numeric', hourCycle: 'h12', 
+console.log(new Intl.DateTimeFormat('en-GB', { hour: 'numeric', hourCycle: 'h12',
 dayPeriod: 'short', timeZone: 'UTC' }).format(date));
 // > 4 at night"  (same formatting in en-GB for all dayPeriod values)
 
@@ -311,7 +311,7 @@ console.log(new Intl.DateTimeFormat('fr', { hour: 'numeric', hourCycle: 'h12',
     dayPeriod: 'narrow', timeZone: 'UTC' }).format(date));
 // > "4 mat."  (same output in French for both narrow/short dayPeriod)
 
-console.log(new Intl.DateTimeFormat('fr', { hour: 'numeric', hourCycle: 'h12', 
+console.log(new Intl.DateTimeFormat('fr', { hour: 'numeric', hourCycle: 'h12',
     dayPeriod: 'long', timeZone: 'UTC' }).format(date));
 // > "4 du matin"
 ```
@@ -321,12 +321,12 @@ console.log(new Intl.DateTimeFormat('fr', { hour: 'numeric', hourCycle: 'h12',
 Use the `timeZoneName` option to output a string for the timezone ("GMT", "Pacific Time", etc.).
 
 ```js
-var date = Date.UTC(2021, 11, 17, 3, 0, 42);
+const date = Date.UTC(2021, 11, 17, 3, 0, 42);
 const timezoneNames = ['short', 'long', 'shortOffset', 'longOffset', 'shortGeneric', 'longGeneric']
 
 for (const zoneName of timezoneNames) {
   // Do something with currentValue
-  var formatter = new Intl.DateTimeFormat('en-US', {
+  const formatter = new Intl.DateTimeFormat('en-US', {
     timeZone: 'America/Los_Angeles',
     timeZoneName: zoneName,
   });

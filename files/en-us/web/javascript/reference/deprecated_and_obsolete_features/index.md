@@ -15,7 +15,29 @@ This page lists features of JavaScript that are deprecated (that is, still avail
 
 These deprecated features can still be used, but should be used with caution because they are expected to be removed entirely sometime in the future. You should work to remove their use from your code.
 
-### RegExp properties
+Some of these deprecated features are listed in the [Annex B](https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers) section of the ECMAScript specification. This section is described as normative optional — that is, web browser hosts must implement these features, while non-web hosts may not. These features are likely stable because removing them will cause backward compatibility issues and break legacy websites. (JavaScript has the design goal of "don't break the web".) Still, they are not cross-platform portable and may not be supported by all analysis tools, so you are advised to not use them, as the introduction of Annex B states:
+
+> … Programmers should not use or assume the existence of these features and behaviors when writing new ECMAScript code. …
+
+Some others, albeit in the main spec body, are also marked as normative optional and should not be depended on.
+
+### HTML comments
+
+JavaScript source, if parsed as scripts, allows HTML-like comments, as if the script is part of a `<script>` tag.
+
+The following is valid JavaScript when running in a web browser (or Node.js, which uses the V8 engine powering Chrome):
+
+```js
+<!-- comment
+console.log("a"); <!-- another comment
+console.log("b");
+--> More comment
+// Logs "a" and "b"
+```
+
+`<!--` and `-->` both act like `//`, i.e. starting line comments. `-->` is only valid at the start of a line (to avoid ambiguity with a postfix decrement followed by a greater than operator), while `<!--` can occur anywhere in the line.
+
+### RegExp
 
 the following properties are deprecated. This does not affect their use in {{jsxref("String.replace", "replacement strings", "", 1)}}:
 
@@ -94,123 +116,131 @@ The following are now properties of `RegExp` instances, no longer of the `RegExp
 | {{jsxref("RegExp.multiline", "multiline")}}     | Whether or not to search in strings across multiple lines.                                                         |
 | {{jsxref("RegExp.source", "source")}}             | The text of the pattern.                                                                                           |
 
-### RegExp methods
+In addition, the {{jsxref("RegExp.compile", "compile()")}} method is deprecated. Construct a new `RegExp` instance instead.
 
-- The {{jsxref("RegExp.compile", "compile()")}} method is deprecated.
-- The `valueOf` method is no longer specialized for `RegExp`. Use {{jsxref("Object.valueOf()")}}.
+The `valueOf()` method is no longer specialized for `RegExp`. It uses {{jsxref("Object.prototype.valueOf()")}}, which returns itself.
 
-### Function properties
+### Function
 
-- The {{jsxref("Global_Objects/Function/caller", "caller")}} and {{jsxref("Global_Objects/Function/arguments", "arguments")}} properties are deprecated, because they leak the function caller. Instead of the arguments property, you should use the {{jsxref("Functions/arguments", "arguments")}} object inside function closures.
+- The {{jsxref("Global_Objects/Function/caller", "caller")}} property of functions and the [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) property are deprecated and unavailable in strict mode.
+- Instead of accessing `arguments` as a property of a function, you should use the {{jsxref("Functions/arguments", "arguments")}} object inside function closures.
 
-### Legacy generator
+### Object
 
-- {{jsxref("Statements/Legacy_generator_function", "Legacy generator function statement")}} and {{jsxref("Operators/Legacy_generator_function", "Legacy generator function expression")}} are deprecated. Use {{jsxref("Statements/function*", "function* statement")}} and {{jsxref("Operators/function*", "function* expression")}} instead.
-- {{jsxref("Operators/Array_comprehensions", "JS1.7/JS1.8 Array comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} and {{jsxref("Operators/Generator_comprehensions", "JS1.7/JS1.8 Generator comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} are deprecated.
+- The [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) accessors are deprecated. Use [`Object.getPrototypeOf`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf) and [`Object.setPrototypeOf`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) instead. This does not apply to the `__proto__` literal key in object literals.
+- The [`Object.prototype.__defineGetter__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__), [`Object.prototype.__defineSetter__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__), [`Object.prototype.__lookupGetter__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__), and [`Object.prototype.__lookupSetter__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) methods are deprecated. Use [`Object.getOwnPropertyDescriptor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor) and [`Object.defineProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) instead.
 
-### Iterator
+### String
 
-- {{jsxref("Global_Objects/StopIteration", "StopIteration")}} is deprecated.
-- {{jsxref("Global_Objects/Iterator", "Iterator")}} is deprecated.
+- HTML wrapper methods like {{jsxref("String.prototype.fontsize")}} and {{jsxref("String.prototype.big")}}.
+- {{jsxref("String.prototype.substr")}} probably won't be removed anytime soon, but it's defined in Annex B and hence normative optional.
+- `String.prototype.trimLeft` and `String.prototype.trimRight` should be replaced with {{jsxref("String.prototype.trimStart")}} and {{jsxref("String.prototype.trimEnd")}}.
 
-### Object methods
+### Date
 
-- {{jsxref("Object.watch", "watch")}} and {{jsxref("Object.unwatch", "unwatch")}} are deprecated. Use {{jsxref("Proxy")}} instead.
-- `__iterator__` is deprecated.
-- {{jsxref("Object.noSuchMethod", "__noSuchMethod__")}} is deprecated. Use {{jsxref("Proxy")}} instead.
-
-### Date methods
-
-- {{jsxref("Global_Objects/Date/getYear", "getYear")}} and {{jsxref("Global_Objects/Date/setYear", "setYear")}} are affected by the Year-2000-Problem and have been subsumed by {{jsxref("Global_Objects/Date/getFullYear", "getFullYear")}} and {{jsxref("Global_Objects/Date/setFullYear", "setFullYear")}}.
-- You should use {{jsxref("Global_Objects/Date/toUTCString", "toUTCString")}} instead of the deprecated {{jsxref("Global_Objects/Date/toGMTString", "toGMTString")}} method in new code.
-- {{jsxref("Global_Objects/Date/toLocaleFormat", "toLocaleFormat")}} is deprecated.
-
-### Functions
-
-- {{jsxref("Operators/Expression_closures", "Expression closures", "", 1)}} are deprecated. Use regular {{jsxref("Operators/function", "functions")}} or {{jsxref("Functions/Arrow_functions", "arrow functions", "", 1)}} instead.
-
-### Proxy
-
-- [Proxy.create](/en-US/docs/Archive/Web/Old_Proxy_API) and [Proxy.createFunction](/en-US/docs/Archive/Web/Old_Proxy_API) are deprecated. Use {{jsxref("Proxy")}} instead.
-- The following traps are obsolete:
-
-  - `hasOwn` ([bug 980565](https://bugzilla.mozilla.org/show_bug.cgi?id=980565), Firefox 33).
-  - `getEnumerablePropertyKeys` ([bug 783829](https://bugzilla.mozilla.org/show_bug.cgi?id=783829), Firefox 37)
-  - `getOwnPropertyNames` ([bug 1007334](https://bugzilla.mozilla.org/show_bug.cgi?id=1007334), Firefox 33)
-  - `keys` ([bug 1007334](https://bugzilla.mozilla.org/show_bug.cgi?id=1007334), Firefox 33)
+- The {{jsxref("Global_Objects/Date/getYear", "getYear()")}} and {{jsxref("Global_Objects/Date/setYear", "setYear()")}} methods are affected by the Year-2000-Problem and have been subsumed by {{jsxref("Global_Objects/Date/getFullYear", "getFullYear")}} and {{jsxref("Global_Objects/Date/setFullYear", "setFullYear")}}.
+- The {{jsxref("Global_Objects/Date/toGMTString", "toGMTString()")}} method is deprecated. Use {{jsxref("Global_Objects/Date/toUTCString", "toUTCString()")}} instead.
 
 ### Escape sequences
 
 - Octal escape sequences (\ followed by one, two, or three octal digits) are deprecated in string and regular expression literals.
 - The {{jsxref("Global_Objects/escape", "escape")}} and {{jsxref("Global_Objects/unescape", "unescape")}} functions are deprecated. Use {{jsxref("Global_Objects/encodeURI", "encodeURI")}}, {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}}, {{jsxref("Global_Objects/decodeURI", "decodeURI")}} or {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} to encode and decode escape sequences for special characters.
 
-### String methods
+### Statements
 
-- HTML wrapper methods like {{jsxref("String.prototype.fontsize")}} and {{jsxref("String.prototype.big")}}.
-- {{jsxref("String.prototype.quote")}} is removed from Firefox 37.
-- non standard `flags` parameter in {{jsxref("String.prototype.search")}}, {{jsxref("String.prototype.match")}}, and {{jsxref("String.prototype.replace")}} are deprecated.
-- {{jsxref("String.prototype.substr")}} probably won't be removed anytime soon, but it's defined in [Annex B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-string.prototype.substr) of the ECMA-262 standard, whose [introduction](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) states: "… Programmers should not use or assume the existence of these features and behaviors when writing new ECMAScript code. …"
+The [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement is deprecated and unavailable in strict mode.
+
+Initializers in `var` declarations of [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops headers are deprecated and produce syntax errors in strict mode. They are silently ignored in non-strict mode.
 
 ## Obsolete features
 
 These obsolete features have been entirely removed from JavaScript and can no longer be used as of the indicated version of JavaScript.
 
-### Object
-
-| Property                                                                                 | Description                                                                    |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| {{jsxref("Global_Objects/Object/count", "__count__")}}                 | Returns the number of enumerable properties directly on a user-defined object. |
-| {{jsxref("Global_Objects/Object/Parent", "__parent__")}}             | Points to an object's context.                                                 |
-| {{jsxref("Global_Objects/Object/eval", "Object.prototype.eval()")}} | Evaluates a string of JavaScript code in the context of the specified object.  |
-| {{jsxref("Object.observe()")}}                                                 | Asynchronously observing the changes to an object.                             |
-| {{jsxref("Object.unobserve()")}}                                             | Remove observers.                                                              |
-| {{jsxref("Object.getNotifier()")}}                                             | Creates an object that allows to synthetically trigger a change.               |
-
 ### Function
 
-| Property                                                             | Description                 |
-| -------------------------------------------------------------------- | --------------------------- |
-| {{jsxref("Global_Objects/Function/arity", "arity")}} | Number of formal arguments. |
+- Functions' `arity` property is obsolete. Use [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length) instead.
+
+### Object
+
+| Property | Description | Alternative |
+| -------- | ----------- | ----------- |
+| `__count__` | Returns the number of enumerable properties directly on a user-defined object. | [`Object.keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys) |
+| `__parent__` | Points to an object's context. | No direct replacement |
+| `__iterator__` | Used with [legacy iterators](#legacy_generator_and_iterator). |  [`Symbol.iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) and the new [iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) |
+| `__noSuchMethod__` | A method called when a non-existent property is called as method. | {{jsxref("Proxy")}} |
+| `Object.prototype.eval()` | Evaluates a string of JavaScript code in the context of the specified object.  | No direct replacement |
+| `Object.observe()` | Asynchronously observing the changes to an object. | {{jsxref("Proxy")}} |
+| `Object.unobserve()` | Remove observers. | {{jsxref("Proxy")}} |
+| `Object.getNotifier()` | Create a notifier object that allows to synthetically trigger a change observable with `Object.observe()`. | No direct replacement |
+| `Object.prototype.watch()` | Attach a handler callback to a property that gets called when the property is assigned. | {{jsxref("Proxy")}} |
+| `Object.prototype.unwatch()` | Remove watch handlers on a property. | {{jsxref("Proxy")}} |
 
 ### String
 
 - Non-standard String generic methods like `String.slice(myStr, 0, 12)`, `String.replace(myStr, /\./g, "!")`, etc. have been introduced in Firefox 1.5 (JavaScript 1.6), deprecated in Firefox 53, and removed in Firefox 68. You can use methods on {{jsxref("String", "String.prototype", "instance_methods")}} together with {{jsxref("Function.call")}} instead.
+- `String.prototype.quote` is removed from Firefox 37.
+- Non-standard `flags` parameter in {{jsxref("String.prototype.search")}}, {{jsxref("String.prototype.match")}}, and {{jsxref("String.prototype.replace")}} are obsolete.
+
+### Date
+
+- `Date.prototype.toLocaleFormat()` is obsolete. Use [`toLocaleString`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString) or [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) instead.
 
 ### Array
 
 - Non-standard Array generic methods like `Array.slice(myArr, 0, 12)`, `Array.forEach(myArr, myFn)`, etc. have been introduced in Firefox 1.5 (JavaScript 1.6), deprecated in Firefox 68, and removed in Firefox 71. You can use methods on {{jsxref("Array", "Array.prototype", "instance_methods")}} together with {{jsxref("Function.call")}} instead.
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td>Property</td>
-      <td>Description</td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Array.observe()")}}</td>
-      <td>Asynchronously observing changes to Arrays.</td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Array.unobserve()")}}</td>
-      <td>Remove observers.</td>
-    </tr>
-  </tbody>
-</table>
+| Property | Description | Alternative |
+| -------- | ----------- | ----------- |
+| `Array.observe()` | Asynchronously observing changes to Arrays. | {{jsxref("Proxy")}} |
+| `Array.unobserve()` | Remove observers. | {{jsxref("Proxy")}} |
 
 ### Number
 
-- {{jsxref("Number.toInteger()")}}
+- `Number.toInteger()` is obsolete. Use [`Math.floor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor), [`Math.round`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round), or other methods instead.
+
+### Proxy
+
+- `Proxy.create` and `Proxy.createFunction` are obsolete. Use the {{jsxref("Proxy/Proxy", "Proxy()")}} constructor instead.
+- The following traps are obsolete:
+  - `hasOwn` ([bug 980565](https://bugzilla.mozilla.org/show_bug.cgi?id=980565), Firefox 33).
+  - `getEnumerablePropertyKeys` ([bug 783829](https://bugzilla.mozilla.org/show_bug.cgi?id=783829), Firefox 37)
+  - `getOwnPropertyNames` ([bug 1007334](https://bugzilla.mozilla.org/show_bug.cgi?id=1007334), Firefox 33)
+  - `keys` ([bug 1007334](https://bugzilla.mozilla.org/show_bug.cgi?id=1007334), Firefox 33)
 
 ### ParallelArray
 
-- {{jsxref("ParallelArray")}}
+- `ParallelArray` is obsolete.
 
 ### Statements
 
-- {{jsxref("Statements/for_each...in", "for each...in")}} is deprecated. Use {{jsxref("Statements/for...of", "for...of")}} instead.
-- Destructuring {{jsxref("Statements/for...in", "for...in")}} is deprecated. Use {{jsxref("Statements/for...of", "for...of")}} instead.
+- `for each...in` is obsolete. Use {{jsxref("Statements/for...of", "for...of")}} instead.
 - let blocks and let expressions are obsolete.
+- [Expression closures](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_expression_closures) are obsolete. Use regular {{jsxref("Operators/function", "functions")}} or {{jsxref("Functions/Arrow_functions", "arrow functions", "", 1)}} instead.
+
+### Acquiring source text
+
+The `toSource()` methods of arrays, numbers, strings, etc. and the `uneval()` global function are obsolete. Use [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString), or write your own serialization method instead.
+
+### Legacy generator and iterator
+
+Legacy generator function statements and legacy generator function expressions are removed. The legacy generator function syntax reuses the `function` keyword, which automatically becomes a generator function when there are one or more `yield` expressions in the body — this is now a syntax error. Use [`function*` statements](/en-US/docs/Web/JavaScript/Reference/Statements/function*) and [`function*` expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function*) instead.
+
+Array comprehensions and generator comprehensions are removed.
+
+```
+// Legacy array comprehensions
+[for (x of iterable) x]
+[for (x of iterable) if (condition) x]
+[for (x of iterable) for (y of iterable) x + y]
+
+// Legacy generator comprehensions
+(for (x of iterable) x)
+(for (x of iterable) if (condition) x)
+(for (x of iterable) for (y of iterable) x + y)
+```
+
+The `Iterator` and `StopIteration` globals from the [legacy iterator protocol](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol) are obsolete.
 
 ### Sharp variables
 
-See [Sharp variables in JavaScript](/en-US/docs/Archive/Web/Sharp_variables_in_JavaScript) for more information.
+Sharp variables are obsolete. To create circular structures, use temporary variables instead.

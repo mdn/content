@@ -28,7 +28,7 @@ Using a TV remote to control the game ended up being surprisingly easy, because 
 
 ```js
 this.cursors = this.input.keyboard.createCursorKeys();
-//...
+// …
 if(this.cursors.right.isDown) {
     // move player right
 }
@@ -59,7 +59,7 @@ window.addEventListener("keydown", function(event) {
             // detonate bomb
             break;
         }
-        // ...
+        // …
     }
 }, this);
 ```
@@ -68,15 +68,15 @@ You can see it in action by watching [this video](https://www.youtube.com/watch?
 
 ## Leap Motion
 
-Have you ever thought about controlling a game only with your hands? It's possible with [Leap Motion](https://www.leapmotion.com/), an immersive controller for games and apps.
+Have you ever thought about controlling a game only with your hands? It's possible with [Leap Motion](https://www.ultraleap.com/), an immersive controller for games and apps.
 
 Leapmotion is becoming more and more popular due to very good integration with VR headsets — demoing [Rainbow Membrane](https://mozilla.github.io/rainbow/) on an Oculus Rift with Leap Motion attached to it was voted one of the best WebVR experiences by JavaScript developers visiting demo booths at conferences around the world.
 
 As well as being great for virtual interfaces, it can also be used for a casual 2D gaming experiences. It would be very difficult to do everything with only your hands, but it's totally doable for the simple Captain Roger's gameplay — steering the ship and shooting the bullets.
 
-There's good [Hello World](https://developer.leapmotion.com/documentation/javascript/devguide/Sample_Tutorial.html) and [Getting Started](https://developer.leapmotion.com/getting-started/javascript) JavaScript tutorials available on the Leap Motion documentation pages, which will get you through the basics. You can also check out the tutorial about [using Leap Motion plugin for Kiwi.js](https://gamedevelopment.tutsplus.com/tutorials/add-motion-control-to-a-kiwijs-game-with-the-leap-motion-controller--cms-20455), or the case study of [building a web game with Leap Motion and Pixi.js](https://arstechnica.com/business/2014/04/building-a-gesture-controlled-web-game-with-leap-motion/). Be sure to visit the [LeapJS repository on GitHub](https://github.com/leapmotion/leapjs) to learn about the JavaScript client for the Leap Motion controller and read the documentation there. If all else fails, there's also a [gallery of working examples](https://developer.leapmotion.com/gallery/category/javascript) you can look at.
+There's a good [Hello World](https://developer-archive.leapmotion.com/documentation/javascript/devguide/Sample_Tutorial.html) tutorial available on the Leap Motion documentation pages, which will get you through the basics. You can also check out the tutorial about [using the Leap Motion plugin for Kiwi.js](https://gamedevelopment.tutsplus.com/tutorials/add-motion-control-to-a-kiwijs-game-with-the-leap-motion-controller--cms-20455), or the case study of [building a web game with Leap Motion and Pixi.js](https://arstechnica.com/information-technology/2014/04/building-a-gesture-controlled-web-game-with-leap-motion/). Be sure to visit the [LeapJS repository on GitHub](https://github.com/leapmotion/leapjs) to learn about the JavaScript client for the Leap Motion controller and read the documentation there. If all else fails, there's also a [gallery of working examples](https://gallery.leapmotion.com/) you can look at.
 
-To get the Leap Motion working on your computer you have to first install it by following the steps at [leapmotion.com/setup](https://leapmotion.com/setup). When everything is installed and the controller is connected to your computer we can proceed with implementing support in our [little demo](https://github.com/end3r/JavaScript-Game-Controls/). First, we add a `<script>` tag with the `url` pointing at [this file](https://js.leapmotion.com/leap-0.6.4.min.js), and add `<div id="output"></div>` just before the closing `</body>` tag for outputting diagnostic information.
+To get the Leap Motion working on your computer you have to first install it by following the steps at [docs.ultraleap.com](https://docs.ultraleap.com/hand-tracking/getting-started.html#installation-guides). When everything is installed and the controller is connected to your computer we can proceed with implementing support in our [little demo](https://github.com/end3r/JavaScript-Game-Controls/). First, we add a `<script>` tag with the `url` pointing at [this file](https://js.leapmotion.com/leap-0.6.4.min.js), and add `<div id="output"></div>` just before the closing `</body>` tag for outputting diagnostic information.
 
 We will need a few helper variables for our code to work — one for the purpose of calculating the degrees from radians, two for holding the horizontal and vertical amount of degrees our hand is leaning above the controller, one for the threshold of that lean, and one for the state of our hand's grab status. We next add these lines after all the event listeners for keyboard and mouse, but before the `draw` method:
 
@@ -92,7 +92,7 @@ Right after that we use the Leap's `loop` method to get the information held in 
 
 ```js
 Leap.loop({
-    hand: function(hand) {
+    hand(hand) {
         horizontalDegree = Math.round(hand.roll() * toDegrees);
         verticalDegree = Math.round(hand.pitch() * toDegrees);
         grabStrength = hand.grabStrength;
@@ -110,7 +110,7 @@ The code above is calculating and assigning the `horizontalDegree`, `verticalDeg
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // ...
+    // …
 
     if(horizontalDegree > degreeThreshold) {
         playerX -= 5;
@@ -178,7 +178,7 @@ Cylon.robot({
   devices: {
     makey: { driver: 'makey-button', pin: 2 }
   },
-  work: function(my) {
+  work(my) {
     my.makey.on('push', function() {
       console.log("Button pushed!");
     });

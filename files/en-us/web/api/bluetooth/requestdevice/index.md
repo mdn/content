@@ -1,6 +1,7 @@
 ---
 title: Bluetooth.requestDevice()
 slug: Web/API/Bluetooth/requestDevice
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth
@@ -20,31 +21,32 @@ UI, this method returns the first device matching the criteria.
 ## Syntax
 
 ```js
-Bluetooth.requestDevice([options])
-  .then(function(bluetoothDevice) { /* ... */ })
+requestDevice()
+requestDevice(options)
 ```
+
+### Parameters
+
+- `options` {{optional_inline}}
+  - : An object that sets options for the device request. The available options are:
+    - `filters[]`
+      - : An array of `BluetoothScanFilters`. This
+        filter consists of an array of `BluetoothServiceUUID`s, a
+        `name` parameter, and a `namePrefix` parameter.
+    - `optionalServices[]`
+      - : An array of `BluetoothServiceUUID`s.
+    - `acceptAllDevices`
+      - : A boolean value indicating that the
+        requesting script can accept all Bluetooth devices. The default is
+        `false`.
 
 ### Return value
 
 A {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object.
 
-### Parameters
+### Exceptions
 
-- options {{optional_inline}}
-
-  - : An object that sets options for the device request. The available options are:
-
-    - `filters[]`: An array of `BluetoothScanFilters`. This
-      filter consists of an array of `BluetoothServiceUUID`s, a
-      `name` parameter, and a `namePrefix` parameter.
-    - `optionalServices[]`: An array of `BluetoothServiceUUID`s.
-    - `acceptAllDevices`: A boolean value indicating that the
-      requesting script can accept all Bluetooth devices. The default is
-      `false`.
-
-## Exceptions
-
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the provided `options` do not make sense. For example,
     `options.filters` is present and `options.acceptAllDevices` is
     `true`, or if `options.filters` is not present and
@@ -56,7 +58,7 @@ A {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object.
   - : Thrown if this operation is not permitted in this context due to security concerns. For
     example, it is called from insecure origin.
 
-## Example
+## Examples
 
 ```js
 // Discovery options match any devices advertising:
@@ -88,8 +90,7 @@ navigator.bluetooth.requestDevice(options).then(function(device) {
 });
 ```
 
-[Detailed
-examples](https://webbluetoothcg.github.io/web-bluetooth/#example-filter-by-services) are in the specification.
+[Detailed examples](https://webbluetoothcg.github.io/web-bluetooth/#example-filter-by-services) are in the specification.
 
 ## Specifications
 

@@ -19,7 +19,7 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
-Another category of content that can create accessibility problems is multimedia — video, audio, and image content need to be given proper textual alternatives so they can be understood by assistive technologies and their users. This article shows how.
+Another category of content that can create accessibility problems is multimedia. Video, audio, and image content need to be given proper textual alternatives so that they can be understood by assistive technologies and their users. This article shows how.
 
 <table>
   <tbody>
@@ -68,7 +68,7 @@ Implementing controls for web-based audio/video shouldn't be a problem, right? L
 
 ### The problem with native HTML5 controls
 
-HTML5 video and audio instances even come with a set of inbuilt controls that allow you to control the media straight out of the box. For example (see `native-controls.html` [source code](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/native-controls.html) and [live](https://mdn.github.io/learning-area/accessibility/multimedia/native-controls.html)):
+HTML5 video and audio instances even come with a set of inbuilt controls that allow you to control the media straight out of the box. For example (see `native-controls.html` [source code](https://github.com/mdn/learning-area/blob/main/accessibility/multimedia/native-controls.html) and [live](https://mdn.github.io/learning-area/accessibility/multimedia/native-controls.html)):
 
 ```html
 <audio controls>
@@ -107,7 +107,7 @@ Let's take the video example from above and add custom controls to them.
 
 #### Basic setup
 
-First, grab a copy of our [custom-controls-start.html](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls-start.html), [custom-controls.css](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls.css), [rabbit320.mp4](https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.mp4), and [rabbit320.webm](https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.webm) files and save them in a new directory on your hard drive.
+First, grab a copy of our [custom-controls-start.html](https://github.com/mdn/learning-area/blob/main/accessibility/multimedia/custom-controls-start.html), [custom-controls.css](https://github.com/mdn/learning-area/blob/main/accessibility/multimedia/custom-controls.css), [rabbit320.mp4](https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.mp4), and [rabbit320.webm](https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.webm) files and save them in a new directory on your hard drive.
 
 Create a new file called main.js and save it in the same directory.
 
@@ -189,7 +189,7 @@ stopBtn.onclick = function() {
 
 There is no `stop()` function available on {{domxref("HTMLMediaElement")}}s, so instead we `pause()` it, and at the same time set the `currentTime` to 0.
 
-Next, our rewind and fast forward buttons — add the following blocks to the bottom of your code:
+Next, our rewind and fast-forward buttons — add the following blocks to the bottom of your code:
 
 ```js
 rwdBtn.onclick = function() {
@@ -208,7 +208,7 @@ fwdBtn.onclick = function() {
 
 These are very simple, just adding or subtracting 3 seconds to the `currentTime` each time they are clicked. In a real video player, you'd probably want a more elaborate seeking bar, or similar.
 
-Note that we also check to see if the `currentTime` is more than the total media `duration`, or if the media is not playing, when the Fwd button is pressed. If either condition is true, we stop the video, to avoid the user interface going wrong if they attempt to fast forward when the video is not playing or fast forward past the end of the video.
+Note that we also check to see if the `currentTime` is more than the total media `duration` or if the media is not playing when the `fwdBtn` is pressed. If either condition is true, we stop the video to avoid the user interface going wrong if they attempt to fast forward when the video is not playing or fast forward past the end of the video.
 
 Last of all, add the following to the end of the code, to control the time elapsed display:
 
@@ -246,7 +246,7 @@ This gives you a basic idea of how to add custom player functionality to video/a
 - [Video player styling basics](/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics)
 - [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)
 
-We've also created an advanced example to show how you could create an object-oriented system that finds every video and audio player on the page (no matter how many there are) and adds our custom controls to it. See [custom-controls-oojs](https://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/) (also [see the source code](https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/custom-controls-OOJS)).
+We've also created an advanced example to show how you could create an object-oriented system that finds every video and audio player on the page (no matter how many there are) and adds our custom controls to it. See [custom-controls-oojs](https://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/) (also [see the source code](https://github.com/mdn/learning-area/tree/main/accessibility/multimedia/custom-controls-OOJS)).
 
 ## Audio transcripts
 
@@ -256,7 +256,7 @@ In terms of actually creating the transcript, your options are:
 
 - Commercial services — You could pay a professional to do the transcription, see for example companies like [Scribie](https://scribie.com/), [Casting Words](https://castingwords.com/), or [Rev](https://www.rev.com/). Look around and ask for advice to make sure you find a reputable company that you'll be able to work with effectively.
 - Community/grassroots/self transcription — If you are part of an active community or team in your workplace, then you could ask them for help with doing the translations. You could even have a go at doing them yourself.
-- Automated services — There are AI services available, like [Trint](https://trint.com) or [Transcribear](https://transcribear.com/index.html). Upload a video/audio file to the site, and it automatically transcribes it for you. On YouTube, you can choose to generate automated captions/transcripts. Depending on how clear the spoken audio is, the resulting transcript quality will vary greatly.
+- Automated services — There are AI services available, like [Trint](https://trint.com) or [Transcribear](https://transcribear.com/index.html). Upload a video/audio file to the site, and it automatically transcribes it for you. On YouTube, you can choose to generate automated captions/transcripts. Depending on how clear the spoken audio is, the resulting transcript quality will vary greatly.
 
 As with most things in life, you tend to get what you pay for; different services will vary in accuracy and time taken to produce the transcript. If you pay a reputable company or AI service to do the transcription, you will probably get it done rapidly and to a high quality. If you don't want to pay for it, you are likely to get it done at a lower quality, and/or slowly.
 
@@ -264,9 +264,9 @@ It is not OK to publish an audio resource but promise to publish the transcript 
 
 ### Transcript examples
 
-If you use an automated service, then you'll probably have to use the user interface that the tool provides. For example, take a look at our [Wait, ARIA Roles Have Categories?](https://www.youtube.com/watch?v=mwF-PpJOjMs) video and choose the three-dot menu (. . .) _> Show Transcript_. You'll see the transcript come up in a separate panel.
+If you use an automated service, then you'll probably have to use the user interface that the tool provides. For example, take a look at our [Wait, ARIA Roles Have Categories?](https://www.youtube.com/watch?v=mwF-PpJOjMs) video and choose the three-dot menu (. . .) _> Show Transcript_. You'll see the transcript come up in a separate panel.
 
-If you are creating your own user interface to present your audio and associated transcript, you can do it however you like, but it might make sense to include it in a showable/hideable panel; see our [audio-transcript-ui](https://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/) example (also see the [source code](https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/audio-transcript-ui)).
+If you are creating your own user interface to present your audio and associated transcript, you can do it however you like, but it might make sense to include it in a showable/hideable panel; see our [audio-transcript-ui](https://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/) example (also see the [source code](https://github.com/mdn/learning-area/tree/main/accessibility/multimedia/audio-transcript-ui)).
 
 ### Audio descriptions
 
@@ -280,15 +280,15 @@ However, there are some edge cases. You might for example have an audio recordin
 
 ## Video text tracks
 
-To make video accessible for deaf, blind, or even other groups of users (such as those on low bandwidth, or who don't understand the language the video is recorded in), you need to include text tracks along with your video content.
+To make video accessible for deaf, visually impaired, or other groups of users (such as those on low bandwidth, or who don't understand the language the video is recorded in), you need to include text tracks along with your video content.
 
-> **Note:** text tracks are also useful for potentially any user, not just those with disabilities. for example, some users may not be able to hear the audio because they are in noisy environments (like a crowded bar when a sports game is being shown) or might not want to disturb others if they are in a quiet place (like a library.)
+> **Note:** Text tracks are also useful for potentially any user, not just those with disabilities. For example, some users may not be able to hear the audio because they are in noisy environments (like a crowded bar when a sports game is being shown) or might not want to disturb others if they are in a quiet place (like a library).
 
 This is not a new concept — television services have had closed captioning available for quite a long time:
 
 ![Frame from an old-timey cartoon with closed captioning "Good work, Goldie. Keep it up!"](closed-captions.png)
 
-Whereas many countries offer English films with subtitles written in their own native languages, and different language subtitles are often available on DVDs, for example
+Many countries offer English films with subtitles written in their own native languages, and different language subtitles are often available on DVDs, as shown below:
 
 ![An English film with German subtitles "Emo, warum erkennst du nicht die Schonheit dieses Ortes?"](subtitles_german.png)
 
@@ -296,7 +296,7 @@ There are different types of text tracks for different purposes. The main ones y
 
 - Captions — There for the benefit of deaf users who can't hear the audio track, including the words being spoken, and contextual information such as who spoke the words, if the people were angry or sad, and what mood the music is currently creating.
 - Subtitles — Include translations of the audio dialog, for users that don't understand the language being spoken.
-- Descriptions — These include descriptions for blind people who can't see the video, for example, what the scene looks like.
+- Descriptions — These include descriptions for visually impaired people who can't see the video, for example, what the scene looks like.
 - Chapter titles — Chapter markers intended to help the user navigate the media resource
 
 ### Implementing HTML5 video text tracks
@@ -316,7 +316,7 @@ This is the first subtitle.
 00:00:30.739 --> 00:00:34.074
 This is the second.
 
-...
+…
 ```
 
 To get this displayed along with the HTML media playback, you need to:
@@ -338,7 +338,7 @@ This will result in a video that has subtitles displayed, kind of like this:
 
 ![Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-For more details, please read [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). You can find [the example](https://iandevlin.github.io/mdn/video-player-with-captions/) that goes along with this article on Github, written by Ian Devlin (see the [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) too.) This example uses JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
+For more details, see [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). You can find [the example](https://iandevlin.github.io/mdn/video-player-with-captions/) that goes along with this article on GitHub, written by Ian Devlin (see the [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) too.) This example uses JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
 
 > **Note:** Text tracks and transcriptions also help you with {{glossary("SEO")}}, since search engines especially thrive on text. Text tracks even allow search engines to link directly to a spot partway through the video.
 
@@ -352,7 +352,7 @@ We've not written a new set of assessments for this article, because there are a
 
 This chapter has provided a summary of accessibility concerns for multimedia content, along with some practical solutions.
 
-It is not always easy to make multimedia accessible. If for example, you are dealing with an immersive 3D game or virtual reality app, it really is quite difficult to provide text alternatives for such an experience, and you might argue that blind users are not really in the target audience bracket for such apps.
+It is not always easy to make multimedia accessible. If for example, you are dealing with an immersive 3D game or virtual reality app, it really is quite difficult to provide text alternatives for such an experience, and you might argue that visually impaired users are not really in the target audience bracket for such apps.
 
 You can however make sure that such an app has good enough color contrast and clear presentation so it is perceivable to those with low vision/color blindness, and also make it keyboard accessible. Remember that accessibility is about doing as much as you can, rather than striving for 100% accessibility all the time, which is often impossible.
 

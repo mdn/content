@@ -1,6 +1,7 @@
 ---
 title: MediaKeySystemAccess.createMediaKeys()
 slug: Web/API/MediaKeySystemAccess/createMediaKeys
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -22,8 +23,16 @@ The `MediaKeySystemAccess.createMediaKeys()` method returns a
 ## Syntax
 
 ```js
-var mediaKeys = await mediaKeySystemAccess.createMediaKeys();
+createMediaKeys()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+A {{jsxref('Promise')}}.
 
 ## Specifications
 

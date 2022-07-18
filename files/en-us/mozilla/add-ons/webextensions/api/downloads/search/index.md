@@ -15,14 +15,14 @@ browser-compat: webextensions.api.downloads.search
 ---
 {{AddonSidebar()}}
 
-The **`search()`** function of the {{WebExtAPIRef("downloads")}} API queries the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} available in the browser's downloads manager, and returns those that match the specified search criteria.
+The **`search()`** function of the {{WebExtAPIRef("downloads")}} API queries the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} available in the browser's downloads manager, and returns those that match the specified search criteria.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
 ```js
-var searching = browser.downloads.search(query);
+let searching = browser.downloads.search(query);
 ```
 
 ### Parameters
@@ -53,10 +53,10 @@ function logDownloads(downloads) {
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.log(`Error: ${error}`);
 }
 
-var searching = browser.downloads.search({
+let searching = browser.downloads.search({
   query:["imgur"]
 });
 
@@ -76,12 +76,12 @@ function logDownloads(downloads) {
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.log(`Error: ${error}`);
 }
 
-var id = 13;
+let id = 13;
 
-var searching = browser.downloads.search({id});
+let searching = browser.downloads.search({id});
 searching.then(logDownloads, onError);
 ```
 
@@ -98,10 +98,10 @@ function logDownloads(downloads) {
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.log(`Error: ${error}`);
 }
 
-var searching = browser.downloads.search({});
+let searching = browser.downloads.search({});
 searching.then(logDownloads, onError);
 ```
 
@@ -121,7 +121,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var searching = browser.downloads.search({
+let searching = browser.downloads.search({
    limit: 1,
    orderBy: ["-startTime"]
 });
@@ -132,7 +132,7 @@ You can see this code in action in our [latest-download](https://github.com/mdn/
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-search) API.
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-search) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

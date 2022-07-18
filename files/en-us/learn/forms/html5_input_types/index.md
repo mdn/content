@@ -38,7 +38,7 @@ In the [previous article](/en-US/docs/Learn/Forms/Basic_native_form_controls) we
 
 > **Note:** Most of the features discussed in this article have wide support across browsers. We'll note any exceptions. If you want more detail on browser support, you should consult our [HTML forms element reference](/en-US/docs/Web/HTML/Element#forms), and in particular our extensive [\<input> types](/en-US/docs/Web/HTML/Element/input) reference.
 
-Because HTML form control appearance may be quite different from a designer's specifications, web developers sometimes build their own custom form controls. We cover this in an advanced tutorial: [How to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls).
+Because HTML form control appearance may be quite different from a designer's specifications, web developers sometimes build their own custom form controls. We cover this in an advanced tutorial: [How to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls).
 
 ## E-mail address field
 
@@ -52,7 +52,7 @@ When this {{htmlattrxref("type","input")}} is used, the user is required to type
 
 ![An invalid email input showing the message "Please enter an email address."](email_address_invalid.png)
 
-You can also use the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attribute in combination with the `email` input type to allow several email addresses to be entered in the same input (separated by commas):
+You can also use the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attribute in combination with the `email` input type to allow several email addresses to be entered in the same input (separated by commas):
 
 ```html
 <input type="email" id="email" name="email" multiple>
@@ -60,15 +60,15 @@ You can also use the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) att
 
 On some devices — notably touch devices with dynamic keyboards like smart phones — a different virtual keypad might be presented that is more suitable for entering email addresses, including the `@` key. See the Firefox for Android keyboard screenshot below for an example:
 
-![firefox for android email keyboard, with ampersand displayed by default.](fx-android-email-type-keyboard.jpg)
+![Firefox for Android email keyboard, with the at sign displayed by default.](fx-android-email-type-keyboard.jpg)
 
-> **Note:** You can find examples of the basic text input types at [basic input examples](https://mdn.github.io/learning-area/html/forms/basic-input-examples/) (see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/basic-input-examples/index.html) also).
+> **Note:** You can find examples of the basic text input types at [basic input examples](https://mdn.github.io/learning-area/html/forms/basic-input-examples/) (see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/basic-input-examples/index.html) also).
 
 This is another good reason for using these newer input types, improving the user experience for users of these devices.
 
 ### Client-side validation
 
-As you can see above `email` — along with other newer `input` types — provides built-in _client-side_ error validation, performed by the browser before the data gets sent to the server. It _is_ a helpful aid to guide users to fill out a form accurately, and it can save time: it is useful to know that your data is not correct immediately, rather than having to wait for a round trip to the server.
+As you can see above, `email` — along with other newer `input` types — provides built-in _client-side_ error validation, performed by the browser before the data gets sent to the server. It _is_ a helpful aid to guide users to fill out a form accurately, and it can save time: it is useful to know that your data is not correct immediately, rather than having to wait for a round trip to the server.
 
 But it _should not be considered_ an exhaustive security measure! Your apps should always perform security checks on any form-submitted data on the _server-side_ as well as the client-side, because client-side validation is too easy to turn off, so malicious users can still easily send bad data through to your server. Read [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security) for an idea of what _could_ happen; implementing server-side validation is somewhat beyond the scope of this module, but you should bear it in mind.
 
@@ -84,7 +84,7 @@ Search fields are intended to be used to create search boxes on pages and apps. 
 <input type="search" id="search" name="search">
 ```
 
-The main difference between a `text` field and a `search` field is how the browser styles its appearance. Often, `search` fields are rendered with rounded corners; they also sometimes display an "Ⓧ", which clears the field of any value when clicked. Additionally, on devices with dynamic keyboards, the keyboard's enter key may read "**search**", or display a magnifying glass icon.
+The main difference between a `text` field and a `search` field is how the browser styles its appearance. Often, `search` fields are rendered with rounded corners; they also sometimes display an "Ⓧ", which clears the field of any value when clicked. Additionally, on devices with dynamic keyboards, the keyboard's enter key may read "**search**", or display a magnifying glass icon.
 
 The below screenshots show a non-empty search field in Firefox 71, Safari 13, and Chrome 79 on macOS, and Edge 18 and Chrome 79 on Windows 10. Note that the clear icon only appears if the field has a value, and, apart from Safari, it is only displayed when the field is focused.
 
@@ -104,9 +104,9 @@ When accessed via a touch device with a dynamic keyboard, most devices will disp
 
 The following Firefox for Android keyboard screenshot provides an example:
 
-![firefox for android email keyboard, with ampersand displayed by default.](fx-android-tel-type-keyboard.jpg)
+![Firefox for Android email keyboard, with ampersand displayed by default.](fx-android-tel-type-keyboard.jpg)
 
-Due to the wide variety of phone number formats around the world, this type of field does not enforce any constraints on the value entered by a user (this means it may include letters, etc.).
+Due to the wide variety of phone number formats around the world, this type of field does not enforce any constraints on the value entered by a user (this means it may include letters, etc.).
 
 As we mentioned earlier, the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute can be used to enforce constraints, which you'll learn about in [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation).
 
@@ -118,11 +118,11 @@ A special type of field for entering URLs can be created using the value `url` f
 <input type="url" id="url" name="url">
 ```
 
-It adds special validation constraints to the field. The browser will report an error if no protocol (such as `http:`) is entered, or if the URL is otherwise malformed. On devices with dynamic keyboards, the default keyboard will often display some or all of the colon, period, and forward slash as default keys.
+It adds special validation constraints to the field. The browser will report an error if no protocol (such as `http:`) is entered, or if the URL is otherwise malformed. On devices with dynamic keyboards, the default keyboard will often display some or all of the colon, period, and forward slash as default keys.
 
 See below for an example (taken on Firefox for Android):
 
-![firefox for android email keyboard, with ampersand displayed by default.](fx-android-url-type-keyboard.jpg)
+![Firefox for Android email keyboard, with ampersand displayed by default.](fx-android-url-type-keyboard.jpg)
 
 > **Note:** Just because the URL is well-formed doesn't necessarily mean that it refers to a location that actually exists!
 
@@ -132,7 +132,7 @@ Controls for entering numbers can be created with an {{HTMLElement("input")}} {{
 
 The following screenshot (from Firefox for Android) provides an example:
 
-![firefox for android email keyboard, with ampersand displayed by default.](fx-android-number-type-keyboard.jpg)
+![Firefox for Android email keyboard, with ampersand displayed by default.](fx-android-number-type-keyboard.jpg)
 
 With the `number` input type, you can constrain the minimum and maximum values allowed by setting the {{htmlattrxref("min","input")}} and {{htmlattrxref("max","input")}} attributes.
 
@@ -150,7 +150,7 @@ The second one creates a number control whose value is restricted to any value b
 <input type="number" name="change" id="pennies" min="0" max="1" step="0.01">
 ```
 
-The `number` input type makes sense when the range of valid values is limited, for example a person's age or height. If the range is too large for incremental increases to make sense (such as USA ZIP codes, which range from `00001` to `99999`), the `tel` type might be a better option; it provides the numeric keypad while forgoing the number's spinner UI feature.
+The `number` input type makes sense when the range of valid values is limited, for example a person's age or height. If the range is too large for incremental increases to make sense (such as USA ZIP codes, which range from `00001` to `99999`), the `tel` type might be a better option; it provides the numeric keypad while forgoing the number's spinner UI feature.
 
 ## Slider controls
 
@@ -174,7 +174,7 @@ Let's look at the code behind the above example, so you can see how its done. Fi
 
 This example creates a slider whose value may range between `50000` and `500000`, which increments/decrements by 100 at a time. We've given it default value of `250000`, using the `value` attribute.
 
-One problem with sliders is that they don't offer any kind of visual feedback as to what the current value is. This is why we've included an {{htmlelement("output")}} element to contain the current value. You could display an input value or the output of a calculation inside any element, but `<output>` is special — like `<label>` — and it can take a `for` attribute that allows you to associate it with the element or elements that the output value came from.
+One problem with sliders is that they don't offer any kind of visual feedback as to what the current value is. This is why we've included an {{htmlelement("output")}} element to contain the current value. You could display an input value or the output of a calculation inside any element, but `<output>` is special — like `<label>` — and it can take a `for` attribute that allows you to associate it with the element or elements that the output value came from.
 
 To actually display the current value, and update it as it changed, you must use JavaScript, but this is relatively easy to do:
 
@@ -260,7 +260,7 @@ A `color` control can be created using the {{HTMLElement("input")}} element with
 
 When supported, clicking a color control will tend to display the operating system's default color picking functionality for you to actually make your choice with. The following screenshot taken on Firefox for macOS provides an example:
 
-![firefox for android email keyboard, with ampersand displayed by default.](fx-macos-color.jpg)
+![Firefox for Android email keyboard, with ampersand displayed by default.](fx-macos-color.jpg)
 
 And here is a live example for you to try out:
 
@@ -283,6 +283,7 @@ That brings us to the end of our tour of the HTML5 form input types. There are a
 - [Your first form](/en-US/docs/Learn/Forms/Your_first_form)
 - [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
 - [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
+- [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
 - [Other form controls](/en-US/docs/Learn/Forms/Other_form_controls)
 - [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
 - [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)

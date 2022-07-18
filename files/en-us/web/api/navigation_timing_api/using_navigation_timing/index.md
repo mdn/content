@@ -1,6 +1,7 @@
 ---
 title: Using Navigation Timing
 slug: Web/API/Navigation_timing_API/Using_Navigation_Timing
+page-type: guide
 tags:
   - Guide
   - Navigation Timing
@@ -20,15 +21,15 @@ Using the API is as simple as obtaining the {{domxref("Performance")}} object us
 
 ```js
 window.addEventListener("load", function() {
-  let now = new Date().getTime();
-  let loadingTime = now - performance.timing.navigationStart;
+  let now = new Date().getTime();
+  let loadingTime = now - performance.timing.navigationStart;
 
-  document.querySelector(".output").innerText =
+  document.querySelector(".output").innerText =
         loadingTime + " ms";
 }, false);
 ```
 
-This code, executed when the {{event("load")}} event occurs, subtracts from the current time the time at which the navigation whose timing was recorded began ({{domxref("PerformanceTiming.navigationStart", "performance.timing.navigationStart")}}), and outputs that information to the screen by inserting it into an element.
+This code, executed when the {{domxref("Window/load_event", "load")}} event occurs, subtracts from the current time the time at which the navigation whose timing was recorded began ({{domxref("PerformanceTiming.navigationStart", "performance.timing.navigationStart")}}), and outputs that information to the screen by inserting it into an element.
 
 ```html hidden
 <div class="output">
@@ -48,7 +49,7 @@ In tandem with appropriate HTML and CSS, the result is:
 
 The values listed are for the {{HTMLElement("iframe")}} in which the sample is presented above.
 
-For a list of the available timing values you can look for in {{domxref("PerformanceTiming")}}, see the {{domxref("PerformanceTiming")}} interface's [Properties](/en-US/docs/Web/API/PerformanceTiming#Properties) section.
+For a list of the available timing values you can look for in {{domxref("PerformanceTiming")}}, see the {{domxref("PerformanceTiming")}} interface's [Properties](/en-US/docs/Web/API/PerformanceTiming#properties) section.
 
 ## Determining navigation type
 

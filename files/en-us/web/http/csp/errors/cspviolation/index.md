@@ -1,6 +1,6 @@
 ---
 title: >-
-  Content Security Policy: The page’s settings blocked the loading of a
+  Content Security Policy: The page's settings blocked the loading of a
   resource: xyz
 slug: Web/HTTP/CSP/Errors/CSPViolation
 tags:

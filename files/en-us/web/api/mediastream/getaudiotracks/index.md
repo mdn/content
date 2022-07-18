@@ -1,6 +1,7 @@
 ---
 title: MediaStream.getAudioTracks()
 slug: Web/API/MediaStream/getAudioTracks
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -18,16 +19,16 @@ browser-compat: api.MediaStream.getAudioTracks
 ---
 {{APIRef("Media Capture and Streams")}}
 
-The **`getAudioTracks()`** method of the
-{{domxref("MediaStream")}} interface returns a sequence that represents all the
-{{domxref("MediaStreamTrack")}} objects in this
-stream's [`track set`](https://www.w3.org/TR/mediacapture-streams/#track-set) where {{domxref("MediaStreamTrack.kind")}}
+The **`getAudioTracks()`** method of the
+{{domxref("MediaStream")}} interface returns a sequence that represents all the
+{{domxref("MediaStreamTrack")}} objects in this
+stream's [`track set`](https://www.w3.org/TR/mediacapture-streams/#track-set) where {{domxref("MediaStreamTrack.kind")}}
 is `audio`.
 
 ## Syntax
 
 ```js
-var mediaStreamTracks = mediaStream.getAudioTracks()
+getAudioTracks()
 ```
 
 ### Parameters
@@ -49,7 +50,7 @@ Early versions of this API included a special `AudioStreamTrack` interface
 which was used as the type for each entry in the list of audio streams; however, this
 has since been merged into the main {{domxref("MediaStreamTrack")}} interface.
 
-## Example
+## Examples
 
 This example gets a webcam's audio and video in a stream using
 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, attaches the stream to a

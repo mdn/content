@@ -1,6 +1,7 @@
 ---
 title: BluetoothDevice.gatt
 slug: Web/API/BluetoothDevice/gatt
+page-type: web-api-instance-property
 tags:
   - API
   - BluetoothDevice
@@ -13,18 +14,12 @@ browser-compat: api.BluetoothDevice.gatt
 {{APIRef("Bluetooth API") }}{{SeeCompatTable}}
 
 The
-**`BluetoothDevice.gatt`** read-only property returns
-a reference to the device's {{DOMxRef("BluetoothRemoteGATTServer")}}.
+**`BluetoothDevice.gatt`** read-only property returns
+a reference to the device's {{DOMxRef("BluetoothRemoteGATTServer")}}.
 
-## Syntax
+## Value
 
-```js
-var gattServer = instanceOfBluetoothDevice.gatt
-```
-
-### Returns
-
-A reference to the device's {{DOMxRef("BluetoothRemoteGATTServer")}}.
+A reference to the device's {{DOMxRef("BluetoothRemoteGATTServer")}}.
 
 ## Specifications
 

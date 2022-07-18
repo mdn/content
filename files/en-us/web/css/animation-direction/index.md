@@ -34,6 +34,7 @@ animation-direction: alternate, reverse, normal;
 animation-direction: inherit;
 animation-direction: initial;
 animation-direction: revert;
+animation-direction: revert-layer;
 animation-direction: unset;
 ```
 
@@ -60,7 +61,7 @@ animation-direction: unset;
 
 ## Examples
 
-### The animation is  playing reversed
+### Reversing the animation direction
 
 #### HTML
 
@@ -72,28 +73,31 @@ animation-direction: unset;
 
 ```css
 .box {
-  background-color: rebeccapurple;
-  border-radius: 10px;
+  background-color: rebeccapurple;
+  border-radius: 10px;
   width: 100px;
-  height: 100px;
-  animation-name: rotate;
-  animation-duration: 0.7s;
-  animation-direction: reverse;
+  height: 100px;
+}
+
+.box:hover {
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-direction: reverse;
 }
 
 @keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("Examples","100%","250")}}
+{{EmbedLiveSample("Reversing the animation direction","100%","250")}}
 
 See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples.
 

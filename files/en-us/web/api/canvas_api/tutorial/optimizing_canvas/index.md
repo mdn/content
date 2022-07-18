@@ -1,6 +1,7 @@
 ---
 title: Optimizing canvas
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
+page-type: guide
 tags:
   - Advanced
   - Canvas
@@ -39,7 +40,7 @@ ctx.drawImage(myImage, 0.3, 0.5);
 
 This forces the browser to do extra calculations to create the anti-aliasing effect. To avoid this, make sure to round all co-ordinates used in calls to {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} using {{jsxref("Math.floor()")}}, for example.
 
-### Don’t scale images in `drawImage`
+### Don't scale images in `drawImage`
 
 Cache various sizes of your images on an offscreen canvas when loading as opposed to constantly scaling them in {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}}.
 
@@ -92,10 +93,31 @@ stage.style.transform = 'scale(' + scaleToFit + ')';
 
 ### Turn off transparency
 
-If your application uses canvas and doesn’t need a transparent backdrop, set the `alpha` option to `false` when creating a drawing context with {{domxref("HTMLCanvasElement.getContext()")}}. This information can be used internally by the browser to optimize rendering.
+If your application uses canvas and doesn't need a transparent backdrop, set the `alpha` option to `false` when creating a drawing context with {{domxref("HTMLCanvasElement.getContext()")}}. This information can be used internally by the browser to optimize rendering.
 
 ```js
 var ctx = canvas.getContext('2d', { alpha: false });
+```
+
+### Scaling for high resolution displays
+
+You may find that canvas items appear blurry on higher-resolution displays. While many solutions may exist, a simple first step is to scale the canvas size up and down simultaneously, using its attributes, styling, and its context's scale.
+
+```js
+// Get the DPR and size of the canvas
+var dpr = window.devicePixelRatio;
+var rect = canvas.getBoundingClientRect();
+
+// Set the "actual" size of the canvas
+canvas.width = rect.width * dpr;
+canvas.height = rect.height * dpr;
+
+// Scale the context to ensure correct drawing operations
+ctx.scale(dpr, dpr);
+
+// Set the "drawn" size of the canvas
+canvas.style.width = rect.width + 'px';
+canvas.style.height = rect.height + 'px';
 ```
 
 ### More tips
@@ -111,7 +133,7 @@ var ctx = canvas.getContext('2d', { alpha: false });
 
 ## See also
 
-- [Improving HTML5 Canvas Performance – HTML5 Rocks](http://www.html5rocks.com/en/tutorials/canvas/performance/#toc-ref)
+- [Improving HTML5 Canvas Performance – HTML5 Rocks](https://www.html5rocks.com/en/tutorials/canvas/performance/#toc-ref)
 - [Optimizing your JavaScript game for Firefox OS – Mozilla Hacks](https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}

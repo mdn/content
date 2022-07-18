@@ -14,7 +14,7 @@ tags:
 ---
 {{LearnSidebar}}
 
-In JavaScript, most things are objects, from core JavaScript features like arrays to the browser {{Glossary("API", "APIs")}} built on top of JavaScript. You can even create your own objects to encapsulate related functions and variables into efficient packages and act as handy data containers. The object-based nature of JavaScript is important to understand if you want to go further with your knowledge of the language, therefore we've provided this module to help you. Here we teach object theory and syntax in detail, then look at how to create your own objects.
+In JavaScript, most things are objects, from core JavaScript features like arrays to the browser {{Glossary("API", "APIs")}} built on top of JavaScript. You can even create your own objects to encapsulate related functions and variables into efficient packages and act as handy data containers. The object-based nature of JavaScript is important to understand if you want to go further with your knowledge of the language, therefore we've provided this module to help you. Here we teach object theory and syntax in detail, then look at how to create your own objects.
 
 > **Callout:**
 >
@@ -27,7 +27,7 @@ In JavaScript, most things are objects, from core JavaScript features like arra
 
 ## Prerequisites
 
-Before starting this module, you should have some familiarity with {{Glossary("HTML")}} and {{Glossary("CSS")}}. You are advised to work through the [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) and [Introduction to CSS](/en-US/docs/Learn/CSS/First_steps) modules before starting on JavaScript.
+Before starting this module, you should have some familiarity with {{Glossary("HTML")}} and {{Glossary("CSS")}}. You are advised to work through the [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) and [Introduction to CSS](/en-US/docs/Learn/CSS/First_steps) modules before starting on JavaScript.
 
 You should also have some familiarity with JavaScript basics before looking at JavaScript objects in detail. Before attempting this module, work through [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps) and [JavaScript building blocks](/en-US/docs/Learn/JavaScript/Building_blocks).
 
@@ -44,7 +44,7 @@ You should also have some familiarity with JavaScript basics before looking at J
 - [Classes in JavaScript](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
   - : JavaScript provides some features for people wanting to implement "classical" object-oriented programs, and in this article we'll describe these features.
 - [Working with JSON data](/en-US/docs/Learn/JavaScript/Objects/JSON)
-  - : JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax, which is commonly used for representing and transmitting data on web sites (i.e. sending some data from the server to the client, so it can be displayed on a web page). You'll come across it quite often, so in this article, we give you all you need to work with JSON using JavaScript, including parsing the JSON so you can access data items within it and writing your own JSON.
+  - : JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax, which is commonly used for representing and transmitting data on web sites (i.e. sending some data from the server to the client, so it can be displayed on a web page). You'll come across it quite often, so in this article, we give you all you need to work with JSON using JavaScript, including parsing the JSON so you can access data items within it and writing your own JSON.
 - [Object building practice](/en-US/docs/Learn/JavaScript/Objects/Object_building_practice)
   - : In previous articles we looked at all the essential JavaScript object theory and syntax details, giving you a solid base to start from. In this article we dive into a practical exercise, giving you some more practice in building custom JavaScript objects, which produce something fun and colorful — some colored bouncing balls.
 

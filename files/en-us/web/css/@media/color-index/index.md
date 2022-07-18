@@ -11,11 +11,11 @@ browser-compat: css.at-rules.media.color-index
 ---
 {{CSSRef}}
 
-The **`color-index`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the number of entries in the output device's color lookup table.
+The **`color-index`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the number of entries in the output device's color lookup table.
 
 ## Syntax
 
-The `color-index` feature is specified as an {{cssxref("&lt;integer&gt;")}} value representing the number of entries in the output device's color lookup table. (This value is zero if the device does not use such a table.) It is a range feature, meaning that you can also use the prefixed **`min-color-index`** and **`max-color-index`** variants to query minimum and maximum values, respectively.
+The `color-index` feature is specified as an {{cssxref("&lt;integer&gt;")}} value representing the number of entries in the output device's color lookup table. (This value is zero if the device does not use such a table.) It is a range feature, meaning that you can also use the prefixed **`min-color-index`** and **`max-color-index`** variants to query minimum and maximum values, respectively.
 
 ## Examples
 
@@ -31,19 +31,19 @@ The `color-index` feature is specified as an {{cssxref("&lt;integer&gt;")}} val
 
 ```css
 p {
-  color: black;
+  color: black;
 }
 
 @media (color-index) {
-  p {
-    color: red;
-  }
+  p {
+    color: red;
+  }
 }
 
 @media (min-color-index: 15000) {
-  p {
-    color: #1475ef;
-  }
+  p {
+    color: #1475ef;
+  }
 }
 ```
 
@@ -70,5 +70,5 @@ This HTML will apply a special stylesheet for devices that have at least 256 col
 
 ## See also
 
-- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 - [@media](/en-US/docs/Web/CSS/@media)

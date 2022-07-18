@@ -1,6 +1,7 @@
 ---
 title: 'Window: gamepadconnected event'
 slug: Web/API/Window/gamepadconnected_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -35,7 +36,7 @@ Alternatively, you can use the `window.ongamepadconnected` event handler propert
 window.ongamepadconnected = event => {
     // All buttons and axes values can be accessed through
     const gamepad = event.gamepad;
-});
+};
 ```
 
 ## Specifications

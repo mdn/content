@@ -1,6 +1,7 @@
 ---
 title: ValidityState.badInput
 slug: Web/API/ValidityState/badInput
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints API
@@ -14,7 +15,11 @@ browser-compat: api.ValidityState.badInput
 
 The read-only **`badInput`** property of a [ValidityState](/en-US/docs/Web/API/ValidityState) object indicates if the user has provided input that the browser is unable to convert. For example, if you have a number input element whose content is a string.
 
-## Example
+## Value
+
+A boolean.
+
+## Examples
 
 ```html
 <input type="number" id="age">
@@ -23,9 +28,9 @@ The read-only **`badInput`** property of a [ValidityState](/en-US/docs/Web/API/V
 ```js
 var input = document.getElementById("age");
 if (input.validity.badInput) {
-  console.log("Bad input detected…");
+  console.log("Bad input detected…");
 } else {
-  console.log("Content of input OK.");
+  console.log("Content of input OK.");
 }
 ```
 

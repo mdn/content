@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaRelevant
 slug: Web/API/ElementInternals/ariaRelevant
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,16 +18,9 @@ The **`ariaRelevant`** property of the {{domxref("ElementInternals")}} interface
 
 > **Note:** Setting aria attributes on `ElementInternals` allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
 
-## Syntax
+## Value
 
-```js
-let ariaRelevant = ElementInternals.ariaRelevant;
-ElementInternals.ariaRelevant = ariaRelevant;
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing one or more of the following values, space separated:
+A string containing one or more of the following values, space separated:
 
 - "additions"
   - : Additions of Element Nodes within the live region should be considered relevant.

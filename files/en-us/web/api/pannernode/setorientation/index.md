@@ -1,6 +1,7 @@
 ---
 title: PannerNode.setOrientation()
 slug: Web/API/PannerNode/setOrientation
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -21,27 +22,25 @@ The three parameters `x`, `y` and `z` are unitless and describe a direction vect
 ## Syntax
 
 ```js
-var audioCtx = new AudioContext();
-var panner = audioCtx.createPanner();
-panner.setOrientation(1,0,0);
+setOrientation(x, y, z)
 ```
 
-### Returns
+### Parameters
 
-{{jsxref('undefined')}}.
+- `x`
+  - : The x value of the panner's direction vector in 3D space.
+- `y`
+  - : The y value of the panner's direction vector in 3D space.
+- `z`
+  - : The z value of the panner's direction vector in 3D space.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
-
-## Parameters
-
-- x
-  - : The x value of the panner's direction vector in 3D space.
-- y
-  - : The y value of the panner's direction vector in 3D space.
-- z
-  - : The z value of the panner's direction vector in 3D space.
 
 ## Specifications
 

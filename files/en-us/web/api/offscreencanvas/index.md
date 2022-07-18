@@ -1,6 +1,7 @@
 ---
 title: OffscreenCanvas
 slug: Web/API/OffscreenCanvas
+page-type: web-api-interface
 tags:
   - API
   - Canvas
@@ -11,7 +12,9 @@ browser-compat: api.OffscreenCanvas
 ---
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-The **`OffscreenCanvas`** interface provides a canvas that can be rendered off screen. It is available in both the window and [worker](/en-US/docs/Web/API/Web_Workers_API) contexts.
+The **`OffscreenCanvas`** interface provides a canvas that can be rendered off screen. It is available in both the window and [worker](/en-US/docs/Web/API/Web_Workers_API) contexts.
+
+`OffscreenCanvas` is a {{glossary("Transferable objects","transferable object")}}.
 
 {{AvailableInWorkers}}
 
@@ -42,7 +45,7 @@ The **`OffscreenCanvas`** interface provides a canvas that can be rendered off s
 
 ### Synchronous display of frames produced by an `OffscreenCanvas`
 
-One way to use the `OffscreenCanvas` API, is to use a rendering context that has been obtained from an `OffscreenCanvas` object to generate new frames. Once a new frame has finished rendering in this context,  the {{domxref("OffscreenCanvas.transferToImageBitmap", "transferToImageBitmap()")}} method can be called to save the most recent rendered image. This method returns an {{domxref("ImageBitmap")}} object, which can be used in a variety of Web APIs and also in a second canvas without creating a transfer copy.
+One way to use the `OffscreenCanvas` API, is to use a rendering context that has been obtained from an `OffscreenCanvas` object to generate new frames. Once a new frame has finished rendering in this context,  the {{domxref("OffscreenCanvas.transferToImageBitmap", "transferToImageBitmap()")}} method can be called to save the most recent rendered image. This method returns an {{domxref("ImageBitmap")}} object, which can be used in a variety of Web APIs and also in a second canvas without creating a transfer copy.
 
 To display the `ImageBitmap`, you can use a {{domxref("ImageBitmapRenderingContext")}} context, which can be created by calling `canvas.getContext("bitmaprenderer")` on a (visible) canvas element. This context only provides functionality to replace the canvas's contents with the given `ImageBitmap`. A call to {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}} with the previously rendered and saved `ImageBitmap` from the OffscreenCanvas, will display the `ImageBitmap` on the canvas and transfer its ownership to the canvas. A single `OffscreenCanvas` may transfer frames into an arbitrary number of other `ImageBitmapRenderingContext` objects.
 
@@ -56,22 +59,22 @@ Given these two {{HTMLElement("canvas")}} elements
 the following code will provide the rendering using an `OffscreenCanvas` as described above.
 
 ```js
-var one = document.getElementById("one").getContext("bitmaprenderer");
-var two = document.getElementById("two").getContext("bitmaprenderer");
+const one = document.getElementById("one").getContext("bitmaprenderer");
+const two = document.getElementById("two").getContext("bitmaprenderer");
 
-var offscreen = new OffscreenCanvas(256, 256);
-var gl = offscreen.getContext('webgl');
+const offscreen = new OffscreenCanvas(256, 256);
+const gl = offscreen.getContext('webgl');
 
 // ... some drawing for the first canvas using the gl context ...
 
 // Commit rendering to the first canvas
-var bitmapOne = offscreen.transferToImageBitmap();
+const bitmapOne = offscreen.transferToImageBitmap();
 one.transferFromImageBitmap(bitmapOne);
 
 // ... some more drawing for the second canvas using the gl context ...
 
 // Commit rendering to the second canvas
-var bitmapTwo = offscreen.transferToImageBitmap();
+const bitmapTwo = offscreen.transferToImageBitmap();
 two.transferFromImageBitmap(bitmapTwo);
 ```
 
@@ -82,10 +85,10 @@ Another way to use the `OffscreenCanvas` API, is to call {{domxref("HTMLCanvasEl
 main.js (main thread code):
 
 ```js
-var htmlCanvas = document.getElementById("canvas");
-var offscreen = htmlCanvas.transferControlToOffscreen();
+const htmlCanvas = document.getElementById("canvas");
+const offscreen = htmlCanvas.transferControlToOffscreen();
 
-var worker = new Worker("offscreencanvas.js");
+const worker = new Worker("offscreencanvas.js");
 worker.postMessage({canvas: offscreen}, [offscreen]);
 ```
 
@@ -93,8 +96,8 @@ offscreencanvas.js (worker code):
 
 ```js
 onmessage = function(evt) {
-  var canvas = evt.data.canvas;
-  var gl = canvas.getContext("webgl");
+  const canvas = evt.data.canvas;
+  const gl = canvas.getContext("webgl");
 
   // ... some drawing using the gl context ...
 };
@@ -104,14 +107,14 @@ You can also use requestAnimationFrame in workers
 
 ```js
 onmessage = function(evt) {
-  const canvas = evt.data.canvas;
-  const gl = canvas.getContext("webgl");
+  const canvas = evt.data.canvas;
+  const gl = canvas.getContext("webgl");
 
-  function render(time) {
-    // ... some drawing using the gl context ...
-    requestAnimationFrame(render);
-  }
-  requestAnimationFrame(render);
+  function render(time) {
+    // ... some drawing using the gl context ...
+    requestAnimationFrame(render);
+  }
+  requestAnimationFrame(render);
 };
 ```
 

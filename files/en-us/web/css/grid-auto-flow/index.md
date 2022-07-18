@@ -29,6 +29,7 @@ grid-auto-flow: column dense;
 grid-auto-flow: inherit;
 grid-auto-flow: initial;
 grid-auto-flow: revert;
+grid-auto-flow: revert-layer;
 grid-auto-flow: unset;
 ```
 
@@ -42,7 +43,7 @@ This property may take one of two forms:
 - `row`
   - : Items are placed by filling each row in turn, adding new rows as necessary. If neither `row` nor `column` is provided, `row` is assumed.
 - `column`
-  - : Items are placed by filling each column in turn, adding new columns as necessary.
+  - : Items are placed by filling each column in turn, adding new columns as necessary.
 - `dense`
 
   - : "dense" packing algorithm attempts to fill in holes earlier in the grid, if smaller items come up later. This may cause items to appear out-of-order, when doing so would fill in holes left by larger items.
@@ -65,15 +66,15 @@ This property may take one of two forms:
 
 ```html
 <div id="grid">
-  <div id="item1"></div>
-  <div id="item2"></div>
-  <div id="item3"></div>
-  <div id="item4"></div>
-  <div id="item5"></div>
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
+  <div id="item4"></div>
+  <div id="item5"></div>
 </div>
 <select id="direction">
-  <option value="column">column</option>
-  <option value="row">row</option>
+  <option value="column">column</option>
+  <option value="row">row</option>
 </select>
 <input id="dense" type="checkbox">
 <label for="dense">dense</label>
@@ -136,7 +137,7 @@ inputElem.addEventListener('change', changeGridAutoFlow);
 
 #### Result
 
-{{EmbedLiveSample("Setting_grid_auto-placement", "200px", "230px")}}
+{{EmbedLiveSample("Setting_grid_auto-placement", "200px", "260px")}}
 
 ## Specifications
 
@@ -150,4 +151,4 @@ inputElem.addEventListener('change', changeGridAutoFlow);
 
 - Related CSS properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid")}}
 - Grid Layout Guide: _[Auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)_
-- Video tutorial: _[Introducing Grid auto-placement and order](http://gridbyexample.com/video/series-auto-placement-order/)_
+- Video tutorial: _[Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)_

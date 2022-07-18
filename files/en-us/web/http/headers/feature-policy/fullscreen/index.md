@@ -12,7 +12,7 @@ browser-compat: http.headers.Feature-Policy.fullscreen
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-The HTTP {{HTTPHeader("Feature-Policy")}} header `fullscreen` directive controls whether the current document is allowed to use {{domxref('Element.requestFullScreen()')}}. When this policy is enabled, the returned {{jsxref('Promise')}} rejects with a {{jsxref('TypeError')}}.
+The HTTP {{HTTPHeader("Feature-Policy")}} header `fullscreen` directive controls whether the current document is allowed to use {{domxref('Element.requestFullscreen()')}}. When this policy is enabled, the returned {{jsxref('Promise')}} rejects with a {{jsxref('TypeError')}}.
 
 By default, top-level documents and their same-origin child frames can request and enter fullscreen mode. This directive allows or prevents cross-origin frames from using fullscreen mode. This includes same-origin frames.
 

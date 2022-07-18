@@ -35,6 +35,8 @@ The **`Intl.ListFormat`** object enables language-sensitive list formatting.
   - : Returns a language-specific formatted string representing the elements of the list.
 - {{jsxref("Intl/ListFormat/formatToParts", "Intl.ListFormat.prototype.formatToParts()")}}
   - : Returns an array of objects representing the different components that can be used to format a list of values in a locale-aware fashion.
+- {{jsxref("Intl/ListFormat/resolvedOptions", "Intl.ListFormat.prototype.resolvedOptions()")}}
+  - : Returns a new object with properties reflecting the locale and style formatting options computed during the construction of the current {{jsxref("Intl.ListFormat")}} object.
 
 ## Examples
 
@@ -70,10 +72,6 @@ console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' })
 //   { "type": "element", "value": "Car" } ];
 ```
 
-## Polyfill
-
-[formatjs Intl.ListFormat polyfill](https://formatjs.io/docs/polyfills/intl-listformat)
-
 ## Specifications
 
 {{Specifications}}
@@ -85,3 +83,4 @@ console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' })
 ## See also
 
 - {{jsxref("Intl")}}
+- [A polyfill of `Intl.ListFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-listformat/)

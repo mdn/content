@@ -24,7 +24,7 @@ The color applies to decorations, such as underlines, overlines, strikethroughs,
 
 {{EmbedInteractiveExample("pages/css/text-decoration-color.html")}}
 
-CSS does not provide a direct mechanism for specifying a unique color for each line type. This effect can nevertheless be achieved by nesting elements, applying a different line type to each element (with the {{cssxref("text-decoration-line")}} property), and specifying the line color (with `text-decoration-color`) on a per-element basis.
+CSS does not provide a direct mechanism for specifying a unique color for each line type. This effect can nevertheless be achieved by nesting elements, applying a different line type to each element (with the {{cssxref("text-decoration-line")}} property), and specifying the line color (with `text-decoration-color`) on a per-element basis.
 
 ## Syntax
 
@@ -40,6 +40,7 @@ text-decoration-color: transparent;
 text-decoration-color: inherit;
 text-decoration-color: initial;
 text-decoration-color: revert;
+text-decoration-color: revert-layer;
 text-decoration-color: unset;
 ```
 
@@ -55,7 +56,7 @@ It is important to ensure that the contrast ratio between the color of the text,
 Color alone should not be used to convey meaning. For example, change of text and text-decoration-color alone is not enough to indicate a link has focus.
 
 - [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ## Formal definition
@@ -103,4 +104,4 @@ s {
 - When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)

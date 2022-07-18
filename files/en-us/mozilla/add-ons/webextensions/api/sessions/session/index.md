@@ -34,16 +34,16 @@ Values of this type are objects. They contain the following properties:
 
 - `lastModified`
   - : `number`. The time the tab or window was closed, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
-- `tab`{{optional_inline}}
+- `tab` {{optional_inline}}
   - : `object`. If the object represents a closed tab, then this property is present and will be a {{WebExtAPIRef("tabs.Tab")}} object. This will contain `url`, `title`, and `favIconUrl` only if the extension has the "tabs" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) to access the tab's URL.
-- `window`{{optional_inline}}
+- `window` {{optional_inline}}
   - : `object`. If the object represents a closed window, then this property is present and will be a {{WebExtAPIRef("windows.Window")}} object.
 
 ## Browser compatibility
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/extensions/sessions) API.
+> **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/sessions/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

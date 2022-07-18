@@ -1,6 +1,7 @@
 ---
 title: Document.xmlVersion
 slug: Web/API/Document/xmlVersion
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -24,8 +25,7 @@ if (document.createElement("foo").tagName == "FOO") {
 
 ## Specifications
 
-- [http://www.w3.org/TR/DOM-Level-3-Cor...ument3-version](https://www.w3.org/TR/DOM-Level-3-Core/core.html#Document3-version)
-- This has been removed from {{ spec("http://www.w3.org/TR/domcore/","DOM Core Level 4","WD") }}
+This feature is not part of any specification anymore. It is no more on track to become a standard.
 
 ## Browser compatibility
 

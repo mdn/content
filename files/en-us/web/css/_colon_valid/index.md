@@ -14,18 +14,15 @@ browser-compat: css.selectors.valid
 
 The **`:valid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents [validate](/en-US/docs/Web/Guide/HTML/Constraint_validation) successfully. This allows to easily make valid fields adopt an appearance that helps the user confirm that their data is formatted properly.
 
-```css
-/* Selects any valid <input> */
-input:valid {
-  background-color: powderblue;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-valid.html", "tabbed-shorter")}}
 
 This pseudo-class is useful for highlighting correct fields for the user.
 
 ## Syntax
 
-{{csssyntax}}
+```
+:valid
+```
 
 ## Examples
 

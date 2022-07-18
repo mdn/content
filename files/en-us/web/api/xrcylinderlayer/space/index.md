@@ -1,6 +1,7 @@
 ---
 title: XRCylinderLayer.space
 slug: Web/API/XRCylinderLayer/space
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -14,7 +15,7 @@ browser-compat: api.XRCylinderLayer.space
 ---
 {{APIRef("WebXR Device API")}}
 
-The **`space`** property of the {{domxref("XRCylinderLayer")}} interface represents the layer's spatial relationship with the user’s physical environment.
+The **`space`** property of the {{domxref("XRCylinderLayer")}} interface represents the layer's spatial relationship with the user's physical environment.
 
 ## Value
 

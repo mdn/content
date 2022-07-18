@@ -1,6 +1,7 @@
 ---
 title: AudioParam
 slug: Web/API/AudioParam
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -22,7 +23,7 @@ Each `AudioParam` has a list of events, initially empty, that define when and ho
 
 ## AudioParam types
 
-There are two kinds of `AudioParam`: _a-rate_ and _k-rate_ parameters. Each {{domxref("AudioNode")}} defines which of its parameters are _a-rate_ or _k-rate_ in the spec.
+There are two `AudioParam` kinds: _a-rate_ and _k-rate_ parameters. Each {{domxref("AudioNode")}} defines which of its parameters are _a-rate_ or _k-rate_ in the spec.
 
 ### a-rate
 
@@ -30,13 +31,13 @@ An _a-rate_ `AudioParam` takes the current audio parameter value for each [sampl
 
 ### k-rate
 
-A _k-rate_ `AudioParam` uses the same initial audio parameter value for the whole block processed; that is, 128 sample frames. In other words, the same value applies to every frame in the audio as it's processed by the node.
+A _k-rate_ `AudioParam` uses the same initial audio parameter value for the whole block processed; that is, 128 sample frames. In other words, the same value applies to every frame in the audio as it's processed by the node.
 
 ## Properties
 
 - {{domxref("AudioParam.defaultValue")}} {{readonlyInline}}
-  - : Represents the initial value of the attribute as defined by the specific {{domxref("AudioNode")}} creating the `AudioParam`.
-- {{domxref("AudioParam.maxValue")}} {{readonlyInline}}
+  - : Represents the initial value of the attribute as defined by the specific {{domxref("AudioNode")}} creating the `AudioParam`.
+- {{domxref("AudioParam.maxValue")}} {{readonlyInline}}
   - : Represents the maximum possible value for the parameter's nominal (effective) range.
 - {{domxref("AudioParam.minValue")}} {{readonlyinline}}
   - : Represents the minimum possible value for the parameter's nominal (effective) range.
@@ -58,21 +59,21 @@ A _k-rate_ `AudioParam` uses the same initial audio parameter value for the whol
 - {{domxref("AudioParam.cancelScheduledValues()")}}
   - : Cancels all scheduled future changes to the `AudioParam`.
 - {{domxref("AudioParam.cancelAndHoldAtTime()")}}
-  - : Cancels all scheduled future changes to the `AudioParam` but holds its value at a given time until further changes are made using other methods.
+  - : Cancels all scheduled future changes to the `AudioParam` but holds its value at a given time until further changes are made using other methods.
 
 ## Examples
 
-First, a basic example showing a {{domxref("GainNode")}} having its `gain` value set. `gain` is an example of an a-rate AudioParam, as the value can potentially be set differently for each sample frame of the audio.
+First, a basic example showing a {{domxref("GainNode")}} having its `gain` value set. `gain` is an example of an _a-rate_ `AudioParam`, as the value can potentially be set differently for each sample frame of the audio.
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
+const AudioContext = (window.AudioContext || window.webkitAudioContext);
 var audioCtx = new AudioContext();
 
 var gainNode = audioCtx.createGain();
 gainNode.gain.value = 0;
 ```
 
-Next, an example showing a {{ domxref("DynamicsCompressorNode") }} having some param values manipulated. These are examples of k-rate AudioParam's, as the values are set for the entire audio block at once.
+Next, an example showing a {{ domxref("DynamicsCompressorNode") }} having some param values manipulated. These are examples of _k-rate_ `AudioParam` types, as the values are set for the entire audio block at once.
 
 ```js
 var compressor = audioCtx.createDynamicsCompressor();

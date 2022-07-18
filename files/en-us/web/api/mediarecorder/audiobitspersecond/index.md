@@ -1,6 +1,7 @@
 ---
 title: MediaRecorder.audioBitsPerSecond
 slug: Web/API/MediaRecorder/audioBitsPerSecond
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -19,13 +20,7 @@ rate in use.
 This may differ from the bit rate specified in the constructor (if
 it was provided).
 
-## Syntax
-
-```js
-var audioBitsPerSecond = MediaRecorder.audioBitsPerSecond
-```
-
-### Value
+## Value
 
 A {{jsxref("Number")}} (unsigned long).
 

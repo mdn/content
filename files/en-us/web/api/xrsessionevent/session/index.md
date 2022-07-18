@@ -1,6 +1,7 @@
 ---
 title: XRSessionEvent.session
 slug: Web/API/XRSessionEvent/session
+page-type: web-api-instance-property
 tags:
   - API
   - AR

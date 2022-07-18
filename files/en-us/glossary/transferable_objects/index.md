@@ -3,13 +3,15 @@ title: Transferable objects
 slug: Glossary/Transferable_objects
 tags:
   - Transferable
+  - Serializable
+  - Structured clone
   - Workers
 ---
 
 **Transferable objects** are objects that own resources that can be _transferred_ from one context to another, ensuring that the resources are only available in one context at a time.
 Following a transfer, the original object is no longer usable; it no longer points to the transferred resource, and any attempt to read or write the object will throw an exception.
 
-_Transferrable objects_ are commonly use to share resources that can only be safely exposed to a single JavaScript thread at a time.
+_Transferrable objects_ are commonly used to share resources that can only be safely exposed to a single JavaScript thread at a time.
 For example, an {{jsxref("ArrayBuffer")}} is a transferrable object that owns a block of memory.
 When such a buffer is transferred between threads, the associated memory resource is detached from the original buffer and attached to the buffer object created in the new thread.
 The buffer object in the original thread is no longer usable because it no longer owns a memory resource.
@@ -43,7 +45,7 @@ worker.postMessage(uInt8Array, [uInt8Array.buffer]);
 console.log(uInt8Array.byteLength);  // 0
 ```
 
-> **Note:** [Typed arrays](en-US/docs/Web/JavaScript/Typed_arrays) like {{jsxref("Int32Array")}} and {{jsxref("Uint8Array")}}, are serializable, but not transferable.
+> **Note:** [Typed arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) like {{jsxref("Int32Array")}} and {{jsxref("Uint8Array")}}, are {{Glossary("serializable object","serializable")}}, but not transferable.
 > However their underlying buffer is an {{jsxref("ArrayBuffer")}}, which is a transferable object.
 > We could have sent `uInt8Array.buffer` in the data parameter, but not `uInt8Array` in the transfer array.
 
@@ -61,7 +63,7 @@ original[0] = 1;
 console.log(clone[0]);  // 0
 
 // Transferring the Uint8Array would throw an exception as it is not a transferrable object
-// const transferred = structuredClone(original, {transfer: [original]}); 
+// const transferred = structuredClone(original, {transfer: [original]});
 
 // We can transfer Uint8Array.buffer.
 const transferred = structuredClone(original, {transfer: [original.buffer]});
@@ -74,7 +76,7 @@ console.log(original.byteLength);  // 0
 
 ## Supported objects
 
-The items that can be _transferred_ are:
+The items that various specifications indicate can be _transferred_ are:
 
 - {{jsxref("ArrayBuffer")}}
 - {{domxref("MessagePort")}}
@@ -85,12 +87,16 @@ The items that can be _transferred_ are:
 - {{domxref("ImageBitmap")}}
 - {{domxref("VideoFrame")}}
 - {{domxref("OffscreenCanvas")}}
+- {{domxref("RTCDataChannel")}}
 
-> **Note:** Transferrable objects are marked up in [Web IDL files](https://github.com/w3c/webref/tree/main/ed/idl) with the attribute `Transferrable`.
+Browser support should be indicated in the respective object's compatibility information by the `transferable` subfeature (see [`RTCDataChannel`](/en-US/docs/Web/API/RTCDataChannel#browser_compatibility) for an example).
+At time of writing, not all transferable objects have been updated with this information.
+
+> **Note:** Transferrable objects are marked up in [Web IDL files](https://github.com/w3c/webref/tree/main/ed/idl) with the attribute `[Transferrable]`.
 
 ## See also
 
-- [Transferable Objects: Lightning Fast!](https://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast)
+- [Transferable Objects: Lightning Fast!](https://developer.chrome.com/blog/transferable-objects-lightning-fast/)
 - [Using Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [Transferable objects in the HTML specification](https://html.spec.whatwg.org/multipage/structured-data.html#transferable-objects)
 - {{domxref("DedicatedWorkerGlobalScope.postMessage()")}}

@@ -1,6 +1,7 @@
 ---
 title: FileSystemEntry
 slug: Web/API/FileSystemEntry
+page-type: web-api-interface
 tags:
   - API
   - Entry
@@ -31,7 +32,7 @@ To see an example of how `toURL()` works, see the [method description](#tourl). 
 // Taking care of the browser-specific prefixes.
 window.requestFileSystem  = window.requestFileSystem || window.webkitRequestFileSystem;
 
-...
+// …
 
 // Opening a file system with temporary storage
 window.requestFileSystem(TEMPORARY, 1024*1024 /*1MB*/, function(fs) {
@@ -52,13 +53,13 @@ _This interface provides the following properties._
 - {{domxref("FileSystemEntry.filesystem", "filesystem")}} {{ReadOnlyInline}}
   - : A {{domxref("FileSystem")}} object representing the file system in which the entry is located.
 - {{domxref("FileSystemEntry.fullPath", "fullPath")}} {{ReadOnlyInline}}
-  - : A {{domxref("USVString")}} object which provides the full, absolute path from the file system's root to the entry; it can also be thought of as a path which is relative to the root directory, prepended with a "/" character.
+  - : A string object which provides the full, absolute path from the file system's root to the entry; it can also be thought of as a path which is relative to the root directory, prepended with a "/" character.
 - {{domxref("FileSystemEntry.isDirectory", "isDirectory")}} {{ReadOnlyInline}}
   - : A boolean value which is `true` if the entry represents a directory; otherwise, it's `false`.
 - {{domxref("FileSystemEntry.isFile", "isFile")}} {{ReadOnlyInline}}
   - : A Boolean which is `true` if the entry represents a file. If it's not a file, this value is `false`.
 - {{domxref("FileSystemEntry.name", "name")}} {{ReadOnlyInline}}
-  - : A {{domxref("USVString")}} containing the name of the entry (the final part of the path, after the last "/" character).
+  - : A string containing the name of the entry (the final part of the path, after the last "/" character).
 
 ## Methods
 
@@ -88,5 +89,5 @@ _This interface defines the following methods._
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemFileEntry")}} and {{domxref("FileSystemDirectoryEntry")}} are based on `FileSystemEntry`.

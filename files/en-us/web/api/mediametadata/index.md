@@ -1,6 +1,7 @@
 ---
 title: MediaMetadata
 slug: Web/API/MediaMetadata
+page-type: web-api-interface
 tags:
   - Audio
   - Interface
@@ -18,7 +19,7 @@ The **`MediaMetadata`** interface of the [Media Session API](/en-US/docs/Web/API
 
 ## Constructor
 
-- {{domxref("MediaMetadata.MediaMetadata()")}}
+- {{domxref("MediaMetadata.MediaMetadata", "MediaMetadata()")}}
   - : Creates a new `MediaMetaData` object.
 
 ## Properties

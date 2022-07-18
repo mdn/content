@@ -1,6 +1,7 @@
 ---
 title: PerformanceNavigationTiming
 slug: Web/API/PerformanceNavigationTiming
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -31,7 +32,7 @@ This interface extends the following {{domxref('PerformanceEntry')}} properties 
 
 This interface also extends following {{domxref('PerformanceResourceTiming')}} properties for navigation performance entry types by qualifying and constraining them as follows:
 
-- {{domxref('PerformanceResourceTiming.initiatorType')}}{{readonlyInline}}
+- {{domxref('PerformanceResourceTiming.initiatorType')}} {{readonlyInline}}
   - : Returns `"navigation"`.
 
 The interface also supports the following properties:
@@ -59,7 +60,7 @@ The interface also supports the following properties:
 - {{domxref('PerformanceNavigationTiming.responseStart')}} {{readonlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the user agent's HTTP parser receives the first byte of the response from relevant application caches, or from local resources or from the server.
 - {{domxref('PerformanceNavigationTiming.type')}} {{readonlyInline}}
-  - : A {{domxref("DOMString","string")}} representing the navigation type. Must be: "`navigate`", "`reload`", "`back_forward`" or "`prerender`".
+  - : A string representing the navigation type. Must be: "`navigate`", "`reload`", "`back_forward`" or "`prerender`".
 - {{domxref('PerformanceNavigationTiming.unloadEventEnd')}} {{readonlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the time value equal to the time immediately after the user agent finishes the unload event of the previous document.
 - {{domxref('PerformanceNavigationTiming.unloadEventStart')}} {{readonlyInline}}
@@ -68,7 +69,7 @@ The interface also supports the following properties:
 ## Methods
 
 - {{domxref("PerformanceNavigationTiming.toJSON()")}}
-  - : Returns a {{domxref("DOMString")}} that is the JSON representation of the {{domxref("PerformanceNavigationTiming")}} object.
+  - : Returns a string that is the JSON representation of the {{domxref("PerformanceNavigationTiming")}} object.
 
 ## Specifications
 

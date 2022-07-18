@@ -1,6 +1,7 @@
 ---
 title: HashChangeEvent.newURL
 slug: Web/API/HashChangeEvent/newURL
+page-type: web-api-instance-property
 tags:
   - API
   - HashChangeEvent
@@ -15,17 +16,11 @@ The **`newURL`** read-only property of the
 {{domxref("HashChangeEvent")}} interface returns the new URL to which the window is
 navigating.
 
-## Syntax
+## Value
 
-```js
-let newEventUrl = event.newURL;
-```
+A string.
 
-### Value
-
-A {{domxref("DOMString")}}.
-
-## Example
+## Examples
 
 ```js
 window.addEventListener('hashchange', function(event) {

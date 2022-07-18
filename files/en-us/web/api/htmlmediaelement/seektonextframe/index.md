@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.seekToNextFrame()
 slug: Web/API/HTMLMediaElement/seekToNextFrame
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -30,9 +31,9 @@ want). Possible uses for this method include filtering and editing of video cont
 
 This method returns immediately, returning a {{jsxref("Promise")}}, whose fulfillment
 handler is called when the seek operation is complete. In addition, a
-{{event("seeked")}} event is sent to let interested parties know that a seek has taken
+{{domxref("HTMLMediaElement/seeked_event", "seeked")}} event is sent to let interested parties know that a seek has taken
 place. If the seek fails because the media is already at the last frame, a
-{{event("seeked")}} event occurs, followed immediately by an {{event("ended")}} event.
+{{domxref("HTMLMediaElement/seeked_event", "seeked")}} event occurs, followed immediately by an {{domxref("HTMLMediaElement/ended_event", "ended")}} event.
 
 If there is no video on the media element, or the media isn't seekable, nothing
 happens.
@@ -40,10 +41,12 @@ happens.
 ## Syntax
 
 ```js
-var seekCompletePromise = HTMLMediaElement.seekToNextFrame();
-
-HTMLMediaElement.seekToNextFrame();
+seekToNextFrame()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

@@ -8,13 +8,14 @@ tags:
   - Reference
   - ARIA roles
   - document structure role
+spec-urls: https://w3c.github.io/aria/#math
 ---
 
 The `math` role indicates that the content represents a mathematical expression.
 
 ## Description
 
-Content with the role `math` is intended to be marked up in an accessible format such as [MathML](https://developer.mozilla.org/en-US/docs/Web/MathML), or with another type of textual representation, which can be converted to an accessible format by the browser or a polyfill library.
+Content with the role `math` is intended to be marked up in an accessible format such as [MathML](/en-US/docs/Web/MathML), or with another type of textual representation, which can be converted to an accessible format by the browser or a polyfill library.
 
 Unfortunately, browser support for MathML is not universal. While using an image of a mathematical expression is not optimal, if you do use image, use the `math` role.
 Make sure any images of math are labeled by an `alt` attribute that describes the mathematical expression as it would be spoken.
@@ -45,14 +46,11 @@ Had an image been used, the `alt` attribute would be used along with the `math` 
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#math","ARIA: math role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_math_role","math role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 
-- [MathML on MDN](https://developer.mozilla.org/en-US/docs/Web/MathML) and the [`<math>`](https://developer.mozilla.org/en-US/docs/Web/MathML/Element/math) element (not HTML)
+- [MathML on MDN](/en-US/docs/Web/MathML) and the [`<math>`](/en-US/docs/Web/MathML/Element/math) element (not HTML)
 - [The MathML specification](https://www.w3.org/TR/MathML3/)
 
 <section id="Quick_links">

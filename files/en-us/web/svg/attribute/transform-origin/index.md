@@ -8,7 +8,7 @@ browser-compat: svg.attributes.presentation.transform-origin
 ---
 {{SVGRef()}}
 
-The **`transform-origin`** SVG attribute sets the origin for an item’s transformations.
+The **`transform-origin`** SVG attribute sets the origin for an item's transformations.
 
 You can use this attribute with any SVG element.
 
@@ -62,9 +62,9 @@ This example shows the code for one PNG image and three SVG images:
 3. An SVG image that uses `transform-origin` to do a transformation, with the expected result being an image identical to the reference image.
 4. An SVG image that does not use `transform-origin` but does the same transformation using just [`transform`](/en-US/docs/Web/SVG/Attribute/transform), with the expected result being an image identical to the reference image.
 
-The fourth image image shows how to do the transformation in browsers that don't support `transform-origin` — because the code for the fourth image does the same transformation as the third image's `transform-origin`-based code, but by only using `transform`, without `transform-origin`.
+The fourth image shows how to do the transformation in browsers that don't support `transform-origin` — because the code for the fourth image does the same transformation as the third image's `transform-origin`-based code, but by only using `transform`, without `transform-origin`.
 
-> **Note:** These examples use a modified version of a code snippet in a Stack Overflow [question](https://stackoverflow.com/q/67057190) from [Maxim Kulikov](https://stackoverflow.com/users/1033939/maxim-kulikov), as well as a modified version of a code snippet in an [answer](https://stackoverflow.com/a/67057754) from [Michael Mullany](https://stackoverflow.com/users/271353/michael-mullany) that accompanies the question. Both code snippets are used under the terms of the [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) license.)
+> **Note:** These examples use a modified version of a code snippet in a Stack Overflow [question](https://stackoverflow.com/questions/67057190/safari-doesnt-respect-transform-origin-svg-attribute) from [Maxim Kulikov](https://stackoverflow.com/users/1033939/maxim-kulikov), as well as a modified version of a code snippet in an [answer](https://stackoverflow.com/questions/67057190/safari-doesnt-respect-transform-origin-svg-attribute/67057754) from [Michael Mullany](https://stackoverflow.com/users/271353/michael-mullany) that accompanies the question. Both code snippets are used under the terms of the [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) license.)
 
 ### HTML
 
@@ -197,29 +197,7 @@ The fourth image image shows how to do the transformation in browsers that don't
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <td><strong>Specification</strong></td>
-      <td><strong>Status</strong></td>
-      <td><strong>Comment</strong></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("CSS3 Transforms", "#transform-origin-property", "transform-origin")}}
-      </td>
-      <td>{{Spec2("CSS3 Transforms")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "styling.html#PresentationAttributes", "transform-origin")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

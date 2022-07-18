@@ -17,7 +17,7 @@ lower precedence.
 ## Precedence And Associativity
 
 Consider an expression describable by the representation below. Note that both
-OP<sub>1</sub> and OP<sub>2</sub> are fill-in-the-blanks for OPerators.
+`OP1` and `OP2` are fill-in-the-blanks for OPerators.
 
 ```js
 a OP1 b OP2 c
@@ -183,8 +183,8 @@ Evaluating the right side
   </tbody>
 </table>
 
-Looking at the code snippets above, `6 / 3 / 2` is the same as
-`(6 / 3) / 2` because division is left-associative. Exponentiation, on the
+Looking at the code snippets above, `6 / 2 / 3` is the same as
+`(6 / 2) / 3` because division is left-associative. Exponentiation, on the
 other hand, is right-associative, so `2 ** 3 ** 2` is the same as
 `2 ** (3 ** 2)`. Thus, doing `(2 ** 3) ** 2` changes the order
 and results in the 64 seen in the table above.
@@ -204,9 +204,9 @@ short-circuiting.
 Short-circuiting is jargon for conditional evaluation. For example, in the expression
 `a && (b + c)`, if `a` is {{Glossary("falsy")}}, then
 the sub-expression `(b + c)` will not even get evaluated, even if it is in
-parentheses. We could say that the logical disjunction operator ("OR") is
-"short-circuited". Along with logical disjunction, other short-circuited operators
-include logical conjunction ("AND"), nullish-coalescing, optional chaining, and the
+parentheses. We could say that the logical conjunction operator ("&&") is
+"short-circuited". Along with logical conjunction, other short-circuited operators
+include logical disjunction ("OR"), nullish-coalescing, optional chaining, and the
 conditional operator. Some more examples follow.
 
 ```js
@@ -230,9 +230,14 @@ a?.b.c;        // evaluate `a` first, then produce `undefined` if `a` is `null` 
 
 ## Table
 
-The following table lists operators in order from highest precedence (19) to lowest precedence (1).
+The following table lists operators in order from highest precedence (18) to lowest precedence (1).
 
-Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) is intentionally not included in the table — because, to quote an [an answer at Stack Overflow](https://stackoverflow.com/a/48656377), “[Spread syntax is not an operator](https://stackoverflow.com/q/44934828/1048572) and therefore does not have a precedence. It is part of the array literal and function call (and object literal) syntax.”
+Several notes about the table:
+
+1. Not all syntax included here are "operators" in the strict sense. For example, spread `...` and arrow `=>` are typically not regarded as operators. However, we still included them to show how tightly they bind compared to other operators/expressions.
+2. The operand of unary operators (precedence 14) cannot be an exponentiation `**` (precedence 13) without grouping, or there will be a {{jsxref("SyntaxError")}}. That means, although `-1 ** 2` is syntactically unambiguous, the language requires you to use `(-1) ** 2` instead.
+3. Some operators have certain operands that require expressions narrower than those produced by higher-precedence operators. For example, the right-hand side of member access `.` (precedence 17) must be an identifier instead of a grouped expression. The left-hand side of arrow `=>` (precedence 15) must be an arguments list or a single identifier instead of some random expression.
+4. Some operators have certain operands that accept expressions wider than those produced by higher-precedence operators. For example, the bracket-enclosed expression of bracket notation `[ … ]` (precedence 17) can be any expression, even comma (precedence 1) joined ones. These operators act as if that operand is "automatically grouped". In this case we will omit the associativity.
 
 <table class="fullwidth-table">
   <tbody>
@@ -243,7 +248,7 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
       <th>Individual operators</th>
     </tr>
     <tr>
-      <td>19</td>
+      <td>18</td>
       <td>
         {{jsxref("Operators/Grouping", "Grouping", "", 1)}}
       </td>
@@ -251,7 +256,7 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
       <td><code>( … )</code></td>
     </tr>
     <tr>
-      <td rowspan="5">18</td>
+      <td rowspan="5">17</td>
       <td>
         {{jsxref("Operators/Property_Accessors", "Member Access", "#Dot_notation",
                 1)}}
@@ -264,7 +269,7 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
         {{jsxref("Operators/Property_Accessors", "Computed Member
                 Access","#Bracket_notation", 1)}}
       </td>
-      <td>left-to-right</td>
+      <td>n/a</td>
       <td><code>… [ … ]</code></td>
     </tr>
     <tr>
@@ -276,9 +281,9 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
       <td>
         <a href="/en-US/docs/Web/JavaScript/Guide/Functions">Function Call</a>
       </td>
-      <td>left-to-right</td>
+      <td>n/a</td>
       <td>
-        <code>… ( <var>… </var>)</code>
+        <code>… ( … )</code>
       </td>
     </tr>
     <tr>
@@ -292,15 +297,15 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
       <td><code>?.</code></td>
     </tr>
     <tr>
-      <td>17</td>
+      <td>16</td>
       <td>
         {{jsxref("Operators/new","new")}} (without argument list)
       </td>
-      <td>right-to-left</td>
+      <td>n/a</td>
       <td><code>new …</code></td>
     </tr>
     <tr>
-      <td rowspan="2">16</td>
+      <td rowspan="2">15</td>
       <td>
         {{jsxref("Operators","Postfix
                 Increment","#increment_and_decrement", 1)}}
@@ -316,13 +321,13 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
       <td><code>… --</code></td>
     </tr>
     <tr>
-      <td rowspan="10">15</td>
+      <td rowspan="10">14</td>
       <td>
         <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT"
           >Logical NOT (!)</a
         >
       </td>
-      <td rowspan="10">right-to-left</td>
+      <td rowspan="10">n/a</td>
       <td><code>! …</code></td>
     </tr>
     <tr>
@@ -380,7 +385,7 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
       <td><code>await …</code></td>
     </tr>
     <tr>
-      <td>14</td>
+      <td>13</td>
       <td>
         <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation"
           >Exponentiation (**)</a
@@ -390,7 +395,7 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
       <td><code>… ** …</code></td>
     </tr>
     <tr>
-      <td rowspan="3">13</td>
+      <td rowspan="3">12</td>
       <td>
         <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication"
           >Multiplication (*)</a
@@ -416,7 +421,7 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
       <td><code>… % …</code></td>
     </tr>
     <tr>
-      <td rowspan="2">12</td>
+      <td rowspan="2">11</td>
       <td>
         <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Addition"
           >Addition (+)</a
@@ -434,7 +439,7 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
       <td><code>… - …</code></td>
     </tr>
     <tr>
-      <td rowspan="3">11</td>
+      <td rowspan="3">10</td>
       <td>
         <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift"
           >Bitwise Left Shift (&#x3C;&#x3C;)</a
@@ -461,7 +466,7 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
       <td><code>… >>> …</code></td>
     </tr>
     <tr>
-      <td rowspan="6">10</td>
+      <td rowspan="6">9</td>
       <td>
         <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Less_than"
           >Less Than (&#x3C;)</a
@@ -505,7 +510,7 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
       <td><code>… instanceof …</code></td>
     </tr>
     <tr>
-      <td rowspan="4">9</td>
+      <td rowspan="4">8</td>
       <td>
         <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Equality"
           >Equality (==)</a
@@ -540,7 +545,7 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
       <td><code>… !== …</code></td>
     </tr>
     <tr>
-      <td>8</td>
+      <td>7</td>
       <td>
         <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND"
           >Bitwise AND (&#x26;)</a
@@ -550,7 +555,7 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
       <td><code>… &#x26; …</code></td>
     </tr>
     <tr>
-      <td>7</td>
+      <td>6</td>
       <td>
         <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR"
           >Bitwise XOR (^)</a
@@ -560,7 +565,7 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
       <td><code>… ^ …</code></td>
     </tr>
     <tr>
-      <td>6</td>
+      <td>5</td>
       <td>
         <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR"
           >Bitwise OR (|)</a
@@ -570,7 +575,7 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
       <td><code>… | …</code></td>
     </tr>
     <tr>
-      <td>5</td>
+      <td>4</td>
       <td>
         <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND"
           >Logical AND (&#x26;&#x26;)</a
@@ -580,7 +585,7 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
       <td><code>… &#x26;&#x26; …</code></td>
     </tr>
     <tr>
-      <td rowspan="2">4</td>
+      <td rowspan="2">3</td>
       <td>
         <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR"
           >Logical OR (||)</a
@@ -600,18 +605,7 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
       <td><code>… ?? …</code></td>
     </tr>
     <tr>
-      <td>3</td>
-      <td>
-        <a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator"
-          >Conditional (ternary) operator</a
-        >
-      </td>
-      <td>right-to-left</td>
-      <td><code>… ? … : …</code></td>
-    </tr>
-    <tr>
-      <td rowspan="18">2</td>
+      <td rowspan="21">2</td>
       <td rowspan="16">
         <a
           href="/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators"
@@ -667,8 +661,27 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
       <td><code>… ??= …</code></td>
     </tr>
     <tr>
+      <td>
+        <a
+          href="/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator"
+          >Conditional (ternary) operator</a
+        >
+      </td>
+      <td>right-to-left<br />(Groups on expressions after <code>?</code>)</td>
+      <td><code>… ? … : …</code></td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions"
+          >Arrow (=>)</a
+        >
+      </td>
+      <td rowspan="4">n/a</td>
+      <td><code>… => …</code></td>
+    </tr>
+    <tr>
       <td>{{jsxref("Operators/yield", "yield")}}</td>
-      <td rowspan="2">right-to-left</td>
       <td><code>yield …</code></td>
     </tr>
     <tr>
@@ -676,7 +689,15 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
       <td><code>yield* …</code></td>
     </tr>
     <tr>
-      <td>1</td>
+      <td>
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax"
+          >Spread (...)</a
+        >
+      </td>
+      <td><code>... …</code></td>
+    </tr>
+    <tr>
+      <td >1</td>
       <td>
         <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator"
           >Comma / Sequence</a

@@ -6,7 +6,7 @@ tags:
   - Web
   - WebMechanics
 ---
-*Synchronous* refers to real-time communication where each party receives (and if necessary, processes and replies to) messages instantly (or as near to instantly as possible).
+*Synchronous* refers to real-time communication where each party receives (and if necessary, processes and replies to) messages instantly (or as near to instantly as possible).
 
 A human example is the telephone — during a telephone call you tend to respond to another person immediately.
 
@@ -15,4 +15,4 @@ Many programming commands are also synchronous — for example when you type in 
 ## See also
 
 - {{glossary("Asynchronous")}}
-- [Synchronous and asynchronous requests](/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) using the [XMLHttpRequest()](/en-US/docs/Web/API/XMLHttpRequest) {{glossary("API")}}
+- [Synchronous and asynchronous requests](/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) using the [XMLHttpRequest()](/en-US/docs/Web/API/XMLHttpRequest) {{glossary("API")}}

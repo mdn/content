@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.fetchStart
 slug: Web/API/PerformanceTiming/fetchStart
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility
@@ -25,11 +26,9 @@ read-only property returns an `unsigned long long` representing the moment,
 in milliseconds since the UNIX epoch, the browser is ready to fetch the document using
 an HTTP request. This moment is _before_ the check to any application cache.
 
-## Syntax
+## Value
 
-```js
-time = performance.timing.fetchStart;
-```
+An `unsigned long long`.
 
 ## Specifications
 

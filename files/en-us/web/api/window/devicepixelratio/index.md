@@ -1,6 +1,7 @@
 ---
 title: Window.devicePixelRatio
 slug: Web/API/Window/devicePixelRatio
+page-type: web-api-instance-property
 tags:
   - API
   - Adaptive Design
@@ -17,11 +18,11 @@ browser-compat: api.Window.devicePixelRatio
 
 The **`devicePixelRatio`** of
 {{domxref("Window")}} interface returns the ratio of the resolution in _physical
-pixels_ to the resolution in _CSS pixels_ for the current display
+pixels_ to the resolution in _CSS pixels_ for the current display
 device.
 
-This value could also be interpreted as the ratio of pixel sizes: the
-size of one *CSS pixel* to the size of one _physical pixel_. In simpler
+This value could also be interpreted as the ratio of pixel sizes: the
+size of one *CSS pixel* to the size of one _physical pixel_. In simpler
 terms, this tells the browser how many of the screen's actual pixels should be used to
 draw a single CSS pixel.
 
@@ -32,15 +33,9 @@ resulting in a sharper image.
 You can use {{domxref("Window.matchMedia", "window.matchMedia()")}} to check if the
 value of `devicePixelRatio` changes (which can happen, for example, if the
 user drags the window to a display with a different pixel density). See
-{{anch("Monitoring screen resolution or zoom level changes", "the example below")}}.
+[the example below](#monitoring_screen_resolution_or_zoom_level_changes).
 
-## Syntax
-
-```js
-value = window.devicePixelRatio;
-```
-
-### Value
+## Value
 
 A double-precision floating-point value indicating the ratio of the display's
 resolution in physical pixels to the resolution in CSS pixels. A value of 1 indicates a
@@ -54,7 +49,7 @@ the standard resolution of 96 or 76 DPI.
 ### Correcting resolution in a `<canvas>`
 
 A {{htmlelement("canvas")}} can appear too blurry on retina screens.
-Use `window.devicePixelRatio` to determine how much extra pixel density
+Use `window.devicePixelRatio` to determine how much extra pixel density
 should be added to allow for a sharper image.
 
 #### HTML
@@ -79,7 +74,7 @@ var scale = window.devicePixelRatio; // Change to 1 on retina screens to see blu
 canvas.width = Math.floor(size * scale);
 canvas.height = Math.floor(size * scale);
 
-// Normalize coordinate system to use css pixels.
+// Normalize coordinate system to use CSS pixels.
 ctx.scale(scale, scale);
 
 ctx.fillStyle = "#bada55";
@@ -123,9 +118,9 @@ updatePixelRatio();
 ```
 
 The string `mqString` is set up to be the media query itself. The media
-query, which begins as `(resolution: 1dppx)` (for standard  displays) or
+query, which begins as `(resolution: 1dppx)` (for standard displays) or
 `(resolution: 2dppx)` (for Retina/HiDPI displays), checks to see if the
-current display resolution matches a specific  number of device dots per
+current display resolution matches a specific number of device dots per
 `px`.
 
 The `updatePixelRatio()` function fetches the current value of

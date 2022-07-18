@@ -1,6 +1,7 @@
 ---
 title: MediaSession
 slug: Web/API/MediaSession
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -16,12 +17,12 @@ browser-compat: api.MediaSession
 
 The **`MediaSession`** interface of the [Media Session API](/en-US/docs/Web/API/Media_Session_API) allows a web page to provide custom behaviors for standard media playback interactions, and to report metadata that can be sent by the user agent to the device or operating system for presentation in standardized user interface elements.
 
-For example, a smartphone might have a standard panel in its lock screen that provides controls for media playback and information display. A browser on the device can use `MediaSession` to make browser playback controllable from that standard/global user interface.
+For example, a smartphone might have a standard panel in its lock screen that provides controls for media playback and information display. A browser on the device can use `MediaSession` to make browser playback controllable from that standard/global user interface.
 
 ## Properties
 
 - {{domxref("MediaSession.metadata", "metadata")}}
-  - : Returns an instance of {{domxref("MediaMetadata")}}, which contains rich media metadata for display in a platform UI.
+  - : Returns an instance of {{domxref("MediaMetadata")}}, which contains rich media metadata for display in a platform UI.
 - {{domxref("MediaSession.playbackState", "playbackState")}}
   - : Indicates whether the current media session is playing. Valid values are `none`, `paused`, or `playing`.
 
@@ -77,7 +78,7 @@ const actionHandlers = [
       // set playback state
       navigator.mediaSession.playbackState = "playing";
       // update our status element
-      updateStatus(allMeta[index], 'Action: play  |  Track is playing...')
+      updateStatus(allMeta[index], 'Action: play  |  Track is playing…')
     }
   ],
   [
@@ -88,7 +89,7 @@ const actionHandlers = [
       // set playback state
       navigator.mediaSession.playbackState = "paused";
       // update our status element
-      updateStatus(allMeta[index], 'Action: pause  |  Track has been paused...');
+      updateStatus(allMeta[index], 'Action: pause  |  Track has been paused…');
     }
   ],
 ]

@@ -106,7 +106,7 @@ const myObject = {
 
 - [How do you declare a variable?](/en-US/docs/Learn/JavaScript/First_steps/Variables#declaring_a_variable)
 - [How do you initialize a variable with a value?](/en-US/docs/Learn/JavaScript/First_steps/Variables#initializing_a_variable)
-- [How do you update a variable's value?](/en-US/docs/Learn/JavaScript/First_steps/Variables#updating_a_variable) (also see [Assignment operators](/en-US/docs/Learn/JavaScript/First_steps/Math#assignment_operators))
+- [How do you update a variable's value?](/en-US/docs/Learn/JavaScript/First_steps/Variables#updating_a_variable) (also see [Assignment operators](/en-US/docs/Learn/JavaScript/First_steps/Math#assignment_operators))
 - [What data types can values have in JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/Variables#variable_types)
 - [What does 'loosely typed' mean?](/en-US/docs/Learn/JavaScript/First_steps/Variables#loose_typing)
 
@@ -162,7 +162,7 @@ For more information on JavaScript debugging, see [Handling common JavaScript pr
 - [How do you run the same bit of code over and over again?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
 - [How do you exit a loop before the end if a certain condition is met?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#exiting_loops_with_break)
 - [How do you skip to the next iteration of a loop if a certain condition is met?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#skipping_iterations_with_continue)
-- [How do you use while and do ... while loops?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while)
+- [How do you use while and do...while loops?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while)
 
 ## Intermediate use cases
 
@@ -184,9 +184,9 @@ For more information on JavaScript debugging, see [Handling common JavaScript pr
 - [What is bracket notation?](/en-US/docs/Learn/JavaScript/Objects/Basics#bracket_notation)
 - [How do you get and set the methods and properties of an object?](/en-US/docs/Learn/JavaScript/Objects/Basics#setting_object_members)
 - [What is `this`, in the context of an object?](/en-US/docs/Learn/JavaScript/Objects/Basics#what_is_this)
-- [What is object-oriented programming?](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS#object-oriented_programming_from_10000_meters)
-- [What are constructors and instances, and how do you create them?](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS#constructors_and_object_instances)
-- [What different ways are there to create objects in JavaScript?](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS#other_ways_to_create_object_instances)
+- [What is object-oriented programming?](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#object-oriented_programming_from_10000_meters)
+- [What are constructors and instances, and how do you create them?](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#constructors_and_object_instances)
+- [What different ways are there to create objects in JavaScript?](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#other_ways_to_create_object_instances)
 
 ### JSON
 
@@ -198,7 +198,7 @@ For more information on JavaScript debugging, see [Handling common JavaScript pr
 
 - [What are event handlers and how do you use them?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_handler_properties)
 - [What are inline event handlers?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#inline_event_handlers_%e2%80%94_don%27t_use_these)
-- [What does the `addEventListener()` function do, and how do you use it?](</en-US/docs/Learn/JavaScript/Building_blocks/Events#addeventlistener()_and_removeeventlistener()>)
+- [What does the `addEventListener()` function do, and how do you use it?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#using_addeventlistener)
 - [Which mechanism should I use to add event code to my web pages?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#what_mechanism_should_i_use)
 - [What are event objects, and how do you use them?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_objects)
 - [How do you prevent default event behavior?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#preventing_default_behavior)
@@ -210,8 +210,8 @@ For more information on JavaScript debugging, see [Handling common JavaScript pr
 - [What are object prototypes?](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
 - [What is the constructor property, and how can you use it?](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes#the_constructor_property)
 - [How do you add methods to the constructor?](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes#modifying_prototypes)
-- [How do you create a new constructor that inherits its members from a parent constructor?](/en-US/docs/Learn/JavaScript/Objects/Inheritance)
-- [When should you use inheritance in JavaScript?](/en-US/docs/Learn/JavaScript/Objects/Inheritance#object_member_summary)
+- [How do you create a new constructor that inherits its members from a parent constructor?](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
+- [When should you use inheritance in JavaScript?](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#object_member_summary)
 
 ### Web APIs
 

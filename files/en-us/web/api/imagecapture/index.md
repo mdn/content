@@ -1,6 +1,7 @@
 ---
 title: ImageCapture
 slug: Web/API/ImageCapture
+page-type: web-api-interface
 tags:
   - API
   - Experimental
@@ -15,7 +16,7 @@ browser-compat: api.ImageCapture
 ---
 {{APIRef("MediaStream Image")}}
 
-The **`ImageCapture`** interface of the [MediaStream Image Capture API](/en-US/docs/Web/API/MediaStream_Image_Capture_API) provides methods to enable the capture of images or photos from a camera or other photographic device. It provides an interface for capturing images from a photographic device referenced through a valid {{domxref("MediaStreamTrack")}}.
+The **`ImageCapture`** interface of the [MediaStream Image Capture API](/en-US/docs/Web/API/MediaStream_Image_Capture_API) provides methods to enable the capture of images or photos from a camera or other photographic device. It provides an interface for capturing images from a photographic device referenced through a valid {{domxref("MediaStreamTrack")}}.
 
 ## Constructor
 
@@ -47,7 +48,7 @@ The following code is taken from [Chrome's Grab Frame - Take Photo Sample](https
 This example shows, roughly, a {{domxref("MediaStreamTrack")}} extracted from a device's {{domxref("MediaStream")}}. The track is then used to create an `ImageCapture` object so that `takePhoto()` and `grabFrame()` can be called. Finally, it shows how to apply the results of these calls to a canvas object.
 
 ```js
-var imageCapture;
+let imageCapture;
 
 function onGetUserMediaButtonClick() {
   navigator.mediaDevices.getUserMedia({video: true})

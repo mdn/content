@@ -1,6 +1,7 @@
 ---
 title: 'TextTrackCue: enter event'
 slug: Web/API/TextTrackCue/enter_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -32,7 +33,7 @@ A generic {{DOMxRef("Event")}} with no added properties.
 In the following example, `cue1` prints to the console when it is the active cue.
 
 ```js
-cue1.addEventListener('enter', event => { 
+cue1.addEventListener('enter', event => {
   console.log('Cue 1 has displayed');
 });
 ```

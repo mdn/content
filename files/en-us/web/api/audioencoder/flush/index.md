@@ -1,6 +1,7 @@
 ---
 title: AudioEncoder.flush()
 slug: Web/API/AudioEncoder/flush
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,14 +17,14 @@ The **`flush()`** method of the {{domxref("AudioEncoder")}} interface returns a 
 ## Syntax
 
 ```js
-AudioEncoder.flush()
+flush()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 A {{jsxref("Promise")}} that resolves with undefined.
 

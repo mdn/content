@@ -1,6 +1,7 @@
 ---
 title: Advanced animations
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
+page-type: guide
 tags:
   - Canvas
   - Graphics
@@ -29,7 +30,7 @@ var ball = {
   y: 100,
   radius: 25,
   color: 'blue',
-  draw: function() {
+  draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
@@ -59,7 +60,7 @@ var ball = {
   vy: 2,
   radius: 25,
   color: 'blue',
-  draw: function() {
+  draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
@@ -93,10 +94,10 @@ Without any boundary collision testing our ball runs out of the canvas quickly. 
 
 ```js
 if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
-  ball.vy = -ball.vy;
+  ball.vy = -ball.vy;
 }
 if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
-  ball.vx = -ball.vx;
+  ball.vx = -ball.vx;
 }
 ```
 
@@ -124,7 +125,7 @@ var ball = {
   vy: 2,
   radius: 25,
   color: 'blue',
-  draw: function() {
+  draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
@@ -201,7 +202,7 @@ var ball = {
   vy: 2,
   radius: 25,
   color: 'blue',
-  draw: function() {
+  draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
@@ -276,7 +277,7 @@ var ball = {
   vy: 2,
   radius: 25,
   color: 'blue',
-  draw: function() {
+  draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
@@ -348,7 +349,7 @@ var ball = {
   vy: 1,
   radius: 25,
   color: 'blue',
-  draw: function() {
+  draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();

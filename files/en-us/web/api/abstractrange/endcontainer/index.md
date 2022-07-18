@@ -1,6 +1,7 @@
 ---
 title: AbstractRange.endContainer
 slug: Web/API/AbstractRange/endContainer
+page-type: web-api-instance-property
 tags:
   - Property
   - Read-only

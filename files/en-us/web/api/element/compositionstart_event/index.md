@@ -1,6 +1,7 @@
 ---
 title: 'Element: compositionstart event'
 slug: Web/API/Element/compositionstart_event
+page-type: web-api-event
 tags:
   - Element
   - Event
@@ -52,7 +53,7 @@ inputElement.addEventListener('compositionstart', (event) => {
 
 ```html
 <div class="control">
-  <label for="name">On macOS, click in the textbox below,<br> then type <kbd>option</kbd> + <kbd>`</kbd>, then <kbd>a</kbd>:</label>
+  <label for="name">First select textbox, then to open IME:<ul><li>on macOS type <kbd>option</kbd> + <kbd>`</kbd></li><li>on Windows type <kbd>windows</kbd> + <kbd>.</kbd></li></ul></label>
   <input type="text" id="example" name="example">
 </div>
 
@@ -67,7 +68,7 @@ inputElement.addEventListener('compositionstart', (event) => {
 body {
   padding: .2rem;
   display: grid;
-  grid-template-areas: "control  log";
+  grid-template-areas: "control log";
 }
 
 .control {

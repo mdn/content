@@ -61,7 +61,16 @@ Assistive technology support is very limited for the `speak-as` property. Do not
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+auto                 |
+bullets              |
+numbers              |
+words                |
+spell-out            |
+<counter-style-name>
+
+<counter-style-name> = <custom-ident>
+```
 
 ## Examples
 
@@ -109,4 +118,4 @@ Assistive technology support is very limited for the `speak-as` property. Do not
 ## See also
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols()")}}, the functional notation creating anonymous counter styles.
+- {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles.

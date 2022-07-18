@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.open()
 slug: Web/API/XMLHttpRequest/open
+page-type: web-api-instance-method
 tags:
   - API
   - HTTP
@@ -24,7 +25,10 @@ initializes a newly-created request, or re-initializes an existing one.
 ## Syntax
 
 ```js
-XMLHttpRequest.open(method, url[, async[, user[, password]]])
+open(method, url)
+open(method, url, async)
+open(method, url, async, user)
+open(method, url, async, user, password)
 ```
 
 ### Parameters
@@ -34,7 +38,7 @@ XMLHttpRequest.open(method, url[, async[, user[, password]]])
     `"GET"`, `"POST"`, `"PUT"`, `"DELETE"`,
     etc. Ignored for non-HTTP(S) URLs.
 - `url`
-  - : A {{domxref("DOMString")}} representing the URL to send the request to.
+  - : A string representing the URL to send the request to.
 - `async` {{optional_inline}}
 
   - : An optional Boolean parameter, defaulting to `true`, indicating whether
@@ -56,6 +60,10 @@ XMLHttpRequest.open(method, url[, async[, user[, password]]])
   - : The optional password to use for authentication purposes; by default, this is the
     `null` value.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Specifications
 
 {{Specifications}}
@@ -66,9 +74,8 @@ XMLHttpRequest.open(method, url[, async[, user[, password]]])
 
 ## See also
 
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - Related {{domxref("XMLHttpRequest")}} methods:
   {{domxref("XMLHttpRequest.setRequestHeader",
-    "setRequestHeader()")}},{{domxref("XMLHttpRequest.send", "send()")}}, and
+    "setRequestHeader()")}}, {{domxref("XMLHttpRequest.send", "send()")}}, and
   {{domxref("XMLHttpRequest.abort", "abort()")}}

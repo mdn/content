@@ -4,7 +4,6 @@ slug: Web/CSS/:dir
 tags:
   - BiDi
   - CSS
-  - Experimental
   - Pseudo-class
   - Reference
   - Selector
@@ -31,16 +30,16 @@ The `:dir()` pseudo-class uses only the _semantic_ value of the directionality, 
 
 The `:dir()` pseudo-class requires one parameter, representing the text directionality you want to target.
 
+```
+:dir( [ ltr | rtl ] )
+```
+
 ### Parameters
 
 - `ltr`
   - : Target left-to-right elements.
 - `rtl`
   - : Target right-to-left elements.
-
-### Formal syntax
-
-{{csssyntax}}
 
 ## Examples
 

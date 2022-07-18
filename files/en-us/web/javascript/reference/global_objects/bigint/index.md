@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.BigInt
 
 ## Description
 
-A **BigInt value**, also sometimes just called a **BigInt**, is a `bigint` {{Glossary("Primitive", "primitive")}}, created by appending `n` to the end of an integer literal, or by calling the {{jsxref("Global_Objects/BigInt/BigInt", "BigInt()")}} constructor (but without the `new` operator) and giving it an integer value or string value.
+A **BigInt value**, also sometimes just called a **BigInt**, is a `bigint` {{Glossary("Primitive", "primitive")}}, created by appending `n` to the end of an integer literal, or by calling the {{jsxref("Global_Objects/BigInt/BigInt", "BigInt()")}} function (without the `new` operator) and giving it an integer value or string value.
 
 ```js
 const previouslyMaxSafeInteger = 9007199254740991n
@@ -90,7 +90,7 @@ bigN * -1n
 // ↪ -18014398509481984n
 ```
 
-The `/` operator also works as expected with whole numbers — but operations with a fractional result will be truncated when used with a BigInt value — they won’t return any fractional digits.
+The `/` operator also works as expected with whole numbers — but operations with a fractional result will be truncated when used with a BigInt value — they won't return any fractional digits.
 
 ```js
 const expected = 4n / 2n
@@ -161,7 +161,7 @@ o === o                    // true
 
 ### Conditionals
 
-A BigInt value behaves like a Number value in cases where:
+A BigInt value behaves like a Boolean value in cases where:
 
 - it is converted to a [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean): via the [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) function;
 - when used with [logical operators](/en-US/docs/Web/JavaScript/Reference/Operators) `||`, `&&`, and `!`; or
@@ -223,7 +223,7 @@ Boolean(12n)
 Because coercing between Number values and BigInt values can lead to loss of precision, the following are recommended:
 
 - Only use a BigInt value when values greater than 2^53 are reasonably expected.
-- Don’t coerce between BigInt values and Number values.
+- Don't coerce between BigInt values and Number values.
 
 ### Cryptography
 
@@ -231,17 +231,41 @@ The operations supported on BigInt values are not constant-time, and are thus op
 
 ### Use within JSON
 
-Using [`JSON.stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) with any BigInt value will raise a `TypeError`, as BigInt values aren't serialized in JSON by default. However, you can implement your own `toJSON` method:
+Using [`JSON.stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) with any BigInt value will raise a `TypeError`, as BigInt values aren't serialized in JSON by default. However, you can use the [replacer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#the_replacer_parameter) parameter of `JSON.stringify` to serialize BigInt properties without error:
 
 ```js
-BigInt.prototype.toJSON = function() { return this.toString()  }
+function replacer(key, value) {
+  if (key === 'big') {
+    return value.toString();
+  }
+  return value;
+}
+
+const data = {
+  number: 1,
+  big: BigInt('18014398509481982'),
+};
+const stringified = JSON.stringify(data, replacer);
+
+console.log(stringified);
+// ↪ '{"number":1,"big":"18014398509481982"}'
 ```
 
-Instead of throwing, `JSON.stringify` now produces a string like this:
+If you have JSON data containing values you know will be large integers, you can use the [reviver](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#using_the_reviver_parameter) parameter of `JSON.parse` to handle them:
 
 ```js
-JSON.stringify(BigInt(1))
-// '"1"'
+function reviver(key, value) {
+  if (key === 'big') {
+    return BigInt(value);
+  }
+  return value;
+}
+
+const payload = '{"number":1,"big":"18014398509481982"}';
+const parsed = JSON.parse(payload, reviver);
+
+console.log(parsed);
+// ↪ {number: 1, big: 18014398509481982n}
 ```
 
 ## Examples

@@ -1,6 +1,7 @@
 ---
 title: Animation.commitStyles()
 slug: Web/API/Animation/commitStyles
+page-type: web-api-instance-method
 tags:
   - API
   - Animation
@@ -17,7 +18,7 @@ The `commitStyles()` method of the [Web Animations API](/en-US/docs/Web/API/Web_
 ## Syntax
 
 ```js
-animation.commitStyles();
+commitStyles()
 ```
 
 ### Parameters
@@ -26,7 +27,7 @@ None.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

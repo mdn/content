@@ -17,8 +17,8 @@ The **`handler.construct()`** method is a trap for the {{jsxref("Operators/new",
 ## Syntax
 
 ```js
-const p = new Proxy(target, {
-  construct: function(target, argumentsList, newTarget) {
+new Proxy(target, {
+  construct(target, argumentsList, newTarget) {
   }
 });
 ```
@@ -63,7 +63,7 @@ The following code traps the {{jsxref("Operators/new", "new")}} operator.
 
 ```js
 const p = new Proxy(function() {}, {
-  construct: function(target, argumentsList, newTarget) {
+  construct(target, argumentsList, newTarget) {
     console.log('called: ' + argumentsList.join(', '));
     return { value: argumentsList[0] * 10 };
   }
@@ -77,7 +77,7 @@ The following code violates the invariant.
 
 ```js example-bad
 const p = new Proxy(function() {}, {
-  construct: function(target, argumentsList, newTarget) {
+  construct(target, argumentsList, newTarget) {
     return 1;
   }
 });
@@ -89,7 +89,7 @@ The following code improperly initializes the proxy. The `target` in Proxy initi
 
 ```js example-bad
 const p = new Proxy({}, {
-  construct: function(target, argumentsList, newTarget) {
+  construct(target, argumentsList, newTarget) {
     return {};
   }
 });

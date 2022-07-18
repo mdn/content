@@ -1,6 +1,7 @@
 ---
 title: OscillatorNode.type
 slug: Web/API/OscillatorNode/type
+page-type: web-api-instance-property
 tags:
   - API
   - OscillatorNode
@@ -18,15 +19,9 @@ oscillator will output. There are several common waveforms available, as well as
 option to specify a custom waveform shape. The shape of the waveform will affect the
 tone that is produced.
 
-## Syntax
+## Value
 
-```js
-OscillatorNode.type = type;
-```
-
-### Value
-
-A {{domxref("DOMString")}} specifying the shape of oscillator wave. The different
+A string specifying the shape of oscillator wave. The different
 available values are:
 
 - `sine`
@@ -51,18 +46,17 @@ available values are:
     {{domxref("OscillatorNode.setPeriodicWave", "setPeriodicWave()")}}. Doing so
     automatically sets the type for you.
 
-## Example
+## Examples
 
 The following example shows basic usage of an {{ domxref("AudioContext") }} to create
-an oscillator node. For an applied example, check out our [Violent Theremin demo](https://mdn.github.io/violent-theremin/) ([see
-app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) for relevant code).
+an oscillator node. For an applied example, check out our [Violent Theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) ([see app.js](https://github.com/mdn/webaudio-examples/blob/master/violent-theremin/scripts/app.js) for relevant code).
 
 ```js
 // create web audio api context
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // create Oscillator node
-var oscillator = audioCtx.createOscillator();
+const oscillator = audioCtx.createOscillator();
 
 oscillator.type = 'square';
 oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // value in hertz

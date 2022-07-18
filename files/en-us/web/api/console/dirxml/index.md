@@ -1,6 +1,7 @@
 ---
 title: console.dirxml()
 slug: Web/API/console/dirxml
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -20,13 +21,17 @@ that let you see the contents of child nodes.
 ## Syntax
 
 ```js
-console.dirxml(object);
+dirxml(object)
 ```
 
-## Parameters
+### Parameters
 
 - `object`
   - : A JavaScript object whose properties should be output.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

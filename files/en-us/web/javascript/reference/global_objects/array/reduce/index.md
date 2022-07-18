@@ -1,6 +1,6 @@
 ---
 title: Array.prototype.reduce()
-slug: Web/JavaScript/Reference/Global_Objects/Array/Reduce
+slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 tags:
   - Array
   - Array method
@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.Array.reduce
 ---
 {{JSRef}}
 
-The **`reduce()`** method executes a user-supplied “reducer” callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element.
+The **`reduce()`** method executes a user-supplied "reducer" callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element.
 The final result of running the reducer across all elements of the array is a single value.
 
 The first time that the callback is run there is no "return value of the previous calculation".
@@ -35,6 +35,9 @@ The reducer walks through the array element-by-element, at each step adding the 
 reduce((previousValue, currentValue) => { /* ... */ } )
 reduce((previousValue, currentValue, currentIndex) => { /* ... */ } )
 reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ } )
+
+reduce((previousValue, currentValue) => { /* ... */ } , initialValue)
+reduce((previousValue, currentValue, currentIndex) => { /* ... */ } , initialValue)
 reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ }, initialValue)
 
 // Callback function
@@ -45,13 +48,19 @@ reduce(callbackFn, initialValue)
 reduce(function(previousValue, currentValue) { /* ... */ })
 reduce(function(previousValue, currentValue, currentIndex) { /* ... */ })
 reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ })
+
+reduce(function(previousValue, currentValue) { /* ... */ }, initialValue)
+reduce(function(previousValue, currentValue, currentIndex) { /* ... */ }, initialValue)
 reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ }, initialValue)
 ```
 
 ### Parameters
 
 - `callbackFn`
-  - : A “reducer” function that takes four arguments:
+  - : A "reducer" function.
+
+    The function is called with the following arguments:
+
     - `previousValue`: the value resulting from the previous call to `callbackFn`.
       On first call, `initialValue` if specified, otherwise the value of `array[0]`.
     - `currentValue`: the value of the current element.
@@ -67,7 +76,7 @@ reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ },
 
 ### Return value
 
-The value that results from running the “reducer” callback function to completion over the entire array.
+The value that results from running the "reducer" callback function to completion over the entire array.
 
 ### Exceptions
 
@@ -77,24 +86,30 @@ The value that results from running the “reducer” callback function to compl
 
 ## Description
 
-The ECMAScript spec describes the behavior of `reduce()` as follows:
+The `reduce()` method takes two arguments: a callback function and an optional initial value.
+If an initial value is provided, `reduce()` calls the "reducer" callback function on each element in the array, in order. If no initial value is provided, `reduce()` calls the callback function on each element in the array after the first element.
 
-> *callbackfn* should be a function that takes four arguments. `reduce` calls the callback, as a function, once for each element after the first element present in the array, in ascending order.
->
-> *callbackfn* is called with four arguments:
->
-> - the *previousValue* (value from the previous call to *callbackfn*)
-> - the *currentValue* (value of the current element)
-> - the *currentIndex*, and
-> - the object being traversed
-> The first time that callback is called, the *previousValue* and *currentValue* can be one of two values:
-> - If an *initialValue* was supplied in the call to `reduce`, then *previousValue* will be equal to *initialValue* and *currentValue* will be equal to the first value in the array.
-> - If no *initialValue* was supplied, then *previousValue* will be equal to the first value in the array and *currentValue* will be equal to the second.
-> It is a {{jsxref("TypeError")}} if the array contains no elements and *initialValue* is not provided.
->
-> `reduce` does not directly mutate the object on which it is called but the object may be mutated by the calls to *callbackfn*.
->
-> The range of elements processed by `reduce` is set before the first call to *callbackfn*. Elements that are appended to the array after the call to `reduce` begins will not be visited by *callbackfn*. If existing elements of the array are changed, their value as passed to *callbackfn* will be the value at the time `reduce` visits them; elements that are deleted after the call to `reduce` begins and before being visited are not visited.
+`reduce()` returns the value that is returned from the callback function on the final iteration of the array.
+
+### When to not use reduce()
+
+Recursive functions like `reduce()` can be powerful but sometimes difficult to understand,
+especially for less experienced JavaScript developers.
+If code becomes clearer when using other array methods,
+developers must weigh the readability tradeoff against the other benefits
+of using `reduce()`.
+In cases where `reduce()` is the best choice, documentation and semantic variable
+naming can help mitigate readability drawbacks.
+
+### Behavior during array mutations
+
+The `reduce()` method itself does not mutate the array it is used on. However, it is possible for code inside the callback function to mutate the array. These are the possible scenarios of array mutations and how `reduce()` behaves in these scenarios:
+
+- If elements are appended to the array _after_ `reduce()` begins to iterate over the array, the callback function does not iterate over the appended elements.
+- If existing elements of the array do get changed, the values passed to the callback function will be the values from the time that reduce() was first called on the array.
+- Array elements that are deleted _after_ the call to `reduce()` begins _and_ before being iterated over are not visited by `reduce()`.
+
+### Edge cases
 
 If the array only has one element (regardless of position) and no *initialValue* is provided, or if *initialValue* is provided but the array is empty, the solo value will be returned _without_ calling _`callbackFn`._
 
@@ -118,6 +133,8 @@ const getMax = (a, b) => Math.max(a, b);
 
 [      ].reduce(getMax);     // TypeError
 ```
+
+## Examples
 
 ### How reduce() works without an initial value
 
@@ -273,8 +290,6 @@ The callback would be invoked five times, with the arguments and return values i
 
 The value returned by `reduce()` in this case would be `95`.
 
-## Examples
-
 ### Sum all the values of an array
 
 ```js
@@ -343,7 +358,7 @@ let flattened = [[0, 1], [2, 3], [4, 5]].reduce(
 ### Counting instances of values in an object
 
 ```js
-let names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice']
+const names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice']
 
 let countedNames = names.reduce(function (allNames, name) {
   if (name in allNames) {
@@ -361,7 +376,7 @@ let countedNames = names.reduce(function (allNames, name) {
 ### Grouping objects by a property
 
 ```js
-let people = [
+const people = [
   { name: 'Alice', age: 21 },
   { name: 'Max', age: 20 },
   { name: 'Jane', age: 20 }
@@ -394,7 +409,7 @@ let groupedPeople = groupBy(people, 'age')
 ```js
 // friends - an array of objects
 // where object field "books" is a list of favorite books
-let friends = [{
+const friends = [{
   name: 'Anna',
   books: ['Bible', 'Harry Potter'],
   age: 21
@@ -429,7 +444,7 @@ let allbooks = friends.reduce(function(previousValue, currentValue) {
 > duplicate items have been removed.
 
 ```js
-let myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd']
+const myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd']
 let myArrayWithNoDuplicates = myArray.reduce(function (previousValue, currentValue) {
   if (previousValue.indexOf(currentValue) === -1) {
     previousValue.push(currentValue)
@@ -445,7 +460,7 @@ console.log(myArrayWithNoDuplicates)
 Using {{jsxref("Array.filter()")}} then {{jsxref("Array.map()")}} traverses the array
 twice, but you can achieve the same effect while traversing only once with
 {{jsxref("Array.reduce()")}}, thereby being more efficient. (If you like `for` loops, you
-can filter and map while traversing once with {{jsxref("Array.forEach()")}}).
+can filter and map while traversing once with {{jsxref("Array.forEach()")}}.)
 
 ```js
 const numbers = [-5, 6, 2, 0,];

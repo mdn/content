@@ -1,6 +1,7 @@
 ---
 title: FileSystemHandle
 slug: Web/API/FileSystemHandle
+page-type: web-api-interface
 tags:
   - Directories
   - File System Access API
@@ -56,7 +57,7 @@ async function getFile() {
 
   if (fileHandle.kind === 'file') {
     // run file code
-  } else if (fileHandle.kind === 'directory')
+  } else if (fileHandle.kind === 'directory') {
     // run directory code
   }
 

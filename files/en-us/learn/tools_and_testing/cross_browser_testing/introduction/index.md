@@ -70,7 +70,7 @@ In later articles, we'll explore common cross browser problems, and look at solu
 
 ## Workflows for cross browser testing
 
-All of this cross browser testing business may sound time consuming and scary, but it needn't be — you just need to plan carefully for it, and make sure you do enough testing in the right places to make sure you don't run into unexpected problems. If you are working on a large project, you should be testing it regularly, to make sure that new features work for your target audience, and that new additions to the code don't break old features that were previously working.
+All of this cross browser testing business may sound time-consuming and scary, but it needn't be — you just need to plan carefully for it, and make sure you do enough testing in the right places to make sure you don't run into unexpected problems. If you are working on a large project, you should be testing it regularly, to make sure that new features work for your target audience, and that new additions to the code don't break old features that were previously working.
 
 If you leave all the testing to the end of a project, any bugs you uncover will be a lot more expensive and time consuming to fix than if you uncover them and fix them as you go along.
 
@@ -130,12 +130,12 @@ If you haven't got the means to test all those different browser, operating syst
 
 Another option is user groups — using a group of people outside your development team to test your site. This could be a group of friends or family, a group of other employees, a class at a local university, or a professional user testing setup, where people are paid to test out your site and provide results.
 
-Finally, you can get smarter with your testing using auditing or automation tools; this is a sensible choice as your projects get bigger, as doing all this testing by hand can start to take a really long time. You can set up your own testing automation system ([Selenium](https://www.seleniumhq.org/) being the popular app of choice) that could for example load your site in a number of different browsers, and:
+Finally, you can get smarter with your testing using auditing or automation tools; this is a sensible choice as your projects get bigger, as doing all this testing by hand can start to take a really long time. You can set up your own testing automation system ([Selenium](https://www.selenium.dev/) being the popular app of choice) that could for example load your site in a number of different browsers, and:
 
 - see if a button click causes something to happen successfully (like for example, a map displaying), displaying the results once the tests are completed
 - take a screenshot of each, allowing you to see if a layout is consistent across the different browsers.
 
-You can also go further than this, if wished. There are commercial tools available such as [Browserling](https://www.browserling.com), [Sauce Labs](https://saucelabs.com/), [Browser Stack](https://www.browserstack.com/), [Endtest](https://endtest.io), [LambdaTest](https://www.lambdatest.com/), [TestingBot](https://testingbot.com), and [CrossBrowserTesting](https://crossbrowsertesting.com) that do this kind of thing for you, without you having to worry about the setup, if you wish to invest some money in your testing. It is also possible to set up an environment that automatically runs tests for you, and then only lets you check in your changes to the central code repository if the tests still pass.
+If you wish to invest money in testing, there are also commercial tools that can automate much of the setup and testing for you (such as [Sauce Labs](https://saucelabs.com/) and [Browser Stack](https://www.browserstack.com/)). These kinds of tools usually enable a continuous integration workflow, where code changes are automatically tested before they are allowed to be submitted into your code repository.
 
 #### Testing on prerelease browsers
 
@@ -144,7 +144,7 @@ It is often a good idea to test on prerelease versions of browsers; see the foll
 - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
 - [Edge Insider Preview](https://insider.windows.com/)
 - [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
-- [Chrome Canary](https://www.google.com/chrome/browser/canary.html)
+- [Chrome Canary](https://www.google.com/chrome/canary/)
 - [Opera Developer](https://www.opera.com/computer/beta)
 
 This is especially prevalent if you are using very new technologies in your site, and you want to test against the latest implementations, or if you are coming across a bug in the latest release version of a browser, and you want to see if the browser's developers have fixed the bug in a newer version.
@@ -155,7 +155,7 @@ Once you've discovered a bug, you need to try to fix it.
 
 The first thing to do is to narrow down where the bug occurs as much as possible. Get as much information as you can from the person reporting the bug — what platform(s), device(s), browser version(s), etc. Try it on similar configurations (e.g. the same browser version on different desktop platforms, or a few different versions of the same browser on the same platform) to see how widely the bug persists.
 
-It might not be your fault — if a bug exists in a browser, then hopefully the vendor will rapidly fix it. It might have already been fixed — for example if a bug is present in Firefox release 49, but it is no longer there in Firefox Nightly (version 52), then they have fixed it. If it is not fixed, then you may want to file a bug (see {{anch("Reporting bugs")}}, below).
+It might not be your fault — if a bug exists in a browser, then hopefully the vendor will rapidly fix it. It might have already been fixed — for example if a bug is present in Firefox release 49, but it is no longer there in Firefox Nightly (version 52), then they have fixed it. If it is not fixed, then you may want to file a bug (see [Reporting bugs](#reporting_bugs), below).
 
 If it is your fault, you need to fix it! Finding out the cause of the bug involves the same strategy as any web development bug (again, see [Debugging HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML), [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS), and [What went wrong? Troubleshooting JavaScript](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)). Once you've discovered what is causing your bug, you need to decide how to work around it in the particular browser it is causing problems in — you can't just change the problem code outright, as this may break the code in other browsers. The general approach is usually to fork the code in some way, for example use JavaScript feature detection code to detect situations in which a problem feature doesn't work, and run some different code in those cases that does work.
 
@@ -166,10 +166,10 @@ Once a fix has been made, you'll want to repeat your testing process to make sur
 Just to reiterate on what was said above, if you discover bugs in browsers, you should report them:
 
 - [Firefox Bugzilla](https://bugzilla.mozilla.org/)
-- [EdgeHTML issue tracker](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/)
+- [EdgeHTML issue tracker](https://developer.microsoft.com/en-us/microsoft-edge/)
 - [Safari](https://bugs.webkit.org/)
 - [Chrome](https://bugs.chromium.org/p/chromium/issues/list)
-- [Opera](https://bugs.opera.com/wizard/desktop)
+- [Opera](https://help.opera.com/en/computer-bug-wizard/)
 
 ## Summary
 

@@ -1,6 +1,7 @@
 ---
 title: PageTransitionEvent
 slug: Web/API/PageTransitionEvent
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -39,11 +40,11 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 window.addEventListener('pageshow', myFunction);
 
 function myFunction(event) {
-  if (event.persisted) {
-    alert("The page was cached by the browser");
-  } else {
-    alert("The page was NOT cached by the browser");
-  }
+  if (event.persisted) {
+    alert("The page was cached by the browser");
+  } else {
+    alert("The page was NOT cached by the browser");
+  }
 }
 ```
 

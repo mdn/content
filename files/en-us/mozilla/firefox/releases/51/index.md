@@ -42,12 +42,12 @@ tags:
 
 ### Developer Tools
 
-- [Network Monitor now shows a "Blocked" state for network requests.](/en-US/docs/Tools/Network_Monitor#timings)
+- [Network Monitor now shows a "Blocked" state for network requests.](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#timings)
 - [All devtools bugs fixed between Firefox 50 and Firefox 51](https://bugzilla.mozilla.org/buglist.cgi?list_id=13263768&resolution=FIXED&classification=Client%20Software&chfieldto=2016-09-19&query_format=advanced&chfield=resolution&chfieldfrom=2016-08-01&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%20about%3Adebugging&component=Developer%20Tools%3A%20Animation%20Inspector&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Computed%20Styles%20Inspector&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20CSS%20Rules%20Inspector&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20DOM&component=Developer%20Tools%3A%20Font%20Inspector&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20JSON%20Viewer&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Design%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Shared%20Components&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox).
 
 ### WebGL
 
-- [WebGL 2](/en-US/docs/Web/API/WebGL_API) is now enabled by default. See [webglsamples.org/WebGL2Samples](http://webglsamples.org/WebGL2Samples/) for a few demos.
+- [WebGL 2](/en-US/docs/Web/API/WebGL_API) is now enabled by default. See [webglsamples.org/WebGL2Samples](https://webglsamples.org/WebGL2Samples/) for a few demos.
 
   - WebGL 2 provides the {{domxref("WebGL2RenderingContext")}} interface that brings OpenGL ES 3.0 to the {{HTMLElement("canvas")}} element.
   - New features include:
@@ -72,7 +72,7 @@ tags:
   - Supports for the new {{domxref("IDBObjectStore.getKey()")}} method has been added ({{bug(1271506)}}).
   - Supports for {{domxref("IDBCursor.continuePrimaryKey()")}} method has been added ({{bug(1271505)}}).
   - Binary keys are now supported ({{bug(1271500)}}).
-  - See also ["What’s new in IndexedDB 2.0?" – Mozilla hacks](https://hacks.mozilla.org/2016/10/whats-new-in-indexeddb-2-0/)
+  - See also ["What's new in IndexedDB 2.0?" – Mozilla hacks](https://hacks.mozilla.org/2016/10/whats-new-in-indexeddb-2-0/)
 
 ### Canvas
 
@@ -95,7 +95,7 @@ tags:
 - Scripts served with an `image/*`, `video/*`, `audio/*` or `text/csv` MIME type are now blocked and are not loaded or executed. This happen when they are declared using {{HTMLElement("script")}}, or loaded via {{domxref("Worker.importScripts()")}}, {{domxref("Worker.Worker","Worker()")}}, {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} ({{bug(1229267)}} and {{bug(1288361)}}).
 - Support for SHA-1 certificates from publicly-trusted certificate authorities has been removed ({{bug(1302140)}}). See also [Phasing Out SHA-1 on the Public Web](https://blog.mozilla.org/security/2016/10/18/phasing-out-sha-1-on-the-public-web/) for more information.
 - New WoSign and StartCom certificates will no longer be accepted ({{bug(1309707)}}), see [Distrusting New WoSign and StartCom Certificates](https://blog.mozilla.org/security/2016/10/24/distrusting-new-wosign-and-startcom-certificates/) for more information.
-- The [PAC](</en-US/docs/Mozilla/Projects/Necko/Proxy_Auto-Configuration_(PAC)_file>) `FindProxyForURL(url, host)` function now strips paths and queries from https\:// URLs to avoid information leakage (see {{bug(1255474)}}, [Sniffing HTTPS URLS with malicious PAC files](https://www.contextis.com/resources/blog/leaking-https-urls-20-year-old-vulnerability/), or `CVE-2017-5384`).
+- The [PAC](</en-US/docs/Mozilla/Projects/Necko/Proxy_Auto-Configuration_(PAC)_file>) `FindProxyForURL(url, host)` function now strips paths and queries from https\:// URLs to avoid information leakage (see {{bug(1255474)}}, [Sniffing HTTPS URLS with malicious PAC files](https://www.contextis.com/us/blog/leaking-https-urls-20-year-old-vulnerability), or `CVE-2017-5384`).
 
 ### XHR
 
@@ -105,7 +105,7 @@ tags:
 
 ### WebRTC
 
-- The {{domxref("RTCPeerConnection.removeStream()")}} method has been removed. It was deprecated back in Firefox 22, and has been throwing a `NotSupportedError` {{domxref("DOMException")}}for a long time. You need to use {{domxref("RTCPeerConnection.removeTrack()")}} instead, for each track on the stream.
+- The {{domxref("RTCPeerConnection.removeStream()")}} method has been removed. It was deprecated back in Firefox 22, and has been throwing a `NotSupportedError` {{domxref("DOMException")}} for a long time. You need to use {{domxref("RTCPeerConnection.removeTrack()")}} instead, for each track on the stream.
 - WebRTC now supports the VP9 codec by default. When added in Firefox 46, VP9 was disabled by default, but when enabled was the preferred codec; however, it has been moved to be the second choice (after VP8) due to its current level of CPU usage.
 - The method {{domxref("HTMLMediaElement.captureStream()")}}, which returns a {{domxref("MediaStream")}} containing the content of the specified {{HTMLElement("video")}} or {{HTMLElement("audio")}}. It's worth noting that this is prefixed still as `mozCaptureStream()`, and that it doesn't yet exactly match the spec.
 
@@ -119,7 +119,7 @@ tags:
 
 - The {{domxref("DOMImplementation.hasFeature()")}} now returns `true` in all cases ({{bug(984778)}}).
 - The {{domxref("HTMLInputElement")}} and {{domxref("HTMLTextAreaElement")}} properties `selectionStart` and `selectionEnd` now correctly return the current position of the text input cursor when there's no selection, instead of returning 0 ({{bug(1287655)}}).
-- The {{domxref("HTMLImageElement")}} interface and the corresponding {{HTMLElement("img")}} element now support the {{htmlattrxref("onerror")}} event handler, sending {{event("error")}} events to the element whenever [errors occur attempting to load or interpret images](/en-US/docs/Web/API/HTMLImageElement#errors).
+- The {{domxref("HTMLImageElement")}} interface and the corresponding {{HTMLElement("img")}} element now support the {{htmlattrxref("onerror")}} event handler, sending {{domxref("Element/error_event", "error")}} events to the element whenever [errors occur attempting to load or interpret images](/en-US/docs/Web/API/HTMLImageElement#errors).
 - You can now change a Web {{domxref("Animation")}}'s effect by setting the value of its {{domxref("Animation.effect", "effect")}} property. Previously, this property was read-only ({{bug(1049975)}}).
 - The Permissions API method {{domxref("Permissions.revoke()")}} has been put behind a preference (`dom.permissions.revoke.enable`) and disabled by default since its design and even its very existence is under discussion in the [Web Application Security Working Group](https://www.w3.org/2011/webappsec/).
 - The [Storage API](/en-US/docs/Web/API/Storage_API)'s {{domxref("NavigatorStorage.storage", "navigator.storage")}} property and {{domxref("StorageManager.estimate()")}} method have been implemented along with the needed supporting code. Storage unit persistence features are not yet implemented. See {{bug(1267941)}}.
@@ -127,8 +127,8 @@ tags:
 
 ### Events
 
-- Firefox now supports the {{domxref("GlobalEventHandlers.onanimationstart", "onanimationstart")}}, {{domxref("GlobalEventHandlers.onanimationiteration", "onanimationiteration")}}, and {{domxref("GlobalEventHandlers.onanimationstart", "onanimationstart")}} event handlers, in addition to supporting the corresponding events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} ({{bug(911987)}}).
-- Firefox now supports the {{domxref("GlobalEventHandlers.ontransitionend", "ontransitionend")}} event handler ({{bug(911987)}}).
+- Firefox now supports the {{domxref("Element.onanimationstart", "onanimationstart")}}, {{domxref("Element.onanimationiteration", "onanimationiteration")}}, and {{domxref("Element.onanimationstart", "onanimationstart")}} event handlers, in addition to supporting the corresponding events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} ({{bug(911987)}}).
+- Firefox now supports the {{domxref("Element.transitionend_event", "ontransitionend")}} event handler ({{bug(911987)}}).
 
 ### Security
 

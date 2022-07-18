@@ -41,7 +41,7 @@ tags:
 
 - The Network inspector now lets you filter by content type (CSS/image/font etc.) and see the relevant size and load times.
 - The Devtools options panel to the left lets you disable/enable Javascript temporarily.
-- Extension developers may use the new [Browser Console](https://www.robodesign.ro/mihai/blog/the-browser-console-is-replacing-the-error-console) for Chrome-level scripts (Replaces Error Console).
+- Extension developers may use the new [Browser Console](https://mihai.sucan.ro/mihai/blog/the-browser-console-is-replacing-the-error-console) for Chrome-level scripts (Replaces Error Console).
 - The source map syntax has been changed to use `//#` instead of `//@` ({{bug(870361)}}).
 
 ### MathML
@@ -53,11 +53,11 @@ tags:
 ## Changes for add-on and Mozilla developers
 
 - Doc Shells have now the `allowMedia` attribute to disable media playing ({{bug(759964)}}).
-- Sherlock search plugins in the application directory or profile  won't be loaded anymore ({{bug(862143)}}).
+- Sherlock search plugins in the application directory or profile won't be loaded anymore ({{bug(862143)}}).
 
 ## See also
 
-- [Firefox 24 Aurora Notes](https://www.mozilla.org/en-US/firefox/24.0a2/auroranotes/)
+- [Firefox 24 Aurora Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/24.0a2/auroranotes/)
 
 ## Older versions
 

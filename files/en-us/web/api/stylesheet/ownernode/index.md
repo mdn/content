@@ -1,6 +1,7 @@
 ---
 title: StyleSheet.ownerNode
 slug: Web/API/StyleSheet/ownerNode
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -18,16 +19,13 @@ with the document.
 This is usually an HTML
 [`<link>`](/en-US/docs/Web/HTML/Element/link) or
 [`<style>`](/en-US/docs/Web/HTML/Element/style) element, but
-can also return a [processing
-instruction node](/en-US/docs/Web/API/ProcessingInstruction) in the case of `<?xml-stylesheet ?>`.
+can also return a [processing instruction node](/en-US/docs/Web/API/ProcessingInstruction) in the case of `<?xml-stylesheet ?>`.
 
-## Syntax
+## Value
 
-```js
-nodeRef = stylesheet.ownerNode
-```
+A {{domxref("Node")}} object.
 
-## Example
+## Examples
 
 ```html
 <html lang="en">
@@ -35,7 +33,7 @@ nodeRef = stylesheet.ownerNode
   <link rel="stylesheet" href="example.css">
  </head>
  <body>
-   <button onclick="alert(document.styleSheets[0].ownerNode)">Show example.css’s ownerNode</button>
+   <button onclick="alert(document.styleSheets[0].ownerNode)">Show example.css's ownerNode</button>
  </body>
 </html>
 // Displays "object HTMLLinkElement"

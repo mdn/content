@@ -1,6 +1,7 @@
 ---
 title: Window.frameElement
 slug: Web/API/Window/frameElement
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -19,19 +20,13 @@ in which the window is embedded.
 > within any embedding point, including {{HTMLElement("object")}},
 > {{HTMLElement("iframe")}}, or {{HTMLElement("embed")}}.
 
-## Syntax
-
-```js
-const frameEl = window.frameElement
-```
-
-### Value
+## Value
 
 The element which the window is embedded into. If the window isn't embedded into
 another document, or if the document into which it's embedded has a different
 {{glossary("origin")}}, the value is {{jsxref("null")}} instead.
 
-## Example
+## Examples
 
 ```js
 const frameEl = window.frameElement;

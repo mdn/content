@@ -1,6 +1,7 @@
 ---
 title: Event.cancelable
 slug: Web/API/Event/cancelable
+page-type: web-api-instance-property
 tags:
   - Property
   - Read-only
@@ -41,8 +42,7 @@ canceled.
 ## Example
 
 For example, browser vendors are proposing that the {{domxref("Document/wheel_event",
-  "wheel")}} event can only be canceled [the first time
-the listener is called](https://github.com/WICG/interventions/issues/33) — any following `wheel` events cannot be
+  "wheel")}} event can only be canceled [the first time the listener is called](https://github.com/WICG/interventions/issues/33) — any following `wheel` events cannot be
 canceled.
 
 ```js

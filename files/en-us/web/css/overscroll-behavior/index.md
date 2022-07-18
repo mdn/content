@@ -35,6 +35,7 @@ overscroll-behavior: auto contain;
 overscroll-behavior: inherit;
 overscroll-behavior: initial;
 overscroll-behavior: revert;
+overscroll-behavior: revert-layer;
 overscroll-behavior: unset;
 ```
 
@@ -63,7 +64,7 @@ Two keywords specifies the `overscroll-behavior` value on the `x` and `y` axes r
 
 ### Preventing an underlying element from scrolling
 
-In our [overscroll-behavior example](https://mdn.github.io/css-examples/overscroll-behavior/) (see the [source code](https://github.com/mdn/css-examples/tree/master/overscroll-behavior) also), we present a full-page list of fake contacts, and a dialog box containing a chat window.
+In our [overscroll-behavior example](https://mdn.github.io/css-examples/overscroll-behavior/) (see the [source code](https://github.com/mdn/css-examples/tree/main/overscroll-behavior) also), we present a full-page list of fake contacts, and a dialog box containing a chat window.
 
 ![A popup chat window titled 'Active chat', showing a conversation between Chris and Bob. Behind the chat window is a contact list titled 'overscroll-behavior demo'.](example.png)
 
@@ -96,4 +97,4 @@ html {
 
 ## See also
 
-- [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo)
+- [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developer.chrome.com/blog/overscroll-behavior/#demo)

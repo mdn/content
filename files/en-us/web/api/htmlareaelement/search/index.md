@@ -1,6 +1,7 @@
 ---
 title: HTMLAreaElement.search
 slug: Web/API/HTMLAreaElement/search
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAreaElement
@@ -11,7 +12,7 @@ browser-compat: api.HTMLAreaElement.search
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.search`** property is a search
-string, also called a _query string_, that is {{domxref("USVString")}} containing
+string, also called a _query string_, that is a string containing
 a `'?'` followed by the parameters of the URL.
 
 Modern browsers provide
@@ -20,14 +21,9 @@ and
 [`URL.searchParams`](/en-US/docs/Web/API/URL/searchParams#examples)
 to make it easy to parse out the parameters from the querystring.
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = area.search;
-// Setter
-area.search = string;
-```
+A string.
 
 ## Examples
 
@@ -45,7 +41,7 @@ Alternatively, [`URLSearchParams`](/en-US/docs/Web/API/URLSearchParams/get#examp
 
 ```js
 let params = new URLSearchParams(queryString);
-let q = parseInt(params.get("q"); // returns the number 123
+let q = parseInt(params.get("q")); // returns the number 123
 ```
 
 ## Specifications

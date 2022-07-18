@@ -1,6 +1,7 @@
 ---
 title: Navigator.onLine
 slug: Web/API/Navigator/onLine
+page-type: web-api-instance-property
 tags:
   - API
   - DOM Reference
@@ -35,17 +36,11 @@ In Firefox and Internet Explorer, switching the browser to offline mode sends a
 `true` value; testing actual behavior on Nightly 68 on Windows shows that it
 only looks for LAN connection like Chrome and Safari giving false positives.
 
-You can see changes in the network state by listening for the events on [`document.ononline`](/en-US/docs/Web/API/Document/ononline) and [`document.onoffline`](/en-US/docs/Web/API/Document/onoffline).
+You can see changes in the network state by listening to the [`online`](/en-US/docs/Web/API/Window/online_event) and [`offline`](/en-US/docs/Web/API/Window/offline_event) events.
 
-## Syntax
+## Value
 
-```js
-online = window.navigator.onLine;
-```
-
-### Value
-
-`online` is a boolean `true` or `false`.
+A boolean.
 
 ## Examples
 
@@ -62,7 +57,7 @@ if (navigator.onLine) {
 }
 ```
 
-If the browser doesn't support `navigator.onLine` the above example will
+If the browser doesn't support `navigator.onLine` the above example will
 always come out as `false`/`undefined`.
 
 ### Listening for changes in network status
@@ -85,9 +80,3 @@ window.addEventListener('online', function(e) { console.log('online'); });
 ## Browser compatibility
 
 {{Compat}}
-
-## Notes
-
-See [Online/Offline Events](/en-US/docs/Web/API/Navigator/Online_and_offline_events) for a
-more detailed description of this property as well as new offline-related features
-introduced in Firefox 3.

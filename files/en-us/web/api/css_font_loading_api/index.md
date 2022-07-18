@@ -1,6 +1,7 @@
 ---
 title: CSS Font Loading API
 slug: Web/API/CSS_Font_Loading_API
+page-type: web-api-overview
 tags:
   - API
   - CSSFontLoading
@@ -14,7 +15,7 @@ browser-compat: api.FontFace
 
 The CSS Font Loading API provides events and interfaces for dynamically loading font resources.
 
-> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (`self.fonts` provides access to {{domxref('FontFaceSet')}}).
+> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (`self.fonts` provides access to {{domxref('FontFaceSet')}}).
 
 ## Interfaces
 
@@ -30,7 +31,5 @@ The CSS Font Loading API provides events and interfaces for dynamically loading 
 {{Specifications}}
 
 ## Browser compatibility
-
-### FontFace
 
 {{Compat}}

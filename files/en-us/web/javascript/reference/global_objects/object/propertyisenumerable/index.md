@@ -42,7 +42,7 @@ inherited through the prototype chain. If the object does not have the specified
 property, this method returns `false`.
 
 > **Note:** Bear in mind that enumerable properties are looped over by
-> {{jsxref("Statements/for...in", "for...in")}} loops, with the exception of
+> {{jsxref("Statements/for...in", "for...in")}} loops, with the exception of
 > {{jsxref("Global_Objects/Symbol", "Symbol")}}s.
 
 ## Examples
@@ -53,8 +53,8 @@ The following example shows the use of `propertyIsEnumerable` on objects and
 arrays:
 
 ```js
-var o = {};
-var a = [];
+const o = {};
+const a = [];
 o.prop = 'is enumerable';
 a[0] = 'is enumerable';
 
@@ -68,7 +68,7 @@ The following example demonstrates the enumerability of user-defined vs. built-i
 properties:
 
 ```js
-var a = ['is enumerable'];
+const a = ['is enumerable'];
 
 a.propertyIsEnumerable(0);          // returns true
 a.propertyIsEnumerable('length');   // returns false
@@ -80,7 +80,7 @@ this.propertyIsEnumerable('Math');     // returns false
 ### Direct vs. inherited properties
 
 ```js
-var a = [];
+const a = [];
 a.propertyIsEnumerable('constructor');         // returns false
 
 function firstConstructor() {
@@ -96,7 +96,7 @@ function secondConstructor() {
 secondConstructor.prototype = new firstConstructor;
 secondConstructor.prototype.constructor = secondConstructor;
 
-var o = new secondConstructor();
+const o = new secondConstructor();
 o.arbitraryProperty = 'is enumerable';
 
 o.propertyIsEnumerable('arbitraryProperty');   // returns true
@@ -125,8 +125,7 @@ o.propertyIsEnumerable('firstMethod'); // returns false
 
 ## See also
 
-- [Enumerability
-  and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.defineProperty()")}}

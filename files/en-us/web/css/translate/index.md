@@ -34,6 +34,7 @@ translate: 50% 105px 5rem;
 translate: inherit;
 translate: initial;
 translate: revert;
+translate: revert-layer;
 translate: unset;
 ```
 
@@ -62,7 +63,7 @@ translate: unset;
 
 ```html
 <div>
-  <p class="translate">Translation</p>
+  <p class="translate">Translation</p>
 </div>
 ```
 

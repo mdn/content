@@ -1,6 +1,7 @@
 ---
 title: MediaList
 slug: Web/API/MediaList
+page-type: web-api-interface
 tags:
   - API
   - CSSOM
@@ -18,7 +19,7 @@ The **`MediaList`** interface represents the media queries of a stylesheet, e.g.
 ## Properties
 
 - {{domxref("MediaList.mediaText")}}
-  - : A {{Glossary("stringifier")}} that returns a {{domxref("DOMString")}} representing the `MediaList` as text, and also allows you to set a new `MediaList`.
+  - : A {{Glossary("stringifier")}} that returns a string representing the `MediaList` as text, and also allows you to set a new `MediaList`.
 - {{domxref("MediaList.length")}} {{readonlyInline}}
   - : Returns the number of media queries in the `MediaList`.
 
@@ -29,7 +30,7 @@ The **`MediaList`** interface represents the media queries of a stylesheet, e.g.
 - {{domxref("MediaList.deleteMedium()")}}
   - : Removes a media query from the `MediaList`.
 - {{domxref("MediaList.item()")}}
-  - : A getter that returns a {{domxref("CSSOMString")}} representing a media query as text, given the media query's index value inside the `MediaList`.
+  - : A getter that returns a string representing a media query as text, given the media query's index value inside the `MediaList`.
 
 ## Examples
 

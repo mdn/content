@@ -1,6 +1,7 @@
 ---
 title: RTCRtpStreamStats.trackId
 slug: Web/API/RTCRtpStreamStats/trackId
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -25,20 +26,14 @@ the {{domxref("RTCMediaStreamTrackStats")}} object which contains the track stat
 for the {{domxref("MediaStreamTrack")}} for which statistics are provided in this
 object.
 
-## Syntax
+## Value
 
-```js
-var trackID = RTCRtpStreamStats.trackId;
-```
-
-### Value
-
-A {{domxref("DOMString")}} which uniquely identifies the
+A string which uniquely identifies the
 {{domxref("RTCMediaStreamTrackStats")}} object that provides statistics for the track
 for which statistics are being collected by this {{domxref("RTCStatsReport")}}.
 
 > **Note:** This value is _not_ the same as the value of
-> {{domxref("MediaStramTrack.id")}}.
+> {{domxref("MediaStreamTrack.id")}}.
 
 ## Specifications
 

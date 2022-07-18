@@ -1,6 +1,7 @@
 ---
 title: SVGAltGlyphElement
 slug: Web/API/SVGAltGlyphElement
+page-type: web-api-interface
 tags:
   - API
   - Deprecated
@@ -19,9 +20,9 @@ The **`SVGAltGlyphElement`** interface represents an {{ SVGElement("altglyph") }
 _This interface also inherits properties from its parent interface, {{domxref("SVGGraphicsElement")}}._
 
 - {{domxref("SVGAltGlyphElement.glyphRef")}} {{deprecated_inline}}
-  - : It corresponds to the attribute {{ SVGAttr("glyphRef") }} on the given element. It's data type is 'String'. It defines the glyph identifier, whose format is dependent on the ‘format’ of the given font.
+  - : It corresponds to the attribute {{ SVGAttr("glyphRef") }} on the given element. It's data type is 'String'. It defines the glyph identifier, whose format is dependent on the 'format' of the given font.
 - {{domxref("SVGAltGlyphElement.format")}} {{deprecated_inline}}
-  - : It corresponds to the attribute  {{ SVGAttr("format") }} on the given element. It's data type is 'String'. This property specifies the format of the given font.
+  - : It corresponds to the attribute {{ SVGAttr("format") }} on the given element. It's data type is 'String'. This property specifies the format of the given font.
 
 ## Methods
 

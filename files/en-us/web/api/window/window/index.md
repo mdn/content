@@ -1,6 +1,7 @@
 ---
 title: Window.window
 slug: Web/API/Window/window
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -21,7 +22,7 @@ Thus, the following expressions all return the same window object:
 window.window
 window.window.window
 window.window.window.window
-// ...
+// …
 ```
 
 In web pages, the window object is also a _global object_. This means:
@@ -29,7 +30,7 @@ In web pages, the window object is also a _global object_. This means:
 1. global variables of your script are in fact properties of `window`:
 
     ```js
-    var global = {data: 0};
+    const global = {data: 0};
     alert(global === window.global); // displays "true"
     ```
 

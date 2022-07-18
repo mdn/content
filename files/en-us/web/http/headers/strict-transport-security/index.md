@@ -43,7 +43,7 @@ Strict-Transport-Security: max-age=<expire-time>; preload
 - `includeSubDomains` {{optional_inline}}
   - : If this optional parameter is specified, this rule applies to all of the site's subdomains as well.
 - `preload` {{optional_inline}} {{non-standard_inline}}
-  - : See {{anch("Preloading Strict Transport Security")}} for details.
+  - : See [Preloading Strict Transport Security](#preloading_strict_transport_security) for details.
     Not part of the specification.
 
 ## Description
@@ -60,10 +60,10 @@ The HTTP Strict Transport Security header informs the browser that it should nev
 
 ### An example scenario
 
-You log into a free WiFi access point at an airport and start surfing the web, visiting your online banking service to check your balance and pay a couple of bills.
+You log into a free Wi-Fi access point at an airport and start surfing the web, visiting your online banking service to check your balance and pay a couple of bills.
 Unfortunately, the access point you're using is actually a hacker's laptop, and they're intercepting your original HTTP request and redirecting you to a clone of your bank's site instead of the real thing. Now your private data is exposed to the hacker.
 
-Strict Transport Security resolves this problem; as long as you've accessed your bank's web site once using HTTPS, and the bank's web site uses Strict Transport Security, your
+Strict Transport Security resolves this problem; as long as you've accessed your bank's website once using HTTPS, and the bank's web site uses Strict Transport Security, your
 browser will know to automatically use only HTTPS, which prevents hackers from performing this sort of man-in-the-middle attack.
 
 ### How the browser handles it
@@ -78,8 +78,8 @@ Should it be necessary to disable Strict Transport Security, setting the `max-ag
 ## Preloading Strict Transport Security
 
 Google maintains [an HSTS preload service](https://hstspreload.org/).
-By following the guidelines and successfully submitting your domain, browsers will never connect to your domain using an insecure connection.
-While the service is hosted by Google, all browsers have stated an intent to use (or actually started using) the preload list.
+By following the guidelines and successfully submitting your domain, you can ensure that browsers will connect to your domain only via secure connections.
+While the service is hosted by Google, all browsers are using this preload list.
 However, it is not part of the HSTS specification and should not be treated as official.
 
 - Information regarding the HSTS preload list in Chrome : <https://www.chromium.org/hsts>
@@ -96,7 +96,7 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 If a `max-age` of 1 year is acceptable for a domain, however, two years is the recommended value as explained on <https://hstspreload.org>.
 
-In the following example, `max-age` is set to 2 years, and is suffixed with `preload`, which is necessary for inclusion in most major web browsers' HSTS preload lists, like Chromium, Edge, and Firefox.
+In the following example, `max-age` is set to 2 years, and is suffixed with `preload`, which is necessary for inclusion in all major web browsers' HSTS preload lists, like Chromium, Edge, and Firefox.
 
 ```http
 Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
@@ -116,5 +116,5 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 - Blog post: [HTTP Strict Transport Security (force HTTPS)](https://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
 - OWASP Article: [HTTP Strict Transport Security](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
 - Wikipedia: {{interwiki("wikipedia", "HTTP Strict Transport Security")}}
-- Browser test site: [HSTS and HPKP test](https://projects.dm.id.lv/Public-Key-Pins_test)
+- [HSTS preload service](https://hstspreload.org/)
 - [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)

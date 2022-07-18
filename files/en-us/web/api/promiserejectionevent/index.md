@@ -1,6 +1,7 @@
 ---
 title: PromiseRejectionEvent
 slug: Web/API/PromiseRejectionEvent
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -40,9 +41,9 @@ _This interface has no unique methods; inherits methods from its parent {{domxre
 
 ## Events
 
-- {{Event("rejectionhandled")}}
+- {{domxref("Window/rejectionhandled_event", "rejectionhandled")}}
   - : Fired when a JavaScript {{jsxref("Promise")}} is rejected, and after the rejection is handled by the promise's rejection handling code.
-- {{Event("unhandledrejection")}}
+- {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}
   - : Fired when a JavaScript {{jsxref("Promise")}} is rejected but there is no rejection handler to deal with the rejection.
 
 ## Examples
@@ -68,5 +69,5 @@ window.onunhandledrejection = function(e) {
 - [Promises](/en-US/docs/Archive/Add-ons/Techniques/Promises)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
 - {{jsxref("Promise")}}
-- {{domxref("WindowEventHandlers.onrejectionhandled")}}
-- {{domxref("WindowEventHandlers.onunhandledrejection")}}
+- {{domxref("Window/rejectionhandled_event", "rejectionhandled")}}
+- {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}

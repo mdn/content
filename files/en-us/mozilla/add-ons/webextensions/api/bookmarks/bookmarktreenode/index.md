@@ -35,7 +35,7 @@ An {{jsxref("object")}} with the following properties:
   - : A {{jsxref("string")}} which specifies the ID of the parent folder. This property is not present in the root node.
 - `title`
   - : A {{jsxref("string")}} which contains the text displayed for the node in menus and lists of bookmarks.
-- `type`{{optional_inline}}
+- `type` {{optional_inline}}
   - : A {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}} object indicating whether this is a bookmark, a folder, or a separator. Defaults to `"bookmark"` unless `url` is omitted, in which case it defaults to `"folder"`.
 - `unmodifiable` {{optional_inline}}
   - : A {{jsxref("string")}} as described by the type {{WebExtAPIRef('bookmarks.BookmarkTreeNodeUnmodifiable')}}. Represents the reason that the node can't be changed. If the node can be changed, this is omitted.
@@ -48,7 +48,7 @@ An {{jsxref("object")}} with the following properties:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#type-BookmarkTreeNode) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#type-BookmarkTreeNode) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

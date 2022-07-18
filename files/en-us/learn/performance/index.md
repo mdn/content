@@ -18,7 +18,7 @@ The rest of our beginner's learning material tried to stick to web best practice
 
 ## Learning pathway
 
-While knowing HTML, CSS, and JavaScript is needed for implementing many web performance improvement recommendations, knowing how to build applications is not a necessary pre-condition for understanding and measuring web performance. We do however recommend that before you work through this module, you at least get a basic idea of web development by working through our [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web) module.
+While knowing HTML, CSS, and JavaScript is needed for implementing many web performance improvement recommendations, knowing how to build applications is not a necessary pre-condition for understanding and measuring web performance. We do however recommend that before you work through this module, you at least get a basic idea of web development by working through our [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web) module.
 
 It would also be helpful to go a bit deeper into these topics, with modules such as:
 
@@ -37,7 +37,7 @@ This topic contains the following guides. The following is a suggested order for
 - [What is web performance?](/en-US/docs/Learn/Performance/What_is_web_performance)
   - : You know web performance is important, but what is constitutes web performance? This article introduces the components of performance, from web page loading and rendering, including how your content makes it into your users browser to be viewed, to what groups of people we need to consider when thinking about performance.
 - [How do users perceive performance?](/en-US/docs/Learn/Performance/Perceived_performance)
-  - : More important than how fast your website is in milliseconds, is how fast your users perceive your site to be. These perceptions are impacted by actual page load time, idling, responsiveness to user interaction, and the smoothness of scrolling and other animations. In this article, we discuss the various loading metrics, animation, and responsiveness metrics, along with best practices to improve user perception, if not the actual timings.
+  - : More important than how fast your website is in milliseconds, is how fast your users perceive your site to be. These perceptions are impacted by actual page load time, idling, responsiveness to user interaction, and the smoothness of scrolling and other animations. In this article, we discuss the various loading metrics, animation, and responsiveness metrics, along with best practices to improve user perception, if not the actual timings.
 - [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
   - : Now that you understand a few performance metrics, we take a deeper dive into performance tools, metrics, and APIs and how we can make performance part of the web development workflow.
 - [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)

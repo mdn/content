@@ -1,6 +1,7 @@
 ---
 title: DOMImplementation.createDocument()
 slug: Web/API/DOMImplementation/createDocument
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -17,22 +18,27 @@ returns an {{domxref("XMLDocument")}}.
 ## Syntax
 
 ```js
-var doc = document.implementation.createDocument(namespaceURI, qualifiedNameStr, documentType);
+createDocument(namespaceURI, qualifiedNameStr)
+createDocument(namespaceURI, qualifiedNameStr, documentType)
 ```
 
 ### Parameters
 
 - `namespaceURI`
-  - : Is a {{domxref("DOMString")}} containing the namespace URI of the document to be
+  - : A string containing the namespace URI of the document to be
     created, or `null` if the document doesn't belong to one.
 - `qualifiedNameStr`
-  - : Is a {{domxref("DOMString")}} containing the qualified name, that is an optional
+  - : A string containing the qualified name, that is an optional
     prefix and colon plus the local root element name, of the document to be created.
 - `documentType` {{optional_inline}}
   - : Is the {{domxref("DocumentType")}} of the document to be created. It defaults to
     `null`.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 var doc = document.implementation.createDocument ('http://www.w3.org/1999/xhtml', 'html', null);

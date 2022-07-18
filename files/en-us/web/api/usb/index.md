@@ -1,6 +1,7 @@
 ---
 title: USB
 slug: Web/API/USB
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -8,6 +9,7 @@ tags:
   - USB
   - WebUSB
   - WebUSB API
+  - Experimental
 browser-compat: api.USB
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
@@ -27,7 +29,7 @@ None.
 ## Methods
 
 - {{domxref("USB.getDevices()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("USBDevice")}} objects for paired attached devices.
+  - : Returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("USBDevice")}} objects for paired attached devices.
 - {{domxref("USB.requestDevice()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("USBDevice")}} if the specified device is found. Calling this function triggers the user agent's pairing flow.
 

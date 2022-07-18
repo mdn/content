@@ -1,44 +1,46 @@
 ---
 title: FormData.keys()
 slug: Web/API/FormData/keys
+page-type: web-api-instance-method
 tags:
   - API
   - FormData
   - Iterator
   - Method
   - Reference
-  - XMLHttpRequest API
+  - XMLHttpRequest
 browser-compat: api.FormData.keys
 ---
 {{APIRef("XMLHttpRequest")}}
 
-The **`FormData.keys()`** method returns an
-{{jsxref("Iteration_protocols",'iterator')}} allowing to go through all keys contained
-in this object. The keys are {{domxref("USVString")}} objects.
+The **`FormData.keys()`** method returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) which iterates through all keys contained in the {{domxref("FormData")}}. The keys are strings.
 
 > **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
 ## Syntax
 
 ```js
-formData.keys();
+keys()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
-Returns an {{jsxref("Iteration_protocols","iterator")}}.
+An [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) of {{domxref("FormData")}}'s keys.
 
-## Example
+## Examples
 
 ```js
-// Create a test FormData object
-var formData = new FormData();
+const formData = new FormData();
 formData.append('key1', 'value1');
 formData.append('key2', 'value2');
 
 // Display the keys
-for (var key of formData.keys()) {
-   console.log(key);
+for (const key of formData.keys()) {
+  console.log(key);
 }
 ```
 
@@ -59,8 +61,5 @@ key2
 
 ## See also
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using
-  FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

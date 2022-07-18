@@ -17,14 +17,14 @@ This article provides a simple static file server built with pure Node.js withou
 The most popular are:
 
 - [Express](/en-US/docs/Learn/Server-side/Express_Nodejs): A widely used framework.
-- [Hapi.js](https://hapijs.com/): A rich framework for building applications and services
+- [Hapi.js](https://hapi.dev/): A rich framework for building applications and services
 - [Total](https://www.totaljs.com/): The all-in-one Node.js framework, which does not depend on any other framework, or module.
 
 These will not suit every situation. A developer may need to build their own server without other dependencies.
 
 ## Example
 
-A simple static file server built with Node.js:
+A simple static file server built with Node.js:
 
 ```js
 var http = require('http');
@@ -41,7 +41,7 @@ http.createServer(function (request, response) {
 
     var extname = String(path.extname(filePath)).toLowerCase();
     var mimeTypes = {
-        '.html': 'text/html',
+        '.html': 'text/html',
         '.js': 'text/javascript',
         '.css': 'text/css',
         '.json': 'application/json',
@@ -93,11 +93,11 @@ var fs = require('fs');
 var path = require('path');
 ```
 
-Afterward is the function for creating the server. `https.createServer` returns a `Server` object, which we can start up by listening on port 8125.
+Afterward is the function for creating the server. `https.createServer` returns a `Server` object, which we can start up by listening on port 8125.
 
 ```js
 http.createServer(function (request, response) {
-    ...
+    // …
 }).listen(8125);
 console.log('Server running at http://127.0.0.1:8125/');
 ```
@@ -143,7 +143,7 @@ Lastly, we respond to the client with the file information. This function reads 
 
 ```js
 fs.readFile(filePath, function(error, content) {
-    ...
+    // …
 });
 ```
 

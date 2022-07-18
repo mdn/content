@@ -1,6 +1,7 @@
 ---
 title: ServiceWorker.state
 slug: Web/API/ServiceWorker/state
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -18,13 +19,7 @@ of the service worker. It can be one of the following values: `installing`,
 `installed,` `activating`, `activated`, or
 `redundant`.
 
-## Syntax
-
-```js
-someURL = ServiceWorker.state
-```
-
-### Value
+## Value
 
 A {{jsxref("String")}} that can take one of the following values:
 
@@ -41,9 +36,7 @@ A {{jsxref("String")}} that can take one of the following values:
 
 ## Examples
 
-This code snippet is from the [service
-worker registration-events sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([live
-demo](https://googlechrome.github.io/samples/service-worker/registration-events/)). The code listens for any change in the {{domxref("ServiceWorker.state")}}
+This code snippet is from the [service worker registration-events sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([live demo](https://googlechrome.github.io/samples/service-worker/registration-events/)). The code listens for any change in the {{domxref("ServiceWorker.state")}}
 and returns its value.
 
 ```js

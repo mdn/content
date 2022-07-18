@@ -23,7 +23,7 @@ The following JavaScript shells are stand-alone environments, like Perl or Pytho
 
 The following JavaScript shells work with Mozilla.
 
-- Firefox has a [built-in JavaScript console](/en-US/docs/Tools/Web_Console/The_command_line_interpreter), which support multi-line editing.
-- [Babel REPL](https://babeljs.io/repl) - A browser-based [REPL](https://en.wikipedia.org/wiki/REPL) for experimenting with future JavaScript.
+- Firefox has a [built-in JavaScript console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html), which support multi-line editing.
+- [Babel REPL](https://babeljs.io/repl) - A browser-based [REPL](https://en.wikipedia.org/wiki/REPL) for experimenting with future JavaScript.
 - [ES6Console.com](https://es6console.com) - An open-source JavaScript console to test ECMAScript 2015 code inside the browser.
-- [jsconsole.com](https://jsconsole.com/) -- An open-source JavaScript console with the ability to easily link to particular expressions
+- [jsconsole.com](https://jsconsole.com/) — An open-source JavaScript console with the ability to easily link to particular expressions

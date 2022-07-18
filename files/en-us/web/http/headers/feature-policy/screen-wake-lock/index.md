@@ -32,10 +32,7 @@ Default allow list for `screen-wake-lock` is `'self'`.
 
 ## Specifications
 
-| Specification                                                                                         | Status                               | Comment                                                     |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------- |
-| {{SpecName('Feature Policy')}}                                                              | {{Spec2('Feature Policy')}} | Initial definition.                                         |
-| [Screen Wake Lock API](https://w3c.github.io/screen-wake-lock/#the-screen-wake-lock-powerful-feature) | Editor's Draft                       | Initial definition of `screen-wake-lock` feature directive. |
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -47,4 +44,4 @@ Default allow list for `screen-wake-lock` is `'self'`.
 - {{HTTPHeader('Feature-Policy')}} header
 - [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
 - [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
-- [Default value of the allow list](https://www.w3.org/TR/wake-lock/#wake-locks)
+- [Default value of the allow list](https://www.w3.org/TR/screen-wake-lock/#wake-locks)

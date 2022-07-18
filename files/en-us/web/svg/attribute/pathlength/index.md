@@ -4,12 +4,13 @@ slug: Web/SVG/Attribute/pathLength
 tags:
   - SVG
   - SVG Attribute
+spec-urls: https://svgwg.org/svg2-draft/paths.html#PathLengthAttribute
 ---
 {{SVGRef}}
 
-The **`pathLength`** attribute lets authors specify a total length for the path, in user units. This value is then used to calibrate the browser's distance calculations with those of the author, by scaling all distance computations using the ratio `pathLength`/(*computed value of path length*).
+The **`pathLength`** attribute lets authors specify a total length for the path, in user units. This value is then used to calibrate the browser's distance calculations with those of the author, by scaling all distance computations using the ratio `pathLength`/(*computed value of path length*).
 
-This can affect the actual rendered lengths of paths; including text paths, animation paths, and various stroke operations. Basically, all computations that require the length of the path. {{SVGAttr('stroke-dasharray')}}, for example, will assume the start of the path being 0 and the end point the value defined in the `pathLength` attribute.
+This can affect the actual rendered lengths of paths; including text paths, animation paths, and various stroke operations. Basically, all computations that require the length of the path. {{SVGAttr('stroke-dasharray')}}, for example, will assume the start of the path being 0 and the end point the value defined in the `pathLength` attribute.
 
 You can use this attribute with the following SVG elements:
 
@@ -234,28 +235,4 @@ For {{SVGElement('rect')}}, `pathLength` lets authors specify a total length for
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "paths.html#PathLengthAttribute", "pathLength")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "paths.html#PathLengthAttribute", "pathLength")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}

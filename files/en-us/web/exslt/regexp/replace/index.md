@@ -40,4 +40,4 @@ The revised version of the string.
 
 ## Specifications
 
-[EXSLT - REGEXP:REPLACE](http://www.exslt.org/regexp/functions/replace/index.html)
+[EXSLT - REGEXP:REPLACE](http://exslt.org/regexp/functions/replace/index.html)

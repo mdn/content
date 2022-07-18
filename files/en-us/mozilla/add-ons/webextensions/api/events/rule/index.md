@@ -21,15 +21,15 @@ Description of a declarative rule for handling events.
 
 Values of this type are objects. They contain the following properties:
 
-- `id`{{optional_inline}}
+- `id` {{optional_inline}}
   - : `string`. Optional identifier that allows referencing this rule.
-- `tags`{{optional_inline}}
+- `tags` {{optional_inline}}
   - : `array` of `string`. Tags can be used to annotate rules and perform operations on sets of rules.
 - `conditions`
   - : `array` of `any`. List of conditions that can trigger the actions.
 - `actions`
   - : `array` of `any`. List of actions that are triggered if one of the conditions is fulfilled.
-- `priority`{{optional_inline}}
+- `priority` {{optional_inline}}
   - : `integer`. Optional priority of this rule. Defaults to 100.
 
 ## Browser compatibility
@@ -38,7 +38,7 @@ Values of this type are objects. They contain the following properties:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.events`](https://developer.chrome.com/extensions/events#type-Rule) API. This documentation is derived from [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.events`](https://developer.chrome.com/docs/extensions/reference/events/#type-Rule) API. This documentation is derived from [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

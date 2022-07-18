@@ -1,6 +1,7 @@
 ---
 title: AudioParam.setValueAtTime()
 slug: Web/API/AudioParam/setValueAtTime
+page-type: web-api-instance-method
 tags:
   - API
   - AudioParam
@@ -20,20 +21,19 @@ The `setValueAtTime()` method of the
 ## Syntax
 
 ```js
-var AudioParam = AudioParam.setValueAtTime(value, startTime)
+setValueAtTime(value, startTime)
 ```
 
 ### Parameters
 
-- value
+- `value`
   - : A floating point number representing the value the AudioParam will change to at the
     given time.
-- startTime
+- `startTime`
   - : A double representing the time (in seconds) after the {{domxref("AudioContext")}}
-    was first created that the change in value will happen. A {{jsxref("TypeError")}} is
-    thrown if this value is negative.
+    was first created that the change in value will happen. If the time is less than {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}, the change happens immediately. A {{jsxref("TypeError")}} is thrown if this value is negative.
 
-### Returns
+### Return value
 
 A reference to this `AudioParam` object. In some browsers older
 implementations of this interface return {{jsxref('undefined')}}.
@@ -41,9 +41,7 @@ implementations of this interface return {{jsxref('undefined')}}.
 ## Examples
 
 This simple example features a media element source with two control buttons (see our
-[webaudio-examples
-repo](https://github.com/mdn/webaudio-examples/blob/master/audio-param/index.html) for the source code, or [view the example
-live](https://mdn.github.io/webaudio-examples/audio-param/)). When the buttons are pressed, the `currGain` variable is
+[webaudio-examples repo](https://github.com/mdn/webaudio-examples/blob/master/audio-param/index.html) for the source code, or [view the example live](https://mdn.github.io/webaudio-examples/audio-param/)). When the buttons are pressed, the `currGain` variable is
 incremented/decremented by 0.25, then the `setValueAtTime()` method is used
 to set the gain value equal to `currGain`, one second from now
 (`audioCtx.currentTime + 1`.)

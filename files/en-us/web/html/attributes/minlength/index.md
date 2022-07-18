@@ -10,6 +10,9 @@ tags:
   - Reference
   - minlength
   - textarea
+browser-compat:
+  - html.elements.input.attributes.minlength
+  - html.elements.textarea.minlength
 ---
 
 {{HTMLSidebar}}
@@ -44,32 +47,11 @@ input:invalid:focus {
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'input.html#attr-input-minlength', 'minlength attribute')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5.1', 'input.html#attr-minlength-accept', 'minlength attribute')}}
-      </td>
-      <td>{{Spec2('HTML5.1')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("html.elements.attribute.minlength")}}
+{{Compat}}
 
 ## See also
 

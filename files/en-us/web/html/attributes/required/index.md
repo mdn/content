@@ -7,6 +7,7 @@ tags:
   - Constraint validation
   - Forms
   - required
+browser-compat: html.elements.attributes.required
 ---
 
 {{HTMLSidebar}}
@@ -17,7 +18,7 @@ The `required` attribute is supported by `{{HTMLElement("input/text","text")}}`,
 
 The attribute is not supported or relevant to {{HTMLElement("input/range","range")}} and {{HTMLElement("input/color","color")}}, as both have default values. It is also not supported on {{HTMLElement("input/hidden","hidden")}} as it can not be expected that a user to fill out a form that is hidden. Nor is it supported on any of the button types, including `image`.
 
-Note `color` and `range` don't support `required`, but type `color` defaults to `#000000`, and `range` defaults to the midpoint between `min` and `max` -- with `min` and `max` defaulting to 0 and 100 respectively in most browsers if not declared -- so always has a value.
+Note `color` and `range` don't support `required`, but type `color` defaults to `#000000`, and `range` defaults to the midpoint between `min` and `max` — with `min` and `max` defaulting to 0 and 100 respectively in most browsers if not declared — so always has a value.
 
 In the case of a same named group of {{HTMLElement("input/radio","radio")}} buttons, if a single radio button in the group has the `required` attribute, a radio button in that group must be checked, although it doesn't have to be the one with the attribute is applied. So to improve code maintenance, it is recommended to either include the `required` attribute in every same-named radio button in the group, or else in none.
 
@@ -65,42 +66,11 @@ Provide an indication to users informing them the form control is required. Ensu
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'forms.html#attr-input-required', 'required attribute')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5 W3C', 'forms.html#attr-input-required', 'required attribute')}}
-      </td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5.1', 'sec-forms.html#the-required-attribute', 'required attribute')}}
-      </td>
-      <td>{{Spec2('HTML5.1')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("html.elements.attributes.required")}}
+{{Compat}}
 
 ## See also
 

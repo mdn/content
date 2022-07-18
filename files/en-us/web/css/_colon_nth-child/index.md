@@ -14,22 +14,17 @@ browser-compat: css.selectors.nth-child
 
 The **`:nth-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among a group of siblings.
 
-```css
-/* Selects the second <li> element in a list */
-li:nth-child(2) {
-  color: lime;
-}
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-child.html", "tabbed-shorter")}}
 
-/* Selects every fourth element
-   among any group of siblings */
-:nth-child(4n) {
-  color: lime;
-}
-```
+Note that, in the `element:nth-child()` syntax, the child count includes children of any element type; but it is considered a match only if the element *at that child position* is of the specified element type.
 
 ## Syntax
 
 `:nth-child()` takes a single argument that describes a pattern for matching element indices in a list of siblings. Element indices are 1-based.
+
+```
+:nth-child( <nth> [ of <complex-selector-list> ]? )
+```
 
 ### Keyword values
 
@@ -49,10 +44,6 @@ li:nth-child(2) {
     - `n` is all nonnegative integers, starting from 0.
 
     It can be read as the *An+B*th element of a list.
-
-### Formal syntax
-
-{{csssyntax}}
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: Notification.permission
 slug: Web/API/Notification/permission
+page-type: web-api-static-property
 tags:
   - API
   - Notification
@@ -16,22 +17,19 @@ The `permission` read-only property of the {{domxref("Notification")}}
 interface indicates the current permission granted by the user for the current origin to
 display web notifications.
 
-## Syntax
+## Value
 
-```js
-var permission = Notification.permission;
-```
+A string representing the current permission. The value can be:
 
-### Value
-
-A {{domxref("DOMString")}} representing the current permission. The value can be:
-
-- `granted`: The user has explicitly granted permission for the current
-  origin to display system notifications.
-- `denied`: The user has explicitly denied permission for the current
-  origin to display system notifications.
-- `default`: The user decision is unknown; in this case the application
-  will act as if permission was `denied`.
+- `granted`
+  - : The user has explicitly granted permission for the current
+    origin to display system notifications.
+- `denied`
+  - : The user has explicitly denied permission for the current
+    origin to display system notifications.
+- `default`
+  - : The user decision is unknown; in this case the application
+    will act as if permission was `denied`.
 
 ## Examples
 
@@ -49,7 +47,7 @@ function notifyMe() {
   // Let's check whether notification permissions have already been granted
   else if (Notification.permission === "granted") {
     // If it's okay let's create a notification
-    var notification = new Notification("Hi there!");
+    let notification = new Notification("Hi there!");
   }
 
   // Otherwise, we need to ask the user for permission
@@ -57,7 +55,7 @@ function notifyMe() {
     Notification.requestPermission(function (permission) {
       // If the user accepts, let's create a notification
       if (permission === "granted") {
-        var notification = new Notification("Hi there!");
+        let notification = new Notification("Hi there!");
       }
     });
   }
@@ -77,9 +75,7 @@ function notifyMe() {
 
 ## See also
 
-- [Notifications API](/docs/Web/API/Notifications_API)
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Notifications API](/en-US/docs/Web/API/Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
 - [Permissions API](/en-US/docs/Web/API/Permissions_API)
-- [Using the
-  Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API)
+- [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API)

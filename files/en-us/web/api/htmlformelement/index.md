@@ -1,6 +1,7 @@
 ---
 title: HTMLFormElement
 slug: Web/API/HTMLFormElement
+page-type: web-api-interface
 tags:
   - API
   - Form Element
@@ -24,22 +25,22 @@ _This interface also inherits properties from its parent, {{domxref("HTMLElement
 
 - {{domxref("HTMLFormElement.elements")}} {{ReadOnlyInline}}
   - : A {{domxref("HTMLFormControlsCollection")}} holding all form controls belonging to this form element.
-- {{domxref("HTMLFormElement.length")}}{{ReadOnlyInline}}
+- {{domxref("HTMLFormElement.length")}} {{ReadOnlyInline}}
   - : A `long` reflecting the number of controls in the form.
 - {{domxref("HTMLFormElement.name")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("name", "form") }} HTML attribute, containing the name of the form.
+  - : A string reflecting the value of the form's {{ htmlattrxref("name", "form") }} HTML attribute, containing the name of the form.
 - {{domxref("HTMLFormElement.method")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("method", "form") }} HTML attribute, indicating the HTTP method used to submit the form. Only specified values can be set.
+  - : A string reflecting the value of the form's {{ htmlattrxref("method", "form") }} HTML attribute, indicating the HTTP method used to submit the form. Only specified values can be set.
 - {{domxref("HTMLFormElement.target")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("target", "form") }} HTML attribute, indicating where to display the results received from submitting the form.
+  - : A string reflecting the value of the form's {{ htmlattrxref("target", "form") }} HTML attribute, indicating where to display the results received from submitting the form.
 - {{domxref("HTMLFormElement.action")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("action", "form") }} HTML attribute, containing the URI of a program that processes the information submitted by the form.
+  - : A string reflecting the value of the form's {{ htmlattrxref("action", "form") }} HTML attribute, containing the URI of a program that processes the information submitted by the form.
 - {{domxref("HTMLFormElement.encoding")}} or {{domxref("HTMLFormElement.enctype")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("enctype", "form") }} HTML attribute, indicating the type of content that is used to transmit the form to the server. Only specified values can be set. The two properties are synonyms.
+  - : A string reflecting the value of the form's {{ htmlattrxref("enctype", "form") }} HTML attribute, indicating the type of content that is used to transmit the form to the server. Only specified values can be set. The two properties are synonyms.
 - {{domxref("HTMLFormElement.acceptCharset")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("accept-charset", "form") }} HTML attribute, representing the character encoding that the server accepts.
+  - : A string reflecting the value of the form's {{ htmlattrxref("accept-charset", "form") }} HTML attribute, representing the character encoding that the server accepts.
 - {{domxref("HTMLFormElement.autocomplete")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("autocomplete", "form") }} HTML attribute, indicating whether the controls in this form can have their values automatically populated by the browser.
+  - : A string reflecting the value of the form's {{ htmlattrxref("autocomplete", "form") }} HTML attribute, indicating whether the controls in this form can have their values automatically populated by the browser.
 - {{domxref("HTMLFormElement.noValidate")}}
   - : A boolean value reflecting the value of the form's {{ htmlattrxref("novalidate", "form") }} HTML attribute, indicating whether the form should not be validated.
 
@@ -63,7 +64,7 @@ _This interface also inherits methods from its parent, {{domxref("HTMLElement")}
 ### Deprecated methods
 
 - {{domxref("HTMLFormElement.requestAutocomplete()")}} {{deprecated_inline}}
-  - : Triggers a native browser interface to assist the user in completing the fields which have an [autofill field name](https://html.spec.whatwg.org/#autofill-field-name) value that is not `off` or `on`. The form will receive an event once the user has finished with the interface, the event will either be {{event("autocomplete")}} when the fields have been filled or {{event("autocompleteerror")}} when there was a problem.
+  - : Triggers a native browser interface to assist the user in completing the fields which have an [autofill field name](https://html.spec.whatwg.org/#autofill-field-name) value that is not `off` or `on`. The form will receive an event once the user has finished with the interface, the event will either be `autocomplete` when the fields have been filled or `autocompleteerror` when there was a problem.
 
 ## Events
 
@@ -102,12 +103,12 @@ You can also get the form's element by using its `name` attribute as a key of th
 
 ### Issues with Naming Elements
 
-Some names will interfere with JavaScript access to the form’s properties and elements.
+Some names will interfere with JavaScript access to the form's properties and elements.
 
 For example:
 
-- `<input name="id">` will take precedence over `<form id="…">`. This means that `form.id` will not refer to the form’s id, but to the element whose name is "`id`". This will be the case with any other form properties, such as `<input name="action">` or `<input name="post">`.
-- `<input name="elements">` will render the form’s `elements` collection inaccessible. The reference `form.elements` will now refer to the individual element.
+- `<input name="id">` will take precedence over `<form id="…">`. This means that `form.id` will not refer to the form's id, but to the element whose name is "`id`". This will be the case with any other form properties, such as `<input name="action">` or `<input name="post">`.
+- `<input name="elements">` will render the form's `elements` collection inaccessible. The reference `form.elements` will now refer to the individual element.
 
 To avoid such problems with element names:
 
@@ -159,11 +160,11 @@ Extract information from a `<form>` element and set some of its attributes:
 <script>
   function getFormInfo(){
     // Get a reference to the form via its name
-    var f = document.forms["formA"];
+    const f = document.forms["formA"];
     // The form properties we're interested in
-    var properties = [ 'elements', 'length', 'name', 'charset', 'action', 'acceptCharset', 'action', 'enctype', 'method', 'target' ];
+    const properties = [ 'elements', 'length', 'name', 'charset', 'action', 'acceptCharset', 'action', 'enctype', 'method', 'target' ];
     // Iterate over the properties, turning them into a string that we can display to the user
-    var info = properties.map(function(property) { return property + ": " + f[property] }).join("\n");
+    const info = properties.map(function(property) { return property + ": " + f[property] }).join("\n");
 
     // Set the form's <textarea> to display the form's properties
     document.forms["formA"].elements['form-info'].value = info; // document.forms["formA"]['form-info'].value would also work

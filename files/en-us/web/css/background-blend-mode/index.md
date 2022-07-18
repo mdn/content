@@ -26,9 +26,10 @@ background-blend-mode: normal;
 background-blend-mode: darken, luminosity;
 
 /* Global values */
-background-blend-mode: initial;
 background-blend-mode: inherit;
+background-blend-mode: initial;
 background-blend-mode: revert;
+background-blend-mode: revert-layer;
 background-blend-mode: unset;
 ```
 
@@ -51,10 +52,10 @@ background-blend-mode: unset;
 
 ```css
 .item {
-    width: 300px;
-    height: 300px;
-    background: url('image1.png'),url('image2.png');
-    background-blend-mode: screen;
+    width: 300px;
+    height: 300px;
+    background: url('image1.png'),url('image2.png');
+    background-blend-mode: screen;
 }
 ```
 

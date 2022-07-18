@@ -1,6 +1,7 @@
 ---
 title: MediaKeyStatusMap.forEach()
 slug: Web/API/MediaKeyStatusMap/forEach
+page-type: web-api-instance-method
 tags:
   - API
   - EncryptedMediaExtensions
@@ -20,28 +21,41 @@ the callback.
 ## Syntax
 
 ```js
-mediaKeyStatusMap.forEach(callback[, thisArg])
+// Arrow function
+forEach((currentValue) => { /* … */ } )
+forEach((currentValue, index) => { /* … */ } )
+forEach((currentValue, index, array) => { /* … */ } )
+
+// Callback function
+forEach(callbackFn)
+forEach(callbackFn, thisArg)
+
+// Inline callback function
+forEach(function(currentValue) { /* … */ })
+forEach(function(currentValue, index) { /* … */ })
+forEach(function(currentValue, index, array){ /* … */ })
+forEach(function(currentValue, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
-- `callback`
+- `callbackFn`
 
   - : Function to execute for each element, taking three arguments:
 
     - `currentValue`
       - : The current element being processed in the array.
-    - `index`
+    - `index` {{optional_inline}}
       - : The index of the current element being processed in the array.
-    - `array`
+    - `array` {{optional_inline}}
       - : Which array `forEach()` is being applied to.
 
-- `thisArg {{Optional_inline}}`
+- `thisArg` {{optional_inline}}
   - : Value used as `this` when executing `callback`.
 
-### Returns
+### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

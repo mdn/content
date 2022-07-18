@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.labels
 slug: Web/API/HTMLSelectElement/labels
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -15,18 +16,12 @@ The **`HTMLSelectElement.labels`** read-only property returns a
 {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with the
 {{HTMLElement("select")}} element.
 
-## Syntax
-
-```js
-var labelElements = select.labels;
-```
-
-### Return value
+## Value
 
 A {{domxref("NodeList")}} containing the `<label>` elements associated
 with the `<select>` element.
 
-## Example
+## Examples
 
 ### HTML
 
@@ -50,7 +45,7 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-{{EmbedLiveSample("Example", "100%", 30)}}
+{{EmbedLiveSample("Examples", "100%", 30)}}
 
 ## Specifications
 

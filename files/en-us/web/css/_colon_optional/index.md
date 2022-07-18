@@ -27,11 +27,13 @@ This pseudo-class is useful for styling fields that are not required to submit a
 
 ## Syntax
 
-{{csssyntax}}
+```
+:optional
+```
 
 ## Examples
 
-### The optional field has a purple border
+### The optional field has a purple border
 
 #### HTML
 

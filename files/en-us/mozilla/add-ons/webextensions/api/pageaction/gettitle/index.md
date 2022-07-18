@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingTitle = browser.pageAction.getTitle(
+let gettingTitle = browser.pageAction.getTitle(
   details // object
 )
 ```
@@ -54,7 +54,7 @@ function gotTitle(title) {
 }
 
 browser.pageAction.onClicked.addListener((tab) => {
-  var gettingTitle = browser.pageAction.getTitle({
+  let gettingTitle = browser.pageAction.getTitle({
     tabId: tab.id
   });
   gettingTitle.then(gotTitle);
@@ -63,7 +63,7 @@ browser.pageAction.onClicked.addListener((tab) => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction#method-getTitle) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/reference/pageAction/#method-getTitle) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

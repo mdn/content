@@ -1,11 +1,13 @@
 ---
 title: InputDeviceCapabilities API
 slug: Web/API/InputDeviceCapabilities_API
+page-type: web-api-overview
 tags:
   - API
   - InputDeviceCapabilities
   - Overview
   - Reference
+browser-compat: api.InputDeviceCapabilities
 ---
 {{DefaultAPISidebar("InputDeviceCapabilities API")}}{{SeeCompatTable}}
 
@@ -13,9 +15,9 @@ The InputDeviceCapabilities API provides details about the underlying sources of
 
 ## Input device capabilities concepts and usage
 
-Because DOM events abstract device input, they provide no way to learn what device or type of device fired an event. This can lead to instances where the same action triggers multiple event handlers.  To deal with this, developers make assumptions and use heuristics to normalize behavior on web pages.
+Because DOM events abstract device input, they provide no way to learn what device or type of device fired an event. This can lead to instances where the same action triggers multiple event handlers.  To deal with this, developers make assumptions and use heuristics to normalize behavior on web pages.
 
-The InputDeviceCapabilities API addresses this problem by abstracting the capabilities of input devices. For example, let's say we have a web page that implements both a `touchstart` and a `mousedown` event. We can assume that if the touchstart event is triggered that the user's device has a touch interface.  What about when the mousedown event is triggered? It would be useful to know if a `touchstart` event were also triggered so that we don't take the same action twice. We can do this by checking the sourceCapabilities property of the {{domxref("UIEvent")}}.
+The InputDeviceCapabilities API addresses this problem by abstracting the capabilities of input devices. For example, let's say we have a web page that implements both a `touchstart` and a `mousedown` event. We can assume that if the touchstart event is triggered that the user's device has a touch interface.  What about when the mousedown event is triggered? It would be useful to know if a `touchstart` event were also triggered so that we don't take the same action twice. We can do this by checking the sourceCapabilities property of the {{domxref("UIEvent")}}.
 
 ```js
 myButton.addEventListener('mousedown', function(e) {
@@ -32,10 +34,8 @@ myButton.addEventListener('mousedown', function(e) {
 
 ## Specifications
 
-| Specification                                        | Status                                           | Comment             |
-| ---------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("InputDeviceCapabilities")}} | {{Spec2("InputDeviceCapabilities")}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.InputDeviceCapabilities")}}
+{{Compat}}

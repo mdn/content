@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var duplicating = browser.tabs.duplicate(
+let duplicating = browser.tabs.duplicate(
   tabId,              // integer
   duplicateProperties // optional object
 )
@@ -64,13 +64,13 @@ function onError(error) {
 function duplicateFirstTab(tabs) {
   console.log(tabs);
   if (tabs.length > 0) {
-    var duplicating = browser.tabs.duplicate(tabs[0].id);
+    let duplicating = browser.tabs.duplicate(tabs[0].id);
     duplicating.then(onDuplicated, onError);
   }
 }
 
 // Query for all open tabs
-var querying = browser.tabs.query({});
+let querying = browser.tabs.query({});
 querying.then(duplicateFirstTab, onError);
 ```
 
@@ -80,7 +80,7 @@ querying.then(duplicateFirstTab, onError);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-duplicate) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-duplicate) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

@@ -1,6 +1,7 @@
 ---
 title: 'XRQuadLayer: redraw event'
 slug: Web/API/XRQuadLayer/redraw_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -51,7 +52,7 @@ quadLayer.addEventListener("redraw", function(event) {
 });
 ```
 
-Alternatively, you can use the `onredraw` event handler property to establish a handler for the `redraw` event:
+Alternatively, you can use the `onredraw` event handler property to establish a handler for the `redraw` event:
 
 ```js
 quadLayer.onredraw = function(event) {

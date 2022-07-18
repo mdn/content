@@ -23,28 +23,15 @@ is called.
 
 ```js
 bind(thisArg)
-bind(thisArg, arg1)
-bind(thisArg, arg1, arg2)
-bind(thisArg, arg1, ... , argN)
+bind(thisArg, arg1, …, argN)
 ```
 
 ### Parameters
 
 - `thisArg`
-  - : The value to be passed as the `this` parameter to the target function
-    `func` when the bound function is called. The value is ignored
-    if the bound function is constructed using the {{jsxref("Operators/new", "new")}}
-    operator. When using `bind` to create a function (supplied as a callback)
-    inside a `setTimeout`, any primitive value passed as
-    `thisArg` is converted to object. If no arguments are provided
-    to `bind`, or if the `thisArg` is
-    `null` or `undefined`, the
-    `this` of the executing scope is treated as the
-    `thisArg` for the new function.
-- `arg1, arg2, ...argN`
-  {{optional_inline}}
-  - : Arguments to prepend to arguments provided to the bound function when invoking
-    `func`.
+  - : The value to be passed as the `this` parameter to the target function `func` when the bound function is called. If the function is not in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) will be replaced with the global object, and primitive values will be converted to objects. The value is ignored if the bound function is constructed using the {{jsxref("Operators/new", "new")}} operator.
+- `arg1, …, argN` {{optional_inline}}
+  - : Arguments to prepend to arguments provided to the bound function when invoking `func`.
 
 ### Return value
 
@@ -61,7 +48,7 @@ of its wrapped function.
 A bound function has the following internal properties:
 
 - **`[[BoundTargetFunction]]`**
-  - : The wrapped function object
+  - : The wrapped function object.
 - **`[[BoundThis]]`**
   - : The value that is always passed as `this` value when calling the wrapped
     function.
@@ -100,10 +87,10 @@ Without special care, however, the original object is usually lost. Creating a b
 function from the function, using the original object, neatly solves this problem:
 
 ```js
-this.x = 9;    // 'this' refers to global 'window' object here in a browser
+this.x = 9;    // 'this' refers to the global object (e.g. 'window') in non-strict mode
 const module = {
   x: 81,
-  getX: function() { return this.x; }
+  getX() { return this.x; }
 };
 
 module.getX();
@@ -120,6 +107,10 @@ const boundGetX = retrieveX.bind(module);
 boundGetX();
 //  returns 81
 ```
+
+> **Note:** If you run this example in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) (e.g. in ECMAScript modules, or through the `"use strict"` directive), the global `this` value will be undefined, causing the `retrieveX` call to fail.
+>
+> If you run this in a Node CommonJS module, the top-scope `this` will be pointing to `module.exports` instead of `globalThis`, regardless of being in strict mode or not. However, in functions, the reference of unbound `this` still follows the rule of "`globalThis` in non-strict, `undefined` in strict". Therefore, in non-strict mode (default), `retrieveX` will return `undefined` because `this.x = 9` is writing to a different object (`module.exports`) from what `getX` is reading from (`globalThis`).
 
 ### Partially applied functions
 
@@ -146,15 +137,15 @@ const result1 = addArguments(1, 2);
 //  3
 
 // Create a function with a preset leading argument
-const leadingThirtysevenList = list.bind(null, 37);
+const leadingThirtySevenList = list.bind(null, 37);
 
 // Create a function with a preset first argument.
 const addThirtySeven = addArguments.bind(null, 37);
 
-const list2 = leadingThirtysevenList();
+const list2 = leadingThirtySevenList();
 //  [37]
 
-const list3 = leadingThirtysevenList(1, 2, 3);
+const list3 = leadingThirtySevenList(1, 2, 3);
 //  [37, 1, 2, 3]
 
 const result2 = addThirtySeven(5);
@@ -280,7 +271,7 @@ In the following piece of code, `slice()` is a bound function to the
 {{jsxref("Function.prototype.apply()", "apply()")}} function of
 {{jsxref("Function")}}, with the `this` value set to the
 {{jsxref("Array.prototype.slice()", "slice()")}} function of
-{{jsxref("Array.prototype")}}. This means that additional `apply()` calls can
+`Array.prototype`. This means that additional `apply()` calls can
 be eliminated:
 
 ```js

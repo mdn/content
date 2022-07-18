@@ -1,6 +1,7 @@
 ---
 title: XRPose.angularVelocity
 slug: Web/API/XRPose/angularVelocity
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -21,7 +22,7 @@ the angular velocity in radians per second relative to the base
 
 A {{DOMxRef("DOMPointReadOnly")}} describing the angular velocity in radians
 per second relative to the base {{DOMxRef("XRSpace")}}. Returns {{jsxref("null")}}
-if the user agent can’t populate this value.
+if the user agent can't populate this value.
 
 ## Specifications
 

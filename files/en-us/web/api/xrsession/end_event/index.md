@@ -1,6 +1,7 @@
 ---
 title: 'XRSession: end event'
 slug: Web/API/XRSession/end_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -12,7 +13,7 @@ browser-compat: api.XRSession.end_event
 ---
 {{APIRef("WebXR Device API")}}
 
-An `end` event is fired at an {{DOMxRef("XRSession")}} object when the WebXR session has ended, either because the web application has chosen to stop the session, or because the {{Glossary("user agent")}} terminated the session.
+An `end` event is fired at an {{DOMxRef("XRSession")}} object when the WebXR session has ended, either because the web application has chosen to stop the session, or because the {{Glossary("user agent")}} terminated the session.
 
 ## Syntax
 
@@ -59,7 +60,7 @@ XRSession.addEventListener("end", function(event) {
 });
 ```
 
-Alternatively, you can use the `XRSession.onend` event handler property to establish a handler for the `end` event:
+Alternatively, you can use the `XRSession.onend` event handler property to establish a handler for the `end` event:
 
 ```js
 XRSession.onend = function(event) {

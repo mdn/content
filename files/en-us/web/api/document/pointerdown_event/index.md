@@ -1,6 +1,7 @@
 ---
 title: 'Document: pointerdown event'
 slug: Web/API/Document/pointerdown_event
+page-type: web-api-event
 tags:
   - API
   - Document
@@ -13,30 +14,50 @@ browser-compat: api.Document.pointerdown_event
 ---
 {{APIRef}}
 
-The `pointerdown` event is fired when a pointer becomes active. For mouse, it is fired when the device transitions from no buttons depressed to at least one button depressed. For touch, it is fired when physical contact is made with the digitizer. For pen, it is fired when the stylus makes physical contact with the digitizer.
+The `pointerdown` event is fired when a pointer becomes active. For mouse, it is fired when the device transitions from no buttons pressed to at least one button pressed. For touch, it is fired when physical contact is made with the digitizer. For pen, it is fired when the stylus makes physical contact with the digitizer.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("PointerEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onpointerdown", "onpointerdown")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+> **Note:** For touchscreen browsers that allow [direct manipulation](https://w3c.github.io/pointerevents/#dfn-direct-manipulation), a `pointerdown` event triggers [implicit pointer capture](https://w3c.github.io/pointerevents/#dfn-implicit-pointer-capture), which causes the target to capture all subsequent pointer events as if they were occurring over the capturing target. Accordingly, `pointerover`, `pointerenter`, `pointerleave`, and `pointerout` **will not fire** as long as this capture is set. The capture can be released manually by calling {{domxref('element.releasePointerCapture')}} on the target element, or it will be implicitly released after a `pointerup` or `pointercancel` event.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('pointerdown', (event) => {});
+
+onpointerdown = (event) => { };
+```
+
+## Event type
+
+An {{domxref("PointerEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("PointerEvent")}}
+
+## Event properties
+
+_This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref("Event")}}._
+
+- {{ domxref('PointerEvent.pointerId')}} {{readonlyInline}}
+  - : A unique identifier for the pointer causing the event.
+- {{ domxref('PointerEvent.width')}} {{readonlyInline}}
+  - : The width (magnitude on the X axis), in CSS pixels, of the contact geometry of the pointer.
+- {{ domxref('PointerEvent.height')}} {{readonlyInline}}
+  - : The height (magnitude on the Y axis), in CSS pixels, of the contact geometry of the pointer.
+- {{ domxref('PointerEvent.pressure')}} {{readonlyInline}}
+  - : The normalized pressure of the pointer input in the range `0` to `1`, where `0` and `1` represent the minimum and maximum pressure the hardware is capable of detecting, respectively.
+- {{ domxref('PointerEvent.tangentialPressure')}} {{readonlyInline}}
+  - : The normalized tangential pressure of the pointer input (also known as barrel pressure or [cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)) in the range `-1` to `1`, where `0` is the neutral position of the control.
+- {{ domxref('PointerEvent.tiltX')}} {{readonlyInline}}
+  - : The plane angle (in degrees, in the range of `-90` to `90`) between the Y–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the Y axis.
+- {{ domxref('PointerEvent.tiltY')}} {{readonlyInline}}
+  - : The plane angle (in degrees, in the range of `-90` to `90`) between the X–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the X axis.
+- {{ domxref('PointerEvent.twist')}} {{readonlyInline}}
+  - : The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
+- {{ domxref('PointerEvent.pointerType')}} {{readonlyInline}}
+  - : Indicates the device type that caused the event (mouse, pen, touch, etc.)
+- {{ domxref('PointerEvent.isPrimary')}} {{readonlyInline}}
+  - : Indicates if the pointer represents the primary pointer of this pointer type.
 
 ## Examples
 
@@ -66,5 +87,4 @@ document.onpointerdown = (event) => {
 
 ## See also
 
-- {{domxref("GlobalEventHandlers/onpointerdown", "onpointerdown")}} event handler property.
 - This event on `HTMLElement` targets: {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event

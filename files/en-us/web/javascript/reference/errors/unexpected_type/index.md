@@ -15,16 +15,14 @@ values.
 
 ## Message
 
-```js
-TypeError: Unable to get property {x} of undefined or null reference (Edge)
-TypeError: "x" is (not) "y" (Firefox)
+```
+TypeError: Cannot read properties of undefined (reading 'x') (V8-based)
+TypeError: "x" is undefined (Firefox)
+TypeError: "undefined" is not an object (Firefox)
+TypeError: undefined is not an object (evaluating 'obj.x') (Safari)
 
-Examples:
-TypeError: "x" is undefined
-TypeError: "x" is null
-TypeError: "undefined" is not an object
-TypeError: "x" is not an object or null
-TypeError: "x" is not a symbol
+TypeError: "x" is not a symbol (V8-based & Firefox)
+TypeError: Symbol.keyFor requires that the first argument be a symbol (Safari)
 ```
 
 ## Error type
@@ -45,33 +43,35 @@ Also, certain methods, such as {{jsxref("Object.create()")}} or
 
 ```js example-bad
 // undefined and null cases on which the substring method won't work
-var foo = undefined;
+const foo = undefined;
 foo.substring(1); // TypeError: foo is undefined
 
-var foo = null;
+const foo = null;
 foo.substring(1); // TypeError: foo is null
 
 // Certain methods might require a specific type
-var foo = {}
+const foo = {}
 Symbol.keyFor(foo); // TypeError: foo is not a symbol
 
-var foo = 'bar'
+const foo = 'bar'
 Object.create(foo); // TypeError: "foo" is not an object or null
 ```
 
 ### Fixing the issue
 
-To fix null pointer to `undefined` values, you can use the [typeof](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator, for
-example.
+To fix null pointer to `undefined` or `null` values, you can test if the value is `undefined` or `null` first.
 
-```js
-if (foo !== undefined) {
+```js example-good
+if (foo !== undefined && foo !== null) {
   // Now we know that foo is defined, we are good to go.
 }
+```
 
-if (typeof foo !== 'undefined') {
-  // The same good idea, but don't use this implementation - it can bring problems
-  // because of the confusion between truly undefined and undeclared variables.
+Or, if you are confident that `foo` will not be another [falsy](/en-US/docs/Glossary/Falsy) value like `""` or `0`, or if filtering those cases out is not an issue, you can simply test for its truthiness.
+
+```js example-good
+if (foo) {
+  // Now we know that foo is truthy, it will necessarily not be null/undefined.
 }
 ```
 

@@ -94,8 +94,8 @@ Microsoft Edge stores its browser specific settings in the `edge` subkey, which 
 
   - : Boolean property which controls the placement of the [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_actions).
 
-    - `true` is equivalent to setting [`browser_action.default_area`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#syntax) to `navbar`.
-    - `false` is equivalent to setting [`browser_action.default_area`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#syntax) to `menupanel`.
+    - `true` is equivalent to setting [`browser_action.default_area`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#syntax) to `navbar`.
+    - `false` is equivalent to setting [`browser_action.default_area`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#syntax) to `menupanel`.
 
 ### Safari properties
 

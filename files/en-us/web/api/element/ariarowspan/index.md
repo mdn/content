@@ -1,6 +1,7 @@
 ---
 title: Element.ariaRowSpan
 slug: Web/API/Element/ariaRowSpan
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,16 +16,9 @@ browser-compat: api.Element.ariaRowSpan
 
 The **`ariaRowSpan`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) attribute, which defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.
 
-## Syntax
+## Value
 
-```js
-var ariaRowSpan = element.ariaRowSpan;
-element.ariaRowSpan = ariaRowSpan
-```
-
-### Value
-
-A {{domxref("DOMString")}} which contains an integer.
+A string which contains an integer.
 
 ## Examples
 
@@ -62,4 +56,4 @@ console.log(el.ariaRowSpan);
 
 ## See also
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

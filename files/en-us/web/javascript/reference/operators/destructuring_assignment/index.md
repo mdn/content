@@ -21,25 +21,34 @@ The **destructuring assignment** syntax is a JavaScript expression that makes it
 ## Syntax
 
 ```js
-let a, b, rest;
-[a, b] = [10, 20];
-console.log(a); // 10
-console.log(b); // 20
+const [a, b] = array;
+const [a, , b] = array;
+const [a = aDefault, b] = array;
+const [a, b, ...rest] = array;
+const [a, , b, ...rest] = array;
+const [a, b, ...{ pop, push }] = array;
+const [a, b, ...[c, d]] = array;
 
-[a, b, ...rest] = [10, 20, 30, 40, 50];
-console.log(a); // 10
-console.log(b); // 20
-console.log(rest); // [30, 40, 50]
+const { a, b } = obj;
+const { a: a1, b: b1 } = obj;
+const { a: a1 = aDefault, b = bDefault } = obj;
+const { a, b, ...rest } = obj;
+const { a: a1, b: b1, ...rest } = obj;
 
-({ a, b } = { a: 10, b: 20 });
-console.log(a); // 10
-console.log(b); // 20
+let a, b, a1, b1, c, d, rest, pop, push;
+[a, b] = array;
+[a, , b] = array;
+[a = aDefault, b] = array;
+[a, b, ...rest] = array;
+[a, , b, ...rest] = array;
+[a, b, ...{ pop, push }] = array;
+[a, b, ...[c, d]] = array;
 
-// Stage 4(finished) proposal
-({a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40});
-console.log(a); // 10
-console.log(b); // 20
-console.log(rest); // {c: 30, d: 40}
+({ a, b } = obj); // brackets are required
+({ a: a1, b: b1 } = obj);
+({ a: a1 = aDefault, b = bDefault } = obj);
+({ a, b, ...rest } = obj);
+({ a: a1, b: b1, ...rest } = obj);
 ```
 
 ## Description
@@ -199,6 +208,39 @@ const [a, ...b,] = [1, 2, 3];
 // Always consider using rest operator as the last element
 ```
 
+#### Using a binding pattern as the rest property
+
+The rest property of array destructuring assignment can be another array or object binding pattern. This allows you to simultaneously unpack the properties and indices of arrays.
+
+```js
+const [a, b, ...{ pop, push }] = [1, 2];
+console.log(a, b); // 1 2
+console.log(pop, push); // [Function pop] [Function push]
+```
+
+```js
+const [a, b, ...[c, d]] = [1, 2, 3, 4];
+console.log(a, b, c, d); // 1 2 3 4
+```
+
+These binding patterns can even be nested, as long as each rest property is the last in the list.
+
+```js
+const [a, b, ...[c, d, ...[e, f]]] = [1, 2, 3, 4, 5, 6];
+console.log(a, b, c, d, e, f); // 1 2 3 4 5 6
+```
+
+On the other hand, object destructuring can only have an identifier as the rest property.
+
+```js example-bad
+const { a, ...{ b } } = { a: 1, b: 2 };
+// SyntaxError: `...` must be followed by an identifier in declaration contexts
+
+let a, b;
+({ a, ...{ b } } = { a: 1, b: 2 });
+// SyntaxError: `...` must be followed by an assignable reference in assignment contexts
+```
+
 #### Unpacking values from a regular expression match
 
 When the regular expression [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method finds a match, it returns an array containing first the entire matched portion of the string and then the portions of the string that matched each parenthesized group in the regular expression. Destructuring assignment allows you to unpack the parts out of this array easily, ignoring the full match if it is not needed.
@@ -210,7 +252,7 @@ function parseProtocol(url) {
     return false;
   }
   console.log(parsedURL);
-  // ["https://developer.mozilla.org/en-US/docs/Web/JavaScript", 
+  // ["https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   // "https", "developer.mozilla.org", "en-US/docs/Web/JavaScript"]
 
   const [, protocol, fullhost, fullpath] = parsedURL;
@@ -219,6 +261,52 @@ function parseProtocol(url) {
 
 console.log(parseProtocol('https://developer.mozilla.org/en-US/docs/Web/JavaScript'));
 // "https"
+```
+
+#### Using array destructuring on any iterable
+
+Array destructuring calls the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) of the right-hand side. Therefore, any iterable, not necessarily arrays, can be destructured.
+
+```js
+const [a, b] = new Map([[1, 2], [3, 4]]);
+console.log(a, b); // [1, 2] [3, 4]
+```
+
+Non-iterables cannot be destructured as arrays.
+
+```js example-bad
+const obj = { 0: "a", 1: "b", length: 2 };
+const [a, b] = obj;
+// TypeError: obj is not iterable
+```
+
+Iterables are only iterated until all bindings are assigned.
+
+```js
+const obj = {
+  *[Symbol.iterator]() {
+    for (const v of [0, 1, 2, 3]) {
+      console.log(v);
+      yield v;
+    }
+  }
+}
+const [a, b] = obj; // Only logs 0 and 1
+```
+
+The rest binding is eagerly evaluated and creates a new array, instead of using the old iterable.
+
+```js
+const obj = {
+  *[Symbol.iterator]() {
+    for (const v of [0, 1, 2, 3]) {
+      console.log(v);
+      yield v;
+    }
+  }
+}
+const [a, b, ...rest] = obj; // Logs 0 1 2 3
+console.log(rest); // Logs an array [2, 3]
 ```
 
 ### Object destructuring
@@ -251,9 +339,9 @@ let a, b;
 >
 > `{a, b} = {a: 1, b: 2}` is not valid stand-alone syntax, as the `{a, b}` on the left-hand side is considered a block and not an object literal.
 >
-> However, `({a, b} = {a: 1, b: 2})` is valid, as is `const {a, b} = {a: 1, b: 2}`
+> However, `({a, b} = {a: 1, b: 2})` is valid, as is `const {a, b} = {a: 1, b: 2}`.
 >
-> Your `( ... )` expression needs to be preceded by a semicolon or it may be used to execute a function on the previous line.
+> If your coding style does not include trailing semicolons, the `( ... )` expression needs to be preceded by a semicolon, or it may be used to execute a function on the previous line.
 
 #### Assigning to new variable names
 
@@ -280,7 +368,7 @@ console.log(a); // 3
 console.log(b); // 5
 ```
 
-#### Assigning to new variables names and providing default values
+#### Assigning to new variable names and providing default values
 
 A property can be both
 
@@ -294,7 +382,12 @@ console.log(aa); // 3
 console.log(bb); // 5
 ```
 
-#### Unpacking fields from objects passed as a function parameter
+#### Unpacking properties from objects passed as a function parameter
+
+Objects passed into function parameters can also be unpacked into variables, which may then be accessed within the function body.
+As for object assignment, the destructuring syntax allows for the new variable to have the same name or a different name than the original property, and to assign default values for the case when the original object does not define the property.
+
+Consider this object, which contains information about a user.
 
 ```js
 const user = {
@@ -305,22 +398,46 @@ const user = {
     lastName: 'Doe'
   }
 };
+```
 
+Here we show how to unpack a property of the passed object into a variable with the same name.
+The parameter value `{id}` indicates that the `id` property of the object passed to the function should be unpacked into a variable with the same name, which can then be used within the function.
+
+```js
 function userId({id}) {
   return id;
 }
 
+console.log(userId(user)); // 42
+```
+
+You can define the name of the unpacked variable.
+Here we unpack the property named `displayName`, and rename it to `dname` for use within the function body.
+
+```js
+function userDisplayName({displayName: dname}) {
+  return dname;
+}
+
+console.log(userDisplayName(user)); // `jdoe`
+```
+
+Nested objects can also be unpacked.
+The example below shows the property `fullname.firstName` being unpacked into a variable called `name`.
+
+```js
 function whois({displayName, fullName: {firstName: name}}) {
   return `${displayName} is ${name}`;
 }
 
-console.log(userId(user)); // 42
 console.log(whois(user));  // "jdoe is John"
 ```
 
-This unpacks the `id`, `displayName` and `firstName` from the user object and prints them.
-
 #### Setting a function parameter's default value
+
+Default values can be specified using `=`, and will be used as variable values if a specified property does not exist in the passed object.
+
+Below we show a function where the default size is `'big'`, default co-ordinates are `x: 0, y: 0` and default radius is 25.
 
 ```js
 function drawChart({size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}) {
@@ -342,7 +459,9 @@ drawChart({
 >
 > You could have also written the function without the right-hand side assignment.
 > However, if you leave out the right-hand side assignment, the function will look for at least one argument to be supplied when invoked, whereas in its current form, you can call **`drawChart()`** without supplying any parameters.
-> The current design is useful if you want to be able to call the function without supplying any parameters. The other can be useful when you want to ensure an object is passed to the function.
+> The current approach is useful if you want to be able to call the function without supplying any parameters.
+> The other approach is useful when you want to ensure an object is passed to the function.
+> For more information see [Default parameters > Destructured parameter with default value assignment](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters#destructured_parameter_with_default_value_assignment).
 
 #### Nested object and array destructuring
 

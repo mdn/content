@@ -1,6 +1,7 @@
 ---
 title: CSSPropertyRule.initialValue
 slug: Web/API/CSSPropertyRule/initialvalue
+page-type: web-api-instance-property
 tags:
   - API
   - CSS
@@ -15,19 +16,12 @@ browser-compat: api.CSSPropertyRule.initialValue
 ---
 {{APIRef("CSS Properties and Values API")}}{{SeeCompatTable}}
 
-The read-only **`initialValue`** nullable property of the {{domxref("CSSPropertyRule")}} interface returns the initial value of the custom property registration represented by the {{cssxref("@property")}} rule, controlling the property’s initial value.
+The read-only **`initialValue`** nullable property of the {{domxref("CSSPropertyRule")}} interface returns the initial value of the custom property registration represented by the {{cssxref("@property")}} rule, controlling the property's initial value.
 
-## Syntax
+## Value
 
-```js
-const initialValue = CSSPropertyRule.initialValue;
-```
-
-### Value
-
-A {{domxref("USVString")}} which is a {{CSSXref("&lt;declaration-value&gt;")}} as
-defined in [CSS
-Syntax 3](https://www.w3.org/TR/css-syntax-3/#typedef-declaration-value).
+A string which is a {{CSSXref("&lt;declaration-value&gt;")}} as
+defined in [CSS Syntax 3](https://www.w3.org/TR/css-syntax-3/#typedef-declaration-value).
 
 ## Examples
 

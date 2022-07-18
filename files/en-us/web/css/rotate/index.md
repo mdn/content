@@ -39,6 +39,7 @@ rotate: 1 1 1 90deg;
 rotate: inherit;
 rotate: initial;
 rotate: revert;
+rotate: revert-layer;
 rotate: unset;
 ```
 
@@ -69,7 +70,7 @@ rotate: unset;
 
 ```html
 <div>
-  <p class="rotate">Rotation</p>
+  <p class="rotate">Rotation</p>
 </div>
 ```
 

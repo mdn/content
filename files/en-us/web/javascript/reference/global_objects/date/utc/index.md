@@ -110,7 +110,8 @@ let utcDate = new Date(Date.UTC(2018, 11, 1, 0, 0, 0));
 
 When providing less than two arguments to `Date.UTC()`, ECMAScript 2017
 requires that {{jsxref("NaN")}} is returned. Engines that weren't supporting this
-behavior have been updated (see [bug 1050755](https://bugzilla.mozilla.org/show_bug.cgi?id=1050755), [ecma-262 #642](https://github.com/tc39/ecma262/pull/642)).
+behavior have been updated (see [bug 1050755](https://bugzilla.mozilla.org/show_bug.cgi?id=1050755),
+[ecma-262 #642](https://github.com/tc39/ecma262/pull/642)).
 
 ```js
 Date.UTC();

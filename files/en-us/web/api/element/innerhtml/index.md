@@ -1,6 +1,7 @@
 ---
 title: Element.innerHTML
 slug: Web/API/Element/innerHTML
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -21,17 +22,9 @@ within the element.
 To insert the HTML into the document rather than replace the contents of an element,
 use the method {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.
 
-## Syntax
+## Value
 
-```js
-const content = element.innerHTML;
-
-element.innerHTML = content;
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing the HTML serialization of the element's
+A string containing the HTML serialization of the element's
 descendants. Setting the value of `innerHTML` removes all of the element's
 descendants and replaces them with nodes constructed by parsing the HTML given in the
 string _htmlString_.
@@ -97,7 +90,7 @@ Doing so causes the user agent to follow these steps:
    then the `<template>` element's {{domxref("HTMLTemplateElement.content", "content")}} attribute is replaced with the new `DocumentFragment` created in step 1.
 3. For all other elements, the element's contents are replaced with the nodes in the new `DocumentFragment`.
 
-### Appending HTML to an element  
+### Appending HTML to an element
 
 Setting the value of `innerHTML` lets you append new contents to the existing one of an element.
 
@@ -121,7 +114,7 @@ const list = document.getElementById("list");
 list.innerHTML += `<li><a href="#">Item ${list.children.length + 1}</a></li>`;
 ```
 
-Please note that using `innerHTML` to append html elements (e.g. `el.innerHTML += "<a href='...'>link</a>"`) will result in the removal of any previously set event listeners.
+Please note that using `innerHTML` to append HTML elements (e.g. `el.innerHTML += "<a href='…'>link</a>"`) will result in the removal of any previously set event listeners.
 That is, after you append any HTML element that way you won't be able to listen to the previously set event listeners.
 
 ### Security considerations
@@ -134,7 +127,7 @@ const name = "John";
 // assuming 'el' is an HTML DOM element
 el.innerHTML = name; // harmless in this case
 
-// ...
+// …
 
 name = "<script>alert('I am John in an annoying alert!')</script>";
 el.innerHTML = name; // harmless in this case
@@ -163,7 +156,7 @@ For that reason, it is recommended that instead of `innerHTML` you use:
 > the extension to [addons.mozilla.org](https://addons.mozilla.org/), it may be rejected in the review process.
 > Please see [Safely inserting external content into a page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page) for alternative methods.
 
-## Example
+## Examples
 
 This example uses `innerHTML` to create a mechanism for logging messages into a box on a web page.
 
@@ -171,14 +164,14 @@ This example uses `innerHTML` to create a mechanism for logging messages into a 
 
 ```js
 function log(msg) {
-  var logElem = document.querySelector(".log");
+  const logElem = document.querySelector(".log");
 
-  var time = new Date();
-  var timeStr = time.toLocaleTimeString();
-  logElem.innerHTML += timeStr + ": " + msg + "<br/>";
+  const time = new Date();
+  const timeStr = time.toLocaleTimeString();
+  logElem.innerHTML += timeStr + ": " + msg + "<br/>";
 }
 
-log("Logging mouse events inside this container...");
+log("Logging mouse events inside this container…");
 ```
 
 The `log()` function creates the log output by getting the current time from a {{jsxref("Date")}} object using
@@ -186,11 +179,11 @@ The `log()` function creates the log output by getting the current time from a {
 Then the message is appended to the box with the class `"log"`.
 
 We add a second method that logs information about {{domxref("MouseEvent")}} based events
-(such as {{event("mousedown")}}, {{event("click")}}, and {{event("mouseenter")}}):
+(such as {{domxref("Element/mousedown_event", "mousedown")}}, {{domxref("Element/click_event", "click")}}, and {{domxref("Element/mouseenter_event", "mouseenter")}}):
 
 ```js
 function logEvent(event) {
-  var msg = "Event <strong>" + event.type + "</strong> at <em>" +
+  const msg = "Event <strong>" + event.type + "</strong> at <em>" +
             event.clientX + ", " + event.clientY + "</em>";
   log(msg);
 }
@@ -199,7 +192,7 @@ function logEvent(event) {
 Then we use this as the event handler for a number of mouse events on the box that contains our log:
 
 ```js
-var boxElem = document.querySelector(".box");
+const boxElem = document.querySelector(".box");
 
 boxElem.addEventListener("mousedown", logEvent);
 boxElem.addEventListener("mouseup", logEvent);
@@ -247,7 +240,7 @@ The following CSS styles our example content.
 The resulting content looks like this.
 You can see output into the log by moving the mouse in and out of the box, clicking in it, and so forth.
 
-{{EmbedLiveSample("Example", 640, 350)}}
+{{EmbedLiveSample("Examples", 640, 350)}}
 
 ## Specifications
 

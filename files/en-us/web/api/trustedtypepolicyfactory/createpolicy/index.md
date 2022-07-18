@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicyFactory.createPolicy()
 slug: Web/API/TrustedTypePolicyFactory/createPolicy
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -24,23 +25,23 @@ In Chrome a policy with a name of "default" creates a special policy that will b
 ## Syntax
 
 ```js
-var policy = TrustedTypePolicyFactory.createPolicy(policyName,policyOptions);
+createPolicy(policyName, policyOptions)
 ```
 
 ### Parameters
 
 - `policyName`
-  - : A {{domxref("DOMString")}} with the name of the policy.
-- `policyOptions`{{optional_inline}}
+  - : A string with the name of the policy.
+- `policyOptions` {{optional_inline}}
 
   - : User-defined functions for converting strings into trusted values.
 
     - `CreateHTML(input[,args])`
-      - : A callback function in the form of a {{domxref("DOMString", "string")}} that contains code to run when creating a {{domxref("TrustedHTML")}} object.
+      - : A callback function in the form of a string that contains code to run when creating a {{domxref("TrustedHTML")}} object.
     - `CreateScript(input[,args])`
-      - : A callback function in the form of a {{domxref("DOMString", "string")}} that contains code to run when creating a {{domxref("TrustedScript")}} object.
+      - : A callback function in the form of a string that contains code to run when creating a {{domxref("TrustedScript")}} object.
     - `CreateScriptURL(input[,args])`
-      - : A callback function in the form of a {{domxref("DOMString", "string")}} that contains code to run when creating a {{domxref("TrustedScriptURL")}} object.
+      - : A callback function in the form of a string that contains code to run when creating a {{domxref("TrustedScriptURL")}} object.
 
 ### Return value
 

@@ -8,6 +8,7 @@ tags:
   - Reference
   - Status code
   - Web
+browser-compat: http.status
 ---
 {{HTTPSidebar}}
 
@@ -22,7 +23,7 @@ Responses are grouped in five classes:
 
 The below status codes are defined by [section 10 of RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-10). You can find an updated specification in [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231#section-6).
 
-> **Note:** If you receive a response that is not in [this list](#information-responses), it is a non-standard response, possibly custom to the server's software.
+> **Note:** If you receive a response that is not in [this list](#information_responses), it is a non-standard response, possibly custom to the server's software.
 
 ## Information responses
 
@@ -42,7 +43,7 @@ The below status codes are defined by [section 10 of RFC 2616](https://datatrack
   - : The request succeeded. The result meaning of "success" depends on the HTTP method:
 
     - `GET`: The resource has been fetched and transmitted in the message body.
-    - `HEAD`: The representation headers are included in the response without any message body.
+    - `HEAD`: The representation headers are included in the response without any message body.
     - `PUT` or `POST`: The resource describing the result of the action is transmitted in the message body.
     - `TRACE`: The message body contains the request message as received by the server.
 
@@ -72,7 +73,7 @@ The below status codes are defined by [section 10 of RFC 2616](https://datatrack
 
 ## Redirection messages
 
-- {{HTTPStatus(300, "300 Multiple Choice")}}
+- {{HTTPStatus(300, "300 Multiple Choices")}}
   - : The request has more than one possible response. The user agent or user should choose one of them. (There is no standardized way of choosing one of the responses, but HTML links to the possibilities are recommended so the user can pick.)
 - {{HTTPStatus(301, "301 Moved Permanently")}}
   - : The URL of the requested resource has been changed permanently. The new URL is given in the response.
@@ -99,7 +100,7 @@ The below status codes are defined by [section 10 of RFC 2616](https://datatrack
 ## Client error responses
 
 - {{HTTPStatus(400, "400 Bad Request")}}
-  - : The server could not understand the request due to invalid syntax.
+  - : The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).
 - {{HTTPStatus(401, "401 Unauthorized")}}
   - : Although the HTTP standard specifies "unauthorized", semantically this response means "unauthenticated".
     That is, the client must authenticate itself to get the requested response.
@@ -208,7 +209,7 @@ The below status codes are defined by [section 10 of RFC 2616](https://datatrack
 
 ## Browser compatibility
 
-{{Compat("http.status")}}
+{{Compat}}
 
 ## See also
 

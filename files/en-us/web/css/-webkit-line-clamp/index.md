@@ -58,8 +58,8 @@ When applied to anchor elements, the truncating can happen in the middle of the 
 
 ```html
 <p>
-  In this example the <code>-webkit-line-clamp</code> property is set to <code>3</code>, which means the text is clamped after three lines.
-  An ellipsis will be shown at the point where the text is clamped.
+  In this example the <code>-webkit-line-clamp</code> property is set to <code>3</code>, which means the text is clamped after three lines.
+  An ellipsis will be shown at the point where the text is clamped.
 </p>
 ```
 
@@ -67,17 +67,17 @@ When applied to anchor elements, the truncating can happen in the middle of the 
 
 ```css
 p {
-  width: 300px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  width: 300px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
   overflow: hidden;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("Truncating_a_paragraph", "100%", "100")}}
+{{EmbedLiveSample("Truncating_a_paragraph", "100%", "130")}}
 
 ## Specifications
 
@@ -89,5 +89,5 @@ p {
 
 ## See also
 
-- [Line Clampin’ (Truncating Multiple Line Text)](https://css-tricks.com/line-clampin/)
+- [Line Clampin' (Truncating Multiple Line Text)](https://css-tricks.com/line-clampin/)
 - {{cssxref("line-clamp")}}

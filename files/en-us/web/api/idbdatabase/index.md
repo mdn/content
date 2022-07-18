@@ -1,6 +1,7 @@
 ---
 title: IDBDatabase
 slug: Web/API/IDBDatabase
+page-type: web-api-interface
 tags:
   - API
   - Database
@@ -27,7 +28,7 @@ The **`IDBDatabase`** interface of the IndexedDB API provides a [connection to a
 ## Properties
 
 - {{domxref("IDBDatabase.name")}} {{readonlyInline}}
-  - : A {{ domxref("DOMString") }} that contains the name of the connected database.
+  - : A string that contains the name of the connected database.
 - {{domxref("IDBDatabase.version")}} {{readonlyInline}}
   - : A 64-bit integer that contains the version of the connected database. When a database is first created, this attribute is an empty string.
 - {{domxref("IDBDatabase.objectStoreNames")}} {{readonlyInline}}
@@ -39,7 +40,7 @@ Inherits from: [EventTarget](/en-US/docs/Web/API/EventTarget)
 
 - {{domxref("IDBDatabase.close()")}}
   - : Returns immediately and closes the connection to a database in a separate thread.
-- {{domxref("IDBDatabase.createMutableFile()")}}
+- `IDBDatabase.createMutableFile()` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Creates a file handle, allowing files to be stored inside an IndexedDB database.
 - {{domxref("IDBDatabase.createObjectStore()")}}
   - : Creates and returns a new object store or index.
@@ -52,14 +53,18 @@ Inherits from: [EventTarget](/en-US/docs/Web/API/EventTarget)
 
 Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
-- [`abort`](/en-US/docs/Web/API/IDBDatabase/abort_event)
-  - : Fired when a transaction is aborted and bubbles up to the connection object. Also available via the [`onabort`](/en-US/docs/Web/API/IDBDatabase/onabort) property.
 - [`close`](/en-US/docs/Web/API/IDBDatabase/close_event)
-  - : Fired when the database connection is unexpectedly closed. Also available via the [`onclose`](/en-US/docs/Web/API/IDBDatabase/onclose) property.
-- [`error`](/en-US/docs/Web/API/IDBDatabase/error_event)
-  - : Fired when a request returns an error and the event bubbles up to the connection object. Also available via the [`onerror`](/en-US/docs/Web/API/IDBDatabase/onerror) property.
+  - : An event fired when the database connection is unexpectedly closed.
+
 - [`versionchange`](/en-US/docs/Web/API/IDBDatabase/versionchange_event)
-  - : Fired when a database structure change was requested. Also available via the [`onversionchange`](/en-US/docs/Web/API/IDBDatabase/onversionchange) property.
+  - : An event fired when a database structure change was requested.
+
+The following events are available to `IDBDatabase` via event bubbling from {{domxref("IDBTransaction")}}:
+
+- `IDBTransaction` [`abort`](/en-US/docs/Web/API/IDBTransaction/abort_event)
+  - : An event fired when a transaction is aborted.
+- `IDBTransaction` [`error`](/en-US/docs/Web/API/IDBTransaction/error_event)
+  - : An event fired when a request returns an error and the event bubbles up to the connection object.
 
 ## Example
 
@@ -67,15 +72,13 @@ In the following code snippet, we open a database asynchronously ({{domxref("IDB
 
 ```js
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the IDBDatabase object,
 // when the database is opened successfully, or not
-DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '<li>Error loading database.</li>';
-};
+DBOpenRequest.onerror = event => { note.innerHTML += '<li>Error loading database.</li>'; };
 
-DBOpenRequest.onsuccess = function(event) {
+DBOpenRequest.onsuccess = event => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db
@@ -92,8 +95,8 @@ DBOpenRequest.onsuccess = function(event) {
 // been created before, or a new version number has been
 // submitted via the window.indexedDB.open line above
 
-DBOpenRequest.onupgradeneeded = function(event) {
-  var db = event.target.result;
+DBOpenRequest.onupgradeneeded = event => {
+  const db = event.target.result;
 
   db.onerror = function(event) {
     note.innerHTML += '<li>Error loading database.</li>';
@@ -102,7 +105,7 @@ DBOpenRequest.onupgradeneeded = function(event) {
   // Create an objectStore for this database using
   // IDBDatabase.createObjectStore
 
-  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  const objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
 
   // define what data items the objectStore will contain
 
@@ -121,7 +124,7 @@ DBOpenRequest.onupgradeneeded = function(event) {
 This next line opens up a transaction on the Database, then opens an object store that we can then manipulate the data inside of.
 
 ```js
-var objectStore = db.transaction('toDoList', 'readwrite').objectStore('toDoList');
+const objectStore = db.transaction('toDoList', 'readwrite').objectStore('toDoList');
 ```
 
 ## Specifications

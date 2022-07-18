@@ -37,7 +37,7 @@ browser.i18n.getMessage(
     - Firefox returns "" and logs an error.
     - Chrome returns "" and does not log an error.
 
-- `substitutions`{{optional_inline}}
+- `substitutions` {{optional_inline}}
 
   - : `string` or `array` of `string`. A single substitution string, or an array of substitution strings.
 
@@ -56,7 +56,7 @@ browser.i18n.getMessage(
 Get the localized string for `"messageContent"`, with `target.url` substituted:
 
 ```js
-var message = browser.i18n.getMessage("messageContent", target.url);
+let message = browser.i18n.getMessage("messageContent", target.url);
 console.log(message);
 ```
 
@@ -85,7 +85,7 @@ If `target.url` is "https\://developer.mozilla.org", then the value of message, 
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/extensions/i18n#method-getMessage) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/i18n/#method-getMessage) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/extensions/common/api/i18n.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

@@ -251,7 +251,7 @@ p {
 
 However, in the case of our earlier example with the conflict between the class selector and the element selector, the class prevails, rendering the paragraph text red. How can this happen even though a conflicting style appears later in the stylesheet? A class is rated as being more specific, as in having more **specificity** than the element selector, so it cancels the other conflicting style declaration.
 
-Try this experiment for yourself! Add HTML, then add the two `p { ... }` rules to your stylesheet. Next, change the first `p` selector to `.special` to see how it changes the styling.
+Try this experiment for yourself! Add HTML, then add the two `p { }` rules to your stylesheet. Next, change the first `p` selector to `.special` to see how it changes the styling.
 
 The rules of specificity and the cascade can seem complicated at first. These rules are easier to understand as you become more familiar with CSS. The [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) section in the next module explains this in detail, including how to calculate specificity.
 
@@ -558,16 +558,16 @@ You should always make sure to separate distinct values from one another by at l
 
 **To find out how spacing can break CSS, try playing with spacing inside your test CSS.**
 
-## What's next?
+## Summary
 
-It's useful to understand how the browser uses HTML and CSS to display a webpage. The next article, [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works), explains the process.
+At this point, you should have a better idea about how CSS is structured. It's also useful to understand how the browser uses HTML and CSS to display a webpage. The next article, [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works), explains the process.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 ## In this module
 
-1. [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
-3. How CSS is structured
-4. [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Using your new knowledge](/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+- [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
+- [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
+- [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+- [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
+- [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page)

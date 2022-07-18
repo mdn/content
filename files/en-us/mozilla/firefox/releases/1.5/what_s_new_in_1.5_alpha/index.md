@@ -13,7 +13,7 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This page is based largely on [http://www.squarefree.com/burningedg...eases/1.1.html](https://www.squarefree.com/burningedge/releases/1.1.html) (thanks Jesse).
+This page is based largely on [https://www.squarefree.com/burningedg...eases/](https://www.squarefree.com/burningedge/releases/) (thanks Jesse).
 
 ### New Web Developer Features
 
@@ -50,7 +50,7 @@ This page is based largely on [http://www.squarefree.com/burningedg...eases/1.1.
 <!---->
 
 - CSS3 cursors
-  - : More [mouse cursor names](https://www.w3.org/TR/css3-ui/#cursor) are now supported.
+  - : More [mouse cursor names](https://www.w3.org/TR/css-ui-3/#cursor) are now supported.
 
 <!---->
 
@@ -68,7 +68,7 @@ This page is based largely on [http://www.squarefree.com/burningedg...eases/1.1.
 <!---->
 
 - CSS `outline` property
-  - : [CSS outlines](https://www.w3.org/TR/css3-ui/#outline1) can now be used. These differ from borders in that they don't affect the page layout.
+  - : [CSS outlines](https://www.w3.org/TR/css-ui-3/#outline1) can now be used. These differ from borders in that they don't affect the page layout.
 
 <!---->
 
@@ -128,34 +128,53 @@ This page is based largely on [http://www.squarefree.com/burningedg...eases/1.1.
 <!---->
 
 - XForms support
-  - : The [W3C's XML Forms](https://www.w3.org/MarkUp/Forms/) language allows writing complex forms in XML, and includes features that regular HTML forms do not have, such as client side validation against [XML Schema](https://www.w3.org/XML/Schema) and XML submission/retrieval. Support for XForms comes as an extension, see [Mozilla XForms Project Page](https://www.mozilla.org/projects/xforms/).
+  - : The [W3C's XML Forms](https://www.w3.org/MarkUp/Forms/) language allows writing complex forms in XML, and includes features that regular HTML forms do not have, such as client side validation against [XML Schema](https://www.w3.org/XML/Schema) and XML submission/retrieval. Support for XForms comes as an extension, see [Mozilla XForms Project Page](/en-US/docs/Archive/Web/XForms).
 
 ### New Extension Developer Features
 
 - Hidden referrer column for history
   - : Extensions can now access the referer information for pages stored in the browser history. This feature can be used to provide alternate history views and other useful functionality. {{bug(128398) }}
 
-<!---->
-
 - API for prioritizing HTTP connections
-  - : The Mozilla networking library now supports the prioritization of connections to a specific server. See {{ Interface("nsISupportsPriority") }}. {{bug(278531) }}
-
-<!---->
+  - : The Mozilla networking library now supports the prioritization of connections to a specific server using `nsISupportsPriority`. {{bug(278531) }}
 
 - API for managing user and UA stylesheets
-  - : Extensions can now register stylesheet URIs as additional user and UA stylesheets. This means extensions no longer have to try to edit `userContent.css` to add styling (say for XBL binding attachment) to web pages. See [Using the Stylesheet Service](/en-US/Using_the_Stylesheet_Service).
-
-<!---->
+  - : Extensions can now register stylesheet URIs as additional user and UA stylesheets. This means extensions no longer have to try to edit `userContent.css` to add styling (say for XBL binding attachment) to web pages. See [Using the Stylesheet Service](https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Using_the_Stylesheet_Service).
 
 - API for configuring proxies
-  - : It is now possible for extensions to easily override the proxy configuration without affecting user-visible preferences. See {{ Interface("nsIProtocolProxyService") }}, {{ Interface("nsIProtocolProxyFilter") }}, and {{ Interface("nsIProtocolProxyCallback") }}. {{bug(282442) }}
-
-<!---->
+  - : It is now possible for extensions to easily override the proxy configuration without affecting user-visible preferences. See `nsIProtocolProxyService`, `nsIProtocolProxyFilter`, and `nsIProtocolProxyCallback`. {{bug(282442) }}
 
 - Dynamic Overlays
-  - : Loading of XUL overlays after the document has been displayed is now supported. See {{ Interface("nsIDOMXULDocument") }}. {{bug(282103) }}
+  - : Loading of XUL overlays after the document has been displayed is now supported. See `nsIDOMXULDocument`. {{bug(282103) }}
 
-<dl><dt>E4X</dt><dd>The Mozilla JavaScript engine now supports ECMAScript for XML (E4X), a draft ECMA standard that adds native XML datatypes to the language and provides operators for common XML operations. See <a href="https://www.ecma-international.org/publications/standards/Ecma-357.htm">the ECMA specification</a>. {{bug(246441)}}</dd><dt>Translucent Windows (Windows/Linux)</dt><dd>On Windows and Linux, XUL windows with a transparent background are now supported. This allows whatever is below the window to shine through the window background.</dd><dt>Adding tokens to the User-Agent string</dt><dd>It is now possible for applications, extensions, and vendors to all add tokens to the User-Agent string (using default preferences) without overwriting each other. See <a href="https://www.mozilla.org/build/revised-user-agent-strings.html">documentation</a>. {{bug(274928) }}</dd><dt>Toolkit chrome registry</dt><dd>Chrome registration has been significantly improved to use simple plaintext chrome registration manifests, and no longer keeps the chrome.rdf/overlayinfo cache. See <a href="/en-US/Chrome_Registration">Chrome Registration</a>.</dd><dt>Extension Manager</dt><dd><ul><li>It is now possible to have Extensions outside the profile and application Extensions directories.</li><li>Installing extensions can now be done by dropping an XPI into the profile or application Extensions directory.</li><li>Uninstalling an Extension now involves deleting its folder from the profile or application Extensions directory.</li></ul></dd><dt>New Preferences bindings</dt><dd>These <a href="http://forums.mozillazine.org/viewtopic.php?t=263028">new bindings</a> make it easier to create preferences windows for extensions. The new preferences windows support instant-apply behavior, which is enabled by default on Mac and Linux.</dd><dt>API for implementing new command-line switches</dt><dd>An API has been introduced so that extensions can easily handle complex command-line flags. This API will be stable and frozen for 1.1. See the interfaces {{ Interface("nsICommandLine") }} and {{ Interface("nsICommandLineHandler") }}.</dd><dt>XTF Support</dt><dd>The eXtensible Tag Framework allows adding support for new namespaces using XPCOM components to Mozilla (written in JavaScript or C++). For example, the <a href="https://www.mozilla.org/projects/xforms">Mozilla XForms Project</a> uses XTF to add support for the XForms namespace. See <a href="http://www.croczilla.com/xtf">XTF Home Page</a></dd></dl>
+- E4X
+  - : The Mozilla JavaScript engine now supports ECMAScript for XML (E4X), a draft ECMA standard that adds native XML datatypes to the language and provides operators for common XML operations. See [the ECMA specification](https://www.ecma-international.org/publications/standards/Ecma-357.htm). {{bug(246441)}}
+
+- Translucent Windows (Windows/Linux)
+  - : On Windows and Linux, XUL windows with a transparent background are now supported. This allows whatever is below the window to shine through the window background.
+
+- Adding tokens to the User-Agent string
+  - : It is now possible for applications, extensions, and vendors to all add tokens to the User-Agent string (using default preferences) without overwriting each other.
+    See [documentation](/en-US/docs/Web/HTTP/Headers/User-Agent). {{bug(274928)}}
+
+- Toolkit chrome registry
+  - : Chrome registration has been significantly improved to use simple plaintext chrome registration manifests, and no longer keeps the chrome.rdf/overlayinfo cache.
+    See [Chrome Registration](https://developer.mozilla.org/en-US/docs/Mozilla/Chrome_Registration).
+
+- Extension Manager
+  - : Following are the new features:
+    - It is now possible to have Extensions outside the profile and application Extensions directories.
+    - Installing extensions can now be done by dropping an XPI into the profile or application Extensions directory.
+    - Uninstalling an Extension now involves deleting its folder from the profile or application Extensions directory.
+
+- New Preferences bindings
+  - : These [new bindings](http://forums.mozillazine.org/viewtopic.php?t=263028) make it easier to create preferences windows for extensions. The new preferences windows support instant-apply behavior, which is enabled by default on Mac and Linux.
+
+- API for implementing new command-line switches
+  - : An API has been introduced so that extensions can easily handle complex command-line flags. This API will be stable and frozen for 1.1. See the interfaces `nsICommandLine` and `nsICommandLineHandler`.
+
+- XTF Support
+  - : The eXtensible Tag Framework allows adding support for new namespaces using XPCOM components to Mozilla (written in JavaScript or C++). See [XTF Home Page](https://web.archive.org/web/20070527160710/http://www.croczilla.com/xtf).
 
 ### New Browser Features
 

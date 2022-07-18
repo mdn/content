@@ -1,6 +1,7 @@
 ---
 title: Navigator.userAgent
 slug: Web/API/Navigator/userAgent
+page-type: web-api-instance-property
 tags:
   - API
   - Navigator
@@ -30,22 +31,16 @@ string is user configurable. For example:
 
 - In Firefox, you can change the preference `general.useragent.override` in
   `about:config`. Some Firefox extensions do that; however, this only changes
-  the HTTP header that gets sent, and doesn't affect browser detection performed by
-  JavaScript code.
+  the HTTP header that gets sent and that is returned by `navigator.userAgent`.
+  There might be other methods that utilize JavaScript code to identify the browser.
 - Opera 6+ allows users to set the browser identification string via a menu.
 - Microsoft Internet Explorer uses the Windows registry.
 - Safari and iCab allow users to change the browser user agent string to predefined
   Internet Explorer or Netscape strings via a menu.
 
-## Syntax
+## Value
 
-```js
-var ua = navigator.userAgent;
-```
-
-### Value
-
-A {{domxref("DOMString")}} specifying the complete user agent string the browser
+A string specifying the complete user agent string the browser
 provides both in {{Glossary("HTTP")}} headers and in response to this and other related
 methods on the {{domxref("Navigator")}} object.
 
@@ -54,13 +49,13 @@ several pieces of info. Each of these pieces of info comes from other navigator
 properties which are also settable by the user. Gecko-based browsers comply with the
 following general structure:
 
-```js
+```
 userAgent = appCodeName/appVersion number (Platform; Security; OS-or-CPU;
 Localization; rv: revision-version-number) product/productSub
 Application-Name Application-Name-version
 ```
 
-## Example
+## Examples
 
 ```js
 alert(window.navigator.userAgent)

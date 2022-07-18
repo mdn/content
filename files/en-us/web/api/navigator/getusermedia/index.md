@@ -1,6 +1,7 @@
 ---
 title: Navigator.getUserMedia()
 slug: Web/API/Navigator/getUserMedia
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -36,7 +37,7 @@ executed.
 ## Syntax
 
 ```js
-navigator.getUserMedia(constraints, successCallback, errorCallback);
+getUserMedia(constraints, successCallback, errorCallback)
 ```
 
 ### Parameters
@@ -45,8 +46,7 @@ navigator.getUserMedia(constraints, successCallback, errorCallback);
   - : An object specifying the types of media to
     request, along with any requirements for each type. For details, see the [constraints](/en-US/docs/Web/API/MediaDevices/getUserMedia#parameters)
     section under the modern {{domxref("MediaDevices.getUserMedia()")}} method, as well
-    as the article [Capabilities,
-    constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints).
+    as the article [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints).
 - `successCallback`
 
   - : A function which is invoked when the request for media access is approved. The
@@ -56,8 +56,8 @@ navigator.getUserMedia(constraints, successCallback, errorCallback);
     shown in the following example:
 
     ```js
-    function(stream) {
-       var video = document.querySelector('video');
+    function successCallback(stream) {
+       const video = document.querySelector('video');
        video.srcObject = stream;
        video.onloadedmetadata = function(e) {
           // Do something with the video here.
@@ -68,12 +68,12 @@ navigator.getUserMedia(constraints, successCallback, errorCallback);
 - `errorCallback`
   - : When the call fails, the function specified in the `errorCallback` is
     invoked with a {{domxref("MediaStreamError")}} object as its sole argument; this
-    object is modeled on {{domxref("DOMException")}}. See {{anch("Errors")}} below for a
+    object is modeled on {{domxref("DOMException")}}. See [Errors](#errors) below for a
     list of the errors which can occur.
 
 ### Return value
 
-{{domxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -92,7 +92,7 @@ navigator.getUserMedia = navigator.getUserMedia ||
 if (navigator.getUserMedia) {
    navigator.getUserMedia({ audio: true, video: { width: 1280, height: 720 } },
       function(stream) {
-         var video = document.querySelector('video');
+         const video = document.querySelector('video');
          video.srcObject = stream;
          video.onloadedmetadata = function(e) {
            video.play();
@@ -109,24 +109,23 @@ if (navigator.getUserMedia) {
 
 ## Permissions
 
-To use `getUserMedia()` in an installable app (for example, a [Firefox
-OS app](/en-US/docs/Web/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)), you need to specify one or both of the following fields inside your
+To use `getUserMedia()` in an installable app, you need to specify one or both of the following fields inside your
 manifest file:
 
-```js
-"permissions": {
-  "audio-capture": {
-    "description": "Required to capture audio using getUserMedia()"
-  },
-  "video-capture": {
-    "description": "Required to capture video using getUserMedia()"
+```json
+{
+  "permissions": {
+    "audio-capture": {
+      "description": "Required to capture audio using getUserMedia()"
+    },
+    "video-capture": {
+      "description": "Required to capture video using getUserMedia()"
+    }
   }
 }
 ```
 
-See [permission:
-audio-capture](/en-US/docs/Web/Apps/Developing/App_permissions#audio-capture) and [permission:
-video-capture](/en-US/docs/Web/Apps/Developing/App_permissions#video-capture) for more information.
+See [permission: audio-capture](/en-US/docs/Web/Apps/Developing/App_permissions#audio-capture) and [permission: video-capture](/en-US/docs/Web/Apps/Developing/App_permissions#video-capture) for more information.
 
 ## Browser compatibility
 

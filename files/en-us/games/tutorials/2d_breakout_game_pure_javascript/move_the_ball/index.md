@@ -51,8 +51,8 @@ You won't notice the ball being repainted constantly at the moment, as it's not 
 First, add the following two lines above your `draw()` function, to define `x` and `y`:
 
 ```js
-var x = canvas.width/2;
-var y = canvas.height-30;
+let x = canvas.width/2;
+let y = canvas.height-30;
 ```
 
 Next update the `draw()` function to use the x and y variables in the {{domxref("CanvasRenderingContext2D.arc()","arc()")}} method, as shown in the following highlighted line:
@@ -70,8 +70,8 @@ function draw() {
 Now comes the important part: we want to add a small value to `x` and `y` after every frame has been drawn to make it appear that the ball is moving. Let's define these small values as `dx` and `dy` and set their values to 2 and -2 respectively. Add the following below your x and y variable definitions:
 
 ```js
-var dx = 2;
-var dy = -2;
+let dx = 2;
+let dy = -2;
 ```
 
 The last thing to do is to update `x` and `y` with our `dx` and `dy` variable on every frame, so the ball will be painted in the new position on every update. Add the following two new lines indicated below to your `draw()` function:

@@ -1,6 +1,7 @@
 ---
 title: AnalyserNode.getFloatFrequencyData()
 slug: Web/API/AnalyserNode/getFloatFrequencyData
+page-type: web-api-instance-method
 tags:
   - API
   - AnalyserNode
@@ -20,11 +21,7 @@ If you need higher performance and don't care about precision, you can use {{dom
 ## Syntax
 
 ```js
-var audioCtx = new AudioContext();
-var analyser = audioCtx.createAnalyser();
-var dataArray = new Float32Array(analyser.frequencyBinCount); // Float32Array should be the same length as the frequencyBinCount
-
-void analyser.getFloatFrequencyData(dataArray); // fill the Float32Array with data returned from getFloatFrequencyData()
+getFloatFrequencyData(array)
 ```
 
 ### Parameters
@@ -35,9 +32,9 @@ void analyser.getFloatFrequencyData(dataArray); // fill the Float32Array with da
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 ```js
 const audioCtx = new AudioContext();

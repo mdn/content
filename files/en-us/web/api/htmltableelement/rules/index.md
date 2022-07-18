@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.rules
 slug: Web/API/HTMLTableElement/rules
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -17,16 +18,9 @@ browser-compat: api.HTMLTableElement.rules
 The **`HTMLTableElement.rules`** property indicates which cell
 borders to render in the table.
 
-## Syntax
+## Value
 
-```js
-HTMLTableElement.rules = rules;
-var rules = HTMLTableElement.rules;
-```
-
-### Parameters
-
-`rules` is a string with one of the following values:
+One of the followings:
 
 - `none`
   - : No rules
@@ -39,7 +33,7 @@ var rules = HTMLTableElement.rules;
 - `all`
   - : Lines between all cells
 
-## Example
+## Examples
 
 ```js
 // Turn on all the internal borders of a table

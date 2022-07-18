@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var updating = browser.notifications.update(
+let updating = browser.notifications.update(
   id,                            // string
   options                        // NotificationOptions
 )
@@ -50,7 +50,7 @@ This example uses `update()` to update a progress notification. Clicking the bro
 Note that you'll need the "alarms" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) to create alarms (as well as the "notifications" permission to create notifications). Also note that Firefox does not support the `progress` attribute.
 
 ```js
-var cakeNotification = "cake-notification";
+let cakeNotification = "cake-notification";
 
 /*
 
@@ -61,9 +61,9 @@ Note that in Chrome, alarms cannot be set for less than
 a minute.
 
 */
-var CAKE_PREP_INTERVAL = 0.005;
+let CAKE_PREP_INTERVAL = 0.005;
 
-var progress = 0;
+let progress = 0;
 
 browser.alarms.onAlarm.addListener(function(alarm) {
   progress = progress + 10;
@@ -87,7 +87,7 @@ browser.browserAction.onClicked.addListener(function () {
     browser.notifications.create(cakeNotification, {
       "type": "progress",
       "iconUrl": browser.extension.getURL("icons/cake-48.png"),
-      "title": "Your cake is being prepared...",
+      "title": "Your cake is being prepared…",
       "message": "Something something cake",
       "progress": progress
     });
@@ -101,6 +101,6 @@ browser.browserAction.onClicked.addListener(function () {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications) API.
+> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

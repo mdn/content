@@ -1,6 +1,7 @@
 ---
 title: PublicKeyCredential.id
 slug: Web/API/PublicKeyCredential/id
+page-type: web-api-instance-property
 tags:
   - API
   - Credential Management API
@@ -14,31 +15,23 @@ browser-compat: api.PublicKeyCredential.id
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`id`** read-only property of the
-{{domxref("PublicKeyCredential")}} interface is a {{domxref("DOMString")}}, inherited
+{{domxref("PublicKeyCredential")}} interface is a string, inherited
 from {{domxref("Credential")}}, which represents the identifier of the current
 `PublicKeyCredential` instance.
 
-This property is a [base64url
-encoded](/en-US/docs/Glossary/Base64) version of {{domxref("PublicKeyCredential.rawId")}}.
+This property is a [base64url encoded](/en-US/docs/Glossary/Base64) version of {{domxref("PublicKeyCredential.rawId")}}.
 
 > **Note:** This property may only be used in top-level contexts and will
 > not be available in an {{HTMLElement("iframe")}} for example.
 
-## Syntax
+## Value
 
-```js
-id = publicKeyCredential.id
-```
-
-### Value
-
-A {{domxref("DOMString")}} being the [base64url
-encoded](/en-US/docs/Glossary/Base64) version of {{domxref("PublicKeyCredential.rawId")}}.
+A string being the [base64url encoded](/en-US/docs/Glossary/Base64) version of {{domxref("PublicKeyCredential.rawId")}}.
 
 ## Examples
 
 ```js
-var publicKey = {
+const publicKey = {
   challenge: new Uint8Array(26) /* this actually is given from the server */,
   rp: {
     name: "Example CORP",
@@ -59,7 +52,7 @@ var publicKey = {
 
 navigator.credentials.create({ publicKey })
   .then(function (newCredentialInfo) {
-    var id = newCredentialInfo.id;
+    const id = newCredentialInfo.id;
     // Do something with the id
 
     // send attestation response and client extensions

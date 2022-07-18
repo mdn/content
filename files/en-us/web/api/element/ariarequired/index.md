@@ -1,6 +1,7 @@
 ---
 title: Element.ariaRequired
 slug: Web/API/Element/ariaRequired
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -17,16 +18,9 @@ The **`ariaRequired`** property of the {{domxref("Element")}} interface reflects
 
 > **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="text"` or a {{htmlelement("textarea")}} as these have built in semantics and do not require ARIA attributes.
 
-## Syntax
+## Value
 
-```js
-var ariaRequired = element.ariaRequired;
-element.ariaRequired = ariaRequired
-```
-
-### Value
-
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : Users need to provide input on an element before a form is submitted.

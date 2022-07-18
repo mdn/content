@@ -31,6 +31,7 @@ border-image-source: linear-gradient(to top, red, yellow);
 border-image-source: inherit;
 border-image-source: initial;
 border-image-source: revert;
+border-image-source: revert-layer;
 border-image-source: unset;
 ```
 
@@ -55,7 +56,7 @@ border-image-source: unset;
 
 ```css
 .box {
-  border-image-source: url('image.png');
+  border-image-source: url('image.png');
 }
 ```
 
@@ -73,4 +74,4 @@ border-image-source: unset;
 - {{cssxref("outline")}}
 - {{cssxref("box-shadow")}}
 - {{cssxref("background-image")}}
-- {{cssxref("url()", "url()")}} function
+- {{cssxref("url", "url()")}} function

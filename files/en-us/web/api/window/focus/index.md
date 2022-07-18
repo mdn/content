@@ -1,6 +1,7 @@
 ---
 title: Window.focus()
 slug: Web/API/Window/focus
+page-type: web-api-instance-method
 tags:
   - API
   - Gecko
@@ -16,10 +17,18 @@ Makes a request to bring the window to the front. It may fail due to user settin
 ## Syntax
 
 ```js
-window.focus()
+focus()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 if (clicked) { window.focus(); }

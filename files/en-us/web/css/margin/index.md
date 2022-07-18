@@ -18,10 +18,10 @@ The **`margin`** [CSS](/en-US/docs/Web/CSS) shorthand property sets the [margin 
 
 This property is a shorthand for the following CSS properties:
 
+- {{cssxref("margin-top")}}
+- {{cssxref("margin-right")}}
 - {{cssxref("margin-bottom")}}
 - {{cssxref("margin-left")}}
-- {{cssxref("margin-right")}}
-- {{cssxref("margin-top")}}
 
 ## Syntax
 
@@ -43,10 +43,11 @@ margin: 2px 1em 0 auto;
 margin: inherit;
 margin: initial;
 margin: revert;
+margin: revert-layer;
 margin: unset;
 ```
 
-The `margin` property may be specified using one, two, three, or four values. Each value is a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or the keyword `auto`. Negative values draw the element closer to its neighbors than it would be by default.
+The `margin` property may be specified using one, two, three, or four values. Each value is a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or the keyword `auto`. Negative values draw the element closer to its neighbors than it would be by default.
 
 - When **one** value is specified, it applies the same margin to **all four sides**.
 - When **two** values are specified, the first margin applies to the **top and bottom**, the second to the **left and right**.
@@ -58,7 +59,7 @@ The `margin` property may be specified using one, two, three, or four values. Ea
 - {{cssxref("length")}}
   - : The size of the margin as a fixed value.
 - {{cssxref("percentage")}}
-  - : The size of the margin as a percentage, relative to the _width_ of the [containing block](/en-US/docs/Web/CSS/Containing_block).
+  - : The size of the margin as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Containing_block).
 - `auto`
   - : The browser selects a suitable margin to use. For example, in certain cases this value can be used to center an element.
 
@@ -76,7 +77,7 @@ However, in older browsers like IE8-9 that do not support Flexible Box Layout, t
 
 ### Margin collapsing
 
-Elements' top and bottom margins are sometimes collapsed into a single margin that is equal to the larger of the two margins. See [Mastering margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) for more information.
+Elements' top and bottom margins are sometimes collapsed into a single margin that is equal to the larger of the two margins. See [Mastering margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) for more information.
 
 ## Formal definition
 
@@ -102,15 +103,15 @@ Elements' top and bottom margins are sometimes collapsed into a single margin th
 
 ```css
 .center {
-  margin: auto;
-  background: lime;
-  width: 66%;
+  margin: auto;
+  background: lime;
+  width: 66%;
 }
 
 .outside {
-  margin: 3rem 0 0 -3rem;
-  background: cyan;
-  width: 66%;
+  margin: 3rem 0 0 -3rem;
+  background: cyan;
+  width: 66%;
 }
 ```
 
@@ -155,4 +156,4 @@ margin: auto;               /* top and bottom: 0 margin     */
 - [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
 - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
 - {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
-- The mapped logical properties: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, and {{cssxref("margin-inline-end")}} and the shorthands {{cssxref("margin-block")}} and {{cssxref("margin-inline")}}
+- The mapped logical properties: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, and {{cssxref("margin-inline-end")}} and the shorthands {{cssxref("margin-block")}} and {{cssxref("margin-inline")}}

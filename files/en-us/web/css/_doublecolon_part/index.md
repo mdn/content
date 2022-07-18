@@ -5,8 +5,6 @@ tags:
   - '::part'
   - CSS
   - Draft
-  - Experimental
-  - NeedsBrowserCompatibility
   - NeedsExample
   - Pseudo-element
   - Reference
@@ -25,7 +23,9 @@ custom-element::part(foo) {
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+::part( <ident>+ )
+```
 
 ## Examples
 

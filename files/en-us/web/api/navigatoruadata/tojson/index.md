@@ -1,6 +1,7 @@
 ---
 title: NavigatorUAData.toJSON()
 slug: Web/API/NavigatorUAData/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,7 +19,7 @@ The **`toJSON()`** method of the {{domxref("NavigatorUAData")}} interface is a _
 ## Syntax
 
 ```js
-NavigatorUAData.toJSON();
+toJSON()
 ```
 
 ### Parameters

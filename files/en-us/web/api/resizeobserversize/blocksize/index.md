@@ -1,6 +1,7 @@
 ---
 title: ResizeObserverSize.blockSize
 slug: Web/API/ResizeObserverSize/blockSize
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,13 +16,7 @@ The **`blockSize`** read-only property of the {{domxref("ResizeObserverSize")}} 
 
 > **Note:** For more explanation of writing modes and block and inline dimensions, read [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
-## Syntax
-
-```js
-var blockSize = ResizeObserverSize.blockSize;
-```
-
-### Value
+## Value
 
 A decimal representing the block size in pixels.
 

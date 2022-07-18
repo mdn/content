@@ -21,7 +21,7 @@ Refer to the documentation for {{Cssxref("angle")}} and {{Cssxref("percentage")}
 
 ## Use in calc()
 
-Where an `<angle-percentage>` is specified as an allowable type, this means that the percentage resolves to an angle and therefore can be used in a {{Cssxref("calc()")}} expression.
+Where an `<angle-percentage>` is specified as an allowable type, this means that the percentage resolves to an angle and therefore can be used in a {{Cssxref("calc", "calc()")}} expression.
 
 ## Specifications
 
@@ -35,4 +35,4 @@ Where an `<angle-percentage>` is specified as an allowable type, this means that
 
 - [CSS data types](/en-US/docs/Web/CSS/CSS_Types)
 - [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
-- [`conic-gradient()`](/en-US/docs/Web/CSS/gradient/conic-gradient()) and [`repeating-conic-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient())
+- [`conic-gradient()`](/en-US/docs/Web/CSS/gradient/conic-gradient) and [`repeating-conic-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient)

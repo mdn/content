@@ -59,12 +59,13 @@ transform: perspective(500px) translate(10px, 0, 20px) rotateY(3deg);
 transform: inherit;
 transform: initial;
 transform: revert;
+transform: revert-layer;
 transform: unset;
 ```
 
 The `transform` property may be specified as either the keyword value `none` or as one or more `<transform-function>` values.
 
-If {{cssxref("transform-function/perspective()", "perspective()")}} is one of multiple function values, it must be listed first.
+If {{cssxref("transform-function/perspective", "perspective()")}} is one of multiple function values, it must be listed first.
 
 ### Values
 

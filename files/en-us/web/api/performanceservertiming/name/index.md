@@ -1,6 +1,7 @@
 ---
 title: PerformanceServerTiming.name
 slug: Web/API/PerformanceServerTiming/name
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,13 +12,11 @@ browser-compat: api.PerformanceServerTiming.name
 {{APIRef("Resource Timing API")}}
 
 The **`name`** read-only property returns a
-{{domxref("DOMString")}} value of the server-specified metric name.
+string value of the server-specified metric name.
 
-## Syntax
+## Value
 
-```js
-serverTiming.name;
-```
+A string.
 
 ## Specifications
 

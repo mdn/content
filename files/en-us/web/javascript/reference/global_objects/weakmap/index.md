@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.WeakMap
 ---
 {{JSRef}}
 
-A **`WeakMap`** is a collection of key/value pairs whose keys must be objects, with values of any arbitrary [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures#javascript_types), and which does not create strong references to its keys. That is, an object’s presence as a key in a `WeakMap` does not prevent the object from being garbage collected. Once an object used as a key has been collected, its corresponding values in any `WeakMap` become candidates for garbage collection as well — as long as they aren't strongly referred to elsewhere.
+A **`WeakMap`** is a collection of key/value pairs whose keys must be objects, with values of any arbitrary [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures#javascript_types), and which does not create strong references to its keys. That is, an object's presence as a key in a `WeakMap` does not prevent the object from being garbage collected. Once an object used as a key has been collected, its corresponding values in any `WeakMap` become candidates for garbage collection as well — as long as they aren't strongly referred to elsewhere.
 
 `WeakMap` allows associating data to objects in a way that doesn't prevent the key objects from being collected, even if the values reference the keys. However, a `WeakMap` doesn't allow observing the liveness of its keys, which is why it doesn't allow enumeration; if a `WeakMap` exposed any method to obtain a list of its keys, the list would depend on the state of garbage collection, introducing non-determinism. If you want to have a list of keys, you should use a {{jsxref("Map")}} rather than a `WeakMap`.
 
@@ -116,6 +116,81 @@ class ClearableWeakMap {
 }
 ```
 
+### Emulating private members
+
+Developers can use a {{jsxref("WeakMap")}} to associate private data to an object, with the following benefits:
+
+- Compared to a {{jsxref("Map")}}, a WeakMap does not hold strong references to the object used as the key, so the metadata shares the same lifetime as the object itself, avoiding memory leaks.
+- Compared to using non-enumerable and/or {{jsxref("Symbol")}} properties, a WeakMap is external to the object and there is no way for user code to retrieve the metadata through reflective methods like {{jsxref("Object.getOwnPropertySymbols")}}.
+- Compared to a [closure](/en-US/docs/Web/JavaScript/Closures), the same WeakMap can be reused for all instances created from a constructor, making it more memory-efficient, and allows different instances of the same class to read the private members of each other.
+
+```js
+let Thing;
+
+{
+  const privateScope = new WeakMap();
+  let counter = 0;
+
+  Thing = function() {
+    this.someProperty = 'foo';
+
+    privateScope.set(this, {
+      hidden: ++counter,
+    });
+  };
+
+  Thing.prototype.showPublic = function() {
+    return this.someProperty;
+  };
+
+  Thing.prototype.showPrivate = function() {
+    return privateScope.get(this).hidden;
+  };
+}
+
+console.log(typeof privateScope);
+// "undefined"
+
+const thing = new Thing();
+
+console.log(thing);
+// Thing {someProperty: "foo"}
+
+thing.showPublic();
+// "foo"
+
+thing.showPrivate();
+// 1
+```
+
+This is roughly equivalent to the following, using [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields):
+
+```js
+class Thing {
+  static #counter = 0;
+  #hidden;
+  constructor() {
+    this.someProperty = 'foo';
+    this.#hidden = ++Thing.#counter;
+  }
+  showPublic() {
+    return this.someProperty;
+  }
+  showPrivate() {
+    return this.#hidden;
+  }
+}
+
+console.log(thing);
+// Thing {someProperty: "foo"}
+
+thing.showPublic();
+// "foo"
+
+thing.showPrivate();
+// 1
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -128,7 +203,7 @@ class ClearableWeakMap {
 
 - [Polyfill of `WeakMap` in `core-js`](https://github.com/zloirock/core-js#weakmap)
 - [WeakMap object](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object) in the [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections) guide
-- [Hiding Implementation Details with ECMAScript 6 WeakMaps](https://fitzgeraldnick.com/weblog/53/)
+- [Hiding Implementation Details with ECMAScript 6 WeakMaps](https://fitzgeraldnick.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html)
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakSet")}}

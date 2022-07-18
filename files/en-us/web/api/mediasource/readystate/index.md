@@ -1,6 +1,7 @@
 ---
 title: MediaSource.readyState
 slug: Web/API/MediaSource/readyState
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -26,25 +27,17 @@ current `MediaSource`. The three possible values are:
 - `ended`: The source is attached to a media element but the stream has
   been ended via a call to {{domxref("MediaSource.endOfStream()")}}.
 
-## Syntax
+## Value
 
-```js
-var myReadyState = mediaSource.readyState;
-```
+A string.
 
-### Value
+## Examples
 
-A {{domxref("DOMString")}}.
-
-## Example
-
-The following snippet is from a simple example written by Nick Desaulniers ([view the full demo
-live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download
-the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
+The following snippet is from a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
 
 ```js
 if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
-  var mediaSource = new MediaSource;
+  const mediaSource = new MediaSource;
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
   mediaSource.addEventListener('sourceopen', sourceOpen);
@@ -54,8 +47,8 @@ if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
 
 function sourceOpen (_) {
   //console.log(this.readyState); // open
-  var mediaSource = this;
-  var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+  const mediaSource = this;
+  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, function (buf) {
     sourceBuffer.addEventListener('updateend', function (_) {
       mediaSource.endOfStream();

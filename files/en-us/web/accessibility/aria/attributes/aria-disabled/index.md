@@ -1,15 +1,15 @@
 ---
-title: 'aria-disabled'
+title: aria-disabled
 slug: Web/Accessibility/ARIA/Attributes/aria-disabled
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-disabled
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-disabled
 ---
-
 The `aria-disabled` state indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
 
 ## Description
@@ -32,7 +32,7 @@ ARIA attributes only provide semantics. To semantically disable an element witho
 
 > **Note:**  The state of being disabled applies to the element with `aria-disabled` and all of its focusable descendants.
 
-The `aria-disabled` attribute is similar to the HTML `disabled` attribute, but better. The first rule of ARIA is "If you can use a native HTML element or attribute with the semantics and behavior you require already built in, instead of repurposing an element and adding an ARIA role, state or property to make it accessible, then do so." `aria-disabled` is an exception to that rule. It is one of the only cases where an ARIA attribute may be better than the native `disabled` attribute HTML equivalent.  
+The `aria-disabled` attribute is similar to the HTML `disabled` attribute, but better. The first rule of ARIA is "If you can use a native HTML element or attribute with the semantics and behavior you require already built in, instead of repurposing an element and adding an ARIA role, state or property to make it accessible, then do so." `aria-disabled` is an exception to that rule. It is one of the only cases where an ARIA attribute may be better than the native `disabled` attribute HTML equivalent.
 
 The `disabled` Boolean attribute provides CSS styles and semantics and removes the ability to click or focus while not disabling hover. By removing the ability to focus and removing it from the accessibility tree, it makes it invisible to assistive technology users. For good user experience, you want to make sure everyone can access all the visible content, no matter how they access the web. It is important to be aware that using the `disabled` attribute can harm usability.
 
@@ -47,21 +47,21 @@ While adding `disabled` to an HTML form control causes `:disabled` user-agent st
 > **Note:** If you are using CSS's [`pointer-events: none;`](/en-US/docs/Web/CSS/pointer-events) to make an element non-clickable, make sure you disable interactivity with JavaScript as well. `pointer-events: none;` prevents mouse clicks, but does not prevent the element from being activated via the keyboard.
 
 ```js
+function onClick(event) {
+  event.preventDefault();
+}
+
 function toggleDisabled(element, status, update) {
   if(status) {
     //element.input.disabled = false;
     element.setAttribute('aria-disabled', 'false');
     update.textContent = 'The element is now enabled.';
-    element.removeEventListener('click', function (event) {
-      event.preventDefault();
-    }
+    element.addEventListener('click', onClick);
   } else {
     //element.input.disabled = true;
     element.setAttribute('aria-disabled', 'true');
     update.textContent = 'The element is now disabled.';
-    element.addEventListener('click', function (event) {
-      event.preventDefault();
-    }
+    element.removeEventListener('click', onClick);
   }
 }
 ```
@@ -78,66 +78,64 @@ If you used just CSS to style the disabled state using an attribute selector, th
 
 - `true`
   - : The element is disabled
-  
+
 - `false`
   - : The element is not disabled
 
 ## ARIAMixin API
 
 - {{domxref("Element.ariaDisabled")}}
-  - : The  [`ariaDisabled`](/en-US/docs/Web/API/Element/ariaDisabled) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-disabled` attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
+  - : The [`ariaDisabled`](/en-US/docs/Web/API/Element/ariaDisabled) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-disabled` attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
 - {{domxref("ElementInternals.ariaDisabled")}}
-  - : The [`ariaDisabled`](https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaDisabled) property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-disabled` attribute.
+  - : The [`ariaDisabled`](/en-US/docs/Web/API/ElementInternals/ariaDisabled) property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-disabled` attribute.
 
 ## Associated roles
 
 Used in roles:
 
-- [`application`](/en-US/docs/Web/Accessibility/ARIA/roles/application_role)
-- [`button`](/en-US/docs/Web/Accessibility/ARIA/roles/button_role)
-- [`composite`](/en-US/docs/Web/Accessibility/ARIA/roles/composite_role)
-- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/roles/gridcell_role)
-- [`group`](/en-US/docs/Web/Accessibility/ARIA/roles/group_role)
-- [`input`](/en-US/docs/Web/Accessibility/ARIA/roles/input_role)
-- [`link`](/en-US/docs/Web/Accessibility/ARIA/roles/link_role)
-- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/roles/menuitem_role)
-- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/roles/scrollbar_role)
-- [`separator`](/en-US/docs/Web/Accessibility/ARIA/roles/separator_role)
-- [`tab`](/en-US/docs/Web/Accessibility/ARIA/roles/tab_role)
+- [`application`](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)
+- [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
+- [`composite`](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role)
+- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
+- [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
+- [`input`](/en-US/docs/Web/Accessibility/ARIA/Roles/input_role)
+- [`link`](/en-US/docs/Web/Accessibility/ARIA/Roles/link_role)
+- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
+- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
+- [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role)
+- [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
 
 Inherits into roles:
 
-- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/roles/checkbox_role)
-- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/roles/columnheader_role)
-- [`combobox`](/en-US/docs/Web/Accessibility/ARIA/roles/combobox_role)
-- [`grid`](/en-US/docs/Web/Accessibility/ARIA/roles/grid_role)
-- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/roles/listbox_role)
-- [`menu`](/en-US/docs/Web/Accessibility/ARIA/roles/menu_role)
-- [`menubar`](/en-US/docs/Web/Accessibility/ARIA/roles/menubar_role)
-- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/roles/menuitemcheckbox_role)
-- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/roles/menuitemradio_role)
-- [`option`](/en-US/docs/Web/Accessibility/ARIA/roles/option_role)
-- [`radio`](/en-US/docs/Web/Accessibility/ARIA/roles/radio_role)
-- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/roles/radiogroup_role)
-- [`row`](/en-US/docs/Web/Accessibility/ARIA/roles/row_role)
-- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/roles/rowheader_role)
-- [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/roles/searchbox_role)
-- [`select`](/en-US/docs/Web/Accessibility/ARIA/roles/select_role)
-- [`slider`](/en-US/docs/Web/Accessibility/ARIA/roles/slider_role)
-- [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/roles/spinbutton_role)
-- [`switch`](/en-US/docs/Web/Accessibility/ARIA/roles/switch_role)
-- [`tablist`](/en-US/docs/Web/Accessibility/ARIA/roles/tablist_role)
-- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/roles/textbox_role)
-- [`toolbar`](/en-US/docs/Web/Accessibility/ARIA/roles/toolbar_role)
-- [`tree`](/en-US/docs/Web/Accessibility/ARIA/roles/tree_role)
-- [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/roles/treegrid_role)
-- [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/roles/treeitem_role)
+- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
+- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
+- [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
+- [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
+- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
+- [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role)
+- [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role)
+- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
+- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
+- [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
+- [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
+- [`radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role)
+- [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
+- [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
+- [`select`](/en-US/docs/Web/Accessibility/ARIA/Roles/select_role)
+- [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
+- [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
+- [`switch`](/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role)
+- [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role)
+- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
+- [`toolbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role)
+- [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role)
+- [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
+- [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role)
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-disabled","ARIA: aria-disabled Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

@@ -1,10 +1,10 @@
 ---
 title: FormDataEvent()
 slug: Web/API/FormDataEvent/FormDataEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
-  - Experimental
   - FormDataEvent
   - Forms
   - Reference
@@ -12,34 +12,28 @@ browser-compat: api.FormDataEvent.FormDataEvent
 ---
 {{APIRef("DOM")}}
 
-The **`FormDataEvent()`** constructor creates a new
-{{domxref("FormDataEvent")}} object instance.
+The **`FormDataEvent()`** constructor creates a new {{domxref("FormDataEvent")}} object.
 
 ## Syntax
 
 ```js
-new FormDataEvent(type[, formEventInit]);
+new FormDataEvent(type, formEventInit)
 ```
 
-### Values
+### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} representing the name of the event.
-- `formEventInit` {{optional_inline}}
+  - : A string with the name of the event.
+    It is case-sensitive and browsers always set it to `formdata`.
+- `options`
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
+    - `formData`
+      - : A {{domxref("FormData")}} object to pre-populate the {{domxref("FormDataEvent")}} with.
+        This would then be accessed through the {{domxref("FormDataEvent.formData")}} property.
 
-  - : A `FormEventInit` dictionary, which can take the following optional
-    fields:
+### Return value
 
-    - `bubbles`: a `true` or `false` value indicating whether the event
-      bubbles. The default is `false`.
-    - `cancelable`: a `true` or `false` value indicating whether the event
-      can be cancelled. The default is `false`.
-    - `composed`: a `true` or `false` value indicating whether the event will
-      trigger listeners outside of a shadow root (see {{domxref("Event.composed")}} for
-      more details). The default is `false`.
-    - `formData`: A {{domxref("FormData")}} object to pre-populate the
-      FormDataEvent with. This would then be accessed through the
-      {{domxref("FormDataEvent.formData")}} property.
+A new {{domxref("FormDataEvent")}} object.
 
 ## Examples
 

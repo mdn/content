@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.createSampler()
 slug: Web/API/WebGL2RenderingContext/createSampler
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,7 +19,7 @@ The **`WebGL2RenderingContext.createSampler()`** method of the
 ## Syntax
 
 ```js
-WebGLSampler gl.createSampler();
+createSampler()
 ```
 
 ### Parameters

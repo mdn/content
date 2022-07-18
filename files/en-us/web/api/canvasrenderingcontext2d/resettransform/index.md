@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.resetTransform()
 slug: Web/API/CanvasRenderingContext2D/resetTransform
+page-type: web-api-instance-method
 tags:
   - Canvas
   - CanvasRenderingContext2D

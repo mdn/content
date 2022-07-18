@@ -32,6 +32,7 @@ left: auto;
 left: inherit;
 left: initial;
 left: revert;
+left: revert-layer;
 left: unset;
 ```
 

@@ -37,6 +37,7 @@ inline-size: auto;
 inline-size: inherit;
 inline-size: initial;
 inline-size: revert;
+inline-size: revert-layer;
 inline-size: unset;
 ```
 

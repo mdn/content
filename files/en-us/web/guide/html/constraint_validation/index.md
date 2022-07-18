@@ -104,7 +104,7 @@ In addition to the `type` attribute described above, the following attributes ar
     </tr>
     <tr>
       <td>
-        <code>datetime</code>, <code>datetime-local</code>, <code>time</code>
+        <code>datetime-local</code>, <code>time</code>
       </td>
       <td>A valid date and time</td>
     </tr>
@@ -132,7 +132,7 @@ In addition to the `type` attribute described above, the following attributes ar
     </tr>
     <tr>
       <td>
-        <code>datetime</code>, <code>datetime-local</code>, <code>time</code>
+        <code>datetime-local</code>, <code>time</code>
       </td>
       <td>A valid date and time</td>
     </tr>
@@ -145,7 +145,7 @@ In addition to the `type` attribute described above, the following attributes ar
       <td>
         <code>text</code>, <code>search</code>, <code>url</code>,
         <code>tel</code>, <code>email</code>, <code>password</code>,
-        <code>date</code>, <code>datetime</code>, <code>datetime-local</code>,
+        <code>date</code>, <code>datetime-local</code>,
         <code>month</code>, <code>week</code>, <code>time</code>,
         <code>number</code>, <code>checkbox</code>, <code>radio</code>,
         <code>file</code>; also on the {{ HTMLElement("select") }} and
@@ -198,7 +198,7 @@ In addition to the `type` attribute described above, the following attributes ar
     </tr>
     <tr>
       <td>
-        <code>datetime</code>, <code>datetime-local</code>, <code>time</code>
+        <code>datetime-local</code>, <code>time</code>
       </td>
       <td>An integer number of seconds</td>
     </tr>
@@ -273,7 +273,7 @@ In addition to the `type` attribute described above, the following attributes ar
 
 Constraint validation is done through the Constraint Validation API either on a single form element or at the form level, on the {{ HTMLElement("form") }} element itself. The constraint validation is done in the following ways:
 
-- By a call to the `checkValidity()` or `reportValidity()` method of a form-associated DOM interface, ([`HTMLInputElement`](/en-US/docs/Web/API/HTMLInputElement), [`HTMLSelectElement`](/en-US/docs/Web/API/HTMLSelectElement), [`HTMLButtonElement`](/en-US/docs/Web/API/HTMLButtonElement), [`HTMLOutputElement`](/en-US/docs/Web/API/HTMLOutputElement) or [`HTMLTextAreaElement`](/en-US/docs/Web/API/HTMLTextAreaElement)), which evaluates the constraints only on this element, allowing a script to get this information. The `checkValidity()` method returns a Boolean indicating whether the element's value passes its constraints. (This is typically done by the user-agent when determining which of the CSS pseudo-classes, {{ Cssxref(":valid") }} or {{ Cssxref(":invalid") }}, applies.) In contrast, the `reportValidity()` method reports any constraint failures to the user.
+- By a call to the `checkValidity()` or `reportValidity()` method of a form-associated DOM interface, ([`HTMLInputElement`](/en-US/docs/Web/API/HTMLInputElement), [`HTMLSelectElement`](/en-US/docs/Web/API/HTMLSelectElement), [`HTMLButtonElement`](/en-US/docs/Web/API/HTMLButtonElement), [`HTMLOutputElement`](/en-US/docs/Web/API/HTMLOutputElement) or [`HTMLTextAreaElement`](/en-US/docs/Web/API/HTMLTextAreaElement)), which evaluates the constraints only on this element, allowing a script to get this information. The `checkValidity()` method returns a Boolean indicating whether the element's value passes its constraints. (This is typically done by the user-agent when determining which of the CSS pseudo-classes, {{ Cssxref(":valid") }} or {{ Cssxref(":invalid") }}, applies.) In contrast, the `reportValidity()` method reports any constraint failures to the user.
 - By a call to the `checkValidity()` or `reportValidity()` method on the [`HTMLFormElement`](/en-US/docs/Web/API/HTMLFormElement) interface.
 - By submitting the form itself.
 

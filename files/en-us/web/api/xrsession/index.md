@@ -1,6 +1,7 @@
 ---
 title: XRSession
 slug: Web/API/XRSession
+page-type: web-api-interface
 tags:
   - API
   - AR
@@ -15,7 +16,7 @@ browser-compat: api.XRSession
 ---
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
-The WebXR Device API's **`XRSession`** interface represents an ongoing XR session, providing methods and properties used to interact with and control the session. To open a WebXR session, use the {{domxref("XRSystem")}} interface's {{domxref("XRSystem.requestSession", "requestSession()")}} method.
+The {{domxref("WebXR Device API")}}'s **`XRSession`** interface represents an ongoing XR session, providing methods and properties used to interact with and control the session. To open a WebXR session, use the {{domxref("XRSystem")}} interface's {{domxref("XRSystem.requestSession", "requestSession()")}} method.
 
 With `XRSession` methods, you can poll the viewer's position and orientation (the {{domxref("XRViewerPose")}}), gather information about the user's environment, and present imagery to the user. `XRSession` supports both inline and immersive virtual and augmented reality modes.
 
@@ -33,15 +34,15 @@ _In addition to the properties listed below, `XRSession` inherits properties fro
   - : Provides information about the DOM overlay, if the feature is enabled.
 - {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns this session's blend mode which denotes how much of the real-world environment is visible through the XR device and how the device will blend the device imagery with it.
-- {{DOMxRef("XRSession.inputSources", "inputSources")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("XRSession.inputSources", "inputSources")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns a list of this session's {{DOMxRef("XRInputSource")}}s, each representing an input device used to control the camera and/or scene.
 - {{DOMxRef("XRSession.interactionMode", "interactionMode")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns this session's interaction mode, which describes the best space (according to the user agent) for the application to draw interactive UI for the current session.
 - {{DOMxRef("XRSession.preferredReflectionFormat", "preferredReflectionFormat")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns this session's preferred reflection format used for lighting estimation texture data.
-- {{DOMxRef("XRSession.renderState", "renderState")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("XRSession.renderState", "renderState")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : An {{domxref("XRRenderState")}} object which contains options affecting how the imagery is rendered. This includes things such as the near and far clipping planes (distances defining how close and how far away objects can be and still get rendered), as well as field of view information.
-- {{DOMxRef("XRSession.visibilityState", "visibilityState")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("XRSession.visibilityState", "visibilityState")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : A string indicating whether or not the session's imagery is visible to the user, and if so, if it's being visible but not currently the target for user events.
 
 ## Methods

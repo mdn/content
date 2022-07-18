@@ -65,12 +65,12 @@ The `Origin` header value may be `null` in a number of cases, including (non-exh
 
 - Origins whose scheme is not one of `http`, `https`, `ftp`, `ws`, `wss`, or `gopher` (including `blob`, `file` and `data`).
 - Cross-origin images and media data, including that in `<img>`, `<video>` and `<audio>` elements.
-- Documents created programmatically using `createDocument()`, generated from a `data:` url, or that do not have a creator browsing context.
+- Documents created programmatically using `createDocument()`, generated from a `data:` URL, or that do not have a creator browsing context.
 - Redirects across origins.
-- iframes with a sandbox attribute that doesn’t contain the value `allow-same-origin`.
+- iframes with a sandbox attribute that doesn't contain the value `allow-same-origin`.
 - Responses that are network errors.
 
-> **Note:** There is a more detailed listing of case that may return `null` on Stack Overflow here: [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/a/42242802/).
+> **Note:** There is a more detailed listing of cases that may return `null` on Stack Overflow: [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802)
 
 ## Examples
 
@@ -95,4 +95,4 @@ Origin: http://developer.mozilla.org:80
 - {{HTTPHeader("Host")}}
 - {{HTTPHeader("Referer")}}
 - [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
-- [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/a/42242802/) (Stack Overflow)
+- [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802) (Stack Overflow)

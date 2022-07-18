@@ -1,6 +1,7 @@
 ---
 title: HTMLUnknownElement
 slug: Web/API/HTMLUnknownElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM

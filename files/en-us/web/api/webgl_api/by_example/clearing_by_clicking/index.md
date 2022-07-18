@@ -1,6 +1,7 @@
 ---
 title: Clearing by clicking
 slug: Web/API/WebGL_API/By_example/Clearing_by_clicking
+page-type: guide
 tags:
   - Beginner
   - Example
@@ -62,13 +63,13 @@ window.addEventListener("load", function setupWebGL (evt) {
 
   // Adding the same click event handler to both canvas and
   // button.
-  var canvas = document.querySelector("#canvas-view");
-  var button = document.querySelector("#color-switcher");
+  const canvas = document.querySelector("#canvas-view");
+  const button = document.querySelector("#color-switcher");
   canvas.addEventListener("click", switchColor, false);
   button.addEventListener("click", switchColor, false);
 
   // A variable to hold the WebGLRenderingContext.
-  var gl;
+  let gl;
 
   // The click event handler.
   function switchColor () {
@@ -88,7 +89,7 @@ window.addEventListener("load", function setupWebGL (evt) {
         gl.drawingBufferWidth, gl.drawingBufferHeight);
     }
     // Get a random color value using a helper function.
-    var color = getRandomColor();
+    const color = getRandomColor();
     // Set the clear color to the random color.
     gl.clearColor(color[0], color[1], color[2], 1.0);
     // Clear the context with the newly set color. This is

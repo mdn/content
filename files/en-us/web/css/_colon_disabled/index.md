@@ -23,11 +23,13 @@ input:disabled {
 
 ## Syntax
 
-{{csssyntax}}
+```
+:disabled
+```
 
 ## Examples
 
-This example shows a basic shipping form. It uses the [JavaScript](/en-US/docs/Web/JavaScript) {{event("change")}} event to let the user enable/disable the billing fields.
+This example shows a basic shipping form. It uses the [JavaScript](/en-US/docs/Web/JavaScript) {{domxref("HTMLElement/change_event", "change")}} event to let the user enable/disable the billing fields.
 
 ### HTML
 

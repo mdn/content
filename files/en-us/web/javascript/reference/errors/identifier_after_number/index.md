@@ -15,7 +15,7 @@ underscore (\_), or dollar sign ($).
 
 ## Message
 
-```js
+```
 SyntaxError: Unexpected identifier after numeric literal (Edge)
 SyntaxError: identifier starts immediately after numeric literal (Firefox)
 SyntaxError: Unexpected number (Chrome)
@@ -28,7 +28,7 @@ SyntaxError: Unexpected number (Chrome)
 ## What went wrong?
 
 The names of variables, called [identifiers](/en-US/docs/Glossary/Identifier), conform to certain rules,
-which your code must adhere to!
+which your code must adhere to!
 
 A JavaScript identifier must start with a letter, underscore (\_), or dollar sign ($).
 They can't start with a digit! Only subsequent characters can be digits (0-9).
@@ -40,10 +40,10 @@ They can't start with a digit! Only subsequent characters can be digits (0-9).
 Variable names can't start with numbers in JavaScript. The following fails:
 
 ```js example-bad
-var 1life = 'foo';
+const 1life = 'foo';
 // SyntaxError: identifier starts immediately after numeric literal
 
-var foo = 1life;
+const foo = 1life;
 // SyntaxError: identifier starts immediately after numeric literal
 
 alert(1.foo);
@@ -53,8 +53,8 @@ alert(1.foo);
 You will need to rename your variable to avoid the leading number.
 
 ```js example-good
-var life1 = 'foo';
-var foo = life1;
+const life1 = 'foo';
+const foo = life1;
 ```
 
 ## See also

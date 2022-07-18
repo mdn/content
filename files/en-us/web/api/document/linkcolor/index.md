@@ -1,6 +1,7 @@
 ---
 title: Document.linkColor
 slug: Web/API/Document/linkColor
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -19,22 +20,13 @@ links within the document.
 This property is deprecated. As an alternative, you can set the CSS
 {{cssxref("color")}} property on either HTML anchor links ({{HtmlElement("a")}}) or on
 {{cssxref(":link")}} pseudo-classes. Another alternative is
-`document.body.link`, although this is [deprecated in HTML
-4.01](https://www.w3.org/TR/html401/struct/global.html#adef-link).
+`document.body.link`, although this is [deprecated in HTML 4.01](https://www.w3.org/TR/html401/struct/global.html#adef-link).
 
-## Syntax
+## Value
 
-```js
-color = document.linkColor
-document.linkColor = color
-```
+A string representing the color as a word (e.g., `red`) or hexadecimal value (e.g., `#ff0000`).
 
-### Parameters
-
-- `color` is a string representing the color as a word (e.g.,
-  `red`) or hexadecimal value (e.g., `#ff0000`).
-
-## Example
+## Examples
 
 ```js
 document.linkColor = 'blue';
@@ -44,8 +36,7 @@ document.linkColor = 'blue';
 
 HTML5
 
-`Document.linkColor` is [deprecated in DOM
-Level 2 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268).
+`Document.linkColor` is [deprecated in DOM Level 2 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268).
 
 ## Browser compatibility
 

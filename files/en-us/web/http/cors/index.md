@@ -13,6 +13,7 @@ tags:
   - Security
   - XMLHttpRequest
   - l10n:priority
+browser-compat: http.headers.Access-Control-Allow-Origin
 ---
 {{HTTPSidebar}}
 
@@ -58,7 +59,7 @@ We present three scenarios that demonstrate how Cross-Origin Resource Sharing wo
 
 ### Simple requests
 
-Some requests don't trigger a {{Glossary("Preflight_request","CORS preflight")}}. Those are called _simple requests_, though the {{SpecName("Fetch")}} spec (which defines CORS) doesn't use that term. A _simple request_ is one that **meets all the following conditions**:
+Some requests don't trigger a {{Glossary("Preflight_request","CORS preflight")}}. Those are called _simple requests_, though the [Fetch](https://fetch.spec.whatwg.org/) spec (which defines CORS) doesn't use that term. A _simple request_ is one that **meets all the following conditions**:
 
 - One of the allowed methods:
 
@@ -72,6 +73,9 @@ Some requests don't trigger a {{Glossary("Preflight_request","CORS preflight")}}
   - {{HTTPHeader("Accept-Language")}}
   - {{HTTPHeader("Content-Language")}}
   - {{HTTPHeader("Content-Type")}} (please note the additional requirements below)
+  - {{HTTPHeader("Range")}} (only with a [simple range header value](https://fetch.spec.whatwg.org/#simple-range-header-value); e.g., `bytes=256-` or `bytes=127-255`)
+
+> **Note:** Firefox has not implemented `Range` as a safelisted request-header yet. See [bug 1733981](https://bugzilla.mozilla.org/show_bug.cgi?id=1733981).
 
 - The only type/subtype combinations allowed for the {{Glossary("MIME type","media type")}} specified in the {{HTTPHeader("Content-Type")}} header are:
 
@@ -103,9 +107,9 @@ xhr.send();
 
 This operation performs a simple exchange between the client and the server, using CORS headers to handle the privileges:
 
-![](simple-req-updated.png)
+![](simple-req.png)
 
-Let's look at what the browser will send to the server in this case, and let's see how the server responds:
+Let's look at what the browser will send to the server in this case:
 
 ```
 GET /resources/public-data/ HTTP/1.1
@@ -119,6 +123,8 @@ Origin: https://foo.example
 ```
 
 The request header of note is {{HTTPHeader("Origin")}}, which shows that the invocation is coming from `https://foo.example`.
+
+Now let's see how the server responds:
 
 ```
 HTTP/1.1 200 OK
@@ -157,12 +163,12 @@ The following is an example of a request that will be preflighted:
 const xhr = new XMLHttpRequest();
 xhr.open('POST', 'https://bar.other/resources/post-here/');
 xhr.setRequestHeader('X-PINGOTHER', 'pingpong');
-xhr.setRequestHeader('Content-Type', 'application/xml');
+xhr.setRequestHeader('Content-Type', 'text/xml');
 xhr.onreadystatechange = handler;
 xhr.send('<person><name>Arun</name></person>');
 ```
 
-The example above creates an XML body to send with the `POST` request. Also, a non-standard HTTP `X-PINGOTHER` request header is set. Such headers are not part of HTTP/1.1, but are generally useful to web applications. Since the request uses a `Content-Type` of `application/xml`, and since a custom header is set, this request is preflighted.
+The example above creates an XML body to send with the `POST` request. Also, a non-standard HTTP `X-PINGOTHER` request header is set. Such headers are not part of HTTP/1.1, but are generally useful to web applications. Since the request uses a `Content-Type` of `text/xml`, and since a custom header is set, this request is preflighted.
 
 ![](preflight_correct.png)
 
@@ -203,7 +209,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
 The {{HTTPHeader("Access-Control-Request-Method")}} header notifies the server as part of a preflight request that when the actual request is sent, it will do so with a `POST` request method. The {{HTTPHeader("Access-Control-Request-Headers")}} header notifies the server that when the actual request is sent, it will do so with `X-PINGOTHER` and `Content-Type` custom headers. Now the server has an opportunity to determine whether it can accept a request under these conditions.
 
-Lines 13 - 22 above are the response that the server returns, which indicate that the request method (`POST`) and request headers (`X-PINGOTHER`) are acceptable. Let's have a closer look at lines 16-19:
+Lines 12 - 21 above are the response that the server returns, which indicate that the request method (`POST`) and request headers (`X-PINGOTHER`) are acceptable. Let's have a closer look at lines 15-18:
 
 ```
 Access-Control-Allow-Origin: https://foo.example
@@ -264,7 +270,7 @@ The CORS protocol originally required that behavior but [was subsequently change
 Until browsers catch up with the spec, you may be able to work around this limitation by doing one or both of the following:
 
 - Change the server-side behavior to avoid the preflight and/or to avoid the redirect
-- Change the request such that it is a [simple request](#simple_requests) that doesn’t cause a preflight
+- Change the request such that it is a [simple request](#simple_requests) that doesn't cause a preflight
 
 If that's not possible, then another way is to:
 
@@ -331,13 +337,13 @@ Content-Type: text/plain
 [text/plain payload]
 ```
 
-Although line 10 contains the Cookie destined for the content on `https://bar.other`, if bar.other did not respond with an {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` (line 17), the response would be ignored and not made available to the web content.
+Although line 10 contains the Cookie destined for the content on `https://bar.other`, if bar.other did not respond with an {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` (line 16), the response would be ignored and not made available to the web content.
 
 #### Preflight requests and credentials
 
 CORS-preflight requests must never include credentials. The _response_ to a preflight request must specify `Access-Control-Allow-Credentials: true` to indicate that the actual request can be made with credentials.
 
-> **Note:** Some enterprise authentication services require that TLS client certificates be sent in preflight requests, in contravention of the {{SpecName("Fetch","#cors-protocol-and-credentials")}} specification.
+> **Note:** Some enterprise authentication services require that TLS client certificates be sent in preflight requests, in contravention of the [Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials) specification.
 >
 > Firefox 87 allows this non-compliant behavior to be enabled by setting the preference: `network.cors_preflight.allow_client_cert` to `true` ({{bug(1511151)}}). Chromium-based browsers currently always send TLS client certificates in CORS preflight requests ([Chrome bug 775438](https://bugs.chromium.org/p/chromium/issues/detail?id=775438)).
 
@@ -359,7 +365,7 @@ Also note that any `Set-Cookie` response header in a response would not set a co
 
 #### Third-party cookies
 
-Note that cookies set in CORS responses are subject to normal third-party cookie policies. In the example above, the page is loaded from `foo.example` but the cookie on line 20 is sent by `bar.other`, and would thus not be saved if the user's browser is configured to reject all third-party cookies.
+Note that cookies set in CORS responses are subject to normal third-party cookie policies. In the example above, the page is loaded from `foo.example` but the cookie on line 19 is sent by `bar.other`, and would thus not be saved if the user's browser is configured to reject all third-party cookies.
 
 Cookie in the request (line 10) may also be suppressed in normal third-party cookie policies. The enforced cookie policy may therefore nullify the capability described in this chapter, effectively preventing you from making credentialed requests whatsoever.
 
@@ -482,13 +488,11 @@ Examples of this usage can be [found above](#preflighted_requests).
 
 ## Specifications
 
-| Specification                                                    | Status                   | Comment                                                                          |
-| ---------------------------------------------------------------- | ------------------------ | -------------------------------------------------------------------------------- |
-| {{SpecName('Fetch', '#cors-protocol', 'CORS')}} | {{Spec2('Fetch')}} | New definition; supplants [W3C CORS](https://www.w3.org/TR/cors/) specification. |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ## See also
 
@@ -496,11 +500,11 @@ Examples of this usage can be [found above](#preflighted_requests).
 - [Enable CORS: I want to add CORS support to my server](https://enable-cors.org/server.html)
 - {{domxref("XMLHttpRequest")}}
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
-- [Will it CORS?](https://httptoolkit.tech/will-it-cors) - an interactive CORS explainer & generator
+- [Will it CORS?](https://httptoolkit.tech/will-it-cors/) - an interactive CORS explainer & generator
 - [How to run Chrome browser without CORS](https://alfilatov.com/posts/run-chrome-without-cors/)
 - [Using CORS with All (Modern) Browsers](https://www.telerik.com/blogs/using-cors-with-all-modern-browsers)
-- [Stack Overflow answer with “how to” info for dealing with common problems](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
+- [Stack Overflow answer with "how to" info for dealing with common problems](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
 
   - How to avoid the CORS preflight
-  - How to use a CORS proxy to get around _“No Access-Control-Allow-Origin header”_
-  - How to fix _“Access-Control-Allow-Origin header must not be the wildcard”_
+  - How to use a CORS proxy to get around _"No Access-Control-Allow-Origin header"_
+  - How to fix _"Access-Control-Allow-Origin header must not be the wildcard"_

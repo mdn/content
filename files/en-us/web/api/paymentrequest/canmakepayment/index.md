@@ -1,6 +1,7 @@
 ---
 title: PaymentRequest.canMakePayment()
 slug: Web/API/PaymentRequest/canMakePayment
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -32,14 +33,14 @@ Request API (or even provide instructions for paying by mail or by phone).
 ## Syntax
 
 ```js
-paymentRequest.canMakePayment()
-    .then( canPay => { /* ... */ })
-    .catch( error => { /* ... */ })
-
-canPay = await paymentRequest.canMakePayment();
+canMakePayment()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 A {{jsxref("Promise")}} to a boolean value that resolves to `true`
 if the user agent supports any of the payment methods supplied when instantiating the
@@ -50,14 +51,9 @@ constructor. If the payment can't be processed, the promise receives a value of
 > **Note:** If you call this too often, the browser may reject the
 > returned promise with a `DOMException`.
 
-### Parameters
-
-None
-
 ## Examples
 
-In the following example, is [excerpted
-from a demo](https://rsolomakhin.github.io/samples/paymentrequest/can-make-payment/) that asynchronously builds a `PaymentRequest` object for
+In the following example, is [excerpted from a demo](https://rsolomakhin.github.io/samples/paymentrequest/can-make-payment/) that asynchronously builds a `PaymentRequest` object for
 both Apple Pay and Example Pay. It wraps the call to `canMakePayment()` in
 feature detection, and calls an appropriate callback depending on the resolution of the
 `Promise`.
@@ -85,7 +81,7 @@ async function initPaymentRequest() {
     return;
   }
 
-  // Otherwise... let's see if we can use Example Pay
+  // Otherwise, let's see if we can use Example Pay
   const supportsExamplePay = await new PaymentRequest(
     [{ supportedMethods: "https://example.com/pay" }],
     details

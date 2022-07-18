@@ -51,7 +51,7 @@ In this article we'll just concentrate on the proper uses of floats.
 
 ## A simple float example
 
-Let's explore the use of floats. We'll start with a really simple example involving floating a block of text around an element. You can follow along by creating a new `index.html` file on your computer, filling it with a [simple HTML template](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html), and inserting the below code into it at the appropriate places. At the bottom of the section, you can see a live example of what the final code should look like.
+Let's explore the use of floats. We'll start with a really simple example involving floating a block of text around an element. You can follow along by creating a new `index.html` file on your computer, filling it with a [simple HTML template](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html), and inserting the below code into it at the appropriate places. At the bottom of the section, you can see a live example of what the final code should look like.
 
 First, we'll start off with some simple HTML. Add the following to your HTML body, removing anything that was inside there before:
 
@@ -74,7 +74,7 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif
+  font: .9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 .box {
@@ -118,7 +118,7 @@ To float the box, add the {{cssxref("float")}} and {{cssxref("margin-right")}} p
 
 Now if you save and refresh you'll see something like the following:
 
-{{ EmbedLiveSample('Floating_the_box', '100%', 500) }}
+{{EmbedLiveSample('Floating_the_box', '100%', 500)}}
 
 Let's think about how the float works. The element with the float set on it (the {{htmlelement("div")}} element in this case) is taken out of the normal layout flow of the document and stuck to the left-hand side of its parent container ({{htmlelement("body")}}, in this case). Any content that would come below the floated element in the normal layout flow will now wrap around it instead, filling up the space to the right-hand side of it as far up as the top of the floated element. There, it will stop.
 
@@ -157,7 +157,7 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif
+  font: .9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 .box {
@@ -177,7 +177,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('Visualizing_the_float', '100%', 500) }}
+{{EmbedLiveSample('Visualizing_the_float', '100%', 500)}}
 
 The [line boxes](/en-US/docs/Web/CSS/Visual_formatting_model#line_boxes) of our following element have been shortened so the text runs around the float, but due to the float being removed from normal flow the box around the paragraph still remains full width.
 
@@ -203,7 +203,6 @@ In your HTML from the previous example, add a class of `cleared` to the second p
 <p class="cleared">Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
 
 <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-
 ```
 
 ```css hidden
@@ -211,7 +210,7 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif
+  font: .9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 .box {
@@ -235,7 +234,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('Clearing_floats', '100%', 600) }}
+{{EmbedLiveSample('Clearing_floats', '100%', 600)}}
 
 You should see that the second paragraph now clears the floated element and no longer comes up alongside it. The `clear` property accepts the following values:
 
@@ -273,14 +272,14 @@ In addition, remove the original `.cleared` class:
 
 ```css
 .cleared {
-    clear: left;
+  clear: left;
 }
 ```
 
 You'll see that, just like in the example where we put a background color on the paragraph, the background color runs behind the float.
 
 ```html hidden
-<p class="cleared">Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
 
 <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 ```
@@ -310,7 +309,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('The_problem', '100%', 600) }}
+{{EmbedLiveSample('The_problem', '100%', 600)}}
 
 Once again, this is because the float has been taken out of normal flow. Clearing the following element won't work as it did before. This is a problem if you want the box to wrap jointly around the floated item as well as the text of the first paragraph that wraps around the float, while also having the following content cleared of the box. There are three potential ways to deal with this, two of which work in all browsers — yet are slightly hacky — and a third, newer way that deals with this situation properly.
 
@@ -373,7 +372,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('The_clearfix_hack', '100%', 600) }}
+{{EmbedLiveSample('The_clearfix_hack', '100%', 600)}}
 
 ### Using overflow
 
@@ -428,7 +427,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('Using_overflow', '100%', 600) }}
+{{EmbedLiveSample('Using_overflow', '100%', 600)}}
 
 This example works by creating what's known as a **block formatting context** (BFC). This is like a mini layout inside your page, inside of which everything is contained. This means our floated element is contained inside the BFC, and the background runs behind both items. This will usually work; however, in certain cases you might find unwanted scrollbars or clipped shadows due to unintended consequences of using overflow.
 
@@ -483,7 +482,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('display_flow-root', '100%', 600) }}
+{{EmbedLiveSample('display_flow-root', '100%', 600)}}
 
 ## Test your skills!
 
@@ -501,11 +500,11 @@ You now know all there is to know about floats in modern web development. See th
 - [Normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)
 - [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
 - [Grid](/en-US/docs/Learn/CSS/CSS_layout/Grids)
-- Floats
+- [Floats](/en-US/docs/Learn/CSS/CSS_layout/Floats)
 - [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
 - [Multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
 - [Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
 - [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
 - [Legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
 - [Supporting older browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension assessment](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
+- [Fundamental layout comprehension](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

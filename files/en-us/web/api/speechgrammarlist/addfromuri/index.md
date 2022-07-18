@@ -1,6 +1,7 @@
 ---
 title: SpeechGrammarList.addFromURI()
 slug: Web/API/SpeechGrammarList/addFromURI
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -26,23 +27,24 @@ specified by URI.
 ## Syntax
 
 ```js
-speechGrammarListInstance.addFromURI(src,weight);
+addFromURI(src)
+addFromURI(src, weight)
 ```
-
-### Returns
-
-{{jsxref('undefined')}}.
 
 ### Parameters
 
-- src
-  - : A {{domxref("DOMString")}} representing the URI of the grammar to be added.
-- weight {{optional_inline}}
+- `src`
+  - : A string representing the URI of the grammar to be added.
+- `weight` {{optional_inline}}
   - : A float representing the weight of the grammar relative to other grammars present in
     the {{domxref("SpeechGrammarList")}}. The weight means the importance of this grammar,
     or the likelihood that it will be recognized by the speech recognition service. The
     value can be between `0.0` and `1.0`; If not specified, the
     default used is `1.0`.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: Document.requestStorageAccess()
 slug: Web/API/Document/requestStorageAccess
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -39,7 +40,7 @@ Storage access is granted based on a series of checks described here:
 
 Assuming all of the requirements above are satisfied, Firefox will automatically grant
 storage access to the requesting origin on up to a threshold number of first-party
-sites in the current session for the duration of user’s session, up to a maximum of 24
+sites in the current session for the duration of user's session, up to a maximum of 24
 hours. After the requesting origin has exceeded the maximum allowable number of storage
 access grants, any future call to `requestStorageAccess()` during the same
 browsing session will prompt the user.
@@ -52,9 +53,7 @@ the level of site, so for example two storage access grants for
 single exception against the limit.
 
 At the time of a `requestStorageAccess()` call, if the requesting origin has
-storage access to...
-
-...fewer sites than the maximum and has been interacted with as a first party in the last 30 days:
+storage access to fewer sites than the maximum and has been interacted with as a first party in the last 30 days:
 
 - The user is not prompted.
 - The origin is given an ephemeral storage access grant for the current top-level
@@ -63,8 +62,7 @@ storage access to...
   one.
 
   - Note that this number is also incremented when automatic access grants are given
-    through [Firefox
-    compatibility heuristics](/en-US/docs/Web/Privacy/Storage_Access_Policy#automatic_storage_access_upon_interaction).
+    through [Firefox compatibility heuristics](/en-US/docs/Web/Privacy/Storage_Access_Policy#automatic_storage_access_upon_interaction).
 
 - The ephemeral storage access grant is:
 
@@ -72,11 +70,11 @@ storage access to...
   - Not persisted to disk (e.g. will not persist if the browser crashes).
   - Reset after 24 hours in the case of a long-running browser session.
 
-...equal or more sites than the maximum or has not been interacted with as a first party in the last 30 days::
+When equal or more sites than the maximum or has not been interacted with as a first party in the last 30 days:
 
 - The user is prompted
-- If the user clicks “Allow” or “Allow on any site” the request is resolved.
-- If the user clicks “Don’t Allow”, the storage access request is rejected and the
+- If the user clicks "Allow" or "Allow on any site" the request is resolved.
+- If the user clicks "Don't Allow", the storage access request is rejected and the
   requesting origin can re-request once it receives another user interaction.
 - If the user allows storage the requesting origin is given a persistent storage
   access grant on the current top-level site.
@@ -90,10 +88,9 @@ storage access to...
 When an ephemeral or persistent storage access grant expires, the number of sites the
 requesting origin has storage access to is decremented by one.
 
-> **Note:** If the requesting origin is not [classified
-> as a tracking origin](/en-US/docs/Web/Privacy/Storage_Access_Policy#tracking_protection_explained), the access request is automatically given an ephemeral
+> **Note:** If the requesting origin is not [classified as a tracking origin](/en-US/docs/Web/Privacy/Storage_Access_Policy#tracking_protection_explained), the access request is automatically given an ephemeral
 > storage access grant, which will go away when the page is reloaded. The user is never
-> shown a prompt in this case, and calling `requestStorageAccess()` won’t
+> shown a prompt in this case, and calling `requestStorageAccess()` won't
 > have any side effects besides changing the value returned by
 > {{domxref("Document.hasStorageAccess()")}}.
 
@@ -118,7 +115,7 @@ we have added two preferences in `about:config` that control prompting upon
 ## Syntax
 
 ```js
-var promise = document.requestStorageAccess();
+requestStorageAccess()
 ```
 
 ### Parameters
@@ -151,9 +148,7 @@ document.requestStorageAccess().then(
 ## Specifications
 
 The API is currently only at the proposal stage — the standardization process has yet
-to begin. You can currently find specification details of the API at Apple's [Introducing
-Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) blog post, and the [Storage Access API proposal in the
-Privacy CG](https://github.com/privacycg/storage-access).
+to begin. You can currently find specification details of the API at Apple's [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) blog post, and the [Storage Access API proposal in the Privacy CG](https://github.com/privacycg/storage-access).
 
 ## Browser compatibility
 

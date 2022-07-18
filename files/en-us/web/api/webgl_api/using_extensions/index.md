@@ -1,13 +1,14 @@
 ---
 title: Using WebGL extensions
 slug: Web/API/WebGL_API/Using_Extensions
+page-type: guide
 tags:
   - Advanced
   - WebGL
 ---
 {{WebGLSidebar}}
 
-WebGL, like its sister APIs (OpenGL and OpenGL ES), supports extensions. A complete list of extensions is available in the [khronos webgl extension registry](http://www.khronos.org/registry/webgl/extensions/).
+WebGL, like its sister APIs (OpenGL and OpenGL ES), supports extensions. A complete list of extensions is available in the [khronos webgl extension registry](https://www.khronos.org/registry/webgl/extensions/).
 
 > **Note:** In WebGL, unlike in other GL APIs, extensions are only available if explicitly requested.
 
@@ -25,7 +26,7 @@ var ext = (
 );
 ```
 
-Note that, vendor prefix have been discouraged more and more and thus most browser implement experimental extensions behind a feature flag rather than vendor prefix.
+Note that, vendor prefix have been discouraged thus most browser implement experimental extensions behind a feature flag rather than vendor prefix.
 
 The feature flags are:
 
@@ -56,7 +57,44 @@ The {{domxref("WebGLRenderingContext.getSupportedExtensions()")}} method returns
 
 The current extensions are:
 
-{{page("en-US/docs/Web/API/WebGL_API", "Extensions")}}
+### Extensions
+
+- {{domxref("ANGLE_instanced_arrays")}}
+- {{domxref("EXT_blend_minmax")}}
+- {{domxref("EXT_color_buffer_float")}}
+- {{domxref("EXT_color_buffer_half_float")}}
+- {{domxref("EXT_disjoint_timer_query")}}
+- {{domxref("EXT_float_blend")}} {{experimental_inline}}
+- {{domxref("EXT_frag_depth")}}
+- {{domxref("EXT_shader_texture_lod")}}
+- {{domxref("EXT_sRGB")}}
+- {{domxref("EXT_texture_compression_bptc")}}
+- {{domxref("EXT_texture_compression_rgtc")}}
+- {{domxref("EXT_texture_filter_anisotropic")}}
+- {{domxref("EXT_texture_norm16")}}
+- {{domxref("KHR_parallel_shader_compile")}}
+- {{domxref("OES_element_index_uint")}}
+- {{domxref("OES_fbo_render_mipmap")}}
+- {{domxref("OES_standard_derivatives")}}
+- {{domxref("OES_texture_float")}}
+- {{domxref("OES_texture_float_linear")}}
+- {{domxref("OES_texture_half_float")}}
+- {{domxref("OES_texture_half_float_linear")}}
+- {{domxref("OES_vertex_array_object")}}
+- {{domxref("OVR_multiview2")}}
+- {{domxref("WEBGL_color_buffer_float")}}
+- {{domxref("WEBGL_compressed_texture_astc")}}
+- {{domxref("WEBGL_compressed_texture_etc")}}
+- {{domxref("WEBGL_compressed_texture_etc1")}}
+- {{domxref("WEBGL_compressed_texture_pvrtc")}}
+- {{domxref("WEBGL_compressed_texture_s3tc")}}
+- {{domxref("WEBGL_compressed_texture_s3tc_srgb")}}
+- {{domxref("WEBGL_debug_renderer_info")}}
+- {{domxref("WEBGL_debug_shaders")}}
+- {{domxref("WEBGL_depth_texture")}}
+- {{domxref("WEBGL_draw_buffers")}}
+- {{domxref("WEBGL_lose_context")}}
+- {{domxref("WEBGL_multi_draw")}}
 
 ## Enabling an extension
 
@@ -76,5 +114,5 @@ If an extension defines specific symbols or functions that are not available in 
 
 - {{domxref("WebGLRenderingContext.getSupportedExtensions()")}}
 - {{domxref("WebGLRenderingContext.getExtension()")}}
-- [webglreport.com](http://webglreport.com)
+- [webglreport.com](https://webglreport.com/)
 - [webglstats.com](http://webglstats.com)

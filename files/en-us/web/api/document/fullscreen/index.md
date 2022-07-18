@@ -1,11 +1,12 @@
 ---
 title: Document.fullscreen
 slug: Web/API/Document/fullscreen
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
   - Document
-  - Full-screen
+  - Fullscreen
   - Fullscreen API
   - Property
   - Read-only
@@ -16,25 +17,19 @@ browser-compat: api.Document.fullscreen
 ---
 {{APIRef("Fullscreen API")}}{{Deprecated_Header}}
 
-The obsolete {{domxref("Document")}} interface's **`fullscreen`** read-only property reports whether or not the document is currently displaying content in full-screen mode.
+The obsolete {{domxref("Document")}} interface's **`fullscreen`** read-only property reports whether or not the document is currently displaying content in fullscreen mode.
 
 Although this property is read-only, it will not throw if it is modified (even in strict mode); the setter is a no-operation and it will be ignored.
 
-> **Note:** Since this property is deprecated, you can determine if full-screen mode is active on the document by checking to see if {{DOMxRef("Document.fullscreenElement")}} is not `null`.
+> **Note:** Since this property is deprecated, you can determine if fullscreen mode is active on the document by checking to see if {{DOMxRef("Document.fullscreenElement")}} is not `null`.
 
-## Syntax
+## Value
 
-```js
-var isFullScreen = document.fullscreen;
-```
+A Boolean value which is `true` if the document is currently displaying an element in fullscreen mode; otherwise, the value is `false.`
 
-### Value
+## Examples
 
-A Boolean value which is `true` if the document is currently displaying an element in full-screen mode; otherwise, the value is `false.`
-
-## Example
-
-This simple function reports whether or not full-screen mode is currently active, using the obsolete `fullscreen` property.
+This simple function reports whether or not fullscreen mode is currently active, using the obsolete `fullscreen` property.
 
 ```js
 function isDocumentInFullScreenMode() {
@@ -50,7 +45,7 @@ function isDocumentInFullScreenMode() {
 }
 ```
 
-If `fullscreenElement` isn't `null`, this returns `true`, indicating that full-screen mode is in effect.
+If `fullscreenElement` isn't `null`, this returns `true`, indicating that fullscreen mode is in effect.
 
 ## Specifications
 

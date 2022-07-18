@@ -53,8 +53,8 @@ tags:
 
 ## Changes for add-on and Mozilla developers
 
-- The `properties` parameter has been removed from the {{ifmethod('nsITreeView','getCellProperties')}}, {{ifmethod('nsITreeView','getColumnProperties')}} and {{ifmethod('nsITreeView','getRowProperties')}} methods of {{interface('nsITreeView')}}. These methods should now return a string of space-separated property names. ({{bug('407956')}})
-- The {{ifmethod('inIDOMUtils', 'getCSSPropertyNames')}} method has been implemented and will return all supported [CSS property](/en-US/docs/Web/CSS/Reference) names.
+- The `properties` parameter has been removed from the `nsITreeView.getCellProperties()`, `nsITreeView.getColumnProperties()` and `nsITreeView.getRowProperties()` methods of `nsITreeView`. These methods should now return a string of space-separated property names. ({{bug('407956')}})
+- The `inIDOMUtils.getCSSPropertyNames()` method has been implemented and will return all supported [CSS property](/en-US/docs/Web/CSS/Reference) names.
 - See [here](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/) for more changes.
 
 ### Firefox Developer Tools
@@ -62,12 +62,12 @@ tags:
 - [Font inspector](https://hacks.mozilla.org/2013/04/developer-tools-update-firefox-22/) shows which fonts on your computer are applied to the page.
 - Visual paint feedback mode shows when and where a page is repainted.
 - The dev tools may now be docked to the right side, not just the bottom of the browser.
-- Some panes within the dev tools have switched from [XUL to HTML](https://bugzilla.mozilla.org/show_bug.cgi?id=875727). For example, the css rule viewer is now chrome://browser/content/devtools/cssruleview\.xhtml, not `cssruleview.xul`. Instead of adding an overlay directly to extend features of these panes, you may add an overlay and script to the outer xul document, to add load listeners and change these html documents.
+- Some panes within the dev tools have switched from [XUL to HTML](https://bugzilla.mozilla.org/show_bug.cgi?id=875727). For example, the CSS rule viewer is now chrome://browser/content/devtools/cssruleview\.xhtml, not `cssruleview.xul`. Instead of adding an overlay directly to extend features of these panes, you may add an overlay and script to the outer xul document, to add load listeners and change these HTML documents.
 - The stack trace is now shown as a breadcrumb near the top, and the script listing is now at the left panel of the debugger.
 
 ## See also
 
-- [Firefox 22 Beta Release Notes](https://www.mozilla.org/en-US/firefox/22.0beta/releasenotes/)
+- [Firefox 22 Beta Release Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/22.0beta/releasenotes/)
 - [Add-on Compatibility for Firefox 22](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/)
 
 ### Versions

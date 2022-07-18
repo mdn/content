@@ -31,6 +31,7 @@ forced-color-adjust: none;
 forced-color-adjust: inherit;
 forced-color-adjust: initial;
 forced-color-adjust: revert;
+forced-color-adjust: revert-layer;
 forced-color-adjust: unset;
 ```
 
@@ -113,6 +114,6 @@ The following screenshot shows the image above in Windows High Contrast Mode:
 
 ## See also
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
 - [Styling for Windows high contrast with standards for forced colors.](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)
 - {{cssxref("print-color-adjust")}}

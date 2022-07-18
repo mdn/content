@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.responseType
 slug: Web/API/XMLHttpRequest/responseType
+page-type: web-api-instance-property
 tags:
   - AJAX
   - API
@@ -25,15 +26,7 @@ It also lets the author change the
 response type. If an empty string is set as the value of `responseType`, the
 default value of `text` is used.
 
-## Syntax
-
-```js
-var type = XMLHttpRequest.responseType;
-
-XMLHttpRequest.responseType = type;
-```
-
-### Value
+## Value
 
 A string which specifies what type of data the response contains.
 It can take the following values:
@@ -49,7 +42,7 @@ It can take the following values:
 - `"json"`
   - : The `response` is a JavaScript object created by parsing the contents of received data as {{Glossary("JSON")}}.
 - `"text"`
-  - : The `response` is a text in a {{domxref("DOMString")}} object.
+  - : The `response` is a text in a string.
 - `"ms-stream"` {{non-standard_inline}}
   - : The `response` is part of a streaming download; this response type is only allowed for download requests, and is only supported by Internet Explorer.
 
@@ -61,11 +54,10 @@ It can take the following values:
 
 ### Exceptions
 
-- `InvalidAccessError`
+- `InvalidAccessError` {{domxref("DOMException")}}
   - : An attempt was made to change the value of `responseType` on
-    an`XMLHttpRequest` which is in synchronous mode but not in a
-    {{domxref("Worker")}}. For additional details, see {{anch("Synchronous XHR
-    restrictions")}} below.
+    an `XMLHttpRequest` which is in synchronous mode but not in a
+    {{domxref("Worker")}}. For additional details, see [Synchronous XHR restrictions](#synchronous_xhr_restrictions) below.
 
 ## Usage notes
 
@@ -96,10 +88,8 @@ ignored in a {{domxref("Worker")}}.
 
 ## See also
 
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTML in
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
 - The response data: {{domxref("XMLHttpRequest.response", "response")}},
   {{domxref("XMLHttpRequest.responseText", "responseText")}}, and
   {{domxref("XMLHttpRequest.responseXML", "responseXML")}}

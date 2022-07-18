@@ -31,6 +31,7 @@ page-break-before: verso;
 page-break-before: inherit;
 page-break-before: initial;
 page-break-before: revert;
+page-break-before: revert-layer;
 page-break-before: unset;
 ```
 
@@ -45,9 +46,9 @@ page-break-before: unset;
 - `avoid`
   - : Avoid page breaks before the element.
 - `left`
-  - : Force page breaks before the element so that the next page is formatted as a left page.
+  - : Force page breaks before the element so that the next page is formatted as a left page. It's the page placed on the left side of the spine of the book or the back side of the page in duplex printing.
 - `right`
-  - : Force page breaks before the element so that the next page is formatted as a right page.
+  - : Force page breaks before the element so that the next page is formatted as a right page. It's the page placed on the right side of the spine of the book or the front side of the page in duplex printing.
 - `recto` {{experimental_inline}}
   - : If pages progress left-to-right, then this acts like `right`. If pages progress right-to-left, then this acts like `left`.
 - `verso` {{experimental_inline}}

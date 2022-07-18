@@ -24,7 +24,7 @@ Language is one of the core features of a locale. The Unicode specification trea
 
 ### Setting the language in the locale identifier string argument
 
-In order to be a valid Unicode locale identifier, a string must start with the language subtag. The main argument to the {{jsxref("Intl/Locale/Locale", "Locale")}} constructor must be a valid Unicode locale identifier, so whenever the constructor is used, it must be passed an identifier with a language subtag.
+In order to be a valid Unicode locale identifier, a string must start with the language subtag. The main argument to the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor must be a valid Unicode locale identifier, so whenever the constructor is used, it must be passed an identifier with a language subtag.
 
 ```js
 let locale = new Intl.Locale("en-Latn-US");
@@ -33,7 +33,7 @@ console.log(locale.language); // Prints "en"
 
 ### Overriding language via the configuration object
 
-While the language subtag must be specified, the {{jsxref("Intl/Locale", "Locale")}} constructor takes a configuration object, which can override the language subtag.
+While the language subtag must be specified, the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor takes a configuration object, which can override the language subtag.
 
 ```js
 let locale = new Intl.Locale("en-Latn-US", { language: "es" });

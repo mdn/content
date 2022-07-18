@@ -14,12 +14,12 @@ tags:
 
 Highlights:
 
-- [Server logging in the Web Console](/en-US/docs/Tools/Web_Console/Console_messages#server)
-- [Quickly find the rule that overrode a CSS declaration](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#overridden_declarations)
-- ["Use in Console" context menu item in Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_menu)
-- ["Strict" option for filtering in the Rules view](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#strict_search)
-- [Network entries in the Console now link to the Network Monitor](/en-US/docs/Tools/Web_Console/Console_messages#network)
-- [Markup view shows indicators for pseudo-classes locked for elements](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#setting_hover_active_focus)
+- [Server logging in the Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#server)
+- [Quickly find the rule that overrode a CSS declaration](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#overridden-declarations)
+- ["Use in Console" context menu item in Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#element-popup-menu)
+- ["Strict" option for filtering in the Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#strict-search)
+- [Network entries in the Console now link to the Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#network)
+- [Markup view shows indicators for pseudo-classes locked for elements](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#setting-hover-active-focus)
 - New sidebar UI for WebIDE
 
 [All devtools bugs fixed between Firefox 42 and Firefox 43](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-09-19&query_format=advanced&chfield=resolution&chfieldfrom=2015-08-10&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=12582678).
@@ -50,7 +50,7 @@ Highlights:
 
 #### Other changes
 
-- [Generators](/en-US/docs/Web/JavaScript/Reference/Statements/function*) and [generator methods](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) are no longer constructable as per ES2016 ({{bug(1191486)}}).
+- [Generators](/en-US/docs/Web/JavaScript/Reference/Statements/function*) and [generator methods](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) are no longer constructable as per ES2016 ({{bug(1191486)}}).
 
 ### Interfaces/APIs/DOM
 
@@ -64,7 +64,7 @@ _No change._
 
 #### Service Workers
 
-- As per the specification, if {{domxref("ExtendableEvent.waitUntil()")}} is called outside of the {{domxref("ExtendableEvent")}} handler, Firefox will now throw an `InvalidStateError`; in addition, multiple calls to {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} will now stack up, and the resulting promises will be added to the list of [extend lifetime promises](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#dfn-extend-lifetime-promises) ({{bug(1180274)}}).
+- As per the specification, if {{domxref("ExtendableEvent.waitUntil()")}} is called outside of the {{domxref("ExtendableEvent")}} handler, Firefox will now throw an `InvalidStateError`; in addition, multiple calls to {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} will now stack up, and the resulting promises will be added to the list of [extend lifetime promises](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#dfn-extend-lifetime-promises) ({{bug(1180274)}}).
 - {{domxref("PushMessageData")}} methods have been implemented ({{bug(1149195)}}).
 
 #### WebRTC
@@ -75,16 +75,16 @@ _No change._
 #### Miscellaneous
 
 - The [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) now uses the new promise syntax for {{domxref("Navigator.getBattery()")}}, as specified in the recent evolution of the specification ({{bug(1050749)}}).
-- The `User-Agent` header is no longer in the list of {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} so it can now be set in a [Fetch](/en-US/docs/Web/API/Fetch_API) {{domxref("Headers")}} object, via XHR {{domxref("XMLHttpRequest.setRequestHeader()")}},… ({{bug(1188932)}}).
-- The {{domxref("MediaRecorder.MediaRecorder()")}} constructor can now accept an options dictionary as a parameter, which allows you to set custom bitrates for the audio/video to be recorded ({{bug("1161276")}}).
+- The `User-Agent` header is no longer in the list of {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} so it can now be set in a [Fetch](/en-US/docs/Web/API/Fetch_API) {{domxref("Headers")}} object, via XHR {{domxref("XMLHttpRequest.setRequestHeader()")}},… ({{bug(1188932)}}).
+- The {{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}} constructor can now accept an options dictionary as a parameter, which allows you to set custom bitrates for the audio/video to be recorded ({{bug("1161276")}}).
 - The {{domxref("PerformanceObserver")}} interface, belonging to the [Performance Timeline API](/en-US/docs/Web/API/Performance_Timeline_API) has been implemented ({{bug(1165796)}}).
 - The Frame Timing API has been added: the {{domxref("PerformanceRenderTiming")}} and {{domxref("PerformanceCompositeTiming")}} interfaces are now available ({{bug(1191178)}}).
 - The modern [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API) has been implemented: unprefixed {{domxref("Screen.orientation")}} and the {{domxref("ScreenOrientation")}} interface are now available ({{bug("1131470")}}). The non-standard {{domxref("Screen.mozOrientation")}}, {{domxref("Screen.onmozorientationchange")}}, {{domxref("Screen.mozLockOrientation()")}}, and {{domxref("Screen.mozUnlockOrientation()")}} will be removed in the future.
 - Under Linux, like under Windows, {{domxref("Event.timeStamp")}} now returns a {{domxref("DOMHighResTimeStamp")}} ({{bug(1026803)}}).
-- Experimental support for {{domxref("Selection")}} events {{event("selectionchange")}} and {{event("selectstart")}}, as well as the {{domxref("GlobalEventHandlers/onselectionchange", "Document.onselectionchange")}} and {{domxref("GlobalEventHandlers.onselectstart")}} event handlers property has been added ({{bug(571294)}}). The `selectionchange` event is fired on the {{domxref("Document")}} if the associated `Selection` object is concerned, or on the specific {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} ({{bug(1196479)}}). This feature is controlled by the `dom.select_events.enabled` preference, that defaults to `false`, except on Nightly.
+- Experimental support for {{domxref("Selection")}} events {{domxref("Document/selectionchange_event", "selectionchange")}} and {{domxref("Document/selectstart_event", "selectstart")}}, as well as the {{domxref("GlobalEventHandlers/onselectionchange", "Document.onselectionchange")}} and {{domxref("HTMLInputElement.onselectstart")}} event handlers property has been added ({{bug(571294)}}). The `selectionchange` event is fired on the {{domxref("Document")}} if the associated `Selection` object is concerned, or on the specific {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} ({{bug(1196479)}}). This feature is controlled by the `dom.select_events.enabled` preference, that defaults to `false`, except on Nightly.
 - Support for {{domxref("MouseEvent.offsetX")}} and {{domxref("MouseEvent.offsetY")}} have been activated on Firefox for Android and Firefox OS ({{bug(1204841)}}).
 - The {{domxref("HTMLCanvasElement.mozFetchAsStream()")}} method has been removed ({{bug(1206030)}}).
-- The constructor {{domxref("Request.Request", "Request()")}} as well as {{domxref("fetch()")}} will now raise a {{exception("TypeError")}} exception when used with a URL containing a username and password ({{bug(1195820)}}).
+- The constructor {{domxref("Request.Request", "Request()")}} as well as {{domxref("fetch()")}} will now raise a {{jsxref("TypeError")}} exception when used with a URL containing a username and password ({{bug(1195820)}}).
 
 ### MathML
 
@@ -108,7 +108,7 @@ _No change._
 
 ## Security
 
-- Access to Web Storage (i.e. `localStorage` and `sessionStorage`) from third-party IFrames is now denied if the user has [disabled third-party cookies](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) ({{bug("536509")}}).
+- Access to Web Storage (i.e. `localStorage` and `sessionStorage`) from third-party IFrames is now denied if the user has [disabled third-party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) ({{bug("536509")}}).
 - This whitelist has even been removed in Nightly and Aurora/Dev Edition of the browser ({{bug(1201023)}}). It is currently scheduled that this removal will also happen for Beta and Release versions for the next version (Firefox 44).
 - Subresource integrity has been implemented for {{htmlelement("script")}} and {{htmlelement("link")}} that links to stylesheets ({{bug("992096")}}).
 
@@ -132,7 +132,7 @@ _No change._
 
 ### Plugins
 
-- In preparation for future releases to switch over to multi-process content, [NPAPI](/en-US/docs/Plugins) plugins can no longer be run in the same process as the page content. The preferences starting with `dom.ipc.plugins` are no longer used.
+- In preparation for future releases to switch over to multi-process content, [NPAPI](/en-US/docs/Glossary/Plugin) plugins can no longer be run in the same process as the page content. The preferences starting with `dom.ipc.plugins` are no longer used.
 
 ### Other
 

@@ -16,8 +16,8 @@ Use the identity API to get an [OAuth2](https://oauth.net/2/) authorization code
 
 OAuth2 flows vary between service provider so, to use this API with a particular service provider, consult their documentation. For example:
 
-- [Google](https://developers.google.com/identity/protocols/OAuth2UserAgent)
-- [GitHub](https://developer.github.com/v3/oauth/)
+- [Google](https://developers.google.com/identity/protocols/oauth2/javascript-implicit-flow)
+- [GitHub](https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps)
 
 The identity API provides the {{WebExtAPIRef("identity.launchWebAuthFlow()")}} function. This authenticates the user with the service, if necessary, and asks the user to authorize the extension to access data, if necessary. The function completes with an access token or authorization code, depending on the provider.
 
@@ -33,13 +33,13 @@ There's some setup you must do before publishing your extension.
 
 The [redirect URL](https://www.oauth.com/oauth2-servers/redirect-uris/) represents the end point of {{WebExtAPIRef("identity.launchWebAuthFlow()")}}, in which the access token or authorization code is delivered to the extension. The browser extracts the result from the redirect URL without loading its response.
 
-You get the redirect URL by calling {{WebExtAPIRef("identity.getRedirectURL()")}}. This function derives a redirect URL from the add-on's ID.  To simplify testing, set your add-on's ID explicitly using the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key (otherwise, each time you [temporarily install the add-on](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), you get a different redirect URL).
+You get the redirect URL by calling {{WebExtAPIRef("identity.getRedirectURL()")}}. This function derives a redirect URL from the add-on's ID.  To simplify testing, set your add-on's ID explicitly using the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key (otherwise, each time you [temporarily install the add-on](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), you get a different redirect URL).
 
 {{WebExtAPIRef("identity.getRedirectURL()")}} returns a URL at a fixed domain name and a subdomain derived from the add-on's ID. Some OAuth servers (such as Google) only accept domains with a verified ownership as the redirect URL. As the dummy domain cannot be controlled by extension developers, the default domain cannot always be used.
 
 However, loopback addresses are an accepted alternative that do not require domain validation (based on [RFC 8252, section 7.3](https://datatracker.ietf.org/doc/html/rfc8252#section-7.3)). Starting from Firefox 86, a loopback address with the format `http://127.0.0.1/mozoauth2/[subdomain of URL returned by identity.getRedirectURL()]` is permitted as a value for the redirect URL.
 
-> **Note:** Starting with Firefox 75, you must use the redirect URL returned by {{WebExtAPIRef("identity.getRedirectURL()")}}.  Earlier versions allowed you to supply any redirect url.
+> **Note:** Starting with Firefox 75, you must use the redirect URL returned by {{WebExtAPIRef("identity.getRedirectURL()")}}.  Earlier versions allowed you to supply any redirect URL.
 >
 > Starting with Firefox 86, the special loopback address described above can be used too.
 
@@ -67,7 +67,7 @@ This will tend to be specific to the service provider, but in general it means c
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.identity`](https://developer.chrome.com/extensions/identity) API.
+> **Note:** This API is based on Chromium's [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/identity/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

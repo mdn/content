@@ -21,8 +21,14 @@ You can also define functions using the {{jsxref("Function")}} constructor and a
 ## Syntax
 
 ```js
-function name([param[, param,[..., param]]]) {
-   [statements]
+function name(param0) {
+  statements
+}
+function name(param0, param1) {
+  statements
+}
+function name(param0, param1, /* … ,*/ paramN) {
+  statements
 }
 ```
 
@@ -74,7 +80,7 @@ if (false) {
 // 'foo' name is hoisted. typeof foo is function
 ```
 
-The results are exactly the same for a condition that evaluates to true
+The results are exactly the same for a condition that evaluates to true
 
 ```js
 var hoisted = "foo" in this;
@@ -116,7 +122,7 @@ hoisted:
 notHoisted(); // TypeError: notHoisted is not a function
 
 var notHoisted = function() {
-   console.log('bar');
+  console.log('bar');
 };
 ```
 

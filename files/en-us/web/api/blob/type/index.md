@@ -1,37 +1,25 @@
 ---
 title: Blob.type
 slug: Web/API/Blob/type
+page-type: web-api-instance-property
 tags:
   - API
   - Blob
-  - DOM
-  - File
   - File API
-  - Format
-  - MIME
-  - MIME Type
   - Property
   - Reference
-  - Type
 browser-compat: api.Blob.type
 ---
 {{APIRef("File API")}}
 
-The **`type`** property of a
-{{domxref("Blob")}} object returns the {{Glossary("MIME type")}} of the file.
+The **`type`** property of a {{domxref("Blob")}} object returns the {{Glossary("MIME type")}} of the file.
 
-## Syntax
+## Value
 
-```js
-var mimetype = blob.type
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing the file's MIME type, or an empty string if the
+A string containing the file's MIME type, or an empty string if the
 type could not be determined.
 
-## Example
+## Examples
 
 This example asks the user to select a number of files, then checks each file to make
 sure it's one of a given set of image file types.
@@ -40,7 +28,7 @@ sure it's one of a given set of image file types.
 
 ```html
 <input type="file" id="input" multiple>
-<output id="output">Choose image files...</output>
+<output id="output">Choose image files…</output>
 ```
 
 ```css hidden
@@ -63,7 +51,7 @@ input.addEventListener('change', (event) => {
   const files = event.target.files;
 
   if (files.length === 0) {
-    output.innerText = 'Choose image files...';
+    output.innerText = 'Choose image files…';
     return;
   }
 
@@ -77,7 +65,7 @@ input.addEventListener('change', (event) => {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 
@@ -90,5 +78,4 @@ input.addEventListener('change', (event) => {
 ## See also
 
 - {{domxref("Blob")}}
-- [Using files
-  from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)

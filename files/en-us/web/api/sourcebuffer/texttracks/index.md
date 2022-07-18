@@ -1,6 +1,7 @@
 ---
 title: SourceBuffer.textTracks
 slug: Web/API/SourceBuffer/textTracks
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -19,17 +20,11 @@ The **`textTracks`** read-only property of the
 {{domxref("SourceBuffer")}} interface returns a list of the text tracks currently
 contained inside the `SourceBuffer`.
 
-## Syntax
-
-```js
-var myTextTracks = sourceBuffer.textTracks;
-```
-
-### Value
+## Value
 
 An {{domxref("TextTrackList")}} object.
 
-## Example
+## Examples
 
 TBD
 

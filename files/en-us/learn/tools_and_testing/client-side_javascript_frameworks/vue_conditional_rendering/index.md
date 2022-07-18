@@ -11,7 +11,7 @@ tags:
   - conditional rendering
   - v-else
   - v-if
-  - vue
+  - Vue
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -139,9 +139,9 @@ There is a "Save" button and a "Cancel" button:
 
 ## Modifying our `ToDoItem` component
 
-Before we can add `ToDoItemEditForm` to our app, we need to make a few modifications to our `ToDoItem` component. Specifically, we need to add a variable to track if the item is being edited, and a button to toggle that variable. We’ll also add a `Delete` button since deletion is closely related.
+Before we can add `ToDoItemEditForm` to our app, we need to make a few modifications to our `ToDoItem` component. Specifically, we need to add a variable to track if the item is being edited, and a button to toggle that variable. We'll also add a `Delete` button since deletion is closely related.
 
-Update your `ToDoItem`’s template as shown below.
+Update your `ToDoItem`'s template as shown below.
 
 ```html
 <template>
@@ -163,12 +163,12 @@ Update your `ToDoItem`’s template as shown below.
 </template>
 ```
 
-We’ve added a wrapper \<div> around the whole template for layout purposes.
+We've added a wrapper \<div> around the whole template for layout purposes.
 
 We've also added "Edit" and "Delete" buttons:
 
 - The "Edit" button, when clicked, will toggle displaying the `ToDoItemEditForm` component so we can use it to edit our todo item, via an event handler function called `toggleToItemEditForm()`. This handler will set an `isEditing` flag to true. To do that, we'll need to first define it inside our `data()` property.
-- The "Delete" button, when clicked, will delete the todo item via an event handler function called `deleteToDo()`. In this handler we’ll emit an `item-deleted` event to our parent component so the list can be updated.
+- The "Delete" button, when clicked, will delete the todo item via an event handler function called `deleteToDo()`. In this handler we'll emit an `item-deleted` event to our parent component so the list can be updated.
 
 Let's define our click handlers, and the necessary `isEditing` flag.
 
@@ -198,9 +198,9 @@ methods: {
 
 ## Conditionally displaying components via `v:if` and `v:else`
 
-Now we have an `isEditing` flag that we can use to signify that the item is being edited (or not). If `isEditing` is true, we want to use that flag to display our `ToDoItemEditForm` instead of the checkbox. To do that, we'll use another Vue directive: [`v-if`](https://vuejs.org/v2/api/#v-if).
+Now we have an `isEditing` flag that we can use to signify that the item is being edited (or not). If `isEditing` is true, we want to use that flag to display our `ToDoItemEditForm` instead of the checkbox. To do that, we'll use another Vue directive: [`v-if`](https://v2.vuejs.org/v2/api/#v-if).
 
-The `v-if` directive will only render a block if the value passed to it is truthy. This is similar to how an `if` statement works in JavaScript. `v-if` also has corresponding [`v-else-if`](https://vuejs.org/v2/api/#v-else-if) and [`v-else`](https://vuejs.org/v2/api/#v-else) directives to provide the equivalent of JavaScript `else if` and `else` logic inside Vue templates.
+The `v-if` directive will only render a block if the value passed to it is truthy. This is similar to how an `if` statement works in JavaScript. `v-if` also has corresponding [`v-else-if`](https://v2.vuejs.org/v2/api/#v-else-if) and [`v-else`](https://v2.vuejs.org/v2/api/#v-else) directives to provide the equivalent of JavaScript `else if` and `else` logic inside Vue templates.
 
 It's important to note that `v-else` and `v-else-if` blocks need to be the first sibling of a `v-if`/`v-else-if` block, otherwise Vue will not recognize them. You can also attach `v-if` to a `<template>` tag if you need to conditionally render an entire template.
 
@@ -272,7 +272,7 @@ Update your `<to-do-item-edit-form></to-do-item-edit-form>` call to look like so
 
 ## Updating and deleting todo items
 
-Now we can toggle between the edit form and the checkbox. However, we haven’t actually handled updating the `ToDoItems` array back in `App.vue`. To fix that, we need to listen for the `item-edited` event, and update the list accordingly. We'll also want to handle the delete event so that we can delete todo items.
+Now we can toggle between the edit form and the checkbox. However, we haven't actually handled updating the `ToDoItems` array back in `App.vue`. To fix that, we need to listen for the `item-edited` event, and update the list accordingly. We'll also want to handle the delete event so that we can delete todo items.
 
 Add the following new methods to your `App.vue`'s component object, below the existing methods inside the `methods` property:
 
@@ -314,7 +314,7 @@ This is great so far, but we've actually introduced a bug by adding in the edit 
 
 Note the state of the checkbox after you cancel — not only has the app forgotten the state of the checkbox, but the done status of that todo item is now out of whack. If you try checking (or unchecking) it again, the completed count will change in the opposite way to what you'd expect. This is because the `isDone` inside `data` is only given the value `this.done` on component load.
 
-Fixing this is fortunately quite easy — we can do this by converting our `isDone` data item into a [computed property](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties) — another advantage of computed properties is that they preserve [reactivity](https://vuejs.org/v2/guide/reactivity.html), meaning (among other things) that their state is saved when the template changes like ours is now doing.
+Fixing this is fortunately quite easy — we can do this by converting our `isDone` data item into a [computed property](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties) — another advantage of computed properties is that they preserve [reactivity](https://v2.vuejs.org/v2/guide/reactivity.html), meaning (among other things) that their state is saved when the template changes like ours is now doing.
 
 So, let's implement the fix:
 

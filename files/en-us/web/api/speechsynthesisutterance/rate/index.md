@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisUtterance.rate
 slug: Web/API/SpeechSynthesisUtterance/rate
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -18,14 +19,7 @@ The **`rate`** property of the {{domxref("SpeechSynthesisUtterance")}} interface
 
 If unset, a default value of 1 will be used.
 
-## Syntax
-
-```js
-var myRate = speechSynthesisUtteranceInstance.rate;
-speechSynthesisUtteranceInstance.rate = 1.5;
-```
-
-### Value
+## Value
 
 A float representing the rate value.
 It can range between 0.1 (lowest) and 10 (highest), with 1 being the default pitch for the current platform or voice, which should correspond to a normal speaking rate.
@@ -36,32 +30,65 @@ If [SSML](https://www.w3.org/TR/speech-synthesis/) is used, this value will be o
 
 ## Examples
 
-```js
-var synth = window.speechSynthesis;
+### Adjusting playback rate
 
-var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('input');
-var voiceSelect = document.querySelector('select');
+In this example we can adjust the playback rate using the slider, then play the utterance with the "Play" button.
 
-var voices = synth.getVoices();
+#### HTML
 
-  ...
+```html
+<p id="text">It was a dark and stormy night.</p>
 
-inputForm.onsubmit = function(event) {
-  event.preventDefault();
+<div id="rate-control">
+  <label for="rate">Rate:</label>
+  <input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
+</div>
 
-  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
-    if(voices[i].name === selectedOption) {
-      utterThis.voice = voices[i];
-    }
-  }
-  utterThis.rate = 1.5;
-  synth.speak(utterThis);
-  inputTxt.blur();
+<button id="play">Play</button>
+```
+
+#### CSS
+
+```css
+body {
+  font-family: sans-serif;
+}
+
+#rate-control {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
 }
 ```
+
+#### JavaScript
+
+```js
+const synth = window.speechSynthesis;
+
+const text = document.querySelector('#text');
+const play = document.querySelector('#play');
+const rate = document.querySelector('#rate');
+
+function speak() {
+  if (synth.speaking) {
+    synth.cancel();
+  }
+  const utterThis = new SpeechSynthesisUtterance(text.textContent);
+  utterThis.addEventListener('error', () => {
+    console.error('SpeechSynthesisUtterance error');
+  });
+  utterThis.rate = rate.value;
+  synth.speak(utterThis);
+}
+
+play.addEventListener('click', speak);
+```
+
+#### Output
+
+{{EmbedLiveSample("Adjusting playback rate")}}
 
 ## Specifications
 

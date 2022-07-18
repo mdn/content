@@ -34,6 +34,7 @@ scrollbar-gutter: stable both-edges;
 scrollbar-gutter: inherit;
 scrollbar-gutter: initial;
 scrollbar-gutter: revert;
+scrollbar-gutter: revert-layer;
 scrollbar-gutter: unset;
 ```
 
@@ -58,7 +59,7 @@ scrollbar-gutter: unset;
 
 The examples below show how the different values for the `scrollbar-gutter` property would affect a scrollable `div` element (`.container`) with one or more paragraphs contained within.
 
-> **Note:** In the images for the examples, the user’s system settings are set to classic scrollbars (always shown).
+> **Note:** In the images for the examples, the user's system settings are set to classic scrollbars (always shown).
 
 ### Example 1
 
@@ -104,7 +105,7 @@ This example shows two divs side by side. The one on the left has no scroll, but
 
 ### Overlay scrollbars
 
-For reference, this image shows the same div as above, but with the user’s system settings set to overlay scrollbars. Note here the scrollbar will only show when the user is scrolling and on top of the content, so no space is reserved for it and the `scrollbar-gutter` property has no effect.
+For reference, this image shows the same div as above, but with the user's system settings set to overlay scrollbars. Note here the scrollbar will only show when the user is scrolling and on top of the content, so no space is reserved for it and the `scrollbar-gutter` property has no effect.
 
 ![One div with text, no visible scrollbar](for-ref-no-scroll.png)
 

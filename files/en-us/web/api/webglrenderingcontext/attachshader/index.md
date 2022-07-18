@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.attachShader()
 slug: Web/API/WebGLRenderingContext/attachShader
+page-type: web-api-instance-method
 tags:
   - Method
   - WebGL
@@ -22,14 +23,14 @@ void gl.attachShader(program, shader);
 - `program`
   - : A {{domxref("WebGLProgram")}}.
 - `shader`
-  - : A fragment or vertex {{domxref("WebGLShader")}}.
+  - : A fragment or vertex {{domxref("WebGLShader")}}.
 
 ## Examples
 
 The following code attaches pre-existing shaders to a {{domxref("WebGLProgram")}}.
 
 ```js
-var program = gl.createProgram();
+const program = gl.createProgram();
 
 // Attach pre-existing shaders
 gl.attachShader(program, vertexShader);
@@ -38,7 +39,7 @@ gl.attachShader(program, fragmentShader);
 gl.linkProgram(program);
 
 if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
-  var info = gl.getProgramInfoLog(program);
+  const info = gl.getProgramInfoLog(program);
   throw 'Could not compile WebGL program. \n\n' + info;
 }
 ```

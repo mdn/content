@@ -1,6 +1,7 @@
 ---
 title: HTMLFontElement.face
 slug: Web/API/HTMLFontElement/face
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -14,7 +15,7 @@ browser-compat: api.HTMLFontElement.face
 
 The obsolete
 **`HTMLFontElement.face`**
-property is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("face",
+property is a string that reflects the {{ htmlattrxref("face",
     "font") }} HTML attribute, containing a comma-separated list of one or more font
 names.
 
@@ -28,12 +29,9 @@ The format of the string must follow one of the following HTML microsyntax:
 | ------------------------------------------- | ------------------------------------------------------------------- | ----------------- |
 | List of one or more valid font family names | _A list of font names, that have to be present on the local system_ | `courier,verdana` |
 
-## Syntax
+## Value
 
-```js
-faceString = fontObj.face;
-fontObj.face = faceString;
-```
+A string.
 
 ## Examples
 

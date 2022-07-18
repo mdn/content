@@ -27,8 +27,7 @@ garbage-collected.
 
 ## Notes
 
-See the [Notes
-on WeakRefs](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#notes_on_weakrefs) section of the {{jsxref("WeakRef")}} page for some important notes.
+See the [Notes on WeakRefs](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#notes_on_weakrefs) section of the {{jsxref("WeakRef")}} page for some important notes.
 
 ## Examples
 

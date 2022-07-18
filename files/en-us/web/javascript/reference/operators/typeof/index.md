@@ -18,11 +18,8 @@ of the unevaluated operand.
 
 ## Syntax
 
-The `typeof` operator is followed by its operand:
-
 ```js
 typeof operand
-typeof(operand)
 ```
 
 ### Parameters
@@ -37,14 +34,14 @@ more information about types and primitives, see also the [JavaScript data struc
 
 | Type                                                                                     | Result                                 |
 | ---------------------------------------------------------------------------------------- | -------------------------------------- |
-| [Undefined](/en-US/docs/Glossary/Undefined)                                              | `"undefined"`                          |
+| [Undefined](/en-US/docs/Glossary/undefined)                                              | `"undefined"`                          |
 | [Null](/en-US/docs/Glossary/Null)                                                        | `"object"` (see [below](#typeof_null)) |
 | [Boolean](/en-US/docs/Glossary/Boolean)                                                  | `"boolean"`                            |
 | [Number](/en-US/docs/Glossary/Number)                                                    | `"number"`                             |
-| [BigInt](/en-US/docs/Glossary/BigInt) (new in ECMAScript 2020)                           | `"bigint"`                             |
+| [BigInt](/en-US/docs/Glossary/BigInt)                                                    | `"bigint"`                             |
 | [String](/en-US/docs/Glossary/String)                                                    | `"string"`                             |
-| [Symbol](/en-US/docs/Glossary/Symbol) (new in ECMAScript 2015)                           | `"symbol"`                             |
-| [Function](/en-US/docs/Glossary/Function) object (implements [[Call]] in ECMA-262 terms) | `"function"`                           |
+| [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)                     | `"symbol"`                             |
+| [Function](/en-US/docs/Glossary/Function) (implements [[Call]] in ECMA-262 terms; [classes](/en-US/docs/Web/JavaScript/Reference/Statements/class) are functions as well) | `"function"`                           |
 | Any other object                                                                         | `"object"`                             |
 
 > **Note:** ECMAScript 2019 and older permitted implementations to have
@@ -62,7 +59,7 @@ more information about types and primitives, see also the [JavaScript data struc
 // Numbers
 typeof 37 === 'number';
 typeof 3.14 === 'number';
-typeof(42) === 'number';
+typeof 42 === 'number';
 typeof Math.LN2 === 'number';
 typeof Infinity === 'number';
 typeof NaN === 'number'; // Despite being "Not-A-Number"
@@ -96,7 +93,7 @@ typeof declaredButUndefinedVariable === 'undefined';
 typeof undeclaredVariable === 'undefined';
 
 // Objects
-typeof {a: 1} === 'object';
+typeof { a: 1 } === 'object';
 
 // use Array.isArray or Object.prototype.toString.call
 // to differentiate regular objects from arrays
@@ -116,7 +113,7 @@ typeof class C {} === 'function';
 typeof Math.sin === 'function';
 ```
 
-### `typeof null`
+### typeof null
 
 ```js
 // This stands since the beginning of JavaScript
@@ -127,31 +124,34 @@ In the first implementation of JavaScript, JavaScript values were represented as
 tag and a value. The type tag for objects was `0`. `null` was
 represented as the NULL pointer (`0x00` in most platforms). Consequently,
 `null` had `0` as type tag, hence the `typeof` return
-value `"object"`. ([reference](http://www.2ality.com/2013/10/typeof-null.html))
+value `"object"`. ([reference](https://2ality.com/2013/10/typeof-null.html))
 
-A fix was proposed for ECMAScript (via an opt-in), but [was
-rejected](https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null). It would have resulted in `typeof null === 'null'`.
+A fix was proposed for ECMAScript (via an opt-in), but
+[was rejected](https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null).
+It would have resulted in `typeof null === 'null'`.
 
-### Using `new` operator
+### Using new operator
 
 ```js
 // All constructor functions, with the exception of the Function constructor, will always be typeof 'object'
-let str = new String('String');
-let num = new Number(100);
+const str = new String('String');
+const num = new Number(100);
 
 typeof str; // It will return 'object'
 typeof num; // It will return 'object'
 
-let func = new Function();
+const func = new Function();
 
 typeof func; // It will return 'function'
 ```
 
 ### Need for parentheses in Syntax
 
+The `typeof` operator has higher [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) than binary operators like addition (`+`). Therefore, parentheses are needed to evaluate the type of an addition result.
+
 ```js
 // Parentheses can be used for determining the data type of expressions.
-let iData = 99;
+const iData = 99;
 
 typeof iData + ' Wisen'; // 'number Wisen'
 typeof (iData + ' Wisen'); // 'string'
@@ -176,10 +176,11 @@ could never generate an error.
 However, with the addition of block-scoped {{JSxRef("Statements/let", "let")}} and
 {{JSxRef("Statements/const", "const")}}, using `typeof` on `let` and
 `const` variables (or using `typeof` on a `class`) in a
-block before they are declared will throw a {{JSxRef("ReferenceError")}}. Block scoped
-variables are in a "[temporal
-dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)" from the start of the block until the initialization is processed,
-during which, it will throw an error if accessed.
+block before they are declared will throw a {{JSxRef("ReferenceError")}}.
+Block scoped variables are in a
+"[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)"
+from the start of the block until the initialization is processed,
+during which it will throw an error if accessed.
 
 ```js
 typeof undeclaredVariable === 'undefined';
@@ -207,38 +208,56 @@ requires those type tags to be different from the predefined ones. The case of
 `document.all` having type `'undefined'` is classified in the web
 standards as a "willful violation" of the original ECMA JavaScript standard.
 
-### Real-world usage
+### Custom method that gets a more specific type
 
-`typeof` is very useful, but it's not as versatile as might be required. For
-example, `typeof([])` , is `'object'`, as well as
-`typeof(new Date())`, `typeof(/abc/)`, etc.
+`typeof` is very useful, but it's not as versatile as might be required. For
+example, `typeof []` , is `'object'`, as well as
+`typeof new Date()`, `typeof /abc/`, etc.
 
-For greater specificity in checking types, a `typeof` wrapper for usage in
-production-level code would be as follows (provided `obj` exists):
+For greater specificity in checking types, here we present a custom `type(value)` function, which mostly mimics the behavior of `typeof`, but for non-primitives (i.e. objects and functions), it returns a more granular type name where possible.
 
 ```js
-  function type(obj, showFullClass) {
-
-    // get toPrototypeString() of obj (handles all types)
-    if (showFullClass && typeof obj === "object") {
-        return Object.prototype.toString.call(obj);
-    }
-    if (obj == null) { return (obj + '').toLowerCase(); } // implicit toString() conversion
-
-    var deepType = Object.prototype.toString.call(obj).slice(8,-1).toLowerCase();
-    if (deepType === 'generatorfunction') { return 'function' }
-
-    // Prevent overspecificity (for example, [object HTMLDivElement], etc).
-    // Account for functionish Regexp (Android <=2.3), functionish <object> element (Chrome <=57, Firefox <=52), etc.
-    // String.prototype.match is universally supported.
-
-    return deepType.match(/^(array|bigint|date|error|function|generator|regexp|symbol)$/) ? deepType :
-       (typeof obj === 'object' || typeof obj === 'function') ? 'object' : typeof obj;
+function type(value) {
+  if (typeof value !== "object" && typeof value !== "function") {
+    return typeof value;
   }
+  if (value === null) {
+    return "null";
+  }
+
+  if (
+    Object.getPrototypeOf(value) === Function.prototype &&
+    /^class/.test(String(value))
+  ) {
+    return "class";
+  }
+
+  // Symbol.toStringTag often specifies the "display name" of the
+  // object's class.
+  if (
+    Symbol.toStringTag in value &&
+    typeof value[Symbol.toStringTag] === "string"
+  ) {
+    return value[Symbol.toStringTag];
+  }
+
+  // The name of the constructor; for example `Array`, `GeneratorFunction`,
+  // `Number`, `String`, `Boolean` or `MyCustomObject`
+  if (
+    typeof value.constructor.name === "string" &&
+    value.constructor.name !== ""
+  ) {
+    return value.constructor.name;
+  }
+
+  // At this point there's no robust way to get the type of value,
+  // so we use the base implementation.
+  return typeof value;
+}
 ```
 
-For checking non-existent variables that would otherwise throw
-a {{JSxRef("ReferenceError")}}, use `typeof nonExistentVar === 'undefined'`.
+For checking non-existent variables that would otherwise throw
+a {{JSxRef("ReferenceError")}}, use `typeof nonExistentVar === 'undefined'`.
 
 ## Specifications
 
@@ -256,8 +275,8 @@ On IE 6, 7, and 8 a lot of host objects are objects and not functions. For examp
 typeof alert === 'object'
 ```
 
-Some non-standard IE properties return other values ([tc39/ecma262#1440
-(comment)](https://github.com/tc39/ecma262/issues/1440#issuecomment-461963872)):
+Some non-standard IE properties return other values
+([tc39/ecma262#1440 (comment)](https://github.com/tc39/ecma262/issues/1440#issuecomment-461963872)):
 
 ```js
 typeof window.external.AddSearchProvider === "unknown";
@@ -267,5 +286,4 @@ typeof window.external.IsSearchProviderInstalled === "unknown";
 ## See also
 
 - {{JSxRef("Operators/instanceof", "instanceof")}}
-- [`document.all`
-  willful violation of the standard](https://github.com/tc39/ecma262/issues/668)
+- [`document.all` willful violation of the standard](https://github.com/tc39/ecma262/issues/668)

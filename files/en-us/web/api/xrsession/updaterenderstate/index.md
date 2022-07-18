@@ -1,6 +1,7 @@
 ---
 title: XRSession.updateRenderState()
 slug: Web/API/XRSession/updateRenderState
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -17,7 +18,7 @@ browser-compat: api.XRSession.updateRenderState
 ---
 {{APIRef("WebXR Device API")}}
 
-The `updateRenderState()` method of the {{DOMxRef("XRSession")}} interface of the [WebXR API](/en-US/docs/Web/API/WebXR_Device_API) schedules changes to be applied  to the active render state ({{domxref("XRRenderState")}}) prior to rendering of the next frame.
+The `updateRenderState()` method of the {{DOMxRef("XRSession")}} interface of the [WebXR API](/en-US/docs/Web/API/WebXR_Device_API) schedules changes to be applied to the active render state ({{domxref("XRRenderState")}}) prior to rendering of the next frame.
 
 ## Syntax
 
@@ -31,14 +32,14 @@ updateRenderState(state)
 - `state` {{optional_inline}}
   - : An optional object to configure the {{domxref("XRRenderState")}}. If none is provided, a default configuration will be used.
     - `baseLayer`  {{optional_inline}}: An {{domxref("XRWebGLLayer")}} object from which the WebXR compositor will obtain imagery. This is  `null`  by default. To specify other (or multiple) layers, see the `layers` option.
-    - `depthFar`  {{optional_inline}}: A floating-point value specifying the distance in meters from the viewer to the  far clip plane, which is a plane parallel to the display surface beyond which no further rendering will occur. All rendering will take place between the distances specified by  `depthNear`  and  `depthFar`. This is 1000 meters (1 kilometer) by default.
-    - `depthNear`  {{optional_inline}}: A floating-point value indicating the distance in meters from the viewer to a plane parallel to the display surface to be the  **near clip  plane**. No part of the scene on the viewer's side of this plane will be rendered. This is 0.1 meters (10 centimeters) by default.
+    - `depthFar`  {{optional_inline}}: A floating-point value specifying the distance in meters from the viewer to the far clip plane, which is a plane parallel to the display surface beyond which no further rendering will occur. All rendering will take place between the distances specified by  `depthNear`  and  `depthFar`. This is 1000 meters (1 kilometer) by default.
+    - `depthNear`  {{optional_inline}}: A floating-point value indicating the distance in meters from the viewer to a plane parallel to the display surface to be the  **near clip plane**. No part of the scene on the viewer's side of this plane will be rendered. This is 0.1 meters (10 centimeters) by default.
     - `inlineVerticalFieldOfView`  {{optional_inline}}: A floating-point value indicating the default field of view, in radians, to be used when computing the projection matrix for an  `inline`  {{domxref("XRSession")}}. The projection matrix calculation also takes into account the output canvas's aspect ratio. This property _must not_ be specified for immersive sessions, so the value is  `null`  by default for immersive sessions. The default value is otherwise π \* 0.5 (half of the value of pi).
     - `layers`  {{optional_inline}}: An ordered array of {{domxref("XRLayer")}} objects specifying the layers that should be presented to the XR device. Setting `layers` will override the `baseLayer` if one is present, with `baseLayer` reporting `null`. The order of the layers given is "back-to-front". For alpha blending of layers, see the {{domxref("XRCompositionLayer.blendTextureSourceAlpha")}} property.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -53,7 +54,7 @@ None.
     - The `layers` option is used in a session that has been created without the `layers` feature.
     - Both the `baseLayer` and `layers` options are specified.
 
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the `layers` option contains duplicate instances.
 
 ## Examples
@@ -91,7 +92,7 @@ Layers will be presented in the order they are given in the `layers` array, with
 ```js
 const xrSession = navigator.xr.requestSession("immersive-ar", {
   optionalFeatures: ["layers"]
-}
+});
 
 function onXRSessionStarted(xrSession) {
   const glCanvas = document.createElement("canvas");

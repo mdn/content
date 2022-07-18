@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.connectStart
 slug: Web/API/PerformanceTiming/connectStart
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility
@@ -27,11 +28,9 @@ started again, the last connection establishment start time is given. If a persi
 connection is used, the value will be the same as
 {{domxref("PerformanceTiming.fetchStart")}}.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.connectStart;
-```
+An `unsigned long long`.
 
 ## Specifications
 

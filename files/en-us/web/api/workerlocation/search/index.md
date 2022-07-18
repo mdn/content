@@ -1,6 +1,7 @@
 ---
 title: WorkerLocation.search
 slug: Web/API/WorkerLocation/search
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,13 +12,11 @@ browser-compat: api.WorkerLocation.search
 ---
 {{ApiRef("WorkerLocation")}}
 
-The **`search`** property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.search", "search")}} part of the worker’s location.
+The **`search`** property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.search", "search")}} part of the worker's location.
 
-## Syntax
+## Value
 
-```js
-string = location.search;
-```
+A string.
 
 ## Examples
 

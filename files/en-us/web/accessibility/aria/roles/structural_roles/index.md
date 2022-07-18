@@ -10,6 +10,7 @@ tags:
   - structural Roles
   - ARIA structure
   - Reference
+spec-urls: https://w3c.github.io/aria/#document_structure_roles
 ---
 
 ARIA document-structure roles are used to provide a structural description for a section of content.
@@ -30,13 +31,13 @@ The structure roles with HTML equivalents are listed below:
 | ---------- | ------------   |
 | **`associationlist`** <br> Contains only `associationlistitemkey` children and their sibling `associationlistitemvalue`. | {{HTMLElement('dl')}} |
 | **`associationlistitemkey`** <br/> Must be contained in an `associationlist`. | {{HTMLElement('dt')}} |
-| **`associationlistitemvalue`** <br/> Always a sibling following an `associationlistitem`. | {{HTMLElement('dd')}} |
+| **`associationlistitemvalue`** <br/> Always a sibling following an `associationlistitemkey`. | {{HTMLElement('dd')}} |
 | **`blockquote`** <br/> A section of content that is quoted from another source.| {{HTMLElement('blockquote')}} |
-| **`caption`** <br>Visible content that names, and may also describe, a `figure`, `table`, `grid`, or `treegrid`.<br/> Only found in those 4 roles. A caption’s `id` is generally referenced by a `figure`, `grid`, `table`, or `treegrid`'s `aria-labelledby` attribute.<br/> Prohibited attributes: `aria-label` and `aria-labelledby`.   | {{HTMLElement('caption')}} <br/> {{HTMLElement('figcaption')}} |
+| **`caption`** <br>Visible content that names, and may also describe, a `figure`, `table`, `grid`, or `treegrid`.<br/> Only found in those 4 roles. A caption's `id` is generally referenced by a `figure`, `grid`, `table`, or `treegrid`'s `aria-labelledby` attribute.<br/> Prohibited attributes: `aria-label` and `aria-labelledby`.   | {{HTMLElement('caption')}} <br/> {{HTMLElement('figcaption')}} |
 | **`code`** <br/> A section representing a fragment of computer code. <br/> Prohibited attributes: `aria-label` and `aria-labelledby`. | {{HTMLElement('code')}} |
 | **`deletion`** <br/>Content that is marked as removed or suggested for removal.<br/> Prohibited attributes: `aria-label` and `aria-labelledby`. | {{HTMLElement('del')}} |
 | **`emphasis`** <br/> Used to stress or emphasize content, but not to suggest importance.<br/>Prohibited attributes: `aria-label` and `aria-labelledby`. | {{HTMLElement('em')}} |
-| [`figure`]((/en-US/docs/Web/Accessibility/ARIA/Roles/figure_role)) <br/>Container for a graphical document, images, code snippets, or example text.| {{HTMLElement('figure')}} |
+| [`figure`](/en-US/docs/Web/Accessibility/ARIA/Roles/figure_role) <br/>Container for a graphical document, images, code snippets, or example text.| {{HTMLElement('figure')}} |
 | [`heading`](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role) <br/> A heading for a section of the page.<br/>The `aria-level` attribute is required to indicate the nesting level.<br/>See the [`heading` role](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role) for more information. | {{HTMLElement('h1')}}, {{HTMLElement('h2')}}, {{HTMLElement('h3')}}, {{HTMLElement('h4')}}, {{HTMLElement('h5')}}, and {{HTMLElement('h6')}} |
 | **`image`** <br/>Container for a collection of elements that form an image. Synonym for `img` role. | {{HTMLElement('img')}} |
 | [`img`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) <br/>Container for a collection of elements that form an image. <br/>Accessible name is required. <br/>See the [`img` role](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) for more information.| {{HTMLElement('img')}} |
@@ -60,9 +61,7 @@ Do not use structural roles. Opt for HTML semantic elements instead.
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#document_structure_roles","ARIA: document structure roles")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLLabelElement
 slug: Web/API/HTMLLabelElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -20,11 +21,11 @@ The **`HTMLLabelElement`** interface gives access to properties specific to {{HT
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLLabelElement.control")}} {{ReadOnlyInline}}
-  - : Is a {{domxref("HTMLElement")}} representing the control with which the label is associated.
+  - : A {{domxref("HTMLElement")}} representing the control with which the label is associated.
 - {{domxref("HTMLLabelElement.form")}} {{ReadOnlyInline}}
-  - : Is a {{domxref("HTMLFormElement")}} object representing the form with which the labeled control is associated, or `null` if there is no associated control, or if that control isn't associated with a form. In other words, this is just a shortcut for `HTMLLabelElement.control.form`.
+  - : A {{domxref("HTMLFormElement")}} object representing the form with which the labeled control is associated, or `null` if there is no associated control, or if that control isn't associated with a form. In other words, this is just a shortcut for `HTMLLabelElement.control.form`.
 - {{domxref("HTMLLabelElement.htmlFor")}}
-  - : Is a string containing the ID of the labeled control. This reflects the {{htmlattrxref("for", "label")}} attribute.
+  - : A string containing the ID of the labeled control. This reflects the {{htmlattrxref("for", "label")}} attribute.
 
 > **Note:** To programmatically set the `for` attribute, use [`htmlFor`](/en-US/docs/Web/API/HTMLLabelElement/htmlFor).
 

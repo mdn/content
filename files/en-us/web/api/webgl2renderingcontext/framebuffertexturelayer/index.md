@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.framebufferTextureLayer()
 slug: Web/API/WebGL2RenderingContext/framebufferTextureLayer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -21,7 +22,7 @@ but only a given single layer of the texture level is attached to the attachment
 ## Syntax
 
 ```js
-void gl.framebufferTextureLayer(target, attachment, texture, level, layer);
+framebufferTextureLayer(target, attachment, texture, level, layer)
 ```
 
 ### Parameters
@@ -57,7 +58,7 @@ void gl.framebufferTextureLayer(target, attachment, texture, level, layer);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

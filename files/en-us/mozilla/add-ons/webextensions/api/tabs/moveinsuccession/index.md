@@ -21,7 +21,7 @@ All tabs start out with no successor; tabs only get a successor if assigned one 
 
 `tabs.moveInSuccession()` takes an array of tab IDs, and moves all of those tabs from their lines of succession. It then makes each tab the successor of the previous tab in the array, forming a chain. It can optionally set the successor of the last tab in the chain to an anchor tab, which is _not_ moved from its line of succession. Additional options can control whether the tab chain is "prepended" or "appended" to the anchor tab, and whether the operation acts like a linked-list insert.
 
-While the successor tab can be assigned with {{WebExtAPIRef('tabs.update()')}}, it is often desirable to use `tabs.moveInSuccession()` to change successors, even if only a single tab is having its successor assigned. The difference is that `browser.tabs.moveInSuccession([a], b)` moves tab `a` from its line of succession, so any predecessors of `a` will adopt `a`'s previous successor; whereas if `browser.tabs.update(a, {successorTabId: b})` is used instead, tab `a` may continue to be the successor of other tabs, which could be unexpected. Another advantage of `tabs.moveInSuccession()` is that all of the succession changes happen atomically, without having to worry about races between calls to {{WebExtAPIRef('tabs.update()')}} and {{WebExtAPIRef('tabs.get()')}} and other operations like the user closing a tab.
+While the successor tab can be assigned with {{WebExtAPIRef('tabs.update()')}}, it is often desirable to use `tabs.moveInSuccession()` to change successors, even if only a single tab is having its successor assigned. The difference is that `browser.tabs.moveInSuccession([a], b)` moves tab `a` from its line of succession, so any predecessors of `a` will adopt `a`'s previous successor; whereas if `browser.tabs.update(a, {successorTabId: b})` is used instead, tab `a` may continue to be the successor of other tabs, which could be unexpected. Another advantage of `tabs.moveInSuccession()` is that all of the succession changes happen atomically, without having to worry about races between calls to {{WebExtAPIRef('tabs.update()')}} and {{WebExtAPIRef('tabs.get()')}} and other operations like the user closing a tab.
 
 ## Syntax
 
@@ -34,7 +34,7 @@ browser.tabs.moveInSuccession([1, 3, 5, 7, 2, 9], 4, {insert:true})
 - `tabIds`
   - : `array` of `integer`. An array of tab `ID`s. The order of the elements in the array defines the relationship of the tabs. Any invalid tab `ID`s, or tab `ID`s corresponding to tabs not in the same window as `tabId` (or the first tab in the array, if `tabId` is omitted), will be ignored—they will keep their current successors and predecessors.
 - `tabId` {{optional_inline}}
-  - : `integer.` The `ID` of the tab that will be the successor of the last tab in the `tabIds` array. If this `ID` is invalid or {{WebExtAPIRef('tabs.TAB_ID_NONE')}}, the last tab will not have a successor. Defaults to {{WebExtAPIRef('tabs.TAB_ID_NONE')}}.
+  - : `integer.` The `ID` of the tab that will be the successor of the last tab in the `tabIds` array. If this `ID` is invalid or {{WebExtAPIRef('tabs.TAB_ID_NONE')}}, the last tab will not have a successor. Defaults to {{WebExtAPIRef('tabs.TAB_ID_NONE')}}.
 - `options` {{optional_inline}}
 
   - : `object`.

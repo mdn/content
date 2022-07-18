@@ -1,6 +1,7 @@
 ---
 title: XMLSerializer
 slug: Web/API/XMLSerializer
+page-type: web-api-interface
 tags:
   - Converting
   - DOM Parsing
@@ -30,9 +31,9 @@ The `XMLSerializer` interface provides the {{domxref("XMLSerializer.serializeToS
 The first, basic, example just serializes an entire document into a string containing XML.
 
 ```js
- var s = new XMLSerializer();
- var d = document;
- var str = s.serializeToString(d);
+ const s = new XMLSerializer();
+ const d = document;
+ const str = s.serializeToString(d);
  saveXML(str);
 ```
 
@@ -48,12 +49,12 @@ This example uses the {{domxref("Element.insertAdjacentHTML()")}} method to inse
 > - The {{domxref("Element.replaceWith")}} method (to replace an existing node with the new one)
 > - The {{domxref("Document.insertAdjacentElement()")}} and {{domxref("Element.insertAdjacentElement()")}} methods.
 
-Because `insertAdjacentHTML()` accepts a string and not a `Node` as its second parameter, `XMLSerializer` is used to first convert the node into a string.
+Because `insertAdjacentHTML()` accepts a string and not a `Node` as its second parameter, `XMLSerializer` is used to first convert the node into a string.
 
 ```js
-var inp = document.createElement('input');
-var XMLS = new XMLSerializer();
-var inp_xmls = XMLS.serializeToString(inp); // First convert DOM node into a string
+const inp = document.createElement('input');
+const XMLS = new XMLSerializer();
+const inp_xmls = XMLS.serializeToString(inp); // First convert DOM node into a string
 
 // Insert the newly created node into the document's body
 document.body.insertAdjacentHTML('afterbegin', inp_xmls);

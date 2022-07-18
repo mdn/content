@@ -16,7 +16,7 @@ constructor call is invalid somehow.
 
 ## Message
 
-```js
+```
 SyntaxError: Expected {x} (Edge)
 SyntaxError: malformed formal parameter (Firefox)
 ```
@@ -49,33 +49,28 @@ Firefox engineers are huge fans of 19th-century Gothic horror novels.
 ### Invalid cases
 
 ```js example-bad
-var f = Function('x y', 'return x + y;');
+const f = Function('x y', 'return x + y;');
 // SyntaxError (missing a comma)
 
-var f = Function('x,', 'return x;');
-// SyntaxError (extraneous comma)
-
-var f = Function(37, "alert('OK')");
+const f = Function(37, "alert('OK')");
 // SyntaxError (numbers can't be argument names)
 ```
 
 ### Valid cases
 
 ```js example-good
-var f = Function('x, y', 'return x + y;');  // correctly punctuated
-
-var f = Function('x', 'return x;');
+const f = Function('x, y', 'return x + y;');  // correctly punctuated
 
 // if you can, avoid using Function - this is much faster
-var f = function(x) { return x; };
+const f = function (x) { return x; };
 ```
 
 ## See also
 
 - [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
 - [About functions](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [_Frankenstein_ by Mary
-  Wollstonecraft Shelley, full e-text](https://www.gutenberg.org/ebooks/84) ("Cursed (although I curse myself) be the
+- [_Frankenstein_ by Mary Wollstonecraft Shelley, full e-text](https://www.gutenberg.org/ebooks/84)
+  ("Cursed (although I curse myself) be the
   hands that formed you! You have made me wretched beyond expression. You have left me
   no power to consider whether I am just to you or not. Begone! Relieve me from the
   sight of your detested form.")

@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.mozCursor
 slug: Web/API/DataTransfer/mozCursor
+page-type: web-api-instance-property
 tags:
   - API
   - Non-standard
@@ -32,24 +33,18 @@ The possible values are:
 
 > **Note:** This property is Gecko-specific.
 
-## Syntax
+## Value
 
-```js
-dataTransfer.mozCursor;
-```
+A string representing one of the values listed above.
 
-### Return value
-
-A {{domxref("DOMString")}} representing one of the values listed above.
-
-## Example
+## Examples
 
 This example shows the use of the `mozCursor` property.
 
 ```js
 function drop_handler(event)
 {
-  var dragData = event.dataTransfer;
+  const dragData = event.dataTransfer;
   console.log("mozCursor = " + dragData.mozCursor);
 }
 ```

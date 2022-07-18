@@ -1,6 +1,7 @@
 ---
 title: RTCIceServer.credentialType
 slug: Web/API/RTCIceServer/credentialType
+page-type: web-api-instance-property
 tags:
   - Authentication
   - ICE
@@ -18,7 +19,7 @@ browser-compat: api.RTCIceServer.credentialType
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceServer")}} dictionary's
-**`credentialType`** property is a string value from the [`RTCIceCredentialType` enum](#RTCIceCredentialType_enum) which
+**`credentialType`** property is a string value which
 indicates what type of credential the {{domxref("RTCIceServer.credential")}} value is.
 The default is `password`.
 
@@ -26,10 +27,10 @@ The default is `password`.
 
 ```js
 var iceServer = {
-                  ...
-                  credentialType = newCredentialType,
-                  ...
-                };
+  // ...
+  credentialType: newCredentialType,
+  // ...
+};
 
 var credentialType = iceServer.credentialType;
 
@@ -38,10 +39,12 @@ iceServer.credentialType = newCredentialType;
 
 ### Value
 
-The permitted values are found in the {{domxref("RTCIceCredentialType")}} enumerated
-string type:
+The permitted values are:
 
-{{page("/en-US/docs/Web/API/RTCIceCredentialType", "Values")}}
+- `oauth`
+  - : The {{domxref("RTCIceServer")}} requires the use of OAuth 2.0 to authenticate in order to use the ICE server described. This process is detailed in {{RFC(7635)}}. This property was formerly called `token`.
+- `password`
+  - : The `RTCIceServer` requires a username and password to authenticate prior to using the described ICE server.
 
 ## Example
 
@@ -51,7 +54,7 @@ connections. Logging into the TURN server will use the username "webrtc" and the
 creative password "turnpassword".
 
 ```js
-myPeerConnection = new RTCPeerConnection({
+const myPeerConnection = new RTCPeerConnection({
   iceServers: [
     {
       urls: "turn:turnserver.example.org",  // A TURN server

@@ -1,6 +1,7 @@
 ---
 title: AudioData.copyTo()
 slug: Web/API/AudioData/copyTo
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,23 +17,23 @@ The **`copyTo()`** method of the {{domxref("AudioData")}} interface copies a pla
 ## Syntax
 
 ```js
-AudioData.copyTo(destination, options)
+copyTo(destination, options)
 ```
 
 ### Parameters
 
 - `destination`
-  - : The {{domxref("BufferSource","buffer")}} to copy the plane to.
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} to copy the plane to.
 - `options`
   - : An object containing the following:
     - `planeIndex`
       - : The index of the plane to copy from.
-    - `frameOffset`{{optional_inline}}
+    - `frameOffset` {{optional_inline}}
       - : An integer giving an offset into the plane data indicating which plane to begin copying from. Defaults to `0`.
-    - `frameCount`{{optional_inline}}
+    - `frameCount` {{optional_inline}}
       - : An integer giving the number of frames to copy. If omitted then all frames in the plane will be copied, beginning with the frame specified in `frameOffset`.
 
-### Return Value
+### Return value
 
 Undefined.
 
@@ -40,12 +41,11 @@ Undefined.
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the `AudioData` object has been {{Glossary("Transferable Objects","transferred")}}.
-- `RangeError` {{domxref("DOMException")}}
-  - : Thrown if the length of the sample is longer than the destination length.
-- `RangeError` {{domxref("DOMException")}}
-  - : Thrown if the format of the `AudioData` object describes a planar format, but `options.planeIndex` is outside of the number of planes available.
-- `RangeError` {{domxref("DOMException")}}
-  - : Thrown if the format of the `AudioData` object describes an interleaved format, but `options.planeIndex` is greater than `0`.
+- {{jsxref("RangeError")}}
+  - : Thrown if one of the following conditions is met:
+    - The length of the sample is longer than the destination length.
+    - The format of the `AudioData` object describes a planar format, but `options.planeIndex` is outside of the number of planes available.
+    - The format of the `AudioData` object describes an interleaved format, but `options.planeIndex` is greater than `0`.
 
 ## Examples
 

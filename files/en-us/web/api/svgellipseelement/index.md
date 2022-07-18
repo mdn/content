@@ -1,6 +1,7 @@
 ---
 title: SVGEllipseElement
 slug: Web/API/SVGEllipseElement
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -46,7 +47,7 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 
 ```js
 function outputSize() {
-  var ellipse = document.getElementById("ellipse");
+  const ellipse = document.getElementById("ellipse");
 
   // Outputs "horizontal radius: 100 vertical radius: 60"
   console.log(

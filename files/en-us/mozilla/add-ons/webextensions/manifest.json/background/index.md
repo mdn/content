@@ -22,6 +22,10 @@ browser-compat: webextensions.manifest.background
       <td>No</td>
     </tr>
     <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
+    </tr>
+    <tr>
       <th scope="row">Example</th>
       <td>
         <pre class="brush: json">
@@ -40,9 +44,9 @@ Background scripts are the place to put code that needs to maintain long-term st
 
 Background scripts are loaded as soon as the extension is loaded and stay loaded until the extension is disabled or uninstalled, unless `persistent` is specified as `false`. You can use any of the WebExtension APIs in the script, as long as you have requested the necessary [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-See the "Background pages" section in [Anatomy of an extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_pages) for some more details.
+See [Background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) for some more details.
 
-The `background` key is an object that may have one of the following two properties, both optional:
+The `background` key is an object that must have one of these properties:
 
 <table class="standard-table">
   <tbody>
@@ -102,7 +106,7 @@ The `background` key is an object that may have one of the following two propert
         </p>
         <p>
           If you use this property, you can not specify background scripts using
-          <code>scripts</code>, but you can  include your own scripts from the
+          <code>scripts</code>, but you can include your own scripts from the
           page, just like in a normal web page.
         </p>
       </td>
@@ -110,7 +114,7 @@ The `background` key is an object that may have one of the following two propert
   </tbody>
 </table>
 
-The `background` key can also contain the following optional property:
+The `background` key can also contain this optional property:
 
 <table class="standard-table">
   <tbody>
@@ -118,12 +122,13 @@ The `background` key can also contain the following optional property:
       <td><code>persistent</code></td>
       <td>
         <p>A <code>Boolean</code> value.</p>
+        <p>If omitted, this property default to <code>true</code> in Manifest V2 and <code>false</code> in Manifest V3. Setting to <code>true</code> in Manifest V3 results in an error.</p>
         <ul>
           <li>
             <code>true</code> indicates the background page is to be kept in
             memory from when the extension is loaded or the browser starts until
             the extension is unloaded or disabled, or the browser is closed
-            (i.e. the background page is persistent).
+            (that is, the background page is persistent).
           </li>
           <li>
             <code>false</code> indicates the background page may be unloaded
@@ -147,9 +152,9 @@ The `background` key can also contain the following optional property:
 ## Example
 
 ```json
-  "background": {
-    "scripts": ["jquery.js", "my-background.js"]
-  }
+  "background": {
+    "scripts": ["jquery.js", "my-background.js"]
+  }
 ```
 
 Load two background scripts.

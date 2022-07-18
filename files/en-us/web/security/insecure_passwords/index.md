@@ -9,7 +9,7 @@ tags:
   - password
   - passwords
 ---
-Serving login forms over HTTP is especially dangerous because of the wide variety of attacks that can be used against them to extract a user’s password. Network eavesdroppers could steal a user's password by sniffing the network, or by modifying the served page in transit.
+Serving login forms over HTTP is especially dangerous because of the wide variety of attacks that can be used against them to extract a user's password. Network eavesdroppers could steal a user's password by sniffing the network, or by modifying the served page in transit.
 
 The [HTTPS](/en-US/docs/Glossary/https) protocol is designed to protect user data from eavesdropping (confidentiality) and from modification (integrity) on the network. Websites that handle user data should use HTTPS to protect their users from attackers. If a website uses HTTP instead of HTTPS, it is trivial to steal user information (such as their login credentials). This was famously demonstrated by [Firesheep](https://codebutler.github.io/firesheep/).
 

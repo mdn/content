@@ -1,6 +1,7 @@
 ---
 title: IDBObjectStore.count()
 slug: Web/API/IDBObjectStore/count
+page-type: web-api-instance-method
 tags:
   - API
   - Database
@@ -25,13 +26,13 @@ of records in the store.
 ## Syntax
 
 ```js
-var request = ObjectStore.count();
-var request = ObjectStore.count(query);
+count()
+count(query)
 ```
 
 ### Parameters
 
-- query {{optional_inline}}
+- `query` {{optional_inline}}
   - : A key or {{domxref("IDBKeyRange")}} object that specifies a range of records you
     want to count.
 
@@ -49,9 +50,9 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `TransactionInactiveError` {{domxref("DOMException")}}
   - : Thrown if this {{domxref("IDBObjectStore")}}'s transaction is inactive.
 - `DataError` {{domxref("DOMException")}}
-  - : Thrown if the specified key or key range is invalid.
+  - : Thrown if the specified key or key range is invalid.
 
-## Example
+## Examples
 
 In this simple fragment we create a transaction, retrieve an object store, then count
 the number of records in the store using `count()` — when the success handler
@@ -63,7 +64,7 @@ var objectStore = transaction.objectStore('fThings');
 
 var countRequest = objectStore.count();
 countRequest.onsuccess = function() {
-  console.log(countRequest.result);
+  console.log(countRequest.result);
 }
 ```
 
@@ -83,5 +84,4 @@ countRequest.onsuccess = function() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

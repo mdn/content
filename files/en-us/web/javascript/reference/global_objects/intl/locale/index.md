@@ -77,7 +77,7 @@ Traditionally, the Intl API used strings to represent locales, just as Unicode d
 
 ### Basic usage
 
-At its very simplest, the {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} constructor takes a locale identifier string as its argument:
+At its very simplest, the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor takes a locale identifier string as its argument:
 
 ```js
 let us = new Intl.Locale('en-US');
@@ -103,5 +103,5 @@ console.log(us12hour.hourCycle); // Prints "h12"
 ## See also
 
 - {{jsxref("Intl")}}
-- [The Intl.Locale Polyfill](https://formatjs.io/docs/polyfills/intl-locale)
+- [The Intl.Locale Polyfill](https://formatjs.io/docs/polyfills/intl-locale/)
 - [Unicode locale identifiers spec](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers)

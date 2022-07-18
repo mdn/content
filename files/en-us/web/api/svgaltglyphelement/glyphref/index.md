@@ -1,6 +1,7 @@
 ---
 title: SVGAltGlyphElement.glyphRef
 slug: Web/API/SVGAltGlyphElement/glyphRef
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -16,23 +17,16 @@ browser-compat: api.SVGAltGlyphElement.glyphRef
 {{Deprecated_header}}
 
 The **`SVGAltGlyphElement.glyphRef`** property is a
-{{domxref("DOMString")}} representing a glyph identifier. It has the same meaning as the
-‘glyphRef’ property on the {{domxref("SVGGlyphRefElement")}} interface of the
+string representing a glyph identifier. It has the same meaning as the
+'glyphRef' property on the {{domxref("SVGGlyphRefElement")}} interface of the
 {{SVGElement("glyphRef")}} element.
 
-## Syntax
-
-```js
-string = myGlyph.glyphRef;
-myGlyph.glyphRef = string;
-```
-
-### Value
+## Value
 
 The return value is a Glyph Identifier, the value of which depends on the
 format of the given font.
 
-## Example
+## Examples
 
 ```js
 myGlyph.glypRef = "#glyphID";

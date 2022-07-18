@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.isSampler()
 slug: Web/API/WebGL2RenderingContext/isSampler
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -17,7 +18,7 @@ passed object is a valid {{domxref("WebGLSampler")}} object.
 ## Syntax
 
 ```js
-GLboolean gl.isSampler(sampler);
+isSampler(sampler)
 ```
 
 ### Parameters

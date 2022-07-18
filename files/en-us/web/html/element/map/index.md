@@ -86,27 +86,28 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Examples
 
+### Image map with two areas
+
+Click the left-hand parrot for JavaScript, or the right-hand parrot for CSS.
+
+#### HTML
+
 ```html
+<!-- Photo by Juliana e Mariana Amorim on Unsplash -->
 <map name="primary">
-  <area shape="circle" coords="75,75,75" href="left.html">
-  <area shape="circle" coords="275,75,75" href="right.html">
+  <area shape="circle" coords="75,75,75"
+        href="https://developer.mozilla.org/docs/Web/JavaScript"
+        target="_blank" >
+  <area shape="circle" coords="275,75,75"
+        href="https://developer.mozilla.org/docs/Web/CSS"
+        target="_blank" >
 </map>
-<img usemap="#primary" src="https://via.placeholder.com/350x150" alt="350 x 150 pic">
+<img usemap="#primary" src="parrots.jpg" alt="350 x 150 pic">
 ```
 
-### Result
+#### Result
 
-{{ EmbedLiveSample('Examples', '350', '166', '', 'Web/HTML/Element/map') }}
-
-### Expected live example output
-
-The live example above should appear similar to the following images (when using your keyboard tab key):
-
-_For the `left.html` link:_
-![](screen_shot_2017-02-02_at_10.48.40_pm.png)
-
-_For the `right.html` link_
-![](screen_shot_2017-02-02_at_10.49.04_pm.png)
+{{ EmbedLiveSample('Image map with two areas', '', '250') }}
 
 ## Specifications
 

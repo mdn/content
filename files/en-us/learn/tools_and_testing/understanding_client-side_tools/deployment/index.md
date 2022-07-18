@@ -77,9 +77,9 @@ We're going to add the build command to our `package.json` file as an npm script
 1. Open the `package.json` file in your project's root directory, and find the `scripts` property.
 2. We'll add a `build` command that we can run to build our code. Add the following line to your project now:
 
-    ```bash
+    ```json
     "scripts": {
-      ...
+      // …
       "build": "parcel build src/index.html"
     }
     ```
@@ -112,7 +112,7 @@ For you to create your own instance of this project you will need to host this p
 
 ## Committing changes to GitHub
 
-This section will get you over the line to storing your code in a git repository, but it is a far cry from a git tutorial. There’s many great tutorials and books available, and our [Git and GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub) page is a good place to start.
+This section will get you over the line to storing your code in a git repository, but it is a far cry from a git tutorial. There's many great tutorials and books available, and our [Git and GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub) page is a good place to start.
 
 We initialized our working directory as a git working directory earlier on. A quick way to verify this is to run the following command:
 
@@ -120,11 +120,11 @@ We initialized our working directory as a git working directory earlier on. A qu
 git status
 ```
 
-You should get a status report of what files are being tracked, what files are staged, and so on — all terms that are part of the git grammar. If you get the error `fatal: not a git repository` returned, then the working directory is not a git working directory and you’ll need to initialise git using `git init`.
+You should get a status report of what files are being tracked, what files are staged, and so on — all terms that are part of the git grammar. If you get the error `fatal: not a git repository` returned, then the working directory is not a git working directory and you'll need to initialise git using `git init`.
 
 Now we have three tasks ahead of us:
 
-- Add any changes we’ve made to the stage (a special name for the place that git will commit files from).
+- Add any changes we've made to the stage (a special name for the place that git will commit files from).
 - Commit the changes to the repository.
 - Push the changes to GitHub.
 
@@ -134,25 +134,25 @@ Now we have three tasks ahead of us:
     git add .
     ```
 
-    Note the period at the end, it means “everything in this directory”. The `git add .` command is a bit of a sledgehammer approach — it will add all local changes you’ve worked on in one go. If you want finer control over what you add, then use `git add -p` for an interactive process, or add individual files using `git add path/to/file`.
+    Note the period at the end, it means "everything in this directory". The `git add .` command is a bit of a sledgehammer approach — it will add all local changes you've worked on in one go. If you want finer control over what you add, then use `git add -p` for an interactive process, or add individual files using `git add path/to/file`.
 
 2. Now all the code is staged, we can commit; run the following command:
 
     ```bash
-    git commit -m ’committing initial code’
+    git commit -m 'committing initial code'
     ```
 
     > **Note:** Although you're free to write whatever you wish in the commit message, there's some useful tips around the web on good commit messages. Keep them short, concise, and descriptive, so they clearly describe what the change does.
 
 3. Finally the code needs to be pushed to your GitHub hosted repository. Let's do that now.
 
-    Over at github, visit <https://github.com/new> and create your own repository to host this code.
+    Over at GitHub, visit <https://github.com/new> and create your own repository to host this code.
 
 4. Give your repository a short, memorable name, without spaces in it (use hyphens to separate words), and a description, then click _Create repository_ at the bottom of the page.
 
     You should now have a "remote" URL that points to your new GitHub repo.
 
-    ![github screenshot showing remote URLs you can use to deploy code to a GitHub repo](github-quick-setup.png)
+    ![GitHub screenshot showing remote URLs you can use to deploy code to a GitHub repo](github-quick-setup.png)
 
 5. This remote location needs to be added to our local git repository before we can push it up there, otherwise it won't be able to find it. You'll need to run a command with the following structure (use the provided HTTPS option for now — especially if you are new to GitHub — not the SSH option):
 
@@ -174,9 +174,9 @@ Now we have three tasks ahead of us:
     git push github main
     ```
 
-    At this point you'll be prompted to enter a username and password before Git will allow the push to be sent. This is because we used the HTTPS option rather than the SSH option, as seen in the screenshot earlier. For this you need your Github username and then — if you do not have two-factor authentication (2FA) turned on — your GitHub password. We would always encourage you to use 2FA if possible, but bear in mind that if you do, you'll also need to use a "personal access token". Github help pages has an [excellent and simple walkthrough covering how to get one](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line).
+    At this point you'll be prompted to enter a username and password before Git will allow the push to be sent. This is because we used the HTTPS option rather than the SSH option, as seen in the screenshot earlier. For this you need your GitHub username and then — if you do not have two-factor authentication (2FA) turned on — your GitHub password. We would always encourage you to use 2FA if possible, but bear in mind that if you do, you'll also need to use a "personal access token". GitHub help pages has an [excellent and simple walkthrough covering how to get one](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
-> **Note:** If you are interested in using the SSH option, thereby avoiding the need to enter your username and password every time you push to GitHub, [this tutorial walks you through how](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh).
+> **Note:** If you are interested in using the SSH option, thereby avoiding the need to enter your username and password every time you push to GitHub, [this tutorial walks you through how](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
 
 This final command instructs git to push the code (aka publish) to the "remote" location that we called `github` (that's the repository hosted on github.com — we could have called it anything we like) using the branch `main`. We've not encountered branches at all, but the "main" branch is the default place for our work and it's what git starts on. It's also the default branch that Netlify will look for, which is convenient.
 
@@ -188,18 +188,18 @@ So with our project committed in git and pushed to our GitHub repository, the ne
 
 Deploying from GitHub to Netlify is surprisingly simple once you know the steps, particularly with "static websites" such as this project.
 
-> **Note:** There are also a lot of [guides and tutorials on Netlify](https://www.netlify.com/tags/tutorial/) to help you improve your development workflow.
+> **Note:** There are also a lot of [guides and tutorials on Netlify](https://www.netlify.com/blog/tags/tutorial/) to help you improve your development workflow.
 
 Let's get this done:
 
 1. Go to <https://app.netlify.com/start>.
-2. Press the Github button underneath the _Continuous Deployment_ heading. "Continuous Deployment" means that whenever the code repository changes, Netlify will (try) to deploy the code, thus it being "continuous".
+2. Press the GitHub button underneath the _Continuous Deployment_ heading. "Continuous Deployment" means that whenever the code repository changes, Netlify will (try) to deploy the code, thus it being "continuous".
 
     ![netlify deployment options, as described in the surrounding text](netlify-deploy.png)
 
 3. Depending on whether you authorized Netlify before, you might need to authorize Netlify with GitHub, and choose what account you want to authorize it for (if you have multiple GitHub accounts or orgs). Choose the one you pushed your project to.
 4. Netlify will prompt you with a list of the GitHub repositories it can find. Select your project repository and proceed to the next step.
-5. Since we've connected Netlify to our Github account and given it access to deploy the project repository, Netlify will ask _how_ to prepare the project for deployment and _what_ to deploy.
+5. Since we've connected Netlify to our GitHub account and given it access to deploy the project repository, Netlify will ask _how_ to prepare the project for deployment and _what_ to deploy.
 
     You should enter the command `npm run build` for the _Build command_, and specify the `dist` directory for the _Publish directory_ — this contains the code that we want to make public.
 
@@ -214,7 +214,7 @@ Let's get this done:
 
     ```bash
     git add .
-    git commit -m ‘simple netlify test’
+    git commit -m 'simple netlify test'
     git push github main
     ```
 
@@ -237,15 +237,15 @@ When approaching tests there's a good deal of ways to approach the problem:
 
 Remember also that tests are not limited to JavaScript; tests can be run against the rendered DOM, user interactions, CSS, and even how a page looks.
 
-However, for this project we’re going to create a small test that will check the third-party NASA data feed and ensure it's in the correct format. If not, the test will fail and will prevent the project from going live. To do anything else would be beyond the scope of this module — testing is a huge subject that really requires its own separate module. We are hoping that this section will at least make you aware of the need for testing, and will plant the seed that inspires you to go and learn more.
+However, for this project we're going to create a small test that will check the third-party NASA data feed and ensure it's in the correct format. If not, the test will fail and will prevent the project from going live. To do anything else would be beyond the scope of this module — testing is a huge subject that really requires its own separate module. We are hoping that this section will at least make you aware of the need for testing, and will plant the seed that inspires you to go and learn more.
 
 Although the test for this project does not include a test framework, as with all things in the front-end development world, there are a slew of [framework options](https://www.npmjs.com/search?q=keywords%3Atesting).
 
 The test itself isn't what is important. What is important is how the failure or success is handled. Some deployment platforms will include a specific method for testing as part of their pipeline. Products like GitHub, GitLab, etc., all support running tests against individual commits.
 
-As this project is deploying to Netlify, and Netlify only asks about the build command, we will have to make the tests part of the build. If the test fails, the build fails, and Netlify won’t deploy.
+As this project is deploying to Netlify, and Netlify only asks about the build command, we will have to make the tests part of the build. If the test fails, the build fails, and Netlify won't deploy.
 
-Let’s get started.
+Let's get started.
 
 1. Go to your `package.json` file and open it up.
 2. Find your `scripts` member, and update it so that it contains the following test and build commands:
@@ -296,11 +296,11 @@ Let’s get started.
 
     ```bash
     git add .
-    git commit -m ‘adding test’
+    git commit -m 'adding test'
     git push github main
     ```
 
-    In some cases you might want to test the result of the built code (since this isn't quite the original code we wrote), so the test might need to be run after the build command. You’ll need to consider all these individual aspects whilst you're working on your own projects.
+    In some cases you might want to test the result of the built code (since this isn't quite the original code we wrote), so the test might need to be run after the build command. You'll need to consider all these individual aspects whilst you're working on your own projects.
 
 Now, finally, a minute or so after pushing, Netlify will deploy the project update. But only if it passes the test that was introduced.
 
@@ -310,10 +310,10 @@ That's it for our sample case study, and for the module! We hope you found it us
 
 Let's summarize all the parts of the toolchain:
 
-- Code quality and maintenance are performed by eslint and prettier. These tools are added as `devDependencies` to the project via `npm install --dev eslint prettier eslint-plugin-react` (the eslint plugin is needed because this particular project uses React).
+- Code quality and maintenance are performed by ESLint and Prettier. These tools are added as `devDependencies` to the project via `npm install --dev eslint prettier eslint-plugin-react` (the ESLint plugin is needed because this particular project uses React).
 - There are two configuration files that the code quality tools read: `.eslintrc` and `.prettierrc`.
 - During development, we use Parcel to handle our dependencies. `parcel src/index.html` is running in the background to watch for changes and to automatically build our source.
-- Deployment is handled by pushing our changes to Github (on the "main" branch), which triggers a build and deployment on Netlify to publish the project. For our instance this URL is [near-misses.netlify.com](https://near-misses.netlify.com); you will have your own unique URL.
+- Deployment is handled by pushing our changes to GitHub (on the "main" branch), which triggers a build and deployment on Netlify to publish the project. For our instance this URL is [near-misses.netlify.com](https://near-misses.netlify.app/); you will have your own unique URL.
 - We also have a simple test that blocks the building and deployment of the site if the NASA API feed isn't giving us the correct data format.
 
 For those of you wanting a challenge, consider whether you can optimize some part of this toolchain. Some questions to ask yourself:

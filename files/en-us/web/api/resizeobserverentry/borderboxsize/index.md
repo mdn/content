@@ -1,6 +1,7 @@
 ---
 title: ResizeObserverEntry.borderBoxSize
 slug: Web/API/ResizeObserverEntry/borderBoxSize
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -18,9 +19,9 @@ border box size of the observed element when the callback is run.
 
 ## Value
 
-An array containing objects with the new border box size of the observed element. The
-array is necessary to support elements that have multiple fragments, which occur in
-multi-column scenarios. Each object in the array contains two properties:
+An array containing objects with the new border box size of the observed element. The
+array is necessary to support elements that have multiple fragments, which occur in
+multi-column scenarios. Each object in the array contains two properties:
 
 - `blockSize`
   - : The length of the observed element's border box in the block dimension. For boxes
@@ -32,8 +33,7 @@ multi-column scenarios. Each object in the array contains two properties:
     width; if the writing-mode is vertical, this is the vertical dimension, or height.
 
 > **Note:** For more explanation of writing modes and block and inline
-> dimensions, read [Handling
-> different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
+> dimensions, read [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
 ## Examples
 

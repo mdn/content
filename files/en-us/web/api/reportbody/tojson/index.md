@@ -1,27 +1,29 @@
 ---
 title: ReportBody.toJSON()
 slug: Web/API/ReportBody/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
+  - Experimental
   - toJSON
   - ReportBody
-browser-compat: api.ReportBody.toJSON
+spec-urls: https://w3c.github.io/reporting/#dom-reportbody-tojson
 ---
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`toJSON()`** method of the {{domxref("ReportBody")}} interface is a _serializer_, and returns a JSON representation of the `ReportBody` object.
 
 ## Syntax
 
 ```js
-ReportBody.toJSON();
+toJSON()
 ```
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 
@@ -49,4 +51,4 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 ## Browser compatibility
 
-{{Compat}}
+This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).

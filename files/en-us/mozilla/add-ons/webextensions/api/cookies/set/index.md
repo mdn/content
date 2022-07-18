@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var setting = browser.cookies.set(
+let setting = browser.cookies.set(
   details               // object
 )
 ```
@@ -35,34 +35,34 @@ var setting = browser.cookies.set(
 
   - : An `object` containing the details of the cookie you wish to set. It can have the following properties:
 
-    - `domain`{{optional_inline}}
+    - `domain` {{optional_inline}}
       - : A `string` representing the domain of the cookie. If omitted, the cookie becomes a host-only cookie.
-    - `expirationDate`{{optional_inline}}
+    - `expirationDate` {{optional_inline}}
       - : A `number` that represents the expiration date of the cookie as the number of seconds since the UNIX epoch. If omitted, the cookie becomes a session cookie.
-    - `firstPartyDomain`{{optional_inline}}
+    - `firstPartyDomain` {{optional_inline}}
       - : A `string` representing the first-party domain with which the cookie to will be associated. This property must be supplied if the browser has first-party isolation enabled. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
-    - `httpOnly`{{optional_inline}}
+    - `httpOnly` {{optional_inline}}
       - : A `boolean` that specifies whether the cookie should be marked as HttpOnly (`true`), or not (false). If omitted, it defaults to false.
-    - `name`{{optional_inline}}
+    - `name` {{optional_inline}}
       - : A `string` representing the name of the cookie. If omitted, this is empty by default.
-    - `partitionKey`{{optional_inline}}
+    - `partitionKey` {{optional_inline}}
 
-      - : An `object` representing the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#Storage_partitioning) to set the cookie in. Include this object to set a cookie in partitioned storage. This object contains:
+      - : An `object` representing the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) to set the cookie in. Include this object to set a cookie in partitioned storage. This object contains:
 
-        - `topLevelSite`{{optional_inline}}
+        - `topLevelSite` {{optional_inline}}
           - : A `string` representing the first-party URL of the top-level site storage partition containing the cookie.
 
-    - `path`{{optional_inline}}
+    - `path` {{optional_inline}}
       - : A `string` representing the path of the cookie. If omitted, this defaults to the path portion of the URL parameter.
-    - `sameSite{{optional_inline}}`
+    - `sameSite` {{optional_inline}}
       - : A {{WebExtAPIRef("cookies.SameSiteStatus")}} value that indicates the SameSite state of the cookie. If omitted, it defaults to 0, 'no_restriction'.
-    - `secure`{{optional_inline}}
+    - `secure` {{optional_inline}}
       - : A `boolean` that specifies whether the cookie should be marked as secure (`true`), or not (false). If omitted, it defaults to false.
-    - `storeId`{{optional_inline}}
+    - `storeId` {{optional_inline}}
       - : A `string` representing the ID of the cookie store in which to set the cookie. If omitted, the cookie is set in the current execution context's cookie store by default.
     - `url`
       - : A `string` representing the request-URI to associate with the cookie. This value can affect the default domain and path values of the created cookie. If host permissions for this URL are not specified in the manifest file, the method call will fail.
-    - `value`{{optional_inline}}
+    - `value` {{optional_inline}}
       - : A `string` representing the value of the cookie. If omitted, this is empty by default.
 
 ### Return value
@@ -78,7 +78,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 This example sets a cookie for the document hosted by the currently active tab:
 
 ```js
-var getActive = browser.tabs.query({active: true, currentWindow: true});
+let getActive = browser.tabs.query({active: true, currentWindow: true});
 getActive.then(setCookie);
 
 function setCookie(tabs) {
@@ -92,7 +92,7 @@ function setCookie(tabs) {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#method-set) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#method-set) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

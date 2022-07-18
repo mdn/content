@@ -21,7 +21,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var getContext = browser.contextualIdentities.get(
+let getContext = browser.contextualIdentities.get(
   cookieStoreId                  // string
 )
 ```
@@ -29,7 +29,7 @@ var getContext = browser.contextualIdentities.get(
 ### Parameters
 
 - `cookieStoreId`
-  - : `string`. The ID of this contextual identity's cookie store. Because contextual identities each have their own cookie store, this serves as an identifier for the contextual identity itself.
+  - : `string`. The ID of this contextual identity's cookie store. Because contextual identities each have their own cookie store, this serves as an identifier for the contextual identity itself.
 
 ### Return value
 

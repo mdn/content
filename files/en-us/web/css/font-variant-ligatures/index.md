@@ -34,6 +34,7 @@ font-variant-ligatures: no-contextual;              /* <contextual-alt-values> *
 font-variant-ligatures: inherit;
 font-variant-ligatures: initial;
 font-variant-ligatures: revert;
+font-variant-ligatures: revert-layer;
 font-variant-ligatures: unset;
 ```
 
@@ -188,7 +189,7 @@ p {
 
 #### Result
 
-{{ EmbedLiveSample('Setting_font_ligatures_and_contextual_forms', '', '700', '', 'Web/CSS/font-variant-ligatures') }}
+{{ EmbedLiveSample('Setting font ligatures and contextual forms', '', '700') }}
 
 ## Specifications
 

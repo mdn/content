@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognitionResult.isFinal
 slug: Web/API/SpeechRecognitionResult/isFinal
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -21,13 +22,7 @@ whether this result is final (`true`) or not (`false`) — if so,
 then this is the final time this result will be returned; if not, then this result is an
 interim result, and may be updated later on.
 
-## Syntax
-
-```js
-var myIsFinal = speechRecognitionResultInstance.isFinal;
-```
-
-### Returns
+## Value
 
 A boolean value.
 
@@ -44,7 +39,7 @@ recognition.onresult = function(event) {
   // These also have getters so they can be accessed like arrays.
   // The second [0] returns the SpeechRecognitionAlternative at position 0.
   // We then return the transcript property of the SpeechRecognitionAlternative object
-  var color = event.results[0][0].transcript;
+  const color = event.results[0][0].transcript;
   diagnostic.textContent = 'Result received: ' + color + '.';
   bg.style.backgroundColor = color;
 

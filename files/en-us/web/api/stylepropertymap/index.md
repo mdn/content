@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMap
 slug: Web/API/StylePropertyMap
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -13,7 +14,7 @@ browser-compat: api.StylePropertyMap
 ---
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-The **`StylePropertyMap`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_Object_Model_API) provides a representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
+The **`StylePropertyMap`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model_experimental) provides a representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
 
 {{InheritanceDiagram}}
 

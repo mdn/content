@@ -1,6 +1,7 @@
 ---
 title: SVGLengthList
 slug: Web/API/SVGLengthList
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -24,7 +25,7 @@ An `SVGLengthList` object can be designated as read only, which means that attem
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Also implement</th>
+      <th scope="row">Also implement</th>
       <td><em>None</em></td>
     </tr>
     <tr>
@@ -84,7 +85,7 @@ An `SVGLengthList` object can be designated as read only, which means that attem
       </td>
     </tr>
     <tr>
-      <th scope="row">Normative document</th>
+      <th scope="row">Normative document</th>
       <td>
         <a href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGLengthList"
           >SVG 1.1 (2nd Edition)</a
@@ -169,7 +170,7 @@ An `SVGLengthList` object can be designated as read only, which means that attem
         <p>
           Returns the specified item from the list. The returned item is the
           item itself and not a copy. Any changes made to the item are
-          immediately reflected in the list. The first item is number 0.
+          immediately reflected in the list. The first item is number 0.
         </p>
         <p><strong>Exceptions:</strong></p>
         <ul>

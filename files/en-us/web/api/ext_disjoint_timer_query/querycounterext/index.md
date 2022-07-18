@@ -1,6 +1,7 @@
 ---
 title: EXT_disjoint_timer_query.queryCounterEXT()
 slug: Web/API/EXT_disjoint_timer_query/queryCounterEXT
+page-type: webgl-extension-method
 tags:
   - API
   - Method
@@ -18,20 +19,20 @@ the corresponding query object.
 ## Syntax
 
 ```js
-void ext.queryCounterEXT(query, target);
+queryCounterEXT(query, target)
 ```
 
 ### Parameters
 
 - `query`
   - : A {{domxref("WebGLQuery")}} object for which to record the current time.
-- target
+- `target`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target of the time query. Must be
     `ext.TIMESTAMP_EXT`.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -41,7 +42,7 @@ var startQuery = ext.createQueryEXT();
 var endQuery = ext.createQueryEXT();
 ext.queryCounterEXT(startQuery, ext.TIMESTAMP_EXT);
 
-// ...
+// …
 
 ext.queryCounterEXT(endQuery, ext.TIMESTAMP_EXT);
 ```

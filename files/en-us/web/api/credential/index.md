@@ -1,6 +1,7 @@
 ---
 title: Credential
 slug: Web/API/Credential
+page-type: web-api-interface
 tags:
   - API
   - Credential Management API
@@ -24,9 +25,9 @@ The **`Credential`** interface of the [Credential Management API](/en-US/docs/We
 ## Properties
 
 - {{domxref("Credential.id")}} {{readonlyInline}}
-  - : Returns a {{domxref("DOMString")}} containing the credential's identifier. This might be any one of a GUID, username, or email address.
+  - : Returns a string containing the credential's identifier. This might be any one of a GUID, username, or email address.
 - {{domxref("Credential.type")}} {{readonlyInline}}
-  - : Returns a {{domxref("DOMString")}} containing the credential's type. Valid values are `password`, `federated` and `public-key`. (For {{domxref("PasswordCredential")}}, {{domxref("FederatedCredential")}} and {{domxref("PublicKeyCredential")}})
+  - : Returns a string containing the credential's type. Valid values are `password`, `federated` and `public-key`. (For {{domxref("PasswordCredential")}}, {{domxref("FederatedCredential")}} and {{domxref("PublicKeyCredential")}})
 
 ### Event handlers
 

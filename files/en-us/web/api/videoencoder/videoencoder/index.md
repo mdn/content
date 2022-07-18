@@ -1,6 +1,7 @@
 ---
-title: VideoEncoder.VideoEncoder()
+title: VideoEncoder()
 slug: Web/API/VideoEncoder/VideoEncoder
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -15,7 +16,7 @@ The **`VideoEncoder()`** constructor creates a new {{domxref("VideoEncoder")}} o
 ## Syntax
 
 ```js
-new VideoEncoder(init);
+new VideoEncoder(init)
 ```
 
 ### Parameters
@@ -27,17 +28,17 @@ new VideoEncoder(init);
         - `decoderconfig` {{Optional_Inline}}
           - : An object containing:
             - `codec`
-              - : A {{domxref("DOMString","string")}} containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#video-codec-registry).
+              - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#video-codec-registry).
             - `description` {{Optional_Inline}}
-              - : A {{domxref("BufferSource")}} containing a sequence of codec-specific bytes, commonly known as “extradata”.
+              - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing a sequence of codec-specific bytes, commonly known as "extradata".
             - `codedWidth` {{Optional_Inline}}
               - : An integer representing the width of the {{domxref("VideoFrame")}} in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
             - `codedHeight` {{Optional_Inline}}
               - : An integer representing the height of the {{domxref("VideoFrame")}} in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
             - `displayAspectWidth` {{Optional_Inline}}
-              - : An integer representing the horizontal dimension of the {{domxref("VideoFrame")}}’s aspect ratio when displayed.
+              - : An integer representing the horizontal dimension of the {{domxref("VideoFrame")}}'s aspect ratio when displayed.
             - `displayAspectHeight` {{Optional_Inline}}
-              - : An integer representing the vertical dimension of the {{domxref("VideoFrame")}}’s aspect ratio when displayed.
+              - : An integer representing the vertical dimension of the {{domxref("VideoFrame")}}'s aspect ratio when displayed.
             - `colorSpace` {{Optional_Inline}}
               - : An object you pass to the {{domxref("VideoColorSpace")}} constructor as the `init` argument, configuring the {{domxref("VideoFrame.colorSpace")}} for {{domxref("VideoFrame","VideoFrames")}} associated with this `decoderconfig` object. If `colorSpace` exists, the provided values will override any in-band values from the bitstream.
             - `hardwareAcceleration` {{Optional_Inline}}
@@ -50,7 +51,8 @@ new VideoEncoder(init);
         - `svc` {{Optional_Inline}}
           - : An optional object with only one member: `temporalLayerId`, which is a number that identifies the [temporal layer](https://w3c.github.io/webcodecs/#temporal-layer) for the associated {{domxref("EncodedVideoChunk")}}.
         - `alphaSideData` {{Optional_Inline}}
-          - : A {{domxref("BufferSource")}} that contains the {{domxref("EncodedVideoChunk")}}'s extra alpha channel data.
+          - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}
+            that contains the {{domxref("EncodedVideoChunk")}}'s extra alpha channel data.
     - `error`
       - : A callback which takes an {{jsxref("Error")}} object as its only argument.
 

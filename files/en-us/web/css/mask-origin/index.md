@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Masking
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.mask-origin
@@ -37,6 +36,7 @@ mask-origin: view-box, fill-box, border-box;
 mask-origin: inherit;
 mask-origin: initial;
 mask-origin: revert;
+mask-origin: revert-layer;
 mask-origin: unset;
 ```
 

@@ -55,6 +55,7 @@ justify-self: unsafe center;
 justify-self: inherit;
 justify-self: initial;
 justify-self: revert;
+justify-self: revert-layer;
 justify-self: unset;
 ```
 
@@ -94,7 +95,7 @@ This property can take one of three different forms:
 - `self-end`
   - : The item is packed flush to the edge of the alignment container of the end side of the item, in the appropriate axis.
 - `center`
-  - : The items are packed flush to each other toward the center of the of the alignment container.
+  - : The items are packed flush to each other toward the center of the alignment container.
 - `left`
   - : The items are packed flush to each other toward the left edge of the alignment container. If the property's axis is not parallel with the inline axis, this value behaves like `start`.
 - `right`
@@ -189,7 +190,7 @@ article {
 
 ## Specifications
 
-{{Specifications("css.properties.justify-self.grid_context")}}
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,6 +1,7 @@
 ---
 title: Gamepad
 slug: Web/API/Gamepad
+page-type: web-api-interface
 tags:
   - API
   - Gamepad API
@@ -13,7 +14,7 @@ browser-compat: api.Gamepad
 
 The **`Gamepad`** interface of the [Gamepad API](/en-US/docs/Web/API/Gamepad_API) defines an individual gamepad or other controller, allowing access to information such as button presses, axis positions, and id.
 
-A Gamepad object can be returned in one of two ways: via the `gamepad` property of the {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} events, or by grabbing any position in the array returned by the {{domxref("Navigator.getGamepads()")}} method.
+A Gamepad object can be returned in one of two ways: via the `gamepad` property of the {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} and {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} events, or by grabbing any position in the array returned by the {{domxref("Navigator.getGamepads()")}} method.
 
 ## Properties
 
@@ -29,13 +30,15 @@ A Gamepad object can be returned in one of two ways: via the `gamepad` property 
   - : An enum defining what hand the controller is being held in, or is most likely to be held in.
 - {{domxref("Gamepad.hapticActuators")}} {{readonlyInline}}
   - : An array containing {{domxref("GamepadHapticActuator")}} objects, each of which represents haptic feedback hardware available on the controller.
+- {{domxref("Gamepad.vibrationActuator")}} {{readonlyInline}}
+  - : A {{domxref("GamepadHapticActuator")}} object, which represents haptic feedback hardware available on the controller.
 - {{domxref("Gamepad.id")}} {{readonlyInline}}
-  - : A {{domxref("DOMString")}} containing identifying information about the controller.
+  - : A string containing identifying information about the controller.
 - {{domxref("Gamepad.index")}} {{readonlyInline}}
   - : An integer that is auto-incremented to be unique for each device currently connected to the system.
 - {{domxref("Gamepad.mapping")}} {{readonlyInline}}
   - : A string indicating whether the browser has remapped the controls on the device to a known layout.
-- {{domxref("Gamepad.pose")}} {{readonlyInline}}{{Experimental_Inline}}
+- {{domxref("Gamepad.pose")}} {{readonlyInline}} {{Experimental_Inline}}
   - : A {{domxref("GamepadPose")}} object representing the pose information associated with a WebVR controller (e.g. its position and orientation in 3D space).
 - {{domxref("Gamepad.timestamp")}} {{readonlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the last time the data for this gamepad was updated.

@@ -1,6 +1,7 @@
 ---
 title: XRQuadLayer
 slug: Web/API/XRQuadLayer
+page-type: web-api-interface
 tags:
   - API
   - AR
@@ -37,7 +38,7 @@ _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 - {{domxref("XRQuadLayer.height")}}
   - : Represents the height of the layer in meters.
 - {{domxref("XRQuadLayer.space")}}
-  - : An {{domxref("XRSpace")}} representing the layer's spatial relationship with the user’s physical environment.
+  - : An {{domxref("XRSpace")}} representing the layer's spatial relationship with the user's physical environment.
 - {{domxref("XRQuadLayer.transform")}}
   - : An {{domxref("XRRigidTransform")}} representing the offset and orientation relative to `space`.
 - {{domxref("XRQuadLayer.width")}}

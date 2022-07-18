@@ -63,25 +63,23 @@ People with disabilities are just as diverse as people without disabilities, and
 
 People with visual impairments include people with blindness, low-level vision, and color blindness. Many people with visual impairments use screen magnifiers that are either physical magnifiers or software zoom capabilities. Most browsers and operating systems these days have zoom capabilities. Some users will rely on screen readers, which is software that reads digital text aloud. Some screen reader examples include:
 
-- Paid commercial products, like [JAWS](https://www.freedomscientific.com/Products/software/JAWS/) (Windows) and [Dolphin Screen Reader](https://yourdolphin.com/screenreader) (Windows).
+- Paid commercial products, like [JAWS](https://www.freedomscientific.com/Products/software/JAWS/) (Windows) and [Dolphin Screen Reader](https://yourdolphin.com/en-gb/products/individuals/screen-reader) (Windows).
 - Free products, like [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://www.chromevox.com/) (Chrome), and [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
-- Software built into the operating system, like [VoiceOver](https://www.apple.com/accessibility/mac/vision/) (macOS, iPadOS, iOS), [Narrator](https://support.microsoft.com/help/22798/windows-10-narrator-get-started) (Windows), [ChromeVox](https://www.chromevox.com/) (on Chrome OS), and [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
+- Software built into the operating system, like [VoiceOver](https://www.apple.com/accessibility/vision/) (macOS, iPadOS, iOS), [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) (Windows), [ChromeVox](https://www.chromevox.com/) (on Chrome OS), and [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
 It is a good idea to familiarize yourself with screen readers; you should also set up a screen reader and have a play around with it, to get an idea of how it works. See our [cross-browser testing screen readers guide](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders) for more details on using them. The below video also provides a brief example of what the experience is like.
 
 {{EmbedYouTube("IK97XMibEws")}}
 
-In terms of statistics, the World Health Organization estimates that "285 million people are estimated to be visually impaired worldwide: 39 million are blind and 246 million have low vision." (see [Visual impairment and blindness](https://www.who.int/mediacentre/factsheets/fs282/en/)). That's a large and significant population of users to just miss out on because your site isn't coded properly — almost the same size as the population of the United States of America.
+In terms of statistics, the World Health Organization estimates that "285 million people are estimated to be visually impaired worldwide: 39 million are blind and 246 million have low vision." (see [Visual impairment and blindness](https://www.who.int/en/news-room/fact-sheets/detail/blindness-and-visual-impairment)). That's a large and significant population of users to just miss out on because your site isn't coded properly — almost the same size as the population of the United States of America.
 
 ### People with hearing impairments
 
 [Deaf and hard-of-hearing (DHH)](https://www.nad.org/resources/american-sign-language/community-and-culture-frequently-asked-questions/) people have various levels of hearing loss ranging from mild to profound. Although some do use AT (see [Assistive Devices for People with Hearing, Voice, Speech, or Language Disorders](https://www.nidcd.nih.gov/health/assistive-devices-people-hearing-voice-speech-or-language-disorders)), they are not widespread.
 
-.
+To provide access, textual alternatives must be provided. Videos should be manually captioned, and transcripts should be provided for audio content. Furthermore, due to high levels of [language deprivation](https://www.therapytravelers.com/language-deprivation/#:~:text=Language%20deprivation%20is%20the%20term,therefore%20not%20exposed%20to%20language.) in DHH populations, [text simplification should be considered](https://circlcenter.org/collaborative-research-automatic-text-simplification-and-reading-assistance-to-support-self-directed-learning-by-deaf-and-hard-of-hearing-computing-workers/).
 
-To provide access, textual alternatives must be provided. Videos should be manually captioned, and transcripts should be provided for audio content. Furthermore, due to high levels of [language deprivation](https://therapytravelers.com/language-deprivation/#:~:text=Language%20deprivation%20is%20the%20term,therefore%20not%20exposed%20to%20language.) in DHH populations, [text simplification should be considered](https://circlcenter.org/collaborative-research-automatic-text-simplification-and-reading-assistance-to-support-self-directed-learning-by-deaf-and-hard-of-hearing-computing-workers/).
-
-Deaf and hard-of-hearing people also represent a significant userbase — "466 million people worldwide have disabling hearing loss", says the World Health Organization's [Deafness and hearing loss](https://www.who.int/mediacentre/factsheets/fs300/en/) fact sheet.
+Deaf and hard-of-hearing people also represent a significant userbase — "466 million people worldwide have disabling hearing loss", says the World Health Organization's [Deafness and hearing loss](https://www.who.int/en/news-room/fact-sheets/detail/deafness-and-hearing-loss) fact sheet.
 
 ### People with mobility impairments
 
@@ -95,7 +93,7 @@ In terms of statistics, a significant number of people have mobility impairments
 
 ### People with cognitive impairments
 
-Cognitive impairment refers to a broad range of disabilities, from people with intellectual disabilities who have the most-limited capabilities, to all of us as we age and have difficulty thinking and remembering. The range includes people with mental illnesses, such as [depression](https://www.nimh.nih.gov/health/topics/depression/index.shtml) and [schizophrenia](https://www.nimh.nih.gov/health/topics/schizophrenia/index.shtml). It also includes people with learning disabilities, such as [dyslexia](https://www.ninds.nih.gov/Disorders/All-Disorders/Learning-Disabilities-Information-Page) and [attention deficit hyperactivity disorder](https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd/index.shtml). Importantly, though there is a lot of diversity within clinical definitions of cognitive impairments, people with them experience a common set of functional problems. These include difficulty with understanding content, remembering how to complete tasks, and confusion caused by inconsistent webpage layouts.
+Cognitive impairment refers to a broad range of disabilities, from people with intellectual disabilities who have the most-limited capabilities, to all of us as we age and have difficulty thinking and remembering. The range includes people with mental illnesses, such as [depression](https://www.nimh.nih.gov/health/topics/depression) and [schizophrenia](https://www.nimh.nih.gov/health/topics/schizophrenia). It also includes people with learning disabilities, such as [dyslexia](https://www.ninds.nih.gov/health-information/disorders/learning-disabilities) and [attention deficit hyperactivity disorder](https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd). Importantly, though there is a lot of diversity within clinical definitions of cognitive impairments, people with them experience a common set of functional problems. These include difficulty with understanding content, remembering how to complete tasks, and confusion caused by inconsistent webpage layouts.
 
 A good foundation of accessibility for people with cognitive impairments includes:
 
@@ -112,8 +110,8 @@ A good foundation of accessibility for people with cognitive impairments include
 ### Notes
 
 - Designing with [cognitive accessibility](/en-US/docs/Web/Accessibility/Cognitive_accessibility) will lead to good design practices. They will benefit everyone.
-- Many people with cognitive impairments also have physical disabilities. Websites must conform with the W3C’s [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), including [cognitive accessibility guidelines](/en-US/docs/Web/Accessibility/Cognitive_accessibility#guidelines).
-- The W3C’s [Cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/) produces web accessibility guidelines for people with cognitive impairments.
+- Many people with cognitive impairments also have physical disabilities. Websites must conform with the W3C's [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), including [cognitive accessibility guidelines](/en-US/docs/Web/Accessibility/Cognitive_accessibility#guidelines).
+- The W3C's [Cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/) produces web accessibility guidelines for people with cognitive impairments.
 - WebAIM has a [Cognitive page](https://webaim.org/articles/cognitive/) of relevant information and resources.
 - The United States Centers for Disease Control estimate that, as of 2018, 1 in 4 US citizens have a disability and, of them, [cognitive impairment is the most common for young people](https://www.cdc.gov/media/releases/2018/p0816-disability.html).
 - In the US, some intellectual disabilities have historically been referred to as "mental retardation." Many now consider this term disparaging, so its use should be avoided.
@@ -155,7 +153,7 @@ To summarize:
 There are numerous checklists and sets of guidelines available for basing accessibility tests on, which might seem overwhelming at first glance. Our advice is to familiarize yourself with the basic areas in which you need to take care, as well as understanding the high-level structures of the guidelines that are most relevant to you.
 
 - For a start, the W3C has published a large and very detailed document that includes very precise, technology-agnostic criteria for accessibility conformance. These are called the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG), and they are not a short read by any means. The criteria are split up into four main categories, which specify how implementations can be made perceivable, operable, understandable, and robust. The best place to get a light introduction and start learning is [WCAG at a Glance](https://www.w3.org/WAI/standards-guidelines/wcag/glance/). There is no need to learn all of the WCAG criteria — be aware of the major areas of concern, and use a variety of techniques and tools to highlight any areas that don't conform to the WCAG criteria (see below for more).
-- Your country may also have specific legislation governing the need for websites serving their population to be accessible — for example [EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf) in the EU, [Section 508 of the Rehabilitation Act](https://www.section508.gov/training) in the US, [Federal Ordinance on Barrier-Free Information Technology](https://www.einfach-fuer-alle.de/artikel/bitv_english/) in Germany, the [Accessibility Regulations 2018](https://www.legislation.gov.uk/uksi/2018/952/introduction/made) in the UK, [Accessibilità](https://www.agid.gov.it/it/design-servizi/accessibilita-siti-web) in Italy, the [Disability Discrimination Act](https://www.humanrights.gov.au/world-wide-web-access-disability-discrimination-act-advisory-notes-ver-41-2014) in Australia, etc. The W3C keeps a list of [Web Accessibility Laws & Policies](https://www.w3.org/WAI/policies/) by country.
+- Your country may also have specific legislation governing the need for websites serving their population to be accessible — for example [EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf) in the EU, [Section 508 of the Rehabilitation Act](https://www.section508.gov/training/) in the US, [Federal Ordinance on Barrier-Free Information Technology](https://www.einfach-fuer-alle.de/artikel/bitv_english/) in Germany, the [Accessibility Regulations 2018](https://www.legislation.gov.uk/uksi/2018/952/introduction/made) in the UK, [Accessibilità](https://www.agid.gov.it/it/design-servizi/accessibilita) in Italy, the [Disability Discrimination Act](https://humanrights.gov.au/our-work/disability-rights/world-wide-web-access-disability-discrimination-act-advisory-notes-ver) in Australia, etc. The W3C keeps a list of [Web Accessibility Laws & Policies](https://www.w3.org/WAI/policies/) by country.
 
 So while the WCAG is a set of guidelines, your country will probably have laws governing web accessibility, or at least the accessibility of services available to the public (which could include websites, television, physical spaces, etc.) It is a good idea to find out what your laws are. If you make no effort to check that your content is accessible, you could be legally liable if people complain.
 
@@ -168,7 +166,7 @@ Web browsers make use of special **accessibility APIs** (provided by the underly
 Different operating systems have different accessibility APIs available :
 
 - Windows: MSAA/IAccessible, UIAExpress, IAccessible2
-- Mac OS X: NSAccessibility
+- macOS: NSAccessibility
 - Linux: AT-SPI
 - Android: Accessibility framework
 - iOS: UIAccessibility

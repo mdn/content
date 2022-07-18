@@ -1,6 +1,7 @@
 ---
 title: SpeechRecognitionResultList.item()
 slug: Web/API/SpeechRecognitionResultList/item
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -24,17 +25,22 @@ syntax.
 ## Syntax
 
 ```js
-var myResult = speechRecognitionResultListInstance[0];
+item(index)
 ```
 
-### Returns
+### Parameters
+
+- `index`
+  - : Index of the item to retrieve.
+
+### Return value
 
 A {{domxref("SpeechRecognitionResult")}} object.
 
 ## Examples
 
 This code is excerpted from our
-[Speech color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) example.
+[Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 recognition.onresult = function(event) {

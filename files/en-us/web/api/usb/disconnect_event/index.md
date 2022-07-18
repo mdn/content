@@ -1,12 +1,14 @@
 ---
 title: 'USB: disconnect event'
 slug: Web/API/USB/disconnect_event
+page-type: web-api-event
 tags:
   - API
   - Event
   - Reference
   - USB
   - WebUSB
+  - Experimental
 browser-compat: api.USB.disconnect_event
 ---
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
@@ -46,7 +48,7 @@ navigator.usb.addEventListener('disconnect', event => {
 });
 ```
 
-Alternatively, you can use the `USB.ondiscconnect` event handler property to establish a handler for the `disconnect` event:
+Alternatively, you can use the `USB.ondiscconnect` event handler property to establish a handler for the `disconnect` event:
 
 ```js
 navigator.usb.ondisconnect = event => {

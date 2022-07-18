@@ -1,6 +1,7 @@
 ---
 title: console.profileEnd()
 slug: Web/API/console/profileEnd
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -37,13 +38,17 @@ only that profile if you have multiple profiles being recorded.
 ## Syntax
 
 ```js
-console.profileEnd(profileName);
+profileEnd(profileName)
 ```
 
-## Parameters
+### Parameters
 
 - `profileName`
   - : The name to give the profile. This parameter is optional.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Browser compatibility
 

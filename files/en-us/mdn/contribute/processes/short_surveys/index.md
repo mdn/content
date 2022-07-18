@@ -39,14 +39,14 @@ To be suitable, the survey proposal needs to be:
 - As concrete and detailed as possible, avoiding high-level questions which are hard to make actionable and addressable.
 - Not more than 3-5 questions, and the survey should take no longer than 10 minutes to fill out.
 - Belonging to a clear category, e.g. CSS, JavaScript, Accessibility, documentation.
-- Not asking for any personal identifying information (PII) which isn’t included in the privacy policy for the survey takers (or asking for PII that is inappropriate for the agreement provided).
+- Not asking for any personal identifying information (PII) which isn't included in the privacy policy for the survey takers (or asking for PII that is inappropriate for the agreement provided).
 
 ## Survey process
 
 1. Submitter submits a proposal through the submissions form, outlining:
 
     - Topic.
-    - Category, e.g. CSS, JavaScript, Accessibility, documentation...
+    - Category, e.g. CSS, JavaScript, Accessibility, documentation…
     - Objective for the survey.
     - Date (range) when the survey ideally should be run.
     - Actions which will be taken based on the results.

@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.setValidity()
 slug: Web/API/ElementInternals/setValidity
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -16,14 +17,14 @@ The **`setValidity()`** method of the {{domxref("ElementInternals")}} interface 
 ## Syntax
 
 ```js
-ElementInternals.setValidity(flags);
-ElementInternals.setValidity(flags, message);
-ElementInternals.setValidity(flags, message, anchor);
+setValidity(flags)
+setValidity(flags, message)
+setValidity(flags, message, anchor)
 ```
 
 ### Parameters
 
-- `flags`{{Optional_Inline}}
+- `flags` {{Optional_Inline}}
 
   - : A dictionary object containing one or more flags indicating the validity state of the element:
 
@@ -36,7 +37,7 @@ ElementInternals.setValidity(flags, message, anchor);
     - `tooLong`
       - : A boolean value that is `true` if the value exceeds the specified `maxlength` for {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} objects, or `false` if its length is less than or equal to the maximum length. If `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.
     - `tooShort`
-      - : A boolean value that is `true` if the value fails to meet the specified `minlength` for {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} objects, or `false` if its length is greater than or equal to the minimum length. If `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.
+      - : A boolean value that is `true` if the value fails to meet the specified `minlength` for {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} objects, or `false` if its length is greater than or equal to the minimum length. If `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.
     - `rangeUnderflow`
       - : A boolean value that is `true` if the value is less than the minimum specified by the {{htmlattrxref("min", "input")}} attribute, or `false` if it is greater than or equal to the minimum. If `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.
     - `rangeOverflow`
@@ -50,20 +51,20 @@ ElementInternals.setValidity(flags, message, anchor);
 
     > **Note:** To set all flags to `false`, indicating that this element passes all constraints validation, pass in an empty object `{}`. In this case, you do not need to also pass a `message`.
 
-- `message`{{Optional_Inline}}
-  - : A {{domxref("DOMString","string")}} containing a message, which will be set if any `flags` are `true`. This parameter is only optional if all `flags` are `false`.
-- `anchor`{{Optional_Inline}}
+- `message` {{Optional_Inline}}
+  - : A string containing a message, which will be set if any `flags` are `true`. This parameter is only optional if all `flags` are `false`.
+- `anchor` {{Optional_Inline}}
   - : An {{domxref("HTMLElement")}} which can be used by the user agent to report problems with this form submission.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the element does not have its `formAssociated` property set to `true`.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if one or more `flags` is `true`.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if `anchor` is given, but the anchor is not a shadow-including descendant of the element.

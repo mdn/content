@@ -1,36 +1,38 @@
 ---
 title: BluetoothUUID.getCharacteristic()
 slug: Web/API/BluetoothUUID/getCharacteristic
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
+  - Experimental
   - getCharacteristic
   - BluetoothUUID
 browser-compat: api.BluetoothUUID.getCharacteristic
 ---
-{{APIRef("Bluetooth API")}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`getCharacteristic()`**  method of the {{domxref("BluetoothUUID")}} interface returns a UUID representing a registered characteristic when passed a name or the 16- or 32-bit UUID alias.
 
 ## Syntax
 
 ```js
-BluetoothUUID.getCharacteristic(name);
+getCharacteristic(name)
 ```
 
 ### Parameters
 
 - `name`
-  - : A {{domxref("DOMString","string")}} containing the name of the characteristic.
+  - : A string containing the name of the characteristic.
 
-### Returns
+### Return value
 
 A 128-bit UUID.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if `name` does not appear in the registry.
 
 ## Examples

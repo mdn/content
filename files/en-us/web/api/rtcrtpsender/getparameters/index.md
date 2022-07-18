@@ -1,6 +1,7 @@
 ---
 title: RTCRtpSender.getParameters()
 slug: Web/API/RTCRtpSender/getParameters
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -24,7 +25,7 @@ the encoding and transmission of media on the sender's {{domxref("RTCRtpSender.t
 ## Syntax
 
 ```js
-var rtpSendParameters = rtpSender.getParameters()
+getParameters()
 ```
 
 ### Parameters

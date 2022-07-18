@@ -12,11 +12,10 @@ browser-compat: http.headers.X-Content-Type-Options
 
 The **`X-Content-Type-Options`** response HTTP header is a
 marker used by the server to indicate that the [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) advertised in the
-{{HTTPHeader("Content-Type")}} headers should be followed and not be changed. The header allows you to avoid [MIME type
-sniffing](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing) by saying that the MIME types are deliberately
+{{HTTPHeader("Content-Type")}} headers should be followed and not be changed. The header allows you to avoid [MIME type sniffing](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing) by saying that the MIME types are deliberately
 configured.
 
-This header was introduced by Microsoft in IE 8 as a way for webmasters to block
+This header was introduced by Microsoft in IE 8 as a way for webmasters to block
 content sniffing that was happening and could transform non-executable MIME types into
 executable MIME types. Since then, other browsers have introduced it, even if their MIME
 sniffing algorithms were less aggressive.
@@ -77,7 +76,7 @@ X-Content-Type-Options: nosniff
 ## See also
 
 - {{HTTPHeader("Content-Type")}}
-- The [original definition](https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update/) of X-Content-Type-Options by Microsoft.
+- The [original definition](https://docs.microsoft.com/en-us/archive/blogs/ie/ie8-security-part-vi-beta-2-update) of X-Content-Type-Options by Microsoft.
 - The [Mozilla Observatory](https://observatory.mozilla.org/) tool testing
   the configuration (including this header) of Web sites for safety and security
 - [Mitigating MIME Confusion Attacks in Firefox](https://blog.mozilla.org/security/2016/08/26/mitigating-mime-confusion-attacks-in-firefox/)

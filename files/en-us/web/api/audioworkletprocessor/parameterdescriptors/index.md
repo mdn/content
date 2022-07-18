@@ -1,6 +1,7 @@
 ---
 title: AudioWorkletProcessor.parameterDescriptors (static getter)
 slug: Web/API/AudioWorkletProcessor/parameterDescriptors
+page-type: web-api-instance-property
 tags:
   - API
   - AudioWorkletProcessor
@@ -23,19 +24,13 @@ interface, but, if defined, it is called internally by the
 
 Defining the getter is optional.
 
-## Syntax
-
-```js
-AudioWorkletProcessorSubclass.parameterDescriptors;
-```
-
-### Value
+## Value
 
 An iterable of {{domxref("AudioParamDescriptor")}}-based objects. The properties of
 these objects are as follows:
 
 - `name`
-  - : The {{domxref("DOMString")}} which represents the name of the `AudioParam`. Under this name the `AudioParam` will be available in the {{domxref("AudioWorkletNode.parameters", "parameters")}} property of the node, and under this name the {{domxref("AudioWorkletProcessor.process")}} method will acquire the calculated values of this `AudioParam`.
+  - : The string which represents the name of the `AudioParam`. Under this name the `AudioParam` will be available in the {{domxref("AudioWorkletNode.parameters", "parameters")}} property of the node, and under this name the {{domxref("AudioWorkletProcessor.process")}} method will acquire the calculated values of this `AudioParam`.
 - `automationRate` {{optional_inline}}
   - : Either [`"a-rate"`](/en-US/docs/Web/API/AudioParam#a-rate), or [`"k-rate"`](/en-US/docs/Web/API/AudioParam#k-rate) string which represents an automation rate of this `AudioParam`. Defaults to `"a-rate"`.
 - `minValue` {{optional_inline}}
@@ -60,5 +55,4 @@ See [`AudioWorkletNode.parameters`](/en-US/docs/Web/API/AudioWorkletNode/paramet
 ## See also
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

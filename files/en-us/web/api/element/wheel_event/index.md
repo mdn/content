@@ -1,6 +1,7 @@
 ---
 title: 'Element: wheel event'
 slug: Web/API/Element/wheel_event
+page-type: web-api-event
 tags:
   - API
   - DOM
@@ -17,30 +18,50 @@ The **`wheel`** event fires when the user rotates a wheel button on a pointing d
 
 This event replaces the non-standard deprecated {{domxref("Element/mousewheel_event", "mousewheel")}} event.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{domxref("WheelEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers.onwheel", "onwheel")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 > **Note:** Don't confuse the `wheel` event with the {{domxref("Element/scroll_event", "scroll")}} event. The default action of a `wheel` event is implementation-specific, and doesn't necessarily dispatch a `scroll` event. Even when it does, the `delta*` values in the `wheel` event don't necessarily reflect the content's scrolling direction. Therefore, do not rely on the `wheel` event's `delta*` properties to get the scrolling direction. Instead, detect value changes of {{domxref("Element.scrollLeft", "scrollLeft")}} and {{domxref("Element.scrollTop", "scrollTop")}} of the target in the `scroll` event.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('wheel', (event) => {});
+
+onwheel = (event) => { };
+```
+
+## Event type
+
+An {{domxref("WheelEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("WheelEvent")}}
+
+## Event properties
+
+_This interface inherits properties from its ancestors, {{DOMxRef("MouseEvent")}}, {{DOMxRef("UIEvent")}}, and {{DOMxRef("Event")}}._
+
+- {{DOMxRef("WheelEvent.deltaX")}} {{ReadOnlyInline}}
+  - : Returns a `double` representing the horizontal scroll amount.
+- {{DOMxRef("WheelEvent.deltaY")}} {{ReadOnlyInline}}
+  - : Returns a `double` representing the vertical scroll amount.
+- {{DOMxRef("WheelEvent.deltaZ")}} {{ReadOnlyInline}}
+  - : Returns a `double` representing the scroll amount for the z-axis.
+- {{DOMxRef("WheelEvent.deltaMode")}} {{ReadOnlyInline}}
+
+  - : Returns an `unsigned long` representing the unit of the `delta*` values' scroll amount. Permitted values are:
+
+    | Constant                     | Value  | Description                                                                                                                                                  |
+    | ---------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+    | `WheelEvent.DOM_DELTA_PIXEL` | `0x00` | The `delta*` values are specified in pixels.                                                                                                                 |
+    | `WheelEvent.DOM_DELTA_LINE`  | `0x01` | The `delta*` values are specified in lines. Each mouse click scrolls a line of content, where the method used to calculate line height is browser dependent. |
+    | `WheelEvent.DOM_DELTA_PAGE`  | `0x02` | The `delta*` values are specified in pages. Each mouse click scrolls a page of content.                                                                      |
+
+- {{DOMxRef("WheelEvent.wheelDelta")}} {{ReadOnlyInline}} {{deprecated_inline}}
+  - : Returns an integer (32-bit) representing the distance in pixels.
+- {{DOMxRef("WheelEvent.wheelDeltaX")}} {{ReadOnlyInline}} {{deprecated_inline}}
+  - : Returns an integer representing the horizontal scroll amount.
+- {{DOMxRef("WheelEvent.wheelDeltaY")}} {{ReadOnlyInline}} {{deprecated_inline}}
+  - : Returns an integer representing the vertical scroll amount.
 
 ## Examples
 
@@ -71,15 +92,15 @@ div {
 
 ```js
 function zoom(event) {
-  event.preventDefault();
+  event.preventDefault();
 
-  scale += event.deltaY * -0.01;
+  scale += event.deltaY * -0.01;
 
-  // Restrict scale
-  scale = Math.min(Math.max(.125, scale), 4);
+  // Restrict scale
+  scale = Math.min(Math.max(.125, scale), 4);
 
-  // Apply scale transform
-  el.style.transform = `scale(${scale})`;
+  // Apply scale transform
+  el.style.transform = `scale(${scale})`;
 }
 
 let scale = 1;
@@ -94,7 +115,7 @@ el.onwheel = zoom;
 The event handler can also be set up using the {{domxref("EventTarget/addEventListener", "addEventListener()")}} method:
 
 ```js
-el.addEventListener('wheel', zoom);
+el.addEventListener('wheel', zoom, { passive: false });
 ```
 
 ## Specifications

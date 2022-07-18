@@ -63,7 +63,7 @@ To begin with, let's put together a basic function.
 
 > **Note:** For function naming conventions, you should follow the same rules as [variable naming conventions](/en-US/docs/Learn/JavaScript/First_steps/Variables#an_aside_on_variable_naming_rules). This is fine, as you can tell them apart — function names appear with parentheses after them, and variables don't.
 
-1. Start by accessing the [function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html) file and making a local copy. You'll see that the HTML is simple — the body contains just a single button. We've also provided some basic CSS to style the custom message box, and an empty {{htmlelement("script")}} element to put our JavaScript in.
+1. Start by accessing the [function-start.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-start.html) file and making a local copy. You'll see that the HTML is simple — the body contains just a single button. We've also provided some basic CSS to style the custom message box, and an empty {{htmlelement("script")}} element to put our JavaScript in.
 2. Next, add the following inside the `<script>` element:
 
     ```js
@@ -77,11 +77,11 @@ To begin with, let's put together a basic function.
 3. Finally, add the following code inside the curly braces:
 
     ```js
-    const html = document.querySelector('html');
+    const body = document.body;
 
     const panel = document.createElement('div');
     panel.setAttribute('class','msgBox');
-    html.appendChild(panel);
+    body.appendChild(panel);
 
     const msg = document.createElement('p');
     msg.textContent = 'This is a message box';
@@ -96,25 +96,25 @@ To begin with, let's put together a basic function.
 
 This is quite a lot of code to go through, so we'll walk you through it bit by bit.
 
-The first line uses a DOM API function called {{domxref("document.querySelector()")}} to select the {{htmlelement("html")}} element and store a reference to it in a constant called `html`, so we can do things to it later on:
+The first line selects the {{htmlelement("body")}} element by using the [DOM API](/en-US/docs/Web/API/Document_Object_Model) to get the [`body`](/en-US/docs/Web/API/Document/body) property of the global [`document`](/en-US/docs/Web/API/Document/body) object, and assigning that to a constant called `body`, so we can do things to it later on:
 
 ```js
-const html = document.querySelector('html');
+const body = document.body;
 ```
 
-The next section uses another DOM API function called {{domxref("document.createElement()")}} to create a {{htmlelement("div")}} element and store a reference to it in a constant called `panel`. This element will be the outer container of our message box.
+The next section uses a DOM API function called {{domxref("document.createElement()")}} to create a {{htmlelement("div")}} element and store a reference to it in a constant called `panel`. This element will be the outer container of our message box.
 
 We then use yet another DOM API function called {{domxref("Element.setAttribute()")}} to set a `class` attribute on our panel with a value of `msgBox`. This is to make it easier to style the element — if you look at the CSS on the page, you'll see that we are using a `.msgBox` class selector to style the message box and its contents.
 
-Finally, we call a DOM function called {{domxref("Node.appendChild()")}} on the `html` constant we stored earlier, which nests one element inside the other as a child of it. We specify the panel `<div>` as the child we want to append inside the `<html>` element. We need to do this as the element we created won't just appear on the page on its own — we need to specify where to put it.
+Finally, we call a DOM function called {{domxref("Node.appendChild()")}} on the `body` constant we stored earlier, which nests one element inside the other as a child of it. We specify the panel `<div>` as the child we want to append inside the `<body>` element. We need to do this as the element we created won't just appear on the page on its own — we need to specify where to put it.
 
 ```js
 const panel = document.createElement('div');
 panel.setAttribute('class', 'msgBox');
-html.appendChild(panel);
+body.appendChild(panel);
 ```
 
-The next two sections make use of the same `createElement()` and `appendChild()` functions we've already seen to create two new elements — a {{htmlelement("p")}} and a {{htmlelement("button")}} — and insert them in the page as children of the panel `<div>`. We use their {{domxref("Node.textContent")}} property — which represents the text content of an element — to insert a message inside the paragraph, and an 'x' inside the button. This button will be what needs to be clicked/activated when the user wants to close the message box.
+The next two sections make use of the same `createElement()` and `appendChild()` functions we've already seen to create two new elements — a {{htmlelement("p")}} and a {{htmlelement("button")}} — and insert them in the page as children of the panel `<div>`. We use their {{domxref("Node.textContent")}} property — which represents the text content of an element — to insert a message inside the paragraph, and an "x" inside the button. This button will be what needs to be clicked/activated when the user wants to close the message box.
 
 ```js
 const msg = document.createElement('p');
@@ -176,14 +176,14 @@ You've now got your function definition written into your `<script>` element jus
     btn.addEventListener('click', displayMessage);
     ```
 
-    In a similar way to our `closeBtn.addEventListener...` line inside the function, here we are calling some code in response to a button being clicked. But in this case, instead of calling an anonymous function containing some code, we are calling our `displayMessage()` function by name.
+    In a similar way to our closeBtn's click event handler, here we are calling some code in response to a button being clicked. But in this case, instead of calling an anonymous function containing some code, we are calling our `displayMessage()` function by name.
 
 6. Try saving and refreshing the page — now you should see the message box appear when you click the button.
 
 You might be wondering why we haven't included the parentheses after the function name. This is because we don't want to call the function immediately — only after the button has been clicked. If you try changing the line to
 
 ```js
-btn.onclick = displayMessage();
+btn.addEventListener('click', displayMessage());
 ```
 
 and saving and reloading, you'll see that the message box appears without the button being clicked! The parentheses in this context are sometimes called the "function invocation operator". You only use them when you want to run the function immediately in the current scope. In the same respect, the code inside the anonymous function is not run immediately, as it is inside the function scope.
@@ -240,7 +240,7 @@ As it stands, the function is still not very useful — we don't want to just sh
 
 On to the next parameter. This one is going to involve slightly more work — we are going to set it so that depending on what the `msgType` parameter is set to, the function will display a different icon and a different background color.
 
-1. First of all, download the icons needed for this exercise ([warning](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/icons/warning.png) and [chat](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/icons/chat.png)) from GitHub. Save them in a new folder called `icons` in the same location as your HTML file.
+1. First of all, download the icons needed for this exercise ([warning](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/warning.png) and [chat](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/chat.png)) from GitHub. Save them in a new folder called `icons` in the same location as your HTML file.
 
     > **Note:** The warning and chat icons were originally found on [iconfinder.com](https://www.iconfinder.com/), and designed by [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr) — Thanks! (The actual icon pages were since moved or removed.)
 
@@ -256,7 +256,7 @@ On to the next parameter. This one is going to involve slightly more work — we
     width: 242px;
     ```
 
-3. Next, add the following lines inside the `.msgBox p { ... }` rule:
+3. Next, add the following lines inside the `.msgBox p { }` rule:
 
     ```css
     padding-left: 82px;
@@ -278,7 +278,7 @@ On to the next parameter. This one is going to involve slightly more work — we
     }
     ```
 
-    Here, if the `msgType` parameter is set as `'warning'`, the warning icon is displayed and the panel's background color is set to red. If it is set to `'chat'`, the chat icon is displayed and the panel's background color is set to aqua blue. If the `msgType` parameter is not set at all (or to something different), then the `else { ... }` part of the code comes into play, and the paragraph is given default padding and no icon, with no background panel color set either. This provides a default state if no `msgType` parameter is provided, meaning that it is an optional parameter!
+    Here, if the `msgType` parameter is set as `'warning'`, the warning icon is displayed and the panel's background color is set to red. If it is set to `'chat'`, the chat icon is displayed and the panel's background color is set to aqua blue. If the `msgType` parameter is not set at all (or to something different), then the `else { }` part of the code comes into play, and the paragraph is given default padding and no icon, with no background panel color set either. This provides a default state if no `msgType` parameter is provided, meaning that it is an optional parameter!
 
 5. Let's test out our updated function, try updating the `displayMessage()` call from this:
 
@@ -295,7 +295,7 @@ On to the next parameter. This one is going to involve slightly more work — we
 
     You can see how useful our (now not so) little function is becoming.
 
-> **Note:** If you have trouble getting the example to work, feel free to check your code against the [finished version on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html) also), or ask us for help.
+> **Note:** If you have trouble getting the example to work, feel free to check your code against the [finished version on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html) also), or ask us for help.
 
 ## Test your skills!
 

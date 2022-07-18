@@ -27,6 +27,12 @@ String(thing)
 - `thing`
   - : Anything to be converted to a string.
 
+## Description
+
+When `String` is called as a function, it coerces the parameter to a string primitive. When `String` is called as a constructor (with `new`), it creates a {{jsxref("String")}} object, which is **not** a primitive.
+
+> **Warning:** You should rarely find yourself using `String` as a constructor.
+
 ## Examples
 
 ### String constructor and String function
@@ -34,8 +40,12 @@ String(thing)
 String function and String constructor produce different results:
 
 ```js
-typeof String('Hello world'); // string
-typeof new String('Hello world'); // object
+const a = new String("Hello world"); // a === "Hello world" is false
+const b = String("Hello world");     // b === "Hello world" is true
+a instanceof String;         // is true
+b instanceof String;         // is false
+typeof a // "object"
+typeof b // "string"
 ```
 
 Here, the function produces a string (the {{Glossary("primitive")}} type) as promised.
@@ -52,5 +62,4 @@ that's why you rarely want to use the String constructor at all.
 
 ## See also
 
-- [Text formatting in the
-  JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
+- [Text formatting in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Text_formatting)

@@ -39,14 +39,14 @@ Firefox 3 provides a number of new [XUL](/en-US/docs/XUL) elements, as well as i
 - The `<menu>`, `<menuitem>` and `<menuseparator>` elements now have a readonly `control` property which returns the enclosing \<menulist>
 - The `<menu>`, `<menuitem>` and `<menuseparator>` elements now support the `accessKey`, `disabled`, `crop`, `image` and `label` properties which set the corresponding attribute
 - The \<menu> element now has methods to append, insert and remove menuitems. ({{ Bug(372552) }})
-- Editable menulists now offer an `editor` property to get the internal {{ Interface("nsIEditor") }} for its text field.
+- Editable menulists now offer an `editor` property to get the internal `nsIEditor` for its text field.
 - Menus may now be made translucent on platforms that support it ({{ Bug(70798) }}).
 
 ### Improvements to textboxes
 
 - Setting a [textbox](/en-US/docs/XUL/textbox)'s `spellcheck` attribute to `true` enables inline spellchecking for that textbox.
 - The `<textbox>` now has a `reset()` method to reset the value of the textbox to the default value. The `defaultValue` property may be used to retrieve and modify the default value of the textbox.
-- An `editor` property is now offered, which lets you get the internal {{ Interface("nsIEditor") }} for the text field.
+- An `editor` property is now offered, which lets you get the internal `nsIEditor` for the text field.
 - [`textbox`](/en-US/docs/XUL/textbox) now supports a `newlines` attribute which specifies how line breaks in pasted text are handled. Possible values are:
 
   - `pasteintact` - paste everything as is

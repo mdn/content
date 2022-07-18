@@ -1,6 +1,7 @@
 ---
 title: WebGLBuffer
 slug: Web/API/WebGLBuffer
+page-type: web-api-interface
 tags:
   - API
   - Reference

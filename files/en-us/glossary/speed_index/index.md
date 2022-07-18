@@ -11,7 +11,7 @@ tags:
 
 ![Calculation of SpeedIndex](speedindex.png)
 
-The calculation calculates what percent of the page is visually complete at every 100ms interval until the page is visually complete.  The overall score, the above the fold metric, is a sum of the individual 10 times per second intervals of the percent of the screen that is not-visually complete**.**
+The calculation calculates what percent of the page is visually complete at every 100ms interval until the page is visually complete.  The overall score, the above the fold metric, is a sum of the individual 10 times per second intervals of the percent of the screen that is not-visually complete**.**
 
 ## See also
 

@@ -1,6 +1,7 @@
 ---
 title: RTCOutboundRtpStreamStats.nackCount
 slug: Web/API/RTCOutboundRtpStreamStats/nackCount
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -33,13 +34,7 @@ ACKnowledgement, also called "Generic NACK") packet is used by the
 {{domxref("RTCRtpReceiver")}} to inform the sender that one or more {{Glossary("RTP")}}
 packets it sent were lost in transport.
 
-## Syntax
-
-```js
-var nackCount = RTCOutboundRtpStreamStats.nackCount;
-```
-
-### Value
+## Value
 
 An integer value indicating how many times the sender received a NACK packet from the
 receiver, indicating the loss of one or more packets.

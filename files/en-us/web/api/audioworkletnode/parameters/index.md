@@ -1,6 +1,7 @@
 ---
 title: AudioWorkletNode.parameters
 slug: Web/API/AudioWorkletNode/parameters
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -21,13 +22,7 @@ underlying {{domxref("AudioWorkletProcessor")}} according to its
 {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} static
 getter.
 
-## Syntax
-
-```js
-audioWorkletNodeInstance.parameters
-```
-
-### Value
+## Value
 
 The {{domxref("AudioParamMap")}} object containing {{domxref("AudioParam")}} instances.
 They can be automated in the same way as with default `AudioNode`s, and their
@@ -111,5 +106,4 @@ gainParam.linearRampToValueAtTime(0.5, audioContext.currentTime + 0.5)
 ## See also
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

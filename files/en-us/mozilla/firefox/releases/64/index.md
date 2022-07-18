@@ -9,24 +9,24 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 64 that will affect developers. Firefox 64 was released on December 11, 2018.
+This article provides information about the changes in Firefox 64 that will affect developers. Firefox 64 was released on December 11, 2018.
 
 ## Changes for web developers
 
 ### Developer tools
 
-- The [Accessibility info-bar](/en-US/docs/Tools/Accessibility_inspector#highlighting_of_ui_items) has been enhanced to include information about the color contrast ratio of text or images on the page ({{bug(1473037)}}).
-- [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode) device selection is now saved between sessions ({{bug(1248619)}}).
-- Resources that are potentially affected by [Tracking Protection](/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection) are now indicated in the [Network Monitor](/en-US/docs/Tools/Network_Monitor) ({{bug(1333994)}}).
-- The [Web Console](/en-US/docs/Tools/Web_Console) got improvements around entering and evaluating code:
+- The [Accessibility info-bar](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#highlighting-of-ui-items) has been enhanced to include information about the color contrast ratio of text or images on the page ({{bug(1473037)}}).
+- [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) device selection is now saved between sessions ({{bug(1248619)}}).
+- Resources that are potentially affected by [Tracking Protection](/en-US/docs/Web/Privacy/Tracking_Protection) are now indicated in the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) ({{bug(1333994)}}).
+- The [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) got improvements around entering and evaluating code:
 
-  - [Autocomplete](/en-US/docs/Tools/Web_Console/The_command_line_interpreter#autocomplete) for Console expressions is now case-insensitive ({{bug(672733)}}).
-  - You can now step through the [Console expression history](/en-US/docs/Tools/Web_Console/The_command_line_interpreter#command_history) with bash-like reverse search ({{bug(1024913)}}).
-  - [Evaluated code](/en-US/docs/Tools/Web_Console/The_command_line_interpreter) in the Console is now syntax-highlighted in both the input and output ({{bug(1463669)}}).
+  - [Autocomplete](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#autocomplete) for Console expressions is now case-insensitive ({{bug(672733)}}).
+  - You can now step through the [Console expression history](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#command-history) with bash-like reverse search ({{bug(1024913)}}).
+  - [Evaluated code](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html) in the Console is now syntax-highlighted in both the input and output ({{bug(1463669)}}).
 
-- Stepping in the [JavaScript Debugger](/en-US/docs/Tools/Debugger) also had some improvements:
+- Stepping in the [JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) also had some improvements:
 
-  - [Stepping out](/en-US/docs/Tools/Debugger/How_to/Step_through_code) of a function in the Debugger now skips the return value ({{bug(923975)}}).
+  - [Stepping out](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/step_through_code/index.html) of a function in the Debugger now skips the return value ({{bug(923975)}}).
 
 #### Removals
 
@@ -74,7 +74,7 @@ _No changes._
 
   - The API has been unprefixed ({{bug(1269276)}}).
   - The {{domxref("Element.requestFullscreen()")}} and {{domxref("Document.exitFullscreen()")}} methods both now return a {{jsxref("Promise")}}, which is resolved when the mode change is complete ({{bug(1188256)}} and {{bug(1491212)}}).
-  - Previously, {{domxref("fullscreenchange")}} and {{domxref("fullscreenerror")}} events were dispatched to the {{domxref("Document")}} first, then the {{domxref("Element")}}. This has been reversed so that the element gets the event first. This matches the latest specification as well as the behavior of Google Chrome ({{bug(1375319)}}).
+  - Previously, {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} and {{domxref("Element/fullscreenerror_event", "fullscreenerror")}} events were dispatched to the {{domxref("Document")}} first, then the {{domxref("Element")}}. This has been reversed so that the element gets the event first. This matches the latest specification as well as the behavior of Google Chrome ({{bug(1375319)}}).
 
 - The {{domxref("WebVR_API", "WebVR API", "", "1")}} (1.1) is now re-enabled in macOS ({{bug(1476091)}}).
 - {{domxref("Window.screenLeft")}} and {{domxref("Window.screenTop")}} have been implemented, as aliases of {{domxref("Window.screenX")}} and {{domxref("Window.screenY")}} ({{bug(1498860)}}).
@@ -106,7 +106,7 @@ _No changes._
 
 ### Security
 
-- The Symantec CA Distrust plan has been implemented (see {{bug(1409257)}}; see also the [Mozilla’s Plan for Symantec Roots](https://groups.google.com/forum/#!topic/mozilla.dev.security.policy/FLHRT79e3XE/discussion) discussion for more details).
+- The Symantec CA Distrust plan has been implemented (see {{bug(1409257)}}; see also the [Mozilla's Plan for Symantec Roots](https://groups.google.com/forum/#!topic/mozilla.dev.security.policy/FLHRT79e3XE/discussion) discussion for more details).
 - {{httpheader("Referrer-Policy")}} can now be used to govern resources fetched via stylesheets ({{bug(1330487)}}) — see {{SectionOnPage("/en-US/docs/Web/HTTP/Headers/Referrer-Policy", "Integration with CSS")}} for more information.
 
 ### Plugins
@@ -136,11 +136,11 @@ _No changes._
 
   - `{{WebExtAPIRef("menus.overrideContext()")}}` was implemented in ({{bug(1280347)}}).
   - The `showDefaults: false` option, which can be used to hide the default context menu options, was implemented in ({{bug(1367160)}}).
-  - `documentURLPatterns` can now be used to match a `moz-extension://` document URL, even if `{{WebExtAPIRef("menus.overrideContext()")}}` is used. This way, it can reliably be used to restrict custom menu items to certain documents ({{bug(1498896)}}).
+  - `documentURLPatterns` can now be used to match a `moz-extension://` document URL, even if `{{WebExtAPIRef("menus.overrideContext()")}}` is used. This way, it can reliably be used to restrict custom menu items to certain documents ({{bug(1498896)}}).
 
 - You can now restrict where context menus can appear in an add-on using the new `viewTypes` property in {{WebExtAPIRef("menus.create()")}} and {{WebExtAPIRef("menus.update()")}} ({{bug(1416839)}}).
 - {{WebExtAPIRef("menus.update()")}} can now be used to update the icon of an existing menu item ({{bug(1414566)}}).
-- Extensions can now detect which mouse button was used when a menu item was clicked — this can be found using the new `button` property of {{WebExtAPIRef("menus.OnClickData")}} ({{bug(1469148)}}).
+- Extensions can now detect which mouse button was used when a menu item was clicked — this can be found using the new `button` property of {{WebExtAPIRef("menus.OnClickData")}} ({{bug(1469148)}}).
 
 #### Windows
 
@@ -156,7 +156,7 @@ _No changes._
 
 ### Manifest changes
 
-- The new `pinned` property of the [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key enables extensions to control whether their page actions should be pinned to the location bar on install or not ({{bug(1494135)}}).
+- The new `pinned` property of the [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key enables extensions to control whether their page actions should be pinned to the location bar on install or not ({{bug(1494135)}}).
 - In native manifests on Windows, the 32-bit registry view ([Wow6432Node)](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system) will be checked first for registry keys, followed by the "native" registry view; you should use whichever is appropriate for your application ({{bug(1494709)}}).
 - The [`chrome_settings_overrides`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides) field's `search_provider` object can now include new properties — `suggest_url` and `suggest_url_post_params` ({{bug(1486819)}}), and `search_url_post_params`.
 

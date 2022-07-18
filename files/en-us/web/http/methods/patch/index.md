@@ -5,6 +5,7 @@ tags:
   - HTTP
   - Reference
   - Request method
+spec-urls: https://www.rfc-editor.org/rfc/rfc5789
 ---
 {{HTTPSidebar}}
 
@@ -87,9 +88,7 @@ ETag: "e0023aa4f"
 
 ## Specifications
 
-| Specification                    | Title                 |
-| -------------------------------- | --------------------- |
-| {{RFC("5789", "PATCH")}} | PATCH Method for HTTP |
+{{Specifications}}
 
 ## See also
 

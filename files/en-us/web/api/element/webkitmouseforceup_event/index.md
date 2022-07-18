@@ -1,6 +1,7 @@
 ---
 title: 'Element: webkitmouseforceup event'
 slug: Web/API/Element/webkitmouseforceup_event
+page-type: web-api-event
 tags:
   - Element
   - Event
@@ -46,7 +47,7 @@ The non-standard **`webkitmouseforceup`** event is fired by Safari at an {{domxr
 
 ## Specifications
 
-_Not part of any specification._ Apple has [a description at the Mac Developer Library](https://developer.apple.com/library/prerelease/mac/documentation/AppleApplications/Conceptual/SafariJSProgTopics/RespondingtoForceTouchEventsfromJavaScript.html).
+_Not part of any specification._ Apple has [a description at the Mac Developer Library](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/SafariJSProgTopics/RespondingtoForceTouchEventsfromJavaScript.html).
 
 ## Browser compatibility
 

@@ -1,6 +1,7 @@
 ---
 title: XRJointSpace
 slug: Web/API/XRJointSpace
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -13,7 +14,7 @@ browser-compat: api.XRJointSpace
 ---
 {{APIRef("WebXR Device API")}}
 
-The **`XRJointSpace`** interface is an {{domxref("XRSpace")}} and represents the position and orientation of an {{domxref("XRHand")}} joint.
+The **`XRJointSpace`** interface is an {{domxref("XRSpace")}} and represents the position and orientation of an {{domxref("XRHand")}} joint.
 
 {{InheritanceDiagram}}
 

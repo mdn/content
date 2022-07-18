@@ -14,9 +14,7 @@ browser-compat: javascript.builtins.Date.toUTCString
 The **`toUTCString()`** method converts a date to a string,
 using the UTC time zone.
 
-Based on [rfc7231](https://datatracker.ietf.org/doc/html/rfc7231#section-7.1.1.1) and
-modified according to [ecma-262
-toUTCString](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-date.prototype.toutcstring), it can have negative values in the [2021 version](https://tc39.es/ecma262/#sec-date.prototype.toutcstring)
+Based on [rfc7231](https://datatracker.ietf.org/doc/html/rfc7231#section-7.1.1.1) and modified according to [ECMA-262 toUTCString](https://tc39.es/ecma262/#sec-date.prototype.toutcstring), it can have negative values in ES2021.
 
 {{EmbedInteractiveExample("pages/js/date-toutcstring.html","shorter")}}
 
@@ -38,9 +36,9 @@ Where:
 
 | Format String | Description                                                  |
 | ------------- | ------------------------------------------------------------ |
-| `Www`         | Day of week, as three letters (e.g. Sun, Mon, ...)           |
+| `Www`         | Day of week, as three letters (e.g. Sun, Mon, …)           |
 | `dd`          | Day of month, as two digits with leading zero if required    |
-| `Mmm`         | Month, as three letters (e.g. Jan, Feb, ...)                 |
+| `Mmm`         | Month, as three letters (e.g. Jan, Feb, …)                 |
 | `yyyy`        | Year, as four or more digits with leading zeroes if required |
 | `hh`          | Hour, as two digits with leading zero if required            |
 | `mm`          | Minute, as two digits with leading zero if required          |

@@ -26,7 +26,7 @@ Sends a single request to other listeners within the extension. Similar to {{Web
 chrome.extension.sendRequest(
   extensionId,             // optional string
   request,                 // any
-  function(response) {...} // optional function
+  function(response) { } // optional function
 )
 ```
 
@@ -34,11 +34,11 @@ This API is also available as `browser.extension.sendRequest()` in a [version th
 
 ### Parameters
 
-- `extensionId`{{Optional_Inline}}
+- `extensionId` {{optional_inline}}
   - : `string`. The extension ID of the extension you want to connect to. If omitted, default is your own extension.
 - `request`
   - : `any`.
-- `responseCallback`{{Optional_Inline}}
+- `responseCallback` {{optional_inline}}
 
   - : `function`. The function is passed the following arguments:
 
@@ -51,7 +51,7 @@ This API is also available as `browser.extension.sendRequest()` in a [version th
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/extensions/extension#method-sendRequest) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/#method-sendRequest) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

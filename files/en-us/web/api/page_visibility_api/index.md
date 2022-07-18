@@ -1,6 +1,7 @@
 ---
 title: Page Visibility API
 slug: Web/API/Page_Visibility_API
+page-type: web-api-overview
 tags:
   - API
   - DOM
@@ -14,6 +15,7 @@ tags:
   - Tutorials
   - Visibility
   - Visible Pages
+browser-compat: api.Document.visibilityState
 ---
 {{DefaultAPISidebar("Page Visibility API")}}
 
@@ -21,7 +23,7 @@ The Page Visibility API provides events you can watch for to know when a documen
 
 > **Note:** The Page Visibility API is especially useful for saving resources and improving performance by letting a page avoid performing unnecessary tasks when the document isn't visible.
 
-When the user minimizes the window or switches to another tab, the API sends a {{event("visibilitychange")}} event to let listeners know the state of the page has changed. You can detect the event and perform some actions or behave differently. For example, if your web app is playing a video, it can pause the video when the user puts the tab into the background, and resume playback when the user returns to the tab. The user doesn't lose their place in the video, the video's soundtrack doesn't interfere with audio in the new foreground tab, and the user doesn't miss any of the video in the meantime.
+When the user minimizes the window or switches to another tab, the API sends a {{domxref("document.visibilitychange_event", "visibilitychange")}} event to let listeners know the state of the page has changed. You can detect the event and perform some actions or behave differently. For example, if your web app is playing a video, it can pause the video when the user puts the tab into the background, and resume playback when the user returns to the tab. The user doesn't lose their place in the video, the video's soundtrack doesn't interfere with audio in the new foreground tab, and the user doesn't miss any of the video in the meantime.
 
 Visibility states of an {{HTMLElement("iframe")}} are the same as the parent document. Hiding an `<iframe>` using CSS properties (such as {{cssxref("display", "display: none;")}}) doesn't trigger visibility events or change the state of the document contained within the frame.
 
@@ -36,7 +38,7 @@ Let's consider a few use cases for the Page Visibility API.
 
 Developers have historically used imperfect proxies to detect this. For example, watching for {{event("blur")}} and {{event("focus")}} events on the window helps you know when your page is not the active page, but it does not tell you that your page is actually hidden to the user. The Page Visibility API addresses this.
 
-> **Note:** While {{domxref("GlobalEventHandlers.onblur", "onblur")}} and {{domxref("GlobalEventHandlers.onfocus", "onfocus")}} will tell you if the user switches windows, it doesn't necessarily mean it's hidden. Pages only become hidden when the user switches tabs or minimizes the browser window containing the tab.
+> **Note:** While {{domxref("Window.blur_event", "onblur")}} and {{domxref("Window.focus_event", "onfocus")}} will tell you if the user switches windows, it doesn't necessarily mean it's hidden. Pages only become hidden when the user switches tabs or minimizes the browser window containing the tab.
 
 ### Policies in place to aid background page performance
 
@@ -54,7 +56,7 @@ Separately from the Page Visibility API, user agents typically have a number of 
 
 Some processes are exempt from this throttling behavior. In these cases, you can use the Page Visibility API to reduce the tabs' performance impact while they're hidden.
 
-- Tabs which are playing audio are considered foreground and aren’t throttled.
+- Tabs which are playing audio are considered foreground and aren't throttled.
 - Tabs running code that's using real-time network connections ([WebSockets](/en-US/docs/Web/API/WebSockets_API) and [WebRTC](/en-US/docs/Web/API/WebRTC_API)) go unthrottled in order to avoid closing these connections timing out and getting unexpectedly closed.
 - [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) processes are also left unthrottled in order to avoid timeouts.
 
@@ -66,7 +68,8 @@ The example, which pauses the video when you switch to another tab and plays aga
 
 ```js
 // Set the name of the hidden property and the change event for visibility
-var hidden, visibilityChange;
+let hidden;
+let visibilityChange;
 if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
   hidden = "hidden";
   visibilityChange = "visibilitychange";
@@ -78,7 +81,7 @@ if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and 
   visibilityChange = "webkitvisibilitychange";
 }
 
-var videoElement = document.getElementById("videoElement");
+const videoElement = document.getElementById("videoElement");
 
 // If the page is hidden, pause the video;
 // if the page is shown, play the video
@@ -119,7 +122,7 @@ The Page Visibility API adds the following properties to the {{domxref("Document
   - : Returns `true` if the page is in a state considered to be hidden to the user, and `false` otherwise.
 - {{domxref("Document.visibilityState")}} {{ReadOnlyInline}}
 
-  - : A {{domxref("DOMString")}} indicating the document's current visibility state. Possible values are:
+  - : A string indicating the document's current visibility state. Possible values are:
 
     - `visible`
       - : The page content may be at least partially visible. In practice this means that the page is the foreground tab of a non-minimized window.
@@ -137,15 +140,19 @@ The Page Visibility API adds the following properties to the {{domxref("Document
 
         > **Note:** Not all browsers support the `unloaded` value.
 
-- {{domxref("Document.onvisibilitychange")}}
-  - : An {{domxref("EventListener")}} providing the code to be called when the {{event("visibilitychange")}} event is fired.
+## Events added to the Document interface
+
+The Page Visibility API adds the following events to the {{domxref("Document")}} interface:
+
+- {{domxref("Document.visibilitychange_event", "visibilitychange")}}
+  - : Fired when the content of a tab has become visible or has been hidden.
 
 ```js
 // startSimulation and pauseSimulation defined elsewhere
 function handleVisibilityChange() {
   if (document.visibilityState === "hidden") {
     pauseSimulation();
-  } else  {
+  } else {
     startSimulation();
   }
 }
@@ -155,17 +162,8 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
 ## Specifications
 
-| Specification                                             |
-| --------------------------------------------------------- |
-| [Page Visibility](https://w3c.github.io/page-visibility/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `Document.visibilityState`
-
-{{Compat("api.Document.visibilityState")}}
-
-## See also
-
-- Description of the [Page Visibility API](https://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx "Page Visibility on IEBlog") on the IEBlog.
-- Description of the [Page Visibility API](https://code.google.com/chrome/whitepapers/pagevisibility.html) by Google
+{{Compat}}

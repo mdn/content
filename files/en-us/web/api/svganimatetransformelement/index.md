@@ -1,6 +1,7 @@
 ---
 title: SVGAnimateTransformElement
 slug: Web/API/SVGAnimateTransformElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample

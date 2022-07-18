@@ -1,6 +1,7 @@
 ---
 title: Navigator.getBattery()
 slug: Web/API/Navigator/getBattery
+page-type: web-api-instance-method
 tags:
   - API
   - Battery API
@@ -24,8 +25,12 @@ documentation for additional details, a guide to using the API, and sample code.
 ## Syntax
 
 ```js
-navigator.getBattery()
+getBattery()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -33,7 +38,7 @@ A {{JSxRef("Promise")}} which, when resolved, calls its fulfillment handler with
 single parameter: a {{DOMxRef("BatteryManager")}} object which you can use to get
 information about the battery's state.
 
-## Exceptions
+### Exceptions
 
 This method doesn't throw true exceptions; instead, it rejects the returned promise, passing into it a {{domxref("DOMException")}} whose `name` is one of the following:
 
@@ -49,10 +54,10 @@ This method doesn't throw true exceptions; instead, it rejects the returned prom
     > This document is not allowed to use this feature.
     > For example, it might not be explicitly allowed or restricted via {{HTTPHeader("Feature-Policy")}} {{HTTPHeader("Feature-Policy/battery", "battery")}} feature.
 
-## Example
+## Examples
 
 This example fetches the current charging state of the battery and establishes a
-handler for the {{Event("chargingchange")}} event, so that the charging state is
+handler for the {{domxref("BatteryManager/chargingchange_event", "chargingchange")}} event, so that the charging state is
 recorded whenever it changes.
 
 ```js

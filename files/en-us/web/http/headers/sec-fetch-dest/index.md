@@ -108,7 +108,7 @@ Servers should ignore this header if it contains any other value.
 - `worker`
   - : The destination is a {{domxref("Worker")}}.
 - `xslt`
-  - : The destination is an XLST transform.
+  - : The destination is an XSLT transform.
 
 ## Examples
 

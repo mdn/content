@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js
-var gettingText = browser.browserAction.getBadgeText(
+let gettingText = browser.browserAction.getBadgeText(
   details               // object
 )
 ```
@@ -33,9 +33,9 @@ var gettingText = browser.browserAction.getBadgeText(
 
   - : An object with the following properties:
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Specifies the tab from which to get the badge text.
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. Specifies the window from which to get the badge text.
 
 <!---->
@@ -60,13 +60,13 @@ function gotBadgeText(text) {
   console.log(text);
 }
 
-var gettingBadgeText = browser.browserAction.getBadgeText({});
+let gettingBadgeText = browser.browserAction.getBadgeText({});
 gettingBadgeText.then(gotBadgeText);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#method-getBadgeText) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/reference/browserAction/#method-getBadgeText) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

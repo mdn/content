@@ -14,13 +14,15 @@ browser-compat: css.selectors.-moz-only-whitespace
 
 {{Non-standard_Header}}
 
-> **Note:** In {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} the {{CSSxRef(":empty")}} selector was changed to act like `:-moz-only-whitespace`, but no browser currently supports this yet.
+> **Note:** In [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo), the {{CSSxRef(":empty")}} selector was changed to act like `:-moz-only-whitespace`, but no browser currently supports this yet.
 
-The **`:-moz-only-whitespace`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements that only contains text nodes that only contain {{Glossary("whitespace")}}. (This includes elements with empty text nodes and elements with no child nodes.)
+The **`:-moz-only-whitespace`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements that only contain text nodes that only contain {{Glossary("whitespace")}}. (This includes elements with empty text nodes and elements with no child nodes.)
 
 ## Syntax
 
-{{CSSSyntax}}
+```
+:-moz-only-whitespace
+```
 
 ## Examples
 
@@ -50,7 +52,7 @@ div {
 
 ## Specifications
 
-Briefly defined as `:blank` in {{SpecName("CSS4 Selectors", "#changes-2018-02")}}, but then the functionality was merged into {{CSSxRef(":empty")}} and {{CSSxRef(":blank")}} redefined to mean empty {{HTMLElement("input")}}.
+Briefly defined as `:blank` in [Selectors Level 4](https://drafts.csswg.org/selectors-4/#changes-2018-02), but then the functionality was merged into {{CSSxRef(":empty")}} and {{CSSxRef(":blank")}} redefined to mean empty {{HTMLElement("input")}}.
 
 ## Browser compatibility
 
@@ -58,5 +60,5 @@ Briefly defined as `:blank` in {{SpecName("CSS4 Selectors", "#changes-2018-02")}
 
 ## See also
 
-- {{CSSxRef(":blank")}} {{Experimental_Inline}}
+- {{CSSxRef(":blank")}} {{Experimental_Inline}}
 - {{CSSxRef(":empty")}}

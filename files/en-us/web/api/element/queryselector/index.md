@@ -1,6 +1,7 @@
 ---
 title: Element.querySelector()
 slug: Web/API/Element/querySelector
+page-type: web-api-instance-method
 tags:
   - API
   - CSS
@@ -27,7 +28,7 @@ invoked that matches the specified group of selectors.
 ## Syntax
 
 ```js
-element = baseElement.querySelector(selectors);
+querySelector(selectors)
 ```
 
 ### Parameters
@@ -53,8 +54,8 @@ If no matches are found, the returned value is `null`.
 
 ### Exceptions
 
-- `SyntaxError`
-  - : The specified `selectors` are invalid.
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if the specified `selectors` are invalid.
 
 ## Examples
 
@@ -172,12 +173,10 @@ format for the `selectors`.
 
 ## See also
 
-- [Locating
-  DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
 - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in the CSS
   Guide
-- [Attribute
-  selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors) in the MDN Learning Area
+- [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors) in the MDN Learning Area
 - {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}} and
   {{domxref("Document.querySelectorAll()")}}

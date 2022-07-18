@@ -9,7 +9,7 @@ tags:
 ---
 The **invalid cookie domain** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Errors) that occurs when an illegal attempt was made to set a [cookie](/en-US/docs/Glossary/Cookie) under a different [domain](/en-US/docs/Glossary/Domain) than that of the current document.
 
-In WebDriver it is not permissable to set cookies for other domains than the domain of the [current browsing context](/en-US/docs/Glossary/Browsing_context)’s [document](/en-US/docs/Web/API/Document)’s domain.
+In WebDriver it is not permissible to set cookies for other domains than the domain of the [current browsing context](/en-US/docs/Glossary/Browsing_context)'s [document](/en-US/docs/Web/API/Document)'s domain.
 
 This error will also happen if the document is _cookie-averse_, that is if the document is not loaded via `http://`, `https://`, or `ftp://`.
 
