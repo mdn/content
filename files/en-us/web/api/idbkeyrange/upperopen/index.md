@@ -45,29 +45,38 @@ console, which should appear as "true": the upper bound is open, so won't be inc
 the range.
 
 > **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/IDBKeyRange-example) repo ([view the example live too](https://mdn.github.io/IDBKeyRange-example/).)
-
+> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/blob/master/indexeddb-examples/idbkeyrange) repo ([view the example live too](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/).)
 ```js
-function displayData() {
-  const keyRangeValue = IDBKeyRange.bound("F", "W", true, true);
-  console.log(keyRangeValue.upperOpen);
+ let keyRangeValue = null;
 
-  const transaction = db.transaction(['fThings'], 'readonly');
-  const objectStore = transaction.objectStore('fThings');
-
-  objectStore.openCursor(keyRangeValue).onsuccess = function(event) {
-    const cursor = event.target.result;
-      if(cursor) {
-        const listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
-        list.appendChild(listItem);
-
-        cursor.continue();
-      } else {
-        console.log('Entries all displayed.');
+ function displayData() {
+    const checkedValue = document.querySelector('input[name="value"]:checked').value;
+    const filterIndex = document.querySelector('input[name="filterIndex"]:checked').value;
+    if (filterIndex=="fThing") {
+      if(checkedValue == "none") {
+        keyRangeValue = null;
+      } else if(checkedValue == "only") {
+        keyRangeValue = IDBKeyRange.only(onlyText.value);
+      } else if(checkedValue == "range") {
+        keyRangeValue = IDBKeyRange.bound(rangeLowerText.value, rangeUpperText.value, false, false);
+      } else if(checkedValue == "lower") {
+        keyRangeValue = IDBKeyRange.lowerBound(lowerBoundText.value);
+      } else if(checkedValue == "upper") {
+        keyRangeValue = IDBKeyRange.upperBound(upperBoundText.value);
       }
+    }
+    
+    // …
+        
+    if(keyRangeValue != null) {
+      console.log(keyRangeValue.lower);
+      console.log(keyRangeValue.upper);
+      console.log(keyRangeValue.lowerOpen);
+      console.log(keyRangeValue.upperOpen);
     };
-  };
+    
+    // …
+}
 ```
 
 ## Specifications
