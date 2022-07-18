@@ -113,7 +113,7 @@ We can also use the general "E" exponent syntax for decimal strings: `#.#E#`.
 The code below creates a {{jsxref("BigInt")}},  coerces it to a string with the suffix `E-6`, and then formats it.
 
 ```js
-numberFormat = new Intl.NumberFormat("en-US");
+let numberFormat = new Intl.NumberFormat("en-US");
 const bigNum = 1000000000000000110000n;
 console.log(numberFormat.format(bigNum));
 // → "1,000,000,000,000,000,110,000"
