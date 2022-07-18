@@ -110,7 +110,7 @@ void append(
 Returns the {{domxref("Blob")}} object that has been constructed using the data passed
 through calls to [`append()`](#append).
 
-```js
+```
 Blob getBlob(
   in DOMString contentType // optional
 );
@@ -133,7 +133,7 @@ starting a new, empty blob.
 
 Returns a {{domxref("File")}} object.
 
-```js
+```
 File getFile(
   in DOMString name,
   [optional] in DOMString contentType
