@@ -200,7 +200,7 @@ for (const link of links) {
 
 ## Same-origin policy
 
-If the newly opened browsing context does not share the same [origin](/en-US/docs/Glossary/origin), the opening script will not be able to interact (reading or writing) with the browsing context's content.
+If the newly opened browsing context does not share the same [origin](/en-US/docs/Glossary/Origin), the opening script will not be able to interact (reading or writing) with the browsing context's content.
 
 ```js example-bad
 // Script from example.com
@@ -271,8 +271,8 @@ When extreme changes in context are explicitly identified before they occur, the
 - `target` attribute documentation:
   - [`<a>`](/en-US/docs/Web/HTML/Element/a#attr-target)
   - [`<form>`](/en-US/docs/Web/HTML/Element/form#attr-target)
-- [`window.close()`](/en-US/docs/Web/API/window/close)
-- [`window.closed`](/en-US/docs/Web/API/window/closed)
+- [`window.close()`](/en-US/docs/Web/API/Window/close)
+- [`window.closed`](/en-US/docs/Web/API/Window/closed)
 - [`window.focus()`](/en-US/docs/Web/API/Window/focus)
 - [`window.opener`](/en-US/docs/Web/API/Window/opener)
 - [`rel="opener"`](/en-US/docs/Web/HTML/Attributes/rel#opener) and [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel#noopener)
