@@ -188,6 +188,7 @@ const person = {
 }
 const input = prompt('Get name or age?')
 console.log(person[input])
+```
 
 ## Setting object members
 
