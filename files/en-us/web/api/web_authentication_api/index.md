@@ -180,7 +180,7 @@ navigator.credentials.create(createCredentialDefaultArgs)
         console.log("NEW CREDENTIAL", cred);
 
         // normally the credential IDs available for an account would come from a server
-        // but we can just copy them from above...
+        // but we can just copy them from above…
         const idList = [{
             id: cred.rawId,
             transports: ["usb", "nfc", "ble"],

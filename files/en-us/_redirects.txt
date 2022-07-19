@@ -7821,6 +7821,7 @@
 /en-US/docs/Web/API/Document/defaultView/storage_event	/en-US/docs/Web/API/Window/storage_event
 /en-US/docs/Web/API/Document/domConfig	/en-US/docs/Web/API/Document
 /en-US/docs/Web/API/Document/getBoxObjectFor	/en-US/docs/Web/API/Element/getBoundingClientRect
+/en-US/docs/Web/API/Document/gotpointercapture_event	/en-US/docs/Web/API/Element/gotpointercapture_event
 /en-US/docs/Web/API/Document/inputEncoding	/en-US/docs/Web/API/document/characterSet
 /en-US/docs/Web/API/Document/keydown_event	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/Document/keypress_event	/en-US/docs/Web/API/Element/keypress_event
@@ -7943,15 +7944,13 @@
 /en-US/docs/Web/API/Element/attachInternals	/en-US/docs/Web/API/HTMLElement/attachInternals
 /en-US/docs/Web/API/Element/cancel_event	/en-US/docs/Web/API/HTMLDialogElement/cancel_event
 /en-US/docs/Web/API/Element/fullscreenchange	/en-US/docs/Web/API/Element/fullscreenchange_event
-/en-US/docs/Web/API/Element/gotpointercapture_event	/en-US/docs/Web/API/HTMLElement/gotpointercapture_event
-/en-US/docs/Web/API/Element/lostpointercapture_event	/en-US/docs/Web/API/HTMLElement/lostpointercapture_event
 /en-US/docs/Web/API/Element/mozRequestFullScreen	/en-US/docs/Web/API/Element/requestFullScreen
 /en-US/docs/Web/API/Element/msMatchesSelector	/en-US/docs/Web/API/Element/matches
 /en-US/docs/Web/API/Element/name	/en-US/docs/Web/API
 /en-US/docs/Web/API/Element/onfullscreenchange	/en-US/docs/Web/API/Element/fullscreenchange_event
 /en-US/docs/Web/API/Element/onfullscreenerror	/en-US/docs/Web/API/Element/fullscreenerror_event
-/en-US/docs/Web/API/Element/ongotpointercapture	/en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture
-/en-US/docs/Web/API/Element/onlostpointercapture	/en-US/docs/Web/API/GlobalEventHandlers/onlostpointercapture
+/en-US/docs/Web/API/Element/ongotpointercapture	/en-US/docs/Web/API/Element/gotpointercapture_event
+/en-US/docs/Web/API/Element/onlostpointercapture	/en-US/docs/Web/API/Element/lostpointercapture_event
 /en-US/docs/Web/API/Element/onwheel	/en-US/docs/Web/API/Element/wheel_event
 /en-US/docs/Web/API/Element/pointerlockchange_event	/en-US/docs/Web/API/Document/pointerlockchange_event
 /en-US/docs/Web/API/Element/resourcetimingbufferfull_event	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
@@ -8163,6 +8162,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onended	/en-US/docs/Web/API/HTMLMediaElement/ended_event
 /en-US/docs/Web/API/GlobalEventHandlers/onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/Web/API/GlobalEventHandlers/onformdata	/en-US/docs/Web/API/HTMLFormElement/formdata_event
+/en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture	/en-US/docs/Web/API/Element/gotpointercapture_event
 /en-US/docs/Web/API/GlobalEventHandlers/oninput	/en-US/docs/Web/API/HTMLElement/input_event
 /en-US/docs/Web/API/GlobalEventHandlers/oninvalid	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Web/API/GlobalEventHandlers/onkeydown	/en-US/docs/Web/API/Element/keydown_event
@@ -8171,6 +8171,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onloadeddata	/en-US/docs/Web/API/HTMLMediaElement/loadeddata_event
 /en-US/docs/Web/API/GlobalEventHandlers/onloadedmetadata	/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event
 /en-US/docs/Web/API/GlobalEventHandlers/onloadstart	/en-US/docs/Web/API/HTMLMediaElement/loadstart_event
+/en-US/docs/Web/API/GlobalEventHandlers/onlostpointercapture	/en-US/docs/Web/API/Element/lostpointercapture_event
 /en-US/docs/Web/API/GlobalEventHandlers/onmousedown	/en-US/docs/Web/API/Element/mousedown_event
 /en-US/docs/Web/API/GlobalEventHandlers/onmouseenter	/en-US/docs/Web/API/Element/mouseenter_event
 /en-US/docs/Web/API/GlobalEventHandlers/onmouseleave	/en-US/docs/Web/API/Element/mouseleave_event
@@ -8268,7 +8269,9 @@
 /en-US/docs/Web/API/HTMLElement/animationiteration_event	/en-US/docs/Web/API/Element/animationiteration_event
 /en-US/docs/Web/API/HTMLElement/animationstart_event	/en-US/docs/Web/API/Element/animationstart_event
 /en-US/docs/Web/API/HTMLElement/forceSpellCheck	/en-US/docs/Web/HTML/Global_attributes/spellcheck
+/en-US/docs/Web/API/HTMLElement/gotpointercapture_event	/en-US/docs/Web/API/Element/gotpointercapture_event
 /en-US/docs/Web/API/HTMLElement/invalid_event	/en-US/docs/Web/API/HTMLInputElement/invalid_event
+/en-US/docs/Web/API/HTMLElement/lostpointercapture_event	/en-US/docs/Web/API/Element/lostpointercapture_event
 /en-US/docs/Web/API/HTMLElement/onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Web/API/HTMLElement/onblur	/en-US/docs/Web/API/Window/blur_event
 /en-US/docs/Web/API/HTMLElement/onchange	/en-US/docs/Web/API/HTMLElement/change_event
@@ -11415,7 +11418,7 @@
 /en-US/docs/Web/Events/gesturechange	/en-US/docs/Web/API/Element/gesturechange_event
 /en-US/docs/Web/Events/gestureend	/en-US/docs/Web/API/Element/gestureend_event
 /en-US/docs/Web/Events/gesturestart	/en-US/docs/Web/API/Element/gesturestart_event
-/en-US/docs/Web/Events/gotpointercapture	/en-US/docs/Web/API/HTMLElement/gotpointercapture_event
+/en-US/docs/Web/Events/gotpointercapture	/en-US/docs/Web/API/Element/gotpointercapture_event
 /en-US/docs/Web/Events/hashchange	/en-US/docs/Web/API/Window/hashchange_event
 /en-US/docs/Web/Events/icecandidate	/en-US/docs/Web/API/RTCPeerConnection/icecandidate_event
 /en-US/docs/Web/Events/iceconnectionstatechange	/en-US/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event
@@ -11434,7 +11437,7 @@
 /en-US/docs/Web/Events/loadedmetadata	/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event
 /en-US/docs/Web/Events/loadend	/en-US/docs/Web/API/XMLHttpRequest/loadend_event
 /en-US/docs/Web/Events/loadstart	/en-US/docs/Web/API/XMLHttpRequest/loadstart_event
-/en-US/docs/Web/Events/lostpointercapture	/en-US/docs/Web/API/HTMLElement/lostpointercapture_event
+/en-US/docs/Web/Events/lostpointercapture	/en-US/docs/Web/API/Element/lostpointercapture_event
 /en-US/docs/Web/Events/mark	/en-US/docs/Web/API/SpeechSynthesisUtterance/mark_event
 /en-US/docs/Web/Events/merchantvalidation	/en-US/docs/Web/API/PaymentRequest/merchantvalidation_event
 /en-US/docs/Web/Events/message	/en-US/docs/Web/API/BroadcastChannel/message_event

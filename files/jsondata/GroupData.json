@@ -1005,8 +1005,6 @@
         "Element.releasePointerCapture()"
       ],
       "properties": [
-        "GlobalEventHandlers.ongotpointercapture",
-        "GlobalEventHandlers.onlostpointercapture",
         "Navigator.maxTouchPoints"
       ],
       "events": [

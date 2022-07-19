@@ -63,7 +63,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     A cookie definition begins with a name-value pair.
 
     A `<cookie-name>` can contain any US-ASCII characters except for: the control character, space, or a tab.
-    It also must not contain a separator characters like the following: `( ) < > @ , ; : \ " / [ ] ? = { }`.
+    It also must not contain separator characters like the following: `( ) < > @ , ; : \ " / [ ] ? = { }`.
 
     A `<cookie-value>` can optionally be wrapped in double quotes and include any US-ASCII character excluding a control character, {{glossary("Whitespace")}}, double quotes, comma, semicolon, and backslash.
 

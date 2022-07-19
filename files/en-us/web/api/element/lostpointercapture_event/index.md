@@ -1,15 +1,15 @@
 ---
-title: 'Document: lostpointercapture event'
-slug: Web/API/Document/lostpointercapture_event
-page-type: web-api-event
+title: 'Element: lostpointercapture event'
+slug: Web/API/Element/lostpointercapture_event
 tags:
-  - API
-  - Document
   - Event
+  - HTML DOM
+  - Element
+  - NeedsSpecTable
   - PointerEvent
   - Reference
-  - lostpointercapture
-browser-compat: api.Document.lostpointercapture_event
+browser-compat: api.Element.lostpointercapture_event
+page-type: web-api-event
 ---
 {{APIRef}}
 
@@ -58,12 +58,12 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 
 ## Examples
 
-This example listens for the `lostpointercapture` event, and captures the pointer for an element on `pointerdown`. When the user subsequently releases the pointer, the `lostpointercapture` event will be fired.
+This example listens for the `lostpointercapture` event for an element, and captures the pointer for the element on `pointerdown`. When the user subsequently releases the pointer, the `lostpointercapture` event will be fired.
 
 ```js
 const para = document.querySelector('p');
 
-document.addEventListener('lostpointercapture', () => {
+para.addEventListener('lostpointercapture', () => {
   console.log('I\'ve been released!')
 });
 
@@ -77,7 +77,7 @@ The same example, but using the `onlostpointercapture` event handler property:
 ```js
 const para = document.querySelector('p');
 
-document.onlostpointercapture = () => {
+para.onlostpointercapture = () => {
   console.log('I\'ve been released!')
 };
 
@@ -98,13 +98,14 @@ para.addEventListener('pointerdown', (event) => {
 
 - Related events
 
-  - {{domxref("Document/pointerover_event", "pointerover")}}
-  - {{domxref("Document/pointerenter_event", "pointerenter")}}
-  - {{domxref("Document/pointerdown_event", "pointerdown")}}
-  - {{domxref("Document/pointermove_event", "pointermove")}}
-  - {{domxref("Document/pointerup_event", "pointerup")}}
-  - {{domxref("Document/pointercancel_event", "pointercancel")}}
-  - {{domxref("Document/pointerout_event", "pointerout")}}
-  - {{domxref("Document/pointerleave_event", "pointerleave")}}
+  - [`gotpointercapture`](/en-US/docs/Web/API/Element/gotpointercapture_event)
+  - [`pointerover`](/en-US/docs/Web/API/Element/pointerover_event)
+  - [`pointerenter`](/en-US/docs/Web/API/Element/pointerenter_event)
+  - [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event)
+  - [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event)
+  - [`pointerup`](/en-US/docs/Web/API/Element/pointerup_event)
+  - [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
+  - [`pointerout`](/en-US/docs/Web/API/Element/pointerout_event)
+  - [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)
 
-- This event on `Element` targets: {{domxref("Element/lostpointercapture_event", "lostpointercapture")}} event
+- This event on `Document` targets: [`lostpointercapture`](/en-US/docs/Web/API/Document/lostpointercapture_event) event

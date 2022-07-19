@@ -60,7 +60,7 @@ async function messageClient(clientId) {
 addEventListener('fetch', (event) => {
     messageClient(event.clientId);
     event.respondWith(() => {
-      // ...
+      // …
     });
 });
 ```

@@ -242,7 +242,7 @@ When the user clicks on a username they want to call, the `invite()` function is
 ```js
 const mediaConstraints = {
   audio: true, // We want an audio track
-  video: true // ...and we want a video track
+  video: true // And we want a video track
 };
 
 function invite(evt) {

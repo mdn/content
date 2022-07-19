@@ -33,7 +33,7 @@ In addition, sandboxed {{htmlelement("iframe")}}s cannot be granted storage acce
 <iframe sandbox="allow-storage-access-by-user-activation
                  allow-scripts
                  allow-same-origin">
-  ...
+  …
 </iframe>
 ```
 

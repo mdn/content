@@ -34,7 +34,7 @@ You can use the `scroll` event in an [`addEventListener`](/en-US/docs/Web/API/Ev
 
 ```js
 visualViewport.addEventListener('scroll', function() {
-  /* ... */
+  // …
 });
 ```
 
@@ -42,7 +42,7 @@ Or use the `onscroll` event handler property:
 
 ```js
 visualViewport.onscroll = function() {
-  /* ... */
+  // …
 };
 ```
 
