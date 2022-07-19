@@ -1,3 +1,13 @@
+---
+title: Code examples
+slug: MDN/Writing_guidelines/Page_structure/Code_examples
+page-type: mdn-writing-guide
+tags:
+  - meta
+  - writing-guide
+---
+{{MDNSidebar}}
+
 <!-- Captured -->
 
 This document series outlines the coding guidelines and best practices we use for writing demos, code snippets, interactive examples, etc, for use on MDN.

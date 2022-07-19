@@ -1,6 +1,7 @@
 ---
 title: How to document web errors
 slug: MDN/Writing_guidelines/Howto/Document_web_errors
+page-type: mdn-writing-guide
 tags:
   - Howto
   - MDN

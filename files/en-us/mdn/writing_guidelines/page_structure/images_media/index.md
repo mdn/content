@@ -1,3 +1,12 @@
+---
+title: TBD
+slug: MDN/Writing_guidelines/Page_structure/Images_media
+page-type: mdn-writing-guide
+tags:
+  - meta
+  - writing-guide
+---
+{{MDNSidebar}}
 
 <!-- Captured -->
 

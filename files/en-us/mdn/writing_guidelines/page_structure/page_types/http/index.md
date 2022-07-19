@@ -1,3 +1,12 @@
+---
+title: HTTP page type
+slug: MDN/Writing_guidelines/Page_structure/Page_types/HTTP
+page-type: mdn-writing-guide
+tags:
+  - meta
+  - writing-guide
+---
+{{MDNSidebar}}
 
 <!-- Captured -->
 

@@ -1,3 +1,12 @@
+---
+title: JavaScript error page type
+slug: MDN/Writing_guidelines/Page_structure/Page_types/Javascript_errors
+page-type: mdn-writing-guide
+tags:
+  - meta
+  - writing-guide
+---
+{{MDNSidebar}}
 
 <!-- Captured -->
 

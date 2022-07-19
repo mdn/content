@@ -1,6 +1,7 @@
 ---
-title: 'MDN web docs: How-to guides'
+title: How-to guides
 slug: MDN/Writing_guidelines/Howto
+page-type: mdn-writing-guide
 tags:
   - Documentation
   - Guide
