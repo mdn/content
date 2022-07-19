@@ -14,7 +14,7 @@ browser-compat: api.WebGLRenderingContext.deleteBuffer
 
 The **`WebGLRenderingContext.deleteBuffer()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) deletes a given
 {{domxref("WebGLBuffer")}}. This method has no effect if the buffer has already been
-deleted.
+deleted. Normally you don't need to call this method yourself, when the buffer object is dereferenced it will be marked as free.
 
 ## Syntax
 
