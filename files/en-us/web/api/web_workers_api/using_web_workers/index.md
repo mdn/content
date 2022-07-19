@@ -44,9 +44,7 @@ For slightly more controlled error handling and backwards compatibility, it is a
 
 ```js
 if (window.Worker) {
-
-  // ...
-
+  // …
 }
 ```
 
@@ -606,9 +604,7 @@ There is not an "official" way to embed the code of a worker within a web page, 
 <script type="text/javascript">
   // This script WILL be parsed by JS engines because its MIME type is text/javascript.
 
-  // In the past...:
-  // blob builder existed
-  // ...but now we use Blob...:
+  // In the past blob builder existed, but now we use Blob
   const blob = new Blob(Array.prototype.map.call(document.querySelectorAll('script[type=\'text\/js-worker\']'), function (oScript) { return oScript.textContent; }),{type: 'text/javascript'});
 
   // Creating a new document.worker property containing all our "text/js-worker" scripts.
