@@ -216,6 +216,11 @@ You must be careful which level of characters you are iterating on. For example,
 // "Family: Man, Boy"
 [..."👨‍👦"]; // [ '👨', '‍', '👦' ]
 // splits into the "Man" and "Boy" emoji, joined by a ZWJ
+
+// The United Nations flag
+[..."🇺🇳"]; // [ '🇺', '🇳' ]
+// splits into two "region indicator" letters "U" and "N".
+// All flag emojis are formed by joining two region indicator letters
 ```
 
 ## Constructor
