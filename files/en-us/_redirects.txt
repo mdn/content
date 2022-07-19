@@ -7294,6 +7294,7 @@
 /en-US/docs/Web/API/AbstractWorker	/en-US/docs/Web/API/Worker
 /en-US/docs/Web/API/AbstractWorker.onerror	/en-US/docs/Web/API/Worker/error_event
 /en-US/docs/Web/API/AbstractWorker/onerror	/en-US/docs/Web/API/Worker/error_event
+/en-US/docs/Web/API/AddressErrors/languageCode	/en-US/docs/Web/API/AddressErrors
 /en-US/docs/Web/API/AddressErrors/regionCode	/en-US/docs/Web/API/AddressErrors
 /en-US/docs/Web/API/AmbientLightSensor/reading	/en-US/docs/Web/API/AmbientLightSensor/illuminance
 /en-US/docs/Web/API/AmbientLightSensorReading	/en-US/docs/Web/API/AmbientLightSensor
@@ -9061,6 +9062,7 @@
 /en-US/docs/Web/API/Path2D.Path2D	/en-US/docs/Web/API/Path2D/Path2D
 /en-US/docs/Web/API/Path2D.addPath	/en-US/docs/Web/API/Path2D/addPath
 /en-US/docs/Web/API/PaymentAddress/PaymentAddress.country	/en-US/docs/Web/API/PaymentAddress/country
+/en-US/docs/Web/API/PaymentAddress/languageCode	/en-US/docs/Web/API/PaymentAddress
 /en-US/docs/Web/API/PaymentAddress/regionCode	/en-US/docs/Web/API/PaymentAddress
 /en-US/docs/Web/API/PaymentCurrencyAmount	/en-US/docs/Web/API/PaymentRequest/show
 /en-US/docs/Web/API/PaymentCurrencyAmount/currency	/en-US/docs/Web/API/PaymentRequest/show
