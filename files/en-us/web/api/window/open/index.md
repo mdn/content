@@ -47,8 +47,6 @@ open(url, target, windowFeatures)
 
         Example: `popup=yes`, `popup=1`, `popup=true`, and `popup` all have identical results.
 
-        > **Note:** [The `true` value was introduced in March 2022](https://github.com/whatwg/html/pull/7425). For better compatibility with older browsers, use one of the other values.
-
     - `width` or `innerWidth`
       - : Specifies the width of the content area, including scrollbars. The minimum required value is 100.
 
@@ -93,7 +91,7 @@ window.open("https://www.mozilla.org/", "mozillaTab");
 
 Alternatively, the following example demonstrates how to open a popup, using the `popup` feature.
 
-> **Warning:** Modern browsers have built-in popup blockers, preventing the opening of such popups without explicit action from the user.
+> **Warning:** Modern browsers have built-in popup blockers, preventing the opening of such popups. Users must have changed their browser settings to enable popups or enable them on a site-per-site basis from the browser's user interface (a notification may appear when the site attempts to open a popup for the first time, giving the option to enable or discard them).
 
 ```js
 window.open("https://www.mozilla.org/", "mozillaWindow", "popup");
@@ -103,12 +101,18 @@ It is possible to control the size and position of the new popup:
 
 ```js
 const windowFeatures = "left=100,top=100,width=320,height=320";
-window.open("https://www.mozilla.org/", "mozillaWindow", windowFeatures);
+const handle = window.open("https://www.mozilla.org/", "mozillaWindow", windowFeatures);
+if (!handle) {
+  // The window wasn't allowed to open
+  // This is likely caused by built-in popup blockers.
+
+  // …
+}
 ```
 
-> **Note:** With the built-in popup blockers, you have to check the return value of `window.open()`: it will be `null` if the window wasn't allowed to open.
-
 ## Progressive enhancement
+
+In some cases, JavaScript is disabled or unavailable and `window.open()` will not work. Instead of solely relying on the presence of this feature, we can provide an alternative solution so that the site or application still functions.
 
 ### Provide alternative ways when JavaScript is disabled
 
