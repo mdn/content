@@ -42,7 +42,7 @@ A script in KumaScript is a _template_, and each template is a file in [the macr
 
 Invoking a template is done with a _macro_, which can be used anywhere in any wiki content. Invoking the above template would look like this (provided it was saved in the macros directory with a filename of `hello.ejs`):
 
-```js
+```plain
 \{{hello(3)}}
 ```
 
@@ -58,7 +58,7 @@ Hello #2
 
 Macro syntax takes the following general form:
 
-```js
+```plain
 \{{templateName("arg0", "arg1", /* …, */ "argN")}}
 ```
 
@@ -73,7 +73,7 @@ Macro syntax follows these rules:
 
 As a semi-experimental feature (not guaranteed to work), you can supply a JSON object for the first and only parameter, like so:
 
-```js
+```plain
 \{{templateName({ "Alpha": "one", "Beta": ["a", "b", "c"], "Foo": "https:\/\/mozilla.org\/" })}}
 ```
 
