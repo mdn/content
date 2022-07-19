@@ -111,12 +111,10 @@ new Intl.NumberFormat(locales, options)
         - `"unit"` for unit formatting.
 
     - `unit`
-      - : The unit to use in `unit` formatting, Possible values are core
-        unit identifiers, defined in [UTS #35, Part 2, Section 6](https://unicode.org/reports/tr35/tr35-general.html#Unit_Elements).
+      - : The unit to use in `unit` formatting, Possible values are core unit identifiers, defined in [UTS #35, Part 2, Section 6](https://unicode.org/reports/tr35/tr35-general.html#Unit_Elements).
         A [subset](https://tc39.es/proposal-unified-intl-numberformat/section6/locales-currencies-tz_proposed_out.html#sec-issanctionedsimpleunitidentifier)
-        of units from the [full list](https://github.com/unicode-org/cldr/blob/main/common/validity/unit.xml)
-        was selected for use in ECMAScript. Pairs of simple units can
-        be concatenated with "`-per-`" to make a compound unit.
+        of units from the [full list](https://github.com/unicode-org/cldr/blob/main/common/validity/unit.xml) was selected for use in ECMAScript.
+        Pairs of simple units can be concatenated with "`-per-`" to make a compound unit.
         There is no default value; if the `style` is `"unit"`, the `unit` property must be provided.
     - `unitDisplay`
 
@@ -128,8 +126,7 @@ new Intl.NumberFormat(locales, options)
         - `"narrow"` (e.g., `16l`).
 
     - `useGrouping` {{experimental_inline}}
-      - : Whether to use grouping separators, such as thousands separators or
-        thousand/lakh/crore separators. The default is `auto`.
+      - : Whether to use grouping separators, such as thousands separators or thousand/lakh/crore separators. The default is `auto`.
 
         - `"always"`: display grouping separators even if the locale prefers otherwise.
         - `"auto"`: display grouping separators based on the locale preference, which may also be dependent on the currency.
@@ -138,24 +135,29 @@ new Intl.NumberFormat(locales, options)
         - `true`: alias for `always`.
 
     - `roundingMode` {{experimental_inline}}
-      - : Options for rounding modes reflecting the [ICU user guide](https://unicode-org.github.io/icu/userguide/format_parse/numbers/rounding-modes.html). The default is `halfExpand`.
+      - : Options for rounding modes. The default is `halfExpand`.
 
-        - `"ceil"`: toward +∞.
-        - `"floor"`: toward -∞.
-        - `"expand"`: away from 0.
-        - `"trunc"`: toward 0.
-        - `"halfCeil"`: ties toward +∞.
+        - `"ceil"`: round to a "more positive" value (toward +∞).
+        - `"floor"`: round to a "less positive" value (toward -∞).
+        - `"expand"`: round away from 0 (positive numbers round more positive, negative numbers round more negative).
+        - `"trunc"`: round toward 0 (positive numbers round less positive (down), negative numbers less negative).
+        - `"halfCeil"`: ties (at the half-rounding incremenet) toward +∞.
         - `"halfFloor"`: ties toward -∞.
         - `"halfExpand"`: ties away from 0.
         - `"halfTrunc"`: ties toward 0.
         - `"halfEven"`: ties toward the value with even cardinality.
 
-    - `roundingPriority` {{experimental_inline}}
-      - : Options for control rounding behavior:
+        These options reflect the [ICU user guide](https://unicode-org.github.io/icu/userguide/format_parse/numbers/rounding-modes.html), where "expand" and "trunc" map to ICU "UP" and"DOWN", respectively.
 
-        - `"auto"`: the significant digits always win a conflict.
-        - `"morePrecision"`: the result with more precision wins a conflict.
-        - `"lessPrecision"`: the result with less precision wins a conflict.
+    - `roundingPriority` {{experimental_inline}}
+      - :  Specify how rounding conflicts between "FractionDigits" and "SignificantDigits" will be resolved:
+
+        - `"auto"`: the result from the significant digits property is used (default).
+        - `"morePrecision"`: the result from the property that results in more precision is used.
+        - `"lessPrecision"`: the result from the property that results in less precision is used.
+
+        Note that if `auto` is not specified then the result is first calculated for both fractional and significant digits taking account of both minimum and maximum values (this includes default values if not explicitly specified).
+        A value with more precision has more digits in the fractional part.
 
     - `roundingIncrement` {{experimental_inline}}
       - : Specifies the rounding-increment precision. Must be one of the following integers:
@@ -192,24 +194,24 @@ new Intl.NumberFormat(locales, options)
         - `"lessPrecision"`: same as "auto", but remove the fraction digits if they are all zero
 
     The following properties fall into two groups:
-    `minimumIntegerDigits`, `minimumFractionDigits`, and
-    `maximumFractionDigits` in one group,
-    `minimumSignificantDigits` and
-    `maximumSignificantDigits` in the other. If at least one property
-    from the second group is defined, then the first group is ignored.
+    `minimumIntegerDigits`, `minimumFractionDigits`, and `maximumFractionDigits` in one group,
+    `minimumSignificantDigits` and `maximumSignificantDigits` in the other.
+    If at least one property from the second group is defined, then the first group is ignored.
 
     - `minimumIntegerDigits`
-      - : The minimum number of integer digits to use. Possible values are from 1 to
-        21; the default is 1.
+      - : The minimum number of integer digits to use.
+        A number with a smaller integer part than this value will be zero-prefixed to this number of digits when formatted.
+        Possible values are from 1 to 21; the default is 1.
     - `minimumFractionDigits`
-      - : The minimum number of fraction digits to use. Possible values are from 0
-        to 20; the default for plain number and percent formatting is 0; the
-        default for currency formatting is the number of minor unit digits
-        provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list_one.xml)
+      - : The minimum number of fraction digits to use.
+        Possible values are from 0 to 20;
+        the default for plain number and percent formatting is 0;
+        the default for currency formatting is the number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list_one.xml)
         (2 if the list doesn't provide that information).
     - `maximumFractionDigits`
       - : The maximum number of fraction digits to use.
-         Possible values are from 0 to 20; the default for plain number formatting is the larger of `minimumFractionDigits` and 3;
+         Possible values are from 0 to 20;
+         the default for plain number formatting is the larger of `minimumFractionDigits` and 3;
          the default for currency formatting is the larger of `minimumFractionDigits` and the number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list_one.xml) (2 if the list doesn't provide that information);
          the default for percent formatting is the larger of `minimumFractionDigits` and 0.
     - `minimumSignificantDigits`
@@ -341,6 +343,72 @@ new Intl.NumberFormat('bn', {
 
 // → '($3,500.00)'
 ```
+
+### FractionDigits, SignificantDigits and IntegerDigits
+
+The `NumberFormat() constructor` can be used to specify the minimum or maximum number of fractional, integer or significant digits to display when formatting a number.
+
+> **Note:** If both significant and fractional digit limits are specified then formatting depends on the [`roundingPriority`](#roundingpriority).
+
+The integer and fraction digit properties indicate the number of digits to display before and after the decimal point, respectively.
+If the value to display has fewer integer digits than specified it will be zero prefixed.
+If it has fewer fractional digits it will be zero suffixed.
+Both cases are shown below:
+
+```js
+// Formatting adds zeros to display minimum integers and fractions
+console.log(new Intl.NumberFormat("en", 
+  {minimumIntegerDigits: 3, minimumFractionDigits: 4}
+  ).format(4.33));
+// > "004.3300"
+```
+
+If a value has more fractional digits than set for the maximum number of digits it will be rounded.
+
+```js
+// Display value shortened to maximum number of digits
+console.log(new Intl.NumberFormat("en", {maximumFractionDigits: 2}).format(4.33145));
+// > "4.33"
+```
+
+The default value of `maximumFractionDigits` is three for a plain number and two for currency (and may have different values for other predefined types).
+For this reason the same value below truncates to `3` fractional digits even though the maximum number is not specified.
+Note that the minimum factional digits are ignored below because the value has more than 2 fractional digits.
+
+```js
+// Minimum has no effect if value is higher precision.
+console.log(new Intl.NumberFormat("en", {minimumFractionDigits: 2}).format(4.33145));
+// > "4.331"
+```
+
+The number of _significant digits_ is the total number of digits including both integer and factional parts.
+The `maximumSignificantDigits` is used to indicate the total number of digits from the original value to display.
+The examples below show how this works.
+Note in particular the last case: only the first digit is retained and the others are discarded/set to zero. 
+
+```js
+// Display 5 significant digits
+console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 5}).format(54.33145));
+// > "54.331"
+
+// Max 2 significant digits
+console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 2}).format(54.33145));
+// > "54"
+
+// Max 1 significant digits
+console.log(new Intl.NumberFormat("en", {maximumSignificantDigits: 1}).format(54.33145));
+// > "50"
+```
+
+The `minimumSignificantDigits` ensures that at least the minimum number of digits are displayed, adding zero suffixes if needed.
+
+```js
+// Minimum 10 significant digits
+console.log(new Intl.NumberFormat("en", {minimumSignificantDigits: 10}).format(54.33145));
+// > "54.33145000"
+```
+
+
 
 ## Specifications
 
