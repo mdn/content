@@ -40,32 +40,7 @@ arguments (if provided).
 
 ## Description
 
-The `bind()` function creates a new **bound function**, which
-is an _exotic function object_ (a term from ECMAScript 2015) that wraps the
-original function object. Calling the bound function generally results in the execution
-of its wrapped function.
-
-A bound function has the following internal properties:
-
-- **`[[BoundTargetFunction]]`**
-  - : The wrapped function object.
-- **`[[BoundThis]]`**
-  - : The value that is always passed as `this` value when calling the wrapped
-    function.
-- **`[[BoundArguments]]`**
-  - : A list of values whose elements are used as the first arguments to any call to the
-    wrapped function.
-- **`[[Call]]`**
-  - : Executes code associated with this object. Invoked via a function call expression.
-    The arguments to the internal method are a `this` value and a list
-    containing the arguments passed to the function by a call expression.
-
-When a bound function is called, it calls internal method `[[Call]]` on
-`[[BoundTargetFunction]]`, with following arguments
-`Call(boundThis, ...args)`. Where
-`boundThis` is `[[BoundThis]]`,
-`args` is `[[BoundArguments]]`, followed by the
-arguments passed by the function call.
+The `bind()` function creates a new **bound function**. Calling the bound function generally results in the execution of its wrapped function. The bound function will store the parameters passed — which include the value of `this` and the first few arguments — as its internal state. These values are stored in advance, instead of being passed at call time. You can generally see `const boundFn = fn.bind(thisArg, arg1, arg2)` as being equivalent to `const boundFn = (...restArgs) => fn.call(thisArg, arg1, arg2, ...restArgs)`.
 
 A bound function may also be constructed using the {{jsxref("Operators/new", "new")}}
 operator. Doing so acts as though the target function had instead been constructed. The

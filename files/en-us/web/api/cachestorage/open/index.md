@@ -66,6 +66,7 @@ self.addEventListener('install', function(event) {
       ]);
     })
   );
+});
 ```
 
 ## Specifications

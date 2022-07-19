@@ -33,7 +33,7 @@ will be the string `Files`.
 This example shows the use of the `types` and
 {{domxref("DataTransfer.items","items")}} properties.
 
-```js
+```html
 <!DOCTYPE html>
 <html lang=en>
 <title>Examples of DataTransfer.{types,items} properties</title>

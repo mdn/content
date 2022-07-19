@@ -39,9 +39,12 @@ Undefined.
 The following function adds the state `--checked` to a `CustomStateSet`.
 
 ```js
-set checked(flag) {
-  if (flag) {
-    this._internals.states.add('--checked');
+class MyCustomElement extends HTMLElement {
+  set checked(flag) {
+    if (flag) {
+      this._internals.states.add('--checked');
+    }
+  }
 }
 ```
 

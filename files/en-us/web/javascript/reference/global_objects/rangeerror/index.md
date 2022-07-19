@@ -22,6 +22,8 @@ This can be encountered when:
 - when attempting to create an array of an illegal length with the {{jsxref("Array")}} constructor, or
 - when passing bad values to the numeric methods {{jsxref("Number.prototype.toExponential()")}}, {{jsxref("Number.prototype.toFixed()")}} or {{jsxref("Number.prototype.toPrecision()")}}.
 
+`RangeError` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker.postMessage()", "postMessage()")}}.
+
 ## Constructor
 
 - {{jsxref("RangeError/RangeError", "RangeError()")}}

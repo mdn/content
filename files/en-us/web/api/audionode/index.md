@@ -53,7 +53,9 @@ const analyserNode = new AnalyserNode(audioCtx, {
   minDecibels: -60,
   smoothingTimeConstant: 0.5,
 });
+```
 
+```js
 // factory method
 const analyserNode = audioCtx.createAnalyser();
 analyserNode.fftSize = 2048;

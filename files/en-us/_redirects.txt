@@ -8123,7 +8123,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.ondurationchange	/en-US/docs/Web/API/HTMLMediaElement/durationchange_event
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onemptied	/en-US/docs/Web/API/HTMLMediaElement/emptied_event
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onended	/en-US/docs/Web/API/HTMLMediaElement/ended_event
-/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oninvalid	/en-US/docs/Web/API/GlobalEventHandlers/oninvalid
+/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oninvalid	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadeddata	/en-US/docs/Web/API/GlobalEventHandlers/onloadeddata
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadedmetadata	/en-US/docs/Web/API/GlobalEventHandlers/onloadedmetadata
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onloadstart	/en-US/docs/Web/API/GlobalEventHandlers/onloadstart
@@ -8164,6 +8164,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onformdata	/en-US/docs/Web/API/HTMLFormElement/formdata_event
 /en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture	/en-US/docs/Web/API/Element/gotpointercapture_event
 /en-US/docs/Web/API/GlobalEventHandlers/oninput	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Web/API/GlobalEventHandlers/oninvalid	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Web/API/GlobalEventHandlers/onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/GlobalEventHandlers/onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/GlobalEventHandlers/onkeyup	/en-US/docs/Web/API/Element/keyup_event
@@ -8194,6 +8195,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onselect	/en-US/docs/Web/API/HTMLInputElement/select_event
 /en-US/docs/Web/API/GlobalEventHandlers/onselectionchange	/en-US/docs/Web/API/HTMLInputElement/selectionchange_event
 /en-US/docs/Web/API/GlobalEventHandlers/onselectstart	/en-US/docs/Web/API/Document/selectstart_event
+/en-US/docs/Web/API/GlobalEventHandlers/onslotchange	/en-US/docs/Web/API/HTMLSlotElement/slotchange_event
 /en-US/docs/Web/API/GlobalEventHandlers/onsubmit	/en-US/docs/Web/API/HTMLFormElement/submit_event
 /en-US/docs/Web/API/GlobalEventHandlers/ontouchcancel	/en-US/docs/Web/API/Element/touchcancel_event
 /en-US/docs/Web/API/GlobalEventHandlers/ontouchend	/en-US/docs/Web/API/Element/touchend_event
