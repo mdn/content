@@ -135,7 +135,7 @@ The following are not supported:
 
 None of the options to `inspectedWindow.eval()` are supported.
 
-Scripts injected using `inspectedWindow.eval()` can't use all the Console's command-line helper functions, but `$0` and `inspect(...)` are both supported (starting from Firefox 55).
+Scripts injected using `inspectedWindow.eval()` can't use all the Console's command-line helper functions, but `$0` and `inspect()` are both supported (starting from Firefox 55).
 
 ### devtools.panels
 

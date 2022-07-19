@@ -118,7 +118,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
   <tbody>
     <tr>
       <td>
-        {{domxref("ScriptProcessorNode.audioprocess_event","audioprocess")}}{{Deprecated_Inline}}
+        {{domxref("ScriptProcessorNode.audioprocess_event","audioprocess")}} {{Deprecated_Inline}}
       </td>
       <td>
         The input buffer of a {{DOMxRef("ScriptProcessorNode")}} is
@@ -333,7 +333,7 @@ elem.audioTracks.onremovetrack = function(event) {
 
 This code watches for audio tracks to be added to and removed from the element, and calls a hypothetical function on a track editor to register and remove the track from the editor's list of available tracks.
 
-You can also use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to listen for the {{domxref("VideoTrackList/addtrack_event", "addtrack")}} and {{event("removetrack")}} events.
+You can also use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to listen for the {{domxref("VideoTrackList/addtrack_event", "addtrack")}} and {{domxref("VideoTrackList/removetrack_event", "removetrack")}} events.
 
 ### Server support for video
 

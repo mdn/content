@@ -26,7 +26,7 @@ A {{domxref("Node")}}.
 const nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } }
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
 node = nodeIterator.referenceNode;
 ```

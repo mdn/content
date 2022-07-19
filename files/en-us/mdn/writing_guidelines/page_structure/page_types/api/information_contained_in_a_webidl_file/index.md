@@ -565,7 +565,7 @@ There can also be several unnamed constructors, differing by their parameter lis
     interface HTMLImageElement : HTMLElement {…
 ```
 
-A named constructor is a constructor that has a different name than that of its interface. For example `new Image(…)` creates a new `HTMLImageElement` object. They are defined in the WebIDL using the `NamedConstructor` annotation on the interface, followed by the name of the constructor after the equality sign (`'='`) and the parameter inside the parenthesis, in the same format as you'll see for methods.
+A named constructor is a constructor that has a different name than that of its interface. For example `new Image()` creates a new `HTMLImageElement` object. They are defined in the WebIDL using the `NamedConstructor` annotation on the interface, followed by the name of the constructor after the equality sign (`'='`) and the parameter inside the parenthesis, in the same format as you'll see for methods.
 
 There can be several named constructors for a specific interface, but this is extremely rare; in such a case we include one sub-page per name.
 
@@ -573,10 +573,10 @@ There can be several named constructors for a specific interface, but this is ex
 
 As of September 2019, WebIDL constructor syntax was updated. Constructor syntax no longer involves an extended attribute on the interface:
 
-```js
+```webidl
 [Constructor(DOMString str)]
     interface MyInterface {
-      ...
+     // …
 };
 ```
 

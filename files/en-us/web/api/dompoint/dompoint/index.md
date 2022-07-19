@@ -68,6 +68,6 @@ newTopLeft.y += 100;
 
 ## See also
 
-- {{domxref("DOMPointReadOnly.DOMPoint", "DOMPointReadOnly()")}}
+- {{domxref("DOMPointReadOnly.DOMPointReadOnly", "DOMPointReadOnly()")}}
 - {{domxref("DOMRect")}}
 - {{domxref("DOMMatrix")}}

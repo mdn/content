@@ -20,13 +20,13 @@ exports.book_update_get = function(req, res, next) {
 
     // Get book, authors and genres for form.
     async.parallel({
-        book: function(callback) {
+        book(callback) {
             Book.findById(req.params.id).populate('author').populate('genre').exec(callback);
         },
-        authors: function(callback) {
+        authors(callback) {
             Author.find(callback);
         },
-        genres: function(callback) {
+        genres(callback) {
             Genre.find(callback);
         },
         }, function(err, results) {
@@ -69,11 +69,11 @@ exports.book_update_post = [
 
     // Convert the genre to an array
     (req, res, next) => {
-        if(!(req.body.genre instanceof Array)){
+        if(!(Array.isArray(req.body.genre))){
             if(typeof req.body.genre==='undefined')
             req.body.genre=[];
             else
-            req.body.genre=new Array(req.body.genre);
+            req.body.genre=[req.body.genre];
         }
         next();
     },
@@ -106,10 +106,10 @@ exports.book_update_post = [
 
             // Get all authors and genres for form.
             async.parallel({
-                authors: function(callback) {
+                authors(callback) {
                     Author.find(callback);
                 },
-                genres: function(callback) {
+                genres(callback) {
                     Genre.find(callback);
                 },
             }, function(err, results) {

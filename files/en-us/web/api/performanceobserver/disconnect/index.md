@@ -47,7 +47,7 @@ observer.observe({entryTypes: ["mark", "frame"]});
 
 function perf_observer(list, observer) {
   // Process the "measure" event
-  // ...
+  // …
   // Disable additional performance events
   observer.disconnect();
 }

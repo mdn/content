@@ -101,6 +101,5 @@ closeButton.addEventListener('click', () => {
 
 ## See also
 
-- {{domxref("GlobalEventHandlers.oncancel")}}
 - HTML {{HTMLElement("dialog")}} element
 - {{domxref("HTMLDialogElement/close_event", "close")}}

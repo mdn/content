@@ -76,7 +76,7 @@ To ensure that keystrokes go to the sample, click or focus the output box below 
 
 ### Handle keyboard events in a game
 
-This example establishes an event listener for {{event("keydown")}} events that handle keyboard input for a game that uses the typical "WASD" keyboard layout for steering forward, left, backward, and right. This will use the same four keys physically regardless of what the actual corresponding characters are, such as if the user is using an AZERTY keyboard.
+This example establishes an event listener for {{domxref("Element/keydown_event", "keydown")}} events that handle keyboard input for a game that uses the typical "WASD" keyboard layout for steering forward, left, backward, and right. This will use the same four keys physically regardless of what the actual corresponding characters are, such as if the user is using an AZERTY keyboard.
 
 #### HTML
 
@@ -165,7 +165,7 @@ function refresh() {
 refresh();
 ```
 
-Finally, the `addEventListener()` method is used to start listening for {{event("keydown")}} events, acting on each key by updating the ship position and rotation angle, then calling `refresh()` to draw the ship at its new position and angle.
+Finally, the `addEventListener()` method is used to start listening for {{domxref("Element/keydown_event", "keydown")}} events, acting on each key by updating the ship position and rotation angle, then calling `refresh()` to draw the ship at its new position and angle.
 
 ```js
 window.addEventListener("keydown", function(event) {
@@ -213,7 +213,7 @@ To ensure that keystrokes go to the sample code, click or focus the black game p
 
 {{EmbedLiveSample("Handle_keyboard_events_in_a_game", 420, 460)}}
 
-There are several ways this code can be made better. Most real games would watch for {{event("keydown")}} events, start motion when that happens, and stop the motion when the corresponding {{event("keyup")}} occurs, instead of relying on key repeats. That would allow both smoother and faster movement, but would also allow the player to be moving and steering at the same time. Transitions or animations could be used to make the ship's movement smoother, too.
+There are several ways this code can be made better. Most real games would watch for {{domxref("Element/keydown_event", "keydown")}} events, start motion when that happens, and stop the motion when the corresponding {{domxref("Element/keyup_event", "keyup")}} occurs, instead of relying on key repeats. That would allow both smoother and faster movement, but would also allow the player to be moving and steering at the same time. Transitions or animations could be used to make the ship's movement smoother, too.
 
 ## Specifications
 

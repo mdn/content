@@ -174,7 +174,7 @@ Modernizr.load({
   both : app.js,
 
   // Once both files are loaded, this function is called in order to initialize the App.
-  complete : function () {
+  complete() {
     app.init();
   }
 });

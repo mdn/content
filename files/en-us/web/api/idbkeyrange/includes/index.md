@@ -46,10 +46,10 @@ A boolean value.
 ```js
 const keyRangeValue = IDBKeyRange.bound('A', 'K', false, false);
 
-const myResult = keyRangeValue.includes('F');
+keyRangeValue.includes('F');
 // Returns true
 
-const myResult = keyRangeValue.includes('W');
+keyRangeValue.includes('W');
 // Returns false
 ```
 

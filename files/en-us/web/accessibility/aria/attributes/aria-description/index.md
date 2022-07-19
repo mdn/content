@@ -24,7 +24,7 @@ The global `aria-description` attribute provides a mechanism for the developer t
      aria-description="Game schedule for the Boston Red Sox 2021 Season">
     <h1>Red Sox 2021</h1>
     <div role="grid">
-        ...
+      …
     </div>
 </div>
 ```

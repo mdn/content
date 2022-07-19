@@ -131,8 +131,8 @@ You can use the bracket notation with [`for...in`](/en-US/docs/Web/JavaScript/Re
 function showProps(obj, objName) {
   let result = '';
   for (const i in obj) {
-    // obj.hasOwnProperty() is used to exclude properties from the object's prototype chain
-    if (obj.hasOwnProperty(i)) {
+    // obj.hasOwn is used to exclude properties from the object's prototype chain and only show "own properties"
+    if (Object.hasOwn(obj, i)) {
       result += `${objName}.${i} = ${obj[i]}\n`;
     }
   }
@@ -303,7 +303,7 @@ Objects can also be created using the {{jsxref("Object.create()")}} method. This
 // Animal properties and method encapsulation
 const Animal = {
   type: 'Invertebrates', // Default value of properties
-  displayType: function() {  // Method which will display type of Animal
+  displayType() {  // Method which will display type of Animal
     console.log(this.type);
   }
 };
@@ -484,8 +484,8 @@ Getters and setters can also be added to an object at any time after creation us
 const myObj = { a: 0 };
 
 Object.defineProperties(myObj, {
-     'b': { get: function() { return this.a + 1; } },
-     'c': { set: function(x) { this.a = x / 2; } }
+     'b': { get() { return this.a + 1; } },
+     'c': { set(x) { this.a = x / 2; } }
 });
 
 myObj.c = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property

@@ -36,7 +36,7 @@ Next, let's load the image of the brick — add the following `load.image()` cal
 
 ```js
 function preload() {
-    // ...
+    // …
     game.load.image('brick', 'img/brick.png');
 }
 ```
@@ -49,7 +49,7 @@ We will place all the code for drawing the bricks inside an `initBricks` functio
 
 ```js
 function create(){
-    // ...
+    // …
     initBricks();
 }
 ```

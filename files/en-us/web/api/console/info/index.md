@@ -22,19 +22,19 @@ next to these items in the Web console's log.
 
 ```js
 info(obj1)
-info(obj1, /* ..., */ objN)
+info(obj1, /* …, */ objN)
 info(msg)
-info(msg, subst1, /* ..., */ substN])
+info(msg, subst1, /* …, */ substN)
 ```
 
 ### Parameters
 
-- `obj1` ... `objN`
+- `obj1` … `objN`
   - : A list of JavaScript objects to output. The string representations of each of these
     objects are appended together in the order listed and output.
 - `msg`
   - : A JavaScript string containing zero or more substitution strings.
-- `subst1` ... `substN`
+- `subst1` … `substN`
   - : JavaScript objects with which to replace substitution strings within
     `msg`. This gives you additional control over the format of the output.
 

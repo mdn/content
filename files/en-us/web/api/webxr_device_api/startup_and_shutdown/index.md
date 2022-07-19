@@ -117,8 +117,8 @@ function getXR(usePolyfill) {
   return tempXR;
 }
 
-const xr = getXR("no");  // Get the native XRSystem object
-const xr = getXR("yes"); // Always returns an XRSystem from the polyfill
+const nativeXr = getXR("no");  // Get the native XRSystem object
+const polyfilledXr = getXR("yes"); // Always returns an XRSystem from the polyfill
 const xr = getXR("if-needed"); // Use the polyfill only if navigator.xr missing
 ```
 

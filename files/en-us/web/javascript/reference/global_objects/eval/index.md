@@ -126,8 +126,8 @@ Indirect eval can be seen as if the code is evaluated within a separate `<script
     console.log(c); // 1
     console.log(d); // ReferenceError: d is not defined
     ```
-    
-    [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) declarations within the evaluated string are always scoped to that script. 
+
+    [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) declarations within the evaluated string are always scoped to that script.
 
 - Direct eval may have access to additional contextual expressions. For example, in a function's body, one can use [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target):
 

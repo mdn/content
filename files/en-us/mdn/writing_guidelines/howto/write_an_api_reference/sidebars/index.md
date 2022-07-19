@@ -137,6 +137,6 @@ Further information about tag-based processing is available [in the APIRef sourc
 Once you've added an entry for your API into `GroupData.json`, submitted it as a pull request and had the change accepted into the main repo, you can include it in your API reference pages using the [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) macro, which takes the name you used for your API in GroupData as a parameter.
 As an example, the [WebVR API](/en-US/docs/Web/API/WebVR_API)'s sidebar is included in its pages with the following:
 
-```js
+```plain
 \{{APIRef("WebVR API")}}
 ```

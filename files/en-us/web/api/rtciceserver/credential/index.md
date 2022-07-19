@@ -26,10 +26,10 @@ other secret.
 
 ```js
 var iceServer = {
-                  ...
-                  credential = credential,
-                  ...
-                };
+  // ...
+  credential: credential,
+  // ...
+};
 
 var credential = iceServer.credential;
 

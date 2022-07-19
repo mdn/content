@@ -21,10 +21,10 @@ are typically STUN and/or TURN servers.
 
 ```js
 var iceServer = {
-                  urls = iceServerUrl | [ url1, ..., urlN ],
-                  username: "webrtc", // optional
-                  credential: "turnpassword" // optional
-                };
+  urls: iceServerUrl, /* or an array or URLs: [ url1, ..., urlN ] */
+  username: "webrtc", // optional
+  credential: "turnpassword" // optional
+};
 
 iceServers.push(iceServer);
 ```

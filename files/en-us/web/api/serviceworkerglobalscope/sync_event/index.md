@@ -57,7 +57,7 @@ You can also set up the event handler using the `onsync` property:
 
 ```js
 self.onsync = event => {
-  ...
+  // ...
 };
 ```
 

@@ -56,10 +56,10 @@ To fix this, move your instantiation of these services into your `load` event ha
 ```js
 var MyObject = {
   comp : null,
-  init: function() {
-    this.comp = Components.classes[...].getService(...);
+  init() {
+    this.comp = Components.classes["…"].getService(/* … */);
   },
-  ...
+  // …
 }
 window.addEventListener("load", function() { MyObject.init(); }, false);
 ```

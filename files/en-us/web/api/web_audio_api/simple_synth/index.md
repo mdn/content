@@ -245,9 +245,10 @@ function createNoteTable() {
   noteFreq[1]["A"] = 55.000000000000000;
   noteFreq[1]["A#"] = 58.270470189761239;
   noteFreq[1]["B"] = 61.735412657015513;
+  // …
 ```
 
-... several octaves not shown for brevity ...
+Several octaves not shown for brevity.
 
 ```js hidden
   noteFreq[2]["C"] = 65.406391325149658;
@@ -443,7 +444,7 @@ setup();
 ```
 
 1. The table which maps note names and octaves to their frequencies is created by calling `createNoteTable()`.
-2. An event handler is established (by calling our old friend {{domxref("EventTarget.addEventListener", "addEventListener()")}} to handle {{event("change")}} events on the main gain control. This will update the main gain node's volume to the new value of the control.
+2. An event handler is established (by calling our old friend {{domxref("EventTarget.addEventListener", "addEventListener()")}} to handle {{domxref("HTMLElement/change_event", "change")}} events on the main gain control. This will update the main gain node's volume to the new value of the control.
 3. Next, we iterate over each octave in the note frequencies table. For each octave, we use {{jsxref("Object.entries()")}} to get a list of the notes in that octave.
 4. Create a {{HTMLElement("div")}} to contain that octave's notes (so we can have a small bit of space drawn between octaves), and set its class name to "octave"
 5. For each key in the octave, we check to see if the note's name has more than one character. We skip these, because we're leaving out the sharp notes in this example. If the note's name is only one character, then we call `createKey()`, specifying the note string, octave, and frequency. The returned element is appended to the octave element created in step 4.
@@ -555,7 +556,7 @@ function noteReleased(event) {
 
 #### Changing the main volume
 
-The volume slider in the settings bar provides a simple interface to change the gain value on the main gain node, thereby changing the loudness of all playing notes. The `changeVolume()` method is the handler for the {{event("change")}} event on the slider.
+The volume slider in the settings bar provides a simple interface to change the gain value on the main gain node, thereby changing the loudness of all playing notes. The `changeVolume()` method is the handler for the {{domxref("HTMLElement/change_event", "change")}} event on the slider.
 
 ```js
 function changeVolume(event) {

@@ -34,8 +34,8 @@ value of the cursor with `cursor.value`.
 The cursor does not require us to select the data based
 on a key; we can just grab all of it. Also note that in each iteration of the loop,
 you can grab data from the current record under the cursor object using `cursor.value.foo`.
-For a complete working example, see our [IDBCursor example](https://github.com/mdn/IDBcursor-example/)
-([view example live](https://mdn.github.io/IDBcursor-example/).)
+For a complete working example, see our [IDBCursor example](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbcursor)
+([view example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/).)
 
 ```js
 function displayData() {

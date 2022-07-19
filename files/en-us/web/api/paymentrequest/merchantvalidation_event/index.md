@@ -64,7 +64,7 @@ request.addEventListener("merchantvalidation", event => {
     // get validation data, and complete validation;
     return await fetch(merchantServerUrl).then(response => response.text());
   }, false);
-};
+});
 
 const response = await request.show();
 ```

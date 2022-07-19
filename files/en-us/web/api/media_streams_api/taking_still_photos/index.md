@@ -62,15 +62,15 @@ We start by wrapping the whole script in an anonymous function to avoid global v
 
 ```js
 (function() {
-  var width = 320;    // We will scale the photo width to this
-  var height = 0;     // This will be computed based on the input stream
+  const width = 320;    // We will scale the photo width to this
+  const height = 0;     // This will be computed based on the input stream
 
-  var streaming = false;
+  const streaming = false;
 
-  var video = null;
-  var canvas = null;
-  var photo = null;
-  var startbutton = null;
+  let video = null;
+  let canvas = null;
+  let photo = null;
+  let startbutton = null;
 ```
 
 Those variables are:
@@ -131,7 +131,7 @@ The error callback is called if opening the stream doesn't work. This will happe
 
 #### Listen for the video to start playing
 
-After calling [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement#play) on the {{HTMLElement("video")}}, there's a (hopefully brief) period of time that elapses before the stream of video begins to flow. To avoid blocking until that happens, we add an event listener to `video` for the {{event("canplay")}} event, which is delivered when the video playback actually begins. At that point, all the properties in the `video` object have been configured based on the stream's format.
+After calling [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement#play) on the {{HTMLElement("video")}}, there's a (hopefully brief) period of time that elapses before the stream of video begins to flow. To avoid blocking until that happens, we add an event listener to `video` for the {{domxref("HTMLMediaElement/canplay_event", "canplay")}} event, which is delivered when the video playback actually begins. At that point, all the properties in the `video` object have been configured based on the stream's format.
 
 ```js
     video.addEventListener('canplay', function(ev){
@@ -155,7 +155,7 @@ Finally, the `width` and `height` of both the video and the canvas are set to ma
 
 #### Handle clicks on the button
 
-To capture a still photo each time the user clicks the `startbutton`, we need to add an event listener to the button, to be called when the {{event("click")}} event is issued:
+To capture a still photo each time the user clicks the `startbutton`, we need to add an event listener to the button, to be called when the {{domxref("Element/click_event", "click")}} event is issued:
 
 ```js
     startbutton.addEventListener('click', function(ev){
@@ -183,11 +183,11 @@ Clearing the photo box involves creating an image, then converting it into a for
 
 ```js
   function clearphoto() {
-    var context = canvas.getContext('2d');
+    const context = canvas.getContext('2d');
     context.fillStyle = "#AAA";
     context.fillRect(0, 0, canvas.width, canvas.height);
 
-    var data = canvas.toDataURL('image/png');
+    const data = canvas.toDataURL('image/png');
     photo.setAttribute('src', data);
   }
 ```
@@ -202,13 +202,13 @@ There's one last function to define, and it's the point to the entire exercise: 
 
 ```js
   function takepicture() {
-    var context = canvas.getContext('2d');
+    const context = canvas.getContext('2d');
     if (width && height) {
       canvas.width = width;
       canvas.height = height;
       context.drawImage(video, 0, 0, width, height);
 
-      var data = canvas.toDataURL('image/png');
+      const data = canvas.toDataURL('image/png');
       photo.setAttribute('src', data);
     } else {
       clearphoto();
@@ -314,21 +314,21 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
   // width to the value defined here, but the height will be
   // calculated based on the aspect ratio of the input stream.
 
-  var width = 320;    // We will scale the photo width to this
-  var height = 0;     // This will be computed based on the input stream
+  let width = 320;    // We will scale the photo width to this
+  let height = 0;     // This will be computed based on the input stream
 
   // |streaming| indicates whether or not we're currently streaming
   // video from the camera. Obviously, we start at false.
 
-  var streaming = false;
+  let streaming = false;
 
   // The various HTML elements we need to configure or control. These
   // will be set by the startup() function.
 
-  var video = null;
-  var canvas = null;
-  var photo = null;
-  var startbutton = null;
+  let video = null;
+  let canvas = null;
+  let photo = null;
+  let startbutton = null;
 
   function showViewLiveResultButton() {
     if (window.self !== window.top) {
@@ -392,11 +392,11 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
   // captured.
 
   function clearphoto() {
-    var context = canvas.getContext('2d');
+    const context = canvas.getContext('2d');
     context.fillStyle = "#AAA";
     context.fillRect(0, 0, canvas.width, canvas.height);
 
-    var data = canvas.toDataURL('image/png');
+    const data = canvas.toDataURL('image/png');
     photo.setAttribute('src', data);
   }
 
@@ -407,13 +407,13 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
   // other changes before drawing it.
 
   function takepicture() {
-    var context = canvas.getContext('2d');
+    const context = canvas.getContext('2d');
     if (width && height) {
       canvas.width = width;
       canvas.height = height;
       context.drawImage(video, 0, 0, width, height);
 
-      var data = canvas.toDataURL('image/png');
+      const data = canvas.toDataURL('image/png');
       photo.setAttribute('src', data);
     } else {
       clearphoto();

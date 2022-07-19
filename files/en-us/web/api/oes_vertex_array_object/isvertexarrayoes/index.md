@@ -41,7 +41,7 @@ var ext = gl.getExtension('OES_vertex_array_object');
 var vao = ext.createVertexArrayOES();
 ext.bindVertexArrayOES(vao);
 
-// ...
+// …
 
 ext.isVertexArrayOES(vao);
 ```

@@ -81,7 +81,7 @@ In the global context, a variable declared using `var` is added as a
 non-configurable property of the global object. This means its property descriptor
 cannot be changed and it cannot be deleted using {{JSxRef("Operators/delete", "delete")}}. The corresponding
 name is also added to a list on the internal `[[VarNames]]` slot on the
-[global environment record](https://262.ecma-international.org/10.0/#sec-global-environment-records)
+[global environment record](https://tc39.es/ecma262/#sec-global-environment-records)
 (which forms part of the global lexical environment). The list
 of names in `[[VarNames]]` enables the runtime to distinguish between global
 variables and straightforward properties on the global object.
@@ -95,7 +95,7 @@ operator on a global variable.
 ```js
 'use strict';
 var x = 1;
-globalThis.hasOwnProperty('x'); // true
+Object.hasOwn(globalThis, 'x'); // true
 delete globalThis.x; // TypeError in strict mode. Fails silently otherwise.
 delete x;  // SyntaxError in strict mode. Fails silently otherwise.
 ```
@@ -112,18 +112,12 @@ to a value, the scope chain is searched. This means that properties on the globa
 are conveniently visible from every scope, without having to qualify the names with
 `globalThis.` or `window.` or `global.`.
 
-So you can just type:
+Because the global object has a `String` property (`Object.hasOwn(globalThis, 'String')`), you can use the following code:
 
 ```js
 function foo() {
   String('s') // Note the function `String` is implicitly visible
 }
-```
-
-...because
-
-```js
-globalThis.hasOwnProperty('String') // true
 ```
 
 So the global object will ultimately be searched for unqualified identifiers. You don't
@@ -134,7 +128,7 @@ scope chain, assume you want to create a property with that name on the global o
 
 ```js
 foo = 'f' // In non-strict mode, assumes you want to create a property named `foo` on the global object
-globalThis.hasOwnProperty('foo') // true
+Object.hasOwn(globalThis, 'foo') // true
 ```
 
 In ECMAScript 5, this behavior was changed for [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).

@@ -56,7 +56,7 @@ The newly inserted rule's index within the stylesheet's rule-list.
   - : Thrown if `index` > `{{domxref("CSSRuleList", "", "", "1")}}.length`.
 - `HierarchyRequestError` {{domxref("DOMException")}}
   - : Thrown if `rule` cannot be inserted at `index` `0` due to some CSS constraint.
-- `SyntaxError`{{domxref("DOMException")}}
+- `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if more than one rule is given in the `rule` parameter.
 - `HierarchyRequestError` {{domxref("DOMException")}}
   - : Thrown if trying to insert an {{cssxref("@import")}} at-rule after a style rule.

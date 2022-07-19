@@ -42,7 +42,7 @@ xhr.open(method, url, true);
 xhr.onreadystatechange = function () {
   // In local files, status is 0 upon success in Mozilla Firefox
   if(xhr.readyState === XMLHttpRequest.DONE) {
-    var status = xhr.status;
+    const status = xhr.status;
     if (status === 0 || (status >= 200 && status < 400)) {
       // The request has been completed successfully
       console.log(xhr.responseText);

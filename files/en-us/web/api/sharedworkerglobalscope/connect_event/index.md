@@ -56,10 +56,10 @@ The connecting port can be referenced through the event object's `ports` paramet
 
 ```js
 self.onconnect = function(e) {
-    var port = e.ports[0];
+    const port = e.ports[0];
 
     port.onmessage = function(e) {
-      var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+      const workerResult = 'Result: ' + (e.data[0] * e.data[1]);
       port.postMessage(workerResult);
     }
 
@@ -75,10 +75,10 @@ You could also set up an event handler using the {{domxref("EventTarget/addEvent
 
 ```js
 self.addEventListener('connect', function(e) {
-  var port = e.ports[0];
+  const port = e.ports[0];
 
   port.onmessage = function(e) {
-    var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+    const workerResult = 'Result: ' + (e.data[0] * e.data[1]);
     port.postMessage(workerResult);
   }
 

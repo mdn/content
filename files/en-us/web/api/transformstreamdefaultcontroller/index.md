@@ -17,7 +17,7 @@ When constructing a {{domxref("TransformStream")}}, the `TransformStreamDefaultC
 
 ## Properties
 
-- {{domxref("TransformStreamDefaultController.desiredSize")}}{{readonlyinline}}
+- {{domxref("TransformStreamDefaultController.desiredSize")}} {{readonlyinline}}
   - : Returns the desired size to fill the readable side of the stream's internal queue.
 
 ## Methods
@@ -59,6 +59,7 @@ const transformContent = {
       default:
         controller.enqueue(this.textencoder.encode(String(chunk)))
         break
+    }
   },
   flush() { /* do any destructor work here */ }
 }

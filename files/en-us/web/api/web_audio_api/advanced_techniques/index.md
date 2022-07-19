@@ -99,7 +99,7 @@ First of all, we'll create our periodic wave. To do so, We need to pass real and
 const wave = audioCtx.createPeriodicWave(wavetable.real, wavetable.imag);
 ```
 
-> **Note:** In our example the wavetable is held in a separate JavaScript file (`wavetable.js`), because there are _so_ many values. It is taken from a [repository of wavetables](https://github.com/GoogleChromeLabs/web-audio-samples/tree/main/archive/demos/wave-tables), which can be found in the [Web Audio API examples from Google Chrome Labs](https://github.com/GoogleChromeLabs/web-audio-samples/).
+> **Note:** In our example the wavetable is held in a separate JavaScript file (`wavetable.js`), because there are _so_ many values. It is taken from a [repository of wavetables](https://github.com/GoogleChromeLabs/web-audio-samples/tree/main/src/demos/wavetable-synth/wave-tables), which can be found in the [Web Audio API examples from Google Chrome Labs](https://github.com/GoogleChromeLabs/web-audio-samples/).
 
 ### The Oscillator
 
@@ -430,7 +430,7 @@ We can now use `setupSample()` like so:
 setupSample()
     .then((sample) => {
         // sample is our buffered file
-        // ...
+        // …
 });
 ```
 

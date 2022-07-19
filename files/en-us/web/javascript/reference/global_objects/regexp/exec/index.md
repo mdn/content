@@ -87,7 +87,7 @@ The following table shows the state of `result` after running this script:
       <td><code>"Quick Brown Fox Jumps"</code></td>
     </tr>
     <tr>
-      <td><code>[1], ...[<var>n</var>]</code></td>
+      <td><code>[1], …[<var>n</var>]</code></td>
       <td>
         <p>The parenthesized substring matches, if any.</p>
         <p>The number of possible parenthesized substrings is unlimited.</p>

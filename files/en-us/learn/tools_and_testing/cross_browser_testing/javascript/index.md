@@ -93,7 +93,7 @@ It is not very convenient to have to copy and paste your code over to a web page
 To install it:
 
 1. Install Atom (if you haven't got an up-to-date version already installed) — download it from the Atom page linked above.
-2. Go to Atom's _Preferences..._ dialog (e.g. by Choosing _Atom > Preferences..._ on Mac, or _File > Preferences..._ on Windows/Linux) and choose the _Install_ option in the left-hand menu.
+2. Go to Atom's _Preferences…_ dialog (e.g. by Choosing _Atom > Preferences…_ on Mac, or _File > Preferences…_ on Windows/Linux) and choose the _Install_ option in the left-hand menu.
 3. In the _Search packages_ text field, type "jslint" and press Enter/Return to search for linting-related packages.
 4. You should see a package called **lint** at the top of the list. Install this first (using the _Install_ button), as other linters rely on it to work. After that, install the **linter-jshint** plugin.
 5. After the packages have finished installing, try loading up a JavaScript file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.
@@ -129,7 +129,11 @@ function showHeroes(jsonObj) {
   let heroes = jsonObj['members'];
 
   for(i = 0; i < heroes.length; i++) {
-  ...
+    // …
+   }
+
+   // …
+ }
 ```
 
 So the code falls over as soon as we try to access a property of `jsonObj` (which as you might expect, is supposed to be a [JSON object](/en-US/docs/Learn/JavaScript/Objects/JSON)). This is supposed to be fetched from an external `.json` file using the following XMLHttpRequest call:
@@ -403,13 +407,13 @@ Another option that is becoming popular for people that want to use modern JavaS
 So for example, we talked about arrow functions (see [arrow-function.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html) live, and see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/arrow-function.html)) earlier in the article, which only work in the newest browsers:
 
 ```js
-() => { ... }
+() => { }
 ```
 
 We could transpile this across to a traditional old-fashioned anonymous function, so it would work in older browsers:
 
 ```js
-function() { ... }
+function() { /* … */ }
 ```
 
 The recommended tool for JavaScript transpiling is currently [Babel](https://babeljs.io/). This offers transpilation capabilities for language features that are appropriate for transpilation. For features that can't just be easily transpiled into an older equivalent, Babel also offers polyfills to provide support.
@@ -456,7 +460,7 @@ In the previous article, we included quite a lot of discussion about [handling C
 - Chrome/Opera/Safari would use `webkitObject`
 - Microsoft would use `msObject`
 
-Here's an example, taken from our [violent-theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) (see [source code](https://github.com/mdn/webaudio-examples/violent-theremin)), which uses a combination of the [Canvas API](/en-US/docs/Web/API/Canvas_API) and the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to create a fun (and noisy) drawing tool:
+Here's an example, taken from our [violent-theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) (see [source code](https://github.com/mdn/webaudio-examples/tree/master/violent-theremin)), which uses a combination of the [Canvas API](/en-US/docs/Web/API/Canvas_API) and the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to create a fun (and noisy) drawing tool:
 
 ```js
 const AudioContext = window.AudioContext || window.webkitAudioContext;

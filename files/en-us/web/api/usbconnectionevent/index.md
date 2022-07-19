@@ -23,7 +23,7 @@ The **`USBConnectionEvent`** interface of the {{domxref('WebUSB API','','',' ')}
 
 ## Properties
 
-- {{domxref("USBConnectionEvent.device")}}{{ReadOnlyInline}}
+- {{domxref("USBConnectionEvent.device")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("USBDevice")}} object representing the current device.
 
 ## Examples

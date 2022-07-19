@@ -15,7 +15,7 @@ destroyed to improve in memory usage and to prevent memory leaks.
 
 ## Message
 
-```js
+```
 TypeError: can't access dead object
 ```
 

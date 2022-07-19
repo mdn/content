@@ -28,10 +28,10 @@ exports.book_create_get = function(req, res, next) {
 
     // Get all authors and genres, which we can use for adding to our book.
     async.parallel({
-        authors: function(callback) {
+        authors(callback) {
             Author.find(callback);
         },
-        genres: function(callback) {
+        genres(callback) {
             Genre.find(callback);
         },
     }, function(err, results) {
@@ -53,11 +53,11 @@ Find the exported `book_create_post()` controller method and replace it with the
 exports.book_create_post = [
     // Convert the genre to an array.
     (req, res, next) => {
-        if(!(req.body.genre instanceof Array)){
+        if(!(Array.isArray(req.body.genre))){
             if(typeof req.body.genre ==='undefined')
             req.body.genre = [];
             else
-            req.body.genre = new Array(req.body.genre);
+            req.body.genre = [req.body.genre];
         }
         next();
     },
@@ -89,10 +89,10 @@ exports.book_create_post = [
 
             // Get all authors and genres for form.
             async.parallel({
-                authors: function(callback) {
+                authors(callback) {
                     Author.find(callback);
                 },
-                genres: function(callback) {
+                genres(callback) {
                     Genre.find(callback);
                 },
             }, function(err, results) {
@@ -127,11 +127,11 @@ The main difference with respect to the other form handling code is how we sanit
 ```js
 // Convert the genre to an array.
 (req, res, next) => {
-    if(!(req.body.genre instanceof Array)){
+    if(!(Array.isArray(req.body.genre))){
         if(typeof req.body.genre === 'undefined')
         req.body.genre = [];
         else
-        req.body.genre = new Array(req.body.genre);
+        req.body.genre = [req.body.genre];
     }
     next();
 },

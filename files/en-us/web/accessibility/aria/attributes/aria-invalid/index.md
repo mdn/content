@@ -22,7 +22,7 @@ The attribute should be set with JavaScript as a result of a validation process.
 
 > **Note:** When `aria-invalid` is used in conjunction with the `aria-required` attribute, `aria-invalid` should not be set to true before the form is submitted - only in response to validation.
 
-There are currently four values: in addition to `true` and `false` we have `grammar` which can be used when a grammatical is detected and `spelling` for spelling errors.  If the attribute is not present, or its value is false, or its value is an empty string, the default value of false applies. Any other value is treated as if `true` were set. It is possible that more values will be added in the future.
+There are currently four values: in addition to `true` and `false` we have `grammar` which can be used when a grammatical error is detected and `spelling` for spelling errors.  If the attribute is not present, or its value is false, or its value is an empty string, the default value of false applies. Any other value is treated as if `true` were set.
 
 ### Native HTML validation
 

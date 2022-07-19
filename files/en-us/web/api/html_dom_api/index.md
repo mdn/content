@@ -164,7 +164,6 @@ These interfaces represent specific HTML elements (or sets of related elements w
 
 #### Obsolete HTML Element Interfaces
 
-- {{DOMxRef("HTMLBaseFontElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFontElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFrameElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFrameSetElement")}} {{deprecated_inline}}

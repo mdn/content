@@ -45,5 +45,5 @@ console.log(syntheticEvent.deltaMode);
 
 ## See also
 
-- {{ event("wheel") }}
+- {{domxref("Element/wheel_event","wheel")}}
 - {{domxref("WheelEvent")}}

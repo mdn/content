@@ -93,8 +93,6 @@ The UI Events API defines a system for handling user interactions such as mouse 
   - : Fired when a mouse or other pointing device is moved outside the element.
 - {{domxref("Element.mouseup_event", "mouseup")}}
   - : Fired when the user releases a button on a mouse or other pointing device, while the pointer is over the element.
-- {{domxref("Element.select_event", "select")}}
-  - : Fired when the user selects some text.
 - {{domxref("Window.unload_event", "unload")}}
   - : Fired when the document or a child resource are being unloaded.
 - {{domxref("Element.wheel_event", "wheel")}}

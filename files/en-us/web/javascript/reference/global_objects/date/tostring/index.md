@@ -75,11 +75,7 @@ represented as a text value, e.g. `console.log(new Date())`, or when a date
 is used in a string concatenation, such as
 `const today = 'Today is ' + new Date()`.
 
-`toString()` is a generic method, it does not require that its
-`this` is a {{jsxref("Date")}} instance. However, it must have an internal
-`[[TimeValue]]` property that can't be constructed using native JavaScript,
-so it's effectively limited to use with {{jsxref("Date")}} instances. If called on a
-non–Date instance, a {{jsxref("TypeError")}} is thrown.
+`Date.prototype.toString()` must be called on {{jsxref("Date")}} instances. If the `this` value does not inherit from `Date.prototype`, a {{jsxref("TypeError")}} is thrown.
 
 ## Examples
 

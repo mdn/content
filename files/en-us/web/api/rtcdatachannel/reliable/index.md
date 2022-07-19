@@ -21,22 +21,10 @@ reliable.
 > **Warning:** This property is obsolete. Use {{domxref("RTCDataChannel.ordered")}} instead in any
 > new code, and update existing code as soon as possible.
 
-## Syntax
-
-```js
-var reliable = aDataChannel.reliable;
-```
-
-### Value
+## Value
 
 `true` if the {{domxref("RTCDataChannel")}}'s connection is reliable;
 `false` if it isn't.
-
-## Example
-
-```js
-// TBD
-```
 
 ## Specifications
 

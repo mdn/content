@@ -40,9 +40,9 @@ set custom styles on a page.
 
 ```js
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  const currentColor = localStorage.getItem('bgcolor');
+  const currentFont = localStorage.getItem('font');
+  const currentImage = localStorage.getItem('image');
 
   document.getElementById('bgcolor').value = currentColor;
   document.getElementById('font').value = currentFont;

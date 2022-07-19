@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Cache
-  - Experimental
   - Method
   - NeedsExample
   - Reference

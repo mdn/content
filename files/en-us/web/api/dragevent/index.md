@@ -46,23 +46,6 @@ Although this interface has a constructor, it is not possible to create a useful
 - {{domxref("HTMLElement/drop_event", "drop")}}
   - : This event is fired when an element or text selection is dropped on a valid drop target.
 
-## GlobalEventHandlers
-
-- {{domxref('GlobalEventHandlers.ondrag')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{domxref("HTMLElement/drag_event", "drag")}} event.
-- {{domxref('GlobalEventHandlers.ondragend')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{domxref("HTMLElement/dragend_event", "dragend")}} event.
-- {{domxref('GlobalEventHandlers.ondragenter')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{domxref("HTMLElement/dragenter_event", "dragenter")}} event.
-- {{domxref('GlobalEventHandlers.ondragleave')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{domxref("HTMLElement/dragleave_event", "dragleave")}} event.
-- {{domxref('GlobalEventHandlers.ondragover')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{domxref("HTMLElement/dragover_event", "dragover")}} event.
-- {{domxref('GlobalEventHandlers.ondragstart')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event.
-- {{domxref('GlobalEventHandlers.ondrop')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{domxref("HTMLElement/drop_event", "drop")}} event.
-
 ## Example
 
 An Example of each property, constructor, event type and global event handlers is included in their respective reference page.

@@ -71,9 +71,9 @@ function printPerformanceEntry(entry) {
   for (const prop of properties) {
     // Check each property
     if (prop in entry) {
-      output.textContent += `... ${prop} = ${entry[prop]} \n`;
+      output.textContent += `… ${prop} = ${entry[prop]} \n`;
     } else {
-      output.textContent += `... ${prop} is NOT supported \n`;
+      output.textContent += `… ${prop} is NOT supported \n`;
     }
   }
 }
