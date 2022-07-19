@@ -125,7 +125,7 @@ Events have three functions:
   - : `string`. Target of the request.
 - `urlClassification`
 
-  - : `object`. The type of tracking associated with the request, if with the request has been classified by [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop). This is an object with the following properties:
+  - : `object`. The type of tracking associated with the request, if with the request has been classified by [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop). This is an object with these properties:
 
     - `firstParty`
       - : `array` of `strings`. Classification flags for the request's first party.
@@ -140,6 +140,17 @@ Events have three functions:
     - `any_basic_tracking`: a meta flag that combines any tracking and fingerprinting flags, excluding `tracking_content` and `fingerprinting_content`.
     - `any_strict_tracking`: a meta flag that combines any tracking and fingerprinting flags, including `tracking_content` and `fingerprinting_content`.
     - `any_social_tracking`: a meta flag that combines any social tracking flags.
+    
+    **Note** If Firefox Tracking Protection blocks the request an empty object is returned and `error` returns one of these descriptions:
+    - "The URI is malware"
+    - "The URI is phishing"
+    - "The URI is tracking"
+    - "The URI is unwanted"
+    - "The URI is blocked"
+    - "The URI is harmful"
+    - "The URI is fingerprinting"
+    - "The URI is cryptomining"
+    - "The URI is social tracking"
 
 ## Browser compatibility
 
