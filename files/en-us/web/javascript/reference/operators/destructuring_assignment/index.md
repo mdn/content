@@ -80,6 +80,8 @@ const { a, b } = obj;
 
 This capability is similar to features present in languages such as Perl and Python.
 
+### Binding and assignment
+
 For both object and array destructuring, there are two kinds of destructuring patterns: _binding pattern_ and _assignment pattern_, with slightly different syntaxes.
 
 In binding patterns, the pattern starts with a declaration keyword (`var`, `let`, or `const`). Then, each individual property must either be bound to a variable or further destructured.
@@ -126,6 +128,8 @@ const { a: numbers[0], b: numbers[1] } = obj;
 // Which definitely is not valid.
 ```
 
+### Default value
+
 Each destructured property can have a _default value_. The default value is used when the property is not present, or has value `undefined`. It is not used if the property has value `null`.
 
 ```js
@@ -142,13 +146,15 @@ const { b = console.log("hey") } = { b: 2 };
 // to evaluate the default value.
 ```
 
+### Rest property
+
 You can end a destructuring pattern with a rest property `...rest`. This pattern will store all remaining properties of the object or array into a new object or array.
 
 ```js
 const { a, ...others } = { a: 1, b: 2, c: 3 };
 console.log(others); // { b: 2, c: 3 }
 
-const [a, ...other2] = [1, 2, 3];
+const [a, ...others2] = [1, 2, 3];
 console.log(others2); // [2, 3]
 ```
 
@@ -160,6 +166,8 @@ const [a, ...b,] = [1, 2, 3];
 // SyntaxError: rest element may not have a trailing comma
 // Always consider using rest operator as the last element
 ```
+
+### Destructuring patterns with other syntaxes
 
 In many syntaxes where the language binds a variable for you, you can use a destructuring pattern as well. These include:
 
