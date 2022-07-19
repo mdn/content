@@ -1,4 +1,11 @@
-<!-- captured -->
+---
+title: Updating JSON
+slug: MDN/Writing_guidelines/Page_structure/Updating_JSON
+page-type: mdn-writing-guide
+tags:
+  - meta
+  - writing-guide
+---
 
 MDN stores data in well-defined structures when possible. This information is then centralized and can be updated once, while being used in numerous places.
 

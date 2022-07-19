@@ -6,9 +6,8 @@ tags:
   - meta
   - writing-guide
 ---
-{{MDNSidebar}}
 
-<!-- Captured -->
+{{MDNSidebar}}
 
 The MDN [HTTP header reference](/en-US/docs/Web/HTTP/Headers) documents HTTP header fields are components of the header section of request and response messages in the Hypertext Transfer Protocol ([HTTP](/en-US/docs/Web/HTTP)). They define the operating parameters of an HTTP transaction. This page explains how to create a new MDN reference page for an HTTP header.
 
@@ -50,7 +49,7 @@ The MDN [HTTP header reference](/en-US/docs/Web/HTTP/Headers) documents HTTP hea
   - A specification section listing relevant RFC standard documents.
   - A "See also" section listing relevant resources.
 
-## Step 4a –  add tags to the page
+## Step 4a – add tags to the page
 
 All HTTP header pages should at least have these tags: "HTTP", "Header", "Reference".
 

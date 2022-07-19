@@ -6,9 +6,8 @@ tags:
   - meta
   - writing-guide
 ---
-{{MDNSidebar}}
 
-<!-- Captured -->
+{{MDNSidebar}}
 
 This article explains how to add and link to entries in the [MDN Web Docs glossary](/en-US/docs/Glossary).
 It also provides guidelines about glossary entry layout and content.

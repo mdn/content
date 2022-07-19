@@ -1,4 +1,11 @@
-<!-- Capture -->
+---
+title: CSS property page type
+slug: MDN/Writing_guidelines/Page_structure/Page_types/CSS/Property
+page-type: mdn-writing-guide
+tags:
+  - meta
+  - writing-guide
+---
 
 As the [CSS](/en-US/docs/Web/CSS) standards evolve, new properties are always being added. The MDN [CSS Reference](/en-US/docs/Web/CSS/Reference) needs to be kept up-to-date with these developments. This document gives step-by-step instructions for creating a CSS property reference page.
 

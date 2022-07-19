@@ -6,10 +6,8 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
-
-<!-- Captured -->
-
 
 MDN Web Docs is not a very video-heavy site, but there are certain places where video content makes sense to use as part of an article.
 This article discusses when including videos in MDN articles is appropriate, and provides tips on how to create simple but effective videos on a budget.

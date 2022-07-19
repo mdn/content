@@ -1,14 +1,13 @@
 ---
 title: JavaScript error page type
-slug: MDN/Writing_guidelines/Page_structure/Page_types/Javascript_errors
+slug: MDN/Writing_guidelines/Page_structure/Page_types/JavaScript/Errors
 page-type: mdn-writing-guide
 tags:
   - meta
   - writing-guide
 ---
-{{MDNSidebar}}
 
-<!-- Captured -->
+{{MDNSidebar}}
 
 The MDN [JavaScript error reference](/en-US/docs/Web/JavaScript/Reference/Errors) is a project aiming to help web developers with errors occurring in the [Developer Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html). You can see this feature in action in Firefox — JavaScript errors contain a "Learn more" link that takes you to the JavaScript error reference containing additional advice for fixing issues.
 

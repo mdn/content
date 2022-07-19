@@ -6,9 +6,8 @@ tags:
   - meta
   - writing-guide
 ---
-{{MDNSidebar}}
 
-<!-- Captured -->
+{{MDNSidebar}}
 
 This document series outlines the coding guidelines and best practices we use for writing demos, code snippets, interactive examples, etc, for use on MDN.
 
@@ -51,8 +50,8 @@ Further general best practices are as follows:
 - Don't use bad practices for brevity (such as presentational elements like {{HTMLElement("big")}} or {{domxref("Document.write", "document.write()")}}); do it correctly.
 - In the case of API demos, if you are using multiple APIs together point out what APIs are included, and what features come from where.
 
-
 <!-- Converting live sample -->
+
 MDN has a "[live sample](/en-US/docs/MDN/Structures/Live_samples)" system, where the code sample shown on a page is directly used to display the output of that same sample. However, many existing articles have code samples that do not yet use this system, and need to be converted.
 
 Live samples, which let you see what a sample's output looks like, make documentation more dynamic and instructive. This guide covers how to take existing samples and add "live" functionality to them.
@@ -75,6 +74,7 @@ Any article that has a static code example (just blocks of HTML, CSS, JavaScript
 For more information on creating and editing Live Samples, see [Using the live sample system](/en-US/docs/MDN/Structures/Live_samples)
 
 <!-- interactive example -->
+
 When learning the web, it's important to rely on active learning content. Such content is made to help with learning something pro-actively. It can be exercises, live hackable examples, tasks to perform, assessments, etc. In short, anything that can help someone to actively understand something.
 
 There is no straightforward way to create such content. For example many third party tools exist that can help you create live hackable examples (see: [JSFiddle](https://jsfiddle.net/), [CodePen](https://codepen.io/), [Dabblet](https://dabblet.com/), etc.) that you can link from MDN articles. If you want to create more advanced comprehensible exercises, you can easily use [Thimble](https://thimble.mozilla.org) from the WebMaker project.
@@ -137,17 +137,19 @@ setColor(getRandomColor());
 If you take a look at the source code of this page, you'll see the following HTML code:
 
 ```html
-<p>Click on the following square to randomly change its color or just type an hexadecimal code color</p>
+<p>
+  Click on the following square to randomly change its color or just type an
+  hexadecimal code color
+</p>
 
 <div id="hidden_code_example">
-
-<pre class="brush: html hidden">
+  <pre class="brush: html hidden">
   <div class="square">
     <p class="color">#000000</p>
   </div>
 </pre>
 
-<pre class="brush: css hidden">
+  <pre class="brush: css hidden">
 body {
   padding: 10px;
   margin : 0;
@@ -166,9 +168,10 @@ body {
   width: 60px;
   text-transform: uppercase;
 }
-</pre>
+</pre
+  >
 
-<pre class="brush: js hidden">
+  <pre class="brush: js hidden">
 function setColor(color) {
   document.querySelector('.square').style.backgroundColor = '#' + color;
   document.querySelector('.color').textContent = '#' + color;
@@ -182,7 +185,8 @@ function getRandomColor() {
 document.addEventListener('click', function (e) {
   setColor(getRandomColor());
 });
-</pre>
+</pre
+  >
 </div>
 
 \{{EmbedLiveSample('hidden_code_example', 120, 125)}}

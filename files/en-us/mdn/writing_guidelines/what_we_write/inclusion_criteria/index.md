@@ -1,6 +1,6 @@
 ---
 title: Inclusion criteria
-slug: MDN/Writing_guide/Inclusion_criteria
+slug: MDN/Writing_guidelines/What_we_write/Inclusion_criteria
 page-type: mdn-writing-guide
 tags:
   - meta
