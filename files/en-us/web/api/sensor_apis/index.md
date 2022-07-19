@@ -32,7 +32,7 @@ The examples below show three methods for detecting sensor APIs. Additionally yo
 
 ```js
 if (typeof Gyroscope === "function") {
-    // run in circles...
+    // run in circles…
 }
 
 if ("ProximitySensor" in window) {
@@ -40,7 +40,7 @@ if ("ProximitySensor" in window) {
 }
 
 if (window.AmbientLightSensor) {
-    // go dark...
+    // go dark…
 }
 ```
 

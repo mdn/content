@@ -59,7 +59,7 @@ fetch('./tortoise.png')
 .then(response => response.body)
 .then(body => {
   const reader = body.getReader();
-  // ...
+  // …
   });
 ```
 
@@ -73,7 +73,7 @@ Also note that the previous example can be reduced by one step, as `response.bod
   // Retrieve its body as ReadableStream
   .then(response => {
     const reader = response.body.getReader();
-    // ...
+    // …
   });
 ```
 

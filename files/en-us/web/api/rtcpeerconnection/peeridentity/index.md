@@ -54,7 +54,7 @@ the console and returns `null` to the caller.
 ```js
 let pc = new RTCPeerConnection();
 
-/* ... */
+// …
 
 async function getIdentityAssertion(pc) {
   try {

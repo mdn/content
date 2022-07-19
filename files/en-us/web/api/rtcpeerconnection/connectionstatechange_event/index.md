@@ -43,13 +43,13 @@ pc.onconnectionstatechange = ev => {
   switch(pc.connectionState) {
     case "new":
     case "checking":
-      setOnlineStatus("Connecting...");
+      setOnlineStatus("Connecting…");
       break;
     case "connected":
       setOnlineStatus("Online");
       break;
     case "disconnected":
-      setOnlineStatus("Disconnecting...");
+      setOnlineStatus("Disconnecting…");
       break;
     case "closed":
       setOnlineStatus("Offline");
@@ -69,7 +69,7 @@ You can also create a handler for `connectionstatechange` by using {{domxref("Ev
 ```js
 pc.addEventListener("connectionstatechange", ev => {
   switch(pc.connectionState) {
-    /* ... */
+    // …
   }
 }, false);
 ```
