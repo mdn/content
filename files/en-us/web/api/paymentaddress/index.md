@@ -43,13 +43,6 @@ It may be useful to refer to the Universal Postal Union web site's [Addressing S
 
 > **Note:** Properties for which values were not specified contain empty strings.
 
-### Obsolete properties
-
-The following properties are obsolete and should no longer be used, but may still be present in some browser versions.
-
-- {{domxref("PaymentAddress.languageCode")}} {{ReadOnlyInline}} {{deprecated_inline}}
-  - : A string indicating the language code of the address. This identifies the language in which the address is given, and is intended to aid in localization of the display of the address.
-
 ## Methods
 
 - {{domxref('PaymentAddress.toJSON()')}} {{deprecated_inline}}
