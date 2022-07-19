@@ -50,7 +50,7 @@ let cameraActive = false;
 
 navigator.mediaSession.setCameraActive(cameraActive);
 
-navigator.mediaSession.setCameraActive('togglecamera', () => {
+navigator.mediaSession.setActionHandler('togglecamera', () => {
   cameraActive = !cameraActive;
   navigator.mediaSession.setCameraActive(cameraActive);
 });
