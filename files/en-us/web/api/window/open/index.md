@@ -366,7 +366,6 @@ recommendable usability and accessibility guidelines:
 **Further reading:**
 
 - [Top Ten Web-Design Mistakes of 2002](https://www.useit.com/alertbox/20021223.html), 6. JavaScript in Links, Jakob Nielsen, December 2002
-- [Links & JavaScript Living Together in Harmony](https://evolt.org/article/Links_and_JavaScript_Living_Together_in_Harmony/17/20938/), Jeff Howden, February 2002
 - [comp.lang.javascript newsgroup discussion FAQ on "javascript:" links](https://jibbering.com/faq/#FAQ4_24)
 
 #### Never use `<a href="#" onclick="window.open(...);">`
