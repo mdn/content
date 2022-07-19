@@ -430,7 +430,7 @@ We can now use `setupSample()` like so:
 setupSample()
     .then((sample) => {
         // sample is our buffered file
-        // ...
+        // …
 });
 ```
 

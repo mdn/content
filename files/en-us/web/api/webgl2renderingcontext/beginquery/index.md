@@ -51,7 +51,7 @@ None ({{jsxref("undefined")}}).
 var query = gl.createQuery();
 gl.beginQuery(gl.ANY_SAMPLES_PASSED, query);
 
-// ...
+// …
 ```
 
 ## Specifications

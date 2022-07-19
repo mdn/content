@@ -34,7 +34,7 @@ You can use the `resize` event in an [`addEventListener`](/en-US/docs/Web/API/Ev
 
 ```js
 visualViewport.addEventListener('resize', function() {
-  /* ... */
+  // …
 });
 ```
 
@@ -42,7 +42,7 @@ Or use the `onresize` event handler property:
 
 ```js
 visualViewport.onresize = function() {
-  /* ... */
+  // …
 };
 ```
 

@@ -94,7 +94,7 @@ function drawVRScene() {
     // draw the view for each eye
   }
 
-  // ...
+  // …
 
   // WebVR: Indicate that we are ready to present the rendered frame to the VR display
   vrDisplay.submitFrame();

@@ -52,7 +52,7 @@ if(navigator.getVRDisplays) {
           // Here it returns an array of VRLayerInit objects
           layers = vrDisplay.getLayers();
 
-          // ...
+          // …
         });
       });
     }
@@ -64,8 +64,8 @@ if(navigator.getVRDisplays) {
 
 ```
 {
-  leftBounds : [ ... ],
-  rightBounds: [ ... ],
+  leftBounds : [ /* … */ ],
+  rightBounds: [ /* … */ ],
   source: canvasReference
 }
 ```
