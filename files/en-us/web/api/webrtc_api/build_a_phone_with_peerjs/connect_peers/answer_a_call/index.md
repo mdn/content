@@ -47,7 +47,7 @@ Now our users can make a call, but they can't answer one. Let's add the next pie
 
     - `call.answer(window.localStream)`: if `answerCall` is `true`, you'll want to call peerJS's `answer()` function on the call to create an answer, passing it the local stream.
     - `showCallContent`: Similar to what you did in the call button event listener, you want to ensure the person being called sees the correct HTML content.
-    - Everything in the `call.on('stream', function(){...}` block is exactly the same as it is in call button's event listener. The reason you need to add it here too is so that the browser is also updated for the person answering the call.
+    - Everything in the `call.on('stream', function(){ }` block is exactly the same as it is in call button's event listener. The reason you need to add it here too is so that the browser is also updated for the person answering the call.
     - If the person denies the call, we're just going to log a message to the console.
 
 3. The code you have now is enough for you to create a call and answer it. Refresh your browsers and test it out. You'll want to make sure that both browsers have the console open or else you won't get the prompt to answer the call. Click call, submit the peer ID for the other browser and then answer the call. The final page should look like this:
