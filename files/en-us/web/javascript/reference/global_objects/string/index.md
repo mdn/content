@@ -72,8 +72,8 @@ In C, the `strcmp()` function is used for comparing strings. In JavaScript,
 you just use the [less-than and greater-than operators](/en-US/docs/Web/JavaScript/Reference/Operators):
 
 ```js
-let a = 'a'
-let b = 'b'
+const a = 'a';
+const b = 'b';
 if (a < b) { // true
   console.log(a + ' is less than ' + b)
 } else if (a > b) {
@@ -92,10 +92,9 @@ to compare without regard to upper or lower case characters, use a function simi
 this:
 
 ```js
-function isEqual(str1, str2)
-{
-    return str1.toUpperCase() === str2.toUpperCase()
-} // isEqual
+function isEqual(str1, str2) {
+  return str1.toUpperCase() === str2.toUpperCase();
+}
 ```
 
 Upper case is used instead of lower case in this function, due to problems with certain
@@ -115,8 +114,8 @@ will automatically wrap the string primitive and call the method or perform the 
 lookup on the wrapper object instead.
 
 ```js
-let s_prim = 'foo'
-let s_obj = new String(s_prim)
+const s_prim = 'foo'
+const s_obj = new String(s_prim)
 
 console.log(typeof s_prim) // Logs "string"
 console.log(typeof s_obj)  // Logs "object"
@@ -130,10 +129,10 @@ using {{jsxref("Global_Objects/eval", "eval()")}}. Primitives passed to
 all other objects are, by returning the object. For example:
 
 ```js
-let s1 = '2 + 2'              // creates a string primitive
-let s2 = new String('2 + 2')  // creates a String object
-console.log(eval(s1))         // returns the number 4
-console.log(eval(s2))         // returns the string "2 + 2"
+const s1 = '2 + 2';              // creates a string primitive
+const s2 = new String('2 + 2');  // creates a String object
+console.log(eval(s1));           // returns the number 4
+console.log(eval(s2));           // returns the string "2 + 2"
 ```
 
 For these reasons, the code may break when it encounters `String` objects
@@ -172,35 +171,52 @@ Special characters can be encoded using escape sequences:
 Sometimes, your code will include strings which are very long. Rather than having lines
 that go on endlessly, or wrap at the whim of your editor, you may wish to specifically
 break the string into multiple lines in the source code without affecting the actual
-string contents. There are two ways you can do this.
+string contents.
 
-#### Method 1
-
-You can use the [+](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+You can use the [`+`](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
 operator to append multiple strings together, like this:
 
 ```js
-let longString = "This is a very long string which needs " +
-                 "to wrap across multiple lines because " +
-                 "otherwise my code is unreadable."
+const longString = "This is a very long string which needs " +
+                   "to wrap across multiple lines because " +
+                   "otherwise my code is unreadable."
 ```
 
-#### Method 2
-
-You can use the backslash character (`\`) at the end of each line to
+Or you can use the backslash character (`\`) at the end of each line to
 indicate that the string will continue on the next line. Make sure there is no space or
 any other character after the backslash (except for a line break), or as an indent;
 otherwise it will not work.
 
-That form looks like this:
-
 ```js
-let longString = "This is a very long string which needs \
+const longString = "This is a very long string which needs \
 to wrap across multiple lines because \
 otherwise my code is unreadable."
 ```
 
 Both of the above methods result in identical strings.
+
+### UTF-16 characters, Unicode codepoints, and grapheme clusters
+
+Strings are represented fundamentally as sequences of [UTF-16 code units](https://en.wikipedia.org/wiki/UTF-16). In UTF-16 encoding, every code unit is exact 16 bits long. This means there are a maximum of 2<sup>16</sup>, or 65536 possible characters representable as single UTF-16 code units. This character set is called the [basic multilingual plane (BMP)](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane), and includes the most common characters like the Latin, Greek, Cyrillic alphabets, as well as many Easy Asian characters. Each code unit can be written in a string with `\u` followed by exactly four hex digits.
+
+However, the entire Unicode character set is much, much bigger than 65536. The extra characters are stored in UTF-16 as _surrogate pairs_, which are pairs of 16-bit code units that represent a single character. To avoid ambiguity, the two parts of the pair must be between `0xD800` and `0xDFFF`, and these code units are not used to encode single-code-unit characters. Therefore, "lone surrogates" are often not valid values for string manipulation — for example, [`encodeURI()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) will throw a {{jsxref("URIError")}} for lone surrogates. Each Unicode character, comprised of one or two UTF-16 code units, is also called a _Unicode codepoint_. Each Unicode codepoint can be written in a string with `\u{xxxxxx}` where `xxxxxx` represents 1–6 hex digits.
+
+On top of Unicode characters, there are certain sequences of Unicode characters that should be treated as one visual unit, known as a _grapheme cluster_. The most common case is emojis: many emojis that have a range of variations are actually formed by multiple emojis, usually joined by the \<ZWJ> (`U+200D`) character.
+
+You must be careful which level of characters you are iterating on. For example, [`split("")`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) will split by UTF-16 code units and will separate surrogate pairs. String indexes also refer to the index of each UTF-16 code unit. On the other hand, [`@@iterator()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) iterates by Unicode codepoints. Iterating through grapheme clusters will require some custom code.
+
+```js
+"😄".split(""); // ['\ud83d', '\ude04']; splits into two lone surrogates
+
+// "Backhand Index Pointing Right: Dark Skin Tone"
+[..."👉🏿"]; // ['👉', '🏿']
+// splits into the basic "Backhand Index Pointing Right" emoji and 
+// the "Dark skin tone" emoji
+
+// "Family: Man, Boy"
+[..."👨‍👦"]; // [ '👨', '‍', '👦' ]
+// splits into the "Man" and "Boy" emoji, joined by a ZWJ
+```
 
 ## Constructor
 
