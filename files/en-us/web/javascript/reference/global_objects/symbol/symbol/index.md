@@ -90,4 +90,3 @@ typeof symObj // => "object"
 ## See also
 
 - [Polyfill of `Symbol` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
-- [Glossary: Symbol data type](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
