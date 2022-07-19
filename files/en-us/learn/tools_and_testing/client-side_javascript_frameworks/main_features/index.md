@@ -308,7 +308,7 @@ import "@testing-library/jest-dom/extend-expect";
 
 import CounterButton from "./CounterButton";
 
-it("renders a semantic with an initial state of 0", () => {
+it("Renders a semantic button with an initial state of 0", () => {
   const { getByRole } = render(<CounterButton />);
   const btn = getByRole("button");
 
