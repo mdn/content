@@ -62,6 +62,10 @@ if ('mediaSession' in navigator) {
   navigator.mediaSession.setActionHandler('previoustrack', function() { /* Code excerpted. */ });
   navigator.mediaSession.setActionHandler('nexttrack', function() { /* Code excerpted. */ });
   navigator.mediaSession.setActionHandler('skipad', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('togglecamera', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('togglemicrophone', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('hangup', function() { /* Code excerpted. */ });
+
 }
 ```
 
