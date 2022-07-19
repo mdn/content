@@ -36,7 +36,7 @@ A generic {{domxref("Event")}}.
 ## Syntax
 
 ```js
-serviceWorkerGlobalScope.onfetch = function(fetchEvent) { /* ... */ };
+serviceWorkerGlobalScope.onfetch = function(fetchEvent) { /* … */ };
 ```
 
 ## Example
@@ -62,7 +62,7 @@ self.addEventListener('fetch', function(event) {
 
         return response;
       }
-      console.log('No response found in cache. About to fetch from network...');
+      console.log('No response found in cache. About to fetch from network…');
 
       return fetch(event.request).then(function(response) {
         console.log('Response from network is:', response);
