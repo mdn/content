@@ -66,7 +66,7 @@ The promise may be rejected with the following exceptions:
 const offscreen = new OffscreenCanvas(256, 256);
 const gl = offscreen.getContext("webgl");
 
-// ... some drawing using the gl context ...
+// Perform some drawing using the gl context
 
 offscreen.convertToBlob().then( blob => console.log(blob));
 // Blob { size: 334, type: "image/png" }

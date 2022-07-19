@@ -398,7 +398,7 @@ const ajaxRequest = new (function () {
         history.replaceState(pageInfo, pageInfo.title, pageInfo.url);
         for (const link of document.links) {
             link.onclick = processLink;
-        );
+        };
     }
 
     loadingBox.id = "ajax-loader";

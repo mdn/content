@@ -46,7 +46,7 @@ function drawVRScene() {
   const aaz = angAcc[2];
 
   // render the scene
-  // ...
+  // …
 
   // WebVR: submit the rendered frame to the VR display
   vrDisplay.submitFrame();

@@ -24,7 +24,7 @@ This article explains how readable byte streams compare to normal "default" stre
 
 > **Note:** Readable byte streams are almost identical to "normal" readable streams and almost all of the concepts are the same.
 > This article assumes that you already understand those concepts and will only be covering them superficially (if at all).
-> If you're not familiar with the relevent concepts, please first read: [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams), [Streams concepts and usage overview](/en-US/docs/Web/API/Streams_API#concepts_and_usage), and [Streams API concepts](/en-US/docs/Web/API/Streams_API/Concepts).
+> If you're not familiar with the relevant concepts, please first read: [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams), [Streams concepts and usage overview](/en-US/docs/Web/API/Streams_API#concepts_and_usage), and [Streams API concepts](/en-US/docs/Web/API/Streams_API/Concepts).
 
 ## Overview
 
@@ -70,17 +70,17 @@ This live example shows how to create a readable byte stream with a _push_ under
 
 Unlike with a pull underlying byte source, data can arrive at any time.
 Therefore the underlying source must use `controller.byobRequest` to transfer incoming data if one exists, and otherwise enqueue the data into the stream's internal queues.
-Further, since the data can arrive at any time the monitoring behaviour is set up in the `underlyingSource.start()` callback function.
+Further, since the data can arrive at any time the monitoring behavior is set up in the `underlyingSource.start()` callback function.
 
 The example is highly influenced by a push byte source example in the stream specification.
 It uses a mocked "hypothetical socket" source that supplies data of arbitrary sizes.
-The reader is deliberately delayed at various points to allow the underlying source to use both transfer and enqueing to send data to the stream.
+The reader is deliberately delayed at various points to allow the underlying source to use both transfer and enqueuing to send data to the stream.
 Backpressure support is not demonstrated.
 
 > **Note:** An underlying byte source can also be used with a default reader.
 > If automatic buffer allocation is enabled the controller will supply fixed-size buffers for zero-copy transfers when there is an outstanding request from a reader and the stream's internal queues are empty.
 > If automatic buffer allocation is not enabled then all data from the byte stream will always be enqueued.
-> This is similar to the behaviour shown in the "pull: underlying byte source examples.
+> This is similar to the behavior shown in the "pull: underlying byte source examples.
 
 #### Mocked underlying socket source
 
@@ -153,13 +153,13 @@ class MockHypotheticalSocket {
   getNumberRandomBytesSocket() {
     //Capped to remaining data and the max min return-per-read range
     const remaining_data = this.max_data - this.data_read;
-    let numberBytesRecieved = 0;
+    let numberBytesReceived = 0;
     if (remaining_data < this.min_per_read) {
-      numberBytesRecieved = remaining_data;
+      numberBytesReceived = remaining_data;
     } else {
-      numberBytesRecieved = this.getRandomIntInclusive(this.min_per_read, Math.min(this.max_per_read, remaining_data));
+      numberBytesReceived = this.getRandomIntInclusive(this.min_per_read, Math.min(this.max_per_read, remaining_data));
     }
-    return numberBytesRecieved;
+    return numberBytesReceived;
   }
 
   /* Return random number between two values */
@@ -253,9 +253,9 @@ This ensures that the stream is handed a {{domxref("ReadableByteStreamController
 
 Since data can arrive at the socket before the consumer is ready to handle it, everything about reading the underlying source is configured in the `start()` callback method (we don't wait on a pull to start handling data).
 The implementation opens the "socket" and calls `select2()` to request data.
-When the retured promise resolves the code checks if `controller.byobRequest` exists (is not `null`), and if so calls `socket.readInto()` to copy data into the request and transfer it.
-If `byobRequest` does not exist there is no outstanding request from a consuming stream that can be satisifed as as zero-copy transfer.
-In this case, `constroller.enqueue()` used to copy data to the stream internal queues.
+When the returned promise resolves the code checks if `controller.byobRequest` exists (is not `null`), and if so calls `socket.readInto()` to copy data into the request and transfer it.
+If `byobRequest` does not exist there is no outstanding request from a consuming stream that can be satisfied as as zero-copy transfer.
+In this case, `controller.enqueue()` used to copy data to the stream internal queues.
 
 The `select2()` request for more data is reposted until a request is returned with no data.
 A this point the controller is used to close the stream.
@@ -400,7 +400,7 @@ reader.closed
 #### Result
 
 The logging from the underlying push source (left) and consumer (right) are shown below.
-Not the period in the middle where data is equeued rather than transferred as a zero-copy operation.
+Not the period in the middle where data is enqueued rather than transferred as a zero-copy operation.
 
 {{EmbedLiveSample("Underlying push source with default reader","100%","500px")}}
 
@@ -564,9 +564,9 @@ function makeReadableByteFileStream(filename) {
     },
     async pull(controller) {
       // Called when there is a pull request for data
-      const theview = controller.byobRequest.view;
+      const theView = controller.byobRequest.view;
       const {bytesRead, buffer} = 
-        await fileHandle.read(theview.buffer, theview.offset, theview.length, position)
+        await fileHandle.read(theView.buffer, theView.offset, theView.length, position)
       if (bytesRead === 0) {
         await fileHandle.close();
         controller.close();
@@ -787,9 +787,9 @@ function makeReadableByteFileStream(filename) {
     },
     async pull(controller) {
       // Called when there is a pull request for data
-      const theview = controller.byobRequest.view;
+      const theView = controller.byobRequest.view;
       const {bytesRead, buffer} = 
-        await fileHandle.read(theview.buffer, theview.offset, theview.length, position)
+        await fileHandle.read(theView.buffer, theView.offset, theView.length, position)
       if (bytesRead === 0) {
         await fileHandle.close();
         controller.close();
@@ -1002,8 +1002,8 @@ function makeReadableByteFileStream(filename) {
     async pull(controller) {
       // Called when there is a pull request for data
       if (controller.byobRequest) {
-         const theview = controller.byobRequest.view;
-         const {bytesRead, buffer} = await fileHandle.read(theview.buffer, theview.offset, theview.length, position)
+         const theView = controller.byobRequest.view;
+         const {bytesRead, buffer} = await fileHandle.read(theView.buffer, theView.offset, theView.length, position)
          if (bytesRead === 0) {
            await fileHandle.close();
            controller.close();

@@ -40,7 +40,7 @@ var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var buffer = gl.createBuffer();
 
-// ...
+// …
 
 gl.deleteBuffer(buffer);
 ```

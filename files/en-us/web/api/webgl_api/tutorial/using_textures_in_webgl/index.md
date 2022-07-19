@@ -148,7 +148,7 @@ At this point, the texture is loaded and ready to use. But before we can use it,
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(textureCoordinates),
                 gl.STATIC_DRAW);
 
-  // ...
+  // …
   return {
     position: positionBuffer,
     textureCoord: textureCoordBuffer,
@@ -265,9 +265,9 @@ Lastly, add `texture` as a parameter to the `drawScene()` function, both where i
 
 ```js
 drawScene(gl, programInfo, buffers, texture, deltaTime);
-// ...
+// …
 function drawScene(gl, programInfo, buffers, texture, deltaTime) {
-  // ...
+  // …
 }
 ```
 
@@ -283,7 +283,7 @@ Loading of WebGL textures is subject to cross-domain access controls. In order f
 
 Because WebGL now requires textures to be loaded from secure contexts, you can't use textures loaded from `file:///` URLs in WebGL. That means that you'll need a secure web server to test and deploy your code. For local testing, see our guide [How do you set up a local testing server?](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server) for help.
 
-See this [hacks.mozilla.org article](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) for an explanation of how to use CORS-approved images as WebGL textures, with [a self-contained example](https://people.mozilla.org/~bjacob/webgltexture-cors-js.html).
+See this [hacks.mozilla.org article](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) for an explanation of how to use CORS-approved images as WebGL textures.
 
 > **Note:** CORS support for WebGL textures and the `crossOrigin` attribute for image elements is implemented in {{Gecko("8.0")}}.
 

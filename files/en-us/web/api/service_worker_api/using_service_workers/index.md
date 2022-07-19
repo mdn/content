@@ -80,7 +80,7 @@ const registerServiceWorker = async () => {
   }
 };
 
-// ...
+// …
 
 registerServiceWorker();
 ```
@@ -469,7 +469,7 @@ self.addEventListener('install', (event) => {
 
       // ...
 
-      // include other new resources for the new version...
+      // include other new resources for the new version…
     ]
   ));
 });

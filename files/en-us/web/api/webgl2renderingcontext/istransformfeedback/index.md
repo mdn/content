@@ -41,7 +41,7 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether the given objec
 ```js
 var transformFeedback = gl.createTransformFeedback();
 
-// ...
+// …
 
 gl.isTransformFeedback(transformFeedback);
 ```

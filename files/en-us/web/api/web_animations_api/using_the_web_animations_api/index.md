@@ -342,15 +342,15 @@ const endGame = function() {
 
   if (aliceHeight <= .333){
     // Alice got smaller!
-    // ...
+    // …
 
   } else if (aliceHeight >= .666) {
     // Alice got bigger!
-    // ...
+    // …
 
   } else {
     // Alice didn't change significantly
-    // ...
+    // …
 
   }
 }
@@ -368,11 +368,11 @@ CSS Animations and Transitions have their own event listeners, and these are als
 Here we set the callbacks for the cake, bottle, and Alice to fire the `endGame` function:
 
 ```js
-// When the cake or bottle runs out...
+// When the cake or bottle runs out
 nommingCake.onfinish = endGame;
 drinking.onfinish = endGame;
 
-// ...or Alice reaches the end of her animation
+// Alice reaches the end of her animation
 aliceChange.onfinish = endGame;
 ```
 
