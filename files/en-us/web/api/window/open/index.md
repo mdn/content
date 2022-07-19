@@ -13,7 +13,7 @@ browser-compat: api.Window.open
 ---
 {{APIRef}}
 
-The **`open()`** method of the [`Window`](/en-US/docs/Web/API/Window) interface loads a specified resource into a new or existing browsing context (that is, tab, window, or [iframe](/en-US/docs/Web/HTML/Element/iframe)) under a specified name.
+The **`open()`** method of the [`Window`](/en-US/docs/Web/API/Window) interface loads a specified resource into a new or existing browsing context (that is, a tab, a window, or an [iframe](/en-US/docs/Web/HTML/Element/iframe)) under a specified name.
 
 ## Syntax
 
@@ -112,7 +112,7 @@ window.open("https://www.mozilla.org/", "mozillaWindow", windowFeatures);
 
 ### Provide alternative ways when JavaScript is disabled
 
-If JavaScript support is disabled or non-existent, then the user agent will create a secondary window accordingly or will render the referenced resource according to its handling of the `target` attribute. The goal and the idea is to try to provide - **not impose** - to the user a way to open the referenced resource.
+If JavaScript support is disabled or non-existent, then the user agent will create a secondary window accordingly or will render the referenced resource according to its handling of the `target` attribute. The goal and the idea are to provide (and _not impose_) to the user a way to open the referenced resource.
 
 #### HTML
 
@@ -127,7 +127,7 @@ If JavaScript support is disabled or non-existent, then the user agent will crea
 ```js
 let windowObjectReference = null; // global variable
 function openRequestedTab(url, windowName) {
-  if(windowObjectReference == null || windowObjectReference.closed) {
+  if (windowObjectReference === null || windowObjectReference.closed) {
     windowObjectReference = window.open(url, windowName);
   } else {
     windowObjectReference.focus();
@@ -136,18 +136,18 @@ function openRequestedTab(url, windowName) {
 
 const link = document.querySelector("a[target='OpenWikipediaWindow']");
 link.addEventListener("click", (event) => {
-  openRequestedSingleTab(link.href);
+  openRequestedTab(link.href);
   event.preventDefault();
   }, false);
 ```
 
-The above code solves a few usability problems related to links opening popups. The purpose of the `event.preventDefault()` in the code is to cancel default action of the link: if the event listener for `click` is executed, then there is no need to execute the default action of the link. But if JavaScript support is disabled or non-existent on the user's browser, then the event listener for `click` is ignored and the browser loads the referenced resource in the target frame or window that has the name `"WikipediaWindowName"`. If no frame nor window has the name `"WikipediaWindowName"`, then the browser will create a new window and name it `"WikipediaWindowName"`.
+The above code solves a few usability problems related to links opening popups. The purpose of the `event.preventDefault()` in the code is to cancel the default action of the link: if the event listener for `click` is executed, then there is no need to execute the default action of the link. But if JavaScript support is disabled or non-existent on the user's browser, then the event listener for `click` is ignored, and the browser loads the referenced resource in the target frame or window that has the name `"WikipediaWindowName"`. If no frame nor window has the name `"WikipediaWindowName"`, then the browser will create a new window and name it `"WikipediaWindowName"`.
 
 > **Note:** For more details about the `target` attribute, see [`<a>`](/en-US/docs/Web/HTML/Element/a#attr-target) or [`<form>`](/en-US/docs/Web/HTML/Element/form#attr-target).
 
 ### Reuse existing windows and avoid `target="_blank"`
 
-Using `"_blank"` as the target attribute value will create several new and unnamed windows on the user's desktop that cannot be recycled, reused. Try to provide a meaningful name to your `target` attribute and to reuse such `target` attribute in your page so that a click on another link may load the referenced resource in an already created and rendered window (therefore speeding up the process for the user) and therefore justifying the reason (and user system resources, time spent) for creating a secondary window in the first place. Using a single `target` attribute value and reusing it in links is much more user resources friendly as it only creates one single secondary window, which is recycled.
+Using `"_blank"` as the target attribute value will create several new and unnamed windows on the user's desktop that cannot be recycled or reused. Try to provide a meaningful name to your `target` attribute and reuse such `target` attribute on your page so that a click on another link may load the referenced resource in an already created and rendered window (therefore speeding up the process for the user) and therefore justifying the reason (and user system resources, time spent) for creating a secondary window in the first place. Using a single `target` attribute value and reusing it in links is much more user resources friendly as it only creates one single secondary window, which is recycled.
 
 Here is an example where a secondary window can be opened and reused for other links:
 
@@ -173,9 +173,9 @@ let windowObjectReference = null; // global variable
 let previousURL; /* global variable that will store the
                     url currently in the secondary window */
 function openRequestedSingleTab(url) {
-  if(windowObjectReference == null || windowObjectReference.closed) {
+  if (windowObjectReference === null || windowObjectReference.closed) {
     windowObjectReference = window.open(url, "SingleSecondaryWindowName");
-  } else if(previousURL != url) {
+  } else if (previousURL !== url) {
     windowObjectReference = window.open(url, "SingleSecondaryWindowName");
     /* if the resource to load is different,
        then we load it in the already opened secondary window and then
@@ -224,22 +224,24 @@ For more information, refer to the [Same-origin policy](/en-US/docs/Web/Security
 
 ## Accessibility
 
-### Avoid resorting to `window.open()`
+### Avoid resorting to window.open()
 
 It is preferable to avoid resorting to `window.open()`, for several reasons:
 
-- Modern browsers offers a popup-blocking feature.
-- Modern browsers offer tab-browsing, and tab-capable browser users overall prefer opening new tabs than opening new windows in a majority of situations.
-- Users may use browser built-in features or extensions to choose whether to open a link in a new window, in the same window, in a new tab or the same tab, or in the background. Forcing the opening to happen in a specific way, using `window.open()`, will confuse them and disregard their habits.
-- Popups don't have a menu toolbar whereas new tabs use the usual user-interface of the browser window, therefore, tab-browsing is preferred by a lot of users because the interface remains stable.
+- Modern browsers offer a popup-blocking feature.
+- Modern browsers offer tab-browsing, and tab-capable browser users prefer opening new tabs to opening new windows in most situations.
+- Users may use browser built-in features or extensions to choose whether to open a link in a new window, in the same window, in a new tab, the same tab, or in the background. Forcing the opening to happen in a specific way, using `window.open()`, will confuse them and disregard their habits.
+- Popups don't have a menu toolbar, whereas new tabs use the user interface of the browser window; therefore, many users prefer tab-browsing because the interface remains stable.
 
-### Never use `<a href="#" onclick="window.open(…);">` or `<a href="javascript:window\.open(…)" …>`
+### Never use window.open() inline in HTML
+
+Avoid `<a href="#" onclick="window.open(…);">` or `<a href="javascript:window\.open(…)" …>`.
 
 These bogus `href` values cause unexpected behavior when copying/dragging links, opening links in a new tab/window, bookmarking, or when JavaScript is loading, errors, or is disabled. They also convey incorrect semantics to assistive technologies, like screen readers.
 
-If necessary, use a [`<button>`](/en-US/docs/Web/HTML/Element/button) element instead. In general, **you should only use a link for navigation to a real URL**.
+If necessary, use a [`<button>`](/en-US/docs/Web/HTML/Element/button) element instead. In general, _you should only use a link for navigation to a real URL_.
 
-### Always identify links that will create (or re-use) a secondary window
+### Always identify links leading to a secondary window
 
 Identify links that will open new windows in a way that helps navigation for users.
 
@@ -249,7 +251,7 @@ Identify links that will open new windows in a way that helps navigation for use
 </a>
 ```
 
-The purpose is to warn users in advance of context changes to minimize confusion on the user's part: changing the current window or popping up new windows can be very disorienting to users (in the case of a popup, no toolbar provides a "Previous" button to get back to the previous window).
+The purpose is to warn users of context changes to minimize confusion on the user's part: changing the current window or popping up new windows can be very disorienting to users (in the case of a popup, no toolbar provides a "Previous" button to get back to the previous window).
 
 When extreme changes in context are explicitly identified before they occur, then the users can determine if they wish to proceed or so they can be prepared for the change: not only they will not be confused or feel disoriented, but more experienced users can better decide how to open such links (in a new window or not, in the same window, in a new tab or not, in "background" or not).
 
