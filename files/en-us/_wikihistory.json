@@ -35222,15 +35222,6 @@
       "david_ross"
     ]
   },
-  "Web/API/Document/gotpointercapture_event": {
-    "modified": "2020-10-15T22:14:51.520Z",
-    "contributors": [
-      "Clarkkkk",
-      "Wind1808",
-      "mfuji09",
-      "wbamberg"
-    ]
-  },
   "Web/API/Document/hasFocus": {
     "modified": "2020-10-15T21:04:29.544Z",
     "contributors": [
@@ -38716,6 +38707,22 @@
       "Andreas Wuest"
     ]
   },
+  "Web/API/Element/gotpointercapture_event": {
+    "modified": "2020-10-15T21:39:52.295Z",
+    "contributors": [
+      "Clarkkkk",
+      "gaearon",
+      "mfuji09",
+      "Wind1808",
+      "wbamberg",
+      "mfluehr",
+      "chrisdavidmills",
+      "fscholz",
+      "erikadoyle",
+      "rolfedh",
+      "AFBarstow"
+    ]
+  },
   "Web/API/Element/hasAttribute": {
     "modified": "2020-10-15T21:11:17.789Z",
     "contributors": [
@@ -39016,6 +39023,22 @@
       "fscholz",
       "DomenicDenicola",
       "Sebastianz"
+    ]
+  },
+  "Web/API/Element/lostpointercapture_event": {
+    "modified": "2020-10-15T21:39:53.427Z",
+    "contributors": [
+      "Clarkkkk",
+      "gaearon",
+      "mfuji09",
+      "Wind1808",
+      "wbamberg",
+      "mfluehr",
+      "chrisdavidmills",
+      "fscholz",
+      "erikadoyle",
+      "rolfedh",
+      "AFBarstow"
     ]
   },
   "Web/API/Element/matches": {
@@ -44278,19 +44301,6 @@
       "alecananian"
     ]
   },
-  "Web/API/GlobalEventHandlers/ongotpointercapture": {
-    "modified": "2020-10-15T21:51:24.512Z",
-    "contributors": [
-      "mfuji09",
-      "Wind1808",
-      "wbamberg",
-      "mfluehr",
-      "chrisdavidmills",
-      "fscholz",
-      "david_ross",
-      "jpmedley"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onload": {
     "modified": "2020-10-15T21:12:46.292Z",
     "contributors": [
@@ -44368,18 +44378,6 @@
     "contributors": [
       "rolfedh",
       "Guillaume-Heras"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onlostpointercapture": {
-    "modified": "2020-10-15T21:51:24.333Z",
-    "contributors": [
-      "Wind1808",
-      "wbamberg",
-      "mfluehr",
-      "chrisdavidmills",
-      "fscholz",
-      "david_ross",
-      "jpmedley"
     ]
   },
   "Web/API/GlobalEventHandlers/onpause": {
@@ -45759,22 +45757,6 @@
       "JesseW"
     ]
   },
-  "Web/API/HTMLElement/gotpointercapture_event": {
-    "modified": "2020-10-15T21:39:52.295Z",
-    "contributors": [
-      "Clarkkkk",
-      "gaearon",
-      "mfuji09",
-      "Wind1808",
-      "wbamberg",
-      "mfluehr",
-      "chrisdavidmills",
-      "fscholz",
-      "erikadoyle",
-      "rolfedh",
-      "AFBarstow"
-    ]
-  },
   "Web/API/HTMLElement/hidden": {
     "modified": "2020-10-15T21:56:20.245Z",
     "contributors": [
@@ -45890,22 +45872,6 @@
       "Dria",
       "Callek",
       "JesseW"
-    ]
-  },
-  "Web/API/HTMLElement/lostpointercapture_event": {
-    "modified": "2020-10-15T21:39:53.427Z",
-    "contributors": [
-      "Clarkkkk",
-      "gaearon",
-      "mfuji09",
-      "Wind1808",
-      "wbamberg",
-      "mfluehr",
-      "chrisdavidmills",
-      "fscholz",
-      "erikadoyle",
-      "rolfedh",
-      "AFBarstow"
     ]
   },
   "Web/API/HTMLElement/mscandidatewindowhide_event": {

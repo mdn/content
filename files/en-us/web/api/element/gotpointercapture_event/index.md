@@ -1,28 +1,28 @@
 ---
-title: 'Document: lostpointercapture event'
-slug: Web/API/Document/lostpointercapture_event
-page-type: web-api-event
+title: 'Element: gotpointercapture event'
+slug: Web/API/Element/gotpointercapture_event
 tags:
-  - API
-  - Document
   - Event
+  - HTML DOM
+  - Element
+  - NeedsSpecTable
   - PointerEvent
   - Reference
-  - lostpointercapture
-browser-compat: api.Document.lostpointercapture_event
+browser-compat: api.Element.gotpointercapture_event
+page-type: web-api-event
 ---
 {{APIRef}}
 
-The **`lostpointercapture`** event is fired when a [captured pointer](/en-US/docs/Web/API/Pointer_events#pointer_capture) is released.
+The **`gotpointercapture`** event is fired when an element captures a pointer using [`setPointerCapture()`](/en-US/docs/Web/API/Element/setPointerCapture).
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('lostpointercapture', (event) => {});
+addEventListener('gotpointercapture', (event) => {});
 
-onlostpointercapture = (event) => { };
+ongotpointercapture = (event) => { };
 ```
 
 ## Event type
@@ -58,13 +58,13 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 
 ## Examples
 
-This example listens for the `lostpointercapture` event, and captures the pointer for an element on `pointerdown`. When the user subsequently releases the pointer, the `lostpointercapture` event will be fired.
+This example gets a `<p>` element and listens for the `gotpointercapture` event. It then calls `setPointerCapture()` on the element on a `pointerdown` event, which will trigger `gotpointercapture`.
 
 ```js
 const para = document.querySelector('p');
 
-document.addEventListener('lostpointercapture', () => {
-  console.log('I\'ve been released!')
+para.addEventListener('gotpointercapture', () => {
+  console.log('I\'ve been captured!')
 });
 
 para.addEventListener('pointerdown', (event) => {
@@ -72,13 +72,13 @@ para.addEventListener('pointerdown', (event) => {
 });
 ```
 
-The same example, but using the `onlostpointercapture` event handler property:
+The same example, using the `ongotpointercapture` event handler property:
 
 ```js
 const para = document.querySelector('p');
 
-document.onlostpointercapture = () => {
-  console.log('I\'ve been released!')
+para.ongotpointercapture = () => {
+  console.log('I\'ve been captured!')
 };
 
 para.addEventListener('pointerdown', (event) => {
@@ -98,13 +98,12 @@ para.addEventListener('pointerdown', (event) => {
 
 - Related events
 
-  - {{domxref("Document/pointerover_event", "pointerover")}}
-  - {{domxref("Document/pointerenter_event", "pointerenter")}}
-  - {{domxref("Document/pointerdown_event", "pointerdown")}}
-  - {{domxref("Document/pointermove_event", "pointermove")}}
-  - {{domxref("Document/pointerup_event", "pointerup")}}
-  - {{domxref("Document/pointercancel_event", "pointercancel")}}
-  - {{domxref("Document/pointerout_event", "pointerout")}}
-  - {{domxref("Document/pointerleave_event", "pointerleave")}}
-
-- This event on `Element` targets: {{domxref("Element/lostpointercapture_event", "lostpointercapture")}} event
+  - [`lostpointercapture`](/en-US/docs/Web/API/Element/lostpointercapture_event)
+  - [`pointerover`](/en-US/docs/Web/API/Element/pointerover_event)
+  - [`pointerenter`](/en-US/docs/Web/API/Element/pointerenter_event)
+  - [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event)
+  - [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event)
+  - [`pointerup`](/en-US/docs/Web/API/Element/pointerup_event)
+  - [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event)
+  - [`pointerout`](/en-US/docs/Web/API/Element/pointerout_event)
+  - [`pointerleave`](/en-US/docs/Web/API/Element/pointerleave_event)
