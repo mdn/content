@@ -18,7 +18,7 @@ As a JavaScript developer, programmatically writing data to a stream is very use
 > **Note:** This article assumes that you understand the use cases of writable streams, and are aware of the high-level concepts.
 > If not, we suggest that you first read the [Streams concepts and usage overview](/en-US/docs/Web/API/Streams_API#concepts_and_usage) and dedicated [Streams API concepts](/en-US/docs/Web/API/Streams_API/Concepts) article, then come back.
 
-> **Note:** If you are looking for information about readable streams, try [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams) instead.
+> **Note:** If you are looking for information about readable streams, try [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams) and [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams) instead.
 
 ## Introducing an example
 
@@ -49,8 +49,8 @@ const stream = new WritableStream({
 
   }
 }, {
-  highWaterMark,
-  size()
+  highWaterMark: 3,
+  size: () => 1
 });
 ```
 
@@ -73,11 +73,11 @@ const writableStream = new WritableStream({
   // Implement the sink
   write(chunk) {
     return new Promise((resolve, reject) => {
-      var buffer = new ArrayBuffer(1);
-      var view = new Uint8Array(buffer);
+      const buffer = new ArrayBuffer(1);
+      const view = new Uint8Array(buffer);
       view[0] = chunk;
-      var decoded = decoder.decode(view, { stream: true });
-      var listItem = document.createElement('li');
+      const decoded = decoder.decode(view, { stream: true });
+      const listItem = document.createElement('li');
       listItem.textContent = "Chunk decoded: " + decoded;
       list.appendChild(listItem);
       result += decoded;
@@ -85,7 +85,7 @@ const writableStream = new WritableStream({
     });
   },
   close() {
-    var listItem = document.createElement('li');
+    const listItem = document.createElement('li');
     listItem.textContent = "[MESSAGE RECEIVED] " + result;
     list.appendChild(listItem);
   },

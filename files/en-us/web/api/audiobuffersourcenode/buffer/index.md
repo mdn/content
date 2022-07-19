@@ -53,6 +53,7 @@ button.onclick = function() {
   const source = audioCtx.createBufferSource();
   // set the buffer in the AudioBufferSourceNode
   source.buffer = myArrayBuffer;
+}
 ```
 
 ## Specifications

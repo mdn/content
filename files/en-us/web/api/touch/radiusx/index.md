@@ -27,18 +27,18 @@ This example illustrates using the {{domxref("Touch")}} interface's {{domxref("T
 The following simple code snippet, registers a single handler for the {{domxref("Document/touchstart_event", "touchstart")}}, {{event("touchmove")}} and {{event("touchend")}} events. When the `src` element is touched, the element's width and height will be calculate based on the touch point's `radiusX` and `radiusY` values and the element will then be rotated using the touch point's `rotationAngle`.
 
 ```html
-<div id="src"> ... </div>
+<div id="src"> … </div>
 ```
 
 ```js
-var src = document.getElementById("src");
+const src = document.getElementById("src");
 
 src.addEventListener('touchstart', rotate);
 src.addEventListener('touchmove', rotate);
 src.addEventListener('touchend', rotate);
 
-function rotate (e) {
-  var touch = e.changedTouches.item(0);
+function rotate(e) {
+  const touch = e.changedTouches.item(0);
 
   // Turn off default event handling
   e.preventDefault();

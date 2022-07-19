@@ -337,7 +337,7 @@ function addTask(name) {
 
 Now you can use the browser to add a task to our data! Type anything into the form and click "Add" (or press the <kbd>Enter</kbd> key) and you'll see your new todo item appear in the UI!
 
-**However, we have another problem**: our `addTask()` function is giving each task the same `id`. This is bad for accessibility, and makes it impossible for React to tell future tasks apart with the `key` prop. In fact, React will give you a warning in your DevTools console — "Warning: Encountered two children with the same key..."
+**However, we have another problem**: our `addTask()` function is giving each task the same `id`. This is bad for accessibility, and makes it impossible for React to tell future tasks apart with the `key` prop. In fact, React will give you a warning in your DevTools console — "Warning: Encountered two children with the same key…"
 
 We need to fix this. Making unique identifiers is a hard problem – one for which the JavaScript community has written some helpful libraries. We'll use [nanoid](https://github.com/ai/nanoid) because it's tiny, and it works.
 
@@ -458,7 +458,7 @@ function toggleTaskCompleted(id) {
 }
 ```
 
-Here, we define an `updatedTasks` constant that maps over the original `tasks` array.  If the task's `id` property matches the `id` provided to the function, we use [object spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to create a new object, and toggle the `checked` property of that object before returning it. If it doesn't match, we return the original object.
+Here, we define an `updatedTasks` constant that maps over the original `tasks` array.  If the task's `id` property matches the `id` provided to the function, we use [object spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to create a new object, and toggle the `completed` property of that object before returning it. If it doesn't match, we return the original object.
 
 Then we call `setTasks()` with this new array in order to update our state.
 

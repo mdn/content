@@ -44,7 +44,7 @@ rather than the directive of the resources it's retrieving.
 
 ```js
 fetch(resource)
-fetch(resource, init)
+fetch(resource, options)
 ```
 
 ### Parameters
@@ -56,7 +56,7 @@ fetch(resource, init)
     - A string or any other object with a {{Glossary("stringifier")}} — including a {{domxref("URL")}} object — that provides the URL of the resource you want to fetch.
     - A {{domxref("Request")}} object.
 
-- `init` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object containing any custom settings that you want to apply to the request. The
     possible options are:
@@ -65,7 +65,7 @@ fetch(resource, init)
       - : The request method, e.g., `GET`, `POST`. Note that the
         {{httpheader("Origin")}} header is not set on Fetch requests with a method of
         {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}}.
-        (This behavior was corrected in Firefox 65 — see {{bug(1508661)}}).
+        (This behavior was corrected in Firefox 65 — see {{bug(1508661)}}.)
     - `headers`
       - : Any headers you want to add to your request, contained within a
         {{domxref("Headers")}} object or an object literal with {{jsxref("String")}}
@@ -99,7 +99,7 @@ fetch(resource, init)
 
       - : How to handle a `redirect` response:
 
-        - `follow`: Automatically follow redirects. Unless otherwise stated the redirect mode is set to `follow`
+        - `follow`: Automatically follow redirects. Unless otherwise stated the redirect mode is set to `follow`.
         - `error`: Abort with an error if a redirect occurs.
         - `manual`: Caller intends to process the response in another context.
           See [WHATWG fetch standard](https://fetch.spec.whatwg.org/#requests) for more information.
@@ -309,7 +309,7 @@ const myRequest = new Request('flowers.jpg');
 
 fetch(myRequest, myInit)
   .then((response) => {
-    // ...
+    // …
   });
 ```
 

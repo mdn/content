@@ -33,7 +33,7 @@ document).
 
 ## Examples
 
-```js
+```html
 <!DOCTYPE html>
 <html>
 <head>

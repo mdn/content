@@ -25,7 +25,7 @@ The **`CSSMathMax`** interface of the {{domxref('CSS_Object_Model#css_typed_obje
 
 ## Properties
 
-- {{domxref('CSSMathMax.values')}}{{ReadOnlyInline}}
+- {{domxref('CSSMathMax.values')}} {{ReadOnlyInline}}
   - : Returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.
 
 ## Methods

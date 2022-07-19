@@ -24,7 +24,7 @@ The `USBIsochronousOutTransferResult` interface of the [WebUSB API](/en-US/docs/
 
 ## Properties
 
-- {{domxref("USBIsochronousOutTransferResult.packets")}}{{readonlyInline}}
+- {{domxref("USBIsochronousOutTransferResult.packets")}} {{readonlyInline}}
   - : Returns an array of `USBIsochronousOutTransferPacket` objects containing the result of each request to send a packet to the device.
 
 ## Specifications

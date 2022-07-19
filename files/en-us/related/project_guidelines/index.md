@@ -35,7 +35,7 @@ Once your team is assembled, you'll need to get them all to [create MDN accounts
 
 Write down a plan for the work — what needs to be done, and when? What milestones do you need to reach so that progress is healthy? If the project is large, you should consider getting one of your team members to be a project manager for the project, and using a project tracking tool like [Trello](https://trello.com/). You should also consider writing a sub-project plan for an initial release that encompasses the minimum set of documentation that is useful to publish (a _minimum viable product_), do that first, and then follow up with further additions later.
 
-If the documentation resource is small, then this probably isn't so critical, but you still need to keep a record of what has been done and what hasn't, what stage each part of the documentation is at (e.g. not started, in progress, draft written, reviewed, done...), and who is working on what.
+If the documentation resource is small, then this probably isn't so critical, but you still need to keep a record of what has been done and what hasn't, what stage each part of the documentation is at (e.g. not started, in progress, draft written, reviewed, done…), and who is working on what.
 
 ## Guidelines and standards
 
@@ -43,7 +43,7 @@ There are [guidelines available on MDN](/en-US/docs/MDN/Guidelines) that state h
 
 Since this is a project in its own right, you may have additional guidelines on language or code styles that you expect to be followed. Feel free to keep a record of these, and even host them on a page inside your own project pages.
 
-In terms of standards, you are expected to maintain a reasonable level of quality for your documentation to stay on MDN. Your MDN rep will work with you on this to make you clear on what is expected. It is a good idea to produce a prototype showing what each type of page in your documentation should look like (e.g. an element or method reference page, a code example...) so that people have a template to follow.
+In terms of standards, you are expected to maintain a reasonable level of quality for your documentation to stay on MDN. Your MDN rep will work with you on this to make you clear on what is expected. It is a good idea to produce a prototype showing what each type of page in your documentation should look like (e.g. an element or method reference page, a code example…) so that people have a template to follow.
 
 > **Note:** MDN is primarily an English site (en-US). The primary language for your resource should be in US English. If this really doesn't make sense for your project (e.g. it might be for a tool usable in a specific non-English locale), then talk to us about it, and we'll see how we can accommodate this.
 

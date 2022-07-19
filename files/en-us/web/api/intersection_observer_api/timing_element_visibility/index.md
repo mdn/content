@@ -480,7 +480,7 @@ function loadRandomAd(replaceBox) {
     {
       bgcolor: "lightgrey",
       title: "3.14 Shades of Gray: A novel",
-      body: "Love really does make the world go round..."
+      body: "Love really does make the world go round…"
     },
     {
       bgcolor: "#fee",

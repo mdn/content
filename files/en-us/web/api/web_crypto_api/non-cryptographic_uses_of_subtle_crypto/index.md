@@ -98,10 +98,10 @@ At this point you may be thinking to yourself "*I can use this on my own website
 - Executable downloads should **always** be done over HTTPS. This prevents intermediate parties from performing attacks like this so it would be redundant.
 - If the attacker is able to replace the download file on the original server, then they can also simply replace the code which invokes the SubtleCrypto interface to bypass it and just state that everything is fine. Probably something sneaky like replacing [strict equality](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using_), which can be a pain to spot in your own code:
 
-```js
---- if (checksum === correctCheckSum) return true;
-+++ if (checksum = correctCheckSum) return true;
-```
+  ```diff
+  --- if (checksum === correctCheckSum) return true;
+  +++ if (checksum = correctCheckSum) return true;
+  ```
 
 One place it may be worthwhile, is if you want to test a file from a third party download source, which you do not control. This would be the case as long as the download location has [CORS](/en-US/docs/Glossary/CORS) headers enabled to let you scan the file before you make it available to your users. Unfortunately not many servers have CORS turned on by default.
 

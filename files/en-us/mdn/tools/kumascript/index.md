@@ -42,7 +42,7 @@ A script in KumaScript is a _template_, and each template is a file in [the macr
 
 Invoking a template is done with a _macro_, which can be used anywhere in any wiki content. Invoking the above template would look like this (provided it was saved in the macros directory with a filename of `hello.ejs`):
 
-```js
+```plain
 \{{hello(3)}}
 ```
 
@@ -58,8 +58,8 @@ Hello #2
 
 Macro syntax takes the following general form:
 
-```js
-\{{templateName("arg0", "arg1", ..., "argN")}}
+```plain
+\{{templateName("arg0", "arg1", /* …, */ "argN")}}
 ```
 
 Macro syntax follows these rules:
@@ -73,7 +73,7 @@ Macro syntax follows these rules:
 
 As a semi-experimental feature (not guaranteed to work), you can supply a JSON object for the first and only parameter, like so:
 
-```js
+```plain
 \{{templateName({ "Alpha": "one", "Beta": ["a", "b", "c"], "Foo": "https:\/\/mozilla.org\/" })}}
 ```
 
@@ -110,7 +110,7 @@ KumaScript templates are processed by an [embedded JavaScript template engine](h
   <% } %>
   ```
 
-  Note how the JavaScript code is contained in `<% ... %>`, and output happens in the space between `%> ... <%`. The `for` loop in JS can begin with one `<% %>` block, transition to output mode, and finish up in a second `<% %>` JS block.
+  Note how the JavaScript code is contained in `<% … %>`, and output happens in the space between `%> … <%`. The `for` loop in JS can begin with one `<% %>` block, transition to output mode, and finish up in a second `<% %>` JS block.
 
 - For more details on EJS syntax, [check out the upstream module documentation](https://ejs.co).
 
@@ -201,7 +201,7 @@ This manually-maintained documentation is likely to fall out of date with the co
 
 - `md5(string)`
   - : Returns an MD5 hex digest of the given string.
-- `template("name", ["arg0", "arg1", ..., "argN"])`
+- `template("name", ["arg0", "arg1", …, "argN"])`
 
   - : Executes and returns the result of the named template with the given list of parameters.
 
@@ -209,7 +209,7 @@ This manually-maintained documentation is likely to fall out of date with the co
 
     Example using the `DOMxRef` macro: `<%- template("DOMxRef", ["Event.bubbles", "bubbles"]) %>`.
 
-    This is a JavaScript function. So, if one of the parameters is an arg variable like $2, do not put it in quotes. Like this: `<%- template("warning", [$1, $2, "baz"]) %>`. If you need to call another template from within a block of code, do not use `<%` ... `%>`. Example: `myvar = "<li>" + template("LXRSearch", ["ident", "i", $1]) + "</li>";`
+    This is a JavaScript function. So, if one of the parameters is an arg variable like $2, do not put it in quotes. Like this: `<%- template("warning", [$1, $2, "baz"]) %>`. If you need to call another template from within a block of code, do not use `<%` … `%>`. Example: `myvar = "<li>" + template("LXRSearch", ["ident", "i", $1]) + "</li>";`
 
 - `require(name)`
   - : Loads another template as a module; any output is ignored. Anything assigned to `module.exports` in the template is returned. Used in templates like so: `<% const my_module = require('MyModule'); %>`.
@@ -251,7 +251,7 @@ Using the built-in `require()` method, you can load a template as a module to sh
 ```js
 <%
 module.exports = {
-    add: function (a, b) {
+    add(a, b) {
         return a + b;
     }
 }
@@ -315,13 +315,13 @@ This is probably a temporary failure of the KumaScript service. If you Refresh t
 On some pages, you'll see a scripting error like this:
 
 ```plain
-Syntax error at line 436, column 461: Expected valid JSON object as the parameter of the preceding macro but...
+Syntax error at line 436, column 461: Expected valid JSON object as the parameter of the preceding macro but…
 ```
 
 If you edit the page, you'll probably see a macro like this at the bottom of the page:
 
 ```plain
-\{{ wiki.languages({ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", ... }) }}
+\{{ wiki.languages({ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", … }) }}
 ```
 
 To fix the problem, just delete the macro. Or, replace the curly braces on either side with HTML comments `<!-- -->` to preserve the information, like so:
@@ -349,7 +349,7 @@ You can read the contents of an attached file by using the `mdn.getFileContent()
 ```js
 <%
   let contents = mdn.getFileContent(fileUrl);
-  // ... do stuff with the contents ...
+  // do stuff with the contents…
 %>
 ```
 

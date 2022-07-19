@@ -443,7 +443,7 @@ Most texture uploads from DOM elements will incur a processing pass that will te
 In WebGL:
 
 ```
-    ...
+    …
     useProgram(prog1)
 <pipeline flush>
     bindFramebuffer(target)
@@ -451,13 +451,13 @@ In WebGL:
     bindTexture(webgl_texture)
     texImage2D(HTMLVideoElement)
     drawArrays()
-    ...
+    …
 ```
 
 Behind the scenes in the browser:
 
 ```
-    ...
+    …
     useProgram(prog1)
 <pipeline flush>
     bindFramebuffer(target)
@@ -474,7 +474,7 @@ Behind the scenes in the browser:
         +useProgram(prog1)
 <pipeline flush>
     drawArrays()
-    ...
+    …
 ```
 
 Prefer doing uploads before starting drawing, or at least between pipelines:
@@ -482,7 +482,7 @@ Prefer doing uploads before starting drawing, or at least between pipelines:
 In WebGL:
 
 ```
-    ...
+    …
     bindTexture(webgl_texture)
     texImage2D(HTMLVideoElement)
     useProgram(prog1)
@@ -491,13 +491,13 @@ In WebGL:
     drawArrays()
     bindTexture(webgl_texture)
     drawArrays()
-    ...
+    …
 ```
 
 Behind the scenes in the browser:
 
 ```
-    ...
+    …
     bindTexture(webgl_texture)
     -texImage2D(HTMLVideoElement):
         +useProgram(_internal_tex_tranform_prog)
@@ -513,7 +513,7 @@ Behind the scenes in the browser:
     drawArrays()
     bindTexture(webgl_texture)
     drawArrays()
-    ...
+    …
 ```
 
 ## Use texStorage to create textures
@@ -547,7 +547,7 @@ function clientWaitAsync(gl, sync, flags, interval_ms) {
       }
       resolve();
     }
-    test());
+    test();
   });
 }
 

@@ -50,7 +50,7 @@ url = "https://path_to_large_file.mp4";
 try {
   const res = await fetch(url, { signal: AbortSignal.timeout(5000) });
   const result = await res.blob();
-  // ...
+  // …
 } catch (e) {
     if (e.name === "TimeoutError") {
       // It took more than 5 seconds to get the result!

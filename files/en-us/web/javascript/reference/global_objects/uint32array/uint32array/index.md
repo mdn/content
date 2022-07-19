@@ -106,13 +106,13 @@ constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
 a {{jsxref("TypeError")}} from now on.
 
 ```js example-bad
-var dv = Uint32Array([1, 2, 3]);
+const dv = Uint32Array([1, 2, 3]);
 // TypeError: calling a builtin Uint32Array constructor
 // without new is forbidden
 ```
 
 ```js example-good
-var dv = new Uint32Array([1, 2, 3]);
+const dv = new Uint32Array([1, 2, 3]);
 ```
 
 ## See also

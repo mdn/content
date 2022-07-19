@@ -14,7 +14,7 @@ The JavaScript exception "x can't be converted to BigInt because it isn't an int
 ## Message
 
 ```
-RangeError: The number 1.5 cannot be converted to a BigInt because it is not an integer (Chromium-based & Firefox)
+RangeError: The number 1.5 cannot be converted to a BigInt because it is not an integer (V8-based & Firefox)
 RangeError: Not an integer (Safari)
 ```
 

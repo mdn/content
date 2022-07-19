@@ -66,6 +66,7 @@ xrSession.requestReferenceSpace(refSpaceType)
   xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(
         new XRRigidTransform(viewerStartPosition, cubeOrientation));
   animationFrameRequestID = xrSession.requestAnimationFrame(drawFrame);
+});
 ```
 
 ## Specifications

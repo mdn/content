@@ -625,7 +625,7 @@ Let's update our `bstack_google_test.js` demo, to show how these features work:
     'project' : 'Google test 2'
     ```
 
-3. Next we need to access the `sessionId` of the current session, so we know where to send the request (the ID is included in the request URL, as you'll see later). Include the following lines just below the block that creates the `driver` object (`let driver ...`) :
+3. Next we need to access the `sessionId` of the current session, so we know where to send the request (the ID is included in the request URL, as you'll see later). Include the following lines just below the block that creates the `driver` object (`let driver …`) :
 
     ```js
     let sessionId;
@@ -635,7 +635,7 @@ Let's update our `bstack_google_test.js` demo, to show how these features work:
     });
     ```
 
-4. Finally, update the `driver.sleep(2000)` ... block near the bottom of the code to add REST API calls (again, replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values):
+4. Finally, update the `driver.sleep(2000)` block near the bottom of the code to add REST API calls (again, replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values):
 
     ```js
     driver.sleep(2000).then(function() {
@@ -761,7 +761,7 @@ To do this, you need to:
     });
     ```
 
-5. Finally, replace the `driver.sleep(2000)` ... block near the bottom of the code with the following:
+5. Finally, replace the `driver.sleep(2000)` block near the bottom of the code with the following:
 
     ```js
     driver.sleep(2000).then(function() {
@@ -807,7 +807,7 @@ If you don't want to use a service like Sauce Labs or BrowserStack, you can alwa
 Now we've got the server running, let's create a demo test that will run on the remote selenium server.
 
 1. Create a copy of your `google_test.js` file, and call it `google_test_remote.js`; put it in your project directory.
-2. Update the second code block (which starts with `let driver = ...`) like so
+2. Update the second code block (which starts with `let driver = …`) like so
 
     ```js
     let driver = new webdriver.Builder()

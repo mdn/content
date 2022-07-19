@@ -69,7 +69,7 @@ the new promise-based version_. Check the [Browser compatibility](#browser_compa
 to verify the state of this method.
 
 ```js
-promise = rtcPeerConnection.getStats(selector, successCallback, failureCallback) {{deprecated_inline}}
+promise = rtcPeerConnection.getStats(selector, successCallback, failureCallback) // deprecated
 ```
 
 #### Parameters

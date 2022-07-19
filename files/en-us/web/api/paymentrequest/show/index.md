@@ -25,7 +25,7 @@ user.
 
 For security reasons, the `PaymentRequest.show()` method can't just be
 initiated at any time. It may only be called while handling events that represent user
-interactions, such as {{event("click")}}, {{domxref("Element/keyup_event", "keyup")}}, or the like.
+interactions, such as {{domxref("Element/click_event", "click")}}, {{domxref("Element/keyup_event", "keyup")}}, or the like.
 
 Only one payment request can be in the process of being handled at once, across all
 documents. Once one `PaymentRequest`'s `show()` method has been
@@ -82,11 +82,11 @@ show(detailsPromise)
         - `pending`
           - : A Boolean value which is `true` if the specified `amount` has not yet been finalized. This can be used to show items such as shipping or tax amounts that depend upon the selection of shipping address, shipping option, or so forth. The user agent may show this information but is not required to do so.
 
-    - `error` {{optional_inline}}{{deprecated_inline}}
+    - `error` {{optional_inline}} {{deprecated_inline}}
       - : A string specifying an error message to present to the user*.* When calling {{domxref("PaymentRequestUpdateEvent.updateWith", "updateWith()")}}, including `error` in the updated data causes the {{Glossary("user agent")}} to display the text as a general error message. For address field specific errors, use `shippingAddressErrors`.
     - `modifiers` {{optional_inline}}
       - : An array of {{domxref("PaymentDetailsModifier")}} objects, each describing a modifier for particular payment method identifiers. For example, you can use one to adjust the total payment amount based on the selected payment method ("5% cash discount!").
-    - `shippingAddressErrors` {{optional_inline}}{{deprecated_inline}}
+    - `shippingAddressErrors` {{optional_inline}} {{deprecated_inline}}
       - : An {{domxref("AddressErrors")}} object which includes an error message for each property of the shipping address that could not be validated.
     - `shippingOptions` {{optional_inline}}
       - : An array of {{domxref("PaymentShippingOption")}} objects, each describing one available shipping option from which the user may choose.
@@ -121,7 +121,7 @@ Exceptions are not thrown but returned when the {{jsxref("Promise")}} rejects.
     {{domxref("PaymentRequest.PaymentRequest","PaymentRequest")}} constructor was called.
 - `SecurityError` {{domxref("DOMException")}}
   - : Returned if the call to
-    `show()` was not in response to a user action, such as a {{event("click")}}
+    `show()` was not in response to a user action, such as a {{domxref("Element/click_event", "click")}}
     or {{domxref("Element/keyup_event", "keyup")}} event. Other reasons a `SecurityError` may be thrown
     are at the discretion of the user agent, and may include situations such as too many
     calls to `show()` being made in a short time or `show()` being
@@ -233,7 +233,7 @@ that may have performance implications you don't want to deal with:
 
 ```js
 function validateResponse(response) {
-  if (checkAllValues(response) {
+  if (checkAllValues(response)) {
     response.complete("success");
   } else {
     response.complete("fail");
@@ -299,7 +299,7 @@ async function requestPayment() {
     },
   };
   const response = await request.show(updatedDetails);
-  // Check response, etc...
+  // Check response, etc.
 }
 
 document.getElementById("buyButton").onclick = requestPayment;

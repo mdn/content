@@ -95,9 +95,7 @@ None.
 ```js
 // let counts = new Int32Array(...);
 // let offsets = new Int32Array(...);
-ext.multiDrawElementsWEBGL(
-    gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, counts.length);
-}
+ext.multiDrawElementsWEBGL(gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, counts.length);
 ```
 
 ## Specifications

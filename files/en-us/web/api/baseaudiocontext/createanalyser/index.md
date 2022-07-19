@@ -51,7 +51,7 @@ examples/information, check out our [Voice-change-O-matic](https://mdn.github.io
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const analyser = audioCtx.createAnalyser();
 
-  ...
+// …
 
 analyser.fftSize = 2048;
 const bufferLength = analyser.frequencyBinCount;

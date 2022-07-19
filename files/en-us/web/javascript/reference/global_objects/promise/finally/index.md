@@ -61,9 +61,9 @@ The `finally()` method is very similar to calling
   - Unlike `Promise.resolve(2).then(() => 77, () => {})` (which
     will return a resolved promise with the result `77`),
     `Promise.resolve(2).finally(() => 77)` will return a
-    new fulfilled promise with the result `2`.
+    new resolved promise with the result `2`.
   - Similarly, unlike `Promise.reject(3).then(() => {}, () => 88)`
-    (which will return a fulfilled promise with the value `88`),
+    (which will return a resolved promise with the value `88`),
     `Promise.reject(3).finally(() => 88)` will return a rejected promise
     with the reason `3`.
   - But, both `Promise.reject(3).finally(() => {throw 99})` and

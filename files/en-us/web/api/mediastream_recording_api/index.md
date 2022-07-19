@@ -61,7 +61,7 @@ function handleDataAvailable(event) {
     console.log(recordedChunks);
     download();
   } else {
-    // ...
+    // …
   }
 }
 function download() {

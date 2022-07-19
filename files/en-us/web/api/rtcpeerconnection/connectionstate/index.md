@@ -71,7 +71,7 @@ A string representing the current state of the connection, that is one of the fo
 ```js
 var pc = new RTCPeerConnection(configuration);
 
-/* ... */
+// …
 
 var connectionState = pc.connectionState;
 ```

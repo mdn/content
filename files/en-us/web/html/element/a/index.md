@@ -94,23 +94,23 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 ### Deprecated attributes
 
-- {{HTMLAttrDef("charset")}}{{Deprecated_Inline}}
+- {{HTMLAttrDef("charset")}} {{Deprecated_Inline}}
 
   - : Hinted at the {{Glossary("character encoding")}} of the linked URL.
 
     > **Note:** This attribute is deprecated and **should not be used by authors**. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.
 
-- {{HTMLAttrDef("coords")}}{{Deprecated_Inline}}
+- {{HTMLAttrDef("coords")}} {{Deprecated_Inline}}
   - : Used with [the `shape` attribute](#shape). A comma-separated list of coordinates.
-- {{HTMLAttrDef("name")}}{{Deprecated_Inline}}
+- {{HTMLAttrDef("name")}} {{Deprecated_Inline}}
 
   - : Was required to define a possible target location in a page. In HTML 4.01, `id` and `name` could both be used on `<a>`, as long as they had identical values.
 
     > **Note:** Use the global attribute {{HTMLAttrxRef("id")}} instead.
 
-- {{HTMLAttrDef("rev")}}{{Deprecated_Inline}}
+- {{HTMLAttrDef("rev")}} {{Deprecated_Inline}}
   - : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
-- {{HTMLAttrDef("shape")}}{{Deprecated_Inline}}
+- {{HTMLAttrDef("shape")}} {{Deprecated_Inline}}
 
   - : The shape of the hyperlink's region in an image map.
 

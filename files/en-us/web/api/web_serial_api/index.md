@@ -52,7 +52,7 @@ navigator.serial.getPorts().then((ports) => {
 });
 
 button.addEventListener('click', () => {
-  const usbVendorId = ...;
+  const usbVendorId = 0xABCD;
   navigator.serial.requestPort({ filters: [{ usbVendorId }]}).then((port) => {
     // Connect to `port` or add it to the list of available ports.
   }).catch((e) => {

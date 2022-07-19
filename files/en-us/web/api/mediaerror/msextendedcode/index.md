@@ -22,7 +22,7 @@ const video1 = object.getElementById("video1");
 
 video1.addEventListener('error', function () {
   const error = video1.error.msExtendedCode;
-  //...
+  //…
 }, false);
 
 video.addEventListener('canplay', function () {

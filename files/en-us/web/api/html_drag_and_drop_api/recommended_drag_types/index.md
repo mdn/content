@@ -183,13 +183,13 @@ currentEvent.dataTransfer.mozSetDataAt('application/x-moz-file-promise',
 function dataProvider(){}
 
 dataProvider.prototype = {
-  QueryInterface : function(iid) {
+  QueryInterface(iid) {
     if (iid.equals(Components.interfaces.nsIFlavorDataProvider)
                   || iid.equals(Components.interfaces.nsISupports))
       return this;
     throw Components.results.NS_NOINTERFACE;
   },
-  getFlavorData : function(aTransferable, aFlavor, aData, aDataLen) {
+  getFlavorData(aTransferable, aFlavor, aData, aDataLen) {
     if (aFlavor == 'application/x-moz-file-promise') {
 
        const urlPrimitive = {};

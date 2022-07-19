@@ -87,9 +87,9 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
 ## Constants
 
-- {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}}{{readonlyinline}}
+- {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}} {{readonlyinline}}
   - : Minimum force necessary for a normal click
-- {{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}} {{non-standard_inline}}{{readonlyinline}}
+- {{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}} {{non-standard_inline}} {{readonlyinline}}
   - : Minimum force necessary for a force click
 
 ## Methods

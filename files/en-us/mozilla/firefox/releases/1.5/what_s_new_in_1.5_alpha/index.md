@@ -155,7 +155,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 
 - Adding tokens to the User-Agent string
   - : It is now possible for applications, extensions, and vendors to all add tokens to the User-Agent string (using default preferences) without overwriting each other.
-    See [documentation](https://www.mozilla.org/build/revised-user-agent-strings.html). {{bug(274928)}}
+    See [documentation](/en-US/docs/Web/HTTP/Headers/User-Agent). {{bug(274928)}}
 
 - Toolkit chrome registry
   - : Chrome registration has been significantly improved to use simple plaintext chrome registration manifests, and no longer keeps the chrome.rdf/overlayinfo cache.
@@ -174,8 +174,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
   - : An API has been introduced so that extensions can easily handle complex command-line flags. This API will be stable and frozen for 1.1. See the interfaces `nsICommandLine` and `nsICommandLineHandler`.
 
 - XTF Support
-  - : The eXtensible Tag Framework allows adding support for new namespaces using XPCOM components to Mozilla (written in JavaScript or C++). For example,
-    the [Mozilla XForms Project](https://www.mozilla.org/projects/xforms) uses XTF to add support for the XForms namespace. See [XTF Home Page](https://web.archive.org/web/20070527160710/http://www.croczilla.com/xtf).
+  - : The eXtensible Tag Framework allows adding support for new namespaces using XPCOM components to Mozilla (written in JavaScript or C++). See [XTF Home Page](https://web.archive.org/web/20070527160710/http://www.croczilla.com/xtf).
 
 ### New Browser Features
 

@@ -113,7 +113,7 @@ async function deriveSharedSecret(privateKey, publicKey) {
   sharedSecretValue.addEventListener("animationend", () => {
     sharedSecretValue.classList.remove("fade-in");
   });
-  sharedSecretValue.textContent = `${buffer}...[${sharedSecret.byteLength} bytes total]`;
+  sharedSecretValue.textContent = `${buffer}…[${sharedSecret.byteLength} bytes total]`;
 }
 
 // Generate 2 ECDH key pairs: one for Alice and one for Bob
@@ -197,7 +197,7 @@ async function getDerivedBits() {
   derivedBitsValue.addEventListener("animationend", () => {
     derivedBitsValue.classList.remove("fade-in");
   });
-  derivedBitsValue.textContent = `${buffer}...[${derivedBits.byteLength} bytes total]`;
+  derivedBitsValue.textContent = `${buffer}…[${derivedBits.byteLength} bytes total]`;
 }
 
 const deriveBitsButton = document.querySelector(".pbkdf2 .derive-bits-button");

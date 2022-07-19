@@ -27,14 +27,14 @@ or more JavaScript objects.
 
 ```js
 log(obj1)
-log(obj1, /* ..., */ objN)
+log(obj1, /* …, */ objN)
 log(msg)
-log(msg, subst1, /* ..., */ substN])
+log(msg, subst1, /* …, */ substN)
 ```
 
 ### Parameters
 
-- `obj1` ... `objN`
+- `obj1` … `objN`
   - : A list of JavaScript objects to output. The string representations of each of these
     objects are appended together in the order listed and output. Please be warned that if
     you log objects in the latest versions of Chrome and Firefox what you get logged on
@@ -43,7 +43,7 @@ log(msg, subst1, /* ..., */ substN])
     it is the value of the object at the moment you open the console.
 - `msg`
   - : A JavaScript string containing zero or more substitution strings.
-- `subst1` ... `substN`
+- `subst1` … `substN`
   - : JavaScript objects with which to replace substitution strings within
     `msg`. This gives you additional control over the format of the output.
 

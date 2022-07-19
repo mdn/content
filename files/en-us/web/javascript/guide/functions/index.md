@@ -104,8 +104,8 @@ Function expressions are convenient when passing a function as an argument to an
 ```js
 function map(f, a) {
   const result = [];
-  for (const v of a) {
-    result[i] = f(v);
+  for (let i = 0; i < a.length; i++) {
+    result[i] = f(a[i]);
   }
   return result;
 }
@@ -271,7 +271,7 @@ Within the function body, the following are all equivalent:
 
 A function that calls itself is called a _recursive function_. In some ways, recursion is analogous to a loop. Both execute the same code multiple times, and both require a condition (to avoid an infinite loop, or rather, infinite recursion in this case).
 
-For example, the following loop...
+For example, consider the following loop:
 
 ```js
 let x = 0;
@@ -281,7 +281,7 @@ while (x < 10) { // "x < 10" is the loop condition
 }
 ```
 
-...can be converted into a recursive function declaration, followed by a call to that function:
+It can be converted into a recursive function declaration, followed by a call to that function:
 
 ```js
 function loop(x) {

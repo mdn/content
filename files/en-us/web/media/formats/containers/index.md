@@ -1078,7 +1078,7 @@ Be sure to consider the needs of your application and your organization before s
 
 #### Audio-only files
 
-| If you need...                                | Consider using this container format |
+| If you need…                                | Consider using this container format |
 | --------------------------------------------- | ------------------------------------ |
 | Compressed files for general-purpose playback | MP3 (MPEG-1 Audio Layer III)         |
 | Losslessly compressed files                   | FLAC with ALAC fallback              |
@@ -1089,7 +1089,7 @@ It's no longer necessary to choose between MP3's broad compatibility and the nee
 
 #### Video files
 
-| If you need...                                      | Consider using this container format                |
+| If you need…                                      | Consider using this container format                |
 | --------------------------------------------------- | --------------------------------------------------- |
 | General purpose video, preferably in an open format | WebM (ideally with MP4 fallback)                    |
 | General purpose video                               | MP4 (ideally with WebM or Ogg fallback)             |

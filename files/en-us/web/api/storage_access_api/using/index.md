@@ -28,7 +28,7 @@ First of all, if the `<iframe>` is sandboxed, the embedding website needs to add
 <iframe sandbox="allow-storage-access-by-user-activation
                  allow-scripts
                  allow-same-origin">
-  ...
+  …
 </iframe>
 ```
 

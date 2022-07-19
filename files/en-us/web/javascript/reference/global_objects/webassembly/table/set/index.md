@@ -57,7 +57,7 @@ the length is two, and the indexes currently contain no function references (the
 currently return {{jsxref("null")}}).
 
 ```js
-var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
+const tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
 console.log(tbl.length);
 console.log(tbl.get(0));
 console.log(tbl.get(1));
@@ -66,10 +66,8 @@ console.log(tbl.get(1));
 We then create an import object that contains a reference to the table:
 
 ```js
-var importObj = {
-  js: {
-    tbl:tbl
-  }
+const importObj = {
+  js: { tbl },
 };
 ```
 

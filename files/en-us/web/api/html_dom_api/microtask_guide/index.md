@@ -105,7 +105,7 @@ The problem introduced here is that by using a task in one branch of the `if...e
 
 ```js
 element.addEventListener("load", () => console.log("Loaded data"));
-console.log("Fetching data...");
+console.log("Fetching data…");
 element.getData();
 console.log("Data fetched");
 ```
