@@ -111,7 +111,7 @@ In languages with {{interwiki("wikipedia", "grammatical number")}} (that is, lan
 The purpose of this element is purely for the convenience of the author and all browsers display it inline ({{cssxref('display')}}`: inline`) by default, though its default styling varies from one browser to another:
 
 
-Some browsers add a dotted underline to the content of the element. Others add a dotted underline while converting the contents to small caps. Others, like Internet Explorer, do not style it differently than a {{HTMLElement("span")}} element. To control this styling, use {{cssxref('text-decoration')}} and {{cssxref('font-variant')}}. 
+Some browsers add a dotted underline to the content of the element. Others add a dotted underline while converting the contents to small caps. Others may not style it differently than a {{HTMLElement("span")}} element. To control this styling, use {{cssxref('text-decoration')}} and {{cssxref('font-variant')}}. 
 
 ## Examples
 
@@ -192,8 +192,6 @@ accessed.</p>
 Spelling out the acronym or abbreviation in full the first time it is used on a page is beneficial for helping people understand it, especially if the content is technical or industry jargon.
 
 Only include a `title` if expanding the abbreviation or acronym in the text is not possible.  Having a difference between the announced word or phrase and what is displayed on the screen, especially if it's technical jargon the reader may not be familiar with, can be jarring. 
-
-
 
 #### Example
 
