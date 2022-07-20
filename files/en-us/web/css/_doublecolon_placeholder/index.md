@@ -79,7 +79,7 @@ This example shows some of the adjustments that you can make to the styles of pl
 #### HTML
 
 ```html
-<input placeholder="Type here...">
+<input placeholder="Type here…">
 ```
 
 #### CSS
@@ -103,8 +103,8 @@ Some browsers (such as Firefox) set the default {{cssxref("opacity")}} of placeh
 #### HTML
 
 ```html
-<input placeholder="Default opacity...">
-<input placeholder="Full opacity..." class="force-opaque">
+<input placeholder="Default opacity…">
+<input placeholder="Full opacity…" class="force-opaque">
 ```
 
 #### CSS

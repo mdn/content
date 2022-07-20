@@ -29,7 +29,7 @@ You can specify either the _type_ of cursor using a keyword, or load a specific 
 /* Keyword value */
 cursor: auto;
 cursor: pointer;
-...
+/* … */
 cursor: zoom-out;
 
 /* URL with mandatory keyword fallback */
@@ -40,7 +40,7 @@ cursor: url(cursor_1.png) 4 12, auto;
 cursor: url(cursor_2.png) 2 2, pointer;
 
 /* URLs and fallback URLs (some with coordinates), with mandatory keyword fallback */
-cursor: url(cursor_1.svg) 4 5, url(cursor_2.svg), ... , url(cursor_n.cur) 5 5, progress;
+cursor: url(cursor_1.svg) 4 5, url(cursor_2.svg), /* … ,*/ url(cursor_n.cur) 5 5, progress;
 
 /* Global values */
 cursor: inherit;
@@ -59,7 +59,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
 ### Values
 
 - `<url>` {{optional_inline}}
-  - : A `url(…)` or a comma separated list `url(…), url(…), …`, pointing to an image file.
+  - : A `url()` or a comma separated list `url(), url(), …`, pointing to an image file.
     More than one {{cssxref("url", "url()")}} may be provided as fallbacks, in case some cursor image types are not supported.
     A non-URL fallback (one or more of the keyword values) _must_ be at the end of the fallback list.
 - `<x>` `<y>` {{optional_inline}}
