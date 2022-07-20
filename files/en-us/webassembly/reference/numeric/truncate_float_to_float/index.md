@@ -16,7 +16,7 @@ The **`trunc`** instructions, short for *truncate*, are used for getting the val
 
 There's another [**`trunc`**](/en-US/docs/WebAssembly/Reference/Numeric/Truncate_float_to_int) instruction that truncates the fractional part of a floating point and converts it to an integer.
 
-{{EmbedInteractiveExample("pages/wat/trunc_float_to_float.html", "tabbed-standard")}}
+{{EmbedInteractiveExample("pages/wat/trunc_float_to_float.html", "tabbed-taller")}}
 
 ## Syntax
 
