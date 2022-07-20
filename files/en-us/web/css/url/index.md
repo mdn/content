@@ -51,7 +51,7 @@ mask-image: image(url(mask.png), skyblue, linear-gradient(rgba(0, 0, 0, 1.0), tr
 content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 
 /* at-rules */
-@document url("https://www.example.com/") { } {{Experimental_Inline}}
+@document url("https://www.example.com/") { /* … */ } {{Experimental_Inline}}
 @import url("https://www.example.com/style.css");
 @namespace url(http://www.w3.org/1999/xhtml);
 ```
