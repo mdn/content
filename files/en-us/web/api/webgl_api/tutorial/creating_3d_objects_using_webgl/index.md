@@ -99,13 +99,13 @@ We also need to build an array of colors for each of the 24 vertices. This code 
 
   // Convert the array of colors into a table for all the vertices.
 
-  let colors = [];
+  const colors = [];
 
   for (let j = 0; j < faceColors.length; ++j) {
     const c = faceColors[j];
 
     // Repeat each color four times for the four vertices of the face
-    colors = colors.concat(c, c, c, c);
+    colors.push(c, c, c, c);
   }
 
   const colorBuffer = gl.createBuffer();
