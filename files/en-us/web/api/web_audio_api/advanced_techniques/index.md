@@ -615,7 +615,7 @@ function scheduleNote(beatNumber, time) {
 
 Here we look at the current time and compare it to the time for the following note; when the two match, it will call the previous two functions.
 
-{{domxref("AudioContext")}} object instances have a [`currentTime`](/en-US/docs/Web/API/BaseAudioContext/currentTime) property, which allows us to retrieve the number of seconds after we first created the context. W will use it for timing within our step sequencer. It's extremely accurate, returning a float value accurate to about 15 decimal places.
+{{domxref("AudioContext")}} object instances have a [`currentTime`](/en-US/docs/Web/API/BaseAudioContext/currentTime) property, which allows us to retrieve the number of seconds after we first created the context. We will use it for timing within our step sequencer. It's extremely accurate, returning a float value accurate to about 15 decimal places.
 
 ```js
 let timerID;
