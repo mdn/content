@@ -86,7 +86,7 @@ This has numerous benefits:
 - it does not create a variable in the outer scope ([except for IE 8 and below](https://kangax.github.io/nfe/#example_1_function_expression_identifier_leaks_into_an_enclosing_scope))
 - it has better performance than accessing the arguments object
 
-Strict mode has banned other properties that leak the stack information, like the [`caller`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/caller) property of functions. This is because looking at the call stack has one single major effect: it makes a large number of optimizations impossible, or much more difficult. For example, if you cannot guarantee that a function `f` will not call an unknown function, it is not possible to inline `f`.
+Strict mode has banned other properties that leak stack information, like the [`caller`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/caller) property of functions. This is because looking at the call stack has one single major effect: it makes a large number of optimizations impossible, or much more difficult. For example, if you cannot guarantee that a function `f` will not call an unknown function, it is not possible to inline `f`.
 
 ```js
 function f(a, b, c, d, e) {
