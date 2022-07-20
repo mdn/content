@@ -39,7 +39,7 @@ function run_PerformanceEntry() {
   console.log("PerformanceEntry support…");
 
   if (performance.mark === undefined) {
-    console.log("The roperty performance.mark is not supported");
+    console.log("The property performance.mark is not supported");
     return;
   }
 
