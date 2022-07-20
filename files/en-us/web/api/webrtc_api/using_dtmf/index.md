@@ -181,7 +181,7 @@ function gotStream(stream) {
     }
   } else {
     log("Your browser doesn't support RTCPeerConnection.addTrack(). Falling " +
-        "back to the <strong>deprecated</strong> addStream() method...");
+        "back to the <strong>deprecated</strong> addStream() method…");
     callerPC.addStream(stream);
   }
 
@@ -292,7 +292,7 @@ When the calling {{domxref("RTCPeerConnection")}} begins to receive media (after
 
 ```js
 function handleCallerNegotiationNeeded() {
-  log("Negotiating...");
+  log("Negotiating…");
   callerPC.createOffer(offerOptions)
   .then(function(offer) {
     log("Setting caller's local description: " + offer.sdp);
