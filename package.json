@@ -19,6 +19,6 @@
     "@mdn/yari": "1.14.31",
     "cross-env": "7.0.3",
     "env-cmd": "10.1.0",
-    "markdownlint-cli": "0.31.1"
+    "markdownlint-cli": "0.32.1"
   }
 }
