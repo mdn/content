@@ -62,7 +62,7 @@ A {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref('FileSyst
 The following function shows a file picker, with text files highlighted for selection.
 
 ```js
-function getNewFileHandle() {
+async function getNewFileHandle() {
   const opts = {
     types: [{
       description: 'Text file',
