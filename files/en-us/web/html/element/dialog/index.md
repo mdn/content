@@ -119,7 +119,7 @@ This example opens a modal dialog that contains a form, when the "Update details
   <form method="dialog">
     <p><label>Favorite animal:
       <select>
-        <option value="default">Choose...</option>
+        <option value="default">Choose…</option>
         <option>Brine shrimp</option>
         <option>Red panda</option>
         <option>Spider monkey</option>

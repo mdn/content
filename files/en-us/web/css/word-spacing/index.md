@@ -51,8 +51,8 @@ word-spacing: unset;
 ### HTML
 
 ```html
-<div id="mozdiv1">Here are many words...</div>
-<div id="mozdiv2">...and many more!</div>
+<div id="mozdiv1">Lorem ipsum dolor sit amet.</div>
+<div id="mozdiv2">Lorem ipsum dolor sit amet.</div>
 ```
 
 ### CSS

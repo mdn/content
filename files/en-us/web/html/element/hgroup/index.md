@@ -96,7 +96,7 @@ The `<hgroup>` itself has no impact on the document outline of a web page. Rathe
   </hgroup>
   <p>Some intro to the document.</p>
   <h2>Table of contents</h2>
-  <ol id=toc>...</ol>
+  <ol id=toc>…</ol>
   <h2>First section</h2>
   <p>Some intro to the first section.</p>
 </body>
