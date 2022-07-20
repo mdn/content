@@ -118,7 +118,7 @@ function onRefSpaceCreated(refSpace) {
   });
 
   // Now set up matrices, create a secondary reference space to
-  // transform the viewer's pose, and so forth. Then...
+  // transform the viewer's pose, and so forth.
 
   xrSession.requestAnimationFrame(onDrawFrame);
 }

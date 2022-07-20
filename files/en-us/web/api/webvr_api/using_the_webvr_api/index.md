@@ -143,7 +143,7 @@ Now onto our first WebVR-specific code. First of all, we check to see if {{domxr
       console.log('WebVR 1.1 supported');
 ```
 
-Inside our `if() { ... }` block, we run the {{domxref("Navigator.getVRDisplays()")}} function. This returns a promise, which is fulfilled with an array containing all the VR display devices connected to the computer. If none are connected, the array will be empty.
+Inside our `if() { }` block, we run the {{domxref("Navigator.getVRDisplays()")}} function. This returns a promise, which is fulfilled with an array containing all the VR display devices connected to the computer. If none are connected, the array will be empty.
 
 ```js
       // Then get the displays attached to the computer

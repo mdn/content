@@ -86,14 +86,14 @@ and [`ext.multiDrawArraysInstancedWEBGL()`](/en-US/docs/Web/API/WEBGL_multi_draw
 
 ```js
 // multiDrawArrays variant
-// let firsts = new Int32Array(...);
-// let counts = new Int32Array(...);
+const firsts = new Int32Array(/* … */);
+const counts = new Int32Array(/* … */);
 ext.multiDrawArraysWEBGL(gl.TRIANGLES, firsts, 0, counts, 0, firsts.length);
 
 // multiDrawArraysInstanced variant
-// let firsts = new Int32Array(...);
-// let counts = new Int32Array(...);
-// let instanceCounts = new Int32Array(...);
+const firsts = new Int32Array(/* … */);
+const counts = new Int32Array(/* … */);
+const instanceCounts = new Int32Array(/* … */);
 ext.multiDrawArraysInstancedWEBGL(
   gl.TRIANGLES, firsts, 0, counts, 0, instanceCounts, 0, firsts.length);
 ```
@@ -108,14 +108,14 @@ Assumes that the indices which have been previously uploaded to the
 
 ```js
 // multiDrawElements variant
-// let counts = new Int32Array(...);
-// let offsets = new Int32Array(...);
+const counts = new Int32Array(/* … */);
+const offsets = new Int32Array(/* … */);
 ext.multiDrawElementsWEBGL(gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, counts.length);
 
 // multiDrawElementsInstanced variant
-// let counts = new Int32Array(...);
-// let offsets = new Int32Array(...);
-// let instanceCounts = new Int32Array(...);
+const counts = new Int32Array(/* … */);
+const offsets = new Int32Array(/* … */);
+const instanceCounts = new Int32Array(/* … */);
 ext.multiDrawElementsInstancedWEBGL(gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, instanceCounts, 0, counts.length);
 ```
 
