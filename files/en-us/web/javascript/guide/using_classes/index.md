@@ -9,7 +9,7 @@ tags:
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Using_promises")}}
 
-JavaScript is a prototype-based language — object behaviors are specified by its own properties and its prototype's. However, with the addition of [classes](/en-US/docs/Web/JavaScript/Reference/Classes), the creation of hierarchies of objects and the inheritance of properties and their values are much more in line with other object-oriented languages like Java. In this section, we will demonstrate how objects can be created from classes.
+JavaScript is a prototype-based language — an object's behaviors are specified by its own properties and its prototype's properties. However, with the addition of [classes](/en-US/docs/Web/JavaScript/Reference/Classes), the creation of hierarchies of objects and the inheritance of properties and their values are much more in line with other object-oriented languages such as Java. In this section, we will demonstrate how objects can be created from classes.
 
 In many other languages, _classes_, or constructors, are clearly distinguished from _objects_, or instances. In JavaScript, classes are mainly an abstraction over the existing prototypical inheritance mechanism — all patterns are convertible to prototype-based inheritance. Classes themselves are normal JavaScript values as well, and have their own prototype chains. In fact, most plain JavaScript functions can be used as constructors — you use the `new` operator with a constructor function to create a new object.
 
@@ -19,7 +19,7 @@ This chapter assumes that you are already somewhat familiar with JavaScript and 
 
 ## Overview of classes
 
-If you have some hands-on experience with JavaScript, or have followed the guide along, you probably have already used classes, even if you haven't created one. For example, this [may seem familiar to you](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates):
+If you have some hands-on experience with JavaScript, or have followed along with the guide, you probably have already used classes, even if you haven't created one. For example, this [may seem familiar to you](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates):
 
 ```js
 const bigDay = new Date(2019, 6, 19);
@@ -167,7 +167,7 @@ class Color {
 }
 ```
 
-Open your browser's DevTools, paste the above code into the console, and then create an instance:
+Open your browser's devtools, paste the above code into the console, and then create an instance:
 
 ```js
 const red = new Color(255, 0, 0);
@@ -181,7 +181,7 @@ Object { values: (3) […] }
   values: Array(3) [ 255, 0, 0 ]
 ```
 
-You have successfully created a `Color` instance, and the instance has a `values` property, which is an array of the RGB values you passed in. This is pretty much equivalent to the following:
+You have successfully created a `Color` instance, and the instance has a `values` property, which is an array of the RGB values you passed in. That is pretty much equivalent to the following:
 
 ```js
 function createColor(r, g, b) {
@@ -191,7 +191,7 @@ function createColor(r, g, b) {
 }
 ```
 
-The constructor's syntax is exactly the same as a normal function, so you can use other syntaxes, like [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters):
+The constructor's syntax is exactly the same as a normal function — which means you can use other syntaxes, like [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters):
 
 ```js
 class Color {
@@ -229,9 +229,9 @@ console.log(new MyClass().myField); // undefined
 
 ## Instance methods
 
-If a class only has a constructor, it is not much different from a `createX` factory function which just creates plain objects. However, the power of classes is that it can be used as a "template" which automatically assigns methods to instances.
+If a class only has a constructor, it is not much different from a `createX` factory function which just creates plain objects. However, the power of classes is that they can be used as "templates" which automatically assign methods to instances.
 
-For example, for `Date` instances, you can use a range of methods to get different information from a single date value, like the [year](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getFullYear), [month](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth), [day of the week](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay), etc. You can also set those values through the `setX` counterparts like [`setFullYear`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setFullYear).
+For example, for `Date` instances, you can use a range of methods to get different information from a single date value, such as the [year](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getFullYear), [month](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth), [day of the week](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay), etc. You can also set those values through the `setX` counterparts like [`setFullYear`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setFullYear).
 
 For our own `Color` class, we can add a method called `getRed` which returns the red value of the color.
 
@@ -268,7 +268,7 @@ This also works. However, a problem is that this creates a new function every ti
 console.log(new Color().getRed === new Color().getRed); // false
 ```
 
-Contrarily, if you use a method, it will be shared between all instances. A function can be shared between all instances, but still have its behavior differ when different instances call it, because the value of `this` is different. If you are curious _where_ this method is stored in — it's defined on the prototype of all instances, or `Color.prototype`, which is explained in more detail in [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+In contrast, if you use a method, it will be shared between all instances. A function can be shared between all instances, but still have its behavior differ when different instances call it, because the value of `this` is different. If you are curious _where_ this method is stored in — it's defined on the prototype of all instances, or `Color.prototype`, which is explained in more detail in [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 Similarly, we can create a new method called `setRed`, which sets the red value of the color.
 
@@ -306,7 +306,7 @@ red.values[0] = 0;
 console.log(red.values[0]); // 0
 ```
 
-There is a philosophy in object-oriented programming called "encapsulation". This means you should not access the underlying the implementation of an object, but use the well-abstracted methods to interact with it. For example, if we suddenly decided to represent colors as [HSL](/en-US/docs/Web/CSS/color_value/hsl) instead:
+There is a philosophy in object-oriented programming called "encapsulation". This means you should not access the underlying implementation of an object, but instead use well-abstracted methods to interact with it. For example, if we suddenly decided to represent colors as [HSL](/en-US/docs/Web/CSS/color_value/hsl) instead:
 
 ```js
 class Color {
@@ -380,7 +380,7 @@ const red = new Color(255, 0, 0);
 red.setRed(1000); // RangeError: Invalid R value
 ```
 
-If we leave the `values` property exposed, our users can easily circumvent that check by assigning to `values[0]` directly, and create invalid colors — but with a well-encapsulated API, we can make our code more robust and prevent logic errors downstream.
+If we leave the `values` property exposed, our users can easily circumvent that check by assigning to `values[0]` directly, and create invalid colors. But with a well-encapsulated API, we can make our code more robust and prevent logic errors downstream.
 
 A class method can read the private fields of other instances, as long as they belong to the same class.
 
@@ -507,7 +507,7 @@ With the `Date` example, we have also encountered the [`Date.now()`](/en-US/docs
 
 > **Note:** Prefixing utility methods with what they deal with is called "namespacing" and is considered a good practice. For example, in addition to the older, unprefixed [`parseInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt) method, JavaScript also later added the prefixed [`Number.parseInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt) method to indicate that it's for dealing with numbers.
 
-[_Static properties_](/en-US/docs/Web/JavaScript/Reference/Classes/static) are a group of class features that are defined the class itself, rather than on individual instances of the class. These features include:
+[_Static properties_](/en-US/docs/Web/JavaScript/Reference/Classes/static) are a group of class features that are defined on the class itself, rather than on individual instances of the class. These features include:
 
 - Static methods
 - Static fields
@@ -607,7 +607,7 @@ const color = new ColorWithAlpha(255, 0, 0, 0.5);
 console.log(color.red); // 255
 ```
 
-Derived classes can also override methods from the parent class. For example, all classes implicitly inherit from [`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) class, which defines some basic methods like [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString). However, the base `toString()` method is notoriously useless, because it prints `[object Object]` in most cases:
+Derived classes can also override methods from the parent class. For example, all classes implicitly inherit the [`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) class, which defines some basic methods like [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString). However, the base `toString()` method is notoriously useless, because it prints `[object Object]` in most cases:
 
 ```js
 console.log(red.toString()); // [object Object]
@@ -654,7 +654,7 @@ class ColorWithAlpha extends Color {
 console.log(ColorWithAlpha.isValid(255, 0, 0, -1)); // false
 ```
 
-Derived classes don't have access to the parent class's private fields — this is another key aspect to JavaScript private fields being "hard private". Private fields are scoped to the class body itself and does not grant access to _any_ outside code.
+Derived classes don't have access to the parent class's private fields — this is another key aspect to JavaScript private fields being "hard private". Private fields are scoped to the class body itself and do not grant access to _any_ outside code.
 
 ```js
 class ColorWithAlpha extends Color {
@@ -678,9 +678,9 @@ console.log(color instanceof ColorWithAlpha); // true
 
 The guide has been pragmatic so far: we are focusing on _how_ classes can be used, but there's one question unanswered: _why_ would one use a class? The answer is: it depends.
 
-Classes introduce a _paradigm_, or a way to organize your code. Classes lay the fundaments to object-oriented programming, which is built on concepts like [inheritance](<https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)>) and [polymorphism](<https://en.wikipedia.org/wiki/Polymorphism_(computer_science)>) (especially _subtype polymorphism_). However, many people are philosophically against certain OOP practices and don't use classes as a result.
+Classes introduce a _paradigm_, or a way to organize your code. Classes are the foundations of object-oriented programming, which is built on concepts like [inheritance](<https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)>) and [polymorphism](<https://en.wikipedia.org/wiki/Polymorphism_(computer_science)>) (especially _subtype polymorphism_). However, many people are philosophically against certain OOP practices and don't use classes as a result.
 
-For example, one thing that makes `Date` objects infamous is that it's _mutable_.
+For example, one thing that makes `Date` objects infamous is that they're _mutable_.
 
 ```js
 function incrementDay(date) {
@@ -693,7 +693,7 @@ console.log(newDay); // 2019-06-20
 console.log(date); // 2019-06-20
 ```
 
-Mutability and internal state is an important aspect of object-oriented programming, but it often makes code hard to reason with, because any seemingly innocent operation may have unexpected side-effects and change the behavior in other parts of the program.
+Mutability and internal state are important aspects of object-oriented programming, but often make code hard to reason with — because any seemingly innocent operation may have unexpected side effects and change the behavior in other parts of the program.
 
 In order to reuse code, we usually resort to extending classes, which can create big hierarchies of inheritance patterns.
 
@@ -722,11 +722,11 @@ function isValidColor(color) {
 
 But with classes, we can congregate them all under the `Color` namespace, which improves readability. In addition, the introduction of private fields allows us to hide certain data from downstream users, creating a clean API.
 
-In general, you should consider using classes when you want to create objects that stores their own internal data and expose a lot of behavior. Take built-in JS classes as examples:
+In general, you should consider using classes when you want to create objects that store their own internal data and expose a lot of behavior. Take built-in JavaScript classes as examples:
 
 - The [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) and [`Set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) classes store a collection of elements and allow you to access them by key using `get()`, `set()`, `has()`, etc.
-- The [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) class stores a date as a Unix timestamp (a number) and allow you to format, update, and read individual date components.
-- The [`Error`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) class stores information about a particular exception, including error message, stack trace, cause, etc. It's one of the few classes that come with a rich inheritance structure: there are multiple built-in classes like [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) and [`ReferenceError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError) that extend `Error`. In the case of errors, this inheritance allows refining the semantics of errors: each error class represents a specific type of error, which can be easily checked with [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof).
+- The [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) class stores a date as a Unix timestamp (a number) and allows you to format, update, and read individual date components.
+- The [`Error`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) class stores information about a particular exception, including the error message, stack trace, cause, etc. It's one of the few classes that come with a rich inheritance structure: there are multiple built-in classes like [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) and [`ReferenceError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError) that extend `Error`. In the case of errors, this inheritance allows refining the semantics of errors: each error class represents a specific type of error, which can be easily checked with [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof).
 
 JavaScript offers the mechanism to organize your code in a canonical object-oriented way, but whether and how to use it is entirely up to the programmer's discretion.
 
