@@ -11,7 +11,7 @@ tags:
 
 {{Non-standard_header()}}
 
-**`XMLHttpRequest.msCaching`** is a read/write property which specifies whether stream data downloaded using [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) is cached to disk or not. On compatible browsers, if `msCaching` is not `disabled` instances of XMLHttpRequest will cache to disk regardless of if [cache-control](/en-US/docs/Web/HTTP/Headers/Cache-Control) is set to `no-cache`.
+**`msCaching`** is a read/write property which specifies whether stream data downloaded using [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) is cached to disk or not. In compatible browsers, if `msCaching` is not `disabled`, then `XMLHttpRequest` instances will be cached to disk regardless of whether [cache-control](/en-US/docs/Web/HTTP/Headers/Cache-Control) is set to `no-cache`.
 
 ## Value
 
