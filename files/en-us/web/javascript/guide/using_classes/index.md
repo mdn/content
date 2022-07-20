@@ -94,9 +94,11 @@ MyClass.myStaticField = "bar";
 MyClass.myStaticMethod = function () {
   // myStaticMethod body
 };
-MyClass.prototype.myMethod = (function () {
+MyClass.prototype.myMethod = function () {
   // myMethod body
-})(function () {
+};
+
+(function () {
   // Static initialization code
 })();
 ```
