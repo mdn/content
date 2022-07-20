@@ -19,7 +19,7 @@ The **`arguments.callee`** property contains the currently executing function.
 
 `callee` is a property of the `arguments` object. It can be used to refer to the currently executing function inside the function body of that function. This is useful when the name of the function is unknown, such as within a function expression with no name (also called "anonymous functions").
 
-(Text below is largely adapted from [a Stack Overflow answer by olliej](https://stackoverflow.com/questions/103598/why-was-the-arguments-callee-caller-property-deprecated-in-javascript/235760))
+(The text below is largely adapted from [a Stack Overflow answer by olliej](https://stackoverflow.com/questions/103598/why-was-the-arguments-callee-caller-property-deprecated-in-javascript/235760))
 
 Early versions of JavaScript did not allow named function expressions, and for this reason you could not make a recursive function expression.
 
