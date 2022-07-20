@@ -144,22 +144,21 @@ If you have a function defined in your C code that you want to call as needed fr
 6. Add a {{HTMLElement("button")}} element as shown below, just above the first opening `<script type='text/javascript'>` tag.
 
     ```html
-    <button class="mybutton">Run myFunction</button>
+    <button id="mybutton">Run myFunction</button>
     ```
 
 7. Now add the following code at the end of the first {{HTMLElement("script")}} element:
 
     ```js
-    document.querySelector('.mybutton')
-        .addEventListener('click', function() {
-            alert('check console');
-            var result = Module.ccall(
-                'myFunction',  // name of C function
-                null,  // return type
-                null,  // argument types
-                null  // arguments
-            );
-        });
+    document.getElementById("mybutton").onclick = () => {
+        alert('check console');
+        let result = Module.ccall(
+            'myFunction',  // name of C function
+            null,  // return type
+            null,  // argument types
+            null  // arguments
+        );
+    };
     ```
 
 This illustrates how `ccall()` is used to call the exported function.
