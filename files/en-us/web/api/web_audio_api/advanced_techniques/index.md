@@ -108,14 +108,14 @@ Now we can create an {{domxref("OscillatorNode")}} and set its wave to the one w
 
 ```js
 function playSweep(time) {
-     const osc = new OscillatorNode(audioCtx, {
-      frequency: 380,
-      type: "custom",
-      periodicWave: wave
-    });
-     osc.connect(audioCtx.destination);
-     osc.start(time);
-     osc.stop(time + 1);
+  const osc = new OscillatorNode(audioCtx, {
+    frequency: 380,
+    type: "custom",
+    periodicWave: wave
+  });
+  osc.connect(audioCtx.destination);
+  osc.start(time);
+  osc.stop(time + 1);
 }
 ```
 
