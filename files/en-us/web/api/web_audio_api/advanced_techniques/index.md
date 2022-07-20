@@ -73,7 +73,7 @@ Each voice also has local controls, allowing you to manipulate the effects or pa
   </tbody>
 </table>
 
-> **Note:** We didn't create this instrument to sound good but to provide demonstration code. This demonstration represents a _very_ simplified version of such an instrument. The sounds are based on a dial-up modem. If you are unaware of how such sounds, you can [listen to one here](https://soundcloud.com/john-pemberton/modem-dialup).
+> **Note:** We didn't create this instrument to sound good but to provide demonstration code. This demonstration represents a _very_ simplified version of such an instrument. The sounds are based on a dial-up modem. If you are unaware of how such device sounds, you can [listen to one here](https://soundcloud.com/john-pemberton/modem-dialup).
 
 ## Creating an audio context
 
@@ -87,7 +87,7 @@ const audioCtx = new AudioContext();
 
 For what we will call the "sweep" sound, that first noise you hear when you dial up, we're going to create an oscillator to generate the sound.
 
-The {{domxref("OscillatorNode")}} comes with basic waveforms out of the box — sine, square, triangle, or sawtooth. However, instead of using the standard waves that come by default, we're going to create our own using the {{domxref("PeriodicWave")}} interface and values set in a wavetable. We can use the {{domxref("PeriodicWaveNode/PeriodicWave", "PeriodicWave()")}} constructor to use this custom wave with an oscillator.
+The {{domxref("OscillatorNode")}} comes with basic waveforms out of the box — sine, square, triangle, or sawtooth. However, instead of using the standard waves that come by default, we're going to create our own using the {{domxref("PeriodicWave")}} interface and values set in a wavetable. We can use the {{domxref("PeriodicWave/PeriodicWave", "PeriodicWave()")}} constructor to use this custom wave with an oscillator.
 
 ### The periodic wave
 
