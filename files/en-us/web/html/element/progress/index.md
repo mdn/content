@@ -126,7 +126,7 @@ If the `<progress>` element is describing the loading progress of a section of a
 
   <!-- ... -->
 
-  <progress id="progress-bar" aria-label="Content loading..."></progress>
+  <progress id="progress-bar" aria-label="Content loading…"></progress>
 ```
 
 ## Specifications

@@ -109,7 +109,7 @@ To begin with, it's a good idea to first check if the browser actually supports 
 var supportsVideo = !!document.createElement('video').canPlayType;
 if (supportsVideo) {
    // set up custom controls
-   // ...
+   // …
 }
 ```
 
