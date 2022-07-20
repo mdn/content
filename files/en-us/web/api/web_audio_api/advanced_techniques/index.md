@@ -254,24 +254,24 @@ As before, we'll vary the parameters when the user changes the ranges values.
 
 ```js
 let pulseHz = 880;
-  const hzControl = document.querySelector("#hz");
-  hzControl.addEventListener(
-    "input",
-    (ev) => {
-      pulseHz = parseInt(ev.target.value, 10);
-    },
-    false
-  );
+const hzControl = document.querySelector("#hz");
+hzControl.addEventListener(
+  "input",
+  (ev) => {
+    pulseHz = parseInt(ev.target.value, 10);
+  },
+  false
+);
 
-  let lfoHz = 30;
-  const lfoControl = document.querySelector("#lfo");
-  lfoControl.addEventListener(
-    "input",
-    (ev) => {
-      lfoHz = parseInt(ev.target.value, 10);
-    },
-    false
-  );
+let lfoHz = 30;
+const lfoControl = document.querySelector("#lfo");
+lfoControl.addEventListener(
+  "input",
+  (ev) => {
+    lfoHz = parseInt(ev.target.value, 10);
+  },
+  false
+);
 ```
 
 ### The final playPulse() function
