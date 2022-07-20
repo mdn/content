@@ -626,19 +626,6 @@ class Color {
 console.log(new Color(255, 0, 0).toString()); // '255, 0, 0'
 ```
 
-Similarly, the derived class `ColorWithAlpha` can override the parent class's `toString()` method to output the color's A value as well.
-
-```js
-class ColorWithAlpha extends Color {
-  // ...
-  toString() {
-    return `${this.#values.join(", ")}, ${this.#alpha}`;
-  }
-}
-
-console.log(new ColorWithAlpha(255, 0, 0, 0.5).toString()); // '255, 0, 0, 0.5'
-```
-
 Within derived classes, you can access the parent class's methods by using `super`. This allows you to build enhancement methods and avoid code duplication.
 
 ```js
