@@ -21,8 +21,8 @@ browser-compat: html.elements.abbr
 {{HTMLRef}}
 
 The **`<abbr>`** [HTML](/en-US/docs/Web/HTML) element represents an abbreviation or acronym.
- 
-When including an abbreviation or acronym, provide a full expansion of the term in plain text on first use, along with the `<abbr>` to mark up the abbreviation. This informs the user what the abbreviation or acronym means. 
+
+When including an abbreviation or acronym, provide a full expansion of the term in plain text on first use, along with the `<abbr>` to mark up the abbreviation. This informs the user what the abbreviation or acronym means.
 
 The optional {{htmlattrxref("title")}} attribute can provide an expansion for the abbreviation or accronym when a full expansion is not present. This provides a hint to user agents on how to announce/display the content while informing all users what the abbreviation means. If present, `title` must contain this full description and nothing else.
 
@@ -98,7 +98,7 @@ Each `<abbr>` element you use is independent from all others; providing a `title
 It's certainly not required that all abbreviations be marked up using `<abbr>`. There are, though, a few cases where it's helpful to do so:
 
 - When an abbreviation is used and you want to provide an expansion or definition outside the flow of the document's content, use `<abbr>` with an appropriate {{htmlattrxref("title")}}.
-- To define an abbreviation which may be unfamiliar to the reader, present the term using `<abbr>` and inline text providing the definition. Include a `title` attribute only when the inline expansion or definition is not available. 
+- To define an abbreviation which may be unfamiliar to the reader, present the term using `<abbr>` and inline text providing the definition. Include a `title` attribute only when the inline expansion or definition is not available.
 - When an abbreviation's presence in the text needs to be semantically noted, the `<abbr>` element is useful. This can be used, in turn, for styling or scripting purposes.
 - You can use `<abbr>` in concert with {{HTMLElement("dfn")}} to establish definitions for terms which are abbreviations or acronyms. See the example [Defining an abbreviation](#defining_an_abbreviation) below.
 
@@ -110,8 +110,7 @@ In languages with {{interwiki("wikipedia", "grammatical number")}} (that is, lan
 
 The purpose of this element is purely for the convenience of the author and all browsers display it inline ({{cssxref('display')}}`: inline`) by default, though its default styling varies from one browser to another:
 
-
-Some browsers add a dotted underline to the content of the element. Others add a dotted underline while converting the contents to small caps. Others may not style it differently than a {{HTMLElement("span")}} element. To control this styling, use {{cssxref('text-decoration')}} and {{cssxref('font-variant')}}. 
+Some browsers add a dotted underline to the content of the element. Others add a dotted underline while converting the contents to small caps. Others may not style it differently than a {{HTMLElement("span")}} element. To control this styling, use {{cssxref('text-decoration')}} and {{cssxref('font-variant')}}.
 
 ## Examples
 
@@ -191,7 +190,7 @@ accessed.</p>
 
 Spelling out the acronym or abbreviation in full the first time it is used on a page is beneficial for helping people understand it, especially if the content is technical or industry jargon.
 
-Only include a `title` if expanding the abbreviation or acronym in the text is not possible.  Having a difference between the announced word or phrase and what is displayed on the screen, especially if it's technical jargon the reader may not be familiar with, can be jarring. 
+Only include a `title` if expanding the abbreviation or acronym in the text is not possible.  Having a difference between the announced word or phrase and what is displayed on the screen, especially if it's technical jargon the reader may not be familiar with, can be jarring.
 
 #### Example
 
