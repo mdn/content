@@ -88,7 +88,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: yari/deployer/.venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}
+          # the trailing number is used to increase for getting
+          # a different cache key when this file changes
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ steps.setup-python.outputs.python-version }}-0
 
       - name: Install poetry dependencies
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
