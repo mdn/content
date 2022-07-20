@@ -34,9 +34,9 @@ The `-webkit-device-pixel-ratio` feature is specified as a {{cssxref("&lt;number
 @media (min-resolution: 2dppx) { }
 
 /* Similarly: */
-@media (-webkit-max-device-pixel-ratio: 2) { }
+@media (-webkit-max-device-pixel-ratio: 2) { /* … */ }
 /* It is equivalent to: */
-@media (max-resolution: 2dppx) { }
+@media (max-resolution: 2dppx) { /* … */ }
 ```
 
 ## Examples
