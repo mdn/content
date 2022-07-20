@@ -49,7 +49,7 @@ showSaveFilePicker()
 
 ### Return value
 
-A {{domxref('FileSystemFileHandle')}}.
+A {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref('FileSystemFileHandle')}} object.
 
 ### Exceptions
 
@@ -69,7 +69,7 @@ function getNewFileHandle() {
       accept: {'text/plain': ['.txt']},
     }],
   };
-  return window.showSaveFilePicker(opts);
+  return await window.showSaveFilePicker(opts);
 }
 ```
 
