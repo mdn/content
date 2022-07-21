@@ -19,7 +19,7 @@ create a class that is a child of another class.
 ## Syntax
 
 ```js
-class ChildClass extends ParentClass { /* ... */ }
+class ChildClass extends ParentClass { /* … */ }
 ```
 
 ## Description

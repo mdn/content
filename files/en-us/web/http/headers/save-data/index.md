@@ -84,7 +84,7 @@ Vary: Accept-Encoding, Save-Data
 Cache-Control: public, max-age=31536000
 Content-Type: image/jpeg
 
-[...]
+[…]
 ```
 
 ### Without `Save-Data`
@@ -105,7 +105,7 @@ Vary: Accept-Encoding, Save-Data
 Cache-Control: public, max-age=31536000
 Content-Type: image/jpeg
 
-[...]
+[…]
 ```
 
 ## Specifications

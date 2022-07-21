@@ -17,10 +17,10 @@ The `constructor` method is a special method of a {{jsxref("Statements/class", "
 ## Syntax
 
 ```js
-constructor() { /* ... */ }
-constructor(argument0) { /* ... */ }
-constructor(argument0, argument1) { /* ... */ }
-constructor(argument0, argument1, ... , argumentN) { /* ... */ }
+constructor() { /* … */ }
+constructor(argument0) { /* … */ }
+constructor(argument0, argument1) { /* … */ }
+constructor(argument0, argument1, /* … ,*/ argumentN) { /* … */ }
 ```
 
 ## Description

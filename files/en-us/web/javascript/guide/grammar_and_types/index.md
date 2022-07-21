@@ -339,7 +339,7 @@ let answer = 42;
 And later, you could assign the same variable a string value, for example:
 
 ```js
-answer = 'Thanks for all the fish...';
+answer = 'Thanks for all the fish!';
 ```
 
 Because JavaScript is dynamically typed, this assignment does not cause an error message.
