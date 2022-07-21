@@ -15,7 +15,6 @@ The MathML `<mrow>` element is used to group sub-expressions, which usually cont
 When writing a MathML expression, you should group elements within an `<mrow>` in the same way as they are grouped in the mathematical interpretation of the expression. Proper grouping helps the rendering of the expression in several ways:
 
 - It can improve the display by possibly affecting spacing.
-- It allows for more intelligent line-breaking and indentation.
 - It simplifies the interpretation of the expression by automated systems such as computer algebra systems and audio renderers.
 
 ## Attributes
