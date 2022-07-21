@@ -46,14 +46,14 @@ const span = document.getElementsByTagName("span")[0];
 const pre = document.getElementsByTagName("pre")[0];
 const attrMap = pre.attributes;
 
-let result = `The \`<pre>\` element initially contains ${attrMap.length} attributes.\n\n`;
+let result = `The '<pre>' element initially contains ${attrMap.length} attributes.\n\n`;
 
 result += "We remove `one` from `<span>` and adds it to `<pre>`.\n";
 const one = span.attributes.removeNamedItem("one");
 attrMap.setNamedItem(one);
-result += `The \`<pre>\` element now contains ${pre.attributes.length} attributes.\n\n`;
+result += `The '<pre>' element now contains ${pre.attributes.length} attributes.\n\n`;
 
-result += "We get `two` from `<span>` and try to adds it to `<pre>`.\n";
+result += "We get 'two' from '<span>' and try to adds it to '<pre>'.\n";
 const two = span.attributes.getNamedItem("two");
 try {
   attrMap.setNamedItem(two);

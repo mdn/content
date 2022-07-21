@@ -42,7 +42,7 @@ The removed {{domxref("Attr")}}.
 const pre = document.getElementsByTagName("pre")[0];
 const attrMap = pre.attributes;
 
-let result = `The \`test\` attribute initially contains \`${attrMap["test"].value}\`.\n`;
+let result = `The 'test' attribute initially contains '${attrMap["test"].value}'.\n`;
 
 result += "We remove it.\n\n";
 attrMap.removeNamedItem("test");
