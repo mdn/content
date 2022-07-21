@@ -98,6 +98,7 @@ playButton.addEventListener('click', function() {
     if (this.dataset.playing === 'false') {
         srcNode = playSourceNode(audioCtx, sample);
         // …
+    }
 }, false);
 ```
 
@@ -115,6 +116,7 @@ filterButton.addEventListener('click', function() {
         srcNode.disconnect(audioCtx.destination);
         srcNode.connect(iirfilter).connect(audioCtx.destination);
         // …
+    }
 }, false);
 ```
 

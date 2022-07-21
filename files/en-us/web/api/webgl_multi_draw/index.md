@@ -89,13 +89,14 @@ and [`ext.multiDrawArraysInstancedWEBGL()`](/en-US/docs/Web/API/WEBGL_multi_draw
 const firsts = new Int32Array(/* … */);
 const counts = new Int32Array(/* … */);
 ext.multiDrawArraysWEBGL(gl.TRIANGLES, firsts, 0, counts, 0, firsts.length);
+```
 
+```js
 // multiDrawArraysInstanced variant
 const firsts = new Int32Array(/* … */);
 const counts = new Int32Array(/* … */);
 const instanceCounts = new Int32Array(/* … */);
-ext.multiDrawArraysInstancedWEBGL(
-  gl.TRIANGLES, firsts, 0, counts, 0, instanceCounts, 0, firsts.length);
+ext.multiDrawArraysInstancedWEBGL(gl.TRIANGLES, firsts, 0, counts, 0, instanceCounts, 0, firsts.length);
 ```
 
 ### Drawing multiple elements
@@ -111,7 +112,9 @@ Assumes that the indices which have been previously uploaded to the
 const counts = new Int32Array(/* … */);
 const offsets = new Int32Array(/* … */);
 ext.multiDrawElementsWEBGL(gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, counts.length);
+```
 
+```js
 // multiDrawElementsInstanced variant
 const counts = new Int32Array(/* … */);
 const offsets = new Int32Array(/* … */);
