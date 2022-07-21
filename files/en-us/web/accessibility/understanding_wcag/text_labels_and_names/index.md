@@ -166,10 +166,10 @@ The form element can be placed inside the {{htmlelement("label")}}, in which cas
 
 ```html
 <label>I agree to the terms and conditions.
-  <input type="checkbox" id="terms">
+  <input type="checkbox" id="terms" name="terms">
 </label>
 
-<input type="checkbox" id="emailoptin">
+<input type="checkbox" id="emailoptin" name="optin">
 <label for="emailoptin">Yes, please send me news about this product.</label>
 ```
 
