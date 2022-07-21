@@ -90,7 +90,7 @@ object or a custom object.
 ```js
 function logIterable(it) {
   if (!(Symbol.iterator in it)) {
-    console.log(it, ' is not an iterable object…');
+    console.log(it, ' is not an iterable object.');
     return;
   }
 
