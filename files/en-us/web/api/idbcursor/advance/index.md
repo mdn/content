@@ -69,7 +69,7 @@ function advanceResult() {
     const cursor = event.target.result;
     if(cursor) {
       const listItem = document.createElement('li');
-      listItem.innerHTML = '<strong>' + cursor.value.albumTitle + '</strong>, ' + cursor.value.year;
+      listItem.innerHTML = `<strong>${cursor.value.albumTitle}</strong>, ${cursor.value.year}`;
       list.appendChild(listItem);
       cursor.advance(2);
     } else {

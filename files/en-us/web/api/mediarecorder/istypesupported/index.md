@@ -53,7 +53,7 @@ const types = ["video/webm",
              "video/mpeg"];
 
 for (const type of types) {
-  console.log( "Is " + type + " supported? " + (MediaRecorder.isTypeSupported(type) ? "Maybe!" : "Nope :("));
+  console.log( `Is ${type} supported? ${MediaRecorder.isTypeSupported(type) ? "Maybe!" : "Nope :("}`);
 }
 ```
 

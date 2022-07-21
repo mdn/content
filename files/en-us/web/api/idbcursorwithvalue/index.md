@@ -49,7 +49,7 @@ function displayData() {
     const cursor = event.target.result;
     if(cursor) {
       const listItem = document.createElement('li');
-      listItem.innerHTML = cursor.value.albumTitle + ', ' + cursor.value.year;
+      listItem.innerHTML = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
 
       cursor.continue();

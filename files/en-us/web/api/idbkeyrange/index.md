@@ -93,7 +93,7 @@ function displayData() {
     const cursor = event.target.result;
     if(cursor) {
       const listItem = document.createElement('li');
-      listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
+      listItem.innerHTML = `<strong>${cursor.value.fThing}</strong>, ${cursor.value.fRating}`;
       list.appendChild(listItem);
 
       cursor.continue();
