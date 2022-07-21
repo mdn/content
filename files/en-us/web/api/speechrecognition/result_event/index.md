@@ -52,7 +52,7 @@ const recognition = new SpeechRecognition();
 
 recognition.addEventListener('result', function(event) {
   const color = event.results[0][0].transcript;
-  diagnostic.textContent = 'Result received: ' + color + '.';
+  diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
 });
 ```
@@ -62,7 +62,7 @@ Or use the `onresult` event handler property:
 ```js
 recognition.onresult = function(event) {
   const color = event.results[0][0].transcript;
-  diagnostic.textContent = 'Result received: ' + color + '.';
+  diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
 }
 ```

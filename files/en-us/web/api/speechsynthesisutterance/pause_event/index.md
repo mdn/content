@@ -47,7 +47,7 @@ You can use the `pause` event in an [`addEventListener`](/en-US/docs/Web/API/Eve
 
 ```js
 utterThis.addEventListener('pause', function(event) {
-  console.log('Speech paused after ' + event.elapsedTime + ' seconds.');
+  console.log(`Speech paused after ${event.elapsedTime} seconds.`);
 });
 ```
 
@@ -55,7 +55,7 @@ Or use the `onpause` event handler property:
 
 ```js
 utterThis.onpause = function(event) {
-  console.log('Speech paused after ' + event.elapsedTime + ' seconds.');
+  console.log(`Speech paused after ${event.elapsedTime} seconds.`);
 }
 ```
 

@@ -47,7 +47,7 @@ You can use the `mark` event in an [`addEventListener`](/en-US/docs/Web/API/Even
 
 ```js
 utterThis.addEventListener('mark', function(event) {
-  console.log('A mark was reached: ' + event.name);
+  console.log(`A mark was reached: ${event.name}`);
 });
 ```
 
@@ -55,7 +55,7 @@ Or use the `onmark` event handler property:
 
 ```js
 utterThis.onmark = function(event) {
-  console.log('A mark was reached: ' + event.name);
+  console.log(`A mark was reached: ${event.name}`);
 }
 ```
 

@@ -87,7 +87,7 @@ function loadVoices() {
   voices = synth.getVoices();
   for(let i = 0; i < voices.length; i++) {
     const option = document.createElement('option');
-    option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+    option.textContent = `${voices[i].name} (${voices[i].lang})`;
     option.value = i;
     voiceSelect.appendChild(option);
   }
