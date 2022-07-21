@@ -131,7 +131,7 @@ Object.prototype.authenticated = true;
 
 // Unexpectedly allowing unauthenticated user to pass through
 if (user.authenticated) {
-  // access confidential data...
+  // access confidential data
 }
 ```
 

@@ -63,7 +63,7 @@ You can then iterate through the returned array as shown below:
 
 ```js
 Intl.supportedValuesOf("calendar").forEach(function(calendar) {
-   // "buddhist", "chinese", "coptic", "dangi", ...
+   // "buddhist", "chinese", "coptic", "dangi", etc.
 });
 ```
 
@@ -73,23 +73,23 @@ The other values are all obtained in the same way:
 
 ```js
 Intl.supportedValuesOf("collation").forEach(function(collation) {
-   // "big5han", "compat", "dict", "emoji", ...
+   // "big5han", "compat", "dict", "emoji", etc.
 });
 
 Intl.supportedValuesOf("currency").forEach(function(currency) {
-   // "ADP", "AED", "AFA", "AFN", "ALK", "ALL", "AMD", ...
+   // "ADP", "AED", "AFA", "AFN", "ALK", "ALL", "AMD", etc.
 });
 
 Intl.supportedValuesOf("numberingSystem").forEach(function(numberingSystem) {
-   // "adlm", "ahom", "arab", "arabext", "bali", ...
+   // "adlm", "ahom", "arab", "arabext", "bali", etc.
 });
 
 Intl.supportedValuesOf("timeZone").forEach(function(timeZone) {
-   // "Africa/Abidjan", "Africa/Accra", "Africa/Addis_Ababa", "Africa/Algiers", ...
+   // "Africa/Abidjan", "Africa/Accra", "Africa/Addis_Ababa", "Africa/Algiers", etc.
 });
 
 Intl.supportedValuesOf("unit").forEach(function(unit) {
-   // "acre", "bit", "byte", "celsius", "centimeter", ...
+   // "acre", "bit", "byte", "celsius", "centimeter", etc.
 });
 ```
 

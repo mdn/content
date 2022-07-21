@@ -106,7 +106,7 @@ try {
   } else if (e instanceof RangeError) {
     console.error(e.name + ': ' + e.message)
   }
-  // ... etc
+  // etc.
 
   else {
     // If none of our cases matched leave the Error unhandled

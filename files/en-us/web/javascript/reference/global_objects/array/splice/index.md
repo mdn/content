@@ -50,7 +50,7 @@ splice(start, deleteCount, item1, item2, itemN)
     If `deleteCount` is `0` or negative, no elements are removed.
     In this case, you should specify at least one new element (see below).
 
-- `item1, item2, ...` {{optional_inline}}
+- `item1`, …, `itemN` {{optional_inline}}
   - : The elements to add to the array, beginning from `start`.
 
     If you do not specify any elements, `splice()` will only remove elements from the array.

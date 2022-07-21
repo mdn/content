@@ -61,7 +61,7 @@ doSomething.name; // "doSomething"
 
 ### Function constructor name
 
-Functions created with the syntax `new Function(...)` or just `Function(...)` create {{jsxref("Function")}} objects and their name is "anonymous".
+Functions created with the syntax `new Function()` or just `Function()` create {{jsxref("Function")}} objects and their name is "anonymous".
 
 ```js
 (new Function).name; // "anonymous"
