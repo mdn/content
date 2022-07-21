@@ -226,7 +226,7 @@ let mc = {
     }).catch((error) => {
         const li = document.createElement('li'),
             ul = document.getElementById("results");
-        li.innerText = `Codec ${mc.videoConfiguration.video.contentType} threw an error: ${error}`;
+        li.textContent = `Codec ${mc.videoConfiguration.video.contentType} threw an error: ${error}`;
         ul.appendChild(li);
     });
   }

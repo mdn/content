@@ -102,7 +102,7 @@ function calcFrequencyResponse() {
 
   for(i = 0; i <= myFrequencyArray.length-1;i++){
     const listItem = document.createElement('li');
-    listItem.innerHTML = `<strong>${myFrequencyArray[i]}Hz</strong>: Magnitude ${magResponseOutput[i]}, Phase ${phaseResponseOutput[i]} radians.`;
+    listItem.textContent = `${myFrequencyArray[i]}Hz: Magnitude ${magResponseOutput[i]}, Phase ${phaseResponseOutput[i]} radians.`;
     freqResponseOutput.appendChild(listItem);
   }
 }

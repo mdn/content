@@ -145,7 +145,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 
     // Error callback
     .catch(function (err) {
-      console.log(`The following getUserMedia error occurred: ${err}`);
+      console.error(`The following getUserMedia error occurred: ${err}`);
     });
 } else {
   console.log("getUserMedia not supported on your browser!");

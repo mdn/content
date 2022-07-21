@@ -39,7 +39,7 @@ function displayData() {
     const cursor = event.target.result;
       if(cursor) {
         const listItem = document.createElement('li');
-        listItem.innerHTML = `<strong>${cursor.value.albumTitle}</strong>, ${cursor.value.year}`;
+        listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
         list.appendChild(listItem);
         console.log(cursor.request);
         cursor.continue();
