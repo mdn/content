@@ -424,7 +424,7 @@ JavaScript objects can be thought of as simple collections of name-value pairs. 
 - HashMaps in Java.
 - Associative arrays in PHP.
 
-The fact that this data structure is so widely used is a testament to its versatility. Since everything (but core types) in JavaScript is an object, any JavaScript program naturally involves a great deal of hash table lookups. It's a good thing they're so fast!
+The fact that this data structure is so widely used is a testament to its versatility. Since everything (except for core types) in JavaScript is an object, any JavaScript program naturally involves plenty of hash table lookups. It's a good thing they're so fast!
 
 The "name" part is a JavaScript string, while the value can be any JavaScript value — including more objects. This allows you to build data structures of arbitrary complexity.
 
