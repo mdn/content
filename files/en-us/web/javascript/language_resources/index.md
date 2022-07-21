@@ -9,7 +9,11 @@ tags:
 ---
 {{JsSidebar}}
 
-**ECMAScript** is the scripting language that forms the basis of [JavaScript](/en-US/docs/Web/JavaScript). ECMAScript standardized by the [ECMA International](https://www.ecma-international.org/) standards organization in the **ECMA-262 and ECMA-402 specifications**. The following ECMAScript standards have been approved or are being worked on:
+**ECMAScript** is the scripting language that forms the basis of [JavaScript](/en-US/docs/Web/JavaScript). ECMAScript standardized by the [ECMA International](https://www.ecma-international.org/) standards organization in the **ECMA-262 and ECMA-402 specifications**.
+
+The specifications are published on a yearly basis. The latest published version of ECMA-262 can be found in [PDF form](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf) and [HTML form](https://262.ecma-international.org/13.0/). <https://tc39.es/ecma262/> and <https://tc39.es/ecma402/> host the current working drafts for ECMA-262 and ECMA-402.
+
+Below are the historical editions:
 
 <table class="standard-table">
   <tbody>
@@ -18,72 +22,6 @@ tags:
       <th>Links</th>
       <th>Release date</th>
       <th>Description</th>
-    </tr>
-    <tr>
-      <th colspan="4">Current editions</th>
-    </tr>
-    <tr>
-      <td>ECMA-262 11th Edition</td>
-      <td>
-        <p>
-          <a
-            href="https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf"
-            >PDF</a
-          >,
-          <a href="https://ecma-international.org/ecma-262/11.0/index.html"
-            >HTML</a
-          >, <a href="https://tc39.github.io/ecma262/">Working draft</a>,
-          <a href="https://github.com/tc39/ecma262">repository</a>
-        </p>
-      </td>
-      <td>2020</td>
-      <td>ECMAScript 2020 Language Specification</td>
-    </tr>
-    <tr>
-      <td>ECMA-262 10th Edition</td>
-      <td>
-        <p>
-          <a
-            href="https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf"
-            >PDF</a
-          >,
-          <a href="https://ecma-international.org/ecma-262/10.0/index.html"
-            >HTML</a
-          >, <a href="https://tc39.github.io/ecma262/">Working draft</a>,
-          <a href="https://github.com/tc39/ecma262">repository</a>
-        </p>
-      </td>
-      <td>2019</td>
-      <td>ECMAScript 2019 Language Specification</td>
-    </tr>
-    <tr>
-      <td>ECMA-262 9th Edition</td>
-      <td>
-        <p>
-          <a
-            href="http://ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf"
-            >PDF</a
-          >,
-          <a href="http://ecma-international.org/ecma-262/9.0/index.html#Title"
-            >HTML</a
-          >, <br /><a href="https://tc39.github.io/ecma262/">Working draft</a>,
-          <a href="https://github.com/tc39/ecma262">repository</a>
-        </p>
-      </td>
-      <td>2018</td>
-      <td>ECMAScript 2018 Language Specification</td>
-    </tr>
-    <tr>
-      <td>ECMA-402 5th Edition</td>
-      <td>
-        <a href="https://tc39.github.io/ecma402/">Working draft</a>,
-        <a href="https://github.com/tc39/ecma402">repository</a>
-      </td>
-      <td>2018</td>
-      <td>ECMAScript 2018 Internationalization API Specification</td>
-    </tr>
-    <tr>
-      <th colspan="4">Obsolete/historical editions</th>
     </tr>
     <tr>
       <td>ECMA-262</td>
