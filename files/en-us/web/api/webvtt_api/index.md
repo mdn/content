@@ -313,7 +313,7 @@ Each cue timing contains five components:
 
 - Timestamp for start time.
 - At least one space.
-- The string "`-->".`
+- The string "`-->`".
 - At least one space.
 - Timestamp for end time.
 
