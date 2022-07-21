@@ -269,7 +269,7 @@ startup = () => {
 
   for (let i=0; i<4; i++) {
     let template = document.querySelector("#boxTemplate").content.cloneNode(true);
-    let boxID = "box" + (i+1);
+    let boxID = `box${i + 1}`;
     template.querySelector(".sampleBox").id = boxID;
     wrapper.appendChild(document.importNode(template, true));
 
@@ -277,7 +277,7 @@ startup = () => {
 
     observerOptions.threshold = thresholdSets[i];
     observers[i] = new IntersectionObserver(intersectionCallback, observerOptions);
-    observers[i].observe(document.querySelector("#" + boxID));
+    observers[i].observe(document.querySelector(`#${boxID}`));
   }
 
   // Scroll to the starting position
@@ -289,7 +289,7 @@ startup = () => {
 intersectionCallback = (entries) => {
   entries.forEach((entry) => {
     let box = entry.target;
-    let visiblePct = (Math.floor(entry.intersectionRatio * 100)) + "%";
+    let visiblePct = `${Math.floor(entry.intersectionRatio * 100)}%`;
 
     box.querySelector(".topLeft").innerHTML = visiblePct;
     box.querySelector(".topRight").innerHTML = visiblePct;

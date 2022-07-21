@@ -29,7 +29,7 @@ A function reference.
 
 ```js
 mediaRecorder.onwarning = function(e) {
-  console.log("A warning has been raised: " + e.message);
+  console.warn(`A warning has been raised: ${e.message}`);
 }
 ```
 

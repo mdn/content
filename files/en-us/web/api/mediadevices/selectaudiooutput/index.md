@@ -75,10 +75,10 @@ document.querySelector('#myButton').addEventListener('click', () => {
   navigator.mediaDevices
     .selectAudioOutput()
     .then((device) => {
-      console.log(device.kind + ': ' + device.label + ' id = ' + device.deviceId);
+      console.log(`${device.kind}: ${device.label} id = ${device.deviceId}`);
     })
     .catch(function (err) {
-      console.log(err.name + ': ' + err.message);
+      console.error(`${err.name}: ${err.message}`);
     });
 });
 ```

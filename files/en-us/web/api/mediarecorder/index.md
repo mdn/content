@@ -146,7 +146,7 @@ if (navigator.mediaDevices) {
     }
   })
   .catch(function(err) {
-    console.log('The following error occurred: ' + err);
+    console.error(`The following error occurred: ${err}`);
   })
 }
 ```

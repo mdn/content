@@ -50,7 +50,7 @@ The code snippet also shows a best practice for versioning caches used by the se
 ```js
 const CACHE_VERSION = 1;
 const CURRENT_CACHES = {
-  prefetch: 'prefetch-cache-v' + CACHE_VERSION
+  prefetch: `prefetch-cache-v${CACHE_VERSION}`
 };
 
 self.addEventListener('install', function(event) {

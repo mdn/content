@@ -118,7 +118,7 @@ async function startCapture(displayMediaOptions) {
   try {
     captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
   } catch(err) {
-    console.error("Error: " + err);
+    console.error(`Error: ${err}`);
   }
   return captureStream;
 }
