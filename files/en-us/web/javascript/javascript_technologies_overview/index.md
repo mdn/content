@@ -17,9 +17,9 @@ However, the umbrella term "JavaScript" as understood in a web browser context c
 
 ## JavaScript, the core language (ECMAScript)
 
-The core language of JavaScript is standardized by the ECMA TC39 committee as a language named [ECMAScript](/en-US/docs/Web/JavaScript/Language_Resources).
+The core language of JavaScript is standardized by the ECMA TC39 committee as a language named [ECMAScript](/en-US/docs/Web/JavaScript/Language_Resources). ECMAScript and JavaScript are often used interchangeably today, but "ECMAScript" is the term for the language standard.
 
-This core language is also used in non-browser environments, for example in [node.js](https://nodejs.org).
+This core language is also used in non-browser environments, for example in [Node.js](https://nodejs.org).
 
 ### What falls under the ECMAScript scope?
 
@@ -28,18 +28,17 @@ Among other things, ECMAScript defines:
 - Language syntax (parsing rules, keywords, control flow, object literal initialization, ...)
 - Error handling mechanisms ({{jsxref("Statements/throw", "throw")}}, {{jsxref("Statements/try...catch", "try...catch")}}, ability to create user-defined {{jsxref("Error")}} types)
 - Types (boolean, number, string, function, object, ...)
-- The global object. In a browser, this global object is the [`window`](/en-US/docs/Web/API/Window) object, but ECMAScript only defines the APIs not specific to browsers, e.g. {{jsxref("parseInt")}}, {{jsxref("parseFloat")}}, {{jsxref("decodeURI")}}, {{jsxref("encodeURI")}}...
 - A prototype-based inheritance mechanism
-- Built-in objects and functions ({{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Array.prototype", "Array.prototype", "Methods")}} methods, {{jsxref("Object")}} introspection methods, etc.)
+- Built-in objects and functions ({{jsxref("JSON")}}, {{jsxref("Math")}}, [Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) methods, {{jsxref("parseInt")}}, {{jsxref("decodeURI")}}, etc.)
 - [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+- A [module system](/en-US/docs/Web/JavaScript/Guide/Modules)
+- Basic memory model
 
-### Browser support
+### Standardization process
 
-As of October 2016, the current versions of the major Web browsers implement [ECMAScript 5.1](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla) and [ECMAScript 2015](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_2015_support_in_Mozilla), but older versions (still in use) implement ECMAScript 5 only.
+After the 6th major edition of ECMAScript (commonly known as ES6) was officially approved and published as a standard on June 17, 2015 by the ECMA General Assembly, ECMAScript editions are published on a yearly basis. All development is public on the [Ecma TC39 GitHub organization](https://github.com/tc39), which hosts proposals, the official specification text, and meeting notes.
 
-### Future
-
-The major 6th Edition of ECMAScript was officially approved and published as a standard on June 17, 2015 by the ECMA General Assembly. Since then ECMAScript Editions are published on a yearly basis.
+New language features, including introduction of new syntaxes and APIs and revision of existing behaviors, are discussed in the form of proposals. Each proposal goes through a [4-stage process](https://tc39.es/process-document/), and is typically implemented by JavaScript engines at stage 3 or stage 4 and thus available for public consumption.
 
 ### Internationalization API
 
@@ -73,7 +72,11 @@ Looking for the [`Document`](/en-US/docs/Web/API/Document) object, [`Window`](/e
 
 - The [`setTimeout`](/en-US/docs/Web/API/setTimeout) and [`setInterval`](/en-US/docs/Web/API/setInterval) functions were first specified on the [`Window`](/en-US/docs/Web/API/Window) interface in HTML Standard.
 - [XMLHttpRequest](https://xhr.spec.whatwg.org/) makes it possible to send asynchronous HTTP requests.
+- The [Fetch API](https://fetch.spec.whatwg.org/) provides a more ergonomic abstraction for network requests.
 - The [CSS Object Model](https://drafts.csswg.org/cssom/) abstract CSS rules as objects.
 - [WebWorkers](https://html.spec.whatwg.org/multipage/workers.html) allows parallel computation.
 - [WebSockets](https://html.spec.whatwg.org/multipage/#network) allows low-level bidirectional communication.
 - [Canvas 2D Context](https://html.spec.whatwg.org/multipage//#2dcontext) is a drawing API for [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas).
+- The [WebAssembly interface](https://webassembly.github.io/spec/js-api) provides utilities for communication between JavaScript code and [WebAssembly](/en-US/docs/WebAssembly) modules.
+
+Non-browser environments (like Node.js) often do not have DOM APIs because they don't interact with a document, but they still usually implement many web APIs, such as [`fetch()`](/en-US/docs/Web/API/fetch) and [`setTimeout()`](/en-US/docs/Web/API/setTimeout).
