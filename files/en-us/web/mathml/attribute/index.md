@@ -441,7 +441,7 @@ Notes:
       </td>
     </tr>
     <tr>
-      <td><code>scriptminsize</code></td>
+      <td><code>scriptminsize</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mstyle") }}</td>
       <td>
         Specifies a minimum font size allowed due to changes in
@@ -449,7 +449,7 @@ Notes:
       </td>
     </tr>
     <tr>
-      <td><code>scriptsizemultiplier</code></td>
+      <td><code>scriptsizemultiplier</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mstyle") }}</td>
       <td>
         Specifies the multiplier to be used to adjust font size due to changes
