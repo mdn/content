@@ -100,7 +100,7 @@ function handleStart(evt) {
     log(`touchstart: ${i}.`);
     ongoingTouches.push(copyTouch(touches[i]));
     const color = colorForTouch(touches[i]);
-    log(`color of touch with id ${ touches[i].identifier } = ${ color }`);
+    log(`color of touch with id ${touches[i].identifier} = ${color}`);
     ctx.beginPath();
     ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false);  // a circle at the start
     ctx.fillStyle = color;
@@ -129,11 +129,11 @@ function handleMove(evt) {
     const idx = ongoingTouchIndexById(touches[i].identifier);
 
     if (idx >= 0) {
-      log(`continuing touch ${ idx }`);
+      log(`continuing touch ${idx}`);
       ctx.beginPath();
-      log(`ctx.moveTo( ${ ongoingTouches[idx].pageX }, ${ ongoingTouches[idx].pageY } );`);
+      log(`ctx.moveTo( ${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY} );`);
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
-      log(`ctx.lineTo( ${ touches[i].pageX }, ${ touches[i].pageY } );`);
+      log(`ctx.lineTo( ${touches[i].pageX}, ${touches[i].pageY} );`);
       ctx.lineTo(touches[i].pageX, touches[i].pageY);
       ctx.lineWidth = 4;
       ctx.strokeStyle = color;
@@ -262,7 +262,7 @@ function ongoingTouchIndexById(idToFind) {
 ```js
 function log(msg) {
   const container = document.getElementById('log');
-  container.textContent = `${ msg } \n${ container.textContent }`;
+  container.textContent = `${msg} \n${container.textContent}`;
 }
 
 
